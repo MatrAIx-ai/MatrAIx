@@ -338,13 +338,7 @@ MatrAIx follows the [semver](https://semver.org/) versioning standard. As pre 1.
 
 ## License 📜
 
-The source code of the MatrAIx project is licensed under Apache 2.0. Your contributed code will also be licensed under Apache 2.0 by default. To add a license to your code, you can manually copy and paste it from `license_template.txt` into the head of your files, or run the `update_license.py` script to automate the process:
-
-```bash
-python licenses/update_license.py . licenses/license_template.txt
-```
-
-This script will add licenses to all `*.py` files or update the licenses if the existing licenses do not match `license_template.txt`.
+The source code of the MatrAIx project is licensed under the MIT License. Your contributed code will also be licensed under MIT by default. The full license text is in the `LICENSE` file at the repo root.
 
 ## Giving Credit 🎉
 
