@@ -4,7 +4,7 @@ Thank you for your interest in contributing to the MatrAIx project! 🎉 We are 
 
 ---
 
-## AI Generated Code Policy
+## 🤖 AI Generated Code Policy
 
 MatrAIx is a agent simulation for evaluation benchmark, designed to simulate agents on different domains of applications. We welcome developers who genuinely use MatrAIx to solve real world problems and want to build alongside us.
 
@@ -13,14 +13,14 @@ MatrAIx is a agent simulation for evaluation benchmark, designed to simulate age
 1. Pursue quality over quantity in both code and feature design within the MatrAIx repository.
 2. Welcome any developer or user who truly uses MatrAIx, or shares our mission and vision, to discuss product and technology with us.
 
-### Why This Policy Exists
+### ❓ Why This Policy Exists
 
 As AI coding capabilities continue to grow, an increasing number of AI coding bots and vibe coded submissions are introducing significant noise and risk into open source repositories:
 
 1. **Code quality risks.** AI generated code can contain subtle bugs or hallucinations. An excessive volume of unreviewed LLM generated code dramatically increases maintenance costs.
 2. **Community culture.** Within the MatrAIx community, we uphold the core value of human collaboration and stand against low effort, low signal spamming.
 
-### Contribution Requirements
+### ✅ Contribution Requirements
 
 To preserve the integrity of this open source repository, we are taking the following precautionary steps:
 
@@ -29,7 +29,7 @@ To preserve the integrity of this open source repository, we are taking the foll
 3. **Human verified testing is required.** Please do not submit code that is theoretically correct but untested. Every PR must include proof of testing such as screenshots, screen recordings, or test output logs.
 4. **AI assisted drafts are acceptable for issues, discussions, and prototypes**, but they must be reviewed and edited by a human to reduce verbosity and noise.
 
-### Enforcement: Grounds for Immediate Ban
+### 🚫 Enforcement: Grounds for Immediate Ban
 
 The following abusive behaviors will result in an immediate ban (PR submission privileges revoked):
 
@@ -38,21 +38,21 @@ The following abusive behaviors will result in an immediate ban (PR submission p
 
 ---
 
-## License
+## 📜 License
 
 MatrAIx is released under the MIT License. By contributing, you agree that your contributions will also be licensed under MIT. A copy of the license is in the `LICENSE` file at the repo root.
 
-## Open Source and Copyright Policy
+## ⚖️ Open Source and Copyright Policy
 
 MatrAIx is fully open source. Every file in this repo, including code, datasets, prompts, evaluation results, and documentation, must be safe to share publicly under the MIT License. If something cannot be shared this way, it does not belong here.
 
-### Contributor Sign Off
+### ✍️ Contributor Sign Off
 
 We use the Developer Certificate of Origin (DCO). Sign off every commit with `git commit -s`, which appends a `Signed-off-by` line confirming you wrote the code or have the right to submit it under MIT. The [DCO GitHub App](https://github.com/apps/dco) checks this on every PR.
 
 If you prefer a CLA based flow later, [CLA Assistant](https://cla-assistant.io/) can be added without disrupting existing contributors. For now, DCO is enough.
 
-### Data and Intellectual Property Rules
+### 🔐 Data and Intellectual Property Rules
 
 Before adding anything to the repo, confirm the following:
 
@@ -64,7 +64,7 @@ Before adding anything to the repo, confirm the following:
 6. **No scraped content with restrictive terms.** If a site forbids redistribution, do not include scraped data from it.
 7. **Attribution.** When using code or data from another open source project, keep the original copyright notices and license headers, and add an entry to `NOTICE` if needed.
 
-### PR Checklist
+### ☑️ PR Checklist
 
 Every PR template includes this box, which must be ticked before review:
 
@@ -74,7 +74,7 @@ Every PR template includes this box, which must be ticked before review:
       be redistributed publicly under the MIT License.
 ```
 
-### Onboarding Checklist
+### 🚪 Onboarding Checklist
 
 Before your first PR, confirm:
 
@@ -85,15 +85,15 @@ Before your first PR, confirm:
 5. Datasets ship with a `DATASHEET.md`; models ship with a `MODEL_CARD.md`.
 6. Commits are signed off using `git commit -s`.
 
-### Dependency License Checks
+### 📦 Dependency License Checks
 
 We run a license scanner in CI so incompatible dependencies fail builds before merge. The current setup uses `pip-licenses` against an allowlist defined in `ALLOWED_LICENSES.md` (MIT, BSD 2 Clause, BSD 3 Clause, Apache 2.0, ISC, Python Software Foundation, MPL 2.0). At release time, `THIRD_PARTY_NOTICES.md` is generated automatically so every dependency is listed with its license.
 
-### Secret and Leak Prevention
+### 🔑 Secret and Leak Prevention
 
 To stop credentials and confidential snippets from ending up in git, the repo uses pre commit hooks for `gitleaks` (or `detect-secrets`) and `nbstripout`, which strips notebook outputs before commit. The `.gitignore` covers `.env`, local data folders, and IDE artifacts. GitHub secret scanning and push protection are enabled at the repo level, which blocks pushes containing detected secrets at the server side. If a secret is ever exposed, rotate it immediately and rewrite history with `git filter-repo` rather than relying on a follow up commit, since git history keeps the original blob forever.
 
-### Standard Repo Files
+### 🗂️ Standard Repo Files
 
 The repo ships with the following so the legal and governance picture is clear at a glance:
 
@@ -107,11 +107,11 @@ The repo ships with the following so the legal and governance picture is clear a
 - `.github/ISSUE_TEMPLATE/`: bug, feature, and data contribution templates.
 - `docs/templates/DATASHEET.md` and `docs/templates/MODEL_CARD.md`: starting points for new datasets and models.
 
-### Documenting Datasets and Models
+### 📋 Documenting Datasets and Models
 
 Datasets ship with a `DATASHEET.md` following the [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) format, covering motivation, composition, collection, preprocessing, uses, distribution, and maintenance. Released models ship with a `MODEL_CARD.md` following the [Model Cards](https://arxiv.org/abs/1810.03993) format, covering intended use, training data, evaluation, limitations, and ethical considerations. Cookbooks that pull external resources link to the original source and its license at the top of the notebook.
 
-### Before Going Public
+### 🏛️ Before Going Public
 
 If a contribution touches material that came from a hospital, a university lab, or sponsored research, run it past your institution's technology transfer office or open source program office before submitting. A single conversation confirms that nothing you ship is bound by an existing IP assignment, sponsored research agreement, or data use agreement. This is the cheapest way to avoid the worst class of open source mistake, which is releasing something that was never yours to release.
 
@@ -145,159 +145,21 @@ Excellent documentation and thorough testing are essential. Here are some guidel
 
 We are a small team focused on building great things. If you have something in mind to add or modify, opening a pull request is the ideal way to catch our attention. 🚀
 
-### Guideline for Writing Docstrings
+### Issues & Pull Requests 🛠️
 
-This guideline will help you write clear, concise, and structured docstrings when contributing to `MatrAIx`.
+We track work through [GitHub Issues](https://github.com/matraix-ai/matraix/issues) and [Pull Requests](https://github.com/matraix-ai/matraix/pulls). A few simple conventions keep things tidy:
 
-#### 1. Use the Triple Quoted String with `r"""` (Raw String)
-Begin the docstring with `r"""` to indicate a raw docstring. This prevents issues with special characters and ensures consistent formatting.
+- **Issues:** Keep each issue focused on a single bug, improvement, or feature. Assign it to yourself when you start, and link related issues rather than merging them. If you spot an outdated issue, let us know.
+- **Pull Requests:** Link the related issue, give the PR a clear title, and mark it ready for review when it's done. The linked issue closes automatically on merge.
+- **PR title prefixes:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore` (for example, `fix: Resolve memory leak issue`).
 
-#### 2. Provide a Brief Class or Method Description
-- Start with a concise summary of the purpose and functionality.
-- Keep each line under `79` characters.
-- The summary should start on the first line without a linebreak.
+We run biweekly dev meetings to align on priorities and review recent work — you're welcome to join, but they're optional.
 
-Example:
-```python
-r"""Class for managing conversations of MatrAIx Chat Agents.
-"""
-```
-
-#### 3. Document Parameters in the Args Section
-- Use an `Args`: section for documenting constructor or function parameters.
-- Maintain the `79` character limit per line, indenting continuation lines by 4 spaces.
-- Follow this structure:
-  - Parameter Name: Match the function signature.
-  - Type: Include the type (for example, `int`, `str`, or custom types like `BaseModelBackend`).
-  - Description: Provide a brief explanation of the parameter's role.
-  - Default Value: Use (`default: :obj:<default_value>`) to indicate default values.
-
-Example:
-```markdown
-Args:
-    system_message (BaseMessage): The system message for initializing
-        the agent's conversation context.
-    model (BaseModelBackend, optional): The model backend to use for
-        response generation. Defaults to :obj:`OpenAIModel` with
-        `GPT_4O_MINI`. (default: :obj:`OpenAIModel` with `GPT_4O_MINI`)
-```
-
-### Principles 🛡️
-
-#### Naming Principle: Avoid Abbreviations in Naming
-
-- Abbreviations can introduce ambiguity, especially since variable names and code in MatrAIx are consumed directly by agents.
-- Use clear, descriptive names that convey meaning without requiring extra explanation. This improves both human readability and the agent's ability to interpret the code.
-
-Examples:
-
-- Bad: msg_win_sz
-- Good: message_window_size
-
-By following this principle, we keep MatrAIx accessible and unambiguous for both developers and AI agents.
-
-#### Toolkit Function Naming Principle: Use Toolkit Specific Prefixes
-
-All public functions in MatrAIx toolkits MUST include a toolkit specific prefix to prevent naming conflicts and improve code clarity.
-
-**Naming Pattern:**
-```
-<toolkit_prefix>_<action>_<resource>
-```
-
-**Examples:**
-- Good: `github_create_issue()`, `twitter_delete_tweet()`, `excel_create_workbook()`
-- Bad: `create_issue()`, `delete_tweet()`, `create_workbook()`
-
-**Key Requirements:**
-1. **Consistent Prefixes**: All public methods in a toolkit must use the same prefix.
-2. **No Built in Shadowing**: Never use names that shadow Python built ins (for example, avoid `round()`, use `math_round()`).
-3. **Clear Association**: The prefix should clearly identify which toolkit the function belongs to.
-4. **Backward Compatibility**: When renaming functions, provide deprecated aliases with warnings for at least 2 minor versions.
-
-#### Logging Principle: Use `logger` Instead of `print`
-
-Avoid using `print` for output. Use Python's `logging` module (`logger`) to ensure consistent, configurable, and professional logging.
-
-Examples:
-
-- Bad:
-  ```python
-  print("Process started")
-  print(f"User input: {user_input}")
-  ```
-- Good:
-  ```python
-  logger.info("Process started")
-  logger.debug(f"User input: {user_input}")
-  ```
-
-For model request and response JSON logs during development or debugging, you can use:
-
-```bash
-export MATRAIX_MODEL_LOG_ENABLED=true
-export MATRAIX_MODEL_LOG_MODEL_CONFIG_ENABLED=true
-export MATRAIX_LOG_DIR=matraix_logs
-```
-
-- `MATRAIX_MODEL_LOG_ENABLED`: Enables model request and response log files.
-- `MATRAIX_MODEL_LOG_MODEL_CONFIG_ENABLED`: Controls whether `model_config_dict` is added to `request.model_config_dict`. When unset, it defaults to the same value as `MATRAIX_MODEL_LOG_ENABLED`.
-- `MATRAIX_LOG_DIR`: Sets the output directory for those logs.
-- Logs are written in UTF 8 JSON so multilingual text stays readable.
-
-
-### Board Item Create Workflow 🛠️
-At MatrAIx, we manage the project through a structured workflow that ensures efficiency and clarity throughout development. Our workflow includes stages for issue creation, pull requests (PRs), sprint planning, and reviews.
-
-#### Issue Item Stage:
-Our [issues](https://github.com/matraix-ai/matraix/issues) page on GitHub is updated regularly with bugs, improvements, and feature requests. We maintain a handy set of labels to help you sort through and find issues that interest you. Feel free to use these labels to keep things organized.
-
-When you start working on an issue, please assign it to yourself so others know it is being handled.
-
-When creating a new issue, keep it focused on a specific bug, improvement, or feature. If two issues are related or block each other, link them rather than merging them into one.
-
-We do our best to keep these issues current, but given the fast moving nature of this field, some may become outdated. If you spot any such issues, please give us a heads up so we can address them promptly. 👀
-
-Here is how to engage with our issues effectively:
-- Visit [GitHub Issues](https://github.com/matraix-ai/matraix/issues), create a new issue, choose the category, and fill in the required information.
-- Ensure the issue has a proper title and update the Assignees, Labels, Projects (select Backlog status), Development, and Milestones.
-- Discuss the issue during team meetings, then move it to the Analysis Done column.
-- At the start of each sprint, share the analyzed issue and move it to the Sprint Planned column if you plan to work on it during the sprint.
-
-#### Pull Request Item Stage:
-
-- Visit [GitHub Pulls](https://github.com/matraix-ai/matraix/pulls), create a new PR, choose the branch, and fill in the information, linking the related issue.
-- Ensure the PR has a proper title and update the Reviewers (convert to draft), Assignees, Labels, Projects (select Developing status), Development, and Milestones.
-- If the PR is related to a roadmap item, link the roadmap to the PR.
-- Move the PR item through the stages: Developing, Stuck, Reviewing (click ready for review), Merged. The linked issue closes automatically once the PR is merged.
-
-**Labeling PRs:**
-- **feat**: For new features (for example, `feat: Add new AI model`)
-- **fix**: For bug fixes (for example, `fix: Resolve memory leak issue`)
-- **docs**: For documentation updates (for example, `docs: Update contribution guidelines`)
-- **style**: For code style changes (for example, `style: Refactor code formatting`)
-- **refactor**: For code refactoring (for example, `refactor: Optimize data processing`)
-- **test**: For adding or updating tests (for example, `test: Add unit tests for new feature`)
-- **chore**: For maintenance tasks (for example, `chore: Update dependencies`)
-
-### Sprint Planning & Review 🎯
-
-#### Definition
-
-Sprint planning defines what can be delivered in the sprint and how it will be achieved. The sprint review allows stakeholders to examine and provide feedback on recent work.
-
-#### Practice
-
-- **Sprint Duration**: Two weeks for development, one week for review.
-- **Sprint Planning & Review**: Conducted biweekly during the dev meeting (around 30 minutes).
-- **Planning**: The founder highlights the sprint goal and key points; developers select items for the sprint.
-- **Review**: Feedback on delivered features and identification of areas for improvement.
-
-## Authorship and Contribution 📝✍️
+## 📝✍️ Authorship and Contribution
 
 Authorship in MatrAIx is earned through visible, sustained, and well documented work. We strongly encourage every contributor to record their progress clearly and to participate actively in the community, so that contributions can be recognized fairly and built upon by others.
 
-### Record Your Progress
+### 📒 Record Your Progress
 
 Keeping a clear written trail of your work makes collaboration easier and ensures your contributions are properly attributed.
 
@@ -307,7 +169,7 @@ Keeping a clear written trail of your work makes collaboration easier and ensure
 - **Document experiments and results.** If your contribution involves benchmarks, evaluations, or ablations, record the configuration, dataset, metrics, and outcomes so the results are reproducible and reviewable.
 - **Credit collaborators.** When others contribute ideas, code review, datasets, or feedback that materially shape the work, acknowledge them in the MD file or PR description.
 
-### Participate Actively in the Community
+### 👥 Participate Actively in the Community
 
 Authorship is not only about code. Showing up consistently, helping others, and shaping discussions are equally valued forms of contribution.
 
@@ -317,11 +179,23 @@ Authorship is not only about code. Showing up consistently, helping others, and 
 - **Open and refine issues.** Well scoped bug reports, feature proposals, and design discussions are invaluable. Following up on issues you opened, including closing them when resolved, helps keep the project healthy.
 - **Share your work publicly.** Blog posts, demos, talks, tutorials, and social media threads about your MatrAIx contributions help grow the community and bring your work the recognition it deserves.
 
-### How Authorship Is Recognized
+### 🌟 How Authorship Is Recognized
 
 - Code, documentation, cookbooks, examples, and substantive design discussions are all counted as authored contributions.
 - For research artifacts, papers, or major releases, contributor lists are compiled from PR history, issue activity, design documents, and community participation, with attention to the depth and continuity of involvement rather than raw commit counts.
 - If you believe a contribution of yours has been overlooked, please reach out to a maintainer with a brief summary and links. We want every meaningful contribution to be visible.
+
+### 📄 Paper Authorship and Acknowledgements
+
+MatrAIx will result in one or more academic papers (see the project README for the current publication plan). Authorship is determined as follows:
+
+- **Everyone records their own work.** Each contributor maintains a markdown file documenting what they worked on and the contributions they made (motivation, design decisions, what was built, experiments, and outcomes). This is the primary record used for authorship decisions, so keep it accurate and up to date.
+- **Records are peer reviewed.** These markdown files are reviewed together by teammates and peers, so contributions are assessed openly and fairly rather than self declared.
+- **Core contributors join the paper.** Contributors whose reviewed work represents a significant, sustained contribution to the project are included as authors on the corresponding paper(s).
+- **Other contributors are acknowledged.** Contributors whose involvement does not reach the authorship bar are credited in the acknowledgements of the relevant paper(s).
+
+If your work spans multiple papers, your authorship and acknowledgements are evaluated per paper based on your contribution to that specific effort.
+
 
 By recording your progress carefully and showing up for the community, you help MatrAIx grow as a trustworthy, high quality, and genuinely collaborative project. 🌱
 
@@ -378,7 +252,7 @@ To verify everything is set up correctly, run `pytest .` to ensure all tests pas
 
 ## Common Actions 🔄
 
-### Update dependencies
+### 🔄 Update dependencies
 
 Whenever you add, update, or delete any dependencies in `pyproject.toml`, please run `uv lock` to synchronize the dependencies with the lock file.
 
@@ -432,7 +306,7 @@ The `conftest.py` file is already configured to automatically load the `.env` fi
 
 ## Documentation 📚
 
-### Contribute to Documentation 📝
+### 📝 Contribute to Documentation
 
 We use [Mintlify](https://mintlify.com/) for documentation.
 
