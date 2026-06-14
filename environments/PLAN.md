@@ -36,6 +36,13 @@ _Multi-agent / social simulation, long-horizon tasks, related work._
 - Proposes an open-source multi-agent marketplace simulation where consumer-side assistant agents interact with business-side service agents to search, communicate, receive proposals, and complete transactions.
 - The environment is built around a centralized marketplace server and a simple action protocol supporting agent registration, search, message passing, proposal submission, payment, and full interaction logging; evaluation focuses on transaction success, consumer utility, welfare, search quality, manipulation resistance, and behavioral biases such as first-proposal bias.
 - Relevant to MatrAIx because it provides a reusable pattern for long-horizon multi-agent social/economic simulations with heterogeneous roles, private preferences, strategic service agents, market-level outcomes, and extensible domains beyond restaurants/contractors.
+
+### [OASIS: Open Agent Social Interaction Simulations with One Million Agents](https://arxiv.org/pdf/2411.11581)
+- Proposes a scalable open-source social media simulation framework where LLM-based agents act as users on platforms like X/Twitter and Reddit, enabling studies of large-scale social phenomena such as information spreading, group polarization, and herd behavior.
+- The environment includes dynamic social networks, evolving post/content states, diverse user actions such as posting, following, reposting, liking, and commenting, plus recommendation systems based on user interests and hot-score ranking; it supports simulations with up to one million agents.
+- Relevant to MatrAIx because it provides a strong reference for large-scale multi-agent social simulation: agent personas, network evolution, recommender-mediated interaction, long-horizon collective dynamics, and environment-level metrics for studying emergent behavior.
+
+
 ---
 
 ## 🧩 Task 1 — Shared Environment Interface & Telemetry
