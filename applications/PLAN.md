@@ -196,7 +196,7 @@ Scenarios where the agent reads a stimulus and returns structured feedback.
 - 2–3 scenarios (e.g. product concept testing, messaging eval, UI-mockup feedback).
 - Each with task prompt, persona requirements, structured output schema, metrics, example run.
 
-**Owner(s):** @Shirley-Huang, _@name2, @name3_ (add more as needed)
+**Owner(s):** @Shirley-Huang, @Xiaoyi-Liu, @name3_ (add more as needed)
 
 ---
 
@@ -208,7 +208,7 @@ Scenarios where the agent converses with a target AI system and evaluates it.
 - Include **hard users** (privacy-sensitive, low-literacy/elderly, confused, adversarial).
 - Each with task prompt, persona requirements, metrics, example run.
 
-**Owner(s):** @Shirley-Huang, @Eliza_Fan, @name3_ (add more as needed)
+**Owner(s):** @Shirley-Huang, @Eliza_Fan, @Xiaoyi-Liu (add more as needed)
 
 ---
 
