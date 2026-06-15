@@ -66,7 +66,7 @@ The simplest surface — the agent reads a stimulus (product concept, message, d
 - Define input formats and a **structured output schema** (rating scores, free-form feedback, ranked preferences, objections, predicted adoption).
 - Reference implementation + a couple of example stimuli.
 
-**Owner(s):** @JianhengHou, @name2, @name3_ (add more as needed)
+**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, _@name3_ (add more as needed)
 
 ---
 
@@ -79,7 +79,7 @@ High-value surface — many target products *are* AI systems, so they can be tes
 - Conversation logging + metrics (helpfulness, trust, clarity, satisfaction, length).
 - Cover **cooperative** users **and** hard/realistic users (privacy-sensitive, low-literacy / elderly, confused, adversarial) — the realistic-but-hard cases are where simulation adds value.
 
-**Owner(s):** @JianhengHou, @name2, @name3_ (add more as needed)
+**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, _@name3_ (add more as needed)
 
 ---
 
@@ -91,7 +91,7 @@ Agent interaction with web surfaces (landing pages, prototypes, dashboards, **fo
 - Capture signals: pages, clicks, scroll, hesitation, failed actions, final decision.
 - Forum/social subtype: read posts, comment, initiate DMs — same interaction layer, different surface.
 
-**Owner(s):** @JianhengHou, @name2, @name3_ (add more as needed)
+**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, _@name3_ (add more as needed)
 
 ---
 
@@ -101,7 +101,7 @@ Complex interactive products (mobile / desktop / sandbox builds). Pulls in low-v
 
 - Scope build formats and UI-automation approach for later.
 
-**Owner(s):** @JianhengHou, @name2, @name3_ (add more as needed)
+**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, _@name3_ (add more as needed)
 
 ---
 
