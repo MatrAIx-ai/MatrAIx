@@ -258,6 +258,6 @@ A small human study to validate data quality and benchmark ground-truth.
 ## 🤝 How to Contribute
 
 1. Pick a task above and add your name to its **Owner** field.
-2. Open a sub-issue / sub-doc for your task to track details and progress.
+2. Open an issue for your task to track details and progress.
 3. Align early on the shared persona **schema** (Task 1) — it blocks Tasks 2–5.
 

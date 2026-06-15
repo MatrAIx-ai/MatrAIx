@@ -108,6 +108,6 @@ Complex interactive products (mobile / desktop / sandbox builds). Pulls in low-v
 ## 🤝 How to Contribute
 
 1. Pick a task above and add your name to its **Owner** field.
-2. Open a sub-issue / sub-doc for your task to track details and progress.
+2. Open an issue for your task to track details and progress.
 3. Align early on the shared **interface + telemetry** (Task 1) — it blocks Tasks 2–5.
 4. Build **Type 1 (survey)** and **Type 2 (chatbot)** first; they're the fastest path to a working end-to-end pipeline.

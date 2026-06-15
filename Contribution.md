@@ -163,11 +163,11 @@ Authorship in MatrAIx is earned through visible, sustained, and well documented 
 
 Keeping a clear written trail of your work makes collaboration easier and ensures your contributions are properly attributed.
 
-- **Maintain a working MD file.** When starting a non trivial feature, experiment, or research direction, create a markdown file (for example, under `docs/notes/` or alongside the relevant module) that captures the motivation, design decisions, current status, open questions, and next steps. Update it as the work evolves.
+- **Keep a status-update issue.** Open a GitHub Issue titled `Status Update - <Your Name>` (for example, `Status Update - Peter Parker`) and use it as your running log. Post dated updates capturing the motivation, design decisions, current status, open questions, and next steps as the work evolves. This is lighter weight than a tracked file and needs no PR.
 - **Write meaningful commit messages and PR descriptions.** Each commit and PR should explain the why, not only the what. Link related issues, discussions, and design notes so reviewers and future readers can follow the reasoning.
-- **Keep a changelog or progress log.** For larger efforts spanning multiple PRs, maintain a short progress log inside your working MD file or in the issue thread, listing milestones reached, blockers encountered, and decisions made.
+- **Keep a changelog or progress log.** For larger efforts spanning multiple PRs, maintain a short progress log inside your status-update issue, listing milestones reached, blockers encountered, and decisions made.
 - **Document experiments and results.** If your contribution involves benchmarks, evaluations, or ablations, record the configuration, dataset, metrics, and outcomes so the results are reproducible and reviewable.
-- **Credit collaborators.** When others contribute ideas, code review, datasets, or feedback that materially shape the work, acknowledge them in the MD file or PR description.
+- **Credit collaborators.** When others contribute ideas, code review, datasets, or feedback that materially shape the work, acknowledge them in your status-update issue or PR description.
 
 ### 👥 Participate Actively in the Community
 
@@ -189,8 +189,8 @@ Authorship is not only about code. Showing up consistently, helping others, and 
 
 MatrAIx will result in one or more academic papers (see the project README for the current publication plan). Authorship is determined as follows:
 
-- **Everyone records their own work.** Each contributor maintains a markdown file documenting what they worked on and the contributions they made (motivation, design decisions, what was built, experiments, and outcomes). This is the primary record used for authorship decisions, so keep it accurate and up to date.
-- **Records are peer reviewed.** These markdown files are reviewed together by teammates and peers, so contributions are assessed openly and fairly rather than self declared.
+- **Everyone records their own work.** Each contributor maintains a `Status Update - <Your Name>` GitHub Issue documenting what they worked on and the contributions they made (motivation, design decisions, what was built, experiments, and outcomes). This is the primary record used for authorship decisions, so keep it accurate and up to date.
+- **Records are peer reviewed.** These status-update issues are reviewed together by teammates and peers, so contributions are assessed openly and fairly rather than self declared.
 - **Core contributors join the paper.** Contributors whose reviewed work represents a significant, sustained contribution to the project are included as authors on the corresponding paper(s).
 - **Other contributors are acknowledged.** Contributors whose involvement does not reach the authorship bar are credited in the acknowledgements of the relevant paper(s).
 
