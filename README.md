@@ -49,12 +49,14 @@ We are actively looking for collaborators across all three teams, whether you ar
 
 ## 📄 Publications
 
-MatrAIx is intended to produce both a unifying paper and several focused papers.
+MatrAIx is intended to produce two initial papers, with more to follow as the project grows.
 
-- **Grand paper.** An end-to-end paper covering the full stack: persona construction, simulation environments, and downstream applications, demonstrating the complete simulation-to-evaluation pipeline.
-- **Focused papers.** Standalone papers on individual components, e.g. a dedicated paper on the persona benchmark (MatrAIxPersonaBench), plus possible papers on environments, evaluation methodology, and specific application domains.
+- **Paper 1 — Persona data & benchmark.** Construction of the large-scale MatrAIxPersona dataset and the MatrAIxPersonaBench persona-adherence benchmark, covering schema design, data generation, quality filtering, and evaluation.
+- **Paper 2 — User simulation.** Downstream applications of persona-conditioned agents as simulated users, with task scenarios, evaluation, and analysis of how well simulated feedback stands in for real users.
 
-**Timeline.** Targeting completion over the summer of 2026, with submissions to **AAAI 2026** and **ICLR 2026**.
+**Timeline.** Both papers target completion over the summer of 2026.
+
+As the project grows, we expect **additional papers** — for example, more advanced persona-agent methods, evaluation methodology, and broader, more comprehensive simulation applications.
 
 ## 🗺️ Roadmap
 
