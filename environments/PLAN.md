@@ -79,7 +79,7 @@ High-value surface — many target products *are* AI systems, so they can be tes
 - Conversation logging + metrics (helpfulness, trust, clarity, satisfaction, length).
 - Cover **cooperative** users **and** hard/realistic users (privacy-sensitive, low-literacy / elderly, confused, adversarial) — the realistic-but-hard cases are where simulation adds value.
 
-**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, _@name3_ (add more as needed)
+**Owner(s):** @JianhengHou, Dipesh Tharu Mahato, @Xiaoyi-Liu, @name4_ (add more as needed)
 
 ---
 
