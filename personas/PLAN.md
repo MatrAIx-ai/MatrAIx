@@ -156,6 +156,11 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 - Empirically grounded: 4 LLMs, human studies with 3,200 participants across 16 demographic identities, plus inference-time mitigation tests (Wang, Morgenstern, Dickerson et al.; Nature Machine Intelligence 2024).
 - Bears on a fairness/distinctiveness axis in MatrAIxPersonaBench — whether large-scale persona agents preserve within-group variation rather than collapsing identities into stereotypes.
 
+### [TinyTroupe: An LLM-powered Multiagent Persona Simulation Toolkit](https://arxiv.org/pdf/2507.09788v3)(https://microsoft.github.io/TinyTroupe/)
+- TinyTroupe is an LLM-powered toolkit designed to simulate realistic human persona interactions within modular, event-driven environments. By orchestrating virtual agents with distinct personalities and memories, it automates the generation of high-quality, complex synthetic data for social and market research while providing mechanisms to correct simulation biases and align agent behavior. However, it believes problem-sovling AI systems generated agents lack wider human variabilities and real world context.
+- Synthetic generation of human agents with personalities, memories, actions and mental faculties. Agents can interact with each other. Scale up by distribution(population number, gender, leftwing/rightwing). The similated results are similar to real results. Use validators and propositions. Have stimulation steering and chaching mechanism, information encricher/extractor and result reducer. Benchmark: persona adherence, self-consistency, fluency, divergence, ideas qty.
+- Relevance: Generation of human agents. The goal of the projects.
+
 ---
 
 ## 🧱 Task 1 — Schema & Domain Design
