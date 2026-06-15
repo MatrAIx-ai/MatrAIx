@@ -243,7 +243,7 @@ Emit each persona in the Task-1 demographic-slice schema (structured fields + na
    - Output: a **ranked list of which demographic axes actually move behavior** → feeds back into Step 2's coarsening and the schema-keep decision.
 
 
-**Owner(s):** @Yunze Xiao @Eliza_Fan, @name2_ (add more as needed)
+**Owner(s):** @Yunze Xiao @Eliza_Fan, @Xiaoyi-Liu, @name3_ (add more as needed)
 
 ---
 
