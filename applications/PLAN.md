@@ -241,6 +241,8 @@ Scenarios where the agent converses with a target AI system and evaluates it.
 **Owner(s):** @Shirley-Huang, @Eliza_Fan, @Xiaoyi-Liu, @Qianfeng-Wen, @Yifan-Liu (add more as needed)
 
 > 🎯 **@Qianfeng-Wen & @Yifan-Liu** are focusing on **AI recommender agent** settings — a persona-driven simulated user converses with a recommender chatbot (conversational recommendation) and we evaluate the quality of its suggestions. Builds on [iEvaLM](https://arxiv.org/abs/2305.13112) and [Evaluating LLMs as Generative User Simulators for Conversational Recommendation](https://arxiv.org/abs/2403.09738) from Related Work.
+>
+> Proposal: [Persona-Conditioned Evaluation for Recommendation Chatbots](proposal_recommendation_chatbot_eval.md)
 
 ---
 
