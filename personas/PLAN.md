@@ -298,7 +298,7 @@ Build the coreset for benchmarking **persona simulation quality**. For each pers
 
 > 🧩 Example: profile says *"dislikes comments in code"* → task: ask the agent (as this persona) to write a function → eval: check whether the output contains comments.
 
-**Owner(s):** @Eliza_Fan, @Keyang Xuan, @name3_ (add more as needed)
+**Owner(s):** @Eliza_Fan, @Keyang Xuan, @Wenkai Li (add more as needed)
 
 ---
 
