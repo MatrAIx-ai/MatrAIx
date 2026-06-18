@@ -105,6 +105,10 @@ class ExternalCommandProviderTest(unittest.TestCase):
                 env={"X": None},
             )
 
+    def test_config_rejects_none_env(self):
+        with self.assertRaises(ValueError):
+            ExternalCommandConfig(command=[sys.executable], env=None)
+
     def test_config_rejects_bool_timeout(self):
         with self.assertRaises(ValueError):
             ExternalCommandConfig(command=[sys.executable], timeout_seconds=True)
@@ -113,6 +117,44 @@ class ExternalCommandProviderTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             script = Path(tmpdir) / "invalid_result_bridge.py"
             script.write_text("import json, sys\njson.dump({'backend': 'fake'}, sys.stdout)\n")
+            provider = ExternalCommandRecBotProvider(
+                ExternalCommandConfig(command=[sys.executable, str(script)], timeout_seconds=10)
+            )
+            request = RecBotRequest(
+                conversation_id="episode_001",
+                turn_id=1,
+                messages=[ChatMessage(role="user", content="Recommend a movie.")],
+            )
+
+            with self.assertRaises(ProviderError) as context:
+                provider.next_turn(request)
+
+            self.assertIn("invalid result", str(context.exception))
+
+    def test_provider_raises_on_invalid_nested_result_shape(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            script = Path(tmpdir) / "invalid_nested_result_bridge.py"
+            script.write_text(
+                textwrap.dedent(
+                    """
+                    import json
+                    import sys
+
+                    json.dump(
+                        {
+                            "backend": "fake",
+                            "conversation_id": "episode_001",
+                            "turn_id": 1,
+                            "user_message": "Recommend a movie.",
+                            "assistant_message": "fake response",
+                            "native_action": None,
+                            "trace": 42,
+                        },
+                        sys.stdout,
+                    )
+                    """
+                ).strip()
+            )
             provider = ExternalCommandRecBotProvider(
                 ExternalCommandConfig(command=[sys.executable, str(script)], timeout_seconds=10)
             )

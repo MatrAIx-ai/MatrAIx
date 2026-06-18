@@ -36,8 +36,6 @@ class ExternalCommandConfig:
             or self.timeout_seconds <= 0
         ):
             raise ValueError("timeout_seconds must be positive")
-        if self.env is None:
-            object.__setattr__(self, "env", {})
         if not isinstance(self.env, dict):
             raise ValueError("env must be a dictionary")
         for key, value in self.env.items():
@@ -82,5 +80,5 @@ class ExternalCommandRecBotProvider:
 
         try:
             return RecBotTurnResult.from_dict(payload)
-        except (KeyError, TypeError, ValueError) as exc:
+        except (AttributeError, KeyError, TypeError, ValueError) as exc:
             raise ProviderError(f"external command returned invalid result: {exc}") from exc
