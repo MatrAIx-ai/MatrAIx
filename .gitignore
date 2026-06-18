@@ -1,0 +1,11 @@
+.DS_Store
+
+# Local dataset materialization. These files are too large and often carry
+# dataset-specific license terms; keep only manifests, schemas, and tiny fixtures
+# in git.
+data/raw/
+data/normalized/
+data/cache/
+
+__pycache__/
+*.pyc

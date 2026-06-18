@@ -7,8 +7,11 @@ Team: Application
 Status: Proposal for discussion
 Related issue or discussion: https://github.com/MatrAIx-ai/MatrAIx/issues/20
 Environment type: Type 2 Chatbot Environment
-Target domain: Recommendation Systems, E-Commerce, Local Services
+Target domain: Recommendation Systems, E-Commerce, Local Services, Movies, Fashion
 Commit scope: Documentation-only proposal. No code, no data, no model artifact, no benchmark result.
+
+Dataset/interface notes: see `applications/recommendation_chatbot_eval/`.
+Current local testing domain: Movies, using the CMU Movie Summary Corpus shape and a tiny movie fixture.
 
 ## 1. General Task Description
 
@@ -94,7 +97,9 @@ Possible domains:
 - laptops,
 - local services,
 - travel destinations,
-- consumer products.
+- consumer products,
+- fashion products,
+- movies.
 
 For each base request, the environment creates a group of persona variants. These variants share the same initial query and differ in latent preferences and constraints.
 
