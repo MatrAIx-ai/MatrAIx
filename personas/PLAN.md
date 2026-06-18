@@ -193,8 +193,8 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 
 ### [SimBench: Benchmarking the Ability for Large Language Models to Simulate Human Behaviors](https://openreview.net/pdf?id=PL51SpN6ZJ)
 - Introduces the first large-scale benchmark for evaluating whether LLMs can faithfully simulate group-level human behavior, unifying 20 datasets spanning moral decisions, economic choices, surveys, and social science tasks.
--- Finds that current models achieve only modest simulation fidelity (best score ≈40.8/100), with performance improving as model size increases but showing little benefit from additional inference-time reasoning.
--- Relevance: provides a standardized evaluation framework for MatrAIx-style personas, measuring whether generated personas can reproduce realistic population and demographic-group behaviors rather than only producing plausible persona descriptions.
+- Finds that current models achieve only modest simulation fidelity (best score ≈40.8/100), with performance improving as model size increases but showing little benefit from additional inference-time reasoning.
+- Relevance: provides a standardized evaluation framework for MatrAIx-style personas, measuring whether generated personas can reproduce realistic population and demographic-group behaviors rather than only producing plausible persona descriptions.
 
 ### [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442) (Xiaoyi-Liu added, Yuexing-Hao posted in Discord discussion)
 ### [Human Relations Area Files(eHRAF ​​World Culture)](https://hraf.yale.edu/resources/reference/outline-of-cultural-materials/) (Xiaoyi-Liu added, Ziyan-Wang posted in Discord)
