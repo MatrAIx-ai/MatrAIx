@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -44,6 +45,13 @@ def _env_float(name: str, default: float) -> float:
     if raw is None:
         return default
     return float(raw)
+
+
+def _planning_recording_file() -> str:
+    return os.environ.get(
+        "INTERECAGENT_PLANNING_RECORDING_FILE",
+        str(Path(tempfile.gettempdir()) / "matraix_interecagent_plan.jsonl"),
+    )
 
 
 def _prepare_imports(interecagent_root: str, domain: str) -> None:
@@ -163,6 +171,7 @@ def _build_interecagent(domain: str):
         num_demos=_env_int("INTERECAGENT_NUM_DEMOS", 3),
         critic=None,
         reflection_limits=_env_int("INTERECAGENT_REFLECTION_LIMITS", 3),
+        planning_recording_file=_planning_recording_file(),
         verbose=bool(_env_int("INTERECAGENT_VERBOSE", 0)),
         reply_style=os.environ.get("INTERECAGENT_REPLY_STYLE", "detailed"),
         enable_summarize=_env_int("INTERECAGENT_ENABLE_SUMMARIZE", 1),
@@ -195,8 +204,9 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     raw_plan = _last_recorded_plan(agent)
     native_raw = raw_plan if raw_plan else f"Final Answer: {response}"
     native_action = build_native_action(native_raw)
+    raw_tool_plan = native_action.raw_tool_plan if isinstance(native_action.raw_tool_plan, list) else []
     trace = RecBotTrace(
-        raw_tool_plan=native_action.raw_tool_plan,
+        raw_tool_plan=raw_tool_plan,
         raw_tool_outputs=getattr(getattr(agent, "candidate_buffer", None), "track_info", None),
         recommended_item_ids=[],
     )

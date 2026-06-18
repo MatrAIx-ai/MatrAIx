@@ -8,11 +8,28 @@ from unittest.mock import patch
 
 from recbot.interecagent_bridge import (
     _build_chat_history,
+    _last_recorded_plan,
     _latest_user_message,
+    _planning_recording_file,
     _prepare_imports,
     main,
+    run_turn,
 )
 from recbot.types import ChatMessage, RecBotRequest
+
+
+class FakeAgent:
+    def __init__(self):
+        self._plan_record_cache = {
+            "traj": [
+                {"role": "user", "content": "Recommend a movie."},
+                {"role": "plan", "content": "Action: ToolExecutor\nAction Input: not-json"},
+            ]
+        }
+        self.candidate_buffer = type("FakeCandidateBuffer", (), {"track_info": {"lookups": []}})()
+
+    def run(self, data, chat_history):
+        return "fallback response"
 
 
 class InteRecAgentBridgeTest(unittest.TestCase):
@@ -81,6 +98,54 @@ class InteRecAgentBridgeTest(unittest.TestCase):
                 os.environ.pop("DOMAIN", None)
             else:
                 os.environ["DOMAIN"] = original_domain
+
+    def test_last_recorded_plan_returns_latest_plan_entry(self):
+        agent = type(
+            "FakeAgentWithPlans",
+            (),
+            {
+                "_plan_record_cache": {
+                    "traj": [
+                        {"role": "plan", "content": "first plan"},
+                        {"role": "assistant", "content": "intermediate"},
+                        {"role": "plan", "content": "latest plan"},
+                    ]
+                }
+            },
+        )()
+
+        self.assertEqual(_last_recorded_plan(agent), "latest plan")
+
+    def test_run_turn_keeps_unparsed_plan_out_of_trace_plan_list(self):
+        request = RecBotRequest(
+            conversation_id="episode_001",
+            turn_id=1,
+            messages=[ChatMessage(role="user", content="Recommend a thriller.")],
+        )
+
+        with patch.dict(os.environ, {"INTERECAGENT_ROOT": "/fake/root"}, clear=True):
+            with patch("recbot.interecagent_bridge._prepare_imports"), patch(
+                "recbot.interecagent_bridge._build_interecagent",
+                return_value=FakeAgent(),
+            ):
+                result = run_turn(request)
+
+        self.assertEqual(result.assistant_message, "fallback response")
+        self.assertEqual(result.native_action.raw_tool_plan, "not-json")
+        self.assertEqual(result.trace.raw_tool_plan, [])
+
+    def test_planning_recording_file_uses_env_or_default_temp_path(self):
+        with patch.dict(os.environ, {"INTERECAGENT_PLANNING_RECORDING_FILE": "/tmp/custom.jsonl"}):
+            self.assertEqual(_planning_recording_file(), "/tmp/custom.jsonl")
+
+        with patch.dict(os.environ, {}, clear=True), patch(
+            "recbot.interecagent_bridge.tempfile.gettempdir",
+            return_value="/tmp/matraix-test",
+        ):
+            self.assertEqual(
+                _planning_recording_file(),
+                os.path.join("/tmp/matraix-test", "matraix_interecagent_plan.jsonl"),
+            )
 
     def test_main_returns_one_when_interecagent_root_missing(self):
         payload = (
