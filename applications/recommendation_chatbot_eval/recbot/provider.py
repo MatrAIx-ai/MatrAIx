@@ -27,12 +27,22 @@ class ExternalCommandConfig:
     def __post_init__(self) -> None:
         if not isinstance(self.command, list) or not self.command:
             raise ValueError("command must be a non-empty list")
-        if not isinstance(self.timeout_seconds, int) or self.timeout_seconds <= 0:
+        for command_part in self.command:
+            if not isinstance(command_part, str) or not command_part:
+                raise ValueError("command must contain only non-empty strings")
+        if (
+            isinstance(self.timeout_seconds, bool)
+            or not isinstance(self.timeout_seconds, int)
+            or self.timeout_seconds <= 0
+        ):
             raise ValueError("timeout_seconds must be positive")
         if self.env is None:
             object.__setattr__(self, "env", {})
         if not isinstance(self.env, dict):
             raise ValueError("env must be a dictionary")
+        for key, value in self.env.items():
+            if not isinstance(key, str) or not isinstance(value, str):
+                raise ValueError("env must contain only string keys and values")
 
 
 class ExternalCommandRecBotProvider:
@@ -57,7 +67,7 @@ class ExternalCommandRecBotProvider:
             raise ProviderError(
                 f"external command timed out after {self._config.timeout_seconds} seconds"
             ) from exc
-        except OSError as exc:
+        except (OSError, TypeError) as exc:
             raise ProviderError(f"external command failed to start: {exc}") from exc
 
         if completed.returncode != 0:
