@@ -34,5 +34,22 @@ data/normalized/recommendation_catalogs/<source_name>/
 
 - [DATASETS.md](DATASETS.md): candidate dataset inventory and field coverage.
 - [LOCAL_MOVIE_TESTING.md](LOCAL_MOVIE_TESTING.md): movie-first local testing plan.
+- [INTERECAGENT_PROVIDER.md](INTERECAGENT_PROVIDER.md): setup and boundary notes for the Microsoft RecAI/InteRecAgent provider.
 - [schemas/catalog_item.schema.json](schemas/catalog_item.schema.json): normalized catalog item schema.
 - [samples/cmu_movie_summary_tiny.jsonl](samples/cmu_movie_summary_tiny.jsonl): tiny synthetic movie fixture using the normalized shape.
+
+## RecBot Provider
+
+The RecBot provider layer gives MatrAIx a normalized request/result contract for
+external recommendation backends. For Microsoft RecAI/InteRecAgent, MatrAIx owns
+the `RecBotRequest`, `RecBotTurnResult`, subprocess provider, JSON bridge, and
+tests around that boundary. InteRecAgent remains the source of truth for
+conversational recommendation reasoning, tool planning, retrieval, ranking, and
+domain resources.
+
+InteRecAgent native output is preserved inside the `RecBotTurnResult` envelope:
+`native_action.raw` carries the backend's native `Final Answer` or
+`Action ToolExecutor` text, while `trace` carries normalized inspection fields
+such as raw tool plans and tool outputs when available. See
+[INTERECAGENT_PROVIDER.md](INTERECAGENT_PROVIDER.md) for local setup,
+environment variables, smoke testing, and the default unit test command.

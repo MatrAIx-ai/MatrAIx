@@ -119,3 +119,45 @@ only intended to validate:
 2. loading a small item list,
 3. passing catalog items to a recommendation bot,
 4. checking that final recommendations reference valid item ids.
+
+## InteRecAgent Smoke Test
+
+After setting up Microsoft RecAI/InteRecAgent and downloading the movie
+resources, run this from the repository root:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/smoke_interecagent_movie.py
+```
+
+This validates a persona-style user message through the MatrAIx provider to the
+existing InteRecAgent movie backend. It requires the external RecAI checkout,
+InteRecAgent resources, and API credentials; default unit tests do not run this
+real backend smoke test.
+
+Expected output is one JSON container object with `conversation_id` and `turns`.
+Each entry in `turns` is a `RecBotTurnResult` containing the assistant response,
+the preserved InteRecAgent native action, and trace fields:
+
+```json
+{
+  "conversation_id": "local_movie_smoke",
+  "turns": [
+    {
+      "backend": "interecagent",
+      "conversation_id": "local_movie_smoke",
+      "turn_id": 1,
+      "user_message": "Can you recommend a movie for tonight?",
+      "assistant_message": "...",
+      "native_action": {
+        "raw": "...",
+        "raw_tool_plan": []
+      },
+      "trace": {
+        "raw_tool_plan": [],
+        "raw_tool_outputs": null,
+        "recommended_item_ids": []
+      }
+    }
+  ]
+}
+```
