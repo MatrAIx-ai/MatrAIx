@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
@@ -10,9 +12,9 @@ def _require_non_empty_string(name: str, value: str) -> None:
         raise ValueError(f"{name} must be a non-empty string")
 
 
-def _require_int(name: str, value: int) -> None:
-    if not isinstance(value, int):
-        raise ValueError(f"{name} must be an integer")
+def _require_non_negative_int(name: str, value: int) -> None:
+    if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+        raise ValueError(f"{name} must be a non-negative integer")
 
 
 @dataclass
@@ -43,6 +45,7 @@ class ChatMessage:
 @dataclass
 class NativeAction:
     raw: str
+    raw_tool_plan: Any | None = None
 
     def __post_init__(self) -> None:
         _require_non_empty_string("raw", self.raw)
@@ -50,13 +53,17 @@ class NativeAction:
     def to_dict(self) -> Dict[str, Any]:
         return {
             "raw": self.raw,
+            "raw_tool_plan": self.raw_tool_plan,
         }
 
     @classmethod
     def from_dict(cls, data: Optional[Dict[str, Any]]) -> Optional["NativeAction"]:
         if data is None:
             return None
-        return cls(raw=data["raw"])
+        return cls(
+            raw=data["raw"],
+            raw_tool_plan=data.get("raw_tool_plan"),
+        )
 
 
 @dataclass
@@ -104,7 +111,7 @@ class RecBotRequest:
 
     def __post_init__(self) -> None:
         _require_non_empty_string("conversation_id", self.conversation_id)
-        _require_int("turn_id", self.turn_id)
+        _require_non_negative_int("turn_id", self.turn_id)
         if not isinstance(self.messages, list) or not self.messages:
             raise ValueError("messages must be a non-empty list")
         self.messages = [
@@ -156,7 +163,7 @@ class RecBotTurnResult:
     def __post_init__(self) -> None:
         _require_non_empty_string("backend", self.backend)
         _require_non_empty_string("conversation_id", self.conversation_id)
-        _require_int("turn_id", self.turn_id)
+        _require_non_negative_int("turn_id", self.turn_id)
         _require_non_empty_string("user_message", self.user_message)
         _require_non_empty_string("assistant_message", self.assistant_message)
         if self.native_action is not None and not isinstance(self.native_action, NativeAction):

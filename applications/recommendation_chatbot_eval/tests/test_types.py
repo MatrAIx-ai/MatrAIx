@@ -50,6 +50,20 @@ class RecBotTypesTest(unittest.TestCase):
         self.assertEqual(restored.native_action.raw, "Action: ToolExecutor\nAction Input: []")
         self.assertEqual(restored.trace.recommended_item_ids, ["movie_fixture:aurora_station"])
 
+    def test_native_action_round_trip_keeps_raw_tool_plan(self):
+        action = NativeAction(
+            raw="Action: ToolExecutor\nAction Input: []",
+            raw_tool_plan=[{"tool_name": "RankingTool", "input": "preference"}],
+        )
+
+        restored = NativeAction.from_dict(action.to_dict())
+
+        self.assertEqual(restored.raw, "Action: ToolExecutor\nAction Input: []")
+        self.assertEqual(
+            restored.raw_tool_plan,
+            [{"tool_name": "RankingTool", "input": "preference"}],
+        )
+
     def test_invalid_role_is_rejected(self):
         with self.assertRaises(ValueError):
             ChatMessage(role="bot", content="hello")
@@ -61,6 +75,28 @@ class RecBotTypesTest(unittest.TestCase):
                 turn_id=1,
                 messages=[ChatMessage(role="assistant", content="hello")],
             )
+
+    def test_request_rejects_invalid_turn_id(self):
+        for turn_id in (-1, True):
+            with self.subTest(turn_id=turn_id):
+                with self.assertRaises(ValueError):
+                    RecBotRequest(
+                        conversation_id="episode_001",
+                        turn_id=turn_id,
+                        messages=[ChatMessage(role="user", content="hello")],
+                    )
+
+    def test_turn_result_rejects_invalid_turn_id(self):
+        for turn_id in (-1, True):
+            with self.subTest(turn_id=turn_id):
+                with self.assertRaises(ValueError):
+                    RecBotTurnResult(
+                        backend="interecagent",
+                        conversation_id="episode_001",
+                        turn_id=turn_id,
+                        user_message="hello",
+                        assistant_message="hi",
+                    )
 
 
 if __name__ == "__main__":
