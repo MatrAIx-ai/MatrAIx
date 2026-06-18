@@ -59,8 +59,9 @@ def _prepare_imports(interecagent_root: str, domain: str) -> None:
             "Download and unpack the ready-to-run InteRecAgent resources before running the smoke test."
         )
     os.environ["DOMAIN"] = domain
-    if str(root) not in sys.path:
-        sys.path.insert(0, str(root))
+    root_path = str(root)
+    sys.path[:] = [path for path in sys.path if path != root_path]
+    sys.path.insert(0, root_path)
 
 
 def _build_interecagent(domain: str):

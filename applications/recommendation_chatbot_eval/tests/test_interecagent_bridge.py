@@ -1,5 +1,6 @@
 import io
 import os
+import sys
 import tempfile
 import unittest
 from contextlib import redirect_stderr
@@ -59,6 +60,27 @@ class InteRecAgentBridgeTest(unittest.TestCase):
 
             with self.assertRaisesRegex(RuntimeError, "resources for domain 'movie' are missing"):
                 _prepare_imports(root, "movie")
+
+    def test_prepare_imports_moves_existing_root_to_front_of_sys_path(self):
+        original_sys_path = list(sys.path)
+        original_domain = os.environ.get("DOMAIN")
+
+        try:
+            with tempfile.TemporaryDirectory() as root:
+                os.mkdir(os.path.join(root, "llm4crs"))
+                os.makedirs(os.path.join(root, "resources", "movie"))
+                resolved_root = os.path.realpath(root)
+                sys.path.append(resolved_root)
+
+                _prepare_imports(root, "movie")
+
+                self.assertEqual(sys.path[0], resolved_root)
+        finally:
+            sys.path[:] = original_sys_path
+            if original_domain is None:
+                os.environ.pop("DOMAIN", None)
+            else:
+                os.environ["DOMAIN"] = original_domain
 
     def test_main_returns_one_when_interecagent_root_missing(self):
         payload = (
