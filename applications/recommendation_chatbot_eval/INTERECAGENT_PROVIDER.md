@@ -101,12 +101,30 @@ subprocess provider to the existing InteRecAgent movie backend. It prints one
         "raw_tool_outputs": null,
         "recommended_item_ids": []
       }
+    },
+    {
+      "backend": "interecagent",
+      "conversation_id": "local_movie_smoke",
+      "turn_id": 2,
+      "user_message": "I want something tense and mysterious, but not horror.",
+      "assistant_message": "...",
+      "native_action": {
+        "raw": "...",
+        "raw_tool_plan": []
+      },
+      "trace": {
+        "raw_tool_plan": [],
+        "raw_tool_outputs": null,
+        "recommended_item_ids": []
+      }
     }
   ]
 }
 ```
 
 Each turn contains `assistant_message`, `native_action.raw`, and `trace` fields.
+`recommended_item_ids` is currently reserved for future item-id extraction and
+may be empty in the v0 bridge.
 The smoke test requires RecAI, downloaded InteRecAgent resources, and API
 credentials. It is not part of the default unit test path.
 

@@ -100,7 +100,7 @@ Suggested persona variants:
 - wants a light romantic comedy set in a city,
 - wants a documentary or realistic survival/adventure story.
 
-Expected behavior:
+Planned full local test behavior:
 
 - The recommendation bot should ask at least one clarification question when the
   request is underspecified.
@@ -108,12 +108,17 @@ Expected behavior:
   open-world movie knowledge.
 - Explanations should cite catalog metadata such as genre, tone, plot summary,
   runtime, or language.
-- The local test should log which item ids were recommended.
+- A future evaluator should extract and log which item ids were recommended.
 
 ## Implementation Boundary
 
-For v0, do not build full conversational evaluation yet. The movie local test is
-only intended to validate:
+For v0, do not build full conversational evaluation yet. The current
+InteRecAgent smoke test is only intended to validate provider-to-InteRecAgent
+conversation flow and the native action/trace envelope. Automatic recommended
+item id extraction and validation are future work; the v0 bridge returns
+`recommended_item_ids: []`.
+
+Future movie catalog evaluation should validate:
 
 1. the normalized catalog item schema,
 2. loading a small item list,
@@ -147,6 +152,22 @@ the preserved InteRecAgent native action, and trace fields:
       "conversation_id": "local_movie_smoke",
       "turn_id": 1,
       "user_message": "Can you recommend a movie for tonight?",
+      "assistant_message": "...",
+      "native_action": {
+        "raw": "...",
+        "raw_tool_plan": []
+      },
+      "trace": {
+        "raw_tool_plan": [],
+        "raw_tool_outputs": null,
+        "recommended_item_ids": []
+      }
+    },
+    {
+      "backend": "interecagent",
+      "conversation_id": "local_movie_smoke",
+      "turn_id": 2,
+      "user_message": "I want something tense and mysterious, but not horror.",
       "assistant_message": "...",
       "native_action": {
         "raw": "...",
