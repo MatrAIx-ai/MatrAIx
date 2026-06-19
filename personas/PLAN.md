@@ -331,7 +331,7 @@ Turn the raw pool into clean, trustworthy data, and *measure* that quality (our 
 ---
 
 ## 📊 Task 4 — MatrAIxPersonaBench
-**Owner(s):** @Eliza_Fan, @Keyang Xuan, @Wenkai Li, @isgla (add more as needed)
+**Owner(s):** @Eliza_Fan, @Keyang Xuan, @Wenkai Li, @isgla, @Peiyang-Song (add more as needed)
 Build the coreset for benchmarking **persona simulation quality**. For each persona, derive concrete tasks + evaluation tied to specific profile attributes.
 
 - For each persona → generate task(s) targeting one or more attributes.
