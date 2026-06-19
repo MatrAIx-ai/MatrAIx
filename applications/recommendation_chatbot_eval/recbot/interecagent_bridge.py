@@ -6,6 +6,7 @@ import os
 import re
 import sys
 import tempfile
+from ast import literal_eval
 from contextlib import redirect_stdout
 from pathlib import Path
 from typing import Any
@@ -131,6 +132,54 @@ class _HardFilterSelectAdapter:
         return self._tool.run(_force_hard_filter_selectable_sql(inputs))
 
 
+class _SeedExcludingSimilarityAdapter:
+    def __init__(self, tool: Any, item_corpus: Any, candidate_buffer: Any) -> None:
+        self._tool = tool
+        self._item_corpus = item_corpus
+        self._candidate_buffer = candidate_buffer
+        self.name = tool.name
+        self.desc = tool.desc
+
+    def run(self, inputs: str) -> str:
+        output = self._tool.run(inputs)
+        seed_ids = self._seed_ids(inputs)
+        if not seed_ids:
+            return output
+        candidates = self._candidate_buffer.get()
+        filtered = [candidate for candidate in candidates if candidate not in set(seed_ids)]
+        if filtered == candidates:
+            return output
+        self._candidate_buffer.push(self.name, filtered)
+        suffix = f" Removed seed items {seed_ids} from similarity candidates."
+        if getattr(self._candidate_buffer, "tracker", None):
+            self._candidate_buffer.tracker[-1]["output"] = (
+                str(self._candidate_buffer.tracker[-1].get("output", "")) + suffix
+            )
+        return output + suffix
+
+    def _seed_ids(self, inputs: str) -> list[int]:
+        try:
+            titles = literal_eval(inputs)
+        except Exception:
+            try:
+                titles = json.loads(inputs)
+            except Exception:
+                return []
+        if isinstance(titles, str):
+            titles = [titles]
+        if not isinstance(titles, list) or not titles:
+            return []
+        try:
+            matched_titles = self._item_corpus.fuzzy_match(titles, "title")
+            info = self._item_corpus.convert_title_2_info(matched_titles, col_names="id")
+            ids = info["id"]
+        except Exception:
+            return []
+        if isinstance(ids, int):
+            return [ids]
+        return [int(item_id) for item_id in ids]
+
+
 def _prepare_imports(interecagent_root: str, domain: str, require_resources: bool = False) -> None:
     root = Path(interecagent_root).expanduser().resolve()
     if not root.exists():
@@ -230,13 +279,17 @@ def _build_interecagent(domain: str):
                 max_candidates_num=max_candidate_num,
             )
         ),
-        "SoftFilterTool": SimilarItemTool(
-            name=tool_names["SoftFilterTool"],
-            desc=SOFT_FILTER_TOOL_DESC.format(**domain_map),
-            item_sim_path=ITEM_SIM_FILE,
-            item_corups=item_corpus,
-            buffer=candidate_buffer,
-            top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
+        "SoftFilterTool": _SeedExcludingSimilarityAdapter(
+            SimilarItemTool(
+                name=tool_names["SoftFilterTool"],
+                desc=SOFT_FILTER_TOOL_DESC.format(**domain_map),
+                item_sim_path=ITEM_SIM_FILE,
+                item_corups=item_corpus,
+                buffer=candidate_buffer,
+                top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
+            ),
+            item_corpus,
+            candidate_buffer,
         ),
         "MapTool": MapTool(
             name=tool_names["MapTool"],

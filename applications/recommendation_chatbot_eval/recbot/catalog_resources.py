@@ -18,6 +18,7 @@ _USE_COLS = [
     "title",
     "tags",
     "description",
+    "movie_description",
     "display_text",
     "visited_num",
     "release_year",
@@ -124,11 +125,12 @@ def _to_recai_row(internal_id: int, item: dict[str, Any]) -> dict[str, Any]:
     metadata = item.get("metadata") if isinstance(item.get("metadata"), dict) else {}
     categories = item.get("categories") if isinstance(item.get("categories"), list) else []
     return {
+        "description": str(item.get("description") or ""),
         "id": internal_id,
         "external_id": str(item["item_id"]),
         "title": str(item["title"]),
         "tags": [str(category) for category in categories if category is not None],
-        "description": str(item.get("description") or ""),
+        "movie_description": str(item.get("description") or ""),
         "display_text": str(item.get("display_text") or item.get("description") or item["title"]),
         "visited_num": _visited_num(item),
         "release_year": _metadata_number(metadata, "release_year"),
@@ -145,6 +147,7 @@ def _dummy_row() -> dict[str, Any]:
         "title": "__dummy__",
         "tags": ["__dummy__"],
         "description": "",
+        "movie_description": "",
         "display_text": "",
         "visited_num": 0,
         "release_year": 0,
@@ -191,6 +194,7 @@ def _column_descriptions() -> dict[str, str]:
         "title": "Human-readable item title.",
         "tags": "Comma-separated normalized item categories.",
         "description": "Source item description, plot, or product detail.",
+        "movie_description": "Alias of description for RecAI movie-domain lookup prompts.",
         "display_text": "Combined title, description, and metadata text for recommendation reasoning.",
         "visited_num": "Popularity-like count derived from source catalog signals.",
         "release_year": "Release year when available, otherwise 0.",

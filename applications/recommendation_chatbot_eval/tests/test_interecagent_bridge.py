@@ -7,6 +7,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from unittest.mock import patch
 
 from recbot.interecagent_bridge import (
+    _SeedExcludingSimilarityAdapter,
     _build_chat_history,
     _force_hard_filter_selectable_sql,
     _last_recorded_plan,
@@ -48,6 +49,47 @@ class FakeEmptyPlanAgent:
 
     def run(self, data, chat_history):
         return "Something went wrong, please retry."
+
+
+class FakeSimilarityInnerTool:
+    name = "Movie Similarity Filtering Tool"
+    desc = "find similar movies"
+
+    def __init__(self, buffer):
+        self.buffer = buffer
+
+    def run(self, inputs):
+        self.buffer.memory = [1, 2, 3]
+        self.buffer.track(self.name, inputs, "native output")
+        return "native output"
+
+
+class FakeSeedCorpus:
+    def fuzzy_match(self, value, col):
+        if isinstance(value, list):
+            return value
+        return value
+
+    def convert_title_2_info(self, titles, col_names=None):
+        title_to_id = {"Aurora Station": 1}
+        if isinstance(titles, str):
+            return {"id": title_to_id[titles]}
+        return {"id": [title_to_id[title] for title in titles if title in title_to_id]}
+
+
+class FakeSeedBuffer:
+    def __init__(self):
+        self.memory = []
+        self.tracker = []
+
+    def get(self):
+        return list(self.memory)
+
+    def push(self, tool, candidates):
+        self.memory = list(candidates)
+
+    def track(self, tool, input=None, output=None):
+        self.tracker.append({"tool": tool, "input": input, "output": output})
 
 
 class InteRecAgentBridgeTest(unittest.TestCase):
@@ -161,6 +203,17 @@ class InteRecAgentBridgeTest(unittest.TestCase):
             normalized,
             "SELECT * FROM movie_information WHERE display_text LIKE '%Mystery%' AND display_text NOT LIKE '%Horror%'",
         )
+
+    def test_seed_excluding_similarity_adapter_removes_seed_item_from_candidates(self):
+        buffer = FakeSeedBuffer()
+        inner = FakeSimilarityInnerTool(buffer)
+        adapter = _SeedExcludingSimilarityAdapter(inner, FakeSeedCorpus(), buffer)
+
+        output = adapter.run('["Aurora Station"]')
+
+        self.assertEqual(buffer.get(), [2, 3])
+        self.assertIn("Removed seed items", output)
+        self.assertIn("Removed seed items", buffer.tracker[-1]["output"])
 
     def test_run_turn_keeps_unparsed_plan_out_of_trace_plan_list(self):
         request = RecBotRequest(

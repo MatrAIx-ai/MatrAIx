@@ -73,6 +73,7 @@ class CatalogResourcesTest(unittest.TestCase):
             self.assertTrue(spec.settings_file.exists())
             self.assertTrue(spec.item_sim_file.exists())
             self.assertIn("external_id", spec.use_cols)
+            self.assertIn("movie_description", spec.use_cols)
             self.assertIn("tags", spec.categorical_cols)
 
             settings = json.loads(spec.settings_file.read_text(encoding="utf-8"))
@@ -90,6 +91,10 @@ class CatalogResourcesTest(unittest.TestCase):
             self.assertEqual(rows[1]["id"], 1)
             self.assertEqual(rows[1]["external_id"], "movie:aurora_station")
             self.assertEqual(rows[1]["title"], "Aurora Station")
+            self.assertEqual(
+                rows[1]["movie_description"],
+                "A cerebral science fiction thriller on an orbital station.",
+            )
             self.assertIn("Science Fiction", rows[1]["tags"])
             self.assertEqual(rows[2]["id"], 2)
 
