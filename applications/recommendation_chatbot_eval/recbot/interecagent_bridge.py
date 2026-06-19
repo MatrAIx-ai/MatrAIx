@@ -387,6 +387,14 @@ def _recommended_item_ids(agent: Any) -> list[str]:
     return []
 
 
+def _raw_tool_outputs(agent: Any) -> Any:
+    candidate_buffer = getattr(agent, "candidate_buffer", None)
+    tracker = getattr(candidate_buffer, "tracker", None)
+    if tracker:
+        return tracker
+    return getattr(candidate_buffer, "track_info", None)
+
+
 def _repair_empty_tool_plan_response(response: str, native_action: Any) -> str:
     if (
         response.startswith("Something went wrong, please retry.")
@@ -424,7 +432,7 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     raw_tool_plan = native_action.raw_tool_plan if isinstance(native_action.raw_tool_plan, list) else []
     trace = RecBotTrace(
         raw_tool_plan=raw_tool_plan,
-        raw_tool_outputs=getattr(getattr(agent, "candidate_buffer", None), "track_info", None),
+        raw_tool_outputs=_raw_tool_outputs(agent),
         recommended_item_ids=_recommended_item_ids(agent),
     )
     return RecBotTurnResult(

@@ -51,6 +51,41 @@ class FakeEmptyPlanAgent:
         return "Something went wrong, please retry."
 
 
+class FakeTrackerAgent:
+    def __init__(self):
+        self._plan_record_cache = {
+            "traj": [
+                {
+                    "role": "plan",
+                    "content": (
+                        "Action: ToolExecutor\n"
+                        "Action Input: [{\"tool_name\": \"Movie Properties Filtering Tool\", "
+                        "\"input\": \"SELECT * FROM movie_information\"}]"
+                    ),
+                }
+            ]
+        }
+        self.candidate_buffer = FakeTrackerBuffer()
+
+    def run(self, data, chat_history):
+        return "Here are two movies."
+
+
+class FakeTrackerBuffer:
+    def __init__(self):
+        self.tracker = [
+            {
+                "tool": "Movie Properties Filtering Tool",
+                "input": "SELECT * FROM movie_information",
+                "output": "After Movie Properties Filtering Tool: There are 2 eligible items.",
+            }
+        ]
+
+    @property
+    def track_info(self):
+        return "0: Movie Properties Filtering Tool (input: ..., output: ...);"
+
+
 class FakeSimilarityInnerTool:
     name = "Movie Similarity Filtering Tool"
     desc = "find similar movies"
@@ -232,6 +267,31 @@ class InteRecAgentBridgeTest(unittest.TestCase):
         self.assertEqual(result.assistant_message, "fallback response")
         self.assertEqual(result.native_action.raw_tool_plan, "not-json")
         self.assertEqual(result.trace.raw_tool_plan, [])
+
+    def test_run_turn_captures_recai_tracker_as_raw_tool_outputs(self):
+        request = RecBotRequest(
+            conversation_id="episode_001",
+            turn_id=1,
+            messages=[ChatMessage(role="user", content="Recommend a thriller.")],
+        )
+
+        with patch.dict(os.environ, {"INTERECAGENT_ROOT": "/fake/root"}, clear=True):
+            with patch("recbot.interecagent_bridge._prepare_imports"), patch(
+                "recbot.interecagent_bridge._build_interecagent",
+                return_value=FakeTrackerAgent(),
+            ):
+                result = run_turn(request)
+
+        self.assertEqual(
+            result.trace.raw_tool_outputs,
+            [
+                {
+                    "tool": "Movie Properties Filtering Tool",
+                    "input": "SELECT * FROM movie_information",
+                    "output": "After Movie Properties Filtering Tool: There are 2 eligible items.",
+                }
+            ],
+        )
 
     def test_run_turn_exposes_current_user_request_for_catalog_ranker(self):
         request = RecBotRequest(
