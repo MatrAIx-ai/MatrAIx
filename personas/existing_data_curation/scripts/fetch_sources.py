@@ -8,6 +8,7 @@ Use --mode full for full artifact download.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import os
 import shutil
@@ -27,6 +28,21 @@ DEFAULT_TARGET_DIR = BASE_DIR / "raw"
 
 NEMOTRON_REPO = "nvidia/Nemotron-Personas-USA"
 PERSONAHUB_REPO = "proj-persona/PersonaHub"
+PANDORA_REPO = "jingjietan/pandora-big5"
+SYNTHPERSONA_REPO = "SynthLabsAI/PERSONA"  # gated: accept terms on HF + set HF_TOKEN
+
+SYNTHETIC_PERSONA_CHAT_REPO = "google/Synthetic-Persona-Chat"
+SYNTHETIC_PERSONA_CHAT_CSV_FILES = [
+    "data/Synthetic-Persona-Chat_train.csv",
+    "data/Synthetic-Persona-Chat_valid.csv",
+    "data/Synthetic-Persona-Chat_test.csv",
+    "data/New-Persona-New-Conversations.csv",
+]
+SYNTHETIC_PERSONA_CHAT_COLUMNS = (
+    "user 1 personas",
+    "user 2 personas",
+    "Best Generated Conversation",
+)
 
 PERSONAHUB_SMALL_FILES = {
     "math": "math.jsonl",
@@ -207,11 +223,119 @@ def fetch_ml_primex(_: argparse.Namespace, target_root: Path) -> None:
     stream_download(PRIMEX_URL, out_path)
 
 
+def _check_synthetic_persona_chat_columns(columns: tuple[str, ...]) -> None:
+    if columns != SYNTHETIC_PERSONA_CHAT_COLUMNS:
+        raise RuntimeError(
+            "Synthetic-Persona-Chat column mismatch: "
+            f"expected {SYNTHETIC_PERSONA_CHAT_COLUMNS}, got {columns}"
+        )
+
+
+def fetch_synthetic_persona_chat(args: argparse.Namespace, target_root: Path) -> None:
+    out_dir = target_root / "google_synthetic_persona_chat"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full Synthetic-Persona-Chat dataset (all CSV files).")
+        snapshot_download(
+            repo_id=SYNTHETIC_PERSONA_CHAT_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", *SYNTHETIC_PERSONA_CHAT_CSV_FILES],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        for relative_path in SYNTHETIC_PERSONA_CHAT_CSV_FILES:
+            csv_path = out_dir / relative_path
+            if not csv_path.exists():
+                raise RuntimeError(
+                    f"Missing expected Synthetic-Persona-Chat file: {csv_path}"
+                )
+            with open(csv_path, newline="", encoding="utf-8") as fh:
+                columns = tuple(csv.DictReader(fh).fieldnames or ())
+            _check_synthetic_persona_chat_columns(columns)
+        return
+
+    # Sample mode streams Part 1 train only via load_dataset (not valid/test or Part 2).
+    # Use --mode full for all four CSV files listed in SYNTHETIC_PERSONA_CHAT_CSV_FILES.
+    sample_out = out_dir / f"synthetic_persona_chat_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=SYNTHETIC_PERSONA_CHAT_REPO,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+        config_name=None,
+    )
+
+
+def fetch_pandora(args: argparse.Namespace, target_root: Path) -> None:
+    out_dir = target_root / "pandora_big5"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full PANDORA Big5 dataset (all parquet shards).")
+        snapshot_download(
+            repo_id=PANDORA_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", "data/*.parquet"],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        return
+
+    sample_out = out_dir / f"pandora_big5_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=PANDORA_REPO,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+        config_name=None,
+    )
+
+
+def fetch_synthpersona(args: argparse.Namespace, target_root: Path) -> None:
+    # SynthLabsAI/PERSONA is gated: accept the dataset terms on Hugging Face and
+    # pass a token (--hf-token or HF_TOKEN env var) or the download will 401.
+    if not args.hf_token:
+        log(
+            "WARNING: SynthLabsAI/PERSONA is gated; set HF_TOKEN (or --hf-token) "
+            "after accepting the terms on the HF dataset page, or this will fail."
+        )
+
+    out_dir = target_root / "synthlabs_persona"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full PERSONA dataset (all parquet shards).")
+        snapshot_download(
+            repo_id=SYNTHPERSONA_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", "data/*.parquet"],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        return
+
+    sample_out = out_dir / f"synthlabs_persona_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=SYNTHPERSONA_REPO,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+        config_name=None,
+    )
+
+
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--source",
-        choices=["all", "nemotron", "personahub", "oasis", "ml_primex"],
+        choices=["all", "nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora", "synthpersona"],
         default="all",
         help="Which source to fetch.",
     )
@@ -281,10 +405,15 @@ def main(argv: Iterable[str]) -> int:
         "personahub": fetch_personahub,
         "oasis": fetch_oasis,
         "ml_primex": fetch_ml_primex,
+        "synthetic_persona_chat": fetch_synthetic_persona_chat,
+        "pandora": fetch_pandora,
+        "synthpersona": fetch_synthpersona,
     }
 
+    # "synthpersona" (SynthLabsAI/PERSONA) is intentionally excluded from "all": it is
+    # gated and needs HF_TOKEN, so opt in explicitly with --source synthpersona.
     selected_sources = (
-        ["nemotron", "personahub", "oasis", "ml_primex"]
+        ["nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora"]
         if args.source == "all"
         else [args.source]
     )
