@@ -1,5 +1,8 @@
 .DS_Store
 
+# Local secrets and machine-specific overrides. Never commit API keys.
+.env.local
+
 # Local dataset materialization. These files are too large and often carry
 # dataset-specific license terms; keep only manifests, schemas, and tiny fixtures
 # in git.

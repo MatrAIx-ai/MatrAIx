@@ -8,10 +8,28 @@ from pathlib import Path
 
 
 APP_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = APP_ROOT.parents[1]
 sys.path.insert(0, str(APP_ROOT))
 
 from recbot.provider import ExternalCommandConfig, ExternalCommandRecBotProvider, ProviderError
 from recbot.types import ChatMessage, RecBotRequest
+
+
+def _load_local_env(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        if not key:
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+            value = value[1:-1]
+        os.environ.setdefault(key, value)
 
 
 def _set_default_catalog_env(domain: str) -> None:
@@ -36,6 +54,8 @@ def _build_provider() -> ExternalCommandRecBotProvider:
 
 
 def main() -> int:
+    _load_local_env(REPO_ROOT / ".env.local")
+
     parser = argparse.ArgumentParser(description="Chat with the catalog-backed movie RecBot.")
     parser.add_argument("--conversation-id", default="local_movie_chat")
     parser.add_argument("--domain", default=os.environ.get("INTERECAGENT_DOMAIN", "movie"))
