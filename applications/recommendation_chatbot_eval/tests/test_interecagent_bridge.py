@@ -3,11 +3,12 @@ import os
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 from unittest.mock import patch
 
 from recbot.interecagent_bridge import (
     _build_chat_history,
+    _force_hard_filter_selectable_sql,
     _last_recorded_plan,
     _latest_user_message,
     _planning_recording_file,
@@ -16,6 +17,7 @@ from recbot.interecagent_bridge import (
     run_turn,
 )
 from recbot.types import ChatMessage, RecBotRequest
+from recbot.types import RecBotTurnResult
 
 
 class FakeAgent:
@@ -30,6 +32,22 @@ class FakeAgent:
 
     def run(self, data, chat_history):
         return "fallback response"
+
+
+class FakeEmptyPlanAgent:
+    def __init__(self):
+        self._plan_record_cache = {
+            "traj": [
+                {
+                    "role": "plan",
+                    "content": "Action: ToolExecutor\nAction Input: []",
+                }
+            ]
+        }
+        self.candidate_buffer = type("FakeCandidateBuffer", (), {"track_info": ""})()
+
+    def run(self, data, chat_history):
+        return "Something went wrong, please retry."
 
 
 class InteRecAgentBridgeTest(unittest.TestCase):
@@ -124,6 +142,26 @@ class InteRecAgentBridgeTest(unittest.TestCase):
 
         self.assertEqual(_last_recorded_plan(agent), "latest plan")
 
+    def test_force_hard_filter_selectable_sql_keeps_where_clause_and_selects_all(self):
+        sql = "SELECT title FROM movie_information WHERE tags LIKE '%Thriller%' ORDER BY visited_num DESC"
+
+        normalized = _force_hard_filter_selectable_sql(sql)
+
+        self.assertEqual(
+            normalized,
+            "SELECT * FROM movie_information WHERE display_text LIKE '%Thriller%' ORDER BY visited_num DESC",
+        )
+
+    def test_force_hard_filter_selectable_sql_preserves_unknown_negative_tags(self):
+        sql = "SELECT title FROM movie_information WHERE tags LIKE '%Mystery%' AND tags NOT LIKE '%Horror%'"
+
+        normalized = _force_hard_filter_selectable_sql(sql)
+
+        self.assertEqual(
+            normalized,
+            "SELECT * FROM movie_information WHERE display_text LIKE '%Mystery%' AND display_text NOT LIKE '%Horror%'",
+        )
+
     def test_run_turn_keeps_unparsed_plan_out_of_trace_plan_list(self):
         request = RecBotRequest(
             conversation_id="episode_001",
@@ -161,6 +199,24 @@ class InteRecAgentBridgeTest(unittest.TestCase):
                 "I like Batman. Recommend a movie.",
             )
 
+    def test_run_turn_repairs_empty_tool_plan_failure_as_clarification(self):
+        request = RecBotRequest(
+            conversation_id="episode_001",
+            turn_id=1,
+            messages=[ChatMessage(role="user", content="I want to watch a movie.")],
+        )
+
+        with patch.dict(os.environ, {"INTERECAGENT_ROOT": "/fake/root"}, clear=True):
+            with patch("recbot.interecagent_bridge._prepare_imports"), patch(
+                "recbot.interecagent_bridge._build_interecagent",
+                return_value=FakeEmptyPlanAgent(),
+            ):
+                result = run_turn(request)
+
+        self.assertIn("What kind of movie", result.assistant_message)
+        self.assertNotIn("Something went wrong", result.assistant_message)
+        self.assertEqual(result.native_action.raw_tool_plan, [])
+
     def test_planning_recording_file_uses_env_or_default_temp_path(self):
         with patch.dict(os.environ, {"INTERECAGENT_PLANNING_RECORDING_FILE": "/tmp/custom.jsonl"}):
             self.assertEqual(_planning_recording_file(), "/tmp/custom.jsonl")
@@ -187,6 +243,36 @@ class InteRecAgentBridgeTest(unittest.TestCase):
 
         self.assertEqual(exit_code, 1)
         self.assertIn("INTERECAGENT_ROOT must be set", stderr.getvalue())
+
+    def test_main_keeps_backend_stdout_noise_out_of_result_json(self):
+        payload = (
+            '{"conversation_id":"episode_001","turn_id":1,'
+            '"messages":[{"role":"user","content":"Recommend a thriller."}]}'
+        )
+        stdout = io.StringIO()
+        stderr = io.StringIO()
+
+        def noisy_run_turn(request):
+            print("Columns in item corups: noisy backend output")
+            return RecBotTurnResult(
+                backend="interecagent",
+                conversation_id=request.conversation_id,
+                turn_id=request.turn_id,
+                user_message=request.latest_user_message,
+                assistant_message="A recommendation.",
+            )
+
+        with patch("recbot.interecagent_bridge.run_turn", side_effect=noisy_run_turn):
+            with patch("sys.stdin", io.StringIO(payload)):
+                with redirect_stdout(stdout), redirect_stderr(stderr):
+                    exit_code = main()
+
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(
+            RecBotTurnResult.from_dict(__import__("json").loads(stdout.getvalue())).assistant_message,
+            "A recommendation.",
+        )
+        self.assertIn("noisy backend output", stderr.getvalue())
 
 
 if __name__ == "__main__":

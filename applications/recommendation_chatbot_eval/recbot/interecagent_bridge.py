@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import json
+import io
 import os
+import re
 import sys
 import tempfile
+from contextlib import redirect_stdout
 from pathlib import Path
 from typing import Any
 
@@ -99,6 +102,35 @@ def _catalog_resource_spec(domain: str) -> RecAIResourceSpec:
     )
 
 
+def _force_hard_filter_selectable_sql(sql: str) -> str:
+    selectable_sql = re.sub(
+        r"^\s*SELECT\s+.+?\s+FROM\s+",
+        "SELECT * FROM ",
+        sql,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return re.sub(
+        r"\btags\s+((?:NOT\s+)?LIKE)\s+",
+        r"display_text \1 ",
+        selectable_sql,
+        flags=re.IGNORECASE,
+    )
+
+
+class _HardFilterSelectAdapter:
+    def __init__(self, tool: Any) -> None:
+        self._tool = tool
+        self.name = tool.name
+        self.desc = (
+            tool.desc
+            + "\nThe SELECT clause is normalized by MatrAIx so candidate ids remain available to the native filter tool."
+        )
+
+    def run(self, inputs: str) -> str:
+        return self._tool.run(_force_hard_filter_selectable_sql(inputs))
+
+
 def _prepare_imports(interecagent_root: str, domain: str, require_resources: bool = False) -> None:
     root = Path(interecagent_root).expanduser().resolve()
     if not root.exists():
@@ -189,12 +221,14 @@ def _build_interecagent(domain: str):
             item_corups=item_corpus,
             buffer=candidate_buffer,
         ),
-        "HardFilterTool": SQLSearchTool(
-            name=tool_names["HardFilterTool"],
-            desc=HARD_FILTER_TOOL_DESC.format(**domain_map),
-            item_corups=item_corpus,
-            buffer=candidate_buffer,
-            max_candidates_num=max_candidate_num,
+        "HardFilterTool": _HardFilterSelectAdapter(
+            SQLSearchTool(
+                name=tool_names["HardFilterTool"],
+                desc=HARD_FILTER_TOOL_DESC.format(**domain_map),
+                item_corups=item_corpus,
+                buffer=candidate_buffer,
+                max_candidates_num=max_candidate_num,
+            )
         ),
         "SoftFilterTool": SimilarItemTool(
             name=tool_names["SoftFilterTool"],
@@ -300,6 +334,19 @@ def _recommended_item_ids(agent: Any) -> list[str]:
     return []
 
 
+def _repair_empty_tool_plan_response(response: str, native_action: Any) -> str:
+    if (
+        response.startswith("Something went wrong, please retry.")
+        and isinstance(getattr(native_action, "raw_tool_plan", None), list)
+        and len(native_action.raw_tool_plan) == 0
+    ):
+        return (
+            "What kind of movie are you in the mood for? "
+            "You can tell me a genre, tone, or a movie you recently liked."
+        )
+    return response
+
+
 def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     interecagent_root = os.environ.get("INTERECAGENT_ROOT")
     if not interecagent_root:
@@ -320,6 +367,7 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     raw_plan = _last_recorded_plan(agent)
     native_raw = raw_plan if raw_plan else f"Final Answer: {response}"
     native_action = build_native_action(native_raw)
+    response = _repair_empty_tool_plan_response(response, native_action)
     raw_tool_plan = native_action.raw_tool_plan if isinstance(native_action.raw_tool_plan, list) else []
     trace = RecBotTrace(
         raw_tool_plan=raw_tool_plan,
@@ -339,10 +387,16 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
 
 def main() -> int:
     try:
+        stdout = sys.stdout
         payload = json.load(sys.stdin)
         request = RecBotRequest.from_dict(payload)
-        result = run_turn(request)
-        json.dump(result.to_dict(), sys.stdout)
+        backend_stdout = io.StringIO()
+        with redirect_stdout(backend_stdout):
+            result = run_turn(request)
+        backend_output = backend_stdout.getvalue()
+        if backend_output:
+            print(backend_output, file=sys.stderr, end="")
+        json.dump(result.to_dict(), stdout)
         return 0
     except Exception as exc:
         print(str(exc), file=sys.stderr)

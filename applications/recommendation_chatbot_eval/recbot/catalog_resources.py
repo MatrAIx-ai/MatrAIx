@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import csv
 import json
 import math
 import re
@@ -10,6 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 import numpy as np
+import pandas as pd
 
 
 _USE_COLS = [
@@ -75,7 +75,7 @@ def ensure_recai_resource_dir(
     resource_dir = Path(output_dir).expanduser().resolve()
     resource_dir.mkdir(parents=True, exist_ok=True)
 
-    item_info_file = resource_dir / "item_info.csv"
+    item_info_file = resource_dir / "item_info.parquet"
     table_col_desc_file = resource_dir / "table_col_desc.json"
     settings_file = resource_dir / "settings.json"
     item_sim_file = resource_dir / "item_sim.npy"
@@ -84,10 +84,7 @@ def ensure_recai_resource_dir(
     rows = [_dummy_row()] + [
         _to_recai_row(index, item) for index, item in enumerate(catalog_items, start=1)
     ]
-    with item_info_file.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
-        for row in rows:
-            writer.writerow([row[column] for column in _USE_COLS])
+    pd.DataFrame(rows, columns=_USE_COLS).to_parquet(item_info_file, index=False)
 
     table_col_desc_file.write_text(
         json.dumps(_column_descriptions(), indent=2, sort_keys=True),
@@ -130,7 +127,7 @@ def _to_recai_row(internal_id: int, item: dict[str, Any]) -> dict[str, Any]:
         "id": internal_id,
         "external_id": str(item["item_id"]),
         "title": str(item["title"]),
-        "tags": _join_values(categories),
+        "tags": [str(category) for category in categories if category is not None],
         "description": str(item.get("description") or ""),
         "display_text": str(item.get("display_text") or item.get("description") or item["title"]),
         "visited_num": _visited_num(item),
@@ -146,7 +143,7 @@ def _dummy_row() -> dict[str, Any]:
         "id": 0,
         "external_id": "__dummy__",
         "title": "__dummy__",
-        "tags": "",
+        "tags": ["__dummy__"],
         "description": "",
         "display_text": "",
         "visited_num": 0,

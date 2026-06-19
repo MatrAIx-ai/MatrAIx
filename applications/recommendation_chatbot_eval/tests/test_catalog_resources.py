@@ -1,10 +1,10 @@
-import csv
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 from recbot.catalog_resources import ensure_recai_resource_dir, load_catalog_items
 
@@ -76,22 +76,22 @@ class CatalogResourcesTest(unittest.TestCase):
             self.assertIn("tags", spec.categorical_cols)
 
             settings = json.loads(spec.settings_file.read_text(encoding="utf-8"))
-            self.assertEqual(settings["GAME_INFO_FILE"], "item_info.csv")
+            self.assertEqual(settings["GAME_INFO_FILE"], "item_info.parquet")
             self.assertEqual(settings["TABLE_COL_DESC_FILE"], "table_col_desc.json")
             self.assertEqual(settings["ITEM_SIM_FILE"], "item_sim.npy")
             self.assertEqual(settings["USE_COLS"], spec.use_cols)
             self.assertEqual(settings["CATEGORICAL_COLS"], ["tags"])
             self.assertIn("MODEL_CKPT_FILE", settings)
 
-            with spec.item_info_file.open(newline="", encoding="utf-8") as handle:
-                rows = list(csv.reader(handle))
-            self.assertEqual(rows[0][0], "0")
-            self.assertEqual(rows[0][1], "__dummy__")
-            self.assertEqual(rows[1][0], "1")
-            self.assertEqual(rows[1][1], "movie:aurora_station")
-            self.assertEqual(rows[1][2], "Aurora Station")
-            self.assertIn("Science Fiction", rows[1][3])
-            self.assertEqual(rows[2][0], "2")
+            rows = pd.read_parquet(spec.item_info_file).to_dict("records")
+            self.assertEqual(rows[0]["id"], 0)
+            self.assertEqual(rows[0]["external_id"], "__dummy__")
+            self.assertEqual(rows[0]["tags"], ["__dummy__"])
+            self.assertEqual(rows[1]["id"], 1)
+            self.assertEqual(rows[1]["external_id"], "movie:aurora_station")
+            self.assertEqual(rows[1]["title"], "Aurora Station")
+            self.assertIn("Science Fiction", rows[1]["tags"])
+            self.assertEqual(rows[2]["id"], 2)
 
             column_desc = json.loads(spec.table_col_desc_file.read_text(encoding="utf-8"))
             for column in spec.use_cols:
