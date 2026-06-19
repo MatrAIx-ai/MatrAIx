@@ -13,8 +13,18 @@ from recbot.provider import ExternalCommandConfig, ExternalCommandRecBotProvider
 from recbot.types import ChatMessage, RecBotRequest
 
 
+def _set_default_catalog_env() -> None:
+    os.environ.setdefault("INTERECAGENT_RESOURCE_MODE", "matraix_catalog")
+    os.environ.setdefault("INTERECAGENT_RANKER_MODE", "semantic_profile")
+    os.environ.setdefault(
+        "INTERECAGENT_CATALOG_PATH",
+        str(APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
+    )
+
+
 def main() -> int:
     try:
+        _set_default_catalog_env()
         bridge = APP_ROOT / "recbot" / "interecagent_bridge.py"
         python_executable = os.environ.get("INTERECAGENT_PYTHON", sys.executable)
         provider = ExternalCommandRecBotProvider(

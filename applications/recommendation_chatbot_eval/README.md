@@ -43,13 +43,21 @@ data/normalized/recommendation_catalogs/<source_name>/
 The RecBot provider layer gives MatrAIx a normalized request/result contract for
 external recommendation backends. For Microsoft RecAI/InteRecAgent, MatrAIx owns
 the `RecBotRequest`, `RecBotTurnResult`, subprocess provider, JSON bridge, and
-tests around that boundary. InteRecAgent remains the source of truth for
-conversational recommendation reasoning, tool planning, retrieval, ranking, and
-domain resources.
+tests around that boundary. The default InteRecAgent provider now uses the
+MatrAIx normalized catalog as the source of truth for the item universe, then
+generates a RecAI-compatible resource directory for RecAI's native lookup,
+filter, similarity, and mapping tools.
+
+Personalized ranking is handled by a catalog-backed semantic profile ranker by
+default because RecAI's native `RecModelTool` requires a UniRec checkpoint
+trained against the same item ids. If a catalog-aligned checkpoint is available,
+the provider can switch back to RecAI's native ranker with
+`INTERECAGENT_RANKER_MODE=native`.
 
 InteRecAgent native output is preserved inside the `RecBotTurnResult` envelope:
 `native_action.raw` carries the backend's native `Final Answer` or
 `Action ToolExecutor` text, while `trace` carries normalized inspection fields
 such as raw tool plans and tool outputs when available. See
 [INTERECAGENT_PROVIDER.md](INTERECAGENT_PROVIDER.md) for local setup,
-environment variables, smoke testing, and the default unit test command.
+environment variables, interactive chat, smoke testing, and the default unit
+test command.

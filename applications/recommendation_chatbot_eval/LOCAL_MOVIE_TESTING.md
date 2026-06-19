@@ -112,13 +112,13 @@ Planned full local test behavior:
 
 ## Implementation Boundary
 
-For v0, do not build full conversational evaluation yet. The current
-InteRecAgent smoke test is only intended to validate provider-to-InteRecAgent
-conversation flow and the native action/trace envelope. Automatic recommended
-item id extraction and validation are future work; the v0 bridge returns
-`recommended_item_ids: []`.
+The current InteRecAgent provider is catalog-backed by default. It converts the
+normalized movie catalog into a RecAI-compatible resource directory, uses RecAI's
+native lookup/filter/similarity/map tools, and replaces only the
+checkpoint-dependent personalized ranking tool with a semantic profile ranker
+unless `INTERECAGENT_RANKER_MODE=native` is explicitly set.
 
-Future movie catalog evaluation should validate:
+Movie catalog evaluation should validate:
 
 1. the normalized catalog item schema,
 2. loading a small item list,
@@ -127,17 +127,17 @@ Future movie catalog evaluation should validate:
 
 ## InteRecAgent Smoke Test
 
-After setting up Microsoft RecAI/InteRecAgent and downloading the movie
-resources, run this from the repository root:
+After setting up Microsoft RecAI/InteRecAgent and API credentials, run this from
+the repository root:
 
 ```sh
 PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/smoke_interecagent_movie.py
 ```
 
-This validates a persona-style user message through the MatrAIx provider to the
-existing InteRecAgent movie backend. It requires the external RecAI checkout,
-InteRecAgent resources, and API credentials; default unit tests do not run this
-real backend smoke test.
+This validates persona-style user messages through the MatrAIx provider to the
+catalog-backed InteRecAgent movie backend. It requires the external RecAI
+checkout and API credentials; default unit tests do not run this real backend
+smoke test.
 
 Expected output is one JSON container object with `conversation_id` and `turns`.
 Each entry in `turns` is a `RecBotTurnResult` containing the assistant response,
@@ -160,7 +160,7 @@ the preserved InteRecAgent native action, and trace fields:
       "trace": {
         "raw_tool_plan": [],
         "raw_tool_outputs": null,
-        "recommended_item_ids": []
+        "recommended_item_ids": ["movie_fixture:aurora_station"]
       }
     },
     {
@@ -181,4 +181,21 @@ the preserved InteRecAgent native action, and trace fields:
     }
   ]
 }
+```
+
+## Interactive Chat
+
+For a manual multi-turn conversation, run:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py
+```
+
+The script keeps the conversation history in memory, so you can start broad and
+then add preferences:
+
+```text
+I want to watch a movie.
+Something tense and mysterious, but not horror.
+I liked Aurora Station. Anything similar?
 ```

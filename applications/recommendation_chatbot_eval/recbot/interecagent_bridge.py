@@ -9,10 +9,13 @@ from typing import Any
 
 
 APP_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = APP_ROOT.parents[1]
 if str(APP_ROOT) not in sys.path:
     sys.path.insert(0, str(APP_ROOT))
 
+from recbot.catalog_resources import RecAIResourceSpec, ensure_recai_resource_dir
 from recbot.native_contract import build_native_action
+from recbot.semantic_ranker import SemanticProfileRankingTool
 from recbot.types import RecBotRequest, RecBotTrace, RecBotTurnResult
 
 
@@ -54,14 +57,56 @@ def _planning_recording_file() -> str:
     )
 
 
-def _prepare_imports(interecagent_root: str, domain: str) -> None:
+def _resource_mode() -> str:
+    return os.environ.get("INTERECAGENT_RESOURCE_MODE", "matraix_catalog")
+
+
+def _ranker_mode(resource_mode: str) -> str:
+    default = "semantic_profile" if resource_mode == "matraix_catalog" else "native"
+    return os.environ.get("INTERECAGENT_RANKER_MODE", default)
+
+
+def _default_catalog_path(domain: str) -> Path:
+    if domain != "movie":
+        raise RuntimeError(
+            "INTERECAGENT_CATALOG_PATH must be set for non-movie catalog-backed domains"
+        )
+    return APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"
+
+
+def _catalog_resource_output_dir(domain: str) -> Path:
+    configured = os.environ.get("INTERECAGENT_GENERATED_RESOURCE_DIR")
+    if configured:
+        return Path(configured).expanduser().resolve()
+    return (
+        REPO_ROOT
+        / "data"
+        / "cache"
+        / "recommendation_chatbot_eval"
+        / "recai_resources"
+        / domain
+    )
+
+
+def _catalog_resource_spec(domain: str) -> RecAIResourceSpec:
+    catalog_path = Path(
+        os.environ.get("INTERECAGENT_CATALOG_PATH", str(_default_catalog_path(domain)))
+    )
+    return ensure_recai_resource_dir(
+        catalog_path,
+        _catalog_resource_output_dir(domain),
+        domain,
+    )
+
+
+def _prepare_imports(interecagent_root: str, domain: str, require_resources: bool = False) -> None:
     root = Path(interecagent_root).expanduser().resolve()
     if not root.exists():
         raise RuntimeError(f"INTERECAGENT_ROOT does not exist: {root}")
     if not (root / "llm4crs").exists():
         raise RuntimeError(f"INTERECAGENT_ROOT must point to the InteRecAgent directory: {root}")
     resources_dir = root / "resources" / domain
-    if not resources_dir.exists():
+    if require_resources and not resources_dir.exists():
         raise RuntimeError(
             f"RecAI resources for domain '{domain}' are missing at {resources_dir}. "
             "Download and unpack the ready-to-run InteRecAgent resources before running the smoke test."
@@ -76,14 +121,6 @@ def _build_interecagent(domain: str):
     from llm4crs.agent_plan_first_openai import CRSAgentPlanFirstOpenAI
     from llm4crs.buffer import CandidateBuffer
     from llm4crs.corups import BaseGallery
-    from llm4crs.environ_variables import (
-        CATEGORICAL_COLS,
-        GAME_INFO_FILE,
-        ITEM_SIM_FILE,
-        MODEL_CKPT_FILE,
-        TABLE_COL_DESC_FILE,
-        USE_COLS,
-    )
     from llm4crs.mapper import MapTool
     from llm4crs.prompt import (
         CANDIDATE_STORE_TOOL_DESC,
@@ -95,9 +132,34 @@ def _build_interecagent(domain: str):
         TOOL_NAMES,
     )
     from llm4crs.query import QueryTool
-    from llm4crs.ranking import RecModelTool
     from llm4crs.retrieval import SQLSearchTool, SimilarItemTool
     from llm4crs.utils import FuncToolWrapper
+
+    resource_mode = _resource_mode()
+    if resource_mode == "recai_resources":
+        from llm4crs.environ_variables import (
+            CATEGORICAL_COLS,
+            GAME_INFO_FILE,
+            ITEM_SIM_FILE,
+            MODEL_CKPT_FILE,
+            TABLE_COL_DESC_FILE,
+            USE_COLS,
+        )
+    elif resource_mode == "matraix_catalog":
+        spec = _catalog_resource_spec(domain)
+        GAME_INFO_FILE = str(spec.item_info_file)
+        TABLE_COL_DESC_FILE = str(spec.table_col_desc_file)
+        ITEM_SIM_FILE = str(spec.item_sim_file)
+        MODEL_CKPT_FILE = os.environ.get(
+            "INTERECAGENT_MODEL_CKPT_FILE",
+            str(spec.model_ckpt_file),
+        )
+        USE_COLS = spec.use_cols
+        CATEGORICAL_COLS = spec.categorical_cols
+    else:
+        raise RuntimeError(
+            "INTERECAGENT_RESOURCE_MODE must be 'matraix_catalog' or 'recai_resources'"
+        )
 
     domain_map = {"item": domain, "Item": domain.capitalize(), "ITEM": domain.upper()}
     tool_names = {key: value.format(**domain_map) for key, value in TOOL_NAMES.items()}
@@ -142,14 +204,6 @@ def _build_interecagent(domain: str):
             buffer=candidate_buffer,
             top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
         ),
-        "RankingTool": RecModelTool(
-            name=tool_names["RankingTool"],
-            desc=RANKING_TOOL_DESC.format(**domain_map),
-            model_fpath=MODEL_CKPT_FILE,
-            item_corups=item_corpus,
-            buffer=candidate_buffer,
-            rec_num=_env_int("INTERECAGENT_RANK_NUM", 100),
-        ),
         "MapTool": MapTool(
             name=tool_names["MapTool"],
             desc=MAP_TOOL_DESC.format(**domain_map),
@@ -157,6 +211,32 @@ def _build_interecagent(domain: str):
             buffer=candidate_buffer,
         ),
     }
+    map_tool = tools.pop("MapTool")
+    ranker_mode = _ranker_mode(resource_mode)
+    if ranker_mode == "native":
+        from llm4crs.ranking import RecModelTool
+
+        tools["RankingTool"] = RecModelTool(
+            name=tool_names["RankingTool"],
+            desc=RANKING_TOOL_DESC.format(**domain_map),
+            model_fpath=MODEL_CKPT_FILE,
+            item_corups=item_corpus,
+            buffer=candidate_buffer,
+            rec_num=_env_int("INTERECAGENT_RANK_NUM", 100),
+        )
+    elif ranker_mode == "semantic_profile":
+        tools["RankingTool"] = SemanticProfileRankingTool(
+            name=tool_names["RankingTool"],
+            desc=RANKING_TOOL_DESC.format(**domain_map),
+            item_corups=item_corpus,
+            buffer=candidate_buffer,
+            rec_num=_env_int("INTERECAGENT_RANK_NUM", 100),
+        )
+    else:
+        raise RuntimeError(
+            "INTERECAGENT_RANKER_MODE must be 'semantic_profile' or 'native'"
+        )
+    tools["MapTool"] = map_tool
     agent = CRSAgentPlanFirstOpenAI(
         domain,
         tools,
@@ -190,16 +270,52 @@ def _last_recorded_plan(agent: Any) -> str | None:
     return None
 
 
+def _recommended_item_ids(agent: Any) -> list[str]:
+    candidate_buffer = getattr(agent, "candidate_buffer", None)
+    tracker = getattr(candidate_buffer, "tracker", [])
+    item_corpus = getattr(agent, "item_corups", None)
+    if not isinstance(tracker, list) or item_corpus is None:
+        return []
+    for entry in reversed(tracker):
+        if not isinstance(entry, dict):
+            continue
+        tool_name = str(entry.get("tool", ""))
+        if "map" not in tool_name.lower():
+            continue
+        output = str(entry.get("output", ""))
+        marker = "Here are recommendations:"
+        if marker in output:
+            output = output.split(marker, 1)[1]
+        titles = [title.strip() for title in output.split(";") if title.strip()]
+        if not titles:
+            continue
+        try:
+            info = item_corpus.convert_title_2_info(titles, col_names="external_id")
+            external_ids = info["external_id"]
+            if isinstance(external_ids, str):
+                return [external_ids]
+            return [str(item_id) for item_id in external_ids]
+        except Exception:
+            return []
+    return []
+
+
 def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     interecagent_root = os.environ.get("INTERECAGENT_ROOT")
     if not interecagent_root:
         raise RuntimeError("INTERECAGENT_ROOT must be set")
 
     domain = os.environ.get("INTERECAGENT_DOMAIN", request.metadata.get("domain", "movie"))
-    _prepare_imports(interecagent_root, domain)
+    resource_mode = _resource_mode()
+    _prepare_imports(
+        interecagent_root,
+        domain,
+        require_resources=resource_mode == "recai_resources",
+    )
     agent = _build_interecagent(domain)
 
     user_message = _latest_user_message(request)
+    os.environ["MATRAIX_CURRENT_USER_REQUEST"] = user_message
     response = agent.run({"input": user_message}, chat_history=_build_chat_history(request))
     raw_plan = _last_recorded_plan(agent)
     native_raw = raw_plan if raw_plan else f"Final Answer: {response}"
@@ -208,7 +324,7 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     trace = RecBotTrace(
         raw_tool_plan=raw_tool_plan,
         raw_tool_outputs=getattr(getattr(agent, "candidate_buffer", None), "track_info", None),
-        recommended_item_ids=[],
+        recommended_item_ids=_recommended_item_ids(agent),
     )
     return RecBotTurnResult(
         backend="interecagent",

@@ -71,12 +71,20 @@ class InteRecAgentBridgeTest(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "INTERECAGENT_ROOT does not exist"):
             _prepare_imports(missing_root, "movie")
 
-    def test_prepare_imports_rejects_missing_resources_directory(self):
+    def test_prepare_imports_allows_missing_resources_directory_by_default(self):
+        with tempfile.TemporaryDirectory() as root:
+            os.mkdir(os.path.join(root, "llm4crs"))
+
+            _prepare_imports(root, "movie")
+
+            self.assertEqual(sys.path[0], os.path.realpath(root))
+
+    def test_prepare_imports_rejects_missing_resources_directory_when_required(self):
         with tempfile.TemporaryDirectory() as root:
             os.mkdir(os.path.join(root, "llm4crs"))
 
             with self.assertRaisesRegex(RuntimeError, "resources for domain 'movie' are missing"):
-                _prepare_imports(root, "movie")
+                _prepare_imports(root, "movie", require_resources=True)
 
     def test_prepare_imports_moves_existing_root_to_front_of_sys_path(self):
         original_sys_path = list(sys.path)
@@ -133,6 +141,25 @@ class InteRecAgentBridgeTest(unittest.TestCase):
         self.assertEqual(result.assistant_message, "fallback response")
         self.assertEqual(result.native_action.raw_tool_plan, "not-json")
         self.assertEqual(result.trace.raw_tool_plan, [])
+
+    def test_run_turn_exposes_current_user_request_for_catalog_ranker(self):
+        request = RecBotRequest(
+            conversation_id="episode_001",
+            turn_id=1,
+            messages=[ChatMessage(role="user", content="I like Batman. Recommend a movie.")],
+        )
+
+        with patch.dict(os.environ, {"INTERECAGENT_ROOT": "/fake/root"}, clear=True):
+            with patch("recbot.interecagent_bridge._prepare_imports"), patch(
+                "recbot.interecagent_bridge._build_interecagent",
+                return_value=FakeAgent(),
+            ):
+                run_turn(request)
+
+            self.assertEqual(
+                os.environ.get("MATRAIX_CURRENT_USER_REQUEST"),
+                "I like Batman. Recommend a movie.",
+            )
 
     def test_planning_recording_file_uses_env_or_default_temp_path(self):
         with patch.dict(os.environ, {"INTERECAGENT_PLANNING_RECORDING_FILE": "/tmp/custom.jsonl"}):
