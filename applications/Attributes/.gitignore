@@ -1,0 +1,9 @@
+# Local raw datasets and generated caches are intentionally kept out of Git.
+dataset/acs_pums/
+dataset/apple_ml_primex/
+dataset/nemotron_personas_usa/
+dataset/tencent_personahub/
+dataset/*.log
+dataset/*.pid
+__pycache__/
+*.py[cod]
