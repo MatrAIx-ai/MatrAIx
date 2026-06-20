@@ -13,6 +13,9 @@ This folder curates external persona datasets for MatrAIx persona construction.
 | Apple ML-PRIMEX | 43 | GitHub raw CSV file |
 | TakeLab PANDORA (Big5 subset) | 6 | Hugging Face dataset: `jingjietan/pandora-big5` |
 | SynthLabs PERSONA | 33 | Hugging Face dataset: `SynthLabsAI/PERSONA` (**gated** — accept terms + set `HF_TOKEN`) |
+| Facebook PersonaChat | 2 | Hugging Face dataset: `facebook/persona-chat` |
+| HorizonBench (mental_state_graphs) | 30 | Hugging Face dataset: `stellalisy/HorizonBench` (`mental_state_graphs` config) |
+| AllenAI WildChat (1M) | 3 | Hugging Face dataset: `allenai/WildChat-1M` |
 
 Manifests live in `manifests/`.
 

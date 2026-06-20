@@ -31,6 +31,11 @@ PERSONAHUB_REPO = "proj-persona/PersonaHub"
 PANDORA_REPO = "jingjietan/pandora-big5"
 SYNTHPERSONA_REPO = "SynthLabsAI/PERSONA"  # gated: accept terms on HF + set HF_TOKEN
 
+PERSONACHAT_REPO = "facebook/persona-chat"
+HORIZONBENCH_REPO = "stellalisy/HorizonBench"
+HORIZONBENCH_CONFIG = "mental_state_graphs"
+WILDCHAT_REPO = "allenai/WildChat-1M"
+
 SYNTHETIC_PERSONA_CHAT_REPO = "google/Synthetic-Persona-Chat"
 SYNTHETIC_PERSONA_CHAT_CSV_FILES = [
     "data/Synthetic-Persona-Chat_train.csv",
@@ -331,11 +336,92 @@ def fetch_synthpersona(args: argparse.Namespace, target_root: Path) -> None:
     )
 
 
+def fetch_personachat(args: argparse.Namespace, target_root: Path) -> None:
+    out_dir = target_root / "personachat_facebook"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full PersonaChat dataset (all parquet shards).")
+        snapshot_download(
+            repo_id=PERSONACHAT_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", "data/*.parquet"],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        return
+
+    sample_out = out_dir / f"personachat_facebook_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=PERSONACHAT_REPO,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+        config_name=None,
+    )
+
+
+def fetch_horizonbench(args: argparse.Namespace, target_root: Path) -> None:
+    out_dir = target_root / "horizonbench_mental_state_graphs"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full HorizonBench mental_state_graphs dataset (all parquet shards).")
+        snapshot_download(
+            repo_id=HORIZONBENCH_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", "data/*.parquet"],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        return
+
+    sample_out = out_dir / f"horizonbench_mental_state_graphs_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=HORIZONBENCH_REPO,
+        config_name=HORIZONBENCH_CONFIG,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+    )
+
+
+def fetch_wildchat(args: argparse.Namespace, target_root: Path) -> None:
+    out_dir = target_root / "wildchat_allenai"
+    ensure_dir(out_dir)
+
+    if args.mode == "full":
+        log("Fetching full WildChat-1M dataset (all parquet shards).")
+        snapshot_download(
+            repo_id=WILDCHAT_REPO,
+            repo_type="dataset",
+            local_dir=str(out_dir),
+            allow_patterns=["README.md", "data/*.parquet"],
+            token=args.hf_token,
+            resume_download=True,
+            max_workers=args.max_workers,
+        )
+        return
+
+    sample_out = out_dir / f"wildchat_allenai_sample_{args.sample_rows}.jsonl"
+    save_jsonl_sample(
+        repo_id=WILDCHAT_REPO,
+        output_path=sample_out,
+        sample_rows=args.sample_rows,
+        token=args.hf_token,
+        config_name=None,
+    )
+
+
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--source",
-        choices=["all", "nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora", "synthpersona"],
+        choices=["all", "nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora", "synthpersona", "personachat", "horizonbench", "wildchat"],
         default="all",
         help="Which source to fetch.",
     )
@@ -408,12 +494,15 @@ def main(argv: Iterable[str]) -> int:
         "synthetic_persona_chat": fetch_synthetic_persona_chat,
         "pandora": fetch_pandora,
         "synthpersona": fetch_synthpersona,
+        "personachat": fetch_personachat,
+        "horizonbench": fetch_horizonbench,
+        "wildchat": fetch_wildchat,
     }
 
     # "synthpersona" (SynthLabsAI/PERSONA) is intentionally excluded from "all": it is
     # gated and needs HF_TOKEN, so opt in explicitly with --source synthpersona.
     selected_sources = (
-        ["nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora"]
+        ["nemotron", "personahub", "oasis", "ml_primex", "synthetic_persona_chat", "pandora", "personachat", "horizonbench", "wildchat"]
         if args.source == "all"
         else [args.source]
     )
