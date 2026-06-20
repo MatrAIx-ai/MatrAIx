@@ -40,7 +40,7 @@ class RecBotTypesTest(unittest.TestCase):
             trace=RecBotTrace(
                 raw_tool_plan=[{"tool_name": "RankingTool", "input": "preference"}],
                 raw_tool_outputs="ranked candidates",
-                recommended_item_ids=["movie_fixture:aurora_station"],
+                recommended_item_ids=["cmu:54166"],
             ),
         )
 
@@ -48,7 +48,7 @@ class RecBotTypesTest(unittest.TestCase):
 
         self.assertEqual(restored.backend, "interecagent")
         self.assertEqual(restored.native_action.raw, "Action: ToolExecutor\nAction Input: []")
-        self.assertEqual(restored.trace.recommended_item_ids, ["movie_fixture:aurora_station"])
+        self.assertEqual(restored.trace.recommended_item_ids, ["cmu:54166"])
 
     def test_native_action_round_trip_keeps_raw_tool_plan(self):
         action = NativeAction(

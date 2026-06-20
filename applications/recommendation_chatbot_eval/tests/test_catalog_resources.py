@@ -1,5 +1,4 @@
 import json
-import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -24,7 +23,7 @@ class CatalogResourcesTest(unittest.TestCase):
                 "categories": ["Science Fiction", "Thriller"],
                 "metadata": {"release_year": 2014, "runtime_minutes": 112},
                 "signals": {"popularity": 0.72},
-                "source": {"dataset": "fixture"},
+                "source": {"dataset": "unit_test"},
             },
             {
                 "item_id": "movie:nebula_code",
@@ -35,7 +34,7 @@ class CatalogResourcesTest(unittest.TestCase):
                 "categories": ["Science Fiction", "Mystery"],
                 "metadata": {"release_year": 2016, "runtime_minutes": 108},
                 "signals": {"popularity": 0.61},
-                "source": {"dataset": "fixture"},
+                "source": {"dataset": "unit_test"},
             },
             {
                 "item_id": "movie:orchard_house",
@@ -46,7 +45,7 @@ class CatalogResourcesTest(unittest.TestCase):
                 "categories": ["Drama", "Family"],
                 "metadata": {"release_year": 2008, "runtime_minutes": 96},
                 "signals": {"popularity": 0.44},
-                "source": {"dataset": "fixture"},
+                "source": {"dataset": "unit_test"},
             },
         ]
         with catalog.open("w", encoding="utf-8") as handle:
@@ -112,16 +111,14 @@ class CatalogResourcesTest(unittest.TestCase):
             self.assertTrue(np.allclose(item_sim, item_sim.T))
             self.assertGreater(item_sim[1, 2], item_sim[1, 3])
 
-    def test_ensure_recai_resource_dir_uses_placeholder_similarity_above_dense_limit(self):
+    def test_ensure_recai_resource_dir_requires_precomputed_similarity_above_runtime_limit(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             catalog = self._write_catalog(tmpdir)
             output_dir = Path(tmpdir) / "recai_resources" / "movie"
 
-            with patch.dict(os.environ, {"INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS": "1"}):
-                spec = ensure_recai_resource_dir(catalog, output_dir, "movie")
-
-            item_sim = np.load(spec.item_sim_file)
-            self.assertEqual(item_sim.shape, (1, 1))
+            with patch.dict("os.environ", {"INTERECAGENT_RUNTIME_SIMILARITY_MAX_ITEMS": "1"}):
+                with self.assertRaisesRegex(RuntimeError, "full RecAI similarity matrix is missing"):
+                    ensure_recai_resource_dir(catalog, output_dir, "movie")
 
 
 if __name__ == "__main__":

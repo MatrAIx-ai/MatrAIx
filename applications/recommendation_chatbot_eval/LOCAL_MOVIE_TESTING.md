@@ -37,16 +37,6 @@ The normalized local catalog should be generated to:
 data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl
 ```
 
-The repo fixture for quick smoke tests is:
-
-```text
-applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl
-```
-
-The fixture is synthetic but follows the CMU-derived normalized movie shape. It
-is only for unit tests and quick fallback runs. Contributor hand testing should
-use the full normalized CMU catalog above.
-
 Generate the full local catalog from the official CMU files with:
 
 ```sh
@@ -96,7 +86,7 @@ Example shape:
 
 ## First Local Test Scenario
 
-Use a small movie catalog and persona-conditioned prompts. The test should check
+Use the full movie catalog and persona-conditioned prompts. The test should check
 that the recommender can read a normalized item list and return candidate movies
 that match stated or elicited preferences.
 
@@ -131,17 +121,15 @@ native lookup/filter/similarity/map tools, and replaces only the
 checkpoint-dependent personalized ranking tool with a semantic profile ranker
 unless `INTERECAGENT_RANKER_MODE=native` is explicitly set.
 
-For full catalogs, RecAI's dense `item_sim.npy` format is not generated with an
-O(N^2) text-cosine matrix. The bridge uses the same RecAI tool plan and buffer
-contract, but computes similarity on demand from catalog text/metadata when the
-catalog is larger than `INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS` (default:
-2,000). This keeps the full CMU catalog usable locally while preserving the
-ranker as the only model substitute.
+The RecAI similarity tool requires a dense `item_sim.npy` whose shape matches
+the generated item ids. For full catalogs, this matrix must be generated
+offline or provided in a complete generated resource directory. The bridge does
+not use sampled catalogs or substitute similarity implementations.
 
 Movie catalog evaluation should validate:
 
 1. the normalized catalog item schema,
-2. loading a small item list,
+2. loading the full item list,
 3. passing catalog items to a recommendation bot,
 4. checking that final recommendations reference valid item ids.
 
@@ -180,7 +168,7 @@ the preserved InteRecAgent native action, and trace fields:
       "trace": {
         "raw_tool_plan": [],
         "raw_tool_outputs": null,
-        "recommended_item_ids": ["movie_fixture:aurora_station"]
+        "recommended_item_ids": ["cmu:54166"]
       }
     },
     {

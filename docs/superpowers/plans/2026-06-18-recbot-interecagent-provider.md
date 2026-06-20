@@ -6,7 +6,7 @@
 
 **Architecture:** MatrAIx owns a thin provider boundary and a `RecBotTurnResult` envelope. The real recommendation behavior stays inside an external InteRecAgent environment, invoked through a subprocess bridge. Unit tests cover the provider contract and bridge payload handling; a local smoke script exercises the real InteRecAgent movie backend when the external RecAI checkout, resources, and OpenAI-compatible API are configured.
 
-**Tech Stack:** Python standard library (`dataclasses`, `json`, `subprocess`, `unittest`), Microsoft RecAI/InteRecAgent as an external dependency, existing normalized catalog docs and movie fixture under `applications/recommendation_chatbot_eval/`.
+**Tech Stack:** Python standard library (`dataclasses`, `json`, `subprocess`, `unittest`), Microsoft RecAI/InteRecAgent as an external dependency, and existing normalized catalog docs under `applications/recommendation_chatbot_eval/`.
 
 ---
 
@@ -95,7 +95,7 @@ class RecBotTypesTest(unittest.TestCase):
             trace=RecBotTrace(
                 raw_tool_plan=[{"tool_name": "RankingTool", "input": "preference"}],
                 raw_tool_outputs="ranked candidates",
-                recommended_item_ids=["movie_fixture:aurora_station"],
+                recommended_item_ids=["cmu:54166"],
             ),
         )
 
@@ -103,7 +103,7 @@ class RecBotTypesTest(unittest.TestCase):
 
         self.assertEqual(restored.backend, "interecagent")
         self.assertEqual(restored.native_action.raw, "Action: ToolExecutor\nAction Input: []")
-        self.assertEqual(restored.trace.recommended_item_ids, ["movie_fixture:aurora_station"])
+        self.assertEqual(restored.trace.recommended_item_ids, ["cmu:54166"])
 
     def test_invalid_role_is_rejected(self):
         with self.assertRaises(ValueError):
@@ -1303,7 +1303,7 @@ Run:
 ```bash
 PYTHONPATH=applications/recommendation_chatbot_eval python -m unittest discover -s applications/recommendation_chatbot_eval/tests -v
 jq empty applications/recommendation_chatbot_eval/schemas/catalog_item.schema.json
-jq -c . applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl >/dev/null
+jq -c . data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl >/dev/null
 git status --short
 ```
 
@@ -1311,7 +1311,7 @@ Expected:
 
 - All unit tests pass.
 - JSON schema parses.
-- JSONL movie fixture parses.
+- Normalized movie catalog JSONL parses.
 - `git status --short` shows only expected committed or intentionally uncommitted files for the current task.
 
 ## Scope Exclusions
@@ -1321,5 +1321,5 @@ This plan does not build a new recommender model, a new ranking model, a new act
 ## Self-Review
 
 - Spec coverage: The plan preserves InteRecAgent's native action contract, avoids turn classification, provides a simple RecBot envelope, calls external RecAI instead of copying its internals, and includes a movie local smoke path.
-- Placeholder scan: No unresolved placeholders are required for the default unit-test path. The smoke test requires user-specific environment values and documents the exact variables.
+- Template scan: No unresolved template values are required for the default unit-test path. The smoke test requires user-specific environment values and documents the exact variables.
 - Type consistency: `RecBotRequest`, `NativeAction`, `RecBotTrace`, `RecBotTurnResult`, `ExternalCommandConfig`, and `ExternalCommandRecBotProvider` names are consistent across tests, implementation, and docs.

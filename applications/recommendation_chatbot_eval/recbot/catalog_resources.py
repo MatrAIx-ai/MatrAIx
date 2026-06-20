@@ -107,7 +107,7 @@ def ensure_recai_resource_dir(
         ),
         encoding="utf-8",
     )
-    np.save(item_sim_file, _build_item_similarity(rows), allow_pickle=False)
+    _ensure_item_similarity(item_sim_file, rows)
 
     return RecAIResourceSpec(
         domain=domain,
@@ -205,10 +205,34 @@ def _column_descriptions() -> dict[str, str]:
     }
 
 
+def _ensure_item_similarity(item_sim_file: Path, rows: list[dict[str, Any]]) -> None:
+    real_rows = [row for row in rows if int(row["id"]) > 0]
+    expected_size = max((int(row["id"]) for row in real_rows), default=0) + 1
+    if _has_expected_similarity_shape(item_sim_file, expected_size):
+        return
+    max_runtime_items = _runtime_similarity_max_items()
+    if len(real_rows) > max_runtime_items:
+        raise RuntimeError(
+            "full RecAI similarity matrix is missing for this catalog. "
+            f"Expected {item_sim_file} with shape ({expected_size}, {expected_size}). "
+            "RecAI's native SimilarItemTool loads a dense item_sim.npy at startup; "
+            "generate it offline or point INTERECAGENT_GENERATED_RESOURCE_DIR to a complete resource directory."
+        )
+    np.save(item_sim_file, _build_item_similarity(rows), allow_pickle=False)
+
+
+def _has_expected_similarity_shape(item_sim_file: Path, expected_size: int) -> bool:
+    if not item_sim_file.exists():
+        return False
+    try:
+        item_sim = np.load(item_sim_file, allow_pickle=False, mmap_mode="r")
+    except Exception:
+        return False
+    return tuple(item_sim.shape) == (expected_size, expected_size)
+
+
 def _build_item_similarity(rows: list[dict[str, Any]]) -> np.ndarray:
     real_rows = [row for row in rows if int(row["id"]) > 0]
-    if len(real_rows) > _dense_similarity_max_items():
-        return np.zeros((1, 1), dtype=np.float32)
     vectors = {int(row["id"]): _text_vector(_row_text(row)) for row in real_rows}
     size = max(vectors.keys(), default=0) + 1
     similarity = np.zeros((size, size), dtype=np.float32)
@@ -223,8 +247,8 @@ def _build_item_similarity(rows: list[dict[str, Any]]) -> np.ndarray:
     return similarity
 
 
-def _dense_similarity_max_items() -> int:
-    raw_value = os.environ.get("INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS", "2000")
+def _runtime_similarity_max_items() -> int:
+    raw_value = os.environ.get("INTERECAGENT_RUNTIME_SIMILARITY_MAX_ITEMS", "2000")
     try:
         return max(0, int(raw_value))
     except ValueError:

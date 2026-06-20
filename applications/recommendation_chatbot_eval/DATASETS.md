@@ -142,7 +142,6 @@ Commit:
 
 - schema files,
 - source documentation,
-- small fixtures,
 - adapter code,
 - reproducible download/normalization instructions.
 

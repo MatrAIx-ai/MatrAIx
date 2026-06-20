@@ -11,9 +11,9 @@ raw file format.
 
 ## Current Decision
 
-Use a small movie catalog first for local testing, based on the CMU Movie Summary
-Corpus shape. Keep the same catalog schema so later domains can plug in without
-changing the recommendation bot interface.
+Use the full normalized CMU Movie Summary Corpus for local movie-domain testing.
+Keep the same catalog schema so later domains can plug in without changing the
+recommendation bot interface.
 
 Full source datasets should not be committed to this repository. The repo should
 contain only:
@@ -21,7 +21,7 @@ contain only:
 - dataset documentation and source manifests,
 - schema definitions,
 - adapters/loaders when implemented,
-- tiny fixtures for local tests and CI.
+- unit tests with inline minimal records.
 
 Large raw and normalized data should live under gitignored local paths:
 
@@ -36,7 +36,6 @@ data/normalized/recommendation_catalogs/<source_name>/
 - [LOCAL_MOVIE_TESTING.md](LOCAL_MOVIE_TESTING.md): movie-first local testing plan.
 - [INTERECAGENT_PROVIDER.md](INTERECAGENT_PROVIDER.md): setup and boundary notes for the Microsoft RecAI/InteRecAgent provider.
 - [schemas/catalog_item.schema.json](schemas/catalog_item.schema.json): normalized catalog item schema.
-- [samples/cmu_movie_summary_tiny.jsonl](samples/cmu_movie_summary_tiny.jsonl): tiny synthetic movie fixture using the normalized shape.
 
 ## RecBot Provider
 

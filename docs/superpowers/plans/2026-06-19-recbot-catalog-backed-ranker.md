@@ -151,7 +151,7 @@ The interactive script should preserve messages across turns and call the provid
 PYTHONPATH=applications/recommendation_chatbot_eval python applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py
 ```
 
-It should default `INTERECAGENT_CATALOG_PATH` to the committed tiny movie fixture when unset.
+It should default `INTERECAGENT_CATALOG_PATH` to the full normalized CMU movie catalog when unset.
 
 - [ ] **Step 2: Update docs**
 
@@ -171,7 +171,7 @@ Run:
 PYTHONPATH=applications/recommendation_chatbot_eval python -m unittest discover -s applications/recommendation_chatbot_eval/tests -v
 python -m py_compile applications/recommendation_chatbot_eval/recbot/*.py applications/recommendation_chatbot_eval/scripts/*.py
 jq empty applications/recommendation_chatbot_eval/schemas/catalog_item.schema.json
-while IFS= read -r line; do printf '%s\n' "$line" | jq empty; done < applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl
+head -n 100 data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl | while IFS= read -r line; do printf '%s\n' "$line" | jq empty; done
 ```
 
 Expected: all commands exit 0.

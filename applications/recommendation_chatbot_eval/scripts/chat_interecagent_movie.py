@@ -39,7 +39,7 @@ def _set_default_catalog_env(domain: str) -> None:
     os.environ.setdefault("INTERECAGENT_RANKER_MODE", "semantic_profile")
     os.environ.setdefault("INTERECAGENT_CACHE_AGENT", "1")
     if domain == "movie":
-        full_catalog = (
+        catalog_path = (
             REPO_ROOT
             / "data"
             / "normalized"
@@ -47,9 +47,15 @@ def _set_default_catalog_env(domain: str) -> None:
             / "cmu_movie_summary"
             / "items.jsonl"
         )
+        if not catalog_path.exists():
+            raise RuntimeError(
+                "full CMU movie catalog is required. Run "
+                "`PYTHONPATH=applications/recommendation_chatbot_eval "
+                "python applications/recommendation_chatbot_eval/scripts/normalize_cmu_movie_summary.py` first."
+            )
         os.environ.setdefault(
             "INTERECAGENT_CATALOG_PATH",
-            str(full_catalog if full_catalog.exists() else APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
+            str(catalog_path),
         )
 
 
@@ -140,7 +146,7 @@ def main() -> int:
                 if provider is not None
                 else _next_turn_inprocess(request)
             )
-        except (ProviderError, ValueError) as exc:
+        except (ProviderError, RuntimeError, ValueError) as exc:
             print(f"RecBot error: {exc}", file=sys.stderr)
             return 1
 

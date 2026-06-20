@@ -17,7 +17,7 @@ from recbot.types import ChatMessage, RecBotRequest
 def _set_default_catalog_env() -> None:
     os.environ.setdefault("INTERECAGENT_RESOURCE_MODE", "matraix_catalog")
     os.environ.setdefault("INTERECAGENT_RANKER_MODE", "semantic_profile")
-    full_catalog = (
+    catalog_path = (
         REPO_ROOT
         / "data"
         / "normalized"
@@ -25,9 +25,15 @@ def _set_default_catalog_env() -> None:
         / "cmu_movie_summary"
         / "items.jsonl"
     )
+    if not catalog_path.exists():
+        raise RuntimeError(
+            "full CMU movie catalog is required. Run "
+            "`PYTHONPATH=applications/recommendation_chatbot_eval "
+            "python applications/recommendation_chatbot_eval/scripts/normalize_cmu_movie_summary.py` first."
+        )
     os.environ.setdefault(
         "INTERECAGENT_CATALOG_PATH",
-        str(full_catalog if full_catalog.exists() else APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
+        str(catalog_path),
     )
 
 

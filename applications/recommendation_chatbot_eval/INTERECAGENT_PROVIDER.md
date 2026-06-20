@@ -72,17 +72,14 @@ export OPENAI_API_KEY="..."
 ```
 
 `INTERECAGENT_CATALOG_PATH` is optional for the movie local test. When unset, it
-defaults to the full normalized CMU catalog when it exists:
+defaults to the full normalized CMU catalog:
 
 ```text
 data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl
 ```
 
-If the full local catalog has not been generated yet, the fallback fixture is:
-
-```text
-applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl
-```
+If the full local catalog has not been generated yet, the provider fails with a
+setup error. Full catalog data is a hard requirement for local movie runs.
 
 The generated RecAI-compatible files are written under:
 
@@ -228,12 +225,17 @@ This substitute keeps the candidate set under MatrAIx control without requiring
 a UniRec checkpoint trained on the same catalog ids. If such a checkpoint exists,
 use `INTERECAGENT_RANKER_MODE=native`.
 
-For full MatrAIx catalogs, native RecAI dense item similarity is not built with
-an O(N^2) text-cosine matrix. The bridge keeps the RecAI tool-plan contract and
-uses an on-demand catalog text/metadata similarity tool when the item count is
-larger than `INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS` (default: 2,000). Small
-catalogs still use RecAI's native `SimilarItemTool` over the generated dense
-`item_sim.npy`.
+The similarity stage uses RecAI's native `SimilarItemTool`, which loads a dense
+`item_sim.npy` at startup. For a MatrAIx catalog, that file must be generated
+offline with ids aligned to `item_info.parquet`; the bridge does not substitute
+another similarity implementation.
+
+RecAI's provided movie resources do not hit this as a startup problem because
+the ready-to-run resource archive already includes a precomputed `item_sim.npy`
+for its own item ids. The preprocessing notebooks build that matrix offline
+from interaction data and save it as `float16`; the runtime tool only loads the
+file and indexes into it. A new MatrAIx catalog must therefore provide its own
+aligned matrix instead of reusing RecAI's original matrix.
 
 ## Default Tests
 
