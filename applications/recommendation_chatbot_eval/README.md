@@ -24,6 +24,12 @@ are prepared locally, run the fixed smoke test with one command:
 python applications/recommendation_chatbot_eval/scripts/recbot.py test
 ```
 
+The smoke test runs a fixed two-turn movie recommendation conversation against
+the catalog-backed InteRecAgent provider. It fails with a non-zero exit code if
+the backend returns a retry response, a broken tool output, or a turn without
+catalog item ids. Default output is compact; add `--show-json` for the full
+`RecBotTurnResult` payload or `--verbose` for backend debug logs.
+
 Start a manual command-line conversation with:
 
 ```sh
@@ -34,6 +40,18 @@ Add `--show-json` to either command to inspect native actions, tool traces, and
 recommended catalog item ids. The wrapper loads `.env.local`, sets the default
 catalog-backed RecAI mode, and injects the app path, so callers do not need to
 manually set `PYTHONPATH`.
+
+Cold-start note: each new CLI process loads the full catalog resources and the
+local dense `item_sim.npy`, so the first turn can take several minutes. Keep one
+`chat` session open for manual multi-turn testing; later turns in the same
+session are much faster because the agent remains in memory.
+
+Default unit tests do not call the external RecAI backend:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python -m unittest discover -s applications/recommendation_chatbot_eval/tests -v
+```
 
 Full source datasets should not be committed to this repository. The repo should
 contain only:

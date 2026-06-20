@@ -133,23 +133,50 @@ Movie catalog evaluation should validate:
 3. passing catalog items to a recommendation bot,
 4. checking that final recommendations reference valid item ids.
 
-## InteRecAgent Smoke Test
+## Simple Smoke Test
 
-After setting up Microsoft RecAI/InteRecAgent and API credentials, run this from
-the repository root:
+After setting up Microsoft RecAI/InteRecAgent, API credentials, the normalized
+movie catalog, and generated RecAI resources, run this from the repository root:
+
+```sh
+python applications/recommendation_chatbot_eval/scripts/recbot.py test
+```
+
+This validates a fixed two-turn recommendation conversation through the MatrAIx
+provider to the catalog-backed InteRecAgent movie backend. It requires the
+external RecAI checkout and API credentials; default unit tests do not run this
+real backend smoke test.
+
+Expected compact output:
+
+```text
+Running MatrAIx RecBot test...
+running turn 1/2
+running turn 2/2
+MatrAIx RecBot test completed
+conversation_id=local_movie_test
+turns=2
+turn 1: planned_tools=...; executed_tools=...; recommended_ids=...
+turn 2: planned_tools=...; executed_tools=...; recommended_ids=...
+```
+
+The command returns a non-zero exit code if any fixed turn returns a backend
+retry response, a broken tool output, or no catalog item ids. Add `--show-json`
+to print full `RecBotTurnResult` payloads, or `--verbose` to include backend
+debug logs.
+
+## Advanced JSON Smoke Test
+
+The older provider-level smoke script remains available when a raw JSON
+container is useful:
 
 ```sh
 PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/smoke_interecagent_movie.py
 ```
 
-This validates persona-style user messages through the MatrAIx provider to the
-catalog-backed InteRecAgent movie backend. It requires the external RecAI
-checkout and API credentials; default unit tests do not run this real backend
-smoke test.
-
-Expected output is one JSON container object with `conversation_id` and `turns`.
-Each entry in `turns` is a `RecBotTurnResult` containing the assistant response,
-the preserved InteRecAgent native action, and trace fields:
+Its output is one JSON object with `conversation_id` and `turns`. Each entry in
+`turns` is a `RecBotTurnResult` containing the assistant response, the preserved
+InteRecAgent native action, and trace fields:
 
 ```json
 {
@@ -196,17 +223,21 @@ the preserved InteRecAgent native action, and trace fields:
 For a manual multi-turn conversation, run:
 
 ```sh
-PYTHONPATH=applications/recommendation_chatbot_eval \
-  python applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py \
-  --show-json
+python applications/recommendation_chatbot_eval/scripts/recbot.py chat
 ```
 
-The script loads `.env.local`, re-execs into `INTERECAGENT_PYTHON` when set, and
-keeps one RecAI agent in memory so the full catalog is initialized once per chat
-session. You can start broad and then add preferences:
+Add `--show-json` to inspect native actions, tool traces, and recommended item
+ids for each turn. The wrapper loads `.env.local`, re-execs into
+`INTERECAGENT_PYTHON` when set, and keeps one RecAI agent in memory so the full
+catalog is initialized once per chat session. You can start broad and then add
+preferences:
 
 ```text
 I want to watch a movie.
 Something tense and mysterious, but not horror.
 I liked Aurora Station. Anything similar?
 ```
+
+Each new CLI process must load the full catalog resources and dense
+`item_sim.npy`, so the first turn can take several minutes. Later turns in the
+same `chat` session are much faster.

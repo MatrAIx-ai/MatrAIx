@@ -36,6 +36,21 @@ Optional fields:
 
 ## Dataset Summary
 
+Current dataset discussion keeps six catalog families in scope:
+
+- Amazon Reviews 2023 for broad e-commerce product catalogs,
+- WebShop for shopping-benchmark products,
+- Yelp Open Dataset for local businesses and restaurants,
+- Google Local Data 2021 for larger local-business coverage,
+- H&M Personalized Fashion for fashion items,
+- CMU Movie Summary Corpus for the first local open movie catalog.
+
+The shared requirement is item-level availability: each source must provide a
+product or item list plus enough metadata, description text, or generated
+display text for a recommendation agent to search, filter, and explain
+recommendations. Query logs and user histories are useful later for ranking
+baselines, but they are not required for the first catalog interface.
+
 | Source | Domain | Item list | Useful item fields | Signals | Access plan | v0 status |
 |---|---|---:|---|---|---|---|
 | Amazon Reviews 2023 | `ecommerce` | Yes | `parent_asin`, title, description, features, category, price, images | average rating, rating number, reviews | Hugging Face / McAuley loader by category config, especially `raw_meta_<category>` | Later, streaming/category subset |
