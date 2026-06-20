@@ -48,6 +48,14 @@ def parse_json_list(value):
     return parsed if isinstance(parsed, list) else []
 
 
+def parse_json_object(value):
+    try:
+        parsed = json.loads(value or "{}")
+    except Exception:
+        return {}
+    return parsed if isinstance(parsed, dict) else {}
+
+
 def as_float(value):
     try:
         return float(value or 0)
@@ -111,6 +119,18 @@ def merge_json_lists(rows, column):
     return values
 
 
+def merge_json_count_maps(rows, column):
+    counts = defaultdict(int)
+    for row in rows:
+        parsed = parse_json_object(row.get(column, ""))
+        for key, value in parsed.items():
+            try:
+                counts[str(key)] += int(value)
+            except Exception:
+                counts[str(key)] += 1
+    return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0])))
+
+
 def build_final_attributes(attributes, merges):
     attr_by_id = {row["canonical_attribute_id"]: row for row in attributes}
     uf = UnionFind(attr_by_id.keys())
@@ -152,7 +172,9 @@ def build_final_attributes(attributes, merges):
                 seen_aliases.add(key)
 
         candidate_count = sum(as_int(row.get("candidate_count")) for row in member_attrs)
-        source_count = len({source for row in member_attrs for source in parse_json_list(row.get("sources_json", ""))})
+        source_map = merge_json_count_maps(member_attrs, "sources_json")
+        source_family_map = merge_json_count_maps(member_attrs, "source_families_json")
+        source_count = len(source_map)
         quality_score = max(as_float(row.get("max_normalized_quality_score")) for row in member_attrs)
         needs_review = any(str(row.get("needs_review", "")).lower() == "true" for row in member_attrs)
         if len(member_ids) > 1:
@@ -169,8 +191,8 @@ def build_final_attributes(attributes, merges):
                 "source_count": source_count,
                 "max_normalized_quality_score": quality_score,
                 "merge_status": "llm_merged" if len(member_ids) > 1 else "singleton",
-                "sources_json": json.dumps(merge_json_lists(member_attrs, "sources_json"), ensure_ascii=False),
-                "source_families_json": json.dumps(merge_json_lists(member_attrs, "source_families_json"), ensure_ascii=False),
+                "sources_json": json.dumps(source_map, ensure_ascii=False),
+                "source_families_json": json.dumps(source_family_map, ensure_ascii=False),
                 "aliases_json": json.dumps(aliases, ensure_ascii=False),
                 "candidate_ids_json": json.dumps(merge_json_lists(member_attrs, "candidate_ids_json"), ensure_ascii=False),
                 "needs_review": str(needs_review).lower(),
