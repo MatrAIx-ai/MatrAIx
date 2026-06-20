@@ -230,6 +230,21 @@ The similarity stage uses RecAI's native `SimilarItemTool`, which loads a dense
 offline with ids aligned to `item_info.parquet`; the bridge does not substitute
 another similarity implementation.
 
+Generate the full movie matrix after the catalog-backed resource directory has
+created `item_info.parquet`:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python applications/recommendation_chatbot_eval/scripts/generate_item_similarity.py \
+  --resource-dir data/cache/recommendation_chatbot_eval/recai_resources/movie \
+  --block-size 256 \
+  --dtype float16
+```
+
+The generator builds a TF-IDF cosine matrix over title, tags, description, and
+display text, writes it atomically as `item_sim.npy`, and keeps the file local
+under ignored `data/cache/`.
+
 RecAI's provided movie resources do not hit this as a startup problem because
 the ready-to-run resource archive already includes a precomputed `item_sim.npy`
 for its own item ids. The preprocessing notebooks build that matrix offline
