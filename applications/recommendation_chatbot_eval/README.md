@@ -15,6 +15,26 @@ Use the full normalized CMU Movie Summary Corpus for local movie-domain testing.
 Keep the same catalog schema so later domains can plug in without changing the
 recommendation bot interface.
 
+## Quick Test Interface
+
+After `.env.local`, the normalized movie catalog, and generated RecAI resources
+are prepared locally, run the fixed smoke test with one command:
+
+```sh
+python applications/recommendation_chatbot_eval/scripts/recbot.py test
+```
+
+Start a manual command-line conversation with:
+
+```sh
+python applications/recommendation_chatbot_eval/scripts/recbot.py chat
+```
+
+Add `--show-json` to either command to inspect native actions, tool traces, and
+recommended catalog item ids. The wrapper loads `.env.local`, sets the default
+catalog-backed RecAI mode, and injects the app path, so callers do not need to
+manually set `PYTHONPATH`.
+
 Full source datasets should not be committed to this repository. The repo should
 contain only:
 
