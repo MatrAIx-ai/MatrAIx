@@ -211,6 +211,19 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 - reasoning-augmented version of CoSER, according to [CoSER github](https://github.com/Neph0s/CoSER）
 ### [The Need for a Socially-Grounded Persona Framework for User Simulation](https://arxiv.org/abs/2601.07110) (Xiaoyi-Liu added, Haiwen-Huang posted on Discord)
 
+### [Improving Language Model Personas via Rationalization with Psychological Scaffolds](https://aclanthology.org/2025.findings-emnlp.1187.pdf) (Xiaoyi-Liu)
+### [Can LLM Agents Maintain a Persona in Discourse](https://aclanthology.org/2025.emnlp-main.1487.pdf) (Xiaoyi-Liu)
+### [Spotting Out-of-Character Behavior: Atomic-Level Evaluation of Persona Fidelity in Open-Ended Generation](https://arxiv.org/abs/2506.19352) (Xiaoyi-Liu)
+### [PersonaLLM: Investigating the Ability of Large Language Models to Express Personality Traits](https://aclanthology.org/2024.findings-naacl.229.pdf) (Xiaoyi-Liu)
+### [LLM Generated Persona is a Promise with a Catch](https://arxiv.org/abs/2503.16527) (Xiaoyi-Liu)
+### [The Challenge of Using LLMs to Simulate Human Behavior: A Causal Inference Perspective](https://arxiv.org/abs/2312.15524) (Xiaoyi-Liu)
+### [Synthetic Replacements for Human Survey Data? The Perils of Large Language Models](https://www.cambridge.org/core/journals/political-analysis/article/synthetic-replacements-for-human-survey-data-the-perils-of-large-language-models/B92267DC26195C7F36E63EA04A47D2FE) (Xiaoyi-Liu)
+### [RealPersonaChat: A Realistic Persona Chat Corpus with Interlocutors’ Own Personalities](https://aclanthology.org/2023.paclic-1.85/) (Xiaoyi-Liu)
+### [Whose Personae? Synthetic Persona Experiments in LLM Research and Pathways to Transparency](https://arxiv.org/abs/2512.00461) (Xiaoyi-Liu)
+### [Training Millions of Personalized Dialogue Agents](https://aclanthology.org/D18-1298.pdf) (Xiaoyi-Liu)
+### [Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization](https://aclanthology.org/2024.findings-emnlp.969/) (Xiaoyi-Liu)
+### [Population-Aligned Persona Generation for LLM-based Social Simulation](https://arxiv.org/abs/2509.10127) (Xiaoyi-Liu)
+
 
 ---
 
