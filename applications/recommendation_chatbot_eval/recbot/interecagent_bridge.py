@@ -23,6 +23,9 @@ from recbot.semantic_ranker import SemanticProfileRankingTool
 from recbot.types import RecBotRequest, RecBotTrace, RecBotTurnResult
 
 
+_AGENT_CACHE: dict[tuple[str, ...], Any] = {}
+
+
 def _latest_user_message(request: RecBotRequest) -> str:
     return request.latest_user_message
 
@@ -75,6 +78,16 @@ def _default_catalog_path(domain: str) -> Path:
         raise RuntimeError(
             "INTERECAGENT_CATALOG_PATH must be set for non-movie catalog-backed domains"
         )
+    full_catalog = (
+        REPO_ROOT
+        / "data"
+        / "normalized"
+        / "recommendation_catalogs"
+        / "cmu_movie_summary"
+        / "items.jsonl"
+    )
+    if full_catalog.exists():
+        return full_catalog
     return APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"
 
 
@@ -100,6 +113,20 @@ def _catalog_resource_spec(domain: str) -> RecAIResourceSpec:
         catalog_path,
         _catalog_resource_output_dir(domain),
         domain,
+    )
+
+
+def _agent_cache_key(domain: str) -> tuple[str, ...]:
+    return (
+        os.environ.get("INTERECAGENT_ROOT", ""),
+        domain,
+        _resource_mode(),
+        os.environ.get("INTERECAGENT_CATALOG_PATH", ""),
+        os.environ.get("INTERECAGENT_GENERATED_RESOURCE_DIR", ""),
+        _ranker_mode(_resource_mode()),
+        os.environ.get("INTERECAGENT_SIMILARITY_MODE", "auto"),
+        os.environ.get("INTERECAGENT_ENGINE", "gpt-4o-mini"),
+        os.environ.get("INTERECAGENT_BOT_TYPE", "chat"),
     )
 
 
@@ -180,6 +207,137 @@ class _SeedExcludingSimilarityAdapter:
         return [int(item_id) for item_id in ids]
 
 
+class _CatalogSimilarityTool:
+    def __init__(self, name: str, desc: str, item_corpus: Any, buffer: Any, top_ratio: float) -> None:
+        self.name = name
+        self.desc = (
+            desc
+            + "\nFor large MatrAIx catalogs, similarity is computed on demand from catalog text and metadata instead of a dense item_sim.npy matrix."
+        )
+        self._item_corpus = item_corpus
+        self._buffer = buffer
+        self._top_ratio = top_ratio
+        self._profiles = self._build_profiles(item_corpus)
+
+    def run(self, inputs: str) -> str:
+        titles = self._parse_titles(inputs)
+        candidates = self._buffer.get()
+        if not candidates:
+            info = f"Before {self.name}: There is no candidate in buffer now. "
+            self._buffer.track(self.name, inputs, info)
+            return info
+        if not titles:
+            info = f"{self.name}: Input format error."
+            self._buffer.track(self.name, inputs, info)
+            return info
+
+        try:
+            matched_titles = self._item_corpus.fuzzy_match(titles, "title")
+            seed_ids = self._ids_for_titles(matched_titles)
+        except Exception:
+            info = f"{self.name}: some thing went wrong in execution, the tool is broken for current input."
+            self._buffer.track(self.name, inputs, info)
+            return info
+
+        seed_profile = self._merged_profile(seed_ids)
+        scored_candidates = []
+        for candidate_id in candidates:
+            if candidate_id in seed_ids:
+                continue
+            score = self._score(seed_profile, self._profiles.get(int(candidate_id), (set(), set())))
+            if score > 0:
+                scored_candidates.append((int(candidate_id), score))
+        scored_candidates.sort(key=lambda pair: (-pair[1], pair[0]))
+        rec_num = max(1, int(self._top_ratio * len(self._item_corpus)))
+        selected = scored_candidates[:rec_num]
+        result_ids = [item_id for item_id, _score in selected]
+        self._buffer.push(self.name, result_ids)
+        self._buffer.save_similarity([score for _item_id, score in selected])
+        info = (
+            f"Before {self.name}: There are {len(candidates)} candidate in buffer. \n"
+            f"After {self.name}: {len(result_ids)} items similar to {matched_titles} are selected "
+            "from full catalog text and metadata."
+        )
+        self._buffer.track(self.name, inputs, info)
+        return info
+
+    def _parse_titles(self, inputs: str) -> list[str]:
+        value: Any
+        try:
+            value = literal_eval(inputs)
+        except Exception:
+            try:
+                value = json.loads(inputs)
+            except Exception:
+                value = []
+        if isinstance(value, str):
+            return [value]
+        if isinstance(value, list):
+            return [str(item) for item in value if item]
+        return []
+
+    def _ids_for_titles(self, titles: Any) -> list[int]:
+        info = self._item_corpus.convert_title_2_info(titles, col_names="id")
+        ids = info["id"]
+        if isinstance(ids, int):
+            return [ids]
+        return [int(item_id) for item_id in ids]
+
+    def _merged_profile(self, item_ids: list[int]) -> tuple[set[str], set[str]]:
+        tags: set[str] = set()
+        tokens: set[str] = set()
+        for item_id in item_ids:
+            item_tags, item_tokens = self._profiles.get(int(item_id), (set(), set()))
+            tags.update(item_tags)
+            tokens.update(item_tokens)
+        return tags, tokens
+
+    def _score(self, seed_profile: tuple[set[str], set[str]], candidate_profile: tuple[set[str], set[str]]) -> float:
+        seed_tags, seed_tokens = seed_profile
+        candidate_tags, candidate_tokens = candidate_profile
+        tag_score = self._jaccard(seed_tags, candidate_tags)
+        token_score = self._jaccard(seed_tokens, candidate_tokens)
+        return (3.0 * tag_score) + token_score
+
+    def _build_profiles(self, item_corpus: Any) -> dict[int, tuple[set[str], set[str]]]:
+        profiles: dict[int, tuple[set[str], set[str]]] = {}
+        for item_id, row in item_corpus.corups.iterrows():
+            if int(item_id) <= 0:
+                continue
+            tags = self._tag_set(row.get("tags", ""))
+            text = " ".join(
+                str(row.get(column, ""))
+                for column in ("title", "tags", "description", "display_text")
+            )
+            profiles[int(item_id)] = (tags, set(_tokenize(text)))
+        return profiles
+
+    def _tag_set(self, value: Any) -> set[str]:
+        if isinstance(value, list):
+            return {str(item).strip().lower() for item in value if str(item).strip()}
+        return {part.strip().lower() for part in str(value).split(",") if part.strip()}
+
+    def _jaccard(self, left: set[str], right: set[str]) -> float:
+        if not left or not right:
+            return 0.0
+        return len(left & right) / len(left | right)
+
+
+def _tokenize(text: str) -> list[str]:
+    return re.findall(r"[a-zA-Z0-9]+", text.lower())
+
+
+def _similarity_mode(resource_mode: str, item_count: int) -> str:
+    configured = os.environ.get("INTERECAGENT_SIMILARITY_MODE", "auto")
+    if configured != "auto":
+        return configured
+    if resource_mode != "matraix_catalog":
+        return "native"
+    if item_count > _env_int("INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS", 2000):
+        return "catalog_text"
+    return "native"
+
+
 def _prepare_imports(interecagent_root: str, domain: str, require_resources: bool = False) -> None:
     root = Path(interecagent_root).expanduser().resolve()
     if not root.exists():
@@ -258,6 +416,29 @@ def _build_interecagent(domain: str):
         item_corpus,
         num_limit=max_candidate_num,
     )
+    similarity_mode = _similarity_mode(resource_mode, len(item_corpus))
+    if similarity_mode == "native":
+        similarity_tool = SimilarItemTool(
+            name=tool_names["SoftFilterTool"],
+            desc=SOFT_FILTER_TOOL_DESC.format(**domain_map),
+            item_sim_path=ITEM_SIM_FILE,
+            item_corups=item_corpus,
+            buffer=candidate_buffer,
+            top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
+        )
+    elif similarity_mode == "catalog_text":
+        similarity_tool = _CatalogSimilarityTool(
+            name=tool_names["SoftFilterTool"],
+            desc=SOFT_FILTER_TOOL_DESC.format(**domain_map),
+            item_corpus=item_corpus,
+            buffer=candidate_buffer,
+            top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
+        )
+    else:
+        raise RuntimeError(
+            "INTERECAGENT_SIMILARITY_MODE must be 'auto', 'native', or 'catalog_text'"
+        )
+
     tools = {
         "BufferStoreTool": FuncToolWrapper(
             func=candidate_buffer.init_candidates,
@@ -280,14 +461,7 @@ def _build_interecagent(domain: str):
             )
         ),
         "SoftFilterTool": _SeedExcludingSimilarityAdapter(
-            SimilarItemTool(
-                name=tool_names["SoftFilterTool"],
-                desc=SOFT_FILTER_TOOL_DESC.format(**domain_map),
-                item_sim_path=ITEM_SIM_FILE,
-                item_corups=item_corpus,
-                buffer=candidate_buffer,
-                top_ratio=_env_float("INTERECAGENT_SIMILAR_RATIO", 0.05),
-            ),
+            similarity_tool,
             item_corpus,
             candidate_buffer,
         ),
@@ -420,7 +594,14 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
         domain,
         require_resources=resource_mode == "recai_resources",
     )
-    agent = _build_interecagent(domain)
+    if os.environ.get("INTERECAGENT_CACHE_AGENT", "0") == "0":
+        agent = _build_interecagent(domain)
+    else:
+        cache_key = _agent_cache_key(domain)
+        agent = _AGENT_CACHE.get(cache_key)
+        if agent is None:
+            agent = _build_interecagent(domain)
+            _AGENT_CACHE[cache_key] = agent
 
     user_message = _latest_user_message(request)
     os.environ["MATRAIX_CURRENT_USER_REQUEST"] = user_message

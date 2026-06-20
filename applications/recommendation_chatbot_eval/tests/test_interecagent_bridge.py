@@ -6,7 +6,10 @@ import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from unittest.mock import patch
 
+import pandas as pd
+
 from recbot.interecagent_bridge import (
+    _CatalogSimilarityTool,
     _SeedExcludingSimilarityAdapter,
     _build_chat_history,
     _force_hard_filter_selectable_sql,
@@ -14,6 +17,7 @@ from recbot.interecagent_bridge import (
     _latest_user_message,
     _planning_recording_file,
     _prepare_imports,
+    _similarity_mode,
     main,
     run_turn,
 )
@@ -116,6 +120,7 @@ class FakeSeedBuffer:
     def __init__(self):
         self.memory = []
         self.tracker = []
+        self.similarity = None
 
     def get(self):
         return list(self.memory)
@@ -125,6 +130,50 @@ class FakeSeedBuffer:
 
     def track(self, tool, input=None, output=None):
         self.tracker.append({"tool": tool, "input": input, "output": output})
+
+    def save_similarity(self, sim):
+        self.similarity = sim
+
+
+class FakeCatalogSimilarityCorpus:
+    def __init__(self):
+        self.corups = pd.DataFrame(
+            [
+                {
+                    "id": 1,
+                    "title": "Aurora Station",
+                    "tags": "Science Fiction, Thriller, Mystery",
+                    "description": "Orbital station signal mystery.",
+                    "display_text": "Science fiction thriller mystery in orbit.",
+                },
+                {
+                    "id": 2,
+                    "title": "Nebula Code",
+                    "tags": "Science Fiction, Mystery",
+                    "description": "Engineers decode a distant signal.",
+                    "display_text": "Science fiction mystery about a distant signal.",
+                },
+                {
+                    "id": 3,
+                    "title": "The Orchard House",
+                    "tags": "Drama, Family",
+                    "description": "A warm family drama.",
+                    "display_text": "Family drama on a farm.",
+                },
+            ]
+        ).set_index("id", drop=True)
+
+    def __len__(self):
+        return 4
+
+    def fuzzy_match(self, value, col):
+        return value
+
+    def convert_title_2_info(self, titles, col_names=None):
+        title_to_id = {"Aurora Station": 1, "Nebula Code": 2, "The Orchard House": 3}
+        if isinstance(titles, str):
+            return {"id": title_to_id[titles]}
+        return {"id": [title_to_id[title] for title in titles]}
 
 
 class InteRecAgentBridgeTest(unittest.TestCase):
@@ -249,6 +298,29 @@ class InteRecAgentBridgeTest(unittest.TestCase):
         self.assertEqual(buffer.get(), [2, 3])
         self.assertIn("Removed seed items", output)
         self.assertIn("Removed seed items", buffer.tracker[-1]["output"])
+
+    def test_similarity_mode_uses_catalog_text_for_large_matraix_catalog(self):
+        with patch.dict(os.environ, {"INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS": "2"}):
+            self.assertEqual(_similarity_mode("matraix_catalog", 3), "catalog_text")
+            self.assertEqual(_similarity_mode("matraix_catalog", 2), "native")
+            self.assertEqual(_similarity_mode("recai_resources", 10), "native")
+
+    def test_catalog_similarity_tool_selects_similar_items_from_catalog_metadata(self):
+        buffer = FakeSeedBuffer()
+        buffer.memory = [1, 2, 3]
+        tool = _CatalogSimilarityTool(
+            name="Movie Similarity Filtering Tool",
+            desc="find similar movies",
+            item_corpus=FakeCatalogSimilarityCorpus(),
+            buffer=buffer,
+            top_ratio=0.75,
+        )
+
+        output = tool.run('["Aurora Station"]')
+
+        self.assertEqual(buffer.get(), [2])
+        self.assertIn("full catalog text and metadata", output)
+        self.assertEqual(buffer.tracker[-1]["tool"], "Movie Similarity Filtering Tool")
 
     def test_run_turn_keeps_unparsed_plan_out_of_trace_plan_list(self):
         request = RecBotRequest(

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 from collections import Counter
 from dataclasses import dataclass
@@ -206,6 +207,8 @@ def _column_descriptions() -> dict[str, str]:
 
 def _build_item_similarity(rows: list[dict[str, Any]]) -> np.ndarray:
     real_rows = [row for row in rows if int(row["id"]) > 0]
+    if len(real_rows) > _dense_similarity_max_items():
+        return np.zeros((1, 1), dtype=np.float32)
     vectors = {int(row["id"]): _text_vector(_row_text(row)) for row in real_rows}
     size = max(vectors.keys(), default=0) + 1
     similarity = np.zeros((size, size), dtype=np.float32)
@@ -218,6 +221,14 @@ def _build_item_similarity(rows: list[dict[str, Any]]) -> np.ndarray:
             similarity[left_id, right_id] = score
             similarity[right_id, left_id] = score
     return similarity
+
+
+def _dense_similarity_max_items() -> int:
+    raw_value = os.environ.get("INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS", "2000")
+    try:
+        return max(0, int(raw_value))
+    except ValueError:
+        return 2000
 
 
 def _row_text(row: dict[str, Any]) -> str:

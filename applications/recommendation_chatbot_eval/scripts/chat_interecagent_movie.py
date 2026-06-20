@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import os
 import sys
+from contextlib import redirect_stdout
 from pathlib import Path
 
 
@@ -35,10 +37,19 @@ def _load_local_env(path: Path) -> None:
 def _set_default_catalog_env(domain: str) -> None:
     os.environ.setdefault("INTERECAGENT_RESOURCE_MODE", "matraix_catalog")
     os.environ.setdefault("INTERECAGENT_RANKER_MODE", "semantic_profile")
+    os.environ.setdefault("INTERECAGENT_CACHE_AGENT", "1")
     if domain == "movie":
+        full_catalog = (
+            REPO_ROOT
+            / "data"
+            / "normalized"
+            / "recommendation_catalogs"
+            / "cmu_movie_summary"
+            / "items.jsonl"
+        )
         os.environ.setdefault(
             "INTERECAGENT_CATALOG_PATH",
-            str(APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
+            str(full_catalog if full_catalog.exists() else APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
         )
 
 
@@ -53,17 +64,46 @@ def _build_provider() -> ExternalCommandRecBotProvider:
     )
 
 
+def _maybe_reexec_with_configured_python() -> None:
+    configured = os.environ.get("INTERECAGENT_PYTHON")
+    if not configured or os.environ.get("MATRAIX_RECBOT_REEXECED") == "1":
+        return
+    configured_path = Path(configured).expanduser().absolute()
+    if Path(sys.executable).absolute() == configured_path:
+        return
+    os.environ["MATRAIX_RECBOT_REEXECED"] = "1"
+    os.execv(str(configured_path), [str(configured_path), *sys.argv])
+
+
+def _next_turn_inprocess(request: RecBotRequest):
+    from recbot.interecagent_bridge import run_turn
+
+    backend_stdout = io.StringIO()
+    with redirect_stdout(backend_stdout):
+        result = run_turn(request)
+    backend_output = backend_stdout.getvalue()
+    if backend_output:
+        print(backend_output, file=sys.stderr, end="")
+    return result
+
+
 def main() -> int:
     _load_local_env(REPO_ROOT / ".env.local")
+    _maybe_reexec_with_configured_python()
 
     parser = argparse.ArgumentParser(description="Chat with the catalog-backed movie RecBot.")
     parser.add_argument("--conversation-id", default="local_movie_chat")
     parser.add_argument("--domain", default=os.environ.get("INTERECAGENT_DOMAIN", "movie"))
     parser.add_argument("--show-json", action="store_true")
+    parser.add_argument(
+        "--backend-mode",
+        choices=["inprocess", "external"],
+        default=os.environ.get("INTERECAGENT_CHAT_BACKEND_MODE", "inprocess"),
+    )
     args = parser.parse_args()
 
     _set_default_catalog_env(args.domain)
-    provider = _build_provider()
+    provider = _build_provider() if args.backend_mode == "external" else None
     messages = [
         ChatMessage(
             role="system",
@@ -89,13 +129,16 @@ def main() -> int:
 
         messages.append(ChatMessage(role="user", content=user_text))
         try:
-            result = provider.next_turn(
-                RecBotRequest(
-                    conversation_id=args.conversation_id,
-                    turn_id=turn_id,
-                    messages=messages,
-                    metadata={"domain": args.domain},
-                )
+            request = RecBotRequest(
+                conversation_id=args.conversation_id,
+                turn_id=turn_id,
+                messages=messages,
+                metadata={"domain": args.domain},
+            )
+            result = (
+                provider.next_turn(request)
+                if provider is not None
+                else _next_turn_inprocess(request)
             )
         except (ProviderError, ValueError) as exc:
             print(f"RecBot error: {exc}", file=sys.stderr)

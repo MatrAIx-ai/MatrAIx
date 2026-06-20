@@ -7,6 +7,7 @@ from pathlib import Path
 
 
 APP_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = APP_ROOT.parents[1]
 sys.path.insert(0, str(APP_ROOT))
 
 from recbot.provider import ExternalCommandConfig, ExternalCommandRecBotProvider, ProviderError
@@ -16,9 +17,17 @@ from recbot.types import ChatMessage, RecBotRequest
 def _set_default_catalog_env() -> None:
     os.environ.setdefault("INTERECAGENT_RESOURCE_MODE", "matraix_catalog")
     os.environ.setdefault("INTERECAGENT_RANKER_MODE", "semantic_profile")
+    full_catalog = (
+        REPO_ROOT
+        / "data"
+        / "normalized"
+        / "recommendation_catalogs"
+        / "cmu_movie_summary"
+        / "items.jsonl"
+    )
     os.environ.setdefault(
         "INTERECAGENT_CATALOG_PATH",
-        str(APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
+        str(full_catalog if full_catalog.exists() else APP_ROOT / "samples" / "cmu_movie_summary_tiny.jsonl"),
     )
 
 

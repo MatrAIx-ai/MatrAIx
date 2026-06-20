@@ -1,7 +1,9 @@
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -109,6 +111,17 @@ class CatalogResourcesTest(unittest.TestCase):
             self.assertAlmostEqual(float(item_sim[3, 3]), 1.0)
             self.assertTrue(np.allclose(item_sim, item_sim.T))
             self.assertGreater(item_sim[1, 2], item_sim[1, 3])
+
+    def test_ensure_recai_resource_dir_uses_placeholder_similarity_above_dense_limit(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            catalog = self._write_catalog(tmpdir)
+            output_dir = Path(tmpdir) / "recai_resources" / "movie"
+
+            with patch.dict(os.environ, {"INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS": "1"}):
+                spec = ensure_recai_resource_dir(catalog, output_dir, "movie")
+
+            item_sim = np.load(spec.item_sim_file)
+            self.assertEqual(item_sim.shape, (1, 1))
 
 
 if __name__ == "__main__":

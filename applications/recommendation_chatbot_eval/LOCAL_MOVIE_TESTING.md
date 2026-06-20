@@ -43,7 +43,20 @@ The repo fixture for quick smoke tests is:
 applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl
 ```
 
-The fixture is synthetic but follows the CMU-derived normalized movie shape.
+The fixture is synthetic but follows the CMU-derived normalized movie shape. It
+is only for unit tests and quick fallback runs. Contributor hand testing should
+use the full normalized CMU catalog above.
+
+Generate the full local catalog from the official CMU files with:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python applications/recommendation_chatbot_eval/scripts/normalize_cmu_movie_summary.py
+```
+
+The full catalog is local-only and gitignored. In the current CMU corpus this
+produces 42,207 recommendable movie items after joining plot summaries to movie
+metadata.
 
 ## Normalization Shape
 
@@ -118,6 +131,13 @@ native lookup/filter/similarity/map tools, and replaces only the
 checkpoint-dependent personalized ranking tool with a semantic profile ranker
 unless `INTERECAGENT_RANKER_MODE=native` is explicitly set.
 
+For full catalogs, RecAI's dense `item_sim.npy` format is not generated with an
+O(N^2) text-cosine matrix. The bridge uses the same RecAI tool plan and buffer
+contract, but computes similarity on demand from catalog text/metadata when the
+catalog is larger than `INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS` (default:
+2,000). This keeps the full CMU catalog usable locally while preserving the
+ranker as the only model substitute.
+
 Movie catalog evaluation should validate:
 
 1. the normalized catalog item schema,
@@ -188,11 +208,14 @@ the preserved InteRecAgent native action, and trace fields:
 For a manual multi-turn conversation, run:
 
 ```sh
-PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py \
+  --show-json
 ```
 
-The script keeps the conversation history in memory, so you can start broad and
-then add preferences:
+The script loads `.env.local`, re-execs into `INTERECAGENT_PYTHON` when set, and
+keeps one RecAI agent in memory so the full catalog is initialized once per chat
+session. You can start broad and then add preferences:
 
 ```text
 I want to watch a movie.

@@ -72,7 +72,13 @@ export OPENAI_API_KEY="..."
 ```
 
 `INTERECAGENT_CATALOG_PATH` is optional for the movie local test. When unset, it
-defaults to:
+defaults to the full normalized CMU catalog when it exists:
+
+```text
+data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl
+```
+
+If the full local catalog has not been generated yet, the fallback fixture is:
 
 ```text
 applications/recommendation_chatbot_eval/samples/cmu_movie_summary_tiny.jsonl
@@ -88,6 +94,13 @@ Use a full normalized movie catalog by setting:
 
 ```sh
 export INTERECAGENT_CATALOG_PATH="$PWD/data/normalized/recommendation_catalogs/cmu_movie_summary/items.jsonl"
+```
+
+Generate that full catalog from the official CMU Movie Summary Corpus files:
+
+```sh
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python applications/recommendation_chatbot_eval/scripts/normalize_cmu_movie_summary.py
 ```
 
 Use RecAI's original resources instead of MatrAIx catalog resources only when
@@ -181,10 +194,14 @@ catalog-backed mode it does not require downloaded RecAI resource archives.
 Run a multi-turn local chat loop:
 
 ```sh
-PYTHONPATH=applications/recommendation_chatbot_eval "$INTERECAGENT_PYTHON" applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py
+PYTHONPATH=applications/recommendation_chatbot_eval \
+  python applications/recommendation_chatbot_eval/scripts/chat_interecagent_movie.py \
+  --show-json
 ```
 
-Example inputs:
+The chat script loads `.env.local`, re-execs into `INTERECAGENT_PYTHON` when
+configured, and defaults to in-process execution so full-catalog RecAI
+initialization happens once per chat session. Example inputs:
 
 ```text
 I want to watch a movie.
@@ -210,6 +227,13 @@ It mimics RecAI's native `RecModelTool` interface:
 This substitute keeps the candidate set under MatrAIx control without requiring
 a UniRec checkpoint trained on the same catalog ids. If such a checkpoint exists,
 use `INTERECAGENT_RANKER_MODE=native`.
+
+For full MatrAIx catalogs, native RecAI dense item similarity is not built with
+an O(N^2) text-cosine matrix. The bridge keeps the RecAI tool-plan contract and
+uses an on-demand catalog text/metadata similarity tool when the item count is
+larger than `INTERECAGENT_DENSE_SIMILARITY_MAX_ITEMS` (default: 2,000). Small
+catalogs still use RecAI's native `SimilarItemTool` over the generated dense
+`item_sim.npy`.
 
 ## Default Tests
 
