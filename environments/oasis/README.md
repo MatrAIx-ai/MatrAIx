@@ -399,32 +399,6 @@ This environment extends MatrAIx beyond single-agent tasks (survey, chatbot, web
 
 ---
 
-## Running on Greenland (p4d.24xlarge, 8x A100)
-
-The MatrAIx Greenland cluster provides sufficient compute for medium-to-large OASIS experiments:
-
-```bash
-# On Greenland instance
-conda activate matraix
-pip install camel-oasis vllm
-
-# Start vLLM server (uses all 8 GPUs with tensor parallelism)
-python -m vllm.entrypoints.openai.api_server \
-  --model meta-llama/Meta-Llama-3-8B-Instruct \
-  --tensor-parallel-size 4 \
-  --port 8002
-
-# Run simulation
-python -m environments.oasis.run
-```
-
-Estimated capacity on single p4d.24xlarge:
-- 4-8 vLLM endpoints (tensor-parallel across 8 A100s)
-- Comfortable for 10K-100K agent simulations
-- For 1M agents, would need multiple Greenland jobs or reduced model size
-
----
-
 ## References
 
 - [OASIS Paper](https://arxiv.org/abs/2411.11581) — Xiong et al., 2024
