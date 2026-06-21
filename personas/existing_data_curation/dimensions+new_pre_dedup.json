@@ -2,7 +2,7 @@
   "schemaVersion": "2.0",
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
-  "targetDimensions": 1354,
+  "targetDimensions": 1388,
   "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only — it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
@@ -15571,6 +15571,336 @@
       ]
     },
     {
+      "id": "synthlabs_persona_dimension_1",
+      "label": "PERSONA_Dimension1",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 1 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_2",
+      "label": "PERSONA_Dimension2",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 2 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_3",
+      "label": "PERSONA_Dimension3",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 3 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_4",
+      "label": "PERSONA_Dimension4",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 4 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_5",
+      "label": "PERSONA_Dimension5",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 5 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_6",
+      "label": "PERSONA_Dimension6",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 6 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_7",
+      "label": "PERSONA_Dimension7",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 7 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_8",
+      "label": "PERSONA_Dimension8",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 8 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_9",
+      "label": "PERSONA_Dimension9",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 9 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_10",
+      "label": "PERSONA_Dimension10",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 10 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_11",
+      "label": "PERSONA_Dimension11",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 11 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_12",
+      "label": "PERSONA_Dimension12",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 12 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_13",
+      "label": "PERSONA_Dimension13",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 13 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_14",
+      "label": "PERSONA_Dimension14",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 14 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_15",
+      "label": "PERSONA_Dimension15",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 15 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_16",
+      "label": "PERSONA_Dimension16",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 16 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_17",
+      "label": "PERSONA_Dimension17",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 17 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_18",
+      "label": "PERSONA_Dimension18",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 18 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_19",
+      "label": "PERSONA_Dimension19",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 19 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_20",
+      "label": "PERSONA_Dimension20",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 20 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_21",
+      "label": "PERSONA_Dimension21",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 21 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_22",
+      "label": "PERSONA_Dimension22",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 22 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_23",
+      "label": "PERSONA_Dimension23",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 23 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_24",
+      "label": "PERSONA_Dimension24",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 24 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_25",
+      "label": "PERSONA_Dimension25",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 25 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_26",
+      "label": "PERSONA_Dimension26",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 26 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_27",
+      "label": "PERSONA_Dimension27",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 27 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_28",
+      "label": "PERSONA_Dimension28",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 28 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_29",
+      "label": "PERSONA_Dimension29",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 29 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_30",
+      "label": "PERSONA_Dimension30",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 30 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_31",
+      "label": "PERSONA_Dimension31",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 31 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_32",
+      "label": "PERSONA_Dimension32",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 32 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
+      "id": "synthlabs_persona_dimension_33",
+      "label": "PERSONA_Dimension33",
+      "category": "External: Datasets",
+      "description": "Placeholder imported dimension 33 from PERSONA.",
+      "values": [
+        "Unknown"
+      ],
+      "marked_for_removal": true
+    },
+    {
       "id": "synthetic_persona_chat_dimension_1",
       "label": "SyntheticPersonaChat_Dimension1",
       "category": "External: Datasets",
@@ -18991,6 +19321,30 @@
       }
     },
     {
+      "id": "wiki_marital_status",
+      "label": "Marital Status",
+      "category": "Demographic: Family",
+      "description": "Marriage and partnership status from biographical records.",
+      "values": [
+        "Single",
+        "Married",
+        "Divorced",
+        "Widowed",
+        "Separated",
+        "Partnered"
+      ],
+      "source_origin": {
+        "source_id": "wiki_bio_dataset",
+        "source_name": "Wikipedia Biographical Data",
+        "source_type": "wikipedia_wikidata_reference",
+        "source_url": "https://huggingface.co/datasets/michaelauli/wiki_bio",
+        "note": "Extracted from Wikipedia infoboxes and Wikidata P26",
+        "added_date": "2026-06-20",
+        "contributor_github": "claude-assistant"
+      },
+      "marked_for_removal": true
+    },
+    {
       "id": "wiki_political_affiliation",
       "label": "Political Affiliation",
       "category": "Worldview: Beliefs",
@@ -19189,5 +19543,46 @@
       "intended_use": "Cognitive and motivation grounding",
       "reason_added": "Adds 1 malleability-of-ability belief dimension for cognitive motivation and learning orientation differences across personas."
     }
-  ]
+  ],
+  "_dedup_metadata": {
+    "snapshot_date": "2026-06-20",
+    "dimensions_to_remove": 34,
+    "removed_ids": [
+      "synthlabs_persona_dimension_1",
+      "synthlabs_persona_dimension_2",
+      "synthlabs_persona_dimension_3",
+      "synthlabs_persona_dimension_4",
+      "synthlabs_persona_dimension_5",
+      "synthlabs_persona_dimension_6",
+      "synthlabs_persona_dimension_7",
+      "synthlabs_persona_dimension_8",
+      "synthlabs_persona_dimension_9",
+      "synthlabs_persona_dimension_10",
+      "synthlabs_persona_dimension_11",
+      "synthlabs_persona_dimension_12",
+      "synthlabs_persona_dimension_13",
+      "synthlabs_persona_dimension_14",
+      "synthlabs_persona_dimension_15",
+      "synthlabs_persona_dimension_16",
+      "synthlabs_persona_dimension_17",
+      "synthlabs_persona_dimension_18",
+      "synthlabs_persona_dimension_19",
+      "synthlabs_persona_dimension_20",
+      "synthlabs_persona_dimension_21",
+      "synthlabs_persona_dimension_22",
+      "synthlabs_persona_dimension_23",
+      "synthlabs_persona_dimension_24",
+      "synthlabs_persona_dimension_25",
+      "synthlabs_persona_dimension_26",
+      "synthlabs_persona_dimension_27",
+      "synthlabs_persona_dimension_28",
+      "synthlabs_persona_dimension_29",
+      "synthlabs_persona_dimension_30",
+      "synthlabs_persona_dimension_31",
+      "synthlabs_persona_dimension_32",
+      "synthlabs_persona_dimension_33",
+      "wiki_marital_status"
+    ],
+    "reason": "Conservative deduplication: removed 33 SynthLabs placeholders (all have single value [\"Unknown\"]) and 1 duplicate marital status dimension (wiki_marital_status in favor of demo_marital_status in Demographic: Core)"
+  }
 }
