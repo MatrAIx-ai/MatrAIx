@@ -136,7 +136,7 @@ class Orchestrator:
                 self._platform_state.process_action(user_id, "do_nothing", {})
                 actions_taken.append({"action": "do_nothing", "params": {}, "result": {"success": True}})
             else:
-                for tc in llm_response.tool_calls[:3]:
+                for tc in llm_response.tool_calls[:5]:
                     if tc.name in self._config.available_actions:
                         result = self._platform_state.process_action(user_id, tc.name, tc.arguments)
                         actions_taken.append({

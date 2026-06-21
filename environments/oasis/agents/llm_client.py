@@ -120,18 +120,32 @@ class LLMClient:
             cleaned = text
 
         calls = []
-        json_match = re.search(r"\{[^{}]*\"name\"[^{}]*\}", cleaned)
-        if json_match:
-            cleaned = json_match.group(0)
+
+        array_match = re.search(r"\[.*\]", cleaned, re.DOTALL)
+        if array_match:
+            try:
+                data = json.loads(array_match.group(0))
+                if isinstance(data, list):
+                    for item in data:
+                        if isinstance(item, dict) and "name" in item:
+                            calls.append(ToolCall(name=item["name"], arguments=item.get("arguments", {})))
+                    if calls:
+                        return calls
+            except (json.JSONDecodeError, TypeError):
+                pass
 
         try:
             data = json.loads(cleaned)
             if isinstance(data, dict) and "name" in data:
                 calls.append(ToolCall(name=data["name"], arguments=data.get("arguments", {})))
-            elif isinstance(data, list):
-                for item in data:
-                    if isinstance(item, dict) and "name" in item:
-                        calls.append(ToolCall(name=item["name"], arguments=item.get("arguments", {})))
         except (json.JSONDecodeError, TypeError):
-            pass
+            json_match = re.search(r"\{.*\"name\".*\}", cleaned, re.DOTALL)
+            if json_match:
+                try:
+                    data = json.loads(json_match.group(0))
+                    if isinstance(data, dict) and "name" in data:
+                        calls.append(ToolCall(name=data["name"], arguments=data.get("arguments", {})))
+                except (json.JSONDecodeError, TypeError):
+                    pass
+
         return calls

@@ -1,42 +1,64 @@
 # prompt.py — System prompt and observation prompt construction for OASIS agents.
-# Matches OASIS's UserInfo.to_system_message() + SocialEnvironment.to_text_prompt().
-# The system prompt carries persona identity; the observation prompt carries the feed state.
+# Designed to force active engagement: agents MUST take 2-3 actions per step.
+# do_nothing is only valid when the feed is completely empty.
 
 from __future__ import annotations
 
+import random
 from typing import Any
 
 from environments.oasis.persona_loader.adapter import OasisUserInfo
 
 
-SYSTEM_PROMPT_TEMPLATE = """You are a social media user. Your actions must be consistent with your personality and profile described below.
+SYSTEM_PROMPT_TEMPLATE = """You are an active social media user who engages heavily with content. Your personality:
 
-# WHO YOU ARE
 Name: {name}
 {user_profile}
 
-# OBJECTIVE
-You will be shown posts from your social media feed. After reviewing them, choose ONE action that reflects your personality, interests, and current mood.
+# RULES
+1. You MUST take 2-3 actions every time you see your feed. You are an active user.
+2. You should like posts you find interesting, repost content you want to share, comment on posts, follow interesting users, AND create your own posts.
+3. do_nothing is ONLY allowed if your feed is completely empty.
+4. When creating posts, write about YOUR field, YOUR opinions, YOUR experiences. Be specific and personal.
+5. When liking/reposting, reference actual post_ids from your feed.
+6. When following, use actual user_ids from posts you saw.
 
 # RESPONSE FORMAT
-You MUST respond with ONLY a JSON object choosing one action. No explanation, no thinking tags, just the JSON.
+Respond with a JSON array of 2-3 actions. Example:
+[
+  {{"name": "like_post", "arguments": {{"post_id": 3}}}},
+  {{"name": "create_post", "arguments": {{"content": "your post here"}}}}
+]
 
 Available actions:
-- {{"name": "create_post", "arguments": {{"content": "your post text"}}}}
-- {{"name": "like_post", "arguments": {{"post_id": <integer>}}}}
-- {{"name": "repost", "arguments": {{"post_id": <integer>}}}}
-- {{"name": "follow", "arguments": {{"user_id": <integer>}}}}
-- {{"name": "do_nothing", "arguments": {{}}}}
+- {{"name": "create_post", "arguments": {{"content": "text"}}}}
+- {{"name": "like_post", "arguments": {{"post_id": <int>}}}}
+- {{"name": "dislike_post", "arguments": {{"post_id": <int>}}}}
+- {{"name": "repost", "arguments": {{"post_id": <int>}}}}
+- {{"name": "create_comment", "arguments": {{"post_id": <int>, "content": "text"}}}}
+- {{"name": "follow", "arguments": {{"user_id": <int>}}}}
+- {{"name": "do_nothing", "arguments": {{}}}} (ONLY if feed is empty)
 
-Respond with ONLY the JSON object."""
+Respond with ONLY the JSON array. No text before or after."""
 
 
-OBSERVATION_TEMPLATE = """Your feed (step {step}):
+OBSERVATION_TEMPLATE = """[Step {step}] Your feed right now:
 {feed_text}
 
-Pick ONE action that best reflects your personality right now. Consider: creating an original post about your field, liking a post you agree with, reposting something worth sharing, following an interesting user, or doing nothing if nothing catches your eye. Vary your behavior naturally.
+You are an active user. Take 2-3 actions from the list below:
+- Like a post you agree with (use the exact post_id)
+- Create an original post about your work/interests
+- Repost something worth sharing
+- Comment on a post with your perspective
+- Follow a user whose content interests you
 
-Respond with JSON only. /no_think"""
+Respond with a JSON array of 2-3 actions. /no_think"""
+
+EMPTY_FEED_TEMPLATE = """[Step {step}] Your feed is empty — you're one of the first users here!
+
+Create 1-2 posts about your field to get the conversation started. Write something interesting that other professionals would want to engage with.
+
+Respond with a JSON array. /no_think"""
 
 
 def build_system_prompt(persona: OasisUserInfo) -> str:
@@ -48,24 +70,22 @@ def build_system_prompt(persona: OasisUserInfo) -> str:
 
 def build_observation_prompt(posts: list[dict[str, Any]], max_posts: int = 20, step: int = 1) -> str:
     if not posts:
-        feed_text = "Your feed is empty. No posts to see right now. You may want to create a post or search for content."
-        return OBSERVATION_TEMPLATE.format(feed_text=feed_text, step=step)
+        return EMPTY_FEED_TEMPLATE.format(step=step)
 
     display_posts = posts[:max_posts]
     lines = []
     for post in display_posts:
         post_id = post.get("post_id", "?")
         user_id = post.get("user_id", "?")
-        content = post.get("content", "")
+        content = post.get("content", "")[:120]
         likes = post.get("num_likes", 0)
         dislikes = post.get("num_dislikes", 0)
         comments = post.get("num_comments", 0)
         shares = post.get("num_shares", 0)
 
         line = (
-            f"[Post #{post_id} by user {user_id}] "
-            f"{content} "
-            f"(likes: {likes}, dislikes: {dislikes}, comments: {comments}, reposts: {shares})"
+            f"  #{post_id} [user_{user_id}]: {content}"
+            f" | likes:{likes} reposts:{shares} comments:{comments}"
         )
         lines.append(line)
 

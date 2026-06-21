@@ -53,6 +53,25 @@ config = SimulationConfig(
 orch = Orchestrator(config)
 orch.setup(personas=personas, graph=graph)
 
+print("\n[3.5/6] Injecting seed content to bootstrap engagement...")
+SEED_CONTENT = [
+    "Breaking: New AI regulation proposed that could change how we build technology. What are your thoughts?",
+    "Unpopular opinion: Remote work is actually hurting early-career professionals more than helping them.",
+    "Just read a study showing 70% of healthcare errors are caused by communication failures. We need better systems.",
+    "The gap between rich and poor countries is growing. What role should NGOs play in bridging this divide?",
+    "Hot take: Most engineering degrees don't prepare you for real-world infrastructure challenges.",
+    "New research suggests personality type affects career satisfaction more than salary. Do you agree?",
+    "The media industry is dying. Or is it just transforming? I'd love to hear different perspectives.",
+    "Climate change policy needs to be led by scientists, not politicians. Change my mind.",
+    "I think AI will replace 50% of white-collar jobs within 10 years. Here's why...",
+    "What's the biggest challenge in your industry right now? Let's start a conversation.",
+]
+for i, content in enumerate(SEED_CONTENT):
+    author_id = (i % NUM_AGENTS) + 1
+    orch._platform_state.db.create_post(author_id, content)
+orch._platform_state.advance_step()
+print(f"  Injected {len(SEED_CONTENT)} provocative seed posts")
+
 print(f"\n[4/6] Running simulation ({NUM_STEPS} steps)...")
 start = time.time()
 result = orch.run()
