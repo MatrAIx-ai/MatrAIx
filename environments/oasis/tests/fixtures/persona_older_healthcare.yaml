@@ -21,10 +21,13 @@ persona:
     years_experience: 10+
     company_size: Large corporation (500+)
     domain: Healthcare & Medicine
-    subject_specialty: Specialized
-    role_function: Leadership
+    subject_specialty: Cardiology
+    domain_characteristics: Practitioner
+    role_function: Clinical
     primary_language: English
     english_proficiency: Native
+    multilingualism: Monolingual
+    register: Formal / standard
     marital_status: Married
     children: Two children
     emotional_state: Cautious
@@ -34,3 +37,34 @@ persona:
     personality_big5_extraversion: Low
     personality_big5_agreeableness: High
     personality_big5_neuroticism: Medium
+    dominant_trait: High conscientiousness
+    risk_tolerance: Risk-averse
+    decision_style: Consensus-driven
+    values_priority: Security
+    political_lean: Center-left
+    linkedin_activity: Lurker
+    topic_health: Passionate
+    topic_science: Interested
+    topic_parenting: Interested
+    topic_gardening: Interested
+    topic_politics: Neutral
+    topic_technology: Neutral
+    topic_cooking: Interested
+    topic_travel: Neutral
+    att_ai: Skeptical
+    att_automation: Neutral
+    att_data_privacy: Enthusiast
+    att_social_media: Skeptical
+    att_remote_work: Neutral
+    val_family: Core value
+    val_health: Core value
+    val_security_stability: Core value
+    val_career_success: Important
+    val_community: Important
+    cog_verbosity: Balanced
+    cog_formality: Formal
+    cog_directness: Indirect
+    cog_humor: Wholesome
+    cog_detail_orientation: High
+    cog_abstraction: Concrete
+    cog_patience: Very high
