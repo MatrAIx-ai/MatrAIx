@@ -15,6 +15,9 @@ Dataset manifests live in `manifests/`.
 | Apple ML-PRIMEX | 43 | GitHub raw CSV file |
 | TakeLab PANDORA (Big5 subset) | 6 | Hugging Face dataset: `jingjietan/pandora-big5` |
 | SynthLabs PERSONA | 33 | Hugging Face dataset: `SynthLabsAI/PERSONA` (**gated**: accept terms + set `HF_TOKEN`) |
+| Facebook PersonaChat | 2 | Hugging Face dataset: `facebook/persona-chat` |
+| HorizonBench (mental_state_graphs) | 30 | Hugging Face dataset: `stellalisy/HorizonBench` (`mental_state_graphs` config) |
+| AllenAI WildChat (1M) | 3 | Hugging Face dataset: `allenai/WildChat-1M` |
 
 ## Eliza's Proposed Persona Schema Categories and Theoretical Basis
 
@@ -177,6 +180,9 @@ Downloads are stored under `raw/`:
 - `raw/apple_ml_primex/primexdata.csv`
 - `raw/pandora_big5/` (sample JSONL, or `data/*.parquet` in full mode)
 - `raw/synthlabs_persona/` (gated; sample JSONL, or `data/*.parquet` in full mode)
+- `raw/personachat_facebook/` (sample JSONL, or `data/*.parquet` in full mode)
+- `raw/horizonbench_mental_state_graphs/` (sample JSONL, or `data/*.parquet` in full mode)
+- `raw/wildchat_allenai/` (sample JSONL, or `data/*.parquet` in full mode)
 - `raw/literature_references/reference_registry.json`
 - `raw/literature_references/reference_registry.jsonl`
 - `raw/{reference_source_id}/`
