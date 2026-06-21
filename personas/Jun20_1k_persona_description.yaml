@@ -1,0 +1,257 @@
+metadata:
+  title: Jun 20 1K Persona Descriptions
+  description: 10 diverse persona archetypes generated from matrAIx dimension space
+  count: 10
+  generation_date: '2026-06-21'
+personas:
+- id: persona_01
+  name: Sarah Chen - Senior ML Engineer
+  description: Sarah Chen - Senior ML Engineer is a 35–44 Woman professional based in a dense urban area in East Asia. From
+    a upper-middle socioeconomic background, Sarah works in software & ai with a specialty in machine learning, holding a
+    senior position as a engineering. With 10+ of professional experience in large corporation (500+), Sarah brings substantial
+    expertise to the field. Linguistically, Sarah speaks Mandarin natively and has fluent (c1–c2) English proficiency, enabling
+    effective cross-cultural communication. Known for being focused, Sarah is currently motivated to solve a technical problem.
+    Educational background includes graduate studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 35–44
+    gender_identity: Woman
+    region: East Asia
+    urbanicity: Dense urban
+    socioeconomic_band: Upper-middle
+    primary_language: Mandarin
+    english_proficiency: Fluent (C1–C2)
+    domain: Software & AI
+    subject_specialty: Machine learning
+    seniority: Senior
+    role_function: Engineering
+    years_experience: 10+
+    company_size: Large corporation (500+)
+    highest_education: Graduate
+    emotional_state: Focused
+    intent: solve a technical problem
+- id: persona_02
+  name: Marcus Johnson - High School Teacher
+  description: Marcus Johnson - High School Teacher is a 45–54 Man professional based in a suburban area in North America.
+    From a middle socioeconomic background, Marcus works in education & learning with a specialty in history, holding a mid
+    position as a educator. With 6–10 of professional experience in government / public institution, Marcus brings substantial
+    expertise to the field. Linguistically, Marcus speaks English natively and has native English proficiency, enabling effective
+    cross-cultural communication. Known for being patient, Marcus is currently motivated to engage students in discussion.
+    Educational background includes bachelor's studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 45–54
+    gender_identity: Man
+    region: North America
+    urbanicity: Suburban
+    socioeconomic_band: Middle
+    primary_language: English
+    english_proficiency: Native
+    domain: Education & Learning
+    subject_specialty: History
+    seniority: Mid
+    role_function: Educator
+    years_experience: 6–10
+    company_size: Government / public institution
+    highest_education: Bachelor's
+    emotional_state: Patient
+    intent: engage students in discussion
+- id: persona_03
+  name: Priya Sharma - Healthcare Consultant
+  description: Priya Sharma - Healthcare Consultant is a 25–34 Woman professional based in a dense urban area in South Asia.
+    From a upper-middle socioeconomic background, Priya works in healthcare & medicine with a specialty in public health,
+    holding a mid position as a consulting. With 3–5 of professional experience in smb (50–500), Priya brings substantial
+    expertise to the field. Linguistically, Priya speaks Hindi natively and has fluent (c1–c2) English proficiency, enabling
+    effective cross-cultural communication. Known for being analytical, Priya is currently motivated to analyze health data
+    trends. Educational background includes master's studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 25–34
+    gender_identity: Woman
+    region: South Asia
+    urbanicity: Dense urban
+    socioeconomic_band: Upper-middle
+    primary_language: Hindi
+    english_proficiency: Fluent (C1–C2)
+    domain: Healthcare & Medicine
+    subject_specialty: Public health
+    seniority: Mid
+    role_function: Consulting
+    years_experience: 3–5
+    company_size: SMB (50–500)
+    highest_education: Master's
+    emotional_state: Analytical
+    intent: analyze health data trends
+- id: persona_04
+  name: Diego Ruiz - Artist & Freelancer
+  description: Diego Ruiz - Artist & Freelancer is a 18–24 Man professional based in a dense urban area in Latin America.
+    From a lower-middle socioeconomic background, Diego works in arts & design with a specialty in graphic design, holding
+    a entry position as a creative. With 0–2 of professional experience in solo / freelance, Diego brings substantial expertise
+    to the field. Linguistically, Diego speaks Spanish natively and has intermediate (b1–b2) English proficiency, enabling
+    effective cross-cultural communication. Known for being creative, Diego is currently motivated to find design inspiration.
+    Educational background includes secondary studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 18–24
+    gender_identity: Man
+    region: Latin America
+    urbanicity: Dense urban
+    socioeconomic_band: Lower-middle
+    primary_language: Spanish
+    english_proficiency: Intermediate (B1–B2)
+    domain: Arts & Design
+    subject_specialty: Graphic design
+    seniority: Entry
+    role_function: Creative
+    years_experience: 0–2
+    company_size: Solo / freelance
+    highest_education: Secondary
+    emotional_state: Creative
+    intent: find design inspiration
+- id: persona_05
+  name: Akira Tanaka - Manufacturing Manager
+  description: Akira Tanaka - Manufacturing Manager is a 55–64 Man professional based in a small town area in East Asia. From
+    a middle socioeconomic background, Akira works in manufacturing & operations with a specialty in supply chain, holding
+    a senior position as a operations. With 20+ of professional experience in large corporation (500+), Akira brings substantial
+    expertise to the field. Linguistically, Akira speaks Japanese natively and has intermediate (b1–b2) English proficiency,
+    enabling effective cross-cultural communication. Known for being pragmatic, Akira is currently motivated to optimize production
+    processes. Educational background includes bachelor's studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 55–64
+    gender_identity: Man
+    region: East Asia
+    urbanicity: Small town
+    socioeconomic_band: Middle
+    primary_language: Japanese
+    english_proficiency: Intermediate (B1–B2)
+    domain: Manufacturing & Operations
+    subject_specialty: Supply chain
+    seniority: Senior
+    role_function: Operations
+    years_experience: 20+
+    company_size: Large corporation (500+)
+    highest_education: Bachelor's
+    emotional_state: Pragmatic
+    intent: optimize production processes
+- id: persona_06
+  name: Emma Thompson - Legal Counsel
+  description: Emma Thompson - Legal Counsel is a 35–44 Woman professional based in a dense urban area in Western Europe.
+    From a upper socioeconomic background, Emma works in law & policy with a specialty in corporate law, holding a senior
+    position as a legal. With 10+ of professional experience in large corporation (500+), Emma brings substantial expertise
+    to the field. Linguistically, Emma speaks English natively and has native English proficiency, enabling effective cross-cultural
+    communication. Known for being cautious, Emma is currently motivated to review contract implications. Educational background
+    includes law degree studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 35–44
+    gender_identity: Woman
+    region: Western Europe
+    urbanicity: Dense urban
+    socioeconomic_band: Upper
+    primary_language: English
+    english_proficiency: Native
+    domain: Law & Policy
+    subject_specialty: Corporate law
+    seniority: Senior
+    role_function: Legal
+    years_experience: 10+
+    company_size: Large corporation (500+)
+    highest_education: Law degree
+    emotional_state: Cautious
+    intent: review contract implications
+- id: persona_07
+  name: Amina Hassan - Startup Founder
+  description: Amina Hassan - Startup Founder is a 25–34 Woman professional based in a dense urban area in MENA. From a lower-middle
+    socioeconomic background, Amina works in business & entrepreneurship with a specialty in e-commerce, holding a founder
+    / ceo position as a leadership. With 3–5 of professional experience in startup (<50), Amina brings substantial expertise
+    to the field. Linguistically, Amina speaks Arabic natively and has fluent (c1–c2) English proficiency, enabling effective
+    cross-cultural communication. Known for being ambitious, Amina is currently motivated to scale business operations. Educational
+    background includes bachelor's studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 25–34
+    gender_identity: Woman
+    region: MENA
+    urbanicity: Dense urban
+    socioeconomic_band: Lower-middle
+    primary_language: Arabic
+    english_proficiency: Fluent (C1–C2)
+    domain: Business & Entrepreneurship
+    subject_specialty: E-commerce
+    seniority: Founder / CEO
+    role_function: Leadership
+    years_experience: 3–5
+    company_size: Startup (<50)
+    highest_education: Bachelor's
+    emotional_state: Ambitious
+    intent: scale business operations
+- id: persona_08
+  name: Robert Wilson - Climate Scientist
+  description: Robert Wilson - Climate Scientist is a 45–54 Man professional based in a dense urban area in North America.
+    From a upper-middle socioeconomic background, Robert works in science & research with a specialty in climate science,
+    holding a senior position as a research. With 15+ of professional experience in university / research institution, Robert
+    brings substantial expertise to the field. Linguistically, Robert speaks English natively and has native English proficiency,
+    enabling effective cross-cultural communication. Known for being concerned, Robert is currently motivated to communicate
+    climate findings. Educational background includes phd studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 45–54
+    gender_identity: Man
+    region: North America
+    urbanicity: Dense urban
+    socioeconomic_band: Upper-middle
+    primary_language: English
+    english_proficiency: Native
+    domain: Science & Research
+    subject_specialty: Climate science
+    seniority: Senior
+    role_function: Research
+    years_experience: 15+
+    company_size: University / research institution
+    highest_education: PhD
+    emotional_state: Concerned
+    intent: communicate climate findings
+- id: persona_09
+  name: Jasmine Patel - Social Worker
+  description: Jasmine Patel - Social Worker is a 25–34 Woman professional based in a small town area in Sub-Saharan Africa.
+    From a low income socioeconomic background, Jasmine works in social services & ngo with a specialty in community development,
+    holding a mid position as a social services. With 3–5 of professional experience in ngo / non-profit, Jasmine brings substantial
+    expertise to the field. Linguistically, Jasmine speaks Swahili natively and has intermediate (b1–b2) English proficiency,
+    enabling effective cross-cultural communication. Known for being compassionate, Jasmine is currently motivated to support
+    vulnerable communities. Educational background includes bachelor's studies in the field, providing strong foundational
+    knowledge.
+  dimensions:
+    age_bracket: 25–34
+    gender_identity: Woman
+    region: Sub-Saharan Africa
+    urbanicity: Small town
+    socioeconomic_band: Low income
+    primary_language: Swahili
+    english_proficiency: Intermediate (B1–B2)
+    domain: Social Services & NGO
+    subject_specialty: Community development
+    seniority: Mid
+    role_function: Social services
+    years_experience: 3–5
+    company_size: NGO / non-profit
+    highest_education: Bachelor's
+    emotional_state: Compassionate
+    intent: support vulnerable communities
+- id: persona_10
+  name: Viktor Novak - Data Analyst
+  description: Viktor Novak - Data Analyst is a 18–24 Man professional based in a dense urban area in Eastern Europe. From
+    a lower-middle socioeconomic background, Viktor works in software & ai with a specialty in data science, holding a entry
+    position as a engineering. With 0–2 of professional experience in startup (<50), Viktor brings substantial expertise to
+    the field. Linguistically, Viktor speaks Polish natively and has intermediate (b1–b2) English proficiency, enabling effective
+    cross-cultural communication. Known for being ambitious, Viktor is currently motivated to improve data analysis pipelines.
+    Educational background includes bachelor's studies in the field, providing strong foundational knowledge.
+  dimensions:
+    age_bracket: 18–24
+    gender_identity: Man
+    region: Eastern Europe
+    urbanicity: Dense urban
+    socioeconomic_band: Lower-middle
+    primary_language: Polish
+    english_proficiency: Intermediate (B1–B2)
+    domain: Software & AI
+    subject_specialty: Data science
+    seniority: Entry
+    role_function: Engineering
+    years_experience: 0–2
+    company_size: Startup (<50)
+    highest_education: Bachelor's
+    emotional_state: Ambitious
+    intent: improve data analysis pipelines
