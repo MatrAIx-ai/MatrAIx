@@ -1,0 +1,18 @@
+id: 00006830
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6830
+persona_description: A neurologist who specializes in the study of neurological syndromes associated with COVID-19, particularly encephalopathy, stroke, intracerebral hemorrhage, signs of meningoencephalitis,
+  and acute neurological symptoms. The neurologist is interested in the pathogenesis of these syndromes and the interventions for the associated symptoms. The neurologist is also interested in long-term
+  monitoring and potential treatment of these neurological effects.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: neurological effects of COVID-19
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

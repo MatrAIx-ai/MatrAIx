@@ -1,0 +1,81 @@
+id: '00001423'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1423
+data:
+  user 1 personas: 'I work at amazon.
+
+    I have two kids.
+
+    I live in a rural community.
+
+    I love robotics.'
+  user 2 personas: 'I play video games all day.
+
+    I eat all take out.
+
+    I still live at home with my parents.
+
+    I do not want a job.'
+  Best Generated Conversation: 'User 1: Hi! I''m interested in robotics. Do you know anything about it?
+
+
+    User 2: I don''t know anything about robotics, but I do know a lot about video games.
+
+
+    User 1: Oh, that''s cool! What kind of video games do you like to play?
+
+
+    User 2: I like to play all kinds of video games, but my favorite is probably Fortnite.
+
+
+    User 1: I''ve heard of Fortnite, but I''ve never played it.
+
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+
+    User 1: Maybe I will. Do you play it a lot?
+
+
+    User 2: I play it every day.
+
+
+    User 1: That''s a lot of video games!
+
+
+    User 2: I know, but I love it!
+
+
+    User 1: I guess I can understand that. I love to play video games too.
+
+
+    User 2: What''s your favorite video game?
+
+
+    User 1: My favorite video game is probably Mario Kart.
+
+
+    User 2: Mario Kart is a classic! I love that game too.
+
+
+    User 1: Me too! It''s so much fun to play with friends.
+
+
+    User 2: I know, right? It''s one of the best multiplayer games ever made.
+
+
+    User 1: I think so too. It''s so much fun to compete with your friends and see who can win.
+
+
+    User 2: Yeah, and it''s even more fun when you''re all laughing and having a good time.
+
+
+    User 1: Exactly! That''s what makes video games so great.
+
+
+    User 2: Yeah, they''re a great way to relax and have fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00000925
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 925
+data:
+  user 1 personas: 'I am from texas.
+
+    I like basketball.
+
+    I work many hours.
+
+    I am a father.'
+  user 2 personas: 'My favorite meal is chicken and rice.
+
+    I read autobiographies before bed.
+
+    I have a cat named george.
+
+    My favorite band is metallica.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello there!
+
+    User 1: I''m from Texas!
+
+    User 2: Oh, that''s cool! I''ve never been to Texas.
+
+    User 1: You should come visit sometime! We have great food, music, and culture.
+
+    User 2: I''d love to! I''ve heard great things about Texas barbecue.
+
+    User 1: It''s the best! What do you like to do for fun?
+
+    User 2: I like to read, play video games, and hang out with my friends.
+
+    User 1: I love to read too! What kind of books do you like to read?
+
+    User 2: I like to read biographies and autobiographies. I also like to read books about history and science.
+
+    User 1: Me too! I love learning about new things.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a software engineer. I work long hours, but I love my job.
+
+    User 2: That''s cool! I''m a student. I''m studying computer science.
+
+    User 1: Oh, that''s awesome! What year are you in?
+
+    User 2: I''m a freshman.
+
+    User 1: That''s great! I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so!
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is Metallica. I love their music.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: I think my favorite song is "One." It''s such a powerful song.
+
+    User 2: That''s a good one! I love the lyrics.
+
+    User 1: Yeah, they''re really powerful.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to concerts, play video games, and watch movies.
+
+    User 2: Oh, that''s cool! I like to do all of those things too.
+
+    User 1: I''m glad! We should hang out sometime.
+
+    User 2: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

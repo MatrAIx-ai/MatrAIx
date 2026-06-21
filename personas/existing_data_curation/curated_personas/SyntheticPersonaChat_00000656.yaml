@@ -1,0 +1,72 @@
+id: '00000656'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 656
+data:
+  user 1 personas: 'I have a beard.
+
+    I graduated high school.
+
+    I like rap music.
+
+    I live on a farm.
+
+    I drive a truck.'
+  user 2 personas: 'I am a barista.
+
+    My family is from algeria.
+
+    I play jazz piano in a band.
+
+    I can speak arabic , english , and french.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a barista.
+
+    User 1: Cool! I''ve always wanted to learn how to make coffee.
+
+    User 2: It''s not that hard. You just need to know how to grind the beans, measure the water, and heat it up.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s fun and you can make some pretty good coffee.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I play jazz piano in a band.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to play the piano.
+
+    User 2: It''s a lot of fun. I''ve been playing for about 10 years now.
+
+    User 1: What''s your favorite genre of music to play?
+
+    User 2: I like to play jazz, but I also like to play classical music.
+
+    User 1: I like jazz too. It''s so relaxing.
+
+    User 2: It is, isn''t it?
+
+    User 1: What languages do you speak?
+
+    User 2: I speak Arabic, English, and French.
+
+    User 1: That''s impressive! I only speak English and a little bit of Spanish.
+
+    User 2: I''ve always been interested in learning new languages.
+
+    User 1: Me too. I think it''s really important to be able to communicate with people from different cultures.
+
+    User 2: I agree. It''s a great way to learn about different ways of life.
+
+    User 1: I''m glad we met. We seem to have a lot in common.
+
+    User 2: Me too. I''m glad we met too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

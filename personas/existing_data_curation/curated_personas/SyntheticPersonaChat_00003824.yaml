@@ -1,0 +1,56 @@
+id: 00003824
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3824
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I have a pet dog.
+
+    I am an only child.
+
+    I am a student.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I like to listen to elvis.
+
+    I drive a blue car.
+
+    I own blue shoes.
+
+    I changed my hair color to blue.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi, my name is Bob! What''s yours?
+
+    User 1: My name is Jane. It''s nice to meet you, Bob!
+
+    User 2: It''s nice to meet you too, Jane! What do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and go for walks.
+
+    User 2: Me too! I love to play video games, especially Mario Kart.
+
+    User 1: Mario Kart is my favorite too! I love playing it with my friends.
+
+    User 2: Me too! It''s so much fun to race against your friends.
+
+    User 1: I like to go for walks too. I live near a park, so I like to walk there.
+
+    User 2: That sounds nice! I love walking in parks. There''s so much to see and do.
+
+    User 1: I know, right? I love taking pictures of the flowers and trees.
+
+    User 2: Me too! I love taking pictures of nature. It''s so beautiful.
+
+    User 1: I agree! I think nature is the most beautiful thing in the world.
+
+    User 2: Me too! I love being in nature. It makes me feel relaxed.
+
+    User 1: Me too! I love going on hikes and camping trips.
+
+    User 2: Me too! I love being outdoors'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

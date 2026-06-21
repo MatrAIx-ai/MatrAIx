@@ -1,0 +1,86 @@
+id: 00001597
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1597
+data:
+  user 1 personas: 'I have 3 children.
+
+    I have a vacation home in the mountains.
+
+    I have a law degree.
+
+    I drive an suv.'
+  user 2 personas: 'I am planning to move to a new state soon.
+
+    I enjoy hiking.
+
+    I have two border collies.
+
+    I speak french and english fluently.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to hike. I also have two border collies, so we go for a lot of walks.
+
+    User 1: That sounds fun! I love to hike too. I have a vacation home in the mountains, so I get to go hiking a lot.
+
+    User 2: That''s awesome! I''m planning to move to a new state soon, and I''m hoping to find a place near the mountains so I can keep hiking.
+
+    User 1: That sounds great! Where are you thinking of moving to?
+
+    User 2: I''m not sure yet. I''m still looking into different places.
+
+    User 1: Well, good luck with your move! I''m sure you''ll find a great place.
+
+    User 2: Thanks! I''m looking forward to it.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a lawyer.
+
+    User 2: Wow, that''s a lot of work!
+
+    User 1: It can be, but I enjoy it.
+
+    User 2: I''m sure you do.
+
+    User 1: So, what do you like about hiking?
+
+    User 2: I love being outdoors and exploring new places. I also love the exercise.
+
+    User 1: I agree, hiking is a great way to get exercise.
+
+    User 2: It is! I''m always so tired when I''m done, but in a good way.
+
+    User 1: Me too! I love the feeling of accomplishment when I finish a hike.
+
+    User 2: Me too! It''s so rewarding.
+
+    User 1: So, what are some of your favorite hikes?
+
+    User 2: I have a lot of favorite hikes, but one of my favorites is the Mount Tammany hike in New Jersey. It''s a challenging hike, but the views at the top are amazing.
+
+    User 1: That sounds amazing! I''ll have to check that out sometime.
+
+    User 2: You should! It''s a great hike.
+
+    User 1: So, what do you like to do with your border collies?
+
+    User 2: We go for walks, play fetch, and go camping.
+
+    User 1: That sounds fun! I love border collies. They''re such smart dogs.
+
+    User 2: They are! They''re the best.
+
+    User 1: I''m glad you have such a great dog.
+
+    User 2: Me too! I love her so much.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: 00002085
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2085
+data:
+  user 1 personas: 'I am a history buff.
+
+    I am engaged to be married.
+
+    I love animals and like working with them.
+
+    My parents are divorced.
+
+    I am in a local theater company.'
+  user 2 personas: 'I like victorian things.
+
+    I collect dolls.
+
+    I am a romantic.
+
+    I like antiques.
+
+    I like jazz.'
+  Best Generated Conversation: 'User 1: Hi, I''m looking for someone to talk to.
+
+    User 2: Hi, I''m free to chat. What would you like to talk about?
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect dolls, listen to jazz, and read about victorian times.
+
+    User 1: That sounds interesting. I like history too. What''s your favorite historical period?
+
+    User 2: I''m really interested in the Victorian era. I love the architecture, fashion, and music from that time.
+
+    User 1: I''ve always wanted to visit London during the Victorian era. I think it would be so cool to see all the old buildings and wear the clothes from that time.
+
+    User 2: Me too! I''ve been to London a few times, but I''ve never been there during the Victorian era. It would be so amazing to see it all in person.
+
+    User 1: Maybe we should plan a trip to London together!
+
+    User 2: That would be so fun! I would love to explore the city with you.
+
+    User 1: Great! We can start planning right away.
+
+    User 2: I can''t wait!
+
+    User 1: Me neither. This is going to be so much fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

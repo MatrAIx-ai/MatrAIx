@@ -1,0 +1,20 @@
+id: 00042805
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42805
+persona_description: A scientist and researcher working in the field of space physics, specifically focusing on the study of the Earth's mesosphere and lower-thermosphere. Their expertise lies in the use
+  of the TIDI Doppler Interferometer, which is a scientific instrument designed to measure the horizontal vector winds from the Earth's limb, with a vertical resolution of 2.5 km and an accuracy approaching
+  3 m/sec. The TIDI design allows for 100% duty cycle instrument operation during daytime, nighttime, and in auroral conditions. The persona is likely to be involved in research projects that involve the
+  analysis of wind patterns, gravity waves, species densities, airglow, auroral emission rates, and noctilucent clouds. They are also likely to have a deep understanding of the physics behind the TIDI interferometer
+  and its components, such as the telescopes, Fabry-Perot interferometer, CCD detector, and electronics box.
+expertise:
+  general_domain_top1pct: Physics
+  specific_domain_top1pct: Atmospheric Physics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

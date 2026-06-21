@@ -1,0 +1,54 @@
+id: 00006581
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6581
+data:
+  user 1 personas: 'I am the youngest of three brothers.
+
+    I play guitar in the local band.
+
+    I ve never been to the city.
+
+    My name is omar.
+
+    I live on a small farm in ohio.'
+  user 2 personas: 'I m the general manager of the local grocery store.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    My hobbies include reading and cycling.
+
+    My name is frank.'
+  Best Generated Conversation: 'User 1: Hey Frank, I''m Omar. What''s up?
+
+    User 2: Hey Omar, not much. Just got back from a long bike ride. What about you?
+
+    User 1: Not much, just hanging out on the farm. I''m the youngest of three brothers. What about you?
+
+    User 2: I''m an only child, but I''m the general manager of the local grocery store.
+
+    User 1: Oh, that''s cool. What''s it like working in a grocery store?
+
+    User 2: It''s pretty good, but it can be stressful at times.
+
+    User 1: I bet. I''ve never been to the city. I live on a small farm in Ohio.
+
+    User 2: Oh, that''s cool. I love the outdoors. I spend a lot of time hiking and biking in my spare time.
+
+    User 1: I love hiking too. I''m not a great biker, but I''m getting better.
+
+    User 2: That''s good to hear. I''m always looking for new biking buddies.
+
+    User 1: Maybe we can bike together sometime.
+
+    User 2: I''d love that.
+
+    User 1: Great. Let''s exchange numbers.
+
+    User 2: Sure.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

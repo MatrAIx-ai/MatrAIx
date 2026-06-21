@@ -1,0 +1,19 @@
+id: 00058201
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58201
+persona_description: A Linux system administrator who is familiar with the configuration and management of network file systems, specifically the NFS protocol and its related components such as rpc.nfsd,
+  rpc.ugidd, and rpc.mountd. The individual has experience working with modern Linux distributions and has a good understanding of the commands and tools related to these components. They are proficient
+  in using the network boot scripts to start the NFS server and have knowledge of how to configure the server to allow clients to mount and use specific directories. Additionally, they have experience with
+  the exports file and how to use it to specify directories for clients to mount. They are likely to be interested in troubleshooting and optimizing the NFS server's performance and security.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Linux System Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: NFS Administration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

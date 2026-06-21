@@ -1,0 +1,18 @@
+id: 00048083
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48083
+persona_description: A neurologist who specializes in the diagnosis and treatment of ALS, focusing on ruling out other diseases through a combination of neurological examinations, nerve and muscle biopsies,
+  and diagnostic tests such as electromyography (EMG) and nerve conduction studies. They are particularly skilled in identifying and differentiating between ALS and other neurodegenerative diseases, such
+  as frontotemporal dementia and multiple sclerosis.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: ALS diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,94 @@
+id: '00005200'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5200
+data:
+  user 1 personas: 'Winter is my favorite season.
+
+    My parents are lawyers.
+
+    I don t like wearing a swimsuit.
+
+    If i can t order it on the internet , i don t need it.'
+  user 2 personas: 'I like visiting art museums in my spare time.
+
+    I m a student.
+
+    I just started dating someone new.
+
+    I am a vegan.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thanks for asking. What about you?
+
+    User 2: I''m doing great! I just started dating someone new, and I''m really excited about it.
+
+    User 1: That''s great! I''m happy for you.
+
+    User 2: Thanks!
+
+    * * *
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to visit art museums, go for walks in the park, and read.
+
+    User 1: Those all sound like great things to do. I love art museums too!
+
+    User 2: Me too! They''re so relaxing and inspiring.
+
+    User 1: I agree. I''m also a big fan of nature, so I love going for walks in the park.
+
+    User 2: Me too! I love being surrounded by trees and plants.
+
+    * * *
+
+    User 1: I''m not really a fan of swimsuits. I don''t like how they feel on my skin.
+
+    User 2: Oh, that''s too bad. I love swimsuits! I think they''re so fun and flirty.
+
+    User 1: I guess I just don''t like the way they look on me.
+
+    User 2: Well, everyone has different tastes. I think you look great in a swimsuit!
+
+    User 1: Thank you!
+
+    * * *
+
+    User 1: I order everything online. I don''t like going to the store.
+
+    User 2: Really? I love going to the store! I like browsing the aisles and seeing all the different things.
+
+    User 1: I guess I just don''t have the patience for it. I''d rather just order what I need online and have it delivered to my door.
+
+    User 2: That makes sense. I can definitely see the appeal of online shopping.
+
+    * * *
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a student. I''m studying to be a lawyer, like my parents.
+
+    User 1: Oh, that''s cool! I''m sure you''ll be a great lawyer.
+
+    User 2: Thanks! I hope so.
+
+    * * *
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!
+
+    * * *
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

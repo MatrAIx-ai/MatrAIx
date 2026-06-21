@@ -1,0 +1,19 @@
+id: 00058160
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58160
+persona_description: A scientist who specializes in battery research and development, particularly focusing on the causes and mechanisms of battery failures such as thermal runaway and combustion. This
+  persona is highly knowledgeable about the materials and processes used in battery manufacturing and is skilled in simulating and analyzing battery failure scenarios using advanced imaging techniques such
+  as X-ray crystallography and thermal imaging. This person has worked with NASA to develop devices that deliberately cause a short circuit at a known location, which has enabled them to build a map that
+  predicts how heat spreads through a cell, and they are currently working on developing safer battery materials that are less prone to thermal runaway and combustion.
+expertise:
+  general_domain_top1pct: Materials Science/Engineering
+  specific_domain_top1pct: Battery Science/Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

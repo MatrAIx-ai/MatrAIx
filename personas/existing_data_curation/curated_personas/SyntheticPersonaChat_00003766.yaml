@@ -1,0 +1,66 @@
+id: '00003766'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3766
+data:
+  user 1 personas: 'I refuse to ride the bus.
+
+    I listen to music for more than 5 hours a day.
+
+    I never work more than 4 days in a row.
+
+    My parents are both dead.'
+  user 2 personas: 'I like playing badminton.
+
+    I don t really like vegetables or fruit but i pretend.
+
+    I once rescued a baby on a highway.
+
+    I am not very good at playing basketball.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for fun?
+
+    User 2: I like playing badminton, and I once rescued a baby on a highway.
+
+    User 1: Wow, that''s amazing! I''m glad you were there to help the baby.
+
+    User 2: Thanks. I like to think that I made a difference in that child''s life.
+
+    User 1: I''m sure you did. So, what else do you like to do?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like action movies, comedies, and dramas.
+
+    User 1: Me too! I love action movies.
+
+    User 2: What''s your favorite action movie?
+
+    User 1: I don''t know if I have a favorite, but I really like the Fast and Furious movies.
+
+    User 2: Those are great movies! I''ve seen all of them.
+
+    User 1: Me too! I love the action and the cars.
+
+    User 2: Me too! I''m a big fan of cars.
+
+    User 1: Me too! I have always loved cars.
+
+    User 2: What''s your favorite car?
+
+    User 1: I don''t know if I have a favorite, but I really like the Ferrari F40.
+
+    User 2: That''s a great car! I''ve always wanted one.
+
+    User 1: Me too! I''m sure it would be a lot of fun to drive.
+
+    User 2: I''m sure it would be.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

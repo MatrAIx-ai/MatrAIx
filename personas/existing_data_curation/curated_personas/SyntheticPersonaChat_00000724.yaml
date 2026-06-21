@@ -1,0 +1,66 @@
+id: '00000724'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 724
+data:
+  user 1 personas: 'I like to read.
+
+    I listen to podcasts.
+
+    I have a long drive to work.
+
+    I am a diabetic.'
+  user 2 personas: 'I love hockey.
+
+    I ve flown out of the country.
+
+    My bestfriend is from out of town.
+
+    I studied business as my major.
+
+    I ve a younger sibling.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How are you?
+
+    User 1: I''m doing well, thanks! What about you?
+
+    User 2: I''m doing great! I just got back from a trip to Canada.
+
+    User 1: Oh, that sounds fun! Where did you go?
+
+    User 2: I went to Vancouver. It was beautiful!
+
+    User 1: I''ve heard good things about Vancouver. I''ve always wanted to go there.
+
+    User 2: You should! It''s a great city.
+
+    User 1: I''ll definitely have to put it on my list.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, listen to podcasts, and play video games.
+
+    User 2: Oh, I love reading too! What are some of your favorite books?
+
+    User 1: I like a lot of different genres, but I''m really into fantasy and science fiction right now.
+
+    User 2: Me too! I love the Harry Potter series.
+
+    User 1: Me too! I''ve read them all multiple times.
+
+    User 2: I love how they''re so magical and imaginative.
+
+    User 1: Me too! I also love the characters. They''re all so well-developed.
+
+    User 2: I agree! They''re some of my favorite characters in any book.
+
+    User 1: Me too! I''m excited for the new movie that''s coming out.
+
+    User 2: Me too! I''m hoping it''s good.
+
+    User 1: Me too! I''m sure it will be.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00053485
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53485
+persona_description: A scientist or researcher who specializes in the study of spectroscopy, particularly in the analysis of elements and their emissions from targets on Mars. This person is likely to be
+  interested in the details of the ChemCam instrument's operation, the types of elements detected, and the analysis of the data. They would be interested in the specifics of the data interpretation, such
+  as the height of peaks indicating the relative abundances of elements in the rock, and the consistency of the spectrum with known types of Martian rocks. They would also be interested in the context of
+  the data, such as its relevance to previous missions and the potential implications for understanding the geology of Mars.
+expertise:
+  general_domain_top1pct: Physics
+  specific_domain_top1pct: Planetary Spectroscopy
+  general_domain_top01pct: None
+  specific_domain_top01pct: Mars Geology and Spectroscopy
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

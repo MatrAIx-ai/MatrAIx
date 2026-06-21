@@ -1,0 +1,86 @@
+id: 00001068
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1068
+data:
+  user 1 personas: 'I like to paint.
+
+    I hate the taste of fish.
+
+    I have 23 cats at home.
+
+    I traveled around the world in a boat.
+
+    I am a vegan.'
+  user 2 personas: 'My favorite band is nirvana.
+
+    My car needs some repairs.
+
+    I am a waitress at a local restaurant.
+
+    I am a casual dresser.'
+  Best Generated Conversation: 'User 1: Hi, I''m David. I''m a vegan.
+
+    User 2: Hi David, I''m Jennifer. I''m a fan of Nirvana.
+
+    User 1: Nice to meet you, Jennifer. I love Nirvana too!
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: What''s your favorite song?
+
+    User 2: It''s hard to say, but I''d have to say "Come as You Are."
+
+    User 1: That''s a great song! I love the music video too.
+
+    User 2: Me too! It''s so iconic.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a waitress at a local restaurant.
+
+    User 1: Oh, that sounds fun.
+
+    User 2: It is! I get to meet new people all the time.
+
+    User 1: What''s your favorite part of your job?
+
+    User 2: I love being able to make people''s days better.
+
+    User 1: That''s a great way to look at it.
+
+    User 2: It is! I love making people happy.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go to concerts, read, and spend time with my friends.
+
+    User 1: Me too! I love going to concerts.
+
+    User 2: Me too! They''re so much fun.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t have any pets.
+
+    User 1: I have 23 cats.
+
+    User 2: That''s a lot of cats!
+
+    User 1: I know, right? I love them all.
+
+    User 2: I bet they''re really cute.
+
+    User 1: They are! They''re the best.
+
+    User 2: So, what''s your favorite thing to do with your cats?
+
+    User 1: I love to play with them, cuddle with them, and give them treats.
+
+    User 2: I bet they love that.
+
+    User 1: They do! They''re so sweet.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

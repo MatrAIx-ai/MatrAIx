@@ -1,0 +1,82 @@
+id: '00006702'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6702
+data:
+  user 1 personas: 'My mother has her own fashion brand.
+
+    I am a vegan.
+
+    I got a job as an accountant 3 months ago.
+
+    My favorite artist is bob ross.'
+  user 2 personas: 'I decided to quick my job and travel for a couple of months.
+
+    I am an engineer.
+
+    I am currently working on a project that involves bitcoins.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an engineer.
+
+    User 1: Cool! What kind of engineering?
+
+    User 2: I''m working on a project that involves bitcoins.
+
+    User 1: Oh, that''s interesting! I''m a vegan.
+
+    User 2: Really? I''ve never met a vegan before.
+
+    User 1: Yeah, it''s not too common.
+
+    User 2: How long have you been vegan?
+
+    User 1: About a year now.
+
+    User 2: Why did you decide to become vegan?
+
+    User 1: I just felt like it was the right thing to do for the environment.
+
+    User 2: That''s a good reason. I''ve been thinking about going vegan myself.
+
+    User 1: You should! It''s really not that hard.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: You won''t regret it.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to paint.
+
+    User 2: Really? Me too! What kind of paintings do you do?
+
+    User 1: I like to paint landscapes and nature scenes.
+
+    User 2: Oh, that''s cool. I like to paint portraits and abstracts.
+
+    User 1: I''ve never tried painting portraits or abstracts.
+
+    User 2: You should! They''re really fun to do.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what are you doing for your travels?
+
+    User 2: I''m not sure yet. I''m still planning it out.
+
+    User 1: Oh, that sounds fun. I''m sure you''ll have a great time.
+
+    User 2: Thanks. I''m hoping so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

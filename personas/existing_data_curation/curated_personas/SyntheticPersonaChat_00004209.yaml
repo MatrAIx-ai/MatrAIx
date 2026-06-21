@@ -1,0 +1,74 @@
+id: 00004209
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4209
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I like skateboarding.
+
+    I am a female.
+
+    I am in high school.
+
+    I have blonde hair.'
+  user 2 personas: 'I sleep 10 hours every day because my work is tiring.
+
+    I have a wife and two kids.
+
+    I am a factory worker.
+
+    I want to be in a band someday.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1''s name], what''s your name?
+
+    User 2: I''m [user 2''s name].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a factory worker.
+
+    User 1: Oh, that sounds interesting. How long have you been doing that?
+
+    User 2: About 10 years now.
+
+    User 1: Wow, that''s a long time. Do you enjoy your job?
+
+    User 2: It''s okay. It''s not the most exciting job in the world, but it pays the bills.
+
+    User 1: I know what you mean. I''m still in high school, but I''m already thinking about what I want to do for a living.
+
+    User 2: What are you interested in?
+
+    User 1: I''m not sure yet. I like a lot of different things, but I''m not sure what I want to do with my life.
+
+    User 2: Well, you have plenty of time to figure it out.
+
+    User 1: Yeah, I know. I''m just not sure where to start.
+
+    User 2: Well, you could start by thinking about what you''re passionate about. What do you love to do?
+
+    User 1: I love to skateboard.
+
+    User 2: That''s a good start. Have you thought about becoming a professional skateboarder?
+
+    User 1: I have thought about it, but I don''t think I''m good enough.
+
+    User 2: You don''t know until you try. You could always take some lessons and see how you do.
+
+    User 1: Yeah, that''s a good idea. I''ll have to think about it.
+
+    User 2: Well, I''m glad we had this talk. I hope it helped you a little bit.
+
+    User 1: It did. Thank you for your help.
+
+    User 2: You''re welcome. Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00006083
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6083
+data:
+  user 1 personas: 'I volunteer at an animal shelter.
+
+    I live in pittsburgh.
+
+    I am a librarian.
+
+    My favorite kind of food is italian.
+
+    I love going to concerts.'
+  user 2 personas: 'I am always happy when the summer ends.
+
+    Sometimes i wish my computer would work faster.
+
+    Rita hayworth is the woman of my dreams.
+
+    I like standing in the rain.'
+  Best Generated Conversation: 'User 1: Hello! I''m (name), and I''m from Pittsburgh.
+
+    User 2: Hi (name), I''m (name). I live in Cleveland.
+
+    User 1: Nice to meet you! What do you do for a living?
+
+    User 2: I''m a web designer.
+
+    User 1: Cool! I''m a librarian.
+
+    User 2: Oh, that sounds interesting! I love to read.
+
+    User 1: Me too! I volunteer at an animal shelter.
+
+    User 2: That''s awesome! I love animals too.
+
+    User 1: What''s your favorite kind of food?
+
+    User 2: I love Italian food!
+
+    User 1: Me too! I''m a big fan of pasta.
+
+    User 2: Me too! I love pasta with tomato sauce.
+
+    User 1: That''s my favorite too!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love going to concerts.
+
+    User 2: Me too! I love music.
+
+    User 1: What''s your favorite band?
+
+    User 2: I like Rita Hayworth.
+
+    User 1: I''ve never heard of them.
+
+    User 2: They''re a great band! You should check them out.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

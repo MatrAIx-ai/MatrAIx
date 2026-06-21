@@ -1,0 +1,76 @@
+id: 00006219
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6219
+data:
+  user 1 personas: 'I drink beers and go to the creek.
+
+    I usually catch sunfish.
+
+    I am a simple man.
+
+    I cannot eat them but they are pretty.'
+  user 2 personas: 'I design video games for a living.
+
+    My mom is my best friend.
+
+    I am afraid of the dark.
+
+    Rock music is my favorite.
+
+    I hate broccoli.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I design video games for a living.
+
+    User 1: That sounds really cool! Do you like it?
+
+    User 2: I do! It''s a lot of fun to be able to create something that other people can enjoy.
+
+    User 1: What''s your favorite game that you''ve designed?
+
+    User 2: I''m not sure I have a favorite game, but I really like working on the new game I''m developing.
+
+    User 1: What''s it about?
+
+    User 2: It''s a role-playing game set in a fantasy world.
+
+    User 1: That sounds awesome! I love role-playing games.
+
+    User 2: Me too! I''m really excited to see how it turns out.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go to concerts and play video games.
+
+    User 1: I love concerts too! What''s your favorite band?
+
+    User 2: I''m not sure I have a favorite band, but I really like the Foo Fighters.
+
+    User 1: They''re great! I''ve seen them live a few times.
+
+    User 2: Me too! They''re awesome live.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go hiking, fishing, and camping.
+
+    User 1: I love hiking too! Where''s your favorite place to hike?
+
+    User 2: I like to hike in the mountains.
+
+    User 1: Me too! I love the views from the top of a mountain.
+
+    User 2: I know, right? It''s so peaceful up there.
+
+    User 1: So, what''s your favorite thing to do?
+
+    User 2: I think my favorite thing to do is just spend time with my friends and family.
+
+    User 1: I can relate to that. I love spending time with my family too.
+
+    User 2: Me too. They''re the most important people in my life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

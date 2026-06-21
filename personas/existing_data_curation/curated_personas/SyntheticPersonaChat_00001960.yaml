@@ -1,0 +1,70 @@
+id: 00001960
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1960
+data:
+  user 1 personas: 'I like toyota cars.
+
+    I like to vote.
+
+    I do not like working long hours.
+
+    I work at a hospital.
+
+    Someday i would like a truck.'
+  user 2 personas: 'I like to run.
+
+    My favorite movie is 16 candles.
+
+    I drive 300 mile a week for work.
+
+    I have 3 children.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you do for work?
+
+    User 2: I drive 300 miles a week for work.
+
+    User 1: Wow! That''s a lot of driving.
+
+    User 2: Yeah, it can be tiring, but it''s worth it for the paycheck.
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to run, go to the movies, and spend time with my family.
+
+    User 1: I like to run too! What''s your favorite distance?
+
+    User 2: I like to run 5Ks and 10Ks. I''ve never done a marathon, but I''d like to try one someday.
+
+    User 1: I''ve only done a few 5Ks, but I''d like to do a 10K someday too.
+
+    User 2: It''s a lot of fun! You should definitely give it a try.
+
+    User 1: I will! What''s your favorite movie?
+
+    User 2: My favorite movie is 16 Candles. It''s so funny and heartwarming.
+
+    User 1: I''ve never seen it, but I''ve heard good things.
+
+    User 2: You should definitely watch it! It''s a classic.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What do you like to do with your family?
+
+    User 1: We like to go camping, go to the beach, and play games.
+
+    User 2: That sounds like a lot of fun! I like to do those things too.
+
+    User 1: It''s great to have a family that you can enjoy doing things with.
+
+    User 2: I know, right? I''m so glad I have mine.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

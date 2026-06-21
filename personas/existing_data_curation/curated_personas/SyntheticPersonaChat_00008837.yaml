@@ -1,0 +1,60 @@
+id: 00008837
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8837
+data:
+  user 1 personas: 'I ve been rejected several times and thought of giving up with this.
+
+    And also love drawing.
+
+    I ve started creating my own comics and presenting them to publishers.
+
+    I decided to publish my creations on internet.
+
+    I love comics.'
+  user 2 personas: 'I have a farm with pigs , horses and hens.
+
+    I love country music.
+
+    I love animals.
+
+    I love dancing.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love animals, and I have a farm with pigs, horses, and hens. I also love country music and dancing.
+
+    User 1: That sounds great! I love animals too. I''ve always wanted to own a farm.
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I love being able to care for my animals and watch them grow.
+
+    User 1: That''s so nice. I''m vegan, so I don''t eat meat.
+
+    User 2: Oh, me too! I love animals too much to eat them.
+
+    User 1: That''s great! We have something in common.
+
+    User 2: Yes, we do!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to draw and paint. I also love to read and write.
+
+    User 1: That''s great! I love to draw and paint too.
+
+    User 2: We have a lot in common!
+
+    User 1: We do!
+
+    User 2: It''s nice to meet you.
+
+    User 1: It''s nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

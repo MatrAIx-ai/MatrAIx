@@ -1,0 +1,60 @@
+id: 00004822
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4822
+data:
+  user 1 personas: 'My boyfriend is in the army.
+
+    My hair is short.
+
+    I play piano.
+
+    My favorite color is yellow.
+
+    My father is dead.'
+  user 2 personas: 'I work graveyard in a hotel.
+
+    My favorite actor is robert deniro.
+
+    I love the snow.
+
+    I m saving for college.
+
+    I like to surf every chance i get.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to surf, go skiing, and play video games.
+
+    User 1: That''s cool. I like to play piano and read books.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I especially like mysteries and thrillers.
+
+    User 2: I love mysteries too! I''m currently reading The Girl in the Spider''s Web.
+
+    User 1: I''ve heard good things about that book. I''m currently reading The Stranger by Albert Camus.
+
+    User 2: That''s a classic! I read it in high school. I really liked it.
+
+    User 1: Me too! It''s a very thought-provoking book.
+
+    User 2: What other books do you like?
+
+    User 1: I also like to read books by Agatha Christie, John Grisham, and Stephen King.
+
+    User 2: I love Agatha Christie! I''ve read most of her books.
+
+    User 1: I''m still working my way through her books. I''ve only read a few so far.
+
+    User 2: You should definitely read more of her books! They''re all great.
+
+    User 1: I will! I''m always looking for new books to read.
+
+    User 2: I''m glad! I''m always happy to recommend books.
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

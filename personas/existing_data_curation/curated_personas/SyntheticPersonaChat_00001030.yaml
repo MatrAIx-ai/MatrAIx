@@ -1,0 +1,70 @@
+id: '00001030'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1030
+data:
+  user 1 personas: 'I like cupcakes.
+
+    I like to read.
+
+    I work at a grocery store.
+
+    My favorite color is blue.'
+  user 2 personas: 'I currently suffer from social anxiety.
+
+    I am a geology major at alabama university.
+
+    I never have had alcohol in my life.
+
+    I have a girlfriend of 7 years.'
+  Best Generated Conversation: 'User 1: I''m a geology major at Auburn University.
+
+    User 2: That''s cool! I''m a geology major at Alabama University.
+
+    User 1: That''s awesome! I always like to meet other geology majors.
+
+    User 2: Me too! It''s not a very common major.
+
+    User 1: No, it''s not. But it''s a lot of fun.
+
+    User 2: I agree! I love learning about the earth and how it works.
+
+    User 1: Me too! It''s so fascinating.
+
+    User 2: I know, right? It''s like a whole new world.
+
+    User 1: It is! And it''s so cool to be able to study it.
+
+    User 2: I know! It''s the best.
+
+    User 1: So, what''s your favorite thing about geology?
+
+    User 2: I love learning about the different rocks and minerals.
+
+    User 1: Me too! They''re so interesting.
+
+    User 2: I know, right? And they''re so beautiful.
+
+    User 1: They are! And they''re also so important to our planet.
+
+    User 2: I know! They''re the building blocks of the earth.
+
+    User 1: They are! It''s so cool to think about how everything we have is made up of rocks and minerals.
+
+    User 2: I know, right? It''s crazy.
+
+    User 1: So, what are you planning to do with your geology degree?
+
+    User 2: I''m not sure yet. I''m thinking about going to grad school.
+
+    User 1: That''s awesome! I''m sure you''d be great at it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, good luck with everything!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

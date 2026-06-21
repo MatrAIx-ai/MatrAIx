@@ -1,0 +1,60 @@
+id: '00007774'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7774
+data:
+  user 1 personas: 'Cher from clueless is my idea of perfection.
+
+    My credit cards are maxed out.
+
+    I still call my ex boyfriend on his birthday because birthdays are special.
+
+    I like the color purple.
+
+    I drive a fast sports car.'
+  user 2 personas: 'I would like to spend more time with my family.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.
+
+    I like spending time with friends playing sports and going to country concerts.
+
+    Unfortunately , my family lives across the country from me.'
+  Best Generated Conversation: 'User 1: Hi! I''m Cher!
+
+    User 2: Hi Cher! I''m [username].
+
+    User 1: Nice to meet you! What do you do for a living?
+
+    User 2: I recently graduated with a business degree, and marketing is all that I really enjoyed.
+
+    User 1: That''s great! I love marketing too. I wish I could do it for a living.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that must be hard.
+
+    User 1: It is, but it''s also really rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like spending time with my friends, playing sports, and going to country concerts.
+
+    User 1: That sounds like a lot of fun! I like to go to concerts too. I''m a big fan of Cher.
+
+    User 2: Really? I love Cher! She''s my idol.
+
+    User 1: Me too! She''s so perfect.
+
+    User 2: She is! I love everything about her.
+
+    User 1: Me too! I''m so glad we met.
+
+    User 2: Me too! It''s nice to meet another Cher fan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

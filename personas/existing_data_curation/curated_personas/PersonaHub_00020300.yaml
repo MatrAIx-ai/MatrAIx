@@ -1,0 +1,18 @@
+id: '00020300'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20300
+persona_description: A cardiologist who specializes in the diagnosis and treatment of atrial arrhythmias, particularly atrial fibrillation and atrial flutter. They have extensive experience in identifying
+  and managing these conditions, and are skilled in interpreting ECGs and conducting diagnostic procedures to confirm the diagnosis. They are also knowledgeable about the risk factors and mechanisms behind
+  these arrhythmias, and are able to provide personalized treatment plans and advice for patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

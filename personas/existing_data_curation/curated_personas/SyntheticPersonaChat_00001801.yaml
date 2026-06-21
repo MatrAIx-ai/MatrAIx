@@ -1,0 +1,82 @@
+id: 00001801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1801
+data:
+  user 1 personas: 'I am an only child.
+
+    I really love plants.
+
+    I have a pet lizard named gila.
+
+    My favorite color is pruple.
+
+    I have brown eyes.'
+  user 2 personas: 'I am a vegan.
+
+    I have 23 cats at home.
+
+    I hate the taste of fish.
+
+    I traveled around the world in a boat.
+
+    I like to paint.'
+  Best Generated Conversation: 'User 1: Hey, what''s up? I''m [user 1 name].
+
+    User 2: Hey, I''m [user 2 name]. Nice to meet you.
+
+    User 1: You too. What are you into?
+
+    User 2: I''m a vegan, I love to paint, and I traveled around the world in a boat.
+
+    User 1: That''s cool! I love plants, I have a pet lizard named Gila, and I''m an only child.
+
+    User 2: Oh, that''s cool. I love reptiles too! I''ve always wanted a lizard.
+
+    User 1: They''re great pets. Gila is really friendly and he loves to bask in the sun.
+
+    User 2: That''s awesome. I''m glad you have a good pet.
+
+    User 1: Thanks. What''s your favorite thing about being a vegan?
+
+    User 2: I love the way it makes me feel. I feel healthier and I have more energy. I also love the way it helps the environment.
+
+    User 1: That''s great. I''ve been thinking about going vegan myself.
+
+    User 2: It''s definitely worth it! You can get all the nutrients you need from a plant-based diet.
+
+    User 1: I''ll have to look into it. Thanks for the info.
+
+    User 2: You''re welcome. So, what do you like to paint?
+
+    User 1: I like to paint landscapes and animals. I also like to do abstract paintings.
+
+    User 2: That''s cool. I like to paint portraits and still lifes.
+
+    User 1: Those are both great subjects to paint.
+
+    User 2: Thanks. So, what''s the craziest thing you''ve ever done?
+
+    User 1: I''m not sure. I guess the craziest thing I''ve done is travel around the world in a boat.
+
+    User 2: That''s crazy! How did you do that?
+
+    User 1: I worked on a yacht that was doing a round-the-world trip. It was an amazing experience.
+
+    User 2: That sounds amazing. I''ve always wanted to travel the world.
+
+    User 1: You should do it! It''s an amazing experience.
+
+    User 2: I''ll have to think about it.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. I hope we can talk again soon.
+
+    User 1: Me too. Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

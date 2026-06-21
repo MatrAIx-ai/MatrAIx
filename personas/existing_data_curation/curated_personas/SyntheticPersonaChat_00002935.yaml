@@ -1,0 +1,82 @@
+id: 00002935
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2935
+data:
+  user 1 personas: 'I work on wall street.
+
+    I love smooth jazz.
+
+    I have a poodle named nanette.
+
+    I live in new york city.
+
+    I actually like wearing suits and ties.'
+  user 2 personas: 'We have two kids.
+
+    I graduated with a nursing degree.
+
+    My favorite food is sushi.
+
+    My husband is a firefighter.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], it''s nice to meet you.
+
+    User 2: Hi [name], I''m [name], it''s nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s great! I work on Wall Street.
+
+    User 2: Oh, that''s interesting! I''ve always been curious about what goes on there.
+
+    User 1: It''s a lot of fun, but it can be stressful too.
+
+    User 2: I can imagine. What do you like most about it?
+
+    User 1: I like the fast pace and the challenge. It''s always something new every day.
+
+    User 2: That sounds exciting.
+
+    User 1: It is. I love the energy and the people I work with.
+
+    User 2: I''m glad you enjoy your job.
+
+    User 1: Thanks. What do you like to do for fun?
+
+    User 2: I love to cook, go out to eat, and spend time with my family.
+
+    User 1: Oh, that sounds great. I love to cook too.
+
+    User 2: What''s your favorite dish to make?
+
+    User 1: I love making pasta.
+
+    User 2: Me too! I make a mean spaghetti.
+
+    User 1: I''m sure it''s delicious.
+
+    User 2: Thanks. I love to cook for my family.
+
+    User 1: That''s so sweet.
+
+    User 2: Thanks.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is sushi.
+
+    User 1: Oh, that''s great! I love sushi too.
+
+    User 2: Me too! I love all the different kinds of fish and seafood.
+
+    User 1: Me too. It''s so good.
+
+    User 2: I''m glad you like it.
+
+    User 1: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00008441
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8441
+data:
+  user 1 personas: 'I have been held hostage in a store robbery situation.
+
+    I have bowled a 300 game twice in my life.
+
+    I like to build furniture.
+
+    My father is a retired police officer.'
+  user 2 personas: 'I go to yoga.
+
+    I used to be a meat eater but i am now a vegan.
+
+    Watching sports is fun.
+
+    I aspire to be a millionaire.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1]. What''s your name?
+
+    User 2: Hello! I''m [user 2]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too! What do you do for fun?
+
+    User 2: I like to go to yoga, watch sports, and build furniture.
+
+    User 1: That''s interesting! I''ve never been to yoga, but I''ve heard it''s very relaxing. I''m not very athletic, so I don''t really watch sports, but I do enjoy watching them from time to time. I''ve
+    never built furniture before, but I''ve always wanted to try it.
+
+    User 2: You should definitely try yoga! It''s a great way to de-stress and relax. And you don''t have to be athletic to do it. There are all different levels of yoga, so you can find one that''s right
+    for you. Building furniture is a lot of fun! It''s a great way to be creative and make something that you can use.
+
+    User 1: I''m glad I met you! You''ve given me some things to think about. I think I might try yoga and building furniture.
+
+    User 2: I''m glad I could help! Let me know how it goes.
+
+    User 1: I will!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher. I teach elementary school.
+
+    User 2: That sounds like a fun job! I''m a student. I''m studying business.
+
+    User 1: I''m glad you''re enjoying school! Business is a great field.
+
+    User 2: Thanks! I''m enjoying it so far.
+
+    User 1: So, what do you want to do with your business degree?
+
+    User 2: I want to be a millionaire!
+
+    User 1: That''s a great goal! I''m sure you''ll achieve it.
+
+    User 2: Thanks! I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

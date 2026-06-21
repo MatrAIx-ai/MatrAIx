@@ -1,0 +1,92 @@
+id: 00007861
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7861
+data:
+  user 1 personas: 'My favorite food is spaghetti and meatballs.
+
+    My mom is a professional tennis player.
+
+    I am currently in elementary school.
+
+    My favorite band is one direction.'
+  user 2 personas: 'I m really excited to see how game of thrones ends.
+
+    I like to do all my shopping at walmart.
+
+    I m deathly terrified of heights.
+
+    I prefer to live where the weather s cold.
+
+    Winter s my favorite time of the year.'
+  Best Generated Conversation: 'User 1: Hi! My name is [your name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What''s your favorite food?
+
+    User 2: I love spaghetti and meatballs!
+
+    User 1: Me too! I''m actually eating spaghetti and meatballs right now.
+
+    User 2: What kind of meatballs?
+
+    User 1: I made them myself. They''re turkey meatballs with tomato sauce and parmesan cheese.
+
+    User 2: That sounds delicious! I''m not a fan of turkey meatballs, but I love tomato sauce and parmesan cheese.
+
+    User 1: Oh, well I''m sure you''d like these. They''re really good.
+
+    User 2: I''ll have to try them sometime.
+
+    User 1: You should!
+
+    User 2: What else do you like to do?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: I love video games too! What kind of games do you play?
+
+    User 1: I like to play all kinds of games, but my favorite is probably Mario Kart.
+
+    User 2: Mario Kart is so much fun! I love playing that game with my friends.
+
+    User 1: Me too! It''s always a good time.
+
+    User 2: What kind of movies do you like to watch?
+
+    User 1: I like to watch all kinds of movies, but my favorite is probably Lord of the Rings.
+
+    User 2: Lord of the Rings is a great movie! I love the whole trilogy.
+
+    User 1: Me too! I''ve seen it so many times, but it never gets old.
+
+    User 2: I know what you mean. It''s a timeless classic.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite is probably Harry Potter.
+
+    User 1: Harry Potter is a great book series! I''ve read them all so many times, too.
+
+    User 2: Me too! I can''t wait to see the new movie.
+
+    User 1: Me neither! It looks like it''s going to be great.
+
+    User 2: I hope so!
+
+    User 1: So, what''s your favorite time of year?
+
+    User 2: My favorite time of year is winter! I love the snow and the cold weather.
+
+    User 1: I love winter too! I love skiing and snowboarding.
+
+    User 2: Me too! I love being outside in the winter.
+
+    User 1: Me too! I love everything about winter.
+
+    User 2: Me too! It''s the best time of year!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

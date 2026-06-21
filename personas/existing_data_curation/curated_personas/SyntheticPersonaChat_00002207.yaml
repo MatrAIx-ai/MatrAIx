@@ -1,0 +1,62 @@
+id: '00002207'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2207
+data:
+  user 1 personas: 'I have a nice smile.
+
+    I m not a nice person.
+
+    I like makeup.
+
+    I love to exercise.'
+  user 2 personas: 'I draw all the time and i am good at it.
+
+    As long as i have a cup of coffee in my hand i am a happy person.
+
+    I listen to pink when i am painting.
+
+    It takes me an hour to drive to work in the morning.
+
+    My wife makes the best pasta.'
+  Best Generated Conversation: 'User 1: I''m not sure what I''m going to do today.
+
+    User 2: Well, I''m going to draw all day long. I''m really good at it.
+
+    User 1: That''s cool. I wish I could draw.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: I don''t know. I''m not very creative.
+
+    User 2: You don''t have to be creative to draw. You just have to have a good imagination.
+
+    User 1: Maybe I''ll try it sometime.
+
+    User 2: You should! I''m sure you''d be good at it.
+
+    User 1: Thanks.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I like to exercise. I love running and lifting weights.
+
+    User 2: Oh, that''s cool. I used to be really into working out, but I don''t have the time anymore.
+
+    User 1: I know what you mean. It can be hard to find the time to work out.
+
+    User 2: Yeah, it''s especially hard when you have kids.
+
+    User 1: I don''t have any kids, but I know how that can be.
+
+    User 2: Well, I''m glad you''re able to find time to exercise. It''s really important for your health.
+
+    User 1: I know. I try to do it as often as I can.
+
+    User 2: Good for you!
+
+    User 1: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

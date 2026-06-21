@@ -1,0 +1,74 @@
+id: 00004929
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4929
+data:
+  user 1 personas: 'I am a senior in high school.
+
+    I am interested in producing music.
+
+    I have been in band all four years of high school.
+
+    I am going to start school at the university of kentucky.'
+  user 2 personas: 'I lost my arm in a car accident.
+
+    I am the youngest of 4 children.
+
+    I am a farmer.
+
+    I like to hike.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a farmer.
+
+    User 1: Oh, that''s cool. I''ve always been interested in farming.
+
+    User 2: It''s hard work, but it''s rewarding.
+
+    User 1: I bet it is. Do you have any animals on your farm?
+
+    User 2: Yes, I have a few cows, pigs, and chickens.
+
+    User 1: That''s awesome. I love animals.
+
+    User 2: Me too. They''re a lot of fun to have around.
+
+    User 1: What''s your favorite thing about farming?
+
+    User 2: I like being able to grow my own food and provide for my family.
+
+    User 1: That''s a great feeling. I''m sure your family appreciates it.
+
+    User 2: They do. They love eating the fresh, healthy food that I grow.
+
+    User 1: I can see why.
+
+    User 2: Do you have any pets?
+
+    User 1: I have a dog named Max. He''s a black lab.
+
+    User 2: Oh, I love black labs! They''re so sweet.
+
+    User 1: They are. He''s the best dog I could ask for.
+
+    User 2: I''m glad to hear that.
+
+    User 1: What''s your favorite thing to do outside of farming?
+
+    User 2: I like to hike and go camping.
+
+    User 1: That''s awesome. I love hiking too.
+
+    User 2: We should go hiking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great. I''ll give you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

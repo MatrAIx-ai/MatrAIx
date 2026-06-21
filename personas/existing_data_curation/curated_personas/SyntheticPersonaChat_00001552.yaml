@@ -1,0 +1,70 @@
+id: '00001552'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1552
+data:
+  user 1 personas: 'I am from georgia.
+
+    I can play the violin.
+
+    I want to have two kids.
+
+    I can t sing very well.
+
+    I love chocolate.'
+  user 2 personas: 'My favorite color is yellow.
+
+    I only take the bus.
+
+    I often do not have the money to pay my utility bills.
+
+    I babysit for the woman who lives next door.'
+  Best Generated Conversation: 'User 1: I love Georgia! I''m from there too!
+
+    User 2: Oh, really? I''ve never met anyone from Georgia before!
+
+    User 1: Well, there are plenty of us! What part of Georgia are you from?
+
+    User 2: I''m from the Atlanta area.
+
+    User 1: Oh, cool! I''m from Athens.
+
+    User 2: Athens is a beautiful city! I''ve been there a few times.
+
+    User 1: Yeah, it''s great! So, what do you do for fun?
+
+    User 2: I like to play the violin.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to play the violin.
+
+    User 2: It''s a lot of fun! I''ve been playing for about 10 years now.
+
+    User 1: Wow, that''s impressive! I can''t even play a song on the recorder.
+
+    User 2: Don''t worry, everyone starts somewhere!
+
+    User 1: I guess so. So, what else do you like to do for fun?
+
+    User 2: I like to read, watch movies, and go out to eat.
+
+    User 1: Me too! I love to read, especially mystery novels.
+
+    User 2: Oh, I love mystery novels too! I just finished reading one called The Girl on the Train.
+
+    User 1: I love that book! I read it a few months ago.
+
+    User 2: Me too! It was so good! So, what kind of music do you like?
+
+    User 1: I like all kinds of music, but I mostly listen to pop and rock music.
+
+    User 2: Oh, I like pop music too! What are some of your favorite artists?
+
+    User 1: I like Taylor Swift, Ariana Grande, and Khalid.
+
+    User 2: Oh, I love Taylor Swift! I also like Ariana Grande and Khalid.
+
+    User 1: Me too! They''re all so talented!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

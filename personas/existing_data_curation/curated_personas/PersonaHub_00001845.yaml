@@ -1,0 +1,19 @@
+id: 00001845
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1845
+persona_description: A Java developer who is interested in optimizing the performance of their Java applications, particularly those running on high-volume server-side applications. They are looking for
+  a garbage collector that can take advantage of available CPUs rather than leaving most of them idle while only one does garbage collection work. They are aware of the limitations of the serial collector
+  and the parallel collector, and are considering using the CMS collector for applications that have pause time constraints and require larger heap sizes. They are also interested in learning about the
+  hotspots and how they can be optimized to improve application performance.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: Java performance optimization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

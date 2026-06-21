@@ -1,0 +1,62 @@
+id: 00005908
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5908
+data:
+  user 1 personas: 'My favorite animal is the koala.
+
+    I don t like beer.
+
+    I live with a roommate.
+
+    I work part time.'
+  user 2 personas: 'I like to run.
+
+    I have 3 children.
+
+    I drive 300 mile a week for work.
+
+    My favorite movie is 16 candles.
+
+    I love cheese cake.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to run, I have 3 children and I drive 300 miles a week for work, my favorite movie is 16 candles and I love cheesecake.
+
+    User 1: I like to draw, I live with a roommate and I work part time, my favorite animal is the koala and I don''t like beer.
+
+    User 2: What''s your favorite thing to draw?
+
+    User 1: I love to draw people, but I also like to draw nature.
+
+    User 2: That''s cool, I''ve always wanted to be able to draw.
+
+    User 1: It''s not that hard, you just have to practice.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m glad you like running, I''ve always wanted to try it but I''m not very athletic.
+
+    User 1: It''s a great way to get in shape and clear your mind.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!
+
+    User 2: Well, I should probably get going. It was nice talking to you.
+
+    User 1: You too! Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

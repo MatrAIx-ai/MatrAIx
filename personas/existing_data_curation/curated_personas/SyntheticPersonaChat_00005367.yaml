@@ -1,0 +1,70 @@
+id: '00005367'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5367
+data:
+  user 1 personas: 'I read fantasy fiction novels.
+
+    I used to work for monsanto.
+
+    I enjoy shopping online.
+
+    I enjoy swimming.
+
+    I am a mother.'
+  user 2 personas: 'I have few friends.
+
+    I like katy perry as a musician.
+
+    I am a great baker.
+
+    I like to hunt for my food.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bake, hunt for food, and listen to Katy Perry.
+
+    User 1: That''s cool! I like to read, swim, and shop online.
+
+    User 2: I love Katy Perry! What''s your favorite song by her?
+
+    User 1: My favorite song by Katy Perry is "Roar."
+
+    User 2: That''s a great song! I also like "Firework" and "California Gurls."
+
+    User 1: I love those songs too! I''m a big fan of Katy Perry.
+
+    User 2: Me too! She''s so talented.
+
+    User 1: What do you like to do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: That''s great! I''m a mother too.
+
+    User 2: That''s awesome! How many kids do you have?
+
+    User 1: I have two kids, a boy and a girl.
+
+    User 2: That''s great! I have two kids too, a boy and a girl.
+
+    User 1: That''s awesome! How old are your kids?
+
+    User 2: My son is 6 years old and my daughter is 5 years old.
+
+    User 1: That''s great! My son is 6 years old and my daughter is 4 years old.
+
+    User 2: That''s awesome! We have the same age kids!
+
+    User 1: That''s great! We should hang out sometime and let our kids play together.
+
+    User 2: That sounds great! I''d love to hang out with you and your kids.
+
+    User 1: Great! We can exchange numbers and set up a time to get together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

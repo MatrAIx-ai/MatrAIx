@@ -1,0 +1,62 @@
+id: 00005807
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5807
+data:
+  user 1 personas: 'I like to dance with my friends.
+
+    I really like to go to school.
+
+    I love to be run.
+
+    I have a family that are all tall.'
+  user 2 personas: 'My mother lives with me.
+
+    I like to plant flowers in my gardens.
+
+    I like to take my dog for long walks.
+
+    I enjoy cooking for people.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hello, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to plant flowers in my garden, take my dog for long walks, and cook for people.
+
+    User 1: That sounds like a lot of fun! I like to dance with my friends, go to school, and run.
+
+    User 2: I love to dance too! I''m not very good at it, but I have a lot of fun.
+
+    User 1: What kind of flowers do you plant in your garden?
+
+    User 2: I like to plant all kinds of flowers, but my favorites are roses, lilies, and peonies.
+
+    User 1: My favorite flowers are sunflowers. I love their bright colors.
+
+    User 2: Sunflowers are beautiful! I love how they follow the sun.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog named Daisy. She''s a Golden Retriever and she''s the sweetest dog ever.
+
+    User 1: I love Golden Retrievers! They''re so friendly and playful.
+
+    User 2: They are! Daisy is always happy to see me.
+
+    User 1: What do you like to cook for people?
+
+    User 2: I like to cook all kinds of dishes, but my specialty is lasagna.
+
+    User 1: Lasagna is my favorite! I love the combination of noodles, sauce, and cheese.
+
+    User 2: Me too! I always make a big batch of lasagna so I can have leftovers for the next day.
+
+    User 1: That sounds delicious! I''m going to have to try your lasagna recipe one day.
+
+    User 2: You should! I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

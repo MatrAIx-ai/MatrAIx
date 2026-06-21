@@ -1,0 +1,19 @@
+id: 00007911
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7911
+persona_description: A programmer who is skilled in using the C programming language, especially in handling input/output operations. They are familiar with the use of functions like getchar() and cgetch()
+  for reading characters from the standard input stream, as well as scanf() for reading multiple characters at once. They are also proficient in handling errors related to reading from streams, such as
+  confusion between valid and invalid characters. They have a strong understanding of the limitations and potential issues with using char variables to store the results of reading from streams, and are
+  aware of the need to use an int variable instead.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: C Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

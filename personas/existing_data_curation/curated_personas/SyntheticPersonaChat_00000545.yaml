@@ -1,0 +1,88 @@
+id: '00000545'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 545
+data:
+  user 1 personas: 'I m a student.
+
+    I like to shop at goodwill.
+
+    I m from california.
+
+    I like to be outdoors.'
+  user 2 personas: 'I am in college.
+
+    My major is business.
+
+    I work part time at a pizza restaurant.
+
+    I love the beach.
+
+    I like to party.'
+  Best Generated Conversation: 'User 1: Hi! I''m from California.
+
+    User 2: Cool, I''m from California too!
+
+    User 1: What part?
+
+    User 2: I''m from the Bay Area.
+
+    User 1: Me too! I''m from San Jose.
+
+    User 2: Oh, cool! I''m from Santa Clara.
+
+    User 1: That''s not too far from me.
+
+    User 2: Yeah, it''s about 15 minutes away.
+
+    User 1: Cool. So, what are you studying in college?
+
+    User 2: I''m studying business.
+
+    User 1: Nice! I''m studying computer science.
+
+    User 2: Oh, cool! I''m thinking about minoring in computer science.
+
+    User 1: That''s a good idea. It''s a really useful skill to have.
+
+    User 2: Yeah, I think it would be.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the beach, party, and hang out with friends.
+
+    User 1: Me too! I love going to the beach.
+
+    User 2: Yeah, it''s so relaxing.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you like to do at the beach?
+
+    User 1: I like to swim, sunbathe, and build sandcastles.
+
+    User 2: Oh, cool! I like to swim and sunbathe too.
+
+    User 1: Me too!
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to the beach with some friends.
+
+    User 1: Oh, that sounds fun! I might join you.
+
+    User 2: Cool!
+
+    User 1: So, what time are you going?
+
+    User 2: We''re going to leave at 10:00 AM.
+
+    User 1: Oh, okay. I''ll see you there.
+
+    User 2: Cool!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

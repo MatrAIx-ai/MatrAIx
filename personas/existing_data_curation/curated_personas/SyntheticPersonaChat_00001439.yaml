@@ -1,0 +1,88 @@
+id: 00001439
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1439
+data:
+  user 1 personas: 'I work on a farm.
+
+    I eat eggs for breakfast.
+
+    I know how to drive a truck.
+
+    I love chickens.
+
+    I was born in kansas.'
+  user 2 personas: 'I drive a honda civic.
+
+    I work at a retail store.
+
+    My favorite movie is django unchained.
+
+    I love rock climbing.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hey! How are you doing?
+
+    User 1: I''m doing great! Just got back from a long day of working on the farm.
+
+    User 2: What kind of farm do you work on?
+
+    User 1: I work on a small farm in Kansas. We raise chickens, pigs, and cows.
+
+    User 2: That sounds like a lot of work!
+
+    User 1: It can be, but it''s also a lot of fun. I love working with animals.
+
+    User 2: I can imagine! I love animals too. I have a dog and a cat.
+
+    User 1: Oh, what kind of dog?
+
+    User 2: I have a golden retriever and a tabby cat.
+
+    User 1: Those are both great breeds! I love golden retrievers.
+
+    User 2: Me too! They''re so friendly and cuddly.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at a retail store. I sell clothes and shoes.
+
+    User 1: Oh, that sounds fun! Do you like it?
+
+    User 2: It''s okay. I''m not really passionate about it, but it pays the bills.
+
+    User 1: That''s all that matters! So, what do you like to do for fun?
+
+    User 2: I love to rock climb! I also like to go hiking and camping.
+
+    User 1: Oh, that sounds like fun! I''ve always wanted to try rock climbing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will! Thanks for the suggestion.
+
+    User 2: No problem! So, what''s your favorite movie?
+
+    User 1: My favorite movie is Django Unchained. I love the story and the characters.
+
+    User 2: I love that movie too! It''s so well done.
+
+    User 1: Yeah, it is. I love the acting and the cinematography.
+
+    User 2: Me too! It''s a really great movie.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to read, watch movies, and spend time with my friends and family.
+
+    User 1: Me too! I love to read and watch movies. I don''t have a lot of friends, but I like to spend time with my family.
+
+    User 2: I''m glad we have something in common!
+
+    User 1: Me too! It''s nice to meet someone I have things in common with.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

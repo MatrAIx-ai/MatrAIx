@@ -1,0 +1,18 @@
+id: '00043333'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43333
+persona_description: A researcher or scientist with expertise in qualitative robot reasoning and spatial reasoning, focusing on the application of qualitative methods to robot problems. They are interested
+  in the ability of qualitative methods to operate with incomplete information, degrade gracefully, and support spatial reasoning at a level easily related to human problem solving. They are likely to be
+  involved in the development and evaluation of qualitative robot reasoning systems.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Robotics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Qualitative Robot Reasoning
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

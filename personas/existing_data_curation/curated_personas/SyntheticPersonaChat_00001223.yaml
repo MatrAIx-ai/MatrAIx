@@ -1,0 +1,66 @@
+id: '00001223'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1223
+data:
+  user 1 personas: 'I am a secretary.
+
+    I have 3 cats.
+
+    I like tacos.
+
+    I enjoy swimming.
+
+    My favorite color is orange.'
+  user 2 personas: 'I like to eat cheetos.
+
+    I have went to mexico 4 times this year.
+
+    My wife does not like me anymore.
+
+    I like to ski.
+
+    I hate mexican food.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Bob.
+
+    User 1: It''s nice to meet you, Bob. What do you do for a living?
+
+    User 2: I''m a ski instructor.
+
+    User 1: That''s cool! I''ve always wanted to learn how to ski.
+
+    User 2: It''s never too late to learn!
+
+    User 1: I know, I know. I''m just a little afraid I''ll fall and hurt myself.
+
+    User 2: Everyone falls when they''re first starting out. It''s all part of the learning process.
+
+    User 1: You''re right. I guess I''ll just have to take the plunge.
+
+    User 2: That''s the spirit!
+
+    User 1: Thanks, Bob. I appreciate the encouragement.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to swim, read, and go to the movies.
+
+    User 2: I love to swim too! What''s your favorite stroke?
+
+    User 1: I''m not very good at swimming, so I just do freestyle.
+
+    User 2: That''s okay, everyone has to start somewhere.
+
+    User 1: Thanks, Bob. I''m glad I met you.
+
+    User 2: Me too, Sarah. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

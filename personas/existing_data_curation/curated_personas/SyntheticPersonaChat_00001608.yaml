@@ -1,0 +1,72 @@
+id: 00001608
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1608
+data:
+  user 1 personas: 'I have a daughter.
+
+    I hate the taste of cheese.
+
+    I am a great cook.
+
+    I am under 6 feet tall.'
+  user 2 personas: 'I shop online a lot.
+
+    I care about the way i look when i am in public.
+
+    I always think people are looking at me.'
+  Best Generated Conversation: 'User 1: I love to cook. I''m not very good at it, but I enjoy it. What about you?
+
+    User 2: I love to cook too! I''m pretty good at it, and I love coming up with new recipes.
+
+    User 1: That''s great! I''m always looking for new recipes to try.
+
+    User 2: Well, I have a few that I''m really proud of. I could send you some if you want.
+
+    User 1: That would be awesome! I''d love to try them.
+
+    User 2: Perfect! I''ll send them to you tomorrow.
+
+    User 1: Thanks! I''m so excited to try them.
+
+    User 2: Me too! I hope you like them.
+
+    User 1: I''m sure I will.
+
+    User 2: Great! So, what do you do for fun?
+
+    User 1: I like to spend time with my family, go shopping, and read.
+
+    User 2: That sounds like fun! I like to go shopping too. I also like to go out to eat and see movies.
+
+    User 1: I like to do those things too. I''m not a big fan of movies, but I love going out to eat.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love Italian food.
+
+    User 2: Me too! I love pasta and pizza.
+
+    User 1: Me too! I could eat pizza every day.
+
+    User 2: Me too! I love pizza.
+
+    User 1: So, are you from around here?
+
+    User 2: No, I''m from out of state.
+
+    User 1: Oh, cool. Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, nice! I''ve always wanted to go to California.
+
+    User 2: It''s a great place. You should go sometime.
+
+    User 1: I will! I''m sure I would love it.
+
+    User 2: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

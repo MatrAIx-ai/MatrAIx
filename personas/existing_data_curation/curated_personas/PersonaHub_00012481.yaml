@@ -1,0 +1,19 @@
+id: 00012481
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12481
+persona_description: A researcher or scientist involved in the development and application of advanced astronomical techniques, particularly in the field of radio astronomy. This individual is likely to
+  be interested in the ALMA radio-interferometric observatory, its operation, and the post-processing required to extract the full potential from its data. They would be familiar with the challenges of
+  image synthesis, algorithmic research, and practical data handling in the context of astronomical observations. They may also have expertise in Bayesian image synthesis pipelines and have collaborated
+  with other scientists in the development of such pipelines.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: radio astronomy
+  general_domain_top01pct: None
+  specific_domain_top01pct: Bayesian image synthesis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

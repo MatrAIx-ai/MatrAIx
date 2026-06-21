@@ -1,0 +1,82 @@
+id: '00002666'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2666
+data:
+  user 1 personas: 'My country is russia.
+
+    I am a olympian.
+
+    I am a weight lifter.
+
+    I can benchpress 345 pounds.'
+  user 2 personas: 'My favorite color is red.
+
+    I like to play tennis.
+
+    My favorite food is a burger.
+
+    I work as an accountant.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an accountant.
+
+    User 1: Oh, cool. I''m a weight lifter.
+
+    User 2: Really? That''s awesome! I''ve always been impressed by weight lifters.
+
+    User 1: Thanks. I''ve been training for a few years now, and I''m finally starting to reach my goals.
+
+    User 2: That''s great! I''m sure it''s been a lot of hard work.
+
+    User 1: It has, but it''s been worth it. I love the feeling of being strong and healthy.
+
+    User 2: I can imagine. I''ve always been more of a runner myself, but I''ve been thinking about trying out weight lifting.
+
+    User 1: I would definitely recommend it. It''s a great way to get in shape and build muscle.
+
+    User 2: I''ll keep that in mind. Thanks for the advice.
+
+    User 1: No problem. So, what''s your favorite food?
+
+    User 2: My favorite food is a burger. I love the combination of meat, cheese, and vegetables.
+
+    User 1: Me too! I love burgers. I can eat them for breakfast, lunch, or dinner.
+
+    User 2: Same here. They''re the perfect food.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play tennis. I''ve been playing since I was a kid, and I love the competition.
+
+    User 1: That''s cool. I''ve never played tennis, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great sport.
+
+    User 1: I will. Thanks for the suggestion.
+
+    User 2: No problem. So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I''m thinking about going to the gym or the beach.
+
+    User 2: The beach sounds nice. I love the beach.
+
+    User 1: Me too. I love swimming and sunbathing.
+
+    User 2: Me too. I love the feeling of the sun on my skin.
+
+    User 1: So, what do you think? Are you up for going to the beach with me?
+
+    User 2: Sure, that sounds like fun.
+
+    User 1: Great! I''ll text you the details later.
+
+    User 2: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

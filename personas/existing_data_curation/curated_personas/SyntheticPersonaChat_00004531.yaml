@@ -1,0 +1,64 @@
+id: '00004531'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4531
+data:
+  user 1 personas: 'My favorite color is green.
+
+    One of my favorite hobbies is gaming.
+
+    I enjoy running.
+
+    I enjoy visiting national parks.
+
+    I currently work in an office job.'
+  user 2 personas: 'I love starbucks coffee.
+
+    I was a swimmer in college.
+
+    I have a beautiful rose garden.
+
+    I have a cat named pickles.
+
+    My parents met at woodstock.'
+  Best Generated Conversation: 'User 1: Hello! I''m [username].
+
+    User 2: Hi, [username]! I''m [username].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love Starbucks coffee, swimming, and gardening.
+
+    User 1: Me too! I love Starbucks coffee and I also enjoy running. I''ve never been a swimmer, but I''ve always wanted to learn.
+
+    User 2: You should definitely give swimming a try! It''s a great way to get exercise and it''s also a lot of fun.
+
+    User 1: I will! I''m also a big fan of gardening. I love growing my own vegetables and flowers.
+
+    User 2: That''s awesome! I have a beautiful rose garden in my backyard. I love taking care of it and watching the roses bloom.
+
+    User 1: That sounds amazing! I would love to see your rose garden sometime.
+
+    User 2: Sure! You''re welcome to come over anytime.
+
+    User 1: Great! I''ll have to take you up on that offer.
+
+    User 2: I''m also a big fan of national parks. I''ve been to a few of them and they''re always amazing.
+
+    User 1: Me too! I''ve been to Yellowstone, Yosemite, and the Grand Canyon. They''re all so beautiful and awe-inspiring.
+
+    User 2: I''ve been to Yellowstone and Yosemite as well. They''re both incredible places. I''ve never been to the Grand Canyon, but I''ve always wanted to go.
+
+    User 1: You should definitely go! It''s one of the most amazing places in the world.
+
+    User 2: I will! I''m sure it would be amazing.
+
+    User 1: It would. I''m glad we have so much in common.
+
+    User 2: Me too! I think we''re going to be good friends.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

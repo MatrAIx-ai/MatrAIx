@@ -1,0 +1,56 @@
+id: '00005044'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5044
+data:
+  user 1 personas: 'I live with my wife and kids.
+
+    I have three beautiful dogs and one cat.
+
+    I own a small farm where i herd cattle.
+
+    My name is william , but people call me bill.'
+  user 2 personas: 'I have a dog named percy.
+
+    I like thomas the tank engine.
+
+    My cat died.
+
+    My poppa has a train set that i play with.
+
+    I like books about trains.'
+  Best Generated Conversation: 'User 1: Hello! My name is Bill. I live on a farm with my wife, kids, and three dogs. I also have a cat, but he died recently.
+
+    User 2: Hi Bill! My name is Lily. I have a dog named Percy. I love Thomas the Tank Engine and I have a train set that my poppa gave me.
+
+    User 1: That''s great! I also like Thomas the Tank Engine. I used to watch it when I was a kid.
+
+    User 2: Me too! I still watch it sometimes.
+
+    User 1: What''s your favorite episode?
+
+    User 2: I like the one where Thomas gets lost on the island.
+
+    User 1: That''s a good one! I also like the one where he goes to America.
+
+    User 2: Me too! I love that episode.
+
+    User 1: I''m glad to hear that you''re a fan of Thomas the Tank Engine.
+
+    User 2: Me too!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to play with my dog, read books, and watch TV.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: Me too!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

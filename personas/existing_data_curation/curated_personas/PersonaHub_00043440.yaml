@@ -1,0 +1,18 @@
+id: '00043440'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43440
+persona_description: A software developer who is new to XML encoding and is interested in learning more about it. The developer is looking for ways to determine the encoding of an XML file without using
+  a parser. They are familiar with the XML Recommendation and are aware that the encoding of an XML document must be declared in the document's prolog. The developer is also aware that the getEncoding()
+  method in InputStreamReader may not be able to determine the encoding of the file, and they are seeking alternative methods to determine the encoding.
+expertise:
+  general_domain_top1pct: software development
+  specific_domain_top1pct: XML encoding
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

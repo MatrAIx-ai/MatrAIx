@@ -1,0 +1,72 @@
+id: '00001740'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1740
+data:
+  user 1 personas: 'I work 9 to 5 job.
+
+    Sometimes i volunteer at the soup kitchen.
+
+    I like to cook.
+
+    My family owned a small restaurant.
+
+    When i retire i want to open a bakery.'
+  user 2 personas: 'I work as a computer programmer.
+
+    I helped develop facebook.
+
+    I make over 200 , 000 per year.
+
+    I like to donate time and money to charity.
+
+    I have two pitt bulls.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I''m a computer programmer.
+
+    User 1: Oh, cool! What kind of programming do you do?
+
+    User 2: I''m a full-stack developer, so I do a little bit of everything.
+
+    User 1: That sounds interesting. I''m a software engineer myself, but I mostly do back-end stuff.
+
+    User 2: Ah, I see. I''ve always been more interested in the front-end.
+
+    User 1: Yeah, it''s a lot more visually appealing.
+
+    User 2: Exactly! I love being able to create something that people can actually see and interact with.
+
+    User 1: Me too. It''s really satisfying to see your work come to life.
+
+    User 2: Definitely. It''s one of the best feelings in the world.
+
+    User 1: I agree. So, what''s your favorite thing about working as a computer programmer?
+
+    User 2: I love the challenge. It''s always fun to be faced with a new problem and figure out how to solve it.
+
+    User 1: I know what you mean. It''s really rewarding when you finally figure out how to solve a problem.
+
+    User 2: Exactly! It''s like a little bit of magic.
+
+    User 1: That''s a great way to put it.
+
+    User 2: Thank you. So, what''s your favorite thing about working as a software engineer?
+
+    User 1: I love the variety of work I get to do. I never know what I''m going to be working on next.
+
+    User 2: That sounds really fun. I like that I can choose what projects I work on.
+
+    User 1: Yeah, that''s a great perk.
+
+    User 2: So, what''s your dream project?
+
+    User 1: I''d love to work on a project that makes a real difference in the world.
+
+    User 2: That''s a great goal. I''m sure you''ll achieve it.
+
+    User 1: Thank you. I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

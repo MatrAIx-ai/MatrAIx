@@ -1,0 +1,60 @@
+id: 00007788
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7788
+data:
+  user 1 personas: 'I am more of a cat person than a dog person.
+
+    I could not live without my cell phone.
+
+    I enjoy the occasional drink with friends.
+
+    I attend book club every week.
+
+    My mom is my best friend.'
+  user 2 personas: 'I live in the city.
+
+    I went to college and graduated few years ago.
+
+    Now i also work at a bank.
+
+    I grew up in the upstate.
+
+    My father used to work for a bank.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go out to eat with friends, go to concerts, and read books.
+
+    User 1: Sounds like you have a lot of fun! I like to read books too, what are some of your favorite books?
+
+    User 2: I love to read historical fiction and fantasy novels. Some of my favorite books are The Lord of the Rings series, The Harry Potter series, and The Hunger Games series.
+
+    User 1: I love those books too! I''m a big fan of fantasy and science fiction. I also like to read historical fiction.
+
+    User 2: It''s nice to meet someone who likes the same books as me.
+
+    User 1: Me too! What are some of your favorite authors?
+
+    User 2: I love J.R.R. Tolkien, J.K. Rowling, and Suzanne Collins.
+
+    User 1: Me too! I also love George R.R. Martin, Terry Pratchett, and Neil Gaiman.
+
+    User 2: Those are great authors! I''ve read some of their books, but I haven''t read all of them.
+
+    User 1: I''ve read all of them. I''m a big fan of their work.
+
+    User 2: It sounds like we have a lot in common. We should get together and read books together sometime.
+
+    User 1: That would be fun! I''d love to read books with you.
+
+    User 2: Great! We can exchange numbers and set up a time to meet.
+
+    User 1: Sounds good! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

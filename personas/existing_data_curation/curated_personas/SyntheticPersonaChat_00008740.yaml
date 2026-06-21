@@ -1,0 +1,68 @@
+id: 00008740
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8740
+data:
+  user 1 personas: 'My weekends are spent studying and looking over client files.
+
+    I manage all the paperwork and incoming calls.
+
+    I m a receptionist at a doctors office.
+
+    My name is mary.
+
+    I m also a fulltime student studying radiology at local college.'
+  user 2 personas: 'I clean houses for extra money.
+
+    I have been held hostage in a store robbery situation.
+
+    I have bowled a 300 game twice in my life.
+
+    I like to build furniture.
+
+    My father is a retired police officer.'
+  Best Generated Conversation: 'User 1: Hi! I''m Mary.
+
+    User 2: Nice to meet you Mary, my name is Mike.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a carpenter and I also clean houses for extra money.
+
+    User 1: That''s cool! I''m a receptionist at a doctors office and I''m also a full time student studying radiology.
+
+    User 2: Wow, that''s a lot to do!
+
+    User 1: Yeah, it can be a lot but I love it.
+
+    User 2: What''s your favorite thing about your job?
+
+    User 1: I like helping people and I like the challenge of learning new things.
+
+    User 2: That''s great. What''s your favorite thing to do on the weekends?
+
+    User 1: I like to study and look over client files.
+
+    User 2: Oh, that sounds intense. What''s your favorite part of studying?
+
+    User 1: I like learning new things and I like the feeling of accomplishment when I finally understand a concept.
+
+    User 2: That''s great. I''m glad you enjoy your job.
+
+    User 1: Thanks, I am. What''s your favorite thing to do on the weekends?
+
+    User 2: I like to clean houses and bowl.
+
+    User 1: That''s cool. I''ve never been bowling before.
+
+    User 2: You should try it sometime. It''s really fun.
+
+    User 1: I might just do that. Thanks for the suggestion.
+
+    User 2: No problem. It was nice meeting you, Mary.
+
+    User 1: You too, Mike.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

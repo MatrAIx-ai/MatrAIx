@@ -1,0 +1,17 @@
+id: '00043411'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43411
+persona_description: A climate scientist who is skeptical of the accuracy and validity of computer-generated climate models, and is concerned about the misuse of public funds on useless computing resources.
+  They are also critical of the IPCC and its role in promoting computer modeling and prediction, and believe that the problem of climate change has not been effectively addressed.
+expertise:
+  general_domain_top1pct: climate science
+  specific_domain_top1pct: climate modeling
+  general_domain_top01pct: None
+  specific_domain_top01pct: climate modeling critique
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

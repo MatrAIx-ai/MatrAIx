@@ -1,0 +1,62 @@
+id: 00001089
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1089
+data:
+  user 1 personas: 'I love to clean.
+
+    I watch a lot of movies.
+
+    I am a stay at home mom.
+
+    I love fast food.
+
+    I do not have much energy.'
+  user 2 personas: 'I sometimes think i am shallow.
+
+    I want a dog , but that is a lot of commitment.
+
+    If i want it , i buy it.
+
+    My mother is a professional make up artist.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1].
+
+    User 2: Hi! I''m [User 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, go shopping, and spend time with my friends and family.
+
+    User 1: That sounds fun! I like to watch movies, clean, and go to the park with my kids.
+
+    User 2: That''s great! I love kids. I''ve always wanted one, but I''m not sure if I''m ready for the commitment yet.
+
+    User 1: I think it''s a lot of fun, but it can also be a lot of work.
+
+    User 2: Yeah, I''ve heard that. But I think it would be worth it.
+
+    User 1: I think so too.
+
+    User 2: So, what do you like to watch on TV?
+
+    User 1: I like to watch a lot of different things, but I''m really into sci-fi and fantasy shows.
+
+    User 2: Me too! I love Star Trek and Lord of the Rings.
+
+    User 1: Me too! I''m also a big fan of Harry Potter.
+
+    User 2: Me too! I''m so excited for the new movie.
+
+    User 1: Me too! I can''t wait to see it.
+
+    User 2: Maybe we should go see it together.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when it comes out.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00000686
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 686
+data:
+  user 1 personas: 'I like to cook.
+
+    I m scared of clowns.
+
+    I live on the third floor in an apartment.
+
+    I have two roomates.
+
+    I have two dogs.'
+  user 2 personas: 'My passion is photography.
+
+    My favorite color is blue.
+
+    I am a freshman at nyu.
+
+    I have two older brothers.
+
+    I am the youngest in my family.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love photography! I''m always taking pictures of things I see, especially around campus.
+
+    User 1: That''s cool! I like to cook. I''m not very good at it, but it''s fun to try new recipes.
+
+    User 2: I love to cook too! I''m not very good at it either, but it''s always fun to eat what I make.
+
+    User 1: Yeah, it is! So, what are you studying at NYU?
+
+    User 2: I''m studying business. I want to be a marketing manager one day.
+
+    User 1: That''s cool! I''m studying computer science. I want to be a software engineer.
+
+    User 2: That''s a great field! There are so many different things you can do with a computer science degree.
+
+    User 1: Yeah, there are! I''m excited to see what the future holds for me.
+
+    User 2: I''m sure you''ll do great things!
+
+    User 1: Thanks! I hope so!
+
+    User 2: So, do you live on campus?
+
+    User 1: Yeah, I live on the third floor of an apartment building.
+
+    User 2: That''s cool! I have two roommates.
+
+    User 1: I have two dogs!
+
+    User 2: That''s awesome! I love dogs!
+
+    User 1: Me too! They''re the best.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to go out with my friends, watch movies, play video games, and cook.
+
+    User 2: That sounds like a lot of fun! I like to do a lot of the same things.
+
+    User 1: Yeah, it is! I''m glad we have so much in common.
+
+    User 2: Me too! I think we''re going to be good friends.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

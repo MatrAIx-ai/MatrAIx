@@ -1,0 +1,82 @@
+id: '00000533'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 533
+data:
+  user 1 personas: 'I love to run.
+
+    My wife just left me.
+
+    My favorite city is new york.
+
+    I am a lawyer.
+
+    My favorite food is steak.'
+  user 2 personas: 'My car has to be as fast as my motorcycle.
+
+    I love to skate and ski.
+
+    I love the smell of leather.
+
+    I have 4 cats and 2 dogs.
+
+    I own 30 pairs of shoes.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to skate and ski.
+
+    User 1: That''s cool, I love to run.
+
+    User 2: Me too! I run every day to stay in shape.
+
+    User 1: I used to run every day, but I got a little lazy.
+
+    User 2: You should start running again! It''s a great way to stay healthy and relieve stress.
+
+    User 1: I know, I know. I''ll start again soon.
+
+    User 2: Good! I''m glad to hear that.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a lawyer.
+
+    User 1: Oh, really? That must be interesting.
+
+    User 2: It is. I love working with people and helping them solve their problems.
+
+    User 1: That''s great. I''m a lawyer too.
+
+    User 2: Really? That''s awesome! What kind of law do you practice?
+
+    User 1: I''m a family law attorney.
+
+    User 2: Oh, that must be interesting. I''ve never met a family law attorney before.
+
+    User 1: It is. I love helping families through difficult times.
+
+    User 2: That''s great. I''m glad you''re passionate about your work.
+
+    User 1: Thanks. I am.
+
+    User 2: So, what''s your favorite city?
+
+    User 1: My favorite city is New York City.
+
+    User 2: New York City? That''s a great city. I''ve always wanted to go there.
+
+    User 1: You should definitely go! It''s an amazing city.
+
+    User 2: I will! I''m sure it''s even better than I imagine.
+
+    User 1: It is. I''m glad you''re planning on going.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00065252'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65252
+persona_description: A healthcare professional who is knowledgeable about pain relief techniques, particularly TENS therapy. They have experience using TENS units and understand the mechanisms of TENS therapy.
+  They are familiar with the benefits and limitations of TENS therapy for cancer pain and are aware of alternative methods for pain management. They are also aware of the regulatory requirements for medical
+  devices and are familiar with the FDA and CE marking processes.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pain management
+  general_domain_top01pct: None
+  specific_domain_top01pct: TENS therapy
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

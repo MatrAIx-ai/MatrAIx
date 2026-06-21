@@ -1,0 +1,19 @@
+id: 00032999
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32999
+persona_description: A healthcare professional who is responsible for administering and managing medications to patients. This person is knowledgeable about the use, dosage, and potential side effects of
+  various medications, including oseltamivir. They are skilled in interpreting medical information and communicating with patients and healthcare providers. This person should be able to provide accurate
+  and up-to-date information on the use of oseltamivir for treating seasonal flu and other conditions, as well as potential interactions and side effects. They should also be able to answer questions about
+  the medication's storage, disposal, and proper use.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: antiviral pharmacology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,64 @@
+id: '00007017'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7017
+data:
+  user 1 personas: 'I won the spelling bee in third grade.
+
+    I smoke a pipe.
+
+    I have been married five times.
+
+    I love to eat eggplant.'
+  user 2 personas: 'My favorite tv show is game of thrones.
+
+    I like long walks on the beach.
+
+    My favorite color is blue.
+
+    My favorite music genre is pop.
+
+    I enjoy home cooked meals.'
+  Best Generated Conversation: '* * User 1: * * Hi, my name is (User 1). What''s your name?
+
+    * * User 2: * * Hi, I''m (User 2). Nice to meet you!
+
+    * * User 1: * * Nice to meet you too! What are you up to today?
+
+    * * User 2: * * I''m just hanging out, watching TV. What about you?
+
+    * * User 1: * * I''m just doing some work. I''m a writer.
+
+    * * User 2: * * Oh, that''s cool. I love to read. What kind of things do you write?
+
+    * * User 1: * * I write mostly fiction, but I also do some nonfiction. I''ve written a few novels and a bunch of short stories.
+
+    * * User 2: * * That''s awesome! I''ve always wanted to be a writer, but I don''t think I have the patience.
+
+    * * User 1: * * It takes a lot of work, but it''s worth it when you finish a piece of writing that you''re proud of.
+
+    * * User 2: * * I can imagine. So, what''s your favorite thing to write about?
+
+    * * User 1: * * I like to write about all sorts of things, but I''m especially interested in character development and relationships.
+
+    * * User 2: * * That''s cool. I''m more interested in plot and setting.
+
+    * * User 1: * * We should collaborate on a story!
+
+    * * User 2: * * That could be fun!
+
+    * * User 1: * * We could each write a chapter and then trade and edit each other''s work.
+
+    * * User 2: * * That''s a great idea! I''m excited to start working on it.
+
+    * * User 1: * * Me too! We can start brainstorming ideas and characters.
+
+    * * User 2: * * Sounds good! I''ll start thinking about it.
+
+    * * User 1: * * I can''t wait to see what we come up with.
+
+    * * User 2: * * Me neither!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00005418
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5418
+data:
+  user 1 personas: 'My favorite band is hop along.
+
+    My father used to be a mechanic.
+
+    I am a musician.
+
+    I like to play video games.'
+  user 2 personas: 'I am a youtuber.
+
+    I have a cat named leela.
+
+    My dad is an airline pilot.
+
+    My car is pink.
+
+    I make videos about makeup.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a YouTuber.
+
+    User 1: Oh, that''s cool! What kind of videos do you make?
+
+    User 2: I make videos about makeup.
+
+    User 1: That''s awesome! I love makeup.
+
+    User 2: Thanks! What''s your favorite band?
+
+    User 1: My favorite band is Hop Along.
+
+    User 2: I''ve never heard of them. What kind of music do they play?
+
+    User 1: They''re an indie rock band. You should check them out!
+
+    User 2: I will! What do you like about them?
+
+    User 1: I love their music and their lyrics. They''re really relatable.
+
+    User 2: That''s good to hear! I''ll definitely check them out.
+
+    User 1: You should! I think you''ll like them.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch YouTube videos, and spend time with my cat, Leela.
+
+    User 1: Leela is a great name for a cat! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I''m really into RPGs right now.
+
+    User 1: RPGs are great! I love the story and character development.
+
+    User 2: Yeah, me too! What''s your favorite RPG?
+
+    User 1: My favorite RPG is The Witcher 3: Wild Hunt.
+
+    User 2: That''s a great game! I''ve played it a few times.
+
+    User 1: It''s so good! I love the story and the characters.
+
+    User 2: Yeah, me too! It''s one of my favorite games of all time.
+
+    User 1: It''s definitely one of mine too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

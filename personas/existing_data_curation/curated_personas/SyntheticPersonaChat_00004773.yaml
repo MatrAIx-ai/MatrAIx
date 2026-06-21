@@ -1,0 +1,68 @@
+id: '00004773'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4773
+data:
+  user 1 personas: 'I was born in san francisco.
+
+    I love dogs , especially labradors.
+
+    I work in the pharmaceutical industry.
+
+    I have one sister.
+
+    I am traveling to paris this year for my vacation.'
+  user 2 personas: 'My dog is a collie.
+
+    I love to travel with my family.
+
+    I have blue eyes and curly brown hair.
+
+    I love to snack between meals.
+
+    My favorite type of music is country.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1''s name). I''m from San Francisco, California.
+
+    User 2: Hi, my name is (user 2''s name). I''m from Seattle, Washington.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s interesting. I work in the pharmaceutical industry.
+
+    User 2: What''s your favorite type of dog?
+
+    User 1: I love labradors. They''re so friendly and playful.
+
+    User 2: I have a collie. He''s a great dog.
+
+    User 1: I love collies too. They''re so beautiful.
+
+    User 2: Where are you traveling to this year?
+
+    User 1: I''m going to Paris for my vacation. I''m really excited to see the Eiffel Tower and the Louvre.
+
+    User 2: That sounds amazing! I''ve always wanted to go to Paris.
+
+    User 1: You should go! It''s a beautiful city.
+
+    User 2: I''m sure I will someday.
+
+    User 1: What''s your favorite type of music?
+
+    User 2: I love country music. It''s so relaxing and upbeat.
+
+    User 1: I love country music too. What are some of your favorite artists?
+
+    User 2: I love Keith Urban, Luke Bryan, and Brad Paisley.
+
+    User 1: Those are all great artists. I love their music too.
+
+    User 2: It''s great to meet someone who likes the same music as me.
+
+    User 1: Me too. It''s always nice to find someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

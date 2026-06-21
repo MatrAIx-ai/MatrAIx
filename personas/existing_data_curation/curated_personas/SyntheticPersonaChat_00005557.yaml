@@ -1,0 +1,60 @@
+id: '00005557'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5557
+data:
+  user 1 personas: 'I have never been to the beach.
+
+    I am the oldest of 5 children.
+
+    I love my parrot , todd.
+
+    I am a disappointment to my family.'
+  user 2 personas: 'I went to stanford.
+
+    I play soccer professionally.
+
+    I have a wife and a 4 year old son.
+
+    My idol is thierry henry.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: I''m not sure what I want to do with my life.
+
+    User 2: I''m sure you''ll figure it out. What do you like to do?
+
+    User 1: I like to play soccer and watch movies.
+
+    User 2: I love soccer! I play professionally.
+
+    User 1: That''s amazing! Who''s your favorite player?
+
+    User 2: Thierry Henry is my idol.
+
+    User 1: I''ve never heard of him.
+
+    User 2: He''s a former French player who''s considered one of the best strikers of all time.
+
+    User 1: Wow, that''s really impressive.
+
+    User 2: Yeah, he''s a legend.
+
+    User 1: So, what''s it like to play soccer professionally?
+
+    User 2: It''s amazing! I love being able to play the game I love for a living.
+
+    User 1: That sounds like a dream come true.
+
+    User 2: It is! I''m so lucky to be able to do it.
+
+    User 1: So, what are your goals for the future?
+
+    User 2: I want to keep playing soccer as long as I can. I also want to start a family someday.
+
+    User 1: That sounds great! I''m sure you''ll achieve both of those goals.
+
+    User 2: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

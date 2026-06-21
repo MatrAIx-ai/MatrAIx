@@ -1,0 +1,66 @@
+id: '00004277'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4277
+data:
+  user 1 personas: 'I am a pilot for southwest.
+
+    I have a twin sister named jessica.
+
+    I met my wife at a tickleback concert.
+
+    My favorite food is fried chicken.
+
+    My son was born completely blind.'
+  user 2 personas: 'I am seven years old.
+
+    I just got my rejection letter from the gifted program.
+
+    And , my best friend is calden.
+
+    I like to play soccer.'
+  Best Generated Conversation: 'User 1: Hi, my name is (USER 1''s name).
+
+    User 2: Hi, my name is (USER 2''s name).
+
+    User 1: What''s your favorite food?
+
+    User 2: I like fried chicken.
+
+    User 1: Me too! I''m a pilot for Southwest Airlines, and I always fly back home to get fried chicken from my favorite place.
+
+    User 2: Wow, that''s so cool! I''ve always wanted to fly a plane.
+
+    User 1: It''s a lot of fun, but it can also be challenging.
+
+    User 2: I bet! But I''m sure it''s worth it.
+
+    User 1: It is. I love being able to travel and see new places.
+
+    User 2: That''s great! I love to travel too.
+
+    User 1: What''s your favorite place you''ve ever been?
+
+    User 2: I''ve been to a lot of great places, but my favorite was probably Hawaii.
+
+    User 1: Hawaii is beautiful! I''ve always wanted to go there.
+
+    User 2: You should definitely go! It''s amazing.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play soccer, read, and hang out with my friends.
+
+    User 1: That sounds like fun! I like to do those things too.
+
+    User 2: Cool! We should hang out sometime.
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

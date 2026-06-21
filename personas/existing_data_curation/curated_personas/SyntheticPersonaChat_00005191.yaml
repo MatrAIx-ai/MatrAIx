@@ -1,0 +1,64 @@
+id: 00005191
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5191
+data:
+  user 1 personas: 'Someday i would like a truck.
+
+    I like toyota cars.
+
+    I do not like working long hours.
+
+    I like to vote.
+
+    I work at a hospital.'
+  user 2 personas: 'My hair is brown.
+
+    I am not thin.
+
+    I like to sew.
+
+    I have one cat.
+
+    I am short.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. I''m from [location 1]. What about you?
+
+    User 2: Hi, I''m [user 2]. I''m from [location 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to sew, read, and spend time with my cat.
+
+    User 1: Oh, that sounds fun! I like to go for walks, play video games, and vote.
+
+    User 2: Voting is important! I wish more people did it.
+
+    User 1: I agree! I think it''s one of the most important things we can do as citizens.
+
+    User 2: What do you do for work?
+
+    User 1: I work at a hospital.
+
+    User 2: Oh, that must be interesting!
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: What kind of truck do you want?
+
+    User 1: I''m not sure yet. I''ve been thinking about a Toyota Tacoma or Tundra.
+
+    User 2: Those are both great trucks! I''ve heard good things about both of them.
+
+    User 1: I think I''m going to go with the Tundra. It''s a little bigger than the Tacoma, but I think it would be more comfortable for me.
+
+    User 2: That''s a good choice. I''m sure you''ll love it.
+
+    User 1: Thanks! I''m excited to get one.
+
+    User 2: Me too! I hope you post a picture of it when you do.
+
+    User 1: I will! I''m sure you''ll like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

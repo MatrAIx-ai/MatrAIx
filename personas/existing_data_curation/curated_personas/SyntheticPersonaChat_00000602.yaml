@@ -1,0 +1,57 @@
+id: '00000602'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 602
+data:
+  user 1 personas: 'I am an artist.
+
+    I recently got a cat.
+
+    I have four children.
+
+    I love watching game of thrones.
+
+    I enjoy walking for exercise.'
+  user 2 personas: 'It s one of my favorite hobbies.
+
+    My parents would take my brother and i when we were little.
+
+    I used to wear a cape.
+
+    I love going to the movies.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m an artist and I recently got a cat. What do you like to do for fun?
+
+    User 2: I love going to the movies! I used to wear a cape when I was little, too.
+
+    User 1: That''s great! I love movies too. I recently watched Game of Thrones.
+
+    User 2: Oh, cool! I''ve heard great things about that show. What''s it about?
+
+    User 1: It''s a fantasy series about a world where there are seven kingdoms. The main character, Jon Snow, is a bastard who is raised in the Night''s Watch, a group of soldiers who guard the Wall, which
+    separates the Seven Kingdoms from a land of ice and snow.
+
+    User 2: That sounds really interesting! I might have to check it out.
+
+    User 1: I definitely recommend it. It''s one of the best shows on TV.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I love to go for walks with my cat. He''s a little ball of fur and he''s always up for an adventure.
+
+    User 2: That sounds cute! I have two dogs, and they''re always up for a walk too.
+
+    User 1: Dogs are great companions. I love how they always seem to know when you''re feeling down and they can always make you smile.
+
+    User 2: I know right? They''re the best.
+
+    User 1: It sounds like we have a lot in common. I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00000861
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 861
+data:
+  user 1 personas: 'I smoke a pipe.
+
+    I won the spelling bee in third grade.
+
+    I love to eat eggplant.
+
+    I have been married five times.
+
+    I own a bar in downtown chicago.'
+  user 2 personas: 'I play ice hockey.
+
+    I go to high school.
+
+    I live in the united states.
+
+    I am a boy.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: I''m doing well, thanks! How are you?
+
+    User 1: I''m doing great! I''m from Chicago, where are you from?
+
+    User 2: I''m from the United States too! I live in a small town in New York.
+
+    User 1: Oh, that''s cool! I''ve always wanted to go to New York.
+
+    User 2: You should! It''s a great place.
+
+    User 1: I''m sure it is. So, what do you like to do for fun?
+
+    User 2: I love to play ice hockey. I''m on the high school team.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to play ice hockey.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to look into it. So, what''s your favorite thing about high school?
+
+    User 2: My favorite thing about high school is the people. I''ve met some really great friends here.
+
+    User 1: That''s great! I''m glad you''re making friends.
+
+    User 2: Thanks! So, what do you do for fun?
+
+    User 1: I like to play basketball and read. I also like to watch movies and listen to music.
+
+    User 2: That sounds fun! I love to watch movies too.
+
+    User 1: Me too! So, what''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: That''s a great movie! I love it too.
+
+    User 2: Me too! It''s so good.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to go see a movie. Do you want to come with me?
+
+    User 2: Sure, that sounds like fun.
+
+    User 1: Great! I''ll pick you up at 7.
+
+    User 2: Okay, see you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

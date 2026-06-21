@@ -1,0 +1,72 @@
+id: 00004608
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4608
+data:
+  user 1 personas: 'I care deeply about animals.
+
+    I grew up homeschooled.
+
+    I have a hard time feeling connected with people.
+
+    I sometimes need to scream to feel alive.
+
+    I take my emotions out through art.'
+  user 2 personas: 'I live in an apartment.
+
+    I like to draw.
+
+    My mother is a teacher.
+
+    I am one of four siblings.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to draw, paint, and play music.
+
+    User 1: Oh, cool! I like to draw and paint too.
+
+    User 2: What kind of things do you like to draw?
+
+    User 1: I like to draw animals, landscapes, and people.
+
+    User 2: Me too! I love drawing animals.
+
+    User 1: I know, they''re so cute!
+
+    User 2: What''s your favorite animal?
+
+    User 1: I think my favorite animal is a bear.
+
+    User 2: Bears are great! They''re so cuddly.
+
+    User 1: I know, right?
+
+    User 2: What kind of music do you like to play?
+
+    User 1: I like to play rock music.
+
+    User 2: Me too! I love playing guitar.
+
+    User 1: Me too! What''s your favorite song to play?
+
+    User 2: I don''t know, I have a lot of favorites.
+
+    User 1: Me too.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: Maybe we can draw together sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

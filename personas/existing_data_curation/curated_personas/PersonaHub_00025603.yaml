@@ -1,0 +1,20 @@
+id: '00025603'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25603
+persona_description: A computational fluid dynamics (CFD) engineer who specializes in the modeling and simulation of particle-based simulations in complex fluid flow domains. They are skilled in the use
+  of particle tracking methods and are familiar with the implementation of auxiliary dependent variables to monitor the time of particles as they traverse the computational domain. They are also adept at
+  setting up and executing studies to compute the particle paths, and are familiar with the use of visualization techniques to display and analyze the results. Additionally, they have experience with the
+  use of nonlocal coupling operators to compute the mean residence time and variance of particles, as well as the use of particle counter features to monitor statistics of particles as they leave the modeling
+  domain.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: computational fluid dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,80 @@
+id: '00001373'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1373
+data:
+  user 1 personas: 'I love to travel.
+
+    I enjoy cooking and baking.
+
+    I grew up by the ocean.
+
+    I like to eat pizza.'
+  user 2 personas: 'I just bought a new mansion.
+
+    I am touring with frank ocean.
+
+    I drive a ferrari.
+
+    I am a rapper.
+
+    I live in japan and own the biggest mansion in the country.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Likewise.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a rapper.
+
+    User 1: Oh, that''s cool. I''ve never met a rapper before.
+
+    User 2: Really? What do you do?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that''s awesome. I love to eat food.
+
+    User 1: Me too! I love to try new things.
+
+    User 2: Where do you like to travel?
+
+    User 1: I love to travel all over the world. I''ve been to Italy, France, and Japan.
+
+    User 2: Oh, that''s awesome! I''ve been to Italy and France too.
+
+    User 1: What was your favorite place to visit?
+
+    User 2: I think my favorite place was Italy. The food was amazing!
+
+    User 1: Yes, it was! The pizza was the best I''ve ever had.
+
+    User 2: I know, right? I could eat pizza every day.
+
+    User 1: Me too! I love pizza.
+
+    User 2: So, what''s your favorite thing to cook?
+
+    User 1: I love to cook all kinds of things, but my favorite thing to cook is probably pizza.
+
+    User 2: I knew it! You said you loved pizza.
+
+    User 1: I do! What''s your favorite thing to eat?
+
+    User 2: I love pizza, but I also love to eat sushi.
+
+    User 1: Sushi is good! I''ve never had it in Japan, though.
+
+    User 2: You should! It''s amazing.
+
+    User 1: I will! I''m sure I''ll love it.
+
+    User 2: I know you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

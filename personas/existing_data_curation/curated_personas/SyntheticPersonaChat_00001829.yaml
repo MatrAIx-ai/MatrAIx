@@ -1,0 +1,62 @@
+id: 00001829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1829
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I have a family that are all tall.
+
+    I love to be run.
+
+    I really like to go to school.
+
+    I like to dance with my friends.'
+  user 2 personas: 'I own a iphone 7.
+
+    My mother use to read me bed time stories.
+
+    My father worked 11 hours a day.
+
+    I drink hot chocolate during the winter.
+
+    I am allergic to seafood.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do?
+
+    User 2: I love to read books. My mom used to read me bed time stories when I was little.
+
+    User 1: Oh, that''s nice. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like fantasy and science fiction.
+
+    User 1: I like those genres too! What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: I love the world that Tolkien created. It''s so detailed and immersive.
+
+    User 1: Me too. I''ve always wanted to visit Middle Earth.
+
+    User 2: Me too! I think it would be an amazing experience.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to go for walks in the park, listen to music, and watch movies.
+
+    User 1: I like those things too! What''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: That''s a great movie! I''ve seen it a few times.
+
+    User 2: I love the story and the characters. It''s so inspiring.
+
+    User 1: Me too. It''s a really good movie.
+
+    User 2: I''m glad you liked it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

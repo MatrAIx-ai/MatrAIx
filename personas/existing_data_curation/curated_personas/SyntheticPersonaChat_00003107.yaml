@@ -1,0 +1,58 @@
+id: '00003107'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3107
+data:
+  user 1 personas: 'I like eating pretzels.
+
+    I work for the railroad.
+
+    I am an omnivore.
+
+    I really like watching star trek.'
+  user 2 personas: 'I sleep on a single bed.
+
+    I love the rain.
+
+    I drive a van.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to watch the rain, play video games, and drive my van.
+
+    User 1: I like watching the rain too! It''s so calming. What kind of video games do you play?
+
+    User 2: I mostly play racing games and RPGs.
+
+    User 1: I love racing games! I''ve been playing a lot of Forza Horizon 5 lately.
+
+    User 2: I''ve heard good things about that game. I''ve been playing a lot of Gran Turismo 7.
+
+    User 1: I love Gran Turismo! I''ve been playing it since I was a kid.
+
+    User 2: I''ve only been playing it for a few months, but I''m already hooked.
+
+    User 1: It''s so addictive! I''m glad we have something in common.
+
+    User 2: Me too! I''m always looking for new friends who like to play video games.
+
+    User 1: Me too! We should play together sometime.
+
+    User 2: That would be great! I''m free most weekends.
+
+    User 1: I''m free most weekends too. Let''s exchange numbers and we can figure out a time to play.
+
+    User 2: Sounds good! My number is [user 2 number].
+
+    User 1: Great! I''ll text you later.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

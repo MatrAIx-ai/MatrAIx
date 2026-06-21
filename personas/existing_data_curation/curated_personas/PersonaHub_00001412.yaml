@@ -1,0 +1,19 @@
+id: '00001412'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1412
+persona_description: A healthcare professional who is interested in preventive medicine and the detection and management of cardiovascular diseases, particularly abdominal aortic aneurysm. This person is
+  likely to be a medical doctor, cardiologist, or a pulmonologist who is responsible for monitoring patients at risk of aneurysm rupture and providing them with regular check-ups. They should have knowledge
+  of the symptoms of an abdominal aortic aneurysm, the causes of aneurysm, and the preventative measures that can be taken to reduce the risk of rupture. They should also be aware of the ultrasound screening
+  procedure and the importance of it in the management of abdominal aortic aneurysm.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiovascular medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

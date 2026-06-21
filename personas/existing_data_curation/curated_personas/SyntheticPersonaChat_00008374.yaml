@@ -1,0 +1,72 @@
+id: 00008374
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8374
+data:
+  user 1 personas: 'I work over 60 hours a week as a restaurant manager.
+
+    When i cut loose , i lose control.
+
+    I lived most of my life not knowing who bob marley was.
+
+    We help each other out in my family.'
+  user 2 personas: 'My favorite color is grey.
+
+    I love to do yoga.
+
+    I am single.
+
+    My passion is writing.
+
+    I work for a newspaper.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user1 name]. What''s yours?
+
+    User 2: I''m [user2 name]. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for a living?
+
+    User 2: I''m a writer for a newspaper.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a writer.
+
+    User 2: It''s a lot of fun, but it can be hard work.
+
+    User 1: I can imagine. Do you have any favorite authors?
+
+    User 2: I love Stephen King and J.K. Rowling.
+
+    User 1: Me too! They''re both great authors.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go to the movies, play video games, and read.
+
+    User 2: I love to go to the movies too! What''s your favorite movie?
+
+    User 1: I don''t know if I have a favorite movie, but I really like the Lord of the Rings series.
+
+    User 2: Me too! I love those movies.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play RPGs, puzzle games, and strategy games.
+
+    User 1: I like RPGs too! I''m playing a lot of Skyrim right now.
+
+    User 2: I''ve heard good things about that game. I''m playing a lot of Final Fantasy XV.
+
+    User 1: I''ve heard good things about that game too.
+
+    User 2: It''s really fun.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: Sure, that sounds fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

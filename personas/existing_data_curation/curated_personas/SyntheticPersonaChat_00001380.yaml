@@ -1,0 +1,56 @@
+id: 00001380
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1380
+data:
+  user 1 personas: 'I love to travel.
+
+    I work as a construction worker during the summers.
+
+    My favourite food is ice cream.
+
+    I am a college student.
+
+    My parents are divorced.'
+  user 2 personas: 'I am a breath of fresh air.
+
+    I work as a lifeguard at a beach.
+
+    I listen to katie perry while in the shower.
+
+    I drive a yellow convertible in the rain.
+
+    I like spreading laughter and love everywhere i go.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m a college student and I love to travel. What do you like to do for fun?
+
+    User 2: Hi! I''m [name]. I''m a lifeguard at a beach. I like to spread laughter and love everywhere I go!
+
+    User 1: That''s a great goal! What''s your favorite thing about being a lifeguard?
+
+    User 2: I love being able to help people and make them feel safe. It''s also a lot of fun to work outside and enjoy the beach.
+
+    User 1: That sounds like a great job! I''m sure you''re really good at it.
+
+    User 2: Thanks! I try my best!
+
+    User 1: So, what do you do for fun when you''re not working?
+
+    User 2: I love to go hiking, swimming, and reading. I also like to spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun! I love to hike and swim too.
+
+    User 2: We should go hiking together sometime!
+
+    User 1: That would be great! I''d love to explore some new trails.
+
+    User 2: Me too! We could make a day of it and have a picnic too.
+
+    User 1: That sounds like the perfect day!
+
+    User 2: Great! I''ll start planning the details.
+
+    User 1: Sounds good! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

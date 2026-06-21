@@ -1,0 +1,52 @@
+id: '00006330'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6330
+data:
+  user 1 personas: 'My favorite food is cheeseburgers.
+
+    I like to go out fishing.
+
+    I play the bass guitar.
+
+    I work out daily.'
+  user 2 personas: 'I love to save money.
+
+    I donate any overstock to charity.
+
+    I am a couponer.
+
+    I like to keep my stockpile organised.
+
+    I shop several times a week.'
+  Best Generated Conversation: 'User 1: Do you like to save money?
+
+    User 2: Yes, I do! I love to find good deals and save money.
+
+    User 1: Me too! I''m always looking for ways to save money.
+
+    User 2: What''s your favorite way to save money?
+
+    User 1: I like to coupon and shop sales. I also like to make my own food.
+
+    User 2: Those are great ways to save money! I love to coupon too. I also like to shop at thrift stores and garage sales.
+
+    User 1: I love thrift stores! I always find great deals there.
+
+    User 2: Me too! I love finding unique items that I can''t find anywhere else.
+
+    User 1: What''s your favorite thing about saving money?
+
+    User 2: I love being able to buy things that I want without having to spend a lot of money. I also love being able to help others.
+
+    User 1: Me too! I love being able to donate to charity and help people in need.
+
+    User 2: That''s great! I think it''s important to give back when you can.
+
+    User 1: I agree! I think it''s important to help others whenever possible.
+
+    User 2: I''m glad we agree! I think it''s important to be mindful of our spending and save money whenever possible. It''s also important to be generous and help others in need.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

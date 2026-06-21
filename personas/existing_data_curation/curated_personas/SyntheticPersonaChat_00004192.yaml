@@ -1,0 +1,76 @@
+id: 00004192
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4192
+data:
+  user 1 personas: 'My favorite food is jello.
+
+    I live in an apartment.
+
+    I have 4 pets.
+
+    I enjoy magic the gathering , it is a card game.
+
+    I cannot whistle.'
+  user 2 personas: 'My favorite band is the avert brother.
+
+    I love to travel.
+
+    I am a steelers fan.
+
+    I am a psychology major.'
+  Best Generated Conversation: 'User 1: Hi! What''s your favorite band?
+
+    User 2: I love the Avett Brothers! Their music is so beautiful and uplifting.
+
+    User 1: I''ve heard of them, but I''ve never listened to their music. I''ll have to check them out.
+
+    User 2: You should! They''re a great band. What about you, what''s your favorite band?
+
+    User 1: I don''t really have a favorite band. I listen to a lot of different music, but I don''t really have one band that I like more than others.
+
+    User 2: That''s cool. I''m pretty much the same way. I like to listen to a variety of music.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to travel! I''ve been to a lot of different countries, and I always love exploring new places.
+
+    User 1: That''s cool! I''ve never been out of the country before. I''d love to travel someday.
+
+    User 2: You should! It''s a great way to learn about new cultures and see new things.
+
+    User 1: I know, I know. I need to get on that.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a psychology major. I''m going to graduate school next year.
+
+    User 2: Oh, that''s cool! I''m a big fan of psychology. I think it''s a really interesting field.
+
+    User 1: Thanks! I love it. I''m excited to learn more about it.
+
+    User 2: So, what do you want to do after graduate school?
+
+    User 1: I''m not sure yet. I''m thinking about going into research, but I''m not sure.
+
+    User 2: Well, whatever you do, I''m sure you''ll be great at it.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: Jello! I love it so much.
+
+    User 2: Jello? That''s interesting. I''ve never met anyone who actually likes jello.
+
+    User 1: I know, it''s not a very common favorite food. But I love it!
+
+    User 2: Well, you''re not alone. I know someone who loves jello too.
+
+    User 1: Really? That''s cool! I''m glad there are other jello lovers out there.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

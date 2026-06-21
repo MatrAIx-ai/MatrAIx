@@ -1,0 +1,62 @@
+id: 00005935
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5935
+data:
+  user 1 personas: 'My favorite sport is basketball.
+
+    I live in canada , near ontario.
+
+    I run marathons twice a year , mostly in america.
+
+    My favorite basketball team is the vancouver grizzlies.'
+  user 2 personas: 'I like swimming.
+
+    I own a home.
+
+    My favorite color is purple.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, go for walks, and spend time with my dogs.
+
+    User 1: That sounds like a lot of fun! I like to run marathons, play basketball, and read.
+
+    User 2: I''ve never been a fan of marathons, but I do love basketball! My favorite team is the Raptors.
+
+    User 1: I''m actually a big fan of the Vancouver Grizzlies! I''m from Canada, so I try to go to as many games as I can.
+
+    User 2: That''s awesome! I''m from the US, so I don''t get to see many games.
+
+    User 1: Well, if you''re ever in Canada, you should definitely check out a Grizzlies game!
+
+    User 2: I definitely will! Thanks for the recommendation!
+
+    User 1: No problem! So, what do you like to read?
+
+    User 2: I love to read anything, but I especially love historical fiction and mystery novels.
+
+    User 1: I love historical fiction too! I''m currently reading The Help.
+
+    User 2: I''ve heard great things about that book! I''m definitely going to have to check it out.
+
+    User 1: You should! It''s really good. So, what kind of dogs do you have?
+
+    User 2: I have a golden retriever and a labrador retriever.
+
+    User 1: Oh, I love retrievers! They''re such friendly dogs.
+
+    User 2: They are! They''re the best pets.
+
+    User 1: Well, it was nice talking to you! I hope we can chat again sometime.
+
+    User 2: Me too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

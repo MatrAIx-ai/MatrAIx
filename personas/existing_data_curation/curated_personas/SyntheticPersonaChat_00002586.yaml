@@ -1,0 +1,90 @@
+id: 00002586
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2586
+data:
+  user 1 personas: 'I love to eat cheese.
+
+    I like to cook stews.
+
+    I am a older lady.
+
+    I love to listen to frank sinatra.'
+  user 2 personas: 'I like to cook.
+
+    I have lived in several different states.
+
+    I worked as a nurse for many years.
+
+    My husband was a salesman.
+
+    I have a cat named kj.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you [user 2].
+
+    User 2: It''s nice to meet you too, [user 1].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, read, and spend time with my cat.
+
+    User 1: I like to cook too! What''s your favorite dish to make?
+
+    User 2: I love making stews. They''re so hearty and comforting.
+
+    User 1: Me too! I make a mean beef stew.
+
+    User 2: Oh, I love beef stew! I''ve never made it myself, but I''ve always wanted to try.
+
+    User 1: It''s not too hard to make. You just need some beef, vegetables, and broth.
+
+    User 2: That sounds easy enough. I''ll have to give it a try sometime.
+
+    User 1: You should! I''m sure you''ll love it.
+
+    User 2: Thanks for the recommendation, [user 1]. I appreciate it.
+
+    User 1: No problem.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to read. I''m a big fan of historical fiction.
+
+    User 1: Me too! I love learning about different time periods and cultures.
+
+    User 2: Me too! I think it''s so interesting to see how people lived in the past.
+
+    User 1: I agree. It''s also really helpful to learn from the mistakes of the past so we can avoid them in the future.
+
+    User 2: That''s a good point. I never thought of it that way.
+
+    User 1: I''m glad I could help.
+
+    User 2: Thanks.
+
+    User 1: What''s your favorite historical fiction book?
+
+    User 2: I''m not sure I can pick just one. I love so many of them.
+
+    User 1: I know what you mean. There are so many good ones.
+
+    User 2: Yeah. I guess if I had to pick one, it would be "The Pillars of the Earth" by Ken Follett.
+
+    User 1: That''s a great book! I love that one too.
+
+    User 2: Me too! It''s so well-written and the characters are so well-developed.
+
+    User 1: I agree. It''s one of my favorite books of all time.
+
+    User 2: Mine too!
+
+    User 1: It''s nice to meet someone who likes the same books as me.
+
+    User 2: Me too! It''s always nice to find someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

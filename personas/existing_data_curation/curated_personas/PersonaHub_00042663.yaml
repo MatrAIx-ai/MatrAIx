@@ -1,0 +1,18 @@
+id: '00042663'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42663
+persona_description: A meteorologist who specializes in tracking and analyzing tropical cyclones, particularly those in the Pacific Ocean. Their expertise lies in using satellite imagery and radar data
+  to predict and monitor the movements and intensities of these storms. They are particularly interested in the impact of these storms on coastal areas and the potential for heavy rainfall. They are also
+  familiar with the latest technology and techniques used by NASA in satellite imagery analysis.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical cyclone tracking and analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: 00001795
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1795
+data:
+  user 1 personas: 'I am an only child.
+
+    I am adopted.
+
+    I ride horses in my spare time.
+
+    I don t believe in love.
+
+    I work at an accounting firm.'
+  user 2 personas: 'I like to donate time at the local animal shelter.
+
+    Both my parents were teachers.
+
+    I had two cats growing up.
+
+    I have two children.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to donate time at the local animal shelter.
+
+    User 1: That''s great! I love animals too. I have two horses that I ride in my spare time.
+
+    User 2: I''ve always wanted to learn how to ride a horse.
+
+    User 1: It''s so much fun! You should try it sometime.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! I''m an accountant.
+
+    User 2: That''s a tough job!
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I bet it is. So, are you married?
+
+    User 1: No, I''m not. I''m an only child and I''m adopted, so I''ve never really felt the need to get married.
+
+    User 2: Oh, that''s interesting. I''m married and have two children.
+
+    User 1: That''s great! I''m sure it''s a lot of work, but it must be really rewarding too.
+
+    User 2: It is. I love being a mom.
+
+    User 1: I''m glad to hear that. So, what do you like to do with your family?
+
+    User 2: We like to go to the beach, go camping, and play board games.
+
+    User 1: That sounds like a lot of fun! I love the beach.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: So, what''s your favorite thing about being a teacher?
+
+    User 2: I love seeing my students grow and learn. It''s so rewarding to know that I''m making a difference in their lives.
+
+    User 1: That''s great! I''m sure you''re a wonderful teacher.
+
+    User 2: Thank you! I like to think so.
+
+    User 1: So, what do you want to do after we graduate?
+
+    User 2: I''m not sure yet. I''m thinking about going into teaching.
+
+    User 1: That would be great! You''d be a great teacher.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

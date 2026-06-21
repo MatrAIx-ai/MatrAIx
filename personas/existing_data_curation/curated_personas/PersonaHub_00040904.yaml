@@ -1,0 +1,20 @@
+id: 00040904
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40904
+persona_description: A Greek Navy medical mission team who travels to remote Greek islands to provide medical care to the inhabitants, often in difficult and isolated locations. They are experienced in
+  treating a wide range of medical conditions and specialize in emergency medicine, surgery, and obstetrics. The team members are highly skilled and dedicated, and they work closely with local healthcare
+  providers to ensure that the islands have access to the best possible medical care. They are also known for their ability to set up makeshift clinics and hospitals on the islands, using their military
+  equipment and medical expertise to treat patients. The team members are often seen interacting with the local population, including the elderly and children, and they are dedicated to improving the health
+  outcomes for the islanders.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: emergency medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

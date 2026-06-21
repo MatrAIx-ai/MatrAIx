@@ -1,0 +1,52 @@
+id: 00006787
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6787
+data:
+  user 1 personas: 'I like to invest in the stock market.
+
+    I want to move to london when i get older.
+
+    I love soccer.
+
+    I work for nike as an accountant.'
+  user 2 personas: 'I work at the gas station as a part time job.
+
+    I am a traveling encyclopedia salesman.
+
+    My life s goal is to be the world s foremost encyclopedia salesman.
+
+    I once saw peyton manning at the grocery store.'
+  Best Generated Conversation: 'User 1: I''m a soccer fan! What kind of soccer do you like?
+
+    User 2: I like to watch soccer games. I am a traveling encyclopedia salesman!
+
+    User 1: I like to play soccer. I work for Nike as an accountant.
+
+    User 2: Do you like the stock market? I once saw Peyton Manning at the grocery store!
+
+    User 1: I love the stock market! I want to move to London when I get older.
+
+    User 2: That''s a cool goal! I want to be the world''s foremost encyclopedia salesman.
+
+    User 1: Good luck with that! I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out and explore new places. I''m always up for an adventure.
+
+    User 1: Me too! I love going to new places and trying new things.
+
+    User 2: We should go on an adventure together sometime!
+
+    User 1: That sounds like a great idea! I''d love to.
+
+    User 2: Great! We can plan something for the next time we''re both in London.
+
+    User 1: Sounds good! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

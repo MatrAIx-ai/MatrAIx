@@ -1,0 +1,56 @@
+id: '00006100'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6100
+data:
+  user 1 personas: 'I work as a lifeguard at a beach.
+
+    I drive a yellow convertible in the rain.
+
+    I listen to katie perry while in the shower.
+
+    I like spreading laughter and love everywhere i go.'
+  user 2 personas: 'I am married.
+
+    I travel a lot.
+
+    I enjoy spending time with family and friends.
+
+    I like doing art projects.
+
+    I am a strong woman.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to travel, spend time with my family and friends, and do art projects.
+
+    User 1: Sounds like you have a lot of fun! I like to travel too, and I also enjoy art projects.
+
+    User 2: What''s your favorite thing to do when you travel?
+
+    User 1: I like to explore new places and meet new people. I also like to try new foods.
+
+    User 2: Those all sound like great things to do. I agree that trying new foods is always fun.
+
+    User 1: I love it when I find a new restaurant that I really like. What''s your favorite kind of art to do?
+
+    User 2: I like to paint, draw, and do crafts. I also like to make jewelry.
+
+    User 1: Those all sound like really fun things to do. I''m not very artistic, but I admire people who are.
+
+    User 2: It''s never too late to learn! I''m sure you could be great at art if you tried.
+
+    User 1: I might have to give it a try. I could always use a new hobby.
+
+    User 2: I''m sure you''d be great at it.
+
+    User 1: Thanks, [name]. I''m glad we met.
+
+    User 2: Me too, [name]. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

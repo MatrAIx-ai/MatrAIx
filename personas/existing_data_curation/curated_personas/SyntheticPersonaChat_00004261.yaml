@@ -1,0 +1,68 @@
+id: '00004261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4261
+data:
+  user 1 personas: 'Pink is my favorite color.
+
+    I enjoy being alone.
+
+    My mother is dead.
+
+    I am a yoga instructor.'
+  user 2 personas: 'I am a roofer.
+
+    I always have a beer after work.
+
+    I played football in high school.
+
+    I drive a lifted chevy truck.
+
+    My favorite food is steak cooked well done.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: Really? That sounds like a tough job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What''s your favorite thing about it?
+
+    User 2: I like being outside and working with my hands.
+
+    User 1: I can see that. Do you like to work alone or with other people?
+
+    User 2: I like both. I like working alone when I need to focus, but I also like working with other people when we''re doing a big project.
+
+    User 1: What''s your favorite thing about being a roofer?
+
+    User 2: I like the feeling of accomplishment I get when I finish a job.
+
+    User 1: I can see that. Do you have any other hobbies?
+
+    User 2: I like to play football. I played in high school and I still like to play in a recreational league.
+
+    User 1: That''s cool. I used to play football in high school too.
+
+    User 2: What position did you play?
+
+    User 1: I was a running back.
+
+    User 2: That''s awesome. I was a linebacker.
+
+    User 1: I bet you were a tough linebacker.
+
+    User 2: I like to think so.
+
+    User 1: What was your favorite football memory?
+
+    User 2: My favorite memory was when we won the state championship my senior year.
+
+    User 1: That''s amazing. I bet that was a great feeling.
+
+    User 2: It was. It was the best feeling in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

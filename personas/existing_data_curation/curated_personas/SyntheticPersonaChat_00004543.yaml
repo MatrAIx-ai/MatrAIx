@@ -1,0 +1,70 @@
+id: '00004543'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4543
+data:
+  user 1 personas: 'My hair is a reddish brown.
+
+    My family is very supportive of my skiing.
+
+    I am a competitive ski racer.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    I broke my arm skiing once.'
+  user 2 personas: 'My car broke down last week.
+
+    I like to fly kites.
+
+    My neighbor comes over all the time to watch rugby with me.
+
+    I love sports , but rugby is my favorite.
+
+    I work out every other day.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to fly kites and watch rugby.
+
+    User 1: Oh, that''s cool! I''ve never flown a kite before.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: Maybe I will. I know my family is really supportive of my skiing, so they might be into kite flying too.
+
+    User 2: That''s awesome! I''m sure they''d love it.
+
+    User 1: So, what''s it like to be a rugby player?
+
+    User 2: It''s really fun! It''s a very physical sport, but it''s also very social. I love playing with my friends and getting to know new people.
+
+    User 1: That sounds really cool! I''ve always been interested in sports, but I''ve never played rugby.
+
+    User 2: You should give it a try! It''s a great way to get in shape and have some fun.
+
+    User 1: Maybe I will. Thanks for the suggestion!
+
+    User 2: No problem! So, what do you do for work?
+
+    User 1: I''m a ski racer. I''ve been racing for a few years now, and I''m hoping to make it to the Olympics one day.
+
+    User 2: That''s amazing! I''ve always been impressed by ski racers. It takes a lot of courage to go down those hills at high speeds.
+
+    User 1: Thank you! It''s definitely a lot of fun, but it can also be scary. I''ve broken my arm skiing once, but I''m still going strong.
+
+    User 2: That''s awesome! I''m glad you''re still able to ski after breaking your arm.
+
+    User 1: Thanks! I''m not going to let anything stop me from skiing.
+
+    User 2: I''m sure you''ll make it to the Olympics one day. You have a lot of talent.
+
+    User 1: Thank you! I appreciate the support.
+
+    User 2: No problem! You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

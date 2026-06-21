@@ -1,0 +1,58 @@
+id: 00005950
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5950
+data:
+  user 1 personas: 'My sister is a published author.
+
+    I sing karaoke every thursday night.
+
+    My favorite color is yellow.
+
+    I was a champion downhill skier in college.'
+  user 2 personas: 'I post a lot about the food i eat on social media.
+
+    I like every post i see on social media.
+
+    When people do not like my social media posts , it upsets me.
+
+    I am from austin , texas.'
+  Best Generated Conversation: 'User 1: Hello! I''m from Austin, Texas. What about you?
+
+    User 2: I''m from Austin, too!
+
+    User 1: Oh, that''s cool! What do you like to do in Austin?
+
+    User 2: I love to eat food and go to concerts.
+
+    User 1: Me too! What are your favorite restaurants in Austin?
+
+    User 2: I love Franklin Barbecue and Tacodeli.
+
+    User 1: Those are both great restaurants! I love Franklin Barbecue''s brisket.
+
+    User 2: Me too! It''s the best brisket I''ve ever had.
+
+    User 1: I''m glad you agree. What are your favorite concerts you''ve seen in Austin?
+
+    User 2: I saw The Killers at ACL Live a few years ago and it was amazing.
+
+    User 1: I saw them at ACL Live too! It was an incredible show.
+
+    User 2: It was! I''m so glad I got to see them.
+
+    User 1: Me too! I''m a big fan of theirs.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: I''m glad we have similar taste in music.
+
+    User 2: Me too! It makes it more fun to go to concerts together.
+
+    User 1: Definitely! I''d love to go to a concert with you sometime.
+
+    User 2: That would be great! I''ll keep an eye out for some good shows.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

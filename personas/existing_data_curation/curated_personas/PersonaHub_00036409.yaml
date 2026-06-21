@@ -1,0 +1,19 @@
+id: 00036409
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36409
+persona_description: A Canadian meteorologist with extensive experience in forecasting weather conditions, particularly extreme cold warnings. They are knowledgeable about the differences in the standard
+  thresholds for issuing extreme cold warnings across different regions of Canada, including southern Ontario, the Ottawa Valley, and northern parts of the country. They are aware of the challenges faced
+  by people in less prepared areas and the importance of taking extra precautions during extreme cold weather. They are skilled in using data and analysis to make accurate predictions and communicate the
+  information effectively to the public.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: extreme cold weather forecasting
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

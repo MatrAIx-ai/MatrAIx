@@ -1,0 +1,20 @@
+id: 00058739
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58739
+persona_description: A Kubernetes administrator who is responsible for managing and maintaining containerized applications on various cloud environments, ensuring optimal functional state and scalability.
+  They are skilled in using kubectl for interacting with Kubernetes clusters and have experience with cloud controller managers and scheduling algorithms. They have a deep understanding of Kubernetes object
+  models and can create, manage, and deploy applications using the various Kubernetes objects such as pods, deployments, and replication controllers. They are proficient in working with cloud provider-specific
+  infrastructure and have experience with attachable storage and load balancers. They are also skilled in monitoring and troubleshooting Kubernetes clusters and have experience with implementing and maintaining
+  container networking and workload balancing.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Container Orchestration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

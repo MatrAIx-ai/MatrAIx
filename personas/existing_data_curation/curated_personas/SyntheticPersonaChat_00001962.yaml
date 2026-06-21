@@ -1,0 +1,70 @@
+id: 00001962
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1962
+data:
+  user 1 personas: 'I like video games.
+
+    I am diabetic.
+
+    My mother worked for apple.
+
+    My favorite genre of music is rock.'
+  user 2 personas: 'I play tabletop games with friends.
+
+    I need to use an inhaler sometimes.
+
+    I have a crush on my co worker.
+
+    I love rpg computer games.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tabletop games with my friends.
+
+    User 1: That sounds fun! What kind of games do you like to play?
+
+    User 2: I like to play RPGs, like Dungeons and Dragons.
+
+    User 1: I''ve never played D&D, but I''ve always wanted to try it.
+
+    User 2: It''s a lot of fun! It''s a great way to get together with friends and have some adventures.
+
+    User 1: I''m sure it is. I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to play RPG computer games.
+
+    User 1: I love RPG computer games! What are some of your favorites?
+
+    User 2: I like Skyrim, Dragon Age, and the Witcher.
+
+    User 1: Those are all great games! I''m a big fan of the Witcher series.
+
+    User 2: Me too! I''m really excited for the new game coming out.
+
+    User 1: Me too! I''m hoping it''s as good as the previous games.
+
+    User 2: I''m sure it will be. The Witcher games are always so well-made.
+
+    User 1: I agree. They''re some of the best RPGs out there.
+
+    User 2: They really are.
+
+    User 1: I''m glad we have similar interests.
+
+    User 2: Me too! It''s always nice to find someone who shares your interests.
+
+    User 1: I agree. It makes for a more enjoyable conversation.
+
+    User 2: Absolutely'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

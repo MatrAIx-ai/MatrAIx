@@ -1,0 +1,68 @@
+id: '00007010'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7010
+data:
+  user 1 personas: 'I teach cheerleading in my spare time.
+
+    I love family time.
+
+    I work for a online company from home.
+
+    I am a soccer mom.
+
+    I cook every night.'
+  user 2 personas: 'I am a white dancer.
+
+    I have the support of my whole family.
+
+    I have studied ballet all my life.
+
+    My mother is a ballerina.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1).
+
+    User 2: Hi! I''m (user 2).
+
+    User 1: I like your profile! I''m a cheerleader too.
+
+    User 2: That''s awesome! I love cheerleading. It''s so much fun.
+
+    User 1: I know, right? It''s a great way to stay active and meet new people.
+
+    User 2: Exactly! I''ve met so many great friends through cheerleading.
+
+    User 1: Me too! What''s your favorite part about cheerleading?
+
+    User 2: I love the feeling of performing in front of a crowd. It''s so exciting!
+
+    User 1: Me too! It''s such a rush.
+
+    User 2: I also love the teamwork aspect of cheerleading. It''s so much fun to work together as a team to create something amazing.
+
+    User 1: That''s so true! It''s a great feeling to be able to accomplish something together with your team.
+
+    User 2: I know, right? I love being a part of a team.
+
+    User 1: So, what do you do outside of cheerleading?
+
+    User 2: I''m a dancer. I''ve studied ballet my whole life.
+
+    User 1: That''s so cool! I love ballet. It''s so graceful and beautiful.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: Do you have any upcoming performances?
+
+    User 2: Yes, I''m performing in a ballet recital next weekend.
+
+    User 1: Oh, that''s exciting! I would love to see it.
+
+    User 2: You''re welcome to come!
+
+    User 1: Great! I''ll be there.
+
+    User 2: Awesome! I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

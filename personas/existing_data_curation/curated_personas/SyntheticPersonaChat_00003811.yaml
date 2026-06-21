@@ -1,0 +1,68 @@
+id: 00003811
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3811
+data:
+  user 1 personas: 'My favorite band is muse.
+
+    I am leaving for college in three months.
+
+    My father is a mechanic.
+
+    I work at walmart as a stocker.
+
+    I am vegan.'
+  user 2 personas: 'I can t cook.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I m an ovo vegetarian.
+
+    I can t stand beets.
+
+    I enjoy sleeping in on my days off.'
+  Best Generated Conversation: 'User 1: Hi! How''s your day going?
+
+    User 2: It''s going well, thanks! Just got back from a long drive to work.
+
+    User 1: Oh, I can imagine! That must have been tiring.
+
+    User 2: It was a bit, but I''m glad to be home.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s really cool! I''ve always been interested in nursing.
+
+    User 2: It''s a great job. I love helping people.
+
+    User 1: That''s awesome.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my family.
+
+    User 1: Oh, that sounds like fun. I like to read too.
+
+    User 2: Me too! What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I''m especially interested in history.
+
+    User 2: Oh, that''s cool! I like history too.
+
+    User 1: I''m actually going to college in three months to study history.
+
+    User 2: Oh, that''s awesome! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m excited to start.
+
+    User 2: Well, it was nice talking to you. I hope you have a great day.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00000514'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 514
+data:
+  user 1 personas: 'I love hockey.
+
+    I prefer texting over phone calls.
+
+    My mother looks after my grandmother.
+
+    I sleep 8 hours.
+
+    I use the computer all day.'
+  user 2 personas: 'My parents live across the street from me.
+
+    I am in grad school.
+
+    I work in a coffee shop.
+
+    I love to read true crime books.
+
+    My favorite drink is caramel cappuccino.'
+  Best Generated Conversation: 'User 1: I love hockey. Do you like sports?
+
+    User 2: I used to play soccer in high school, but I''m not really into sports anymore.
+
+    User 1: That''s too bad. What do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and hang out with my friends.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read true crime books. I find them really interesting.
+
+    User 1: I''ve never read a true crime book before. What''s your favorite one?
+
+    User 2: My favorite one is "In Cold Blood" by Truman Capote. It''s about the murder of a family in Kansas in the 1950s.
+
+    User 1: That sounds really interesting. I might have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: What do you like to do at the movies?
+
+    User 2: I like to watch action movies, comedies, and horror movies.
+
+    User 1: Me too! I love action movies.
+
+    User 2: What''s your favorite action movie?
+
+    User 1: My favorite action movie is "Die Hard". It''s so iconic.
+
+    User 2: I love "Die Hard"! It''s one of my favorites too.
+
+    User 1: It''s so good.
+
+    User 2: It is.
+
+    User 1: I''m glad we have the same taste in movies.
+
+    User 2: Me too! It''s always fun to find someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

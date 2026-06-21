@@ -1,0 +1,66 @@
+id: 00000912
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 912
+data:
+  user 1 personas: 'I am a vet tech.
+
+    My favorite author is stephen king.
+
+    I love to read.
+
+    I am a christian.'
+  user 2 personas: 'I like to go on long hikes.
+
+    I like to play volleyball.
+
+    I like to come up with new hairstyles.
+
+    I like to do my nails.'
+  Best Generated Conversation: 'User 1: Hi! I''m (User 1)
+
+    User 2: Hello! I''m (User 2)
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go on long hikes, play volleyball, and come up with new hairstyles.
+
+    User 1: That''s cool! I like to read, go to the beach, and play with my dog.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read books by Stephen King, Dean Koontz, and John Grisham.
+
+    User 2: Oh, I''ve read some of Stephen King''s books. I liked The Shining and Pet Sematary.
+
+    User 1: Those are both great books! I also liked It and The Stand.
+
+    User 2: I haven''t read those yet, but I''ve heard good things about them.
+
+    User 1: They''re definitely worth a read! So, what do you do for work?
+
+    User 2: I''m a hair stylist.
+
+    User 1: Oh, that''s cool! I like getting my hair done.
+
+    User 2: Thanks! I''m glad to hear that. Do you have any pets?
+
+    User 1: Yes, I have a dog named Buddy. He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly.
+
+    User 1: They are! Buddy is the best dog in the world.
+
+    User 2: I''m sure he is. So, what are you doing today?
+
+    User 1: I''m just hanging out at home. I''m not really sure what I want to do.
+
+    User 2: Do you want to go for a hike? I know a good trail in the mountains.
+
+    User 1: That sounds like a great idea! I love hiking.
+
+    User 2: Great! Let''s go!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

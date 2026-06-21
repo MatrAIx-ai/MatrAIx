@@ -1,0 +1,86 @@
+id: '00000601'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 601
+data:
+  user 1 personas: 'I am an artist.
+
+    I have four children.
+
+    I enjoy walking for exercise.
+
+    I love watching game of thrones.'
+  user 2 personas: 'My mother is a retired teacher.
+
+    My favorite flower is a rose.
+
+    I am from texas.
+
+    I love to ride horses.
+
+    I love to bake.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a horse trainer.
+
+    User 1: That''s cool! I love horses.
+
+    User 2: Me too! They''re my favorite animals.
+
+    User 1: What''s your favorite breed?
+
+    User 2: I love all breeds, but I''m especially fond of Arabians.
+
+    User 1: Arabians are beautiful horses.
+
+    User 2: They are! They''re also very intelligent and agile.
+
+    User 1: Do you ride horses?
+
+    User 2: Yes, I do! I love to go riding on the weekends.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I love being outdoors and spending time with my horses.
+
+    User 1: What do you like to do when you''re not riding horses?
+
+    User 2: I love to bake. I''m not very good at it, but I enjoy it.
+
+    User 1: I love to bake too! I''m not very good at it either, but I think it''s fun.
+
+    User 2: What''s your favorite thing to bake?
+
+    User 1: I love to make cookies.
+
+    User 2: Me too! I love chocolate chip cookies.
+
+    User 1: They''re the best!
+
+    User 2: I agree!
+
+    User 1: What''s your favorite thing about being a horse trainer?
+
+    User 2: I love working with horses. They''re such amazing animals.
+
+    User 1: I agree! They''re the best.
+
+    User 2: I also love the feeling of freedom when I''m riding a horse.
+
+    User 1: That sounds amazing.
+
+    User 2: It is! I love being outdoors and exploring new places.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I''m very lucky to be able to do what I love.
+
+    User 1: I''m glad to hear that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

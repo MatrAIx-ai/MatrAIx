@@ -1,0 +1,18 @@
+id: '00003440'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3440
+persona_description: A healthcare professional who is responsible for monitoring and treating patients with arrhythmias, including those who require the use of a wireless defibrillator (WCD). This persona
+  is trained to recognize and respond to potential arrhythmias, and to ensure that the WCD is used safely and effectively. They are also trained to communicate with patients and healthcare providers, and
+  to provide information about the use of the WCD and related treatments.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

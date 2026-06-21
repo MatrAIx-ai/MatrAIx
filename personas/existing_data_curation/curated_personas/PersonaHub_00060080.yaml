@@ -1,0 +1,20 @@
+id: 00060080
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60080
+persona_description: A researcher or scientist who is interested in the study of radio astronomy, particularly in the field of radio telescopes and their applications. They are familiar with the use of
+  GREAT and its atmospheric transmission program, ATRAN, for estimating the integration time needed to reach a desired signal-to-noise ratio for a given brightness temperature. They may be involved in observing
+  radio sources and have experience with converting main beam brightness temperature to radiation temperature and estimating the required integration time for a line with a given peak brightness temperature,
+  desired signal to noise ratio, and frequency or velocity resolution. They may also be interested in the atmospheric effects on the signal, such as the position of both sidebands and the need for a velocity
+  correction.
+expertise:
+  general_domain_top1pct: Physics/Astronomy
+  specific_domain_top1pct: Radio Astronomy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

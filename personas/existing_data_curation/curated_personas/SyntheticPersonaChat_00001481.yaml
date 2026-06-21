@@ -1,0 +1,72 @@
+id: 00001481
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1481
+data:
+  user 1 personas: 'I am 19 years old.
+
+    I recently made the college baseball team.
+
+    I am a huge fan of baseball.
+
+    I am going to be the starting shortstop.
+
+    My favorite player is mike trout.'
+  user 2 personas: 'I have four children.
+
+    I enjoy walking for exercise.
+
+    I recently got a cat.
+
+    I am an artist.
+
+    I love watching game of thrones.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1].
+
+    User 2: Hello, my name is [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy walking for exercise, and I recently got a cat.
+
+    User 1: That''s cool! I recently made the college baseball team and I''m going to be the starting shortstop.
+
+    User 2: Wow, that''s awesome! I love baseball. My favorite player is Mike Trout.
+
+    User 1: Me too! He''s an amazing player. Do you watch Game of Thrones?
+
+    User 2: Yes, I love Game of Thrones! It''s one of my favorite shows.
+
+    User 1: Me too! I''m so excited for the new season.
+
+    User 2: Me too! I''m wondering what''s going to happen with Jon Snow.
+
+    User 1: I don''t know, but I''m sure it''s going to be good.
+
+    User 2: I hope so!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I enjoy painting and drawing. I''m an artist.
+
+    User 1: That''s cool! I wish I could draw.
+
+    User 2: It''s not too hard to learn.
+
+    User 1: Maybe I''ll take a class sometime.
+
+    User 2: That would be great!
+
+    User 1: So, what do you like about walking?
+
+    User 2: I like the exercise and the fresh air. It''s a good way to clear my head.
+
+    User 1: I can see why you like it. I like to walk too.
+
+    User 2: It''s a great way to relax.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

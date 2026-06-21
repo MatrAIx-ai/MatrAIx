@@ -1,0 +1,68 @@
+id: 00001931
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1931
+data:
+  user 1 personas: 'I like sleeping in.
+
+    I love fall and winter.
+
+    I have brown hair.
+
+    I sometimes wonder why i am not married.
+
+    I like eating healthy foods.'
+  user 2 personas: 'I work at an accounting firm.
+
+    I ride horses in my spare time.
+
+    I am adopted.
+
+    I do not believe in love.
+
+    I am an only child.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to ride horses.
+
+    User 1: That''s cool! I''ve never ridden a horse before.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: I''ll have to keep that in mind.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to sleep in, read, and eat healthy foods.
+
+    User 2: I like to sleep in too! I also like to go for walks in the park.
+
+    User 1: I love going for walks in the park! It''s so peaceful and relaxing.
+
+    User 2: I agree. It''s a great way to clear your head.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t. I''m an only child and my parents are divorced, so I didn''t grow up with any pets.
+
+    User 1: Oh, that''s too bad. I have a cat and a dog. They''re my best friends.
+
+    User 2: I''m sure they are! Pets can be such great companions.
+
+    User 1: They are! I don''t know what I would do without them.
+
+    User 2: I''m glad you have them.
+
+    User 1: Thanks. I am too.
+
+    User 2: Well, it was nice talking to you, [user 1''s name].
+
+    User 1: It was nice talking to you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

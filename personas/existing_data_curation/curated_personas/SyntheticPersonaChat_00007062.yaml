@@ -1,0 +1,66 @@
+id: '00007062'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7062
+data:
+  user 1 personas: 'My favorite writer is nicholas sparks.
+
+    I own a cleaning company.
+
+    I enjoy cooking.
+
+    I am married.
+
+    My mother was a teacher.'
+  user 2 personas: 'I am also round.
+
+    I am short.
+
+    I like reading.
+
+    I have big face cheeks.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What are your interests?
+
+    User 2: I enjoy reading, cooking, and spending time with friends and family.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read a variety of things, but I''m especially interested in historical fiction and fantasy.
+
+    User 1: I love historical fiction too! I''m currently reading a book about the American Revolution.
+
+    User 2: Oh, that sounds interesting! I''ve always wanted to learn more about the American Revolution.
+
+    User 1: It''s a really good book. It''s really interesting to learn about the events that led up to the American Revolution.
+
+    User 2: I''m glad to hear it! I''ll have to check it out.
+
+    User 1: You should! It''s a great read. What do you like to cook?
+
+    User 2: I like to cook all sorts of things, but I''m especially good at making soups and stews.
+
+    User 1: I love soups and stews! I always have them on a cold day.
+
+    User 2: Me too! They''re so comforting and delicious.
+
+    User 1: What''s your favorite soup or stew?
+
+    User 2: I love my mom''s tomato soup. It''s the best.
+
+    User 1: Your mom must be a great cook! I''ve never had homemade tomato soup, but I''ve heard it''s delicious.
+
+    User 2: It is! You should try it sometime.
+
+    User 1: I will! I''m sure I''ll love it.
+
+    User 2: I''m glad!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

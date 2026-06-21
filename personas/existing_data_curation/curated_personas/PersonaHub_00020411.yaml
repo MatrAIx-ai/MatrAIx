@@ -1,0 +1,20 @@
+id: '00020411'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20411
+persona_description: A researcher who is conducting a study on the effects of human activities on bird species composition and abundance in Baltimore, Maryland. The researcher is interested in understanding
+  how vegetation variables and land-use/land-cover variables explain differences among bird census points and how these variables relate to bird species occurrence and abundance. The researcher is using
+  a modified bird count protocol and is collecting data from 50 randomly selected bird census points in Baltimore. The researcher is also using variables such as vegetation, home type, presence of trash
+  and garbage, home-security features, and property maintenance to describe neighborhood characteristics and neighborhood change. The researcher is using principal component analysis to identify combinations
+  of vegetation variables that explain at least 60% of the differences among the bird census points.
+expertise:
+  general_domain_top1pct: ecology
+  specific_domain_top1pct: urban ecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

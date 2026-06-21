@@ -1,0 +1,53 @@
+id: 00004483
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4483
+data:
+  user 1 personas: 'I was a swimmer in college.
+
+    I have a beautiful rose garden.
+
+    My parents met at woodstock.
+
+    I have a cat named pickles.
+
+    I love starbucks coffee.'
+  user 2 personas: 'I enjoy eating pumpkins.
+
+    I have a small beagle dog who i call droopy.
+
+    I use third party programs to read portable documents instead of adobe.
+
+    I enjoy watching videos on youtube.
+
+    I love eating shrimp , and i like to dip them into barbecue sauce.'
+  Best Generated Conversation: 'User 1: Hi, I''m Andrew. I''m a swimmer, I have a beautiful rose garden, my parents met at Woodstock, I have a cat named Pickles, and I love Starbucks coffee.
+
+    User 2: Hi Andrew, I''m Sarah. I enjoy eating pumpkins, I have a small beagle dog named Droopy, I use third party programs to read portable documents instead of Adobe, I enjoy watching videos on YouTube,
+    and I love eating shrimp dipped in barbecue sauce.
+
+    User 1: That''s great! What do you like about swimming?
+
+    User 2: I like the way it makes me feel. I feel like I''m in control of my body and I''m able to push myself to my limits.
+
+    User 1: I know what you mean. I love the feeling of being in the water and the way it helps me relax.
+
+    User 2: Me too! I also love the feeling of being a part of a team and working together to achieve a common goal.
+
+    User 1: That''s definitely a great part of swimming. I''m glad you enjoy it!
+
+    User 2: Thanks! What''s your favorite thing about roses?
+
+    User 1: I love the way they smell. They''re so fragrant and beautiful.
+
+    User 2: I know what you mean. I love the way they smell too. They''re also so pretty to look at.
+
+    User 1: Me too! I love having them in my garden. They''re a beautiful addition to any home.
+
+    User 2: I know what you mean. I have a lot of roses in my garden too. They''re one of my favorite flowers.
+
+    User 1: That''s great! I''m glad you enjoy them as much as I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

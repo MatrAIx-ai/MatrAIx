@@ -1,0 +1,62 @@
+id: '00001340'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1340
+data:
+  user 1 personas: 'I love chocolate.
+
+    I am from georgia.
+
+    I cannot sing very well.
+
+    I can play the violin.
+
+    I want to have two kids.'
+  user 2 personas: 'I plan to retire in 6 months.
+
+    I have studied ballet all my life.
+
+    I have the support of my whole family.
+
+    I am a white dancer.
+
+    My mother is a ballerina.'
+  Best Generated Conversation: 'User 1: Hello! My name is [user 1 name].
+
+    User 2: Hi [user 1 name], my name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. Where are you from?
+
+    User 2: I''m from Georgia, too! What part are you from?
+
+    User 1: I''m from Atlanta.
+
+    User 2: Oh, cool! I''m from Savannah.
+
+    User 1: That''s a beautiful city. I''ve been there a few times.
+
+    User 2: It is. I love living there.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to dance. I''ve been studying ballet all my life.
+
+    User 1: That''s so cool! I can''t dance very well at all.
+
+    User 2: Don''t worry, you''re not alone. Ballet is a hard skill to learn.
+
+    User 1: I can imagine. Do you plan to continue dancing after you retire?
+
+    User 2: I think so. I''m not sure what else I would do with all my free time.
+
+    User 1: I''m sure you''ll figure something out.
+
+    User 2: I''m sure I will.
+
+    User 1: It was nice talking to you, [user 2 name].
+
+    User 2: It was nice talking to you too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

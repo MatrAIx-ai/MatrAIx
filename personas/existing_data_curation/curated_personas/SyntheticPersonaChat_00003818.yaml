@@ -1,0 +1,66 @@
+id: 00003818
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3818
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I ve a dog.
+
+    I m looking for a job.
+
+    I m not very tall.
+
+    I ve two siblings.'
+  user 2 personas: 'My father was a cook.
+
+    I am a fisherman.
+
+    He worked hard.
+
+    He later became a bartender.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a fisherman.
+
+    User 1: That''s cool! What''s your favorite thing about it?
+
+    User 2: I like being on the water and catching fish.
+
+    User 1: Me too! I used to go fishing with my dad when I was a kid.
+
+    User 2: What kind of fish did you catch?
+
+    User 1: We used to catch a lot of bass and trout.
+
+    User 2: Those are some good fish to catch!
+
+    User 1: Yeah, they''re really tasty.
+
+    User 2: What do you do with the fish you catch?
+
+    User 1: We usually eat them, or we give them to friends and family.
+
+    User 2: That''s cool. I like to give some of my fish to friends and family too.
+
+    User 1: What''s your favorite kind of fish to eat?
+
+    User 2: I like to eat salmon.
+
+    User 1: Salmon is really good! I like it smoked.
+
+    User 2: Me too! It''s one of my favorite smoked fish.
+
+    User 1: So, what''s your dad like?
+
+    User 2: He''s a great guy. He''s always been there for me and my siblings.
+
+    User 1: That''s good to hear. I''m glad you have a good relationship with him.
+
+    User 2: Yeah, I''m lucky to have him.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

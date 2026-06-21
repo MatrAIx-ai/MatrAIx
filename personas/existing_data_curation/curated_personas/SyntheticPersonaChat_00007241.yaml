@@ -1,0 +1,48 @@
+id: '00007241'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7241
+data:
+  user 1 personas: 'My favorite band is insane clown posse.
+
+    I love to larp.
+
+    I am chubby.
+
+    I work as an interior designer.'
+  user 2 personas: 'I ve flown out of the country.
+
+    I love hockey.
+
+    I studied business as my major.
+
+    My bestfriend is from out of town.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name]. What is your name?
+
+    User 2: Hello [user 1 name], my name is [user 2 name]. It is nice to meet you.
+
+    User 1: It is nice to meet you too. What are your hobbies?
+
+    User 2: I love to fly out of the country, play hockey, and study business.
+
+    User 1: That is very interesting. I have never been out of the country. I work as an interior designer and I love to larp.
+
+    User 2: LARP? What is that?
+
+    User 1: LARP stands for Live Action Role Playing. It is a type of role playing game where participants act out their characters in a real-world setting.
+
+    User 2: That sounds like a lot of fun. I have never heard of it before.
+
+    User 1: It is a lot of fun. I have been playing LARP for about 10 years. It is a great way to meet new people and have fun.
+
+    User 2: It sounds like I should give it a try.
+
+    User 1: I would definitely recommend it. There are many different LARP groups out there, so you are sure to find one that fits your interests.
+
+    User 2: I will definitely look into it. Thank you for telling me about it.
+
+    User 1: You are welcome. I am glad I could introduce you to LARP.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

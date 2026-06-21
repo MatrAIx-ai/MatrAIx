@@ -1,0 +1,52 @@
+id: '00001476'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1476
+data:
+  user 1 personas: 'I am 10 years old.
+
+    I also love orange juice.
+
+    My name is arnold.
+
+    I love ham and cheese sandwiches.'
+  user 2 personas: 'My father is a preacher.
+
+    I am a 1st grade teacher.
+
+    I go to church on sunday.
+
+    I have a 3 year old.'
+  Best Generated Conversation: 'User 1: Hi! My name is Arnold. I''m 10 years old.
+
+    User 2: Hi Arnold! My name is Kate. I''m a first grade teacher.
+
+    User 1: Oh cool! What''s your favorite thing about being a first grade teacher?
+
+    User 2: I love working with kids and seeing them learn new things.
+
+    User 1: Me too! I love learning new things. What''s your favorite thing to teach?
+
+    User 2: I love teaching math. It''s so fun to see how kids'' minds work when they''re learning new concepts.
+
+    User 1: I agree! Math is really fun. I also love science.
+
+    User 2: I love science too! What''s your favorite thing about science?
+
+    User 1: I love learning about new things and how the world works.
+
+    User 2: Me too! I think it''s amazing how much we still have to learn about the universe.
+
+    User 1: I know right! It''s so exciting to think about all the things we''re going to discover in the future.
+
+    User 2: I agree! I can''t wait to see what happens.
+
+    User 1: Me too!
+
+    User 2: Well, it was nice talking to you, Arnold. I have to go now. Have a nice day!
+
+    User 1: You too, Kate!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

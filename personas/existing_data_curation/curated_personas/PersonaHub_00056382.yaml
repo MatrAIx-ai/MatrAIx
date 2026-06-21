@@ -1,0 +1,19 @@
+id: 00056382
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56382
+persona_description: A utility company employee who is responsible for monitoring and managing the frequency of the power grid in the United States and Canada. They need to be able to quickly detect and
+  respond to frequency disturbances caused by unexpected generation losses, such as a sudden loss of a generating unit. They will also need to be able to provide real-time information about the frequency
+  event, including the location, size, and time of the event, as well as historical frequency event data. They may also need to work with clients to understand the implications of the frequency disturbances
+  and provide additional information in the event of a blackout.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: power grid operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

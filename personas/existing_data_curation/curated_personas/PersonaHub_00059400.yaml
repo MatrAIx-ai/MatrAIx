@@ -1,0 +1,18 @@
+id: 00059400
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 59400
+persona_description: A veterinarian who specializes in diagnosing and treating cancer in cats. They are highly skilled in conducting blood tests, imaging techniques, and performing fine needle aspirates
+  or biopsies to identify and analyze cancerous growths. They have a deep understanding of the complexities of cancer in cats and are equipped with the necessary knowledge and expertise to provide effective
+  treatment plans for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

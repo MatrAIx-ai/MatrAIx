@@ -1,0 +1,96 @@
+id: '00001156'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1156
+data:
+  user 1 personas: 'My name is dave.
+
+    I live in las vegas , nevada.
+
+    I go fishing on the weekends to relax.
+
+    I love hiking and staying fit.
+
+    I work as a personal trainer , 5 days a week.'
+  user 2 personas: 'I can t do math.
+
+    I also eat too much french fries.
+
+    I just got a new sweater.
+
+    I smell like french fries.
+
+    It was too small.'
+  Best Generated Conversation: 'User 1: Hi, I''m Dave. I''m a personal trainer in Las Vegas. What do you do for a living?
+
+    User 2: I''m not employed right now. I''m looking for a job, but I''m not good at math, so it''s been tough.
+
+    User 1: I''m sorry to hear that. I''m sure you''ll find something soon. In the meantime, why don''t you come with me fishing? It''s a great way to relax and enjoy the outdoors.
+
+    User 2: That sounds like fun! I love fishing. I used to go with my dad all the time when I was a kid.
+
+    User 1: Great! I know a great spot just outside of town. We can go this weekend if you like.
+
+    User 2: That sounds great! I''ll bring my gear.
+
+    User 1: Great! I''ll see you then.
+
+    *On the weekend*
+
+    User 1: Hi, are you ready to go?
+
+    User 2: Yeah, I''m all set.
+
+    User 1: Let''s go!
+
+    *At the fishing spot*
+
+    User 1: Here we are! This is my favorite spot.
+
+    User 2: It''s beautiful. I can''t wait to get started.
+
+    User 1: Go ahead and get your gear set up. I''ll start digging for worms.
+
+    *After fishing for a while*
+
+    User 1: How are you doing?
+
+    User 2: I''m doing great! I''ve caught a few fish already.
+
+    User 1: That''s awesome! I''m still waiting for my first bite.
+
+    User 2: Here, let me help you.
+
+    *User 2 helps User 1 set up his bait*
+
+    User 1: Thanks!
+
+    *User 1 catches a fish*
+
+    User 1: I got one!
+
+    User 2: Congratulations!
+
+    User 1: Thanks!
+
+    *User 2 catches a fish*
+
+    User 2: I got one too!
+
+    User 1: Congratulations!
+
+    User 2: Thanks!
+
+    *User 1 and User 2 continue to fish and talk*
+
+    User 1: This is so much fun! I''m glad I came.
+
+    User 2: Me too! I''m glad I met you.
+
+    User 1: Me too. We should do this again sometime.
+
+    User 2: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

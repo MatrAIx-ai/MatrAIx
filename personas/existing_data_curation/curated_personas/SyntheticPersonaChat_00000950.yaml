@@ -1,0 +1,76 @@
+id: 00000950
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 950
+data:
+  user 1 personas: 'I collect dolls.
+
+    I like jazz.
+
+    I like victorian things.
+
+    I like antiques.'
+  user 2 personas: 'I work at a hotel overnight.
+
+    I eat more junk food than i really should.
+
+    I enjoy video games.
+
+    I write in my spare time.
+
+    Pop is my favorite music.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and write in my spare time.
+
+    User 1: Oh, that''s cool. I like to collect dolls, listen to jazz, and read about Victorian things.
+
+    User 2: Dolls? That''s interesting. I''ve never really been into collecting anything.
+
+    User 1: I love them! They''re so cute and I love the history behind them.
+
+    User 2: I guess I can see the appeal. I just don''t have the space for anything like that.
+
+    User 1: I understand. I have a whole room in my house dedicated to my dolls.
+
+    User 2: Wow, that''s a lot of dolls!
+
+    User 1: Yeah, it is. But I love them all!
+
+    User 2: I''m sure they''re beautiful.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, what kind of video games do you like to play?
+
+    User 1: I like all kinds of video games, but I''m especially into RPGs and adventure games.
+
+    User 2: Oh, I like those too! I''ve been playing a lot of Skyrim lately.
+
+    User 1: That''s a great game! I''ve put so many hours into it.
+
+    User 2: Me too! It''s so addictive.
+
+    User 1: So, what are you working on right now?
+
+    User 2: I''m working on a new story for my novel.
+
+    User 1: Oh, that''s cool! What''s it about?
+
+    User 2: It''s a fantasy story about a young girl who goes on a quest to save the world.
+
+    User 1: That sounds really cool! I love fantasy stories.
+
+    User 2: Thanks! I''m hoping to finish it soon.
+
+    User 1: I''m sure you will! You seem really talented.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

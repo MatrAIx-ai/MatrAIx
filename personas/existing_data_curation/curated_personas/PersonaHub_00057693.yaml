@@ -1,0 +1,18 @@
+id: 00057693
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57693
+persona_description: A network administrator who is responsible for configuring and managing redundant network devices, specifically in the context of load-sharing and switchover scenarios. This individual
+  is skilled in configuring redundancy groups (RGs) and is proficient in using control links, data synchronization links, and hello messages to determine the pairs of interfaces affected by switchover events.
+  The persona is also knowledgeable in configuring priority settings and thresholds to determine when switchover occurs, and is adept at handling syslog entries to monitor and troubleshoot network failures.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

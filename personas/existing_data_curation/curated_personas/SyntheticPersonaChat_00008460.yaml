@@ -1,0 +1,68 @@
+id: 00008460
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8460
+data:
+  user 1 personas: 'I would like to retire to hawaii in the next 10 years.
+
+    I am almost 7 feet tall.
+
+    I am not a basketball player though.
+
+    My favorite band is the rolling stones.
+
+    I currently work for ibm in chicago.'
+  user 2 personas: 'I am single.
+
+    I am buying a house.
+
+    I paddle board on my days off.
+
+    I play the piano.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I work for IBM in Chicago.
+
+    User 2: Really? I''m buying a house in Chicago!
+
+    User 1: Oh, that''s awesome! Where in Chicago are you buying a house?
+
+    User 2: I''m looking in the Lincoln Park area.
+
+    User 1: Oh, that''s a nice area. I know someone who lives there.
+
+    User 2: Oh, that''s cool! Do you know if there are any good paddle boarding spots in Lincoln Park?
+
+    User 1: I''m not sure, but I can ask my friend.
+
+    User 2: Oh, that would be great! Thanks!
+
+    User 1: No problem!
+
+    User 2: I''m also looking for a piano teacher. Do you know anyone who teaches piano?
+
+    User 1: I do! I know a really great teacher who lives in Lincoln Park.
+
+    User 2: Oh, that''s awesome! Can you give me his contact information?
+
+    User 1: Sure!
+
+    User 2: Thanks so much!
+
+    User 1: No problem!
+
+    User 2: I''m also single, so if you know anyone who might be interested in me, let me know!
+
+    User 1: Oh, I''m not sure if I know anyone who''s single. But I can ask around.
+
+    User 2: Oh, that would be great! Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

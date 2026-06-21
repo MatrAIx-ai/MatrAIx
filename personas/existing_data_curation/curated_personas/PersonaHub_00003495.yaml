@@ -1,0 +1,18 @@
+id: 00003495
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3495
+persona_description: A healthcare professional who works in a hospital setting and is responsible for managing flu patients. They have experience with flu surveillance, patient management, and outbreak
+  response. They are familiar with the latest flu trends and outbreaks, and have knowledge of the medical treatment and management of flu patients. They are also aware of the importance of flu vaccination
+  and the effectiveness of the current flu vaccine.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease management
+  general_domain_top01pct: None
+  specific_domain_top01pct: flu epidemiology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

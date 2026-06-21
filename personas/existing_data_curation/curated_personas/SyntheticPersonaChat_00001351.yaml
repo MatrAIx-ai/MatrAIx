@@ -1,0 +1,70 @@
+id: '00001351'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1351
+data:
+  user 1 personas: 'I love fast food.
+
+    I love to clean.
+
+    I watch a lot of movies.
+
+    I am a stay at home mom.'
+  user 2 personas: 'My family came from greece in the 1950 s.
+
+    I am a very tall woman.
+
+    I love to draw.
+
+    I have very curly hair.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1 name)!
+
+    User 2: Hi, my name is (user 2 name)!
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to draw, and I''m also a big fan of Greek culture.
+
+    User 1: Oh, that''s great! I love to watch movies, and I''m also a stay at home mom.
+
+    User 2: That''s awesome! What''s your favorite movie?
+
+    User 1: My favorite movie is "The Sound of Music". I love the music and the story.
+
+    User 2: I love that movie too! I''ve seen it so many times.
+
+    User 1: Me too! It''s such a classic.
+
+    User 2: What do you like to draw?
+
+    User 1: I love to draw people, animals, and landscapes. I''m always looking for new inspiration.
+
+    User 2: That''s awesome! I''m not very good at drawing, but I love to look at art.
+
+    User 1: I''m sure you''re better than you think!
+
+    User 2: Thanks!
+
+    User 1: So, what''s your favorite thing about Greek culture?
+
+    User 2: I love the food, the music, and the history. I''m so glad my family came to America from Greece.
+
+    User 1: That''s great! I''ve always wanted to visit Greece.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I will!
+
+    User 2: So, what do you like to do as a stay at home mom?
+
+    User 1: I love spending time with my kids, cooking, and cleaning. I also love to go on walks and explore the city.
+
+    User 2: That sounds like a great life!
+
+    User 1: It is! I''m very happy.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

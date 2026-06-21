@@ -1,0 +1,70 @@
+id: 00000920
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 920
+data:
+  user 1 personas: 'I am an athlete.
+
+    I get paid over 5 million a year to dribble a ball.
+
+    I was drafted last years by the minnesota wolves.
+
+    I play basketball.'
+  user 2 personas: 'I have never been out of the country.
+
+    I have never been to college.
+
+    I love to go hiking.
+
+    My favorite phone is as iphone.'
+  Best Generated Conversation: 'User 1: I''m a professional basketball player.
+
+    User 2: That''s awesome! What''s your favorite thing about being a professional athlete?
+
+    User 1: I love the competition and the thrill of the game.
+
+    User 2: That''s understandable. I can see how that would be exciting.
+
+    User 1: I also love the travel. I get to see so many different places and meet new people.
+
+    User 2: That''s a really cool perk. I''ve never been out of the country, so I''d love to get to travel more.
+
+    User 1: You should definitely do it! There''s so much to see and do in the world.
+
+    User 2: I know, I know. I''m planning on it.
+
+    User 1: Good! I''m sure you''ll have a great time.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to go hiking. I find it really relaxing to be out in nature and take in the scenery.
+
+    User 1: That''s awesome! I love hiking too. I''m not as good at it as I used to be, but I still enjoy it.
+
+    User 2: Me too. I''m not very good at it, but I still love it.
+
+    User 1: I think it''s a great way to get exercise and enjoy the outdoors.
+
+    User 2: I agree. It''s also a great way to clear your head and relax.
+
+    User 1: Yeah, it''s definitely one of my favorite ways to de-stress.
+
+    User 2: Mine too.
+
+    User 1: So, what''s your favorite hiking trail?
+
+    User 2: I have a few, but my favorite is probably the one at Mount Tammany in New Jersey. It''s a beautiful trail with amazing views of the surrounding area.
+
+    User 1: That sounds amazing! I''ve never been to New Jersey, but I''ll have to check out that trail sometime.
+
+    User 2: I definitely recommend it. It''s a great hike for all skill levels.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

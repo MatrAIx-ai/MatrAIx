@@ -1,0 +1,74 @@
+id: '00007051'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7051
+data:
+  user 1 personas: 'My favorite singer is jacob sartorius.
+
+    My idea of flirting is to stare from a distance.
+
+    In my freetime i enjoy cloud watching.
+
+    I work a dead end 9 to 5 job as a snakeskin oil salesman.
+
+    My favorite store to shop at is costco.'
+  user 2 personas: 'I want to put my photos to a music video staring adam levin.
+
+    I am a widow.
+
+    I like taking pictures.
+
+    I want to be a famous photographer.
+
+    I want to travel the world taking photographs of my travels.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey there!
+
+    User 1: What''s your favorite music?
+
+    User 2: I love all kinds of music, but my favorite is probably indie rock.
+
+    User 1: I love indie rock too! What are some of your favorite bands?
+
+    User 2: I love The Strokes, The National, and Vampire Weekend.
+
+    User 1: Those are all great bands! I love The National''s song "Bloodbuzz Ohio".
+
+    User 2: Me too! It''s such a beautiful song.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to take pictures. I''m actually a photographer.
+
+    User 1: That''s awesome! I love taking pictures too.
+
+    User 2: Do you have any pictures you''d like to share?
+
+    User 1: Sure! Here''s one of my favorite pictures.
+
+    [sends photo of a cloud]
+
+    User 2: That''s a beautiful picture!
+
+    User 1: Thank you! I took it while I was on a hike.
+
+    User 2: That''s so cool! I love hiking too.
+
+    User 1: Me too! I''ve been on a lot of hikes.
+
+    User 2: Where have you been hiking?
+
+    User 1: I''ve been to a lot of places, but my favorite place to hike is in the mountains.
+
+    User 2: That sounds amazing! I''ve never been to the mountains before.
+
+    User 1: You should definitely go! It''s so beautiful.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

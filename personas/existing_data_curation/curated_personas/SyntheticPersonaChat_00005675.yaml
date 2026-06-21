@@ -1,0 +1,68 @@
+id: '00005675'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5675
+data:
+  user 1 personas: 'My favorite phone is as iphone.
+
+    I have never been to college.
+
+    I have never been out of the country.
+
+    I am a bank teller.
+
+    I love to go hiking.'
+  user 2 personas: 'I work in a factory.
+
+    I volunteer in my spare time.
+
+    I hope to change the world.
+
+    I love to tell jokes.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work in a factory.
+
+    User 1: Oh, that sounds interesting. What kind of factory?
+
+    User 2: It''s a factory that makes plastic products.
+
+    User 1: Oh, cool! I''ve always been interested in how things are made.
+
+    User 2: Yeah, it''s pretty cool. We make a lot of different things, like toys, kitchenware, and even some medical equipment.
+
+    User 1: That''s really impressive! I''m sure you''re proud of the work you do.
+
+    User 2: I am! It''s a lot of hard work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. So, what do you do in your free time?
+
+    User 2: I volunteer at a local soup kitchen.
+
+    User 1: That''s really great! I love that you''re giving back to your community.
+
+    User 2: Thanks! It''s something I really enjoy doing.
+
+    User 1: I can imagine! So, what do you hope to accomplish in life?
+
+    User 2: I hope to change the world for the better.
+
+    User 1: That''s a great goal! I''m sure you''ll do great things.
+
+    User 2: Thank you! I hope so too.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I love to tell jokes!
+
+    User 1: Oh, that''s a great hobby! I love to laugh.
+
+    User 2: I''m glad! I love to make people laugh.
+
+    User 1: You do a great job of it!
+
+    User 2: Thanks! I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00006341'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6341
+persona_description: A scientist who is interested in the history of astronomy and the contributions of Johannes Kepler, particularly in the fields of planetary motion and his three laws of planetary motion.
+  This persona is likely to have a deep understanding of Kepler's work and its impact on the development of science and astronomy. They may also be interested in the broader implications of Kepler's laws
+  and their application to modern astronomical research.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: Kepler's laws of planetary motion
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

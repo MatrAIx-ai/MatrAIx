@@ -1,0 +1,68 @@
+id: 00003826
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3826
+data:
+  user 1 personas: 'My favorite color is red.
+
+    My favorite food is pizza.
+
+    I am a student.
+
+    I have a pet dog.'
+  user 2 personas: 'I do not have much energy.
+
+    I watch a lot of movies.
+
+    I am a stay at home mom.
+
+    I love to clean.
+
+    I love fast food.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, clean, and hang out with my kids.
+
+    User 1: That sounds like fun! What are some of your favorite movies?
+
+    User 2: I like romantic comedies and action movies.
+
+    User 1: I love romantic comedies too! What are some of your favorites?
+
+    User 2: I love When Harry Met Sally, The Princess Bride, and Sleepless in Seattle.
+
+    User 1: Those are all great movies! I love When Harry Met Sally too.
+
+    User 2: Me too! It''s so funny and romantic.
+
+    User 1: What about action movies? What are some of your favorites?
+
+    User 2: I love the Fast and Furious movies, the Bourne Identity movies, and the Mission Impossible movies.
+
+    User 1: I love the Fast and Furious movies too! I think they''re so much fun.
+
+    User 2: Me too! I love the car chases and the action sequences.
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m just cleaning the house and getting ready for my kids to come home from school.
+
+    User 1: That sounds like a lot of work!
+
+    User 2: It is, but it''s worth it. I love my kids.
+
+    User 1: I''m sure they love you too.
+
+    User 2: I hope so!
+
+    User 1: Well, it was nice talking to you. I hope you have a good day.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

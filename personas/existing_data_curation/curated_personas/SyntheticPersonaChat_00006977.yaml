@@ -1,0 +1,98 @@
+id: 00006977
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6977
+data:
+  user 1 personas: 'I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    I am a cat owner.
+
+    My brother is an archaeologist.
+
+    I speak fluent italian.'
+  user 2 personas: 'I cannot stand beets.
+
+    I am an ovo vegetarian.
+
+    I cannot cook.
+
+    Every day i drive an hour to work in this horrible traffic.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [name]. What''s yours?
+
+    User 1: Nice to meet you, [name]. I''m [name].
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: That''s cool. I''m not a very good cook, but I love to eat.
+
+    User 1: Me too! I love to cook.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love to make pasta.
+
+    User 2: Oh, that''s my favorite too!
+
+    User 1: I''m also a cat owner.
+
+    User 2: Me too! I have two cats.
+
+    User 1: What are their names?
+
+    User 2: Their names are Mittens and Oliver.
+
+    User 1: Those are cute names.
+
+    User 2: Thanks.
+
+    User 1: I have one blue eye and one hazel eye.
+
+    User 2: That''s cool! I''ve never seen that before.
+
+    User 1: My mom is an osteopath.
+
+    User 2: What''s that?
+
+    User 1: It''s a type of doctor that specializes in treating the musculoskeletal system.
+
+    User 2: Oh, that''s interesting.
+
+    User 1: My brother is an archaeologist.
+
+    User 2: That''s cool! What kind of things does he find?
+
+    User 1: He''s found a lot of cool things, like ancient pottery and tools.
+
+    User 2: That''s amazing!
+
+    User 1: I speak fluent Italian.
+
+    User 2: That''s impressive! I wish I could speak another language.
+
+    User 1: It''s not that hard. I started learning when I was a kid.
+
+    User 2: Maybe I''ll start learning one.
+
+    User 1: That''s a great idea!
+
+    User 2: Thanks for the chat.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

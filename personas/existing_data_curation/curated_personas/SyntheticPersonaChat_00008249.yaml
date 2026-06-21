@@ -1,0 +1,72 @@
+id: 00008249
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8249
+data:
+  user 1 personas: 'I am traveling to paris this year for my vacation.
+
+    I was born in san francisco.
+
+    I work in the pharmaceutical industry.
+
+    I have one sister.
+
+    I love dogs , especially labradors.'
+  user 2 personas: 'I met my birth mother when i was sixteen.
+
+    I have several siblings i don t know.
+
+    Christmas is my favorite holiday.
+
+    I was adopted.
+
+    I work at a local party store.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1]. Where are you from?
+
+    User 2: Hello, I''m [user 2]. I''m originally from San Francisco, but I live in Los Angeles now.
+
+    User 1: Cool! I''m from San Francisco too. What brought you to LA?
+
+    User 2: I got a job at a party store.
+
+    User 1: Oh, that''s fun! I work in the pharmaceutical industry.
+
+    User 2: Nice! What''s your favorite holiday?
+
+    User 1: Christmas, because I get to spend time with my family.
+
+    User 2: I like Christmas too! But my favorite holiday is actually New Year''s, because it''s a fresh start.
+
+    User 1: That''s a good way to look at it.
+
+    User 2: Yeah, I think so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to parties, play games, and watch movies.
+
+    User 1: I like to do those things too!
+
+    User 2: Cool! We should hang out sometime.
+
+    User 1: That would be fun! What are you doing this weekend?
+
+    User 2: I''m not sure yet, but I''m free on Saturday.
+
+    User 1: Me too! I''m going to the movies on Saturday.
+
+    User 2: Oh, that sounds fun! What movie are you seeing?
+
+    User 1: I''m not sure yet, but I''m thinking about seeing "No Time To Die."
+
+    User 2: Oh, that''s a good movie! I''ve been wanting to see it.
+
+    User 1: Cool! We should go see it together.
+
+    User 2: That would be great! I''ll see you there.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

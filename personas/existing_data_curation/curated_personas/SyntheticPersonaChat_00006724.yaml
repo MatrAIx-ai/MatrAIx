@@ -1,0 +1,71 @@
+id: '00006724'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6724
+data:
+  user 1 personas: 'I am fairly conservative in politics.
+
+    I live in a rural community.
+
+    I have two kids.
+
+    I love robotics.
+
+    I work at amazon.'
+  user 2 personas: 'Chocolate chip cookies are the tastier things in my opinion.
+
+    I drive only toyota.
+
+    Superman s my favorite super hero.
+
+    I like pepsi.
+
+    I talk a lot in irc.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi there! My name is [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: I like to do those things too! What are your favorite books, movies, and video games?
+
+    User 2: My favorite books are the Harry Potter series, the Hunger Games series, and the Percy Jackson series. My favorite movies are The Lord of the Rings trilogy, the Star Wars prequels, and the Marvel
+    Cinematic Universe movies. My favorite video games are the Legend of Zelda series, the Super Mario series, and the Final Fantasy series.
+
+    User 1: Those are some great choices! I love the Harry Potter series and the Legend of Zelda series too.
+
+    User 2: Me too! They''re both so well-written and fun.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a stay-at-home mom, but I used to work as a customer service representative at Amazon.
+
+    User 1: Oh, that sounds like a fun job! What was your favorite part about it?
+
+    User 2: I liked helping people and getting to know them.
+
+    User 1: That''s awesome! I bet you were great at your job.
+
+    User 2: Thank you! I''m glad you think so.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to spend time with my kids, read, and watch movies.
+
+    User 1: That sounds like a great way to relax.
+
+    User 2: It is! I love spending time with my kids.
+
+    User 1: I bet! They''re so cute.
+
+    User 2: They are! I love them to death.
+
+    User 1: I can tell! You seem like a great mom.
+
+    User 2: Thank you! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

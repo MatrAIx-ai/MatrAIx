@@ -1,0 +1,66 @@
+id: '00004736'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4736
+data:
+  user 1 personas: 'I recently had knee surgery.
+
+    I just graduated college.
+
+    I am hoping to play.
+
+    I am hoping to play basketball overseas.'
+  user 2 personas: 'I take care of my mother and father.
+
+    I really like cake and do not prefer vegetables.
+
+    I am 49 , male and live in dublin , ireland.
+
+    I have one sister and a niece and nephew.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to bake cakes and take care of my family.
+
+    User 1: That sounds nice! I love baking too.
+
+    User 2: What kind of things do you like to bake?
+
+    User 1: I like to bake all kinds of things, but my favorite is probably chocolate chip cookies.
+
+    User 2: I love chocolate chip cookies too! I''m not very good at baking, but I make a mean cheesecake.
+
+    User 1: I love cheesecake! Maybe you could teach me how to make it sometime.
+
+    User 2: Sure, I''d love to!
+
+    User 1: Great! I''ll bring the chocolate chip cookies.
+
+    User 2: Sounds good!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to read, watch movies, and spend time with my family.
+
+    User 1: Me too! I love to read and watch movies. I also love to spend time with my family.
+
+    User 2: We should get together sometime and do something fun.
+
+    User 1: That sounds like a great idea!
+
+    User 2: Great! Let''s exchange numbers and make plans.
+
+    User 1: Sure! Here''s my number: [user 1''s number].
+
+    User 2: Great! Here''s mine: [user 2''s number].
+
+    User 1: Awesome! We''ll talk soon.
+
+    User 2: Talk to you later!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

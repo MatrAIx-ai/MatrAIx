@@ -1,0 +1,64 @@
+id: '00002206'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2206
+data:
+  user 1 personas: 'I have a nice smile.
+
+    I love to exercise.
+
+    Many people want to be my friend.
+
+    I like makeup.'
+  user 2 personas: 'I am the oldest of 5 children.
+
+    I m a disappointment to my family.
+
+    I love my parrot , todd.
+
+    I love to climb.
+
+    I ve never been to the beach.'
+  Best Generated Conversation: 'User 1: Hi, I''m user 1.
+
+    User 2: Hi, I''m user 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to climb and love my parrot, Todd.
+
+    User 1: I love to exercise too! And I like makeup.
+
+    User 2: Oh, you''re into beauty? That''s cool.
+
+    User 1: Yeah, I love it. I''m always trying new products and techniques.
+
+    User 2: Me too! I''m always trying to find ways to make myself look more beautiful.
+
+    User 1: I think you''re already beautiful.
+
+    User 2: Thanks! You''re so sweet.
+
+    User 1: You''re welcome. What do you think of my makeup?
+
+    User 2: I think it looks great! You did a great job.
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: I do. You look really nice.
+
+    User 1: Thanks! I feel nice too.
+
+    User 2: I''m glad.
+
+    User 1: Me too.
+
+    User 2: Well, I have to go now. It was nice talking to you.
+
+    User 1: You too. Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

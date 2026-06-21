@@ -1,0 +1,68 @@
+id: '00001175'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1175
+data:
+  user 1 personas: 'I am 6 foot tall.
+
+    I love to dance.
+
+    I have asthma.
+
+    I used to play hockey.'
+  user 2 personas: 'I like to bowl.
+
+    I am a family man.
+
+    I am married with 2 children.
+
+    I am a pediatrician.
+
+    I spend as much time as i can with my family.'
+  Best Generated Conversation: 'User 1: Hello, I''m John.
+
+    User 2: Hello, I''m Mary.
+
+    User 1: It''s nice to meet you, Mary.
+
+    User 2: Nice to meet you too, John.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to bowl, spend time with my family, and I''m a pediatrician.
+
+    User 1: That sounds like a lot of fun. I used to play hockey, but I had to stop because of my asthma.
+
+    User 2: Oh, that''s too bad. I love to play hockey.
+
+    User 1: What do you like about bowling?
+
+    User 2: I like the competition and the fact that it''s a social activity. I also like the challenge of trying to get a perfect score.
+
+    User 1: I can imagine. I love the feeling of getting a strike.
+
+    User 2: Me too!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too.
+
+    User 1: What''s it like being a pediatrician?
+
+    User 2: It''s very rewarding. I love working with children and helping them stay healthy.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is. I''m very lucky to be a pediatrician.
+
+    User 1: It sounds like you have a lot going on.
+
+    User 2: I do, but it''s all good. I love my life.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thank you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00004727'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4727
+data:
+  user 1 personas: 'I play a lot of video games.
+
+    When i have free time , i sketch my favorite characters.
+
+    I like comic books and anime.
+
+    I am gay but i have not told my parents yet.'
+  user 2 personas: 'I like to fly model airplanes.
+
+    I like to kayak.
+
+    I like crab dipped in butter.
+
+    I run six miles a day.
+
+    I like imagine dragons.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What are your hobbies?
+
+    User 2: I like to fly model airplanes, kayak, and run six miles a day.
+
+    User 1: That''s cool! I like to play video games, sketch, and read comic books.
+
+    User 2: Oh, I love comic books too! What''s your favorite series?
+
+    User 1: I really like the X-Men. I also like the Batman and Superman comics.
+
+    User 2: Those are all great series! I''m a big fan of the Justice League.
+
+    User 1: Oh, nice! I''ve never read any Justice League comics, but I''ve seen the movies.
+
+    User 2: The movies are pretty good! The DC animated movies are even better.
+
+    User 1: I''ll have to check those out.
+
+    User 2: You should! They''re really good.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a web developer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to code.
+
+    User 2: It''s not too hard to learn. There are a lot of resources available online.
+
+    User 1: I''ll have to look into that.
+
+    User 2: You should! It''s a great skill to have.
+
+    User 1: Thanks for the advice!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

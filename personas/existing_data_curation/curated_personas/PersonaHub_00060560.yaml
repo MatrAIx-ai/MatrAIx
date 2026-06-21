@@ -1,0 +1,18 @@
+id: '00060560'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60560
+persona_description: A medical researcher who specializes in the study of muscle necrosis and its effects on the kidneys, particularly in the context of crush injuries. This researcher has conducted extensive
+  research on the mechanism of myoglobinuria and the subsequent renal damage, and has published several papers on the topic. The researcher has also worked on experimental models of crush injuries to better
+  understand the underlying mechanisms and to develop new treatments for the syndrome.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: renal pathology
+  general_domain_top01pct: None
+  specific_domain_top01pct: muscle necrosis and renal damage
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

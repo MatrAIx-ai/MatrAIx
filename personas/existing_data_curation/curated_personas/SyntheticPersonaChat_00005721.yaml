@@ -1,0 +1,62 @@
+id: '00005721'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5721
+data:
+  user 1 personas: 'And , my best friend is abigail.
+
+    I am ten years old.
+
+    I take martial arts after school.
+
+    Tomorrow is my first day of safety patrol.'
+  user 2 personas: 'I fly airplanes.
+
+    I enjoy building computers.
+
+    My favorite band is tool.
+
+    I dropped out of college.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name]. What''s yours?
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name].
+
+    User 2: You too, [user 1 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fly airplanes, build computers, and listen to Tool.
+
+    User 1: That''s cool! I like to take martial arts and I''m on safety patrol at my school.
+
+    User 2: That''s awesome! I''ve always wanted to take martial arts.
+
+    User 1: You should! It''s a lot of fun and it''s a great way to stay in shape.
+
+    User 2: I might just do that.
+
+    User 1: What''s your favorite Tool song?
+
+    User 2: My favorite Tool song is Lateralus. It''s a really deep and meaningful song.
+
+    User 1: I''ve heard good things about that song. I''ll have to check it out.
+
+    User 2: You should! It''s one of my favorite songs of all time.
+
+    User 1: I''m glad we have something in common. What''s your favorite computer brand?
+
+    User 2: I like Apple computers. They''re very user-friendly and reliable.
+
+    User 1: I''m a big fan of Apple computers too. I have a MacBook Pro.
+
+    User 2: Nice! I have a MacBook Air.
+
+    User 1: It''s nice to meet someone who shares my interests.
+
+    User 2: You too. I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

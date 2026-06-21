@@ -1,0 +1,82 @@
+id: 00008157
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8157
+data:
+  user 1 personas: 'I like playing outside in the sun with my dolls.
+
+    I m a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I sleep in a princess bed.'
+  user 2 personas: 'I enjoy hiking.
+
+    I have two border collies.
+
+    I speak french and english fluently.
+
+    I am planning to move to a new state soon.
+
+    I am an artist.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What is your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hike, paint, and travel.
+
+    User 1: I like to play outside in the sun with my dolls.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I also like to go on picnics with my mommy.
+
+    User 2: That sounds lovely. I like to go hiking with my dogs.
+
+    User 1: Dogs are so cute! I wish I had one.
+
+    User 2: Maybe you can get one when you''re older.
+
+    User 1: I hope so! I would love to have a dog.
+
+    User 2: What do you like to paint?
+
+    User 1: I like to paint pictures of my dolls and my family.
+
+    User 2: That sounds really nice. I like to paint landscapes.
+
+    User 1: That sounds beautiful! I would love to see one of your paintings.
+
+    User 2: Maybe I can show you one next time we meet.
+
+    User 1: That would be great!
+
+    User 2: Where are you from?
+
+    User 1: I''m from [user 1''s hometown].
+
+    User 2: Oh, I''ve never been there. What''s it like?
+
+    User 1: It''s a small town, but it''s really nice. There''s a lot of nature around.
+
+    User 2: That sounds like a nice place to live.
+
+    User 1: It is! I love it there.
+
+    User 2: I''m planning to move to a new state soon. I''m not sure where I''m going yet, but I''m excited for a change.
+
+    User 1: That sounds exciting! I hope you find a place you love.
+
+    User 2: Thanks! Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

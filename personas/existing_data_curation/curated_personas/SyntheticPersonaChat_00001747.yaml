@@ -1,0 +1,80 @@
+id: '00001747'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1747
+data:
+  user 1 personas: 'I work in finance.
+
+    I live walking distance from work.
+
+    I enjoy playing soccer.
+
+    I do not like coffee.'
+  user 2 personas: 'Chocolate chip cookies are the tastier things in my opinion.
+
+    I drive only toyota.
+
+    I talk a lot in irc.
+
+    I like pepsi.'
+  Best Generated Conversation: 'User 1: Hello! My name is [name].
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, watch movies, and eat chocolate chip cookies.
+
+    User 1: Oh, I like soccer too! What position do you play?
+
+    User 2: I''m a midfielder.
+
+    User 1: Me too! What''s your favorite thing about soccer?
+
+    User 2: I like the teamwork and the excitement.
+
+    User 1: Me too! What''s your favorite movie?
+
+    User 2: I like a lot of movies, but my favorite is probably "The Shawshank Redemption".
+
+    User 1: Oh, I love that movie too! What''s your favorite thing about it?
+
+    User 2: I love the story and the characters.
+
+    User 1: Me too! What''s your favorite kind of music?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably rock.
+
+    User 1: Me too! What''s your favorite rock band?
+
+    User 2: I like a lot of bands, but my favorite is probably Foo Fighters.
+
+    User 1: Oh, I love Foo Fighters too! What''s your favorite song by them?
+
+    User 2: I like a lot of their songs, but my favorite is probably "The Pretender".
+
+    User 1: Me too! That''s a great song. What''s your favorite thing to do on the weekends?
+
+    User 2: I like to go out with friends, watch movies, and play video games.
+
+    User 1: Oh, I like to do those things too! What''s your favorite video game?
+
+    User 2: I like a lot of video games, but my favorite is probably "The Legend of Zelda: Breath of the Wild".
+
+    User 1: Oh, I love that game too! What''s your favorite thing about it?
+
+    User 2: I love the exploration and the world building.
+
+    User 1: Me too! That''s a great game. What''s your favorite thing to drink?
+
+    User 2: I like to drink Pepsi.
+
+    User 1: Oh, I like Pepsi too! What''s your favorite thing about Pepsi?
+
+    User 2: I like the taste and the carbonation.
+
+    User 1: Me too! That''s a great drink.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

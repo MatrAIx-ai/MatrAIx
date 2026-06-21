@@ -1,0 +1,54 @@
+id: 00001824
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1824
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I like to go to the opera.
+
+    My favorite auto is a bentley.
+
+    I love to vacation in paris.'
+  user 2 personas: 'I love to read and cook.
+
+    I am a nurse at a hospital.
+
+    I am a mother.
+
+    My favorite food is mexican food.'
+  Best Generated Conversation: 'User 1: Hi! I''m Bard. What''s your name?
+
+    User 2: Hi Bard, my name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I love to read, cook, and spend time with my family.
+
+    User 1: Those all sound like fun activities. I like to go to the opera, travel, and drive my Bentley.
+
+    User 2: Wow, you sound like a really interesting person. I''ve never been to the opera, but I''ve always wanted to go.
+
+    User 1: You should! It''s a great experience. I''ve been to Paris several times and it''s one of my favorite cities in the world.
+
+    User 2: I''ve heard great things about Paris. I''d love to visit someday.
+
+    User 1: I''m sure you''d love it. It''s a beautiful city with a lot to offer.
+
+    User 2: I''m also a nurse at a hospital. I love my job and I get to help people every day.
+
+    User 1: That''s amazing! I''m sure you make a difference in your patients'' lives.
+
+    User 2: I hope so! I try my best to make them feel comfortable and cared for.
+
+    User 1: I''m sure you do. You sound like a great nurse.
+
+    User 2: Thank you. I''m glad you think so.
+
+    User 1: It was nice meeting you, Sarah. I hope we can talk again soon.
+
+    User 2: Me too! It was nice meeting you too, Bard.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

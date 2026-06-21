@@ -1,0 +1,18 @@
+id: 00006840
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6840
+persona_description: A geologist who specializes in studying earthquakes and their effects on the geological landscape. They are particularly interested in understanding the potential impact of large earthquakes
+  on nearby cities and infrastructure, and are constantly monitoring seismic activity in Yellowstone National Park and other active earthquake zones. They are also knowledgeable about past earthquakes and
+  their effects on the landscape and human populations, and have a keen interest in predicting and understanding the potential for future earthquakes.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

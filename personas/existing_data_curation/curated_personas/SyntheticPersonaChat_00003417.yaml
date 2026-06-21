@@ -1,0 +1,74 @@
+id: '00003417'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3417
+data:
+  user 1 personas: 'I like to go out to eat.
+
+    A hobby of mine is the drums.
+
+    I like listening to other rap music too.
+
+    I also enjoy cooking.
+
+    One of my favorite artists is drake.'
+  user 2 personas: 'I prefer winter over fall.
+
+    I prefer morning to night.
+
+    I like to swim.
+
+    My favorite fruit is an apple.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, nice to meet you! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, cook, and go out to eat.
+
+    User 1: That''s cool! I like to go out to eat too. What''s your favorite restaurant?
+
+    User 2: I like this little Italian place down the street. The food is amazing.
+
+    User 1: I''ll have to check it out sometime. I love Italian food.
+
+    User 2: You should! They have the best spaghetti and meatballs.
+
+    User 1: I love spaghetti and meatballs!
+
+    User 2: They also have a really good lasagna.
+
+    User 1: I''m not a big fan of lasagna, but I''ll try it if you recommend it.
+
+    User 2: I''m sure you''ll like it. It''s really good.
+
+    User 1: Well, I''m sure I''ll have to check it out sometime.
+
+    User 2: You should! It''s my favorite place to eat.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to swim and cook. I also like to listen to music.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like all kinds of music, but I especially like rap music.
+
+    User 1: Me too! I love Drake.
+
+    User 2: He''s one of my favorites too!
+
+    User 1: I''m glad you like him. He''s a great artist.
+
+    User 2: I agree. He''s one of the best.
+
+    User 1: Well, I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to find someone who shares your interests.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

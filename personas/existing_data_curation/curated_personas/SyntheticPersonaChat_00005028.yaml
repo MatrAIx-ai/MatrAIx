@@ -1,0 +1,84 @@
+id: 00005028
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5028
+data:
+  user 1 personas: 'I like to go out to the bars.
+
+    I like cooking healthy meals.
+
+    I m retired.
+
+    I like to go to the gym and work out.'
+  user 2 personas: 'I couldn t live without my cell phone.
+
+    I am more of a cat person than a dog person.
+
+    I enjoy the occasional drink with friends.
+
+    My mom is my best friend.
+
+    I attend book club every week.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to go out to the bars and enjoy the occasional drink with friends.
+
+    User 1: Oh, that sounds fun. I like to go to the bars too.
+
+    User 2: Do you have a favorite bar?
+
+    User 1: Not really, I just like to go to different bars and try new things.
+
+    User 2: That''s cool. I''m more of a creature of habit. I go to the same bar all the time.
+
+    User 1: What do you like about that bar?
+
+    User 2: It''s a neighborhood bar, so I know everyone there. It''s like a second home.
+
+    User 1: That sounds nice. I''m more of an introvert, so I don''t really like going to bars where I know everyone.
+
+    User 2: I understand. I used to be the same way, but then I started to go to the bar more often and I made some really good friends.
+
+    User 1: That''s great. I''m glad you found a place where you can feel comfortable.
+
+    User 2: Me too.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to read and go to book club.
+
+    User 1: Oh, that''s cool. I love to read too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I like to read a variety of books, but I''m really into historical fiction right now.
+
+    User 2: I''ve never really read any historical fiction. What''s it like?
+
+    User 1: It''s really interesting. It''s like you''re transported to another time and place.
+
+    User 2: That sounds cool. I might have to give it a try.
+
+    User 1: I think you would like it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m retired.
+
+    User 2: Oh, that''s great. I can''t wait to retire.
+
+    User 1: It''s definitely nice. I have a lot more time to do the things I love.
+
+    User 2: What do you like to do in your free time?
+
+    User 1: I like to read, cook, and go to the gym.
+
+    User 2: That sounds like a lot of fun. I like to do a lot of the same things'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

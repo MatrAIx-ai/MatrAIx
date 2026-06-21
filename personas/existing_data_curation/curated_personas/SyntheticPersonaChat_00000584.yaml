@@ -1,0 +1,70 @@
+id: 00000584
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 584
+data:
+  user 1 personas: 'I am a student.
+
+    I am from california.
+
+    I like to shop at goodwill.
+
+    I think recycling is important.
+
+    I like to be outdoors.'
+  user 2 personas: 'I love to listen to frank sinatra.
+
+    I like to cook stews.
+
+    I am a older lady.
+
+    I watch a lot of spongebob.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to cook stews.
+
+    User 1: That sounds delicious! Do you have any favorite recipes?
+
+    User 2: I have a few, but my favorite is my chicken and dumplings stew. It''s so comforting and delicious.
+
+    User 1: I love dumplings! I''ll have to try your recipe sometime.
+
+    User 2: You definitely should! It''s a family favorite.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also love to watch movies and TV. My favorite show is Spongebob Squarepants.
+
+    User 1: I love Spongebob too! I''ve been watching it since I was a kid.
+
+    User 2: It''s such a classic! I''m always laughing at it.
+
+    User 1: Me too! It''s so funny and relatable.
+
+    User 2: What other shows do you like to watch?
+
+    User 1: I also like to watch The Office, Parks and Recreation, and The Good Place.
+
+    User 2: I love The Office! I''ve watched it all the way through multiple times.
+
+    User 1: Me too! It''s so funny and well-written.
+
+    User 2: What do you like to do outside?
+
+    User 1: I love to go hiking, camping, and kayaking.
+
+    User 2: I love to hike too! I''ve been to a lot of different national parks.
+
+    User 1: Me too! I love exploring new places and seeing the beautiful scenery.
+
+    User 2: What''s your favorite national park?
+
+    User 1: I think my favorite is Yosemite National Park. It''s so beautiful and there''s so much to do.
+
+    User 2: Yosemite is amazing! I''ve been there a few times and I love it every time.
+
+    User 1: It''s so great to meet someone who loves the outdoors as much as I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

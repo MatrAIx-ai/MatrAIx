@@ -1,0 +1,74 @@
+id: 00003249
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3249
+data:
+  user 1 personas: 'My children vist often.
+
+    I live in a retirement home.
+
+    My grandson s favorite type of cake is chocolate.
+
+    I am an old woman.
+
+    I like to bake for them.'
+  user 2 personas: 'I do not eat well.
+
+    I sleep most of the day.
+
+    I am not social.
+
+    I work in a factory.
+
+    I am very unproductive unless it comes to my job.'
+  Best Generated Conversation: 'User 1: Good morning!
+
+    User 2: Morning, how are you?
+
+    User 1: I''m doing well, thank you. How are you doing today?
+
+    User 2: I''m doing okay, thanks for asking.
+
+    User 1: That''s good to hear. Do you have any plans for the day?
+
+    User 2: Not really, I''m just going to work and then come home.
+
+    User 1: Oh, okay. What do you do for work?
+
+    User 2: I work in a factory.
+
+    User 1: Oh, that sounds interesting. Do you like your job?
+
+    User 2: It''s okay. I don''t really like working, but it pays the bills.
+
+    User 1: I know what you mean. I don''t like working either, but it''s necessary.
+
+    User 2: Yeah, it is. Do you have any kids?
+
+    User 1: Yes, I have two children.
+
+    User 2: Oh, that''s nice. How old are they?
+
+    User 1: They''re 10 and 12 years old.
+
+    User 2: Oh, that''s a good age. What are their names?
+
+    User 1: Their names are Sarah and Michael.
+
+    User 2: Those are nice names. Do you like to bake?
+
+    User 1: Yes, I love to bake. I bake for my children all the time.
+
+    User 2: Oh, that''s nice. My grandson loves chocolate cake.
+
+    User 1: I love to bake chocolate cake too. It''s my favorite to bake.
+
+    User 2: Oh, that''s nice. I should have you bake a cake for my grandson sometime.
+
+    User 1: I would be happy to bake a cake for your grandson.
+
+    User 2: Oh, thank you. I''ll let you know when he''s coming over.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

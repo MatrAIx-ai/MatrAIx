@@ -1,0 +1,20 @@
+id: 00051845
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51845
+persona_description: A public health expert and medical doctor with expertise in vector-borne diseases, specifically LACV, and its transmission. They have conducted investigations and surveillance of LACV
+  cases in Missouri and Kansas, and are aware of the potential for underreporting and unrecognized cases. They are aware of the epidemiological characteristics of LACV, including the risk factors for transmission
+  and the incubation period. They are knowledgeable about the clinical presentation of LACV neuroinvasive disease and its sequelae. They are familiar with the recent outbreak of LACV neuroinvasive disease
+  in northwest Missouri and are aware of the potential for further transmission in the region. They are aware of the importance of maintaining a high clinical suspicion for LACV among patients with unexplained
+  meningoencephalitis during summer and fall, when mosquitoes are active.
+expertise:
+  general_domain_top1pct: Public Health
+  specific_domain_top1pct: Vector-borne diseases
+  general_domain_top01pct: None
+  specific_domain_top01pct: LACV (La Crosse virus)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

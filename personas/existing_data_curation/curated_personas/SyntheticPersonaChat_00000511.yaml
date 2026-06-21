@@ -1,0 +1,72 @@
+id: '00000511'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 511
+data:
+  user 1 personas: 'I love hockey.
+
+    I studied business as my major.
+
+    My bestfriend is from out of town.
+
+    I ve flown out of the country.'
+  user 2 personas: 'I despise sweet potatoes.
+
+    I am a weightlifter.
+
+    I love the all american rejects.
+
+    I have three great danes.'
+  Best Generated Conversation: 'User 1: Hi! I''m looking for someone to talk to.
+
+    User 2: Hi there! I''m always up for a chat.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love weightlifting, playing with my dogs, and listening to music.
+
+    User 1: Oh, I love dogs! What kind do you have?
+
+    User 2: I have three Great Danes. They''re the best dogs ever!
+
+    User 1: I''ve never met a Great Dane before. What are they like?
+
+    User 2: They''re huge, but they''re also very gentle and loving. They''re the perfect family dogs.
+
+    User 1: That sounds amazing! I''m definitely going to have to meet one someday.
+
+    User 2: You should! They''re the best.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also love watching hockey. It''s my favorite sport.
+
+    User 1: Oh, that''s awesome! I love hockey too. What team do you follow?
+
+    User 2: I''m a big fan of the Penguins.
+
+    User 1: Me too! They''re my favorite team too.
+
+    User 2: That''s great! I''m glad to meet another Penguins fan.
+
+    User 1: Me too! It''s always nice to find someone who shares your interests.
+
+    User 2: Exactly! So, what else do you like to do?
+
+    User 1: I also love to travel. I''ve been to a lot of different countries.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to travel.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: I know, I know. I''m just waiting until I have some more time and money.
+
+    User 1: That''s fair. It can be expensive.
+
+    User 2: Yeah, it can. But it''s worth it.
+
+    User 1: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

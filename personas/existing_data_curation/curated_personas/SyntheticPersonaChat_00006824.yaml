@@ -1,0 +1,68 @@
+id: 00006824
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6824
+data:
+  user 1 personas: 'I still live at home with my parents.
+
+    I am 32.
+
+    I do not want a job.
+
+    I play video games all day.
+
+    I eat all take out.'
+  user 2 personas: 'I want to write a book before i die.
+
+    I am excellent at playing pool.
+
+    I would love to visit the pyramids.
+
+    I teach middle school art.
+
+    I still like unicorns even though i m an adult.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I teach middle school art and I like to play pool.
+
+    User 1: Oh, that''s cool. I''m 32 and I still live at home with my parents. I don''t want a job and I play video games all day.
+
+    User 2: That''s interesting! I''ve always wanted to write a book before I die.
+
+    User 1: Oh, really? What kind of book?
+
+    User 2: I don''t know, maybe a children''s book. I like to draw and I think it would be fun to write a story that kids would enjoy.
+
+    User 1: That''s a great idea! I''m sure you would be a great writer.
+
+    User 2: Thanks! I''d love to visit the pyramids someday. I think they''re amazing.
+
+    User 1: I know, right? They''re so huge and mysterious. I''d love to go there too.
+
+    User 2: I also like unicorns. I think they''re so cute!
+
+    User 1: Me too! They''re the best.
+
+    User 2: So, what do you think of the art program in the middle school?
+
+    User 1: I think it''s great. I''ve always loved art and I think it''s important for kids to have the opportunity to express themselves creatively.
+
+    User 2: I agree. I think art is a great way for kids to learn and grow.
+
+    User 1: So, what do you think of the new pool table?
+
+    User 2: I think it''s awesome! I''ve been playing pool all day.
+
+    User 1: That''s great! I''m not very good at pool, but I''m always up for a game.
+
+    User 2: Well, you''re welcome to join me anytime.
+
+    User 1: Thanks, I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

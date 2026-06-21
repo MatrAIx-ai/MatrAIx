@@ -1,0 +1,66 @@
+id: 00007284
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7284
+data:
+  user 1 personas: 'Starbucks is my favorite hang out spot.
+
+    I spend my weekends browsing antique stores.
+
+    I collect little figurines.
+
+    Subway is my favorite fast food restaurant.'
+  user 2 personas: 'I am from france.
+
+    My favorite food is tacos.
+
+    I like to draw.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m user 1! What''s your name?
+
+    User 2: Hello! I''m user 2.
+
+    User 1: Nice to meet you! Where are you from?
+
+    User 2: I''m from France.
+
+    User 1: Oh, cool! I''ve always wanted to visit France.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: Maybe I will someday. What do you like to do for fun?
+
+    User 2: I love to draw, I''m vegan, and my favorite food is tacos.
+
+    User 1: That''s great! I love to draw too. What kind of things do you draw?
+
+    User 2: I like to draw animals, landscapes, and people.
+
+    User 1: Cool! I''m not very good at drawing people, but I love drawing animals.
+
+    User 2: I''m not very good at drawing landscapes, but I love drawing animals.
+
+    User 1: Well, we can always practice together!
+
+    User 2: That would be fun!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to antique stores, I collect little figurines, and Starbucks is my favorite hang out spot.
+
+    User 1: Antique stores are fun! I love to browse them and find interesting things. I don''t collect little figurines, but I do love Subway. It''s my favorite fast food restaurant.
+
+    User 2: That''s great! We should go to Starbucks sometime and browse some antique stores.
+
+    User 1: That sounds like a lot of fun! We should do that soon.
+
+    User 2: Great! I''m free this weekend if you are.
+
+    User 1: I am too! We should definitely go.
+
+    User 2: Awesome! We''ll make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

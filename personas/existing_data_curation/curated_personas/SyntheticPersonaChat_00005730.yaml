@@ -1,0 +1,68 @@
+id: '00005730'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5730
+data:
+  user 1 personas: 'Everyday i go swimming at the y.
+
+    My mom taught me how to play the cello.
+
+    I collect stamps.
+
+    I love going to concerts on the weekend.
+
+    My favorite color is blue.'
+  user 2 personas: 'I use red lipstick.
+
+    I wear a red purse.
+
+    I like to wear red shoes also.
+
+    I like to wear red.
+
+    I drive a red car.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I like to go swimming, play the cello, and collect stamps.
+
+    User 1: Oh, that''s cool! I like to go swimming too. Do you have a favorite swimming pool?
+
+    User 2: I like to swim at the Y. It''s a great place to relax and get some exercise.
+
+    User 1: I''ve heard good things about the Y. I''ll have to check it out sometime.
+
+    User 2: You should! It''s a great place to swim.
+
+    User 1: What''s your favorite stamp?
+
+    User 2: I have a lot of favorite stamps, but I think my favorite one is a stamp of a blue bird.
+
+    User 1: That''s a beautiful stamp! I love blue birds.
+
+    User 2: Me too! They''re so pretty.
+
+    User 1: What do you like about collecting stamps?
+
+    User 2: I like learning about the history of different countries and the different kinds of stamps that they have.
+
+    User 1: That sounds really interesting! I''ve never thought about collecting stamps before.
+
+    User 2: It''s a lot of fun! You can learn a lot about the world.
+
+    User 1: Maybe I''ll give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

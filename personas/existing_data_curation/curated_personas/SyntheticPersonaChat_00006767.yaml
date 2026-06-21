@@ -1,0 +1,52 @@
+id: '00006767'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6767
+data:
+  user 1 personas: 'I have appeared on the show jeopardy.
+
+    I once lived in a storage locker for two months.
+
+    I like to refurbish classic cars.
+
+    I make pottery.'
+  user 2 personas: 'I am an old soul.
+
+    I am passionate about a lot of things.
+
+    I just want my voice to be heard.
+
+    I tend to work myself up.
+
+    My back hurts chronically.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name].
+
+    User 1: What are you passionate about?
+
+    User 2: I''m passionate about a lot of things. I''m a writer, so I''m passionate about writing. I''m also passionate about music, and I love to play the piano.
+
+    User 1: That''s great! I''m also passionate about writing. I''m a bit of a history buff, so I love to write about history. I also like to write short stories.
+
+    User 2: That''s awesome! I love history too. I''m not a writer, but I love to read about history.
+
+    User 1: What kind of history do you like to read about?
+
+    User 2: I like to read about a lot of different kinds of history, but I''m especially interested in American history.
+
+    User 1: American history is really fascinating. I love learning about the different presidents and the wars that we''ve been in.
+
+    User 2: Me too! I love learning about the different cultures and traditions that have shaped our country.
+
+    User 1: I think it''s important to learn about history so that we can understand the world around us.
+
+    User 2: I agree! History is the foundation of our society, and it''s important to know where we came from in order to understand where we''re going.
+
+    User 1: I''m glad we have something in common! I''m sure we could have a lot of interesting conversations about history.
+
+    User 2: Me too! I''m always up for a good conversation about history.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

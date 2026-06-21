@@ -1,0 +1,76 @@
+id: '00007761'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7761
+data:
+  user 1 personas: 'My grandchildren range in age from 30 to 7.
+
+    I have 4 children.
+
+    I am a senior citizen.
+
+    I like to read.
+
+    My husband was a career soldier.'
+  user 2 personas: 'Our kids are 14 and 12 years old.
+
+    We also have three dogs and two cats.
+
+    My name is john and i live in dallas , tx.
+
+    My wife and i have 2 children.
+
+    I work as a physical therapist , and my wife is a school nurse.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, exercise, and spend time with my family.
+
+    User 1: I like to read too! What are some of your favorite books?
+
+    User 2: I like to read a lot of different genres, but I''m especially fond of historical fiction.
+
+    User 1: I''m not usually a big fan of historical fiction, but I did enjoy The Pillars of the Earth.
+
+    User 2: That''s a great book! I love Ken Follett''s books.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to exercise. I run a lot and I also do yoga.
+
+    User 1: I used to run, but I don''t do it as much anymore. I''ve been meaning to get back into it.
+
+    User 2: You should! It''s a great way to stay in shape and relieve stress.
+
+    User 1: I know, I know. I''ll get back on it soon.
+
+    User 2: Good to hear.
+
+    User 1: What about your family? Do you have any kids?
+
+    User 2: Yes, I have two children. They''re 14 and 12 years old.
+
+    User 1: Oh, that''s great! What are their names?
+
+    User 2: Their names are John and Jane.
+
+    User 1: Are you both working?
+
+    User 2: Yes, I work as a physical therapist and my wife is a school nurse.
+
+    User 1: Wow, you must have your hands full!
+
+    User 2: We do, but it''s a lot of fun.
+
+    User 1: It sounds like you have a great life.
+
+    User 2: I do. I''m very happy.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

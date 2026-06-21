@@ -1,0 +1,72 @@
+id: '00001657'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1657
+data:
+  user 1 personas: 'I like rock music.
+
+    I have a black purse.
+
+    I like to wear black.
+
+    My favorite artist is guns and roses.'
+  user 2 personas: 'I sing in the shower.
+
+    I have never had alcohol.
+
+    I am very shy.
+
+    I own a dog who is my best friend.
+
+    I am content with my life.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m a big fan of rock music.
+
+    User 2: Me too! What''s your favorite band?
+
+    User 1: Guns N'' Roses!
+
+    User 2: Oh, I love them too! They''re one of my favorites.
+
+    User 1: I''m going to see them in concert next week!
+
+    User 2: That''s awesome! I''m so jealous.
+
+    User 1: I''m really excited. I''ve been a fan of theirs for years.
+
+    User 2: I bet it''s going to be an amazing concert.
+
+    User 1: I hope so!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to concerts, read books, and play video games.
+
+    User 2: I like to read books and play video games too!
+
+    User 1: That''s great! What''s your favorite book?
+
+    User 2: It''s hard to choose just one, but I really like "The Great Gatsby."
+
+    User 1: That''s one of my favorites too!
+
+    User 2: I like the way it captures the spirit of the Jazz Age.
+
+    User 1: Me too. It''s a classic for a reason.
+
+    User 2: So, what''s your favorite video game?
+
+    User 1: I like a lot of different video games, but my favorite is probably "The Legend of Zelda: Breath of the Wild."
+
+    User 2: I''ve heard great things about that game. I''ve been meaning to try it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

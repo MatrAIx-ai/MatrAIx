@@ -1,0 +1,66 @@
+id: 00007856
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7856
+data:
+  user 1 personas: 'My dad is journalist for the new york times.
+
+    I have one older sister named mary.
+
+    I was born premature.
+
+    I recently broke my leg.
+
+    I live in texas.'
+  user 2 personas: 'I love to cook.
+
+    I breed maine coon cats and show them.
+
+    My brother is currently couch surfing at my house.
+
+    I am going on a cruise next month.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1].
+
+    User 2: Hi, I''m [User 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to cook.
+
+    User 1: Oh, really? What are some of your favorite things to cook?
+
+    User 2: I love to make pasta dishes. I also love to bake.
+
+    User 1: That sounds delicious. I love pasta.
+
+    User 2: Me too! I''m always looking for new pasta recipes to try.
+
+    User 1: I know what you mean. I''m always looking for new recipes to try too.
+
+    User 2: What''s your favorite thing to do when you''re not cooking?
+
+    User 1: I like to spend time with my family and friends. I also like to read and write.
+
+    User 2: That sounds like fun. I like to spend time with my family and friends too. I also like to go on hikes and bike rides.
+
+    User 1: That sounds like a lot of fun. I love the outdoors.
+
+    User 2: Me too! I love to explore new places.
+
+    User 1: What''s your favorite place that you''ve ever been?
+
+    User 2: I''ve been to a lot of great places, but my favorite was probably the Grand Canyon.
+
+    User 1: The Grand Canyon is amazing! I''ve been there too.
+
+    User 2: It''s so beautiful. I could have spent hours just looking at it.
+
+    User 1: Me too! I''m glad we have similar interests.
+
+    User 2: Me too! I''m looking forward to getting to know you better.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

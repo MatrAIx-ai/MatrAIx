@@ -1,0 +1,70 @@
+id: '00002221'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2221
+data:
+  user 1 personas: 'I have long fingers.
+
+    I cannot eat shrimp.
+
+    I am dumpy.
+
+    I have long legs.
+
+    Like a skeleton.'
+  user 2 personas: 'I go running a lot.
+
+    I work as an electrician.
+
+    I always sleep 8 hours a day.
+
+    I love hamburgers.
+
+    I hate winter.'
+  Best Generated Conversation: 'User 1: Hey, what''s your name?
+
+    User 2: My name is [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you do for a living?
+
+    User 2: I work as an electrician.
+
+    User 1: Oh, that''s cool. I''ve always been interested in electricity. Do you like your job?
+
+    User 2: I do, it''s challenging and rewarding.
+
+    User 1: That''s great. What do you like to do for fun?
+
+    User 2: I like to go running, I love hamburgers, and I hate winter.
+
+    User 1: I like running too! I''m not a big fan of winter either.
+
+    User 2: It''s too cold and wet.
+
+    User 1: Exactly.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, play video games, and go out with friends.
+
+    User 2: That sounds like fun. I like to read too. What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I especially like fantasy and science fiction.
+
+    User 2: I like those genres too. I''m currently reading a fantasy novel called "The Name of the Wind".
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should, it''s really good.
+
+    User 1: I''ve been meaning to go running more often. I think I''ll go for a run tomorrow morning.
+
+    User 2: That''s a great idea. I''ll probably go running with you.
+
+    User 1: That would be fun!
+
+    User 2: Great, I''ll see you tomorrow morning.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

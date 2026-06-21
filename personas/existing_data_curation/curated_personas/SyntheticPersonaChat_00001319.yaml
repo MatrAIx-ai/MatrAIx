@@ -1,0 +1,56 @@
+id: 00001319
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1319
+data:
+  user 1 personas: 'I like to garden.
+
+    I graduated college for secondary english education.
+
+    I am a teacher.
+
+    I have three children.'
+  user 2 personas: 'I like to play soccer.
+
+    I am seven years old.
+
+    I just got my rejection letter from the gifted program.
+
+    And , my best friend is cayden.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m a teacher and I like to garden. What do you like to do for fun?
+
+    User 2: I like to play soccer and I just got my rejection letter from the gifted program.
+
+    User 1: That''s too bad about the gifted program, but I''m sure you''re a great kid. What''s your favorite thing about soccer?
+
+    User 2: I like running around and scoring goals. I''m the best player on my team.
+
+    User 1: I''m sure you are! I''m impressed that you''re already playing soccer at such a young age.
+
+    User 2: My best friend Cayden is on my team too.
+
+    User 1: That''s great! It''s always nice to have a friend on your team.
+
+    User 2: Yeah, he''s the best.
+
+    User 1: So, what else do you like to do for fun besides soccer?
+
+    User 2: I like to play with my friends, watch TV, and go to the park.
+
+    User 1: Those sound like fun things to do. I like to garden, read, and cook.
+
+    User 2: I like to read too. My favorite book is Harry Potter.
+
+    User 1: That''s a great book! I''m a big fan of the Harry Potter series too.
+
+    User 2: Yeah, it''s so good! I''ve read all of the books and watched all of the movies.
+
+    User 1: I have too! I''m excited for the new movie that''s coming out next year.
+
+    User 2: Me too! I can''t wait to see what happens.
+
+    User 1: Me neither! It''s going to be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

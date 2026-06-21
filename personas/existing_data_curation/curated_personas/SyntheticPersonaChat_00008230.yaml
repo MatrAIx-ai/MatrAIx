@@ -1,0 +1,82 @@
+id: 00008230
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8230
+data:
+  user 1 personas: 'My college courses are on philosophy and history.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My newly bought laptop has a bum battery.
+
+    I ride my bike to class since it s only a mile away.
+
+    My glasses are held together by tiger printed duct tape.'
+  user 2 personas: 'I am an only child.
+
+    I love spicy food.
+
+    I have traveled to europe and mexico.
+
+    I like swimming.
+
+    My mother is a housemaid.'
+  Best Generated Conversation: 'User 1: Hello, I am writing a short story in my document tab.
+
+    User 2: That is interesting, what is it about?
+
+    User 1: It is about a group of people who are trying to find a way to escape a dystopian society.
+
+    User 2: That sounds exciting, what are some of the challenges they face?
+
+    User 1: The main challenge is that they are not allowed to leave the city. The government has put up a wall around the city and they are not allowed to cross it.
+
+    User 2: That sounds very scary, how do they plan to escape?
+
+    User 1: They are planning to build a tunnel under the wall. They have been working on it for a while now, but they are not sure if it will be finished in time.
+
+    User 2: I hope they make it out, that would be a great story.
+
+    User 1: Thank you, me too.
+
+    User 2: By the way, my mother is a housemaid.
+
+    User 1: That''s interesting, what is her favorite part of the job?
+
+    User 2: She likes helping people and making their homes clean.
+
+    User 1: That''s great, I''m sure she is very good at her job.
+
+    User 2: Thank you, she is.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Me too.
+
+    User 1: So, do you have any other hobbies besides swimming?
+
+    User 2: Yes, I also like to travel.
+
+    User 1: That''s great, I have also been to Europe and Mexico.
+
+    User 2: Oh, what did you think of them?
+
+    User 1: I loved them both, they are such beautiful places.
+
+    User 2: I''m glad to hear that.
+
+    User 1: Me too.
+
+    User 2: So, what are some of your favorite foods?
+
+    User 1: I love spicy food.
+
+    User 2: Oh, that''s great. I also love spicy food.
+
+    User 1: That''s great, we should try to eat some spicy food together sometime.
+
+    User 2: That would be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

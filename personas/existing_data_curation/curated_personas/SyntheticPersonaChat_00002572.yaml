@@ -1,0 +1,76 @@
+id: '00002572'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2572
+data:
+  user 1 personas: 'I love my girlfriend.
+
+    I am a veteran.
+
+    I eat a lot of meat.
+
+    My father was also in the military.'
+  user 2 personas: 'I do not have children.
+
+    I go to the pool every thursday for three hours.
+
+    I work five days a week.
+
+    I enjoy shopping.
+
+    I do yoga on tuesdays.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I work five days a week.
+
+    User 1: What do you do on your days off?
+
+    User 2: I go to the pool every thursday for three hours.
+
+    User 1: That sounds like fun! I love swimming.
+
+    User 2: Me too! It''s a great way to relax and de-stress.
+
+    User 1: I know, right? I also enjoy shopping.
+
+    User 2: I do too! I go shopping on tuesdays.
+
+    User 1: That''s funny, I do yoga on tuesdays.
+
+    User 2: Oh, that''s cool! I''ve always wanted to try yoga.
+
+    User 1: It''s really great! It''s a great way to stretch and relax.
+
+    User 2: I might have to give it a try.
+
+    User 1: You should! I think you''d like it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! So, do you have any kids?
+
+    User 2: No, I don''t have any kids.
+
+    User 1: Me neither. I''m not sure if I want kids or not.
+
+    User 2: I''m not sure either. I think I''ll have to wait until I''m older to decide.
+
+    User 1: That''s a good idea.
+
+    User 2: Thanks.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to read and watch movies.
+
+    User 1: Me too! I love reading fantasy and science fiction novels.
+
+    User 2: I love those too! I also love to watch action and comedy movies.
+
+    User 1: Me too! I think we would get along great.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

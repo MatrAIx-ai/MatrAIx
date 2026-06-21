@@ -1,0 +1,18 @@
+id: 00060385
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60385
+persona_description: A healthcare professional who is trained in the diagnosis and treatment of bacterial meningitis and septicaemia. They are familiar with the symptoms, causes, and treatments for both
+  conditions and have a deep understanding of the risk factors that increase the likelihood of these diseases. They are also knowledgeable about the current vaccination schedules for babies and teenagers
+  and the effectiveness of vaccines in reducing the incidence of meningitis and septicaemia.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

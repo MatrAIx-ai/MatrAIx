@@ -1,0 +1,90 @@
+id: '00001543'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1543
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I wish that i lived in the city.
+
+    I live on a pig farm.
+
+    I have allergies.'
+  user 2 personas: '1984 is my favorite book.
+
+    I am working on a biology degree.
+
+    I love book.
+
+    I am in college.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is 1984 by George Orwell.
+
+    User 1: I''ve heard that''s a good book. What do you like about it?
+
+    User 2: I like the way it''s written and the way it explores the themes of totalitarianism and surveillance.
+
+    User 1: I''ve always been interested in dystopian fiction.
+
+    User 2: Me too! I think it''s a really important genre that can help us understand the dangers of society.
+
+    User 1: I agree. I think it''s important to be aware of the things that can go wrong in society so that we can try to prevent them.
+
+    User 2: I think you''re right.
+
+    User 1: So, what are you studying in college?
+
+    User 2: I''m studying biology.
+
+    User 1: Oh, that''s cool! I''ve always been interested in biology.
+
+    User 2: Me too! It''s so fascinating.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, play video games, and go hiking.
+
+    User 2: I like to read too! What kind of books do you like to read?
+
+    User 1: I like to read science fiction, fantasy, and horror.
+
+    User 2: I like to read science fiction and fantasy too!
+
+    User 1: Oh, cool! What are some of your favorite books?
+
+    User 2: I love the Ender''s Game series by Orson Scott Card and the Harry Potter series by J.K. Rowling.
+
+    User 1: I love those books too!
+
+    User 2: Me too! They''re so good.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to see a movie.
+
+    User 2: Oh, cool! What movie are you seeing?
+
+    User 1: I''m seeing the new Star Wars movie.
+
+    User 2: Oh, cool! I''m excited to see that movie too.
+
+    User 1: Me too! It looks really good.
+
+    User 2: Yeah, it does.
+
+    User 1: Well, I have to go now. It was nice talking to you.
+
+    User 2: You too! Have a nice weekend.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00016629
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16629
+persona_description: A programmer who specializes in C programming language, particularly in the use of the hardware libraries provided by the system. This person is skilled in using the in32(), inbe32(),
+  and inle32() functions to read 32-bit values from ports and converting them to native-endian format as required. This person is also skilled in using the hw/inout.h library and the mmap_device_io() function
+  to access the device's I/O registers.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: embedded systems programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

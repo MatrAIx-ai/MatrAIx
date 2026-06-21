@@ -1,0 +1,106 @@
+id: 00003228
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3228
+data:
+  user 1 personas: 'I work 40 hours a week.
+
+    I look forward to eating at restaurants.
+
+    I am very polite and courteous.
+
+    I work in a bank.'
+  user 2 personas: 'I am a karate black belt.
+
+    I love to sing.
+
+    My wife has terminal cancer.
+
+    I am a business man.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1 name).
+
+    User 2: Hello! I''m (user 2 name).
+
+    User 1: What do you do for work?
+
+    User 2: I''m a business man.
+
+    User 1: Cool! I work in a bank.
+
+    User 2: That''s great! I''m sure you''re very good at your job.
+
+    User 1: Thank you! I try my best.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to eat at restaurants.
+
+    User 2: Me too! I''m a pretty good cook, but I love trying new things.
+
+    User 1: I''m not much of a cook, but I love trying new restaurants too.
+
+    User 2: That''s great! We should go out to dinner sometime.
+
+    User 1: I''d love that!
+
+    User 2: Perfect! I''ll let you know when I''m free.
+
+    User 1: Great! I look forward to it.
+
+    User 2: Me too!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to sing.
+
+    User 1: Really? That''s great! I love singing too.
+
+    User 2: Me too! I''m in a choir at my church.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to sing in a choir.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I think I will!
+
+    User 2: Great! I''m sure you''d be great at it.
+
+    User 1: Thank you!
+
+    User 2: So, tell me more about yourself.
+
+    User 1: Well, I''m from (user 1 hometown).
+
+    User 2: Oh, I''ve never been there before. What''s it like?
+
+    User 1: It''s a small town, but it''s very nice.
+
+    User 2: That sounds nice. I live in (user 2 hometown).
+
+    User 1: Oh, I''ve heard of that! It''s a big city.
+
+    User 2: Yeah, it is. But it''s a great city.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: Well, I like to go to the movies, read, and play video games.
+
+    User 2: Me too! I love going to the movies.
+
+    User 1: What are your favorite movies?
+
+    User 2: I love all kinds of movies, but I especially like action movies and comedies.
+
+    User 1: Me too! I love action movies and comedies too.
+
+    User 2: We seem to have a lot in common.
+
+    User 1: We do! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

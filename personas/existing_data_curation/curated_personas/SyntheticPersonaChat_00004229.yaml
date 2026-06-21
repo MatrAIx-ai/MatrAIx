@@ -1,0 +1,82 @@
+id: 00004229
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4229
+data:
+  user 1 personas: 'My favorite food is steak.
+
+    I drive a black car.
+
+    I am working in finance.
+
+    I listen to rap.'
+  user 2 personas: 'I love to sing.
+
+    My favorite past time is cooking.
+
+    I love to run.
+
+    I have a lot of trophies from my childhood.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I love to sing, cook, and run.
+
+    User 1: That''s awesome! I love to eat steak, listen to rap, and drive my black car.
+
+    User 2: Oh, I love steak too! I''m not a huge fan of rap, but I do love to drive.
+
+    User 1: What do you like to sing?
+
+    User 2: I like to sing all kinds of music, but my favorite is probably country.
+
+    User 1: Oh, that''s cool. I''m not really a country fan, but I do like some of the oldies.
+
+    User 2: Yeah, I like some of the old country songs too. They''re really good.
+
+    User 1: So, what do you like to cook?
+
+    User 2: I like to cook a lot of different things, but my favorite is probably chicken Alfredo.
+
+    User 1: Oh, that sounds delicious! I love chicken Alfredo.
+
+    User 2: Yeah, it''s really good. I make it all the time.
+
+    User 1: That''s awesome! I wish I could cook.
+
+    User 2: You should learn! It''s not that hard, and it''s really rewarding.
+
+    User 1: Maybe I will. I''ll have to give it a try.
+
+    User 2: Yeah, you should! It''s a lot of fun.
+
+    User 1: So, what do you like to run?
+
+    User 2: I like to run all kinds of distances, but my favorite is probably half marathons.
+
+    User 1: Oh, that''s cool. I''ve never done a half marathon, but I''ve done a couple of 5Ks.
+
+    User 2: 5Ks are a good way to start! They''re not too long, but they''re still challenging.
+
+    User 1: Yeah, they were pretty tough, but they were fun too.
+
+    User 2: Yeah, they''re definitely a good workout.
+
+    User 1: So, what are your trophies for?
+
+    User 2: I used to swim competitively when I was younger. I won a lot of trophies for my swimming.
+
+    User 1: Oh, that''s awesome! I''ve never been a good swimmer.
+
+    User 2: Neither was I at first, but I kept practicing and eventually I got better.
+
+    User 1: That''s really impressive. I''m glad you stuck with it.
+
+    User 2: Me too! It was a lot of hard work, but it was worth it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

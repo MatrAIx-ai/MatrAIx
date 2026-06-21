@@ -1,0 +1,74 @@
+id: '00001260'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1260
+data:
+  user 1 personas: 'I drive an acara.
+
+    My favorite beer is coors.
+
+    I love to play basketball.
+
+    My wife is a hairdresser.'
+  user 2 personas: 'I am a ballet dancer.
+
+    I work many hours rehearsing for my show.
+
+    My parents passed away in a car accident.
+
+    My favorite food is hamburgers.
+
+    I like movies based on comedies.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a ballet dancer.
+
+    User 1: That''s cool! How long have you been dancing?
+
+    User 2: Since I was a little kid.
+
+    User 1: Do you like it?
+
+    User 2: Yeah, it''s my favorite thing to do.
+
+    User 1: What''s the best thing about it?
+
+    User 2: The feeling of performing for an audience.
+
+    User 1: I can imagine that would be really exciting.
+
+    User 2: It is. I love the adrenaline rush.
+
+    User 1: What''s the most challenging part of your job?
+
+    User 2: The long hours of rehearsal.
+
+    User 1: I can imagine. I''m sure it''s a lot of hard work.
+
+    User 2: It is, but it''s worth it when I''m on stage performing.
+
+    User 1: Do you have any plans for the future?
+
+    User 2: Yeah, I''m going to audition for the Royal Ballet School in London.
+
+    User 1: Wow, that''s great! Good luck with that.
+
+    User 2: Thanks. I''m really excited about it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the movies, hang out with my friends, and play basketball.
+
+    User 1: I like movies too. What''s your favorite movie?
+
+    User 2: My favorite movie is The Royal Tenenbaums.
+
+    User 1: I''ve never seen that one. What''s it about?
+
+    User 2: It''s about a family of eccentric siblings who reunite after their father dies. It''s a really funny and touching movie.
+
+    User 1: It sounds good. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

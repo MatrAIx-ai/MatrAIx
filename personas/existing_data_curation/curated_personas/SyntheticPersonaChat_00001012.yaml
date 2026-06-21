@@ -1,0 +1,64 @@
+id: '00001012'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1012
+data:
+  user 1 personas: 'I have red hair.
+
+    I am a runner.
+
+    I like tall men.
+
+    I have 2 dogs.'
+  user 2 personas: 'I have a small pet cat.
+
+    I am currently going to school to be an artist.
+
+    My favorite flower is a rose.
+
+    I am twenty one years old.'
+  Best Generated Conversation: 'User 1: Hey there! I''m User 1, what''s your name?
+
+    User 2: I''m User 2, nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I''m currently going to school to be an artist, and I love to paint and draw.
+
+    User 1: That''s awesome! I''m an artist too, but I''m more of a runner. I like to run marathons.
+
+    User 2: That''s cool! I''ve never done a marathon before, but I''ve always wanted to try.
+
+    User 1: You should! It''s a great way to challenge yourself and see what you''re capable of.
+
+    User 2: I might just do that!
+
+    User 1: Oh, and I have 2 dogs, they''re my best friends.
+
+    User 2: That''s awesome! I have a small pet cat, she''s my little buddy.
+
+    User 1: Cats are great! I''ve never had one, but I''ve always wanted one.
+
+    User 2: You should get one! They''re so cuddly and cute.
+
+    User 1: Maybe I will one day.
+
+    User 2: I hope you do!
+
+    User 1: Thanks! So, what''s your favorite flower?
+
+    User 2: My favorite flower is a rose. They''re so beautiful and they smell amazing.
+
+    User 1: Roses are great! I love the way they smell.
+
+    User 2: Me too! They''re my favorite flower.
+
+    User 1: Well, it was nice chatting with you!
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

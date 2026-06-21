@@ -1,0 +1,17 @@
+id: 00029091
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 29091
+persona_description: A scientist or researcher who is interested in the history of medicine and the development of new drugs. This person is likely to be familiar with the use of curare as a neurotoxin
+  and its role in the assassination plot during World War One. They may also be interested in the use of Botox in plastic surgery and the different effects of the two compounds.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

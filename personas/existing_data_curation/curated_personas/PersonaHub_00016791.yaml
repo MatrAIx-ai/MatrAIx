@@ -1,0 +1,18 @@
+id: 00016791
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16791
+persona_description: A healthcare professional with expertise in parasitology and malaria diagnosis, particularly in the diagnosis of Plasmodium falciparum and Plasmodium malariae. They are knowledgeable
+  in the diagnostic techniques and laboratory procedures used to identify and differentiate between the two species. They are experienced in managing and treating malaria patients, and are equipped with
+  the knowledge and skills necessary to provide accurate and timely diagnosis and treatment recommendations.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: parasitology
+  general_domain_top01pct: None
+  specific_domain_top01pct: malaria diagnosis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: 00053809
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53809
+persona_description: A geologist who is interested in studying the history and impact of earthquakes, particularly those with a high number of estimated fatalities. They are likely to be interested in the
+  specific dates, locations, and estimated numbers of people killed associated with each earthquake. They may also be interested in the broader context of earthquake studies, such as the impact of earthquakes
+  on infrastructure and society.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: earthquake science
+  general_domain_top01pct: None
+  specific_domain_top01pct: earthquake impact assessment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,86 @@
+id: 00001249
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1249
+data:
+  user 1 personas: 'I am not married.
+
+    Have both daughters and sons.
+
+    I like to sing.
+
+    I love basketball.
+
+    I like to hunt.'
+  user 2 personas: 'I m from california.
+
+    I like to be outdoors.
+
+    I think recycling is important.
+
+    I m a student.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m doing well, thanks for asking! How about you?
+
+    User 1: I''m doing great, thanks! I''m from California. Where are you from?
+
+    User 2: I''m also from California! What part of the state are you from?
+
+    User 1: I''m from the Bay Area. What about you?
+
+    User 2: I''m from Los Angeles.
+
+    User 1: Cool! I''ve been to LA a few times. It''s a great city.
+
+    User 2: Thanks! It''s definitely a fun place to live.
+
+    User 1: I''m a student. What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That''s awesome! I''m sure you have a lot of fun with your students.
+
+    User 2: I do! I love working with kids.
+
+    User 1: Me too! They''re so funny and creative.
+
+    User 2: I agree! They always make me laugh.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, biking, and swimming. I also like to read and play video games.
+
+    User 1: Those all sound like fun activities! I like to sing, play basketball, and hunt.
+
+    User 2: Oh, that''s cool! I''ve always wanted to learn how to sing.
+
+    User 1: It''s not that hard! I''m sure you''d be a natural.
+
+    User 2: Thanks! I''ll have to give it a try sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to go hiking with my friends.
+
+    User 2: That sounds like fun! I wish I could go with you.
+
+    User 1: You''re welcome to come! We''d love to have you.
+
+    User 2: Thanks for the offer! I''ll let you know if I can make it.
+
+    User 1: Okay, sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

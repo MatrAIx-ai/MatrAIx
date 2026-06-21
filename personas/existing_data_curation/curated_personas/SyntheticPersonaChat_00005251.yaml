@@ -1,0 +1,70 @@
+id: '00005251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5251
+data:
+  user 1 personas: 'I currently work at mcdonalds.
+
+    I live with my parents.
+
+    I am eighteen years old.
+
+    I am saving money to buy my first car.'
+  user 2 personas: 'I love fast food.
+
+    I am a stay at home mom.
+
+    I watch a lot of movies.
+
+    I love to clean.
+
+    I do not have much energy.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi! My name is [user 2 name].
+
+    User 1: Nice to meet you! My name is [user 1 name].
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay at home mom.
+
+    User 1: Oh, that''s cool! How many kids do you have?
+
+    User 2: I have two kids, a boy and a girl.
+
+    User 1: Aww, that''s cute! What are their names?
+
+    User 2: Their names are [kids names].
+
+    User 1: Nice! What are your hobbies?
+
+    User 2: I love to watch movies, I love to clean, and I love to eat fast food.
+
+    User 1: Wow, we have a lot in common! I love watching movies, I love to clean, and I love fast food too!
+
+    User 2: That''s awesome! What''s your favorite movie?
+
+    User 1: My favorite movie is The Godfather.
+
+    User 2: Oh, that''s a good one! Mine is The Shawshank Redemption.
+
+    User 1: That''s another good one! I''ve seen it a few times.
+
+    User 2: Me too! It''s so good.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the movies, I like to go shopping, and I like to go out to eat.
+
+    User 1: Wow, we have a lot in common! I love to go to the movies, I love to go shopping, and I love to go out to eat too!
+
+    User 2: That''s awesome! We should hang out sometime.
+
+    User 1: That would be fun! I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

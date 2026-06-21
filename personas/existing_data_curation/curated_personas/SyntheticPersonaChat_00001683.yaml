@@ -1,0 +1,80 @@
+id: 00001683
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1683
+data:
+  user 1 personas: 'I love eating out.
+
+    I like nature.
+
+    My favorite color is blue.
+
+    I like to go hiking.'
+  user 2 personas: 'I live alone.
+
+    I haven t spoken to my family in years.
+
+    I enjoy hitchhiking.
+
+    I have over 4000 friends on facebook.
+
+    Formal situations make me uncomfortable.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I love to go hiking, I enjoy nature, and I love eating out.
+
+    User 1: That sounds like a lot of fun! I love to hike too. Where are some of your favorite places to hike?
+
+    User 2: I love hiking in the mountains. I love the views and the fresh air.
+
+    User 1: Me too! I love the feeling of being surrounded by nature.
+
+    User 2: I also like to go hiking in the woods. I love the smell of the trees and the sound of the birds.
+
+    User 1: That sounds amazing! I''ve never been hiking in the woods before.
+
+    User 2: You should try it! It''s a great way to relax and enjoy nature.
+
+    User 1: I will! I''ve been looking for new places to hike, so I''ll definitely keep that in mind.
+
+    User 2: You won''t regret it!
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also love to go to the movies. I''m a huge fan of the Marvel Cinematic Universe.
+
+    User 1: Me too! I love the Marvel movies. I''m really excited for the new Dr. Strange movie.
+
+    User 2: Me too! I''m a big fan of Benedict Cumberbatch.
+
+    User 1: I am too! He''s a great actor.
+
+    User 2: I agree! He''s perfect for the role of Dr. Strange.
+
+    User 1: I can''t wait to see the new movie!
+
+    User 2: Me neither! It''s going to be amazing!
+
+    User 1: Well, it was nice chatting with you, [user 2''s name].
+
+    User 2: It was nice chatting with you too, [user 1''s name].
+
+    User 1: Maybe we can go hiking together sometime.
+
+    User 2: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

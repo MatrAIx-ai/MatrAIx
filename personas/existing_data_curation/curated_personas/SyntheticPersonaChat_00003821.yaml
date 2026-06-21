@@ -1,0 +1,72 @@
+id: 00003821
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3821
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I love to dance.
+
+    I drive a prius.
+
+    My mom was a hairdresser.
+
+    I work at a coffee shop.'
+  user 2 personas: 'I like standing in the rain.
+
+    Rita hayworth is the woman of my dreams.
+
+    My glasses are always dirty and i cannot seem to get them clean.
+
+    Sometimes i wish my computer would work faster.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to dance, listen to music, and stand in the rain.
+
+    User 1: Oh, that''s cool. I love to dance too! What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but I''m really into jazz and blues right now.
+
+    User 1: I love jazz too! I used to play the saxophone in high school.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play an instrument.
+
+    User 1: You should totally do it! It''s a lot of fun.
+
+    User 2: I know, I''ve been thinking about it.
+
+    User 1: Well, if you ever decide to take lessons, let me know. I''ll be happy to help you out.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to read and go for walks in the park.
+
+    User 1: Me too! I love to read. What are some of your favorite books?
+
+    User 2: I love all kinds of books, but I''m really into historical fiction right now.
+
+    User 1: I love historical fiction too! I''ve been reading a lot of books about the Civil War lately.
+
+    User 2: Oh, that''s cool. I''ve been reading a lot about the Victorian era.
+
+    User 1: I''ve heard that''s really interesting.
+
+    User 2: Yeah, it is! I love reading about all the different social and political changes that happened during that time period.
+
+    User 1: Me too! That sounds like a great book. I''ll have to check it out.
+
+    User 2: You should! I''m sure you''d like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

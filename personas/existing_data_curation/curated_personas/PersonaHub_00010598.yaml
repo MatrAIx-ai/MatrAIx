@@ -1,0 +1,18 @@
+id: 00010598
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10598
+persona_description: A medical professional with extensive knowledge and experience in treating chemical and poison ingestion, including the use of activated charcoal as a counteragent. They are aware of
+  the potential dangers and side effects of activated charcoal and are skilled in assessing patients and choosing the appropriate treatment for their specific needs. They are also aware of the importance
+  of time in treating such cases and are prepared to make quick decisions to ensure the best outcome for the patient.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: toxicology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

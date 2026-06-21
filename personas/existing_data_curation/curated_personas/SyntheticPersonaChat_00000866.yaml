@@ -1,0 +1,68 @@
+id: 00000866
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 866
+data:
+  user 1 personas: 'I travel often.
+
+    I live with my parents.
+
+    I ve an iphone.
+
+    My favorite color is red.'
+  user 2 personas: 'My mom went crazy when i was three and i haven t seen her since.
+
+    My hair is black and curly.
+
+    I am an accountant.
+
+    My dog is my best friend.
+
+    I believe in leprechauns.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I like to play video games and I''m a big fan of fantasy books.
+
+    User 1: Oh, that''s cool. I like to play video games too. What kind of games do you like to play?
+
+    User 2: I like to play role-playing games and adventure games. I also like to play some action games.
+
+    User 1: I like adventure games too. I''m playing one right now where I have to find a treasure map.
+
+    User 2: Oh, that sounds fun. I''m playing a role-playing game where I''m a wizard trying to save the world from evil.
+
+    User 1: That sounds cool. I''ve never played a role-playing game before.
+
+    User 2: You should try it. They''re really fun.
+
+    User 1: I think I will. I''m always looking for new games to play.
+
+    User 2: Well, I''m sure you''ll like it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m an accountant.
+
+    User 1: Oh, that''s cool. I''m a software engineer.
+
+    User 2: Oh, that''s awesome. I''ve always been interested in software engineering.
+
+    User 1: It''s a lot of fun. I get to work on a lot of different projects.
+
+    User 2: That''s great. I''m sure it keeps you busy.
+
+    User 1: It does. But it''s a good kind of busy.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what''s your favorite color?
+
+    User 2: My favorite color is blue.
+
+    User 1: Me too! It''s a calming color.
+
+    User 2: I know, right? It''s my favorite color for a lot of reasons.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,86 @@
+id: '00005053'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5053
+data:
+  user 1 personas: 'I love watching funny movies.
+
+    I listen to all kinds of music.
+
+    My favorite color is green.
+
+    I like to play tennis.'
+  user 2 personas: 'I own my own small marketing consulting agency.
+
+    My favorite band is radiolead.
+
+    I am married to my wonderful husband.
+
+    We have two dogs small dogs.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name], what''s yours?
+
+    User 2: Hello, nice to meet you, my name is [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I own my own small marketing consulting agency, and I love playing music.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I love playing rock music, my favorite band is radiohead.
+
+    User 1: Nice, I love radiohead too. What is your favorite song by them?
+
+    User 2: My favorite song by them is "Paranoid Android".
+
+    User 1: That''s a great song, I love the guitar solo in it.
+
+    User 2: Yeah, it''s one of my favorite solos of all time.
+
+    User 1: What other bands do you like?
+
+    User 2: I also like to listen to a lot of alternative rock, like the strokes, and the killers.
+
+    User 1: Nice, I love the strokes too. I''ve seen them live a few times.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to see them live.
+
+    User 1: You should definitely go if you get the chance, they''re amazing.
+
+    User 2: I will, thanks for the recommendation.
+
+    User 1: No problem. So, what do you like to do for fun?
+
+    User 2: I like to play tennis, and I also like to go hiking.
+
+    User 1: Nice, I like to play tennis too. I''m not very good at it, but it''s fun.
+
+    User 2: Same here, I''m not very good either, but I still enjoy it.
+
+    User 1: What else do you like to do?
+
+    User 2: I also like to watch funny movies, and I like to read.
+
+    User 1: Nice, I love to watch funny movies too. What are some of your favorite comedies?
+
+    User 2: I love the Hangover movies, and I also like the Anchorman movies.
+
+    User 1: Nice, I love the Hangover movies too. I''ve seen them all a few times.
+
+    User 2: Me too, they''re so funny. What are some of your favorite books?
+
+    User 1: I love the Harry Potter series, and I also like the Hunger Games series.
+
+    User 2: Nice, I love the Harry Potter series too. I''ve read all of the books and seen all of the movies.
+
+    User 1: Me too, I''ve read all of the books and seen all of the movies. The Harry Potter series is so good.
+
+    User 2: It really is. So, what do you do for a living?
+
+    User 1: I''m a software engineer at Google.
+
+    User 2: Oh, that''s cool! I work as a marketing consultant.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

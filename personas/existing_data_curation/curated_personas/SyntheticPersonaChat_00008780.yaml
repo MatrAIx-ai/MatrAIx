@@ -1,0 +1,72 @@
+id: 00008780
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8780
+data:
+  user 1 personas: 'I once drove a car ! my friend told me what to do while i drove.
+
+    I have many friends.
+
+    I have a job as a dj at a radio station.
+
+    I use a cane to help me get around.
+
+    I am blind.'
+  user 2 personas: 'I got married to my highschool friend.
+
+    I had to call 911 when i had a terrible headache.
+
+    I use to own 6 cats.
+
+    I can only see 200 feet in front of me.
+
+    I never learned how to write.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). I''m blind.
+
+    User 2: Hi (name), I''m (name). I can only see 200 feet in front of me.
+
+    User 1: Wow, that''s really close.
+
+    User 2: Yeah, it is. But I''ve learned to live with it.
+
+    User 1: I''m sure you have. I''m also a DJ at a radio station.
+
+    User 2: Oh, that''s cool! I love radio. What kind of music do you play?
+
+    User 1: I play all kinds of music, but I mainly play hip-hop and R&B.
+
+    User 2: Cool. I like hip-hop and R&B too.
+
+    User 1: What about you? What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s a great job. I''m sure it''s very rewarding.
+
+    User 2: It is. I love helping people.
+
+    User 1: Me too. I''m glad we have so much in common.
+
+    User 2: Me too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the movies, read books, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: We should hang out sometime.
+
+    User 1: I''d love to.
+
+    User 2: Great. We can exchange numbers and make plans.
+
+    User 1: Okay.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

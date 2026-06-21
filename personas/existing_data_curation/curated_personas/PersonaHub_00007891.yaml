@@ -1,0 +1,20 @@
+id: 00007891
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7891
+persona_description: A healthcare professional who specializes in the early detection and intervention of diabetic retinopathy, focusing on the analysis and automated detection of various stages and features
+  of the disease through image analysis tools, with a specific interest in the optic disc, exudates, microaneurysms, and hemorrhages. They have a background in computer science, specifically in image processing
+  and pattern recognition, and are proficient in using tools such as active contours, mathematical morphology, and supervised classification algorithms to analyze and segment retinal images. They are highly
+  skilled in identifying and mapping the spatial distribution of retinal abnormalities, and are capable of automating the screening process for diabetic retinopathy, thereby reducing the workload on eye
+  specialists and improving the efficiency of screening and intervention.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Image Analysis and Pattern Recognition
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

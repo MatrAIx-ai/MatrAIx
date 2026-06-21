@@ -1,0 +1,60 @@
+id: '00006105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6105
+data:
+  user 1 personas: 'Its good to eat a lot of veggies.
+
+    I like meat too much.
+
+    I want to be a vegetarian.
+
+    I do the shopping in my house.'
+  user 2 personas: 'My mother is a ballet dancer.
+
+    I have a pencil thin mustache.
+
+    I am from baltimore md.
+
+    I am a medical file clerk.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. I''m from [city, state]. What''s your name?
+
+    User 2: Hello, my name is [name]. I''m from Baltimore, MD.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit Baltimore. What''s it like there?
+
+    User 2: It''s a great city! It has a lot to offer, from museums and historical sites to parks and restaurants.
+
+    User 1: That sounds like a lot of fun! I''m sure I''d like it there.
+
+    User 2: I''m glad you think so. If you ever do visit, be sure to check out the National Aquarium and the Baltimore Museum of Art.
+
+    User 1: I will, thanks for the recommendation!
+
+    User 2: No problem. So, what do you do for a living?
+
+    User 1: I''m a medical file clerk.
+
+    User 2: Oh, that sounds interesting. What does that involve?
+
+    User 1: Basically, I organize and file medical records.
+
+    User 2: That sounds like a lot of paperwork.
+
+    User 1: It can be, but it''s pretty straightforward.
+
+    User 2: I see. What do you like to do for fun?
+
+    User 1: I like to read, watch movies, and spend time with my friends and family.
+
+    User 2: That sounds like a lot of fun. I like to do a lot of the same things.
+
+    User 1: That''s great! We should get together sometime and do something fun.
+
+    User 2: I''d love that! I''ll send you my number so we can make plans.
+
+    User 1: Great! I look forward to hearing from you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

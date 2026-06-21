@@ -1,0 +1,84 @@
+id: 00006811
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6811
+data:
+  user 1 personas: 'I m currently looking for employment.
+
+    I am colour blind.
+
+    I am a mother of two.
+
+    My favourite band is rush.'
+  user 2 personas: 'I m always early.
+
+    Although i m studying to be a doctor , animals like me.
+
+    I am a graduate student.
+
+    I am in between classes.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What are you up to today?
+
+    User 2: I''m in between classes, just killing time.
+
+    User 1: Oh, that''s cool. I''m actually looking for employment.
+
+    User 2: Oh, really? What kind of work are you looking for?
+
+    User 1: I''m not sure yet. I''m open to anything.
+
+    User 2: Well, I''m a graduate student studying to be a doctor, and I''m always early for my classes. So if you need a study buddy, I''m your girl.
+
+    User 1: That''s a really cool job! I''m impressed. And sure, I''d love a study buddy.
+
+    User 2: Awesome! We could meet up at the library sometime.
+
+    User 1: That sounds great! I''ll PM you my schedule.
+
+    User 2: Perfect! In the meantime, let''s listen to some Rush.
+
+    User 1: I''m down! What''s your favorite song?
+
+    User 2: I love "Tom Sawyer." How about you?
+
+    User 1: Me too! I also love "Limelight" and "Freewill."
+
+    User 2: Those are great songs! I love Rush. They''re my favorite band.
+
+    User 1: Me too! They''re so good.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, watch movies, and play video games.
+
+    User 2: I love to read too! What are your favorite books?
+
+    User 1: I love the Harry Potter series, the Hunger Games series, and the Divergent series.
+
+    User 2: Those are all great series! I love them too.
+
+    User 1: Me too! I also like to watch horror movies.
+
+    User 2: I love horror movies too! What are your favorite horror movies?
+
+    User 1: I love the Conjuring series, the Insidious series, and the Saw series.
+
+    User 2: Those are all great horror movies! I love them too.
+
+    User 1: Me too! I also like to play video games.
+
+    User 2: I love video games too! What are your favorite video games?
+
+    User 1: I love the Grand Theft Auto series, the Call of Duty series, and the Battlefield series.
+
+    User 2: Those are all great video games! I love them too.
+
+    User 1: Me too! I think we have a lot in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00007670'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7670
+data:
+  user 1 personas: 'My favorite pass time is gazing at clouds.
+
+    I love chocolate milk shakes.
+
+    My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    My best friend is my dog allie.'
+  user 2 personas: 'I am a woman.
+
+    I love cats.
+
+    I am married to a man.
+
+    I like crocheting.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I love to crochet. I also love cats.
+
+    User 1: Me too! I have a dog named Allie. What kind of cats do you have?
+
+    User 2: I have a Siamese cat named Mittens and a tabby cat named Tiger.
+
+    User 1: They sound adorable! What do you like to crochet?
+
+    User 2: I like to crochet hats, scarves, and blankets. I also like to make amigurumi animals.
+
+    User 1: Those are all great ideas! I''ve always wanted to learn how to crochet.
+
+    User 2: You should! It''s a lot of fun and it''s a great way to relax.
+
+    User 1: Maybe I will! I''m always looking for new hobbies.
+
+    User 2: That''s great! I''m sure you''ll love it.
+
+    User 1: Thanks! So, what do you like to do for fun?
+
+    User 2: I love to read, go for walks, and spend time with my family.
+
+    User 1: Those all sound like great things to do. I like to do a lot of the same things.
+
+    User 2: That''s awesome! We should get together sometime and do something fun.
+
+    User 1: That would be great! I''m free on Saturday if you are.
+
+    User 2: Saturday sounds good to me. I''ll message you later this week and we can figure out what we want to do.
+
+    User 1: Okay, sounds good! Talk to you later.
+
+    User 2: Talk to you later!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

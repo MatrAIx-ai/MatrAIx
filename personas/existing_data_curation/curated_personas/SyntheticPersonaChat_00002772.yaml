@@ -1,0 +1,80 @@
+id: '00002772'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2772
+data:
+  user 1 personas: 'I have 2 dogs as pets.
+
+    I work as a veterinarians assistant.
+
+    My mother is allergic to dogs.
+
+    I love dogs.
+
+    I leave the dogs home when i visit my parents.'
+  user 2 personas: 'I just got a new sweater.
+
+    I also eat too much french fries.
+
+    I cannot do math.
+
+    It was too small.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: Hi! I''m doing okay. I just got a new sweater.
+
+    User 1: Oh, nice! What kind of sweater is it?
+
+    User 2: It''s a green sweater with a white stripe.
+
+    User 1: Sounds cute!
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to eat french fries.
+
+    User 1: Me too! I love french fries.
+
+    User 2: I eat too much of them.
+
+    User 1: I''m not sure I can help you with that. I eat too much of them too.
+
+    User 2: I know, right? They''re so addictive.
+
+    User 1: I can''t resist them.
+
+    User 2: Neither can I.
+
+    User 1: Well, I''m glad we have that in common.
+
+    User 2: Me too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to the movies.
+
+    User 1: Me too! What''s your favorite movie?
+
+    User 2: I don''t know. I have so many favorites.
+
+    User 1: Me too. I can''t name just one.
+
+    User 2: I like the classic ones.
+
+    User 1: Me too. I like the old movies.
+
+    User 2: I like the ones from the 1940s.
+
+    User 1: Me too. I like the black and white movies.
+
+    User 2: Me too. They''re so classic.
+
+    User 1: I know, right? I love them.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00065955
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65955
+persona_description: A concerned and informed individual who is aware of the potential dangers of snake bites and is looking for reliable information and resources to help prevent and treat them. They are
+  likely to be a healthcare professional, such as a physician or poison control specialist, who is familiar with the latest research and treatment options for snake bites. They are also likely to be aware
+  of the impact of venom potency on the severity of symptoms and the cost of treatment.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: toxicology
+  general_domain_top01pct: None
+  specific_domain_top01pct: herpetological toxicology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

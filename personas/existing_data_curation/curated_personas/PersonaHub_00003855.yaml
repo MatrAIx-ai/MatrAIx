@@ -1,0 +1,18 @@
+id: 00003855
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3855
+persona_description: A medical professional with a background in infectious diseases, particularly in the field of bioterrorism. This persona is knowledgeable about the symptoms and signs of various biological
+  warfare agents, including anthrax, tularemia, and plague. They are also familiar with the medical management and public health management strategies for these diseases. This persona may have a background
+  in medical research, epidemiology, or public health, and is likely to have read about these topics in the text.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: bioterrorism medicine
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

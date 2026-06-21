@@ -1,0 +1,18 @@
+id: '00043735'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43735
+persona_description: A healthcare professional who is interested in pediatric COVID-19 hospitalization rates and characteristics. They are particularly interested in understanding the hospitalization rates
+  among children aged <18 years, the characteristics of the hospitalized children, and the impact of the COVID-19 pandemic on the healthcare system. They are also interested in tracking the morbidity and
+  mortality associated with pediatric COVID-19 and the effectiveness of prevention efforts in congregate settings like childcare centers and schools.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

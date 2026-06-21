@@ -1,0 +1,18 @@
+id: '00032254'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32254
+persona_description: A neurologist or epilepsy specialist who is interested in the study of temporal lobe seizures and their lateralization. They are particularly interested in the role of speech manifestations
+  in the lateralization of these seizures and how they can be used as a diagnostic tool. They are likely to have expertise in EEG monitoring, intracarotid amobarbital tests, and the classification of speech
+  manifestations. They may also have experience with temporal lobectomy and the use of speech areas in electrical stimulation.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: epilepsy/neurophysiology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

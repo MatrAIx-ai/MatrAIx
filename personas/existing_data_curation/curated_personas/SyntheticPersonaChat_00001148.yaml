@@ -1,0 +1,60 @@
+id: 00001148
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1148
+data:
+  user 1 personas: 'I work at a vet.
+
+    My husband is a lawyer.
+
+    I love flowers.
+
+    I have 2 kids.
+
+    I have 3 dog.'
+  user 2 personas: 'I play jazz piano in a band.
+
+    I like to go hiking on the weekends.
+
+    I can speak arabic , english , and french.
+
+    My family is from algeria.
+
+    I am a barista.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. I work at a vet and I love flowers. I have two kids and three dogs.
+
+    User 2: Hi, I''m [user 2]. I play jazz piano in a band, I like to go hiking on the weekends, and I can speak Arabic, English, and French. My family is from Algeria and I work as a barista.
+
+    User 1: That''s cool! I love jazz piano, too. Do you have any favorite pieces you like to play?
+
+    User 2: I love playing "Autumn Leaves" and "So What". They''re both classic jazz standards.
+
+    User 1: Those are both great songs! I love the way they use the blues scale.
+
+    User 2: Me too! The blues scale is so versatile and it can be used in so many different ways.
+
+    User 1: I agree! It''s one of my favorite scales to use.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go hiking, too! I also like to read and watch movies.
+
+    User 2: I love to read and watch movies, too! What are some of your favorite books and movies?
+
+    User 1: I love the Harry Potter series and I love the Lord of the Rings movies.
+
+    User 2: I love those books and movies, too! I also love the Hunger Games series and the Star Wars movies.
+
+    User 1: I love the Hunger Games series and the Star Wars movies, too!
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: I think so too!
+
+    User 2: I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

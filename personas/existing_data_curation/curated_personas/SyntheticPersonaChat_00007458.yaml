@@ -1,0 +1,43 @@
+id: 00007458
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7458
+data:
+  user 1 personas: 'I don t fully understand my own feelings.
+
+    I am afraid of rejection from my parents.
+
+    I wonder what it would be like to be a different gender.
+
+    I am unsure of who i am attracted to.'
+  user 2 personas: 'I live alone in a cabin.
+
+    I like to go fishing on the lake.
+
+    I own a boat.
+
+    I have 5 grandchildren.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m not sure if this is the right place to talk about this, but I''m not sure how I feel about my gender. I''m afraid of being rejected by my parents, and I''m unsure of who I''m attracted
+    to.
+
+    User 2: I''m sorry to hear that you''re going through this. I can''t tell you what you should do, but I can listen if you want to talk about it.
+
+    User 1: Thanks, I appreciate that. I''ve been feeling like I''m not like other people, and I''m not sure what to do about it.
+
+    User 2: It''s okay to feel different. There are a lot of people who feel the same way you do.
+
+    User 1: I know, but I''m afraid to tell anyone about it. I''m afraid of being judged.
+
+    User 2: You don''t have to tell anyone if you don''t want to. But if you do decide to tell someone, I''m here for you.
+
+    User 1: Thank you, I appreciate that. I''m not sure what I''m going to do yet, but I''ll keep you updated.
+
+    User 2: Okay, I''m here for you whenever you need me.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: '00045101'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45101
+persona_description: A scientist with expertise in marine biology and conservation, particularly focused on the study of southern right whales. She is passionate about conservation efforts and has a deep
+  understanding of the biology, anatomy, and behavior of these marine mammals. She is dedicated to collecting data and conducting research to better understand these endangered species and their habitats.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: marine biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: marine mammal conservation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

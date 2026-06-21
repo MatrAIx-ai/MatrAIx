@@ -1,0 +1,64 @@
+id: 00002814
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2814
+data:
+  user 1 personas: 'I like to go for runs.
+
+    I play the guitar.
+
+    I like country music.
+
+    I have a dog and two cats.
+
+    I live by myself.'
+  user 2 personas: 'I am a cyclist.
+
+    My favorite food is pizza.
+
+    I work at a restaurant as waiter.
+
+    My father used to be a cop.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go cycling, play guitar, and listen to country music.
+
+    User 1: That''s cool! I like to go for runs, play the guitar, and listen to country music too.
+
+    User 2: That''s awesome! What kind of guitar do you play?
+
+    User 1: I play an acoustic guitar.
+
+    User 2: Nice! I play an electric guitar.
+
+    User 1: Oh, cool! What kind of music do you like to play?
+
+    User 2: I like to play country music, rock music, and blues music.
+
+    User 1: That''s cool! I like to play all kinds of music, but I mostly play country music.
+
+    User 2: Oh, cool! We should play a song together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange phone numbers and set up a time to meet.
+
+    User 1: Sure!
+
+    User 2: I''m free next weekend.
+
+    User 1: Me too!
+
+    User 2: Great! Let''s meet at my house on Saturday morning.
+
+    User 1: Sounds good! I''ll see you then.
+
+    User 2: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

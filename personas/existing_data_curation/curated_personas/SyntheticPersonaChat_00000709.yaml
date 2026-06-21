@@ -1,0 +1,80 @@
+id: 00000709
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 709
+data:
+  user 1 personas: 'I like to hunt.
+
+    I had two cats growing up.
+
+    Both my parents were teachers.
+
+    I like to donate time at the local animal shelter.'
+  user 2 personas: 'I collect comic books.
+
+    I own two snakes.
+
+    I am allergic to dust.
+
+    I only eat organic food.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect comic books, own two snakes, and only eat organic food.
+
+    User 1: That''s interesting. I like to hunt, had two cats growing up, both my parents were teachers, and I like to donate time at the local animal shelter.
+
+    User 2: Oh wow, we have a few things in common! I also like to donate time at the local animal shelter. I also have two cats.
+
+    User 1: That''s so cool! I''m glad we have something in common. I''ve always been interested in collecting comic books, but I''ve never really gotten into it.
+
+    User 2: It''s not too hard to get into. You just have to find a few series that you like and start collecting them.
+
+    User 1: I think I might give it a try. I''ve heard a lot of good things about comic books.
+
+    User 2: You won''t regret it. They''re a lot of fun to read and collect.
+
+    User 1: Thanks for the recommendation. I''ll definitely look into it.
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! I''ve always thought about being a teacher.
+
+    User 2: It''s a great job. I love working with kids and helping them learn.
+
+    User 1: I can imagine. It must be really rewarding.
+
+    User 2: It is. I love seeing the light bulb go on when a kid finally understands something.
+
+    User 1: That''s awesome. I''m glad you enjoy your job.
+
+    User 2: Thanks. I do.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to be doing some yard work and cleaning up the house.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I love getting things done around the house.
+
+    User 1: I can imagine. It''s always satisfying to have a clean and organized house.
+
+    User 2: Exactly. I love it.
+
+    User 1: Well, I have to go now. It was nice talking to you.
+
+    User 2: You too. Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00007115'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7115
+data:
+  user 1 personas: 'I cannot hold down a job for very long.
+
+    If i am not drinking , i am thinking , which makes me uncomfortable.
+
+    I am constantly drinking.
+
+    I blame myself for all of my problems.
+
+    My family loves me , but keeps their distance.'
+  user 2 personas: 'My wife is a nurse.
+
+    My favorite place is the mountains.
+
+    I like to play baseball.
+
+    I have 2 kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. What do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool. I can''t imagine doing a job like that. I''m not sure I could handle seeing people sick all the time.
+
+    User 2: It''s not always easy, but it''s rewarding. I love helping people.
+
+    User 1: That''s great. What''s your favorite place to go?
+
+    User 2: I love the mountains. I love being outdoors and being active.
+
+    User 1: Me too! I love hiking and camping.
+
+    User 2: I love those things too! I also love to go fishing.
+
+    User 1: Fishing is fun, but I''m not very good at it.
+
+    User 2: You just have to keep trying. I''m sure you''ll get better with practice.
+
+    User 1: Thanks for the encouragement. I''m going to need it.
+
+    User 2: You''re welcome.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play baseball. I used to play in high school and college.
+
+    User 1: That''s cool. I played baseball in high school too, but I wasn''t very good.
+
+    User 2: You don''t have to be good to have fun.
+
+    User 1: That''s true.
+
+    User 2: Do you have any kids?
+
+    User 1: Yes, I have two kids.
+
+    User 2: Oh, that''s great. How old are they?
+
+    User 1: They''re 6 and 8 years old.
+
+    User 2: That''s a great age. They''re still young enough to enjoy being around you, but they''re also old enough to be independent.
+
+    User 1: That''s true. I love spending time with them.
+
+    User 2: I''m sure they love spending time with you too.
+
+    User 1: I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

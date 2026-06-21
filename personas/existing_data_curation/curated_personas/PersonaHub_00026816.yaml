@@ -1,0 +1,18 @@
+id: 00026816
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26816
+persona_description: A System Administrator who manages the configuration and management of slices in a Linux system. They are responsible for assigning slices to units based on their needs and ensuring
+  that the system is organized hierarchically. They are familiar with the concept of slices, their management, and the associated resource limits that apply to all processes of all units contained in that
+  slice. They also understand the default dependencies and the implications of disabling the DefaultDependencies option for slice units.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Linux System Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

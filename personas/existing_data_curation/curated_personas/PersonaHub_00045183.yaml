@@ -1,0 +1,18 @@
+id: 00045183
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45183
+persona_description: A healthcare professional who is responsible for administering the pneumococcal vaccine to individuals who are at higher risk of complications, such as children under two, adults aged
+  65 or over, and individuals with certain long-term health conditions. They are aware of the importance of the vaccine in preventing pneumococcal infections and the different dosing schedules for different
+  age groups and health conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

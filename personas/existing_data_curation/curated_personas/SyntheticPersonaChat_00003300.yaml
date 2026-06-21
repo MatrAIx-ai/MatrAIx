@@ -1,0 +1,90 @@
+id: '00003300'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3300
+data:
+  user 1 personas: 'I am a huge fan of dogs.
+
+    I am trying to write an ebook on animals.
+
+    I wish to buy a corvette when i retire.
+
+    I am recently divorced.'
+  user 2 personas: 'I love animals and like working with them.
+
+    My parents are divorced.
+
+    I am in a local theater company.
+
+    I am engaged to be married.'
+  Best Generated Conversation: 'User 1: I am a huge fan of dogs.
+
+    User 2: I love animals and like working with them.
+
+    User 1: That''s great! I''m trying to write an ebook on animals.
+
+    User 2: That''s awesome! What kind of animals are you writing about?
+
+    User 1: I''m writing about dogs. I''m a huge fan of them and I think they''re the best animals.
+
+    User 2: I agree! Dogs are amazing. They''re so loyal and loving.
+
+    User 1: I know, right? I love everything about them. Their fur, their eyes, their tails. They''re just the best.
+
+    User 2: I know what you mean. Dogs are my favorite animals.
+
+    User 1: Mine too.
+
+    User 2: So, what are you planning to do with your ebook? Are you going to publish it?
+
+    User 1: I''m not sure yet. I''m still working on it, but I think I might publish it if it''s good enough.
+
+    User 2: I think it would be great if you did. I''m sure a lot of people would love to read it.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a web developer.
+
+    User 2: Oh, that''s cool! I''m an actor.
+
+    User 1: That''s great! What kind of shows do you do?
+
+    User 2: I do a lot of local theater. I''m also in a local theater company.
+
+    User 1: That sounds like fun! I''ve always wanted to try acting.
+
+    User 2: It''s a lot of fun! You should give it a try.
+
+    User 1: Maybe I will.
+
+    User 2: So, how long have you been divorced?
+
+    User 1: About six months.
+
+    User 2: Oh, I''m sorry to hear that.
+
+    User 1: It''s okay. It''s been tough, but I''m getting through it.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what''s it like being engaged to be married?
+
+    User 2: It''s amazing! I''m so excited to be marrying the love of my life.
+
+    User 1: That''s great! I''m happy for you.
+
+    User 2: Thanks!
+
+    User 1: So, what are you most looking forward to about your wedding?
+
+    User 2: I''m most looking forward to spending the rest of my life with the love of my life.
+
+    User 1: That''s so sweet. I''m sure you''ll have a beautiful wedding.
+
+    User 2: Thank you! I''m sure it will be.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

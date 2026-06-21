@@ -1,0 +1,84 @@
+id: '00002533'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2533
+data:
+  user 1 personas: 'I like to wear black.
+
+    I like rock music.
+
+    I drive a black car.
+
+    My favorite artist is guns and roses.'
+  user 2 personas: 'I like to watch tv.
+
+    I also love orange juice.
+
+    I love ham and cheese sandwiches.
+
+    My name is arnold.
+
+    I am 10 years old.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m Arnold.
+
+    User 1: It''s nice to meet you, Arnold. What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and eat ham and cheese sandwiches.
+
+    User 1: Cool, I like to watch TV too. What are your favorite shows?
+
+    User 2: I like to watch The Simpsons, Family Guy, and SpongeBob SquarePants.
+
+    User 1: I love The Simpsons! I also like Family Guy.
+
+    User 2: Me too! They''re both so funny.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play racing games, action games, and platformers.
+
+    User 1: Cool, I like to play racing games too.
+
+    User 2: What''s your favorite racing game?
+
+    User 1: My favorite racing game is Forza Horizon 5.
+
+    User 2: I''ve never played that one, but I''ve heard good things about it.
+
+    User 1: It''s a lot of fun. You should check it out.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool. What kind of software do you write?
+
+    User 1: I write software for video games.
+
+    User 2: That''s awesome! I love video games.
+
+    User 1: Me too! It''s a lot of fun to be able to make games for people to enjoy.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be a video game designer.
+
+    User 1: That''s great! I''m sure you''ll be a great video game designer.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you, Arnold.
+
+    User 2: It was nice talking to you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

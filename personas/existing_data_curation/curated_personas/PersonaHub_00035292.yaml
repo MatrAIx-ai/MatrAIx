@@ -1,0 +1,20 @@
+id: 00035292
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35292
+persona_description: A PCB fab technician who is proficient in using electronic test equipment to perform electrical testing on printed circuit boards (PCBs) before they are sent to a fabrication house
+  for production. They are familiar with the process of extracting pad-lists and netlists from gerbers and using robotic arms with flying probes to manually ohm-out all the connected nets. They are also
+  familiar with the use of a bed-of-nails tester to measure resistance and conductance from locations on the PCB board surface to other points on the surface, which is used to detect bad plated holes as
+  it is more process-sensitive. They are likely to have a deep understanding of the intricacies of PCB fabrication and testing, and have experience with using electronic test equipment to perform electrical
+  testing on PCBs.
+expertise:
+  general_domain_top1pct: electronics engineering
+  specific_domain_top1pct: PCB testing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

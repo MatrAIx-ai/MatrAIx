@@ -1,0 +1,17 @@
+id: '00051100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51100
+persona_description: A veterinarian who specializes in treating dogs with facial swelling. The veterinarian is knowledgeable about the different causes of facial swelling in dogs and has experience in identifying
+  and treating the underlying pathology behind the swelling. They are also skilled in dietary tests and intradermal techniques to detect allergic reactions in dogs.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: Veterinary medicine (canine dermatology)
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

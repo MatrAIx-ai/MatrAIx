@@ -1,0 +1,19 @@
+id: 00017981
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 17981
+persona_description: A team of Boston University students who worked on a project to develop a distributed tracing solution for Ceph, a high-performance distributed storage application, using the open-source
+  tracing tool Jaeger. The students designed and implemented a solution using Jaeger and Ceph, deployed a distributed chat application on MOC, and compared the tracing mechanisms of Blkin with Jaeger. They
+  aimed to provide a better understanding of the system's behavior and to identify the causes of performance issues. The students were interested in debugging large distributed systems and found Jaeger
+  to be an effective solution.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Distributed Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

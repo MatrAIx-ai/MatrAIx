@@ -1,0 +1,52 @@
+id: '00000676'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 676
+data:
+  user 1 personas: 'I like fishing.
+
+    I can t eat them but they re pretty.
+
+    I drink beers and go to the creek.
+
+    I usually catch sunfish.
+
+    I m a simple man.'
+  user 2 personas: 'I am tall.
+
+    I never eat veggies.
+
+    I am strong.
+
+    I love to run fast.
+
+    I am young.'
+  Best Generated Conversation: 'User 1: I like to go fishing.
+
+    User 2: Me too! I love being outside and catching fish.
+
+    User 1: I usually just catch sunfish, but they''re pretty.
+
+    User 2: I''ve never caught a sunfish before. What are they like?
+
+    User 1: They''re small and colorful. They''re good for eating, but I like to catch them for fun.
+
+    User 2: That sounds like a lot of fun. I''d love to go fishing with you sometime.
+
+    User 1: That would be great! I''m always looking for new fishing buddies.
+
+    User 2: I''m a little busy this week, but I''m free next weekend.
+
+    User 1: That works for me! I''ll bring the gear.
+
+    User 2: Great! I''ll bring the drinks.
+
+    User 1: Sounds like a plan.
+
+    User 2: See you next weekend!
+
+    User 1: Looking forward to it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

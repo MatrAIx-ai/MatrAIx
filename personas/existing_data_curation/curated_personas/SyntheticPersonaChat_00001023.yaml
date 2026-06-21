@@ -1,0 +1,66 @@
+id: '00001023'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1023
+data:
+  user 1 personas: 'I have two kids.
+
+    I am fairly conservative in politics.
+
+    I work at amazon.
+
+    I live in a rural community.
+
+    I love robotics.'
+  user 2 personas: 'I work out to look good.
+
+    I work in marketing , and i love it.
+
+    I spend a lot of time on my hair and make up.
+
+    I m an only child.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [name], how are you?
+
+    User 2: I''m doing great, thanks for asking! What about you?
+
+    User 1: I''m doing well, thank you! I''m a conservative and I work at Amazon. I love robotics and I have two kids. What about you?
+
+    User 2: I''m a liberal and I work in marketing. I love working out and I''m an only child.
+
+    User 1: Oh, that''s cool! I''ve never met a conservative who likes robotics before.
+
+    User 2: Yeah, I''m a bit of a maverick. I don''t always agree with my party on everything.
+
+    User 1: That''s cool. I''m not a huge fan of politics anyway. I''m more interested in robotics.
+
+    User 2: Me too! I think robotics is the future.
+
+    User 1: I agree! It''s going to change the world in so many ways.
+
+    User 2: I know, right? It''s so exciting!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a marketing manager for a tech company.
+
+    User 1: Oh, cool! What''s your favorite part about your job?
+
+    User 2: I love working with creative people and coming up with new ideas.
+
+    User 1: That sounds fun! I''m more of a technical person. I like working with robots and building things.
+
+    User 2: That''s cool too! I wish I was more technical.
+
+    User 1: It''s not too hard to learn. You just have to be willing to put in the time.
+
+    User 2: I''m sure I could do it. I''m just not sure if I''d be very good at it.
+
+    User 1: You''d be surprised. I thought I was terrible at it when I first started, but now I''m pretty good at it.
+
+    User 2: I''ll have to take your word for it.
+
+    User 1: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

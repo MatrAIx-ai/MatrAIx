@@ -1,0 +1,76 @@
+id: 00001900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1900
+data:
+  user 1 personas: 'I have purple hair.
+
+    I am 6 feet tall.
+
+    I am a genius.
+
+    I collect stray people like crazy cat ladys collect cats.'
+  user 2 personas: 'My brother lives in england.
+
+    My favorite tv show is friends.
+
+    My favorite food is sushi.
+
+    I own my own business.
+
+    I have a timeshare in mexico.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How are you?
+
+    User 1: I''m doing well, thanks! How about yourself?
+
+    User 2: I''m good, thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to watch TV, read, and eat sushi.
+
+    User 1: Me too! I love sushi. Where''s your favorite place to get it?
+
+    User 2: I like to go to a little place in the city. It''s called Sushi Den.
+
+    User 1: I''ve been there! It''s really good.
+
+    User 2: Yeah, it''s my favorite place to get sushi.
+
+    User 1: What''s your favorite TV show?
+
+    User 2: My favorite TV show is Friends.
+
+    User 1: I love Friends! I''ve seen every episode at least five times.
+
+    User 2: Me too! I love the characters and the storylines.
+
+    User 1: Me too! It''s so funny and relatable.
+
+    User 2: Yeah, it''s the perfect show to watch when you''re bored.
+
+    User 1: I agree! I love watching it when I''m feeling down.
+
+    User 2: Me too! It always cheers me up.
+
+    User 1: So, do you have any pets?
+
+    User 2: I have a dog named Bailey.
+
+    User 1: I love dogs! What kind of dog is he?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Oh, he sounds adorable!
+
+    User 2: He is! He''s the sweetest dog ever.
+
+    User 1: I''m sure he is! I love golden retrievers.
+
+    User 2: Me too! They''re the best dogs.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

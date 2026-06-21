@@ -1,0 +1,19 @@
+id: '00001020'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1020
+persona_description: A scientist who specializes in the study of protein production and its applications in medicine. This scientist has a background in molecular biology and has worked with various antibiotics
+  to understand their mechanism of action. They have made significant contributions to the field of antibiotic resistance and have published several papers on the topic. The scientist is interested in the
+  role of translocators in bacterial protein synthesis and has discovered a new way to protect them from being attacked by antibiotics. They are also interested in the potential use of translocators in
+  cancer research.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: protein production and its applications in medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

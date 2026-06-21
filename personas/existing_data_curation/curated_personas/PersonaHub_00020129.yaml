@@ -1,0 +1,18 @@
+id: 00020129
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20129
+persona_description: A healthcare provider who specializes in immunization and vaccination schedules for adults, children, and the elderly. They are responsible for providing guidance and advice on the
+  recommended vaccination schedule, risks of vaccine reactions, and the importance of vaccination in preventing fatal and life-threatening diseases. They also ensure that the recommended vaccines are administered
+  according to the approved schedule by the US Center for Disease Control and Prevention (CDC).
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: immunization and vaccination
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

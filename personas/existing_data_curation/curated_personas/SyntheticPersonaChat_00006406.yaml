@@ -1,0 +1,56 @@
+id: '00006406'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6406
+data:
+  user 1 personas: 'I have a collection of video games.
+
+    I work in a warehouse.
+
+    My son is a straight a student.
+
+    I have a very tone body.'
+  user 2 personas: 'I own a black suburban.
+
+    I spend a lot of time driving my kids to sports events.
+
+    I drink a lot of apple martinis when i get a girls night out.
+
+    I am a member of four book clubs , the pta , and two bunch groups.
+
+    I still dream about going to paris and designing clothes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: I''m a warehouse worker.
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: I have a son who is a straight A student.
+
+    User 2: I have two kids who are both in sports.
+
+    User 1: I collect video games.
+
+    User 2: I love to go shopping and drink apple martinis with my friends.
+
+    User 1: I''d love to visit Paris one day.
+
+    User 2: I''d love to design clothes one day.
+
+    User 1: I think we''d make a good team.
+
+    User 2: I think so too.
+
+    User 1: What do you say we grab a drink and talk about it?
+
+    User 2: Sounds good. I know a great little bar down the street.
+
+    User 1: Perfect. I''ll meet you there in 15 minutes.
+
+    User 2: See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

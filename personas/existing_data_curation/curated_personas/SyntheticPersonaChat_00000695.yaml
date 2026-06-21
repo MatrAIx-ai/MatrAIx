@@ -1,0 +1,54 @@
+id: 00000695
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 695
+data:
+  user 1 personas: 'I like to draw.
+
+    I am a vegan.
+
+    I am studying literature.
+
+    My favorite food is tacos.
+
+    I am from france.'
+  user 2 personas: 'I sit on my computer for several hours a day.
+
+    I wish i could speak another language.
+
+    I m bored with my current lifestyle.
+
+    I enjoy learning about other cultures.'
+  Best Generated Conversation: 'User 1: Salut! Je m''appelle [name]. Je suis étudiant en littérature à l''Université de Paris.
+
+    User 2: Bonjour! Je m''appelle [name]. Je suis de la Californie. Je suis un peu ennuyé avec mon style de vie actuel.
+
+    User 1: C''est dommage. Pourquoi es-tu ennuyé?
+
+    User 2: Je ne sais pas. Je pense que j''aimerais apprendre une autre langue ou vivre dans un autre pays.
+
+    User 1: Oh, je comprends. Je suis d''accord que ça pourrait être une bonne expérience.
+
+    User 2: Oui, je pense que ce serait.
+
+    User 1: Tu devrais essayer d''apprendre une langue étrangère. C''est très amusant!
+
+    User 2: Je vais essayer. Je pense que je vais commencer avec l''espagnol.
+
+    User 1: L''espagnol est une bonne langue à apprendre. C''est une langue très utile.
+
+    User 2: Oui, je sais. J''ai beaucoup d''amis hispanophones.
+
+    User 1: Oh, c''est bien! Tu devrais essayer de parler avec eux en espagnol.
+
+    User 2: Je vais essayer. Je pense que ça m''aidera à apprendre la langue.
+
+    User 1: Je suis sûr que ça t''aidera.
+
+    User 2: Merci pour l''idée.
+
+    User 1: De rien.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

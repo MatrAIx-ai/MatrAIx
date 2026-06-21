@@ -1,0 +1,19 @@
+id: 00052929
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52929
+persona_description: A programmer who is interested in the study of computer architecture and instruction formats. They are particularly interested in understanding how the opcode and register number fields
+  are used to control the behavior of instructions in a computer system. They are also interested in the differences between R-type instructions and load instructions, and how they are differentiated by
+  the "function" field. They are skilled in connecting the instruction fields to the register number inputs on a register file, and are familiar with the use of multiplexers to handle the varying bit patterns
+  of the opcode and register numbers. They are also knowledgeable about the implications of the instruction formats on the performance and efficiency of computer systems.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Computer Architecture
+  general_domain_top01pct: None
+  specific_domain_top01pct: Instruction Set Architecture
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

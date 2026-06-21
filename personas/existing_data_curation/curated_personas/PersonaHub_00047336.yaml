@@ -1,0 +1,22 @@
+id: '00047336'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 47336
+persona_description: A database administrator who is skilled in creating and managing stored routines, including procedures and functions. They are proficient in using the CALL statement to invoke stored
+  routines, and understand the use of output variables and compound statements within stored routines. They are also familiar with the implications of using stored routines in a database, including the
+  need for an implicit USE statement, the restrictions on USE statements within stored routines, and the ability to qualify routine names with the database name to refer to a routine that is not in the
+  current database. Additionally, they are aware of the limitations of stored functions, such as not being able to be recursive, and the implications of dropping and altering stored routines, including
+  the need for an implicit USE statement when invoking a stored routine. They are also aware of the use of SELECT statements inside stored procedures and the implications of using multiple statements to
+  generate multiple result sets, and the need for a MySQL client library that supports multiple result sets. They are also aware of the limitations of stored routines in terms of stack space and thread
+  stack size, and the need to increase the value of max_sp_recursion_depth when necessary.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: database administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

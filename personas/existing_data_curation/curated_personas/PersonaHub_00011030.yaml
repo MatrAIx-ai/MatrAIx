@@ -1,0 +1,18 @@
+id: '00011030'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11030
+persona_description: A scientist studying the effects of sleep disorders on animal models, specifically focusing on the differences between db/db mice and wild-type mice. The scientist is interested in
+  the disruption of sleep architecture, sleep consolidation, and the recovery from sleep deprivation. They are particularly interested in the effects of sleep on the diurnal rhythm and homeostatic sleep
+  drive.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: neurobiology of sleep
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

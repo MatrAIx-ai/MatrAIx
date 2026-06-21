@@ -1,0 +1,76 @@
+id: '00003701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3701
+data:
+  user 1 personas: 'I just graduated college.
+
+    I am hoping to play.
+
+    I am hoping to play basketball overseas.
+
+    I recently had knee surgery.
+
+    I am 7 foot tall.'
+  user 2 personas: 'I just started college.
+
+    I am living at home but hope to live in the dorms next year.
+
+    I work part time in the campus library.
+
+    I have 3 science classes.'
+  Best Generated Conversation: 'User 1: Hi! I''m new here.
+
+    User 2: Hey! Welcome to the club!
+
+    User 1: Thanks! I''m just starting out at this college.
+
+    User 2: Me too! I''m a freshman.
+
+    User 1: Nice! I''m a senior.
+
+    User 2: Wow, you''re a tall one!
+
+    User 1: Yeah, I''m 7 feet tall.
+
+    User 2: That''s awesome! I''m only 5''6".
+
+    User 1: I''m sure you''re still growing.
+
+    User 2: I hope so!
+
+    User 1: So, what are you studying?
+
+    User 2: I''m majoring in biology.
+
+    User 1: Oh, cool! I''m majoring in business.
+
+    User 2: That''s a good choice.
+
+    User 1: Thanks! I''m hoping to get a job in finance after I graduate.
+
+    User 2: Good luck! I''m hoping to do something with my biology degree, but I''m not sure what yet.
+
+    User 1: Well, I''m sure you''ll figure it out.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, watch movies, and hang out with my friends.
+
+    User 1: Me too! I also like to play basketball.
+
+    User 2: Oh, I love basketball! I''m not very good at it, but I like to play.
+
+    User 1: Well, we can play sometime if you want.
+
+    User 2: I''d love that!
+
+    User 1: Great! We can make plans after class.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

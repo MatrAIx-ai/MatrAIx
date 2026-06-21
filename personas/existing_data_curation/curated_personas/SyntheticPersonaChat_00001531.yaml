@@ -1,0 +1,70 @@
+id: '00001531'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1531
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I am a dancer.
+
+    I am a night owl.
+
+    I can play the piano.'
+  user 2 personas: 'I am terrible at math.
+
+    I am a college student.
+
+    I have a dog named socks.
+
+    Dancing is my passion.
+
+    I drive a silver lexus.'
+  Best Generated Conversation: 'User 1: Hey, I''m (your name). What''s your name?
+
+    User 2: I''m (their name). Nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I like to dance, and I''m a night owl.
+
+    User 1: Oh, me too! I love dancing. What kind of dancing do you do?
+
+    User 2: I do ballet, tap, and jazz.
+
+    User 1: Wow, that''s impressive! I''ve always wanted to try ballet, but I''m not very coordinated.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: Maybe I will! What''s your favorite thing about dancing?
+
+    User 2: I love the feeling of being free and expressing myself.
+
+    User 1: That''s great! I love that feeling too.
+
+    User 2: So, what''s your favorite kind of music to dance to?
+
+    User 1: I love all kinds of music, but I especially love dancing to upbeat pop music.
+
+    User 2: Me too! I love dancing to anything that gets me moving.
+
+    User 1: Me too! So, what do you do for a living?
+
+    User 2: I''m a college student, but I also work part-time as a dance instructor.
+
+    User 1: Oh, that''s cool! I''m a student too. What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Oh, that''s a good major. I''m thinking about majoring in business too.
+
+    User 2: It''s a great field! There are so many opportunities out there.
+
+    User 1: I know, right? That''s why I''m interested in it.
+
+    User 2: Well, it sounds like we have a lot in common.
+
+    User 1: I think so too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

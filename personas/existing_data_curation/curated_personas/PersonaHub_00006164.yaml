@@ -1,0 +1,18 @@
+id: '00006164'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6164
+persona_description: A medical imaging professional who is interested in utilizing liquid crystal displays (LCDs) with 10-bit grayscale capability to enhance the clarity and contrast of medical images.
+  This individual is likely to be interested in studying the human visual system's ability to distinguish small differences in luminance and is looking for ways to display medical images in a way that can
+  accurately represent the smallest variations in image contrast. This persona is likely to be interested in advanced medical imaging techniques and the latest research in the field of radiology.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: medical imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: liquid crystal display technology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

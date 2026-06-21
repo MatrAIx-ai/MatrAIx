@@ -1,0 +1,52 @@
+id: '00005511'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5511
+data:
+  user 1 personas: 'I am the youngest in my family.
+
+    My passion is photography.
+
+    I have two older brothers.
+
+    My favorite color is blue.
+
+    I am a freshman at nyu.'
+  user 2 personas: 'I am 5 3 and am the shortest person in my family.
+
+    My father is a school teacher , he teaches middle school.
+
+    I have four siblings.
+
+    I am the oldest sibling.'
+  Best Generated Conversation: 'User 1: Hi there! I''m a freshman at NYU and I love photography.
+
+    User 2: Hi! I''m a sophomore at NYU and I''m also in the photography club.
+
+    User 1: That''s awesome! What kind of photography do you like to do?
+
+    User 2: I like to do street photography, nature photography, and portrait photography.
+
+    User 1: Nice! I like to do street photography and portrait photography too.
+
+    User 2: What''s your favorite thing about photography?
+
+    User 1: I love the way photography can capture a moment in time and tell a story.
+
+    User 2: I agree! It''s a great way to express yourself and to connect with others.
+
+    User 1: I''m glad we have something in common! What''s your favorite photograph you''ve ever taken?
+
+    User 2: It''s a photo I took of my family at the beach. It was just a simple photo, but it captures the love and happiness we have for each other.
+
+    User 1: That''s a beautiful photo! It sounds like you have a great family.
+
+    User 2: Thanks! I''m lucky to have them.
+
+    User 1: Me too! I''m glad we got to chat about photography. It was nice to meet you!
+
+    User 2: It was nice to meet you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

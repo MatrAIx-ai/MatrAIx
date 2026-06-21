@@ -1,0 +1,80 @@
+id: '00001602'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1602
+data:
+  user 1 personas: 'I have 5 children.
+
+    I am a student.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.
+
+    My mom is a lawyer.'
+  user 2 personas: 'I love my girlfriend.
+
+    I live in the city.
+
+    I dyed my hair pink.
+
+    I have an older brother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go fishing.
+
+    User 1: That''s cool! I used to fish a lot when I was younger.
+
+    User 2: What''s your favorite fish to catch?
+
+    User 1: I like to catch bass.
+
+    User 2: Nice! I like to catch catfish.
+
+    User 1: I''ve never caught a catfish before.
+
+    User 2: You should try it sometime! They''re really fun to catch.
+
+    User 1: I will! What else do you like to do for fun?
+
+    User 2: I like to go hiking.
+
+    User 1: That''s cool! I love hiking too.
+
+    User 2: I like to go hiking in the mountains.
+
+    User 1: Me too! I love the views from the top of a mountain.
+
+    User 2: I do too! It''s so peaceful up there.
+
+    User 1: I know what you mean.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a student.
+
+    User 2: Oh, that''s cool! What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: Nice! I''m in the IT field.
+
+    User 1: That''s cool! What do you do?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s awesome! I''m just starting out in the field.
+
+    User 2: It''s a great field! There are a lot of opportunities out there.
+
+    User 1: I know, right? I''m excited to see what the future holds.
+
+    User 2: Me too! It''s a great time to be in the IT field.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

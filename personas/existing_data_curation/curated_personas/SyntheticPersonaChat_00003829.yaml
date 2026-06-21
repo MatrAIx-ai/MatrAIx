@@ -1,0 +1,74 @@
+id: 00003829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3829
+data:
+  user 1 personas: 'My favorite color is red.
+
+    My favorite food is a burger.
+
+    I work as an accountant.
+
+    I like to play tennis.'
+  user 2 personas: 'I like rock music.
+
+    I like basketball.
+
+    My favorite color is green.
+
+    I work at mcdonald.'
+  Best Generated Conversation: 'User 1: Hi there. What do you do for fun?
+
+    User 2: I like to play basketball and listen to rock music.
+
+    User 1: That''s cool. I like to play tennis and listen to classical music.
+
+    User 2: Do you go to any concerts?
+
+    User 1: I do sometimes. I just went to a classical music concert last week.
+
+    User 2: That''s cool. I''ve never been to a classical music concert before.
+
+    User 1: You should go sometime. It''s a really different experience than listening to music on the radio.
+
+    User 2: I might do that. What''s your favorite classical composer?
+
+    User 1: My favorite is Bach. I love his music.
+
+    User 2: I''ve heard of Bach, but I''ve never listened to his music.
+
+    User 1: You should. It''s really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I work at McDonald''s.
+
+    User 1: Oh, cool. I''ve never worked in fast food before.
+
+    User 2: It''s not too bad. It can be busy at times, but it''s usually pretty fun.
+
+    User 1: Do you like your job?
+
+    User 2: I do. I like the people I work with and the customers are usually pretty nice.
+
+    User 1: That''s good to hear. What do you like to do outside of work?
+
+    User 2: I like to play basketball, go to concerts, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to do a lot of the same things.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: Yeah, we do. It''s nice to meet someone who likes the same things I do.
+
+    User 2: Me too. It''s been nice talking to you.
+
+    User 1: You too. We should talk again sometime.
+
+    User 2: Sounds good. I''ll give you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

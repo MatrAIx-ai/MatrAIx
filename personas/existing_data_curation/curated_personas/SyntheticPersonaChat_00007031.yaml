@@ -1,0 +1,71 @@
+id: '00007031'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7031
+data:
+  user 1 personas: 'My dad died when i was in high school.
+
+    I have a lot of allergies.
+
+    My favorite type of music is metal.
+
+    I like watching tv and movies.
+
+    I work in commercials.'
+  user 2 personas: 'I have an older brother.
+
+    I live in the city.
+
+    I love my girlfriend.
+
+    I work in a bookstore.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too. What do you do for fun?
+
+    User 1: I like to watch TV and movies, and I also like listening to metal music.
+
+    User 2: Oh, I like metal too! What are your favorite bands?
+
+    User 1: I like Metallica, Slipknot, and Avenged Sevenfold.
+
+    User 2: Nice! I like those bands too. I also like Slayer and Lamb of God.
+
+    User 1: Oh, I like those bands too! We should go to a concert together sometime.
+
+    User 2: That would be fun! I''m free this weekend, if you want to go.
+
+    User 1: Okay, that sounds like a plan.
+
+    User 2: Great! I''ll see you then.
+
+    User 1: Bye!
+
+
+    [Later that weekend]
+
+    User 1: I''m here!
+
+    User 2: Hi! I''m so glad you could make it.
+
+    User 1: Me too! This is going to be a lot of fun.
+
+    User 2: I know, right? I''m so excited!
+
+    [They go to the concert and have a great time.]
+
+    User 1: That was so much fun!
+
+    User 2: I know, right? I''m so glad we went.
+
+    User 1: Me too. We should do it again sometime.
+
+    User 2: That sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

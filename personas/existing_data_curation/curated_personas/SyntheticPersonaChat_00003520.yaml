@@ -1,0 +1,60 @@
+id: '00003520'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3520
+data:
+  user 1 personas: 'I work at a power plant.
+
+    My newest car is a chevy.
+
+    My favorite thing to do is read.
+
+    I like to eat spaghetti.'
+  user 2 personas: 'I often do not have the money to pay my utility bills.
+
+    I only take the bus.
+
+    I babysit for the woman who lives next door.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: I''m a power plant operator.
+
+    User 2: What''s that like?
+
+    User 1: It''s challenging, but it''s also very rewarding. I get to work on some really cool technology, and I''m helping to keep the lights on for people all over the country.
+
+    User 2: That''s really cool! I wish I had a job like that.
+
+    User 1: You could always get a job in the power industry. There are a lot of different jobs available, and they''re all pretty important.
+
+    User 2: I''m not sure if I''m smart enough for that.
+
+    User 1: You don''t have to be a genius to work in the power industry. You just have to be willing to learn and work hard.
+
+    User 2: I guess I could give it a try.
+
+    User 1: I''m sure you''d be great at it.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem. What do you do for a living?
+
+    User 2: I''m a babysitter.
+
+    User 1: Oh, that sounds fun. Do you like it?
+
+    User 2: I love it! I get to work with kids all day, and I get to make a difference in their lives.
+
+    User 1: That''s really great. Do you ever get to babysit my kids?
+
+    User 2: I would love to babysit your kids!
+
+    User 1: Great! I''ll let you know next time I need a babysitter.
+
+    User 2: Thank you!
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

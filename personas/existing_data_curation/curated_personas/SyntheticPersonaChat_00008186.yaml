@@ -1,0 +1,74 @@
+id: 00008186
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8186
+data:
+  user 1 personas: 'My mommy makes me a picnic lunch to eat outside.
+
+    I like playing outside in the sun with my dolls.
+
+    My daddy brings home flowers for me.
+
+    I m a four year old girl with brown eyes and hair.'
+  user 2 personas: 'I wish that i lived in the city.
+
+    I have allergies.
+
+    I live on a pig farm.
+
+    I dislike animals.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi, I''m [girl''s name].
+
+    User 2: Nice to meet you, [girl''s name]. I''m [boy''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and go online.
+
+    User 1: I like to read too! What are your favorite books?
+
+    User 2: I like fantasy and science fiction books.
+
+    User 1: Me too! I''m reading a book about a group of kids who go on an adventure to find a magical sword.
+
+    User 2: That sounds cool! I like books about magic and adventure.
+
+    User 1: What do you like to do on the farm?
+
+    User 2: I don''t really like working on the farm, but I like helping out with the animals.
+
+    User 1: What kind of animals do you have?
+
+    User 2: We have pigs, cows, chickens, and ducks.
+
+    User 1: I''ve never been to a pig farm before. Do you have any pictures of the animals?
+
+    User 2: Sure, I can show you some pictures.
+
+    [Boy''s name shows [girl''s name] pictures of the animals.]
+
+    User 1: They''re so cute! I love the pigs.
+
+    User 2: They''re my favorite animals too.
+
+    User 1: Do you ever get to play with the animals?
+
+    User 2: Sometimes, but we have to be careful because they can be dangerous.
+
+    User 1: I can imagine. Do you ever get any injuries from the animals?
+
+    User 2: Not too often, but I''ve been bitten a few times.
+
+    User 1: That sounds scary.
+
+    User 2: It can be, but it''s usually not too bad.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

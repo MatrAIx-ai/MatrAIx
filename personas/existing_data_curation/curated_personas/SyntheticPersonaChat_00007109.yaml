@@ -1,0 +1,78 @@
+id: 00007109
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7109
+data:
+  user 1 personas: 'I can only see 200 feet in front of me.
+
+    I never learned how to write.
+
+    I had to call 911 when i had a terrible headache.
+
+    I use to own 6 cats.
+
+    I got married to my highschool friend.'
+  user 2 personas: 'I can do many celebrity impressions.
+
+    I work as a plumber.
+
+    I can speak four languages fluently.
+
+    I am an award winning 4h member.
+
+    I volunteer in my son s boy scout troop.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a plumber.
+
+    User 1: Oh, cool! I never met a plumber before.
+
+    User 2: That''s okay. We''re not all that common.
+
+    User 1: What''s it like being a plumber?
+
+    User 2: It''s a lot of work, but it''s also pretty rewarding.
+
+    User 1: I can imagine. I''m sure you see some interesting things.
+
+    User 2: I do! I''ve seen everything from clogged toilets to burst pipes.
+
+    User 1: That must be crazy.
+
+    User 2: It can be, but it''s also a lot of fun.
+
+    User 1: What''s the most interesting thing you''ve ever seen?
+
+    User 2: I once saw a toilet that was so clogged, it was overflowing into the bathtub.
+
+    User 1: Wow! That must have been a mess.
+
+    User 2: It was! But I was able to get it fixed eventually.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, it was a close call.
+
+    User 1: Do you have any other interesting stories?
+
+    User 2: I once had to fix a burst pipe in a house that was on fire.
+
+    User 1: Oh my gosh! That sounds dangerous.
+
+    User 2: It was! But I was able to get it fixed before the house burned down.
+
+    User 1: That''s amazing! You''re a hero!
+
+    User 2: Thanks! I just did my job.
+
+    User 1: Well, you did a great job.
+
+    User 2: Thanks! I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

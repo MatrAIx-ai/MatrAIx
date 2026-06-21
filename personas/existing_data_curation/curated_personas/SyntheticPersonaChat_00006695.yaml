@@ -1,0 +1,56 @@
+id: 00006695
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6695
+data:
+  user 1 personas: 'My favorite song is california love.
+
+    My favorite artist is 2pac.
+
+    I drive a fast car.
+
+    My car is black.'
+  user 2 personas: 'I never eat veggies.
+
+    I love to run fast.
+
+    I am strong.
+
+    I am young.'
+  Best Generated Conversation: 'User 1: I love the song California Love by 2pac. It''s so catchy and it gets me pumped up.
+
+    User 2: I''ve never heard of it. What''s it about?
+
+    User 1: It''s about the life of 2pac in California. It''s a good song, you should check it out.
+
+    User 2: I''ll do that. I''ve never really listened to 2pac before.
+
+    User 1: You''re missing out! He''s one of the best rappers of all time.
+
+    User 2: I''m not much of a music person. I''m more into sports.
+
+    User 1: I like sports too. What kind of sports do you like?
+
+    User 2: I like running and baseball. I''m not really good at either one, but I enjoy them.
+
+    User 1: I like baseball too. I''m not good at it either, but I love watching the games.
+
+    User 2: Me too. I love the atmosphere of a baseball game. It''s so relaxing.
+
+    User 1: I know, right? It''s the perfect way to spend a summer day.
+
+    User 2: So, what''s your favorite sport?
+
+    User 1: My favorite sport is probably football. I love the excitement of the game.
+
+    User 2: I''ve never really been into football. I find it too violent.
+
+    User 1: I can understand that. It can be pretty violent at times. But I think it''s a great sport.
+
+    User 2: I guess I''ll have to take your word for it.
+
+    User 1: You''re welcome to try it out sometime. I''m sure you''d like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

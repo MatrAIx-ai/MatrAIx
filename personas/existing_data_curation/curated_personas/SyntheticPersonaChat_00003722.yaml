@@ -1,0 +1,60 @@
+id: '00003722'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3722
+data:
+  user 1 personas: 'I like vintage furniture.
+
+    Favorite band is the beetles.
+
+    I play the bass.
+
+    I have a large cd collection.
+
+    I collect stamps.'
+  user 2 personas: 'I like to go shopping with my daughters.
+
+    I am a foodie.
+
+    I like to cook.
+
+    I love to chat with my friends.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing today?
+
+    User 2: I''m doing good! How about you?
+
+    User 1: I''m doing well, thanks! What do you like to do for fun?
+
+    User 2: I like to go shopping with my daughters, cook, and chat with my friends.
+
+    User 1: Oh, that sounds fun! I like to play the bass, collect stamps, and listen to music.
+
+    User 2: That''s interesting! What kind of music do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but my favorite band is the Beatles.
+
+    User 2: I''ve heard good things about them! I''m not really a big fan of rock music, but I do like some classic rock songs.
+
+    User 1: That''s fair! What''s your favorite type of food to cook?
+
+    User 2: I like to cook a lot of different things, but my favorite is probably Italian food.
+
+    User 1: Oh, that''s great! I love Italian food. I''m a huge fan of pizza and pasta.
+
+    User 2: Me too! I love making homemade pizza.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to make pizza.
+
+    User 2: It''s not too hard! There are a lot of great recipes online.
+
+    User 1: I''ll have to check some out. Thanks for the tip!
+
+    User 2: No problem! It was nice chatting with you.
+
+    User 1: You too! Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

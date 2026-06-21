@@ -1,0 +1,82 @@
+id: 00006976
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6976
+data:
+  user 1 personas: 'I have blue eyes and curly brown hair.
+
+    My favorite type of music is country.
+
+    I love to travel with my family.
+
+    My dog is a collie.
+
+    I love to snack between meals.'
+  user 2 personas: 'I work at a gas station as a cashier.
+
+    I am twenty six years old this may.
+
+    My mother was a famous ballet dancer in london.
+
+    My favorite band is the punk band rancid.
+
+    I will be moving to san diego in two months.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for fun?
+
+    User 2: I like to play video games, watch movies, and go to concerts.
+
+    User 1: Cool, me too! What''s your favorite video game?
+
+    User 2: I like playing Minecraft and Super Mario Odyssey.
+
+    User 1: Oh, I love Minecraft too! What''s your favorite part about it?
+
+    User 2: I like the freedom to build whatever you want.
+
+    User 1: Me too! I love building houses and castles.
+
+    User 2: That''s awesome! I also love building rollercoasters and cities.
+
+    User 1: That sounds really fun! I''ve never tried building a rollercoaster before.
+
+    User 2: You should! It''s really easy to learn.
+
+    User 1: I will! Thanks for the tip.
+
+    User 2: No problem! What''s your favorite movie?
+
+    User 1: I like the Lord of the Rings movies.
+
+    User 2: Oh, I love those movies too! What''s your favorite part?
+
+    User 1: I like the battle scenes. They''re so epic!
+
+    User 2: Me too! Those movies are so well-made.
+
+    User 1: I know! They''re definitely my favorite movies of all time.
+
+    User 2: Mine too! What''s your favorite concert you''ve ever been to?
+
+    User 1: I went to a Taylor Swift concert a few years ago and it was amazing!
+
+    User 2: Oh, I love Taylor Swift! I''m so jealous!
+
+    User 1: It was so much fun! I''m going to see her again in a few months.
+
+    User 2: That''s awesome! I hope she puts on a great show.
+
+    User 1: Me too! I''m sure she will.
+
+    User 2: Well, it was nice talking to you, [user 1 name]. I have to go now.
+
+    User 1: Nice talking to you too, [user 2 name]. Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

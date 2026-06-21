@@ -1,0 +1,70 @@
+id: '00000560'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 560
+data:
+  user 1 personas: 'I stay active.
+
+    I have good health.
+
+    I am retired.
+
+    I wear glasses.
+
+    I have eight grandchildren.'
+  user 2 personas: 'I m from seattle.
+
+    I work in public relations.
+
+    My parents raised me as a buddhist.
+
+    I am a vegan.
+
+    My favorite band is bon over.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hello, I''m (user 2).
+
+    User 1: Nice to meet you, (user 2). Where are you from?
+
+    User 2: I''m from Seattle, Washington.
+
+    User 1: That''s a beautiful city! I''ve been there a few times.
+
+    User 2: It is. I''m lucky to live there. What do you do for a living?
+
+    User 1: I''m retired.
+
+    User 2: Oh, that''s great. What did you do before you retired?
+
+    User 1: I was a teacher.
+
+    User 2: That''s awesome! I''ve always wanted to be a teacher.
+
+    User 1: It''s a great profession. I loved it.
+
+    User 2: What do you like to do now that you''re retired?
+
+    User 1: I stay active. I walk a lot, and I do some gardening. I also have eight grandchildren, so I spend a lot of time with them.
+
+    User 2: That sounds great. I''m sure you''re a great grandparent.
+
+    User 1: Thank you. I try my best.
+
+    User 2: What do you think of Buddhism?
+
+    User 1: I think it''s a beautiful religion. I''m not a Buddhist myself, but I respect it a lot.
+
+    User 2: I''m glad you think so. I''m a Buddhist, and I''m always happy to talk about it with people.
+
+    User 1: I''d love to learn more about it.
+
+    User 2: I''d be happy to teach you anything you want to know.
+
+    User 1: Thank you. I''m grateful for your offer.
+
+    User 2: You''re welcome. I''m glad to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

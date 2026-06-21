@@ -1,0 +1,68 @@
+id: 00000497
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 497
+data:
+  user 1 personas: 'I like to ski.
+
+    I like to eat cheetos.
+
+    My wife doesn t like me anymore.
+
+    I have went to mexico 4 times this year.
+
+    I hate mexican food.'
+  user 2 personas: 'Starbucks is my favorite hang out spot.
+
+    I have a cat.
+
+    Subway is my favorite fast food restaurant.
+
+    I collect little figurines.
+
+    I spend my weekends browsing antique stores.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do on the weekends?
+
+    User 2: I like to go antiquing and collect little figurines.
+
+    User 1: Oh, that sounds fun! I love antique stores.
+
+    User 2: Me too! I find all sorts of interesting things there.
+
+    User 1: What kind of things do you collect?
+
+    User 2: Mostly little figurines, but I also collect old books, jewelry, and furniture.
+
+    User 1: That''s so cool! I wish I had the space to collect things.
+
+    User 2: Yeah, it can get pretty cluttered.
+
+    User 1: What''s your favorite place to go antiquing?
+
+    User 2: I love going to the antique stores in the city. There''s always something new to find.
+
+    User 1: I''ve never been to an antique store in the city. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a lot of fun.
+
+    User 1: What''s your favorite thing about collecting little figurines?
+
+    User 2: I just love the way they look. They''re so cute and unique.
+
+    User 1: I know what you mean. I have a little figurine collection too.
+
+    User 2: Really? What kind of figurines do you collect?
+
+    User 1: I mostly collect fairy figurines. I think they''re so pretty.
+
+    User 2: Fairy figurines are so cute! I have a few myself.
+
+    User 1: That''s awesome! I''m glad to meet another person who collects little figurines.
+
+    User 2: Me too! It''s not a very common hobby.
+
+    User 1: I know, right? But it''s so much fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

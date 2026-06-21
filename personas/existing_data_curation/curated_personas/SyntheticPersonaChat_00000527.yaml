@@ -1,0 +1,64 @@
+id: '00000527'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 527
+data:
+  user 1 personas: 'I love soccer.
+
+    I work for nike as an accountant.
+
+    I like to invest in the stock market.
+
+    I have 3 brothers.
+
+    I want to move to london when i get older.'
+  user 2 personas: 'My favorite musician is bruno mars.
+
+    I am an accountant.
+
+    I have 2 dogs.
+
+    I drive a red car.
+
+    I enjoy running.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m an accountant at Nike and I love soccer. What about you?
+
+    User 2: I''m also an accountant and I love Bruno Mars!
+
+    User 1: That''s awesome! I''ve been to a few of his concerts.
+
+    User 2: Me too! They''re so much fun!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, play with my dogs, and listen to music.
+
+    User 1: That sounds like a lot of fun! I like to invest in the stock market and cook.
+
+    User 2: Cooking is fun! I love trying new recipes.
+
+    User 1: Me too! I''m trying to learn how to make sushi.
+
+    User 2: Sushi is delicious! I love it.
+
+    User 1: I''m getting hungry just thinking about it.
+
+    User 2: Me too! Maybe we can go out to eat some sushi sometime.
+
+    User 1: That would be great! I''d love to try your favorite spot.
+
+    User 2: Awesome! I''ll let you know next time I''m going.
+
+    User 1: Thanks! I''ll be ready.
+
+    User 2: It was nice talking to you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

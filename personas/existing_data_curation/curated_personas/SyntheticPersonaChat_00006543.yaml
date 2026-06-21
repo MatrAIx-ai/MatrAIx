@@ -1,0 +1,106 @@
+id: '00006543'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6543
+data:
+  user 1 personas: 'My least favorite music is country.
+
+    I am nearly 6 tall.
+
+    My favorite outfit is thigh high leather boots and a skirt.
+
+    I drive a ford truck.'
+  user 2 personas: 'I am on a competitive dance team.
+
+    I love to dance.
+
+    Ariel is my favorite princess.
+
+    I am in high school.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to dance. I''m on a competitive dance team.
+
+    User 1: That''s cool! I''ve always wanted to learn how to dance.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: Maybe I will. What''s your favorite kind of dance to do?
+
+    User 2: I like to do all kinds of dance, but I''m especially good at jazz and contemporary.
+
+    User 1: Those are two of my favorites too!
+
+    User 2: Oh, that''s cool! We should dance together sometime.
+
+    User 1: I would love to!
+
+    User 2: Great! What time are you free this weekend?
+
+    User 1: I''m free on Saturday night.
+
+    User 2: That works for me. I''ll pick you up at 7.
+
+    User 1: Okay, perfect. I can''t wait to dance with you!
+
+    User 2: Me neither! I''ll see you then!
+
+
+    Saturday night, 7pm
+
+
+    User 1: Hi [user 2''s name], I''m here!
+
+    User 2: Hi [user 1''s name], I''m so glad you could make it!
+
+    User 1: Me too! I''m really excited to dance with you.
+
+    User 2: Me too! Let''s go!
+
+
+    At the dance studio
+
+
+    User 1: This is so much fun! I''m so glad I came.
+
+    User 2: I told you you would like it!
+
+    User 1: I love your dancing! You''re so good.
+
+    User 2: Thank you! I''m glad you think so.
+
+    User 1: I''m having so much fun! I''m glad we did this.
+
+    User 2: Me too! This was a great idea.
+
+
+    After dancing
+
+
+    User 1: Thank you so much for this! I had so much fun.
+
+    User 2: You''re welcome! I''m glad you enjoyed it.
+
+    User 1: I know I''ll be doing this again soon.
+
+    User 2: I''m sure you will!
+
+    User 1: I hope so!
+
+    User 2: Well, I should probably get going.
+
+    User 1: Me too. It was nice meeting you.
+
+    User 2: You too!
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

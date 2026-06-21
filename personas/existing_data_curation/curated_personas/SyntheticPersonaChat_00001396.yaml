@@ -1,0 +1,56 @@
+id: 00001396
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1396
+data:
+  user 1 personas: 'I own a corvette.
+
+    I like to surf.
+
+    I live in california.
+
+    I am a mechanic.'
+  user 2 personas: 'Since i have fibromyalgia , the harsher winters here in pa will be rough on me.
+
+    I grew up on a large farm.
+
+    I just moved from va to pa.
+
+    I enjoy doing beadwork and writing my own patterns.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m a mechanic from California. What do you do for a living?
+
+    User 2: I''m a bead artist. I just moved to PA from VA.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to bead.
+
+    User 2: It''s not too hard. You can learn how to do simple patterns online.
+
+    User 1: Maybe I''ll check it out. I''m sure it would be a good way to relax.
+
+    User 2: It is! I love it when I can just sit down and bead for a while. It helps me to de-stress.
+
+    User 1: That''s great! I''m glad you found something that helps you to relax.
+
+    User 2: Thanks. I''m also glad I moved to PA. It''s a beautiful state.
+
+    User 1: I''m sure it is. I''ve never been there before.
+
+    User 2: You should come visit sometime!
+
+    User 1: I might do that. I''ve heard good things about PA.
+
+    User 2: Well, if you do decide to visit, let me know. I''d be happy to show you around.
+
+    User 1: Thanks! I appreciate it.
+
+    User 2: No problem! Have a great day.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

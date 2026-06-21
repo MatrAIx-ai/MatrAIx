@@ -1,0 +1,58 @@
+id: 00008156
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8156
+data:
+  user 1 personas: 'I like playing outside in the sun with my dolls.
+
+    My daddy brings home flowers for me.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I sleep in a princess bed.'
+  user 2 personas: 'I live by a lake.
+
+    I am a wife.
+
+    I am a mother.
+
+    I own a custom upholstery shop.'
+  Best Generated Conversation: 'User 1: Hi, I''m (child''s name).
+
+    User 2: Hi, I''m (mother''s name).
+
+    User 1: I like to play outside in the sun with my dolls.
+
+    User 2: That sounds like a lot of fun! I love the sun too.
+
+    User 1: My daddy brings home flowers for me.
+
+    User 2: How sweet! My husband is always bringing me flowers too.
+
+    User 1: My mommy makes me a picnic lunch to eat outside.
+
+    User 2: That''s so nice of her! I love making picnic lunches too.
+
+    User 1: I sleep in a princess bed.
+
+    User 2: That''s adorable! I used to have a princess bed when I was a little girl.
+
+    User 1: I love my house. It has a big yard with a swing set and a sandbox.
+
+    User 2: That sounds like a great house! My house is right by a lake, so we can go swimming and fishing whenever we want.
+
+    User 1: That sounds like so much fun! I love going swimming and fishing.
+
+    User 2: We should go swimming and fishing together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll bring the swimsuits and the fishing poles.
+
+    User 1: I''ll bring the snacks and the sunscreen.
+
+    User 2: Perfect! We''re going to have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

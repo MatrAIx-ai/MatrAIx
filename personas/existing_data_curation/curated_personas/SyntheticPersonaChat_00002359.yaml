@@ -1,0 +1,56 @@
+id: 00002359
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2359
+data:
+  user 1 personas: 'My dad is a veteran.
+
+    I like to play tennis.
+
+    My favorite color is green.
+
+    I listen to all kinds of music.
+
+    I love watching funny movies.'
+  user 2 personas: 'I married my high school sweetheart.
+
+    My favorite pizza is pepperoni.
+
+    I teach first grade.
+
+    I drink lots of iced tea.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I love to play tennis, read, and watch funny movies.
+
+    User 1: Those are all great hobbies! I love to play tennis too. What''s your favorite kind of movie?
+
+    User 2: I love comedies, especially ones with a lot of slapstick humor.
+
+    User 1: Me too! I love watching old Charlie Chaplin movies.
+
+    User 2: Those are great! I also love watching the Marx Brothers movies.
+
+    User 1: Me too! They''re so funny. What''s your favorite type of music?
+
+    User 2: I like all kinds of music, but I especially love listening to classic rock.
+
+    User 1: Those are great! I love classic rock too. What''s your favorite band?
+
+    User 2: I love the Beatles, the Rolling Stones, and Queen.
+
+    User 1: Those are all great bands! I love the Beatles too. What''s your favorite song by the Beatles?
+
+    User 2: I love "All You Need Is Love." It''s such a beautiful and positive song.
+
+    User 1: Me too! It''s one of my favorite songs by them. I love the message of the song.
+
+    User 2: It''s a great message. I''m glad we have similar taste in music.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

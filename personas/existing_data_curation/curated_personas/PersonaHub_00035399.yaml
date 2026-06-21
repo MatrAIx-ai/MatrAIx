@@ -1,0 +1,19 @@
+id: 00035399
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35399
+persona_description: A scientist or researcher who specializes in the study of birds, particularly shorebirds, and their responses to environmental changes such as sea-level rise and human development.
+  They are interested in developing predictive models to understand how these changes affect the survival and distribution of shorebird species, and are looking for innovative methods to link specific physical
+  features to nest presence. They are likely to be interested in using a Bayesian network framework to develop models that can predict the presence or absence of piping plover nests based on the physical
+  conditions of their nesting habitat, and are looking for ways to improve the accuracy and reliability of these predictions.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: ornithology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Bayesian network modeling in ornithology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

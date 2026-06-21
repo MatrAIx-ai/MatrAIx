@@ -1,0 +1,96 @@
+id: '00007162'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7162
+data:
+  user 1 personas: 'I hope to one day be happy with myself.
+
+    I love her though.
+
+    Currently , i am saving up to get some procedures done.
+
+    I do not think my girlfriend understands.
+
+    I enjoy dressing up to go out clubbing.'
+  user 2 personas: 'I have 3 cats.
+
+    I enjoy swimming.
+
+    I like tacos.
+
+    My favorite color is orange.
+
+    I am a secretary.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi [username], I''m [username].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like swimming, playing video games, and eating tacos.
+
+    User 1: I love swimming too! I''m not very good at video games, but I enjoy playing them. And I love tacos too.
+
+    User 2: What''s your favorite kind of taco?
+
+    User 1: I like chicken tacos with lots of cheese and guacamole.
+
+    User 2: Yum! Those sound delicious. I like fish tacos with avocado salsa.
+
+    User 1: Those sound good too! I''ve never had fish tacos before.
+
+    User 2: You should try them! They''re really good.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: No problem! So, what do you do for work?
+
+    User 1: I''m a secretary.
+
+    User 2: Oh, cool! I''ve always wanted to be a secretary.
+
+    User 1: It''s a lot of fun! I get to help people all day long.
+
+    User 2: That sounds great! I''m glad you like your job.
+
+    User 1: I do! It''s the best job I''ve ever had.
+
+    User 2: That''s great to hear! So, what''s your favorite thing about yourself?
+
+    User 1: I''m not sure. I guess I''m pretty funny.
+
+    User 2: That''s a good quality! I like to laugh.
+
+    User 1: Me too! So, what''s your favorite thing about yourself?
+
+    User 2: I''m very caring and loving. I love making people happy.
+
+    User 1: That''s a great quality! I''m sure you make a lot of people happy.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite color?
+
+    User 2: Orange!
+
+    User 1: That''s my favorite color too!
+
+    User 2: Really? That''s amazing! I''ve never met anyone else who likes orange.
+
+    User 1: I know, right? It''s such a great color!
+
+    User 2: I agree! So, what are you doing later today?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m not sure either. Maybe we could hang out?
+
+    User 1: That sounds like fun! I''d love to hang out with you.
+
+    User 2: Great! I''ll text you later and we can figure out what we''re going to do.
+
+    User 1: Sounds good! I''ll see you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

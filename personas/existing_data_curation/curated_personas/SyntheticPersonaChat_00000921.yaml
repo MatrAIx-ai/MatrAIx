@@ -1,0 +1,104 @@
+id: 00000921
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 921
+data:
+  user 1 personas: 'I am an old man.
+
+    I drive a jag.
+
+    I do not have a lot of family members that i like.
+
+    I am an angry person.'
+  user 2 personas: 'I work at a coffee shop.
+
+    My favorite color is red.
+
+    I drive a prius.
+
+    My mom was a hairdresser.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. My name is [user 1''s name].
+
+    User 2: Nice to meet you too, [user 1''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: Those all sound like fun things to do! I love to read too.
+
+    User 2: Me too! What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 2: Oh, me too! I love those genres!
+
+    User 1: What''s your favorite book?
+
+    User 2: It''s hard to say, but I think my favorite book is probably The Lord of the Rings.
+
+    User 1: That''s a great book! I love that series.
+
+    User 2: Me too! I''ve read it so many times.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like a lot of different video games, but my favorite is probably The Legend of Zelda: Breath of the Wild.
+
+    User 1: That''s a great game! I loved the open world and the exploration.
+
+    User 2: Me too! It was so much fun to explore the world and find all the different secrets.
+
+    User 1: What do you do for work?
+
+    User 2: I work at a coffee shop.
+
+    User 1: Oh, that sounds fun! I love coffee.
+
+    User 2: Me too! I love trying new coffees.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is red.
+
+    User 1: That''s a pretty color!
+
+    User 2: I think so too!
+
+    User 1: Do you have any siblings?
+
+    User 2: I have a sister and a brother.
+
+    User 1: Oh, that''s nice! I have a sister too.
+
+    User 2: Do you get along with your siblings?
+
+    User 1: Yeah, we get along pretty well.
+
+    User 2: That''s good!
+
+    User 1: Yeah, it is.
+
+    User 2: Do you have any pets?
+
+    User 1: I have a dog.
+
+    User 2: Oh, that''s cute! What kind of dog?
+
+    User 1: He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so sweet.
+
+    User 1: Yeah, he is! He''s the best dog ever.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

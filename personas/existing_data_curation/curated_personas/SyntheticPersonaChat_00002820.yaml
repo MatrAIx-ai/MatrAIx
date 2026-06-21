@@ -1,0 +1,86 @@
+id: 00002820
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2820
+data:
+  user 1 personas: 'I like to go swimming.
+
+    My hobby is sewing.
+
+    I like to make fresh pies.
+
+    I am a cashier at a grocery store.
+
+    I have a garden in my yard.'
+  user 2 personas: 'I work at a retail store.
+
+    My favorite movie is django unchained.
+
+    I drive a honda civic.
+
+    I love rock climbing.
+
+    I like long walks on the beach.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Nice to meet you. I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go rock climbing and long walks on the beach.
+
+    User 1: That''s cool. I like to go swimming and sew.
+
+    User 2: Sewing is a great skill to have. I''ve always wanted to learn how to do it.
+
+    User 1: It''s not too hard to learn. I started by watching YouTube videos.
+
+    User 2: I''ll have to check those out. Thanks for the tip.
+
+    User 1: No problem. So, what''s your favorite movie?
+
+    User 2: My favorite movie is Django Unchained. It''s such a great film. The acting is incredible and the story is so captivating.
+
+    User 1: I''ve heard good things about that movie. I''ll have to check it out.
+
+    User 2: You definitely should. I''m sure you''ll love it.
+
+    User 1: I''m also a big fan of The Lord of the Rings movies. They''re some of my favorite movies of all time.
+
+    User 2: I love those movies too! They''re so epic and beautiful.
+
+    User 1: I know, right? I''m so glad they made a series out of them.
+
+    User 2: Me too. I can''t wait to see what they do with the upcoming Amazon series.
+
+    User 1: Me neither. I''m sure it''s going to be amazing.
+
+    User 2: I''m sure it will be.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work at a retail store.
+
+    User 1: Oh, that''s cool. I work at a grocery store.
+
+    User 2: Nice. I''ve always thought about working at a grocery store.
+
+    User 1: It''s not bad. The hours can be long, but it''s a good job.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what''s your favorite hobby?
+
+    User 2: I love rock climbing. It''s such a great way to get exercise and have fun.
+
+    User 1: I''ve always wanted to try rock climbing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You definitely should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

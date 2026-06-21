@@ -1,0 +1,20 @@
+id: '00063406'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63406
+persona_description: A researcher in the field of speech processing, specifically focused on developing machine learning models to improve speech recognition for hearing-impaired individuals. The researcher
+  has developed a deep learning-based speech recognition model that can accurately predict the acoustic conditions a listener is experiencing and estimate how well the listener can identify words in noisy
+  environments. The model has been trained and tested with recordings of sentences that are degraded to mimic how people with different types of hearing impairments perceive speech in different noisy environments.
+  The researcher is working on fixing issues with the current version of the model, such as the need for information about what's actually being spoken, and hopes that a future version of the model could
+  be integrated into hearing aids to improve speech intelligibility for the hearing-impaired.
+expertise:
+  general_domain_top1pct: speech processing
+  specific_domain_top1pct: speech processing for hearing-impaired individuals
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

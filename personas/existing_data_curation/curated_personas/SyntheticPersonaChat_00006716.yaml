@@ -1,0 +1,56 @@
+id: '00006716'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6716
+data:
+  user 1 personas: 'We help each other out in my family.
+
+    When i cut loose , i lose control.
+
+    I work over 60 hours a week as a restaurant manager.
+
+    I despise my boss.
+
+    I lived most of my life not knowing who bob marley was.'
+  user 2 personas: 'I am studying literature.
+
+    I am a vegan.
+
+    I like to draw.
+
+    I am from france.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Nice to meet you, I''m (name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m studying literature at the moment.
+
+    User 1: That''s cool! I''ve always loved to read.
+
+    User 2: Me too! What''s your favorite book?
+
+    User 1: I have a few, but I''d have to say The Catcher in the Rye.
+
+    User 2: Oh, that''s a great book! I love J.D. Salinger''s writing.
+
+    User 1: Yeah, he''s one of my favorite authors.
+
+    User 2: I''m also a vegan.
+
+    User 1: Oh, really? That''s interesting. Why did you decide to go vegan?
+
+    User 2: I''m just not a fan of eating animals. I think it''s cruel and unnecessary.
+
+    User 1: I respect that. I''m not vegan myself, but I do try to eat less meat.
+
+    User 2: That''s good. I think it''s important to be conscious of the impact our food choices have on the environment.
+
+    User 1: I agree. I''m glad to meet someone else who cares about the environment.
+
+    User 2: Me too. It''s good to know that there are other people out there who are passionate about the same things I am.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

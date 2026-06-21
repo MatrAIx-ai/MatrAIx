@@ -1,0 +1,60 @@
+id: 00004409
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4409
+data:
+  user 1 personas: 'I live in toronto , canada.
+
+    My favorite french fries are from mcdonalds.
+
+    I love to shop.
+
+    I am an elementary school teacher.
+
+    My mom and dad are from japan.'
+  user 2 personas: 'I love to eat shrimp and lobster.
+
+    I vacation along lake michigan every summer.
+
+    I have a black belt in karate.
+
+    My favorite drink is iced coffee.'
+  Best Generated Conversation: 'User 1: Hi there! I''m from Toronto, Canada. Do you live in the area?
+
+    User 2: No, I live in Michigan. I visit Lake Michigan every summer though.
+
+    User 1: Oh, that''s nice. I love the beach. What do you like to do there?
+
+    User 2: I like to swim, sunbathe, and eat seafood. What about you?
+
+    User 1: I love to swim too. I also like to play volleyball and go on hikes.
+
+    User 2: That sounds fun. I''m not much of a hiker, but I love playing volleyball.
+
+    User 1: Maybe we should go hiking together sometime.
+
+    User 2: Sure, that would be fun.
+
+    User 1: Great! We can also go swimming and play volleyball.
+
+    User 2: Sounds like a plan.
+
+    User 1: What do you like to do for work?
+
+    User 2: I''m a chef. I love cooking, and I''m really good at it.
+
+    User 1: That''s awesome! I love to eat food. What''s your favorite thing to cook?
+
+    User 2: I love to cook seafood. I''m really good at making shrimp and lobster.
+
+    User 1: That sounds delicious! I love shrimp.
+
+    User 2: Me too! We should have a cookout sometime.
+
+    User 1: That would be fun. I''m a pretty good cook too.
+
+    User 2: Great! We can cook up a storm.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

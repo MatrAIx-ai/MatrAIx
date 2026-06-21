@@ -1,0 +1,82 @@
+id: 00007084
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7084
+data:
+  user 1 personas: 'When i retire i want to open a bakery.
+
+    Sometimes i volunteer at the soup kitchen.
+
+    My family owned a small restaurant.
+
+    I work 9 to 5 job.
+
+    I like to cook.'
+  user 2 personas: 'My three ring binder has my drawings of ponies all over it.
+
+    My dream is to be a veterinarian.
+
+    I could eat less.
+
+    People say i talk when i m not supposed to.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a student.
+
+    User 1: What are you studying?
+
+    User 2: I''m studying to be a veterinarian.
+
+    User 1: That''s great! I love animals.
+
+    User 2: Me too! I have a three ring binder full of drawings of ponies.
+
+    User 1: That''s so cool! I''ve always wanted to be able to draw.
+
+    User 2: You should take an art class! It''s really fun.
+
+    User 1: Maybe I will!
+
+    User 2: What do you do for work?
+
+    User 1: I work 9-to-5 at a bakery.
+
+    User 2: That sounds fun! I love to bake.
+
+    User 1: Me too! I''m thinking about opening my own bakery when I retire.
+
+    User 2: That would be great! I''d love to come eat there.
+
+    User 1: Thanks! I''ll keep you in mind.
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to draw, read, and play video games.
+
+    User 1: Me too! I love to read.
+
+    User 2: What''s your favorite book?
+
+    User 1: I love all of the Harry Potter books.
+
+    User 2: Me too! They''re my favorite books too.
+
+    User 1: We should read them together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll bring the books.
+
+    User 2: Thanks! I''ll bring the snacks.
+
+    User 1: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

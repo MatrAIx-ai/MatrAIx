@@ -1,0 +1,96 @@
+id: '00006115'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6115
+data:
+  user 1 personas: 'My car is green and smells weird.
+
+    My favorite band used to be toto.
+
+    My favorite food is meatloaf.
+
+    My dog s name is toto.'
+  user 2 personas: 'My eyes are green.
+
+    My purse has a picture of a skunk on it.
+
+    I wear glasses that are cateyes.
+
+    My skin is olive colored.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m [User 2''s name]. What''s yours?
+
+    User 1: I''m [User 1''s name].
+
+    User 2: It''s nice to meet you, [User 1''s name].
+
+    User 1: You too, [User 2''s name].
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to concerts, play video games, and read.
+
+    User 2: Oh, that''s cool! I like to go to concerts too. What''s your favorite band?
+
+    User 1: My favorite band used to be Toto, but I''m not sure they''re together anymore.
+
+    User 2: Oh, I''ve never heard of them.
+
+    User 1: They''re a classic rock band from the 70s. You should check them out.
+
+    User 2: I will!
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is meatloaf.
+
+    User 1: That''s a good choice! I like meatloaf too.
+
+    User 2: Me too! I love the way it tastes.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an interior designer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in interior design.
+
+    User 2: It''s a lot of fun! I love getting to create beautiful spaces.
+
+    User 1: I can imagine. It''s a lot of work, though, isn''t it?
+
+    User 2: It can be, but it''s worth it.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite thing about yourself?
+
+    User 1: My favorite thing about myself is my sense of humor.
+
+    User 2: Oh, that''s a good one! I love to laugh.
+
+    User 1: Me too! I think it''s important to be able to laugh at yourself.
+
+    User 2: I agree!
+
+    User 1: So, what do you think about me?
+
+    User 2: I think you''re really nice!
+
+    User 1: Thanks! I think you''re nice too!
+
+    User 2: Thanks!
+
+    User 1: So, what do you want to do tomorrow?
+
+    User 2: I''m not sure. What do you want to do?
+
+    User 1: I don''t know. We could go to a movie, or go out to dinner, or go for a walk.
+
+    User 2: I think it''s too early to decide. Let''s just see how we''re feeling tomorrow.
+
+    User 1: Okay. Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

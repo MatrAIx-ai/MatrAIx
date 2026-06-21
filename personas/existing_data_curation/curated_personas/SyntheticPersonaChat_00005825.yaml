@@ -1,0 +1,56 @@
+id: 00005825
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5825
+data:
+  user 1 personas: 'I love the natural world beauty.
+
+    My family is poor.
+
+    I believe in fairytales.
+
+    I practice yoga and hike.
+
+    I am obsessed with animals.'
+  user 2 personas: 'I am in my last year of grad school.
+
+    I love trips to the beach.
+
+    I am the worlds best aunt.
+
+    I enjoy cooking italian food.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]!
+
+    User 2: Hi, I''m [user 2]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love going to the beach, cooking Italian food, and being an amazing aunt!
+
+    User 1: That sounds awesome! I love going to the beach too. What''s your favorite Italian dish to cook?
+
+    User 2: My favorite Italian dish to cook is chicken parmesan!
+
+    User 1: Yum! That sounds delicious! I love chicken parmesan too.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Me too! What''s your favorite thing about being an aunt?
+
+    User 2: My favorite thing about being an aunt is getting to spend time with my nieces and nephews. I love watching them grow up and learn new things.
+
+    User 1: That sounds really special. I''m sure your nieces and nephews love having you as an aunt.
+
+    User 2: I hope so! I love them very much.
+
+    User 1: I can tell! You seem like a great aunt.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it''s been great talking to you!
+
+    User 2: You too! It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

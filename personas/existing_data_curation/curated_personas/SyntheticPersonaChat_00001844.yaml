@@ -1,0 +1,68 @@
+id: 00001844
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1844
+data:
+  user 1 personas: 'I believe in karma.
+
+    I have never been on a date.
+
+    I adopted all my dogs.
+
+    I love to read.'
+  user 2 personas: 'I love scary movies.
+
+    I am allergic to cats.
+
+    I am learning to play the piano.
+
+    I am a member of the ymca.
+
+    I keep my hair cut very short.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read and watch scary movies.
+
+    User 1: Me too! I love reading Stephen King novels and watching horror movies.
+
+    User 2: What''s your favorite Stephen King novel?
+
+    User 1: I think my favorite is The Shining. It''s so creepy and atmospheric.
+
+    User 2: I love The Shining too! It''s one of my favorites. I also really like Pet Sematary.
+
+    User 1: Pet Sematary is great! It''s so sad and scary.
+
+    User 2: I know! It''s one of those books that stays with you long after you''ve finished reading it.
+
+    User 1: Me too! What other kinds of books do you like to read?
+
+    User 2: I like to read a lot of different things, but I especially like historical fiction and mystery novels.
+
+    User 1: I love historical fiction too! I''ve recently been reading The Last Kingdom series by Bernard Cornwell.
+
+    User 2: I''ve heard good things about that series! I''ll have to check it out.
+
+    User 1: It''s really good! I''m on the third book now and I''m really enjoying it.
+
+    User 2: I''m glad to hear that. I''ll definitely put it on my list.
+
+    User 1: What''s your favorite mystery novel?
+
+    User 2: I think my favorite is The Girl with the Dragon Tattoo by Stieg Larsson.
+
+    User 1: That''s a great book! I read it a few years ago and I really enjoyed it.
+
+    User 2: I know! It''s so suspenseful and the characters are really well-developed.
+
+    User 1: I agree! I''m glad you liked it.
+
+    User 2: Me too! It''s one of my favorite books of all time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

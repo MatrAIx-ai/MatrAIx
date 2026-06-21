@@ -1,0 +1,72 @@
+id: '00001434'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1434
+data:
+  user 1 personas: 'I work in a bank.
+
+    I work 40 hours a week.
+
+    I look forward to eating at restaurants.
+
+    I am very polite and courteous.
+
+    I try to do my job as best as i can.'
+  user 2 personas: 'I play the piano.
+
+    I am buying a house.
+
+    I am a nurse and work in an emergency room at a busy hospital.
+
+    I paddle board on my days off.
+
+    I am single.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a nurse in the ER at a busy hospital.
+
+    User 1: Oh, that sounds like a tough job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play the piano, paddle board, and go to concerts.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I try to do as much as I can in my free time.
+
+    User 1: What are you looking forward to right now?
+
+    User 2: I''m actually looking forward to buying a house.
+
+    User 1: Oh, that''s exciting!
+
+    User 2: Yeah, I''m really excited to start a new chapter in my life.
+
+    User 1: I''m sure you''ll do great!
+
+    User 2: Thanks, I hope so!
+
+    User 1: So, what''s your favorite restaurant?
+
+    User 2: I have a lot of favorite restaurants, but I would say my favorite is probably [restaurant name].
+
+    User 1: Oh, I''ve heard of that place! It''s supposed to be really good.
+
+    User 2: It is! I love their [food].
+
+    User 1: I''ve been meaning to try it. Maybe I''ll go there soon.
+
+    User 2: You should! You won''t regret it.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00007002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7002
+data:
+  user 1 personas: 'I m a mom with two sons and a husband.
+
+    Since my dog died i m incomplete.
+
+    My parents taught me to find inspiration in the world.
+
+    I live in a house with a yard.'
+  user 2 personas: 'At all times , i am wearing something black.
+
+    I like to drink chai tea before bed every night.
+
+    My dog is my best friend.
+
+    I work as a computer technician , but secretly hate my job.
+
+    I am terrified of spiders , but love snakes.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m (user 2''s name).
+
+    User 1: Nice to meet you, (user 2''s name). I''m (user 1''s name).
+
+    User 2: Nice to meet you too, (user 1''s name).
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a computer technician.
+
+    User 1: Oh, cool! I''ve always been interested in computers, but I don''t know much about them.
+
+    User 2: Well, if you ever need any help, I''m always happy to give advice.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to spend time with my family and friends, go for walks in the park, and read books.
+
+    User 2: Oh, that sounds nice. I like to read books too.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like mystery novels and historical fiction.
+
+    User 1: Oh, I like those too! What''s your favorite mystery novel?
+
+    User 2: I''m not sure I have a favorite, but I really enjoyed The Girl on the Train.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: So, what''s your favorite historical fiction novel?
+
+    User 2: I really liked The Help. It''s a great book about the civil rights movement.
+
+    User 1: I''ve heard good things about that book too. I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: Sure, that sounds fun.
+
+    User 1: Great! I''ll text you later.
+
+    User 2: Okay, great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

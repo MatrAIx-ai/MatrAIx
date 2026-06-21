@@ -1,0 +1,18 @@
+id: 00040945
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40945
+persona_description: A sailor who is planning a trip and is interested in navigation and maritime navigation. They are looking for a way to calculate the bearing of their sailboat from port after sailing
+  for two hours at a speed of 12 knots and then for three hours at a speed of 9 knots. They are also interested in finding the length of the two sides of the triangle formed by the sailboat's position and
+  the bearing from port.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: Navigation
+  general_domain_top01pct: None
+  specific_domain_top01pct: Navigation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

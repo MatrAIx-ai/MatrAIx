@@ -1,0 +1,64 @@
+id: 00006971
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6971
+data:
+  user 1 personas: 'I have been at my job for seven years.
+
+    I am a vegan.
+
+    I like to read.
+
+    I love country music.'
+  user 2 personas: 'I live in alabama.
+
+    I have twelve kids.
+
+    I m 53 years old.
+
+    I am obese.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name].
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thanks. How are you?
+
+    User 1: I''m doing well too. Thank you for asking.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a vegan, and I love to read.
+
+    User 2: That''s interesting. I''ve been a vegan for 5 years now.
+
+    User 1: Wow! That''s great. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I mostly read historical fiction and nonfiction.
+
+    User 1: I like to read historical fiction too. I also like to read romance novels.
+
+    User 2: Romance novels are great! I love a good love story.
+
+    User 1: Me too! I''m currently reading a romance novel about a woman who falls in love with her boss.
+
+    User 2: That sounds like a good book. I''m currently reading a historical fiction novel about the Civil War.
+
+    User 1: The Civil War is a fascinating time period. I''ve always been interested in it.
+
+    User 2: Me too! I''m learning a lot about it from this book.
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: Thanks! I am.
+
+    User 1: Well, it was nice chatting with you.
+
+    User 2: You too. Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

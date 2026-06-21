@@ -1,0 +1,18 @@
+id: '00007600'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7600
+persona_description: A chemistry professor who has made significant contributions to the field of explosive detection through his research on bomb-detecting lasers. His work has led to the development of
+  a laser that can detect micro traces of explosive chemicals on clothing and luggage, and has been presented in Applied Physics Letters. He is interested in the practical applications of his research,
+  including the possibility of using the laser in security checkpoints and other applications.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: explosive detection
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

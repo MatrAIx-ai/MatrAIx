@@ -1,0 +1,19 @@
+id: 00015495
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15495
+persona_description: A mathematician or a computer scientist who specializes in polynomial factorization, particularly Gaussian integer factorization. They are interested in finding the factors of a given
+  polynomial over the integers, allowing Gaussian integer coefficients if necessary. They are familiar with the default setting of Extension->None, which treats algebraic number coefficients like independent
+  variables, and Extension->Automatic, which extends the domain to include any algebraic numbers that appear in the polynomial. They are proficient in using Factor to thread over lists, equations, inequalities,
+  and logic functions, and they are skilled in using the Gaussian integer setting to factor polynomials efficiently.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: algebra or number theory
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

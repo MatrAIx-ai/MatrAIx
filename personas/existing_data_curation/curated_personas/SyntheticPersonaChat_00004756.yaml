@@ -1,0 +1,58 @@
+id: '00004756'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4756
+data:
+  user 1 personas: 'I train horses for a living.
+
+    I write in my spare time.
+
+    I never sleep in.
+
+    I wish i knew where i belonged.'
+  user 2 personas: 'I have two kids i enjoy being on social media.
+
+    I love mexican food.
+
+    I love the summer.
+
+    I work at a animal clinic.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name], what''s your name?
+
+    User 2: I''m [user 2 name], it''s nice to meet you!
+
+    User 1: You too! What do you do for a living?
+
+    User 2: I work at an animal clinic.
+
+    User 1: Oh, that''s cool! I love animals.
+
+    User 2: Me too! What kind of animals do you like?
+
+    User 1: I like all animals, but I''m especially fond of dogs and cats.
+
+    User 2: Me too! I have two dogs and a cat.
+
+    User 1: Oh, that''s awesome! What are their names?
+
+    User 2: My dogs are named Max and Chloe, and my cat is named Luna.
+
+    User 1: Those are great names!
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the beach, play sports, and watch movies.
+
+    User 1: Sounds like we have a lot in common! I love going to the beach, playing sports, and watching movies too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great, I''ll send you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

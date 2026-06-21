@@ -1,0 +1,56 @@
+id: '00001301'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1301
+data:
+  user 1 personas: 'I have one child.
+
+    My favorite drink is red wine.
+
+    I work for a clothes retailer.
+
+    I enjoy gardening.'
+  user 2 personas: 'I work at amazon.
+
+    I am fairly conservative in politics.
+
+    I love robotics.
+
+    I have two kids.'
+  Best Generated Conversation: 'User 1: I like to garden.
+
+    User 2: That''s cool. I love gardening too. I have a small garden at my house.
+
+    User 1: What kind of plants do you have?
+
+    User 2: I have a lot of different plants. I have tomatoes, peppers, cucumbers, squash, and beans. I also have some flowers.
+
+    User 1: That''s a lot of plants! I have a few flowers and some herbs.
+
+    User 2: I love gardening because it''s relaxing and it''s a great way to get some fresh air.
+
+    User 1: I agree. It''s also a great way to learn about nature.
+
+    User 2: I love learning about plants. I''m always reading about different plants and how to care for them.
+
+    User 1: I''m not as knowledgeable about plants, but I''m learning more every day.
+
+    User 2: That''s great. Keep learning!
+
+    User 1: I will. I want to be able to grow my own food one day.
+
+    User 2: That would be so cool! I would love to be able to grow my own food too.
+
+    User 1: Maybe we could start a garden together.
+
+    User 2: That would be fun! We could trade plants and tips.
+
+    User 1: That would be great!
+
+    User 2: I''m so glad we met.
+
+    User 1: Me too. I think we''re going to be great friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

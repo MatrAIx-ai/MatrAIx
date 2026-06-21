@@ -1,0 +1,72 @@
+id: 00002815
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2815
+data:
+  user 1 personas: 'I like to go on walks.
+
+    I have 2 cats.
+
+    I like to bake.
+
+    I am from mexico.'
+  user 2 personas: 'I help them win a lot of money.
+
+    I am a small business owner.
+
+    My clients are gamblers.
+
+    I give out sports information.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a small business owner.
+
+    User 1: Oh, that''s cool. What kind of business?
+
+    User 2: I''m in the sports betting industry.
+
+    User 1: Oh, that''s interesting. So, what do you do?
+
+    User 2: I help my clients win a lot of money by giving them sports information.
+
+    User 1: That''s awesome! I''m from Mexico, and I love to go on walks.
+
+    User 2: That''s cool. I love to go on walks too.
+
+    User 1: I also like to bake.
+
+    User 2: That''s cool too. I''ve never tried baking before.
+
+    User 1: You should try it sometime. It''s really fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, do you have any pets?
+
+    User 2: I have two cats.
+
+    User 1: That''s cool. I have two dogs.
+
+    User 2: Oh, that''s nice.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play video games, watch movies, and go out with friends.
+
+    User 1: That''s cool. I like to do those things too.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: I think we do too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00006523'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6523
+data:
+  user 1 personas: 'My favorite musician is bruno mars.
+
+    I am an accountant.
+
+    I drive a red car.
+
+    I have 2 dogs.
+
+    I enjoy running.'
+  user 2 personas: 'I love to go shopping and inspire myself in stylish stores.
+
+    Since young i have loved fashion.
+
+    My desire is to become a fashion designer.
+
+    I moved to ny to study in a prestigious designing school.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I''m a fashion designer.
+
+    User 1: Oh, that''s so cool! I love fashion.
+
+    User 2: Thanks! I''ve always loved it since I was a little girl.
+
+    User 1: What''s your favorite thing about fashion?
+
+    User 2: I love being able to express myself through my clothes. I love finding new ways to mix and match different pieces and create something unique.
+
+    User 1: That''s so cool. I''m not very creative when it comes to fashion, but I love seeing what other people come up with.
+
+    User 2: Well, you''re sure to find some inspiration in New York City. There are so many stylish stores here.
+
+    User 1: I''m sure I will. I''m excited to explore the city.
+
+    User 2: You should check out the High Line. It''s a really cool park that was built on an old elevated railroad.
+
+    User 1: That sounds cool. I''ll add it to my list.
+
+    User 2: Also, you should check out the Met. It''s one of the largest art museums in the world.
+
+    User 1: The Met?
+
+    User 2: Yeah, the Metropolitan Museum of Art. It''s a really cool museum.
+
+    User 1: I''ll definitely check it out. Thanks for the recommendations.
+
+    User 2: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00005014'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5014
+data:
+  user 1 personas: 'I just took a trip to london.
+
+    I love to watch game shows.
+
+    I m very religious.
+
+    I m easily agitated.'
+  user 2 personas: 'I wish that i lived in the city.
+
+    I live on a pig farm.
+
+    I dislike animals.
+
+    I have allergies.'
+  Best Generated Conversation: 'User 1: Hi! I just took a trip to London and I''m really excited to talk about it.
+
+    User 2: Oh that sounds fun! I''ve never been to London, I live on a pig farm.
+
+    User 1: Wow! That sounds like a cool place to live, but I''m not sure I could handle the smell.
+
+    User 2: Yeah, it can get pretty bad sometimes. But I love the animals.
+
+    User 1: I can''t say I''m a big fan of animals, but I''m glad you like them.
+
+    User 2: Yeah, I really do. I think they''re so cute and cuddly.
+
+    User 1: I''m more of a cat person myself. I love their independent nature.
+
+    User 2: I can understand that. Cats are pretty cool too.
+
+    User 1: So, what do you do on your farm?
+
+    User 2: I mostly just take care of the pigs and help out around the house.
+
+    User 1: That sounds like a lot of work.
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: I''m glad you like it.
+
+    User 2: Thanks! I''m really passionate about it.
+
+    User 1: That''s great.
+
+    User 2: Yeah, I can''t imagine doing anything else.
+
+    User 1: Well, it was nice talking to you! I''m sure you''ll have a great time in London.
+
+    User 2: Thanks! I hope so too.
+
+    User 1: Take care!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

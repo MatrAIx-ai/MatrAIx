@@ -1,0 +1,60 @@
+id: '00004712'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4712
+data:
+  user 1 personas: 'I love to read crime novels.
+
+    I am a zookeeper.
+
+    My favorite animal is the panda.
+
+    My right foot only has 3 toes.'
+  user 2 personas: 'I am twenty two years old.
+
+    I just graduated college with my bachelor s degree in education.
+
+    I love children.
+
+    I just moved into an apartment within the vicinity of my new job.
+
+    I just accepted a job at the elementary school in my hometown.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi! How''s it going?
+
+    User 1: Good, good. I''m a zookeeper and I love to read crime novels. What about you?
+
+    User 2: I''m 22, just graduated college with my bachelor''s degree in education, love children, and just moved into an apartment within the vicinity of my new job.
+
+    User 1: Wow, that''s exciting! Where did you go to college?
+
+    User 2: I went to [name of college].
+
+    User 1: Oh, cool! I''ve heard good things about that school.
+
+    User 2: Yeah, it was a great experience. I''m glad I went there.
+
+    User 1: So, what kind of job did you get?
+
+    User 2: I got a job as a teacher at the elementary school in my hometown.
+
+    User 1: Oh, that''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thanks, I hope so!
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just going to take it one day at a time.
+
+    User 1: That sounds like a good plan.
+
+    User 2: Yeah, I think so.
+
+    User 1: Well, I''m glad I met you. It was nice talking to you.
+
+    User 2: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

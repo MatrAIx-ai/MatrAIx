@@ -1,0 +1,60 @@
+id: 00001418
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1418
+data:
+  user 1 personas: 'I play the piano.
+
+    I paddle board on my days off.
+
+    I am buying a house.
+
+    I am single.
+
+    I am a nurse and work in an emergency room at a busy hospital.'
+  user 2 personas: 'I play electric violin , and also work as an accountant.
+
+    My favorite band is imagine dragons.
+
+    Lately i ve been learning how to garden.
+
+    I have a pond at home with a pet koi named spot.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name] and I''m a nurse at an emergency room. What about you?
+
+    User 2: Hi! I''m [user 2 name] and I''m an accountant.
+
+    User 1: That''s cool! I''ve always been curious about accounting. What''s it like?
+
+    User 2: It''s pretty interesting! I get to work with a lot of different people and I get to see how businesses work.
+
+    User 1: That sounds like fun! I like working with people too.
+
+    User 2: Me too! What do you like to do for fun?
+
+    User 1: I like to play the piano, paddle board, and garden.
+
+    User 2: Wow, you''re very active! I like to play the electric violin, garden, and spend time with my pet koi fish.
+
+    User 1: That sounds great! I love koi fish.
+
+    User 2: Me too! They''re so peaceful and beautiful.
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is Imagine Dragons. They''re so talented and they have such a great sound.
+
+    User 1: I love Imagine Dragons! I saw them live a few years ago and it was amazing.
+
+    User 2: I''m so jealous! I''ve always wanted to see them live.
+
+    User 1: You should! They put on a really great show.
+
+    User 2: I definitely will!
+
+    User 1: Well, it was nice meeting you, [user 2 name].
+
+    User 2: You too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

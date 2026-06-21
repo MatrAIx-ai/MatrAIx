@@ -1,0 +1,60 @@
+id: 00003908
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3908
+data:
+  user 1 personas: 'I am not a fan of science.
+
+    My dad works for ups.
+
+    My favorite color is purple.
+
+    I have owned two mustangs.
+
+    I am currently looking for a job.'
+  user 2 personas: 'I have high speed internet.
+
+    I simply walk around when i have nothing to do.
+
+    I got hired as a security guard.
+
+    I can beat anyone in chess.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is John.
+
+    User 1: Hi, John. What do you do for a living?
+
+    User 2: I''m a security guard.
+
+    User 1: Oh, cool! What''s that like?
+
+    User 2: It''s pretty interesting. I get to meet a lot of different people and see a lot of interesting things.
+
+    User 1: I bet. What''s the weirdest thing you''ve ever seen?
+
+    User 2: I once saw a guy try to steal a whole car. He got caught pretty quickly, though.
+
+    User 1: Haha, that''s crazy. What''s your favorite part of the job?
+
+    User 2: I like getting to help people. I''ve been able to stop a few crimes, and it''s always a good feeling.
+
+    User 1: That''s really nice. What''s your least favorite part of the job?
+
+    User 2: The hours can be long, and it can be pretty boring at times.
+
+    User 1: I can imagine. Do you have any hobbies outside of work?
+
+    User 2: I like to play chess. I''m actually pretty good at it.
+
+    User 1: Oh, cool! I''ve never been very good at chess.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might just do that. Thanks for talking to me, John. It was nice meeting you.
+
+    User 2: You too, User 1. It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

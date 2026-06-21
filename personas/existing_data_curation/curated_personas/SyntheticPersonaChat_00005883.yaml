@@ -1,0 +1,66 @@
+id: 00005883
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5883
+data:
+  user 1 personas: 'I work in the office , 9 till 5.
+
+    I like italian cusine.
+
+    Sometimes i go to yoga classes.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.'
+  user 2 personas: 'I am vegan.
+
+    I work at the grocery store.
+
+    I decided to become vegan a year ago.
+
+    I help around with bookkeeping and tours.'
+  Best Generated Conversation: 'User 1: I like that you are vegan. I have been thinking about trying it myself.
+
+    User 2: It is something to think about. It took me a long time to make the decision.
+
+    User 1: What was the process like for you?
+
+    User 2: I started by reading up on it and watching documentaries.
+
+    User 1: What documentaries did you watch?
+
+    User 2: I watched "Cowspiracy" and "What the Health".
+
+    User 1: I have heard of those. I should check them out.
+
+    User 2: You should. They are really good.
+
+    User 1: What made you decide to become vegan?
+
+    User 2: I decided to become vegan because I didn''t want to support the meat and dairy industry anymore.
+
+    User 1: I can understand that. What have you been doing since you became vegan?
+
+    User 2: I have been trying new recipes and cooking more.
+
+    User 1: That is great. I love trying new recipes.
+
+    User 2: I have also been learning about the different ways to eat vegan.
+
+    User 1: That is awesome. I am happy that you have found something that works for you.
+
+    User 2: Thank you. I am too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at the grocery store.
+
+    User 1: Oh, that is cool. Do you like it?
+
+    User 2: I like it. It is a good job.
+
+    User 1: That is great. I am glad that you like your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

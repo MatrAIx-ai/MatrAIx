@@ -1,0 +1,130 @@
+id: '00007615'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7615
+data:
+  user 1 personas: 'I like to draw and paint in my spare time.
+
+    I wear a uniform to work.
+
+    My house is paid for.
+
+    My favorite color is blue.
+
+    I drive a four wheel drive vehicle.'
+  user 2 personas: 'My children vist often.
+
+    My grandson s favorite type of cake is chocolate.
+
+    I am an old woman.
+
+    I like to bake for them.'
+  Best Generated Conversation: 'User 1: Hi, my name is [USER_1_NAME].
+
+    User 2: Hi, my name is [USER_2_NAME].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I love to bake for my grandchildren.
+
+    User 1: That''s a great hobby! What''s your grandson''s favorite type of cake?
+
+    User 2: He loves chocolate cake.
+
+    User 1: I love chocolate cake too! I like to make it with chocolate frosting and chocolate ganache.
+
+    User 2: That sounds delicious!
+
+    User 1: Do you have any pictures of your grandchildren?
+
+    User 2: Yes, I do. I have them on my phone.
+
+    User 1: Can you show me?
+
+    User 2: Sure.
+
+    User 2 shows User 1 pictures of her grandchildren.
+
+    User 1: They''re so cute!
+
+    User 2: Thank you.
+
+    User 1: Do they live close by?
+
+    User 2: Yes, they live just down the street.
+
+    User 1: That''s great! You''re lucky to have them so close.
+
+    User 2: I am.
+
+    User 1: So, what do you like to do when you''re not baking?
+
+    User 2: I like to read, watch TV, and spend time with my grandchildren.
+
+    User 1: Sounds like you have a very active lifestyle.
+
+    User 2: I try to keep busy.
+
+    User 1: That''s good.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to draw and paint, go for walks, and play video games.
+
+    User 2: Those all sound like fun activities.
+
+    User 1: They are.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a firefighter.
+
+    User 2: That''s a very noble profession.
+
+    User 1: Thank you.
+
+    User 2: So, what''s it like being a firefighter?
+
+    User 1: It''s challenging and rewarding.
+
+    User 2: I can imagine.
+
+    User 1: It''s a lot of work, but it''s also very satisfying.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet.
+
+    User 1: You have plenty of time to figure that out.
+
+    User 2: I know.
+
+    User 1: So, what do you think of the weather today?
+
+    User 2: It''s beautiful!
+
+    User 1: It is!
+
+    User 2: I love days like this.
+
+    User 1: Me too.
+
+    User 2: So, what are you doing later today?
+
+    User 1: I''m not sure yet.
+
+    User 2: You should come over and have dinner with me and my grandchildren.
+
+    User 1: That sounds like a great idea!
+
+    User 2: Great! I''ll give you my address.
+
+    User 1: Thank you.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

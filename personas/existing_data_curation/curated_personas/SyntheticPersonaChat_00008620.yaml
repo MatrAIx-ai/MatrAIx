@@ -1,0 +1,78 @@
+id: 00008620
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8620
+data:
+  user 1 personas: 'I recently lost both my parents to an automobile accident.
+
+    I am a model building enthusiast.
+
+    I love going to comedy clubs.
+
+    I like camping and the outdoors in general.
+
+    I am originally from london , england.'
+  user 2 personas: 'I am a secretary.
+
+    My favorite color is orange.
+
+    I enjoy swimming.
+
+    I have 3 cats.
+
+    I like tacos.'
+  Best Generated Conversation: 'User 1: I''m sorry to hear about your parents. I lost my dad a few years ago.
+
+    User 2: Thanks. It''s been hard, but I''m trying to stay positive.
+
+    User 1: I know what you mean. It''s important to grieve and process the loss, but it''s also important to find ways to move on.
+
+    User 2: Exactly. I''ve been trying to focus on my hobbies and spend time with friends and family.
+
+    User 1: That sounds like a good way to cope. I''m sure your parents would want you to be happy.
+
+    User 2: I know. They were always so supportive of me.
+
+    User 1: I''m sure they''re proud of you.
+
+    User 2: Thanks. That means a lot.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go swimming, I''m a secretary and I have 3 cats.
+
+    User 1: That sounds fun! I love swimming too. I''m a model building enthusiast, I enjoy going to comedy clubs, I like camping and the outdoors in general, and I am originally from London, England.
+
+    User 2: That''s cool! I''ve never been to London, but I''ve heard it''s a beautiful city.
+
+    User 1: It is! I love it there.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to comedy clubs, I''m a model building enthusiast, I enjoy camping and the outdoors in general, and I am originally from London, England.
+
+    User 2: That sounds like a lot of fun! I''m a secretary and I have 3 cats.
+
+    User 1: That sounds fun too! I''ve always wanted a cat.
+
+    User 2: They''re great pets!
+
+    User 1: I''m sure they are.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a model building enthusiast.
+
+    User 2: That sounds interesting! What kind of models do you build?
+
+    User 1: I build all sorts of models, but I''m mostly into airplanes.
+
+    User 2: That''s cool! I''ve never built a model airplane before.
+
+    User 1: It''s a lot of fun! You should give it a try sometime.
+
+    User 2: I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

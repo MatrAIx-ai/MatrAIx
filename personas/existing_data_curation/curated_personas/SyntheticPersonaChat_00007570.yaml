@@ -1,0 +1,62 @@
+id: '00007570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7570
+data:
+  user 1 personas: 'I am a genius and know over 300 languages.
+
+    I never met my parents.
+
+    I own a mansion that i do not live in.
+
+    I never went to school.'
+  user 2 personas: 'I go to bed pretty late.
+
+    My passion is in programming.
+
+    My best friend is gay.
+
+    I am in school to be a computer engineer.
+
+    One day i hope to own my own company.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey, how''s it going?
+
+    User 1: It''s going well, thanks! I''m just chatting with some friends on this new app.
+
+    User 2: Oh, cool! I''m just hanging out, waiting for my best friend to come over.
+
+    User 1: Oh, what are you guys going to do?
+
+    User 2: We''re going to play some video games and watch some movies.
+
+    User 1: That sounds like fun! I love playing video games.
+
+    User 2: Me too! My favorite game is Fortnite.
+
+    User 1: I''ve never played Fortnite, but I''ve heard good things about it.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: I will! Do you play any other games?
+
+    User 2: Yeah, I play a lot of different games. I like Call of Duty, Minecraft, and Apex Legends.
+
+    User 1: Those all sound like really fun games. I''m not much of a shooter person, but I love Minecraft.
+
+    User 2: Minecraft is so much fun! I''ve been playing it for years.
+
+    User 1: I''ve only been playing it for a few months, but I''m already addicted.
+
+    User 2: Me too! It''s so easy to lose track of time when you''re playing Minecraft.
+
+    User 1: I know, right? I''ve been up all night playing Minecraft a few times.
+
+    User 2: Me too! I''m glad we both love Minecraft.
+
+    User 1: Me too! It''s such a great game.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

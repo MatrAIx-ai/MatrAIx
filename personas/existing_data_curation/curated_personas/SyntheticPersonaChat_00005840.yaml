@@ -1,0 +1,54 @@
+id: 00005840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5840
+data:
+  user 1 personas: 'I make a million dollars a year.
+
+    I play for the baltimore orioles.
+
+    I am a baseball player.
+
+    I m married and have three kids.
+
+    I went to miami university.'
+  user 2 personas: 'I like pasta.
+
+    I am a student.
+
+    I like cookies.
+
+    I like painting , i can cook well.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1. What''s your name?
+
+    User 2: Hi, I''m User 2. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to paint, cook, and play video games.
+
+    User 1: That''s cool! I like to cook too. What''s your favorite thing to cook?
+
+    User 2: I like to cook pasta dishes. I''m really good at making lasagna.
+
+    User 1: Lasagna is one of my favorite foods! I''d love to try yours sometime.
+
+    User 2: You''re welcome to come over for dinner sometime. I''ll make lasagna for you.
+
+    User 1: That sounds great! I love home-cooked meals.
+
+    User 2: Me too! I''m a good cook, so you''re in for a treat.
+
+    User 1: I''m sure I will be. I''m looking forward to it.
+
+    User 2: Great! I''ll send you a text message when I''m ready.
+
+    User 1: Sounds good.
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

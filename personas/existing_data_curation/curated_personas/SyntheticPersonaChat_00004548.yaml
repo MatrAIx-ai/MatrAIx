@@ -1,0 +1,78 @@
+id: 00004548
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4548
+data:
+  user 1 personas: 'My mom died when i was six.
+
+    My dad is a college professor.
+
+    I am a petsitter.
+
+    I have purple hair.
+
+    My favorite book is the tale of genji.'
+  user 2 personas: 'I used to be a lawyer.
+
+    My name is albert.
+
+    I m a judge in the circuit court.
+
+    I give everybody that comes in front me a fair chance.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username].
+
+    User 2: Hi, my name is Albert.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a judge in the circuit court.
+
+    User 1: That''s interesting! How did you get into that?
+
+    User 2: I used to be a lawyer, but I wanted to make a difference in people''s lives, so I became a judge.
+
+    User 1: That''s great! I''m sure you''re making a difference.
+
+    User 2: I hope so.
+
+    User 1: So, what''s your favorite thing about your job?
+
+    User 2: I like being able to help people. I also like the challenge of making difficult decisions.
+
+    User 1: That makes sense. I''m sure it''s a lot of responsibility.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is. So, what''s your favorite book?
+
+    User 2: My favorite book is The Tale of Genji.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: Really? That''s awesome! I''ve never met anyone else who''s read it.
+
+    User 1: I''m a big fan of Japanese literature.
+
+    User 2: Me too! I love the way they write.
+
+    User 1: Me too. It''s so poetic.
+
+    User 2: I agree. So, what do you do for a living?
+
+    User 1: I''m a petsitter.
+
+    User 2: Oh, that''s cool! I love animals.
+
+    User 1: Me too! I have a cat named Luna.
+
+    User 2: Aww, I love cats! I have a dog named Bailey.
+
+    User 1: Aww, I love dogs too!
+
+    User 2: I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

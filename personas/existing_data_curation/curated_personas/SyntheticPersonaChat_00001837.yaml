@@ -1,0 +1,70 @@
+id: 00001837
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1837
+data:
+  user 1 personas: 'I am ten years old.
+
+    My dad works at the mill and my mom is a teacher.
+
+    I love dogs and cats.
+
+    I live in a house.
+
+    I have a lot of friends.'
+  user 2 personas: 'I enjoy playing computer games.
+
+    I am confined to my bed.
+
+    I am glad that i work from home.
+
+    I love when my pets visit me in bed.'
+  Best Generated Conversation: 'User 1: I''m ten years old.
+
+    User 2: Wow, you''re so young! I''m 30.
+
+    User 1: I know. I''m still learning a lot.
+
+    User 2: I bet you are. What do you like to do for fun?
+
+    User 1: I love playing with my friends, dogs, and cats.
+
+    User 2: That sounds like a lot of fun. I used to love playing with my friends when I was younger.
+
+    User 1: What do you like to do for fun now?
+
+    User 2: I like to play computer games.
+
+    User 1: I''ve never played a computer game before.
+
+    User 2: You should try it! They''re a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! I''m sure you''d like it.
+
+    User 1: I hope so.
+
+    User 2: So, what kind of pets do you have?
+
+    User 1: I have a dog and a cat.
+
+    User 2: What are their names?
+
+    User 1: My dog''s name is Sparky and my cat''s name is Mittens.
+
+    User 2: Those are great names! I love animals.
+
+    User 1: Me too. They''re the best.
+
+    User 2: I agree.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

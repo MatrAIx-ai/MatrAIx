@@ -1,0 +1,17 @@
+id: 00006218
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6218
+persona_description: A healthcare professional who is interested in cardiovascular health and has a background in pharmacology. They are looking for information on the risks associated with different NSAIDs,
+  particularly Celebrex, and want to understand how it compares to other drugs in terms of cardiovascular risks. They are also interested in the side effects of Celebrex and its impact on kidney complications.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: pharmacology of cardiovascular drugs
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

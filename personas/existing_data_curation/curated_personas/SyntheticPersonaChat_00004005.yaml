@@ -1,0 +1,88 @@
+id: '00004005'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4005
+data:
+  user 1 personas: 'I have two border collies.
+
+    I am planning to move to a new state soon.
+
+    I speak french and english fluently.
+
+    I am an artist.
+
+    I enjoy hiking.'
+  user 2 personas: 'I love dancing.
+
+    I love country music.
+
+    I love animals.
+
+    I am a vegan.
+
+    I have a farm with pigs , horses and hens.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I''m a farmer. I have a farm with pigs, horses, and hens.
+
+    User 1: That''s cool! Do you like it?
+
+    User 2: I love it! I love being around animals.
+
+    User 1: I can see why. I''m an artist. I like to paint and draw.
+
+    User 2: That''s cool! I love art too. I like to go to art galleries and museums.
+
+    User 1: Me too! I love seeing all the different types of art.
+
+    User 2: What''s your favorite kind of art?
+
+    User 1: I like all kinds of art, but I especially like abstract art.
+
+    User 2: I like abstract art too! It''s so interesting to see what different artists can come up with.
+
+    User 1: I agree! I think it''s a great way to express oneself.
+
+    User 2: Me too! So, what kind of paintings do you do?
+
+    User 1: I do a lot of landscapes and portraits. I also like to do abstract paintings.
+
+    User 2: That''s cool! I would love to see some of your work sometime.
+
+    User 1: Sure! I''ll send you some pictures.
+
+    User 2: Great! I''d love to see them.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to dance! I also love to go to concerts and listen to country music.
+
+    User 1: That''s cool! I love country music too. What are some of your favorite bands?
+
+    User 2: I love the Dixie Chicks, Zac Brown Band, and Alan Jackson.
+
+    User 1: I love the Dixie Chicks too! I also love Luke Bryan and Toby Keith.
+
+    User 2: Those are great bands! I love all of their music.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to a country music festival with some friends.
+
+    User 1: That sounds like fun! I''m going to be hiking with my dogs.
+
+    User 2: That sounds like fun too! I love hiking.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to the movies, read, and play video games.
+
+    User 1: Me too! I love going to the movies, reading, and playing video games.
+
+    User 2: That''s great! We have a lot in common.
+
+    User 1: I think so too! It''s nice to meet someone with similar interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

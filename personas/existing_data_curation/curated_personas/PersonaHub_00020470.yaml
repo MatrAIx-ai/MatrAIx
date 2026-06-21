@@ -1,0 +1,18 @@
+id: '00020470'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20470
+persona_description: A person who is interested in medical conditions that affect the visual system, particularly glaucoma, age-related macular degeneration, retinitis pigmentosa, and left homonymous hemianopia.
+  This person may have a background in biology, medicine, or optometry and is interested in learning about the latest research and treatments for these conditions. They may also be interested in the causes
+  and underlying mechanisms of these diseases, as well as the potential for new therapies and advancements in the field.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

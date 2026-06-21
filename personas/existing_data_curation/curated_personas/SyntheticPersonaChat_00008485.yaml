@@ -1,0 +1,68 @@
+id: 00008485
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8485
+data:
+  user 1 personas: 'When i turned 18 , my family moved across the country.
+
+    On weekends i go out with friends.
+
+    I eat eggs and bacon for breakfast.
+
+    I grew up on a farm.'
+  user 2 personas: 'My favorite color is purple.
+
+    I love dogs.
+
+    I like swimming.
+
+    I own a home.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sam.
+
+    User 2: Hi Sam, I''m Sarah.
+
+    User 1: Nice to meet you, Sarah.
+
+    User 2: You too, Sam.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to swim, go for walks, and read.
+
+    User 1: Oh, that sounds nice. I like to go out with friends on weekends.
+
+    User 2: That''s fun too. Do you have any pets?
+
+    User 1: Yes, I have a dog.
+
+    User 2: Oh, what kind of dog?
+
+    User 1: He''s a golden retriever named Buddy.
+
+    User 2: Aw, he sounds adorable.
+
+    User 1: He is. He''s my best friend.
+
+    User 2: I''m glad you have a good friend.
+
+    User 1: Me too.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great! What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: Oh, that must be fun.
+
+    User 1: It is. I love working with kids.
+
+    User 2: That''s great. I''m glad you enjoy your job.
+
+    User 1: Me too. It''s the best job in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

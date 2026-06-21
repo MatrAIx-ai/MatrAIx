@@ -1,0 +1,66 @@
+id: 00002309
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2309
+data:
+  user 1 personas: 'I ride a skateboard.
+
+    I have often been called a slacker.
+
+    I am a weirdo.
+
+    I wear dingy clothes.'
+  user 2 personas: 'I am a mechanic.
+
+    I like to surf.
+
+    I own a german shepard.
+
+    I live in california.'
+  Best Generated Conversation: 'User 1: Hi there, what do you do for fun?
+
+    User 2: I''m a mechanic and I also like to surf.
+
+    User 1: Oh that''s cool, I love to surf too.
+
+    User 2: Nice! Where do you like to surf?
+
+    User 1: I usually go to the beach near my house.
+
+    User 2: Oh yeah? I live in California so I have a lot of good surfing spots nearby.
+
+    User 1: That''s awesome. I wish I lived in California.
+
+    User 2: It''s pretty great, but it''s also really expensive.
+
+    User 1: I can imagine. Do you have any pets?
+
+    User 2: Yeah, I have a German Shepherd.
+
+    User 1: Oh my god, I love German Shepherds! They''re so cute.
+
+    User 2: They are! Mine is a big sweetheart.
+
+    User 1: I''m sure he is. What''s his name?
+
+    User 2: His name is Bear.
+
+    User 1: That''s a great name.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do for fun besides surf and work on cars?
+
+    User 2: I like to go hiking, play video games, and hang out with my friends.
+
+    User 1: Oh that sounds like a lot of fun. I like to do all of those things too.
+
+    User 2: Cool! It sounds like we have a lot in common.
+
+    User 1: Yeah, it does. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

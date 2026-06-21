@@ -1,0 +1,18 @@
+id: '00027445'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27445
+persona_description: A semiconductor engineer who specializes in the design and optimization of low-power, high-performance chips. They are knowledgeable about the latest technologies in chip manufacturing,
+  such as 65nm and 90nm lithography, and are interested in the trade-offs between power consumption and chip size. They are also interested in the potential of water cooling and nano-peltier technology
+  as solutions to the heat dissipation issue in modern CPUs.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: semiconductor engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: semiconductor engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

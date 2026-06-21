@@ -1,0 +1,19 @@
+id: '00020066'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20066
+persona_description: A medical doctor who specializes in emergency medicine, particularly in the management of children with foreign bodies in the esophagus. She has experience in treating patients who
+  have swallowed coins, food particles, and toy parts, and is familiar with the medical protocol for managing these cases. Her expertise includes reviewing the literature on foreign body retrieval and developing
+  a suggested protocol for managing patients who have swallowed coins. She is likely to be interested in the latest research on foreign body management and the development of effective treatment plans for
+  children with esophageal foreign bodies.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric emergency medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

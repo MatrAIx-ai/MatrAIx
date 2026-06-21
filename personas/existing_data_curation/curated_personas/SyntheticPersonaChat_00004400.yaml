@@ -1,0 +1,74 @@
+id: '00004400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4400
+data:
+  user 1 personas: 'I like to play video games.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I am a scientist.
+
+    I live alone.
+
+    I play guitar on my free time.'
+  user 2 personas: 'I have a few pet iguanas.
+
+    I like to give them sassy sounding names that actually help people think nice things.
+
+    I have a brother but we do not talk much yet.
+
+    I think dogs could learn to read if they were trained well.
+
+    I am pretty poor financially.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play with my iguanas, they''re very sassy!
+
+    User 1: That sounds fun! I''ve never had a pet iguana before.
+
+    User 2: I think you''d like them, they''re very friendly.
+
+    User 1: What''s your favorite thing about them?
+
+    User 2: I like their personalities, they''re very unique and interesting.
+
+    User 1: I can see why you like them so much!
+
+    User 2: They''re also very low maintenance, which is great for me since I''m so busy.
+
+    User 1: That''s a plus!
+
+    User 2: Yeah, they''re pretty much the perfect pet for me.
+
+    User 1: I''m glad you found a pet that you love!
+
+    User 2: Me too! What do you like to do for fun?
+
+    User 1: I like to play video games, cook, and play guitar.
+
+    User 2: That''s awesome! I love to cook too, what are your favorite dishes to make?
+
+    User 1: I love to make pasta dishes, especially lasagna.
+
+    User 2: I love lasagna too! It''s so delicious.
+
+    User 1: Me too! I also love to make seafood dishes.
+
+    User 2: Seafood is delicious! I''m not a very good cook, but I do love to eat seafood.
+
+    User 1: Well, I''m sure you''re better than you think!
+
+    User 2: Thanks! I''m trying to get better, but I''m not quite there yet.
+
+    User 1: We all have to start somewhere!
+
+    User 2: That''s true!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

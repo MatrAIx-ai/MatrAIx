@@ -1,0 +1,78 @@
+id: '00001204'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1204
+data:
+  user 1 personas: 'I am a night owl.
+
+    I am a dancer.
+
+    I am a vegetarian.
+
+    I love to sing.'
+  user 2 personas: 'I drive a black car.
+
+    I like rock music.
+
+    I have a black purse.
+
+    My favorite artist is guns and roses.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to dance and listen to rock music.
+
+
+    User 1: Cool! I like to dance too. What kind of rock music do you like?
+
+
+    User 2: I like Guns N'' Roses, AC/DC, and Led Zeppelin.
+
+
+    User 1: Oh, I love those bands! I''m also a vegetarian.
+
+
+    User 2: Me too! I love animals.
+
+
+    User 1: Me too. I''m a big advocate for animal rights.
+
+
+    User 2: That''s great. I''m glad to meet someone who shares my values.
+
+
+    User 1: Me too! What do you do for a living?
+
+
+    User 2: I''m a nurse.
+
+
+    User 1: Oh, that''s cool! I''ve always been interested in nursing.
+
+
+    User 2: It''s a great job. I love helping people.
+
+
+    User 1: That''s what I like to hear. I''m glad you''re happy with your job.
+
+
+    User 2: Thanks. I am.
+
+
+    User 1: Well, it was nice talking to you.
+
+
+    User 2: You too. Have a nice day!
+
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

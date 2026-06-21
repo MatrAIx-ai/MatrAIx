@@ -1,0 +1,64 @@
+id: 00003860
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3860
+data:
+  user 1 personas: 'My newest car is a chevy.
+
+    My favorite thing to do is read.
+
+    I live in california.
+
+    I like to eat spaghetti.
+
+    I work at a power plant.'
+  user 2 personas: 'I have a masters degree in creative writing.
+
+    I have 3 sisters and 2 brothers.
+
+    My favorite place to spend time at is the beach.
+
+    I live in a medium sized city.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username]. What''s yours?
+
+    User 2: Hi, I''m [username].
+
+    User 1: Where do you live?
+
+    User 2: I live in a medium-sized city.
+
+    User 1: Cool, me too! What do you like to do for fun?
+
+    User 2: I like to read, write, and spend time at the beach.
+
+    User 1: Nice, me too! What are your favorite books?
+
+    User 2: I like to read a lot of different types of books, but I especially enjoy historical fiction and fantasy.
+
+    User 1: I love historical fiction too! What are some of your favorite books in that genre?
+
+    User 2: I really enjoyed the Pillars of the Earth series by Ken Follett, the Outlander series by Diana Gabaldon, and the The Last Kingdom series by Bernard Cornwell.
+
+    User 1: Those are all great books! I''ve read the Pillars of the Earth and the Outlander series, and I''m currently reading The Last Kingdom.
+
+    User 2: Oh, that''s awesome! What do you think of it so far?
+
+    User 1: I''m really enjoying it! It''s a great historical fiction series.
+
+    User 2: I''m glad you''re enjoying it! It''s one of my favorites.
+
+    User 1: What are some of your favorite fantasy books?
+
+    User 2: I really enjoyed the Lord of the Rings series by J.R.R. Tolkien, the Harry Potter series by J.K. Rowling, and the The Witcher series by Andrzej Sapkowski.
+
+    User 1: Those are all great books! I''ve read the Lord of the Rings and Harry Potter series, and I''ve started reading the The Witcher series.
+
+    User 2: Oh, that''s awesome! What do you think of it so far?
+
+    User 1: I''m really enjoying it! It''s a great fantasy series.
+
+    User 2: I''m glad you''re enjoying it! It''s one of my favorites.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

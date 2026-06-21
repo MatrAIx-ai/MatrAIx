@@ -1,0 +1,64 @@
+id: '00005520'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5520
+data:
+  user 1 personas: 'I can do convincing bird calls.
+
+    I am partially blind.
+
+    I can recite the movie young frankenstein word for word.
+
+    I do volunteer work for human rights organizations.
+
+    I like to make my own clothes.'
+  user 2 personas: 'My favorite color is grey.
+
+    I am single.
+
+    I work for a newspaper.
+
+    My passion is writing.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a journalist for a local newspaper.
+
+    User 1: That sounds interesting! I''m partially blind and I volunteer for human rights organizations.
+
+    User 2: That''s very cool! I''m impressed by your work.
+
+    User 1: Thank you! I''m also a seamstress and I love to make my own clothes.
+
+    User 2: That''s awesome! I''m not very crafty, but I like to write.
+
+    User 1: That''s cool! I can recite the movie Young Frankenstein word for word.
+
+    User 2: Wow! That''s impressive! I''ve never seen it, but I''ve heard good things.
+
+    User 1: It''s a classic! You should definitely watch it.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! What''s your favorite color?
+
+    User 2: My favorite color is grey.
+
+    User 1: Grey is a great color! I like it too.
+
+    User 2: Thanks! It''s a good color for clothes, don''t you think?
+
+    User 1: Yes, it is! It''s also a good color for writing.
+
+    User 2: I agree! It''s a calming color that helps me focus.
+
+    User 1: I''m glad you like it!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

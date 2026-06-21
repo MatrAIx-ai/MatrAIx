@@ -1,0 +1,72 @@
+id: 00001095
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1095
+data:
+  user 1 personas: 'I love to dance.
+
+    I don t eat meat.
+
+    I am witty.
+
+    I love sharks.'
+  user 2 personas: 'I m never still.
+
+    I fix airplanes for a living.
+
+    I drive junk cars that no one else wants.
+
+    I prefer vinyl records to any other music recording format.'
+  Best Generated Conversation: '*User 1:* Hi there!
+
+    *User 2:* Hey there! How are you doing today?
+
+    *User 1:* I''m doing well, thanks! How about you?
+
+    *User 2:* I''m doing great! I''m just getting ready to go to work.
+
+    *User 1:* What do you do for work?
+
+    *User 2:* I''m a mechanic. I fix airplanes.
+
+    *User 1:* That''s cool! I''ve always been interested in airplanes.
+
+    *User 2:* It''s a great job. I get to work on all sorts of different airplanes.
+
+    *User 1:* I bet that''s a lot of fun.
+
+    *User 2:* It is! I love working with my hands.
+
+    *User 1:* What kind of music do you like?
+
+    *User 2:* I listen to all sorts of music, but I prefer vinyl records.
+
+    *User 1:* Oh, cool! I used to listen to vinyl records when I was younger.
+
+    *User 2:* They''re the best! I love the sound quality.
+
+    *User 1:* Me too! They just sound so much better than CDs.
+
+    *User 2:* I agree!
+
+    *User 1:* So, what else do you like to do for fun?
+
+    *User 2:* I love to dance. I''m always moving.
+
+    *User 1:* Really? That''s awesome! I love to dance too.
+
+    *User 2:* We should dance together sometime!
+
+    *User 1:* That would be fun!
+
+    *User 2:* Great! I''ll bring my records.
+
+    *User 1:* Sounds like a plan!
+
+    *User 2:* See you then!
+
+    *User 1:* Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00004345'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4345
+data:
+  user 1 personas: 'I have a wife and two kids.
+
+    I am a factory worker.
+
+    I want to be in a band someday.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    My hobbies are sleeping and playing the guitar.'
+  user 2 personas: 'I grew up on a farm.
+
+    I am a veterinarian.
+
+    I have two nephews.
+
+    My brother is in the army.
+
+    Running is my way to relax.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a veterinarian.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a vet.
+
+    User 2: Really? Why''s that?
+
+    User 1: I love animals. I grew up on a farm, so I''ve always been around them.
+
+    User 2: That''s awesome! I love animals too.
+
+    User 1: What kind of animals do you treat?
+
+    User 2: I treat all kinds of animals, but I specialize in dogs and cats.
+
+    User 1: That''s cool! I have a dog and a cat.
+
+    User 2: Oh, what kind of dog?
+
+    User 1: He''s a golden retriever.
+
+    User 2: Golden retrievers are great dogs!
+
+    User 1: Yeah, he''s the best dog ever.
+
+    User 2: What''s your cat''s name?
+
+    User 1: Her name is Lily.
+
+    User 2: That''s a pretty name.
+
+    User 1: Thanks.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play the guitar, sleep, and spend time with my family.
+
+    User 2: What kind of music do you play?
+
+    User 1: I play a lot of different kinds of music, but I mostly play classic rock.
+
+    User 2: That''s cool! I like classic rock too.
+
+    User 1: Cool! We should jam sometime.
+
+    User 2: Yeah, that would be fun.
+
+    User 1: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00002958
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2958
+data:
+  user 1 personas: 'I am a 70 year old man.
+
+    I have 5 grandchildren.
+
+    I live alone in a cabin.
+
+    I like to go fishing on the lake.'
+  user 2 personas: 'I never learned how to swim.
+
+    I am a meat eater.
+
+    I had to get a job early as a child.
+
+    I like anime shows.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Bob.
+
+    User 1: Hi Bob, my name is John. What are you up to today?
+
+    User 2: I''m just watching some anime.
+
+    User 1: Oh, that''s cool. I''ve never really gotten into anime, but I''ve heard good things about it.
+
+    User 2: Yeah, it''s really good. There''s a lot of different types of anime, so you''re sure to find something you like.
+
+    User 1: Maybe I''ll check it out sometime. What''s your favorite anime?
+
+    User 2: My favorite is Fullmetal Alchemist.
+
+    User 1: Oh, I''ve heard of that one. I''ve heard it''s really good.
+
+    User 2: It is. It''s a really well-written story with great characters.
+
+    User 1: What''s it about?
+
+    User 2: It''s about two brothers who are trying to find the Philosopher''s Stone so they can bring their mother back from the dead.
+
+    User 1: That sounds interesting. I might have to check it out.
+
+    User 2: I definitely recommend it.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go fishing.
+
+    User 1: Oh, me too! I love fishing.
+
+    User 2: Where do you like to fish?
+
+    User 1: I like to fish in the lake near my house.
+
+    User 2: That''s cool. I like to fish in the ocean.
+
+    User 1: I''ve never been fishing in the ocean.
+
+    User 2: You should try it. It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

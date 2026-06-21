@@ -1,0 +1,82 @@
+id: 00003960
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3960
+data:
+  user 1 personas: 'I grew up on a large farm.
+
+    I just moved from va to pa.
+
+    I love reading.
+
+    Since i have fibromyalgia , the harsher winters here in pa will be rough on me.
+
+    I enjoy doing beadwork and writing my own patterns.'
+  user 2 personas: 'I hate red meat.
+
+    My hair is brown and curly.
+
+    I love to surf.
+
+    I love watching sunsets.
+
+    I live near the ocean.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: I''m from Virginia. I just moved to Pennsylvania.
+
+    User 2: Oh, that''s a big change. How are you liking it so far?
+
+    User 1: It''s been a little tough, but I''m getting used to it.
+
+    User 2: What do you miss most about Virginia?
+
+    User 1: I miss my family and friends, and the milder weather.
+
+    User 2: I can understand that. I miss my family and friends too, but I love the ocean.
+
+    User 1: I''ve never been to the ocean.
+
+    User 2: You should come visit sometime! I''ll take you surfing.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll get you in touch with my friends who run a surf shop.
+
+    User 1: Thanks!
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I love to read, and I enjoy doing beadwork.
+
+    User 2: That''s cool! I love to read too. I''m not very good at beadwork, but I''ve always wanted to learn.
+
+    User 1: It''s not hard to learn. You just need some basic supplies and a lot of patience.
+
+    User 2: I''ll have to look into it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to surf, and I love watching sunsets.
+
+    User 1: That''s cool! I''ve never been surfing, but I''ve always wanted to try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to look into it.
+
+    User 2: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

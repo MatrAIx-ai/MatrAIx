@@ -1,0 +1,68 @@
+id: 00005283
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5283
+data:
+  user 1 personas: 'I graduated college last week.
+
+    I got a job as a coach at a local highschool.
+
+    I am proposing tonight.
+
+    We just bought a house near her parents.
+
+    My girlfriend is 6 months pregnant.'
+  user 2 personas: 'I am in a lot of debt.
+
+    I enjoy nature.
+
+    I enjoy electronic music.
+
+    I fantasize about living in another country.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a musician.
+
+    User 1: Oh, cool. What kind of music do you play?
+
+    User 2: I play electronic music.
+
+    User 1: That''s cool. I''ve always wanted to learn to play an instrument.
+
+    User 2: It''s a lot of fun. You should try it!
+
+    User 1: Maybe I will.
+
+    User 2: What do you do for a living?
+
+    User 1: I just graduated college and got a job as a coach at a local high school.
+
+    User 2: That''s awesome! Congratulations!
+
+    User 1: Thanks! I''m really excited about it.
+
+    User 2: So, what''s your favorite thing about nature?
+
+    User 1: I love the way it can be so calming and peaceful.
+
+    User 2: Me too. It''s a great place to relax and de-stress.
+
+    User 1: Do you have any plans for the future?
+
+    User 2: I''m thinking about moving to another country.
+
+    User 1: That''s awesome! Where are you thinking about moving to?
+
+    User 2: I''m not sure yet. I''m still exploring my options.
+
+    User 1: Well, I''m sure you''ll find a great place to live.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

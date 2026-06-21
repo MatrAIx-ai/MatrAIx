@@ -1,0 +1,18 @@
+id: 00028283
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28283
+persona_description: A lawyer who specializes in medical malpractice cases, particularly those involving infants and their conditions. The lawyer has extensive knowledge of medical malpractice law, negligence,
+  and the legal system, and has successfully represented many clients in similar cases. The lawyer is particularly interested in cases involving infant injuries and the actions of healthcare providers,
+  and has a deep understanding of the McGhee principle and its application to such cases.
+expertise:
+  general_domain_top1pct: law
+  specific_domain_top1pct: medical malpractice law
+  general_domain_top01pct: None
+  specific_domain_top01pct: medical malpractice law involving infants
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

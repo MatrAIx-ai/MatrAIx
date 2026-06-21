@@ -1,0 +1,18 @@
+id: '00063545'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63545
+persona_description: A person who is interested in grading and ranking subgrades, and is looking for a rule to calculate the overall grade from subgrades. They may be a teacher, student, or someone with
+  a background in mathematics or education. They are interested in finding the optimal gap for the overall grade to be as high as possible, while still maintaining fairness and consistency in grading. They
+  are also likely to be interested in finding the optimal gap for each subgrade, as well as the overall grade.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: statistics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

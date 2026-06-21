@@ -1,0 +1,18 @@
+id: 00009868
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9868
+persona_description: A healthcare professional who is concerned with the early detection and treatment of breast cancer. They are likely to be a mammography technician, a breast surgeon, or a breast cancer
+  researcher. They are knowledgeable about the statistics and prevalence of breast cancer, and are aware of the latest treatment options and research advancements in the field. They are dedicated to improving
+  the lives of women by providing accurate and timely information about breast cancer.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: breast cancer diagnosis and treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: breast cancer research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

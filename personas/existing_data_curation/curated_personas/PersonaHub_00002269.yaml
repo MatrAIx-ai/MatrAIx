@@ -1,0 +1,18 @@
+id: 00002269
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2269
+persona_description: A healthcare professional who works in a maternity ward and is responsible for caring for pregnant women and their babies. They are familiar with the latest medical practices and guidelines
+  for COVID-19, and are trained to recognize the signs of preterm labor or other complications during pregnancy. They are also aware of the importance of maintaining a healthy lifestyle during pregnancy
+  to reduce the risk of contracting COVID-19.
+expertise:
+  general_domain_top1pct: healthcare
+  specific_domain_top1pct: obstetrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

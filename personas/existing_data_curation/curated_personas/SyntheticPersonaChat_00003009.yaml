@@ -1,0 +1,82 @@
+id: 00003009
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3009
+data:
+  user 1 personas: 'I am fluent in spanish.
+
+    I have a gambling problem.
+
+    I love to go hiking.
+
+    I love talking on the phone.'
+  user 2 personas: 'I own 30 pairs of shoes.
+
+    My car has to be as fast as my motorcycle.
+
+    I have 4 cats and 2 dogs.
+
+    I love to skate and ski.
+
+    I love the smell of leather.'
+  Best Generated Conversation: 'User 1: Hey, I''m user 1. Nice to meet you.
+
+    User 2: Hey, I''m user 2. Nice to meet you too.
+
+    User 1: So, what are you interested in?
+
+    User 2: I love to go hiking, I love talking on the phone, and I''m fluent in Spanish.
+
+    User 1: That''s cool. I love hiking too. I''m not very good at Spanish, but I''m learning.
+
+    User 2: That''s great. What do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: Nice. I like to do all of those things too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like a lot of different types of books, but I really like sci-fi and fantasy.
+
+    User 1: Me too. I love the Lord of the Rings series and the Harry Potter series.
+
+    User 2: Those are great books. I also love the Dune series and the Ender''s Game series.
+
+    User 1: I''ve heard good things about the Dune series, but I haven''t read it yet.
+
+    User 2: You should. It''s really good.
+
+    User 1: I''ll check it out.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a student. I''m studying to be a teacher.
+
+    User 2: That''s great. What grade do you want to teach?
+
+    User 1: I''m not sure yet. I''m still undecided.
+
+    User 2: Well, whatever you decide, I''m sure you''ll be great at it.
+
+    User 1: Thanks. I hope so.
+
+    User 2: So, what''s your favorite thing about being a student?
+
+    User 1: I like learning new things and meeting new people.
+
+    User 2: Me too. I also like the freedom to choose my own classes.
+
+    User 1: Yeah, that''s a lot of fun.
+
+    User 2: So, what are you looking forward to the most in the future?
+
+    User 1: I''m looking forward to graduating and starting my career as a teacher.
+
+    User 2: That''s great. I''m sure you''ll be great at it.
+
+    User 1: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

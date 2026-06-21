@@ -1,0 +1,66 @@
+id: '00002725'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2725
+data:
+  user 1 personas: 'I am incredibly smart.
+
+    I have no parents or siblings.
+
+    I always travel alone.
+
+    My favorite meal is steak.
+
+    I only sleep 3 hours a day.'
+  user 2 personas: 'I work in a factory.
+
+    I sleep most of the day.
+
+    I am very unproductive unless it comes to my job.
+
+    I do not eat well.
+
+    I am not social.'
+  Best Generated Conversation: 'User 1: Hi there! How are you today?
+
+    User 2: I''m doing okay, thanks for asking. How about you?
+
+    User 1: I''m doing great, thank you!
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work in a factory.
+
+    User 1: Oh, that sounds interesting. What do you do there?
+
+    User 2: I''m a machine operator.
+
+    User 1: Oh, cool. I''ve always thought that would be a fun job.
+
+    User 2: It''s okay, I guess. It''s not very social, though.
+
+    User 1: I can understand that. I''m not really a social person myself.
+
+    User 2: Me neither. I mostly just keep to myself.
+
+    User 1: I like to spend my time reading and learning new things.
+
+    User 2: Me too! I love to learn about history and science.
+
+    User 1: Me too! I also love to travel. I''ve been all over the world.
+
+    User 2: I''ve never been out of the country. I''d love to travel, but I don''t have the money.
+
+    User 1: I''m sorry to hear that. Maybe one day you''ll be able to travel.
+
+    User 2: I hope so.
+
+    User 1: Well, it was nice chatting with you. I hope you have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

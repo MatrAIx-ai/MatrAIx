@@ -1,0 +1,18 @@
+id: 00014980
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14980
+persona_description: A medical professional who specializes in laser hair removal procedures, focusing on understanding the mechanisms of selective photothermolysis and the absorption of laser light by
+  melanin in hair. They are knowledgeable about the low-level emissions of lasers and their classification as Class IV lasers, and are familiar with the FDA's approval process for aesthetic procedures.
+  They have a deep understanding of the technology and its applications in the field of dermatology.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: laser dermatology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,121 @@
+id: '00001572'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1572
+data:
+  user 1 personas: 'I drive a red car.
+
+    I enjoy running.
+
+    My favorite musician is bruno mars.
+
+    I have 2 dogs.
+
+    I am an accountant.'
+  user 2 personas: 'I love the band van haven.
+
+    I play dungeons and dragons.
+
+    I like going to canada.
+
+    I wear a lot of purple.
+
+    I want to be a doctor.'
+  Best Generated Conversation: 'User 1: Hi there! My name is [user 1].
+
+
+    User 2: Hi, I''m [user 2].
+
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+
+    User 2: I''m a doctor in training.
+
+
+    User 1: Oh, that''s cool! I''m an accountant.
+
+
+    User 2: I''ve always been interested in accounting. What''s it like?
+
+
+    User 1: It''s a lot of work, but it''s also very rewarding. I love the feeling of helping businesses and individuals succeed.
+
+
+    User 2: That sounds really great. I''m glad you enjoy your job.
+
+
+    User 1: Thanks! I do.
+
+
+    User 2: So, what do you like to do for fun?
+
+
+    User 1: I love running, listening to music, and spending time with my dogs.
+
+
+    User 2: That sounds like a lot of fun! I love dogs too.
+
+
+    User 1: They''re the best!
+
+
+    User 2: So, what''s your favorite band?
+
+
+    User 1: I love Bruno Mars. He''s so talented.
+
+
+    User 2: I''ve never heard of him. What kind of music does he make?
+
+
+    User 1: He''s a pop singer. He''s really good. You should check him out.
+
+
+    User 2: I will!
+
+
+    User 1: So, what do you like to do for fun?
+
+
+    User 2: I love playing Dungeons and Dragons. It''s so much fun to come up with stories and characters.
+
+
+    User 1: That sounds really interesting. I''ve never played it before.
+
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+
+    User 1: I will!
+
+
+    User 2: So, where are you from?
+
+
+    User 1: I''m from [location].
+
+
+    User 2: Me too! I''ve always loved [location].
+
+
+    User 1: It''s a great place to live.
+
+
+    User 2: I know, right?
+
+
+    User 1: So, what are you doing later?
+
+
+    User 2: I''m not sure yet. What are you doing?
+
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

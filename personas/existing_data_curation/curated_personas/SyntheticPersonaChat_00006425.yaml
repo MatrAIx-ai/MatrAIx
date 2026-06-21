@@ -1,0 +1,68 @@
+id: '00006425'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6425
+data:
+  user 1 personas: 'I have never been on a cruise ship.
+
+    I am a woman who wears a size 12.
+
+    I go to dance lessons with my boyfriend.
+
+    I love to shop on weekends.'
+  user 2 personas: 'I only wear tennis shoes.
+
+    I live near the ocean.
+
+    My favorite author is jane austen.
+
+    I eat a lot of fish.
+
+    I own a boat.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go fishing and swimming in the ocean.
+
+    User 1: That sounds fun! I love to go shopping and dance.
+
+    User 2: I''ve never been on a cruise ship, have you?
+
+    User 1: No, I''ve never been on a cruise ship either. I''ve always wanted to go though.
+
+    User 2: I''ve been on a few cruises, and they''re really fun. You get to see a lot of different places and meet new people.
+
+    User 1: That sounds like a lot of fun! I''ll have to add it to my bucket list.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read Jane Austen. She''s my favorite author.
+
+    User 1: I''ve never read any Jane Austen. What''s her writing like?
+
+    User 2: Her writing is very detailed and descriptive. She''s a master of character development and her novels are very well-written.
+
+    User 1: That sounds interesting. I''ll have to check her out.
+
+    User 2: You should! I think you''ll like her.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! Have you ever been to the ocean?
+
+    User 1: No, I''ve never been to the ocean. I''ve always wanted to go though.
+
+    User 2: You should! The ocean is beautiful. I live right near it and I love going there to relax and enjoy the views.
+
+    User 1: That sounds amazing. I''ll have to add it to my bucket list.
+
+    User 2: You should! You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

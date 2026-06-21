@@ -1,0 +1,88 @@
+id: '00005110'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5110
+data:
+  user 1 personas: 'My children are mostly grown.
+
+    I live in a small city.
+
+    I have a cat named felix and a small terror names emmy.
+
+    I like to cook.'
+  user 2 personas: 'I have a twin sister.
+
+    I am a teacher.
+
+    I love chocolate.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m a teacher too! What grade do you teach?
+
+    User 2: I teach high school.
+
+    User 1: That''s great! I teach middle school.
+
+    User 2: What subject do you teach?
+
+    User 1: I teach English.
+
+    User 2: That''s what my sister teaches!
+
+    User 1: Oh, really? That''s cool!
+
+    User 2: Yeah, she loves it.
+
+    User 1: I love it too.
+
+    User 2: What''s your favorite thing about teaching?
+
+    User 1: I love seeing my students learn and grow.
+
+    User 2: That''s what I love about it too.
+
+    User 1: It''s so rewarding.
+
+    User 2: It is.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I love to read, cook, and spend time with my family.
+
+    User 1: Me too! I love to cook and read.
+
+    User 2: I love trying new recipes.
+
+    User 1: Me too!
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love making pasta dishes.
+
+    User 2: That''s my favorite too!
+
+    User 1: I love making lasagna.
+
+    User 2: Me too!
+
+    User 1: It''s so easy to make and it''s always a hit.
+
+    User 2: I know, right?
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go on hikes, watch movies, and play games.
+
+    User 1: Me too! I love hiking and watching movies.
+
+    User 2: I love going on hikes with my family.
+
+    User 1: Me too! It''s so much fun.
+
+    User 2: I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00004502'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4502
+data:
+  user 1 personas: 'I work for a large company.
+
+    I dream of winning the lottery.
+
+    I like to eat food.
+
+    I listen to rock music.'
+  user 2 personas: 'I work for a small , family owned restaurant.
+
+    I have six older sisters.
+
+    I love walking in the park.
+
+    I am an avid fan of the boston celtics.
+
+    I love chocolate.'
+  Best Generated Conversation: 'User 1: Hi! I''m John. I work for a large company.
+
+    User 2: Hi John! I''m Lisa. I work for a small, family owned restaurant.
+
+    User 1: Oh, that''s cool. Do you like it there?
+
+    User 2: Yeah, I do. It''s a lot of fun.
+
+    User 1: That''s good to hear. I like my job too, but I sometimes dream of winning the lottery and being able to retire early.
+
+    User 2: That would be awesome! I would love to be able to travel the world.
+
+    User 1: Me too! I would love to see all the different places I''ve always wanted to go.
+
+    User 2: What are some of the places you want to visit?
+
+    User 1: I''ve always wanted to go to Italy, France, and Japan.
+
+    User 2: Those are all great places. I''ve been to Italy and France, and they were both amazing.
+
+    User 1: I''m sure Japan would be amazing too. I love Japanese food.
+
+    User 2: Me too! It''s my favorite food.
+
+    User 1: Well, it looks like we have a lot in common.
+
+    User 2: We do! We both love food, travel, and music.
+
+    User 1: We should definitely hang out sometime and talk about our favorite foods and places we want to visit.
+
+    User 2: That would be great! I''d love to do that.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good. I''ll be looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00005116'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5116
+data:
+  user 1 personas: 'My father was a famous actor.
+
+    I don t like acting.
+
+    I have 3 ferrari cars in my garage.
+
+    I have 3 ex wives.
+
+    I don t like kids.'
+  user 2 personas: 'I just got a new sweater.
+
+    I also eat too much french fries.
+
+    I can t do math.
+
+    It was too small.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to eat French fries and I just got a new sweater.
+
+    User 1: Oh, that''s nice. I''m not a big fan of French fries, but I love sweaters.
+
+    User 2: I can''t do math.
+
+    User 1: Me neither! I''m terrible at it.
+
+    User 2: My father was a famous actor, but I don''t like acting at all.
+
+    User 1: Really? That''s interesting. My father was a carpenter.
+
+    User 2: I have three Ferrari cars in my garage.
+
+    User 1: Wow! That''s a lot of cars.
+
+    User 2: Yes, it is. I also have three ex-wives.
+
+    User 1: That''s a lot of ex-wives!
+
+    User 2: Yes, it is. I don''t like kids.
+
+    User 1: That''s okay. I don''t like kids either.
+
+    User 2: Good. We have something in common.
+
+    User 1: Yes, we do.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Oh, that''s cool. I like to read, too. I also like to go shopping.
+
+    User 1: I like to go shopping sometimes, too.
+
+    User 2: We should go shopping together sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

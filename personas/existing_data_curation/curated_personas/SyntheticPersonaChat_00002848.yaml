@@ -1,0 +1,66 @@
+id: 00002848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2848
+data:
+  user 1 personas: 'I like to watch anime.
+
+    I like being weird.
+
+    I draw all of my friends as my little pony characters.
+
+    I like cats.'
+  user 2 personas: 'My name is mary.
+
+    I manage all the paperwork and incoming calls.
+
+    I m also a fulltime student studying radiology at local college.
+
+    My weekends are spent studying and looking over client files.
+
+    I m a receptionist at a doctors office.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1].
+
+    User 2: Hi, I''m Mary.
+
+    User 1: What do you do for fun?
+
+    User 2: I''m a receptionist at a doctor''s office. I also study radiology part-time.
+
+    User 1: That''s cool! I''m a student as well. I''m studying computer science.
+
+    User 2: Nice! What do you like to do for fun?
+
+    User 1: I like to watch anime, draw, and play video games.
+
+    User 2: I''ve never seen anime before. What''s it like?
+
+    User 1: It''s a type of animation from Japan. It''s usually set in a fantasy world and has a lot of action and adventure.
+
+    User 2: That sounds like it could be fun. I''ll have to check it out sometime.
+
+    User 1: You should! There are a lot of great anime out there.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: So, what video games do you play?
+
+    User 1: I play a lot of different games, but my favorites are RPGs and action games.
+
+    User 2: I''m not really into video games, but I do like to watch people play them.
+
+    User 1: That''s cool. I like watching people play games too.
+
+    User 2: I know a lot of people who are really into video games.
+
+    User 1: Me too. It''s a pretty popular hobby.
+
+    User 2: I''m glad I met you. You seem like a really cool person.
+
+    User 1: Thanks, Mary. I''m glad I met you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

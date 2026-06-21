@@ -1,0 +1,101 @@
+id: 00007940
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7940
+data:
+  user 1 personas: 'I volunteer at the red cross on the weekends.
+
+    I do yoga three times a week.
+
+    I am married with 2 kids.
+
+    I live in chicago.
+
+    I am a high school teacher.'
+  user 2 personas: 'I work in a diner.
+
+    I live with my best friend.
+
+    I also own a cupcake business.
+
+    I am always late.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name], I''m a high school teacher in Chicago.
+
+
+    User 2: Hi! I''m [user 2''s name], I work in a diner and I also own a cupcake business.
+
+
+    User 1: Nice! What''s your favorite thing about your job?
+
+
+    User 2: I like the freedom of being my own boss. And I love making cupcakes!
+
+
+    User 1: That''s awesome! I''ve always wanted to own my own business.
+
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+
+    User 1: I can imagine! So, what''s your favorite cupcake flavor?
+
+
+    User 2: I love red velvet!
+
+
+    User 1: Me too! I love the combination of chocolate and cream cheese frosting.
+
+
+    User 2: Same! It''s the perfect combination.
+
+
+    User 1: So, what do you like to do for fun?
+
+
+    User 2: I like to go to concerts, watch movies, and hang out with my friends.
+
+
+    User 1: That sounds like a lot of fun! I love to go to concerts too.
+
+
+    User 2: Me too! I just saw The Killers last weekend. They were amazing!
+
+
+    User 1: I love The Killers! I''m so jealous!
+
+
+    User 2: You should have come! They were so good.
+
+
+    User 1: I know, I wish I could have!
+
+
+    User 2: Maybe they''ll come back to Chicago soon.
+
+
+    User 1: I hope so!
+
+
+    User 2: Me too! So, what else do you like to do for fun?
+
+
+    User 1: I like to go hiking, play video games, and watch anime.
+
+
+    User 2: That sounds like a lot of fun! I love hiking too. I''ve been meaning to go on a hike for a while now.
+
+
+    User 1: You should! It''s a great way to get some exercise and enjoy the outdoors.
+
+
+    User 2: Yeah, I know! I''ll have to make some time for it soon.
+
+
+    User 1: Good! It''s a lot of fun.
+
+
+    User 2: I''m sure it is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

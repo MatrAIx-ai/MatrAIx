@@ -1,0 +1,86 @@
+id: 00004683
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4683
+data:
+  user 1 personas: 'I like to draw other people.
+
+    I like to drink tea.
+
+    I like to mountain bike.
+
+    I like to eat hard boiled eggs.'
+  user 2 personas: 'I live alone.
+
+    I live in portland , maine.
+
+    I am an environmental engineer.
+
+    I like to take photos.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. My name is [user 1 name].
+
+    User 2: Nice to meet you too, [user 1 name]. Where are you from?
+
+    User 1: I''m from [user 1 home town].
+
+    User 2: Cool! I''m from [user 2 home town].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an environmental engineer.
+
+    User 1: That''s cool! What does that entail?
+
+    User 2: I design and implement environmental solutions for businesses.
+
+    User 1: That sounds interesting! What''s your favorite part of the job?
+
+    User 2: I like the challenge of finding creative solutions to environmental problems.
+
+    User 1: That makes sense. I''m sure it''s very rewarding.
+
+    User 2: It is! I also like the opportunity to make a difference in the world.
+
+    User 1: That''s awesome! What''s your favorite thing to do in your free time?
+
+    User 2: I like to take photos.
+
+    User 1: That''s cool! I like to draw.
+
+    User 2: Oh, that''s cool! What kind of things do you draw?
+
+    User 1: I draw people, animals, and landscapes.
+
+    User 2: That sounds really cool! I''d love to see some of your work sometime.
+
+    User 1: Sure! I''ll send you some pictures.
+
+    User 2: Great! I''d love to see them.
+
+    User 1: What''s your favorite thing about Portland?
+
+    User 2: I love the food scene! There are so many great restaurants here.
+
+    User 1: I''ve heard that! I''m excited to try some of the food here.
+
+    User 2: You won''t be disappointed!
+
+    User 1: It sounds like you really like Portland.
+
+    User 2: I do! It''s a great city.
+
+    User 1: I''m glad to hear that. I''m looking forward to spending more time here.
+
+    User 2: I''m sure you''ll enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

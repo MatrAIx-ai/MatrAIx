@@ -1,0 +1,80 @@
+id: '00002425'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2425
+data:
+  user 1 personas: 'I am writing a novel.
+
+    My favorite color is black.
+
+    I own an iphone.
+
+    My favorite tv show is rick and morty.'
+  user 2 personas: 'I live on a farm.
+
+    I drive a truck.
+
+    I graduated high school.
+
+    I have a beard.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1). What''s yours?
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: Nice to meet you, (user 2).
+
+    User 2: Nice to meet you too, (user 1).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a farmer.
+
+    User 1: Oh, that''s cool. I''ve always been fascinated by farming.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I can imagine. Do you grow any specific crops?
+
+    User 2: I grow corn, soybeans, and wheat.
+
+    User 1: Wow, that''s a lot of different crops.
+
+    User 2: It is, but it''s fun to keep things interesting.
+
+    User 1: I can imagine. What''s your favorite part of being a farmer?
+
+    User 2: My favorite part is getting to work outside and seeing the fruits of my labor.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It is. I also love working with animals.
+
+    User 1: I can imagine. What kind of animals do you have?
+
+    User 2: I have a few cows, pigs, and chickens.
+
+    User 1: Oh, that''s cool. Do you sell your animals or just keep them for yourself?
+
+    User 2: I sell some of them, but I keep most of them for myself.
+
+    User 1: That makes sense. Do you have any other hobbies besides farming?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: Me too! I love reading, and I''m a big fan of science fiction and fantasy.
+
+    User 2: That''s awesome. I love science fiction and fantasy too.
+
+    User 1: What''s your favorite book?
+
+    User 2: It''s hard to pick just one, but I''d have to say the Lord of the Rings.
+
+    User 1: That''s a great choice! I love that series too.
+
+    User 2: It''s one of my favorites.
+
+    User 1: It''s great to meet someone who shares my love of reading.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

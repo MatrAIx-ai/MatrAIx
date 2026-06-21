@@ -1,0 +1,68 @@
+id: '00007007'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7007
+data:
+  user 1 personas: 'I own a mansion that i do not live in.
+
+    I never went to school.
+
+    I am an international business man.
+
+    I am a genius and know over 300 languages.
+
+    I never met my parents.'
+  user 2 personas: 'I have been to 7 countries in europe and 3 countries in asia.
+
+    I have been married for 6 years.
+
+    I like to go to the casino on weekends.
+
+    I have tried 35 different types of beer in my lifetime.
+
+    I am a financial analyst for a brewery.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I have a few questions for you.
+
+    User 2: Sure, ask away.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the casino, travel, and try new beers.
+
+    User 1: Have you ever been to Europe?
+
+    User 2: Yes, I''ve been to 7 countries in Europe and 3 countries in Asia.
+
+    User 1: Wow, that''s awesome! What''s your favorite country that you''ve been to?
+
+    User 2: I''m not sure I can pick a favorite, but I really enjoyed visiting Italy and Switzerland.
+
+    User 1: I''ve heard great things about both of those countries. I''m sure they''re beautiful.
+
+    User 2: They are! I highly recommend visiting them if you ever get the chance.
+
+    User 1: I will! Thank you for the recommendation.
+
+    User 2: You''re welcome!
+
+    User 1: What''s your favorite type of beer?
+
+    User 2: I like IPAs and stouts, but I''ll try anything once.
+
+    User 1: I love IPAs too! They''re so hoppy and delicious.
+
+    User 2: Me too! I''ve tried over 35 different types of IPAs in my lifetime.
+
+    User 1: Wow, that''s a lot! I''ve only tried a few, but I''m sure I''ll get there eventually.
+
+    User 2: You will! IPAs are the best!
+
+    User 1: I''m glad we agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

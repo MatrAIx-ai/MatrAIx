@@ -1,0 +1,76 @@
+id: '00001067'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1067
+data:
+  user 1 personas: 'I like to paint.
+
+    I have 23 cats at home.
+
+    I am a vegan.
+
+    I hate the taste of fish.
+
+    I traveled around the world in a boat.'
+  user 2 personas: 'I have never lost a fight.
+
+    I have more then 10 tattoos.
+
+    I have gone 208 mph for for than 10 minutes.
+
+    I am a grown woman.'
+  Best Generated Conversation: 'User 1: Hi, I''m [your name].
+
+    User 2: Hello, I''m [other name].
+
+    User 1: It''s nice to meet you, [other name].
+
+    User 2: Likewise.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to paint, travel, and spend time with my cats.
+
+    User 1: That sounds like a lot of fun. I like to paint too. I also like to go camping and hiking.
+
+    User 2: Those sound like great hobbies. I''ve never been camping, but I''ve always wanted to go.
+
+    User 1: You should definitely go sometime. It''s a lot of fun to get out in nature and explore.
+
+    User 2: I''ll have to do that.
+
+    User 1: So, what kind of paintings do you like to do?
+
+    User 2: I like to paint landscapes and portraits. I also like to do abstract paintings.
+
+    User 1: I love abstract paintings. They''re so creative.
+
+    User 2: I know, right? They''re really fun to do.
+
+    User 1: Do you have any of your paintings on display?
+
+    User 2: Yes, I have a few paintings in my home.
+
+    User 1: Would you mind showing me them?
+
+    User 2: Sure, I''d be happy to.
+
+    User 1: Wow, your paintings are really beautiful. I love the colors and the way you use light.
+
+    User 2: Thank you, I''m glad you like them.
+
+    User 1: So, what''s your favorite painting that you''ve done?
+
+    User 2: I think my favorite painting is one of a sunrise over the mountains.
+
+    User 1: That sounds beautiful. I''d love to see it sometime.
+
+    User 2: I''ll send you a picture of it.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

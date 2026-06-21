@@ -1,0 +1,82 @@
+id: '00002211'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2211
+data:
+  user 1 personas: 'I have a pomeranian.
+
+    My mom is a music teacher at the elementary school.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    I play the violin.
+
+    My older sister plays clarinet.'
+  user 2 personas: 'I love to be run.
+
+    I am six feet tall.
+
+    I like to dance with my friends.
+
+    I have a family that are all tall.
+
+    I really like to go to school.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, dance, and go to school.
+
+    User 1: Oh, that''s cool. I like to play the violin and enter into violin competitions.
+
+    User 2: I''ve never heard of violin competitions. What are they like?
+
+    User 1: They''re great! You get to meet other people who play the violin and compete against them. It''s a lot of fun.
+
+    User 2: That sounds really cool. I might have to try one of those sometime.
+
+    User 1: You should! They''re a lot of fun.
+
+    User 2: So, what''s your favorite song to play on the violin?
+
+    User 1: It''s hard to say. I have a lot of favorites.
+
+    User 2: That''s fair. I have a lot of favorite songs too.
+
+    User 1: So, what kind of music do you like to dance to?
+
+    User 2: I like to dance to all kinds of music, but I especially like to dance to hip-hop and R&B.
+
+    User 1: I like dancing to hip-hop and R&B too.
+
+    User 2: Cool! Maybe we can dance together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''m sure we''ll have a lot of fun.
+
+    User 1: I''m sure we will too.
+
+    User 2: So, what''s your favorite thing about school?
+
+    User 1: My favorite thing about school is getting to learn new things. I love the feeling of expanding my knowledge and understanding the world around me.
+
+    User 2: I agree! Learning new things is one of the best things about being alive.
+
+    User 1: It is! It''s so exciting to discover new things and learn about the world.
+
+    User 2: I love the feeling of being challenged and learning new things. It makes me feel like I''m growing as a person.
+
+    User 1: Me too! It''s so important to keep learning and challenging yourself.
+
+    User 2: I agree! Learning is a lifelong journey.
+
+    User 1: It is! It''s something that we should never stop doing.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

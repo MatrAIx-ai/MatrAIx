@@ -1,0 +1,58 @@
+id: '00003734'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3734
+data:
+  user 1 personas: 'I love to go to the lake.
+
+    I am a happy person.
+
+    I love to take walks.
+
+    I love to knit and crochet.
+
+    I love to listen to music.'
+  user 2 personas: 'I am very athletic.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I have been in a lot of romantic relationships that have ended up poorly.
+
+    I wish i could be more serious about school.
+
+    I get distracted easily.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. My name is [user 1''s name].
+
+    User 2: It''s nice to meet you too, [user 1''s name].
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the lake, take walks, knit and crochet, and listen to music.
+
+    User 1: I love to go to the lake too! What''s your favorite thing to do there?
+
+    User 2: I love to swim, fish, and sunbathe.
+
+    User 1: Those sound like a lot of fun activities. I''m not much of a swimmer, but I love to fish and sunbathe.
+
+    User 2: Me too! I''m not very good at knitting or crocheting, but I love listening to music. What kind of music do you like?
+
+    User 1: I like all kinds of music, but I especially love country music.
+
+    User 2: I love country music too! I like to go to concerts when I can.
+
+    User 1: Me too! I''ve been to a few country concerts this year.
+
+    User 2: That sounds like a lot of fun. I''m glad we have so much in common.
+
+    User 1: Me too! I''m sure we''ll be great friends.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

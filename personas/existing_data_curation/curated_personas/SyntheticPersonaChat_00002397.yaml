@@ -1,0 +1,72 @@
+id: 00002397
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2397
+data:
+  user 1 personas: 'I am an avid quilter.
+
+    I like classical music.
+
+    My grand children mean the world to me.
+
+    I am a pharmacist.
+
+    I was a wild child in my younger years.'
+  user 2 personas: 'I work at a coffee house.
+
+    I have a cat named seven of nine.
+
+    I like to sing broadway show tunes.
+
+    I am a student at michigan state university.
+
+    My favorite tv show is dancing with the stars.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]. What''s your name?
+
+    User 2: I''m [username]. Nice to meet you!
+
+    User 1: It''s nice to meet you too! What do you do for a living?
+
+    User 2: I''m a student at Michigan State University.
+
+    User 1: Oh, that''s cool! What are you studying?
+
+    User 2: I''m majoring in computer science.
+
+    User 1: Wow, that''s a tough major!
+
+    User 2: It can be, but it''s also really fun.
+
+    User 1: What do you like most about it?
+
+    User 2: I like the challenge of solving problems and creating new things.
+
+    User 1: That sounds really cool! I''m a pharmacist, so I can relate to the challenge of solving problems.
+
+    User 2: Oh, that''s cool! What''s your favorite part of being a pharmacist?
+
+    User 1: I like the fact that I can help people. I also like the variety of work that I get to do.
+
+    User 2: That sounds really rewarding! I''m glad that you enjoy your job.
+
+    User 1: Me too! What do you like to do for fun?
+
+    User 2: I like to sing broadway show tunes. I also like to watch Dancing with the Stars.
+
+    User 1: That''s awesome! I love singing too, but I''m not very good at it.
+
+    User 2: Don''t worry, I''m not very good at it either! But it''s still fun to do.
+
+    User 1: I agree! So, what''s your favorite Broadway show?
+
+    User 2: My favorite Broadway show is Hamilton. It''s such a good show!
+
+    User 1: I''ve heard good things about it. I''ll have to check it out sometime.
+
+    User 2: You definitely should! It''s a great show.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

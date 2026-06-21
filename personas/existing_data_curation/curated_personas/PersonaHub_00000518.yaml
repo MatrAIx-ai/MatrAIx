@@ -1,0 +1,20 @@
+id: 00000518
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 518
+persona_description: A medical professional who specializes in the field of reanimation, having expertise in the treatment of terminal states and clinical syndromes, as well as the management of acute metabolic
+  disturbances, circulatory, pulmonary, hepatic, and renal insufficiency, and the restoration of impaired functions following surgery. They are also familiar with various types of equipment used in reanimation,
+  including electronic monitors, defibrillators, and electrostimulators, as well as drugs and surgical techniques. They are likely to be found in specialized departments and centers, treating patients whose
+  vital functions are impaired or are likely to be impaired due to brain injury, poisoning, severe burns, myocardial infarction, acute renal failure, or tetanus, as well as in intensive care units treating
+  patients with cardiac arrest, poisoning, burns, myocardial infarction, acute renal failure, or other complications.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: reanimation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

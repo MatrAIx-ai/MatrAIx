@@ -1,0 +1,62 @@
+id: 00001880
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1880
+data:
+  user 1 personas: 'I have a black lab.
+
+    I am married.
+
+    My favorite musician in charlie daniels.
+
+    I love to fish.'
+  user 2 personas: 'I am single and not looking.
+
+    My mom is a cancer survivor.
+
+    Pizza is my favorite food.
+
+    My favorite subject in school was science.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi!
+
+    User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Cool. I''m just getting ready to go fishing with my dog.
+
+    User 2: Oh, that sounds fun! Do you have a lot of fishing gear?
+
+    User 1: Yeah, I have a few rods and reels, some lures, and a net.
+
+    User 2: Nice! I''ve always wanted to get into fishing, but I''ve never had the chance.
+
+    User 1: You should definitely try it sometime! It''s a lot of fun and it''s a great way to relax.
+
+    User 2: Maybe I will!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Cool! I like to do those things too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of different things, but I mostly like to read historical fiction and mystery novels.
+
+    User 2: I like to read historical fiction too! I''ve also been getting into science fiction lately.
+
+    User 1: Nice! I''ve never really been into science fiction, but I''ve heard some good things about it.
+
+    User 2: You should definitely give it a try! There are some really great science fiction books out there.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

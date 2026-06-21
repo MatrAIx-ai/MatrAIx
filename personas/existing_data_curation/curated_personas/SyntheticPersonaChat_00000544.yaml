@@ -1,0 +1,60 @@
+id: '00000544'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 544
+data:
+  user 1 personas: 'I m a student.
+
+    I like to be outdoors.
+
+    I m from california.
+
+    I think recycling is important.'
+  user 2 personas: 'I am a graduate student.
+
+    Although i m studying to be a doctor , animals like me.
+
+    I m always early.
+
+    I am in between classes.
+
+    I volunteer with dogs.'
+  Best Generated Conversation: 'User 1: Hi! I''m from California, too. Where do you go to school?
+
+    User 2: Hi! I''m a graduate student at the University of California, Berkeley.
+
+    User 1: Wow, that''s awesome! I''m a student at UC Santa Cruz.
+
+    User 2: Nice! I''ve always wanted to visit Santa Cruz.
+
+    User 1: It''s a great place to visit. We have a beautiful beach and a lot of hiking trails.
+
+    User 2: I love hiking! I volunteer with a dog rescue organization and we take the dogs on hikes all the time.
+
+    User 1: That''s so cool! I love dogs. I have a dog named Luna.
+
+    User 2: Oh, I love that name! Luna is a beautiful name for a dog.
+
+    User 1: Thank you! She''s a great dog.
+
+    User 2: I''m sure she is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the beach, go hiking, and volunteer with my dog rescue organization.
+
+    User 1: Those all sound like great ways to spend your time.
+
+    User 2: Yeah, they are! I love being outdoors and helping animals.
+
+    User 1: I love animals, too. I''m glad you''re volunteering with your dog rescue organization.
+
+    User 2: Thanks! I''m glad I get to help the dogs.
+
+    User 1: It sounds like we have a lot in common. I''m sure we''ll get along great.
+
+    User 2: Me too! I''m glad to meet you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00002301'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2301
+data:
+  user 1 personas: 'I never knew my dad.
+
+    I work at a bookstore.
+
+    I have three tattoos.
+
+    My mom is a nurse.'
+  user 2 personas: 'I love to dance.
+
+    I enjoy reading history books.
+
+    I grew up in new hampshire.
+
+    My favorite food is mexican.
+
+    I am a teacher.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name)
+
+    User 2: Hello! I''m (name)
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s great! What do you teach?
+
+    User 2: I teach history.
+
+    User 1: That''s awesome! I love history.
+
+    User 2: Me too! What''s your favorite historical period?
+
+    User 1: I really like the Renaissance.
+
+    User 2: That''s a great choice! I love the Renaissance as well.
+
+    User 1: What''s your favorite thing about the Renaissance?
+
+    User 2: I love the art and the music.
+
+    User 1: Me too! I love how the Renaissance was a time of great creativity and innovation.
+
+    User 2: Me too! It was a really exciting time in history.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to a Mexican restaurant with my friends.
+
+    User 1: Oh, that sounds fun! I love Mexican food.
+
+    User 2: Me too! I''m really excited to try the new restaurant that just opened up.
+
+    User 1: Oh, nice! I''ve been meaning to try that place too.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

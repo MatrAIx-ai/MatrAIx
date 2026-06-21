@@ -1,0 +1,52 @@
+id: 00001449
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1449
+data:
+  user 1 personas: 'My dad was a cop.
+
+    I am tall.
+
+    I spend my free time volunteering at nursing homes.
+
+    My favorite color is red.
+
+    I like to water ski.'
+  user 2 personas: 'I have often been called a slacker.
+
+    I am a weirdo.
+
+    I have blue and orange hair.
+
+    I wear dingy clothes.'
+  Best Generated Conversation: 'User 1: I''m tall.
+
+    User 2: I''m short.
+
+    User 1: My dad was a cop.
+
+    User 2: I''m a weirdo.
+
+    User 1: I spend my free time volunteering at nursing homes.
+
+    User 2: I don''t do anything productive with my free time.
+
+    User 1: My favorite color is red.
+
+    User 2: I don''t have a favorite color.
+
+    User 1: I like to water ski.
+
+    User 2: I don''t like water sports.
+
+    User 1: I''m not sure we have much in common.
+
+    User 2: I guess not.
+
+    User 1: Well, it was nice meeting you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

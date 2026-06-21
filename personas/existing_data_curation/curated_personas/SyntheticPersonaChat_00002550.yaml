@@ -1,0 +1,70 @@
+id: '00002550'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2550
+data:
+  user 1 personas: 'I live in pittsburgh.
+
+    My favorite kind of food is italian.
+
+    I am a librarian.
+
+    I love going to concerts.
+
+    I volunteer at an animal shelter.'
+  user 2 personas: 'I am a school psychologist.
+
+    I geocache in my spare time.
+
+    Chocolate is my favorite food.
+
+    I am the youngest sibling of four.'
+  Best Generated Conversation: 'User 1: Hey! I''m a librarian from Pittsburgh.
+
+    User 2: Hi, I''m a school psychologist from Pittsburgh.
+
+    User 1: What''s your favorite food?
+
+    User 2: Chocolate! What''s yours?
+
+    User 1: Italian!
+
+    User 2: I love Italian food too!
+
+    User 1: Have you been to any good Italian restaurants in Pittsburgh lately?
+
+    User 2: Yes, I went to this great Italian restaurant called Osteria. The food was amazing!
+
+    User 1: I''ve heard good things about that restaurant. I''ve been meaning to go there.
+
+    User 2: You should definitely go!
+
+    User 1: I will!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love going to concerts. I''ve been to a lot of great concerts in Pittsburgh.
+
+    User 2: Me too! I love live music.
+
+    User 1: Have you been to any good concerts lately?
+
+    User 2: Yes, I went to a concert by my favorite band, The Killers. It was an amazing show!
+
+    User 1: I love The Killers! I''ve seen them in concert a few times. They''re always great live.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to volunteer at my local animal shelter. I love animals, and I think it''s important to help them.
+
+    User 1: That''s great! I love animals too. I''ve volunteered at an animal shelter before. It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I agree! It''s hard work, but it''s so worth it when you see how happy you''re making the animals.
+
+    User 1: I love volunteering at the animal shelter. It''s a great way to give back to the community and help animals in need.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

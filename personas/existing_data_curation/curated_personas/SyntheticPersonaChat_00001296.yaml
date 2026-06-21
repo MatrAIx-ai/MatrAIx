@@ -1,0 +1,86 @@
+id: 00001296
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1296
+data:
+  user 1 personas: 'I have four cats.
+
+    I take the subway to work everyday.
+
+    I am afraid of clowns.
+
+    Every fall i visit my sister in canada.
+
+    I am a vegetarian.'
+  user 2 personas: 'I am caucasian.
+
+    I like rollerblading.
+
+    My favorite sport is hockey.
+
+    I try to eat a balanced diet.
+
+    I avoid eating sugar.'
+  Best Generated Conversation: 'User 1: Hi! I''m a vegetarian.
+
+    User 2: Me too! I''ve been a vegetarian for 5 years now.
+
+    User 1: Wow, that''s great! I''ve been a vegetarian for about 2 years now.
+
+    User 2: What made you decide to become a vegetarian?
+
+    User 1: I was watching a documentary about factory farming, and it really opened my eyes to the horrors of the meat industry. I couldn''t believe that I was eating animals that had been treated so poorly.
+
+    User 2: I know, it''s really awful. I was also really upset when I learned about factory farming.
+
+    User 1: So, what do you like to eat instead of meat?
+
+    User 2: I eat a lot of beans, tofu, and vegetables. I also like to make vegetarian chili and soups.
+
+    User 1: I love vegetarian chili! I also like to make pasta dishes with vegetables.
+
+    User 2: I love pasta! I usually make it with a marinara sauce or pesto sauce.
+
+    User 1: Me too! I love both of those sauces.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go rollerblading, play video games, and watch movies.
+
+    User 2: I love rollerblading! I also like to play video games and watch movies.
+
+    User 1: That''s awesome! We should go rollerblading sometime.
+
+    User 2: That would be fun!
+
+    User 1: What''s your favorite movie?
+
+    User 2: I really like the Lord of the Rings trilogy.
+
+    User 1: Me too! I''ve seen it a few times.
+
+    User 2: I''ve seen it so many times, I can recite the whole thing from memory.
+
+    User 1: That''s impressive! I''m not that good with names, but I can remember the plot pretty well.
+
+    User 2: Me too! I love the plot of the movie.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a software engineer too.
+
+    User 2: That''s awesome! What kind of software do you work on?
+
+    User 1: I work on enterprise software.
+
+    User 2: Me too! I work on enterprise software as well.
+
+    User 1: That''s great! I''m glad to meet another software engineer.
+
+    User 2: Me too! It''s nice to meet you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

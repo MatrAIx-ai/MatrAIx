@@ -1,0 +1,86 @@
+id: '00000732'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 732
+data:
+  user 1 personas: 'I like to read.
+
+    My favorite book is enders game.
+
+    I grew up in kentucky.
+
+    I have a garden.'
+  user 2 personas: 'I love sports , but rugby is my favorite.
+
+    My neighbor comes over all the time to watch rugby with me.
+
+    I like to fly kites.
+
+    My car broke down last week.'
+  Best Generated Conversation: 'User 1: Hi, my name is James. What''s your name?
+
+    User 2: Hello, my name is Mary.
+
+    User 1: It''s nice to meet you, Mary. Where are you from?
+
+    User 2: I grew up in Canada, but I''ve been living in the US for the past 5 years.
+
+    User 1: That''s cool. I grew up in Kentucky.
+
+    User 2: Oh, Kentucky. I''ve heard it''s a beautiful state.
+
+    User 1: It is. I love the mountains.
+
+    User 2: Me too. I love hiking and camping.
+
+    User 1: Me too. I''m actually planning a camping trip this weekend.
+
+    User 2: That sounds fun. Where are you going?
+
+    User 1: I''m going to Mammoth Cave National Park.
+
+    User 2: Oh, that''s a great place. I''ve been there before.
+
+    User 1: Really? What did you think of it?
+
+    User 2: I thought it was amazing. The caves are so beautiful.
+
+    User 1: I''m glad to hear that. I''m looking forward to seeing it for myself.
+
+    User 2: I''m sure you''ll love it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to watch rugby. It''s my favorite sport.
+
+    User 1: Oh, really? I''ve never actually watched rugby.
+
+    User 2: You should try it. It''s a lot of fun.
+
+    User 1: Maybe I will. I''m always looking for new things to do.
+
+    User 2: Well, if you ever want to watch a game with me, my neighbor comes over all the time to watch with me.
+
+    User 1: That sounds like fun. I''ll keep that in mind.
+
+    User 2: Great.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to fly kites.
+
+    User 1: Oh, really? I''ve never flown a kite before.
+
+    User 2: You should try it. It''s really fun.
+
+    User 1: Maybe I will. I''m always looking for new things to do.
+
+    User 2: Well, if you ever want to fly a kite with me, just let me know.
+
+    User 1: That sounds like fun. I''ll keep that in mind.
+
+    User 2: Great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

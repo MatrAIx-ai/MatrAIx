@@ -1,0 +1,82 @@
+id: '00001671'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1671
+data:
+  user 1 personas: 'I live in chicago.
+
+    I do yoga three times a week.
+
+    I am a high school teacher.
+
+    I volunteer at the red cross on the weekends.
+
+    I am married with 2 kids.'
+  user 2 personas: 'I read autobiographies before bed.
+
+    I regularly go to the gym.
+
+    My favorite band is metallica.
+
+    I have a cat named george.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I''m doing well, thanks. How are you?
+
+    User 1: I''m doing good too. Thanks for asking.
+
+    User 2: No problem. What do you do for fun?
+
+    User 1: I like to do yoga, volunteer at the Red Cross, and I''m a high school teacher.
+
+    User 2: That''s cool. I like to read autobiographies before bed, go to the gym, and I''m a huge fan of Metallica.
+
+    User 1: I''ve never been to the gym, but I love reading autobiographies too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read anything that''s well-written, but I especially enjoy autobiographies of famous people.
+
+    User 2: That makes sense. I like to read about the lives of people who have accomplished great things.
+
+    User 1: Me too. It''s inspiring to read about the lives of people who have overcome obstacles and achieved their goals.
+
+    User 2: I agree. It''s always good to be reminded that anything is possible if you set your mind to it.
+
+    User 1: That''s a good motto to live by.
+
+    User 2: I think so too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. What kind of software do you work on?
+
+    User 2: I work on a variety of software, but I mostly work on web applications.
+
+    User 1: That sounds interesting.
+
+    User 2: It is. I like it a lot.
+
+    User 1: So, what''s your favorite Metallica album?
+
+    User 2: My favorite Metallica album is "The Black Album".
+
+    User 1: That''s a good one.
+
+    User 2: I know, right?
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure yet either. Maybe we could hang out?
+
+    User 2: That sounds like fun.
+
+    User 1: Great. Let''s figure out a time and place to meet'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

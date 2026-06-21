@@ -1,0 +1,112 @@
+id: 00000955
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 955
+data:
+  user 1 personas: 'I drive a moped.
+
+    I struggle with maintaining eye contact.
+
+    I like to take cold showers.
+
+    My favorite video game is halo 3.
+
+    I sing in the shower.'
+  user 2 personas: 'I cut down trees very fast , because i have a large ax.
+
+    I love to cut down trees.
+
+    I eat lots of pancakes and syrup.
+
+    I am a lumberjack.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, my name is [User 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a lumberjack.
+
+    User 1: Oh, that''s cool! Do you like it?
+
+    User 2: Yeah, I love it! I get to work outside and use my hands.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I also get to eat a lot of pancakes and syrup.
+
+    User 1: That sounds delicious!
+
+    User 2: It is! I love it.
+
+    User 1: So, what''s your favorite thing about being a lumberjack?
+
+    User 2: I love the feeling of getting up in the morning and knowing that I''m going to be outside cutting down trees. It''s a great feeling.
+
+    User 1: That sounds really satisfying.
+
+    User 2: It is! I also love the physical challenge of it. It''s a great workout.
+
+    User 1: That makes sense.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! Do you like it?
+
+    User 1: Yeah, I love it! I get to work on interesting problems and use my brain.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is! I also get to work with a lot of smart people.
+
+    User 2: That''s great!
+
+    User 1: So, what''s your favorite thing about being a software engineer?
+
+    User 2: I love the feeling of solving a difficult problem and seeing it come to life. It''s a great feeling.
+
+    User 1: That sounds really satisfying.
+
+    User 2: It is! I also love the collaborative nature of the work. It''s a lot of fun working with other people on solving problems.
+
+    User 1: That makes sense.
+
+    User 2: So, what''s your favorite video game?
+
+    User 1: My favorite video game is Halo 3.
+
+    User 2: Oh, that''s a good one! I love that game too.
+
+    User 1: Me too! I love the multiplayer mode.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go hiking, fishing, and camping.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I love being outdoors.
+
+    User 1: Me too!
+
+    User 2: So, what are your favorite pancakes and syrup combinations?
+
+    User 1: I like blueberry pancakes with maple syrup.
+
+    User 2: Oh, that''s a good one! I like that too.
+
+    User 1: Me too! I also like chocolate chip pancakes with butter and syrup.
+
+    User 2: That sounds delicious! I''ve never tried that before.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will! Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

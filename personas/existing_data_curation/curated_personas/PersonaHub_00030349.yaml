@@ -1,0 +1,18 @@
+id: 00030349
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30349
+persona_description: A healthcare professional, particularly a physician or a clinical researcher, who specializes in the diagnosis and management of thyroid diseases, including Graves' disease and its
+  treatment. This persona is likely to be involved in the interpretation and analysis of thyroid function tests, including the measurement of anti-TSH receptor antibodies, and to make decisions based on
+  the results of these tests in the management of thyroid disorders. They may also be involved in the development and validation of new diagnostic tools for thyroid diseases.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: endocrinology
+  general_domain_top01pct: None
+  specific_domain_top01pct: thyroid disease diagnosis and management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

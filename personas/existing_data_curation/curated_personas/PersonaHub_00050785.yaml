@@ -1,0 +1,19 @@
+id: 00050785
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50785
+persona_description: A healthcare professional who is aware of the signs and symptoms of sepsis and is trained to recognize and treat it as a medical emergency. This person is knowledgeable about the common
+  causes of sepsis, such as pneumonia, urinary tract infections, and skin infections, and is skilled in performing diagnostic tests to identify the source of the infection. This person is also aware of
+  the potential complications of sepsis, such as organ failure and death, and takes steps to prevent sepsis by following good infection control practices and encouraging patients to seek medical attention
+  promptly if they suspect sepsis.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

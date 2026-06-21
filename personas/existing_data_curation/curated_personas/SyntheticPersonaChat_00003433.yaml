@@ -1,0 +1,82 @@
+id: '00003433'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3433
+data:
+  user 1 personas: 'I like to race go carts.
+
+    I am an avid fisherman.
+
+    I know how to play the guitar.
+
+    I have a george foreman grill at home.
+
+    I hate fast food.'
+  user 2 personas: 'I like to train dogs.
+
+    I like to make cookies.
+
+    I like bagels with everything on them.
+
+    My favorite drink is coke.
+
+    I like to run.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: What are you up to this weekend?
+
+    User 2: I''m not sure yet, maybe go fishing.
+
+    User 1: That sounds fun, I love fishing.
+
+    User 2: You do? That''s great!
+
+    User 1: Yeah, I''ve been fishing since I was a kid.
+
+    User 2: Where do you like to fish?
+
+    User 1: I usually go to the lake, but I''ve also been fishing in the ocean.
+
+    User 2: That sounds fun. I''ve only ever fished in the lake.
+
+    User 1: It''s a lot of fun, you should try it sometime.
+
+    User 2: I will, thanks for the suggestion.
+
+    User 1: No problem.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to play the guitar, and I also like to race go carts.
+
+    User 2: Oh, I like to play the guitar too!
+
+    User 1: That''s great! What kind of music do you play?
+
+    User 2: I play a lot of different types of music, but I mostly play country.
+
+    User 1: Oh, I like country music too.
+
+    User 2: That''s great! We should jam sometime.
+
+    User 1: I would love that.
+
+    User 2: What about tomorrow?
+
+    User 1: I''m free tomorrow.
+
+    User 2: Great! I''ll come over and we can play some music.
+
+    User 1: Sounds good.
+
+    User 2: Cool, I''ll see you tomorrow.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00008058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8058
+data:
+  user 1 personas: 'I am a proofreader for a greeting card company.
+
+    My parents have been married for 40 years.
+
+    My favorite movie is goodfellas.
+
+    I love to read.'
+  user 2 personas: 'I am not a basketball player though.
+
+    My favorite band is the rolling stones.
+
+    I would like to retire to hawaii in the next 10 years.
+
+    I currently work for ibm in chicago.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey, how are you?
+
+    User 1: I''m doing well, thanks for asking! I''m a proofreader for a greeting card company.
+
+    User 2: Oh, that''s cool! I''m a software engineer at IBM in Chicago.
+
+    User 1: Oh, that''s awesome! I''ve always been interested in coding.
+
+    User 2: It''s a lot of fun, but it can be challenging at times.
+
+    User 1: I can imagine! What''s your favorite part of it?
+
+    User 2: I like the problem solving aspect of it. It''s really satisfying to be able to solve a complex problem.
+
+    User 1: I can see how that would be satisfying. I''m glad you''re enjoying your job.
+
+    User 2: Yeah, I really am. I''m also a big fan of the Rolling Stones.
+
+    User 1: Oh, me too! They''re one of my favorite bands.
+
+    User 2: I''m glad to hear that! I''m actually going to see them in concert next month.
+
+    User 1: Oh, that''s awesome! I''m jealous.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks, I hope so!
+
+    User 2: So, what''s your favorite movie?
+
+    User 1: Goodfellas.
+
+    User 2: Oh, I love that movie!
+
+    User 1: I know, right? It''s so good.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to read, watch movies, and spend time with my family.
+
+    User 2: Sounds like you have a lot of interests.
+
+    User 1: Yeah, I guess I do.
+
+    User 2: Well, it sounds like you''re a pretty interesting person.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: You''re welcome. It was nice meeting you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

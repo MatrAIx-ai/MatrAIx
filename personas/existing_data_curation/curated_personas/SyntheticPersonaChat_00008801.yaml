@@ -1,0 +1,88 @@
+id: 00008801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8801
+data:
+  user 1 personas: 'I just moved into an apartment within the vicinity of my new job.
+
+    I just graduated college with my bachelor s degree in education.
+
+    I just accepted a job at the elementary school in my hometown.
+
+    I am twenty two years old.'
+  user 2 personas: 'I like to chat with my friends.
+
+    I love to go out to eat with my family.
+
+    I like to take drives in the country.
+
+    I like to go to the movies.'
+  Best Generated Conversation: 'User 1: Hi there! How are you doing today?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing well too, thanks! I just moved into a new apartment and I''m really excited about it.
+
+    User 2: That''s awesome! I love moving to new places. It''s so much fun to explore and discover all the new things around you.
+
+    User 1: Me too! I''m looking forward to getting to know my new neighbors and exploring the city.
+
+    User 2: I''m sure you''ll have a great time. It sounds like you''re really excited about the move.
+
+    User 1: Yeah, I am! I''m starting a new job at the elementary school in my hometown and I''m just really excited to be starting this new chapter in my life.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I''m excited to get started.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go out to eat with my family, and take drives in the country.
+
+    User 2: Those all sound like fun things to do. I love to read as well. What are some of your favorite books?
+
+    User 1: I like to read a lot of different things, but I''m really into historical fiction right now. I just finished reading "The Nightingale" by Kristin Hannah and I really enjoyed it.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a really good read.
+
+    User 2: I''m sure I will. So, what else do you like to do?
+
+    User 1: I like to go out to eat with my family. We''re always trying new restaurants.
+
+    User 2: That sounds like fun. I love trying new food too.
+
+    User 1: Me too! We recently went to a new restaurant in town and it was really good. The food was delicious and the service was great.
+
+    User 2: That sounds like a great experience. I love going to restaurants with my family. It''s always a lot of fun.
+
+    User 1: Yeah, it is. We always have a good time.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to take drives in the country. I find it really relaxing to just drive around and take in the scenery.
+
+    User 2: That sounds like a great way to relax. I love driving around in the country too.
+
+    User 1: Yeah, it''s a nice way to get away from everything and just clear your head.
+
+    User 2: I agree. I like to go for drives when I''m feeling stressed or overwhelmed.
+
+    User 1: Me too. It''s a great way to relax and de-stress.
+
+    User 2: So, what do you think of our new city?
+
+    User 1: I love it! It''s so much different than the city I grew up in.
+
+    User 2: I''m glad you like it! I think it''s a great city.
+
+    User 1: Yeah, I do too. I''m really happy I moved here.
+
+    User 2: I''m glad to hear that. I hope you have a great time here.
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

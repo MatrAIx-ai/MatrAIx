@@ -1,0 +1,61 @@
+id: 00005398
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5398
+data:
+  user 1 personas: 'I work for a beer distributor.
+
+    My favorite singer is taylor swift.
+
+    I am married.
+
+    I have a toddler.'
+  user 2 personas: 'I drive a moped.
+
+    I sing in the shower.
+
+    My favorite video game is halo 3.
+
+    I struggle with maintaining eye contact.'
+  Best Generated Conversation: 'User 1: Hey! How are you?
+
+    User 2: I''m good, how are you?
+
+    User 1: I''m doing great! I just got back from work.
+
+    User 2: Oh, what do you do for work?
+
+    User 1: I work for a beer distributor.
+
+    User 2: That sounds fun! Do you like it?
+
+    User 1: Yeah, it''s pretty great. I get to drink beer all day long!
+
+    User 2: That''s awesome! I wish I could get paid to drink beer.
+
+    User 1: Me too! But I''m sure you''re doing something just as cool.
+
+    User 2: I''m not sure about that. I drive a moped.
+
+    User 1: A moped? That''s cool! I''ve never ridden one.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will! Maybe I''ll take a ride down to the beach.
+
+    User 2: That would be fun! I love the beach.
+
+    User 1: Me too! We should go together sometime.
+
+    User 2: I''d love that!
+
+    User 1: Great! We''ll have to make a date.
+
+    User 2: Sounds good!
+
+
+    [They continue to talk about their favorite music, movies, and TV shows. They find out that they have a lot in common. They decide to exchange numbers and make plans to hang out soon.]'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

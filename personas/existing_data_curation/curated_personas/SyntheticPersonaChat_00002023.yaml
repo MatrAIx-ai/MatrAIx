@@ -1,0 +1,70 @@
+id: '00002023'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2023
+data:
+  user 1 personas: 'I married miss usa.
+
+    I am bored of my maids.
+
+    I have more money than i know what to do with.
+
+    My favorite dessert is cheesecake.'
+  user 2 personas: 'I wear contacts.
+
+    I hate carrots.
+
+    I am very athletic.
+
+    I have brown hair.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I like to go running, I play soccer, and I love to read.
+
+    User 1: That''s great! I like to run too. I also love to read.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all sorts of books, but my favorite genre is historical fiction.
+
+    User 2: That''s cool! I like historical fiction too.
+
+    User 1: What''s your favorite historical fiction book?
+
+    User 2: My favorite historical fiction book is The Pillars of the Earth by Ken Follett.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go out with my friends, I like to go to the movies, and I like to travel.
+
+    User 1: That''s great! I like to do all those things too.
+
+    User 2: What''s your favorite place to travel to?
+
+    User 1: I love to travel to Europe. I''ve been to Italy, France, and Spain, and I''m dying to go to Greece and Ireland.
+
+    User 2: Those are all beautiful places. I''ve been to Italy and France, but I''ve never been to Spain or Greece.
+
+    User 1: You should go! They''re both amazing countries.
+
+    User 2: I''m sure I will someday.
+
+    User 1: Well, it was nice meeting you, [user 2 name].
+
+    User 2: It was nice meeting you too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

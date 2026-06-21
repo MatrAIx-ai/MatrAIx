@@ -1,0 +1,62 @@
+id: 00004284
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4284
+data:
+  user 1 personas: 'I am rich beyond my dreams.
+
+    I will never punch a clock again.
+
+    I hit for over forty million dollars.
+
+    I used to work a 9 5 job as a telemarketer.
+
+    One day i played the lottery.'
+  user 2 personas: 'I take pride in my job managing the restaurant.
+
+    My family is very important to me.
+
+    My brothers work with me.
+
+    I drive a nice car.
+
+    I work all the time.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name]. I''m a retired lottery winner.
+
+    User 2: Hi, my name is [User 2''s name]. I''m a restaurant manager.
+
+    User 1: Nice to meet you, [User 2''s name]. What''s it like to be a restaurant manager?
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I get to work with my family and I get to see the restaurant grow and prosper.
+
+    User 1: That sounds great. I used to work as a telemarketer, but I won the lottery and now I never have to work again.
+
+    User 2: That''s amazing! How did you feel when you won the lottery?
+
+    User 1: I was shocked and excited. I couldn''t believe it was real.
+
+    User 2: I can imagine. What did you do with the money?
+
+    User 1: I bought a house, a car, and I invested the rest.
+
+    User 2: That sounds like a great plan. What do you do with your free time now?
+
+    User 1: I travel a lot, I play golf, and I spend time with my family.
+
+    User 2: That sounds like a great life. I''m happy for you.
+
+    User 1: Thanks. I''m happy too.
+
+    User 2: So, what are you doing today?
+
+    User 1: I''m just hanging out, relaxing. I don''t have to work anymore, so I can do whatever I want.
+
+    User 2: That sounds great. I have to work today, but I''m looking forward to the weekend.
+
+    User 1: Well, I hope you have a good day at work.
+
+    User 2: Thanks, I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

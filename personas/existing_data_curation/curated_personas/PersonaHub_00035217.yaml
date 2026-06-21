@@ -1,0 +1,19 @@
+id: '00035217'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35217
+persona_description: A researcher at MIT's Computer Science and Artificial Intelligence Laboratory who specializes in developing new technologies to track and measure human movements, particularly through
+  facial and head movements. She has expertise in computer vision and is currently working on a project that combines techniques from computer vision with heart rate measurement to create a new method for
+  detecting heart rate from video footage. Her goal is to use this technology to provide estimates of heart rate intervals and identify patients at risk for cardiac events, which could potentially lead
+  to improvements in healthcare.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: computer vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: tracking and analysis of human movements
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

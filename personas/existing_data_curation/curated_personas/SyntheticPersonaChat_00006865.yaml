@@ -1,0 +1,58 @@
+id: 00006865
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6865
+data:
+  user 1 personas: 'My favorite meal is chicken and rice.
+
+    I have a cat named george.
+
+    My favorite band is metallica.
+
+    I regularly go to the gym.'
+  user 2 personas: 'My father was a cop.
+
+    I am a truck driver.
+
+    I know how to drive a stickshift.
+
+    My mother was a teacher.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m doing well, thanks for asking!
+
+    User 1: That''s great to hear. I''m doing well too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go to the gym, listen to music, and spend time with my cat.
+
+    User 2: That sounds like fun. I like to go to the gym too. I also like to play video games and watch movies.
+
+    User 1: Oh, I like video games too! What''s your favorite game?
+
+    User 2: My favorite game is Grand Theft Auto V.
+
+    User 1: That''s a great game! I''ve played it a few times.
+
+    User 2: I''ve played it a lot. I''m really good at it.
+
+    User 1: I''m sure you are. I''m not very good at video games.
+
+    User 2: Don''t worry, I''m sure you''re better than you think.
+
+    User 1: Thanks. I like to go to the gym to stay in shape.
+
+    User 2: That''s good. I should probably go to the gym more often.
+
+    User 1: You should! It''s a great way to get in shape and relieve stress.
+
+    User 2: I know, I know. I''ll start going to the gym more often.
+
+    User 1: Good! I''m sure you''ll be glad you did.
+
+    User 2: Thanks. I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

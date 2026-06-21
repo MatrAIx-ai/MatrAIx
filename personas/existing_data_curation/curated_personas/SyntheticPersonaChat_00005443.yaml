@@ -1,0 +1,80 @@
+id: '00005443'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5443
+data:
+  user 1 personas: 'My favorite hobby is knitting.
+
+    I work in an office.
+
+    I enjoy shopping.
+
+    I have two tattoos.'
+  user 2 personas: 'I like to eat beef.
+
+    I like to ride horses.
+
+    I like to wear boots.'
+  Best Generated Conversation: 'User 1: Hey there! What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Hi Sarah, my name is [name]. What do you like to do for fun?
+
+    User 2: I like to ride horses, eat beef, and wear boots.
+
+    User 1: That''s cool. I like to knit, shop, and I have two tattoos.
+
+    User 2: Oh, that''s really cool! I''ve never been good at knitting, but I love shopping. I''ve always wanted to get a tattoo, but I''m not sure what I would get.
+
+    User 1: Well, if you ever do decide to get a tattoo, I''m sure it will look great on you.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a horse trainer.
+
+    User 1: Oh, that''s really cool! I''ve always wanted to learn how to ride horses.
+
+    User 2: Well, if you ever want to learn, I''m sure I could give you some lessons.
+
+    User 1: That would be great! Thanks for the offer.
+
+    User 2: No problem. So, what do you do for work?
+
+    User 1: I work in an office.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It can be, but it''s also a lot of paperwork.
+
+    User 2: I bet. Well, it sounds like you have a pretty busy life.
+
+    User 1: Yeah, I do. But I like it that way.
+
+    User 2: That''s good. I like to keep busy too.
+
+    User 1: So, what are some of your other hobbies?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to read too.
+
+    User 2: Oh, that''s great. What are some of your favorite books?
+
+    User 1: I like to read a lot of different genres, but I really like historical fiction and mystery novels.
+
+    User 2: Oh, that''s cool. I like historical fiction too.
+
+    User 1: Me too. It''s so interesting to learn about different time periods.
+
+    User 2: I know, right? It''s like traveling back in time.
+
+    User 1: Yeah, it is. I really enjoy it.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

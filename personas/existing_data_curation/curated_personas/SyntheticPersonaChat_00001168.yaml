@@ -1,0 +1,86 @@
+id: 00001168
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1168
+data:
+  user 1 personas: 'My name is todd.
+
+    I want to grow up to be a superhero one day.
+
+    I love comic books.
+
+    My favorite hero is superman.
+
+    I am 8 years old.'
+  user 2 personas: 'I am a vegan.
+
+    I have a tattoo of an angel on my hip.
+
+    My eyes are brown.
+
+    I love going to concerts.
+
+    I study philosophy at mass.'
+  Best Generated Conversation: 'User 1: Hi, my name is Todd!
+
+    User 2: Hi Todd, my name is Sarah.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to concerts and study philosophy.
+
+    User 1: That sounds fun! I like to read comic books.
+
+    User 2: Oh, what kind of comic books do you like?
+
+    User 1: I like superhero comic books. My favorite hero is Superman.
+
+    User 2: I''ve never read any superhero comic books.
+
+    User 1: You should! They''re really fun.
+
+    User 2: Maybe I will.
+
+    User 1: I also like to go to the movies.
+
+    User 2: I like going to the movies too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t really have a favorite movie.
+
+    User 1: Oh, that''s okay.
+
+    User 2: I like a lot of different movies.
+
+    User 1: Me too.
+
+    User 2: So, what do you do for school?
+
+    User 1: I''m in the second grade.
+
+    User 2: Oh, that''s cool! I''m in college.
+
+    User 1: What do you study?
+
+    User 2: I study philosophy.
+
+    User 1: Oh, that''s interesting!
+
+    User 2: Yeah, it''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I want to be a superhero when I grow up.
+
+    User 2: That''s a great goal! I''m sure you''ll achieve it.
+
+    User 1: Thanks!
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

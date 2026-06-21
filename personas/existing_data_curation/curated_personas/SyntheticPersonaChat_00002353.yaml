@@ -1,0 +1,82 @@
+id: '00002353'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2353
+data:
+  user 1 personas: 'I work with my wife.
+
+    My wife is a breast cancer survivor.
+
+    I am a zookeeper.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I have trained over 20 types of animals.'
+  user 2 personas: 'My girlfriend lives in salt lake city.
+
+    I have 2 beagles named chance and boomer.
+
+    Both of my parents are in the military.
+
+    I am afraid of spiders.
+
+    I am a pilot.'
+  Best Generated Conversation: 'User 1: Hello, what do you do for a living?
+
+    User 2: I am a pilot.
+
+    User 1: Oh that must be exciting. I am a zookeeper.
+
+    User 2: That sounds awesome! What is your favorite part of the job?
+
+    User 1: I love working with animals. I have trained over 20 different species.
+
+    User 2: That''s amazing! I have two beagles named Chance and Boomer.
+
+    User 1: Beagles are great dogs! I have always wanted one.
+
+    User 2: They are the best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go hiking and camping.
+
+    User 1: Me too! I just went camping last weekend.
+
+    User 2: Where did you go camping?
+
+    User 1: I went camping in the mountains. It was so peaceful and beautiful.
+
+    User 2: That sounds amazing! I love the mountains.
+
+    User 1: Yeah, me too.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I also like to read, watch movies, and go to the gym.
+
+    User 2: I like to read too. What are some of your favorite books?
+
+    User 1: I like to read all sorts of books, but I''m really into historical fiction right now.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: Yeah, you should. It''s really good.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go hiking with my dogs. Do you want to come?
+
+    User 1: That sounds like fun! I''d love to come.
+
+    User 2: Great! I''ll text you the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

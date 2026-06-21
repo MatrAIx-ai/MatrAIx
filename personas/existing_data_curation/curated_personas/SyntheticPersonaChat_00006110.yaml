@@ -1,0 +1,68 @@
+id: '00006110'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6110
+data:
+  user 1 personas: 'Many people want to be my friend.
+
+    I have a nice smile.
+
+    I love to exercise.
+
+    I am not a nice person.'
+  user 2 personas: 'I am an environmental engineer.
+
+    I live alone.
+
+    I like to take photos.
+
+    I live in portland , maine.
+
+    I love to hike.'
+  Best Generated Conversation: 'User 1: I''m not a nice person, but many people want to be my friend.
+
+    User 2: That''s interesting. Why do you think that is?
+
+    User 1: I''m not sure. Maybe it''s because I have a nice smile.
+
+    User 2: I can see that. You have a very warm smile.
+
+    User 1: Thanks. I like to exercise. I think it''s important to stay in shape.
+
+    User 2: I agree. I love to hike. It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 1: I''ve never been hiking. Is it fun?
+
+    User 2: It''s amazing! You get to see some beautiful scenery and burn some calories at the same time.
+
+    User 1: It sounds like something I''d enjoy. Maybe I''ll try it sometime.
+
+    User 2: You should! I''m sure you''d love it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome. So, what else do you like to do for fun?
+
+    User 1: I like to take photos. I think it''s a great way to capture memories and share them with others.
+
+    User 2: That''s a great hobby. I''m sure you take some amazing photos.
+
+    User 1: Thanks! I like to think so. I''m always looking for new ways to improve my photography skills.
+
+    User 2: I''m sure you''ll keep getting better. You have a natural eye for photography.
+
+    User 1: Thank you! That means a lot.
+
+    User 2: You''re welcome. So, what are you doing with your photography? Do you sell it or just share it with friends and family?
+
+    User 1: I''ve actually been trying to sell some of my photos. I''m not sure if I''m very good at it, but it''s fun to try.
+
+    User 2: I''m sure you''re good at it. You have a great eye for photography.
+
+    User 1: Thank you! That means a lot.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

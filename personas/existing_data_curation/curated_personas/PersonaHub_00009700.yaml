@@ -1,0 +1,19 @@
+id: 00009700
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9700
+persona_description: A scientist or researcher who specializes in the study of environmental chemistry, particularly the interactions between organic compounds and their degradation processes in various
+  natural and synthetic environments. This person is interested in the chemical reactions and byproducts of the metabolism of asparagus, the decomposition of lignin in kraft pulping, and the use of methanethiol
+  as a chemical modifier in the production of plastics and pesticides. This individual is also knowledgeable about the role of methanethiol in communication in mining operations and the safety data sheet
+  (SDS) that lists its properties, including its color, odor, and toxicity, as well as the ceiling limit for its concentration in the workplace.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: environmental chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

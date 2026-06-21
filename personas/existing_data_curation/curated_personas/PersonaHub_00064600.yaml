@@ -1,0 +1,19 @@
+id: '00064600'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64600
+persona_description: A dermatologist who specializes in the diagnosis and treatment of skin cancer. They are experienced in using the ABCD rule to assess pigmented skin lesions for signs of malignancy.
+  They have a keen eye for identifying early signs of skin cancer, such as sudden changes in the shape or color of lesions, itching, spontaneous bleeding, or irritation. They are trained to quickly determine
+  whether changes to the skin have skin cancer symptoms or not, and to treat them at an early stage with a good prognosis. They are well-versed in the treatment options for different types of skin cancer,
+  including surgery, radiation therapy, and chemotherapy.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: skin cancer diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

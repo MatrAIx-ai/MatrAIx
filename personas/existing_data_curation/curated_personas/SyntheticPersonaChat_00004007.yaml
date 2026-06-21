@@ -1,0 +1,66 @@
+id: '00004007'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4007
+data:
+  user 1 personas: 'I have two older brothers.
+
+    I am the youngest in my family.
+
+    My passion is photography.
+
+    My favorite color is blue.'
+  user 2 personas: 'I collect seashells.
+
+    I have two chiuahuahs.
+
+    I love horses.
+
+    I am a yoga instructor.
+
+    I have a son.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I''m a yoga instructor and I love horses!
+
+    User 1: That''s so cool! I love yoga too. Do you have any pets?
+
+    User 2: I have two chihuahuas and I love them to death!
+
+    User 1: Aww, that''s so cute! I love dogs. Do you have any siblings?
+
+    User 2: I have a son and a daughter.
+
+    User 1: Oh, that''s nice! I''m the youngest in my family. I have two older brothers.
+
+    User 2: That must have been fun growing up!
+
+    User 1: It was! I''m always the baby of the family.
+
+    User 2: I bet you get away with a lot!
+
+    User 1: I do sometimes!
+
+    User 2: So, what''s your passion?
+
+    User 1: My passion is photography. I love taking pictures of anything and everything.
+
+    User 2: That''s really cool! I''ve always wanted to learn how to take better pictures.
+
+    User 1: I could teach you!
+
+    User 2: That would be awesome!
+
+    User 1: Great! I''ll bring my camera next time we meet.
+
+    User 2: Awesome! I can''t wait to see your pictures.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

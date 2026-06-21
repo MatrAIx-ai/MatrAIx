@@ -1,0 +1,72 @@
+id: '00003704'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3704
+data:
+  user 1 personas: 'I learned piano at age 6.
+
+    I am a vegan.
+
+    I am trying to play in a local band.
+
+    I own 9 guitars.'
+  user 2 personas: 'I work for a government agency.
+
+    I like sports.
+
+    My favorite team is the washington nationals.
+
+    My favorite food is pizza.
+
+    I prefer baseball over football.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play sports, watch sports, and eat pizza.
+
+    User 1: What sports do you like to play?
+
+    User 2: I like to play baseball and basketball.
+
+    User 1: Nice! I like to play basketball too. What''s your favorite team?
+
+    User 2: My favorite team is the Washington Nationals.
+
+    User 1: Oh, nice! I''m a fan of the New York Mets.
+
+    User 2: Oh, cool! We should have a game sometime.
+
+    User 1: That would be fun! I''m not very good, though.
+
+    User 2: Me neither, but it''s always fun to play.
+
+    User 1: What about pizza? What''s your favorite kind?
+
+    User 2: I like pepperoni and pineapple pizza.
+
+    User 1: Oh, I''ve never had pepperoni and pineapple pizza. What''s it like?
+
+    User 2: It''s really good! The sweetness of the pineapple goes well with the saltiness of the pepperoni.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s my favorite kind of pizza.
+
+    User 1: I''m always looking for new foods to try.
+
+    User 2: Me too! I love trying new things.
+
+    User 1: It''s a good way to explore different cultures.
+
+    User 2: Yeah, it is. I''ve learned a lot about different cultures through food.
+
+    User 1: Me too. It''s a great way to learn about different people.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

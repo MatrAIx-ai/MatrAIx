@@ -1,0 +1,86 @@
+id: 00001930
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1930
+data:
+  user 1 personas: 'I like photography.
+
+    I like to bake pies.
+
+    I like to garden.
+
+    I love traveling.
+
+    I am a chef.'
+  user 2 personas: 'I am in college.
+
+    I love the beach.
+
+    I work part time at a pizza restaurant.
+
+    I like to party.
+
+    My major is business.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to go to the beach, party, and hang out with my friends.
+
+    User 1: That sounds fun! I like to bake pies, garden, and travel.
+
+    User 2: I love baking! What''s your favorite kind of pie to make?
+
+    User 1: I love making apple pie! It''s my favorite fruit.
+
+    User 2: That sounds delicious! I love apple pie too.
+
+    User 1: Do you like to travel?
+
+    User 2: I love to travel! I''ve been to a lot of different countries.
+
+    User 1: That''s awesome! I''ve only been to a few countries.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to the United States, Mexico, and Canada.
+
+    User 2: That''s a good start! I''ve been to all of those countries too.
+
+    User 1: Have you been to any other countries?
+
+    User 2: Yes, I''ve been to Europe, Asia, and Africa.
+
+    User 1: That''s amazing! I''d love to travel to Europe one day.
+
+    User 2: You definitely should! It''s an amazing place.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that''s cool! I love to cook.
+
+    User 1: Me too! I love making different types of food.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love to cook Italian food.
+
+    User 2: That sounds delicious! I love Italian food too.
+
+    User 1: Do you like to garden?
+
+    User 2: I love to garden! I have a garden in my backyard.
+
+    User 1: That''s awesome! I''ve always wanted to have a garden.
+
+    User 2: You should do it! It''s really fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,54 @@
+id: '00007220'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7220
+data:
+  user 1 personas: 'I wish i could live in a fantasy world.
+
+    I do not have many friends.
+
+    I like lizards.
+
+    I draw during classes instead of taking notes.'
+  user 2 personas: 'I like the guitar.
+
+    I like music.
+
+    I like to skateboard.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: I''m really into fantasy worlds, like Lord of the Rings and Harry Potter. Do you like any fantasy worlds?
+
+
+    User 2: I like Lord of the Rings, but I haven''t read Harry Potter. I''m more into music. I like to play guitar and listen to music.
+
+
+    User 1: That''s cool! I used to play guitar a lot, but I haven''t in a while. I''m also into music, but I''m more into rock and metal.
+
+
+    User 2: Oh, nice! I like rock and metal too. I''m a vegan, so I don''t eat meat or dairy. Do you have any dietary restrictions?
+
+
+    User 1: No, I don''t have any dietary restrictions. I love to eat meat and dairy.
+
+
+    User 2: That''s cool. I used to eat meat, but I switched to a vegan diet a few years ago.
+
+
+    User 1: Why did you decide to become a vegan?
+
+
+    User 2: I decided to become a vegan because I wanted to do something to help the environment. I also believe that it''s wrong to eat animals.
+
+
+    User 1: That''s a good reason. I''m glad you''re doing something to help the environment.
+
+
+    User 2: Thanks! I''m glad I could talk to you about it.
+
+
+    User 1: Me too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

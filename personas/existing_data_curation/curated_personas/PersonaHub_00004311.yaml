@@ -1,0 +1,19 @@
+id: '00004311'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4311
+persona_description: A healthcare professional who specializes in performing and interpreting x-rays and fluoroscopy tests for various body systems, including the skeletal, digestive, urinary, respiratory,
+  and reproductive systems. They are knowledgeable in the use of contrast substances and have experience in obtaining detailed images of internal organs. They are likely to have a detailed understanding
+  of the procedures involved in these tests and are skilled in communicating with patients to ensure their comfort and understanding of the tests. They may also be responsible for interpreting test results
+  and providing recommendations for further care.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: radiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

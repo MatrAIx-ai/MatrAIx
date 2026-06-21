@@ -1,0 +1,80 @@
+id: 00006468
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6468
+data:
+  user 1 personas: 'I sell paper products for a living.
+
+    I am under 6 feet tall.
+
+    I am a great cook.
+
+    I have a daughter.'
+  user 2 personas: 'I eat out more than three times a week.
+
+    I believe the rich should not be taxed as much.
+
+    I look down on people who did not.
+
+    I went to an elite ivy league school.
+
+    I work in finance.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that''s interesting. I''m a paper products salesperson.
+
+    User 2: Oh, that''s good. I''m sure you make a lot of money.
+
+    User 1: I''m not complaining.
+
+    User 2: I eat out more than three times a week. Do you?
+
+    User 1: No, I don''t really have the time or the money.
+
+    User 2: I guess you''re not a big spender.
+
+    User 1: I''m not, but I''m happy with my life.
+
+    User 2: I look down on people who didn''t go to an elite ivy league school. Do you agree?
+
+    User 1: No, I don''t believe in judging people based on their education.
+
+    User 2: I guess we''re just going to have to agree to disagree.
+
+    User 1: That''s fine.
+
+    User 2: I''m not sure if I''ve ever met someone who didn''t go to an ivy league school.
+
+    User 1: Well, now you have.
+
+    User 2: That''s interesting. I guess I''m not as open-minded as I thought.
+
+    User 1: It''s okay. We all have our prejudices.
+
+    User 2: I guess so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Maybe we can get together sometime and have dinner.
+
+    User 1: That would be nice.
+
+    User 2: I''ll give you my number.
+
+    User 1: Okay.
+
+    User 2: Here it is.
+
+    User 1: Thanks.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: '00010212'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10212
+persona_description: A pediatric neurologist who specializes in the study of polio-like syndromes and has investigated cases of the illness in California children since 2012. He is part of a team investigating
+  the current cases and will present findings at the American Academy of Neurology's annual meeting. His research interests include the pathophysiology of the illness and its impact on children's mobility.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: polio-like syndromes in children
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

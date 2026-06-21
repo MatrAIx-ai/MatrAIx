@@ -1,0 +1,70 @@
+id: 00000693
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 693
+data:
+  user 1 personas: 'I like to cook.
+
+    My family owned a small restaurant.
+
+    I work 9 to 5 job.
+
+    Sometimes i volunteer at the soup kitchen.
+
+    When i retire i want to open a bakery.'
+  user 2 personas: 'I listen to rock music.
+
+    I work for a large company.
+
+    I like to eat food.
+
+    I drive a fast car.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to rock music, eat food, and drive fast cars.
+
+    User 1: Oh, that''s cool! I like to cook, volunteer at the soup kitchen, and work.
+
+    User 2: What kind of food do you like to cook?
+
+    User 1: I like to cook all kinds of food, but my favorite is Italian food.
+
+    User 2: I love Italian food too! I''m a big fan of pasta.
+
+    User 1: Me too! I love making pasta dishes. I''m actually planning on opening a bakery when I retire.
+
+    User 2: That''s awesome! I''m sure you''ll be a great baker.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what kind of work do you do?
+
+    User 1: I work for a large company. I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a software engineer.
+
+    User 1: It''s a lot of fun! I get to work on cool projects and solve interesting problems.
+
+    User 2: That sounds like a great job.
+
+    User 1: It is. I love it.
+
+    User 2: So, what do you like to do for fun besides work and cook?
+
+    User 1: I like to volunteer at the soup kitchen. It''s a great way to give back to the community.
+
+    User 2: That''s awesome! I''ve always wanted to volunteer, but I just haven''t had the time.
+
+    User 1: You should definitely try it! It''s a lot of fun and you get to meet new people.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00003823
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3823
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I have 2 turtles.
+
+    I have purple hair.
+
+    My favorite movie is gone with the wind.
+
+    I like to play video games.'
+  user 2 personas: 'I listen to metal music.
+
+    I have black spiky hair.
+
+    I wear a lot of leather.
+
+    I sleep in late during the day.'
+  Best Generated Conversation: 'User 1: I like to play video games.
+
+    User 2: Me too! What are some of your favorite games?
+
+    User 1: I like to play open world games like Skyrim and Fallout.
+
+    User 2: I love open world games too! I''m a big fan of the Elder Scrolls series.
+
+    User 1: I''ve played all of the Elder Scrolls games and I love them all.
+
+    User 2: Me too! I''m really excited for the new one coming out next year.
+
+    User 1: Me too! I''m hoping it''s as good as the others.
+
+    User 2: I''m sure it will be. The developers have been working on it for a long time.
+
+    User 1: I''m glad to hear that. I can''t wait to play it.
+
+    User 2: Me too! It''s going to be awesome.
+
+    User 1: I''m sure it will be. So, what other kinds of games do you like to play?
+
+    User 2: I also like to play shooters and racing games.
+
+    User 1: I like shooters too! What''s your favorite shooter?
+
+    User 2: I like Call of Duty and Battlefield.
+
+    User 1: Me too! I love playing those games online with friends.
+
+    User 2: Me too! It''s so much fun to compete against each other.
+
+    User 1: I know right! It''s a great way to bond with friends.
+
+    User 2: Yeah, it is. I''m glad we have similar interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: 00005584
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5584
+data:
+  user 1 personas: 'I like to eat hard boiled eggs.
+
+    I like to mountain bike.
+
+    I like to draw other people.
+
+    I love people with a sense of humor.
+
+    I like to drink tea.'
+  user 2 personas: 'I have an 18 year old son.
+
+    I spend time signing a lot of petitions and donate to animal rights groups.
+
+    I love animals.
+
+    I am a vegan.
+
+    I volunteer walking dogs twice a week.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hello! My name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to spend time with my son, volunteer walking dogs, and I''m a vegan.
+
+    User 1: That''s cool! I like to mountain bike, draw people, and eat hard boiled eggs.
+
+    User 2: Mountain biking sounds like fun! I''ve never tried it before.
+
+    User 1: You should! It''s a great way to get exercise and see some beautiful scenery.
+
+    User 2: I might have to give it a try.
+
+    User 1: I''m sure you''d enjoy it.
+
+    User 2: So, what''s your favorite thing to draw?
+
+    User 1: I like to draw people, animals, and landscapes. I''m trying to get better at drawing dogs.
+
+    User 2: I''m sure you''re a great artist.
+
+    User 1: Thanks! I''ve been drawing since I was a kid.
+
+    User 2: That''s awesome!
+
+    User 1: Yeah, I love it.
+
+    User 2: What''s your favorite type of tea?
+
+    User 1: I like green tea, but I''ll drink any kind.
+
+    User 2: Me too! I love the way it tastes.
+
+    User 1: Yeah, it''s really refreshing.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m an artist, but I also do some freelance drawing.
+
+    User 2: That sounds like a cool job.
+
+    User 1: It is! I get to draw all day long.
+
+    User 2: I''m sure you''re very talented.
+
+    User 1: Thanks! I try my best.
+
+    User 2: Well, I have to go now. It was nice talking to you.
+
+    User 1: You too! Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

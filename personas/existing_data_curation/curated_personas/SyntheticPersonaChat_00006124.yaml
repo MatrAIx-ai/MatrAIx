@@ -1,0 +1,78 @@
+id: '00006124'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6124
+data:
+  user 1 personas: 'My favorite band is rise against.
+
+    I like sports.
+
+    My favorite team is the raptors.
+
+    I usually go to bed late.
+
+    I am studying to be a dentist.'
+  user 2 personas: 'I never met my parents.
+
+    I am an international business man.
+
+    I own a mansion that i do not live in.
+
+    I am a genius and know over 300 languages.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an international business man.
+
+    User 1: Oh, that sounds exciting. What does that entail?
+
+    User 2: I travel all over the world, meeting with clients and negotiating deals.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is, but it can also be very stressful.
+
+    User 1: I can imagine.
+
+    User 2: I''m also a genius and know over 300 languages.
+
+    User 1: Wow, that''s amazing!
+
+    User 2: Thanks. I''ve always been interested in learning languages.
+
+    User 1: What''s your favorite language?
+
+    User 2: I don''t really have a favorite language. I enjoy learning all of them.
+
+    User 1: That''s cool. I wish I was more good at learning languages.
+
+    User 2: It takes practice, but anyone can do it.
+
+    User 1: I guess I''ll have to give it a try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Well, I''m glad you''re enjoying your job.
+
+    User 2: I do, it''s very rewarding.
+
+    User 1: Do you have any kids?
+
+    User 2: No, I never met my parents.
+
+    User 1: Oh, I''m sorry.
+
+    User 2: It''s okay, I''ve made my own family.
+
+    User 1: That''s good to hear.
+
+    User 2: Thanks. I''m glad to meet you, [name].
+
+    User 1: It''s nice to meet you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00000805
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 805
+data:
+  user 1 personas: 'I love to fish.
+
+    I have a black lab.
+
+    I am from tennessee.
+
+    I am married.
+
+    My favorite musician in charlie daniels.'
+  user 2 personas: 'I have ink stains on all my shirts.
+
+    My cats name is leroy jenkins.
+
+    I enjoy playing retro video games on my 386.
+
+    My suspenders sometimes make my shoulders hurt.
+
+    I wish i had a real dragon i could train.'
+  Best Generated Conversation: 'User 1: I''m from Tennessee too! Where are you from?
+
+    User 2: I''m from Nashville!
+
+    User 1: Me too! I love Nashville. What''s your favorite thing about it?
+
+    User 2: I love the food and the music.
+
+    User 1: Me too! And I love the people. Everyone is so friendly.
+
+    User 2: I know, right? It''s like one big family.
+
+    User 1: I''m glad you''re a fellow Nashvillian!
+
+    User 2: Me too! It''s always nice to meet someone from home.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play retro video games.
+
+    User 1: Oh, that''s cool! I''ve never played any retro video games.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might! What''s your favorite retro video game?
+
+    User 2: My favorite retro video game is Super Mario Bros.
+
+    User 1: Oh, that''s a classic! I''ve heard good things about it.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: I might!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to fish, go for walks with my dog, and play music.
+
+    User 2: Oh, that''s cool! I like to fish too. What kind of music do you play?
+
+    User 1: I play guitar.
+
+    User 2: Oh, that''s cool! I play guitar too. What kind of music do you like to play?
+
+    User 1: I like to play all kinds of music, but I mostly play country music.
+
+    User 2: Oh, that''s cool! I like country music too. We should jam sometime!
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

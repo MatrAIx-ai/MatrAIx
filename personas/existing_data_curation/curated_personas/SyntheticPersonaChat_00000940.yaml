@@ -1,0 +1,64 @@
+id: 00000940
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 940
+data:
+  user 1 personas: 'I am very short.
+
+    I hate tomatoes.
+
+    I have 2 kids.
+
+    I am a female.'
+  user 2 personas: 'I enjoy hanging out with friends and family.
+
+    I am a big sports fan.
+
+    I have a brand new chevrolet.
+
+    I like to get involved in politics.
+
+    I am looking to start a business.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy spending time with my friends and family, watching sports, and getting involved in politics.
+
+    User 1: Cool! I like to do some of those things too. I have two kids and I love spending time with them. I also hate tomatoes.
+
+    User 2: That''s too bad, I love tomatoes.
+
+    User 1: I know, right? Everyone else seems to love them, but I just can''t stand the taste.
+
+    User 2: What other things do you like to do?
+
+    User 1: I like to go to the movies, I love to read, and I''m always up for trying new things.
+
+    User 2: That''s great! I''m also always up for trying new things. I''m looking to start a business soon, so I''m always looking for new ideas.
+
+    User 1: That''s awesome! I''m always rooting for people who are trying to start their own businesses.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what kind of business are you thinking about starting?
+
+    User 2: I''m not sure yet, but I''m thinking about something in the food industry.
+
+    User 1: That''s great! I love food!
+
+    User 2: Me too! I think it''s a great way to make a difference in the world.
+
+    User 1: I agree! Food brings people together and it''s a way to make the world a better place.
+
+    User 2: I''m glad you agree!
+
+    User 1: I''m sure you''ll do great things with your business.
+
+    User 2: Thanks! I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

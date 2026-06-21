@@ -1,0 +1,95 @@
+id: 00008227
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8227
+data:
+  user 1 personas: 'My college courses are on philosophy and history.
+
+    I ride my bike to class since it s only a mile away.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My newly bought laptop has a bum battery.'
+  user 2 personas: 'My sister is a published author.
+
+    I was a champion downhill skier in college.
+
+    I sing karaoke every thursday night.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: It''s nice to meet you, [User 2''s name]. What are you interested in?
+
+    User 2: I''m interested in a lot of things, but I''m especially interested in writing, skiing, and singing.
+
+    User 1: Oh, that''s cool! I''m interested in writing too. I like to write short stories.
+
+    User 2: Me too! I used to write short stories all the time when I was younger.
+
+    User 1: That''s awesome! Do you still write short stories?
+
+    User 2: Not as much as I used to, but I still do it every once in a while.
+
+    User 1: That''s cool! I''m always looking for new people to share my writing with.
+
+    User 2: Me too! I love sharing my writing with others.
+
+    User 1: That''s great! Maybe we could share our stories with each other sometime.
+
+    User 2: That would be great! I''d love to read your stories.
+
+    User 1: Awesome! I''ll send you one soon.
+
+    User 2: Great! I can''t wait to read it.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I have a lot of favorite books, but some of my favorites are "The Great Gatsby" by F. Scott Fitzgerald, "One Hundred Years of Solitude" by Gabriel García Márquez, and "To Kill a Mockingbird"
+    by Harper Lee.
+
+    User 1: Those are all great books! I''ve read "The Great Gatsby" and "To Kill a Mockingbird". I''ve been meaning to read "One Hundred Years of Solitude".
+
+    User 2: You should! It''s a really good book.
+
+    User 1: I will!
+
+    User 2: So, what are some of your favorite movies?
+
+    User 1: I have a lot of favorite movies, but some of my favorites are "The Shawshank Redemption", "The Princess Bride", and "The Lord of the Rings" trilogy.
+
+    User 2: Those are all great movies! I''ve seen all of them.
+
+    User 1: I have too. They''re all so good.
+
+    User 2: So, what are some of your favorite TV shows?
+
+    User 1: I have a lot of favorite TV shows, but some of my favorites are "The Office", "Parks and Recreation", and "The Simpsons".
+
+    User 2: Those are all great shows! I''ve seen all of them.
+
+    User 1: I have too. They''re all so good.
+
+    User 2: So, what are some of your favorite hobbies?
+
+    User 1: I have a lot of hobbies, but some of my favorites are writing, reading, and playing video games.
+
+    User 2: Those are all great hobbies! I like writing and reading too.
+
+    User 1: I''m glad! I love sharing my hobbies with others.
+
+    User 2: Me too! I always enjoy meeting new people who share my interests.
+
+    User 1: Me too! It''s great to meet you, [User 2''s name].
+
+    User 2: It''s great to meet you too, [User 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

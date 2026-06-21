@@ -1,0 +1,18 @@
+id: 00039166
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39166
+persona_description: A network administrator or consultant who is interested in monitoring network traffic and ensuring that it does not exceed the necessary capacity. They are looking for a tool or method
+  that can accurately predict the peak usage of the network and provide alerts when it exceeds the 95th percentile. They are also interested in understanding the factors that affect network utilization
+  and how they can optimize network performance.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Network Performance Optimization
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

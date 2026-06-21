@@ -1,0 +1,84 @@
+id: 00004995
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4995
+data:
+  user 1 personas: 'I have a parrot named parrot.
+
+    I have male pattern baldness.
+
+    I was born in baton rouge.
+
+    I am a classily trained chef.'
+  user 2 personas: 'I am a vegan.
+
+    I am from france.
+
+    I am studying literature.
+
+    My favorite food is tacos.
+
+    I like to draw.'
+  Best Generated Conversation: 'User 1: Bonjour!
+
+    User 2: Bonjour!
+
+    User 1: Je m''appelle [user 1''s name].
+
+    User 2: Je m''appelle [user 2''s name].
+
+    User 1: D''où venez-vous?
+
+    User 2: Je viens de France.
+
+    User 1: Ah, c''est super! Je suis de Baton Rouge, en Louisiane.
+
+    User 2: C''est très loin!
+
+    User 1: Oui, c''est vrai.
+
+    User 2: Qu''est-ce que vous faites?
+
+    User 1: Je suis chef.
+
+    User 2: Oh, c''est génial! J''aime manger!
+
+    User 1: Merci. J''adore cuisiner.
+
+    User 2: Avez-vous des animaux?
+
+    User 1: Oui, j''ai un perroquet.
+
+    User 2: Oh, c''est cool! J''adore les animaux.
+
+    User 1: Moi aussi.
+
+    User 2: Quel est le nom de votre perroquet?
+
+    User 1: Son nom est Parrot.
+
+    User 2: C''est un joli nom.
+
+    User 1: Merci.
+
+    User 2: Qu''est-ce que vous aimez faire dans votre temps libre?
+
+    User 1: J''aime cuisiner, lire, et voyager.
+
+    User 2: J''aime aussi lire et voyager.
+
+    User 1: C''est super!
+
+    User 2: Oui, c''est vrai.
+
+    User 1: Je suis contente de vous rencontrer.
+
+    User 2: Moi aussi.
+
+    User 1: On pourrait se revoir un de ces jours.
+
+    User 2: Oui, ça serait bien.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

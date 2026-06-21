@@ -1,0 +1,58 @@
+id: '00004251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4251
+data:
+  user 1 personas: 'My husband died last year.
+
+    My favorite hobby is gardening.
+
+    I am 77 years old.
+
+    Black coffee is my addiction.'
+  user 2 personas: 'I graduated college a few years ago.
+
+    I love food.
+
+    I ve a big family.
+
+    I prefer summer over winter.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2]. What do you like to do for fun?
+
+    User 1: I like to garden, read, and play cards.
+
+    User 2: That sounds nice. I like to cook, go for walks, and spend time with my family.
+
+    User 1: What kind of food do you like to cook?
+
+    User 2: I like to cook all kinds of food, but my favorite is probably Italian.
+
+    User 1: I love Italian food! My husband used to make the best pasta. He died last year.
+
+    User 2: I''m so sorry to hear that.
+
+    User 1: Thank you. I''m trying to keep busy, but it''s hard.
+
+    User 2: I understand. I''m here for you if you need anything.
+
+    User 1: Thanks. I appreciate that.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read, especially mysteries. I also love to play cards.
+
+    User 2: I''ve never been much of a card player, but I love to read too. I''m currently reading a book about the history of food.
+
+    User 1: That sounds interesting. I''m reading a book about the history of medicine.
+
+    User 2: Oh, that sounds interesting too. I''m sure we could have a lot of interesting conversations about our hobbies.
+
+    User 1: I''m sure we would. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

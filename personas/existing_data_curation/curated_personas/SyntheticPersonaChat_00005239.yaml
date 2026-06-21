@@ -1,0 +1,74 @@
+id: 00005239
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5239
+data:
+  user 1 personas: 'I am studying to be a dentist.
+
+    My favorite team is the raptors.
+
+    My favorite band is rise against.
+
+    I like sports.
+
+    I usually go to bed late.'
+  user 2 personas: 'I eat healthy.
+
+    I make straight as.
+
+    I am in the band.
+
+    I am very social.
+
+    I am a high school student.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to play sports, go to the movies, and hang out with my friends.
+
+    User 1: That sounds fun. I like to play sports too. I''m a big fan of the Raptors.
+
+    User 2: Me too! They''re my favorite team.
+
+    User 1: What are some of your favorite bands?
+
+    User 2: I like Rise Against, Twenty One Pilots, and Imagine Dragons.
+
+    User 1: Nice! I like Rise Against too.
+
+    User 2: What do you like about them?
+
+    User 1: I like their music and their lyrics. They''re really passionate about what they do.
+
+    User 2: I agree. They''re one of my favorite bands.
+
+    User 1: So, what do you want to do when you''re older?
+
+    User 2: I''m not sure yet. I''m thinking about going to medical school.
+
+    User 1: That''s a great goal. I''m sure you''ll be a great doctor.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies with my friends.
+
+    User 1: That sounds like fun. I''m going to a concert with my friends this weekend.
+
+    User 2: Nice! What concert are you going to?
+
+    User 1: I''m going to see Rise Against.
+
+    User 2: That''s awesome! I''m jealous.
+
+    User 1: You should come with us!
+
+    User 2: I wish I could, but I have to work.
+
+    User 1: Oh, that''s too bad. Maybe next time.
+
+    User 2: Yeah, maybe.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

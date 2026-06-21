@@ -1,0 +1,17 @@
+id: '00037401'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 37401
+persona_description: A patient with a history of hypothalamic dysfunction who is seeking information about the symptoms and causes of hypothalamic disease. They are likely to have a background in medicine
+  or a related field and are interested in understanding the impact of hypothalamic dysfunction on their health.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hypothalamic disease
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

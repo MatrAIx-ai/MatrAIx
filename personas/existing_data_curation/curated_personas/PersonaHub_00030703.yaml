@@ -1,0 +1,19 @@
+id: '00030703'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30703
+persona_description: A robot tasked with performing object recognition and localization tasks on a table, using a reference frame specified on the table to determine the pose of each object. The robot must
+  produce the result consisting of the object class name, instance name, and 2D pose of the object w.r.t. the reference system specified on the table. The robot must communicate with the referee box using
+  BeaconSignals and BenchmarkState messages, and log sensor data to be sent online. The robot is expected to perform the task until the state changes to FINISHED, and save relevant data when executing the
+  benchmarks.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Robotics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

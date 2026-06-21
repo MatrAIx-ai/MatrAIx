@@ -1,0 +1,18 @@
+id: 00005183
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5183
+persona_description: A scientist who specializes in the field of pharmacology and drug discovery. They are particularly interested in understanding how GPCRs communicate the message from outside the cell
+  to the inside and how different ligands set off distinct biochemical pathways. They are currently using a physics-based computational method to predict the mechanism of cell signaling and developing biased
+  drugs that target specific allosteric communication pathways, minimizing side effects. They have published their findings in prestigious scientific journals and are recognized as a leader in their field.
+expertise:
+  general_domain_top1pct: pharmacology
+  specific_domain_top1pct: GPCR pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

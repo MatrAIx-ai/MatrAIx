@@ -1,0 +1,18 @@
+id: '00006157'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6157
+persona_description: A trader who is interested in predicting the movement of the market and making informed decisions based on the neural network's predictions. This trader is particularly interested in
+  the Optimal Buy/Sell and Optimal Buy/Sell/Hold actual outputs, which provide a more robust interpretation of the change in price. The trader is also interested in using the Optimal Change actual outputs
+  to avoid premature exit signals that often occur when predicting the change.
+expertise:
+  general_domain_top1pct: Finance
+  specific_domain_top1pct: Financial Machine Learning
+  general_domain_top01pct: None
+  specific_domain_top01pct: Neural Network-based Financial Forecasting
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

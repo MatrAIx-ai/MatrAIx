@@ -1,0 +1,20 @@
+id: 00062118
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 62118
+persona_description: A device driver specialist who is knowledgeable about the hardware-specific aspects of operating various devices such as hard disk drives, tape drives, and other physical devices connected
+  to a controller card. They are responsible for designing and implementing the target drivers that control the behavior of these devices and handle the details of operating them. These drivers are responsible
+  for programming the controller to perform the requested actions and are the low-level interface between the device and the host system. The target drivers are similar in architecture but differ in their
+  device-specific aspects, which require knowledge of the specific device class to be correctly supported. The persona is likely to have experience with designing and implementing target drivers for different
+  device types, and may be involved in developing new target drivers to support new device classes in the future.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Device Driver Development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

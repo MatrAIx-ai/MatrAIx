@@ -1,0 +1,78 @@
+id: 00008606
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8606
+data:
+  user 1 personas: 'I had to drop out of college to help with my grandparents.
+
+    I cannot stand salads.
+
+    My mother stayed at home all day to raise me and my siblings.
+
+    My father used to be an insurance salesman.
+
+    I graduated valedictorian of my high school class.'
+  user 2 personas: 'My favorite type of music is country.
+
+    I love to travel with my family.
+
+    My dog is a collie.
+
+    I love to snack between meals.
+
+    I have blue eyes and curly brown hair.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I love to travel with my family. We''ve been to a lot of great places, like Europe, Australia, and the Caribbean.
+
+    User 1: That sounds amazing! I''ve always wanted to travel more, but I''ve never had the chance.
+
+    User 2: You should definitely go! It''s so much fun to see new places and experience different cultures.
+
+    User 1: I know, I know. I''ll try to plan a trip soon.
+
+    User 2: Good! I''m sure you''ll have a great time.
+
+    User 1: Thanks.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to listen to country music. My favorite artist is Garth Brooks.
+
+    User 2: Oh, I love Garth Brooks too! He''s so talented.
+
+    User 1: I know, right? He''s one of my all-time favorite artists.
+
+    User 2: Me too.
+
+    User 1: What kind of dog do you have?
+
+    User 2: I have a collie named Bailey. She''s the sweetest dog ever.
+
+    User 1: Aww, I love collies! They''re so cute.
+
+    User 2: They are. Bailey is my best friend.
+
+    User 1: I''m glad you have such a great dog.
+
+    User 2: Me too. She''s the best.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to snack between meals. I''m always hungry!
+
+    User 1: Me too! I''m a big snacker.
+
+    User 2: That''s good to know. We can be snack buddies.
+
+    User 1: Sure! I''m always down for a snack.
+
+    User 2: Great! I''m glad we''re friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

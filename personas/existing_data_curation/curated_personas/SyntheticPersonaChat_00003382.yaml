@@ -1,0 +1,53 @@
+id: 00003382
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3382
+data:
+  user 1 personas: 'I have a masters degree.
+
+    My favorite color is purple.
+
+    I love to swim , and began at a young age.
+
+    I am a female.'
+  user 2 personas: 'I am a hippie.
+
+    I drive a large , blue van.
+
+    I have two tattoos.
+
+    I love to recycle.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi, I''m [username]. What are you interested in?
+
+    User 1: I''m interested in many things, but I''m especially passionate about swimming. I started swimming at a young age and have been swimming ever since. I love the feeling of the water on my skin
+    and the freedom of being able to move through the water. I also love the challenge of swimming long distances and the sense of accomplishment I feel when I reach my goal.
+
+    User 2: That''s awesome! I''ve never been a good swimmer. I''m more of a hippie. I love to recycle and I drive a large, blue van. I also have two tattoos.
+
+    User 1: That''s cool! I''m not a hippie, but I do love to recycle. And I''ve always thought it would be cool to get a tattoo.
+
+    User 2: You should! It''s a lot of fun. And it''s a great way to express yourself.
+
+    User 1: I know, I know. I''ve been thinking about it for a while. I just haven''t decided what I want to get.
+
+    User 2: Well, you have plenty of time to figure it out. I''m sure you''ll come up with something great.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to read, go for walks, and spend time with my friends and family. I also love to travel. I''ve been to a few different countries, but I''d love to travel more.
+
+    User 2: That''s awesome! I love to travel too. I''ve been to a few different countries as well, and I''d love to travel more too.
+
+    User 1: Maybe we should plan a trip together sometime.
+
+    User 2: That would be fun! I''d love to explore new places with you.
+
+    User 1: Me too! We could start planning our trip soon'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00001696
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1696
+data:
+  user 1 personas: 'I love to recycle.
+
+    I drive a large , blue van.
+
+    I am a hippie.
+
+    I have curly , red hair.
+
+    I have two tattoos.'
+  user 2 personas: 'I have a pet husky.
+
+    I like to play nintendo.
+
+    I live in the great white north.
+
+    I love to eat fish.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I like to play Nintendo, go camping, and spend time with my husky.
+
+    User 1: That sounds like a lot of fun! I love Nintendo too. What''s your favorite game?
+
+    User 2: I love Animal Crossing!
+
+    User 1: Me too! It''s so relaxing and cute.
+
+    User 2: I know, right? It''s the perfect game to play when you want to de-stress.
+
+    User 1: Yeah, it is. Do you have any other hobbies?
+
+    User 2: I like to go camping and hiking. I also like to spend time with my husky.
+
+    User 1: That sounds like a lot of fun! I love camping and hiking too. What''s your favorite place to go camping?
+
+    User 2: I like to go camping in the mountains. I love the fresh air and the beautiful scenery.
+
+    User 1: Me too! I love the feeling of being surrounded by nature.
+
+    User 2: It''s the best feeling in the world.
+
+    User 1: I know, right? I love being able to relax and enjoy the outdoors.
+
+    User 2: Me too! I''m glad we have similar interests.
+
+    User 1: Me too! I''m always looking for new people to connect with who share my interests.
+
+    User 2: Me too! It''s always nice to find someone who you can relate to.
+
+    User 1: I know, right? It''s like finding a long-lost friend.
+
+    User 2: Exactly! I''m glad we met.
+
+    User 1: Me too! I hope we can talk again soon.
+
+    User 2: Me too! I''m always up for a good conversation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

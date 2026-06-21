@@ -1,0 +1,72 @@
+id: '00001665'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1665
+data:
+  user 1 personas: 'I live in a house.
+
+    My dad works at the mill and my mom is a teacher.
+
+    I am ten years old.
+
+    I love dogs and cats.
+
+    I have a lot of friends.'
+  user 2 personas: 'I like to go to the park.
+
+    I work at a museum.
+
+    I am stuck in a wheel chair.
+
+    I do not have a lot of friends.
+
+    I read a lot.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just reading a book.
+
+    User 1: Oh, what book are you reading?
+
+    User 2: It''s a biography of Albert Einstein.
+
+    User 1: That sounds interesting! I''ve always been fascinated by him.
+
+    User 2: Yeah, he''s a fascinating person.
+
+    User 1: What do you like most about him?
+
+    User 2: I think his intelligence and his creativity are just amazing.
+
+    User 1: I agree. He was a true genius.
+
+    User 2: Do you have any plans for the weekend?
+
+    User 1: I''m going to the park with my friends.
+
+    User 2: That sounds like fun! I wish I could go with you.
+
+    User 1: You can! We''d love to have you.
+
+    User 2: I don''t know. I don''t really have any friends.
+
+    User 1: That''s okay. We''ll be your friends.
+
+    User 2: Thanks. That''s really nice of you.
+
+    User 1: No problem. We''re always looking for new friends.
+
+    User 2: Well, I''m glad I met you.
+
+    User 1: Me too!
+
+    User 2: I''m sure we''ll be good friends.
+
+    User 1: I''m sure we will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

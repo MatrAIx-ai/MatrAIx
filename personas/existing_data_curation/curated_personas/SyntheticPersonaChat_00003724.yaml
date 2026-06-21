@@ -1,0 +1,60 @@
+id: '00003724'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3724
+data:
+  user 1 personas: 'I listen to classic rock.
+
+    I watch basketball.
+
+    I work at a smoothie shop.
+
+    I go to a local college.'
+  user 2 personas: 'I want to go back to school.
+
+    I like to watch shows on netflix.
+
+    I want to learn self defense.
+
+    I want to move to las vegas.
+
+    My sister is my best friend.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to watch shows on Netflix, play video games, and go out with my friends.
+
+    User 1: That sounds fun! I like to watch shows on Netflix too, and I play video games sometimes.
+
+    User 2: What shows do you like to watch on Netflix?
+
+    User 1: I like to watch a lot of different shows, but my favorites are The Witcher, Ozark, and The Umbrella Academy.
+
+    User 2: I''ve heard good things about The Witcher, but I haven''t seen it yet. I''ll have to check it out.
+
+    User 1: It''s really good! The characters are all really well-developed and the story is really interesting.
+
+    User 2: I''m excited to check it out! What are some of your favorite video games?
+
+    User 1: I like to play a lot of different video games, but my favorites are The Legend of Zelda, The Elder Scrolls, and Minecraft.
+
+    User 2: I love The Legend of Zelda! I''ve played every single one.
+
+    User 1: Me too! I''m so excited for the new one coming out this year.
+
+    User 2: Me too! It looks so good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go out with my friends, go to the movies, and read.
+
+    User 1: That sounds like a lot of fun! I like to do those things too.
+
+    User 2: I''m glad! It''s always nice to find someone who has similar interests.
+
+    User 1: Me too! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

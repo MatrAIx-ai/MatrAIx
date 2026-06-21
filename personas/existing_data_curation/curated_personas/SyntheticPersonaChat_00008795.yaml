@@ -1,0 +1,82 @@
+id: 00008795
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8795
+data:
+  user 1 personas: 'I have a condition that prevents me from going to high altitudes.
+
+    Spiders scare the life out of me.
+
+    I pray to god for my family every morning.
+
+    My mother raised me by herself while working two jobs.
+
+    I always put my left sock on first.'
+  user 2 personas: 'I am an engineer.
+
+    I decided to quick my job and travel for a couple of months.
+
+    I love to dance salsa.
+
+    I am currently working on a project that involves bitcoins.'
+  Best Generated Conversation: 'User 1: Hi! I''m (User 1''s name). What''s your name?
+
+    User 2: Hi, I''m (User 2''s name). What do you do for work?
+
+    User 1: I''m an engineer. What about you?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! What do you like to do for fun?
+
+    User 2: I like to dance salsa, I recently quit my job and have been traveling for a couple of months and I also love working on my project involving bitcoins.
+
+    User 1: That''s really cool! I''ve always wanted to learn how to dance salsa.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just have to do that. So, how long have you been traveling?
+
+    User 2: I''ve been traveling for about a month now.
+
+    User 1: Oh, wow! That''s exciting. Where have you been so far?
+
+    User 2: I''ve been to Mexico, Guatemala, and Costa Rica.
+
+    User 1: Oh, cool! I''ve always wanted to go to Mexico.
+
+    User 2: It''s beautiful! You should definitely go one day.
+
+    User 1: I will! So, what''s your project involving bitcoins?
+
+    User 2: I''m working on a decentralized marketplace where people can buy and sell goods and services using bitcoins.
+
+    User 1: Oh, that''s really cool! I''ve heard a lot about bitcoins, but I don''t really understand how they work.
+
+    User 2: They''re a digital currency that is not controlled by any government or central bank. They''re completely decentralized, which means that there is no single entity that can control them.
+
+    User 1: Oh, that''s interesting. So, how do they work?
+
+    User 2: They''re based on a blockchain, which is a distributed ledger that records all transactions.
+
+    User 1: Oh, I see. So, it''s like a big database.
+
+    User 2: Exactly. And the blockchain is secured by cryptography, which means that it''s very difficult to hack.
+
+    User 1: That''s really cool! So, what are the benefits of using bitcoins?
+
+    User 2: There are a few benefits. First, they''re not controlled by any government or central bank, so there is no risk of inflation.
+
+    User 2: Second, they''re very secure, thanks to cryptography.
+
+    User 2: Third, they''re fast and easy to use.
+
+    User 2: Fourth, they''re global, so you can use them to buy and sell goods and services anywhere in the world.
+
+    User 1: Those are all great benefits! I think I might have to learn more about bitcoins.
+
+    User 2: You definitely should! They''re a very interesting technology.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00013311'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13311
+persona_description: A scientist who is conducting a long-term experiment to understand how microbial communities are changing in response to soil warming at the Harvard Forest in Petersham, Massachusetts.
+  Their goal is to isolate bacteria directly from the environment to understand how microbial communities are changing in response to soil warming. The team harvested microbial cells from soil they collected
+  and suspended them in a mild detergent along with a dye that binds to DNA. They passed that sample through a machine that can sort out individual cells. The team generated sequence data from more than
+  2,000 cells, revealing sixteen new giant viruses.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: microbiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

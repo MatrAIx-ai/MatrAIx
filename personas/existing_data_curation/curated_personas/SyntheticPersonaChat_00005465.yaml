@@ -1,0 +1,59 @@
+id: '00005465'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5465
+data:
+  user 1 personas: 'My right foot only has 3 toes.
+
+    I eat 6 eggs every morning for breakfast.
+
+    I am a zookeeper.
+
+    I love to read crime novels.
+
+    My favorite animal is the panda.'
+  user 2 personas: 'I eat well.
+
+    I am in college.
+
+    I play football.
+
+    I exercise.
+
+    I am very social.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: I''m a zookeeper.
+
+    User 2: Oh, that''s so cool! I love animals.
+
+    User 1: Me too! My favorite animal is the panda.
+
+    User 2: Pandas are so cute! I''ve always wanted to see one in real life.
+
+    User 1: They''re amazing animals. I''m so lucky to get to work with them every day.
+
+    User 2: That''s awesome! I''m sure you have a lot of interesting stories.
+
+    User 1: I do! I could talk about pandas all day.
+
+    User 2: I could listen all day. They''re so fascinating.
+
+    User 1: Well, one of my favorite stories is about the time I was working with a panda named Mei. Mei was a very shy panda, and she would often hide from us. But one day, I was able to get her to come
+    out and play with me. I was so happy!
+
+    User 2: That''s a great story! I''m so glad you were able to build a bond with Mei.
+
+    User 1: Me too. She''s a very special panda.
+
+    User 2: I''m sure she is. I''m glad she has a zookeeper like you who cares about her so much.
+
+    User 1: Thank you! I''m glad I could share my story with you.
+
+    User 2: Me too! It was really interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

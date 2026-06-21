@@ -1,0 +1,76 @@
+id: 00007288
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7288
+data:
+  user 1 personas: 'Formal situations make me uncomfortable.
+
+    I enjoy hitchhiking.
+
+    I haven t spoken to my family in years.
+
+    I have over 4000 friends on facebook.'
+  user 2 personas: 'I have visited 12 national parks in the us.
+
+    I live in vermont.
+
+    I also like to mountain bike.
+
+    I love to hike.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1].
+
+    User 2: Hi, I''m [user 2]. I''m from Vermont.
+
+    User 1: Cool, I''ve never been to Vermont.
+
+    User 2: You should come visit! There''s a lot to see and do.
+
+    User 1: What do you like to do there?
+
+    User 2: I like to hike, mountain bike, and camp.
+
+    User 1: Sounds like fun! I like to do all those things too.
+
+    User 2: Awesome! We should go on an adventure together sometime.
+
+    User 1: That would be great! I''m always looking for new adventures.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: Oh, I love to read too! What are some of your favorite books?
+
+    User 1: I like all kinds of books, but I''m really into fantasy and science fiction.
+
+    User 2: Me too! I''m a big fan of Brandon Sanderson.
+
+    User 1: Me too! He''s one of my favorite authors.
+
+    User 2: So, what are some of your favorite video games?
+
+    User 1: I like all kinds of video games, but I''m really into RPGs.
+
+    User 2: Me too! I love RPGs. What are some of your favorites?
+
+    User 1: I like The Elder Scrolls, The Witcher, and Fallout.
+
+    User 2: Me too! I love those games.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a software engineer too.
+
+    User 2: That''s awesome! What kind of software do you work on?
+
+    User 1: I work on embedded systems.
+
+    User 2: Oh, that''s cool! I''ve always wanted to learn more about embedded systems.
+
+    User 1: It''s a lot of fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,48 @@
+id: '00001230'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1230
+data:
+  user 1 personas: 'I am an old soul.
+
+    I tend to work myself up.
+
+    I am passionate about a lot of things.
+
+    I just want my voice to be heard.'
+  user 2 personas: 'I m a shy person but i love to sing.
+
+    My shyness made me panick and i didn t show up.
+
+    I was accepted to participate.
+
+    Until recently i ve never been able to sing in front of anyone.
+
+    Anyways i decided to give it a try and participaed in an audition for a talent show.'
+  Best Generated Conversation: 'User 1: I am very passionate about a lot of things. I just want my voice to be heard.
+
+    User 2: I am a shy person but i love to sing. Until recently i ve never been able to sing in front of anyone.
+
+    User 1: I think it''s great that you are trying new things. I know it can be scary to put yourself out there, but it''s worth it.
+
+    User 2: Thank you! I was very nervous but I decided to give it a try and participated in an audition for a talent show.
+
+    User 1: That''s awesome! I''m so glad you did.
+
+    User 2: Unfortunately I didn''t make it to the next round, but I''m still proud of myself for trying.
+
+    User 1: You should be proud of yourself! You took a risk and you went for it. That''s all that matters.
+
+    User 2: Thank you! I''m glad you think so.
+
+    User 1: I think it''s very brave to put yourself out there and try new things. It''s something I admire.
+
+    User 2: Thank you! I''m glad you think so. I''m trying to be more brave and take more risks.
+
+    User 1: I think that''s great! I''m sure you''ll go far.
+
+    User 2: Thank you! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

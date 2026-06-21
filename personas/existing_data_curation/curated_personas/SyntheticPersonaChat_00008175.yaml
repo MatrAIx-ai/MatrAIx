@@ -1,0 +1,80 @@
+id: 00008175
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8175
+data:
+  user 1 personas: 'I still like unicorns even though i am an adult.
+
+    I am excellent at playing pool.
+
+    I would love to visit the pyramids.
+
+    I want to write a book before i die.'
+  user 2 personas: 'My favorite seafood in lobster.
+
+    I started at google on an internship.
+
+    I live in seattle.
+
+    I work at google.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How are you doing today?
+
+    User 1: I''m doing well, thanks! How about you?
+
+    User 2: I''m doing great! I just got back from a trip to Seattle.
+
+    User 1: Oh, that sounds fun! Did you enjoy it?
+
+    User 2: I loved it! I went to visit my friend who works at Google.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit Seattle.
+
+    User 2: You should definitely go! It''s a beautiful city.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I like to play pool, read, and write.
+
+    User 2: Oh, I love pool! I''m not very good at it, but I have a lot of fun playing.
+
+    User 1: I''m pretty good at pool. I''ve been playing for a while.
+
+    User 2: That''s awesome! We should play sometime.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Sounds good!
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read a variety of things, but I''m really into fantasy and sci-fi.
+
+    User 2: Oh, cool! I love sci-fi. What are some of your favorite books?
+
+    User 1: I love the Ender''s Game series by Orson Scott Card and the Dune series by Frank Herbert.
+
+    User 2: I''ve read Ender''s Game, but I haven''t read Dune yet. I''ve heard good things about it.
+
+    User 1: It''s a great series! You should definitely check it out.
+
+    User 2: I will! So, what do you like to write?
+
+    User 1: I write short stories and poetry. I''m working on a novel, but I''m not sure if I''ll ever finish it.
+
+    User 2: That''s awesome! I''ve always wanted to try writing, but I''m not sure where to start.
+
+    User 1: You should definitely try it! There are a lot of great resources online and in libraries to help you get started.
+
+    User 2: I will! Thanks for the encouragement.
+
+    User 1: No problem! I''m always happy to talk about writing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

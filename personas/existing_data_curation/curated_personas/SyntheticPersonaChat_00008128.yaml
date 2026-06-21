@@ -1,0 +1,72 @@
+id: 00008128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8128
+data:
+  user 1 personas: 'I am enrolled in several college credit courses.
+
+    My parent s immigrated from europe before i was born.
+
+    While both my parents have thick european accents , i do not.
+
+    I drive a motorcycle instead of a car.'
+  user 2 personas: 'I prefer texting over phone calls.
+
+    I love hockey.
+
+    My mother looks after my grandmother.
+
+    I sleep 8 hours.
+
+    I use the computer all day.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thanks! How are you doing?
+
+    User 1: I''m doing good too. I''m just getting ready for my classes today.
+
+    User 2: Oh, that sounds fun! What are you studying?
+
+    User 1: I''m studying engineering.
+
+    User 2: Oh, that''s cool! I''ve always been interested in engineering.
+
+    User 1: It''s really interesting! I''m learning a lot.
+
+    User 2: That''s great! What do you like most about engineering?
+
+    User 1: I like the problem solving aspect of it. I also like the fact that it''s always changing and evolving.
+
+    User 2: That makes sense. I think that''s why I''m so interested in it.
+
+    User 1: Yeah, it''s a really great field.
+
+    User 2: So, what are you planning to do after you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going into research or teaching.
+
+    User 2: Oh, that''s cool! I''m sure you''ll do great in whatever you do.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I''m thinking about going to a hockey game.
+
+    User 2: Oh, that sounds fun! I love hockey!
+
+    User 1: Yeah, me too! I''m a big fan of the [insert hockey team].
+
+    User 2: Oh, me too! They''re my favorite team.
+
+    User 1: That''s awesome! Maybe we can go to a game together sometime.
+
+    User 2: That would be great! I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

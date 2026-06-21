@@ -1,0 +1,78 @@
+id: '00004354'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4354
+data:
+  user 1 personas: 'I have long hair for a boy.
+
+    I like lizards.
+
+    I draw during classes instead of taking notes.
+
+    I do not have many friends.'
+  user 2 personas: 'I have four siblings.
+
+    My father is a school teacher , he teaches middle school.
+
+    My youngest sister is in first grade.
+
+    I am 5 3 and am the shortest person in my family.
+
+    I am the oldest sibling.'
+  Best Generated Conversation: 'User 1: Hey, I''m new here.
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name].
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and hang out with my friends.
+
+    User 1: That sounds fun. I like to draw and play video games.
+
+    User 2: That''s cool. I''ve always wanted to learn how to draw.
+
+    User 1: It''s not too hard. You just have to practice.
+
+    User 2: Maybe I''ll try it sometime.
+
+    User 1: You should. It''s a lot of fun.
+
+    User 2: What do you like to draw?
+
+    User 1: I like to draw animals, especially lizards.
+
+    User 2: Oh, that''s cool. I''ve always been afraid of lizards.
+
+    User 1: There''s nothing to be afraid of. They''re harmless.
+
+    User 2: I know, but they just look so scary.
+
+    User 1: They''re not that scary. They''re just little lizards.
+
+    User 2: I guess you''re right.
+
+    User 1: So, what''s your favorite video game?
+
+    User 2: I like to play Call of Duty.
+
+    User 1: I''ve never played that game.
+
+    User 2: It''s a lot of fun. It''s a first-person shooter game.
+
+    User 1: Oh, I''m not really into shooter games.
+
+    User 2: That''s okay. There are lots of other fun games out there.
+
+    User 1: Yeah, I know. I just haven''t found one that I really like yet.
+
+    User 2: Well, if you ever find one, let me know. I''d be happy to play with you.
+
+    User 1: Thanks, I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

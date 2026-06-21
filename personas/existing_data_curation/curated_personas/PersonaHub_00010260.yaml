@@ -1,0 +1,16 @@
+id: '00010260'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10260
+persona_description: A doctor who specializes in medical assessment and trauma detection, particularly using the 2AI Lab's special glasses that can read different emotions and detect trauma.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: trauma detection
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,86 @@
+id: '00004463'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4463
+data:
+  user 1 personas: 'I sing in the church choir.
+
+    I grew up in the trailer park.
+
+    I love hot wings.
+
+    I m a truck driver in the south.
+
+    I have three kids.'
+  user 2 personas: 'I started at google on an internship.
+
+    I live in seattle.
+
+    I am a software engineer.
+
+    I work at google.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: My name is [user 1].
+
+    User 2: Nice to meet you, [user 1]. My name is [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer at Google.
+
+    User 1: Oh, that''s cool! I''m a truck driver.
+
+    User 2: Wow, that''s a lot of driving.
+
+    User 1: Yeah, it can be. But it''s also a lot of fun.
+
+    User 2: I bet it is. Where do you drive to?
+
+    User 1: I drive all over the country. I''ve been to some really cool places.
+
+    User 2: That''s awesome! I''ve never been out of the country.
+
+    User 1: You should definitely go sometime. It''s a great experience.
+
+    User 2: I will! Thanks for the advice.
+
+    User 1: No problem. So, what do you like to do for fun?
+
+    User 2: I like to go hiking, biking, and kayaking. I also like to play video games and watch movies.
+
+    User 1: Oh, I like to do all of those things too!
+
+    User 2: That''s awesome! We should do something together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Sounds good!
+
+    User 2: So, what do you like about your job?
+
+    User 1: I like the freedom to be on the road and explore new places. I also like the challenge of driving long distances and making sure my deliveries are on time.
+
+    User 2: That sounds like a lot of fun. I''m glad you like it.
+
+    User 1: Thanks! I do.
+
+    User 2: So, what''s your favorite thing about Seattle?
+
+    User 1: I love the weather. It''s so much nicer than where I grew up. I also love the food and the people.
+
+    User 2: That sounds great! I''ve always wanted to visit Seattle.
+
+    User 1: You should definitely come! It''s a beautiful city.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

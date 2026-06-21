@@ -1,0 +1,21 @@
+id: 00024668
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24668
+persona_description: A nuclear power plant operator who is responsible for ensuring the safe operation and maintenance of nuclear power plants in the United States. This persona is aware of the regulatory
+  requirements and safety standards set by the Nuclear Regulatory Commission (NRC) and is required to renew their license every ten years. They are responsible for identifying and implementing measures
+  to address age-related issues, such as the need for additional monitoring equipment or more frequent inspections, and ensuring that the plants are designed and built to withstand the maximum ground motion
+  expected for their particular locations. They must also take into account the most severe natural phenomena historically reported for the site and surrounding area, as well as the importance of the safety
+  functions to limit those effects or to contain any damage that occurs. This persona is also responsible for verifying each plant's capability to manage major challenges such as aircraft impacts, losses
+  of large areas of the plant due to natural events, fires or explosions, to manage a total loss of off-site power, and to mitigate flooding and the impact of floods on systems inside and outside the plant.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: nuclear engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

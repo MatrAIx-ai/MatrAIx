@@ -1,0 +1,56 @@
+id: '00005763'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5763
+data:
+  user 1 personas: 'I enjoy watching mystery movies.
+
+    I like to run so that i can clear my head.
+
+    I am an author.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I like to drink green tea.'
+  user 2 personas: 'I am a grandparent at 44.
+
+    I drive more than an hour each way to work.
+
+    I love dragons.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.
+
+    I prefer the night to the day , but i love sunshine.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey, how''s it going?
+
+    User 1: Pretty good! Just finished writing a new story.
+
+    User 2: Oh, that''s awesome! What''s it about?
+
+    User 1: It''s a mystery about a dragon who''s been stealing treasure from the local village.
+
+    User 2: That sounds really interesting! I love mystery stories.
+
+    User 1: Thanks! I''m glad you like it. I like to write stories while I''m sitting in my back yard.
+
+    User 2: That sounds like a great place to write. I love the outdoors.
+
+    User 1: Me too! I love to take walks in the woods, too.
+
+    User 2: That''s awesome! I like to do that, too. Do you like to read mystery stories?
+
+    User 1: Yeah, I love them! I think they''re so exciting.
+
+    User 2: Me too! I love the feeling of trying to figure out who did it.
+
+    User 1: That''s my favorite part, too!
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too! It''s always nice to meet someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

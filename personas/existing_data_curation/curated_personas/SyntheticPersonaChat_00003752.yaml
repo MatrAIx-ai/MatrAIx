@@ -1,0 +1,66 @@
+id: '00003752'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3752
+data:
+  user 1 personas: 'I only wear tennis shoes.
+
+    My favorite author is jane austen.
+
+    I eat a lot of fish.
+
+    I own a boat.
+
+    I live near the ocean.'
+  user 2 personas: 'I clean houses for extra money.
+
+    I like to build furniture.
+
+    I have been held hostage in a store robbery situation.
+
+    I have bowled a 300 game twice in my life.
+
+    My father is a retired police officer.'
+  Best Generated Conversation: 'User 1: I love Jane Austen! She''s one of my favorite authors.
+
+    User 2: Me too! I love her sense of humor and her realistic characters.
+
+    User 1: What''s your favorite book by her?
+
+    User 2: It''s hard to choose, but I think I''d have to say Pride and Prejudice.
+
+    User 1: That''s a great book! I love the romance and the humor.
+
+    User 2: Me too! It''s a classic for a reason.
+
+    User 1: I know! It''s so well written.
+
+    User 2: What''s your favorite kind of fish?
+
+    User 1: I love salmon! It''s so good.
+
+    User 2: Me too! I love it grilled.
+
+    User 1: Me too! It''s so delicious.
+
+    User 2: Do you live near the ocean?
+
+    User 1: Yes, I do! I live in Maine.
+
+    User 2: Oh, that must be nice! I''ve always wanted to live near the ocean.
+
+    User 1: It is! It''s so beautiful.
+
+    User 2: I bet!
+
+    User 1: Yeah, it''s really nice.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too! Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

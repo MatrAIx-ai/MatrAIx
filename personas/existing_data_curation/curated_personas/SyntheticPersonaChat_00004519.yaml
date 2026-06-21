@@ -1,0 +1,58 @@
+id: 00004519
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4519
+data:
+  user 1 personas: 'My family hates my fiancé.
+
+    I am getting married next week.
+
+    My dog is the ring bearer.
+
+    We will be traveling to niagra falls for our honeymoon.
+
+    We are getting married in a park.'
+  user 2 personas: 'I am former military.
+
+    I exercise 4 times a week.
+
+    I drive a truck for a living.
+
+    My favorite sport is football.'
+  Best Generated Conversation: 'User 1: Hi! I''m getting married next week!
+
+    User 2: Congrats! Where are you getting married?
+
+    User 1: In a park. My dog is the ring bearer.
+
+    User 2: A park? That''s unique! How did you come up with that idea?
+
+    User 1: We love nature and wanted to have a more intimate ceremony.
+
+    User 2: That''s awesome! Where are you honeymooning?
+
+    User 1: We''re going to Niagara Falls!
+
+    User 2: That''s so romantic! I''ve always wanted to go to Niagara Falls.
+
+    User 1: You should! It''s beautiful.
+
+    User 2: I will! Are you excited about your wedding?
+
+    User 1: I am! I can''t wait to marry the love of my life.
+
+    User 2: That''s great! I''m sure it will be a beautiful day.
+
+    User 1: Thanks! I hope so.
+
+    User 2: What are you most looking forward to about the wedding?
+
+    User 1: I''m most looking forward to exchanging vows with my fiancé and spending the rest of our lives together.
+
+    User 2: That''s a beautiful sentiment. I''m sure it will be a day to remember.
+
+    User 1: Thank you! I''m excited to share it with my family and friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

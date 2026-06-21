@@ -1,0 +1,70 @@
+id: '00003006'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3006
+data:
+  user 1 personas: 'I am fifteen years old.
+
+    I live in america in the state of florida.
+
+    I have braces.
+
+    My family has three dogs and my dog is named maddie.'
+  user 2 personas: 'I really enjoy reading the news.
+
+    I wish i could play the stock market well.
+
+    I try to find easy ways to make money.
+
+    I love new technology.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m fifteen years old. I live in America in the state of Florida.
+
+    User 2: That''s cool! I''m also from America. What part of Florida do you live in?
+
+    User 1: I live in Orlando. What part of America are you from?
+
+    User 2: I''m from California. I love it here. The weather is always nice and there''s always something to do.
+
+    User 1: That sounds nice! I''ve always wanted to visit California.
+
+    User 2: You should! It''s a great place.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read the news. I also like to try new things, like new foods and new technology.
+
+    User 1: I love to read too! I''m always looking for new books to read.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like mystery and thriller novels.
+
+    User 2: Me too! I love the suspense and the thrill of the chase.
+
+    User 1: What''s your favorite mystery or thriller novel?
+
+    User 2: That''s a tough question! I have so many favorites. But one of my favorites is The Girl on the Train by Paula Hawkins.
+
+    User 1: I love that book! It was so suspenseful and twisty.
+
+    User 2: Me too! I couldn''t put it down.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to try new foods. I''m always looking for new restaurants to try.
+
+    User 1: Me too! I love trying new foods. I''m always looking for new flavors.
+
+    User 2: I''m glad to hear that! I''m always looking for people to go to new restaurants with.
+
+    User 1: Me too! We should go to a new restaurant together sometime.
+
+    User 2: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

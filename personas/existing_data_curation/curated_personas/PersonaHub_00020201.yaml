@@ -1,0 +1,19 @@
+id: '00020201'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20201
+persona_description: A medical professional with a specialization in ear, nose, and throat (ENT) surgery, particularly focused on the treatment of conditions affecting the nasal cavity, sinuses, and eustachian
+  tubes. They have extensive knowledge and experience in diagnosing and managing conditions such as nasal congestion, sinusitis, and ear infections, as well as the use of surgical procedures to correct
+  anatomical defects and restore normal function. They are highly skilled in the use of endoscopic techniques and minimally invasive surgery to achieve optimal outcomes for their patients. They are dedicated
+  to advancing the field of ENT through research and education, and are committed to providing compassionate and effective care to all their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ENT surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

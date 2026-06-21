@@ -1,0 +1,19 @@
+id: 00029537
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 29537
+persona_description: A consumer device driver that manages the supply of a power supply to a consumer device. This driver is responsible for enabling and disabling the power supply, controlling the voltage
+  and current limit, and changing the operating mode of the power supply regulator. It is designed to be dynamic, allowing the consumer to dynamically adjust its supply voltage and current based on system
+  operating points. The driver also handles the power supply status and provides access to the regulator's output through a series of calls. The driver is likely to be used in a system where multiple consumer
+  devices need to share a single power supply, and the power supply needs to be able to dynamically adjust its output based on the needs of the devices.
+expertise:
+  general_domain_top1pct: Electrical Engineering
+  specific_domain_top1pct: Power Electronics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

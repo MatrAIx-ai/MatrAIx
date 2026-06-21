@@ -1,0 +1,88 @@
+id: '00004620'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4620
+data:
+  user 1 personas: 'I get good grades in school.
+
+    I am a 15 year old girl.
+
+    I like field hockey and soccer.
+
+    When i grow up , i want to be a veterinarian.
+
+    I love animals , especially dogs.'
+  user 2 personas: 'I am obese.
+
+    I live in alabama.
+
+    I have blonde hair.
+
+    I m 53 years old.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing, play golf, and watch football.
+
+    User 1: That''s cool. I like to play field hockey and soccer.
+
+    User 2: I''ve never played either of those sports.
+
+    User 1: They''re both really fun. You should try them sometime.
+
+    User 2: Maybe I will.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a mechanic.
+
+    User 1: Oh, that''s cool. I''m a student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying to be a veterinarian.
+
+    User 2: That''s awesome! I love animals.
+
+    User 1: Me too! I have a dog and a cat.
+
+    User 2: That''s great. I have a dog too.
+
+    User 1: What kind of dog?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Golden retrievers are the best!
+
+    User 2: I know, right?
+
+    User 1: What''s his name?
+
+    User 2: His name is Buddy.
+
+    User 1: That''s a great name.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do with your dog?
+
+    User 2: We go for walks, play fetch, and go to the park.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is.
+
+    User 1: I''m glad you have a dog.
+
+    User 2: Me too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

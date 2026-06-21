@@ -1,0 +1,69 @@
+id: '00005700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5700
+data:
+  user 1 personas: 'My name is jovannie and i m 19.
+
+    I enjoy hanging out with my imaginary friends as a hobby.
+
+    I love eating barbeque sandwiches and pizza puffs.
+
+    My favorite show is tom and jerry.'
+  user 2 personas: 'I work as an attorney.
+
+    I enjoy comedies.
+
+    I am bald with a thick beard.
+
+    I wear nice clothes.
+
+    I exercise often and have nice muscles.'
+  Best Generated Conversation: 'User 1: Hi there! I''m Jovannie.
+
+    User 2: Hi Jovannie! I''m (User 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an attorney.
+
+    User 1: Wow, that''s awesome! What''s your favorite part of the job?
+
+    User 2: I like being able to help people.
+
+    User 1: That''s great. What kind of law do you practice?
+
+    User 2: I mostly do civil litigation.
+
+    User 1: Oh, that''s interesting. What''s the most interesting case you''ve ever worked on?
+
+    User 2: I had a case where I was representing a client who was being sued by a large corporation. The corporation was trying to force my client to give up their intellectual property, and I was able
+    to get them to drop the case.
+
+    User 1: Wow, that''s amazing! You must be a really good lawyer.
+
+    User 2: Thanks. I try my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I enjoy watching comedies and exercising.
+
+    User 1: I love comedies too! What are some of your favorites?
+
+    User 2: I like The Office, Parks and Recreation, and The Good Place.
+
+    User 1: Oh, those are all great shows! I love them too.
+
+    User 2: Me too. I also like to exercise. I run and lift weights.
+
+    User 1: That''s cool. I used to run a lot, but I haven''t been in a while.
+
+    User 2: You should start running again! It''s a great way to stay in shape.
+
+    User 1: I know, I know. I''ll get back into it soon.
+
+    User 2: Good. I''ll hold you to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

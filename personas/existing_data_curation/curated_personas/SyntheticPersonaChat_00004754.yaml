@@ -1,0 +1,62 @@
+id: '00004754'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4754
+data:
+  user 1 personas: 'I train horses for a living.
+
+    I never sleep in.
+
+    I write in my spare time.
+
+    I hate my parents , but i love my job.'
+  user 2 personas: 'My favorite color is blue.
+
+    I am next in line to become queen of england.
+
+    I have five cats.
+
+    Madonna is my sister.
+
+    My husband is the ceo of taco bell.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I am next in line to become the Queen of England.
+
+    User 1: That''s amazing! I''ve always wanted to meet the Queen of England.
+
+    User 2: Well, now''s your chance!
+
+    User 1: I''m so excited! What''s it like being the next in line to the throne?
+
+    User 2: It''s very exciting, but also very stressful. I have a lot of responsibility to uphold.
+
+    User 1: I can imagine. Do you have any pets?
+
+    User 2: Yes, I have five cats.
+
+    User 1: That''s a lot of cats! What are their names?
+
+    User 2: Their names are Blue, Princess, Madonna, Taco Bell, and The Queen.
+
+    User 1: Those are great names! Do you have any hobbies?
+
+    User 2: I love to read and write.
+
+    User 1: Me too! What do you like to read?
+
+    User 2: I like to read biographies and historical fiction.
+
+    User 1: I love biographies too! I also like to read fantasy and sci-fi.
+
+    User 2: I''ve never been a big fan of fantasy or sci-fi, but I''m always open to trying new things.
+
+    User 1: You should! They''re great genres.
+
+    User 2: I''ll keep that in mind.
+
+    User 1: I''m sure you''ll love them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00041106'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41106
+persona_description: A scientist with expertise in climate monitoring and assessments, specifically focused on the National Climatic Data Center's development and analysis of the HCN version 2 temperature
+  dataset. The scientist is interested in understanding the quality of the data sources, the systematic bias adjustments, and the impact of these adjustments on U.S. temperature trends over the period 1895–2007.
+  They are also interested in the effects of changes to the time of observation and the widespread changeover from liquid-in-glass thermometers to the maximum–minimum temperature system (MMTS) on the HCN
+  version 2 temperature data.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Climate Science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

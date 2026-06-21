@@ -1,0 +1,74 @@
+id: 00002989
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2989
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    I have two adopted kids.
+
+    I love watching old movies.
+
+    I hope to visit quebec , canada someday.'
+  user 2 personas: 'I am taking courses online.
+
+    I am engaged.
+
+    I love rock music.
+
+    I like ice cream.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love listening to rock music, taking online courses, and eating ice cream.
+
+    User 1: Those are all great things! I love yoga, watching old movies, and I have two adopted kids.
+
+    User 2: That''s so cool! I''ve always wanted to try yoga.
+
+    User 1: You should! It''s a great way to relax and relieve stress.
+
+    User 2: I''ll have to look into it.
+
+    User 1: You should!
+
+    User 2: So, what kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I''m really into old movies.
+
+    User 2: Me too! I love the old classics like Casablanca and Gone with the Wind.
+
+    User 1: Those are great movies! I also love Rear Window and The Maltese Falcon.
+
+    User 2: I''ve never seen those movies, but I''ll have to check them out.
+
+    User 1: You should! They''re both really good.
+
+    User 2: Okay, I will.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go on hikes and explore the outdoors.
+
+    User 1: That sounds like fun! I''ve always wanted to go hiking, but I''ve never had anyone to go with.
+
+    User 2: We should go hiking together sometime.
+
+    User 1: That would be great!
+
+    User 2: I''m free next weekend.
+
+    User 1: Me too!
+
+    User 2: Okay, let''s go hiking next weekend.
+
+    User 1: Great! I''ll bring the snacks.
+
+    User 2: Sounds good! I''ll bring the water.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

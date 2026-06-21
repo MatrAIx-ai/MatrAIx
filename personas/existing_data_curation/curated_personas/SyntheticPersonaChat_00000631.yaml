@@ -1,0 +1,70 @@
+id: '00000631'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 631
+data:
+  user 1 personas: 'I enjoy nature.
+
+    I am in a lot of debt.
+
+    I fantasize about living in another country.
+
+    I am failing some of my classes.
+
+    I enjoy electronic music.'
+  user 2 personas: 'I am catholic.
+
+    I just started working as a librarian.
+
+    I am a vegetarian.
+
+    I don t know how to swim.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What are some of your interests?
+
+    User 2: I love nature, electronic music, and learning new things.
+
+    User 1: Those are all great interests! I love nature too. What kind of electronic music do you like?
+
+    User 2: I like a lot of different types of electronic music, but I especially like techno and house music.
+
+    User 1: I love techno music too! It''s so fun to dance to.
+
+    User 2: Me too! I love dancing to techno music.
+
+    User 1: So, what are some of your favorite things to do in nature?
+
+    User 2: I love hiking, camping, and fishing.
+
+    User 1: I love hiking too! I''ve never been camping or fishing, but I''ve always wanted to try.
+
+    User 2: You should! They''re both really fun.
+
+    User 1: I will! I''m sure I''d love them.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go hiking or go to a concert.
+
+    User 2: Oh, that sounds fun! I''m going to a concert with some friends.
+
+    User 1: Cool! What band are you going to see?
+
+    User 2: I''m going to see Marshmello.
+
+    User 1: Oh, I love Marshmello! I''m jealous!
+
+    User 2: You should come with us!
+
+    User 1: I''m not sure if I can. I have a lot of homework to do.
+
+    User 2: Oh, that''s too bad. Maybe next time.
+
+    User 1: Yeah, maybe next time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

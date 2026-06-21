@@ -1,0 +1,19 @@
+id: '00054201'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54201
+persona_description: An IT professional who is interested in security and network protocols. This persona is likely to be interested in ISO 7498-2, the security architecture of the OSI Reference Model,
+  and the Open Systems Interconnection Basic Reference Model. They may also be interested in the details of the security services that are provided by different layers of the OSI model, and the potential
+  threats that can attack the resources of an organization through exploiting vulnerabilities. This persona may also be interested in the managed security services that are outsourced to a service provider,
+  as well as the protocols and communication network used to communicate data in a standardized way.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

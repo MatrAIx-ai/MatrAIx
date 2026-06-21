@@ -1,0 +1,72 @@
+id: 00000908
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 908
+data:
+  user 1 personas: 'I am a vet tech.
+
+    I love to read.
+
+    My favorite author is stephen king.
+
+    I am a christian.'
+  user 2 personas: 'I am hoping to play.
+
+    I am 7 foot tall.
+
+    I am hoping to play basketball overseas.
+
+    I just graduated college.
+
+    I recently had knee surgery.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I just graduated college and I''m hoping to play basketball overseas.
+
+    User 1: That''s awesome! What position do you play?
+
+    User 2: I''m a center.
+
+    User 1: Oh, cool! I''m a vet tech. I love animals.
+
+    User 2: That''s awesome! I''ve always loved animals too.
+
+    User 1: What''s your favorite kind of animal?
+
+    User 2: I love dogs. They''re so loyal and loving.
+
+    User 1: Me too! I have a dog named Buddy. He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re the best.
+
+    User 1: They are! So, what''s your favorite book?
+
+    User 2: My favorite book is "The Shining" by Stephen King.
+
+    User 1: Oh, that''s one of my favorites too! I love Stephen King''s books.
+
+    User 2: Me too! He''s one of my favorite authors.
+
+    User 1: So, what''s your favorite part of Stephen King''s books?
+
+    User 2: I love the way he creates such a creepy and suspenseful atmosphere.
+
+    User 1: Me too! I always feel like I''m right there with the characters.
+
+    User 2: Yeah, his books are so immersive.
+
+    User 1: So, what are you doing after you graduate college?
+
+    User 2: I''m hoping to play basketball overseas.
+
+    User 1: That''s awesome! I hope you make it!
+
+    User 2: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

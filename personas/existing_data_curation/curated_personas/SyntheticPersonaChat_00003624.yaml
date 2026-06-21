@@ -1,0 +1,66 @@
+id: '00003624'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3624
+data:
+  user 1 personas: 'I did not finish college.
+
+    My favorite movie is the last of the mohicans.
+
+    My car is over 20 years old.
+
+    My dad was a preacher.'
+  user 2 personas: 'I am a musician.
+
+    I wish i could spend more time at home.
+
+    I have taken formal music lessons since i was 5.
+
+    My best friend is in a band with me.'
+  Best Generated Conversation: 'User 1: Hi, my name is John. I''m a musician.
+
+    User 2: Hi John, I''m Jane. I''m a musician too.
+
+    User 1: That''s awesome! What kind of music do you play?
+
+    User 2: I play guitar and sing.
+
+    User 1: Nice! I play guitar and bass.
+
+    User 2: What kind of music do you like to play?
+
+    User 1: I like to play a lot of different genres, but I''m mostly into rock and blues.
+
+    User 2: Me too! I love rock and blues. I also like to play some jazz and country.
+
+    User 1: That''s cool! I''ve always wanted to learn to play jazz.
+
+    User 2: It''s a lot of fun. You should give it a try.
+
+    User 1: I will! What''s your favorite band?
+
+    User 2: That''s a tough question. I have so many favorites. But I think I''d have to say The Beatles.
+
+    User 1: The Beatles are great! They''re one of my favorites too.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: It''s hard to choose just one, but I think I''d have to say "Yesterday".
+
+    User 2: That''s a great song. It''s one of my favorites too.
+
+    User 1: What''s your favorite instrument to play?
+
+    User 2: I love playing the guitar, but I also really enjoy playing the piano.
+
+    User 1: I''ve always wanted to learn to play the piano.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: I will! I''m glad we met.
+
+    User 2: Me too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

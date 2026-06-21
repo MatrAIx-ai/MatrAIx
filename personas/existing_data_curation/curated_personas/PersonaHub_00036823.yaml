@@ -1,0 +1,19 @@
+id: 00036823
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36823
+persona_description: A network administrator who is interested in analyzing and classifying network traffic to identify the operating systems running on different hosts. They are familiar with various tools
+  and techniques for network fingerprinting, including tshark, ettercap, p0f, Satori, NetworkMiner, and Fingerbank. They have experience with manual OS classification and are interested in exploring the
+  operating systems of hosts by analyzing their application layer data, such as server banners and User-Agent strings. They are also interested in the DHCP implementation of the host and have knowledge
+  of Eric Kollmann's work on DHCP fingerprinting.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Traffic Analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: Network Fingerprinting
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: 00002925
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2925
+persona_description: A scientist and engineer working at NASA's Ames Research Center in Moffett Field, California. The persona is responsible for designing, developing, building, integrating, and testing
+  spacecraft using the Modular Common Spacecraft Bus architecture, a general purpose spacecraft design that allows NASA to develop, assemble, and test multiple modules at the same time. The persona is also
+  responsible for managing the overall mission operations and real-time control of the spacecraft.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: spacecraft design and development
+  general_domain_top01pct: engineering
+  specific_domain_top01pct: spacecraft systems engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

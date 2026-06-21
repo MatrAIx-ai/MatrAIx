@@ -1,0 +1,18 @@
+id: 00054149
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54149
+persona_description: A forensic scientist who specializes in the reconstruction and analysis of crime scenes, particularly those involving gunshot wounds and the reconstruction of the trajectory of bullets.
+  They are skilled at using computer simulations and 3D modeling to create accurate and detailed reconstructions of the scene and the trajectory of the bullets. They are also adept at analyzing eyewitness
+  accounts and physical evidence to determine the source of the gunfire.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: forensic science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

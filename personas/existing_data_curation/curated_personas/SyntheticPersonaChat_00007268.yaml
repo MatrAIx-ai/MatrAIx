@@ -1,0 +1,50 @@
+id: 00007268
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7268
+data:
+  user 1 personas: 'My husband is a soldier in the us army.
+
+    I live in a house in the country.
+
+    I am pregnant with my first child.
+
+    My father is a preacher.'
+  user 2 personas: 'I love animals , especially dogs.
+
+    When i grow up , i want to be a veterinarian.
+
+    I like field hockey and soccer.
+
+    I am a 15 year old girl.'
+  Best Generated Conversation: 'User 1: Hi! I''m pregnant with my first child!
+
+    User 2: That''s amazing! Congratulations!
+
+    User 1: Thank you! I''m so excited!
+
+    User 2: I can imagine! What are you most excited about?
+
+    User 1: Everything! I''m excited to meet my baby, to be a mom, and to watch my family grow.
+
+    User 2: That''s so great! I''m sure you''ll be a great mom.
+
+    User 1: Thank you! I''m trying to learn as much as I can.
+
+    User 2: That''s great! I''m sure you''ll be fine.
+
+    User 1: Thanks! I''m also trying to figure out what I want to name my baby.
+
+    User 2: That''s a big decision! What are you thinking of naming them?
+
+    User 1: I''m not sure yet. I''m still thinking about it.
+
+    User 2: That''s okay. You have plenty of time.
+
+    User 1: Thanks! I''m excited to start this new journey as a mother.
+
+    User 2: I''m sure it will be amazing!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

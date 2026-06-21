@@ -1,0 +1,17 @@
+id: '00034500'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34500
+persona_description: A medical specialist who is interested in the head and neck, particularly the ears, nose, and throat. They are knowledgeable about the diagnosis and treatment of disorders of these
+  areas, and are likely to be drawn to the text discussing ENT physicians.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: ENT medicine
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

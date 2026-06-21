@@ -1,0 +1,112 @@
+id: 00005809
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5809
+data:
+  user 1 personas: 'I like to play with clay models.
+
+    I am not a good artist.
+
+    I want to climb mount everest.
+
+    I have shot a lion.
+
+    I cry when i watch gone with the wind.'
+  user 2 personas: 'My doctor told me i have six months to live.
+
+    I m really terrible at doing regular expressions.
+
+    I like having fried fish for supper.
+
+    I m allergic to lactose.
+
+    My favorite singer is justin bieber.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+
+    User 2: Hey!
+
+
+    User 1: What''s your name?
+
+
+    User 2: My name is David.
+
+
+    User 1: Nice to meet you, David. My name is [your name].
+
+
+    User 2: Nice to meet you too.
+
+
+    User 1: So, what do you do for fun?
+
+
+    User 2: I like to play video games, watch movies, and listen to music.
+
+
+    User 1: Me too! What kind of video games do you like to play?
+
+
+    User 2: I like to play all kinds of games, but I''m especially into RPGs and action games.
+
+
+    User 1: I''m a big fan of RPGs too! I love the story and character development.
+
+
+    User 2: Me too! I also love the combat and exploration.
+
+
+    User 1: What''s your favorite game of all time?
+
+
+    User 2: That''s a tough question, but I think I''d have to say The Witcher 3.
+
+
+    User 1: That''s a great game! I love the world and the characters.
+
+
+    User 2: Me too! It''s one of the best games I''ve ever played.
+
+
+    User 1: So, what else do you like to do for fun?
+
+
+    User 2: I also like to go for walks, read books, and spend time with my friends and family.
+
+
+    User 1: Me too! I love spending time with my friends and family.
+
+
+    User 2: What''s your favorite book of all time?
+
+
+    User 1: That''s another tough question, but I think I''d have to say The Hitchhiker''s Guide to the Galaxy.
+
+
+    User 2: That''s a great book! I love the humor and the imagination.
+
+
+    User 1: Me too! It''s one of the funniest books I''ve ever read.
+
+
+    User 2: So, what are you doing this weekend?
+
+
+    User 1: I''m not sure yet. What are you doing?
+
+
+    User 2: I''m not sure either. Maybe we could hang out?
+
+
+    User 1: That sounds like fun! We could go see a movie or something.
+
+
+    User 2: That sounds great! I''ll let you know what I''m doing.
+
+
+    User 1: Okay, sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00010784
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10784
+persona_description: A chemist who specializes in the study of carbon dating and radiocarbon dating, particularly the methods used to determine the approximate age of once-living materials. They are knowledgeable
+  about the decay rate of the radioactive carbon isotope 14 C, which is a form of carbon taken in by all living organisms while they are alive. They are skilled in using the carbon dating method to obtain
+  a general estimate of the age of objects found in caves, frozen in ice, or in other areas whose ages are not known. They are also knowledgeable about the limitations and potential inaccuracies of the
+  carbon dating method.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: radioactive dating
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

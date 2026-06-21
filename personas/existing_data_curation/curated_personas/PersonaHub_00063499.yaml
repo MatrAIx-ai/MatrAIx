@@ -1,0 +1,19 @@
+id: 00063499
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63499
+persona_description: A systems administrator who specializes in the configuration and management of SELinux in Linux systems, particularly in Fedora 14. This individual has extensive knowledge and experience
+  in managing and configuring SELinux to enforce access controls on various resources such as files, network resources, and interprocess communication (IPC). They are skilled at determining and implementing
+  the necessary configuration changes to enable or disable SELinux, as well as troubleshooting and resolving issues related to SELinux enforcement. This persona is highly skilled in using the SELinux configuration
+  file, /etc/selinux/config, to configure SELinux to enforce access controls, and they are also proficient in using the command line to temporarily switch SELinux into permissive mode or fully disable SELinux.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Linux Systems Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: SELinux Configuration and Management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

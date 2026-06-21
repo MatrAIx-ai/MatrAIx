@@ -1,0 +1,80 @@
+id: 00005805
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5805
+data:
+  user 1 personas: 'I like to dance with my friends.
+
+    I am six feet tall.
+
+    I have a family that are all tall.
+
+    I really like to go to school.
+
+    I love to be run.'
+  user 2 personas: 'I love to go hiking.
+
+    I am a bank teller.
+
+    I have never been out of the country.
+
+    My favorite phone is as iphone.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1].
+
+    User 2: Hi! Nice to meet you. My name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go hiking. It''s a great way to get exercise and see some beautiful scenery.
+
+    User 1: That''s awesome! I love to hike too. I''ve been on a few hikes in the mountains.
+
+    User 2: Oh, that sounds amazing! I''ve never been hiking in the mountains. I''ve only been hiking in the woods.
+
+    User 1: The mountains are really beautiful. There''s so much more to see than just trees.
+
+    User 2: I''m sure they are. I''ll have to make it a point to go hiking in the mountains someday.
+
+    User 1: You definitely should. It''s a great experience.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I love to go dancing. It''s a great way to let loose and have fun.
+
+    User 2: That''s cool! I''ve never been dancing before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just have to.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a bank teller.
+
+    User 1: Oh, that''s cool! I''ve never been to a bank before.
+
+    User 2: You should go to one sometime. They''re pretty interesting.
+
+    User 1: I might just have to.
+
+    User 2: What''s your favorite phone?
+
+    User 1: I love my iPhone. It''s the best phone I''ve ever had.
+
+    User 2: I''ve never had an iPhone. I''ve always had an Android phone.
+
+    User 1: You should try an iPhone sometime. They''re really great.
+
+    User 2: I might just have to.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

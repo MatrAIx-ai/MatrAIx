@@ -1,0 +1,18 @@
+id: '00044442'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44442
+persona_description: A pediatric radiologist who specializes in the use of CT scans in children and has conducted studies on the potential risks and benefits of these scans. They have observed a decrease
+  in CT scan usage at children's facilities due to concerns over radiation exposure and have recommended alternative imaging methods such as ultrasounds and MRIs. They are also interested in reducing radiation
+  exposure in children and have advocated for the use of PET/MRI scans as a less invasive alternative to CT scans.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric radiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: radiation safety in pediatric imaging
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,19 @@
+id: '00026011'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26011
+persona_description: A PowerSafe filesystem administrator who is familiar with the fsencrypt utility and its commands. They are responsible for managing encryption and decryption of data on a PowerSafe
+  filesystem, ensuring secure storage and access to sensitive information. The persona is skilled in setting up and configuring fsencrypt, as well as performing various operations such as creating and destroying
+  domains, enabling encryption support, and managing migration work. They have a deep understanding of the encryption mechanisms supported by fsencrypt, including AES-256 in XTS mode, CBC mode, and other
+  options.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Filesystem Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Filesystem Encryption
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

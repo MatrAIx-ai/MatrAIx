@@ -1,0 +1,84 @@
+id: '00000613'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 613
+data:
+  user 1 personas: 'I am caucasian.
+
+    My favorite sport is hockey.
+
+    I like rollerblading.
+
+    I try to eat a balanced diet.
+
+    I avoid eating sugar.'
+  user 2 personas: 'I live in chicago.
+
+    I am a high school teacher.
+
+    I am married with 2 kids.
+
+    I do yoga three times a week.
+
+    I volunteer at the red cross on the weekends.'
+  Best Generated Conversation: 'User 1: What kind of hobbies do you like?
+
+    User 2: I like to read, play video games, and go to the gym.
+
+    User 1: I like to read too! What are some of your favorite books?
+
+    User 2: I like to read science fiction and fantasy novels. Some of my favorite authors are Isaac Asimov, J.K. Rowling, and Terry Pratchett.
+
+    User 1: I''ve read a few of those books! I''m more of a history buff myself, but I enjoy a good science fiction or fantasy novel every now and then.
+
+    User 2: I know a lot of people who are history buffs. Have you ever been to the Field Museum in Chicago?
+
+    User 1: Yes, I have! It''s a great museum. I love the dinosaur exhibit.
+
+    User 2: I''ve been there a few times myself. It''s a really cool museum.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a high school teacher.
+
+    User 1: That sounds like a challenging but rewarding job.
+
+    User 2: It is, but it''s also a lot of fun. I love working with kids.
+
+    User 1: I''m sure you''re a great teacher.
+
+    User 2: Thanks!
+
+    User 1: Do you have any kids?
+
+    User 2: Yes, I have two kids.
+
+    User 1: Oh, that''s great! What are their names?
+
+    User 2: Their names are Sarah and John.
+
+    User 1: Those are beautiful names.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun with your family?
+
+    User 2: We like to go to the park, play games, and read books together.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. We love spending time together.
+
+    User 1: So, what do you like to do on the weekends?
+
+    User 2: On the weekends, I like to relax and spend time with my family. I also like to go to the gym and work out.
+
+    User 1: That sounds like a good way to spend your weekends.
+
+    User 2: It is. I love my family and I enjoy relaxing.
+
+    User 1: I know what you mean. I like to spend time with my family and relax too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

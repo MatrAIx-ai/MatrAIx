@@ -1,0 +1,62 @@
+id: 00000598
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 598
+data:
+  user 1 personas: 'I am an artist.
+
+    I love nighttime.
+
+    My favorite food is pizza.
+
+    I have a cat named charlie.
+
+    I just bought new hoop earrings.'
+  user 2 personas: 'I love dragons.
+
+    I prefer the night to the day , but i love sunshine.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.
+
+    I drive more than an hour each way to work.
+
+    I am a grandparent at 44.'
+  Best Generated Conversation: 'User 1: I love the nighttime too! I''m an artist and I love working late into the night.
+
+    User 2: That''s awesome! I''m not as creative as you are, but I do love to read at night.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I love anything fantasy or sci-fi. I also love historical fiction.
+
+    User 1: Me too! I just finished reading a really good book about the history of dragons.
+
+    User 2: That sounds awesome! I love dragons!
+
+    User 1: I know, right? They''re so cool!
+
+    User 2: I''m a grandparent at 44, so I don''t get to read as much as I used to, but I still love it when I can.
+
+    User 1: That''s great! I''m sure your grandkids love hearing you read to them.
+
+    User 2: They do! They love all the different voices I do for the characters.
+
+    User 1: That''s so cute! I love that.
+
+    User 2: Me too!
+
+    User 1: I have a cat named Charlie. What are your pets'' names?
+
+    User 2: I have two dogs, a golden retriever named Buddy and a black lab named Lola.
+
+    User 1: Aww, they sound adorable!
+
+    User 2: They are! I love them so much.
+
+    User 1: I can tell! You sound like a great pet owner.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

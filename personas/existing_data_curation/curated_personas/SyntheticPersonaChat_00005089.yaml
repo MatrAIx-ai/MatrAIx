@@ -1,0 +1,64 @@
+id: 00005089
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5089
+data:
+  user 1 personas: 'I was a mechanic for 6 years.
+
+    I collect bugs in jars.
+
+    I ran for political office in 2004.
+
+    I thought of joining the military when i was younger.
+
+    I build my own computers.'
+  user 2 personas: 'I love most music except country and jazz.
+
+    My favorite book that i ve read lately is middlesex.
+
+    My favorite tv shows are forensic files and jeopardy.
+
+    I am a gym rat that loves to play racquetball.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go to the gym and play racquetball. I also like to read and watch TV.
+
+    User 1: That sounds great! I used to be a mechanic and I love to build computers. I also collect bugs in jars.
+
+    User 2: That''s really interesting! I''ve never met anyone who collects bugs. What kind of bugs do you collect?
+
+    User 1: I collect all kinds of bugs, but my favorites are beetles and moths. I also collect some spiders and flies.
+
+    User 2: That''s really cool! I''ve never met anyone who collects bugs. What do you do with them after you collect them?
+
+    User 1: I usually put them in jars and keep them in my room. I also like to study them and learn more about them.
+
+    User 2: That''s really neat! I''m not sure I would have the patience to collect bugs, but it sounds like you really enjoy it.
+
+    User 1: It''s definitely not for everyone, but I find it to be very relaxing and rewarding.
+
+    User 2: That''s great! I''m glad you found something that you enjoy doing.
+
+    User 1: Thanks! What''s your favorite TV show?
+
+    User 2: My favorite TV show is Forensic Files. I love the way they solve crimes.
+
+    User 1: That''s a good show! I''ve seen a few episodes. I also like Jeopardy.
+
+    User 2: Jeopardy is a great game show! I''m always impressed by the contestants who know so much trivia.
+
+    User 1: Yeah, me too! I can''t believe how some people can remember so much information.
+
+    User 2: Me neither! I''m always learning new things when I watch Jeopardy.
+
+    User 1: Me too! It''s a really good show.
+
+    User 2: Yeah, it is! I''m glad we agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

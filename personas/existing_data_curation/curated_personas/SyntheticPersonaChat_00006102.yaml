@@ -1,0 +1,102 @@
+id: '00006102'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6102
+data:
+  user 1 personas: 'I work at a restaurant as waiter.
+
+    I am a cyclist.
+
+    My father used to be a cop.
+
+    My favorite food is pizza.
+
+    I am single.'
+  user 2 personas: 'I love animals.
+
+    I like chicken nuggets.
+
+    My favorite band is a fine frenzy.
+
+    I love reading.
+
+    I work at a hotel.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work at a hotel.
+
+    User 1: Oh, that sounds fun! What''s your favorite part about it?
+
+    User 2: I love meeting new people and helping them make their stay as comfortable as possible.
+
+    User 1: That''s great! I''m a waiter at a restaurant.
+
+    User 2: Oh, cool! What''s your favorite part about that job?
+
+    User 1: I love getting to interact with people and making sure they have a good time.
+
+    User 2: That''s awesome! I''m glad you enjoy your job.
+
+    User 1: Thanks! You too!
+
+    User 2: So, what''s your favorite food?
+
+    User 1: I love pizza!
+
+    User 2: Me too! What''s your favorite kind?
+
+    User 1: I love pepperoni pizza.
+
+    User 2: That''s a classic! I love it too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love reading, listening to music, and spending time with my friends and family.
+
+    User 1: That sounds great! I love reading and listening to music too.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like all kinds of music, but my favorite is probably rock.
+
+    User 2: I love rock too! What are your favorite bands?
+
+    User 1: I love the Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 2: Those are all great bands! I love them too.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading a book by John Grisham.
+
+    User 1: I love John Grisham! I''ve read a few of his books.
+
+    User 2: Oh, cool! Which ones have you read?
+
+    User 1: I''ve read "The Firm", "The Pelican Brief", and "The Client".
+
+    User 2: Those are all great books! I''ve read them all too.
+
+    User 1: So, what do you think of them?
+
+    User 2: I think they''re all really good. They''re suspenseful and exciting.
+
+    User 1: I agree! I love how they keep you guessing until the end.
+
+    User 2: Me too! I''m always wondering what''s going to happen next.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I don''t know. Maybe we could hang out?
+
+    User 2: That would be fun! We could go to the movies or something.
+
+    User 1: That sounds great! I''d love to go to the movies.
+
+    User 2: Okay, sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

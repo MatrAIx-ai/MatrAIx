@@ -1,0 +1,18 @@
+id: '00061655'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61655
+persona_description: A medical professional with expertise in liver disease, specifically focusing on the treatment and prevention of alcohol-related liver damage. They are knowledgeable about the warning
+  signs and symptoms of liver disease, as well as the potential complications and treatments for alcohol-related liver damage. They are likely to be involved in patient care, research, and education related
+  to liver disease and alcohol use.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: liver disease
+  general_domain_top01pct: None
+  specific_domain_top01pct: alcohol-related liver disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

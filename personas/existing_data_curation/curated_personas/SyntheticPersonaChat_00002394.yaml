@@ -1,0 +1,82 @@
+id: 00002394
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2394
+data:
+  user 1 personas: 'I am an angry person.
+
+    I drive a jag.
+
+    I don t have a lot of family members that i like.
+
+    I like to go to bars and people watch.'
+  user 2 personas: 'My favorite food is meatloaf.
+
+    My grandma is from denmark.
+
+    My car is green and smells weird.
+
+    My dog s name is toto.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Denmark.
+
+    User 1: Oh, that''s cool. I''ve never been to Denmark.
+
+    User 2: You should come visit! It''s a beautiful country.
+
+    User 1: Maybe I will one day.
+
+    User 2: I hope you do!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, go for walks, and spend time with my dog.
+
+    User 1: What''s your favorite food to cook?
+
+    User 2: My favorite food to cook is meatloaf.
+
+    User 1: Meatloaf is delicious! I love it with mashed potatoes and gravy.
+
+    User 2: Me too! That''s my favorite way to eat it.
+
+    User 1: What''s your dog''s name?
+
+    User 2: His name is Toto.
+
+    User 1: That''s a great name!
+
+    User 2: Thanks! He''s a great dog.
+
+    User 1: I''m sure he is.
+
+    User 2: Do you like to go to bars?
+
+    User 1: Yes, I do. I like to go to bars and people watch.
+
+    User 2: Me too! It''s so much fun to watch people interact.
+
+    User 1: I know, right? It''s like a live reality show.
+
+    User 2: Exactly!
+
+    User 1: So, what''s your favorite bar to go to?
+
+    User 2: My favorite bar is The Phoenix.
+
+    User 1: I''ve never been there.
+
+    User 2: You should go! It''s a great bar.
+
+    User 1: Maybe I will one day.
+
+    User 2: I hope you do! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

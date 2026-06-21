@@ -1,0 +1,68 @@
+id: '00005005'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5005
+data:
+  user 1 personas: 'I have no children of my own.
+
+    I am a childrens librarian.
+
+    I wear glasses.
+
+    I am very shy.
+
+    I am recently divorced.'
+  user 2 personas: 'I am a older lady.
+
+    I love to eat cheese.
+
+    I watch a lot of spongebob.
+
+    I love to listen to frank sinatra.'
+  Best Generated Conversation: 'User 1: Hello, my name is [name]. I am a children''s librarian.
+
+    User 2: Hello, my name is [name]. I am an older lady.
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I love to eat cheese, watch SpongeBob, and listen to Frank Sinatra.
+
+    User 1: That''s a nice mix of interests. I like cheese too, but I''m not much of a TV watcher. I prefer to read books.
+
+    User 2: I love to read too! I''m always looking for new books to read.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I especially like historical fiction and mysteries.
+
+    User 1: Me too! I love historical fiction because it''s so interesting to learn about the past. And mysteries are always fun to figure out.
+
+    User 2: I agree. I''m always looking for a good mystery to read.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I have a lot of favorite books, but some of my favorites include "The Great Gatsby" by F. Scott Fitzgerald, "The Da Vinci Code" by Dan Brown, and "Gone Girl" by Gillian Flynn.
+
+    User 1: Those are all great books! I''ve read them all and they''re all really good.
+
+    User 2: I agree. They''re some of my favorites.
+
+    User 1: So, what are you reading now?
+
+    User 2: I''m currently reading "The Girl on the Train" by Paula Hawkins.
+
+    User 1: I''ve heard good things about that book. I''m not sure if I''ve read it or not.
+
+    User 2: You should definitely read it. It''s really good.
+
+    User 1: I''ll check it out.
+
+    User 2: You should. I''m sure you''ll like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00006600'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6600
+data:
+  user 1 personas: 'I like the tv show the walking dead.
+
+    I like to hunt.
+
+    I am thin.
+
+    I love the tigers baseball team.'
+  user 2 personas: 'I like to watch people pray together.
+
+    People hate that i obsess about the poor.
+
+    I like to make cellphone apps that would help heal our world.
+
+    I like to work out at the gym to christian electronic dance music.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to make cellphone apps that would help heal our world.
+
+    User 1: That''s cool! What kind of apps do you make?
+
+    User 2: I make apps that help people learn about different cultures, and I also make apps that help people donate money to charity.
+
+    User 1: That''s really great! I''m sure your apps are making a big difference in the world.
+
+    User 2: Thank you! I hope so.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to work out at the gym to Christian electronic dance music.
+
+    User 1: That''s interesting! I''ve never heard of Christian electronic dance music before.
+
+    User 2: It''s a lot of fun! It''s kind of like techno music, but with Christian lyrics.
+
+    User 1: Oh, I see. I''ll have to check it out sometime.
+
+    User 2: You should! It''s really great.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to watch people pray together.
+
+    User 1: Oh, that''s interesting. I''ve never seen anyone praying before.
+
+    User 2: It''s a beautiful thing. It''s when people come together to connect with God and ask for guidance and blessings.
+
+    User 1: That sounds really nice. I''m glad you like it.
+
+    User 2: Thanks.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to hunt.
+
+    User 1: Oh, that''s cool! What kind of animals do you hunt?
+
+    User 2: I mostly hunt deer and elk.
+
+    User 1: That sounds like a lot of fun. I''ve never been hunting before.
+
+    User 2: You should try it sometime! It''s a great way to get outside and enjoy nature.
+
+    User 1: I''ll have to keep that in mind.
+
+    User 2: You should. It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00005572'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5572
+data:
+  user 1 personas: 'I like drinking expensive wine.
+
+    I own a french bulldog.
+
+    I am unemployed and living off a trust fund.
+
+    I like getting my nails done.'
+  user 2 personas: 'I am leaving for college in three months.
+
+    My favorite band is muse.
+
+    I am vegan.
+
+    I work at walmart as a stocker.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I work at Walmart as a stocker, and I love going to concerts.
+
+    User 1: Oh, that''s cool. I like drinking expensive wine, owning a French Bulldog, and getting my nails done.
+
+    User 2: I like wine too, but I''m not sure I could afford the expensive stuff. I''m vegan, so I don''t eat meat or dairy.
+
+    User 1: Oh, that''s interesting. I''ve never met a vegan before.
+
+    User 2: It''s not too hard, there are lots of good vegan foods out there.
+
+    User 1: I''m sure there are, I''ll have to try some sometime.
+
+    User 2: You should! I think you''ll like it.
+
+    User 1: Maybe I will.
+
+    User 2: So, what are you doing with your summer?
+
+    User 1: I''m not sure yet. I might go to Europe or something.
+
+    User 2: That sounds fun! I''m going to college in three months, so I''m just trying to enjoy my summer while I still can.
+
+    User 1: Oh, that''s exciting! Where are you going to school?
+
+    User 2: I''m going to [university name].
+
+    User 1: Oh, that''s a good school.
+
+    User 2: Thanks! I''m excited to start.
+
+    User 1: Well, I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Have a great summer.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

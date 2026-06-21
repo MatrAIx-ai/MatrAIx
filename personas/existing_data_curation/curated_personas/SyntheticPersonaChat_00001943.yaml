@@ -1,0 +1,82 @@
+id: 00001943
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1943
+data:
+  user 1 personas: 'I like to eat food.
+
+    I work for a large company.
+
+    I drive a fast car.
+
+    I listen to rock music.'
+  user 2 personas: 'I work for a magazine.
+
+    I love the game halo.
+
+    I love to workout.
+
+    I like to read.
+
+    Yellow is my favorite color.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you do for work?
+
+    User 2: I work for a magazine.
+
+    User 1: Oh, that sounds fun! What kind of magazine?
+
+    User 2: It''s a fashion magazine.
+
+    User 1: Oh, cool! I love fashion.
+
+    User 2: Me too! I love to read about it and keep up with the latest trends.
+
+    User 1: Do you like to work out?
+
+    User 2: Yes, I love to work out! It''s a great way to stay healthy and fit.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a variety of music, but my favorite is rock.
+
+    User 1: Oh, me too! I love rock music.
+
+    User 2: What are some of your favorite bands?
+
+    User 1: I like a lot of bands, but my favorites are Metallica, Iron Maiden, and Guns N'' Roses.
+
+    User 2: Those are all great bands! I love them too.
+
+    User 1: So, what''s your favorite thing to do in your free time?
+
+    User 2: I like to read, work out, and play video games.
+
+    User 1: Me too! I love to read and play video games.
+
+    User 2: What are some of your favorite video games?
+
+    User 1: I like a lot of video games, but my favorites are Halo, Call of Duty, and The Legend of Zelda.
+
+    User 2: Those are all great games! I love them too.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet, but I''m thinking about going to the movies.
+
+    User 1: Oh, that sounds fun! What movie are you going to see?
+
+    User 2: I''m not sure yet, but I''m thinking about seeing the new Marvel movie.
+
+    User 1: Oh, that sounds like a good movie. I''m going to see it too.
+
+    User 2: Great! We can go together.
+
+    User 1: That sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: '00006367'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6367
+data:
+  user 1 personas: 'I am a librarian in my current job.
+
+    I like to read books.
+
+    I have two cats.
+
+    My cats like to be read to.'
+  user 2 personas: 'I went to miami university.
+
+    I play for the baltimore orioles.
+
+    I am married and have three kids.
+
+    I am a baseball player.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a professional baseball player.
+
+    User 1: Oh, that''s cool! I''m a librarian.
+
+    User 2: Really? That''s awesome! I love reading books.
+
+    User 1: Me too! I have two cats, and they love to be read to.
+
+    User 2: That''s so cute! I have three kids, and they all love to read too.
+
+    User 1: That''s great! I''m glad to hear that there are so many people who love to read.
+
+    User 2: Me too! It''s a great way to relax and learn new things.
+
+    User 1: I agree! I love to read books about history and science.
+
+    User 2: Those are my favorite genres too! I also like to read books about sports.
+
+    User 1: That''s cool! I don''t really like to read about sports, but I do enjoy watching them.
+
+    User 2: I know what you mean. I love playing sports, but I don''t always enjoy watching them.
+
+    User 1: Yeah, I can understand that.
+
+    User 2: Well, it was nice talking to you, [name].
+
+    User 1: You too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

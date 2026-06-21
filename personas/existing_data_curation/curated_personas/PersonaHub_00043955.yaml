@@ -1,0 +1,19 @@
+id: 00043955
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43955
+persona_description: A scientist or researcher who is interested in climate science, specifically in the field of energy balance modeling. They are likely to have a background in physics or mathematics
+  and are familiar with the principles of energy balance and climate dynamics. They are interested in understanding how different factors, such as solar radiation, atmospheric absorption, and reflection,
+  affect global temperature and are interested in using simulation tools to analyze and predict these effects. They may also have an interest in the mathematical and computational aspects of climate modeling,
+  including the use of spline interpolation to fill in data gaps and the energy balance model as a fundamental tool in climate science.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: climate science
+  general_domain_top01pct: None
+  specific_domain_top01pct: energy balance modeling
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

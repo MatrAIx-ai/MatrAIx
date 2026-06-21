@@ -1,0 +1,68 @@
+id: 00003548
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3548
+data:
+  user 1 personas: 'My mother was a teacher.
+
+    I own a cleaning company.
+
+    My favorite writer is nicholas sparks.
+
+    I am married.'
+  user 2 personas: 'I wish i could be more serious about school.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I have been in a lot of romantic relationships that have ended up poorly.
+
+    I get distracted easily.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to hang out with friends, go to concerts, and go out to eat.
+
+    User 1: Me too! What kind of music do you like?
+
+    User 2: I like all kinds of music, but I''m really into indie rock right now.
+
+    User 1: Me too! I love indie rock. What are some of your favorite bands?
+
+    User 2: I love The 1975, Pale Waves, and The Japanese House.
+
+    User 1: I love all those bands! What else do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and watch TV.
+
+    User 1: Me too! I love reading, and I''m really into TV shows right now.
+
+    User 2: What are some of your favorite TV shows?
+
+    User 1: I love The Office, Parks and Recreation, and Friends.
+
+    User 2: Me too! I love all those shows.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to a concert or hang out with friends.
+
+    User 1: That sounds like fun. I might go to a concert too.
+
+    User 2: We should go together!
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know what I decide.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

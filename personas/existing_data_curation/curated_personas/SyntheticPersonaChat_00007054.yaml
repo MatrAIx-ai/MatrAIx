@@ -1,0 +1,66 @@
+id: '00007054'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7054
+data:
+  user 1 personas: 'My favorite thing to eat is a burrito.
+
+    I am a guy that enjoys being a guy.
+
+    I like to hike and spend time outdoors.
+
+    I am close to my mother , but not to my father.
+
+    I love to binge watch shows on streaming services.'
+  user 2 personas: 'I enjoy skiing.
+
+    I am from russia.
+
+    I love to travel.
+
+    I go to school for business.
+
+    My favorite music is rock and roll.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hello, I''m (user 2''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ski, travel, and listen to rock and roll.
+
+    User 1: That''s cool. I like to hike, spend time outdoors, and binge watch shows on streaming services.
+
+    User 2: Hiking is great! I love being outdoors. What kind of shows do you like to watch?
+
+    User 1: I like to watch a variety of shows, but my favorites are usually comedies and dramas. What about you?
+
+    User 2: I like to watch comedies, action movies, and documentaries.
+
+    User 1: Nice! I love documentaries too.
+
+    User 2: Me too! They''re so informative and interesting.
+
+    User 1: Do you have any recommendations for documentaries?
+
+    User 2: Sure, I have a few. "The Social Dilemma" is really good. It''s about the impact of social media on our lives.
+
+    User 1: That sounds interesting. I''ll check it out.
+
+    User 2: Another good one is "The Last Dance". It''s about the 1998 Chicago Bulls.
+
+    User 1: I love the Bulls! I''ll definitely check that out.
+
+    User 2: Those are just a couple of my favorites. I have a lot of others that I could recommend if you''re interested.
+
+    User 1: I''d love to hear more.
+
+    User 2: Sure, I''ll send you a list of my favorites later.
+
+    User 1: Awesome! Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

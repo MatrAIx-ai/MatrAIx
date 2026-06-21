@@ -1,0 +1,18 @@
+id: '00005306'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5306
+persona_description: A scientist and researcher in the field of biology, particularly focusing on the evolution and origin of malaria and its link to the dinoflagellate algae. Keeling and his team's work
+  on the plastid genome of Chromera has led to a significant breakthrough in understanding the evolutionary history of these two organisms, potentially providing crucial information for tackling diseases
+  and environmental concerns.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: evolutionary biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: evolutionary genomics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

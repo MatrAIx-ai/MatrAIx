@@ -1,0 +1,70 @@
+id: 00008193
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8193
+data:
+  user 1 personas: 'I am an orphan who was in the foster care system.
+
+    I went to a community college and got a degree in communication.
+
+    I am in the navy.
+
+    I listen to folk music.'
+  user 2 personas: 'I want to be a museum curator.
+
+    I am a painter.
+
+    I went to new york city once.
+
+    My favorite band is the beastie boys.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a painter.
+
+    User 1: Oh, that''s cool! Do you have any of your work online?
+
+    User 2: Yes, I have a website. Here''s the link: [user 2''s website].
+
+    User 1: [Looks at user 2''s website] Wow, your work is beautiful! I love the colors and the textures.
+
+    User 2: Thank you! I''m glad you like it.
+
+    User 1: What are your plans for the future?
+
+    User 2: I''m hoping to get a job as a museum curator.
+
+    User 1: That would be great! I''m sure you''d be a great curator.
+
+    User 2: Thanks! I''m excited to see what the future holds.
+
+    User 1: I''m sure it will be bright.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to art museums, concerts, and the movies. I also like to read and cook.
+
+    User 1: Those all sound like fun things to do. I like to go to art museums and concerts too.
+
+    User 2: Nice! We should go to a concert together sometime.
+
+    User 1: That would be fun! I''m free next weekend.
+
+    User 2: Me too! We should see The Killers.
+
+    User 1: Oh, I love The Killers! That would be great.
+
+    User 2: Awesome! I''ll send you the link to the tickets.
+
+    User 1: Great! I can''t wait!
+
+    User 2: Me neither!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

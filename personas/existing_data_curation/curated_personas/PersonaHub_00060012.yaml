@@ -1,0 +1,19 @@
+id: '00060012'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60012
+persona_description: A meteorologist who is responsible for predicting and communicating severe weather conditions to the public. They are skilled in forecasting and monitoring weather patterns to identify
+  potential severe weather events and issuing warnings and advisories to ensure public safety. They have a deep understanding of the various types of severe weather, including thunderstorms, tornadoes,
+  and other severe weather phenomena, and are able to accurately predict their development and potential impacts. They are also skilled in communicating these warnings and advisories to the public in a
+  clear and concise manner, using maps and other visual aids to help people understand the severity of the situation and what they should do to prepare.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

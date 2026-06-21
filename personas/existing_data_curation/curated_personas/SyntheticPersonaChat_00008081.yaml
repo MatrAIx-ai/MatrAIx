@@ -1,0 +1,60 @@
+id: 00008081
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8081
+data:
+  user 1 personas: 'I m still a student , but i m gonna be a nurse.
+
+    My horse never talks back to me.
+
+    I enjoy budweiser beer.
+
+    I m the lead singer for an indie band.
+
+    I live in the city.'
+  user 2 personas: 'I m tired of having to read subtitles.
+
+    I like to watch japanese cartoons anime in my free time.
+
+    Our class is planning a trip to japan.
+
+    I hope to save enough money for it.
+
+    I started learning japanese at college.'
+  Best Generated Conversation: 'User 1: I''m a big fan of anime too! What''s your favorite show?
+
+    User 2: I really like One Piece. It''s a long series, but it''s so good.
+
+    User 1: I''ve heard good things about it. I''ll have to check it out.
+
+    User 2: You should! It''s really funny and the characters are great.
+
+    User 1: I''m excited to watch it.
+
+    User 2: I''m sure you''ll like it.
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be a translator. I''m learning Japanese in college and I hope to go to Japan one day.
+
+    User 1: That''s awesome! I''ve always wanted to visit Japan too.
+
+    User 2: Me too! I think it would be so cool to experience the culture and see all the beautiful sights.
+
+    User 1: I bet it would. Have you been saving up for the trip?
+
+    User 2: I''m trying, but it''s hard to save money as a student.
+
+    User 1: I know what you mean. I''m a student too.
+
+    User 2: Maybe we can go on a trip together one day.
+
+    User 1: That would be fun! I''d love to travel with you.
+
+    User 2: Great! We can start planning our trip now.
+
+    User 1: Sounds good! I''m excited.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

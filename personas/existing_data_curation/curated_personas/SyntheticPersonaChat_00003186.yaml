@@ -1,0 +1,58 @@
+id: 00003186
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3186
+data:
+  user 1 personas: 'I love to ride my bike.
+
+    I like going to the beach.
+
+    I have a dog named george.
+
+    I like my job.
+
+    I used to work for a cable company.'
+  user 2 personas: 'I played football in college.
+
+    I have a passion for politics.
+
+    I work at a candy store.
+
+    I ve been married for five years.'
+  Best Generated Conversation: 'User 1: Hey there! How are you doing today?
+
+    User 2: I''m doing well, thanks for asking! How are you?
+
+    User 1: I''m doing great! I just got back from a bike ride.
+
+    User 2: That sounds fun! I love to go bike riding too.
+
+    User 1: Me too! I''m actually a pretty competitive biker. I''ve even done a few races.
+
+    User 2: That''s awesome! I''m more of a recreational biker. I just like to get out and enjoy the scenery.
+
+    User 1: That''s great too! I love getting out in nature.
+
+    User 2: Me too! I''m also a big fan of politics.
+
+    User 1: Really? Me too! I''m always interested in hearing people''s thoughts on current events.
+
+    User 2: Me too! I think it''s so important to be informed and involved in our democracy.
+
+    User 1: I agree! I think it''s our civic duty to be involved in the political process.
+
+    User 2: I''m glad to hear that! I think we need more people like you who are willing to stand up for what they believe in.
+
+    User 1: Thanks! I try my best.
+
+    User 2: Well, it''s working! You''ve convinced me to go out and vote in the next election.
+
+    User 1: That''s great! I''m glad I could make a difference.
+
+    User 2: You definitely did! Thanks for talking to me.
+
+    User 1: No problem! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

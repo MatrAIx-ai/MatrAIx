@@ -1,0 +1,18 @@
+id: '00051446'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51446
+persona_description: A healthcare professional who is interested in understanding the impact of tumor grade on prognosis in breast cancer. They are likely to be a pathologist or a medical oncologist, who
+  is responsible for diagnosing and treating breast cancer patients. They are familiar with the classification of tumors based on their grade, which is a crucial factor in determining the prognosis of the
+  disease. They are also likely to be aware of the other factors that can impact survival, such as tumor size and stage of the cancer, and how these factors interact with tumor grade.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: breast cancer pathology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

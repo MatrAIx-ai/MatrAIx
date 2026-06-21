@@ -1,0 +1,80 @@
+id: 00008636
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8636
+data:
+  user 1 personas: 'I am slightly overweight , but my doctors say i am healthy.
+
+    I decorate cakes for a living.
+
+    I love cats.
+
+    I am a lesbian.'
+  user 2 personas: 'I am a hardcore biker.
+
+    I enjoy the outdoors.
+
+    My favorite breakfast is pancakes.
+
+    My friends and i go hiking all the time.
+
+    I got a girlfriend last month.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go hiking and biking.
+
+    User 1: That sounds fun! I love the outdoors too.
+
+    User 2: Me too! I love being active and exploring new places.
+
+    User 1: What''s your favorite thing about hiking?
+
+    User 2: I love the feeling of being in nature and the challenge of the hike.
+
+    User 1: I can understand that. I love the sense of accomplishment I get after a long hike.
+
+    User 2: Me too! It''s a great way to get in shape and clear your head.
+
+    User 1: I agree! It''s also a great way to meet new people.
+
+    User 2: I''ve met some of my best friends on the hiking trail.
+
+    User 1: That''s great! I''m glad to hear it.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to decorate cakes for a living.
+
+    User 2: That sounds like a lot of fun! I love baking.
+
+    User 1: It is! I get to be creative and make people happy.
+
+    User 2: That''s great! I''m glad you enjoy it.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go out to dinner with my friends and I like to watch movies.
+
+    User 1: I love going out to dinner too! What''s your favorite restaurant?
+
+    User 2: I love going to [restaurant name]. What''s your favorite movie?
+
+    User 1: I love [movie name].
+
+    User 2: I''ve never seen it! What''s it about?
+
+    User 1: It''s about [movie synopsis].
+
+    User 2: That sounds interesting! I''ll have to check it out.
+
+    User 1: You should! It''s a great movie.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

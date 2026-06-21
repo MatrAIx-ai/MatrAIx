@@ -1,0 +1,72 @@
+id: 00001648
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1648
+data:
+  user 1 personas: 'I like basketball.
+
+    My favorite color is green.
+
+    I work at mcdonald.
+
+    My name is gerald.'
+  user 2 personas: 'I work for an architect firm.
+
+    I love to cook.
+
+    I am looking for someone.
+
+    I have three dogs.
+
+    I enjoy fishing.'
+  Best Generated Conversation: 'User 1: I''m Gerald.
+
+    User 2: I''m Sarah.
+
+    User 1: It''s nice to meet you Sarah.
+
+    User 2: You too Gerald.
+
+    User 1: What do you do for a living?
+
+    User 2: I work for an architect firm.
+
+    User 1: That sounds interesting. What do you like about it?
+
+    User 2: I like the creative aspect of it. I get to design buildings and make them come to life.
+
+    User 1: That''s awesome. I''m a big fan of architecture.
+
+    User 2: Really? What''s your favorite building?
+
+    User 1: I like the Sydney Opera House. It''s so unique and beautiful.
+
+    User 2: That''s a great choice. I''ve always wanted to see it in person.
+
+    User 1: It''s really amazing. You should definitely go if you ever get the chance.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what else do you like to do?
+
+    User 2: I love to cook. I''m always trying new recipes and experimenting with different flavors.
+
+    User 1: That''s awesome. I love to cook too.
+
+    User 2: Great! We should cook dinner together sometime.
+
+    User 1: That would be fun. I love sharing recipes.
+
+    User 2: Perfect. I''ll bring the wine.
+
+    User 1: Sounds good. I''ll make the pasta.
+
+    User 2: Perfect. I''ll see you then.
+
+    User 1: Bye Sarah.
+
+    User 2: Bye Gerald.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

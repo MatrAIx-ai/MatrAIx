@@ -1,0 +1,58 @@
+id: '00006047'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6047
+data:
+  user 1 personas: 'I like watching the walking dead.
+
+    I practice vegetarianism.
+
+    I like reading a lot.
+
+    My favorite books are the harry potter books.'
+  user 2 personas: 'Not a day goes by that i don t drink four mountain dews.
+
+    My favorite hobby is chess.
+
+    I enjoy movies about aliens invading the earth.
+
+    Sometimes , i have sword fights with strangers in the park.'
+  Best Generated Conversation: 'User 1: Hi, I''m Mike.
+
+    User 2: Hey, I''m Mary.
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I like to read, watch movies, and play chess.
+
+    User 1: I like to read too. What are some of your favorite books?
+
+    User 2: I like Harry Potter, The Lord of the Rings, and The Hunger Games.
+
+    User 1: I love Harry Potter too! I''ve read all of the books and seen all of the movies.
+
+    User 2: I''m glad you like Harry Potter. It''s a great series.
+
+    User 1: What do you like about it?
+
+    User 2: I like the characters, the story, and the magic.
+
+    User 1: I agree. The characters are all very well developed and the story is really exciting.
+
+    User 2: I also like the magic. It''s so creative and imaginative.
+
+    User 1: Me too. It''s always fun to see what new spells and potions are used.
+
+    User 2: Have you seen the new movie yet?
+
+    User 1: No, I haven''t had a chance to yet. I''m really excited to see it though.
+
+    User 2: It''s really good. You''ll love it.
+
+    User 1: I''m sure I will. I''m glad you recommended it to me.
+
+    User 2: You''re welcome. I''m always happy to help people find new books to read.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

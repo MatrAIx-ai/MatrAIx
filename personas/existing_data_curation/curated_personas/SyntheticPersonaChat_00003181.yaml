@@ -1,0 +1,62 @@
+id: 00003181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3181
+data:
+  user 1 personas: 'I love to drive my car.
+
+    I work in a factory.
+
+    Connor mcgreggor is my favorite fighter.
+
+    I enjoy travel.'
+  user 2 personas: 'I swim often.
+
+    I run track.
+
+    I wear glasses all day.
+
+    I take medication.'
+  Best Generated Conversation: 'User 1: Hi. I''m (user 1).
+
+    User 2: Hi. I''m (user 2).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to swim and run track.
+
+    User 1: That''s cool. I love to drive my car.
+
+    User 2: Do you race cars?
+
+    User 1: No, not really. I just enjoy the feeling of freedom when I''m behind the wheel.
+
+    User 2: I know what you mean. It''s like you can go anywhere you want.
+
+    User 1: Exactly. I love the feeling of the wind in my hair and the sun on my face.
+
+    User 2: Me too. I also like the feeling of being in control of my own destiny.
+
+    User 1: That''s a great way to put it. I also like the feeling of being able to go wherever I want, whenever I want.
+
+    User 2: I know what you mean. It''s like you can be your own boss.
+
+    User 1: Exactly. That''s one of the things I love about driving.
+
+    User 2: Me too. It''s just the best.
+
+    User 1: What''s your favorite place to drive?
+
+    User 2: I love driving on the beach.
+
+    User 1: Me too! It''s so relaxing.
+
+    User 2: I know what you mean. It''s like you can just forget about everything and enjoy the moment.
+
+    User 1: Exactly. I love that feeling.
+
+    User 2: Me too. It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

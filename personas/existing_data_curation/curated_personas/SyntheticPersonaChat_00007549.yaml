@@ -1,0 +1,56 @@
+id: 00007549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7549
+data:
+  user 1 personas: 'My favorite show is battlestar galactica.
+
+    I live on a beet farm.
+
+    I am a paper salesman.
+
+    My favorite animal is a bear.'
+  user 2 personas: 'I eat breakfast then go right back to bed.
+
+    I wake early to watch the sun rise every day.
+
+    Sometimes i think i should get out and exercise more.
+
+    I love sunsets.
+
+    I work 60 hours a week.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m good, thanks! How are you?
+
+    User 1: I''m doing well, thank you. I''m a paper salesman, and I live on a beet farm. My favorite show is Battlestar Galactica, and my favorite animal is a bear.
+
+    User 2: That''s cool! I wake up early every day to watch the sun rise, and I love sunsets. I work 60 hours a week, and I sometimes think I should get out and exercise more.
+
+    User 1: That''s interesting. I''m not a morning person, so I usually sleep in. I do like to watch sunsets though. I think they''re beautiful.
+
+    User 2: Me too! I love the way the sky turns all different colors.
+
+    User 1: It''s amazing. I''m glad you like Battlestar Galactica. It''s my favorite show.
+
+    User 2: I''ve never seen it. What''s it about?
+
+    User 1: It''s about a space fleet that''s fighting against a group of robots called Cylons. It''s really good.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: Well, I should probably get going. It was nice talking to you.
+
+    User 1: It was nice talking to you too. Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

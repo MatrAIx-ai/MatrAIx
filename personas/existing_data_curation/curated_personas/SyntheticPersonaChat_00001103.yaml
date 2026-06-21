@@ -1,0 +1,76 @@
+id: '00001103'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1103
+data:
+  user 1 personas: 'I love to paint.
+
+    My favorite season is spring.
+
+    I enjoy walks on the beach.
+
+    I am currently single.'
+  user 2 personas: 'I need to use an inhaler sometimes.
+
+    I have a crush on my co worker.
+
+    I play tabletop games with friends.
+
+    I love rpg computer games.
+
+    I still live at home.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is Alex.
+
+    User 1: Nice to meet you, Alex. My name is Emily.
+
+    User 2: Nice to meet you too, Emily.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tabletop games with my friends, and I love RPG computer games.
+
+    User 1: Oh, that''s cool. I''ve never played tabletop games, but I''ve played a few RPG computer games.
+
+    User 2: Oh, really? Which ones have you played?
+
+    User 1: I''ve played Skyrim, Oblivion, and Fallout 4.
+
+    User 2: Oh, I love Skyrim! I''ve also played Oblivion and Fallout 4.
+
+    User 1: That''s great! What are your favorite things about Skyrim?
+
+    User 2: I love the freedom of it. You can do whatever you want, and you can go anywhere.
+
+    User 1: I agree. That''s one of my favorite things about the game too.
+
+    User 2: What are your favorite things about Oblivion and Fallout 4?
+
+    User 1: I like the story and characters in Oblivion. And I like the exploration and combat in Fallout 4.
+
+    User 2: I agree. The story and characters in Oblivion are great. And the exploration and combat in Fallout 4 are really fun.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: Yeah, it does.
+
+    User 1: Well, it was nice talking to you, Alex.
+
+    User 2: Nice talking to you too, Emily.
+
+    User 1: Maybe we can play a tabletop game together sometime.
+
+    User 2: That would be fun.
+
+    User 1: Great. I''ll let you know when I''m free.
+
+    User 2: Okay.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

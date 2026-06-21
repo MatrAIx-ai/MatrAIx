@@ -1,0 +1,72 @@
+id: '00002636'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2636
+data:
+  user 1 personas: 'I want to go to mars.
+
+    I have 3 kids.
+
+    I am an avid artist.
+
+    I am a scientist.'
+  user 2 personas: 'I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I m an ovo vegetarian.
+
+    I can t stand beets.
+
+    I can t cook.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there!
+
+    User 1: I''m a scientist and an artist. I have 3 kids and I want to go to Mars.
+
+    User 2: Wow, that''s a lot to be! I''m an ovo vegetarian who hates beets, and I can''t cook. I enjoy sleeping in on my days off and I drive an hour to work in horrible traffic every day.
+
+    User 1: That''s cool! I love art and science too, but I don''t have any kids. I''ve always wanted to go to Mars! I''m not sure how I''d feel about being a vegetarian, but I''m glad you can enjoy it.
+
+    User 2: It''s not for everyone, but I love it! I''m not sure how I''d feel about having kids either, but I''m glad you''re enjoying being a parent.
+
+    User 1: It''s definitely challenging, but it''s also very rewarding.
+
+    User 2: I can imagine!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! That''s a great field.
+
+    User 2: It is! I love it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go hiking, biking, and swimming. I also love to play video games.
+
+    User 1: Those sound like fun hobbies! I love to go hiking too.
+
+    User 2: Me too! It''s a great way to relax and get some exercise.
+
+    User 1: Absolutely!
+
+    User 2: What do you like to do with your kids?
+
+    User 1: We love to go to the park, play games, and read books together.
+
+    User 2: Those sound like great activities! I''m glad you''re spending time with your kids.
+
+    User 1: Me too! They''re my world.
+
+    User 2: I can tell!
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00001098
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1098
+data:
+  user 1 personas: 'I love to dance.
+
+    My favorite food is mexican.
+
+    I am a teacher.
+
+    I enjoy reading history books.
+
+    I grew up in new hampshire.'
+  user 2 personas: 'I love katy perry.
+
+    I drive a ford taurus.
+
+    I work in retail.
+
+    I spend too much time shopping.'
+  Best Generated Conversation: 'User 1: Hello there! How are you doing today?
+
+    User 2: Hey! I''m doing well, thanks. How are you doing today?
+
+    User 1: I''m doing great, thanks! I''m just getting ready to start teaching my afternoon class.
+
+    User 2: Oh, that sounds exciting! What are you teaching?
+
+    User 1: I''m teaching a history class on the American Revolution.
+
+    User 2: That sounds really interesting! I love history.
+
+    User 1: Me too! It''s one of my favorite subjects.
+
+    User 2: What''s your favorite historical event?
+
+    User 1: I think my favorite historical event is the Battle of Bunker Hill. It was a really important battle in the American Revolution.
+
+    User 2: That''s a good one! I like the Battle of Gettysburg too.
+
+    User 1: That''s another good one! I love all the history of the American Civil War.
+
+    User 2: Me too! It''s such a fascinating time period.
+
+    User 1: Yeah, it is. It''s so interesting to learn about how the country was divided and how the war eventually ended slavery.
+
+    User 2: I agree! It''s amazing to think about how different the country would be if the war had gone the other way.
+
+    User 1: Yeah, it''s hard to imagine what the country would be like if slavery had never been abolished.
+
+    User 2: It''s definitely a topic worth learning about.
+
+    User 1: It is. I''m glad we had this conversation.
+
+    User 2: Me too! It was really interesting to talk to someone who shares my passion for history.
+
+    User 1: Me too! I''m always happy to talk about history.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

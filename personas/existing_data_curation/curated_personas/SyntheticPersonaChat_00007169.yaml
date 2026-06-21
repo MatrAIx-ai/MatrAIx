@@ -1,0 +1,66 @@
+id: 00007169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7169
+data:
+  user 1 personas: 'I i love logical and rational thinking.
+
+    I started working at google last week on self driving car research.
+
+    I love computers.
+
+    I am considered a nerd by many.'
+  user 2 personas: 'My mother is a dentist.
+
+    I like to play tennis.
+
+    I am a baker.
+
+    My favorite tv show is silicon valley.'
+  Best Generated Conversation: 'User 1: Hey! My name is Eric.
+
+    User 2: Hi Eric, my name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah. What do you do for a living?
+
+    User 2: I''m a baker.
+
+    User 1: Oh, that''s cool! I love baking. What''s your favorite thing to bake?
+
+    User 2: I love making pies.
+
+    User 1: I love pies too! My favorite is apple pie.
+
+    User 2: Mine too! Do you like tennis?
+
+    User 1: I love playing tennis! I used to play in high school.
+
+    User 2: Oh, that''s cool! I play tennis too.
+
+    User 1: That''s great! We should play sometime.
+
+    User 2: Yeah, that would be fun!
+
+    User 1: So, what''s your favorite TV show?
+
+    User 2: My favorite TV show is Silicon Valley.
+
+    User 1: Oh, that''s a great show! I love that show too.
+
+    User 2: Yeah, it''s so funny.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to bake, play tennis, and watch TV.
+
+    User 1: I like to bake, play video games, and watch TV.
+
+    User 2: Oh, that''s cool! I love video games too.
+
+    User 1: Yeah, me too! We should play sometime.
+
+    User 2: Yeah, that would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

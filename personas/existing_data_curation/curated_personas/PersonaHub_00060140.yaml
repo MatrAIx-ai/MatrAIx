@@ -1,0 +1,19 @@
+id: '00060140'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60140
+persona_description: A strategic intelligence analyst with expertise in the use of remote sensing technologies and the manipulation of military decoys, particularly those related to inflatables. This individual
+  is highly skilled in the use of commercial spectral imagery and synthetic aperture radar (SAR) systems to detect and track military targets, and is familiar with the limitations and benefits of these
+  technologies in the context of dealing with inflatables. This persona is likely to be involved in the development and deployment of advanced decoy systems, and is constantly monitoring the latest developments
+  in remote sensing technology and military tactics.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: remote sensing
+  general_domain_top01pct: None
+  specific_domain_top01pct: remote sensing/military decoys
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

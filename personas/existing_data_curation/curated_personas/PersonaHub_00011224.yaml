@@ -1,0 +1,21 @@
+id: '00011224'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11224
+persona_description: A professional engineer or scientist who specializes in physical modeling and control systems, particularly in the automotive industry. This individual has experience with both physical
+  and signal-flow modeling techniques and has worked with companies such as Toyota to create computer-based models of complex systems for analysis, testing, improvement, and optimization. This persona is
+  highly skilled in the use of MapleSim software and has a deep understanding of physical systems and their behavior. They are adept at manually deriving equations governing a system's behavior and manipulating
+  these equations into a block diagram, signal-flow representation, and then building the block diagram. They are familiar with the topological or acausal system representation and can use this approach
+  to generate equations automatically based on the physical properties of the components and their connections. This individual is well-versed in the Toyota joint project and has a unique understanding
+  of the concept of creating a computer-based model of a system to analyze, test, improve, and optimize the design before actually building the physical system.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: physical modeling and control systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: signal-flow modeling techniques
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

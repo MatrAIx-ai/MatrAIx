@@ -1,0 +1,58 @@
+id: '00004503'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4503
+data:
+  user 1 personas: 'I work in a doctors office.
+
+    I only wear silver jewelry.
+
+    I am studying to be a dental hygienist but i hate seeing patients saliva.
+
+    I have a rose tattooed on my right ankle.
+
+    There are thorns tattooed on my toes.'
+  user 2 personas: 'I work as a waitress.
+
+    I have 5 brothers and sisters.
+
+    I live in north dakota.
+
+    I ride a bike.
+
+    I like to draw.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]. I work in a doctor''s office and I''m studying to be a dental hygienist.
+
+    User 2: Hi, I''m [username]. I work as a waitress.
+
+    User 1: Cool. What do you like about being a waitress?
+
+    User 2: I like the interaction with people, and I like that I''m always busy.
+
+    User 1: That''s cool. I like being busy too. I also like the idea of being a dental hygienist. I''m just not sure if I can handle seeing patients saliva.
+
+    User 2: You get used to it.
+
+    User 1: I hope so.
+
+    User 2: So, what''s your favorite thing to do when you''re not working?
+
+    User 1: I like to draw. I also like to go for walks and spend time with my family.
+
+    User 2: Me too. I like to draw, I like to bike, and I like to spend time with my family.
+
+    User 1: Cool. It sounds like we have a lot in common.
+
+    User 2: Yeah, we do.
+
+    User 1: Maybe we could hang out sometime.
+
+    User 2: Sure, I''d love to.
+
+    User 1: Great. I''ll text you my number.
+
+    User 2: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

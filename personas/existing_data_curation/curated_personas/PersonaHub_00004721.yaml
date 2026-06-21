@@ -1,0 +1,17 @@
+id: '00004721'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4721
+persona_description: A healthcare professional who is knowledgeable about the symptoms and treatment of COVID-19 and other viral infections, as well as the importance of proper rest, nutrition, and medication
+  management in managing fever. They are also aware of the potential for false positives in fever diagnosis due to other conditions and are trained to use heat-lowering drugs appropriately.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

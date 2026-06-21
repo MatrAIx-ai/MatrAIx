@@ -1,0 +1,18 @@
+id: 00030810
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30810
+persona_description: A healthcare professional specializing in the diagnosis and management of rare genetic disorders. This person has expertise in the field of medicine, particularly in the area of genetics
+  and bone disorders. They are well-versed in the etiology and clinical manifestations of osteogenesis imperfecta, and are trained to perform systematic physical assessments to detect the disorder early.
+  They are also skilled in discussing treatment options and providing support to families affected by the disorder.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: genetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,20 @@
+id: 00046885
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 46885
+persona_description: A student conducting a physics lab to measure the resistance of a Wheatstone bridge. The student is using a slide-wire Wheatstone bridge with a known resistance Rk and a galvanometer
+  with adjustable sensitivity buttons 1, 2, and 3. The student is balancing the bridge with the sliding contact at point A, and is using the galvanometer to measure the change in resistance Rx. The student
+  is measuring the change in VAB due to a small change in Rx, and is using Kirchhoff's Voltage Law and Ohm's Law to relate the change in VAB to the change in Rx. The student is using the galvanometer to
+  measure the sensitivity of the bridge, and is adjusting the position of the sliding contact to balance the bridge. The student is using the galvanometer to measure the resistance of the unknown resistor
+  Rx, and is using the galvanometer to measure the sensitivity of the bridge.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: electronics engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

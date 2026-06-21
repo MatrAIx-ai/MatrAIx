@@ -1,0 +1,60 @@
+id: 00008674
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8674
+data:
+  user 1 personas: 'My mom raised me by herself and taught me to play baseball.
+
+    I blog about salt water aquarium ownership.
+
+    I still love to line dry my clothes.
+
+    I am allergic to peanuts.
+
+    I will one day own a ferret.'
+  user 2 personas: 'I work for a online company from home.
+
+    I am a soccer mom.
+
+    I cook every night.
+
+    I love family time.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love to cook and spend time with my family.
+
+    User 1: That''s great! I also love to cook, but I don''t have a lot of time for it with my job.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I work for a company that develops software for the online gaming industry.
+
+    User 1: That sounds like an interesting job.
+
+    User 2: It is! I get to work on some really cool projects.
+
+    User 1: Do you like working from home?
+
+    User 2: I do! I get to have a lot more flexibility in my schedule.
+
+    User 1: That''s one of the things I like about my job too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to play video games and read.
+
+    User 2: I love to play video games too! What games do you like to play?
+
+    User 1: I like to play a variety of games, but I''m really into the Assassin''s Creed series right now.
+
+    User 2: I''ve heard good things about that series. I''ve been meaning to try it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

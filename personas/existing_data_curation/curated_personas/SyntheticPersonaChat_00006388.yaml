@@ -1,0 +1,78 @@
+id: 00006388
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6388
+data:
+  user 1 personas: 'I enjoy listening to country music.
+
+    I live life to its fullest.
+
+    I enjoy playing video games.
+
+    I am in college.
+
+    I have a crummy job at scrubway.'
+  user 2 personas: 'I own two snakes.
+
+    I have an autograph collection with more than 2000 signatures.
+
+    I only eat organic food.
+
+    I collect comic books.
+
+    I am allergic to dust.'
+  Best Generated Conversation: 'User 1: Hi! I''m User 1.
+
+    User 2: Hi! I''m User 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect comic books and autographs.
+
+    User 1: That''s cool! I like to play video games.
+
+    User 2: Oh, that''s cool! What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of games, but I especially like RPGs.
+
+    User 2: That''s cool! I like RPGs too.
+
+    User 1: What are your favorite RPGs?
+
+    User 2: I like Final Fantasy, Persona, and Dragon Quest.
+
+    User 1: Oh, those are all great games! I''ve played them all.
+
+    User 2: That''s awesome!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to read and listen to music.
+
+    User 1: That''s cool! I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read fantasy and science fiction.
+
+    User 1: That''s cool! I like to read those too.
+
+    User 2: What are your favorite authors?
+
+    User 1: I like Brandon Sanderson, Neil Gaiman, and Terry Pratchett.
+
+    User 2: Oh, those are all great authors! I''ve read a few of their books.
+
+    User 1: That''s awesome!
+
+    User 2: So, what kind of music do you like to listen to?
+
+    User 1: I like to listen to country music.
+
+    User 2: Oh, that''s cool! I don''t listen to country music much, but I can appreciate it.
+
+    User 1: It''s definitely not for everyone.
+
+    User 2: Yeah, I know what you mean.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

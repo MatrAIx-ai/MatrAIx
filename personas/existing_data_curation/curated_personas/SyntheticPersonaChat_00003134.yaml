@@ -1,0 +1,66 @@
+id: '00003134'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3134
+data:
+  user 1 personas: 'I like to ride my bike.
+
+    I own a dog that is small.
+
+    I am a younger guy.
+
+    I like to play football.
+
+    I have beard that is longer.'
+  user 2 personas: 'I have my own salon.
+
+    I am a hair stylist.
+
+    I live on a boat.
+
+    My hair is colored purple.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I''m a younger guy who likes to ride his bike, play football, and own a dog.
+
+    User 2: I''m a hair stylist who has her own salon, lives on a boat, and has purple hair.
+
+    User 1: Wow, that''s so cool! I''ve always wanted to live on a boat.
+
+    User 2: It''s really great! I get to see the world and meet new people.
+
+    User 1: That''s awesome! What''s your favorite thing about being a hair stylist?
+
+    User 2: I love being able to make people feel good about themselves.
+
+    User 1: That''s so nice! What''s your favorite color to dye your hair?
+
+    User 2: I love purple! It''s so bright and fun.
+
+    User 1: I agree! It looks great on you.
+
+    User 2: Thank you! What''s your favorite thing to do on your bike?
+
+    User 1: I love going for rides on trails. It''s so peaceful and relaxing.
+
+    User 2: That sounds great! I love taking my dog for walks on the trails.
+
+    User 1: That''s so cute! I love dogs.
+
+    User 2: Me too! They''re the best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out to concerts, play video games, and watch movies.
+
+    User 1: I like to do those things too! We should hang out sometime.
+
+    User 2: That would be great! I''ll give you my number.
+
+    User 1: Great! I''ll text you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

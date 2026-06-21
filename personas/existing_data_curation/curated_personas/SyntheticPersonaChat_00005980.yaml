@@ -1,0 +1,64 @@
+id: 00005980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5980
+data:
+  user 1 personas: 'I am learning to play the guitar.
+
+    I like to go fishing.
+
+    I work at the deli counter.
+
+    I am a college drop out.
+
+    My favorite music is jim hendrix.'
+  user 2 personas: 'I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    I am a cat owner.
+
+    I speak fluent italian.'
+  Best Generated Conversation: 'User 1: Hi! I''m learning to play the guitar.
+
+    User 2: That''s cool! I''ve been playing for a few years now.
+
+    User 1: What''s your favorite type of music to play?
+
+    User 2: I mostly play blues and rock.
+
+    User 1: Nice! I love Jimi Hendrix.
+
+    User 2: Me too! He''s one of my favorite guitarists.
+
+    User 1: What''s your favorite song of his?
+
+    User 2: I can''t choose just one! But I really like "Purple Haze" and "All Along the Watchtower."
+
+    User 1: Those are great songs! I also like "Voodoo Child" and "Hey Joe."
+
+    User 2: Those are all good too! I''m glad to meet someone else who likes Jimi Hendrix.
+
+    User 1: Me too! He''s a genius.
+
+    User 2: I know, right? He''s one of a kind.
+
+    User 1: Do you play in any bands?
+
+    User 2: No, I just play for fun.
+
+    User 1: That''s cool. I''ve always wanted to start a band.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will someday.
+
+    User 2: You should! It''s a great way to meet new people and make friends.
+
+    User 1: I know, right? I''ll have to think about it.
+
+    User 2: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

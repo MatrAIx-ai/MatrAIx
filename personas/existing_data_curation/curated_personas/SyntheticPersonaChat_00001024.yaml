@@ -1,0 +1,72 @@
+id: '00001024'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1024
+data:
+  user 1 personas: 'I have two kids.
+
+    I am fairly conservative in politics.
+
+    I live in a rural community.
+
+    I love robotics.'
+  user 2 personas: 'I do not like being asked a lot of questions.
+
+    I think about food a lot.
+
+    I do not like when people get too close to me.
+
+    I have a shopping addiction.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It has its ups and downs.
+
+    User 1: Do you have any kids?
+
+    User 2: I have two boys.
+
+    User 1: Oh, that''s nice.
+
+    User 2: They''re a handful, but I love them.
+
+    User 1: I''m sure they''re great.
+
+    User 2: Thanks.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to read, cook, and shop.
+
+    User 1: I love to read too! What kind of books do you like to read?
+
+    User 2: I like a variety of books, but I really like historical fiction.
+
+    User 1: Me too! I''ve been reading a lot of historical fiction lately.
+
+    User 2: Oh, what have you been reading?
+
+    User 1: I just finished reading "The Nightingale" by Kristin Hannah.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: It''s really good.
+
+    User 2: What do you like about it?
+
+    User 1: I love the historical setting and the characters. It''s a really moving story.
+
+    User 2: That sounds like something I would like.
+
+    User 1: I think you would too.
+
+    User 2: I''ll have to add it to my reading list.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

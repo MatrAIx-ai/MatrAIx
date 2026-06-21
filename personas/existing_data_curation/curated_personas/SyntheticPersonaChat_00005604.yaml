@@ -1,0 +1,58 @@
+id: '00005604'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5604
+data:
+  user 1 personas: 'I prefer headsets over earbuds.
+
+    I live with my parents.
+
+    My favorite color is red.
+
+    I ve an iphone.
+
+    I travel often.'
+  user 2 personas: 'I like to draw other people.
+
+    I like to mountain bike.
+
+    I love people with a sense of humor.
+
+    I like to drink tea.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m [User 2''s name]. What''s yours?
+
+    User 1: I''m [User 1''s name]. Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to draw, mountain bike, and drink tea.
+
+    User 1: Those all sound like fun activities. I like to travel, play video games, and listen to music.
+
+    User 2: Oh, that''s cool! I like to travel too. I''ve been to a few different countries.
+
+    User 1: That''s awesome! I''ve only been to a few countries myself. I''m hoping to travel more in the future.
+
+    User 2: Me too! There''s so much to see and do in the world.
+
+    User 1: I agree! So, what do you like about drawing?
+
+    User 2: I like that it allows me to express myself creatively. I also enjoy the challenge of trying to capture a likeness of someone or something.
+
+    User 1: That''s really cool. I''ve always wanted to be able to draw, but I''m not very good at it.
+
+    User 2: You should keep practicing! I''m sure you could get better with time.
+
+    User 1: Thanks, I''ll try! I''m definitely not giving up!
+
+    User 2: Good for you! I''m sure you''ll be a great artist one day.
+
+    User 1: Thanks for the encouragement! I appreciate it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

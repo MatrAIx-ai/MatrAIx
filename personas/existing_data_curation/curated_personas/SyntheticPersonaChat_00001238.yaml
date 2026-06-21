@@ -1,0 +1,98 @@
+id: 00001238
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1238
+data:
+  user 1 personas: 'I am from france.
+
+    I am a vegan.
+
+    I am studying literature.
+
+    I like to draw.
+
+    My favorite food is tacos.'
+  user 2 personas: 'I have been bankrupt and back.
+
+    I have lots of cash.
+
+    I used to own several casinos.
+
+    I am the president.
+
+    I used to own a casino.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hello, my name is [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I am the president.
+
+    User 1: Oh, that''s interesting. What is your favorite part about being president?
+
+    User 2: I like being able to make decisions that impact the country.
+
+    User 1: That must be a lot of pressure.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What are your plans for the future?
+
+    User 2: I plan to continue to work hard and make decisions that are best for the country.
+
+    User 1: That sounds great. I wish you the best of luck.
+
+    User 2: Thank you.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and go out to eat.
+
+    User 1: What is your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: I love that movie too! It''s so heartwarming.
+
+    User 2: It is. I love the story and the characters.
+
+    User 1: What is your favorite video game?
+
+    User 2: My favorite video game is Grand Theft Auto.
+
+    User 1: I love that game too! It''s so much fun to play.
+
+    User 2: It is. I love the open world and the different activities you can do.
+
+    User 1: What is your favorite food?
+
+    User 2: My favorite food is tacos.
+
+    User 1: I love tacos too! They are so delicious.
+
+    User 2: They are. I love the different toppings you can put on them.
+
+    User 1: Me too. I love tacos with guacamole, sour cream, and cheese.
+
+    User 2: Those are my favorite toppings too!
+
+    User 1: So, what is it like being president?
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I get to make decisions that impact the country, and that''s a big responsibility.
+
+    User 1: I''m sure it is. But it sounds like you''re doing a great job.
+
+    User 2: Thank you. I''m trying my best.
+
+    User 1: Well, I wish you the best of luck in the future.
+
+    User 2: Thank you.
+
+    User 1: And I hope you enjoy your tacos.
+
+    User 2: I will. Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,100 @@
+id: '00006103'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6103
+data:
+  user 1 personas: 'I work at a restaurant as waiter.
+
+    My favorite food is pizza.
+
+    I am single.
+
+    My father used to be a cop.
+
+    I am a cyclist.'
+  user 2 personas: 'My dog is my best friend.
+
+    I work as a computer technician , but secretly hate my job.
+
+    At all times , i am wearing something black.
+
+    I like to drink chai tea before bed every night.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go for walks with my dog, play video games, and read books.
+
+    User 1: That sounds nice. I like to go for walks with my dog too.
+
+    User 2: What kind of dog do you have?
+
+    User 1: I have a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly.
+
+    User 1: Yeah, they are. My dog is named Buddy.
+
+    User 2: That''s a great name for a dog.
+
+    User 1: Thanks.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I mostly play action-adventure games.
+
+    User 2: I like action-adventure games too. What are some of your favorite games?
+
+    User 1: I like the Uncharted series, the Assassin''s Creed series, and the Witcher 3.
+
+    User 2: I''ve played all of those games! They''re all great.
+
+    User 1: Yeah, they are.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I mostly read science fiction and fantasy.
+
+    User 2: I like science fiction and fantasy too. What are some of your favorite books?
+
+    User 1: I like the Hitchhiker''s Guide to the Galaxy series, the Lord of the Rings series, and the Dune series.
+
+    User 2: I''ve read all of those books! They''re all great.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a waiter at a restaurant.
+
+    User 2: Oh, that sounds like a fun job.
+
+    User 1: It can be, but it can also be really stressful.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a computer technician, but I secretly hate my job.
+
+    User 1: Why do you hate your job?
+
+    User 2: I just don''t find it very fulfilling.
+
+    User 1: I''m sorry to hear that.
+
+    User 2: It''s okay.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m thinking about going back to school to get a degree in computer science.
+
+    User 1: That sounds like a good idea.
+
+    User 2: I think so too.
+
+    User 1: Well, I hope you can find a job you enjoy.
+
+    User 2: Thanks. Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

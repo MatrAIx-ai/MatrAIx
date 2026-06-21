@@ -1,0 +1,74 @@
+id: 00000992
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 992
+data:
+  user 1 personas: 'I got a new job.
+
+    Favorite color is green.
+
+    I like cats.
+
+    I like cars.'
+  user 2 personas: 'My favorite band is nirvana.
+
+    I am overall happy with life.
+
+    My car needs some repairs.
+
+    I am a waitress at a local restaurant.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just working.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a waitress at a local restaurant.
+
+    User 1: Oh, that sounds fun.
+
+    User 2: It''s okay, but it can be tough sometimes.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I like meeting new people and making them happy.
+
+    User 1: That''s a great quality to have.
+
+    User 2: Thanks! What do you do for work?
+
+    User 1: I just got a new job as a marketing manager.
+
+    User 2: That''s awesome! Congratulations!
+
+    User 1: Thanks! I''m really excited about it.
+
+    User 2: What''s your favorite color?
+
+    User 1: Green.
+
+    User 2: That''s my favorite color too!
+
+    User 1: Really? That''s cool.
+
+    User 2: Yeah, I think it''s a really calming color.
+
+    User 1: I agree.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, play video games, and watch movies.
+
+    User 2: That sounds like a lot of fun. I like to go hiking too.
+
+    User 1: That''s great! We should go hiking together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Cool. I''ll have to get your number.
+
+    User 2: Okay.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

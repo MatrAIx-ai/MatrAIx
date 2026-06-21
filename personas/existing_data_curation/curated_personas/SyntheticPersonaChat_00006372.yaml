@@ -1,0 +1,64 @@
+id: '00006372'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6372
+data:
+  user 1 personas: 'I am gong to adopt a dog very soon.
+
+    I have played since i was 4 years old.
+
+    I recently discovered a new love for indian food.
+
+    I am a violinist.'
+  user 2 personas: 'I enjoy talking to strangers.
+
+    I am good at throwing parties.
+
+    My favorite animal is a monkey.
+
+    I want to live at the beach.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi (name), I''m (name).
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I enjoy talking to strangers, throwing parties, and spending time at the beach.
+
+    User 1: Oh, that''s cool! I like to play the violin, eat Indian food, and adopt dogs.
+
+    User 2: I''ve never met a violinist before! How long have you been playing?
+
+    User 1: I''ve been playing since I was 4 years old.
+
+    User 2: Wow, that''s a long time! Do you play in any bands?
+
+    User 1: I used to play in a band, but we disbanded a few years ago.
+
+    User 2: Oh, that''s too bad. What kind of music did you play?
+
+    User 1: We played a lot of different genres, but our favorite was rock.
+
+    User 2: Rock is my favorite genre too! I love the energy of it.
+
+    User 1: Me too! It''s the best way to let loose and have fun.
+
+    User 2: Do you know any good bands that I should check out?
+
+    User 1: Sure, I have a few recommendations. One of my favorites is The Killers.
+
+    User 2: I''ve heard of them! I''ll have to check them out.
+
+    User 1: You won''t be disappointed. They''re a great band.
+
+    User 2: Thanks for the recommendation! I''m always looking for new music to listen to.
+
+    User 1: No problem! I''m always happy to share my music with others.
+
+    User 2: That''s really nice of you. I''m grateful.
+
+    User 1: You''re welcome! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

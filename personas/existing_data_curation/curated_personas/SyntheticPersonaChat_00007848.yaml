@@ -1,0 +1,92 @@
+id: 00007848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7848
+data:
+  user 1 personas: 'In my spare time i like to play video games.
+
+    I would rather read a book than watch a movie.
+
+    I do not drink alcohol.
+
+    I work for a marketing agency.
+
+    My favorite music artist is isaiah rashed.'
+  user 2 personas: 'I play tabletop games with friends.
+
+    I have a crush on my co worker.
+
+    I still live at home.
+
+    I need to use an inhaler sometimes.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hey there, I''m [name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to play tabletop games with my friends.
+
+    User 1: Oh, that sounds like fun! I''ve never played before, but I''ve always wanted to try.
+
+    User 2: It''s a lot of fun! I''ve been playing for a few years now, and I''m still getting better.
+
+    User 1: What''s your favorite tabletop game?
+
+    User 2: I''ve been really enjoying Dungeons & Dragons lately.
+
+    User 1: I''ve heard good things about that game.
+
+    User 2: It''s a lot of fun! You can create your own character and go on adventures with your friends.
+
+    User 1: That sounds really cool! I might have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a customer service representative.
+
+    User 1: Oh, that sounds interesting!
+
+    User 2: It''s not too bad. I get to help people with their problems all day.
+
+    User 1: That''s good! I''m sure it''s rewarding.
+
+    User 2: It can be, yeah.
+
+    User 1: So, what do you do for fun outside of work?
+
+    User 2: I like to hang out with my friends, read books, and play video games.
+
+    User 1: Sounds like you have a lot of fun!
+
+    User 2: I do! I like to keep busy.
+
+    User 1: What''s your favorite book?
+
+    User 2: I''m not sure I have a favorite book. I like a lot of different kinds of books.
+
+    User 1: That''s fair. I like to read a lot of different kinds of books too.
+
+    User 2: Yeah, it''s fun to explore new things.
+
+    User 1: So, what''s your favorite kind of video game?
+
+    User 2: I like RPGs. I like the idea of creating my own character and going on adventures.
+
+    User 1: I like RPGs too! I''ve been playing a lot of them lately.
+
+    User 2: What have you been playing?
+
+    User 1: I''ve been playing a lot of Skyrim and The Witcher 3.
+
+    User 2: Those are both great games! I''ve been playing a lot of Divinity: Original Sin 2 lately.
+
+    User 1: I''ve heard good things about that game. I might have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

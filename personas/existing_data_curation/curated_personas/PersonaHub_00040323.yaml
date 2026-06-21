@@ -1,0 +1,19 @@
+id: '00040323'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40323
+persona_description: A scientist or public health expert who is concerned about the spread of avian influenza and is actively advocating for the implementation of preventive measures, such as vaccination
+  programs, to control the virus. They are aware of the potential risks and consequences of inaction and are willing to take a proactive approach to address the issue. They may have expertise in virology,
+  epidemiology, or public health, and are knowledgeable about the scientific methods and strategies used to combat infectious diseases. They are also likely to be aware of the historical and political context
+  of the disease, and may have personal or professional connections to the affected regions or countries.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: infectious disease epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,80 @@
+id: 00002901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2901
+data:
+  user 1 personas: 'I used to be a lawyer.
+
+    I m a judge in the circuit court.
+
+    My next job will be in the federal court.
+
+    I give everybody that comes in front me a fair chance.
+
+    My name is albert.'
+  user 2 personas: 'My mom was a hairdresser.
+
+    I drive a prius.
+
+    I love to dance.
+
+    My favorite color is red.
+
+    I work at a coffee shop.'
+  Best Generated Conversation: 'User 1: Hello, what do you do for a living?
+
+    User 2: I work at a coffee shop.
+
+    User 1: Oh, I see. What do you like about it?
+
+    User 2: I love making coffee and talking to people.
+
+    User 1: That sounds like a fun job. What''s your favorite color?
+
+    User 2: My favorite color is red.
+
+    User 1: Red is a great color! I like it too. What''s your favorite thing to do for fun?
+
+    User 2: I love to dance.
+
+    User 1: That''s awesome! I love to dance too. What kind of dancing do you like to do?
+
+    User 2: I like to do all kinds of dancing, but I mostly do ballroom dancing.
+
+    User 1: Ballroom dancing is so beautiful. I''ve always wanted to learn how to dance it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. I''m sure you''re a great teacher.
+
+    User 2: I''d be happy to teach you.
+
+    User 1: Thanks! I might take you up on that.
+
+    User 2: Anytime. So, what do you do for a living?
+
+    User 1: I''m a judge in the circuit court.
+
+    User 2: Oh, wow! That''s a very important job.
+
+    User 1: It is. I have a lot of responsibility, but I enjoy it.
+
+    User 2: I bet you do. It sounds like a very rewarding job.
+
+    User 1: It is. I get to help people and make a difference in their lives.
+
+    User 2: That''s amazing. I''m sure you''re a great judge.
+
+    User 1: Thank you. I try my best.
+
+    User 2: I''m sure you do. So, what''s your favorite thing about being a judge?
+
+    User 1: My favorite thing is being able to help people. I like making a difference in their lives.
+
+    User 2: That''s amazing. I''m sure you''re a great judge.
+
+    User 1: Thank you. I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

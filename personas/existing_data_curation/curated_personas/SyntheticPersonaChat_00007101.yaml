@@ -1,0 +1,68 @@
+id: '00007101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7101
+data:
+  user 1 personas: 'I am an avid fan of the boston celtics.
+
+    I have six older sisters.
+
+    I love walking in the park.
+
+    I work for a small , family owned restaurant.
+
+    I love chocolate.'
+  user 2 personas: 'Ferrari is my favorite car company.
+
+    I work out daily.
+
+    I own many cars.
+
+    Basketball is my favorite sport to watch.'
+  Best Generated Conversation: 'User 1: What''s your favorite sport to watch?
+
+    User 2: I love watching basketball. It''s so exciting and intense.
+
+    User 1: Me too! I''m a big fan of the Boston Celtics.
+
+    User 2: Really? I''m not a big fan of the Celtics, but I do like watching LeBron James play.
+
+    User 1: LeBron is a great player. He''s one of the best in the league.
+
+    User 2: Yeah, he''s definitely one of the best. What other sports do you like to watch?
+
+    User 1: I like watching baseball and football too, but I don''t follow them as closely as I do basketball.
+
+    User 2: I''m the same way. I''ll watch baseball and football, but I don''t really keep up with the news or anything like that.
+
+    User 1: Me neither. I just like to watch the games and enjoy the competition.
+
+    User 2: That''s what it''s all about.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to work out, go for walks, and play video games.
+
+    User 1: Me too! I love working out and playing video games.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I''m especially into RPGs and adventure games.
+
+    User 2: Oh, me too! I love RPGs.
+
+    User 1: What''s your favorite RPG?
+
+    User 2: I don''t know if I have a favorite, but I really enjoyed playing The Witcher 3.
+
+    User 1: Me too! That''s one of my favorite games.
+
+    User 2: It''s so good.
+
+    User 1: I''m glad you like it.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

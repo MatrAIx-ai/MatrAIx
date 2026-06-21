@@ -1,0 +1,60 @@
+id: '00000604'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 604
+data:
+  user 1 personas: 'I am an artist.
+
+    I have a cat named charlie.
+
+    I just bought new hoop earrings.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I am highly educated.
+
+    My father used to be a butcher.
+
+    My only friend is a dog.
+
+    I work at a newspaper.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hi there!
+
+    User 1: What''s up?
+
+    User 2: Not much, just working on a story for the newspaper.
+
+    User 1: Oh, that''s cool. What kind of story?
+
+    User 2: It''s about a local artist who''s been painting murals all over town.
+
+    User 1: Oh, that sounds interesting! What''s the artist''s name?
+
+    User 2: Her name is Mary. She''s really talented.
+
+    User 1: Oh, I love murals! I''ve seen a few of Mary''s paintings around town. They''re really beautiful.
+
+    User 2: Yeah, she''s really good. I''m glad you like them!
+
+    User 1: Me too! I hope she keeps making more murals.
+
+    User 2: Me too! I think they''re a great addition to our town.
+
+    User 1: So, what do you do for fun?
+
+    User 2: Well, I like to read, write, and go for walks in the park.
+
+    User 1: Oh, I love reading too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 1: Oh, I love historical fiction too! I''ve read a lot of books about the American Civil War.
+
+    User 2: Me too! I''m a big fan of the Civil War. I''ve read a lot of books about it as well.
+
+    User 1: That''s awesome! I''m glad to meet someone who''s into the same things as me.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

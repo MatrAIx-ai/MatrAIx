@@ -1,0 +1,19 @@
+id: 00007181
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7181
+persona_description: A meteorologist who specializes in severe weather forecasting, particularly in the Rocky Mountain region of the United States. They are experienced in monitoring and predicting severe
+  weather events such as tornadoes, floods, and severe thunderstorms. They have a deep understanding of the meteorological patterns and conditions that lead to these events, and are skilled in using satellite
+  imagery and other tools to analyze and predict severe weather conditions. They are also knowledgeable about the impact of severe weather events on the region, and are committed to providing accurate and
+  timely information to the public and emergency responders.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: severe weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

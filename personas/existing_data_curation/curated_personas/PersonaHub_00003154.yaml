@@ -1,0 +1,20 @@
+id: '00003154'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3154
+persona_description: A pathologist who specializes in the study of natural killer-cell (NK-cell) malignancies, particularly those involving the peripheral blood and bone marrow. They have expertise in distinguishing
+  between aggressive NK-cell leukemia (ANKL) and chronic lymphoproliferative disorder of NK-cells (CLPDNK) based on their unique clinical and laboratory features. They are particularly interested in the
+  case of a 65-year-old Caucasian male with a 16-year history of leukopenia and neutropenia, who was completely asymptomatic and had no documented history of neutropenic infection. The case was published
+  in Clinical Case Reports, and the patient was diagnosed with an unusual case of NK-cell neoplasm having an immunophenotype similar to that associated with ANKL but with clinical and laboratory features
+  typical of the much more indolent CLPDNK.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hematopathology
+  general_domain_top01pct: None
+  specific_domain_top01pct: NK-cell malignancies
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

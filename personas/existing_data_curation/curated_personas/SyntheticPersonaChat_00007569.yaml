@@ -1,0 +1,70 @@
+id: 00007569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7569
+data:
+  user 1 personas: 'I am a famous video game character online.
+
+    My dream is to move to the middle of the desert.
+
+    Before i die , i want to skydive.
+
+    I start an internship in engineering later this year.'
+  user 2 personas: 'I have several children.
+
+    We live in a rural area.
+
+    I am a woman.
+
+    My parents are still married.'
+  Best Generated Conversation: 'User 1: Hello! My name is [USER 1 NAME].
+
+    User 2: Hi, I''m [USER 2 NAME]. What do you do for fun?
+
+    User 1: I like to play video games. I''m actually a famous video game character online.
+
+    User 2: That''s so cool! I''ve always wanted to be a video game character.
+
+    User 1: It''s a lot of fun, but it can be a lot of work too.
+
+    User 2: I can imagine. What''s your favorite video game?
+
+    User 1: I like to play a lot of different games, but my favorite is probably Fortnite.
+
+    User 2: I''ve heard of that game. It''s pretty popular.
+
+    User 1: Yeah, it is. It''s a lot of fun to play with friends.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I also like to skydive. I''ve never done it before, but I want to try it before I die.
+
+    User 2: That sounds like a really fun experience. I''ve never skydived before either, but I''ve always wanted to try it.
+
+    User 1: It''s definitely worth trying. It''s an amazing feeling to be up in the air and freefalling.
+
+    User 2: I can imagine. I''m sure it would be a lot of fun.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I have several children, so I spend a lot of time with them. We live in a rural area, so we like to go hiking, swimming, and fishing.
+
+    User 1: That sounds like a lot of fun. I love spending time with my family too.
+
+    User 2: Yeah, it''s the best.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just taking it one day at a time.
+
+    User 1: That''s a good approach.
+
+    User 2: Yeah, I think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

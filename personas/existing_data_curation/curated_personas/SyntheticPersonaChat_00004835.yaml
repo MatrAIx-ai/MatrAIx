@@ -1,0 +1,65 @@
+id: 00004835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4835
+data:
+  user 1 personas: 'My family comes first to me.
+
+    I sometimes drive fast.
+
+    I am a gentle giant.
+
+    I prefer reading to sports.'
+  user 2 personas: 'I like spending time with my friends and family.
+
+    I would travel the world if i could.
+
+    I like to read a lot of books.
+
+    I am not much of a fan of hot weather.
+
+    I like listening to all genres of music except country music.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey there!
+
+    User 1: I''m a big reader. Do you like to read?
+
+    User 2: Yes, I love to read! I''m currently reading "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I''ve heard good things about that book. I''m currently reading "The Count of Monte Cristo" by Alexandre Dumas.
+
+    User 2: That''s a great book! I''ve read it before. It''s a really long book, but it''s worth it.
+
+    User 1: I''m enjoying it so far. I''m about halfway through.
+
+    User 2: I''m glad you''re enjoying it! What are some other books you like?
+
+    User 1: I like a lot of different types of books. I like historical fiction, mystery, and science fiction.
+
+    User 2: Me too! I like a lot of different types of books as well. I like historical fiction, fantasy, and mystery.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I have a lot of favorite books, but some of my favorites include "The Lord of the Rings" by J.R.R. Tolkien, "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams, and "The Color Purple" by
+    Alice Walker.
+
+    User 1: Those are all great books! I''ve read all of them. I love "The Lord of the Rings" series.
+
+    User 2: Me too! It''s one of my favorite book series of all time.
+
+    User 1: I also love "The Hitchhiker''s Guide to the Galaxy" series. It''s so funny and witty.
+
+    User 2: Me too! It''s one of my favorite science fiction series of all time.
+
+    User 1: I''ve heard good things about "The Color Purple". I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

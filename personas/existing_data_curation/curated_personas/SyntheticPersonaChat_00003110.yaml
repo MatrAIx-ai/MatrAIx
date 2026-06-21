@@ -1,0 +1,101 @@
+id: '00003110'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3110
+data:
+  user 1 personas: 'I like eating pretzels.
+
+    I really like watching star trek.
+
+    I am an omnivore.
+
+    I work for the railroad.
+
+    My favorite band is vnv nation.'
+  user 2 personas: 'I was an army brat.
+
+    I married my high school sweetheart.
+
+    I surf often.
+
+    I am a nurse.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+
+    User 2: Hello!
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I love to surf, I''m a nurse, I''m an army brat, and I married my high school sweetheart.
+
+
+    User 1: Oh, that''s cool! I like watching Star Trek, I''m an omnivore, I work for the railroad, and my favorite band is VNV Nation.
+
+
+    User 2: Wow, those are all really interesting! I''ve never met anyone who likes Star Trek before.
+
+
+    User 1: Really? It''s one of my favorite shows! I''ve been watching it since I was a kid.
+
+
+    User 2: That''s awesome! I''ve always wanted to watch it, but I''ve never had the time.
+
+
+    User 1: You should definitely check it out! It''s a really good show.
+
+
+    User 2: I will! Thanks for the recommendation.
+
+
+    User 1: No problem! So, what do you like about nursing?
+
+
+    User 2: I love the feeling of helping people. It''s really rewarding to be able to make a difference in someone''s life.
+
+
+    User 1: That''s so great! I''m sure you''re a great nurse.
+
+
+    User 2: Thank you! I try my best.
+
+
+    User 1: So, what''s your favorite part of surfing?
+
+
+    User 2: I love the feeling of being out on the water and the freedom of riding the waves.
+
+
+    User 1: That sounds amazing! I''ve always wanted to try surfing, but I''m not very coordinated.
+
+
+    User 2: You should definitely give it a try! It''s a lot of fun and it''s not as hard as it looks.
+
+
+    User 1: Maybe I will! Thanks for the encouragement.
+
+
+    User 2: No problem! So, what''s your favorite band?
+
+
+    User 1: VNV Nation is my favorite band! I love their music and their message.
+
+
+    User 2: I''ve never heard of them! What kind of music do they play?
+
+
+    User 1: They''re an electronic music band. Their music is really dark and atmospheric.
+
+
+    User 2: That sounds interesting! I''ll have to check them out.
+
+
+    User 1: You should! I think you''ll like them.
+
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00002303'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2303
+data:
+  user 1 personas: 'I only take the bus.
+
+    I babysit for the woman who lives next door.
+
+    My favorite color is yellow.
+
+    I am an old woman who lives on a social security check.
+
+    I often do not have the money to pay my utility bills.'
+  user 2 personas: 'I am still living at home at age 30.
+
+    I am currently trying to open my own grocery store.
+
+    I am a volunteer firefighter.
+
+    I am colorblind.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a volunteer firefighter and I''m trying to open my own grocery store.
+
+    User 1: Oh, that''s interesting. I''m a retired babysitter and I live on social security.
+
+    User 2: That''s cool. I''m colorblind, so I can''t drive.
+
+    User 1: Oh, that must be hard. I only take the bus.
+
+    User 2: I like to take the bus too. It''s a good way to get around.
+
+    User 1: Yeah, it is. So, what are your hobbies?
+
+    User 2: I like to play video games and watch movies.
+
+    User 1: Me too! I love watching movies.
+
+    User 2: What are some of your favorite movies?
+
+    User 1: I like a lot of different movies, but my favorite is probably The Shawshank Redemption.
+
+    User 2: I''ve never seen that movie. What''s it about?
+
+    User 1: It''s about a man who is wrongly convicted of murder and sent to prison. He befriends a fellow prisoner and they escape together. It''s a really good movie.
+
+    User 2: It sounds like a good movie. I''ll have to check it out.
+
+    User 1: You should. It''s one of the best movies ever made.
+
+    User 2: Well, thanks for the recommendation. I''ll check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

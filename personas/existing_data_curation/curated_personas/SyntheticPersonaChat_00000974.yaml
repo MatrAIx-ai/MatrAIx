@@ -1,0 +1,86 @@
+id: 00000974
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 974
+data:
+  user 1 personas: 'I enjoy golfing.
+
+    I am married with three kids.
+
+    I listen to classical music.
+
+    I work for a large law firm.'
+  user 2 personas: 'I like meat.
+
+    My favorite food is steak.
+
+    I listen to rap.
+
+    I drive a black car.
+
+    I am working in finance.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thanks! How are you?
+
+    User 1: I''m doing great! What do you do for a living?
+
+    User 2: I''m a financial analyst.
+
+    User 1: Oh, that sounds interesting! What''s your favorite part of your job?
+
+    User 2: I like getting to work with numbers and helping people make financial decisions.
+
+    User 1: That''s great! I''m a lawyer, so I also work with numbers and help people make decisions.
+
+    User 2: Really? That''s awesome! What kind of law do you practice?
+
+    User 1: I practice family law.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is. What''s your favorite part of your job?
+
+    User 1: I like helping people solve their problems and finding a way to get them what they want.
+
+    User 2: That''s a great goal.
+
+    User 1: Thanks! What''s your favorite food?
+
+    User 2: I love steak.
+
+    User 1: Me too! I''m a big fan of red meat.
+
+    User 2: What kind of music do you like?
+
+    User 1: I listen to a lot of classical music.
+
+    User 2: Oh, I''m not really a fan of classical music.
+
+    User 1: That''s okay! I like a lot of different kinds of music.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I love to golf.
+
+    User 2: Golf? That''s a pretty boring sport.
+
+    User 1: I don''t think it''s boring! I find it very relaxing.
+
+    User 2: I guess you''re right. Golf is pretty relaxing.
+
+    User 1: I''m glad you agree.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go out to eat and try new restaurants.
+
+    User 2: I like that too! I love trying new foods.
+
+    User 1: I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: 00001819
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1819
+data:
+  user 1 personas: 'I am not very tall.
+
+    I am looking for a job.
+
+    I have a dog.
+
+    My favorite color is red.
+
+    I have two siblings.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I love the rain.
+
+    I sleep on a single bed.
+
+    I prefer winter.
+
+    I drive a van.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m currently looking for a job, but I''m a dog groomer by trade.
+
+    User 1: Oh, that''s interesting. Do you like it?
+
+    User 2: I love it! I love working with dogs and helping them look their best.
+
+    User 1: What''s your favorite color?
+
+    User 2: Red! It''s so vibrant and energetic.
+
+    User 1: I like red too! It''s my favorite color for lipstick.
+
+    User 2: Me too! I also like to wear red nail polish.
+
+    User 1: What''s your favorite food?
+
+    User 2: Pizza! I love all kinds of pizza, but my favorite is pepperoni.
+
+    User 1: I love pizza too! I''m a big fan of cheese pizza.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go for walks with my dog, read, and watch movies.
+
+    User 2: I love going for walks too! I also like to play video games and listen to music.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like all kinds of video games, but my favorite is probably Mario Kart.
+
+    User 1: Mario Kart is so much fun! I love playing it with my friends.
+
+    User 2: Me too! It''s a great game to have a good time with.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: I prefer winter! I love the snow and the cold weather.
+
+    User 1: I like winter too! I love skiing and snowboarding.
+
+    User 2: Me too! I also love building snowmen and having snowball fights.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: We do! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: '00005371'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5371
+data:
+  user 1 personas: 'I travel at least once a year.
+
+    I graduated from princeton.
+
+    I love to watch the voice.
+
+    My favorite thing to do is to go to museums.
+
+    I am currently listening to bach.'
+  user 2 personas: 'I want to be desired.
+
+    I want to feel pretty.
+
+    I like to eat.
+
+    I feel overweight.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (user 1).
+
+    User 2: Hi (user 2).
+
+    User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Nice. Me too. I''m currently listening to Bach.
+
+    User 2: Oh, that''s nice. I love Bach.
+
+    User 1: Me too. He''s one of my favorite composers.
+
+    User 2: I''m actually a musician myself.
+
+    User 1: Oh, that''s cool! What do you play?
+
+    User 2: I play the piano.
+
+    User 1: Oh, that''s awesome! I love the piano.
+
+    User 2: Me too. It''s my favorite instrument.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I like to play classical music, but I also like to play some pop music.
+
+    User 1: Nice. I like classical music too.
+
+    User 2: Me too. It''s so peaceful and beautiful.
+
+    User 1: I agree. So, what do you do for fun besides music?
+
+    User 2: I like to travel, watch movies, and go to museums.
+
+    User 1: Oh, that''s nice. I like to travel too.
+
+    User 2: Me too. It''s so much fun to see new places.
+
+    User 1: I agree. It''s a great way to learn about different cultures.
+
+    User 2: Yes, it is. I love learning about new cultures.
+
+    User 1: Me too. So, what''s your favorite place to travel?
+
+    User 2: My favorite place to travel is Europe.
+
+    User 1: Oh, that''s nice. I''ve always wanted to go to Europe.
+
+    User 2: You should go! It''s so beautiful.
+
+    User 1: I will! I''m planning to go next year.
+
+    User 2: That''s great! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

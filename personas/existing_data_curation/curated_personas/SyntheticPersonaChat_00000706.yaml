@@ -1,0 +1,72 @@
+id: '00000706'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 706
+data:
+  user 1 personas: 'I like to hunt.
+
+    I love basketball.
+
+    I am not married.
+
+    Have both daughters and sons.
+
+    I like to sing.'
+  user 2 personas: 'I enjoy hiking on glaciers.
+
+    I always seem to be losing things , most recently , my mind.
+
+    I recently moved to sweden.
+
+    Lutefisk is the best dish in the whole world.
+
+    Marduk is my favorite band.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi! I''m (name).
+
+    User 1: Nice to meet you! I''m from (location).
+
+    User 2: Nice to meet you too! I''m from (location).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hike on glaciers, go fishing, and play video games.
+
+    User 1: Oh, that sounds fun! I like to hunt, go to basketball games, and sing.
+
+    User 2: I''ve never been hunting, but I love basketball! What''s your favorite team?
+
+    User 1: I like the Golden State Warriors.
+
+    User 2: They''re a good team! I''m a fan of the Minnesota Timberwolves.
+
+    User 1: Nice! I''ve always wanted to go to a game in Minnesota.
+
+    User 2: You should! It''s a great experience.
+
+    User 1: Yeah, I''ll have to do that sometime.
+
+    User 2: So, what are you up to today?
+
+    User 1: Not much, just hanging out.
+
+    User 2: Same here. I''m trying to find something to do.
+
+    User 1: Well, if you''re looking for something to do, I know a good place to go hiking.
+
+    User 2: Oh, that sounds like fun! Where is it?
+
+    User 1: It''s in (location).
+
+    User 2: Oh, that''s not too far from me. I might check it out.
+
+    User 1: Yeah, you should! It''s a really beautiful place.
+
+    User 2: Thanks for the recommendation! I''ll let you know if I go.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

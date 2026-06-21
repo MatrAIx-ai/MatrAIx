@@ -1,0 +1,80 @@
+id: 00003871
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3871
+data:
+  user 1 personas: 'My sister is a guitarist.
+
+    I work as a tutor for english literature.
+
+    I like going barefoot.
+
+    My favorite book is jane austins pride and prejudice.
+
+    I can knit.'
+  user 2 personas: 'I like lizards.
+
+    I wish i could live in a fantasy world.
+
+    I draw during classes instead of taking notes.
+
+    I have long hair for a boy.
+
+    I do not have many friends.'
+  Best Generated Conversation: 'User 1: Hi! My name is User 1.
+
+    User 2: Hi! I''m User 2. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too! What do you do for a living?
+
+    User 2: I''m a student.
+
+    User 1: Oh, what are you studying?
+
+    User 2: I''m studying music.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play an instrument.
+
+    User 2: It''s a lot of fun! I play the guitar.
+
+    User 1: That''s awesome! My sister is a guitarist too.
+
+    User 2: Really? That''s cool! Do you play any instruments?
+
+    User 1: I don''t, but I''ve always wanted to learn how to play the piano.
+
+    User 2: You should! It''s a great instrument to learn.
+
+    User 1: Maybe I will.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go hiking, read, and knit.
+
+    User 2: I like to draw, go to the movies, and play video games.
+
+    User 1: That''s cool! I like video games too.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I like the Zelda games.
+
+    User 2: Me too! They''re so much fun.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. Maybe I''ll go for a hike.
+
+    User 2: That sounds like a good idea.
+
+    User 1: Yeah, it does.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00001037'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1037
+data:
+  user 1 personas: 'I like football.
+
+    We drink beer and eat food.
+
+    My friends like watching it to.
+
+    Its great fun.'
+  user 2 personas: 'Before i die , i want to skydive.
+
+    I have a pet snake.
+
+    My dream is to move to the middle of the desert.
+
+    I start an internship in engineering later this year.
+
+    I am a famous video game character online.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to skydive, play video games, and work on engineering projects.
+
+    User 1: Wow, skydiving sounds like a lot of fun! I''ve never done it before.
+
+    User 2: It is! It''s a great adrenaline rush.
+
+    User 1: What do you like about video games?
+
+    User 2: I like that they can be so immersive and creative. I also like the challenge of trying to beat a difficult game.
+
+    User 1: I know what you mean! I love the feeling of accomplishment when you finally beat a hard boss.
+
+    User 2: Me too! What kind of games do you like to play?
+
+    User 1: I like all kinds of games, but I especially like RPGs and platformers.
+
+    User 2: I love RPGs too! I''m really looking forward to the new Elder Scrolls game.
+
+    User 1: Me too! I''m hoping it''s as good as Skyrim.
+
+    User 2: Me too! I''m also excited about the new Mario game.
+
+    User 1: Mario games are always fun!
+
+    User 2: They are! I love the way they can be enjoyed by both adults and children.
+
+    User 1: I agree! They''re always a good time.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: Not much, just hanging out with friends.
+
+    User 2: Sounds fun! I''m going to be working on a new engineering project.
+
+    User 1: That sounds cool! What kind of project?
+
+    User 2: I''m building a robot that can do backflips.
+
+    User 1: That''s awesome! I''d love to see it when it''s finished.
+
+    User 2: I''ll be sure to send you a video.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

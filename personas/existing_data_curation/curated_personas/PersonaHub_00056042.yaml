@@ -1,0 +1,19 @@
+id: '00056042'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56042
+persona_description: A physical therapist who specializes in the assessment and treatment of low back pain. They are skilled in conducting the Back Assessment Tool (BAT-Back) to identify safety behaviors
+  and beliefs of patients, as well as their tendency to avoid certain movements. They are experienced in using the BAT-Back to generate hypotheses about the cause of the patient's pain and to develop a
+  better understanding of the patient's thoughts and beliefs. They are also skilled in conducting other tests and treatments for low back pain, but the BAT-Back is their primary tool for assessing patient
+  pain and behavior. They are aware of the limitations and assumptions of the BAT-Back and are skilled in using it in a clinical setting.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: physical therapy
+  general_domain_top01pct: None
+  specific_domain_top01pct: low back pain treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

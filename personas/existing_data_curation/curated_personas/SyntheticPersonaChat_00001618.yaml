@@ -1,0 +1,80 @@
+id: 00001618
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1618
+data:
+  user 1 personas: 'I have black hair.
+
+    I enjoy the outdoors.
+
+    I am a cheerleader.
+
+    I live on a ranch.
+
+    I am 21 years old.'
+  user 2 personas: 'I own 3 cats.
+
+    I drive a honda car.
+
+    I love candy.
+
+    I deliver packages for a living.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a package delivery driver.
+
+    User 1: Oh, that sounds like a fun job!
+
+    User 2: It''s okay. I''m not really a people person, so it can be a bit lonely sometimes.
+
+    User 1: I know what you mean. I''m a cheerleader, so I''m always around people. It can be exhausting.
+
+    User 2: I can imagine. But I bet it''s a lot of fun.
+
+    User 1: It is! I love being able to make people smile.
+
+    User 2: That''s great! What do you like to do outside of work?
+
+    User 1: I love spending time outdoors. I go hiking, camping, fishing, and swimming.
+
+    User 2: That sounds amazing! I wish I could do more outdoorsy things.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: I know, I know. I''ll try to do more of that.
+
+    User 1: You should! And if you ever need a hiking buddy, just let me know.
+
+    User 2: Thanks! I will.
+
+    User 1: So, what do you like to do with your cats?
+
+    User 2: I love to play with them and cuddle with them. They''re my best friends.
+
+    User 1: I love cats too! I have two cats of my own.
+
+    User 2: Oh, that''s awesome! What are their names?
+
+    User 1: Their names are Mittens and Snowball.
+
+    User 2: Those are great names!
+
+    User 1: Thanks!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to watch movies, read books, and listen to music.
+
+    User 2: Me too! I love all of those things.
+
+    User 1: It''s nice to meet someone who has similar interests.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

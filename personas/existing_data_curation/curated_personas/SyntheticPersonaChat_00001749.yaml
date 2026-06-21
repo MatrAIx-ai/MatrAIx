@@ -1,0 +1,58 @@
+id: 00001749
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1749
+data:
+  user 1 personas: 'My eyes are green.
+
+    I wear glasses that are cateye.
+
+    I want to be a librarian.'
+  user 2 personas: 'My son plays on the local football team.
+
+    My wife recently got laid off from her human resources job.
+
+    I design video games for a living.
+
+    I have been on the design team for over 65 video games.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I''m a video game designer.
+
+    User 1: Oh, that''s cool! What games have you designed?
+
+    User 2: I''ve worked on over 65 video games, but my most recent one is called "The Witcher 3: Wild Hunt."
+
+    User 1: I''ve heard of that game! It''s supposed to be really good.
+
+    User 2: It is! It''s one of my favorite games that I''ve ever worked on.
+
+    User 1: What''s it like to design video games?
+
+    User 2: It''s a lot of fun! I get to be creative and come up with new ideas all the time.
+
+    User 1: That sounds great! I wish I could do something creative for a living.
+
+    User 2: You can! There are a lot of different ways to be creative in the workplace.
+
+    User 1: I know, but I''m not sure what I want to do.
+
+    User 2: Well, what do you like to do?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: You could be a writer or a librarian!
+
+    User 1: I''ve thought about being a librarian, but I''m not sure if I''m smart enough.
+
+    User 2: You don''t have to be smart to be a librarian! You just have to be organized and love books.
+
+    User 1: I do love books! I think I''m going to look into being a librarian.
+
+    User 2: That''s great! I''m sure you''d be a great librarian.
+
+    User 1: Thank you! I''m excited to start looking into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

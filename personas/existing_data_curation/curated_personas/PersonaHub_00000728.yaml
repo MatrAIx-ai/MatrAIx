@@ -1,0 +1,18 @@
+id: 00000728
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 728
+persona_description: A healthcare professional with expertise in cancer diagnosis and treatment, specifically focusing on the lymphatic system and its role in cancer spread. This individual is likely to
+  be interested in reading about the structure and function of lymph nodes, the mechanisms by which cancer cells can infiltrate and metastasize, and the latest advancements in lymph node imaging and treatment
+  strategies. This persona would be interested in understanding the role of lymph nodes in the immune system and how they can be used as diagnostic tools in cancer detection.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: lymph node oncology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

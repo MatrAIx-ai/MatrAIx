@@ -1,0 +1,58 @@
+id: '00003137'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3137
+data:
+  user 1 personas: 'I like to watch movies.
+
+    I like all types of music.
+
+    I like to draw.
+
+    I am a mother of 5.'
+  user 2 personas: 'I eat healthy.
+
+    I make straight as.
+
+    I am very social.
+
+    I am a high school student.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing great! How about you?
+
+    User 1: I''m good, thanks! What do you like to do for fun?
+
+    User 2: I like to watch movies, listen to music, and draw.
+
+    User 1: Those are all great things to do! I love movies too. What''s your favorite movie?
+
+    User 2: I have a few favorite movies, but one of my favorites is The Shawshank Redemption. It''s such a heartwarming and inspiring story.
+
+    User 1: I love that movie too! It''s one of my favorites as well. What kind of music do you like to listen to?
+
+    User 2: I like a lot of different types of music, but my favorite is probably rock music. I love the energy and passion of it.
+
+    User 1: I love rock music too! It''s so exciting and fun. What kind of drawing do you like to do?
+
+    User 2: I like to draw all sorts of things, but I''m especially fond of drawing animals. I love capturing their beauty and personality in my drawings.
+
+    User 1: I love animals too! I have five dogs of my own.
+
+    User 2: That''s so great! I love dogs too. I have a cat and a fish.
+
+    User 1: I''m sure they''re both very cute.
+
+    User 2: They are! They''re my best friends.
+
+    User 1: I''m glad to hear that. Well, I have to go now, but it was nice chatting with you.
+
+    User 2: You too! I hope we can chat again sometime.
+
+    User 1: Me too! Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

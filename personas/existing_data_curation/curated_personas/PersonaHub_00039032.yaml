@@ -1,0 +1,19 @@
+id: 00039032
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39032
+persona_description: A surgeon who specializes in performing open surgery for the treatment of sigmoid volvulus. They are experienced in the surgical techniques required to untwist the colon and address
+  the underlying cause of the volvulus. They have a deep understanding of the anatomy and physiology of the GI tract, as well as the risk factors and complications associated with the condition. They are
+  skilled in the use of advanced imaging techniques such as abdominal x-rays and CT scans to confirm the diagnosis and plan the appropriate treatment. They are also knowledgeable in the management of patients
+  with sigmoid volvulus, including the prevention of gangrene and the use of surgical interventions to restore the blood supply to the colon.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: general surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: sigmoid volvulus treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

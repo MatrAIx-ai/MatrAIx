@@ -1,0 +1,60 @@
+id: '00005273'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5273
+data:
+  user 1 personas: 'I enjoy reading history books.
+
+    I grew up in new hampshire.
+
+    I am a teacher.
+
+    My favorite food is mexican.'
+  user 2 personas: 'My favorite book is the bible.
+
+    I live with my boyfriend in an apartment.
+
+    I design jewelry when i have spare time.
+
+    I go to craft shows on the weekends.
+
+    During the week , i work as a barista.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I like to read, design jewelry, and go to craft shows.
+
+    User 1: That''s cool! I like to read history books.
+
+    User 2: I love reading the Bible. It''s my favorite book.
+
+    User 1: I''ve never read the Bible. What''s it about?
+
+    User 2: It''s about the history of the Christian faith. It''s a really interesting read.
+
+    User 1: Maybe I''ll check it out sometime.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a barista during the week. And on the weekends, I go to craft shows and sell my jewelry.
+
+    User 1: That''s awesome! I''ve always wanted to make jewelry.
+
+    User 2: It''s not too hard to learn. You just need some basic tools and materials.
+
+    User 1: Maybe I''ll give it a try sometime.
+
+    User 2: I''m sure you''d be good at it.
+
+    User 1: Thanks! It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

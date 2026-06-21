@@ -1,0 +1,18 @@
+id: 00008058
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8058
+persona_description: A NASA engineer who specializes in the development and operation of spacecraft, particularly those used for missions to Mars. They are responsible for designing, building, and testing
+  the third stage of the spacecraft, which is responsible for providing the majority of the velocity change needed to leave Earth's gravitational pull and to inject the spacecraft onto a trajectory to Mars.
+  They are also responsible for ensuring the spacecraft stays on course and that the motor flies in the same direction while it is thrusting, using a spin-stabilized approach.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: spacecraft design and operation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

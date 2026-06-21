@@ -1,0 +1,111 @@
+id: '00003270'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3270
+data:
+  user 1 personas: 'My weakness are sweets.
+
+    I am male.
+
+    I am unsociable.
+
+    I live to not disappoint my loved ones.
+
+    I am a jack of all , master of none.'
+  user 2 personas: 'I enjoy home cooked meals.
+
+    I like long walks on the beach.
+
+    My favorite music genre is pop.
+
+    My favorite color is blue.
+
+    My favorite tv show is game of thrones.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to go for long walks on the beach, listen to pop music, and watch Game of Thrones.
+
+    User 1: Oh, I like those things too! I love going for walks on the beach, and I''m a big fan of Game of Thrones.
+
+    User 2: That''s great! We should go for a walk on the beach sometime.
+
+    User 1: That sounds like fun! I''m free this weekend.
+
+    User 2: Me too! Let''s go this Saturday morning.
+
+    User 1: Okay, I''ll pick you up at 10am.
+
+    User 2: Sounds good! See you then.
+
+    User 1: See you!
+
+    *Saturday morning*
+
+
+    User 1: Hi, [user 2''s name].
+
+    User 2: Hi, [user 1''s name].
+
+    User 1: I''m here to take you for our walk on the beach.
+
+    User 2: Great! I''m ready to go.
+
+    *The two walk to the beach*
+
+
+    User 1: This is a beautiful day for a walk on the beach.
+
+    User 2: It is. The sun is shining, and the waves are crashing.
+
+    User 1: It''s the perfect day to relax.
+
+    User 2: I agree.
+
+    *The two walk for a while, enjoying the scenery and each other''s company*
+
+
+    User 1: This is really nice. I''m glad we decided to do this.
+
+    User 2: Me too. This is my favorite way to relax.
+
+    User 1: I can see why. It''s so peaceful and calming.
+
+    User 2: It is. I love coming here to clear my head.
+
+    User 1: I can understand that. It''s a great place to escape from the stress of everyday life.
+
+    User 2: Exactly.
+
+    *The two continue to walk for a while longer, enjoying the conversation and the company of each other*
+
+
+    User 1: I think it''s time to head back.
+
+    User 2: Okay. I''ve had a great time.
+
+    User 1: Me too. We should do this again sometime.
+
+    User 2: I''d love that.
+
+    *The two walk back to the car and drive home*
+
+
+    User 1: I had a really great time today. Thanks for going on the walk with me.
+
+    User 2: Me too. It was a lot of fun.
+
+    User 1: We should do it again sometime.
+
+    User 2: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

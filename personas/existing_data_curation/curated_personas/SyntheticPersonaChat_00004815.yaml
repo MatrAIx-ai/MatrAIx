@@ -1,0 +1,60 @@
+id: 00004815
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4815
+data:
+  user 1 personas: 'I work in an animal shelter.
+
+    I speak fluent french.
+
+    My mother works at a bank.
+
+    I have never met my father.'
+  user 2 personas: 'My father was a driver himself.
+
+    I work on semi trucks for a living.
+
+    I got off the road when i married my sweetheart.
+
+    My motor never stops running.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I work in an animal shelter.
+
+    User 2: Hi, I''m [name]. I work on semi trucks for a living.
+
+    User 1: That''s cool! I''ve always been interested in trucks.
+
+    User 2: Yeah, they''re pretty cool. I''ve been driving them for a long time now.
+
+    User 1: What do you like most about it?
+
+    User 2: I like the freedom of being on the road. I also like the challenge of driving a big rig.
+
+    User 1: I can imagine. I''ve never driven a truck before, but I''m sure it''s a lot different than driving a car.
+
+    User 2: Yeah, it definitely is. You have to be a lot more careful and aware of your surroundings.
+
+    User 1: So, what''s your favorite part of the job?
+
+    User 2: I like getting to meet new people and seeing new places. I''ve been all over the country and met a lot of interesting people.
+
+    User 1: That sounds like a lot of fun. I''m sure it''s a great way to see the country.
+
+    User 2: Yeah, it is. I''ve seen a lot of things I would never have seen if I didn''t drive a truck.
+
+    User 1: That''s awesome. I''m glad you enjoy your job.
+
+    User 2: Me too. It''s a great job.
+
+    User 1: So, what''s your least favorite part of the job?
+
+    User 2: My least favorite part is being away from home for long periods of time. I miss my family and friends.
+
+    User 1: I can imagine. That must be hard.
+
+    User 2: Yeah, it can be. But I know it''s worth it for the job that I love.
+
+    User 1: I''m sure it is. It sounds like you have a great job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

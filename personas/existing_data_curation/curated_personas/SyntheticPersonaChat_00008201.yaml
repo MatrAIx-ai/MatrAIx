@@ -1,0 +1,82 @@
+id: 00008201
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8201
+data:
+  user 1 personas: 'I had to call 911 when i had a terrible headache.
+
+    I never learned how to write.
+
+    I use to own 6 cats.
+
+    I can only see 200 feet in front of me.
+
+    I got married to my highschool friend.'
+  user 2 personas: 'I don t know if i enjoy programming , or if it s my only choice.
+
+    I wear cardigans because i hope it makes me look more cultured.
+
+    I had one step dad , and fortunately he ignored me.
+
+    I hate that i got my brain from the dad i never met.
+
+    My last name is spanish , but i tell people that it s italian.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and read.
+
+    User 1: Oh, me too! What kind of video games do you play?
+
+    User 2: I like to play RPGs and puzzle games.
+
+    User 1: Nice! I like those too. I''m playing a lot of Elder Scrolls Online right now.
+
+    User 2: Oh, I''ve never played that one. Is it good?
+
+    User 1: Yeah, it''s really good! It''s a big open world game with a lot of things to do.
+
+    User 2: That sounds cool! I might have to check it out.
+
+    User 1: You should! It''s free to play, so you don''t have anything to lose.
+
+    User 2: Okay, I''ll check it out. Thanks for the recommendation!
+
+    User 1: No problem! So, what''s your favorite kind of books?
+
+    User 2: I like all kinds of books, but I especially like fantasy and science fiction.
+
+    User 1: Me too! I love getting lost in a good book.
+
+    User 2: Me too! I love getting lost in a different world.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading the Wheel of Time series by Robert Jordan.
+
+    User 1: Oh, I''ve heard good things about that series. Is it good?
+
+    User 2: It''s really good! It''s a long series, but it''s worth the read.
+
+    User 1: Okay, I''ll have to check it out.
+
+    User 2: You should! It''s a great series.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a programmer.
+
+    User 1: Oh, cool! I''ve always wanted to learn how to program.
+
+    User 2: It''s not that hard! There are a lot of great resources online.
+
+    User 1: Okay, I''ll have to look into it.
+
+    User 2: You should! It''s a great skill to have.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

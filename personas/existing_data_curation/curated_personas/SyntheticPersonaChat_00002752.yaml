@@ -1,0 +1,76 @@
+id: '00002752'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2752
+data:
+  user 1 personas: 'I do yoga on tuesdays.
+
+    I work five days a week.
+
+    I go to the pool every thursday for three hours.
+
+    I do not have children.
+
+    I enjoy shopping.'
+  user 2 personas: 'My favorite band is one direction.
+
+    My name is mary and i am from colorado.
+
+    I love to ski in the winter.
+
+    The weather here is very cold , but so beautiful in the spring.
+
+    I love to hike in the summer.'
+  Best Generated Conversation: 'User 1: Hi Mary, I''m [name].
+
+    User 2: Hi [name], nice to meet you.
+
+    User 1: I love shopping too! Where do you like to shop?
+
+    User 2: I love to go to the mall, especially during the holidays. There are so many good sales!
+
+    User 1: I know, right? It''s the best time to buy clothes.
+
+    User 2: What kind of clothes do you like to buy?
+
+    User 1: I like to buy dresses, skirts, and pants. I like to look cute and stylish.
+
+    User 2: Me too! I love to wear dresses and skirts.
+
+    User 1: What kind of music do you like?
+
+    User 2: I love One Direction! They''re my favorite band.
+
+    User 1: I love them too! I''ve seen them in concert three times.
+
+    User 2: Wow, you''re lucky! I''ve only seen them once.
+
+    User 1: They''re really good live.
+
+    User 2: I know, right?
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to ski in the winter, hike in the summer, and go to the pool in the summer.
+
+    User 1: I love to ski too! I''ve been skiing since I was a little kid.
+
+    User 2: Me too! I love the feeling of going down a mountain on skis.
+
+    User 1: Me too! It''s so much fun.
+
+    User 2: I know, right?
+
+    User 1: So, where do you like to ski?
+
+    User 2: I like to ski in Colorado. The weather is perfect for skiing there.
+
+    User 1: I know, right? I love skiing in Colorado too.
+
+    User 2: It''s the best!
+
+    User 1: It is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

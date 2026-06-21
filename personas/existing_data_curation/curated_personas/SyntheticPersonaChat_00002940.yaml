@@ -1,0 +1,72 @@
+id: 00002940
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2940
+data:
+  user 1 personas: 'My best friend is gay.
+
+    I am in school to be a computer engineer.
+
+    One day i hope to own my own company.
+
+    My passion is in programming.'
+  user 2 personas: 'I could eat meatloaf every night and never get tired of it.
+
+    I can t get enough of lindsey stirling s music.
+
+    I smoke two packs of cigarettes most days.
+
+    I enjoy putting alcohol in my coffee.
+
+    If i were to be reincarnated , i d want to come back as a hippopotamus.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi [User 1''s name], I''m [User 2''s name].
+
+    User 1: What are you interested in?
+
+    User 2: I love music, meatloaf, and hippos.
+
+    User 1: Oh, I love meatloaf too! What''s your favorite kind?
+
+    User 2: I like it with gravy and mashed potatoes.
+
+    User 1: That sounds delicious! I''m not sure I''ve ever had it with gravy before.
+
+    User 2: You should try it! It''s really good.
+
+    User 1: I will! What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite is Lindsey Stirling.
+
+    User 1: Oh, I love her too! She''s so talented.
+
+    User 2: I know, right? She''s amazing.
+
+    User 1: What do you like about her music?
+
+    User 2: I love her violin playing and her choreography. She''s so creative.
+
+    User 1: Me too! I love how she combines classical music with modern dance.
+
+    User 2: Me too! She''s really unique.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s great! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That must be fun! I love working with kids.
+
+    User 2: It is! I love watching them learn and grow.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: Thanks! I do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

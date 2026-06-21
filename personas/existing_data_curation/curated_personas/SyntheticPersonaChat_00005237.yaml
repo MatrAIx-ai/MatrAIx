@@ -1,0 +1,80 @@
+id: '00005237'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5237
+data:
+  user 1 personas: 'I am looking for a second job.
+
+    Running is a hobby.
+
+    My favorite band is pink floyd.
+
+    I work as a grill cook.'
+  user 2 personas: 'I like to go to comic con.
+
+    I write short films.
+
+    I am a lesbian.
+
+    I play the guitar.'
+  Best Generated Conversation: 'User 1: Hey! I''m (user 1).
+
+    User 2: Hi! I''m (user 2).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to comic con, write short films, and play the guitar.
+
+    User 1: Cool! I like to run and listen to Pink Floyd.
+
+    User 2: I''ve never been to comic con, but I''ve heard it''s a lot of fun. What''s your favorite thing about it?
+
+    User 1: I love dressing up as my favorite characters and meeting new people.
+
+    User 2: That sounds like a lot of fun! I''ve always wanted to try it.
+
+    User 1: You should! It''s a great way to meet new people and have fun.
+
+    User 2: Maybe I will one day.
+
+    User 1: Do you have any short films I can watch?
+
+    User 2: Sure! I have a few on my YouTube channel.
+
+    User 1: Cool! I''ll check them out.
+
+    User 2: Thanks! I hope you like them.
+
+    User 1: I''m sure I will.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a grill cook at a local restaurant.
+
+    User 2: Oh, cool! I''ve always wanted to be a chef.
+
+    User 1: It''s not as easy as it looks, but it''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are you looking for in a second job?
+
+    User 2: I''m not sure yet. I''m just looking for something that''s flexible and pays well.
+
+    User 1: I see. Well, I hope you find something soon.
+
+    User 2: Thanks! Me too.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to comic con or hang out with friends.
+
+    User 1: That sounds like a lot of fun. I''m going to Comic Con.
+
+    User 2: Oh, cool! Have fun!
+
+    User 1: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

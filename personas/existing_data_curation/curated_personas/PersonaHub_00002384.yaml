@@ -1,0 +1,18 @@
+id: 00002384
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2384
+persona_description: A computer security professional who is knowledgeable about malware detection and infection prevention. They have experience with F-Secure security products and are familiar with the
+  F-Secure Knowledge Base and F-Secure Community site for further assistance. They are also familiar with the Worm:W32/AutoRun family of worms and their infection methods, including the autorun.inf file
+  created by the worm. They are skilled in using generic detections to identify and analyze malware, including autorun.inf files.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: malware detection and prevention
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

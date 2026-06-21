@@ -1,0 +1,19 @@
+id: 00039546
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39546
+persona_description: A medical professional with expertise in the diagnosis and treatment of sleep apnea. They are familiar with the physiological and clinical aspects of the condition and have conducted
+  research on its association with insulin resistance and diabetic neuropathy. They are also aware of the impact of OSA on hypertension and central obesity. They have experience in evaluating patients with
+  OSA and interpreting the results of their physical exams and laboratory tests. They are skilled in using regression models to diagnose OSA and have a deep understanding of the factors that contribute
+  to the condition.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: sleep apnea
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

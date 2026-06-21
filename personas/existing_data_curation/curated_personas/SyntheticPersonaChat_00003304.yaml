@@ -1,0 +1,54 @@
+id: '00003304'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3304
+data:
+  user 1 personas: 'I am a registered nurse.
+
+    I have two smartphones.
+
+    My favorite movie is pretty woman.
+
+    I am a vegan.'
+  user 2 personas: 'I prefer winter.
+
+    I love the rain.
+
+    I sleep on a single bed.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hey, I''m a registered nurse. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom, but I used to be a teacher.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, knit, and cook.
+
+    User 1: Me too! I''m a big fan of Pretty Woman. What''s your favorite movie?
+
+    User 2: I love The Princess Bride!
+
+    User 1: That''s a great movie! I''m vegan, do you eat meat?
+
+    User 2: I do, but I''m trying to eat less of it.
+
+    User 1: That''s good! I''m trying to eat more fruits and vegetables.
+
+    User 2: I love fruits and vegetables! I love to cook with them.
+
+    User 1: Me too! I love making salads and smoothies.
+
+    User 2: I love smoothies too! They''re so refreshing.
+
+    User 1: I know, right? They''re the best!
+
+    User 2: I agree!
+
+    User 1: It was nice meeting you. Maybe we can hang out sometime and cook some vegan food together?
+
+    User 2: That would be great! I''d love to try some vegan recipes.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00001675'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1675
+data:
+  user 1 personas: 'I live in seattle.
+
+    My favorite seafood in lobster.
+
+    I am a software engineer.
+
+    I started at google on an internship.'
+  user 2 personas: 'I race cars for a living.
+
+    I like to play board games.
+
+    I have 4 daughters.
+
+    I am an athlete.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Seattle.
+
+    User 1: Oh, me too! What do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, nice! I''m also a software engineer.
+
+    User 2: What''s your favorite seafood?
+
+    User 1: I love lobster.
+
+    User 2: Me too! I used to work at a seafood restaurant.
+
+    User 1: Oh, that''s cool! What''s your favorite board game?
+
+    User 2: I like to play Monopoly.
+
+    User 1: Me too! I''ve also played Scrabble and Clue.
+
+    User 2: I''ve played Scrabble and Clue too.
+
+    User 1: Do you have any kids?
+
+    User 2: I have four daughters.
+
+    User 1: Oh, that''s a lot of kids! Do you like being a dad?
+
+    User 2: I love it! It''s the best job in the world.
+
+    User 1: I''m glad to hear that!
+
+    User 2: Thanks. What''s your favorite thing about being a software engineer?
+
+    User 1: I like the challenge of solving problems and coming up with new solutions.
+
+    User 2: Me too! It''s a lot of fun.
+
+    User 1: It is!
+
+    User 2: Good chat!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

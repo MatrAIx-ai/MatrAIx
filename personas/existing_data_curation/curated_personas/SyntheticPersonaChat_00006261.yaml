@@ -1,0 +1,66 @@
+id: '00006261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6261
+data:
+  user 1 personas: 'I look down on people who did not.
+
+    I eat out more than three times a week.
+
+    I went to an elite ivy league school.
+
+    I believe the rich should not be taxed as much.
+
+    I work in finance.'
+  user 2 personas: 'I only sleep 3 hours a day.
+
+    I have no parents or siblings.
+
+    I always travel alone.
+
+    My favorite meal is steak.
+
+    I am incredibly smart.'
+  Best Generated Conversation: 'User 1: I''m so glad to meet you. I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a chef.
+
+    User 1: That''s awesome! I love food. What''s your favorite meal to cook?
+
+    User 2: I love making steak.
+
+    User 1: Steak is my favorite meal too! I love how it''s so simple, but still so delicious.
+
+    User 2: I know, right? It''s the perfect meal.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I love to travel.
+
+    User 1: Me too! I''ve been to a few different countries, but I still have so many more to see.
+
+    User 2: I''ve been to all seven continents.
+
+    User 1: Wow, that''s amazing! I''m so jealous.
+
+    User 2: It''s been a lot of fun. I''ve met so many interesting people and seen so many amazing things.
+
+    User 1: I''m sure it has. I''d love to travel more, but I just don''t have the time or the money.
+
+    User 2: I understand. It can be expensive, but it''s worth it.
+
+    User 1: I''m sure it is. Maybe one day I''ll get to travel the world.
+
+    User 2: I hope you do. It''s a great experience.
+
+    User 1: Thanks. I''m glad I met you.
+
+    User 2: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00008500
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8500
+persona_description: A scientist or health advocate who is concerned about the health effects of glyphosate and its impact on the human body. This individual is likely to be knowledgeable about the shikimate
+  pathway, the gut microbiome, and the effects of glyphosate on human health. They are interested in reading about the latest research on glyphosate and its potential health risks, and may be seeking solutions
+  to avoid or reduce glyphosate exposure. They may also be interested in the potential link between glyphosate and food sensitivities.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: toxicology
+  general_domain_top01pct: None
+  specific_domain_top01pct: glyphosate research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,58 @@
+id: 00004758
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4758
+data:
+  user 1 personas: 'I used to be in the marines.
+
+    When i have nothing else to do , i read books.
+
+    I m a vegetarian.
+
+    I work as a bartender.'
+  user 2 personas: 'Paps likes to go mushroom hunting.
+
+    I live with my paps and grandma.
+
+    I have a brown belt in karate.
+
+    I sing in the school chorus.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you do for fun?
+
+    User 2: I like to go mushroom hunting with my paps.
+
+    User 1: That''s really cool! I''ve never been mushroom hunting before.
+
+    User 2: It''s a lot of fun. You should try it sometime.
+
+    User 1: I might just do that. Do you have any advice for beginners?
+
+    User 2: Yeah, just make sure you know what you''re looking for. There are some poisonous mushrooms out there, so it''s important to be careful.
+
+    User 1: Thanks for the advice. I''ll be sure to do my research.
+
+    User 2: No problem. What do you do for fun?
+
+    User 1: I used to be in the marines, but now I work as a bartender. I also like to read books when I have nothing else to do.
+
+    User 2: That''s cool. I''m a vegetarian too.
+
+    User 1: Me too! It''s hard to find good vegetarian food in this town, though.
+
+    User 2: Yeah, I know what you mean. I usually cook my own food.
+
+    User 1: I do too. It''s the best way to be sure you''re getting good ingredients.
+
+    User 2: I agree. Well, it was nice talking to you. I should probably go now.
+
+    User 1: It was nice talking to you too. Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

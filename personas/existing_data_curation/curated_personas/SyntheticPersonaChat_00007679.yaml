@@ -1,0 +1,74 @@
+id: 00007679
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7679
+data:
+  user 1 personas: 'My lifes passion is designer french fries.
+
+    My daily driver is a bicycle that you pedal with your hands.
+
+    I am the leader of the french fry research department at del taco.
+
+    My favorite band is up.'
+  user 2 personas: 'I hate tacos.
+
+    I like to swim.
+
+    I am bald.
+
+    I do not work.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim.
+
+    User 1: That''s cool! I love swimming too. I''m a lifeguard at the local pool.
+
+    User 2: Really? That''s awesome! I''m not very good at swimming, but I''m trying to get better.
+
+    User 1: You should come to the pool sometime and I can give you some lessons.
+
+    User 2: That would be great! Thanks for the offer.
+
+    User 1: No problem! What do you do for work?
+
+    User 2: I don''t work.
+
+    User 1: Oh, why not?
+
+    User 2: I''m not sure. I''ve just never felt the need to work.
+
+    User 1: That''s interesting. I think I''d get bored if I didn''t have anything to do.
+
+    User 2: Maybe so, but I''ve always been the type of person who likes to stay busy. I have a lot of hobbies and interests that keep me occupied.
+
+    User 1: That''s good! It''s important to have hobbies that you enjoy.
+
+    User 2: I agree. I think it''s also important to have a good work ethic.
+
+    User 1: I agree. I think it''s important to be productive and contribute to society.
+
+    User 2: I think so too. I''m glad we agree on that.
+
+    User 1: Me too!
+
+    User 2: So, what do you do for fun besides swim and work?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: That sounds like fun! I like to do all of those things too.
+
+    User 1: We should get together sometime and do some of those things together.
+
+    User 2: That would be great! I''d love to.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

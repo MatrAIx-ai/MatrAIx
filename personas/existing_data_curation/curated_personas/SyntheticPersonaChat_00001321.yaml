@@ -1,0 +1,80 @@
+id: '00001321'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1321
+data:
+  user 1 personas: 'I like to travel.
+
+    I am tall.
+
+    I like to garden.
+
+    I love the outdoors.
+
+    I like to build things.'
+  user 2 personas: 'I work in finance.
+
+    I enjoy playing soccer.
+
+    I live walking distance from work.
+
+    I do not like coffee.
+
+    I rent an apartment.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user1 name].
+
+    User 2: Hi [user1 name], I''m [user2 name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to play soccer, go for walks, and hang out with my friends.
+
+    User 1: Oh, I like to play soccer too! I''m also tall and I love to build things.
+
+    User 2: That''s cool! I''m not very tall, but I do enjoy building things too.
+
+    User 1: What kind of things do you like to build?
+
+    User 2: I like to build furniture, bird houses, and other small projects.
+
+    User 1: That''s awesome! I''ve always wanted to build my own furniture.
+
+    User 2: You should give it a try! It''s really fun and rewarding.
+
+    User 1: I might just do that!
+
+    User 2: Good! I''m sure you''ll make something great.
+
+    User 1: Thanks! So, what do you do for a living?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that sounds interesting. What do you like about it?
+
+    User 2: I like the challenge of it and the fact that I get to help people.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: Thanks! Me too.
+
+    User 1: So, where do you live?
+
+    User 2: I live in a small apartment in the city.
+
+    User 1: Oh, I see. I live in a house in the suburbs.
+
+    User 2: I''ve always wanted to live in the suburbs.
+
+    User 1: It''s nice, but it can be a little boring sometimes.
+
+    User 2: I''m sure it can. But I like the peace and quiet.
+
+    User 1: I can understand that.
+
+    User 2: I''m glad we''re having this conversation. It''s nice to meet someone who''s so different from me.
+
+    User 1: Me too! It''s always interesting to learn about new things and meet new people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

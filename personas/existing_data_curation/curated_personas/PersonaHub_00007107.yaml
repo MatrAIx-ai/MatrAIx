@@ -1,0 +1,19 @@
+id: '00007107'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7107
+persona_description: A software engineer with expertise in distributed systems, specifically focusing on the design and implementation of efficient and secure multi-core systems. They are particularly interested
+  in the impact of resource hogging attacks on multicore processors and the potential solutions to mitigate these risks. They have experience in conducting experiments on real hardware and simulating attacks,
+  and have a keen interest in understanding the implications of such attacks on real-world applications. They are also knowledgeable about the challenges of partitioning applications across cores and the
+  potential risks associated with sharing all cores across partitions.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: distributed systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

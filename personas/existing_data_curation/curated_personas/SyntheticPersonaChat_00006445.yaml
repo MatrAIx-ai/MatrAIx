@@ -1,0 +1,64 @@
+id: '00006445'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6445
+data:
+  user 1 personas: 'I love owning nice office supplies.
+
+    I have always wanted a pot bellied pig.
+
+    My mom teaches kindergarten and my dad is a tax assessor.
+
+    My favorite book is anne of green gables.'
+  user 2 personas: 'I am a high school student.
+
+    I make straight as.
+
+    I eat healthy.
+
+    I am very social.
+
+    I am in the band.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What are you interested in?
+
+    User 2: I''m interested in school, music, and social events.
+
+    User 1: That''s great! I''m interested in office supplies, gardening, and reading.
+
+    User 2: Oh, that''s interesting. What do you like about office supplies?
+
+    User 1: I like the way they look and feel. They''re also very useful.
+
+    User 2: I can see how that would be appealing. I like how office supplies can be used to create something beautiful or useful.
+
+    User 1: Me too! I''ve always wanted a pot bellied pig.
+
+    User 2: That''s a great idea! Pigs are very smart and affectionate animals.
+
+    User 1: Yeah, I think they would be great pets.
+
+    User 2: I''m sure they would be.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is Anne of Green Gables.
+
+    User 1: I''ve heard good things about that book. What''s it about?
+
+    User 2: It''s about a young girl who is sent to live with an elderly brother and sister. She learns to love them and they learn to love her.
+
+    User 1: That sounds like a great book. I''ll have to check it out.
+
+    User 2: I think you''d like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

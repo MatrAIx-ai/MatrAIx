@@ -1,0 +1,82 @@
+id: '00004012'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4012
+data:
+  user 1 personas: 'I like doing art projects.
+
+    I am a strong woman.
+
+    I travel a lot.
+
+    I am married.'
+  user 2 personas: 'I like eating pretzels.
+
+    I work for the railroad.
+
+    I am an omnivore.
+
+    I really like watching star trek.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, watch Star Trek, and eat pretzels.
+
+    User 1: I like to do art projects, travel, and eat chocolate.
+
+    User 2: I''ve never been much of an artist, but I do love chocolate.
+
+    User 1: Me too! I''m a chocolate addict.
+
+    User 2: What''s your favorite kind of chocolate?
+
+    User 1: I love dark chocolate, but I also like milk chocolate.
+
+    User 2: I like both too, but I prefer dark chocolate.
+
+    User 1: What''s your favorite Star Trek episode?
+
+    User 2: I like the one where Spock is trapped in the mirror universe.
+
+    User 1: That''s a good episode. I also like the one where Kirk is trapped in a simulation.
+
+    User 2: I haven''t seen that one. I''ll have to check it out.
+
+    User 1: It''s one of my favorites.
+
+    User 2: I''m sure I''ll like it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work for the railroad.
+
+    User 1: Oh, cool! I''ve never met anyone who works for the railroad before.
+
+    User 2: It''s a lot of fun. I get to travel all over the country.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I love seeing new places.
+
+    User 1: I''m glad you like your job.
+
+    User 2: Thanks! I do.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: I''d like that too.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

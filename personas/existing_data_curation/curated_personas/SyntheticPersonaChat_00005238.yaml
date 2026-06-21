@@ -1,0 +1,76 @@
+id: 00005238
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5238
+data:
+  user 1 personas: 'I am looking for a second job.
+
+    My favorite band is pink floyd.
+
+    My dream is to own my own restaurant.
+
+    I work as a grill cook.'
+  user 2 personas: 'I have many girlfriends.
+
+    I am argentinian.
+
+    I like to ride horses.
+
+    I like to wear boots.
+
+    I like to eat beef.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hola!
+
+    User 1: My name is [User 1''s name]. What''s yours?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for a living?
+
+    User 2: I''m a grill cook.
+
+    User 1: Oh, that''s cool! I''ve always been interested in cooking.
+
+    User 2: It''s a lot of fun, but it can be hard work.
+
+    User 1: I''m sure it can. What''s your favorite thing about cooking?
+
+    User 2: I love being able to create something delicious out of simple ingredients.
+
+    User 1: That''s a great feeling! What''s your favorite dish to cook?
+
+    User 2: I love making steaks.
+
+    User 1: Steaks are delicious! What''s your favorite way to cook them?
+
+    User 2: I like to grill them over charcoal.
+
+    User 1: That''s a great way to cook them. I love the smoky flavor that you get from grilling.
+
+    User 2: Me too! I also like to marinate them in a balsamic vinegar and olive oil mixture.
+
+    User 1: That sounds delicious! I''ll have to try that sometime.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to ride horses.
+
+    User 1: That''s cool! I''ve always wanted to learn how to ride a horse.
+
+    User 2: It''s not too hard to learn. I can teach you if you want.
+
+    User 1: That would be great! I''d love to learn.
+
+    User 2: All right, I''ll teach you sometime.
+
+    User 1: Thanks! I''m excited to learn.
+
+    User 2: You''re welcome! I''m sure you''ll be a great rider.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

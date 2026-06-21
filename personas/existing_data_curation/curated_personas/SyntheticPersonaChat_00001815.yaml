@@ -1,0 +1,64 @@
+id: 00001815
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1815
+data:
+  user 1 personas: 'I am in art school.
+
+    My favorite class is painting.
+
+    I like to work with acrylics.
+
+    I aspire to paint murals.
+
+    I have blonde hair.'
+  user 2 personas: 'I enjoy dressing up to go out clubbing.
+
+    Currently , i am saving up to get some procedures done.
+
+    I do not think my girlfriend understands.
+
+    I hope to one day be happy with myself.
+
+    I love her though.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much! What about you?
+
+    User 1: I''m doing well! I''m in art school right now, and I''m really enjoying it.
+
+    User 2: That''s great! What''s your favorite class?
+
+    User 1: My favorite class is painting. I love working with acrylics.
+
+    User 2: That''s awesome! I''ve always wanted to take a painting class.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go out clubbing. I love dressing up and getting all dolled up.
+
+    User 1: That''s cool! I''ve never been clubbing before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what else are you interested in?
+
+    User 1: I''m also really interested in art. I love to paint and draw.
+
+    User 2: That''s awesome! I love art too.
+
+    User 1: We should go to an art museum together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! We can set it up.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

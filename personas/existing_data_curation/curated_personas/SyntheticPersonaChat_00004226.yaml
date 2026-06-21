@@ -1,0 +1,68 @@
+id: '00004226'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4226
+data:
+  user 1 personas: 'My favorite food is steak.
+
+    I love to run.
+
+    My wife just left me.
+
+    I am a lawyer.
+
+    My favorite city is new york.'
+  user 2 personas: 'I am hoping to find someone to marry me.
+
+    I spend a lot of time on my hair and make up.
+
+    I am an only child.
+
+    I work out to look good.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]. What''s your name?
+
+    User 2: I''m [username]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. Where are you from?
+
+    User 2: I''m from [location].
+
+    User 1: Oh, that''s cool. I''ve never been there. What''s it like?
+
+    User 2: It''s a nice place. It''s a little small, but it''s very peaceful and quiet.
+
+    User 1: That sounds nice. I''m from [location]. It''s a big city, so it''s definitely not as peaceful and quiet as [location].
+
+    User 2: I can imagine. I''ve always wanted to live in a big city.
+
+    User 1: It can be fun, but it can also be very overwhelming.
+
+    User 2: I can see how that would be.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go out with my friends, go to the movies, and shop.
+
+    User 1: Sounds like fun. I like to do those things too.
+
+    User 2: What are you looking for in a partner?
+
+    User 1: I''m looking for someone who is kind, caring, and funny.
+
+    User 2: That sounds good. I''m looking for someone who is ambitious, successful, and good looking.
+
+    User 1: Those are all good qualities to look for in a partner.
+
+    User 2: I think so too.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I was thinking about going to the movies. Do you want to come with me?
+
+    User 2: That sounds like fun. I''d love to go.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

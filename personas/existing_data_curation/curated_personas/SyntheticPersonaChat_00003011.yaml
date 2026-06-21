@@ -1,0 +1,96 @@
+id: '00003011'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3011
+data:
+  user 1 personas: 'I am fluent in spanish.
+
+    I love talking on the phone.
+
+    I have a gambling problem.
+
+    I love to go hiking.'
+  user 2 personas: 'I like to play tennis.
+
+    I am a baker.
+
+    My mother is a dentist.
+
+    I have 2 sisters.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tennis, bake, and spend time with my family.
+
+    User 1: I like to go hiking, talk on the phone, and gamble.
+
+    User 2: Oh, I''ve never been hiking before. What''s it like?
+
+    User 1: It''s great! You get to see beautiful scenery and get some exercise at the same time.
+
+    User 2: That sounds fun. I might have to try it sometime.
+
+    User 1: You should! I''m sure you''d enjoy it.
+
+    User 2: What''s your favorite thing to do when you''re on the phone?
+
+    User 1: I like to talk to my friends and family. I also like to listen to music and play games.
+
+    User 2: What kind of games do you like to play?
+
+    User 1: I like to play word games, puzzle games, and strategy games.
+
+    User 2: I like to play word games too! What''s your favorite word game?
+
+    User 1: I like Scrabble and Boggle. What''s your favorite word game?
+
+    User 2: I like Scrabble too! I also like Bananagrams.
+
+    User 1: I''ve never heard of Bananagrams before. What''s it like?
+
+    User 2: It''s a word game where you have to make words with tiles that are laid out in a grid.
+
+    User 1: That sounds like a lot of fun. I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go shopping, watch movies, and read books.
+
+    User 1: I like to go shopping too! I love trying on new clothes and finding good deals.
+
+    User 2: Me too! I love finding new clothes that I feel good in.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read mystery novels, historical fiction, and romance novels.
+
+    User 1: I like to read mystery novels too! I also like to read historical fiction and nonfiction.
+
+    User 2: I like nonfiction too! I like learning new things.
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a baker. I make cakes, cookies, and other pastries.
+
+    User 1: Oh, that sounds fun! I love baking.
+
+    User 2: It is fun! I love creating delicious treats.
+
+    User 1: What''s your favorite thing to bake?
+
+    User 2: I love baking chocolate chip cookies. They''re my favorite!
+
+    User 1: Chocolate chip cookies are my favorite too!
+
+    User 2: I knew we would get along.
+
+    User 1: I''m sure we will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

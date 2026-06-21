@@ -1,0 +1,17 @@
+id: '00023036'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23036
+persona_description: A healthcare professional who is interested in determining the prevalence and sensitivity, specificity, positive predictive value, and negative predictive value of a particular test
+  for a given population, such as a population of people with syphilis. They are interested in conducting a test and analyzing the results to determine the accuracy and reliability of the test.
+expertise:
+  general_domain_top1pct: statistics
+  specific_domain_top1pct: biostatistics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

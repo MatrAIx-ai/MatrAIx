@@ -1,0 +1,18 @@
+id: 00025963
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25963
+persona_description: A healthcare professional with expertise in bone cancer diagnosis and staging, who uses a wide range of tests and procedures to classify and evaluate the stage of the cancer. They are
+  highly trained in the latest medical techniques and have extensive knowledge in the field of oncology. Their goal is to provide personalized treatment plans for their patients based on their specific
+  needs and circumstances.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bone cancer diagnosis and staging
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

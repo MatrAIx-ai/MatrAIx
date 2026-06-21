@@ -1,0 +1,60 @@
+id: 00008831
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8831
+data:
+  user 1 personas: 'I likw to go to the farmers markets to buy local veggies and fruits.
+
+    I help my neighbor.
+
+    I live in a city.
+
+    I am a grandmother.
+
+    I have a dog and we go for walks.'
+  user 2 personas: 'I have a pomeranian.
+
+    My older sister plays clarinet.
+
+    I play the violin.
+
+    I have entered into many violin competitions before and have placed in a few of them.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello!
+
+    User 1: I see that you have a Pomeranian dog. What''s his/her name?
+
+    User 2: His name is Toby, he''s a very good boy.
+
+    User 1: I''m sure he is! I have a dog too, his name is Milo.
+
+    User 2: Milo! That''s a great name for a dog.
+
+    User 1: Thanks! He''s a golden retriever.
+
+    User 2: I love golden retrievers! They''re so friendly and lovable.
+
+    User 1: They are! Milo is a big sweetheart.
+
+    User 2: I bet he is. I like to take Toby for walks in the park.
+
+    User 1: Me too! Milo and I go for walks in the park every day.
+
+    User 2: That''s so nice. I''m sure Milo loves it.
+
+    User 1: He does! It''s his favorite thing to do.
+
+    User 2: It''s so great to have a dog. They''re so loyal and loving.
+
+    User 1: They are! They''re the best pets.
+
+    User 2: I agree. I can''t imagine my life without Toby.
+
+    User 1: Me neither! Milo is my best friend.
+
+    User 2: I can see why! Dogs are the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

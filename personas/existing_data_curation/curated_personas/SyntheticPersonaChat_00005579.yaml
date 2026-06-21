@@ -1,0 +1,62 @@
+id: 00005579
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5579
+data:
+  user 1 personas: 'I like long walks on the beach.
+
+    I love rock climbing.
+
+    I drive a honda civic.
+
+    My favorite movie is django unchained.'
+  user 2 personas: 'I am a cyclist.
+
+    My father used to be a cop.
+
+    I work at a restaurant as waiter.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to go cycling! I''ve been riding bikes since I was a kid, and I love the feeling of the wind in my hair and the sun on my face.
+
+    User 1: That sounds really fun! I''ve never been much of a cyclist, but I''ve always wanted to try it.
+
+    User 2: You should definitely give it a try! It''s a great way to get exercise and explore your surroundings.
+
+    User 1: I think I will! Thanks for the recommendation.
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I love to go rock climbing! It''s a really challenging and exciting sport, and it''s a great way to get in shape.
+
+    User 2: That sounds really cool! I''ve always wanted to try rock climbing, but I''ve never had the chance.
+
+    User 1: You should definitely try it! It''s a lot of fun, and it''s a great way to meet new people.
+
+    User 2: I think I will! Thanks for the recommendation.
+
+    User 1: No problem! What do you do for work?
+
+    User 2: I work as a waiter at a restaurant. I love it because I get to meet new people and I get to be creative with my food.
+
+    User 1: That sounds like a fun job! I''ve always wanted to be a waiter, but I''m not sure if I''m good enough with people.
+
+    User 2: It''s not that hard! You just have to be friendly and helpful.
+
+    User 1: I think I could do that!
+
+    User 2: I''m sure you could! What''s your favorite food?
+
+    User 1: My favorite food is pizza! I love how it''s so easy to customize and there are so many different toppings to choose from.
+
+    User 2: That''s my favorite food too! I love pizza so much that I could eat it every day.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

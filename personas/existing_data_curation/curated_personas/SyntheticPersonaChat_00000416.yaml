@@ -1,0 +1,61 @@
+id: '00000416'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 416
+data:
+  user 1 personas: 'I am divorced.
+
+    I am a nurse.
+
+    My favorite drink is dr pepper.
+
+    I enjoy reading.
+
+    I work in the emergency room.'
+  user 2 personas: 'I am a deaf man.
+
+    I sometimes scratch my nose for fun.
+
+    I love to read books.
+
+    My favorite number is 7.
+
+    I never learned how to drive.'
+  Best Generated Conversation: 'User 1: Hi! I''m a nurse.
+
+    User 2: I''m a deaf man.
+
+    User 1: Oh, that''s interesting. What''s it like being deaf?
+
+    User 2: It''s not that bad. I''ve learned to live with it.
+
+    User 1: That''s good. What do you do for fun?
+
+    User 2: I love to read books.
+
+    User 1: That''s great! I love reading too. What''s your favorite book?
+
+    User 2: My favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: I''ve never heard of that book. What''s it about?
+
+    User 2: It''s about a guy named Arthur Dent who is saved by his friend Ford Prefect, who is actually an alien who was living on Earth undercover. They travel the galaxy together and get into a lot of
+    adventures.
+
+    User 1: That sounds like a really fun book! I might have to check it out.
+
+    User 2: I highly recommend it!
+
+    User 1: So, what are you doing now?
+
+    User 2: I''m just sitting here reading my book.
+
+    User 1: That sounds nice. I''m going to go get a drink of Dr. Pepper.
+
+    User 2: Okay, have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

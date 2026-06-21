@@ -1,0 +1,58 @@
+id: 00002986
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2986
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    My mother is dead.
+
+    I enjoy being alone.
+
+    I married my highschool sweetheart.'
+  user 2 personas: 'I have a pet snake.
+
+    My dream is to move to the middle of the desert.
+
+    I am a famous video game character online.
+
+    I start an internship in engineering later this year.'
+  Best Generated Conversation: 'User 1: Hi, I''m Alex.
+
+    User 2: Hi, Alex, I''m John.
+
+    User 1: It''s nice to meet you, John. What do you do for a living?
+
+    User 2: I''m an engineering intern at Google. What about you?
+
+    User 1: I''m a yoga instructor.
+
+    User 2: Oh, that''s cool! I''ve always wanted to try yoga.
+
+    User 1: It''s a great way to relax and get in shape.
+
+    User 2: I''m sure it is. I''m more of an adrenaline junkie, myself. I love going hiking and skiing.
+
+    User 1: I love hiking too! I''ve never been skiing, though.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: I''ll have to give it a try. What about your pet snake?
+
+    User 2: His name is Noodle. He''s a ball python.
+
+    User 1: Oh, I love ball pythons! I used to have one when I was a kid.
+
+    User 2: Really? What was his name?
+
+    User 1: His name was Oscar. He was a great pet.
+
+    User 2: I''m glad to hear that. It sounds like you''ve had some great pets in your life.
+
+    User 1: I have. I''m a big animal lover.
+
+    User 2: Me too. I''m glad we''re both animal lovers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

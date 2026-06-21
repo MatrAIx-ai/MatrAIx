@@ -1,0 +1,50 @@
+id: 00002893
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2893
+data:
+  user 1 personas: 'I practice yoga daily.
+
+    I am a vegan.
+
+    I have a marketing job.
+
+    I also meditate a lot.'
+  user 2 personas: 'Formal situations make me uncomfortable.
+
+    I have over 4000 friends on facebook.
+
+    I live alone.
+
+    I enjoy hitchhiking.'
+  Best Generated Conversation: 'User 1: Hello, what do you do for fun?
+
+    User 2: I enjoy hitchhiking, it can be a really fun way to travel and meet new people.
+
+    User 1: That sounds interesting, I''ve never done it before. Do you have any tips for getting started?
+
+    User 2: Sure, the best way to get started is to just do it! There are lots of resources online that can help you learn how to hitchhike safely.
+
+    User 1: Thanks, I''ll check those out. What''s your favorite place to hitchhike to?
+
+    User 2: I love hitching to new places, but my favorite place to hitchhike to is the beach. There''s something about being in the ocean that just makes me feel relaxed.
+
+    User 1: I can understand that, I love the beach too. Do you have any other hobbies?
+
+    User 2: I practice yoga daily, and I also meditate a lot. I find that these practices help me to stay calm and focused, which is important for my job as a marketing manager.
+
+    User 1: That''s great, I''m glad you have found things that help you to relax. I''m a vegan, so I know a little about yoga. It''s a great way to stay healthy and in shape.
+
+    User 2: I''m glad to hear that you''re a vegan too! It''s a great way to live a healthy life.
+
+    User 1: I agree, it''s the best decision I''ve ever made.
+
+    User 2: I''m glad you''re happy with it!
+
+    User 1: I am, and I''m glad I met you today.
+
+    User 2: Me too, it''s been nice chatting with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

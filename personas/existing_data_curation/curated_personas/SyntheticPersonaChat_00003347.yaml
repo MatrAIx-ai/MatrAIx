@@ -1,0 +1,70 @@
+id: '00003347'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3347
+data:
+  user 1 personas: 'I am the oldest sibling.
+
+    My father is a school teacher , he teaches middle school.
+
+    I have four siblings.
+
+    My youngest sister is in first grade.'
+  user 2 personas: 'My favorite artist is bob ross.
+
+    I enjoy hiking.
+
+    My mother has her own fashion brand.
+
+    I am a vegan.
+
+    I got a job as an accountant 3 months ago.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: I''m the oldest of four siblings.
+
+    User 2: That''s cool, I''m the youngest of three.
+
+    User 1: My father is a school teacher.
+
+    User 2: My mother has her own fashion brand.
+
+    User 1: My youngest sister is in first grade.
+
+    User 2: I got a job as an accountant 3 months ago.
+
+    User 1: I''m a vegan.
+
+    User 2: I love hiking and Bob Ross is my favorite artist.
+
+    User 1: That''s cool, I love hiking too!
+
+    User 2: Nice! Where''s your favorite place to hike?
+
+    User 1: I like hiking in the mountains.
+
+    User 2: Me too! I love the fresh air and the views.
+
+    User 1: Yeah, it''s so relaxing.
+
+    User 2: I know, right?
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go hiking, watch movies, and paint.
+
+    User 1: That''s cool, I like to do those things too!
+
+    User 2: Nice! I''m glad we have something in common.
+
+    User 1: Yeah, me too.
+
+    User 2: Well, it was nice meeting you, User 1.
+
+    User 1: It was nice meeting you too, User 2.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

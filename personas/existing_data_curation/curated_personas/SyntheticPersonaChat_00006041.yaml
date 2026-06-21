@@ -1,0 +1,142 @@
+id: '00006041'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6041
+data:
+  user 1 personas: 'I like to read true crime novels.
+
+    I have two dogs.
+
+    I work as a secretary at an insurance agency.
+
+    I am close to both of my brothers.
+
+    I travel every year to disney world.'
+  user 2 personas: 'I like candy and soda.
+
+    I am not healthy.
+
+    I weight 300 pounds.
+
+    I like the movie godfather.
+
+    I am a man.'
+  Best Generated Conversation: '* * User 1: * * Hi! I''m [user 1''s name].
+
+
+    * * User 2: * * Hi, I''m [user 2''s name].
+
+
+    * * User 1: * * I''m a secretary at an insurance agency.
+
+
+    * * User 2: * * I''m a mechanic.
+
+
+    * * User 1: * * Do you like your job?
+
+
+    * * User 2: * * I love it! I get to work on cars all day long.
+
+
+    * * User 1: * * That''s cool! I''ve always been interested in cars, but I don''t know much about them.
+
+
+    * * User 2: * * You should learn! It''s a great skill to have.
+
+
+    * * User 1: * * I''ll think about it.
+
+
+    * * User 2: * * You should! I think you''d be good at it.
+
+
+    * * User 1: * * Thanks!
+
+
+    * * User 2: * * No problem! So, what do you like to do for fun?
+
+
+    * * User 1: * * I like to read, travel, and spend time with my family.
+
+
+    * * User 2: * * I like to read too! What are some of your favorite books?
+
+
+    * * User 1: * * I love true crime novels. I also like to read historical fiction and fantasy.
+
+
+    * * User 2: * * I''ve never read a true crime novel before, but I''ve heard they''re good.
+
+
+    * * User 1: * * You should give one a try! They''re really suspenseful and you never know what''s going to happen.
+
+
+    * * User 2: * * I will! Thanks for the recommendation.
+
+
+    * * User 1: * * No problem! So, what do you like to do for fun?
+
+
+    * * User 2: * * I like to watch movies and play video games.
+
+
+    * * User 1: * * I like to watch movies too, but I don''t really play video games.
+
+
+    * * User 2: * * That''s cool! I like all kinds of movies, but I especially like action and comedy movies.
+
+
+    * * User 1: * * I like those too! I also like romantic comedies and horror movies.
+
+
+    * * User 2: * * I''m not a big fan of horror movies, but I can see why people like them.
+
+
+    * * User 1: * * They''re definitely not for everyone.
+
+
+    * * User 2: * * So, what are some of your favorite movies?
+
+
+    * * User 1: * * I love the Godfather, The Princess Bride, and The Shawshank Redemption.
+
+
+    * * User 2: * * I''ve seen The Godfather and The Shawshank Redemption, but I haven''t seen The Princess Bride.
+
+
+    * * User 1: * * You should check it out! It''s a really good movie.
+
+
+    * * User 2: * * I will! Thanks for the recommendation.
+
+
+    * * User 1: * * No problem! So, what are you doing this weekend?
+
+
+    * * User 2: * * I''m not sure yet. What are you doing?
+
+
+    * * User 1: * * I''m going to Disney World with my family.
+
+
+    * * User 2: * * That sounds like fun! I''ve never been to Disney World.
+
+
+    * * User 1: * * You should go! It''s a lot of fun.
+
+
+    * * User 2: * * Maybe I will one day.
+
+
+    * * User 1: * * I hope so! It''s a great place to visit.
+
+
+    * * User 2: * * Thanks for the recommendation.
+
+
+    * * User 1: * * No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

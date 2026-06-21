@@ -1,0 +1,78 @@
+id: '00000741'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 741
+data:
+  user 1 personas: 'I like to surf.
+
+    My mother is a school teacher.
+
+    I am a reality tv star.
+
+    I worked as a clown in the circus.
+
+    I listen to country music.'
+  user 2 personas: 'I love photography.
+
+    I enjoy spending a lot of money on my hobbies.
+
+    I do not like waking up early.
+
+    I like to use candles instead of lights.
+
+    I love the sound of the rain.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love photography! I love taking pictures of nature and animals.
+
+    User 1: That''s awesome! I love photography too. I like taking pictures of people and landscapes.
+
+    User 2: That''s cool! Have you ever been to the beach?
+
+    User 1: Yes, I love the beach! I love surfing and swimming.
+
+    User 2: Me too! I love swimming and sunbathing.
+
+    User 1: I like the sound of the waves and the smell of the ocean.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: I''m a reality TV star!
+
+    User 2: That''s so cool! What show are you on?
+
+    User 1: I''m on a show called "The Real Housewives of Orange County."
+
+    User 2: Oh, I''ve heard of that show! It''s really popular.
+
+    User 1: Yeah, it is! I''m having a lot of fun being on it.
+
+    User 2: That''s awesome! I''m sure you''re a great reality TV star.
+
+    User 1: Thank you! I try my best.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a clown in the circus!
+
+    User 2: That''s so cool! I''ve never met a clown before.
+
+    User 1: Really? That''s so strange. I thought everyone knew a clown.
+
+    User 2: Well, I guess I''m just not that lucky.
+
+    User 1: Well, now you know a clown!
+
+    User 2: Yes, I do! I''m so glad!
+
+    User 1: Good! I''m glad I could make your day.
+
+    User 2: You did! Thank you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

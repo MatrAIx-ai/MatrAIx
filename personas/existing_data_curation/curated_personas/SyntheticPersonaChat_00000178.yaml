@@ -1,0 +1,72 @@
+id: 00000178
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 178
+data:
+  user 1 personas: 'I am a nurse.
+
+    I surf often.
+
+    I married my high school sweetheart.
+
+    I was an army brat.'
+  user 2 personas: 'I am still a student , but i am gonna be a nurse.
+
+    I am the lead singer for an indie band.
+
+    My horse never talks back to me.
+
+    I enjoy budweiser beer.
+
+    I live in the city.'
+  Best Generated Conversation: 'User 1: I''m a nurse. I also surf a lot. What do you do for fun?
+
+    User 2: I''m still a student, but I''m going to be a nurse too! I also sing in an indie band.
+
+    User 1: That''s awesome! I''ve always loved music, but I''m not very good at playing any instruments.
+
+    User 2: Neither am I! I just sing.
+
+    User 1: What kind of music do you play?
+
+    User 2: Indie rock.
+
+    User 1: Oh cool! I love indie rock. What''s your favorite band?
+
+    User 2: The Strokes.
+
+    User 1: Me too! They''re one of my favorites.
+
+    User 2: I also like The Shins.
+
+    User 1: I love them too! They''re so good.
+
+    User 2: We should go to a concert together sometime.
+
+    User 1: That would be awesome! I''d love to.
+
+    User 2: Great! I''ll keep you posted on when my band is playing.
+
+    User 1: Sounds good!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to surf, read, and spend time with my family.
+
+    User 2: I love to read too! What''s your favorite book?
+
+    User 1: I''m not sure I have a favorite book, but I really love the Harry Potter series.
+
+    User 2: Me too! I''ve read them all at least twice.
+
+    User 1: I''ve read them a few times too. They''re so good.
+
+    User 2: Yeah, they''re my favorite books.
+
+    User 1: I''m glad we have similar interests. We''ll have to get together and hang out sometime.
+
+    User 2: That would be great! I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

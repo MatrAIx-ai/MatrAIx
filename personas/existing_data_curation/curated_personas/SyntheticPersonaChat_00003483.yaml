@@ -1,0 +1,64 @@
+id: 00003483
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3483
+data:
+  user 1 personas: 'I own 30 pairs of shoes.
+
+    I love to skate and ski.
+
+    I have 4 cats and 2 dogs.
+
+    I love the smell of leather.'
+  user 2 personas: 'I love to bake.
+
+    My favorite flower is a rose.
+
+    My mother is a retired teacher.
+
+    I am from texas.
+
+    I love to ride horses.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: What''s your favorite flower?
+
+    User 2: I love roses!
+
+    User 1: Me too! They''re so beautiful.
+
+    User 2: I know right! They''re also really fragrant.
+
+    User 1: Yeah, I love the smell of roses.
+
+    User 2: Me too! I have a rose bush in my backyard.
+
+    User 1: That''s so nice! I''m sure it smells amazing.
+
+    User 2: It does! I love to sit outside and enjoy the smell of the roses.
+
+    User 1: That sounds really relaxing.
+
+    User 2: It is! I love spending time in my backyard.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to bake! I''m not very good at it, but I enjoy it.
+
+    User 1: Baking is fun! I love to make cookies.
+
+    User 2: Cookies are my favorite! I love to make chocolate chip cookies.
+
+    User 1: Me too! They''re so good.
+
+    User 2: I know right! I could eat them all day long.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too! It''s nice to meet someone who shares my love of baking and roses.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

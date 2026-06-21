@@ -1,0 +1,84 @@
+id: 00005897
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5897
+data:
+  user 1 personas: 'My father used to be a mechanic.
+
+    I like to play video games.
+
+    I am a musician.
+
+    My favorite band is hop along.
+
+    I have been working the same job for two years.'
+  user 2 personas: 'I feel overweight.
+
+    I am a mother.
+
+    I want to feel pretty.
+
+    I like to eat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games and eat.
+
+    User 1: Cool, me too! What kind of video games do you like to play?
+
+    User 2: I like to play action games and RPGs.
+
+    User 1: Me too! What''s your favorite game?
+
+    User 2: My favorite game is Skyrim.
+
+    User 1: Oh, that''s a great game! I love the open world and the character customization.
+
+    User 2: Me too! I have spent so many hours playing that game.
+
+    User 1: Me too! I''m always looking for new games to play, but I can never find anything that compares to Skyrim.
+
+    User 2: I know what you mean. It''s a really special game.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go shopping and eat out.
+
+    User 1: Oh, me too! I love trying new foods and exploring new restaurants.
+
+    User 2: Me too! I love trying new things.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I don''t know, I love so many things. I guess I''d have to say pizza.
+
+    User 1: Pizza is always a good choice! I love pizza too.
+
+    User 2: Me too! It''s the perfect food.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun. I''m sure you love spending time with your children.
+
+    User 2: I do! I love being a mom.
+
+    User 1: That''s great! So, what are you doing today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. I''m thinking about going to the park.
+
+    User 2: That sounds like fun! I''d love to go with you.
+
+    User 1: Great! We can meet there in an hour.
+
+    User 2: Perfect! I''ll see you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

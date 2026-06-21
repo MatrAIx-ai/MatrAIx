@@ -1,0 +1,60 @@
+id: 00003835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3835
+data:
+  user 1 personas: 'My favorite is rock fish.
+
+    I am a fisherman.
+
+    I m going riding on my boat today.
+
+    I love tuna.
+
+    I live in cape hatteras.'
+  user 2 personas: 'I like to surf every chance i get.
+
+    I love the snow.
+
+    My favorite actor is robert deniro.
+
+    I work graveyard in a hotel.'
+  Best Generated Conversation: 'User 1: Hi! I''m a fisherman from Cape Hatteras. What do you like to do for fun?
+
+    User 2: Hi! I like to surf, ski, and watch movies. What do you like to do for fun?
+
+    User 1: I like to fish, go on boat rides, and spend time with my family.
+
+    User 2: That sounds like a lot of fun! I''ve never been fishing before.
+
+    User 1: You should try it sometime! It''s a great way to relax and enjoy the outdoors.
+
+    User 2: I might just have to do that. I''ve been wanting to try something new.
+
+    User 1: I''m sure you''d love it. What''s your favorite movie?
+
+    User 2: My favorite movie is The Godfather. It''s a classic.
+
+    User 1: I love that movie too! The cast is amazing and the story is so well done.
+
+    User 2: I know, right? It''s so good.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work graveyard at a hotel. It''s not always easy, but I like the work.
+
+    User 1: That sounds interesting. I''ve never worked graveyard before.
+
+    User 2: It''s not for everyone, but I like it. It''s nice and quiet.
+
+    User 1: I can imagine. It sounds like you have a lot of interests.
+
+    User 2: Thanks! I like to keep busy.
+
+    User 1: Me too. I think it''s important to have a lot of different things to do.
+
+    User 2: I agree. It makes life more interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

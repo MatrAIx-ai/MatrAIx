@@ -1,0 +1,18 @@
+id: 00008088
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8088
+persona_description: A healthcare professional who specializes in the management and treatment of abdominal aortic aneurysms, with a particular focus on aneurysms larger than 5cm and those that seem to
+  be growing quickly. They are likely to be a vascular surgeon, cardiologist, or a medical researcher with expertise in aortic aneurysm surgery and treatment. They may also have a background in radiology,
+  anatomy, or pathology, as these areas are crucial in diagnosing and assessing the severity of abdominal aortic aneurysms.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vascular surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

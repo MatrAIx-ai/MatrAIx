@@ -1,0 +1,64 @@
+id: 00001973
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1973
+data:
+  user 1 personas: 'I live in the city.
+
+    I m still a student , but i m gonna be a nurse.
+
+    I m the lead singer for an indie band.
+
+    I enjoy budweiser beer.'
+  user 2 personas: 'I like fruit.
+
+    I like green apples.
+
+    I like to eat the skin of the apple.
+
+    I don t like to eat meat.'
+  Best Generated Conversation: 'User 1: Hey, I''m a lead singer for an indie band.
+
+    User 2: Oh, that''s cool! What kind of music do you play?
+
+    User 1: We play a mix of rock, folk, and country.
+
+    User 2: Sounds like my kind of music! What''s your favorite song to perform?
+
+    User 1: My favorite song to perform is "Landslide" by Fleetwood Mac.
+
+    User 2: That''s a great song! I love that song too.
+
+    User 1: Do you like to sing?
+
+    User 2: I love to sing! I''m actually in a choir.
+
+    User 1: That''s awesome! What kind of choir do you sing in?
+
+    User 2: I sing in a church choir.
+
+    User 1: Oh, that''s cool. Do you have any hobbies besides singing?
+
+    User 2: I like to play video games and read books.
+
+    User 1: I love video games too! What''s your favorite game?
+
+    User 2: My favorite game is "The Legend of Zelda: Breath of the Wild."
+
+    User 1: That''s a great game! I love it too.
+
+    User 2: Do you like to read books?
+
+    User 1: I love to read! I''m currently reading "The Lord of the Rings."
+
+    User 2: That''s a great book! I''ve read it a few times.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read fantasy and sci-fi books.
+
+    User 1: Me too! I love those genres'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

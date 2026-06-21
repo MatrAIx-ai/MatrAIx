@@ -1,0 +1,80 @@
+id: 00000900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 900
+data:
+  user 1 personas: 'I am a musician.
+
+    I wish i could spend more time at home.
+
+    My best friend is in a band with me.'
+  user 2 personas: 'I am funny.
+
+    I have sausage fingers.
+
+    I am bloated.
+
+    I can draw.
+
+    I like sprite soda.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to draw.
+
+    User 1: That''s cool! I''m a musician.
+
+    User 2: Nice! What instrument do you play?
+
+    User 1: I play guitar and bass.
+
+    User 2: Oh, cool! I like guitar.
+
+    User 1: Me too! It''s a lot of fun to play.
+
+    User 2: I''m sure it is. I''m not very good at it, though.
+
+    User 1: Don''t worry, it takes practice.
+
+    User 2: Yeah, I know. I''m trying to learn.
+
+    User 1: That''s good. I''m sure you''ll be great at it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: Yeah, I like to watch movies and play video games.
+
+    User 1: Me too! What kind of movies do you like?
+
+    User 2: I like all kinds of movies, but I especially like comedies and action movies.
+
+    User 1: Me too! I love comedies.
+
+    User 2: What''s your favorite comedy?
+
+    User 1: I don''t know if I can pick just one. I love a lot of them.
+
+    User 2: Me too. I love the Hangover movies.
+
+    User 1: Me too! Those are great movies.
+
+    User 2: What about you? What''s your favorite comedy?
+
+    User 1: I love Airplane! That''s my favorite comedy.
+
+    User 2: I love that movie too! It''s so funny.
+
+    User 1: Yeah, it is! I could watch it over and over again.
+
+    User 2: Me too! It''s a classic.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

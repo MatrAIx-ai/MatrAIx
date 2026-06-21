@@ -1,0 +1,72 @@
+id: '00001645'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1645
+data:
+  user 1 personas: 'I like basketball.
+
+    I am from texas.
+
+    I am a father.
+
+    My favorite band is imagine dragons.
+
+    I work many hours.'
+  user 2 personas: 'I am very familiar with hospitals and doctors.
+
+    I have problems chewing my food.
+
+    I have a lot of medical bills.
+
+    My mother is in the hospital.
+
+    I used to be able to run really fast.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much. I''m in the hospital with my mom.
+
+    User 1: Oh no, I''m sorry to hear that. What''s wrong with her?
+
+    User 2: She had a stroke.
+
+    User 1: That''s really tough. I''m so sorry.
+
+    User 2: Thanks. It''s been hard.
+
+    User 1: I can imagine. How are you holding up?
+
+    User 2: It''s been a challenge, but I''m doing my best.
+
+    User 1: Good. I''m here for you if you need anything.
+
+    User 2: Thank you. I appreciate it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I used to love running, but I can''t do it anymore because of my jaw.
+
+    User 1: Oh, that''s too bad. I love running too.
+
+    User 2: Yeah, it was my favorite thing to do.
+
+    User 1: So, what do you do for fun now?
+
+    User 2: I watch a lot of TV and I play games.
+
+    User 1: Oh, what kind of games?
+
+    User 2: I play a lot of video games.
+
+    User 1: Me too! What''s your favorite game?
+
+    User 2: I like to play games like Call of Duty and Fortnite.
+
+    User 1: I''ve played Call of Duty, but I''ve never played Fortnite.
+
+    User 2: It''s a lot of fun. You should check it out.
+
+    User 1: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

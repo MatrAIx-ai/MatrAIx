@@ -1,0 +1,18 @@
+id: 00062930
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 62930
+persona_description: A historian or archaeologist interested in the history and development of a particular region, particularly in the context of the fields mentioned in the text. They are knowledgeable
+  about the early history of the area, the layout and development of settlements, and the impact of historical events on the landscape and the population. They are also interested in the social, economic,
+  and cultural aspects of the time period and are able to analyze and interpret historical documents and artifacts.
+expertise:
+  general_domain_top1pct: history
+  specific_domain_top1pct: archaeology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

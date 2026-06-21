@@ -1,0 +1,18 @@
+id: 00014941
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14941
+persona_description: A user who is interested in using Python's `numpy` and `scipy` libraries to perform simulations on a 2D or 3D domain, and is looking for methods to sample values from a field. They
+  are familiar with the `sampleDict` file format used by the `sample` module, and are seeking to understand the different sampling methods available and their respective attributes. They are also interested
+  in the `face` sampling method, which allows for sampling points located at intersections between lines and the faces of the system being simulated.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: geometric sampling
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

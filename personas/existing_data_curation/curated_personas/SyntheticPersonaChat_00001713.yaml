@@ -1,0 +1,88 @@
+id: '00001713'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1713
+data:
+  user 1 personas: 'I play ice hockey.
+
+    I live in the united states.
+
+    I am a boy.
+
+    I go to high school.
+
+    Math is my favorite subject.'
+  user 2 personas: 'I like toyota cars.
+
+    I like to vote.
+
+    Someday i would like a truck.
+
+    I do not like working long hours.
+
+    I work at a hospital.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just working.
+
+    User 1: Where do you work?
+
+    User 2: At a hospital.
+
+    User 1: Oh, that must be busy.
+
+    User 2: Yeah, it can be.
+
+    User 1: Do you like it?
+
+    User 2: It''s okay.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to vote, go to the movies, and play video games.
+
+    User 1: I like to vote too! What do you like to vote for?
+
+    User 2: I like to vote for people who I think will make good decisions for our country.
+
+    User 1: That''s a good way to use your vote.
+
+    User 2: Yeah, I think so.
+
+    User 1: What video games do you like to play?
+
+    User 2: I like to play RPGs, action games, and puzzle games.
+
+    User 1: I like RPGs too! What''s your favorite RPG?
+
+    User 2: My favorite RPG is Final Fantasy VII.
+
+    User 1: That''s a good choice! I''ve never played it, but I''ve heard good things about it.
+
+    User 2: It''s a really good game.
+
+    User 1: Do you play any sports?
+
+    User 2: I used to play ice hockey, but I don''t play anymore.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: Yeah, it was fun.
+
+    User 1: What''s your favorite subject in school?
+
+    User 2: My favorite subject is math.
+
+    User 1: That''s cool. I like math too.
+
+    User 2: Yeah, it''s fun.
+
+    User 1: So, what are you doing after work today?
+
+    User 2: I''m going to go home and relax.
+
+    User 1: That sounds like a good plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

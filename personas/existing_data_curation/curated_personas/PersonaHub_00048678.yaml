@@ -1,0 +1,19 @@
+id: 00048678
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48678
+persona_description: A scientist who is concerned about the impact of ocean power generation projects on marine species, particularly salmon and other sensitive species that rely on internal compasses.
+  The scientist is also interested in the potential for electromagnetic fields created by the power-generating devices and cables to interfere with the marine environment. The scientist is studying the
+  reactions of marine species, including salmon, dungeness crab, halibut, and American lobsters, when copper wiring near their tanks is energized. The scientist is seeking scientific guidance before moving
+  forward with ocean power generation projects.
+expertise:
+  general_domain_top1pct: marine biology
+  specific_domain_top1pct: marine ecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

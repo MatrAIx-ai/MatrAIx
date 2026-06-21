@@ -1,0 +1,72 @@
+id: '00003355'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3355
+data:
+  user 1 personas: 'I enjoy deep sea diving.
+
+    I have a career in party planning.
+
+    I like to perform stand up comedy.
+
+    My sister belongs to a cult and has not spoken to the family in years.'
+  user 2 personas: 'I work at amazon.
+
+    I have two kids.
+
+    I love robotics.
+
+    I live in a rural community.
+
+    I am fairly conservative in politics.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Nice to meet you! I''m [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love robotics! I''m actually a robotics engineer at Amazon.
+
+    User 1: That''s so cool! I''ve always been fascinated by robotics.
+
+    User 2: Me too! I love how they can do things that humans can''t.
+
+    User 1: I know, right? It''s amazing.
+
+    User 2: What do you do for fun?
+
+    User 1: I''m a party planner! I love planning parties for all occasions.
+
+    User 2: That sounds like fun! I''m not very creative, so I''m not sure I could do that.
+
+    User 1: It''s not as hard as you think! I just love making people happy.
+
+    User 2: I''m sure you''re great at it!
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, do you have any kids?
+
+    User 1: Yes, I have two kids.
+
+    User 2: Oh, that''s great! I have two kids as well.
+
+    User 1: What are their ages?
+
+    User 2: They''re both 8 years old.
+
+    User 1: Mine are 6 and 9.
+
+    User 2: That''s a great age! They''re still young enough to be fun, but old enough to be independent.
+
+    User 1: I know, right? I love spending time with them.
+
+    User 2: Me too! They''re the best.
+
+    User 1: I''m glad we had this chat. It was nice to meet you.
+
+    User 2: You too! It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

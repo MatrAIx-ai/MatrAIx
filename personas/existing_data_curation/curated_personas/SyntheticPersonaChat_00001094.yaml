@@ -1,0 +1,66 @@
+id: 00001094
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1094
+data:
+  user 1 personas: 'I love to dance.
+
+    I am a teacher.
+
+    I grew up in new hampshire.
+
+    My favorite food is mexican.'
+  user 2 personas: 'I went to japan this summer.
+
+    I start my senior year of high school next week.
+
+    My mom is a painter.
+
+    My favorite sport is hockey.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I love to dance, play hockey, and go to the movies.
+
+    User 1: I love to dance too! What kind of dance do you like to do?
+
+    User 2: I mostly do hip-hop and contemporary dance.
+
+    User 1: Nice, I like hip-hop too. I''ve been taking classes for a few years now.
+
+    User 2: That''s awesome! I''ve been dancing for about 10 years.
+
+    User 1: Wow, that''s impressive! I wish I had started dancing earlier.
+
+    User 2: It''s never too late to start!
+
+    User 1: I know, but I''m not sure I have the time.
+
+    User 2: You could always take a class on the weekends.
+
+    User 1: I might have to look into that.
+
+    User 2: There are also a lot of dance studios that offer drop-in classes.
+
+    User 1: That''s a good idea. I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love Mexican food.
+
+    User 2: Me too! I love tacos and enchiladas.
+
+    User 1: I love all of it! I could eat Mexican food every day.
+
+    User 2: Same here! It''s so delicious.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

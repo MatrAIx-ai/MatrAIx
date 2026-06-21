@@ -1,0 +1,18 @@
+id: '00014120'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14120
+persona_description: A tech enthusiast who is interested in understanding how electronic devices communicate and operate. This person is particularly curious about the specific details of how the NES controller
+  ports are multiplexed and how the adapter works with them. They are likely to be interested in the text as it provides detailed information about the serial communication protocol used between the controllers
+  and the adapter, which could be useful for anyone who is interested in developing or troubleshooting electronic devices.
+expertise:
+  general_domain_top1pct: electronics
+  specific_domain_top1pct: embedded systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: NES controller protocol
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00005412'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5412
+persona_description: A scientist who specializes in satellite technology and space debris mitigation, with a focus on understanding the risks associated with space junk and developing strategies to minimize
+  the impact of such debris on Earth. They are likely to be familiar with the history of space debris, the current state of space technology, and the latest research in the field. They may also have a background
+  in physics, engineering, or astronomy, and be familiar with the mathematical models used to predict the trajectory of space debris.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: space technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: space debris mitigation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,19 @@
+id: 00040922
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40922
+persona_description: A computer scientist who specializes in image processing and compression algorithms. This person is likely to be familiar with Fourier transformations, discrete cosine transformations
+  (DCT), and compression techniques such as MPEG. They would have a deep understanding of how these algorithms work and how they can be applied to various image and signal processing problems. They might
+  have expertise in image compression algorithms such as DCT, and would be able to explain the principles of DCT and its application in image processing. They would also be knowledgeable about the compression
+  techniques used in MPEG, such as the principle flow described in the text, and would be able to explain how these techniques can improve the compression of images and other signals.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: image processing and compression
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

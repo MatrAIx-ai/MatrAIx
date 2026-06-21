@@ -1,0 +1,70 @@
+id: 00002099
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2099
+data:
+  user 1 personas: 'I am a truck driver.
+
+    My mother was a teacher.
+
+    I know how to drive a stickshift.
+
+    We lived in virginia while i was growing up.'
+  user 2 personas: 'My adopted dad works at hp.
+
+    I was adopted when i was a baby.
+
+    My mom stays at home.
+
+    The future scares me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. Where are you from?
+
+    User 2: I''m from [user 2''s hometown].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a small town, but it''s really nice. The people are friendly and the atmosphere is relaxed.
+
+    User 1: That sounds nice. I''m from [user 1''s hometown].
+
+    User 2: Oh, where is that?
+
+    User 1: It''s in [user 1''s state].
+
+    User 2: I''ve never been there either. What''s it like?
+
+    User 1: It''s a big city, but it''s also really diverse. There are people from all over the world living there.
+
+    User 2: That sounds really interesting. I''ve always wanted to live in a big city.
+
+    User 1: It can be fun, but it can also be overwhelming.
+
+    User 2: I can imagine. What do you like to do for fun?
+
+    User 1: I like to go out to concerts and movies. I also like to go hiking and camping.
+
+    User 2: I like to do those things too. I also like to go shopping and play video games.
+
+    User 1: I like to play video games too. I''m not very good at them, but I have a lot of fun.
+
+    User 2: Me too. I''m not very good at them either, but I enjoy playing them.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play action and adventure games. I also like to play puzzle games.
+
+    User 1: Me too. I like to play action and adventure games too. I also like to play racing games.
+
+    User 2: Racing games are fun. I''ve never been very good at them, but I still enjoy playing them.
+
+    User 1: I''m not very good at them either, but I have a lot of fun.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

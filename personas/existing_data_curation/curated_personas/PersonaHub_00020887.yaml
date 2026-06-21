@@ -1,0 +1,19 @@
+id: 00020887
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20887
+persona_description: A meteorologist who specializes in the study of weather forecasting and analysis, particularly the use of radar and Doppler technology to detect and analyze wind patterns. They are
+  experienced in interpreting and understanding the different colors and patterns in velocity images, such as red for wind moving away from the radar and green for wind moving toward it, and are skilled
+  in drawing lines perpendicular to the grayish areas to determine the direction of the wind. They are also knowledgeable about the differences in wind direction at different heights and distances from
+  the radar, as well as the implications of these differences in the overall circulation of a hurricane.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: weather forecasting and analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

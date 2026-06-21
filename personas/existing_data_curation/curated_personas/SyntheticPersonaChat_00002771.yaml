@@ -1,0 +1,58 @@
+id: '00002771'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2771
+data:
+  user 1 personas: 'I have 2 dogs as pets.
+
+    I love dogs.
+
+    My mother is allergic to dogs.
+
+    I leave the dogs home when i visit my parents.'
+  user 2 personas: 'It was too small.
+
+    I also eat too much french fries.
+
+    I smell like french fries.
+
+    I just got a new sweater.
+
+    I can t do math.'
+  Best Generated Conversation: 'User 1: Hi, I''m a dog lover!
+
+    User 2: Me too! I love french fries too much.
+
+    User 1: Oh, I love french fries too!
+
+    User 2: I just got a new sweater.
+
+    User 1: Nice! What''s it like?
+
+    User 2: It''s a little small, but it''s so soft.
+
+    User 1: That sounds nice. I like soft things.
+
+    User 2: I can''t do math, but I know how to cook.
+
+    User 1: I can do math, but I''m not very good at cooking.
+
+    User 2: We should go get some french fries together sometime!
+
+    User 1: That would be fun!
+
+    User 2: Great! I''m free next weekend.
+
+    User 1: Me too! We can go to the diner down the street.
+
+    User 2: Sounds good! I''ll bring the french fries.
+
+    User 1: Perfect! I''ll bring the ketchup.
+
+    User 2: See you next week!
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

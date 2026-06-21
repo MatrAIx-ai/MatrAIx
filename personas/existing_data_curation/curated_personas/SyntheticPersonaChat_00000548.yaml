@@ -1,0 +1,64 @@
+id: 00000548
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 548
+data:
+  user 1 personas: 'I miss my dad.
+
+    I larp on the weekends in the forest.
+
+    I could move out , but she doesn t want me to.
+
+    In reality i m 32 and live at home with my mother.'
+  user 2 personas: 'I work many hours rehearsing for my show.
+
+    I like movies based on comedies.
+
+    My favorite food is hamburgers.
+
+    My parents passed away in a car accident.'
+  Best Generated Conversation: 'User 1: I''m sorry to hear about your parents.
+
+    User 2: Thank you.
+
+    User 1: Do you have siblings?
+
+    User 2: No, I''m an only child.
+
+    User 1: That must be tough.
+
+    User 2: It is sometimes, but I try to focus on the positive.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the movies, watch comedy shows, and play video games.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I''m not sure I have a favorite movie, but I like a lot of comedies.
+
+    User 1: Me too! What''s your favorite comedy show?
+
+    User 2: I like The Office, Parks and Recreation, and Arrested Development.
+
+    User 1: Those are all great shows! What kind of video games do you like to play?
+
+    User 2: I like open-world games, like The Elder Scrolls and Fallout.
+
+    User 1: Those are great games! I also like open-world games.
+
+    User 2: Do you have any plans for the weekend?
+
+    User 1: I''m not sure yet. I might go to the movies.
+
+    User 2: That sounds fun! What movie are you thinking of seeing?
+
+    User 1: I''m not sure yet. I''m looking at a few different options.
+
+    User 2: Well, let me know if you decide to go. I might want to go with you.
+
+    User 1: Okay, I will. Thanks for the offer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

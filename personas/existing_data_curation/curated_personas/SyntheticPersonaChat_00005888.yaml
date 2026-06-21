@@ -1,0 +1,72 @@
+id: 00005888
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5888
+data:
+  user 1 personas: 'I work remotely as a programmer.
+
+    I have not gone home in over two years.
+
+    I live a nomadic lifestyle and travel frequently.
+
+    I am currently traveling in japan.'
+  user 2 personas: 'I listen to a lot of strange music.
+
+    I wait for something interesting to happen each day.
+
+    I enjoy cold winters and strong breezes.
+
+    I wish i could write in cursive.
+
+    I wish i could live in iceland.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just hanging out, listening to some music.
+
+    User 1: Nice! What kind of music do you like?
+
+    User 2: I listen to a lot of different things, but I really like strange and experimental music.
+
+    User 1: That''s cool! I like listening to music too. I''m more into pop and rock.
+
+    User 2: Have you heard of Death Grips?
+
+    User 1: No, I haven''t. What kind of music do they play?
+
+    User 2: They''re a hip-hop group from Sacramento, California. They''re known for their experimental and abrasive sound.
+
+    User 1: That sounds interesting. I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to travel, read, and go to concerts.
+
+    User 1: That sounds like fun! I like to travel too. I''ve been to Japan, but I''ve never been to Iceland.
+
+    User 2: Iceland is amazing! I went there last year and it was the best experience of my life.
+
+    User 1: That''s awesome! I''m glad you enjoyed it.
+
+    User 2: Thanks! I hope you can go there someday.
+
+    User 1: I hope so too!
+
+    User 2: So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, cool! I''ve never been to California.
+
+    User 1: You should! It''s beautiful there.
+
+    User 2: I''ll have to check it out sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

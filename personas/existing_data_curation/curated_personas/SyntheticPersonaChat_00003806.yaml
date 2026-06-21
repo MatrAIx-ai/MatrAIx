@@ -1,0 +1,102 @@
+id: 00003806
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3806
+data:
+  user 1 personas: 'My brothers work with me.
+
+    I take pride in my job managing the restaurant.
+
+    My family is very important to me.
+
+    I drive a nice car.'
+  user 2 personas: 'I have a boxer dog.
+
+    I like to exercise.
+
+    I like to listen to music.
+
+    I like baths.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a dog trainer.
+
+    User 1: That''s cool! I love dogs.
+
+    User 2: Me too! I have a boxer dog named Max.
+
+    User 1: What''s it like being a dog trainer?
+
+    User 2: It''s great! I love working with dogs and helping them learn new things.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: Seeing the dogs learn new things and make progress.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It is! I love seeing the excitement on their faces when they learn something new.
+
+    User 1: I''m sure that''s really special.
+
+    User 2: It is. I love my job.
+
+    User 1: That''s great to hear. I''m glad you''re happy with what you do.
+
+    User 2: Thanks. I am.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to exercise, listen to music, and take baths.
+
+    User 1: I like to exercise too! What kind of exercise do you do?
+
+    User 2: I mostly run and do yoga.
+
+    User 1: I like running too! I''ve been trying to get into yoga.
+
+    User 2: It''s a great way to relax and stretch.
+
+    User 1: I can imagine. I''ve heard good things about it.
+
+    User 2: You should try it!
+
+    User 1: I will.
+
+    User 2: So, what kind of music do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but my favorite is probably alternative rock.
+
+    User 2: I like alternative rock too! What bands do you like?
+
+    User 1: I like The Killers, The 1975, and Twenty One Pilots.
+
+    User 2: I love The Killers! I''ve seen them in concert a few times.
+
+    User 1: I''m jealous! I''ve always wanted to see them in concert.
+
+    User 2: They''re amazing live.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you like to do on your days off?
+
+    User 1: I like to go out with my friends, watch movies, and play video games.
+
+    User 2: I like to do those things too! I also like to go to the beach.
+
+    User 1: Me too! I love the beach.
+
+    User 2: So, what do you think? Do you want to grab a drink sometime?
+
+    User 1: Sure! That sounds like fun.
+
+    User 2: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

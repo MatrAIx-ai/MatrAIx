@@ -1,0 +1,76 @@
+id: 00000874
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 874
+data:
+  user 1 personas: 'I wear glasses.
+
+    I am retired.
+
+    I have good health.
+
+    I have eight grandchildren.
+
+    I stay active.'
+  user 2 personas: 'I enjoy reading history books.
+
+    I love to dance.
+
+    My favorite food is mexican.
+
+    I am a teacher.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, cool. I''m retired.
+
+    User 2: That must be nice.
+
+    User 1: It is. I have a lot of time to do the things I love.
+
+    User 2: Like what?
+
+    User 1: I like to read, garden, and spend time with my eight grandchildren.
+
+    User 2: That sounds great. I love to read too. My favorite books are history books.
+
+    User 1: Oh, that''s interesting. What kind of history books do you like?
+
+    User 2: I like to read about the history of different countries and cultures. I also like to read about wars and battles.
+
+    User 1: That sounds like fun. I''ve never been much of a history buff, but I can see how it could be interesting.
+
+    User 2: It is. It''s a great way to learn about the world.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to dance. I''ve been dancing since I was a little kid.
+
+    User 2: That''s awesome! I love to dance too.
+
+    User 1: What kind of dancing do you like to do?
+
+    User 2: I like to do all kinds of dancing, but I''m best at Latin dance.
+
+    User 1: Oh, that''s cool. I''ve always wanted to learn how to dance Latin.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to look into it.
+
+    User 2: You should. It''s a great way to get exercise and have fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

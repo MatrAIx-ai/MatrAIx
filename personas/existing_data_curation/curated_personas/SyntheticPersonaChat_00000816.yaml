@@ -1,0 +1,84 @@
+id: 00000816
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 816
+data:
+  user 1 personas: 'I love to hunt.
+
+    I hate seafood but love mexican food.
+
+    My favorite color is blue.
+
+    I grew up in the deep south.
+
+    My mother was a piano teacher.'
+  user 2 personas: 'I am in high school.
+
+    I love bruno mars.
+
+    I love sweets.
+
+    I cs and ds.
+
+    I sleep a lot.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from the south.
+
+    User 1: Me too! I grew up in Alabama.
+
+    User 2: I''m from Georgia.
+
+    User 1: I love Georgia! I used to go there all the time when I was younger.
+
+    User 2: What did you like to do there?
+
+    User 1: I loved to go swimming in the rivers and lakes.
+
+    User 2: I love swimming too! I also like to go hiking and camping.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Me too! I love the way it looks on everything.
+
+    User 1: I know, right? It''s so calming.
+
+    User 2: It is. I also love the way it looks with white.
+
+    User 1: Me too! I think that''s a great color combination.
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is Mexican food.
+
+    User 2: Me too! I love tacos and burritos.
+
+    User 1: Me too! I also love enchiladas and fajitas.
+
+    User 2: Me too! I love all Mexican food!
+
+    User 1: Me too! It''s so good!
+
+    User 2: What''s your favorite music?
+
+    User 1: My favorite music is country.
+
+    User 2: Me too! I love Blake Shelton and Carrie Underwood.
+
+    User 1: Me too! I also love Luke Bryan and Keith Urban.
+
+    User 2: Me too! I love all country music!
+
+    User 1: Me too! It''s so good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

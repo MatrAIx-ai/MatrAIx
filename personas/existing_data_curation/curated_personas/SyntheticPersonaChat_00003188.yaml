@@ -1,0 +1,68 @@
+id: 00003188
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3188
+data:
+  user 1 personas: 'I m a college drop out.
+
+    My favorite music is jimi hendrix.
+
+    I m learning to play the guitar.
+
+    I work at the deli counter.'
+  user 2 personas: 'I am a weightlifter.
+
+    I love the all american rejects.
+
+    I run marathons.
+
+    I have three great danes.
+
+    I despise sweet potatoes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: I''m a college dropout, and I''m learning to play the guitar.
+
+    User 2: I''m a weightlifter, and I run marathons.
+
+    User 1: Oh, cool! I love Jimi Hendrix.
+
+    User 2: Me too! He''s one of my favorite guitarists.
+
+    User 1: I''ve been learning to play his songs.
+
+    User 2: That''s awesome! I''m sure you''re doing a great job.
+
+    User 1: Thanks! I''m still trying to figure it out, but I''m getting better.
+
+    User 2: It takes a lot of practice, but it''s worth it.
+
+    User 1: Yeah, I know. I''m really enjoying it.
+
+    User 2: What do you like about it?
+
+    User 1: I like the way it makes me feel. It''s really relaxing and therapeutic.
+
+    User 2: I know what you mean. I feel the same way when I''m weightlifting.
+
+    User 1: I can see why you''re a weightlifter. You''re really strong.
+
+    User 2: Thanks! I''ve been working out for a long time.
+
+    User 1: I''m impressed. I''m not sure I could ever be that strong.
+
+    User 2: You could if you wanted to. It just takes time and dedication.
+
+    User 1: I might give it a try. I''ve always been kind of skinny.
+
+    User 2: You should! It''s a great way to get in shape.
+
+    User 1: I''ll think about it. Thanks for the advice.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: '00005705'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5705
+data:
+  user 1 personas: 'My wife is a college professor.
+
+    My mother was a concert pianist.
+
+    I have one little girl.
+
+    I work as a trauma surgeon.'
+  user 2 personas: 'I don t like being asked a lot of questions.
+
+    I have a shopping addiction.
+
+    I don t like when people get too close to me.
+
+    I think about food a lot.
+
+    I love the forest.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m a trauma surgeon.
+
+    User 2: Hi, I''m [user 2''s name]. I''m a shopaholic.
+
+    User 1: Oh, that''s interesting. What do you like to shop for?
+
+    User 2: I like to shop for everything! Clothes, shoes, accessories, makeup... you name it.
+
+    User 1: I see. I''m not much of a shopper myself. I''m more of a saver.
+
+    User 2: That''s interesting. I guess we''re different in that way.
+
+    User 1: Yeah, I guess so.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to spend time with my family and friends. I also like to go hiking, biking, and camping.
+
+    User 2: Oh, that sounds like fun. I like to go shopping, go to the movies, and eat out.
+
+    User 1: I see. I''m not much of a movie person myself. I prefer to read books.
+
+    User 2: That''s interesting. I love to read books too. What are some of your favorite books?
+
+    User 1: I like to read all kinds of books, but my favorite genres are sci-fi and fantasy.
+
+    User 2: Oh, I love those genres too! What are some of your favorite books in those genres?
+
+    User 1: I love the Harry Potter series, the Lord of the Rings series, and the Dune series.
+
+    User 2: Oh, I love those books too! We have a lot in common.
+
+    User 1: Yeah, we do. It''s nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

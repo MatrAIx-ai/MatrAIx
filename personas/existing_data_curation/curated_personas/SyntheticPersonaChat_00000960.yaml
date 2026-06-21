@@ -1,0 +1,97 @@
+id: 00000960
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 960
+data:
+  user 1 personas: 'I drive a prius.
+
+    I love to read romance novels.
+
+    I was in the army.
+
+    I work in construction.
+
+    I have freckles all over my face.'
+  user 2 personas: 'I play the violin.
+
+    I have a pomeranian.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My older sister plays clarinet.
+
+    My mom is a music teacher at the elementary school.'
+  Best Generated Conversation: 'User 1: Hey, I''m (name). It''s nice to meet you.
+
+
+    User 2: Hi, I''m (name). Nice to meet you too.
+
+
+    User 1: What do you do for fun?
+
+
+    User 2: I play the violin.
+
+
+    User 1: That''s cool! I''ve always wanted to learn how to play an instrument.
+
+
+    User 2: You should! It''s really fun.
+
+
+    User 1: Maybe I will. What kind of music do you play?
+
+
+    User 2: I mostly play classical music.
+
+
+    User 1: Oh, that''s cool. I like classical music too.
+
+
+    User 2: Me too! I''ve been in a few violin competitions before and I''ve placed in a few of them.
+
+
+    User 1: That''s awesome! I''m impressed.
+
+
+    User 2: Thanks!
+
+
+    User 1: Do you have any other hobbies?
+
+
+    User 2: I have a pomeranian.
+
+
+    User 1: A pomeranian? That''s so cute!
+
+
+    User 2: Thanks! He''s my best friend.
+
+
+    User 1: What''s his name?
+
+
+    User 2: His name is Milo.
+
+
+    User 1: That''s a great name.
+
+
+    User 2: Thanks!
+
+
+    User 1: It was nice talking to you.
+
+
+    User 2: You too.
+
+
+    User 1: Maybe we can talk again sometime.
+
+
+    User 2: Yeah, that would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

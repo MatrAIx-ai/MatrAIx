@@ -1,0 +1,72 @@
+id: '00003132'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3132
+data:
+  user 1 personas: 'I like to ride my bike.
+
+    I work as a vet.
+
+    I am a 30 year old female.
+
+    I have 3 dogs and 2 cats.'
+  user 2 personas: 'I love to do yoga.
+
+    I am single.
+
+    My favorite color is grey.
+
+    My passion is writing.
+
+    I work for a newspaper.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I love to do yoga, write, and read.
+
+    User 1: That sounds great! I like to ride my bike, work as a vet, and have three dogs and two cats.
+
+    User 2: I love dogs! I used to have a dog named Charlie, but he passed away a few years ago.
+
+    User 1: I''m sorry to hear that. My dogs are named Bailey, Bailey, and Bailey.
+
+    User 2: That''s a lot of Baileys!
+
+    User 1: I know, right? I''m a big fan of the name.
+
+    User 2: I can tell. So, what do you do for work?
+
+    User 1: I''m a vet. I love working with animals and helping them stay healthy.
+
+    User 2: That sounds like a really rewarding job.
+
+    User 1: It is! I love getting to know my patients and helping them feel better.
+
+    User 2: I''m sure your patients love you too.
+
+    User 1: I hope so! I try my best to make them comfortable and happy.
+
+    User 2: It sounds like you''re a great vet.
+
+    User 1: Thank you! I''m glad you think so.
+
+    User 2: So, what do you like to do outside of work?
+
+    User 1: I like to ride my bike, read, and play with my dogs.
+
+    User 2: That sounds like a lot of fun. I like to do yoga, write, and read too.
+
+    User 1: That''s great! We should get together sometime and do something together.
+
+    User 2: That would be fun! I''d love to meet your dogs too.
+
+    User 1: Perfect! We can exchange numbers and make plans.
+
+    User 2: Sounds good! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

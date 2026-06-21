@@ -1,0 +1,72 @@
+id: '00001570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1570
+data:
+  user 1 personas: 'I drink diet coke.
+
+    I spend too much time shopping.
+
+    I love katy perry.
+
+    I work in retail.'
+  user 2 personas: 'I am one of four siblings.
+
+    My favorite color is blue.
+
+    My mother is a teacher.
+
+    I like to draw.
+
+    I live in an apartment.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I work as a teacher.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a teacher.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. I love working with kids.
+
+    User 2: Me too! It''s so much fun to see them learn and grow.
+
+    User 1: What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that''s great! I love kindergarteners. They''re so cute and innocent.
+
+    User 2: They are! They''re also a lot of work, but they''re so much fun to teach.
+
+    User 1: I can imagine. So, what do you like to do for fun?
+
+    User 2: I like to draw, watch movies, and spend time with my family.
+
+    User 1: Oh, that''s cool! I love to draw too. What kind of things do you like to draw?
+
+    User 2: I like to draw animals and landscapes.
+
+    User 1: Oh, those are my favorite things to draw too!
+
+    User 2: Mine too! We should swap drawing tips sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange contact info.
+
+    User 1: Sounds good!
+
+    User 2: Okay, I have to go now. It was nice talking to you!
+
+    User 1: You too! Have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

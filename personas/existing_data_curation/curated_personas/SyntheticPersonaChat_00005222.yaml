@@ -1,0 +1,62 @@
+id: '00005222'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5222
+data:
+  user 1 personas: 'I am a average american youth.
+
+    I hate school.
+
+    I fell in love this summer.
+
+    I enjoy summer walking and reading.'
+  user 2 personas: 'I m 53 years old.
+
+    I am obese.
+
+    I have blonde hair.
+
+    I live in alabama.
+
+    I have twelve kids.'
+  Best Generated Conversation: 'User 1: I am an average American youth. I am 16 years old and I hate school. I fell in love this summer and I enjoy walking and reading in the summer.
+
+    User 2: I am 53 years old and I live in Alabama. I am obese and I have blonde hair. I have 12 kids.
+
+    User 1: How old are your kids?
+
+    User 2: They are all between the ages of 1 and 18.
+
+    User 1: Wow, that must be a lot to handle.
+
+    User 2: It can be sometimes, but it''s also really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to walk and read in the summer. I also like to play video games and watch movies.
+
+    User 2: I like to read too. I read a lot of historical fiction and science fiction.
+
+    User 1: I like to read a lot of different things, but I do love a good historical fiction novel.
+
+    User 2: Me too. I think they''re so interesting to learn about other cultures and time periods.
+
+    User 1: I agree.
+
+    User 2: Where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, I''ve never been to California. I''ve always wanted to go.
+
+    User 1: It''s a beautiful state. You should definitely come visit sometime.
+
+    User 2: I will, thanks for the suggestion.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

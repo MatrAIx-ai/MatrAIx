@@ -1,0 +1,72 @@
+id: 00002953
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2953
+data:
+  user 1 personas: 'Some jokes go too far.
+
+    I prefer the simpler times.
+
+    I like the flintstones.
+
+    My friend likes cartoons like south park.'
+  user 2 personas: 'I like meat.
+
+    My favorite food is steak.
+
+    I drive a black car.
+
+    I am working in finance.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing great! I''m just watching some cartoons.
+
+    User 2: Oh, cool! What are you watching?
+
+    User 1: I''m watching The Flintstones. It''s one of my favorite shows.
+
+    User 2: I''ve never seen that show before. What''s it about?
+
+    User 1: It''s about a family of cavemen who live in the Stone Age. It''s really funny and entertaining.
+
+    User 2: That sounds interesting. I might have to check it out.
+
+    User 1: I''m sure you''d like it. So, what do you like to do for fun?
+
+    User 2: I like to go out to eat, play video games, and watch movies.
+
+    User 1: Oh, cool! I like to do those things too.
+
+    User 2: Do you have a favorite food?
+
+    User 1: I love steak. It''s my favorite food.
+
+    User 2: Me too! I love the way it''s cooked to perfection.
+
+    User 1: Yes, it''s the best!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a financial analyst.
+
+    User 2: Oh, cool! I''m a banker.
+
+    User 1: That''s interesting! I''m sure you have a lot of interesting stories.
+
+    User 2: Yes, I do. I''ve seen a lot of things in my time.
+
+    User 1: I''m sure you have.
+
+    User 2: So, what do you think about the future of finance?
+
+    User 1: I think it''s going to be very interesting. There are a lot of new technologies that are changing the way we do business.
+
+    User 2: Yes, I agree. It''s going to be a very exciting time.
+
+    User 1: I''m sure it will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

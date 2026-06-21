@@ -1,0 +1,18 @@
+id: 00030028
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30028
+persona_description: A healthcare professional who studies sudden cardiac arrest and its underlying causes, and is interested in identifying public health implications. They are dedicated to preventing
+  sudden cardiac arrest and have a strong interest in research to understand the reasons behind the shift in the time of day when cardiac arrests occur. They are likely to be involved in clinical trials,
+  epidemiological studies, and other research projects related to sudden cardiac arrest.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: cardiac arrhythmia research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

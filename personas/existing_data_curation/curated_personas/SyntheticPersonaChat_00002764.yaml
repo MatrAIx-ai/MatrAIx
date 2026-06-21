@@ -1,0 +1,58 @@
+id: '00002764'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2764
+data:
+  user 1 personas: 'I drive a honda civic.
+
+    I have three children.
+
+    My best friend lives down the street.
+
+    I am named after my grandmother.'
+  user 2 personas: 'I work for a large law firm.
+
+    I love my work and just got promoted.
+
+    I listen to classical music.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello there!
+
+    User 1: What''s up?
+
+    User 2: Not much, just working on some legal briefs.
+
+    User 1: Cool. What kind of law do you practice?
+
+    User 2: I''m a litigator.
+
+    User 1: Oh, that''s sounds interesting. What''s it like?
+
+    User 2: It''s challenging, but it''s also very rewarding. I love being able to help people solve their problems.
+
+    User 1: I can imagine. So, what do you like to do for fun?
+
+    User 2: I love to read, listen to classical music, and spend time with my family.
+
+    User 1: That sounds nice. I love to read too. What kind of books do you like to read?
+
+    User 2: I read a little bit of everything, but I''m a big fan of historical fiction.
+
+    User 1: Me too! I love learning about different time periods and cultures.
+
+    User 2: Yeah, it''s so interesting to see how people lived in the past.
+
+    User 1: I agree. So, what''s your favorite historical fiction book?
+
+    User 2: That''s a tough question. I have so many favorites. But I think I would have to say "The Name of the Rose" by Umberto Eco.
+
+    User 1: Oh, that''s a great book! I love the way Eco uses history to tell a story.
+
+    User 2: Me too! It''s such a fascinating book.
+
+    User 1: I''m glad you like it. It''s one of my favorites too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

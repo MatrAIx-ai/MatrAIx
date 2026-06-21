@@ -1,0 +1,19 @@
+id: '00033210'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33210
+persona_description: A facility manager responsible for monitoring and managing energy consumption in a building. This person is interested in identifying high energy-consuming applications and systems
+  for potential improvement to reduce running costs and carbon emissions. They are looking for ways to improve energy consumption over time and track actual energy consumption against design figures to
+  improve demand modeling and reduce infrastructure upgrade costs for future projects. They are also interested in comparing meter readings to predicted values to help identify faulty equipment or incorrect
+  building operation.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Energy Management
+  general_domain_top01pct: None
+  specific_domain_top01pct: Energy Efficiency
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

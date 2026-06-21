@@ -1,0 +1,72 @@
+id: 00001942
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1942
+data:
+  user 1 personas: 'I like to eat beef.
+
+    I like to ride horses.
+
+    I have many girlfriends.
+
+    I am argentinian.
+
+    I like to wear boots.'
+  user 2 personas: 'I love the summer.
+
+    I work at a animal clinic.
+
+    I love mexican food.
+
+    I have two kids i enjoy being on social media.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, my name is Emily. What''s yours?
+
+    User 1: My name is Juan. It''s nice to meet you!
+
+    User 2: It''s nice to meet you too, Juan! Where are you from?
+
+    User 1: I''m from Argentina.
+
+    User 2: Oh, that''s cool! I''ve always wanted to visit Argentina.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: Maybe I will someday.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to ride horses, go to the beach, and spend time with my family.
+
+    User 1: Those sound like fun things to do.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to eat beef, ride horses, and go to the beach.
+
+    User 2: I love beef too! It''s my favorite food.
+
+    User 1: What''s your favorite Mexican food?
+
+    User 2: I love enchiladas.
+
+    User 1: Me too! I love them with red sauce.
+
+    User 2: Me too! They''re so good.
+
+    User 1: I think we should go to a Mexican restaurant sometime.
+
+    User 2: That sounds like a great idea! I love Mexican food.
+
+    User 1: Me too! We could go this weekend if you''re free.
+
+    User 2: I''m free this weekend! Let''s do it.
+
+    User 1: Great! I''ll make a reservation.
+
+    User 2: Perfect! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

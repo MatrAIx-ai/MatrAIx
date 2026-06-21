@@ -1,0 +1,66 @@
+id: 00001908
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1908
+data:
+  user 1 personas: 'I have shot a lion.
+
+    I am not a good artist.
+
+    I want to climb mount everest.
+
+    I like to play with clay models.'
+  user 2 personas: 'My hair is brown.
+
+    I like to sew.
+
+    I am not thin.
+
+    I am short.
+
+    I have one cat.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, my name is [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to sew, play with clay models, and read books.
+
+    User 1: That''s cool. I like to shoot lions, climb Mount Everest, and play video games.
+
+    User 2: Wow, you''re so adventurous! I''ve never shot a lion or climbed Mount Everest.
+
+    User 1: Yeah, I''m a bit of a risk-taker. But I''m also really careful, so I''ve never gotten hurt.
+
+    User 2: That''s good to hear. I''m not really the adventurous type, but I do enjoy sewing and reading books.
+
+    User 1: That''s cool. I like to do those things too. I also like to play video games, but I''m not very good at them.
+
+    User 2: That''s okay. I''m not very good at them either. But it''s still fun to play, right?
+
+    User 1: Yeah, it is. It''s a good way to relax and have fun.
+
+    User 2: I agree. So, what''s your favorite video game?
+
+    User 1: I like to play a lot of different games, but my favorite is probably Super Mario Bros.
+
+    User 2: Oh, I love that game! I used to play it all the time when I was a kid.
+
+    User 1: Me too! It''s a classic.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and camping. I also like to go to the movies and read books.
+
+    User 2: That sounds like a lot of fun. I like to do some of those things too.
+
+    User 1: Cool. Maybe we can do some of those things together sometime.
+
+    User 2: That would be fun. I''d love to hang out with you.
+
+    User 1: Great! I''ll let you know when I''m free.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

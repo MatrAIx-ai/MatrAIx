@@ -1,0 +1,70 @@
+id: '00004303'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4303
+data:
+  user 1 personas: 'I drive a blue honda civic.
+
+    I m scared of left turns.
+
+    I have four siblings.
+
+    I think i m failing my women s studies class.'
+  user 2 personas: 'I ve a dog.
+
+    My favorite color is red.
+
+    I m looking for a job.
+
+    I m not very tall.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just looking for a job.
+
+    User 1: What kind of job are you looking for?
+
+    User 2: I''m not sure yet, but I''m open to anything.
+
+    User 1: Well, I''m sure you''ll find something. You seem like a smart person.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to read, play video games, and hang out with my dog.
+
+    User 1: That sounds like fun. I like to read and play video games too.
+
+    User 2: Me too! What are some of your favorite books and games?
+
+    User 1: I love the Harry Potter series and I''ve been playing a lot of Elden Ring lately.
+
+    User 2: Oh, I love Harry Potter too! I haven''t played Elden Ring yet, but I''ve heard good things about it.
+
+    User 1: It''s really good. It''s a challenging game, but it''s also really rewarding.
+
+    User 2: I''ll have to check it out.
+
+    User 1: I hope you like it.
+
+    User 2: Thanks!
+
+    User 1: So, what are you doing tomorrow?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to the park with my dog. Do you want to come?
+
+    User 2: That sounds like fun! I''ll come.
+
+    User 1: Great! I''ll see you tomorrow.
+
+    User 2: See you tomorrow!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00004234'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4234
+data:
+  user 1 personas: 'My favorite food is sushi.
+
+    I graduated with a nursing degree.
+
+    Helping people makes me happy.
+
+    We have two kids.
+
+    My husband is a firefighter.'
+  user 2 personas: 'I live in my parent s basement.
+
+    I work in a flower shop.
+
+    I like cats.
+
+    I read a lot of used books.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [username].
+
+    User 2: Hi, I''m [username]. Nice to meet you.
+
+    User 1: Same here. What do you do for a living?
+
+    User 2: I work in a flower shop.
+
+    User 1: Oh, that''s cool. I love flowers.
+
+    User 2: Me too! I like to grow them in my garden.
+
+    User 1: That''s awesome. I''ve always wanted to grow my own flowers, but I don''t have a green thumb.
+
+    User 2: You can always learn! I''m sure you''d be great at it.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to read, go for walks, and spend time with my family.
+
+    User 2: Me too! I love to read, especially books about gardening.
+
+    User 1: That''s cool. I like to read all kinds of books, but I don''t read a lot about gardening.
+
+    User 2: You should! It''s really interesting.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what''s your favorite book?
+
+    User 1: It''s hard to say, but I really like the Harry Potter series.
+
+    User 2: I''ve heard good things about those books.
+
+    User 1: They''re really good. They''re about a young wizard who goes to a magical school.
+
+    User 2: That sounds interesting. I might have to check them out.
+
+    User 1: You should! They''re really fun to read.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

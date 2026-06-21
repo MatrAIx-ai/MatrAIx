@@ -1,0 +1,66 @@
+id: '00000521'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 521
+data:
+  user 1 personas: 'I love pandas.
+
+    I am a vegetarian.
+
+    I love to surf.
+
+    I am starting a new juicing bar.
+
+    My favorite thing to do is to read books on the beach.'
+  user 2 personas: 'My father was a famous actor.
+
+    I do not like acting.
+
+    I have 3 ferrari cars in my garage.
+
+    I have 3 ex wives.
+
+    I do not like kids.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I like to read books, go to the beach, and watch movies.
+
+    User 1: That sounds like fun. I like to surf, read books, and go to the beach too.
+
+    User 2: Oh, that''s great! We should go surfing together sometime.
+
+    User 1: That would be fun!
+
+    User 2: I''m also a vegetarian.
+
+    User 1: Me too! I love vegetables.
+
+    User 2: My father was a famous actor, but I don''t like acting.
+
+    User 1: That''s interesting. I''ve never met anyone whose father was an actor.
+
+    User 2: I have 3 ex wives and 3 Ferrari cars in my garage.
+
+    User 1: Wow, that''s quite a collection of cars. I have always wanted to drive a Ferrari.
+
+    User 2: I don''t like kids.
+
+    User 1: I don''t either. I think they''re a lot of work.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: We do. I think we''re going to be friends.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

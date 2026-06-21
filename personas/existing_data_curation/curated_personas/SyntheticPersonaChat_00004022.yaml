@@ -1,0 +1,58 @@
+id: '00004022'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4022
+data:
+  user 1 personas: 'I like to create websites.
+
+    I love new technology.
+
+    I wish i could play the stock market well.
+
+    I really enjoy reading the news.'
+  user 2 personas: 'I like alternative rock.
+
+    I work in a craft store.
+
+    I own a hearse.
+
+    I love to crochet.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name]. What do you do for fun?
+
+    User 1: I like to create websites, read the news, and follow new technology.
+
+    User 2: That''s cool. I like alternative rock, crocheting, and working in a craft store.
+
+    User 1: Oh, that''s really interesting. I''ve never crocheted before, but I''ve always wanted to try.
+
+    User 2: It''s really easy to learn! I''m sure you''d be a natural at it.
+
+    User 1: Maybe I''ll give it a try sometime.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I''ve heard that. What''s your favorite thing about crocheting?
+
+    User 2: I love the way it''s so easy to create something beautiful with your own two hands.
+
+    User 1: That''s a great way to look at it. I''m sure it''s really rewarding to see something you''ve made with your own hands.
+
+    User 2: It is. And it''s so much fun to give your creations to friends and family.
+
+    User 1: I bet! I''m sure they really appreciate it.
+
+    User 2: They do. It''s always nice to see someone wear something you''ve made.
+
+    User 1: That''s so cool. I''m definitely going to give crocheting a try sometime.
+
+    User 2: You should! I''m sure you''ll enjoy it.
+
+    User 1: Thanks for the encouragement.
+
+    User 2: No problem. Happy to help!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

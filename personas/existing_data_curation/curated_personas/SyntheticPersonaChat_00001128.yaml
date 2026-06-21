@@ -1,0 +1,60 @@
+id: 00001128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1128
+data:
+  user 1 personas: 'I run marathons.
+
+    I am a weightlifter.
+
+    I love the all american rejects.
+
+    I despise sweet potatoes.'
+  user 2 personas: 'I eat a lot of carbs even though my doctor tells me not to.
+
+    Just this past week i got a job cleaning gutters.
+
+    I spend every waking hour i can at the archery center.
+
+    My favorite singer is jess greenberg.
+
+    I ride a motorcycle , but it s not a harley.'
+  Best Generated Conversation: 'User 1: I''m a big fan of the All American Rejects!
+
+    User 2: Me too! They''re my favorite band.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I can''t decide between "Gives You Hell" and "Dirty Little Secret."
+
+    User 1: I love both of those songs!
+
+    User 2: Me too! They''re such great songs.
+
+    User 1: I''m also a weightlifter. Do you lift?
+
+    User 2: I do! I love it!
+
+    User 1: That''s awesome! I''m not very good at it, but I enjoy it.
+
+    User 2: It''s a great workout!
+
+    User 1: I agree! It''s a lot of fun too.
+
+    User 2: Do you run marathons?
+
+    User 1: I do! I love running!
+
+    User 2: That''s awesome! I''m not a very good runner, but I like to run sometimes.
+
+    User 1: It''s a great way to stay in shape!
+
+    User 2: I agree! It''s also a lot of fun.
+
+    User 1: I''m glad to see another All American Rejects fan!
+
+    User 2: Me too! They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

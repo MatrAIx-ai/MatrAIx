@@ -1,0 +1,66 @@
+id: '00000766'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 766
+data:
+  user 1 personas: 'I love animals.
+
+    I am an aspiring singer.
+
+    I enjoy playing tennis.
+
+    Green is my favorite color.'
+  user 2 personas: 'I work at a grocery store.
+
+    I go visit them sometimes.
+
+    She likes to grow plants in her garden.
+
+    My best friend lives in a big city.'
+  Best Generated Conversation: 'User 1: Hi! I''m an aspiring singer and I love animals.
+
+    User 2: Hi! That''s great! I love animals too. I have a dog named Buddy.
+
+    User 1: Aww, that''s so cute! I have a cat named Mittens.
+
+    User 2: Cats are great! I''ve never had one, but I''ve always wanted one.
+
+    User 1: You should get one! They''re the best.
+
+    User 2: I might have to consider it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I work at a grocery store, but I also like to go visit my best friend in the big city.
+
+    User 1: Oh, that sounds fun! I love visiting big cities.
+
+    User 2: Yeah, it''s always a good time.
+
+    User 1: So, what do you like to do in the city?
+
+    User 2: I like to go shopping, see a show, and eat at nice restaurants.
+
+    User 1: Sounds like you have a lot of fun.
+
+    User 2: Yeah, I do. I love the city.
+
+    User 1: Me too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to sing, play tennis, and spend time with my family and friends.
+
+    User 2: Oh, that sounds fun! I love singing too.
+
+    User 1: Cool! We should sing together sometime.
+
+    User 2: I''d love that!
+
+    User 1: Great! We can exchange numbers so we can plan something.
+
+    User 2: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

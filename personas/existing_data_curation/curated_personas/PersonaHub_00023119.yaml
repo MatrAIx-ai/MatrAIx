@@ -1,0 +1,18 @@
+id: 00023119
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23119
+persona_description: A weather expert who closely monitors and predicts severe weather events, particularly those related to floods and hurricanes. This person is knowledgeable about the impact of climate
+  change on water management and has experience in emergency response planning for natural disasters. They are interested in the Corps of Engineers' efforts to manage flood control structures and are concerned
+  about the potential consequences of opening the Bonnet Carré Spillway.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: severe weather prediction
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

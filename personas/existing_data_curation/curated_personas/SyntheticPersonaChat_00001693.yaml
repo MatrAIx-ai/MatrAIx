@@ -1,0 +1,68 @@
+id: 00001693
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1693
+data:
+  user 1 personas: 'I love the forest.
+
+    I have a shopping addiction.
+
+    I do not like when people get too close to me.
+
+    I do not like being asked a lot of questions.'
+  user 2 personas: 'I have traveled overseas many times.
+
+    My mother is a well known celebrity.
+
+    I am a civil war reenactment participant.
+
+    I have been on the tv news six times.
+
+    I like to make short films.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to travel, make short films, and participate in civil war reenactments.
+
+    User 1: That''s cool! I''ve always wanted to travel. Where have you been?
+
+    User 2: I''ve been to a lot of places. I''ve been to Europe, Asia, Africa, and South America.
+
+    User 1: Wow, that''s impressive! I''ve only ever been to Canada and Mexico.
+
+    User 2: You should definitely travel more. It''s a great way to learn about other cultures.
+
+    User 1: I know, I know. I''m planning a trip to Europe next year.
+
+    User 2: That''s great! What countries are you going to visit?
+
+    User 1: I''m not sure yet, but I''m thinking about going to France, Italy, and Spain.
+
+    User 2: Those are all great choices! I love France and Italy.
+
+    User 1: I''ve heard good things about them. I''m excited to see them for myself.
+
+    User 2: You''re going to have a great time.
+
+    User 1: Thanks! I''m sure I will.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to shop, go to the movies, and hang out with my friends.
+
+    User 2: I like to do all of those things too.
+
+    User 1: We should hang out sometime.
+
+    User 2: I''d love to.
+
+    User 1: Great! We can exchange numbers and make plans.
+
+    User 2: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00007978
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7978
+data:
+  user 1 personas: 'One of my favorite shows is face off on syfy.
+
+    I like things in organized.
+
+    I am a stay at home mom.
+
+    I enjoy cooking but not baking.
+
+    I enjoy a good run.'
+  user 2 personas: 'I like to water ski.
+
+    I spend my free time volunteering at nursing homes.
+
+    I am tall.
+
+    My favorite color is red.
+
+    My dad was a cop.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name). What''s your name?
+
+    User 2: I''m (user 2''s name). Nice to meet you.
+
+    User 1: You too. What do you like to do for fun?
+
+    User 2: I like to water ski, volunteer at nursing homes, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to cook, run, and watch Face Off on Syfy.
+
+    User 2: I''ve never heard of Face Off. What''s it about?
+
+    User 1: It''s a reality competition show where makeup artists compete to create the best special effects makeup. It''s really cool.
+
+    User 2: Oh, that sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a stay at home mom.
+
+    User 2: Oh, that must be fun.
+
+    User 1: It is. I love spending time with my kids.
+
+    User 2: I can imagine. I have a lot of fun with my family too.
+
+    User 1: That''s good. It''s important to have fun with your family.
+
+    User 2: I agree.
+
+    User 1: Well, it was nice talking to you. I have to go now.
+
+    User 2: It was nice talking to you too. Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

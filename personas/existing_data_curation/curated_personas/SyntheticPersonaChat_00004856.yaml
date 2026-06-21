@@ -1,0 +1,76 @@
+id: 00004856
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4856
+data:
+  user 1 personas: 'My favorite color is purple.
+
+    My father is a preacher.
+
+    I go to church on sunday.
+
+    I am a 1st grade teacher.
+
+    I have a 3 year old.'
+  user 2 personas: 'I am the worlds best aunt.
+
+    I am obsessed with my dog.
+
+    I enjoy cooking italian food.
+
+    I love trips to the beach.
+
+    I am in my last year of grad school.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: I''m Sarah.
+
+    User 1: Nice to meet you, Sarah. I''m [name].
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a grad student in my last year.
+
+    User 1: Oh, that''s cool! What are you studying?
+
+    User 2: I''m studying psychology.
+
+    User 1: That''s interesting! I''m a first grade teacher.
+
+    User 2: Oh, that''s awesome! I love kids.
+
+    User 1: Me too! They''re so much fun to work with.
+
+    User 2: I bet! So, what do you like to do for fun?
+
+    User 1: I like to go to the beach, read, and spend time with my family.
+
+    User 2: That sounds like a lot of fun! I like to cook, go to the dog park, and spend time with my family too.
+
+    User 1: Nice! We should go to the beach together sometime.
+
+    User 2: That would be fun! I love the beach.
+
+    User 1: Me too! We could go for a walk, play in the sand, and have a picnic.
+
+    User 2: That sounds like a perfect day!
+
+    User 1: It does!
+
+    User 2: I''m free next weekend.
+
+    User 1: Me too!
+
+    User 2: So, how about next weekend we go to the beach?
+
+    User 1: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

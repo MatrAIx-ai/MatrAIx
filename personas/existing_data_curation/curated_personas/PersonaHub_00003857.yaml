@@ -1,0 +1,19 @@
+id: 00003857
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3857
+persona_description: A NASA astronaut who is primarily interested in conducting scientific experiments in space and exploring the potential of microgravity for scientific research. This persona is known
+  for their expertise in conducting experiments aboard the International Space Station and has a passion for microgravity research. They are likely to be interested in the STS-107 mission, which was a mission
+  specifically mandated by the US Congress to test microgravity experiments with commercial potential and could not have been done on the International Space Station for some time due to ISS construction
+  work and crew limitations. This persona is also interested in the potential of microgravity for scientific research and is likely to be familiar with the various experiments conducted on the STS-107 mission.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Space Exploration/Astronautics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

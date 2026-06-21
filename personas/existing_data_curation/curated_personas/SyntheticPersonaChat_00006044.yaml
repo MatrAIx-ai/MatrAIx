@@ -1,0 +1,66 @@
+id: '00006044'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6044
+data:
+  user 1 personas: 'I like to watch shows on netflix.
+
+    My sister is my best friend.
+
+    I want to learn self defense.
+
+    I want to go back to school.'
+  user 2 personas: 'My father used to be a cop.
+
+    I am single.
+
+    I am a cyclist.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to watch shows on Netflix, go for bike rides, and eat pizza.
+
+    User 1: Oh, me too! I love watching shows on Netflix. What''s your favorite show?
+
+    User 2: I like to watch a lot of different shows, but my favorite is probably The Office.
+
+    User 1: I love The Office! I''ve seen every episode at least twice.
+
+    User 2: Me too! It''s such a funny show.
+
+    User 1: Yeah, it is. I love all the characters.
+
+    User 2: Me too. Michael Scott is my favorite character.
+
+    User 1: He''s so funny! I love his one-liners.
+
+    User 2: Me too. He''s the best.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a cyclist.
+
+    User 1: Oh, that''s cool! Do you do it professionally or just for fun?
+
+    User 2: Just for fun. I love riding my bike.
+
+    User 1: That''s great! I used to ride my bike a lot when I was younger, but I don''t have as much time for it anymore.
+
+    User 2: Yeah, I know what you mean. It''s a lot of work, but it''s so worth it.
+
+    User 1: Yeah, it is. I miss it.
+
+    User 2: You should get back into it! It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 1: I think I will! Thanks for the suggestion.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

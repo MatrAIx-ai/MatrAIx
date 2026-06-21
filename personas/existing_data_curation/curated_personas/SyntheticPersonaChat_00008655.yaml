@@ -1,0 +1,62 @@
+id: 00008655
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8655
+data:
+  user 1 personas: 'I prefer vinyl records to any other music recording format.
+
+    I think if i work hard enough i can fix the world.
+
+    I fix airplanes for a living.
+
+    I am never still.'
+  user 2 personas: 'When i have free time , i sketch my favorite characters.
+
+    I take things very literally.
+
+    I play a lot of video games.
+
+    I am gay but i have not told my parents yet.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sketch my favorite characters and play video games.
+
+    User 1: Oh, cool! I''m into music and fixing airplanes.
+
+    User 2: That''s interesting. I''ve never met someone who fixes airplanes before.
+
+    User 1: It''s a lot of fun. I get to work on different types of airplanes and it''s always challenging.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It is, but it''s worth it when I see the finished product.
+
+    User 2: I''m sure it is. So, do you have a favorite type of music?
+
+    User 1: I love all kinds of music, but I prefer vinyl records.
+
+    User 2: Why do you prefer vinyl records?
+
+    User 1: I think they sound better than digital music. And there''s something about the ritual of putting on a record and listening to it that I find really relaxing.
+
+    User 2: I can see why you like that. I like the way vinyl records look and feel.
+
+    User 1: Me too. They''re just so cool.
+
+    User 2: So, what do you like to do when you''re not working?
+
+    User 1: I like to play music, go to concerts, and hang out with friends.
+
+    User 2: That sounds like a lot of fun. I like to do those things too.
+
+    User 1: Cool! We should hang out sometime.
+
+    User 2: I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

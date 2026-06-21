@@ -1,0 +1,76 @@
+id: 00008591
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8591
+data:
+  user 1 personas: 'I was born male and transitioned to female when i was 17.
+
+    I love pizza.
+
+    My favorite color is blue.
+
+    I live in the usa.'
+  user 2 personas: 'I live with my boyfriend of 5 years.
+
+    I was born in london.
+
+    I paint in my free time.
+
+    I live in vienna , austria now.
+
+    I work in it.'
+  Best Generated Conversation: 'User 1: Hi there! What do you like to do for fun?
+
+    User 2: I like to paint, and I also like to play video games.
+
+    User 1: What kind of games do you like to play?
+
+    User 2: I like to play a lot of different games, but my favorite is probably Minecraft.
+
+    User 1: I''ve heard of Minecraft, but I''ve never played it. What''s it about?
+
+    User 2: It''s a sandbox game where you can build anything you want. It''s really fun to be creative and build your own world.
+
+    User 1: That sounds like a lot of fun! I might have to check it out.
+
+    User 2: You should! It''s really fun.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from London, England.
+
+    User 1: Oh, cool! I''ve always wanted to visit London.
+
+    User 2: You should! It''s a great city.
+
+    User 1: Maybe I will one day.
+
+    User 2: You should!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in IT.
+
+    User 1: Oh, cool! I''m in IT too.
+
+    User 2: Really? What do you do?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I''m a systems administrator.
+
+    User 1: Nice!
+
+    User 2: So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to paint a picture of a cat.
+
+    User 1: Oh, cool! I''d love to see it when you''re done.
+
+    User 2: Sure! I''ll send you a picture.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

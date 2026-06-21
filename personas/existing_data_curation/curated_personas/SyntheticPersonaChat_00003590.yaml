@@ -1,0 +1,94 @@
+id: 00003590
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3590
+data:
+  user 1 personas: 'I am allergic to lactose.
+
+    I am really terrible at doing regular expressions.
+
+    I like having fried fish for supper.
+
+    My favorite singer is justin bieber.
+
+    My doctor told me i have six months to live.'
+  user 2 personas: 'I have a rose tattooed on my right ankle.
+
+    I am studying to be a dental hygienist but i hate seeing patients saliva.
+
+    I work in a doctors office.
+
+    I only wear silver jewelry.
+
+    There are thorns tattooed on my toes.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name]. What''s your name?
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Me too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite are mystery novels.
+
+    User 1: I love mystery novels too! What''s your favorite mystery novel?
+
+    User 2: My favorite mystery novel is "The Girl with the Dragon Tattoo" by Stieg Larsson.
+
+    User 1: That''s a great book! I read it a few years ago and I really enjoyed it.
+
+    User 2: It''s so good! I''m glad you liked it.
+
+    User 1: So, what kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but my favorite are action movies.
+
+    User 1: Me too! What''s your favorite action movie?
+
+    User 2: My favorite action movie is "The Fast and the Furious".
+
+    User 1: That''s a great movie! I love the car chases.
+
+    User 2: Me too! They''re so intense.
+
+    User 1: So, what kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but my favorite are adventure games.
+
+    User 1: Me too! What''s your favorite adventure game?
+
+    User 2: My favorite adventure game is "The Legend of Zelda".
+
+    User 1: That''s a great game! I love the dungeons.
+
+    User 2: Me too! They''re so challenging.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go camping, hiking, and fishing.
+
+    User 1: I love camping too! What''s your favorite camping spot?
+
+    User 2: My favorite camping spot is in the mountains.
+
+    User 1: That sounds amazing! I love the mountains.
+
+    User 2: Me too! I love the fresh air and the beautiful scenery.
+
+    User 1: So, what are you studying to be?
+
+    User 2: I''m studying to be a dental hygienist.
+
+    User 1: That''s cool! I''ve always been interested in dentistry.
+
+    User 2: It''s a great job! I love working with people and helping them improve their oral health.
+
+    User 1: That''s awesome! I''m sure you''ll be a great dental hygienist.
+
+    User 2: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00000930
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 930
+data:
+  user 1 personas: 'I am in college.
+
+    I eat large meals.
+
+    I exercise everyday.
+
+    I like to swim.'
+  user 2 personas: 'I work nights now and like my job.
+
+    I recently broke up with my girlfriend.
+
+    I have two dogs.
+
+    I am a 30 year old male.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I like to work out and swim.
+
+    User 1: That sounds like a lot of fun! I like to swim too.
+
+    User 2: What do you like about swimming?
+
+    User 1: I love the feeling of being in the water and the exercise. It''s also a great way to relax.
+
+    User 2: I agree! I also like the exercise and relaxation.
+
+    User 1: Do you swim competitively?
+
+    User 2: No, I just swim for fun.
+
+    User 1: Me too. I used to swim competitively when I was younger, but now I just swim for fun.
+
+    User 2: I''m glad you still enjoy it.
+
+    User 1: Yes, I do. It''s a great way to stay in shape.
+
+    User 2: I agree! What else do you like to do for fun?
+
+    User 1: I like to watch movies, go out to eat, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun! I like to do all of those things too.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but I especially like action movies and comedies.
+
+    User 1: Me too! I love action movies and comedies.
+
+    User 2: What kind of food do you like to eat?
+
+    User 1: I like to eat all kinds of food, but I especially like Mexican food and Italian food.
+
+    User 2: I love Mexican food and Italian food too!
+
+    User 1: What are your favorite Mexican and Italian restaurants?
+
+    User 2: I like El Torito and Casa Blanca for Mexican food, and I like Olive Garden and Maggiano''s for Italian food.
+
+    User 1: I''ve been to El Torito and Olive Garden before. They''re both great restaurants!
+
+    User 2: I''m glad you like them! What are some of your favorite things to do with your friends?
+
+    User 1: I like to go to the movies, go out to eat, and play video games.
+
+    User 2: That sounds like a lot of fun! I like to do all of those things too.
+
+    User 1: What are some of your favorite video games?
+
+    User 2: I like to play Call of Duty, Grand Theft Auto, and Overwatch.
+
+    User 1: I''ve played Call of Duty and Grand Theft Auto before. They''re both great games!
+
+    User 2: I''m glad you like them!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

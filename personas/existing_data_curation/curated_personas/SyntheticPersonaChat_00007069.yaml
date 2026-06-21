@@ -1,0 +1,92 @@
+id: 00007069
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7069
+data:
+  user 1 personas: 'My name is mary and i m from colorado.
+
+    The weather here is very cold , but so beautiful in the spring.
+
+    My favorite band is one direction.
+
+    I love to hike in the summer.'
+  user 2 personas: 'I am very unproductive unless it comes to my job.
+
+    I do not eat well.
+
+    I work in a factory.
+
+    I sleep most of the day.
+
+    I am not social.'
+  Best Generated Conversation: 'User 1: Hi! I''m Mary. I''m from Colorado.
+
+    User 2: Hello Mary! I''m [user 2''s name]. I''m also from Colorado.
+
+    User 1: No way! That''s so cool! What part of Colorado are you from?
+
+    User 2: I''m from Denver.
+
+    User 1: Me too! I love Denver. It''s such a beautiful city.
+
+    User 2: It is! I love the mountains and the weather.
+
+    User 1: Me too! The mountains are so beautiful, and the weather is perfect in the spring.
+
+    User 2: I agree! The spring is my favorite time of year in Colorado.
+
+    User 1: Mine too! Do you like to hike in the summer?
+
+    User 2: I do! I love hiking in the mountains.
+
+    User 1: Me too! I love the views from the top of the mountains.
+
+    User 2: Me too! They''re so beautiful.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch movies, play video games, and read.
+
+    User 1: Me too! I love watching movies and playing video games.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I have so many favorite movies, but I think my favorite is "The Lord of the Rings: The Return of the King."
+
+    User 2: That''s a great movie! I love the whole Lord of the Rings trilogy.
+
+    User 1: Me too! They''re so good.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read a lot of different things, but my favorite genre is science fiction.
+
+    User 2: Me too! I love science fiction.
+
+    User 1: So, what are some of your favorite science fiction books?
+
+    User 2: I like "The Martian" by Andy Weir, "Ready Player One" by Ernest Cline, and "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams.
+
+    User 1: I love all of those books! They''re so good.
+
+    User 2: Me too! They''re some of my favorite books.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go out to eat, go shopping, and hang out with friends.
+
+    User 1: Me too! I love going out to eat and hanging out with friends.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go to the movies or go out to eat.
+
+    User 2: That sounds fun! I''m not sure what I''m doing either.
+
+    User 1: Well, it was nice talking to you. I hope we can talk again sometime.
+
+    User 2: Me too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

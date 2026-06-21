@@ -1,0 +1,64 @@
+id: 00003538
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3538
+data:
+  user 1 personas: 'My father is a mechanic.
+
+    I work at walmart as a stocker.
+
+    I am leaving for college in three months.
+
+    I am vegan.'
+  user 2 personas: 'I have a cat.
+
+    Subway is my favorite fast food restaurant.
+
+    I spend my weekends browsing antique stores.
+
+    I collect little figurines.
+
+    Starbucks is my favorite hang out spot.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1]. What''s your name?
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to browse antique stores and collect little figurines.
+
+    User 1: That''s cool! I love to shop for clothes.
+
+    User 2: I''m not a big fan of shopping. I prefer to spend my money on experiences.
+
+    User 1: That makes sense. I like to save up for big purchases.
+
+    User 2: I do the same. I''m saving up for a trip to Europe.
+
+    User 1: That sounds like a lot of fun! I''ve never been to Europe.
+
+    User 2: You should go! It''s a beautiful place.
+
+    User 1: I''m planning on it!
+
+    User 2: What do you do for work?
+
+    User 1: I work at Walmart as a stocker.
+
+    User 2: Oh, that''s cool. I''ve never been to Walmart.
+
+    User 1: You should go! It''s a great place to get cheap stuff.
+
+    User 2: I will!
+
+    User 1: What are you studying in college?
+
+    User 2: I''m not sure yet. I''m still waiting to get my acceptance letters.
+
+    User 1: Oh, I see. Well, good luck!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

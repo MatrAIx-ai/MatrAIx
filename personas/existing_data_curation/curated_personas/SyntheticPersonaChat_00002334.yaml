@@ -1,0 +1,54 @@
+id: '00002334'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2334
+data:
+  user 1 personas: 'I work at a factory.
+
+    I enjoy jazz music.
+
+    I ride my bicycle everywhere.
+
+    I broke my nose when i was ten.'
+  user 2 personas: 'I am a mother of three.
+
+    I am thinking of becoming a mother next year.
+
+    I love to eat pita bread with hummus.
+
+    I go to work early in the morning as a nurse.
+
+    I am bipolar.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1. I work at a factory, I enjoy jazz music, I ride my bicycle everywhere, and I broke my nose when I was ten.
+
+    User 2: Hi, I''m User 2. I''m a mother of three, I''m thinking of becoming a mother next year, I love to eat pita bread with hummus, I go to work early in the morning as a nurse, and I''m bipolar.
+
+    User 1: That''s cool! I''ve never heard of anyone being a nurse who is bipolar.
+
+    User 2: It can be challenging, but it''s also very rewarding.
+
+    User 1: I''m sure it is. I''ve always admired nurses.
+
+    User 2: Thanks! It''s a great profession.
+
+    User 1: So, how do you like being a mother of three?
+
+    User 2: It''s definitely a lot of work, but it''s also very rewarding. I love being able to watch my children grow and learn.
+
+    User 1: That''s awesome! I''m sure you''re a great mother.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to read, go for walks, and spend time with my family.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I love my life.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00003369
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3369
+data:
+  user 1 personas: 'I graduated high school.
+
+    I drive a truck.
+
+    I live on a farm.
+
+    I have a beard.
+
+    I like rap music.'
+  user 2 personas: 'I am in a local theater company.
+
+    My parents are divorced.
+
+    I am a history buff.
+
+    I love animals and like working with them.'
+  Best Generated Conversation: 'User 1: I''m a truck driver.
+
+    User 2: That''s cool. I''ve always wanted to drive a truck.
+
+    User 1: It''s fun. I get to see a lot of different places.
+
+    User 2: Yeah, that would be cool. I like to travel.
+
+    User 1: Where have you traveled to?
+
+    User 2: I''ve been to a few different states in the US, but I''ve never been out of the country.
+
+    User 1: I''ve been to a few countries in Europe.
+
+    User 2: That sounds amazing. I would love to go to Europe.
+
+    User 1: It''s a great place to visit. There''s so much history and culture.
+
+    User 2: I''m sure there is. I love history.
+
+    User 1: Me too. I''m a big history buff.
+
+    User 2: That''s cool. I''m in a local theater company, so I get to act out history all the time.
+
+    User 1: That''s awesome. I love theater.
+
+    User 2: Me too. It''s a great way to express yourself.
+
+    User 1: I agree. I''ve always wanted to act in a play.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: You should! I''m sure you''d be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

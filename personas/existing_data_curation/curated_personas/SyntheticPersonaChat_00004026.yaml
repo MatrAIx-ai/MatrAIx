@@ -1,0 +1,74 @@
+id: '00004026'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4026
+data:
+  user 1 personas: 'I like to drink green tea.
+
+    I like to run so that i can clear my head.
+
+    I enjoy watching mystery movies.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I am an author.'
+  user 2 personas: 'I am married.
+
+    I love the beach.
+
+    I work 2 jobs.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1!
+
+    User 2: Hi, I''m User 2!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go to the beach!
+
+    User 1: Me too! I love swimming, sunbathing, and playing volleyball.
+
+    User 2: What''s your favorite color?
+
+    User 1: Blue! What''s yours?
+
+    User 2: Mine is also blue! It''s such a calming color.
+
+    User 1: I agree! It''s my favorite color for clothes, too.
+
+    User 2: Me too! I always wear blue when I want to feel relaxed.
+
+    User 1: I love that! What do you do for work?
+
+    User 2: I work two jobs. I''m a teacher during the day and a waitress at night.
+
+    User 1: Wow, that''s a lot of work! How do you manage it all?
+
+    User 2: It can be tough, but I make it work. I love my jobs and I''m happy to do them.
+
+    User 1: I''m glad to hear that! What do you like about teaching?
+
+    User 2: I love working with kids and helping them learn. It''s so rewarding to see them grow and learn.
+
+    User 1: That sounds amazing! What do you like about being a waitress?
+
+    User 2: I love meeting new people and making them feel special. It''s so much fun to be able to make people''s day a little better.
+
+    User 1: That sounds like a great job!
+
+    User 2: It is! I love it.
+
+    User 1: What are your hobbies?
+
+    User 2: I love to read, write, and play sports.
+
+    User 1: Me too! I love to read mystery novels, write short stories, and play volleyball.
+
+    User 2: We have a lot in common! It''s nice to meet you, User 1.
+
+    User 1: It''s nice to meet you too, User 2.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

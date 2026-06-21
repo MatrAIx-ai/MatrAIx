@@ -1,0 +1,58 @@
+id: 00006975
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6975
+data:
+  user 1 personas: 'I have blue eyes and curly brown hair.
+
+    My favorite type of music is country.
+
+    My dog is a collie.
+
+    I love to snack between meals.
+
+    I love to travel with my family.'
+  user 2 personas: 'I m looking for a job.
+
+    I m not very tall.
+
+    I ve a dog.
+
+    I ve two siblings.
+
+    My favorite color is red.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to concerts and play video games.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like country music, but I''m open to other types.
+
+    User 1: I love country music too! What are some of your favorite artists?
+
+    User 2: I like George Strait, Kenny Chesney, and Brad Paisley.
+
+    User 1: Those are all great artists! I''m a big fan of Brad Paisley myself.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play action-adventure games, like The Last of Us and God of War.
+
+    User 2: I''ve heard good things about both of those games. I''m more of a racing game fan myself.
+
+    User 1: I like racing games too! I''ve been playing Forza Horizon 5 a lot lately.
+
+    User 2: I''ve heard good things about that game too. I''ve been playing Forza Horizon 4 a lot.
+
+    User 1: Both of those games are great! I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

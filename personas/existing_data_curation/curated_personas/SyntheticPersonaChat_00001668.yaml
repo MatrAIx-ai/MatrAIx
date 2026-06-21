@@ -1,0 +1,58 @@
+id: 00001668
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1668
+data:
+  user 1 personas: 'I live in alabama.
+
+    I have blonde hair.
+
+    I am obese.
+
+    I m 53 years old.'
+  user 2 personas: 'I would like to be a journalist one day.
+
+    I am going to school for writing.
+
+    My mother is a librarian.
+
+    I often help her sort books in the library.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a student, and I''m going to school for writing.
+
+    User 1: Oh, that''s great! I''m a journalist.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to be a journalist.
+
+    User 1: Well, it''s not as easy as it seems.
+
+    User 2: I know, I''ve heard that it''s a lot of work.
+
+    User 1: It is, but it''s also very rewarding.
+
+    User 2: I can imagine. I love writing, so I''m sure I would love being a journalist.
+
+    User 1: I''m sure you would. Do you have any experience writing?
+
+    User 2: Yes, I''ve written for my school newspaper and I''ve also written some articles for my local newspaper.
+
+    User 1: That''s great! It sounds like you''re on the right track to becoming a journalist.
+
+    User 2: Thanks! I hope so.
+
+    User 1: I''m sure you will. You just have to keep writing and keep practicing.
+
+    User 2: I will. I''m not going to give up on my dream.
+
+    User 1: That''s the spirit!
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

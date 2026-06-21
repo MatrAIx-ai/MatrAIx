@@ -1,0 +1,86 @@
+id: '00002432'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2432
+data:
+  user 1 personas: 'I avoid eating sugar.
+
+    I like rollerblading.
+
+    I try to eat a balanced diet.
+
+    I am caucasian.'
+  user 2 personas: 'I work in the office , 9 till 5.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.
+
+    I like italian cusine.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well, thanks! How are you?
+
+    User 1: I''m doing great! What do you do for fun?
+
+    User 2: I like to go rollerblading and eat Italian food.
+
+    User 1: Rollerblading sounds fun! I love Italian food too.
+
+    User 2: That''s great! Where are you from?
+
+    User 1: I''m from a small town in the Midwest.
+
+    User 2: Oh, cool! I live in a big city.
+
+    User 1: How do you like living in a big city?
+
+    User 2: It''s okay, but it''s a little noisy and crowded.
+
+    User 1: Yeah, I can imagine. I like the peace and quiet of a small town.
+
+    User 2: I guess it''s just a matter of personal preference.
+
+    User 1: I guess so. So, what''s your favorite Italian food?
+
+    User 2: I love pasta! And I also love pizza.
+
+    User 1: Me too! Pasta is my favorite food.
+
+    User 2: That''s great! I''m glad we have something in common.
+
+    User 1: Me too! So, where do you like to go for Italian food?
+
+    User 2: There''s a great restaurant in my neighborhood called Il Forno.
+
+    User 1: Oh, I''ve heard good things about that place.
+
+    User 2: Yeah, it''s really good. I''ve been going there for years.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should! It''s worth the trip.
+
+    User 1: Thanks for the recommendation! I''ll definitely put it on my list.
+
+    User 2: You''re welcome! So, what else do you like to do for fun?
+
+    User 1: I like to go hiking, swimming, and biking.
+
+    User 2: Those all sound like fun! I love being outdoors.
+
+    User 1: Me too! I think it''s important to get some exercise and fresh air every day.
+
+    User 2: I agree! So, what''s your favorite outdoor activity?
+
+    User 1: I think my favorite is hiking. I love being in the mountains and exploring new places.
+
+    User 2: That sounds like a lot of fun! I''ve never really been hiking before, but I''d like to try it sometime.
+
+    User 1: You should! It''s a great way to get out and enjoy nature.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

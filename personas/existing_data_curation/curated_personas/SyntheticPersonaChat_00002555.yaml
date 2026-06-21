@@ -1,0 +1,81 @@
+id: '00002555'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2555
+data:
+  user 1 personas: 'I live on a pig farm.
+
+    I wish that i lived in the city.
+
+    I dislike animals.
+
+    I am a vegetarian.'
+  user 2 personas: 'My favorite music is rock and roll.
+
+    I enjoy skiing.
+
+    I am from russia.
+
+    I love to travel.'
+  Best Generated Conversation: 'User 1: Hi!
+
+
+    User 2: Hello!
+
+
+    User 1: What''s your name?
+
+
+    User 2: My name is [name].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a programmer.
+
+
+    User 1: Oh, cool! I''m a vegetarian.
+
+
+    User 2: Really? That''s interesting. I love meat.
+
+
+    User 1: I don''t like animals.
+
+
+    User 2: That''s too bad. I love animals. I have a dog and a cat.
+
+
+    User 1: I live on a pig farm.
+
+
+    User 2: Oh, really? That must be interesting. I''ve never been to a pig farm.
+
+
+    User 1: It''s not very interesting. I just wish I lived in the city.
+
+
+    User 2: I like living in the city. It''s so much more exciting than living in the country.
+
+
+    User 1: I can imagine. I''ve always wanted to travel to Russia.
+
+
+    User 2: You should! It''s a beautiful country. I love skiing in Russia.
+
+
+    User 1: I''ve always wanted to try skiing.
+
+
+    User 2: You should! It''s really fun.
+
+
+    User 1: I think I will.
+
+
+    User 2: Good! I''m glad I could help you decide.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

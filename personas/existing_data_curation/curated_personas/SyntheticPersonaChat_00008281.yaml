@@ -1,0 +1,58 @@
+id: 00008281
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8281
+data:
+  user 1 personas: 'I m a four year old girl with brown eyes and hair.
+
+    I like playing outside in the sun with my dolls.
+
+    My daddy brings home flowers for me.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I sleep in a princess bed.'
+  user 2 personas: 'My hair is brown and curly.
+
+    I hate red meat.
+
+    I love to surf.
+
+    I love watching sunsets.
+
+    I live near the ocean.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username], I''m 4 years old and I love playing outside!
+
+    User 2: Hi [username], I''m [username], I''m 25 years old and I love surfing!
+
+    User 1: Wow, surfing sounds so fun! I''ve never been before.
+
+    User 2: You should try it sometime! It''s a great way to get exercise and have fun in the sun.
+
+    User 1: I might just do that!
+
+    User 2: I''m sure you''d love it. Do you live near the ocean?
+
+    User 1: Yes, I do! I live in a small town right by the beach.
+
+    User 2: That''s perfect! You could go surfing every day if you wanted to.
+
+    User 1: I would love that! I''ve always wanted to learn how to surf.
+
+    User 2: Well, I''d be happy to teach you.
+
+    User 1: That would be great!
+
+    User 2: We can go surfing this weekend, if you''re free.
+
+    User 1: I''m free! I can''t wait to try surfing.
+
+    User 2: Great! I''ll pick you up at your house at 9am.
+
+    User 1: See you then!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

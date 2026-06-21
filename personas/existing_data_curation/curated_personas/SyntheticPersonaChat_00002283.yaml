@@ -1,0 +1,72 @@
+id: 00002283
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2283
+data:
+  user 1 personas: 'I love mexican food.
+
+    I work at a animal clinic.
+
+    I have two kids i enjoy being on social media.
+
+    I love the summer.'
+  user 2 personas: 'I like alternative rock.
+
+    I love to crochet.
+
+    I work in a craft store.
+
+    I own a hearse.
+
+    Halloween is my favorite holiday.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hello, my name is [name]. What do you do for fun?
+
+    User 1: I work at an animal clinic, I have two kids, and I love Mexican food. What about you?
+
+    User 2: I work in a craft store, I love alternative rock, and I crochet. I also love Halloween and own a hearse.
+
+    User 1: That''s interesting! I''ve never met someone who owns a hearse.
+
+    User 2: It''s a lot of fun. I love driving around in it and scaring people.
+
+    User 1: I bet! That sounds like a great way to spend Halloween.
+
+    User 2: It is! I also like to go to concerts and see bands that play alternative rock.
+
+    User 1: That''s cool! I love going to concerts too. What are some of your favorite bands?
+
+    User 2: I like The Cure, Joy Division, The Smiths, and Bauhaus.
+
+    User 1: Those are great bands! I love The Cure and Bauhaus.
+
+    User 2: Me too! They''re both so good.
+
+    User 1: So, what do you like to do at the craft store?
+
+    User 2: I like to crochet, knit, and sew. I also like to make jewelry and other crafts.
+
+    User 1: That''s cool! I''ve always wanted to learn how to crochet.
+
+    User 2: You should! It''s really easy to learn.
+
+    User 1: Maybe I will! Thanks for the suggestion.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in a craft store. I love it! I get to be creative all day long.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I love making things and seeing people enjoy them.
+
+    User 1: I bet! That''s so cool.
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: 00000857
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 857
+data:
+  user 1 personas: 'I own a hearse.
+
+    I work in a craft store.
+
+    I love to crochet.
+
+    Halloween is my favorite holiday.'
+  user 2 personas: 'I draw all the time and i am good at it.
+
+    I listen to pink when i am painting.
+
+    It takes me an hour to drive to work in the morning.
+
+    My wife makes the best pasta.
+
+    As long as i have a cup of coffee in my hand i am a happy person.'
+  Best Generated Conversation: 'User 1: I''m really interested in seeing your drawings. Do you have any online that I can see?
+
+    User 2: Yes, I do! Here''s my Instagram: @thedrawingartist
+
+    User 1: Wow, these are amazing! I love your style.
+
+    User 2: Thank you! I''m glad you like them.
+
+    User 1: I''m also a big fan of Halloween. What are some of your favorite things to do for Halloween?
+
+    User 2: I love dressing up as different characters and going to parties. I also love carving pumpkins and watching horror movies.
+
+    User 1: Me too! I love watching horror movies with my friends.
+
+    User 2: What''s your favorite horror movie?
+
+    User 1: I''m not sure I can pick just one favorite, but I love The Conjuring, The Shining, and The Exorcist.
+
+    User 2: Those are all great movies! I love The Conjuring too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to draw, listen to music, and spend time with my family.
+
+    User 1: I love to draw too! What kind of things do you draw?
+
+    User 2: I draw all kinds of things, but I mostly draw people and animals.
+
+    User 1: I love your drawings! I can tell you put a lot of time and effort into them.
+
+    User 2: Thank you! I''m glad you like them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

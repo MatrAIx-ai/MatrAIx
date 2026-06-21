@@ -1,0 +1,54 @@
+id: '00007430'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7430
+data:
+  user 1 personas: 'My purse has a picture of a skunk on it.
+
+    My skin is olive colored.
+
+    I wear glasses that are cateyes.
+
+    My eyes are green.
+
+    I want to be a librarian.'
+  user 2 personas: 'I enjoy reading history books.
+
+    I am a teacher.
+
+    I love to dance.
+
+    I grew up in new hampshire.'
+  Best Generated Conversation: 'User 1: Hi! I''m a librarian in training. I love history books. Do you have any favorite books?
+
+    User 2: I love reading history books too! My favorite is "A People''s History of the United States" by Howard Zinn.
+
+    User 1: That''s a great book! I''ve read it a few times. What else do you like to do for fun?
+
+    User 2: I love to dance. I took dance classes when I was younger, and I still love to dance at parties and social events.
+
+    User 1: That''s awesome! I wish I could dance. I''m pretty clumsy.
+
+    User 2: You should give it a try! It''s so much fun to move your body and express yourself.
+
+    User 1: I might just do that. Thanks for the suggestion!
+
+    User 2: You''re welcome! Where did you grow up?
+
+    User 1: I grew up in California. I love the beach and the weather there.
+
+    User 2: I''ve never been to California. I grew up in New Hampshire. It''s a lot colder there than California!
+
+    User 1: I can imagine! I''ve never been to New Hampshire, but I''ve heard it''s beautiful.
+
+    User 2: It is! There are a lot of mountains and lakes. It''s a great place to go hiking and camping.
+
+    User 1: It sounds like a lot of fun. I''d love to visit sometime.
+
+    User 2: You should! I''m sure you''d love it.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

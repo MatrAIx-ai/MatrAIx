@@ -1,0 +1,64 @@
+id: 00008026
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8026
+data:
+  user 1 personas: 'I teach 5th grade students near oakville , ny.
+
+    My name is sarah.
+
+    I love to read and relax by the lake on the weekends.
+
+    I enjoy watching tennis and golf on tv.'
+  user 2 personas: 'I am an athlete.
+
+    I want to be an explorer.
+
+    I do not like my job.
+
+    My favorite color is blue.
+
+    I visit india often.'
+  Best Generated Conversation: 'User 1: Hi there! My name is Sarah and I''m a teacher.
+
+    User 2: Hi Sarah! I''m [user 2''s name]. I''m an athlete.
+
+    User 1: That''s cool! What kind of athlete are you?
+
+    User 2: I''m a runner. I love to compete in marathons.
+
+    User 1: That''s amazing! I''ve always wanted to run a marathon, but I''m not sure I''m in shape enough.
+
+    User 2: You should do it! It''s a great challenge and it''s a lot of fun.
+
+    User 1: I might just have to try it!
+
+    User 2: I''m sure you''d be great at it.
+
+    User 1: Thanks! What''s your favorite thing about being an athlete?
+
+    User 2: I love the feeling of pushing myself to the limit and seeing what I''m capable of.
+
+    User 1: That sounds amazing! I''m not sure I''ve ever felt that feeling.
+
+    User 2: You should try it! It''s a really rewarding experience.
+
+    User 1: I''ll think about it.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I love to read and relax by the lake on the weekends. I also enjoy watching tennis and golf on TV.
+
+    User 2: That sounds like a great way to relax. I love to watch tennis too.
+
+    User 1: It''s so much fun to watch the pros play.
+
+    User 2: I know, right? They''re so good.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

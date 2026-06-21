@@ -1,0 +1,66 @@
+id: 00008275
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8275
+data:
+  user 1 personas: 'I love eating barbeque sandwiches and pizza puffs.
+
+    I enjoy hanging out with my imaginary friends as a hobby.
+
+    I live down the street from miley cyrus and pnb rock.
+
+    My name is jovannie and i m 19.'
+  user 2 personas: 'I like the beatles.
+
+    My parents were scientists.
+
+    I am well built and tall.
+
+    I work as a scientist.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: My name is Jovannie. How about you?
+
+    User 2: My name is Alex.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a scientist.
+
+    User 1: Oh, that''s cool! I''m a student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: Oh, that''s cool! I''m a big fan of the Beatles.
+
+    User 1: Oh, really? I love the Beatles too!
+
+    User 2: What''s your favorite Beatles song?
+
+    User 1: I think my favorite Beatles song is "Hey Jude".
+
+    User 2: That''s a great song! Mine is "Yellow Submarine".
+
+    User 1: That''s a good one too!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to hang out with my friends, play video games, and watch movies.
+
+    User 2: Oh, that sounds like fun! I like to do the same things.
+
+    User 1: That''s cool! We should hang out sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll text you my number.
+
+    User 2: Ok, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

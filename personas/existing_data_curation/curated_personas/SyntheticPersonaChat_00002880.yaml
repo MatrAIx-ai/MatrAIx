@@ -1,0 +1,66 @@
+id: 00002880
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2880
+data:
+  user 1 personas: 'I love to play tennis.
+
+    My dad works offshore.
+
+    I love the chainsmokers.
+
+    I work as a lifeguard.
+
+    I also love to travel.'
+  user 2 personas: 'I have a dog and we go for walks.
+
+    I help my neighbor.
+
+    I am a grandmother.
+
+    I live in a city.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I like to go for walks with my dog, and I love to help my neighbor.
+
+    User 1: That''s great! I like to play tennis, and I love to travel.
+
+    User 2: I''ve never played tennis, but it sounds like it would be fun. I''ve always wanted to travel, but I''ve never had the chance.
+
+    User 1: You should! It''s amazing to see new places and meet new people.
+
+    User 2: I know, I know! I''m planning on going to Europe next year.
+
+    User 1: That''s awesome! What countries are you planning on visiting?
+
+    User 2: I''m not sure yet, but I''m thinking about going to Italy, France, and Spain.
+
+    User 1: That sounds like a great trip! I''ve been to Italy and France, and they were both amazing.
+
+    User 2: I''m so excited! I can''t wait to see all the beautiful sights and meet new people.
+
+    User 1: I know you''ll have a great time.
+
+    User 2: Thanks!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a grandmother, and I work as a volunteer at my local library.
+
+    User 1: That''s great! I''m a lifeguard, and I love my job.
+
+    User 2: I''m sure you do! It sounds like a great job.
+
+    User 1: It is! I get to help people, and I get to be outside.
+
+    User 2: That sounds like the perfect job! I''m glad you like it.
+
+    User 1: Thank you! I love it!
+
+    User 2: Well, it was nice talking to you. I hope you have a great day.
+
+    User 1: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

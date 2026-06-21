@@ -1,0 +1,18 @@
+id: 00005802
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5802
+persona_description: A software engineer who is interested in validating and verifying the accuracy of a linear-elastic wave propagation model for spherically symmetric problems. The persona is particularly
+  interested in the code's ability to accurately model the twisting motion of a linear elastic annulus subjected to a slowly varying twisting angle. The persona seeks to ensure that the model is physically
+  applicable and physically appropriate, and that the code produces reasonable approximations of reality.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Computational Mechanics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Computational Mechanics of Elastic Waves
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

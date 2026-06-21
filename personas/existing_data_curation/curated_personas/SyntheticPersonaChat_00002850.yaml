@@ -1,0 +1,82 @@
+id: 00002850
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2850
+data:
+  user 1 personas: 'I like to watch anime.
+
+    I enjoy all things my little pony.
+
+    I like being weird.
+
+    I draw all of my friends as my little pony characters.'
+  user 2 personas: 'I have long red hair.
+
+    I own 10 cats.
+
+    My favorite jello is the blue one.
+
+    I work at home on my computer.
+
+    I do not eat asparagus.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch anime and draw.
+
+    User 1: Oh, that''s cool. I like to watch anime too. What are some of your favorite shows?
+
+    User 2: I like "Fullmetal Alchemist: Brotherhood" and "Cowboy Bebop".
+
+    User 1: I''ve heard good things about those shows. I''ve been meaning to check them out.
+
+    User 2: You should! They''re both really good.
+
+    User 1: What else do you like to draw?
+
+    User 2: I like to draw my friends as My Little Pony characters.
+
+    User 1: That''s really cool! I''ve never seen anything like that before.
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at home on my computer.
+
+    User 1: Oh, that''s interesting. What do you do?
+
+    User 2: I''m a freelance artist.
+
+    User 1: That''s cool! I''ve always wanted to be an artist.
+
+    User 2: It''s a lot of fun, but it can be hard to make a living.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch anime, and draw.
+
+    User 2: Oh, that''s cool. I like to play video games too.
+
+    User 1: What are some of your favorite games?
+
+    User 2: I like "The Witcher 3", "Dragon Age: Inquisition", and "Dark Souls".
+
+    User 1: I''ve heard good things about those games. I''ve been meaning to check them out.
+
+    User 2: You should! They''re all really good.
+
+    User 1: I''ll definitely check them out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

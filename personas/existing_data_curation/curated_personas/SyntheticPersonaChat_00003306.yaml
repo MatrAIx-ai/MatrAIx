@@ -1,0 +1,74 @@
+id: '00003306'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3306
+data:
+  user 1 personas: 'I am a registered nurse.
+
+    I have two smartphones.
+
+    My favorite movie is pretty woman.
+
+    I enjoy reading.'
+  user 2 personas: 'I love to cook.
+
+    I have three dogs.
+
+    I enjoy fishing.
+
+    I am looking for someone.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How are you today?
+
+    User 1: I''m doing well, thanks! How about you?
+
+    User 2: I''m doing great, thanks!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a registered nurse.
+
+    User 1: Oh, that''s great! I''ve always wanted to be a nurse.
+
+    User 2: It''s a great job! I love working with people and helping them get better.
+
+    User 1: What''s your favorite part about the job?
+
+    User 2: My favorite part is seeing the difference I can make in people''s lives.
+
+    User 1: That''s so amazing! What do you like to do outside of work?
+
+    User 2: I love to cook, read, and spend time with my dogs.
+
+    User 1: Oh, that''s sounds great! I love to cook too. I''m not very good at it, but I enjoy it.
+
+    User 2: Cooking is a great way to relax and de-stress.
+
+    User 1: That''s true! What do you like to cook?
+
+    User 2: I love to cook Italian food. I also love to make desserts.
+
+    User 1: I love Italian food too! I''m not the best at making desserts, but I enjoy trying new recipes.
+
+    User 2: That''s the best way to learn!
+
+    User 1: I agree! What''s your favorite dessert to make?
+
+    User 2: My favorite dessert to make is tiramisu.
+
+    User 1: That''s one of my favorites too! It''s so delicious.
+
+    User 2: It is! I love the combination of the coffee, cream, and lady fingers.
+
+    User 1: Me too! It''s so rich and decadent.
+
+    User 2: It''s the perfect dessert to end a meal.
+
+    User 1: I agree! I''m glad we have something in common.
+
+    User 2: Me too! I think it''s a good sign.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

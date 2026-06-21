@@ -1,0 +1,66 @@
+id: '00005435'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5435
+data:
+  user 1 personas: 'My favorite drink is red wine.
+
+    I enjoy gardening.
+
+    I have one child.
+
+    I work for a clothes retailer.'
+  user 2 personas: 'I eat too much fast food.
+
+    I love cold , wintry weather and snow.
+
+    I am a national guard officer.
+
+    I drive a 2011 volkswagen passat.'
+  Best Generated Conversation: 'User 1: Hello, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a National Guard officer.
+
+    User 1: Oh, that''s cool! I''ve always thought about joining the military.
+
+    User 2: It''s a great way to serve your country and get some great training.
+
+    User 1: I''m sure it is. What''s your favorite part of being an officer?
+
+    User 2: I love the sense of community and camaraderie. I also enjoy the challenges and the sense of accomplishment that comes with the job.
+
+    User 1: That sounds awesome. I''m sure it''s a lot of hard work, but it also sounds really rewarding.
+
+    User 2: It can be hard work, but it''s also very rewarding. I''m proud to serve my country and I''m grateful for the opportunities I''ve been given.
+
+    User 1: That''s great to hear. I''m sure your family is proud of you too.
+
+    User 2: They are. They''re my biggest supporters.
+
+    User 1: That''s awesome. I''m glad to hear that.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite thing to do in your free time?
+
+    User 2: I love spending time with my family and friends. I also enjoy gardening and reading.
+
+    User 1: That sounds like a lot of fun. I love gardening too. What kind of things do you like to grow?
+
+    User 2: I like to grow a variety of things, including vegetables, flowers, and herbs.
+
+    User 1: That''s awesome. I''m not much of a gardener, but I love eating fresh vegetables.
+
+    User 2: Gardening is a great way to get fresh produce and it''s also a lot of fun.
+
+    User 1: I agree. I''m going to have to try my hand at gardening one of these days.
+
+    User 2: You should! It''s a great hobby.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

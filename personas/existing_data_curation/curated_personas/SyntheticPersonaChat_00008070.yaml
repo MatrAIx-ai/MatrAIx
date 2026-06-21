@@ -1,0 +1,76 @@
+id: 00008070
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8070
+data:
+  user 1 personas: 'I do community theater when i am not in school.
+
+    I am in medical school.
+
+    I am in love with a girl who is unaware of it.
+
+    Both of my parents are doctors.
+
+    I really wanted to be an actor.'
+  user 2 personas: 'I enjoy budweiser beer.
+
+    I m still a student , but i m gonna be a nurse.
+
+    My horse never talks back to me.
+
+    I m the lead singer for an indie band.
+
+    I live in the city.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I''m a student, but I''m also the lead singer for an indie band.
+
+    User 1: That''s cool! What kind of music do you play?
+
+    User 2: We play a lot of different genres, but our main focus is on alternative rock.
+
+    User 1: That sounds cool. I''m in medical school, but I love to do community theater when I''m not in school.
+
+    User 2: That''s really cool! I''ve always wanted to try community theater, but I''ve never had the time.
+
+    User 1: You should definitely give it a try! It''s a lot of fun, and it''s a great way to meet new people.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem. So, what do you like to do for fun other than music?
+
+    User 2: I like to go out to concerts, hang out with my friends, and play video games.
+
+    User 1: That sounds like a lot of fun. I like to do a lot of the same things.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play a lot of different kinds of games, but my favorite is probably The Legend of Zelda.
+
+    User 2: I love The Legend of Zelda! It''s one of my favorite series of all time.
+
+    User 1: Me too! I''ve been playing it since I was a kid.
+
+    User 2: Me too! I still play it all the time.
+
+    User 1: It''s so good.
+
+    User 2: It is.
+
+    User 1: I wish they would make a new one.
+
+    User 2: Me too! They''ve been teasing one for a while now, but it hasn''t come out yet.
+
+    User 1: I know! It''s so frustrating.
+
+    User 2: It is. But I''m sure it''ll be worth the wait.
+
+    User 1: I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

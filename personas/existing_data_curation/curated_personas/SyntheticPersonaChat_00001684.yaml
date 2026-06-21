@@ -1,0 +1,72 @@
+id: 00001684
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1684
+data:
+  user 1 personas: 'I love folk metal.
+
+    I like tacos.
+
+    I talk in my sleep.
+
+    I own a cat.'
+  user 2 personas: 'I want to move to london when i get older.
+
+    I like to invest in the stock market.
+
+    I have 3 brothers.
+
+    I work for nike as an accountant.
+
+    I love soccer.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to invest in the stock market, play soccer, and spend time with my brothers.
+
+    User 1: Cool! I like to listen to folk metal, eat tacos, and talk in my sleep.
+
+    User 2: Interesting! I''ve never heard of folk metal before.
+
+    User 1: It''s a type of metal music that uses traditional folk instruments and melodies.
+
+    User 2: Oh, that sounds cool! I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: So, what are you doing in London?
+
+    User 1: I''m here for a business trip.
+
+    User 2: Oh, cool! What kind of business do you work in?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, cool! I work for Nike as an accountant too!
+
+    User 1: Really? That''s awesome!
+
+    User 2: Yeah, it''s a great company to work for.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to play soccer, watch movies, and hang out with friends.
+
+    User 2: Oh, that sounds like fun! I like to do the same things.
+
+    User 1: Cool! We should hang out sometime.
+
+    User 2: Yeah, that would be fun!
+
+    User 1: Great! I''ll give you my number.
+
+    User 2: Awesome! I''ll text you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

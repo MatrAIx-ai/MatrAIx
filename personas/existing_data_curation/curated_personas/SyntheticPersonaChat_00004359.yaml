@@ -1,0 +1,72 @@
+id: 00004359
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4359
+data:
+  user 1 personas: 'I have never broken a bone.
+
+    My favorite food is pizza.
+
+    I am athletic.
+
+    I love cats.'
+  user 2 personas: 'I like smoking weed.
+
+    I love rap music.
+
+    I am a meataholic.
+
+    My dad works for stifel.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to smoke weed and listen to rap music.
+
+    User 1: I''ve never tried weed, but I love rap music. Who''s your favorite rapper?
+
+    User 2: My favorite rapper is Kendrick Lamar. What''s your favorite food?
+
+    User 1: My favorite food is pizza. I love it so much!
+
+    User 2: Pizza is good. I''m a meataholic, so I love anything with meat.
+
+    User 1: I''m not really a big meat eater, but I do like some meat.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a software engineer. I work at a company called Google.
+
+    User 2: Oh, that''s cool. My dad works for Stifel.
+
+    User 1: I''ve never heard of that company before.
+
+    User 2: It''s a financial services company.
+
+    User 1: Oh, okay.
+
+    User 2: So, what do you like to do outside of work?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: I like to do those things too. I also like to go to concerts and festivals.
+
+    User 1: I don''t go to a lot of concerts, but I do like to go to festivals.
+
+    User 2: What''s your favorite festival?
+
+    User 1: My favorite festival is Coachella. It''s so much fun!
+
+    User 2: I''ve never been to Coachella, but I''ve heard it''s great.
+
+    User 1: It is! I''ve been going for the past few years and I always have a great time.
+
+    User 2: I''m going to have to check it out sometime.
+
+    User 1: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

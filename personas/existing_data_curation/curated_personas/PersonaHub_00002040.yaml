@@ -1,0 +1,18 @@
+id: '00002040'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2040
+persona_description: A cybersecurity expert who specializes in identifying and responding to cyber threats, including the analysis of security signs and incidents such as unexplained CPU usage, theft of
+  important information, strange processes running, and damage to or loss of important data. They have experience in investigating and preventing cybercrime and have a deep understanding of the latest trends
+  and techniques in cybersecurity. They are highly trained and have a proven track record of successfully preventing and responding to cyber incidents.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: cybersecurity
+  general_domain_top01pct: None
+  specific_domain_top01pct: threat hunting or incident response
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

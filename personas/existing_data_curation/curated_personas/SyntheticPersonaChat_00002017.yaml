@@ -1,0 +1,84 @@
+id: '00002017'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2017
+data:
+  user 1 personas: 'I m very religious.
+
+    I just took a trip to london.
+
+    I love to watch game shows.
+
+    I hate green beans.
+
+    I m easily agitated.'
+  user 2 personas: 'I want to be a famous photographer.
+
+    I want to travel the world taking photographs of my travels.
+
+    I want to put my photos to a music video staring adam levin.
+
+    I am a widow.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hello! I''m (user 2''s name).
+
+    User 1: It''s nice to meet you! What are you interested in?
+
+    User 2: I want to be a famous photographer. I want to travel the world taking photographs of my travels. I want to put my photos to a music video starring Adam Levine.
+
+    User 1: That''s amazing! I love to travel too. I just took a trip to London and I had a great time.
+
+    User 2: That''s so cool! I''ve always wanted to go to London. What did you like most about it?
+
+    User 1: I loved the history and the culture. I also loved the food!
+
+    User 2: I love food too! What was your favorite thing to eat in London?
+
+    User 1: I really loved the fish and chips. It was so fresh and delicious.
+
+    User 2: I''ve never had fish and chips before. I''ll have to try it when I go to London.
+
+    User 1: You definitely should! It''s a must-try.
+
+    User 2: So, what else are you interested in?
+
+    User 1: I''m also interested in game shows. I love watching them and I''m always trying to guess the answers.
+
+    User 2: I love game shows too! I always get so excited when I''m watching them.
+
+    User 1: Me too! I think it''s so much fun to try to figure out the answers.
+
+    User 2: So, what''s your favorite game show?
+
+    User 1: I think my favorite game show is Jeopardy. I love the way it tests your knowledge.
+
+    User 2: I love Jeopardy too! I''m always trying to learn new things when I''m watching it.
+
+    User 1: Me too! It''s such a great way to learn.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch movies, and read.
+
+    User 2: I like to do those things too! What are your favorite video games?
+
+    User 1: I like to play Mario Kart, Zelda, and Pokemon.
+
+    User 2: I love Mario Kart! I''m always trying to beat my friends'' times.
+
+    User 1: Me too! It''s so much fun to race against each other.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read science fiction and fantasy novels.
+
+    User 2: I love science fiction and fantasy too! I''m always looking for new books to read.
+
+    User 1: Me too! I love getting lost in a good book.
+
+    User 2: Me too! It''s such a great way to relax.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

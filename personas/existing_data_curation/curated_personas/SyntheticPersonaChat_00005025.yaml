@@ -1,0 +1,64 @@
+id: '00005025'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5025
+data:
+  user 1 personas: 'I like crab dipped in butter.
+
+    I like to kayak.
+
+    I like to fly model airplanes.
+
+    I like imagine dragons.'
+  user 2 personas: 'I like to play video games.
+
+    I have been working the same job for two years.
+
+    I am a musician.
+
+    My favorite band is hop along.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I like to play video games, I''ve been playing for over 10 years.
+
+    User 1: That''s cool! I used to play video games a lot, but I haven''t had much time for them lately.
+
+    User 2: I know what you mean. I have a full-time job now, so I don''t have as much time for gaming as I used to.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a musician. I play the guitar and sing.
+
+    User 1: That''s awesome! I''ve always wanted to learn to play the guitar.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. What''s your favorite band?
+
+    User 2: My favorite band is Hop Along. They''re a really good indie rock band from Philadelphia.
+
+    User 1: I''ve never heard of them, but I''ll check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go out to concerts, I like to go to the movies, and I like to hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to do similar things.
+
+    User 2: It''s good to have fun!
+
+    User 1: Yeah, it is.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too, Sarah. It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

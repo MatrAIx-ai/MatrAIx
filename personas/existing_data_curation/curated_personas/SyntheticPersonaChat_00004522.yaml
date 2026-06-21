@@ -1,0 +1,94 @@
+id: '00004522'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4522
+data:
+  user 1 personas: 'My favorite color is black.
+
+    I like to skate.
+
+    I want to visit the uk.
+
+    I sometimes write poetry.
+
+    I sing in a punk band.'
+  user 2 personas: 'I work for the railroad.
+
+    I like eating pretzels.
+
+    I am an omnivore.
+
+    My favorite band is vnv nation.
+
+    I really like watching star trek.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+
+    User 2: Hi [name], I''m [name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to watch Star Trek, eat pretzels, and work for the railroad.
+
+
+    User 1: Oh, that''s cool! I like to skate, write poetry, and sing in a punk band.
+
+
+    User 2: That''s cool! I''ve never been skating before, but I''ve always wanted to try it.
+
+
+    User 1: It''s really fun! You should give it a try.
+
+
+    User 2: Maybe I will.
+
+
+    User 1: What''s your favorite Star Trek series?
+
+
+    User 2: My favorite is Voyager.
+
+
+    User 1: Oh, that''s mine too! I love the characters and the story.
+
+
+    User 2: Me too! I''ve seen the whole series at least three times.
+
+
+    User 1: I''ve seen it twice, but I''m always up for a rewatch.
+
+
+    User 2: Me too! It''s always a good time.
+
+
+    User 1: So, what do you like about your job?
+
+
+    User 2: I like the people I work with and the job itself is pretty interesting.
+
+
+    User 1: That''s good! I''m glad you like your job.
+
+
+    User 2: Thanks!
+
+
+    User 1: Do you have any plans for the weekend?
+
+
+    User 2: Not really, I''m just going to relax and catch up on some TV.
+
+
+    User 1: That sounds like a good plan. I''m going to go skating with some friends.
+
+
+    User 2: Have fun!
+
+
+    User 1: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

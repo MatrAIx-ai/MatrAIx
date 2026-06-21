@@ -1,0 +1,17 @@
+id: '00001010'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1010
+persona_description: A botanist who specializes in the study of gymnosperms, particularly the life cycle and reproductive structures of conifers such as pines. The botanist's research interests include,
+  but are not limited to, the evolution of gymnosperms, their reproductive strategies, and the differences between gymnosperms and angiosperms.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: plant biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: gymnosperm biology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

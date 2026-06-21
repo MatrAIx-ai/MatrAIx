@@ -1,0 +1,58 @@
+id: 00003938
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3938
+data:
+  user 1 personas: 'I do not know how to swim.
+
+    My grandpa was in wwii.
+
+    My favorite food is steak.'
+  user 2 personas: 'I work as a construction worker during the summers.
+
+    My favourite food is ice cream.
+
+    I am a college student.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for a living?
+
+    User 2: I''m a college student, but I work as a construction worker during the summers.
+
+    User 1: Oh, that''s interesting. What''s your favorite thing about working as a construction worker?
+
+    User 2: I get to work outside, and I get to meet new people.
+
+    User 1: That sounds like a lot of fun. What''s your favorite food?
+
+    User 2: My favorite food is ice cream.
+
+    User 1: Mine too! What''s your favorite kind of ice cream?
+
+    User 2: I like chocolate chip cookie dough ice cream.
+
+    User 1: That''s a good choice. I like vanilla bean ice cream.
+
+    User 2: Vanilla bean ice cream is good too. What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and watch movies.
+
+    User 2: I like to read, go for walks, and watch movies too.
+
+    User 1: Oh, that''s great. We have a lot in common.
+
+    User 2: I think so too.
+
+    User 1: I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

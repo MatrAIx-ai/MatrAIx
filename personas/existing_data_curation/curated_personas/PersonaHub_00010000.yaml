@@ -1,0 +1,19 @@
+id: '00010000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10000
+persona_description: A molecular biologist who specializes in the study of microRNAs and their roles in gene regulation. His research focuses on the identification and characterization of microRNAs, their
+  interactions with target mRNAs, and the mechanisms by which miRNAs repress gene expression. He is particularly interested in the role of the CCR4-NOT complex in miRNA-mediated repression and the interaction
+  of GW182 proteins with the CNOT1 scaffold subunit of CCR4-NOT. He has published several papers in prestigious journals, including the Molecular Cell, and is known for his contributions to the elucidation
+  of possible modes of translational repression.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: molecular biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: microRNA biology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,70 @@
+id: 00006873
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6873
+data:
+  user 1 personas: 'My favorite singer is britney spears.
+
+    I love the color pink.
+
+    I love to swim.
+
+    I enjoy being outside.'
+  user 2 personas: 'I own 10 cats.
+
+    I have long red hair.
+
+    I do not eat asparagus.
+
+    My favorite jello is the blue one.
+
+    I work at home on my computer.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to swim and play with my cats.
+
+    User 1: That sounds like fun! I love to swim too. What''s your favorite color?
+
+    User 2: I love the color pink. It''s so cheerful.
+
+    User 1: Pink is my favorite color too! I love wearing pink clothes.
+
+    User 2: Me too! I have a lot of pink clothes in my closet.
+
+    User 1: That''s awesome! I''m glad we have something in common.
+
+    User 2: Me too! What do you do for work?
+
+    User 1: I work as a sales representative for a software company.
+
+    User 2: That sounds like a fun job! I work from home on my computer.
+
+    User 1: That sounds like a great job too! I love being outside, so I''m not sure I could work from home.
+
+    User 2: I like it because I can set my own hours and I don''t have to commute.
+
+    User 1: That''s a big advantage! I have to drive to work every day, and it can be a pain.
+
+    User 2: I know what you mean! I used to have to commute, and it was the worst.
+
+    User 1: So, what do you like to do for fun on the weekends?
+
+    User 2: I like to spend time with my cats, go swimming, and watch movies.
+
+    User 1: That sounds like a great way to relax. I like to do similar things on the weekends.
+
+    User 2: It''s the best way to unwind after a long week.
+
+    User 1: I agree! I''m glad we have similar interests.
+
+    User 2: Me too! I think we''d get along really well.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

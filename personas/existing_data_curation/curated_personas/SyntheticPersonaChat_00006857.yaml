@@ -1,0 +1,78 @@
+id: 00006857
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6857
+data:
+  user 1 personas: 'My favorite band is the beastie boys.
+
+    I want to be a museum curator.
+
+    I am a painter.
+
+    I went to new york city once.'
+  user 2 personas: 'I weight 300 pounds.
+
+    I am a man.
+
+    I like the movie godfather.
+
+    I am not healthy.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Cool. I''m a painter and I want to be a museum curator.
+
+    User 2: That''s cool. What kind of art do you paint?
+
+    User 1: I paint a lot of abstract and nature themed pieces.
+
+    User 2: Oh, that''s cool. I don''t think I''ve ever seen abstract art before.
+
+    User 1: Well, it''s not for everyone. It''s not meant to be realistic. It''s more about expressing yourself and your emotions.
+
+    User 2: I see. I guess I could see how that would be interesting.
+
+    User 1: Yeah, it is. Do you have any hobbies?
+
+    User 2: I like to watch movies and I like to play video games.
+
+    User 1: Oh, that''s cool. I like to watch movies too. What''s your favorite movie?
+
+    User 2: My favorite movie is The Godfather.
+
+    User 1: Oh, that''s a great movie. I love Marlon Brando''s performance in it.
+
+    User 2: Yeah, he was great in it. I also like the music in the movie.
+
+    User 1: Yeah, the music is really good. It''s a classic movie for sure.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''ve always been interested in coding.
+
+    User 2: It''s a lot of fun. I like the challenge of coming up with solutions to problems.
+
+    User 1: Yeah, I can see how that would be fun.
+
+    User 2: So, what do you want to do for a career?
+
+    User 1: I want to be a museum curator. I love art and I think it would be great to work in a museum.
+
+    User 2: That''s great. I''m sure you''ll do great things.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

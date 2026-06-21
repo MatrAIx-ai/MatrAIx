@@ -1,0 +1,84 @@
+id: '00003471'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3471
+data:
+  user 1 personas: 'I love to skate and ski.
+
+    My car has to be as fast as my motorcycle.
+
+    I love the smell of leather.
+
+    I own 30 pairs of shoes.
+
+    I have 4 cats and 2 dogs.'
+  user 2 personas: 'I work for a large law firm.
+
+    I hate tofu.
+
+    I drive a prius.
+
+    My wife stays home with our kids.
+
+    We own our home.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go skiing and skating.
+
+    User 1: Nice, I love to go skating too.
+
+    User 2: What do you like about it?
+
+    User 1: I love the feeling of the wind in my hair and the freedom of being able to move so quickly.
+
+    User 2: I know what you mean, it''s really exhilarating.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have two dogs and four cats.
+
+    User 1: Oh wow, that''s a lot of pets!
+
+    User 2: I know, it''s a lot to take care of, but I love them all.
+
+    User 1: I''m sure they love you too.
+
+    User 2: I hope so!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a lawyer.
+
+    User 1: Oh wow, that must be interesting.
+
+    User 2: It can be, but it''s also a lot of work.
+
+    User 1: I bet.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh cool, what grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: Oh nice, I bet that''s fun.
+
+    User 1: It is, I love working with kids.
+
+    User 2: So, what''s your favorite thing to do in your free time?
+
+    User 1: I like to go skiing, skate, and read.
+
+    User 2: Nice, I like to go skiing and skating too.
+
+    User 1: We should go skiing together sometime.
+
+    User 2: That would be fun.
+
+    User 1: Great, I''ll give you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

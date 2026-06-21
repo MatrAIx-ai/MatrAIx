@@ -1,0 +1,68 @@
+id: 00007383
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7383
+data:
+  user 1 personas: 'I ve been in a relationship for 2 years.
+
+    I work at a daycare.
+
+    My dad is a dentist and my mom is a teacher.
+
+    I am a college student.
+
+    My major is in business administration.'
+  user 2 personas: 'I like to shop.
+
+    I like to dance.
+
+    I love shoes.
+
+    I like pizza.
+
+    I like burritos.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name). What do you do for fun?
+
+    User 1: I like to go shopping, dance, and watch movies.
+
+    User 2: I like to do those things too! I love shoes and pizza.
+
+    User 1: That''s cool! I also like pizza.
+
+    User 2: What do you like to order on pizza?
+
+    User 1: I usually get pepperoni and mushrooms.
+
+    User 2: Me too! I also like sausage and olives.
+
+    User 1: What kind of music do you like to dance to?
+
+    User 2: I like to dance to pop music and hip hop.
+
+    User 1: I like pop music too! I also like to dance to rock music.
+
+    User 2: That''s cool! I''ve never really been into rock music.
+
+    User 1: What do you like to watch in movies?
+
+    User 2: I like to watch romantic comedies and action movies.
+
+    User 1: I like those kinds of movies too! I also like to watch horror movies.
+
+    User 2: I''ve never really been into horror movies.
+
+    User 1: That''s okay! I''m sure we can find something to watch together.
+
+    User 2: That sounds like fun! I''m always up for watching a movie.
+
+    User 1: Me too! I have a lot of free time, so I can watch movies whenever you want.
+
+    User 2: That''s great! I''ll let you know when I''m free.
+
+    User 1: Sounds good! I''ll be waiting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

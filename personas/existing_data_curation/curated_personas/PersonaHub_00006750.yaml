@@ -1,0 +1,19 @@
+id: '00006750'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6750
+persona_description: A scientist or researcher with expertise in veterinary pathology and animal husbandry, particularly in the detection and prevention of Bovine Spongiform Encephalopathy (BSE), commonly
+  known as Mad Cow Disease. This person is likely to be interested in the latest developments and findings related to the testing of the suspect animal for BSE, as well as the implications of the results
+  for human health and the food industry. They are likely to be familiar with the rapid testing methods used by the USDA and the Western blot test, as well as the potential for discrepancies between these
+  tests and the gold standard, the immunohistochemistry test.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: veterinary pathology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: 00001839
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1839
+data:
+  user 1 personas: 'I am the president.
+
+    I have lots of cash.
+
+    I used to own several casinos.
+
+    I used to own a casino.
+
+    I have been bankrupt and back.'
+  user 2 personas: 'I love to play basketball.
+
+    My favorite beer is coors.
+
+    I work in car sales.
+
+    I drive an acura.
+
+    My wife is a hairdresser.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thank you. How are you?
+
+    User 1: I''m doing well, thank you.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m the President of the United States.
+
+    User 2: Oh, that''s really cool! What''s it like being the President?
+
+    User 1: It''s a lot of work, but it''s also very rewarding. I get to meet a lot of interesting people and make a difference in the world.
+
+    User 2: That''s awesome. I''m sure you''re doing a great job.
+
+    User 1: Thank you, I appreciate that.
+
+    User 2: So, what''s your favorite beer?
+
+    User 1: My favorite beer is Coors Light. It''s light, refreshing, and goes well with just about anything.
+
+    User 2: I love Coors Light too! It''s my go-to beer.
+
+    User 1: It''s a great beer.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play basketball, golf, and watch football. I also like to read and spend time with my family.
+
+    User 2: That sounds like a lot of fun. I like to play basketball too. I also like to go hiking and camping.
+
+    User 1: Hiking and camping are great ways to get outdoors.
+
+    User 2: Yes, they are. I love being in nature.
+
+    User 1: So, what do you think of the state of the country?
+
+    User 2: I think it''s in a good place. The economy is strong, unemployment is low, and we''re making progress on a number of important issues.
+
+    User 1: I agree. I think the country is on the right track.
+
+    User 2: I''m glad you agree.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to a basketball game. Do you want to come with me?
+
+    User 2: That sounds like fun! I''d love to go.
+
+    User 1: Great! I''ll pick you up at 7.
+
+    User 2: Sounds good.
+
+    User 1: See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

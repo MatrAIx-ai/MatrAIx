@@ -1,0 +1,70 @@
+id: '00005456'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5456
+data:
+  user 1 personas: 'My mother passed away in 1979.
+
+    I am a meat eater.
+
+    I never learned how to swim.
+
+    I like anime shows.'
+  user 2 personas: 'My mom is an osteopath.
+
+    I have one blue eye and one hazel eye.
+
+    I am a cat owner.
+
+    I speak fluent italian.'
+  Best Generated Conversation: 'User 1: Hey, my name is [your name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch anime, read manga, and play video games.
+
+    User 1: Nice! I like to watch anime too. What are some of your favorites?
+
+    User 2: I like a lot of different anime, but my favorites are "Fullmetal Alchemist", "Death Note", and "Code Geass".
+
+    User 1: I''ve heard good things about those shows. I''ve only seen a few episodes of "Fullmetal Alchemist", but I really liked it.
+
+    User 2: It''s a great show. It''s a little dark at times, but it''s really good.
+
+    User 1: I know what you mean. I''m not usually into dark shows, but I really liked "Death Note".
+
+    User 2: "Death Note" is really good. It''s a really interesting concept.
+
+    User 1: Yeah, it is. I''m not usually into shows about serial killers, but I really liked the way "Death Note" handled it.
+
+    User 2: Me too. It was a really creative way to tell a story about a serial killer.
+
+    User 1: Yeah, it was. So, what other kinds of shows do you like to watch?
+
+    User 2: I like a lot of different kinds of shows. I like action, comedy, drama, horror, and everything in between.
+
+    User 1: Me too. I like to watch a little bit of everything.
+
+    User 2: What are some of your favorite shows?
+
+    User 1: I like a lot of different shows, but some of my favorites are "The Office", "Parks and Recreation", "The Good Place", and "Game of Thrones".
+
+    User 2: I''ve heard good things about all of those shows. I''ve only seen a few episodes of "Game of Thrones", but I really liked it.
+
+    User 1: It''s a great show. It''s a little slow at times, but it''s really good.
+
+    User 2: I know what you mean. I''m not usually into fantasy shows, but I really liked "Game of Thrones".
+
+    User 1: Yeah, it''s a little different than other fantasy shows. It''s a lot more realistic.
+
+    User 2: That''s what I liked about it. It felt more like a historical drama than a fantasy show.
+
+    User 1: Yeah, it did. I think that''s why it''s so popular.
+
+    User 2: I agree. I think it''s a really good show.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

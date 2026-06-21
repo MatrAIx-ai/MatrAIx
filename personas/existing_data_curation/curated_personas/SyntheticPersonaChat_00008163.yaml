@@ -1,0 +1,72 @@
+id: 00008163
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8163
+data:
+  user 1 personas: 'I like to listen to someone else reading a book.
+
+    I love the water , any water , ocean , river , or lake.
+
+    My mother met elvis.
+
+    I like cartoons more than movies.
+
+    I moved out when i was 14.'
+  user 2 personas: 'I lay awake at night so i can watch the stars.
+
+    I wish i was taller so i could reach the cookie jar.
+
+    I want a porsche.
+
+    I cuddle up with my dog every night.'
+  Best Generated Conversation: 'User 1: I like cartoons more than movies.
+
+    User 2: I like movies more than cartoons.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: I''ve heard good things about that movie.
+
+    User 2: It''s a really good movie. It''s one of those movies that you can watch over and over again and still enjoy it.
+
+    User 1: What''s your favorite part about the movie?
+
+    User 2: My favorite part is the escape scene. It''s so well-done and it''s so suspenseful.
+
+    User 1: I''ve heard that it''s a really long movie.
+
+    User 2: It is, but it''s worth it. It''s a great movie.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should. You won''t be disappointed.
+
+    User 1: What''s your favorite cartoon?
+
+    User 2: My favorite cartoon is SpongeBob SquarePants.
+
+    User 1: I love SpongeBob! He''s so funny.
+
+    User 2: He is! He''s the best.
+
+    User 1: What''s your favorite episode?
+
+    User 2: My favorite episode is "Pizza Delivery."
+
+    User 1: That''s a good one! I love when SpongeBob gets lost in the forest.
+
+    User 2: Me too! That''s one of my favorite moments in the whole series.
+
+    User 1: Do you have any other favorite cartoons?
+
+    User 2: Yeah, I like The Simpsons, Family Guy, and South Park.
+
+    User 1: Those are all great cartoons! I love them too.
+
+    User 2: Me too! We have similar taste in cartoons.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

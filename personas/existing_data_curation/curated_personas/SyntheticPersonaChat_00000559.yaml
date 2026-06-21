@@ -1,0 +1,70 @@
+id: 00000559
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 559
+data:
+  user 1 personas: 'I stay active.
+
+    I am retired.
+
+    I have eight grandchildren.
+
+    I have good health.
+
+    I wear glasses.'
+  user 2 personas: 'We lived in virginia while i was growing up.
+
+    My father was a cop.
+
+    I know how to drive a stickshift.
+
+    I am a truck driver.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you. I''m retired and I have eight grandchildren.
+
+    User 2: That''s great. I''m a truck driver and I have a stickshift car.
+
+    User 1: Oh, wow. I''ve always wanted to learn how to drive a stickshift car.
+
+    User 2: It''s not too hard. You just need to learn how to use the clutch and the gear shifter.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: You should. It''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to stay active. I go for walks, I ride my bike, and I do yoga.
+
+    User 2: That sounds great. I like to stay active too. I go running, I play basketball, and I lift weights.
+
+    User 1: We sound like we have a lot in common.
+
+    User 2: We do. It''s nice to meet someone who shares my interests.
+
+    User 1: Me too.
+
+    User 2: So, what are you doing later?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go for a run. Would you like to come with me?
+
+    User 1: Sure, that sounds like fun.
+
+    User 2: Great. I''ll pick you up at 7.
+
+    User 1: Okay, see you then.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

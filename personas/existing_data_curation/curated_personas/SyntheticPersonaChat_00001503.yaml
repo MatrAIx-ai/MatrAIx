@@ -1,0 +1,56 @@
+id: '00001503'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1503
+data:
+  user 1 personas: 'I am 77 years old.
+
+    My husband died last year.
+
+    My favorite hobby is gardening.
+
+    My family gets together every saturday.
+
+    Black coffee is my addiction.'
+  user 2 personas: 'I currently work at mcdonald.
+
+    I am eighteen years old.
+
+    I am taking a year off before i start college.
+
+    I am saving money to buy my first car.
+
+    I live with my parents.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I''m good, thank you. How are you?
+
+    User 1: I''m doing well, thank you. I''m 77 years old and my husband died last year. My favorite hobby is gardening and my family gets together every Saturday. Black coffee is my addiction.
+
+    User 2: I''m sorry to hear about your husband. How are you coping?
+
+    User 1: Thank you. It''s been hard, but I''m doing my best. I''m grateful for my family and friends who are helping me through this difficult time.
+
+    User 2: I''m glad to hear that you have a good support system. What do you like to do in your free time?
+
+    User 1: I love to garden. I have a small garden in my backyard and I love spending time tending to my plants. It''s a great way to relax and get some fresh air.
+
+    User 2: That sounds like a great hobby. I''m not very good at gardening, but I do enjoy it.
+
+    User 1: It''s not hard to get started. You just need some seeds, a few pots, and some soil. And you can always start with something simple, like a tomato plant or a potted herb.
+
+    User 2: That''s a good idea. I might have to give it a try.
+
+    User 1: I''m sure you''d enjoy it. It''s a great way to learn about nature and how to take care of plants.
+
+    User 2: I''m looking forward to it. Thank you for the advice.
+
+    User 1: You''re welcome. It was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

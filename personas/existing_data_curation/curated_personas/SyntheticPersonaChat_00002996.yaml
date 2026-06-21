@@ -1,0 +1,64 @@
+id: 00002996
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2996
+data:
+  user 1 personas: 'I am an amazing dancer.
+
+    I am a terrible speller.
+
+    I have blonde hair that reaches my knees.
+
+    Country music makes me cringe.
+
+    I volunteer at animal shelters.'
+  user 2 personas: 'I write fiction for fun.
+
+    I work in advertising.
+
+    I have a golden retriever.
+
+    My mother is dead.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I write fiction for fun.
+
+    User 1: Oh, that''s cool! What kind of fiction do you write?
+
+    User 2: I write mostly short stories, but I''ve also written a few novels.
+
+    User 1: That''s awesome! I love reading short stories.
+
+    User 2: Me too! They''re a great way to relax and escape from the real world.
+
+    User 1: Do you have any favorite authors?
+
+    User 2: I have a lot of favorite authors, but some of my favorites include Ernest Hemingway, Jack Kerouac, and Kurt Vonnegut.
+
+    User 1: I love Hemingway! I''ve read The Sun Also Rises and A Farewell to Arms.
+
+    User 2: Those are both great books! I also love A Moveable Feast.
+
+    User 1: I''ve heard good things about that one, but I haven''t read it yet.
+
+    User 2: You should! It''s a great memoir about Hemingway''s time in Paris.
+
+    User 1: I''ll definitely check it out.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to dance. I''ve been dancing since I was a little girl.
+
+    User 2: That''s cool! I used to dance when I was younger, but I haven''t danced in a while.
+
+    User 1: You should start dancing again! It''s a great way to get exercise and relieve stress.
+
+    User 2: I might just do that! I''ve been meaning to get back into shape.
+
+    User 1: I''m sure you''ll be great at it!
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

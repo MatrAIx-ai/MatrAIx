@@ -1,0 +1,72 @@
+id: 00000855
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 855
+data:
+  user 1 personas: 'I make pottery.
+
+    I like to refurbish classic cars.
+
+    I once lived in a storage locker for two months.
+
+    I have appeared on the show jeopardy.'
+  user 2 personas: 'I watch a lot of tv.
+
+    My favorite food is a cheeseburger.
+
+    I enjoy fishing.
+
+    I live alone.
+
+    I work on cars for a living.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to watch a lot of TV, and I also enjoy fishing.
+
+    User 1: That''s cool! I like to watch TV too, but I''m not very good at fishing.
+
+    User 2: It''s not hard to learn! I can teach you if you want.
+
+    User 1: That would be great! I''d love to learn.
+
+    User 2: Okay, we can go fishing this weekend if you''re free.
+
+    User 1: That sounds like a plan.
+
+    User 2: Great! I''ll bring my gear.
+
+    User 1: Okay, see you then.
+
+
+    [At the fishing spot]
+
+
+    User 1: This is so much fun! I''m glad you invited me.
+
+    User 2: I''m glad you''re enjoying it.
+
+    User 1: I caught a fish!
+
+    User 2: You''re a natural!
+
+    User 1: Thanks!
+
+
+    [After fishing]
+
+
+    User 1: That was so much fun! I''m glad we did this.
+
+    User 2: Me too! I''m glad you enjoyed it.
+
+    User 1: I know what you mean! I''m definitely hooked.
+
+    User 2: I''m glad to hear that.
+
+    User 1: I''ll have to come fishing with you again soon.
+
+    User 2: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,86 @@
+id: 00002028
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2028
+data:
+  user 1 personas: 'I own a ford truck.
+
+    I have a ford f150.
+
+    I also like ford trucks.
+
+    My truck is black.'
+  user 2 personas: 'I will work hard for whatever i want.
+
+    I care deeply for my friends and others close to me.
+
+    I often play the clown to get attention.
+
+    I grew up as an orphan.'
+  Best Generated Conversation: 'User 1: Hey! I''m Drew. What''s your name?
+
+    User 2: I''m Alex. It''s nice to meet you.
+
+    User 1: Nice to meet you too, Alex. What do you do for fun?
+
+    User 2: I like to go to concerts, hang out with friends, and play video games.
+
+    User 1: That''s cool. I like to go to concerts and play video games too. What''s your favorite video game?
+
+    User 2: I like a lot of different video games, but my favorite is probably Skyrim.
+
+    User 1: Skyrim is a great game! I''ve played it a lot myself.
+
+    User 2: Yeah, it''s so much fun. I can always get lost in that world for hours.
+
+    User 1: Me too. What else do you like to do?
+
+    User 2: I also like to watch movies and TV shows. I''m a big fan of sci-fi and fantasy.
+
+    User 1: Me too! I love sci-fi and fantasy movies and TV shows.
+
+    User 2: What''s your favorite sci-fi or fantasy movie or TV show?
+
+    User 1: I don''t know if I could pick just one. I really like Star Wars, Lord of the Rings, and Game of Thrones.
+
+    User 2: Those are all great choices. I love Star Wars, Lord of the Rings, and Harry Potter.
+
+    User 1: I''ve never seen Harry Potter. I''ve heard good things about it, though.
+
+    User 2: You should definitely see it. It''s a great series.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem. So, what do you like to do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool. What kind of software do you work on?
+
+    User 1: I work on a lot of different kinds of software, but my main focus is on web development.
+
+    User 2: That''s cool. I''m not very good with computers.
+
+    User 1: It''s not too hard to learn. I can teach you.
+
+    User 2: Thanks, but I think I''m okay.
+
+    User 1: Okay, if you say so.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to see a movie with some friends.
+
+    User 1: Oh, cool. What movie are you seeing?
+
+    User 2: We''re not sure yet. We''re still trying to decide.
+
+    User 1: Well, have fun.
+
+    User 2: Thanks, you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

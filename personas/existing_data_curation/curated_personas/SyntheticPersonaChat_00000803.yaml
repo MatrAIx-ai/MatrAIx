@@ -1,0 +1,104 @@
+id: 00000803
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 803
+data:
+  user 1 personas: 'I love to draw.
+
+    I am a very tall woman.
+
+    My family came from greece in the 1950 s.
+
+    I have very curly hair.
+
+    I love to cook ethnic foods.'
+  user 2 personas: 'I love my family.
+
+    I like playing basketball.
+
+    I love to listen to religious music.
+
+    I am a middle aged woman.
+
+    I don t talk a lot.'
+  Best Generated Conversation: 'User 1: Hi! I''m Susan. What''s your name?
+
+    User 2: Hi, Susan. My name is Mary.
+
+    User 1: It''s nice to meet you, Mary. Where are you from?
+
+    User 2: I''m from Michigan.
+
+    User 1: Oh, me too! Where in Michigan?
+
+    User 2: I''m from Detroit.
+
+    User 1: Oh, cool! I''m from Ann Arbor.
+
+    User 2: Oh, that''s not too far.
+
+    User 1: Yeah, it''s about an hour and a half away.
+
+    User 2: Do you like Michigan?
+
+    User 1: I love it! I love the weather, the people, and the food.
+
+    User 2: Me too! I love the food especially.
+
+    User 1: Me too! I love all the ethnic foods.
+
+    User 2: Me too! I love Greek food the most.
+
+    User 1: That''s funny, I love Greek food too!
+
+    User 2: Really? That''s great!
+
+    User 1: Yeah, I love the food, the culture, and the people.
+
+    User 2: Me too! I love how close-knit the Greek community is.
+
+    User 1: Yeah, I love that too. It''s so welcoming.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play basketball, listen to religious music, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to draw, cook ethnic foods, and spend time with my family.
+
+    User 2: That sounds like a lot of fun too! I''ve always wanted to learn how to draw.
+
+    User 1: It''s not too hard! I''m sure you could learn.
+
+    User 2: I might have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will!
+
+    User 1: So, what are you doing tonight?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. We could hang out if you want.
+
+    User 2: That sounds like fun! What do you want to do?
+
+    User 1: We could go to a movie or play some basketball.
+
+    User 2: I''d love to go to a movie. What movie do you want to see?
+
+    User 1: I don''t know. What do you want to see?
+
+    User 2: I don''t know either. We could just see whatever''s playing.
+
+    User 1: Ok, that sounds good.
+
+    User 2: Great! I''ll call you and we can figure out the details.
+
+    User 1: Ok, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

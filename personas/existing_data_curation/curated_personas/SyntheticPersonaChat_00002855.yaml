@@ -1,0 +1,58 @@
+id: 00002855
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2855
+data:
+  user 1 personas: 'I live near the ocean.
+
+    My favorite author is jane austen.
+
+    I own a boat.
+
+    I only wear tennis shoes.
+
+    I eat a lot of fish.'
+  user 2 personas: 'My favorite color is red.
+
+    I am tall.
+
+    My dad was a cop.
+
+    I spend my free time volunteering at nursing homes.'
+  Best Generated Conversation: 'User 1: Hi! I''m a big fan of Jane Austen. What''s your favorite book by her?
+
+    User 2: I''m not really a big reader, but I like the color red.
+
+    User 1: Oh, okay. I love the ocean. I live near it and I own a boat.
+
+    User 2: That''s cool. I''m tall.
+
+    User 1: Me too! I''m 6''4".
+
+    User 2: That''s really tall! My dad was a cop.
+
+    User 1: Oh, cool. I spend my free time volunteering at nursing homes.
+
+    User 2: That''s really nice of you.
+
+    User 1: Thanks. It''s something I enjoy doing. What do you do for fun?
+
+    User 2: Not much. I like to hang out with my friends and go out to eat.
+
+    User 1: Oh, that sounds fun. I like to go out to eat too.
+
+    User 2: What''s your favorite restaurant?
+
+    User 1: I like this little Italian place called The Pasta House.
+
+    User 2: I''ve never been there. I''ll have to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

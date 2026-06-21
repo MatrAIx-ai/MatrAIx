@@ -1,0 +1,76 @@
+id: 00001199
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1199
+data:
+  user 1 personas: 'I am a librarian.
+
+    I live in pittsburgh.
+
+    I volunteer at an animal shelter.
+
+    My favorite kind of food is italian.
+
+    I love going to concerts.'
+  user 2 personas: 'I m picky when it comes to food.
+
+    My temper is pretty short.
+
+    I like early 2000s indie music.
+
+    I d like to be a teacher in the future.
+
+    I love my pet dog more than anything.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for a living?
+
+    User 2: I''m a student, but I''m also a volunteer at an animal shelter.
+
+    User 1: Oh, that''s great! I''m a librarian.
+
+    User 2: Really? I love books! What''s your favorite book?
+
+    User 1: It''s hard to choose just one, but I''d say "The Lord of the Rings" is my favorite.
+
+    User 2: I love that book! I''ve read it so many times.
+
+    User 1: Me too! I''m actually going to see the movie adaptation next weekend.
+
+    User 2: Oh, that sounds fun! I''ve heard good things about it.
+
+    User 1: Me too! I''m looking forward to seeing it.
+
+    User 2: Well, I hope you enjoy it!
+
+    User 1: Thanks! I''m sure I will.
+
+    User 2: What''s your favorite kind of music?
+
+    User 1: I like a lot of different kinds of music, but my favorite is probably early 2000s indie rock.
+
+    User 2: Oh, that''s cool! I like some of that too.
+
+    User 1: What''s your favorite band?
+
+    User 2: I like The Strokes and The White Stripes.
+
+    User 1: Oh, I love The Strokes! I''ve seen them in concert a few times.
+
+    User 2: Really? That''s awesome! I''ve always wanted to see them live.
+
+    User 1: They''re a great live band. You should definitely check them out if you get the chance.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! What do you do for fun?
+
+    User 2: I like to go to concerts, go for walks with my dog, and watch movies.
+
+    User 1: Oh, that sounds like fun! I like to do those things too.
+
+    User 2: We should hang out sometime!
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

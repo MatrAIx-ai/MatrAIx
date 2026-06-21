@@ -1,0 +1,64 @@
+id: '00003255'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3255
+data:
+  user 1 personas: 'My grandpa was in wwii.
+
+    My favorite food is steak.
+
+    My favorite genre of music is rock.
+
+    I own a chevy tahoe.'
+  user 2 personas: 'I am a fruitarian.
+
+    I make my own soap.
+
+    I make my own compost.
+
+    I like to garden.
+
+    I have my own greenhouse.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to garden and make my own soap.
+
+    User 1: That''s cool! I''ve never tried gardening, but I''ve always wanted to.
+
+    User 2: It''s really fun! And it''s a great way to get fresh produce.
+
+    User 1: What kinds of things do you grow in your garden?
+
+    User 2: I grow a lot of different things, but my favorite is tomatoes.
+
+    User 1: Tomatoes are my favorite too! What kind of soap do you make?
+
+    User 2: I make a variety of soaps, but my most popular one is a lavender soap.
+
+    User 1: That sounds nice! I love lavender.
+
+    User 2: Me too! It''s a great scent for soap.
+
+    User 1: So, what do you do with your soap?
+
+    User 2: I give it away to friends and family, or I sell it at a local farmers market.
+
+    User 1: That''s a great idea! I''m sure your soap is really popular.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: So, what''s your favorite thing about gardening?
+
+    User 2: I love getting my hands dirty and working in the soil. It''s a really relaxing experience.
+
+    User 1: I can imagine. It sounds like a great way to de-stress.
+
+    User 2: It is! And it''s a great way to get some exercise.
+
+    User 1: That''s good to know. I''ll have to try gardening sometime.
+
+    User 2: I think you''d really enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

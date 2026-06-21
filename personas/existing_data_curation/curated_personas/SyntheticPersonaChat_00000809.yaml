@@ -1,0 +1,70 @@
+id: 00000809
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 809
+data:
+  user 1 personas: 'I love to hike.
+
+    I like folk music.
+
+    The appalachian trail is my favorite.
+
+    I work in marketing.
+
+    My hiking boots are pink.'
+  user 2 personas: 'I am trying to write an ebook on animals.
+
+    I am recently divorced.
+
+    I am a huge fan of dogs.
+
+    I wish to buy a corvette when i retire.
+
+    I work as a mall cop.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to write and I love dogs.
+
+    User 1: That''s great! What kind of writing do you like to do?
+
+    User 2: I''m currently working on an ebook about animals.
+
+    User 1: Oh, that''s cool! What kind of animals do you write about?
+
+    User 2: I write about all kinds of animals, but I''m really interested in dogs.
+
+    User 1: I love dogs too! They''re the best.
+
+    User 2: I know, right? I have two dogs myself.
+
+    User 1: Oh, that''s great! What kind of dogs do you have?
+
+    User 2: I have a golden retriever and a labrador retriever.
+
+    User 1: Those are two great breeds! I''m sure they''re great companions.
+
+    User 2: They are! They''re the best dogs in the world.
+
+    User 1: So, what are you hoping to do with your ebook?
+
+    User 2: I''m hoping to publish it and make some money.
+
+    User 1: That''s great! I''m sure you''ll do well.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a mall cop.
+
+    User 1: Oh, that''s interesting! What''s that like?
+
+    User 2: It''s a lot of fun! I get to meet a lot of people and I get to help people out.
+
+    User 1: That''s great! I''m glad you like your job.
+
+    User 2: I do! It''s the best job I''ve ever had.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00006649
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6649
+data:
+  user 1 personas: 'I try to do my job as best as i can.
+
+    I am very polite and courteous.
+
+    I work in a bank.
+
+    I look forward to eating at restaurants.'
+  user 2 personas: 'I haven t gone home in over two years.
+
+    I can speak three languages.
+
+    I work remotely as a programmer.
+
+    I am currently traveling in japan.
+
+    I live a nomadic lifestyle and travel frequently.'
+  Best Generated Conversation: 'User 1: Hi there, how are you?
+
+    User 2: I''m doing well, thanks for asking. How about you?
+
+    User 1: I''m doing well, thank you.
+
+    User 2: That''s good to hear.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a programmer, and I work remotely.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a programmer.
+
+    User 2: It''s a lot of fun, but it can be challenging at times.
+
+    User 1: I can imagine. Do you like traveling?
+
+    User 2: I love traveling! I''ve been to over 30 countries.
+
+    User 1: Wow, that''s amazing! I''ve only been to a few countries.
+
+    User 2: You should definitely travel more. It''s a great way to learn about different cultures and experience new things.
+
+    User 1: I agree. I''m planning to go on a trip to Europe this summer.
+
+    User 2: That sounds like a lot of fun! I''m sure you''ll have a great time.
+
+    User 1: Thanks, I''m looking forward to it.
+
+    User 2: Well, it was nice talking to you. I have to go now, but I hope you have a great day.
+
+    User 1: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

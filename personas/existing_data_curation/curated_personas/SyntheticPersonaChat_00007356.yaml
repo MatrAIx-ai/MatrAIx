@@ -1,0 +1,64 @@
+id: '00007356'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7356
+data:
+  user 1 personas: 'I like to visit places around the world.
+
+    I like to swim in the lake.
+
+    I like to paddle board.
+
+    I have been to every state except alaska.'
+  user 2 personas: 'I am thinking of becoming a mother next year.
+
+    I am a mother of three.
+
+    I love to eat pita bread with hummus.
+
+    I go to work early in the morning as a nurse.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go swimming in the lake.
+
+    User 1: That sounds fun! I love swimming too.
+
+    User 2: What''s your favorite place to swim?
+
+    User 1: I like to swim in Lake Michigan.
+
+    User 2: I''ve never been to Michigan.
+
+    User 1: It''s a great state! There''s a lot to see and do.
+
+    User 2: What''s your favorite thing to do there?
+
+    User 1: I love to go to the beach and swim in the lake.
+
+    User 2: That sounds fun! I''m not a big fan of beaches, but I love swimming.
+
+    User 1: I also like to go hiking and camping.
+
+    User 2: I''ve never been camping before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I''m not sure if I''d like it.
+
+    User 1: You don''t have to go all out. You can just go for a day hike.
+
+    User 2: Maybe I''ll try it sometime.
+
+    User 1: I hope you do!
+
+    User 2: Thanks for talking to me!
+
+    User 1: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

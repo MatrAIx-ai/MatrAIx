@@ -1,0 +1,18 @@
+id: '00040075'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40075
+persona_description: A user who is interested in analyzing audio signals and their spectrograms, possibly for research or entertainment purposes. This person is likely to have a background in signal processing,
+  specifically in the use of FFTs and windowing techniques. They may also be familiar with the use of plotting options to customize the appearance of the spectrogram, such as the compactplot option for
+  more compact plotting.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: signal processing/statistical mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

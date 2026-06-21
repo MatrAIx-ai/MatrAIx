@@ -1,0 +1,19 @@
+id: 00034287
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34287
+persona_description: A meteorologist who closely monitors and analyzes weather patterns, particularly those related to hurricanes and tropical storms. They are knowledgeable about the Atlantic hurricane
+  season, the Atlantic Multi-decadal Oscillation (AMO), and the relationship between the Arctic Oscillation (AO) and the North Atlantic Oscillation (NAO). They have a keen eye for detecting and predicting
+  extreme weather events and are well-versed in the impact of high SSTs on hurricane activity. They are also aware of the potential implications of high SSTs for the upcoming hurricane season, including
+  the likelihood of abnormally high numbers of intense hurricanes and the potential for tropical storms to develop in the Caribbean.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: hurricane and tropical storm analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

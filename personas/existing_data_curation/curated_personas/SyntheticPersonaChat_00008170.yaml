@@ -1,0 +1,60 @@
+id: 00008170
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8170
+data:
+  user 1 personas: 'I start my senior year of high school next week.
+
+    My mom is a painter.
+
+    I went to japan this summer.
+
+    My favorite sport is hockey.
+
+    My best friend just moved away.'
+  user 2 personas: 'I am a free spirit.
+
+    I like to live off of the land.
+
+    I am all about family and fun.
+
+    My parents were like this as well.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. I''m starting my senior year of high school next week.
+
+    User 2: Hi, I''m [user 2]. I''m a free spirit. I like to live off the land and I''m all about family and fun.
+
+    User 1: That''s cool. I like to go camping and hiking. I also like to spend time with my family and friends.
+
+    User 2: That sounds like a lot of fun. I love to go camping and hiking too. I went to Japan this summer and did a lot of hiking. It was amazing!
+
+    User 1: That sounds awesome! I''ve always wanted to go to Japan. What was your favorite part about it?
+
+    User 2: My favorite part was the food. The food in Japan is amazing! I also loved the culture and the people. Everyone was so friendly and welcoming.
+
+    User 1: That sounds great. I''m sure I would love it there too.
+
+    User 2: You should definitely go sometime! It''s an amazing place.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to play hockey. I''m on the varsity team at my school.
+
+    User 2: That''s awesome! I used to play hockey when I was younger. It''s a lot of fun.
+
+    User 1: Yeah, it is. I love the rush of playing the game.
+
+    User 2: I can imagine. I miss playing hockey.
+
+    User 1: Well, you can always pick it up again!
+
+    User 2: Maybe I will. It would be fun to play again.
+
+    User 1: That would be great! I''d love to play with you sometime.
+
+    User 2: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

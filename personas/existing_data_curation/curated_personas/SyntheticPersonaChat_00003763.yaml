@@ -1,0 +1,48 @@
+id: '00003763'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3763
+data:
+  user 1 personas: 'I refuse to ride the bus.
+
+    My parents are both dead.
+
+    I find joy in the littlest things.
+
+    I listen to music for more than 5 hours a day.
+
+    I never work more than 4 days in a row.'
+  user 2 personas: 'I live in a bad neighborhood.
+
+    I worry about my image.
+
+    I worry about our neighbors yelling in the middle of the night.
+
+    I wish my mom was healthier.
+
+    I wish i could go to a better school.'
+  Best Generated Conversation: 'User 1: I have a lot of fun things I like to do. I like to listen to music, I like to watch movies, and I like to play games. I also like to read books, and I like to go
+    for walks. I love to spend time with my friends and family, and I love to make people laugh. I''m a very happy person, and I love to enjoy life.
+
+
+    User 2: I''m glad you''re a happy person! I''m not so happy. I live in a bad neighborhood, and I worry about my image. I worry about our neighbors yelling in the middle of the night, and I wish my mom
+    was healthier. I wish I could go to a better school.
+
+
+    User 1: I''m sorry to hear that you''re not happy. I hope things get better for you. I''m sure you''re a great person, and you deserve to be happy.
+
+
+    User 2: Thank you. I appreciate that.
+
+
+    User 1: I''m here to listen if you ever need someone to talk to.
+
+
+    User 2: Thanks. I might take you up on that.
+
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

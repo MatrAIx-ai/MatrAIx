@@ -1,0 +1,60 @@
+id: '00005625'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5625
+data:
+  user 1 personas: 'I want to be in a band someday.
+
+    I have a wife and two kids.
+
+    My hobbies are sleeping and playing the guitar.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I am a factory worker.'
+  user 2 personas: 'I like cosplay.
+
+    I love watching tv and movies.
+
+    I have been to a few renaissance fairs.
+
+    My favorite show ever is game of thrones.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch TV and movies, and I also like cosplay.
+
+    User 1: Oh, that''s cool! I love to watch TV and movies too, but I don''t have any experience with cosplay.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: I might have to! What''s your favorite TV show?
+
+    User 2: My favorite show ever is Game of Thrones.
+
+    User 1: Oh, I love that show too! Have you read the books?
+
+    User 2: Yes, I have! I love the books even more than the show.
+
+    User 1: I agree! The books are so much more detailed.
+
+    User 2: Right? I love all the history and lore of the world.
+
+    User 1: Me too! I''m so glad I got to talk to you today. I really enjoyed our conversation.
+
+    User 2: Me too! I''m glad I met you too.
+
+    User 1: Maybe we can cosplay together someday!
+
+    User 2: That would be awesome! I''d love to do that.
+
+    User 1: Great! I''ll let you know when I''m ready.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

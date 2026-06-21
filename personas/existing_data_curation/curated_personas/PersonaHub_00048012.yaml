@@ -1,0 +1,18 @@
+id: 00048012
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48012
+persona_description: A scientist who studies the effects of aspirin on cancer cells, particularly in the context of bowel cancer. They are interested in understanding how aspirin switches off mTOR, a protein
+  that is overactive in bowel cancer cells, and activates AMPK, which switches on pathways that generate energy but halts other processes in the cell that need energy, including mTOR. They are also interested
+  in identifying targets in the processes involved in cell energy balance in order to develop new drugs that are even better and safer than aspirin at preventing bowel and other cancers.
+expertise:
+  general_domain_top1pct: Biology
+  specific_domain_top1pct: Cancer Research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

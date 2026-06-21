@@ -1,0 +1,18 @@
+id: '00060260'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60260
+persona_description: A medical historian who is interested in the history of anesthesia and the medical technology used in the 19th century, particularly the endotracheal tubes invented by William Macewan.
+  This persona is likely to be interested in the development of medical technology, the history of anesthesia, and the medical practices of the Victorian era. They may also be interested in the use of chloroform
+  and other anaesthetic agents, as well as the impact of these technologies on medical practice.
+expertise:
+  general_domain_top1pct: history
+  specific_domain_top1pct: medical history
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

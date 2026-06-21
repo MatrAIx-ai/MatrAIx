@@ -1,0 +1,18 @@
+id: 00051539
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51539
+persona_description: A meteorologist who is interested in the upcoming meteor shower and the impact of Storm Doris on the region. They are looking for information on the meteor shower and the weather conditions
+  for the region, as well as any updates on the International Space Station passing overhead. They are also interested in the impact of Storm Doris on the region, including any potential dangers or precautions
+  to take.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: None
+  general_domain_top01pct: meteorology
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

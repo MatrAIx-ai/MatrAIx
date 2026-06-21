@@ -1,0 +1,66 @@
+id: '00000517'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 517
+data:
+  user 1 personas: 'I love my dog.
+
+    I like baking.
+
+    Wedding cakes are my specialty.
+
+    I enjoy walking around the park.
+
+    I go to the theater to watch plays.'
+  user 2 personas: 'I like to make short films.
+
+    My mother is a well known celebrity.
+
+    I am a civil war reenactment participant.
+
+    I have been on the tv news six times.'
+  Best Generated Conversation: 'User 1: Hi, I''m Amy!
+
+    User 2: Hi, I''m John!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make short films.
+
+    User 1: That''s cool! Do you have any of them online?
+
+    User 2: Yeah, I have a few on YouTube.
+
+    User 1: I''ll check them out! What else do you like to do?
+
+    User 2: I also enjoy civil war reenactments.
+
+    User 1: Really? That''s interesting! Have you ever been on the news?
+
+    User 2: Yes, I''ve been on the news six times.
+
+    User 1: Wow, that''s a lot! Were you the one interviewed, or were you just in the background?
+
+    User 2: I was the one interviewed.
+
+    User 1: That''s awesome! What was that like?
+
+    User 2: It was nerve-wracking at first, but it was also really fun.
+
+    User 1: I bet! So, what''s your favorite part of being a civil war reenactor?
+
+    User 2: I love learning about history and getting to meet other people who are interested in the same thing.
+
+    User 1: That sounds great! I''m not very interested in history, but I can see how it would be fun to learn more about it.
+
+    User 2: It''s definitely something everyone should try at least once!
+
+    User 1: I''ll keep that in mind! Thanks for telling me about it.
+
+    User 2: No problem! It was nice to meet you, Amy.
+
+    User 1: You too, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

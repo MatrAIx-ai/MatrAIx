@@ -1,0 +1,82 @@
+id: '00006451'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6451
+data:
+  user 1 personas: 'I need a wheel chair to get around.
+
+    I have 2 kids.
+
+    I hate tomatoes.
+
+    I am very short.
+
+    I am a female.'
+  user 2 personas: 'I am getting married next week.
+
+    My family hates my fiancé.
+
+    We are getting married in a park.
+
+    My dog is the ring bearer.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]!
+
+    User 2: Hi, I''m [user 2]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking and camping.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: I know, right? It''s so peaceful and relaxing.
+
+    User 1: I have two kids, how about you?
+
+    User 2: I''m not married yet, but I''m getting married next week!
+
+    User 1: Congratulations! That''s so exciting!
+
+    User 2: Thank you! I''m so excited to start a new life with my fiancé.
+
+    User 1: I''m sure you''ll be very happy together.
+
+    User 2: Thank you! I hope so too.
+
+    User 1: I know you will.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: So, where are you getting married?
+
+    User 2: We''re getting married in a park.
+
+    User 1: Oh, that sounds lovely.
+
+    User 2: I know, right? We''re going to have a barbecue and a bonfire.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It will be! We''re really excited about it.
+
+    User 1: I''m sure you''ll have a great time.
+
+    User 2: Thank you! I hope so.
+
+    User 1: So, you''re getting married in a park and your dog is the ring bearer?
+
+    User 2: Yeah, my dog is my best friend. He''s going to be a great ring bearer.
+
+    User 1: I''m sure he will!
+
+    User 2: Thanks, I hope so.
+
+    User 1: Well, it sounds like you''re going to have a great wedding.
+
+    User 2: I think so too!
+
+    User 1: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

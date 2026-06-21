@@ -1,0 +1,72 @@
+id: 00003268
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3268
+data:
+  user 1 personas: 'My parents pay my rent.
+
+    I like to shop.
+
+    I am a vegetarian but i eat fish , especially sushi.
+
+    I graduated college and immediately went to graduate school.'
+  user 2 personas: 'I hope to move out soon.
+
+    I have a cat.
+
+    I have depression and anxiety so i do not really go out a lot.
+
+    I work at home , editing.
+
+    I live at home with my dad and brother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an editor, and I work from home.
+
+    User 1: That sounds cool. I''m a student, and I''m going to grad school in the fall.
+
+    User 2: That''s exciting! What are you going to school for?
+
+    User 1: I''m going to be studying social work.
+
+    User 2: That''s a great field! I have depression and anxiety, so I know how important social workers can be.
+
+    User 1: I''m glad you''re finding ways to cope with your depression and anxiety. It''s not always easy, but it''s important to not give up.
+
+    User 2: I know, it''s hard. But I''m trying.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thanks.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yes, I have a cat.
+
+    User 1: Oh, that''s cool! I love cats.
+
+    User 2: Me too, they''re the best.
+
+    User 1: I''m glad you''re enjoying them.
+
+    User 2: Yeah, they''re really great.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, watch movies, and spend time with my cat.
+
+    User 1: Oh, that sounds like a lot of fun. I like to shop, go out to eat, and spend time with my friends.
+
+    User 2: Sounds like we have some similar interests.
+
+    User 1: Yeah, we do. It''s always nice to meet someone with similar interests.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00001659
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1659
+data:
+  user 1 personas: 'I like the guitar.
+
+    I am a vegan.
+
+    I like to go for bike rides.
+
+    I like to skateboard.'
+  user 2 personas: 'I am a very funny woman.
+
+    I love candy.
+
+    I drive a honda car.
+
+    I own 3 cats.
+
+    I deliver packages for a living.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]. What''s your name?
+
+    User 2: I''m [username]. Nice to meet you!
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I like to bike, skateboard, and play guitar.
+
+    User 1: Oh, that''s cool! I used to skateboard a lot when I was younger.
+
+    User 2: What kind of music do you like to play on the guitar?
+
+    User 1: I like to play all kinds of music, but I mostly play rock and blues.
+
+    User 2: That''s cool! I love rock and blues music too.
+
+    User 1: What''s your favorite band?
+
+    User 2: I like The Beatles a lot.
+
+    User 1: Me too! They''re one of my favorite bands too.
+
+    User 2: I also like The Rolling Stones, The Doors, and Led Zeppelin.
+
+    User 1: Oh, those are all great bands too! I like them all a lot.
+
+    User 2: Me too! What do you like to do for fun?
+
+    User 1: I like to go to concerts, play video games, and watch movies.
+
+    User 2: Oh, that''s cool! I like to go to concerts too. I also like to play video games and watch movies.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I like The Shawshank Redemption a lot.
+
+    User 1: Me too! That''s a great movie.
+
+    User 2: I also like Pulp Fiction, The Godfather, and The Lord of the Rings.
+
+    User 1: Oh, those are all great movies too! I like them all a lot.
+
+    User 2: Me too! I think we have a lot in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

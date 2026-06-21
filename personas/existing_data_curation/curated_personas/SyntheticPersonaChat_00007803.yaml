@@ -1,0 +1,70 @@
+id: 00007803
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7803
+data:
+  user 1 personas: 'I enjoy working out and learning new things.
+
+    I play the guitair.
+
+    I am a student in college.
+
+    My name is kevin.
+
+    I am studying software development.'
+  user 2 personas: 'My car is over 20 years old.
+
+    My mother was a school music teacher.
+
+    My dad was a preacher.
+
+    My favorite movie is the last of the mohicans.
+
+    I did not finish college.'
+  Best Generated Conversation: 'User 1: Hi! I''m Kevin.
+
+    User 2: Hi Kevin, I''m (user 2).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch movies, play games, and work on my car.
+
+    User 1: Cool! I like to work out, learn new things, and play guitar.
+
+    User 2: What kind of music do you play?
+
+    User 1: I play a lot of different styles, but I mostly play rock and blues.
+
+    User 2: Nice! I''ve always wanted to learn how to play the guitar.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will one day.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Last of the Mohicans.
+
+    User 1: That''s a great movie! I love the scenery and the action.
+
+    User 2: Me too! It''s one of my favorite movies of all time.
+
+    User 1: What did you do after high school?
+
+    User 2: I didn''t finish college. I started working on my car and just never went back.
+
+    User 1: Oh, I see. I''m currently in college studying software development.
+
+    User 2: That''s great! I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what are you going to do after college?
+
+    User 1: I''m not sure yet. I''m thinking about getting a job in software development.
+
+    User 2: That sounds like a great plan. Good luck!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

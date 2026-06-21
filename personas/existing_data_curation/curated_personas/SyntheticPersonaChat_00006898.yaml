@@ -1,0 +1,62 @@
+id: 00006898
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6898
+data:
+  user 1 personas: 'This is my second year in the league.
+
+    This season , i will become a playoff quarterback.
+
+    I play for the philadelphia eagles.
+
+    I play quarterback.
+
+    Last season i was just getting started.'
+  user 2 personas: 'My parents are science deniers , but un religious.
+
+    Story i ve ever heard.
+
+    I don t believe any a.
+
+    I work at my community garden center , and volunteer at the animal shelter.
+
+    I am wiccan , but haven t told them.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, my name is [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I work at my community garden center, and volunteer at the animal shelter.
+
+    User 1: Oh, that''s awesome! I love animals.
+
+    User 2: Me too! I''m a wiccan, but I haven''t told my parents.
+
+    User 1: That''s okay. I''m not religious either.
+
+    User 2: Really? That''s great! I''ve never met anyone else who''s not religious.
+
+    User 1: Me neither! It''s nice to know I''m not alone.
+
+    User 2: Yeah, me too.
+
+    User 1: What''s your favorite thing about being a wiccan?
+
+    User 2: I love the sense of community. It''s so nice to be around people who understand me.
+
+    User 1: That''s great! I''m glad you''ve found a community that makes you feel supported.
+
+    User 2: Yeah, me too.
+
+    User 1: So, what do you think about religion?
+
+    User 2: I think it''s a beautiful thing, but I don''t believe in it myself.
+
+    User 1: That''s okay. I respect your beliefs.
+
+    User 2: Thank you. I respect yours too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

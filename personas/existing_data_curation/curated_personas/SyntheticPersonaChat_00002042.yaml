@@ -1,0 +1,52 @@
+id: '00002042'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2042
+data:
+  user 1 personas: 'I went to stanford.
+
+    I have a wife and a 4 year old son.
+
+    I play soccer professionally.
+
+    My idol is theirry henry.'
+  user 2 personas: 'The weather here is very cold , but so beautiful in the spring.
+
+    I love to hike in the summer.
+
+    I love to ski in the winter.
+
+    My name is mary and i m from colorado.'
+  Best Generated Conversation: 'User 1: Hi, my name is John. I''m from California.
+
+    User 2: Hi John, my name is Mary. I''m from Colorado.
+
+    User 1: What''s it like living in Colorado?
+
+    User 2: The weather is very cold, but it''s so beautiful in the spring. I love to hike and ski here.
+
+    User 1: I''ve heard that Colorado is a beautiful place. I''ve always wanted to visit.
+
+    User 2: You should! It''s a great place to live.
+
+    User 1: I might have to come visit you sometime.
+
+    User 2: That would be great! I would love to show you around.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to hike, ski, and go camping. I also love to read and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to play soccer, watch movies, and spend time with my family too.
+
+    User 2: We should get together sometime and do something fun.
+
+    User 1: That would be great! I''d love to meet up with you.
+
+    User 2: Great! We can exchange numbers and plan something.
+
+    User 1: Sounds good! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

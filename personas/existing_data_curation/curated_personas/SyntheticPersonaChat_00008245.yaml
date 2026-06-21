@@ -1,0 +1,56 @@
+id: 00008245
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8245
+data:
+  user 1 personas: 'I am currently unemployed so i have time to write.
+
+    I am a profesional translator.
+
+    I am writing my first novel and hope to finish before the end of the year.
+
+    I want to become an author.'
+  user 2 personas: 'I have a poster of neil tyson degrasse on my wall.
+
+    My two dogs are the best friends a girl could have.
+
+    I want to be an astronaut when i grow up.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to read, learn about science and space, and play with my dogs.
+
+    User 1: Wow, that''s awesome! I love reading too. What kind of books do you like to read?
+
+    User 2: I love reading science fiction and fantasy novels. I also like nonfiction books about space and astronomy.
+
+    User 1: Me too! I''m a huge fan of sci-fi and fantasy. I love the way they can transport me to another world.
+
+    User 2: I know what you mean! I love being able to escape reality for a while and just get lost in a good book.
+
+    User 1: Me too! So, what''s your favorite sci-fi or fantasy book?
+
+    User 2: That''s a tough question! I have so many favorites. But one of my favorites is "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams.
+
+    User 1: I love that book! It''s so funny and clever.
+
+    User 2: I know, right? It''s one of my favorite books ever.
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be an astronaut! I''ve always been fascinated by space and I love the idea of exploring it.
+
+    User 1: That''s awesome! I''m sure you''ll make a great astronaut.
+
+    User 2: Thank you! I hope so!
+
+    User 1: So, what do you think your dogs think of you?
+
+    User 2: I think they think I''m the best person in the world! They love to play with me and they''re always so happy to see me.
+
+    User 1: I''m sure they do! They''re lucky to have you.
+
+    User 2: I''m the lucky one! They make my life so much better.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

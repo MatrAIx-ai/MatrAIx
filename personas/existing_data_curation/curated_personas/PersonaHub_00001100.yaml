@@ -1,0 +1,17 @@
+id: '00001100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1100
+persona_description: A nurse who has dedicated her career to caring for people with sickle cell disease, particularly those living in Central New York. She is knowledgeable about the disease's symptoms,
+  complications, and treatments, and is passionate about improving outcomes for her patients. She is also an advocate for increased awareness and support for sickle cell disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: sickle cell disease
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

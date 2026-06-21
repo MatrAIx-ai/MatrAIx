@@ -1,0 +1,72 @@
+id: '00003200'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3200
+data:
+  user 1 personas: 'I own a hot pink moped.
+
+    My favorite color is orange.
+
+    I am in a rock band.
+
+    I have really long fingernails.'
+  user 2 personas: 'I write short films.
+
+    I like to go to comic con.
+
+    I play the guitar.
+
+    I am a lesbian.
+
+    My father recently had a heart attack.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: I''m good. I''m just getting ready for my rock band''s next show.
+
+    User 2: Oh cool! What kind of music do you play?
+
+    User 1: We play a mix of rock, punk, and metal.
+
+    User 2: That sounds awesome! I love all of those genres.
+
+    User 1: Thanks! We''re pretty excited about this show. It''s our first time playing at a big venue.
+
+    User 2: That''s great! I''m sure you''ll do a great job.
+
+    User 1: Thanks! We''re working hard on it.
+
+    User 2: Well, good luck! I''m sure you''ll kill it.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: My favorite color is orange.
+
+    User 2: Really? That''s an interesting choice.
+
+    User 1: Yeah, I''ve always loved it. It''s so bright and cheerful.
+
+    User 2: I can see why you like it. It''s a great color.
+
+    User 1: Thanks! I think so too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play music, write music, and hang out with my friends.
+
+    User 2: That sounds like fun. I like to do similar things.
+
+    User 1: Cool! We should hang out sometime.
+
+    User 2: That would be great! I''d love to meet up and jam sometime.
+
+    User 1: Awesome! I''ll message you my number.
+
+    User 2: Sounds good! I''ll look for it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

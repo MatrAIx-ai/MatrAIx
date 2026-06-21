@@ -1,0 +1,84 @@
+id: 00000801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 801
+data:
+  user 1 personas: 'I love to cook.
+
+    I am going on a cruise next month.
+
+    My parents recently moved to florida.
+
+    I breed maine coon cats and show them.'
+  user 2 personas: 'I am a guitar player.
+
+    I like playing video games.
+
+    My parents do not know i am gay.
+
+    Welding is my career field.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games and guitar.
+
+    User 1: Me too! What video games do you like to play?
+
+    User 2: I like to play a lot of different games, but I''m really into Fortnite right now.
+
+    User 1: I''ve heard good things about Fortnite. I''ve never played it, though.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that''s cool. Do you like it?
+
+    User 1: Yeah, I love it! I get to cook all day and I get to be creative.
+
+    User 2: That sounds great.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a welder.
+
+    User 1: Oh, that''s cool. How long have you been doing that?
+
+    User 2: About 5 years.
+
+    User 1: How do you like it?
+
+    User 2: It''s good. It''s a lot of hard work, but it''s rewarding.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, guitar, and go to concerts.
+
+    User 1: Me too! What''s your favorite concert you''ve ever been to?
+
+    User 2: I saw Metallica a few years ago and it was amazing.
+
+    User 1: Oh, I love Metallica! I''ve seen them a few times.
+
+    User 2: They''re so good!
+
+    User 1: So, what do you like to cook?
+
+    User 2: I like to cook all kinds of food, but my favorite thing to make is probably pasta.
+
+    User 1: Me too! I love pasta.
+
+    User 2: Well, it was nice talking to you, [user 1 name].
+
+    User 1: It was nice talking to you too, [user 2 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

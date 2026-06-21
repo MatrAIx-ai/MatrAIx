@@ -1,0 +1,66 @@
+id: '00004035'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4035
+data:
+  user 1 personas: 'I like to make fresh pies.
+
+    My hobby is sewing.
+
+    I like to go swimming.
+
+    I am a cashier at a grocery store.
+
+    I have a garden in my yard.'
+  user 2 personas: 'I listen to metal music.
+
+    I sleep in late during the day.
+
+    I have black spiky hair.
+
+    I wear a lot of leather.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey!
+
+    User 1: I''m [name].
+
+    User 2: I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I listen to metal music, sleep in late, and wear a lot of leather.
+
+    User 1: That sounds pretty cool. I like to make fresh pies, go swimming, and sew.
+
+    User 2: I''ve never made a pie before. Do you have a favorite recipe?
+
+    User 1: I do! It''s a simple apple pie recipe. I like to use fresh apples and a lattice crust.
+
+    User 2: That sounds delicious. I might have to try making one sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a cashier at a grocery store.
+
+    User 2: Oh, cool! I used to work in a grocery store when I was younger.
+
+    User 1: It''s not a bad job. It''s pretty easy, and the pay is decent.
+
+    User 2: Yeah, it was pretty easy when I worked there.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to watch movies, go to concerts, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: I''m glad we have some things in common.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

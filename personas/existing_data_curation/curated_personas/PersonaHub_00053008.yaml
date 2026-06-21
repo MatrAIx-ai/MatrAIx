@@ -1,0 +1,19 @@
+id: 00053008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53008
+persona_description: A team member who is part of a rover development project, responsible for driving the rover and testing its navigation systems. The individual has experience with wheel odometry, inertial
+  measurement units (IMUs), and visual odometry. They are skilled in using these sensors to navigate the rover in complex terrain and are able to perform loop closure, a method for correcting localization
+  errors. The team member is also experienced in conducting tests in simulated environments, including slag heaps, and is skilled in driving the rover through complex terrain and navigating in various test
+  sites.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Robotics Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: Autonomous Navigation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

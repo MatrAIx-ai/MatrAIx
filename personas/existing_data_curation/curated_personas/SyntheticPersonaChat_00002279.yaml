@@ -1,0 +1,56 @@
+id: 00002279
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2279
+data:
+  user 1 personas: 'I love cold weather.
+
+    I love dark clothes.
+
+    I work two jobs as a cashier.
+
+    Favorite band is red hot chilli peppers.'
+  user 2 personas: 'I teach kindergarten.
+
+    I enjoys kayaking in my free time.
+
+    I graduated college in 2016.
+
+    My class has 26 kids.
+
+    I teach at a large school.'
+  Best Generated Conversation: 'User 1: I''m trying to find someone to go kayaking with me. Do you like kayaking?
+
+    User 2: I love kayaking! I teach kindergarten at a large school, and I always take the kids kayaking on our field trips. It''s so much fun.
+
+    User 1: That sounds like a lot of fun! I''m not much of a teacher, but I do love kayaking.
+
+    User 2: I''m sure you''d be a great teacher! You seem like you''d be really patient and understanding.
+
+    User 1: Thanks! I try to be.
+
+    User 2: So, where are you thinking of going kayaking?
+
+    User 1: I was thinking of going to the river near my house. It''s a pretty river, and it''s not too crowded.
+
+    User 2: That sounds like a great idea! I''ve never been kayaking on a river before.
+
+    User 1: It''s really fun! You can go really fast, and you can see a lot of wildlife.
+
+    User 2: That sounds amazing! I can''t wait to go.
+
+    User 1: Me too! Let''s set a date.
+
+    User 2: Sure! How about next weekend?
+
+    User 1: That sounds perfect! I''ll bring all the gear.
+
+    User 2: Great! I''ll bring snacks.
+
+    User 1: Sounds like a plan!
+
+    User 2: See you next weekend!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

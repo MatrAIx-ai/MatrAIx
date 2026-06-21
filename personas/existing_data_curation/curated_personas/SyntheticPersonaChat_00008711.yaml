@@ -1,0 +1,80 @@
+id: 00008711
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8711
+data:
+  user 1 personas: 'My dad owns a appliance store that i do not want to inherit.
+
+    I like running in marathons.
+
+    I hate social obligations because i always say the wrong thing.
+
+    I spend a lot of time watching obscure foreign film on netflix.'
+  user 2 personas: 'I work in academia at a local university.
+
+    I am committed to the environment.
+
+    I play music in my spare time.
+
+    I live in nashville.
+
+    I like to go to the farmers market every weekend.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you do for fun?
+
+    User 2: I play music in my spare time, and I''m committed to the environment.
+
+    User 1: That''s really cool! I like to run marathons and watch obscure foreign film on Netflix.
+
+    User 2: That''s awesome! I love to run, but I''ve never been in a marathon.
+
+    User 1: It''s really fun! It''s a great way to challenge yourself and get in shape.
+
+    User 2: I bet it is! I''m going to have to try it sometime.
+
+    User 1: You should! It''s really rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in academia at a local university.
+
+    User 1: That''s really interesting! What do you teach?
+
+    User 2: I teach environmental science.
+
+    User 1: That''s awesome! I''m a big fan of the environment.
+
+    User 2: Me too! It''s something that''s really important to me.
+
+    User 1: So, do you live in Nashville?
+
+    User 2: Yes, I do.
+
+    User 1: Me too! I love Nashville.
+
+    User 2: Me too! It''s a great city.
+
+    User 1: So, what do you like to do in Nashville?
+
+    User 2: I like to go to the farmers market, go to concerts, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun! I like to do a lot of the same things.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: '00026145'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26145
+persona_description: A genetic counselor or a pediatrician who specializes in the diagnosis and treatment of rare genetic disorders, particularly those involving facial features and internal organ malformations.
+  They are skilled in interpreting genetic tests, counseling families about the risk of passing on the disorder, and developing treatment plans for affected children.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: genetic medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: genetic counseling
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

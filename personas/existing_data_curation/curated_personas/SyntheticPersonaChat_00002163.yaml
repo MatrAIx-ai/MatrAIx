@@ -1,0 +1,62 @@
+id: '00002163'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2163
+data:
+  user 1 personas: 'I dyed my hair pink.
+
+    I have an older brother.
+
+    I love my girlfriend.
+
+    I work in a bookstore.'
+  user 2 personas: 'I have a golden retriever.
+
+    My mother is dead.
+
+    I write fiction for fun.
+
+    I work in advertising.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: I dyed my hair pink.
+
+    User 2: That''s cool! I have a golden retriever.
+
+    User 1: Oh, that''s cool! I love dogs.
+
+    User 2: Yeah, me too. My dog''s name is Buddy.
+
+    User 1: That''s a great name.
+
+    User 2: Thanks. My mother is dead.
+
+    User 1: Oh, I''m sorry to hear that.
+
+    User 2: It''s okay. She died of cancer a few years ago.
+
+    User 1: I''m sure she was a great mom.
+
+    User 2: She was. She loved to write fiction.
+
+    User 1: That''s really cool. I love to read.
+
+    User 2: Me too! I write fiction for fun.
+
+    User 1: That''s awesome. I''ve always wanted to write a book.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! I''m sure it would be great.
+
+    User 1: Thanks for the encouragement.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

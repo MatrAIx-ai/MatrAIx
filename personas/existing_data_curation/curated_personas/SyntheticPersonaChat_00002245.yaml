@@ -1,0 +1,60 @@
+id: '00002245'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2245
+data:
+  user 1 personas: 'I have two children.
+
+    Both my parents were teachers.
+
+    I had two cats growing up.
+
+    I like to hunt.
+
+    I like to donate time at the local animal shelter.'
+  user 2 personas: 'My favorite food is cheeseburgers.
+
+    I like to go out fishing.
+
+    I work out daily.
+
+    My mother is a teacher in the city.'
+  Best Generated Conversation: 'User 1: I like to go fishing too! I''ve been fishing since I was a kid.
+
+    User 2: That''s awesome! What''s your favorite kind of fish to catch?
+
+    User 1: I like to catch trout. They''re so beautiful and delicious.
+
+    User 2: Trout are really good eating! I''ve never caught one before, though.
+
+    User 1: You should try it! They''re not too hard to catch, and they''re a lot of fun.
+
+    User 2: I will! Maybe we can go fishing together sometime.
+
+    User 1: That would be great! I love fishing with friends.
+
+    User 2: Me too! It''s always more fun to share a good catch with someone.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the gym and work out. I also like to cook.
+
+    User 1: I like to cook too! I''m not very good at it, but I like trying new recipes.
+
+    User 2: I''m sure you''re better than you think! I love trying new recipes too.
+
+    User 1: So, what''s your favorite recipe?
+
+    User 2: I love making cheeseburgers. They''re so easy to make and they''re always a hit.
+
+    User 1: I love cheeseburgers too! I think I''ll have to make some soon.
+
+    User 2: You should! They''re the perfect food for a lazy weekend.
+
+    User 1: I agree! I''m sure my kids will love them too.
+
+    User 2: I''m sure they will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

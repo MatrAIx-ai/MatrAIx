@@ -1,0 +1,70 @@
+id: 00006907
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6907
+data:
+  user 1 personas: 'I am a painter and love to create art.
+
+    I am a talented singer and have won several competitions.
+
+    I work as an extra for major motion pictures.
+
+    I have a set of identical twin brothers.'
+  user 2 personas: 'My favorite fruit is apple.
+
+    I like green apples.
+
+    I like fruit.
+
+    I do not like to eat meat.
+
+    I like to eat the skin of the apple.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for a living?
+
+    User 2: I''m a vegan baker.
+
+    User 1: That''s cool! I love fruit. What''s your favorite fruit?
+
+    User 2: My favorite fruit is apple. I like green apples the best.
+
+    User 1: I love apples too! I''ve never tried green apples, though.
+
+    User 2: You should! They''re delicious.
+
+    User 1: I will! Maybe I''ll even try to bake a cake with them.
+
+    User 2: That would be awesome! I''m sure it would be delicious.
+
+    User 1: Thanks! So, what''s your favorite thing to do for fun?
+
+    User 2: I like to go for walks in the park. I also like to bake and read.
+
+    User 1: I love walks in the park too! I also like to read. What''s your favorite book?
+
+    User 2: My favorite book is "The Little Prince" by Antoine de Saint-Exupéry.
+
+    User 1: I love that book! It''s so beautiful and inspiring.
+
+    User 2: It is! I love the illustrations too.
+
+    User 1: Me too! They''re so whimsical.
+
+    User 2: So, what do you like to do for a living?
+
+    User 1: I''m a painter and a singer. I also work as an extra for major motion pictures.
+
+    User 2: Wow! That''s so cool! I''ve always wanted to be an actor.
+
+    User 1: It''s a lot of fun! I''ve been lucky enough to work on some really great projects.
+
+    User 2: I bet! That sounds awesome.
+
+    User 1: It is! I''m grateful for every opportunity I get to act.
+
+    User 2: I can imagine! It must be amazing to be able to do something you love for a living.
+
+    User 1: It is! I''m really lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

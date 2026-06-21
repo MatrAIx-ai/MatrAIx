@@ -1,0 +1,19 @@
+id: 00050888
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50888
+persona_description: A surgeon who specializes in minimally invasive surgical procedures, particularly those related to the heart and cardiovascular system. They are known for their expertise in using IVUS
+  guidance to place the heart in the exact position during surgical procedures. They are also aware of the risks associated with angioplasty and the importance of lifelong intake of aspirin and Clopidogrel.
+  They are familiar with the symptoms of angina pectoris and the importance of immediate emergency medical help in preventing a heart attack. They are aware of the causes of sudden cardiac arrest and the
+  treatment options available for those who survive.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiovascular surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: IVUS-guided cardiovascular surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,78 @@
+id: 00000591
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 591
+data:
+  user 1 personas: 'I am a teacher.
+
+    I drink coffee every day.
+
+    I have a twin sister.
+
+    I love chocolate.
+
+    I do yoga every morning.'
+  user 2 personas: 'I like reading.
+
+    I enjoy taking late night walks when its completely dark.
+
+    I like being by myself.
+
+    My favorite band is dream theater.
+
+    Pizza is my most favorite thing.'
+  Best Generated Conversation: '* * User 1: * * Hi! What do you like to do for fun?
+
+    * * User 2: * * I enjoy reading and taking late night walks when it''s completely dark.
+
+    * * User 1: * * That sounds interesting! I love reading too. What''s your favorite book?
+
+    * * User 2: * * My favorite book is "It''s Kind of a Funny Story" by Ned Vizzini. It''s a coming-of-age story about a teenager who is struggling with depression.
+
+    * * User 1: * * I''ve heard good things about that book. I''ll have to check it out.
+
+    * * User 2: * * You should! It''s a really good book.
+
+    * * User 1: * * So, what do you like about taking late night walks?
+
+    * * User 2: * * I like the peace and quiet. It''s a good time to think about things.
+
+    * * User 1: * * I can understand that. I like to take walks to clear my head too.
+
+    * * User 2: * * Do you have any siblings?
+
+    * * User 1: * * Yes, I have a twin sister.
+
+    * * User 2: * * That must be cool! I''ve always wanted a twin.
+
+    * * User 1: * * It is! We''re very close.
+
+    * * User 2: * * Do you do anything together?
+
+    * * User 1: * * We used to do everything together, but now that we''re adults, we don''t get to see each other as often. But when we do, we always have a lot of fun.
+
+    * * User 2: * * That sounds great.
+
+    * * User 1: * * So, what do you do for a living?
+
+    * * User 2: * * I''m a nurse.
+
+    * * User 1: * * That''s awesome! I have a lot of respect for nurses.
+
+    * * User 2: * * Thanks! It''s a tough job, but it''s also very rewarding.
+
+    * * User 1: * * I can imagine. What do you like most about being a nurse?
+
+    * * User 2: * * I like helping people. It''s really satisfying to be able to make a difference in someone''s life.
+
+    * * User 1: * * That''s a great answer.
+
+    * * User 2: * * Thanks.
+
+    * * User 1: * * Well, it was nice talking to you.
+
+    * * User 2: * * You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00030001'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30001
+persona_description: A government energy analyst who is responsible for analyzing and interpreting energy consumption data from various U.S. government agencies. The analyst is likely to be highly skilled
+  in data analysis and interpretation, with a focus on electricity generation, uranium enrichment, and other energy sources used by the U.S. government. The analyst may also have knowledge of foreign installations
+  and operations, as well as the conversion factors used to calculate energy consumption. The persona is likely to be familiar with the U.S. government's fiscal year and the data preparation process used
+  to create the energy consumption data.
+expertise:
+  general_domain_top1pct: energy
+  specific_domain_top1pct: energy policy/analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

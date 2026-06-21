@@ -1,0 +1,68 @@
+id: 00005884
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5884
+data:
+  user 1 personas: 'I work in the office , 9 till 5.
+
+    I like italian cousine.
+
+    Sometimes i go to yoga classes.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.'
+  user 2 personas: 'I have a garden.
+
+    My favorite book is enders game.
+
+    I like to read.
+
+    I grew up in kentucky.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that sounds fun! What do you like to do with your time?
+
+    User 2: I like to read, garden, and spend time with my kids.
+
+    User 1: That sounds great! I like to read too. Have you read any good books recently?
+
+    User 2: Yes, I just finished reading "Ender''s Game". It was really good.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a really good story.
+
+    User 1: So, where do you live?
+
+    User 2: I live in Kentucky.
+
+    User 1: Oh, really? I''ve never been to Kentucky.
+
+    User 2: It''s a beautiful state! You should visit sometime.
+
+    User 1: I might just do that.
+
+    User 1: So, what do you like to do in your garden?
+
+    User 2: I like to grow vegetables, flowers, and herbs.
+
+    User 1: That sounds like a lot of fun! I''m not very good at gardening.
+
+    User 2: It''s not that hard! You just have to learn what plants like what kind of soil and sun.
+
+    User 1: Maybe I''ll try to start a garden this summer.
+
+    User 2: You should! It''s a lot of fun and you get to eat fresh vegetables.
+
+    User 1: Thanks for the advice! I''ll definitely look into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

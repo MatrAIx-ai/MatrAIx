@@ -1,0 +1,61 @@
+id: 00002946
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2946
+data:
+  user 1 personas: 'My mother was a nurse.
+
+    I recently discovered a new love for indian food.
+
+    I am gong to adopt a dog very soon.
+
+    I am a violinist.
+
+    I have played since i was 4 years old.'
+  user 2 personas: 'I have two older brothers.
+
+    My passion is photography.
+
+    My favorite color is blue.
+
+    I am a freshman at nyu.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. I''m a violinist and I recently discovered a new love for Indian food.
+
+    User 2: Oh, that''s cool! I''ve always wanted to learn how to play the violin. What got you interested in it?
+
+    User 1: My mother was a nurse and she used to play the violin. I would always watch her play and I thought it was so beautiful. I started taking lessons when I was four years old and I''ve been playing
+    ever since.
+
+    User 2: Wow, that''s so cool! I''m glad you stuck with it.
+
+    User 1: Me too! I love playing the violin. It''s such a relaxing and therapeutic experience.
+
+    User 2: I can imagine. Do you have any favorite songs to play?
+
+    User 1: I have a lot of favorite songs to play, but one of my favorites is "The Swan" by Saint-Saëns.
+
+    User 2: Oh, that''s a beautiful song. I love the violin solo in that piece.
+
+    User 1: Me too! It''s so beautiful and expressive.
+
+    User 2: So, what other things do you like to do?
+
+    User 1: I love to cook and bake. I recently discovered a new love for Indian food. I''m planning on adopting a dog very soon.
+
+    User 2: Oh, that''s cool! I love to cook and bake too. I''m not very good at it, but it''s fun to try.
+
+    User 1: It''s definitely a lot of fun! I''m not very good at it either, but I''m getting better.
+
+    User 2: So, what''s your favorite thing to cook?
+
+    User 1: I love to make pasta dishes. I''m also really good at making desserts.
+
+    User 2: Oh, that''s cool! I love pasta too. I''m not very good at making desserts, but I''m trying to learn.
+
+    User 1: It''s definitely a lot of fun to learn! I''m sure you''ll be a great baker in no time.
+
+    User 2: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

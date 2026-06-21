@@ -1,0 +1,18 @@
+id: '00005555'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5555
+persona_description: A Facility Maintenance Specialist (FMS) responsible for managing and maintaining the indoor environment of a building, focusing on humidity control and moisture management. This FMS
+  must be knowledgeable in HVAC systems, moisture sources, and moisture control strategies to ensure optimal facility conditions. They must be able to manage humidity levels within a specific range (40%
+  to 60% in summer, 20% to 30% in winter) to prevent mold growth and ensure occupant comfort. Understanding of vapor retarders/barriers and their placement in different geographic climates is also crucial.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: HVAC and moisture management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

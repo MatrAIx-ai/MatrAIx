@@ -1,0 +1,76 @@
+id: 00007912
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7912
+data:
+  user 1 personas: 'I like visiting art museums in my spare time.
+
+    I just started dating someone new.
+
+    I m in an education program , and hope to teach kindergarten when i graduate.
+
+    I am a vegan.
+
+    I m a student.'
+  user 2 personas: 'Under a pen name , i write romance books.
+
+    This past summer i hiked the appalachian trail.
+
+    I have a terrible singing voice.
+
+    I used to follow the grateful dead when they toured.
+
+    I am a short order cook at a local diner.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a short order cook at a local diner.
+
+    User 1: Oh, that sounds like a fun job. I like to cook too.
+
+    User 2: Me too! I''ve been cooking since I was a kid.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I like to make breakfast food. I make a mean omelet.
+
+    User 1: I love omelets! I''m a vegan, so I don''t eat eggs, but I love the way they smell.
+
+    User 2: Oh, that''s too bad. I love eggs. But I''ve been trying to eat more vegan food lately.
+
+    User 1: That''s good. I think everyone should try to eat more plants.
+
+    User 2: I agree. It''s good for your health and the environment.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and hike.
+
+    User 1: I like reading too. I''m reading a book about the Grateful Dead right now.
+
+    User 2: Oh, I love the Grateful Dead! I used to follow them when they toured.
+
+    User 1: That''s so cool! I''ve never seen them live, but I''ve heard they''re amazing.
+
+    User 2: They are. I saw them a few times in the ''80s and it was always a great experience.
+
+    User 1: So, what do you like to write?
+
+    User 2: I write romance novels under a pen name.
+
+    User 1: Oh, that''s cool. I''ve never written a book before, but I''ve always wanted to.
+
+    User 2: You should give it a try. It''s a lot of fun.
+
+    User 1: I might just do that. Thanks for the encouragement.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

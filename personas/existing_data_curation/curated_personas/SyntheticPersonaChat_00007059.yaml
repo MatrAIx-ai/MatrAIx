@@ -1,0 +1,56 @@
+id: 00007059
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7059
+data:
+  user 1 personas: 'My favorite tv show is silicon valley.
+
+    I like to play tennis.
+
+    I am a baker.
+
+    My mother is a dentist.'
+  user 2 personas: 'I enjoy ice cream.
+
+    We have 4 children and 2 dogs.
+
+    The kids will be my responsibility as my husband does not want them.
+
+    My husband just decided to leave me.'
+  Best Generated Conversation: 'User 1: Hi! I''m John.
+
+    User 2: Hi, I''m Mary.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, cook, and play with my kids.
+
+    User 1: That sounds great! I love to cook too. What''s your favorite thing to make?
+
+    User 2: I love to make ice cream. I make it from scratch.
+
+    User 1: Oh, that''s awesome! I love ice cream. I''m a baker myself.
+
+    User 2: That''s so cool! What kind of things do you bake?
+
+    User 1: I make everything from cakes to cookies to pies.
+
+    User 2: That sounds delicious! I love all of those things.
+
+    User 1: What''s your favorite thing to bake?
+
+    User 2: I think my favorite thing to bake is probably chocolate chip cookies.
+
+    User 1: Me too! I love chocolate chip cookies.
+
+    User 2: They''re so delicious and easy to make.
+
+    User 1: Yeah, they are. I''m glad you like them.
+
+    User 2: Me too! I''m glad I met you, John.
+
+    User 1: Me too! I''m glad I met you too, Mary.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

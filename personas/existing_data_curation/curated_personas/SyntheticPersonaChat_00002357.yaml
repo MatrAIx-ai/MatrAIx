@@ -1,0 +1,62 @@
+id: '00002357'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2357
+data:
+  user 1 personas: 'I work with my wife.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I have trained over 20 types of animals.
+
+    I am a zookeeper.
+
+    My wife is a breast cancer survivor.'
+  user 2 personas: 'My car is black.
+
+    I lease my car.
+
+    I am a recruiter.
+
+    My favorite meal is brunch.
+
+    I do not own any pets.'
+  Best Generated Conversation: 'User 1: It''s great to meet you, I''m a zookeeper.
+
+    User 2: Nice to meet you, I''m a recruiter.
+
+    User 1: What''s your favorite type of animal?
+
+    User 2: I like birds.
+
+    User 1: Birds are awesome! I have trained over 20 types of animals.
+
+    User 2: Wow, that''s a lot! I can''t imagine working with so many animals.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I can imagine. I''m just not sure I would have the patience for it.
+
+    User 1: I think it''s all about finding the right animals for you.
+
+    User 2: That makes sense. I guess I would need to be good at communicating with animals.
+
+    User 1: That''s definitely a plus, but it''s not the only thing that matters.
+
+    User 2: What else is important?
+
+    User 1: You need to be patient, calm, and have a good sense of humor.
+
+    User 2: I think I can do that. I''m a pretty patient person.
+
+    User 1: That''s good. I think you would be a great zookeeper.
+
+    User 2: Thanks, I appreciate that. Maybe I''ll look into it more.
+
+    User 1: You should! It''s a great job.
+
+    User 2: I''ll definitely think about it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

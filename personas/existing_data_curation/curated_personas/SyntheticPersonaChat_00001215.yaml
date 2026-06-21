@@ -1,0 +1,86 @@
+id: '00001215'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1215
+data:
+  user 1 personas: 'I am a paramedic.
+
+    I am studying to become a nurse.
+
+    I live in a studio apartment.
+
+    I have three sisters.'
+  user 2 personas: 'I enjoy cooking for people.
+
+    I like to plant flowers in my gardens.
+
+    My mother lives with me.
+
+    I like to take my dog for long walks.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: I''m doing well, thank you for asking. How are you?
+
+    User 1: I''m doing well too. I''m a paramedic and I''m studying to become a nurse. What do you do for a living?
+
+    User 2: I enjoy cooking for people. I like to plant flowers in my gardens and take my dog for long walks.
+
+    User 1: That sounds like a great way to relax. I live in a studio apartment and I have three sisters.
+
+    User 2: I live with my mother and our dog. We have a big garden in the back of our house.
+
+    User 1: That sounds like a nice place to live. I''m glad you''re enjoying your life.
+
+    User 2: Thank you. I''m glad you''re doing well too.
+
+    User 1: Thank you. I hope we can get to know each other better.
+
+    User 2: I would love that. We could cook dinner together sometime.
+
+    User 1: That would be fun. I''m free on Wednesday night.
+
+    User 2: Great. I''ll see you then.
+
+    User 1: See you then.
+
+    (On Wednesday night)
+
+    User 1: Hi, I''m here.
+
+    User 2: Hi, I''m glad you could make it.
+
+    User 1: Me too. This looks great.
+
+    User 2: Thank you. I hope you like it.
+
+    User 1: It''s delicious. Thank you for cooking for me.
+
+    User 2: You''re welcome. I''m glad you like it.
+
+    User 1: This is a nice place.
+
+    User 2: Thank you. I love it here.
+
+    User 1: I can see why. It''s so relaxing.
+
+    User 2: It is. I love spending time here.
+
+    User 1: I''m glad you''re enjoying your life.
+
+    User 2: Thank you. I am.
+
+    User 1: Me too. I''m happy to be here.
+
+    User 2: Me too. I''m glad we met.
+
+    User 1: Me too. I hope we can do this again sometime.
+
+    User 2: I would love that.
+
+    User 1: Great. We''ll have to make plans.
+
+    User 2: Yes, we will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00000701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 701
+data:
+  user 1 personas: 'I like to hike.
+
+    My mother is dead.
+
+    I write fiction for fun.
+
+    I have a golden retriever.
+
+    I work in advertising.'
+  user 2 personas: 'I like to hike and spend time outdoors.
+
+    My favorite thing to eat is a burrito.
+
+    I am a guy that enjoys being a guy.
+
+    I love to binge watch shows on streaming services.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name]. I like to hike and spend time outdoors. What about you?
+
+    User 2: Hi! I''m [user 2''s name]. I also like to hike! My favorite thing to eat is a burrito. What''s yours?
+
+    User 1: I love burritos too! I also love to write fiction for fun. Do you like to read?
+
+    User 2: I do! I love reading books and watching movies. I''m a big fan of sci-fi and fantasy.
+
+    User 1: Me too! I love anything that takes me away to another world.
+
+    User 2: Me too! I''m also a big fan of horror movies.
+
+    User 1: I''m not so much into horror movies. I''m more of a comedy person myself.
+
+    User 2: I can respect that. What are some of your favorite comedies?
+
+    User 1: I love The Hangover, The Wedding Singer, and Bridesmaids. What about you?
+
+    User 2: I love all of those movies! I also love Anchorman and Step Brothers.
+
+    User 1: Those are great movies! I''m glad we have similar taste in movies.
+
+    User 2: Me too! It''s always nice to find someone who likes the same things you do.
+
+    User 1: Yeah, it is. So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, play video games, and hang out with my friends.
+
+    User 1: I like all of those things too! I''m a big fan of video games.
+
+    User 2: Me too! What are some of your favorite games?
+
+    User 1: I love the Legend of Zelda series, the Final Fantasy series, and the Pokemon series. What about you?
+
+    User 2: I love all of those games! I also love the Mario series, the Kirby series, and the Animal Crossing series.
+
+    User 1: Those are great games too! I''m glad we have similar taste in video games.
+
+    User 2: Me too! It''s always nice to find someone who shares your interests.
+
+    User 1: Yeah, it is. So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. Maybe I''ll go to the movies or hang out with my friends.
+
+    User 1: That sounds fun! I''m not sure what I''m doing either. Maybe we can hang out?
+
+    User 2: That would be fun! What do you want to do?
+
+    User 1: We could go to the movies or play video games.
+
+    User 2: I would love to go to the movies!
+
+    User 1: Great! I''ll check out what''s playing and we can make a plan.
+
+    User 2: Sounds good! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

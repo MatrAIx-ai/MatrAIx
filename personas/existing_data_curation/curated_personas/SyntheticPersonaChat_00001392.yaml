@@ -1,0 +1,64 @@
+id: 00001392
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1392
+data:
+  user 1 personas: 'I m a vegetarian.
+
+    When i have nothing else to do , i read books.
+
+    I like to write poetry.
+
+    I work as a bartender.
+
+    I used to be in the marines.'
+  user 2 personas: 'My mother is a well known celebrity.
+
+    I have been on the tv news six times.
+
+    I have traveled overseas many times.
+
+    I am a civil war reenactment participant.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to travel, and I''ve been on the TV news six times.
+
+    User 1: Wow, that''s really cool! Do you have any favorite travel destinations?
+
+    User 2: I love going to Europe, especially Italy.
+
+    User 1: I''ve been to Italy once, and I loved it!
+
+    User 2: What did you like most about it?
+
+    User 1: I loved the food, the history, and the culture.
+
+    User 2: Me too! I''m really hoping to go back someday.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a civil war reenactment participant.
+
+    User 1: That''s really interesting! Have you ever been in a reenactment battle?
+
+    User 2: Yes, I have! It was really fun.
+
+    User 1: I bet it was! What kind of role do you play in the reenactments?
+
+    User 2: I usually play a soldier.
+
+    User 1: That''s cool! Do you have any other hobbies?
+
+    User 2: I also like to write poetry.
+
+    User 1: I love poetry! I used to write a lot of it when I was younger.
+
+    User 2: That''s cool! Do you still write poetry?
+
+    User 1: I don''t as much as I used to, but I still enjoy it.
+
+    User 2: I''m glad you still enjoy it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

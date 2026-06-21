@@ -1,0 +1,56 @@
+id: 00008512
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8512
+data:
+  user 1 personas: 'I lived most of my life not knowing who bob marley was.
+
+    When i cut loose , i lose control.
+
+    We help each other out in my family.
+
+    I despise my boss.
+
+    I work over 60 hours a week as a restaurant manager.'
+  user 2 personas: 'I like meat too much.
+
+    I want to be a vegetarian.
+
+    Its good to eat a lot of veggies.
+
+    I m lazy and pork tastes good.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, but I''m not very good at it. I''m trying to become a vegetarian, but I''m having a hard time giving up meat.
+
+    User 1: I''m not a vegetarian, but I do like to eat a lot of vegetables. I''m a restaurant manager, and I work over 60 hours a week.
+
+    User 2: That sounds like a lot of work! I''m a teacher, and I only work 40 hours a week.
+
+    User 1: I know, it''s a lot. But it''s worth it. I love my job.
+
+    User 2: I''m glad to hear that. What do you like most about your job?
+
+    User 1: I like the people I work with, and I like the challenge of the job.
+
+    User 2: That''s great. I like working with kids, and I like the feeling of making a difference in their lives.
+
+    User 1: That''s really admirable. I wish I could make a difference in the world.
+
+    User 2: You can! Everyone can make a difference. We just have to find the right way to do it.
+
+    User 1: You''re right. I''m going to start thinking about how I can make a difference.
+
+    User 2: That''s great! I''m sure you''ll figure out something.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

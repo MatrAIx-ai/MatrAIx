@@ -1,0 +1,64 @@
+id: 00007906
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7906
+data:
+  user 1 personas: 'I like to cook with food i grow in my garden.
+
+    I play many instruments.
+
+    I like to travel.
+
+    I give lessons on string instruments.'
+  user 2 personas: 'I am in 3rd grade.
+
+    I like to play soccer , draw and read asterix.
+
+    I am a french girl , but i moved to the us last year.
+
+    I live with my parents and my little brother.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, draw, and read Asterix.
+
+    User 1: Asterix is a great comic book! I love the little Gauls.
+
+    User 2: Me too! I''m glad someone else has heard of it. I''ve read all of the books and seen all of the movies.
+
+    User 1: I''ve only seen a few of the movies, but I really enjoyed them.
+
+    User 2: You should read the books too! They''re even better than the movies.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You won''t regret it!
+
+    User 1: I''m sure I won''t.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to cook, travel, and play music.
+
+    User 2: I love to cook too! I''m trying to learn how to make my own pasta.
+
+    User 1: That''s a great skill to have! I can''t cook pasta to save my life.
+
+    User 2: It''s not that hard, once you get the hang of it.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: You should! I''m sure you''ll be a natural.
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

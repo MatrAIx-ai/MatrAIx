@@ -1,0 +1,74 @@
+id: 00001490
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1490
+data:
+  user 1 personas: 'I am 26 years old.
+
+    I found out that i am carrying twins.
+
+    I have thrown up every day for the last 3 months with morning sickness.
+
+    I will be on bed rest for the next 5 months.
+
+    I already have 3 children.'
+  user 2 personas: 'I work as a contractor for a cab company.
+
+    I am taking courses online.
+
+    I like ice cream.
+
+    I am engaged.'
+  Best Generated Conversation: 'User 1: Hi! I''m Ashley.
+
+    User 2: Hi Ashley, I''m Josh.
+
+    User 1: Nice to meet you, Josh. What do you do for work?
+
+    User 2: I''m a contractor for a cab company.
+
+    User 1: Oh, that sounds interesting.
+
+    User 2: It''s not bad. It pays the bills.
+
+    User 1: What are you doing for fun these days?
+
+    User 2: I''m taking some online courses.
+
+    User 1: Oh, that''s awesome! What kind of courses?
+
+    User 2: I''m trying to learn how to code.
+
+    User 1: That''s great! I''ve always wanted to learn how to code.
+
+    User 2: It''s not too hard. There are a lot of resources online.
+
+    User 1: Yeah, I''ve heard that. I''ll have to check it out.
+
+    User 2: You should! It''s a great skill to have.
+
+    User 1: Do you have any plans for the weekend?
+
+    User 2: I''m going to visit my fiance.
+
+    User 1: Oh, that''s nice! How long have you been engaged?
+
+    User 2: We got engaged a few months ago.
+
+    User 1: Congratulations!
+
+    User 2: Thank you!
+
+    User 1: So, what are you guys planning for the wedding?
+
+    User 2: We''re not sure yet. We''re still in the planning stages.
+
+    User 1: I''m sure it will be beautiful.
+
+    User 2: Thanks, Ashley. I appreciate it.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

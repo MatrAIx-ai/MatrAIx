@@ -1,0 +1,54 @@
+id: 00000840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 840
+data:
+  user 1 personas: 'I love to sing.
+
+    I ca swim very fast.
+
+    I love to run.
+
+    I have a lot of trophies from my childhood.
+
+    My favorite past time is cooking.'
+  user 2 personas: 'I m a babysitter.
+
+    I m the middle child of 3 siblings.
+
+    I have a sweet tooth.
+
+    I drive a mercedes.'
+  Best Generated Conversation: 'User 1: I love to sing, I can swim very fast, I love to run, I have a lot of trophies from my childhood, and my favorite past time is cooking.
+
+    User 2: I''m a babysitter, I''m the middle child of 3 siblings, I have a sweet tooth, and I drive a Mercedes.
+
+    User 1: What''s it like being a babysitter?
+
+    User 2: It''s a lot of fun, but it can also be challenging. I love getting to spend time with kids, but it can be hard to keep them entertained all day long.
+
+    User 1: I bet. I have a lot of energy, but I don''t know if I could keep up with kids all day long.
+
+    User 2: It''s definitely not for everyone, but it''s a great way to make some money and get some experience working with kids.
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: Thanks! I''m pretty good at it too.
+
+    User 1: I bet you are. You seem like a very caring person.
+
+    User 2: Thanks! I try to be.
+
+    User 1: What''s it like being the middle child of 3 siblings?
+
+    User 2: It''s a lot of fun, but it can also be a little chaotic. I''m always in the middle of everything, but I wouldn''t trade it for anything.
+
+    User 1: I can imagine. I''m an only child, so I''ve never had to deal with that.
+
+    User 2: It''s definitely a different experience, but it''s also a lot of fun.
+
+    User 1: I''m glad you''re enjoying it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

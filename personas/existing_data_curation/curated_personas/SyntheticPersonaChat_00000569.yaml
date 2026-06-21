@@ -1,0 +1,90 @@
+id: 00000569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 569
+data:
+  user 1 personas: 'I am a barista.
+
+    I can speak arabic , english , and french.
+
+    I like to go hiking on the weekends.
+
+    My family is from algeria.
+
+    I play jazz piano in a band.'
+  user 2 personas: 'My wife stays home with our kids.
+
+    I hate tofu.
+
+    I work for a large law firm.
+
+    I drive a prius.
+
+    We own our home.'
+  Best Generated Conversation: 'User 1: I''m a barista. What do you do for work?
+
+    User 2: I work for a large law firm.
+
+    User 1: Oh wow, that must be interesting.
+
+    User 2: It is! I get to work on a lot of different cases.
+
+    User 1: That''s cool. I''m a musician. I play jazz piano in a band.
+
+    User 2: That''s awesome! I''ve always wanted to learn to play an instrument.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Maybe I will! What kind of music do you play?
+
+    User 1: I play jazz piano.
+
+    User 2: That''s cool. I''ve always wanted to learn to play an instrument.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Maybe I will! What kind of music do you play?
+
+    User 1: I play jazz piano.
+
+    User 2: Cool!
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking on the weekends.
+
+    User 2: That sounds fun. I love being outdoors.
+
+    User 1: Me too! I love being in nature.
+
+    User 2: So, where do you like to hike?
+
+    User 1: I like to hike in the mountains.
+
+    User 2: Me too! I love the views from the top of a mountain.
+
+    User 1: Yeah, it''s amazing.
+
+    User 2: So, do you have any other hobbies?
+
+    User 1: I like to read.
+
+    User 2: Me too! What kind of books do you like to read?
+
+    User 1: I like to read thrillers and mysteries.
+
+    User 2: I like those too!
+
+    User 1: So, what do you think about the weather today?
+
+    User 2: It''s a little chilly, but it''s nice out.
+
+    User 1: Yeah, it''s perfect weather for hiking.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

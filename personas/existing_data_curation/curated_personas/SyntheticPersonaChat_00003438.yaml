@@ -1,0 +1,64 @@
+id: 00003438
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3438
+data:
+  user 1 personas: 'I like victorian things.
+
+    I like jazz.
+
+    I am a romantic.
+
+    I collect dolls.
+
+    I like antiques.'
+  user 2 personas: 'I have the support of my whole family.
+
+    I plan to retire in 6 months.
+
+    I have studied ballet all my life.
+
+    My mother is a ballerina.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love ballet. I have studied it my whole life and I plan to retire in six months.
+
+    User 1: That''s wonderful! I have always loved ballet too. I have a collection of dolls and antiques, and I love to listen to jazz music.
+
+    User 2: That''s so interesting! I''ve never met anyone else who likes victorian things.
+
+    User 1: Me neither! It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what are you doing today?
+
+    User 2: I''m just relaxing at home. I have a few days off before my retirement, so I''m trying to enjoy them.
+
+    User 1: That sounds wonderful. I''m working, but I''m looking forward to the weekend.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a lawyer.
+
+    User 2: Oh, that sounds interesting. I''ve always thought about going to law school.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are your plans for retirement?
+
+    User 2: I''m not sure yet. I''m thinking about traveling and spending more time with my family.
+
+    User 1: That sounds like a great plan.
+
+    User 2: Thanks. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00012277'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12277
+persona_description: A highly skilled and dedicated scientist, researcher, or engineer at the U.S. Energy Department's Oak Ridge National Laboratory, specifically focused on computational science and engineering.
+  They have expertise in high-performance computing, particularly in supercomputing systems and their applications. This individual is known for their exceptional computational skills, having significantly
+  increased the computing power of the Cray XT Jaguar supercomputer to a peak of 1.64 petaflops, making it the world's fastest open research supercomputer. They have already used this upgraded system to
+  complete an unprecedented superconductivity calculation, demonstrating their expertise in advanced scientific simulations and research.
+expertise:
+  general_domain_top1pct: computational science
+  specific_domain_top1pct: high-performance computing
+  general_domain_top01pct: computational science
+  specific_domain_top01pct: supercomputing systems
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

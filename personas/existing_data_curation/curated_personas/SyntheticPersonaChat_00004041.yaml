@@ -1,0 +1,56 @@
+id: '00004041'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4041
+data:
+  user 1 personas: 'I like wide , open spaces.
+
+    I have 10 alpacas.
+
+    I own a home with 5 acres of land.
+
+    I only eat locally sourced food.
+
+    I am active on my city council.'
+  user 2 personas: 'Starbucks is my favorite hang out spot.
+
+    I collect little figurines.
+
+    I spend my weekends browsing antique stores.
+
+    I have a cat.
+
+    Subway is my favorite fast food restaurant.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to Starbucks, collect little figurines, and browse antique stores.
+
+    User 1: That sounds fun! I like to spend my time in wide, open spaces. I have 10 alpacas and a home with 5 acres of land.
+
+    User 2: Wow, that''s amazing! I''ve never seen an alpaca in real life.
+
+    User 1: They''re really cute! I also only eat locally sourced food and am active on my city council.
+
+    User 2: That''s great! I''m trying to eat more locally sourced food, but it can be hard to find.
+
+    User 1: It can be, but it''s worth it! It''s better for the environment and your health.
+
+    User 2: I agree! I''m also trying to be more active, but it can be hard to find the motivation.
+
+    User 1: It can be, but it''s so important! I try to walk around my neighborhood every day and do some yoga.
+
+    User 2: That sounds like a good routine! I''m going to start doing that too.
+
+    User 1: Great! I''m sure you''ll be glad you did.
+
+    User 2: Thanks for the chat! It was nice to meet you.
+
+    User 1: You too! It was nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

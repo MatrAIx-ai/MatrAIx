@@ -1,0 +1,76 @@
+id: '00003131'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3131
+data:
+  user 1 personas: 'I like to ride my bike.
+
+    I am a vegan.
+
+    I have 3 dogs and 2 cats.
+
+    I am a 30 year old female.'
+  user 2 personas: 'I love chocolate.
+
+    I love watching anime.
+
+    I owe two laptops.
+
+    I ve a flower garden.'
+  Best Generated Conversation: 'User 1: Hi! I''m looking for someone to ride bikes with me. Are you interested?
+
+    User 2: I love riding bikes! I''ve got a couple of road bikes and a mountain bike.
+
+    User 1: Awesome! I only have a mountain bike, but I''m always up for a ride.
+
+    User 2: Where do you like to ride?
+
+    User 1: I like to ride in the city, but I''m also open to exploring new places.
+
+    User 2: I''ve got a favorite trail in the suburbs that''s really fun. It''s not too challenging, but it''s got some good views.
+
+    User 1: That sounds perfect! I''d love to try it out.
+
+    User 2: Great! Let''s meet up this weekend and we can go for a ride.
+
+    User 1: Sounds good to me! I''ll bring my bike and meet you at the trailhead.
+
+    User 2: Perfect! I''ll see you then.
+
+
+    [On the trail]
+
+
+    User 1: This is a great trail! It''s not too hard, but it''s challenging enough to keep me interested.
+
+    User 2: I''m glad you''re enjoying it! I come here all the time when I need to clear my head.
+
+    User 1: I can see why. It''s so peaceful and beautiful here.
+
+    User 2: Yeah, it''s my favorite place to be.
+
+    User 1: I can see why! It''s so relaxing.
+
+
+    [After the ride]
+
+
+    User 1: That was so much fun! I''m so glad we went on this ride.
+
+    User 2: Me too! I''m glad I could introduce you to my favorite trail.
+
+    User 1: Thanks for showing me! I''ll definitely be back.
+
+    User 2: I''m glad to hear it!
+
+
+    [After exchanging contact information]
+
+
+    User 1: I had a great time! I''m looking forward to riding with you again.
+
+    User 2: Me too! I''m always up for a bike ride'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

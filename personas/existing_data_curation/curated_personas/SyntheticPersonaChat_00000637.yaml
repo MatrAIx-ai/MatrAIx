@@ -1,0 +1,78 @@
+id: '00000637'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 637
+data:
+  user 1 personas: 'I enjoy travel.
+
+    Connor mcgregor is my favorite fighter.
+
+    I work in a factory.
+
+    I like watching ufc fights.
+
+    I love to drive my car.'
+  user 2 personas: 'I work in a factory.
+
+    I am very unproductive unless it comes to my job.
+
+    I am not social.
+
+    I sleep most of the day.'
+  Best Generated Conversation: 'User 1: Do you like to travel?
+
+    User 2: I do, but I don''t get a lot of time off.
+
+    User 1: Oh, that''s too bad. Where do you like to go when you do get the chance?
+
+    User 2: I like to go to the beach.
+
+    User 1: Me too! I love to swim and sunbathe.
+
+    User 2: Me too! I also like to go fishing.
+
+    User 1: That''s cool! I''ve never been fishing before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work in a factory.
+
+    User 2: Oh, me too! What do you do there?
+
+    User 1: I work on an assembly line.
+
+    User 2: Oh, that sounds interesting.
+
+    User 1: It''s not too bad.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to watch UFC fights.
+
+    User 2: Oh, me too! I''m a big fan of Connor McGregor.
+
+    User 1: Me too! He''s my favorite fighter.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to sleep most of the day.
+
+    User 1: Oh, that sounds relaxing.
+
+    User 2: Yeah, I need to catch up on my sleep.
+
+    User 1: So, do you want to go to the beach with me next weekend?
+
+    User 2: I would love to!
+
+    User 1: Great! I''ll text you the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

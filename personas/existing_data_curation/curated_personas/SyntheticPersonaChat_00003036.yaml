@@ -1,0 +1,58 @@
+id: '00003036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3036
+data:
+  user 1 personas: 'I collect vintage cars.
+
+    I ride horses.
+
+    I like to ride motorcycles.
+
+    I have many homes.'
+  user 2 personas: 'I live in nashville.
+
+    I work in academia at a local university.
+
+    I am committed to the environment.
+
+    I like to go to the farmer s market every weekend.
+
+    I play music in my spare time.'
+  Best Generated Conversation: 'User 1: Hi, I''m new in town. I''m looking for some people to hang out with.
+
+    User 2: Hi there! I''m always looking for new friends too. What do you like to do for fun?
+
+    User 1: I like to collect vintage cars, ride horses, and ride motorcycles.
+
+    User 2: That''s cool! I like to go to the farmer''s market every weekend and I play music in my spare time.
+
+    User 1: Oh, I love music! What kind of music do you play?
+
+    User 2: I play guitar and sing. I''m in a band with some friends of mine.
+
+    User 1: That''s awesome! I''d love to hear you play sometime.
+
+    User 2: We''re actually playing at the local bar next weekend. You should come check it out!
+
+    User 1: I''ll definitely be there!
+
+    User 2: Great! It''s always nice to meet new people.
+
+    User 1: Me too! I''m excited to make some new friends in Nashville.
+
+    User 2: I''m sure you will. Nashville is a great city with a lot to offer.
+
+    User 1: I''m already starting to see that. It''s so beautiful here.
+
+    User 2: It is! And the people are so friendly.
+
+    User 1: I''ve noticed that. I''m really glad I moved here.
+
+    User 2: You''re welcome to the neighborhood!
+
+    User 1: Thanks! I''m happy to be here.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

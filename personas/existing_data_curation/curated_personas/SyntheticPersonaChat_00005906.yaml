@@ -1,0 +1,68 @@
+id: 00005906
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5906
+data:
+  user 1 personas: 'My favorite activity is fishing.
+
+    My favorite thing to do is float the river.
+
+    I cannot go a single day without eating ice cream.
+
+    My dad was a cop until he was killed.
+
+    I once ran the mile in under 4 minutes.'
+  user 2 personas: 'I like to play video games.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I live alone.
+
+    I am a scientist.
+
+    I play guitar on my free time.'
+  Best Generated Conversation: 'User 1: What do you enjoy doing for fun?
+
+    User 2: I like to play video games, I''m also an amateur chef who cooks 5 different cuisines.
+
+    User 1: Oh that''s cool, what are your favorite cuisines to cook?
+
+    User 2: I love to cook Italian, Mexican, Chinese, Japanese, and Indian food.
+
+    User 1: Wow, that''s a lot of variety! I love Italian food, what''s your favorite dish to make?
+
+    User 2: I love making lasagna, it''s one of my favorite dishes to make.
+
+    User 1: I love lasagna too, it''s one of my favorite comfort foods.
+
+    User 2: Me too, it''s so delicious and easy to make.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I also play guitar on my free time.
+
+    User 1: Oh that''s cool, I play guitar too!
+
+    User 2: Really? What kind of music do you play?
+
+    User 1: I mostly play rock and blues music.
+
+    User 2: That''s awesome, I mostly play rock and country music.
+
+    User 1: Nice, we should jam sometime.
+
+    User 2: That would be cool, I''d love to jam with you.
+
+    User 1: Great, let''s exchange numbers and we can set something up.
+
+    User 2: Sure, here''s my number.
+
+    User 1: Okay, I just sent you a text message.
+
+    User 2: Got it, I''ll text you back later.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

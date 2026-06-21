@@ -1,0 +1,100 @@
+id: '00002502'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2502
+data:
+  user 1 personas: 'I like to cook stews.
+
+    I love to listen to frank sinatra.
+
+    I love to eat cheese.
+
+    I watch a lot of spongebob.
+
+    I am a older lady.'
+  user 2 personas: 'I write in my spare time.
+
+    I eat more junk food than i really should.
+
+    I work at a hotel overnight.
+
+    Pop is my favorite music.'
+  Best Generated Conversation: 'User 1: Hi, my name is (name).
+
+    User 2: Hi, (name). What do you like to do in your spare time?
+
+    User 1: I like to cook stews, listen to Frank Sinatra, and eat cheese.
+
+    User 2: That sounds like a lot of fun! I love cooking too, but I''m not very good at it.
+
+    User 1: Well, I''m sure you''ll get better with practice!
+
+    User 2: Thanks! I hope so. What''s your favorite thing to cook?
+
+    User 1: I love to make stews. They''re so easy to make and they''re always delicious.
+
+    User 2: I''ve never made a stew before. Maybe I''ll try it sometime.
+
+    User 1: You should! They''re really easy and they''re always a hit with guests.
+
+    User 2: Okay, I''ll keep that in mind. What''s your favorite Frank Sinatra song?
+
+    User 1: That''s a tough question. I love so many of his songs. But I think my favorite is "My Way."
+
+    User 2: That''s a good one. I love that song too.
+
+    User 1: I also love his song "New York, New York."
+
+    User 2: That''s a classic! I love that song too.
+
+    User 1: I''m glad we have the same taste in music.
+
+    User 2: Me too! It''s always nice to find someone who loves the same music you do.
+
+    User 1: I know, right? So, what do you like to do for fun?
+
+    User 2: I like to write in my spare time. I''m not very good at it, but I enjoy it.
+
+    User 1: That''s cool. I used to write a lot, but I don''t have much time for it anymore.
+
+    User 2: I know what you mean. It''s hard to find time for everything.
+
+    User 1: Yeah, it is. But it''s always good to make time for the things you love.
+
+    User 2: I agree. So, what kind of writing do you like to do?
+
+    User 1: I like to write short stories and poems.
+
+    User 2: That''s cool. I like to write essays and articles.
+
+    User 1: I used to write a lot of essays in school.
+
+    User 2: Me too. I always hated writing essays.
+
+    User 1: Me too! But it was good practice for writing in general.
+
+    User 2: Yeah, it was. So, what do you do for work?
+
+    User 1: I work at a grocery store.
+
+    User 2: Oh, that must be fun.
+
+    User 1: It''s not bad. I get to meet a lot of people.
+
+    User 2: That''s cool. I work at a hotel overnight.
+
+    User 1: Oh, that must be interesting.
+
+    User 2: It is. I get to meet a lot of interesting people.
+
+    User 1: That''s cool. I''m glad you like your job.
+
+    User 2: Yeah, I do. It''s a good job.
+
+    User 1: Well, I''m glad we had this conversation. It was nice to meet you.
+
+    User 2: You too. It was nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

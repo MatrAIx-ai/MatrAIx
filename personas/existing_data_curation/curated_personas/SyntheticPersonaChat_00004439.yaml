@@ -1,0 +1,64 @@
+id: 00004439
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4439
+data:
+  user 1 personas: 'I m a kindergarten teacher.
+
+    I enjoy organizing my surroundings.
+
+    I love kids.
+
+    When i m stressed , i overeat.
+
+    I have a lot of style.'
+  user 2 personas: 'I work in retail.
+
+    Lady gaga is my current favorite singer.
+
+    I love music.
+
+    I go to at least 10 concerts a year.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m a kindergarten teacher.
+
+    User 2: Hi, I''m [user 2''s name]. I work in retail.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love music! I go to at least 10 concerts a year.
+
+    User 1: That''s awesome! I love music too. My favorite band is Lady Gaga.
+
+    User 2: I love her too! She''s amazing.
+
+    User 1: I''m so glad I found someone who loves music as much as I do.
+
+    User 2: Me too! We should go to a concert together sometime.
+
+    User 1: That would be so much fun! I''ll let you know when I''m free.
+
+    User 2: Great! I''m free most weekends.
+
+    User 1: Perfect!
+
+    User 2: What''s your favorite thing to do when you''re stressed?
+
+    User 1: I usually eat, but I''m trying to cut back on that.
+
+    User 2: I know what you mean. I used to do that too.
+
+    User 1: What do you do now when you''re stressed?
+
+    User 2: I listen to music or I go for a walk.
+
+    User 1: That''s a good idea. I''ll try that next time I''m stressed.
+
+    User 2: I hope it helps!
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

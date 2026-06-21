@@ -1,0 +1,19 @@
+id: '00045576'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45576
+persona_description: A security policy administrator who is responsible for managing and implementing security policies for a company's network. This person is likely to have expertise in network security,
+  authentication, and content filtering. They are familiar with various security zones, including the Internet zone, local intranet zone, local computer zone, no zone, trusted sites zone, and restricted
+  sites zone. They have the ability to assign higher trust levels to content on these zones to ensure the security of the company's network. They are also responsible for mapping URLs of trusted and untrusted
+  Web sites into these zones.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

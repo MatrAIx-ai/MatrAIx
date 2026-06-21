@@ -1,0 +1,64 @@
+id: '00002645'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2645
+data:
+  user 1 personas: 'I was born premature.
+
+    My dad is journalist for the new york times.
+
+    I recently broke my leg.
+
+    I live in texas.
+
+    I have one older sister named mary.'
+  user 2 personas: 'I am an environmental engineer.
+
+    I live in portland , maine.
+
+    I like to take photos.
+
+    I live alone.
+
+    I love to hike.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an environmental engineer.
+
+    User 1: Oh, that''s cool! I''m a journalist for the New York Times.
+
+    User 2: That''s really interesting! What kind of stories do you write?
+
+    User 1: I write about a variety of topics, but I mostly focus on environmental issues.
+
+    User 2: That''s great! I''m glad that there are people like you out there who are working to make the world a better place.
+
+    User 1: Thanks! I''m glad that you''re doing your part too.
+
+    User 2: I''m trying my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to hike, take photos, and explore nature.
+
+    User 1: That sounds like a lot of fun! I love to hike too, but I don''t get to do it as often as I would like.
+
+    User 2: I know what you mean. I''m lucky to live in Portland, Maine, where there are so many beautiful places to hike.
+
+    User 1: I''m jealous! I live in Texas, and there are a lot of good places to hike, but it''s not as easy to get to them.
+
+    User 2: I''m sure you can find some great places to hike in Texas.
+
+    User 1: I''ll have to do some research!
+
+    User 2: You should! And if you''re ever in Portland, Maine, be sure to let me know. I''ll take you on some of my favorite hikes.
+
+    User 1: I will! That would be great. Thanks for the offer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

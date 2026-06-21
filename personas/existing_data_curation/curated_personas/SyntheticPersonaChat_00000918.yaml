@@ -1,0 +1,62 @@
+id: 00000918
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 918
+data:
+  user 1 personas: 'I am an athlete.
+
+    I have 4 daughters.
+
+    I like to go fishing.
+
+    I race cars for a living.'
+  user 2 personas: 'I like to make boats on the weekends.
+
+    I have a dog named bob.
+
+    I am a closet cannibal.
+
+    I enjoy fishing.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make boats on the weekends.
+
+    User 1: That''s cool! I''ve never made a boat before.
+
+    User 2: It''s not too hard, but it can be time consuming.
+
+    User 1: I can imagine. Do you have any pictures of your boats?
+
+    User 2: Sure, I can send you some.
+
+    User 1: That would be great!
+
+    User 2: Here you go.
+
+    User 1: Wow, those are really cool!
+
+    User 2: Thanks! I''m pretty proud of them.
+
+    User 1: I can see why. They look like they would be a lot of fun to sail.
+
+    User 2: They are. I love taking them out on the water.
+
+    User 1: I bet. I can imagine just relaxing on the deck of a boat, fishing and enjoying the scenery.
+
+    User 2: That''s exactly what I do. It''s so peaceful and relaxing.
+
+    User 1: It sounds like you have a great hobby.
+
+    User 2: I do. I''m really glad I started making boats.
+
+    User 1: I''m glad too. It''s a great way to relax and enjoy the outdoors.
+
+    User 2: It is. I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

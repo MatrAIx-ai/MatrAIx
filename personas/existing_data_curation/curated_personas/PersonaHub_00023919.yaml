@@ -1,0 +1,19 @@
+id: 00023919
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23919
+persona_description: A neuroscientist who is conducting a clinical trial to test the safety and effectiveness of a novel procedure to implant artificial brain cells into patients with damaged brain tissue.
+  The procedure involves inserting a probe into the patients' brains and injecting the cells, and the goal is to establish whether the procedure is safe and to determine whether it can make patients better.
+  The research is being conducted at the University of Pittsburgh Medical Center, and the trial is seeking to establish whether the procedure is safe. The procedure is being tested on patients with paralysis
+  in their right arm and leg and loss of most of their ability to speak, and if successful, it may be used to treat other patients with brain disorders such as Parkinson's disease and Alzheimer's.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology/neuroscience
+  general_domain_top01pct: None
+  specific_domain_top01pct: neural engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

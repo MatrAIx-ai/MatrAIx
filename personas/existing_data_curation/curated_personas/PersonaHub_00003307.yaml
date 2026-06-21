@@ -1,0 +1,18 @@
+id: '00003307'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3307
+persona_description: A healthcare professional who is knowledgeable about heat-related illness and the body's response to extreme heat. They are aware of the symptoms of heat-related illness, the importance
+  of proper hydration and the need for adequate cooling mechanisms, and the importance of using common sense during extreme heat. They are likely to have a background in medicine, public health, or environmental
+  science and are trained to provide guidance and advice on how to stay safe and healthy during hot weather.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: heat-related illness
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

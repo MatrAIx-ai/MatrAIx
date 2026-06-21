@@ -1,0 +1,104 @@
+id: 00003081
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3081
+data:
+  user 1 personas: 'I have a small pet cat.
+
+    I live in a small apartment in new york.
+
+    I am twenty one years old.
+
+    I am currently going to school to be an artist.
+
+    My favorite flower is a rose.'
+  user 2 personas: 'I love to surf.
+
+    I live near the ocean.
+
+    I love watching sunsets.
+
+    I hate red meat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to surf.
+
+    User 1: That sounds really fun! I''ve never been surfing before.
+
+    User 2: You should try it sometime! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 1: I might just do that!
+
+    User 2: Where do you live?
+
+    User 1: I live in New York City.
+
+    User 2: Oh, that''s cool! I live near the ocean, so I can surf whenever I want.
+
+    User 1: I''m jealous! I wish I could surf more often.
+
+    User 2: You should come visit sometime! I''ll teach you how to surf.
+
+    User 1: That would be awesome! I''ll have to keep that in mind.
+
+    User 2: Great!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love watching sunsets.
+
+    User 1: That''s cool! I love watching sunsets too.
+
+    User 2: Me too! They''re so beautiful.
+
+    User 1: I know! They''re always so relaxing.
+
+    User 2: Yeah, they''re the perfect way to end a day.
+
+    User 1: I agree.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m currently going to school to be an artist.
+
+    User 2: Oh, that''s cool! What kind of art do you do?
+
+    User 1: I do a lot of painting and drawing.
+
+    User 2: That''s awesome! I love art.
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: So, what''s your favorite flower?
+
+    User 1: My favorite flower is a rose.
+
+    User 2: Roses are beautiful! I love them too.
+
+    User 1: Yeah, they''re so pretty.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to spend time with my cat, watch movies, and read books.
+
+    User 2: That sounds like a lot of fun! I like to spend time with my dog, watch movies, and read books too.
+
+    User 1: That''s great! We have a lot in common.
+
+    User 2: Yeah, it seems like we do.
+
+    User 1: So, what do you think? Would you like to meet up sometime?
+
+    User 2: Sure! I''d love to meet up sometime.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

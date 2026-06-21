@@ -1,0 +1,86 @@
+id: '00006554'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6554
+data:
+  user 1 personas: 'We plan to travel after he retires.
+
+    My husband will retire next year.
+
+    I like to take walks.
+
+    I am a retired school teacher.'
+  user 2 personas: 'I can speak arabic , english , and french.
+
+    I am a barista.
+
+    I play jazz piano in a band.
+
+    My family is from algeria.
+
+    I like to go hiking on the weekends.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. I''m [User 1''s name].
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a barista at a coffee shop.
+
+    User 1: Oh, that sounds fun! I love coffee.
+
+    User 2: Me too! I''m also a jazz pianist in a band.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play the piano.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: Where are you from?
+
+    User 1: I''m from the United States.
+
+    User 2: Oh, cool! I''m from Algeria.
+
+    User 1: That''s cool! I''ve never been to Algeria.
+
+    User 2: You should come visit sometime! It''s a beautiful country.
+
+    User 1: I would love to!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and play piano.
+
+    User 2: Oh, that sounds like a lot of fun! I like to read too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like to read historical fiction and fantasy novels.
+
+    User 1: Oh, me too! I love the Harry Potter series.
+
+    User 2: Me too! That''s one of my favorite series.
+
+    User 1: What are some other things you like to do for fun?
+
+    User 2: I like to go hiking and camping on the weekends.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to go hiking, but I''ve never had the chance.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should come with me sometime.
+
+    User 1: I would love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

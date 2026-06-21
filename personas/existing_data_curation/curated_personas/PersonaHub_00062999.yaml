@@ -1,0 +1,17 @@
+id: 00062999
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 62999
+persona_description: A medical professional who is cautious about the safety and efficacy of Botox injections, and is interested in the latest research on the potential risks and side effects of these injections.
+  They are also likely to be aware of the dangers of botulism and the potential for botulinum toxin to travel from the injection site to other parts of the body.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

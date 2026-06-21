@@ -1,0 +1,72 @@
+id: '00004770'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4770
+data:
+  user 1 personas: 'I want to live at the beach.
+
+    I enjoy talking to strangers.
+
+    I love honey.
+
+    I am good at throwing parties.
+
+    My favorite animal is a monkey.'
+  user 2 personas: 'I am very smart.
+
+    I work as a janitor.
+
+    I love to drink whiskey.
+
+    I wear contacts.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: I''m a janitor. I love to drink whiskey. I wear contacts.
+
+    User 2: That''s cool! I''m a party planner. I love honey and monkeys. I''m very smart.
+
+    User 1: Wow, you seem like a really interesting person!
+
+    User 2: Thanks! I like to think so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the beach, read books, and watch movies.
+
+    User 1: That sounds like fun! I like to go to the beach too. I also like to go hiking and camping.
+
+    User 2: Hiking and camping sounds fun! I''ve never been camping before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem! So, what do you like about being a party planner?
+
+    User 2: I like the creativity and the challenge. I also like the opportunity to make people happy.
+
+    User 1: That''s great! I''m sure you''re a great party planner.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s the biggest party you''ve ever planned?
+
+    User 2: I planned a wedding for 200 people. It was a lot of work, but it was a lot of fun too.
+
+    User 1: Wow, that''s amazing! I can''t imagine planning a wedding for that many people.
+
+    User 2: It was definitely a challenge, but it was also a lot of fun. I''m glad I got to do it.
+
+    User 1: That''s great! So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m still thinking about it.
+
+    User 1: Well, I hope you figure it out.
+
+    User 2: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

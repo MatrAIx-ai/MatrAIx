@@ -1,0 +1,88 @@
+id: '00006741'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6741
+data:
+  user 1 personas: 'I dropped out of college a month ago.
+
+    I live in my foreign car outside los angeles.
+
+    I wear my heart on my sleeve.
+
+    Some call me a hopeless romantic.'
+  user 2 personas: 'Both of my parents are teachers.
+
+    I have three roommates.
+
+    I have an eyebrown piercing.
+
+    I work at a coffee shop.
+
+    My sister and i are in a grunge band.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I work at a coffee shop.
+
+    User 1: Oh, cool. How do you like it?
+
+    User 2: I like it a lot. It''s a fun place to work.
+
+    User 1: That''s great. Do you have any siblings?
+
+    User 2: Yeah, I have a sister.
+
+    User 1: Oh, cool. What''s her name?
+
+    User 2: Her name is [user 2''s sister''s name].
+
+    User 1: Nice. Are you close with her?
+
+    User 2: Yeah, we''re pretty close. We''re in a grunge band together.
+
+    User 1: Oh, that''s cool. What kind of music do you play?
+
+    User 2: We play a mix of punk rock and grunge.
+
+    User 1: Oh, cool. I''ve always liked grunge music.
+
+    User 2: Yeah, it''s a lot of fun to play.
+
+    User 1: That''s great. Do you guys play any shows?
+
+    User 2: Yeah, we play a few shows every month.
+
+    User 1: Oh, cool. Where do you play?
+
+    User 2: We play at a lot of different venues around town.
+
+    User 1: Oh, that''s cool. I''ll have to come see you guys play sometime.
+
+    User 2: Yeah, you should!
+
+    User 1: I will.
+
+    User 2: So, what are you doing later?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go see a movie. Do you want to come with me?
+
+    User 1: Sure, I''d love to.
+
+    User 2: Great! I''m going to see [movie title]. Do you want to see that one?
+
+    User 1: Yeah, that sounds good.
+
+    User 2: Great! I''ll pick you up at [time].
+
+    User 1: Okay, see you then.
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

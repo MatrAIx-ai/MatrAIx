@@ -1,0 +1,78 @@
+id: '00002240'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2240
+data:
+  user 1 personas: 'I have two children.
+
+    One child has autism.
+
+    I work as a teacher and love my job.
+
+    I am a mother.
+
+    I have two dogs who are like my babies.'
+  user 2 personas: 'I like all types of music.
+
+    I like to do crafts.
+
+    I like to draw.
+
+    I am a mother of 5.
+
+    I like to watch movies.'
+  Best Generated Conversation: 'User 1: Hi! How are you?
+
+    User 2: I''m doing well! Thanks for asking. How about you?
+
+    User 1: I''m doing well too, thanks!
+
+    User 2: That''s great to hear!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to do crafts, draw, and watch movies.
+
+    User 1: That''s cool! I like to do crafts too. What kind of crafts do you like to do?
+
+    User 2: I like to do all sorts of crafts, but my favorites are knitting, crocheting, and painting.
+
+    User 1: Oh, I love knitting and crocheting! I''ve never tried painting, though.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher. I love my job!
+
+    User 2: That''s great! I''ve always wanted to be a teacher.
+
+    User 1: It''s a lot of work, but it''s very rewarding.
+
+    User 2: I can imagine.
+
+    User 1: So, how many children do you have?
+
+    User 2: I have five children.
+
+    User 1: Wow! That must keep you busy!
+
+    User 2: It does! But it''s also a lot of fun.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I have two dogs who are like my babies. I also love to read and go for walks.
+
+    User 2: That''s great! I love dogs!
+
+    User 1: Me too! They''re the best.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

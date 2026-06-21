@@ -1,0 +1,90 @@
+id: '00003253'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3253
+data:
+  user 1 personas: 'My grandpa was in wwii.
+
+    I do not know how to swim.
+
+    I own a chevy tahoe.
+
+    My favorite food is steak.'
+  user 2 personas: 'I love dogs.
+
+    I like to drink at bars with friends.
+
+    I have a sleeve of tattoos.
+
+    I have 4 dogs and i spend all my time with them.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to drink at bars with friends and I love dogs.
+
+    User 1: Oh, that''s cool. I don''t know how to swim, but I love steak.
+
+    User 2: That''s okay, I love steak too. I have four dogs and I spend all my time with them.
+
+    User 1: Wow, that''s a lot of dogs!
+
+    User 2: Yeah, I love them all. They''re my best friends.
+
+    User 1: I can understand that. My grandpa was in WWII, and he always had a dog by his side.
+
+    User 2: That''s really cool. Dogs are great companions.
+
+    User 1: Yeah, they really are. So, what''s your favorite bar?
+
+    User 2: My favorite bar is called The Dog House. It''s a dog-friendly bar with a great atmosphere.
+
+    User 1: Oh, that sounds like a fun place. I''ll have to check it out sometime.
+
+    User 2: You should! It''s a great place to meet people and have a good time.
+
+    User 1: Thanks for the recommendation. I''m always looking for new places to go.
+
+    User 2: No problem. So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool. I''m a nurse.
+
+    User 1: Oh, that''s really interesting.
+
+    User 2: Yeah, it''s a lot of work, but it''s also really rewarding.
+
+    User 1: I can imagine. So, what do you like to do outside of work?
+
+    User 2: I like to go to the beach, hang out with my dogs, and watch Netflix.
+
+    User 1: Oh, that sounds like a lot of fun. I like to go to the beach too, but I don''t have any dogs.
+
+    User 2: You should get one! They''re the best pets.
+
+    User 1: I know, I''ve been thinking about it.
+
+    User 2: Well, if you ever do, I''ll be happy to help you find one.
+
+    User 1: Thanks, I appreciate it.
+
+    User 2: No problem. So, what are you up to this weekend?
+
+    User 1: Not much, I''m just going to hang out with my friends.
+
+    User 2: Oh, that sounds fun. What are you guys going to do?
+
+    User 1: We''re not sure yet, but we''re probably going to go out to dinner or something.
+
+    User 2: Oh, that sounds like a great time. Well, I have to go now, but it was nice talking to you.
+
+    User 1: You too. Have a nice weekend!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00002587
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2587
+data:
+  user 1 personas: 'I love to go running.
+
+    My favorite store is american eagle.
+
+    I do not like vegetables.
+
+    My favorite truck is a chevy duramax.'
+  user 2 personas: 'I help around with bookkeeping and tours.
+
+    Sometimes i volunteer at an urban farm.
+
+    I decided to become vegan a year ago.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to volunteer at an urban farm.
+
+    User 1: That sounds cool! I love nature.
+
+    User 2: Me too! I decided to become vegan a year ago.
+
+    User 1: That''s great! I''m not a vegan, but I love vegetables.
+
+    User 2: That''s cool! I love cooking vegan food.
+
+    User 1: Me too! I''m a big fan of American Eagle.
+
+    User 2: I''ve never been to American Eagle.
+
+    User 1: Oh, you should check it out! It''s a great store for clothes.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what do you do for a living?
+
+    User 2: I help around with bookkeeping and tours.
+
+    User 1: That sounds like a cool job.
+
+    User 2: It is! I love meeting new people.
+
+    User 1: Me too! I''m always looking for new friends.
+
+    User 2: Me too! It''s great to meet you.
+
+    User 1: You too! I hope we can hang out sometime soon.
+
+    User 2: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

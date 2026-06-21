@@ -1,0 +1,78 @@
+id: 00008813
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8813
+data:
+  user 1 personas: 'I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I enjoy watching videos on youtube.
+
+    I use third party programs to read portable documents instead of adobe.
+
+    I have a small beagle dog who i call droopy.
+
+    I enjoy eating pumpkins.'
+  user 2 personas: 'I have 3 cats.
+
+    I am a secretary.
+
+    I enjoy swimming.
+
+    My favorite color is orange.
+
+    I like tacos.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Nice to meet you, Sarah. I''m (user 1).
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, read, and watch YouTube videos.
+
+    User 1: I love swimming too! What''s your favorite thing about swimming?
+
+    User 2: I love the feeling of being in the water and the freedom of movement.
+
+    User 1: Me too! I also love the exercise.
+
+    User 2: What''s your favorite YouTube channel?
+
+    User 1: I like to watch Vlogbrothers and Smarter Every Day.
+
+    User 2: I''ve never heard of either of those.
+
+    User 1: You should check them out! They''re both really good.
+
+    User 2: I will.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to read and watch movies.
+
+    User 1: What''s your favorite book?
+
+    User 2: I don''t really have a favorite book, but I really enjoyed The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a really funny book.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t really have a favorite movie, but I really enjoyed The Shawshank Redemption.
+
+    User 1: I''ve heard good things about that movie too. I''ll have to check it out.
+
+    User 2: You should! It''s a really good movie.
+
+    User 1: Well, it was nice talking to you, Sarah.
+
+    User 2: It was nice talking to you too, (user 1).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

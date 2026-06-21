@@ -1,0 +1,88 @@
+id: 00000549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 549
+data:
+  user 1 personas: 'I own 10 cats.
+
+    I do not eat asparagus.
+
+    I work at home on my computer.
+
+    My favorite jello is the blue one.'
+  user 2 personas: 'I live in colorado.
+
+    I have an mba degree.
+
+    I own my home.
+
+    My car is blue.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go hiking, and play with my dog.
+
+    User 1: Nice! I like to read and go hiking too. What books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m really into historical fiction right now.
+
+    User 1: Oh, that''s cool! I''ve been reading a lot of historical fiction lately too.
+
+    User 2: Have you read any good books lately?
+
+    User 1: I just finished reading "The Nightingale" by Kristin Hannah. It was really good!
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work at home on my computer.
+
+    User 2: Oh, what do you do?
+
+    User 1: I''m a web designer.
+
+    User 2: That''s cool! I''ve always been interested in web design.
+
+    User 1: It''s a lot of fun! I get to work on all kinds of different projects.
+
+    User 2: That sounds really cool.
+
+    User 1: So, what do you do for work?
+
+    User 2: I have an MBA and I work in finance.
+
+    User 1: Oh, that''s interesting! I don''t know much about finance.
+
+    User 2: It''s not as exciting as web design, but it''s a good job.
+
+    User 1: I''m sure it is!
+
+    User 2: So, what else do you do for fun?
+
+    User 1: I like to go to concerts, play with my cats, and watch movies.
+
+    User 2: I like to go to concerts too! What kind of music do you like?
+
+    User 1: I like all kinds of music, but I''m really into indie rock right now.
+
+    User 2: Oh, that''s cool! I''m more into country music.
+
+    User 1: I like country music too!
+
+    User 2: It seems like we have a lot in common.
+
+    User 1: I think so too!
+
+    User 2: Maybe we should hang out sometime.
+
+    User 1: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

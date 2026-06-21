@@ -1,0 +1,88 @@
+id: '00003260'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3260
+data:
+  user 1 personas: 'My mother is a teacher.
+
+    I am one of four siblings.
+
+    I live in an apartment.
+
+    I like to draw.
+
+    My favorite color is blue.'
+  user 2 personas: 'I draw all of my friends as my little pony characters.
+
+    I enjoy all things my little pony.
+
+    I like being weird.
+
+    I like to watch anime.
+
+    I like cats.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to draw, watch anime, and play video games.
+
+    User 1: Oh, cool! I like to draw too. What kind of things do you draw?
+
+    User 2: I draw all sorts of things, but I mostly draw my friends as My Little Pony characters.
+
+    User 1: That''s so cool! I''ve never seen anything like that before.
+
+    User 2: Thanks! I love drawing My Little Pony characters. They''re so cute and fun to draw.
+
+    User 1: I can see why you like them. They are pretty cute.
+
+    User 2: Do you watch anime?
+
+    User 1: Yeah, I do. I''ve watched a lot of different animes over the years.
+
+    User 2: What''s your favorite anime?
+
+    User 1: My favorite anime is Naruto. It''s a really long anime, but it''s so good.
+
+    User 2: I''ve heard good things about Naruto. I''ve never seen it, but I''ve been meaning to check it out.
+
+    User 1: You should! It''s a really good anime.
+
+    User 2: I''ll add it to my list.
+
+    User 1: You won''t be disappointed.
+
+    User 2: I hope not!
+
+    User 1: So, what do you like to do besides draw, watch anime, and play video games?
+
+    User 2: I like to go to the movies, read books, and hang out with my friends.
+
+    User 1: Oh, cool! I like going to the movies too. What''s your favorite movie?
+
+    User 2: My favorite movie is The Lord of the Rings: The Return of the King.
+
+    User 1: I love that movie! It''s so good.
+
+    User 2: It''s my favorite movie of all time.
+
+    User 1: Me too!
+
+    User 2: So, what''s your favorite book?
+
+    User 1: My favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 2: I''ve heard good things about that book. I''ve been meaning to check it out.
+
+    User 1: You should! It''s really funny.
+
+    User 2: I''ll add it to my list.
+
+    User 1: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00005626'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5626
+data:
+  user 1 personas: 'I want to be in a band someday.
+
+    I have a wife and two kids.
+
+    My hobbies are sleeping and playing the guitar.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I am a factory worker.'
+  user 2 personas: 'I am a paramedic.
+
+    I have three sisters.
+
+    I am studying to become a nurse.
+
+    My favorite band is the beatles.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a paramedic.
+
+    User 1: That''s a lot of responsibility. Do you like it?
+
+    User 2: I do, it''s very rewarding.
+
+    User 1: What''s the most interesting thing you''ve ever seen?
+
+    User 2: I once responded to a call where someone was having a heart attack. I was able to save their life.
+
+    User 1: That''s amazing! I''m sure you made a big difference in that person''s life.
+
+    User 2: I hope so.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to play music, read, and spend time with my family.
+
+    User 1: What kind of music do you play?
+
+    User 2: I play the guitar. I''ve always loved music, and I''ve been playing the guitar since I was a teenager.
+
+    User 1: That''s great! I play the piano.
+
+    User 2: Nice! We should jam together sometime.
+
+    User 1: That would be fun!
+
+    User 2: What are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school to become a teacher.
+
+    User 2: That''s a great idea! I''m sure you''d be a great teacher.
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite band?
+
+    User 1: I like the Beatles.
+
+    User 2: Me too! They''re my favorite band of all time.
+
+    User 1: They''re so good! I love all their songs.
+
+    User 2: Me too! I''m glad we have similar taste in music.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00006242'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6242
+data:
+  user 1 personas: 'I have won tap dance competitions.
+
+    I m really short.
+
+    I love to bake cakes.
+
+    I have a twin brother.'
+  user 2 personas: 'I am a casual dresser.
+
+    My car needs some repairs.
+
+    I am a waitress at a local restaurant.
+
+    My favorite band is nirvana.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]!
+
+    User 2: Hi, I''m [name]! What do you like to do for fun?
+
+    User 1: I love to tap dance, bake cakes, and spend time with my twin brother.
+
+    User 2: That sounds like a lot of fun! I love to bake too, but I''m not very good at it.
+
+    User 1: Oh, you should come over and try some of my cakes! I''m sure you''ll like them.
+
+    User 2: Thanks, I''d love to! What''s your favorite kind of cake to bake?
+
+    User 1: I love making chocolate cakes with raspberry filling.
+
+    User 2: That sounds delicious! I''m not a huge fan of chocolate, but I love raspberries.
+
+    User 1: Well, I have a lot of other kinds of cakes too, so you''re sure to find something you like.
+
+    User 2: Great! I''ll definitely come over and try some of your baking.
+
+    User 1: Awesome! I''ll be sure to make some extra for you.
+
+    User 2: Thanks! I really appreciate it.
+
+    User 1: No problem! So, what do you do for fun?
+
+    User 2: I''m a waitress at a local restaurant, and I love my job. I also love to go to concerts. My favorite band is Nirvana.
+
+    User 1: I''ve heard of Nirvana, but I''ve never heard their music.
+
+    User 2: You should check them out! They''re really good.
+
+    User 1: I will! I''m always looking for new music to listen to.
+
+    User 2: Well, I''m sure you''ll like Nirvana. They''re one of the best bands of all time.
+
+    User 1: I''m excited to check them out!
+
+    User 2: Great! I''m sure you''ll enjoy them.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

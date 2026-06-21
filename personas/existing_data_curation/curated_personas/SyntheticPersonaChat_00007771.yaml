@@ -1,0 +1,60 @@
+id: '00007771'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7771
+data:
+  user 1 personas: 'People say i talk when i m not supposed to.
+
+    My dream is to be a veterinarian.
+
+    I hate that my mom made me get braces.
+
+    My three ring binder has my drawings of ponies all over it.
+
+    I could eat less.'
+  user 2 personas: 'I am a soccer player.
+
+    I joined a new team last month.
+
+    My number is 42.
+
+    Nike cleats are my favorite.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I play soccer.
+
+    User 1: Oh, cool! I love soccer too! What team do you play for?
+
+    User 2: I just joined a new team last month. It''s called the [team name].
+
+    User 1: Oh, that''s great! What''s your number?
+
+    User 2: My number is 42.
+
+    User 1: That''s a good number! I usually play as a defender, but I''ve been trying to get better at scoring goals.
+
+    User 2: I''m a midfielder, but I''m not very good at scoring goals. I''m more of a playmaker.
+
+    User 1: That''s cool! I''m not very good at dribbling, so I''m usually the one passing the ball to the other players.
+
+    User 2: I''m not very good at dribbling either. I''m more of a physical player.
+
+    User 1: That''s cool! I like to play a physical game too. I think it''s important to be able to defend your teammates and keep the ball from the other team.
+
+    User 2: I agree! I think it''s also important to be able to pass the ball and create scoring opportunities.
+
+    User 1: I agree! I think it''s important to be able to do both.
+
+    User 2: I think we would make a good team!
+
+    User 1: I think so too! Maybe we should play a game together sometime.
+
+    User 2: That would be fun! I''ll give you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00003573'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3573
+data:
+  user 1 personas: 'I also love orange juice.
+
+    I am 10 years old.
+
+    I love ham and cheese sandwiches.
+
+    My name is arnold.
+
+    I like to watch tv.'
+  user 2 personas: 'I recently broke up with my girlfriend.
+
+    I just finished training as a security guard.
+
+    I m a 30 year old male.
+
+    I work nights now and like my job.
+
+    I have two dogs.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m doing okay, thanks for asking.
+
+    User 1: I''m doing well, too. What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and read.
+
+    User 1: I like to do those things too! I also like to play basketball.
+
+    User 2: That''s cool. Do you play on a team?
+
+    User 1: No, I just play with my friends.
+
+    User 2: That''s still fun.
+
+    User 1: Yeah, it is. What''s your favorite TV show?
+
+    User 2: I like to watch a lot of different shows, but my favorite is probably The Office.
+
+    User 1: I''ve heard good things about that show. I''ve never seen it, though.
+
+    User 2: You should check it out. It''s really funny.
+
+    User 1: I will. What''s your favorite video game?
+
+    User 2: I like to play a lot of different video games, but my favorite is probably Skyrim.
+
+    User 1: I''ve heard good things about that game, too. I''ve never played it, though.
+
+    User 2: You should check it out. It''s a really big game with a lot to do.
+
+    User 1: I will. What''s your favorite book?
+
+    User 2: I like to read a lot of different books, but my favorite is probably The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: I''ve heard good things about that book, too. I''ve never read it, though.
+
+    User 2: You should check it out. It''s a really funny book.
+
+    User 1: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

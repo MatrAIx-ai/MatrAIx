@@ -1,0 +1,56 @@
+id: 00004781
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4781
+data:
+  user 1 personas: 'I will one day own a ferret.
+
+    I am allergic to peanuts.
+
+    My mom raised me by herself and taught me to play baseball.
+
+    I still love to line dry my clothes.'
+  user 2 personas: 'I work at a grocery store.
+
+    She likes to grow plants in her garden.
+
+    My mother is a social worker for the school system.
+
+    I go visit them sometimes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to grow plants in my garden.
+
+    User 1: That''s really cool. I''m not very good at gardening, but I love looking at flowers.
+
+    User 2: Me too! I love the colors and smells.
+
+    User 1: What kind of plants do you grow?
+
+    User 2: I grow a lot of different kinds of flowers, vegetables, and fruits.
+
+    User 1: That''s so cool! I wish I had a garden.
+
+    User 2: It''s a lot of work, but it''s very rewarding.
+
+    User 1: I can imagine. I love eating fresh vegetables.
+
+    User 2: Me too! I love everything about gardening, from planting the seeds to harvesting the fruits of my labor.
+
+    User 1: That''s so great. I''m glad you enjoy gardening.
+
+    User 2: Thanks! I''m glad I met you.
+
+    User 1: Me too! It''s been nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

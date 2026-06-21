@@ -1,0 +1,66 @@
+id: '00005702'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5702
+data:
+  user 1 personas: 'My older sister plays clarinet.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    I play the violin.
+
+    I have a pomeranian.'
+  user 2 personas: 'I love to travel.
+
+    I grew up by the ocean.
+
+    I like to eat pizza.
+
+    Dogs are my favorite animal.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel, I grew up by the ocean, I love pizza and dogs are my favorite animal.
+
+    User 1: That''s cool. I play the violin, I have entered into many violin competitions before and have placed in a few of them, I have a pomeranian and I like to read.
+
+    User 2: That''s cool. Do you travel much with your pomeranian?
+
+    User 1: Yes, we like to go camping and hiking.
+
+    User 2: That''s awesome! I love camping and hiking. Where do you like to go camping and hiking?
+
+    User 1: I like to go camping in the mountains and hiking in the woods.
+
+    User 2: That''s awesome. I love the mountains and woods.
+
+    User 1: What''s your favorite pizza topping?
+
+    User 2: I like pepperoni, mushrooms, olives, and onions.
+
+    User 1: That''s a good combination. I like pepperoni, mushrooms, and onions.
+
+    User 2: I like to go to different pizza places and try different pizzas.
+
+    User 1: That''s a good idea. I like to try new things too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I like to read books about history, science, and philosophy.
+
+    User 2: I like to read books about history and science too.
+
+    User 1: We should read some books together sometime.
+
+    User 2: That would be fun.
+
+    User 1: I''ll bring the pizza.
+
+    User 2: And I''ll bring the dogs.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00001911
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1911
+data:
+  user 1 personas: 'I have two nephews.
+
+    I grew up on a farm.
+
+    I am a veterinarian.
+
+    Running is my way to relax.'
+  user 2 personas: 'I like to watch tv.
+
+    I am 10 years old.
+
+    My name is arnold.
+
+    I also love orange juice.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: My name is [user 1] and I''m a veterinarian. I grew up on a farm and I have two nephews.
+
+    User 2: That''s cool! I''m Arnold and I''m 10 years old. I love to watch TV and I love orange juice.
+
+    User 1: It''s nice to meet you, Arnold! What''s your favorite TV show?
+
+    User 2: I like to watch cartoons, especially Spongebob Squarepants.
+
+    User 1: Spongebob is a classic! I used to love watching that show when I was a kid.
+
+    User 2: I like it because it''s funny and it makes me laugh.
+
+    User 1: I agree, it''s a very funny show.
+
+    User 2: What''s your favorite kind of animal?
+
+    User 1: I love dogs! They''re so cute and cuddly.
+
+    User 2: I like dogs too! I have a dog named Charlie.
+
+    User 1: What kind of dog is Charlie?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Golden retrievers are so sweet! I love them.
+
+    User 2: Yeah, they''re the best.
+
+    User 1: Well, it was nice talking to you, Arnold. I hope you have a great day!
+
+    User 2: You too, [user 1]!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

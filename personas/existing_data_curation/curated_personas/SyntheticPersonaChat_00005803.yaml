@@ -1,0 +1,68 @@
+id: 00005803
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5803
+data:
+  user 1 personas: 'I like movies based on comedies.
+
+    I work many hours rehearsing for my show.
+
+    I am a ballet dancer.
+
+    My parents passed away in a car accident.'
+  user 2 personas: 'My favorite musician is ed sheeran.
+
+    I am very health conscious , and i watch what i eat.
+
+    I love romantic comedies.
+
+    I like to write poetry in my spare time.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write poetry in my spare time.
+
+    User 1: That''s cool! I love romantic comedies.
+
+    User 2: Me too! What''s your favorite romantic comedy?
+
+    User 1: I love Love Actually. It''s such a feel-good movie.
+
+    User 2: I love that movie too! It''s so funny and heartwarming.
+
+    User 1: Yeah, it''s definitely one of my favorites. What''s your favorite musician?
+
+    User 2: My favorite musician is Ed Sheeran. I love his music.
+
+    User 1: I love Ed Sheeran too! He''s so talented.
+
+    User 2: I know, right? He''s one of the best songwriters out there.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a health conscious person, and I watch what I eat.
+
+    User 1: That''s great! I''m trying to be more health conscious myself.
+
+    User 2: Good for you! It''s important to take care of your health.
+
+    User 1: Yeah, I know. I''ve been meaning to start exercising more.
+
+    User 2: That''s a great idea! Exercise is a great way to stay healthy.
+
+    User 1: Yeah, I know. I''ve been meaning to start exercising more.
+
+    User 2: That''s a great idea! Exercise is a great way to stay healthy.
+
+    User 1: Thanks for the advice. I think I''m going to start working out tomorrow.
+
+    User 2: That''s awesome! I''m sure you''ll love it.
+
+    User 1: Thanks, I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

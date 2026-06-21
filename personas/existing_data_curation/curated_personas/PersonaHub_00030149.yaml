@@ -1,0 +1,18 @@
+id: 00030149
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30149
+persona_description: A scientist who studies the physics of fluids and foam, specifically the effects of foam on sloshing motion and its potential applications in industry. They have a background in engineering
+  and are particularly interested in the safety and transport of hazardous liquids. They have conducted research on the dampening effect of foam on sloshing motion and have found that five layers of foam
+  are sufficient for significant dampening.
+expertise:
+  general_domain_top1pct: Physics
+  specific_domain_top1pct: Fluid Dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,94 @@
+id: '00005063'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5063
+data:
+  user 1 personas: 'I play soccer professionally.
+
+    I have a wife and a 4 year old son.
+
+    I went to stanford.
+
+    My favorite food is pizza.
+
+    My idol is thierry henry.'
+  user 2 personas: 'I love candy.
+
+    Skateboarding is a hobby of mine.
+
+    I have a crush on my co worker.
+
+    I go to college part time.
+
+    I almost always wear a t shirt and jeans.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+
+    User 2: Hi, I''m [User 2''s name].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a student at [university name]. I''m studying [major].
+
+
+    User 1: Oh, cool. I played soccer professionally until a few years ago.
+
+
+    User 2: That''s awesome! I''m a big fan of soccer.
+
+
+    User 1: Thanks! My favorite player is Thierry Henry.
+
+
+    User 2: He''s a great player! I''m a fan of [player name].
+
+
+    User 1: Nice! I''ve played against him a few times.
+
+
+    User 2: That must have been awesome!
+
+
+    User 1: It was! He''s a really tough player.
+
+
+    User 2: I''m sure he is.
+
+
+    User 1: So, what else do you like to do for fun?
+
+
+    User 2: I love to skateboard. I''m actually really good at it.
+
+
+    User 1: That''s cool! I used to skateboard when I was younger, but I never got very good at it.
+
+
+    User 2: It''s not too hard to learn. You just need to keep practicing.
+
+
+    User 1: I might give it a try again sometime.
+
+
+    User 2: You should! It''s a lot of fun.
+
+
+    User 1: I''m sure it is.
+
+
+    User 2: So, what are your plans for the future?
+
+
+    User 1: I''m not sure yet. I''m still trying to figure that out.
+
+
+    User 2: Well, I hope you find something you love to do.
+
+
+    User 1: Thanks, me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

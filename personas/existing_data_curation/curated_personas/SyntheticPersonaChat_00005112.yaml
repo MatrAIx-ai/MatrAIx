@@ -1,0 +1,80 @@
+id: '00005112'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5112
+data:
+  user 1 personas: 'My dad worked for home depot.
+
+    I am a teacher.
+
+    I like to work puzzles.
+
+    I love country music.'
+  user 2 personas: 'I own my own business.
+
+    My favorite food is sushi.
+
+    I have a timeshare in mexico.
+
+    My favorite tv show is friends.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I own my own business.
+
+    User 1: What kind of business?
+
+    User 2: I own a sushi restaurant.
+
+    User 1: Oh, that sounds delicious! I love sushi.
+
+    User 2: Me too! I eat it all the time.
+
+    User 1: Where is your restaurant located?
+
+    User 2: It''s in Chicago.
+
+    User 1: I''ve never been to Chicago, but I''ve heard it''s a great city.
+
+    User 2: It is! I love living there.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the beach, I like to go out to eat, I like to go shopping, and I like to watch my favorite TV show, Friends.
+
+    User 1: Friends is a great show! I love it too.
+
+    User 2: I''m so glad I met someone who loves Friends!
+
+    User 1: Me too!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to work puzzles, I like to go to concerts, I like to go to the movies, and I like to go camping.
+
+    User 2: Those all sound like fun activities.
+
+    User 1: Yeah, they are.
+
+    User 2: What''s your favorite kind of puzzle?
+
+    User 1: I like jigsaw puzzles.
+
+    User 2: Me too! I love putting them together.
+
+    User 1: Me too!
+
+    User 2: So, are you from Chicago?
+
+    User 1: No, I''m from Texas.
+
+    User 2: Oh, that''s cool! I''ve never been to Texas.
+
+    User 1: It''s a great state! I love living there.
+
+    User 2: I''m sure you do!
+
+    User 1: Yeah, I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

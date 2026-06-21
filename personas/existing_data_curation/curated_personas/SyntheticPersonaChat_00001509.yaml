@@ -1,0 +1,74 @@
+id: 00001509
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1509
+data:
+  user 1 personas: 'I am a house wife.
+
+    I am on a diet.
+
+    I am thirty two years old.
+
+    I have been married eight years.
+
+    I can t drive.'
+  user 2 personas: 'I make my own soap.
+
+    I make my own compost.
+
+    I am a fruitarian.
+
+    I have my own greenhouse.
+
+    I like to garden.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to garden, make my own soap, and compost.
+
+    User 1: That''s cool! I''ve always wanted to try gardening, but I don''t have a lot of time.
+
+    User 2: It''s not as time consuming as you might think. You can start with a small garden and just grow a few herbs or vegetables.
+
+    User 1: That''s a good idea. I might give it a try.
+
+    User 2: I also like to make my own soap. It''s not as hard as you might think, and it''s a lot cheaper than buying it from the store.
+
+    User 1: That sounds like fun! I''ve never made soap before.
+
+    User 2: You should try it! It''s a great way to use up all of the leftover oils and butters from your kitchen.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: You''re welcome!
+
+    User 1: What else do you do?
+
+    User 2: I''m a fruitarian, so I eat a lot of fruits and vegetables. I also like to make my own compost.
+
+    User 1: That''s interesting! I''ve never heard of a fruitarian before.
+
+    User 2: It''s a diet that focuses on eating fruits and vegetables. It''s good for your health and the environment.
+
+    User 1: I''m glad you''re doing something that''s good for you and the environment.
+
+    User 2: Thank you! I''m glad you''re interested in it.
+
+    User 1: I am. I might look into it more.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: I''m sure I would.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too! Have a nice day.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

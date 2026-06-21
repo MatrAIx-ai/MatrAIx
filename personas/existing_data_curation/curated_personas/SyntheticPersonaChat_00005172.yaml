@@ -1,0 +1,70 @@
+id: '00005172'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5172
+data:
+  user 1 personas: 'My feet are size six women s.
+
+    I love the band red hot chili peppers.
+
+    I play bass.
+
+    I have a french bulldog.
+
+    I want to be a journalist but instead i sell washers at sears.'
+  user 2 personas: 'My hobbies include pillaging and fine dining.
+
+    I am a viking.
+
+    Its cold where i live.
+
+    I have a big beard.
+
+    I like to go fishing on my viking boat.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I like to pillage and fine dine.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a viking.
+
+    User 1: Really? That''s awesome! Where do you live?
+
+    User 2: It''s cold where I live.
+
+    User 1: I can imagine! What''s your favorite thing to do in your free time?
+
+    User 2: I like to go fishing on my viking boat.
+
+    User 1: That sounds like a lot of fun! Do you ever go on any long journeys?
+
+    User 2: I sometimes go on pillaging expeditions.
+
+    User 1: That sounds dangerous! Have you ever been in any trouble?
+
+    User 2: Not yet!
+
+    User 1: Well, I hope you stay safe!
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to eat?
+
+    User 2: I like to eat fine food.
+
+    User 1: What''s your favorite food?
+
+    User 2: I like to eat seafood.
+
+    User 1: Me too! I love seafood.
+
+    User 2: We should go on a seafood date sometime.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: Great! I''ll bring my viking boat.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

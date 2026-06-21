@@ -1,0 +1,88 @@
+id: '00003605'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3605
+data:
+  user 1 personas: 'I am married with 5 kids.
+
+    I like to visit national parks.
+
+    I am nurse.
+
+    I play the violin.'
+  user 2 personas: 'I am a roofer.
+
+    I played football in high school.
+
+    My favorite food is steak cooked well done.
+
+    I always have a beer after work.
+
+    I drive a lifted chevy truck.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, cool. I''ve always wondered what that job is like.
+
+    User 2: It''s pretty tough, but it''s also really rewarding. I get to work outside all day and I get to see my work come to life.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I''m really glad I chose this career.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I like seeing the finished product. I like knowing that I helped to make someone''s home look better.
+
+    User 1: That''s a great feeling.
+
+    User 2: It is. I''m really proud of my work.
+
+    User 1: What''s your least favorite part of the job?
+
+    User 2: I don''t like the heights. I''m always a little scared when I''m up on the roof.
+
+    User 1: I can imagine.
+
+    User 2: But it''s worth it to see the finished product.
+
+    User 1: So, what''s your next project?
+
+    User 2: I''m not sure yet. I''m waiting for my boss to give me the next job.
+
+    User 1: Well, I''m sure it will be great.
+
+    User 2: Thanks. I''m confident that it will be.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to play video games, watch sports, and go to the gym.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I try to stay active as much as possible.
+
+    User 1: That''s great. I like to stay active too.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the beach or go hiking.
+
+    User 1: That sounds like a great idea.
+
+    User 2: Thanks. I''m sure it will be.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: It was nice talking to you too.
+
+    User 1: Have a great weekend!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

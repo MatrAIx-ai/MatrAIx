@@ -1,0 +1,70 @@
+id: 00005486
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5486
+data:
+  user 1 personas: 'I am a fan of system of a down.
+
+    I am trying to play in a local band.
+
+    I learned piano at age 6.
+
+    I am a vegan.'
+  user 2 personas: 'My mother is a teacher in the city.
+
+    I play the bass guitar.
+
+    I like to go out fishing.
+
+    I work out daily.
+
+    My favorite food is cheeseburgers.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play bass guitar, go fishing, and work out.
+
+    User 1: That''s cool! I like to play the piano and I''m trying to get into a local band.
+
+    User 2: That''s awesome! What kind of music do you like to play?
+
+    User 1: I like to play a lot of different kinds of music, but my favorite is rock.
+
+    User 2: That''s cool! I like to play a lot of different kinds of music too, but my favorite is country.
+
+    User 1: That''s cool! I''ve never really been into country music, but I''ve heard some good songs.
+
+    User 2: Yeah, there''s a lot of great country music out there.
+
+    User 1: What''s your favorite song?
+
+    User 2: My favorite song is "Wagon Wheel" by Old Crow Medicine Show.
+
+    User 1: Oh, I love that song! I''ve been listening to it a lot lately.
+
+    User 2: That''s awesome!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a teacher in the city.
+
+    User 1: That''s cool! I''ve always thought about being a teacher.
+
+    User 2: It''s a great job! I love working with kids.
+
+    User 1: I can imagine. What''s your favorite thing about being a teacher?
+
+    User 2: My favorite thing is seeing the excitement on my students'' faces when they learn something new.
+
+    User 1: That''s so cool! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: I''m sure you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

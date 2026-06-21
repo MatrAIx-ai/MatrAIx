@@ -1,0 +1,18 @@
+id: 00041359
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41359
+persona_description: A person with expertise in NLP and disaster response, particularly in the use of pre-trained language models for disaster-related text analysis. This person has experience with fine-tuning
+  language models for classification tasks and is familiar with the AWS LSTM language models developed by Jeremy and Stephen Merity. This person is skilled in using NLP techniques to detect disaster topics
+  in tweets and is interested in using this knowledge to improve disaster response efforts.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Natural Language Processing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,66 @@
+id: 00008528
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8528
+data:
+  user 1 personas: 'I teach elementary school children at a private school.
+
+    My friends tell me that i m a neurotic hypochondriac.
+
+    Ocd rules my life , and i have a hard time relinquishing control.
+
+    I am a seventh day adventist.'
+  user 2 personas: 'I am from france.
+
+    I am a vegan.
+
+    My favorite food is tacos.
+
+    I am studying literature.
+
+    I like to draw.'
+  Best Generated Conversation: 'User 1: I''m glad to meet you, [username].
+
+    User 2: You too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a student.
+
+    User 1: Oh, cool. What are you studying?
+
+    User 2: I''m studying literature.
+
+    User 1: That''s interesting. What are you interested in about literature?
+
+    User 2: I''m interested in a lot of things about literature, but I''m particularly interested in how it can be used to explore social issues.
+
+    User 1: That''s a great interest. What are some of the social issues you''re interested in?
+
+    User 2: I''m interested in gender equality, race relations, and environmental issues.
+
+    User 1: Those are all important issues. I''m glad you''re passionate about them.
+
+    User 2: Thanks. I think it''s important to be passionate about something.
+
+    User 1: I agree. So, what do you like to do for fun?
+
+    User 2: I like to draw, read, and go to the movies.
+
+    User 1: Oh, that''s cool. I like to draw too.
+
+    User 2: Really? What kind of things do you like to draw?
+
+    User 1: I like to draw portraits, landscapes, and animals.
+
+    User 2: That''s cool. I like to draw animals too.
+
+    User 1: We should share our drawings with each other sometime.
+
+    User 2: That would be fun.
+
+    User 1: Great. I''ll send you my email address.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

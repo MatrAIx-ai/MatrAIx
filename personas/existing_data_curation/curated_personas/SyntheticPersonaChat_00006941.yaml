@@ -1,0 +1,64 @@
+id: 00006941
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6941
+data:
+  user 1 personas: 'I can t hold down a job for very long.
+
+    If i m not drinking , i m thinking , which makes me uncomfortable.
+
+    I am constantly drinking.
+
+    My family loves me , but keeps their distance.
+
+    I blame myself for all of my problems.'
+  user 2 personas: 'I like to make cakes.
+
+    I am a vegetarian.
+
+    My favorite music is country.
+
+    I like the internet.
+
+    I have a new job.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I just got a new job as a baker!
+
+    User 1: That''s awesome! I''ve always wanted to be a baker.
+
+    User 2: It''s a lot of work, but it''s really fun.
+
+    User 1: I bet it is! What''s your favorite thing about baking?
+
+    User 2: I love creating new recipes and seeing people enjoy my creations.
+
+    User 1: That''s great! I''m sure you''re very talented.
+
+    User 2: Thank you! I''m trying to learn more about vegan baking.
+
+    User 1: Oh, that''s interesting! I''ve never tried vegan baking before.
+
+    User 2: It''s a lot of fun! There are so many different ways to make vegan desserts.
+
+    User 1: I''m sure it is. I''d love to try some of your recipes sometime.
+
+    User 2: Sure! I''d be happy to share them with you.
+
+    User 1: Thank you! I''m looking forward to trying them.
+
+    User 2: No problem! I''m glad I could chat with you.
+
+    User 1: Me too! It was nice talking to you.
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

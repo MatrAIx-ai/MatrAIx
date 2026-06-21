@@ -1,0 +1,70 @@
+id: '00004446'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4446
+data:
+  user 1 personas: 'I make robots for a living.
+
+    I do not have a good social life.
+
+    I am a night owl.
+
+    I eat mainly chinese food.'
+  user 2 personas: 'I love fast food.
+
+    I love to clean.
+
+    I watch a lot of movies.
+
+    I do not have much energy.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, clean, and eat fast food.
+
+    User 1: That''s cool. I like to make robots, eat Chinese food, and stay up late.
+
+    User 2: I''ve never had Chinese food. What''s it like?
+
+    User 1: It''s delicious! It''s a lot of different types of food, but it''s all very flavorful.
+
+    User 2: I''ll have to try it sometime. What''s your favorite movie?
+
+    User 1: I have a lot of favorites, but I think my favorite is The Matrix.
+
+    User 2: I''ve never seen that one. What''s it about?
+
+    User 1: It''s about a computer simulation that''s been created to keep people docile and unaware of the real world.
+
+    User 2: That sounds really cool. I''ll have to check it out.
+
+    User 1: You should. It''s a really good movie.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a robotics engineer. I design and build robots for a living.
+
+    User 2: That''s so cool! I''ve always been fascinated by robots.
+
+    User 1: It''s a lot of fun. I get to work on a lot of different projects and I get to see my robots in action.
+
+    User 2: That sounds amazing. I wish I could be a robotics engineer.
+
+    User 1: It''s not as hard as you might think. You just have to be good at math and science.
+
+    User 2: I''m not very good at math and science.
+
+    User 1: You could always take some classes to learn more.
+
+    User 2: I might do that. Thanks for the suggestion.
+
+    User 1: No problem. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

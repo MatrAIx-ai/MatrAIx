@@ -1,0 +1,68 @@
+id: 00002181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2181
+data:
+  user 1 personas: 'I grew up in nevada.
+
+    I am an orphan.
+
+    I now live in new mexico.
+
+    I like dogs.
+
+    I used to fly planes for a living.'
+  user 2 personas: 'I could not live without my dog , bart.
+
+    I will graduate from college in two years.
+
+    I am very popular and have a lot of friends.
+
+    My parents are divorced.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m from Nevada. What about you?
+
+    User 2: I grew up in Iowa, but I''m in college in New Mexico now.
+
+    User 1: That''s cool! I used to fly planes for a living, but I don''t do that anymore.
+
+    User 2: Oh, that''s interesting! What do you do now?
+
+    User 1: I''m a dog trainer. I love dogs, and I think they''re the best way to make new friends.
+
+    User 2: That''s a great job! I love dogs too, but I couldn''t live without my dog Bart.
+
+    User 1: Oh, I''m sure Bart is a great dog! What breed is he?
+
+    User 2: He''s a golden retriever. He''s the sweetest dog I know.
+
+    User 1: Golden retrievers are so friendly! I''ve always wanted one.
+
+    User 2: You should get one! They''re the best dogs.
+
+    User 1: Maybe I will. Thanks for the advice!
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I like to go hiking, camping, and fishing. I also like to play video games and read books.
+
+    User 2: Those sound like fun hobbies! I like to go hiking and camping too. I also like to play video games, but I don''t read much.
+
+    User 1: That''s okay! I like to read because it helps me learn new things.
+
+    User 2: I can understand that. I guess I just don''t have the attention span for reading.
+
+    User 1: That''s okay! We all have different interests.
+
+    User 2: Yeah, that''s true.
+
+    User 1: Well, it was nice talking to you! I hope you have a good day.
+
+    User 2: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

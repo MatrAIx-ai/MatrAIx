@@ -1,0 +1,18 @@
+id: '00054707'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54707
+persona_description: A forensic examiner who is interested in creating disk images to ensure the integrity of the evidence and to reproduce forensic test results with an exact reproduction of analysis methods
+  on the original evidence. They are also interested in capturing information invisible to the operating system in use, such as hidden partitions and ext3 partitions on a Windows machine. They prefer using
+  popular software like Norton Ghost to create disk images and may not use the default settings on the software.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Digital Forensics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Disk Imaging and Forensic Analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

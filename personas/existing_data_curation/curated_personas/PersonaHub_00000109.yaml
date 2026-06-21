@@ -1,0 +1,19 @@
+id: 00000109
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 109
+persona_description: A medical professional with expertise in the treatment and management of alcoholism. This person is likely to be a psychiatrist, psychologist, or addiction specialist who has conducted
+  extensive research on the pharmacological treatments for alcoholism. They are familiar with the various medications and psychotherapeutic interventions used in the treatment of alcohol dependence and
+  have evaluated their efficacy in reducing the number of drinks consumed, the number of days on which a drink was consumed, the resumption of drinking and episodes of heavy drinking and craving. They are
+  also likely to be aware of the limitations of these treatments and the need for further research to optimize the use of pharmacologic agents for treatment of alcoholism.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: addiction medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: alcoholism treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

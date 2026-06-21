@@ -1,0 +1,66 @@
+id: 00005058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5058
+data:
+  user 1 personas: 'I never learned how to drive.
+
+    I am a deaf man.
+
+    I sometimes scratch my nose for fun.
+
+    I love to read books.
+
+    My favorite number is 7.'
+  user 2 personas: 'I like to sew.
+
+    I am not thin.
+
+    My hair is brown.
+
+    I am short.'
+  Best Generated Conversation: 'User 1: Hi, I''m [USER 1].
+
+    User 2: Hi, I''m [USER 2].
+
+    User 1: I''m a deaf man and I love to read books.
+
+    User 2: I like to sew.
+
+    User 1: That''s cool. Do you sew for yourself or others?
+
+    User 2: I mostly sew for myself, but I''ve also sewn gifts for friends and family.
+
+    User 1: That''s nice. I''m not very good at sewing, but I enjoy reading books. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m mostly interested in historical fiction and fantasy.
+
+    User 1: I like those genres too. I''ve been reading a lot of fantasy lately.
+
+    User 2: What are you reading right now?
+
+    User 1: I''m reading the Mistborn series by Brandon Sanderson.
+
+    User 2: I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: I will.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go hiking, biking, and camping.
+
+    User 1: That sounds fun. I like to do those things too.
+
+    User 2: We should go hiking together sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great. We can exchange contact information and plan a hike.
+
+    User 1: Okay. I''ll send you my contact information.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

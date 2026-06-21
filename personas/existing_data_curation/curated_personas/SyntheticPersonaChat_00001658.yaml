@@ -1,0 +1,82 @@
+id: 00001658
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1658
+data:
+  user 1 personas: 'I like the guitar.
+
+    I am a vegan.
+
+    I like to skateboard.
+
+    I like to go for bike rides.'
+  user 2 personas: 'My wife is a college professor.
+
+    I have one little girl.
+
+    I work as a trauma surgeon.
+
+    My mother was a concert pianist.'
+  Best Generated Conversation: 'User 1: Hi, I''m Jake.
+
+    User 2: Hi Jake, I''m Sarah.
+
+    User 1: Nice to meet you, Sarah.
+
+    User 2: Nice to meet you too, Jake. What do you do for fun?
+
+    User 1: I like to play guitar, skateboard, and go for bike rides.
+
+    User 2: That''s cool. I like to play the piano.
+
+    User 1: Oh, really? That''s awesome. What do you like to play?
+
+    User 2: I like to play classical music. My mom was a concert pianist, so I grew up listening to a lot of classical music.
+
+    User 1: That''s really cool. I''ve always wanted to learn how to play the piano.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! I''m sure you''d be great at it.
+
+    User 1: Thanks, Sarah. I appreciate it.
+
+    User 2: No problem, Jake.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a trauma surgeon.
+
+    User 1: Oh, wow! That''s really cool.
+
+    User 2: It can be, but it''s also very challenging.
+
+    User 1: I can imagine. I''m sure it''s a lot of pressure.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool. What kind of software do you work on?
+
+    User 1: I work on a lot of different types of software, but my main focus is on web development.
+
+    User 2: Oh, that''s cool. I''ve always wanted to learn how to code.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: You should! I''m sure you''d be great at it.
+
+    User 2: Thanks, Jake. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,61 @@
+id: '00004375'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4375
+data:
+  user 1 personas: 'I like things in organized.
+
+    I am a stay at home mom.
+
+    I enjoy cooking but not baking.
+
+    I enjoy a good run.
+
+    One of my favorite shows is face off on syfy.'
+  user 2 personas: 'My mother stayed at home all day to raise me and my siblings.
+
+    I had to drop out of college to help with my grandparents.
+
+    My father used to be an insurance salesman.
+
+    I graduated valedictorian of my high school class.
+
+    I can t stand salads.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I''m a stay at home mom, and I enjoy cooking but not baking. I also like a good run, and one of my favorite shows is Face Off on Syfy.
+
+    User 2: My mom stayed at home all day to raise me and my siblings. I had to drop out of college to help with my grandparents. My father used to be an insurance salesman, and I graduated valedictorian
+    of my high school class. I can''t stand salads.
+
+    User 1: That''s interesting. I''m glad you''re doing well despite having to drop out of college. I''m sure your parents are very proud of you.
+
+    User 2: Thanks. I''m doing okay. I''m working as a waitress now, and I''m looking into going back to school eventually.
+
+    User 1: That''s great. I''m sure you''ll do great.
+
+    User 2: Thanks. I appreciate it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch movies, read, and go out with friends.
+
+    User 1: Me too. I love movies, and I''m always reading something. I don''t go out with friends as much as I used to, but I still like to do it when I can.
+
+    User 2: I know what you mean. It''s hard to find time to go out with friends when you have kids.
+
+    User 1: Yeah, it is. But it''s important to make time for yourself, even if it''s just a little bit.
+
+    User 2: You''re right. I should try to go out with my friends more often.
+
+    User 1: You should! It''ll be good for you.
+
+    User 2: Okay. I''ll try.
+
+    User 1: Great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

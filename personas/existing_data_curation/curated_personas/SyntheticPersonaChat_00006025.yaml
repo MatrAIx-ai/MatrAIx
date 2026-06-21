@@ -1,0 +1,74 @@
+id: '00006025'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6025
+data:
+  user 1 personas: 'I have freckles all over my face.
+
+    I work in construction.
+
+    I love to read romance novels.
+
+    I was in the army.'
+  user 2 personas: 'I drive a mercedes.
+
+    I am getting married in six months.
+
+    I am a babysitter.
+
+    I have a sweet tooth.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, I''m [name].
+
+    User 1: I see you drive a Mercedes. Nice!
+
+    User 2: Thanks! I''m getting married in six months.
+
+    User 1: Congratulations! I''m sure it will be a beautiful wedding.
+
+    User 2: Thanks! I hope so. I''m a little nervous, but I''m also excited.
+
+    User 1: That''s understandable. Weddings can be stressful, but they''re also a lot of fun.
+
+    User 2: Yeah, I''m sure it will be a great day.
+
+    User 1: So what do you do for a living?
+
+    User 2: I''m a babysitter.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a babysitter.
+
+    User 2: It''s a lot of fun. I get to play with kids all day long.
+
+    User 1: That sounds like it would be a blast.
+
+    User 2: It is! I love working with kids.
+
+    User 1: I bet. So, what''s your favorite thing about your job?
+
+    User 2: My favorite thing is getting to make a difference in kids'' lives.
+
+    User 1: That''s really sweet. I''m sure you''re a great babysitter.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: My favorite book is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: Oh, that''s a classic. I''ve always wanted to read it.
+
+    User 2: You should! It''s a great book.
+
+    User 1: I''ll check it out.
+
+    User 2: You won''t be disappointed.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

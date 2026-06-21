@@ -1,0 +1,18 @@
+id: '00045220'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45220
+persona_description: A clinician who specializes in the assessment and diagnosis of dementia, particularly the Mini Mental State Examination (MMSE) test. They are skilled in using the MMSE test to diagnose
+  dementia, assess its progression and severity, and evaluate changes in a person who has already been diagnosed with dementia. They have a deep understanding of the assessment process and tests used for
+  dementia assessment, and are capable of considering MMSE score alongside other measures of a person's mental state and clinical judgement.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neuropsychiatry
+  general_domain_top01pct: None
+  specific_domain_top01pct: dementia assessment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

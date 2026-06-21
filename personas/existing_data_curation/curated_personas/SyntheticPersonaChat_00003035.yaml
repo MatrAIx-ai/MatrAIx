@@ -1,0 +1,60 @@
+id: '00003035'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3035
+data:
+  user 1 personas: 'I collect vintage cars.
+
+    I ride horses.
+
+    I have many homes.
+
+    I try to limit how much meat i eat for health reasons.'
+  user 2 personas: 'I love to ride my bike.
+
+    I like going to the beach.
+
+    I have a dog named george.
+
+    I used to work for a cable company.
+
+    I like my job.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Nice to meet you, [name]. I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to ride my bike, go to the beach, and spend time with my dog, George.
+
+    User 1: I used to ride my bike a lot when I was younger, but I haven''t had a chance to do it in a while. I''d love to get back into it.
+
+    User 2: You should! It''s a great way to get exercise and see some beautiful scenery.
+
+    User 1: I know, right? I used to love biking through the woods and along the beach.
+
+    User 2: Yeah, it''s the best. I also love going to the beach. It''s so relaxing to just sit on the sand and listen to the waves.
+
+    User 1: I love the beach too. I love swimming, sunbathing, and building sandcastles.
+
+    User 2: Me too! I love swimming and playing in the water. And I''m always up for a good sandcastle contest.
+
+    User 1: Me too! I''m sure we could make some amazing sandcastles together.
+
+    User 2: Yeah, I''m sure we could. We should go to the beach sometime and have a sandcastle building contest.
+
+    User 1: That would be fun! I''d love to see who can build the best sandcastle.
+
+    User 2: Me too! I''m sure it would be a lot of fun. We could also bring George and have a picnic.
+
+    User 1: That would be great! George would love to play at the beach. And I love picnics.
+
+    User 2: Yeah, me too. We could have a whole day of fun at the beach.
+
+    User 1: That sounds like a perfect day.
+
+    User 2: Yeah, it does. We should definitely do it sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

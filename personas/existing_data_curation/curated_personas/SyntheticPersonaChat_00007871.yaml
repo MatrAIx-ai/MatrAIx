@@ -1,0 +1,92 @@
+id: 00007871
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7871
+data:
+  user 1 personas: 'I am a police officer in a suburb of detroit.
+
+    I love to go horseback riding.
+
+    My wife and i like to go scuba diving.
+
+    I grew up on a farm in kansas.'
+  user 2 personas: 'I was born in san francisco.
+
+    I am traveling to paris this year for my vacation.
+
+    I work in the pharmaceutical industry.
+
+    I love dogs , especially labradors.
+
+    I have one sister.'
+  Best Generated Conversation: 'User 1: Hello! I''m [username].
+
+    User 2: Hi [username]. I''m [username].
+
+    User 1: Nice to meet you! What do you do for a living?
+
+    User 2: I work in the pharmaceutical industry.
+
+    User 1: Oh, that''s interesting. What do you like about it?
+
+    User 2: I like the challenge of developing new drugs and helping people to get better.
+
+    User 1: That''s great. I''m a police officer in a suburb of Detroit.
+
+    User 2: Oh, that''s cool! I''ve always been interested in law enforcement.
+
+    User 1: It''s a lot of fun, but it can be dangerous.
+
+    User 2: I''m sure it can be. What''s your favorite part of the job?
+
+    User 1: I like helping people and keeping my community safe.
+
+    User 2: That''s great. I''m sure you''re a great asset to your community.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, where are you from?
+
+    User 1: I grew up on a farm in Kansas.
+
+    User 2: Oh, that''s cool. I was born in San Francisco.
+
+    User 1: Oh, really? I''ve always wanted to visit San Francisco.
+
+    User 2: It''s a great city! You should definitely visit sometime.
+
+    User 1: I will.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to go horseback riding and scuba diving.
+
+    User 2: Oh, that''s cool. I love dogs, especially Labradors.
+
+    User 1: Me too! I have a dog named Buddy.
+
+    User 2: Oh, that''s nice. I have a sister.
+
+    User 1: Oh, cool. I''m an only child.
+
+    User 2: That''s okay. I''m actually an only child too.
+
+    User 1: Oh, that''s interesting.
+
+    User 2: I like it. It''s nice to be the only one getting all the attention.
+
+    User 1: Me too.
+
+    User 2: So, what are you doing for your vacation this year?
+
+    User 1: I''m going to Paris.
+
+    User 2: Oh, that''s cool! I''ve always wanted to go to Paris.
+
+    User 1: Me too! I''m excited to see all the sights.
+
+    User 2: I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

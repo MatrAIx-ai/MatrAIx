@@ -1,0 +1,74 @@
+id: 00008004
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8004
+data:
+  user 1 personas: 'I have traveled to both ireland and australia.
+
+    My father was born in australia.
+
+    My mother was born in ireland.
+
+    My father was an author.
+
+    I like to travel.'
+  user 2 personas: 'I love hockey.
+
+    I ve flown out of the country.
+
+    My bestfriend is from out of town.
+
+    I studied business as my major.
+
+    I ve a younger sibling.'
+  Best Generated Conversation: 'User 1: Have you been to Ireland?
+
+    User 2: No, not yet. I''m hoping to go one day.
+
+    User 1: It''s a beautiful country. I visited there a few years ago and really enjoyed it.
+
+    User 2: What did you like most about it?
+
+    User 1: I loved the people. They were so friendly and welcoming.
+
+    User 2: I''ve heard that the people in Ireland are very nice.
+
+    User 1: They are. I also loved the scenery. It''s so beautiful.
+
+    User 2: I''ve seen pictures of it and it looks amazing.
+
+    User 1: It is. I''m sure you''ll love it when you go.
+
+    User 2: I hope so. It''s definitely on my list of places to visit.
+
+    User 1: What about Australia? Have you been there?
+
+    User 2: Yes, I have. I went there a few years ago on vacation.
+
+    User 1: What did you like most about it?
+
+    User 2: I loved the beaches. They were some of the most beautiful beaches I''ve ever seen.
+
+    User 1: I''ve heard that the beaches in Australia are amazing.
+
+    User 2: They are. I also loved the wildlife. I saw kangaroos, koalas, and dingoes.
+
+    User 1: I''ve always wanted to see a kangaroo in person.
+
+    User 2: They''re really cool. I also loved the food. I had a lot of amazing seafood while I was there.
+
+    User 1: I love seafood. I''m sure I would have loved the food in Australia.
+
+    User 2: You definitely would have. It''s one of the best parts of the country.
+
+    User 1: Well, it sounds like you had a great time in Australia.
+
+    User 2: I did. It was an amazing experience.
+
+    User 1: I''m glad to hear that. I hope you get to go back to Ireland someday.
+
+    User 2: Thanks. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

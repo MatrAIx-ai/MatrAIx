@@ -1,0 +1,58 @@
+id: '00001550'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1550
+data:
+  user 1 personas: 'I am from georgia.
+
+    I can play the violin.
+
+    I love chocolate.
+
+    I want to have two kids.
+
+    I cannot sing very well.'
+  user 2 personas: 'Formal situations make me uncomfortable.
+
+    I have over 4000 friends on facebook.
+
+    I live alone.
+
+    I enjoy hitchhiking.
+
+    I have not spoken to my family in years.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Georgia!
+
+    User 2: Hello! I''m from California.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, camping, and traveling.
+
+    User 1: That sounds fun! I like to play the violin, and I love chocolate.
+
+    User 2: I don''t really play any instruments, but I do love chocolate.
+
+    User 1: What''s your favorite thing about chocolate?
+
+    User 2: I love the way it tastes, and I love how it makes me feel.
+
+    User 1: Me too! I think chocolate is the best thing ever.
+
+    User 2: I agree! What''s your favorite kind of chocolate?
+
+    User 1: I like dark chocolate the best.
+
+    User 2: Me too! I like the way it''s rich and flavorful.
+
+    User 1: Me too! I love the way it melts in your mouth.
+
+    User 2: Me too! I love chocolate so much.
+
+    User 1: Me too! I think we''d be good friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

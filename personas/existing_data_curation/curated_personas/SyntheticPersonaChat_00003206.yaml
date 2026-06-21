@@ -1,0 +1,60 @@
+id: '00003206'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3206
+data:
+  user 1 personas: 'I play the bass guitar.
+
+    My mother is a teacher in the city.
+
+    I work out daily.
+
+    My favorite food is cheeseburgers.
+
+    I like to go out fishing.'
+  user 2 personas: 'I am a professional gamer.
+
+    I love to play league of legends.
+
+    I occasionally go for walks down by the park.
+
+    I am currently single but i am ready to mingle.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I''m a professional gamer. I love playing League of Legends.
+
+    User 1: Oh, that''s cool! I used to play League a lot, but I haven''t played in a while.
+
+    User 2: You should start playing again! It''s a lot of fun.
+
+    User 1: I might have to. I miss it.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to play the bass guitar. I also like to go fishing and work out.
+
+    User 2: Oh, that''s cool! I like to go for walks in the park and I love dogs.
+
+    User 1: I love dogs too! I have a dog named Buddy.
+
+    User 2: Aw, that''s cute! I have a dog named Max.
+
+    User 1: I''m sure Max is a good boy.
+
+    User 2: He is! He''s the best.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: Yeah, we do! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

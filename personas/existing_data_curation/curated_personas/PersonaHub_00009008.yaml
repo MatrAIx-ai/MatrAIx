@@ -1,0 +1,18 @@
+id: 00009008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9008
+persona_description: A scientist or researcher in the field of hemoglobin research, particularly interested in the molecular alterations and structural changes that occur in hemoglobin molecules. This persona
+  may be studying the genetic basis of hemoglobinopathies and the molecular mechanisms behind their pathogenesis. They may also be interested in the development of new diagnostic tests and therapies for
+  hemoglobin disorders.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: molecular biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: hemoglobinopathies
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

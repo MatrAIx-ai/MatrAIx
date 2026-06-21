@@ -1,0 +1,78 @@
+id: '00003667'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3667
+data:
+  user 1 personas: 'I have a consulting firm.
+
+    I give out sports information.
+
+    My clients are gamblers.
+
+    I am a small business owner.'
+  user 2 personas: 'I once rescued a baby on a highway.
+
+    I don t really like vegetables or fruit but i pretend.
+
+    I am not very good at playing basketball.
+
+    My family owns a dairy farm.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work on my family''s dairy farm.
+
+    User 1: Oh, that''s cool. I''ve always wanted to try farming.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I bet. What''s the best part about farming?
+
+    User 2: I love working outside and being around animals.
+
+    User 1: Me too! That sounds like a great job.
+
+    User 2: It is. I love it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play basketball, go hiking, and watch movies.
+
+    User 1: Basketball is fun! I''m not very good at it, though.
+
+    User 2: Me neither, but it''s still a lot of fun.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t know, I have a lot of favorites. But one of my favorites is "The Shawshank Redemption."
+
+    User 1: That''s a great movie! I love it too.
+
+    User 2: Me too!
+
+    User 1: So, what are you doing in town?
+
+    User 2: I''m here for a conference.
+
+    User 1: Oh, that''s cool. What kind of conference?
+
+    User 2: It''s a dairy farming conference.
+
+    User 1: Oh, that''s interesting. I''m sure you''ll learn a lot.
+
+    User 2: I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00008567
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8567
+data:
+  user 1 personas: 'I am going to start school at the university of kentucky.
+
+    I have 2 brothers.
+
+    I have been in band all four years of high school.
+
+    I am a senior in high school.'
+  user 2 personas: 'I have an internship at a computer company.
+
+    My mom is a lawyer.
+
+    I have 5 children.
+
+    I am a student.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to go hiking and camping.
+
+    User 1: I love hiking! I''ve been in band all four years of high school, so I''m not very athletic, but I still love to get out there and enjoy nature.
+
+    User 2: That''s awesome! I''m not very athletic either, but I love the outdoors.
+
+    User 1: So, what''s your favorite thing about hiking?
+
+    User 2: I love being able to get away from everything and just enjoy the peace and quiet.
+
+    User 1: That''s so true. I love being able to clear my head and just relax.
+
+    User 2: And I love seeing all the beautiful scenery.
+
+    User 1: Me too! I love getting up to the top of a mountain and looking out over the view.
+
+    User 2: I love that too! It''s so amazing to see how vast the world is.
+
+    User 1: So, where''s your favorite place to hike?
+
+    User 2: I really love hiking in the mountains. I live in California, so I''m lucky to have so many beautiful mountains to choose from.
+
+    User 1: That''s awesome! I''m from Kentucky, so I''m not too far from the mountains either.
+
+    User 2: I''m sure Kentucky has some beautiful mountains as well.
+
+    User 1: It does! I love hiking in the Appalachian Mountains.
+
+    User 2: I''ve heard good things about the Appalachian Mountains. I''ve always wanted to go hiking there.
+
+    User 1: You should! It''s really beautiful.
+
+    User 2: I will! I''m definitely going to put it on my bucket list.
+
+    User 1: Good! You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

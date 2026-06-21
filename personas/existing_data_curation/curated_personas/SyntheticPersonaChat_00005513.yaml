@@ -1,0 +1,58 @@
+id: '00005513'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5513
+data:
+  user 1 personas: 'I am very polite and courteous.
+
+    I look forward to eating at restaurants.
+
+    I work 40 hours a week.
+
+    I try to do my job as best as i can.
+
+    I work in a bank.'
+  user 2 personas: 'There i m a general of an orcish army.
+
+    I miss my dad.
+
+    I larp on the weekends in the forest.
+
+    In reality i m 32 and live at home with my mother.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I like to LARP in the forest on the weekends.
+
+    User 1: That''s cool! I''ve never heard of that before.
+
+    User 2: It''s a live-action role-playing game. We dress up as characters and act out a story.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! It''s a great way to meet new people and have some fun.
+
+    User 1: Do you have a character that you play?
+
+    User 2: I play a general of an orcish army.
+
+    User 1: That sounds awesome! I''m sure you''re very good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: What do you like about playing LARP?
+
+    User 2: I love the community aspect of it. It''s a great way to meet new people and make friends.
+
+    User 2: I also love the creative aspect of it. We get to come up with our own characters and stories.
+
+    User 1: That sounds like a lot of fun. I wish I could try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I will! Thanks for telling me about it.
+
+    User 2: No problem! I''m always happy to talk about LARP.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

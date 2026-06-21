@@ -1,0 +1,70 @@
+id: '00003354'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3354
+data:
+  user 1 personas: 'I enjoy classical music.
+
+    My favorite auto is a bentley.
+
+    I love to vacation in paris.
+
+    I am six feet tall.
+
+    I like to go to the opera.'
+  user 2 personas: 'I drive a truck for a living.
+
+    I exercise 4 times a week.
+
+    I recently bought a camper.
+
+    My favorite sport is football.
+
+    I am former military.'
+  Best Generated Conversation: 'User 1: Hi! My name is Sam.
+
+    User 2: Hello! My name is John.
+
+    User 1: It''s nice to meet you, John.
+
+    User 2: Nice to meet you too, Sam.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy working out, playing football, and spending time with my family.
+
+    User 1: That sounds like a lot of fun! I enjoy classical music, traveling, and going to the opera.
+
+    User 2: I''ve never been to the opera. What''s it like?
+
+    User 1: It''s a beautiful experience. The music is incredible, and the stories are always so moving.
+
+    User 2: It sounds like something I would really enjoy. Maybe I''ll check it out sometime.
+
+    User 1: I highly recommend it!
+
+    User 2: Thanks for the suggestion.
+
+    User 1: No problem. What do you do for a living?
+
+    User 2: I''m a truck driver. I really enjoy it.
+
+    User 1: That must be a lot of fun. I''ve always thought it would be cool to drive a truck.
+
+    User 2: It is! It''s a great way to see the country.
+
+    User 1: I''m sure it is. Where have you been to on your travels?
+
+    User 2: I''ve been to all over the country. I''ve even been to Canada a few times.
+
+    User 1: That''s awesome! I''ve always wanted to go to Canada.
+
+    User 2: You should definitely go sometime. It''s a beautiful country.
+
+    User 1: Thanks for the recommendation. I will definitely look into it.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

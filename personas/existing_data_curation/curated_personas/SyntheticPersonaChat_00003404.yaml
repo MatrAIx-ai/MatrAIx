@@ -1,0 +1,72 @@
+id: '00003404'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3404
+data:
+  user 1 personas: 'I like collecting rocks.
+
+    I like collectible dragon ball z figures.
+
+    I love the smell of beans.
+
+    I love zumba.
+
+    I love huge paintings.'
+  user 2 personas: 'I recently moved to florida.
+
+    I am a huge fan of jason mraz.
+
+    Twilight is my favorite book series.
+
+    I only surf when the tide is low.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What are you interested in?
+
+    User 2: I like to surf.
+
+    User 1: Me too! I''ve been surfing for about 10 years.
+
+    User 2: Really? That''s awesome! What''s your favorite spot to surf?
+
+    User 1: I like to surf at the beach.
+
+    User 2: Me too! I like to surf at the beach when the tide is low.
+
+    User 1: I like to surf at the beach when the tide is high.
+
+    User 2: Why do you like to surf at the beach when the tide is high?
+
+    User 1: Because I like the waves to be bigger.
+
+    User 2: I see. I like to surf at the beach when the tide is low because I like the waves to be smaller.
+
+    User 1: That makes sense.
+
+    User 2: What''s your favorite type of rock?
+
+    User 1: I like rocks that are smooth and polished.
+
+    User 2: I like rocks that are jagged and sharp.
+
+    User 1: Why do you like rocks that are jagged and sharp?
+
+    User 2: Because I like the way they look.
+
+    User 1: I see. I like rocks that are smooth and polished because they feel good in my hands.
+
+    User 2: I see. What''s your favorite book series?
+
+    User 1: My favorite book series is Harry Potter.
+
+    User 2: Me too! I love Harry Potter! What''s your favorite book in the series?
+
+    User 1: My favorite book in the series is Harry Potter and the Sorcerer''s Stone.
+
+    User 2: Me too! That''s my favorite book in the series too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

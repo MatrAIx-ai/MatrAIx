@@ -1,0 +1,66 @@
+id: 00008115
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8115
+data:
+  user 1 personas: 'My mother was a famous ballet dancer in london.
+
+    I will be moving to san diego in two months.
+
+    I work at a gas station as a cashier.
+
+    I am twenty six years old this may.'
+  user 2 personas: 'My three ring binder has my drawings of ponies all over it.
+
+    My dream is to be a veterinarian.
+
+    I hate that my mom made me get braces.
+
+    I could eat less.'
+  Best Generated Conversation: 'User 1: Hi there, I''m (user 1''s name). What''s your name?
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you, (user 2''s name).
+
+    User 2: Nice to meet you too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to draw, I have my drawings of ponies all over my three ring binder.
+
+    User 1: That''s cool, I''ve always wanted to be able to draw well.
+
+    User 2: It''s not that hard, just takes practice.
+
+    User 1: I guess so. What else do you like to do?
+
+    User 2: I want to be a veterinarian when I grow up, but my mom made me get braces so I could eat less.
+
+    User 1: That''s too bad, but I''m sure you''ll be a great veterinarian when you grow up.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from California, but I''m moving to San Diego in two months.
+
+    User 1: Oh wow, that''s a big move. Why are you moving?
+
+    User 2: My mom got a new job there, so we''re all moving.
+
+    User 1: That''s exciting. I''m sure you''ll like it in San Diego.
+
+    User 2: I hope so.
+
+    User 1: So, what are you looking forward to most about moving to San Diego?
+
+    User 2: I''m looking forward to going to the beach and swimming in the ocean.
+
+    User 1: That sounds like fun. I''m sure you''ll have a great time in San Diego.
+
+    User 2: Thanks, I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

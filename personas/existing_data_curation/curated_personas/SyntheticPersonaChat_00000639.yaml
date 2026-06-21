@@ -1,0 +1,104 @@
+id: 00000639
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 639
+data:
+  user 1 personas: 'I hate carrots.
+
+    I love bicycling.
+
+    I wear contacts.
+
+    I am very athletic.
+
+    I have brown hair.'
+  user 2 personas: 'Someday i would like a truck.
+
+    I like to vote.
+
+    I do not like working long hours.
+
+    I work at a hospital.
+
+    I like toyota cars.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username].
+
+    User 2: Hi, my name is [username].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to vote, work at a hospital, and drive a Toyota car.
+
+    User 1: That''s cool. I like to go bicycling, I hate carrots, and I have brown hair.
+
+    User 2: I''ve never been bicycling before, but I''ve heard it''s a lot of fun. I don''t like carrots either.
+
+    User 1: What''s your favorite part about working at a hospital?
+
+    User 2: I like helping people, and I like the fast-paced environment.
+
+    User 1: That''s good. I''m glad you like your job.
+
+    User 2: Thanks. What do you like about bicycling?
+
+    User 1: I like the exercise, and I like being outside.
+
+    User 2: That''s cool. I could see myself trying bicycling sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: Cool.
+
+    User 2: So, what do you like to do when you''re not bicycling?
+
+    User 1: I like to read, go to concerts, and hang out with friends.
+
+    User 2: That''s cool. I like to read and go to concerts too.
+
+    User 1: What''s your favorite book?
+
+    User 2: I don''t really have a favorite book, but I like to read a lot of different genres.
+
+    User 1: That''s cool. I like to read a lot of different genres too.
+
+    User 2: I think it''s important to keep an open mind about books.
+
+    User 1: I agree. I think it''s good to try new things.
+
+    User 2: I think so too.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading a book called "The Martian".
+
+    User 1: I''ve heard good things about that book.
+
+    User 2: It''s a really good book.
+
+    User 1: I might have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Cool.
+
+    User 2: So, what do you like to do when you''re not bicycling, reading, or going to concerts?
+
+    User 1: I like to hang out with friends, play video games, and watch movies.
+
+    User 2: That''s cool. I like to do all of those things too.
+
+    User 1: I think it''s good to have a variety of interests.
+
+    User 2: I agree. I think it''s important to keep yourself entertained.
+
+    User 1: I agree.
+
+    User 2: I''m glad we have so much in common.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

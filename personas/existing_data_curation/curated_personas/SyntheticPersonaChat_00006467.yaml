@@ -1,0 +1,76 @@
+id: '00006467'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6467
+data:
+  user 1 personas: 'I ran for political office in 2004.
+
+    I thought of joining the military when i was younger.
+
+    I was a mechanic for 6 years.
+
+    I build my own computers.
+
+    I collect bugs in jars.'
+  user 2 personas: 'I am from mexico.
+
+    I like to go on walks.
+
+    I have 2 cats.
+
+    I like to bake.
+
+    I used to be a chef , but i m a teacher now.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Mexico.
+
+    User 1: Oh, that''s cool! I''ve never been to Mexico.
+
+    User 2: You should come visit sometime! It''s a beautiful country.
+
+    User 1: I would love to! What are some of your favorite things to do in Mexico?
+
+    User 2: I love to go on walks, explore new places, and try new food.
+
+    User 1: That sounds like a lot of fun! I love to go on walks too. What are some of your favorite places to walk in Mexico?
+
+    User 2: I love to walk in the city, especially in the historic center. There are so many beautiful buildings and things to see.
+
+    User 1: That sounds like a great place to walk! I would love to see the historic center of Mexico.
+
+    User 2: You should! It''s really beautiful.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s nice! What do you teach?
+
+    User 2: I teach English.
+
+    User 1: That''s a great subject to teach! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: So, what do you do for fun besides teaching?
+
+    User 2: I like to bake, go on walks, and play with my cats.
+
+    User 1: Oh, that sounds fun! I like to bake too. What do you like to bake?
+
+    User 2: I like to bake cakes, cookies, and pies.
+
+    User 1: Those all sound delicious! I love to bake cakes too.
+
+    User 2: We should bake together sometime!
+
+    User 1: That would be fun! I''d love to learn some new baking recipes from you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

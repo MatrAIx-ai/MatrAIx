@@ -1,0 +1,72 @@
+id: '00007554'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7554
+data:
+  user 1 personas: 'My newly bought laptop has a bum battery.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My college courses are on philosophy and history.
+
+    My glasses are held together by tiger printed duct tape.'
+  user 2 personas: 'I have a personal trainer.
+
+    I have 3 small dogs.
+
+    I tutor kids in my spare time.
+
+    I used to be very religious.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: I''m Sarah. What''s yours?
+
+    User 1: I''m (user 1''s name). It''s nice to meet you, Sarah.
+
+    User 2: Nice to meet you too. What do you do for fun?
+
+    User 1: I write short stories and I''m also studying philosophy and history in college.
+
+    User 2: Oh, that''s cool! I tutor kids in my spare time.
+
+    User 1: That''s really nice of you. I used to be very religious, but I''ve kind of fallen out of it.
+
+    User 2: That''s okay. I still have a personal trainer, but I don''t go to church anymore.
+
+    User 1: That''s interesting. I''ve never had a personal trainer.
+
+    User 2: It''s really helpful. I''m trying to get in shape.
+
+    User 1: That''s good. I should probably start working out more.
+
+    User 2: You should! It''s really good for you.
+
+    User 1: I know, I know. I''ll get on it.
+
+    User 2: You''re welcome.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to play with my dogs. I have three little dogs.
+
+    User 1: Oh, that sounds fun. I have a cat.
+
+    User 2: Cats are cool too.
+
+    User 1: Yeah, they are.
+
+    User 2: What''s your favorite thing about your cat?
+
+    User 1: I like that he''s always there to greet me when I come home.
+
+    User 2: That''s really sweet.
+
+    User 1: Yeah, he''s a good cat.
+
+    User 2: I''m glad you have a pet that you love.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

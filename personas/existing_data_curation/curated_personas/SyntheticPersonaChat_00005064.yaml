@@ -1,0 +1,88 @@
+id: '00005064'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5064
+data:
+  user 1 personas: 'I played football in college.
+
+    I work at a candy store.
+
+    I run two miles everyday.
+
+    I have been married for five years.
+
+    I have a passion for politics.'
+  user 2 personas: 'I grew up in the upstate.
+
+    I went to college and graduated few years ago.
+
+    My father used to work for a bank.
+
+    Now i also work at a bank.'
+  Best Generated Conversation: 'User 1: Hey, I''m [User 1''s name]! I''m from the upstate.
+
+    User 2: Nice to meet you, [User 1''s name]! I''m [User 2''s name]. I also grew up in the upstate.
+
+    User 1: That''s awesome! What town are you from?
+
+    User 2: I''m from [town name].
+
+    User 1: Oh, I know that town! I used to go there all the time when I was younger.
+
+    User 2: Really? That''s cool. What did you used to do there?
+
+    User 1: I used to go to the park and play basketball. I also used to go to the movies a lot.
+
+    User 2: That sounds like a lot of fun. I used to go to the park a lot too. I also used to go to the movies a lot.
+
+    User 1: That''s awesome! We should go to the movies sometime.
+
+    User 2: That sounds like fun! I''m free this weekend.
+
+    User 1: Me too! I''ll pick you up at 7.
+
+    User 2: Great! See you then!
+
+    User 1: Bye!
+
+
+    On the weekend:
+
+
+    User 1: Hey, I''m here!
+
+    User 2: Hi! I''m ready to go.
+
+    User 1: Awesome! Let''s go.
+
+
+    At the movie theater:
+
+
+    User 1: What movie do you want to see?
+
+    User 2: I''m not sure. What do you want to see?
+
+    User 1: I''m feeling like a comedy.
+
+    User 2: That sounds good.
+
+    User 1: How about [movie title]?
+
+    User 2: That sounds good.
+
+
+    After the movie:
+
+
+    User 1: That was a good movie!
+
+    User 2: I know, right? I''m glad we went.
+
+    User 1: Me too! We should do this again sometime.
+
+    User 2: Sounds good to me!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

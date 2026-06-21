@@ -1,0 +1,74 @@
+id: 00002129
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2129
+data:
+  user 1 personas: 'I am in high school.
+
+    I cs and ds.
+
+    I love sweets.
+
+    I love bruno mars.
+
+    I sleep a lot.'
+  user 2 personas: 'I enjoy reading.
+
+    I love dogs.
+
+    I work at a doctor s office.
+
+    I am single.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play with my dogs, and watch movies.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like mystery and romance novels.
+
+    User 1: Oh, I love romance novels too! I just finished reading one by Danielle Steel.
+
+    User 2: I love Danielle Steel! She''s one of my favorite authors.
+
+    User 1: What''s your favorite book by her?
+
+    User 2: I think my favorite is "The Affair." It''s a really good story about two people who fall in love despite the fact that they''re both married.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great read.
+
+    User 1: So, what''s it like working at a doctor''s office?
+
+    User 2: It''s pretty interesting. I get to meet a lot of different people and learn about different medical conditions.
+
+    User 1: That sounds like a cool job.
+
+    User 2: It is. I really like it.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or visit my parents.
+
+    User 1: Oh, I''m going to the movies this weekend too. I''m seeing the new Marvel movie.
+
+    User 2: Oh, cool! I''ve been wanting to see that movie.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will!
+
+    User 1: Well, it was nice talking to you. Maybe we can get together sometime and watch a movie or something.
+
+    User 2: That sounds like fun. I''d like that.
+
+    User 1: Great! I''ll text you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

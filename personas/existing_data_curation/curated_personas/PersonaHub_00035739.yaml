@@ -1,0 +1,19 @@
+id: 00035739
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35739
+persona_description: A healthcare professional who is trained in the use of electronic fetal heart monitoring to monitor the heart rate of a pregnant woman during pregnancy, labor, and delivery. They are
+  experienced in interpreting the results of electronic fetal monitoring and are familiar with the signs and symptoms of abnormal heart rate, such as a heart rate less than 110 beats per minute or more
+  than 160 beats per minute. They are also trained in the use of nonstress tests to assess the health of the baby and are familiar with the signs and symptoms of an abnormal nonstress test, such as a heart
+  rate that does not increase by 15 beats per minute or drops far below its baseline rate during a contraction.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: perinatal monitoring
+  general_domain_top01pct: None
+  specific_domain_top01pct: fetal monitoring
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

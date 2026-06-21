@@ -1,0 +1,76 @@
+id: '00004023'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4023
+data:
+  user 1 personas: 'I like to create websites.
+
+    I really enjoy reading the news.
+
+    I wish i could play the stock market well.
+
+    I love new technology.
+
+    I try to find easy ways to make money.'
+  user 2 personas: 'I play the drums.
+
+    I m the oldest of three boys.
+
+    I work at the pizza parlor.
+
+    I grew up in the projects of chicago.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to play the drums.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play the drums.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. What kind of music do you play?
+
+    User 2: I mostly play rock and blues.
+
+    User 1: Cool. I like those genres too.
+
+    User 2: Do you like to read the news?
+
+    User 1: Yes, I love reading the news. It''s important to stay informed about what''s going on in the world.
+
+    User 2: I agree. I like to keep up with current events.
+
+    User 1: What''s your favorite news source?
+
+    User 2: I like to read the New York Times and the Washington Post.
+
+    User 1: Those are both great sources. I also like to read the Wall Street Journal.
+
+    User 2: I''ve heard good things about the Wall Street Journal. Maybe I''ll check it out.
+
+    User 1: It''s worth a read. Do you like to invest in the stock market?
+
+    User 2: I used to, but I don''t really have the time for it anymore.
+
+    User 1: I understand. It can be a lot of work.
+
+    User 2: Yeah, it can. But it''s also a lot of fun.
+
+    User 1: I''ve never tried it, but I''m always curious about it.
+
+    User 2: If you''re ever interested, I could give you some pointers.
+
+    User 1: Thanks, I appreciate that. I might just take you up on that offer.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and go out with my friends.
+
+    User 2: Sounds like you have a lot of fun.
+
+    User 1: I do. I like to keep busy.
+
+    User 2: I can relate. I like to keep busy too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

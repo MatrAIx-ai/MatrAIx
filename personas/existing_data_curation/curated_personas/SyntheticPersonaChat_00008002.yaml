@@ -1,0 +1,72 @@
+id: 00008002
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8002
+data:
+  user 1 personas: 'I have traveled to both ireland and australia.
+
+    My mother was born in ireland.
+
+    I like to travel.
+
+    My father was an author.'
+  user 2 personas: 'I grow the tallest sunfloweres you ve ever seen.
+
+    I spend most of my days working at my church s food pantry.
+
+    I love agatha christie novels.
+
+    I have 5 children , though 2 have passed away.
+
+    My husband and i have a suicide pact.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1]. What''s your name?
+
+    User 2: Hi [user 1]. My name is [user 2].
+
+    User 1: It''s nice to meet you, [user 2].
+
+    User 2: Nice to meet you too, [user 1].
+
+    User 1: Where are you from?
+
+    User 2: I''m from [user 2''s location].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a beautiful place. The people are friendly and the weather is nice all year round.
+
+    User 1: That sounds amazing. I''ve always wanted to travel more.
+
+    User 2: You should! It''s a great way to experience new things and meet new people.
+
+    User 1: I know, I know. I keep putting it off, but I''m going to start planning a trip soon.
+
+    User 2: That''s great! I''m sure you''ll have a wonderful time.
+
+    User 1: Thanks, I hope so!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, travel, and spend time with my family.
+
+    User 2: I love to read too! What are your favorite books?
+
+    User 1: I love all kinds of books, but I especially love historical fiction and mysteries.
+
+    User 2: Me too! I''ve been reading a lot of Agatha Christie lately.
+
+    User 1: She''s one of my favorite authors! I love her mysteries.
+
+    User 2: Me too! She''s so good at creating suspense.
+
+    User 1: I know, right? I can''t wait to see what she writes next.
+
+    User 2: Me neither!
+
+    User 1: Well, it was nice talking to you, [user 2].
+
+    User 2: It was nice talking to you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

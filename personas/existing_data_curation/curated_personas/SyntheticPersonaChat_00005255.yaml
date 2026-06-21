@@ -1,0 +1,76 @@
+id: '00005255'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5255
+data:
+  user 1 personas: 'I do the shopping in my house.
+
+    I want to be a vegetarian.
+
+    I m lazy and pork tastes good.
+
+    I like meat too much.'
+  user 2 personas: 'I have a wife and children.
+
+    I m insecure.
+
+    I m always hungry.
+
+    I need a corvette to complete my life.'
+  Best Generated Conversation: 'User 1: Hi, I''m (USER 1''s name).
+
+    User 2: Hi, I''m (USER 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that''s nice. I''m a grocery store cashier.
+
+    User 2: How do you like that?
+
+    User 1: It''s okay. It''s not the most exciting job in the world, but it pays the bills.
+
+    User 2: I''m sure it does. What are your hobbies?
+
+    User 1: I like to read, watch movies, and go for walks.
+
+    User 2: That sounds nice. I like to read and watch movies too. I also like to go shopping.
+
+    User 1: I don''t do much shopping. I''m not very good at it.
+
+    User 2: Oh, that''s too bad. I love to find a good deal.
+
+    User 1: I guess I''m just not very interested in fashion.
+
+    User 2: Well, you don''t have to be interested in fashion to go shopping. You can just go for the fun of it.
+
+    User 1: I guess you''re right. I might have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: Good.
+
+    User 1: So, what do you do with your kids?
+
+    User 2: We go to the park, the zoo, the playground, the library, and the movies. We also play games at home.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. It''s great to be able to spend time with them.
+
+    User 1: I can imagine. I don''t have any kids of my own, but I love spending time with my nieces and nephews.
+
+    User 2: They''re so much fun.
+
+    User 1: They are. They''re always up for anything.
+
+    User 2: That''s one of the things I love about them.
+
+    User 1: I agree. I''m glad you have such a great family.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,104 @@
+id: 00000947
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 947
+data:
+  user 1 personas: 'I chew my nails.
+
+    I make friends fast and say goodbye fast.
+
+    I kayak at the lake on weekends.
+
+    I am studying to be a special education teacher.'
+  user 2 personas: 'I like to kayak.
+
+    I like to fly model airplanes.
+
+    I like crab dipped in butter.
+
+    I run six miles a day.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to kayak, fly model airplanes, and run six miles a day.
+
+    User 1: Those are all cool hobbies. I like to kayak too.
+
+    User 2: That''s great! We should go kayaking together sometime.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! We could go to the lake near my house.
+
+    User 1: That sounds perfect!
+
+    User 2: Great! I''ll see you there.
+
+    User 1: See you then!
+
+    [On the weekend, at the lake]
+
+    User 1: Hi, [user 2''s name].
+
+    User 2: Hi, [user 1''s name].
+
+    User 1: This is a great spot for kayaking.
+
+    User 2: I know, right? It''s my favorite spot.
+
+    User 1: So, what''s your favorite thing about kayaking?
+
+    User 2: I love the feeling of being on the water and the freedom of being able to go wherever I want.
+
+    User 1: Me too! I also love the way the sun shines on the water.
+
+    User 2: Me too! It''s so beautiful.
+
+    User 1: So, what do you like to do when you''re not kayaking?
+
+    User 2: I like to run, fly model airplanes, and eat crab dipped in butter.
+
+    User 1: I''ve never tried crab dipped in butter. Is it good?
+
+    User 2: It''s amazing! You have to try it.
+
+    User 1: I will!
+
+    User 2: So, what do you like to do when you''re not kayaking?
+
+    User 1: I like to read, write, and hang out with my friends.
+
+    User 2: Those are all great hobbies. I like to read too.
+
+    User 1: Me too! What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m really into historical fiction right now.
+
+    User 1: Me too! I''ve been reading a lot of historical fiction lately.
+
+    User 2: That''s great! We should talk about books sometime.
+
+    User 1: That would be fun!
+
+    User 2: I''m going to start paddling back to shore. Are you ready?
+
+    User 1: Yeah, I''m ready.
+
+    [On the way back to shore, they talk about their favorite books.]
+
+    User 1: I really enjoyed kayaking with you today.
+
+    User 2: Me too! We should do it again sometime.
+
+    User 1: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

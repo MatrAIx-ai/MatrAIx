@@ -1,0 +1,56 @@
+id: 00006807
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6807
+data:
+  user 1 personas: 'I love to eat pita bread with hummus.
+
+    I am bipolar.
+
+    I am a mother of three.
+
+    I am thinking of becoming a mother next year.
+
+    I go to work early in the morning as a nurse.'
+  user 2 personas: 'I work for an architect firm.
+
+    I love to cook.
+
+    I am looking for someone.
+
+    I have three dogs.'
+  Best Generated Conversation: 'User 1: Hey, I''m user1!
+
+    User 2: Hey, I''m user2!
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to cook and I love to travel.
+
+    User 1: Me too! I love to cook, but I''m not very good at it. I love to travel to new places and experience different cultures.
+
+    User 2: That sounds like a lot of fun! I love to travel to new places and try new foods.
+
+    User 1: Me too! I''m always looking for new places to explore.
+
+    User 2: I''m glad to hear that! I''m always looking for someone to travel with.
+
+    User 1: That''s great! I would love to travel with you sometime.
+
+    User 2: That sounds like a plan! I''m free next weekend, would you like to go somewhere?
+
+    User 1: Sure! I would love to go somewhere next weekend. What are you thinking?
+
+    User 2: I was thinking we could go to the beach. There''s a great beach house that my family has that we could use.
+
+    User 1: That sounds like a lot of fun! I love the beach.
+
+    User 2: Great! I''ll start planning the trip.
+
+    User 1: Awesome! I can''t wait.
+
+    User 2: Me neither!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

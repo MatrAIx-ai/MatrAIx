@@ -1,0 +1,78 @@
+id: '00001415'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1415
+data:
+  user 1 personas: 'I play the piano.
+
+    I hate flowers.
+
+    I ran into jimmy fallon just the other day.
+
+    I make my own clothes.'
+  user 2 personas: 'I start an internship in engineering later this year.
+
+    Before i die , i want to skydive.
+
+    I am a famous video game character online.
+
+    I have a pet snake.'
+  Best Generated Conversation: 'User 1: Hi there, what do you do?
+
+    User 2: I''m an intern in engineering. What about you?
+
+    User 1: I''m a piano player and I make my own clothes. I also ran into Jimmy Fallon just the other day.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play the piano.
+
+    User 1: It''s a lot of fun, but it can be challenging.
+
+    User 2: I''m sure it is. I''m really impressed that you make your own clothes too.
+
+    User 1: Thanks! It''s something I''ve always enjoyed doing.
+
+    User 2: I''ve always wanted to try it, but I don''t know where to start.
+
+    User 1: There are a lot of great tutorials online. I would definitely recommend looking into it.
+
+    User 2: I will. Thanks for the advice.
+
+    User 1: No problem. So, what''s it like being an intern in engineering?
+
+    User 2: It''s really great! I''m learning a lot and I''m getting to work on some really cool projects.
+
+    User 1: That''s awesome! I''m glad to hear that you''re enjoying it.
+
+    User 2: I am. It''s definitely a lot of work, but it''s worth it.
+
+    User 1: I''m sure it is. So, what do you want to do after your internship?
+
+    User 2: I''m not sure yet. I''m thinking about going back to school for my master''s degree.
+
+    User 1: That would be great! I''m sure you''d be a great engineer.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go hiking, camping, and fishing. I also like to play video games.
+
+    User 1: That sounds like a lot of fun. I like hiking and camping too.
+
+    User 2: Me too! I''m not very good at fishing, but I still enjoy it.
+
+    User 1: I''m not very good at it either, but it''s still fun.
+
+    User 2: I agree.
+
+    User 1: So, what are some of your favorite video games?
+
+    User 2: I like to play a lot of different games, but my favorites are The Legend of Zelda, Mario, and Final Fantasy.
+
+    User 1: Those are great games! I love Mario and Final Fantasy.
+
+    User 2: Me too! They''re so much fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

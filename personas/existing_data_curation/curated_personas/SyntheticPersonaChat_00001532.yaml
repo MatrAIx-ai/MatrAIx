@@ -1,0 +1,58 @@
+id: '00001532'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1532
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I love to surf.
+
+    I love pandas.
+
+    I am starting a new juicing bar.'
+  user 2 personas: 'I like to visit places around the world.
+
+    I have been to every state except alaska.
+
+    I like to paddle board.
+
+    I like to swim in the lake.
+
+    I love cabins in the woods on the lake.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What are your hobbies?
+
+    User 2: I love to visit places around the world, paddleboard, swim in the lake, and love cabins in the woods on the lake.
+
+    User 1: Wow, you are very adventurous! I love to surf and I am starting a new juicing bar. I am also a vegetarian.
+
+    User 2: That is so cool! I love juicing and I have never tried surfing but I would love to. I have been to all the states except Alaska.
+
+    User 1: That is amazing! I would love to travel the world. I have been to a few places in Europe.
+
+    User 2: Europe is so beautiful! I would love to go to Europe one day.
+
+    User 1: Me too! I love the history and culture of Europe.
+
+    User 2: I also love the food in Europe.
+
+    User 1: Me too! What is your favorite food from Europe?
+
+    User 2: I love the pasta in Italy.
+
+    User 1: That is my favorite too! I also love the pastries in France.
+
+    User 2: France is so beautiful! I would love to go there one day.
+
+    User 1: Me too! I would love to travel the world with you.
+
+    User 2: That would be so much fun! We could go to all the places we want to see.
+
+    User 1: That would be amazing! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00005900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5900
+data:
+  user 1 personas: 'My father worked 11 hours a day.
+
+    I drink hot chocolate during the winter.
+
+    My mother use to read me bed time stories.
+
+    I own a iphone 7.
+
+    I am allergic to seafood.'
+  user 2 personas: 'I am a night owl , but i am an introvert so i do not go out much or anything.
+
+    I am a graduate student studying law.
+
+    I like playing ultimate in the park with my guys sometimes.
+
+    I live in new york and i love the local shops around here.'
+  Best Generated Conversation: 'User 1: Hi, I''m a night owl too! What do you like to do to pass the time?
+
+    User 2: I usually read or watch TV. Sometimes I''ll go out with friends, but not often.
+
+    User 1: I''m an introvert too, so I understand not wanting to go out much. What kind of TV shows do you like to watch?
+
+    User 2: I like a lot of different types of shows, but I''m a big fan of documentaries. I also like watching comedies and dramas.
+
+    User 1: Me too! I love watching documentaries, especially about history. I also like watching comedies and dramas.
+
+    User 2: What''s your favorite documentary?
+
+    User 1: I have a few favorites, but one of my favorites is "The Act of Killing". It''s about the Indonesian genocide in the 1960s. It''s a really powerful and disturbing film, but it''s also very important.
+
+    User 2: That sounds really interesting. I''ll have to check it out.
+
+    User 1: You definitely should. It''s one of the best documentaries I''ve ever seen.
+
+    User 2: What''s your favorite comedy?
+
+    User 1: I have a lot of favorites, but one of my favorites is "Arrested Development". It''s a really funny show about a dysfunctional family.
+
+    User 2: I''ve heard good things about that show. I''ll have to check it out.
+
+    User 1: You definitely should. It''s really funny.
+
+    User 2: What''s your favorite drama?
+
+    User 1: I have a lot of favorites, but one of my favorites is "The Wire". It''s a really good show about the drug trade in Baltimore.
+
+    User 2: I''ve heard good things about that show too. I''ll have to check it out.
+
+    User 1: You definitely should. It''s a really well-made show.
+
+    User 2: Thanks for the recommendations! I''ll definitely check them out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

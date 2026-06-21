@@ -1,0 +1,64 @@
+id: 00000589
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 589
+data:
+  user 1 personas: 'I am a teacher.
+
+    I do yoga every morning.
+
+    I have a twin sister.
+
+    I love chocolate.'
+  user 2 personas: 'My grandma is from denmark.
+
+    My car is green and smells weird.
+
+    My favorite food is meatloaf.
+
+    My favorite band used to be toto.
+
+    My dog s name is toto.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]!
+
+    User 2: Hello, my name is [user 2]!
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s awesome! I''ve always wanted to be a teacher.
+
+    User 2: It''s a great job! I love working with kids.
+
+    User 1: I bet! What do you like to do for fun?
+
+    User 2: I love to do yoga, go for walks, and read.
+
+    User 1: Yoga is great! I love to do it too.
+
+    User 2: It''s so relaxing.
+
+    User 1: I agree! What''s your favorite food?
+
+    User 2: I love meatloaf.
+
+    User 1: Me too! What''s your favorite band?
+
+    User 2: My favorite band used to be Toto, but now it''s The Killers.
+
+    User 1: I love The Killers! I''ve been listening to them for years.
+
+    User 2: Me too! They''re so good.
+
+    User 1: What''s your favorite thing to do with your dog?
+
+    User 2: I love to take him for walks in the park.
+
+    User 1: That sounds like a lot of fun! I''m glad you''re enjoying your time here.
+
+    User 2: Me too! It''s been great meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

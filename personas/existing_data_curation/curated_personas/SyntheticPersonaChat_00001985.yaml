@@ -1,0 +1,86 @@
+id: 00001985
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1985
+data:
+  user 1 personas: 'I love comic books.
+
+    My favorite hero is superman.
+
+    I want to grow up to be a superhero one day.
+
+    I am 8 years old.
+
+    My name is todd.'
+  user 2 personas: 'I just moved to los angeles from tokyo.
+
+    I love to walk my dog everyday after work.
+
+    I want to be a famous actor.
+
+    My english is not very good yet.
+
+    I also dance and sing.'
+  Best Generated Conversation: 'User 1: Hi! My name is Todd.
+
+    User 2: Hello Todd! My name is Haruka.
+
+    User 1: What do you like to do?
+
+    User 2: I love to sing, dance, and walk my dog.
+
+    User 1: That''s cool! I love to read comic books.
+
+    User 2: What''s your favorite comic book?
+
+    User 1: My favorite comic book is Superman.
+
+    User 2: Superman is a great hero!
+
+    User 1: I know, right? I want to grow up to be a superhero one day.
+
+    User 2: That''s a great dream! I''m sure you''ll achieve it.
+
+    User 1: Thanks!
+
+    User 2: Where are you from, Todd?
+
+    User 1: I''m from New York City.
+
+    User 2: Oh, cool! I just moved to Los Angeles from Tokyo.
+
+    User 1: That''s awesome! How do you like it here so far?
+
+    User 2: It''s great! I love the weather and the people.
+
+    User 1: I''m glad to hear that.
+
+    User 2: What do you like to do in your free time?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: That sounds like fun!
+
+    User 1: It is.
+
+    User 2: What are some of your favorite video games?
+
+    User 1: I like to play Call of Duty, Fortnite, and Minecraft.
+
+    User 2: I''ve heard good things about Call of Duty.
+
+    User 1: It''s a great game!
+
+    User 2: I''m going to have to check it out.
+
+    User 1: You should!
+
+    User 2: I will.
+
+    User 1: It was nice meeting you, Haruka.
+
+    User 2: It was nice meeting you too, Todd.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

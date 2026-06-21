@@ -1,0 +1,74 @@
+id: '00002510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2510
+data:
+  user 1 personas: 'I like to go fishing.
+
+    I have 4 daughters.
+
+    I race cars for a living.
+
+    I like to play board games.'
+  user 2 personas: 'I leave the dogs home when i visit my parents.
+
+    I love dogs.
+
+    I have 2 dogs as pets.
+
+    My mother is allergic to dogs.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, biking, and kayaking. I also love spending time with my dogs.
+
+    User 1: That sounds like fun! I like to go fishing, play board games, and read.
+
+    User 2: I love board games too! What''s your favorite?
+
+    User 1: I like Monopoly, Scrabble, and Risk.
+
+    User 2: Those are all great games! I love playing Monopoly with my family.
+
+    User 1: Me too! It''s so much fun to try to get everyone bankrupt.
+
+    User 2: I know, right? It''s always a good time.
+
+    User 1: What are your dogs'' names?
+
+    User 2: Their names are Buddy and Buster. They''re both golden retrievers.
+
+    User 1: Aww, they sound adorable! I love golden retrievers.
+
+    User 2: They are! They''re the best dogs ever.
+
+    User 1: I''m sure they are.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a race car driver.
+
+    User 2: That''s so cool! I''ve always wanted to race cars.
+
+    User 1: It''s a lot of fun, but it''s also a lot of work.
+
+    User 2: I can imagine.
+
+    User 1: But it''s worth it when you get to win a race.
+
+    User 2: I bet it is.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s a great job! I''m sure you love working with kids.
+
+    User 2: I do! It''s the best'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00007553'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7553
+data:
+  user 1 personas: 'My newly bought laptop has a bum battery.
+
+    My glasses are held together by tiger printed duct tape.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My college courses are on philosophy and history.
+
+    I ride my bike to class since it s only a mile away.'
+  user 2 personas: 'I love to go hiking.
+
+    I have never been to college.
+
+    My favorite phone is as iphone.
+
+    I am a bank teller.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where do you work?
+
+    User 2: I''m a bank teller.
+
+    User 1: Oh, cool. I''m in college right now studying philosophy and history.
+
+    User 2: That''s really cool! I''ve never been to college.
+
+    User 1: You should try it! It''s really fun.
+
+    User 2: I''m not sure I''m smart enough.
+
+    User 1: You''re probably smarter than you think!
+
+    User 2: I don''t know, I''ve never really been good at school.
+
+    User 1: Well, there''s more to college than just school work. You can also meet new people, learn new things, and have a lot of fun.
+
+    User 2: That sounds like it could be fun.
+
+    User 1: It is! You should definitely think about it.
+
+    User 2: I''ll keep it in mind.
+
+    User 1: Good! So, what do you do for fun?
+
+    User 2: I love to go hiking. I live in a really beautiful area, so there are lots of great places to hike.
+
+    User 1: That sounds like fun! I''ve never been hiking before, but I''ve always wanted to try it.
+
+    User 2: You should definitely give it a try! It''s a great way to get out in nature and explore.
+
+    User 1: I will! I''ll have to find some good hiking trails near my college.
+
+    User 2: You can do that online or you can ask a local hiking group.
+
+    User 1: Thanks for the tip! I''ll definitely do that.
+
+    User 2: No problem! So, what''s your favorite phone?
+
+    User 1: I''m not really an Apple person, so I have a Samsung Galaxy.
+
+    User 2: I have an iPhone, but I''ve been thinking about switching to a Samsung.
+
+    User 1: I think you''d like it. It''s a great phone.
+
+    User 2: I''ll have to check it out.
+
+    User 1: You should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

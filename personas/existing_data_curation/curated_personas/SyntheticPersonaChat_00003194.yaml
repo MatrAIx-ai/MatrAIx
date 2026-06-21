@@ -1,0 +1,70 @@
+id: 00003194
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3194
+data:
+  user 1 personas: 'I never went to school.
+
+    I never met my parents.
+
+    I own a mansion that i do not live in.
+
+    I am a genius and know over 300 languages.
+
+    I am an international business man.'
+  user 2 personas: 'I am leaving for college in three months.
+
+    I am vegan.
+
+    My father is a mechanic.
+
+    My favorite band is muse.
+
+    I work at walmart as a stocker.'
+  Best Generated Conversation: 'User 1: Where are you from?
+
+    User 2: I''m from Ohio.
+
+    User 1: Oh, cool. I''m from California.
+
+    User 2: How old are you?
+
+    User 1: I''m 23. How about you?
+
+    User 2: I''m 18.
+
+    User 1: Oh, so you''re going to college soon.
+
+    User 2: Yeah, I''m leaving in three months.
+
+    User 1: What are you going to study?
+
+    User 2: I''m not sure yet. I''m thinking about business.
+
+    User 1: That''s a good choice.
+
+    User 2: Thanks. What do you do for a living?
+
+    User 1: I''m an international businessman.
+
+    User 2: That sounds interesting. What does that entail?
+
+    User 1: I travel a lot and meet with people from all over the world. I negotiate deals and make money.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is. I get to see the world and meet new people.
+
+    User 2: That''s cool. I''m not sure what I want to do with my life yet.
+
+    User 1: You''ve got plenty of time to figure it out.
+
+    User 2: I know. But it''s still kind of stressful.
+
+    User 1: I know what you mean. But it''s all good. You''ll figure it out.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00014197
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14197
+persona_description: A scientist or researcher interested in meteorology, specifically studying the impact of hurricanes on tornado formation and the damage they cause. This individual is likely to be interested
+  in the Georgia Institute of Technology and the work of James Belanger and his team, as well as the recent increase in tornadoes associated with hurricanes moving inland from the Gulf Coast. They would
+  be interested in the model developed by Belanger and his colleagues to predict tornado activity, as well as the implications of the findings for hurricane damage and the need for better understanding
+  of hurricane size and its impact on the environment.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: hurricane-tornado interaction
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

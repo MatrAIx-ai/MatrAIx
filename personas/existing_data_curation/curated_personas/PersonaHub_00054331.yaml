@@ -1,0 +1,18 @@
+id: '00054331'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54331
+persona_description: A medical expert with a background in public health and infectious diseases. They are well-versed in the history of smallpox, its eradication efforts, and the current state of vaccination
+  programs. They are also knowledgeable about the potential for smallpox to be reintroduced in the future due to the potential for bioengineered hybrid viruses and the risk of vaccine-resistant strains.
+  They are likely to be concerned about the potential for a smallpox outbreak and the need for robust vaccination programs.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: smallpox eradication and vaccination
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

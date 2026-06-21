@@ -1,0 +1,60 @@
+id: 00005779
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5779
+data:
+  user 1 personas: 'I have been married eight years.
+
+    I am on a diet.
+
+    I can t drive.
+
+    I am a house wife.'
+  user 2 personas: 'I have a pond at home with a pet koi named spot.
+
+    I m a musician with a day job.
+
+    I play electric violin , and also work as an accountant.
+
+    Lately i ve been learning how to garden.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a musician and an accountant.
+
+    User 1: Wow, that''s cool!
+
+    User 2: Thanks!
+
+    User 1: I''m a housewife.
+
+    User 2: That must be interesting!
+
+    User 1: It is sometimes.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to garden and go for walks.
+
+    User 2: That sounds nice.
+
+    User 1: It is. What about you?
+
+    User 2: I like to play music, garden, and read.
+
+    User 1: That sounds great!
+
+    User 2: It is. I''m glad we met!
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

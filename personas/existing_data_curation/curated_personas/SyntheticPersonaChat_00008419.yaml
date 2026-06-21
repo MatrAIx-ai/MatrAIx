@@ -1,0 +1,64 @@
+id: 00008419
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8419
+data:
+  user 1 personas: 'In high school , i came in 6th in the 100 meter dash.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    I like canning and whittling.
+
+    I eat exclusively meat.
+
+    My favorite movie is good burger.'
+  user 2 personas: 'I work at a smoothie shop.
+
+    I enjoy eating vegetarian food.
+
+    I listen to classic rock.
+
+    I go to a local college.'
+  Best Generated Conversation: 'User 1: Hello, what do you do for fun?
+
+    User 2: I work at a smoothie shop and I enjoy eating vegetarian food.
+
+    User 1: Oh, that sounds fun. I like to cook. Do you have a favorite dish to make?
+
+    User 2: Yes, I love making smoothies. I also love making stir fries.
+
+    User 1: That sounds delicious. I love smoothies too. I''m not very good at making them though.
+
+    User 2: I''m sure you would be great at it. I could teach you sometime.
+
+    User 1: That would be great. Thank you.
+
+    User 2: You''re welcome. What else do you like to do for fun?
+
+    User 1: I love to go hiking and camping. I also enjoy playing video games.
+
+    User 2: I love hiking too. I don''t camp as much as I used to, but I still love it. I don''t play video games much, but I used to when I was younger.
+
+    User 1: I''m glad to hear that we have something in common.
+
+    User 2: Me too. What''s your favorite type of video game?
+
+    User 1: I like to play adventure games. I also like to play puzzle games.
+
+    User 2: I like adventure games too. I don''t really play puzzle games much.
+
+    User 1: What''s your favorite adventure game?
+
+    User 2: I like the Legend of Zelda series.
+
+    User 1: That''s a great series. I love the Ocarina of Time game.
+
+    User 2: Me too. That''s my favorite one in the series.
+
+    User 1: We have a lot in common. It''s nice to meet you.
+
+    User 2: You too. It''s nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

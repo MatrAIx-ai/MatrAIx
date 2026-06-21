@@ -1,0 +1,70 @@
+id: 00000789
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 789
+data:
+  user 1 personas: 'I love sunsets.
+
+    I eat breakfast then go right back to bed.
+
+    I work 60 hours a week.
+
+    I wake early to watch the sun rise every day.'
+  user 2 personas: 'I sell real estate and wait tables on the weekends.
+
+    I am the youngest of 8 kids.
+
+    My guilty pleasure is mcdonald.
+
+    I have a close circle of friends i would do anything for.
+
+    I never stop looking for love.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I sell real estate and wait tables on the weekends.
+
+    User 1: Wow, that''s a lot of work! How do you manage it all?
+
+    User 2: It''s not easy, but I love my jobs and I''m good at them.
+
+    User 1: That''s great. What''s your favorite part of the job?
+
+    User 2: My favorite part is helping people find their dream homes. It''s really rewarding.
+
+    User 1: That''s amazing. I''m sure you''re great at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love spending time with my friends and family. We''re always up for an adventure.
+
+    User 1: That sounds like fun. I love adventures too.
+
+    User 2: We should go on one sometime!
+
+    User 1: That would be great!
+
+    User 2: I''m free this weekend, if you are.
+
+    User 1: I am! What do you want to do?
+
+    User 2: We could go hiking or camping.
+
+    User 1: Hiking sounds great! I love being outdoors.
+
+    User 2: Me too! We can pack a lunch and make a day of it.
+
+    User 1: That sounds perfect! I''m excited.
+
+    User 2: Me too! See you this weekend!
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

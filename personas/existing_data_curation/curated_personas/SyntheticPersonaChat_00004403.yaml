@@ -1,0 +1,80 @@
+id: '00004403'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4403
+data:
+  user 1 personas: 'I like to shop at goodwill.
+
+    I like to be outdoors.
+
+    I m from california.
+
+    I m a student.
+
+    I think recycling is important.'
+  user 2 personas: 'I live with my paps and grandma.
+
+    Paps likes to go mushroom hunting.
+
+    I have a brown belt in karate.
+
+    Grandma makes jewelry.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking and camping. I also like to go fishing.
+
+    User 1: That sounds like fun! I like to go hiking and camping too. I also like to go swimming.
+
+    User 2: Where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, I''ve always wanted to go to California. I hear it''s beautiful.
+
+    User 1: It is! I love the beaches and the mountains.
+
+    User 2: I''m sure I would too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student. I''m studying to be a teacher.
+
+    User 1: That''s great! I''m a student too. I''m studying to be a social worker.
+
+    User 2: Oh, that''s cool! I''ve always thought about being a social worker.
+
+    User 1: It''s a great job. I''m really excited about it.
+
+    User 2: I''m sure you''ll be a great social worker.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to read, watch movies, and play video games.
+
+    User 2: Me too! I love to read and watch movies. I don''t play video games very often, but I like them.
+
+    User 1: That''s cool. What kind of books do you like to read?
+
+    User 2: I like to read everything, but I especially like romance novels, mystery novels, and historical fiction.
+
+    User 1: Oh, I like those too! I love romance novels and mystery novels. I''m not a big fan of historical fiction, but I''ll read it if it''s good.
+
+    User 2: I think you would like historical fiction if you gave it a try. There are some really great historical fiction novels out there.
+
+    User 1: Maybe I will. I''ll have to check some out.
+
+    User 2: I''m sure you''d like them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00025216'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25216
+persona_description: A healthcare professional who works in a hospital or clinic, responsible for monitoring and treating patients for tuberculosis. They must be vigilant in their work, especially when
+  dealing with cases of active tuberculosis, as it can be transmitted from one person to another. They must also be able to accurately record cases in the 300 Log column, as it is crucial for tracking the
+  spread of the disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: tuberculosis treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

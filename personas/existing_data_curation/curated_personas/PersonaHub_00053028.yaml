@@ -1,0 +1,17 @@
+id: 00053028
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53028
+persona_description: A meteorologist who closely monitors severe weather events and has expertise in analyzing tornadoes. They are currently working in Texas, where they are assessing the damage caused
+  by the recent tornadoes and providing updates to the public. They are also observing the weather patterns in tornado alley and are prepared for any unexpected events.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tornado analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,74 @@
+id: '00005457'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5457
+data:
+  user 1 personas: 'My mother passed away in 1979.
+
+    I never learned how to swim.
+
+    I am a meat eater.
+
+    I like anime shows.
+
+    I had to get a job early as a child.'
+  user 2 personas: 'My wife is a hairdresser.
+
+    I love to play basketball.
+
+    My favorite beer is coors.
+
+    I drive an acura.
+
+    I work in car sales.'
+  Best Generated Conversation: 'User 1: Hi, my name is (name). What''s yours?
+
+    User 2: Hi, I''m (name).
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I love to play basketball and watch anime.
+
+    User 1: That''s cool. I''ve never played basketball but I love to watch it. I also love anime. What''s your favorite anime?
+
+    User 2: I''m a big fan of Naruto.
+
+    User 1: Me too! It''s so good. I''m also a fan of One Piece and Attack on Titan.
+
+    User 2: I''ve heard good things about One Piece but I haven''t seen it yet. I''ll have to check it out.
+
+    User 1: You definitely should. It''s a great show.
+
+    User 2: What do you like about it?
+
+    User 1: I love the characters and the story. It''s really well-written and the animation is amazing.
+
+    User 2: Sounds like I''m going to have to check it out.
+
+    User 1: You won''t regret it.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work in sales.
+
+    User 2: Oh, that''s cool. I work in car sales.
+
+    User 1: Really? That''s awesome. I''ve always been interested in cars but I don''t know much about them.
+
+    User 2: Well, you can always ask me if you have any questions.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: So, what do you like to do for fun outside of work?
+
+    User 1: I like to go out with friends, watch movies, and play video games.
+
+    User 2: That sounds like fun. I like to do similar things.
+
+    User 1: It''s great to meet someone who has similar interests.
+
+    User 2: Me too. It''s always nice to make new friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

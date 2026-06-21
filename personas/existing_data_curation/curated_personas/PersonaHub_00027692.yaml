@@ -1,0 +1,20 @@
+id: 00027692
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27692
+persona_description: A radiologist who is responsible for interpreting and interpreting the results of computed tomography (CT) scans, which are a type of imaging test used to create detailed images of
+  the body's internal structures. They must ensure that the use of CT is appropriate and safe, considering factors such as patient health, clinical care, and potential adverse outcomes. They must also apply
+  the ALARA (as low as reasonably achievable) principle, which suggests that radiation doses can be reduced without affecting diagnostic accuracy. Additionally, they must inform patients of the potential
+  risks associated with CT before imaging, monitor individual exposure over time, and track dose and exposure metrics in the medical record to increase awareness about imaging radiation and to determine
+  when a patient has a high cumulative dose from multiple imaging procedures.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: Medical Imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

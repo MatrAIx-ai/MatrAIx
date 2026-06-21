@@ -1,0 +1,70 @@
+id: 00004860
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4860
+data:
+  user 1 personas: 'My favorite color is purple.
+
+    I am not a fan of science.
+
+    My dad works for ups.
+
+    I am currently looking for a job.
+
+    I have owned two mustangs.'
+  user 2 personas: 'I want to be a vegetarian.
+
+    I like meat too much.
+
+    I am lazy and pork tastes good.
+
+    Its good to eat a lot of veggies.
+
+    I do the shopping in my house.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing good too! I''m just looking for a job right now.
+
+    User 2: Oh, that''s exciting! What kind of job are you looking for?
+
+    User 1: I''m not really sure yet. I''m open to anything.
+
+    User 2: Well, I''m sure you''ll find something perfect for you. You seem like a smart and capable person.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to go to the movies, play video games, and read.
+
+    User 2: Those sound like fun activities! I love reading too. What''s your favorite book?
+
+    User 1: It''s hard to say, but I think I''d have to go with "The Hitchhiker''s Guide to the Galaxy."
+
+    User 2: Oh, I love that book! It''s so funny.
+
+    User 1: Yeah, it is! I''ve read it so many times.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 2: I love to cook, go shopping, and spend time with my family.
+
+    User 1: Those sound like great activities! I love to cook too.
+
+    User 2: Me too! What''s your favorite thing to cook?
+
+    User 1: I love to make pasta dishes.
+
+    User 2: Me too! I love pasta with pesto sauce.
+
+    User 1: That''s my favorite too!
+
+    User 2: It''s so good!
+
+    User 1: I know, right?'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: '00001254'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1254
+data:
+  user 1 personas: 'I commute by bus.
+
+    I just started college.
+
+    I work part time in the campus library.
+
+    I have 3 science classes.'
+  user 2 personas: 'I like to go hiking on the weekends.
+
+    I play jazz piano in a band.
+
+    I am a barista.
+
+    My family is from algeria.
+
+    I can speak arabic , english , and french.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m just starting college.
+
+    User 2: Me too! What are you studying?
+
+    User 1: I''m studying biology, chemistry, and physics.
+
+    User 2: Wow, that''s a lot of science!
+
+    User 1: I know, but I''m really interested in it.
+
+    User 2: I can tell. So, what do you want to do after college?
+
+    User 1: I''m not sure yet. I''m thinking about going to medical school.
+
+    User 2: That''s a great goal! I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go to the movies, and hang out with my friends.
+
+    User 2: Me too! I love to read, go to the movies, and hang out with my friends.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I''ve never read that book, but I''ve heard good things about it.
+
+    User 2: It''s a really good book. It''s about the American Dream and how it can sometimes be unattainable.
+
+    User 1: That sounds interesting. I might have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play jazz piano in a band. I also like to go hiking on the weekends.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to learn how to play the piano.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a great way to relax.
+
+    User 1: So, what''s your family like?
+
+    User 2: My family is from Algeria. I speak Arabic, English, and French.
+
+    User 1: That''s cool! I''ve always wanted to learn another language.
+
+    User 2: You should! It''s a great way to learn about other cultures.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a great way to travel.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

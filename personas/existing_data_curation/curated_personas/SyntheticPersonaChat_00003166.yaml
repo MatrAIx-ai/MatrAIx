@@ -1,0 +1,58 @@
+id: '00003166'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3166
+data:
+  user 1 personas: 'I live with my parents.
+
+    I think i might need help.
+
+    I get sad a lot.
+
+    I just lost my job and i m looking for something new.'
+  user 2 personas: 'I work as a barista.
+
+    My favorite color is orange.
+
+    I am a vegan.
+
+    My favorite flower is a rose.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m in a bit of a rut. I just lost my job and I''m feeling really down.
+
+    User 2: Oh no, I''m sorry to hear that. What happened?
+
+    User 1: I''m not sure. They just told me that they were downsizing and that my position was being eliminated.
+
+    User 2: That''s really tough. I can definitely understand why you''re feeling down about it.
+
+    User 1: Yeah, it''s been a rough few weeks.
+
+    User 2: Well, I''m here for you if you need anything.
+
+    User 1: Thanks, I really appreciate that.
+
+    User 2: So, what are you going to do now?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school or getting a new job.
+
+    User 2: Those are both great options. I''m sure you''ll figure it out.
+
+    User 1: Thanks, I hope so.
+
+    User 2: In the meantime, why don''t you come by the coffee shop and I''ll give you a free cup of coffee?
+
+    User 1: That''s so nice of you! I''d love that.
+
+    User 2: Great! I''ll see you there.
+
+    User 1: Thanks again!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

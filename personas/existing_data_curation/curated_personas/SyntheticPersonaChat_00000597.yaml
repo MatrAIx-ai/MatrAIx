@@ -1,0 +1,62 @@
+id: 00000597
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 597
+data:
+  user 1 personas: 'I am a youtube.
+
+    I have a cat named leela.
+
+    My dad is an airline pilot.
+
+    I make videos about makeup.'
+  user 2 personas: 'Both my parents were over 6 foot tall.
+
+    I have amazing eye sight.
+
+    I am a democrat.
+
+    I like to only eat fish.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name]. I''m a YouTube who makes videos about makeup.
+
+    User 2: Cool! What''s your channel name?
+
+    User 1: It''s [channel name].
+
+    User 2: I''ll check it out! What''s your favorite thing about makeup?
+
+    User 1: I love the way it can change your look and make you feel more confident.
+
+    User 2: Me too! I''m not very good at applying it, though.
+
+    User 1: Don''t worry, I''m still learning too!
+
+    User 2: What''s your cat''s name?
+
+    User 1: Her name is Leela. She''s a tortoiseshell cat.
+
+    User 2: She sounds adorable!
+
+    User 1: She is! She''s the best.
+
+    User 2: What''s your dad''s job?
+
+    User 1: He''s an airline pilot.
+
+    User 2: That''s so cool! I''ve always wanted to fly a plane.
+
+    User 1: It''s a lot of fun!
+
+    User 2: So, what do you like to do for fun besides YouTube?
+
+    User 1: I like to read, go for walks, and spend time with my friends and family.
+
+    User 2: Me too! I love to read and go for walks.
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

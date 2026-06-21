@@ -1,0 +1,76 @@
+id: '00006005'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6005
+data:
+  user 1 personas: 'I don t get along with my family.
+
+    I wish that i could be an animal.
+
+    I wonder about what life in space would be like.
+
+    Regular life disappoints me.'
+  user 2 personas: 'I have two kids.
+
+    I love robotics.
+
+    I live in a rural community.
+
+    I work at amazon.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to build robots and work on projects with my kids.
+
+    User 1: That sounds really fun! What kind of projects do you work on?
+
+    User 2: We''ve built a few robots, like a robot arm and a robot that can walk. We''ve also built a few things with Legos, like a car and a house.
+
+    User 1: That''s awesome! I''ve always wanted to build a robot.
+
+    User 2: It''s not as hard as you think. There are a lot of resources online that can help you get started.
+
+    User 1: I''ll have to look into that. Thanks for the tip!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at Amazon as a software engineer.
+
+    User 1: Oh, that''s cool! I''ve heard that''s a great company to work for.
+
+    User 2: It is! I love my job.
+
+    User 1: So, what do you like about your job?
+
+    User 2: I like the work that I do, and I like the people I work with.
+
+    User 1: That''s great!
+
+    User 2: Yeah, I''m really happy with my job.
+
+    User 1: So, what''s your favorite thing to do in your free time?
+
+    User 2: I love to spend time with my family and friends. We go on hikes, play games, and just relax.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love my family and friends.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thanks!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to read, watch movies, and play video games.
+
+    User 1: Oh, that''s cool! I like to do all of those things too.
+
+    User 2: That''s great! We should do something together sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

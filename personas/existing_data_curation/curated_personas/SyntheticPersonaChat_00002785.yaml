@@ -1,0 +1,56 @@
+id: 00002785
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2785
+data:
+  user 1 personas: 'I have three children.
+
+    I am a teacher.
+
+    I live in the suburbs of a major city.
+
+    I like to garden.
+
+    I graduated college for secondary english education.'
+  user 2 personas: 'My biggest fear in life is heights.
+
+    There s only been one set of twins in my family.
+
+    I ve been cheated on by every ex girlfriend except for one.
+
+    I can make fart noises with my arm pits , even some musical melody s.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play music, go to concerts, and hang out with friends.
+
+    User 1: I like to garden, cook, and read.
+
+    User 2: Those all sound like fun things to do. I''ve never been a good gardener, but I love to cook.
+
+    User 1: I''m not great at it either, but I enjoy it. What kind of music do you like to play?
+
+    User 2: I play the guitar and the piano. I like to play all sorts of music, but I''m especially into rock and roll.
+
+    User 1: I love rock and roll too! I used to play the guitar in a band when I was in college.
+
+    User 2: That''s so cool! I''ve always wanted to be in a band.
+
+    User 1: It was a lot of fun. We played at a lot of local bars and festivals.
+
+    User 2: That must have been amazing. I''ve always dreamed of playing in front of a big crowd.
+
+    User 1: It was a lot of fun, but it was also a lot of work. We rehearsed all the time and we had to travel a lot.
+
+    User 2: I can imagine. But it must have been worth it to play in front of a crowd.
+
+    User 1: It was. It was an amazing experience.
+
+    User 2: I''m glad you had a good time. I''m sure I would have loved it too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

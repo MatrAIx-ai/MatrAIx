@@ -1,0 +1,66 @@
+id: '00003462'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3462
+data:
+  user 1 personas: 'I love the walking dead.
+
+    I love comics.
+
+    I eat junk food.
+
+    I do not have a job.
+
+    I am a couch potato.'
+  user 2 personas: 'Watching sports is fun.
+
+    I used to be a meat eater but i m now a vegan.
+
+    I aspire to be a millionaire.
+
+    I go to yoga.
+
+    My favorite sport is hockey.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I love watching sports and going to yoga.
+
+    User 1: What''s your favorite sport?
+
+    User 2: Hockey! I love the speed and the excitement.
+
+    User 1: I''ve never really watched hockey, but it sounds like fun.
+
+    User 2: You should check it out! It''s a great way to get excited and have some fun.
+
+    User 1: I''ll have to do that. What other hobbies do you have?
+
+    User 2: I also love comics and the Walking Dead.
+
+    User 1: I love the Walking Dead too! It''s so good.
+
+    User 2: I know, right? I can''t wait for the new season to start.
+
+    User 1: Me neither! I''m so excited to see what happens next.
+
+    User 2: Me too! It''s going to be great.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m going to go to yoga. Do you want to come with me?
+
+    User 1: I''m not sure. I''ve never done yoga before.
+
+    User 2: It''s not hard to do, and it''s really good for you.
+
+    User 1: I''ll think about it.
+
+    User 2: Okay, let me know.
+
+    User 1: Okay, thanks for talking.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

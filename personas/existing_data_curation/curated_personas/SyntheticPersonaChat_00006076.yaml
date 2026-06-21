@@ -1,0 +1,66 @@
+id: '00006076'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6076
+data:
+  user 1 personas: 'I really like watching star trek.
+
+    I like eating pretzels.
+
+    My favorite band is vnv nation.
+
+    I work for the railroad.'
+  user 2 personas: 'I like to hunt.
+
+    Both my parents were teachers.
+
+    I had two cats growing up.
+
+    I have two children.
+
+    I like to donate time at the local animal shelter.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to hunt, go camping, and spend time with my family.
+
+    User 1: Those all sound like fun activities. I like to watch Star Trek, eat pretzels, and listen to VNV Nation.
+
+    User 2: Star Trek is a great show! I''ve never heard of VNV Nation, though.
+
+    User 1: They''re a German electronic music band. You should check them out!
+
+    User 2: I will! What''s your favorite episode of Star Trek?
+
+    User 1: That''s a tough one. I think I''d have to say "The Wrath of Khan."
+
+    User 2: That''s a good one! I also love "The Undiscovered Country."
+
+    User 1: Those are both great episodes. I''m glad we can agree on something!
+
+    User 2: Me too! So, what do you do for work?
+
+    User 1: I''m a railroad engineer.
+
+    User 2: That sounds like a very interesting job.
+
+    User 1: It is! I get to see a lot of different places and meet a lot of interesting people.
+
+    User 2: That sounds like a lot of fun! I''m glad you enjoy your job.
+
+    User 1: Thanks! Me too.
+
+    User 2: So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. I might go for a walk, or I might just relax at home.
+
+    User 2: Sounds like a good plan. I''m going to go home and start dinner. It was nice talking to you!
+
+    User 1: You too! Have a nice day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

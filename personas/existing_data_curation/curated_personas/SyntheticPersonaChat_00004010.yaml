@@ -1,0 +1,90 @@
+id: '00004010'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4010
+data:
+  user 1 personas: 'I like all types of music.
+
+    I am a mother of 5.
+
+    I like to do crafts.
+
+    I like to watch movies.'
+  user 2 personas: 'I take medication.
+
+    I swim often.
+
+    I run track.
+
+    I wear glasses all day.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [user2 name].
+
+    User 1: Nice to meet you [user2 name]. What do you like to do for fun?
+
+    User 2: I like to swim, run track, and watch movies.
+
+    User 1: Oh, that''s cool! I like to do crafts, watch movies, and listen to music.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like all types of music, but I mostly listen to rock, pop, and country.
+
+    User 2: I like rock and pop too. I don''t really listen to country music.
+
+    User 1: That''s okay! What''s your favorite movie?
+
+    User 2: I don''t have a favorite movie, but I like action movies and comedies.
+
+    User 1: Me too! What''s your favorite action movie?
+
+    User 2: I like the Fast and Furious series. What''s your favorite comedy movie?
+
+    User 1: I like the Hangover series.
+
+    User 2: Me too! I love the Hangover movies.
+
+    User 1: I know, right? They''re so funny!
+
+    User 2: Do you have any kids?
+
+    User 1: Yes, I have five kids.
+
+    User 2: Oh, that''s cool! How old are they?
+
+    User 1: They''re all under 10 years old.
+
+    User 2: That''s a lot of kids!
+
+    User 1: It sure is, but it''s also a lot of fun.
+
+    User 2: I bet it is!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a nurse.
+
+    User 2: It''s a great job!
+
+    User 1: So, what''s your favorite thing about being a nurse?
+
+    User 2: I love helping people.
+
+    User 1: That''s such a great answer. I think that''s the best part about being a nurse too.
+
+    User 2: It''s definitely the best part.
+
+    User 1: Well, it was nice talking to you [user2 name].
+
+    User 2: You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: '00007633'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7633
+persona_description: A healthcare professional who specializes in the study of ocular infections, particularly the epidemiology of community-associated methicillin-resistant Staphylococcus aureus (MRSA)
+  in S. aureus ocular infections. He or she is aware of the importance of MRSA in ocular infections and is interested in the treatment options for glaucoma.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: ocular infections
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

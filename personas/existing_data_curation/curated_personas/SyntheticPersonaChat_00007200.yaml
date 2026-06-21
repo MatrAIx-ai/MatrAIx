@@ -1,0 +1,70 @@
+id: '00007200'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7200
+data:
+  user 1 personas: 'I never work more than 4 days in a row.
+
+    My parents are both dead.
+
+    I refuse to ride the bus.
+
+    I listen to music for more than 5 hours a day.
+
+    I find joy in the littlest things.'
+  user 2 personas: 'I am a night owl.
+
+    I love to sing.
+
+    I can play the piano.
+
+    I am a dancer.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What are your interests?
+
+    User 2: I love to sing, play the piano, and dance.
+
+    User 1: That''s cool! I''m not very musical, but I love to listen to music.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I especially like folk music, country music, and rock music.
+
+    User 2: I like folk music and country music too! What are some of your favorite bands?
+
+    User 1: I like the Avett Brothers, Mumford & Sons, and Bob Dylan.
+
+    User 2: I love the Avett Brothers! I''ve seen them live a few times.
+
+    User 1: Me too! They''re so good live.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go hiking, camping, and fishing. I also like to read, play video games, and watch movies.
+
+    User 2: That''s cool! I like to go hiking and camping too. I also like to play video games and watch movies.
+
+    User 1: What video games do you like to play?
+
+    User 2: I like to play RPGs, action games, and adventure games.
+
+    User 1: Me too! I love RPGs and action games.
+
+    User 2: What are some of your favorite video games?
+
+    User 1: I like the Legend of Zelda series, the Mario series, and the Final Fantasy series.
+
+    User 2: I love the Legend of Zelda series too! I''ve played every game in the series.
+
+    User 1: Me too! I love the story and the gameplay.
+
+    User 2: Me too! They''re so well-made.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

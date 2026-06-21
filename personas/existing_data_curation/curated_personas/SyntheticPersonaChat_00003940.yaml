@@ -1,0 +1,62 @@
+id: 00003940
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3940
+data:
+  user 1 personas: 'I do not own a television.
+
+    My hobby is photography.
+
+    I am a lawyer.
+
+    I live in the mountains.'
+  user 2 personas: 'I grew up homeschooled.
+
+    I care deeply about animals.
+
+    I take my emotions out through art.
+
+    I have a hard time feeling connected with people.
+
+    I sometimes need to scream to feel alive.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to take care of animals, make art, and scream into the void.
+
+    User 1: That''s cool. I like photography, reading, and baking.
+
+    User 2: Oh, I love baking! What''s your favorite thing to bake?
+
+    User 1: I love making macarons. They''re so pretty and delicious.
+
+    User 2: Macarons are so hard to make! I''ve tried a few times, but I''ve never been able to get them to turn out right.
+
+    User 1: It takes a lot of practice, but it''s worth it when you finally get it right.
+
+    User 2: I''ll have to keep practicing then.
+
+    User 1: What kind of art do you make?
+
+    User 2: I mostly draw and paint. I also like to make sculptures.
+
+    User 1: That''s awesome. I''ve always wanted to try my hand at sculpting.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should. It''s a great way to express yourself.
+
+    User 1: I think I will.
+
+    User 2: Awesome! I''m excited to see what you create.
+
+    User 1: Thanks! I''m excited to try it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

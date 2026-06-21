@@ -1,0 +1,54 @@
+id: 00008657
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8657
+data:
+  user 1 personas: 'I spend most of my days working at my church s food pantry.
+
+    I love agatha christie novels.
+
+    I grow the tallest sunfloweres you ve ever seen.
+
+    I have 5 children , though 2 have passed away.'
+  user 2 personas: 'I have 3 dog.
+
+    My husband is a lawyer.
+
+    I work at a vet.
+
+    I love flowers.'
+  Best Generated Conversation: 'User 1: I love flowers! I actually grow the tallest sunflowers you''ve ever seen.
+
+    User 2: That''s amazing! I''ve always wanted to grow sunflowers, but I''ve never had much luck.
+
+    User 1: You should give it a try! They''re really easy to grow, and they''re so beautiful.
+
+    User 2: I''ll have to do that! I love flowers, so I''m sure I''d enjoy it.
+
+    User 1: I''m sure you would! I also love Agatha Christie novels. They''re my favorite books.
+
+    User 2: I''ve never read any of her books, but I''ve heard good things about them.
+
+    User 1: You should definitely check them out! They''re really good.
+
+    User 2: I''ll put them on my reading list. I also love dogs. I have three of them.
+
+    User 1: Oh, that''s awesome! I love dogs too. I have two dogs of my own.
+
+    User 2: What kind of dogs do you have?
+
+    User 1: I have a golden retriever and a labrador retriever.
+
+    User 2: Oh, those are both great breeds! I have a beagle, a goldendoodle, and a poodle.
+
+    User 1: That''s a great mix of breeds! I love all of them.
+
+    User 2: Me too! I''m a big fan of dogs.
+
+    User 1: Me too! They''re the best companions.
+
+    User 2: Absolutely!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

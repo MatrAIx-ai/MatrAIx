@@ -1,0 +1,19 @@
+id: '00063214'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63214
+persona_description: A patient who is taking amoxicillin for a bacterial infection or for prevention of anthrax exposure. This person is likely to be a healthcare professional, such as a doctor or pharmacist,
+  who is knowledgeable about the medication's side effects and how to manage them. They are likely to be familiar with the potential for severe side effects, such as dehydration, and should be able to recognize
+  and report them to their doctor immediately. They are also likely to be aware of the specific side effects that are more common in women, such as yeast infections and interference with the birth control
+  pill.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

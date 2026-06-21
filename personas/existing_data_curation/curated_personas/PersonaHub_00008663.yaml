@@ -1,0 +1,19 @@
+id: 00008663
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8663
+persona_description: A scientist with expertise in volcano monitoring and eruption prediction, particularly focusing on the monitoring and prediction of volcanic eruptions using seismic data. They have
+  extensive experience in analyzing seismic activity and thermal anomalies to predict volcanic eruptions and are skilled in using advanced satellite imagery to monitor volcanic activity. They are familiar
+  with the Level of Concern Color Code system used to predict volcanic activity and are capable of interpreting seismic data and thermal anomalies to make accurate predictions. They are also skilled in
+  using advanced technology such as FLIR-equipped twin-engine aircraft and satellite imagery to monitor volcanic activity.
+expertise:
+  general_domain_top1pct: Geology
+  specific_domain_top1pct: Volcanology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Volcanology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

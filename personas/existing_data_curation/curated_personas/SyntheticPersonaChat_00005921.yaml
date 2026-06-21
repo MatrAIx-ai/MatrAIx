@@ -1,0 +1,69 @@
+id: 00005921
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5921
+data:
+  user 1 personas: 'My favorite book is enders game.
+
+    I am a veteran.
+
+    I like to read.
+
+    I have a garden.'
+  user 2 personas: 'I love animals.
+
+    My father worked for ge.
+
+    I enjoy playing tennis.
+
+    I am an aspiring singer.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sing, play tennis, and spend time with animals.
+
+    User 1: That sounds fun! I like to read, garden, and spend time with my family.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I especially enjoy science fiction and fantasy.
+
+    User 2: I''ve never really read science fiction or fantasy before. What are some good ones to start with?
+
+    User 1: Ender''s Game by Orson Scott Card is a great place to start. It''s a classic science fiction novel about a young boy who is recruited by the military to lead an army of children against an alien
+    invasion.
+
+    User 2: That sounds really interesting! I''ll have to check it out.
+
+    User 1: You should! I think you''ll like it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! What do you like to do with animals?
+
+    User 2: I love to play with them! I have a dog and two cats, and I love taking them to the park. I also volunteer at my local animal shelter.
+
+    User 1: That''s awesome! I''m glad you''re so passionate about animals.
+
+    User 2: Thanks! I think they''re amazing creatures.
+
+    User 1: Me too! I have a lot of respect for animals.
+
+    User 2: I''m glad to hear that. What''s your favorite animal?
+
+    User 1: I think my favorite animal is the cat. They''re so independent and curious.
+
+    User 2: I love cats too! They''re the best pets.
+
+    User 1: I agree! They''re so cuddly and affectionate.
+
+    User 2: I''m glad we agree! I love talking about animals.
+
+    User 1: Me too! I could talk about them all day long.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

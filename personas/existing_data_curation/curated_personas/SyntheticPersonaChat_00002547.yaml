@@ -1,0 +1,80 @@
+id: '00002547'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2547
+data:
+  user 1 personas: 'I live in california.
+
+    My newest car is a chevy.
+
+    My favorite thing to do is read.
+
+    I like to eat spaghetti.'
+  user 2 personas: 'I work as an accountant.
+
+    I like to go to the lake.
+
+    I have 3 dogs.
+
+    My favorite color is blue.
+
+    I like to read horror novels.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read horror novels, go to the lake, and play with my dogs.
+
+    User 1: That''s cool. I like to read, too. What are some of your favorite horror novels?
+
+    User 2: I like Stephen King, Dean Koontz, and Mary Shelley.
+
+    User 1: I''ve read some of Stephen King''s books. They''re really good.
+
+    User 2: Yeah, he''s one of my favorite authors.
+
+    User 1: What do you like about horror novels?
+
+    User 2: I like the suspense and the thrill of being scared.
+
+    User 1: Me too. I love being scared.
+
+    User 2: Where do you live?
+
+    User 1: I live in California.
+
+    User 2: I''ve always wanted to visit California.
+
+    User 1: You should! It''s a beautiful state.
+
+    User 2: I will one day.
+
+    User 1: What do you do for work?
+
+    User 2: I''m an accountant.
+
+    User 1: Oh, that''s cool. I''ve always been terrible at math.
+
+    User 2: It''s not so bad once you get the hang of it.
+
+    User 1: I guess I''ll have to take your word for it.
+
+    User 2: You should! It''s a good skill to have.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what are you doing today?
+
+    User 1: I''m just hanging out at home. What about you?
+
+    User 2: I''m going to the lake with my dogs.
+
+    User 1: Oh, that sounds fun. Have a good time!
+
+    User 2: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

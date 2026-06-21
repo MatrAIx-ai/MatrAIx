@@ -1,0 +1,70 @@
+id: '00001425'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1425
+data:
+  user 1 personas: 'I work at amazon.
+
+    I am fairly conservative in politics.
+
+    I love robotics.
+
+    I have two kids.
+
+    I live in a rural community.'
+  user 2 personas: 'I have never traveled outside of the united states.
+
+    I am a dog walker.
+
+    I live in new york.
+
+    My best friend lives in japan.
+
+    I eat ice cream when i am sad.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name] and I work at Amazon.
+
+    User 2: Hi, my name is [user 2''s name] and I''m a dog walker in New York City.
+
+    User 1: What do you like most about your job?
+
+    User 2: I love getting to spend time with dogs and getting them out of the house.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is, and it''s also a great way to stay active.
+
+    User 1: I''m glad you enjoy your job.
+
+    User 2: Thanks! What do you like most about your job?
+
+    User 1: I love working on robotics and coming up with new ways to automate tasks.
+
+    User 2: That sounds like a really interesting job!
+
+    User 1: It is, and it''s also a lot of fun.
+
+    User 2: I''m glad you enjoy your job.
+
+    User 1: Thanks! I know you''re originally from Japan. What was it like to move to the United States?
+
+    User 2: It was definitely a culture shock, but I''ve been here for a few years now and I''m starting to adjust.
+
+    User 1: I''m glad to hear that! What do you miss most about Japan?
+
+    User 2: I miss my family and friends, but I also miss the food.
+
+    User 1: I''ve heard that the food in Japan is amazing.
+
+    User 2: It is! I love all the different types of sushi and ramen.
+
+    User 1: I''ve never had ramen before, but I''ve heard good things about it.
+
+    User 2: You should definitely try it sometime! It''s delicious.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

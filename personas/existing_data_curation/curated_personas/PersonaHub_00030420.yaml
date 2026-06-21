@@ -1,0 +1,18 @@
+id: '00030420'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30420
+persona_description: A pediatrician who specializes in immunization practices and pediatric health care. This persona is likely to be a parent or a healthcare provider who is concerned about the safety
+  and efficacy of flu vaccine for children. They are likely to be aware of the recommended age group for flu vaccination and may have concerns about the logistical challenges of administering the vaccine
+  to children in the fall. They may also be interested in learning about the benefits of the spring-fall vaccination schedule and the potential impact on the immune response of toddlers.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric immunization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

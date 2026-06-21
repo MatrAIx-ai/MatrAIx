@@ -1,0 +1,18 @@
+id: '00016765'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16765
+persona_description: A medical professional with expertise in neurological disorders, particularly epilepsy. They are interested in the latest research and treatment options for seizures and may be actively
+  seeking out new information and resources to better understand and manage their condition. They are likely to be familiar with the classification of seizures and the potential causes of epilepsy, and
+  may be seeking out information on the latest developments in the field.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: epileptology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

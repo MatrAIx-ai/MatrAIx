@@ -1,0 +1,58 @@
+id: '00003367'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3367
+data:
+  user 1 personas: 'I got married last year.
+
+    I have my own salon.
+
+    I am a hair stylist.
+
+    I live on a boat.'
+  user 2 personas: 'I am a retired computer programmer.
+
+    I just turned 77.
+
+    I love animals.
+
+    I like watching british tv shows and movies.
+
+    I have one grandson and one daughter.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well, thank you! How are you?
+
+    User 1: I''m doing great! I''m a hair stylist and I just got married last year.
+
+    User 2: Congratulations! That''s wonderful news. I''m a retired computer programmer and I just turned 77.
+
+    User 1: Wow! That''s amazing. I''m sure you have a lot of stories to tell.
+
+    User 2: I do, indeed! I love to watch British TV shows and movies. I also love animals.
+
+    User 1: I love animals too! I have a cat and a dog.
+
+    User 2: That''s great! I have a cat and a dog as well.
+
+    User 1: Oh, how funny! We''re both animal lovers.
+
+    User 2: We sure are! What are your favorite British TV shows and movies?
+
+    User 1: I love watching Monty Python and Fawlty Towers. I also love watching Downton Abbey.
+
+    User 2: Those are great shows! I love Monty Python and Downton Abbey. I''ve never seen Fawlty Towers.
+
+    User 1: You should check it out! It''s really funny.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome! It''s been really nice talking to you.
+
+    User 2: It''s been nice talking to you too. I hope we can talk again sometime.
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

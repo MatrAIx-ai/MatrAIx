@@ -1,0 +1,18 @@
+id: 00013079
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13079
+persona_description: A meteorologist who specializes in tracking and predicting tropical storms and hurricanes in the Atlantic basin. They have a deep understanding of the weather patterns and systems,
+  including the formation of tropical storms, their movement, and their potential impact on land. They are knowledgeable about the climatological peak of hurricane season and the likelihood of tropical
+  storms and hurricanes deep into autumn. They are also likely to be familiar with the latest updates and information on the tropics from WeatherNation.
+expertise:
+  general_domain_top1pct: science/weather forecasting
+  specific_domain_top1pct: meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

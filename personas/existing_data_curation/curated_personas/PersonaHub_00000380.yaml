@@ -1,0 +1,17 @@
+id: 00000380
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 380
+persona_description: A medical professional with expertise in the fields of ophthalmology and neurology. They are particularly interested in the analysis and treatment of adrenal and heart pathologies,
+  as well as the study of the various signs and symptoms that accompany them. They are also familiar with the classification and treatment of spasmodic iris type, contraction rings, and other related disorders.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

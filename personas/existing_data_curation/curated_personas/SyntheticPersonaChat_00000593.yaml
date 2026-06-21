@@ -1,0 +1,88 @@
+id: 00000593
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 593
+data:
+  user 1 personas: 'I am a veteran.
+
+    I like to read.
+
+    My favorite book is enders game.
+
+    I grew up in kentucky.
+
+    I have a garden.'
+  user 2 personas: 'I like to run.
+
+    My hair is long and blonde.
+
+    My mother died when i was a child.
+
+    My favorite color is blue.
+
+    Cooking is my passion.'
+  Best Generated Conversation: 'User 1: Hi there, my name is [User 1''s name].
+
+    User 2: Hi [User 1''s name], my name is [User 2''s name].
+
+    User 1: It''s nice to meet you! I''m a veteran and I like to read.
+
+    User 2: It''s nice to meet you too! I like to run and cook.
+
+    User 1: Where are you from?
+
+    User 2: I grew up in Kentucky, but I live in Florida now.
+
+    User 1: I grew up in Kentucky too!
+
+    User 2: Oh, really? That''s cool.
+
+    User 1: Yeah, I miss Kentucky sometimes.
+
+    User 2: Me too.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Great Gatsby.
+
+    User 1: I love that book!
+
+    User 2: Me too! I love the characters and the setting.
+
+    User 1: Yeah, it''s a great book.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Me too! I love blue.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is pizza.
+
+    User 1: Me too! I love pizza.
+
+    User 2: What''s your favorite way to relax?
+
+    User 1: I like to read.
+
+    User 2: Me too! I like to read and cook.
+
+    User 1: I like to garden.
+
+    User 2: That''s cool. I like to garden too.
+
+    User 1: What do you like about gardening?
+
+    User 2: I like the feeling of being outside and growing things.
+
+    User 1: I like that too.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

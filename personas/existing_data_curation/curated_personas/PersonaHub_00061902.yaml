@@ -1,0 +1,18 @@
+id: 00061902
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61902
+persona_description: A database administrator who values data integrity and is cautious about allowing NULL values in the database. They are familiar with SQL and have experience in creating and managing
+  database constraints, including NOT NULL constraints. They prefer NOT NULL constraints when creating a table and implement them after the table is created. They are interested in understanding the implications
+  of NULL values on database integrity and strive to prevent NULL values from being inserted into the database.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Database Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Database Integrity and NULL Value Management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

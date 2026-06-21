@@ -1,0 +1,84 @@
+id: 00008140
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8140
+data:
+  user 1 personas: 'I enjoy john gresham movies , but not his books.
+
+    My parents used to work in politics , until they discovered the goodness within themselves.
+
+    My girlfriend tells me she is going to leave me almost every day.
+
+    I do not like wearing pants when i do not have to.'
+  user 2 personas: 'I am going to school to get my bachelors degree.
+
+    I eat a lot of meat.
+
+    I am a veteran.
+
+    I love my girlfriend.'
+  Best Generated Conversation: 'User 1: Do you like John Grisham books?
+
+    User 2: I''ve only read a few, but I enjoyed them.
+
+    User 1: Yeah, I like the movies better. I love watching them with my girlfriend.
+
+    User 2: I haven''t seen any of the movies.
+
+    User 1: You should! They''re really good.
+
+    User 2: I''ll check them out.
+
+    User 1: What are you going to school for?
+
+    User 2: I''m getting my bachelor''s degree in business.
+
+    User 1: Nice! I''m thinking about going back to school.
+
+    User 2: You should! It''s a great way to learn new things.
+
+    User 1: Yeah, I know. I just need to find the time.
+
+    User 2: It''s hard, but it''s worth it.
+
+    User 1: I guess you''re right. I''ll start looking into it.
+
+    User 2: Good!
+
+    User 1: So, you''re a veteran?
+
+    User 2: Yeah, I served in the army for four years.
+
+    User 1: That''s cool! I''ve always wanted to serve in the military.
+
+    User 2: It''s a great experience. I learned a lot about myself and about the world.
+
+    User 1: I''m sure you did. It''s something I''d like to do one day.
+
+    User 2: You should! It''s a great way to give back to your country.
+
+    User 1: I know. I''ll definitely consider it.
+
+    User 2: Good!
+
+    User 1: So, you love your girlfriend?
+
+    User 2: I do! She''s the best thing that''s ever happened to me.
+
+    User 1: That''s great! I''m happy for you.
+
+    User 2: Thanks!
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What about you?
+
+    User 1: I''m going to go home and watch a movie with my girlfriend.
+
+    User 2: That sounds like fun! I hope you have a good time.
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

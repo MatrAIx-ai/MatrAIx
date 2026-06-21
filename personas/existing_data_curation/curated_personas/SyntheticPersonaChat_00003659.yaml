@@ -1,0 +1,74 @@
+id: 00003659
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3659
+data:
+  user 1 personas: 'I have a cat named leela.
+
+    My car is pink.
+
+    I am a youtube.
+
+    My dad is an airline pilot.
+
+    I make videos about makeup.'
+  user 2 personas: 'I help around with bookkeeping and tours.
+
+    I decided to become vegan a year ago.
+
+    I am vegan.
+
+    Sometimes i volunteer at an urban farm.
+
+    I work at the grocery store.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi, what''s up?
+
+    User 1: I''m just hanging out. What about you?
+
+    User 2: Not much, just working on some bookkeeping.
+
+    User 1: Oh, that sounds interesting. What kind of bookkeeping?
+
+    User 2: I''m helping out with a local organic farm.
+
+    User 1: Oh, cool! I''ve been thinking about going vegan.
+
+    User 2: Well, I''m vegan and I love it! It''s the best decision I ever made.
+
+    User 1: What made you decide to go vegan?
+
+    User 2: I was just watching a lot of documentaries about how animals are treated in factory farms, and I just couldn''t stomach it anymore. I knew that I had to make a change.
+
+    User 1: That''s really inspiring. I think I''m going to do some research and see if I can make the switch.
+
+    User 2: I''m so glad! I know you won''t regret it.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem! So, what do you do for fun?
+
+    User 1: I''m a YouTube. I make videos about makeup.
+
+    User 2: Oh, cool! I love makeup. Do you have a channel I can subscribe to?
+
+    User 1: Sure, it''s [your channel name].
+
+    User 2: Awesome! I''ll definitely check it out.
+
+    User 1: Thanks! So, what do you do for fun?
+
+    User 2: I like to volunteer at the urban farm. I also like to go hiking and camping.
+
+    User 1: Oh, that sounds fun! I love hiking and camping too.
+
+    User 2: We should go camping together sometime!
+
+    User 1: That would be fun! I''ll bring the marshmallows.
+
+    User 2: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

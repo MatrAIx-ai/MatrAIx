@@ -1,0 +1,74 @@
+id: '00007552'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7552
+data:
+  user 1 personas: 'My newly bought laptop has a bum battery.
+
+    My glasses are held together by tiger printed duct tape.
+
+    My college courses are on philosophy and history.
+
+    I ride my bike to class since its only a mile away.'
+  user 2 personas: 'I played football in college.
+
+    I run two miles everyday.
+
+    I have a passion for politics.
+
+    I have been married for five years.
+
+    I work at a candy store.'
+  Best Generated Conversation: 'User 1: Hey! I''m on my way to class.
+
+    User 2: Nice! What classes are you taking?
+
+    User 1: Philosophy and history.
+
+    User 2: Oh, cool! I''m a history buff myself.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: What''s your favorite historical period?
+
+    User 1: I''m not sure I have a favorite, but I''m really interested in the Renaissance.
+
+    User 2: The Renaissance is a great time period! I love the art and the music.
+
+    User 1: Me too! I''m also really interested in the philosophy of the Renaissance.
+
+    User 2: Oh, what philosophers do you like?
+
+    User 1: I''m a big fan of Plato and Aristotle.
+
+    User 2: Me too! They''re two of the greatest philosophers of all time.
+
+    User 1: I agree! I''m also a fan of Thomas Aquinas.
+
+    User 2: I''ve never heard of him.
+
+    User 1: He''s a medieval philosopher who was a Dominican friar.
+
+    User 2: Oh, that sounds interesting. I''ll have to look him up.
+
+    User 1: You should! He''s really interesting.
+
+    User 2: I will! So, what are your plans for after class?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go for a run.
+
+    User 1: Oh, that sounds nice. I''m going to ride my bike to class since it''s only a mile away.
+
+    User 2: That''s a good idea. I wish I could bike to work.
+
+    User 1: It''s really great! I get some exercise and it''s a lot more relaxing than driving.
+
+    User 2: I''m sure it is. I might start biking to work too.
+
+    User 1: You should! It''s a great way to start your day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

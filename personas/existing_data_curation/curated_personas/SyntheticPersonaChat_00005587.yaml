@@ -1,0 +1,62 @@
+id: 00005587
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5587
+data:
+  user 1 personas: 'I like to live off of the land.
+
+    I am all about family and fun.
+
+    My parents were like this as well.
+
+    I am a free spirit.
+
+    The idea of working is not my cup of tea.'
+  user 2 personas: 'I like to go fishing.
+
+    My mom is a lawyer.
+
+    I have 5 children.
+
+    I am a student.
+
+    I have an internship at a computer company.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing, and I also love to go camping.
+
+    User 1: That''s cool! I love camping too. It''s so peaceful and relaxing.
+
+    User 2: Yeah, it is! I love being in nature and just being away from everything.
+
+    User 1: Me too! I think it''s really important to spend time in nature.
+
+    User 2: I agree! It''s good for your mental health.
+
+    User 1: Definitely! So, what''s your favorite type of fish to catch?
+
+    User 2: I like to catch trout. They''re so beautiful and they fight really hard.
+
+    User 1: I''ve never caught a trout before. They sound like they''d be a lot of fun to catch.
+
+    User 2: They are! You should try it sometime.
+
+    User 1: I will! I''m sure I''d love it. So, what do you do for work?
+
+    User 2: I''m a student right now. I''m majoring in computer science.
+
+    User 1: Oh, that''s cool! What do you like about computer science?
+
+    User 2: I like the challenge of it. I also like the fact that it''s a field that''s always changing.
+
+    User 1: I can see how that would be a lot of fun. Do you have any plans for after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about getting a job at a software company.
+
+    User 1: That would be a great job! You could do a lot of cool things with computer science.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

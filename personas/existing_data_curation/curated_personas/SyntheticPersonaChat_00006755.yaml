@@ -1,0 +1,74 @@
+id: '00006755'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6755
+data:
+  user 1 personas: 'I found out that i am carrying twins.
+
+    I already have 3 children.
+
+    I will be on bed rest for the next 5 months.
+
+    I have thrown up every day for the last 3 months with morning sickness.'
+  user 2 personas: 'I love to surf.
+
+    My favorite thing to do is to read books on the beach.
+
+    I love pandas.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to surf and read books.
+
+    User 1: That''s cool! I used to surf, but I haven''t been in a long time.
+
+    User 2: You should get back into it! It''s so much fun.
+
+    User 1: I know, I miss it.
+
+    User 2: What''s your favorite book?
+
+    User 1: I don''t know if I have a favorite book, but I really like the Harry Potter series.
+
+    User 2: Me too! I''ve read them all multiple times.
+
+    User 1: I love the world that J.K. Rowling created.
+
+    User 2: Me too, it''s so magical.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I love to go to the beach and read books. I also love pandas.
+
+    User 1: Pandas are so cute! I''ve always wanted to see one in real life.
+
+    User 2: They are! I''ve seen them at the zoo a few times.
+
+    User 1: That''s awesome! So, are you vegetarian?
+
+    User 2: Yes, I am.
+
+    User 1: Me too! I''ve been vegetarian for about 8 years now.
+
+    User 2: That''s great! I''ve been vegetarian for about 5 years.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun! What do you want to do?
+
+    User 1: We could go to the beach and read books.
+
+    User 2: That sounds perfect'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

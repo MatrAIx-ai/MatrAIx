@@ -1,0 +1,20 @@
+id: '00054122'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54122
+persona_description: A database administrator who is familiar with the concepts and techniques of normalization, specifically the first three normal forms (1NF, 2NF, 3NF) and the challenges of moving from
+  1NF to 2NF. The individual is interested in optimizing database performance and ensuring data integrity and consistency through the proper use of normalization techniques. They are also aware of the limitations
+  and complexities of the fourth and fifth normal forms (BCNF, 4NF, 5NF) and the challenges they present in large and complex databases. The persona is skilled in designing and implementing database structures
+  and normalization strategies to meet specific business requirements and performance goals. They are familiar with the importance of data consistency and integrity in database design and management, and
+  are committed to using best practices and industry standards to ensure the security and reliability of their databases.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Database Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Database Normalization
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

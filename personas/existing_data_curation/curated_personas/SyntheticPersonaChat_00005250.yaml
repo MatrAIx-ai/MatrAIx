@@ -1,0 +1,76 @@
+id: '00005250'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5250
+data:
+  user 1 personas: 'I attend book club every week.
+
+    I am more of a cat person than a dog person.
+
+    My mom is my best friend.
+
+    I enjoy the occasional drink with friends.'
+  user 2 personas: 'I enjoy talking to strangers.
+
+    I want to live at the beach.
+
+    My favorite animal is a monkey.
+
+    I love honey.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s yours?
+
+    User 2: Hi, I''m [name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. Do you like to read?
+
+    User 2: I love to read! I''m always reading something new.
+
+    User 1: Me too! I love to explore new worlds and learn about different cultures.
+
+    User 2: Me too! I''m always learning new things when I read.
+
+    User 1: Do you have a favorite book?
+
+    User 2: I have a few, but my favorite is probably "To Kill a Mockingbird" by Harper Lee.
+
+    User 1: That''s a great book! I loved reading it in school.
+
+    User 2: Me too! It''s so well-written and the characters are so memorable.
+
+    User 1: What''s your favorite thing about the book?
+
+    User 2: I love the way Lee explores the themes of race and prejudice. It''s a really important book that everyone should read.
+
+    User 1: I agree. It''s a book that everyone can learn from.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I love cats! They''re so independent and cute.
+
+    User 2: Me too! I have two cats of my own.
+
+    User 1: That''s awesome! I love cats. I have one of my own.
+
+    User 2: What''s your cat''s name?
+
+    User 1: Her name is Luna.
+
+    User 2: That''s a beautiful name.
+
+    User 1: Thanks! I think so too.
+
+    User 2: What''s your favorite thing to do with your cat?
+
+    User 1: I love to play with her and brush her fur.
+
+    User 2: Me too! Cats are so much fun to play with.
+
+    User 1: They really are.
+
+    User 2: I''m glad we both have a love of books and cats. We should hang out sometime and talk about them.
+
+    User 1: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

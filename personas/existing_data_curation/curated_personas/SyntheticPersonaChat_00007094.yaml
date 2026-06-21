@@ -1,0 +1,64 @@
+id: 00007094
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7094
+data:
+  user 1 personas: 'I am a traveling encyclopedia salesman.
+
+    I once saw peyton manning at the grocery store.
+
+    My lifes goal is to be the worlds foremost encyclopedia salesman.
+
+    My hobbies include rock collecting and making macaroni art.'
+  user 2 personas: 'I enjoy visiting museums.
+
+    I like to attend wine tours.
+
+    My husband is 20 years older than me.
+
+    I like to paint.
+
+    We have two sons.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m a traveling encyclopedia salesman.
+
+    User 2: Oh, that''s interesting! What''s your favorite thing about your job?
+
+    User 1: I love getting to meet new people and learn about their lives. I also love the challenge of selling encyclopedias.
+
+    User 2: That sounds like a really fun job!
+
+    User 1: It is! I''m really passionate about encyclopedias, and I love sharing my knowledge with others.
+
+    User 2: That''s great! What''s your favorite thing to learn about?
+
+    User 1: I love learning about history, science, and technology. I also love learning about different cultures.
+
+    User 2: Those are all really interesting things to learn about!
+
+    User 1: I know, right? I could talk about them for hours!
+
+    User 2: I''m sure you could!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love visiting museums, attending wine tours, and painting. I also enjoy spending time with my family.
+
+    User 1: Those all sound like really fun things to do!
+
+    User 2: They are! I''m really lucky to have such a fun and interesting life.
+
+    User 1: It sounds like you do! I''m glad to hear that.
+
+    User 2: Thank you!
+
+    User 1: Well, it was nice talking to you! I hope you have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

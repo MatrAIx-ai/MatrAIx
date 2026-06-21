@@ -1,0 +1,17 @@
+id: '00026530'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26530
+persona_description: A Ruby programmer who is concerned about the security vulnerabilities in the Ruby language, particularly those that can be exploited through hash bucket sharing and the potential for
+  attackers to create a list of values that hash to the same bucket. They are looking for information on the latest security fixes and the status of the JRuby project.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: Ruby programming security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

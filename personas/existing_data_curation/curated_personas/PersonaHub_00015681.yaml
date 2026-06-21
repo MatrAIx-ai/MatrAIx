@@ -1,0 +1,18 @@
+id: 00015681
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15681
+persona_description: A respiratory physician who specializes in the diagnosis and treatment of respiratory disorders. This persona is likely to be interested in the study of hyponatremia and its causes,
+  including SIADHS. They would be familiar with the diagnostic criteria for SIADHS and would be able to interpret the results of the water load test. They would also be aware of the potential complications
+  of hyponatremia, such as drowsiness, and would be able to manage the condition appropriately.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: SIADH diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

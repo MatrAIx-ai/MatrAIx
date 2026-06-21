@@ -1,0 +1,82 @@
+id: 00006791
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6791
+data:
+  user 1 personas: 'I like to make boats on the weekends.
+
+    I have a dog named bob.
+
+    I live on an island.
+
+    I am a closet cannibal.'
+  user 2 personas: 'I like to cook with food i grow in my garden.
+
+    I give lessons on string instruments.
+
+    I play many instruments.
+
+    I like to travel.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hello! My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I like to cook with food I grow in my garden, give lessons on string instruments, and play many instruments.
+
+    User 1: Wow, that''s a lot of hobbies! What''s your favorite thing to do?
+
+    User 2: I think my favorite thing to do is travel. I love seeing new places and meeting new people.
+
+    User 1: That''s awesome! I love to travel too. What''s your favorite place you''ve ever been?
+
+    User 2: I''ve been to a lot of great places, but I think my favorite was Thailand. The food was amazing, the people were so friendly, and the beaches were beautiful.
+
+    User 1: I''ve heard great things about Thailand! I''ve always wanted to go.
+
+    User 2: You should definitely go! It''s a beautiful country.
+
+    User 1: Maybe I will someday.
+
+    User 2: I hope so!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a music teacher. I teach guitar, piano, and violin.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play the guitar.
+
+    User 2: You should definitely take lessons! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I hope so!
+
+    User 1: So, what do you like to do on the weekends?
+
+    User 2: I like to spend time with my family and friends, go to the beach, and cook.
+
+    User 1: That sounds nice. I like to do those things too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love to cook pasta dishes.
+
+    User 2: I love pasta too! What''s your favorite pasta dish?
+
+    User 1: I love pesto pasta.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: I''m glad we agree.
+
+    User 2: Me too.
+
+    User 1: Well, it was nice talking to you, [User 2''s name].
+
+    User 2: It was nice talking to you too, [User 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

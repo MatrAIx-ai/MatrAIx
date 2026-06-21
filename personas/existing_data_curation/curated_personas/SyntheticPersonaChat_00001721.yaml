@@ -1,0 +1,60 @@
+id: '00001721'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1721
+data:
+  user 1 personas: 'I play the violin.
+
+    I am married with 5 kids.
+
+    I like to visit national parks.
+
+    I am nurse.'
+  user 2 personas: 'I like to cook.
+
+    I m scared of clowns.
+
+    I have two dogs.
+
+    I have two roomates.
+
+    I live on the third floor in an apartment.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to cook, I''m scared of clowns, and I have two dogs.
+
+    User 1: That''s cool. I play the violin, I''m married with 5 kids, and I like to visit national parks.
+
+    User 2: Wow, you have a lot of kids! I can''t imagine having that many.
+
+    User 1: It''s definitely not easy, but it''s a lot of fun too.
+
+    User 2: I''m sure it is. I''m glad you enjoy it.
+
+    User 1: Thanks. What do you like about cooking?
+
+    User 2: I like being creative and coming up with new dishes. I also like the sense of accomplishment when I make something delicious.
+
+    User 1: That''s a great way to feel. I love the smell of good food cooking.
+
+    User 2: Me too! It''s the best.
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes. There are so many different ways to make them and they''re always so delicious.
+
+    User 1: I love pasta too! I have a lot of fun making different sauces.
+
+    User 2: Me too! It''s a lot of fun to experiment in the kitchen.
+
+    User 1: I agree. It''s a great way to relax.
+
+    User 2: I know, right? It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00000837
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 837
+data:
+  user 1 personas: 'I love to sing.
+
+    I am in my 20 s.
+
+    My favorite flower is a daisy.
+
+    I work at a real estate office.
+
+    I am dating my boss.'
+  user 2 personas: 'I have a family of three daughters.
+
+    My daughters say i am a great mother.
+
+    My mother is an immigrant from saudi arabia.
+
+    I enjoy baking and cooking.
+
+    I am a woman.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, my name is [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom with three daughters.
+
+    User 1: Oh, that sounds like a lot of fun!
+
+    User 2: It is, but it can also be very challenging.
+
+    User 1: I can imagine. What do you like to do in your free time?
+
+    User 2: I love to bake and cook. I also enjoy reading and watching movies.
+
+    User 1: Those are all great hobbies. I love to bake too. What''s your favorite thing to bake?
+
+    User 2: I love to bake cookies. I also love to make cakes and pies.
+
+    User 1: I love all of those things! I''m not very good at baking, but I always have fun trying new recipes.
+
+    User 2: That''s the spirit! I''m sure you''ll get better with practice.
+
+    User 1: I hope so! What do your daughters like to do for fun?
+
+    User 2: They love to play outside, read books, and watch movies.
+
+    User 1: Those are all great things to do. I''m sure they''re all very happy girls.
+
+    User 2: They are. I''m very lucky to have them.
+
+    User 1: It sounds like you have a great life.
+
+    User 2: I do. I''m very happy.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

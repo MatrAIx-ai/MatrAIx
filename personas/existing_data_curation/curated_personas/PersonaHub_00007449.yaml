@@ -1,0 +1,17 @@
+id: 00007449
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7449
+persona_description: A mission control team member at NASA's Jet Propulsion Laboratory, responsible for coordinating with the Phoenix Mars Lander's orbiter teams to communicate with the spacecraft and ensure
+  its survival during its extended mission on Mars. This person must have expertise in spacecraft operations, communication protocols, and Martian exploration.
+expertise:
+  general_domain_top1pct: Space exploration
+  specific_domain_top1pct: Spacecraft operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

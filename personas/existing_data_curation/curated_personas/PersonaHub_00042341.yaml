@@ -1,0 +1,18 @@
+id: '00042341'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42341
+persona_description: A medical professional who has undergone extensive training in the management and treatment of severe injuries and illnesses, including shock. They are equipped with the knowledge and
+  skills to recognize the signs and symptoms of shock, and the ability to provide prompt and effective first aid. They have experience in managing the condition until medical help arrives, and are prepared
+  to take action in a crisis situation.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: trauma medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

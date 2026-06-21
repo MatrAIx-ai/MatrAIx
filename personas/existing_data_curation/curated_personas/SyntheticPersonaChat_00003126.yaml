@@ -1,0 +1,74 @@
+id: '00003126'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3126
+data:
+  user 1 personas: 'I like to paddle board.
+
+    I like to swim in the lake.
+
+    I have been to every state except alaska.
+
+    I like to visit places around the world.
+
+    I love cabins in the woods on the lake.'
+  user 2 personas: 'I am starting a new juicing bar.
+
+    My favorite thing to do is to read books on the beach.
+
+    I love to surf.
+
+    I love pandas.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]. What''s your name?
+
+    User 2: Hi, I''m [User 2].
+
+    User 1: It''s nice to meet you, [User 2].
+
+    User 2: Nice to meet you too, [User 1].
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to surf, read books on the beach, and start new businesses.
+
+    User 1: That sounds like a lot of fun! I like to paddle board, swim in the lake, and travel.
+
+    User 2: I love lakes! I''ve never been to a cabin in the woods on the lake, but it sounds amazing.
+
+    User 1: You should definitely try it sometime. It''s so relaxing.
+
+    User 2: I will! I love to relax.
+
+    User 1: So, what are you working on right now?
+
+    User 2: I''m starting a new juicing bar. I''m really excited about it!
+
+    User 1: That''s awesome! I love juicing. I''m sure it will be a success.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, cool! I''m from New York.
+
+    User 2: Oh, nice! I''ve always wanted to go to New York.
+
+    User 1: You should definitely go sometime. It''s a great city.
+
+    User 2: I will!
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to read, cook, and spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun! I like to do a lot of the same things.
+
+    User 2: Oh, cool! We should hang out sometime.
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

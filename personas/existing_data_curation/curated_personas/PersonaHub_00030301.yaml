@@ -1,0 +1,18 @@
+id: '00030301'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30301
+persona_description: A photographer who is interested in understanding the limits of resolution in photography, specifically focusing on the resolution of Bayer arrays in digital cameras. They are curious
+  about the trade-offs between color and luminosity detail, the diffraction limit, and the resolution of blue light compared to red light. They are also interested in the relationship between the width
+  of an airy disk and the resolution limit of an optical system.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: optics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

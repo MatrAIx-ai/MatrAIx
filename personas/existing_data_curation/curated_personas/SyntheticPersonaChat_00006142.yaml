@@ -1,0 +1,44 @@
+id: '00006142'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6142
+data:
+  user 1 personas: 'My favorite movie is good burger.
+
+    I like canning and whittling.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    In high school , i came in 6th in the 100 meter dash.'
+  user 2 personas: 'I like to read.
+
+    I love to workout.
+
+    I work for a magazine.
+
+    I love the game halo.'
+  Best Generated Conversation: 'User 1: Hi! I''m a big fan of the movie Good Burger. What''s your favorite movie?
+
+    User 2: Hi! My favorite movie is The Princess Bride. It''s so funny and charming. What do you like about Good Burger?
+
+    User 1: I love the humor and the characters. It''s a really fun movie to watch. I also like that it''s about a fast food restaurant, which is something I can relate to.
+
+    User 2: I can see why you like it. It''s a classic. What other movies do you like?
+
+    User 1: I also like The Breakfast Club, Ferris Bueller''s Day Off, and Clueless. I''m a big fan of 80s movies.
+
+    User 2: Me too! Those are all great movies. I also like movies from the 90s, like The Matrix, Pulp Fiction, and Titanic.
+
+    User 1: I like all those movies too. I''m a big fan of classic movies. What kind of movies do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and science fiction. What kind of books do you like to read?
+
+    User 1: I like to read a lot of different things too, but I''m really into historical fiction right now. I''m also a big fan of mysteries and thrillers.
+
+    User 2: Me too! I love mysteries and thrillers. I think they''re so suspenseful.
+
+    User 1: I know what you mean. I can''t put them down.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

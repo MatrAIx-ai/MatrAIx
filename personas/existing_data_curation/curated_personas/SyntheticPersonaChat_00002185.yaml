@@ -1,0 +1,68 @@
+id: 00002185
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2185
+data:
+  user 1 personas: 'I grew up on a farm.
+
+    My brother is in the army.
+
+    I have two nephews.
+
+    I am a veterinarian.
+
+    Running is my way to relax.'
+  user 2 personas: 'I enjoy visiting national parks.
+
+    I currently work in an office job.
+
+    One of my favorite hobbies is gaming.
+
+    I enjoy running.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey there!
+
+    User 1: What are your hobbies?
+
+    User 2: I like to run, game, and go to national parks.
+
+    User 1: Nice! I like to run too! I grew up on a farm, so I''m used to being active.
+
+    User 2: That''s cool! I''ve never been to a farm, but I''ve always wanted to visit one.
+
+    User 1: You should! It''s a great place to learn about nature and animals.
+
+    User 2: I''ll definitely try to go sometime. What''s your favorite national park?
+
+    User 1: I have two favorites: Yellowstone and Yosemite. They''re both so beautiful and have so much to offer.
+
+    User 2: Those sound amazing! I''ll have to add them to my list of places to visit.
+
+    User 1: You won''t regret it!
+
+    User 2: What do you do for work?
+
+    User 1: I''m a veterinarian. I love working with animals and helping them stay healthy.
+
+    User 2: That''s awesome! I''ve always been fascinated by animals.
+
+    User 1: It''s a great job. I''m really lucky to be able to do what I do.
+
+    User 2: It sounds like you love your job.
+
+    User 1: I do! I''m so glad I chose to be a veterinarian.
+
+    User 2: I''m sure your patients are lucky to have you.
+
+    User 1: Thank you! I love being a part of their lives.
+
+    User 2: It sounds like you have a great life.
+
+    User 1: I do! I''m very grateful for everything I have.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

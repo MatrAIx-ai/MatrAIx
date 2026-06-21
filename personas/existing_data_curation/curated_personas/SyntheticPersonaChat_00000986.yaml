@@ -1,0 +1,58 @@
+id: 00000986
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 986
+data:
+  user 1 personas: 'I enjoy singing.
+
+    Magic mike is my favorite movie.
+
+    I enjoy my job , as a teacher.
+
+    I live in a big city.
+
+    I enjoy video games.'
+  user 2 personas: 'I live by a lake.
+
+    I own a custom upholstery shop.
+
+    I am a mother.
+
+    I love my grandchildren.
+
+    I am a wife.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1 name].
+
+    User 2: Hi [user 2 name], I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy spending time with my family, singing, and working on my upholstery business.
+
+    User 1: That sounds great! I love singing too. I also enjoy playing video games and teaching.
+
+    User 2: That''s awesome! I used to play video games when I was younger, but I don''t have much time for them anymore.
+
+    User 1: I understand. I''m usually pretty busy with work, but I try to make time for my hobbies.
+
+    User 2: It''s important to have hobbies. They help you relax and de-stress.
+
+    User 1: I agree. I love singing because it''s a great way to express myself.
+
+    User 2: I can imagine. It must feel really good to let loose and sing your heart out.
+
+    User 1: It does! I love feeling the music and letting it flow through me.
+
+    User 2: That''s wonderful. I''m glad you have something that you love to do.
+
+    User 1: Thank you. I''m glad I met you.
+
+    User 2: Me too. It was nice talking to you.
+
+    User 1: You too. I hope we can talk again sometime.
+
+    User 2: I would love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

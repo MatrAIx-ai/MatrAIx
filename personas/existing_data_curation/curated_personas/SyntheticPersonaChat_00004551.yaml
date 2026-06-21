@@ -1,0 +1,72 @@
+id: '00004551'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4551
+data:
+  user 1 personas: 'My mother worked for apple.
+
+    I like video games.
+
+    My favorite genre of music is rock.
+
+    I am diabetic.
+
+    I have never been employed.'
+  user 2 personas: 'I have an iq of 250.
+
+    I wish i had money to travel.
+
+    I live alone with my dog.
+
+    My parents died in a plane crash.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: I like video games too! What''s your favorite genre?
+
+    User 2: I like role-playing games.
+
+    User 1: Me too! I''ve been playing Skyrim lately.
+
+    User 2: I''ve heard good things about that game.
+
+    User 1: It''s a lot of fun. I''m really into the character customization.
+
+    User 2: I''m more into the story and the quests.
+
+    User 1: That''s fair enough. I like both the story and the characters.
+
+    User 2: Have you ever tried any other role-playing games?
+
+    User 1: Yeah, I''ve played a few. I really liked Dragon Age: Inquisition.
+
+    User 2: I''ve heard good things about that one too.
+
+    User 1: It''s a lot of fun. I love the combat system.
+
+    User 2: I''m more of a turn-based combat person myself.
+
+    User 1: That''s fair enough. I like both turn-based and action combat.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to watch movies and TV shows. I also like to read.
+
+    User 2: What kind of movies and TV shows do you like?
+
+    User 1: I like all kinds of movies and TV shows, but I''m especially into sci-fi and fantasy.
+
+    User 2: I like those genres too! What are some of your favorite movies and TV shows?
+
+    User 1: I like Star Wars, Star Trek, The Lord of the Rings, and Game of Thrones.
+
+    User 2: I love all of those! I''m also a big fan of The X-Files, Doctor Who, and Stranger Things.
+
+    User 1: Those are great shows! I''ve been meaning to watch Stranger Things.
+
+    User 2: You should! It''s really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

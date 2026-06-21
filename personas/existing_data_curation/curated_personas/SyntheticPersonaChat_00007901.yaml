@@ -1,0 +1,68 @@
+id: 00007901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7901
+data:
+  user 1 personas: 'I have been acting since i was ten years old.
+
+    I made my first movie when i was 18.
+
+    I starred in television commercials when i was young.
+
+    I am an actor.
+
+    Now i am a fixture on a weekly telenovela.'
+  user 2 personas: 'This summer i went on vacation to italy.
+
+    I live in a big city.
+
+    I work in the office , 9 till 5.
+
+    Sometimes i go to yoga classes.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there! How are you?
+
+    User 1: I''m doing well, thank you. What about you?
+
+    User 2: I''m doing alright. I just got back from vacation in Italy.
+
+    User 1: That sounds amazing! What was your favorite part of the trip?
+
+    User 2: I loved exploring the city of Rome. It was so beautiful and historic.
+
+    User 1: I''ve always wanted to visit Italy. Maybe I''ll have to go one day.
+
+    User 2: You definitely should! It''s a beautiful country with a lot to offer.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work in an office. I''m a marketing manager.
+
+    User 1: Interesting. I''m an actor. I''ve been acting since I was ten years old.
+
+    User 2: Oh, that''s cool! What kind of acting do you do?
+
+    User 1: I do mostly television commercials, but I''ve also done some theater and movies.
+
+    User 2: That sounds like a lot of fun! I''ve never been in a movie before.
+
+    User 1: It''s definitely an experience. It''s a lot of work, but it''s also a lot of fun.
+
+    User 2: I''m sure it is. So, what''s it like being an actor?
+
+    User 1: It''s great! I love being able to play different characters and tell stories. It''s a really rewarding job.
+
+    User 2: It sounds like you really enjoy your job.
+
+    User 1: I do! It''s the best job in the world.
+
+    User 2: I''m glad to hear that. It sounds like you''re really passionate about your work.
+
+    User 1: I am. I love acting. It''s my dream job.
+
+    User 2: That''s great! I''m glad you''re happy with your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

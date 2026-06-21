@@ -1,0 +1,66 @@
+id: 00006293
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6293
+data:
+  user 1 personas: 'I sell cosmetics in my spare time.
+
+    I am a special ed teacher.
+
+    And , i love psychoanalyzing my friends.
+
+    I love rage metal music.'
+  user 2 personas: 'I have two cats.
+
+    I need extra iron in my diet.
+
+    I am in love with adam levine.
+
+    I have two children under ten.
+
+    I love eating kale.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a special ed teacher.
+
+    User 1: That sounds like a rewarding job.
+
+    User 2: It is. I love working with kids.
+
+    User 1: Me too. I have two children under ten.
+
+    User 2: Oh, really? What are their names?
+
+    User 1: Their names are [child names].
+
+    User 2: Cute. I have two cats.
+
+    User 1: Cats are cool. I love animals.
+
+    User 2: Me too. I''m a vegan.
+
+    User 1: Really? That''s interesting. Why did you become a vegan?
+
+    User 2: I learned about the cruelty of the meat industry and I just couldn''t support it anymore.
+
+    User 1: I can respect that. I try to eat meatless meals as often as I can.
+
+    User 2: That''s great. We should start a vegan club.
+
+    User 1: That would be fun! I''m sure we could find some other people who are interested.
+
+    User 2: I''m sure we could. We could meet up once a week and cook vegan food together.
+
+    User 1: That sounds like a great idea. I''m in!
+
+    User 2: Awesome! I''ll start working on the details.
+
+    User 1: Great. I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

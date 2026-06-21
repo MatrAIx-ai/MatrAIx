@@ -1,0 +1,70 @@
+id: 00000902
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 902
+data:
+  user 1 personas: 'I am a musician.
+
+    I have been working the same job for two years.
+
+    I like to play video games.
+
+    My favorite band is hop along.'
+  user 2 personas: 'I work at a animal clinic.
+
+    I love the summer.
+
+    I have two kids i enjoy being on social media.
+
+    I love mexican food.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], what''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a pet clinic.
+
+    User 1: Cool, I''m a musician.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I play in a band called Hop Along.
+
+    User 2: I''ve never heard of them, but I''ll check them out.
+
+    User 1: Thanks, I hope you like them.
+
+    User 2: What''s your favorite thing about being a musician?
+
+    User 1: I love the creative process of writing music and performing it live.
+
+    User 2: That sounds really fun. I''m more of a behind-the-scenes kind of person.
+
+    User 1: That''s cool too. What do you do at your clinic?
+
+    User 2: I''m a veterinary technician, so I help the doctors with everything from taking care of the animals to cleaning up after them.
+
+    User 1: That sounds like a lot of work, but it''s probably really rewarding.
+
+    User 2: It is. I love working with animals.
+
+    User 1: I can understand that. I love my cat.
+
+    User 2: Me too! I have two dogs and a cat.
+
+    User 1: That''s a lot of pets!
+
+    User 2: I know, but I love them all.
+
+    User 1: I''m sure they love you too.
+
+    User 2: I know they do. They''re my best friends.
+
+    User 1: I''m glad you have such a great family.
+
+    User 2: Me too. I wouldn''t trade them for anything.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

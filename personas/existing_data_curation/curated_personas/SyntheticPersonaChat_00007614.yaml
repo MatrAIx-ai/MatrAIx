@@ -1,0 +1,52 @@
+id: '00007614'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7614
+data:
+  user 1 personas: 'I like to draw and paint in my spare time.
+
+    My house is paid for.
+
+    I drive a four wheel drive vehicle.
+
+    My favorite color is blue.
+
+    I wear a uniform to work.'
+  user 2 personas: 'My dad works at the mill and my mom is a teacher.
+
+    I live in a house.
+
+    I have a lot of friends.
+
+    I love dogs and cats.'
+  Best Generated Conversation: 'User 1: What do you like to do in your spare time?
+
+    User 2: I like to draw and paint. I also like to play video games and go for walks.
+
+    User 1: That sounds like fun! I love to draw and paint too. What kind of things do you like to draw?
+
+    User 2: I like to draw animals and landscapes. I also like to draw imaginary creatures.
+
+    User 1: That''s cool! I like to draw people and animals. I also like to draw cartoons.
+
+    User 2: I love cartoons! I used to watch a lot of cartoons when I was younger.
+
+    User 1: Me too! I still watch cartoons sometimes.
+
+    User 2: What''s your favorite cartoon?
+
+    User 1: I don''t have a favorite cartoon, but I like a lot of them. I like Adventure Time, Gravity Falls, and Steven Universe.
+
+    User 2: Those are all great cartoons! I love Adventure Time and Steven Universe.
+
+    User 1: Me too! I''m so excited for the next season of Adventure Time.
+
+    User 2: Me too! I''m also excited for the next season of Steven Universe.
+
+    User 1: I''m sure they''ll both be great!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

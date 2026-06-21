@@ -1,0 +1,72 @@
+id: 00002180
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2180
+data:
+  user 1 personas: 'I grew up in nevada.
+
+    I like dogs.
+
+    I am an orphan.
+
+    I used to fly planes for a living.
+
+    I now live in new mexico.'
+  user 2 personas: 'My girlfriend lives in salt lake city.
+
+    I am afraid of spiders.
+
+    I have 2 beagles named chance and boomer.
+
+    Both of my parents are in the military.
+
+    I am a pilot.'
+  Best Generated Conversation: 'User 1: Hello! I''m from New Mexico.
+
+    User 2: Hi! I''m from Salt Lake City.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fly planes, go hiking, and play with my dogs.
+
+    User 1: That''s cool! I used to fly planes for a living.
+
+    User 2: Really? That''s awesome! What kind of planes did you fly?
+
+    User 1: I flew Cessnas and Pipers.
+
+    User 2: Those are nice planes.
+
+    User 1: What kind of dogs do you have?
+
+    User 2: I have two beagles named Chance and Boomer.
+
+    User 1: Beagles are great dogs! I used to have a beagle named Scout.
+
+    User 2: That''s a cute name!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a pilot for a small airline.
+
+    User 1: That''s cool! I''m a software engineer.
+
+    User 2: That''s a good job!
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do in New Mexico?
+
+    User 1: I like to go hiking, camping, and fishing.
+
+    User 2: Those are all great things to do in New Mexico.
+
+    User 1: Yeah, they are.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00001261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1261
+data:
+  user 1 personas: 'I enjoy comedies.
+
+    I am bald with a thick beard.
+
+    I wear nice clothes.
+
+    I work as an attorney.'
+  user 2 personas: 'There are thorns tattooed on my toes.
+
+    I only wear silver jewelry.
+
+    I work in a doctors office.
+
+    I have a rose tattooed on my right ankle.
+
+    I am studying to be a dental hygienist but i hate seeing patients saliva.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you do for work?
+
+    User 2: I work in a doctor''s office.
+
+    User 1: Oh, that''s cool! I''m an attorney.
+
+    User 2: Really? That''s so interesting! What kind of law do you practice?
+
+    User 1: I practice family law.
+
+    User 2: Oh, that must be interesting. I''m actually studying to be a dental hygienist, but I hate seeing patients saliva.
+
+    User 1: That''s understandable. I''m sure you''ll do great at it!
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch movies, go out to eat, and hang out with my friends.
+
+    User 1: Nice! I like to watch comedies and go to nice restaurants.
+
+    User 2: Me too! I love comedies.
+
+    User 1: I''m glad we have that in common.
+
+    User 2: Me too!
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: I have a lot of favorite movies, but I think my favorite is "The Princess Bride."
+
+    User 1: That''s a classic! I love that movie too.
+
+    User 2: Me too! It''s so funny and charming.
+
+    User 1: I agree!
+
+    User 2: I''m so glad we''re getting along so well.
+
+    User 1: Me too! I think we''re going to be good friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00003513'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3513
+data:
+  user 1 personas: 'I work at a coffee shop.
+
+    I drive a prius.
+
+    My mom was a hairdresser.
+
+    My favorite color is red.
+
+    I love to dance.'
+  user 2 personas: 'I was adopted.
+
+    I met my birth mother when i was sixteen.
+
+    I have several siblings i do not know.
+
+    Christmas is my favorite holiday.
+
+    I work at a local party store.'
+  Best Generated Conversation: 'User 1: Hey! What do you do for work?
+
+    User 2: I work at a local party store.
+
+    User 1: Oh, that''s cool! I like parties.
+
+    User 2: Yeah, they''re pretty fun. I like getting to decorate and set up the party venues.
+
+    User 1: I bet! I love decorating too. My favorite color to use is red.
+
+    User 2: Red is a great color! It''s so festive and cheerful.
+
+    User 1: Thanks! I love Christmas too! It''s my favorite holiday.
+
+    User 2: Me too! I love getting to spend time with my family and friends.
+
+    User 1: Yeah, that''s the best part of Christmas. I love getting to eat all the yummy food too.
+
+    User 2: Me too! Christmas is the perfect time to indulge.
+
+    User 1: I''m so glad we met! You seem like a really cool person.
+
+    User 2: Thanks! You too!
+
+    User 1: Do you want to hang out sometime?
+
+    User 2: Sure! I''d love to.
+
+    User 1: Great! We can go to a party or something.
+
+    User 2: That sounds like fun! I''ll see you there.
+
+    User 1: See you later!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

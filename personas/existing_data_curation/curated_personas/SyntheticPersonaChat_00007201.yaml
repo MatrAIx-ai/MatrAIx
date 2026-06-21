@@ -1,0 +1,100 @@
+id: '00007201'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7201
+data:
+  user 1 personas: 'I once ran the mile in under 4 minutes.
+
+    My dad was a cop until he was killed.
+
+    My favorite activity is fishing.
+
+    My favorite thing to do is float the river.
+
+    I cannot go a single day without eating ice cream.'
+  user 2 personas: 'I like to come up with new hairstyles.
+
+    I like to pickle eggs.
+
+    I like to play volleyball.
+
+    I like to do my nails.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to play volleyball, pickle eggs, come up with new hairstyles, and do my nails.
+
+    User 1: That''s cool! I like to fish, float the river, and eat ice cream.
+
+    User 2: Fishing sounds fun! I''ve never been on a float trip before.
+
+    User 1: It''s a lot of fun! You should try it sometime.
+
+    User 2: I will! Ice cream sounds delicious too.
+
+    User 1: It is! I have to have it at least once a day.
+
+    User 2: That''s a lot of ice cream!
+
+    User 1: I know, I know. I''m a bit of a chocoholic.
+
+    User 2: Haha, well, I''m a bit of a pickle fanatic.
+
+    User 1: Pickles are good! I like them with burgers.
+
+    User 2: Me too! They''re also good with eggs.
+
+    User 1: I''ve never tried that.
+
+    User 2: It''s really good! You should try it.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a hair stylist.
+
+    User 1: Oh, cool! I''ve always wanted to learn how to do hair.
+
+    User 2: It''s a lot of fun!
+
+    User 1: I bet it is.
+
+    User 2: It is! I love getting to help people look and feel their best.
+
+    User 1: That''s great! I''m sure you''re very good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it sounds like you have a lot of fun hobbies.
+
+    User 2: I do! I like to keep busy.
+
+    User 1: That''s good! I''m the same way.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you like to do for fun on the weekends?
+
+    User 2: I usually like to go out with friends, or watch a movie.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: I''m glad!
+
+    User 1: I''m sure we''ll get along great.
+
+    User 2: I''m sure we will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

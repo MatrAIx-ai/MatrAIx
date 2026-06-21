@@ -1,0 +1,76 @@
+id: '00000136'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 136
+data:
+  user 1 personas: 'I love cats.
+
+    I am slightly overweight , but my doctors say i m healthy.
+
+    I m a lesbian.
+
+    I decorate cakes for a living.
+
+    I play a lot of video games.'
+  user 2 personas: 'I love lasagna like i m garfield.
+
+    I want to be an astronaut when i grow up.
+
+    My two dogs are the best friends a girl could have.
+
+    Penn teller are my favorite magicians.
+
+    I have a poster of neil tyson degrasse on my wall.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to play video games, watch TV, and read. I also love cats.
+
+    User 1: Me too! I love cats too. I have two cats of my own.
+
+    User 2: Oh, that''s great! What are their names?
+
+    User 1: Their names are Mittens and Oliver.
+
+    User 2: Those are adorable names!
+
+    User 1: Thanks! What video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but my favorite is probably The Legend of Zelda.
+
+    User 1: Oh, that''s a great game! I love the Zelda series too.
+
+    User 2: Me too! I''m so excited for the new one coming out.
+
+    User 1: Me too! I''ve been waiting for it for years.
+
+    User 2: Me too! It looks like it''s going to be amazing.
+
+    User 1: I hope so! I''m sure it will be.
+
+    User 2: Me too!
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be an astronaut. I''ve always loved space and astronomy.
+
+    User 1: That''s awesome! I''ve always wanted to be an astronaut too, but I know it''s really hard to get into the space program.
+
+    User 2: I know it is, but I''m determined to try.
+
+    User 1: I''m sure you''ll do great!
+
+    User 2: Thanks! I hope so!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to read, play video games, watch TV, and hang out with friends.
+
+    User 1: Me too! I love doing all of those things.
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: That would be fun! Let''s exchange numbers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

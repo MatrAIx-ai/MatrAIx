@@ -1,0 +1,64 @@
+id: '00001473'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1473
+data:
+  user 1 personas: 'We have two kids.
+
+    I graduated with a nursing degree.
+
+    Helping people makes me happy.
+
+    My favorite food is sushi.'
+  user 2 personas: 'I like to try different beers from various countries.
+
+    My favorite music genre is classic rock.
+
+    I like to work on cars.
+
+    I enjoy playing recreational games like cards , darts or billiards.'
+  Best Generated Conversation: 'User 1: Hello, nice to meet you!
+
+    User 2: Hello, nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy trying different beers from various countries, working on cars, and playing recreational games like cards, darts, or billiards.
+
+    User 1: That sounds like a lot of fun! I like trying different foods, especially sushi. I also like working on projects around the house.
+
+    User 2: I''ve never tried sushi, but I''ve heard good things about it. I like working on projects around the house too, but I''m not very good at it.
+
+    User 1: Sushi is delicious! You should definitely try it sometime. And don''t worry, you''ll get better at working on projects around the house the more you do it.
+
+    User 2: I''ll definitely try it! And I''m sure I will get better with time.
+
+    User 1: I''m glad to hear that. So, what''s your favorite beer?
+
+    User 2: I really like IPAs, especially ones from the Pacific Northwest.
+
+    User 1: I''ve never had an IPA, but I''ve heard they''re good. I''ll have to try one sometime.
+
+    User 2: You should! I think you''ll like them.
+
+    User 1: I''m looking forward to it. So, what do you like about working on cars?
+
+    User 2: I like the challenge of it, and I like seeing the finished product.
+
+    User 1: I can understand that. I like the feeling of accomplishment when I finish a project.
+
+    User 2: Me too. It''s a great feeling.
+
+    User 1: So, what''s your favorite game to play?
+
+    User 2: I like playing cards, darts, and billiards.
+
+    User 1: I''ve never played darts or billiards, but I like playing cards too.
+
+    User 2: You should try them sometime. They''re both a lot of fun.
+
+    User 1: I will! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

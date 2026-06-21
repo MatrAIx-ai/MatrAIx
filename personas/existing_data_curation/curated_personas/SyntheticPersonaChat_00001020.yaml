@@ -1,0 +1,80 @@
+id: '00001020'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1020
+data:
+  user 1 personas: 'I have two dogs.
+
+    I lease my car.
+
+    I work in accounting.
+
+    I like potatoes.
+
+    I am male.'
+  user 2 personas: 'I speak fluent italian.
+
+    I have one blue eye and one hazel eye.
+
+    My brother is an archaeologist.
+
+    I am a cat owner.
+
+    My mom is an osteopath.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name]. What do you like to do for fun?
+
+    User 1: I like to play video games, work out, and spend time with my dogs.
+
+    User 2: Nice! I like to read, go to the movies, and hang out with my cat.
+
+    User 1: I love cats! I''ve never owned one, but I''ve always wanted one.
+
+    User 2: They''re great pets! They''re independent and they''re always there to greet you when you come home.
+
+    User 1: I can see why you''re so fond of them!
+
+    User 2: Yeah, I''m a big cat person.
+
+    User 1: What''s your favorite book?
+
+    User 2: I''m not sure I have a favorite book, but I really enjoyed "The Martian" by Andy Weir.
+
+    User 1: I''ve heard good things about that book! I''ve been meaning to read it.
+
+    User 2: It''s a really good book. It''s a science fiction novel about a guy who gets stranded on Mars and has to figure out how to survive.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I have a lot of favorite movies, but one of my favorites is "The Princess Bride."
+
+    User 1: I love that movie! It''s so funny and heartwarming.
+
+    User 2: It''s a classic! I''ve seen it so many times, but I never get tired of it.
+
+    User 1: Me neither! It''s always fun to watch.
+
+    User 2: What''s your favorite food?
+
+    User 1: I like potatoes! They''re so versatile and they can be cooked in so many different ways.
+
+    User 2: I love potatoes too! They''re one of my favorite foods.
+
+    User 1: What''s your favorite way to eat potatoes?
+
+    User 2: I like them mashed, fried, or baked.
+
+    User 1: I love them mashed too! I like to add butter, sour cream, and chives.
+
+    User 2: That sounds delicious! I''ll have to try that.
+
+    User 1: You should! It''s so good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

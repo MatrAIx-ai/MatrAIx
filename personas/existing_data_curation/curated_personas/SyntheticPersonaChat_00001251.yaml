@@ -1,0 +1,84 @@
+id: '00001251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1251
+data:
+  user 1 personas: 'I am very social.
+
+    I am in college.
+
+    I exercise.
+
+    I play football.'
+  user 2 personas: 'I like rap music.
+
+    I live on a farm.
+
+    I have a beard.
+
+    I graduated high school.
+
+    I drive a truck.'
+  Best Generated Conversation: 'User 1: Do you like rap music?
+
+    User 2: Yeah, I love it! What''s your favorite song?
+
+    User 1: I like "The Next Episode" by Dr. Dre.
+
+    User 2: That''s a great song! I also like "In Da Club" by 50 Cent.
+
+    User 1: I love that song too! What other artists do you like?
+
+    User 2: I like Kanye West, Kendrick Lamar, and Drake.
+
+    User 1: Me too! I''m also a big fan of J. Cole and Lil Wayne.
+
+    User 2: Those are all great artists! I''m glad we have similar taste in music.
+
+    User 1: Me too! Do you like to go to concerts?
+
+    User 2: Yeah, I love going to concerts! I''ve seen Kanye West, Kendrick Lamar, and Drake in concert.
+
+    User 1: That''s awesome! I''ve seen Kanye West, Kendrick Lamar, and Lil Wayne in concert.
+
+    User 2: We should go to a concert together sometime!
+
+    User 1: That would be awesome! I''d love to go to a concert with you.
+
+    User 2: Great! We can talk about it more later.
+
+    User 1: Sounds good!
+
+    User 2: What do you do for fun?
+
+    User 1: I like to play football, exercise, and hang out with friends.
+
+    User 2: That sounds like fun! I like to play football too.
+
+    User 1: Cool! We should play football together sometime.
+
+    User 2: That would be awesome!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go to the gym, listen to music, and watch football.
+
+    User 1: I like to do those things too! We should do something together sometime.
+
+    User 2: That sounds like fun!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a farmer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a farmer.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. I''m glad you enjoy it.
+
+    User 2: I do! It''s a great way to live.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

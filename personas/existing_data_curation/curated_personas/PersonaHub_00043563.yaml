@@ -1,0 +1,18 @@
+id: '00043563'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43563
+persona_description: A scientist who conducts research on the movements and habitat use of West Indian manatees in the northern Gulf of Mexico. The scientist is interested in understanding how manatees
+  use ship channels and how this can impact their safety. The scientist uses satellite tracking, citizen-sourced sightings, and environmental attributes to analyze manatee movement patterns. The scientist
+  is also interested in predicting when and how marine megafauna use ship channels and evaluating risks associated with channel use.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: marine biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: marine megafauna behavior
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

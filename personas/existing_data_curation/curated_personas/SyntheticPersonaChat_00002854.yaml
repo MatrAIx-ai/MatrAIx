@@ -1,0 +1,60 @@
+id: 00002854
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2854
+data:
+  user 1 personas: 'I live near the ocean.
+
+    I only wear tennis shoes.
+
+    I eat a lot of fish.
+
+    I own a boat.'
+  user 2 personas: 'I have two cats , milo and fio.
+
+    My brother works at best buy.
+
+    My favorite sport is soccer.
+
+    I am canadian.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1). What''s your name?
+
+    User 2: Hi! I''m (user 2). It''s nice to meet you!
+
+    User 1: Nice to meet you too! What are you doing today?
+
+    User 2: I''m just hanging out with my cats, Milo and Fio.
+
+    User 1: That sounds nice. I love cats! Do you have any other pets?
+
+    User 2: No, just the two cats.
+
+    User 1: Do you like to go fishing?
+
+    User 2: I love to go fishing! I have a boat and I love to take it out on the ocean.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to go fishing, but I''ve never had the chance.
+
+    User 2: You should definitely try it! It''s a lot of fun and you can catch some really good fish.
+
+    User 1: I''ll have to give it a try sometime. What''s your favorite sport?
+
+    User 2: My favorite sport is soccer. I love playing and watching it.
+
+    User 1: I love watching soccer too! I''m not very good at playing it, but I love watching it.
+
+    User 2: That''s cool! Where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, I''m from Canada.
+
+    User 1: That''s cool! I''ve always wanted to visit Canada.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

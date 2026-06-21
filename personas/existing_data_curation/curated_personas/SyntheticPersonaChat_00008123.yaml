@@ -1,0 +1,64 @@
+id: 00008123
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8123
+data:
+  user 1 personas: 'This past summer i hiked the appalachian trail.
+
+    I am a short order cook at a local diner.
+
+    I have a terrible singing voice.
+
+    Under a pen name , i write romance books.
+
+    I used to follow the grateful dead when they toured.'
+  user 2 personas: 'I like chicken nuggets.
+
+    I work at a hotel.
+
+    I love animals.
+
+    My favorite band is a fine frenzy.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s yours?
+
+    User 2: Hi, nice to meet you. My name is [name].
+
+    User 1: It''s nice to meet you too. What do you do for fun?
+
+    User 2: I like to go to concerts, read books, and play with my dog.
+
+    User 1: That sounds fun! I like to do a lot of those things too.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read romance novels, historical fiction, and fantasy.
+
+    User 2: I like to read romance novels too! What''s your favorite book?
+
+    User 1: My favorite book is "Pride and Prejudice" by Jane Austen.
+
+    User 2: I love that book too! It''s so well written.
+
+    User 1: It is! I love the characters and the story.
+
+    User 2: Me too! I''ve read it multiple times.
+
+    User 1: Me too! Have you read any other Jane Austen books?
+
+    User 2: I''ve read "Sense and Sensibility" and "Emma". I also started reading "Persuasion" but I haven''t finished it yet.
+
+    User 1: I''ve read "Sense and Sensibility" and "Persuasion" too. I really liked "Persuasion".
+
+    User 2: I''m looking forward to finishing it. I''ve heard good things about it.
+
+    User 1: You won''t be disappointed.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to concerts, read books, and play with my dog.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

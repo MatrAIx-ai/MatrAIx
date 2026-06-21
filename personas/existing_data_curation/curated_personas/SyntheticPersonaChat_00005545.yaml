@@ -1,0 +1,72 @@
+id: '00005545'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5545
+data:
+  user 1 personas: 'I have a beautiful rose garden.
+
+    My parents met at woodstock.
+
+    I love starbucks coffee.
+
+    I was a swimmer in college.
+
+    I have a cat named pickles.'
+  user 2 personas: 'I drink lots of iced tea.
+
+    I teach first grade.
+
+    I married my high school sweetheart.
+
+    I love to go shopping.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go shopping and read.
+
+    User 1: I love to read too! What are you reading right now?
+
+    User 2: I''m reading the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard good things about that series. I''ve never read it, but I''ve seen the TV show.
+
+    User 2: The show is good, but the books are even better.
+
+    User 1: I''ll have to check them out. I love historical fiction.
+
+    User 2: Me too! It''s my favorite genre.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go to the movies, go out to eat, and spend time with my family.
+
+    User 1: Sounds like we have a lot in common. I like to do all of those things too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: I''d love to.
+
+    User 2: Great! Let''s exchange numbers.
+
+    User 1: Okay. Here''s my number.
+
+    User 2: Thanks. Here''s mine.
+
+    User 1: It was nice talking to you.
+
+    User 2: You too. I hope we can hang out soon.
+
+    User 1: Me too! Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

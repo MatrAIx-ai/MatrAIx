@@ -1,0 +1,18 @@
+id: 00025449
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25449
+persona_description: A welding cost estimator who is interested in using the MIG Welding Cost Model in Costimator to estimate the cost of welding multiple parts with varying weld sizes and distances. This
+  persona is likely to be a manufacturing or engineering professional who needs to optimize welding operations and minimize costs. They are likely to have knowledge of welding processes, equipment, and
+  cost estimation methodologies.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: welding engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: welding engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

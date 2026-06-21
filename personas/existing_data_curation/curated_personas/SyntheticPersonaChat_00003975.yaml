@@ -1,0 +1,48 @@
+id: 00003975
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3975
+data:
+  user 1 personas: 'I have a gambling problem.
+
+    I always eat my vegetables.
+
+    I am fluent in spanish.
+
+    I love talking on the phone.
+
+    I love to go hiking.'
+  user 2 personas: 'I enjoy watching tennis and golf on tv.
+
+    My name is sarah.
+
+    I m a school teacher.
+
+    I love to read and relax by the lake on the weekends.'
+  Best Generated Conversation: 'User 1: Hi! I''m Sarah.
+
+    User 2: Hi Sarah, I''m Maria. What do you do for fun?
+
+    User 1: I love to hike and read. I also love to watch tennis and golf on TV.
+
+    User 2: That''s cool. I like to relax by the lake on the weekends. I''m also a school teacher.
+
+    User 1: That''s a great job! I''m always impressed by teachers.
+
+    User 2: Thanks! It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. Maybe I''ll go hiking or read a book.
+
+    User 1: That sounds like a good plan. I''m going to go hiking with my friends.
+
+    User 2: That sounds fun! I hope you have a great time.
+
+    User 1: Thanks! I hope you have a great weekend too.
+
+    User 2: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

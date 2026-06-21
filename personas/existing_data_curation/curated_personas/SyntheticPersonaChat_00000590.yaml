@@ -1,0 +1,64 @@
+id: 00000590
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 590
+data:
+  user 1 personas: 'I am a teacher.
+
+    I do yoga every morning.
+
+    I drink coffee every day.
+
+    I love chocolate.'
+  user 2 personas: 'I love children.
+
+    I just graduated college with my bachelor s degree in education.
+
+    I am twenty two years old.
+
+    I just accepted a job at the elementary school in my hometown.
+
+    I just moved into an apartment within the vicinity of my new job.'
+  Best Generated Conversation: 'User 1: Hi, I''m a teacher!
+
+    User 2: Hi, me too! I just graduated college and accepted a job at the elementary school in my hometown.
+
+    User 1: That''s awesome! Congratulations!
+
+    User 2: Thank you! I''m so excited to start teaching.
+
+    User 1: Me too! I''ve been teaching for a few years now, and I love it.
+
+    User 2: What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That''s great! I love kindergarten. Kids are so fun at that age.
+
+    User 1: They are! I love getting to teach them new things and watch them learn.
+
+    User 2: I''m sure you''re a great teacher.
+
+    User 1: Thank you! I try my best.
+
+    User 2: I''m sure you do. So, what do you like to do for fun?
+
+    User 1: I love to do yoga, drink coffee, and eat chocolate.
+
+    User 2: Yoga, coffee, and chocolate? That''s my kind of person!
+
+    User 1: What about you? What do you like to do for fun?
+
+    User 2: I love to read, watch movies, and spend time with my friends and family.
+
+    User 1: Sounds like we have a lot in common.
+
+    User 2: I think so too!
+
+    User 1: Well, it was nice chatting with you. I hope you have a great day!
+
+    User 2: Thank you! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

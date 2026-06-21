@@ -1,0 +1,64 @@
+id: '00002431'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2431
+data:
+  user 1 personas: 'I avoid eating sugar.
+
+    I like rollerblading.
+
+    My favorite sport is hockey.
+
+    I try to eat a balanced diet.'
+  user 2 personas: 'I am a teacher.
+
+    I drink coffee every day.
+
+    I have a twin sister.
+
+    I do yoga every morning.
+
+    I love chocolate.'
+  Best Generated Conversation: 'User 1: Hi! What are your hobbies?
+
+    User 2: I like to rollerblade, and I also do yoga every morning.
+
+    User 1: That''s cool! I''ve always wanted to try rollerblading, but I''m afraid I''ll fall and hurt myself.
+
+    User 2: It''s not as hard as it looks! You just have to be careful and take your time.
+
+    User 1: Maybe I''ll give it a try one day.
+
+    User 2: I''m sure you''ll love it!
+
+    User 1: What else do you like to do?
+
+    User 2: I''m a teacher, and I love my job. I also have a twin sister, and we''re very close.
+
+    User 1: That''s great! I''m a student, and I like my classes. I don''t have any siblings, but I''m close to my cousins.
+
+    User 2: That''s cool! I love having a twin sister. It''s always nice to have someone who knows you inside and out.
+
+    User 1: I can imagine! I''m sure you two get into a lot of trouble together.
+
+    User 2: We do! But we always have each other''s backs.
+
+    User 1: That''s what sisters are for!
+
+    User 2: Exactly!
+
+    User 1: So, what''s your favorite thing to do on your days off?
+
+    User 2: I like to relax and spend time with my family. I also like to go out with friends, and I love to travel.
+
+    User 1: That sounds like a lot of fun! I like to relax and spend time with my family too. I also like to go out with friends, but I don''t travel as much as I''d like to.
+
+    User 2: That''s okay! You can always travel more in the future.
+
+    User 1: I hope so!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

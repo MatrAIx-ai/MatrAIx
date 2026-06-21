@@ -1,0 +1,68 @@
+id: '00003226'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3226
+data:
+  user 1 personas: 'I work 40 hours a week.
+
+    I try to do my job as best as i can.
+
+    I am very polite and courteous.
+
+    I look forward to eating at restaurants.'
+  user 2 personas: 'I am single and live alone.
+
+    I make robots for a living.
+
+    I eat mainly chinese food.
+
+    I am a night owl.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I work as a robotics engineer.
+
+    User 1: That''s so cool! I''ve always been interested in robotics.
+
+    User 2: It''s a lot of fun! I get to build and design robots all day.
+
+    User 1: Do you have a favorite robot that you''ve built?
+
+    User 2: I have a few, but my favorite is probably the one that I built for my senior project. It was a robot that could walk and talk.
+
+    User 1: That''s awesome! Do you still have it?
+
+    User 2: Unfortunately, no. I had to give it back to the university when I graduated.
+
+    User 1: That''s too bad. I''m sure it was amazing.
+
+    User 2: It was! It was the best robot I''ve ever built.
+
+    User 1: What are you working on now?
+
+    User 2: Right now, I''m working on a robot that can help people with disabilities.
+
+    User 1: That''s great! I''m sure that will be a lot of help.
+
+    User 2: I hope so! It''s really exciting to be working on something that could make a real difference in people''s lives.
+
+    User 1: I''m sure it will! Do you have any other hobbies?
+
+    User 2: I love to cook. I''m always trying new recipes.
+
+    User 1: That''s awesome! Do you have a favorite dish that you like to make?
+
+    User 2: I love making Chinese food. I''m not sure why, but I just love the flavors.
+
+    User 1: That''s great! I love Chinese food too. What''s your favorite dish to make?
+
+    User 2: I love making dumplings. They''re so delicious and easy to make.
+
+    User 1: I''ve never made dumplings before. I should try it sometime.
+
+    User 2: You should! They''re really easy and they''re so good.
+
+    User 1: I will! Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

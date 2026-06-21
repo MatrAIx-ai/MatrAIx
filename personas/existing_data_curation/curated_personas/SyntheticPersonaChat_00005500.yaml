@@ -1,0 +1,84 @@
+id: '00005500'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5500
+data:
+  user 1 personas: 'I am excellent at playing pool.
+
+    I still like unicorns even though i m an adult.
+
+    I would love to visit the pyramids.
+
+    I want to write a book before i die.
+
+    I teach middle school art.'
+  user 2 personas: 'I live with my parents.
+
+    I just lost my job and i m looking for something new.
+
+    I m bisexual.
+
+    I get sad a lot.
+
+    I think i might need help.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name], nice to meet you!
+
+    User 2: Hi, I''m [user 2 name], it''s nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, write, and play pool.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I really like fantasy and science fiction.
+
+    User 1: I love fantasy and science fiction too! What are some of your favorite fantasy books?
+
+    User 2: I love the Harry Potter series, The Lord of the Rings, and The Chronicles of Narnia.
+
+    User 1: Those are all great books! I love them too.
+
+    User 2: What are some of your favorite science fiction books?
+
+    User 1: I love the Ender''s Game series, The Hitchhiker''s Guide to the Galaxy, and Dune.
+
+    User 2: Those are all great books! I love them too.
+
+    User 1: It''s always nice to meet someone who loves to read.
+
+    User 2: Yeah, it is! I don''t know many people who like to read as much as I do.
+
+    User 1: Well, now you have someone to talk to about books!
+
+    User 2: Yeah, that''s true! I''m glad I met you.
+
+    User 1: Me too!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a middle school art teacher.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be an artist.
+
+    User 1: It''s a lot of fun! I get to help kids express themselves creatively.
+
+    User 2: That sounds really rewarding.
+
+    User 1: It is! I love it.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to visit the pyramids!
+
+    User 2: The pyramids? That''s awesome! I''ve always wanted to go there.
+
+    User 1: Me too! I''m so excited.
+
+    User 2: Well, have fun! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

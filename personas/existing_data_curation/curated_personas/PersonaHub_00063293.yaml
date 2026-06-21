@@ -1,0 +1,19 @@
+id: 00063293
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63293
+persona_description: An ALMA system operator who is responsible for managing and operating the telescope, ensuring that the spectral windows within the specified ranges are correctly placed and utilized,
+  and addressing any issues related to the constraining requirements of the 15/16 effective bandwidth of the spectral windows. This persona must have expertise in ALMA system operations, knowledge of spectral
+  window design and placement, and the ability to navigate and resolve issues related to the constraints placed on the IF and RF ranges. They must also be able to work with the OT software and troubleshoot
+  any bugs that may affect the spectral setups at the extreme edges of the IF.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Radio Astronomy/Telecommunications Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: ALMA System Operations
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,48 @@
+id: 00008738
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8738
+data:
+  user 1 personas: 'My mother stayed at home all day to raise me and my siblings.
+
+    I can t stand salads.
+
+    I graduated valedictorian of my high school class.
+
+    I had to drop out of college to help with my grandparents.'
+  user 2 personas: 'When people don t like my social media posts , it upsets me.
+
+    I like to cook new recipes.
+
+    I m from austin , texas.
+
+    I post a lot about the food i eat on social media.
+
+    I like every post i see on social media.'
+  Best Generated Conversation: 'User 1: I had to drop out of college to help with my grandparents.
+
+    User 2: I''m so sorry to hear that. I hope they''re doing okay now.
+
+    User 1: Thank you. They''re doing much better now.
+
+    User 2: That''s good to hear.
+
+    User 1: I''m glad you''re not upset when people don''t like your social media posts.
+
+    User 2: I try not to be. I know that not everyone is going to like everything I post, and that''s okay.
+
+    User 1: I guess I need to learn to be more like that. I take it really personally when people don''t like my posts.
+
+    User 2: It''s hard not to take it personally, but it''s not always worth it. Just focus on the people who do like your posts and the people who support you.
+
+    User 1: That''s good advice. I''ll try to do that.
+
+    User 2: Good. I''m glad I could help.
+
+    User 1: Me too. Thanks for talking to me.
+
+    User 2: No problem. Anytime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00008731
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8731
+data:
+  user 1 personas: 'I m looking forward to reading the latest political thriller.
+
+    I drive a honda that s seen better days.
+
+    Sometimes , i sit by strangers on the subway and strike up a conversation.
+
+    I love watching sitcoms on television.
+
+    I listen to a fall out boy record every day.'
+  user 2 personas: 'I am a huge fan of baseball.
+
+    My favorite player is mike trout.
+
+    I am going to be the starting shortstop.
+
+    I recently made the college baseball team.'
+  Best Generated Conversation: 'User 1: Hey, what are your interests?
+
+    User 2: I love baseball! I''m going to be the starting shortstop for the college baseball team.
+
+    User 1: That''s awesome! I''m not much of a sports person, but I do love watching sitcoms on television.
+
+    User 2: I''m not a big TV watcher, but I do like political thrillers.
+
+    User 1: Oh, that''s cool! I''m looking forward to reading the latest political thriller.
+
+    User 2: What''s it about?
+
+    User 1: It''s about a political conspiracy. I''m not sure if I can say too much about it, but it''s really exciting.
+
+    User 2: That sounds really interesting! I love thrillers.
+
+    User 1: Me too! I''m always looking for new ones to read.
+
+    User 2: Do you have any recommendations?
+
+    User 1: Sure! I just finished reading The Girl on the Train, and I really enjoyed it. It''s about a woman who witnesses a murder from her train window.
+
+    User 2: That sounds really good! I''ll have to check it out.
+
+    User 1: You should! It''s a really good book.
+
+    User 2: I''m also a big fan of Fall Out Boy. I listen to them every day.
+
+    User 1: Oh, that''s cool! They''re one of my favorite bands too.
+
+    User 2: Have you seen them live?
+
+    User 1: I have! I saw them a few years ago, and it was an amazing concert.
+
+    User 2: I''m so jealous! I''ve always wanted to see them live.
+
+    User 1: You should definitely try to go to one of their concerts. It''s an amazing experience.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

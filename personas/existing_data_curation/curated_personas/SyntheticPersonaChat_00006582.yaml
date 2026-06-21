@@ -1,0 +1,62 @@
+id: 00006582
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6582
+data:
+  user 1 personas: 'I am trying to play in a local band.
+
+    I own 9 guitars.
+
+    I am a vegan.
+
+    I learned piano at age 6.
+
+    I am a fan of system of a down.'
+  user 2 personas: 'I coach the girls volley ball team.
+
+    I enjoy crosswords , crocheting , and football.
+
+    I am allergic to apples yet still eat them.
+
+    I enjoy karaoke every friday night.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Cool, what do you like to do for fun?
+
+    User 2: I like to crochet, play crosswords, and watch football.
+
+    User 1: Oh, that''s cool. I like playing the piano, and I''m trying to start my own band.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I like to play a lot of different genres, but I''m really into rock and metal.
+
+    User 2: Oh, nice! I love rock and metal too. Who are some of your favorite bands?
+
+    User 1: I love System of a Down, Tool, and Deftones.
+
+    User 2: Oh, those are great bands! I love them too.
+
+    User 1: Cool! We should totally start a band together.
+
+    User 2: That would be awesome! I''d love to play with you.
+
+    User 1: Great! Let''s start practicing this weekend.
+
+    User 2: Sounds good! I''m free all weekend.
+
+    User 1: Perfect! We can meet at my house and jam out.
+
+    User 2: Sounds like a plan. I''ll bring the beer.
+
+    User 1: Awesome! I''ll bring the snacks.
+
+    User 2: Sounds like a party!
+
+    User 1: It will be!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

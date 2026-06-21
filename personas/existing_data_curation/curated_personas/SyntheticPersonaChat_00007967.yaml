@@ -1,0 +1,66 @@
+id: 00007967
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7967
+data:
+  user 1 personas: 'My friends and i enjoy golfing on sunny days.
+
+    I am a poet.
+
+    I am the head of the gun club.
+
+    I donate old clothes to the homeless.
+
+    I have a beta fish.'
+  user 2 personas: 'I love reading.
+
+    My favorite band is a fine frenzy.
+
+    I work at a hotel.
+
+    I love animals.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What are you interested in?
+
+    User 2: I love reading, animals, and music.
+
+    User 1: That''s awesome! Me too! I love reading, especially poetry. I also love animals, and I have a beta fish.
+
+    User 2: That''s so cool! I love poetry too, and I used to have a betta fish. What''s your favorite book?
+
+    User 1: My favorite book is "The Great Gatsby" by F. Scott Fitzgerald. It''s such a beautiful and tragic story.
+
+    User 2: I''ve never read it, but I''ve heard great things about it. I''ll have to add it to my list.
+
+    User 1: You should! It''s a really good read. What''s your favorite band?
+
+    User 2: My favorite band is The Fine Frenzy. They''re such a talented band, and their music is so beautiful.
+
+    User 1: I''ve never heard of them, but I''ll check them out. I love discovering new music.
+
+    User 2: You should! I''m sure you''ll love them.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at a hotel. I really enjoy it, and I get to meet a lot of interesting people.
+
+    User 1: That sounds like a fun job! I''ve always thought about working in a hotel.
+
+    User 2: It is! It''s a great way to meet new people and learn about different cultures.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I love to read, go to concerts, and spend time with my family and friends.
+
+    User 1: That''s great! I love to do all of those things too.
+
+    User 2: I''m glad to hear that! We should get together sometime and do something fun.
+
+    User 1: That would be great! I''ll send you a message with my contact information.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00005635'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5635
+data:
+  user 1 personas: 'I wish i knew where i belonged.
+
+    I hate my parents , but i love my job.
+
+    I train horses for a living.
+
+    I write in my spare time.
+
+    I never sleep in.'
+  user 2 personas: 'I enjoy hiking on glaciers.
+
+    Lutefisk is the best dish in the whole world.
+
+    I always seem to be losing things , most recently , my mind.
+
+    I recently moved to sweden.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How are you?
+
+    User 1: I''m doing well, thanks! I''m a horse trainer, and I love my job.
+
+    User 2: That''s great! I love horses too. I''ve been hiking on glaciers in Sweden recently.
+
+    User 1: Oh, that sounds amazing! I''ve never been to Sweden before.
+
+    User 2: You should come! It''s a beautiful country.
+
+    User 1: I will! I''ve heard good things about it.
+
+    User 2: I''m glad! So, what do you like to do for fun?
+
+    User 1: I like to write in my spare time. I''m working on a novel right now.
+
+    User 2: That''s awesome! I love writing too. I''m currently working on a memoir.
+
+    User 1: Oh, that sounds really cool! I''d love to read it when it''s finished.
+
+    User 2: Thanks! I''ll let you know when it''s ready.
+
+    User 1: Great! So, what''s your favorite dish?
+
+    User 2: My favorite dish is lutefisk. It''s a traditional Swedish dish made with dried cod.
+
+    User 1: Oh, I''ve never had lutefisk before. What''s it like?
+
+    User 2: It''s a very rich and flavorful dish. It''s usually served with a cream sauce and mashed potatoes.
+
+    User 1: It sounds delicious! I''ll have to try it sometime.
+
+    User 2: You should! It''s a real Swedish classic.
+
+    User 1: Thanks for the recommendation! I''m glad I met you!
+
+    User 2: Me too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

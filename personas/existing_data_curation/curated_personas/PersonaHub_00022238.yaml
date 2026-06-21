@@ -1,0 +1,19 @@
+id: 00022238
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22238
+persona_description: A healthcare professional with expertise in lung volume reduction surgery, specifically in evaluating patients for candidates and assessing lifestyle changes to improve lung function.
+  They are knowledgeable about minimally invasive and open approaches to surgery, as well as pulmonary rehabilitation. The persona is likely to have a deep understanding of the patient's condition, their
+  medical history, and the potential benefits and risks of the procedure. They are also skilled in conducting assessments and treatments, and are aware of the long-term implications of the surgery on the
+  patient's health and quality of life.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pulmonary surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: lung volume reduction surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

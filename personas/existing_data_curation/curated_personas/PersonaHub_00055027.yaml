@@ -1,0 +1,18 @@
+id: '00055027'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55027
+persona_description: A medical professional who is trained in treating snakebites and has experience in first aid. They are familiar with the symptoms and treatment for snake bites and have knowledge of
+  the specific types of snake bites and their potential effects. They are also knowledgeable about the first aid measures that should be taken to treat snake bites, including applying a pressure bandage,
+  splinting the limb, and calling for medical help if necessary. Additionally, they have experience in identifying the species of snake that caused the bite and administering anti-venom if required.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: herpetology
+  general_domain_top01pct: None
+  specific_domain_top01pct: snakebite treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

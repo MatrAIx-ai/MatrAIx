@@ -1,0 +1,72 @@
+id: '00000570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 570
+data:
+  user 1 personas: 'I am a cyclist.
+
+    My favorite food is pizza.
+
+    My father used to be a cop.
+
+    I am single.'
+  user 2 personas: 'My father is dead.
+
+    My boyfriend is in the army.
+
+    My hair is short.
+
+    I play piano.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I play piano and I love to read.
+
+    User 1: That''s cool. I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially interested in science fiction and fantasy.
+
+    User 1: Oh, me too! I love those genres. What''s your favorite book?
+
+    User 2: It''s hard to choose, but I think my favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: That''s a great book! I love that series.
+
+    User 2: Me too! What''s your favorite book in the series?
+
+    User 1: I think my favorite book is The Restaurant at the End of the Universe.
+
+    User 2: That''s a great choice. I love that book too.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go for walks, bike rides, and play video games.
+
+    User 1: I like to go for walks and bike rides too. I don''t play video games very much, but I used to when I was younger.
+
+    User 2: What kind of video games did you play?
+
+    User 1: I used to play a lot of Mario games and Sonic games.
+
+    User 2: Those are great games. I love Mario games.
+
+    User 1: Me too! They''re so much fun.
+
+    User 2: So, what are you doing tonight?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to play piano. Do you want to come over and listen?
+
+    User 1: Sure, that sounds like fun.
+
+    User 2: Great! I''ll see you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00006046'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6046
+data:
+  user 1 personas: 'I like watching the walking dead.
+
+    I like reading a lot.
+
+    My favorite books are the harry potter books.
+
+    I also enjoy reading the game of thrones series books.
+
+    I practice vegetarianism.'
+  user 2 personas: 'My favorite band is the beatles.
+
+    I am a paramedic.
+
+    I am studying to become a nurse.
+
+    I have three sisters.
+
+    I live in a studio apartment.'
+  Best Generated Conversation: 'User 1: Hello, what do you like to do for fun?
+
+    User 2: Hi, I like to watch the walking dead, and I also enjoy reading a lot.
+
+    User 1: I love the walking dead too! What is your favorite season?
+
+    User 2: I think my favorite season is the first season. I love the way it all started and how the characters develop.
+
+    User 1: I agree, the first season is really good! I also love the character development.
+
+    User 2: I do too. What are some of your favorite books?
+
+    User 1: My favorite books are the Harry Potter series and the Game of Thrones series.
+
+    User 2: I love the Harry Potter series too! I haven''t read the Game of Thrones series yet, but I''ve heard good things about it.
+
+    User 1: You should definitely read it! It''s a great series.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I''m a paramedic.
+
+    User 1: Oh, that''s cool! Do you like it?
+
+    User 2: I love it! It''s a great job.
+
+    User 1: I bet. It sounds like it would be very rewarding.
+
+    User 2: It is. I love helping people.
+
+    User 1: That''s great. So, what are you studying to be?
+
+    User 2: I''m studying to be a nurse.
+
+    User 1: Oh, that''s awesome! Why did you decide to become a nurse?
+
+    User 2: I wanted to be able to help people in a different way.
+
+    User 1: That''s great. I''m sure you''ll be a great nurse.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you. I hope we can chat again soon.
+
+    User 2: It was nice talking to you too. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

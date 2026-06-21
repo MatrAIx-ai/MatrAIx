@@ -1,0 +1,64 @@
+id: 00008303
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8303
+data:
+  user 1 personas: 'During the week i go to college to become a lawyer.
+
+    I live in a tiny house to save money.
+
+    I collect single malt scotch.
+
+    I listen to blues and jazz.'
+  user 2 personas: 'I do not like animals.
+
+    I love cars.
+
+    I like to role play.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thank you for asking.
+
+    User 1: That''s good to hear. What do you do for fun?
+
+    User 2: I like to play video games, go to the movies, and eat pizza.
+
+    User 1: Those are all great hobbies! I also like to play video games and go to the movies.
+
+    User 2: What video games do you like to play?
+
+    User 1: I like to play role-playing games, like Skyrim and The Witcher.
+
+    User 2: I''ve never played any role-playing games, but they sound interesting.
+
+    User 1: They are! You should give them a try.
+
+    User 2: I will! What are your favorite movies?
+
+    User 1: I like a lot of different kinds of movies, but I especially like science fiction and fantasy movies.
+
+    User 2: Me too! I love movies like Star Wars and Lord of the Rings.
+
+    User 1: Those are great movies! I also love the Harry Potter movies.
+
+    User 2: Me too! I''m a big Harry Potter fan.
+
+    User 1: It''s always nice to meet someone who shares my interests.
+
+    User 2: Me too! Maybe we could hang out sometime and play some video games or watch a movie.
+
+    User 1: That would be great! I''d love to do that.
+
+    User 2: Cool! I''ll message you my number.
+
+    User 1: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00005310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5310
+data:
+  user 1 personas: 'I have ten nieces and nephews.
+
+    I enjoy going to museums.
+
+    I am a writer.
+
+    I am married.
+
+    I live in new york city.'
+  user 2 personas: 'I enjoy jazz music.
+
+    I work at a factory.
+
+    My favorite city is seattle.
+
+    I ride my bicycle everywhere.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I enjoy going to museums, listening to jazz music, and riding my bicycle.
+
+    User 1: That''s cool! I love going to museums too. I''m also a writer, and I live in New York City.
+
+    User 2: Oh, that''s cool! I''ve never been to New York City, but I''ve always wanted to go. I work at a factory in Seattle.
+
+    User 1: Wow, that''s interesting! I''ve never been to Seattle either. I''m married and I have ten nieces and nephews.
+
+    User 2: Oh, that''s cool! I''m not married, but I have a dog and two cats.
+
+    User 1: Nice! I like animals.
+
+    User 2: Me too! So, what do you like to write about?
+
+    User 1: I write about a lot of things, but my favorite topic is family.
+
+    User 2: That''s great! I''m sure you''re a great writer.
+
+    User 1: Thanks! I''ve been writing since I was a kid.
+
+    User 2: That''s awesome! I''ve always wanted to be a writer, but I''ve never had the time to pursue it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might! Thanks for the encouragement.
+
+    User 1: You''re welcome!
+
+    User 2: So, what''s your favorite museum in New York City?
+
+    User 1: I love the Metropolitan Museum of Art. It has such a great collection of art from all over the world.
+
+    User 2: Oh, that sounds amazing! I''ll have to check it out when I''m in New York City.
+
+    User 1: You should! It''s a must-see for any art lover.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

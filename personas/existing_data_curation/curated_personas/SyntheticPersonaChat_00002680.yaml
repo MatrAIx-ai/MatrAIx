@@ -1,0 +1,62 @@
+id: 00002680
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2680
+data:
+  user 1 personas: 'My mom stays at home.
+
+    My adopted dad works at hp.
+
+    I have six siblings.
+
+    The future scares me.'
+  user 2 personas: 'I have a golden retriever.
+
+    I have a little sister.
+
+    My favorite subject in school is math.
+
+    I like to play soccer.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What are some of your interests?
+
+    User 2: I like to play soccer, I have a golden retriever, and my favorite subject in school is math.
+
+    User 1: That''s cool! I like to play soccer too. I also have a dog, but it''s a chihuahua. My favorite subject in school is English.
+
+    User 2: That''s awesome! I''ve never had a chihuahua before. What''s it like?
+
+    User 1: They''re great! They''re small, but they''re very loyal and affectionate.
+
+    User 2: That sounds like a lot of fun! I''ve always wanted a small dog.
+
+    User 1: You should get one! They''re the best.
+
+    User 2: I might just have to do that.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out with my friends, play soccer, and hang out with my dog.
+
+    User 1: That sounds like a lot of fun! I like to do similar things, but I also like to read and go to the movies.
+
+    User 2: I like to read too! What''s your favorite book?
+
+    User 1: I have a lot of favorites, but one of my favorites is To Kill a Mockingbird.
+
+    User 2: I''ve never heard of that book. What''s it about?
+
+    User 1: It''s about a young boy who grows up in the South during the 1930s. He witnesses the injustice of the Jim Crow era and learns about the power of empathy and compassion.
+
+    User 2: That sounds like an interesting book. I''ll have to check it out.
+
+    User 1: I hope you like it!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

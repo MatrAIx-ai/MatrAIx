@@ -1,0 +1,20 @@
+id: '00011067'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11067
+persona_description: A scientist who is interested in parallel computing and distributed computing, particularly in the context of climate change simulations. This persona is likely to be involved in the
+  development and optimization of large-scale parallel and distributed applications for scientific research and engineering purposes. They are familiar with the challenges and issues that arise in parallel
+  and distributed computing, such as failures, network partition, and checkpointing/restart mechanisms. This persona is also interested in the Grid and Cloud computing paradigms, and how they can be used
+  to optimize the performance and efficiency of parallel and distributed computing. They are also likely to be familiar with the Map/Reduce paradigm and how it can be used to efficiently distribute and
+  process large amounts of data.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Distributed Computing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

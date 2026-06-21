@@ -1,0 +1,62 @@
+id: 00007951
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7951
+data:
+  user 1 personas: 'I work as a secretary at an insurance agency.
+
+    I have two dogs.
+
+    I like to read true crime novels.
+
+    I travel every year to disney world.
+
+    I am close to both of my brothers.'
+  user 2 personas: 'I like to do my nails.
+
+    I like to come up with new hairstyles.
+
+    I like to play volleyball.
+
+    I like to go on long hikes.
+
+    I like to pickle eggs.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to do my nails, come up with new hairstyles, play volleyball, go on long hikes, and pickle eggs.
+
+    User 1: Wow, that''s a lot of different things! Do you have any hobbies in common with me?
+
+    User 2: I do! I also like to read true crime novels.
+
+    User 1: That''s awesome! I''m a big fan of true crime novels too.
+
+    User 2: What''s your favorite one?
+
+    User 1: It''s hard to choose just one, but I really enjoyed the book "In Cold Blood" by Truman Capote.
+
+    User 2: That''s a great book! I also really enjoyed it.
+
+    User 1: What''s your favorite way to relax?
+
+    User 2: I love to take long baths.
+
+    User 1: That sounds nice. I usually read a book when I take a bath.
+
+    User 2: Me too! What''s your favorite book to read in the bath?
+
+    User 1: I''m currently reading "The Woman in the Window" by A.J. Finn.
+
+    User 2: I haven''t read that one yet, but I''ve heard good things about it.
+
+    User 1: It''s really good! I''m really enjoying it.
+
+    User 2: Well, I''m glad to hear that. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

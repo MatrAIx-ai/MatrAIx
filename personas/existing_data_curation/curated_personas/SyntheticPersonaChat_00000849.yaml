@@ -1,0 +1,68 @@
+id: 00000849
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 849
+data:
+  user 1 personas: 'I love to surf.
+
+    My hair is brown and curly.
+
+    I hate red meat.
+
+    I love watching sunsets.
+
+    I live near the ocean.'
+  user 2 personas: 'My favorite meal is steak.
+
+    I always travel alone.
+
+    I am incredibly smart.
+
+    I have no parents or siblings.'
+  Best Generated Conversation: 'User 1: Hi! I''m John. I''m from California.
+
+    User 2: Hi, John! I''m Mary. I''m from New York.
+
+    User 1: Where are you from in New York?
+
+    User 2: I''m from Queens.
+
+    User 1: Oh, cool! I''ve never been to Queens before.
+
+    User 2: It''s not too bad.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel.
+
+    User 1: Me too! I''ve been to a lot of places.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to Europe, Asia, and Africa.
+
+    User 2: Wow! That''s amazing. I''ve only been to Europe.
+
+    User 1: What''s your favorite place you''ve been?
+
+    User 2: My favorite place is Paris.
+
+    User 1: Paris is beautiful! I love the Eiffel Tower.
+
+    User 2: Me too! I love the city atmosphere.
+
+    User 1: What''s your favorite thing to do in Paris?
+
+    User 2: I love to just walk around and explore.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I also love to eat at the cafes.
+
+    User 1: Me too! The food in Paris is amazing.
+
+    User 2: I''m so glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

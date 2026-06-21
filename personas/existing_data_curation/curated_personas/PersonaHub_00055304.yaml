@@ -1,0 +1,19 @@
+id: '00055304'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55304
+persona_description: A medical oncologist who specializes in the treatment and management of colon and rectal cancer. She has extensive experience in evaluating cancer patients, interpreting medical imaging
+  reports, and determining the stage and grade of the cancer. She is particularly interested in the TNM system, which is used to classify cancer based on the tumor size, nodal involvement, and spread to
+  other parts of the body. She also has expertise in the use of chemotherapy, surgery, and radiation therapy to treat cancer. She is knowledgeable about the grading system used to classify cancer cells
+  and how it can help predict the prognosis of the cancer. She is also knowledgeable about the different stages of cancer and how they can be grouped together based on the T, N, and M classifications.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

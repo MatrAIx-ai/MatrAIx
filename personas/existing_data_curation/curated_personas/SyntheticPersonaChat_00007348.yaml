@@ -1,0 +1,72 @@
+id: 00007348
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7348
+data:
+  user 1 personas: 'I have went to mexico 4 times this year.
+
+    My wife does not like me anymore.
+
+    I like to ski.
+
+    I hate mexican food.
+
+    I like to eat cheetos.'
+  user 2 personas: 'I am studying to become a nurse.
+
+    I am a paramedic.
+
+    I live in a studio apartment.
+
+    My favorite band is the beatles.
+
+    I have three sisters.'
+  Best Generated Conversation: 'User 1: I''m going to Mexico next week.
+
+    User 2: Oh, how exciting! Have you been there before?
+
+    User 1: Yes, I''ve been there four times this year.
+
+    User 2: Wow, you must really love it there.
+
+    User 1: I do! I love the food, the culture, and the people.
+
+    User 2: I''ve heard that the food is amazing.
+
+    User 1: It is! And the culture is so rich and vibrant.
+
+    User 2: I''ve always wanted to go, but I''ve never had the chance.
+
+    User 1: You should definitely go sometime. It''s a beautiful country.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for a living?
+
+    User 2: I''m a paramedic.
+
+    User 1: Oh, that''s really interesting. What''s it like being a paramedic?
+
+    User 2: It''s challenging, but it''s also very rewarding. I get to help people every day, and that''s what makes it worth it.
+
+    User 1: That''s great. I''m sure it''s very rewarding.
+
+    User 2: It is. So, what about you? What do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool. What kind of software do you work on?
+
+    User 1: I work on enterprise software.
+
+    User 2: Oh, that sounds interesting.
+
+    User 1: It is. I get to work on a lot of different projects, and I get to learn new things all the time.
+
+    User 2: That''s great. I''m glad you like your job.
+
+    User 1: I do! I''m really lucky to have such a great job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: 00007590
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7590
+data:
+  user 1 personas: 'I enjoy reading and walking on sunny days.
+
+    I sing many songs.
+
+    I especially enjoy listening to the band the mutineers.
+
+    I am a happy person.'
+  user 2 personas: 'I have two children.
+
+    I like to hunt.
+
+    I like to donate time at the local animal shelter.
+
+    I had two cats growing up.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: I like to read, walk on sunny days, and sing songs.
+
+    User 2: I like to hunt, donate time at the local animal shelter, and I have two children.
+
+    User 1: Oh, that''s cool. I have two cats.
+
+    User 2: I used to have two cats growing up.
+
+    User 1: What do you like to hunt?
+
+    User 2: I mostly hunt deer.
+
+    User 1: Oh, that''s cool. I''ve never been hunting before.
+
+    User 2: It''s a lot of fun. You should try it sometime.
+
+    User 1: I might do that.
+
+    User 2: So, what are you reading right now?
+
+    User 1: I''m reading a book called "The Great Gatsby."
+
+    User 2: Oh, I''ve heard good things about that book.
+
+    User 1: It''s really good. I''m enjoying it a lot.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a teacher.
+
+    User 2: It''s a lot of fun. You should do it.
+
+    User 1: Maybe I will.
+
+    User 2: So, what''s your favorite song by The Mutinyers?
+
+    User 1: I really like "The Last Great American Song."
+
+    User 2: Oh, that''s a good one. I also like "The House of the Rising Sun."
+
+    User 1: That''s a good one too.
+
+    User 2: It''s been nice talking to you.
+
+    User 1: You too.
+
+    User 2: Maybe we can talk again sometime.
+
+    User 1: I''d like that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

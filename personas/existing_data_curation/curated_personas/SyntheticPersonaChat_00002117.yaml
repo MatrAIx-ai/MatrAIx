@@ -1,0 +1,60 @@
+id: '00002117'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2117
+data:
+  user 1 personas: 'I am buying a house.
+
+    I am single.
+
+    I play the piano.
+
+    I paddle board on my days off.'
+  user 2 personas: 'I work at a museum.
+
+    I like to go to the park.
+
+    I am stuck in a wheel chair.
+
+    I read a lot.
+
+    I don t have a lot of friends.'
+  Best Generated Conversation: 'User 1: Hi there, what do you do for fun?
+
+    User 2: I like to read and go to the park.
+
+    User 1: That''s cool. I like to play the piano and paddle board.
+
+    User 2: I''ve always wanted to learn to play the piano.
+
+    User 1: It''s a lot of fun. I''ve been playing for about 10 years.
+
+    User 2: That''s awesome. I''m a little scared of trying something new, but I think I''d like it.
+
+    User 1: You should give it a try! There are a lot of great resources online to help you learn.
+
+    User 2: I might just do that. Thanks for the suggestion.
+
+    User 1: No problem. What kind of books do you like to read?
+
+    User 2: I like to read a lot of different types of books. I''m currently reading a book about the history of the piano.
+
+    User 1: That sounds really interesting. I''ve always been curious about the history of the piano.
+
+    User 2: It''s really fascinating. I''m learning a lot about it.
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: Thanks. So, what do you like to do on your days off?
+
+    User 1: I like to go paddle boarding. It''s a great way to relax and enjoy the outdoors.
+
+    User 2: That sounds really fun. I''ve never tried paddle boarding before.
+
+    User 1: You should give it a try! It''s really easy to learn.
+
+    User 2: I might just do that. Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

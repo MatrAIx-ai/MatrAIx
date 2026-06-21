@@ -1,0 +1,18 @@
+id: '00010201'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10201
+persona_description: A public health official who is responsible for monitoring and ensuring the safety of children living near industrial sites and homes with lead-based paint. They are knowledgeable in
+  the analysis of blood lead levels and the impact of lead exposure on children's health. They are likely to be involved in the development of policies and regulations to prevent lead poisoning and provide
+  support and guidance to parents and communities affected by lead contamination.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: environmental health
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

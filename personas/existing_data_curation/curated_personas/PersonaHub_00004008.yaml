@@ -1,0 +1,19 @@
+id: 00004008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4008
+persona_description: An aerospace engineer who specializes in the design and development of turbine engines, with a focus on Full Authority Digital Engine Control (FADEC) systems and their decision-making
+  processes. This individual is skilled in using Simulink to model and simulate complex engine operations, and is interested in designing logic and decision-making algorithms that can handle a wide range
+  of operational scenarios, including the control of fuel flow and the selection of operating modes. This persona is likely to be interested in refining and optimizing FADEC designs, as well as developing
+  new algorithms and techniques for managing engine performance and fuel consumption.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: turbine engine design and development, FADEC systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,59 @@
+id: '00005612'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5612
+data:
+  user 1 personas: 'I spend too much time shopping.
+
+    I work in retail.
+
+    I love katy perry.
+
+    I drive a ford taurus.
+
+    I drink diet coke.'
+  user 2 personas: 'My mother stayed at home all day to raise me and my siblings.
+
+    My father used to be an insurance salesman.
+
+    I graduated valedictorian of my high school class.
+
+    I had to drop out of college to help with my grandparents.
+
+    I cannot stand salads.'
+  Best Generated Conversation: 'User 1: Hi, I''m Katy. I love shopping, work in retail, love Katy Perry, drive a Ford Taurus, and drink diet Coke. What about you?
+
+    User 2: Hi, I''m Jessica. My mother stayed at home all day to raise me and my siblings, my father used to be an insurance salesman, I graduated valedictorian of my high school class, I had to drop out
+    of college to help with my grandparents, and I cannot stand salads.
+
+    User 1: That''s cool. How did you feel about having a stay-at-home mom?
+
+    User 2: I loved it. She was always there for me and my siblings.
+
+    User 1: That''s awesome. What was your favorite thing about your father''s job as an insurance salesman?
+
+    User 2: He was always so good at talking to people and making them feel comfortable.
+
+    User 1: That''s a great skill to have. Were you happy to graduate valedictorian of your high school class?
+
+    User 2: I was so proud of myself! It was a lot of hard work, but it was worth it.
+
+    User 1: I bet it was. I''m sorry you had to drop out of college. What made you have to do that?
+
+    User 2: My grandparents got sick and I had to help take care of them.
+
+    User 1: Oh, that''s tough. I''m sure that was hard on you.
+
+    User 2: It was, but I''m glad I could be there for them.
+
+    User 1: That''s good. I''m sorry you don''t like salads. I love them!
+
+    User 2: I know, it''s weird. I just can''t stand the taste of them.
+
+    User 1: That''s okay. Everyone has their own preferences.
+
+    User 2: Yeah, I guess so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

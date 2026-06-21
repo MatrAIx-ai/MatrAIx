@@ -1,0 +1,76 @@
+id: 00002108
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2108
+data:
+  user 1 personas: 'I am a white dancer.
+
+    I have studied ballet all my life.
+
+    My mother is a ballerina.
+
+    I have the support of my whole family.
+
+    I plan to retire in 6 months.'
+  user 2 personas: 'I work for a large company.
+
+    I drive a fast car.
+
+    I dream of winning the lottery.
+
+    I like to eat food.
+
+    I listen to rock music.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], a white dancer who has studied ballet all my life. My mother is a ballerina, and I have the support of my whole family. I plan to retire in 6 months.
+
+    User 2: Hi, I''m [name], I work for a large company, drive a fast car, dream of winning the lottery, like to eat food, and listen to rock music.
+
+    User 1: That''s interesting, what do you like about working for a large company?
+
+    User 2: I like the benefits and the opportunities for advancement.
+
+    User 1: I see. What kind of car do you drive?
+
+    User 2: I drive a Porsche 911.
+
+    User 1: Nice! What''s your favorite food?
+
+    User 2: I love sushi.
+
+    User 1: Me too! What kind of rock music do you like?
+
+    User 2: I like a lot of different kinds, but my favorites are classic rock and heavy metal.
+
+    User 1: I like those too! What''s your favorite classic rock band?
+
+    User 2: My favorite classic rock band is The Beatles.
+
+    User 1: Me too! They''re my favorite band of all time.
+
+    User 2: I see. What''s your favorite heavy metal band?
+
+    User 1: My favorite heavy metal band is Black Sabbath.
+
+    User 2: Nice! I like them too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to concerts, play video games, and watch movies.
+
+    User 1: I like to do those things too!
+
+    User 2: That''s cool.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m thinking about starting my own business.
+
+    User 1: That''s cool. I wish you the best of luck with that.
+
+    User 2: Thanks.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

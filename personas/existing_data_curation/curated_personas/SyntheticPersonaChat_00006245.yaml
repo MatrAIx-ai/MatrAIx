@@ -1,0 +1,62 @@
+id: '00006245'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6245
+data:
+  user 1 personas: 'I have won tap dance competitions.
+
+    I have a twin brother.
+
+    My favorite book is david copperfield.
+
+    I m really short.
+
+    I love to bake cakes.'
+  user 2 personas: 'I like to make short films.
+
+    My mother is a well known celebrity.
+
+    I have been on the tv news six times.
+
+    I have traveled overseas many times.
+
+    I am a civil war reenactment participant.'
+  Best Generated Conversation: 'User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings. It''s a fantasy novel by J.R.R. Tolkien.
+
+    User 1: I''ve heard good things about that book. I''ve never read it, but I''ve seen the movies.
+
+    User 2: The movies are great, but the books are even better. I''ve read them all multiple times.
+
+    User 1: I''m not much of a reader, but I might have to give it a try.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to make short films. I''m not very good at it, but it''s fun to do.
+
+    User 1: That''s cool! I''ve always wanted to make a short film, but I don''t know where to start.
+
+    User 2: There are a lot of great resources online. You can find tutorials on how to make a short film, and you can also find people who are willing to help you make one.
+
+    User 1: That''s good to know. I might have to give it a try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to travel. I''ve been to a lot of different countries.
+
+    User 1: I''ve never been out of the country. I''d love to travel, but I don''t have the money.
+
+    User 2: You should start saving up! It''s worth it.
+
+    User 1: I''ll try.
+
+    User 2: You should! There are so many amazing places to see in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

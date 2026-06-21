@@ -1,0 +1,74 @@
+id: '00002563'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2563
+data:
+  user 1 personas: 'I love dogs and cats.
+
+    I am ten years old.
+
+    I have a lot of friends.
+
+    I live in a house.'
+  user 2 personas: 'I love animals and i want to help them.
+
+    I have three pets.
+
+    I would like to go to school to become a veterinarian.
+
+    I love going to the gym.
+
+    I am currently on a diet.'
+  Best Generated Conversation: 'User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah. My name is Alex.
+
+    User 2: Nice to meet you too, Alex.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love animals and I want to help them. I would like to go to school to become a veterinarian.
+
+    User 1: That''s awesome! I love animals too. I have a dog and a cat.
+
+    User 2: Me too! I have three pets. A dog, a cat, and a fish.
+
+    User 1: Oh, that''s cool. What are their names?
+
+    User 2: My dog''s name is Sparky, my cat''s name is Mittens, and my fish''s name is Nemo.
+
+    User 1: Those are great names!
+
+    User 2: Thanks!
+
+    User 1: So, what''s your favorite thing about animals?
+
+    User 2: I love how they''re always so happy to see you. They make me feel good.
+
+    User 1: Me too! They''re the best.
+
+    User 2: I know, right?
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t. I''m allergic to dogs and cats.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: Yeah, it is.
+
+    User 1: Well, maybe you can volunteer at a local animal shelter or something.
+
+    User 2: That''s a great idea! I''ll look into it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00007780
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7780
+data:
+  user 1 personas: 'I am a student at michigan state university.
+
+    I work at a coffee house.
+
+    I have a cat named seven of nine.
+
+    I like to sing broadway show tunes.'
+  user 2 personas: 'I am a wedding planner.
+
+    My favorite color is yellow.
+
+    I am fascinated with ghosts.
+
+    When i was a child , i wanted to be an architect.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I like to plan weddings and I''m fascinated by ghosts.
+
+    User 1: That''s cool. I''m a student at Michigan State University and I work at a coffee house. I also like to sing broadway show tunes.
+
+    User 2: Do you have any favorite show tunes?
+
+    User 1: I do! I love "The Phantom of the Opera" and "Les Miserables."
+
+    User 2: Those are great shows! I''ve seen both of them.
+
+    User 1: What did you think of them?
+
+    User 2: I thought they were both amazing. The music was incredible and the stories were really engaging.
+
+    User 1: I agree! They''re both some of my favorite musicals.
+
+    User 2: Do you have any plans for after you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going to grad school, but I''m not sure what I want to study.
+
+    User 2: That''s a big decision. I''m sure you''ll figure it out.
+
+    User 1: Thanks, I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to sing, I love broadway show tunes, and I also like to write.
+
+    User 2: That''s cool. I like to read and I also like to go on trips.
+
+    User 1: What''s your favorite book?
+
+    User 2: I don''t have a favorite book, but I like reading books about history.
+
+    User 1: That''s cool. I like to read books about psychology.
+
+    User 2: That''s interesting. I''ve never read a book about psychology before.
+
+    User 1: You should! They''re really interesting.
+
+    User 2: Maybe I will'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

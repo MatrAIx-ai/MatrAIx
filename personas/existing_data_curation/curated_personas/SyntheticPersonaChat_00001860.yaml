@@ -1,0 +1,62 @@
+id: 00001860
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1860
+data:
+  user 1 personas: 'I drive a blue car.
+
+    I own blue shoes.
+
+    I like the color blue.
+
+    I like to listen to elvis.
+
+    I changed my hair color to blue.'
+  user 2 personas: 'I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I m an ovo vegetarian.
+
+    I can t cook.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi!
+
+    User 1: I like the color blue.
+
+    User 2: Me too! I''m an ovo vegetarian, so I can''t eat meat or fish. But I love eggs.
+
+    User 1: I love eggs too! I''m not a vegetarian, but I don''t eat a lot of meat.
+
+    User 2: I love to sleep in on my days off.
+
+    User 1: Me too! I love to relax and catch up on my sleep.
+
+    User 2: I drive an hour to work every day in this horrible traffic.
+
+    User 1: That sounds awful! I''m glad I don''t have to commute that far to work.
+
+    User 2: I can''t cook.
+
+    User 1: That''s okay! I''m not a very good cook either.
+
+    User 2: I like Elvis.
+
+    User 1: Me too! He''s one of my favorite singers.
+
+    User 2: I like to change my hair color often.
+
+    User 1: That''s cool! I''ve never dyed my hair before.
+
+    User 2: I like to drive a blue car.
+
+    User 1: Me too! I have a blue car myself.
+
+    User 2: I like to own blue shoes.
+
+    User 1: Me too! I have a pair of blue shoes myself.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

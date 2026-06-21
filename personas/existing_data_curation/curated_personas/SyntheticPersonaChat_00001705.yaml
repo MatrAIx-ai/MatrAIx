@@ -1,0 +1,56 @@
+id: '00001705'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1705
+data:
+  user 1 personas: 'I make 50k a year.
+
+    I work for peta.
+
+    I love animals.
+
+    I like to make clothes.'
+  user 2 personas: 'I own a cleaning company.
+
+    My favorite writer is nicholas sparks.
+
+    I am married.
+
+    I enjoy cooking.
+
+    My mother was a teacher.'
+  Best Generated Conversation: 'User 1: Hello! What is your favorite food?
+
+
+    User 2: I love cooking and I love to eat! I would say my favorite food is lasagna.
+
+
+    User 1: That''s a good choice! I love lasagna too. I also love to cook. I''m a chef, actually.
+
+
+    User 2: That''s awesome! I would love to learn how to cook. Maybe you could give me some pointers sometime?
+
+
+    User 1: Sure! I''d be happy to help. What kind of food are you interested in learning how to cook?
+
+
+    User 2: I''m really interested in learning how to make healthy, delicious meals. I want to eat healthier, but I don''t know where to start.
+
+
+    User 1: I can definitely help you with that! I love making healthy meals. I have a few recipes that I could share with you.
+
+
+    User 2: That would be great! I would love that.
+
+
+    User 1: Great! I''ll send you some recipes tomorrow. In the meantime, you can check out my blog. I have a lot of healthy recipes there.
+
+
+    User 2: Awesome! I''ll check it out. Thanks so much for your help!
+
+
+    User 1: You''re welcome! I''m happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

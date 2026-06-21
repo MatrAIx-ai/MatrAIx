@@ -1,0 +1,82 @@
+id: '00005503'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5503
+data:
+  user 1 personas: 'I am getting married next week.
+
+    We are getting married in a park.
+
+    We will be traveling to niagra falls for our honeymoon.
+
+    My dog is the ring bearer.'
+  user 2 personas: 'I currently work at target.
+
+    I live in a house in california.
+
+    Everyday after work i buy my dog a dog biscuit.
+
+    I am 5 7 tall.
+
+    I try to take a break and see a movie in theaters every other month.'
+  Best Generated Conversation: 'User 1: Hi! I''m getting married next week.
+
+    User 2: Congratulations! Where are you getting married?
+
+    User 1: We''re getting married in a park.
+
+    User 2: Oh, that''s lovely! What park?
+
+    User 1: It''s a small park in my neighborhood.
+
+    User 2: That sounds perfect for a small wedding.
+
+    User 1: Thank you! We''re really excited about it.
+
+    User 2: Where are you going for your honeymoon?
+
+    User 1: We''re going to Niagara Falls.
+
+    User 2: Oh, that''s beautiful! I''ve always wanted to go there.
+
+    User 1: Me too! We''re looking forward to it.
+
+    User 2: That''s great! I hope you have a wonderful time.
+
+    User 1: Thank you!
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great! I love teachers.
+
+    User 1: Thank you! I love my job.
+
+    User 2: Where do you live?
+
+    User 1: I live in California.
+
+    User 2: Oh, me too! I live in San Diego.
+
+    User 1: Oh, that''s cool! I live in Los Angeles.
+
+    User 2: Oh, that''s not too far. We should hang out sometime.
+
+    User 1: Yeah, that would be great!
+
+    User 2: How about next weekend?
+
+    User 1: I''m free next weekend.
+
+    User 2: Great! We can go to the movies.
+
+    User 1: That sounds fun!
+
+    User 2: We can see a movie about dogs.
+
+    User 1: That sounds perfect! I love dogs.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

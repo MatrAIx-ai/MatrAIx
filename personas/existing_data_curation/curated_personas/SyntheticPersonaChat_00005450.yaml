@@ -1,0 +1,64 @@
+id: '00005450'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5450
+data:
+  user 1 personas: 'My mom and dad are from japan.
+
+    My favorite french fries are from mcdonald.
+
+    I love to shop.
+
+    I live in toronto , canada.'
+  user 2 personas: 'I have three children.
+
+    My parents do not really speak english , but i speak italian and english.
+
+    I got married when i was young.
+
+    I moved to america when i was 14.
+
+    I like to cook.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Toronto.
+
+    User 2: Hi, I''m from America.
+
+    User 1: Where in America are you from?
+
+    User 2: I''m from New York City.
+
+    User 1: Oh, that''s cool. I''ve always wanted to visit New York City.
+
+    User 2: You should! It''s a great city.
+
+    User 1: I''m sure it is. So, what do you like to do for fun?
+
+    User 2: I like to cook, read, and travel.
+
+    User 1: Me too! I love to cook and read. I don''t travel as much as I''d like to, but I''m trying to make it a priority.
+
+    User 2: That''s great! I love to travel and see new places. I''ve been to a few different countries, but I''d love to see more.
+
+    User 1: Me too! I''ve only been to a few countries, but I''d love to see more of the world.
+
+    User 2: Well, if you ever come to America, you should visit New York City.
+
+    User 1: I will definitely do that! Thanks for the recommendation.
+
+    User 2: No problem! So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool. I''ve always wanted to be a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: I can imagine! I love working with kids too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Let''s talk again soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

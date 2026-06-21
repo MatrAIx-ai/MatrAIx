@@ -1,0 +1,18 @@
+id: 00010748
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10748
+persona_description: A healthcare professional who is familiar with medical imaging techniques such as computed tomography (CT) scans, including the use of contrast agents for better visualization of organs
+  and blood vessels in the body. They may work in a hospital, clinic, or imaging center and have expertise in interpreting CT scans for various medical conditions. They may also be involved in research
+  and development of new imaging technologies.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: medical imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

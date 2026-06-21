@@ -1,0 +1,82 @@
+id: 00008732
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8732
+data:
+  user 1 personas: 'I ve never done drugs because i don t know where to buy them.
+
+    I love living in texas.
+
+    Ke ha is my favorite singer of all time.
+
+    I have a friend named james who secretly rules the world.'
+  user 2 personas: 'I want to visit the uk.
+
+    I sometimes write poetry.
+
+    My favorite color is black.
+
+    I sing in a punk band.'
+  Best Generated Conversation: 'User 1: Hi, I''m James.
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m from Texas. Where are you from?
+
+    User 2: I''m from the UK.
+
+    User 1: Oh, that''s cool. I''ve always wanted to visit the UK.
+
+    User 2: You should! It''s a beautiful place.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write poetry, sing in a punk band, and travel.
+
+    User 1: Wow, that''s a lot of hobbies.
+
+    User 2: Yeah, I like to keep busy.
+
+    User 1: What kind of poetry do you write?
+
+    User 2: I write all sorts of poetry, but I''m mostly interested in writing about social issues.
+
+    User 1: That sounds really interesting.
+
+    User 2: Thanks. I think it''s important to use my poetry to raise awareness about important issues.
+
+    User 1: I agree. I think it''s a great way to make a difference in the world.
+
+    User 2: Thanks. I''m glad you think so.
+
+    User 1: So, what''s your favorite color?
+
+    User 2: Black.
+
+    User 1: Why is that?
+
+    User 2: I don''t know. I''ve always liked it.
+
+    User 1: It''s a good color.
+
+    User 2: Thanks.
+
+    User 1: So, what do you think of Texas?
+
+    User 2: It''s a big state.
+
+    User 1: Yeah, it is. What''s your favorite part?
+
+    User 2: I don''t know. I like all of it.
+
+    User 1: Me too. I love living in Texas.
+
+    User 2: Good.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

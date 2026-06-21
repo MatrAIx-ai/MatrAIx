@@ -1,0 +1,74 @@
+id: '00007260'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7260
+data:
+  user 1 personas: 'My grandma likes to make pizza with me.
+
+    Grandpa takes me to get ice cream.
+
+    I have a cat named mater.
+
+    I like to play basketball.'
+  user 2 personas: 'My family comes first to me.
+
+    I have survived near death experiences.
+
+    I sometimes drive fast.
+
+    I prefer reading to sports.'
+  Best Generated Conversation: 'User 1: I like to play basketball.
+
+    User 2: I prefer reading to sports.
+
+    User 1: What do you like to read about?
+
+    User 2: I like to read about history and science.
+
+    User 1: That''s cool. I like to read about history too.
+
+    User 2: What''s your favorite historical period?
+
+    User 1: I like the Middle Ages.
+
+    User 2: That''s a good choice. I like the Renaissance.
+
+    User 1: That''s cool. I like the Renaissance too.
+
+    User 2: What''s your favorite thing about the Renaissance?
+
+    User 1: I like the art and architecture.
+
+    User 2: That''s a good answer. I like the art too.
+
+    User 1: What''s your favorite piece of Renaissance art?
+
+    User 2: I like The Last Supper by Leonardo da Vinci.
+
+    User 1: That''s a good choice. I like that painting too.
+
+    User 2: What''s your favorite thing about The Last Supper?
+
+    User 1: I like the way it captures the moment when Jesus is telling his disciples that one of them will betray him.
+
+    User 2: That''s a good answer. I like that too.
+
+    User 1: It''s a really powerful painting.
+
+    User 2: It is. I''m glad you like it.
+
+    User 1: Me too. It''s one of my favorite pieces of art.
+
+    User 2: I''m glad. I like talking about art with you.
+
+    User 1: Me too. It''s always nice to find someone who shares your interests.
+
+    User 2: Exactly. I''m glad we met.
+
+    User 1: Me too. I hope we can talk again soon.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: 00004628
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4628
+data:
+  user 1 personas: 'I had 128 tackles last year.
+
+    I play football.
+
+    My position is linebacker.
+
+    I am an athlete.'
+  user 2 personas: 'I love to cook.
+
+    My parents recently moved to florida.
+
+    I am going on a cruise next month.
+
+    I breed maine coon cats and show them.
+
+    My brother is currently couch surfing at my house.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I love to cook and bake!
+
+    User 1: Oh, that''s awesome! I love to cook too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love making homemade pasta.
+
+    User 2: That sounds delicious! I''ve never made homemade pasta before.
+
+    User 1: You should try it! It''s really easy and it''s so much better than store-bought pasta.
+
+    User 2: I will! Thanks for the tip!
+
+    User 1: No problem! What else do you like to do for fun?
+
+    User 2: I also like to go on cruises.
+
+    User 1: Oh, that''s cool! I''ve never been on a cruise before.
+
+    User 2: You should go on one! It''s a lot of fun.
+
+    User 1: I will! Thanks for the tip!
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I also like to play football.
+
+    User 2: Oh, that''s cool! I''ve never played football before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the tip!
+
+    User 1: No problem! What else do you like to do for fun?
+
+    User 2: I also like to breed Maine Coon cats and show them.
+
+    User 1: Oh, that''s cool! I''ve never heard of Maine Coon cats.
+
+    User 2: They''re the largest domestic cat breed.
+
+    User 1: Oh, that''s cool! I''ve never seen a Maine Coon cat before.
+
+    User 2: You should come over and see my cats sometime!
+
+    User 1: I will! Thanks for the invite!
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I also like to go to the beach.
+
+    User 2: Oh, that''s cool! I love the beach!
+
+    User 1: Me too! I love swimming and surfing.
+
+    User 2: I love swimming too! I''ve never tried surfing before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the tip!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

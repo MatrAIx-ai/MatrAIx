@@ -1,0 +1,68 @@
+id: 00007485
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7485
+data:
+  user 1 personas: 'I have one sister and a niece and nephew.
+
+    I am almost finished with my degree.
+
+    I really like cake and do not prefer vegetables.
+
+    I am 49 , male and live in dublin , ireland.'
+  user 2 personas: 'My eyes are green.
+
+    I want to be a librarian.
+
+    I wear glasses that are cateye.
+
+    My skin is olive colored.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m from Dublin, Ireland.
+
+    User 2: Oh, really? I''m from London, England.
+
+    User 1: That''s cool! What do you do for a living?
+
+    User 2: I''m a librarian.
+
+    User 1: That''s awesome! I love libraries.
+
+    User 2: Me too! I love books.
+
+    User 1: I like books too. What''s your favorite book?
+
+    User 2: It''s hard to say, but I''d probably say Harry Potter and the Sorcerer''s Stone.
+
+    User 1: That''s a good choice! I love that book too.
+
+    User 2: What''s your favorite thing about Dublin?
+
+    User 1: I love the people here. They''re so friendly and welcoming.
+
+    User 2: I''ve heard that! I''ve always wanted to visit Dublin.
+
+    User 1: You should! It''s a great city.
+
+    User 2: I will! Maybe we can meet up when I visit.
+
+    User 1: That would be great!
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school to get my master''s degree.
+
+    User 2: That''s a great idea! What do you want to study?
+
+    User 1: I''m not sure yet. I''m interested in a lot of things.
+
+    User 2: Well, you have plenty of time to figure it out.
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

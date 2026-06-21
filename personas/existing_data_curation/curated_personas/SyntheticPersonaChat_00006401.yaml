@@ -1,0 +1,82 @@
+id: '00006401'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6401
+data:
+  user 1 personas: 'I go to the theater to watch plays.
+
+    I like baking.
+
+    Wedding cakes are my specialty.
+
+    I enjoy walking around the park.
+
+    I love my dog.'
+  user 2 personas: 'I want to move to london when i get older.
+
+    I have 3 brothers.
+
+    I work for nike as an accountant.
+
+    I like to invest in the stock market.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hello, I''m [username].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an accountant for Nike.
+
+    User 1: Oh, cool! I''ve always been interested in accounting.
+
+    User 2: It''s a great field. I''m really enjoying it.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I like the fact that it''s a challenging and rewarding career.
+
+    User 1: I can understand that. I''m also a big fan of challenging work.
+
+    User 2: That''s great! What else do you like to do?
+
+    User 1: I love going to the theater to watch plays. I also enjoy baking, and my specialty is wedding cakes.
+
+    User 2: Oh, that''s really cool! I''ve never been to the theater, but I''ve heard it''s a lot of fun.
+
+    User 1: It is! I love the atmosphere and the way the actors can transport you to another world.
+
+    User 2: That sounds amazing! I''ll have to check it out sometime.
+
+    User 1: You should! And if you ever need a baking recommendation, I''m always happy to help.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to invest in the stock market and walk around the park.
+
+    User 1: Oh, that''s interesting! I''ve never invested in the stock market before, but I''ve always been curious about it.
+
+    User 2: It''s a great way to make money, but it can also be risky.
+
+    User 1: I can imagine. I''ll have to do some research before I get started.
+
+    User 2: That''s a good idea. And if you ever have any questions, I''m always happy to help.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what do you think about moving to London?
+
+    User 1: I think it would be amazing! I''ve always wanted to live in a big city.
+
+    User 2: It''s a great city. I''m sure you''d love it.
+
+    User 1: I''m sure I would too. I''ll have to start saving up for a plane ticket.
+
+    User 2: That''s a good idea. And if you ever need a place to stay, you''re always welcome to stay with me.
+
+    User 1: Thanks! I appreciate that. I''m sure I''ll take you up on that offer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

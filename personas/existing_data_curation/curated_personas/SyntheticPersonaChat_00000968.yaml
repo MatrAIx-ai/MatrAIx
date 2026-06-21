@@ -1,0 +1,100 @@
+id: 00000968
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 968
+data:
+  user 1 personas: 'I enjoy fishing.
+
+    I am a closet cannibal.
+
+    I have a dog named bob.
+
+    I like to make boats on the weekends.'
+  user 2 personas: 'I like nature.
+
+    I love eating out.
+
+    My favorite color is blue.
+
+    I work full time.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to eat out, go to the beach, and spend time in nature.
+
+    User 1: Me too! I love fishing and I have a dog named Bob.
+
+    User 2: That''s great! I''ve always wanted to learn how to fish.
+
+    User 1: It''s not too hard. I can teach you if you want.
+
+    User 2: That would be great! I''d love to learn.
+
+    User 1: Awesome! We can go fishing this weekend if you''re free.
+
+    User 2: I''m free Saturday morning.
+
+    User 1: Perfect! I''ll pick you up at 8.
+
+    User 2: Great! See you then.
+
+
+    [The next morning]
+
+
+    User 1: Hey, I''m here to pick you up.
+
+    User 2: Great! I''m ready to go.
+
+    User 1: Let''s go!
+
+
+    [At the lake]
+
+
+    User 1: So, what kind of fishing do you want to do?
+
+    User 2: I''m not sure. What are the options?
+
+    User 1: We can either go fishing from the shore or we can go on a boat.
+
+    User 2: I think I''d like to go on a boat.
+
+    User 1: Okay, let''s do it.
+
+
+    [On the boat]
+
+
+    User 1: So, what do you want to catch?
+
+    User 2: I''m not sure. What do you recommend?
+
+    User 1: We could catch bass, catfish, or bluegill.
+
+    User 2: I think I''d like to catch a bass.
+
+    User 1: Okay, let''s do it.
+
+
+    [After fishing]
+
+
+    User 1: Well, that was fun!
+
+    User 2: It was! I caught a bass!
+
+    User 1: Great job! I''m glad you had fun.
+
+    User 2: Me too! I can''t wait to go fishing again.
+
+    User 1: Me neither! We should do it again soon.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

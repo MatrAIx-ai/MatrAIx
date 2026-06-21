@@ -1,0 +1,64 @@
+id: 00008765
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8765
+data:
+  user 1 personas: 'I work as a physical therapist , and my wife is a school nurse.
+
+    My name is john and i live in dallas , tx.
+
+    We also have three dogs and two cats.
+
+    Our kids are 14 and 12 years old.'
+  user 2 personas: 'I broke my arm skiing once.
+
+    My hair is a reddish brown.
+
+    My family is very supportive of my skiing.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    I am a competitive ski racer.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, thanks! Just got back from a day of skiing.
+
+    User 1: Oh, cool! I love skiing. Where did you go?
+
+    User 2: I went to Taos Ski Valley. It was a lot of fun.
+
+    User 1: I''ve never been to Taos Ski Valley. How is it?
+
+    User 2: It''s really nice. The slopes are challenging, but there''s also a lot of beginner terrain.
+
+    User 1: That sounds great. I''m not a very good skier, so I need a place with beginner terrain.
+
+    User 2: Yeah, Taos Ski Valley is a great place for beginners.
+
+    User 1: So, do you ski competitively?
+
+    User 2: I used to, but I don''t compete anymore.
+
+    User 1: Why not?
+
+    User 2: I just got too busy with school and work.
+
+    User 1: Oh, I see. Well, that''s too bad. You were probably really good.
+
+    User 2: Thanks. I was good, but I''m not sure I was ever good enough to make it to the Olympics or anything.
+
+    User 1: Well, you never know. You might have been if you had kept skiing.
+
+    User 2: Maybe. I''ll never know for sure.
+
+    User 1: Well, it sounds like you''re still having a lot of fun skiing.
+
+    User 2: Yeah, I am. It''s my favorite thing to do.
+
+    User 1: Me too. I''m glad we have something in common.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

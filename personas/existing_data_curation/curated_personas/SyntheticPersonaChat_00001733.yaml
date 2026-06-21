@@ -1,0 +1,70 @@
+id: '00001733'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1733
+data:
+  user 1 personas: 'I went to college.
+
+    I like to go shopping.
+
+    I live in a small town.
+
+    I wanted to be a nurse.
+
+    Driving in the country side is a pastime.'
+  user 2 personas: 'I eat lots of pancakes and syrup.
+
+    I love to fish.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I am a lumberjack.
+
+    I love to cut down trees.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: Hello! My name is (name), I am a lumberjack.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a lumberjack.
+
+    User 2: It''s a great job! I love being outside and working with my hands.
+
+    User 1: Me too! I love going camping and hiking.
+
+    User 2: Those are both great hobbies! I love to go fishing too.
+
+    User 1: Oh, that''s awesome! I''ve never been fishing before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I will! Maybe I''ll go fishing with you sometime.
+
+    User 2: That would be great! I love to teach people how to fish.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go shopping, go to the movies, and drive in the country side.
+
+    User 2: Those are all great things to do! I love to go shopping too.
+
+    User 1: What''s your favorite thing to buy?
+
+    User 2: I love buying clothes and shoes.
+
+    User 1: Me too! I love clothes and shoes.
+
+    User 2: We should go shopping sometime!
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: I''m free too! Let''s go shopping on Saturday!
+
+    User 1: Great! I''ll pick you up at 10am.
+
+    User 2: Sounds good! I''ll see you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

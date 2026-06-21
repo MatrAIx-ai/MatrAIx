@@ -1,0 +1,18 @@
+id: 00011087
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11087
+persona_description: A database administrator who is preparing a physical standby database to transition to a logical standby database. They are familiar with Redo Apply, LogMiner dictionary, and the SQL
+  procedure for building LogMiner dictionary. They are also aware of the importance of ensuring the timely conversion of the physical standby database to a logical standby database and the use of Flashback
+  Query to obtain a consistent snapshot of the data dictionary.
+expertise:
+  general_domain_top1pct: Database Administration
+  specific_domain_top1pct: Database Administration (Oracle)
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

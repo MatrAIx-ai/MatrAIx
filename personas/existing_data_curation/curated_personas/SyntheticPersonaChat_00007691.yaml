@@ -1,0 +1,60 @@
+id: 00007691
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7691
+data:
+  user 1 personas: 'Tomorrow is my first day of safety patrol.
+
+    And , my best friend is abigail.
+
+    I am ten years old.
+
+    I love to read harry potter books.
+
+    I take martial arts after school.'
+  user 2 personas: 'I play football.
+
+    My favorite movie is star wars.
+
+    I have a pet iguana.
+
+    I like to play video games.
+
+    I work at mcdonald s.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1)!
+
+    User 2: Hi, I''m (user 2)!
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I play football, I like to play video games, and I work at McDonald''s.
+
+    User 1: Oh, that''s cool! I like to read Harry Potter books, I take martial arts after school, and my best friend is Abigail.
+
+    User 2: I''ve never read Harry Potter, but I''ve heard good things about it. Martial arts sounds cool! What''s your favorite thing about it?
+
+    User 1: I like the challenge and the way it makes me feel. It''s also a great way to stay in shape.
+
+    User 2: That''s awesome! I''m glad you like it.
+
+    User 1: Thanks! What''s your favorite thing about football?
+
+    User 2: I like the team spirit and the competition. It''s also a lot of fun to play.
+
+    User 1: I bet it is! I''ve never played football, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that!
+
+    User 2: Great! I''m sure you''ll love it.
+
+    User 1: Thanks! It was nice talking to you!
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

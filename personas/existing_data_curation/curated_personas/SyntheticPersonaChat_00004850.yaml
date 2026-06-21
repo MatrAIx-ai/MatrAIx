@@ -1,0 +1,72 @@
+id: 00004850
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4850
+data:
+  user 1 personas: 'My favorite color is pruple.
+
+    I have a pet lizard named gila.
+
+    I really love plants.
+
+    I am an only child.
+
+    I have brown eyes.'
+  user 2 personas: 'My name is john and i live in dallas , tx.
+
+    My wife and i have 2 children.
+
+    Our kids are 14 and 12 years old.
+
+    We also have three dogs and two cats.
+
+    I work as a physical therapist , and my wife is a school nurse.'
+  Best Generated Conversation: 'User 1: Hi! I''m John.
+
+    User 2: Hi John, I''m [User 2 Name].
+
+    User 1: Nice to meet you! I''m from Dallas, Texas.
+
+    User 2: Me too! What part of Dallas are you from?
+
+    User 1: I live in North Dallas.
+
+    User 2: I live in South Dallas.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, we have three dogs and two cats.
+
+    User 1: Oh wow, that''s a lot of pets!
+
+    User 2: Yeah, we love animals.
+
+    User 1: I love animals too! I have a pet lizard named Gila.
+
+    User 2: A lizard! That''s so cool.
+
+    User 1: Yeah, he''s a really cool pet.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and camping.
+
+    User 2: Me too! I love being outdoors.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is blue.
+
+    User 1: Mine too! What''s your favorite food?
+
+    User 2: My favorite food is pizza.
+
+    User 1: Mine too! We''re so similar!
+
+    User 2: Yeah, we are! I''m glad we met, John.
+
+    User 1: Me too! I''m glad I met you, [User 2 Name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

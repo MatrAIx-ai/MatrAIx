@@ -1,0 +1,72 @@
+id: 00005080
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5080
+data:
+  user 1 personas: 'I used to work as an actress.
+
+    I am a vegan.
+
+    My favorite music is country.
+
+    I love all animals.
+
+    I love my job.'
+  user 2 personas: 'I am a painter.
+
+    My wife hates me , she thinks i am lazy and poor.
+
+    I live a lie.
+
+    I won a lottery 6 years ago but nobody knows.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a painter.
+
+    User 1: Wow, that''s really cool! What kind of paintings do you do?
+
+    User 2: I mostly do portraits, but I also do landscapes and still lifes.
+
+    User 1: I love paintings! I used to work as an actress, but I gave it up to pursue my passion for art.
+
+    User 2: That''s awesome! I''m glad you were able to find your passion.
+
+    User 1: Me too! I love painting animals. I think they''re so beautiful and expressive.
+
+    User 2: I love animals too! I have a dog and a cat.
+
+    User 1: That''s great! I used to have a dog, but I had to give him up when I moved.
+
+    User 2: I''m sorry to hear that.
+
+    User 1: It''s okay. I''m sure I''ll get another one someday.
+
+    User 2: I''m sure you will!
+
+    User 1: So, what''s your favorite thing about painting?
+
+    User 2: I love the way it makes me feel. It''s so relaxing and therapeutic.
+
+    User 1: I know what you mean. Painting is my way of escaping from the world.
+
+    User 2: Me too! It''s a great way to clear my head.
+
+    User 1: So, what''s your favorite painting that you''ve ever done?
+
+    User 2: I think my favorite painting is one I did of my dog. It''s a portrait of him sitting in the grass.
+
+    User 1: That sounds beautiful! I''d love to see it sometime.
+
+    User 2: Sure! I''ll bring it with me next time we meet.
+
+    User 1: Great! I''m excited to see it.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,94 @@
+id: 00003269
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3269
+data:
+  user 1 personas: 'My parents pay my rent.
+
+    I m a vegetarian but i eat fish , especially sushi.
+
+    I graduated college and immediately went to graduate school.
+
+    I love my dog.
+
+    I like to shop.'
+  user 2 personas: 'I like to draw.
+
+    I am a vegan.
+
+    My favorite food is tacos.
+
+    I am studying literature.
+
+    I am from france.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to draw, read, and eat tacos.
+
+    User 1: I like to draw too! What kind of things do you like to draw?
+
+    User 2: I like to draw people, animals, and nature.
+
+    User 1: That''s cool. I like to draw cartoons and caricatures.
+
+    User 2: I''ve always wanted to learn how to draw cartoons.
+
+    User 1: It''s not too hard. You just need to have a good sense of humor and be able to exaggerate features.
+
+    User 2: I think I might be able to do that.
+
+    User 1: I''m sure you can. What''s your favorite book?
+
+    User 2: I don''t have a favorite book, but I''m currently reading "The Little Prince".
+
+    User 1: I''ve heard good things about that book. What''s it about?
+
+    User 2: It''s about a pilot who crashes his plane in the desert and meets a young prince from another planet.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should. It''s a really good book.
+
+    User 1: I''m from the United States. Where are you from?
+
+    User 2: I''m from France.
+
+    User 1: Oh, that''s cool. I''ve always wanted to visit France.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: You''re welcome.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a student. I''m studying literature at the Sorbonne.
+
+    User 1: That''s cool. I''m a graduate student at the University of California, Berkeley.
+
+    User 2: Oh, that''s awesome. What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: That''s cool. I''ve always been interested in computer science.
+
+    User 1: It''s a lot of fun. I''m glad I chose it.
+
+    User 2: I''m glad you''re happy with it.
+
+    User 1: I am. It''s a great field.
+
+    User 2: It sounds like it. I''m glad I met you.
+
+    User 1: Me too. It''s been nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

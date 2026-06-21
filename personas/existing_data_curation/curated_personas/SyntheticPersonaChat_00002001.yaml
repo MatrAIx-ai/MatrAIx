@@ -1,0 +1,66 @@
+id: '00002001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2001
+data:
+  user 1 personas: 'I love to barbecue.
+
+    I am a writer.
+
+    I live in springfield , mo.
+
+    I just bought my first home.
+
+    I try to go hunting with my brothers several times a year.'
+  user 2 personas: 'I love sunny days.
+
+    I do not like feeling obligated to hang out with someone.
+
+    Coffee is important to me.
+
+    I love winning.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love sunny days, coffee, and winning!
+
+    User 1: Those are all great things! I love barbecues, writing, and spending time outdoors.
+
+    User 2: Oh, I love BBQs too! I''m not much of a writer, but I enjoy reading. What kind of things do you like to write?
+
+    User 1: I mostly write fiction, but I''ve also dabbled in some nonfiction. I''m always looking for new ideas to write about.
+
+    User 2: That''s awesome! I love reading fiction. I''m always looking for new books to read.
+
+    User 1: Well, if you''re ever looking for a good book, I''d be happy to recommend something.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in computers, but I''m not very good at math.
+
+    User 2: Math is definitely a challenge, but it''s not impossible!
+
+    User 1: I guess you''re right. I''ll have to try harder.
+
+    User 2: You can do it!
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem! So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. I might go out for a walk or read a book.
+
+    User 2: Sounds like a good plan. Enjoy your day!
+
+    User 1: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

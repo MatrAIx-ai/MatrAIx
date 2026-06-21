@@ -1,0 +1,60 @@
+id: '00001310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1310
+data:
+  user 1 personas: 'I like gardening.
+
+    I have a cat named felix and a small terror names emmy.
+
+    I live in a small city.
+
+    I like to cook.'
+  user 2 personas: 'I play tabletop games with friends.
+
+    I still live at home.
+
+    I have a crush on my co worker.
+
+    I love rpg computer games.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do?
+
+    User 2: I love playing tabletop games with friends!
+
+    User 1: Oh, that''s fun! What kind of games do you play?
+
+    User 2: I love playing D&D, Pathfinder, and other RPGs.
+
+    User 1: I''ve never played D&D, but it sounds like fun! What''s it like?
+
+    User 2: It''s a lot of fun! You create your own character and go on adventures with your friends.
+
+    User 1: That sounds awesome! I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to spend time with friends and have some fun.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I love cooking! I''m always trying new recipes and making new dishes.
+
+    User 1: That''s awesome! I love to cook too! What''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes! I love the way they smell and the way they taste.
+
+    User 1: Pasta is my favorite food! I love making it with my family.
+
+    User 2: That''s awesome! I love making pasta with my friends.
+
+    User 1: So, what''s your favorite place to go in your city?
+
+    User 2: I love going to the park! It''s a great place to relax and have some fun.
+
+    User 1: The park is my favorite place to go too! I love going for walks and reading books there.
+
+    User 2: That''s awesome! I love going to the park with my friends and family.
+
+    User 1: Me too! It''s a great place to spend time with the people you love.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

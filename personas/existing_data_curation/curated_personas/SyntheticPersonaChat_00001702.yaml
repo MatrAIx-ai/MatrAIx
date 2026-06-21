@@ -1,0 +1,92 @@
+id: '00001702'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1702
+data:
+  user 1 personas: 'I m not very tall.
+
+    I m looking for a job.
+
+    My favorite color is red.
+
+    I ve a dog.'
+  user 2 personas: 'I m recently divorced.
+
+    I wear glasses.
+
+    I have no children of my own.
+
+    I m very shy.
+
+    I m a children s librarian.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi!
+
+    User 1: I''m [User 1''s name], what''s yours?
+
+    User 2: I''m [User 2''s name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my dog.
+
+    User 1: Oh, that''s cool! I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I''m especially interested in historical fiction and science fiction.
+
+    User 1: Oh, me too! I love historical fiction.
+
+    User 2: What''s your favorite book?
+
+    User 1: It''s hard to pick just one, but I''d say my favorite book is A Tale of Two Cities by Charles Dickens.
+
+    User 2: Oh, that''s a good one! I''ve read it a few times.
+
+    User 1: Yeah, it''s really good. I love the story and the characters.
+
+    User 2: Me too. What do you like about it?
+
+    User 1: I like the way Dickens explores the themes of love, loss, and redemption. I also like the historical setting.
+
+    User 2: Yeah, the historical setting is really interesting.
+
+    User 1: Yeah, it''s one of the things I love about the book.
+
+    User 2: So, what are you looking for in a job?
+
+    User 1: I''m looking for something in the library field. I''ve always loved books and I think I would be a good librarian.
+
+    User 2: Oh, that''s great! I''m a children''s librarian myself.
+
+    User 1: Oh, that''s cool! I''ve always wanted to work with kids.
+
+    User 2: It''s really rewarding. I love getting to see kids excited about reading.
+
+    User 1: Yeah, I can imagine.
+
+    User 2: So, what''s your favorite thing about books?
+
+    User 1: I love how they can transport you to another world. I can be anyone I want to be when I''m reading a book.
+
+    User 2: Yeah, me too. I love that feeling of escape.
+
+    User 1: Yeah, it''s the best.
+
+    User 2: So, what are you reading right now?
+
+    User 1: I''m reading The Great Gatsby by F. Scott Fitzgerald.
+
+    User 2: Oh, that''s a good one! I''ve read it a few times.
+
+    User 1: Yeah, it''s really good. I''m enjoying it so far.
+
+    User 2: I''m glad to hear it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

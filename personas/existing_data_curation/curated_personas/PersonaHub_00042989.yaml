@@ -1,0 +1,18 @@
+id: 00042989
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42989
+persona_description: A Radiologist who specializes in mammography and breast cancer screening, with expertise in interpreting mammogram images to detect abnormalities such as cysts, calcifications, and
+  tumors in the breast tissue. They are highly skilled in interpreting mammogram results and can provide accurate diagnoses based on the findings. Their knowledge and expertise are crucial in identifying
+  early signs of breast cancer, which can lead to better treatment outcomes and improved patient outcomes.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: mammography
+  general_domain_top01pct: None
+  specific_domain_top01pct: breast cancer screening
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

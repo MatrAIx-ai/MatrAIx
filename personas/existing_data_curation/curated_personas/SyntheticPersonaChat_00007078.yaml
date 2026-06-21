@@ -1,0 +1,66 @@
+id: 00007078
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7078
+data:
+  user 1 personas: 'Our class is planning a trip to japan.
+
+    I hope to save enough money for it.
+
+    I started learning japanese at college.
+
+    I like to watch japanese cartoons anime in my free time.
+
+    I m tired of having to read subtitles.'
+  user 2 personas: 'I work as a police officer.
+
+    I don t like broccoli.
+
+    I like to play video games.
+
+    I have 2 dogs.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to play video games, watch anime, and spend time with my dogs.
+
+    User 1: That''s awesome! I love video games and anime too.
+
+    User 2: Oh, cool! What kind of games do you like to play?
+
+    User 1: I like to play action games, adventure games, and RPGs.
+
+    User 2: I like those too! I''m a big fan of the Final Fantasy series.
+
+    User 1: Me too! I love the Final Fantasy games.
+
+    User 2: What''s your favorite one?
+
+    User 1: I think my favorite one is Final Fantasy VII.
+
+    User 2: That''s a great one! I love the story and the characters.
+
+    User 1: Me too! It''s such a classic game.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to play video games with my friends.
+
+    User 1: Oh, that sounds fun! I''m going to hang out with my friends too.
+
+    User 2: Cool! We should play video games together sometime.
+
+    User 1: That sounds like a great idea!
+
+    User 2: Awesome! I''ll give you my gamer tag later.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

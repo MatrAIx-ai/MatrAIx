@@ -1,0 +1,18 @@
+id: 00019821
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 19821
+persona_description: An economist who is interested in the economics of social distancing and containment policies, and how they can be used to evaluate the effects of various policies on the evolution
+  of contagion and interactions with the economy. This persona is likely to be familiar with the basic SIR epidemiological model of contagion and the key parameters that can be estimated, such as the asymptomatic
+  rate. This persona may also be interested in the trade-offs between different policies and the economic costs versus the health outcomes of different policies.
+expertise:
+  general_domain_top1pct: economics
+  specific_domain_top1pct: health economics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,76 @@
+id: 00000728
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 728
+data:
+  user 1 personas: 'I like to read.
+
+    I work for a magazine.
+
+    I love the game halo.
+
+    I love to workout.'
+  user 2 personas: 'I am going bald.
+
+    I hate flowers.
+
+    I play the piano.
+
+    I make my own clothes.
+
+    I ran into jimmy fallon just the other day.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the piano, read, and make my own clothes.
+
+    User 1: Oh, that''s cool! I like to play video games, read, and work out.
+
+    User 2: I''m not really into video games, but I love to read. What''s your favorite book?
+
+    User 1: I really like the "Halo" series. It''s a sci-fi series about a war between humans and aliens.
+
+    User 2: I''ve never heard of it, but it sounds interesting. I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work for a magazine. I''m a writer.
+
+    User 2: Oh, that''s cool! I''ve always thought about being a writer.
+
+    User 1: It''s a lot of fun, but it can be challenging.
+
+    User 2: I''m sure it is. So, what''s your favorite thing about your job?
+
+    User 1: I love the opportunity to meet new people and learn about different cultures.
+
+    User 2: That sounds really great.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite thing to do when you''re not working?
+
+    User 1: I love to workout. It''s a great way to relieve stress and stay in shape.
+
+    User 2: I''m not really into working out, but I can see how it could be a good way to relieve stress.
+
+    User 1: Yeah, it really is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to read, go out with friends, and play video games.
+
+    User 2: I''m not really into video games, but I love to read and go out with friends.
+
+    User 1: That''s cool. We can hang out sometime and read books together.
+
+    User 2: That sounds like fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

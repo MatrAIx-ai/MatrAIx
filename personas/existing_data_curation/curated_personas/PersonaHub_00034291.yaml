@@ -1,0 +1,18 @@
+id: 00034291
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34291
+persona_description: An engineer at Southern California Edison, responsible for monitoring and maintaining the backup diesel generators at the San Onofre nuclear plant. The engineer is responsible for detecting
+  and addressing potential issues with the generators, such as the possibility of an earthquake triggering a shutdown. The engineer is knowledgeable in nuclear engineering and has experience with vibration
+  sensors and emergency diesel generators.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: nuclear engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

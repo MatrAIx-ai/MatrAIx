@@ -1,0 +1,80 @@
+id: '00000643'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 643
+data:
+  user 1 personas: 'I hate flowers.
+
+    I am going bald.
+
+    I play the piano.
+
+    I ran into jimmy fallon just the other day.
+
+    I make my own clothes.'
+  user 2 personas: 'I have 4 children.
+
+    My husband was a career soldier.
+
+    I am a senior citizen.
+
+    I like to read.
+
+    My grandchildren range in age from 30 to 7.'
+  Best Generated Conversation: 'User 1: What is something you do to pass the time?
+
+    User 2: I like to read, especially historical fiction.
+
+    User 1: I love reading too! What are some of your favorite books?
+
+    User 2: I recently read "The Terror" by Dan Simmons, which was really good.
+
+    User 1: I''ve heard good things about that book. I''ve been meaning to check it out.
+
+    User 2: You should, it''s really great!
+
+    User 1: What other books have you read recently?
+
+    User 2: I also read "The Martian" by Andy Weir, which was also really good.
+
+    User 1: That''s another one I''ve heard good things about.
+
+    User 2: It''s a really interesting story.
+
+    User 1: So, what do you like to do for fun besides read?
+
+    User 2: I like to spend time with my family. I have four children, and I love spending time with them.
+
+    User 1: I can imagine. I have two children, and I love spending time with them too.
+
+    User 2: What are your children''s ages?
+
+    User 1: They''re 8 and 10.
+
+    User 2: That''s great! I have a 21-year-old, a 19-year-old, a 17-year-old, and a 7-year-old.
+
+    User 1: Wow! You have a big family.
+
+    User 2: It is, but it''s a lot of fun.
+
+    User 1: I bet it is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go for walks, and I like to play video games.
+
+    User 2: I like to go for walks too. I don''t play video games though.
+
+    User 1: That''s okay. I''m sure you have other hobbies.
+
+    User 2: I do. I like to crochet.
+
+    User 1: I''ve never crocheted before.
+
+    User 2: It''s a lot of fun. You should try it sometime.
+
+    User 1: I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

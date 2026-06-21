@@ -1,0 +1,20 @@
+id: '00060701'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60701
+persona_description: A health and wellness expert who is well-versed in the causes, symptoms, and treatments of various types of headaches. This expert has a deep understanding of the different types of
+  headaches, their causes, and how they can be treated. They are knowledgeable about the environmental factors that trigger migraines, and they can provide guidance on how to prevent and manage these headaches.
+  This expert is also familiar with the treatment options for tension headaches, cluster headaches, and sinus headaches. They can provide personalized advice on how to manage and treat these types of headaches,
+  and they can recommend over-the-counter pain relievers and medications to help alleviate pain. Additionally, this expert is knowledgeable about the causes and symptoms of rebound headaches and can provide
+  guidance on how to prevent their recurrence. They can also provide information on the causes and symptoms of hangovers and offer remedies for them.
+expertise:
+  general_domain_top1pct: healthcare
+  specific_domain_top1pct: headache management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

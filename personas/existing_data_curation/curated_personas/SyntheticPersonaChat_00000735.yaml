@@ -1,0 +1,96 @@
+id: '00000735'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 735
+data:
+  user 1 personas: 'I like to read.
+
+    I work at a school as an art teacher.
+
+    My girlfriend just broke up with me.
+
+    I cannot stand pizza.
+
+    I do not own a television.'
+  user 2 personas: 'I really like technology.
+
+    My dog is smaller than my cat.
+
+    I only date people taller than me.
+
+    I like free diving.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: That''s cool. I like to read, too. What kind of books do you like to read?
+
+    User 2: I like to read science fiction, fantasy, and mystery novels.
+
+    User 1: Me too! I''m currently reading a science fiction novel by [author].
+
+    User 2: Oh, I''ve heard good things about that book. What do you think of it so far?
+
+    User 1: I''m really enjoying it! It''s a great story with a lot of interesting characters.
+
+    User 2: That''s good to hear. I might have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go for walks in the park. I also like to play video games.
+
+    User 2: I like to go for walks in the park, too. It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 1: I agree! Do you have any pets?
+
+    User 2: Yes, I have a dog and a cat.
+
+    User 1: Oh, that''s cool! I love dogs and cats.
+
+    User 2: Me too! My dog is smaller than my cat.
+
+    User 1: That''s funny! I''ve never seen a dog that''s smaller than a cat.
+
+    User 2: Yeah, he''s a little guy.
+
+    User 1: What kind of dog is he?
+
+    User 2: He''s a Chihuahua.
+
+    User 1: Oh, I love Chihuahuas! They''re so cute.
+
+    User 2: I know, right? He''s the best dog ever.
+
+    User 1: I''m sure he is!
+
+    User 2: So, what do you do for work?
+
+    User 1: I work as an art teacher at a school.
+
+    User 2: That''s cool! I''ve always wanted to be an art teacher.
+
+    User 1: It''s a lot of fun! I get to help kids learn how to draw and paint.
+
+    User 2: That sounds really rewarding.
+
+    User 1: It is! I love seeing the progress that my students make.
+
+    User 2: I''m sure they love having you as a teacher.
+
+    User 1: I hope so! I try my best to be a good teacher.
+
+    User 2: I''m sure you are.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

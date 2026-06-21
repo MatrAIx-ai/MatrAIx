@@ -1,0 +1,66 @@
+id: '00005004'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5004
+data:
+  user 1 personas: 'I have no children of my own.
+
+    I am recently divorced.
+
+    I wear glasses.
+
+    I am a childrens librarian.'
+  user 2 personas: 'I am a sixth grade teacher.
+
+    I enjoy karaoke every friday night.
+
+    I am allergic to apples yet still eat them.
+
+    I coach the girls volley ball team.
+
+    I enjoy crosswords , crocheting , and football.'
+  Best Generated Conversation: 'User 1: Hello! How are you today?
+
+    User 2: Good! I''m a sixth grade teacher and a girls volleyball coach.
+
+    User 1: Oh, that sounds like a lot of fun! I''m a children''s librarian.
+
+    User 2: Really? That''s awesome! I love books. I used to be a children''s librarian when I was in college.
+
+    User 1: What made you switch to teaching?
+
+    User 2: I wanted to have more of a relationship with my students. I love being able to see them grow and learn.
+
+    User 1: That''s great! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I love Harry Potter, Percy Jackson, and the Hunger Games.
+
+    User 1: Those are all great books! I love them too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I love Roald Dahl, Lemony Snicket, and Andrew Clements.
+
+    User 2: I love Roald Dahl too! He''s one of my favorite authors.
+
+    User 1: Me too! He''s so creative and funny.
+
+    User 2: Yeah, he is. I love his books.
+
+    User 1: So, what are you doing for fun this weekend?
+
+    User 2: I''m going to a volleyball game and then going out to dinner with my friends.
+
+    User 1: That sounds like fun! I''m going to stay in and relax.
+
+    User 2: I hope you have a good time!
+
+    User 1: Thanks! I hope you have a good time too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

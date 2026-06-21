@@ -1,0 +1,92 @@
+id: '00000555'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 555
+data:
+  user 1 personas: 'I ride horses.
+
+    I have many homes.
+
+    I collect vintage cars.
+
+    I try to limit how much meat i eat for health reasons.'
+  user 2 personas: 'I sometimes write poetry.
+
+    My favorite color is black.
+
+    I like to skate.
+
+    I want to visit the uk.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Lisa.
+
+    User 1: It''s nice to meet you Lisa. I''m [user 1''s name].
+
+    User 2: Nice to meet you too [user 1''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write poetry, skate, and travel.
+
+    User 1: That''s cool! I like to ride horses, collect vintage cars, and cook.
+
+    User 2: Horses? That''s awesome! I''ve always wanted to ride a horse.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I will! Where do you ride horses?
+
+    User 1: I have a horse farm in the country.
+
+    User 2: Oh, that sounds amazing!
+
+    User 1: It is. I love it there.
+
+    User 2: I bet. I''ve always wanted to live in the country.
+
+    User 1: It''s great. I love the peace and quiet.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you like about poetry?
+
+    User 2: I love the way it can express emotions in a way that words alone can''t.
+
+    User 1: That''s a great way to put it. I agree.
+
+    User 2: Do you have any favorite poems?
+
+    User 1: Yes, I have a few. One of my favorites is "The Road Not Taken" by Robert Frost.
+
+    User 2: I love that poem! It''s so beautiful.
+
+    User 1: It is. I love the imagery and the message.
+
+    User 2: Me too.
+
+    User 1: So, have you ever been to the UK?
+
+    User 2: No, I haven''t. But I''ve always wanted to go.
+
+    User 1: It''s a beautiful country. I went to London last year and it was amazing.
+
+    User 2: I bet. I''ve heard great things about London.
+
+    User 1: It''s a must-see city.
+
+    User 2: I''ll definitely put it on my list.
+
+    User 1: You should!
+
+    User 2: Thank you for the recommendation.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00003264'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3264
+data:
+  user 1 personas: 'My parents are lawyers.
+
+    I do not like wearing a swimsuit.
+
+    Winter is my favorite season.
+
+    If i cannot order it on the internet , i do not need it.'
+  user 2 personas: 'I am a casual dresser.
+
+    I am overall happy with life.
+
+    I am a waitress at a local restaurant.
+
+    My favorite band is nirvana.
+
+    My car needs some repairs.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a waitress at a local restaurant.
+
+    User 1: Oh, cool! I''ve never been a waitress before, but I''ve always thought it would be fun.
+
+    User 2: It is! I get to meet all kinds of people and I get to be creative with my food presentations.
+
+    User 1: That sounds fun! I''m not very creative with food, so I''d probably be bad at that part.
+
+    User 2: Don''t worry, you''ll learn!
+
+    User 1: I hope so!
+
+    User 2: So, what''s your favorite season?
+
+    User 1: Winter! I love the snow and the cold weather.
+
+    User 2: I''m not a fan of the cold weather, but I do love the snow.
+
+    User 1: Me too! I love to go skiing and snowboarding.
+
+    User 2: I''ve never been skiing or snowboarding before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s so much fun!
+
+    User 2: I will!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to concerts, play video games, and hang out with my friends.
+
+    User 1: I like to do those things too! I also like to go to the movies and read books.
+
+    User 2: I love going to the movies! I''m not really a big reader, though.
+
+    User 1: That''s okay! I''m always looking for new book recommendations.
+
+    User 2: I''ll let you know if I come across anything good.
+
+    User 1: Thanks! It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

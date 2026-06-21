@@ -1,0 +1,60 @@
+id: '00002257'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2257
+data:
+  user 1 personas: 'I like to bake pies.
+
+    I like photography.
+
+    I like to garden.
+
+    I am a chef.
+
+    I love traveling.'
+  user 2 personas: 'I am a student in social sciences.
+
+    I am studying for my master s.
+
+    I also like eating sushi.
+
+    Cooking is one of my pass times.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, travel, and study.
+
+    User 1: Wow! Me too! I love to cook pies, travel, and take pictures.
+
+    User 2: That''s awesome! I love taking pictures too. What''s your favorite thing to photograph?
+
+    User 1: I love taking pictures of food, landscapes, and people.
+
+    User 2: Me too! I love taking pictures of food because it''s so delicious and I love taking pictures of landscapes because they''re so beautiful.
+
+    User 1: I agree! I also love taking pictures of people because they''re so interesting and unique.
+
+    User 2: Me too! I love seeing the different expressions on people''s faces.
+
+    User 1: I know what you mean! I love that too.
+
+    User 2: So, what do you like to cook?
+
+    User 1: I love to bake pies! I also love to cook different kinds of pasta dishes.
+
+    User 2: I love pasta too! What''s your favorite pasta dish to cook?
+
+    User 1: I love making lasagna! It''s so easy to make and it''s always delicious.
+
+    User 2: I love lasagna too! I make it all the time.
+
+    User 1: That''s awesome! I''m glad we have so much in common.
+
+    User 2: Me too! I think we''d be great friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

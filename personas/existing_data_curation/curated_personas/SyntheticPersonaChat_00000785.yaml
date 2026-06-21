@@ -1,0 +1,66 @@
+id: 00000785
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 785
+data:
+  user 1 personas: 'I love history.
+
+    My mother was an rn.
+
+    I am a technician.
+
+    My father was a dry wall finisher.'
+  user 2 personas: 'My favorite city is new york.
+
+    I am a lawyer.
+
+    I love to run.
+
+    My wife just left me.'
+  Best Generated Conversation: 'User 1: Hi there, how are you doing today?
+
+    User 2: Not so great, I just found out that my wife left me.
+
+    User 1: Oh no, I''m so sorry to hear that.
+
+    User 2: Thanks, I''m still trying to process it all.
+
+    User 1: It''s okay to be sad. It''s a lot to take in.
+
+    User 2: I know, I just feel like my whole world has been turned upside down.
+
+    User 1: I can understand that. It''s not easy to deal with something like that.
+
+    User 2: Yeah, I''m not sure what I''m going to do.
+
+    User 1: Well, you''re not alone. There are people who can help you.
+
+    User 2: Like who?
+
+    User 1: Well, you could always talk to a therapist. They can help you process your emotions and figure out what to do next.
+
+    User 2: That''s a good idea, I''ll look into it.
+
+    User 1: I''m sure you''ll be okay. Just take it one day at a time.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: No problem, I''m here for you if you need anything.
+
+    User 2: Thanks, I know I can count on you.
+
+    User 1: Of course.
+
+    User 2: I''m going to go for a run now.
+
+    User 1: That sounds good. I''m sure it will help you clear your head.
+
+    User 2: Yeah, I hope so.
+
+    User 1: Well, I''m going to go now. Take care of yourself.
+
+    User 2: You too. Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

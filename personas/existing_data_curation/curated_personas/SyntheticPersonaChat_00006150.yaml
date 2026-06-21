@@ -1,0 +1,66 @@
+id: '00006150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6150
+data:
+  user 1 personas: 'My favorite video game is halo 3.
+
+    I like to take cold showers.
+
+    I struggle with maintaining eye contact.
+
+    I sing in the shower.
+
+    I drive a moped.'
+  user 2 personas: 'I have never kissed a woman.
+
+    People notice how organized i am.
+
+    I love to gossip.
+
+    I watch jimmy allons show every night.
+
+    I believe that i can achieve anything.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. Nice to meet you.
+
+    User 1: Nice to meet you too. Where are you from?
+
+    User 2: I''m from [city].
+
+    User 1: Oh, I''ve never been there before. What''s it like?
+
+    User 2: It''s a great city! There''s a lot to do and see.
+
+    User 1: What''s your favorite thing to do there?
+
+    User 2: I love to go to the park and play with my friends.
+
+    User 1: That sounds like fun. I like to go to the park too.
+
+    User 2: What video games do you like to play?
+
+    User 1: I like to play Halo 3. It''s my favorite video game.
+
+    User 2: I''ve never played Halo 3. Is it fun?
+
+    User 1: It''s really fun. It''s a first-person shooter game.
+
+    User 2: I''m not really into first-person shooters. I like more peaceful games.
+
+    User 1: I like peaceful games too. I like to play Stardew Valley.
+
+    User 2: I''ve never heard of Stardew Valley. Is it any good?
+
+    User 1: It''s really good. It''s a farming simulator game.
+
+    User 2: Sounds like something I would like.
+
+    User 1: You should try it out. I think you''d like it.
+
+    User 2: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

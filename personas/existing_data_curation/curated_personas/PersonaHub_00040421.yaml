@@ -1,0 +1,19 @@
+id: '00040421'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40421
+persona_description: A professional engineer who specializes in the design and installation of water treatment plants. Their expertise lies in the calculation and optimization of head loss within the installation,
+  ensuring that the pump can operate efficiently without exceeding the maximum recommended head loss of 6%. They are skilled in using the given formula to calculate the head loss based on the pipe diameter,
+  pipe length, and other factors, and are able to provide guidance on the correct correction factor to be applied. They are also knowledgeable in the use of the equivalent pipe length formula to calculate
+  the length of non-straight pipework and are able to provide examples and calculations for the factors involved in the head loss calculation.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Water treatment plant design and installation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

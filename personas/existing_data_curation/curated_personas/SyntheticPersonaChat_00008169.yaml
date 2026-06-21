@@ -1,0 +1,86 @@
+id: 00008169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8169
+data:
+  user 1 personas: 'I really like cake and do not prefer vegetables.
+
+    I have one sister and a niece and nephew.
+
+    I am almost finished with my degree.
+
+    I take care of my mother and father.'
+  user 2 personas: 'My favorite singer is jacob sartorius.
+
+    I work a dead end 9 to 5 job as a snakeskin oil salesman.
+
+    In my freetime i enjoy cloud watching.
+
+    My idea of flirting is to stare from a distance.
+
+    My favorite store to shop at is costco.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch clouds and I like to shop at Costco.
+
+    User 1: That''s cool. I like to bake cakes and I like to spend time with my family.
+
+    User 2: What kind of cakes do you like to bake?
+
+    User 1: I like to bake chocolate cakes and lemon cakes.
+
+    User 2: Those sound delicious. I love lemon cake.
+
+    User 1: I''m glad you like it. What do you like about Costco?
+
+    User 2: I like the cheap prices and the good selection.
+
+    User 1: I agree. Costco is a great place to shop.
+
+    User 2: Do you have any siblings?
+
+    User 1: Yes, I have one sister.
+
+    User 2: That''s cool. I have one sister and a brother.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a snakeskin oil salesman.
+
+    User 1: That sounds interesting. What do you like about it?
+
+    User 2: I like working with people and I like learning about new things.
+
+    User 1: That''s great. Do you like your job?
+
+    User 2: I do. It''s a good job.
+
+    User 1: I''m glad you like your job.
+
+    User 2: Thanks.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to bake a cake for my sister''s birthday.
+
+    User 2: That sounds fun. I''m sure she''ll love it.
+
+    User 1: I hope so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

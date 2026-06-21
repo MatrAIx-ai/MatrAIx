@@ -1,0 +1,60 @@
+id: 00001889
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1889
+data:
+  user 1 personas: 'I have a pet skunk.
+
+    I live in a nice attic apartment in portland or.
+
+    My nails are painted green.
+
+    My brother thinks he s a viking.'
+  user 2 personas: 'I enjoy my steaks cooked medium rare.
+
+    My dog introduced me to my first and second wives.
+
+    I have the gene that lets me know when someone s eaten asparagus.
+
+    I have five different flavors of coffee in my fridge.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi [User 1''s name], I''m [User 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: Where are you from?
+
+    User 2: I''m from Portland, Oregon.
+
+    User 1: Oh, cool! I''ve always wanted to visit Portland.
+
+    User 2: You should! It''s a great city.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, biking, and camping. I also like to play video games and read.
+
+    User 1: That sounds fun! I like to go hiking and biking too.
+
+    User 2: Me too! Have you been to any cool places hiking?
+
+    User 1: I''ve been to a few places. I really like going to Mount Tammany in New Jersey.
+
+    User 2: I''ve never been to New Jersey, but I''ve heard good things about it.
+
+    User 1: It''s a beautiful state. I''d definitely recommend going there.
+
+    User 2: I''ll have to put it on my list of places to visit.
+
+    User 1: You should! It''s definitely worth it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

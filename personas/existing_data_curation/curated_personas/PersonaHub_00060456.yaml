@@ -1,0 +1,19 @@
+id: '00060456'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60456
+persona_description: A healthcare professional who is interested in evidence-based medicine and is advocating for patients to be informed about the efficacy of new medications. They believe that the current
+  FDA approval process for new drugs does not adequately reflect the actual efficacy of these products, and they propose that the FDA require drug manufacturers to state how new medications compare with
+  similar, existing treatments. They also believe that the FDA's primary role is informing the public about the safety of drugs and devices, and they advocate for developing more informative labels to improve
+  patient outcomes.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmaceutical policy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

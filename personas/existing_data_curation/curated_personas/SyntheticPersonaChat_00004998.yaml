@@ -1,0 +1,66 @@
+id: 00004998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4998
+data:
+  user 1 personas: 'I have male pattern baldness.
+
+    I am a classily trained chef.
+
+    I was born in baton rouge.
+
+    My mother does not ! ove me.'
+  user 2 personas: 'My motor never stops running.
+
+    I want to take her on vacations one day.
+
+    I got off the road when i married my sweetheart.
+
+    My father was a driver himself.'
+  Best Generated Conversation: 'User 1: Hi there, how are you doing?
+
+    User 2: I''m doing well, thanks for asking. How are you?
+
+    User 1: I''m doing well, thank you. I''m a chef, and I''m from Baton Rouge.
+
+    User 2: Oh, that''s interesting. I''m a truck driver, and I''ve been on the road for many years.
+
+    User 1: That''s cool. I''ve always wanted to be a truck driver.
+
+    User 2: It''s a great job, but it can be tough being away from home for so long.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I love the freedom of being able to go wherever I want. And I also love the people I meet along the way.
+
+    User 1: That sounds like a lot of fun. I''m sure you''ve seen some interesting things.
+
+    User 2: I have! I''ve seen everything from mountains to deserts to oceans.
+
+    User 1: That''s amazing. I''d love to see some of the places you''ve been.
+
+    User 2: Maybe one day you will.
+
+    User 1: Maybe! I''d love to take a road trip with you.
+
+    User 2: That would be fun.
+
+    User 1: So, what do you like to do for fun when you''re not on the road?
+
+    User 2: I like to spend time with my family and friends. I also enjoy fishing and hunting.
+
+    User 1: Those all sound like great hobbies.
+
+    User 2: Yeah, they are. I like to keep busy.
+
+    User 1: I can see that. So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I might want to start my own trucking company one day.
+
+    User 1: That would be cool. I''m sure you''d be great at it.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

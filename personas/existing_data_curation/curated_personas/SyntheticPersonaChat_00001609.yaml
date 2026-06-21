@@ -1,0 +1,60 @@
+id: 00001609
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1609
+data:
+  user 1 personas: 'I have a daughter.
+
+    I hate the taste of cheese.
+
+    I am a great cook.
+
+    I am under 6 feet tall.'
+  user 2 personas: 'I am an avid fisherman.
+
+    I hate fast food.
+
+    I have a george foreman grill at home.
+
+    I like to race go carts.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi, how are you?
+
+    User 1: I''m doing well. What about you?
+
+    User 2: I''m good, thanks. So, what do you do for fun?
+
+    User 1: I like to cook, read, and spend time with my daughter.
+
+    User 2: Those are all great hobbies! I love to cook too. What''s your favorite dish to make?
+
+    User 1: I love to make lasagna. It''s one of my daughter''s favorites.
+
+    User 2: I love lasagna too! I usually make it on special occasions.
+
+    User 1: Me too. It''s a lot of work, but it''s so delicious.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I also like to read. I''m a big fan of historical fiction.
+
+    User 2: Me too! I love learning about different time periods.
+
+    User 1: Me too. I think it''s important to learn about our past so we can understand the present.
+
+    User 2: I agree. It''s also a great way to escape from the present.
+
+    User 1: Exactly. What are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon. It''s a historical fiction series set in the 18th century.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

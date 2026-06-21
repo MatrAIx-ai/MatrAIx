@@ -1,0 +1,72 @@
+id: 00007338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7338
+data:
+  user 1 personas: 'I have not spoken to my family in years.
+
+    I have over 4000 friends on facebook.
+
+    I enjoy hitchhiking.
+
+    Formal situations make me uncomfortable.'
+  user 2 personas: 'I work in a factory.
+
+    I do not eat well.
+
+    I am very unproductive unless it comes to my job.
+
+    I am not social.'
+  Best Generated Conversation: 'User 1: I have not spoken to my family in years.
+
+    User 2: I work in a factory.
+
+    User 1: I enjoy hitchhiking.
+
+    User 2: I do not eat well.
+
+    User 1: Formal situations make me uncomfortable.
+
+    User 2: I am not social.
+
+    User 1: I have over 4000 friends on Facebook.
+
+    User 2: What do you like about Facebook?
+
+    User 1: I like to keep up with friends and family, and I like seeing what people are up to. I also like sharing my own experiences with others.
+
+    User 2: I don''t really use Facebook much. I''m not very social, and I don''t really have a lot of friends.
+
+    User 1: That''s okay. I''m sure you''re a great person, even if you''re not social.
+
+    User 2: Thanks. I appreciate that.
+
+    User 1: So, what''s your job like?
+
+    User 2: It''s not bad. I''m not really passionate about it, but it pays the bills.
+
+    User 1: I know what you mean. I''m not passionate about my job either, but it''s a good job.
+
+    User 2: Yeah, I guess that''s all that matters.
+
+    User 1: I think so too.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go hiking, camping, and fishing. I also like to read and watch movies.
+
+    User 2: I like to do those things too, but I don''t get out much.
+
+    User 1: You should! They''re a lot of fun.
+
+    User 2: I know, I know. I''ll try to get out more.
+
+    User 1: Good! You won''t regret it.
+
+    User 2: I hope not.
+
+    User 1: I''m sure you won''t.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: 00004678
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4678
+data:
+  user 1 personas: 'I like playing games online.
+
+    I am a vegetarian.
+
+    I will study computer science.
+
+    I am on my way to uc santa cruz where i was accepted.'
+  user 2 personas: 'We live in a rural area.
+
+    I am a woman.
+
+    My parents are still married.
+
+    I have several children.'
+  Best Generated Conversation: 'User 1: Hi there! I''m going to be studying computer science at UC Santa Cruz.
+
+    User 2: Oh, that''s cool! I grew up in a rural area and I''ve always been interested in computers.
+
+    User 1: That''s great! What are some of your favorite games?
+
+    User 2: I really like playing online games with my friends.
+
+    User 1: I used to play a lot of online games too. I''m not as much into them anymore, but I still enjoy them from time to time.
+
+    User 2: Yeah, I know what you mean. I still play them sometimes, but not as much as I used to.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go hiking and camping with my kids. We live in a rural area, so there are a lot of great places to explore.
+
+    User 1: That sounds like fun! I love hiking and camping. I used to go hiking a lot when I lived in a rural area.
+
+    User 2: Yeah, it''s a great way to get outside and enjoy nature.
+
+    User 1: So, what do you like about computer science?
+
+    User 2: I like the problem-solving aspect of it. I also like the fact that it''s a growing field with a lot of opportunities.
+
+    User 1: Yeah, I agree. It''s a great field to study. I''m excited to start my studies at UC Santa Cruz.
+
+    User 2: I''m sure you''ll do great! You seem like you''re really passionate about it.
+
+    User 1: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

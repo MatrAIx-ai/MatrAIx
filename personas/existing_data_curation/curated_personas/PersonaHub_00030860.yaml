@@ -1,0 +1,18 @@
+id: 00030860
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30860
+persona_description: A scientist or engineer with expertise in space exploration, particularly in the field of planetary science. They have experience with spacecraft operations, engineering, and data analysis.
+  They are responsible for overseeing the mission's execution, including the precise firing of engines and thrusters, and the testing of instruments to gather data about Venus. They are focused on collecting
+  scientific information about the planet's atmosphere, clouds, and other features, which will contribute to our understanding of the solar system.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: planetary science
+  general_domain_top01pct: None
+  specific_domain_top01pct: planetary science
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

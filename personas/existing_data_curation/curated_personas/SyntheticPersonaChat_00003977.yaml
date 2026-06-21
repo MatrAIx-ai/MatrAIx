@@ -1,0 +1,82 @@
+id: 00003977
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3977
+data:
+  user 1 personas: 'I have a golden retriever.
+
+    I like to play soccer.
+
+    My favorite subject in school is math.
+
+    I have a little sister.
+
+    My favorite book is pride and prejudice.'
+  user 2 personas: 'My father used to work for microsoft.
+
+    I am a christian.
+
+    I like football.
+
+    My favourite band is kings of leon.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play football, watch football, and listen to music.
+
+    User 1: That''s cool. I like to play soccer, read books, and watch movies.
+
+    User 2: Oh, I love books too. What''s your favorite book?
+
+    User 1: My favorite book is Pride and Prejudice by Jane Austen.
+
+    User 2: I''ve never read that book, but I''ve heard good things about it.
+
+    User 1: It''s a great book. It''s about a young woman who is trying to find her place in society.
+
+    User 2: Sounds interesting. I might have to check it out.
+
+    User 1: You should. It''s a classic for a reason.
+
+    User 2: So, what''s your favorite band?
+
+    User 1: My favorite band is Kings of Leon.
+
+    User 2: I''ve heard of them. They''re pretty good.
+
+    User 1: Yeah, I love their music. They''re one of my favorite bands to listen to while I''m working out.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have a golden retriever named Buddy.
+
+    User 2: Oh, that''s cool. I love dogs.
+
+    User 1: Me too. Buddy is my best friend.
+
+    User 2: It sounds like you have a lot of great hobbies and interests.
+
+    User 1: Thanks. I try to keep busy.
+
+    User 2: That''s good. It''s important to have things to do that you enjoy.
+
+    User 1: Yeah, I agree.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great. I''ve always thought about being a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: I can imagine. It sounds like you enjoy your job.
+
+    User 1: Yeah, I do. It''s the perfect job for me.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

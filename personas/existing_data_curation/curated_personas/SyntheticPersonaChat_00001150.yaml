@@ -1,0 +1,60 @@
+id: '00001150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1150
+data:
+  user 1 personas: 'I work in a lab.
+
+    I ve been a vegan since i was 5.
+
+    I have two brothers.
+
+    I love to sleep in.'
+  user 2 personas: 'I have lived a very sheltered life.
+
+    I m about to go off to college at a very liberal school soon.
+
+    I plan to raise hell and sew my wild oats.
+
+    I am 17.
+
+    I go to a catholic high school in new england.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name]. What''s your name?
+
+    User 2: Hi, my name is [user 2 name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. I''ve heard that you''re going to be attending [user 2 college name] soon.
+
+    User 2: Yes, I am! I''m really excited to start my new life there.
+
+    User 1: That''s great! I''m sure you''ll have a lot of fun. I''m a vegan, too. Have you been vegan for long?
+
+    User 2: I''ve been vegan for about a year now. I''ve been really enjoying it.
+
+    User 1: That''s awesome! I''ve been vegan since I was five.
+
+    User 2: Wow! That''s really impressive. I can''t imagine being vegan at such a young age.
+
+    User 1: It''s not that hard. I just grew up around it. My parents are both vegan, so it was just natural for me to become vegan too.
+
+    User 2: That''s cool. I''m glad that you''ve found something that you''re passionate about.
+
+    User 1: Thanks. I''m glad too.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I love to read, cook, and watch movies.
+
+    User 2: Those are all great hobbies. I love to read, too. I''m not much of a cook, but I love to eat.
+
+    User 1: Me too! I love to try new foods. I''m also a big fan of movies.
+
+    User 2: I love movies, too. I''m always looking for new movies to watch.
+
+    User 1: I''m sure we''ll get along well.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

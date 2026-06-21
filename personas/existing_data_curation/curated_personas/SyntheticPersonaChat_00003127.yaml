@@ -1,0 +1,70 @@
+id: '00003127'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3127
+data:
+  user 1 personas: 'I like to play outside.
+
+    I am a girl.
+
+    I am in preschool.
+
+    I like to dance.'
+  user 2 personas: 'My dad was a preacher.
+
+    I did not finish college.
+
+    My favorite movie is the last of the mohicans.
+
+    My mother was a school music teacher.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play outside, read, and dance.
+
+    User 1: Oh, that''s cool! I like to play outside and dance too.
+
+    User 2: Really? What kind of dancing do you like to do?
+
+    User 1: I like to do all kinds of dancing, but I especially like hip hop and ballet.
+
+    User 2: Oh, I like those too! I''ve never tried ballet, but I''ve always wanted to.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a preschool teacher.
+
+    User 1: Oh, that''s cool! I''ve always thought that would be a fun job.
+
+    User 2: It is! I love working with kids.
+
+    User 1: What''s your favorite part about being a preschool teacher?
+
+    User 2: I love seeing the kids learn and grow.
+
+    User 1: That''s so nice!
+
+    User 2: Yeah, it''s really rewarding.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is The Last of the Mohicans.
+
+    User 1: Oh, I''ve never seen that movie.
+
+    User 2: It''s a really good movie. It''s about a group of Native Americans who are fighting for their land.
+
+    User 1: That sounds interesting. I might have to check it out sometime.
+
+    User 2: You should! It''s a really good movie.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00007692
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7692
+data:
+  user 1 personas: 'Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.
+
+    And , my best friend is abigail.
+
+    I take martial arts after school.'
+  user 2 personas: 'My parents passed away in a car accident.
+
+    I am a ballet dancer.
+
+    My favorite food is hamburgers.
+
+    I like movies based on comedies.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What are you up to today?
+
+    User 2: I''m just working on some homework.
+
+    User 1: Oh, me too. What are you working on?
+
+    User 2: I''m working on a paper about the history of ballet.
+
+    User 1: That sounds really interesting! I''ve always been fascinated by ballet.
+
+    User 2: It''s really amazing! I love the way it combines dance and music.
+
+    User 1: Me too! I''ve never tried it myself, but I''ve always wanted to learn.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: I might have to give it a try. What are your favorite things about ballet?
+
+    User 2: I love the way it makes me feel. It''s so graceful and elegant.
+
+    User 1: I can see why you love it! It''s beautiful to watch.
+
+    User 2: Thank you! I''m glad you think so.
+
+    User 1: I''m sure I''ll be seeing you at the ballet sometime soon!
+
+    User 2: I hope so! It would be great to meet you there.
+
+    User 1: Me too! It was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

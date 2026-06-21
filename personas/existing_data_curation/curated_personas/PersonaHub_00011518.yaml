@@ -1,0 +1,18 @@
+id: 00011518
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11518
+persona_description: A meteorologist or climatologist who is interested in understanding the patterns and anomalies in temperature and precipitation data. They are likely to be familiar with the concept
+  of the January thaw and its possible physical mechanisms, and may be interested in studying the data analysis methods used to detect such anomalies. They may also be interested in the broader implications
+  of the January thaw, such as its potential role in climate change or its influence on regional weather patterns.
+expertise:
+  general_domain_top1pct: meteorology/climatology
+  specific_domain_top1pct: anomaly detection in climate data
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

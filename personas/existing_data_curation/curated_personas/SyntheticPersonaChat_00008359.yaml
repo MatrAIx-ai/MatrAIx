@@ -1,0 +1,60 @@
+id: 00008359
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8359
+data:
+  user 1 personas: 'I prefer the night to the day , but i love sunshine.
+
+    I drive more than an hour each way to work.
+
+    I am a grandparent at 44.
+
+    I love dragons.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.'
+  user 2 personas: 'I am married and have three kids.
+
+    I am a baseball player.
+
+    I make a million dollars a year.
+
+    I play for the baltimore orioles.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]!
+
+    User 2: Hi [User 1], I''m [User 2]!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baseball player for the Baltimore Orioles!
+
+    User 1: Wow, that''s so cool! How do you like it?
+
+    User 2: It''s great! I love playing baseball and I''m really lucky to be able to do it for a living.
+
+    User 1: I bet! Do you have any family?
+
+    User 2: Yes, I''m married and I have three kids.
+
+    User 1: That''s awesome! How old are your kids?
+
+    User 2: They''re 6, 8, and 10.
+
+    User 1: Aww, they must be so cute!
+
+    User 2: They are!
+
+    User 1: So, what do you do for fun outside of baseball?
+
+    User 2: I love to spend time with my family, go to the beach, and play golf.
+
+    User 1: Those all sound like great ways to relax.
+
+    User 2: They are!
+
+    User 1: Well, I''m glad I got to meet you, [User 2].
+
+    User 2: It was nice meeting you too, [User 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

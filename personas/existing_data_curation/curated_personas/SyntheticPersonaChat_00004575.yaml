@@ -1,0 +1,66 @@
+id: '00004575'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4575
+data:
+  user 1 personas: 'I am a small business owner.
+
+    My clients are gamblers.
+
+    I help them win a lot of money.
+
+    I give out sports information.'
+  user 2 personas: 'I love going to concerts on the weekend.
+
+    I collect stamps.
+
+    My favorite color is blue.
+
+    My mom taught me how to play the cello.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I like to go to concerts on the weekend.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but I''m especially into rock and roll.
+
+    User 1: Me too! I love going to concerts. I went to one last weekend.
+
+    User 2: Oh, what band did you see?
+
+    User 1: I saw The Killers. They were amazing!
+
+    User 2: I''ve always wanted to see them. They''re one of my favorite bands.
+
+    User 1: You should definitely go see them if you ever get the chance.
+
+    User 2: I will! I''m sure they''re even better live.
+
+    User 1: They are! They put on a great show.
+
+    User 2: I''m glad you had a good time.
+
+    User 1: Thanks! I always have a good time at concerts.
+
+    User 2: Me too!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to collect stamps. I have a really big collection of stamps from all over the world.
+
+    User 1: That''s cool! I''ve never collected stamps before.
+
+    User 2: It''s a lot of fun. You can learn a lot about different cultures by collecting stamps.
+
+    User 1: That''s a good point. I might have to start collecting stamps.
+
+    User 2: I would definitely recommend it.
+
+    User 1: Thanks for the suggestion!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

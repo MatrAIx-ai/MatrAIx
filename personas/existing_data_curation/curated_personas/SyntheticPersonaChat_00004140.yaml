@@ -1,0 +1,66 @@
+id: '00004140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4140
+data:
+  user 1 personas: 'I work some very odd jobs.
+
+    I was born under a blood moon.
+
+    I enjoy going on hikes.
+
+    I am one of four children.'
+  user 2 personas: 'I like playing badminton.
+
+    I am not very good at playing basketball.
+
+    I once rescued a baby on a highway.
+
+    My family owns a dairy farm.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [User 1''s name].
+
+    User 2: Hello! I''m [User 2''s name]. Nice to meet you.
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I like to play badminton. I''m not very good at it, but I have fun.
+
+    User 1: That''s cool! I''ve never played badminton before. I''m more of a hiker.
+
+    User 2: Hiking is fun! I like going on hikes in the forest.
+
+    User 1: Me too! I love being surrounded by nature.
+
+    User 2: I once rescued a baby on a highway.
+
+    User 1: Oh my gosh, that''s amazing! What happened?
+
+    User 2: I was driving home from work one night and I saw a baby on the side of the road. It was crying and its mother was nowhere to be seen.
+
+    User 1: That''s so scary! What did you do?
+
+    User 2: I pulled over and picked up the baby. I called the police and they came and took the baby to the hospital.
+
+    User 1: That''s so good of you! I''m sure the baby is grateful.
+
+    User 2: I hope so. I''m just glad I was there to help.
+
+    User 1: What''s your family like?
+
+    User 2: My family owns a dairy farm. We have a lot of cows and we milk them for their milk.
+
+    User 1: That sounds like a lot of work!
+
+    User 2: It is, but it''s also a lot of fun. I love working on the farm.
+
+    User 1: I''m glad you enjoy it. It sounds like you have a great family.
+
+    User 2: I do. I''m very lucky.
+
+    User 1: Me too. It sounds like we have a lot in common. I''d love to chat with you again sometime.
+
+    User 2: That sounds great! I''d love to chat with you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

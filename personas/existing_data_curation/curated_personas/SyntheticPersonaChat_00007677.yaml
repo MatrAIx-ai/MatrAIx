@@ -1,0 +1,56 @@
+id: '00007677'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7677
+data:
+  user 1 personas: 'My hobbies include photography and hiking.
+
+    I have two pet dogs.
+
+    I hope to travel the world one day.
+
+    My favorite music genre is rock.
+
+    I am a farmer.'
+  user 2 personas: 'I have a cat named mater.
+
+    Grandpa takes me to get ice cream.
+
+    I like to play basketball.
+
+    I like lightning mcqueen.
+
+    My grandma likes to make pizza with me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play basketball, go to get ice cream with my grandpa, and watch Lightning McQueen movies.
+
+    User 1: That sounds like a lot of fun! I like to go hiking, take pictures, and listen to rock music.
+
+    User 2: I like going hiking too! I''ve never been to a rock concert, but it sounds like it would be fun.
+
+    User 1: It''s definitely a great experience. I love being surrounded by people who love the same music as I do.
+
+    User 2: I can imagine! I''m not sure if I''d be brave enough to go to a concert by myself, but I''d love to go with my friends or family.
+
+    User 1: I''m sure you''d have a great time. Concerts are a lot of fun, and it''s always a good time to be with friends and family.
+
+    User 2: Thanks for the recommendation! I''ll have to keep that in mind for the future.
+
+    User 1: No problem! It''s always good to try new things.
+
+    User 2: I agree! I''m always looking for new ways to have fun.
+
+    User 1: That''s great! I think it''s important to have a variety of hobbies and interests. It keeps things interesting and helps you stay active.
+
+    User 2: I definitely agree! I like to keep busy, and I think it''s important to have fun while you''re doing it.
+
+    User 1: I couldn''t agree more!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

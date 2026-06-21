@@ -1,0 +1,76 @@
+id: 00005539
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5539
+data:
+  user 1 personas: 'I enjoy playing computer games.
+
+    I love when my pets visit me in bed.
+
+    I spend a good deal of time on social media.
+
+    I am confined to my bed.
+
+    I am glad that i work from home.'
+  user 2 personas: 'I like basketball.
+
+    My favorite color is green.
+
+    I like rock music.
+
+    I work at mcdonalds.
+
+    My name is gerald.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play basketball, listen to rock music, and spend time with my friends.
+
+    User 1: I like to play video games, spend time with my pets, and I work from home.
+
+    User 2: That''s cool. Do you have any pets?
+
+    User 1: Yeah, I have a dog and a cat.
+
+    User 2: What are their names?
+
+    User 1: The dog''s name is Max and the cat''s name is Mittens.
+
+    User 2: Nice. What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I mostly listen to rock and hip hop.
+
+    User 2: I like rock too. What are some of your favorite bands?
+
+    User 1: I like The Beatles, The Rolling Stones, and The Eagles.
+
+    User 2: Those are all great bands. I like The Beatles and The Rolling Stones too.
+
+    User 1: Me too. They''re both really good. What about hip hop?
+
+    User 2: I like Kendrick Lamar, J. Cole, and Chance the Rapper.
+
+    User 1: I like them too. They''re all great artists.
+
+    User 2: Yeah, they are. I like how they all have different styles of hip hop.
+
+    User 1: Me too. It''s nice to have a variety of styles to choose from.
+
+    User 2: Yeah, it is. So, what do you do for work?
+
+    User 1: I work from home as a graphic designer.
+
+    User 2: Oh, that''s cool. I work at McDonald''s.
+
+    User 1: Nice. I''ve always wanted to work at McDonald''s.
+
+    User 2: It''s a good job. I get to meet a lot of people.
+
+    User 1: That''s cool. I like meeting new people too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

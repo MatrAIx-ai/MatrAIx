@@ -1,0 +1,62 @@
+id: 00002369
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2369
+data:
+  user 1 personas: 'I also enjoy cooking.
+
+    One of my favorite artists is drake.
+
+    I like to go out to eat.
+
+    A hobby of mine is the drums.
+
+    I like listening to other rap music too.'
+  user 2 personas: 'I need a corvette to complete my life.
+
+    I m insecure.
+
+    I have a wife and children.
+
+    I m always hungry.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out to eat, listen to music, and cook.
+
+    User 1: Me too! I love listening to rap music. What are some of your favorite artists?
+
+    User 2: I love Drake, Kendrick Lamar, and J. Cole.
+
+    User 1: Those are all great artists! I''m a big fan of Drake and Kendrick Lamar.
+
+    User 2: Me too! They''re so talented.
+
+    User 1: Yeah, they are. I also like to cook. What kind of food do you like to make?
+
+    User 2: I like to make all kinds of food, but I''m especially good at making pasta dishes.
+
+    User 1: That''s awesome! I love pasta.
+
+    User 2: Me too! I''m always hungry, so I love to cook big meals.
+
+    User 1: I can relate to that! I''m always hungry too.
+
+    User 2: Well, we should definitely go out to eat sometime. I know a great restaurant that has amazing pasta dishes.
+
+    User 1: That sounds great! I''d love to go out to eat with you.
+
+    User 2: Awesome! We can go next weekend.
+
+    User 1: Sounds good to me!
+
+    User 2: Great! I''ll see you then.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00003982
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3982
+data:
+  user 1 personas: 'I have a personal trainer.
+
+    I used to be very religious.
+
+    I love to ride bikes.
+
+    I tutor kids in my spare time.
+
+    I have 3 small dogs.'
+  user 2 personas: 'I love sunny days.
+
+    I love winning.
+
+    I can tell right away if i am going to like someone.
+
+    I do not like feeling obligated to hang out with someone.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], what''s your name?
+
+    User 2: Hey, I''m [name]! It''s nice to meet you.
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I love to go on sunny day hikes. I also like to play video games and watch movies.
+
+    User 1: I love to go on hikes too! I also love to bike. What kind of video games do you like to play?
+
+    User 2: I like all kinds of video games, but my favorite is Mario Kart.
+
+    User 1: I love Mario Kart too! It''s so much fun to play with friends.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Me too! What about you, what do you like to do for fun?
+
+    User 2: I like to tutor kids in my spare time. I also have three small dogs.
+
+    User 1: Oh, that''s cool! I used to tutor kids when I was in college.
+
+    User 2: Yeah, it''s really rewarding.
+
+    User 1: I bet it is! I love working with kids.
+
+    User 2: Me too! They''re so cute and innocent.
+
+    User 1: Yeah, they''re the best!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a personal trainer.
+
+    User 2: Oh, that''s cool! I used to be really into fitness, but I haven''t had a lot of time for it lately.
+
+    User 1: Yeah, it can be tough to find time for fitness. But it''s really important to stay active.
+
+    User 2: I know, I know. I need to get back into it.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: Okay, I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

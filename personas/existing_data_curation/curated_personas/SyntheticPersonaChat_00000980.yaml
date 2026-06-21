@@ -1,0 +1,62 @@
+id: 00000980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 980
+data:
+  user 1 personas: 'I enjoy reading.
+
+    I work in the emergency room.
+
+    My favorite drink is dr pepper.
+
+    I am divorced.
+
+    I am a nurse.'
+  user 2 personas: 'I love photography.
+
+    I don t like waking up early.
+
+    I enjoy spending a lot of money on my hobbies.
+
+    I like to use candles instead of lights.
+
+    I love the sound of the rain.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love photography. I''m always trying to capture the perfect moment.
+
+    User 1: That''s cool! I''ve always wanted to get into photography, but I''m not very good at it.
+
+    User 2: You should give it a try! It''s a lot of fun, and it''s a great way to capture memories.
+
+    User 1: I might just do that. What''s your favorite thing about photography?
+
+    User 2: I love the way you can capture a moment in time and freeze it forever. It''s like a little piece of history.
+
+    User 1: That''s a really good way to put it. I like that too.
+
+    User 2: I also like the way you can use photography to express your creativity. You can tell a story with a picture, or just capture a beautiful moment.
+
+    User 1: That''s true. Photography is a great way to express yourself.
+
+    User 2: So, what''s your favorite hobby?
+
+    User 1: I love to read. I read all different kinds of books, but I especially love historical fiction.
+
+    User 2: That''s cool! I''ve never been much of a reader, but I''ve heard that historical fiction is really good.
+
+    User 1: It is! I love learning about different time periods and seeing how people lived.
+
+    User 2: I can imagine. It sounds really interesting.
+
+    User 1: It is. I''m actually reading a book about the American Civil War right now.
+
+    User 2: Oh, that sounds really good! I''ve always been interested in the Civil War.
+
+    User 1: It''s a really interesting time period. I''m learning a lot about it.
+
+    User 2: That''s great. I''m glad you''re enjoying the book.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

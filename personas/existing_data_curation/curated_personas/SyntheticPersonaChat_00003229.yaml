@@ -1,0 +1,94 @@
+id: 00003229
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3229
+data:
+  user 1 personas: 'I work 60 hours a week.
+
+    I love sunsets.
+
+    I wake early to watch the sun rise every day.
+
+    I eat breakfast then go right back to bed.
+
+    Sometimes i think i should get out and exercise more.'
+  user 2 personas: 'I m from austin , texas.
+
+    I like to cook new recipes.
+
+    I post a lot about the food i eat on social media.
+
+    When people don t like my social media posts , it upsets me.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Austin, Texas.
+
+    User 1: Oh, nice! I''ve never been to Texas before.
+
+    User 2: You should come visit sometime! We have a lot to offer.
+
+    User 1: Maybe I will. What do you like to do for fun?
+
+    User 2: I like to cook new recipes.
+
+    User 1: That''s cool! I love to cook too.
+
+    User 2: I also like to go to the gym.
+
+    User 1: Me too! I try to go at least three times a week.
+
+    User 2: That''s great! I usually go five times a week.
+
+    User 1: Wow, you''re really dedicated.
+
+    User 2: I try to be. I want to be in shape.
+
+    User 1: I can respect that.
+
+    User 2: What do you do for work?
+
+    User 1: I work 60 hours a week.
+
+    User 2: That''s a lot of hours! What do you do?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I''ve always wanted to learn how to code.
+
+    User 1: It''s not too hard to learn.
+
+    User 2: Maybe I''ll try it someday.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t. I wish I did, but I don''t have the time to take care of one.
+
+    User 1: I understand. I have two dogs.
+
+    User 2: Oh, nice! What kind of dogs?
+
+    User 1: A golden retriever and a beagle.
+
+    User 2: Aw, that''s cute. I love dogs.
+
+    User 1: Me too!
+
+    User 2: I think that''s about all I have to say.
+
+    User 1: Okay, well it was nice talking to you.
+
+    User 2: You too. Goodbye.
+
+    User 1: Goodbye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

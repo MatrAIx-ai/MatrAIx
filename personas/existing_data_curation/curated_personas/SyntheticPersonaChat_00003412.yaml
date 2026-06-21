@@ -1,0 +1,64 @@
+id: '00003412'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3412
+data:
+  user 1 personas: 'I like to bake for them.
+
+    I live in a retirement home.
+
+    I am an old woman.
+
+    My grandsons favorite type of cake is chocolate.'
+  user 2 personas: 'Winters my favorite time of the year.
+
+    I am deathly terrified of heights.
+
+    I am really excited to see how game of thrones ends.
+
+    I prefer to live where the weathers cold.
+
+    I like to do all my shopping at walmart.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. I''m an old woman who lives in a retirement home.
+
+    User 2: Hi, my name is [user 2''s name]. Winters are my favorite time of the year.
+
+    User 1: That''s nice. I like the cold weather too.
+
+    User 2: Me too! I''m deathly terrified of heights, but I love going skiing in the winter.
+
+    User 1: That sounds like fun. I''ve never been skiing before.
+
+    User 2: You should try it sometime! It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 1: I might have to give it a try.
+
+    User 2: You won''t regret it.
+
+    User 1: I''m glad you''re so excited about the new season of Game of Thrones. I''m really looking forward to it too.
+
+    User 2: Me too! I''ve been reading the books since I was a kid, and I''ve been waiting for the show to catch up for years.
+
+    User 1: I''ve never read the books, but I''ve heard they''re really good.
+
+    User 2: They are! You should definitely check them out.
+
+    User 1: I might have to.
+
+    User 2: You won''t regret it.
+
+    User 1: I''m glad you like to do your shopping at Walmart. I live in a retirement home, so I don''t get out much, but I do like to shop there when I can.
+
+    User 2: I like that Walmart has everything you need under one roof. It''s so convenient.
+
+    User 1: I agree. It''s a great place to shop.
+
+    User 2: It is.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

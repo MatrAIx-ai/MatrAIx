@@ -1,0 +1,66 @@
+id: 00000850
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 850
+data:
+  user 1 personas: 'I love to surf.
+
+    My favorite thing to do is to read books on the beach.
+
+    I am starting a new juicing bar.
+
+    I love pandas.'
+  user 2 personas: 'Sometimes i wish i didn t have to wake up in the morning.
+
+    I have trouble feeling emotion.
+
+    I see a therapist that doesn t really understand me.
+
+    I have an older brother that has gotten into trouble.
+
+    My parents are distant.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go on hikes, and watch movies.
+
+    User 1: Me too! I love to read books about nature and history. I also love to go hiking in the mountains. What kind of movies do you like to watch?
+
+    User 2: I like to watch movies that make me think. I also like to watch comedies and action movies.
+
+    User 1: I like to watch movies that make me feel something. I also like to watch comedies and action movies.
+
+    User 2: What are some of your favorite movies?
+
+    User 1: I love the Lord of the Rings trilogy, The Shawshank Redemption, and The Godfather.
+
+    User 2: Those are all great movies! I love the Lord of the Rings trilogy, too. I also love The Princess Bride and The Big Lebowski.
+
+    User 1: The Princess Bride is a classic! I love The Big Lebowski too. It''s so funny.
+
+    User 2: I know, right? It''s one of my favorite movies.
+
+    User 1: It''s great to meet someone who likes the same movies I do.
+
+    User 2: It is! It''s hard to find people who like the same movies as me.
+
+    User 1: Well, we can be friends now.
+
+    User 2: That would be great!
+
+    User 1: Great! What''s your favorite book?
+
+    User 2: My favorite book is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: That''s a great book! I love the writing style.
+
+    User 2: Me too! It''s so beautiful.
+
+    User 1: It is! I''m glad we have the same taste in books.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

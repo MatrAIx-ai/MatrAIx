@@ -1,0 +1,18 @@
+id: '00044135'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44135
+persona_description: A medical professional with expertise in optometry, specifically focusing on the ocular muscles and their functions. They are knowledgeable about the anatomy and physiology of the eye,
+  and have a deep understanding of the reflexes that occur when the eye is subluxated. They are likely to be interested in the scientific explanation behind the sneeze reflex, and how it relates to the
+  ocular muscles and the brain.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: ocular muscle physiology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

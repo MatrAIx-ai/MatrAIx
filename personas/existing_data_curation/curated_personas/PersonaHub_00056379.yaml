@@ -1,0 +1,19 @@
+id: 00056379
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56379
+persona_description: A storage systems engineer who is familiar with the implementation and architecture of deduplication systems. They are particularly interested in the concept of global deduplication,
+  which involves sharing a hash table among multiple dedupe engines and storage modules. They are also knowledgeable about the different implementations of global deduplication and how they differ from
+  local deduplication. They are skilled in understanding the trade-offs and benefits of different dedupe strategies and are able to evaluate the effectiveness of global deduplication in improving dedupe
+  efficiency and reducing data handling. They are also aware of the different hardware-based deduplication systems and their implementation, and are able to compare them to each other.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Storage Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

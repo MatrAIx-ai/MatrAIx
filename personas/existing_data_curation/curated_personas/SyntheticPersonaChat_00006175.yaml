@@ -1,0 +1,70 @@
+id: '00006175'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6175
+data:
+  user 1 personas: 'Some call me a hopeless romantic.
+
+    I dropped out of college a month ago.
+
+    I wear my heart on my sleeve.
+
+    I live in my foreign car outside los angeles.'
+  user 2 personas: 'I enjoy golfing.
+
+    I work for a large law firm.
+
+    I listen to classical music.
+
+    I love my work and just got promoted.
+
+    I am married with three kids.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], and I''m a hopeless romantic.
+
+    User 2: Hi [name], I''m [name], and I just got promoted to partner at my law firm.
+
+    User 1: Congratulations! That''s amazing! What kind of law do you practice?
+
+    User 2: I''m a corporate lawyer.
+
+    User 1: Oh, cool! I''m actually a law school dropout.
+
+    User 2: Really? Why did you drop out?
+
+    User 1: I just wasn''t feeling it. I wanted to do something more creative.
+
+    User 2: I can understand that. Law school can be tough.
+
+    User 1: Yeah, it was. But I''m glad I made the decision to drop out. I''m really happy now.
+
+    User 2: I''m glad to hear that. What are you doing now?
+
+    User 1: I''m a writer. I write short stories and novels.
+
+    User 2: Oh, that''s great! I love reading.
+
+    User 1: Thanks! I''m glad to hear that.
+
+    User 2: So, are you a hopeless romantic because you write love stories?
+
+    User 1: No, not really. I''m just a hopeless romantic in general. I love the idea of finding your soulmate and living happily ever after.
+
+    User 2: I see. Well, I''m sure you''ll find your soulmate one day.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to read, write, and go for walks.
+
+    User 2: Those sound like great hobbies.
+
+    User 1: Thanks! I think so too.
+
+    User 2: I''m glad we met.
+
+    User 1: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

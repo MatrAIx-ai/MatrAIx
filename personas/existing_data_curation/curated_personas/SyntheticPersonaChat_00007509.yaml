@@ -1,0 +1,76 @@
+id: 00007509
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7509
+data:
+  user 1 personas: 'I make friends fast and say goodbye fast.
+
+    I kayak at the lake on weekends.
+
+    I chew my nails.
+
+    I am studying to be a special education teacher.'
+  user 2 personas: 'I am a meat eater.
+
+    I love country music.
+
+    I like football on tv.
+
+    I like to go hunting.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is John.
+
+    User 1: Nice to meet you, John. My name is [user 1 name].
+
+    User 2: Nice to meet you too. So, what do you do for fun?
+
+    User 1: I like to kayak, go hiking, and spend time with my friends and family.
+
+    User 2: That sounds fun. I like to go hunting, go fishing, and watch football on TV.
+
+    User 1: I''ve never been hunting or fishing, but I love to watch football.
+
+    User 2: What''s your favorite team?
+
+    User 1: I''m a big fan of the Dallas Cowboys.
+
+    User 2: Nice! I''m a fan of the Green Bay Packers.
+
+    User 1: Oh, that''s right. I forgot you were from Wisconsin.
+
+    User 2: Yeah, I grew up in Green Bay.
+
+    User 1: Do you still live in Wisconsin?
+
+    User 2: No, I moved to California a few years ago.
+
+    User 1: Oh, why did you move?
+
+    User 2: I got a job in the tech industry.
+
+    User 1: Cool! I''m in the tech industry too.
+
+    User 2: Oh, really? What do you do?
+
+    User 1: I''m a software engineer.
+
+    User 2: Nice! I''m a software developer.
+
+    User 1: That''s cool! So, what do you like to do for fun in California?
+
+    User 2: I like to go hiking, go to the beach, and go kayaking.
+
+    User 1: That sounds fun. I''ve never been to California before.
+
+    User 2: You should come visit sometime.
+
+    User 1: I''d love to.
+
+    User 2: Great! I''ll show you around.
+
+    User 1: Thanks, I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

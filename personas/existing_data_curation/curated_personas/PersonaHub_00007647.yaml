@@ -1,0 +1,19 @@
+id: '00007647'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7647
+persona_description: A network administrator who is responsible for configuring and maintaining the EIGRP routing protocol in a network environment. The persona is skilled in implementing and troubleshooting
+  the DUAL algorithm for selecting and maintaining the best route to each remote network. They are also proficient in handling various tasks related to dynamic route recovery, querying neighbors for unknown
+  alternate routes, and sending out queries for an alternate route. The persona must be able to meet the requirements for DUAL to work properly, including discovering neighbors, detecting changes, and processing
+  messages in the correct order.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Routing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,62 @@
+id: 00001823
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1823
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I enjoy classical music.
+
+    My favorite auto is a bentley.
+
+    I like to go to the opera.
+
+    I love to vacation in paris.'
+  user 2 personas: 'I live in a big city.
+
+    On weekends i like to go hiking.
+
+    I just graduated college.
+
+    My major was american literature and education.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go hiking on the weekends.
+
+    User 1: That''s cool. I love hiking too. Where do you like to hike?
+
+    User 2: I usually hike in the mountains near my house.
+
+    User 1: Nice. I''ve been hiking in the mountains a few times, but I''ve never been to Europe.
+
+    User 2: Oh, that''s cool. I''ve been to Paris a few times.
+
+    User 1: I''ve always wanted to go to Paris! What''s it like?
+
+    User 2: It''s amazing. The food is great, the people are friendly, and there''s so much to see and do.
+
+    User 1: That sounds amazing. I''m definitely going to have to go there someday.
+
+    User 2: You should! It''s a beautiful city.
+
+    User 1: What''s your favorite thing about hiking?
+
+    User 2: I love being outdoors and getting some exercise. I also love the challenge of hiking up a mountain and seeing the beautiful views at the top.
+
+    User 1: Me too. I love being able to see the world from a different perspective.
+
+    User 2: Exactly. Hiking is a great way to relax and get some fresh air.
+
+    User 1: I agree. It''s definitely one of my favorite activities.
+
+    User 2: I''m glad we agree. Maybe we can go hiking together sometime.
+
+    User 1: That would be great! I''d love to explore the mountains with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

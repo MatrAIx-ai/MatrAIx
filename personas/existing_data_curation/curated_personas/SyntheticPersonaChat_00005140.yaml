@@ -1,0 +1,72 @@
+id: '00005140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5140
+data:
+  user 1 personas: 'My favorite food is a burger.
+
+    My favorite color is red.
+
+    I work as an accountant.
+
+    I like to play tennis.
+
+    My favorite musical is hamilton.'
+  user 2 personas: 'I have went to mexico 4 times this year.
+
+    I hate mexican food.
+
+    I like to ski.
+
+    My wife doesn t like me anymore.
+
+    I like to eat cheetos.'
+  Best Generated Conversation: 'User 1: I love Hamilton! It''s one of my favorite musicals.
+
+    User 2: I''ve never seen it. Is it good?
+
+    User 1: It''s amazing! It''s a hip-hop musical about the life of Alexander Hamilton. It''s really well done and the music is catchy.
+
+    User 2: That sounds interesting. I might have to check it out.
+
+    User 1: I hope you do! It''s a great show.
+
+    User 2: So what do you do for a living?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, cool. I''ve always thought accounting would be a boring job.
+
+    User 1: It can be, but it''s actually not that bad. I get to work with numbers all day and I get to help people with their finances.
+
+    User 2: That''s good. I''m not good with numbers.
+
+    User 1: Me neither! That''s why I''m an accountant.
+
+    User 2: So what do you like to do for fun?
+
+    User 1: I like to play tennis. I also like to go to the movies and watch musicals.
+
+    User 2: I love to go skiing! I''ve been to Mexico four times this year.
+
+    User 1: That''s awesome! I''ve never been to Mexico.
+
+    User 2: You should go! It''s beautiful.
+
+    User 1: I will!
+
+    User 2: I have a wife, but she doesn''t like me anymore.
+
+    User 1: Oh, that''s too bad. Why not?
+
+    User 2: I don''t know. I guess we just grew apart.
+
+    User 1: I''m sorry to hear that.
+
+    User 2: It''s okay. I''m sure I''ll find someone else.
+
+    User 1: I''m sure you will. You seem like a great guy.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

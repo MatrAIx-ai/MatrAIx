@@ -1,0 +1,64 @@
+id: 00006840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6840
+data:
+  user 1 personas: 'I work as a veterinarian s assistant.
+
+    I leave the dogs home when i visit my parents.
+
+    I love dogs.
+
+    I have 2 dogs as pets.
+
+    My mother is allergic to dogs.'
+  user 2 personas: 'I like italian cusine.
+
+    I live in a big city.
+
+    This summer i went on vacation to italy.
+
+    I work in the office , 9 till 5.
+
+    Sometimes i go to yoga classes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I work as a veterinarian''s assistant.
+
+    User 2: Hi, I''m [user 2''s name]. I like Italian food.
+
+    User 1: That''s cool. I love Italian food too. I went to Italy this summer and had some of the best food I''ve ever had.
+
+    User 2: Oh, that''s awesome! What did you like the most?
+
+    User 1: I really enjoyed the pasta. I had some amazing pasta in Rome.
+
+    User 2: I love pasta too! I''m actually a vegetarian, so I love all the veggie pasta dishes.
+
+    User 1: That''s cool. I''m not a vegetarian, but I love veggie pasta dishes too. They can be so delicious.
+
+    User 2: Yeah, they can be. I''m glad we have something in common.
+
+    User 1: Me too. It''s always nice to meet someone who shares one of your interests.
+
+    User 2: Definitely. So, what else do you like to do?
+
+    User 1: I like to read, go to the movies, and play video games.
+
+    User 2: I love to read too! I also like to go to the movies, but I don''t play video games.
+
+    User 1: That''s cool. I like to read all different kinds of books, but I especially love historical fiction and mystery novels.
+
+    User 2: I love historical fiction too! I''ve been reading a lot of historical fiction about the Roman Empire lately.
+
+    User 1: That''s cool. I''ve been wanting to read more historical fiction about the Roman Empire.
+
+    User 2: You should! It''s really interesting.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00002155'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2155
+data:
+  user 1 personas: 'I drive a black car.
+
+    I listen to rap.
+
+    I like meat.
+
+    My favorite food is steak.
+
+    I am working in finance.'
+  user 2 personas: 'I love basketball.
+
+    I am not married.
+
+    I like to hunt.
+
+    Have both daughters and sons.
+
+    I like to sing.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I love to play basketball! I''m not very good at it, but it''s a lot of fun.
+
+    User 1: That''s cool! I love basketball too. I''m not very good at it either, but it''s still fun.
+
+    User 2: What''s your favorite team?
+
+    User 1: I''m a big fan of the Golden State Warriors. They''re so much fun to watch.
+
+    User 2: Me too! I love Steph Curry. He''s a beast.
+
+    User 1: Yeah, he''s incredible. I love watching him play.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a financial analyst. I work in finance.
+
+    User 2: Oh, that sounds interesting. What do you like about it?
+
+    User 1: I like the challenge of it. It''s always changing, and I''m always learning new things.
+
+    User 2: That''s cool. I''m a teacher. I teach kindergarten.
+
+    User 1: That''s great! I love kids. I''m sure you have a lot of fun.
+
+    User 2: I do! They''re the best.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love steak!
+
+    User 1: Me too! I could eat steak every day.
+
+    User 2: Oh, that''s great! I know a great steak place. We should go sometime.
+
+    User 1: That sounds like a plan!
+
+    User 2: Cool! I''m free next weekend.
+
+    User 1: Me too! Let''s do it then.
+
+    User 2: Awesome! I''ll text you the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

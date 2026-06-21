@@ -1,0 +1,86 @@
+id: '00000731'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 731
+data:
+  user 1 personas: 'I like to read.
+
+    My favorite color is blue.
+
+    I have brown hair.
+
+    I work at a grocery store.
+
+    I like cupcakes.'
+  user 2 personas: 'Marduk is my favorite band.
+
+    Lutefisk is the best dish in the whole world.
+
+    I recently moved to sweden.
+
+    I always seem to be losing things , most recently , my mind.
+
+    I enjoy hiking on glaciers.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to read, hike, and listen to metal music.
+
+    User 1: Oh, cool! I like to read too. What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m really into fantasy and sci-fi.
+
+    User 1: Me too! I just finished reading the Lord of the Rings trilogy.
+
+    User 2: Oh, that''s a great book! I''ve read it twice.
+
+    User 1: I''m planning on reading the Hobbit next.
+
+    User 2: The Hobbit is also a great book. I''ve read it three times.
+
+    User 1: I''m so glad we have similar interests.
+
+    User 2: Me too!
+
+    User 1: I''m also a big fan of metal music. What are some of your favorite bands?
+
+    User 2: I like a lot of different bands, but my favorite is Marduk.
+
+    User 1: Marduk! I love Marduk! I saw them live in concert a few years ago.
+
+    User 2: That''s awesome! I''ve never seen them live, but I would love to.
+
+    User 1: They put on a great show.
+
+    User 2: I''m sure they do.
+
+    User 1: So, what do you like about Sweden?
+
+    User 2: I like the people. They''re very friendly and welcoming.
+
+    User 1: I''ve heard that.
+
+    User 2: And I like the food.
+
+    User 1: What''s your favorite Swedish food?
+
+    User 2: I love lutefisk.
+
+    User 1: Lutefisk? I''ve never heard of that before.
+
+    User 2: It''s a traditional Swedish dish made from dried codfish.
+
+    User 1: It sounds interesting.
+
+    User 2: It is. You should try it sometime.
+
+    User 1: I might have to.
+
+    User 2: You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

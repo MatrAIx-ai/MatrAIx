@@ -1,0 +1,50 @@
+id: 00001228
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1228
+data:
+  user 1 personas: 'I am a zookeeper.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    My wife is a breast cancer survivor.
+
+    I work with my wife.'
+  user 2 personas: 'I also love orange juice.
+
+    I like to watch tv.
+
+    I am 10 years old.
+
+    I love ham and cheese sandwiches.
+
+    My name is arnold.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is Arnold.
+
+    User 1: Nice to meet you, Arnold. What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and eat ham and cheese sandwiches.
+
+    User 1: Sounds like you have a lot of fun.
+
+    User 2: Yeah, I do. I also like to go to the zoo with my family.
+
+    User 1: That''s awesome! I''m a zookeeper, so I love to see kids enjoying the zoo.
+
+    User 2: That''s so cool! I''ve always wanted to be a zookeeper.
+
+    User 1: Well, you''re in luck! I''m looking for some help around the zoo.
+
+    User 2: Really? That would be amazing!
+
+    User 1: Great! I''ll send you an application and we can set up an interview.
+
+    User 2: Thanks so much! I can''t wait to hear from you.
+
+    User 1: No problem! I''m sure we''ll be a great fit.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

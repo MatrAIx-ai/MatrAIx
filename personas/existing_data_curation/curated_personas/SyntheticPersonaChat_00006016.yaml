@@ -1,0 +1,78 @@
+id: '00006016'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6016
+data:
+  user 1 personas: 'I have a dog and we go for walks.
+
+    I live in a city.
+
+    I like to go to the farmers markets to buy local veggies and fruits.
+
+    I am a grandmother.'
+  user 2 personas: 'I grew up on a large farm.
+
+    I just moved from va to pa.
+
+    I enjoy doing beadwork and writing my own patterns.
+
+    Since i have fibromyalgia , the harsher winters here in pa will be rough on me.
+
+    I love reading.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to do beadwork and write my own patterns.
+
+    User 1: That''s cool! I''ve never been good at crafts.
+
+    User 2: It''s not too hard to learn. There are lots of online tutorials and classes.
+
+    User 1: Maybe I''ll look into it. What kind of beadwork do you like to do?
+
+    User 2: I like to do all kinds of beadwork, but my favorite is probably making jewelry.
+
+    User 1: That''s awesome! I''m sure it''s beautiful.
+
+    User 2: Thanks! I''m always happy to share my work with others.
+
+    User 1: That''s really nice of you.
+
+    User 2: I''m sure you''re good at something too.
+
+    User 1: I like to go for walks with my dog.
+
+    User 2: That sounds like fun! I used to have a dog, but he passed away a few years ago.
+
+    User 1: I''m so sorry to hear that.
+
+    User 2: It''s okay. I''m sure he''s in a better place now.
+
+    User 1: I''m sure he is too.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read and go to the farmers market.
+
+    User 2: I love reading too! I''m always looking for new books to read.
+
+    User 1: Me too! I like to read a variety of genres, but I especially like historical fiction and mystery novels.
+
+    User 2: Those are my favorites too! I also like to read science fiction and fantasy.
+
+    User 1: That''s great! I like to read all of those genres too.
+
+    User 2: It''s so nice to meet someone who shares my love of reading.
+
+    User 1: Me too! It''s been a pleasure talking to you.
+
+    User 2: You too! I hope we can chat again sometime.
+
+    User 1: I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

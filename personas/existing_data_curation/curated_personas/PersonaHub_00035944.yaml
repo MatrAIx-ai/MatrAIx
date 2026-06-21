@@ -1,0 +1,19 @@
+id: 00035944
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35944
+persona_description: A medical professional who is interested in the diagnosis and treatment of infectious diseases. This individual is likely to be a physician or a laboratory scientist who is knowledgeable
+  about the diagnostic methods used to identify and treat Lyme disease. They may have experience working with serological testing, laboratory techniques, and understanding the stages of the disease. They
+  are likely to be familiar with the symptoms, incubation period, and transmission vectors of Borrelia burgdorferi. They may also have experience interpreting laboratory test results and discussing them
+  with patients and their healthcare providers.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: Lyme disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

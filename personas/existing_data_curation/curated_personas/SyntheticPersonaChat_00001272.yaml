@@ -1,0 +1,58 @@
+id: '00001272'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1272
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    My favorite hobby is knitting.
+
+    I have a cat named speckles.
+
+    I work in an office.
+
+    I have two tattoos.'
+  user 2 personas: 'I design video games for a living.
+
+    I have been on the design team for over 65 video games.
+
+    My wife recently got laid off from her human resources job.
+
+    My son plays on the local football team.
+
+    I am trying to create my own startup company in the gaming industry.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a video game designer.
+
+    User 1: Wow, that''s so cool! What''s it like to work in the gaming industry?
+
+    User 2: It''s really fun! I get to work on some really cool projects, and I get to meet a lot of interesting people.
+
+    User 1: That''s awesome! What''s your favorite game that you''ve ever worked on?
+
+    User 2: It''s hard to say, but I''d probably have to say I''m most proud of my work on [game name].
+
+    User 1: I''ve heard great things about that game! What was it like to work on it?
+
+    User 2: It was a lot of hard work, but it was also a lot of fun. We had a great team, and we all worked really hard to make the best game we could.
+
+    User 1: That''s amazing! I''m sure it was a lot of fun to see your game come to life.
+
+    User 2: Yeah, it was really cool! It''s amazing to think that something I worked on could be played by millions of people all over the world.
+
+    User 1: That''s so cool! I''m sure it''s a lot of fun to see your name in the credits of a game that''s so popular.
+
+    User 2: Yeah, it is! It''s a really great feeling.
+
+    User 1: So, what''s next for you? Are you working on anything new?
+
+    User 2: Yeah, I''m actually working on a new game right now. It''s still in the early stages, but I''m really excited about it.
+
+    User 1: That''s great! I can''t wait to see what you come up with.
+
+    User 2: Thanks! I''ll let you know when it''s ready.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

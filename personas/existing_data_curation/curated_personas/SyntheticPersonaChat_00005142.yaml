@@ -1,0 +1,86 @@
+id: '00005142'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5142
+data:
+  user 1 personas: 'My favorite food is meatloaf.
+
+    My dogs name is toto.
+
+    My favorite band used to be toto.
+
+    My car is green and smells weird.
+
+    My grandma is from denmark.'
+  user 2 personas: 'I live with my best friend.
+
+    I work in a diner.
+
+    I also own a cupcake business.
+
+    I am always late.
+
+    I sing in the shower.'
+  Best Generated Conversation: 'User 1: What''s your name?
+
+    User 2: My name is Alice.
+
+    User 1: Hi Alice, I''m [name].
+
+    User 2: Nice to meet you, [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a diner and I also own a cupcake business.
+
+    User 1: Oh, that''s cool. I''ve always wanted to own a cupcake business.
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I can imagine. Do you have any favorite cupcakes?
+
+    User 2: I love all of my cupcakes, but my most popular ones are the chocolate chip and red velvet.
+
+    User 1: Those sound delicious. I''m sure they''re hard to resist.
+
+    User 2: They are. I try not to eat too many of them myself.
+
+    User 1: That''s good. You have to keep your figure.
+
+    User 2: I try.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to sing in the shower, read books, and spend time with my best friend.
+
+    User 1: That sounds like fun. I like to read books too.
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is To Kill a Mockingbird.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should. It''s a great book.
+
+    User 2: I will.
+
+    User 1: So, what''s it like living with your best friend?
+
+    User 2: It''s great. We''re always there for each other.
+
+    User 1: That sounds nice. I''m glad you have someone like that in your life.
+
+    User 2: Me too.
+
+    User 1: Well, it''s been nice talking to you, Alice.
+
+    User 2: You too, [name].
+
+    User 1: I hope to see you around sometime.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00002801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2801
+data:
+  user 1 personas: 'I like the color blue.
+
+    I drive a blue car.
+
+    I like to listen to elvis.
+
+    I own blue shoes.'
+  user 2 personas: 'My father died when i was 2.
+
+    I love fishing.
+
+    I have blue eyes.
+
+    I hate to lose.
+
+    My favorite season is spring.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hello, my name is [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name].
+
+    User 2: It''s nice to meet you too, [user 1''s name].
+
+    User 1: What are you interested in?
+
+    User 2: I love fishing, and I hate to lose.
+
+    User 1: I like fishing too! What''s your favorite type of fish to catch?
+
+    User 2: I like to catch bass. What about you?
+
+    User 1: I like to catch trout.
+
+    User 2: Nice! I''ve never caught a trout.
+
+    User 1: You should try it! They''re really fun to catch.
+
+    User 2: I will! Thanks for the tip.
+
+    User 1: No problem! So, what else do you like to do?
+
+    User 2: I love to go camping in the spring.
+
+    User 1: Me too! I love the fresh air and the beautiful scenery.
+
+    User 2: Me too! I also love the hiking trails.
+
+    User 1: Yes, they''re great!
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too! I''m always looking for new people to talk to about fishing and camping.
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: '00065013'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65013
+persona_description: A public health official or healthcare professional who is responsible for overseeing the administration of seasonal influenza vaccines and monitoring influenza outbreaks in Australia.
+  This persona is likely to be familiar with the latest guidelines and recommendations from the Australian Therapeutic Goods Administration (ATAGI) and the Department of Health regarding the administration
+  of influenza vaccines. They are also likely to be up-to-date with the latest research and studies on the effectiveness of influenza vaccines, including the use of adjuvants such as MF59. This persona
+  may also be involved in the development and implementation of vaccination programs in different regions of Australia, and may collaborate with other healthcare professionals and government agencies to
+  ensure the optimal timing and coverage of influenza vaccination.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: infectious disease epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: influenza vaccine development and implementation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

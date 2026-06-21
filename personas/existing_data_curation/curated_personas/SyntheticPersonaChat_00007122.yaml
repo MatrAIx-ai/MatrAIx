@@ -1,0 +1,66 @@
+id: '00007122'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7122
+data:
+  user 1 personas: 'I eat out more than three times a week.
+
+    I went to an elite ivy league school.
+
+    I work in finance.
+
+    I look down on people who didn t.
+
+    I believe the rich shouldn t be taxed as much.'
+  user 2 personas: 'I am an elementary school teacher.
+
+    My mom and dad are from japan.
+
+    I live in toronto , canada.
+
+    My favorite french fries are from mcdonalds.
+
+    I love to shop.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name). What''s your name?
+
+    User 2: Hi, I''m (user 2''s name). It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for a living?
+
+    User 2: I''m an elementary school teacher.
+
+    User 1: That''s great! I''m a finance worker myself.
+
+    User 2: Oh, cool! What do you like most about your job?
+
+    User 1: I like the challenge and the opportunity to make a lot of money.
+
+    User 2: I can imagine. I like the feeling of helping kids learn and grow.
+
+    User 1: I''m sure that''s rewarding. Where are you from?
+
+    User 2: I was born in Japan, but I''ve lived in Toronto, Canada for most of my life.
+
+    User 1: That''s interesting! I''ve always wanted to visit Japan.
+
+    User 2: You should! It''s a beautiful country with a rich culture.
+
+    User 1: Maybe I will someday. What do you like to do for fun?
+
+    User 2: I love to shop, go out to eat, and spend time with my family.
+
+    User 1: I like to do those things too! What''s your favorite restaurant in Toronto?
+
+    User 2: I love the sushi at Omakase Yume.
+
+    User 1: I''ve heard good things about that place. I''ll have to try it sometime.
+
+    User 2: You should! It''s delicious.
+
+    User 1: Well, it was nice talking to you. I hope we can talk again sometime.
+
+    User 2: It was nice talking to you too! I''d love to chat again sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

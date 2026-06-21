@@ -1,0 +1,60 @@
+id: 00007181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7181
+data:
+  user 1 personas: 'I live at home with my dad and brother.
+
+    I have a cat.
+
+    I have depression and anxiety so i don t really go out a lot.
+
+    I hope to move out soon.'
+  user 2 personas: 'I work in marketing , and i love it.
+
+    I spend a lot of time on my hair and make up.
+
+    I m hoping to find someone to marry me.
+
+    I m an only child.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m [name].
+
+    User 2: Nice to meet you [name]. I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I work in marketing, and I love it. I also spend a lot of time on my hair and make up.
+
+    User 1: That''s cool. I''m a stay-at-home mom, but I''m hoping to move out soon. I have a cat, and I love to go out, but my depression and anxiety make it hard.
+
+    User 2: I''m sorry to hear that. I hope you''re able to get the help you need.
+
+    User 1: Thank you. I''m working on it.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what are you hoping to find someone to marry you?
+
+    User 2: I''m looking for someone who is kind, funny, and supportive.
+
+    User 1: That sounds like a great list of qualities.
+
+    User 2: I think so too.
+
+    User 1: I''m sure you''ll find someone who is perfect for you.
+
+    User 2: Thank you. I hope so too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

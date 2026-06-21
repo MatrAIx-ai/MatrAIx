@@ -1,0 +1,68 @@
+id: '00000515'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 515
+data:
+  user 1 personas: 'I love horses.
+
+    I collect seashells.
+
+    I am a yoga instructor.
+
+    I have two chiuahuahs.
+
+    I have a son.'
+  user 2 personas: 'I enjoy eating vegetarian food.
+
+    I listen to classic rock.
+
+    I go to a local college.
+
+    I watch basketball.
+
+    I work at a smoothie shop.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to eat vegetarian food, listen to classic rock, and watch basketball.
+
+    User 1: That''s cool! I like to collect seashells, do yoga, and have two chihuahuas.
+
+    User 2: Seashells are pretty! I like to go to the beach, but I''m not very good at yoga.
+
+    User 1: Oh, well, you can always learn! I love teaching yoga.
+
+    User 2: That''s a nice offer! Maybe I''ll take you up on that.
+
+    User 1: Great! I''m always happy to help.
+
+    User 2: Thanks! So, what do you like about doing yoga?
+
+    User 1: I love the way it makes me feel. It''s a great way to relieve stress and relax.
+
+    User 2: I can see how that would be helpful. I''m always stressed out.
+
+    User 1: Well, you should try yoga! It might help you.
+
+    User 2: I will! Thanks for the advice.
+
+    User 1: No problem! So, what else do you like to do for fun?
+
+    User 2: I like to watch basketball. I''m a big fan of the [local team].
+
+    User 1: Oh, nice! I love basketball too. I''m a fan of the [other local team].
+
+    User 2: Oh, cool! We should go to a game together sometime.
+
+    User 1: That would be fun! I''d love to go to a game.
+
+    User 2: Great! We can talk about it more later.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

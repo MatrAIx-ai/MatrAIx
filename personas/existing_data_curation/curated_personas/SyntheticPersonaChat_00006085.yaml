@@ -1,0 +1,70 @@
+id: 00006085
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6085
+data:
+  user 1 personas: 'I volunteer at an animal shelter.
+
+    I live in pittsburgh.
+
+    I love going to concerts.
+
+    I am a librarian.
+
+    My favorite kind of food is italian.'
+  user 2 personas: 'My mother was a nurse.
+
+    I am a violinist.
+
+    I have played since i was 4 years old.
+
+    I am gong to adopt a dog very soon.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the violin.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play the violin.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. I''m also a librarian, so I love to read.
+
+    User 2: That''s awesome! I love to read too. What''s your favorite book?
+
+    User 1: I''m not sure if I have a favorite book, but I really like "The Book Thief" by Markus Zusak.
+
+    User 2: Oh, I''ve heard of that book. I''ve been meaning to read it.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will! I also love to go to concerts. What''s your favorite band?
+
+    User 1: I love a lot of bands, but I think my favorite is The Beatles.
+
+    User 2: Oh, they''re great! I love their music.
+
+    User 1: Me too! I''m going to see them in concert next month.
+
+    User 2: That''s awesome! I''m jealous.
+
+    User 1: I''m excited!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a librarian at the Carnegie Library in Pittsburgh.
+
+    User 2: Oh, that''s cool! I''ve been to Pittsburgh a few times. It''s a beautiful city.
+
+    User 1: I love it here! It''s a great place to live and work.
+
+    User 2: I''m glad you like it!
+
+    User 1: I do'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00040018
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40018
+persona_description: A biologist who is interested in the study of evolution and development, particularly in the context of evolutionary biology. This persona is curious about how changes in the genes
+  controlling development have helped bring about large-scale evolutionary transformations. They are also interested in learning about evolutionary history and how development may contain clues about its
+  history that biologists can use to build evolutionary trees. Additionally, this persona is aware of the potential limitations of development in preventing certain characters from evolving in certain lineages.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: evolutionary biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

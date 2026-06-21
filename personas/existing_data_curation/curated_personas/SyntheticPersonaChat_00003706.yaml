@@ -1,0 +1,56 @@
+id: '00003706'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3706
+data:
+  user 1 personas: 'I learned piano at age 6.
+
+    I am trying to play in a local band.
+
+    I am a fan of system of a down.
+
+    I am a vegan.'
+  user 2 personas: 'I drive a yellow convertible in the rain.
+
+    I work as a lifeguard at a beach.
+
+    I m a breath of fresh air.
+
+    I listen to katie perry while in the shower.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I work as a lifeguard at the beach.
+
+    User 1: That sounds like a fun job! Do you get to swim a lot?
+
+    User 2: I do! I love swimming and the beach. It''s a great place to relax and enjoy the sun.
+
+    User 1: That''s awesome! I love the beach too. I''m a vegan. Do you know any good vegan restaurants around here?
+
+    User 2: Yeah, I know a few. There''s a great vegan cafe right down the street from my work. It''s called "The Veggie Spot".
+
+    User 1: Oh, that sounds great! I''ll have to check it out. I''m also trying to play in a local band. Do you have any advice on how to get started?
+
+    User 2: Sure, I can help you with that. I''ve played in a few bands myself.
+
+    User 1: That''s great! I''m really excited to start playing in a band.
+
+    User 2: I''m sure you''ll do great. You seem like you''re really talented.
+
+    User 1: Thanks! I appreciate that. I''m also a fan of System of a Down. Do you like them?
+
+    User 2: Yes, I love System of a Down! They''re one of my favorite bands.
+
+    User 1: Me too! I''m so glad to meet someone else who likes them.
+
+    User 2: Me too! It''s always nice to meet a fellow System of a Down fan.
+
+    User 1: I''m glad you''re so nice. I''m used to being judged for being a vegan.
+
+    User 2: That''s ridiculous! There''s nothing wrong with being a vegan. It''s a healthy lifestyle choice.
+
+    User 1: Thanks for saying that. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

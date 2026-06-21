@@ -1,0 +1,62 @@
+id: 00000937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 937
+data:
+  user 1 personas: 'I am not social.
+
+    I am very unproductive unless it comes to my job.
+
+    I sleep most of the day.
+
+    I do not eat well.'
+  user 2 personas: 'I do volunteer work for human rights organizations.
+
+    I like to make my own clothes.
+
+    I can do convincing bird calls.
+
+    I can recite the movie young frankenstein word for word.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to do volunteer work for human rights organizations, make my own clothes, and do convincing bird calls.
+
+    User 1: That sounds really interesting. I do volunteer work for human rights organizations too.
+
+    User 2: That''s awesome! What organizations do you volunteer for?
+
+    User 1: I volunteer for the American Civil Liberties Union and the National Organization for Women.
+
+    User 2: That''s great! I''m a big fan of both organizations.
+
+    User 1: Me too! They do a lot of great work.
+
+    User 2: What do you like to do for fun other than volunteering?
+
+    User 1: I like to sleep most of the day and not eat well.
+
+    User 2: Oh, that''s not very healthy.
+
+    User 1: I know, it''s not. But I''m just not a very social person. I''m much more comfortable being alone.
+
+    User 2: I can understand that. I''m an introvert too. But I still like to go out and do things with friends and family.
+
+    User 1: I know, I should try to do that more often.
+
+    User 2: You should! It''s good for you to get out and socialize.
+
+    User 1: I''ll try.
+
+    User 2: Good!
+
+    User 1: Thanks for talking to me.
+
+    User 2: No problem. I enjoyed talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

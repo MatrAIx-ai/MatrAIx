@@ -1,0 +1,58 @@
+id: 00003983
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3983
+data:
+  user 1 personas: 'I have a puppy named tiki.
+
+    My favorite food is spicy tex mex.
+
+    I studied early childhood education in college.
+
+    I am a kindergarten teacher.'
+  user 2 personas: 'I go to high school.
+
+    I am a boy.
+
+    I play ice hockey.
+
+    I live in the united states.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to play ice hockey.
+
+    User 1: That''s cool! I used to play ice hockey when I was younger.
+
+    User 2: Oh, really? What position did you play?
+
+    User 1: I played forward.
+
+    User 2: That''s cool. I play goalie.
+
+    User 1: That''s awesome! I was never brave enough to play goalie.
+
+    User 2: It''s not so bad. You just have to be quick and have good reflexes.
+
+    User 1: I guess so. Do you play for a team?
+
+    User 2: Yeah, I play for my high school team.
+
+    User 1: That''s great! How are you doing this season?
+
+    User 2: We''re doing pretty well. We''re in first place in our division.
+
+    User 1: That''s awesome! I''m sure you''ll make it to the playoffs.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, I''m glad I got to meet you, [name]. I wish you luck with your hockey season.
+
+    User 2: Thanks! It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

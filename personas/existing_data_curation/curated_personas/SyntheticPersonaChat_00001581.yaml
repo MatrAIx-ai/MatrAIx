@@ -1,0 +1,88 @@
+id: 00001581
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1581
+data:
+  user 1 personas: 'I enjoy ice cream.
+
+    I am 50 years old.
+
+    We have 4 children and 2 dogs.
+
+    The kids will be my responsibility as my husband does not want them.
+
+    My husband just decided to leave me.'
+  user 2 personas: 'My mom is the best baker in my family.
+
+    My favorite thing to do is watch old movies.
+
+    I am a hindu living in louisiana.
+
+    I am in my second year of medical school.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1 name].
+
+    User 2: Hi, I''m [User 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch old movies and bake.
+
+    User 1: Oh, I like to watch old movies too! What''s your favorite movie?
+
+    User 2: My favorite movie is The Princess Bride.
+
+    User 1: That''s a great movie! I love the sword fight scene.
+
+    User 2: Me too! It''s so funny.
+
+    User 1: What do you like to bake?
+
+    User 2: I like to bake cakes, cookies, and pies.
+
+    User 1: Oh, my mom used to bake a lot when I was younger. I love her chocolate chip cookies.
+
+    User 2: I love chocolate chip cookies too!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a second year medical student.
+
+    User 1: Oh, that''s really cool! What do you want to do after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about going into pediatrics or family medicine.
+
+    User 1: Those are both great choices! I''m sure you''ll be a great doctor.
+
+    User 2: Thank you!
+
+    User 1: So, what''s your favorite thing about living in Louisiana?
+
+    User 2: I love the food! There are so many great restaurants here.
+
+    User 1: I''ve heard that the food in Louisiana is really good.
+
+    User 2: It is! You should come and try some time.
+
+    User 1: I will!
+
+    User 2: So, what''s your favorite thing about being a mom?
+
+    User 1: I love spending time with my kids and watching them grow up.
+
+    User 2: That''s so sweet! I''m sure your kids are lucky to have you.
+
+    User 1: Thank you!
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go shopping or see a movie.
+
+    User 2: That sounds like fun! I''m going to the beach with my friends.
+
+    User 1: Oh, that sounds nice! Have a good time.
+
+    User 2: Thanks! You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00003750'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3750
+data:
+  user 1 personas: 'I make cars for a living.
+
+    I like to sit on couch all day.
+
+    I make 30k a year.
+
+    I love mac and cheese.'
+  user 2 personas: 'I am a pilot.
+
+    I am afraid of spiders.
+
+    Both of my parents are in the military.
+
+    My girlfriend lives in salt lake city.
+
+    I have 2 beagles named chance and boomer.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I am a pilot.
+
+    User 1: That''s cool! I have always wanted to be a pilot.
+
+    User 2: It''s a lot of fun, but it''s also a lot of work.
+
+    User 1: I''m sure it is. What''s your favorite thing about being a pilot?
+
+    User 2: I love the feeling of flying. It''s like being on top of the world.
+
+    User 1: That must be amazing. What''s your least favorite thing about being a pilot?
+
+    User 2: The long hours. It can be tough being away from home for long periods of time.
+
+    User 1: I can imagine. What''s the coolest place you''ve ever been?
+
+    User 2: I''ve been to a lot of cool places, but my favorite was probably the Maldives.
+
+    User 1: The Maldives? That sounds amazing!
+
+    User 2: It was incredible. The beaches were white sand and the water was crystal clear.
+
+    User 1: That sounds like a dream vacation.
+
+    User 2: It was. I''m glad I got to experience it.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love mac and cheese.
+
+    User 1: Me too! I could eat it every day.
+
+    User 2: I know, right? It''s so good.
+
+    User 1: What''s your favorite thing to do on the weekends?
+
+    User 2: I like to relax and watch movies.
+
+    User 1: That sounds like a good way to spend a weekend.
+
+    User 2: It is. I like to unwind and just forget about all my troubles.
+
+    User 1: I can understand that. I like to do the same thing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: '00002105'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2105
+persona_description: A healthcare provider who specializes in treating back pain. They are experienced in evaluating the patient's medical history, diagnosing back pain through extensive testing, and treating
+  it with conservative measures such as medication and physical therapy. They are also aware of the latest medications available for managing back pain and the importance of returning to work in any capacity.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pain management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

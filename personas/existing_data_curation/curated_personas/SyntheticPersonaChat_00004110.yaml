@@ -1,0 +1,76 @@
+id: '00004110'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4110
+data:
+  user 1 personas: 'I think i need a vacation.
+
+    I work too much.
+
+    If things aren t done right i ll redo them again and again.
+
+    I take forever to get tasks done so i start early and clock out late.
+
+    I m a perfectionist.'
+  user 2 personas: 'I sell miscelaneous stuff in local fairs.
+
+    I haven t had luck with finding a job.
+
+    I recently graduated from college.
+
+    It s been doing better than i expected.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you do for a living?
+
+    User 2: I sell miscellaneous stuff at local fairs.
+
+    User 1: Oh, that''s interesting! How did you get into that?
+
+    User 2: I recently graduated from college and I haven''t had luck finding a job, so I started selling my handmade crafts at local fairs. It''s been doing better than I expected.
+
+    User 1: That''s great! I''m glad it''s working out for you.
+
+    User 2: Thanks!
+
+    User 1: What kind of stuff do you sell?
+
+    User 2: I sell jewelry, handbags, and home decor.
+
+    User 1: Oh, that sounds really nice.
+
+    User 2: Thanks! I try to make things that are unique and special.
+
+    User 1: I''m sure they are. I would love to see them sometime.
+
+    User 2: You''re welcome to come to one of my fairs! I''m usually at the one in my town every weekend.
+
+    User 1: I might just do that!
+
+    User 2: Great! I hope to see you there.
+
+    User 1: Me too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the movies, read books, and spend time with my friends and family.
+
+    User 1: Oh, that sounds nice. I like to do those things too.
+
+    User 2: We should get together sometime and do something fun!
+
+    User 1: That would be great! I''m free on Saturday.
+
+    User 2: I''m free too! We could go to the movies.
+
+    User 1: Sounds good! I''ll pick you up at 7.
+
+    User 2: Great! See you then!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

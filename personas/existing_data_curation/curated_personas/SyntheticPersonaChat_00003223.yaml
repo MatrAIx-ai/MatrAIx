@@ -1,0 +1,82 @@
+id: '00003223'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3223
+data:
+  user 1 personas: 'I wear a lot of purple.
+
+    I love the band van halen.
+
+    I want to be a doctor.
+
+    I play dungeons and dragons.'
+  user 2 personas: 'I work at google.
+
+    I live in seattle.
+
+    My favorite seafood in lobster.
+
+    I started at google on an internship.
+
+    I am a software engineer.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: I''m user1. What''s your name?
+
+    User 2: I''m user2. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for a living?
+
+    User 2: I''m a software engineer at Google.
+
+    User 1: That''s awesome! I''m going to be a doctor!
+
+    User 2: That''s great! What kind of doctor do you want to be?
+
+    User 1: I''m not sure yet, but I''m interested in pediatrics.
+
+    User 2: That''s a great choice! I have a friend who''s a pediatrician. She loves her job.
+
+    User 1: That''s good to hear! I''m excited to start my medical career.
+
+    User 2: I''m sure you''ll do great! What''s your favorite band?
+
+    User 1: I love Van Halen!
+
+    User 2: Me too! They''re one of my favorite bands too!
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I love "Jump" and "Panama".
+
+    User 1: Those are both great songs! My favorite song is "Hot for Teacher".
+
+    User 2: That''s a great song too! I love their music videos.
+
+    User 1: Me too! They''re so cool!
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to play Dungeons and Dragons.
+
+    User 2: That''s awesome! I''ve never played it, but I''ve heard it''s a lot of fun.
+
+    User 1: It is! It''s a great way to spend time with friends and have some fun.
+
+    User 2: I''m glad to hear that! Maybe I''ll try it sometime.
+
+    User 1: I''d love to teach you how to play!
+
+    User 2: Sounds great! I''m free this weekend, if you want to play.
+
+    User 1: That sounds like a plan! I''ll bring my dice and rulebook.
+
+    User 2: Great! I''ll bring some snacks.
+
+    User 1: Sounds like a great time!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

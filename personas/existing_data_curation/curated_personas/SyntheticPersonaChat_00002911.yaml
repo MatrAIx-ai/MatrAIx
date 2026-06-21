@@ -1,0 +1,66 @@
+id: 00002911
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2911
+data:
+  user 1 personas: 'I want to feel pretty.
+
+    I want to be desired.
+
+    I like to eat.
+
+    I feel overweight.'
+  user 2 personas: 'I don t work.
+
+    I like to swim.
+
+    I hate tacos.
+
+    My favorite drink is chocolate milk.'
+  Best Generated Conversation: 'User 1: Hi, how''s it going?
+
+    User 2: Good, I''m just swimming.
+
+    User 1: Nice, what are you swimming for?
+
+    User 2: I''m not swimming for anything, I just like to swim.
+
+    User 1: Oh, I see. I like to swim too, but I''m not very good at it.
+
+    User 2: That''s okay, everyone has to start somewhere.
+
+    User 1: Thanks. So, what do you do for fun?
+
+    User 2: I like to swim, play video games, and watch movies.
+
+    User 1: Oh, that sounds fun. I like to do those things too.
+
+    User 2: Cool, we should hang out sometime.
+
+    User 1: That sounds like a great idea.
+
+    User 2: Great, I''ll text you my number.
+
+    User 1: Okay, sounds good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool. I''m not a very good student.
+
+    User 1: That''s okay, I''m not a very good teacher.
+
+    User 2: We should team up and make a terrible teacher/student duo.
+
+    User 1: That sounds like a great idea.
+
+    User 2: I''m excited to see what we can accomplish.
+
+    User 1: Me too. I think we''re going to do great things.
+
+    User 2: I can''t wait to see what the future holds for us.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00007013'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7013
+data:
+  user 1 personas: 'I try to find easy ways to make money.
+
+    I really enjoy reading the news.
+
+    I wish i could play the stock market well.
+
+    I like to create websites.'
+  user 2 personas: 'I hate talking to people.
+
+    I should beverage been born a prince.
+
+    Nachos are my favorite food.
+
+    I believe dragons are real.
+
+    I play d and d.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play D&D.
+
+    User 1: Oh, that''s cool. I''ve never played D&D before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will. What''s it like?
+
+    User 2: It''s a role-playing game. You create a character and then you go on adventures with other players.
+
+    User 1: That sounds really fun.
+
+    User 2: It is! It''s a great way to meet new people and have fun.
+
+    User 1: I''m not really good at meeting new people.
+
+    User 2: Don''t worry, you''ll be fine. It''s a lot of fun.
+
+    User 1: I''ll try it.
+
+    User 2: Great! I''ll be your DM.
+
+    User 1: What''s a DM?
+
+    User 2: A DM is the Dungeon Master. They''re the person who runs the game and creates the story.
+
+    User 1: Oh, okay.
+
+    User 2: So, when do you want to start?
+
+    User 1: I''m free tomorrow.
+
+    User 2: Tomorrow is perfect. I''ll send you the details.
+
+    User 1: Great! See you then.
+
+    User 2: See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

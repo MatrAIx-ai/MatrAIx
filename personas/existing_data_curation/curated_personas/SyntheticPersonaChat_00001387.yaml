@@ -1,0 +1,60 @@
+id: 00001387
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1387
+data:
+  user 1 personas: 'I m a simple man.
+
+    I can t eat them but they re pretty.
+
+    I drink beers and go to the creek.
+
+    I like fishing.
+
+    I usually catch sunfish.'
+  user 2 personas: 'My favorite animal is the panda.
+
+    My right foot only has 3 toes.
+
+    I eat 6 eggs every morning for breakfast.
+
+    I am a zookeeper.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a zookeeper.
+
+    User 1: That''s awesome! I''ve always wanted to be a zookeeper. What''s your favorite animal?
+
+    User 2: My favorite animal is the panda. They''re so cute and cuddly!
+
+    User 1: I love pandas too! They''re really endangered, aren''t they?
+
+    User 2: Yes, they are. That''s why I''m so passionate about protecting them.
+
+    User 1: That''s really great. What do you do to protect them?
+
+    User 2: I work to educate people about the importance of conservation. I also help to raise funds for panda research and habitat protection.
+
+    User 1: That''s amazing. I''m so glad you''re doing something so important.
+
+    User 2: Thanks! I''m glad I can do something to help.
+
+    User 1: So, what do you do at work on a typical day?
+
+    User 2: A typical day at work for me involves working with the animals, feeding them, cleaning their enclosures, and monitoring their health. I also do a lot of educational presentations for the public.
+
+    User 1: That sounds like a really interesting job.
+
+    User 2: It is! I love working with animals and helping to educate the public about conservation.
+
+    User 1: I''m sure you''re a great zookeeper.
+
+    User 2: Thank you! I try my best.
+
+    User 1: I can see why you love your job.
+
+    User 2: I''m glad! It''s really a dream come true.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

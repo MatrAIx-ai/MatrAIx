@@ -1,0 +1,18 @@
+id: '00035410'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35410
+persona_description: A weather enthusiast who is interested in tracking and analyzing atmospheric conditions, particularly concerning fire activity and air quality. They are knowledgeable about the effects
+  of fires on the environment and the air they emit, as well as the impact of air quality on public health. They are also interested in the use of satellite imagery and data to monitor and predict weather
+  patterns. They are familiar with the use of AQI values and NOAA ozone forecasts to understand and interpret the air quality in their region.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Wildland Fire Science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

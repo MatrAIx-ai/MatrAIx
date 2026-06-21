@@ -1,0 +1,78 @@
+id: '00005415'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5415
+data:
+  user 1 personas: 'My favorite auto is a bentley.
+
+    I like to go to the opera.
+
+    I enjoy classical music.
+
+    I love to vacation in paris.'
+  user 2 personas: 'Sometimes i wish i did not have to wake up in the morning.
+
+    I have trouble feeling emotion.
+
+    My parents are distant.
+
+    I have an older brother that has gotten into trouble.'
+  Best Generated Conversation: 'User 1: I''m not sure what to do today. What are you up to?
+
+    User 2: I''m not sure. I was thinking about going to the opera.
+
+    User 1: Oh, that sounds like fun! I''ve never been to the opera before.
+
+    User 2: It''s really amazing. The music is so beautiful and the stories are so touching.
+
+    User 1: I''m not sure if I''m really into classical music.
+
+    User 2: There are a lot of different types of opera. Maybe you would like a musical?
+
+    User 1: I''ve never heard of a musical.
+
+    User 2: It''s like a play with music. It''s a lot of fun.
+
+    User 1: I''m not sure if I''m ready for a show.
+
+    User 2: Well, you can always just go to the opera and see what you think.
+
+    User 1: I guess I could do that.
+
+    User 2: Great! I''ll meet you there.
+
+    User 1: Okay, what time?
+
+    User 2: I''ll be there at 7:00.
+
+    User 1: Okay, I''ll see you then.
+
+
+    [7:00pm]
+
+
+    User 1: I''m here.
+
+    User 2: Hi! I''m so glad you could make it.
+
+    User 1: Me too. This is my first time at the opera.
+
+    User 2: You''re going to love it.
+
+    [The show starts]
+
+
+    [End of show]
+
+
+    User 1: That was amazing! I can''t believe I''ve never been to the opera before.
+
+    User 2: I told you you''d like it.
+
+    User 1: I''m so glad I came. Thank you for inviting me.
+
+    User 2: You''re welcome. I''m glad you had a good time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

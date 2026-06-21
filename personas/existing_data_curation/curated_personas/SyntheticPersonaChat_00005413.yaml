@@ -1,0 +1,66 @@
+id: '00005413'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5413
+data:
+  user 1 personas: 'My favorite auto is a bentley.
+
+    I am six feet tall.
+
+    I like to go to the opera.
+
+    I love to vacation in paris.'
+  user 2 personas: 'I spend my free time volunteering at nursing homes.
+
+    My dad was a cop.
+
+    I am tall.
+
+    My favorite color is red.
+
+    I like to water ski.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, nice to meet you. My name is [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to volunteer at nursing homes, water ski, and play video games.
+
+    User 1: That''s cool. I like to go to the opera, vacation in Paris, and drive my Bentley.
+
+    User 2: I''ve never been to Paris, but I''ve always wanted to go. I love opera, but I''ve never been to one.
+
+    User 1: You should go! It''s an amazing experience.
+
+    User 2: I will! I''ve heard great things about it.
+
+    User 1: So, what''s your favorite thing about volunteering at nursing homes?
+
+    User 2: I love being able to make a difference in the lives of the people I''m helping.
+
+    User 1: That''s great. I''m sure you''re doing a lot of good.
+
+    User 2: Thanks. I try.
+
+    User 1: So, what''s your favorite video game?
+
+    User 2: I like to play a lot of different games, but my favorite is probably Mario Kart.
+
+    User 1: Mario Kart is great! I love playing it with my friends.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: Well, it''s been nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too. Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

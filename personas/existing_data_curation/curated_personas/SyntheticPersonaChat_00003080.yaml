@@ -1,0 +1,76 @@
+id: 00003080
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3080
+data:
+  user 1 personas: 'I have a small pet cat.
+
+    I live in a small apartment in new york.
+
+    I am twenty one years old.
+
+    My favorite flower is a rose.'
+  user 2 personas: 'I am a roofer.
+
+    I always have a beer after work.
+
+    I played football in high school.
+
+    My favorite food is steak cooked well done.
+
+    I drive a lifted chevy truck.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: What''s up?
+
+    User 2: Not much, just got home from work.
+
+    User 1: Oh, what do you do for work?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, cool! I''ve always been interested in roofing.
+
+    User 2: It''s a lot of fun, but it can be hard work.
+
+    User 1: Yeah, I can imagine.
+
+    User 2: But it''s worth it when you see the finished product.
+
+    User 1: I bet! So, what''s your favorite thing about your job?
+
+    User 2: I like getting to work outdoors and seeing my work come to life.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It is. What do you do for fun?
+
+    User 1: I like to go to concerts, play video games, and hang out with my friends.
+
+    User 2: Oh, that sounds fun. I like to go to concerts too. What''s your favorite band?
+
+    User 1: I like a lot of different bands, but my favorite is probably Panic! At the Disco.
+
+    User 2: Oh, I love Panic! At the Disco! They''re so good live.
+
+    User 1: I know, right? They''re one of the best live bands I''ve ever seen.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go to a concert or just hang out with my friends.
+
+    User 2: Oh, cool. Well, I''m going to a concert on Saturday night. Do you want to come with me?
+
+    User 1: Oh, that sounds fun! I''d love to.
+
+    User 2: Great! I''ll text you the details later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

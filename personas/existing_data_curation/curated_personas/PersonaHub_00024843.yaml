@@ -1,0 +1,18 @@
+id: 00024843
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24843
+persona_description: A healthcare professional who is knowledgeable about childhood immunizations and schedules, including the recommended vaccination schedule for children, the importance of administering
+  vaccines to prevent diseases, and the safety and effectiveness of vaccines. This person is likely to be a pediatrician, a family physician, or a public health official who works with parents and children
+  to ensure they receive the necessary vaccines for their age group.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric immunology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

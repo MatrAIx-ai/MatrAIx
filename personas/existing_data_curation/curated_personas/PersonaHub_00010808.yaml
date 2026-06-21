@@ -1,0 +1,19 @@
+id: 00010808
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10808
+persona_description: A meteorologist who specializes in forecasting weather patterns and is particularly knowledgeable about the formation and behavior of ice pellets, hail, and other forms of frozen precipitation.
+  They have a deep understanding of the physics and meteorological processes involved in the formation and movement of these precipitation types, and are skilled at predicting their occurrence and the impact
+  they can have on local weather conditions. They are also knowledgeable about the specific characteristics and behavior of ice pellets and hail in different regions of the world, and can provide accurate
+  and detailed information on the formation and behavior of these precipitation types.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: precipitation physics and forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: 00005329
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5329
+data:
+  user 1 personas: 'I like thomas the tank engine.
+
+    I like books about trains.
+
+    My poppa has a train set that i play with.
+
+    My cat died.'
+  user 2 personas: 'I am very athletic.
+
+    I wish i could be more serious about school.
+
+    I get distracted easily.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I have been in a lot of romantic relationships that have ended up poorly.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear about your cat.
+
+    User 2: Thanks. I''m still trying to get over it.
+
+    User 1: I know how you feel. I lost my dog a few years ago, and I still miss him every day.
+
+    User 2: Yeah, it''s hard to lose a pet. They''re like family.
+
+    User 1: Exactly.
+
+    User 2: So, what are you interested in?
+
+    User 1: I like trains.
+
+    User 2: Really? That''s cool. I''ve never really been into trains, but I can see the appeal.
+
+    User 1: Yeah, they''re really cool. I like reading books about them, and I have a train set that I play with.
+
+    User 2: That sounds like fun. I''ve always wanted to have a train set, but I''ve never had the space for one.
+
+    User 1: You should get one. They''re really fun to play with.
+
+    User 2: I might just do that.
+
+    User 1: Good! I''m sure you''ll love it.
+
+    User 2: Thanks.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play sports. I''m on the soccer team at my school, and I also play basketball and tennis.
+
+    User 1: That''s cool. I''m not very athletic, but I like to watch sports.
+
+    User 2: You should try playing sports. It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: Good! I''m sure you''ll like it.
+
+    User 1: Thanks.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read books, watch movies, and listen to music.
+
+    User 2: That sounds like me. I like to do all of those things too.
+
+    User 1: Cool! We should hang out sometime and do some of those things together.
+
+    User 2: That sounds like fun. I''m free this weekend.
+
+    User 1: Me too. I''m free on Saturday.
+
+    User 2: Great! I''ll come over to your house and we can hang out.
+
+    User 1: Sounds good. I''ll see you then.
+
+    User 2: See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

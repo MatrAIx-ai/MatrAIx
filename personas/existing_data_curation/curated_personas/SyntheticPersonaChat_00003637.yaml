@@ -1,0 +1,58 @@
+id: '00003637'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3637
+data:
+  user 1 personas: 'I enjoy going to museums.
+
+    I am married.
+
+    I live in new york city.
+
+    I have ten nieces and nephews.
+
+    I am a writer.'
+  user 2 personas: 'I like to party.
+
+    My major is business.
+
+    I am in college.
+
+    I love the beach.
+
+    I work part time at a pizza restaurant.'
+  Best Generated Conversation: 'User 1: Hey! How''s it going?
+
+    User 2: I''m doing great! I just got back from the beach.
+
+    User 1: Oh, that sounds fun! I love the beach.
+
+    User 2: Me too! I''m actually a lifeguard at a beach near my college.
+
+    User 1: That''s awesome! I''ve always wanted to be a lifeguard.
+
+    User 2: It''s a lot of fun, but it can be pretty stressful sometimes.
+
+    User 1: I can imagine. Do you like working with kids?
+
+    User 2: Yeah, I love working with kids. They''re always so excited to be at the beach.
+
+    User 1: That''s awesome. I''m sure you make a lot of people''s days.
+
+    User 2: I hope so! I try my best to make sure everyone is having a good time.
+
+    User 1: So, what do you do for fun when you''re not working?
+
+    User 2: I like to go to parties, hang out with friends, and play video games.
+
+    User 1: Sounds like we have a lot in common! I love going to parties and playing video games too.
+
+    User 2: That''s awesome! We should hang out sometime.
+
+    User 1: I would love that! We can go to the beach or something.
+
+    User 2: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

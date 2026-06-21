@@ -1,0 +1,78 @@
+id: '00002275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2275
+data:
+  user 1 personas: 'I live in nashville.
+
+    I am committed to the environment.
+
+    I work in academia at a local university.
+
+    I like to go to the farmer s market every weekend.
+
+    I play music in my spare time.'
+  user 2 personas: 'I need to take my blood sugar everyday.
+
+    I have a bicycle.
+
+    I have three dogs at home.
+
+    I hate to workout , but i need to.
+
+    I am very good at the drums.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1. What''s your name?
+
+    User 2: Hi, I''m User 2.
+
+    User 1: Where are you from?
+
+    User 2: I''m from Nashville, Tennessee.
+
+    User 1: Oh, I''ve been to Nashville a few times. It''s a beautiful city.
+
+    User 2: It is! I love it here.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in academia at a local university.
+
+    User 1: Oh, that''s cool. I''ve always been interested in academia.
+
+    User 2: It''s a lot of fun. I love learning new things and sharing my knowledge with others.
+
+    User 1: That''s awesome. What do you do in your spare time?
+
+    User 2: I like to play music. I also like to go to the farmer''s market every weekend.
+
+    User 1: Oh, I love going to the farmer''s market too! I always find the best fresh produce there.
+
+    User 2: Me too! I love trying new things.
+
+    User 1: What kind of music do you play?
+
+    User 2: I play the drums.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to learn how to play the drums.
+
+    User 2: It''s a lot of fun. You should give it a try.
+
+    User 1: I might just do that.
+
+    User 2: Good!
+
+    User 1: So, what else do you like to do in your spare time?
+
+    User 2: I also like to volunteer at my local animal shelter.
+
+    User 1: That''s so nice of you! I''m sure the animals appreciate it.
+
+    User 2: They do! It''s always a great time.
+
+    User 1: Well, it was nice meeting you, User 2.
+
+    User 2: It was nice meeting you too, User 1.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

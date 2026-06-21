@@ -1,0 +1,62 @@
+id: 00008142
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8142
+data:
+  user 1 personas: 'I enjoy magic the gathering , it is a card game.
+
+    I can t whistle.
+
+    I have 4 pets.
+
+    I live in an apartment.
+
+    My favorite food is jello.'
+  user 2 personas: 'I work in finance.
+
+    I do not like coffee.
+
+    I rent an apartment.
+
+    I live walking distance from work.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy reading, playing video games, and spending time with my friends.
+
+    User 1: I like those things too. What kinds of games do you like to play?
+
+    User 2: I like to play all kinds of games, but I''m especially into strategy games and role-playing games.
+
+    User 1: Me too! I love playing strategy games. I''ve been playing a lot of Civilization VI lately.
+
+    User 2: I''ve heard good things about that game. I''ve been playing a lot of Total War: Warhammer II.
+
+    User 1: That''s a great game too! I love the Warhammer universe.
+
+    User 2: Me too! It''s so cool.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go to the gym and work out. I''m trying to get in shape.
+
+    User 1: That''s a great goal! I''m trying to get in shape too.
+
+    User 2: We should work out together sometime!
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Okay, sounds good.
+
+    User 2: Nice to meet you, [user 1''s name].
+
+    User 1: Nice to meet you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00002337'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2337
+data:
+  user 1 personas: 'I work at a factory.
+
+    I broke my nose when i was ten.
+
+    My favorite city is seattle.
+
+    I ride my bicycle everywhere.
+
+    I enjoy jazz music.'
+  user 2 personas: 'Last month the farm was foreclosed so i am looking for a new job.
+
+    I like watching reality television shows.
+
+    I would like to move some place warmer.
+
+    I am an out of work farmhand.
+
+    I live in kansas.'
+  Best Generated Conversation: 'User 1: Hey, I''m from Seattle. What about you?
+
+    User 2: I''m from Kansas, but I''m looking for a new job because my farm was foreclosed.
+
+    User 1: Oh, that''s too bad. I''m sorry to hear that.
+
+    User 2: Thanks. It''s not the end of the world, though. I''m just trying to figure out what I want to do next.
+
+    User 1: What kind of work are you looking for?
+
+    User 2: I''m not sure yet. I''m open to anything.
+
+    User 1: Well, I work at a factory here in Seattle. It''s not the best job in the world, but it pays the bills.
+
+    User 2: I''ll keep that in mind. Thanks for the tip.
+
+    User 1: No problem. So, what do you do for fun?
+
+    User 2: I like watching reality TV shows. It''s a guilty pleasure.
+
+    User 1: Me too! I love watching all the drama unfold.
+
+    User 2: Right? It''s so addictive.
+
+    User 1: What are your favorite shows?
+
+    User 2: I like to watch all the Kardashians, Real Housewives, and Vanderpump Rules.
+
+    User 1: I love those shows too! I''m also a big fan of RuPaul''s Drag Race.
+
+    User 2: I''ve never watched that show.
+
+    User 1: You should! It''s so funny.
+
+    User 2: I''ll check it out.
+
+    User 1: So, what do you think you want to do with your life?
+
+    User 2: I''m not sure yet. I''m open to anything.
+
+    User 1: Well, I''m sure you''ll find something great. You seem like a smart and capable person.
+
+    User 2: Thanks for the vote of confidence.
+
+    User 1: No problem. I''m always rooting for people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

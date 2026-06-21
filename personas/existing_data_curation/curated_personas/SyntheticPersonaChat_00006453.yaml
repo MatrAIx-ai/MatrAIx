@@ -1,0 +1,78 @@
+id: '00006453'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6453
+data:
+  user 1 personas: 'I need certain medications to live.
+
+    I skydive frequently.
+
+    I like fast food too much.
+
+    I have won an olympic medal.'
+  user 2 personas: 'My father was born in australia.
+
+    My father was an author.
+
+    I like to travel.
+
+    I have traveled to both ireland and australia.
+
+    My mother was born in ireland.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: I''m from [country].
+
+    User 2: I''m from [country].
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit [country].
+
+    User 2: It''s a beautiful place. You should definitely go sometime.
+
+    User 1: I will!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a skydiver.
+
+    User 2: That''s so cool! I''ve always wanted to try skydiving.
+
+    User 1: It''s a lot of fun. You should definitely give it a try.
+
+    User 2: I will!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to travel, read, and write.
+
+    User 1: That''s cool! I like to travel, too. I''ve been to Ireland and Australia.
+
+    User 2: Oh, that''s cool! I''ve been to Australia, too. It''s a beautiful country.
+
+    User 1: It is. I loved the beaches.
+
+    User 2: Me too! They''re so beautiful.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: I have a lot of favorite books, but I think my favorite is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: Oh, that''s a good one! I read that book in high school.
+
+    User 2: Me too! I loved it.
+
+    User 1: So, what do you like to write?
+
+    User 2: I like to write fiction. I''ve written a few short stories and I''m working on a novel.
+
+    User 1: That''s cool! I''ve always wanted to try writing a novel.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

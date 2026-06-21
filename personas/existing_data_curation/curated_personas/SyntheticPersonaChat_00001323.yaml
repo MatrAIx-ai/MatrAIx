@@ -1,0 +1,72 @@
+id: '00001323'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1323
+data:
+  user 1 personas: 'I like to travel.
+
+    I like cats.
+
+    I got a new job.
+
+    I like cars.'
+  user 2 personas: 'I want to be a doctor when i graduate.
+
+    I love tacos but hate spaghetti.
+
+    I just graduated high school.
+
+    My favorite season is summer.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I just got a new job.
+
+    User 2: Congratulations! That''s great news!
+
+    User 1: Thanks! I''m excited to start.
+
+    User 2: What kind of job is it?
+
+    User 1: I''m going to be a car salesman.
+
+    User 2: Oh, that sounds exciting!
+
+    User 1: I think it will be. I''ve always loved cars.
+
+    User 2: Me too! I love going on road trips.
+
+    User 1: Me too! I love the feeling of the open road.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: What are your plans after high school?
+
+    User 2: I want to go to medical school and become a doctor.
+
+    User 1: That''s a great goal! I''m sure you''ll be a great doctor.
+
+    User 2: Thanks! I hope so.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love tacos!
+
+    User 1: Me too! They''re so good.
+
+    User 2: I love the combination of the meat, the cheese, and the salsa.
+
+    User 1: Me too! It''s so delicious.
+
+    User 2: What''s your favorite season?
+
+    User 1: I love summer! It''s so hot and sunny.
+
+    User 2: Me too! I love the beach and swimming.
+
+    User 1: Me too! It''s so much fun to go swimming in the summer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

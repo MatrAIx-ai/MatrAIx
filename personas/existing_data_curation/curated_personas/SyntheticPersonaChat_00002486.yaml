@@ -1,0 +1,76 @@
+id: 00002486
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2486
+data:
+  user 1 personas: 'I like action movies.
+
+    My father is a doctor.
+
+    I drive a restored mustang.
+
+    I play football.
+
+    I am a college student.'
+  user 2 personas: 'Wedding cakes are my specialty.
+
+    I like baking.
+
+    I go to the theater to watch plays.
+
+    I love my dog.
+
+    I enjoy walking around the park.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I like to bake, especially wedding cakes. I also enjoy going to the theater to watch plays.
+
+    User 1: That''s cool! I''ve always wanted to take a baking class. And I love going to the theater too!
+
+    User 2: You should! It''s a great way to relax and enjoy a good show.
+
+    User 1: I know, I know! I''m going to have to sign up for a class soon.
+
+    User 2: That''s great! I''m sure you''ll have a lot of fun.
+
+    User 1: Thanks! So, what''s your favorite kind of cake to bake?
+
+    User 2: I love making wedding cakes! There''s so much creativity that can go into them.
+
+    User 1: I can imagine! I''ve seen some really amazing wedding cakes.
+
+    User 2: Yeah, they can be really beautiful. And they''re always so delicious!
+
+    User 1: I''m sure they are! I love cake.
+
+    User 2: Me too! It''s my favorite dessert.
+
+    User 1: What''s your favorite thing about baking?
+
+    User 2: I love the creativity of it. And I love seeing the look on people''s faces when they see my cakes.
+
+    User 1: That''s so nice! I''m sure your cakes are amazing.
+
+    User 2: Thanks! I hope so!
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the theater to see a play.
+
+    User 1: Oh, that sounds fun! What play are you going to see?
+
+    User 2: I''m not sure yet. I''m still looking into it.
+
+    User 1: Well, let me know if you decide to go. I''d love to go with you.
+
+    User 2: I will! Thanks for the offer.
+
+    User 1: No problem! It''s always fun to go to the theater with friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

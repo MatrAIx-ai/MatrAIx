@@ -1,0 +1,66 @@
+id: 00006870
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6870
+data:
+  user 1 personas: 'My favorite movies are disney movies.
+
+    I am an insatiable reader.
+
+    I love to play soccer.
+
+    I live with my parents.'
+  user 2 personas: 'I work at a real estate office.
+
+    I am dating my boss.
+
+    I love to sing.
+
+    I am in my 20 s.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to sing and play soccer.
+
+    User 1: Oh, that''s cool! I love Disney movies.
+
+    User 2: Me too! What''s your favorite one?
+
+    User 1: I love Mulan. It''s so inspiring.
+
+    User 2: I love that movie too! I''m actually learning to sing "Reflection" right now.
+
+    User 1: That''s awesome! I''m sure you''ll do great.
+
+    User 2: Thanks! What do you do for fun?
+
+    User 1: I''m an avid reader. I love to read all different kinds of books, but I especially love historical fiction.
+
+    User 2: That''s cool! I love to read too. I''m currently reading "The Secret History" by Donna Tartt.
+
+    User 1: I love that book! It''s so good.
+
+    User 2: I know, right? It''s one of my favorites.
+
+    User 1: What do you like about it?
+
+    User 2: I love the characters and the mystery. It''s just a really well-written book.
+
+    User 1: I agree. It''s definitely one of the best books I''ve ever read.
+
+    User 2: So, do you have any other hobbies?
+
+    User 1: Yeah, I like to play soccer. I''ve been playing since I was a kid.
+
+    User 2: That''s cool! I''ve always wanted to learn how to play soccer.
+
+    User 1: It''s really fun! I''m sure you''d be good at it.
+
+    User 2: Thanks! I might have to give it a try.
+
+    User 1: You should! It''s a great way to stay active and have fun.
+
+    User 2: I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

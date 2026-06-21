@@ -1,0 +1,70 @@
+id: '00002252'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2252
+data:
+  user 1 personas: 'I like simple jokes.
+
+    I like the flintstones.
+
+    Some jokes go too far.
+
+    My friend likes cartoons like south park.
+
+    I prefer the simpler times.'
+  user 2 personas: 'I live on a farm.
+
+    I graduated high school.
+
+    I drive a truck.
+
+    I like rap music.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to rap music, drive my truck, and work on my farm.
+
+    User 1: Oh, that''s cool! I like to watch cartoons, play video games, and read books.
+
+    User 2: I don''t really watch cartoons, but I do play video games sometimes.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play racing games and action games.
+
+    User 1: Oh, I like racing games too! I''m not very good at them, but I have a lot of fun playing them.
+
+    User 2: Me too! I''m not very good at them either, but I still have a lot of fun.
+
+    User 1: What''s your favorite racing game?
+
+    User 2: I think my favorite racing game is Need for Speed.
+
+    User 1: That''s a good one! I like that one too.
+
+    User 2: What''s your favorite action game?
+
+    User 1: I think my favorite action game is Grand Theft Auto.
+
+    User 2: That''s a good one too! I like that one too.
+
+    User 1: Have you ever played any of the Zelda games?
+
+    User 2: No, I haven''t. Are they any good?
+
+    User 1: Yeah, they''re really good! They''re action-adventure games with a lot of puzzles to solve.
+
+    User 2: Oh, I like puzzles! I might have to check them out.
+
+    User 1: I think you would like them!
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: 00003469
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3469
+data:
+  user 1 personas: 'I love to skate and ski.
+
+    I love the smell of leather.
+
+    My car has to be as fast as my motorcycle.
+
+    I have 4 cats and 2 dogs.
+
+    I own 30 pairs of shoes.'
+  user 2 personas: 'I have beard that is longer.
+
+    I like to ride my bike.
+
+    I own a dog that is small.
+
+    I like to play football.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my bike, play football, and hang out with my friends.
+
+    User 1: Nice! I like to skate and ski. I also have 4 cats and 2 dogs.
+
+    User 2: Wow, that''s a lot of pets! I only have a small dog.
+
+    User 1: I love animals. I also have a lot of shoes. I think I own about 30 pairs.
+
+    User 2: That''s a lot of shoes! I only have about 10 pairs.
+
+    User 1: I like to have different shoes for different occasions. I also like to collect shoes.
+
+    User 2: That''s cool. I like to keep my shoes simple.
+
+    User 1: I like to mix and match my shoes. I think it''s fun to be creative with my outfits.
+
+    User 2: I agree. It''s fun to experiment with different styles.
+
+    User 1: So, what do you like about riding your bike?
+
+    User 2: I like the freedom of it. I can go anywhere I want, and I don''t have to worry about traffic.
+
+    User 1: That''s true. I also like the exercise I get from riding my bike.
+
+    User 2: Me too. It''s a great way to stay in shape.
+
+    User 1: So, what do you like about playing football?
+
+    User 2: I like the competition. I also like the teamwork involved in the game.
+
+    User 1: That makes sense. Football is a team sport, so it''s important to work together to win.
+
+    User 2: Exactly. I also like the strategy involved in football. It''s a lot of fun to come up with a game plan and execute it.
+
+    User 1: That''s true. Football is a very strategic game.
+
+    User 2: I''m glad you agree. I think football is a great sport.
+
+    User 1: I do too. It''s one of my favorites.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

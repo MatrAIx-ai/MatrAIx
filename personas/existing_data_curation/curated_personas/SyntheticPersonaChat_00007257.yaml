@@ -1,0 +1,58 @@
+id: '00007257'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7257
+data:
+  user 1 personas: 'My grand children mean the world to me.
+
+    I am an avid quilter.
+
+    I was a wild child in my younger years.
+
+    I am a pharmacist.
+
+    I like classical music.'
+  user 2 personas: 'I have two dogs.
+
+    I like to cook.
+
+    I am scared of clowns.
+
+    I live on the third floor in an apartment.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi! My name is [user 1].
+
+    User 2: Hi! My name is [user 2].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to cook, I have two dogs, and I''m scared of clowns.
+
+    User 1: Wow, you seem like a very interesting person! I''m a pharmacist, I like classical music, and I''m an avid quilter.
+
+    User 2: That''s really cool! I''ve always wanted to learn how to quilt.
+
+    User 1: It''s really fun! You should give it a try.
+
+    User 2: I might just do that!
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes! I''m really good at making homemade pasta.
+
+    User 1: That sounds delicious! I''m not very good at cooking, but I love eating pasta.
+
+    User 2: You should come over to my place sometime and I''ll make you some pasta.
+
+    User 1: I would love that!
+
+    User 2: Great! We can set something up for next week.
+
+    User 1: Sounds good!
+
+    * * *'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

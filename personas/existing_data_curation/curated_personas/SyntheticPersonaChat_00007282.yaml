@@ -1,0 +1,76 @@
+id: 00007282
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7282
+data:
+  user 1 personas: 'Sometimes i like to visit thrift shops.
+
+    I like to recycle my thrift shop finds and make new items.
+
+    I like to sew my own clothing.
+
+    I enjoy clothing with exotic prints.
+
+    I am an art teacher.'
+  user 2 personas: 'My father is a doctor.
+
+    I am a college student.
+
+    I like action movies.
+
+    I drive a restored mustang.
+
+    I play football.'
+  Best Generated Conversation: 'User 1: Hi, I''m Susan.
+
+    User 2: Hi, I''m John.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play football and watch action movies.
+
+    User 1: I like to sew my own clothing and I enjoy thrift shopping.
+
+    User 2: That''s cool. I''ve never been to a thrift shop before.
+
+    User 1: You should go sometime. They''re really fun. You can find a lot of great deals on clothes and other items.
+
+    User 2: Maybe I will. I''m always looking for a good deal.
+
+    User 1: I also like to go to the art museum. I''m an art teacher.
+
+    User 2: Oh, that''s cool. I''ve never been to an art museum.
+
+    User 1: You should go sometime. They''re really interesting. You can see a lot of different types of art from all over the world.
+
+    User 2: Maybe I will. I''m always looking for new things to do.
+
+    User 1: I''m also a college student. What are you studying?
+
+    User 2: I''m studying business. I want to be a doctor like my dad.
+
+    User 1: That''s great. I''m sure you''ll be a great doctor.
+
+    User 2: Thanks. I hope so.
+
+    User 1: Well, it was nice talking to you, John.
+
+    User 2: You too, Susan. I hope we can get together again sometime.
+
+    User 1: Sure. Let''s exchange numbers.
+
+    User 2: Okay.
+
+    User 1: What''s your number?
+
+    User 2: My number is 555-555-5555.
+
+    User 1: Okay. I''ll text you.
+
+    User 2: Okay. Bye, Susan.
+
+    User 1: Bye, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

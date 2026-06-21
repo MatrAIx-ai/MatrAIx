@@ -1,0 +1,62 @@
+id: '00004131'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4131
+data:
+  user 1 personas: 'I work in a movie theater.
+
+    I hate popcorn.
+
+    Nachos make me happy.
+
+    I am constantly making short films with the camcorder my parents got me.
+
+    My boyfriend is in acting school.'
+  user 2 personas: 'I am a strong woman.
+
+    I enjoy spending time with family and friends.
+
+    I am married.
+
+    I travel a lot.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to travel, spend time with family and friends, and I''m married.
+
+    User 1: That''s great! I like to make short films and I work in a movie theater.
+
+    User 2: That''s awesome! I love going to the movies.
+
+    User 1: Me too! I go all the time.
+
+    User 2: Do you have a favorite movie?
+
+    User 1: I have a few, but I''d have to say my favorite is The Shawshank Redemption.
+
+    User 2: That''s a great movie! I love it too.
+
+    User 1: What''s your favorite thing about it?
+
+    User 2: I love the story, the characters, and the acting. It''s just a really well-made movie.
+
+    User 1: I agree! It''s so good.
+
+    User 2: So, what are you working on right now?
+
+    User 1: I''m working on a short film about a group of friends who go on a road trip.
+
+    User 2: That sounds like a fun project!
+
+    User 1: Thanks! It is. I''m having a lot of fun with it.
+
+    User 2: I''m sure it will turn out great.
+
+    User 1: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

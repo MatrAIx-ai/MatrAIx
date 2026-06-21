@@ -1,0 +1,100 @@
+id: '00005175'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5175
+data:
+  user 1 personas: 'My mother is in the hospital.
+
+    I have a lot of medical bills.
+
+    I used to be able to run really fast.
+
+    I m very familiar with hospitals and doctors.'
+  user 2 personas: 'I am a very short woman.
+
+    I have trouble losing weight.
+
+    I am near sighted and wear contact lenses.
+
+    I love animals.
+
+    I don t cook and usually eat out.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Where are you from?
+
+    User 2: I''m from [user 2''s hometown].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a small town, but it''s nice.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: Oh, I like to do those things too.
+
+    User 2: What''s your favorite book?
+
+    User 1: I don''t have one favorite book, but I really like the Harry Potter series.
+
+    User 2: I''ve never read them. What are they about?
+
+    User 1: They''re about a young boy who finds out he''s a wizard and goes to a school for witchcraft and wizardry.
+
+    User 2: That sounds interesting. I might have to check them out.
+
+    User 1: You should! They''re really good.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I also like to go to the gym and work out.
+
+    User 2: I''m not very athletic. I have trouble losing weight.
+
+    User 1: Have you tried going to the gym?
+
+    User 2: Yes, but I didn''t really enjoy it.
+
+    User 1: Maybe you could try a different type of exercise, like yoga or Pilates.
+
+    User 2: I''ll look into that.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool! I''ve always thought about being a nurse.
+
+    User 2: It''s a good job. I get to help people.
+
+    User 1: That''s what I like to hear.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I know a little bit about coding.
+
+    User 1: Nice! What kind of coding do you know?
+
+    User 2: I know a little bit of Python and Java.
+
+    User 1: Oh, nice! I''m a Java developer.
+
+    User 2: That''s cool! I''ve always wanted to learn Java.
+
+    User 1: It''s a good language. It''s what I use at work.
+
+    User 2: That''s cool! I''m glad I met you.
+
+    User 1: Me too! It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

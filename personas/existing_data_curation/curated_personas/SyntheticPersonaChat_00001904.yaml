@@ -1,0 +1,76 @@
+id: 00001904
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1904
+data:
+  user 1 personas: 'I have purple hair.
+
+    My mom died when i was six.
+
+    My favorite book is the tale of genji.
+
+    I am a petsitter.'
+  user 2 personas: 'I have more money than i know what to do with.
+
+    I am bored of my maids.
+
+    My children are a dissapointment.
+
+    My favorite dessert is cheesecake.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is, but it can also be very challenging.
+
+    User 1: I can imagine.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a petsitter.
+
+    User 2: Oh, that sounds like a fun job.
+
+    User 1: It is, I get to meet a lot of different animals.
+
+    User 2: That''s great.
+
+    User 1: I have a dog, a cat, and a fish.
+
+    User 2: Oh, I love animals!
+
+    User 1: Me too, I love taking care of them.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I think I''d have to say dogs, they''re so loyal and loving.
+
+    User 2: I agree, they''re the best.
+
+    User 1: What''s your favorite dessert?
+
+    User 2: Cheesecake, I love the creamy texture and the sweet flavor.
+
+    User 1: Me too, cheesecake is my favorite too.
+
+    User 2: We have so much in common!
+
+    User 1: I know, it''s amazing.
+
+    User 2: Well, it was nice meeting you.
+
+    User 1: It was nice meeting you too.
+
+    User 2: I hope we can meet again soon.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

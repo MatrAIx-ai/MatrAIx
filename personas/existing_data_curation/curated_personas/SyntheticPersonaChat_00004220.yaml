@@ -1,0 +1,90 @@
+id: '00004220'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4220
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I work for a government agency.
+
+    I prefer baseball over football.
+
+    I like sports.'
+  user 2 personas: 'I fix airplanes for a living.
+
+    I drive junk cars that no one else wants.
+
+    I think if i work hard enough i can fix the world.
+
+    I am never still.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What do you do for a living?
+
+    User 2: I fix airplanes.
+
+    User 1: Oh, that''s cool! I''ve always been fascinated by airplanes.
+
+    User 2: It''s a lot of fun, but it can be stressful too.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I like the feeling of accomplishment I get when I fix an airplane and it''s ready to fly again.
+
+    User 1: That''s awesome! I''m sure it''s a great feeling.
+
+    User 2: It is! So what do you do for a living?
+
+    User 1: I work for a government agency.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It can be, but it''s also a lot of paperwork.
+
+    User 2: I can imagine. What''s your favorite part of the job?
+
+    User 1: I like the sense of making a difference in the world.
+
+    User 2: That''s a great feeling!
+
+    User 1: It is! So what do you like to do for fun?
+
+    User 2: I like to fix up old cars.
+
+    User 1: Oh, that''s cool! I''ve never been very good at working on cars.
+
+    User 2: It''s a lot of fun, and it''s a great way to learn about how cars work.
+
+    User 1: I can imagine. So what''s your favorite car?
+
+    User 2: I like old muscle cars.
+
+    User 1: Oh, those are cool! I''ve always wanted a Mustang.
+
+    User 2: Mustangs are great cars!
+
+    User 1: So what''s your favorite thing to do in your free time?
+
+    User 2: I like to go for walks, play sports, and watch movies.
+
+    User 1: I like to do those things too!
+
+    User 2: Awesome! So what''s your favorite movie?
+
+    User 1: I like a lot of different movies, but my favorite is probably The Shawshank Redemption.
+
+    User 2: That''s a great movie! I love Morgan Freeman''s character.
+
+    User 1: Me too! He''s so good in that movie.
+
+    User 2: So what do you think? Wanna grab a pizza and watch a movie sometime?
+
+    User 1: That sounds like a great idea! I''m free this weekend.
+
+    User 2: Awesome! I''ll pick you up at 7:00.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

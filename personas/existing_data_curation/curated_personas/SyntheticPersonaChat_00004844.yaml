@@ -1,0 +1,60 @@
+id: 00004844
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4844
+data:
+  user 1 personas: 'My favorite color is orange.
+
+    I am lactose intolerant.
+
+    I have 3 roommates.
+
+    I have a parakeet.'
+  user 2 personas: 'I love my work and just got promoted.
+
+    I work for a large law firm.
+
+    I listen to classical music.
+
+    I am married with three kids.
+
+    I enjoy golfing.'
+  Best Generated Conversation: 'User 1: I''m looking for someone to talk to.
+
+    User 2: Me too! I''m always up for a conversation.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play golf, listen to classical music, and spend time with my family.
+
+    User 1: Golf sounds fun! I''ve never tried it before.
+
+    User 2: You should! It''s a great way to relax and get some exercise.
+
+    User 1: Maybe I will give it a try sometime.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: What''s your favorite part about golf?
+
+    User 2: I love the challenge of trying to hit the ball into the hole. It''s a lot of fun to try and improve your score each time you play.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I''m also really competitive, so I like trying to beat my friends'' scores.
+
+    User 1: I''m not very competitive, but I''m sure I''d still enjoy it.
+
+    User 2: I''m sure you would! It''s a great way to spend an afternoon.
+
+    User 1: Maybe we should go golfing together sometime.
+
+    User 2: That would be fun! I''d love to show you the ropes.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

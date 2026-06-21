@@ -1,0 +1,61 @@
+id: 00002990
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2990
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    Pink is my favorite color.
+
+    My mother is dead.
+
+    I enjoy being alone.
+
+    I married my highschool sweetheart.'
+  user 2 personas: 'Sometimes , i like to relieve myself when on roses.
+
+    I can t get enough ginger snaps.
+
+    I think canadian women are incredibly attractive.
+
+    I drive a prius.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, my name is [name].
+
+    User 1: What are your interests?
+
+    User 2: I like to relieve myself on roses, eat ginger snaps, and think Canadian women are incredibly attractive.
+
+    User 1: That''s interesting. I''m a yoga instructor, and my favorite color is pink. I also enjoy being alone and I married my high school sweetheart.
+
+    User 2: I''ve never been to Canada, but I''ve heard it''s beautiful. I''m not sure I''ve ever tried ginger snaps, but I''m sure they''re delicious. I''m not sure why you like to relieve yourself on
+    roses, but I''m sure you have your reasons.
+
+    User 1: I enjoy the feeling of being on top of the world.
+
+    User 2: I can understand that. I think it''s important to have something that makes you feel happy and fulfilled.
+
+    User 1: I agree.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I enjoy teaching yoga, spending time with my family, and reading.
+
+    User 2: That sounds like a great way to spend your time. I enjoy reading too, but I don''t have much time for it lately.
+
+    User 1: I know what you mean. It''s hard to find time for everything.
+
+    User 2: I agree.
+
+    User 1: It was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

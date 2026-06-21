@@ -1,0 +1,62 @@
+id: 00008135
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8135
+data:
+  user 1 personas: 'I care about the way i look when i am in public.
+
+    I always think people are looking at me.
+
+    I shop online a lot.
+
+    I think i am fabulous.
+
+    I check my reflection in the mirror constantly.'
+  user 2 personas: 'I have driven a race car before.
+
+    I have a bad habit of being dishonest.
+
+    I sometimes get into fights.
+
+    I do whatever it takes to get what i want.
+
+    I would like to try sky diving.'
+  Best Generated Conversation: 'User 1: Hi, I''m new here. What''s your name?
+
+    User 2: Nice to meet you, my name is [User 2''s name].
+
+    User 1: What do you like to do?
+
+    User 2: I like to race cars, skydive, and fight.
+
+    User 1: Wow, that''s a lot of exciting things to do! I like shopping online, checking my reflection in the mirror, and caring about how I look.
+
+    User 2: You sound like a very vain person.
+
+    User 1: I guess I am a little bit vain, but I like to look my best.
+
+    User 2: I can respect that. I''m not usually so concerned about my appearance.
+
+    User 1: Well, I think you look great.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: What''s your favorite thing about yourself?
+
+    User 2: I''m not sure. I guess I''m pretty good at getting what I want.
+
+    User 1: That''s a good quality to have. I''m more of a go-with-the-flow kind of person.
+
+    User 2: I can respect that too. I''m not always the best at going with the flow, but I''m trying to learn.
+
+    User 1: I''m sure you''ll get the hang of it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

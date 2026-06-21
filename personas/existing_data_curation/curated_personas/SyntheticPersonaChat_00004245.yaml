@@ -1,0 +1,68 @@
+id: '00004245'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4245
+data:
+  user 1 personas: 'My hair is long and brown.
+
+    I have a little girl.
+
+    I wait tables.
+
+    I am taking online classes.'
+  user 2 personas: 'My car is green and smells weird.
+
+    My grandma is from denmark.
+
+    My favorite food is meatloaf.
+
+    My dogs name is toto.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to cook, go for walks, and play with my dog.
+
+    User 1: That sounds fun! I like to go for walks too.
+
+    User 2: What kind of dog do you have?
+
+    User 1: I have a little brown and white dog named Toby.
+
+    User 2: That''s a cute name! I have a black dog named Toto.
+
+    User 1: Nice! What''s your favorite food to cook?
+
+    User 2: I love making meatloaf. It''s so easy and delicious.
+
+    User 1: Me too! I love meatloaf.
+
+    User 2: What kind of car do you have?
+
+    User 1: I have a green Honda Civic.
+
+    User 2: That''s a nice car! Mine is a blue Ford Focus.
+
+    User 1: Nice! What''s your favorite thing to do in your free time?
+
+    User 2: I like to go to the movies, read books, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to go to the movies too.
+
+    User 2: We should go to the movies together sometime!
+
+    User 1: That would be fun! I''m free on Friday night.
+
+    User 2: Me too! I''ll text you my number.
+
+    User 1: Okay, great!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

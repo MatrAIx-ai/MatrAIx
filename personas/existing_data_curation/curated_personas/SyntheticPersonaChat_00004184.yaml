@@ -1,0 +1,66 @@
+id: 00004184
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4184
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I love to ride my bike on the weekend.
+
+    I am an insurance salesman.
+
+    I post on reduit often.'
+  user 2 personas: 'I have a french bulldog.
+
+    My feet are size six womens.
+
+    I want to be a journalist but instead i sell washers at sears.
+
+    I play bass.
+
+    I love the band red hot chili peppers.'
+  Best Generated Conversation: 'User 1: Hey! I''m [name], it''s nice to meet you.
+
+    User 2: Hi [name], I''m [name]. It''s nice to meet you too.
+
+    User 1: I see you like the band Red Hot Chili Peppers. They''re one of my favorites too!
+
+    User 2: Yeah, they''re great! I''ve been a fan for a long time.
+
+    User 1: Me too! I saw them in concert a few years ago and it was amazing.
+
+    User 2: I''m so jealous! I''ve always wanted to see them in concert.
+
+    User 1: You should definitely try to go if they ever come to your area. It''s a really great experience.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. What else do you like to do for fun?
+
+    User 2: I like to play music. I play bass in a band.
+
+    User 1: Oh, that''s cool! What kind of music do you play?
+
+    User 2: We play a lot of different styles, but we''re mostly into rock and blues.
+
+    User 1: That''s awesome. I love rock and blues.
+
+    User 2: Me too! We''re always looking for new members, if you''re interested.
+
+    User 1: I''m not sure I''m quite good enough, but thanks for the offer.
+
+    User 2: No worries. We''re always happy to have new people come and play.
+
+    User 1: Maybe I''ll come check you guys out sometime.
+
+    User 2: That would be great! We''re playing at the local bar on Friday night.
+
+    User 1: I''ll try to make it.
+
+    User 2: Great! See you then.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

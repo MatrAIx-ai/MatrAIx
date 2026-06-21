@@ -1,0 +1,78 @@
+id: 00001810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1810
+data:
+  user 1 personas: 'I am an only child.
+
+    I like going to foreign countries.
+
+    I love dancing.
+
+    I dye my hair blonde.'
+  user 2 personas: 'I go visit them sometimes.
+
+    My best friend lives in a big city.
+
+    She likes to grow plants in her garden.
+
+    I work at a grocery store.'
+  Best Generated Conversation: 'User 1: I love going to foreign countries. I''ve been to Italy, France, and Spain.
+
+    User 2: Wow, that''s amazing! I''ve never been to a foreign country.
+
+    User 1: You should! It''s so much fun to experience different cultures.
+
+    User 2: I''m sure it is. I''ll have to start saving up for a trip.
+
+    User 1: Good for you!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love dancing. I''ve been dancing since I was a little girl.
+
+    User 2: That''s so cool! I wish I could dance.
+
+    User 1: You should try it! It''s really fun.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: Good for you! I''m sure you''ll be a natural.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work at a grocery store.
+
+    User 1: Oh, that''s cool. I used to work at a grocery store when I was in college.
+
+    User 2: What did you do there?
+
+    User 1: I was a cashier.
+
+    User 2: Oh, that must have been a lot of fun.
+
+    User 1: It was okay. I got to meet a lot of interesting people.
+
+    User 2: That''s always a plus.
+
+    User 1: Yeah, it was.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to go out dancing, go to concerts, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun. I like to do those things too.
+
+    User 1: Cool! Maybe we can go out dancing sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Okay, thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: '00001777'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1777
+data:
+  user 1 personas: 'I am a great baker.
+
+    I was an army brat.
+
+    I am a nurse.
+
+    I surf often.'
+  user 2 personas: 'I have a job as an it agent.
+
+    I like smoking weed.
+
+    I am a meataholic.
+
+    I love rap music.
+
+    My dad works for stifel.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from the Midwest.
+
+    User 1: Cool, me too!
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s cool! I''m an IT agent.
+
+    User 1: Nice! What kind of music do you like?
+
+    User 2: I like all sorts of music, but I''m really into rap right now.
+
+    User 1: Me too! I love rap.
+
+    User 2: What''s your favorite rapper?
+
+    User 1: I like Kendrick Lamar, J. Cole, and Drake.
+
+    User 2: Nice! I like them too.
+
+    User 1: Do you have any siblings?
+
+    User 2: I have one brother.
+
+    User 1: Me too! I have one sister.
+
+    User 2: Cool! What do you like to do for fun?
+
+    User 1: I like to bake, surf, and hang out with my friends.
+
+    User 2: Oh, that''s cool! I like to smoke weed, eat meat, and play video games.
+
+    User 1: Nice! I like to do some of those things too.
+
+    User 2: Cool! It looks like we have a lot in common.
+
+    User 1: Yeah, it does!
+
+    User 2: So, what do you want to do now?
+
+    User 1: I don''t know, what do you want to do?
+
+    User 2: We could go get some food or something.
+
+    User 1: That sounds good.
+
+    User 2: Where do you want to go?
+
+    User 1: I don''t know, where do you want to go?
+
+    User 2: We could go to this new restaurant that just opened up.
+
+    User 1: That sounds good.
+
+    User 2: Cool, let''s go.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

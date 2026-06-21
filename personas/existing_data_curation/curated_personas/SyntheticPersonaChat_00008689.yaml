@@ -1,0 +1,88 @@
+id: 00008689
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8689
+data:
+  user 1 personas: 'I am recent college graduate looking for a job in marketing.
+
+    I would like to spend more time with my family.
+
+    Unfortunately , my family lives across the country from me.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.
+
+    I like spending time with friends playing sports and going to country concerts.'
+  user 2 personas: 'I prefer headsets over earbuds.
+
+    I live with my parents.
+
+    My favorite color is red.
+
+    I travel often.
+
+    I have an iphone.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, what about you?
+
+    User 1: I''m doing well, thanks! Just got back from a trip to Europe.
+
+    User 2: Oh, that sounds fun! Where did you go?
+
+    User 1: I went to Paris, London, and Rome.
+
+    User 2: Wow, that''s awesome! I''ve always wanted to go to Europe.
+
+    User 1: It was amazing, I highly recommend it.
+
+    User 2: I''m sure I will someday.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to travel, listen to music, and play video games.
+
+    User 1: Oh, cool. I like to travel too, but I don''t get to do it as much as I''d like.
+
+    User 2: I know what you mean, it can be expensive.
+
+    User 1: Yeah, it can be. But it''s worth it!
+
+    User 2: Definitely.
+
+    User 1: So, what kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably country.
+
+    User 1: Oh, cool. I like country music too.
+
+    User 2: Who''s your favorite country artist?
+
+    User 1: I''m a big fan of Eric Church.
+
+    User 2: Me too! He''s one of my favorites.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a web developer.
+
+    User 1: Oh, cool. What kind of web development do you do?
+
+    User 2: I mostly do front-end web development, but I also do some back-end work.
+
+    User 1: That''s cool. I''ve always wanted to learn how to code.
+
+    User 2: It''s a lot of fun, but it can be challenging.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what are you looking for in a job?
+
+    User 1: I''m looking for a job in marketing, preferably in the tech industry.
+
+    User 2: Oh, cool. I''m sure you''ll find something great.
+
+    User 1: Thanks, I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

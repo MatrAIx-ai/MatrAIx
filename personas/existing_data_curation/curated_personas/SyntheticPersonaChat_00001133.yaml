@@ -1,0 +1,60 @@
+id: '00001133'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1133
+data:
+  user 1 personas: 'I surf everyday.
+
+    I like to listen to country music.
+
+    I work at a bar.
+
+    People say i can cook well.'
+  user 2 personas: 'I m a vegetarian but i eat fish , especially sushi.
+
+    My parents pay my rent.
+
+    I love my dog.
+
+    I graduated college and immediately went to graduate school.
+
+    I like to shop.'
+  Best Generated Conversation: 'User 1: What is your favorite kind of music?
+
+    User 2: I like country music.
+
+    User 1: Oh, that''s cool. I''ve never been a big fan of country music, but I can appreciate it.
+
+    User 2: Yeah, it''s not for everyone.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to surf, shop, and spend time with my dog.
+
+    User 1: Surfing sounds like a lot of fun. I''ve always wanted to try it, but I''m not sure if I''m that good at swimming.
+
+    User 2: It''s not too hard to learn. You just have to be confident in the water.
+
+    User 1: Yeah, I think I''m going to need to take a lesson or two first.
+
+    User 2: That''s a good idea. It''s always better to be safe than sorry.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a graduate student. I just graduated from college and I''m working on my master''s degree.
+
+    User 1: Oh, that''s cool. What are you studying?
+
+    User 2: I''m studying business administration.
+
+    User 1: That sounds like a tough degree.
+
+    User 2: It''s not too bad. It''s just a lot of work.
+
+    User 1: I''m sure it is. But I''m sure you''re doing great.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00004075'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4075
+data:
+  user 1 personas: 'I love wearing flip flops.
+
+    I love laughing.
+
+    My best friend is from tanzania.
+
+    I have freckles.'
+  user 2 personas: 'I wear cardigans because i hope it makes me look more cultured.
+
+    I had one step dad , and fortunately he ignored me.
+
+    I hate that i got my brain from the dad i never met.
+
+    I do not know if i enjoy programming , or if its my only choice.
+
+    My last name is spanish , but i tell people that its italian.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from New Jersey.
+
+    User 1: Oh, cool. I''m from California.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go to the beach, go hiking, and play video games.
+
+    User 2: I love the beach too! I also like to read and go shopping.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially a fan of mystery and suspense novels.
+
+    User 1: Oh, me too! I love a good mystery.
+
+    User 2: What''s your favorite mystery novel?
+
+    User 1: I don''t know if I have a favorite, but I really enjoyed the Girl with the Dragon Tattoo series.
+
+    User 2: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool. I''m a programmer too.
+
+    User 1: Really? What do you do?
+
+    User 2: I work for a small company that makes software for businesses.
+
+    User 1: That sounds interesting.
+
+    User 2: It is. I like it.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the beach or go hiking.
+
+    User 1: Sounds like a good plan.
+
+    User 2: Yeah, it should be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

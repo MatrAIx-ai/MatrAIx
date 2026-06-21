@@ -1,0 +1,54 @@
+id: 00006288
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6288
+data:
+  user 1 personas: 'I recently graduated from college.
+
+    I have not had luck with finding a job.
+
+    So i started a small business.
+
+    I sell miscellaneous stuff in local fairs.
+
+    Its been doing better than i expected.'
+  user 2 personas: 'I have reached 50k subscribers !.
+
+    Recently i started a youtube channel where i share make up tutorials too.
+
+    Through them i have learned to make up myself and others.
+
+    I started taking beauty classes too.
+
+    I like to watch make up tutorials in youtube.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch make up tutorials in YouTube. I recently started a YouTube channel where I share make up tutorials too.
+
+    User 1: That''s awesome! I just graduated from college and haven''t had luck finding a job, so I started a small business. I sell miscellaneous stuff at local fairs. It''s been doing better than I expected.
+
+    User 2: That''s great! I''m glad to hear that your business is doing well. I''ve been thinking about starting my own business too, but I''m not sure what I would do.
+
+    User 1: You should do it! It''s a lot of work, but it''s also a lot of fun.
+
+    User 2: I know, I know. I''ve just been so busy with my YouTube channel and my beauty classes that I haven''t had time to think about it.
+
+    User 1: Well, you should definitely think about it. It could be a great way to make some extra money and have some fun too.
+
+    User 2: I will, I will. Thanks for the advice.
+
+    User 1: No problem. So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just going to keep doing what I''m doing and see where it takes me.
+
+    User 1: That''s the best way to do it. Just keep moving forward and you''ll eventually find your way.
+
+    User 2: Thanks for the advice. I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

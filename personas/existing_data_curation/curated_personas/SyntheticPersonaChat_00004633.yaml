@@ -1,0 +1,58 @@
+id: '00004633'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4633
+data:
+  user 1 personas: 'I have a harsh inner critic.
+
+    I do not like feeling controlled.
+
+    I do not like my reputation.
+
+    I wish i could take back a mistake.
+
+    I want to move.'
+  user 2 personas: 'My favorite food is mashed potatoes.
+
+    I like soccer.
+
+    My brother used to be in the navy.
+
+    I love game of thrones.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: I want to move to a new city.
+
+    User 2: Why?
+
+    User 1: I don''t like my reputation here.
+
+    User 2: What do you mean?
+
+    User 1: I''m always the one who makes mistakes.
+
+    User 2: Everyone makes mistakes.
+
+    User 1: But I''m always the one who gets caught.
+
+    User 2: Maybe you should try to be more careful.
+
+    User 1: I''m trying, but it''s hard.
+
+    User 2: I know it is. But you can''t let your mistakes define you.
+
+    User 1: I know, but it''s hard to not think about it.
+
+    User 2: I understand. But you have to focus on the future.
+
+    User 1: I''m trying.
+
+    User 2: Good. And if you ever need someone to talk to, I''m here for you.
+
+    User 1: Thanks.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

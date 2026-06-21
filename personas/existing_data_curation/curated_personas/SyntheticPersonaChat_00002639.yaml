@@ -1,0 +1,78 @@
+id: 00002639
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2639
+data:
+  user 1 personas: 'I was born in kansas.
+
+    I love chickens.
+
+    I work on a farm.
+
+    I know how to drive a truck.'
+  user 2 personas: 'I have lots of cash.
+
+    I am the president.
+
+    I have been bankrupt and back.
+
+    I used to own a casino.'
+  Best Generated Conversation: 'User 1: I''m from Kansas.
+
+    User 2: Me too! What city?
+
+    User 1: I was born in Wichita.
+
+    User 2: Nice! I live in Topeka.
+
+    User 1: I love chickens.
+
+    User 2: That''s cool. I''ve never had any chickens.
+
+    User 1: They''re great pets. They''re really friendly and they lay eggs.
+
+    User 2: That sounds nice. I''ll have to consider getting some.
+
+    User 1: You should! They''re a lot of fun.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work on a farm.
+
+    User 2: That''s cool. I used to own a casino.
+
+    User 1: Really? That sounds like a lot of fun.
+
+    User 2: It was, but it was also a lot of work.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, go for walks, and read.
+
+    User 2: That sounds nice. I like to go to the movies too.
+
+    User 1: I like to watch all kinds of movies, but I especially like action movies and comedies.
+
+    User 2: Me too! I like action movies and comedies too.
+
+    User 1: So, what are your favorite movies?
+
+    User 2: I like the Fast and Furious movies, the Hangover movies, and the Avengers movies.
+
+    User 1: Those are all great movies! I like them too.
+
+    User 2: Yeah, they''re so much fun to watch.
+
+    User 1: So, what do you think of Kansas?
+
+    User 2: I love Kansas. It''s a great state.
+
+    User 1: Me too! I''m glad you like it here.
+
+    User 2: Yeah, I''m glad I moved here.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

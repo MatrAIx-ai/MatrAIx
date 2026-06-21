@@ -1,0 +1,66 @@
+id: '00001735'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1735
+data:
+  user 1 personas: 'I went to college.
+
+    I live in a small town.
+
+    Driving in the country side is a pastime.
+
+    I like to go shopping.'
+  user 2 personas: 'I hope to change the world.
+
+    I work in a factory.
+
+    I volunteer in my spare time.
+
+    I m always early to everything.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a factory.
+
+    User 1: Oh, that''s interesting. Do you like it?
+
+    User 2: It''s okay. It''s not my passion, but it pays the bills.
+
+    User 1: What''s your passion?
+
+    User 2: I want to change the world.
+
+    User 1: That''s a great goal! What do you want to do to change the world?
+
+    User 2: I''m not sure yet. I''m still figuring it out.
+
+    User 1: Well, I''m sure you''ll figure it out. You seem like a smart and driven person.
+
+    User 2: Thank you! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I volunteer in my spare time.
+
+    User 1: That''s great! What kind of volunteer work do you do?
+
+    User 2: I work with a local food bank.
+
+    User 1: That''s wonderful! I''m sure it''s very rewarding.
+
+    User 2: It is. I love helping people.
+
+    User 1: I''m glad you find it rewarding.
+
+    User 2: Me too. It''s one of the things that makes life worth living.
+
+    User 1: I agree. It''s important to find something that you''re passionate about and that makes you feel good.
+
+    User 2: I agree. It''s the key to a happy life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00052144'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52144
+persona_description: A Windows system administrator who has gained administrative access to a Windows 10 computer and is skilled in exploiting vulnerabilities and configuring virtualization-based security.
+  They are familiar with the Metasploit framework and have experience with PowerShell and command-line tools. They are aware of the importance of security measures such as creating separate domain admin
+  accounts and implementing password policies.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: Windows system administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

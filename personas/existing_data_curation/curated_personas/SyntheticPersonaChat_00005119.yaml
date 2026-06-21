@@ -1,0 +1,88 @@
+id: 00005119
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5119
+data:
+  user 1 personas: 'My favorite animal is a bear.
+
+    I think beets are the best vegetable.
+
+    My favorite show is battlestar galactica.
+
+    I live on a beet farm.'
+  user 2 personas: 'My favorite animal is a zebra.
+
+    I am in preschool.
+
+    I like to dance.
+
+    I am a girl.
+
+    I like to play outside.'
+  Best Generated Conversation: 'User 1: Hello! I''m [name].
+
+    User 2: Hello! I''m [name].
+
+    User 1: What''s your favorite animal?
+
+    User 2: My favorite animal is a zebra!
+
+    User 1: Oh, cool! I love zebras too! They''re so beautiful.
+
+    User 2: I know, right? They''re also really fast.
+
+    User 1: Do you have any other favorite animals?
+
+    User 2: I also like lions and tigers.
+
+    User 1: Those are great choices! I love lions. They''re so majestic.
+
+    User 2: Me too! I also like tigers because they''re so powerful.
+
+    User 1: I can see why you like them. They''re amazing animals.
+
+    User 2: What''s your favorite vegetable?
+
+    User 1: My favorite vegetable is beets!
+
+    User 2: Beets? That''s a weird choice.
+
+    User 1: I know, right? But I love them! They''re so sweet and earthy.
+
+    User 2: I''ve never had beets before.
+
+    User 1: You should try them! They''re really good.
+
+    User 2: I''ll have to give them a try.
+
+    User 1: What''s your favorite show?
+
+    User 2: My favorite show is "The Lion Guard".
+
+    User 1: Oh, I love that show! It''s so cute.
+
+    User 2: Me too! I love Kion.
+
+    User 1: Kion is the best! He''s so brave and kind.
+
+    User 2: I know, right? He''s my favorite character.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to dance, play outside, and play with my friends.
+
+    User 1: That sounds like a lot of fun! I like to do those things too.
+
+    User 2: What''s your favorite thing to do outside?
+
+    User 1: I like to go for walks in the park.
+
+    User 2: Me too! I love seeing all the animals and plants.
+
+    User 1: I know, right? It''s so peaceful and relaxing.
+
+    User 2: It is! I love going for walks in the park.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

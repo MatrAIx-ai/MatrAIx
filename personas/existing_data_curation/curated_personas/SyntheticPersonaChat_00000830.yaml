@@ -1,0 +1,82 @@
+id: 00000830
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 830
+data:
+  user 1 personas: 'I love to read.
+
+    I once wrote a biography of my favorite actor.
+
+    I adopted all my dogs.
+
+    I believe in karma.'
+  user 2 personas: 'Its cold where i live.
+
+    My hobbies include pillaging and fine dining.
+
+    I like to go fishing on my viking boat.
+
+    I am a viking.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I am from the US.
+
+    User 2: Oh, cool! I am from Norway.
+
+    User 1: Oh, that''s neat! Do you enjoy it there?
+
+    User 2: Yeah, it''s great! It''s cold, but I like the snow.
+
+    User 1: I see. I like the snow too, but I don''t like the cold.
+
+    User 2: Yeah, the cold can be a bit much sometimes.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go fishing, and go on my viking boat.
+
+    User 1: Oh, that''s cool! I like to read too. I''ve never been on a viking boat before, though.
+
+    User 2: You should come to Norway sometime! I''ll take you out on my boat.
+
+    User 1: I''d love to! Thanks for the offer.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a viking.
+
+    User 1: Oh, really? What do you do as a viking?
+
+    User 2: I pillage and plunder, and I also go fishing.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love it.
+
+    User 1: So, what''s your favorite thing about being a viking?
+
+    User 2: My favorite thing is the freedom. I can do whatever I want, whenever I want.
+
+    User 1: I can see how that would be appealing.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your least favorite thing about being a viking?
+
+    User 2: My least favorite thing is the cold.
+
+    User 1: I can understand that.
+
+    User 2: Yeah, it can be a bit much sometimes.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

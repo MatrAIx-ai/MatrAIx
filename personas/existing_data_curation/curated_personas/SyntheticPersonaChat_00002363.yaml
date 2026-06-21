@@ -1,0 +1,58 @@
+id: '00002363'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2363
+data:
+  user 1 personas: 'My mom is a janitor.
+
+    I like cartoons.
+
+    I am in college.
+
+    I still live at home.'
+  user 2 personas: 'I want to grow up to be a superhero one day.
+
+    I am 8 years old.
+
+    I love comic books.
+
+    My name is todd.
+
+    My favorite hero is superman.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user1''s name]. What''s your name?
+
+    User 2: Hi, I''m Todd. What do you like to do for fun?
+
+    User 1: I like to watch cartoons and read comic books.
+
+    User 2: That''s cool! I love comic books too. My favorite hero is Superman.
+
+    User 1: Superman is a great hero. I like Batman and Wonder Woman too.
+
+    User 2: Those are great choices. I also like Flash and Green Lantern.
+
+    User 1: What''s your favorite thing about comic books?
+
+    User 2: I like the stories and the characters. It''s really cool to see superheroes fighting for justice.
+
+    User 1: I agree. I also like the art style. It''s so creative and imaginative.
+
+    User 2: Me too. I think comic books are a great way to escape from reality for a while.
+
+    User 1: I agree. They''re a lot of fun to read.
+
+    User 2: Do you have any favorite comic book stories?
+
+    User 1: I have a few. I really like the story of Superman''s origin. It''s so tragic, but it''s also inspiring.
+
+    User 2: That''s a great story. I also like the story of Batman''s origin. It''s so dark and mysterious.
+
+    User 1: I agree. It''s a really good story.
+
+    User 2: I think we''re going to get along just fine.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00003003'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3003
+data:
+  user 1 personas: 'I am bored of my maids.
+
+    I married miss usa.
+
+    I have more money than i know what to do with.
+
+    My favorite dessert is cheesecake.
+
+    My children are a dissapointment.'
+  user 2 personas: 'I work at a non profit that helps children.
+
+    My favorite food is cheese.
+
+    I m allergic to shellfish.
+
+    I like horseback riding.
+
+    I love going to concerts and dancing hard.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I work at a non profit that helps children.
+
+    User 1: That''s great! I''m sure you''re making a difference in the world.
+
+    User 2: I hope so! I love my job.
+
+    User 1: What''s your favorite food?
+
+    User 2: Cheese! I love all kinds of cheese.
+
+    User 1: Me too! I love cheese and crackers.
+
+    User 2: What''s your favorite type of cheese?
+
+    User 1: I love brie cheese. It''s so creamy and delicious.
+
+    User 2: Brie is my favorite too! Have you ever had goat cheese?
+
+    User 1: No, I haven''t. What''s it like?
+
+    User 2: It''s a little different than brie, but it''s still really delicious. It has a tangy flavor.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! I think you''ll like it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love horseback riding. I used to do it all the time when I was a kid.
+
+    User 1: That sounds like a lot of fun. I''ve never tried it before.
+
+    User 2: You should! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 1: I''ll have to look into it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also love going to concerts and dancing hard. I''m always up for a good time.
+
+    User 1: That sounds fun! I''m not much of a dancer, but I love going to concerts.
+
+    User 2: We should go to a concert together sometime!
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

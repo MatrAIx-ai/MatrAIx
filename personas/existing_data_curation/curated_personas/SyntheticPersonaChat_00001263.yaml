@@ -1,0 +1,62 @@
+id: '00001263'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1263
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I have two tattoos.
+
+    I have a cat named speckles.
+
+    I work in an office.'
+  user 2 personas: 'My favorite color is blue.
+
+    I enjoy home cooked meals.
+
+    My favorite tv show is game of thrones.
+
+    My favorite music genre is pop.'
+  Best Generated Conversation: 'User 1: Hi, my name is Person 1. What''s your name?
+
+    User 2: Hello, my name is Person 2.
+
+    User 1: It''s nice to meet you, Person 2. What do you do for fun?
+
+    User 2: I enjoy watching Game of Thrones, listening to pop music, and eating home cooked meals.
+
+    User 1: Those are all great things to do! What''s your favorite episode of Game of Thrones?
+
+    User 2: I can''t say I have a favorite episode, but I really enjoyed the Battle of Blackwater.
+
+    User 1: That was a great episode! I loved how Tyrion came up with the plan to burn the ships.
+
+    User 2: Me too! That was a really clever plan.
+
+    User 1: What''s your favorite pop song?
+
+    User 2: I really like "Happy" by Pharrell Williams.
+
+    User 1: That''s a great song! I love the beat.
+
+    User 2: Me too! It''s so catchy.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes.
+
+    User 1: Me too! What''s your favorite pasta dish to make?
+
+    User 2: I love making spaghetti bolognese.
+
+    User 1: That''s a good choice! I love spaghetti bolognese too.
+
+    User 2: Me too! It''s so easy to make and it''s always delicious.
+
+    User 1: I know, it''s one of my go-to meals.
+
+    User 2: Mine too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

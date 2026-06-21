@@ -1,0 +1,60 @@
+id: 00008530
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8530
+data:
+  user 1 personas: 'I worked 3 jobs at the same time for more than 5 years.
+
+    I like to go to the movies.
+
+    My favorite car is the ford mustang.
+
+    I walk more than 2 miles a day.'
+  user 2 personas: 'I m still single at the age of 35.
+
+    I teach both japanese and drawing classes.
+
+    My dog s name is wonwon.
+
+    I still have a thick accent so words like hippopotamus are difficult.
+
+    I came from japan to teach high school over 10 years ago.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1]. What''s your name?
+
+    User 2: Hello, I''m [user 2]. I''m from Japan and I came to the US over 10 years ago to teach high school.
+
+    User 1: Oh, that''s interesting. Do you like living in the US?
+
+    User 2: I do, but it''s definitely different than Japan.
+
+    User 1: I can imagine. What do you like most about the US?
+
+    User 2: I love the freedom here. I can do whatever I want and no one will tell me no.
+
+    User 1: That''s true, we have a lot of freedom here.
+
+    User 2: I also love the food here. There''s so much variety and it''s all so good.
+
+    User 1: Yes, the food here is great.
+
+    User 2: What''s your favorite thing to do in the US?
+
+    User 1: I love going to the movies. There are so many great movies to see and the theaters here are so nice.
+
+    User 2: I love the movies too! I go to the movies all the time.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is "The Shawshank Redemption." It''s such a great movie.
+
+    User 1: I''ve heard good things about that movie. I''ll have to check it out.
+
+    User 2: You should! It''s a classic.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

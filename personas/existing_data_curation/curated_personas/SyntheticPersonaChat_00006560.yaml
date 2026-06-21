@@ -1,0 +1,58 @@
+id: '00006560'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6560
+data:
+  user 1 personas: 'I am a mother of two beautiful boys.
+
+    My family and i go camping every month.
+
+    My favorite artist is justin bieber.
+
+    I love to go horseback riding whenever i can.'
+  user 2 personas: 'I am taking a year off before i start college.
+
+    I currently work at mcdonalds.
+
+    I live with my parents.
+
+    I am eighteen years old.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go camping.
+
+    User 1: That''s cool! I like to go camping too. I''ve been going camping with my family every month since I was a kid.
+
+    User 2: That''s awesome! I''ve only been camping a few times.
+
+    User 1: Where do you like to go camping?
+
+    User 2: I like to go camping in the mountains.
+
+    User 1: Me too! I love the mountains. They''re so beautiful and peaceful.
+
+    User 2: I know, right? I love hiking and fishing in the mountains.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: Me too! I don''t know why, but I just feel more free when I''m outdoors.
+
+    User 1: I know what you mean. I feel the same way.
+
+    User 2: I''m glad I''m not the only one.
+
+    User 1: Me too!
+
+    User 2: It''s nice to meet someone who shares my love of camping.
+
+    User 1: Me too! I''m sure we''ll have a lot of fun camping together.
+
+    User 2: I''m sure we will too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

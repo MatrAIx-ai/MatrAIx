@@ -1,0 +1,88 @@
+id: 00004294
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4294
+data:
+  user 1 personas: 'I broke my arm skiing once.
+
+    I am a competitive ski racer.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    My hair is a reddish brown.
+
+    My family is very supportive of my skiing.'
+  user 2 personas: 'I eat ice cream when i am sad.
+
+    I have never traveled outside of the united states.
+
+    I am a dog walker.
+
+    My best friend lives in japan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [USER 1''s name].
+
+    User 2: Hi, I''m [USER 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to walk dogs, eat ice cream, and watch anime.
+
+    User 1: That''s cool! I like to ski, watch movies, and read.
+
+    User 2: I''ve never skied before. I''m afraid of heights.
+
+    User 1: I''m afraid of heights too, but I still ski. It''s a lot of fun!
+
+    User 2: I don''t know if I could do it.
+
+    User 1: You should try it! It''s really exhilarating.
+
+    User 2: Maybe I will.
+
+    User 1: What''s your favorite anime?
+
+    User 2: My favorite anime is Fullmetal Alchemist.
+
+    User 1: That''s a great anime! I love it too.
+
+    User 2: Have you seen the movie?
+
+    User 1: No, I haven''t. Is it good?
+
+    User 2: It''s really good! You should watch it.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a dog walker. I love it!
+
+    User 1: That sounds like a fun job.
+
+    User 2: It is! I get to meet a lot of different dogs and people.
+
+    User 1: That''s awesome! I''m glad you like your job.
+
+    User 2: Thanks! I do.
+
+    User 1: So, what''s your best friend like?
+
+    User 2: My best friend is amazing! She''s always there for me, no matter what.
+
+    User 1: That''s great! I''m glad you have such a good friend.
+
+    User 2: Thanks! I am too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!
+
+    User 1: Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

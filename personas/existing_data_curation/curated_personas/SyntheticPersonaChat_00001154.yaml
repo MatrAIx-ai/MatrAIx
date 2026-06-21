@@ -1,0 +1,58 @@
+id: '00001154'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1154
+data:
+  user 1 personas: 'My car is black.
+
+    My favorite artist is 2pac.
+
+    I drive a fast car.
+
+    I like to listen to rap music.
+
+    My favorite song is california love.'
+  user 2 personas: 'I am an old soul.
+
+    I tend to work myself up.
+
+    My back hurts chronically.
+
+    I am passionate about a lot of things.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name] and I like to listen to rap music.
+
+    User 2: Hi, my name is [name] and I''m an old soul.
+
+    User 1: What do you mean by old soul?
+
+    User 2: I mean that I''m more interested in things that were popular in the past than things that are popular today.
+
+    User 1: Oh, I see. I guess I can relate to that. I really like listening to music from the 90s.
+
+    User 2: Me too! I love that era of music.
+
+    User 1: What''s your favorite song from the 90s?
+
+    User 2: I have a lot of favorite songs from the 90s, but one of my favorites is "California Love" by 2Pac.
+
+    User 1: That''s a great song! I love it too.
+
+    User 2: Me too! It''s so catchy and the beat is amazing.
+
+    User 1: What do you think of the new rap music?
+
+    User 2: I like some of it, but I think a lot of it is just too repetitive.
+
+    User 1: I agree. I think a lot of it is missing the creativity and originality of the old stuff.
+
+    User 2: Yeah, I miss that too.
+
+    User 1: Well, I''m glad we could find some common ground.
+
+    User 2: Me too. It''s always nice to meet someone who shares your interests.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

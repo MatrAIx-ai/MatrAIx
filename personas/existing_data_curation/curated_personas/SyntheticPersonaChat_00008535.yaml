@@ -1,0 +1,62 @@
+id: 00008535
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8535
+data:
+  user 1 personas: 'My favorite foods are fried chicken and chocolate cake.
+
+    I enjoy playing video games.
+
+    I am the youngest sibling in my family.
+
+    I would rather stay up late than get up early.
+
+    I am very inquisitive and enjoy learning new things.'
+  user 2 personas: 'I got a new job.
+
+    I like to travel.
+
+    I like cats.
+
+    Favorite color is green.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, play video games, and read.
+
+    User 1: Those are all great things to do! I love to travel too. Where have you been recently?
+
+    User 2: I just got back from a trip to Japan. It was amazing!
+
+    User 1: I''ve always wanted to go to Japan! What was your favorite part of the trip?
+
+    User 2: I loved the food and culture. The people were so friendly and welcoming.
+
+    User 1: That sounds amazing! I''m sure it was a great experience.
+
+    User 2: It was! I''m already planning my next trip.
+
+    User 1: Where are you thinking of going next?
+
+    User 2: I''m not sure yet. I''m thinking about going to Europe or South America.
+
+    User 1: Europe is beautiful! I''ve been to France and Italy.
+
+    User 2: I''ve always wanted to go to France! What was it like?
+
+    User 1: It was amazing! The food was incredible and the people were so friendly. I loved exploring all the different cities.
+
+    User 2: That sounds amazing! I''m definitely putting France on my list.
+
+    User 1: You should! It''s a beautiful country with so much to offer.
+
+    User 2: Thanks for the recommendation! I''m excited to start planning my trip.
+
+    User 1: You''re welcome! I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00004481
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4481
+data:
+  user 1 personas: 'I was a slave for 10 years.
+
+    I escaped and later became a carpenter.
+
+    I got married 10 years later.
+
+    I was the first born child.
+
+    My favorite color is red.'
+  user 2 personas: 'I own a bar in downtown chicago.
+
+    I smoke a pipe.
+
+    I won the spelling bee in third grade.
+
+    I ve been married five times.
+
+    I love to eat eggplant.'
+  Best Generated Conversation: 'User 1: I''m a carpenter. What do you do for a living?
+
+    User 2: I own a bar in downtown Chicago.
+
+    User 1: That sounds like a fun job! Do you enjoy it?
+
+    User 2: Yes, I do. I get to meet a lot of interesting people.
+
+    User 1: That''s great! I''m a first born child and my favorite color is red.
+
+    User 2: I''m an only child and I love the color blue.
+
+    User 1: That''s interesting! I was a slave for 10 years, but I escaped and became a carpenter.
+
+    User 2: Wow, that''s a tough story. I''m glad you were able to escape and find a better life.
+
+    User 1: Thank you. I''m happy now. I got married 10 years later.
+
+    User 2: Congratulations! I''ve been married five times.
+
+    User 1: Wow! That''s a lot of marriages.
+
+    User 2: I know, right? I''m not sure what I''m doing wrong.
+
+    User 1: Well, I''m sure you''ll find someone who''s perfect for you eventually.
+
+    User 2: Thanks for the encouragement. I hope so.
+
+    User 1: Me too. I love eggplant. Do you like it?
+
+    User 2: I love it! I eat it all the time.
+
+    User 1: That''s great! I''ve never really tried it.
+
+    User 2: You should! It''s really good.
+
+    User 1: Maybe I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,100 @@
+id: 00006845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6845
+data:
+  user 1 personas: 'My best friend lives down the street.
+
+    I have three children.
+
+    I drive a honda civic.
+
+    I enjoy taking walks.'
+  user 2 personas: 'I didn t pass the audition , but i ll keep trying.
+
+    I auditionated in a cooking show.
+
+    I took classes while growing up.
+
+    Since young i ve loved to cook.
+
+    I think i have talent for it.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a chef.
+
+    User 1: Oh, that''s cool! I love to cook.
+
+    User 2: Me too! I''ve been cooking since I was a kid.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love to cook anything, but I''m especially good at making pasta.
+
+    User 1: I love pasta too! What''s your favorite pasta dish?
+
+    User 2: I love making spaghetti with meatballs.
+
+    User 1: That''s one of my favorite dishes too! I love meatballs.
+
+    User 2: Me too! I think they''re so delicious.
+
+    User 1: Have you ever been on a cooking show?
+
+    User 2: Yes, I actually auditioned for one a few years ago.
+
+    User 1: Oh, that''s so cool! Did you get on the show?
+
+    User 2: No, I didn''t, but it was still a lot of fun.
+
+    User 1: I''m sure it was! I would love to be on a cooking show one day.
+
+    User 2: You should go for it! It''s a lot of fun.
+
+    User 1: I might just do that!
+
+    User 2: Good luck!
+
+    User 1: Thanks!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool! What grade do you teach?
+
+    User 1: I teach third grade.
+
+    User 2: That''s a fun grade to teach!
+
+    User 1: It is! I love working with kids.
+
+    User 2: I can imagine! I''m glad you enjoy your job.
+
+    User 1: Thanks! I do.
+
+    User 2: So, what are your hobbies?
+
+    User 1: I love to cook, I have three children, I drive a Honda Civic, and I enjoy taking walks.
+
+    User 2: That''s a lot of hobbies! I love to cook too, but I don''t have any kids. I drive a Toyota Corolla, and I like to go swimming.
+
+    User 1: That''s cool! I''ve never been swimming in a Toyota Corolla.
+
+    User 2: I know, it''s really hard to get in.
+
+    User 1: I bet!
+
+    User 2: So, what''s your favorite thing to cook?
+
+    User 1: I love to make pasta with meatballs.
+
+    User 2: Me too! I think they''re so delicious.
+
+    User 1: I know, right? I love meatballs.
+
+    User 2: Me too! I think they''re so delicious.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00002021'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2021
+data:
+  user 1 personas: 'I make straight as.
+
+    I am very social.
+
+    I eat healthy.
+
+    I am in the band.'
+  user 2 personas: 'My mother is a school teacher.
+
+    I worked as a clown in the circus.
+
+    I listen to country music.
+
+    I like to surf.
+
+    I am a reality tv star.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to surf, listen to country music, and be a reality TV star.
+
+    User 1: That sounds fun! I love to surf too.
+
+    User 2: Really? That''s awesome! Where do you surf?
+
+    User 1: I surf in the ocean near my house.
+
+    User 2: That sounds amazing! I wish I could surf in the ocean.
+
+    User 1: You should come over and surf with me sometime!
+
+    User 2: I would love that!
+
+    User 1: Great! We can exchange numbers and make plans.
+
+    User 2: Sounds good!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to listen to country music and be a reality TV star.
+
+    User 1: Oh, cool! I love country music too. What are some of your favorite bands?
+
+    User 2: I love George Strait, Shania Twain, and Carrie Underwood.
+
+    User 1: Those are all great artists! I love their music too.
+
+    User 2: Me too! They''re some of the best country artists ever.
+
+    User 1: So, what''s it like being a reality TV star?
+
+    User 2: It''s really fun! I get to meet a lot of interesting people and I get to travel all over the world.
+
+    User 1: That sounds amazing! I''ve always wanted to be a reality TV star.
+
+    User 2: It''s a lot of fun, but it can also be a lot of work.
+
+    User 1: I can imagine. But it sounds like it''s worth it.
+
+    User 2: It is! I love my job.
+
+    User 1: That''s great! I''m glad you''re happy with your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

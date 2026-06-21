@@ -1,0 +1,84 @@
+id: '00000611'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 611
+data:
+  user 1 personas: 'I am an orphan.
+
+    I used to fly planes for a living.
+
+    I grew up in nevada.
+
+    I now live in new mexico.'
+  user 2 personas: 'I have a small beagle dog who i call droopy.
+
+    I use third party programs to read portable documents instead of adobe.
+
+    I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I enjoy watching videos on youtube.
+
+    I enjoy eating pumpkins.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m from New Mexico. What about you?
+
+    User 2: Hi, I''m [user 2''s name]. I''m from California.
+
+    User 1: I''ve never been to California. What''s it like?
+
+    User 2: It''s a beautiful state. There''s a lot to see and do.
+
+    User 1: What''s your favorite thing to do there?
+
+    User 2: I love to go to the beach. There are some great beaches in California.
+
+    User 1: I love the beach too. I used to fly planes for a living, and I would often take my family to the beach on weekends.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It was. I''m not flying anymore, but I still love going to the beach.
+
+    User 2: I''m glad.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a software engineer too.
+
+    User 2: No way! That''s awesome.
+
+    User 1: Yeah, it is. I like it.
+
+    User 2: Me too.
+
+    User 1: So, what are some of your favorite things to do?
+
+    User 2: I love to play video games, watch YouTube videos, and eat shrimp.
+
+    User 1: I love video games too. I don''t watch YouTube videos as much as I used to, but I still love them. And I love eating shrimp too.
+
+    User 2: No way! We have so much in common.
+
+    User 1: I know, right? It''s weird.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. We should hang out.
+
+    User 2: That would be great.
+
+    User 1: We can go to the beach.
+
+    User 2: That sounds like a plan.
+
+    User 1: Great. I''ll pick you up at 10.
+
+    User 2: Perfect. See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: '00001225'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1225
+data:
+  user 1 personas: 'I am a violinist.
+
+    My mother was a nurse.
+
+    I recently discovered a new love for indian food.
+
+    I have played since i was 4 years old.
+
+    I am gong to adopt a dog very soon.'
+  user 2 personas: 'I am a vegan.
+
+    My favorite food is tacos.
+
+    I am from france.
+
+    I am studying literature.
+
+    I like to draw.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: I''m a violinist, have you ever played an instrument?
+
+    User 2: I''m not a musician at all, but I do love listening to music!
+
+    User 1: I love listening to music too. What''s your favorite genre?
+
+    User 2: I like a lot of different genres, but I think my favorite is probably rock.
+
+    User 1: I love rock too! My favorite band is Green Day.
+
+    User 2: I love Green Day too! They''re so good live.
+
+    User 1: I''ve never seen them live, but I''ve heard they''re amazing.
+
+    User 2: They really are. I''ve seen them twice and it was an amazing experience both times.
+
+    User 1: I''m so jealous! I hope I get to see them live someday.
+
+    User 2: I hope you do too! It''s a really great show.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to draw, paint, and read.
+
+    User 1: Me too! I love to draw and paint. I''m not very good at it, but it''s fun.
+
+    User 2: It doesn''t matter if you''re good or not. It''s about the process and the enjoyment of it.
+
+    User 1: I agree. I love the feeling of creating something with my own hands.
+
+    User 2: Me too! It''s so satisfying.
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read a lot of different things, but my favorite genre is probably fantasy.
+
+    User 1: I love fantasy too! I''m reading the Wheel of Time series right now.
+
+    User 2: I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will!
+
+    User 1: So, what are you doing today?
+
+    User 2: I''m just hanging out at home. I have a lot of homework to do, but I''m taking a break for a little while.
+
+    User 1: I know what you mean. I have a lot of homework to do too. I''m going to start working on it after this conversation.
+
+    User 2: Good luck! I hope you get it done.
+
+    User 1: Thanks! I hope so too.
+
+    User 2: Well, it was nice chatting with you. I have to go now, but I hope to talk to you again soon.
+
+    User 1: It was nice chatting with you too. Have a good day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

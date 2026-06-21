@@ -1,0 +1,66 @@
+id: '00003415'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3415
+data:
+  user 1 personas: 'I like to go out to eat.
+
+    I also enjoy cooking.
+
+    One of my favorite artists is drake.
+
+    I like listening to other rap music too.
+
+    A hobby of mine is the drums.'
+  user 2 personas: 'I love dogs.
+
+    I have 2 dogs as pets.
+
+    I work as a veterinarians assistant.
+
+    My mother is allergic to dogs.
+
+    I leave the dogs home when i visit my parents.'
+  Best Generated Conversation: 'User 1: I''m a big fan of Drake. Do you like his music?
+
+    User 2: I love Drake! He''s one of my favorite artists.
+
+    User 1: What''s your favorite song by him?
+
+    User 2: I''m not sure I can pick just one. I love a lot of his songs. But I''d say "Hotline Bling" is probably my favorite.
+
+    User 1: That''s a great song! I love the beat and the lyrics.
+
+    User 2: Me too! It''s so catchy.
+
+    User 1: Do you play any instruments?
+
+    User 2: Yeah, I play the drums.
+
+    User 1: That''s awesome! I''ve always wanted to learn to play the drums.
+
+    User 2: It''s really fun. You should give it a try.
+
+    User 1: Maybe I will. I''m always looking for new hobbies to pick up.
+
+    User 2: Well, if you do, I''m sure you''ll be great at it.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to go out to eat. I''m always looking for new restaurants to try.
+
+    User 2: Me too! I love trying new foods.
+
+    User 1: I''m also a big fan of cooking. I like to experiment with new recipes.
+
+    User 2: That''s awesome! I can''t cook anything besides eggs.
+
+    User 1: You should try cooking more! It''s a lot of fun.
+
+    User 2: Maybe I will. I''m always looking for new ways to challenge myself.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

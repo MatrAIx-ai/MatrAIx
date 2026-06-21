@@ -1,0 +1,64 @@
+id: '00004321'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4321
+data:
+  user 1 personas: 'I enjoy hiking on glaciers.
+
+    I recently moved to sweden.
+
+    Lutefisk is the best dish in the whole world.
+
+    I always seem to be losing things , most recently , my mind.
+
+    Marduk is my favorite band.'
+  user 2 personas: 'I have traveled overseas many times.
+
+    My mother is a well known celebrity.
+
+    I have been on the tv news six times.
+
+    I am a civil war reenactment participant.'
+  Best Generated Conversation: 'User 1: I''m new to Sweden and I''m looking for some new hiking spots. Do you know of any good ones?
+
+    User 2: Sure, I know a few. There''s a great hike in Kiruna that goes up to the top of a glacier. It''s a long hike, but the views are amazing.
+
+    User 1: That sounds amazing! I''ll have to check it out.
+
+    User 2: You should! And if you''re ever looking for someone to hike with, I''m always up for it.
+
+    User 1: Thanks! I''ll keep that in mind.
+
+    User 2: No problem. So, what do you do for a living?
+
+    User 1: I''m a civil war reenactment participant.
+
+    User 2: That''s really cool! I''ve always been interested in history, but I''ve never had the chance to participate in a reenactment.
+
+    User 1: It''s a lot of fun! I''ve been doing it for a few years now, and I always learn something new.
+
+    User 2: That''s great. What''s your favorite part of it?
+
+    User 1: I love learning about history and meeting new people. And I have to admit, I do get a kick out of dressing up in period clothing.
+
+    User 2: That sounds like a lot of fun. I''m sure you make a great reenactor.
+
+    User 1: Thanks! I''ve been told I''m pretty good.
+
+    User 2: I''m sure you are. So, what''s your favorite thing about Sweden?
+
+    User 1: I love the food! I''ve never had such good food before.
+
+    User 2: I''m glad you''re enjoying it. Sweden has some of the best food in the world.
+
+    User 1: I definitely agree. So, what''s your favorite thing about being a civil war reenactment participant?
+
+    User 2: I love the sense of community. We all have a shared love of history, and we''re always there for each other.
+
+    User 1: That sounds great. I''m glad you''re enjoying it.
+
+    User 2: I am! It''s a great hobby.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

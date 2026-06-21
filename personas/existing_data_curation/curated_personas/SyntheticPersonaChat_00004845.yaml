@@ -1,0 +1,68 @@
+id: 00004845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4845
+data:
+  user 1 personas: 'My favorite color is orange.
+
+    I have 2 cats and a dog.
+
+    I enjoy watching baseball.
+
+    I hate running.
+
+    I am married with kids.'
+  user 2 personas: 'I love disney movies.
+
+    I love to dance.
+
+    Ariel is my favorite princess.
+
+    I am in high school.
+
+    I am on a competitive dance team.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to dance and watch Disney movies.
+
+    User 1: Oh, I love dancing too! What''s your favorite dance style?
+
+    User 2: I love to do hip hop and jazz.
+
+    User 1: Me too! I also love to watch Disney movies. What''s your favorite one?
+
+    User 2: My favorite Disney movie is The Little Mermaid.
+
+    User 1: That''s a great movie! I love the songs.
+
+    User 2: Me too! My favorite song is "Under the Sea."
+
+    User 1: That''s a great song! I also like "Part of Your World."
+
+    User 2: Me too! Those are my two favorite songs from the movie.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go to the beach.
+
+    User 1: Me too! I love the beach. I live near the ocean, so I go to the beach a lot.
+
+    User 2: That''s awesome! I live in a landlocked state, so I don''t get to go to the beach as often as I''d like.
+
+    User 1: You should come visit me sometime! I''ll take you to the beach.
+
+    User 2: That would be awesome! I''d love to go to the beach.
+
+    User 1: Great! I''ll have to keep that in mind.
+
+    User 2: Thanks! I''m sure it would be a lot of fun.
+
+    User 1: I''m sure it would too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

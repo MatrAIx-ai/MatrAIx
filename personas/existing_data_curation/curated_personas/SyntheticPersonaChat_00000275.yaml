@@ -1,0 +1,64 @@
+id: '00000275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 275
+data:
+  user 1 personas: 'I have a son.
+
+    I run a small bakery.
+
+    I like going on walks.
+
+    I love to laugh.
+
+    My husband works for the government.'
+  user 2 personas: 'I enjoy walking for exercise.
+
+    I recently got a cat.
+
+    I love watching game of thrones.
+
+    I am an artist.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. I run a small bakery.
+
+    User 2: Hi, my name is [user 2]. I''m an artist.
+
+    User 1: Nice to meet you! What kind of art do you do?
+
+    User 2: I paint and sculpt.
+
+    User 1: That''s great! I love art. I used to take painting classes when I was younger.
+
+    User 2: Oh, that''s cool! What kind of things did you like to paint?
+
+    User 1: I liked to paint landscapes and nature scenes.
+
+    User 2: Those are beautiful subjects to paint.
+
+    User 1: Thanks! I also like to paint portraits.
+
+    User 2: Portraits can be so challenging, but they''re also very rewarding.
+
+    User 1: I agree! I''ve never been very good at painting people, but I always enjoy trying.
+
+    User 2: You should keep practicing! I''m sure you''ll get better.
+
+    User 1: Thanks! I will.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go on walks with my son. We also like to go hiking and camping.
+
+    User 2: That sounds like fun! I like to go on walks too. I recently got a cat, and we like to go on walks together.
+
+    User 1: Oh, that''s great! I love cats.
+
+    User 2: Me too! They''re the best.
+
+    User 1: I''m glad we met. I think we''re going to get along great.
+
+    User 2: Me too! I''m glad we met too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

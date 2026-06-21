@@ -1,0 +1,72 @@
+id: 00007083
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7083
+data:
+  user 1 personas: 'When i retire i want to open a bakery.
+
+    Sometimes i volunteer at the soup kitchen.
+
+    I like to cook.
+
+    My family owned a small restaurant.'
+  user 2 personas: 'My favorite food is strawberries.
+
+    I work in a veterinary office.
+
+    I love to go to the beach.
+
+    I have 2 cats.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a veterinary office.
+
+    User 1: Oh, that''s cool. I''ve always wanted to work with animals.
+
+    User 2: It''s a lot of fun, but it can be challenging too.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I love getting to help animals and make them feel better.
+
+    User 1: That''s so nice of you. What''s your least favorite part of the job?
+
+    User 2: Sometimes it can be sad when an animal doesn''t make it.
+
+    User 1: I know what you mean. I volunteered at a soup kitchen once and it was hard to see people who were struggling.
+
+    User 2: It''s definitely hard to see animals or people in pain.
+
+    User 1: I know. But it''s also rewarding to help them.
+
+    User 2: It is. I''m glad you volunteer at the soup kitchen.
+
+    User 1: Thanks. It''s something I really enjoy doing.
+
+    User 2: That''s great. What''s your favorite food?
+
+    User 1: I love strawberries. They''re so sweet and juicy.
+
+    User 2: Me too! I love them on their own or in a fruit salad.
+
+    User 1: I love them in a fruit salad too. They''re also good in smoothies.
+
+    User 2: I''ve never had strawberries in a smoothie. I''ll have to try that.
+
+    User 1: You should! It''s really good.
+
+    User 2: Thanks for the tip. I''ll definitely try it.
+
+    User 1: You''re welcome. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

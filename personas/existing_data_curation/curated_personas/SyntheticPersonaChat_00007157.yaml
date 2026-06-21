@@ -1,0 +1,48 @@
+id: '00007157'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7157
+data:
+  user 1 personas: 'I have sandy brown hair and green eyes.
+
+    I read sci fi space adventures with a passion.
+
+    My favorite music is two steps from hell and rock opera genre.
+
+    I eat tuna fish salad at least every day.
+
+    I cannot get enough gummy worms to satisfy my sweet tooth.'
+  user 2 personas: 'I am not a big fan of waiting in line.
+
+    My sister is becoming my mother and often asks me when i am getting married.
+
+    I still have a photo from my senior prom in my wallet.
+
+    I own five pairs of the same pants.
+
+    I often think about quitting my job and becoming a roadie for justin bieber.'
+  Best Generated Conversation: 'User 1: I love sci-fi space adventures! What are your favorite books in that genre?
+
+    User 2: I love the Vorkosigan Saga by Lois McMaster Bujold. What about you?
+
+    User 1: I''ve never heard of that series, but I''ll have to check it out! I''m a big fan of the Expanse series by James SA Corey.
+
+    User 2: I''ve heard good things about that series. I''m also a big fan of the Ender''s Game series by Orson Scott Card.
+
+    User 1: I''ve read Ender''s Game, but I haven''t read any of the sequels. I''ve heard they''re good, though.
+
+    User 2: They''re definitely worth reading! I also love the Foundation series by Isaac Asimov.
+
+    User 1: I''ve heard of that series, but I''ve never read any of them. I''ll have to check them out!
+
+    User 2: You definitely should! They''re some of the best science fiction ever written.
+
+    User 1: I''m always looking for new books to read, so I''ll definitely add them to my list!
+
+    User 2: Great! I hope you enjoy them!
+
+    User 1: Thanks, me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

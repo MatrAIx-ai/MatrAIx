@@ -1,0 +1,70 @@
+id: '00001322'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1322
+data:
+  user 1 personas: 'I like to travel.
+
+    I like cars.
+
+    I like cats.
+
+    Favorite color is green.'
+  user 2 personas: 'My favorite color is purple.
+
+    I love ballet.
+
+    I have blonde hair.
+
+    My favorite food is macaroni and cheese.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you today?
+
+    User 1: I''m doing well, thank you! How about you?
+
+    User 2: I''m doing great!
+
+    User 1: That''s good to hear! So, what do you like to do for fun?
+
+    User 2: I love to travel, ballet, and eat macaroni and cheese!
+
+    User 1: Oh, that''s cool! I love to travel and cats too!
+
+    User 2: Cats are awesome! What''s your favorite place you''ve traveled to?
+
+    User 1: I love Italy! The food is amazing, and the scenery is beautiful.
+
+    User 2: Italy sounds amazing! I''ve always wanted to go there.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I will! I''m sure I''ll love it.
+
+    User 1: So, what''s your favorite ballet?
+
+    User 2: I love Romeo and Juliet! It''s such a beautiful story.
+
+    User 1: That''s a great choice! I love that one too.
+
+    User 2: Me too! I love the music and the dancing.
+
+    User 1: Me too! It''s such a classic.
+
+    User 2: Yes, it is!
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love macaroni and cheese! It''s so delicious.
+
+    User 1: Me too! I could eat it every day.
+
+    User 2: Me too! It''s so easy to make, and it''s always so good.
+
+    User 1: Yes, it is! It''s a classic comfort food.
+
+    User 2: Yes, it is! I love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

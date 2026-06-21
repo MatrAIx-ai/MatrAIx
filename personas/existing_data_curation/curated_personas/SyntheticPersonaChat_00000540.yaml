@@ -1,0 +1,66 @@
+id: '00000540'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 540
+data:
+  user 1 personas: 'I love to sew.
+
+    I like to be alone.
+
+    I have a cat.
+
+    I wait tables at a cafe.'
+  user 2 personas: 'I graduated high school in 1986.
+
+    I hope to become a music teacher after retirement.
+
+    I play piano.
+
+    I have a ten year old son.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I''m a piano teacher.
+
+    User 1: That''s awesome! I love piano. I used to play when I was younger.
+
+    User 2: That''s great! Do you still play?
+
+    User 1: No, I haven''t in a long time. I should get back into it.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I know, right? I used to love playing piano. It was so much fun.
+
+    User 2: I''m glad you liked it. I''ve been playing for over 20 years now.
+
+    User 1: Wow, that''s impressive! Do you have any favorite pieces to play?
+
+    User 2: I have a few, but my favorite is probably Moonlight Sonata.
+
+    User 1: Oh, that''s a beautiful piece. I love the second movement.
+
+    User 2: Me too! It''s so peaceful and calming.
+
+    User 1: I agree. So, what do you like to do for fun?
+
+    User 2: I like to read, play piano, and spend time with my family.
+
+    User 1: That sounds like fun. I like to read and hang out with my friends.
+
+    User 2: It''s good to have hobbies and interests. It makes life more enjoyable.
+
+    User 1: I agree. I love learning new things and trying new things.
+
+    User 2: That''s great! It''s important to keep your mind active.
+
+    User 1: I agree. I try to stay active and engaged.
+
+    User 2: That''s great. I''m glad you''re taking care of yourself.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

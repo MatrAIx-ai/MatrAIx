@@ -1,0 +1,72 @@
+id: 00002903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2903
+data:
+  user 1 personas: 'I used to be a lawyer.
+
+    My next job will be in the federal court.
+
+    I give everybody that comes in front me a fair chance.
+
+    I m a judge in the circuit court.
+
+    My name is albert.'
+  user 2 personas: 'I am ten years old.
+
+    I take martial arts after school.
+
+    Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.'
+  Best Generated Conversation: 'User 1: Hi, I''m Albert.
+
+    User 2: Hi, I''m (child''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read Harry Potter books.
+
+    User 1: Me too! I love the Harry Potter series.
+
+    User 2: What''s your favorite book in the series?
+
+    User 1: I think my favorite book is Harry Potter and the Prisoner of Azkaban.
+
+    User 2: That''s a good one! I like the way Sirius Black is introduced in that book.
+
+    User 1: Yeah, he''s a really interesting character.
+
+    User 2: I''m also really excited about my first day of safety patrol tomorrow.
+
+    User 1: That sounds like a lot of fun! I''m sure you''ll do a great job.
+
+    User 2: Thank you! I''m a little nervous, but I''m also excited.
+
+    User 1: I know what you mean. I was nervous when I started my first job too, but it was a lot of fun.
+
+    User 2: That''s good to know. I''m sure it will be a lot of fun.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I take martial arts after school.
+
+    User 1: That''s awesome! I used to take martial arts too.
+
+    User 2: What kind of martial arts did you do?
+
+    User 1: I did karate.
+
+    User 2: That''s cool! I do tae kwon do.
+
+    User 1: That''s a good one too. I''m sure you''re really good at it.
+
+    User 2: Thank you! I''m still learning, but I''m getting better every day.
+
+    User 1: I''m sure you''ll be a black belt in no time.
+
+    User 2: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

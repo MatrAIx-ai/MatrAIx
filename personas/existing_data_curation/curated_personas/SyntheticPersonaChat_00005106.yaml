@@ -1,0 +1,76 @@
+id: '00005106'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5106
+data:
+  user 1 personas: 'My brother works at best buy.
+
+    I am canadian.
+
+    My favorite sport is soccer.
+
+    I have two cats , milo and fio.
+
+    I love video games.'
+  user 2 personas: 'I like cats.
+
+    I enjoy all things my little pony.
+
+    I like to watch anime.
+
+    I like being weird.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch anime, read manga, and play video games.
+
+    User 1: Oh, that''s cool! I like video games too. What are your favorite ones?
+
+    User 2: I like the Zelda series, the Mario series, and the Final Fantasy series.
+
+    User 1: Nice! I like the Zelda series too. What''s your favorite Zelda game?
+
+    User 2: Ocarina of Time is my favorite, but I also like Majora''s Mask and Breath of the Wild.
+
+    User 1: Those are all great games! I like Majora''s Mask too.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to watch movies, play soccer, and hang out with my friends.
+
+    User 2: Oh, that''s cool! I like to watch movies too. What are your favorite movies?
+
+    User 1: I like a lot of different kinds of movies, but I especially like comedies and action movies.
+
+    User 2: Nice! I like comedies too. What are your favorite comedies?
+
+    User 1: I like the Hangover movies, The Wedding Singer, and Anchorman.
+
+    User 2: Nice! I like those movies too.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yeah, I have two cats.
+
+    User 1: Oh, that''s cool! What are their names?
+
+    User 2: Their names are Milo and Fio.
+
+    User 1: Nice! Do you like cats?
+
+    User 2: Yeah, I love cats! They''re so cute and cuddly.
+
+    User 1: Me too! I have two cats of my own.
+
+    User 2: Oh, that''s cool! What are their names?
+
+    User 1: Their names are Mittens and Snowball.
+
+    User 2: Nice! I like those names.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

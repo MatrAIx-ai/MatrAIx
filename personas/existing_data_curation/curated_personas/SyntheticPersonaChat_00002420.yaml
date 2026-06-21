@@ -1,0 +1,60 @@
+id: '00002420'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2420
+data:
+  user 1 personas: 'I am seven years old.
+
+    And , my best friend is cayden.
+
+    I like to play soccer.
+
+    I just got my rejection letter from the gifted program.'
+  user 2 personas: 'I just graduated college.
+
+    I am hoping to play basketball overseas.
+
+    I recently had knee surgery.
+
+    I am 7 foot tall.'
+  Best Generated Conversation: 'User 1: I just got my rejection letter from the gifted program.
+
+    User 2: Oh man, I''m sorry to hear that.
+
+    User 1: Thanks. I was kind of hoping I''d get in, but I guess it''s not meant to be.
+
+    User 2: It''s okay. You''re still a smart kid, and you''ll do great things no matter what.
+
+    User 1: Thanks. I hope so.
+
+    User 2: I know you will. So, what are you going to do now?
+
+    User 1: I''m not sure. I''m thinking about joining the soccer team.
+
+    User 2: That''s a great idea! I love soccer. I used to play when I was younger.
+
+    User 1: Really? What position did you play?
+
+    User 2: I played goalkeeper. I was pretty good at it, too.
+
+    User 1: That''s awesome. I''m not sure what position I''m going to play yet. I''m still kind of new to the game.
+
+    User 2: Don''t worry, you''ll figure it out.
+
+    User 1: Thanks. I hope so.
+
+    User 2: So, when are you going to try out for the team?
+
+    User 1: I''m not sure. I''m going to talk to my parents about it first.
+
+    User 2: That''s a good idea. They''ll know what''s best for you.
+
+    User 1: I know. I''ll talk to them later today.
+
+    User 2: Good luck!
+
+    User 1: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

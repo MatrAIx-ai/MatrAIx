@@ -1,0 +1,102 @@
+id: 00001669
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1669
+data:
+  user 1 personas: 'I live in alabama.
+
+    I have blonde hair.
+
+    I am obese.
+
+    I have twelve kids.
+
+    I am 53 years old.'
+  user 2 personas: 'I work in a corner grocery store during the day.
+
+    In the evenings i watch the door at a club where they play punkrock.
+
+    I like dr pepper and black jack gum , but not together.
+
+    I draw comic books.
+
+    My favorite show is scobby doo.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Alabama.
+
+    User 1: Oh, me too! What part?
+
+    User 2: I''m from Birmingham.
+
+    User 1: No way, me too!
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, it is. It''s nice to meet someone from around here.
+
+    User 2: Same here. So, what do you do for fun?
+
+    User 1: I like to draw, paint, and read.
+
+    User 2: Oh, cool. I like to draw too. What kind of things do you draw?
+
+    User 1: I draw mostly cartoons and anime.
+
+    User 2: Nice. I draw more realistic stuff.
+
+    User 1: Oh, cool. Do you have any of your work online?
+
+    User 2: Yeah, I have a website where I post my art.
+
+    User 1: Oh, cool. Can you send me the link?
+
+    User 2: Sure. Here it is: [link]
+
+    User 1: Wow, your art is amazing! I love your style.
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to concerts, play video games, and watch movies.
+
+    User 1: Oh, cool. I like to go to concerts too. What kind of music do you like?
+
+    User 2: I like all kinds of music, but I mostly listen to punk rock.
+
+    User 1: Nice. I like punk rock too.
+
+    User 2: Cool. Do you have any favorite bands?
+
+    User 1: Yeah, I like The Ramones, The Clash, and Black Flag.
+
+    User 2: Nice. I like those bands too.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m going to a concert tonight.
+
+    User 1: Oh, cool. What band are you seeing?
+
+    User 2: I''m seeing The Ramones.
+
+    User 1: No way! I''m seeing them too!
+
+    User 2: Really? That''s awesome! We should meet up before the show.
+
+    User 1: Sure. Where are you going to be?
+
+    User 2: I''m going to be at the door at the club.
+
+    User 1: Okay, I''ll see you there.
+
+    User 2: See you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

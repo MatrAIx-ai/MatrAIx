@@ -1,0 +1,120 @@
+id: '00001722'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1722
+data:
+  user 1 personas: 'I play the violin.
+
+    I am married with 5 kids.
+
+    I met my husband when i was a freshman in college.
+
+    I am nurse.'
+  user 2 personas: 'I love to bake.
+
+    I love to ride horses.
+
+    My favorite flower is a rose.
+
+    I am from texas.
+
+    My mother is a retired teacher.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. Where are you from?
+
+    User 2: I''m from Texas.
+
+    User 1: Oh, cool! I''ve never been to Texas. What''s it like there?
+
+    User 2: It''s great! There''s a lot of space, and the people are really friendly.
+
+    User 1: That sounds nice. I''m from [user 1 location].
+
+    User 2: Oh, where is that?
+
+    User 1: It''s in [user 1 location].
+
+    User 2: Oh, I''ve never been there either. What''s it like there?
+
+    User 1: It''s pretty small, but it''s a nice place to live.
+
+    User 2: I''m sure it is.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baker.
+
+    User 1: Oh, that''s cool! I love baking. What kind of things do you like to bake?
+
+    User 2: I like to bake all kinds of things, but my favorite is probably chocolate chip cookies.
+
+    User 1: Me too! They''re so delicious.
+
+    User 2: I know, right? I could eat them all day long.
+
+    User 1: Me too.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s a good job. I''m sure you help a lot of people.
+
+    User 1: I try to.
+
+    User 2: That''s good.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to ride horses, bake, and read.
+
+    User 1: Oh, that sounds fun. I love to read too. What do you like to read?
+
+    User 2: I like to read all kinds of things, but my favorite is probably historical fiction.
+
+    User 1: Me too! I love learning about different time periods.
+
+    User 2: Me too.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon, The Pillars of the Earth by Ken Follett, and The Name of the Rose by Umberto Eco.
+
+    User 1: Those all sound great! I''ve heard good things about them.
+
+    User 2: They''re all really good. I''d definitely recommend them.
+
+    User 1: I will.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play the violin.
+
+    User 2: Oh, that''s cool! I''ve always wanted to learn to play an instrument.
+
+    User 1: It''s fun! I started playing when I was a kid.
+
+    User 2: That''s awesome.
+
+    User 1: So, what are your favorite flowers?
+
+    User 2: I love roses. They''re so pretty and fragrant.
+
+    User 1: Me too! I love the smell of roses.
+
+    User 2: Me too.
+
+    User 1: So, what''s your favorite thing about Texas?
+
+    User 2: I love the food. There''s so much good food in Texas.
+
+    User 1: I bet! I love Mexican food.
+
+    User 2: Me too! Mexican food is my favorite.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

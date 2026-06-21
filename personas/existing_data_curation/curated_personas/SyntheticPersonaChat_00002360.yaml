@@ -1,0 +1,52 @@
+id: '00002360'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2360
+data:
+  user 1 personas: 'My dad is a veteran.
+
+    I listen to all kinds of music.
+
+    I love watching funny movies.
+
+    I like to play tennis.'
+  user 2 personas: 'I teach at a large school.
+
+    My class has 26 kids.
+
+    I graduated college in 2016.
+
+    I enjoys kayaking in my free time.
+
+    I teach kindergarten.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear that about your dad. I hope he''s doing better.
+
+    User 2: Thanks. He''s doing better. He''s been in the hospital for a few weeks, but he''s coming home soon.
+
+    User 1: That''s great news!
+
+    User 2: I''m glad to hear you like all kinds of music. I''m a big fan of classic rock.
+
+    User 1: Me too! I love Led Zeppelin, Pink Floyd, and The Beatles.
+
+    User 2: Those are all great bands! I also like The Rolling Stones, The Who, and The Doors.
+
+    User 1: Nice! I like to watch funny movies too. What are some of your favorites?
+
+    User 2: I love the Monty Python movies, and I also like The Office, Parks and Recreation, and Arrested Development.
+
+    User 1: Those are all great shows! I love Monty Python too.
+
+    User 2: Me too! What kind of music do you like to play?
+
+    User 1: I mostly play rock and roll. I play guitar and sing.
+
+    User 2: That''s awesome! I love to play music too. I play piano and sing.
+
+    User 1: That''s great! We should play together sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

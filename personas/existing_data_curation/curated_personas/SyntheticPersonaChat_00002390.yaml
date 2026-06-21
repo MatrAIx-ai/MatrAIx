@@ -1,0 +1,64 @@
+id: 00002390
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2390
+data:
+  user 1 personas: 'I am a very bad liar.
+
+    I am obsessed with filming.
+
+    I love to put a smile on people s faces.
+
+    I try not to think about death.'
+  user 2 personas: 'I currently work for ibm in chicago.
+
+    My favorite band is the rolling stones.
+
+    I am almost 7 feet tall.
+
+    I am not a basketball player though.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1)! What''s your name?
+
+    User 2: Hi, I''m (user 2)!
+
+    User 1: It''s nice to meet you, (user 2)! What do you do for work?
+
+    User 2: I work for IBM in Chicago.
+
+    User 1: Wow, that''s cool! I''ve always wanted to work for IBM. What do you do there?
+
+    User 2: I''m a software engineer.
+
+    User 1: That''s awesome! I''m a film student.
+
+    User 2: Oh, cool! What do you like to film?
+
+    User 1: I like to film anything and everything. I love to tell stories with my camera.
+
+    User 2: That''s awesome! I''m sure you''re really good at it.
+
+    User 1: Thanks! I try my best.
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is the Rolling Stones.
+
+    User 2: Oh, that''s cool! I like them too.
+
+    User 1: They''re my favorite band of all time.
+
+    User 2: They''re great! I love their music.
+
+    User 1: Me too! They''re so iconic.
+
+    User 2: Yeah, they are. I''ve been a fan of them for years.
+
+    User 1: Me too! I''ve been listening to them since I was a kid.
+
+    User 2: That''s awesome!
+
+    User 1: Yeah, they''re great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00005400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5400
+data:
+  user 1 personas: 'I work for a clothes retailer.
+
+    I have one child.
+
+    I enjoy gardening.
+
+    My favorite drink is red wine.
+
+    I own two boxer dogs.'
+  user 2 personas: 'My favorite color is blue.
+
+    Cooking is my passion.
+
+    My hair is long and blonde.
+
+    I like to run.
+
+    My mother died when i was a child.'
+  Best Generated Conversation: 'User 1: Hello! What do you do for a living?
+
+    User 2: I''m a chef!
+
+    User 1: That''s cool! I love cooking. Do you have a favorite dish?
+
+    User 2: I love making pasta dishes.
+
+    User 1: Pasta is my favorite food! What''s your favorite type of pasta?
+
+    User 2: I love fettuccine Alfredo.
+
+    User 1: That''s my favorite too!
+
+    User 2: I''m glad to hear it. Do you like to cook at home?
+
+    User 1: I do, but I don''t have much time for it.
+
+    User 2: I understand. It can be hard to find time to cook.
+
+    User 1: Yeah, especially when you have a family.
+
+    User 2: I know what you mean. I have two kids of my own.
+
+    User 1: Really? That''s great! How old are they?
+
+    User 2: They''re 8 and 10.
+
+    User 1: Oh, that''s cute. What are their names?
+
+    User 2: Their names are Sarah and Jacob.
+
+    User 1: Those are beautiful names.
+
+    User 2: Thanks. I think so too.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have two boxer dogs.
+
+    User 1: Oh, that''s great! I love dogs.
+
+    User 2: Me too. They''re my best friends.
+
+    User 1: What''s their names?
+
+    User 2: Their names are Charlie and Lucy.
+
+    User 1: Those are great names.
+
+    User 2: Thanks. I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

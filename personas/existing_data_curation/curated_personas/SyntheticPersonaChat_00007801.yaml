@@ -1,0 +1,84 @@
+id: 00007801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7801
+data:
+  user 1 personas: 'I enjoy working out and learning new things.
+
+    My name is kevin.
+
+    I play the guitair.
+
+    I am a student in college.
+
+    I am studying software development.'
+  user 2 personas: 'I love to listen to music.
+
+    I love to go to the lake.
+
+    I love to knit and crochet.
+
+    I am a happy person.
+
+    I love to take walks.'
+  Best Generated Conversation: 'User 1: Hi, my name is Kevin. What''s your name?
+
+    User 2: Hi, my name is Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I love to listen to music, go to the lake, and knit and crochet.
+
+    User 1: Those are all great hobbies! I love to play guitar, work out, and learn new things.
+
+    User 2: That''s awesome! I love to learn new things too. I''m actually a student in college studying software development.
+
+    User 1: That''s great! I''m also a student in college, studying business administration.
+
+    User 2: That''s awesome! I''m sure you''ll do great things in business.
+
+    User 1: Thanks! I hope so too.
+
+    User 2: So, what do you think of the weather today?
+
+    User 1: It''s a bit chilly, but it''s not too bad.
+
+    User 2: Yeah, it''s definitely not the worst we''ve had this winter.
+
+    User 1: I know, right? I''m just glad it''s not snowing.
+
+    User 2: Me too! I''m not a big fan of snow.
+
+    User 1: Me neither. It''s so hard to get around in.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do for fun in the winter?
+
+    User 2: I like to go skiing, ice skating, and build snowmen.
+
+    User 1: Those are all great winter activities! I like to go snowboarding, sledding, and build snowmen too.
+
+    User 2: That''s awesome! I''m sure we''d have a lot of fun together in the winter.
+
+    User 1: Me too! We should hang out sometime.
+
+    User 2: I''d love that!
+
+    User 1: Great! Let''s exchange numbers.
+
+    User 2: Okay!
+
+    User 1: Here''s my number: 555-555-5555
+
+    User 2: Thanks! Here''s mine: 555-555-5556
+
+    User 1: Great! I''ll text you sometime.
+
+    User 2: Okay! I''ll talk to you later!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

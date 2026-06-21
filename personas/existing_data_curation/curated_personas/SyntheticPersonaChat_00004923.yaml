@@ -1,0 +1,66 @@
+id: 00004923
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4923
+data:
+  user 1 personas: 'I always sleep 8 hours a day.
+
+    I work as an electrician.
+
+    I go running a lot.
+
+    I love hamburgers.
+
+    I hate winter.'
+  user 2 personas: 'I like anime shows.
+
+    I had to get a job early as a child.
+
+    I am a meat eater.
+
+    My mother passed away in 1979.'
+  Best Generated Conversation: 'User 1: I''m an electrician.
+
+    User 2: Oh, cool! What''s that like?
+
+    User 1: It''s pretty good. I get to work with my hands and I''m always learning new things.
+
+    User 2: That sounds interesting. I''m not sure what I want to do when I grow up.
+
+    User 1: Well, you could always be an electrician!
+
+    User 2: I don''t know if I''m good enough at math.
+
+    User 1: You don''t need to be a math genius to be an electrician. You just need to be able to add, subtract, multiply, and divide.
+
+    User 2: I think I can do that.
+
+    User 1: Great! Then you could always give it a try.
+
+    User 2: Thanks for the advice. I''ll think about it.
+
+    User 1: No problem.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go running.
+
+    User 2: Really? That''s awesome. I used to love running, but I haven''t been able to do it much lately.
+
+    User 1: Why not?
+
+    User 2: I just don''t have the time. I have a lot of other things going on.
+
+    User 1: I know what you mean. I used to have the same problem. But then I realized that I needed to make time for running. It''s important to me.
+
+    User 2: I think you''re right. I should make time for running again.
+
+    User 1: Good! It''s a great way to stay in shape and de-stress.
+
+    User 2: Thanks for the advice. I''ll start going running again.
+
+    User 1: No problem. I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

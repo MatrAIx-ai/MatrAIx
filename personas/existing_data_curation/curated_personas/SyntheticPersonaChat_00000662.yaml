@@ -1,0 +1,74 @@
+id: '00000662'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 662
+data:
+  user 1 personas: 'I have one son.
+
+    I like to go swimming.
+
+    I like to read.
+
+    My parents are not married anymore.
+
+    I have epilepsy.'
+  user 2 personas: 'I have a 3 year old.
+
+    I go to church on sunday.
+
+    I am a 1st grade teacher.
+
+    My favorite color is purple.
+
+    My father is a preacher.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go swimming, read, and watch movies.
+
+    User 1: Me too! I love to swim, and I''m a big reader.
+
+    User 2: Oh, what do you like to read?
+
+    User 1: I like to read a lot of different things, but I''m really into historical fiction right now.
+
+    User 2: Me too! I love learning about different time periods.
+
+    User 1: What''s your favorite historical period?
+
+    User 2: I''m really interested in the Victorian era.
+
+    User 1: Oh, that''s a great period. I love the clothes and the culture.
+
+    User 2: Me too! I love the way people dressed and the way they lived.
+
+    User 1: What''s your favorite book from the Victorian era?
+
+    User 2: I''m not sure, I have so many favorites.
+
+    User 1: Me too! I could spend hours reading Victorian novels.
+
+    User 2: Me too! I love the way they capture the atmosphere of the time.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a first grade teacher.
+
+    User 1: Oh, that''s so cool! I''ve always wanted to be a teacher.
+
+    User 2: It''s really rewarding. I love working with kids.
+
+    User 1: I bet you do! I''m sure they''re all really great.
+
+    User 2: They are! I love getting to see them learn and grow.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

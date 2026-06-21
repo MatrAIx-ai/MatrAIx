@@ -1,0 +1,62 @@
+id: 00008746
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8746
+data:
+  user 1 personas: 'I am about to go off to college at a very liberal school soon.
+
+    I have lived a very sheltered life.
+
+    I am 17.
+
+    I plan to raise hell and sew my wild oats.
+
+    I go to a catholic high school in new england.'
+  user 2 personas: 'The future scares me.
+
+    My mom stays at home.
+
+    I was adopted when i was a baby.
+
+    My adopted dad works at hp.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]. I''m 17 and I''m about to go off to college.
+
+    User 2: Hi, I''m [user 2''s name]. I''m 17 too and I''m also about to go off to college.
+
+    User 1: What college are you going to?
+
+    User 2: I''m going to [college name].
+
+    User 1: Oh, that''s cool. I''m going to [college name].
+
+    User 2: That''s great! We should be roommates.
+
+    User 1: That''s a good idea. I''m sure we''ll have a lot of fun together.
+
+    User 2: I''m sure we will. I''m excited to get to know you better.
+
+    User 1: Me too.
+
+    User 2: What do you plan to study in college?
+
+    User 1: I''m not sure yet. I''m thinking about majoring in psychology.
+
+    User 2: That sounds interesting. I''m thinking about majoring in business.
+
+    User 1: That''s also a good choice.
+
+    User 2: Thanks.
+
+    User 1: So, what are you scared about about the future?
+
+    User 2: I''m scared about getting a good job and making enough money to support myself.
+
+    User 1: I''m sure you''ll be fine. You''re smart and you''re hard-working.
+
+    User 2: Thanks. I hope you''re right.
+
+    User 1: I am right. You''re going to do great things.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

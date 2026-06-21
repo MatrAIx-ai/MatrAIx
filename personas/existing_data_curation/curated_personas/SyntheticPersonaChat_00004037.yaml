@@ -1,0 +1,80 @@
+id: '00004037'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4037
+data:
+  user 1 personas: 'I like to play volleyball.
+
+    I like to do my nails.
+
+    I like to pickle eggs.
+
+    I like to go on long hikes.
+
+    I like to come up with new hairstyles.'
+  user 2 personas: 'I play football.
+
+    I am in college.
+
+    I exercise.
+
+    I am very social.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (user 1''s name).
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play football, exercise, and be social.
+
+    User 1: Nice! I like to play volleyball, hike, and do my nails.
+
+    User 2: I''ve never played volleyball before, but it sounds fun.
+
+    User 1: It is! It''s a great workout, and it''s a lot of fun.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! So, what''s your favorite team?
+
+    User 2: My favorite team is the Pittsburgh Steelers.
+
+    User 1: Oh, cool! I''m a big fan of the Dallas Cowboys.
+
+    User 2: We''re rivals!
+
+    User 1: We are! But I''m sure we can still be friends.
+
+    User 2: Of course! We can still be friends, even though we don''t like the same team.
+
+    User 1: Great! So, what do you like to do when you''re not playing sports?
+
+    User 2: I like to exercise, go out with my friends, and watch movies.
+
+    User 1: I like to do those things too! I also like to read, do my nails, and play video games.
+
+    User 2: I''ve never been much of a reader, but I do like to do my nails and play video games.
+
+    User 1: That''s cool! I love reading, but I''m not very good at video games.
+
+    User 2: We can always learn together!
+
+    User 1: That''s a great idea! I''m always up for learning new things.
+
+    User 2: Me too! So, what do you think we should do for our next date?
+
+    User 1: I think we should go hiking.
+
+    User 2: That sounds like a great idea! I love hiking.
+
+    User 1: Me too! I know a great hiking trail near here.
+
+    User 2: That sounds perfect! I''ll bring the snacks.
+
+    User 1: Great! I''ll bring the drinks.
+
+    User 2: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

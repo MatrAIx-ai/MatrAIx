@@ -1,0 +1,72 @@
+id: '00007545'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7545
+data:
+  user 1 personas: 'My favorite book is anne of green gables.
+
+    I have always wanted a pot bellied pig.
+
+    I won a beauty pageant one time but didn t feel like it was worth the effort.
+
+    I love owning nice office supplies.
+
+    My mom teaches kindergarten and my dad is a tax assessor.'
+  user 2 personas: 'I spend time signing a lot of petitions and donate to animal rights groups.
+
+    I am a vegan.
+
+    I volunteer walking dogs twice a week.
+
+    I love animals.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, my name is [User 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What are you interested in?
+
+    User 2: I''m interested in animals.
+
+    User 1: Oh, that''s great! I love animals too.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I don''t know if I have a favorite animal, but I really like dogs.
+
+    User 2: Me too! I have a dog named Max.
+
+    User 1: Oh, that''s great! I love dogs.
+
+    User 2: What do you like about dogs?
+
+    User 1: I like their loyalty and how they''re always happy to see you.
+
+    User 2: Me too! They''re the best.
+
+    User 1: What are some things you do to support animal rights?
+
+    User 2: I sign a lot of petitions and donate to animal rights groups.
+
+    User 1: That''s great! I do the same thing.
+
+    User 2: I''m also a vegan.
+
+    User 1: Oh, that''s interesting. I''ve been thinking about going vegan myself.
+
+    User 2: I would recommend it! It''s a great way to support animals.
+
+    User 1: I''ll have to look into it.
+
+    User 2: You should! It''s really easy to do.
+
+    User 1: Thanks for the advice!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

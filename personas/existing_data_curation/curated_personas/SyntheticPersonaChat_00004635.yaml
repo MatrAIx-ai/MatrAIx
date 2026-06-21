@@ -1,0 +1,86 @@
+id: '00004635'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4635
+data:
+  user 1 personas: 'I have a horse named beauty.
+
+    My father is a preacher.
+
+    I am pregnant with my first child.
+
+    I live in a house in the country.'
+  user 2 personas: 'I love to chat with my friends.
+
+    I like to cook.
+
+    I love kids and dogs.
+
+    I am a foodie.
+
+    I like to go shopping with my daughters.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to chat with my friends, cook, and go shopping.
+
+    User 1: That sounds fun! I love to cook too. What''s your favorite thing to make?
+
+    User 2: I love to make pasta dishes. I''m really good at making lasagna.
+
+    User 1: Lasagna is my favorite! I love how cheesy it is.
+
+    User 2: Me too! I also love making chicken dishes.
+
+    User 1: I''m not a big fan of chicken, but I do like chicken parmesan.
+
+    User 2: Chicken parmesan is really good! I also love making chicken wings.
+
+    User 1: I like chicken wings, but I don''t like them too spicy.
+
+    User 2: I like them spicy, but I know not everyone does.
+
+    User 1: Yeah, I''m not a big fan of spicy food.
+
+    User 2: Me neither. I like to have a little bit of spice, but not too much.
+
+    User 1: Me too.
+
+    User 2: So, what are you up to today?
+
+    User 1: I''m just hanging out. I''m pregnant with my first child, so I''m trying to relax as much as possible.
+
+    User 2: Congratulations! That''s so exciting!
+
+    User 1: Thanks! It is exciting. I''m a little bit nervous, but I''m also really excited.
+
+    User 2: I''m sure you''re going to be a great mom.
+
+    User 1: I hope so!
+
+    User 2: I''m sure you will be. You seem like a very caring and loving person.
+
+    User 1: Thanks. I try to be.
+
+    User 2: So, when are you due?
+
+    User 1: I''m due in March.
+
+    User 2: That''s not too long!
+
+    User 1: I know! It''s coming up fast.
+
+    User 2: Are you ready for it?
+
+    User 1: I think so. I''m getting everything ready.
+
+    User 2: That''s good. I''m sure you''re going to be a great mom.
+
+    User 1: Thanks! I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

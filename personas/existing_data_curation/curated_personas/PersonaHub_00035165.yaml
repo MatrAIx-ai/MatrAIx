@@ -1,0 +1,19 @@
+id: '00035165'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35165
+persona_description: A researcher or scientist who is interested in the field of neuroscience and has expertise in neuroimaging techniques like high-density EEG, ERP, ICA, and gaze tracking. They are particularly
+  interested in the cognitive processing that occurs under ecologically valid conditions and have a deep understanding of the limitations of traditional EEG recordings. They are looking for ways to overcome
+  these limitations by combining computer games with high-density EEG and gaze tracking, and they are skilled in computational neuroscience and data analysis. They are also interested in the distribution
+  of directions of microsaccades and how they correlate with the (otherwise) covert direction of attention.
+expertise:
+  general_domain_top1pct: neuroscience
+  specific_domain_top1pct: neuroimaging techniques
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

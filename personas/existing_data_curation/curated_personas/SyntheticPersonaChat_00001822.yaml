@@ -1,0 +1,76 @@
+id: 00001822
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1822
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I speak fluent german.
+
+    My mom and dad are both red headed.
+
+    I tell bad jokes on purpose.'
+  user 2 personas: 'I live with a roommate.
+
+    I do not like beer.
+
+    I work part time.
+
+    My favorite animal is the koala.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: Where are you from?
+
+    User 2: I''m from Michigan.
+
+    User 1: Me too! What part?
+
+    User 2: I live in Lansing.
+
+    User 1: Oh, I''m from Detroit.
+
+    User 2: Cool. What do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool. I work part-time as a barista.
+
+    User 1: Nice. Do you like it?
+
+    User 2: Yeah, it''s fun.
+
+    User 1: What''s your favorite animal?
+
+    User 2: Koalas.
+
+    User 1: Koalas! That''s a weird choice.
+
+    User 2: I know, right? But they''re so cute and cuddly.
+
+    User 1: I guess.
+
+    User 2: Do you like beer?
+
+    User 1: No, I don''t.
+
+    User 2: Oh, really? Why not?
+
+    User 1: I just don''t like the taste.
+
+    User 2: Fair enough.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go hiking, swimming, and reading.
+
+    User 1: Oh, that''s nice. I like to do those things too.
+
+    User 2: Cool. Maybe we can do something together sometime.
+
+    User 1: Yeah, that would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

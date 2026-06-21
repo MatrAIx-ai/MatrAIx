@@ -1,0 +1,68 @@
+id: '00003140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3140
+data:
+  user 1 personas: 'I like to work puzzles.
+
+    I am a teacher.
+
+    I love country music.
+
+    My dad worked for home depot.
+
+    I am an aspiring fiction writer.'
+  user 2 personas: 'My mother works at a bank.
+
+    I speak fluent french.
+
+    I ve never met my father.
+
+    My favorite food is mushroom ravioli.'
+  Best Generated Conversation: 'User 1: What kind of music do you like?
+
+    User 2: I like country music.
+
+    User 1: Really? I love country music too! What are some of your favorite artists?
+
+    User 2: I like Luke Bryan, Eric Church, and Carrie Underwood.
+
+    User 1: Nice! I like Luke Bryan and Eric Church too. I''m not a big fan of Carrie Underwood, but I can respect her talent.
+
+    User 2: Yeah, she''s really good. What do you like to do for fun?
+
+    User 1: I like to work puzzles, read, and write. I''m also a teacher.
+
+    User 2: Oh, that''s cool! I like to read and write too. I''m not a teacher, but I work at a bank.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is To Kill a Mockingbird.
+
+    User 1: That''s a great book! I''ve read it a few times. What''s your favorite thing about it?
+
+    User 2: I love the way it shows the importance of empathy and understanding.
+
+    User 1: Yeah, that''s a great message. What''s your favorite thing to write about?
+
+    User 2: I like to write about my experiences and observations.
+
+    User 1: That sounds really interesting. I''m an aspiring fiction writer, so I like to write about imaginary worlds and characters.
+
+    User 2: That''s cool! I''ve never tried writing fiction, but it sounds like it could be fun.
+
+    User 1: It is! It''s a lot of work, but it''s also very rewarding.
+
+    User 2: Yeah, I can see that. I''m always impressed by people who can write well.
+
+    User 1: Thanks! It''s something I''ve always been passionate about.
+
+    User 2: That''s great! I''m glad you''ve found something you love to do.
+
+    User 1: Me too! I''m really lucky to be a teacher and a writer.
+
+    User 2: That''s wonderful! I''m sure you''re a great teacher.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

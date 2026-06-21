@@ -1,0 +1,84 @@
+id: '00000654'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 654
+data:
+  user 1 personas: 'I have a beard.
+
+    I drive a truck.
+
+    I live on a farm.
+
+    I like rap music.'
+  user 2 personas: 'I have big face cheeks.
+
+    I like reading.
+
+    I m smart too.
+
+    I am also round.
+
+    I am short.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much. Just reading a book.
+
+    User 1: What are you reading?
+
+    User 2: It''s a book about rap music.
+
+    User 1: Oh, that''s cool. I like rap music too.
+
+    User 2: Me too. It''s so good.
+
+    User 1: What''s your favorite rap song?
+
+    User 2: It''s hard to choose just one, but I''d say "The Message" by Grandmaster Flash and the Furious Five.
+
+    User 1: That''s a great song. I love the beat.
+
+    User 2: Me too. It''s so catchy.
+
+    User 1: Do you like any other genres of music?
+
+    User 2: I like a little bit of everything, but I mostly listen to rap and hip-hop.
+
+    User 1: Me too. I think rap is the best music.
+
+    User 2: I agree. It''s so expressive and powerful.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: Me too! I love to read and play video games.
+
+    User 2: What are your favorite video games?
+
+    User 1: I like a lot of different games, but I really like the Zelda series.
+
+    User 2: Oh, I love Zelda too! It''s so good.
+
+    User 1: Me too. It''s my favorite game series.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a farmer. I live on a farm with my family.
+
+    User 2: That''s cool. I''ve always wanted to live on a farm.
+
+    User 1: It''s a lot of work, but it''s also really rewarding.
+
+    User 2: I bet it is. I love animals.
+
+    User 1: We have a lot of animals on our farm. We have cows, pigs, chickens, and ducks.
+
+    User 2: That''s so cool. I''ve always wanted to have a farm of my own.
+
+    User 1: You should do it! It''s a lot of work, but it''s also really rewarding.
+
+    User 2: I might just do that. Thanks for the inspiration.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

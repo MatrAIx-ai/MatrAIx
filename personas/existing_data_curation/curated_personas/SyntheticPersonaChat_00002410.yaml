@@ -1,0 +1,82 @@
+id: '00002410'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2410
+data:
+  user 1 personas: 'I am highly educated.
+
+    My father used to be a butcher.
+
+    My only friend is a dog.
+
+    I am a carnivore.
+
+    I work at a newspaper.'
+  user 2 personas: 'I like lizards.
+
+    I wish i could live in a fantasy world.
+
+    I draw during classes instead of taking notes.
+
+    I don t have many friends.
+
+    I have long hair for a boy.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you do for fun?
+
+    User 2: I like to draw, I wish I could live in a fantasy world and I like lizards.
+
+    User 1: That''s cool, I like to read and I wish I could go back in time.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read fantasy novels and historical fiction.
+
+    User 2: Me too! I love fantasy novels, I have a lot of dragons in my drawings.
+
+    User 1: That''s cool, I like dragons too.
+
+    User 2: What''s your favorite dragon?
+
+    User 1: I like Smaug from The Hobbit.
+
+    User 2: Me too! He''s my favorite dragon.
+
+    User 1: What do you like about him?
+
+    User 2: I like that he''s so powerful and he''s not afraid to fight for what he wants.
+
+    User 1: Yeah, he''s a really cool dragon.
+
+    User 2: Yeah, he''s my favorite.
+
+    User 1: What''s your favorite historical fiction?
+
+    User 2: I like The Pillars of the Earth by Ken Follett.
+
+    User 1: That''s a great book! I really enjoyed it.
+
+    User 2: Me too! It''s so well written.
+
+    User 1: Yeah, it is.
+
+    User 2: What''s your favorite part?
+
+    User 1: I like the part where the cathedral is built.
+
+    User 2: Me too! It''s so amazing how they built it.
+
+    User 1: Yeah, it is.
+
+    User 2: I like that they had to use water to build it.
+
+    User 1: Yeah, that''s really cool.
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

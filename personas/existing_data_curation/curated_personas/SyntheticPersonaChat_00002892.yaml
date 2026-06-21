@@ -1,0 +1,50 @@
+id: 00002892
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2892
+data:
+  user 1 personas: 'I moved far from home.
+
+    I am skilled in computer repair.
+
+    My family owns a farm.
+
+    I like to eat meat.'
+  user 2 personas: 'I am a middle aged woman.
+
+    I love to listen to religious music.
+
+    I don t talk a lot.
+
+    I like playing basketball.
+
+    I love my family.'
+  Best Generated Conversation: 'User 1: Hey! I''m new in town. What''s there to do around here?
+
+    User 2: There''s a lot to do! We have a great theater, a beautiful park, and a lot of great restaurants.
+
+    User 1: That sounds great! I love to go to the theater. Do you have any recommendations?
+
+    User 2: I''d recommend checking out the Playhouse. They have a great selection of shows, and they''re always putting on new ones.
+
+    User 1: Awesome! Thanks for the tip. I''ll definitely check it out.
+
+    User 2: No problem! If you''re looking for something to do on the weekend, there''s a big basketball game happening at the local arena.
+
+    User 1: I''m not really a sports person, but I might check it out anyway.
+
+    User 2: The park is a great place to relax and enjoy the outdoors. There''s a lot of hiking trails, and you can also go swimming in the lake.
+
+    User 1: That sounds like a great idea! I love to hike and swim.
+
+    User 2: If you''re looking for a place to eat, there''s a great restaurant called The Barn. They have amazing food, and the atmosphere is really cozy.
+
+    User 1: I love cozy restaurants! I''ll have to check it out.
+
+    User 2: No problem! I hope you enjoy your time in town!
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

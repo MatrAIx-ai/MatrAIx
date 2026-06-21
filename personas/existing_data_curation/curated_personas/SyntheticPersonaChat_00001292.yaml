@@ -1,0 +1,82 @@
+id: 00001292
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1292
+data:
+  user 1 personas: 'I have blue eyes.
+
+    My favorite season is spring.
+
+    I love fishing.
+
+    I hate to lose.
+
+    My father died when i was 2.'
+  user 2 personas: 'I am going to school for writing.
+
+    My mother is a librarian.
+
+    I often help her sort books in the library.
+
+    I would like to be a journalist one day.
+
+    I love to read fantasy novels and poetry.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, I''m [name].
+
+    User 1: What''s your favorite season?
+
+    User 2: Spring! The weather is nice and the flowers are blooming.
+
+    User 1: I love spring too! It''s my favorite time of year.
+
+    User 2: Me too! Do you like to do anything special in the spring?
+
+    User 1: I love to go fishing. The fish are biting and the weather is perfect for it.
+
+    User 2: That sounds like a lot of fun! I''ve never been fishing before.
+
+    User 1: You should try it! It''s really relaxing and you can get some fresh air.
+
+    User 2: I might have to give it a try.
+
+    User 1: You''d love it! So, what do you like to do for fun?
+
+    User 2: I love to read. I''m going to school for writing and I love to read all different kinds of books.
+
+    User 1: That''s awesome! I love to read too. What''s your favorite book?
+
+    User 2: I have a lot of favorites, but I think I''d have to say The Lord of the Rings.
+
+    User 1: That''s one of my favorites too! I love the world building and the characters.
+
+    User 2: Me too! It''s so immersive and I love the way the story unfolds.
+
+    User 1: I agree! It''s one of those books that I can read over and over again and never get bored.
+
+    User 2: Me too! It''s so good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to spend time with my family and friends. We go on hikes, play games, and just hang out.
+
+    User 1: That sounds like a lot of fun! I love spending time with my family and friends too.
+
+    User 2: Me too! It''s the best.
+
+    User 1: So, what do you want to do for the rest of the day?
+
+    User 2: I''m not sure. What do you want to do?
+
+    User 1: I don''t know. We could go for a walk in the park, watch a movie, or just hang out.
+
+    User 2: We could go for a walk in the park. It''s a beautiful day outside.
+
+    User 1: That sounds like a plan. Let''s go.
+
+    User 2: Okay.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

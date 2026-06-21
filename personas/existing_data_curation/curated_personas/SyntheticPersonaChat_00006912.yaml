@@ -1,0 +1,64 @@
+id: 00006912
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6912
+data:
+  user 1 personas: 'I am currently looking for employment.
+
+    I can speak three languages english , french and spanish.
+
+    I am a mother of two.'
+  user 2 personas: 'I am an only child.
+
+    I work at an accounting firm.
+
+    I do not believe in love.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for work?
+
+    User 2: I work at an accounting firm.
+
+    User 1: Oh, cool! What''s that like?
+
+    User 2: It''s pretty interesting. I get to work with numbers all day, and I get to help people make financial decisions.
+
+    User 1: That sounds like a great job. I''m currently looking for employment.
+
+    User 2: Oh, what kind of job are you looking for?
+
+    User 1: I''m not really sure. I''m open to anything, really.
+
+    User 2: Well, if you''re interested in accounting, I could always put in a good word for you.
+
+    User 1: That would be great! Thank you so much.
+
+    User 2: No problem! So, what do you do for fun?
+
+    User 1: I like to spend time with my kids. We go to the park a lot, and we like to play games together.
+
+    User 2: That sounds like a lot of fun. I''m an only child, so I never really got to do that.
+
+    User 1: Oh, that''s too bad. It''s really great to have siblings.
+
+    User 2: I guess so. I''ve always been a bit of a loner, so it''s never really bothered me.
+
+    User 1: Well, I''m glad you''re happy.
+
+    User 2: Thanks! I am.
+
+    User 1: So, what do you think of love?
+
+    User 2: I don''t believe in it.
+
+    User 1: Why not?
+
+    User 2: Because I think it''s a waste of time.
+
+    User 1: Well, I think it''s a beautiful thing.
+
+    User 2: You''re entitled to your opinion.
+
+    User 1: And you''re entitled to yours.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

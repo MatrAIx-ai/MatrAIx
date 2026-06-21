@@ -1,0 +1,82 @@
+id: '00006404'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6404
+data:
+  user 1 personas: 'I have 3 ferrari cars in my garage.
+
+    My father was a famous actor.
+
+    I don t like acting.
+
+    I don t like kids.'
+  user 2 personas: 'I read fantasy fiction novels.
+
+    I am a mother.
+
+    I enjoy shopping online.
+
+    I used to work for monsanto.
+
+    I enjoy swimming.'
+  Best Generated Conversation: 'User 1: I''m reading a fantasy fiction novel right now. What are you reading?
+
+    User 2: I''m reading a book about the history of Monsanto.
+
+    User 1: What do you think of it?
+
+    User 2: It''s interesting, but it''s also a bit depressing.
+
+    User 1: Why is that?
+
+    User 2: Because Monsanto has done a lot of bad things.
+
+    User 1: Like what?
+
+    User 2: They''ve been accused of poisoning people with their pesticides, and they''ve also been accused of suing farmers who''ve saved their own seeds.
+
+    User 1: That''s awful.
+
+    User 2: Yeah, it''s really sad.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, go shopping, and read.
+
+    User 1: I like to swim too! What''s your favorite stroke?
+
+    User 2: I like the butterfly stroke. It''s the most challenging, but it''s also the most rewarding.
+
+    User 1: I''ve never tried the butterfly stroke. I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: That sounds like a lot of work.
+
+    User 2: It is, but it''s also really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you do when you''re not working?
+
+    User 2: I like to spend time with my kids, go shopping, and read.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read fantasy fiction novels.
+
+    User 1: That''s great! I like to read those too.
+
+    User 2: We should exchange book recommendations sometime.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

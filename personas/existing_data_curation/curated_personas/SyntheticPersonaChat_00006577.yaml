@@ -1,0 +1,72 @@
+id: '00006577'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6577
+data:
+  user 1 personas: 'I am still living at home at age 30.
+
+    I am colorblind.
+
+    I am a volunteer firefighter.
+
+    I have a college degree in marketing.
+
+    I am currently trying to open my own grocery store.'
+  user 2 personas: 'I always have a beer after work.
+
+    I drive a lifted chevy truck.
+
+    My favorite food is steak cooked well done.
+
+    I played football in high school.
+
+    I am a roofer.'
+  Best Generated Conversation: 'User 1: Hey what''s up?
+
+    User 2: Not much. Just got home from work.
+
+    User 1: Oh nice. What do you do for work?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh cool. How long have you been doing that?
+
+    User 2: About 3 years now.
+
+    User 1: Wow, that''s awesome. I always thought being a roofer would be really hard work.
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: Yeah, I can imagine. So, what do you do for fun?
+
+    User 2: Well, I like to play video games, watch football, and go out with my friends.
+
+    User 1: Oh nice. I love video games too. What games do you play?
+
+    User 2: I play a lot of different games, but my favorite is probably Call of Duty.
+
+    User 1: Oh nice. I used to play that game a lot.
+
+    User 2: Yeah, it''s a lot of fun. So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m not sure either. We should hang out and do something together.
+
+    User 1: That sounds like fun. What do you want to do?
+
+    User 2: We could go to the movies, or we could go to a bar.
+
+    User 1: I''m not really feeling like going to the movies. How about we go to a bar?
+
+    User 2: That sounds good. There''s a new bar in town that I''ve been wanting to check out.
+
+    User 1: Oh nice. Let''s go there.
+
+    User 2: Sounds good. I''ll meet you there at 7:00.
+
+    User 1: Sounds good. See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

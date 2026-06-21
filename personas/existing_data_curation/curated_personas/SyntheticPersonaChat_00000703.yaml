@@ -1,0 +1,82 @@
+id: '00000703'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 703
+data:
+  user 1 personas: 'I like to hike.
+
+    I have a golden retriever.
+
+    I write fiction for fun.
+
+    My mother is dead.'
+  user 2 personas: 'I love rpg computer games.
+
+    I have a crush on my co worker.
+
+    I play tabletop games with friends.
+
+    I still live at home.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play video games, especially RPGs.
+
+    User 1: I''ve never really been into video games, but I''ve heard good things about RPGs.
+
+    User 2: Yeah, they''re a lot of fun. You should check out some of the classics like Final Fantasy VII or The Witcher 3.
+
+    User 1: I''ll have to do that. What else do you like to do for fun?
+
+    User 2: I also like to play tabletop games with my friends. We''ve been playing Dungeons and Dragons for years.
+
+    User 1: That sounds fun. I''ve never played Dungeons and Dragons, but I''ve heard it''s a lot of fun.
+
+    User 2: It is! It''s a great way to meet new people and have some fun.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a teacher.
+
+    User 2: That''s awesome! I''ve always wanted to be a teacher.
+
+    User 1: It''s a lot of fun. I get to help kids learn new things and grow as people.
+
+    User 2: That sounds great. I''m sure you''re a great teacher.
+
+    User 1: Thank you! I try my best.
+
+    User 2: So, what''s your favorite type of music?
+
+    User 1: I like all kinds of music, but my favorite is probably indie rock.
+
+    User 2: Me too! I love indie rock.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is The Shins.
+
+    User 1: I love The Shins! They''re so good.
+
+    User 2: I know, right? They''re my favorite band of all time.
+
+    User 1: Me too! I''m glad we have the same taste in music.
+
+    User 2: Me too! It''s always nice to find someone who likes the same music as you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

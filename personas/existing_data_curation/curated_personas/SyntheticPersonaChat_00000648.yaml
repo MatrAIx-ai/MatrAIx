@@ -1,0 +1,70 @@
+id: 00000648
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 648
+data:
+  user 1 personas: 'I hate running.
+
+    I enjoy watching baseball.
+
+    My favorite color is orange.
+
+    I have 2 cats and a dog.'
+  user 2 personas: 'I am a couch potato.
+
+    I love the walking dead.
+
+    I do not have a job.
+
+    I love comics.
+
+    I eat junk food.'
+  Best Generated Conversation: 'User 1: I hate running.
+
+    User 2: I am a couch potato.
+
+    User 1: What do you like to do?
+
+    User 2: I watch the walking dead.
+
+    User 1: That''s a good show! I like it too.
+
+    User 2: I love comics.
+
+    User 1: Me too! I have a huge collection.
+
+    User 2: I also eat junk food.
+
+    User 1: I do too! I love chocolate.
+
+    User 2: I love pizza.
+
+    User 1: Me too! I love pizza with pineapple.
+
+    User 2: I don''t like pineapple on my pizza.
+
+    User 1: That''s okay. I like it!
+
+    User 2: I don''t have a job.
+
+    User 1: Why not?
+
+    User 2: I''m a couch potato.
+
+    User 1: I''m not sure what that means.
+
+    User 2: It means I stay home all the time.
+
+    User 1: Oh, that''s not good for you.
+
+    User 2: I know. I need to get out more.
+
+    User 1: You should! There''s a lot to see and do in the world.
+
+    User 2: I know. I''ll try to get out more.
+
+    User 1: That''s great! I''m glad to hear it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,100 @@
+id: 00005380
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5380
+data:
+  user 1 personas: 'I want to climb mount everest.
+
+    I have shot a lion.
+
+    I am not a good artist.
+
+    I cry when i watch gone with the wind.
+
+    I like to play with clay models.'
+  user 2 personas: 'I work at a vet.
+
+    My husband is a lawyer.
+
+    I have 3 dog.
+
+    I have 2 kids.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to go hiking with my dogs.
+
+    User 1: That sounds fun! I like to go camping with my friends.
+
+    User 2: That sounds fun too! I''ve never been camping before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I''ll have to look into it.
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a vet.
+
+    User 1: Oh, that''s cool! I love animals.
+
+    User 2: Me too! I have three dogs of my own.
+
+    User 1: What kind of dogs do you have?
+
+    User 2: I have a golden retriever, a German Shepherd, and a Labrador retriever.
+
+    User 1: Those are all great breeds!
+
+    User 2: Yeah, I love them all!
+
+    User 1: What about your husband? What does he do for a living?
+
+    User 2: He''s a lawyer.
+
+    User 1: Oh, that''s interesting! Do you have any kids?
+
+    User 2: Yeah, we have two kids.
+
+    User 1: How old are they?
+
+    User 2: My daughter is five and my son is three.
+
+    User 1: That''s great! I have a niece and nephew who are about the same age.
+
+    User 2: Oh, that''s nice!
+
+    User 1: So, what''s your favorite thing to do with your family?
+
+    User 2: I love to go to the park with them.
+
+    User 1: That sounds fun! I love the park too.
+
+    User 2: Yeah, it''s a great place to relax and have fun.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to read.
+
+    User 1: Me too! What kind of books do you like to read?
+
+    User 2: I like to read historical fiction and contemporary romance.
+
+    User 1: Those are both great genres!
+
+    User 2: Yeah, I love them!
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading the new book by Kristin Hannah.
+
+    User 1: Oh, I''ve heard good things about that book.
+
+    User 2: Yeah, it''s really good!
+
+    User 1: I''m going to have to check it out.
+
+    User 2: You should!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00002987
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2987
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    I enjoy being alone.
+
+    Pink is my favorite color.
+
+    I married my highschool sweetheart.'
+  user 2 personas: 'I enjoy golfing.
+
+    I love my work and just got promoted.
+
+    I am married with three kids.
+
+    I work for a large law firm.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a lawyer at a large law firm.
+
+    User 1: Oh, that sounds exciting! I''m a yoga instructor.
+
+    User 2: That''s cool! I used to do yoga a few years ago, but I haven''t had time since I got busy with work.
+
+    User 1: I know what you mean. It can be hard to find time for things you enjoy when you have a busy life.
+
+    User 2: Yeah, but it''s important to make time for things you love.
+
+    User 1: I agree. That''s why I try to do yoga every day, even if it''s just for a few minutes.
+
+    User 2: That''s great! I should try to do that too.
+
+    User 1: You should! It''s really good for your mind and body.
+
+    User 2: I know, I know. I just need to make time for it.
+
+    User 1: Well, I''m sure you can do it.
+
+    User 2: Thanks! I''ll try.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to golf. I play a few times a week with my friends.
+
+    User 1: That sounds like fun! I''ve never golfed before, but I''d love to try it sometime.
+
+    User 2: You should! It''s a great way to relax and have fun.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to the beach or go hiking.
+
+    User 2: The beach sounds like fun! I love going to the beach.
+
+    User 1: Me too! I love swimming and sunbathing.
+
+    User 2: Me too! I also love playing in the sand.
+
+    User 1: Me too! It''s so much fun to build sandcastles and dig holes.
+
+    User 2: I know, right? I wish I could go to the beach every day.
+
+    User 1: Me too! It''s a great place to relax and have fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

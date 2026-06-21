@@ -1,0 +1,64 @@
+id: 00008566
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8566
+data:
+  user 1 personas: 'I am dissatisfied with the school life i have had so far.
+
+    I wished i was older so i could move out.
+
+    I have one close friend i grew up with.
+
+    My dad is very strict with his kids.
+
+    I worry about money even though i am in high school.'
+  user 2 personas: 'I work in a doctors office.
+
+    I have a rose tattooed on my right ankle.
+
+    I only wear silver jewelry.
+
+    There are thorns tattooed on my toes.
+
+    I am studying to be a dental hygienist but i hate seeing patients saliva.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a doctor''s office.
+
+    User 1: Oh, cool. What''s it like?
+
+    User 2: It''s pretty interesting. I get to see a lot of different patients and learn about different medical conditions.
+
+    User 1: That sounds like it would be really rewarding.
+
+    User 2: It can be. It''s also really busy, but I like the fast pace.
+
+    User 1: I can imagine. Do you like it?
+
+    User 2: Yeah, I do. It''s a great job.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to read, write, and paint. I also like to go hiking and biking.
+
+    User 1: Those all sound like great hobbies. I like to read and write too.
+
+    User 2: Oh, cool. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 2: Me too! I love historical fiction. What''s your favorite historical fiction book?
+
+    User 1: I''m not sure I could pick a favorite, but I really like "The Pillars of the Earth" by Ken Follett.
+
+    User 2: Oh, that''s a great book! I loved it too.
+
+    User 1: I''m glad you liked it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

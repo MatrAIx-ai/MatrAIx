@@ -1,0 +1,60 @@
+id: '00006171'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6171
+data:
+  user 1 personas: 'Skateboarding is a hobby of mine.
+
+    I love candy.
+
+    I have a crush on my co worker.
+
+    I go to college part time.'
+  user 2 personas: 'I work in retail.
+
+    I go to at least 10 concerts a year.
+
+    I love music.
+
+    Lady gaga is my current favorite singer.
+
+    Madonna is my all time favorite.'
+  Best Generated Conversation: 'User 1: What''s your favorite type of music?
+
+    User 2: I love Lady Gaga, Madonna, and music from the 80s.
+
+    User 1: I love Lady Gaga too! I''ve seen her in concert twice.
+
+    User 2: Me too! I saw her on her Born This Way tour.
+
+    User 1: That was a great concert. I also love her songs Telephone and Bad Romance.
+
+    User 2: Those are both great songs! I also love her new song Stupid Love.
+
+    User 1: I haven''t heard that one yet. I''ll have to check it out.
+
+    User 2: You should! It''s a really good song.
+
+    User 1: I''m sure it is. I love all of her songs.
+
+    User 2: Me too! She''s such a talented artist.
+
+    User 1: Yeah, she is. I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who loves Lady Gaga as much as I do.
+
+    User 1: I agree. It''s rare to find someone who appreciates her music as much as I do.
+
+    User 2: We should go to a concert together sometime.
+
+    User 1: That would be fun! I''ll have to keep an eye out for when she''s coming to town.
+
+    User 2: Okay, I''ll do the same.
+
+    User 1: Great! We can set up a time to go when we find out.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

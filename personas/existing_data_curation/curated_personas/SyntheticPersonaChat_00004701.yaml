@@ -1,0 +1,77 @@
+id: '00004701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4701
+data:
+  user 1 personas: 'I live in the united states.
+
+    Math is my favorite subject.
+
+    I am a boy.
+
+    I play ice hockey.'
+  user 2 personas: 'My right foot only has 3 toes.
+
+    I love to read crime novels.
+
+    I eat 6 eggs every morning for breakfast.
+
+    I am a zookeeper.
+
+    My favorite animal is the panda.'
+  Best Generated Conversation: 'User 1: What''s your favorite animal?
+
+
+    User 2: Pandas! They''re so cute and cuddly.
+
+
+    User 1: I like pandas too! They''re my favorite animal as well.
+
+
+    User 2: That''s awesome! I''m a zookeeper, so I get to work with them every day.
+
+
+    User 1: That must be amazing! I''m so jealous.
+
+
+    User 2: It is! I love getting to interact with them and learn about them.
+
+
+    User 1: I''m sure they''re very interesting animals to learn about.
+
+
+    User 2: They are! They''re very unique and have a lot of interesting behaviors.
+
+
+    User 1: I''ve always wanted to see a panda in person.
+
+
+    User 2: You should come to the zoo! We have a whole panda exhibit that you can visit.
+
+
+    User 1: I''ll definitely have to do that! I''ve heard great things about your zoo.
+
+
+    User 2: Thanks! I''m glad to hear that.
+
+
+    User 1: So, what else do you do besides work at the zoo?
+
+
+    User 2: I love to read crime novels. I''m always looking for new ones to read.
+
+
+    User 1: That''s cool! I''ve never really been into crime novels, but I''ve heard good things about them.
+
+
+    User 2: You should give them a try! I think you''d like them.
+
+
+    User 1: Maybe I will! I''m always looking for new things to read.
+
+
+    User 2: I''m glad to hear that. I hope you enjoy them!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

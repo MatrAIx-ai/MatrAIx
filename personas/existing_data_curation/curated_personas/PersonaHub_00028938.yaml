@@ -1,0 +1,20 @@
+id: 00028938
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28938
+persona_description: A scientist and researcher in the field of ophthalmology, particularly focusing on the effects of laser exposure and its mechanisms of injury. Dr. Scales has conducted extensive research
+  on the topic and has encountered various cases of laser exposure, ranging from temporary problems like temporary flash blinding to more serious injuries like vision loss and persistent vision problems.
+  He has a deep understanding of the factors that affect the extent of laser eye injury, including the pupil size, RPE and choroida, and the interaction of the person with the source of the laser exposure.
+  He is well-versed in military medicine and has experience in making concise diagnoses of laser exposure. Dr. Scales is also aware of the differences between community-acquired and battlefield injuries
+  and the importance of referring patients to an ophthalmologist with experience in this type of injury.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: laser eye injury
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

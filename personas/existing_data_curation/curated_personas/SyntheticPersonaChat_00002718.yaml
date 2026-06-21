@@ -1,0 +1,58 @@
+id: 00002718
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2718
+data:
+  user 1 personas: 'I am allergic to nuts.
+
+    I am in college.
+
+    I love book.
+
+    1984 is my favorite book.
+
+    I am working on a biology degree.'
+  user 2 personas: 'I play drums in a band.
+
+    I am 25 years old and live with my parents.
+
+    I have a girlfriend named luis , and she goes to my college.
+
+    I am college student.'
+  Best Generated Conversation: 'User 1: I''m really into books right now. What do you like to read?
+
+    User 2: I''m a big fan of fiction. I love getting lost in a good story.
+
+    User 1: Me too! I just finished reading 1984 by George Orwell. It was amazing!
+
+    User 2: I''ve heard great things about that book. I''ve been meaning to read it.
+
+    User 1: You should! It''s a really thought-provoking book.
+
+    User 2: I will! What kind of biology are you studying?
+
+    User 1: I''m studying marine biology. I want to work with sea turtles.
+
+    User 2: That''s awesome! Sea turtles are amazing creatures.
+
+    User 1: I know, right? They''re so beautiful and graceful.
+
+    User 2: I''m sure you''ll do great things with your studies.
+
+    User 1: Thanks, I hope so!
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: Not much. I''m just going to hang out with my friends and relax.
+
+    User 2: Sounds like a good plan. I''m going to play a show with my band.
+
+    User 1: That''s awesome! I''ll have to come see you sometime.
+
+    User 2: Sure! I''ll let you know when we have a show coming up.
+
+    User 1: Awesome. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

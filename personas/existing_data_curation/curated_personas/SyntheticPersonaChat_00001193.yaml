@@ -1,0 +1,68 @@
+id: 00001193
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1193
+data:
+  user 1 personas: 'I am a christian.
+
+    My favorite movie genre is horror.
+
+    My favorite author is stephen king.
+
+    I love to read.'
+  user 2 personas: 'I like to surf.
+
+    I own a german shepard.
+
+    I am a mechanic.
+
+    I live in california.
+
+    I own a corvette.'
+  Best Generated Conversation: 'User 1: What is your favorite type of movie?
+
+    User 2: I love horror movies.
+
+    User 1: Oh, me too! What is your favorite horror movie?
+
+    User 2: My favorite horror movie is The Conjuring.
+
+    User 1: That is a good movie! I love the paranormal and psychological aspects of it.
+
+    User 2: Me too! What is your favorite book?
+
+    User 1: My favorite book is It by Stephen King.
+
+    User 2: That is a great book! I have read it twice.
+
+    User 1: Me too! I love the way Stephen King writes horror.
+
+    User 2: Me too! He is a master of the genre.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to surf, go camping, and play video games.
+
+    User 1: Those are all great ways to have fun! I love to surf too.
+
+    User 2: Really? Where do you surf?
+
+    User 1: I surf in California.
+
+    User 2: Oh, cool! I live in California too.
+
+    User 1: Where do you live in California?
+
+    User 2: I live in San Diego.
+
+    User 1: Oh, nice! I live in Los Angeles.
+
+    User 2: Oh, cool! We should go surfing together sometime.
+
+    User 1: That would be fun! I would love to go surfing with you.
+
+    User 2: Great! I will let you know when I am free.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

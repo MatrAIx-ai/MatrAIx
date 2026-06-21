@@ -1,0 +1,105 @@
+id: '00005170'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5170
+data:
+  user 1 personas: 'My favourite colour is green.
+
+    My mother is from greece.
+
+    I like to swim when the weather is hot.
+
+    My father is from india.'
+  user 2 personas: 'I work at an accounting firm.
+
+    I am adopted.
+
+    I am an only child.
+
+    I do not believe in love.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+
+    User 2: Hi, I''m [user 2''s name].
+
+
+    User 1: Where are you from?
+
+
+    User 2: I''m from [user 2''s hometown].
+
+
+    User 1: Oh, I''ve never been there. Is it nice?
+
+
+    User 2: It''s beautiful. It''s a small town in the mountains.
+
+
+    User 1: I like mountains. I''m from [user 1''s hometown], which is also a small town.
+
+
+    User 2: Oh, really? What''s it like there?
+
+
+    User 1: It''s nice. It''s a pretty town.
+
+
+    User 2: I''m glad you like it.
+
+
+    User 1: Me too. So, what do you do for work?
+
+
+    User 2: I''m an accountant.
+
+
+    User 1: Oh, that''s cool. I''m a software engineer.
+
+
+    User 2: Nice. I''ve always been interested in computers.
+
+
+    User 1: Me too. I''ve been programming since I was a kid.
+
+
+    User 2: Wow, that''s impressive. I didn''t start until college.
+
+
+    User 1: It''s never too late to learn.
+
+
+    User 2: I know. I''m glad I did.
+
+
+    User 1: Me too. So, what do you like to do for fun?
+
+
+    User 2: I like to play video games, watch movies, and read.
+
+
+    User 1: Me too! I love video games. What kind of games do you play?
+
+
+    User 2: I like to play all kinds of games, but I mostly play RPGs.
+
+
+    User 1: Oh, I love RPGs too. I''m actually playing one right now.
+
+
+    User 2: Oh, cool. What game is it?
+
+
+    User 1: It''s called Skyrim.
+
+
+    User 2: I''ve heard good things about that game. I''ve been meaning to try it.
+
+
+    User 1: You should. It''s a lot of fun.
+
+
+    User 2: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

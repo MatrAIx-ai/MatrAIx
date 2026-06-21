@@ -1,0 +1,17 @@
+id: 00065488
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65488
+persona_description: An astronaut who participated in the Apollo 11 mission and played a significant role in the first human landing on the moon. The text mentions the astronaut's name, the crew's activities,
+  and the events leading up to and following the landing. The persona is likely interested in space exploration, astronautics, and the history of space missions.
+expertise:
+  general_domain_top1pct: Astronautics
+  specific_domain_top1pct: Space Mission Operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,68 @@
+id: 00008403
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8403
+data:
+  user 1 personas: 'I just lost my job and i m looking for something new.
+
+    I think i might need help.
+
+    I live with my parents.
+
+    I m bisexual.'
+  user 2 personas: 'I like free diving.
+
+    I wish i could live forever.
+
+    I really like technology.
+
+    My dog is smaller than my cat.
+
+    I only date people taller than me.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]! What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]! It''s nice to meet you.
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I like to free dive, swim, and play video games.
+
+    User 1: That''s cool! I like swimming too.
+
+    User 2: Me too! I used to compete in swimming when I was younger.
+
+    User 1: Wow, that''s awesome! I''ve always wanted to compete in swimming, but I''m not very good at it.
+
+    User 2: Don''t worry, everyone starts somewhere. You just have to keep practicing.
+
+    User 1: Thanks for the encouragement. I''ll try my best.
+
+    User 2: I know you will! So, what else do you like to do for fun?
+
+    User 1: I also like to read, write, and play video games.
+
+    User 2: Me too! I love reading fantasy novels and playing video games.
+
+    User 1: Me too! I just finished reading the latest book in the Harry Potter series.
+
+    User 2: I love Harry Potter! I''ve read all the books and seen all the movies.
+
+    User 1: I''m a big fan of the Harry Potter series too. What''s your favorite book in the series?
+
+    User 2: My favorite book in the series is The Deathly Hallows.
+
+    User 1: Mine too! It''s such a good book.
+
+    User 2: I know, right? It''s so sad, but it''s also so good.
+
+    User 1: Yeah, it''s really sad. But I think it''s a good ending to the series.
+
+    User 2: I agree. It''s a perfect ending.
+
+    User 1: Well, it was nice talking to you, [user 2''s name].
+
+    User 2: You too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

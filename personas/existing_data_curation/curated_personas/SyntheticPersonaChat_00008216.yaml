@@ -1,0 +1,74 @@
+id: 00008216
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8216
+data:
+  user 1 personas: 'I run marathons twice a year , mostly in america.
+
+    My favorite basketball team is the vancouver grizzlies.
+
+    My favorite sport is basketball.
+
+    I am an avid runner.
+
+    I live in canada , near ontario.'
+  user 2 personas: 'I wish i could live forever.
+
+    I really like technology.
+
+    I like free diving.
+
+    I only date people taller than me.
+
+    My dog is smaller than my cat.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name], what''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from [user 2''s hometown].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a small town, but it''s a nice place to live.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to free dive, and I love technology.
+
+    User 1: Free diving sounds really cool! I''ve never tried it before.
+
+    User 2: You should! It''s amazing to be able to explore the underwater world.
+
+    User 1: I''ll have to try it sometime. What kind of technology do you like?
+
+    User 2: I like all kinds of technology, but I''m especially interested in artificial intelligence and virtual reality.
+
+    User 1: Artificial intelligence is really cool! I think it has the potential to change the world in a lot of ways.
+
+    User 2: I agree! I think it''s going to be a major part of our future.
+
+    User 1: So, do you have a favorite sport?
+
+    User 2: I don''t really have a favorite sport, but I do enjoy watching basketball.
+
+    User 1: Me too! I''m a big fan of the Vancouver Grizzlies.
+
+    User 2: Oh, that''s cool! I''m a fan of the Toronto Raptors.
+
+    User 1: Nice! I''m excited to see how they do this year.
+
+    User 2: Me too! I think they have a good chance of making the playoffs.
+
+    User 1: I hope so!
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you, [user 2''s name].
+
+    User 2: You too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

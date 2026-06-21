@@ -1,0 +1,19 @@
+id: '00051245'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51245
+persona_description: A cybersecurity professional who specializes in network defense, particularly in the detection and mitigation of denial of service attacks. They have experience with load balancing,
+  redundancy, and isolation techniques to prevent denial of service attacks from affecting their organization's DNS server and internal network. They are knowledgeable in the use of external DNS servers
+  and the importance of isolating internal name resolution functions from the outside world to combat techniques like footprinting. They are committed to maintaining the security and reliability of their
+  organization's DNS infrastructure.
+expertise:
+  general_domain_top1pct: Computer Security
+  specific_domain_top1pct: Network Defense
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

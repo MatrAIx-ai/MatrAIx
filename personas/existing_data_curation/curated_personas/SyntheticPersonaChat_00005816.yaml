@@ -1,0 +1,62 @@
+id: 00005816
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5816
+data:
+  user 1 personas: 'I lost my arm in a car accident.
+
+    I am a farmer.
+
+    I graduated from college.
+
+    I am the youngest of 4 children.
+
+    I like to hike.'
+  user 2 personas: 'I have a close circle of friends i would do anything for.
+
+    I sell real estate and wait tables on the weekends.
+
+    I never stop looking for love.
+
+    I am the youngest of 8 kids.
+
+    My guilty pleasure is mcdonald.'
+  Best Generated Conversation: 'User 1: Hi, I''m John. I''m a farmer.
+
+    User 2: Hi, I''m Sarah. I sell real estate and wait tables on the weekends.
+
+    User 1: That''s cool. What''s your favorite part of your job?
+
+    User 2: I like helping people find their dream homes.
+
+    User 1: That''s nice. I''m a farmer too. I love working outside and being in nature.
+
+    User 2: That sounds great. I like being outside too, but I don''t get to spend as much time in nature as I''d like.
+
+    User 1: I understand. What''s your favorite thing to do for fun?
+
+    User 2: I like to go out with my friends, play video games, and watch movies.
+
+    User 1: That sounds like fun. I like to go hiking, cook, and read.
+
+    User 2: I love to read too! What are some of your favorite books?
+
+    User 1: I like to read all kinds of books, but I''m especially a fan of historical fiction and fantasy novels.
+
+    User 2: I love historical fiction too! I''m reading a book about the American Revolution right now.
+
+    User 1: That sounds interesting. I''m currently reading a book about the Tudors.
+
+    User 2: The Tudors are really interesting. I''m a fan of Henry VIII.
+
+    User 1: Me too! He was a fascinating character.
+
+    User 2: He really was. I''m glad we could chat.
+
+    User 1: Me too. It was nice to meet you, Sarah.
+
+    User 2: You too, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,71 @@
+id: 00001018
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1018
+data:
+  user 1 personas: 'I have two cats.
+
+    I need extra iron in my diet.
+
+    I have two children under ten.'
+  user 2 personas: 'I have allergies.
+
+    I am a vegetarian.
+
+    I dislike animals.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+
+    User 2: Hello, I''m [user 2''s name].
+
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+
+    User 2: I like to read, play video games, and watch movies.
+
+
+    User 1: Oh, that''s cool. I like to read and watch movies too.
+
+
+    User 2: Do you have any pets?
+
+
+    User 1: I have two cats.
+
+
+    User 2: Oh, that''s nice. I''m not a big fan of animals.
+
+
+    User 1: Really? Why not?
+
+
+    User 2: I have allergies.
+
+
+    User 1: Oh, that''s too bad. Well, I''m sure you have other things you enjoy doing.
+
+
+    User 2: Yeah, I do. I like to go hiking, biking, and camping.
+
+
+    User 1: Oh, that sounds fun. I''ve never been camping before.
+
+
+    User 2: You should try it sometime! It''s a great way to get outdoors and enjoy nature.
+
+
+    User 1: Yeah, I think I would like it.
+
+
+    User 2: Well, if you ever do decide to go camping, let me know. I''d be happy to show you the ropes.
+
+
+    User 1: Thanks, I appreciate it!
+
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

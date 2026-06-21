@@ -1,0 +1,66 @@
+id: 00002338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2338
+data:
+  user 1 personas: 'I work at mcdonalds.
+
+    I like sleeping.
+
+    I watch youtube videos.
+
+    I have brown hair.'
+  user 2 personas: 'I still like unicorns even though i am an adult.
+
+    I want to write a book before i die.
+
+    I am excellent at playing pool.
+
+    I teach middle school art.'
+  Best Generated Conversation: 'User 1: Hi! I''m User 1.
+
+    User 2: Hi, I''m User 2. Nice to meet you!
+
+    User 1: Same here! What do you like to do for fun?
+
+    User 2: I like to play pool, watch YouTube videos, and write.
+
+    User 1: That''s cool! I like to sleep, watch YouTube videos, and play video games.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play RPGs, like Skyrim and The Witcher.
+
+    User 2: Me too! I love playing RPGs.
+
+    User 1: What kind of books do you like to write?
+
+    User 2: I like to write fantasy and science fiction novels.
+
+    User 1: That''s cool! I''ve never written a novel, but I''ve always wanted to try.
+
+    User 2: You should give it a try! It''s really fun.
+
+    User 1: I might just do that.
+
+    User 2: Cool! I''d love to read it if you ever write one.
+
+    User 1: Thanks! I''ll let you know.
+
+    User 2: Great! So, what do you do for work?
+
+    User 1: I work at McDonald''s.
+
+    User 2: Oh, really? I used to work at McDonald''s when I was in high school.
+
+    User 1: What was it like?
+
+    User 2: It was fun! I got to meet a lot of people and I learned a lot about customer service.
+
+    User 1: I''m glad you enjoyed it! I like working at McDonald''s because it''s a fun and fast-paced environment.
+
+    User 2: I agree! It''s a great place to work.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

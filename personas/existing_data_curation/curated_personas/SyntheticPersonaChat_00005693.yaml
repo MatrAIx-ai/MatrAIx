@@ -1,0 +1,66 @@
+id: 00005693
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5693
+data:
+  user 1 personas: 'My landlord is raising my rent.
+
+    I am an excellent baker.
+
+    Everyone says my pecan pie is the best they have ever had.
+
+    I was born on christmas day.
+
+    I went to law school.'
+  user 2 personas: 'I can speak three languages english , french and spanish.
+
+    I m currently looking for employment.
+
+    I am colour blind.
+
+    My favourite band is rush.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m User 1 and I''m a lawyer.
+
+    User 2: Nice to meet you, User 1! I''m User 2 and I''m a professional baker.
+
+    User 1: That''s awesome! I love baking too. What''s your favorite thing to bake?
+
+    User 2: My favorite thing to bake is pecan pie.
+
+    User 1: Oh, that sounds delicious! I''ve never had pecan pie before.
+
+    User 2: You should try it sometime. It''s my family''s recipe and it''s the best you''ll ever have.
+
+    User 1: I''ll have to make it a point to try it.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to read, listen to music, and spend time with my family.
+
+    User 1: I like those things too! We should hang out sometime and bake some pecan pie.
+
+    User 2: That sounds like a great idea!
+
+    User 1: Great! What are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. We could bake some pecan pie and hang out.
+
+    User 2: That sounds like a great plan!
+
+    User 1: Great! I''ll pick you up at 6:00 on Saturday.
+
+    User 2: See you then!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

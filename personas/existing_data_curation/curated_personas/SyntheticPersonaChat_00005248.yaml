@@ -1,0 +1,84 @@
+id: 00005248
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5248
+data:
+  user 1 personas: 'I attend book club every week.
+
+    My mom is my best friend.
+
+    I couldn t live without my cell phone.
+
+    I am more of a cat person than a dog person.'
+  user 2 personas: 'I enjoy cooking but not baking.
+
+    I enjoy a good run.
+
+    I like things in organized.
+
+    One of my favorite shows is face off on syfy.'
+  Best Generated Conversation: 'User 1: Hi! My name is [name].
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy cooking, running, and watching TV.
+
+    User 1: That''s cool! I like to cook too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love making pasta dishes.
+
+    User 2: Me too! I love making lasagna.
+
+    User 1: Lasagna is my favorite too!
+
+    User 2: I know a great recipe if you''re interested.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll send it to you later.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also enjoy running.
+
+    User 1: Me too! I love going for runs in the park.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: I agree.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to watch TV.
+
+    User 2: What''s your favorite show?
+
+    User 1: I like to watch Face Off on SyFy.
+
+    User 2: Me too! That''s a great show.
+
+    User 1: It is!
+
+    User 2: What other shows do you like?
+
+    User 1: I also like to watch The Walking Dead and The 100.
+
+    User 2: Me too! Those are both great shows.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

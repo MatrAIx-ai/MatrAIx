@@ -1,0 +1,17 @@
+id: 00004080
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4080
+persona_description: A financial advisor who specializes in managing and analyzing customer accounts, making decisions based on a set of alternatives and considering the value of each alternative. The advisor
+  must make difficult choices when faced with limited resources and must prioritize the allocation of scarce financial resources to achieve the best possible outcome for the customer.
+expertise:
+  general_domain_top1pct: finance
+  specific_domain_top1pct: financial planning
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

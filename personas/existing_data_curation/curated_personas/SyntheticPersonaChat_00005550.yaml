@@ -1,0 +1,60 @@
+id: '00005550'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5550
+data:
+  user 1 personas: 'I have a girlfriend of 7 years.
+
+    I am a geology major at alabama university.
+
+    I never have had alcohol in my life.
+
+    I watch every football game at alabama.'
+  user 2 personas: 'I work in a corner grocery store during the day.
+
+    My favorite show is scooby doo.
+
+    I draw comic books.
+
+    In the evenings i watch the door at a club where they play punkrock.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How''s it going?
+
+    User 1: I''m doing well, thanks! I''m a geology major at Alabama University.
+
+    User 2: That''s cool! I''m a comic book artist.
+
+    User 1: Oh, that''s awesome! I love comic books.
+
+    User 2: Thanks! I''ve been drawing them since I was a kid.
+
+    User 1: That''s really impressive. I''m sure you''re really good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: What''s your favorite comic book series?
+
+    User 2: I''m a big fan of the X-Men.
+
+    User 1: Me too! I love the X-Men. They''re my favorite superhero team.
+
+    User 2: Me too! I love their diversity and their stories.
+
+    User 1: Yeah, they''re really great.
+
+    User 2: What are you most excited about in your life right now?
+
+    User 1: I''m most excited about going to graduate school next year.
+
+    User 2: That''s awesome! What are you going to study?
+
+    User 1: I''m going to study geophysics.
+
+    User 2: That sounds really cool! I''m sure you''ll love it.
+
+    User 1: Thanks! I think I will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

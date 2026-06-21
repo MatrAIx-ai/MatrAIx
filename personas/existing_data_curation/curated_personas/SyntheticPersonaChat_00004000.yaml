@@ -1,0 +1,104 @@
+id: '00004000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4000
+data:
+  user 1 personas: 'I have owned two mustangs.
+
+    My dad works for ups.
+
+    My favorite color is purple.
+
+    I am currently looking for a job.
+
+    I am not a fan of science.'
+  user 2 personas: 'I enjoy gardening.
+
+    I work for a clothes retailer.
+
+    I have one child.
+
+    I own two boxer dogs.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hi there!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a clothes retailer.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: I do. I get to meet a lot of different people and help them find the perfect clothes for themselves.
+
+    User 1: That''s great. I''m glad you like your job.
+
+    User 2: Thank you. What do you do for a living?
+
+    User 1: I''m currently looking for a job.
+
+    User 2: Oh, that''s too bad. What kind of job are you looking for?
+
+    User 1: I''m not sure yet. I''m open to anything.
+
+    User 2: Well, I''m sure you''ll find something soon. You seem like a really hard worker.
+
+    User 1: Thank you. I appreciate that.
+
+    User 2: So, what are your hobbies?
+
+    User 1: I like to garden. I also like to read and play video games.
+
+    User 2: Oh, I like to garden too! I have a lot of plants in my backyard.
+
+    User 1: That''s great. What kind of plants do you have?
+
+    User 2: I have a lot of different plants. I have some roses, some lilies, and some sunflowers.
+
+    User 1: Oh, those sound beautiful. I have some roses and some lilies too.
+
+    User 2: That''s awesome. We should trade pictures of our gardens sometime.
+
+    User 1: That sounds like a great idea.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read a variety of things. I like to read historical fiction, fantasy, and romance novels.
+
+    User 2: Oh, I like to read historical fiction too. I''ve been reading a lot of books about the Tudor period lately.
+
+    User 1: Oh, that sounds interesting. I''ve never read any books about the Tudor period.
+
+    User 2: You should. They''re really good.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You won''t be disappointed.
+
+    User 1: So, what are your favorite video games?
+
+    User 2: I like to play a variety of video games. I like to play first-person shooters, role-playing games, and action-adventure games.
+
+    User 1: Oh, I like to play first-person shooters too. I''ve been playing a lot of Call of Duty lately.
+
+    User 2: Oh, that''s a good game. I''ve been playing a lot of Fortnite lately.
+
+    User 1: Oh, I''ve heard good things about that game. I''ll have to check it out.
+
+    User 2: You should. It''s really fun.
+
+    User 1: So, what do you like to do with your family?
+
+    User 2: We like to go on hikes, go to the beach, and play board games.
+
+    User 1: Oh, that sounds fun. I like to go on hikes too.
+
+    User 2: We have a lot of fun together.
+
+    User 1: That''s great. I''m glad you have a good relationship with your family.
+
+    User 2: Thank you. I am too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

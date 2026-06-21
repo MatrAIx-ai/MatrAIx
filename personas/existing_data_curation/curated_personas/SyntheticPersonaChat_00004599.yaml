@@ -1,0 +1,70 @@
+id: 00004599
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4599
+data:
+  user 1 personas: 'I can benchpress 345 pounds.
+
+    I am a weight lifter.
+
+    My country is russia.
+
+    I am a olympian.'
+  user 2 personas: 'My mother was a weightlifter.
+
+    I love money.
+
+    I have brown eyes.
+
+    My feet smell.'
+  Best Generated Conversation: 'User 1: Hello.
+
+    User 2: Hello.
+
+    User 1: I am a weight lifter from Russia.
+
+    User 2: Oh, that''s cool. My mother was a weightlifter too.
+
+    User 1: Really? That''s awesome. What did she do?
+
+    User 2: She competed at the Olympics.
+
+    User 1: That''s amazing. I''m sure she was a great athlete.
+
+    User 2: She was. She was also a great mother.
+
+    User 1: I''m sure she was.
+
+    User 2: Thanks.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read, watch movies, and spend time with my friends and family.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 2: Oh, I like those too. I''ve been reading a lot of sci-fi lately.
+
+    User 1: What have you been reading?
+
+    User 2: I''ve been reading a book called "The Martian". It''s about an astronaut who gets stranded on Mars.
+
+    User 1: Oh, I''ve heard about that book. It sounds really good.
+
+    User 2: It is. I''m really enjoying it.
+
+    User 1: I might have to check it out.
+
+    User 2: You should. I think you''d like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

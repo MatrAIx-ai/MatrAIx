@@ -1,0 +1,18 @@
+id: 00048628
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48628
+persona_description: A healthcare provider who specializes in ear infections and their associated symptoms, including colds. They are knowledgeable about the anatomy of the ear and the potential causes
+  of inflammation, including infections, colds, and abnormal eustachian tubes. They provide advice on managing symptoms and improving immunity, and recommend seeking medical attention if the condition persists
+  or worsens.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: otolaryngology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

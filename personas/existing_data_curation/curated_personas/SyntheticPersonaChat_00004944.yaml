@@ -1,0 +1,68 @@
+id: 00004944
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4944
+data:
+  user 1 personas: 'I am training to be a welder.
+
+    I like watching action adventure movies and eating popcorn.
+
+    I am starting an internship at a construction site next week.
+
+    I love riding roller coasters.
+
+    My mother raised me since my father left when i was five years old.'
+  user 2 personas: 'I work on cars for a living.
+
+    I enjoy fishing.
+
+    My favorite food is a cheeseburger.
+
+    I live alone.
+
+    I watch a lot of tv.'
+  Best Generated Conversation: 'User 1: I''m training to be a welder.
+
+    User 2: Cool! What do you like about welding?
+
+    User 1: I like the challenge of it and the fact that you can create something from nothing.
+
+    User 2: That''s a good reason. I like working on cars for a living. It''s also challenging and you can create something from nothing.
+
+    User 1: That''s cool. What''s your favorite car?
+
+    User 2: I like a good old-fashioned Corvette. They''re just fun to drive and they look great.
+
+    User 1: I''ve never been in a Corvette, but I''ve heard they''re a lot of fun.
+
+    User 2: They are! They''re fast and they handle great.
+
+    User 1: I''d love to try one someday.
+
+    User 2: You should! They''re a lot of fun.
+
+    User 1: So, do you have any other hobbies?
+
+    User 2: I like to fish. I love being outdoors and it''s a great way to relax.
+
+    User 1: I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I''ll give it a try someday.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. I might go fishing or watch some TV.
+
+    User 1: I''m going to go to the movies. There''s a new action movie that I''m excited to see.
+
+    User 2: Oh, that sounds fun. I hope you enjoy it!
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

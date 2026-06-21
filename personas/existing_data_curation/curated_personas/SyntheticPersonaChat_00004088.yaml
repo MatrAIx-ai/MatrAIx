@@ -1,0 +1,73 @@
+id: 00004088
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4088
+data:
+  user 1 personas: 'I only eat at restaurants.
+
+    I am allergic to shellfish and cats.
+
+    My mother has 500 pairs of shoes.
+
+    I have 1 pair of shoes.'
+  user 2 personas: 'In allergic to peanuts.
+
+    I like eating vegetables.
+
+    I love the beatles.
+
+    I am usually very shy.
+
+    I have trouble getting along with family.'
+  Best Generated Conversation: 'User 1: Hey! I''m new here. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, listen to music, and play video games.
+
+    User 1: Me too! I love reading and playing video games. What kinds of books and games do you like?
+
+    User 2: I like to read science fiction and fantasy novels, and I like to play action and adventure video games.
+
+    User 1: Those are my favorite genres too! I''m currently reading the Wheel of Time series by Robert Jordan, and I''m playing the new God of War game.
+
+    User 2: I''ve heard good things about the Wheel of Time series. I''ve never played a God of War game, but they look really cool.
+
+    User 1: You should definitely check out the Wheel of Time series. It''s one of the best fantasy series ever written. And if you like action games, you''ll definitely enjoy God of War.
+
+    User 2: I''ll have to check them out!
+
+    User 1: Cool! What else do you like to do for fun?
+
+    User 2: I like to cook, go camping, and travel.
+
+    User 1: I love to cook too! I''m not very good at it, but I love trying new recipes. I''ve never been camping, but I''ve always wanted to try it. And I love to travel! I''ve been to a few different
+    countries, but I''d love to see more of the world.
+
+    User 2: You should definitely go camping! It''s a lot of fun and you get to experience nature in a whole new way. And if you''re ever looking for a travel buddy, I''m always up for an adventure.
+
+    User 1: Thanks for the invite! I''ll keep that in mind.
+
+    User 2: No problem!
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to go to the gym and then meet up with some friends for dinner.
+
+    User 2: Sounds fun! I''m going to stay in and relax. I have a big test tomorrow, so I need to study.
+
+    User 1: Good luck on your test!
+
+    User 2: Thanks!
+
+    User 1: I''ll catch up with you later!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

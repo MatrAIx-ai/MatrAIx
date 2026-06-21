@@ -1,0 +1,82 @@
+id: '00007734'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7734
+data:
+  user 1 personas: 'I m a student at a small community college.
+
+    I work at a hospital.
+
+    I m twenty years old.
+
+    I love to read fiction.
+
+    I love pasta.'
+  user 2 personas: 'I work at home on my computer.
+
+    I do not eat asparagus.
+
+    My favorite jello is the blue one.
+
+    I have long red hair.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username] and I''m a student at a small community college.
+
+    User 2: Hi, I''m [username] and I work at home on my computer.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a web developer.
+
+    User 1: Oh, that''s cool! What kind of websites do you design?
+
+    User 2: I mostly design websites for businesses, but I''ve also done some work for non-profits and personal websites.
+
+    User 1: That''s really interesting. I''m not very tech-savvy, so I''m always impressed by people who can do things like that.
+
+    User 2: Thanks! It''s not as hard as it looks, but it does take a lot of practice.
+
+    User 1: I''m sure it does. So, what do you do for fun?
+
+    User 2: I like to read, watch movies, and go out to eat.
+
+    User 1: Me too! What kind of books do you like to read?
+
+    User 2: I like to read fiction, especially science fiction and fantasy.
+
+    User 1: Oh, me too! I love to get lost in a good book.
+
+    User 2: Me too! I''m currently reading a book about a group of friends who go on a quest to find a magical artifact.
+
+    User 1: That sounds really cool! I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: My favorite food is pasta.
+
+    User 1: Me too! I love pasta. What''s your favorite kind of pasta?
+
+    User 2: I like all kinds of pasta, but my favorite is probably spaghetti.
+
+    User 1: Spaghetti is good! I like it with red sauce and meatballs.
+
+    User 2: Me too! That''s my favorite way to eat it.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or stay home and read a book.
+
+    User 1: I might go to the movies too. I''m not sure what I want to see yet.
+
+    User 2: There''s a new Star Wars movie out. I''ve heard it''s really good.
+
+    User 1: I''ve heard that too. I might go see that.
+
+    User 2: I hope you do! It''s really good.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00007802
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7802
+data:
+  user 1 personas: 'I enjoy working out and learning new things.
+
+    My name is kevin.
+
+    I am studying software development.
+
+    I play the guitair.
+
+    I am a student in college.'
+  user 2 personas: '1984 is my favorite book.
+
+    I am in college.
+
+    I am allergic to nuts.
+
+    I love book.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: Nice to meet you! My name is [user 1]. What are you studying in college?
+
+    User 2: I''m studying business.
+
+    User 1: Cool! I''m studying software development.
+
+    User 2: Oh, that''s cool! What''s your favorite thing about software development?
+
+    User 1: I love the problem-solving aspect of it. I also like the creativity that goes into it.
+
+    User 2: That''s cool. I like the business aspect of it. I like the idea of working with people and helping businesses grow.
+
+    User 1: That''s a great perspective. I think software development and business are a good match for each other.
+
+    User 2: I agree. I think they''re both important parts of the world today.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is 1984.
+
+    User 1: That''s a great book! I love the way it explores the themes of totalitarianism and surveillance.
+
+    User 2: I agree. It''s a really thought-provoking book.
+
+    User 1: What are you allergic to?
+
+    User 2: I''m allergic to nuts.
+
+    User 1: Oh, that''s tough. I love nuts.
+
+    User 2: Me too, but I can''t eat them.
+
+    User 1: Well, at least you can still enjoy other foods.
+
+    User 2: Yeah, I''m grateful for that.
+
+    User 1: Me too. So, what do you like to do for fun?
+
+    User 2: I love to read, I love to go to the movies, and I love to play video games.
+
+    User 1: Cool! I love to read, I love to go to the movies, and I love to play video games too!
+
+    User 2: That''s awesome! We should get together and do something sometime.
+
+    User 1: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

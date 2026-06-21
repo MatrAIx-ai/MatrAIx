@@ -1,0 +1,66 @@
+id: '00003635'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3635
+data:
+  user 1 personas: 'I eat too much fast food.
+
+    I work as a public affairs liaison.
+
+    I am a national guard officer.
+
+    I drive a 2011 volkswagen passat.'
+  user 2 personas: 'I like to fly kites.
+
+    My car broke down last week.
+
+    I work out every other day.
+
+    I love sports , but rugby is my favorite.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I''m a personal trainer.
+
+    User 1: That''s cool! I''m a public affairs liaison for the National Guard.
+
+    User 2: Nice! Do you like it?
+
+    User 1: I do, it''s a good job. I get to work with a lot of different people.
+
+    User 2: That sounds really fun!
+
+    User 1: It is. What do you like to do for fun?
+
+    User 2: I love to fly kites and work out.
+
+    User 1: That''s awesome! I used to fly kites as a kid, it was really fun.
+
+    User 2: Me too, it''s so relaxing.
+
+    User 1: Yeah, it is. What kind of workouts do you do?
+
+    User 2: I do a lot of cardio and strength training.
+
+    User 1: Nice! I used to do a lot of running, but I''ve been slacking off lately.
+
+    User 2: You should start running again! It''s a great way to stay in shape.
+
+    User 1: I know, I know. I''ll start again soon.
+
+    User 2: Good! What''s your favorite type of food?
+
+    User 1: I love Mexican food.
+
+    User 2: Me too! What''s your favorite Mexican dish?
+
+    User 1: I love enchiladas!
+
+    User 2: Me too! I also love tacos.
+
+    User 1: Me too! I love all Mexican food.
+
+    User 2: Me too! It''s the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

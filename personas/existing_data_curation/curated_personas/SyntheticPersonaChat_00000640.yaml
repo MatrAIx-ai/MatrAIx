@@ -1,0 +1,86 @@
+id: '00000640'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 640
+data:
+  user 1 personas: 'I hate carrots.
+
+    I am very athletic.
+
+    I have brown hair.
+
+    I love bicycling.'
+  user 2 personas: 'I am a grandmother.
+
+    I have a dog and we go for walks.
+
+    I live in a city.
+
+    I help my neighbor.
+
+    I like to go to the farmers markets to buy local veggies and fruits.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: It is nice to meet you.
+
+    User 2: It is nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go for walks with my dog, and I like to go to the farmers markets to buy local veggies and fruits.
+
+    User 1: That sounds like fun. I like to go for walks too, but I don''t have a dog.
+
+    User 2: You should get one! They''re great companions.
+
+    User 1: I''ve thought about it, but I''m not sure if I''m ready for the responsibility.
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I''ll have to think about it.
+
+    User 2: You should. They''re great pets.
+
+    User 1: Okay, I will.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a carpenter.
+
+    User 2: Oh, that''s cool. I''ve always been interested in carpentry.
+
+    User 1: It''s a great trade. I get to build things with my hands.
+
+    User 2: That sounds really rewarding.
+
+    User 1: It is. I love seeing the finished product.
+
+    User 2: So, what''s your favorite thing to build?
+
+    User 1: I like building furniture. I think it''s so satisfying to see a piece of furniture come together from a bunch of pieces of wood.
+
+    User 2: That does sound really satisfying.
+
+    User 1: It is.
+
+    User 2: So, what are you working on right now?
+
+    User 1: I''m building a new coffee table for my living room.
+
+    User 2: Oh, that sounds nice.
+
+    User 1: Yeah, I''m pretty excited about it.
+
+    User 2: I''m sure it''s going to look great.
+
+    User 1: Thanks, I hope so.
+
+    User 2: Well, I should probably get going. It was nice meeting you, [user 1 name].
+
+    User 1: It was nice meeting you too, [user 2 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

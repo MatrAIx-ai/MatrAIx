@@ -1,0 +1,64 @@
+id: '00002264'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2264
+data:
+  user 1 personas: 'I like to role play.
+
+    I love cars.
+
+    I am a morning person.
+
+    I do not like animals.'
+  user 2 personas: 'My favorite color is purple.
+
+    I am not a fan of science.
+
+    I have owned two mustangs.
+
+    My dad works for ups.
+
+    I am currently looking for a job.'
+  Best Generated Conversation: 'User 1: Hi there! I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: I like to read and play video games too! What are some of your favorite books and games?
+
+    User 2: I love the Harry Potter series and the Lord of the Rings series. My favorite games are The Sims, Minecraft, and Stardew Valley.
+
+    User 1: Those are all great books and games! I''ve read all of the Harry Potter books and I''ve played Minecraft a lot. I''ve never played Stardew Valley, but I''ve heard good things about it.
+
+    User 2: You should definitely try it! It''s a really fun game.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! So, what else do you like to do?
+
+    User 1: I like to go for walks, go to the movies, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun! I like to do similar things.
+
+    User 1: What kind of car do you drive?
+
+    User 2: I drive a Mustang.
+
+    User 1: Nice! I''ve always wanted to drive a Mustang.
+
+    User 2: They''re great cars!
+
+    User 1: So, what are you looking for in a new job?
+
+    User 2: I''m looking for something that''s challenging and rewarding. I''d also like to work for a company that I''m passionate about.
+
+    User 1: That''s great! I''m sure you''ll find something perfect for you.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

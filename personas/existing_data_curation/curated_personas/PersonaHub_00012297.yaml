@@ -1,0 +1,17 @@
+id: 00012297
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12297
+persona_description: A healthcare provider with a special interest in the treatment of migraines and Alzheimer's disease. This person has experience with memantine and its use in treating chronic migraines.
+  They are likely to be familiar with the drug's side effects and benefits, and may have a patient with migraines who benefited from memantine treatment.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Alzheimer's disease treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

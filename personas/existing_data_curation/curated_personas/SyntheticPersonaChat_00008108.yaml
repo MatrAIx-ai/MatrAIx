@@ -1,0 +1,68 @@
+id: 00008108
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8108
+data:
+  user 1 personas: 'My major was american literature and education.
+
+    On weekends i like to go hiking.
+
+    I just graduated college.
+
+    I want to teach kids in elementary school.
+
+    I live in a big city.'
+  user 2 personas: 'I am a software engineer.
+
+    I started at google on an internship.
+
+    My favorite seafood in lobster.
+
+    I work at google.
+
+    I live in seattle.'
+  Best Generated Conversation: 'User 1: Hi! I just graduated from college and I''m looking for a job.
+
+    User 2: Congratulations! What did you study?
+
+    User 1: I studied American Literature and Education.
+
+    User 2: Cool! I''m a software engineer at Google.
+
+    User 1: Oh, cool! I''ve always been interested in coding.
+
+    User 2: It''s a lot of fun. I''m originally from Seattle, but I moved to the Bay Area for work.
+
+    User 1: That''s awesome! I just moved to San Francisco after I graduated.
+
+    User 2: Nice! I love living in the Bay Area. It''s so beautiful here.
+
+    User 1: It is! I love the hiking trails.
+
+    User 2: Me too! I go hiking every weekend.
+
+    User 1: That''s awesome! I''m looking forward to getting into hiking more.
+
+    User 2: You should! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 1: Yeah, I''ve heard that.
+
+    User 2: So, what are you looking for in a job?
+
+    User 1: I''m not sure yet. I''m open to anything, but I''m really interested in teaching.
+
+    User 2: That''s great! I know a few people who teach elementary school.
+
+    User 1: Oh, that''s awesome! I''d love to meet them.
+
+    User 2: I''m sure they''d love to meet you too. I''ll send you their contact information.
+
+    User 1: Thank you! That''s really helpful.
+
+    User 2: You''re welcome! I''m glad I could help.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

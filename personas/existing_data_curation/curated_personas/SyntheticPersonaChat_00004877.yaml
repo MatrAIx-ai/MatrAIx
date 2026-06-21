@@ -1,0 +1,78 @@
+id: 00004877
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4877
+data:
+  user 1 personas: 'My favorite food is mexican.
+
+    I am a teacher.
+
+    I love to dance.
+
+    I enjoy reading history books.
+
+    I grew up in new hampshire.'
+  user 2 personas: 'I like playing outside in the sun with my dolls.
+
+    I sleep in a princess bed.
+
+    I m a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name].
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play outside, go to the park, and play with my dolls.
+
+    User 1: That sounds like fun. I like to play outside too.
+
+    User 2: What''s your favorite thing to do outside?
+
+    User 1: I like to go for walks in the woods and explore.
+
+    User 2: That sounds really nice. I like to do that too.
+
+    User 1: Where do you live?
+
+    User 2: I live in [place].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a really nice place. There''s a lot of parks and nature trails.
+
+    User 1: That sounds like a great place to live.
+
+    User 2: It is. I like it a lot.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to play with my dolls, read books, and watch cartoons.
+
+    User 1: That sounds like fun. I like to read books too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read history books, mystery novels, and science fiction.
+
+    User 2: That''s cool. I like to read history books too.
+
+    User 1: What''s your favorite history book?
+
+    User 2: I like the book "The Diary of Anne Frank."
+
+    User 1: That''s a great book. I love it too.
+
+    User 2: I''m glad you like it.
+
+    User 1: I do. It''s a really good book.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

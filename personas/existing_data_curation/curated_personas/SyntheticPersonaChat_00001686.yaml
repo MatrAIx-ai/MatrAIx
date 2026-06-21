@@ -1,0 +1,76 @@
+id: 00001686
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1686
+data:
+  user 1 personas: 'I love hamburgers.
+
+    I always sleep 8 hours a day.
+
+    I go running a lot.
+
+    I work as an electrician.
+
+    I hate winter.'
+  user 2 personas: 'I take care of my mother and father.
+
+    I m 49 , male and live in dublin , ireland.
+
+    I have one sister and a niece and nephew.
+
+    I m almost finished with my degree.'
+  Best Generated Conversation: 'User 1: Hi there! I''m John.
+
+    User 2: Hello, John! I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Dublin, Ireland.
+
+    User 1: Oh, that''s cool! I''ve never been to Ireland before.
+
+    User 2: You should come visit sometime! It''s a beautiful country.
+
+    User 1: I would love to! What do you like to do for fun?
+
+    User 2: I love to spend time with my family and friends. I also enjoy reading, writing, and taking walks.
+
+    User 1: Those sound like great hobbies! I love to read and write too.
+
+    User 2: Oh, that''s great! What are some of your favorite books?
+
+    User 1: I love anything by Jane Austen. She''s one of my favorite authors.
+
+    User 2: I''ve never read any of her books, but I''ve heard good things.
+
+    User 1: You should definitely read some of them! They''re really good.
+
+    User 2: I''ll put them on my list.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s great! I''m a doctor.
+
+    User 2: That''s awesome! What kind of doctor are you?
+
+    User 1: I''m a pediatrician.
+
+    User 2: That''s great! I love working with kids.
+
+    User 1: Me too! It''s the best job in the world.
+
+    User 2: It sounds like it!
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m still in school, so I''m just focused on finishing my degree.
+
+    User 1: That''s understandable. Well, I hope you have a great day!
+
+    User 2: You too, John!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

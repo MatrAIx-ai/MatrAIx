@@ -1,0 +1,64 @@
+id: '00001465'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1465
+data:
+  user 1 personas: 'My name is sarah.
+
+    I am a school teacher.
+
+    I teach 5th grade students near oakville , ny.
+
+    I love to read and relax by the lake on the weekends.
+
+    I enjoy watching tennis and golf on tv.'
+  user 2 personas: 'I am vegan.
+
+    I decided to become vegan a year ago.
+
+    I work at the grocery store.
+
+    Sometimes i volunteer at an urban farm.
+
+    I help around with bookkeeping and tours.'
+  Best Generated Conversation: 'User 1: Hi! I''m Sarah, a school teacher.
+
+
+    User 2: Hello Sarah! I''m John, and I work at the grocery store.
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to volunteer at the urban farm and help with bookkeeping and tours.
+
+
+    User 1: That sounds great! I love to read and relax by the lake on the weekends.
+
+
+    User 2: I''ve never been to the lake, but I''ve heard it''s beautiful.
+
+
+    User 1: It is! I love to go swimming and kayaking.
+
+
+    User 2: I''m not much of a swimmer, but I love kayaking!
+
+
+    User 1: Well, we''ll have to go kayaking together sometime.
+
+
+    User 2: That would be fun! I''m free this weekend.
+
+
+    User 1: Great! I''ll bring my kayak.
+
+
+    User 2: Sounds good! I''ll see you then.
+
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00001919
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1919
+data:
+  user 1 personas: 'I help my neighbor.
+
+    I live in a city.
+
+    I likw to go to the farmers markets to buy local veggies and fruits.
+
+    I have a dog and we go for walks.
+
+    I am a grandmother.'
+  user 2 personas: 'I am an old woman who lives on a social security check.
+
+    I only take the bus.
+
+    I babysit for the woman who lives next door.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: Hi there, I''m a grandma. What''s your name?
+
+    User 2: Hello, my name is Margaret.
+
+    User 1: It''s nice to meet you Margaret. What do you do for fun?
+
+    User 2: I enjoy babysitting for my neighbors, and I like to go to the farmers market.
+
+    User 1: I love going to the farmers market too! I always try to find the best local vegetables and fruits.
+
+    User 2: I do too! I like to support local businesses.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is yellow.
+
+    User 1: That''s a great color! It''s so cheerful.
+
+    User 2: I agree!
+
+    User 1: So, where do you live?
+
+    User 2: I live in the city.
+
+    User 1: Me too! I love living in the city. There''s always something to do.
+
+    User 2: I agree! There''s always something going on.
+
+    User 1: So, what do you like to do in the city?
+
+    User 2: I like to go to the park, go shopping, and see movies.
+
+    User 1: I like to do all of those things too!
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: I think we do too! It''s nice to meet you, Margaret.
+
+    User 2: It''s nice to meet you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

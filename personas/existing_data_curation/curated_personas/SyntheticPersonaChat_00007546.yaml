@@ -1,0 +1,78 @@
+id: '00007546'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7546
+data:
+  user 1 personas: 'My favorite book is anne of green gables.
+
+    My mom teaches kindergarten and my dad is a tax assessor.
+
+    I love owning nice office supplies.
+
+    I have always wanted a pot bellied pig.
+
+    I won a beauty pageant one time but did not feel like it was worth the effort.'
+  user 2 personas: 'It was too small.
+
+    I also eat too much french fries.
+
+    I smell like french fries.
+
+    I just got a new sweater.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: Me too! I love the humor and the way it makes me think about the universe.
+
+    User 1: I agree. It''s a really unique book.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool. What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That must be fun! I''ve always liked working with kids.
+
+    User 1: It is! They''re so full of energy and imagination.
+
+    User 2: I can imagine. So, what do you like to do for fun?
+
+    User 1: I love to read, go for walks, and spend time with my family.
+
+    User 2: Me too! I love spending time with my family. We go on a lot of trips together.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! We just got back from a trip to Disney World.
+
+    User 1: Oh, that sounds amazing! I''ve always wanted to go to Disney World.
+
+    User 2: It was so much fun! We rode all the rides and saw all the shows.
+
+    User 1: That sounds like a great time.
+
+    User 2: It was! I''m so glad we went.
+
+    User 1: Me too! So, what are your plans for the rest of the year?
+
+    User 2: I''m not sure yet. I might go on another trip or just relax at home.
+
+    User 1: Sounds like you have a lot of options.
+
+    User 2: I do! I''m excited to see what the future holds.
+
+    User 1: Me too! I''m sure it will be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

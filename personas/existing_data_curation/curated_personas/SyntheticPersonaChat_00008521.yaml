@@ -1,0 +1,84 @@
+id: 00008521
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8521
+data:
+  user 1 personas: 'I spend a lot of time driving my kids to sports events.
+
+    I own a black suburban.
+
+    I am a member of four book clubs , the pta , and two bunch groups.
+
+    I drink a lot of apple martinis when i get a girls night out.
+
+    I still dream about going to paris and designing clothes.'
+  user 2 personas: 'I live in portland , maine.
+
+    I live alone.
+
+    I like to take photos.
+
+    I love to hike.
+
+    I am an environmental engineer.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to take photos, hike, and go camping.
+
+    User 1: That sounds fun. I like to go hiking too.
+
+    User 2: Where do you like to hike?
+
+    User 1: I like to hike in the mountains. I live in Colorado, so there are a lot of great hiking trails here.
+
+    User 2: I''ve heard that Colorado is beautiful. I''ve never been there, but I''d love to go sometime.
+
+    User 1: You should! It''s a great place to hike.
+
+    User 2: I''ll have to keep that in mind.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an environmental engineer.
+
+    User 1: Oh, that sounds interesting. What does that involve?
+
+    User 2: I work on projects that help protect the environment. I do things like design pollution control systems and develop sustainable energy sources.
+
+    User 1: That sounds like important work.
+
+    User 2: I think it is. I''m glad to be able to do something that makes a difference.
+
+    User 1: So, what else do you do for fun?
+
+    User 2: I like to read, go to the movies, and play video games.
+
+    User 1: Those all sound like fun things to do.
+
+    User 2: They are. I like to do things that relax me and help me de-stress.
+
+    User 1: I understand that. I like to do the same thing.
+
+    User 1: So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent. I''d also like to find someone who shares my interests.
+
+    User 1: I think we''d get along well. I''m kind, funny, and intelligent. I also like to hike, read, and play video games.
+
+    User 2: It sounds like we have a lot in common. I''m glad we met.
+
+    User 1: Me too. I think we''re going to be friends.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

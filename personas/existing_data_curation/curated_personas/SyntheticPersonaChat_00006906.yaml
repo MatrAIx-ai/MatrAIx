@@ -1,0 +1,60 @@
+id: 00006906
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6906
+data:
+  user 1 personas: 'I am a painter and love to create art.
+
+    I am a talented singer and have won several competitions.
+
+    I am an aspiring writer.
+
+    I work as an extra for major motion pictures.'
+  user 2 personas: 'I live in upstate new york.
+
+    I work as a meeting coordinator.
+
+    I love to take road trips.
+
+    My favorite place to visit is seattle.
+
+    I live with my husband and two children.'
+  Best Generated Conversation: 'User 1: Hey, what do you like to do for fun?
+
+    User 2: I love to take road trips! I''ve been to Seattle a few times and it''s my favorite place to visit.
+
+    User 1: That''s awesome! I''ve always wanted to go to Seattle. What do you like about it so much?
+
+    User 2: I love the mountains and the water. There''s so much to do and see, and the people are so friendly.
+
+    User 1: That sounds amazing! I''m definitely going to have to check it out sometime.
+
+    User 2: You won''t regret it! What do you like to do for fun?
+
+    User 1: I''m a painter and singer. I love to create art and perform. I also work as an extra for major motion pictures.
+
+    User 2: That''s so cool! I''ve always wanted to be an actor.
+
+    User 1: It''s a lot of fun, but it can be tough to make it.
+
+    User 2: I''m sure it is. But it sounds like you''re doing great!
+
+    User 1: Thanks! I''m trying my best.
+
+    User 2: Well, I''m sure you''ll go far. You seem like a very talented person.
+
+    User 1: Thank you! I appreciate that.
+
+    User 2: No problem! So, what are you working on right now?
+
+    User 1: I''m working on a painting of a mountain scene. I''m also working on a song about love.
+
+    User 2: That sounds really cool! I''d love to see the painting when it''s finished.
+
+    User 1: Sure! I''ll let you know when it''s done.
+
+    User 2: Great! Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

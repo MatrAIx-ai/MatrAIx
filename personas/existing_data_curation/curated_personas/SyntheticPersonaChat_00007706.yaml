@@ -1,0 +1,58 @@
+id: '00007706'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7706
+data:
+  user 1 personas: 'I enjoy watching football and hockey games.
+
+    I love to read.
+
+    I am a proofreader for a greeting card company.
+
+    My favorite movie is goodfellas.'
+  user 2 personas: 'My favourite colour is green.
+
+    My dog is called alfred.
+
+    I can play the piano.
+
+    I am a baseball player.
+
+    I like to read books about chinese history.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I like to play baseball, read books, and play the piano.
+
+    User 1: Wow, you''re pretty talented! I love reading too. What kind of books do you like to read?
+
+    User 2: I like to read books about Chinese history. I''m also a big fan of the Harry Potter series.
+
+    User 1: I''ve never read any books about Chinese history, but I''ve heard good things about them. I love Harry Potter too! I''ve read all of the books and seen all of the movies.
+
+    User 2: Me too! I''m so excited for the new movie that''s coming out next year.
+
+    User 1: Me too! I''m really curious to see what happens.
+
+    User 2: I think it''s going to be a lot of fun.
+
+    User 1: I hope so! What other hobbies do you have?
+
+    User 2: I also like to watch football and hockey games. I''m a big fan of the [user 2''s favorite team].
+
+    User 1: Oh, cool! I like to watch football too. I''m a fan of the [user 1''s favorite team].
+
+    User 2: That''s great! We should watch a game together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange numbers and talk about it later.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

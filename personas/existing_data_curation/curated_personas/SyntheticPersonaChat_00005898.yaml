@@ -1,0 +1,62 @@
+id: 00005898
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5898
+data:
+  user 1 personas: 'My father was born in australia.
+
+    My mother was born in ireland.
+
+    My father was an author.
+
+    I have traveled to both ireland and australia.'
+  user 2 personas: 'Sometimes i like to visit thrift shops.
+
+    I like to upcycle my thrift shop finds and make new items.
+
+    I am an art teacher.
+
+    I like to sew my own clothing.'
+  Best Generated Conversation: 'User 1: I''m from the United States, but my father was born in Australia.
+
+    User 2: That''s cool! My parents are from the Philippines.
+
+    User 1: I''ve been to Ireland, but I''ve never been to the Philippines.
+
+    User 2: You should go! It''s a beautiful country.
+
+    User 1: I''d love to!
+
+    User 2: I''m an art teacher.
+
+    User 1: That''s cool! I''m an author.
+
+    User 2: Really? What kind of books do you write?
+
+    User 1: I write science fiction and fantasy novels.
+
+    User 2: That''s awesome! I love reading science fiction and fantasy.
+
+    User 1: Thanks! I''m glad to hear that.
+
+    User 2: I also like to sew my own clothing.
+
+    User 1: That''s cool! I''m not very good at sewing, but I love to make crafts.
+
+    User 2: I like to make crafts too. I''m pretty good at upcycling thrift shop finds.
+
+    User 1: That''s cool! I''ve never tried that.
+
+    User 2: It''s a lot of fun. You can find some really cool stuff at thrift shops.
+
+    User 1: I''ll have to try that sometime.
+
+    User 2: You should! It''s a great way to save money and make unique items.
+
+    User 1: I''m sure I would love it.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

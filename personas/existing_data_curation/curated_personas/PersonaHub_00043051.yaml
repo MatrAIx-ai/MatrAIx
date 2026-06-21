@@ -1,0 +1,19 @@
+id: '00043051'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43051
+persona_description: A meteorologist with expertise in tracking and predicting tropical cyclones, specifically hurricanes and their paths and impacts on coastal areas. They are knowledgeable about the atmospheric
+  conditions that contribute to the development and strength of these storms, as well as the impacts they can have on human life and infrastructure. They are interested in monitoring and analyzing satellite
+  imagery, such as infrared light and visible images, to better understand the storm's intensity and trajectory. They may also be interested in studying the impact of climate change on tropical cyclones
+  and their potential to cause more severe and frequent events in the future.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical cyclone prediction and tracking
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

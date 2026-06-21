@@ -1,0 +1,54 @@
+id: 00003294
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3294
+data:
+  user 1 personas: 'I am a georgia resident.
+
+    I like nfl and college football.
+
+    I play in a nfl fantasy football league.
+
+    I love to read fiction books.
+
+    My favorite fiction genres are sci fi and horror.'
+  user 2 personas: 'I like to go for bike rides.
+
+    I am a vegan.
+
+    I like the guitar.
+
+    I like music.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m a Georgia resident, and I love watching football. What about you?
+
+    User 2: I like to go for bike rides, and I''m a vegan.
+
+    User 1: Oh, that''s cool! I like reading fiction books, and my favorite genres are sci-fi and horror.
+
+    User 2: I like music, and I play the guitar.
+
+    User 1: That''s awesome! Do you play in a band?
+
+    User 2: No, I just play for fun.
+
+    User 1: Well, I''m sure you''re very good.
+
+    User 2: Thanks!
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m just hanging out, listening to music.
+
+    User 1: Cool. I''m going to watch some football.
+
+    User 2: Have fun!
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

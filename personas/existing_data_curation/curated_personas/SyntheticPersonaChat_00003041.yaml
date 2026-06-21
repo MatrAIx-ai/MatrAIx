@@ -1,0 +1,76 @@
+id: '00003041'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3041
+data:
+  user 1 personas: 'I don t like the beach.
+
+    I am a writer.
+
+    I m allergic to milk.
+
+    I dream of becoming a famous actress.
+
+    Zebras are my favorite animals.'
+  user 2 personas: 'I only eat organic food.
+
+    I own two snakes.
+
+    I collect comic books.
+
+    I am allergic to dust.
+
+    I have an autograph collection with more than 2000 signatures.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1 name].
+
+    User 2: Hi there! I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read comic books, collect autographs, and take care of my snakes.
+
+    User 1: That''s cool! I like to write and go to the beach.
+
+    User 2: I''m allergic to dust, so I can''t go to the beach.
+
+    User 1: Oh, that''s too bad. What''s your favorite thing to do at the beach?
+
+    User 2: I like to swim and sunbathe.
+
+    User 1: Me too! I love the feeling of the sun on my skin.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: What''s your favorite comic book series?
+
+    User 2: I like the X-Men.
+
+    User 1: Me too! They''re my favorite too!
+
+    User 2: What''s your favorite X-Men character?
+
+    User 1: I like Wolverine.
+
+    User 2: Me too! He''s so badass.
+
+    User 1: I know, right? I love his claws.
+
+    User 2: Me too! They''re so cool.
+
+    User 1: What''s your favorite autograph you have?
+
+    User 2: I have a signed copy of The X-Men #1.
+
+    User 1: That''s awesome! I''m jealous.
+
+    User 2: It''s a great piece of comic book history.
+
+    User 1: I''m sure it is. It sounds like you have a lot of cool stuff.
+
+    User 2: I do! I''m a big fan of comic books and autographs.
+
+    User 1: I can tell! You have a lot of interesting hobbies.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

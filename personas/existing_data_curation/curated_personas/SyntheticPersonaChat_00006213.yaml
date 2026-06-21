@@ -1,0 +1,56 @@
+id: '00006213'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6213
+data:
+  user 1 personas: 'I design video games for a living.
+
+    My wife recently got laid off from her human resources job.
+
+    My son plays on the local football team.
+
+    I have been on the design team for over 65 video games.
+
+    I am trying to create my own startup company in the gaming industry.'
+  user 2 personas: 'I love country music.
+
+    I drive a big truck.
+
+    I like to go hunting.
+
+    I like football on tv.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool. I''m a video game designer.
+
+    User 2: Really? What games have you worked on?
+
+    User 1: I''ve worked on a lot of games. Some of the most popular ones are Call of Duty, World of Warcraft, and Grand Theft Auto.
+
+    User 2: Wow! Those are some big games.
+
+    User 1: Yeah, they are. I''ve been really lucky to be able to work on such amazing projects.
+
+    User 2: What''s it like to be a video game designer?
+
+    User 1: It''s a lot of fun! I get to come up with new ideas and create worlds that people can explore.
+
+    User 2: That sounds really cool. I''m not sure I could ever do something like that.
+
+    User 1: It''s not as hard as you might think. You just need to have a good imagination and be able to tell a story.
+
+    User 2: I guess I could give it a try.
+
+    User 1: You should! I think you''d be great at it.
+
+    User 2: Thanks for the vote of confidence. I''ll have to think about it.
+
+    User 1: Sure. Let me know if you have any questions.
+
+    User 2: I will. Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

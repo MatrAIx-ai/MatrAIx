@@ -1,0 +1,86 @@
+id: 00000815
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 815
+data:
+  user 1 personas: 'I love to hunt.
+
+    My mother was a piano teacher.
+
+    I grew up in the deep south.
+
+    I hate seafood but love mexican food.'
+  user 2 personas: 'I never eat veggies.
+
+    I am strong.
+
+    I am young.
+
+    I am tall.
+
+    I love to run fast.'
+  Best Generated Conversation: 'User 1: I love to hunt.
+
+    User 2: That''s cool. What kind of animals do you hunt?
+
+    User 1: I like to hunt deer, elk, and bear.
+
+    User 2: Wow, that''s pretty impressive. I''ve never hunted anything bigger than a squirrel.
+
+    User 1: It''s a lot of fun, and it''s a great way to get exercise.
+
+    User 2: I bet it is. I''ve always wanted to try it, but I''m not sure I''m brave enough.
+
+    User 1: It''s not as scary as you think. And it''s really rewarding when you get a big kill.
+
+    User 2: I''ll have to keep that in mind.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, where do you usually go hunting?
+
+    User 1: I usually go in the deep south, where I grew up.
+
+    User 2: That sounds beautiful. I''ve never been to the deep south before.
+
+    User 1: You should! It''s a great place to visit.
+
+    User 2: I''ll have to put it on my list.
+
+    User 1: You won''t regret it.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, really? What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That''s so cool. I''ve always wanted to be a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: I bet it is. I can''t wait to start teaching.
+
+    User 1: You''ll do great.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to run. I''m really fast.
+
+    User 1: That''s cool. I''ve never been a runner myself.
+
+    User 2: You should give it a try. It''s a lot of fun.
+
+    User 1: I''ll have to keep that in mind.
+
+    User 2: You should! It''s a great way to get in shape.
+
+    User 1: I''ll let you know.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

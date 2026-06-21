@@ -1,0 +1,54 @@
+id: '00005261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5261
+data:
+  user 1 personas: 'I eat ice cream when i am sad.
+
+    I am a dog walker.
+
+    My best friend lives in japan.
+
+    I live in new york.'
+  user 2 personas: 'I miss my dad.
+
+    In reality i m 32 and live at home with my mother.
+
+    There i m a general of an orcish army.
+
+    I larp on the weekends in the forest.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I like to LARP.
+
+    User 1: I''ve never heard of that before. What is it?
+
+    User 2: It''s a live action role playing game. We dress up in costumes and act out different fantasy characters.
+
+    User 1: That sounds like fun! Where do you do it?
+
+    User 2: We have a group that meets in the forest on the weekends.
+
+    User 1: That''s awesome! I''d love to try it sometime.
+
+    User 2: You''re welcome to come with us next weekend.
+
+    User 1: I''ll have to check my schedule, but I''d love to.
+
+    User 2: Great! We have a lot of fun.
+
+    User 1: What''s your favorite part about it?
+
+    User 2: I love the sense of community. We''re all there to have fun and we''re all really supportive of each other.
+
+    User 1: That sounds amazing. I''m looking forward to it.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks for the invite.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

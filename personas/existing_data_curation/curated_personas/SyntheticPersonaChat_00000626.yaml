@@ -1,0 +1,72 @@
+id: '00000626'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 626
+data:
+  user 1 personas: 'I enjoy hiking.
+
+    I am an artist.
+
+    I speak french and english fluently.
+
+    I have two border collies.
+
+    I am planning to move to a new state soon.'
+  user 2 personas: 'My favorite color is red.
+
+    I spend my free time volunteering at nursing homes.
+
+    My dad was a cop.
+
+    I like to water ski.'
+  Best Generated Conversation: 'User 1: I love hiking too. I''m planning to move to a new state soon and I''m looking for some good hiking trails in the area.
+
+    User 2: That''s awesome! I''m sure you''ll find some great trails. I love hiking in the mountains.
+
+    User 1: Me too! I''m excited to explore the new state.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks!
+
+    User 2: What kind of art do you do?
+
+    User 1: I paint, mostly landscapes.
+
+    User 2: That''s cool. I love art. I wish I could paint.
+
+    User 1: It''s not as hard as it looks. You should give it a try.
+
+    User 2: Maybe I will.
+
+    User 1: I''m sure you''d be good at it.
+
+    User 2: Thanks!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my family.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is "The Great Gatsby."
+
+    User 1: I''ve never read it. What''s it about?
+
+    User 2: It''s about a man who falls in love with a woman who is unattainable.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should. It''s a classic.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

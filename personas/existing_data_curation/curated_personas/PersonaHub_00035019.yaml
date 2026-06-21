@@ -1,0 +1,21 @@
+id: 00035019
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35019
+persona_description: A scientist with expertise in cybersecurity, specifically focusing on the vulnerabilities of smart grid technology and the potential for cyber attacks. Chee-Wooi Ten, an associate professor
+  of electrical and computer engineering at Michigan Technological University, is leading a team that has identified the gaps between physical equipment and intangible software in the power grid. Ten and
+  his team are working on developing a framework that would constantly assess the bottleneck of a power grid and its interconnection with neighbouring grids, using quantitative methods to prioritize cybersecurity
+  protection. This approach aims to ensure that power grids are operated in a more secure and safer manner. Ten believes that by better understanding the system's weaknesses, it is easier to be strategic
+  and shore up security risks. He also emphasizes the importance of improving regulations with specifics to match actual infrastructure needs and providing cyber security insurance to help mitigate the
+  risks associated with the evolving cyber security threats.
+expertise:
+  general_domain_top1pct: cybersecurity
+  specific_domain_top1pct: cybersecurity of smart grid technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

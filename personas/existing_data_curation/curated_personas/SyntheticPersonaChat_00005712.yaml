@@ -1,0 +1,50 @@
+id: '00005712'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5712
+data:
+  user 1 personas: 'Sometimes i go to yoga classes.
+
+    I work in the office , 9 till 5.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.
+
+    I like italian cusine.'
+  user 2 personas: 'I enjoy crosswords , crocheting , and football.
+
+    I enjoy karaoke every friday night.
+
+    I m allergic to apples yet still eat them.
+
+    I coach the girl s volley ball team.
+
+    I m a sixth grade teacher.'
+  Best Generated Conversation: 'User 1: I''m glad you enjoy Italian cuisine. I went to Italy this summer and had a wonderful time. I ate a lot of delicious food and saw some beautiful sights.
+
+    User 2: That sounds amazing! I''m sure you had a great time. I''ve always wanted to go to Italy, but I''ve never had the chance.
+
+    User 1: You should definitely go! It''s a beautiful country with a rich history and culture.
+
+    User 2: I''ll definitely look into it. In the meantime, I''ll just have to enjoy the Italian food I can get here.
+
+    User 1: Yeah, that''s always a good option. What''s your favorite Italian dish?
+
+    User 2: I love pasta. I could eat it every day.
+
+    User 1: Me too! I love pasta with tomato sauce and meatballs.
+
+    User 2: That''s my favorite too! I also love pasta with pesto sauce and shrimp.
+
+    User 1: That sounds delicious! I''ve never tried it before.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: No problem! I''m always happy to talk about food.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00001314'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1314
+data:
+  user 1 personas: 'I like to garden.
+
+    I like photography.
+
+    I love traveling.
+
+    I like to bake pies.'
+  user 2 personas: 'I m learning to play the guitar.
+
+    I work at the deli counter.
+
+    I like to go fishing.
+
+    I m a college drop out.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the guitar, go fishing, and I''m a college drop out.
+
+    User 1: That''s cool! I like to garden, bake pies, and travel.
+
+    User 2: I love to bake pies too! Do you have a favorite recipe?
+
+    User 1: Yes, I love to make apple pie. It''s my favorite.
+
+    User 2: That''s a great choice! Apple pie is delicious.
+
+    User 1: Do you have any plans for the weekend?
+
+    User 2: I''m not sure yet. I might go fishing or play the guitar.
+
+    User 1: Sounds like a good plan. I''m going to bake an apple pie.
+
+    User 2: That sounds delicious! I love apple pie.
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: Do you mind if I come over and have some?
+
+    User 1: Sure, that would be great!
+
+    User 2: Awesome! I''ll bring some of my homemade chocolate chip cookies.
+
+    User 1: Sounds great! I love chocolate chip cookies.
+
+    User 2: I''m glad you do! I''ll see you later.
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

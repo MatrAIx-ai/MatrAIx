@@ -1,0 +1,50 @@
+id: 00000086
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 86
+data:
+  user 1 personas: 'I am chubby.
+
+    I love to larp.
+
+    My favorite band is insane clown posse.
+
+    I work as an interior designer.
+
+    I am tall and blonde.'
+  user 2 personas: 'I also own a cupcake business.
+
+    I am always late.
+
+    I sing in the shower.
+
+    I work in a diner.'
+  Best Generated Conversation: 'User 1: I''m glad to meet you! What do you do for fun?
+
+    User 2: I work in a diner and I also own a cupcake business.
+
+    User 1: Oh, that sounds interesting! What''s your favorite part of your job?
+
+    User 2: I love the creative aspect of making cupcakes. I also love meeting new people.
+
+    User 1: That''s great! I''m a tall and blonde interior designer. I love to larp and my favorite band is Insane Clown Posse.
+
+    User 2: Larp? What''s that?
+
+    User 1: LARP stands for Live Action Role Playing. It''s a form of role playing where people dress up as characters and act out a story.
+
+    User 2: That sounds like fun! I''ve never done anything like that before.
+
+    User 1: You should try it! It''s a great way to meet new people and have some fun.
+
+    User 2: I''ll have to look into it. I''m always up for trying new things.
+
+    User 1: Good! I''m glad I could introduce you to the world of LARPing.
+
+    User 2: Thanks! I think I''m going to like it.
+
+    User 1: I hope so'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00000870
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 870
+data:
+  user 1 personas: 'I ve an iphone.
+
+    I live with my parents.
+
+    My favorite color is red.
+
+    I prefer headsets over earbuds.
+
+    I travel often.'
+  user 2 personas: 'My favorite color is red orange.
+
+    I enjoy watching horror flicks.
+
+    I want to be a music teacher.
+
+    I play the violin.
+
+    My grandma raised me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you. What''s your favorite color?
+
+    User 2: My favorite color is red-orange.
+
+    User 1: That''s cool! Mine is red.
+
+    User 2: Oh, that''s funny. My grandma raised me, and she loves red too.
+
+    User 1: That''s a coincidence! What do you like to do for fun?
+
+    User 2: I like to play the violin, and I enjoy watching horror flicks.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to play the violin.
+
+    User 2: It''s a lot of fun. What do you do for fun?
+
+    User 1: I like to travel, and I prefer headsets over earbuds.
+
+    User 2: That''s cool! I like to travel too. Where have you been?
+
+    User 1: I''ve been to a lot of places, but my favorite place is London.
+
+    User 2: Oh, that''s cool! I''ve always wanted to go to London.
+
+    User 1: It''s a great city. What do you want to do when you grow up?
+
+    User 2: I want to be a music teacher.
+
+    User 1: Oh, that''s great! I''m sure you''ll be a great teacher.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

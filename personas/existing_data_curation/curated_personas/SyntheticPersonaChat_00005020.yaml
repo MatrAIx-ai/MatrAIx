@@ -1,0 +1,66 @@
+id: '00005020'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5020
+data:
+  user 1 personas: 'I like cooking healthy meals.
+
+    I enjoy dating women.
+
+    I am retired.
+
+    I like to go out to the bars.'
+  user 2 personas: 'I have a job as a dj at a radio station.
+
+    I am blind.
+
+    I use a cane to help me get around.
+
+    I have many friends.
+
+    I once drove a car ! my friend told me what to do while i drove.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thanks! How about yourself?
+
+    User 1: I''m doing well, thank you! I''m retired and I love it.
+
+    User 2: That''s great! I''m still working, but I''m a DJ at a radio station.
+
+    User 1: Oh, that sounds fun! Do you like it?
+
+    User 2: I love it! I get to play music and talk to people all day.
+
+    User 1: That sounds amazing! I''m not very musical, but I do enjoy listening to music.
+
+    User 2: Well, maybe I can play you a song sometime!
+
+    User 1: That would be great! I''d love that.
+
+    User 2: Okay, I''ll keep that in mind.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go out to bars and socialize with my friends. I also like to cook healthy meals.
+
+    User 1: That sounds like a lot of fun. I also enjoy cooking and going out to bars.
+
+    User 2: Great! Maybe we can go out to a bar together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Okay, I''ll let you know when I''m free.
+
+    User 1: Okay, great!
+
+    User 2: It was nice talking to you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

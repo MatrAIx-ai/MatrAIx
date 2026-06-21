@@ -1,0 +1,18 @@
+id: '00030017'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30017
+persona_description: A healthcare provider who specializes in obstetrics and gynecology, particularly in the field of ultrasound imaging. They are experienced in interpreting ultrasound scans and have a
+  deep understanding of the benefits and limitations of this imaging technique. They are knowledgeable about the preparation for ultrasound exams and are committed to providing accurate and timely results
+  to their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: obstetrics and gynecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: ultrasound imaging in obstetrics and gynecology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

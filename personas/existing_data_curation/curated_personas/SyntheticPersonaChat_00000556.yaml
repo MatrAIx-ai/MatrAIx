@@ -1,0 +1,86 @@
+id: '00000556'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 556
+data:
+  user 1 personas: 'I ride horses.
+
+    I try to limit how much meat i eat for health reasons.
+
+    I have many homes.
+
+    I like to ride motorcycles.'
+  user 2 personas: 'I was born 20 years ago.
+
+    I live in the usa.
+
+    I was born male and transitioned to female when i was 17.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hey, I''m [name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to ride horses, motorcycles, and read books.
+
+    User 1: Oh, I like riding horses too! What''s your favorite breed?
+
+    User 2: I like Arabians and Thoroughbreds. What about you?
+
+    User 1: I like Thoroughbreds too! I also like Quarter Horses.
+
+    User 2: Those are great breeds. I''ve never ridden a Quarter Horse, but I''ve heard they''re a lot of fun.
+
+    User 1: They are! They''re really fast and agile.
+
+    User 2: I''m glad to hear that. I''ll have to try riding one sometime.
+
+    User 1: You definitely should! They''re a great breed.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I also like to read books. I''m a big fan of historical fiction.
+
+    User 2: Oh, that''s cool. I like historical fiction too! I''m a big fan of the Outlander series.
+
+    User 1: I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 2: You definitely should! It''s really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in programming.
+
+    User 2: It''s a lot of fun! I''m glad I found a career that I enjoy.
+
+    User 1: I''m glad you did too.
+
+    User 2: Thanks.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to concerts and play video games.
+
+    User 1: Oh, I like concerts too! What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but I''m mostly into rock, indie, and alternative.
+
+    User 1: Oh, that''s cool. I like a lot of the same kind of music.
+
+    User 2: That''s great! I''m always looking for new music to listen to.
+
+    User 1: Me too! I''ll have to give you some of my recommendations sometime.
+
+    User 2: That would be great! I''d love to hear them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

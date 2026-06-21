@@ -1,0 +1,78 @@
+id: '00002735'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2735
+data:
+  user 1 personas: 'I can play the violin.
+
+    I can t sing very well.
+
+    I love chocolate.
+
+    I am from georgia.
+
+    I want to have two kids.'
+  user 2 personas: 'I own 3 cats.
+
+    I love candy.
+
+    I am a very funny woman.
+
+    I deliver packages for a living.
+
+    I drive a honda car.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Georgia.
+
+    User 1: Me too! What city?
+
+    User 2: I''m from Savannah.
+
+    User 1: No way, I''m from Savannah too!
+
+    User 2: That''s so cool! What do you do for a living?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that''s great. I''m a delivery driver.
+
+    User 1: That must be fun.
+
+    User 2: It''s not so bad. I get to see a lot of different people.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and spend time with my cats.
+
+    User 1: Me too! I love cats.
+
+    User 2: I have three.
+
+    User 1: That''s a lot of cats!
+
+    User 2: I know, they''re a handful.
+
+    User 1: I bet they are.
+
+    User 2: But I love them.
+
+    User 1: I can tell.
+
+    User 2: So, what are you up to today?
+
+    User 1: Not much, just hanging out with my kids.
+
+    User 2: That sounds fun. I have to get back to work.
+
+    User 1: Oh, okay. Well, it was nice to meet you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

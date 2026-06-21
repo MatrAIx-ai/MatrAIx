@@ -1,0 +1,64 @@
+id: '00004275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4275
+data:
+  user 1 personas: 'I am a nurse at a hospital.
+
+    My favorite food is mexican food.
+
+    My favorite band is the rolling stones.
+
+    I am a mother.'
+  user 2 personas: 'My favorite singer is justin timberlake.
+
+    I am a mother to two beautiful boys.
+
+    My family and i go camping every month.
+
+    I am a full time mom.
+
+    I enjoy horseback riding.'
+  Best Generated Conversation: 'User 1: Hi! I''m (User 1).
+
+    User 2: Hi! I''m (User 2).
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What are you doing today?
+
+    User 2: I''m just hanging out with my kids.
+
+    User 1: That sounds nice. I''m a nurse at a hospital.
+
+    User 2: Oh, that''s cool! What''s your favorite part about being a nurse?
+
+    User 1: I love helping people and making a difference in their lives.
+
+    User 2: That''s so great. I''m a full time mom, so I don''t really have a job.
+
+    User 1: That''s okay. You''re doing an important job by raising your children.
+
+    User 2: Thank you. I love being a mom.
+
+    User 1: What do you like to do with your kids?
+
+    User 2: We love to go camping, play games, and go to the park.
+
+    User 1: That sounds like a lot of fun. I love camping too.
+
+    User 2: We''re going camping next weekend. Do you want to come with us?
+
+    User 1: I would love to, but I have to work.
+
+    User 2: That''s okay. Maybe next time.
+
+    User 1: Sounds good. Have fun camping!
+
+    User 2: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

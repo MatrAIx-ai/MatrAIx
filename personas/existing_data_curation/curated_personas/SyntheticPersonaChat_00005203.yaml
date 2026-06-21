@@ -1,0 +1,74 @@
+id: '00005203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5203
+data:
+  user 1 personas: 'Winter is my favorite season.
+
+    I don t like wearing a swimsuit.
+
+    My parents are lawyers.
+
+    If i can t order it on the internet , i don t need it.'
+  user 2 personas: 'I drive a nice car.
+
+    I work all the time.
+
+    My family is very important to me.
+
+    I take pride in my job managing the restaurant.
+
+    My brothers work with me.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I manage a restaurant.
+
+    User 1: Oh, that sounds like a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is. What''s your favorite part of the job?
+
+    User 2: My favorite part is getting to work with my family.
+
+    User 1: Oh, that''s nice. Are your brothers in the business too?
+
+    User 2: Yes, they are.
+
+    User 1: That''s cool. So what''s the most challenging part of your job?
+
+    User 2: The most challenging part is the long hours.
+
+    User 1: Yeah, I can imagine. Do you have any other hobbies or interests outside of work?
+
+    User 2: I like to spend time with my family and friends.
+
+    User 1: That''s nice. What''s your favorite thing to do with them?
+
+    User 2: We like to go out to eat, go shopping, and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to do similar things with my family.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: I love winter. I love the snow and the cold weather.
+
+    User 1: I''m the opposite. I love summer. I love the sun and the warm weather.
+
+    User 2: I can see why you like summer. It is very nice.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. What are yours?
+
+    User 1: I''m going to spend time with my family. We''re going to go out to eat and see a movie.
+
+    User 2: That sounds like a lot of fun. I''m glad you have plans for the weekend.
+
+    User 1: Thanks. I''m excited to get some time to relax and spend with my family.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

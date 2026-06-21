@@ -1,0 +1,72 @@
+id: 00008333
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8333
+data:
+  user 1 personas: 'My two dogs are the best friends a girl could have.
+
+    I want to be an astronaut when i grow up.
+
+    I have a poster of neil tyson degrasse on my wall.
+
+    Penn teller are my favorite magicians.
+
+    I love lasagna like i m garfield.'
+  user 2 personas: 'Coffee is important to me.
+
+    I don t like feeling obligated to hang out with someone.
+
+    I can tell right away if i m going to like someone.
+
+    I love winning.'
+  Best Generated Conversation: 'User 1: Hi! I''m a big fan of Penn and Teller.
+
+    User 2: Me too! They''re my favorite magicians.
+
+    User 1: I love how they always play up their rivalry.
+
+    User 2: Me too! It''s so funny.
+
+    User 1: Have you seen their show "Penn & Teller: Fool Us"?
+
+    User 2: Yeah, I love that show! It''s so much fun to see them try to figure out how the magicians are doing their tricks.
+
+    User 1: Me too! I always try to figure it out, but I never can.
+
+    User 2: Me neither! They''re so good at what they do.
+
+    User 1: Have you ever tried to do magic?
+
+    User 2: No, I''m not very good at it.
+
+    User 1: Me neither! I''ve tried a few times, but I''ve never been able to figure it out.
+
+    User 2: I''m sure you could do it if you practiced.
+
+    User 1: Maybe! I''ll have to give it a try.
+
+    User 2: Good luck!
+
+    User 1: Thanks!
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: Me too! I love to read and write. I don''t play video games very much, though.
+
+    User 1: I love reading science fiction and fantasy novels.
+
+    User 2: Me too! I love those genres.
+
+    User 1: I also like to read non-fiction books about history, science, and politics.
+
+    User 2: Me too! I love learning new things.
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too! I think we''re going to be good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

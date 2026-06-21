@@ -1,0 +1,72 @@
+id: 00008410
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8410
+data:
+  user 1 personas: 'I starred in television commercials when i was young.
+
+    I am an actor.
+
+    I have been acting since i was ten years old.
+
+    I made my first movie when i was 18.'
+  user 2 personas: 'I recently got a cat.
+
+    I have four children.
+
+    I am an artist.
+
+    I enjoy walking for exercise.
+
+    I love watching game of thrones.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m good, how are you?
+
+    User 1: I''m doing well.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to paint, I have four children, and I recently got a cat.
+
+    User 1: Oh, that sounds like a lot of fun!
+
+    User 2: It is, I love being busy.
+
+    User 1: I can relate.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I''m an actor, I''ve been acting since I was ten years old, and I made my first movie when I was 18.
+
+    User 2: Oh, that''s so cool! What kind of movies do you like to act in?
+
+    User 1: I like to act in all kinds of movies, but I especially like to act in comedies.
+
+    User 2: I love comedies! What''s your favorite comedy movie?
+
+    User 1: My favorite comedy movie is The Hangover.
+
+    User 2: That''s a great movie! I love that movie too.
+
+    User 1: So, what are you watching on TV right now?
+
+    User 2: I''m watching Game of Thrones.
+
+    User 1: Oh, that''s a good show! I''ve seen a few episodes.
+
+    User 2: It''s a really good show, I''m hooked on it.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should, it''s really good.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00021006'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21006
+persona_description: A scientist and researcher who specializes in the study of protein-DNA complexes and their mechanisms, particularly those related to transposition and regulation. Their research interests
+  include defining interactions between proteins and their regulatory proteins, understanding the regulation of transposition mechanisms, and studying the disassembly and degradation of protein-DNA complexes.
+  They have expertise in protein folding, protein-protein interactions, and the role of proteins in cellular processes.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: molecular biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: protein-DNA interactions
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

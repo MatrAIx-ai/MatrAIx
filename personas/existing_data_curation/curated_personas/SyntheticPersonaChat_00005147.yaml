@@ -1,0 +1,64 @@
+id: '00005147'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5147
+data:
+  user 1 personas: 'My favorite hobby is reading.
+
+    I am a digital artist.
+
+    My favorite author is stephen king.
+
+    I was born in france and moved to canada.'
+  user 2 personas: 'I broke my nose when i was ten.
+
+    I enjoy jazz music.
+
+    I ride my bicycle everywhere.
+
+    I work at a factory.'
+  Best Generated Conversation: 'User 1: Hey! I''m [User 1''s name].
+
+    User 2: Hey! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my bike, listen to jazz music, and breakdance.
+
+    User 1: That sounds cool! I like to read, digital art, and draw.
+
+    User 2: Oh, that''s cool! I used to draw a lot when I was younger.
+
+    User 1: What kind of things did you draw?
+
+    User 2: I used to draw a lot of animals and landscapes.
+
+    User 1: That''s awesome! I wish I could draw more.
+
+    User 2: You should give it a try! It''s really fun.
+
+    User 1: I might just do that!
+
+    User 2: You should! I can give you some pointers if you need them.
+
+    User 1: That would be great! Thanks!
+
+    User 2: No problem! So, what''s your favorite book?
+
+    User 1: My favorite book is The Stand by Stephen King.
+
+    User 2: Oh, that''s a good book! I''ve read it a few times.
+
+    User 1: Me too! It''s my favorite book of all time.
+
+    User 2: It''s definitely one of my favorites too.
+
+    User 1: I''m glad to hear that!
+
+    User 2: I''m sure we''ll get along great.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

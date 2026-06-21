@@ -1,0 +1,62 @@
+id: '00000513'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 513
+data:
+  user 1 personas: 'I love hockey.
+
+    I have flown out of the country.
+
+    I studied business as my major.
+
+    My befriend is from out of town.'
+  user 2 personas: 'My favorite hobby is reading.
+
+    I was born in france and moved to canada.
+
+    I am a digital artist.
+
+    My husband is an author and we have twins together.
+
+    My favorite author is stephen king.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I love to read, draw, and play video games.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but my favorite authors are Stephen King, Neil Gaiman, and Margaret Atwood.
+
+    User 1: I like Stephen King too! What''s your favorite book of his?
+
+    User 2: I think my favorite book of his is "The Stand." It''s a post-apocalyptic novel about a virus that kills most of the world''s population.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: I hope you like it!
+
+    User 1: What do you like to draw?
+
+    User 2: I like to draw characters from video games and anime. I also like to draw fantasy landscapes.
+
+    User 1: I love video games too! What''s your favorite video game?
+
+    User 2: My favorite video game is "The Legend of Zelda: Ocarina of Time." It''s a classic!
+
+    User 1: I love that game too! It''s so much fun!
+
+    User 2: I agree! It''s one of my all-time favorite games.
+
+    User 1: What''s your favorite thing about the game?
+
+    User 2: I love the story and the characters. I also love the gameplay. It''s so much fun to explore the world and solve puzzles.
+
+    User 1: I agree! It''s a really well-made game.
+
+    User 2: I''m glad you like it!
+
+    User 1: I do! It''s one of my favorite games of all time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

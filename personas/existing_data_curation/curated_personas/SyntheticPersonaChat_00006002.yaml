@@ -1,0 +1,62 @@
+id: '00006002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6002
+data:
+  user 1 personas: 'I don t cook and usually eat out.
+
+    I love animals.
+
+    I am near sighted and wear contact lenses.
+
+    I have trouble losing weight.'
+  user 2 personas: 'My family owned a small restaurant.
+
+    I work 9 to 5 job.
+
+    I like to cook.
+
+    When i retire i want to open a bakery.
+
+    Sometimes i volunteer at the soup kitchen.'
+  Best Generated Conversation: 'User 1: Hi! I''m a big animal lover. What are some of your favorite animals?
+
+    User 2: I love cats and dogs. I also like rabbits and hamsters.
+
+    User 1: Me too! I have a cat named Mittens. She''s the best.
+
+    User 2: I love Mittens! What kind of cat is she?
+
+    User 1: She''s a tabby cat. She''s really fluffy and cute.
+
+    User 2: I love tabby cats! They''re so friendly.
+
+    User 1: Yeah, Mittens is really friendly. She loves to play and cuddle.
+
+    User 2: Sounds like a great cat!
+
+    User 1: She is! I''m so glad I have her.
+
+    User 2: I''m glad to hear that. What else do you like to do?
+
+    User 1: I like to cook, but I''m not very good at it. I like to go out to eat a lot.
+
+    User 2: I''m the opposite! I love to cook, but I don''t get to do it very often. I''m working on starting my own bakery when I retire.
+
+    User 1: That''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I hope so. I also like to volunteer at the soup kitchen. It''s a lot of work, but it''s really rewarding.
+
+    User 1: That''s great! I''m glad you''re doing something to help others.
+
+    User 2: Me too. I think it''s important to give back.
+
+    User 1: I agree. It makes you feel good.
+
+    User 2: It does. I''m glad we''re talking. I feel like I''ve been able to relate to you a lot.
+
+    User 1: Me too! I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

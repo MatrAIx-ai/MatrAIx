@@ -1,0 +1,96 @@
+id: 00003781
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3781
+data:
+  user 1 personas: 'I ve never met my father.
+
+    I speak fluent french.
+
+    My mother works at a bank.
+
+    My favorite food is mushroom ravioli.'
+  user 2 personas: 'I love rock climbing.
+
+    My favorite movie is django unchained.
+
+    I like long walks on the beach.
+
+    I work at a retail store.
+
+    I drive a honda civic.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to rock climb!
+
+    User 1: That''s awesome! I''ve never tried rock climbing before.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: I''ll have to give it a try. What else do you like to do?
+
+    User 2: I also like to go on long walks on the beach.
+
+    User 1: I love long walks on the beach too!
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is mushroom ravioli.
+
+    User 2: That sounds delicious!
+
+    User 1: It is! I love the combination of mushrooms and cheese.
+
+    User 2: I''m not a big fan of mushrooms, but I love cheese.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is Django Unchained.
+
+    User 1: I''ve never seen that movie. Is it good?
+
+    User 2: It''s amazing! It''s a western movie with a lot of action and violence.
+
+    User 1: It sounds like a good movie. I''ll have to check it out.
+
+    User 2: You should!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at a retail store.
+
+    User 1: What kind of retail store?
+
+    User 2: It''s a clothing store.
+
+    User 1: Oh, cool! I like clothes shopping.
+
+    User 2: Me too! I get to wear a lot of different clothes at work.
+
+    User 1: That sounds fun! What kind of car do you drive?
+
+    User 2: I drive a Honda Civic.
+
+    User 1: I like Honda Civics! They''re great cars.
+
+    User 2: They are! They''re reliable and fuel-efficient.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to go rock climbing, go for walks on the beach, and watch movies.
+
+    User 1: That sounds like a lot of fun! I like to do similar things in my free time.
+
+    User 2: It sounds like we have a lot in common!
+
+    User 1: We do! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

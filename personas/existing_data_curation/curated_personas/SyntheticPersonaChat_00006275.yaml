@@ -1,0 +1,88 @@
+id: '00006275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6275
+data:
+  user 1 personas: 'I m still single at the age of 35.
+
+    My dog s name is wonwon.
+
+    I teach both japanese and drawing classes.
+
+    I still have a thick accent so words like hippopotamus are difficult.'
+  user 2 personas: 'I like the tv show the walking dead.
+
+    I like to hunt.
+
+    I love the tigers baseball team.
+
+    I am thin.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to watch TV, go hunting, and play video games.
+
+    User 1: Oh, that''s cool. I like to watch TV and play video games too.
+
+    User 2: What''s your favorite TV show?
+
+    User 1: I like to watch "The Walking Dead."
+
+    User 2: Oh, that''s one of my favorites too! I''m really excited for the new season.
+
+    User 1: Me too! I''m curious to see what happens next.
+
+    User 2: Have you seen the new trailer yet?
+
+    User 1: No, I haven''t. I''ll have to check it out.
+
+    User 2: It''s really good! It gives you a little bit of a preview of what''s going to happen in the new season.
+
+    User 1: Cool, I''ll definitely check it out.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool. What grade do you teach?
+
+    User 1: I teach Japanese and drawing.
+
+    User 2: Wow, that''s interesting. Do you like your job?
+
+    User 1: I love my job! I love teaching and I love working with kids.
+
+    User 2: That''s great! I''m glad you like your job.
+
+    User 1: Thanks!
+
+    User 2: So, what''s your dog''s name?
+
+    User 1: My dog''s name is Wonwon.
+
+    User 2: Oh, that''s a cute name. What kind of dog is he?
+
+    User 1: He''s a Shiba Inu.
+
+    User 2: Oh, I love Shiba Inus! They''re so cute.
+
+    User 1: He is! He''s the best dog ever.
+
+    User 2: I''m sure he is.
+
+    User 1: So, what''s your favorite team?
+
+    User 2: My favorite team is the Detroit Tigers.
+
+    User 1: Oh, that''s cool. I''m a Tigers fan too!
+
+    User 2: Awesome! We should go to a game sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

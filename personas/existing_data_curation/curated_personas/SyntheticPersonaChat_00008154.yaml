@@ -1,0 +1,66 @@
+id: 00008154
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8154
+data:
+  user 1 personas: 'I have taken formal music lessons since i was 5.
+
+    I wish i could spend more time at home.
+
+    I am a musician.
+
+    I like to write my own songs.
+
+    My best friend is in a band with me.'
+  user 2 personas: 'I am seven years old.
+
+    I like to play soccer.
+
+    And , my best friend is calden.
+
+    I just got my rejection letter from the gifted program.'
+  Best Generated Conversation: 'User 1: Hey, I''m a musician too! What instrument do you play?
+
+    User 2: I play the violin.
+
+    User 1: That''s awesome! I play the guitar and the piano.
+
+    User 2: That''s cool! I''ve always wanted to learn how to play the guitar.
+
+    User 1: It''s not that hard, you should give it a try!
+
+    User 2: Maybe I will.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I like to play classical music.
+
+    User 1: Me too! I''m a big fan of Mozart and Beethoven.
+
+    User 2: I love those guys too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, read books, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun! I like to do those things too.
+
+    User 2: Cool! Maybe we can hang out sometime and play some soccer.
+
+    User 1: That would be fun! I''ll bring my guitar and we can play some music too.
+
+    User 2: That sounds like a great plan!
+
+    User 1: What time are you free?
+
+    User 2: I''m free anytime this weekend.
+
+    User 1: This weekend works for me! How about we meet at the park at 10am on Saturday?
+
+    User 2: That sounds perfect! I''ll see you there.
+
+    User 1: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

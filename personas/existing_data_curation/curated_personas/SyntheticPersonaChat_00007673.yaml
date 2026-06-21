@@ -1,0 +1,54 @@
+id: '00007673'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7673
+data:
+  user 1 personas: 'My favorite subject in school was science.
+
+    Pizza is my favorite food.
+
+    I am single and not looking.
+
+    My mom is a cancer survivor.
+
+    My favorite hobby is reading suspense novels.'
+  user 2 personas: 'My brother works at best buy.
+
+    I love video games.
+
+    I have two cats , milo and fio.
+
+    My favorite sport is soccer.
+
+    I am canadian.'
+  Best Generated Conversation: 'User 1: Hi! What''s your favorite sport?
+
+    User 2: Soccer! I''m from Canada and it''s a big sport here.
+
+    User 1: Oh, that''s cool. I''ve never been to Canada, but I''ve heard it''s a beautiful country.
+
+    User 2: It is! I love it here. What''s your favorite subject in school?
+
+    User 1: Science! I love learning about how the world works.
+
+    User 2: That''s awesome! I''m more of a math person myself.
+
+    User 1: I like math too! What''s your favorite video game?
+
+    User 2: I love the Legend of Zelda series. I''m a big fan of fantasy games.
+
+    User 1: Oh, me too! I love the Legend of Zelda games. I''ve played them all.
+
+    User 2: That''s awesome! I''ve only played a few of them, but I love them all.
+
+    User 1: I''m a big fan of suspense novels. What''s your favorite book?
+
+    User 2: I love the Harry Potter series! I''ve read them all multiple times.
+
+    User 1: Oh, me too! I love the Harry Potter series. I''ve read them all too.
+
+    User 2: That''s awesome! I''m glad to meet someone who''s a fan of all the same things I am.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

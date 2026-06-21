@@ -1,0 +1,74 @@
+id: '00006227'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6227
+data:
+  user 1 personas: 'I hate to workout , but i need to.
+
+    I have a bicycle.
+
+    I am very good at the drums.
+
+    I have three dogs at home.
+
+    I need to take my blood sugar everyday.'
+  user 2 personas: 'I live in a tiny house to save money.
+
+    I collect single malt scotch.
+
+    I listen to blues and jazz.
+
+    I tend bar on the weekends.
+
+    During the week i go to college to become a lawyer.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi, I''m [username].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a lawyer in training. During the week, I go to college and on the weekends, I tend bar.
+
+    User 1: Wow, that must be a lot of work!
+
+    User 2: It is, but it''s worth it. I''m passionate about helping people, and I think being a lawyer is the best way to do that.
+
+    User 1: That''s great! I''m sure you''ll be a great lawyer.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to listen to music. My favorite genres are blues and jazz. I also like to collect single malt scotch.
+
+    User 1: That''s awesome! I love scotch too. My favorite is Lagavulin 16.
+
+    User 2: I''ve never had Lagavulin 16, but I''ve heard great things about it. I''ll have to try it sometime.
+
+    User 1: You should! It''s a great scotch.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I love to play the drums. I''ve been playing since I was a kid.
+
+    User 2: That''s cool! I''ve always wanted to learn how to play the drums.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: You should! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. What about you?
+
+    User 1: I''m not sure either. Maybe we can hang out sometime?
+
+    User 2: That sounds like fun! I''d love to hang out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

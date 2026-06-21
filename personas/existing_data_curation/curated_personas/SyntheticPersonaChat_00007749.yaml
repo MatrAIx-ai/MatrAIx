@@ -1,0 +1,58 @@
+id: 00007749
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7749
+data:
+  user 1 personas: 'I work at a non profit that helps children.
+
+    I am allergic to shellfish.
+
+    My favorite food is cheese.
+
+    I like horseback riding.'
+  user 2 personas: 'My father died when i was 2.
+
+    I hate to lose.
+
+    I love fishing.
+
+    My favorite season is spring.'
+  Best Generated Conversation: 'User 1: Hi, I''m Tom. I work at a non profit that helps children.
+
+    User 2: Hi, I''m Jill. My father died when I was 2.
+
+    User 1: I''m so sorry to hear that.
+
+    User 2: Thanks. It was a long time ago, but I still miss him.
+
+    User 1: I understand. Do you have any other hobbies?
+
+    User 2: I love fishing. I love being outdoors and I love the challenge of catching a big fish.
+
+    User 1: That sounds like a lot of fun. I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great way to relax and enjoy the outdoors.
+
+    User 1: Maybe I will. I do love being outdoors.
+
+    User 2: My favorite season is spring. The weather is warm, the flowers are blooming, and the fish are biting.
+
+    User 1: That sounds lovely. I love the spring too. The weather is nice and the days are getting longer.
+
+    User 2: Me too. It''s the perfect time to go fishing.
+
+    User 1: Maybe we could go fishing together sometime.
+
+    User 2: I would love that. We could make a day of it.
+
+    User 1: That sounds great. I''ll bring the snacks.
+
+    User 2: And I''ll bring the fishing gear.
+
+    User 1: Perfect. We''ll have a great time.
+
+    User 2: I''m sure we will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

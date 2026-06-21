@@ -1,0 +1,80 @@
+id: '00006645'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6645
+data:
+  user 1 personas: 'I travel every year to disney world.
+
+    I am close to both of my brothers.
+
+    I like to read true crime novels.
+
+    I work as a secretary at an insurance agency.'
+  user 2 personas: 'I love to travel with my family.
+
+    My dog is a collie.
+
+    I love to snack between meals.
+
+    My favorite type of music is country.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1 name].
+
+    User 2: Hi there! I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too!
+
+    User 1: I see you like to travel. Where have you been?
+
+    User 2: I''ve been all over the world! I love to see new places and meet new people.
+
+    User 1: That''s awesome! I''ve been to a few places, but I''d love to travel more.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: I know, I know. I''m just not sure where to start.
+
+    User 2: Well, what kind of places are you interested in seeing?
+
+    User 1: I''m interested in seeing all kinds of places. I''d love to go to Europe, Asia, Africa, South America... really anywhere!
+
+    User 2: That''s great! You''ve got a lot of options.
+
+    User 1: I know, I know. It''s a good problem to have.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a secretary at an insurance agency.
+
+    User 2: Oh, that sounds interesting.
+
+    User 1: It is. It''s a lot of work, but it''s rewarding.
+
+    User 2: Good for you!
+
+    User 1: Thanks!
+
+    User 2: So, do you have any hobbies?
+
+    User 1: Yes, I love to read true crime novels.
+
+    User 2: Oh, that''s interesting. I''ve never been much of a reader, myself.
+
+    User 1: It''s really fun! I love to learn about all the different crimes that have been committed.
+
+    User 2: I guess it could be interesting.
+
+    User 1: It is! I''ve learned so much about the human mind and how people can be so twisted.
+
+    User 2: I''ll have to take your word for it.
+
+    User 1: You should! It''s really fascinating.
+
+    User 2: I might just do that.
+
+    User 1: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

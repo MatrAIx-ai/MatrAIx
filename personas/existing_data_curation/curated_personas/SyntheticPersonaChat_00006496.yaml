@@ -1,0 +1,66 @@
+id: 00006496
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6496
+data:
+  user 1 personas: 'My best friend lives in a big city.
+
+    I go visit them sometimes.
+
+    My mother is a social worker for the school system.
+
+    She likes to grow plants in her garden.
+
+    I work at a grocery store.'
+  user 2 personas: 'I regularly go to the gym.
+
+    My favorite band is metallica.
+
+    My favorite meal is chicken and rice.
+
+    I read autobiographies before bed.
+
+    I have a cat named george.'
+  Best Generated Conversation: 'User 1: What''s your favorite band?
+
+    User 2: Metallica!
+
+    User 1: I love Metallica too! What''s your favorite song?
+
+    User 2: Master of Puppets!
+
+    User 1: That''s a great song! I also love One and Enter Sandman.
+
+    User 2: Me too! Those are my top three.
+
+    User 1: What other music do you like?
+
+    User 2: I also like Iron Maiden, Slayer, and Pantera.
+
+    User 1: I love those bands too! We should listen to some music together sometime.
+
+    User 2: That would be fun! What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but I mostly listen to rock and metal.
+
+    User 2: Me too! What''s your favorite rock band?
+
+    User 1: I think my favorite rock band is Guns N'' Roses.
+
+    User 2: I love Guns N'' Roses! What''s your favorite song?
+
+    User 1: Sweet Child o'' Mine is my favorite song, but I also love Paradise City and November Rain.
+
+    User 2: Me too! Those are my top three.
+
+    User 1: What other bands do you like?
+
+    User 2: I also like Black Sabbath, Led Zeppelin, and AC/DC.
+
+    User 1: I love those bands too! We should listen to some music together sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

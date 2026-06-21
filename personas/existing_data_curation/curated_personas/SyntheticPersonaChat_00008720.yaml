@@ -1,0 +1,64 @@
+id: 00008720
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8720
+data:
+  user 1 personas: 'I am a fourteen year old living with my mom and grandparents.
+
+    I like swimming.
+
+    I am a girl who loves sports cars and video games.
+
+    My favorite thing to do is research race cars in my free time.
+
+    I only have three best friends.'
+  user 2 personas: 'I drive a honda civic.
+
+    I love rock climbing.
+
+    I like long walks on the beach.
+
+    My favorite movie is django unchained.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go rock climbing, go for long walks on the beach, and watch movies.
+
+    User 1: Oh, that''s cool. I like to swim, play video games, and research race cars.
+
+    User 2: Swimming sounds fun. I''ve never been rock climbing before.
+
+    User 1: It''s really fun! I''m not very good at it, but I still enjoy it.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I like a lot of different games, but my favorite is probably Mario Kart.
+
+    User 2: Mario Kart! That''s a classic. I used to play that all the time when I was younger.
+
+    User 1: Me too! I still play it sometimes, but I''m not as good as I used to be.
+
+    User 2: I''m sure you''re still better than me. I''ve never been very good at video games.
+
+    User 1: Oh, I don''t know about that. I''m not that great either.
+
+    User 2: Well, we should play Mario Kart sometime. I''m sure it would be a lot of fun.
+
+    User 1: That would be fun! I''m free this weekend if you want to play.
+
+    User 2: I''m free too! That sounds like a plan.
+
+    User 1: Great! I''ll send you my friend code.
+
+    User 2: Perfect. I''ll add you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,102 @@
+id: '00000510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 510
+data:
+  user 1 personas: 'I love hockey.
+
+    I ve flown out of the country.
+
+    I ve a younger sibling.
+
+    My bestfriend is from out of town.
+
+    I studied business as my major.'
+  user 2 personas: 'My favorite genre of music is rock.
+
+    I do not know how to swim.
+
+    My grandpa was in wwii.
+
+    My favorite food is steak.
+
+    I own a chevy tahoe.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to listen to rock music and play video games.
+
+    User 1: I like rock music too! What''s your favorite band?
+
+    User 2: My favorite band is Led Zeppelin.
+
+    User 1: They''re one of my favorites too! What''s your favorite song of theirs?
+
+    User 2: My favorite song of theirs is Stairway to Heaven.
+
+    User 1: That''s a great song! I love the guitar solo in that song.
+
+    User 2: Me too! It''s so iconic.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to play video games. My favorite video game is The Last of Us.
+
+    User 1: I''ve heard good things about that game. I''ve been meaning to try it.
+
+    User 2: You should! It''s a great game.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a business analyst.
+
+    User 2: Nice! I''ve always been interested in business.
+
+    User 1: Me too! It''s a fascinating field.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: My favorite food is pizza.
+
+    User 2: Me too! I love pizza.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, cool! I''ve always wanted to go to California.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: So, what''s your favorite thing about California?
+
+    User 2: My favorite thing about California is the weather. It''s always sunny and warm.
+
+    User 1: That sounds amazing! I''m from the Midwest, so we get a lot of snow and cold weather.
+
+    User 2: I''m sorry to hear that. I hate the cold weather.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m thinking about moving to New York City.
+
+    User 1: Oh, cool! I''ve always wanted to live in New York City.
+
+    User 2: You should! It''s a great place to live.
+
+    User 1: So, what do you think? Should I move to New York City?
+
+    User 2: I think it would be a great decision! It''s a very exciting city.
+
+    User 1: Thanks for the advice! I''m going to start looking into moving to New York City.
+
+    User 2: Good luck! I''m sure you''ll love it there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

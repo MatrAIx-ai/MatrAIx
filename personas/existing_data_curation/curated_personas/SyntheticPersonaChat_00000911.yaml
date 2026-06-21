@@ -1,0 +1,77 @@
+id: 00000911
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 911
+data:
+  user 1 personas: 'I am a vet tech.
+
+    My favorite movie genre is horror.
+
+    I am a christian.
+
+    I love to read.
+
+    My favorite author is stephen king.'
+  user 2 personas: 'I drive a yellow convertible in the rain.
+
+    I like spreading laughter and love everywhere i go.
+
+    I work as a lifeguard at a beach.
+
+    I m a breath of fresh air.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+
+    User 2: I love spreading laughter and love everywhere I go. I''m also a lifeguard at the beach.
+
+
+    User 1: That''s great! I work as a vet tech. I also love horror movies. What''s your favorite movie genre?
+
+
+    User 2: My favorite movie genre is horror! I love the feeling of being scared and on the edge of my seat.
+
+
+    User 1: Me too! I love Stephen King''s books. He''s my favorite author.
+
+
+    User 2: I love Stephen King too! I''ve read all of his books.
+
+
+    User 1: Wow! That''s amazing. I''ve only read a few of his books.
+
+
+    User 2: You should read more of his books! They''re so good.
+
+
+    User 1: I will! Thanks for the recommendation.
+
+
+    User 2: No problem! What''s your favorite Stephen King book?
+
+
+    User 1: My favorite Stephen King book is The Shining. It''s so good.
+
+
+    User 2: I love The Shining too! It''s one of my favorites.
+
+
+    User 1: Do you have any pets?
+
+
+    User 2: Yes, I have a dog named Bailey. She''s a yellow lab.
+
+
+    User 1: Aww, I love yellow labs! They''re so cute.
+
+
+    User 2: She is! She''s the best dog ever.
+
+
+    User 1: I''m sure she is. Thanks for chatting with me!
+
+
+    User 2: No problem! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

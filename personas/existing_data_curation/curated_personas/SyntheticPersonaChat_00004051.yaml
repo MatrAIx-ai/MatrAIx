@@ -1,0 +1,78 @@
+id: '00004051'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4051
+data:
+  user 1 personas: 'I love collecting teapots.
+
+    I work at the local bank.
+
+    I am a cat person.
+
+    My grandmother lives in my guesthouse.
+
+    I have been divorced for 2 years.'
+  user 2 personas: 'I am too short to reach the top shelf.
+
+    I have the gene that lets me know when someones eaten asparagus.
+
+    I have five different flavors of coffee in my fridge.
+
+    My dog introduced me to my first and second wives.
+
+    I enjoy my steaks cooked medium rare.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1].
+
+    User 2: Hi, I''m [user 2]. Nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I love to cook, and I also enjoy playing video games.
+
+    User 1: Oh, that''s cool! I love to cook too. What''s your favorite thing to make?
+
+    User 2: I love making pasta dishes. I''m not very good at baking, but I can make a mean lasagna!
+
+    User 1: That sounds delicious! I love lasagna.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like playing all kinds of games, but I''m really into open-world RPGs right now. I just finished playing Elden Ring, and I''m really looking forward to the next one.
+
+    User 2: I''ve heard good things about Elden Ring. I''m not much of a gamer, but I''ve been thinking about getting into it.
+
+    User 1: You should! It''s really fun, and it''s a great way to relax.
+
+    User 2: I might just do that.
+
+    User 1: Cool! What else do you like to do?
+
+    User 2: I love to spend time with my family and friends. I also love to go on walks in the park.
+
+    User 1: That sounds nice. I love spending time with my family and friends too. I also love going for walks in the park.
+
+    User 2: It''s a great way to get some fresh air and exercise.
+
+    User 1: It is! And it''s also a great way to relax and de-stress.
+
+    User 2: I agree.
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That sounds like fun! What do you want to do?
+
+    User 1: We could go for a walk in the park, or we could go to a movie.
+
+    User 2: I''d love to go for a walk in the park.
+
+    User 1: Great! Let''s meet at the park in 30 minutes.
+
+    User 2: See you there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,86 @@
+id: '00007601'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7601
+data:
+  user 1 personas: 'I have bowled a 300 game twice in my life.
+
+    I have been held hostage in a store robbery situation.
+
+    I like to build furniture.
+
+    I clean houses for extra money.'
+  user 2 personas: 'I am short.
+
+    I like to sew.
+
+    My hair is brown.
+
+    I am not thin.
+
+    I have one cat.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just sewing.
+
+    User 1: Oh, that''s fun! What are you sewing?
+
+    User 2: I''m making a dress for my cat.
+
+    User 1: That''s adorable! I love it.
+
+    User 2: Thanks!
+
+    User 1: Do you sew often?
+
+    User 2: Yes, I love it. It''s so relaxing.
+
+    User 1: I can imagine. I''ve always wanted to learn how to sew.
+
+    User 2: You should! It''s really easy to get started.
+
+    User 1: I might just do that.
+
+    User 2: Good! You''ll have so much fun.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem!
+
+    User 1: So, what else do you do for fun?
+
+    User 2: I like to read, go to the movies, and play video games.
+
+    User 1: I like all of those things too!
+
+    User 2: We should hang out sometime!
+
+    User 1: That would be great!
+
+    User 2: I''m free this weekend.
+
+    User 1: Me too!
+
+    User 2: Perfect! Let''s get together and watch a movie.
+
+    User 1: Sounds great!
+
+    User 2: What movie do you want to see?
+
+    User 1: I don''t know, what do you want to see?
+
+    User 2: We could see the new Star Wars movie.
+
+    User 1: That sounds good to me!
+
+    User 2: Great! I''ll pick you up at 7.
+
+    User 1: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

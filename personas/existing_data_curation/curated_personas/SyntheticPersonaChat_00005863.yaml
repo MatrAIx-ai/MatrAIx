@@ -1,0 +1,80 @@
+id: 00005863
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5863
+data:
+  user 1 personas: 'I ve never been a fan of sports.
+
+    Recently i started taking archery classes and love it.
+
+    I hope to keep improving and go big with this sport.
+
+    I noticed i m very talented for this sport.
+
+    I work full time in an office , so i don t have much time to practice.'
+  user 2 personas: 'Basketball is my favorite sport to watch.
+
+    Ferrari is my favorite car company.
+
+    I work out daily.
+
+    I like watching sports.
+
+    I own many cars.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to watch sports, work out, and go out with friends.
+
+    User 1: I like to do those things too! I''m actually a big fan of basketball.
+
+    User 2: Me too! I love watching the NBA.
+
+    User 1: Me too! I''m a big fan of the Warriors.
+
+    User 2: I like the Warriors too! They''re a great team.
+
+    User 1: They are! I''m excited to see how they do in the playoffs this year.
+
+    User 2: Me too! I think they have a good chance of winning it all.
+
+    User 1: I hope so! It would be great to see them get another championship.
+
+    User 2: Me too! It would be a lot of fun.
+
+    User 1: So, what do you like about archery?
+
+    User 2: I''ve always been interested in it, but I never had the time to learn. I recently started taking classes and I''m really enjoying it. It''s a great way to relax and de-stress.
+
+    User 1: I can imagine! It''s a really peaceful sport.
+
+    User 2: It is! I also love the challenge of it. It''s really rewarding when you hit your target.
+
+    User 1: I can imagine! I''m really impressed with your skills.
+
+    User 2: Thanks! I''m still learning, but I''m getting better every day.
+
+    User 1: I''m sure you''ll be a pro in no time.
+
+    User 2: Thanks! I hope so!
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I work as a personal trainer. I love helping people get in shape and live healthier lives.
+
+    User 1: That sounds like a great job! I''m sure it''s very rewarding.
+
+    User 2: It is! I love seeing my clients achieve their goals.
+
+    User 1: I''m sure they love you too! You sound like a great trainer.
+
+    User 2: Thanks! I try my best.
+
+    User 1: I''m sure you do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

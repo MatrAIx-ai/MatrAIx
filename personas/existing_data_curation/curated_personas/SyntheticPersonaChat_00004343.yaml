@@ -1,0 +1,68 @@
+id: '00004343'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4343
+data:
+  user 1 personas: 'I have a missing pinky toe.
+
+    I enjoy swimming.
+
+    I have 4 dogs.
+
+    I do not like green eggs and ham.'
+  user 2 personas: 'I want to become an author.
+
+    After finishing my career i discovered that i m not that pasionate about it.
+
+    I m a profesional translator.
+
+    I m currently unemployed so i have time to write.
+
+    I m writing my first novel and hope to finish before the end of the year.'
+  Best Generated Conversation: 'User 1: I''m a professional translator and I''m currently unemployed so I have a lot of time to write.
+
+    User 2: That''s great! I''m also a writer, but I''m not a professional translator.
+
+    User 1: What do you write?
+
+    User 2: I''m writing my first novel.
+
+    User 1: That''s great! What''s it about?
+
+    User 2: It''s about a young woman who discovers she has the power to control the weather.
+
+    User 1: That sounds really cool!
+
+    User 2: Thanks! I''m hoping to finish it before the end of the year.
+
+    User 1: I''m sure you will! Good luck with it.
+
+    User 2: Thanks!
+
+    User 1: What''s your favorite thing to write about?
+
+    User 2: I like to write about relationships and how people interact with each other.
+
+    User 1: That''s a good topic. I like to write about that too.
+
+    User 2: I''m glad I''m not the only one!
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of them is "The Catcher in the Rye" by J.D. Salinger.
+
+    User 1: I love that book! It''s one of my favorites too.
+
+    User 2: I''m glad you like it!
+
+    User 1: So, what''s your favorite thing to do when you''re not writing?
+
+    User 2: I like to go swimming.
+
+    User 1: That''s great! I love to swim too.
+
+    User 2: I''m glad we have something in common!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

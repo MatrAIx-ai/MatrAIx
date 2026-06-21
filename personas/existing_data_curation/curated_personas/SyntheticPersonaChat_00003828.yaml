@@ -1,0 +1,72 @@
+id: 00003828
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3828
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I like to play video games.
+
+    I have 2 turtles.
+
+    My favorite movie is gone with the wind.'
+  user 2 personas: 'I live with my sisters and they provide me with all my needs.
+
+    I enjoy reading.
+
+    I am afraid to leave the house.
+
+    When i was a child i was kidnapped by my uncle.'
+  Best Generated Conversation: 'User 1: Hello, I''m [name]. What''s your name?
+
+    User 2: Hello, my name is [name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games, read, and watch movies.
+
+    User 2: I love to read too! What are some of your favorite books?
+
+    User 1: I like to read a lot of different things, but I especially like science fiction and fantasy novels.
+
+    User 2: I love science fiction too! What are some of your favorite science fiction novels?
+
+    User 1: I really enjoyed the Hitchhiker''s Guide to the Galaxy series and the Ender''s Game series.
+
+    User 2: I''ve heard good things about those books! I''ll have to check them out.
+
+    User 1: You should! They''re both great.
+
+    User 2: What do you like to play video games on?
+
+    User 1: I have a Nintendo Switch and a PlayStation 4.
+
+    User 2: I have a Switch too! What games do you like to play on it?
+
+    User 1: I like to play a lot of different games, but my favorites are Mario Kart 8 Deluxe, Animal Crossing: New Horizons, and The Legend of Zelda: Breath of the Wild.
+
+    User 2: I love Mario Kart 8 Deluxe too! It''s so much fun to play with friends.
+
+    User 1: It is! I''ve spent so many hours playing it with my friends.
+
+    User 2: Do you play any other multiplayer games?
+
+    User 1: I also play a lot of Fortnite.
+
+    User 2: I''ve heard good things about that game! I''ve never played it though.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: I''ll have to check it out.
+
+    User 1: I hope you enjoy it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

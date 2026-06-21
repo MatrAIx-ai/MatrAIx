@@ -1,0 +1,19 @@
+id: '00026150'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26150
+persona_description: A healthcare worker who is part of the medical team treating patients with Ebola virus disease. They are responsible for providing medical care to patients, following proper precautions
+  to prevent the spread of the virus, and managing exposure to infected materials. They are knowledgeable about the symptoms, signs, and treatment of Ebola virus disease, as well as the precautions to take
+  when caring for patients with suspected or confirmed Ebola virus. They are also aware of the importance of using standard precautions consistently with all patients and in all work practices, and are
+  trained to use appropriate personal protective equipment and infection-control measures.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: Ebola virus disease treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

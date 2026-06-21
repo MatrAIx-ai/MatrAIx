@@ -1,0 +1,74 @@
+id: 00008762
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8762
+data:
+  user 1 personas: 'I wear cardigans because i hope it makes me look more cultured.
+
+    My last name is spanish , but i tell people that its italian.
+
+    I had one step dad , and fortunately he ignored me.
+
+    I hate that i got my brain from the dad i never met.
+
+    I do not know if i enjoy programming , or if its my only choice.'
+  user 2 personas: 'My poppa has a train set that i play with.
+
+    I like thomas the tank engine.
+
+    My cat died.
+
+    I have a dog named percy.
+
+    I like books about trains.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is (name). What''s your name?
+
+    User 1: My name is (name).
+
+    User 2: Nice to meet you, (name).
+
+    User 1: Nice to meet you too, (name).
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, watch movies, and play video games.
+
+    User 2: I like to read too. What are some of your favorite books?
+
+    User 1: I like to read books about history and science.
+
+    User 2: I like reading books about history too. What are some of your favorite historical books?
+
+    User 1: I like the book "The Rise and Fall of the Third Reich" by William L. Shirer.
+
+    User 2: I''ve never read that book, but it sounds interesting. I''ll have to check it out.
+
+    User 1: You should. It''s a really good book.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to watch movies. What are some of your favorite movies?
+
+    User 2: I like to watch action movies. What are some of your favorite action movies?
+
+    User 1: I like the movie "Die Hard".
+
+    User 2: I love that movie! It''s one of my favorites too.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to play video games. What are some of your favorite video games?
+
+    User 1: I like to play the game "League of Legends".
+
+    User 2: I''ve never played that game. What''s it about?
+
+    User 1: It''s a game where you control a character and fight against other players. It''s a lot of fun.
+
+    User 2: It sounds like a lot of fun. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

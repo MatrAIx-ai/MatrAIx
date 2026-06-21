@@ -1,0 +1,20 @@
+id: '00064441'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64441
+persona_description: A Linux administrator who is responsible for configuring a DHCP server on a Linux system for the BMC Server Automation provisioning process. This person must be familiar with configuring
+  DHCP servers on Linux, including the use of the dhcpd.conf file, the ISC DHCP package, and the BMC Server Automation provisioning process. They must have knowledge of the requirements for a DHCP server
+  on Linux, including the version compatibility with the BMC Server Automation provisioning system and the required configuration for the BMC Server Automation provisioning process. This person must be
+  able to edit the dhcpd.conf file, install and configure the ISC DHCP package, and restart the DHCP server. They should also be aware of the additional notes for required options and the importance of
+  ensuring the option is enabled.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Linux System Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

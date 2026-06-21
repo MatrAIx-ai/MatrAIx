@@ -1,0 +1,58 @@
+id: 00002839
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2839
+data:
+  user 1 personas: 'I like to play tennis.
+
+    My favorite food is a burger.
+
+    I work as an accountant.
+
+    My favorite color is red.
+
+    My favorite musical is hamilton.'
+  user 2 personas: 'I love nighttime.
+
+    My favorite food is pizza.
+
+    I just bought new hoop earrings.
+
+    I have a cat named charlie.
+
+    I am an artist.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to paint! I''m an artist.
+
+    User 1: That''s awesome! I love watching people paint. It''s so relaxing.
+
+    User 2: Thank you! I love to share my art with others.
+
+    User 1: I bet you do! I love seeing people''s creative expression.
+
+    User 2: I''m glad you enjoy it!
+
+    User 1: So, what kind of art do you like to paint?
+
+    User 2: I like to paint all sorts of things, but I''m especially fond of landscapes and portraits.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to paint landscapes.
+
+    User 2: It''s not as hard as you might think. I can teach you if you''re interested.
+
+    User 1: That would be great! I''d love to learn.
+
+    User 2: Perfect! I''ll bring my paints next time we meet.
+
+    User 1: Awesome! I can''t wait to see your work.
+
+    User 2: Me too! I''m always excited to share it with others.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

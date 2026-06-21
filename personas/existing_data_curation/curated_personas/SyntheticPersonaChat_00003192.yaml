@@ -1,0 +1,56 @@
+id: 00003192
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3192
+data:
+  user 1 personas: 'I m not really a blond.
+
+    I often worry about where to park when i go somewhere new.
+
+    I think food trucks are awesome.
+
+    I am quiet but confident.
+
+    My brother raised me after our parents died.'
+  user 2 personas: 'I am a vegetarian.
+
+    I like the internet.
+
+    I have a new job.
+
+    I like to make cakes.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, I just got a new job!
+
+    User 1: Oh, congrats! What are you doing now?
+
+    User 2: I''m a cake decorator!
+
+    User 1: That''s awesome! I love cake.
+
+    User 2: Me too! I love to bake and decorate cakes.
+
+    User 1: Do you have a favorite cake to make?
+
+    User 2: I love making chocolate cakes.
+
+    User 1: Me too! I love chocolate cake with chocolate frosting.
+
+    User 2: That''s my favorite too!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to read, watch movies, and go to the beach.
+
+    User 1: I like all of those things too!
+
+    User 2: We should get together sometime and do something fun.
+
+    User 1: That sounds like a great idea!
+
+    User 2: I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00001173'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1173
+data:
+  user 1 personas: 'I am 6 feet tall.
+
+    I collect stray people like crazy cat ladys collect cats.
+
+    I am a genius.
+
+    I have purple hair.'
+  user 2 personas: 'My mother is from greece.
+
+    My favourite colour is green.
+
+    I love cooking !.
+
+    I like to swim when the weather is hot.
+
+    My father is from india.'
+  Best Generated Conversation: 'User 1: Hi! I''m John.
+
+    User 2: Hi John! I''m Mary.
+
+    User 1: What are your hobbies?
+
+    User 2: I love cooking, swimming, and traveling.
+
+    User 1: I love cooking too! What''s your favorite dish to make?
+
+    User 2: I love making Greek food because my mom is from Greece.
+
+    User 1: Oh that''s cool! I love Greek food too. What''s your favorite Greek dish?
+
+    User 2: My favorite Greek dish is moussaka.
+
+    User 1: I''ve never had moussaka before. What''s it like?
+
+    User 2: It''s a layered dish with eggplant, potatoes, ground beef, and a béchamel sauce. It''s really good!
+
+    User 1: It sounds delicious! I''ll have to try it sometime.
+
+    User 2: You definitely should!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go swimming, especially when the weather is hot.
+
+    User 1: I love swimming too! It''s so refreshing.
+
+    User 2: Me too! It''s one of my favorite things to do.
+
+    User 1: Do you swim in pools or lakes?
+
+    User 2: I swim in both! I love the feeling of the water on my skin.
+
+    User 1: Me too! I love the feeling of the water flowing over me.
+
+    User 2: It''s so relaxing.
+
+    User 1: It really is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to travel! I''ve been to a lot of different countries.
+
+    User 2: I''ve been to a few different countries too.
+
+    User 1: What''s your favorite country you''ve visited?
+
+    User 2: My favorite country I''ve visited is Greece because it''s so beautiful.
+
+    User 1: I can see why you love it so much! It''s a beautiful country.
+
+    User 2: It really is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

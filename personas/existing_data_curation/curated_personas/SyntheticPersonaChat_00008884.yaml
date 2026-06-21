@@ -1,0 +1,50 @@
+id: 00008884
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8884
+data:
+  user 1 personas: 'My parents don t really speak english , but i speak italian and english.
+
+    I moved to america when i was 14.
+
+    I got married when i was young.
+
+    I like to cook.
+
+    I have three children.'
+  user 2 personas: 'I have 5 children.
+
+    I have an internship at a computer company.
+
+    I am a student.
+
+    I like to go fishing.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m 30 years old and I''m from Italy. I moved to the US when I was 14. I''m married and I have three children. I like to cook and I speak English and Italian.
+
+    User 2: That''s cool! I''m 25 years old and I''m from California. I have 5 children and I''m a student. I like to go fishing and I''m learning Japanese.
+
+    User 1: Oh, I love Japanese food! I used to go fishing when I was a kid, but I haven''t been in a long time.
+
+    User 2: It''s really good! I''m glad you like it. I like to go fishing with my friends and family.
+
+    User 1: That sounds fun! I''m not sure if I have any friends who like to fish, but I''m sure I could find some.
+
+    User 2: I''m sure you could! There are a lot of people who like to fish.
+
+    User 1: I''m glad to hear that!
+
+    User 2: Me too!
+
+    User 1: Well, it was nice meeting you!
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

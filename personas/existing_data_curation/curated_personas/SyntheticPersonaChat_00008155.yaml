@@ -1,0 +1,58 @@
+id: 00008155
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8155
+data:
+  user 1 personas: 'I have taken formal music lessons since i was 5.
+
+    I wish i could spend more time at home.
+
+    I am a musician.
+
+    I like to write my own songs.
+
+    My best friend is in a band with me.'
+  user 2 personas: 'I enjoy hanging out with friends and family.
+
+    I have a brand new chevrolet.
+
+    I am looking to start a business.
+
+    I am a big sports fan.
+
+    I like to get involved in politics.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi! I''m [name]. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I enjoy hanging out with friends and family, playing sports, and getting involved in politics.
+
+    User 1: Wow, that sounds like a lot of fun! I''m a musician and I love to write my own songs. I also enjoy spending time at home.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play an instrument. What kind of music do you play?
+
+    User 1: I play the guitar and the piano. I love all kinds of music, but I mostly play pop and rock.
+
+    User 2: That''s great! I love pop and rock too. Do you have any favorite bands?
+
+    User 1: I love the Beatles, The Rolling Stones, and Queen. What about you?
+
+    User 2: I love those bands too! I also love The Beach Boys, The Doors, and Led Zeppelin.
+
+    User 1: Those are all great bands! I''m glad we have something in common.
+
+    User 2: Me too! So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go to a concert or hang out with friends. What about you?
+
+    User 2: I''m not sure either. I might go to a football game or go to a party.
+
+    User 1: Those sound like fun plans! I hope you have a great time.
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00002736'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2736
+data:
+  user 1 personas: 'I can play the violin.
+
+    I want to have two kids.
+
+    I love chocolate.
+
+    I am from georgia.'
+  user 2 personas: 'My favorite show is csi.
+
+    I once swam with manta rays.
+
+    I would like to work for the smithsonian.
+
+    My parents are lawyers.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Georgia, too!
+
+    User 2: Oh, really? What part?
+
+    User 1: I''m from the Atlanta area.
+
+    User 2: Cool! I''m from the Savannah area.
+
+    User 1: Nice! I''ve been to Savannah a few times. It''s a beautiful city.
+
+    User 2: It is! I love the historic district.
+
+    User 1: Me too! It''s so charming.
+
+    User 2: Do you like to travel?
+
+    User 1: I love to travel! I''ve been to a few different countries.
+
+    User 2: That''s awesome! I''ve only been to a few countries.
+
+    User 1: Where have you been?
+
+    User 2: I''ve been to Mexico, Canada, and the Bahamas.
+
+    User 1: Nice! I''ve been to Mexico and Canada.
+
+    User 2: I''ve always wanted to go to Europe.
+
+    User 1: Europe is beautiful! I''ve been to a few countries in Europe.
+
+    User 2: Which countries have you been to?
+
+    User 1: I''ve been to England, France, and Italy.
+
+    User 2: Those are all beautiful countries!
+
+    User 1: They are! I love the history and culture of Europe.
+
+    User 2: Me too! I''m really interested in the history of art and architecture.
+
+    User 1: Me too! I love learning about different cultures.
+
+    User 2: Me too! I think it''s so important to be open-minded and learn about different cultures.
+
+    User 1: I agree! It''s the best way to grow as a person.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

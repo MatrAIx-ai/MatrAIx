@@ -1,0 +1,96 @@
+id: '00005263'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5263
+data:
+  user 1 personas: 'I eat ice cream when i am sad.
+
+    I live in new york.
+
+    I am a dog walker.
+
+    I have never traveled outside of the united states.
+
+    My best friend lives in japan.'
+  user 2 personas: 'My best friend lives in japan.
+
+    I live in new york.
+
+    I am a dog walker.
+
+    I have never traveled outside of the united states.
+
+    I eat ice cream when i am sad.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from New York City.
+
+    User 1: Me too! What part of New York City?
+
+    User 2: I live in Manhattan.
+
+    User 1: Me too! What do you do for a living?
+
+    User 2: I''m a dog walker.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a dog walker.
+
+    User 2: It''s a lot of fun. I get to meet all sorts of different dogs and their owners.
+
+    User 1: That sounds great! Do you have any pets?
+
+    User 2: I have a dog named Max. He''s a golden retriever.
+
+    User 1: Aww, I love golden retrievers! They''re so cute.
+
+    User 2: They are! He''s the best dog ever.
+
+    User 1: I''m sure he is! What''s your favorite thing to do in New York City?
+
+    User 2: I love going to the dog park with Max. We also like to go to Central Park and just walk around.
+
+    User 1: Those sound like fun things to do. I''ve never been to the dog park, but I''ve been to Central Park a few times.
+
+    User 2: You should go to the dog park sometime. It''s a lot of fun.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!
+
+    User 1: So, have you ever traveled outside of the United States?
+
+    User 2: No, I haven''t. I''ve always wanted to, but I''ve never had the chance.
+
+    User 1: Me neither. I think it would be really cool to travel the world.
+
+    User 2: It would be! I''ve always wanted to go to Japan.
+
+    User 1: Me too! I''ve heard it''s a beautiful country.
+
+    User 2: It is! I have a friend who lives in Japan and she always sends me pictures of the food she''s eating. It looks amazing.
+
+    User 1: I''m sure it is! I love Japanese food.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do when you''re sad?
+
+    User 2: I eat ice cream.
+
+    User 1: Me too! It''s the best.
+
+    User 2: It is! It always makes me feel better.
+
+    User 1: Me too! It''s the best feeling.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,54 @@
+id: '00000727'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 727
+data:
+  user 1 personas: 'I like to read.
+
+    I like to go swimming.
+
+    I have epilepsy.
+
+    My parents are not married anymore.
+
+    I have one son.'
+  user 2 personas: 'My mind is set on things above.
+
+    I trust in god.
+
+    I am weak and selfish , but i want to change.
+
+    My heart hurts from a broken relationship.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m trying to make some new friends. What are some things you like to do for fun?
+
+    User 2: I love to read, go swimming, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I love to read too. Do you have any favorite books?
+
+    User 2: I love all of the Harry Potter books! I''m also a big fan of the Outlander series.
+
+    User 1: Oh, I love Harry Potter too! I''ve read all of the books and seen all of the movies.
+
+    User 2: That''s great! I''m so glad I met someone who also loves Harry Potter.
+
+    User 1: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go swimming, play video games, and watch movies. I also like to spend time with my family and friends.
+
+    User 2: That sounds like a lot of fun! I like to do all of those things too.
+
+    User 1: It''s always nice to meet someone who has similar interests.
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

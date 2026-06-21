@@ -1,0 +1,18 @@
+id: 00065941
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65941
+persona_description: A medical professional who is interested in diagnosing and monitoring heart rhythm problems. They are likely to be a doctor or a healthcare provider who works with Holter and event
+  monitors to diagnose arrhythmias, silent myocardial ischemia, and heart rate or rhythm problems. They are familiar with the use of these devices and have experience with interpreting the data they provide.
+  They may also have a background in electrical engineering or physiology, as these devices rely on electrical signals to record heart activity.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: electrophysiology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

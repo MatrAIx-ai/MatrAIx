@@ -1,0 +1,18 @@
+id: 00053118
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53118
+persona_description: A meteorologist who specializes in severe weather forecasting and analysis. They have extensive knowledge and experience in identifying and predicting severe thunderstorms, tornadoes,
+  and other severe weather events. They are skilled in using radar data and other meteorological tools to analyze and interpret weather patterns and predict the potential for severe weather. They may also
+  have expertise in developing and implementing weather warning systems and emergency response plans.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: severe weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

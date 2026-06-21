@@ -1,0 +1,94 @@
+id: 00006692
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6692
+data:
+  user 1 personas: 'My favorite singer is justin bieber.
+
+    I m really terrible at doing regular expressions.
+
+    I like having fried fish for supper.
+
+    I m allergic to lactose.
+
+    My doctor told me i have six months to live.'
+  user 2 personas: 'My favorite music is hip hop.
+
+    I am married and have five children.
+
+    My birthplace is spain.
+
+    I am a vegetarian.
+
+    I work as a veterinarian.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1''s name].
+
+    User 2: Hi, nice to meet you [user 1''s name]. My name is [user 2''s name].
+
+    User 1: What kind of music do you like?
+
+    User 2: I like hip hop.
+
+    User 1: Me too! Who are your favorite artists?
+
+    User 2: I like Kanye West, Kendrick Lamar, and J. Cole.
+
+    User 1: Those are all great artists! I also like J. Cole.
+
+    User 2: Nice! What do you do for a living?
+
+    User 1: I''m a veterinarian.
+
+    User 2: Oh, that''s cool! I''ve always been interested in animals.
+
+    User 1: Yeah, it''s a great job. I get to help animals all day long.
+
+    User 2: That''s awesome! I''m married and have five children.
+
+    User 1: Wow, that''s a lot of kids!
+
+    User 2: Yeah, it is. But it''s a lot of fun too.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: Those are all great hobbies. I like to do those things too.
+
+    User 1: Nice!
+
+    User 2: So, what''s your favorite movie?
+
+    User 1: I have a lot of favorite movies, but one of my favorites is The Shawshank Redemption.
+
+    User 2: That''s a great movie! I love that one too.
+
+    User 1: Me too! It''s so good.
+
+    User 2: So, what''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is The Hitchhiker''s Guide to the Galaxy.
+
+    User 2: That''s a great book! I love that one too.
+
+    User 1: Me too! It''s so funny.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to be spending time with my family.
+
+    User 1: That sounds nice. I''m sure you''ll have a great time.
+
+    User 2: Thanks! I''m sure I will.
+
+    User 1: Well, it was nice talking to you, [user 2''s name].
+
+    User 2: It was nice talking to you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

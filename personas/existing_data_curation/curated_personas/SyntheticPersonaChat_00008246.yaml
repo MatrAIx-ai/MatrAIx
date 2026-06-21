@@ -1,0 +1,86 @@
+id: 00008246
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8246
+data:
+  user 1 personas: 'I am really terrible at doing regular expressions.
+
+    I am allergic to lactose.
+
+    I like having fried fish for supper.
+
+    My doctor told me i have six months to live.
+
+    My favorite singer is justin bieber.'
+  user 2 personas: 'I like to go hiking on the weekends.
+
+    My family is from algeria.
+
+    I can speak arabic , english , and french.
+
+    I am a barista.
+
+    I play jazz piano in a band.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name]. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to go hiking on the weekends. It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 1: That sounds like fun! I''ve never been hiking, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great way to see new places and meet new people.
+
+    User 1: Maybe I will! I''m not sure where I''d go, though.
+
+    User 2: There are lots of great places to hike in the world. What part of the world are you in?
+
+    User 1: I''m in the United States.
+
+    User 2: There are lots of great hiking trails in the United States. You could try hiking in the Appalachian Mountains or the Rocky Mountains.
+
+    User 1: Those sound like great places to hike! I''ll have to look into them.
+
+    User 2: You should! I''m sure you''d have a great time.
+
+    User 1: Thanks for the suggestion!
+
+    User 2: No problem!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to play jazz piano in a band. I''ve been playing piano since I was a kid, and I''ve been playing in a jazz band for about five years.
+
+    User 1: That''s awesome! I love jazz music.
+
+    User 2: Thanks! Me too. I love the improvisation and the creativity that goes into playing jazz.
+
+    User 1: I''m not that good at playing piano, but I love listening to jazz music.
+
+    User 2: That''s okay! I''m sure you''re a great listener.
+
+    User 1: Thank you!
+
+    User 2: So, what''s your favorite song?
+
+    User 1: I don''t know if I have a favorite song, but I really like "Autumn Leaves" by Duke Ellington.
+
+    User 2: That''s a great song! I love that one too.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to read and write. I''m a big fan of science fiction and fantasy novels.
+
+    User 1: That''s great! I love to read too. I''m a big fan of historical fiction and mystery novels.
+
+    User 2: Those are both great genres! I''m sure we could find some books to read together.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

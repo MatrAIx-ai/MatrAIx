@@ -1,0 +1,74 @@
+id: 00000708
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 708
+data:
+  user 1 personas: 'I like to hunt.
+
+    I have two children.
+
+    I like to donate time at the local animal shelter.
+
+    Both my parents were teachers.
+
+    I had two cats growing up.'
+  user 2 personas: 'I work for a online company from home.
+
+    I cook every night.
+
+    I love family time.
+
+    I am a soccer mom.
+
+    I teach cheerleading in my spare time.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: It''s nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to cook, go to the park with my kids, and play soccer.
+
+    User 1: That sounds like a lot of fun! I like to hunt, donate time at the local animal shelter, and spend time with my family.
+
+    User 2: That''s awesome! I''ve always wanted to try hunting.
+
+    User 1: It''s a lot of fun! I love being in the woods and seeing all the animals.
+
+    User 2: I bet! I''m sure my kids would love it too.
+
+    User 1: You should take them sometime! They''d have a blast.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I work for an online company from home.
+
+    User 1: That sounds like a great job! I''ve always wanted to work from home.
+
+    User 2: It''s really nice! I can set my own hours and work from anywhere.
+
+    User 1: That''s awesome! I''m jealous.
+
+    User 2: It''s not always easy, but it''s worth it.
+
+    User 1: I''m sure it is. So, what are you doing later today?
+
+    User 2: I''m not sure yet. What are you up to?
+
+    User 1: I''m going to go to the park with my kids. Do you want to come with us?
+
+    User 2: That sounds like fun! I''d love to.
+
+    User 1: Great! I''ll pick you up in an hour.
+
+    User 2: Okay, see you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

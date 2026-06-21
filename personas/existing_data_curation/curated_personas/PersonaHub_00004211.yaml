@@ -1,0 +1,18 @@
+id: '00004211'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4211
+persona_description: A medical professional who is interested in eye health and retina testing, specifically in understanding the electrical responses of the retina to light and detecting potential abnormalities.
+  They are likely to be interested in the full-field electroretinography (FFERG) test, which measures global retinal function and is used to detect abnormal function in the retina. They may also be interested
+  in the scotopic ERG test, which measures the electrical response of the proximal retina and is useful for detecting scotopic vision.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: electrophysiology of the retina
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

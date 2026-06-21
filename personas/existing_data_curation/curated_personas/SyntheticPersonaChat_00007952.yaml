@@ -1,0 +1,80 @@
+id: 00007952
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7952
+data:
+  user 1 personas: 'I work as a secretary at an insurance agency.
+
+    I have two dogs.
+
+    I travel every year to disney world.
+
+    I like to read true crime novels.
+
+    I am close to both of my brothers.'
+  user 2 personas: 'I dropped out of college.
+
+    I fly airplanes.
+
+    My favorite band is tool.
+
+    I am in the army.
+
+    I enjoy building computers.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username].
+
+    User 2: Hello, my name is [username].
+
+    User 1: What are your interests?
+
+    User 2: I like to fly airplanes, build computers, and listen to Tool.
+
+    User 1: That''s cool! I''ve always wanted to learn how to fly an airplane.
+
+    User 2: It''s not as hard as you think. It''s a lot of fun too.
+
+    User 1: What''s your favorite band?
+
+    User 2: Tool is my favorite band. They''re a progressive rock band from Los Angeles.
+
+    User 1: I''ve heard of them. I''ll have to check them out.
+
+    User 2: You should. They''re really good.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in the army. I''m a helicopter pilot.
+
+    User 1: That''s awesome! I''ve always wanted to be in the military.
+
+    User 2: It''s not as easy as it looks. It''s a lot of hard work, but it''s also a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work as a secretary at an insurance agency.
+
+    User 2: That sounds like a fun job.
+
+    User 1: It''s not bad. It''s a lot of paperwork, but it''s also a lot of interaction with people.
+
+    User 2: I like interacting with people.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go flying or build a computer.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Maybe we can hang out sometime.
+
+    User 1: That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

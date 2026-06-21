@@ -1,0 +1,68 @@
+id: '00004735'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4735
+data:
+  user 1 personas: 'I prefer summer over winter.
+
+    I graduated college a few years ago.
+
+    I was born outside the us.
+
+    I ve a big family.'
+  user 2 personas: 'My favorite activity is fishing.
+
+    I can t go a single day without eating ice cream.
+
+    My favorite thing to do is float the river.
+
+    I once ran the mile in under 4 minutes.
+
+    My dad was a cop until he was killed.'
+  Best Generated Conversation: 'User 1: What''s your favorite activity?
+
+    User 2: I love fishing!
+
+    User 1: Cool! I''ve never been fishing before.
+
+    User 2: You should try it sometime! It''s really relaxing.
+
+    User 1: I might just do that!
+
+    User 2: What did you do in college?
+
+    User 1: I studied business.
+
+    User 2: Oh, cool! I''m a bit of a nerd when it comes to business.
+
+    User 1: Me too! I love learning about how businesses work.
+
+    User 2: So, what do you do now?
+
+    User 1: I work in marketing for a small company.
+
+    User 2: Oh, that''s awesome! What''s your favorite thing about your job?
+
+    User 1: I love working with people. I''m a big people person.
+
+    User 2: Me too! I love meeting new people.
+
+    User 1: Where are you from?
+
+    User 2: I''m from the US.
+
+    User 1: Me too! Where in the US?
+
+    User 2: I''m from California.
+
+    User 1: Oh, cool! I''m from New York.
+
+    User 2: Oh, cool! I''ve always wanted to visit New York.
+
+    User 1: You should! It''s a great city.
+
+    User 2: I might just do that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

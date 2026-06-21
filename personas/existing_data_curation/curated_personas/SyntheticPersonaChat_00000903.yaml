@@ -1,0 +1,54 @@
+id: 00000903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 903
+data:
+  user 1 personas: 'I am a musician.
+
+    I have taken formal music lessons since i was 5.
+
+    I like to write my own songs.
+
+    I wish i could spend more time at home.
+
+    My best friend is in a band with me.'
+  user 2 personas: 'My family owned a small restaurant.
+
+    I like to cook.
+
+    When i retire i want to open a bakery.
+
+    I work 9 to 5 job.
+
+    Sometimes i volunteer at the soup kitchen.'
+  Best Generated Conversation: 'User 1: I''m a musician and I''ve been taking formal music lessons since I was five.
+
+    User 2: That''s cool! I like to cook and when I retire I want to open a bakery.
+
+    User 1: What kind of music do you play?
+
+    User 2: I like to cook a variety of things, but my favorite is baking.
+
+    User 1: Do you have any favorite songs?
+
+    User 2: I like to make cakes, cookies, pies, and breads.
+
+    User 1: I love to write my own songs.
+
+    User 2: I also volunteer at the soup kitchen.
+
+    User 1: I wish I could spend more time at home.
+
+    User 2: I love working with people and I''m good at it.
+
+    User 1: My best friend is in a band with me.
+
+    User 2: I''m glad you have a friend to share your love of music with.
+
+    User 1: I do too! It''s great to have someone to share your passion with.
+
+    User 2: I''m sure you''ll have a lot of fun together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

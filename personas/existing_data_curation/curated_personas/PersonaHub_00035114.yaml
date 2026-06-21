@@ -1,0 +1,19 @@
+id: '00035114'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35114
+persona_description: A computer science professor who specializes in the field of system simulation, particularly in the use of multigrid methods for solving large linear systems arising from the discretization
+  of partial differential equations. His expertise lies in the development and optimization of efficient parallel solvers for the mantle convection simulation problem, including the design and implementation
+  of geometric multigrid methods. He is skilled in the application of relaxation and inter-grid transfer kernels, as well as the optimization of the design of coarse grid solvers tailored to the data structures.
+  His research interests extend to the optimization of these methods on modern supercomputers and the efficient use of resources.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Numerical Analysis/Computational Mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

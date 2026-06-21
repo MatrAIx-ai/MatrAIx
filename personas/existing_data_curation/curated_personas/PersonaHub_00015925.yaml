@@ -1,0 +1,20 @@
+id: 00015925
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15925
+persona_description: A research scientist or scientist working in the field of drug discovery and computational biology, particularly focused on the study of the actions of the molecules of the SARS-CoV-2
+  virus and the development of drugs that bind to them. The persona has expertise in protein structures and shapes, their motions and actions, the discovery of drugs that bind to them, the binding of proteins
+  to other proteins, and protein motions, loops and macrocycles. They are part of a team of 5 faculty research groups and a 25-year leader of industrial Computer Aided Drug Design (CADD) at Stony Brook
+  University, and have more than 100 years of research experience, more than 500 publications, and more than a dozen collaborations with industry. They are among the leading physical-modeling competitors
+  in the international communal blind competitive events, CASP, CAPRI and D3R.
+expertise:
+  general_domain_top1pct: computational biology
+  specific_domain_top1pct: protein-ligand binding and drug discovery
+  general_domain_top01pct: None
+  specific_domain_top01pct: protein structure prediction and design
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

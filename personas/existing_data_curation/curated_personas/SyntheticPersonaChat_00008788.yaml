@@ -1,0 +1,74 @@
+id: 00008788
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8788
+data:
+  user 1 personas: 'My girlfriend tells me she s going to leave me almost every day.
+
+    I enjoy john grisham movies , but not his books.
+
+    I don t like wearing pants when i don t have to.
+
+    My parents used to work in politics , until they discovered the goodness within themselves.
+
+    I m a really , really good guitar player.'
+  user 2 personas: 'My favorite color is blue.
+
+    I am 25 years old.
+
+    I have one son.
+
+    I was a wrestler in high school.'
+  Best Generated Conversation: 'User 1: Hi, I''m Mike.
+
+
+    User 2: Hello, I''m Sarah.
+
+
+    User 1: It''s nice to meet you, Sarah.
+
+
+    User 2: You too, Mike.
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to read, go for walks, and spend time with my son.
+
+
+    User 1: That sounds nice. I like to play guitar, watch movies, and go to concerts.
+
+
+    User 2: I used to play guitar too. I was in a band in high school.
+
+
+    User 1: That''s cool. What kind of music did you play?
+
+
+    User 2: We played a mix of rock and punk.
+
+
+    User 1: That sounds like fun. I''ve always wanted to be in a band.
+
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+
+    User 1: I can imagine. So, what are you doing for the rest of the day?
+
+
+    User 2: I''m not sure yet. Maybe I''ll go for a walk with my son.
+
+
+    User 1: That sounds like a good idea. I''m going to go practice guitar.
+
+
+    User 2: Have fun!
+
+
+    User 1: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

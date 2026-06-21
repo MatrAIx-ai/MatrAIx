@@ -1,0 +1,68 @@
+id: 00008000
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8000
+data:
+  user 1 personas: 'I got engaged to be married in paris , france.
+
+    I have danced since i was two.
+
+    I am a redhead.
+
+    I lost my job as a banker a month ago.
+
+    I can say the alphabet backwards.'
+  user 2 personas: 'I am an insatiable reader.
+
+    My favorite movies are disney movies.
+
+    I live with my parents.
+
+    I love to play soccer.
+
+    I work as a waitress.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just working as a waitress.
+
+    User 1: Oh, that sounds fun.
+
+    User 2: It''s okay, but it can be tiring.
+
+    User 1: I bet. I''m glad you''re having fun though.
+
+    User 2: Thanks. I am.
+
+    User 1: What are you doing later?
+
+    User 2: I''m not sure yet. I might go to the park or something.
+
+    User 1: That sounds fun. I love the park.
+
+    User 2: Me too. It''s a great place to relax.
+
+    User 1: I know, right? I could spend hours there.
+
+    User 2: Me too. I love the fresh air and the trees.
+
+    User 1: Me too. It''s so relaxing.
+
+    User 2: I know. It''s my favorite place to go.
+
+    User 1: I''m glad you have a favorite place to go.
+
+    User 2: Me too. It helps me relax and de-stress.
+
+    User 1: I know, right? It''s so important to have a place to escape to.
+
+    User 2: Me too. I love my park.
+
+    User 1: Me too. I''m glad you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

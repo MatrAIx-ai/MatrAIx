@@ -1,0 +1,17 @@
+id: 00009336
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9336
+persona_description: A radiologist who is interested in advancing lung cancer diagnosis through the use of deep learning technology. They are interested in the performance of the deep-learning system in
+  detecting lung nodules and are looking for ways to integrate it into clinical settings to improve diagnostic accuracy and reduce unnecessary follow-up procedures.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: medical imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: medical imaging (deep learning)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

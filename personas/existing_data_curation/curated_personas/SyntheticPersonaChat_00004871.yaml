@@ -1,0 +1,70 @@
+id: 00004871
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4871
+data:
+  user 1 personas: 'My favorite color is yellow.
+
+    When i was a child , i wanted to be an architect.
+
+    I am a wedding planner.
+
+    I love 80s music.
+
+    I am fascinated with ghosts.'
+  user 2 personas: 'I have never kissed a woman.
+
+    I love to gossip.
+
+    I watch jimmy allons show every night.
+
+    People notice how organized i am.
+
+    I believe that i can achieve anything.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [username].
+
+    User 1: Nice to meet you, [username]. What do you do for fun?
+
+    User 2: I love to gossip, watch Jimmy Fallon''s show every night, and I''m obsessed with organizing.
+
+    User 1: Sounds like we have a lot in common! I love to gossip too, and I''m also a big fan of Jimmy Fallon. I''m not as organized as you are, though.
+
+    User 2: That''s okay. I''m sure you''re organized in your own way.
+
+    User 1: Thanks! So, what''s your favorite color?
+
+    User 2: My favorite color is purple. It''s so vibrant and fun.
+
+    User 1: I like purple too! It''s a great color.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a wedding planner. I love planning weddings and helping couples make their special day perfect.
+
+    User 2: That sounds like a really fun job! I''m always impressed by wedding planners.
+
+    User 1: Thanks! It is a lot of fun, but it can also be a lot of work.
+
+    User 2: I can imagine. But it''s definitely worth it to see the bride and groom happy on their big day.
+
+    User 1: It is! It''s the best feeling in the world.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go out with some friends or just relax at home.
+
+    User 2: Sounds like a good plan. I''m going to be watching Jimmy Fallon''s show, as usual.
+
+    User 1: Have fun!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

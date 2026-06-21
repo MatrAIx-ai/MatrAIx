@@ -1,0 +1,78 @@
+id: 00006833
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6833
+data:
+  user 1 personas: 'I went to an elite ivy league school.
+
+    I work in finance.
+
+    I look down on people who didn t.
+
+    I eat out more than three times a week.'
+  user 2 personas: 'I am an only child.
+
+    I ride horses in my spare time.
+
+    I am adopted.
+
+    I don t believe in love.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from [user 2''s hometown].
+
+    User 1: Nice. I''m from [user 1''s hometown].
+
+    User 2: What do you do for a living?
+
+    User 1: I work in finance.
+
+    User 2: Oh, cool. I''m a horse rider.
+
+    User 1: That''s cool. I''ve never been on a horse.
+
+    User 2: You should try it sometime. It''s really fun.
+
+    User 1: I might.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to eat out, go to the movies, and hang out with friends.
+
+    User 2: I like to ride horses, go to the movies, and hang out with friends too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is [user 2''s favorite movie].
+
+    User 1: Oh, I''ve never seen that.
+
+    User 2: You should try it sometime. It''s really good.
+
+    User 1: I might.
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is [user 1''s favorite food].
+
+    User 2: Oh, that''s one of my favorites too.
+
+    User 1: What''s your favorite restaurant?
+
+    User 2: My favorite restaurant is [user 2''s favorite restaurant].
+
+    User 1: Oh, I''ve been there before. It''s really good.
+
+    User 2: It is!
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

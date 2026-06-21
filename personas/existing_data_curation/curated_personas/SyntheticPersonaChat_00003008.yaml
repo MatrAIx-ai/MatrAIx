@@ -1,0 +1,94 @@
+id: 00003008
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3008
+data:
+  user 1 personas: 'I am fifteen years old.
+
+    I live in america in the state of florida.
+
+    I just started the tenth grade and my concentration is in science.
+
+    My family has three dogs and my dog is named maddie.
+
+    I have braces.'
+  user 2 personas: 'I am an art teacher.
+
+    I enjoy clothing with exotic prints.
+
+    I like to sew my own clothing.
+
+    Sometimes i like to visit thrift shops.
+
+    I like to recycle my thrift shop finds and make new items.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi! How are you?
+
+    User 1: I''m good! Just got home from school.
+
+    User 2: Oh, that''s good! What do you like to do for fun?
+
+    User 1: I like to read, play video games, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun! I like to do a lot of those things too.
+
+    User 1: Oh, really? What do you like to read?
+
+    User 2: I like to read a lot of different things, but I really like science fiction and fantasy.
+
+    User 1: Oh, cool! I like those genres too. What are some of your favorite books?
+
+    User 2: I really like the Ender''s Game series by Orson Scott Card and the Harry Potter series by J.K. Rowling.
+
+    User 1: Oh, those are both great series! I''ve read them both too.
+
+    User 2: Yeah, they''re both really good.
+
+    User 1: So, what do you like to do with your friends?
+
+    User 2: We usually hang out, play video games, or go to the movies.
+
+    User 1: That sounds like a lot of fun. I like to do those things with my friends too.
+
+    User 2: Yeah, they''re always a good time.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m an art teacher.
+
+    User 1: Oh, that''s cool! I''ve always been interested in art.
+
+    User 2: Yeah, it''s a lot of fun. I like to teach people how to express themselves creatively.
+
+    User 1: That sounds like a great job.
+
+    User 2: Yeah, it is. I love it.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to sew, visit thrift shops, and recycle my thrift shop finds to make new items.
+
+    User 1: Oh, that''s interesting! I''ve never done that before.
+
+    User 2: It''s really fun! I like to find unique items and make them into something new.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: Yeah, it is. I love it.
+
+    User 1: So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: Oh, that sounds great! I think we''d get along really well.
+
+    User 2: Yeah, I think so too.
+
+    User 1: So, what do you think? Do you want to be friends?
+
+    User 2: Sure! I''d love to be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00001750'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1750
+data:
+  user 1 personas: 'My family is poor.
+
+    I practice yoga and hike.
+
+    I am obsessed with animals.
+
+    I love the natural world beauty.
+
+    I believe in fairytales.'
+  user 2 personas: 'I love animals , especially dogs.
+
+    I am a 15 year old girl.
+
+    I get good grades in school.
+
+    I like field hockey and soccer.
+
+    When i grow up , i want to be a veterinarian.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play field hockey and soccer.
+
+    User 1: That sounds fun! I used to play soccer when I was younger.
+
+    User 2: Oh, really? How was it?
+
+    User 1: It was a lot of fun! I really enjoyed the physical activity and the camaraderie of being on a team.
+
+    User 2: I can see why you would like it. It''s a great way to stay in shape and to meet new people.
+
+    User 1: I agree! What are your favorite things about playing field hockey and soccer?
+
+    User 2: I love the competition and the teamwork. It''s also a great way to get exercise.
+
+    User 1: I agree! It''s a great way to stay in shape and to meet new people.
+
+    User 2: I''m glad we agree! What else do you like to do for fun?
+
+    User 1: I also like to practice yoga and hike. I love being in the outdoors and exploring nature.
+
+    User 2: That sounds like a lot of fun! I''ve never tried yoga, but I''ve always wanted to.
+
+    User 1: It''s a great way to relax and de-stress. I highly recommend it!
+
+    User 2: I''ll have to try it! I also love being in the outdoors. I''m obsessed with animals, especially dogs.
+
+    User 1: I''m a dog person too! I have a dog named Luna.
+
+    User 2: Aww, Luna is such a cute name! I love dogs so much. I have a dog named Charlie.
+
+    User 1: Charlie is a great name! I''m glad we both love dogs.
+
+    User 2: Me too! I''m so glad I met you. You seem really cool.
+
+    User 1: I''m glad I met you too! You seem really cool too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

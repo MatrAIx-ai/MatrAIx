@@ -1,0 +1,72 @@
+id: 00001920
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1920
+data:
+  user 1 personas: 'I help my neighbor.
+
+    I likw to go to the farmers markets to buy local veggies and fruits.
+
+    I live in a city.
+
+    I have a dog and we go for walks.
+
+    I am a grandmother.'
+  user 2 personas: 'I work in tv.
+
+    I love to sing.
+
+    I m a lesbian.
+
+    I don t treat my girlfriend very well.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. Nice to meet you.
+
+    User 1: You too. What do you do for a living?
+
+    User 2: I work in television.
+
+    User 1: Oh, that sounds interesting. What kind of shows do you work on?
+
+    User 2: I''ve worked on a lot of different shows, but my favorite was a show about a group of friends who lived in a big city.
+
+    User 1: That sounds like a fun show.
+
+    User 2: It was! I got to meet a lot of cool people and learn a lot about the industry.
+
+    User 1: That''s great. What''s your favorite thing about working in television?
+
+    User 2: I love the creativity and the collaboration. It''s really great to be able to work with so many talented people and see your ideas come to life.
+
+    User 1: That makes sense. I can imagine that it''s a lot of fun.
+
+    User 2: It is!
+
+    User 1: Do you have any other hobbies or interests?
+
+    User 2: Yes, I love to sing. I''m actually in a band with some friends of mine.
+
+    User 1: That''s awesome! What kind of music do you play?
+
+    User 2: We play a mix of rock and pop.
+
+    User 1: That sounds cool. Do you have any upcoming shows?
+
+    User 2: Yes, we have a show next week at the local coffee shop.
+
+    User 1: I''ll have to come check it out!
+
+    User 2: That would be great!
+
+    User 1: Do you know what time the show starts?
+
+    User 2: It starts at 7:00 pm.
+
+    User 1: Okay, I''ll see you there!
+
+    User 2: Great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00000519
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 519
+data:
+  user 1 personas: 'I love my dog.
+
+    I go to the theater to watch plays.
+
+    I like baking.
+
+    I enjoy walking around the park.
+
+    Wedding cakes are my specialty.'
+  user 2 personas: 'I work as a lifeguard at a beach.
+
+    I am a breath of fresh air.
+
+    I like spreading laughter and love everywhere i go.
+
+    I listen to katie perry while in the shower.
+
+    I drive a yellow convertible in the rain.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]. What''s your name?
+
+    User 2: My name is [User 2]. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for a living?
+
+    User 2: I''m a lifeguard at a beach.
+
+    User 1: That sounds like a fun job! I bet you get to see some cool things.
+
+    User 2: I do! I get to see people swimming, playing volleyball, and sunbathing. It''s a lot of fun.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: My favorite part is getting to interact with people. I love making new friends and helping people have fun.
+
+    User 1: That''s great! You sound like a very nice person.
+
+    User 2: Thank you! I try my best to be.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the theater to watch plays, I love baking, and I enjoy walking around the park.
+
+    User 1: I love baking too! I once made a wedding cake that was so beautiful, it looked like it was made of real flowers.
+
+    User 2: Wow! That sounds amazing! I''m not that good of a baker, but I love to try new recipes.
+
+    User 1: You should try making a wedding cake! It''s a lot of fun, and it''s a great way to show your creativity.
+
+    User 2: I might just do that! Thanks for the suggestion.
+
+    User 1: No problem! I''m always happy to help out a fellow baker.
+
+    User 2: You''re so kind! I really appreciate it.
+
+    User 1: It was my pleasure.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

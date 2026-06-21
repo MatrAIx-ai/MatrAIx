@@ -1,0 +1,64 @@
+id: '00001277'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1277
+data:
+  user 1 personas: 'I enjoy swimming.
+
+    I am a secretary.
+
+    I have 3 cats.
+
+    My favorite color is orange.
+
+    I like tacos.'
+  user 2 personas: 'I listen to linking park , i do not know why.
+
+    People in school said i was quiet.
+
+    I was diagnosed with autism.
+
+    I play games at the arcade , still.'
+  Best Generated Conversation: 'User 1: Hi, how''s it going?
+
+    User 2: Good, thanks. How are you?
+
+    User 1: I''m doing well, thanks.
+
+    User 2: Do you have any hobbies?
+
+    User 1: I enjoy swimming, playing video games, and eating tacos.
+
+    User 2: Oh, cool! I like swimming too. What''s your favorite kind of video game?
+
+    User 1: I like all sorts of video games, but I''m especially a fan of action-adventure games.
+
+    User 2: I''m more into puzzle games, but I do enjoy a good action-adventure game from time to time.
+
+    User 1: What''s your favorite puzzle game?
+
+    User 2: I like the Portal series a lot.
+
+    User 1: I''ve heard good things about that game. I''ll have to check it out.
+
+    User 2: You should! It''s really fun.
+
+    User 1: What''s your favorite taco?
+
+    User 2: I like the classic carne asada taco.
+
+    User 1: Me too! I also like fish tacos.
+
+    User 2: Fish tacos are good.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

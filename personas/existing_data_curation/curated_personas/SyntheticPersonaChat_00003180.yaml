@@ -1,0 +1,80 @@
+id: 00003180
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3180
+data:
+  user 1 personas: 'I love to drive my car.
+
+    I work in a factory.
+
+    Connor mcgreggor is my favorite fighter.
+
+    I enjoy travel.'
+  user 2 personas: 'My mother was a famous ballet dancer in london.
+
+    I will be moving to san diego in two months.
+
+    I am twenty six years old this may.
+
+    My favorite band is the punk band rancid.
+
+    I work at a gas station as a cashier.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to play music, read, and watch movies.
+
+    User 1: That''s cool. I like to drive my car, travel, and watch movies.
+
+    User 2: What kind of music do you like to play?
+
+    User 1: I like to play guitar and piano. I also like to sing.
+
+    User 2: That''s awesome! I play the violin.
+
+    User 1: That''s great! Do you play in any bands?
+
+    User 2: No, I just play for fun.
+
+    User 1: That''s cool. I''ve always wanted to be in a band.
+
+    User 2: It''s a lot of fun. You should try it sometime.
+
+    User 1: I might just do that.
+
+    User 2: Good!
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to see a movie. Do you want to come with me?
+
+    User 2: Sure! What movie are you seeing?
+
+    User 1: I''m seeing the new Marvel movie.
+
+    User 2: Oh, I''ve been wanting to see that!
+
+    User 1: Great! It''s supposed to be really good.
+
+    User 2: I''m sure it will be.
+
+    User 1: So, what time should I pick you up?
+
+    User 2: How about 6:00?
+
+    User 1: Perfect. See you then.
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

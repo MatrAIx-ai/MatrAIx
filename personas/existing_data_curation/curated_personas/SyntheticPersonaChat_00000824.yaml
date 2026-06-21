@@ -1,0 +1,70 @@
+id: 00000824
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 824
+data:
+  user 1 personas: 'I love to read.
+
+    I dropped out of high school.
+
+    I read three books a week.
+
+    I learned how to reads when i was three.'
+  user 2 personas: 'I am a paper salesman.
+
+    I live on a beet farm.
+
+    My favorite animal is a bear.
+
+    My favorite show is battlestar galactica.'
+  Best Generated Conversation: 'User 1: Hi, what''s up?
+
+    User 2: Not much, just working.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a paper salesman.
+
+    User 1: Oh, cool. I''ve never met a paper salesman before.
+
+    User 2: It''s not as exciting as it sounds.
+
+    User 1: I guess not. What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings.
+
+    User 1: Oh, that''s a good one. I''ve read it a few times.
+
+    User 2: Yeah, it''s really good. I love the world that Tolkien created.
+
+    User 1: Me too. It''s so detailed and immersive.
+
+    User 2: Yeah, it''s really one of a kind.
+
+    User 1: Do you read a lot?
+
+    User 2: I used to read a lot more when I was younger, but I still read a few books a week.
+
+    User 1: What are you reading right now?
+
+    User 2: I''m reading the Wheel of Time series.
+
+    User 1: Oh, that''s a long one.
+
+    User 2: Yeah, it''s 14 books, but I''m really enjoying it.
+
+    User 1: I''ve heard good things about it.
+
+    User 2: It''s really good. I''m on the 4th book right now.
+
+    User 1: Cool. I''ll have to check it out.
+
+    User 2: You should. It''s really good.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

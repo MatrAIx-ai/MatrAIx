@@ -1,0 +1,72 @@
+id: 00000807
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 807
+data:
+  user 1 personas: 'I love to fish.
+
+    I eat lots of pancakes and syrup.
+
+    I love to cut down trees.
+
+    I am a lumberjack.
+
+    I cut down trees very fast , because i have a large ax.'
+  user 2 personas: 'I don t believe any a.
+
+    Story i ve ever heard.
+
+    I am wiccan , but haven t told them.
+
+    My parents are science deniers , but un religious.
+
+    I work at my community garden center , and volunteer at the animal shelter.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I work at the community garden center and volunteer at the animal shelter.
+
+    User 1: That''s cool! I''m a lumberjack.
+
+    User 2: A lumberjack? That''s awesome!
+
+    User 1: Yeah, it''s a lot of fun. I get to cut down trees and work outside.
+
+    User 2: That sounds like a great job. I love being outside.
+
+    User 1: Me too! I''m not really much of a science person, but I love nature.
+
+    User 2: That''s interesting. I''m not really religious, but I''m a wiccan.
+
+    User 1: A wiccan? I''ve never heard of that before.
+
+    User 2: It''s a religion based on nature and spirituality.
+
+    User 1: That sounds really interesting. I''d love to learn more about it.
+
+    User 2: Sure! I''d be happy to tell you about it.
+
+    User 1: Great! I''d love to hear.
+
+    User 2: So, wicca is a religion that is based on nature and spirituality. We believe that there is a divine feminine energy that is present in all things, and we also believe in the power of magic.
+
+    User 1: That''s really interesting! I''ve never heard of that before.
+
+    User 2: Yeah, it''s not a very well-known religion. But there are a lot of people who practice it.
+
+    User 1: Do you practice it?
+
+    User 2: Yes, I do. I''ve been practicing it for about a year now.
+
+    User 1: That''s really cool. I''d love to learn more about it.
+
+    User 2: Sure! I''d be happy to tell you more about it.
+
+    User 1: Great! I''m really interested in learning more.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

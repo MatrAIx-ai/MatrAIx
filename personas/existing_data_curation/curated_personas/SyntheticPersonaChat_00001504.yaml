@@ -1,0 +1,76 @@
+id: '00001504'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1504
+data:
+  user 1 personas: 'I am 77 years old.
+
+    My favorite hobby is gardening.
+
+    My husband died last year.
+
+    Black coffee is my addiction.
+
+    My family gets together every saturday.'
+  user 2 personas: 'I like to play nintendo.
+
+    I like to race rc cars.
+
+    I love to eat fish.
+
+    I live in the great white north.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to play Nintendo, race RC cars, and eat fish.
+
+    User 1: Those sound like fun hobbies.
+
+    User 2: They are.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home dad.
+
+    User 1: Oh, that sounds like a lot of fun.
+
+    User 2: It is.
+
+    User 1: What do you do for fun with your family?
+
+    User 2: We like to go camping, fishing, and hiking.
+
+    User 1: Those sound like great family activities.
+
+    User 2: They are.
+
+    User 1: What''s your favorite thing about living in the great white north?
+
+    User 2: The snow. I love skiing and snowboarding.
+
+    User 1: I''m not a big fan of the snow, but I can see how it would be fun to ski and snowboard.
+
+    User 2: It is.
+
+    User 1: Well, it''s been nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again sometime.
+
+    User 2: I''d like that.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

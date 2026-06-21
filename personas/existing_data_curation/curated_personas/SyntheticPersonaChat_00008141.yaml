@@ -1,0 +1,82 @@
+id: 00008141
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8141
+data:
+  user 1 personas: 'I enjoy magic the gathering , it is a card game.
+
+    I have 4 pets.
+
+    I can t whistle.
+
+    My favorite food is jello.'
+  user 2 personas: 'I work in a veterinary office.
+
+    I have 2 cats.
+
+    My favorite food is strawberries.
+
+    I love to go to the beach.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hi! My name is Alice.
+
+    User 2: Hi Alice, my name is Bob.
+
+    User 1: It''s nice to meet you Bob.
+
+    User 2: Nice to meet you too Alice.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a veterinary office.
+
+    User 1: Oh, that must be interesting.
+
+    User 2: It is. I get to see a lot of cute animals.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have two cats.
+
+    User 1: Oh, I love cats! What are their names?
+
+    User 2: Their names are Mittens and Snowball.
+
+    User 1: Those are cute names.
+
+    User 2: Thanks.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is strawberries.
+
+    User 1: Oh, I love strawberries too!
+
+    User 2: They''re so sweet and juicy.
+
+    User 1: I know right? I could eat them all day long.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go to the beach.
+
+    User 1: Oh, me too! I love swimming, sunbathing, and building sandcastles.
+
+    User 2: Me too! I also love to go fishing.
+
+    User 1: I''ve never been fishing before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might just have to do that.
+
+    User 2: You won''t regret it.
+
+    User 1: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

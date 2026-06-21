@@ -1,0 +1,70 @@
+id: 00007068
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7068
+data:
+  user 1 personas: 'My mother was a sunday school teacher.
+
+    I dance ballet.
+
+    I am an only child.
+
+    I went to an all girls christian high school.
+
+    I m currently in nursing school.'
+  user 2 personas: 'I like to eat the skin of the apple.
+
+    My favorite fruit is apple.
+
+    I like fruit.
+
+    I like green apples.
+
+    I don t like to eat meat.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [User 1''s name].
+
+    User 2: Nice to meet you! I''m [User 2''s name].
+
+    User 1: What''s your favorite fruit?
+
+    User 2: Apples! I love them all, but green apples are my favorite.
+
+    User 1: Me too! I love the tartness of green apples.
+
+    User 2: Do you like to eat the skin of the apple?
+
+    User 1: Yes, I do! I think it''s the best part.
+
+    User 2: I agree! The skin is so flavorful.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s great! I''m in nursing school right now.
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, I''m really enjoying it so far.
+
+    User 2: I''m sure you''ll be a great nurse.
+
+    User 1: Thank you! I hope so.
+
+    User 2: So, what''s your favorite thing about nursing school?
+
+    User 1: I love learning about the human body and how to care for people.
+
+    User 2: That''s awesome! I''m sure you''ll make a difference in the lives of your patients.
+
+    User 1: Thank you! I hope so.
+
+    User 2: So, what are your plans after nursing school?
+
+    User 1: I''m not sure yet. I''m thinking about working in a hospital.
+
+    User 2: That''s great! I''m sure you''ll be a great asset to any hospital.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

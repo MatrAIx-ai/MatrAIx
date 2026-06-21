@@ -1,0 +1,76 @@
+id: 00004119
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4119
+data:
+  user 1 personas: 'I try to watch what i eat.
+
+    Pizza is my favorite.
+
+    I enjoy eating italian food.
+
+    I am east asian.
+
+    My name is tom.'
+  user 2 personas: 'I love pandas.
+
+    I am a vegetarian.
+
+    My favorite thing to do is to read books on the beach.
+
+    I am starting a new juicing bar.
+
+    I love to surf.'
+  Best Generated Conversation: 'User 1: Hello, my name is Tom.
+
+    User 2: Hello Tom, my name is Anya.
+
+    User 1: It''s nice to meet you, Anya. What do you like to do for fun?
+
+    User 2: I love to read books, surf, and go to the beach.
+
+    User 1: That sounds great. I also enjoy reading books and going to the beach.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read fiction, especially fantasy and sci-fi novels.
+
+    User 2: I love fantasy novels too! I''ve been reading a lot of Brandon Sanderson''s books lately.
+
+    User 1: I''ve heard good things about his books. I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to surf. I''ve been surfing for a few years now, and I love it.
+
+    User 1: That''s cool. I''ve never surfed before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. I''m always looking for new things to try.
+
+    User 2: That''s great. I''m sure you''d love it.
+
+    User 1: So, what are you doing these days?
+
+    User 2: I''m starting a new juicing bar. I''m really excited about it.
+
+    User 1: That''s great! I''m sure it will be a success.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what kind of food do you serve at your juicing bar?
+
+    User 2: We serve a variety of juices, smoothies, and salads.
+
+    User 1: That sounds good. I''ll have to come try it sometime.
+
+    User 2: You should! I''m sure you''ll like it.
+
+    User 1: Thanks for the recommendation. I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

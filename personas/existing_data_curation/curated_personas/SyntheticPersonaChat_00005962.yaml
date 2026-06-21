@@ -1,0 +1,66 @@
+id: 00005962
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5962
+data:
+  user 1 personas: 'Christmas is my favorite holiday.
+
+    I was adopted.
+
+    I work at a local party store.
+
+    I met my birth mother when i was sixteen.
+
+    I have several siblings i do not know.'
+  user 2 personas: 'I enjoy walking around the park.
+
+    I love my dog.
+
+    I like baking.
+
+    I go to the theater to watch plays.
+
+    Wedding cakes are my specialty.'
+  Best Generated Conversation: 'User 1: Hi, I''m (User 1)!
+
+    User 2: Hi, I''m (User 2)!
+
+    User 1: What are your hobbies?
+
+    User 2: I enjoy baking, walking around the park, and going to the theater.
+
+    User 1: That''s great! I love to bake too. What''s your favorite thing to bake?
+
+    User 2: My favorite thing to bake is wedding cakes. I love the challenge of creating something that is both beautiful and delicious.
+
+    User 1: That''s so cool! I''ve never tried to bake a wedding cake before.
+
+    User 2: You should try it sometime! It''s a lot of fun and it''s really rewarding when you finish it.
+
+    User 1: I might just do that! What''s your favorite kind of wedding cake to bake?
+
+    User 2: I like to make simple cakes that are elegant and classic. I think they''re the most beautiful.
+
+    User 1: I agree! I love simple cakes. They''re so easy to decorate and they always look so nice.
+
+    User 2: Me too! I''m glad you like them.
+
+    User 1: I do! What are some of your favorite things to do in the park?
+
+    User 2: I like to go for walks, read books, and just relax. It''s a great place to escape from the hustle and bustle of city life.
+
+    User 1: That sounds like a great way to relax. I''m not much of a walker, but I love to read. I''ll have to bring my book the next time I go to the park.
+
+    User 2: You should! It''s a great place to read.
+
+    User 1: Thanks for the tip! I''ve always wanted to try watching a play at the theater.
+
+    User 2: You should! It''s a great way to see a live performance. I especially love musicals.
+
+    User 1: I''ve heard that they''re really fun. I''ll have to check one out sometime.
+
+    User 2: You won''t regret it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

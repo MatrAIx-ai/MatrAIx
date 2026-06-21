@@ -1,0 +1,68 @@
+id: 00008005
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8005
+data:
+  user 1 personas: 'I have two kids i enjoy being on social media.
+
+    I love mexican food.
+
+    I work at a animal clinic.
+
+    I love the summer.'
+  user 2 personas: 'I use third party programs to read portable documents instead of adobe.
+
+    I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I have a small beagle dog who i call droopy.
+
+    I enjoy eating pumpkins.
+
+    I enjoy watching videos on youtube.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. What do you like to do for fun?
+
+    User 1: I like to spend time with my family, go out to eat, and read. What about you?
+
+    User 2: I like to watch YouTube videos, play video games, and cook.
+
+    User 1: I love cooking too! What''s your favorite thing to cook?
+
+    User 2: I love making shrimp tacos. I use my own recipe for the shrimp, and I dip them in barbecue sauce.
+
+    User 1: That sounds delicious! I love shrimp.
+
+    User 2: I also have a beagle dog named Droopy. He''s the cutest little thing.
+
+    User 1: I love beagles! I had one growing up.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have two kids.
+
+    User 2: Oh, that''s great! I love kids.
+
+    User 1: They''re a lot of work, but they''re also a lot of fun.
+
+    User 2: I''m sure they are.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in computer science.
+
+    User 2: It''s a great field. I love it.
+
+    User 1: I can imagine. It must be really rewarding.
+
+    User 2: It is. I love being able to create things that people use every day.
+
+    User 1: That''s awesome.
+
+    User 2: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

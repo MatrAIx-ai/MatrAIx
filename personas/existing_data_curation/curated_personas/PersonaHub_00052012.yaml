@@ -1,0 +1,18 @@
+id: '00052012'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52012
+persona_description: A SQL Server administrator who is interested in optimizing database performance and reducing storage costs. They are looking for ways to improve data retrieval and reduce overhead for
+  non-null values, specifically when the space saved is at least 20 percent to 40 percent. They are familiar with the concept of sparse columns and column sets and are interested in learning more about
+  how to implement them in their database. They may also be interested in learning about the limitations of sparse columns and column sets, as well as potential solutions to overcome these limitations.
+expertise:
+  general_domain_top1pct: Database Administration
+  specific_domain_top1pct: Database Performance Optimization
+  general_domain_top01pct: None
+  specific_domain_top01pct: Sparse Column and Column Set Implementation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

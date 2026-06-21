@@ -1,0 +1,64 @@
+id: 00004168
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4168
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I live in the usa.
+
+    I was born male and transitioned to female when i was 17.
+
+    I love pizza.
+
+    I was born 20 years ago.'
+  user 2 personas: 'I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    My name is frank.
+
+    I m the general manager of the local grocery store.
+
+    My hobbies include reading and cycling.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi! I''m Frank.
+
+    User 1: Nice to meet you, Frank! What do you do for fun?
+
+    User 2: I like to read, cycle, and play video games.
+
+    User 1: Oh, that''s cool! I like to read and play video games too.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all sorts of games, but I''m a big fan of RPGs.
+
+    User 2: Oh, me too! What are your favorite RPGs?
+
+    User 1: I like a lot of different RPGs, but some of my favorites are the Final Fantasy series, Mass Effect, and Elder Scrolls.
+
+    User 2: Those are all great games! I''m a big fan of the Final Fantasy series too.
+
+    User 1: What''s your favorite Final Fantasy game?
+
+    User 2: It''s hard to choose, but I think I''d have to say Final Fantasy VII.
+
+    User 1: That''s a great choice! VII is my favorite too.
+
+    User 2: It''s so good! I love the story, the characters, and the music.
+
+    User 1: Me too! It''s such a classic game.
+
+    User 2: Yeah, it is. I''m glad we could bond over Final Fantasy VII.
+
+    User 1: Me too! It''s always nice to meet someone who''s a fan of the same games.
+
+    User 2: Yeah, it is. I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

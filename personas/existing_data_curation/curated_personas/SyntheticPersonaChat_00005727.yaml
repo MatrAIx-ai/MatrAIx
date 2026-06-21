@@ -1,0 +1,60 @@
+id: '00005727'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5727
+data:
+  user 1 personas: 'Boating is my favorite activity.
+
+    I am a doctor.
+
+    I work for a large hospital.
+
+    I live in a large home.'
+  user 2 personas: 'I am in college.
+
+    I am very social.
+
+    I play football.
+
+    I exercise.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play football, exercise, and be social.
+
+    User 1: Oh, that''s cool! I like to boat, go fishing, and read.
+
+    User 2: Fishing sounds like fun. I''ve never been boating before.
+
+    User 1: You should try it! It''s really relaxing and fun.
+
+    User 2: Maybe I will.
+
+    User 1: What are you studying in college?
+
+    User 2: I''m studying business.
+
+    User 1: Oh, that''s cool! I''m a doctor.
+
+    User 2: Wow! That''s amazing! What kind of doctor are you?
+
+    User 1: I''m a general practitioner.
+
+    User 2: Oh, that''s cool! I''m thinking about going to medical school after I graduate.
+
+    User 1: That''s great! I''m sure you''d be a great doctor.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Maybe we can get together and go boating sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

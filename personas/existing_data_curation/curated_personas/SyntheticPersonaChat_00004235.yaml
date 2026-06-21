@@ -1,0 +1,70 @@
+id: '00004235'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4235
+data:
+  user 1 personas: 'My favorite hero is flash.
+
+    I prefer summer.
+
+    I type one handed.
+
+    I do not like dresses.
+
+    I love butterflies.'
+  user 2 personas: 'I still have a photo from my senior prom in my wallet.
+
+    I often think about quitting my job and becoming a roadie for justin bieber.
+
+    My sister is becoming my mother and often asks me when i am getting married.
+
+    I am not a big fan of waiting in line.
+
+    I own five pairs of the same pants.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What are your interests?
+
+    User 2: I like to read, write, and draw.
+
+    User 1: That''s cool! I like to read, too. What are some of your favorite books?
+
+    User 2: I like books about history and science.
+
+    User 1: Oh, I like those too! I''m reading a book about the history of the Roman Empire right now.
+
+    User 2: That sounds interesting! I''ve never read a book about the Roman Empire.
+
+    User 1: It''s really good! I''ve learned a lot about the history of Rome.
+
+    User 2: I''ll have to check it out. I''m always looking for new books to read.
+
+    User 1: You should! It''s a great book.
+
+    User 2: What are some of your favorite authors?
+
+    User 1: I like a lot of different authors, but my favorite is probably Stephen King.
+
+    User 2: I love Stephen King! I''ve read all of his books.
+
+    User 1: Me too! He''s a great author.
+
+    User 2: What''s your favorite book by him?
+
+    User 1: It''s hard to choose, but I think my favorite is "The Shining."
+
+    User 2: That''s one of my favorites too! It''s so good.
+
+    User 1: It is! I love the movie, too.
+
+    User 2: Me too! It''s one of my favorite movies.
+
+    User 1: I''m glad we have similar interests.
+
+    User 2: Me too! I think we''re going to get along well.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

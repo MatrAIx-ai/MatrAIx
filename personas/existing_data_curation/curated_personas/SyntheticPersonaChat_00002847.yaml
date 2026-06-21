@@ -1,0 +1,82 @@
+id: 00002847
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2847
+data:
+  user 1 personas: 'I like to take photos.
+
+    I am an environmental engineer.
+
+    I live alone.
+
+    I love to hike.
+
+    I live in portland , maine.'
+  user 2 personas: 'I can t stand beets.
+
+    I m an ovo vegetarian.
+
+    I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I can t cook.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to sleep in on my days off.
+
+    User 1: I love that too! What do you do when you wake up?
+
+    User 2: I usually go for a walk or read a book.
+
+    User 1: That sounds nice. I love to go hiking.
+
+    User 2: I''ve never been hiking. Is it fun?
+
+    User 1: It''s amazing! You get to see beautiful views and you can get some exercise.
+
+    User 2: That sounds like something I would like.
+
+    User 1: We should go hiking together sometime!
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an ovo vegetarian.
+
+    User 1: Oh, that''s interesting. What does that mean?
+
+    User 2: It means I don''t eat meat or fish, but I do eat eggs.
+
+    User 1: Why did you decide to become a vegetarian?
+
+    User 2: I just don''t like the taste of meat or fish.
+
+    User 1: That''s fair enough. I''m a flexitarian, so I don''t eat meat very often.
+
+    User 2: That''s cool. I''ve never heard of that before.
+
+    User 1: It''s just a term for someone who eats mostly vegetarian but sometimes eats meat.
+
+    User 2: That sounds like a good way to eat.
+
+    User 1: It is! I feel healthier when I eat less meat.
+
+    User 2: Me too. I think I might try to be more vegetarian in the future.
+
+    User 1: That''s great! I''m sure you''ll feel better.
+
+    User 2: Thanks for the tip!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

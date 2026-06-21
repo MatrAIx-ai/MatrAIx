@@ -1,0 +1,60 @@
+id: '00006312'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6312
+data:
+  user 1 personas: 'My father used to work for a bank.
+
+    I went to college and graduated few years ago.
+
+    Now i also work at a bank.
+
+    I live in the city.
+
+    I grew up in the upstate.'
+  user 2 personas: 'I listen to podcasts.
+
+    I do not have a car.
+
+    My favorite color is purple.
+
+    I live near a park.
+
+    I do not have any children.'
+  Best Generated Conversation: 'User 1: I am a banker.
+
+    User 2: I like podcasts.
+
+    User 1: Where do you live?
+
+    User 2: I live near a park.
+
+    User 1: I grew up in the upstate.
+
+    User 2: I do not have a car.
+
+    User 1: I have a car and I drive to the city every day to work.
+
+    User 2: I do not have any children.
+
+    User 1: I have a son and a daughter.
+
+    User 2: I like purple.
+
+    User 1: Me too. It is my favorite color.
+
+    User 2: I like to listen to podcasts when I am at the park.
+
+    User 1: That sounds like a great way to relax.
+
+    User 2: It is. I also listen to podcasts when I am driving.
+
+    User 1: I like to listen to podcasts when I am working.
+
+    User 2: I like to listen to podcasts about history and science.
+
+    User 1: I like to listen to podcasts about news and politics.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

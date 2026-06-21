@@ -1,0 +1,60 @@
+id: '00001670'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1670
+data:
+  user 1 personas: 'I live in alabama.
+
+    I have twelve kids.
+
+    I have blonde hair.
+
+    I am obese.'
+  user 2 personas: 'My name is arnold.
+
+    I also love orange juice.
+
+    I like to watch tv.
+
+    I am 10 years old.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is Arnold.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and read.
+
+    User 1: I like to watch TV too. What are some of your favorite shows?
+
+    User 2: I like to watch cartoons, like SpongeBob SquarePants and The Loud House.
+
+    User 1: I like those shows too! What else do you like to do?
+
+    User 2: I like to play video games, like Mario Kart and Minecraft.
+
+    User 1: I like Mario Kart too! What''s your favorite character?
+
+    User 2: I like Mario. He''s the best character.
+
+    User 1: I agree! He''s the best!
+
+    User 2: I also like to read. I like to read books about fantasy and adventure.
+
+    User 1: I like to read too. I like to read books about history and science.
+
+    User 2: I like history books too. I like learning about the past.
+
+    User 1: Me too! I think it''s really interesting to learn about what happened in the past.
+
+    User 2: Me too! I think it''s important to learn about the past so we can understand the present.
+
+    User 1: I agree! It''s important to learn from the past so we can make better decisions in the future.
+
+    User 2: Me too! I think we''re going to be great friends.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00004002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4002
+data:
+  user 1 personas: 'I have three dogs at home.
+
+    I hate to workout , but i need to.
+
+    I am very good at the drums.
+
+    I have a bicycle.
+
+    I need to take my blood sugar everyday.'
+  user 2 personas: 'I like to listen to someone else reading a book.
+
+    My mother met elvis.
+
+    I moved out when i was 14.
+
+    I like cartoons more than movies.'
+  Best Generated Conversation: 'User 1: Hey! How are you doing today?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing pretty good, thanks!
+
+    User 2: That''s great to hear! So, what do you like to do for fun?
+
+    User 1: I like to play the drums, and I also have three dogs at home.
+
+    User 2: That''s awesome! I love dogs! Do you have any pictures of them?
+
+    User 1: Sure, I do! Here''s one of my dogs playing fetch.
+
+    User 2: Aww, he''s so cute! I love it!
+
+    User 1: Thanks! He''s my favorite dog.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I also like to ride my bicycle, and I like to watch cartoons.
+
+    User 2: That''s cool! I used to love cartoons when I was younger. Do you have a favorite cartoon?
+
+    User 1: I like a lot of cartoons, but my favorite is probably "SpongeBob SquarePants."
+
+    User 2: Oh, that''s a good one! I used to love that show when I was younger too.
+
+    User 1: It''s still a good show!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''m a teacher.
+
+    User 1: That''s awesome! I''ve always thought teaching would be a fun job.
+
+    User 2: It is! I love working with kids.
+
+    User 1: That''s great! So, what do you like to do in your free time?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Oh, that''s cool! I like to do a lot of the same things.
+
+    User 2: Awesome! We should hang out sometime and do something fun.
+
+    User 1: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

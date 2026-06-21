@@ -1,0 +1,64 @@
+id: '00003666'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3666
+data:
+  user 1 personas: 'I have a consulting firm.
+
+    I am a small business owner.
+
+    I give out sports information.
+
+    My clients are gamblers.
+
+    I help them win a lot of money.'
+  user 2 personas: 'I give everybody that comes in front me a fair chance.
+
+    My next job will be in the federal court.
+
+    I m a judge in the circuit court.
+
+    I used to be a lawyer.
+
+    My name is albert.'
+  Best Generated Conversation: 'User 1: Hey, I''m Alex. I''m a small business owner and I have a consulting firm. I give out sports information to my clients, which are gamblers.
+
+    User 2: Hi Alex, I''m Albert. I''m a judge in the circuit court. I''ve been a lawyer in the past and I''m on my way to the federal court.
+
+    User 1: That''s great, Albert. I''m sure you''ll do well in the federal court.
+
+    User 2: Thanks, Alex. I''m confident that I will.
+
+    User 1: So, what do you think of the gambling industry?
+
+    User 2: I think it''s a dangerous industry, but it''s also a lot of fun.
+
+    User 1: I agree. It can be very dangerous, but it can also be very profitable.
+
+    User 2: That''s true. I''ve seen people lose a lot of money gambling, but I''ve also seen people win a lot of money.
+
+    User 1: Exactly. I''ve seen people go broke gambling, but I''ve also seen people make a fortune.
+
+    User 2: It''s all about knowing when to walk away.
+
+    User 1: That''s right. It''s important to be able to control your emotions when you''re gambling.
+
+    User 2: Absolutely. If you can''t control your emotions, you''re going to lose money.
+
+    User 1: I agree. So, what do you think of my business?
+
+    User 2: I think it''s a great business. You''re providing a valuable service to your clients.
+
+    User 1: Thanks, Albert. I''m glad you think so.
+
+    User 2: No problem. I''m always happy to support small businesses.
+
+    User 1: Thanks for the support. I''m going to need all the help I can get.
+
+    User 2: You''re welcome. I''m sure you''ll be successful.
+
+    User 1: Thanks, Albert. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

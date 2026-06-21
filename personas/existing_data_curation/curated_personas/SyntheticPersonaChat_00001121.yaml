@@ -1,0 +1,62 @@
+id: '00001121'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1121
+data:
+  user 1 personas: 'I play the bass.
+
+    I have a large cd collection.
+
+    I collect stamps.
+
+    I like vintage furniture.'
+  user 2 personas: 'My father is from india.
+
+    My mother is from greece.
+
+    I love cooking !.
+
+    I like to swim when the weather is hot.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I like to play the bass. What do you like to do for fun?
+
+    User 2: I love to cook! I''m also a big fan of swimming.
+
+    User 1: That''s cool! I''m not very good at cooking, but I love to eat.
+
+    User 2: Well, I''m sure you''d love the food I cook!
+
+    User 1: I''m sure I would! What''s your favorite dish to make?
+
+    User 2: My favorite dish to make is moussaka. It''s a traditional Greek dish made with eggplant, potatoes, ground beef, and a béchamel sauce.
+
+    User 1: Oh, that sounds delicious! I love eggplant.
+
+    User 2: I know, right? It''s so good! I''ll have to make some for you sometime.
+
+    User 1: That would be great! Thanks!
+
+    User 2: No problem! I''m always happy to cook for people.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go swimming, especially when the weather is hot.
+
+    User 1: Me too! Swimming is so much fun.
+
+    User 2: I know, right? It''s a great way to cool down and relax.
+
+    User 1: I agree! I love swimming in the ocean.
+
+    User 2: Me too! It''s the best.
+
+    User 1: Well, it was nice talking to you, [user 2].
+
+    User 2: It was nice talking to you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

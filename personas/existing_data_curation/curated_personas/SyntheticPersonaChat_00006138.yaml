@@ -1,0 +1,66 @@
+id: 00006138
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6138
+data:
+  user 1 personas: 'My favorite holiday is halloween.
+
+    I like to go shopping with my daughters.
+
+    I like to remodel homes.
+
+    I like to go hunting.
+
+    I like to shoot a bow.'
+  user 2 personas: 'I am thin.
+
+    I like to hunt.
+
+    I like the tv show the walking dead.
+
+    I am blonde.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to go hunting, remodel homes, and shop with my daughters.
+
+    User 1: That''s cool! I like to go hunting too.
+
+    User 2: Oh, really? What kind of hunting do you like to do?
+
+    User 1: I like to go deer hunting and turkey hunting.
+
+    User 2: That''s great! I love turkey hunting.
+
+    User 1: Me too! It''s so much fun.
+
+    User 2: I know, right? It''s so exciting to wait for the turkey to come and then finally get a shot at him.
+
+    User 1: Yeah, it is! It''s such a rush.
+
+    User 2: I know, right? It''s the best feeling.
+
+    User 1: Do you like to remodel homes too?
+
+    User 2: I do! It''s so much fun to take a house that''s old and outdated and make it into something new and beautiful.
+
+    User 1: Yeah, it is! It''s so satisfying to see your hard work come to life.
+
+    User 2: I know, right? It''s the best feeling.
+
+    User 1: So, what do you like to do with your daughters when you go shopping?
+
+    User 2: We usually go to the mall and look for clothes, shoes, and accessories.
+
+    User 1: That sounds like fun! I love shopping with my daughters too.
+
+    User 2: Me too! It''s so much fun to spend time with them and get them new things.
+
+    User 1: Yeah, it is! It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

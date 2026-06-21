@@ -1,0 +1,19 @@
+id: '00010007'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10007
+persona_description: A researcher in the field of robotics and artificial intelligence, particularly in the area of multiagent systems and decision-making under uncertainty. The individual is skilled in
+  developing and applying advanced mathematical models to solve complex problems involving autonomous robots and networks of devices. They are adept at developing practical and efficient algorithms for
+  solving Dec-POMDP models, and have a track record of successfully applying their methods to real-world robotic systems. They are also known for their expertise in generating lower-level control systems
+  for robotic helicopters in a specific scenario, and for their ability to decompose Dec-POMDPs into two simpler problems involving graphs.
+expertise:
+  general_domain_top1pct: Artificial Intelligence
+  specific_domain_top1pct: Multiagent Systems and Decision-Making under Uncertainty
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

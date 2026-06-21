@@ -1,0 +1,84 @@
+id: '00001714'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1714
+data:
+  user 1 personas: 'I play ice hockey.
+
+    I live in the united states.
+
+    I go to high school.
+
+    Math is my favorite subject.
+
+    I am a boy.'
+  user 2 personas: 'I watch every football game at alabama.
+
+    I am a geology major at alabama university.
+
+    I never have had alcohol in my life.
+
+    I currently suffer from social anxiety.
+
+    I have a girlfriend of 7 years.'
+  Best Generated Conversation: 'User 1: Hey! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch football games, play video games, and hang out with my friends.
+
+    User 1: That sounds like fun! I like to play ice hockey, do math problems, and hang out with my friends.
+
+    User 2: That''s cool! I''ve never played ice hockey before.
+
+    User 1: It''s a lot of fun! You should try it sometime.
+
+    User 2: I might just do that.
+
+    User 1: So, what are you majoring in?
+
+    User 2: I''m majoring in geology at the University of Alabama.
+
+    User 1: Oh, cool! I''ve never met anyone who''s majoring in geology before.
+
+    User 2: It''s a pretty interesting field. I get to learn about the earth and how it works.
+
+    User 1: That sounds really cool! I wish I could learn more about it.
+
+    User 2: You can always take a geology course!
+
+    User 1: I might just do that.
+
+    User 2: So, what kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I mostly play action-adventure games.
+
+    User 2: Oh, cool! I like those too. What''s your favorite action-adventure game?
+
+    User 1: My favorite action-adventure game is The Legend of Zelda: Breath of the Wild.
+
+    User 2: That''s a great game! I love the open world and the exploration.
+
+    User 1: Me too! I''ve spent hours just exploring the world and finding new things.
+
+    User 2: That''s what I love about that game. It''s so open-ended and there''s so much to do.
+
+    User 1: Yeah, it''s the best!
+
+    User 2: So, what do you want to do when you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going to graduate school, but I''m not sure what I want to specialize in.
+
+    User 2: Oh, that''s cool. I''m sure you''ll figure it out.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

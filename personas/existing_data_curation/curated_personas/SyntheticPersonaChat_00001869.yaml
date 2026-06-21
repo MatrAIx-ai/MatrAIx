@@ -1,0 +1,80 @@
+id: 00001869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1869
+data:
+  user 1 personas: 'I drive a nice car.
+
+    I take pride in my job managing the restaurant.
+
+    My family is very important to me.
+
+    My brothers work with me.
+
+    I work all the time.'
+  user 2 personas: 'I live alone.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I am a scientist.
+
+    I play guitar on my free time.
+
+    I like to play video games.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hello! I''m [user 2 name].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a scientist.
+
+    User 1: Oh, that''s cool! What kind of science do you do?
+
+    User 2: I''m a biochemist.
+
+    User 1: Wow, that sounds really interesting! What''s your favorite part of the job?
+
+    User 2: I like learning new things about the human body.
+
+    User 1: That''s awesome! I''m always learning new things too.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a restaurant manager.
+
+    User 2: Oh, that''s cool! What''s your favorite part of the job?
+
+    User 1: I like working with food and making people happy.
+
+    User 2: That''s awesome! I love food too.
+
+    User 1: Me too! What''s your favorite food?
+
+    User 2: I like a lot of different foods, but my favorite is probably pizza.
+
+    User 1: Pizza is my favorite too! I love the variety of toppings you can get.
+
+    User 2: Me too! I like to experiment with different toppings.
+
+    User 1: Me too! I once made a pizza with pineapple, bacon, and green olives.
+
+    User 2: That sounds delicious! I love pineapple on pizza.
+
+    User 1: Me too! It''s a great combination of sweet and salty.
+
+    User 2: I agree! We should get together sometime and make a pizza together.
+
+    User 1: That would be fun! I love cooking with friends.
+
+    User 2: Me too! We can make a pizza with all our favorite toppings.
+
+    User 1: That sounds great! I''ll bring the cheese.
+
+    User 2: And I''ll bring the dough.
+
+    User 1: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

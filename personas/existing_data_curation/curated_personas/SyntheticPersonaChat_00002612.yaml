@@ -1,0 +1,54 @@
+id: '00002612'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2612
+data:
+  user 1 personas: 'I recently got a cat.
+
+    I am an artist.
+
+    I enjoy walking for exercise.
+
+    I have four children.'
+  user 2 personas: 'Sometimes i wish my computer would work faster.
+
+    My glasses are always dirty and i cannot seem to get them clean.
+
+    I am always happy when the summer ends.
+
+    I like standing in the rain.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: Doing well, thanks! How about you?
+
+    User 1: I''m doing great, thanks! I''m an artist and I just recently got a cat.
+
+    User 2: That''s awesome! I love cats! I used to have a cat named Mittens.
+
+    User 1: Really? What was it like having a cat?
+
+    User 2: It was great! She was so much fun to play with and she was always there to greet me when I got home from work.
+
+    User 1: That sounds like a great cat! I''m glad you had a good experience with her.
+
+    User 2: Me too! So, what kind of art do you do?
+
+    User 1: I mostly do watercolor paintings. I love the way watercolors can create such a soft and delicate look.
+
+    User 2: That sounds really nice! I''ve always wanted to try watercolor painting but I''m not very good at it.
+
+    User 1: It''s definitely a learning process, but it''s really fun to experiment with different techniques.
+
+    User 2: I''ll have to give it a try sometime! So, what do you do for fun besides art?
+
+    User 1: I like to go for walks, read books, and spend time with my family.
+
+    User 2: That sounds like a nice life. I like to go for walks too, but I don''t have much time for reading or spending time with my family.
+
+    User 1: I''m sorry to hear that. Maybe you could try reading books on your walks? That way you could still get some exercise and you could also learn something new.
+
+    User 2: That''s a good idea! I''ll have to try that. Thanks for the suggestion!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

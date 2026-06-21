@@ -1,0 +1,58 @@
+id: '00004014'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4014
+data:
+  user 1 personas: 'I like doing art projects.
+
+    I enjoy spending time with family and friends.
+
+    I am married.
+
+    I am a strong woman.
+
+    I travel a lot.'
+  user 2 personas: 'I play guitar.
+
+    I am a michigan state trooper.
+
+    I love chocolate cake with extra frosting.
+
+    I have two siberian huskies.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi! I''m (name). What do you like to do?
+
+    User 1: I love doing art projects, traveling, and spending time with family and friends.
+
+    User 2: I love to play guitar, eat chocolate cake with extra frosting, and spend time with my two Siberian Huskies.
+
+    User 1: That sounds like a lot of fun! I''ve never played guitar before, but I love listening to it. What kind of music do you play?
+
+    User 2: I play a lot of different genres, but my favorite is country music.
+
+    User 1: I love country music too! What''s your favorite song?
+
+    User 2: I have a lot of favorite songs, but one of my favorites is "Friends in Low Places" by Garth Brooks.
+
+    User 1: That''s a great song! I love the music video.
+
+    User 2: Me too! It''s so funny.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to go hiking, camping, and fishing.
+
+    User 1: That sounds like a lot of fun! I''ve never been camping before, but I''ve always wanted to try it.
+
+    User 2: You should definitely try it! It''s a lot of fun to get away from the city and spend time in nature.
+
+    User 1: I think I will! Thanks for the recommendation.
+
+    User 2: No problem! It was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

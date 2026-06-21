@@ -1,0 +1,74 @@
+id: 00007580
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7580
+data:
+  user 1 personas: 'I am planning to move to a new state soon.
+
+    I enjoy hiking.
+
+    I have two border collies.
+
+    I am an artist.'
+  user 2 personas: 'I am hoping to play.
+
+    I recently had knee surgery.
+
+    I am hoping to play basketball overseas.
+
+    I just graduated college.
+
+    I am 7 foot tall.'
+  Best Generated Conversation: 'User 1: Hi, my name is [Your name].
+
+    User 2: Hi, nice to meet you, my name is [Their name].
+
+    User 1: What are your hobbies?
+
+    User 2: I love to play basketball, I recently had knee surgery and am hoping to play overseas after I graduate college.
+
+    User 1: That''s great! I love to hike, I have two border collies that I like to take with me.
+
+    User 2: That sounds like a lot of fun! I''ve always wanted to try hiking, but I''m not sure where to start.
+
+    User 1: There are a lot of great places to hike in [your city], you can start by doing some research online or talking to some friends who are into hiking.
+
+    User 2: Thanks for the advice, I''ll definitely look into it.
+
+    User 1: So, what are you planning to do after you graduate college?
+
+    User 2: I''m hoping to play basketball overseas, I''ve been working hard on my game and I think I''m ready for the next level.
+
+    User 1: That''s great! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are you looking for in a new state?
+
+    User 2: I''m not sure yet, I''m just looking for a place that I can be happy and have a good job.
+
+    User 1: That makes sense. I''m sure you''ll find the perfect place for you.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, tell me more about yourself.
+
+    User 2: What do you want to know?
+
+    User 1: Well, what are you interested in?
+
+    User 2: I''m interested in a lot of things, but my main interests are basketball, music, and art.
+
+    User 1: That sounds like a lot of fun! I like all of those things too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: That sounds like a great idea.
+
+    User 2: Awesome! I''ll bring my basketball.
+
+    User 1: Sounds good! I''ll bring my hiking gear'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

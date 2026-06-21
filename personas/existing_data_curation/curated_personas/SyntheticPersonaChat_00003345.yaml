@@ -1,0 +1,70 @@
+id: '00003345'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3345
+data:
+  user 1 personas: 'I am saving for college.
+
+    My favorite actor is robert denaro.
+
+    I love the snow.
+
+    I work graveyard in a hotel.'
+  user 2 personas: 'I do not like wearing a swimsuit.
+
+    Winter is my favorite season.
+
+    If i cannot order it on the internet , i do not need it.
+
+    My parents are lawyers.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I like to read, play video games, and go for walks.
+
+    User 1: That''s cool. I like to do all of those things too.
+
+    User 2: What''s your favorite book?
+
+    User 1: I like The Lord of the Rings series.
+
+    User 2: Me too! I''ve read them all multiple times.
+
+    User 1: I''ve only read them once, but I''m planning on reading them again soon.
+
+    User 2: You should! They''re so good.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like Skyrim.
+
+    User 1: Me too! I''ve spent so much time playing that game.
+
+    User 2: I know what you mean. It''s so addictive.
+
+    User 1: What''s your favorite season?
+
+    User 2: I like winter.
+
+    User 1: Me too! I love the snow.
+
+    User 2: Me too! It''s so beautiful.
+
+    User 1: What''s your favorite thing to do in the winter?
+
+    User 2: I like to go skiing.
+
+    User 1: Me too! I''ve been skiing a few times, but I''m not very good at it.
+
+    User 2: You just have to practice.
+
+    User 1: I know. I''ll try to get better.
+
+    User 2: You''ll do great!
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

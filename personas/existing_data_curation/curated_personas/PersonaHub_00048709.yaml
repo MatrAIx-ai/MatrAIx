@@ -1,0 +1,18 @@
+id: 00048709
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48709
+persona_description: A healthcare professional who is interested in immunization rates and birth doses of hepatitis B vaccine. This persona is likely to be a public health official or a healthcare provider
+  who works in a hospital or clinic and is responsible for tracking and monitoring the vaccination rates among newborns. They may be interested in comparing the rates from year to year or studying the factors
+  that affect the vaccination rates.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: immunization rates
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

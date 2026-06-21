@@ -1,0 +1,90 @@
+id: 00007768
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7768
+data:
+  user 1 personas: 'My mother is a professional make up artist.
+
+    I want a dog , but that is a lot of commitment.
+
+    I love to go outside at night and eavesdrop on my neighbor s arguments.
+
+    If i want it , i buy it.'
+  user 2 personas: 'My father is a mechanic.
+
+    I work at walmart as a stocker.
+
+    My favorite band is muse.
+
+    I am leaving for college in three months.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for work?
+
+    User 2: I''m a stocker at Walmart.
+
+    User 1: Oh, that sounds like a tough job.
+
+    User 2: It''s not bad. I''m leaving in three months to go to college, though.
+
+    User 1: Oh, cool! What are you going to study?
+
+    User 2: I''m not sure yet, but I''m thinking about business.
+
+    User 1: That''s a good choice. What''s your favorite band?
+
+    User 2: Muse. They''re a British rock band.
+
+    User 1: I''ve heard of them, but I''ve never listened to them.
+
+    User 2: You should! They''re really good.
+
+    User 1: Okay, I''ll check them out.
+
+    User 2: What''s your favorite thing to do?
+
+    User 1: I love to go outside at night and eavesdrop on my neighbors'' arguments.
+
+    User 2: That''s... interesting.
+
+    User 1: I know, right? It''s so much fun to hear what other people are saying.
+
+    User 2: I guess so. I''ve never really thought about doing that.
+
+    User 1: You should! It''s really entertaining.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you want to do after college?
+
+    User 2: I''m not sure yet, but I''m thinking about starting my own business.
+
+    User 1: That''s a great idea. You''re really smart.
+
+    User 2: Thanks! I think so too.
+
+    User 1: So, what''s your favorite color?
+
+    User 2: Blue.
+
+    User 1: That''s my favorite color too!
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, I love the color blue. It''s so calming.
+
+    User 2: Me too. It''s my favorite color for a lot of things.
+
+    User 1: Me too. I like to wear blue a lot.
+
+    User 2: Me too. It''s just a great color.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

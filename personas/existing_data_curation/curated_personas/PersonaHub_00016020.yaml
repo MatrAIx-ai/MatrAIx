@@ -1,0 +1,19 @@
+id: '00016020'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16020
+persona_description: A research scientist with expertise in geography and public health, focusing on using geographic information systems (GIS) to analyze and visualize data related to the spread of COVID-19.
+  They are currently working on a new method called GeoMEDD, which uses a combination of household, neighborhood, and community-level data to identify emerging clusters and hotspots for COVID-19. They are
+  interested in using this method to help public health officials in identifying areas where the virus is spreading and taking appropriate actions to prevent further spread. They are also interested in
+  using this method to identify other outbreaks, such as flu epidemics and overdoses, and to decrease illness and loss of life.
+expertise:
+  general_domain_top1pct: Computer Science/Information Technology
+  specific_domain_top1pct: Geographic Information Systems/Public Health Informatics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

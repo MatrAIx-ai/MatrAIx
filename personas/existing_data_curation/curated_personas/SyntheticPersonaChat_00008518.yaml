@@ -1,0 +1,82 @@
+id: 00008518
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8518
+data:
+  user 1 personas: 'I prefer eating at home because people make me nervous.
+
+    My dad owns a appliance store that i don t want to inherit.
+
+    I spend a lot of time watching obscure foreign film on netflix.
+
+    I hate social obligations because i always say the wrong thing.
+
+    I like running in marathons.'
+  user 2 personas: 'I m really terrible at doing regular expressions.
+
+    I m allergic to lactose.
+
+    My doctor told me i have six months to live.
+
+    My favorite singer is justin bieber.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m (user 2''s name).
+
+    User 1: Nice to meet you! I''m (user 1''s name).
+
+    User 2: It''s nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch obscure foreign films on Netflix, and I also like running in marathons.
+
+    User 1: Oh, that''s cool! I''ve never seen an obscure foreign film on Netflix, but I''ve always wanted to.
+
+    User 2: You should! There are some really great ones out there.
+
+    User 1: I will! I''m always looking for new things to watch.
+
+    User 2: What do you do for a living?
+
+    User 1: I work at an appliance store.
+
+    User 2: Oh, that''s cool! I''m allergic to lactose, so I don''t really eat a lot of dairy products.
+
+    User 1: I''m not sure if we sell anything dairy-free, but I can check.
+
+    User 2: That would be great! Thank you.
+
+    User 1: No problem!
+
+    User 2: My doctor told me I have six months to live.
+
+    User 1: Oh no! I''m so sorry to hear that.
+
+    User 2: It''s okay. I''ve made peace with it.
+
+    User 1: I''m glad to hear that.
+
+    User 2: I''m going to spend the rest of my time doing things I love.
+
+    User 1: That''s a great idea.
+
+    User 2: Yeah, I''m going to travel the world and see all the places I''ve always wanted to see.
+
+    User 1: That sounds amazing!
+
+    User 2: I''m also going to spend a lot of time with my family and friends.
+
+    User 1: That''s really important.
+
+    User 2: Yeah, I want to make sure I spend as much time with them as possible.
+
+    User 1: I''m sure they''ll appreciate that.
+
+    User 2: I hope so.
+
+    User 1: I''m sure they will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

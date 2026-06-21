@@ -1,0 +1,52 @@
+id: '00005127'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5127
+data:
+  user 1 personas: 'My favorite city is new york.
+
+    My wife just left me.
+
+    I love to run.
+
+    My favorite food is steak.'
+  user 2 personas: 'I drive a 2011 volkswagen passat.
+
+    I eat too much fast food.
+
+    I am a national guard officer.
+
+    I love cold , wintry weather and snow.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thank you! I''m just enjoying a nice day of running.
+
+    User 2: That''s great! I love running too. What kind of running do you do?
+
+    User 1: I usually do short runs, but I''m trying to get into longer runs.
+
+    User 2: That''s great! I''m sure you''ll do great. I usually do long runs, but I''m trying to get into shorter runs.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love steak! What''s yours?
+
+    User 1: My favorite food is steak as well! I love the taste and texture of it.
+
+    User 2: Me too! I also love the way it makes me feel.
+
+    User 1: Me too! I always feel so satisfied after eating a steak.
+
+    User 2: Me too! I''m glad we have the same taste in food.
+
+    User 1: Me too! It''s always nice to find someone who enjoys the same things you do.
+
+    User 2: I agree! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00006980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6980
+data:
+  user 1 personas: 'I have the support of my whole family.
+
+    I am a white dancer.
+
+    I ve studied ballet all my life.
+
+    My mother is a ballerina.'
+  user 2 personas: 'I am a redhead.
+
+    I got engaged to be married in paris , france.
+
+    I ve danced since i was two.
+
+    I can say the alphabet backwards.
+
+    I lost my job as a banker a month ago.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. I''m a dancer and I''ve studied ballet all my life.
+
+    User 2: Hi, I''m [user 2''s name]. I''m also a dancer and I''ve been dancing since I was two.
+
+    User 1: Oh, that''s great! What kind of dancing do you do?
+
+    User 2: I do ballet, jazz, and tap.
+
+    User 1: I do ballet and jazz too. We should dance together sometime.
+
+    User 2: That would be fun!
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to go to the movies, go shopping, and hang out with my friends.
+
+    User 1: I like to do those things too. I also like to read and go to the beach.
+
+    User 2: The beach is my favorite place to be. I love swimming and sunbathing.
+
+    User 1: Me too! I love the feeling of the sun on my skin.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a dancer, but I also work as a personal trainer.
+
+    User 2: That''s cool! I was a banker, but I just got engaged and moved to Paris, so I lost my job.
+
+    User 1: Oh, that''s too bad. But congratulations on getting engaged!
+
+    User 2: Thanks! I''m excited to start this new chapter in my life.
+
+    User 1: I''m sure it''ll be great.
+
+    User 2: Thanks. It''s nice talking to you.
+
+    User 1: You too. It was nice meeting you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

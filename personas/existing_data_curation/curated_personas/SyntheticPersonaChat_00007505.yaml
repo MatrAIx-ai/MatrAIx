@@ -1,0 +1,80 @@
+id: '00007505'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7505
+data:
+  user 1 personas: 'I love sports , but rugby is my favorite.
+
+    My neighbor comes over all the time to watch rugby with me.
+
+    My car broke down last week.
+
+    I work out every other day.'
+  user 2 personas: 'I take vitamin c when i have a cold.
+
+    I am disabled and cannot walk.
+
+    My favorite season is winter.
+
+    I do not eat bread.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name].
+
+    User 2: Nice to meet you too, [user 1''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and go for walks.
+
+    User 1: Me too! I love to read and watch movies.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is To Kill a Mockingbird.
+
+    User 2: I''ve heard good things about that book.
+
+    User 1: It''s a really good book. What''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: That''s a great movie! I love that movie too.
+
+    User 2: What''s your favorite season?
+
+    User 1: My favorite season is summer.
+
+    User 2: I like summer too. I love going to the beach.
+
+    User 1: Me too! I love swimming and sunbathing.
+
+    User 2: I like to go swimming and sunbathe too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is. I love spending time with my children.
+
+    User 1: That''s great.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It is. I get to work on a lot of different projects.
+
+    User 2: That sounds fun.
+
+    User 1: It is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

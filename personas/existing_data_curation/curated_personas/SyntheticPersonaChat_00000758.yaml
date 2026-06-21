@@ -1,0 +1,80 @@
+id: 00000758
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 758
+data:
+  user 1 personas: 'I like to vote.
+
+    I like toyota cars.
+
+    Someday i would like a truck.
+
+    I work at a hospital.
+
+    I don t like working long hours.'
+  user 2 personas: 'I work as a meeting coordinator.
+
+    I live with my husband and two children.
+
+    I love to take road trips.
+
+    My favorite place to visit is seattle.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just got back from a road trip.
+
+    User 1: Oh, where did you go?
+
+    User 2: We drove to Seattle.
+
+    User 1: That''s awesome! I''ve always wanted to go there.
+
+    User 2: You should go, it''s a beautiful city.
+
+    User 1: I will, thanks for the recommendation.
+
+    User 2: No problem. So, what do you do for a living?
+
+    User 1: I work at a hospital.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It is, but it can be stressful.
+
+    User 2: I can imagine. Do you like it?
+
+    User 1: I do, for the most part.
+
+    User 2: That''s good. So, what''s your favorite car?
+
+    User 1: I like Toyotas.
+
+    User 2: Me too! I have a Toyota RAV4.
+
+    User 1: Nice! I have a Toyota Tacoma.
+
+    User 2: I''ve always wanted a Tacoma.
+
+    User 1: They''re great trucks. So, what do you like to do for fun?
+
+    User 2: I like to take road trips, go camping, and hike.
+
+    User 1: Oh, that sounds fun. I like to go hiking too.
+
+    User 2: Where do you like to hike?
+
+    User 1: I like to hike in the mountains.
+
+    User 2: Me too! I love the views from the top of a mountain.
+
+    User 1: Me too! So, what''s your favorite place to hike?
+
+    User 2: I like to hike in the Sierra Nevadas.
+
+    User 1: I''ve heard great things about the Sierra Nevadas. I''ve always wanted to hike there.
+
+    User 2: You should go, it''s amazing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

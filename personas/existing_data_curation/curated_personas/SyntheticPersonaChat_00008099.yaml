@@ -1,0 +1,52 @@
+id: 00008099
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8099
+data:
+  user 1 personas: 'I would like to spend more time with my family.
+
+    I am recent college graduate looking for a job in marketing.
+
+    Unfortunately , my family lives across the country from me.
+
+    I like spending time with friends playing sports and going to country concerts.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.'
+  user 2 personas: 'I speak fluent italian.
+
+    I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    I am a cat owner.'
+  Best Generated Conversation: 'User 1: I recently graduated from college and I''m looking for a job in marketing. I''m really excited to start my career.
+
+    User 2: Congrats on graduating! What was your major?
+
+    User 1: I majored in business administration with a focus on marketing.
+
+    User 2: Oh, nice! I have a friend who majored in business administration too. What do you want to do with your marketing degree?
+
+    User 1: I''m not sure yet. I''m still exploring my options. I''m interested in working for a marketing agency, but I''m also open to other possibilities.
+
+    User 2: I think that''s great. It''s important to keep your options open.
+
+    User 1: Yeah, I agree.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to spend time with my friends and family. I also like playing sports and going to concerts.
+
+    User 2: That sounds like a lot of fun. I like going to concerts too. Do you have any favorite bands or artists?
+
+    User 1: I like a lot of different bands and artists. I''m a big fan of country music.
+
+    User 2: Oh, nice! I like country music too. Who are some of your favorite country artists?
+
+    User 1: I like a lot of different country artists, but some of my favorites are Luke Bryan, Jason Aldean, and Miranda Lambert.
+
+    User 2: I like those artists too! They''re all really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00002624'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2624
+data:
+  user 1 personas: 'I teach kindergarten.
+
+    My class has 26 kids.
+
+    I teach at a large school.
+
+    I enjoys kayaking in my free time.'
+  user 2 personas: 'I like to attend wine tours.
+
+    We have two sons.
+
+    I like to paint.
+
+    I enjoy visiting museums.
+
+    My husband is 20 years older than me.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah. What do you do for fun?
+
+    User 2: I like to go to wine tours, paint, and visit museums.
+
+    User 1: That sounds fun! I like to kayak in my free time.
+
+    User 2: Oh, I''ve never tried kayaking before. Is it fun?
+
+    User 1: It''s really fun! You get to be out on the water and explore new places.
+
+    User 2: That sounds like something I would enjoy. Maybe we could go kayaking together sometime.
+
+    User 1: That would be fun! I''m free on Saturday if you are.
+
+    User 2: Saturday sounds perfect! I''ll bring a picnic lunch.
+
+    User 1: Sounds like a plan! I''ll see you then.
+
+    *On Saturday*
+
+    User 1: Hi Sarah, I''m here!
+
+    User 2: Hi! I''m here too.
+
+    User 1: I brought the kayaks.
+
+    User 2: Great! Let''s get started!
+
+    *They get in their kayaks and start paddling.*
+
+    User 1: This is so much fun!
+
+    User 2: I know right? It''s so peaceful out here.
+
+    User 1: I can see why you like to do this.
+
+    User 2: Me too. It''s a great way to relax and de-stress.
+
+    User 1: I agree. This is the perfect way to spend a Saturday.
+
+    User 2: I know right? I''m so glad we decided to do this.
+
+    *They paddle for a while longer and then stop to eat their picnic lunch.*
+
+    User 1: This lunch is delicious!
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: I''m really glad we decided to do this. This was a lot of fun.
+
+    User 2: Me too! I''m so glad we met.
+
+    User 1: Me too. I hope we can do this again sometime.
+
+    User 2: Definitely! I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

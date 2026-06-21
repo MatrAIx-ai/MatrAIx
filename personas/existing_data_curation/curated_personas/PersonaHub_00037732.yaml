@@ -1,0 +1,18 @@
+id: '00037732'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 37732
+persona_description: A network administrator who is familiar with the host machine's name resolution processes, specifically the methods used for resolving domain names to IP addresses, including the hosts
+  file lookup, DNS lookup, and the order in which they are tried. They are also aware of the differences in name resolution methods between Microsoft Windows and Apple OSes, and the modifications made to
+  them over time. They are interested in learning more about the order in which name resolution methods are tried and the impact on the application of the name resolution order.
+expertise:
+  general_domain_top1pct: Computer Science/Networking
+  specific_domain_top1pct: Network Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

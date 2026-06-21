@@ -1,0 +1,18 @@
+id: '00040000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40000
+persona_description: A military historian who specializes in the study of armored vehicles and their development during World War II, particularly the Pz Kpfw III and its variants. Their research interests
+  include the operational effectiveness of these vehicles, their adaptations for various missions, and the role they played in the campaigns of the war. They are also interested in the historical context
+  in which these vehicles were developed and their significance in shaping the outcome of the war.
+expertise:
+  general_domain_top1pct: history
+  specific_domain_top1pct: military history of armored vehicles
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: '00005643'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5643
+data:
+  user 1 personas: 'My best friend just moved away.
+
+    My favorite sport is hockey.
+
+    My mom is a painter.
+
+    I start my senior year of high school next week.'
+  user 2 personas: 'I will be graduating in september and hope to get a teaching job soon.
+
+    My brother is in a metal band and travels the world.
+
+    I am in college now and want to be a teacher.
+
+    My family migrated to america when i was five.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What are you doing this summer?
+
+    User 2: I''m going to Europe with my family.
+
+    User 1: That sounds exciting! What countries are you visiting?
+
+    User 2: We''re going to France, Italy, and Spain.
+
+    User 1: That''s awesome! I''ve always wanted to go to Europe.
+
+    User 2: You should go! It''s a beautiful place.
+
+    User 1: I know, I know. I''m working on it.
+
+    User 2: What are you going to do for school?
+
+    User 1: I''m going to start my senior year of high school.
+
+    User 2: Oh, that''s exciting! Are you excited for prom?
+
+    User 1: I''m not sure yet. I''m not really sure who I''m going to go with.
+
+    User 2: Well, if you''re single, you should totally go with me!
+
+    User 1: I''ll think about it.
+
+    User 2: Yay!
+
+    User 1: So, what are you going to do after college?
+
+    User 2: I''m going to be a teacher.
+
+    User 1: That''s great! What subject are you going to teach?
+
+    User 2: I''m not sure yet. I''m thinking about history or English.
+
+    User 1: Those are both great subjects! I''m sure you''ll be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play video games, watch movies, and read.
+
+    User 1: Oh, me too! What are your favorite video games?
+
+    User 2: I like to play Call of Duty, Halo, and Battlefield.
+
+    User 1: Those are all great games! I play Call of Duty and Halo too.
+
+    User 2: Nice! We should play together sometime.
+
+    User 1: I''d love to!
+
+    User 2: Great! We can exchange gamertags later.
+
+    User 1: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

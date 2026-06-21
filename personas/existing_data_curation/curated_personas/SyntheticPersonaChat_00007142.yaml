@@ -1,0 +1,78 @@
+id: '00007142'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7142
+data:
+  user 1 personas: 'I have a black and white cat named cow.
+
+    My favorite coffee is french vanilla.
+
+    I have been dating my boyfriend for over 10 years.
+
+    I hate the feeling of chalk.'
+  user 2 personas: 'My mother is in the hospital.
+
+    I have a lot of medical bills.
+
+    I used to be able to run really fast.
+
+    I have problems chewing my food.'
+  Best Generated Conversation: 'User 1: What''s your favorite coffee?
+
+    User 2: I like French Vanilla. It''s so sweet and creamy.
+
+    User 1: That''s my favorite too! I love the vanilla flavor and the sweetness.
+
+    User 2: Me too! I wish I could drink it more often, but it''s so expensive.
+
+    User 1: I know what you mean. I only get it when I''m feeling fancy.
+
+    User 2: I''m glad I''m not the only one who loves French Vanilla.
+
+    User 1: Me too! It''s the best.
+
+    User 2: I wonder if there''s a way to make it at home.
+
+    User 1: I''m sure there is. There are a lot of recipes online.
+
+    User 2: I''ll have to look into that. I''m tired of spending so much money on it.
+
+    User 1: Me too. I''d love to be able to make it at home.
+
+    User 2: I''m sure it wouldn''t be too hard.
+
+    User 1: I hope not. I''ll let you know if I find a good recipe.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: You''re welcome!
+
+
+    [Later on, User 1 sends User 2 a link to a French Vanilla coffee recipe.]
+
+    User 1: Hey, I found a recipe for French Vanilla coffee!
+
+    User 2: Oh, that''s great! Thanks for sending it to me.
+
+    User 1: No problem! I hope you like it.
+
+    User 2: I''m sure I will! I''m excited to try it.
+
+    User 1: Let me know how it goes!
+
+    User 2: I will!
+
+
+    [Later, User 2 tries the French Vanilla coffee recipe and sends User 1 a message.]
+
+    User 2: Hey, I just tried the French Vanilla coffee recipe you sent me and it was delicious! Thanks for sending it to me.
+
+    User 1: You''re welcome! I''m glad you liked it.
+
+    User 2: Me too! I''m going to make it again soon.
+
+    User 1: That''s great! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

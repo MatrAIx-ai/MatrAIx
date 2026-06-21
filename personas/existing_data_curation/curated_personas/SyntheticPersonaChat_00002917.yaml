@@ -1,0 +1,62 @@
+id: 00002917
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2917
+data:
+  user 1 personas: 'I work as a librarian.
+
+    My favorite drink is pepsi.
+
+    I like reading horror novels.
+
+    My weekends are filled with bird watching.'
+  user 2 personas: 'I love to sleep in.
+
+    I have two brothers.
+
+    I have been a vegan since i was 5.
+
+    I work in a lab.
+
+    I believe in love at first sight.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to sleep in, I have two brothers, I have been a vegan since I was 5, I work in a lab, and I believe in love at first sight.
+
+    User 1: Wow, you sound like an interesting person! I like to read horror novels, bird watch on the weekends, and I work as a librarian.
+
+    User 2: That''s cool! I love horror movies, but I''ve never been a bird watcher. What''s your favorite horror novel?
+
+    User 1: My favorite horror novel is Pet Sematary by Stephen King. It''s a really creepy story about a family who moves to a new town and their son finds a pet cemetery in the woods.
+
+    User 2: I''ve heard good things about that book! I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: So, what''s it like being a librarian?
+
+    User 1: It''s really fun! I get to help people find books, and I get to learn about all kinds of different topics.
+
+    User 2: That sounds like a great job!
+
+    User 1: It is! I''m really happy with it.
+
+    User 2: So, what''s your favorite part about being a vegan?
+
+    User 1: I love that I''m not contributing to the suffering of animals. I also love the way I feel when I eat a plant-based diet.
+
+    User 2: I can understand that. I''ve been thinking about going vegan myself.
+
+    User 1: You should! It''s a great decision.
+
+    User 2: I might just do that.
+
+    User 1: I''m glad I could help!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

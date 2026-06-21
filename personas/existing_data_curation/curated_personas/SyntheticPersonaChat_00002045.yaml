@@ -1,0 +1,52 @@
+id: '00002045'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2045
+data:
+  user 1 personas: 'I work at mcdonald.
+
+    I like to play video games.
+
+    I have a pet iguana.
+
+    My favorite movie is star wars.'
+  user 2 personas: 'Ferrari is my favorite car company.
+
+    Basketball is my favorite sport to watch.
+
+    I own many cars.
+
+    I like watching sports.'
+  Best Generated Conversation: 'User 1: Hi, I''m a video game player.
+
+    User 2: That''s cool. I like watching sports, especially basketball.
+
+    User 1: What''s your favorite team?
+
+    User 2: I like the Golden State Warriors.
+
+    User 1: I''ve heard of them. They''re a good team.
+
+    User 2: Yeah, they''re really good. I''m excited to see them play this season.
+
+    User 1: Me too. I''m not sure if they''ll be able to repeat as champions, but they''re definitely one of the favorites.
+
+    User 2: Yeah, they''ll be tough to beat. But I think they have a good chance of winning again.
+
+    User 1: I hope so. I love watching them play.
+
+    User 2: Me too. They''re a really exciting team to watch.
+
+    User 1: What do you like about them?
+
+    User 2: I like their style of play. They''re very fast and they play defense really well.
+
+    User 1: Yeah, they''re a lot of fun to watch.
+
+    User 2: Yeah, I''m really excited to see them play this season.
+
+    User 1: Me too. I think they''re going to be really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

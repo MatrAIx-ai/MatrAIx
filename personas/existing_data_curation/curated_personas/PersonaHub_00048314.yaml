@@ -1,0 +1,18 @@
+id: 00048314
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48314
+persona_description: A healthcare provider who is knowledgeable about flu prevention and treatment, particularly for vulnerable populations such as the elderly, pregnant women, and those with chronic illnesses.
+  They are aware of the symptoms of the flu and know how to support individuals who are experiencing flu-like symptoms. They are also aware of the importance of getting a flu vaccine each year and the benefits
+  of antiviral drugs in treating flu illness.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

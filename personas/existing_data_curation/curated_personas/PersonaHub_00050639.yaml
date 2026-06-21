@@ -1,0 +1,18 @@
+id: 00050639
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50639
+persona_description: A healthcare professional who is interested in cardiac anatomy and function, particularly in the evaluation of heart murmurs, arrhythmias, and the assessment of heart structure and
+  function in patients with chronic heart disease. They are likely to have knowledge of echocardiography and its testing procedures, and may have experience in interpreting the results of an echocardiogram
+  to diagnose and monitor heart conditions. They may also have expertise in using echocardiography to assess heart function during stress tests, such as stress echocardiography.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: cardiac imaging
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

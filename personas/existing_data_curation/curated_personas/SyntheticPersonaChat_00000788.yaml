@@ -1,0 +1,82 @@
+id: 00000788
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 788
+data:
+  user 1 personas: 'I love reading.
+
+    Since i have fibromyalgia , the harsher winters here in pa will be rough on me.
+
+    I enjoy doing beadwork and writing my own patterns.
+
+    I just moved from va to pa.
+
+    I grew up on a large farm.'
+  user 2 personas: 'I listen to podcasts.
+
+    I like to read.
+
+    I am a diabetic.
+
+    Traffic makes me mad.
+
+    I have a long drive to work.'
+  Best Generated Conversation: 'User 1: Hi, I''m new in town.
+
+    User 2: Welcome! What''s your name?
+
+    User 1: I''m [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. I''m [user 2''s name].
+
+    User 1: Thank you. It''s nice to meet you too.
+
+    User 2: Where are you from?
+
+    User 1: I''m from Virginia.
+
+    User 2: Oh, nice. I''ve always wanted to visit Virginia.
+
+    User 1: It''s a beautiful state. I''m sure you''d love it.
+
+    User 2: I''m sure I would. So, what brought you to Pennsylvania?
+
+    User 1: I moved here for a job.
+
+    User 2: Oh, that''s great. What kind of job did you get?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s awesome. I''m a teacher too.
+
+    User 1: Really? That''s great! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That''s awesome. I teach first grade.
+
+    User 2: Oh, that''s great. I love first grade.
+
+    User 1: Me too. It''s a great age.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to read, beadwork, and spend time with my family.
+
+    User 2: Oh, that sounds like me. I love to read, listen to podcasts, and spend time with my family too.
+
+    User 1: That''s great. We should hang out sometime.
+
+    User 2: I''d love that.
+
+    User 1: Great. What''s your phone number?
+
+    User 2: [user 2''s phone number]
+
+    User 1: Okay, I''ll text you.
+
+    User 2: Great. I''ll see you soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

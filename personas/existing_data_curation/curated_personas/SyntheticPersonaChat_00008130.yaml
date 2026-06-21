@@ -1,0 +1,76 @@
+id: 00008130
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8130
+data:
+  user 1 personas: 'I am trying to become a male model in hollywood.
+
+    I am a huge fan of classical jazz.
+
+    I overcame urinary cancer at age 18.
+
+    I am on a low carb diet.
+
+    I recently had a private lunch with will ferrell.'
+  user 2 personas: 'I am starting a new juicing bar.
+
+    I am a vegetarian.
+
+    I love to surf.
+
+    My favorite thing to do is to read books on the beach.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to surf, read, and eat healthy.
+
+    User 1: I like to surf too! What''s your favorite spot?
+
+    User 2: I love surfing at Malibu.
+
+    User 1: That''s a great spot. I like to surf at Santa Monica.
+
+    User 2: Have you ever been to Malibu Beach Cafe?
+
+    User 1: No, I haven''t. What''s it like?
+
+    User 2: It''s a great place to get breakfast. They have the best pancakes.
+
+    User 1: I love pancakes! I''ll have to check it out.
+
+    User 2: You won''t be disappointed.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m starting a new juicing bar.
+
+    User 1: That''s awesome! What''s it called?
+
+    User 2: It''s called "The Healthy Juice Bar".
+
+    User 1: I love the name! Good luck with it.
+
+    User 2: Thanks!
+
+    User 1: So, you''re a vegetarian?
+
+    User 2: Yeah, I''ve been a vegetarian for about 10 years now.
+
+    User 1: That''s cool. I''ve been thinking about becoming a vegetarian myself.
+
+    User 2: You should! It''s really good for you.
+
+    User 1: I know, I know. I just need to find some good recipes.
+
+    User 2: There are so many great vegetarian recipes out there. I can give you some recommendations if you want.
+
+    User 1: That would be great!
+
+    User 2: Sure, no problem'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

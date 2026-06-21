@@ -1,0 +1,74 @@
+id: 00000729
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 729
+data:
+  user 1 personas: 'I like to read.
+
+    I don t own a television.
+
+    My girlfriend just broke up with me.
+
+    I work at a school as an art teacher.'
+  user 2 personas: 'I hate social obligations because i always say the wrong thing.
+
+    I like running in marathons.
+
+    I spend a lot of time watching obscure foreign film on netflix.
+
+    My dad owns a appliance store that i don t want to inherit.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey, how are you doing?
+
+    User 1: I''m doing okay, thanks. I''m actually kind of sad right now.
+
+    User 2: Oh, what''s wrong?
+
+    User 1: My girlfriend just broke up with me.
+
+    User 2: Oh, I''m so sorry to hear that.
+
+    User 1: Thanks. It''s been a rough day.
+
+    User 2: I can imagine. Do you want to talk about it?
+
+    User 1: Sure.
+
+    User 2: Okay. So, what happened?
+
+    User 1: Well, we had been dating for a few months and things were going really well. But then, she just started to pull away. She said she wasn''t feeling it anymore.
+
+    User 2: Wow, that''s tough. I''m sorry.
+
+    User 1: Thanks. It''s hard to understand.
+
+    User 2: I know. It''s hard to make sense of things when someone you love just doesn''t want to be with you anymore.
+
+    User 1: Exactly.
+
+    User 2: But you know, it''s not always about you. Sometimes, it''s just about them.
+
+    User 1: I know. I''m trying to tell myself that.
+
+    User 2: And you know, it''s okay to be sad. It''s okay to grieve the loss of a relationship.
+
+    User 1: Thanks. I appreciate that.
+
+    User 2: It takes time to heal. But you know, you''ll get through this. You''re a strong person.
+
+    User 1: Thanks. I hope you''re right.
+
+    User 2: I am. I know you can do it.
+
+    User 1: Thanks. I''m feeling a little better now.
+
+    User 2: I''m glad.
+
+    User 1: I''m glad I met you.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

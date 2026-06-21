@@ -1,0 +1,19 @@
+id: 00063291
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63291
+persona_description: A medical imaging expert who is interested in real-time image processing and has expertise in adaptive image enhancement techniques. They are familiar with the Philips XRES technology,
+  which uses proprietary algorithms to reduce speckle, haze, and clutter artifacts, and enhance edges by correcting discontinuities between textured regions. This technology is based on extensive research
+  by Philips on how humans perceive tissue patterns, and is a true adaptive image-processing technique using 350 million calculations per frame of data. The ability to virtually eliminate noise, enhance
+  clarity, and improve border definition makes XRES imaging a valuable tool for medical professionals.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Medical Imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: Medical Imaging (Real-time Image Processing)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

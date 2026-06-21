@@ -1,0 +1,86 @@
+id: '00004032'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4032
+data:
+  user 1 personas: 'I like to listen to elvis.
+
+    I like the color blue.
+
+    I changed my hair color to blue.
+
+    I own blue shoes.
+
+    I drive a blue car.'
+  user 2 personas: 'I have long curly hair.
+
+    I m really into the powers of crystals.
+
+    I sew my own clothes.
+
+    My favorite food is raw onion.
+
+    I like to grow my own herbs and vegetables in my garden.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: I like the color blue. What''s your favorite color?
+
+    User 2: I like the color green. It''s a very calming color.
+
+    User 1: I agree. I also like the color blue because it''s a very expressive color.
+
+    User 2: I like that you have blue hair. It''s very unique.
+
+    User 1: Thanks! I changed my hair color to blue because I wanted to be more expressive.
+
+    User 2: I think it''s a great look for you.
+
+    User 1: Thanks! I appreciate it.
+
+    User 2: I see you''re also wearing blue shoes.
+
+    User 1: Yes, I like to match my clothes to my hair color.
+
+    User 2: I think it''s a great way to make a statement.
+
+    User 1: Thanks! I agree.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to listen to Elvis Presley. He''s my favorite singer.
+
+    User 2: I''ve never heard of him. What kind of music does he sing?
+
+    User 1: He sings country music. He''s also known for his blue suede shoes.
+
+    User 2: Oh, I know those! I''ve seen them in pictures.
+
+    User 1: They''re really cool. I''m hoping to get a pair of my own one day.
+
+    User 2: That would be great! I''m sure you''d look great in them.
+
+    User 1: Thanks! I appreciate it.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to the movies. I also like to read and play video games.
+
+    User 2: I like to go to the movies too. What''s your favorite movie?
+
+    User 1: I like a lot of movies, but my favorite is probably The Lord of the Rings trilogy.
+
+    User 2: I''ve never seen that movie. Is it good?
+
+    User 1: It''s amazing! It''s a fantasy epic with a great story and characters.
+
+    User 2: It sounds like something I would like. I''ll have to check it out.
+
+    User 1: You should! I hope you like it.
+
+    User 2: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: '00005724'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5724
+data:
+  user 1 personas: 'And , my best friend is abigail.
+
+    I love to read harry potter books.
+
+    I am ten years old.
+
+    I take martial arts after school.'
+  user 2 personas: 'I have pink hair.
+
+    I m the youngest of five.
+
+    I m allergic to bees.
+
+    I work at the hospital as a nurse.
+
+    I live in the city of grand rapids , michigan.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name], and I''m 10 years old.
+
+    User 2: Hi [user 1 name], I''m [user 2 name], and I''m 26 years old.
+
+    User 1: What do you do for a living?
+
+    User 2: I work as a nurse at the hospital in Grand Rapids, Michigan.
+
+    User 1: Oh, that''s cool! I''m still in school, but I want to be a writer when I grow up.
+
+    User 2: That''s a great goal! I love to read, so I''m sure you''ll be a great writer.
+
+    User 1: Thanks! I love to read Harry Potter books.
+
+    User 2: Oh, me too! They''re my favorite books.
+
+    User 1: I''m also allergic to bees, just like you.
+
+    User 2: That''s too bad! Bees can be really scary.
+
+    User 1: They are! I once got stung by a bee on my finger, and it really hurt.
+
+    User 2: I''ve been stung by a bee on my leg, and it hurt so bad that I could barely walk.
+
+    User 1: That sounds awful! I''m glad we''re both allergic to bees, because we can understand each other.
+
+    User 2: Me too! It''s always nice to meet someone who understands what you''re going through.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

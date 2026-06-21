@@ -1,0 +1,18 @@
+id: 00049907
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49907
+persona_description: A healthcare professional who works in a hospital or clinic and specializes in infectious diseases. This person is responsible for detecting and treating TB patients and their close
+  contacts to prevent the spread of the disease. They must be knowledgeable about the symptoms, diagnosis, and treatment of TB, as well as the environmental factors that can affect TB transmission. This
+  person must also be able to communicate effectively with patients, their families, and healthcare providers to ensure proper care and treatment.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: TB treatment and prevention
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

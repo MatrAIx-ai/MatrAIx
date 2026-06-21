@@ -1,0 +1,90 @@
+id: '00000756'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 756
+data:
+  user 1 personas: 'I like to swim.
+
+    I prefer morning to night.
+
+    My favorite fruit is an apple.
+
+    I am a marathon runner.
+
+    I prefer winter over fall.'
+  user 2 personas: 'Grandma makes jewelry.
+
+    I sing in the school chorus.
+
+    I live with my paps and grandma.
+
+    Paps likes to go mushroom hunting.
+
+    I have a brown belt in karate.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sing in the school chorus, and I have a brown belt in karate.
+
+    User 1: That''s cool! I like to swim, and I''m a marathon runner.
+
+    User 2: I love swimming! I used to swim competitively when I was younger.
+
+    User 1: Really? That''s awesome! How long did you swim competitively?
+
+    User 2: I swam competitively for about 10 years. I stopped when I was in high school.
+
+    User 1: That''s a long time! I wish I had started swimming competitively when I was younger.
+
+    User 2: It was a lot of fun, but it was also a lot of work.
+
+    User 1: I can imagine. But it''s definitely worth it if you love swimming.
+
+    User 2: Yes, it was. I miss it sometimes.
+
+    User 1: Well, if you ever want to get back into swimming, I''d be happy to swim with you.
+
+    User 2: Thanks! I might take you up on that offer.
+
+    User 1: Great! I''m always looking for new swimming partners.
+
+    User 2: Me too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go mushroom hunting with my paps.
+
+    User 1: Mushroom hunting? That sounds interesting.
+
+    User 2: It is! We go out in the woods and look for mushrooms to eat.
+
+    User 1: Do you find a lot of mushrooms?
+
+    User 2: We usually find a few pounds every time we go.
+
+    User 1: That''s a lot! What do you do with them all?
+
+    User 2: We eat some of them fresh, and we can the rest.
+
+    User 1: Canning mushrooms? That''s cool.
+
+    User 2: It is! We love eating mushrooms, so we always want to have some on hand.
+
+    User 1: I can understand that. Mushrooms are delicious.
+
+    User 2: They are!
+
+    User 1: So, what''s your favorite kind of mushroom?
+
+    User 2: I like chanterelles the best.
+
+    User 1: Chanterelles are good! I like them too.
+
+    User 2: They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

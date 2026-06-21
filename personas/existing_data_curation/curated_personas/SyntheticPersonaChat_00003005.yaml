@@ -1,0 +1,80 @@
+id: '00003005'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3005
+data:
+  user 1 personas: 'I am fifteen years old.
+
+    I have braces.
+
+    My family has three dogs and my dog is named maddie.
+
+    I live in america in the state of florida.'
+  user 2 personas: 'People say i can cook well.
+
+    I like to listen to country music.
+
+    I can play piano.
+
+    I surf everyday.
+
+    I work at a bar.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play piano, cook, and surf.
+
+    User 1: Oh cool! I like to listen to country music and surf too.
+
+    User 2: Really? I love country music! Who are your favorite artists?
+
+    User 1: I like Luke Bryan, Kenny Chesney, and Miranda Lambert.
+
+    User 2: Me too! I love all of them.
+
+    User 1: What do you like to cook?
+
+    User 2: I like to cook all kinds of food, but I''m best at making pasta dishes.
+
+    User 1: Oh that sounds delicious! I love pasta.
+
+    User 2: Me too! I like to make different kinds of sauces to go with it.
+
+    User 1: That sounds like a lot of fun. I wish I could cook like that.
+
+    User 2: You can! It''s not that hard. Just takes a little practice.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Thanks for the advice!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at a bar.
+
+    User 1: Oh cool! I''ve never worked at a bar before.
+
+    User 2: It''s not so bad. It''s a lot of fun, but it can be hard work.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, but it''s worth it. I get to meet a lot of interesting people.
+
+    User 1: That sounds cool.
+
+    User 2: It is. I''ve met some really great people there.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Yeah, it''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

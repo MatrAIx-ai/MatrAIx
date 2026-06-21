@@ -1,0 +1,50 @@
+id: 00007188
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7188
+data:
+  user 1 personas: 'I love cabins in the woods on the lake.
+
+    I have been to every state except alaska.
+
+    I like to paddle board.
+
+    I like to visit places around the world.
+
+    I like to swim in the lake.'
+  user 2 personas: 'I m learning to play the guitar.
+
+    I like to go fishing.
+
+    I m a college drop out.
+
+    My favorite music is jimi hendrix.'
+  Best Generated Conversation: 'User 1: Hey! I''m looking for someone to go kayaking with me. Do you know how to paddle board?
+
+    User 2: No, but I''m willing to learn. I love being on the water.
+
+    User 1: That''s great! I''ve been paddle boarding for a few years now and I love it. It''s a great way to relax and get some exercise.
+
+    User 2: I''m looking forward to trying it! Where do you usually go paddle boarding?
+
+    User 1: I usually go to a lake near my house. It''s a beautiful spot and there''s always a lot of wildlife to see.
+
+    User 2: That sounds amazing! I''ll have to check it out sometime.
+
+    User 1: I''m sure you''ll love it. Do you have any plans for the weekend?
+
+    User 2: I don''t have any plans yet. What do you have in mind?
+
+    User 1: Well, I was thinking we could go paddle boarding on Saturday if you''re free.
+
+    User 2: That sounds like a great idea! I''m free on Saturday.
+
+    User 1: Perfect! I''ll text you my address and we can meet up there.
+
+    User 2: Sounds good! I''ll see you then.
+
+    User 1: Awesome! I''m excited.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

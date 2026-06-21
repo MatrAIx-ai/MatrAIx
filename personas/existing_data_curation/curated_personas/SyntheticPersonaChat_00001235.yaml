@@ -1,0 +1,72 @@
+id: '00001235'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1235
+data:
+  user 1 personas: 'I am argentinian.
+
+    I have many girlfriends.
+
+    I like to eat beef.
+
+    I like to ride horses.'
+  user 2 personas: 'I live in japan and own the biggest mansion in the country.
+
+    I just bought a new mansion.
+
+    I drive a ferrari.
+
+    I am touring with frank ocean.
+
+    I am a rapper.'
+  Best Generated Conversation: 'User 1: I''m from Argentina, where are you from?
+
+    User 2: I''m from Japan, I just bought a new mansion there.
+
+    User 1: Oh wow, that''s amazing! What do you do for a living?
+
+    User 2: I''m a rapper and I''m touring with Frank Ocean.
+
+    User 1: That''s so cool! I love Frank Ocean.
+
+    User 2: Thanks! He''s a great artist.
+
+    User 1: So, what''s it like living in Japan?
+
+    User 2: It''s amazing! I love the culture and the people.
+
+    User 1: I''ve always wanted to go to Japan.
+
+    User 2: You should definitely go! It''s a beautiful country.
+
+    User 1: I''ll have to put it on my list of places to visit.
+
+    User 2: Good! You won''t be disappointed.
+
+    User 1: So, what do you do for fun in Japan?
+
+    User 2: I like to go to the beach, ride my bike, and play video games.
+
+    User 1: Oh wow, I love playing video games too!
+
+    User 2: What''s your favorite video game?
+
+    User 1: I''m really into Mario Kart right now.
+
+    User 2: Mario Kart is a classic! I love it too.
+
+    User 1: It''s so much fun to play with friends.
+
+    User 2: I know right? I''m always up for a game of Mario Kart.
+
+    User 1: Awesome! We should play sometime.
+
+    User 2: Sounds good! I''m free this weekend.
+
+    User 1: Perfect! I''ll DM you my Nintendo Switch friend code.
+
+    User 2: Sounds good! I''ll add you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

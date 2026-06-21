@@ -1,0 +1,62 @@
+id: 00002468
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2468
+data:
+  user 1 personas: 'I enjoy the outdoors.
+
+    I am a cheerleader.
+
+    I have black hair.
+
+    I live on a ranch.
+
+    I am 21 years old.'
+  user 2 personas: 'I like to chat with my friends.
+
+    I like to read books that are in a series.
+
+    I like to go to the movies.
+
+    I love to go out to eat with my family.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to chat with my friends, read books, and go to the movies.
+
+    User 1: I like to chat with my friends too, but I love being outdoors. I''m a cheerleader and I live on a ranch.
+
+    User 2: That sounds like a lot of fun! I''ve never been a cheerleader, but I love to go hiking and camping.
+
+    User 1: Me too! I love spending time in nature.
+
+    User 2: I''m also a big reader. I love books that are in a series.
+
+    User 1: I love books too! I''ve been reading the Harry Potter series for years.
+
+    User 2: I love Harry Potter! I''ve read the entire series multiple times.
+
+    User 1: Me too! I''m so excited for the new movie.
+
+    User 2: Me too! I''m going to see it opening night.
+
+    User 1: I''m going to see it too!
+
+    User 2: We should go together!
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll text you the details.
+
+    User 1: Sounds good!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

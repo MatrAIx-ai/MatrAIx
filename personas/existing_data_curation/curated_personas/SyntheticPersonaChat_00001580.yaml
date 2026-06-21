@@ -1,0 +1,62 @@
+id: 00001580
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1580
+data:
+  user 1 personas: 'I enjoy gardening.
+
+    My favorite drink is red wine.
+
+    I work for a clothes retailer.
+
+    I have one child.'
+  user 2 personas: 'I m allergic to bees.
+
+    I work at the hospital as a nurse.
+
+    I live in the city of grand rapids , michigan.
+
+    I m the youngest of five.'
+  Best Generated Conversation: 'User 1: I''m a nurse too!
+
+    User 2: Oh, that''s cool. Where do you work?
+
+    User 1: I work at a hospital in Grand Rapids, Michigan.
+
+    User 2: Oh, that''s cool! I also live in Grand Rapids.
+
+    User 1: Really? What part of town do you live in?
+
+    User 2: I live in the west side.
+
+    User 1: Me too! That''s so funny.
+
+    User 2: Yeah, it is. What''s your name?
+
+    User 1: My name is [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. My name is [user 2''s name].
+
+    User 1: Nice to meet you too, [user 2''s name].
+
+    User 2: What kind of nurse are you?
+
+    User 1: I''m an ER nurse.
+
+    User 2: Oh, that''s cool. I work in the pediatrics ward.
+
+    User 1: That''s awesome! I bet it''s really rewarding to work with kids.
+
+    User 2: It is. I love working with kids.
+
+    User 1: Me too. I think they''re so cute and funny.
+
+    User 2: Me too. I love hearing their stories and playing with them.
+
+    User 1: I know what you mean. They always make me smile.
+
+    User 2: Me too. They''re the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

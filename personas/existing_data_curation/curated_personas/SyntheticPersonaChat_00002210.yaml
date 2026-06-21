@@ -1,0 +1,92 @@
+id: '00002210'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2210
+data:
+  user 1 personas: 'I have a pomeranian.
+
+    I play the violin.
+
+    My older sister plays clarinet.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My mom is a music teacher at the elementary school.'
+  user 2 personas: 'My name is kevin.
+
+    I am studying software development.
+
+    I am a student in college.
+
+    I enjoy working out and learning new things.'
+  Best Generated Conversation: 'User 1: Hi, my name is Alice.
+
+    User 2: Hi, I''m Kevin.
+
+    User 1: What are you studying in college?
+
+    User 2: I''m studying software development.
+
+    User 1: Oh, cool! I''m a musician.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I play the violin.
+
+    User 2: Oh, that''s great! I''ve always wanted to learn how to play the violin.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: I have a pomeranian.
+
+    User 2: Oh, that''s cute! Do you have any pictures of her?
+
+    User 1: Sure, I can send you some.
+
+    User 2: That would be great!
+
+    User 1: Here you go.
+
+    User 2: Aww, she''s so cute!
+
+    User 1: Thanks, I love her.
+
+    User 2: Do you have any siblings?
+
+    User 1: Yeah, I have an older sister.
+
+    User 2: What does she do for a living?
+
+    User 1: She''s a clarinetist.
+
+    User 2: Oh, that''s cool! Do you two ever play together?
+
+    User 1: Sometimes, but we''re not as good together as we are separately.
+
+    User 2: I bet you''re still great!
+
+    User 1: Thanks!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to work out and learn new things.
+
+    User 2: Me too! What kind of things do you like to learn?
+
+    User 1: I like to learn about history, music, and science.
+
+    User 2: Oh, that''s cool! I like to learn about those things too.
+
+    User 1: We should get together sometime and learn about something together.
+
+    User 2: That would be great! I''d love to learn more about music.
+
+    User 1: Me too! We could start by learning about the violin.
+
+    User 2: That sounds like a great idea'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

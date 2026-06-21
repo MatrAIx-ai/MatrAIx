@@ -1,0 +1,76 @@
+id: '00005776'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5776
+data:
+  user 1 personas: 'I have a gun collection at home.
+
+    I drive a ford truck.
+
+    I am a police officer.
+
+    I hate the holidays.'
+  user 2 personas: 'My doctor told me i have six months to live.
+
+    My favorite singer is justin bieber.
+
+    I like having fried fish for supper.
+
+    I m really terrible at doing regular expressions.
+
+    I m allergic to lactose.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. I''m a police officer.
+
+    User 2: Hi, I''m [user 2]. I have six months to live.
+
+    User 1: I''m sorry to hear that. What''s wrong?
+
+    User 2: I have cancer.
+
+    User 1: That''s terrible. I''m so sorry.
+
+    User 2: Thanks.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to Justin Bieber.
+
+    User 1: I don''t really listen to Justin Bieber, but I know he''s popular.
+
+    User 2: Yeah, he''s my favorite singer.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to eat fried fish for supper.
+
+    User 1: I like fried fish too!
+
+    User 2: Me too!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to play video games.
+
+    User 1: I like to play video games too!
+
+    User 2: What games do you like to play?
+
+    User 1: I like to play first-person shooters.
+
+    User 2: Me too! I like to play Call of Duty.
+
+    User 1: Me too! I love that game.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: I''m sorry to hear about your cancer. I hope you can find a way to beat it.
+
+    User 2: Thanks. I''m trying.
+
+    User 1: I''m sure you''ll be okay.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

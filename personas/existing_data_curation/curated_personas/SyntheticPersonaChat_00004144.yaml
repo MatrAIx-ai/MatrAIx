@@ -1,0 +1,58 @@
+id: '00004144'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4144
+data:
+  user 1 personas: 'My back hurts chronically.
+
+    I am an old soul.
+
+    I just want my voice to be heard.
+
+    I am passionate about a lot of things.
+
+    I tend to work myself up.'
+  user 2 personas: 'I am 29 years old.
+
+    I am a night owl.
+
+    My favorite band is pearl jam.
+
+    I live in a suburb of boston.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to listen to music, play video games, and hang out with my friends.
+
+    User 1: Cool! I like to listen to music too, and I also enjoy reading and writing.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like a lot of different types of music, but my favorite is probably rock.
+
+    User 2: Nice! I like rock too. What are some of your favorite bands?
+
+    User 1: I like a lot of bands, but my favorites are probably Pearl Jam, Nirvana, and Rage Against the Machine.
+
+    User 2: Those are all great bands! I like Nirvana and Rage Against the Machine too.
+
+    User 1: Cool! Have you ever seen any of them live?
+
+    User 2: I''ve seen Nirvana live, but I''ve never seen Pearl Jam or Rage Against the Machine live.
+
+    User 1: I''ve seen Pearl Jam live, and they were amazing! I''ve heard that Rage Against the Machine is also really good live.
+
+    User 2: I''m hoping to see them both live one day.
+
+    User 1: Me too!
+
+    User 2: It''s nice talking to you, [name].
+
+    User 1: It''s nice talking to you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

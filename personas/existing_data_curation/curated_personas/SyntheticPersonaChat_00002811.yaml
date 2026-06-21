@@ -1,0 +1,100 @@
+id: 00002811
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2811
+data:
+  user 1 personas: 'I like to eat cheetos.
+
+    I hate mexican food.
+
+    I like to ski.
+
+    My wife doesn t like me anymore.'
+  user 2 personas: 'I like cosplay.
+
+    I love watching tv and movies.
+
+    I have been to a few renaissance fairs.
+
+    My favorite show ever is game of thrones.
+
+    I work from home.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]!
+
+    User 2: Hi, I''m [user 2]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cosplay, watch TV and movies, and go to renaissance fairs.
+
+    User 1: What''s your favorite TV show?
+
+    User 2: My favorite show ever is Game of Thrones.
+
+    User 1: I''ve heard good things about that show.
+
+    User 2: It''s really good! What do you like to do for fun?
+
+    User 1: I like to ski, read, and go to the movies.
+
+    User 2: That sounds fun! I''ve always wanted to try skiing.
+
+    User 1: It''s a lot of fun! You should try it sometime.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work from home as a software engineer.
+
+    User 1: That sounds like a cool job.
+
+    User 2: It is! I get to work on my own schedule and I can wear whatever I want.
+
+    User 1: That''s awesome! So, do you have any pets?
+
+    User 2: I have a cat named Shadow.
+
+    User 1: What kind of cat is he?
+
+    User 2: He''s a black cat.
+
+    User 1: Aww, I love black cats!
+
+    User 2: Me too! He''s the best.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love all kinds of food, but my favorite is probably Mexican food.
+
+    User 1: That''s funny, my least favorite food is Mexican food.
+
+    User 2: Oh, no! What''s your favorite food?
+
+    User 1: My favorite food is probably Italian food.
+
+    User 2: I love Italian food too!
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is probably The Princess Bride.
+
+    User 1: I''ve never seen that movie.
+
+    User 2: You should! It''s a classic.
+
+    User 1: I''ll check it out.
+
+    User 2: So, what do you like to do on the weekends?
+
+    User 1: I like to go out with my friends, watch movies, and read.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I love spending time with my friends.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

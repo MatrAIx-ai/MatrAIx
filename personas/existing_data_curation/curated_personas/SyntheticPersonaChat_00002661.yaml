@@ -1,0 +1,72 @@
+id: '00002661'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2661
+data:
+  user 1 personas: 'I work in accounting.
+
+    I like potatoes.
+
+    I lease my car.
+
+    I am male.
+
+    I have two dogs.'
+  user 2 personas: 'I live in the city of grand rapids , michigan.
+
+    I m allergic to bees.
+
+    I have pink hair.
+
+    I work at the hospital as a nurse.
+
+    I m the youngest of five.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], I work in accounting.
+
+    User 2: Hi, I''m [name], I''m a nurse at the hospital.
+
+    User 1: Nice to meet you! I''m from [hometown].
+
+    User 2: Nice to meet you too! I''m from Grand Rapids, Michigan.
+
+    User 1: Oh, I''ve heard of Grand Rapids! Is it nice there?
+
+    User 2: It''s a great city! I love it here.
+
+    User 1: What do you like about it?
+
+    User 2: I love the people, the food, and the culture.
+
+    User 1: What''s your favorite food there?
+
+    User 2: I love the pizza! There are so many great pizza places in Grand Rapids.
+
+    User 1: I love pizza too!
+
+    User 2: Me too!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to go hiking, biking, and swimming. I also like to play video games and watch movies.
+
+    User 1: I love hiking and biking too! I also like to play video games and watch movies.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I love the Legend of Zelda series.
+
+    User 2: Me too! I''ve been playing Zelda games since I was a kid.
+
+    User 1: Me too! What''s your favorite Zelda game?
+
+    User 2: My favorite Zelda game is Ocarina of Time.
+
+    User 1: That''s a great game! I love the story and the gameplay.
+
+    User 2: Me too! It''s one of my favorite games of all time.
+
+    User 1: I think we''re going to be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

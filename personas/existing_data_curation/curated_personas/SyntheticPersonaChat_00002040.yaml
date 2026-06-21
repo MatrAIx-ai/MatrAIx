@@ -1,0 +1,84 @@
+id: '00002040'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2040
+data:
+  user 1 personas: 'I went to stanford.
+
+    My favorite food is pizza.
+
+    I play soccer professionally.
+
+    I have a wife and a 4 year old son.
+
+    My idol is thierry henry.'
+  user 2 personas: 'I like to work puzzles.
+
+    I love country music.
+
+    I am a teacher.
+
+    My dad worked for home depot.
+
+    I am an aspiring fiction writer.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: Doing well, thanks for asking!
+
+    User 1: Nice to hear! What are you up to today?
+
+    User 2: I''m just working on a puzzle.
+
+    User 1: Oh, cool! What kind of puzzle?
+
+    User 2: It''s a jigsaw puzzle of the Grand Canyon.
+
+    User 1: That sounds like a fun puzzle!
+
+    User 2: It is, I''m really enjoying it.
+
+    User 1: What''s your favorite kind of music?
+
+    User 2: I love country music!
+
+    User 1: Me too! What are some of your favorite artists?
+
+    User 2: I love Luke Combs, Chris Stapleton, and Morgan Wallen.
+
+    User 1: Nice! I love those guys too!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a professional soccer player.
+
+    User 2: Oh, wow! That''s amazing!
+
+    User 1: Thanks! It''s a lot of hard work, but it''s also a lot of fun.
+
+    User 2: I can imagine! What''s your favorite part of the job?
+
+    User 1: My favorite part is the travel. I get to see so many different places and meet new people.
+
+    User 2: That sounds amazing!
+
+    User 1: Yeah, it''s a great job.
+
+    User 2: Do you have any kids?
+
+    User 1: Yes, I have a wife and a 4-year-old son.
+
+    User 2: Oh, that''s great! What are their names?
+
+    User 1: My wife''s name is Sarah and my son''s name is Luca.
+
+    User 2: Nice to meet you, Sarah and Luca!
+
+    User 1: You too!
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m just enjoying the moment.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

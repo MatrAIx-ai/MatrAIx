@@ -1,0 +1,18 @@
+id: '00024010'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24010
+persona_description: A healthcare professional who recommends and administers flu vaccinations, especially targeting high-risk individuals such as the elderly and those with chronic medical conditions.
+  The individual is knowledgeable about the different types of flu vaccines available and their benefits and risks, and is committed to reducing the spread of the flu to prevent severe complications and
+  deaths. They are also aware of the importance of annual flu vaccinations for vulnerable populations and encourage individuals to get vaccinated to protect themselves and those around them.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

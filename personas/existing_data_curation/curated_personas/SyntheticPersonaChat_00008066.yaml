@@ -1,0 +1,54 @@
+id: 00008066
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8066
+data:
+  user 1 personas: 'I check my reflection in the mirror constantly.
+
+    I think i am fabulous.
+
+    I care about the way i look when i am in public.
+
+    I shop online a lot.
+
+    I always think people are looking at me.'
+  user 2 personas: 'I work graveyard in a hotel.
+
+    My favorite actor is robert denaro.
+
+    I am saving for college.
+
+    I love the snow.
+
+    I like to surf every chance i get.'
+  Best Generated Conversation: 'User 1: Hi! I''m a big fan of Robert De Niro. What''s your favorite movie of his?
+
+    User 2: My favorite movie of his is Taxi Driver. I love his character, Travis Bickle. He''s so complex and interesting.
+
+    User 1: I agree, he''s such a great actor. I love his work in Raging Bull too.
+
+    User 2: Yeah, that''s another great movie. He really gives it his all in that one.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I work graveyard in a hotel, so I don''t have a lot of time for hobbies. But I like to surf every chance I get.
+
+    User 1: That sounds like fun! I''ve always wanted to try surfing, but I''m not sure if I''m coordinated enough.
+
+    User 2: It''s not as hard as it looks. You just have to get the hang of it.
+
+    User 1: I''ll have to try it sometime. Do you like the snow?
+
+    User 2: I love the snow! I grew up in a cold climate, so I''m used to it.
+
+    User 1: Me too! I love skiing and snowboarding.
+
+    User 2: Me too! I love spending the day on the slopes.
+
+    User 1: I''m glad we have so much in common. It''s nice to meet you.
+
+    User 2: You too! It''s nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

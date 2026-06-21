@@ -1,0 +1,65 @@
+id: '00001075'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1075
+data:
+  user 1 personas: 'I like to skate.
+
+    My favorite color is black.
+
+    I sing in a punk band.
+
+    I sometimes write poetry.'
+  user 2 personas: 'I vacation in florida every winter.
+
+    I was a champion downhill skier in college.
+
+    My sister is a published author.
+
+    I sing karaoke every thursday night.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Alice.
+
+    User 1: Nice to meet you, Alice. What do you like to do for fun?
+
+    User 2: I like to ski, play volleyball, and read.
+
+    User 1: Oh, cool! I like to skate, sing in a punk band, and write poetry.
+
+    User 2: Wow, that''s a lot of fun! I wish I could skate.
+
+    User 1: It''s easy to learn! You should come with me to the rink some time.
+
+    User 2: I would love to!
+
+    User 1: Great! What day would you be free?
+
+    User 2: How about next Friday?
+
+    User 1: That works for me! I''ll pick you up at 7.
+
+    User 2: Okay, see you then!
+
+    User 1: Bye!
+
+    User 2: Bye!
+
+
+
+
+    User 1 Profiles: {I love to read and write.
+
+    I play music.
+
+    I am single.
+
+    I am a musician.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

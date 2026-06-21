@@ -1,0 +1,18 @@
+id: 00002459
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2459
+persona_description: A scientist or researcher who specializes in X-ray crystallography and protein crystallography. They are interested in understanding the structure of proteins and proteins that crystallize.
+  They are likely to have a deep understanding of the Bragg equation, Fourier transform, and the phase problem in crystallography. They may have experience with heavy atom substitution and isomorphous replacement
+  methods to solve the phase problem. They are also likely to be familiar with the protein data bank and have experience with using software such as Chime to visualize and analyze 3D protein structures.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: crystallography
+  general_domain_top01pct: None
+  specific_domain_top01pct: protein crystallography
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

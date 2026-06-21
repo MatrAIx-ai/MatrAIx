@@ -1,0 +1,72 @@
+id: 00000681
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 681
+data:
+  user 1 personas: 'I like to cook.
+
+    I am a foodie.
+
+    I like to go shopping with my daughters.
+
+    I love to chat with my friends.'
+  user 2 personas: 'My dog s name is toto.
+
+    My favorite food is meatloaf.
+
+    My car is green and smells weird.
+
+    My grandma is from denmark.
+
+    My favorite band used to be toto.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: Meatloaf!
+
+    User 1: That''s interesting, I''ve never really liked meatloaf.
+
+    User 2: Oh, it''s so good! My grandma used to make it for me all the time when I was little.
+
+    User 1: That''s sweet. I''m not really a big fan of cooking, but I do enjoy eating.
+
+    User 2: Me too! I love to cook, but I''m not very good at it.
+
+    User 1: Well, you''re better than me! I don''t even know how to boil water.
+
+    User 2: That''s okay, everyone has to start somewhere.
+
+    User 1: I guess so. But I''m not sure I''ll ever be a good cook.
+
+    User 2: You never know! You might surprise yourself.
+
+    User 1: I hope so. Maybe I''ll try making meatloaf one day.
+
+    User 2: That would be awesome! I''d love to try your meatloaf.
+
+    User 1: I''ll let you know how it goes.
+
+    User 2: Great! I''m excited to try it.
+
+    User 1: Me too!
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to go shopping with my daughters.
+
+    User 2: That sounds fun! I don''t have any kids, but I like to go shopping with my friends.
+
+    User 1: It''s so much fun to go shopping with someone else. You can always find something you like when you''re with someone else.
+
+    User 2: That''s true! I always end up buying more stuff when I''m with my friends.
+
+    User 1: Me too! I''m always like, "I didn''t need this, but I''m getting it anyway."
+
+    User 2: That''s me too! I''m always buying things I don''t need.
+
+    User 1: But it''s so much fun!
+
+    User 2: I know, right? Shopping is the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

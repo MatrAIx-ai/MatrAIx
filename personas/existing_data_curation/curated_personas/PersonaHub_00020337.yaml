@@ -1,0 +1,18 @@
+id: '00020337'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20337
+persona_description: A patient who is taking rifabutin for the treatment of tuberculosis and is aware of the potential for rifamycin resistance. They are also interested in the drug's effectiveness against
+  other bacteria and its use in treating Crohn's Disease. They are likely to be HIV-positive and have a low CD4 count, which increases the risk of treatment failure or relapse due to acquired rifamycin
+  resistance. They are also interested in the drug's side effects and the potential for it to be used in treating other infections, such as Chlamydia pneumoniae.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: tuberculosis treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

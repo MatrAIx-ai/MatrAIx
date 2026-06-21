@@ -1,0 +1,78 @@
+id: '00005770'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5770
+data:
+  user 1 personas: 'I have 3 sisters and 2 brothers.
+
+    I live in a medium sized city.
+
+    My favorite place to spend time at is the beach.
+
+    I love to read.
+
+    I have a masters degree in creative writing.'
+  user 2 personas: 'I have a lot of trophies from my childhood.
+
+    I love to run.
+
+    My favorite past time is cooking.
+
+    I love to sing.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]. Nice to meet you.
+
+    User 1: Nice to meet you too! Where are you from?
+
+    User 2: I''m from [user 2''s hometown].
+
+    User 1: Oh, I''m from [user 1''s hometown]. That''s cool!
+
+    User 2: Yeah, it is. What do you do for a living?
+
+    User 1: I''m a writer.
+
+    User 2: Oh, that''s cool. I love to write too. What kind of things do you like to write about?
+
+    User 1: I like to write fiction, mostly short stories and novels.
+
+    User 2: Oh, that''s awesome. I write poetry sometimes.
+
+    User 1: Oh, that''s cool. I don''t think I have the patience for poetry.
+
+    User 2: It takes a lot of patience, but it''s fun.
+
+    User 1: I''m sure it is. I''m more of a prose person.
+
+    User 2: That''s cool. Do you have anything published?
+
+    User 1: Yes, I have a few short stories published in magazines.
+
+    User 2: Oh, that''s awesome! I''m trying to get my work published right now.
+
+    User 1: I hope you do. It''s a great feeling to see your work in print.
+
+    User 2: Thank you. I''m excited for it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to run. I also love to cook and sing.
+
+    User 1: Oh, I love to run too. It''s so relaxing.
+
+    User 2: It is. And it''s a great way to get in shape.
+
+    User 1: I agree. I love to cook too. I''m not very good at it, but it''s fun.
+
+    User 2: Cooking is great. It''s so satisfying to make a delicious meal.
+
+    User 1: I agree. I love to sing too. I''m not very good at it, but I enjoy it.
+
+    User 2: Singing is great. It''s a great way to express yourself.
+
+    User 1: I agree. I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

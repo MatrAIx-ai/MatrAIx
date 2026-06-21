@@ -1,0 +1,19 @@
+id: '00003030'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3030
+persona_description: A professional web developer who specializes in using graphical editors to edit documents and websites. They are skilled in using PUT method to edit documents, and are familiar with
+  the Content-Location header to ensure the correct URI is sent to the editing software. They are aware of the drawbacks of using Directory Indexes and the need to hide the technology used in serving pages,
+  and are aware of the importance of sending additional information about the resource served through the 'Allow' header to prevent ambiguity. They are also aware of the potential security risks associated
+  with using Directory Indexes and the need to use dynamic content to prevent this from happening.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: web development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

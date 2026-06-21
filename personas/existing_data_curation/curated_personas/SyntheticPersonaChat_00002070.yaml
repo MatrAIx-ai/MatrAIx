@@ -1,0 +1,66 @@
+id: '00002070'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2070
+data:
+  user 1 personas: 'I am a cartographer.
+
+    I like to make bagels.
+
+    I like to arm wrestle.
+
+    I used to be a nurse.
+
+    I like to paint outdoors.'
+  user 2 personas: 'I am chubby.
+
+    My favorite band is insane clown posse.
+
+    I am tall and blonde.
+
+    I love to lamp.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a cartographer.
+
+    User 1: Oh, that''s cool! I''ve always been fascinated by maps.
+
+    User 2: Me too! I love creating them and making them look as beautiful as possible.
+
+    User 1: I can imagine. What''s your favorite kind of map to make?
+
+    User 2: I like making historical maps the most. I love learning about the past and seeing how it''s changed over time.
+
+    User 1: That makes sense. I love history too. What''s your favorite historical event?
+
+    User 2: I''m not sure I can pick just one favorite historical event. But I really enjoyed learning about the Black Plague. It''s such a fascinating and tragic story.
+
+    User 1: Me too. It''s so hard to imagine what it must have been like to live through something like that.
+
+    User 2: I know, right? It''s so hard to comprehend the amount of death and destruction that it caused.
+
+    User 1: Yeah, it''s really sad.
+
+    User 2: But it''s also a reminder of how far we''ve come as a society.
+
+    User 1: I know, right? It''s crazy to think about how different things were just a few hundred years ago.
+
+    User 2: Yeah, it is. But it''s also a reminder that we still have a long way to go.
+
+    User 1: I know, right? But I''m optimistic that we''ll eventually get there.
+
+    User 2: Me too. We just have to keep fighting for what''s right.
+
+    User 1: I know, right? We can''t give up.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

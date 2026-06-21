@@ -1,0 +1,83 @@
+id: 00002786
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2786
+data:
+  user 1 personas: 'I have three children.
+
+    I like to garden.
+
+    I am a teacher.
+
+    I graduated college for secondary english education.
+
+    I live in the suburbs of a major city.'
+  user 2 personas: 'I am a scientist.
+
+    I know karate.
+
+    I want to go to mars.
+
+    I am an avid artist.'
+  Best Generated Conversation: '* * *
+
+
+    User 1: Hi there! I''m [user 1''s name].
+
+
+    User 2: Hello! I''m [user 2''s name].
+
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+
+    User 2: I''m a scientist.
+
+
+    User 1: That''s awesome! What kind of science do you do?
+
+
+    User 2: I study the effects of climate change on marine life.
+
+
+    User 1: That sounds really interesting! Do you have any exciting projects going on right now?
+
+
+    User 2: Yes, I''m working on a project to study the effects of climate change on coral reefs.
+
+
+    User 1: That sounds like a really important project! I''m glad you''re working on it.
+
+
+    User 2: Thanks! I''m passionate about protecting our planet''s environment.
+
+
+    User 1: Me too! I try to do my part to help the environment by recycling and composting.
+
+
+    User 2: That''s great! We all need to do our part to make a difference.
+
+
+    User 1: What else do you enjoy doing?
+
+
+    User 2: I love to paint and draw. I''m also an avid martial artist.
+
+
+    User 1: That sounds like a lot of fun! I love to garden.
+
+
+    User 2: Gardening is a great way to relax and enjoy nature.
+
+
+    User 1: It is! I love being outside and working with my hands.
+
+
+    User 2: I can definitely relate to that!
+
+
+    * * *'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

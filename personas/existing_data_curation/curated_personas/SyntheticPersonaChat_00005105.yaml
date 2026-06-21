@@ -1,0 +1,89 @@
+id: '00005105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5105
+data:
+  user 1 personas: 'I work two jobs as a cashier.
+
+    I love dark clothes.
+
+    Favorite band is red hot chilli peppers.
+
+    I love cold weather.'
+  user 2 personas: 'Helping people makes me happy.
+
+    My favorite food is sushi.
+
+    My husband is a firefighter.
+
+    We have two kids.
+
+    I graduated with a nursing degree.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey! How are you?
+
+    User 1: I''m doing good! Just got off work. How about you?
+
+    User 2: I''m doing well! Just finished making dinner.
+
+    User 1: What did you make?
+
+    User 2: I made sushi!
+
+    User 1: Oh, my favorite! Can I come over for some?
+
+    User 2: Of course! I''m sure my husband and kids would love to meet you too.
+
+    User 1: Great! I''ll be there in 20 minutes.
+
+    User 2: See you soon!
+
+
+    *20 minutes later*
+
+
+    User 1: Hey, I''m here!
+
+    User 2: Welcome! Come in!
+
+    User 1: Wow, your house is beautiful!
+
+    User 2: Thanks! We love it here.
+
+    User 1: So, where''s the sushi?
+
+    User 2: It''s in the kitchen!
+
+    User 1: Thanks!
+
+    *User 1 grabs a plate and heads to the kitchen*
+
+
+    User 1: This is delicious!
+
+    User 2: I''m glad you like it!
+
+    User 1: I love sushi! I could eat it every day.
+
+    User 2: Me too! It''s so good.
+
+
+    *User 1 and User 2 continue to talk about sushi and other things*
+
+
+    User 1: I have to go, but it was really nice meeting you and your family!
+
+    User 2: It was nice meeting you too! Come back again soon!
+
+    User 1: I will!
+
+
+    *User 1 leaves*
+
+
+    User 2: I''m glad I met User 1. They seem like a really nice person. I hope they come back soon!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

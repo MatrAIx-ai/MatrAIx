@@ -1,0 +1,66 @@
+id: 00002936
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2936
+data:
+  user 1 personas: 'Its cold where i live.
+
+    I have a big beard.
+
+    I am a viking.
+
+    My hobbies include pillaging and fine dining.'
+  user 2 personas: 'I like field hockey and soccer.
+
+    I love animals , especially dogs.
+
+    I am a 15 year old girl.
+
+    I get good grades in school.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you today?
+
+    User 1: I am doing well, thank you for asking. And how are you?
+
+    User 2: I am doing good, thank you!
+
+    User 1: That''s great to hear!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go hiking and camping. I also enjoy reading and spending time with my friends and family.
+
+    User 2: That sounds like a lot of fun! I like to play field hockey and soccer. I also love animals, especially dogs.
+
+    User 1: I love animals too! I have a dog named Odin.
+
+    User 2: Aww, that''s so cute! I have a dog named Thor.
+
+    User 1: Awesome! We should have them play together sometime.
+
+    User 2: That would be fun!
+
+    User 1: What do you do for school?
+
+    User 2: I''m in the 10th grade. I''m doing pretty well so far.
+
+    User 1: That''s great to hear! I''m sure you''ll do great things in the future.
+
+    User 2: Thank you! I hope so.
+
+    User 1: I''m sure you will. You seem like a very smart and capable person.
+
+    User 2: Thank you for saying that. You seem really nice too.
+
+    User 1: Thanks! I try my best.
+
+    User 2: It''s working!
+
+    User 1: Haha, thanks.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

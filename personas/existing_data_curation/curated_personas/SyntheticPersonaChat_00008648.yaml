@@ -1,0 +1,66 @@
+id: 00008648
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8648
+data:
+  user 1 personas: 'I live in japan and own the biggest mansion in the country.
+
+    I am touring with frank ocean.
+
+    I am a rapper.
+
+    I just bought a new mansion.'
+  user 2 personas: 'I am married.
+
+    I enjoy spending time with family and friends.
+
+    I like doing art projects.
+
+    I am a strong woman.
+
+    I travel a lot.'
+  Best Generated Conversation: 'User 1: Hey! My name is [name].
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to spend time with my family and friends, do art projects, and travel.
+
+    User 1: That sounds like fun! I like to do art projects too. What kind of art do you like to do?
+
+    User 2: I like to do painting, drawing, and sculpting.
+
+    User 1: Wow, that''s great! I''ve always wanted to learn how to sculpt.
+
+    User 2: It''s really not that hard. You just need to find a good tutorial and start practicing.
+
+    User 1: I''ll have to do that. Thanks for the tip!
+
+    User 2: No problem! So, what do you do for work?
+
+    User 1: I''m a rapper. I''m currently touring with Frank Ocean.
+
+    User 2: That''s awesome! I love Frank Ocean''s music.
+
+    User 1: Thanks! He''s a great artist.
+
+    User 2: So, where are you from?
+
+    User 1: I live in Japan. I just bought a new mansion here.
+
+    User 2: Wow, that''s amazing! I''ve always wanted to visit Japan.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I will! I''ll have to come see your new mansion.
+
+    User 1: You''re welcome anytime!
+
+    User 2: Thanks! It was great talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

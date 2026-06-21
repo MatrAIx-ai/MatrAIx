@@ -1,0 +1,70 @@
+id: '00000610'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 610
+data:
+  user 1 personas: 'I am an orphan.
+
+    I like dogs.
+
+    I now live in new mexico.
+
+    I grew up in nevada.'
+  user 2 personas: 'I went to miami university.
+
+    I make a million dollars a year.
+
+    I play for the baltimore orioles.
+
+    I m married and have three kids.
+
+    I am a baseball player.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Alex.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baseball player for the Baltimore Orioles.
+
+    User 1: Wow, that''s amazing! I''ve always been a big baseball fan.
+
+    User 2: Thanks! I''ve been playing baseball since I was a kid.
+
+    User 1: Where are you from?
+
+    User 2: I''m from Miami, but I now live in New Mexico.
+
+    User 1: What''s it like being a baseball player?
+
+    User 2: It''s a lot of hard work, but it''s also a lot of fun. I love being able to play the game I love for a living.
+
+    User 1: That''s great! I bet it''s a lot of pressure, too.
+
+    User 2: It can be, but it''s also a lot of fun. I love being able to compete at the highest level.
+
+    User 1: I''m sure it is. So, what''s your favorite thing about playing baseball?
+
+    User 2: My favorite thing is being able to play with my teammates. We''re all like a family, and we love to win together.
+
+    User 1: That''s great! I''m sure it''s a lot of fun to be able to bond with your teammates.
+
+    User 2: It is! We''re always there for each other, on and off the field.
+
+    User 1: That''s really nice. So, what do you like to do for fun when you''re not playing baseball?
+
+    User 2: I like to spend time with my family and friends, and I also like to play video games.
+
+    User 1: I like to play video games too! What kind of games do you like to play?
+
+    User 2: I like to play all kinds of games, but I especially like playing sports games.
+
+    User 1: Me too! I love playing sports games.
+
+    User 2: It''s so much fun to be able to compete against your friends and family.
+
+    User 1: I agree! It''s a great way to have some fun and bond with your loved ones.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

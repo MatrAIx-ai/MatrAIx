@@ -1,0 +1,76 @@
+id: 00005419
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5419
+data:
+  user 1 personas: 'My favorite band is hop along.
+
+    I have been working the same job for two years.
+
+    I like to play video games.
+
+    My father used to be a mechanic.
+
+    I am a musician.'
+  user 2 personas: 'I am the oldest of three boys.
+
+    I play the drums.
+
+    I work at the pizza parlor.
+
+    My mother was a single mother.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I play the drums.
+
+    User 1: Cool! I play guitar.
+
+    User 2: That''s awesome! I''ve been playing the drums for about 10 years now.
+
+    User 1: Wow, that''s long! I''ve only been playing guitar for about 5 years.
+
+    User 2: Well, you''re doing a great job!
+
+    User 1: Thanks! What''s your favorite band?
+
+    User 2: I like a lot of different bands, but my favorite is probably Hop Along.
+
+    User 1: I''ve never heard of them.
+
+    User 2: They''re a really great indie band from Philadelphia. You should check them out!
+
+    User 1: I will! Thanks for the recommendation!
+
+    User 2: No problem! So, what do you do for work?
+
+    User 1: I''m a musician.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I play a lot of different genres, but my favorite is indie rock.
+
+    User 2: That''s cool! What''s your favorite song to play?
+
+    User 1: I don''t know if I have a favorite song, but I really like playing "Losing My Mind" by The 1975.
+
+    User 2: I''ve never heard of that song.
+
+    User 1: You should check it out! It''s a really good song.
+
+    User 2: I will! Thanks for the recommendation!
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I work at the pizza parlor.
+
+    User 1: Oh, cool! What''s that like?
+
+    User 2: It''s pretty fun! I get to make pizza and meet new people all the time.
+
+    User 1: That sounds like a fun job!
+
+    User 2: It is! I''m glad I got it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

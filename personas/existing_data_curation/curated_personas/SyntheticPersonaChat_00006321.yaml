@@ -1,0 +1,90 @@
+id: '00006321'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6321
+data:
+  user 1 personas: 'My favorite band is one direction.
+
+    My mom is a professional tennis player.
+
+    I hope to be a football player when i grow up.
+
+    I am currently in elementary school.'
+  user 2 personas: 'I make over 200 , 000 per year.
+
+    I work as a computer programmer.
+
+    I like to donate time and money to charity.
+
+    I have two pitt bulls.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, nice to meet you [name]. My name is [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a computer programmer.
+
+    User 1: Oh, that''s cool. What''s your favorite part about your job?
+
+    User 2: I get to work on a lot of different projects and I get to use my creativity to solve problems.
+
+    User 1: That sounds really interesting.
+
+    User 2: It is. I also make a lot of money, which is a nice bonus.
+
+    User 1: What do you like to do with your money?
+
+    User 2: I donate a lot of it to charity. I also like to travel and buy nice things.
+
+    User 1: That''s great. I like to donate money to charity too.
+
+    User 2: It''s important to give back.
+
+    User 1: I agree.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and listen to music.
+
+    User 2: Oh, that''s cool. What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I mostly play action games.
+
+    User 2: Action games are fun. I like to play them too.
+
+    User 1: What''s your favorite video game?
+
+    User 2: My favorite video game is "Skyrim". It''s an open-world action RPG.
+
+    User 1: "Skyrim" is a great game. I''ve played it too.
+
+    User 2: It''s so much fun.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite band?
+
+    User 1: My favorite band is One Direction.
+
+    User 2: Oh, I''ve heard of them. They''re pretty popular, right?
+
+    User 1: Yeah, they are. I love their music.
+
+    User 2: I''ve never really listened to them before.
+
+    User 1: You should! They''re great.
+
+    User 2: I will.
+
+    User 1: So, what''s your favorite song by One Direction?
+
+    User 2: I don''t know. I''ve never really listened to them before.
+
+    User 1: Oh, well you should! They''re great.
+
+    User 2: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00006242'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6242
+persona_description: A marine scientist who is interested in studying the health and distribution of coral reefs, and has expertise in remote sensing techniques such as airborne remote sensing campaigns
+  using PRISM sensors. They are also familiar with the Quicklooks data available on the PRISM website, and have experience in applying corrections to obtain maps indicating the relative densities of coral,
+  sand, and algae in each study area, as well as rates of primary productivity and calcification.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Marine Remote Sensing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

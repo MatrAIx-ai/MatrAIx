@@ -1,0 +1,80 @@
+id: 00003699
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3699
+data:
+  user 1 personas: 'I just got a new sweater.
+
+    I smell like french fries.
+
+    I also eat too much french fries.
+
+    I cannot do math.
+
+    It was too small.'
+  user 2 personas: 'I live in a house.
+
+    I have a lot of friends.
+
+    I love dogs and cats.
+
+    My dad works at the mill and my mom is a teacher.
+
+    I am ten years old.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi (user 1''s name)! I''m (user 2''s name).
+
+    User 1: It''s nice to meet you!
+
+    User 2: It''s nice to meet you too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play with my friends, read books, and go to the park.
+
+    User 1: Those sound like fun things to do!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and play video games.
+
+    User 2: Those sound like fun things to do too!
+
+    User 1: I''m glad we have something in common!
+
+    User 2: Me too!
+
+    User 1: So, what kind of books do you like to read?
+
+    User 2: I like to read adventure books, mystery books, and science fiction books.
+
+    User 1: I like to read those kinds of books too!
+
+    User 2: That''s great!
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog and a cat.
+
+    User 1: That''s awesome! I love dogs and cats.
+
+    User 2: Me too!
+
+    User 1: Where do you live?
+
+    User 2: I live in a house with my parents and my brother.
+
+    User 1: That sounds nice. I live in an apartment with my roommate.
+
+    User 2: It''s nice to know that we have something in common!
+
+    User 1: Me too!
+
+    User 2: I think we''re going to be good friends.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00001192
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1192
+data:
+  user 1 personas: 'I am a christian.
+
+    My favorite movie genre is horror.
+
+    I love to read.
+
+    I am a vet tech.'
+  user 2 personas: 'I am a high school teacher.
+
+    I live in chicago.
+
+    I volunteer at the red cross on the weekends.
+
+    I do yoga three times a week.
+
+    I am married with 2 kids.'
+  Best Generated Conversation: 'User 1: Hi! I''m User 1.
+
+    User 2: Hi! I''m User 2.
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, volunteer, and do yoga.
+
+    User 1: I love reading too! What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I''m especially interested in history and nonfiction.
+
+    User 1: I love history too! I''m a huge fan of biographies.
+
+    User 2: Me too! I love learning about the lives of interesting people.
+
+    User 1: What are your favorite books?
+
+    User 2: I have a lot of favorite books, but one of my favorites is "The Autobiography of Benjamin Franklin."
+
+    User 1: I love that book! It''s so inspiring.
+
+    User 2: Me too! I love how Benjamin Franklin was always learning and growing.
+
+    User 1: Me too! He''s such an amazing role model.
+
+    User 2: I agree! He''s one of my heroes.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to volunteer at the Red Cross.
+
+    User 1: That''s great! I''ve always wanted to volunteer there.
+
+    User 2: It''s really rewarding. I feel good knowing that I''m helping people in need.
+
+    User 1: I''m sure you do! It sounds like you''re a very busy person.
+
+    User 2: I try to be! I like to stay active.
+
+    User 1: I can tell! You seem like a really interesting person.
+
+    User 2: Thank you! You seem interesting too.
+
+    User 1: Thanks! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

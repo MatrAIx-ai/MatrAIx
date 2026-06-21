@@ -1,0 +1,94 @@
+id: '00006036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6036
+data:
+  user 1 personas: 'I know how to drive a stickshift.
+
+    We lived in virginia while i was growing up.
+
+    My mother was a teacher.
+
+    I am a truck driver.
+
+    My father was a cop.'
+  user 2 personas: 'I worry about my image.
+
+    I live in a bad neighborhood.
+
+    I wish my mom was healthier.
+
+    I worry about our neighbors yelling in the middle of the night.
+
+    I wish i could go to a better school.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name). What''s your name?
+
+    User 2: Hi, my name is (user 2''s name).
+
+    User 1: Nice to meet you, (user 2''s name). Where are you from?
+
+    User 2: I grew up in Virginia, but I moved to this city a few years ago.
+
+    User 1: What was it like growing up in Virginia?
+
+    User 2: It was nice. I had a lot of friends and we used to do all sorts of things together.
+
+    User 1: What kind of things?
+
+    User 2: We used to go swimming in the summer, play in the snow in the winter, and go camping in the spring and fall.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It was! I miss those days.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool. Do you like it?
+
+    User 2: I do. It''s a good job and it pays well.
+
+    User 1: What''s your favorite part about it?
+
+    User 2: I like the freedom of being able to drive wherever I want.
+
+    User 1: Yeah, that would be nice.
+
+    User 2: What about you? What do you do for a living?
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s a good job too. Do you like it?
+
+    User 1: I do. It''s rewarding and it''s a good way to help people.
+
+    User 2: That''s great.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out with friends, watch movies, and read books.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I mostly read thrillers and mysteries.
+
+    User 1: I like those too.
+
+    User 2: Yeah, they''re really exciting.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading a book called "The Silent Patient" by Alex Michaelides. It''s really good.
+
+    User 1: I''ve heard good things about that book.
+
+    User 2: Yeah, it''s definitely worth a read.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should. It''s a good one.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

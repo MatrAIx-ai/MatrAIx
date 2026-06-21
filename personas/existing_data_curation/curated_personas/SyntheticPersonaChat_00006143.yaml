@@ -1,0 +1,94 @@
+id: '00006143'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6143
+data:
+  user 1 personas: 'My favorite movie is good burger.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    In high school , i came in 6th in the 100 meter dash.
+
+    I eat exclusively meat.
+
+    I like canning and whittling.'
+  user 2 personas: 'I like to shop.
+
+    My parents pay my rent.
+
+    I graduated college and immediately went to graduate school.
+
+    I am a vegetarian but i eat fish , especially sushi.
+
+    I love my dog.'
+  Best Generated Conversation: 'User 1: Hey, I''m Ben.
+
+    User 2: Hi, I''m Emily.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to shop and go to the movies.
+
+    User 1: Cool, me too! I love to go to the movies. What''s your favorite movie?
+
+    User 2: I love Good Burger. It''s so funny.
+
+    User 1: I''ve never seen that movie. Is it good?
+
+    User 2: It''s really funny. You should check it out.
+
+    User 1: I will. What else do you like to do?
+
+    User 2: I like to go to the beach.
+
+    User 1: Me too! I love swimming and sunbathing.
+
+    User 2: Me too! I also love to build sand castles.
+
+    User 1: I''ve never been very good at building sand castles.
+
+    User 2: I''ll teach you!
+
+    User 1: Sounds like fun!
+
+    User 2: What else do you like to do?
+
+    User 1: I like to can and whittle.
+
+    User 2: What''s that?
+
+    User 1: Canning is a way of preserving food, and whittling is a woodworking technique.
+
+    User 2: Oh, that sounds interesting. I''ve never done either of those things before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that sounds cool! What kind of food do you cook?
+
+    User 1: I cook all kinds of food, but I specialize in Italian cuisine.
+
+    User 2: Oh, that''s my favorite!
+
+    User 1: I''m glad to hear that!
+
+    User 2: So, what''s your favorite dish to cook?
+
+    User 1: My favorite dish to cook is lasagna.
+
+    User 2: Lasagna is my favorite too!
+
+    User 1: Well, I guess we have something in common.
+
+    User 2: I guess so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

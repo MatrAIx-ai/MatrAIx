@@ -1,0 +1,62 @@
+id: '00001436'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1436
+data:
+  user 1 personas: 'I work in retail.
+
+    I drink diet coke.
+
+    I spend too much time shopping.
+
+    I drive a ford taurus.'
+  user 2 personas: 'I live life to its fullest.
+
+    I have a crummy job at scrubway.
+
+    I am in college.
+
+    I enjoy playing video games.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games, go out with friends, and just relax.
+
+    User 1: I like to do those things too! I also like to go shopping.
+
+    User 2: That''s cool! What do you like to buy?
+
+    User 1: I like to buy clothes, shoes, and makeup.
+
+    User 2: I like to buy video games, clothes, and food.
+
+    User 1: I like food too! What''s your favorite food?
+
+    User 2: I like pizza, pasta, and chocolate.
+
+    User 1: Those are all great foods! I like pizza, pasta, and ice cream.
+
+    User 2: Ice cream is my favorite dessert!
+
+    User 1: Mine too! I also like chocolate cake.
+
+    User 2: Me too! I love chocolate cake.
+
+    User 1: I think we would be good friends.
+
+    User 2: I think so too!
+
+    User 1: Well, it was nice meeting you!
+
+    User 2: It was nice meeting you too!
+
+    User 1: Maybe we can hang out sometime.
+
+    User 2: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

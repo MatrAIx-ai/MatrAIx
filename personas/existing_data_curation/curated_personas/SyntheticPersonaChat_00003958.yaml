@@ -1,0 +1,76 @@
+id: 00003958
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3958
+data:
+  user 1 personas: 'I go visit them sometimes.
+
+    She likes to grow plants in her garden.
+
+    I work at a grocery store.
+
+    My best friend lives in a big city.
+
+    My mother is a social worker for the school system.'
+  user 2 personas: 'I am not married.
+
+    I like to sing.
+
+    I love basketball.
+
+    Have both daughters and sons.
+
+    I like to hunt.'
+  Best Generated Conversation: 'User 1: Hey there! I''m (user 1''s name).
+
+    User 2: Hi (user 2''s name)! I''m (user 2''s name).
+
+    User 1: Nice to meet you! Where do you live?
+
+    User 2: I live in (user 2''s city).
+
+    User 1: Oh, I live in (user 1''s city).
+
+    User 2: Really? That''s cool! What do you do for a living?
+
+    User 1: I work at a grocery store.
+
+    User 2: Oh, that''s cool. I work as a hunting guide.
+
+    User 1: Really? That sounds like a lot of fun!
+
+    User 2: Yeah, it is. I love being outdoors and getting to see all the different animals.
+
+    User 1: That''s awesome. I love being outside too. I like to go hiking and camping.
+
+    User 2: Me too! I also like to go fishing.
+
+    User 1: That''s cool. I''ve never been fishing before.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: You should. It''s a great way to relax and enjoy nature.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, watch TV, and play video games.
+
+    User 2: Me too! I love going to the movies. I''m a big fan of action movies.
+
+    User 1: Me too! I love action movies and horror movies.
+
+    User 2: Me too! Those are my two favorite genres.
+
+    User 1: Awesome! I''m glad we have something in common.
+
+    User 2: Me too! It''s nice to meet someone who likes the same things I do.
+
+    User 1: Yeah, me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

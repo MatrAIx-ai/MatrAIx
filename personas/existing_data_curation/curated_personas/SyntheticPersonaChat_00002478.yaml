@@ -1,0 +1,74 @@
+id: 00002478
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2478
+data:
+  user 1 personas: 'I have an mba degree.
+
+    I live in colorado.
+
+    I am married.
+
+    I own my home.'
+  user 2 personas: 'I work at a retail store.
+
+    I love rock climbing.
+
+    My favorite movie is django unchained.
+
+    I drive a honda civic.
+
+    I like long walks on the beach.'
+  Best Generated Conversation: 'User 1: Hi! I''m [username]. What''s your name?
+
+    User 2: Hi, I''m [username].
+
+    User 1: Nice to meet you! What do you do for a living?
+
+    User 2: I work at a retail store.
+
+    User 1: Oh, cool! I''ve always thought about working in retail.
+
+    User 2: It''s not bad, but it can be a lot of work.
+
+    User 1: I bet! So, what are some of your hobbies?
+
+    User 2: I love rock climbing, long walks on the beach, and watching movies.
+
+    User 1: Rock climbing sounds like fun! I''ve never tried it before.
+
+    User 2: You should! It''s a great way to get exercise and have fun at the same time.
+
+    User 1: I''ll have to give it a try sometime. What''s your favorite movie?
+
+    User 2: My favorite movie is Django Unchained. It''s a great movie about slavery in the American West.
+
+    User 1: Oh, I''ve heard good things about that movie. I''ll have to check it out.
+
+    User 2: You should! It''s a really good movie.
+
+    User 1: So, what are you doing in Colorado?
+
+    User 2: I''m here visiting my family.
+
+    User 1: Oh, that''s nice! I''m from Colorado originally.
+
+    User 2: Oh, really? What part of Colorado are you from?
+
+    User 1: I''m from Denver.
+
+    User 2: Oh, nice! I''ve been to Denver a few times. It''s a great city.
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: So, what are you doing for fun in Colorado?
+
+    User 1: I''m going to visit some friends and family, and I''m going to go rock climbing.
+
+    User 2: Oh, that sounds like fun! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

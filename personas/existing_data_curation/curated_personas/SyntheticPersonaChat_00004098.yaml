@@ -1,0 +1,82 @@
+id: 00004098
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4098
+data:
+  user 1 personas: 'I sing barbershop and rap.
+
+    I love to take naps.
+
+    I love watching basketball.
+
+    My eyes are blue.
+
+    My favorite season is winter.'
+  user 2 personas: 'I went to a community college and got a degree in communication.
+
+    I am an orphan who was in the foster care system.
+
+    I listen to folk music.
+
+    Whittling is my favorite hobby.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to whittle.
+
+    User 1: What''s that?
+
+    User 2: It''s a woodworking hobby where you carve small sculptures out of wood.
+
+    User 1: Oh, that sounds cool.
+
+    User 2: It is. I''ve been doing it for a few years now.
+
+    User 1: Do you have any pictures of your work?
+
+    User 2: Yeah, I do. Here''s one.
+
+    User 1: Wow, that''s really cool!
+
+    User 2: Thanks!
+
+    User 1: I''ve never seen anything like it before.
+
+    User 2: It''s a lot of fun to do.
+
+    User 1: It looks like it.
+
+    User 2: I''ve been thinking about taking some classes to learn how to carve more elaborate pieces.
+
+    User 1: That would be awesome! I''m sure you''d be great at it.
+
+    User 2: Thanks!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to watch basketball.
+
+    User 1: Me too! What''s your favorite team?
+
+    User 2: I like the Golden State Warriors.
+
+    User 1: They''re a great team! I''m a fan of the San Antonio Spurs.
+
+    User 2: They''re a good team too.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: Winter. I love the snow.
+
+    User 1: I like winter too! I love skiing and snowboarding.
+
+    User 2: Me too! I love going to the mountains to ski.
+
+    User 1: I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

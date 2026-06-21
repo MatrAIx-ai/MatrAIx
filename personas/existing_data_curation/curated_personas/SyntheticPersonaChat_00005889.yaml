@@ -1,0 +1,56 @@
+id: 00005889
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5889
+data:
+  user 1 personas: 'Magic mike is my favorite movie.
+
+    I live in a big city.
+
+    I enjoy video games.
+
+    I enjoy my job , as a teacher.'
+  user 2 personas: 'I was raised by two mothers.
+
+    I can be quite forgetful.
+
+    My boyfriend works for nasa.
+
+    My favorite food is spaghetti and meatballs.'
+  Best Generated Conversation: 'User 1: Hello! I''m (name). I''m a teacher in a big city.
+
+    User 2: Nice to meet you, (name). I''m (name). I was raised by two moms.
+
+    User 1: That''s interesting! I''ve never met anyone who was raised by two moms before.
+
+    User 2: It''s not so bad. I''m glad I had two parents who loved me.
+
+    User 1: I''m sure they did. What do you do for a living?
+
+    User 2: I work as a graphic designer. I love my job!
+
+    User 1: That''s great! I''m glad you like your job.
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is Magic Mike. I love the dancing and the music.
+
+    User 2: I''ve never seen that movie. Is it good?
+
+    User 1: It''s a great movie! You should watch it sometime.
+
+    User 2: I''ll try to find it.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is spaghetti and meatballs.
+
+    User 1: That''s a good choice! I love spaghetti and meatballs too.
+
+    User 2: I''m glad to hear that. We should have dinner together sometime.
+
+    User 1: That sounds like a great idea! I''d love to have dinner with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

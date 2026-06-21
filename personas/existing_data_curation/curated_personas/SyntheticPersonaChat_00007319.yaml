@@ -1,0 +1,56 @@
+id: 00007319
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7319
+data:
+  user 1 personas: 'I enjoy cold winters and strong breezes.
+
+    I listen to a lot of strange music.
+
+    I wish i could write in cursive.
+
+    I wish i could live in iceland.'
+  user 2 personas: 'I only use apple products because i feel everything else is inferior.
+
+    Sometimes i listen to gary numan to be ironic.
+
+    I like eating fresh mangoes in the morning.
+
+    I like chasing komodo lizards on a private island.
+
+    Going snorkeling is my favorite thing to do.'
+  Best Generated Conversation: 'User 1: I really enjoy cold winters and strong breezes. Do you have a favorite season?
+
+    User 2: I like all seasons, but I think my favorite is spring.
+
+    User 1: I like spring too, but I''m not a big fan of the pollen.
+
+    User 2: Yeah, I know what you mean. I have allergies too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go snorkeling, eat fresh mangoes in the morning, and chase komodo lizards on a private island.
+
+    User 1: Wow, that''s sounds like a lot of fun! I''ve never been snorkeling, but I''ve always wanted to try it.
+
+    User 2: It''s really fun! You should definitely try it sometime.
+
+    User 1: I will! What''s your favorite music?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to alternative and indie music.
+
+    User 1: I like alternative music too! What are some of your favorite bands?
+
+    User 2: I like The Killers, The Shins, and The National.
+
+    User 1: I like The Killers too! I''ve never heard of The Shins or The National, but I''ll have to check them out.
+
+    User 2: You definitely should! They''re all great bands.
+
+    User 1: I will! Thanks for the recommendations.
+
+    User 2: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

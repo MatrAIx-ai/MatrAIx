@@ -1,0 +1,72 @@
+id: '00007655'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7655
+data:
+  user 1 personas: 'I want to move to london when i get older.
+
+    I like to invest in the stock market.
+
+    I have 3 brothers.
+
+    I love soccer.'
+  user 2 personas: 'I am a poet.
+
+    I have a beta fish.
+
+    My friends and i enjoy golfing on sunny days.
+
+    I am the head of the gun club.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to golf and write poetry.
+
+    User 1: That''s cool. I like to play soccer and invest in the stock market.
+
+    User 2: I''ve never played soccer before, but I''ve heard it''s fun.
+
+    User 1: It is! It''s a great way to get exercise and have fun with friends.
+
+    User 2: I''m not very good at sports, but I''m always up for trying new things.
+
+    User 1: Well, if you ever want to play soccer, let me know. I''d be happy to teach you the ropes.
+
+    User 2: Thanks, I''ll keep that in mind.
+
+    User 1: So, what kind of poetry do you write?
+
+    User 2: I write a lot of different kinds of poetry, but my favorite is nature poetry.
+
+    User 1: That''s cool. I''ve never written poetry before, but I''ve always thought it would be fun to try.
+
+    User 2: It''s definitely worth trying! It''s a great way to express yourself.
+
+    User 1: Maybe I''ll give it a shot sometime.
+
+    User 2: I''d love to see what you come up with.
+
+    User 1: Thanks, I''ll let you know.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a stock broker.
+
+    User 2: Oh, cool. I''ve always been interested in the stock market, but I don''t know much about it.
+
+    User 1: It''s a lot of fun, but it can be a bit complex at first.
+
+    User 2: I can imagine. Do you have any tips for beginners?
+
+    User 1: Sure, I have a few. First, you need to have a good understanding of the basics of the market. Second, you need to have a strategy for investing. Third, you need to be patient and disciplined.
+
+    User 2: Thanks for the tips. I''ll definitely keep them in mind.
+
+    User 1: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

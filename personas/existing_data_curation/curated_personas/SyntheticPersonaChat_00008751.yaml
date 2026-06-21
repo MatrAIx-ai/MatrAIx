@@ -1,0 +1,64 @@
+id: 00008751
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8751
+data:
+  user 1 personas: 'I just accepted a job at the elementary school in my hometown.
+
+    I just graduated college with my bachelors degree in education.
+
+    I love children.
+
+    I am twenty two years old.
+
+    I just moved into an apartment within the vicinity of my new job.'
+  user 2 personas: 'I have several siblings i do not know.
+
+    I met my birth mother when i was sixteen.
+
+    I was adopted.
+
+    Christmas is my favorite holiday.
+
+    I work at a local party store.'
+  Best Generated Conversation: 'User 1: Hi, I''m new to the area. I just moved in today.
+
+    User 2: Welcome! I''m glad to meet you.
+
+    User 1: Thanks! I''m really excited to start my new job at the elementary school.
+
+    User 2: Oh, that''s great! I''ve always wanted to be a teacher.
+
+    User 1: It''s a lot of work, but it''s so rewarding. I love working with kids.
+
+    User 2: I bet it is! I''ve always loved working with kids too.
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a local party store.
+
+    User 1: Oh, that''s cool! I love parties.
+
+    User 2: Me too! I get to help people plan their special events, which is always fun.
+
+    User 1: I bet it is! I''m sure you''re great at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what are you doing for Christmas this year?
+
+    User 2: I''m not sure yet. I''m thinking about going to visit my birth mother.
+
+    User 1: Oh, that would be nice. I''m sure she''d love to see you.
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, it was nice meeting you.
+
+    User 2: You too! I hope we can get to know each other better.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

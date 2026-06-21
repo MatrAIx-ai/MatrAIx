@@ -1,0 +1,48 @@
+id: 00003197
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3197
+data:
+  user 1 personas: 'I own a black suburban.
+
+    I still dream about going to paris and designing clothes.
+
+    I spend a lot of time driving my kids to sports events.
+
+    I am a member of four book clubs , the pta , and two bunch groups.
+
+    I drink a lot of apple martinis when i get a girls night out.'
+  user 2 personas: 'I hate tomatoes.
+
+    I need a wheel chair to get around.
+
+    I am very short.
+
+    I am a female.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [User 1 name]
+
+    User 2: Hi [User 1 name], I''m [User 2 name]
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I''m a wheelchair user and I love to go to the park.
+
+    User 1: I love the park too! I''m a big fan of gardening and I love to spend time outdoors.
+
+    User 2: Oh, that''s great! I don''t have a green thumb, but I love to watch the plants grow.
+
+    User 1: I have a black suburban and I love to drive it. I used to dream of being a designer, but I never got the chance.
+
+    User 2: That''s too bad, but I''m sure you''re really good at what you do.
+
+    User 1: Thanks! I try my best. I''m a member of a lot of clubs, including the PTA and two book clubs.
+
+    User 2: That''s really cool! I''m not a very social person, but I''m trying to get out more.
+
+    User 1: It''s good to get out and meet new people. I love going to girls night out and having apple martinis.
+
+    User 2: I''ve never had an apple martini, but they sound delicious. Maybe I''ll try one next time I go out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

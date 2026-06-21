@@ -1,0 +1,60 @@
+id: '00003776'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3776
+data:
+  user 1 personas: 'I usually go to bed late.
+
+    I like sports.
+
+    I am studying to be a dentist.
+
+    My favorite band is rise against.
+
+    My favorite team is the raptors.'
+  user 2 personas: 'I am bald with a thick beard.
+
+    I wear nice clothes.
+
+    I work as an attorney.
+
+    I enjoy comedies.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username]. What''s yours?
+
+    User 2: Hello, I''m [username].
+
+    User 1: Nice to meet you [username].
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch comedies and play video games.
+
+    User 1: I like comedies too! What are some of your favorite shows?
+
+    User 2: I like The Office, Parks and Rec, and Brooklyn Nine-Nine.
+
+    User 1: Those are great shows! I love The Office and Parks and Rec. I haven''t seen Brooklyn Nine-Nine yet, but I''ve heard good things about it.
+
+    User 2: It''s really funny, you should check it out.
+
+    User 1: I will! What kind of video games do you like to play?
+
+    User 2: I like open-world games like Skyrim and The Witcher 3.
+
+    User 1: I love open-world games too! I''ve played Skyrim and The Witcher 3, but I also like Fallout and Red Dead Redemption.
+
+    User 2: Those are great games too! I''ve played Fallout, but not Red Dead Redemption.
+
+    User 1: You should definitely check it out! It''s a lot of fun.
+
+    User 2: I will! It sounds like we have similar interests.
+
+    User 1: It looks like we do! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

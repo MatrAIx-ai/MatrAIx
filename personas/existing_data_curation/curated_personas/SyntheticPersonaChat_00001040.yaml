@@ -1,0 +1,60 @@
+id: '00001040'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1040
+data:
+  user 1 personas: 'I like football.
+
+    My friends like watching it to.
+
+    We drink beer and eat food.
+
+    It s great fun.'
+  user 2 personas: 'I enjoy ice cream.
+
+    My husband just decided to leave me.
+
+    The kids will be my responsibility as my husband doesn t want them.
+
+    I am 50 years old.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing okay, thanks. How about you?
+
+    User 1: I''m doing well, thanks. What do you like to do for fun?
+
+    User 2: I like to watch movies and read. I also enjoy spending time with my kids.
+
+    User 1: That sounds nice. I like to go to football games with my friends.
+
+    User 2: Football games sound fun! I''ve never been to one.
+
+    User 1: You should go! They''re a lot of fun.
+
+    User 2: Maybe I will someday.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like to watch comedies and dramas. I also enjoy horror movies, but only if I''m watching them with someone else.
+
+    User 1: Me too! I love horror movies, but I can''t watch them alone.
+
+    User 2: I''m glad to hear that! I''m always looking for someone to watch horror movies with me.
+
+    User 1: I''m always up for a horror movie!
+
+    User 2: Great! We should go to one sometime.
+
+    User 1: That sounds like a plan!
+
+    User 2: It''s nice talking to you.
+
+    User 1: It''s nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

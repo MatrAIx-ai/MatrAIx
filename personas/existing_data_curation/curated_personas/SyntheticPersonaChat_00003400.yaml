@@ -1,0 +1,78 @@
+id: '00003400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3400
+data:
+  user 1 personas: 'I hope to move out soon.
+
+    I have a cat.
+
+    I have depression and anxiety so i do not really go out a lot.
+
+    I live at home with my dad and brother.'
+  user 2 personas: 'I am a vegan.
+
+    I like visiting art museums in my spare time.
+
+    I am a student.
+
+    I just started dating someone new.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1].
+
+    User 2: Hey, I''m [user 2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: I see you''re a vegan. I''m not vegan myself, but I do try to eat a lot of plant-based foods.
+
+    User 2: That''s good! I''ve been vegan for about a year now, and I''m really happy with it.
+
+    User 1: I''m glad to hear that. I''ve been thinking about going vegan, but I''m not sure if I could do it.
+
+    User 2: It''s definitely not easy, but it''s worth it. I feel a lot better and healthier since I made the switch.
+
+    User 1: That''s good to hear. I might have to give it a try.
+
+    User 2: I would recommend it!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to art museums in my spare time. I''m also a student, so I spend a lot of time studying.
+
+    User 1: That''s cool. I love art museums too. I''m not a student anymore, but I used to be.
+
+    User 2: What did you study?
+
+    User 1: I studied psychology.
+
+    User 2: That''s interesting. What do you do now?
+
+    User 1: I''m a therapist.
+
+    User 2: Oh, that''s cool! I''ve been thinking about going to therapy.
+
+    User 1: I''m glad to hear that. It can be really helpful.
+
+    User 2: Thanks. I''m going to look into it.
+
+    User 1: Good luck!
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out with my friends, go to concerts, and watch movies.
+
+    User 1: Oh, that''s cool. I like to do those things too.
+
+    User 2: We should hang out sometime.
+
+    User 1: I would love to!
+
+    User 2: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00002810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2810
+data:
+  user 1 personas: 'I like to be outdoors.
+
+    I m from california.
+
+    I think recycling is important.
+
+    I m a student.'
+  user 2 personas: 'I like to swim in the lake.
+
+    I like to paddle board.
+
+    I like to visit places around the world.
+
+    I have been to every state except alaska.
+
+    I love cabins in the woods on the lake.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to swim in the lake, paddle board, and visit places around the world.
+
+    User 1: That sounds like a lot of fun! Where have you been to?
+
+    User 2: I''ve been to every state except Alaska, and I''ve also been to a lot of countries in Europe and Asia.
+
+    User 1: Wow, that''s amazing! I''ve never been to Europe or Asia, but I''d love to go someday.
+
+    User 2: You should! It''s a great experience.
+
+    User 1: I know, I''ve heard great things.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, camping, and kayaking. I also like to go to the beach.
+
+    User 2: That sounds like a lot of fun too! I love the outdoors.
+
+    User 1: Me too! It''s so relaxing.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have a dog named Buddy.
+
+    User 2: I love dogs! What kind of dog is he?
+
+    User 1: He''s a Golden Retriever.
+
+    User 2: Golden Retrievers are the best! They''re so friendly and loving.
+
+    User 1: I know, right? I love him to death.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a student. I''m studying to be a teacher.
+
+    User 2: Oh, that''s great! What grade level do you want to teach?
+
+    User 1: I''m not sure yet. I''m still deciding.
+
+    User 2: Well, I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00042306'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42306
+persona_description: A healthcare professional who works in a hospital in Georgia, particularly in the field of intensive care units. This person is responsible for ensuring the safety and well-being of
+  patients by taking proper precautions to prevent the development of central line-associated bloodstream infections (CLASBIs). This persona may be particularly interested in learning more about the causes
+  and prevention of CLASBIs, as well as the potential consequences of contracting these infections.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infection control in intensive care units
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,98 @@
+id: 00004092
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4092
+data:
+  user 1 personas: 'I own a dog that is small.
+
+    I like to play football.
+
+    I have beard that is longer.
+
+    I like to ride my bike.'
+  user 2 personas: 'My hair is a reddish brown.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    My family is very supportive of my skiing.
+
+    I am a competitive ski racer.
+
+    I broke my arm skiing once.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ski.
+
+    User 1: Really? I''ve never skied before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I''m a competitive ski racer.
+
+    User 1: Wow! That''s impressive.
+
+    User 2: Thanks. I''ve been skiing since I was a kid.
+
+    User 1: I can see why you like it. It looks like a lot of fun.
+
+    User 2: It is. I love the feeling of being free and fast on the snow.
+
+    User 1: I''m sure it''s great.
+
+    User 2: It is. I also love the challenge of it.
+
+    User 1: I can imagine.
+
+    User 2: It''s a lot of fun to push yourself to the limit.
+
+    User 1: I''m sure it is.
+
+    User 2: I have a fear of heights, but I still ski down high hills.
+
+    User 1: That''s amazing.
+
+    User 2: My family is very supportive of my skiing.
+
+    User 1: I''m sure they are.
+
+    User 2: They''re the best.
+
+    User 1: I''m glad you have such a supportive family.
+
+    User 2: Thanks.
+
+    User 1: So, what do you do when you''re not skiing?
+
+    User 2: I like to spend time with my dog.
+
+    User 1: I have a dog too.
+
+    User 2: That''s great. What kind of dog?
+
+    User 1: A chihuahua.
+
+    User 2: Chihuahuas are so cute.
+
+    User 1: I know, right?
+
+    User 2: So, what''s your dog''s name?
+
+    User 1: His name is Chester.
+
+    User 2: That''s a great name.
+
+    User 1: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

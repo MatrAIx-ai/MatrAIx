@@ -1,0 +1,72 @@
+id: 00000964
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 964
+data:
+  user 1 personas: 'I drive a truck.
+
+    I have a beard.
+
+    I live on a farm.
+
+    I graduated high school.'
+  user 2 personas: 'I am 25 years old.
+
+    My boyfriend is unemployed.
+
+    We live in an apartment.
+
+    I take her to the park.'
+  Best Generated Conversation: 'User 1: I live on a farm and drive a truck.
+
+    User 2: What do you grow on your farm?
+
+    User 1: We grow corn, soybeans, and wheat.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It is, but it''s also a lot of fun.
+
+    User 2: I''m sure it is. I''ve never been on a farm before.
+
+    User 1: You should come visit sometime.
+
+    User 2: I would love to.
+
+    User 1: We have a lot of livestock too.
+
+    User 2: What kind of livestock?
+
+    User 1: We have cows, pigs, and chickens.
+
+    User 2: That''s awesome. I love animals.
+
+    User 1: We also have a couple of dogs.
+
+    User 2: Do you have any pictures of your farm?
+
+    User 1: Yeah, I do. I can send them to you.
+
+    User 2: That would be great.
+
+    User 1: Here you go.
+
+    User 2: Wow, your farm is beautiful!
+
+    User 1: Thanks. We love it here.
+
+    User 2: I can see why. It looks like a great place to live.
+
+    User 1: It is. We''re very lucky to have it.
+
+    User 2: I''m glad you''re happy there.
+
+    User 1: Thanks. I am.
+
+    User 2: Well, I should probably get going. It was nice meeting you.
+
+    User 1: It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00002419
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2419
+data:
+  user 1 personas: 'I am seven years old.
+
+    I like to play soccer.
+
+    And , my best friend is cayden.
+
+    I just got my rejection letter from the gifted program.'
+  user 2 personas: 'I am a vet tech.
+
+    I am a christian.
+
+    My favorite movie genre is horror.
+
+    I love to read.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch horror movies, and volunteer at my local animal shelter.
+
+    User 1: Those all sound like fun things to do! I like to play soccer, read, and hang out with my friends.
+
+    User 2: That''s great! I love soccer too. What position do you play?
+
+    User 1: I play forward. What position do you play?
+
+    User 2: I play defense.
+
+    User 1: That''s cool! I think defense is a really important position.
+
+    User 2: Thanks! I think so too.
+
+    User 1: So, what do you do at the animal shelter?
+
+    User 2: I help to clean the cages, feed the animals, and play with them.
+
+    User 1: That sounds like a lot of fun! I''m sure the animals love you there.
+
+    User 2: Thanks! I love working there. It''s so rewarding to help animals in need.
+
+    User 1: That''s awesome! I''m glad you''re able to do something that you love.
+
+    User 2: Thanks! I''m glad too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a vet tech.
+
+    User 1: That''s cool! I''ve always been interested in working with animals.
+
+    User 2: It''s a great job! I love working with animals and helping them feel better.
+
+    User 1: That sounds like a lot of fun! I''m glad you enjoy your job.
+
+    User 2: Thanks! I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

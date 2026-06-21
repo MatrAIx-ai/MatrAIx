@@ -1,0 +1,68 @@
+id: 00002871
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2871
+data:
+  user 1 personas: 'I love the color pink.
+
+    I enjoy being outside.
+
+    I love pasta.
+
+    I love to swim.
+
+    My favorite singer is britney spears.'
+  user 2 personas: 'Pink is my favorite color.
+
+    I enjoy being alone.
+
+    My mother is dead.
+
+    I am a yoga instructor.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I love the color pink too! What''s your favorite shade?
+
+    User 2: I love all shades of pink, but I think my favorite is rose gold.
+
+    User 1: That''s a beautiful shade! I love it too.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love yoga and spending time in nature.
+
+    User 1: That''s so cool! I love yoga too. I do it almost every day.
+
+    User 2: Wow, that''s awesome! I''m not that consistent, but I try to do it at least once a week.
+
+    User 1: I think it''s so important to have a healthy body and mind.
+
+    User 2: I agree! Yoga has really helped me to be more present and mindful.
+
+    User 1: I''m glad to hear that!
+
+    User 2: What do you like to do outside?
+
+    User 1: I love swimming! I swim at least three times a week.
+
+    User 2: That''s awesome! I love swimming too, but I don''t get to do it as often as I would like.
+
+    User 1: You should come swimming with me sometime!
+
+    User 2: I would love that!
+
+    User 1: Great! We can make a plan.
+
+    User 2: Sounds good!
+
+    User 1: It was nice talking to you!
+
+    User 2: Nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

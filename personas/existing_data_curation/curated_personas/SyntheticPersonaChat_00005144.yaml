@@ -1,0 +1,68 @@
+id: '00005144'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5144
+data:
+  user 1 personas: 'My favorite food is meatloaf.
+
+    My car is green and smells weird.
+
+    My dogs name is toto.
+
+    My favorite band used to be toto.
+
+    My grandma is from denmark.'
+  user 2 personas: 'I am a carnivore.
+
+    My only friend is a dog.
+
+    My father used to be a butcher.
+
+    I am highly educated.
+
+    I work at a newspaper.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hello, I''m [username].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: Me too! I love to read and write. What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Hunger Games series, and the Percy Jackson series. What about you?
+
+    User 1: I love the Harry Potter series too! I also love the Hunger Games series and the Percy Jackson series. I''m also a big fan of the Lord of the Rings series.
+
+    User 2: Oh, I love the Lord of the Rings series too! I''m also a big fan of the Game of Thrones series.
+
+    User 1: I''ve heard good things about Game of Thrones, but I haven''t seen it yet.
+
+    User 2: You should definitely watch it! It''s a great show.
+
+    User 1: I''ll have to check it out. So, what do you do for a living?
+
+    User 2: I''m a journalist for a newspaper.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a journalist.
+
+    User 2: It''s a lot of fun, but it can be tough sometimes.
+
+    User 1: I can imagine. What''s the most interesting story you''ve ever written?
+
+    User 2: I once wrote a story about a man who was found dead in his house. The police never figured out what happened to him.
+
+    User 1: That''s so creepy! I would have been scared to write that story.
+
+    User 2: It was a little scary, but it was also really interesting.
+
+    User 1: I bet. So, what''s your favorite thing about your dog?
+
+    User 2: I love that he''s always happy to see me. He doesn''t care if I''m having a bad day or a good day, he''s always happy to see me.
+
+    User 1: That''s so sweet! I love that about my dog too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation
