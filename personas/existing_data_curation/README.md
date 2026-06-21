@@ -81,6 +81,54 @@ The category structure below is Eliza Fan's current proposal, not a finalized pr
 | Attachment style | 2 | Adds interpersonal relationship tendencies using the common adult attachment dimensions of anxiety and avoidance. |
 | Interpersonal circumplex | 2 | Adds broad interpersonal style axes for dominance/agency and warmth/communion. |
 
+## Literature & Proposed Persona Frameworks (For Future Expansion)
+
+The following frameworks from research papers and domain experts propose additional dimension candidates that could extend the schema beyond current sources. These are documented for future curation:
+
+### Personality & Character Frameworks
+
+| Source | Dimensions | Notes |
+| --- | --- | --- |
+| **BFI-2 Facets** | 15 facets across 5 domains | Extraversion (Sociability, Assertiveness, Energy); Agreeableness (Compassion, Respectfulness, Trust); Conscientiousness (Organization, Productiveness, Responsibility); Negative Emotionality (Anxiety, Depression, Volatility); Open-Mindedness (Curiosity, Aesthetic Sensitivity, Creative Imagination) |
+| **16 Personalities (16P)** | 16 types | From Personality Database (PDb); complements Big Five with type-level categorization |
+| **Dark Triad + Dirty Dozen** | 6-12 constructs | Narcissism, Machiavellianism, Psychopathy (Dark Triad); Dishonesty, Grandiosity, Aggressiveness, etc. (Dirty Dozen) |
+| **InCharacter Paper** | 14 personality tests | Comprehensive assessment including Big Five, 16P, Dark Triad, Dirty Dozen |
+
+### Character-Driven Persona Dimensions
+
+| Source | Framework | Dimensions |
+| --- | --- | --- |
+| **CharacterGPT** | Character Narrative | Personality, Physical Description, Motivations, Backstory, Emotions, Relationships, Growth & Change, Conflict |
+| **Character is Destiny Paper** | Decision-Making | Personality & Traits, Emotions & Psychological State, Social Relationships, Values & Beliefs, Desires & Goals |
+| **Character is Destiny Paper** | Plot-Driven | External Conflicts, Tasks & Goals, Puzzles & Secrets, Pursuits & Escapes, Exploration & Discovery, Power & Control, Intrigue & Betrayal |
+
+### Domain-Specific Persona Models
+
+| Source | Domain | Key Dimensions |
+| --- | --- | --- |
+| **SimsChat** | Conversational Agents | Career, Aspiration, Traits, Skills, + Personal Aspects (name, gender, tone, personality), Social Backgrounds (relationships, family dynamics), Emotion, Conversation Topic |
+| **Information Design for Personas (4 Domains)** | UX/Healthcare/Market Research/Social Media | Demographics, Personality, Activity, Interests, Challenges, Environment, Hobbies, Physical Health, Mental Health, Behavioral Health, Income |
+
+### Temporal & Context-Dependent Dimensions
+
+These frameworks highlight dimensions that should vary by context or time:
+
+| Dimension Category | Notes |
+| --- | --- |
+| **Emotional State** | Varies by context, interaction, and time (SimsChat, Character is Destiny) |
+| **Conversation Topic** | Dynamically chosen based on persona state and social context |
+| **Growth & Change** | Temporal evolution of personality, relationships, and goals over narrative arc |
+| **Conflict States** | External and internal conflicts that drive decision-making and persona behavior |
+
+## Future Curation Priorities
+
+Based on the above literature, candidates for next-phase expansion:
+
+1. **BFI-2 Facets** (15) — High-fidelity Big Five breakdown already cited in behavioral research
+2. **16 Personalities (16P)** — Complements existing MBTI with validated type taxonomy
+3. **Dark Triad / Dirty Dozen** (6-12) — Shadow personality dimensions for nuanced behavioral modeling
+4. **Temporal Dimensions** — Emotional state, growth, conflict as dynamic rather than static
+5. **Domain-Specific Overlays** — Per-domain extensions (career, conversation topic, etc.) beyond core schema
 
 ## Fetch Script
 
