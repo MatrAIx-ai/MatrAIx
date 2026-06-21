@@ -60,7 +60,7 @@ _Existing persona datasets / profile collections (also log scale + how to compar
 - ~5,648 new synthetic personas with ~11K conversations (plus a 4,723-persona / 10,906-conversation PersonaChat extension); a mixture-of-experts Critic iteratively filters quality, cutting the Turing-test losing rate vs human PersonaChat from 17.2% to 8.8% over three rounds.
 - Relevance: a Generator–Critic quality-control loop relevant to MatrAIx's synthetic-persona pipeline, with a measured fidelity signal (Turing-test win rate vs human personas) for how human generated personas read.
 
-### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576)
+### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576) (Keyang Xuan)
 - A persona conditiong method that uses open-ended first-person life narratives to steer LLMs toward more representative, consistent, and diverse virtual personas for approximating human survey respondents.
 - Scale/method: prompt the LLM with open-ended questions to self-generate a large anthology of backstories, then greedy-match backstories to real survey respondents to build aligned "virtual subjects".
 - Relevance: a persona-generation recipe which is relevant to MatrAIxPersona's narrative-expansion step (Task 1, Step 3), offering a generation-plus-validation pattern for population-grounded personas through respondent matching and distribution/consistency metrics.

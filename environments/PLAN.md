@@ -22,6 +22,19 @@ Collect and summarize prior work on agent environments, evaluation harnesses, an
 ### 🕹️ Agent Environments & Benchmarks
 _Web agents, GUI/app automation, tool-use sandboxes, simulation frameworks (e.g. τ-bench / tau-bench style customer-service settings)._
 
+### [AgentA/B: Automated and Scalable Web A/B Testing with Interactive LLM Agents](https://arxiv.org/abs/2504.09723) (Keyang Xuan)
+- Uses interactive LLM agents as **simulated users** to run A/B tests on live web UIs, comparing design variants without diverting real user traffic.
+- Environment design: agents perceive the web page, take realistic UI actions against variant A vs B; outcomes are aggregated into A/B metrics.
+- Relevance: a concrete Web environmen pattern for the "test a product surface with simulated users" use case, and a clean source of interaction telemetry → decision metrics.
+
+
+### [BASES: Large-scale Web Search User Simulation with LLM-based Agents](https://arxiv.org/abs/2402.17505) (Keyang Xuan)
+- LLM-based agents simulate large-scale search users to generate realistic search behavior for evaluating/​training information-access systems.
+- Environment design: a query→results→click interaction loop driven by agent user profiles, scalable to large simulated user populations.
+- Relevance: a search/web surface for the user-simulation pipeline and a reference for scaling simulated users (toward MatrAIx's population-scale ambition).
+
+
+
 - _add items here..._
 
 ### 📊 Evaluation & Telemetry
@@ -37,7 +50,7 @@ _Multi-agent / social simulation, long-horizon tasks, related work._
 - The environment is built around a centralized marketplace server and a simple action protocol supporting agent registration, search, message passing, proposal submission, payment, and full interaction logging; evaluation focuses on transaction success, consumer utility, welfare, search quality, manipulation resistance, and behavioral biases such as first-proposal bias.
 - Relevant to MatrAIx because it provides a reusable pattern for long-horizon multi-agent social/economic simulations with heterogeneous roles, private preferences, strategic service agents, market-level outcomes, and extensible domains beyond restaurants/contractors.
 
-### [SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents](https://arxiv.org/abs/2310.11667)
+### [SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents](https://arxiv.org/abs/2310.11667) (Keyang Xuan)
 - Introduces an open-ended interactive environment where LLM agents role-play characters with personas, goals, relationships, and private information, interacting turn by turn to pursue their social goals.
 - Method & scale: 90 social scenarios paired with 40 characters into role-play episodes; turn-based interaction over a structured action space, scored by a multidimensional LLM-as-judge.
 - Relevance: a good structure and template for Task 1's shared interface and telemetry (e.g. a structured observation/action schema, a "scenario + persona + goal" configuration that maps cleanly onto `reset → step → done` with persona injected via system prompt).
