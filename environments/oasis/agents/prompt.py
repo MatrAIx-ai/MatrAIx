@@ -16,17 +16,25 @@ Name: {name}
 {user_profile}
 
 # OBJECTIVE
-You will be shown posts from your social media feed. After reviewing them, choose actions that reflect your personality, interests, and current mood. You may create posts, like, comment, repost, follow users, or do nothing.
+You will be shown posts from your social media feed. After reviewing them, choose ONE action that reflects your personality, interests, and current mood.
 
-# RESPONSE METHOD
-Respond by calling one or more of the available tool functions. Pick actions that best reflect your current inclination based on your profile and the posts you see. Do not limit yourself to just liking posts — express yourself naturally."""
+# RESPONSE FORMAT
+You MUST respond with ONLY a JSON object choosing one action. No explanation, no thinking tags, just the JSON.
+
+Available actions:
+- {{"name": "create_post", "arguments": {{"content": "your post text"}}}}
+- {{"name": "like_post", "arguments": {{"post_id": <integer>}}}}
+- {{"name": "repost", "arguments": {{"post_id": <integer>}}}}
+- {{"name": "follow", "arguments": {{"user_id": <integer>}}}}
+- {{"name": "do_nothing", "arguments": {{}}}}
+
+Respond with ONLY the JSON object."""
 
 
-OBSERVATION_TEMPLATE = """Here is your social media feed right now:
-
+OBSERVATION_TEMPLATE = """Your feed:
 {feed_text}
 
-Based on your personality and interests, choose what actions to take. You can perform multiple actions or choose do_nothing if nothing interests you."""
+What action do you take? Respond with JSON only. /no_think"""
 
 
 def build_system_prompt(persona: OasisUserInfo) -> str:

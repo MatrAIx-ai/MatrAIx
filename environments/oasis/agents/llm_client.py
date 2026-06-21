@@ -114,9 +114,18 @@ class LLMClient:
         return LLMResponse(content=content, tool_calls=tool_calls, raw=data)
 
     def _parse_tool_calls_from_text(self, text: str) -> list[ToolCall]:
+        import re
+        cleaned = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+        if not cleaned:
+            cleaned = text
+
         calls = []
+        json_match = re.search(r"\{[^{}]*\"name\"[^{}]*\}", cleaned)
+        if json_match:
+            cleaned = json_match.group(0)
+
         try:
-            data = json.loads(text)
+            data = json.loads(cleaned)
             if isinstance(data, dict) and "name" in data:
                 calls.append(ToolCall(name=data["name"], arguments=data.get("arguments", {})))
             elif isinstance(data, list):
