@@ -1,0 +1,49 @@
+id: 00002728
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2728
+data:
+  user 1 personas: 'I am married to a man.
+
+    I love cats.
+
+    I am a woman.
+
+    I have five children.'
+  user 2 personas: 'My mom is my favorite person of all people.
+
+    I love watching grey s anatomy.
+
+    I have to live by a schedule in order to keep my mind right.
+
+    I am in high school apart of the school band.'
+  Best Generated Conversation: 'User 1: Hi! My name is Amy, how are you?
+
+    User 2: Hi Amy, I''m doing well, thank you for asking!
+
+    User 1: Nice to meet you! I''m a woman and I''m married to a man. We have five children together. I love cats!
+
+    User 2: That''s awesome! I''m still in high school, but I want to be a doctor when I grow up. My mom is my favorite person in the whole world. I love watching Grey''s Anatomy and I have to live by a
+    schedule in order to keep my mind right.
+
+    User 1: Wow, that''s great! I''m sure you''ll be a great doctor. I love Grey''s Anatomy too! What''s your favorite episode?
+
+    User 2: I think my favorite episode is the one where Cristina and Owen get married. It was so romantic!
+
+    User 1: That''s a great episode! I love how Cristina finally found her happily ever after.
+
+    User 2: Me too! I think it''s so important to find someone who you love and who loves you back.
+
+    User 1: I agree! I''m so lucky to have found my husband. He''s my best friend and I love him more than anything in the world.
+
+    User 2: That''s so sweet! I''m glad you''re so happy.
+
+    User 1: Thank you! I hope you''re happy too.
+
+    User 2: I am! I have a great family and I''m really excited for my future.
+
+    User 1: That''s great to hear! I''m happy for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

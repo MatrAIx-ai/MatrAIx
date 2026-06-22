@@ -1,0 +1,66 @@
+id: 00008772
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8772
+data:
+  user 1 personas: 'I do not know if i enjoy programming , or if its my only choice.
+
+    I had one step dad , and fortunately he ignored me.
+
+    My last name is spanish , but i tell people that its italian.
+
+    I wear cardigans because i hope it makes me look more cultured.'
+  user 2 personas: 'I wish i was taller so i could reach the cookie jar.
+
+    I lay awake at night so i can watch the stars.
+
+    I want a porsche.
+
+    I am often late for class.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hey, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch the stars at night.
+
+    User 1: That''s cool. I''ve never been very good at stargazing.
+
+    User 2: It takes a little practice, but it''s fun to learn the constellations.
+
+    User 1: Yeah, I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to relax and enjoy the outdoors.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool. I''m a programmer too.
+
+    User 2: Really? What kind of programming do you do?
+
+    User 1: I do mostly web development.
+
+    User 2: Nice. I''m more into mobile development.
+
+    User 1: That''s cool. I''ve always wanted to try mobile development.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I think I will.
+
+    User 2: Good. It''s a great way to learn a new skill.
+
+    User 1: Yeah, I''m always looking for ways to learn new things.
+
+    User 2: Me too. I think it''s important to keep challenging yourself.
+
+    User 1: I agree. I think it''s the best way to stay sharp.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

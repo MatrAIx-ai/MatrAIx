@@ -1,0 +1,64 @@
+id: 00006821
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6821
+data:
+  user 1 personas: 'I speak english and spanish fluently.
+
+    I am from germany.
+
+    I am mixed with puerto rican and chinese.
+
+    I like listening to blues music.
+
+    My favorite artist was prince.'
+  user 2 personas: 'I am a musician.
+
+    I like to write my own songs.
+
+    I have taken formal music lessons since i was 5.
+
+    I wish i could spend more time at home.
+
+    My best friend is in a band with me.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do?
+
+    User 2: I like to play music.
+
+    User 1: That''s cool! What kind of music do you play?
+
+    User 2: I play piano and guitar.
+
+    User 1: Nice! I play piano too.
+
+    User 2: Really? That''s awesome! What kind of music do you like to play?
+
+    User 1: I like to play classical music.
+
+    User 2: Me too! I''m learning to play Moonlight Sonata.
+
+    User 1: That''s a great piece! I''m learning to play Für Elise.
+
+    User 2: I love that piece! It''s so beautiful.
+
+    User 1: Yeah, it is. I''m also learning to play Chopin''s Nocturne Op. 9 No. 2.
+
+    User 2: That''s another great piece! I love the melody.
+
+    User 1: Me too! I''m really enjoying learning to play it.
+
+    User 2: I''m sure you''ll do a great job.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Maybe we can play together sometime.
+
+    User 1: That would be fun! I''d love to.
+
+    User 2: Great! I''ll give you my number.
+
+    User 1: Okay. Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

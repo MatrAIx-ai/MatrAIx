@@ -1,0 +1,62 @@
+id: '00001163'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1163
+data:
+  user 1 personas: 'My name is omar.
+
+    I have never been to the city.
+
+    I am the youngest of three brothers.
+
+    I play guitar in the local band.'
+  user 2 personas: 'I will work hard for whatever i want.
+
+    I often play the clown to get attention.
+
+    I want people to notice me.
+
+    I grew up as an orphan.
+
+    I care deeply for my friends and others close to me.'
+  Best Generated Conversation: 'User 1: Hi, I''m Omar! What''s your name?
+
+    User 2: I''m [name].
+
+    User 1: Nice to meet you [name]. What do you like to do for fun?
+
+    User 2: I love to go to the movies, play video games, and hang out with my friends.
+
+    User 1: Me too! I love to go to the movies, too. What''s your favorite movie of all time?
+
+    User 2: It''s hard to say, but I think I''d have to go with The Shawshank Redemption.
+
+    User 1: That''s a great movie! I love the story.
+
+    User 2: Me too! It''s so heartwarming and inspiring.
+
+    User 1: I know, right? It''s one of those movies that you can watch over and over again and still enjoy it.
+
+    User 2: I agree! It''s a classic.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to play video games. My favorite game is currently Elden Ring.
+
+    User 1: I''ve heard good things about that game. I''m not much of a gamer, but I know it''s a big hit.
+
+    User 2: It''s definitely a lot of fun. It''s challenging, but it''s also very rewarding.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go see a movie, or I might just hang out with my friends.
+
+    User 1: Nice! I might go to the movies too. I''m not sure what I want to see yet.
+
+    User 2: Well, if you decide on a movie, let me know. I might be interested in going with you.
+
+    User 1: Sure, I''ll let you know.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

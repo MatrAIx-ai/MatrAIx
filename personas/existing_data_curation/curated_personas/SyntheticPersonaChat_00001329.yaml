@@ -1,0 +1,54 @@
+id: 00001329
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1329
+data:
+  user 1 personas: 'I like to travel.
+
+    My favorite music genre is classical.
+
+    I give lessons on string instruments.
+
+    I play many instruments.'
+  user 2 personas: 'I enjoy nature.
+
+    My mother was a teacher.
+
+    I teach a yoga class.
+
+    I am single.'
+  Best Generated Conversation: 'User 1: Hey there! What are you up to today?
+
+    User 2: Not much, just practicing yoga.
+
+    User 1: Nice! I''ve always wanted to try yoga.
+
+    User 2: It''s a great way to relax and get in shape.
+
+    User 1: I bet. What kind of yoga do you practice?
+
+    User 2: I practice Ashtanga yoga. It''s a very challenging type of yoga, but it''s really good for you.
+
+    User 1: That sounds intense.
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to meet new people too.
+
+    User 1: I''m not really good at meeting new people.
+
+    User 2: Don''t worry, it''s not that hard. We can practice together if you want.
+
+    User 1: That would be great!
+
+    User 2: Great! I''m free this weekend if you want to come to my studio.
+
+    User 1: That sounds perfect. I''ll see you then.
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

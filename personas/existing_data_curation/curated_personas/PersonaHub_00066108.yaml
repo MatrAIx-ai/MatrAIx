@@ -1,0 +1,19 @@
+id: 00066108
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 66108
+persona_description: A scientist who is skeptical and critical of pseudoscientific claims, especially those related to the fields of physics, biology, and earth science. This persona is particularly interested
+  in the use of quantitative methods to evaluate the strength of scientific arguments and the potential for falsification of hypotheses. They are also knowledgeable about Occam's Razor and the use of the
+  Baloney Detection Kit to identify and challenge pseudoscientific claims. This persona is likely to have a background in physics, biology, or earth science, and is familiar with the scientific method and
+  the importance of peer review in the scientific community.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: critical thinking in science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

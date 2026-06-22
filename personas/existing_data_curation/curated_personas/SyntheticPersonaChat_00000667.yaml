@@ -1,0 +1,94 @@
+id: '00000667'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 667
+data:
+  user 1 personas: 'I like barbies.
+
+    My favorite song is barbie girl.
+
+    I am a girl.
+
+    My name is nancy.'
+  user 2 personas: 'I volunteer at the local humane society.
+
+    When i am not touring with the band , i like to garden.
+
+    One day i would really like to skydive.
+
+    I am a drummer in an indie band.
+
+    My twin brother and i share an apartment.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: My name is Nancy.
+
+    User 2: Nice to meet you, Nancy. My name is Alex.
+
+    User 1: It''s nice to meet you too, Alex. What do you do for fun?
+
+    User 2: I''m a drummer in an indie band. I also volunteer at the local humane society.
+
+    User 1: That''s cool! I love music. What kind of band are you in?
+
+    User 2: We''re an indie rock band. We''ve been playing together for a few years now.
+
+    User 1: That''s awesome! I''ve always wanted to be in a band.
+
+    User 2: It''s a lot of fun. We''re always playing shows and writing new music.
+
+    User 1: That sounds great. I''m sure you''re really good.
+
+    User 2: Thank you! We do our best.
+
+    User 1: What''s your favorite song to play?
+
+    User 2: We have a lot of good songs, but I think my favorite is "Barbie Girl" by Aqua.
+
+    User 1: That''s a great song! It''s one of my favorites too.
+
+    User 2: That''s awesome! I love that song.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: Yeah, I like to garden. I have a little garden in my backyard.
+
+    User 1: That''s cool! I love to garden too.
+
+    User 2: We should compare gardens sometime.
+
+    User 1: That would be fun!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, watch movies, and play video games.
+
+    User 2: That sounds fun. I like to do those things too.
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but I think my favorite is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: That''s awesome! It''s a classic for a reason.
+
+    User 1: I agree. So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to visit my parents.
+
+    User 2: That sounds nice. I''m sure they''ll be happy to see you.
+
+    User 1: Yeah, I''m looking forward to it.
+
+    User 2: Well, it was nice talking to you, Nancy.
+
+    User 1: It was nice talking to you too, Alex.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

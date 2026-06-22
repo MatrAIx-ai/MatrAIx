@@ -1,0 +1,94 @@
+id: 00007139
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7139
+data:
+  user 1 personas: 'I have 2 dogs , both golden retrievers.
+
+    I am on a keto diet.
+
+    I work in a circus as a juggler.
+
+    My father and grandfather also worked in the circus.
+
+    I like going to the moves.'
+  user 2 personas: 'I am a graduate student.
+
+    I am in between classes.
+
+    Although i am studying to be a doctor , animals like me.
+
+    I volunteer with dogs.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hello, my name is [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a graduate student studying to be a doctor.
+
+    User 1: That''s interesting. I''m a juggler in a circus.
+
+    User 2: Really? That''s cool! I''ve always wanted to learn how to juggle.
+
+    User 1: It''s not too hard. You just have to practice.
+
+    User 2: Maybe I''ll give it a try.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to go to the movies, watch sports, and play video games.
+
+    User 2: I like to go to the movies too. What''s your favorite movie?
+
+    User 1: I don''t know if I have a favorite movie, but I really like the Lord of the Rings series.
+
+    User 2: I love those movies too! They''re so good.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what do you do with your dogs?
+
+    User 1: I take them for walks, play fetch with them, and just cuddle with them.
+
+    User 2: That sounds like fun.
+
+    User 1: It is. I love my dogs.
+
+    User 2: I can tell.
+
+    User 1: So, what are you doing in between classes?
+
+    User 2: I''m doing some research for my thesis.
+
+    User 1: Oh, that sounds interesting. What''s your thesis about?
+
+    User 2: It''s about the effects of exercise on the brain.
+
+    User 1: That sounds like a really interesting topic.
+
+    User 2: Thanks. I think it''s going to be a lot of fun.
+
+    User 1: I''m sure it will.
+
+    User 2: So, what do you think of cats?
+
+    User 1: I like cats. They''re pretty cute.
+
+    User 2: Yeah, they are. I have two cats.
+
+    User 1: Oh, that''s cool. I''ve always wanted a cat, but I''m allergic.
+
+    User 2: That''s too bad. Cats are great pets.
+
+    User 1: Yeah, they are. I''m sure I''ll get one someday.
+
+    User 2: I hope so.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00002951
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2951
+data:
+  user 1 personas: 'Some jokes go too far.
+
+    I like simple jokes.
+
+    I prefer the simpler times.
+
+    My friend likes cartoons like south park.'
+  user 2 personas: 'I love to recycle.
+
+    I drive a large , blue van.
+
+    I have curly , red hair.
+
+    I am a hippie.
+
+    I have two tattoos.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to recycle and drive my large, blue van.
+
+    User 1: Recycling is a great way to help the environment!
+
+    User 2: I know! I''m a huge environmentalist.
+
+    User 1: That''s cool! I''m not quite as big of an environmentalist, but I do try to do my part.
+
+    User 2: That''s all that matters.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to watch cartoons, especially South Park.
+
+    User 1: I love South Park! What''s your favorite episode?
+
+    User 2: I don''t know if I can pick just one, but I love the episode where they go to Canada.
+
+    User 1: That''s a good one! I also love the episode where they make fun of hippies.
+
+    User 2: I''m not a huge fan of hippies, so that''s one of my favorites too.
+
+    User 1: What do you think about the new season of South Park?
+
+    User 2: I think it''s great! They''re always so funny.
+
+    User 1: I agree! I''ve been watching it since the beginning, and I''ve never been disappointed.
+
+    User 2: Me neither! It''s one of my favorite shows.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

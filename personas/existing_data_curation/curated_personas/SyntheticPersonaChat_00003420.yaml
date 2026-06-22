@@ -1,0 +1,66 @@
+id: '00003420'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3420
+data:
+  user 1 personas: 'I like to mountain bike.
+
+    I like to drink tea.
+
+    I love people with a sense of humor.
+
+    I like to draw other people.'
+  user 2 personas: 'I help around with bookkeeping and tours.
+
+    I decided to become vegan a year ago.
+
+    I am vegan.
+
+    Sometimes i volunteer at an urban farm.
+
+    I work at the grocery store.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What is your favorite thing to do for fun?
+
+    User 2: I love to spend time outdoors, hiking and camping are some of my favorite things to do.
+
+    User 1: Me too! I love the fresh air and exercise.
+
+    User 2: I also enjoy volunteering at my local urban farm, it''s a great way to give back to the community.
+
+    User 1: That sounds like a lot of fun! I''ve never been to an urban farm before.
+
+    User 2: You should check it out sometime, it''s a really cool experience.
+
+    User 1: I will! What''s your favorite thing about being vegan?
+
+    User 2: I love that it''s a way to reduce my environmental impact.
+
+    User 1: That''s a great reason! I''m trying to be more environmentally conscious myself.
+
+    User 2: That''s awesome! There are so many easy ways to make a difference.
+
+    User 1: I know, right? I''m starting by using less plastic and recycling more.
+
+    User 2: That''s a great start!
+
+    User 1: Thank you! I''m going to look into volunteering at an urban farm too.
+
+    User 2: That''s great! I''m sure you''ll love it.
+
+    User 1: I hope so!
+
+    User 2: Me too!
+
+    User 1: Well, it was nice meeting you!
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

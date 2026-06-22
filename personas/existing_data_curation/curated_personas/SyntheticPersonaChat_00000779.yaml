@@ -1,0 +1,60 @@
+id: 00000779
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 779
+data:
+  user 1 personas: 'I love dancing.
+
+    I love country music.
+
+    I am a vegan.
+
+    I love animals.'
+  user 2 personas: 'I am a poet.
+
+    My friends and i enjoy golfing on sunny days.
+
+    I am the head of the gun club.
+
+    I have a beta fish.
+
+    I donate old clothes to the homeless.'
+  Best Generated Conversation: 'User 1: Hey! I’m [user 1 name].
+
+    User 2: Hi there! I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write poetry, go golfing, and donate old clothes to the homeless.
+
+    User 1: That’s cool! I like to dance, listen to country music, and play with my pet fish.
+
+    User 2: Oh, I love country music! What are some of your favorite songs?
+
+    User 1: I love "God Bless the USA" by Lee Greenwood, "My Heart Will Go On" by Celine Dion, and "Wagon Wheel" by Old Crow Medicine Show.
+
+    User 2: Those are all great songs! I also love "Born This Way" by Lady Gaga, "I Will Survive" by Gloria Gaynor, and "What''s Going On" by Marvin Gaye.
+
+    User 1: Those are great songs too!
+
+    User 2: So, what kind of dancing do you like to do?
+
+    User 1: I like to do all kinds of dancing, but I mostly do ballet, tap, and jazz.
+
+    User 2: That’s awesome! I’ve always wanted to learn how to dance.
+
+    User 1: You should! It’s a lot of fun.
+
+    User 2: Maybe I will!
+
+    User 1: I’m glad we met!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

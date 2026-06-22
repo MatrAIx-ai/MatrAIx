@@ -1,0 +1,78 @@
+id: 00001832
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1832
+data:
+  user 1 personas: 'I am ten years old.
+
+    I have a lot of friends.
+
+    I love dogs and cats.
+
+    My dad works at the mill and my mom is a teacher.
+
+    I live in a house.'
+  user 2 personas: 'I am pursuing my law degree.
+
+    I am the youngest of 3.
+
+    I love reading mysteries in my free time.
+
+    I love playing tennis.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thank you for asking. How are you today?
+
+    User 1: I''m doing great! What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to read mysteries, play tennis, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to read mysteries too. What are some of your favorite mystery books?
+
+    User 2: I like the Agatha Christie and Sherlock Holmes series. What are some of your favorites?
+
+    User 1: I love the Harry Bosch series by Michael Connelly. I also like the Alex Cross series by James Patterson.
+
+    User 2: I''ve heard good things about those series. I''ll have to check them out.
+
+    User 1: You should! They''re great. So, what do you do for work?
+
+    User 2: I''m a law student at the University of California, Berkeley.
+
+    User 1: Oh, that''s cool! I''m a student at [school name].
+
+    User 2: What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: That''s a great field. I''m sure you''ll do well.
+
+    User 1: Thank you! I hope so.
+
+    User 2: So, what do you want to do after you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going into software engineering.
+
+    User 2: That''s a great option. There are a lot of opportunities in that field.
+
+    User 1: I know. It''s exciting.
+
+    User 2: So, what do you want to do today?
+
+    User 1: I''m not sure. I was thinking about going to the park.
+
+    User 2: That sounds like a great idea. I love the park.
+
+    User 1: Me too. Do you want to come with me?
+
+    User 2: Sure, I''d love to.
+
+    User 1: Great! Let''s go.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

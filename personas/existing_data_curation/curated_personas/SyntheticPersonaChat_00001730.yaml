@@ -1,0 +1,92 @@
+id: '00001730'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1730
+data:
+  user 1 personas: 'I visit comic con.
+
+    I draw comics.
+
+    I love anime.
+
+    I read a lot.'
+  user 2 personas: 'My wife just left me.
+
+    My favorite city is new york.
+
+    I am a lawyer.
+
+    I love to run.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to run, I''m a lawyer, and my favorite food is steak.
+
+    User 1: Oh, I like to run too! Have you been to New York City?
+
+    User 2: I have, it''s my favorite city. I live there.
+
+    User 1: Oh, that''s cool. What do you like about it?
+
+    User 2: I like the food, the people, and the culture.
+
+    User 1: I hear the food is great. What''s your favorite thing to eat there?
+
+    User 2: I love the steak!
+
+    User 1: Me too! I''m a big fan of steak.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to draw comics, read, and watch anime.
+
+    User 2: Oh, I love anime too! What''s your favorite anime?
+
+    User 1: My favorite anime is "Fullmetal Alchemist: Brotherhood".
+
+    User 2: I love that anime too! It''s one of my favorites.
+
+    User 1: Do you like to visit comic con?
+
+    User 2: I do! I love to see all the different comics and cosplays.
+
+    User 1: Me too! It''s so much fun to see all the creativity.
+
+    User 2: I know, right? It''s always a great time.
+
+    User 1: So, what do you like to do in New York City?
+
+    User 2: I love to go to the theater, visit museums, and eat at the best restaurants.
+
+    User 1: Oh, that sounds great. I love to go to the theater too.
+
+    User 2: Me too! It''s so much fun to see a good show.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could do something together?
+
+    User 2: That would be fun! What did you have in mind?
+
+    User 1: I don''t know, what do you like to do?
+
+    User 2: I like to go to the movies, go out to eat, or go to the park.
+
+    User 1: I like to go to the movies too. We could go see that new movie about the dinosaurs.
+
+    User 2: That sounds like fun. Let''s do that.
+
+    User 1: Great! I''ll pick you up at seven.
+
+    User 2: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

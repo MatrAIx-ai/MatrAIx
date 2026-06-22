@@ -1,0 +1,60 @@
+id: 00000834
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 834
+data:
+  user 1 personas: 'I love to shop.
+
+    I have a lot of friends.
+
+    I drive a bmw.
+
+    I am single.'
+  user 2 personas: 'I m originally from london , england.
+
+    I love going to comedy clubs.
+
+    I am a model building enthusiast.
+
+    I recently lost both my parents to an automobile accident.
+
+    I like camping and the outdoors in general.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name].
+
+    User 2: Nice to meet you! I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I''m originally from London, England.
+
+    User 1: Oh, cool! I''ve always wanted to visit England.
+
+    User 2: It''s a beautiful country. You should definitely go sometime.
+
+    User 1: I will! What do you like to do for fun?
+
+    User 2: I love going to comedy clubs, model building, camping, and the outdoors in general.
+
+    User 1: That sounds like fun! I love to shop and go out with friends.
+
+    User 2: I love shopping too! I''m single, so I like to go out and have fun by myself sometimes.
+
+    User 1: That''s great! I''m single too.
+
+    User 2: Oh, well maybe we should go out sometime and have some fun.
+
+    User 1: I''d love that! What are you doing this weekend?
+
+    User 2: I''m not sure yet. What do you want to do?
+
+    User 1: We could go shopping or go to a comedy club.
+
+    User 2: I''d love to go to a comedy club! I haven''t been to one in a while.
+
+    User 1: Great! I''ll text you tomorrow and we can make plans.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

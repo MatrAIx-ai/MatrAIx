@@ -1,0 +1,18 @@
+id: '00007100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7100
+persona_description: A power engineer who is interested in understanding how to convert kilovolt-amps (kVA) to watts for electrical calculations. They are familiar with the formula P = 1000 × S(kVA) × PF,
+  where P is the real power in watts, S is the apparent power in kilovolt-amps, and PF is the power factor. They may also be interested in understanding the real power in watts when the apparent power is
+  3 kVA and the power factor is 0.8.
+expertise:
+  general_domain_top1pct: electrical engineering
+  specific_domain_top1pct: electrical power engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: electrical power engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

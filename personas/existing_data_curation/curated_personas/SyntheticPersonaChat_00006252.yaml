@@ -1,0 +1,80 @@
+id: '00006252'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6252
+data:
+  user 1 personas: 'I like painting , i can cook well.
+
+    I also like ice cream.
+
+    I like pasta.
+
+    I am a student.'
+  user 2 personas: 'I like to go fishing.
+
+    I m learning to play the guitar.
+
+    My favorite music is jimi hendrix.
+
+    I m a college drop out.
+
+    I work at the deli counter.'
+  Best Generated Conversation: 'User 1: Hi, I''m X.
+
+    User 2: Hi, I''m Y.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing and play guitar.
+
+    User 1: I like to paint and cook.
+
+    User 2: Oh, that''s cool. Do you have any favorite paintings?
+
+    User 1: I like the work of Claude Monet.
+
+    User 2: I''ve never heard of him. What''s his work like?
+
+    User 1: He''s a French Impressionist painter. His paintings are known for their use of light and color.
+
+    User 2: That sounds really interesting. I''ll have to check him out.
+
+    User 1: You should. I think you''d like his work.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome.
+
+    User 2: What''s your favorite kind of food to cook?
+
+    User 1: I like to make pasta dishes.
+
+    User 2: Oh, that''s one of my favorites too. What''s your favorite pasta dish to make?
+
+    User 1: I like to make a pasta with pesto sauce.
+
+    User 2: That sounds delicious. I''ll have to try that sometime.
+
+    User 1: You should. It''s really easy to make.
+
+    User 2: Thanks for the recipe.
+
+    User 1: You''re welcome.
+
+    User 2: So, what are you studying in college?
+
+    User 1: I''m studying art history.
+
+    User 2: Oh, that''s cool. I''ve always been interested in art history.
+
+    User 1: It''s a really interesting field. I''m learning a lot about different cultures and art movements.
+
+    User 2: That sounds really cool. I''m glad you''re enjoying it.
+
+    User 1: Me too. It''s the perfect major for me.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

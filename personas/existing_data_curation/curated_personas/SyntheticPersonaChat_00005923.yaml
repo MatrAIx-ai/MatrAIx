@@ -1,0 +1,66 @@
+id: 00005923
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5923
+data:
+  user 1 personas: 'My favorite drink is cuba libre.
+
+    I had a gig at local theater last night.
+
+    I did a few small roles in tv series.
+
+    I work as a stand up comedian.'
+  user 2 personas: 'I can play the violin.
+
+    I love chocolate.
+
+    I can t sing very well.
+
+    I want to have two kids.
+
+    I am from georgia.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m a stand-up comedian. I had a gig at the local theater last night.
+
+    User 2: Oh, cool! I''m [user 2''s name]. I can play the violin.
+
+    User 1: Wow, that''s really impressive! I''ve always wanted to learn how to play an instrument.
+
+    User 2: It''s not that hard. You just have to practice a lot.
+
+    User 1: I''m sure I would be terrible at it.
+
+    User 2: I''m sure you''d be great at it! You should give it a try.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to comedy shows, watch stand-up comedy, and read books.
+
+    User 2: I love reading books too! I''m reading a book about the history of Georgia right now.
+
+    User 1: Oh, that sounds interesting! I''m from Georgia.
+
+    User 2: Really? Me too! Where in Georgia are you from?
+
+    User 1: I''m from Savannah.
+
+    User 2: Oh, I''ve been to Savannah a few times. It''s a beautiful city.
+
+    User 1: It is. I love it there.
+
+    User 2: So, do you have any kids?
+
+    User 1: No, not yet. I want to have two kids someday.
+
+    User 2: Me too! I think two is the perfect number.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

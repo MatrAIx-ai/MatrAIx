@@ -1,0 +1,18 @@
+id: 00046873
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 46873
+persona_description: A meteorologist and climate scientist who specializes in studying the interaction between wildfires and the atmosphere, with a focus on developing mobile atmospheric profiling systems
+  and analyzing data collected from field trips to wildfires. He is currently conducting research with his students to predict the spread and intensity of wildfires, using tools such as lidar and sodar,
+  and is working with NASA to collect air chemistry data.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: atmospheric science
+  general_domain_top01pct: None
+  specific_domain_top01pct: wildfire-atmosphere interactions
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

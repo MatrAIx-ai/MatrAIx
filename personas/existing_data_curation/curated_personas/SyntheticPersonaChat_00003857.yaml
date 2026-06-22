@@ -1,0 +1,74 @@
+id: 00003857
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3857
+data:
+  user 1 personas: 'My mother is from russia.
+
+    She died when i was 18.
+
+    I opened up a restaurant three years later.
+
+    She taught me to cook.
+
+    I have a dog.'
+  user 2 personas: 'I have a missing pinky toe.
+
+    I enjoy swimming.
+
+    I have 4 dogs.
+
+    I love cooking.
+
+    I do not like green eggs and ham.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to cook and swim.
+
+    User 1: That''s great! I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m Italian, so I grew up eating a lot of pasta.
+
+    User 1: That sounds delicious! I love Italian food. What''s your favorite Italian dish?
+
+    User 2: I love lasagna. My mom used to make it all the time when I was a kid.
+
+    User 1: Lasagna is one of my favorite dishes too! I love the combination of the noodles, sauce, and cheese.
+
+    User 2: Me too! I love how it''s so hearty and comforting.
+
+    User 1: I know, right? It''s the perfect dish for a cold winter night.
+
+    User 2: Totally! I''m so glad we met.
+
+    User 1: Me too! It''s always nice to meet someone who loves to cook.
+
+    User 2: I know, right? It''s hard to find people who are as passionate about food as I am.
+
+    User 1: I know, right? It''s one of my favorite things to talk about.
+
+    User 2: Me too! I love hearing about new recipes and trying new dishes.
+
+    User 1: I know, right? It''s so much fun to explore the culinary world.
+
+    User 2: Totally! I wish I could cook more often, but I don''t have a lot of time.
+
+    User 1: Me too! I wish I could cook every day.
+
+    User 2: Maybe we can cook together sometime.
+
+    User 1: That would be so much fun! I''d love to learn some new recipes from you.
+
+    User 2: Great! I''ll bring the wine.
+
+    User 1: I''ll bring the cheese.
+
+    User 2: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,94 @@
+id: 00002945
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2945
+data:
+  user 1 personas: 'My mother was a nurse.
+
+    I am a violinist.
+
+    I recently discovered a new love for indian food.
+
+    I am gong to adopt a dog very soon.
+
+    I have played since i was 4 years old.'
+  user 2 personas: 'I am married with kids.
+
+    I hate running.
+
+    My favorite color is orange.
+
+    I enjoy watching baseball.
+
+    I have 2 cats and a dog.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for fun?
+
+
+    User 2: I enjoy watching baseball and spending time with my family.
+
+
+    User 1: That sounds fun! I enjoy watching baseball too. What''s your favorite team?
+
+
+    User 2: I''m a big fan of the New York Mets.
+
+
+    User 1: Oh, nice! I''m a fan of the Los Angeles Dodgers.
+
+
+    User 2: That''s a good team too! I''m sure we''ll have a lot to talk about.
+
+
+    User 1: I''m sure we will! What else do you like to do?
+
+
+    User 2: I love to go on walks with my dog. I have two cats and a dog.
+
+
+    User 1: Oh, that sounds fun! I have a dog too. He''s a golden retriever.
+
+
+    User 2: Oh, nice! I love golden retrievers. They''re so friendly.
+
+
+    User 1: They are! He''s the best dog I''ve ever had.
+
+
+    User 2: I''m glad to hear that! What''s his name?
+
+
+    User 1: His name is Buddy.
+
+
+    User 2: That''s a great name!
+
+
+    User 1: Thanks! I like it too.
+
+
+    User 2: What else do you like to do?
+
+
+    User 1: I enjoy reading and playing video games.
+
+
+    User 2: Oh, nice! I love reading too. What kind of books do you like to read?
+
+
+    User 1: I like to read all kinds of books, but I''m really into historical fiction right now.
+
+
+    User 2: Oh, that sounds interesting. I''ve never read much historical fiction, but I might have to check it out.
+
+
+    User 1: You should! It''s really good.
+
+
+    User 2: I will! What''s your favorite historical fiction book?
+
+
+    User 1: My favorite historical fiction book is {{book'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

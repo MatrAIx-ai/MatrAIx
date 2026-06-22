@@ -1,0 +1,80 @@
+id: 00003509
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3509
+data:
+  user 1 personas: 'I work as an accountant.
+
+    My favorite musical is hamilton.
+
+    I like to play tennis.
+
+    My favorite color is red.
+
+    My favorite food is a burger.'
+  user 2 personas: 'I try to find easy ways to make money.
+
+    I wish i could play the stock market well.
+
+    I love new technology.
+
+    I like to create websites.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Nice! I''m an accountant.
+
+    User 2: That''s a tough job.
+
+    User 1: Yeah, it can be. But I like it.
+
+    User 2: What''s your favorite thing about it?
+
+    User 1: I like the problem-solving aspect of it.
+
+    User 2: I can see why. It''s a lot like software engineering in that way.
+
+    User 1: Yeah, it is.
+
+    User 2: What''s your favorite musical?
+
+    User 1: Hamilton.
+
+    User 2: Oh, that''s a good one. I''ve seen it twice.
+
+    User 1: Me too! It''s so good.
+
+    User 2: What do you like about it?
+
+    User 1: I love the music, the story, and the characters.
+
+    User 2: Yeah, it''s all really good.
+
+    User 1: I''m glad you like it.
+
+    User 2: Me too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and read.
+
+    User 1: Me too! I love video games.
+
+    User 2: What kind of games do you like to play?
+
+    User 1: I like all kinds of games, but I especially like RPGs.
+
+    User 2: Me too! I love RPGs. What''s your favorite RPG?
+
+    User 1: My favorite RPG is The Witcher 3.
+
+    User 2: Oh, that''s a good one. I''ve played it a few times.
+
+    User 1: I''ve played it a few times too. It''s so good.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

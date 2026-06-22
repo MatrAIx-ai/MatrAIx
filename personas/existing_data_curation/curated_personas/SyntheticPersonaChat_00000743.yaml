@@ -1,0 +1,85 @@
+id: '00000743'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 743
+data:
+  user 1 personas: 'I like to surf.
+
+    My mother is a school teacher.
+
+    I worked as a clown in the circus.
+
+    I listen to country music.
+
+    I am a reality tv star.'
+  user 2 personas: 'Pizza is my favorite.
+
+    I try to watch what i eat.
+
+    I enjoy eating italian food.
+
+    I am east asian.
+
+    My name is tom.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, my name is Tom.
+
+    User 1: Nice to meet you, Tom. What do you do for fun?
+
+    User 2: I like to surf, play video games, and eat pizza.
+
+    User 1: That''s cool. I love to surf too! I''m also a fan of Italian food.
+
+    User 2: Oh, cool! We should go surfing sometime.
+
+    User 1: That sounds fun! I''m free this weekend.
+
+    User 2: Me too! We can meet at the beach and go surfing.
+
+    User 1: Sounds good! I''ll see you there.
+
+    User 2: See you!
+
+
+    (On the weekend)
+
+
+    User 1: Hey, Tom!
+
+    User 2: Hi, [user 1 name]!
+
+    User 1: I''m here at the beach. Where are you?
+
+    User 2: I''m just coming down now. I''ll be there in a minute.
+
+    User 1: Okay, I''ll wait for you.
+
+    (Tom arrives)
+
+
+    User 2: Hey, I made it!
+
+    User 1: Great! Let''s go surfing!
+
+    (They go surfing and have a lot of fun)
+
+
+    (After surfing)
+
+
+    User 1: That was so much fun!
+
+    User 2: I know, right? I''m so glad we decided to go.
+
+    User 1: Me too. We should do it again sometime.
+
+    User 2: Definitely! We can make it a regular thing.
+
+    User 1: Sounds good! I''m looking forward to it.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

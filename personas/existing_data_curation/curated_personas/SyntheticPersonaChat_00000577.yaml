@@ -1,0 +1,72 @@
+id: '00000577'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 577
+data:
+  user 1 personas: 'I am a painter.
+
+    I won a lottery 6 years ago but nobody knows.
+
+    I paint organic scenes with pretty trees.
+
+    My wife hates me , she thinks i am lazy and poor.'
+  user 2 personas: 'I graduated top of my class.
+
+    I have one little girl.
+
+    My mother was a concert pianist.
+
+    My wife is a college professor.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I graduated top of my class and I''m a college professor.
+
+    User 1: That''s great! What do you teach?
+
+    User 2: I teach business and economics.
+
+    User 1: Interesting. I''ve always been interested in business.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a painter.
+
+    User 2: Oh, that''s cool! Do you paint pictures of landscapes or people?
+
+    User 1: I paint organic scenes with pretty trees.
+
+    User 2: That sounds beautiful. Do you sell your paintings?
+
+    User 1: Yes, I do. I sell them online and at art shows.
+
+    User 2: That''s great! I''m sure you make a lot of money.
+
+    User 1: I do, but my wife hates me because she thinks I''m lazy and poor.
+
+    User 2: Why does she think that?
+
+    User 1: Because she doesn''t know that I won the lottery.
+
+    User 2: Oh! That''s a good reason to be mad.
+
+    User 1: Yeah, I know. I''m trying to figure out how to tell her.
+
+    User 2: Maybe you should just show her your bank account.
+
+    User 1: I''m not sure if that''s a good idea. She might get mad at me for not telling her sooner.
+
+    User 2: Maybe you could just tell her that you were trying to surprise her.
+
+    User 1: That''s a good idea. I''ll do that.
+
+    User 2: I''m sure she''ll be happy when she finds out.
+
+    User 1: I hope so.
+
+    User 2: Well, I should probably go. It was nice talking to you.
+
+    User 1: You too. It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

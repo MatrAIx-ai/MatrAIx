@@ -1,0 +1,66 @@
+id: 00005905
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5905
+data:
+  user 1 personas: 'My favorite activity is fishing.
+
+    My favorite thing to do is float the river.
+
+    My dad was a cop until he was killed.
+
+    I can t go a single day without eating ice cream.
+
+    I once ran the mile in under 4 minutes.'
+  user 2 personas: 'I am a roofer.
+
+    I always have a beer after work.
+
+    My favorite food is steak cooked well done.
+
+    I drive a lifted chevy truck.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: That sounds like hard work.
+
+    User 2: It is, but it''s rewarding.
+
+    User 1: I bet. What''s your favorite part about it?
+
+    User 2: The satisfaction of seeing a job well done.
+
+    User 1: I can understand that. What''s your least favorite part?
+
+    User 2: The weather. It''s tough working outside in the hot sun or the cold rain.
+
+    User 1: That''s for sure. What do you do for fun?
+
+    User 2: I like to go fishing, float the river, and go to concerts.
+
+    User 1: I love fishing too! What''s your favorite fish to catch?
+
+    User 2: I like to catch bass.
+
+    User 1: Me too! They''re such a fun fish to catch.
+
+    User 2: Yeah, they are. What''s your favorite way to cook them?
+
+    User 1: I like to fry them.
+
+    User 2: Me too! They''re so good fried.
+
+    User 1: So, what''s your favorite concert you''ve ever been to?
+
+    User 2: I saw the Rolling Stones in concert a few years ago. It was amazing.
+
+    User 1: I''ve always wanted to see them in concert. They''re one of my favorite bands.
+
+    User 2: They''re amazing live. You should definitely see them if you get the chance.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

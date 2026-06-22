@@ -1,0 +1,92 @@
+id: 00000781
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 781
+data:
+  user 1 personas: 'I love fishing.
+
+    My father died when i was 2.
+
+    I hate to lose.
+
+    My favorite season is spring.
+
+    I have blue eyes.'
+  user 2 personas: 'I tell bad jokes on purpose.
+
+    I wish i was a tiger.
+
+    My mom and dad are both red headed.
+
+    I am six feet tall.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Ryan.
+
+    User 1: Nice to meet you, Ryan. My name is [user 1 name].
+
+    User 2: Nice to meet you too, [user 1 name]. What do you like to do for fun?
+
+    User 1: I like to fish, play video games, and watch sports. What about you?
+
+    User 2: I like to tell bad jokes on purpose, watch TV, and play video games.
+
+    User 1: I love bad jokes! What''s your favorite one?
+
+    User 2: What do you call a cow with no legs?
+
+    User 1: I don''t know.
+
+    User 2: Ground beef!
+
+    User 1: That''s a good one!
+
+    User 2: Thanks! I love making people laugh.
+
+    User 1: Me too.
+
+    User 2: So, what''s your favorite video game?
+
+    User 1: I love Zelda, but I also like Mario, Pokemon, and Smash Bros.
+
+    User 2: I love Zelda too! I''ve been playing Breath of the Wild a lot lately.
+
+    User 1: I haven''t played that one yet, but I''ve heard great things about it.
+
+    User 2: It''s a lot of fun! You should definitely check it out.
+
+    User 1: I will.
+
+    User 2: So, what do you like to watch on TV?
+
+    User 1: I like to watch a lot of different things, but I really like sitcoms and reality TV.
+
+    User 2: I love sitcoms too! What are your favorites?
+
+    User 1: I love The Office, Parks and Recreation, and Friends.
+
+    User 2: I love all of those shows too!
+
+    User 1: They''re so funny!
+
+    User 2: I know, right?
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''ve always wanted to learn how to code.
+
+    User 2: It''s not that hard! You should give it a try.
+
+    User 1: Maybe I will.
+
+    User 2: You should!
+
+    User 1: I''m glad we met, Ryan.
+
+    User 2: Me too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

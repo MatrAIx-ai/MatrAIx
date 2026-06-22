@@ -1,0 +1,84 @@
+id: 00001129
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1129
+data:
+  user 1 personas: 'I run marathons.
+
+    I despise sweet potatoes.
+
+    I have three great danes.
+
+    I am a weightlifter.
+
+    I love the all american rejects.'
+  user 2 personas: 'I like to come up with new hairstyles.
+
+    I like to do my nails.
+
+    I like to play volleyball.
+
+    I like to pickle eggs.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Nice to meet you, Sarah.
+
+    User 2: Nice to meet you too, [user 1''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to do my nails, come up with new hairstyles, and play volleyball.
+
+    User 1: Oh, that''s cool! I like to run marathons, weightlifter, and I love the all american rejects.
+
+    User 2: I''ve never heard of the all american rejects.
+
+    User 1: They''re a rock band.
+
+    User 2: Oh, I''ve heard of them.
+
+    User 1: What do you like about doing your nails?
+
+    User 2: I like to experiment with different colors and designs.
+
+    User 1: That''s cool. I''m not very good at doing my nails.
+
+    User 2: Neither am I, but I still enjoy it.
+
+    User 1: So, what kind of volleyball do you play?
+
+    User 2: I play beach volleyball.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try that.
+
+    User 2: It''s a lot of fun.
+
+    User 1: I bet it is.
+
+    User 2: It is.
+
+    User 1: Do you play on a team?
+
+    User 2: No, I just play with my friends.
+
+    User 1: Oh, that''s cool.
+
+    User 2: Yeah, it is.
+
+    User 1: Well, it was nice talking to you, Sarah.
+
+    User 2: You too, [user 1''s name].
+
+    User 1: Maybe we can play volleyball sometime.
+
+    User 2: Yeah, that would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

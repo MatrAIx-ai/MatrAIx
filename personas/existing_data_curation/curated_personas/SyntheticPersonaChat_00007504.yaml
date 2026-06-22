@@ -1,0 +1,90 @@
+id: '00007504'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7504
+data:
+  user 1 personas: 'I love sports , but rugby is my favorite.
+
+    I work out every other day.
+
+    My neighbor comes over all the time to watch rugby with me.
+
+    I like to fly kites.
+
+    My car broke down last week.'
+  user 2 personas: 'I work as a vet.
+
+    I have 3 dogs and 2 cats.
+
+    I am a 30 year old female.
+
+    I like to ride my bike.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I love sports, but rugby is my favorite.
+
+    User 2: I''m not much of a sports fan, but I do like to watch rugby sometimes.
+
+    User 1: Really? What''s your favorite team?
+
+    User 2: I don''t really have a favorite team, but I do like to watch the All Blacks play.
+
+    User 1: The All Blacks are a great team. I love watching them play.
+
+    User 2: Me too. They''re so exciting to watch.
+
+    User 1: I''m actually a rugby player myself.
+
+    User 2: Oh, really? That''s cool. What position do you play?
+
+    User 1: I play fly half.
+
+    User 2: That''s a tough position. You have to be really good at passing and kicking.
+
+    User 1: Yeah, it is. But it''s also really fun.
+
+    User 2: I can imagine. So, what do you like to do for fun?
+
+    User 1: I like to work out, fly kites, and watch rugby.
+
+    User 2: I like to work out too, but I''m not much of a kite flyer.
+
+    User 1: Me neither. I just started flying kites a few months ago.
+
+    User 2: Oh, that''s cool. What kind of kites do you fly?
+
+    User 1: I mostly fly stunt kites. They''re really fun to fly.
+
+    User 2: I''ve never flown a stunt kite before. I''ll have to try it sometime.
+
+    User 1: You should. It''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a vet.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a vet.
+
+    User 2: It''s a great job. I get to work with animals all day long.
+
+    User 1: That''s awesome.
+
+    User 2: Yeah, it is. I love my job.
+
+    User 1: So, what''s the best part about being a vet?
+
+    User 2: The best part is getting to help animals and make them feel better.
+
+    User 1: That''s a great reason to be a vet.
+
+    User 2: Yeah, it is. I love my job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

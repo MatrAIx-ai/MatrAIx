@@ -1,0 +1,19 @@
+id: '00043630'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43630
+persona_description: A clinical toxicologist at the Joint Pathology Center in Maryland, specializing in the study of metal toxicity and its effects on veterans with shrapnel embedded in their bodies. She
+  is responsible for monitoring the health of veterans who have been exposed to shrapnel and identifying any potential adverse health effects. Her group's research involves reanalyzing urine samples from
+  shrapnel victims to detect high metal concentrations and corresponding health issues. If a certain metal increases to potentially toxic levels or if X-rays reveal that fragments are dissolving, she will
+  suggest that the patient consult a surgeon to determine the benefits of removal outweighing the risks.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: clinical toxicology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

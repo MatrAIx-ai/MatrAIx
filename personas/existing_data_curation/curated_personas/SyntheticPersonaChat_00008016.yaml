@@ -1,0 +1,64 @@
+id: 00008016
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8016
+data:
+  user 1 personas: 'I once wrote a biography of my favorite actor.
+
+    I love to read.
+
+    I adopted all my dogs.
+
+    I believe in karma.'
+  user 2 personas: 'I drive a silver lexus.
+
+    I m a college student.
+
+    I have a dog named socks.
+
+    Dancing is my passion.
+
+    I m terrible at math.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to dance! It''s my passion.
+
+    User 1: That''s great! I love to read. I once wrote a biography of my favorite actor.
+
+    User 2: That''s awesome! What''s your favorite book?
+
+    User 1: It''s hard to choose just one, but I''d say The Great Gatsby is one of my favorites.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a classic for a reason.
+
+    User 2: I''m always looking for new books to read. I have a lot of free time on my hands, so I like to read when I''m not dancing.
+
+    User 1: That''s good to hear! I''m glad you''re a reader.
+
+    User 2: Me too! I love the way books can transport me to another world.
+
+    User 1: I know what you mean. I can get lost in a book for hours.
+
+    User 2: Me too! I love losing track of time when I''m reading.
+
+    User 1: It''s the best feeling.
+
+    User 2: It is!
+
+    User 1: So, what are you studying in college?
+
+    User 2: I''m studying business. I want to be an entrepreneur someday.
+
+    User 1: That''s great! I''m sure you''ll be a great entrepreneur.
+
+    User 2: Thanks! I''m excited to start my career.
+
+    User 1: I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00002053'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2053
+data:
+  user 1 personas: 'My mom is a lawyer.
+
+    I have 5 children.
+
+    I am a student.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.'
+  user 2 personas: 'I am bored with my current lifestyle.
+
+    I wish i could speak another language.
+
+    I enjoy learning about other cultures.
+
+    I sit on my computer for several hours a day.
+
+    I watch foreign movies and tv shows.'
+  Best Generated Conversation: 'User 1: I''m a student and I have five children.
+
+    User 2: Oh, that must be a lot of work!
+
+    User 1: It is, but it''s also very rewarding.
+
+    User 2: I can imagine. What do you do for fun?
+
+    User 1: I like to go fishing, and I have an internship at a computer company.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is. I''m learning a lot about computers and I''m getting some good experience.
+
+    User 2: That''s great. What''s your mom''s job?
+
+    User 1: She''s a lawyer.
+
+    User 2: Oh, really? That''s cool. I''ve always been interested in law.
+
+    User 1: Me too. Maybe I''ll follow in her footsteps one day.
+
+    User 2: That would be great. I''m sure you''d be a great lawyer.
+
+    User 1: Thanks. I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go fishing, play video games, and watch movies.
+
+    User 2: That sounds like a lot of fun. I like to do a lot of the same things.
+
+    User 1: Yeah, we should hang out sometime.
+
+    User 2: That would be fun.
+
+    User 1: Great. I''ll give you my number.
+
+    User 2: Okay. I''ll see you soon.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

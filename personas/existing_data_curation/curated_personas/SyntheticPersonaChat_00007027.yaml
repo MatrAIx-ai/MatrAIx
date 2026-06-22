@@ -1,0 +1,60 @@
+id: '00007027'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7027
+data:
+  user 1 personas: 'Its been doing better than i expected.
+
+    So i started a small business.
+
+    I have not had luck with finding a job.
+
+    I recently graduated from college.
+
+    I sell miscellaneous stuff in local fairs.'
+  user 2 personas: 'My car is green and smells weird.
+
+    My favorite food is meatloaf.
+
+    My grandma is from denmark.
+
+    My favorite band used to be toto.'
+  Best Generated Conversation: 'User 1: So, I just started a small business. It''s been doing better than I expected!
+
+    User 2: That''s great news! What kind of business is it?
+
+    User 1: I sell miscellaneous stuff in local fairs. I make handmade jewelry, sell some used books, and I also have a booth where I sell homemade food.
+
+    User 2: That''s really cool! I love going to local fairs. They''re always so much fun.
+
+    User 1: Me too! I love seeing all the different things people are selling.
+
+    User 2: I''m glad your business is doing well. It sounds like you''re really enjoying it.
+
+    User 1: I am! It''s a lot of work, but it''s also really rewarding.
+
+    User 2: I''m sure it is. I''ve always wanted to start my own business, but I''m not sure what I would do.
+
+    User 1: Well, if you ever decide to start something, I''d be happy to help you out.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to cook, read, and go for walks.
+
+    User 1: Me too! I love cooking, especially when I can use fresh ingredients.
+
+    User 2: Me too! I love going to the farmer''s market on the weekends.
+
+    User 1: I''ve never been to a farmer''s market. I should check it out sometime.
+
+    User 2: You definitely should! It''s a great place to find fresh produce and other local goods.
+
+    User 1: Okay, I will! Thanks for the tip.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

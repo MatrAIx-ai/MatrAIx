@@ -1,0 +1,94 @@
+id: '00003711'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3711
+data:
+  user 1 personas: 'I like lightning mcqueen.
+
+    I like to play basketball.
+
+    Grandpa takes me to get ice cream.
+
+    My grandma likes to make pizza with me.'
+  user 2 personas: 'I love to laugh.
+
+    I run a small bakery.
+
+    My husband works for the government.
+
+    I like going on walks.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bake, go for walks, and laugh.
+
+    User 1: Oh, cool! I like to play basketball, watch movies, and play games.
+
+    User 2: Nice! I like watching movies too. What kind of movies do you like?
+
+    User 1: I like all kinds of movies, but I especially like action and comedy movies.
+
+    User 2: Me too! I love action movies. They''re so exciting!
+
+    User 1: I know, right? They get my heart racing!
+
+    User 2: Me too! I love to watch them with my husband.
+
+    User 1: That sounds like a lot of fun! Do you guys have any favorite movies?
+
+    User 2: We really like the Avengers movies. They''re so cool!
+
+    User 1: I know, right? I love them too!
+
+    User 2: Me too! They''re so much fun to watch.
+
+    User 1: So, what do you do for work?
+
+    User 2: I run a small bakery.
+
+    User 1: Oh, cool! What kind of bakery?
+
+    User 2: I make all kinds of breads, cookies, pies, and cakes.
+
+    User 1: Oh, that sounds delicious! Do you sell them online?
+
+    User 2: Yes, I do! You can find my website on my profile.
+
+    User 1: Awesome! I''ll definitely check it out.
+
+    User 2: Great! I hope you like it.
+
+    User 1: I''m sure I will!
+
+    User 2: Good!
+
+    User 1: So, what''s your husband do for work?
+
+    User 2: He works for the government.
+
+    User 1: Oh, cool! What does he do?
+
+    User 2: He''s a firefighter.
+
+    User 1: Oh, that''s awesome! He''s a hero!
+
+    User 2: Thanks! He likes it a lot.
+
+    User 1: I can imagine! It must be a lot of work, but it''s also very rewarding.
+
+    User 2: Yeah, it is. He''s very good at it.
+
+    User 1: That''s great!
+
+    User 2: Thanks!
+
+    User 1: Well, it was nice talking to you, [user 2 name].
+
+    User 2: You too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00002835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2835
+data:
+  user 1 personas: 'I like to play tennis.
+
+    I work as an accountant.
+
+    My favorite food is a burger.
+
+    My favorite musical is hamilton.'
+  user 2 personas: 'I believe that i can achieve anything.
+
+    I love to gossip.
+
+    I have never kissed a woman.
+
+    I watch jimmy fallon s show every night.'
+  Best Generated Conversation: 'User 1: Hey! How''s it going?
+
+    User 2: Good! I''m watching Jimmy Fallon right now. He''s so funny.
+
+    User 1: I know! I love his show. What''s your favorite thing about it?
+
+    User 2: I love his skits. They''re always so funny.
+
+    User 1: Me too! I also love his guests. He always gets such interesting people on his show.
+
+    User 2: Yeah, he does. I love that he''s not afraid to have people on who have different opinions.
+
+    User 1: Me too. I think it''s important to have conversations with people who have different opinions. It helps us to learn and grow.
+
+    User 2: I completely agree. I love hearing different perspectives.
+
+    User 1: What''s your favorite thing to gossip about?
+
+    User 2: I don''t really gossip. I think it''s kind of mean to talk about people behind their backs.
+
+    User 1: I know what you mean. I don''t really like gossiping either.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play tennis, watch movies, and go out to eat.
+
+    User 2: Oh, that sounds fun! I like to do all of those things too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t really have a favorite movie. I like a lot of different movies.
+
+    User 1: Me too. I like to watch movies from all different genres.
+
+    User 2: Yeah, me too. I think it''s important to have a variety of interests.
+
+    User 1: I agree. I think it makes life more interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

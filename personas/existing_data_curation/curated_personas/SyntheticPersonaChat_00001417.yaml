@@ -1,0 +1,62 @@
+id: '00001417'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1417
+data:
+  user 1 personas: 'I play the piano.
+
+    I am buying a house.
+
+    I paddle board on my days off.
+
+    I am a nurse and work in an emergency room at a busy hospital.'
+  user 2 personas: 'I have a cat named george.
+
+    I read autobiographies before bed.
+
+    My favorite band is metallica.
+
+    My favorite meal is chicken and rice.
+
+    I regularly go to the gym.'
+  Best Generated Conversation: 'User 1: Hello! My name is [username].
+
+    User 2: Hi [username], I''m [username]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you do for a living?
+
+    User 2: I''m a nurse at a busy hospital.
+
+    User 1: Oh, that sounds like a rewarding job.
+
+    User 2: It can be, but it''s also very stressful.
+
+    User 1: I can imagine. What do you do for fun?
+
+    User 2: I like to read, go to the gym, and spend time with my cat.
+
+    User 1: Those all sound like great hobbies.
+
+    User 2: Thanks. What do you like to do for fun?
+
+    User 1: I like to play piano, paddle board, and go to the beach.
+
+    User 2: Oh, I love the beach! I used to go there all the time when I was younger.
+
+    User 1: Me too! I love swimming, sunbathing, and building sandcastles.
+
+    User 2: Me too! I also love to collect seashells.
+
+    User 1: Oh, that''s a fun hobby.
+
+    User 2: Yeah, it is. I have a whole collection of seashells at home.
+
+    User 1: I''d love to see them sometime.
+
+    User 2: Sure, I''d love to show them to you.
+
+    User 1: Sounds great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

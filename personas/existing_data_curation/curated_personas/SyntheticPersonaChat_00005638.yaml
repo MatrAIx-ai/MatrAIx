@@ -1,0 +1,60 @@
+id: 00005638
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5638
+data:
+  user 1 personas: 'I would like to try sky diving.
+
+    I have a bad habit of being dishonest.
+
+    I do whatever it takes to get what i want.
+
+    I sometimes get into fights.'
+  user 2 personas: 'My mom was a hairdresser.
+
+    My favorite color is red.
+
+    I love to dance.
+
+    I work at a coffee shop.
+
+    I drive a prius.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to dance, I drive a prius, and my mom was a hairdresser.
+
+    User 1: Oh, that''s cool! I love to dance too. What kind of music do you like to dance to?
+
+    User 2: I like to dance to all kinds of music, but I especially love to dance to pop and hip-hop.
+
+    User 1: Me too! I love to dance to hip-hop. What''s your favorite song to dance to?
+
+    User 2: My favorite song to dance to is "Work" by Rihanna.
+
+    User 1: Oh, that''s a great song! I love to dance to that song too.
+
+    User 2: Do you go to any clubs or dance parties?
+
+    User 1: I used to go to a lot of clubs and dance parties, but I don''t go out much anymore.
+
+    User 2: Oh, why not?
+
+    User 1: I just don''t have the time anymore. I''m working a lot and I have a lot of other commitments.
+
+    User 2: I understand. I have a lot of commitments too, but I always try to make time for dancing.
+
+    User 1: That''s good. You should never give up on your passions.
+
+    User 2: I know. I''m not going to.
+
+    User 1: Good. I''m glad to hear that.
+
+    User 2: Thanks. Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

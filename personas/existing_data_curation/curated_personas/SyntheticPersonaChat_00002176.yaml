@@ -1,0 +1,62 @@
+id: '00002176'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2176
+data:
+  user 1 personas: 'I go to high school.
+
+    I am a boy.
+
+    Math is my favorite subject.
+
+    I play ice hockey.'
+  user 2 personas: 'I have studied ballet all my life.
+
+    My mother is a ballerina.
+
+    I have the support of my whole family.
+
+    I plan to retire in 6 months.
+
+    I am a white dancer.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I study ballet all my life.
+
+    User 1: That sounds cool. I play ice hockey.
+
+    User 2: I have always wanted to play hockey.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I''m not sure if I''m athletic enough.
+
+    User 1: You don''t have to be athletic to play hockey. Just be willing to work hard and have fun.
+
+    User 2: I''ll think about it.
+
+    User 1: You should. It''s a great way to stay in shape and make new friends.
+
+    User 2: Thanks for the advice.
+
+    User 1: No problem. What''s your favorite subject in school?
+
+    User 2: My favorite subject in school is math.
+
+    User 1: Me too! I love math. It''s so logical and satisfying.
+
+    User 2: I know, right? It''s like a puzzle that you have to solve.
+
+    User 1: Exactly! I love figuring out how things work.
+
+    User 2: Me too. I''m so glad we have something in common.
+
+    User 1: Me too. It''s nice to meet someone who gets me.
+
+    User 2: Same here. I''m looking forward to getting to know you better.
+
+    User 1: Me too. I''m sure we''ll be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

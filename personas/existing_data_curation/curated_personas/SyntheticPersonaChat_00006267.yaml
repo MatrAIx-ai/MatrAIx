@@ -1,0 +1,74 @@
+id: '00006267'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6267
+data:
+  user 1 personas: 'I love to listen to frank sinatra.
+
+    I love to eat cheese.
+
+    I am a older lady.
+
+    I like to cook stews.'
+  user 2 personas: 'I have 3 cats.
+
+    I like going to foreign countries.
+
+    I love dancing.
+
+    I am an only child.
+
+    I dye my hair blonde.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love dancing! It''s so much fun to express myself through movement.
+
+    User 1: That''s great! I love to dance too. I used to be in a dance class when I was younger.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to take dance lessons.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might have to try that sometime.
+
+    User 1: I''m sure you''d love it.
+
+    User 2: What are some other things you like to do?
+
+    User 1: I like to cook, especially stews. I love the way they smell and taste.
+
+    User 2: Oh, I love stews too! They''re so comforting and filling.
+
+    User 1: Me too! I love to put all sorts of different vegetables in them.
+
+    User 2: That''s a great idea. I usually just put potatoes and carrots in mine.
+
+    User 1: You should try adding some other vegetables like peas, corn, or beans. They add a lot of flavor and nutrition.
+
+    User 2: I''ll have to try that next time I make a stew.
+
+    User 1: I''m sure you''ll love it.
+
+    User 2: Thanks for the tip!
+
+    User 1: No problem!
+
+    User 2: So, what kind of music do you like to listen to?
+
+    User 1: I love Frank Sinatra. He''s my favorite singer.
+
+    User 2: I''ve never heard of him. What kind of music does he sing?
+
+    User 1: He sings mostly jazz and swing. He''s really good.
+
+    User 2: I''ll have to check him out sometime.
+
+    User 1: I''m sure you''ll like him.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

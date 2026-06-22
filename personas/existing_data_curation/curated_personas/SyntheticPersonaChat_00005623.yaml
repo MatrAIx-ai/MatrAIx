@@ -1,0 +1,78 @@
+id: '00005623'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5623
+data:
+  user 1 personas: 'I walk more than 2 miles a day.
+
+    I like to go to the movies.
+
+    I worked 3 jobs at the same time for more than 5 years.
+
+    I have a pit bull and a chihuahua.
+
+    My favorite car is the ford mustang.'
+  user 2 personas: 'I drive a fast car.
+
+    I like to listen to rap music.
+
+    My favorite song is california love.
+
+    My favorite artist is 2pac.
+
+    My car is black.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: What''s up?
+
+    User 2: Not much, just listening to some music.
+
+    User 1: What are you listening to?
+
+    User 2: California Love by 2Pac.
+
+    User 1: Oh, I love that song!
+
+    User 2: Me too! It''s so classic.
+
+    User 1: What other music do you like?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to rap.
+
+    User 1: Oh, me too! I love rap.
+
+    User 2: Who are some of your favorite artists?
+
+    User 1: I like Kendrick Lamar, Eminem, and J. Cole.
+
+    User 2: Nice! I like all of those artists too.
+
+    User 1: Do you like to go to concerts?
+
+    User 2: Yeah, I love going to concerts!
+
+    User 1: Me too! I''ve been to a few concerts this year.
+
+    User 2: Oh, nice! Who have you seen?
+
+    User 1: I saw Kendrick Lamar, J. Cole, and Chance the Rapper.
+
+    User 2: Nice! I''ve seen Kendrick Lamar and J. Cole too.
+
+    User 1: Oh, cool! What were the concerts like?
+
+    User 2: They were amazing! The energy was so high and the music was incredible.
+
+    User 1: I bet! I''m so jealous.
+
+    User 2: Yeah, they were definitely worth seeing.
+
+    User 1: I''m definitely going to try to see them again sometime.
+
+    User 2: You should! They''re definitely worth it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00001945
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1945
+data:
+  user 1 personas: 'I like to eat meat.
+
+    I have red hair.
+
+    I am skilled in computer repair.'
+  user 2 personas: 'I do not have a lot of friends.
+
+    I am stuck in a wheel chair.
+
+    I work at a museum.'
+  Best Generated Conversation: 'User 1: Hello, my name is User 1.
+
+    User 2: Hello, my name is User 2.
+
+    User 1: It''s nice to meet you. What do you do for fun?
+
+    User 2: I work at a museum, and I also volunteer at a local animal shelter.
+
+    User 1: Oh, that sounds like you have a lot of hobbies.
+
+    User 2: Yes, I do. I also like to read, write, and play video games.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I especially like puzzle games and role-playing games.
+
+    User 1: Oh, I like those too. What''s your favorite puzzle game?
+
+    User 2: My favorite puzzle game is The Witness.
+
+    User 1: I''ve heard good things about that game. I''ll have to check it out.
+
+    User 2: You definitely should. It''s a lot of fun.
+
+    User 1: What''s your favorite role-playing game?
+
+    User 2: My favorite role-playing game is Skyrim.
+
+    User 1: I''ve played Skyrim too! It''s a great game.
+
+    User 2: I know, right? It''s so much fun to explore the world and do all the different quests.
+
+    User 1: Yeah, it is. I spent so many hours playing that game.
+
+    User 2: Me too. I still play it sometimes.
+
+    User 1: What other hobbies do you have?
+
+    User 2: I also like to cook, bake, and garden.
+
+    User 1: Oh, that''s great. I love to cook and bake too.
+
+    User 2: Me too. I love trying new recipes and creating new dishes.
+
+    User 1: Me too. I''m always looking for new recipes to try.
+
+    User 2: What''s your favorite dish to cook?
+
+    User 1: My favorite dish to cook is lasagna.
+
+    User 2: Oh, I love lasagna. I make a great lasagna.
+
+    User 1: I''m sure you do. I''ll have to try it sometime.
+
+    User 2: You definitely should. It''s one of my specialties.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

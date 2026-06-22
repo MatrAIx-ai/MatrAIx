@@ -1,0 +1,18 @@
+id: 00021586
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21586
+persona_description: A scientist who is interested in space exploration and has expertise in asteroid sampling and analysis. The individual is particularly interested in the OSIRIS-REx mission and its objectives,
+  including the detailed survey of Bennu, the retrieval of a sample, and the analysis of the sample. The persona is also interested in the sample return journey to Earth, the preservation of the sample,
+  and the cataloging and analysis of the sample.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: space exploration
+  general_domain_top01pct: None
+  specific_domain_top01pct: asteroid sampling and analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

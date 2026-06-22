@@ -1,0 +1,58 @@
+id: 00001788
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1788
+data:
+  user 1 personas: 'I am a younger guy.
+
+    I own a dog that is small.
+
+    I have beard that is longer.
+
+    I like to ride my bike.
+
+    I like to play football.'
+  user 2 personas: 'My poppa has a train set that i play with.
+
+    I have a dog named percy.
+
+    I like thomas the tank engine.
+
+    My cat died.
+
+    I like books about trains.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m a younger guy who likes to ride his bike and play football. What about you?
+
+    User 2: I like to play with my train set and read books about trains. I also have a dog named Percy.
+
+    User 1: Percy is a great name for a dog! I have a small dog too.
+
+    User 2: What kind of dog do you have?
+
+    User 1: I have a terrier mix. He''s a great dog.
+
+    User 2: I''m glad you have a great dog. I love dogs.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What''s your favorite thing to do with your dog?
+
+    User 1: I like to take him for walks and play fetch.
+
+    User 2: That sounds like a lot of fun. I like to take my dog to the park.
+
+    User 1: I like to go to the park too. It''s a great place to let dogs run around and play.
+
+    User 2: I agree. It''s a great place to relax and enjoy the outdoors.
+
+    User 1: It is. I love spending time in the park with my dog.
+
+    User 2: Me too. It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

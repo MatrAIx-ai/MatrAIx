@@ -1,0 +1,46 @@
+id: 00008764
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8764
+data:
+  user 1 personas: 'I work as a physical therapist , and my wife is a school nurse.
+
+    We also have three dogs and two cats.
+
+    My name is john and i live in dallas , tx.
+
+    Our kids are 14 and 12 years old.
+
+    My wife and i have 2 children.'
+  user 2 personas: 'I speak english and spanish fluently.
+
+    I am mixed with puerto rica and chinese.
+
+    I am from germany.
+
+    I like listening to blues music.
+
+    My favorite artist was prince.'
+  Best Generated Conversation: 'User 1: Hi, I''m John. I''m from Dallas, Texas. I work as a physical therapist and my wife is a school nurse. We have two kids, ages 14 and 12. We also have three dogs and
+    two cats. What about you?
+
+    User 2: Hi John, nice to meet you! My name is [name]. I''m from Germany. I''m mixed with Puerto Rican and Chinese. I work as a translator and I love listening to blues music. My favorite artist was
+    Prince.
+
+    User 1: Wow, that''s a lot of languages you speak! I only speak English and Spanish. I''ve never been to Germany, but I''d love to go someday. Do you like living there?
+
+    User 2: I love living in Germany! It''s a beautiful country with a rich history and culture. The people are friendly and the food is delicious. I''m so glad I moved here.
+
+    User 1: That''s great to hear! I''m glad you like it there. I''ve never been a big fan of blues music, but I can see why you like it. It''s got a lot of soul and passion.
+
+    User 2: Thanks! I love the way it makes me feel. It''s so emotional and powerful. Prince was one of the greatest musicians of all time. He was so talented and his music was always so moving.
+
+    User 1: I agree! He was a true original. I''m so glad I got to see him perform live before he passed away.
+
+    User 2: Me too! It was an amazing experience. I''ll never forget it.
+
+    User 1: I''m glad you had a chance to see him. He was truly one of a kind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

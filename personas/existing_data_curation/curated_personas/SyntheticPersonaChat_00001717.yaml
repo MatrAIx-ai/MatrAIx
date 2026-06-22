@@ -1,0 +1,48 @@
+id: '00001717'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1717
+data:
+  user 1 personas: 'I play the guitar.
+
+    I like to go for runs.
+
+    I have a dog and two cats.
+
+    I live by myself.
+
+    I like country music.'
+  user 2 personas: 'I am a carnivore.
+
+    I work at a newspaper.
+
+    I am highly educated.
+
+    My father used to be a butcher.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name]. What do you like to do for fun?
+
+    User 1: I like to play the guitar, go for runs, and hang out with my dog and cats.
+
+    User 2: That sounds fun! I like to cook, read, and spend time with my family.
+
+    User 1: What do you like to cook?
+
+    User 2: I like to cook a variety of things, but my favorite is probably meat. I''m a carnivore, and my dad used to be a butcher, so I grew up eating a lot of meat.
+
+    User 1: That''s cool! I''m not a big meat eater, but I do love some good steak.
+
+    User 2: I''m glad you know your way around a grill. What are some of your favorite country songs?
+
+    User 1: I like old country music the best, like Johnny Cash and Willie Nelson. I also like some new country music, like Eric Church and Luke Bryan.
+
+    User 2: I love Johnny Cash! I''m not a huge fan of new country music, but I do like some of it.
+
+    User 1: I''m glad we have some common interests. It''s always nice to meet someone new who you have things in common with.
+
+    User 2: Me too! I''m glad I met you, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

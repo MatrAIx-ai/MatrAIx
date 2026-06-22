@@ -1,0 +1,68 @@
+id: '00003540'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3540
+data:
+  user 1 personas: 'My favorite number is 7.
+
+    I never learned how to drive.
+
+    I sometimes scratch my nose for fun.
+
+    I am a deaf man.
+
+    I love to read books.'
+  user 2 personas: 'I ride a skateboard.
+
+    I have often been called a slacker.
+
+    I wear dingy clothes.
+
+    I have blue and orange hair.'
+  Best Generated Conversation: 'User 1: Hi! My name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to skate, listen to music, and hang out with my friends.
+
+    User 1: That sounds fun. I like to read, write, and play video games.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I''m mostly interested in science fiction and fantasy.
+
+    User 2: I like to read science fiction too. What''s your favorite book?
+
+    User 1: My favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 2: I''ve heard of that book, but I''ve never read it.
+
+    User 1: You should! It''s a really fun book.
+
+    User 2: I''ll check it out.
+
+    User 1: Do you have any favorite video games?
+
+    User 2: I like to play a lot of different video games, but my favorite is probably Call of Duty.
+
+    User 1: I''ve never played Call of Duty, but I''ve heard good things about it.
+
+    User 2: It''s a lot of fun. You should give it a try.
+
+    User 1: I might do that.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to go to the movies, go out to eat, and spend time with my friends and family.
+
+    User 2: That sounds like a lot of fun. I like to do a lot of the same things.
+
+    User 1: It''s great to meet someone who has similar interests.
+
+    User 2: Yeah, it is. I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

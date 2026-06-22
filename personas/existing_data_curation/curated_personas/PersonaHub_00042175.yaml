@@ -1,0 +1,18 @@
+id: '00042175'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42175
+persona_description: A machine operator who uses custom macro B to send text information from the machine through the serial communications port for various applications such as sending offset data, tool
+  length, cutter radius compensation offsets, and fixture offsets for machining centers, turning centers, and machine position data. They are interested in creating programs that reset offsets to their
+  current values at some future date for repeated setups.
+expertise:
+  general_domain_top1pct: technology
+  specific_domain_top1pct: machine operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

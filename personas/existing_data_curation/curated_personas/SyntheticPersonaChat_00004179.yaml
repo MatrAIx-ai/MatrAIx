@@ -1,0 +1,48 @@
+id: 00004179
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4179
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I am an insurance salesman.
+
+    I love to ride my bike on the weekend.
+
+    I post on reddit often.'
+  user 2 personas: 'My favorite sport is basketball.
+
+    I run marathons twice a year , mostly in america.
+
+    I live in canada , near ontario.
+
+    I am an avid runner.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I love to run marathons!
+
+    User 1: Oh wow, that''s so cool! I''ve always wanted to run a marathon but I''m not sure if I''m fit enough.
+
+    User 2: It''s definitely a challenge but it''s so worth it! What do you like to do for fun?
+
+    User 1: I like to ride my bike on the weekends. I also love to post on Reddit.
+
+    User 2: That''s awesome! I''ve never been on a bike but I''ve heard it''s a lot of fun. I also love to post on Reddit! What''s your favorite subreddit?
+
+    User 1: I love all the gaming subreddits! I also like the r/funny subreddit. What''s your favorite subreddit?
+
+    User 2: I love the r/sports subreddit! I also like the r/askreddit subreddit.
+
+    User 1: Those are both great subreddits! I love to see what other people are thinking about.
+
+    User 2: Me too! It''s so interesting to learn about different perspectives.
+
+    User 1: I''m glad we have something in common! We should definitely run a marathon together sometime!
+
+    User 2: I would love that! I''ll start training right away!
+
+    User 1: Awesome! I''m so excited!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

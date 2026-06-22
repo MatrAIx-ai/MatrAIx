@@ -1,0 +1,66 @@
+id: '00001241'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1241
+data:
+  user 1 personas: 'I am gluten free.
+
+    I am a writer.
+
+    I have a dog.
+
+    I like rock climbing.
+
+    My hair is black.'
+  user 2 personas: 'My daddy brings home flowers for me.
+
+    I sleep in a princess bed.
+
+    My mommy makes me a picnic lunch to eat outside.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I like to play pretend, go to the park, and have picnics.
+
+    User 1: That sounds like a lot of fun! I like to write, rock climb, and go for walks with my dog.
+
+    User 2: I love dogs! What breed is yours?
+
+    User 1: He''s a golden retriever. He''s the sweetest dog ever.
+
+    User 2: I love golden retrievers! They''re so friendly.
+
+    User 1: They are! He''s always happy to see me.
+
+    User 2: What''s your favorite thing to write about?
+
+    User 1: I like to write about my life and my experiences. I also like to write stories and poems.
+
+    User 2: That sounds really interesting! I love to read.
+
+    User 1: Me too! I read a lot of different things, but I mostly like to read fiction.
+
+    User 2: I like to read a lot of nonfiction. I like to learn new things.
+
+    User 1: That''s great! Learning is always fun.
+
+    User 2: It is! So, what''s your favorite thing to do outside?
+
+    User 1: I love to go for walks in the park. I also like to go hiking and rock climbing.
+
+    User 2: I love hiking! I''ve never tried rock climbing, but it looks like fun.
+
+    User 1: It is! It''s a great workout.
+
+    User 2: I''m sure it is! I''ll have to try it sometime.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Okay! I will!
+
+    User 1: Well, it was nice meeting you! I hope we can talk again soon.
+
+    User 2: You too! Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00002120'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2120
+data:
+  user 1 personas: 'I am dating my boss.
+
+    I love to sing.
+
+    I am in my 20 s.
+
+    My favorite flower is a daisy.'
+  user 2 personas: 'It s great fun.
+
+    My friends like watching it to.
+
+    We drink beer and eat food.
+
+    We watch the games together.'
+  Best Generated Conversation: 'User 1: I love to sing. Do you like to sing too?
+
+    User 2: Yes, I love to sing. I sing in a band with my friends.
+
+    User 1: That''s so cool! I''ve always wanted to be in a band.
+
+    User 2: You should do it! It''s a lot of fun.
+
+    User 1: Maybe I will. I love to sing karaoke.
+
+    User 2: Me too! I love to sing karaoke with my friends. We have a lot of fun.
+
+    User 1: Do you have any favorite songs to sing?
+
+    User 2: I love to sing "Don''t Stop Me Now" by Queen. It''s such a fun song.
+
+    User 1: Me too! That''s one of my favorite songs to sing too.
+
+    User 2: We should sing it together sometime.
+
+    User 1: I would love to!
+
+    User 2: Great! I''ll let you know when we''re having our next karaoke night.
+
+    User 1: Thanks! I''ll be there.
+
+    User 2: Great!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to watch football.
+
+    User 1: Oh, that''s cool! I like to watch football too.
+
+    User 2: We should watch a game together sometime.
+
+    User 1: I would love to!
+
+    User 2: Great! I''ll let you know when there''s a game on.
+
+    User 1: Thanks! I''ll be there.
+
+    User 2: Great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

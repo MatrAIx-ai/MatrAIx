@@ -1,0 +1,74 @@
+id: 00002569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2569
+data:
+  user 1 personas: 'I love kids and dogs.
+
+    I love to chat with my friends.
+
+    I like to go shopping with my daughters.
+
+    I like to cook.
+
+    I am a foodie.'
+  user 2 personas: 'I love the country but enjoy visiting the city life.
+
+    I have two dogs , one pitbull and old english bulldog.
+
+    I like the color blue or red.
+
+    I ve always wanted to travel to ireland or puerto rico.
+
+    I use to be a wild child.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hello! My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I love spending time with my dogs, going shopping, and cooking.
+
+    User 1: I love dogs too! I have a German Shepherd.
+
+    User 2: That''s great! I have a pitbull and an old English bulldog.
+
+    User 1: What are their names?
+
+    User 2: My pitbull''s name is Jax and my bulldog''s name is Tank.
+
+    User 1: Those are great names! I love dogs with names that start with the letter J.
+
+    User 2: Me too! Do you like to travel?
+
+    User 1: I love to travel! I''ve been to a few different countries, but I''ve always wanted to go to Ireland or Puerto Rico.
+
+    User 2: Those are both great places to visit! I''ve been to Ireland and it was amazing.
+
+    User 1: I''ve heard great things about Ireland. What''s your favorite thing about it?
+
+    User 2: The people are so friendly and the scenery is beautiful.
+
+    User 1: I''m sure it is! I''ve always wanted to visit the Emerald Isle.
+
+    User 2: You should definitely go! I''m sure you''d love it.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I like to cook, read, and chat with my friends.
+
+    User 2: I like to cook too! What''s your favorite thing to cook?
+
+    User 1: I love to cook Italian food. I''m not very good at it, but it''s fun to try.
+
+    User 2: I love Italian food too! I''m not very good at cooking it either, but it''s delicious.
+
+    User 1: I''m glad we agree! I''m sure we''d have a lot of fun cooking together.
+
+    User 2: I''m sure we would!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

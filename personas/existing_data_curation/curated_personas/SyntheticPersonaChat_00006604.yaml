@@ -1,0 +1,68 @@
+id: '00006604'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6604
+data:
+  user 1 personas: 'I listen to pink when i am painting.
+
+    My wife makes the best pasta.
+
+    As long as i have a cup of coffee in my hand i am a happy person.
+
+    It takes me an hour to drive to work in the morning.
+
+    I draw all the time and i am good at it.'
+  user 2 personas: 'I am in my second year of medical school.
+
+    My mom is the best baker in my family.
+
+    I have two children but i am divorced.
+
+    I am a hindu living in louisiana.
+
+    My favorite thing to do is watch old movies.'
+  Best Generated Conversation: 'User 1: Hi! What''s your favorite thing to do for fun?
+
+    User 2: I love to watch old movies! I''m a huge fan of classic cinema.
+
+    User 1: Oh, that''s great! I love old movies too. What''s your favorite?
+
+    User 2: I''m not sure I can pick just one, but I really love the original Star Wars trilogy.
+
+    User 1: Those are great! I''m a big fan of Star Wars too.
+
+    User 2: Me too! I''ve seen all of the movies multiple times.
+
+    User 1: Me too! I''m really excited for the new one coming out next year.
+
+    User 2: Me too! I can''t wait to see what happens next in the story.
+
+    User 1: What other kinds of movies do you like to watch?
+
+    User 2: I like all kinds of movies, but I especially love comedies and action movies.
+
+    User 1: Me too! I love comedies because they make me laugh.
+
+    User 2: Me too! And I love action movies because they''re so exciting.
+
+    User 1: What''s your favorite action movie?
+
+    User 2: I''m not sure I can pick just one, but I really love the Mission Impossible movies.
+
+    User 1: Those are great! I love Tom Cruise in those movies.
+
+    User 2: Me too! He''s so good in them.
+
+    User 1: What other movies have you seen recently?
+
+    User 2: I recently saw the new Jumanji movie. It was really good!
+
+    User 1: I heard it was good! I want to see it soon.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

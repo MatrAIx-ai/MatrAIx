@@ -1,0 +1,50 @@
+id: '00005013'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5013
+data:
+  user 1 personas: 'I just took a trip to london.
+
+    I love to watch game shows.
+
+    I m very religious.
+
+    I hate green beans.'
+  user 2 personas: 'I study philosophy at umass.
+
+    My eyes are brown.
+
+    I m a vegan.
+
+    I love going to concerts.'
+  Best Generated Conversation: 'User 1: Hi, I just took a trip to London. It was amazing! I went to all of the famous landmarks and even saw the queen!
+
+    User 2: That''s so cool! I''ve always wanted to go to London. What was your favorite part of the trip?
+
+    User 1: I think my favorite part was seeing all of the historical buildings. I''m a big history buff, so that was really cool for me.
+
+    User 2: I can understand that. I love history too. I''m actually studying philosophy at UMass, and I''m really interested in the history of philosophy.
+
+    User 1: That''s really interesting! I''ve never really studied philosophy, but I''ve always been interested in it.
+
+    User 2: It''s a lot of fun! I''m sure you''d like it.
+
+    User 1: Maybe I''ll look into it. I''m always looking for new things to learn.
+
+    User 2: Good! I''m sure you''d really enjoy it.
+
+    User 1: I''m glad you''re so passionate about it.
+
+    User 2: Thanks! I''m glad to talk about it.
+
+    User 1: Me too. It''s always nice to find someone who shares your interests.
+
+    User 2: Definitely. It''s rare to find someone who''s interested in philosophy, so I''m glad I met you.
+
+    User 1: Me too! I''m sure we''ll have some more interesting conversations in the future.
+
+    User 2: I''m sure we will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

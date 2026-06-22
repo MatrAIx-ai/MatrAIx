@@ -1,0 +1,60 @@
+id: 00004925
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4925
+data:
+  user 1 personas: 'I am a competitive ski racer.
+
+    I broke my arm skiing once.
+
+    My hair is a reddish brown.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    My family is very supportive of my skiing.'
+  user 2 personas: 'I like to play baseball.
+
+    I am a doctor.
+
+    I have 2 kids.
+
+    My wife is a nurse.
+
+    My favorite place is the mountains.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user1]. I''m a competitive ski racer.
+
+    User 2: Hi, I''m [user2]. I''m a doctor.
+
+    User 1: That''s cool. I''m afraid of heights, but I love skiing down high hills.
+
+    User 2: I love the mountains too. I go hiking there with my kids and wife.
+
+    User 1: That sounds like a lot of fun. I''m single and my family is very supportive of my skiing.
+
+    User 2: I''m glad to hear that. I''m sure your family is proud of you.
+
+    User 1: Thanks. I''m glad you''re a doctor. I''m sure you help a lot of people.
+
+    User 2: I try my best. It''s a great job.
+
+    User 1: I bet it is. Do you have any funny stories from your time as a doctor?
+
+    User 2: Sure, I have a few. One time, I was working in the ER and a patient came in with a fish hook stuck in his throat.
+
+    User 1: That sounds like a scary situation. How did you get the hook out?
+
+    User 2: I used a pair of tweezers and carefully removed it.
+
+    User 1: That must have been nerve-wracking.
+
+    User 2: It was a little bit, but I''m glad I was able to help the patient.
+
+    User 1: I''m sure he was glad too. Thanks for sharing your story.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

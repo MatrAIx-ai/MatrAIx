@@ -1,0 +1,86 @@
+id: 00000859
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 859
+data:
+  user 1 personas: 'I smoke a pipe.
+
+    I ve been married five times.
+
+    I love to eat eggplant.
+
+    I own a bar in downtown chicago.'
+  user 2 personas: 'I am very athletic.
+
+    I wear contacts.
+
+    I love bicycling.
+
+    I hate carrots.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (name).
+
+    User 2: Hello there! I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to bike! I go on bike rides every week.
+
+    User 1: Oh, that''s cool! I love to bike too.
+
+    User 2: What''s your favorite thing about biking?
+
+    User 1: I love the feeling of the wind in my hair and the freedom of being able to go wherever I want.
+
+    User 2: I know what you mean! It''s so much fun to explore new places on a bike.
+
+    User 1: What''s your favorite place to bike?
+
+    User 2: I love biking in the park. There are so many beautiful trails to explore.
+
+    User 1: That sounds like a great place to bike. I''ll have to check it out sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to go swimming. I''m on the swim team at my school.
+
+    User 1: Oh, that''s cool! I used to be on the swim team too.
+
+    User 2: Really? What was your favorite event?
+
+    User 1: I loved the freestyle. It was so much fun to just swim as fast as I could.
+
+    User 2: I know what you mean! Freestyle is my favorite event too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to play video games.
+
+    User 1: Oh, that''s cool! I like to play video games too.
+
+    User 2: What''s your favorite game?
+
+    User 1: I love the Legend of Zelda series.
+
+    User 2: I love that series too! It''s so much fun.
+
+    User 1: So, what do you like to do for a living?
+
+    User 2: I''m a personal trainer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a personal trainer.
+
+    User 2: It''s a lot of fun! I get to help people get in shape and live healthier lives.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I love helping people.
+
+    User 1: Well, it''s been nice talking to you.
+
+    User 2: You too! It''s been nice to meet you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

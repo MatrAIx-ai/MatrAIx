@@ -1,0 +1,68 @@
+id: 00001828
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1828
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I like to dance with my friends.
+
+    I love to be run.
+
+    I have a family that are all tall.
+
+    I really like to go to school.'
+  user 2 personas: 'My favorite color is purple.
+
+    I live near a park.
+
+    I do not have a car.
+
+    I listen to podcasts.
+
+    I do not have any children.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m six feet tall. How tall are you?
+
+    User 2: I''m five feet four inches tall.
+
+    User 1: Oh, so you''re not very tall.
+
+    User 2: No, I''m not. But I don''t mind.
+
+    User 1: I like to dance with my friends. Do you like to dance?
+
+    User 2: No, I don''t really like to dance. I prefer to sit and watch.
+
+    User 1: I like to run. Do you like to run?
+
+    User 2: No, I don''t really like to run. I prefer to walk.
+
+    User 1: I have a family that are all tall. How about you? Do you have any children?
+
+    User 2: No, I don''t have any children. I''m not sure if I want any.
+
+    User 1: I really like to go to school. Do you like to go to school?
+
+    User 2: Yes, I like to go to school. I like learning new things.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is purple.
+
+    User 1: Purple is a nice color.
+
+    User 2: Thank you.
+
+    User 1: Do you have a car?
+
+    User 2: No, I don''t have a car. I live near a park, so I can walk or bike everywhere I need to go.
+
+    User 1: That''s great. I like walking and biking too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,106 @@
+id: 00005129
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5129
+data:
+  user 1 personas: 'My favorite city is new york.
+
+    My favorite food is steak.
+
+    My wife just left me.
+
+    I love to run.
+
+    I am a lawyer.'
+  user 2 personas: 'I struggle with maintaining eye contact.
+
+    I sing in the shower.
+
+    My favorite video game is halo 3.
+
+    I like to take cold showers.
+
+    I drive a moped.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m Alex.
+
+    User 1: Nice to meet you, Alex. My name is John.
+
+    User 2: Nice to meet you too, John.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to sing in the shower, play video games, and take cold showers.
+
+    User 1: That''s interesting. I like to run, read, and watch movies.
+
+    User 2: I''ve never been a runner, but I love reading and watching movies too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Lord of the Rings: The Return of the King.
+
+    User 1: That''s one of my favorites too!
+
+    User 2: I love the ending, where Frodo throws the ring into the volcano.
+
+    User 1: Me too! It''s so satisfying.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a lawyer.
+
+    User 2: Oh, really? What kind of law do you practice?
+
+    User 1: I practice civil law.
+
+    User 2: What''s your favorite part of being a lawyer?
+
+    User 1: I like helping people.
+
+    User 2: That''s a great reason to be a lawyer.
+
+    User 1: Thanks. What do you do for work?
+
+    User 2: I''m a delivery driver.
+
+    User 1: Oh, cool. Do you like it?
+
+    User 2: Yeah, it''s pretty fun.
+
+    User 1: That''s good.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: My favorite food is steak.
+
+    User 2: I love steak too!
+
+    User 1: Me too! It''s so delicious.
+
+    User 2: So, what''s your favorite city?
+
+    User 1: My favorite city is New York.
+
+    User 2: Oh, cool. I''ve never been to New York.
+
+    User 1: You should go sometime. It''s a great city.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: You''re welcome.
+
+    User 2: So, what do you like to do in New York?
+
+    User 1: I like to go to the theater, visit museums, and eat at the best restaurants.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is. New York is a great place to visit.
+
+    User 2: I''m sure it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

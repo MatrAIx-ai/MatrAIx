@@ -1,0 +1,44 @@
+id: 00008784
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8784
+data:
+  user 1 personas: 'Last month the farm was foreclosed so i m looking for a new job.
+
+    I live in kansas.
+
+    I would like to move some place warmer.
+
+    I like watching reality television shows.
+
+    I m an out of work farmhand.'
+  user 2 personas: 'I make robots for a living.
+
+    I am single and live alone.
+
+    I am a night owl.
+
+    I do not have a good social life.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear about your farm. That must have been a tough time.
+
+    User 2: Thanks. It was. But I''m trying to stay positive and look for a new job.
+
+    User 1: That''s good. I''m sure you''ll find something soon.
+
+    User 2: I hope so. I''m not sure what I''m going to do if I don''t.
+
+    User 1: Well, you could always move to a warmer place. I hear that California is nice this time of year.
+
+    User 2: I''ve thought about that. But I don''t know anyone there.
+
+    User 1: Well, you could always make new friends. I''m sure you''d have no trouble finding people to hang out with.
+
+    User 2: I guess you''re right. I''ll have to give it some thought.
+
+    User 1: Good. And don''t forget, I''m always here for you if you need anything.
+
+    User 2: Thanks, I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

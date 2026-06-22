@@ -1,0 +1,66 @@
+id: 00008125
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8125
+data:
+  user 1 personas: 'This past summer i hiked the appalachian trail.
+
+    Under a pen name , i write romance books.
+
+    I am a short order cook at a local diner.
+
+    I used to follow the grateful dead when they toured.'
+  user 2 personas: 'I have a lot of style.
+
+    I enjoy organizing my surroundings.
+
+    When i am stressed , i overeat.
+
+    I love kids.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How are you doing today?
+
+    User 1: I''m doing well, thanks! I''m just getting ready to start writing a new chapter in my romance novel.
+
+    User 2: That sounds exciting! I love romance novels. What''s it about?
+
+    User 1: It''s about a woman who falls in love with a man who is a chef. They meet when she goes to his restaurant for dinner.
+
+    User 2: That sounds like a great story! I love love stories.
+
+    User 1: Thanks! I''m hoping it will be a success.
+
+    User 2: I''m sure it will be. You''re a great writer!
+
+    User 1: Thanks for the encouragement! I''m really glad you like my writing.
+
+    User 2: No problem! I love reading and I always appreciate finding new authors to follow.
+
+    User 1: Well, I''m glad to hear that. I''m always happy to make new readers.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to hike, I used to follow the Grateful Dead when they toured, and I''m a short order cook at a local diner.
+
+    User 2: Oh wow, you must be really fit! Hiking is a great way to stay in shape.
+
+    User 1: I do it for fun, but it''s a great workout too!
+
+    User 2: That''s amazing! I''ve always wanted to go hiking, but I''m not very fit.
+
+    User 1: You should try it! It''s a great way to get outdoors and enjoy nature.
+
+    User 2: I''ll definitely keep that in mind! So, what''s it like being a short order cook?
+
+    User 1: It''s a lot of fun! I get to meet a lot of different people and I get to be creative with my cooking.
+
+    User 2: Oh wow, that sounds really cool! I''ve never thought of being a short order cook before.
+
+    User 1: It''s a great job! I''m really happy with it.
+
+    User 2: That''s great! I''m glad you''re happy with your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

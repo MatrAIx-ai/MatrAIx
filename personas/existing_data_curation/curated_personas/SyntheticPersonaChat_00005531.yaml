@@ -1,0 +1,72 @@
+id: '00005531'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5531
+data:
+  user 1 personas: 'I dream of winning the lottery.
+
+    I like to eat food.
+
+    I drive a fast car.
+
+    I listen to rock music.'
+  user 2 personas: 'I am allergic to nuts.
+
+    1984 is my favorite book.
+
+    I am working on a biology degree.
+
+    I love book.
+
+    I am in college.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What''s your favorite book?
+
+    User 2: 1984 by George Orwell.
+
+    User 1: I''ve heard good things about that book. What''s it about?
+
+    User 2: It''s about a dystopian future where the government is constantly watching and controlling its citizens.
+
+    User 1: That sounds interesting. I might have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What are you studying in college?
+
+    User 2: Biology.
+
+    User 1: Oh, that''s cool! I was thinking about majoring in biology myself.
+
+    User 2: It''s a great major! It''s really interesting and it opens up a lot of career opportunities.
+
+    User 1: Yeah, I''ve heard that. What do you want to do with your degree?
+
+    User 2: I''m not sure yet. I''m thinking about going to medical school or becoming a scientist.
+
+    User 1: Both of those sound like great options.
+
+    User 2: Thanks!
+
+    User 1: So, you''re allergic to nuts?
+
+    User 2: Yeah, I am. It''s really annoying. I can''t eat a lot of things that I like.
+
+    User 1: That must be tough. I''m sorry.
+
+    User 2: It''s okay. I''ve learned to live with it.
+
+    User 1: Well, I''m glad you''re enjoying college.
+
+    User 2: Thanks! I am. It''s been a lot of fun so far.
+
+    User 1: That''s great. I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

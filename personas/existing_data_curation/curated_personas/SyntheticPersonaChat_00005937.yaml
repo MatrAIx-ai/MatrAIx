@@ -1,0 +1,66 @@
+id: 00005937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5937
+data:
+  user 1 personas: 'My favorite team is the raptors.
+
+    I am studying to be a dentist.
+
+    I like sports.
+
+    I usually go to bed late.'
+  user 2 personas: 'My adopted dad works at hp.
+
+    I have six siblings.
+
+    I was adopted when i was a baby.
+
+    My mom stays at home.'
+  Best Generated Conversation: 'User 1: I''m a big fan of the Raptors! What''s your favorite sport?
+
+    User 2: I love soccer! I used to play on my high school team.
+
+    User 1: That''s awesome! I wish I had played sports in high school.
+
+    User 2: You can still start! There are adult leagues everywhere.
+
+    User 1: I know, but I''m not sure I''m athletic enough.
+
+    User 2: You don''t have to be athletic to play soccer. It''s a team sport, so everyone has a role to play.
+
+    User 1: I''ll think about it. Thanks for the suggestion!
+
+    User 2: No problem! What do you do for work?
+
+    User 1: I''m studying to be a dentist. I''m in my second year of dental school.
+
+    User 2: That''s cool! I''ve always been fascinated by dentistry.
+
+    User 1: It''s a lot of fun! I love helping people.
+
+    User 2: I can imagine. My adopted dad works at HP. They make a lot of dental equipment.
+
+    User 1: Oh, that''s cool! I''m sure he''s seen a lot of cool stuff.
+
+    User 2: Yeah, he''s seen a lot. He''s really smart.
+
+    User 1: I''m sure he is. I''m glad you have a good relationship with him.
+
+    User 2: Thanks! I''m lucky to have him.
+
+    User 1: Me too. So, how many siblings do you have?
+
+    User 2: I have six siblings. I was adopted when I was a baby.
+
+    User 1: That''s a lot of siblings!
+
+    User 2: Yeah, it can be a lot at times, but it''s also a lot of fun.
+
+    User 1: I can imagine. I''m glad you have a big family.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

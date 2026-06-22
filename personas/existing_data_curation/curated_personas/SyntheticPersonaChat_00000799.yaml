@@ -1,0 +1,62 @@
+id: 00000799
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 799
+data:
+  user 1 personas: 'I love to cook.
+
+    My dad was a carsalesman.
+
+    I am a happy person.'
+  user 2 personas: 'I drink a lot of apple martinis when i get a girls night out.
+
+    I am a member of four book clubs , the pta , and two bunch groups.
+
+    I own a black suburban.
+
+    I spend a lot of time driving my kids to sports events.
+
+    I still dream about going to paris and designing clothes.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to go out with my friends for drinks and to have a girls night out.
+
+    User 1: What do you like to drink?
+
+    User 2: I love apple martinis.
+
+    User 1: Me too! They''re so delicious.
+
+    User 2: I know, right? They''re my favorite drink.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to cook. I''m a really good cook.
+
+    User 1: That''s awesome! I love to cook too. I''m not as good as you are, but I''m learning.
+
+    User 2: Well, you''re doing great so far.
+
+    User 1: Thanks! I love to try new recipes.
+
+    User 2: Me too! I love trying new things in general.
+
+    User 1: Me too! I''m always looking for new experiences.
+
+    User 2: I''m glad to hear that. I love meeting new people and learning about different cultures.
+
+    User 1: Me too! I love traveling and learning about new places.
+
+    User 2: I''ve never been out of the country, but I''d love to go to Europe someday.
+
+    User 1: You should definitely go! It''s amazing.
+
+    User 2: I know, I know. I''ve been dreaming about it for years.
+
+    User 1: Well, you should definitely make it happen.
+
+    User 2: I will! It''s definitely on my bucket list.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

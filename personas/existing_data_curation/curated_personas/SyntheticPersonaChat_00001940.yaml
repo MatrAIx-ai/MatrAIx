@@ -1,0 +1,68 @@
+id: 00001940
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1940
+data:
+  user 1 personas: 'I like the library.
+
+    I don t like trying new things.
+
+    I feel competitive against other women.
+
+    I don t trust anyone.
+
+    I want to be alone sometimes.'
+  user 2 personas: 'My favorite basketball team is the vancouver grizzlies.
+
+    My favorite sport is basketball.
+
+    I am an avid runner.
+
+    I live in canada , near ontario.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play basketball, run, and read books.
+
+    User 1: I like reading books too! What kind of books do you like to read?
+
+    User 2: I like to read nonfiction books about history and science.
+
+    User 1: I like to read nonfiction books about psychology and philosophy.
+
+    User 2: That''s cool! I''ve never read a book about philosophy.
+
+    User 1: I would recommend it! It''s really interesting to learn about different ways of thinking about the world.
+
+    User 2: I''ll have to check it out. What''s your favorite book?
+
+    User 1: My favorite book is "The Stranger" by Albert Camus.
+
+    User 2: I''ve never heard of it. What''s it about?
+
+    User 1: It''s about a man who commits a murder and then doesn''t feel guilty about it. It''s a really interesting book that makes you think about the nature of good and evil.
+
+    User 2: That sounds really interesting! I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to the library. I''m a big reader.
+
+    User 2: I love libraries! I used to go to the library all the time when I was a kid.
+
+    User 1: Me too! I love the smell of books and the feeling of being surrounded by knowledge.
+
+    User 2: Me too! I miss going to the library.
+
+    User 1: You should go back! They''re still around, you know.
+
+    User 2: I know, I know. I''ll have to go back sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

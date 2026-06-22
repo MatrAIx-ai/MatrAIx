@@ -1,0 +1,19 @@
+id: 00058123
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58123
+persona_description: A neurologist with expertise in the diagnosis, treatment, and research of movement disorders, particularly tardive dyskinesia. They have a collaborative approach to treatment, involving
+  input from physical, occupational, and speech therapists, as well as members of the Otolaryngology Department. They have a special area of expertise in pallidotomy, thalamotomy, and thalamic or subthalamic
+  deep brain stimulators, and use advanced image-guidance techniques to optimize surgical procedures. They are passionate about finding the sources of movement disorders and improving treatments and therapies
+  for patients with these conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: movement disorders
+  general_domain_top01pct: None
+  specific_domain_top01pct: deep brain stimulation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

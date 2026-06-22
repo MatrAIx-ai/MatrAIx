@@ -1,0 +1,62 @@
+id: '00003233'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3233
+data:
+  user 1 personas: 'I work in construction.
+
+    I drive a prius.
+
+    I have freckles all over my face.
+
+    I love to read romance novels.'
+  user 2 personas: 'I wish i knew where i belonged.
+
+    I never sleep in.
+
+    I train horses for a living.
+
+    I write in my spare time.'
+  Best Generated Conversation: 'User 1: I love reading romance novels! What are some of your favorites?
+
+    User 2: I love Jane Eyre and Pride and Prejudice. I''m also a big fan of historical romance novels.
+
+    User 1: I''ve never read Jane Eyre, but I''ve heard good things about it. I love Pride and Prejudice too!
+
+    User 2: Jane Eyre is a classic. It''s about a young woman who is sent to live with a cruel aunt and uncle. She eventually finds love and happiness, but it''s not easy.
+
+    User 1: That sounds interesting. I might have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What are some of your favorite historical romance novels?
+
+    User 2: I love Outlander by Diana Gabaldon. It''s about a woman who travels back in time to the Scottish Highlands.
+
+    User 1: I''ve heard good things about that one too. I''ll have to check it out.
+
+    User 2: You should! It''s a great series.
+
+    User 1: What do you do for a living?
+
+    User 2: I train horses.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: It is! I love working with horses.
+
+    User 1: Do you write in your spare time?
+
+    User 2: Yes, I do. I''m working on a novel right now.
+
+    User 1: Oh, that''s cool! What''s it about?
+
+    User 2: It''s a historical romance novel set in the Scottish Highlands.
+
+    User 1: That sounds really cool! I''d love to read it when it''s finished.
+
+    User 2: Thanks! I''ll let you know when it''s ready.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

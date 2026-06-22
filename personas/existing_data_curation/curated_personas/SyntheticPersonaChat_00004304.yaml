@@ -1,0 +1,70 @@
+id: '00004304'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4304
+data:
+  user 1 personas: 'I drive a blue honda civic.
+
+    I got hired last week at mcdonald s.
+
+    I have four siblings.
+
+    I m scared of left turns.'
+  user 2 personas: 'I am eighteen years old.
+
+    I am taking a year off before i start college.
+
+    I am saving money to buy my first car.
+
+    I currently work at mcdonalds.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hey, [name], I''m [name].
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I like to go to the movies, play video games, and hang out with friends.
+
+    User 1: Cool, I like to do those things too. What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but my favorite is probably Call of Duty.
+
+    User 1: Nice, I like Call of Duty too. What kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but my favorite is probably horror movies.
+
+    User 1: Nice, I like horror movies too. What''s your favorite horror movie?
+
+    User 2: My favorite horror movie is The Conjuring.
+
+    User 1: Nice, I''ve heard good things about that movie. What else do you like to do?
+
+    User 2: I like to go to the beach, play music, and hang out with friends.
+
+    User 1: Cool, I like to do those things too. What kind of music do you like to play?
+
+    User 2: I like to play all kinds of music, but my favorite is probably rock music.
+
+    User 1: Nice, I like rock music too. What''s your favorite rock band?
+
+    User 2: My favorite rock band is probably The Beatles.
+
+    User 1: Nice, I like The Beatles too. They''re a great band.
+
+    User 2: I know, right? They''re my favorite band.
+
+    User 1: Do you want to hang out sometime?
+
+    User 2: Sure, that sounds like fun. When are you free?
+
+    User 1: I''m free next weekend.
+
+    User 2: Okay, let''s hang out next weekend. We can go to the movies or something.
+
+    User 1: Sounds good. I''ll see you next weekend.
+
+    User 2: See you next weekend.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00008546
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8546
+data:
+  user 1 personas: 'I don t like feeling obligated to hang out with someone.
+
+    Coffee is important to me.
+
+    I can tell right away if i m going to like someone.
+
+    I love sunny days.'
+  user 2 personas: 'I have 4 daughters.
+
+    I am an athlete.
+
+    I like to go fishing.
+
+    I race cars for a living.'
+  Best Generated Conversation: 'User 1: Hey, what''s your name?
+
+    User 2: My name is John.
+
+    User 1: Nice to meet you, John. What do you do for a living?
+
+    User 2: I''m a race car driver.
+
+    User 1: Oh wow, that''s awesome! I''m sure that''s a lot of fun.
+
+    User 2: It is, but it''s also a lot of work.
+
+    User 1: I bet. So, how many kids do you have?
+
+    User 2: I have four daughters.
+
+    User 1: Wow, that''s a lot of kids! I have two.
+
+    User 2: I love it. They keep me busy.
+
+    User 1: I bet. So, what do you like to do for fun?
+
+    User 2: I like to go fishing, go for walks, and read.
+
+    User 1: I like to go fishing too. It''s so relaxing.
+
+    User 2: It is. I love being out in nature.
+
+    User 1: Me too. So, what''s your favorite book?
+
+    User 2: I like to read a lot of different things, but my favorite book is probably "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I''ve heard good things about that book. I''ve been meaning to read it.
+
+    User 2: You should! It''s a great book.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

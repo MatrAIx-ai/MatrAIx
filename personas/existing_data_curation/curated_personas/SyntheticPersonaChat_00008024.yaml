@@ -1,0 +1,66 @@
+id: 00008024
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8024
+data:
+  user 1 personas: 'I started a small blog lately to post reviews.
+
+    I have found other pretty good blogs to share opinions with.
+
+    I started collaborating with some popular publishers.
+
+    I have none to share my thoughts about the books i read.
+
+    I love to read.'
+  user 2 personas: 'My father used to work for a bank.
+
+    I went to college and graduated few years ago.
+
+    Now i also work at a bank.
+
+    I grew up in the upstate.
+
+    I live in the city.'
+  Best Generated Conversation: 'User 1: Hello, do you like to read books?
+
+    User 2: Yes, I do. I love reading.
+
+    User 1: Me too! What are your favorite genres?
+
+    User 2: I like to read a variety of genres, but my favorites are mystery, thriller, and historical fiction.
+
+    User 1: I love mystery and thriller books too! What are some of your favorite books?
+
+    User 2: I really enjoyed The Girl on the Train by Paula Hawkins, The Girl with the Dragon Tattoo by Stieg Larsson, and Gone Girl by Gillian Flynn.
+
+    User 1: I''ve heard good things about those books! I''ll have to check them out.
+
+    User 2: You definitely should! I think you''ll like them.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work at a bank.
+
+    User 1: Oh, really? I used to work at a bank too.
+
+    User 2: No way! Where did you work?
+
+    User 1: I worked at the bank in the upstate.
+
+    User 2: Oh, I''ve never been there.
+
+    User 1: It''s a beautiful area. There''s a lot of hiking and camping to be done.
+
+    User 2: That sounds like fun. I love to hike.
+
+    User 1: We should go hiking together sometime.
+
+    User 2: That would be great!
+
+    User 1: It''s settled then. We''ll go hiking soon.
+
+    User 2: I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

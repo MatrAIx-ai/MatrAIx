@@ -1,0 +1,54 @@
+id: '00002056'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2056
+data:
+  user 1 personas: 'My wife is a nurse.
+
+    I am a doctor.
+
+    I have 2 kids.
+
+    I like to play baseball.
+
+    My favorite place is the mountains.'
+  user 2 personas: 'I love cooking !.
+
+    My mother is from greece.
+
+    My favourite colour is green.
+
+    I like to swim when the weather is hot.
+
+    My father is from india.'
+  Best Generated Conversation: 'User 1: Hi, I''m a doctor. My wife is a nurse. We have 2 kids and we love to play baseball. Our favorite place to go is the mountains. What about you?
+
+    User 2: Hi, nice to meet you! I''m a cook. My mother is from Greece and my father is from India. I love the color green and I love to swim when the weather is hot. What are your hobbies?
+
+    User 1: We love playing baseball and swimming. We also enjoy spending time in the mountains. What do you enjoy doing for fun?
+
+    User 2: I love cooking, swimming, and traveling. I also like to go to concerts and watch movies. What are your favorite movies?
+
+    User 1: I love action movies and comedies. I also like to watch documentaries and TV shows. What are your favorite shows?
+
+    User 2: I love The Office, Parks and Recreation, and Brooklyn Nine-Nine. I also like to watch documentaries about history and science. What are your favorite foods?
+
+    User 1: I love Italian food and seafood. I also enjoy Mexican food and sushi. What are your favorite dishes?
+
+    User 2: I love Greek food, Indian food, and Chinese food. I also enjoy Mediterranean food and pizza. What are your favorite colors?
+
+    User 1: I love blue, green, and red. I also like black and white. What are your favorite colors?
+
+    User 2: I love green, blue, and yellow. I also like purple and orange. What are your favorite places to travel?
+
+    User 1: I love the mountains, the beach, and the city. I also enjoy traveling to different countries. What are your favorite places to travel?
+
+    User 2: I love Greece, India, and China. I also enjoy traveling to Europe and North America. What are your favorite hobbies?
+
+    User 1: I love playing sports, reading books, and watching movies. I also enjoy spending time with my family and friends. What are your hobbies?
+
+    User 2: I love cooking, swimming, and traveling. I also enjoy playing video games and reading books.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: 00001181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1181
+data:
+  user 1 personas: 'I am a carnivore.
+
+    My father is in prison.
+
+    I went on welfare last month , which makes me want to run into traffic in front of big trucks.
+
+    I enjoy running.
+
+    My favorite band is creed.'
+  user 2 personas: 'I had 128 tackles last year.
+
+    My position is linebacker.
+
+    The name of my team is the baltimore ravens.
+
+    I am an athlete.
+
+    I play football.'
+  Best Generated Conversation: 'User 1: Hey there, what''s up?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: I''m good, just got done running.
+
+    User 2: Oh, cool. I''m not really a runner, I''m more of a football player.
+
+    User 1: Oh, that''s cool. What position do you play?
+
+    User 2: I''m a linebacker for the Baltimore Ravens.
+
+    User 1: Oh, that''s awesome! I''m a big fan of the Ravens.
+
+    User 2: Thanks, man. We''re having a pretty good season so far.
+
+    User 1: Yeah, you guys are definitely one of the top teams in the league.
+
+    User 2: Thanks, we''re trying to make a run for the Super Bowl this year.
+
+    User 1: I hope you guys do it! I''ll be rooting for you.
+
+    User 2: Thanks, man. I appreciate that.
+
+    User 1: So, what''s it like being a professional football player?
+
+    User 2: It''s pretty amazing, actually. I get to play a sport that I love for a living. And I get to travel all over the country and meet new people.
+
+    User 1: That sounds amazing. I''m sure it''s a lot of hard work, but it must be so rewarding.
+
+    User 2: It is. It''s definitely a lot of hard work, but it''s worth it.
+
+    User 1: Well, I''m glad you''re enjoying it. I''m sure you''re a great player.
+
+    User 2: Thanks, man. I appreciate that.
+
+    User 1: So, what''s next for you?
+
+    User 2: We''re playing the Steelers next week, so I''m just focused on that game right now.
+
+    User 1: Good luck! I''ll be watching.
+
+    User 2: Thanks, man. I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

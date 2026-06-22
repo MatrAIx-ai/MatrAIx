@@ -1,0 +1,68 @@
+id: 00006881
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6881
+data:
+  user 1 personas: 'My mother looks after my grandmother.
+
+    I use the computer all day.
+
+    I sleep 8 hours.
+
+    I love hockey.
+
+    I prefer texting over phone calls.'
+  user 2 personas: 'I read sci fi space adventures with a passion.
+
+    I eat tuna fish salad at least every day.
+
+    I have sandy brown hair and green eyes.
+
+    I can t get enough gummy worms to satisfy my sweet tooth.
+
+    My favorite music is two steps from hell and rock opera genre.'
+  Best Generated Conversation: 'User 1: Hello! I''m [name].
+
+    User 2: Hi there, [name]! I''m [name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love to read science fiction space adventures.
+
+    User 1: That sounds really interesting! What''s your favorite book?
+
+    User 2: I''m not sure I have a favorite, but I really enjoyed the Expanse series.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good. So, what do you like to do for fun?
+
+    User 1: I like to play hockey and watch hockey games. I also like to use the computer.
+
+    User 2: Oh, I love hockey too! My favorite team is the Edmonton Oilers.
+
+    User 1: Mine is the Pittsburgh Penguins!
+
+    User 2: Oh, that''s a great team! I''ve been to a few of their games.
+
+    User 1: Me too! They''re so much fun to watch.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s awesome! I''ve always been interested in computer science.
+
+    User 1: It''s a lot of fun. I get to work on all kinds of cool projects.
+
+    User 2: That sounds great! I''m glad you like your job.
+
+    User 1: Yeah, I do. It''s a great way to make a living.
+
+    User 2: Well, it''s been nice talking to you, [name].
+
+    User 1: It''s been nice talking to you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

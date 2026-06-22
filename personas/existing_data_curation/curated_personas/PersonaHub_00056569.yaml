@@ -1,0 +1,17 @@
+id: 00056569
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56569
+persona_description: A medical professional with expertise in the diagnosis and treatment of ADHD. They are familiar with the history and evolution of the diagnosis, the scientific research behind the treatment,
+  and the potential risks and benefits of medication. They are aware of the misinformation surrounding ADHD and are committed to providing accurate information to patients and the public.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ADHD diagnosis and treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

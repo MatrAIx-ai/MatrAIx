@@ -1,0 +1,104 @@
+id: 00002808
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2808
+data:
+  user 1 personas: 'I like to be outdoors.
+
+    I m a student.
+
+    I m from california.
+
+    I think recycling is important.'
+  user 2 personas: 'I enjoy running.
+
+    My father is in prison.
+
+    My favorite band is creed.
+
+    I went on welfare last month , which makes me want to run into traffic in front of big trucks.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy running and listening to music.
+
+    User 1: I like running too! It''s a great way to stay in shape.
+
+    User 2: It is! I also like to go hiking and camping.
+
+    User 1: That sounds fun! I love being outdoors.
+
+    User 2: Me too! It''s a great way to relax and escape the stresses of everyday life.
+
+    User 1: I agree! Where are you from?
+
+    User 2: I''m from [user 2 location].
+
+    User 1: Oh, I''ve never been there before.
+
+    User 2: It''s a great place to visit! There''s a lot of beautiful scenery and the people are really friendly.
+
+    User 1: I''m sure it is! I''d love to visit sometime.
+
+    User 2: You should!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a student.
+
+    User 1: Oh, what are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: That''s great! What do you want to do with your degree?
+
+    User 2: I''m not sure yet. I''m thinking about going into marketing.
+
+    User 1: That sounds like a good choice.
+
+    User 2: Thanks! I think so too.
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is Creed.
+
+    User 1: I''ve never heard of them.
+
+    User 2: They''re a Christian rock band.
+
+    User 1: Oh, okay.
+
+    User 2: They''re really good. You should check them out.
+
+    User 1: I will!
+
+    User 2: So, what do you think of welfare?
+
+    User 1: I think it''s a good thing. It helps people who are in need.
+
+    User 2: I agree. It''s important to help people who are struggling.
+
+    User 1: I think we should all do our part to help others.
+
+    User 2: I agree.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to run, listen to music, and hang out with friends.
+
+    User 1: I like to do those things too!
+
+    User 2: We should hang out sometime.
+
+    User 1: I''d love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

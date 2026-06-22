@@ -1,0 +1,92 @@
+id: '00005671'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5671
+data:
+  user 1 personas: 'My favorite movie is star wars.
+
+    I work at mcdonald s.
+
+    I have a pet iguana.
+
+    I like to play video games.'
+  user 2 personas: 'Running is a hobby.
+
+    I work as a grill cook.
+
+    I am looking for a second job.
+
+    My favorite band is pink floyd.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: It''s nice to meet you, [User 2''s name]. What do you do for fun?
+
+    User 2: I like to run, play video games, and watch movies.
+
+    User 1: Those all sound like fun things to do. I like to play video games too. What''s your favorite game?
+
+    User 2: My favorite game is Skyrim. I''ve played it for hundreds of hours.
+
+    User 1: I''ve never heard of Skyrim. What''s it about?
+
+    User 2: It''s an open-world role-playing game where you can explore a huge world, complete quests, and fight monsters.
+
+    User 1: That sounds like a lot of fun. I might have to check it out.
+
+    User 2: I definitely recommend it. It''s one of the best games I''ve ever played.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a grill cook at a local restaurant.
+
+    User 1: Oh, that sounds like a fun job. Do you like it?
+
+    User 2: It''s okay. I''m looking for a second job, though.
+
+    User 1: Why''s that?
+
+    User 2: I need more money to save up for a car.
+
+    User 1: I see. What kind of car are you looking to get?
+
+    User 2: I''m not sure yet. I''m still saving up.
+
+    User 1: Well, good luck with that.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is Pink Floyd.
+
+    User 1: Oh, I love Pink Floyd. What''s your favorite song by them?
+
+    User 2: My favorite song is "Wish You Were Here."
+
+    User 1: That''s a great song. I love the guitar solo.
+
+    User 2: Me too. It''s one of the best guitar solos ever written.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, read books, and hang out with my friends.
+
+    User 1: Those all sound like fun things to do. I like to do those things too.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: Yeah, we do.
+
+    User 2: It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

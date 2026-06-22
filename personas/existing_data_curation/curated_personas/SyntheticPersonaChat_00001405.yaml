@@ -1,0 +1,80 @@
+id: '00001405'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1405
+data:
+  user 1 personas: 'I own blue shoes.
+
+    I like the color blue.
+
+    I like to listen to elvis.
+
+    I drive a blue car.
+
+    I changed my hair color to blue.'
+  user 2 personas: 'My mother lives with me.
+
+    I enjoy cooking for people.
+
+    I like to take my dog for long walks.
+
+    I have a lizard named ragini.'
+  Best Generated Conversation: 'User 1: Hi! I''m James.
+
+    User 2: Hi, James. I''m Kate.
+
+    User 1: It''s nice to meet you, Kate.
+
+    User 2: Nice to meet you too, James.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook for people.
+
+    User 1: That''s great! I love to cook too.
+
+    User 2: Me too! It''s so much fun to create something delicious and share it with others.
+
+    User 1: I agree. I love trying new recipes and seeing what I can come up with.
+
+    User 2: Me too! I''m always looking for new ways to challenge myself in the kitchen.
+
+    User 1: That''s awesome. I love learning new things.
+
+    User 2: Me too! I think it''s so important to keep learning and growing.
+
+    User 1: I agree. It''s the only way to stay ahead in this world.
+
+    User 2: I think so too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to take my dog for long walks.
+
+    User 1: That sounds fun! I used to have a dog, but he passed away a few years ago.
+
+    User 2: I''m sorry to hear that. Dogs are such loyal companions.
+
+    User 1: They are. I miss him every day.
+
+    User 2: I''m sure he misses you too.
+
+    User 1: I hope so.
+
+    User 2: Do you have any other pets?
+
+    User 1: No, I don''t have any other pets.
+
+    User 2: You should get a new dog! They''re great companions.
+
+    User 1: I''ve thought about it, but I''m not sure if I''m ready yet.
+
+    User 2: That''s okay. When you''re ready, you''ll know it.
+
+    User 1: Thanks, Kate. I appreciate your advice.
+
+    User 2: You''re welcome, James.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

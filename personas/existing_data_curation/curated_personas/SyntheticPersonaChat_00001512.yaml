@@ -1,0 +1,90 @@
+id: '00001512'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1512
+data:
+  user 1 personas: 'I am a meat eater.
+
+    I like anime shows.
+
+    My mother passed away in 1979.
+
+    I had to get a job early as a child.
+
+    I never learned how to swim.'
+  user 2 personas: 'Dancing is my passion.
+
+    I am a college student.
+
+    I drive a silver lexus.
+
+    I am terrible at math.
+
+    I have a dog named socks.'
+  Best Generated Conversation: 'User 1: Hello! I''m (name)
+
+    User 2: Hey, my name is (name)! What are some of your interests?
+
+    User 1: I love anime shows, and I am a meat eater.
+
+    User 2: Oh cool, I used to watch anime a lot when I was younger. Do you have a favorite show?
+
+    User 1: I like Attack on Titan, and I also like My Hero Academia.
+
+    User 2: I''ve heard good things about both of those shows. I''ve never watched them, but I''ve seen some clips.
+
+    User 1: They''re both really good. You should check them out.
+
+    User 2: I might do that. What else are you interested in?
+
+    User 1: I also like to dance. It''s my passion.
+
+    User 2: Oh, that''s cool. I''m not very good at dancing, but I like to watch it.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might do that. I''ve always wanted to learn how to dance.
+
+    User 1: There are a lot of good dance classes in the area.
+
+    User 2: I''ll have to look into that. Thanks for the suggestion.
+
+    User 1: No problem. What else do you like to do?
+
+    User 2: I''m a college student, so I spend a lot of time studying.
+
+    User 1: Oh, what are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Cool. What do you want to do after college?
+
+    User 2: I''m not sure yet. I''m thinking about going into marketing.
+
+    User 1: That''s a good field. There are a lot of job opportunities in marketing.
+
+    User 2: I know. That''s why I''m thinking about it.
+
+    User 1: What else are you interested in?
+
+    User 2: I have a dog named Socks.
+
+    User 1: Oh, I love dogs! What breed is he?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Golden retrievers are so cute! I love them.
+
+    User 2: They''re the best.
+
+    User 1: So, what do you like to do with your dog?
+
+    User 2: We go for walks, play fetch, and I take him to the park.
+
+    User 1: That sounds like fun. I love spending time with my dog too.
+
+    User 2: It''s the best'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

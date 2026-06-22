@@ -1,0 +1,76 @@
+id: 00008496
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8496
+data:
+  user 1 personas: 'I feel that i cannot live up to many peoples standards.
+
+    I am unsure of who i am attracted to.
+
+    I do not fully understand my own feelings.
+
+    I wonder what it would be like to be a different gender.
+
+    I am afraid of rejection from my parents.'
+  user 2 personas: 'I like going to canada.
+
+    I play dungeons and dragons.
+
+    I wear a lot of purple.
+
+    I want to be a doctor.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play Dungeons and Dragons, I like to go to Canada, and I want to be a doctor.
+
+    User 1: That''s cool. I like to play Dungeons and Dragons too.
+
+    User 2: Really? That''s awesome. What''s your favorite class?
+
+    User 1: I like to play the rogue. I like the sneaky aspect of it.
+
+    User 2: That''s a good class. I like to play the wizard.
+
+    User 1: I like the wizard too. It''s a lot of fun to be able to cast spells.
+
+    User 2: Yeah, it is. So, what''s your favorite part about Dungeons and Dragons?
+
+    User 1: I think my favorite part is the role-playing aspect. I like being able to create a character and then role-play as them.
+
+    User 2: That''s a good point. I like that too.
+
+    User 1: So, what''s your favorite place in Canada?
+
+    User 2: I think my favorite place in Canada is Banff National Park. It''s so beautiful there.
+
+    User 1: I''ve heard good things about Banff. I''ve never been there, but I''d like to go someday.
+
+    User 2: You should definitely go. It''s worth it.
+
+    User 1: I will. Thanks for the suggestion.
+
+    User 2: No problem. So, what do you want to be when you grow up?
+
+    User 1: I''m not sure. I''m thinking about becoming a teacher.
+
+    User 2: That''s a good choice. I''ve heard that teaching is a rewarding profession.
+
+    User 1: Yeah, I think it would be.
+
+    User 2: So, what do you think? Are you ready to play Dungeons and Dragons?
+
+    User 1: Sure, I''m ready.
+
+    User 2: Great. Let''s set up a game.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

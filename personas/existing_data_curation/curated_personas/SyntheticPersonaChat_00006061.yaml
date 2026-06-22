@@ -1,0 +1,58 @@
+id: '00006061'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6061
+data:
+  user 1 personas: 'I love lasagna like i m garfield.
+
+    I want to be an astronaut when i grow up.
+
+    I have a poster of neil tyson degrasse on my wall.
+
+    My two dogs are the best friends a girl could have.
+
+    Penn teller are my favorite magicians.'
+  user 2 personas: 'I am a savage.
+
+    I have no technological skills.
+
+    I am stuck in the past due to remotness.
+
+    I love the outdoors.'
+  Best Generated Conversation: 'User 1: What are you passionate about?
+
+    User 2: I love the outdoors. I love hiking, camping, and fishing.
+
+    User 1: That''s cool! I love the outdoors too. I like to go for walks in the park, and I love camping.
+
+    User 2: I''m kind of a savage. I don''t have any technological skills.
+
+    User 1: That''s okay. I''m not that great with technology either.
+
+    User 2: I''m stuck in the past because I live in a remote area.
+
+    User 1: That''s okay. I''m from the city, but I like to go out and explore the wilderness.
+
+    User 2: I''m not much of a people person.
+
+    User 1: That''s okay. I''m not much of a people person either. I''d rather spend time with my dogs.
+
+    User 2: I have two dogs. They''re the best friends a girl could have.
+
+    User 1: That''s nice. I have two dogs too. They''re my best friends.
+
+    User 2: I want to be an astronaut when I grow up.
+
+    User 1: That''s cool! I''ve always wanted to be an astronaut too.
+
+    User 2: I have a poster of Neil deGrasse Tyson on my wall. He''s my favorite scientist.
+
+    User 1: Me too! He''s so inspiring.
+
+    User 2: I love lasagna. I''m like Garfield.
+
+    User 1: That''s funny! I love lasagna too. It''s my favorite food.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00011777'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11777
+persona_description: A military historian who is interested in the history of the Roman Empire and particularly in the role of auxiliary troops in the Roman military. This person is likely to have a deep
+  understanding of Roman military history and would be interested in the specific details of the auxiliary troop unit mentioned in the text, such as its size, location, and destruction during a significant
+  historical event.
+expertise:
+  general_domain_top1pct: history
+  specific_domain_top1pct: roman history
+  general_domain_top01pct: None
+  specific_domain_top01pct: roman military history
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

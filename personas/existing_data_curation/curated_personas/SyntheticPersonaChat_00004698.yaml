@@ -1,0 +1,60 @@
+id: 00004698
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4698
+data:
+  user 1 personas: 'I live in a rural community.
+
+    I love robotics.
+
+    I have two kids.
+
+    I am fairly conservative in politics.
+
+    I work at amazon.'
+  user 2 personas: 'I am working in finance.
+
+    I listen to rap.
+
+    I drive a black car.
+
+    I like meat.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a finance manager.
+
+    User 1: What''s that like?
+
+    User 2: It''s interesting. I get to work with a lot of different people and learn about different businesses.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I like getting to see the impact of my work. When I make a decision, it can have a big impact on the company.
+
+    User 1: That''s cool. I''m a robotics engineer.
+
+    User 2: Oh, that''s really cool! I''ve always been fascinated by robots.
+
+    User 1: Me too! I love working on them and seeing how they can be used to improve the world.
+
+    User 2: I can imagine. What''s the most interesting project you''ve ever worked on?
+
+    User 1: I worked on a project where we built a robot that could help people with disabilities.
+
+    User 2: That''s amazing! How did that work?
+
+    User 1: The robot could help people with tasks like getting dressed or doing chores.
+
+    User 2: That''s so cool! I''m sure that was a rewarding project.
+
+    User 1: It was! It was really great to see how the robot could help people.
+
+    User 2: I''m sure. I''m so glad I got to talk to you today. You''ve given me a lot to think about.
+
+    User 1: You''re welcome! I''m glad we had this conversation too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

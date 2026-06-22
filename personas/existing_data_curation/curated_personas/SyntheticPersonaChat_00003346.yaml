@@ -1,0 +1,57 @@
+id: '00003346'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3346
+data:
+  user 1 personas: 'I am the oldest sibling.
+
+    My youngest sister is in first grade.
+
+    My father is a school teacher , he teaches middle school.
+
+    I have four siblings.
+
+    I am 5 3 and am the shortest person in my family.'
+  user 2 personas: 'I am an old man.
+
+    I don t have a lot of family members that i like.
+
+    I am an angry person.
+
+    I drive a jag.'
+  Best Generated Conversation: 'User 1: Hello, my name is [User 1''s name].
+
+    User 2: Hello, my name is [User 2''s name].
+
+    User 1: I''m 22 years old, I''m the oldest of 4 siblings, and my youngest sister is in first grade.
+
+    User 2: I''m 70 years old, I don''t have a lot of family members that I like, and I drive a Jaguar.
+
+    User 1: It sounds like you''ve had a very interesting life.
+
+    User 2: It has been. I''ve seen a lot of changes in the world over the years.
+
+    User 1: I''m sure you have. I''m curious, what was it like growing up in the 1950s?
+
+    User 2: It was a lot different than it is now. There was no internet, no cell phones, and no social media. We had to go to the library to look up information, and we had to use rotary phones to call
+    people.
+
+    User 1: That sounds like it would be really difficult.
+
+    User 2: It was, but it was also a lot of fun. We had to use our imaginations more, and we had to be more creative.
+
+    User 1: I can imagine. I''m glad I''m growing up in the 21st century.
+
+    User 2: Me too. It''s a much better time to be alive.
+
+    User 1: I agree.
+
+    User 2: I''m glad we had this conversation.
+
+    User 1: Me too. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

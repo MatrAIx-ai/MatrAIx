@@ -1,0 +1,68 @@
+id: '00005434'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5434
+data:
+  user 1 personas: 'My favorite drink is red wine.
+
+    I have one child.
+
+    I enjoy gardening.
+
+    I work for a clothes retailer.
+
+    I own two boxer dogs.'
+  user 2 personas: 'Recently i started taking archery classes and love it.
+
+    I ve never been a fan of sports.
+
+    I hope to keep improving and go big with this sport.
+
+    I work full time in an office , so i don t have much time to practice.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is John.
+
+    User 1: Nice to meet you, John. My name is Alice.
+
+    User 2: Nice to meet you too, Alice.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I recently started taking archery classes and I love it.
+
+    User 1: That''s great! I''ve always wanted to try archery but I''ve never had the chance.
+
+    User 2: You should definitely try it! It''s a lot of fun and it''s a great way to get exercise.
+
+    User 1: I''ll definitely look into it. What else do you like to do for fun?
+
+    User 2: I also enjoy gardening and spending time with my family.
+
+    User 1: That sounds nice. I love gardening too. I have two boxer dogs that I love to spend time with.
+
+    User 2: I love dogs! I wish I could have one but I don''t have enough time to take care of one.
+
+    User 1: It''s a lot of work but it''s also a lot of fun.
+
+    User 2: I''m sure it is. I''m happy for you that you have dogs to spend time with.
+
+    User 1: Thank you. I''m glad I have them too.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work for a clothing retailer.
+
+    User 2: Oh, that sounds fun. I''ve always wanted to work in retail.
+
+    User 1: It''s not bad. It can be a lot of work, but it''s also a lot of fun.
+
+    User 2: I''m sure it is. I''m glad you like your job.
+
+    User 1: Thanks. I do. I''m happy to be working in a field that I''m passionate about.
+
+    User 2: That''s great. I''m glad you''re happy with your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

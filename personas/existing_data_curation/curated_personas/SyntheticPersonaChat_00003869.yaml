@@ -1,0 +1,78 @@
+id: 00003869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3869
+data:
+  user 1 personas: 'My parents were divorced.
+
+    I grew up with 6 siblings.
+
+    I am a widow.
+
+    I ve broken my arm twice.
+
+    I am a very social person.'
+  user 2 personas: 'I am a baseball player.
+
+    My favourite colour is green.
+
+    I like to read books about chinese history.
+
+    My dog is called alfred.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name]. What''s your name?
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to play baseball, read books, and spend time with my dog.
+
+    User 1: That sounds like a lot of fun! I like to read books too. What kind of books do you like to read?
+
+    User 2: I like to read books about Chinese history.
+
+    User 1: That sounds really interesting! I''ve never read a book about Chinese history.
+
+    User 2: You should try it! They''re really interesting.
+
+    User 1: I might just do that. Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a baseball player.
+
+    User 1: Oh, that''s cool! What''s your favorite team?
+
+    User 2: I''m a fan of the Boston Red Sox.
+
+    User 1: Me too! They''re my favorite team too.
+
+    User 2: That''s awesome! We should go to a game together sometime.
+
+    User 1: I would love that!
+
+    User 2: Great! We''ll have to make it happen.
+
+    User 1: Sounds good.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go out with my friends, go to the movies, and travel.
+
+    User 2: That sounds like a lot of fun! I like to do those things too.
+
+    User 1: Great! We should get together sometime and do some of those things.
+
+    User 2: That would be fun!
+
+    User 1: Sounds good.
+
+    User 2: Nice talking to you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00006194
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6194
+data:
+  user 1 personas: 'I am committed to the environment.
+
+    I work in academia at a local university.
+
+    I like to go to the farmers market every weekend.
+
+    I live in nashville.
+
+    I play music in my spare time.'
+  user 2 personas: 'I enjoy shopping.
+
+    I used to cheerlead in high school.
+
+    I am married and have 2 kids.
+
+    I am a lifestyle blogger.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy shopping, and I used to cheerlead in high school.
+
+    User 1: That sounds like fun! I like to go to the farmers market every weekend, and I play music in my spare time.
+
+    User 2: I love the farmers market! I always find something delicious to eat.
+
+    User 1: Me too! I love trying new foods. Do you have any kids?
+
+    User 2: Yes, I have two boys. They''re my whole world.
+
+    User 1: That''s great! I''m not married, but I have a dog.
+
+    User 2: Dogs are great! I love animals.
+
+    User 1: Me too! I''m glad we have so much in common.
+
+    User 2: Me too! What do you like to do for work?
+
+    User 1: I work in academia at a local university.
+
+    User 2: That sounds interesting! What do you teach?
+
+    User 1: I teach music. I love helping students learn to play instruments.
+
+    User 2: That''s awesome! I used to play the piano when I was younger.
+
+    User 1: That''s great! I''m always looking for new people to play music with.
+
+    User 2: Me too! Maybe we could play together sometime.
+
+    User 1: That would be fun! I''d love to hear you play the piano.
+
+    User 2: I''d love to play for you!
+
+    User 1: Great! Let''s exchange numbers and we can set something up.
+
+    User 2: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00002015'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2015
+data:
+  user 1 personas: 'I m a photographer.
+
+    I have a sleeve of tattoos.
+
+    I love dogs.
+
+    I like to drink at bars with friends.'
+  user 2 personas: 'I grew up in the deep south.
+
+    I hate seafood but love mexican food.
+
+    I love to hunt.
+
+    My mother was a piano teacher.'
+  Best Generated Conversation: 'User 1: I love dogs! I have two of them myself. What kind of dog do you have?
+
+    User 2: I have a beagle named Daisy. She''s the sweetest dog in the world.
+
+    User 1: Beagles are so cute! I love their little ears.
+
+    User 2: Me too! They''re also really smart dogs.
+
+    User 1: I''ve heard that. What''s your favorite thing to do with Daisy?
+
+    User 2: I love to take her for walks in the park. She loves to run around and play.
+
+    User 1: That sounds like a lot of fun! I love taking my dogs to the park too.
+
+    User 2: Do you have any other pets?
+
+    User 1: No, just the two dogs. I''ve thought about getting a cat, but I''m not sure if I''m ready for the responsibility.
+
+    User 2: Cats are a lot of work, but they''re also a lot of fun.
+
+    User 1: I''ve heard that. Maybe I''ll get one someday.
+
+    User 2: You should! They''re great companions.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I''m a photographer. I love taking pictures of nature and animals.
+
+    User 2: That sounds really cool! I love looking at pictures of nature.
+
+    User 1: I''m glad! I love sharing my photos with people.
+
+    User 2: Do you have a website or anything where you post your photos?
+
+    User 1: I do! I have a website and I''m also on Instagram.
+
+    User 2: I''ll have to check them out!
+
+    User 1: You should! I''m always posting new photos.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

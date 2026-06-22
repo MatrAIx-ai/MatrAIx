@@ -1,0 +1,64 @@
+id: '00000576'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 576
+data:
+  user 1 personas: 'I am a painter.
+
+    I won a lottery 6 years ago but nobody knows.
+
+    I live a lie.
+
+    My wife hates me , she thinks i am lazy and poor.'
+  user 2 personas: 'Once a year , i take a week off and head to florida.
+
+    I freeze up in social situations.
+
+    I was diagnosed with mild ocd in college.
+
+    Sometimes i feel like i ve already been through life once before.'
+  Best Generated Conversation: 'User 1: Hello there! How are you doing today?
+
+    User 2: I''m doing okay, thanks for asking. How are you?
+
+    User 1: I''m doing well, thank you. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: That sounds lovely. I like to read too. What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Hunger Games series, and the Twilight series.
+
+    User 1: I''ve read the Harry Potter series too. I love them! What do you like about them?
+
+    User 2: I love the characters and the story. It''s really well-written.
+
+    User 1: I agree. I''ve read them all multiple times. What''s your favorite book in the series?
+
+    User 2: I think my favorite book is The Order of the Phoenix. What''s yours?
+
+    User 1: Mine is probably The Prisoner of Azkaban. I love the time travel element.
+
+    User 2: That''s a good one too. I love how Harry and Hermione have to go back in time to save Sirius.
+
+    User 1: Me too! It''s such a great book.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a painter.
+
+    User 2: Oh, that''s cool! What kind of paintings do you do?
+
+    User 1: I mostly do landscapes and portraits.
+
+    User 2: That sounds really interesting. Do you ever sell your paintings?
+
+    User 1: Sometimes. I''ve had a few exhibitions, but I mostly sell them online.
+
+    User 2: That''s great! I''m sure you''re very talented.
+
+    User 1: Thank you! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

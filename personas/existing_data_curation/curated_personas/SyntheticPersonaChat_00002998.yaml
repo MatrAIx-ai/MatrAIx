@@ -1,0 +1,62 @@
+id: 00002998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2998
+data:
+  user 1 personas: 'I am an avid fisherman.
+
+    I hate fast food.
+
+    I have a george foreman grill at home.
+
+    I know how to play the guitar.
+
+    I like to race go carts.'
+  user 2 personas: 'I like to hike.
+
+    I am a farmer.
+
+    I graduated from college.
+
+    I am the youngest of 4 children.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I like to hike. What about you?
+
+    User 1: I like to fish. I''m an avid fisherman.
+
+    User 2: That''s cool. I''ve never been fishing before.
+
+    User 1: You should try it sometime. It''s a lot of fun.
+
+    User 2: Maybe I will. Do you have any advice for beginners?
+
+    User 1: Sure. The most important thing is to have the right gear. You need a good rod and reel, and you also need some bait.
+
+    User 2: What kind of bait do you use?
+
+    User 1: I like to use worms, but you can also use lures or flies.
+
+    User 2: I''m not sure I''m brave enough to use worms.
+
+    User 1: You don''t have to use worms if you don''t want to. Lures and flies are also good options.
+
+    User 2: I think I''ll try lures. They sound more appealing.
+
+    User 1: That''s a good choice. Lures are a lot of fun to use.
+
+    User 2: So, what''s the best way to learn how to fish?
+
+    User 1: The best way is to go with someone who knows what they''re doing. They can show you the ropes and help you get started.
+
+    User 2: I don''t know anyone who fishes.
+
+    User 1: You can always find someone to teach you. There are a lot of fishing clubs and organizations out there that can help you learn.
+
+    User 2: I''ll look into that. Thanks for the advice.
+
+    User 1: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00004838
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4838
+data:
+  user 1 personas: 'My favorite band is nirvana.
+
+    I am a casual dresser.
+
+    I am a waitress at a local restaurant.
+
+    My car needs some repairs.
+
+    I am overall happy with life.'
+  user 2 personas: 'I am the youngest of 3.
+
+    I went to college in chicago.
+
+    I love playing tennis.
+
+    I am pursuing my law degree.
+
+    I love reading mysteries in my free time.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi, how are you doing?
+
+    User 1: I''m doing well, thanks! What about you?
+
+    User 2: I''m doing great, thanks! What do you do for fun?
+
+    User 1: I like to go to concerts, play video games, and read. What about you?
+
+    User 2: I like to play tennis, go to the gym, and read mysteries. What''s your favorite band?
+
+    User 1: My favorite band is Nirvana. They''re so good! What''s your favorite kind of mystery book?
+
+    User 2: I like psychological thrillers. They''re so suspenseful! What do you like about Nirvana?
+
+    User 1: I love their music. It''s so raw and emotional. Do you have a favorite Nirvana song?
+
+    User 2: I love "All Apologies." It''s so beautiful and sad. What''s your favorite tennis player?
+
+    User 1: I love Serena Williams. She''s so strong and powerful. What''s your favorite kind of tennis?
+
+    User 2: I like singles tennis. I like the individual challenge. Do you play tennis?
+
+    User 1: I used to play, but I don''t have a lot of time anymore. I miss it. What are you studying for law school?
+
+    User 2: I''m studying criminal law. I want to be a lawyer someday. What''s your job?
+
+    User 1: I''m a waitress at a local restaurant. It''s not my dream job, but it pays the bills. What law school are you going to?
+
+    User 2: I''m going to the University of Chicago Law School. It''s a great school. Do you like your job?
+
+    User 1: I like it most of the time. It can be stressful, but it''s also a lot of fun. I like meeting new people and learning about different cultures. What do you think your future holds?
+
+    User 2: I hope to be a successful lawyer and make a difference in the world. I think I''m going to make a great lawyer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

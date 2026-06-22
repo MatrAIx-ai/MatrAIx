@@ -1,0 +1,18 @@
+id: '00041424'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41424
+persona_description: A user who is interested in using GRASS for terrain generation and map creation, especially for custom scenery. They are familiar with the concepts of coordinate systems, map projections,
+  and vector data, and are looking for guidance on how to reproject vector data and select an attribute model for their data. They may also be interested in using shape-decode and GRASS for handling shapefiles
+  and converting them to polygons.
+expertise:
+  general_domain_top1pct: Geography/Geospatial Analysis
+  specific_domain_top1pct: Geospatial Software (GRASS)
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,55 @@
+id: '00003740'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3740
+data:
+  user 1 personas: 'I m often late for class.
+
+    I wish i was taller so i could reach the cookie jar.
+
+    I lay awake at night so i can watch the stars.
+
+    I want a porsche.
+
+    I cuddle up with my dog every night.'
+  user 2 personas: 'I am tall and blonde.
+
+    I work as an interior designer.
+
+    I am chubby.
+
+    My favorite band is insane clown posse.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1. I''m often late for class, I wish I was taller so I could reach the cookie jar, I lay awake at night so I can watch the stars, I want a Porsche,
+    and I cuddle up with my dog every night.
+
+    User 2: Hi, I''m User 2. I''m tall and blonde, I work as an interior designer, I''m chubby, and my favorite band is Insane Clown Posse.
+
+    User 1: It''s nice to meet you, User 2. I''m impressed that you''re tall. I''m often late for class because I''m always rushing around. I wish I could be more organized.
+
+    User 2: It''s nice to meet you too, User 1. I''m sure you''ll get there eventually. I''m a night owl, so I usually stay up late watching the stars. What do you like to do at night?
+
+    User 1: I love to cuddle up with my dog. He''s the best listener I know.
+
+    User 2: That''s sweet. I have two cats, but they''re not as cuddly as your dog.
+
+    User 1: I''m sure they''re just as sweet.
+
+    User 2: They are.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to concerts, read books, and watch movies.
+
+    User 1: Those all sound like fun things to do.
+
+    User 2: They are. I''m always looking for new things to do.
+
+    User 1: Me too. I''m always up for an adventure.
+
+    User 2: That''s good to hear. I''m sure we''ll get along just fine.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

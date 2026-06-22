@@ -1,0 +1,17 @@
+id: 00000769
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 769
+persona_description: A U.S. weather official who specializes in forecasting and monitoring weather patterns in the Pacific region, particularly focusing on the La Nina weather pattern and its effects on
+  weather in the United States, Asia, and South America. They have confirmed the arrival of the La Nina weather pattern and will continue to monitor and forecast its impact on weather conditions.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: La Nina forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

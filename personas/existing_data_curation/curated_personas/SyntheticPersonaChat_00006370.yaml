@@ -1,0 +1,58 @@
+id: '00006370'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6370
+data:
+  user 1 personas: 'I am an international business man.
+
+    I never went to school.
+
+    I never met my parents.
+
+    I am a genius and know over 300 languages.'
+  user 2 personas: 'I play for the baltimore orioles.
+
+    I am a baseball player.
+
+    I am married and have three kids.
+
+    I went to miami university.'
+  Best Generated Conversation: 'User 1: Hi, my name is John. I''m an international businessman.
+
+    User 2: Hi, my name is Dave. I''m a baseball player for the Baltimore Orioles.
+
+    User 1: Wow, that''s cool! I''m a big baseball fan.
+
+    User 2: Thanks! I''ve been playing baseball since I was a kid.
+
+    User 1: That''s great! What''s your favorite thing about baseball?
+
+    User 2: I love the competition and the teamwork.
+
+    User 1: I can understand that. Baseball is a great team sport.
+
+    User 2: It sure is. I''m glad you''re a fan.
+
+    User 1: Me too. I''ve been to a few games this year.
+
+    User 2: Oh, that''s awesome! How did you like it?
+
+    User 1: I loved it! It was so much fun to watch the game and be in the atmosphere.
+
+    User 2: I''m glad you enjoyed it. I''m sure you''ll come back again soon.
+
+    User 1: I definitely will!
+
+    User 2: Great! I''m glad we had this conversation.
+
+    User 1: Me too. It was great meeting you, Dave.
+
+    User 2: It was great meeting you too, John.
+
+    User 1: I hope you have a great day.
+
+    User 2: You too, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

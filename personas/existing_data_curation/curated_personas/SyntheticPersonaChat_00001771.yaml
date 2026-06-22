@@ -1,0 +1,64 @@
+id: '00001771'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1771
+data:
+  user 1 personas: 'I am a cheerleader.
+
+    I live on a ranch.
+
+    I have black hair.
+
+    I enjoy the outdoors.
+
+    I am 21 years old.'
+  user 2 personas: 'I have no parents or siblings.
+
+    I always travel alone.
+
+    My favorite meal is steak.
+
+    I am incredibly smart.
+
+    I only sleep 3 hours a day.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is Jane.
+
+    User 1: It''s nice to meet you, Jane. I''m [name].
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel.
+
+    User 1: That''s cool! I''ve always wanted to travel the world.
+
+    User 2: It''s a lot of fun. I''ve been to a lot of different countries.
+
+    User 1: Wow, that''s impressive! What''s your favorite place you''ve been to?
+
+    User 2: My favorite place was probably Paris. It''s such a beautiful city.
+
+    User 1: I''ve heard that Paris is amazing. I''ve always wanted to go there.
+
+    User 2: You should definitely go! It''s definitely worth it.
+
+    User 1: I will!
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to cheerlead. I''ve been a cheerleader for my college''s football team for the past two years.
+
+    User 2: That''s cool! I''ve never been a cheerleader, but I''ve always thought it looked like a lot of fun.
+
+    User 1: It is! It''s a great way to stay active and have fun.
+
+    User 2: I''m glad you like it.
+
+    User 1: I do! It''s definitely my favorite thing to do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

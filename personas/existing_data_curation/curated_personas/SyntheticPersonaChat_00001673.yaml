@@ -1,0 +1,68 @@
+id: '00001673'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1673
+data:
+  user 1 personas: 'I live in chicago.
+
+    I like to use a lot of exclamation marks when i type.
+
+    I have three dogs and two cats.
+
+    Both my moms tell me they love me when i call them.
+
+    Playing quake on slackware linux makes me happy.'
+  user 2 personas: 'I am all about family and fun.
+
+    I am a free spirit.
+
+    The idea of working is not my cup of tea.
+
+    I like to live off of the land.
+
+    My parents were like this as well.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name]. I''m from Chicago, IL.
+
+    User 2: Hi! I''m [user 2 name]. I''m from Oregon, but I''m currently living in Portland, OR.
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to spend time with my family and friends. I also love to be active, so I go hiking, biking, and kayaking a lot.
+
+    User 1: That sounds great! I love to be active too. I love to play video games, and I also love to play sports.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play a lot of different types of games, but I''m really into shooters and RPGs right now.
+
+    User 2: I''ve never been a big fan of shooters, but I do like RPGs. I''m currently playing Skyrim for the third time.
+
+    User 1: Nice! I''ve heard good things about Skyrim.
+
+    User 2: It''s a really great game. I''ve put over 100 hours into it.
+
+    User 1: Wow! That''s a lot of time.
+
+    User 2: Yeah, it is. But it''s a lot of fun.
+
+    User 1: It sounds like it.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I''ve always been interested in programming, but I''m not very good at it.
+
+    User 1: It''s not that hard to learn. There are a lot of resources available online.
+
+    User 2: I''ll have to check that out.
+
+    User 1: It''s definitely worth it.
+
+    User 2: Thanks for the advice.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

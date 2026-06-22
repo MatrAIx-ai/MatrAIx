@@ -60,7 +60,7 @@ _Existing persona datasets / profile collections (also log scale + how to compar
 - ~5,648 new synthetic personas with ~11K conversations (plus a 4,723-persona / 10,906-conversation PersonaChat extension); a mixture-of-experts Critic iteratively filters quality, cutting the Turing-test losing rate vs human PersonaChat from 17.2% to 8.8% over three rounds.
 - Relevance: a Generator–Critic quality-control loop relevant to MatrAIx's synthetic-persona pipeline, with a measured fidelity signal (Turing-test win rate vs human personas) for how human generated personas read.
 
-### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576)
+### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576) (Keyang Xuan)
 - A persona conditiong method that uses open-ended first-person life narratives to steer LLMs toward more representative, consistent, and diverse virtual personas for approximating human survey respondents.
 - Scale/method: prompt the LLM with open-ended questions to self-generate a large anthology of backstories, then greedy-match backstories to real survey respondents to build aligned "virtual subjects".
 - Relevance: a persona-generation recipe which is relevant to MatrAIxPersona's narrative-expansion step (Task 1, Step 3), offering a generation-plus-validation pattern for population-grounded personas through respondent matching and distribution/consistency metrics.
@@ -224,6 +224,16 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 ### [Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization](https://aclanthology.org/2024.findings-emnlp.969/) (Xiaoyi-Liu)
 ### [Population-Aligned Persona Generation for LLM-based Social Simulation](https://arxiv.org/abs/2509.10127) (Xiaoyi-Liu)
 
+Some none-ML references for attributes that the team (and previous works organized in the above) has been using:
+
+### The stories we live by: Personal myths and the making of the self. (Xiaoyi-Liu)
+- basis for using personal experiences and social norms in persona problems
+### [An alternative "description of personality": The Big-Five factor structure](https://psycnet.apa.org/record/1991-09869-001) (Xiaoyi-Liu)
+- basis for "Big 5" or OCEAN for persona problems
+### [Universals in the Content and Structure of Values: Theoretical Advances and Empirical Tests in 20 Countries](https://www.researchgate.net/publication/230557790_Universals_in_the_Content_and_Structure_of_Values_Theoretical_Advances_and_Empirical_Tests_in_20_Countries) (Xiaoyi-Liu)
+- also known as the Schwartz values after the author. 
+### [Primal world beliefs](https://psycnet.apa.org/record/2018-49649-001) (Xiaoyi-Liu)
+- another psychology reference for persona design
 
 ---
 
@@ -317,7 +327,7 @@ Build the raw persona pool through four complementary sources, all conforming to
 |---|---------|-------------|----------|
 | 2.1 | 📥 **Collect open-source datasets** | Gather existing persona datasets (from the related work), clean and normalize into the MatrAIx schema. | @Xiaoyi-Liu, @AravindMohan10, @Eliza_Fan |
 | 2.2 | 🧪 **Heuristic + synthetic generation** | Per-domain attribute combination + generation with multiple strong models (GPT, Claude, DeepSeek). Seed with real-world demographic priors for realism. | @ElegantLin, @AravindMohan10, @brihijoshi @isgla @Eliza_Fan|
-| 2.3 | 🧑 **Personas from real human info** | Build personas seeded by public/real signals (public figures, social profiles, chat/conversation data), properly anonymized. | @Laerdon Kim, @brihijoshi, @rosierogao, @ziweil2 |
+| 2.3 | 🧑 **Personas from real human info** | Build personas seeded by public/real signals (public figures, social profiles, chat/conversation data), properly anonymized. | @Laerdon Kim, @brihijoshi, @rosierogao, @ziweil2 @Eliza_Fan |
 | 2.4 | 📝 **Questionnaire → volunteers** | Design a questionnaire, collect volunteer data, and expand each response into a full persona via synthetic augmentation. | _@name1, @name2, @name3_ |
 | 2.5 | 🔁 **Continuous-growth intake** | Let contributors keep adding personas over time (upload conversations, fill/extend a profile) so the pool grows; gate on the Task 3 quality bar. | _@name1, @name2, @name3_ |
 

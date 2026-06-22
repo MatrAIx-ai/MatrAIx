@@ -1,0 +1,66 @@
+id: 00000749
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 749
+data:
+  user 1 personas: 'I like to swim.
+
+    I like to read.
+
+    My favorite show is thevoice.
+
+    I am blue and tall.'
+  user 2 personas: 'I enjoy reading.
+
+    I am a vegan.
+
+    I am going back to school.
+
+    I love animals.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, nice to meet you. I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy reading, swimming, and watching The Voice.
+
+    User 1: I like to read and swim too! What are your favorite books and swimming spots?
+
+    User 2: I like to read books about psychology and swimming in the ocean.
+
+    User 1: I love psychology too! I''ve been wanting to go swimming in the ocean for a while now.
+
+    User 2: It''s really fun! You should go sometime.
+
+    User 1: I will!
+
+    User 2: What else do you like to do?
+
+    User 1: I like to watch The Voice. It''s my favorite show.
+
+    User 2: I love The Voice too! Who''s your favorite coach?
+
+    User 1: I like Blake Shelton and Gwen Stefani the best.
+
+    User 2: Me too! They''re both so talented.
+
+    User 1: I agree.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to the beach with my family.
+
+    User 1: That sounds fun! I wish I could go.
+
+    User 2: You should!
+
+    User 1: I''ll try.
+
+    User 2: Good luck!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00003451'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3451
+data:
+  user 1 personas: 'I live in new york city.
+
+    I am a writer.
+
+    I enjoy going to museums.
+
+    I have ten nieces and nephews.'
+  user 2 personas: 'I have a very unhealthy diet.
+
+    I have a cheap car my dad gave me.
+
+    I can run very fast for long distances.
+
+    I am very skinny and energetic.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m from New York City!
+
+    User 2: Oh, nice! I''ve always wanted to visit.
+
+    User 1: It''s a great city! There''s always something to do.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to go to museums. There are so many amazing museums in New York City.
+
+    User 2: That''s cool! I''ve never been to a museum before.
+
+    User 1: You should definitely check out the Metropolitan Museum of Art. It''s one of the best museums in the world.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! What do you do for fun?
+
+    User 2: I like to run. I can run very fast for long distances.
+
+    User 1: That''s impressive! I''m not very athletic.
+
+    User 2: You should try it! It''s a great way to stay in shape.
+
+    User 1: I might try it!
+
+    User 2: I also have a very unhealthy diet. I eat a lot of junk food.
+
+    User 1: Oh, that''s not good.
+
+    User 2: I know, I know. I''m trying to change my diet, but it''s hard.
+
+    User 1: It''s never too late to start!
+
+    User 2: Thanks for the encouragement.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00004218
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4218
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I am studying for my master s.
+
+    I am a student in social sciences.
+
+    I also like eating sushi.
+
+    Cooking is one of my pass times.'
+  user 2 personas: 'My mother is a professional make up artist.
+
+    I want a dog , but that is a lot of commitment.
+
+    I sometimes think i m shallow.
+
+    If i want it , i buy it.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: Hi, my name is [name].
+
+    User 1: Nice to meet you [name], my name is [name]. What are you doing today?
+
+    User 2: Not much, just working on a project.
+
+    User 1: Oh, what kind of project?
+
+    User 2: I''m working on a research paper for my master''s degree.
+
+    User 1: Oh, that sounds interesting. What are you studying?
+
+    User 2: I''m studying social sciences.
+
+    User 1: Oh, that''s cool. I''m a big fan of social science. What''s your favorite subject?
+
+    User 2: I really like psychology, but I''m also interested in sociology and anthropology.
+
+    User 1: Those are all really interesting subjects. I''m a student too, but I''m studying business.
+
+    User 2: Oh, that''s cool. What do you want to do with your business degree?
+
+    User 1: I''m not sure yet, but I''m thinking about working in marketing.
+
+    User 2: That sounds like a great career.
+
+    User 1: Thanks, I think so too.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet, but I''m thinking about going to a concert.
+
+    User 2: Oh, that sounds fun. Who are you going to see?
+
+    User 1: I''m not sure yet, but I''m thinking about seeing Taylor Swift.
+
+    User 2: Oh, that would be so cool. I love her music.
+
+    User 1: Me too, she''s one of my favorite artists.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, cook, and travel.
+
+    User 2: Oh, I love to cook too. What''s your favorite thing to cook?
+
+    User 1: I love to make pasta.
+
+    User 2: Oh, that sounds delicious. I love pasta too.
+
+    User 1: I''m glad to hear it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

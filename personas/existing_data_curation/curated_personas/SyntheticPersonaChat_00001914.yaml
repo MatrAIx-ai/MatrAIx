@@ -1,0 +1,72 @@
+id: 00001914
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1914
+data:
+  user 1 personas: 'I have two tattoos.
+
+    I work in an office.
+
+    I enjoy shopping.
+
+    My favorite hobby is knitting.
+
+    I have a cat named speckles.'
+  user 2 personas: 'I was a swimmer in college.
+
+    I love starbucks coffee.
+
+    I have a beautiful rose garden.
+
+    I have a cat named pickles.
+
+    My parents met at woodstock.'
+  Best Generated Conversation: 'User 1: Hi! My name is [name].
+
+    User 2: Hi, nice to meet you! My name is [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go swimming, and I also love to garden.
+
+    User 1: That''s so cool! I love to go shopping and I also love to knit.
+
+    User 2: I used to knit a lot when I was younger, but I haven''t done it in a while.
+
+    User 1: You should pick it up again! It''s really relaxing and therapeutic.
+
+    User 2: I think I will! I love to make things with my hands.
+
+    User 1: Me too! I love to make clothes and blankets.
+
+    User 2: That''s so cool! Do you sell your clothes and blankets?
+
+    User 1: I have in the past, but I don''t do it too often.
+
+    User 2: I think you should! I''m sure people would love to buy your stuff.
+
+    User 1: Thanks for the encouragement! I''ll think about it.
+
+    User 2: You''re welcome! So, what are your tattoos of?
+
+    User 1: My first tattoo is a small heart on my wrist, and my second tattoo is a flower on my back.
+
+    User 2: Those sound beautiful! I''ve always wanted to get a tattoo, but I''m not sure what I want yet.
+
+    User 1: You could always get a small tattoo first, just to see how you like it.
+
+    User 2: That''s a good idea! I''ll definitely think about it.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a cat named Pickles.
+
+    User 1: That''s so cute! I have a cat named Speckles.
+
+    User 2: We should have a cat playdate!
+
+    User 1: That would be so much fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

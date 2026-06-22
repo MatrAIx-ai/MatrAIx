@@ -1,0 +1,60 @@
+id: '00005653'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5653
+data:
+  user 1 personas: 'My father was a driver himself.
+
+    I got off the road when i married my sweetheart.
+
+    I work on semi trucks for a living.
+
+    I want to take her on vacations one day.'
+  user 2 personas: 'I have 2 dogs , both golden retrievers.
+
+    I work in a circus as a juggler.
+
+    I am on a keto diet.
+
+    I like going to the moives.
+
+    My father and grandfather also worked in the circus.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m good, thanks for asking. How about you?
+
+    User 1: I''m doing well, thanks. What do you do for a living?
+
+    User 2: I work as a juggler in a circus.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to juggle.
+
+    User 2: It''s not as hard as it looks! You should give it a try.
+
+    User 1: Maybe I will. What''s your favorite thing about your job?
+
+    User 2: I love the feeling of being up on stage and making people laugh.
+
+    User 1: That sounds like a lot of fun. Do you have any pets?
+
+    User 2: Yes, I have two golden retrievers.
+
+    User 1: Oh, I love golden retrievers! They''re such sweet dogs.
+
+    User 2: They are! They''re the best dogs in the world.
+
+    User 1: I''m sure they''re very happy to have you for a dad.
+
+    User 2: They are. They love to play fetch and go for walks.
+
+    User 1: I can imagine. They sound like great dogs.
+
+    User 2: They are. I''m so glad I have them in my life.
+
+    User 1: I''m sure they''re glad to have you too.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

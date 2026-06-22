@@ -1,0 +1,92 @@
+id: 00007825
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7825
+data:
+  user 1 personas: 'I listen to a fall out boy record every day.
+
+    I drive a honda that is seen better days.
+
+    I am looking forward to reading the latest political thriller.
+
+    I love watching sitcoms on television.
+
+    Sometimes , i sit by strangers on the subway and strike up a conversation.'
+  user 2 personas: 'I am in love with adam levine.
+
+    I need extra iron in my diet.
+
+    I love eating kale.
+
+    I have two cats.
+
+    I have two children under ten.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to watch sitcoms on TV. What about you?
+
+    User 1: I love watching sitcoms too! My favorite is The Office.
+
+    User 2: I love that show! I also love Friends.
+
+    User 1: Me too! Who''s your favorite character?
+
+    User 2: Chandler Bing. He''s so funny!
+
+    User 1: I agree! He''s my favorite too.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I love reading, especially political thrillers. I''m looking forward to reading the latest one by [author name].
+
+    User 2: I love to read too! I''ve never read a political thriller, but I''m sure I would like it.
+
+    User 1: You should check it out! It''s really good.
+
+    User 2: I will! What else do you like to do?
+
+    User 1: I like to go to concerts. I recently went to a Fall Out Boy concert. It was amazing!
+
+    User 2: I love Fall Out Boy! I''ve seen them in concert twice.
+
+    User 1: No way! They''re so good live.
+
+    User 2: I know, right?
+
+    User 1: I also like to go to the park with my dog.
+
+    User 2: I love animals! I have two cats.
+
+    User 1: I love cats too!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, cool! I''m a stay-at-home mom.
+
+    User 1: That sounds like a lot of work.
+
+    User 2: It is, but it''s also really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite thing about teaching?
+
+    User 1: I love seeing my students learn and grow.
+
+    User 2: That sounds like a great feeling.
+
+    User 1: It is.
+
+    User 2: Well, it was nice chatting with you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

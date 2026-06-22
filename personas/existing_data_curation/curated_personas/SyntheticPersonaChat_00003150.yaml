@@ -1,0 +1,70 @@
+id: '00003150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3150
+data:
+  user 1 personas: 'I live in a large home.
+
+    I am a doctor.
+
+    I work for a large hospital.
+
+    Boating is my favorite activity.
+
+    I enjoy vacations at the beach.'
+  user 2 personas: 'I like to watch shows on netflix.
+
+    My sister is my best friend.
+
+    I want to move to las vegas.
+
+    I want to learn self defense.
+
+    I want to go back to school.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey! How''s it going?
+
+    User 1: Good! I''m a doctor, and I live in a large home. My favorite activity is boating, and I enjoy vacations at the beach.
+
+    User 2: That''s cool! I like to watch shows on Netflix, and my sister is my best friend. I want to move to Las Vegas, learn self defense, and go back to school.
+
+    User 1: Wow, that''s a lot of goals! I''m sure you''ll achieve them all.
+
+    User 2: Thanks! I hope so. What''s your favorite show on Netflix?
+
+    User 1: I like to watch The Crown, and I just finished watching Squid Game.
+
+    User 2: I haven''t seen either of those, but I''ve heard good things about them.
+
+    User 1: They''re both really good! I highly recommend them.
+
+    User 2: I''ll have to check them out. Thanks for the recommendation!
+
+    User 1: No problem! So, what do you like to do for fun?
+
+    User 2: I like to go to the movies, play video games, and go to concerts.
+
+    User 1: That sounds like fun! I like to do all of those things too.
+
+    User 2: Cool! Maybe we could go to a movie together sometime.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! What do you want to see?
+
+    User 1: I''m not sure. What do you want to see?
+
+    User 2: I''m not sure either. What''s playing?
+
+    User 1: There''s a new James Bond movie out, and there''s also a new Batman movie.
+
+    User 2: Oh, I''ve been wanting to see the new James Bond movie!
+
+    User 1: Me too! That sounds like a plan.
+
+    User 2: Great! I''ll text you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

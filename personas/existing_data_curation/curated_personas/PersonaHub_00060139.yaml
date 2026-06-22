@@ -1,0 +1,19 @@
+id: 00060139
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60139
+persona_description: A researcher in clinical trials who is interested in understanding the assumptions and limitations of different methods for handling missing data, and is looking for methods that provide
+  valid type I error rates under explicitly stated assumptions taking missing data status into account. They are open to more robust and reliable models and are willing to collect auxiliary data, information
+  about reason for drop-out, and follow up on drop-outs to obtain efficacy outcome data. They are also interested in sensitivity analyses to assess the sensitivity of the results to the assumptions about
+  the missing data mechanism.
+expertise:
+  general_domain_top1pct: statistics
+  specific_domain_top1pct: missing data analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

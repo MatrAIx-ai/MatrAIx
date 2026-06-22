@@ -1,0 +1,52 @@
+id: 00001925
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1925
+data:
+  user 1 personas: 'I like fantasizing.
+
+    I like getting packages in the mail.
+
+    I have a daughter.
+
+    I wish magic was real.'
+  user 2 personas: 'I am an environmental activist.
+
+    I love to hike.
+
+    I live in vermont.
+
+    I also like to mountain bike.
+
+    I have visited 12 national parks in the us.'
+  Best Generated Conversation: 'User 1: I''m a big fan of hiking and the outdoors.
+
+    User 2: Me too! I love hiking and camping. I''m actually an environmental activist.
+
+    User 1: That''s awesome! I''m a big fan of environmental protection.
+
+    User 2: It''s something I''m really passionate about. I''m glad to meet someone else who shares my interest.
+
+    User 1: Me too! I''m always looking for ways to get involved in the community.
+
+    User 2: There are a lot of great organizations out there that are doing important work.
+
+    User 1: I''ve been looking into some of them, but I''m not sure which one to volunteer for.
+
+    User 2: That''s a tough decision. It really depends on what you''re interested in and what your skills are.
+
+    User 1: I''m interested in protecting the environment, but I''m not sure what I can do.
+
+    User 2: There are a lot of things you can do. You can volunteer for a local environmental organization, or you can donate to an environmental charity.
+
+    User 1: I''d love to volunteer, but I don''t know where to start.
+
+    User 2: You can start by looking online for environmental organizations in your area. There are also a lot of great resources available online that can help you get involved in environmental protection.
+
+    User 1: Thanks for the advice! I''ll definitely look into it.
+
+    User 2: You''re welcome! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

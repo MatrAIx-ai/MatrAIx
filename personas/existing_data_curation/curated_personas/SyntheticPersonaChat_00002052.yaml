@@ -1,0 +1,60 @@
+id: '00002052'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2052
+data:
+  user 1 personas: 'My hobby is sewing.
+
+    I am a cashier at a grocery store.
+
+    I like to go swimming.
+
+    I like to make fresh pies.'
+  user 2 personas: 'I love to read fantasy novels and poetry.
+
+    I often help her sort books in the library.
+
+    I would like to be a journalist one day.
+
+    My mother is a librarian.'
+  Best Generated Conversation: 'User 1: I love to sew. I make all my own clothes and I even make my own quilts.
+
+    User 2: That''s so cool! I love to read fantasy novels and poetry.
+
+    User 1: Oh, that''s great! I love to read too. Do you have a favorite author?
+
+    User 2: Yes, I love Brandon Sanderson. His books are so well-written and they''re always so exciting.
+
+    User 1: I''ve never heard of him. I''ll have to check him out.
+
+    User 2: You definitely should! He''s one of the best fantasy authors out there.
+
+    User 1: I also like to go swimming. It''s a great way to relax and get some exercise.
+
+    User 2: I love swimming too! It''s so much fun to just float in the water and relax.
+
+    User 1: Do you like to go to the beach or the pool?
+
+    User 2: I like both! The beach is great for swimming and sunbathing, but the pool is nice when it''s too cold to go to the beach.
+
+    User 1: I agree. I love the beach, but I don''t like it when it''s too crowded.
+
+    User 2: Me neither. I like to go to the beach when it''s not too crowded so I can have more space to myself.
+
+    User 1: I also like to make fresh pies. I love the smell of fresh-baked pie in the house.
+
+    User 2: I love pie too! I don''t bake much, but I love to eat pie.
+
+    User 1: I''m a cashier at a grocery store. It''s not the most exciting job in the world, but it pays the bills.
+
+    User 2: I know what you mean. I help my mom sort books in the library. It''s not the most exciting job, but it''s a lot of fun.
+
+    User 1: I''m thinking about going back to school to become a journalist. I''ve always wanted to be a writer.
+
+    User 2: That''s great! I''m sure you''d be a great journalist.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00008306
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8306
+data:
+  user 1 personas: 'I am currently trying to open my own grocery store.
+
+    I am colorblind.
+
+    I have a college degree in marketing.
+
+    I am a volunteer firefighter.'
+  user 2 personas: 'I am an only child.
+
+    My favorite color is red.
+
+    I am a student.
+
+    I have a pet dog.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student.
+
+    User 1: Oh, that''s cool. What are you studying?
+
+    User 2: I''m studying marketing.
+
+    User 1: Oh, nice! I have a degree in marketing.
+
+    User 2: That''s awesome! What do you do with your degree?
+
+    User 1: I''m currently trying to open my own grocery store.
+
+    User 2: That''s a great goal! I hope you''re successful.
+
+    User 1: Thanks! I''m working hard on it.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to spend time with my family and friends. I also like to volunteer as a firefighter.
+
+    User 2: That''s great! I love spending time with my family and friends too. I also have a pet dog that I love to spend time with.
+
+    User 1: Oh, that''s awesome! What kind of dog do you have?
+
+    User 2: I have a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so cute and friendly.
+
+    User 2: Yeah, they''re great dogs!
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to be volunteering at the local fire department.
+
+    User 2: Oh, that sounds like fun! I''ve always wanted to volunteer at a fire department.
+
+    User 1: You should come with me!
+
+    User 2: I would love to!
+
+    User 1: Great! Let''s meet at the fire station at 6:00.
+
+    User 2: See you there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

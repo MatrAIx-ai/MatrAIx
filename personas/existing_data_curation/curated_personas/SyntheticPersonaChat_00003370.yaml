@@ -1,0 +1,66 @@
+id: '00003370'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3370
+data:
+  user 1 personas: 'I have a french bulldog.
+
+    I play bass.
+
+    I want to be a journalist but instead i sell washers at sears.
+
+    I love the band red hot chili peppers.
+
+    My feet are size six women s.'
+  user 2 personas: 'My favorite sport is basketball.
+
+    I am an avid runner.
+
+    I live in canada , near ontario.
+
+    My favorite basketball team is the vancouver grizzlies.
+
+    I run marathons twice a year , mostly in america.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to play basketball and run marathons!
+
+    User 1: Cool! I love to play bass and sing!
+
+    User 2: That''s awesome! Do you have any pets?
+
+    User 1: Yes, I have a French bulldog.
+
+    User 2: Aww! I love French bulldogs!
+
+    User 1: Me too! They''re so cute and cuddly.
+
+    User 2: What do you do for work?
+
+    User 1: I sell washers at Sears, but I want to be a journalist.
+
+    User 2: That''s interesting! What kind of journalist do you want to be?
+
+    User 1: I want to be a music journalist, so I can write about bands I love.
+
+    User 2: That''s a great goal! I''m sure you''ll achieve it.
+
+    User 1: Thanks! I hope so!
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is the Red Hot Chili Peppers.
+
+    User 2: Oh, I love them! They''re my favorite too!
+
+    User 1: We should go to a concert together sometime!
+
+    User 2: That would be awesome! I''d love to do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

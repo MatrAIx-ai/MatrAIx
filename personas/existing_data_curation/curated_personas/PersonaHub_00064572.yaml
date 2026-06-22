@@ -1,0 +1,17 @@
+id: '00064572'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64572
+persona_description: A healthcare professional with expertise in pediatric cardiology, particularly in the management and treatment of ventricular septal defects (VSD). This individual is likely to be interested
+  in the above text as it provides a detailed account of the diagnosis, treatment, and follow-up of a patient with a VSD, including the recommended surgical intervention and the potential benefits of surgery.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: ventricular septal defects (VSD) treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

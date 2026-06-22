@@ -1,0 +1,82 @@
+id: 00008158
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8158
+data:
+  user 1 personas: 'I like to drink chai tea before bed every night.
+
+    My dog is my best friend.
+
+    I am terrified of spiders , but love snakes.
+
+    At all times , i am wearing something black.
+
+    I work as a computer technician , but secretly hate my job.'
+  user 2 personas: 'I read ebooks more than hardcopies.
+
+    I love watching superheroes shows.
+
+    I am single.
+
+    I owe 2 monitors for work.
+
+    I prefer iphone over samsung.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love reading, watching superhero shows, and playing video games.
+
+    User 1: Oh, that''s cool. I love reading ebooks, too. I''m also single, but I have a dog.
+
+    User 2: That''s awesome! I''m not a dog person, but I love snakes.
+
+    User 1: Really? That''s interesting. I''m terrified of spiders, but I love snakes.
+
+    User 2: Yeah, they''re so cool! I have two pet snakes.
+
+    User 1: Oh, that''s cool! What kind of snakes?
+
+    User 2: I have a ball python and a corn snake.
+
+    User 1: Oh, those are both really cool snakes! I''ve always wanted a ball python.
+
+    User 2: They''re great snakes. They''re very calm and easy to care for.
+
+    User 1: That''s good to know. I''m not sure if I''m ready for a snake yet, but maybe someday.
+
+    User 2: Yeah, they''re definitely a lot of work. But they''re so rewarding!
+
+    User 1: I can imagine. So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a computer technician.
+
+    User 2: Nice! What do you like about your job?
+
+    User 1: I like working with computers, and I like helping people.
+
+    User 2: That''s awesome. I like working with computers, too. But I don''t really like working with people.
+
+    User 1: Really? Why not?
+
+    User 2: I don''t know. I guess I''m just not a very good people person.
+
+    User 1: I get that. I''m not very good at it either.
+
+    User 2: Well, it''s good that we''re both computer people.
+
+    User 1: Yeah, it is. We can just talk about computers all day long.
+
+    User 2: Exactly! That sounds like a great plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

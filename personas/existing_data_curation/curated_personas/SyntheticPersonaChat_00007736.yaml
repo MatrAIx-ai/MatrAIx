@@ -1,0 +1,66 @@
+id: '00007736'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7736
+data:
+  user 1 personas: 'I often help her sort books in the library.
+
+    My mother is a librarian.
+
+    I love to read fantasy novels and poetry.
+
+    I am going to school for writing.
+
+    I would like to be a journalist one day.'
+  user 2 personas: 'I am a teacher.
+
+    I grew up in new hampshire.
+
+    My favorite food is mexican.
+
+    I love to dance.'
+  Best Generated Conversation: 'User 1: I like to read fantasy novels and poetry.
+
+    User 2: I love to read! What are some of your favorite books?
+
+    User 1: I''ve been really enjoying the Stormlight Archive series by Brandon Sanderson.
+
+    User 2: I''ve heard good things about that series! I''ve been meaning to check it out.
+
+    User 1: You should! It''s really good. What are some of your favorite books?
+
+    User 2: I love anything by Jane Austen. She''s my favorite author.
+
+    User 1: I''ve never read any of her books! What are they about?
+
+    User 2: They''re mostly about romance, but they''re also very witty and insightful.
+
+    User 1: They sound interesting. I''ll have to check them out.
+
+    User 2: You should! I think you''d like them.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! So, what do you do for fun?
+
+    User 1: I love to read, write, and play video games.
+
+    User 2: I love to read and play video games too! What kind of video games do you like to play?
+
+    User 1: I like all kinds of video games, but I''m especially into RPGs and action games.
+
+    User 2: Me too! I love RPGs and action games. I''m also really into puzzle games.
+
+    User 1: I''ve never really been into puzzle games.
+
+    User 2: You should give them a try! They''re really fun and challenging.
+
+    User 1: I will! I''m always looking for new games to play.
+
+    User 2: Good! I''m sure you''ll like puzzle games.
+
+    User 1: I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

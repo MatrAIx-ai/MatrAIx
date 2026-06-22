@@ -1,0 +1,18 @@
+id: '00042060'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42060
+persona_description: A spaceflight engineer who is responsible for designing and analyzing spacecraft to minimize the risk of impact with space debris. They need to consider factors such as spacecraft size,
+  orbital region, and debris flux to determine the probability of collision. They must also be familiar with the complex relationship between the probability of collision and the orbital region, which varies
+  significantly with altitude and to a lesser degree with inclination. They must be able to accurately estimate the debris impact probability for spacecraft in LEO by analyzing the data in Figure 4-1.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: statistical mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

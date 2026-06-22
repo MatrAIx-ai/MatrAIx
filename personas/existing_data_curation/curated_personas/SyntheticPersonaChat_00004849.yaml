@@ -1,0 +1,94 @@
+id: 00004849
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4849
+data:
+  user 1 personas: 'My favorite color is pruple.
+
+    I am an only child.
+
+    I have a pet lizard named gila.
+
+    I have brown eyes.
+
+    I really love plants.'
+  user 2 personas: 'I like to watch tv.
+
+    I am 10 years old.
+
+    I also love orange juice.
+
+    My name is arnold.
+
+    I love ham and cheese sandwiches.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m Arnold.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch TV and play video games.
+
+    User 1: What''s your favorite TV show?
+
+    User 2: I like to watch cartoons.
+
+    User 1: Me too! What''s your favorite cartoon?
+
+    User 2: I like to watch Adventure Time.
+
+    User 1: I love Adventure Time! It''s so funny and creative.
+
+    User 2: Me too! What''s your favorite episode?
+
+    User 1: I can''t decide between "The Lich" and "Jake the Dog."
+
+    User 2: Those are both great episodes! I also like "The Hall of Egress" and "BMO Noire."
+
+    User 1: I love all of the episodes! Adventure Time is the best.
+
+    User 2: I agree! It''s so good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to play video games.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like to play Minecraft.
+
+    User 1: Me too! Minecraft is so much fun.
+
+    User 2: I agree! It''s the best game ever.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to eat ham and cheese sandwiches.
+
+    User 1: Me too! Ham and cheese sandwiches are so good.
+
+    User 2: I agree! They''re my favorite food.
+
+    User 1: What else do you like to eat?
+
+    User 2: I also like to eat orange juice.
+
+    User 1: Me too! Orange juice is so good.
+
+    User 2: I agree! It''s my favorite drink.
+
+    User 1: What else do you like?
+
+    User 2: I like to watch TV, play video games, eat ham and cheese sandwiches, and drink orange juice.
+
+    User 1: Sounds like you''re a lot like me! I like all of those things too.
+
+    User 2: Me too! We should be friends!
+
+    User 1: I''d love to be friends!
+
+    User 2: Great! Let''s exchange numbers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

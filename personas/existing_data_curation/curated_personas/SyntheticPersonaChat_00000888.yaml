@@ -1,0 +1,60 @@
+id: 00000888
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 888
+data:
+  user 1 personas: 'I am a couponed.
+
+    I like to keep my stockpile organised.
+
+    I donate any overstock to charity.
+
+    I love to save money.
+
+    I shop several times a week.'
+  user 2 personas: 'My car is over 20 years old.
+
+    My favorite movie is the last of the mohicans.
+
+    My dad was a preacher.
+
+    My mother was a school music teacher.
+
+    I did not finish college.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing great! I''m so excited for the weekend.
+
+    User 2: Me too! I''m going to see the new movie "The Last of the Mohicans".
+
+    User 1: Oh, that sounds fun! I love that movie.
+
+    User 2: Me too! It''s my favorite movie of all time.
+
+    User 1: What do you like about it so much?
+
+    User 2: I love the story, the acting, the cinematography, and the music. It''s just a perfect movie.
+
+    User 1: I agree! It''s so well-made.
+
+    User 2: I''m glad you agree. I''m sure you''ll enjoy it as much as I do.
+
+    User 1: I''m sure I will too! Thanks for the recommendation.
+
+    User 2: No problem! I''m always happy to talk about movies.
+
+    User 1: Me too! I love talking about movies.
+
+    User 2: Well, I''m going to go get ready for the movie.
+
+    User 1: Have fun! I''ll see you later.
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

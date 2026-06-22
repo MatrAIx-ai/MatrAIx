@@ -1,0 +1,56 @@
+id: '00003622'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3622
+data:
+  user 1 personas: 'I despise sweet potatoes.
+
+    I am a weightlifter.
+
+    I run marathons.
+
+    I have three great danes.
+
+    I love the all american rejects.'
+  user 2 personas: 'Pizza is my most favorite thing.
+
+    My favorite band is dream theater.
+
+    I like being by myself.
+
+    I like reading.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your favorite pizza topping?
+
+    User 2: I love pepperoni and pineapple!
+
+    User 1: Interesting! I''ve never had pineapple on pizza before.
+
+    User 2: It''s really good! You should try it sometime.
+
+    User 1: Maybe I will! I''m a weightlifter, and I love the All American Rejects.
+
+    User 2: That''s cool! I like to run marathons, and my favorite band is Dream Theater.
+
+    User 1: Dream Theater! I''ve heard of them, but I''ve never listened to them.
+
+    User 2: You should! They''re a great band.
+
+    User 1: Maybe I will! I have three Great Danes, and I love spending time with them.
+
+    User 2: That''s awesome! I love dogs.
+
+    User 1: They''re the best! I''m glad we''re having this conversation.
+
+    User 2: Me too! It''s nice to meet someone with similar interests.
+
+    User 1: Me too! We should talk again sometime.
+
+    User 2: Definitely!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

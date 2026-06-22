@@ -1,0 +1,66 @@
+id: '00001242'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1242
+data:
+  user 1 personas: 'I am gluten free.
+
+    My hair is black.
+
+    I like rock climbing.
+
+    I am a writer.
+
+    I have a dog.'
+  user 2 personas: 'I am a carnivore.
+
+    My father is in prison.
+
+    I enjoy running.
+
+    I went on welfare last month , which makes me want to run into traffic in front of big trucks.
+
+    My favorite band is creed.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I enjoy running and listening to Creed.
+
+    User 1: Oh, I like running too! I also like to rock climb.
+
+    User 2: I''ve never tried rock climbing before. What''s it like?
+
+    User 1: It''s a lot of fun! You get to use your upper body strength and your agility to climb up and down a wall.
+
+    User 2: That sounds like it would be challenging.
+
+    User 1: It can be, but it''s also really rewarding.
+
+    User 2: I might have to give it a try sometime.
+
+    User 1: I would definitely recommend it! It''s a great way to get exercise and have fun at the same time.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I also like to write. I''m a writer.
+
+    User 2: Oh, that''s cool! What kind of things do you write?
+
+    User 1: I mostly write short stories and poems. I''m also working on a novel.
+
+    User 2: That sounds really interesting. I''ve never written anything longer than a blog post.
+
+    User 1: It''s a lot of fun to write a novel. It''s a lot of work, but it''s also really rewarding.
+
+    User 2: I might have to give it a try someday.
+
+    User 1: I would definitely recommend it! It''s a great way to express yourself creatively.
+
+    User 2: Thanks for the recommendation. I''ll definitely think about it.
+
+    User 1: No problem! I hope you have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00008543
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8543
+data:
+  user 1 personas: 'The death of kurt cobain marred my middle school years.
+
+    I don t have a relationship with my deadbeat dad.
+
+    I want to visit rome , but i can t make myself go alone.
+
+    I flirted with the dmv officer in order to pass my driving exam.'
+  user 2 personas: 'Magic mike is my favorite movie.
+
+    I enjoy singing.
+
+    I enjoy video games.
+
+    I live in a big city.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. I''m [user 2''s name].
+
+    User 1: What are your interests?
+
+    User 2: I like to sing, play video games, and watch movies.
+
+    User 1: Nice! I like to sing too. What kind of music do you like to sing?
+
+    User 2: I like to sing a variety of music, but my favorite is probably country music.
+
+    User 1: Oh, that''s cool! I like country music too. I''m actually from Texas.
+
+    User 2: Really? Me too! I''m from Austin.
+
+    User 1: No way! I''m from San Antonio.
+
+    User 2: That''s awesome! I''ve been to San Antonio a few times. It''s a beautiful city.
+
+    User 1: Thanks! It is. What''s your favorite thing to do in Austin?
+
+    User 2: I love to go to the river and go tubing. It''s so much fun!
+
+    User 1: That sounds like a lot of fun! I''ve never been tubing, but I''ve always wanted to try it.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: I''ll have to give it a try next time I''m in Austin.
+
+    User 2: You won''t regret it!
+
+    User 1: What else do you like to do in Austin?
+
+    User 2: I also like to go to concerts and festivals. There''s always something going on in Austin.
+
+    User 1: That sounds like a lot of fun! I love going to concerts and festivals too.
+
+    User 2: We should go to a concert together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll keep an eye out for some good shows.
+
+    User 1: Thanks! I''m excited to see what we can find.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

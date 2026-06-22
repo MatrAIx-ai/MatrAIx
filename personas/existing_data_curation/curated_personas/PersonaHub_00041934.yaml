@@ -1,0 +1,18 @@
+id: 00041934
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41934
+persona_description: A team of engineers and scientists who specialize in developing and implementing numerical simulation tools for the automotive industry, focusing on the Gasoline Direct Injection (GDI)
+  engine. They are skilled in using OpenFOAM® and in-house simulation codes, and have expertise in mapping piston/valve motions and simulating spray atomization. Their goal is to precisely investigate the
+  entire engine process from nozzle flow to fuel/air mixture, ensuring the accuracy and reliability of their simulations.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: automotive engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

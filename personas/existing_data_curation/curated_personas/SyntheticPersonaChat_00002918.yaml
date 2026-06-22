@@ -1,0 +1,60 @@
+id: 00002918
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2918
+data:
+  user 1 personas: 'I work as a scientist.
+
+    I m in gymnastics.
+
+    I like the beatles.
+
+    I am well built and tall.'
+  user 2 personas: 'I eat mainly chinese food.
+
+    I do not have a good social life.
+
+    I am a night owl.
+
+    I make robots for a living.
+
+    I am single and live alone.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hello [name], my name is [name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you do for a living?
+
+    User 2: I make robots for a living.
+
+    User 1: Wow, that''s really cool! What''s your favorite thing about your job?
+
+    User 2: I love the challenge of creating something new and seeing it come to life.
+
+    User 1: I can imagine! What''s your least favorite thing about your job?
+
+    User 2: The long hours.
+
+    User 1: I can understand that. What are your hobbies?
+
+    User 2: I like to play video games, watch movies, and eat Chinese food.
+
+    User 1: I love video games too! What are your favorite games?
+
+    User 2: I like a lot of different games, but I''m really into the new Call of Duty.
+
+    User 1: I''ve heard good things about that game. I''ve been playing a lot of Minecraft lately.
+
+    User 2: I''ve never played Minecraft. What''s it like?
+
+    User 1: It''s a sandbox game where you can build anything you want. It''s really fun.
+
+    User 2: That sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

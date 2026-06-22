@@ -1,0 +1,60 @@
+id: '00001246'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1246
+data:
+  user 1 personas: 'I am not healthy.
+
+    I like the movie godfather.
+
+    I like candy and soda.
+
+    I weight 300 pounds.
+
+    I am a man.'
+  user 2 personas: 'I have a golden retriever.
+
+    I like to play soccer.
+
+    My favorite subject in school is math.
+
+    My favorite book is pride and prejudice.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, read books, and spend time with my golden retriever.
+
+    User 1: That''s cool. I like to play soccer too. Do you play in any leagues?
+
+    User 2: Not right now, but I''m hoping to join one soon.
+
+    User 1: That''s great. I''m sure you''ll have a lot of fun. What''s your favorite book?
+
+    User 2: My favorite book is Pride and Prejudice. It''s a classic for a reason.
+
+    User 1: I''ve heard good things about it. I''ll have to check it out. What''s your favorite math topic?
+
+    User 2: I like algebra. It''s the most challenging, but it''s also the most rewarding.
+
+    User 1: I agree. Algebra is really tough, but it''s a lot of fun to figure out. What''s your favorite candy?
+
+    User 2: I like Skittles. They''re so good!
+
+    User 1: Me too. I could eat them all day long. What''s your favorite soda?
+
+    User 2: I like Dr Pepper. It''s the best.
+
+    User 1: I can''t argue with that. Dr Pepper is pretty good. Do you have any pets?
+
+    User 2: Yes, I have a golden retriever named Buddy. He''s the best dog in the world.
+
+    User 1: I love golden retrievers. They''re so friendly and loving.
+
+    User 2: They are. Buddy is the best friend I could ask for.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

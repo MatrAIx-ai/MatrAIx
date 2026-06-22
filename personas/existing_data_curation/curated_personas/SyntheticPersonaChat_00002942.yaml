@@ -1,0 +1,74 @@
+id: 00002942
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2942
+data:
+  user 1 personas: 'My family owns a farm.
+
+    I have red hair.
+
+    I like to eat meat.
+
+    I moved far from home.
+
+    I am skilled in computer repair.'
+  user 2 personas: 'I am married.
+
+    I work 2 jobs.
+
+    I am in school.
+
+    I love the beach.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to go to the beach, read, and play video games.
+
+    User 1: Those sound like fun hobbies! Do you have a favorite book?
+
+    User 2: I like The Lord of the Rings.
+
+    User 1: Me too! It''s such a good book.
+
+    User 2: I know! It''s my favorite book of all time.
+
+    User 1: What do you like about it?
+
+    User 2: I love the characters, the story, and the world building.
+
+    User 1: I agree! It''s so well written.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a computer programmer.
+
+    User 2: Oh cool! I''m a student.
+
+    User 1: What do you study?
+
+    User 2: I''m studying computer science.
+
+    User 1: That''s awesome! I''m a big fan of computers.
+
+    User 2: Me too! I love learning about how they work.
+
+    User 1: Do you have any plans for after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about getting a job as a software engineer.
+
+    User 1: That sounds like a great plan!
+
+    User 2: Thanks! I''m excited to see where my career takes me.
+
+    User 1: I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

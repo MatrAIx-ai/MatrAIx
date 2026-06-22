@@ -1,0 +1,19 @@
+id: '00040702'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40702
+persona_description: A scientist or astronomer interested in studying astronomical phenomena, particularly those related to the study of protostars and their associated systems, such as accretion disks
+  and emission-line jets. This persona is likely to have expertise in astrophysics, astronomy, and related fields, and may have a strong background in physics, mathematics, and computer science. They are
+  likely to have a keen interest in the detailed analysis and interpretation of astronomical images and data, and may have experience with advanced imaging techniques and software tools. They may also have
+  a background in theoretical physics and may be interested in the implications of their findings for the broader field of astronomy and astrophysics.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: astrophysics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

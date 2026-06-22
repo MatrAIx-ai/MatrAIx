@@ -1,0 +1,72 @@
+id: 00002882
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2882
+data:
+  user 1 personas: 'I m a college student.
+
+    I like action movies.
+
+    My father is a doctor.
+
+    I drive a restored mustang.
+
+    I play football.'
+  user 2 personas: 'My favorite author is stephen king.
+
+    I was born in france and moved to canada.
+
+    I am a digital artist.
+
+    My husband is an author and we have twins together.
+
+    My favorite hobby is reading.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read! My favorite author is Stephen King.
+
+    User 1: Oh, I love Stephen King too! What''s your favorite book by him?
+
+    User 2: I love It! It''s so creepy and suspenseful.
+
+    User 1: I agree! It''s one of my favorites too. What else do you like to do?
+
+    User 2: I''m also a digital artist. I love to draw and paint.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to learn how to draw.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that! What else do you like about Canada?
+
+    User 2: I love the people. They''re so friendly and welcoming.
+
+    User 1: I agree! I love the people here too.
+
+    User 2: What do you like about college?
+
+    User 1: I love the freedom. I can do whatever I want, whenever I want.
+
+    User 2: Oh, I know what you mean. I miss that about college.
+
+    User 1: What do you miss most about France?
+
+    User 2: My family and friends. I miss them so much.
+
+    User 1: I''m sure they miss you too.
+
+    User 2: I hope so.
+
+    User 1: I''m sure they do.
+
+    User 2: Thanks.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

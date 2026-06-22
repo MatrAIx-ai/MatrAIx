@@ -1,0 +1,18 @@
+id: 00042159
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42159
+persona_description: A scientist or statistician who is interested in the analysis of random processes and distributions, particularly in the context of transportation and traffic management. This person
+  is likely to be interested in the inter-arrival times of customers at a service point, as they can provide insights into the efficiency of the service and the impact of congestion. They may also be interested
+  in the distribution of inter-arrival times and the effect of the arrival times on the overall service.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: statistical mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: transportation and traffic management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

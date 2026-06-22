@@ -1,0 +1,78 @@
+id: 00001845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1845
+data:
+  user 1 personas: 'I believe in karma.
+
+    I have never been on a date.
+
+    I adopted all my dogs.
+
+    I love to read.
+
+    I once wrote a biography of my favorite actor.'
+  user 2 personas: 'I make my own compost.
+
+    I like to garden.
+
+    I have my own greenhouse.
+
+    I am a fruitarian.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hello (name), I''m (name).
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: So what do you like to do for fun?
+
+    User 2: I like to garden, I have my own greenhouse.
+
+    User 1: That sounds really nice! I''ve always wanted to have a garden.
+
+    User 2: It''s a lot of fun, and it''s really rewarding to see your plants grow.
+
+    User 1: I can imagine. What kind of plants do you grow?
+
+    User 2: I grow a lot of different things, but my favorites are tomatoes, peppers, and cucumbers.
+
+    User 1: Those sound delicious! I love tomatoes and peppers.
+
+    User 2: Me too! They''re so good fresh out of the garden.
+
+    User 1: I bet! So what else do you like to do for fun?
+
+    User 2: I also like to read, write, and spend time with my dogs.
+
+    User 1: That sounds like a great time. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but my favorites are usually historical fiction and fantasy.
+
+    User 1: Oh, I love historical fiction too! What are some of your favorite books?
+
+    User 2: Some of my favorite historical fiction books are "The Pillars of the Earth" by Ken Follett, "The Outlander" series by Diana Gabaldon, and "The Name of the Wind" by Patrick Rothfuss.
+
+    User 1: I''ve heard good things about all of those books! I''ll have to check them out.
+
+    User 2: I highly recommend them! So what do you like to write about?
+
+    User 1: I like to write about a variety of things, but my favorite thing to write about is people. I love to explore the human condition and write stories that make people think.
+
+    User 2: That sounds really interesting! I''ve never tried writing stories before, but I''ve always wanted to.
+
+    User 1: You should give it a try! It''s a lot of fun.
+
+    User 2: I might just do that! So what else do you like to do with your dogs?
+
+    User 1: I like to take them for walks, play fetch with them, and just cuddle with them.
+
+    User 2: Sounds like you have some great dogs!
+
+    User 1: I do! They''re the best dogs in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

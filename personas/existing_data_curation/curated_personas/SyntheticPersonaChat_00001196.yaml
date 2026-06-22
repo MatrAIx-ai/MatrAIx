@@ -1,0 +1,44 @@
+id: 00001196
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1196
+data:
+  user 1 personas: 'I am a fisherman.
+
+    I love tuna.
+
+    My favorite is rock fish.
+
+    I live in cape hatteras.'
+  user 2 personas: 'I work on trucks.
+
+    I have a doberman.
+
+    I am twenty five years old.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello, how are you doing today?
+
+    User 1: I''m doing well, thank you. I''m a fisherman, and I live in Cape Hatteras. What do you do for a living?
+
+    User 2: I work on trucks, and I''m 25 years old. I have a doberman, and my favorite food is pizza.
+
+    User 1: That''s interesting! I''ve always wanted to learn how to work on trucks. I have a dog too, but it''s a golden retriever. My favorite food is rockfish.
+
+    User 2: Rockfish? I''ve never had that before. Is it good?
+
+    User 1: It''s delicious! It''s a type of tuna, and it''s very popular in Cape Hatteras.
+
+    User 2: I''ll have to try it sometime. It sounds like we have a lot in common. We both like dogs, and we both like seafood.
+
+    User 1: Yeah, we do! It''s nice to meet someone who''s similar to me.
+
+    User 2: You too! I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

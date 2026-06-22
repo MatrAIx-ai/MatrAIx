@@ -1,0 +1,18 @@
+id: 00001280
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1280
+persona_description: A meteorologist who specializes in the study of tornadoes and fire tornadoes, particularly the differences between the two and their potential for destruction. They are knowledgeable
+  about the formation and behavior of tornadoes and fire tornadoes, and can provide insights into their characteristics, dangers, and potential impact. They are also likely to be interested in the history
+  and evolution of tornadoes and fire tornadoes, as well as their impact on society and the environment.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tornadoes and fire tornadoes
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

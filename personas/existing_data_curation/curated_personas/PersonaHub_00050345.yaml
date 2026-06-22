@@ -1,0 +1,19 @@
+id: '00050345'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50345
+persona_description: A participant in a psychological study who was asked to complete a series of cognitive tests, including the Tombeau Memory Test (TOMM) and the yes/no recognition test, and to respond
+  to a follow-up questionnaire about the testing procedure. The participant was instructed to adhere to the respective instructions and to report if they suspected any of the tests to be a malingering test.
+  The participant was also asked to name the tests they suspected to be malingering. The participant's responses were used to evaluate the sensitivity and specificity of the tests in detecting memory malingering
+  and to compare the sensitivity and specificity of the TOMM and the yes/no recognition test.
+expertise:
+  general_domain_top1pct: psychology
+  specific_domain_top1pct: memory assessment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00024575'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24575
+persona_description: A wearable assistive robot designed to detect and prevent falls and aid in rehabilitation for users with disabilities, including stroke, traumatic brain injuries, and spinal cord injuries.
+  The robot uses built-in sensors to detect loss of balance, instantaneously catching users with its safety harness, and uses a depth-sensing camera to estimate the user's balance state in real-time. The
+  device has been shown to be successful in aiding patients in sitting, standing, and walking, as well as assisting in tasks like fetching water, with no recorded falls in clinical trials involving 29 participants.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: robotics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

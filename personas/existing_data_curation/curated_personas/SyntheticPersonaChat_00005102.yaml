@@ -1,0 +1,78 @@
+id: '00005102'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5102
+data:
+  user 1 personas: 'I work in the emergency room.
+
+    I enjoy reading.
+
+    I am a nurse.
+
+    I am divorced.
+
+    My favorite drink is dr pepper.'
+  user 2 personas: 'I usually catch sunfish.
+
+    I drink beers and go to the creek.
+
+    I m a simple man.
+
+    I like fishing.
+
+    I can t eat them but they re pretty.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to fish and drink beers with my friends.
+
+    User 1: That sounds like fun! I love fishing, too. What kind of fish do you catch?
+
+    User 2: I usually catch sunfish. They''re small, but they''re really pretty.
+
+    User 1: Sunfish are great! I love how they flash their colors.
+
+    User 2: Me too! They''re really fun to catch.
+
+    User 1: Do you ever eat them?
+
+    User 2: No, I can''t eat them. They''re just too pretty.
+
+    User 1: I know what you mean. They''re so colorful.
+
+    User 2: I like to take pictures of them.
+
+    User 1: That''s a great idea! I love taking pictures of fish.
+
+    User 2: Me too! It''s a lot of fun.
+
+    User 1: Do you ever go fishing with your family?
+
+    User 2: Sometimes, but not very often.
+
+    User 1: I know what you mean. Fishing can be a lot of work.
+
+    User 2: Yeah, it can be.
+
+    User 1: Do you have any fishing stories?
+
+    User 2: I have a lot of fishing stories.
+
+    User 1: Oh, tell me one!
+
+    User 2: Well, one time I was fishing with my dad and we caught a huge fish.
+
+    User 1: Wow! How big was it?
+
+    User 2: It was about three feet long.
+
+    User 1: That''s amazing!
+
+    User 2: Yeah, it was a lot of fun.
+
+    User 1: It sounds like you''ve had some great fishing experiences.
+
+    User 2: I have! I love fishing'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

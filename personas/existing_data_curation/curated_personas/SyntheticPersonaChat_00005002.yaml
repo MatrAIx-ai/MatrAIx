@@ -1,0 +1,62 @@
+id: '00005002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5002
+data:
+  user 1 personas: 'I have never been to college.
+
+    My favorite phone is as iphone.
+
+    I have never been out of the country.
+
+    I love to go hiking.
+
+    I am a bank teller.'
+  user 2 personas: 'I have 10 piercings.
+
+    I like to drive for hours.
+
+    My favorite food is italian.
+
+    I used to smoke.
+
+    I can t live without my friends.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I''m doing well, thank you for asking. And yourself?
+
+    User 1: I''m doing well, thanks. I''m a bank teller, I''ve never been to college, and my favorite phone is an iPhone. What about you?
+
+    User 2: I''m a student, I have 10 piercings, I love to drive for hours, and my favorite food is Italian. I used to smoke, but I quit a few years ago.
+
+    User 1: That''s interesting! I''ve never been to college, either. And I love hiking. What are you studying?
+
+    User 2: I''m studying business administration. I''m hoping to start my own business one day.
+
+    User 1: That''s a great goal! I''m sure you''ll do great.
+
+    User 2: Thanks! I''m trying to stay positive.
+
+    User 1: You should. You''re doing great so far.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to drive for hours, listen to music, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: Me too! It''s always nice to meet people who like the same things as you.
+
+    User 1: I agree. It''s nice to have someone to relate to.
+
+    User 2: I know, right? It''s like finding a missing puzzle piece.
+
+    User 1: Exactly! I''m glad we met.
+
+    User 2: Me too! This was fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

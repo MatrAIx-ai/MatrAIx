@@ -1,0 +1,148 @@
+id: '00007050'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7050
+data:
+  user 1 personas: 'My favorite place to visit is seattle.
+
+    I work as a meeting coordinator.
+
+    I live with my husband and two children.
+
+    I love to take road trips.
+
+    I live in upstate new york.'
+  user 2 personas: 'I have many homes.
+
+    I ride horses.
+
+    I like to ride motorcycles.
+
+    I try to limit how much meat i eat for health reasons.
+
+    I collect vintage cars.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, nice to meet you. My name is [name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from upstate New York.
+
+    User 1: Oh, that''s cool. I''m from Seattle.
+
+    User 2: Oh, nice. I''ve always wanted to visit Seattle.
+
+    User 1: You should! It''s a beautiful city.
+
+    User 2: I know, I know. I''ve heard great things about it.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a meeting coordinator.
+
+    User 1: Oh, that sounds interesting. What''s that like?
+
+    User 2: It''s a lot of fun. I get to meet a lot of different people and plan all sorts of events.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is. I love it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride horses, ride motorcycles, and collect vintage cars.
+
+    User 1: Oh, that''s cool. I''ve never been on a horse.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I know, I know. I''ve heard great things about it.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I love to take road trips, go to the beach, and spend time with my family.
+
+    User 2: Oh, that sounds nice. I love to take road trips too.
+
+    User 1: Me too. They''re so much fun.
+
+    User 2: I know, right?
+
+    User 1: So, what''s your favorite thing about living in upstate New York?
+
+    User 2: I love the mountains. They''re so beautiful.
+
+    User 1: Oh, I know. They''re gorgeous.
+
+    User 2: And I love the snow.
+
+    User 1: Me too. It''s so beautiful.
+
+    User 2: And I love the skiing.
+
+    User 1: Me too. It''s so much fun.
+
+    User 2: I know, right?
+
+    User 1: So, what''s your favorite thing about living in Seattle?
+
+    User 2: I love the rain.
+
+    User 1: Oh, I know. It''s so refreshing.
+
+    User 2: And I love the coffee.
+
+    User 1: Me too. It''s so good.
+
+    User 2: And I love the people.
+
+    User 1: Me too. They''re so friendly.
+
+    User 2: I know, right?
+
+    User 1: So, what are you doing in Seattle?
+
+    User 2: I''m here on vacation.
+
+    User 1: Oh, that''s cool. How long are you staying?
+
+    User 2: I''m here for a week.
+
+    User 1: Oh, that''s great. Have you seen anything fun?
+
+    User 2: Yeah, I went to Pike Place Market and I saw the Space Needle.
+
+    User 1: Oh, that''s awesome. Did you eat any seafood?
+
+    User 2: Yeah, I had some salmon.
+
+    User 1: Oh, good. That''s my favorite.
+
+    User 2: Me too.
+
+    User 1: So, what are you doing tomorrow?
+
+    User 2: I''m not sure yet. What do you recommend?
+
+    User 1: I''m not sure. What are you interested in?
+
+    User 2: I''m interested in anything.
+
+    User 1: Well, you could go to the Museum of Pop Culture.
+
+    User 2: Oh, that sounds cool. I''ve heard good things about it.
+
+    User 1: Yeah, it''s a really cool museum.
+
+    User 2: I know, right?
+
+    User 1: So, what do you think?
+
+    User 2: I think it sounds like a great idea.
+
+    User 1: Great! I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

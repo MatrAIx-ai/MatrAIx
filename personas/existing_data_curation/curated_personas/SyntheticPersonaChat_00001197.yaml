@@ -1,0 +1,82 @@
+id: 00001197
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1197
+data:
+  user 1 personas: 'I am a fisherman.
+
+    My father was a cook.
+
+    He worked hard.
+
+    He taught me right from wrong.
+
+    He later became a bartender.'
+  user 2 personas: 'I love mac and cheese.
+
+    I make cars for a living.
+
+    I like to watch tv.
+
+    I like to sit on couch all day.'
+  Best Generated Conversation: 'User 1: Hi, I''m a fisherman!
+
+    User 2: Nice to meet you! I make cars for a living.
+
+    User 1: That''s cool! My dad used to be a cook, but he later became a bartender.
+
+    User 2: Oh, really? That''s interesting. What kind of food did he cook?
+
+    User 1: He was a really good cook. He made everything from burgers and fries to steaks and seafood.
+
+    User 2: That sounds delicious! I love to eat seafood.
+
+    User 1: Me too! I love to fish for it myself.
+
+    User 2: That''s so cool! I''ve never been fishing before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: Maybe I will. I''m not sure I''m very good at it, though.
+
+    User 1: You''ll never know unless you try!
+
+    User 2: I guess you''re right.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and just relax.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: What kind of TV shows do you like to watch?
+
+    User 1: I like to watch a lot of different things, but I especially like crime dramas and comedies.
+
+    User 2: Oh, I like crime dramas too. What are some of your favorites?
+
+    User 1: I like The Wire, The Sopranos, and Breaking Bad.
+
+    User 2: I''ve never seen The Wire or Breaking Bad, but I''ve heard good things about them.
+
+    User 1: You should check them out. They''re really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or just stay home and relax.
+
+    User 1: That sounds like a good plan. I''m going to go to the movies too. I''m excited to see the new Batman movie.
+
+    User 2: Oh, that sounds good. I''ve heard good things about it.
+
+    User 1: Yeah, I''m really looking forward to it.
+
+    User 2: Well, I have to get going. It was nice talking to you.
+
+    User 1: You too! Have a great day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

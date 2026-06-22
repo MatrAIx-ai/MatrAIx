@@ -1,0 +1,56 @@
+id: 00006548
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6548
+data:
+  user 1 personas: 'My mother is a teacher in the city.
+
+    My favorite food is cheeseburgers.
+
+    I play the bass guitar.
+
+    I like to go out fishing.
+
+    I work out daily.'
+  user 2 personas: 'In high school , i came in 6th in the 100 meter dash.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    I eat exclusively meat.
+
+    My favorite movie is good burger.
+
+    I like canning and whittling.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, can, and whittle.
+
+    User 1: That''s cool! I like to play bass guitar, go fishing, and work out.
+
+    User 2: I''ve never played an instrument before, but I like to listen to music.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like all kinds of music, but I especially like rap and hip-hop.
+
+    User 1: Me too! I love Drake and Kendrick Lamar.
+
+    User 2: I like them too! I also like Lil Wayne and Jay-Z.
+
+    User 1: Wow, we have similar taste in music!
+
+    User 2: Yeah, it looks like we do!
+
+    User 1: It''s nice to meet someone who likes the same things I do.
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

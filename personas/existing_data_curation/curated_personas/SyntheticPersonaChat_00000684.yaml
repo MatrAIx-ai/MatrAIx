@@ -1,0 +1,82 @@
+id: 00000684
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 684
+data:
+  user 1 personas: 'I like to cook.
+
+    I like gardening.
+
+    I live in a small city.
+
+    My children are mostly grown.'
+  user 2 personas: 'My hair is short and pink.
+
+    I love to travel.
+
+    I have two full sleeves of tattoos.
+
+    I work as a freight truck driver.
+
+    I am a 43 year old woman.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1 name].
+
+    User 2: Nice to meet you, [user 1 name]. I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a freight truck driver.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try driving a truck.
+
+    User 2: It''s a lot of fun! And it''s a great way to see the country.
+
+    User 1: I bet! Do you get to go to a lot of different places?
+
+    User 2: Yes, I do. I''ve been all over the country.
+
+    User 1: That''s so cool! I''ve only been to a few states.
+
+    User 2: You should travel more! It''s a great way to learn about new cultures and meet new people.
+
+    User 1: I agree! I''m planning to take a trip to Europe next year.
+
+    User 2: That sounds like a great idea! Europe is a beautiful place.
+
+    User 1: I know! I''m really excited about it.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to cook, garden, and read.
+
+    User 2: Oh, that''s cool! I love to cook too.
+
+    User 1: I know! We should have a cooking competition sometime.
+
+    User 2: That would be fun! I''m sure we''d both make some delicious food.
+
+    User 1: I''m sure we would!
+
+    User 2: What do you like to cook?
+
+    User 1: I like to cook all kinds of food, but my favorite thing to make is pasta.
+
+    User 2: Oh, I love pasta! I make a mean spaghetti sauce.
+
+    User 1: I''m sure it is! I love spaghetti sauce.
+
+    User 2: We should definitely have that cooking competition sometime.
+
+    User 1: That would be so much fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

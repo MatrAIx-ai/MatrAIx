@@ -1,0 +1,92 @@
+id: '00007065'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7065
+data:
+  user 1 personas: 'My grandmother lives in my guesthouse.
+
+    I have been divorced for 2 years.
+
+    I work at the local bank.
+
+    I am a cat person.
+
+    I love collecting teapots.'
+  user 2 personas: 'I love the snow.
+
+    My favorite actor is robert denaro.
+
+    I like to surf every chance i get.
+
+    I am saving for college.'
+  Best Generated Conversation: 'User 1: Hi there, I''m new here. What''s your name?
+
+    User 2: Hello, my name is [User 2''s name].
+
+    User 1: Nice to meet you [User 2''s name]. I''m [User 1''s name].
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to surf, go skiing, and play video games.
+
+    User 1: I love skiing too! I haven''t been in a while, though.
+
+    User 2: You should come with me the next time I go!
+
+    User 1: That would be fun! I love Robert DeNiro.
+
+    User 2: He''s one of my favorite actors too!
+
+    User 1: I love his movies. I think he''s so talented.
+
+    User 2: Me too. He''s always so good in everything he does.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!
+
+    User 1: I''m also a cat person.
+
+    User 2: Me too! I love cats. They''re so cute and cuddly.
+
+    User 1: I have two cats. They''re the best pets ever.
+
+    User 2: I''ve always wanted a cat, but I''m allergic.
+
+    User 1: That''s too bad. Cats are great companions.
+
+    User 2: I know. I wish I could have one.
+
+    User 1: I''m sure you''ll find one that''s hypoallergenic one day.
+
+    User 2: I hope so!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a student. I''m saving up for college.
+
+    User 1: That''s great! I''m a banker.
+
+    User 2: Oh, that''s cool! I''ve never met a banker before.
+
+    User 1: It''s not as glamorous as it sounds.
+
+    User 2: I''m sure it''s still interesting.
+
+    User 1: It can be, sometimes.
+
+    User 2: Well, it was nice meeting you.
+
+    User 1: You too. Maybe we can hang out sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll give you my number.
+
+    User 2: Thanks'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

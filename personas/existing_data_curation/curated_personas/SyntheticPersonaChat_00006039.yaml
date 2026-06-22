@@ -1,0 +1,48 @@
+id: 00006039
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6039
+data:
+  user 1 personas: 'I like cartoons more than movies.
+
+    I love the water , any water , ocean , river , or lake.
+
+    I moved out when i was 14.
+
+    I like to listen to someone else reading a book.
+
+    My mother met elvis.'
+  user 2 personas: 'I like rock climbing.
+
+    My hair is black.
+
+    I am a writer.
+
+    I have a dog.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to write, rock climb, and spend time with my dog.
+
+    User 1: That sounds fun! I like to listen to someone else reading a book. I also love the water, any water, ocean, river, or lake. I moved out when I was 14. Did you ever move away from home?
+
+    User 2: I have never moved away from home. I like to stay close to my family.
+
+    User 1: That''s nice! I like my family too, but I also like to explore new places.
+
+    User 2: I can understand that. It''s fun to experience new things.
+
+    User 1: Yes, it is! I''m glad we''re having this conversation.
+
+    User 2: Me too! This is a lot of fun.
+
+    User 1: It is! I''m glad I met you.
+
+    User 2: Me too! I''m glad I met you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

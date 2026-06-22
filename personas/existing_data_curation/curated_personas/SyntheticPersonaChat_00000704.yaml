@@ -1,0 +1,66 @@
+id: '00000704'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 704
+data:
+  user 1 personas: 'I like to hike.
+
+    I am the youngest of 4 children.
+
+    I graduated from college.
+
+    I lost my arm in a car accident.'
+  user 2 personas: 'I like rollerblading.
+
+    I am caucasian.
+
+    I avoid eating sugar.
+
+    I try to eat a balanced diet.
+
+    My favorite sport is hockey.'
+  Best Generated Conversation: 'User 1: Hi there! My name is User 1.
+
+    User 2: Hi! I''m User 2. What are you interested in?
+
+    User 1: I like to hike, go to the gym, and read. How about you?
+
+    User 2: I like to rollerblade, play hockey, and watch movies.
+
+    User 1: That''s cool. I''ve always wanted to try rollerblading.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure I would enjoy it. I''m just not sure if I''ll be very good at it.
+
+    User 2: You''ll be fine. Just give it a try.
+
+    User 1: I will. Thanks for the encouragement.
+
+    User 2: You''re welcome. So, what else do you like to do?
+
+    User 1: I also like to read. I''m currently reading a book about hiking in the Himalayas.
+
+    User 2: That sounds interesting. I''ve always wanted to go to the Himalayas.
+
+    User 1: It''s definitely on my bucket list.
+
+    User 2: Mine too. So, what are you doing later?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go rollerblading. Do you want to come with me?
+
+    User 1: I''m not sure if I''ll be good enough.
+
+    User 2: You''ll be fine. Just give it a try.
+
+    User 1: Okay, I''ll give it a try.
+
+    User 2: Great! I''ll meet you at the park in 10 minutes.
+
+    User 1: Okay. See you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

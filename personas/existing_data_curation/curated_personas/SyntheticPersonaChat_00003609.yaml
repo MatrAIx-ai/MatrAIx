@@ -1,0 +1,56 @@
+id: 00003609
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3609
+data:
+  user 1 personas: 'I am studying literature.
+
+    My favorite food is tacos.
+
+    I like to draw.
+
+    I am from france.'
+  user 2 personas: 'I love country music.
+
+    I am a meat eater.
+
+    I like football on tv.
+
+    I drive a big truck.
+
+    I like to go hunting.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Nice to meet you, my name is [user 2 name].
+
+    User 1: What are you interested in?
+
+    User 2: I love country music, football on TV, driving my big truck, and going hunting.
+
+    User 1: Wow, you sound like a real outdoorsman! I''m from France, so I''m not really into those things.
+
+    User 2: Oh, that''s cool! I''ve always wanted to go to France. What''s it like there?
+
+    User 1: It''s beautiful! The food is amazing, and the people are so friendly.
+
+    User 2: I''ve heard that before. I''m definitely going to have to visit sometime.
+
+    User 1: You definitely should! In the meantime, I can tell you all about the best places to eat and things to see.
+
+    User 2: That would be great! I''m always looking for new travel ideas.
+
+    User 1: Well, one of my favorite places to eat is a little bistro in Paris called Chez Claude. The food is amazing, and the atmosphere is so cozy and romantic.
+
+    User 2: That sounds like a great place to take my wife on our next anniversary.
+
+    User 1: It''s perfect for that! And if you''re looking for something a little more active, you could always visit the Eiffel Tower or the Louvre.
+
+    User 2: Those are both on my bucket list. I''m sure they''ll be even more amazing in person.
+
+    User 1: I''m sure they will! And if you have any other questions, don''t hesitate to ask.
+
+    User 2: Thanks, I will! I''m so excited to start planning my trip to France.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

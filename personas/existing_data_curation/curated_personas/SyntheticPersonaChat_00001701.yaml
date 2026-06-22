@@ -1,0 +1,68 @@
+id: '00001701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1701
+data:
+  user 1 personas: 'I m not very tall.
+
+    I ve two siblings.
+
+    I ve a dog.
+
+    My favorite color is red.'
+  user 2 personas: 'In high school , i came in 6th in the 100 meter dash.
+
+    I like canning and whittling.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    My favorite movie is good burger.
+
+    I eat exclusively meat.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, good. What about you?
+
+    User 1: I''m doing well, thanks. So, what do you do for fun?
+
+    User 2: I like to can and whittle.
+
+    User 1: Oh, that''s interesting. What do you like about canning?
+
+    User 2: I like the process of preserving food, and I also like the taste of home-canned food.
+
+    User 1: I see. What do you like to whittle?
+
+    User 2: I like to make small sculptures and other things out of wood.
+
+    User 1: That''s cool. I''ve never really tried whittling before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will. So, what else do you like to do for fun?
+
+    User 2: I also like to go running, hiking, and biking. I like to stay active.
+
+    User 1: That''s great. I like to go running too. It''s a great way to clear your head.
+
+    User 2: I agree. It''s also a great way to get in shape.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is Good Burger. It''s so funny and it always puts me in a good mood.
+
+    User 1: I''ve never seen it. Is it on Netflix?
+
+    User 2: I think it is. You should check it out. It''s a classic.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem. So, what''s your favorite color?
+
+    User 1: My favorite color is red. It''s a very vibrant and energetic color.
+
+    User 2: I like red too. It''s a great color.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

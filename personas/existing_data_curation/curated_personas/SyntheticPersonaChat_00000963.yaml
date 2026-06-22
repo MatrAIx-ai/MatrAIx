@@ -1,0 +1,66 @@
+id: 00000963
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 963
+data:
+  user 1 personas: 'I drive a prius.
+
+    I think canadian women are incredibly attractive.
+
+    I can t get enough ginger snaps.
+
+    I like hiking up volcanoes.'
+  user 2 personas: 'I am a teacher.
+
+    I love chocolate.
+
+    I have a twin sister.
+
+    I do yoga every morning.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: I''m from Canada.
+
+    User 2: Oh, really? I''m from the US.
+
+    User 1: I know that Canadian women are incredibly attractive. What do you think about that?
+
+    User 2: I think that''s a pretty bold statement. I''ve never been to Canada, so I don''t have much to say about it.
+
+    User 1: You should come visit sometime! I''ll show you around.
+
+    User 2: I''d love to! I''ve always wanted to see the Canadian Rockies.
+
+    User 1: They''re amazing! I love hiking up volcanoes.
+
+    User 2: That sounds like a lot of fun! I''ve never been hiking before.
+
+    User 1: You should try it! It''s a great way to get exercise and see some amazing scenery.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s great! What grade do you teach?
+
+    User 2: I teach third grade.
+
+    User 1: That''s awesome! I always liked third grade.
+
+    User 2: It''s a great grade. I love working with kids.
+
+    User 1: I can imagine! What''s your favorite part about being a teacher?
+
+    User 2: My favorite part is seeing the kids learn and grow.
+
+    User 1: That''s amazing! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

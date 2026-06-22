@@ -1,0 +1,70 @@
+id: 00006823
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6823
+data:
+  user 1 personas: 'I speak english and spanish fluently.
+
+    I am mixed with puerto rican and chinese.
+
+    I am from germany.
+
+    I like listening to blues music.
+
+    My favorite artist was prince.'
+  user 2 personas: 'I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    I speak fluent italian.
+
+    My brother is an archaeologist.
+
+    I am a cat owner.'
+  Best Generated Conversation: 'User 1: Where are you from?
+
+    User 2: I was born in Italy, but I live in the US now.
+
+    User 1: Oh cool! I''m from Germany.
+
+    User 2: That''s cool! I''ve always wanted to visit Germany.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I''m sure it is. What''s your favorite thing about Germany?
+
+    User 1: I love the food. There are so many great restaurants in Germany.
+
+    User 2: I love food too! What''s your favorite German food?
+
+    User 1: I love schnitzel. It''s so delicious.
+
+    User 2: I''ve never had schnitzel, but it sounds good. I''ll have to try it sometime.
+
+    User 1: You should! It''s one of my favorite foods.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to concerts. I''m a big fan of blues music.
+
+    User 2: I like going to concerts too! What''s your favorite blues musician?
+
+    User 1: I love Prince. He''s my favorite artist of all time.
+
+    User 2: I''ve heard of Prince. I''ll have to check him out.
+
+    User 1: You should! He''s amazing.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a translator. I translate English and Spanish.
+
+    User 2: That''s cool! I''m a teacher. I teach Italian.
+
+    User 1: That''s awesome! I love languages.
+
+    User 2: Me too! I''m glad we''re both multi-lingual.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

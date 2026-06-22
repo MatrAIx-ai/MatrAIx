@@ -1,0 +1,92 @@
+id: '00001313'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1313
+data:
+  user 1 personas: 'I like to garden.
+
+    I like to travel.
+
+    I like to build things.
+
+    I am tall.'
+  user 2 personas: 'My favorite author is jane austen.
+
+    I eat a lot of fish.
+
+    I live near the ocean.
+
+    I only wear tennis shoes.
+
+    I own a boat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi [user 2''s name].
+
+    User 1: What are you interested in?
+
+    User 2: I like to garden, travel, and build things.
+
+    User 1: That''s cool. I like gardening too. What do you like to grow?
+
+    User 2: I like to grow a lot of different things, but my favorite thing to grow is tomatoes.
+
+    User 1: Me too! I love fresh tomatoes.
+
+    User 2: They''re so good. I also like to grow herbs.
+
+    User 1: Me too! I love having fresh herbs to use in cooking.
+
+    User 2: Me too. What do you like to cook?
+
+    User 1: I like to cook a lot of different things, but my favorite thing to cook is probably pasta.
+
+    User 2: Pasta is so good. I like to make pasta with a lot of vegetables.
+
+    User 1: Me too! I love fresh vegetables.
+
+    User 2: I live near the ocean, so I like to eat a lot of fish.
+
+    User 1: That''s cool. I like fish too.
+
+    User 2: My favorite author is Jane Austen.
+
+    User 1: I haven''t read any of her books.
+
+    User 2: You should! They''re really good.
+
+    User 1: Okay, I''ll check them out.
+
+    User 2: You won''t regret it.
+
+    User 1: I hope not.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to the beach, play tennis, and go camping.
+
+    User 2: That sounds fun. I like to go to the beach too.
+
+    User 1: I also like to travel.
+
+    User 2: Me too! I''ve been to a lot of different countries.
+
+    User 1: Me too. I''ve been to Europe, Asia, and Africa.
+
+    User 2: That''s cool. I''ve only been to Europe and Asia.
+
+    User 1: I''ve been to a lot of different places.
+
+    User 2: That''s really cool. I wish I could travel more.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I know, I know. I just don''t have the time or money.
+
+    User 1: Well, maybe you''ll be able to travel more in the future.
+
+    User 2: Yeah, I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

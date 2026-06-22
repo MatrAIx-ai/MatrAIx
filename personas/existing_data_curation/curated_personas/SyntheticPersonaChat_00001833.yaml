@@ -1,0 +1,68 @@
+id: 00001833
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1833
+data:
+  user 1 personas: 'I am ten years old.
+
+    I love to read harry potter books.
+
+    And , my best friend is abigail.
+
+    Tomorrow is my first day of safety patrol.'
+  user 2 personas: 'I moved far from home.
+
+    I am skilled in computer repair.
+
+    My family owns a farm.
+
+    I have red hair.
+
+    I like to eat meat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: Me too! I love to read Harry Potter books.
+
+    User 2: Oh, I''ve never read them! What are they about?
+
+    User 1: They''re about a boy named Harry Potter who''s a wizard. He goes to a magic school called Hogwarts and has all sorts of adventures.
+
+    User 2: That sounds really cool! I might have to check them out.
+
+    User 1: You definitely should! They''re really good.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to play video games and watch movies. What do you like to do?
+
+    User 2: I like to play video games too. I also like to build computers.
+
+    User 1: Oh, that''s cool! I''ve never built a computer before.
+
+    User 2: It''s not too hard. You just need to know how to put the parts together.
+
+    User 1: I think I could learn how to do that.
+
+    User 2: I''m sure you could.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a computer repair technician.
+
+    User 1: Oh, that''s cool! I''ve always been interested in computers.
+
+    User 2: It''s a good job. I get to work on computers all day long.
+
+    User 1: That sounds like it would be a lot of fun.
+
+    User 2: It is. I love working with computers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

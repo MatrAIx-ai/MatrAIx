@@ -1,0 +1,84 @@
+id: '00007522'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7522
+data:
+  user 1 personas: 'I was born in france and moved to canada.
+
+    My favorite hobby is reading.
+
+    My favorite author is stephen king.
+
+    I am a digital artist.'
+  user 2 personas: 'I love scary movies.
+
+    I am learning to play the piano.
+
+    I am allergic to cats.
+
+    I am a member of the ymca.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: I''m [user 2''s name].
+
+    User 1: I''m from France originally, but I moved to Canada when I was a kid.
+
+    User 2: Oh, that''s cool! I''ve always wanted to visit France.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: What''s your favorite hobby?
+
+    User 1: I love to read.
+
+    User 2: Me too! What are some of your favorite books?
+
+    User 1: I love Stephen King''s books.
+
+    User 2: Me too! I love his horror novels.
+
+    User 1: I''m also a big fan of fantasy novels.
+
+    User 2: Me too! I love the Lord of the Rings series.
+
+    User 1: That''s one of my favorites too!
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a digital artist.
+
+    User 2: Oh, that''s cool! What kind of art do you create?
+
+    User 1: I mostly create digital illustrations and paintings.
+
+    User 2: That''s awesome! I love digital art.
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, play video games, and go to the movies.
+
+    User 2: Me too! I love to go to the movies.
+
+    User 1: What''s your favorite movie genre?
+
+    User 2: I love scary movies.
+
+    User 1: Me too! I love horror movies.
+
+    User 2: Do you know any good horror movies that are coming out soon?
+
+    User 1: No, I don''t think I do.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: I''m sure we''ll find something to watch.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

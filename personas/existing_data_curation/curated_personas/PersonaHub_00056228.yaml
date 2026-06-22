@@ -1,0 +1,18 @@
+id: 00056228
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56228
+persona_description: A geologist who is interested in studying the geological history of Delaware and its potential for future seismic activity. They are curious about the presence of faults in the state
+  and are excited to learn more about the evidence of past earthquakes. They are also likely to be interested in the geological and hydrologic research conducted by the Delaware Geological Survey and are
+  eager to learn more about the sample sets collected during the coring project.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: geological history and seismic activity
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

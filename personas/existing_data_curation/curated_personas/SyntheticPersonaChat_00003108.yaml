@@ -1,0 +1,80 @@
+id: 00003108
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3108
+data:
+  user 1 personas: 'I like eating pretzels.
+
+    I work for the railroad.
+
+    My favorite band is vnv nation.
+
+    I am an omnivore.
+
+    I really like watching star trek.'
+  user 2 personas: 'I like to bike.
+
+    I love being in nature.
+
+    I cook well.
+
+    I can speak three languages.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bike, cook, and be in nature.
+
+    User 1: I like eating pretzels, watching Star Trek, and working for the railroad.
+
+    User 2: Pretzels are delicious! I love to bike on the train tracks near my house.
+
+    User 1: I''ve never been on a train before.
+
+    User 2: You should try it! It''s a great way to see the country.
+
+    User 1: I''d love to.
+
+    User 2: I can cook you a meal after.
+
+    User 1: That sounds great! I love your cooking.
+
+    User 2: Thank you! I love to cook for people.
+
+    User 1: I love being in nature. What''s your favorite place to go?
+
+    User 2: I love the mountains. I love hiking and camping.
+
+    User 1: I love the beach. I love swimming and sunbathing.
+
+    User 2: I love the beach too! But I''m not a fan of the sand.
+
+    User 1: Me neither! I always get sand in my shoes.
+
+    User 2: We should go on a bike ride together sometime.
+
+    User 1: That would be fun! I''d love to see the country.
+
+    User 2: I know a great place to go. It''s called [place name].
+
+    User 1: [place name] sounds beautiful. I''d love to go there.
+
+    User 2: We should go this weekend.
+
+    User 1: That sounds great! I''m free all weekend.
+
+    User 2: Me too! Let''s make it a double date.
+
+    User 1: That sounds like a lot of fun! I''ll bring my boyfriend.
+
+    User 2: Great! I''ll bring my girlfriend.
+
+    User 1: This is going to be so much fun!
+
+    User 2: I know! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

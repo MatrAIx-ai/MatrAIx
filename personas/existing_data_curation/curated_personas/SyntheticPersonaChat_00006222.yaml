@@ -1,0 +1,60 @@
+id: '00006222'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6222
+data:
+  user 1 personas: 'I find joy in the littlest things.
+
+    I refuse to ride the bus.
+
+    I never work more than 4 days in a row.
+
+    My parents are both dead.
+
+    I listen to music for more than 5 hours a day.'
+  user 2 personas: 'I love adventures like mountain climbing.
+
+    My husband works at a telecom.
+
+    But i m a frustrated driver.
+
+    I am a mother of 2 daughters.'
+  Best Generated Conversation: 'User 1: My parents are both dead.
+
+    User 2: I am sorry.
+
+    User 1: Thanks. I am a music lover and I listen to music more than 5 hours a day.
+
+    User 2: I like music too. I like to listen to music while I drive.
+
+    User 1: I don''t drive. I refuse to ride the bus. I hate public transportation.
+
+    User 2: I understand. I am a frustrated driver. I get road rage all the time.
+
+    User 1: I don''t have to worry about that. I just walk everywhere I need to go.
+
+    User 2: I wish I could do that. I have two daughters and I have to drive them to school and activities.
+
+    User 1: That must be challenging.
+
+    User 2: It can be, but it''s also rewarding. I love being a mother.
+
+    User 1: I''m sure you do. I don''t have any kids, but I think I would like to be a mother someday.
+
+    User 2: It''s a lot of work, but it''s worth it.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go hiking and camping. I also like to go to concerts and festivals.
+
+    User 2: I love hiking and camping too! I''ve never been to a concert or festival, but I''d like to try it sometime.
+
+    User 1: You should! They''re a lot of fun.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

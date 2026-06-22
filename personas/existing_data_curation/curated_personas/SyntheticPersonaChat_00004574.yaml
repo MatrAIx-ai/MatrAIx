@@ -1,0 +1,64 @@
+id: '00004574'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4574
+data:
+  user 1 personas: 'I am a recovering alcoholic.
+
+    My girl friend lives in the condo next door.
+
+    I am a retired newspaper reporter.
+
+    I live in a condo.
+
+    I have a large mustache.'
+  user 2 personas: 'I am very social.
+
+    I am in the band.
+
+    I make straight as.
+
+    I am a high school student.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play in the band, hang out with friends, and get good grades.
+
+    User 1: I like to play the drums in the band, too. I''m also a retired newspaper reporter.
+
+    User 2: That''s cool! I''m a high school student.
+
+    User 1: Nice! How are your grades?
+
+    User 2: I make straight A''s.
+
+    User 1: That''s amazing!
+
+    User 2: Thanks!
+
+    User 1: So, are you going to college?
+
+    User 2: I''m not sure yet. I''m still thinking about it.
+
+    User 1: Well, whatever you decide to do, I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you think about the band''s new song?
+
+    User 2: I like it! It''s really catchy.
+
+    User 1: I know, right? I''m glad you like it.
+
+    User 2: Me too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

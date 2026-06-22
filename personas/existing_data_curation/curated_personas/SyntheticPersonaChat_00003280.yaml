@@ -1,0 +1,72 @@
+id: 00003280
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3280
+data:
+  user 1 personas: 'Watching sports is fun.
+
+    I used to be a meat eater but i am now a vegan.
+
+    I go to yoga.
+
+    My favorite sport is hockey.'
+  user 2 personas: 'I never cook.
+
+    I like to dress up for other people.
+
+    I take great care of my skin.
+
+    I am an actress and i work at a grocery store.
+
+    I think i will be famous one day.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an actress and I work at a grocery store.
+
+    User 1: That''s cool! I''ve always wanted to be an actress.
+
+    User 2: It''s a lot of fun, but it''s also a lot of work.
+
+    User 1: I can imagine. What''s your favorite part of being an actress?
+
+    User 2: I love the feeling of being on stage and performing for a live audience. It''s so much fun to be able to make people laugh and cry.
+
+    User 1: That''s awesome! I''m sure you''re great at it.
+
+    User 2: Thank you! I hope so!
+
+    User 1: So, what''s your favorite sport?
+
+    User 2: I love hockey! It''s so exciting and fast-paced.
+
+    User 1: Me too! I used to play hockey when I was younger.
+
+    User 2: That''s awesome! I wish I could play, but I''m not very athletic.
+
+    User 1: You don''t have to be athletic to play hockey! It''s all about having fun.
+
+    User 2: I guess you''re right. Maybe I''ll give it a try sometime.
+
+    User 1: I''m sure you''d be great at it!
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to dress up for other people. I think it''s so much fun to be able to transform into someone else for a night.
+
+    User 1: That''s awesome! I''m not very good at dressing up, but I admire people who are.
+
+    User 2: Thanks! It''s really not that hard. Just takes a little practice.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: I''m sure you''d be great at it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00006298
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6298
+data:
+  user 1 personas: 'I used to wear glasses as a child.
+
+    My mother is a librarian.
+
+    The only autographs i ve ever wanted are from authors.
+
+    I m applying for publishing jobs.'
+  user 2 personas: 'I listen to classical music.
+
+    I enjoy golfing.
+
+    I am married with three kids.
+
+    I love my work and just got promoted.
+
+    I work for a large law firm.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too. What do you do for a living?
+
+    User 1: I''m currently applying for publishing jobs, but I used to work at a bookstore.
+
+    User 2: Oh, that''s cool. I work for a large law firm.
+
+    User 1: Wow, that must be interesting.
+
+    User 2: It is. I love my job. I just got promoted, too.
+
+    User 1: Congratulations!
+
+    User 2: Thanks! I''m really excited about it.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I love golfing and listening to classical music.
+
+    User 1: Golfing? That''s interesting. I''ve never tried it before.
+
+    User 2: You should! It''s a great way to relax and get some exercise.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: I''m sure you''ll enjoy it.
+
+    User 1: So, what''s it like being married with three kids?
+
+    User 2: It''s busy, but it''s also really rewarding. I love my family.
+
+    User 1: That''s great to hear.
+
+    User 2: Thanks.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again sometime.
+
+    User 2: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

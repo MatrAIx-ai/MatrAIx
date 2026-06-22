@@ -1,0 +1,64 @@
+id: '00002125'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2125
+data:
+  user 1 personas: 'I am from tennessee.
+
+    I love to fish.
+
+    I have a black lab.
+
+    My favorite musician in charlie daniels.
+
+    I am married.'
+  user 2 personas: 'I am a vegan.
+
+    I have a farm with pigs , horses and hens.
+
+    I love country music.
+
+    I love dancing.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Tennessee.
+
+    User 2: Hi! I''m from Kentucky.
+
+    User 1: Oh, cool! I love country music. Do you like it?
+
+    User 2: Yes, I do! I love to dance to country music.
+
+    User 1: Me too! I love to go dancing with my husband.
+
+    User 2: That''s great! I''m single, so I don''t get to dance as much as I would like.
+
+    User 1: Well, you''re always welcome to join us!
+
+    User 2: Thanks! I might take you up on that.
+
+    User 1: Great! We can have a lot of fun.
+
+    User 2: I''m sure we would.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a farmer. I have a farm with pigs, horses, and hens.
+
+    User 1: That''s awesome! I''ve always wanted to live on a farm.
+
+    User 2: It''s great! I love being surrounded by animals.
+
+    User 1: Me too! I love animals.
+
+    User 2: We should go to my farm sometime.
+
+    User 1: I would love to!
+
+    User 2: Great! I''ll send you the address.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

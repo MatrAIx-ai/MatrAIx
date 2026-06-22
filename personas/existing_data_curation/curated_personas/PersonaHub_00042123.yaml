@@ -1,0 +1,18 @@
+id: '00042123'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42123
+persona_description: A systems administrator who is responsible for managing and maintaining a database system, specifically focusing on the replication process. This individual is skilled in understanding
+  and implementing the replication strategy, ensuring that the slave server is functioning correctly and that the relay log, master info log, and relay log info log are being maintained efficiently. They
+  are also knowledgeable about the binary log events, event execution, and the status of the slave's connection to the master, as well as the overall system's performance and stability.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: database administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

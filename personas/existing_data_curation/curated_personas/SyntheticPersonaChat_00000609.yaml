@@ -1,0 +1,76 @@
+id: 00000609
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 609
+data:
+  user 1 personas: 'I am an orphan.
+
+    I like dogs.
+
+    I grew up in nevada.
+
+    I used to fly planes for a living.
+
+    I now live in new mexico.'
+  user 2 personas: 'I own a hot pink moped.
+
+    My favorite color is orange.
+
+    I m in a rock band.
+
+    I have really long fingernails.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I grew up in Las Vegas, Nevada, but I now live in New Mexico.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in a rock band.
+
+    User 1: Oh, that''s cool! What''s your band name?
+
+    User 2: We''re called The Pink Mopeds.
+
+    User 1: That''s a great name! How long have you been in the band?
+
+    User 2: We''ve been together for about five years.
+
+    User 1: What''s your favorite song to play?
+
+    User 2: We have a lot of great songs, but I think my favorite is "Hot Pink Moped."
+
+    User 1: That''s a good one! Do you have any upcoming concerts?
+
+    User 2: We''re playing at a local bar next week.
+
+    User 1: I''ll have to come see you!
+
+    User 2: That would be great!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play music, hang out with friends, and ride my hot pink moped.
+
+    User 1: That sounds like fun! I like to play music and hang out with friends too.
+
+    User 2: What kind of music do you like to play?
+
+    User 1: I like to play rock, blues, and country.
+
+    User 2: Nice! I like all those genres too.
+
+    User 1: So, you''re in a rock band, but you also like country music?
+
+    User 2: Yeah, I like a lot of different genres of music. I''m not a big fan of pop music, but I like everything else.
+
+    User 1: Me too! I like to listen to a variety of music.
+
+    User 2: That''s cool! I like meeting people who like different kinds of music.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

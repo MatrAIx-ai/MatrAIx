@@ -1,0 +1,60 @@
+id: 00001977
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1977
+data:
+  user 1 personas: 'I love all animals.
+
+    I love my job.
+
+    I am a vegan.
+
+    I used to work as an actress.'
+  user 2 personas: 'My birthday is in june.
+
+    I am currently unemployed.
+
+    I have a cat.
+
+    I still live with my parents.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read and play with my cat.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love the Harry Potter series and the Lord of the Rings trilogy.
+
+    User 1: I love those books too! I''m also a big fan of the Hunger Games series.
+
+    User 2: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a vegan chef.
+
+    User 2: That''s cool! I''ve never met a vegan chef before.
+
+    User 1: It''s a lot of fun! I love being able to create delicious meals without using any animal products.
+
+    User 2: That must be challenging.
+
+    User 1: It can be, but it''s also really rewarding. I love being able to show people that vegan food can be just as delicious as non-vegan food.
+
+    User 2: I''m sure it can. I''m always looking for new vegan recipes to try.
+
+    User 1: Well, if you''re ever in the mood for some delicious vegan food, you know where to find me.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

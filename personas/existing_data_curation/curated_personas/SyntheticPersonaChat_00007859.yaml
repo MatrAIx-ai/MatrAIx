@@ -1,0 +1,76 @@
+id: 00007859
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7859
+data:
+  user 1 personas: 'My favorite food is spaghetti and meatballs.
+
+    I am not afraid of what others think.
+
+    I can be quite forgetful.
+
+    My boyfriend works for nasa.
+
+    I was raised by two mothers.'
+  user 2 personas: 'I love starbucks coffee.
+
+    I have a cat named pickles.
+
+    I was a swimmer in college.
+
+    My parents met at woodstock.
+
+    I have a beautiful rose garden.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to swim and I have a beautiful rose garden.
+
+    User 1: I love swimming too! What''s your favorite stroke?
+
+    User 2: I love the butterfly stroke. It''s so graceful.
+
+    User 1: I''ve never tried it. I''m more of a freestyle swimmer.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I''ll have to give it a try. I love your rose garden! It''s beautiful.
+
+    User 2: Thank you! I''m really proud of it.
+
+    User 1: I have a cat named Pickles.
+
+    User 2: That''s a cute name! I love cats.
+
+    User 1: Me too! Pickles is a great companion.
+
+    User 2: I bet he is! I love cuddling with my cat, Mittens.
+
+    User 1: Mittens is a great name!
+
+    User 2: Thank you!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: That''s awesome! I''m in college studying computer science.
+
+    User 2: That''s great! What do you want to do with your degree?
+
+    User 1: I''m not sure yet. I''m interested in a lot of different things.
+
+    User 2: Well, you have a lot of options with a computer science degree.
+
+    User 1: I know! That''s what''s so exciting.
+
+    User 2: It sounds like you''re going to have a great future.
+
+    User 1: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

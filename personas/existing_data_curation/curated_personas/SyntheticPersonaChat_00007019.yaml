@@ -1,0 +1,74 @@
+id: 00007019
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7019
+data:
+  user 1 personas: 'I won the spelling bee in third grade.
+
+    I love to eat eggplant.
+
+    I smoke a pipe.
+
+    I ve been married five times.'
+  user 2 personas: 'I love to drive my car.
+
+    I like watching ufc fights.
+
+    I work in a factory.
+
+    Connor mcgreggor is my favorite fighter.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to drive my car, watch UFC fights, and work in my factory.
+
+    User 1: Oh, that''s cool! I like to eat eggplant, smoke a pipe, and I''ve been married five times.
+
+    User 2: Really? I''ve never met someone who''s been married five times before.
+
+    User 1: Yeah, it''s a lot of work, but it''s worth it.
+
+    User 2: I can imagine. So, what''s your favorite kind of eggplant?
+
+    User 1: I like to eat it roasted with a little bit of salt and pepper.
+
+    User 2: That sounds delicious! I''ve never tried it that way before.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem. So, what''s your favorite UFC fighter?
+
+    User 2: My favorite UFC fighter is Connor McGregor.
+
+    User 1: Oh, that''s a good choice. He''s a great fighter.
+
+    User 2: Yeah, he is. I love watching his fights.
+
+    User 1: Me too. He''s always so exciting to watch.
+
+    User 2: Yeah, he is. So, what do you do for work?
+
+    User 1: I work at a nursing home.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It is. I get to meet a lot of different people.
+
+    User 2: That sounds cool.
+
+    User 1: Yeah, it is.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

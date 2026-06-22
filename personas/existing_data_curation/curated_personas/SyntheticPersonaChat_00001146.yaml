@@ -1,0 +1,104 @@
+id: '00001146'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1146
+data:
+  user 1 personas: 'I work at a vet.
+
+    I have 3 dog.
+
+    I have 2 kids.
+
+    My husband is a lawyer.
+
+    I love flowers.'
+  user 2 personas: 'Going to the beach is my favorite past time.
+
+    I am an american citizen.
+
+    I love pizza.
+
+    My son is a football player.
+
+    I like reading mystery novels.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, go to the beach, and play video games.
+
+    User 1: Oh, me too! I love to read mystery novels, and I used to play a lot of video games when I was younger.
+
+    User 2: What kind of mystery novels do you like to read?
+
+    User 1: I like all kinds of mystery novels, but I especially like the ones that are set in historical settings.
+
+    User 2: I love historical fiction too! It''s so much fun to learn about different time periods.
+
+    User 1: I know, right? It''s like taking a little vacation without even leaving your house.
+
+    User 2: Exactly! So, what do you do for a living?
+
+    User 1: I work at a vet.
+
+    User 2: Oh, that must be so rewarding! I love animals.
+
+    User 1: It is! I get to help people and animals every day.
+
+    User 2: That''s amazing.
+
+    User 1: Thank you. So, what do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be so much fun!
+
+    User 2: It is! I love spending time with my kids.
+
+    User 1: That''s great. So, what do you like to do as a family?
+
+    User 2: We like to go to the beach, play games, and read books.
+
+    User 1: Sounds like you have a lot of fun together.
+
+    User 2: We do! We''re a very close family.
+
+    User 1: That''s great to hear.
+
+    User 2: Thanks. So, what else do you like to do?
+
+    User 1: I like to go to the gym, cook, and watch movies.
+
+    User 2: Oh, me too! I love to cook.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love to make pizza.
+
+    User 1: Me too! I love making pizza with my kids.
+
+    User 2: That''s so cute! I''m sure they love it.
+
+    User 1: They do! They''re always begging me to make pizza.
+
+    User 2: That''s so sweet.
+
+    User 1: It is.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to the beach with my family.
+
+    User 2: Oh, that sounds like fun!
+
+    User 1: It will! I''m looking forward to it.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

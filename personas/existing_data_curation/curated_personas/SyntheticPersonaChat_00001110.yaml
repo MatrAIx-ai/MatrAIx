@@ -1,0 +1,84 @@
+id: '00001110'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1110
+data:
+  user 1 personas: 'I play football.
+
+    I eat well.
+
+    I am very social.
+
+    I am in college.'
+  user 2 personas: 'I live near the ocean.
+
+    I own a boat.
+
+    I only wear tennis shoes.
+
+    My favorite author is jane austen.
+
+    I eat a lot of fish.'
+  Best Generated Conversation: 'User 1: Hi there, what''s your name?
+
+    User 2: Hi, I''m Jane.
+
+    User 1: Nice to meet you, Jane. What do you do for fun?
+
+    User 2: I like to read, go for walks on the beach, and play with my dog.
+
+    User 1: That sounds like fun. I like to play football, eat well, and be social.
+
+    User 2: Oh, I''ve always wanted to play football. What position do you play?
+
+    User 1: I play running back. I''m not very fast, but I''m pretty strong.
+
+    User 2: That''s cool. I''m not very coordinated, so I don''t think I would be very good at football.
+
+    User 1: Don''t worry, you don''t have to be very coordinated to play. It''s more about having fun and working together as a team.
+
+    User 2: That''s true. I''ve always wanted to try it out, but I''ve never had the opportunity.
+
+    User 1: Well, if you''re ever in the area, I''ll let you know when we have practice.
+
+    User 2: That would be great! Thanks.
+
+    User 1: No problem. So, what do you like to read?
+
+    User 2: I like to read a lot of different things, but I''m especially a fan of Jane Austen.
+
+    User 1: I''ve never read any of her books.
+
+    User 2: You should! They''re really good. She''s a classic author.
+
+    User 1: I''ll check them out. I''m always looking for new books to read.
+
+    User 2: Good. I hope you like them.
+
+    User 1: Me too. So, what else do you like to do for fun?
+
+    User 2: I like to go for walks on the beach. I live right near the ocean, so it''s easy to get out there and enjoy the scenery.
+
+    User 1: That sounds really nice. I''ve always wanted to live near the ocean.
+
+    User 2: It''s great. I love the sound of the waves and the smell of the salt air.
+
+    User 1: Me too. I think it would be so relaxing to live near the ocean.
+
+    User 2: It is. I love it.
+
+    User 1: So, what''s your favorite thing about living near the ocean?
+
+    User 2: I think it''s the freedom. I can go for walks on the beach whenever I want, and I can always see the ocean.
+
+    User 1: That sounds amazing. I wish I could live near the ocean.
+
+    User 2: Well, you''re always welcome to come visit me.
+
+    User 1: I will! Thanks for the invite.
+
+    User 2: No problem. I''m always happy to have guests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

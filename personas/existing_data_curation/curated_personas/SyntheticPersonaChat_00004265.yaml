@@ -1,0 +1,94 @@
+id: '00004265'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4265
+data:
+  user 1 personas: 'Green is my favorite color.
+
+    I love animals.
+
+    I am an aspiring singer.
+
+    I enjoy playing tennis.
+
+    My father worked for ge.'
+  user 2 personas: 'I like to go to the movies.
+
+    I like to take drives in the country.
+
+    I like to read books that are in a series.
+
+    I like to chat with my friends.
+
+    I love to go out to eat with my family.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What are you interested in?
+
+    User 2: I like to go to the movies, take drives in the country, read books that are in a series, and chat with my friends.
+
+    User 1: Wow, you have a lot of interests! I''m an aspiring singer, I enjoy playing tennis, and my favorite color is green.
+
+    User 2: That''s cool! I''ve always wanted to learn how to sing. I love watching tennis, but I''ve never played it myself.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out to eat with my family, go shopping, and take walks in the park.
+
+    User 1: Those sound like fun things to do. I like to go out to eat with my friends, too.
+
+    User 2: Yeah, it''s always more fun to eat with friends!
+
+    User 1: So, where are you from?
+
+    User 2: I''m from [User 2''s hometown].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a small town, but it''s really nice. It''s a great place to raise a family.
+
+    User 1: That sounds like a nice place to live.
+
+    User 2: It is. I love it there.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to be a teacher.
+
+    User 2: It''s a great job. I love working with kids.
+
+    User 1: I bet it is. I love kids, too.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a student.
+
+    User 2: Oh, that''s cool. What are you studying?
+
+    User 1: I''m studying music.
+
+    User 2: That''s awesome! I love music.
+
+    User 1: Thanks! I love it too.
+
+    User 2: So, what kind of music do you like?
+
+    User 1: I like all kinds of music, but my favorite is probably rock.
+
+    User 2: Rock is my favorite genre too!
+
+    User 1: That''s awesome!
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

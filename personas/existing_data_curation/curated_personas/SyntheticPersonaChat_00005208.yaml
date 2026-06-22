@@ -1,0 +1,70 @@
+id: 00005208
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5208
+data:
+  user 1 personas: 'Ariel is my favorite princess.
+
+    I love disney movies.
+
+    I love to dance.
+
+    I am in high school.'
+  user 2 personas: 'I ca sim very fast.
+
+    I have a lot of trophies from my childhood.
+
+    I love to sing.
+
+    I love to run.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). What''s your name?
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to swim, sing, and run.
+
+    User 1: Me too! I love to swim and dance.
+
+    User 2: That''s awesome! Do you have a favorite Disney movie?
+
+    User 1: Yes, I love Ariel from The Little Mermaid.
+
+    User 2: Ariel is my favorite too! I love her red hair and her singing voice.
+
+    User 1: Me too! She''s so beautiful and kind.
+
+    User 2: I know, right? She''s my favorite Disney princess.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to go to the beach and swim. I also love to play video games.
+
+    User 1: I love the beach too! I love to swim, play in the sand, and sunbathe.
+
+    User 2: Me too! I love to go to the beach with my friends and family.
+
+    User 1: Me too! It''s so much fun to spend time with loved ones at the beach.
+
+    User 2: I know, right? It''s the best!
+
+    User 1: So, what are some of your favorite video games?
+
+    User 2: I love to play Mario Kart, Minecraft, and Call of Duty.
+
+    User 1: Me too! I love Mario Kart and Minecraft. I''ve never played Call of Duty, but I''ve heard it''s really fun.
+
+    User 2: It''s a lot of fun! It''s a first-person shooter game.
+
+    User 1: Oh, I''ve heard of that. I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

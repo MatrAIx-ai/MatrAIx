@@ -1,0 +1,100 @@
+id: 00004873
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4873
+data:
+  user 1 personas: 'My favorite color is yellow.
+
+    I often do not have the money to pay my utility bills.
+
+    I only take the bus.
+
+    I babysit for the woman who lives next door.
+
+    I am an old woman who lives on a social security check.'
+  user 2 personas: 'My country is russia.
+
+    I can also squat 400 pounds.
+
+    I am a weight lifter.
+
+    I can benchpress 345 pounds.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a weight lifter.
+
+    User 1: That''s impressive! How much can you bench press?
+
+    User 2: I can bench press 345 pounds.
+
+    User 1: Wow! That''s amazing!
+
+    User 2: Thanks! I''ve been lifting weights for a few years now.
+
+    User 1: I see. What do you like to do for fun?
+
+    User 2: I like to read and watch movies.
+
+    User 1: Me too! What kind of books and movies do you like?
+
+    User 2: I like to read historical fiction and watch comedies.
+
+    User 1: I like historical fiction too! What are some of your favorite books?
+
+    User 2: I like the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what are some of your favorite movies?
+
+    User 2: I like the Princess Bride and the Shawshank Redemption.
+
+    User 1: I love the Princess Bride! It''s so funny.
+
+    User 2: I know, right? It''s one of my favorite movies of all time.
+
+    User 1: What about the Shawshank Redemption?
+
+    User 2: It''s a really good movie. It''s about a man who is wrongly convicted of murder and sent to prison.
+
+    User 1: Oh, I''ve heard of that movie. It''s on my list to watch.
+
+    User 2: You should watch it! It''s a really good movie.
+
+    User 1: I will!
+
+    User 2: So, where are you from?
+
+    User 1: I''m from Texas.
+
+    User 2: Oh, nice! I''m from Russia.
+
+    User 1: Really? That''s cool! I''ve always wanted to visit Russia.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I will! I''ve heard that the food is really good.
+
+    User 2: It is! You should try borscht.
+
+    User 1: What''s that?
+
+    User 2: It''s a soup made with beets, cabbage, and beef.
+
+    User 1: That sounds delicious! I''ll have to try it.
+
+    User 2: You should! It''s one of my favorite foods.
+
+    User 1: Well, it''s been nice chatting with you.
+
+    User 2: You too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

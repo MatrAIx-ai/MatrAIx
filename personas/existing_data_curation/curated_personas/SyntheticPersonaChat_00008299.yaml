@@ -1,0 +1,64 @@
+id: 00008299
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8299
+data:
+  user 1 personas: 'Both my moms tell me they love me when i call them.
+
+    Playing quake on slackware linux makes me happy.
+
+    I have three dogs and two cats.
+
+    I like to use a lot of exclamation marks when i type.
+
+    I live in chicago.'
+  user 2 personas: 'I like to make clothes.
+
+    I work for peta.
+
+    I am a vegetarian.
+
+    I love animals.
+
+    I make 50k a year.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey! What''s up?
+
+    User 1: Not much, just playing Quake on my Slackware Linux machine.
+
+    User 2: Cool! I''ve never played Quake, but I''ve heard it''s a lot of fun.
+
+    User 1: It is! It''s a really fast-paced shooter, and it''s a lot of fun to compete against other people online.
+
+    User 2: That sounds like a lot of fun! I might have to check it out sometime.
+
+    User 1: You should! I''m sure you''d like it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! So, what do you do for fun?
+
+    User 2: I like to make clothes. I work for PETA, so I get to make clothes out of recycled materials. It''s really fun and rewarding, and I love that I''m helping to save animals.
+
+    User 1: That''s so cool! I love that you''re using your work to help animals. I''m a vegetarian too, so I really appreciate that.
+
+    User 2: Thanks! I''m glad you appreciate it. I try to do everything I can to help animals, and I''m glad I can do that through my work.
+
+    User 1: That''s really great of you. So, what''s your favorite kind of animal?
+
+    User 2: I love dogs! They''re so loving and loyal. I have two dogs of my own, and they''re my best friends.
+
+    User 1: That''s great! I love dogs too. I have three dogs and two cats, and they''re my whole world.
+
+    User 2: That''s a lot of pets! I''m sure you have your hands full.
+
+    User 1: I do, but it''s worth it. I love them all so much.
+
+    User 2: I''m sure they love you too.
+
+    User 1: I know they do. They''re the best pets anyone could ask for.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

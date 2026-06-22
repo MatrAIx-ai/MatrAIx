@@ -1,0 +1,18 @@
+id: 00000128
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 128
+persona_description: A person who is interested in economics and environmental issues, and is particularly concerned about the costs of oil production and its impact on the environment. They are likely
+  to be a scientist or a policy analyst who is concerned about the long-term effects of fossil fuels and their dependence on foreign resources. They are also likely to be aware of the social and political
+  implications of oil production, such as the role of oil companies in funding propaganda organizations and Middle Eastern dictatorships.
+expertise:
+  general_domain_top1pct: economics
+  specific_domain_top1pct: energy economics or environmental economics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

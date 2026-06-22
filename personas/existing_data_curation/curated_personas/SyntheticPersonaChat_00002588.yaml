@@ -1,0 +1,82 @@
+id: 00002588
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2588
+data:
+  user 1 personas: 'I love to go running.
+
+    I enjoy spending time with my family.
+
+    My favorite store is american eagle.
+
+    I do not like vegetables.
+
+    My favorite truck is a chevy drama.'
+  user 2 personas: 'I am an out of work farmhand.
+
+    Last month the farm was foreclosed so i am looking for a new job.
+
+    I live in kansas.
+
+    I like watching reality television shows.
+
+    I would like to move some place warmer.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name], and I''m from [user 1''s hometown].
+
+    User 2: Hi, I''m [user 2''s name], and I''m from [user 2''s hometown].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go running, watch reality television, and spend time with my family.
+
+    User 1: I like to go running too! I also like to read and spend time with my family.
+
+    User 2: That''s great! What''s your favorite book?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction.
+
+    User 2: I''ve never read any historical fiction. What''s your favorite historical fiction book?
+
+    User 1: My favorite historical fiction book is The Book Thief by Markus Zusak. It''s about a young girl living in Germany during World War II.
+
+    User 2: That sounds like a good book. I''ll have to check it out.
+
+    User 1: You should! It''s a really good read.
+
+    User 2: I''m sure it is. I''m always looking for new books to read.
+
+    User 1: What''s your favorite reality television show?
+
+    User 2: I like to watch all kinds of reality shows, but my favorite is The Bachelor.
+
+    User 1: I''ve never watched The Bachelor. What''s it about?
+
+    User 2: It''s about a single man who goes on a series of dates with 25 women, and he eventually chooses one to marry.
+
+    User 1: That sounds like a good show. I might have to check it out.
+
+    User 2: You should! It''s a lot of fun to watch.
+
+    User 1: So, what are you doing now that your farm was foreclosed?
+
+    User 2: I''m currently out of work, but I''m looking for a new job. I''m hoping to find something in the agriculture industry.
+
+    User 1: I hope you find a new job soon. I''m sure you''ll be great at it.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, where do you want to move to?
+
+    User 2: I''m not sure yet. I''m thinking about somewhere in the South. I''ve always wanted to live somewhere warm.
+
+    User 1: That sounds nice. I''ve always wanted to live in the mountains.
+
+    User 2: The mountains are beautiful. I''ve only been to them once, but I loved it.
+
+    User 1: I''m sure you''ll find a great place to move to. You''re a smart and capable person. You can do anything you set your mind to.
+
+    User 2: Thanks! I appreciate that. I''m sure I''ll find my way.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

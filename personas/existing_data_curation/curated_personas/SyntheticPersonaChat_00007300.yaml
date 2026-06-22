@@ -1,0 +1,76 @@
+id: '00007300'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7300
+data:
+  user 1 personas: 'I am still in love with my ex boyfriend.
+
+    I am a female and love to be surrounded by males.
+
+    People say i have a cute laugh.
+
+    I working in a publishing building.
+
+    I love to cook for my family and friends.'
+  user 2 personas: 'I live at home with my dad and brother.
+
+    I have depression and anxiety so i do not really go out a lot.
+
+    I work at home , editing.
+
+    I have a cat.
+
+    I hope to move out soon.'
+  Best Generated Conversation: 'User 1: Hi! I''m Sarah.
+
+    User 2: Hi Sarah, I''m Alex.
+
+    User 1: It''s nice to meet you, Alex.
+
+    User 2: You too, Sarah.
+
+    User 1: What do you do for work?
+
+    User 2: I''m an editor.
+
+    User 1: Oh, that''s cool. I work in publishing.
+
+    User 2: Oh, that''s awesome! I love to read.
+
+    User 1: Me too! I love cooking for my family and friends.
+
+    User 2: That''s a great hobby. I wish I could cook.
+
+    User 1: You should try it! It''s really fun and you can learn a lot.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch movies, play video games, and read.
+
+    User 1: Oh, that''s cool. I like to do all of those things too.
+
+    User 2: Nice!
+
+    User 1: So, what do you think of living at home with your dad and brother?
+
+    User 2: It''s not bad. I get to save money and I like being close to my family.
+
+    User 1: That''s good. I hope you can move out soon.
+
+    User 2: Me too.
+
+    User 1: So, what are your goals for the future?
+
+    User 2: I want to get my own place and start a family.
+
+    User 1: That''s great! I''m sure you''ll achieve your goals.
+
+    User 2: Thanks, Sarah. I''m glad I met you.
+
+    User 1: Me too, Alex. It''s been nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

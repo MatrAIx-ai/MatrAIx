@@ -1,0 +1,64 @@
+id: 00003183
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3183
+data:
+  user 1 personas: 'I love to eat eggplant.
+
+    I ve been married five times.
+
+    I smoke a pipe.
+
+    I own a bar in downtown chicago.
+
+    I won the spelling bee in third grade.'
+  user 2 personas: 'I m allergic to cats.
+
+    I use to compete in beauty pageants.
+
+    I love to have my nails done.
+
+    My husband is a corporate attorney.
+
+    I have one little boy named owen.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to have my nails done and compete in beauty pageants.
+
+    User 1: Oh, that''s cool! I''ve never been a fan of beauty pageants, but I can appreciate the hard work that goes into them.
+
+    User 2: Thank you! It''s a lot of fun, but it can also be very stressful.
+
+    User 1: I can imagine. So, what are your nails like right now?
+
+    User 2: They''re actually pretty basic right now. I just got them done a few days ago, so they''re still pretty fresh.
+
+    User 1: Oh, that''s nice. I like to keep mine a little more colorful.
+
+    User 2: That''s cool! I think it''s fun to switch it up every once in a while.
+
+    User 1: Yeah, me too. So, what do you do for a living?
+
+    User 2: I''m a stay-at-home mom. I have a little boy named Owen.
+
+    User 1: Oh, that''s great! I''m sure being a stay-at-home mom is a lot of work, but it''s also very rewarding.
+
+    User 2: It is! I love spending time with Owen and helping him grow and learn.
+
+    User 1: That''s awesome. So, what''s your husband like?
+
+    User 2: He''s great! He''s a corporate attorney and he''s very supportive of me and Owen.
+
+    User 1: That''s great! So, what are you guys up to this weekend?
+
+    User 2: We''re not sure yet. We might go to the park or have a picnic.
+
+    User 1: That sounds like fun! I hope you guys have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

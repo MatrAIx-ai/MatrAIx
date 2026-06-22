@@ -1,0 +1,70 @@
+id: '00001536'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1536
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I live on a pig farm.
+
+    I dislike animals.
+
+    I have allergies.'
+  user 2 personas: 'I work at a coffee shop.
+
+    I have three roommates.
+
+    I have an eyebrown piercing.
+
+    My sister and i are in a grunge band.
+
+    Both of my parents are teachers.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], I live on a pig farm and I''m a vegetarian.
+
+    User 2: Hi [name], I''m [name], I work at a coffee shop.
+
+    User 1: Cool! I''ve always wanted to work in a coffee shop.
+
+    User 2: It''s pretty fun, but it can be tiring.
+
+    User 1: I bet. Do you have any piercings?
+
+    User 2: I have an eyebrow piercing.
+
+    User 1: Oh, cool! I''ve always wanted one, but I''m too scared of the pain.
+
+    User 2: It wasn''t that bad, but it does take a while to heal.
+
+    User 1: I''m sure it''s worth it. What''s your favorite thing about your job?
+
+    User 2: I like the people I work with and the free coffee.
+
+    User 1: That''s always a plus. What''s your favorite band?
+
+    User 2: I like Nirvana.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: My sister and I are in a grunge band.
+
+    User 1: That''s awesome! Do you guys play any shows?
+
+    User 2: We''re still working on it, but we''re hoping to play some shows soon.
+
+    User 1: I''ll definitely check you out when you do.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to concerts, play video games, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: We should hang out sometime.
+
+    User 1: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

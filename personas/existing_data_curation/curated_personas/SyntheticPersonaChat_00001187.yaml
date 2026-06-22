@@ -1,0 +1,66 @@
+id: 00001187
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1187
+data:
+  user 1 personas: 'I am a cat owner.
+
+    I have one blue eye and one hazel eye.
+
+    My brother is an archaeologist.
+
+    I speak fluent italian.
+
+    My mom is an osteopath.'
+  user 2 personas: 'I am a student at a small community college.
+
+    I love to read fiction.
+
+    I work at a hospital.
+
+    I love pasta.
+
+    I am twenty years old.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for fun?
+
+    User 2: I love to read fiction. I''m currently reading a book about a cat who travels around the world.
+
+    User 1: That sounds interesting. I''ve always wanted to learn Italian.
+
+    User 2: That''s cool! I know a little bit of Italian, but I''m not very good at it.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog. His name is Milo.
+
+    User 1: That''s a cute name! I have a cat named Mittens.
+
+    User 2: I love cats! I''ve always wanted a cat, but my mom is allergic to them.
+
+    User 1: I''m sorry to hear that. Cats are great pets.
+
+    User 2: I know, right? They''re so cute and cuddly.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student at a small community college. I''m studying to be a nurse.
+
+    User 1: That''s great! I''m sure you''ll be a great nurse.
+
+    User 2: Thanks! I hope so. I''m really excited to start my career.
+
+    User 1: I''m sure you''ll be successful. You seem like a very hard-working person.
+
+    User 2: Thanks! That means a lot.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

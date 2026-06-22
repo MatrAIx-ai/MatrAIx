@@ -1,0 +1,74 @@
+id: 00001858
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1858
+data:
+  user 1 personas: 'I draw comic books.
+
+    In the evenings i watch the door at a club where they play punkrock.
+
+    My favorite show is scobby doo.
+
+    I work in a corner grocery store during the day.'
+  user 2 personas: 'I am a pilot.
+
+    Both of my parents are in the military.
+
+    I am afraid of spiders.
+
+    My girlfriend lives in salt lake city.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. What do you do for a living?
+
+    User 1: I draw comic books.
+
+    User 2: That''s cool! I''ve always wanted to be able to draw.
+
+    User 1: It''s a lot of fun! What do you do for a living?
+
+    User 2: I''m a pilot.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to go flying.
+
+    User 2: It''s really fun! I get to see a lot of different places.
+
+    User 1: That must be great! Where have you been to the most?
+
+    User 2: I''ve been all over the United States, and I''ve also been to Europe and Asia.
+
+    User 1: That''s amazing! I''ve only been to a few places in the United States.
+
+    User 2: You should definitely travel more! It''s a great way to see the world.
+
+    User 1: I know, I know. I''m trying to save up money to go to Europe.
+
+    User 2: Europe is a great place to travel. I''m sure you''ll have a lot of fun there.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: So, what''s your favorite show?
+
+    User 1: My favorite show is Scooby Doo.
+
+    User 2: That''s a good choice! I used to love watching Scooby Doo when I was a kid.
+
+    User 1: Me too! I still love it to this day.
+
+    User 2: What''s your favorite episode?
+
+    User 1: My favorite episode is the one where they go to Egypt.
+
+    User 2: That''s a good one! I also like the one where they go to the moon.
+
+    User 1: Those are both great episodes! I love the ones where they go to different countries.
+
+    User 2: Me too! They''re always so much fun.
+
+    User 1: I''m glad we agree on something!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

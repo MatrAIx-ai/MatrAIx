@@ -1,0 +1,74 @@
+id: '00006206'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6206
+data:
+  user 1 personas: 'I am the youngest sibling of four.
+
+    I am learning how to play the piano.
+
+    I am a school psychologist.
+
+    Chocolate is my favorite food.
+
+    I geocache in my spare time.'
+  user 2 personas: 'I love my girlfriend.
+
+    I live in the city.
+
+    I work in a bookstore.
+
+    I have an older brother.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do in the city?
+
+    User 2: I love going to bookstores and just getting lost in the books.
+
+    User 1: That sounds fun! I love bookstores too.
+
+    User 2: I''m so glad! I''m a librarian, so I''m always around books.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a librarian.
+
+    User 2: It''s a great job! I love helping people find books they''ll enjoy.
+
+    User 1: I can imagine. What''s your favorite book?
+
+    User 2: That''s a tough question. I have a lot of favorite books.
+
+    User 1: Me too. I love reading. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction.
+
+    User 1: I like historical fiction too! What''s your favorite historical fiction book?
+
+    User 2: My favorite historical fiction book is "The Help" by Kathryn Stockett.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem! I''m always happy to talk about books.
+
+    User 1: Me too. I love talking about books.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go geocaching.
+
+    User 2: What''s geocaching?
+
+    User 1: It''s a global treasure hunt. People hide containers called "geocaches" all over the world, and then other people use GPS devices to find them.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I''ve been geocaching for a few years, and I''ve found a lot of cool places.
+
+    User 2: That''s awesome! I''ve never heard of geocaching before, but it sounds like something I would enjoy.
+
+    User 1: You should definitely try it! It''s a lot of fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

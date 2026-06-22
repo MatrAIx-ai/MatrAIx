@@ -1,0 +1,84 @@
+id: '00003464'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3464
+data:
+  user 1 personas: 'I love to play softball.
+
+    I am a technician.
+
+    My father was a dry wall finisher.
+
+    I love history.
+
+    My mother was an rn.'
+  user 2 personas: 'I worry about my image.
+
+    I wish my mom was healthier.
+
+    I live in a bad neighborhood.
+
+    I worry about our neighbors yelling in the middle of the night.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play softball.
+
+    User 1: That''s cool. I used to play softball too.
+
+    User 2: Oh, really? What position did you play?
+
+    User 1: I played pitcher.
+
+    User 2: That''s awesome! I''m a pitcher too.
+
+    User 1: Nice! Do you play for a team?
+
+    User 2: No, I just play for fun.
+
+    User 1: That''s cool. I used to play for a team, but I quit a few years ago.
+
+    User 2: Why did you quit?
+
+    User 1: I just didn''t have the time anymore.
+
+    User 2: I understand. Do you miss playing?
+
+    User 1: Sometimes. But I''m happy with just playing for fun now.
+
+    User 2: That''s good. I''m glad you''re still able to enjoy the game.
+
+    User 1: Me too.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read, watch movies, and go to the gym.
+
+    User 2: That''s cool. I like to read too. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction.
+
+    User 2: Oh, that''s cool. I like historical fiction too.
+
+    User 1: Have you read any good historical fiction lately?
+
+    User 2: I just finished reading "The Nightingale" by Kristin Hannah. It was really good.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a really good story.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

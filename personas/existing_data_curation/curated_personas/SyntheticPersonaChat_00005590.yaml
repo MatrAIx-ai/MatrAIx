@@ -1,0 +1,70 @@
+id: 00005590
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5590
+data:
+  user 1 personas: 'I like to sit on couch all day.
+
+    I make cars for a living.
+
+    I like to watch tv.
+
+    I love mac and cheese.
+
+    I make 30k a year.'
+  user 2 personas: 'Just this past week i got a job cleaning gutters.
+
+    I ride a motorcycle , but it s not a harley.
+
+    My favorite singer is jess greenberg.
+
+    I spend every waking hour i can at the archery center.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1]. What''s your name?
+
+    User 2: Hi, my name is [User 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I just got a job cleaning gutters this past week.
+
+    User 1: Oh, that sounds interesting. How do you like it?
+
+    User 2: It''s not bad so far. It''s a lot of hard work, but it''s also good exercise.
+
+    User 1: That''s good. What else do you like to do?
+
+    User 2: I like to ride my motorcycle.
+
+    User 1: Oh, cool! What kind of motorcycle do you have?
+
+    User 2: It''s not a Harley, but it''s a pretty nice bike.
+
+    User 1: That''s cool. Do you like to go on long rides or just around town?
+
+    User 2: I like to go on long rides, but I also like to just cruise around town.
+
+    User 1: That''s cool. I''ve always wanted to get a motorcycle, but I''m not sure if I''m brave enough.
+
+    User 2: It''s not as scary as it looks. You just have to be careful and aware of your surroundings.
+
+    User 1: I''ll keep that in mind. What else do you like to do?
+
+    User 2: I love to go to the archery center. I spend every waking hour I can there.
+
+    User 1: Oh, that''s cool! I''ve never been to an archery center before.
+
+    User 2: You should go sometime. It''s a lot of fun.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should. It''s really fun.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

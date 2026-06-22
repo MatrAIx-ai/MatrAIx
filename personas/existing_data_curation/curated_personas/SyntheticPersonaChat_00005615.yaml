@@ -1,0 +1,76 @@
+id: '00005615'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5615
+data:
+  user 1 personas: 'I studied business as my major.
+
+    I love hockey.
+
+    My bestfriend is from out of town.
+
+    I ve flown out of the country.
+
+    I ve a younger sibling.'
+  user 2 personas: 'I play the trumpet.
+
+    I really enjoy making friends.
+
+    I want to be a movie director when i grow up.
+
+    I am in my high school band.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What are you interested in?
+
+    User 2: I''m interested in making friends, playing trumpet, and being a movie director.
+
+    User 1: That''s cool! I''m also interested in making friends and hockey.
+
+    User 2: Oh, that''s cool! What''s your favorite hockey team?
+
+    User 1: I''m a big fan of the Toronto Maple Leafs.
+
+    User 2: Me too! They''re my favorite team too.
+
+    User 1: That''s awesome! I''m glad to meet another Leafs fan.
+
+    User 2: Me too! It''s always nice to meet someone who shares my interests.
+
+    User 1: So, what''s your favorite thing about the Leafs?
+
+    User 2: I love their history and tradition. They''re one of the oldest teams in the NHL and have a lot of great players.
+
+    User 1: I agree! They''re definitely one of the most storied franchises in hockey.
+
+    User 2: So, what''s your favorite hockey memory?
+
+    User 1: My favorite memory is when I went to the Stanley Cup Finals in 2016. It was an amazing experience and I''ll never forget it.
+
+    User 2: That''s awesome! I was so jealous of you when you were there. I wish I could have gone.
+
+    User 1: It was amazing! I''m so glad I got to experience it.
+
+    User 2: So, what are you doing now?
+
+    User 1: I''m studying business in college.
+
+    User 2: That''s cool! What do you want to do with your business degree?
+
+    User 1: I''m not sure yet. I''m still thinking about it.
+
+    User 2: That''s okay. There''s plenty of time to figure it out.
+
+    User 1: Thanks! I appreciate the advice.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: '00002523'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2523
+data:
+  user 1 personas: 'I like to read books.
+
+    I have two cats.
+
+    My cats like to be read to.
+
+    I like to eat tune.'
+  user 2 personas: 'My mother raised me by herself while working two jobs.
+
+    Spiders scare the life out of me.
+
+    I pray to god for my family every morning.
+
+    I always put my left sock on first.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: That sounds nice! I like to read too. What''s your favorite book?
+
+    User 2: It''s hard to choose just one, but I really enjoyed "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a classic for a reason.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go for walks in the park with my dogs.
+
+    User 1: I have two cats, but I love dogs too!
+
+    User 2: I''m glad you like dogs! They''re the best.
+
+    User 1: What''s your favorite thing about dogs?
+
+    User 2: I love their unconditional love. They''re always happy to see you, no matter what.
+
+    User 1: I know what you mean! My cats are always happy to see me too.
+
+    User 2: What''s your favorite thing about cats?
+
+    User 1: I love their independence. They''re not as needy as dogs, but they''re still very affectionate.
+
+    User 2: That''s a good point! I like that about cats too.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: I think so too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

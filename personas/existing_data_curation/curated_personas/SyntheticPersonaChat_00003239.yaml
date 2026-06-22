@@ -1,0 +1,83 @@
+id: 00003239
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3239
+data:
+  user 1 personas: 'I worry about my image.
+
+    I worry about our neighbors yelling in the middle of the night.
+
+    I live in a bad neighborhood.
+
+    I wish my mom was healthier.'
+  user 2 personas: 'My dad works at the mill and my mom is a teacher.
+
+    I love dogs and cats.
+
+    I live in a house.
+
+    I have a lot of friends.
+
+    I am ten years old.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+
+    User 2: Hi, my name is [user 2''s name].
+
+
+    User 1: Where do you live?
+
+
+    User 2: I live in a house.
+
+
+    User 1: I live in an apartment.
+
+
+    User 2: Do you have any pets?
+
+
+    User 1: I have a dog.
+
+
+    User 2: I love dogs! I have a cat and a dog.
+
+
+    User 1: That''s cool! What are their names?
+
+
+    User 2: My cat''s name is Mittens and my dog''s name is Buddy.
+
+
+    User 1: Those are great names! Do you like your neighborhood?
+
+
+    User 2: Yes, I love it! I have a lot of friends in my neighborhood.
+
+
+    User 1: That''s great! I wish I had more friends in my neighborhood.
+
+
+    User 2: You can come over and play with me and my friends sometime.
+
+
+    User 1: That would be fun! Thanks for the offer.
+
+
+    User 2: No problem! I''m glad I could meet you.
+
+
+    User 1: Me too! It was nice talking to you.
+
+
+    User 2: You too! I hope to see you again soon.
+
+
+    User 1: Me too! Bye for now.
+
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

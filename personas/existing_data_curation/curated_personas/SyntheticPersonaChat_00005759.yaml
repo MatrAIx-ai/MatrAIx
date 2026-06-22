@@ -1,0 +1,68 @@
+id: 00005759
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5759
+data:
+  user 1 personas: 'I drive a 2011 volkswagen passa.
+
+    I love cold , wintry weather and snow.
+
+    I work as a public affairs liaison.
+
+    I eat too much fast food.'
+  user 2 personas: 'I cannot hold down a job for very long.
+
+    My family loves me , but keeps their distance.
+
+    I blame myself for all of my problems.
+
+    If i am not drinking , i am thinking , which makes me uncomfortable.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is (user 2''s name).
+
+    User 1: Nice to meet you, (user 2''s name). What do you do for a living?
+
+    User 2: I''m a bartender at a local pub.
+
+    User 1: Oh, nice! I''ve always been curious about what it''s like to be a bartender. What''s your favorite part of the job?
+
+    User 2: I like the interaction with people. I get to meet all sorts of different people from all walks of life.
+
+    User 1: That sounds really fun! Do you have any other interests or hobbies?
+
+    User 2: I love to read, write, and play video games.
+
+    User 1: Me too! What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Hunger Games series, and the Twilight series.
+
+    User 1: I love all of those series too!
+
+    User 2: What are some of your favorite video games?
+
+    User 1: I love the Legend of Zelda series, the Super Mario series, and the Final Fantasy series.
+
+    User 2: Me too! I love those games too!
+
+    User 1: It''s nice to meet someone who shares my interests.
+
+    User 2: You too! I''m always looking for new friends who like to read, write, and play video games.
+
+    User 1: Me too! We should get together sometime and play some video games or read some books together.
+
+    User 2: That would be fun! I''m free tomorrow night if you want to come over.
+
+    User 1: I''m free tomorrow night too! I''ll bring some games and we can have a gaming night.
+
+    User 2: That sounds great! I''ll see you tomorrow night!
+
+    User 1: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

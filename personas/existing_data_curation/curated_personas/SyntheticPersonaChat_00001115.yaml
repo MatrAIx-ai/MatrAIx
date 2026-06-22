@@ -1,0 +1,79 @@
+id: '00001115'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1115
+data:
+  user 1 personas: 'I play football.
+
+    I work at mcdonald s.
+
+    I like to play video games.
+
+    My favorite movie is star wars.
+
+    I have a pet iguana.'
+  user 2 personas: 'I like to perform stand up comedy.
+
+    My sister belongs to a cult and has not spoken to the family in years.
+
+    My father was a member of the communist party.
+
+    I have a career in party planning.
+
+    I enjoy deep sea diving.'
+  Best Generated Conversation: 'User 1: I''m a football player and I work at McDonald''s. I like to play video games and my favorite movie is Star Wars. I have a pet iguana.
+
+    User 2: I''m a stand up comedian. My sister belongs to a cult and has not spoken to my family in years. My father was a member of the communist party and I have a career in party planning. I also enjoy
+    deep sea diving.
+
+    User 1: That''s cool. I''ve always wanted to try stand up comedy.
+
+    User 2: It''s a lot of fun. You should give it a try.
+
+    User 1: Maybe I will.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I like to play Star Wars: The Old Republic.
+
+    User 2: Oh, that''s a good one. I''ve played it a little bit.
+
+    User 1: It''s really fun. I''m a big fan of Star Wars.
+
+    User 2: Me too. It''s my favorite movie franchise.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I think it''s a tie between Star Wars and The Lord of the Rings.
+
+    User 1: Those are both great movies.
+
+    User 2: Yeah, they are. I''m a big fan of fantasy movies.
+
+    User 1: Me too.
+
+    User 2: What kind of pets do you have?
+
+    User 1: I have a pet iguana.
+
+    User 2: Oh, that''s cool. I''ve never seen an iguana in real life.
+
+    User 1: They''re really cool animals. I love mine.
+
+    User 2: I bet.
+
+    User 1: What kind of deep sea diving do you do?
+
+    User 2: I do mostly recreational diving. I like to go on dives to see sharks and other marine life.
+
+    User 1: That sounds really cool. I''ve always wanted to go deep sea diving.
+
+    User 2: You should definitely try it. It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I hope you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

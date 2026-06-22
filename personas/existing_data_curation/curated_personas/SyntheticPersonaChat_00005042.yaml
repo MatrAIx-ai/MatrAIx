@@ -1,0 +1,80 @@
+id: '00005042'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5042
+data:
+  user 1 personas: 'I live with my wife and kids.
+
+    I live near grand rapids , michigan.
+
+    I own a small farm where i herd cattle.
+
+    I have three beautiful dogs and one cat.'
+  user 2 personas: 'I like to play baseball.
+
+    My favorite place is the mountains.
+
+    I have 2 kids.
+
+    I am a doctor.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What are you doing today?
+
+    User 2: Not much, just relaxing. How about you?
+
+    User 1: I''m just getting ready for work. I work on a farm near Grand Rapids, Michigan.
+
+    User 2: Oh, that sounds interesting! What do you do on the farm?
+
+    User 1: I herd cattle and raise chickens.
+
+    User 2: That must be a lot of work!
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I can imagine. I love animals.
+
+    User 1: Me too! I have three dogs and one cat at home.
+
+    User 2: That''s awesome! I have two kids.
+
+    User 1: Oh, fun! What are their names?
+
+    User 2: Their names are Emily and Sarah.
+
+    User 1: Those are nice names.
+
+    User 2: Thanks. What''s your favorite place to go in the mountains?
+
+    User 1: I love to go hiking in the mountains. There are so many beautiful places to explore.
+
+    User 2: I love hiking too! I''ve been to a few different national parks in the mountains.
+
+    User 1: Oh, cool! Which ones have you been to?
+
+    User 2: I''ve been to Rocky Mountain National Park, Yosemite National Park, and Mount Rainier National Park.
+
+    User 1: Those are all beautiful parks! I''ve been to Yosemite National Park.
+
+    User 2: It''s an amazing park! I''m glad you''ve been there.
+
+    User 1: Me too! I would love to go back someday.
+
+    User 2: I''m sure you would. It''s a great place to visit.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: Yes, we do! I''m glad we met.
+
+    User 1: Me too! It was nice talking to you.
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

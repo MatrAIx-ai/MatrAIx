@@ -1,0 +1,76 @@
+id: '00006133'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6133
+data:
+  user 1 personas: 'My favorite food is mexican food.
+
+    My favorite band is the rolling stones.
+
+    I am a mother.
+
+    I am a nurse at a hospital.'
+  user 2 personas: 'I like the guitar.
+
+    I am a vegan.
+
+    I like to go for bike rides.
+
+    I like music.
+
+    I like to skateboard.'
+  Best Generated Conversation: 'User 1: Hey, I''m Sarah.
+
+    User 2: Hi Sarah, I''m [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. What do you like to do for fun?
+
+    User 2: I like to go for bike rides, play guitar, and listen to music.
+
+    User 1: That sounds fun! I like to go for bike rides too. I also like to listen to music, but my favorite band is the Rolling Stones.
+
+    User 2: Oh, I love the Rolling Stones! They''re one of my favorite bands too.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I''m not sure I could pick just one. I love so many of their songs. But if I had to, I''d probably say "Gimme Shelter".
+
+    User 1: That''s a great song! I love the guitar solo in that one.
+
+    User 2: Me too! It''s so iconic.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a vegan chef.
+
+    User 1: Oh, that''s cool! I''ve been thinking about trying a vegan diet.
+
+    User 2: You should! It''s really good for you.
+
+    User 1: Maybe I will. I''ve heard a lot of good things about it.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: So, what''s your favorite thing about being a chef?
+
+    User 2: I love creating new recipes and seeing people enjoy my food.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I love it.
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love to cook all kinds of things, but my favorite is probably pasta.
+
+    User 1: Pasta is good! I love spaghetti with meatballs.
+
+    User 2: That''s a classic! I love spaghetti with meatballs too.
+
+    User 1: I''m glad we have similar taste in food.
+
+    User 2: Me too! It''s always nice to meet someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

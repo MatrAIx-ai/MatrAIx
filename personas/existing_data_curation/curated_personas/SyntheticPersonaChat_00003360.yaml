@@ -1,0 +1,64 @@
+id: '00003360'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3360
+data:
+  user 1 personas: 'I get distracted easily.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I am very athletic.
+
+    I have been in a lot of romantic relationships that have ended up poorly.'
+  user 2 personas: 'I love to dance.
+
+    I am in high school.
+
+    I love disney movies.
+
+    I am on a competitive dance team.
+
+    Ariel is my favorite princess.'
+  Best Generated Conversation: 'User 1: I love disney movies!
+
+    User 2: Me too! I''m on a competitive dance team and we''re performing in a Disney show next month.
+
+    User 1: Wow, that sounds awesome! What role are you playing?
+
+    User 2: I''m playing Ariel.
+
+    User 1: That''s perfect! You look just like her.
+
+    User 2: Thanks! I love her so much. She''s my favorite Disney princess.
+
+    User 1: She''s mine too! I love her red hair and her beautiful voice.
+
+    User 2: Me too! Her voice is amazing.
+
+    User 1: What else do you like to do?
+
+    User 2: I love to dance, obviously. But I also like to hang out with my friends, watch movies, and go to the beach.
+
+    User 1: Sounds like we have a lot in common. I love to dance, hang out with my friends, watch movies, and go to the beach too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: That would be fun!
+
+    User 2: I''m free this weekend.
+
+    User 1: Me too! What do you want to do?
+
+    User 2: We could go to the movies.
+
+    User 1: That sounds great! What movie do you want to see?
+
+    User 2: How about Mulan?
+
+    User 1: Mulan is a great movie! I''d love to see it.
+
+    User 2: Perfect! I''ll text you the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

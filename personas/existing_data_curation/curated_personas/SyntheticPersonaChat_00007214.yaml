@@ -1,0 +1,76 @@
+id: '00007214'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7214
+data:
+  user 1 personas: 'I want to learn how to fly an airplane.
+
+    My favorite movie is dirty harry.
+
+    I collect stamps.
+
+    I am a mortician.
+
+    I love the colors yellow and teal.'
+  user 2 personas: 'I haven t spoken to my family in years.
+
+    I live alone.
+
+    I have over 4000 friends on facebook.
+
+    I enjoy hitchhiking.
+
+    Formal situations make me uncomfortable.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to hitchhike, collect stamps, and go to the movies.
+
+    User 1: That''s cool! I''ve always wanted to try hitchhiking, but I''m too scared.
+
+    User 2: It''s not as scary as you think. Just be smart about it and you''ll be fine.
+
+    User 1: I guess you''re right. What''s your favorite movie?
+
+    User 2: My favorite movie is Dirty Harry.
+
+    User 1: Oh, that''s a good one! I love Clint Eastwood.
+
+    User 2: Me too! He''s one of my favorite actors.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a mortician.
+
+    User 1: Oh, wow! That''s a pretty interesting job.
+
+    User 2: It is. It''s not for everyone, but I love it.
+
+    User 1: I can imagine. It must be a lot of responsibility.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what about you? What do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great! I love teachers.
+
+    User 1: Thanks! I love my job.
+
+    User 2: I can tell. You seem really passionate about it.
+
+    User 1: I am. It''s my calling.
+
+    User 2: That''s awesome. I''m glad you found your calling.
+
+    User 1: Thanks. Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

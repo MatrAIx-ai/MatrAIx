@@ -1,0 +1,80 @@
+id: '00003511'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3511
+data:
+  user 1 personas: 'I work at a candy store.
+
+    I have a passion for politics.
+
+    I run two miles everyday.
+
+    I ve been married for five years.'
+  user 2 personas: 'I enjoy reading and cooking.
+
+    I am a runner.
+
+    I have 2 dogs.
+
+    I like tall men.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: Hi, my name is Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I enjoy reading, cooking, and running.
+
+    User 1: I like reading and cooking too! What are some of your favorite books?
+
+    User 2: I love to read historical fiction, especially books about the American Revolution. I also enjoy cooking Italian food.
+
+    User 1: I''ve never read a historical fiction book, but I''ve heard good things about them. I love Italian food too, especially pasta.
+
+    User 2: Me too! I love making pasta from scratch.
+
+    User 1: That''s awesome! I''ve always wanted to try making pasta from scratch.
+
+    User 2: It''s not as hard as you think. You just need some flour, eggs, and water.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What about running? Do you run long distances?
+
+    User 2: I usually run two miles every day. I''m training for a marathon next year.
+
+    User 1: That''s awesome! I used to run when I was in college, but I haven''t run in a while.
+
+    User 2: You should start running again! It''s a great way to stay in shape.
+
+    User 1: I know, I know. I''ll start running again soon.
+
+    User 2: Good!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool. I have a friend who''s a nurse too.
+
+    User 2: What does your friend do?
+
+    User 1: She works in a hospital.
+
+    User 2: That''s what I do too. I work in a hospital in the city.
+
+    User 1: Oh, that''s awesome. I work at a candy store in the city.
+
+    User 2: I love candy! What''s your favorite kind?
+
+    User 1: I love chocolate.
+
+    User 2: Me too! Chocolate is the best.
+
+    User 1: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

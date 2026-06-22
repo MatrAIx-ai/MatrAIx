@@ -1,0 +1,74 @@
+id: '00007754'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7754
+data:
+  user 1 personas: 'In my free time , i watch movies and sleep.
+
+    I would like to open a restaurant someday.
+
+    My favorite color is hunter green.
+
+    I love creating new recipes.'
+  user 2 personas: 'I have 3 roommates.
+
+    My favorite color is orange.
+
+    I love gummy bears.
+
+    I am lactose intolerant.
+
+    I have a parakeet.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, I''m John! What''s yours?
+
+    User 1: My name is [name].
+
+    User 2: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 1: I love watching movies and sleeping. I also love creating new recipes.
+
+    User 2: Oh, that''s cool. I love watching movies too. My favorite color is orange, and I have three roommates.
+
+    User 1: Oh, that''s cool. I love gummy bears, and I''m lactose intolerant.
+
+    User 2: Oh, that''s too bad. I love gummy bears too! What''s your favorite movie?
+
+    User 1: My favorite movie is The Shawshank Redemption.
+
+    User 2: Oh, I''ve heard good things about that movie. I''ll have to check it out.
+
+    User 1: You should! It''s a really good movie.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a chef. I love creating new recipes and cooking for people.
+
+    User 2: Oh, that''s cool. I love food! What''s your favorite thing to cook?
+
+    User 1: My favorite thing to cook is pasta. I love making all kinds of different pastas.
+
+    User 2: Oh, that sounds delicious. I love pasta too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher. I love teaching kids.
+
+    User 1: Oh, that''s cool. I love kids too.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I love watching movies, sleeping, creating new recipes, and cooking for people.
+
+    User 2: Oh, that sounds like me. I love watching movies, eating food, and cooking.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: Oh, I''ve heard good things about that movie. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

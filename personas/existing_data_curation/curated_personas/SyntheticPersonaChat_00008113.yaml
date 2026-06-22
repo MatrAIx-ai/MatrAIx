@@ -1,0 +1,70 @@
+id: 00008113
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8113
+data:
+  user 1 personas: 'My mom is a checker at the local grocery store.
+
+    I once saw the easter bunny hiding behind my closet door.
+
+    I don t like the song sweet home alabama.
+
+    I grew up in alabama.
+
+    I love watching game of thrones.'
+  user 2 personas: 'My favorite color is red.
+
+    I m deathly afraid of snakes , but not bugs.
+
+    I watched the eclipse without using proper eye protection.
+
+    I really enjoy hiking.
+
+    I drink 10 cups of tea every day.'
+  Best Generated Conversation: 'User 1: Hi! My name is John, and I''m from Alabama.
+
+    User 2: Hello John, my name is Mary, and I''m from California.
+
+    User 1: Nice to meet you Mary. What do you do for fun?
+
+    User 2: I like to hike, drink tea, and read.
+
+    User 1: I like to hike too! What''s your favorite place to hike?
+
+    User 2: I love hiking in the mountains.
+
+    User 1: Me too! I''ve been hiking in the mountains of Alabama a few times.
+
+    User 2: Oh, that''s cool! Have you ever seen a bear?
+
+    User 1: No, but I''ve heard they can be dangerous.
+
+    User 2: They can be, but they''re usually not aggressive unless they''re threatened.
+
+    User 1: That''s good to know. I''ll have to be careful if I ever see one.
+
+    User 2: You should! But don''t worry, they''re not very common.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read and drink tea.
+
+    User 1: Me too! What are your favorite books?
+
+    User 2: I like to read historical fiction and fantasy.
+
+    User 1: I like to read historical fiction too! What are some of your favorite books?
+
+    User 2: I like the Outlander series by Diana Gabaldon and The Lord of the Rings trilogy by J.R.R. Tolkien.
+
+    User 1: I''ve heard good things about Outlander. I''ve never read The Lord of the Rings, but I''ve seen the movies.
+
+    User 2: The movies are good, but the books are even better.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You should! They''re really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

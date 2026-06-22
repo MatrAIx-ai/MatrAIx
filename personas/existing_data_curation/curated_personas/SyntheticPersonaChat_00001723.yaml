@@ -1,0 +1,86 @@
+id: '00001723'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1723
+data:
+  user 1 personas: 'I play the violin.
+
+    I like to visit national parks.
+
+    I met my husband when i was a freshman in college.
+
+    I am nurse.'
+  user 2 personas: 'It s been doing better than i expected.
+
+    I haven t had luck with finding a job.
+
+    So i started a small business.
+
+    I recently graduated from college.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). What''s your name?
+
+    User 2: Hi, I''m (name). Nice to meet you!
+
+    User 1: Same to you! What do you do for a living?
+
+    User 2: I recently graduated from college, and I haven''t had luck finding a job. So I started a small business.
+
+    User 1: Oh, that''s cool! What kind of business?
+
+    User 2: I''m a musician, and I teach violin lessons.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to play the violin.
+
+    User 2: You should! It''s a great instrument to learn.
+
+    User 1: Maybe I will! So, what are your hobbies?
+
+    User 2: I love to play music, and I also like to visit national parks.
+
+    User 1: That''s cool! I love to travel too.
+
+    User 2: Me too! I''ve been to a few national parks, but I want to see more.
+
+    User 1: Which national parks have you been to?
+
+    User 2: I''ve been to Yosemite, Yellowstone, and the Grand Canyon.
+
+    User 1: Those are all great parks! I''ve been to Yosemite and the Grand Canyon, but not Yellowstone.
+
+    User 2: Yellowstone is amazing! It''s one of my favorite places in the world.
+
+    User 1: I''ve heard good things about it. I''ll have to check it out sometime.
+
+    User 2: You definitely should!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to read, and I love to spend time with my friends and family.
+
+    User 1: That''s nice! I like to read too.
+
+    User 2: What are your favorite books?
+
+    User 1: I like to read all kinds of books, but I really like historical fiction.
+
+    User 2: That''s cool! I like historical fiction too.
+
+    User 1: What are some of your favorite historical fiction books?
+
+    User 2: I love the Outlander series by Diana Gabaldon, and I also like The Pillars of the Earth by Ken Follett.
+
+    User 1: I''ve heard good things about Outlander. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a great series.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just going to keep working on my business, and I''m going to keep playing music.
+
+    User 1: That sounds like a good plan. I''m sure you''ll do great things.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

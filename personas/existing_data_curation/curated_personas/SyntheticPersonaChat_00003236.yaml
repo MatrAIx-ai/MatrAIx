@@ -1,0 +1,72 @@
+id: '00003236'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3236
+data:
+  user 1 personas: 'I work in the military.
+
+    I like things that explode.
+
+    Brownies are my favorite dessert.
+
+    I have been all over the world.
+
+    I also like kittens.'
+  user 2 personas: 'I work at the deli counter.
+
+    I m a college drop out.
+
+    I like to go fishing.
+
+    I m learning to play the guitar.'
+  Best Generated Conversation: 'User 1: I am a military man, and I like things that explode.
+
+    User 2: I like to go fishing.
+
+    User 1: I have been all over the world.
+
+    User 2: I am a college drop out.
+
+    User 1: I like kittens.
+
+    User 2: I am learning to play the guitar.
+
+    User 1: What is your favorite thing about fishing?
+
+    User 2: I like the peace and quiet.
+
+    User 1: I understand. I love to go hiking in the mountains.
+
+    User 2: I like to go hiking too.
+
+    User 1: I love the fresh air and the views.
+
+    User 2: Me too.
+
+    User 1: Do you like to travel?
+
+    User 2: I love to travel.
+
+    User 1: I have been all over the world.
+
+    User 2: Where have you been?
+
+    User 1: I have been to Europe, Asia, and the Middle East.
+
+    User 2: That is amazing. I have only been to the United States.
+
+    User 1: I would love to go to the United States one day.
+
+    User 2: You should. It is a great place to visit.
+
+    User 1: I am sure it is. I have heard great things about it.
+
+    User 2: It is a beautiful country with a lot to offer.
+
+    User 1: I am looking forward to visiting one day.
+
+    User 2: You should. I am sure you would love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

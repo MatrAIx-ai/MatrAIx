@@ -1,0 +1,19 @@
+id: 00000899
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 899
+persona_description: A researcher or engineer involved in the field of computer vision, specifically in the application of epipolar geometry to stereo vision. This individual is likely to have expertise
+  in the mathematical principles underlying stereo vision and the use of epipolar geometry to reconstruct 3D points from 2D images. They may have experience with the pinhole camera model and have worked
+  with cameras located in a circular region. They would be interested in understanding how epipolar geometry can be used in special cases, such as when cameras are located at opposite sides of a circular
+  region.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: stereo vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00003721'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3721
+persona_description: A healthcare professional who specializes in the management and treatment of malnutrition, particularly in developing regions where protein and essential nutrient deficiencies are common.
+  This individual has extensive knowledge and experience in diagnosing and treating kwashiorkor and marasmus, as well as in the development and implementation of appropriate treatment plans. They are skilled
+  in working with children and families to ensure that they receive the nutrition and support they need to recover and reach their full growth potential.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric nutrition
+  general_domain_top01pct: None
+  specific_domain_top01pct: pediatric malnutrition
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,64 @@
+id: 00008829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8829
+data:
+  user 1 personas: 'The kids will be my responsibility as my husband doesn t want them.
+
+    We have 4 children and 2 dogs.
+
+    I am 50 years old.
+
+    I enjoy ice cream.'
+  user 2 personas: 'I love pizza.
+
+    Going to the beach is my favorite past time.
+
+    I like reading mystery novels.
+
+    My son is a football player.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the beach, read mystery novels, and play video games.
+
+    User 1: I like to go to the beach too! I''ve always wanted to read a mystery novel, but I''m not sure where to start.
+
+    User 2: I recommend the Agatha Christie series. They''re really good.
+
+    User 1: Thanks for the recommendation! I''ll check them out. What kind of video games do you like to play?
+
+    User 2: I like to play action-adventure games. I''m really excited for the new God of War game.
+
+    User 1: Me too! I''m a big fan of the series.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that must be fun! I have a son who''s a football player.
+
+    User 1: That''s great! I have four kids and two dogs.
+
+    User 2: Wow, you have your hands full!
+
+    User 1: Yeah, but I love it.
+
+    User 2: You seem like a great mom.
+
+    User 1: Thanks! I try my best.
+
+    User 2: I''m sure your kids are lucky to have you.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Well, I have to go now. It was nice talking to you.
+
+    User 1: You too! Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00004217'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4217
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I am studying for my master s.
+
+    Cooking is one of my pass times.
+
+    I also like eating sushi.
+
+    I am a student in social sciences.'
+  user 2 personas: 'I like to shoot a bow.
+
+    I like to remodel homes.
+
+    I like to go shopping with my daughters.
+
+    I like to go hunting.'
+  Best Generated Conversation: 'User 1: I''m studying for my master''s in social sciences.
+
+    User 2: That''s interesting! What are you studying?
+
+    User 1: I''m focusing on social policy and public administration.
+
+    User 2: Oh, that''s cool! I''ve always been interested in social policy.
+
+    User 1: It''s really interesting. I''m learning a lot about how government programs work and how they can be used to improve society.
+
+    User 2: That''s great! I''m sure you''ll be doing some great things with your degree.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love to cook. I''m always trying new recipes and experimenting in the kitchen.
+
+    User 2: Oh, that''s cool! I love cooking too. What''s your favorite thing to cook?
+
+    User 1: I love to make pizza. It''s my favorite food.
+
+    User 2: Pizza is delicious! I love making it too.
+
+    User 1: Do you have a favorite pizza recipe?
+
+    User 2: I do! It''s a classic pepperoni and mushroom pizza.
+
+    User 1: That''s my favorite too!
+
+    User 2: We should have a pizza party sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll start planning it.
+
+    User 1: Sounds good. I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

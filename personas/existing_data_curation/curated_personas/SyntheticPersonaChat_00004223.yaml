@@ -1,0 +1,91 @@
+id: '00004223'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4223
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I decided to quick my job and travel for a couple of months.
+
+    I am an engineer.
+
+    I love to dance salsa.
+
+    I am currently working on a project that involves bitcoins.'
+  user 2 personas: 'I want to be a movie director when i grow up.
+
+    I really enjoy making friends.
+
+    I play the trumpet.
+
+    My dad and i own over 600 movies.
+
+    I am in my high school band.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi! I''m [user 2''s name]. It''s nice to meet you!
+
+    User 1: It''s nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to make friends, play the trumpet, and watch movies.
+
+    User 1: Oh, that''s cool! I like to dance salsa, play guitar, and watch movies too.
+
+    User 2: That''s awesome! We should hang out sometime and watch movies together.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! I''m free on Saturday. What time do you want to meet up?
+
+    User 1: I''m free after 4pm.
+
+    User 2: Okay, I''ll meet you at the movie theater at 4:30pm.
+
+    User 1: Great! I''ll see you there.
+
+    User 2: See you then!
+
+
+    (On Saturday at 4:30pm)
+
+    User 1: Hi, [user 2''s name].
+
+    User 2: Hi, [user 1''s name]. It''s nice to see you!
+
+    User 1: You too! What movie do you want to see?
+
+    User 2: I''m not sure. What do you want to see?
+
+    User 1: I''m in the mood for a comedy.
+
+    User 2: Me too. How about we see "The Hangover"?
+
+    User 1: That sounds good.
+
+    User 2: Okay, let''s go get tickets.
+
+    (After the movie)
+
+    User 1: That was a great movie!
+
+    User 2: I know, right? It was so funny.
+
+    User 1: I''m glad we decided to see it.
+
+    User 2: Me too.
+
+    User 1: I''m so glad we met.
+
+    User 2: Me too.
+
+    User 1: We should hang out again sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll text you when I''m free.
+
+    User 2: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

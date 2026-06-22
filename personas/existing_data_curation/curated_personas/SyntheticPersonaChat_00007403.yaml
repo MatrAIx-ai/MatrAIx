@@ -1,0 +1,52 @@
+id: '00007403'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7403
+data:
+  user 1 personas: 'My family came from greece in the 1950s.
+
+    I love to cook ethnic foods.
+
+    I am a very tall woman.
+
+    I have very curly hair.'
+  user 2 personas: 'I work as a meeting coordinator.
+
+    I live in upstate new york.
+
+    I love to take road trips.
+
+    I live with my husband and two children.
+
+    My favorite place to visit is seattle.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to cook?
+
+    User 2: I love to cook ethnic food, especially from Greece. My family came from there in the 1950s.
+
+    User 1: That''s so interesting! I''ve never been to Greece, but I''ve always wanted to go. What are some of your favorite Greek dishes?
+
+    User 2: Oh, there are so many! I love moussaka, souvlaki, and spanakopita. But my favorite dish of all is baklava.
+
+    User 1: Baklava! I love baklava! I''ve only had it a few times, but it''s always so delicious.
+
+    User 2: It is! It''s my favorite dessert.
+
+    User 1: I''m so glad I met you! You''re the first person I''ve met who''s from Greece and loves to cook ethnic food.
+
+    User 2: I''m glad I met you too! I love meeting new people and sharing my love of food.
+
+    User 1: Well, I''m definitely going to have to try some of your Greek cooking sometime!
+
+    User 2: I would love that! I''m always happy to cook for people.
+
+    User 1: Great! I''ll bring the wine.
+
+    User 2: Sounds like a plan!
+
+    User 1: I''m so excited!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

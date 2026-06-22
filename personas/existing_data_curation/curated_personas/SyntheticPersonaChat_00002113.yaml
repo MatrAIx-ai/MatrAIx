@@ -1,0 +1,64 @@
+id: '00002113'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2113
+data:
+  user 1 personas: 'I am an art teacher.
+
+    I like to recycle my thrift shop finds and make new items.
+
+    Sometimes i like to visit thrift shops.
+
+    I enjoy clothing with exotic prints.'
+  user 2 personas: 'I work out daily.
+
+    My mother is a teacher in the city.
+
+    I play the bass guitar.
+
+    My favorite food is cheeseburgers.
+
+    I like to go out fishing.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name], and I''m an art teacher.
+
+    User 2: Hi! I''m [user 2''s name], and my mom is a teacher too!
+
+    User 1: That''s cool! What grade does she teach?
+
+    User 2: She teaches kindergarten.
+
+    User 1: Oh, that must be fun! I teach fifth grade.
+
+    User 2: I''m sure it is! Do you like it?
+
+    User 1: I love it! I love working with kids.
+
+    User 2: That''s great! I''m glad you like it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to work out, play the bass guitar, and go fishing.
+
+    User 1: Oh, that''s cool! I like to go thrift shopping, recycle my finds, and make new items.
+
+    User 2: That sounds like fun! I''ve never been to a thrift shop before.
+
+    User 1: You should go! You can find some really great stuff.
+
+    User 2: I''ll have to check it out sometime.
+
+    User 1: You should! I''m sure you''ll find something you like.
+
+    User 2: Thanks for the tip!
+
+    User 1: No problem!
+
+    User 2: It was nice talking to you.
+
+    User 1: You too! Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00005275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5275
+data:
+  user 1 personas: 'I give out sports information.
+
+    I am a small business owner.
+
+    I help them win a lot of money.
+
+    My clients are gamblers.
+
+    I have a consulting firm.'
+  user 2 personas: 'I like crab dipped in butter.
+
+    I like to kayak.
+
+    I like to fly model airplanes.
+
+    I like imagine dragons.
+
+    I run six miles a day.'
+  Best Generated Conversation: 'User 1: Hi there, what is your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. I''m [user 1].
+
+    User 2: Nice to meet you too, [user 1]. What do you do for a living?
+
+    User 1: I''m a small business owner.
+
+    User 2: Oh, that''s interesting. What kind of business do you own?
+
+    User 1: I have a consulting firm that helps gamblers win money.
+
+    User 2: Wow, that''s a unique business. How did you get into that?
+
+    User 1: I''ve always been interested in sports, and I''m very good at analyzing data. I started out by helping my friends with their gambling, and then I started my own business.
+
+    User 2: That''s amazing. I''ve never met anyone who does that before.
+
+    User 1: Well, it''s a pretty niche market.
+
+    User 2: I can imagine. So, what do you do for fun?
+
+    User 1: I like to go kayaking, fly model airplanes, and listen to Imagine Dragons.
+
+    User 2: Kayaking sounds like fun. I''ve never tried it before.
+
+    User 1: You should! It''s a great way to get out on the water and enjoy the scenery.
+
+    User 2: I''ll have to give it a try sometime.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: I''m sure I would.
+
+    User 1: What about you? What do you like to do for fun?
+
+    User 2: I like to run, go to the gym, and cook.
+
+    User 1: Running sounds like a great way to stay in shape.
+
+    User 2: It is. It''s also a great way to clear your head.
+
+    User 1: I can imagine.
+
+    User 2: I like to cook because it''s a creative outlet.
+
+    User 1: I can see that.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go kayaking or go to the gym.
+
+    User 2: Sounds like a good weekend.
+
+    User 1: Thanks. You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

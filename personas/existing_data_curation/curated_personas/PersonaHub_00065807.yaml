@@ -1,0 +1,19 @@
+id: 00065807
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65807
+persona_description: A healthcare professional who is responsible for performing the Glucose Tolerance Test (GTT) in a medical center or hospital. They must be well-versed in the testing process, including
+  the timing of the test, the requirements for fasting, and the interpretation of the test results. They must also be familiar with the medical conditions and symptoms associated with diabetes and impaired
+  glucose tolerance, and be able to diagnose these conditions based on the results of the test. They may also be involved in pre-operative anaesthetic assessments and general health assessments, as well
+  as in the interpretation of blood tests and intravenous cannulation.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: diabetes diagnosis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

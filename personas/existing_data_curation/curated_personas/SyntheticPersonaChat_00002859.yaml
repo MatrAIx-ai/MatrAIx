@@ -1,0 +1,72 @@
+id: 00002859
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2859
+data:
+  user 1 personas: 'I love helping people.
+
+    I am a older woman.
+
+    I live in a rural area.
+
+    I retired so i can spend more time with my husband and helping people.'
+  user 2 personas: 'I like to make bagels.
+
+    I am a cartographer.
+
+    I like to arm wrestle.
+
+    I used to be a nurse.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make bagels, arm wrestle, and map out areas.
+
+    User 1: Oh, that''s cool. I love to help people.
+
+    User 2: That''s a great hobby.
+
+    User 1: Thank you. I''m retired now so I can spend more time with my husband and helping others.
+
+    User 2: That''s really nice.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a cartographer.
+
+    User 1: Oh, that''s interesting. What do you do as a cartographer?
+
+    User 2: I map out areas. I use maps to help people find their way around.
+
+    User 1: That''s really cool. I''ve always liked maps.
+
+    User 2: Me too. I''m glad you like them.
+
+    User 1: Yeah, I think they''re really helpful.
+
+    User 2: Me too. They can be really useful.
+
+    User 1: Yeah, I can imagine.
+
+    User 2: Yeah, they can be.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: I hope so too. Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

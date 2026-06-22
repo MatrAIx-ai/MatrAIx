@@ -1,0 +1,72 @@
+id: '00007060'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7060
+data:
+  user 1 personas: 'My favorite writer is nicholas sparks.
+
+    I enjoy cooking.
+
+    My mother was a teacher.
+
+    I am married.'
+  user 2 personas: 'My major is in business administration.
+
+    I ve been in a relationship for 2 years.
+
+    I am a college student.
+
+    I work at a daycare.
+
+    My dad is a dentist and my mom is a teacher.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to go out and have fun with friends. I also enjoy cooking and baking.
+
+    User 1: That''s cool. I love to cook too! What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m also a big fan of baking cookies and cakes.
+
+    User 1: Those sound delicious! I love pasta too. Do you have a favorite recipe?
+
+    User 2: My favorite recipe is for a simple tomato sauce. It''s just tomatoes, garlic, olive oil, and basil.
+
+    User 1: That sounds really good. I''ll have to try it sometime.
+
+    User 2: You should! It''s really easy to make.
+
+    User 1: I''m sure it is. I love cooking simple meals.
+
+    User 2: Me too. They''re the best way to relax and have fun.
+
+    User 1: I agree. So, what do you do for work?
+
+    User 2: I work at a daycare. I love working with kids.
+
+    User 1: That''s awesome. I''ve always wanted to work with kids.
+
+    User 2: It''s a lot of fun. You get to see them learn and grow.
+
+    User 1: That sounds great. I''m glad you like it.
+
+    User 2: I do. It''s a great job.
+
+    User 1: So, what''s your major?
+
+    User 2: I''m majoring in business administration.
+
+    User 1: Oh, that''s cool. I''m not sure what I want to major in yet.
+
+    User 2: You have plenty of time to figure it out.
+
+    User 1: I know. I''m just not sure what I want to do with my life.
+
+    User 2: You''ll figure it out. Just take your time and enjoy the process.
+
+    User 1: I will. Thanks for talking to me.
+
+    User 2: No problem. It was nice chatting with you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00066120'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 66120
+persona_description: A healthcare professional interested in the treatment of cancer, particularly non-small cell lung cancer (NSCLC). This person may have expertise in cancer treatment, specifically targeted
+  therapies, and has experience with EGFR inhibitors and dacomitinib, a pan-HER inhibitor. This person is likely to be interested in the clinical trial results for dacomitinib in advanced NSCLC patients
+  with EGFR mutations or clinical characteristics associated with response to EGFR inhibitors.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: cancer treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

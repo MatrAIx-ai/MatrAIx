@@ -1,0 +1,74 @@
+id: '00006136'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6136
+data:
+  user 1 personas: 'My favorite food is strawberries.
+
+    I love to go to the beach.
+
+    I have 2 cats.
+
+    I am vegan.
+
+    I work in a veterinary office.'
+  user 2 personas: 'I am content with my life.
+
+    I own a dog who is my best friend.
+
+    I am very shy.
+
+    I sing in the shower.
+
+    I have never had alcohol.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: My favorite food is strawberries. I love their sweet, juicy flavor.
+
+    User 1: Strawberries are delicious! I love them in a fruit salad or on top of ice cream.
+
+    User 2: Me too! They''re also great in smoothies.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go to the beach. I love swimming, sunbathing, and playing in the sand.
+
+    User 1: That sounds like fun! I love the beach too. I love the feeling of the sun on my skin and the sound of the waves crashing.
+
+    User 2: Me too! The beach is the perfect place to relax and forget about all your troubles.
+
+    User 1: What else do you like to do?
+
+    User 2: I also love animals. I have a dog who is my best friend.
+
+    User 1: I love animals too! I have two cats.
+
+    User 2: Cats are great! They''re so independent and cuddly.
+
+    User 1: I know! They''re the perfect pets.
+
+    User 2: What do you do for a living?
+
+    User 1: I work in a veterinary office. I love working with animals and helping them stay healthy.
+
+    User 2: That sounds like a great job! I''m sure you love helping animals.
+
+    User 1: I do! It''s the best job in the world.
+
+    User 2: What''s the best part of your job?
+
+    User 1: The best part of my job is getting to see animals get better and go home to their families.
+
+    User 2: That sounds amazing! I''m sure you''re a great vet.
+
+    User 1: I try my best!
+
+    User 2: Well, it sounds like you''re living a great life.
+
+    User 1: I am! I''m very happy.
+
+    User 2: That''s great! I''m happy for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

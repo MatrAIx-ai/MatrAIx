@@ -1,0 +1,80 @@
+id: '00003202'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3202
+data:
+  user 1 personas: 'I play drums in a band.
+
+    I am 25 years old and live with my parents.
+
+    I am college student.
+
+    I drive a ford mustang.'
+  user 2 personas: 'I enjoy nature.
+
+    I teach a yoga class.
+
+    My favorite food is salad.
+
+    I am single.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi (name), I''m (name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go hiking and camping. I also teach a yoga class.
+
+    User 1: That''s awesome! I love hiking and camping too. I actually play drums in a band.
+
+    User 2: That''s so cool! I love music. What kind of band do you play in?
+
+    User 1: We''re a rock band. We play mostly cover songs, but we also write our own music.
+
+    User 2: That''s great! I love rock music. Do you have any songs I can listen to?
+
+    User 1: Sure! Here''s a link to our Soundcloud page.
+
+    User 2: Cool! I''ll check it out.
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a teacher. I teach yoga at a local studio.
+
+    User 1: That''s really cool! I''ve always wanted to try yoga.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I''ll definitely look into it.
+
+    User 2: So, what do you like to eat?
+
+    User 1: I love all kinds of food, but my favorite is probably salad.
+
+    User 2: Salad! I love salad too. I''m a vegetarian, so I eat a lot of salad.
+
+    User 1: That''s cool! I know a lot of people who are vegetarian.
+
+    User 2: Yeah, it''s a great way to live.
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: Thanks! I am.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go hiking or camping. What are you doing?
+
+    User 1: I''m going to see a movie with my friends.
+
+    User 2: That sounds fun! What movie are you seeing?
+
+    User 1: I''m not sure yet. I''ll have to check the listings.
+
+    User 2: Okay, well have fun!
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

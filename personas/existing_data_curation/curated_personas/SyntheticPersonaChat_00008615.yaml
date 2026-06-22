@@ -1,0 +1,64 @@
+id: 00008615
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8615
+data:
+  user 1 personas: 'I live in new york and i love the local shops around here.
+
+    I m a night owl , but i m an introvert so i don t go out much or anything.
+
+    I like playing ultimate in the park with my guys sometimes.
+
+    I m a graduate student studying law.'
+  user 2 personas: 'My favorite band is a fine frenzy.
+
+    I like chicken nuggets.
+
+    I work at a hotel.
+
+    I love animals.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What''s your favorite band?
+
+    User 2: I love Fine Frenzy!
+
+    User 1: I''ve never heard of them. What kind of music do they play?
+
+    User 2: They''re a pop-rock band from the early 2000s. They''re really good.
+
+    User 1: I''ll have to check them out. What do you like about them?
+
+    User 2: I love their lyrics. They''re so relatable and meaningful.
+
+    User 1: I can see why you like them. They sound like a great band.
+
+    User 2: They are! I''m so glad you''re going to check them out.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! What do you do for work?
+
+    User 1: I''m a graduate student studying law.
+
+    User 2: Oh, that''s awesome! What made you want to become a lawyer?
+
+    User 1: I''ve always been interested in the law. I think it''s a really important field that can make a big difference in people''s lives.
+
+    User 2: I agree! I think it''s great that you''re pursuing your dream.
+
+    User 1: Thank you!
+
+    User 2: What''s your favorite thing about being a law student?
+
+    User 1: I like learning about the law and how it works. I also like working on cases with my classmates.
+
+    User 2: That sounds really interesting! I''m sure you''ll make a great lawyer.
+
+    User 1: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

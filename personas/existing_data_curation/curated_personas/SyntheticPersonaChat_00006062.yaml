@@ -1,0 +1,82 @@
+id: '00006062'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6062
+data:
+  user 1 personas: 'I love to eat shrimp and lobster.
+
+    I am in a jazz band and play the saxophone.
+
+    I have a black belt in karate.
+
+    I vacation along lake michigan every summer.'
+  user 2 personas: 'I once swam with manta rays.
+
+    I hate winter and the cold.
+
+    My favorite show is csi.
+
+    I would like to work for the smithsonian.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch TV, swim, and read.
+
+    User 1: I like to play the saxophone, play video games, and go on vacation.
+
+    User 2: I''ve always wanted to learn to play an instrument.
+
+    User 1: It''s a lot of fun! I''ve been playing the saxophone for 10 years.
+
+    User 2: Wow, that''s impressive!
+
+    User 1: Thanks! I also love to go on vacation. I go to Lake Michigan every summer.
+
+    User 2: That sounds like a lot of fun! I''ve never been to Lake Michigan.
+
+    User 1: You should go sometime! It''s beautiful there.
+
+    User 2: I will!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Really? That''s awesome! I have a lot of respect for nurses.
+
+    User 2: Thanks! It''s a very rewarding job.
+
+    User 1: What do you like most about it?
+
+    User 2: I like helping people and making a difference in their lives.
+
+    User 1: That''s amazing!
+
+    User 2: Thanks!
+
+    User 1: So, what''s your favorite TV show?
+
+    User 2: My favorite TV show is CSI.
+
+    User 1: That''s a good show! I love the crime-solving aspect of it.
+
+    User 2: Me too! It''s so interesting to see how they solve the crimes.
+
+    User 1: So, what would you like to do after you retire?
+
+    User 2: I would like to work for the Smithsonian.
+
+    User 1: That would be so cool! You would be surrounded by history and culture.
+
+    User 2: I know, right? I would love to learn more about the world.
+
+    User 1: Well, I''m sure you''ll achieve your goals. You seem like a very driven person.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

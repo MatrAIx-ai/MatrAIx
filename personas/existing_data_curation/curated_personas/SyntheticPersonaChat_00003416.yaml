@@ -1,0 +1,72 @@
+id: '00003416'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3416
+data:
+  user 1 personas: 'I like to go out to eat.
+
+    A hobby of mine is the drums.
+
+    One of my favorite artists is drake.
+
+    I like listening to other rap music too.
+
+    I also enjoy cooking.'
+  user 2 personas: 'My favorite band is insane clown posse.
+
+    I love to larp.
+
+    I am chubby.
+
+    I work as an interior designer.
+
+    I am tall and blonde.'
+  Best Generated Conversation: 'User 1: Hey, my name is (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to larp, interior design, and listen to ICP.
+
+    User 1: I''ve never heard of larp.
+
+    User 2: It''s a live action role playing game.
+
+    User 1: That sounds like fun!
+
+    User 2: It is! I love dressing up and pretending to be someone else.
+
+    User 1: I can imagine. Do you have any funny stories from larp?
+
+    User 2: Oh, yeah! I once had to pretend to be a vampire, and I got so into character that I bit someone.
+
+    User 1: That''s crazy!
+
+    User 2: It was! But it was also really fun.
+
+    User 1: What''s your favorite part about being an interior designer?
+
+    User 2: I love getting to create spaces that make people happy.
+
+    User 1: That''s such a great feeling.
+
+    User 2: It is! I love making people''s homes feel like their own personal sanctuaries.
+
+    User 1: I bet you''re really good at your job.
+
+    User 2: I like to think so!
+
+    User 1: Well, you sound like an awesome person.
+
+    User 2: Thanks! You too.
+
+    User 1: Do you want to get together sometime and hang out?
+
+    User 2: Sure! That sounds like fun.
+
+    User 1: Great! We can exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

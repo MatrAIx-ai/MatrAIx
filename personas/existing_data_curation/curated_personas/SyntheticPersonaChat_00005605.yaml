@@ -1,0 +1,64 @@
+id: '00005605'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5605
+data:
+  user 1 personas: 'I really wanted to be an actor.
+
+    I am in medical school.
+
+    I am in love with a girl who is unaware of it.
+
+    I do community theater when i am not in school.
+
+    Both of my parents are doctors.'
+  user 2 personas: 'I dyed my hair pink.
+
+    I work in a bookstore.
+
+    I live in the city.
+
+    I have an older brother.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I work in a bookstore. It''s pretty fun!
+
+    User 1: That sounds like a great job. I''ve always loved reading.
+
+    User 2: Me too! I read a lot of different things, but I''m always looking for new books to read.
+
+    User 1: What are you reading right now?
+
+    User 2: I''m currently reading a book about the history of the city I live in. It''s been really interesting to learn more about the place I call home.
+
+    User 1: That sounds like a really cool book. I''ve always been interested in history.
+
+    User 2: Me too! I think it''s important to know about the past in order to understand the present.
+
+    User 1: I agree. I think history is really important for understanding the world around us.
+
+    User 2: I''m glad you agree. I think it''s a really important subject.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to go out to eat, explore the city, and spend time with my family and friends.
+
+    User 1: Sounds like you have a lot of fun hobbies.
+
+    User 2: I do! I like to keep busy.
+
+    User 1: So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: I think we could be friends.
+
+    User 2: I think so too.
+
+    User 1: Great! I''d love to get to know you better.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

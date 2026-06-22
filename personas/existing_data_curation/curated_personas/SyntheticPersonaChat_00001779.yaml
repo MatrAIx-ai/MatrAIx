@@ -1,0 +1,62 @@
+id: 00001779
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1779
+data:
+  user 1 personas: 'I am a great baker.
+
+    I like to hunt for my food.
+
+    I have few friends.
+
+    I like katy perry as a musician.
+
+    I like to sew.'
+  user 2 personas: 'I want to climb mount everest.
+
+    I cry when i watch gone with the wind.
+
+    I have shot a lion.
+
+    I like to play with clay models.
+
+    I am not a good artist.'
+  Best Generated Conversation: 'User 1: I''m a great baker. What are your hobbies?
+
+    User 2: I like to play with clay models, and I want to climb Mount Everest.
+
+    User 1: That''s cool. I''ve never been interested in climbing, but I''ve always wanted to try making clay models.
+
+    User 2: You should! It''s really fun. What kind of things do you like to bake?
+
+    User 1: I like to bake all kinds of things, but my favorite is probably chocolate chip cookies.
+
+    User 2: Chocolate chip cookies are my favorite too! I love the way they smell when they''re baking.
+
+    User 1: Me too! I always bake them when I''m feeling stressed or anxious.
+
+    User 2: That''s a great way to relieve stress. I like to watch movies when I''m feeling stressed or anxious.
+
+    User 1: What are your favorite movies?
+
+    User 2: I love Gone with the Wind. I cry every time I watch it.
+
+    User 1: I''ve never seen it. I''ll have to check it out sometime.
+
+    User 2: You should! It''s a classic.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool. I''ve always thought about being a nurse.
+
+    User 2: It''s a great job. You get to help people and make a difference in their lives.
+
+    User 1: I bet. I''m sure you''re a great nurse.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

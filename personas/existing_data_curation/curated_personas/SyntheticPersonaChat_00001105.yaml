@@ -1,0 +1,74 @@
+id: '00001105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1105
+data:
+  user 1 personas: 'I own 9 guitars.
+
+    I learned piano at age 6.
+
+    I am a vegan.
+
+    I am trying to play in a local band.'
+  user 2 personas: 'I have a black belt in karate.
+
+    My favorite drink is iced coffee.
+
+    I m in a jazz band and play the saxophone.
+
+    I vacation along lake michigan every summer.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hello, I''m [User 2''s name].
+
+    User 1: I see you''re in a jazz band. Do you play any other instruments?
+
+    User 2: I play the saxophone.
+
+    User 1: That''s cool! I play the piano.
+
+    User 2: Oh, nice! I''ve always wanted to learn piano.
+
+    User 1: It''s a lot of fun! I''ve been playing since I was six years old.
+
+    User 2: Wow, that''s impressive! I started playing the saxophone when I was 12 years old.
+
+    User 1: What''s your favorite song to play?
+
+    User 2: I like to play "Take Five" by Dave Brubeck.
+
+    User 1: That''s a great song! I love the saxophone solo in that song.
+
+    User 2: Me too! It''s one of my favorite solos of all time.
+
+    User 1: I see you''re also a black belt in karate. That''s really cool!
+
+    User 2: Thanks! I''ve been practicing karate for over 10 years.
+
+    User 1: Wow, that''s a long time! I''ve always wanted to learn karate, but I''ve never had the time.
+
+    User 2: It''s never too late to start! I''m sure you''d be a natural.
+
+    User 1: Thanks, I might just give it a try.
+
+    User 2: I''m sure you''d love it!
+
+    User 1: I see you vacation in Lake Michigan every summer. Where do you like to go?
+
+    User 2: I usually go to Grand Haven, Michigan. It''s a beautiful town with a lot to offer.
+
+    User 1: That sounds nice! I''ve never been to Michigan before.
+
+    User 2: You should definitely go! It''s a great state with a lot to offer.
+
+    User 1: I''ll keep that in mind!
+
+    User 2: I hope you do!
+
+    User 1: Thanks for talking to me!
+
+    User 2: No problem! It was nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

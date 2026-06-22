@@ -1,0 +1,74 @@
+id: 00001158
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1158
+data:
+  user 1 personas: 'My name is dave.
+
+    I love hiking and staying fit.
+
+    I live in las vegas , nevada.
+
+    I work as a personal trainer , 5 days a week.
+
+    I go fishing on the weekends to relax.'
+  user 2 personas: 'My favorite music is two steps from hell and rock opera genre.
+
+    I eat tuna fish salad at least every day.
+
+    I have sandy brown hair and green eyes.
+
+    I read sci fi space adventures with a passion.'
+  Best Generated Conversation: 'User 1: Hi, I''m Dave. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you, Dave.
+
+    User 1: Nice to meet you too, [user 2 name]. Where are you from?
+
+    User 2: I''m from Las Vegas, Nevada. What about you?
+
+    User 1: I''m from Los Angeles, California.
+
+    User 2: Oh, cool. I''ve always wanted to visit California.
+
+    User 1: You should! It''s a beautiful state.
+
+    User 2: I definitely will someday.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to read, listen to music, and play video games.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably two steps from hell and rock opera.
+
+    User 1: I''ve never heard of two steps from hell before. What''s that?
+
+    User 2: It''s a music group that makes epic music for movies and video games.
+
+    User 1: Oh, that sounds cool. I''ll have to check them out.
+
+    User 2: You should! I think you''ll like them.
+
+    User 1: So, do you like to read sci-fi or fantasy?
+
+    User 2: I love sci-fi and fantasy! I''m always looking for new books to read.
+
+    User 1: Me too! I love getting lost in a good book.
+
+    User 2: Me too! It''s so much fun to escape from reality for a while.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m currently reading The Expanse series by James S. A. Corey.
+
+    User 1: Oh, I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 2: You should! It''s a great series.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

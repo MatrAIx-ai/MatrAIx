@@ -1,0 +1,86 @@
+id: '00005302'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5302
+data:
+  user 1 personas: 'I have a new job selling cars.
+
+    My favorite food is pizza.
+
+    I love to paint pictures.
+
+    I love meat.
+
+    My wife use to be a teacher.'
+  user 2 personas: 'My favorite band is pink floyd.
+
+    My dream is to own my own restaurant.
+
+    I am looking for a second job.
+
+    Running is a hobby.
+
+    I work as a grill cook.'
+  Best Generated Conversation: 'User 1: What''s your favorite band?
+
+    User 2: My favorite band is Pink Floyd.
+
+    User 1: Nice! I love Pink Floyd too. What''s your favorite song?
+
+    User 2: It''s hard to choose, but I''d say "Comfortably Numb" is one of my favorites.
+
+    User 1: That''s a great song! I love the guitar solo in that song.
+
+    User 2: Me too! It''s one of the best guitar solos ever written.
+
+    User 1: What other bands do you like?
+
+    User 2: I also like The Beatles, Led Zeppelin, and The Rolling Stones.
+
+    User 1: Nice! I like all those bands too.
+
+    User 2: What''s your dream job?
+
+    User 1: I''m not sure yet. I''m just starting out my career, so I''m still exploring my options.
+
+    User 2: What are you doing for work right now?
+
+    User 1: I''m selling cars at a dealership.
+
+    User 2: Oh, cool! I work as a grill cook at a restaurant.
+
+    User 1: Nice! Do you like it?
+
+    User 2: It''s okay. It''s not my dream job, but it''s a good job for now.
+
+    User 1: What''s your dream job?
+
+    User 2: I''d love to own my own restaurant one day.
+
+    User 1: That''s a great goal! I''m sure you''ll achieve it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are you doing for fun these days?
+
+    User 2: I''m just working and running. I''m trying to get in shape.
+
+    User 1: Nice! I like running too. It''s a great way to relieve stress.
+
+    User 2: I know, right? It''s also a great way to get in shape.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I like to paint pictures. I''m not very good at it, but it''s a relaxing hobby.
+
+    User 1: That''s cool! I''ve always wanted to learn how to paint.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a great way to express yourself.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

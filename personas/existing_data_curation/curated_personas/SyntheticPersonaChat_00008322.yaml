@@ -1,0 +1,80 @@
+id: 00008322
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8322
+data:
+  user 1 personas: 'I ride my bike to class since its only a mile away.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My glasses are held together by tiger printed duct tape.
+
+    My newly bought laptop has a bum battery.'
+  user 2 personas: 'I have never been employed.
+
+    I like video games.
+
+    I am diabetic.
+
+    My mother worked for apple.
+
+    My favorite genre of music is rock.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name], what''s your name?
+
+    User 2: Hey! I''m [name].
+
+    User 1: Nice to meet you! I''m from [place]. Where are you from?
+
+    User 2: I''m from [place].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, listen to rock music, and watch movies.
+
+    User 1: That sounds like fun! I like to write short stories, ride my bike, and go to the movies.
+
+    User 2: Wow, you sound like a very creative person.
+
+    User 1: Thanks! I like to think so. I''m actually a student at [university].
+
+    User 2: Oh, that''s cool! What are you studying?
+
+    User 1: I''m studying English literature.
+
+    User 2: Oh, that''s awesome! I love reading.
+
+    User 1: Me too! I''m currently reading a book about the history of rock music.
+
+    User 2: Oh, that sounds interesting! I''ve never really been into rock music, but I''m always up for trying new things.
+
+    User 1: You should! There''s a lot of great rock music out there.
+
+    User 2: I''ll keep that in mind.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m not currently employed.
+
+    User 1: Oh, why not?
+
+    User 2: I''m a diabetic, and it''s hard to find a job that will work with my condition.
+
+    User 1: Oh, that''s too bad. I''m sorry to hear that.
+
+    User 2: It''s okay. I''m hoping to get a job soon.
+
+    User 1: I''m sure you will! You seem like a very hard-working person.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just taking it one day at a time.
+
+    User 1: That''s a good attitude to have.
+
+    User 2: Thanks'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

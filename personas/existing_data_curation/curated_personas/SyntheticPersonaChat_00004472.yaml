@@ -1,0 +1,64 @@
+id: '00004472'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4472
+data:
+  user 1 personas: 'I use the computer all day.
+
+    I love hockey.
+
+    I sleep 8 hours.
+
+    My mother looks after my grandmother.'
+  user 2 personas: 'I need extra iron in my diet.
+
+    I have two cats.
+
+    I m in love with adam levine.
+
+    I love eating kale.
+
+    I have two children under ten.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom to two young children.
+
+    User 1: Oh, that sounds like a lot of work.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I''m sure it is. What are your hobbies?
+
+    User 2: I love to cook, read, and watch movies.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like a variety of movies, but I especially enjoy romantic comedies and action movies.
+
+    User 1: I like romantic comedies too. Do you have any favorite movies?
+
+    User 2: I love "When Harry Met Sally" and "Love Actually."
+
+    User 1: Those are both great movies! I love them too.
+
+    User 2: I also like to read, but I don''t have much time for it these days.
+
+    User 1: That''s understandable. I know how that feels.
+
+    User 2: I used to love reading historical romances, but I haven''t had much time for them lately.
+
+    User 1: I love historical romances too! I''m currently reading "The Duchess of Malfi" by John Webster.
+
+    User 2: I''ve never heard of that one. Is it good?
+
+    User 1: It''s really good! It''s a tragedy about a noble family in the 16th century.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: You should. It''s a great book.
+
+    User 2: Thanks for the recommendation. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

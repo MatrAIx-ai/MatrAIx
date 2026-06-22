@@ -1,0 +1,66 @@
+id: 00001850
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1850
+data:
+  user 1 personas: 'I brew my own beer.
+
+    I just bought a new house with my partner.
+
+    I am gay.
+
+    I live in portland , oregon.
+
+    I like to make my own coffee.'
+  user 2 personas: 'My favorite color is blue.
+
+    I drive a four wheel drive vehicle.
+
+    I like to draw and paint in my spare time.
+
+    I wear a uniform to work.
+
+    My house is paid for.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey there! How''s it going?
+
+    User 1: It''s going great! I just bought a new house with my partner.
+
+    User 2: That''s awesome! Congratulations!
+
+    User 1: Thanks! We''re really excited about it.
+
+    User 2: Where do you live?
+
+    User 1: I live in Portland, Oregon.
+
+    User 2: Oh, nice! I''ve been to Portland before. It''s a great city.
+
+    User 1: Yeah, it is. I love it here.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to brew beer, make my own coffee, and draw and paint.
+
+    User 2: That''s cool! I like to draw and paint too.
+
+    User 1: Oh, really? What kind of things do you like to draw and paint?
+
+    User 2: I like to draw and paint landscapes, animals, and people.
+
+    User 1: That''s cool! I like to draw and paint animals and people too.
+
+    User 2: We should do a drawing or painting collaboration sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll send you my contact information.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

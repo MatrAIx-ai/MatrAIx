@@ -1,0 +1,64 @@
+id: 00002295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2295
+data:
+  user 1 personas: 'I m a perfectionist.
+
+    I take forever to get tasks done so i start early and clock out late.
+
+    I think i need a vacation.
+
+    I work too much.'
+  user 2 personas: 'I work at a non profit that helps children.
+
+    My favorite food is cheese.
+
+    I m allergic to shellfish.
+
+    I like horseback riding.
+
+    I love going to concerts and dancing hard.'
+  Best Generated Conversation: 'User 1: I''m a perfectionist, so I take forever to get tasks done. I start early and clock out late. I think I need a vacation.
+
+    User 2: Ah, I work at a non profit that helps children, so I can relate to the long hours. What do you like to do for fun?
+
+    User 1: I like to go horseback riding, and I love going to concerts and dancing hard.
+
+    User 2: That sounds like fun! I love cheese, so I''m always looking for new places to try.
+
+    User 1: Oh, I love cheese too! I''m allergic to shellfish, so I can''t have any, but I love it in everything else.
+
+    User 2: That''s a shame, but you can always have cheese fries.
+
+    User 1: True, but I prefer it in other foods.
+
+    User 2: What''s your favorite cheese?
+
+    User 1: I like cheddar, but I also like brie and goat cheese.
+
+    User 2: I like those too, but my favorite is mozzarella.
+
+    User 1: Mozzarella is good, but I think it''s a bit bland.
+
+    User 2: I know what you mean, but I like the way it melts.
+
+    User 1: Me too, it''s perfect for pizza.
+
+    User 2: Exactly! What''s your favorite kind of pizza?
+
+    User 1: I like pepperoni and mushroom, but I also like cheese pizza.
+
+    User 2: I like those too, but I like to mix it up with some veggies.
+
+    User 1: Me too, I like artichokes and spinach on my pizza.
+
+    User 2: That sounds delicious! I''ll have to try that next time.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

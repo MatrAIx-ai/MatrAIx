@@ -1,0 +1,58 @@
+id: '00006737'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6737
+data:
+  user 1 personas: 'I dream of becoming a famous actress.
+
+    I am allergic to milk.
+
+    I do not like the beach.
+
+    I am a writer.'
+  user 2 personas: 'I like to use candles instead of lights.
+
+    I love photography.
+
+    I enjoy spending a lot of money on my hobbies.
+
+    I do not like waking up early.
+
+    I love the sound of the rain.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love photography, and I''m really into candles. I like to use them instead of regular lights.
+
+    User 1: That''s interesting. I''ve never been much of a photographer, but I love candles too. They''re so relaxing.
+
+    User 2: Me too! I love the way they smell and the ambiance they create.
+
+    User 1: What''s your favorite type of photography?
+
+    User 2: I love taking pictures of nature. I think there''s something so beautiful about the natural world.
+
+    User 1: Me too! I love taking pictures of flowers and animals.
+
+    User 2: Oh, me too! I love taking pictures of animals, especially baby animals.
+
+    User 1: They''re so cute! I love taking pictures of my cat.
+
+    User 2: I love taking pictures of my dog.
+
+    User 1: Dogs are the best! What''s your favorite thing to do with your dog?
+
+    User 2: I love taking him for walks. He loves to run around and play fetch.
+
+    User 1: I love taking my cat for walks too. He''s not as big of a fan as my dog is, but he still enjoys it.
+
+    User 2: I''m glad to hear that you have a dog. I love dogs!
+
+    User 1: I''m glad to hear that you love photography. I think it''s a great hobby.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

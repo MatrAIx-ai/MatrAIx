@@ -1,0 +1,78 @@
+id: 00005618
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5618
+data:
+  user 1 personas: 'I think recycling is important.
+
+    I like to be outdoors.
+
+    I am a student.
+
+    I am from california.'
+  user 2 personas: 'My girlfriend tells me she is going to leave me almost every day.
+
+    I enjoy john gresham movies , but not his books.
+
+    My parents used to work in politics , until they discovered the goodness within themselves.
+
+    I am a really , really good guitar player.
+
+    I do not like wearing pants when i do not have to.'
+  Best Generated Conversation: 'User 1: Hey, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I like to play guitar and I enjoy being outdoors.
+
+    User 1: That''s cool. I like to play guitar too. What kind of music do you like to play?
+
+    User 2: I like to play all kinds of music, but I''m really into blues and jazz right now.
+
+    User 1: Nice. I''m more into rock and roll.
+
+    User 2: That''s cool too. I like some rock and roll too.
+
+    User 1: I''m from California. Where are you from?
+
+    User 2: I''m from Texas.
+
+    User 1: Oh, cool. I''ve never been to Texas.
+
+    User 2: It''s a great state. You should come visit sometime.
+
+    User 1: I will. Thanks for the offer.
+
+    User 2: No problem. So, what do you do for a living?
+
+    User 1: I''m a student. I''m studying business.
+
+    User 2: Oh, cool. What do you want to do with your business degree?
+
+    User 1: I''m not sure yet. I''m still exploring my options.
+
+    User 2: That''s okay. You have plenty of time to figure it out.
+
+    User 1: Thanks. I''m glad to hear that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play guitar, go hiking, and go to the beach.
+
+    User 2: Nice. I like hiking too. I used to go hiking a lot when I lived in Texas.
+
+    User 1: Oh, cool. Where did you go hiking in Texas?
+
+    User 2: I used to hike in the Guadalupe Mountains.
+
+    User 1: Oh, that''s cool. I''ve never been to the Guadalupe Mountains.
+
+    User 2: You should go. They''re really beautiful.
+
+    User 1: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

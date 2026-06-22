@@ -1,0 +1,82 @@
+id: 00001939
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1939
+data:
+  user 1 personas: 'I like the library.
+
+    I want to be alone sometimes.
+
+    I feel competitive against other women.
+
+    I do not trust anyone.'
+  user 2 personas: 'I am a lawyer.
+
+    I do not own a television.
+
+    My hobby is photography.
+
+    I know how to pilot a plane.
+
+    I live in the mountains.'
+  Best Generated Conversation: 'User 1: Hi there, I''m (username).
+
+    User 2: Hello, I''m (username). What do you do for fun?
+
+    User 1: I like to read, go to the library, and spend time alone.
+
+    User 2: I like to go hiking and take photos. I also like to pilot my plane.
+
+    User 1: That''s cool! I''ve never been hiking before, but I''d love to try it sometime.
+
+    User 2: You should! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 1: I know, I''ve heard great things about it.
+
+    User 2: If you ever want to go hiking, let me know. I''d be happy to show you around.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: You''re welcome. So, what do you do for work?
+
+    User 1: I''m a lawyer.
+
+    User 2: Oh, that''s interesting. Do you like it?
+
+    User 1: It''s okay, I guess.
+
+    User 2: What''s your favorite part about being a lawyer?
+
+    User 1: I like the challenge of it.
+
+    User 2: That''s understandable. I know a lot of people who are lawyers, and they all say the same thing.
+
+    User 1: Yeah, it can be tough sometimes, but it''s also rewarding.
+
+    User 2: I''m sure it is. So, what''s your favorite thing to do in your spare time?
+
+    User 1: I like to read, like I said. I also like to watch movies and go out to dinner with my friends.
+
+    User 2: That sounds like fun. I like to read too, but I don''t get to do it as much as I''d like.
+
+    User 1: Yeah, I know what you mean. I wish I had more time to read.
+
+    User 2: Me too. So, what are you reading right now?
+
+    User 1: I''m reading a book called "The Great Gatsby".
+
+    User 2: Oh, I''ve heard good things about that book.
+
+    User 1: It''s pretty good so far.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go hiking or go out to dinner.
+
+    User 1: That sounds like fun. I''m going to go to the library. I need to find a new book to read.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

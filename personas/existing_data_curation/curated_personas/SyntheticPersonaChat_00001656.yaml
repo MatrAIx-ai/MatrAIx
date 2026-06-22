@@ -1,0 +1,68 @@
+id: '00001656'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1656
+data:
+  user 1 personas: 'I like rock music.
+
+    I have a black purse.
+
+    I drive a black car.
+
+    I like to wear black.'
+  user 2 personas: 'I like to run.
+
+    I love cheese cake.
+
+    I have 3 children.
+
+    My favorite movie is 16 candles.
+
+    I drive 300 mile a week for work.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah.
+
+    User 2: Hi Sarah, I''m Bob.
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to run, love cheese cake, have 3 children, my favorite movie is 16 candles, and I drive 300 mile a week for work.
+
+    User 1: Wow, you''re busy! I like rock music, have a black purse, drive a black car, and like to wear black.
+
+    User 2: I like rock music too! What are some of your favorite bands?
+
+    User 1: I love Guns N'' Roses, Metallica, and Nirvana.
+
+    User 2: Me too! I also like Black Sabbath, AC/DC, and Iron Maiden.
+
+    User 1: Nice! I love all of those bands too.
+
+    User 2: What do you like about rock music?
+
+    User 1: I love the energy and the passion. It''s so much fun to listen to and dance to.
+
+    User 2: I agree! I love to go to concerts and rock out.
+
+    User 1: Me too! I''ve been to a few concerts this year already.
+
+    User 2: What were some of your favorite concerts?
+
+    User 1: I really enjoyed the Foo Fighters concert I went to.
+
+    User 2: Me too! They''re such a great live band.
+
+    User 1: I also enjoyed the Green Day concert I went to.
+
+    User 2: They''re one of my favorite bands! I''m so jealous that you got to see them.
+
+    User 1: It was a lot of fun! I''m glad I got to go.
+
+    User 2: Me too! I hope you get to see more concerts in the future.
+
+    User 1: I hope so too! Thanks for talking to me, Bob.
+
+    User 2: You''re welcome, Sarah. It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00001346'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1346
+data:
+  user 1 personas: 'I love christmas.
+
+    I wish magic was real.
+
+    I like getting packages in the mail.
+
+    I have a daughter.
+
+    I like fantasizing.'
+  user 2 personas: 'My friend once bought me a car.
+
+    I am disabled and cannot walk.
+
+    I take vitamin c when i have a cold.
+
+    I do not eat bread.
+
+    My favorite season is winter.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read and write. I also enjoy watching movies and playing video games.
+
+    User 1: Me too! I love reading, especially fantasy and mystery novels. I also love watching movies and playing video games.
+
+    User 2: That''s awesome! I love fantasy novels too. What are your favorite books?
+
+    User 1: I love the Harry Potter series, The Lord of the Rings series, and the Percy Jackson series.
+
+    User 2: I love those books too! I also love the His Dark Materials series and the Hunger Games series.
+
+    User 1: Those are great books! I''ve read them all too.
+
+    User 2: We have so much in common!
+
+    User 1: I know! It''s like we''re soulmates.
+
+    User 2: Haha, I guess we are!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I love to go on walks and hikes. I also love to travel.
+
+    User 1: Me too! I love going on walks and hikes. I''ve been to a lot of different places, but I''d love to travel more.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to the United States, Canada, Mexico, and Europe.
+
+    User 2: Wow! That''s a lot of places. I''ve only been to the United States and Canada.
+
+    User 1: I would love to go to Europe again. I really enjoyed it there.
+
+    User 2: I''m sure I would too. It looks beautiful.
+
+    User 1: It is! I would definitely recommend going there.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

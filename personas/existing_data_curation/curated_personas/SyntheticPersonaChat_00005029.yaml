@@ -1,0 +1,74 @@
+id: 00005029
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5029
+data:
+  user 1 personas: 'I like to go out to the bars.
+
+    I like to go to the gym and work out.
+
+    I enjoy dating women.
+
+    I m retired.
+
+    I like cooking healthy meals.'
+  user 2 personas: 'I love my grandchildren.
+
+    I am a mother.
+
+    I live by a lake.
+
+    I own a custom upholstery shop.
+
+    I am a wife.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to spend time with my grandchildren, go to the gym, and cook healthy meals.
+
+    User 1: That sounds great! I like to go out to the bars, work out, and date women.
+
+    User 2: Oh, I''ve never been to a bar before. What''s it like?
+
+    User 1: It''s a lot of fun! You can meet new people, dance, and have a good time.
+
+    User 2: That sounds like something I''d enjoy. Maybe I''ll try it sometime.
+
+    User 1: You should! I''m sure you''d have a great time.
+
+    User 2: Thanks for the suggestion.
+
+    User 1: No problem. So, what do you do for a living?
+
+    User 2: I''m a wife and mother, and I own a custom upholstery shop.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to upholster furniture.
+
+    User 2: It''s not that hard, but it does take some practice.
+
+    User 1: I''m sure I could learn it. I''m a pretty good handyman.
+
+    User 2: Well, if you''re ever in the market for some new furniture, let me know.
+
+    User 1: Will do! Thanks for the offer.
+
+    User 2: No problem. So, what are you looking for in a partner?
+
+    User 1: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 2: That sounds like a great combination.
+
+    User 1: I think so too.
+
+    User 2: Well, I''m sure you''ll find someone who''s perfect for you.
+
+    User 1: Thanks for the vote of confidence.
+
+    User 2: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

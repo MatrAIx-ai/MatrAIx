@@ -1,0 +1,64 @@
+id: 00002962
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2962
+data:
+  user 1 personas: 'I am a baseball player.
+
+    I make a million dollars a year.
+
+    I went to miami university.
+
+    I m married and have three kids.'
+  user 2 personas: 'I eat exclusively meat.
+
+    My favorite movie is good burger.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    In high school , i came in 6th in the 100 meter dash.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for a living?
+
+    User 2: I''m a professional athlete.
+
+    User 1: Really? What sport?
+
+    User 2: I play baseball.
+
+    User 1: That''s cool! I''ve always loved baseball.
+
+    User 2: Me too! It''s a great sport.
+
+    User 1: So, what''s it like to be a professional baseball player?
+
+    User 2: It''s a lot of fun, but it''s also a lot of work.
+
+    User 1: I bet it is. What''s your favorite part of the job?
+
+    User 2: I love playing the game. It''s the best feeling in the world to be out on the field and competing.
+
+    User 1: That''s awesome! How long have you been playing baseball?
+
+    User 2: I''ve been playing since I was a kid.
+
+    User 1: Wow, so you''re really good at it!
+
+    User 2: I''m okay, I guess.
+
+    User 1: You must be really good if you''re a professional baseball player!
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite baseball team?
+
+    User 2: I''m a big fan of the Miami Marlins.
+
+    User 1: Me too! They''re my favorite team too.
+
+    User 2: That''s cool! I''m glad to meet a fellow Marlins fan.
+
+    User 1: Me too! I''m sure we''ll have a lot to talk about then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

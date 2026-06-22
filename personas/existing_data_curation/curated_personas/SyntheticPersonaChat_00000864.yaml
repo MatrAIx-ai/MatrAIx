@@ -1,0 +1,66 @@
+id: 00000864
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 864
+data:
+  user 1 personas: 'I travel a lot.
+
+    I like doing art projects.
+
+    I am a strong woman.
+
+    I am married.'
+  user 2 personas: 'I work as a scientist.
+
+    I am well built and tall.
+
+    My parents were scientists.
+
+    I m in gymnastics.'
+  Best Generated Conversation: 'User 1: I''m a scientist too! What field do you work in?
+
+    User 2: I''m a physicist, and I work on developing new materials.
+
+    User 1: That''s amazing! I''m a computational chemist, so I work on developing new drugs.
+
+    User 2: That''s really cool! I''ve always been interested in chemistry, but I didn''t have the math skills for it.
+
+    User 1: It''s not so bad! I''m sure you could do it if you wanted to.
+
+    User 2: Maybe someday! I''m really enjoying my work as a physicist right now.
+
+    User 1: I''m glad to hear that! So, what kind of projects are you working on right now?
+
+    User 2: I''m currently working on a new material that could be used in solar cells. I''m hoping to make it more efficient than the current materials on the market.
+
+    User 1: That''s awesome! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to travel, read, and do art projects.
+
+    User 1: That sounds like fun! I love to travel too. I''ve been to a few countries, but I''d love to see more.
+
+    User 2: Me too! I''ve been to a few countries in Europe, but I''d love to travel to Asia and South America.
+
+    User 1: I''ve been to Asia a few times, and it''s amazing! I''ve always wanted to go to South America, but I''ve never had the chance.
+
+    User 2: You should definitely go! It''s beautiful and there''s so much to see and do.
+
+    User 1: I will! Thanks for the tip.
+
+    User 2: No problem! So, what kind of art projects do you do?
+
+    User 1: I mostly do painting and drawing. I also like to make jewelry.
+
+    User 2: That sounds really cool! I''d love to see some of your work sometime.
+
+    User 1: Sure! I''ll send you some pictures.
+
+    User 2: Great! I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

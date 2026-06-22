@@ -1,0 +1,70 @@
+id: 00006806
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6806
+data:
+  user 1 personas: 'I love to eat pita bread with hummus.
+
+    I am bipolar.
+
+    I am a mother of three.
+
+    I am thinking of becoming a mother next year.
+
+    I go to work early in the morning as a nurse.'
+  user 2 personas: 'My left knee is filled with metal.
+
+    My family means the world to me.
+
+    I enjoy jazz music from when i was a girl.
+
+    I play bingo every wednesday with my husband.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hello (name), my name is (name). It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I like to play bingo with my husband every Wednesday. I also enjoy listening to jazz music.
+
+    User 1: That sounds fun! I love to play bingo too. I also love to eat pita bread with hummus.
+
+    User 2: That''s a great combination! I''ve never tried it, but I''m sure it''s delicious.
+
+    User 1: It is! You should try it sometime.
+
+    User 2: I will! What else do you like to do for fun?
+
+    User 1: I like to go to the park with my kids. We like to play on the swings and the slide.
+
+    User 2: That sounds like a lot of fun! I don''t have any kids, but I like to watch them play.
+
+    User 1: They''re a lot of work, but they''re also a lot of fun.
+
+    User 2: I can imagine. Do you have any other hobbies?
+
+    User 1: I used to be a nurse, but I had to quit because of my bipolar disorder.
+
+    User 2: I''m sorry to hear that. I''m sure you were a great nurse.
+
+    User 1: Thank you. I miss it sometimes, but I''m happy to be home with my family.
+
+    User 2: I''m sure they''re glad to have you home too.
+
+    User 1: Yes, they are.
+
+    User 2: So, what do you like to do when you''re not working or with your family?
+
+    User 1: I like to read, watch TV, and go online.
+
+    User 2: That sounds like a lot of fun! I like to do similar things. I also like to go shopping and spend time with my friends.
+
+    User 1: That sounds fun! I don''t have many friends, but I''m trying to make more.
+
+    User 2: I''m sure you''ll make some great friends! You seem like a nice person.
+
+    User 1: Thank you! I think you''re nice too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

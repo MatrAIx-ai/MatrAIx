@@ -1,0 +1,66 @@
+id: 00003184
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3184
+data:
+  user 1 personas: 'I love to read fiction.
+
+    I work at a hospital.
+
+    I love pasta.
+
+    I m twenty years old.'
+  user 2 personas: 'I have four daughters.
+
+    I love chocolate cake with extra frosting.
+
+    I have two siberian huskies.
+
+    I play guitar.
+
+    I am a michigan state trooper.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]!
+
+    User 2: Hi, I''m [name]! What do you do for fun?
+
+    User 1: I love to read fiction, play video games, and cook. What about you?
+
+    User 2: I love to play guitar, bake chocolate cake, and spend time with my family.
+
+    User 1: That''s so cool! I love to cook too, but I''m not very good at it. Do you have any favorite recipes?
+
+    User 2: Yeah, I have a lot of favorite recipes! But my favorite is probably my chocolate cake recipe. It''s so easy to make and it always turns out amazing.
+
+    User 1: That sounds delicious! I love chocolate cake. I''ll have to try your recipe sometime.
+
+    User 2: You''re welcome to! I''d be happy to share it with you.
+
+    User 1: Thanks! I''ll let you know how it turns out.
+
+    User 2: Sounds good!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a Michigan State Trooper. I love my job!
+
+    User 1: That''s so cool! I''ve always wanted to be a police officer, but I''m not sure I''m tough enough.
+
+    User 2: It''s not always easy, but it''s a rewarding job. I love helping people and making a difference in the community.
+
+    User 1: That''s awesome! I''m sure you''re a great trooper.
+
+    User 2: Thank you! I try my best.
+
+    User 1: So, what''s your favorite part of being a trooper?
+
+    User 2: I love helping people and being there for them when they need me. I also love the excitement and adrenaline rush of the job.
+
+    User 1: That sounds amazing! I''m sure it''s a lot of work, but it must be really rewarding.
+
+    User 2: It is! I''m so glad I made the decision to become a trooper.
+
+    User 1: Me too! It sounds like you''re really happy with your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

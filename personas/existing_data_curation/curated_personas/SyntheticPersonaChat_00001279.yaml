@@ -1,0 +1,106 @@
+id: 00001279
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1279
+data:
+  user 1 personas: 'I enjoy swimming.
+
+    I do not like green eggs and ham.
+
+    I love cooking.
+
+    I have 4 dogs.'
+  user 2 personas: 'My mother and father are both in the church choir.
+
+    I own my own music store.
+
+    I played in a band for 17 years.
+
+    I hope to retire to florida.
+
+    I am an animal rights activist.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love playing music, and I''m also an animal rights activist.
+
+    User 1: That''s cool! I love swimming, cooking, and I have four dogs.
+
+    User 2: Oh, that''s nice! I love dogs, too. Do you have any pictures of your dogs?
+
+    User 1: Sure! Here''s one of my dogs playing in the pool.
+
+    User 2: Aww, he''s so cute! I love dogs that swim.
+
+    User 1: Thanks! He''s my favorite dog.
+
+    User 2: I can see why!
+
+    User 1: So, what kind of music do you like to play?
+
+    User 2: I like to play all kinds of music, but I''m mostly into rock and blues.
+
+    User 1: Cool! I like rock and blues, too.
+
+    User 2: Oh, that''s great! We should jam sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Okay, sounds good!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a chef.
+
+    User 1: It''s a lot of fun, but it can be hard work.
+
+    User 2: I bet! But I''m sure it''s rewarding.
+
+    User 1: It is. I love seeing people enjoy my food.
+
+    User 2: That''s awesome!
+
+    User 1: So, what do you do for work?
+
+    User 2: I own a music store.
+
+    User 1: Oh, that''s cool! I''ve always loved music stores.
+
+    User 2: Me too! It''s a lot of fun working in a music store.
+
+    User 1: I bet!
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to cook, swim, and spend time with my dogs.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I love doing all of those things.
+
+    User 2: Me too!
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I hope to retire to Florida someday.
+
+    User 1: Oh, that''s cool! I''ve always wanted to live in Florida.
+
+    User 2: Me too! It''s a beautiful place.
+
+    User 1: It is.
+
+    User 2: So, what do you think? Should we set up a time to jam?
+
+    User 1: Sure! That sounds like a great idea.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

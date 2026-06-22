@@ -1,0 +1,90 @@
+id: '00001052'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1052
+data:
+  user 1 personas: 'I like tall men.
+
+    I enjoy reading and cooking.
+
+    I have 2 dogs.
+
+    I have red hair.'
+  user 2 personas: 'I love reading mysteries in my free time.
+
+    I went to college in chicago.
+
+    I am the youngest of 3.
+
+    I love playing tennis.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. I''m new here.
+
+    User 2: Hi [user 1], I''m [user 2]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, cook, and spend time with my dogs.
+
+    User 2: I love to read too! What kind of books do you like to read?
+
+    User 1: I like to read mysteries, romance, and historical fiction.
+
+    User 2: I love mysteries too! What''s your favorite mystery book?
+
+    User 1: My favorite mystery book is "The Girl on the Train" by Paula Hawkins.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I also like to cook. I love trying new recipes and experimenting in the kitchen.
+
+    User 2: That sounds fun! I''m not much of a cook, but I do enjoy eating.
+
+    User 1: I love to eat too! What''s your favorite food?
+
+    User 2: My favorite food is pizza. I could eat pizza every day.
+
+    User 1: I love pizza too! It''s so delicious.
+
+    User 2: I know, right? It''s the perfect food.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to play tennis. I''ve been playing tennis since I was a kid.
+
+    User 1: I''ve never played tennis before. Is it hard to learn?
+
+    User 2: It''s not too hard to learn. It''s a great way to stay active and get some exercise.
+
+    User 1: I might have to give it a try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: It sounds like you have a lot of interests.
+
+    User 2: I like to keep busy.
+
+    User 1: Me too.
+
+    User 2: So, what are you looking for in a partner?
+
+    User 1: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 2: That sounds like a good list of qualities.
+
+    User 1: I think so.
+
+    User 2: I''m sure you''ll find someone who''s perfect for you.
+
+    User 1: I hope so.
+
+    User 2: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00001698
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1698
+data:
+  user 1 personas: 'I m a older woman.
+
+    My favorite food is pasta.
+
+    I love helping people.
+
+    I live in a rural area.'
+  user 2 personas: 'I work in a factory.
+
+    I am very unproductive unless it comes to my job.
+
+    I am not social.
+
+    I do not eat well.
+
+    I sleep most of the day.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1 name].
+
+    User 2: Hello! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I don''t really do much for fun.
+
+    User 1: Oh, that''s too bad. I love to go out and explore new places.
+
+    User 2: I don''t really like going out.
+
+    User 1: Why not?
+
+    User 2: I''m just not a very social person.
+
+    User 1: I see. Well, I''m sure you have other interests.
+
+    User 2: I guess so. I like to work out.
+
+    User 1: That''s great! I love working out too.
+
+    User 2: Yeah, it''s a good way to relieve stress.
+
+    User 1: Absolutely. Do you have any pets?
+
+    User 2: No, I don''t.
+
+    User 1: Oh, that''s too bad. I love animals.
+
+    User 2: I''m not really a pet person.
+
+    User 1: I see. Well, I''m sure you have other interests.
+
+    User 2: I guess so. I like to read.
+
+    User 1: That''s a great hobby! I love to read too.
+
+    User 2: Yeah, it''s a good way to escape from the world.
+
+    User 1: Absolutely. Do you have any favorite books?
+
+    User 2: I like to read anything by John Grisham.
+
+    User 1: I''ve read a few of his books. They''re really good!
+
+    User 2: Yeah, they are. I''m always excited to read his new books.
+
+    User 1: Me too. He''s a great writer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

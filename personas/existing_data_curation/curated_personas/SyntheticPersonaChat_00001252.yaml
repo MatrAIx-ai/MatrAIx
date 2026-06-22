@@ -1,0 +1,64 @@
+id: '00001252'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1252
+data:
+  user 1 personas: 'I can play piano.
+
+    I work at a bar.
+
+    I surf everyday.
+
+    People say i can cook well.
+
+    I like to listen to country music.'
+  user 2 personas: 'I am fifteen years old.
+
+    My family has three dogs and my dog is named maddie.
+
+    I live in america in the state of florida.
+
+    I have braces.'
+  Best Generated Conversation: 'User 1: Hi, I''m user 1!
+
+    User 2: Hi! I''m user 2!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim and play with my dogs.
+
+    User 1: That sounds fun! I like to surf and cook.
+
+    User 2: I''ve never surfed before, but it looks like a lot of fun.
+
+    User 1: It is! It''s a great way to relax and get some exercise.
+
+    User 2: I''m sure I''d like it. I love being in the water.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like country music.
+
+    User 1: Me too! I love listening to country music while I''m cooking.
+
+    User 2: That sounds like a great way to relax.
+
+    User 1: It is. I also like to listen to country music when I''m surfing.
+
+    User 2: I can imagine that would be a lot of fun.
+
+    User 1: It is. I love the feeling of the waves crashing over me and the sound of the music in the background.
+
+    User 2: That sounds like a great way to enjoy nature.
+
+    User 1: It is. I love being out in nature.
+
+    User 2: Me too. I love the feeling of the sun on my skin and the wind in my hair.
+
+    User 1: Me too. I love being outside.
+
+    User 2: Me too. I love the fresh air.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00009114
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9114
+persona_description: A corporate IT professional responsible for managing and securing employee devices. This persona is knowledgeable about the latest technologies and best practices in mobile device management
+  (MDM) and enterprise security. They are skilled in configuring and deploying configuration profiles to add trusted CA certificates to employee devices. This individual is also experienced in implementing
+  and managing remote certificate enrollment protocols (SCEP) to ensure secure authentication and access to corporate servers.
+expertise:
+  general_domain_top1pct: IT
+  specific_domain_top1pct: mobile device management (MDM) and enterprise security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,62 @@
+id: 00001913
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1913
+data:
+  user 1 personas: 'I have two tattoos.
+
+    I enjoy shopping.
+
+    My favorite hobby is knitting.
+
+    I work in an office.'
+  user 2 personas: 'I like action movies.
+
+    I drive a restored mustang.
+
+    My father is a doctor.
+
+    I am a college student.
+
+    I play football.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is John.
+
+    User 1: Nice to meet you, John. What do you like to do for fun?
+
+    User 2: I like to play football, watch action movies, and drive my restored Mustang.
+
+    User 1: I''m not a football fan, but I love action movies! And restoring cars sounds really cool.
+
+    User 2: Thanks! I''m glad you like them. What do you do for fun?
+
+    User 1: I work in an office, but I enjoy knitting and shopping in my free time.
+
+    User 2: I''ve never tried knitting, but it looks like a fun hobby. And shopping is always a good time!
+
+    User 1: It is! I love finding new things to wear and decorate my home with.
+
+    User 2: Me too! I''m always looking for new clothes and furniture.
+
+    User 1: It''s good to know we have something in common.
+
+    User 2: Yeah, it is. I think we''re going to get along well.
+
+    User 1: I think so too.
+
+    User 2: So, what do you like to do for your birthday?
+
+    User 1: I usually go out to dinner with my friends and family. Sometimes we go to a nice restaurant, and other times we just order takeout and watch a movie.
+
+    User 2: That sounds like fun. I like to spend my birthday with my family too. We usually go out to dinner and then we stay up late playing games.
+
+    User 1: That sounds like a great way to spend your birthday.
+
+    User 2: It is! I always have a lot of fun.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

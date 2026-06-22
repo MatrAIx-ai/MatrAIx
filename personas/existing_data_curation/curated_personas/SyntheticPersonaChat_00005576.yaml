@@ -1,0 +1,58 @@
+id: '00005576'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5576
+data:
+  user 1 personas: 'I like early 2000s indie music.
+
+    My temper is pretty short.
+
+    I would like to be a teacher in the future.
+
+    I am picky when it comes to food.'
+  user 2 personas: 'I like to sing broadway show tunes.
+
+    I am a student at michigan state university.
+
+    My favorite tv show is dancing with the stars.
+
+    I work at a coffee house.
+
+    I have a cat named seven of nine.'
+  Best Generated Conversation: 'User 1: Hello! I''m interested in talking about music and teaching.
+
+    User 2: Hi! I love to sing broadway show tunes. What do you like to listen to?
+
+    User 1: I love early 2000s indie music. I think it has a lot of energy and passion.
+
+    User 2: That''s cool! I''ve never really listened to it before. What are some of your favorite bands?
+
+    User 1: I like The Strokes, The Killers, and The White Stripes.
+
+    User 2: I''ve heard of The Killers, but I haven''t heard of the other two. I''ll have to check them out.
+
+    User 1: You should! They''re all great bands.
+
+    User 2: So, what do you want to be when you grow up?
+
+    User 1: I want to be a teacher. I think it would be really rewarding to help kids learn and grow.
+
+    User 2: That''s awesome! I''m sure you''d be a great teacher.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what are you studying in school?
+
+    User 1: I''m studying education.
+
+    User 2: Cool! How do you like it?
+
+    User 1: I like it a lot! It''s really interesting to learn about how kids learn and how to teach them effectively.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

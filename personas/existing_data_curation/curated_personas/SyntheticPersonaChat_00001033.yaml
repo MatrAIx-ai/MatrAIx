@@ -1,0 +1,80 @@
+id: '00001033'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1033
+data:
+  user 1 personas: 'I like cupcakes.
+
+    My favorite color is blue.
+
+    I have brown hair.
+
+    I work at a grocery store.
+
+    I like to read.'
+  user 2 personas: 'I want to get married again.
+
+    I wish my boyfriend didn t want an open relationship.
+
+    I m angry at my coworker.
+
+    I m not going to go the extra mile anymore.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: I''m [name].
+
+    User 1: Nice to meet you, [name]. What''s your favorite color?
+
+    User 2: My favorite color is blue. What''s yours?
+
+    User 1: Mine is also blue!
+
+    User 2: That''s cool.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, watch movies, and spend time with my friends and family.
+
+    User 1: Me too! I love to read and watch movies.
+
+    User 2: What kind of movies do you like to watch?
+
+    User 1: I like to watch all kinds of movies, but I especially like romantic comedies and action movies.
+
+    User 2: I like romantic comedies too!
+
+    User 1: What''s your favorite romantic comedy?
+
+    User 2: I don''t know if I have a favorite, but I really like When Harry Met Sally.
+
+    User 1: That''s a great movie! I love Meg Ryan in that movie.
+
+    User 2: Me too! She''s so funny.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s interesting. I''ve always thought about being a nurse.
+
+    User 2: It''s a great job! I love helping people.
+
+    User 1: That''s what I like about it too.
+
+    User 2: So, what''s your favorite thing to do in the city?
+
+    User 1: I like to go shopping and eat at all the different restaurants.
+
+    User 2: Me too! I love trying new food.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

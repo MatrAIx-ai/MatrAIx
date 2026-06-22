@@ -1,0 +1,18 @@
+id: '00051102'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51102
+persona_description: A technologist who specializes in radio frequency (RF) communications and signal processing. They are proficient in FM audio demodulation techniques, including the use of the CORDIC
+  phase detector for frequency estimation. Their expertise includes understanding the principles of FM modulated audio signals, including the frequency offset between the video and audio bands, and the
+  modifications required for FM demodulation. They are skilled in post-processing techniques for recovering subcarriers in stereo FM signals.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: RF communications and signal processing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,64 @@
+id: '00001123'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1123
+data:
+  user 1 personas: 'I prefer summer.
+
+    I love butterflies.
+
+    I do not like dresses.
+
+    My favorite hero is flash.'
+  user 2 personas: 'I enjoy jazz music from when i was a girl.
+
+    My left knee is filled with metal.
+
+    I have 3 dogs and a parrot.
+
+    My family means the world to me.
+
+    I play bingo every wednesday with my husband.'
+  Best Generated Conversation: 'User 1: Hello, how are you doing today?
+
+    User 2: I''m doing well, thanks for asking! How about you?
+
+    User 1: I''m doing great! I love the weather today. It''s so nice outside.
+
+    User 2: Me too! I love summer. It''s my favorite time of year.
+
+    User 1: Do you have any fun summer plans?
+
+    User 2: I''m going to the beach with my family next week. I''m really looking forward to it.
+
+    User 1: That sounds like a lot of fun! I love going to the beach.
+
+    User 2: Me too! I love swimming, sunbathing, and playing in the sand.
+
+    User 1: What''s your favorite thing about the beach?
+
+    User 2: I love the feeling of the sun on my skin and the sound of the waves crashing against the shore.
+
+    User 1: Me too! Those are my favorite things about the beach too.
+
+    User 2: What are some other things you like to do in the summer?
+
+    User 1: I like to go camping, go hiking, and play sports.
+
+    User 2: Those all sound like fun activities! I love camping too.
+
+    User 1: I do too! It''s so much fun to get away from the city and spend time in nature.
+
+    User 2: I agree! It''s a great way to relax and de-stress.
+
+    User 1: It is! I''m so glad we''re both enjoying the summer.
+
+    User 2: Me too! It''s been a great year so far.
+
+    User 1: I agree! I''m looking forward to what the rest of the year has in store.
+
+    User 2: Me too! I''m sure it will be another great year.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

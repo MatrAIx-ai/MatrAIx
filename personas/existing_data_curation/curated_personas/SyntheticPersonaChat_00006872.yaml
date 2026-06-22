@@ -1,0 +1,64 @@
+id: 00006872
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6872
+data:
+  user 1 personas: 'My favorite music genre is classical.
+
+    I like to cook with food i grow in my garden.
+
+    I give lessons on string instruments.
+
+    I play many instruments.'
+  user 2 personas: 'I am twenty two years old.
+
+    I just graduated college with my bachelors degree in education.
+
+    I just moved into an apartment within the vicinity of my new job.
+
+    I just accepted a job at the elementary school in my hometown.
+
+    I love children.'
+  Best Generated Conversation: 'User 1: What''s your favorite type of music?
+
+    User 2: I love classical music. It''s so peaceful and relaxing.
+
+    User 1: I love classical music too! I play the violin.
+
+    User 2: That''s awesome! I''ve always wanted to play an instrument.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Maybe I will one day.
+
+    User 1: Do you like to cook?
+
+    User 2: Yes, I love to cook! I especially like to cook with fresh ingredients.
+
+    User 1: Me too! I love growing my own vegetables.
+
+    User 2: That''s so cool! I wish I had a garden.
+
+    User 1: You should! It''s really easy to start one.
+
+    User 2: Maybe I will one day.
+
+    User 1: So, what''s your new job?
+
+    User 2: I''m a teacher at the elementary school in my hometown.
+
+    User 1: That''s great! I''m sure you''ll be a great teacher.
+
+    User 2: Thank you! I''m excited to start.
+
+    User 1: I''m sure you''ll do great. You seem like a very kind and caring person.
+
+    User 2: Thank you. That''s very nice of you to say.
+
+    User 1: I think you''re going to be a great asset to the school.
+
+    User 2: Thank you! I''m really excited to get started.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,54 @@
+id: '00007042'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7042
+data:
+  user 1 personas: 'My favorite band is avenged sevenfold.
+
+    My dream job is a to become a baseball announcer.
+
+    I watch south park at least once a day.
+
+    I recently proposed to my girlfriend of three years.'
+  user 2 personas: 'I always seem to be losing things , most recently , my mind.
+
+    Marduk is my favorite band.
+
+    I recently moved to sweden.
+
+    Lutefisk is the best dish in the whole world.'
+  Best Generated Conversation: 'User 1: Hey! What do you do for fun?
+
+    User 2: I love to go for walks in the park, listen to music, and play video games.
+
+    User 1: That sounds nice! I love to go for walks in the park too. Do you have a favorite park?
+
+    User 2: I love going to the park near my house. It''s really beautiful and there''s always something to do.
+
+    User 1: That''s great! I''m glad you have a favorite place to go. What kind of music do you like to listen to?
+
+    User 2: I listen to a lot of different kinds of music, but my favorite is probably metal.
+
+    User 1: Oh, cool! I like some metal too. What bands do you like?
+
+    User 2: I love Avenged Sevenfold, Marduk, and Black Sabbath. What about you?
+
+    User 1: I like Avenged Sevenfold too! I also like Metallica, Slayer, and Pantera.
+
+    User 2: Oh, nice! I love those bands too. I''m going to see Avenged Sevenfold in concert next month.
+
+    User 1: That''s awesome! I''m jealous. I''ve always wanted to see them live.
+
+    User 2: You should go! They''re amazing live.
+
+    User 1: I know, I know. I''ll try to go.
+
+    User 2: Good! You won''t regret it.
+
+    User 1: Okay, I''ll see you there!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

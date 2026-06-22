@@ -1,0 +1,60 @@
+id: 00006963
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6963
+data:
+  user 1 personas: 'I have a bad habit of being dishonest.
+
+    I would like to try sky diving.
+
+    I do whatever it takes to get what i want.
+
+    I sometimes get into fights.'
+  user 2 personas: 'I am plotting on taking over the world.
+
+    I have found the cure for the common cold.
+
+    My nickname is bubblegum.
+
+    My brother and i have bright red hair.
+
+    I love to sing in the shower.'
+  Best Generated Conversation: 'User 1: Hey there! What''s your name?
+
+    User 2: Hi! My name is Bubblegum.
+
+    User 1: That''s a cool name! What do you like to do for fun?
+
+    User 2: I love to sing in the shower, and I''m also plotting on taking over the world.
+
+    User 1: Wow, that''s pretty ambitious! What are your plans for world domination?
+
+    User 2: Well, first I need to find a way to get people to listen to me.
+
+    User 1: Maybe you could try singing in the shower on a global scale?
+
+    User 2: That''s a great idea! I''ll get right on it.
+
+    User 1: So, what do you think of me?
+
+    User 2: You seem pretty cool. You''re honest, you like skydiving, and you do whatever it takes to get what you want.
+
+    User 1: Thanks! I like you too. You''re a bit of a weirdo, but that''s okay. I like weirdos.
+
+    User 2: Thanks! I like you too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: That''s cool. I like reading and writing too.
+
+    User 2: Me too. I''ve written a few novels, but I''ve never published any of them.
+
+    User 1: You should! I''m sure they''re great.
+
+    User 2: Thanks! I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

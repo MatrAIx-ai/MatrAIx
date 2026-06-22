@@ -1,0 +1,58 @@
+id: '00001534'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1534
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I have allergies.
+
+    I wish that i lived in the city.
+
+    I live on a pig farm.'
+  user 2 personas: 'I am a mom with two sons and a husband.
+
+    My parents taught me to find inspiration in the world.
+
+    I live in a house with a yard.
+
+    Since my dog died i am incomplete.'
+  Best Generated Conversation: 'User 1: What''s it like living on a pig farm?
+
+    User 2: It''s a lot of work, but it''s also rewarding. I love the animals and I get to see them every day.
+
+    User 1: I can imagine! I''ve always wanted to live on a farm.
+
+    User 2: It''s definitely a different lifestyle than living in the city.
+
+    User 1: I''m sure it is. How many pigs do you have?
+
+    User 2: We have about 200 pigs.
+
+    User 1: Wow, that''s a lot!
+
+    User 2: Yeah, it is. But it''s a lot of fun to take care of them.
+
+    User 1: I can imagine! What''s your favorite thing about living on a farm?
+
+    User 2: My favorite thing is probably getting to see the animals every day. I love watching them grow and develop.
+
+    User 1: That sounds really nice. I''m sure it''s a lot of fun to work with them.
+
+    User 2: It is! I love working with them. They''re very friendly and they always make me laugh.
+
+    User 1: That''s great to hear! I''m sure your kids love living on a farm too.
+
+    User 2: They do! They love playing with the pigs and learning about agriculture.
+
+    User 1: That''s awesome! I''m sure they''re learning a lot about life on the farm.
+
+    User 2: They are! They''re learning about responsibility, hard work, and how to care for animals.
+
+    User 1: That''s great! I''m sure they''ll appreciate it when they''re older.
+
+    User 2: I''m sure they will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

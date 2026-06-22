@@ -1,0 +1,76 @@
+id: '00005337'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5337
+data:
+  user 1 personas: 'I like to read a lot of books.
+
+    I m not much of a fan of hot weather.
+
+    I would travel the world if i could.
+
+    I like listening to all genres of music except country music.'
+  user 2 personas: 'My car is black.
+
+    I am a recruiter.
+
+    I lease my car.
+
+    My favorite meal is brunch.
+
+    I do not own any pets.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 2].
+
+    User 1: I like reading a lot of books. What do you like to do for fun?
+
+    User 2: I like to go to brunch.
+
+    User 1: Oh, I like brunch too! What''s your favorite brunch place?
+
+    User 2: I like [brunch place].
+
+    User 1: I''ve never been there. What do you like about it?
+
+    User 2: The food is delicious and the atmosphere is really nice.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should!
+
+    User 1: I''m not much of a fan of hot weather. What do you like to do when it''s hot outside?
+
+    User 2: I like to go swimming or go to the beach.
+
+    User 1: I like swimming too! I''ve been to the beach a few times, but I''m not a big fan of sand.
+
+    User 2: I don''t mind sand.
+
+    User 1: I''m a recruiter. What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, cool! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love working with kids.
+
+    User 1: I''m sure you do. They''re so cute!
+
+    User 2: Yeah, they are.
+
+    User 1: I''d love to have kids someday.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you. I should probably get going.
+
+    User 2: You too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

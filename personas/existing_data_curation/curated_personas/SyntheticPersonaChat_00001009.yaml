@@ -1,0 +1,80 @@
+id: 00001009
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1009
+data:
+  user 1 personas: 'I have epilepsy.
+
+    I like to read.
+
+    My parents are not married anymore.
+
+    I like to go swimming.
+
+    I have one son.'
+  user 2 personas: 'I like to run so that i can clear my head.
+
+    I am an author.
+
+    I like to drink green tea.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I enjoy watching mystery movies.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just writing some stories in my backyard.
+
+    User 1: Oh, that sounds nice. I like to write too.
+
+    User 2: Really? What do you like to write about?
+
+    User 1: I like to write about my experiences and the people in my life.
+
+    User 2: That sounds interesting. I like to write mystery stories.
+
+    User 1: I love mystery movies. I always try to guess who the killer is before the end.
+
+    User 2: Me too! I love the suspense.
+
+    User 1: Do you have any favorite mystery authors?
+
+    User 2: I love Agatha Christie and John Grisham.
+
+    User 1: Me too! I''ve read a lot of their books.
+
+    User 2: What''s your favorite book by Agatha Christie?
+
+    User 1: I think my favorite is And Then There Were None.
+
+    User 2: That''s a great one! I love the ending.
+
+    User 1: Me too! It''s so unexpected.
+
+    User 2: So, what do you like to do for fun besides writing?
+
+    User 1: I like to read, go swimming, and spend time with my son.
+
+    User 2: Oh, that sounds nice. I like to run, read, and watch movies.
+
+    User 1: I love movies too. I love going to the theater.
+
+    User 2: Me too! I love the experience of watching a movie on the big screen.
+
+    User 1: So, what are some of your favorite movies?
+
+    User 2: I love the Back to the Future movies, the Harry Potter movies, and the Lord of the Rings movies.
+
+    User 1: Me too! I love all of those movies.
+
+    User 2: So, what are some of your favorite books?
+
+    User 1: I love the Harry Potter books, the Lord of the Rings books, and the Percy Jackson books.
+
+    User 2: Me too! I love all of those books.
+
+    User 1: It''s so nice to meet someone who likes the same things I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

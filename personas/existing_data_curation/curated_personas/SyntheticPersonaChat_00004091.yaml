@@ -1,0 +1,78 @@
+id: 00004091
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4091
+data:
+  user 1 personas: 'I own a dog that is small.
+
+    I like to ride my bike.
+
+    I have beard that is longer.
+
+    I am a younger guy.
+
+    I like to play football.'
+  user 2 personas: 'I am married and have five children.
+
+    My birthplace is spain.
+
+    I work as a veterinarian.
+
+    My favorite music is hip hop.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi, I''m Maria.
+
+    User 1: What''s your favorite kind of music?
+
+    User 2: I like hip hop.
+
+    User 1: Me too! What are some of your favorite artists?
+
+    User 2: Kendrick Lamar, J. Cole, and Drake.
+
+    User 1: Nice! I like Kendrick Lamar too.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool. I''m a veterinarian.
+
+    User 1: That''s awesome! I love animals.
+
+    User 2: Me too! I have five dogs.
+
+    User 1: Five dogs! That''s a lot of dogs.
+
+    User 2: Yeah, it is. But I love them all.
+
+    User 1: I''m sure they''re all great pets.
+
+    User 2: They are. They''re my best friends.
+
+    User 1: What''s your favorite thing about being a veterinarian?
+
+    User 2: I love helping animals. It''s so rewarding to see them get better.
+
+    User 1: That''s great. I''m glad you have such a fulfilling job.
+
+    User 2: Thank you. I am too.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from Spain.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit Spain.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00002720'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2720
+data:
+  user 1 personas: 'I am currently single.
+
+    I love to paint.
+
+    My favorite season is spring.
+
+    I enjoy walks on the beach.'
+  user 2 personas: 'I am married and have five children.
+
+    My favorite music is hip hop.
+
+    I work as a veterinarian.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a veterinarian.
+
+    User 1: Oh, that''s cool. I love animals.
+
+    User 2: Me too! I have five children at home.
+
+    User 1: Wow, that''s a lot of kids!
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: I''m sure it is. What''s your favorite season?
+
+    User 2: Spring, because the weather is nice and the flowers are blooming.
+
+    User 1: I love spring too. Do you enjoy any hobbies?
+
+    User 2: Yes, I love to paint and listen to hip hop music.
+
+    User 1: That''s cool. I love to paint too. I''m not very good at it, but I enjoy it.
+
+    User 2: You should keep practicing. You might get better.
+
+    User 1: Thanks, I''ll try. What are some of your favorite paintings?
+
+    User 2: I love Van Gogh''s paintings. I also love Monet''s and Dali''s.
+
+    User 1: I love Van Gogh''s paintings too. They''re so beautiful.
+
+    User 2: I know, right? They''re so expressive.
+
+    User 1: What''s your favorite hip hop artist?
+
+    User 2: I like Kendrick Lamar, J. Cole, and Childish Gambino.
+
+    User 1: I like Kendrick Lamar too. I think he''s really talented.
+
+    User 2: He is. He''s one of the best rappers in the game right now.
+
+    User 1: Do you have any plans for the weekend?
+
+    User 2: No, not really. What about you?
+
+    User 1: I''m going to go to the beach. I love going to the beach in the spring.
+
+    User 2: That sounds nice. I love the beach too.
+
+    User 1: Well, it was nice chatting with you, [user 2''s name].
+
+    User 2: It was nice chatting with you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

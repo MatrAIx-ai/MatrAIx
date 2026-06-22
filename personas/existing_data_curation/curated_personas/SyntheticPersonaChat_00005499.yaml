@@ -1,0 +1,54 @@
+id: 00005499
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5499
+data:
+  user 1 personas: 'I am excellent at playing pool.
+
+    I want to write a book before i die.
+
+    I still like unicorns even though i am an adult.
+
+    I teach middle school art.'
+  user 2 personas: 'I spend my free time volunteering at nursing homes.
+
+    My favorite color is red.
+
+    I like to water ski.
+
+    I am tall.'
+  Best Generated Conversation: 'User 1: Hi, my name is Amanda.
+
+    User 2: Hello, my name is John.
+
+    User 1: It''s nice to meet you, John.
+
+    User 2: Nice to meet you too, Amanda.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy volunteering at nursing homes.
+
+    User 1: That''s really nice of you. I used to do that when I was in college.
+
+    User 2: What do you do for fun now?
+
+    User 1: I teach middle school art.
+
+    User 2: That sounds really fun. Do you like it?
+
+    User 1: I love it! I get to see kids'' creative sides come out.
+
+    User 2: That''s amazing. I wish I was more creative.
+
+    User 1: You can be creative! Just try something new and see what you like.
+
+    User 2: I''ll try that. Thanks for the advice, Amanda.
+
+    User 1: No problem, John. It was nice meeting you.
+
+    User 2: You too, Amanda.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

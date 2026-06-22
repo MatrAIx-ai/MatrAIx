@@ -1,0 +1,64 @@
+id: '00004027'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4027
+data:
+  user 1 personas: 'I like to drink green tea.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I enjoy watching mystery movies.
+
+    I like to run so that i can clear my head.
+
+    I am an author.'
+  user 2 personas: 'My hair is long and blonde.
+
+    I like to run.
+
+    My favorite color is blue.
+
+    My mother died when i was a child.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to run, write, and watch mystery movies.
+
+    User 1: Oh, I love running too! I also like to write stories. What kind of mystery movies do you like?
+
+    User 2: I like psychological thrillers and murder mysteries. I also like movies that are based on true stories.
+
+    User 1: Me too! I love psychological thrillers. I''ve always been fascinated by the human mind.
+
+    User 2: I know what you mean. I''m also really interested in the criminal mind.
+
+    User 1: I''m not surprised. You seem like a really smart and interesting person.
+
+    User 2: Thanks! I think you''re pretty cool too.
+
+    User 1: Thanks! So, what do you do for a living?
+
+    User 2: I''m a writer. I write mystery novels.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to be a writer.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I can imagine. I think I''d love to write mystery novels.
+
+    User 2: You should give it a try! I''m sure you''d be great at it.
+
+    User 1: Thanks! I might just do that.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too! I hope we can talk again sometime.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

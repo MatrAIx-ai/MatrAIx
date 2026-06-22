@@ -1,0 +1,74 @@
+id: 00005528
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5528
+data:
+  user 1 personas: 'I do not have a college degree.
+
+    My eyes are bright blue.
+
+    I have an above average iq.
+
+    I love to eat meat.
+
+    I love the desert.'
+  user 2 personas: 'I prefer headsets over earbuds.
+
+    I have an iphone.
+
+    My favorite color is red.
+
+    I travel often.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m (user 1).
+
+    User 2: Nice to meet you, (user 1). I''m (user 2).
+
+    User 1: Where are you from?
+
+    User 2: I''m from (place). Where are you from?
+
+    User 1: I''m from (place).
+
+    User 2: Nice! What do you do for a living?
+
+    User 1: I''m a (job title).
+
+    User 2: Cool! I''m a (job title).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, listen to music, and play video games.
+
+    User 1: Cool! I like to travel, read, and play video games too.
+
+    User 2: What''s your favorite book?
+
+    User 1: I don''t have a favorite book, but I love reading fantasy and science fiction.
+
+    User 2: Cool! Me too! What''s your favorite video game?
+
+    User 1: I don''t have a favorite video game, but I love playing open-world games.
+
+    User 2: Cool! Me too! I love exploring and finding new things in open-world games.
+
+    User 1: Me too!
+
+    User 2: So, what are you up to tonight?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to play video games.
+
+    User 1: Cool! I might do the same.
+
+    User 2: Nice! Have fun!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

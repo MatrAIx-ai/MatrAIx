@@ -1,0 +1,94 @@
+id: '00001147'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1147
+data:
+  user 1 personas: 'I work at a vet.
+
+    My husband is a lawyer.
+
+    I have 2 kids.
+
+    I love flowers.'
+  user 2 personas: 'My favorite band is metallica.
+
+    I am a college student.
+
+    I own 4 cats.
+
+    I work at the grocery store.
+
+    I ride a unicycle.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I work at the grocery store.
+
+    User 1: Oh, cool. What''s your favorite thing about your job?
+
+    User 2: I like getting to meet new people.
+
+    User 1: Me too. I work at a vet.
+
+    User 2: Oh, that''s cool! Do you like it?
+
+    User 1: Yeah, I love it. I get to work with animals all day.
+
+    User 2: That sounds awesome! I love animals too.
+
+    User 1: Me too! I have two dogs and two cats.
+
+    User 2: Wow, that''s a lot of animals! I have four cats.
+
+    User 1: Oh, cool! What are their names?
+
+    User 2: Their names are Mittens, Oliver, Snowball, and Whiskers.
+
+    User 1: Those are great names!
+
+    User 2: Thanks! What are your animals'' names?
+
+    User 1: My dogs'' names are Bailey and Buddy, and my cats'' names are Sophie and Tiger.
+
+    User 2: Those are great names too!
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and swimming. I also like to read and watch movies.
+
+    User 2: Oh, cool! I like to go hiking and swimming too. I also like to play video games.
+
+    User 1: Oh, cool! What video games do you like to play?
+
+    User 2: I like to play Call of Duty and Minecraft.
+
+    User 1: Oh, cool! I like to play Call of Duty too.
+
+    User 2: Oh, that''s cool!
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to go to concerts. I''m a huge fan of Metallica.
+
+    User 1: Oh, that''s cool! I like Metallica too! I saw them in concert a few years ago.
+
+    User 2: Oh, that''s awesome! I''ve never seen them in concert.
+
+    User 1: You should! They''re amazing live.
+
+    User 2: I will!
+
+    User 1: Good!
+
+    User 2: Thanks for the conversation!
+
+    User 1: No problem! It was nice talking to you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,17 @@
+id: 00051159
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51159
+persona_description: A health professional who is concerned about the spread of the novel coronavirus and is advising the public on preventive measures. They are knowledgeable about the virus and its transmission,
+  and are sharing information to help people stay safe. They are also advising on oral hygiene and other precautions to reduce the risk of infection.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: infectious disease prevention
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,78 @@
+id: '00005226'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5226
+data:
+  user 1 personas: 'I am a national guard officer.
+
+    I work as a public affairs liaison.
+
+    I drive a 2011 volkswagen passa.
+
+    I eat too much fast food.
+
+    I love cold , wintry weather and snow.'
+  user 2 personas: 'I once rescued a baby on a highway.
+
+    I do not really like vegetables or fruit but i pretend.
+
+    I like playing badminton.
+
+    I am not very good at playing basketball.
+
+    My family owns a dairy farm.'
+  Best Generated Conversation: 'User 1: Hi, I''m a national guard officer.
+
+    User 2: Hi, I''m a farmer.
+
+    User 1: What kind of farm do you have?
+
+    User 2: A dairy farm.
+
+    User 1: Oh, that''s cool. Do you have any animals?
+
+    User 2: Yes, I have cows, chickens, and pigs.
+
+    User 1: Wow, that sounds like a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m glad you enjoy it.
+
+    User 2: Thanks. What do you do for fun?
+
+    User 1: I like to play badminton.
+
+    User 2: I''ve never played badminton before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Oh, me too! I love to read.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and science fiction.
+
+    User 2: I like those genres too!
+
+    User 1: What''s your favorite book?
+
+    User 2: It''s hard to say, but I would probably say "The Lord of the Rings" by J.R.R. Tolkien.
+
+    User 1: That''s a great book! I''ve read it several times.
+
+    User 2: Me too! It''s one of my favorites.
+
+    User 1: It''s nice to meet you, [user 2].
+
+    User 2: You too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,94 @@
+id: 00003900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3900
+data:
+  user 1 personas: 'I am an excellent student.
+
+    I am very popular and have a lot of friends.
+
+    My parents are divorced.
+
+    I could not live without my dog , bart.
+
+    I will graduate from college in two years.'
+  user 2 personas: 'I love winning.
+
+    I can tell right away if i am going to like someone.
+
+    I love sunny days.
+
+    Coffee is important to me.
+
+    I do not like feeling obligated to hang out with someone.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. What do you like to do for fun?
+
+    User 1: I love to read, go out with friends, and spend time with my dog.
+
+    User 2: I love reading too! What are your favorite books?
+
+    User 1: I love anything by Stephen King, but I also love historical fiction.
+
+    User 2: I''ve never read anything by Stephen King, but I''ve heard good things. What''s your favorite historical fiction book?
+
+    User 1: My favorite historical fiction book is The Name of the Rose by Umberto Eco. It''s a mystery set in a monastery in the Middle Ages.
+
+    User 2: That sounds really interesting! I''ll have to check it out.
+
+    User 1: I hope you like it! What do you like to do for fun?
+
+    User 2: I love to spend time outside, especially on sunny days. I also love to play video games and watch movies.
+
+    User 1: Me too! I love playing video games and watching movies. What are your favorite movies?
+
+    User 2: My favorite movies are The Lord of the Rings trilogy, The Matrix, and The Shawshank Redemption.
+
+    User 1: Those are all great movies! I love The Lord of the Rings and The Matrix.
+
+    User 2: I know, right? They''re so good!
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a software engineer. I love my job!
+
+    User 1: That sounds like a really cool job!
+
+    User 2: It is! I get to work on really interesting projects and I get to work with a great team of people.
+
+    User 1: That sounds awesome!
+
+    User 2: It is!
+
+    User 1: So, what''s your favorite thing to do on a sunny day?
+
+    User 2: I love going for walks in the park or playing sports.
+
+    User 1: Me too! I love going for walks in the park.
+
+    User 2: It''s so relaxing!
+
+    User 1: It is!
+
+    User 2: So, what''s your favorite thing to do on a rainy day?
+
+    User 1: I love watching movies or reading books.
+
+    User 2: Me too! I love cuddling up with a good book on a rainy day.
+
+    User 1: Me too!
+
+    User 2: So, what''s your favorite book?
+
+    User 1: My favorite book is The Name of the Rose by Umberto Eco.
+
+    User 2: I''ve never heard of that book, but I''ll have to check it out.
+
+    User 1: I hope you like it!
+
+    User 2: I hope so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

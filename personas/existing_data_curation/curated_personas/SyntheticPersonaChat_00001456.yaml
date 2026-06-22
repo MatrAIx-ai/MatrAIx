@@ -1,0 +1,58 @@
+id: '00001456'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1456
+data:
+  user 1 personas: 'My hair is brown.
+
+    I am not thin.
+
+    I like to sew.
+
+    I am short.
+
+    I have one cat.'
+  user 2 personas: 'I plan to raise hell and sew my wild oats.
+
+    I go to a catholic high school in new england.
+
+    I have lived a very sheltered life.
+
+    I am 17.
+
+    I am about to go off to college at a very liberal school soon.'
+  Best Generated Conversation: 'User 1: I''m curious about your plans to raise hell and sew your wild oats.
+
+    User 2: I''m not really sure yet, but I''m excited to find out. I''ve lived a very sheltered life, so I''m looking forward to experiencing new things and meeting new people.
+
+    User 1: I''m sure you''ll have a lot of fun. What do you think you''ll do first?
+
+    User 2: I''m not sure yet. I''ve been thinking about going to a few music festivals, and I''m also looking forward to visiting some new cities.
+
+    User 1: Those sound like great plans. I''m sure you''ll have a lot of fun.
+
+    User 2: Thanks. I''m excited to get started.
+
+    User 1: So, what do you think of the catholic high school you go to?
+
+    User 2: I''m not really a fan of it. It''s very strict and conservative, and I feel like I''m not able to be myself there.
+
+    User 1: I can understand that. I''m glad you''re going to a more liberal school in college.
+
+    User 2: Me too. I think it will be a lot more fun and I''ll be able to meet more people with similar interests.
+
+    User 1: That''s great. I''m sure you''ll have a great time.
+
+    User 2: Thanks. I''m excited to start my new life.
+
+    User 1: So, what do you want to do with your life after college?
+
+    User 2: I''m not sure yet. I''m thinking about going into law or business.
+
+    User 1: Those are both great options. I''m sure you''ll be successful at whatever you do.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

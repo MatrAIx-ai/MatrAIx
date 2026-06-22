@@ -1,0 +1,60 @@
+id: '00001352'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1352
+data:
+  user 1 personas: 'I love fast food.
+
+    I do not have much energy.
+
+    I am a stay at home mom.
+
+    I love to clean.
+
+    I watch a lot of movies.'
+  user 2 personas: 'I do not eat meat.
+
+    I am witty.
+
+    I love to dance.
+
+    I read tons of books.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I like to read, dance, and spend time with my friends.
+
+    User 1: Oh, that sounds fun! I love to read too. What are your favorite books?
+
+    User 2: I love all kinds of books, but my favorites are historical fiction and fantasy.
+
+    User 1: Those are my favorites too! I''ve read a lot of historical fiction and fantasy books.
+
+    User 2: Oh, really? What are some of your favorite books?
+
+    User 1: I love the Outlander series by Diana Gabaldon, the Lord of the Rings trilogy by J.R.R. Tolkien, and the Harry Potter series by J.K. Rowling.
+
+    User 2: Those are all great books! I''ve read them all too.
+
+    User 1: Oh, cool! It''s nice to meet someone who likes the same books I do.
+
+    User 2: Me too! What else do you like to do for fun?
+
+    User 1: I like to watch movies, go to the gym, and spend time with my family.
+
+    User 2: Oh, those are all my favorite things to do too!
+
+    User 1: Oh, cool! We should hang out sometime.
+
+    User 2: That would be fun! I''d love to meet up for coffee or something.
+
+    User 1: Great! I''ll send you my number.
+
+    User 2: Perfect! I''ll send you mine too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

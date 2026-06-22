@@ -1,0 +1,84 @@
+id: '00002344'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2344
+data:
+  user 1 personas: 'I work in a factory.
+
+    I love to drive my car.
+
+    Connor mcgregor is my favorite fighter.
+
+    I enjoy travel.
+
+    I like watching ufc fights.'
+  user 2 personas: 'I drive a silver lexus.
+
+    I have a dog named socks.
+
+    Dancing is my passion.
+
+    I am terrible at math.
+
+    I am a college student.'
+  Best Generated Conversation: 'User 1: Hey, do you like to drive?
+
+    User 2: Yes, I love driving!
+
+    User 1: What kind of car do you drive?
+
+    User 2: I drive a silver Lexus.
+
+    User 1: Oh, that''s nice. I drive a Ford Focus.
+
+    User 2: I''ve heard good things about those.
+
+    User 1: Yeah, they''re pretty good.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to travel, watch UFC fights, and play video games.
+
+    User 2: Oh, I like to dance and play video games too!
+
+    User 1: What''s your favorite kind of dance?
+
+    User 2: I like to do ballet and hip hop.
+
+    User 1: Oh, that''s cool. I''ve never tried ballet.
+
+    User 2: You should! It''s really fun.
+
+    User 1: I might just have to try it sometime.
+
+    User 2: You should!
+
+    User 1: So, what are you studying in college?
+
+    User 2: I''m studying business.
+
+    User 1: Oh, that''s cool. I''m not sure what I want to study yet.
+
+    User 2: Well, you have plenty of time to figure it out.
+
+    User 1: Yeah, I guess so.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I work in a factory.
+
+    User 2: Oh, that''s interesting. What do you do there?
+
+    User 1: I assemble car parts.
+
+    User 2: Oh, that sounds like hard work.
+
+    User 1: Yeah, it can be, but it''s not so bad.
+
+    User 2: Well, I''m glad you enjoy it.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: '00005660'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5660
+data:
+  user 1 personas: 'My favorite band is pink floyd.
+
+    I am looking for a second job.
+
+    Running is a hobby.
+
+    My dream is to own my own restaurant.'
+  user 2 personas: 'I love lasagna like i am garfield.
+
+    Penn teller are my favorite magicians.
+
+    My two dogs are the best friends a girl could have.
+
+    I have a poster of neil tyson degrasse on my wall.
+
+    I want to be an astronaut when i grow up.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there! How are you?
+
+    User 1: I''m good, thanks! You?
+
+    User 2: I''m doing well, thank you!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read, watch TV, and hang out with my friends.
+
+    User 1: Oh, that''s cool! I like to run, cook, and play video games.
+
+    User 2: I love lasagna too! My two dogs are the best friends a girl could have.
+
+    User 1: That''s cool! I have a cat named Mittens.
+
+    User 2: I love cats!
+
+    User 1: What''s your dream job?
+
+    User 2: I want to be an astronaut when I grow up.
+
+    User 1: Oh, that''s awesome! I love space.
+
+    User 2: Me too! I think it''s so amazing that we can explore it.
+
+    User 1: Yeah, it is!
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is Pink Floyd.
+
+    User 2: Oh, I love them! I''ve seen them in concert twice.
+
+    User 1: That''s awesome! I''ve never seen them live.
+
+    User 2: You should! They''re amazing.
+
+    User 1: I will!
+
+    User 2: So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. What about you?
+
+    User 2: I''m going to go hang out with my friends.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: Yeah, it should be.
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too! Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: 00002058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2058
+data:
+  user 1 personas: 'My wife is a nurse.
+
+    I have 2 kids.
+
+    I like to play baseball.
+
+    I am a doctor.
+
+    My favorite place is the mountains.'
+  user 2 personas: 'I like chicken nuggets.
+
+    I love animals.
+
+    I love reading.
+
+    My favorite band is a fine frenzy.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love reading, listening to music, and hanging out with my friends.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite band is Fine Frenzy.
+
+    User 1: I''ve never heard of them. What kind of music do they play?
+
+    User 2: They''re a pop rock band, and they have a really unique sound. I love their lyrics and their melodies.
+
+    User 1: I''ll have to check them out. Do you have any other hobbies?
+
+    User 2: I love animals, so I volunteer at my local animal shelter. I also love to cook, and I''m always trying new recipes.
+
+    User 1: That''s awesome! I love to cook too. What are some of your favorite dishes to make?
+
+    User 2: I love to make anything with chicken, and I''m a big fan of comfort food.
+
+    User 1: I love chicken nuggets! What are some of your favorite comfort foods?
+
+    User 2: I love mashed potatoes, macaroni and cheese, and lasagna.
+
+    User 1: Those are all great comfort foods! I love them all.
+
+    User 2: Me too! I also love to bake, so I''ll often make cookies or cupcakes for my friends and family.
+
+    User 1: That''s so kind of you! I''m sure they love it.
+
+    User 2: They do! I love to make people happy.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

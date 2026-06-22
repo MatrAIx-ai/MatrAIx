@@ -1,0 +1,68 @@
+id: '00002165'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2165
+data:
+  user 1 personas: 'I eat a lot of fish.
+
+    I live near the ocean.
+
+    My favorite author is jane austen.
+
+    I own a boat.
+
+    I only wear tennis shoes.'
+  user 2 personas: 'I have a severe anxiety disorder.
+
+    My husband in an engineer.
+
+    I love art.
+
+    I am currently pregnant with my second child.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. What''s yours?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to paint and draw. I''m also an avid reader.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: I love Jane Austen''s novels. They''re so well written and funny.
+
+    User 1: I''ve never read any of her books, but I''ve heard good things.
+
+    User 2: You should definitely check them out!
+
+    User 1: I will! What else do you like to do for fun?
+
+    User 2: I like to go to the beach and play with my kids. I also like to go boating.
+
+    User 1: I love going to the beach too! I don''t have any kids, but I like to watch other people''s kids play.
+
+    User 2: I''m pregnant with my second child. I''m really excited to be a mom again.
+
+    User 1: Congratulations! I''m sure you''ll be a great mom.
+
+    User 2: Thank you!
+
+    User 1: What does your husband do for a living?
+
+    User 2: He''s an engineer. He works a lot, but he''s a great husband and father.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, he''s my best friend.
+
+    User 1: I''m glad to hear that. You seem like a nice family.
+
+    User 2: Thank you! We try our best.
+
+    User 1: Well, it''s been nice talking to you. I hope you have a great day.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

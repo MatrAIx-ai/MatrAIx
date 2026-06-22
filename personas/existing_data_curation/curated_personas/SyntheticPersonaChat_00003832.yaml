@@ -1,0 +1,76 @@
+id: 00003832
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3832
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I escaped and later became a carpenter.
+
+    I was a slave for 10 years.
+
+    I was the first born child.
+
+    I got married 10 years later.'
+  user 2 personas: 'I have a pomeranian.
+
+    My older sister plays clarinet.
+
+    I play the violin.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My mom is a music teacher at the elementary school.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1, how are you?
+
+    User 2: Hi, I''m User 2, I''m doing well, thanks for asking.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the violin and compete in violin competitions.
+
+    User 1: That''s cool, I''ve always wanted to learn how to play an instrument.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: I''m sure you''d be great at it.
+
+    User 1: Thanks, I appreciate the encouragement.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to build things, especially furniture.
+
+    User 2: That''s cool, I''ve always wanted to learn how to build furniture.
+
+    User 1: You should give it a try! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: I''m sure you''d be great at it.
+
+    User 2: Thanks, I appreciate the encouragement.
+
+    User 1: What kind of furniture do you like to build?
+
+    User 2: I like to build chairs and tables, but I''ve also built a few beds and bookcases.
+
+    User 1: That''s cool, I''ve always wanted to build a bed.
+
+    User 2: You should give it a try! It''s not as hard as it looks.
+
+    User 1: I might just do that.
+
+    User 2: I''m sure you''d be great at it.
+
+    User 1: Thanks, I appreciate the encouragement.
+
+    User 2: No problem. It was nice talking to you, User 1.
+
+    User 1: It was nice talking to you too, User 2.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00007705'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7705
+data:
+  user 1 personas: 'I drive more than an hour each way to work.
+
+    I am a grandparent at 44.
+
+    I prefer the night to the day , but i love sunshine.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.
+
+    I love dragons.'
+  user 2 personas: 'I think canadian women are incredibly attractive.
+
+    I like hiking up volcanoes.
+
+    I drive a prius.
+
+    I cannot get enough ginger snaps.
+
+    Sometimes , i like to relieve myself when on roses.'
+  Best Generated Conversation: 'User 1: Hey, I''m going to be hiking up a volcano in the next few weeks. Have you done any hikes like that before?
+
+    User 2: Yeah, I love hiking up volcanoes. I''ve done a few in Canada.
+
+    User 1: Cool! What''s it like hiking up a volcano?
+
+    User 2: It''s pretty challenging, but it''s also really rewarding. You get to see some amazing views from the top.
+
+    User 1: I''m sure it is. I''m looking forward to it.
+
+    User 2: What volcano are you hiking?
+
+    User 1: I''m not sure yet. I''m still doing some research.
+
+    User 2: Well, if you need any help, let me know. I''d be happy to give you some tips.
+
+    User 1: Thanks, I appreciate it.
+
+    User 2: No problem.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go camping, hiking, and kayaking.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: Cool! Maybe we can go hiking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Sounds good.
+
+    User 2: Hey, I know you said you like dragons. I just found this really cool dragon-shaped cookie cutter. Do you want it?
+
+    User 1: That''s so nice of you! I love it!
+
+    User 2: You''re welcome! I''m glad you like it.
+
+    User 1: Thank you so much! I''m going to put it on my fridge.
+
+    User 2: You''re welcome! I''m glad you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

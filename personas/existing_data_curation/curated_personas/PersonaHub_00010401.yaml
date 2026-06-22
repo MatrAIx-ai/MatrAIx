@@ -1,0 +1,19 @@
+id: '00010401'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10401
+persona_description: A person who is knowledgeable and experienced in handling radiation emergencies, specifically those related to nuclear and radiological disasters. They have been trained by the Department
+  of Atomic Energy and have attended training workshops conducted by BARC-NPCIL. They are familiar with the stock of items stored at various nuclear facilities and emergency response centers, as well as
+  the guidelines prescribed by the International Commission on Non-ionizing Radiation Protection (ICNIRP) for RF and microwave radiation. They are aware of the radiation safety issues related to cell tower
+  installations and can provide additional information related to non-ionizing radiation safety.
+expertise:
+  general_domain_top1pct: Environmental/Health Safety
+  specific_domain_top1pct: Radiation Safety
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

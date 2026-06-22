@@ -1,0 +1,18 @@
+id: 00054468
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54468
+persona_description: A medical professional who is interested in non-invasive tests for diagnosing liver fibrosis. They are knowledgeable about ultrasound waves, blood flow measurement, and magnetic resonance
+  elastography. They have experience with liver biopsy and are looking for alternative methods to evaluate liver fibrosis. They are open to new technologies and are willing to conduct research to improve
+  the accuracy and reliability of non-invasive tests.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: liver disease diagnosis
+  general_domain_top01pct: None
+  specific_domain_top01pct: non-invasive liver fibrosis diagnosis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

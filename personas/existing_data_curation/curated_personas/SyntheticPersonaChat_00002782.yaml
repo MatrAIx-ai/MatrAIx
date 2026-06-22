@@ -1,0 +1,82 @@
+id: 00002782
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2782
+data:
+  user 1 personas: 'I have four daughters.
+
+    I play guitar.
+
+    I love chocolate cake with extra frosting.
+
+    I have two siberian huskies.
+
+    I am a michigan state trooper.'
+  user 2 personas: 'My favorite food is anything italian.
+
+    I love most music except country and jazz.
+
+    My favorite book that i have read lately is middlesex.
+
+    My favorite tv shows are forensic files and jeopardy.
+
+    I am a gym rat that loves to play racquetball.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, play sports, and watch TV.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read mystery and thriller novels, but I also enjoy reading nonfiction.
+
+    User 1: I love mystery and thriller novels too! What''s your favorite book?
+
+    User 2: My favorite book lately is Middlesex. It''s a historical fiction novel about a person who is born intersex.
+
+    User 1: I''ve never heard of that book, but it sounds interesting. I''ll have to check it out.
+
+    User 2: I highly recommend it. It''s a really good book.
+
+    User 1: What kind of sports do you like to play?
+
+    User 2: I love to play racquetball and basketball. I also enjoy hiking and biking.
+
+    User 1: I love racquetball too! It''s so much fun.
+
+    User 2: Me too! It''s a great way to get exercise and have fun at the same time.
+
+    User 1: What''s your favorite TV shows?
+
+    User 2: I love Forensic Files and Jeopardy. They''re both so interesting.
+
+    User 1: I love Forensic Files too! I''m always learning new things about crime.
+
+    User 2: Me too! It''s such a good show.
+
+    User 1: What''s your favorite part about being a gym rat?
+
+    User 2: I love the feeling of being active and healthy. I also love the social aspect of it.
+
+    User 1: I agree! Being active is so important for your health.
+
+    User 2: It is! I feel much better when I''m getting regular exercise.
+
+    User 1: Me too! It''s a great way to start the day.
+
+    User 2: I agree! It gives me a lot of energy.
+
+    User 1: Well, it was nice meeting you, [user 2''s name].
+
+    User 2: You too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

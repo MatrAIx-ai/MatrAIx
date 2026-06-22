@@ -1,0 +1,76 @@
+id: 00008280
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8280
+data:
+  user 1 personas: 'I m a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.
+
+    I sleep in a princess bed.
+
+    I like playing outside in the sun with my dolls.'
+  user 2 personas: 'I sell paper products for a living.
+
+    I hate the taste of cheese.
+
+    I am a great cook.
+
+    I have a daughter.
+
+    I am under 6 feet tall.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is Ben. What''s yours?
+
+    User 1: My name is Lily.
+
+    User 2: It''s nice to meet you, Lily.
+
+    User 1: It''s nice to meet you too, Ben.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play outside, read books, and go to the park.
+
+    User 2: Those sound like fun things to do. I like to cook, read, and go to the beach.
+
+    User 1: I like cooking too. What''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes. I''m not a big fan of cheese, but I love the way it makes pasta sauce taste.
+
+    User 1: I like pasta too. My favorite thing to make is a spaghetti and meatballs dish.
+
+    User 2: That sounds delicious. I''ll have to try it sometime.
+
+    User 1: You should! It''s really easy to make.
+
+    User 2: Thanks for the tip. I''m always looking for new recipes to try.
+
+    User 1: No problem. I''m happy to help.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a preschool teacher. I love working with kids.
+
+    User 2: That sounds like a great job. I bet you get to do a lot of fun things.
+
+    User 1: I do! I get to play games, read books, and learn new things with my students every day.
+
+    User 2: That sounds amazing. I''m sure your students love you.
+
+    User 1: They do! I love working with them.
+
+    User 2: I can see why. You sound like a great teacher.
+
+    User 1: Thank you! I''m glad you think so.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

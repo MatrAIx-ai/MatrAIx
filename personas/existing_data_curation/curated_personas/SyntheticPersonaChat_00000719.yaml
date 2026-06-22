@@ -1,0 +1,100 @@
+id: 00000719
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 719
+data:
+  user 1 personas: 'I like to read.
+
+    I am a diabetic.
+
+    I have a long drive to work.
+
+    Traffic makes me mad.'
+  user 2 personas: 'I have three roommates.
+
+    Both of my parents are teachers.
+
+    I work at a coffee shop.
+
+    My sister and i are in a grunge band.
+
+    I have an eyebrows piercing.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a barista at a coffee shop.
+
+    User 1: Oh cool, I love coffee.
+
+    User 2: Me too! I''m actually in a grunge band with my sister.
+
+    User 1: That''s really cool! What''s your band''s name?
+
+    User 2: It''s called "The Grunge Girls."
+
+    User 1: That''s a great name! What kind of music do you play?
+
+    User 2: We play grunge rock.
+
+    User 1: I love grunge rock! I''ve seen Nirvana in concert twice.
+
+    User 2: Oh wow, that''s awesome! Nirvana is one of my favorite bands.
+
+    User 1: Me too! Do you guys have any music online?
+
+    User 2: Yes, we do. You can check us out on Spotify.
+
+    User 1: Cool, I''ll check it out. I''m sure I''ll like it.
+
+    User 2: Thanks!
+
+    User 1: So, what''s it like working at a coffee shop?
+
+    User 2: It''s pretty fun, but it can be really busy sometimes.
+
+    User 1: I can imagine. Do you have any funny stories from working there?
+
+    User 2: Actually, I do. One time, this lady came in and ordered a coffee. I asked her what kind of milk she wanted, and she said, "I don''t know. What kind do you have?" I told her we had regular milk,
+    skim milk, and soy milk. She said, "I don''t know what any of those things are." I was so confused. I finally just asked her what she usually gets at other coffee shops, and she said, "I usually just
+    get a cup of water."
+
+    User 1: That''s hilarious!
+
+    User 2: I know, right?
+
+    User 1: So, what do you do for fun when you''re not working?
+
+    User 2: I like to read, listen to music, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to read too. What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m really into science fiction and fantasy right now.
+
+    User 1: Me too! I love books by Ursula K. Le Guin and Terry Pratchett.
+
+    User 2: I love Ursula K. Le Guin! I''ve never read anything by Terry Pratchett, though.
+
+    User 1: You should! His books are really funny.
+
+    User 2: I''ll check them out.
+
+    User 1: Awesome!
+
+    User 2: So, what''s your favorite book?
+
+    User 1: That''s a tough question. I have a lot of favorites. But I think my favorite book of all time is "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a really funny book.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

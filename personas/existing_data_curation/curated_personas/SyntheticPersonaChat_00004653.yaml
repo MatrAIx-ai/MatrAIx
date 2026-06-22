@@ -1,0 +1,64 @@
+id: '00004653'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4653
+data:
+  user 1 personas: 'I have been in 3 triathlons.
+
+    My daughter just graduated college.
+
+    I have only one child.
+
+    I run more then 2 miles a day even though i hate it.
+
+    I like snowboarding.'
+  user 2 personas: 'I am 50 years old.
+
+    My husband just decided to leave me.
+
+    I enjoy ice cream.
+
+    The kids will be my responsibility as my husband doesn t want them.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear about your husband.
+
+    User 2: Thanks. It''s tough, but I''m trying to stay positive.
+
+    User 1: That''s good to hear. It sounds like you have a lot of good things going for you.
+
+    User 2: I do. I have my daughter, and I''m starting a new job next week.
+
+    User 1: That''s great! What kind of job is it?
+
+    User 2: I''m going to be a teacher.
+
+    User 1: That''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thanks. I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go ice skating, snowboarding, and skiing.
+
+    User 1: That sounds fun! I''ve never been ice skating, but I''ve always wanted to try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: It''s also a good way to get exercise.
+
+    User 1: I know. I need to get more exercise.
+
+    User 2: Well, you can always come ice skating with me.
+
+    User 1: I''d love to.
+
+    User 2: Great! We''ll have to make a date.
+
+    User 1: Sounds good.
+
+    User 2: It''s going to be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

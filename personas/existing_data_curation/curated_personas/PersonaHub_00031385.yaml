@@ -1,0 +1,18 @@
+id: 00031385
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31385
+persona_description: A healthcare professional who specializes in the treatment of stroke, particularly hemorrhagic stroke. They are experienced in performing surgery to remove pooled blood from the brain
+  and repair damaged blood vessels. They also have expertise in managing other types of bleeding, including aneurysm and AVM, and are familiar with the potential complications associated with hydrocephalus.
+  They may also be involved in the diagnosis and treatment of other conditions related to stroke, such as transient ischemic attacks or post-stroke complications.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurosurgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: neurosurgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

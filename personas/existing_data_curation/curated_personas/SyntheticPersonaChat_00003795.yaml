@@ -1,0 +1,76 @@
+id: 00003795
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3795
+data:
+  user 1 personas: 'I work as a veterinarian.
+
+    I am married and have five children.
+
+    My birthplace is spain.
+
+    My favorite music is hip hop.'
+  user 2 personas: 'I have an older brother.
+
+    I work in a bookstore.
+
+    I love my girlfriend.
+
+    I dyed my hair pink.
+
+    I live in the city.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a bookstore.
+
+    User 1: That''s cool! I''ve always loved books.
+
+    User 2: Me too! I love reading and learning new things.
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I love that book too! It''s so well written and the characters are so complex.
+
+    User 2: I know! I love the way Fitzgerald explores the themes of love, loss, and the American Dream.
+
+    User 1: Me too! It''s such a timeless classic.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go to the movies, and travel.
+
+    User 2: Me too! I love to travel. I''ve been to a lot of different countries.
+
+    User 1: That''s awesome! I''ve only been to a few countries.
+
+    User 2: You should definitely travel more. It''s a great way to learn about new cultures and meet new people.
+
+    User 1: I know, I know. I''m planning on it.
+
+    User 2: Good!
+
+    User 1: So, what''s your favorite thing about where you live?
+
+    User 2: I love the city! There''s always something to do and see.
+
+    User 1: I know what you mean. I love the city too.
+
+    User 2: So, what do you think about me so far?
+
+    User 1: I think you''re really cool! We have a lot in common.
+
+    User 2: I think you''re really cool too!
+
+    User 1: Thanks! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

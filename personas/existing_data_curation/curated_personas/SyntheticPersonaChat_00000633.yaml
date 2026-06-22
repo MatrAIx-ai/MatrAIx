@@ -1,0 +1,64 @@
+id: '00000633'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 633
+data:
+  user 1 personas: 'I enjoy nature.
+
+    I am failing some of my classes.
+
+    I fantasize about living in another country.
+
+    I enjoy electronic music.'
+  user 2 personas: 'When i turned 18 , my family moved across the country.
+
+    On weekends i go out with friends.
+
+    I eat eggs and bacon for breakfast.
+
+    I like going to rock concerts.'
+  Best Generated Conversation: 'User 1: What are your favorite things to do outside?
+
+    User 2: I enjoy hiking and camping.
+
+    User 1: I love hiking too! I''ve been to a few different national parks.
+
+    User 2: Me too! I''ve been to Yosemite, Yellowstone, and the Grand Canyon.
+
+    User 1: Those are all amazing places! I''ve always wanted to go to the Grand Canyon.
+
+    User 2: It''s absolutely beautiful. You should definitely go sometime.
+
+    User 1: I will!
+
+    User 2: What else do you like to do outside?
+
+    User 1: I enjoy fishing, swimming, and playing sports.
+
+    User 2: I love swimming too! I''m not much of a fisherman, but I do enjoy playing sports.
+
+    User 1: What sports do you like to play?
+
+    User 2: I play tennis and soccer.
+
+    User 1: Me too! I love tennis. I''m not very good at soccer, but I still enjoy playing it.
+
+    User 2: I''m not very good at tennis, but I still enjoy playing it too.
+
+    User 1: So, what do you like to do on weekends?
+
+    User 2: On weekends, I usually go out with friends. We go to parties, concerts, and other events.
+
+    User 1: That sounds like a lot of fun! I usually just stay home and relax on weekends.
+
+    User 2: I enjoy staying home too, but I also like to go out and have fun.
+
+    User 1: I know what you mean. I like to have a balance of both.
+
+    User 2: Me too! I think it''s important to have some fun and relax, but it''s also important to be productive and get things done.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

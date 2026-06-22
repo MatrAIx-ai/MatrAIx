@@ -1,0 +1,18 @@
+id: '00040301'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40301
+persona_description: A fish enthusiast who is interested in the biology and behavior of fish, particularly in the context of their skin coloration and patterns. They are knowledgeable about the common causes
+  of dark and bright coloration in fish and the specific conditions that may lead to these patterns, such as bacterial and parasitic infections. They are also familiar with the medical conditions that may
+  cause black patches in fish, such as wounds or ulcers, and the treatment methods for these conditions.
+expertise:
+  general_domain_top1pct: Biology
+  specific_domain_top1pct: Fish Biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

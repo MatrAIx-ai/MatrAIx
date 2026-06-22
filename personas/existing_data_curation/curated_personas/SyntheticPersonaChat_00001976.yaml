@@ -1,0 +1,64 @@
+id: 00001976
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1976
+data:
+  user 1 personas: 'I live near a park.
+
+    My favorite color is purple.
+
+    I do not have any children.
+
+    I do not have a car.'
+  user 2 personas: 'I am in preschool.
+
+    I like to play outside.
+
+    My favorite animal is a zebra.
+
+    I am a girl.
+
+    I like to dance.'
+  Best Generated Conversation: 'User 1: Hi! I''m John.
+
+    User 2: Hi John! I''m Mary.
+
+    User 1: It''s nice to meet you, Mary.
+
+    User 2: You too, John.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play outside, dance, and read.
+
+    User 1: That''s cool. I like to play outside too. What''s your favorite animal?
+
+    User 2: My favorite animal is a zebra.
+
+    User 1: Zebras are cool! I have a zebra print blanket.
+
+    User 2: That''s cool! I have a zebra plushie.
+
+    User 1: I love it! Do you live close to the park?
+
+    User 2: Yes, I do! I live right across the street from the park.
+
+    User 1: That''s awesome! I like to go to the park sometimes.
+
+    User 2: Me too! I love to play on the swings and slide.
+
+    User 1: I love the swings too! I think they''re so much fun.
+
+    User 2: Me too! I also love to climb trees.
+
+    User 1: I''m not so good at climbing trees. I''m always afraid of falling.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: I hope you do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

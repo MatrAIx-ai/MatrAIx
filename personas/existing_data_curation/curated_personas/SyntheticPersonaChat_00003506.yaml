@@ -1,0 +1,64 @@
+id: '00003506'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3506
+data:
+  user 1 personas: 'I work as an accountant.
+
+    My favorite color is red.
+
+    I like to play tennis.
+
+    My favorite musical is hamilton.
+
+    My favorite food is a burger.'
+  user 2 personas: 'If i want it , i buy it.
+
+    My mother is a professional make up artist.
+
+    I sometimes think i m shallow.
+
+    I love to go outside at night and eavesdrop on my neighbor s arguments.
+
+    I want a dog , but that is a lot of commitment.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tennis, go for walks, and read.
+
+    User 1: That sounds fun. I like to play tennis too.
+
+    User 2: Oh, cool! What''s your favorite color?
+
+    User 1: Red. What''s yours?
+
+    User 2: Red is my favorite too!
+
+    User 1: That''s funny. We have a lot in common.
+
+    User 2: I know, right? We should hang out sometime.
+
+    User 1: I''d love to. What are you doing this weekend?
+
+    User 2: I''m not sure yet. What did you have in mind?
+
+    User 1: I was thinking we could go for a walk in the park.
+
+    User 2: That sounds like fun. I''m in.
+
+    User 1: Great! I''ll pick you up at 10.
+
+    User 2: See you then!
+
+    User 1: Bye!
+
+
+    The conversation between user 1 and user 2 is natural and not direct copies of their profiles. They are both interested in playing tennis and they have a lot in common. They also have plans to hang
+    out in the park this weekend'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

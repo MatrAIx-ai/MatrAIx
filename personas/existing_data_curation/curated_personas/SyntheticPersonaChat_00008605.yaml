@@ -1,0 +1,80 @@
+id: 00008605
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8605
+data:
+  user 1 personas: 'I had to drop out of college to help with my grandparents.
+
+    I can t stand salads.
+
+    I graduated valedictorian of my high school class.
+
+    My mother stayed at home all day to raise me and my siblings.'
+  user 2 personas: 'I like to do all my shopping at walmart.
+
+    I prefer to live where the weather s cold.
+
+    I m deathly terrified of heights.
+
+    Winter s my favorite time of the year.
+
+    I m really excited to see how game of thrones ends.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there! How are you doing today?
+
+    User 1: I''m doing well, thanks! How about you?
+
+    User 2: I''m doing great, thank you! What''s your name?
+
+    User 1: My name is (user 1''s name).
+
+    User 2: It''s nice to meet you, (user 1''s name).
+
+    User 1: It''s nice to meet you too, (user 2''s name).
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Oh, I like to read too! What are some of your favorite books?
+
+    User 1: I like a lot of different types of books, but I''m really into fantasy and science fiction.
+
+    User 2: I love fantasy and science fiction too! What are some of your favorite books in those genres?
+
+    User 1: I''m a big fan of the Harry Potter series, the Lord of the Rings series, and the Game of Thrones series.
+
+    User 2: I love all of those series too! I''m really excited to see how Game of Thrones ends.
+
+    User 1: Me too! I''m not sure how they''re going to wrap it up, but I''m sure it will be epic.
+
+    User 2: I''m sure it will be too. So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that must be interesting! What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: Oh, that''s so cool! I love kindergarteners. They''re so cute and innocent.
+
+    User 1: They are! I love teaching them new things and watching them grow and learn.
+
+    User 2: That sounds like a great job.
+
+    User 1: It is! I love it.
+
+    User 2: So, what do you like to do outside of work?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: I would love that!
+
+    User 2: Great! We can exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00005750'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5750
+data:
+  user 1 personas: 'I can t live without my friends.
+
+    My favorite food is italian.
+
+    I have 10 piercings.
+
+    I used to smoke.'
+  user 2 personas: 'I am gay.
+
+    I brew my own beer.
+
+    I like to make my own coffee.
+
+    I live in portland , oregon.
+
+    I just bought a new house with my partner.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name].
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to brew my own beer, make my own coffee, and cook Italian food.
+
+    User 1: That''s cool! I love Italian food too.
+
+    User 2: Me too! I''m actually from Portland, Oregon, so I''m lucky to have a lot of great Italian restaurants to choose from.
+
+    User 1: I''m from California, so I''m not as lucky with the Italian food here.
+
+    User 2: You should come to Portland and visit me! I''ll take you to my favorite Italian restaurant.
+
+    User 1: I''d love that! Thanks for the offer.
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and kayaking.
+
+    User 2: That sounds fun! I''m not much of an outdoorsman myself, but I do enjoy going for walks.
+
+    User 1: I love going for walks too. They''re a great way to relax and clear your head.
+
+    User 2: That''s true. I always feel better after a good walk.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: That''s cool! I''ve always been interested in computers, but I''m not very good at them.
+
+    User 2: It takes a lot of practice, but it''s a lot of fun too.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite thing about yourself?
+
+    User 1: My friends are my favorite thing about myself. They''re always there for me, no matter what.
+
+    User 2: That''s great! I''m glad you have such great friends.
+
+    User 1: Thanks! I am too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

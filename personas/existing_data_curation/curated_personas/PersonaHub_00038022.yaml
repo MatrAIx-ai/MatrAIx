@@ -1,0 +1,21 @@
+id: 00038022
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38022
+persona_description: A healthcare professional who is responsible for screening pregnant women for Down's syndrome and neural tube defects. This person is likely to be a healthcare provider, such as a midwife
+  or obstetrician, who is responsible for interpreting the results of the screening tests and making decisions based on the screening performance of the programme. This person is likely to have a strong
+  understanding of the factors that influence the false-positive rate, including the age distribution of the screened population, the combination of screening markers used, and the risk cut-off used. This
+  person is also likely to be familiar with the expected screening performance for the population screened, and the expected false-positive rate, which can be determined using the Statistics screen and
+  the Population and Screening performance facilities. This person is also likely to be familiar with the concept of the screen-positive rate, which is the percentage with increased risk of Down's syndrome
+  or raised AFP, and can be used to compare the observed results to the expected false-positive rate.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: prenatal screening
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

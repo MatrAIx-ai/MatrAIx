@@ -1,0 +1,48 @@
+id: 00000869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 869
+data:
+  user 1 personas: 'I ve an iphone.
+
+    I travel often.
+
+    My favorite color is red.
+
+    I live with my parents.'
+  user 2 personas: 'My brother and i have bright red hair.
+
+    My nickname is bubblegum.
+
+    I love to sing in the shower.
+
+    I am plotting on taking over the world.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1].
+
+    User 2: Hi, I''m [User 2]. Nice to meet you.
+
+    User 1: You too. What are your favorite things to do?
+
+    User 2: I love to sing in the shower, and I''m plotting on taking over the world.
+
+    User 1: That''s interesting. I''ve never met anyone who wants to take over the world before.
+
+    User 2: Well, I''ve always been a bit of a rebel. I like to do things that are different.
+
+    User 1: I can respect that. I''m not much of a rebel myself, but I can appreciate someone who is.
+
+    User 2: Thanks. I think it''s important to stand up for what you believe in, even if it''s not popular.
+
+    User 1: I agree. I think it''s important to be true to yourself, no matter what.
+
+    User 2: That''s a great way to live. I''m glad we agree on something.
+
+    User 1: Me too. I think we''re going to get along just fine.
+
+    User 2: I think so too. Let''s be friends.
+
+    User 1: I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

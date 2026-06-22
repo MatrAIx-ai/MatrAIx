@@ -1,0 +1,58 @@
+id: '00005476'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5476
+data:
+  user 1 personas: 'Both of my parents are doctors.
+
+    I am in love with a girl who is unaware of it.
+
+    I do community theater when i am not in school.
+
+    I am in medical school.'
+  user 2 personas: 'My grandchildren range in age from 30 to 7.
+
+    I like to read.
+
+    My husband was a career soldier.
+
+    I am a senior citizen.
+
+    I have 4 children.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I like to read, play games, and spend time with my family.
+
+    User 1: What kind of games do you like to play?
+
+    User 2: I like to play board games, card games, and video games.
+
+    User 1: Cool! I like to play video games too. What are some of your favorite games?
+
+    User 2: I like to play a lot of different games, but some of my favorites are Super Mario Bros., Tetris, and Minecraft.
+
+    User 1: Those are all great games! I''ve played them all. What kind of board games do you like to play?
+
+    User 2: I like to play a lot of different board games, but some of my favorites are Monopoly, Scrabble, and Clue.
+
+    User 1: Those are all classic games! I''ve played them all too. What kind of card games do you like to play?
+
+    User 2: I like to play a lot of different card games, but some of my favorites are Go Fish, Uno, and Hearts.
+
+    User 1: Those are all great games! I''ve played them all too.
+
+    User 2: It sounds like we have a lot in common!
+
+    User 1: Yeah, it does!
+
+    User 2: Maybe we should play a game together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

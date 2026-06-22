@@ -1,0 +1,66 @@
+id: '00003232'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3232
+data:
+  user 1 personas: 'I work for a newspaper.
+
+    I am single.
+
+    My favorite color is grey.
+
+    I love to do yoga.'
+  user 2 personas: 'I am a 1st grade teacher.
+
+    I go to church on sunday.
+
+    My favorite color is purple.
+
+    I have a 3 year old.
+
+    My father is a preacher.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I''m a first grade teacher!
+
+    User 1: Oh, that''s cool! I work for a newspaper.
+
+    User 2: That''s interesting! What do you like about your job?
+
+    User 1: I like the variety of stories I get to cover.
+
+    User 2: That makes sense. I like that I get to work with kids.
+
+    User 1: I can see why! What''s your favorite part of being a teacher?
+
+    User 2: My favorite part is seeing the kids learn and grow.
+
+    User 1: That''s so sweet! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is purple.
+
+    User 1: Oh, mine is gray!
+
+    User 2: That''s a cool color!
+
+    User 1: Thanks! What''s your favorite thing to do on the weekend?
+
+    User 2: I like to spend time with my family.
+
+    User 1: That''s great! I like to go out with my friends.
+
+    User 2: That sounds fun! What do you like to do with your friends?
+
+    User 1: We like to go to movies, go out to eat, or just hang out.
+
+    User 2: That sounds like a lot of fun! I''m sure you have a lot of fun with your friends.
+
+    User 1: Thanks! We do have a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

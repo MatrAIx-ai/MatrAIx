@@ -1,0 +1,52 @@
+id: '00001330'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1330
+data:
+  user 1 personas: 'I like to travel.
+
+    I have traveled to both ireland and australia.
+
+    My father was born in australia.
+
+    My father was an author.'
+  user 2 personas: 'Going snorkeling is my favorite thing to do.
+
+    I like chasing comodo lizards on a private island.
+
+    I like eating fresh mangoes in the morning.
+
+    Sometimes i listen to gary human to be ironic.
+
+    I only use apple products because i feel everything else is inferior.'
+  Best Generated Conversation: 'User 1: Hi, my name is User 1. I like to travel. Have you been to any interesting places?
+
+    User 2: Hi User 1, my name is User 2. I love snorkeling! Where have you traveled to?
+
+    User 1: I''ve been to Ireland and Australia. My father was born in Australia, so I''ve always wanted to visit.
+
+    User 2: That''s awesome! I''ve always wanted to go to Australia. I hear it''s a beautiful country.
+
+    User 1: It is! I loved the beaches and the food. Have you ever been to Ireland?
+
+    User 2: No, but I''ve always wanted to go! I''ve heard it''s a beautiful country with a rich history.
+
+    User 1: It is! I loved the castles and the people.
+
+    User 2: So, what do you like to do when you travel?
+
+    User 1: I like to explore the local culture, try new food, and take pictures.
+
+    User 2: Sounds like we have similar interests! I also like to explore new places and try new things.
+
+    User 1: That''s great! I''m sure we would get along well on a trip together.
+
+    User 2: I agree! We should plan a trip together sometime.
+
+    User 1: That sounds like a great idea! I''m sure we would have a lot of fun.
+
+    User 2: Me too! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

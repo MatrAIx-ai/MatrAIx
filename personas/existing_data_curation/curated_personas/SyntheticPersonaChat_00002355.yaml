@@ -1,0 +1,60 @@
+id: '00002355'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2355
+data:
+  user 1 personas: 'I work with my wife.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I am a zookeeper.
+
+    My wife is a breast cancer survivor.'
+  user 2 personas: 'I try to eat a balanced diet.
+
+    I avoid eating sugar.
+
+    My favorite sport is hockey.
+
+    I am caucasian.
+
+    I like rollerblading.'
+  Best Generated Conversation: 'User 1: Hello! How are you doing today?
+
+    User 2: I''m doing well, thanks for asking! How about you?
+
+    User 1: I''m doing well too, thanks! I''m a zookeeper, and my daughter just graduated from high school.
+
+    User 2: That''s great! Congratulations to your daughter! What kind of animals do you work with?
+
+    User 1: I work with all kinds of animals, but my favorites are the monkeys.
+
+    User 2: I love monkeys too! They''re so cute and playful.
+
+    User 1: They are! My wife is a breast cancer survivor, and she''s also a zookeeper.
+
+    User 2: That''s amazing! I''m so glad she''s okay.
+
+    User 1: Me too! She''s a very strong woman.
+
+    User 2: I''m sure she is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play hockey, rollerblade, and eat a balanced diet.
+
+    User 1: That sounds like a lot of fun! I''ve never been much of a hockey player, but I love to rollerblade.
+
+    User 2: It''s a great way to get exercise and have fun at the same time.
+
+    User 1: I agree! I''m trying to eat a more balanced diet, but I''m not always successful.
+
+    User 2: It''s a challenge, but it''s worth it in the end.
+
+    User 1: I agree! Thanks for chatting with me today. It was nice to meet you.
+
+    User 2: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

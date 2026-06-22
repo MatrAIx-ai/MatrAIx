@@ -1,0 +1,68 @@
+id: 00004904
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4904
+data:
+  user 1 personas: 'Yellow is my favorite color.
+
+    I work for a magazine.
+
+    I like to read.
+
+    I love the game halo.'
+  user 2 personas: 'I have lots of friends.
+
+    I have red hair.
+
+    I like to ride my scooter.
+
+    My name is nick.
+
+    I do not like music.'
+  Best Generated Conversation: 'User 1: Hi, I''m Nick!
+
+    User 2: Hi Nick, I''m (user 1''s name).
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for a living?
+
+    User 2: I work for a magazine.
+
+    User 1: Oh, that sounds interesting! What kind of magazine?
+
+    User 2: It''s a fashion magazine.
+
+    User 1: Oh, I love fashion! Do you like to read?
+
+    User 2: Yes, I love to read! I read a lot of books and magazines.
+
+    User 1: Me too! What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but I think my favorite is "The Great Gatsby."
+
+    User 1: Oh, I love that book too! It''s so good.
+
+    User 2: I know, right? It''s one of my favorites.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my scooter, hang out with friends, and play video games.
+
+    User 1: Oh, I like to ride my scooter too! What games do you like to play?
+
+    User 2: I like to play a lot of different games, but my favorite is Halo.
+
+    User 1: Oh, I love Halo! It''s so much fun.
+
+    User 2: I know, right? It''s one of the best games ever made.
+
+    User 1: I agree! We should play Halo sometime.
+
+    User 2: That would be awesome! I''d love to play Halo with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

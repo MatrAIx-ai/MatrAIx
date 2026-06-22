@@ -1,0 +1,72 @@
+id: 00007877
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7877
+data:
+  user 1 personas: 'I am currently pregnant with my second child.
+
+    I love art.
+
+    I am a stay at home mom.
+
+    I have a severe anxiety disorder.
+
+    My husband in an engineer.'
+  user 2 personas: 'I am a volunteer firefighter.
+
+    I have a college degree in marketing.
+
+    I am colorblind.
+
+    I am still living at home at age 30.
+
+    I am currently trying to open my own grocery store.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a volunteer firefighter and I''m trying to open my own grocery store.
+
+    User 1: That''s really cool! I''m a stay at home mom.
+
+    User 2: Nice, how many kids do you have?
+
+    User 1: I''m pregnant with my second child.
+
+    User 2: Congratulations! That''s exciting.
+
+    User 1: Thank you! What''s your favorite thing about being a volunteer firefighter?
+
+    User 2: I like helping people and the sense of community.
+
+    User 1: That''s great! What''s your favorite thing about being a stay at home mom?
+
+    User 2: I love spending time with my kids and watching them grow.
+
+    User 1: That''s wonderful! I''m sure you''re a great mom.
+
+    User 2: Thanks, I try.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is blue.
+
+    User 1: That''s a nice color. My favorite color is red.
+
+    User 2: Red is a good color too.
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog named Charlie.
+
+    User 1: That''s a cute name. I have a cat named Mittens.
+
+    User 2: Nice to meet you, Mittens.
+
+    User 1: Nice to meet you too, Charlie.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00004798
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4798
+data:
+  user 1 personas: 'I work at a hotel overnight.
+
+    I enjoy video games.
+
+    I eat more junk food than i really should.
+
+    Kpop is my favorite music.'
+  user 2 personas: 'I got a new job.
+
+    Favorite color is green.
+
+    I like cats.
+
+    I like cars.
+
+    I like to travel.'
+  Best Generated Conversation: 'User 1: Hi there, my name is [user 1].
+
+    User 2: Hi [user 1], my name is [user 2].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to travel, play video games, and watch movies.
+
+    User 1: Cool! I like to travel too, but I haven''t done much of it lately. What''s your favorite place you''ve traveled to?
+
+    User 2: I''ve been to a lot of great places, but my favorite was probably Japan. The culture and food were amazing.
+
+    User 1: Japan sounds amazing! I''ve always wanted to go there. What did you do there?
+
+    User 2: I went to Tokyo, Kyoto, and Osaka. I did a lot of sightseeing and tried all sorts of delicious food.
+
+    User 1: Sounds like you had a great time! I''m sure I would have too.
+
+    User 2: It was an unforgettable experience.
+
+    User 1: I''m glad to hear that. What kind of video games do you like to play?
+
+    User 2: I like all kinds of games, but I''m a big fan of RPGs.
+
+    User 1: I like RPGs too! I''ve been playing a lot of Elden Ring lately.
+
+    User 2: Elden Ring is great! I''ve been playing that too.
+
+    User 1: It''s so much fun! I''ve been exploring every nook and cranny of the world.
+
+    User 2: Me too! I''ve been having a blast playing it.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

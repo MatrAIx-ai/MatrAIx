@@ -1,0 +1,78 @@
+id: '00006051'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6051
+data:
+  user 1 personas: 'I live in a house in the country.
+
+    I have a horse named beauty.
+
+    My husband is a soldier in the us army.
+
+    My father is a preacher.
+
+    I am pregnant with my first child.'
+  user 2 personas: 'I am single.
+
+    I enjoy reading.
+
+    I work at a doctors office.
+
+    My favorite flower is a lily.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hello, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a doctor''s office.
+
+    User 1: Oh, that sounds interesting. What kind of doctor''s office?
+
+    User 2: It''s a general practice.
+
+    User 1: Oh, I see. Do you like your job?
+
+    User 2: I love it! I get to meet all sorts of interesting people.
+
+    User 1: That''s great! What''s your favorite part of the job?
+
+    User 2: I like helping people.
+
+    User 1: That''s so nice of you. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my dog.
+
+    User 1: Oh, that sounds nice. I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read all sorts of books, but I especially like historical fiction.
+
+    User 1: I like historical fiction too! What''s your favorite historical fiction book?
+
+    User 2: It''s hard to say, but I really enjoyed The Book Thief by Markus Zusak.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: So, what do you think about being single?
+
+    User 2: I like it! I have a lot of freedom and I can do whatever I want.
+
+    User 1: That''s good to hear. I''m pregnant with my first child.
+
+    User 2: Oh, congratulations! That''s exciting!
+
+    User 1: Thank you! I''m really excited.
+
+    User 2: I''m sure you''re going to be a great mother.
+
+    User 1: Thank you! I''m trying to be prepared.
+
+    User 2: I''m sure you''ll be fine.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

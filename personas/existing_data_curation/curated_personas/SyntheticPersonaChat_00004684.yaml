@@ -1,0 +1,66 @@
+id: 00004684
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4684
+data:
+  user 1 personas: 'I like to draw other people.
+
+    I like to drink tea.
+
+    I like to eat hard boiled eggs.
+
+    I like to mountain bike.'
+  user 2 personas: 'I grew up as an orphan.
+
+    I often play the clown to get attention.
+
+    I care deeply for my friends and others close to me.
+
+    I will work hard for whatever i want.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name]. It''s nice to meet you.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the clown to get attention, care deeply for my friends and others close to me, and work hard for whatever I want.
+
+    User 1: What''s your favorite type of tea?
+
+    User 2: I like green tea.
+
+    User 1: Me too! It''s so refreshing.
+
+    User 2: I know, right? I love it iced.
+
+    User 1: I do too. I also like to mountain bike.
+
+    User 2: That sounds like fun! I''ve never tried it before.
+
+    User 1: It''s great exercise! You should give it a try.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: No problem. So, what else do you like to do?
+
+    User 2: I like to draw.
+
+    User 1: Really? That''s cool! What kind of things do you draw?
+
+    User 2: I like to draw people.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to draw.
+
+    User 2: It''s not too hard. You just need to practice.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Thanks for the advice.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

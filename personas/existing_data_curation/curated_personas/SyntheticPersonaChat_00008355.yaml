@@ -1,0 +1,31 @@
+id: 00008355
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8355
+data:
+  user 1 personas: 'I love the country but enjoy visiting the city life.
+
+    I use to be a wild child.
+
+    I have two dogs , one pitbull and old english bulldog.
+
+    I like the color blue or red.
+
+    I have always wanted to travel to ireland or puerto rico.'
+  user 2 personas: 'I am a freshman at nyu.
+
+    I am the youngest in my family.
+
+    My favorite color is blue.
+
+    I have two older brothers.'
+  Best Generated Conversation: "User 1: Hello!\nUser 2: Hello!\nUser 1: I am so happy to meet you! \nUser 2: Me too!\nUser 1: What are you interested in?\nUser 2: I like to travel.\nUser 1: That's awesome!\
+    \ Where have you been?\nUser 2: I've been to Europe, Asia, and South America.\nUser 1: Wow! That's amazing! I've never been out of the country.\nUser 2: You should go! It's amazing to see new places\
+    \ and learn about different cultures.\nUser 1: I know, I know! I've been wanting to travel for a while.\nUser 2: Well, if you ever need a travel buddy, let me know!\nUser 1: Thanks! I will!\nUser 2:\
+    \ So, what else do you like to do?\nUser 1: I like to go to the gym, read, and play video games.\nUser 2: I like to go to the gym too! What kind of video games do you like to play?\nUser 1: I like to\
+    \ play RPGs, sports games, and strategy games.\nUser 2: Me too! I'm a big fan of the Civilization series.\nUser 1: Me too! I've played every Civilization game since the first one.\nUser 2: Wow! That's\
+    \ awesome! I've only played Civ 5 and 6.\nUser 1: Well, if you ever want to play Civ 6 together, let me know!\nUser 2: Thanks! I would love that!"
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,106 @@
+id: 00006680
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6680
+data:
+  user 1 personas: 'My favorite car is the ford mustang.
+
+    I worked 3 jobs at the same time for more than 5 years.
+
+    I have a pit bull and a chihuahua.
+
+    I walk more than 2 miles a day.'
+  user 2 personas: 'Favorite band is the beetles.
+
+    I have a large cd collection.
+
+    I play the bass.
+
+    I like vintage furniture.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name].
+
+    User 2: You too, [user 1 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play the bass guitar and collect vintage furniture.
+
+    User 1: That''s cool! I like to play the drums and collect vinyl records.
+
+    User 2: Oh, that''s awesome! What''s your favorite band?
+
+    User 1: I love The Beatles. They''re my favorite band of all time.
+
+    User 2: Me too! They''re so good.
+
+    User 1: Yeah, they''re amazing.
+
+    User 2: What''s your favorite Beatles song?
+
+    User 1: I love "A Day in the Life." It''s so beautiful.
+
+    User 2: Me too! It''s one of my favorites too.
+
+    User 1: What''s your favorite vintage furniture piece?
+
+    User 2: I have a really old oak table that I love.
+
+    User 1: Oh, that sounds cool. I''d love to see it sometime.
+
+    User 2: Sure, I''d be happy to show you.
+
+    User 1: Great!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go for walks with my dogs.
+
+    User 2: Oh, that''s cool. I have a dog too.
+
+    User 1: What kind of dog?
+
+    User 2: I have a pit bull and a chihuahua.
+
+    User 1: Oh, that''s cool. I have a pit bull too.
+
+    User 2: Nice! We should have a dog play date sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a music teacher.
+
+    User 1: Oh, that''s cool! I love music.
+
+    User 2: Me too! I''m glad I get to teach it to kids.
+
+    User 1: That''s awesome!
+
+    User 2: Yeah, it''s a lot of fun.
+
+    User 1: So, what''s your favorite thing about teaching music?
+
+    User 2: I love seeing the excitement on kids'' faces when they learn a new song.
+
+    User 1: That''s awesome!
+
+    User 2: Yeah, it''s the best feeling.
+
+    User 1: Well, it''s been nice chatting with you, [user 2 name].
+
+    User 2: You too, [user 1 name].
+
+    User 1: I hope we can talk again sometime.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00000981
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 981
+data:
+  user 1 personas: 'I enjoy reading.
+
+    My favorite movie is pretty woman.
+
+    I am a vegan.
+
+    I am a registered nurse.'
+  user 2 personas: 'I live walking distance from work.
+
+    I work in finance.
+
+    I rent an apartment.
+
+    I do not like coffee.
+
+    I enjoy playing soccer.'
+  Best Generated Conversation: 'User 1: Hello! What do you do for a living?
+
+    User 2: I''m a financial analyst.
+
+    User 1: Oh, that sounds interesting. What kind of things do you do?
+
+    User 2: I help companies make financial decisions, like how much to invest in new projects or how much to charge for their products.
+
+    User 1: That sounds like a lot of responsibility.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What do you enjoy doing outside of work?
+
+    User 2: I enjoy playing soccer, reading, and spending time with my friends and family.
+
+    User 1: Me too! I love to read, and I also enjoy playing soccer.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is "Pretty Woman." I love the story and the characters.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great read.
+
+    User 2: So, what do you like about being a nurse?
+
+    User 1: I like helping people, and I like the challenge of working in a fast-paced environment.
+
+    User 2: That''s great! I''m sure you''re a great nurse.
+
+    User 1: Thank you! I try my best.
+
+    User 2: Do you have any plans for the weekend?
+
+    User 1: I''m going to be reading "Pretty Woman" and playing soccer.
+
+    User 2: Sounds like a fun weekend!
+
+    User 1: It should be! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

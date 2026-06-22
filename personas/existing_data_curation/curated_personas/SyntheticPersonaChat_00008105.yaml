@@ -1,0 +1,70 @@
+id: 00008105
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8105
+data:
+  user 1 personas: 'My hobbies are sleeping and playing the guitar.
+
+    I want to be in a band someday.
+
+    I am a factory worker.
+
+    I sleep 10 hours every day because my work is tiring.'
+  user 2 personas: 'I like to eat.
+
+    I want to feel pretty.
+
+    I want to be desired.
+
+    I feel overweight.'
+  Best Generated Conversation: 'User 1: Hi, how''s it going?
+
+    User 2: Not so good, I''m feeling really down.
+
+    User 1: Oh, I''m sorry to hear that. What''s wrong?
+
+    User 2: I just feel like I''m not good enough.
+
+    User 1: You''re not good enough? What do you mean?
+
+    User 2: I mean, I''m not pretty enough, I''m not smart enough, I''m not funny enough...
+
+    User 1: That''s not true! You''re beautiful, you''re smart, and you''re hilarious.
+
+    User 2: I don''t know... I just feel like I''m not enough.
+
+    User 1: Well, you are enough. You''re more than enough. You''re a wonderful person, and you deserve to feel good about yourself.
+
+    User 2: Thanks... I think I needed to hear that.
+
+    User 1: No problem. I''m always here for you.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, I like to play music, and I like to go out with friends.
+
+    User 1: That sounds like fun. I like to read too, and I love to play music.
+
+    User 2: Oh, that''s cool! What do you play?
+
+    User 1: I play the guitar, and I sing.
+
+    User 2: Oh, that''s awesome! I play the guitar too.
+
+    User 1: Really? That''s great! We should jam together sometime.
+
+    User 2: Yeah, that would be fun!
+
+    User 1: Cool. We should exchange numbers.
+
+    User 2: Okay.
+
+    User 1: Here''s my number.
+
+    User 2: Okay, I''ll add you'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

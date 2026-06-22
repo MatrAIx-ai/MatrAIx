@@ -1,0 +1,104 @@
+id: '00004070'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4070
+data:
+  user 1 personas: 'I love to take road trips.
+
+    My favorite place to visit is seattle.
+
+    I live in upstate new york.
+
+    I work as a meeting coordinator.'
+  user 2 personas: 'I graduated college last week.
+
+    My girlfriend is 6 months pregnant.
+
+    I got a job as a coach at a local highschool.
+
+    We just bought a house near her parents.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: I see that you recently graduated from college. Congratulations!
+
+    User 2: Thank you!
+
+    User 1: What are your plans for the future?
+
+    User 2: I''m going to be a coach at a local high school.
+
+    User 1: That''s great! I''m sure you''ll be a great coach.
+
+    User 2: Thanks! I''m excited to start.
+
+    User 1: What''s your girlfriend''s name?
+
+    User 2: Her name is [girlfriend''s name].
+
+    User 1: How long have you been together?
+
+    User 2: We''ve been together for 3 years.
+
+    User 1: Congratulations on the baby!
+
+    User 2: Thank you!
+
+    User 1: What are you going to name the baby?
+
+    User 2: We''re not sure yet.
+
+    User 1: Well, I''m sure you''ll pick a great name.
+
+    User 2: Thanks!
+
+    User 1: What are your hobbies?
+
+    User 2: I like to play sports, read, and watch movies.
+
+    User 1: Me too! What sports do you like to play?
+
+    User 2: I like to play basketball, baseball, and football.
+
+    User 1: I love basketball too! What''s your favorite team?
+
+    User 2: My favorite team is the New York Knicks.
+
+    User 1: Nice! Mine is the Golden State Warriors.
+
+    User 2: Oh, they''re a great team.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to concerts, movies, and museums.
+
+    User 2: I like to do those things too! I love going to concerts.
+
+    User 1: Me too! I love the energy and excitement of a live concert.
+
+    User 2: Yeah, it''s so much fun.
+
+    User 1: So, where do you live?
+
+    User 2: I live in upstate New York.
+
+    User 1: Oh, that''s cool! I live in Seattle.
+
+    User 2: Oh, that''s a long way away!
+
+    User 1: Yeah, it is.
+
+    User 2: How do you like it there?
+
+    User 1: I love it! It''s such a beautiful city.
+
+    User 2: It looks like a great place to live.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

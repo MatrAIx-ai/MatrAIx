@@ -1,0 +1,60 @@
+id: 00004368
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4368
+data:
+  user 1 personas: 'I like hiking up volcanoes.
+
+    Sometimes , i like to relieve myself when on roses.
+
+    I think canadian women are incredibly attractive.
+
+    I cannot get enough ginger snaps.'
+  user 2 personas: 'I take my emotions out through art.
+
+    I have a hard time feeling connected with people.
+
+    I grew up homeschooled.
+
+    I care deeply about animals.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to take my emotions out through art.
+
+    User 1: That''s really cool! I''ve always wanted to be more creative.
+
+    User 2: You should try it! It''s a great way to express yourself.
+
+    User 1: I''ll keep that in mind. What kind of art do you like to do?
+
+    User 2: I like to paint, draw, and write.
+
+    User 1: Those are all great creative outlets.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: Do you have any favorite artists?
+
+    User 2: I like Van Gogh, Monet, and Dali.
+
+    User 1: Those are all great artists! I like their work too.
+
+    User 2: Me too! I think their art is really inspiring.
+
+    User 1: I agree. It''s amazing what you can create with just a few strokes of a paintbrush.
+
+    User 2: It really is! I think art is one of the most beautiful things in the world.
+
+    User 1: I agree. It''s a way to express yourself and connect with others.
+
+    User 2: Exactly! It''s a great way to communicate your feelings and ideas.
+
+    User 1: I''m glad you''re so passionate about art. It''s definitely a beautiful thing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,106 @@
+id: 00008811
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8811
+data:
+  user 1 personas: 'I just started the tenth grade and my concentration is in science.
+
+    My family has three dogs and my dog is named maddie.
+
+    I have braces.
+
+    I am fifteen years old.'
+  user 2 personas: 'My name is kevin.
+
+    I am a student in college.
+
+    I am studying software development.
+
+    I enjoy working out and learning new things.
+
+    I play the guitar.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi [user 1 name], my name is Kevin.
+
+    User 1: Nice to meet you, Kevin.
+
+    User 2: Nice to meet you too. So, what grade are you in?
+
+    User 1: I just started the tenth grade.
+
+    User 2: Oh, cool. I''m in college.
+
+    User 1: What are you studying?
+
+    User 2: I''m studying software development.
+
+    User 1: That''s cool. What made you want to study that?
+
+    User 2: I''ve always been interested in computers and technology.
+
+    User 1: Me too! I like to build computers and play video games.
+
+    User 2: That''s cool. I used to play video games a lot when I was younger, but I don''t have as much time for them anymore.
+
+    User 1: Why not?
+
+    User 2: I''m just really busy with school and work.
+
+    User 1: Oh, I know what you mean. I''m also pretty busy with school and my family.
+
+    User 2: Yeah, it can be tough to find time for everything.
+
+    User 1: But it''s worth it.
+
+    User 2: I agree.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a software developer for a small company.
+
+    User 1: Oh, that''s cool. What kind of software do you develop?
+
+    User 2: I mostly develop web applications.
+
+    User 1: Oh, that''s interesting. I''ve never really thought about what goes into developing web applications.
+
+    User 2: It''s actually pretty complex, but it''s also a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to play guitar, work out, and learn new things.
+
+    User 1: That''s cool. I like to play guitar too.
+
+    User 2: Oh, really? What kind of music do you like to play?
+
+    User 1: I like to play a lot of different kinds of music, but my favorite is probably rock and roll.
+
+    User 2: Oh, that''s cool. I like rock and roll too.
+
+    User 1: Me too.
+
+    User 2: So, what are some of your favorite bands?
+
+    User 1: I like a lot of bands, but my favorites are probably The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 2: Oh, I love those bands too!
+
+    User 1: Me too!
+
+    User 2: So, what are some of your favorite songs?
+
+    User 1: I have a lot of favorite songs, but some of my favorites are "Yellow Submarine" by The Beatles, "Satisfaction" by The Rolling Stones, and "Stairway to Heaven" by Led Zeppelin.
+
+    User 2: Oh, those are all great songs! I love them too.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

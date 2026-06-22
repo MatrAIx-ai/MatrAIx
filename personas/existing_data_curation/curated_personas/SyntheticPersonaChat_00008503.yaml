@@ -1,0 +1,52 @@
+id: 00008503
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8503
+data:
+  user 1 personas: 'I have been on the design team for over 65 video games.
+
+    My son plays on the local football team.
+
+    I am trying to create my own startup company in the gaming industry.
+
+    My wife recently got laid off from her human resources job.'
+  user 2 personas: 'People say i talk when i m not supposed to.
+
+    I could eat less.
+
+    My dream is to be a veterinarian.
+
+    My three ring binder has my drawings of ponies all over it.
+
+    I hate that my mom made me get braces.'
+  Best Generated Conversation: 'User 1: Hi, how are you doing today?
+
+    User 2: I''m doing pretty good, thanks for asking. I''m a little tired, but I''m excited to meet you.
+
+    User 1: Nice to meet you too! I''m [User 1''s name]. What do you do for a living?
+
+    User 2: I''m a veterinarian in training. I''m really passionate about animals, and I can''t wait to get my license and start working with them.
+
+    User 1: That''s amazing! I''ve always loved animals too. What kind of animals do you like to work with?
+
+    User 2: I love all animals, but I''m especially interested in working with horses. I think they''re beautiful and majestic creatures.
+
+    User 1: I agree! Horses are amazing animals. I''ve always wanted to learn how to ride one.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to look into it. What''s your favorite thing about being a veterinarian in training?
+
+    User 2: I love being able to help animals and make a difference in their lives. It''s so rewarding to see them get better and know that you played a role in that.
+
+    User 1: That''s such a great feeling. I''m sure you''re going to be a great veterinarian.
+
+    User 2: Thanks! I''m really excited to get started.
+
+    User 1: Well, I''m sure you''re going to do great things.
+
+    User 2: Thanks'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

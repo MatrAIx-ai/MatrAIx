@@ -1,0 +1,78 @@
+id: 00001950
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1950
+data:
+  user 1 personas: 'I like to eat tune.
+
+    I like to read books.
+
+    I have two cats.
+
+    My cats like to be read to.'
+  user 2 personas: 'I have to live by a schedule in order to keep my mind right.
+
+    I love watching grey s anatomy.
+
+    I am in high school apart of the school band.
+
+    My mom is my favorite person of all people.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I like to watch Grey''s Anatomy, and I''m in high school and apart of the school band.
+
+    User 1: Oh, that''s cool! I''ve never been in a school band, but I always wanted to. What instrument do you play?
+
+    User 2: I play the clarinet.
+
+    User 1: The clarinet is a cool instrument. I''ve always thought it would be fun to play.
+
+    User 2: It is! It''s a little hard to learn at first, but it''s a lot of fun once you get the hang of it.
+
+    User 1: I''m sure it is. I''ve always been a little bit musically inclined, so I think I would be able to pick it up pretty quickly.
+
+    User 2: Maybe you should give it a try! I''m sure you''d be great at it.
+
+    User 1: Thanks! I might just do that.
+
+    User 2: You''re welcome!
+
+    User 1: So, what other things do you like to do for fun?
+
+    User 2: I like to go out with my friends, and I love to read. I also like to cook.
+
+    User 1: Me too! I love to read, and I love to cook. I''m not very good at it, but I enjoy it.
+
+    User 2: I''m not very good at it either, but I still love doing it.
+
+    User 1: I''m glad I''m not the only one!
+
+    User 2: Yeah, me too!
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read a lot of different things, but I mostly read fiction. I love historical fiction, romantic fiction, and mystery novels.
+
+    User 1: Me too! I love historical fiction and romantic fiction. I''m not so much into mystery novels, but I''ll read them if they''re good.
+
+    User 2: I''m glad to hear that! We should exchange book recommendations sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great!
+
+    User 1: So, what do you like to cook?
+
+    User 2: I like to cook a lot of different things, but I''m not very good at it. I mostly cook Italian food and Mexican food.
+
+    User 1: I''m not very good at cooking either, but I love to do it. I love Italian food and Mexican food too!
+
+    User 2: That''s awesome! We should cook together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

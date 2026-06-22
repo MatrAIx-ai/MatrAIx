@@ -1,0 +1,58 @@
+id: 00004916
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4916
+data:
+  user 1 personas: 'Have both daughters and sons.
+
+    I like to sing.
+
+    I am not married.
+
+    I love basketball.
+
+    I like to hunt.'
+  user 2 personas: 'My favorite dessert is cheesecake.
+
+    I married miss usa.
+
+    I have more money than i know what to do with.
+
+    I am bored of my maids.
+
+    My children are a dissapointment.'
+  Best Generated Conversation: 'User 1: Hey, I''m [User 1]. What''s your name?
+
+    User 2: I''m [User 2]. What do you do for a living?
+
+    User 1: I''m a singer. What about you?
+
+    User 2: I own a company that sells cheesecake.
+
+    User 1: That sounds delicious. What''s your favorite cheesecake flavor?
+
+    User 2: My favorite is chocolate cheesecake.
+
+    User 1: Nice. I like chocolate too. Do you have any children?
+
+    User 2: Yes, I have two daughters and a son.
+
+    User 1: That''s great. I have two daughters and a son too.
+
+    User 2: Really? That''s amazing. We should get together sometime and talk about our children.
+
+    User 1: That sounds like a great idea. I''m free this weekend.
+
+    User 2: Me too. Let''s meet at my house for dinner on Saturday.
+
+    User 1: Sounds good. What time?
+
+    User 2: How about 6pm?
+
+    User 1: Perfect. I''ll see you then.
+
+    User 2: Great. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

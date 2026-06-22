@@ -1,0 +1,19 @@
+id: '00054040'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54040
+persona_description: A scientist who specializes in the study of galactic structure and rotation velocity, particularly in the Milky Way. This individual is likely to have expertise in trigonometry, parallax
+  measurement, and radio astronomy. They have conducted extensive research on the galactic rotation velocity of the Milky Way, and their findings have implications for dark matter detection experiments.
+  They have also used VERA, a modern radio interferometer, to accurately measure the distances and motions of radio objects within the Milky Way, which has helped them draw conclusions about the size and
+  rotation velocity of the galaxy.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: galactic structure and rotation velocity
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

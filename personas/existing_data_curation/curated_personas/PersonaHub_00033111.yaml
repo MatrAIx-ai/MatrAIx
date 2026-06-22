@@ -1,0 +1,19 @@
+id: '00033111'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33111
+persona_description: A healthcare professional who is interested in the diagnosis and treatment of multiple sclerosis (MS). They are likely to be familiar with the various tests and procedures required
+  for a comprehensive assessment of a patient's health picture, including symptoms and their onset. They may have a background in neurology, neurosurgery, or other related fields, and are interested in
+  learning about the latest research and developments in MS diagnosis and treatment. They are also likely to be knowledgeable about the clinical features and symptoms of MS, and are interested in understanding
+  how these features can be used to make a diagnosis.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: multiple sclerosis diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

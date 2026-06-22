@@ -1,0 +1,18 @@
+id: '00032462'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32462
+persona_description: A patient seeking information about cystoscopy, a medical procedure used to examine the bladder and urinary tract for abnormalities or surgical procedures. The patient is likely to
+  be a middle-aged or older adult with a history of urinary issues, such as difficulty or painful voiding, bladder or urethral tumors, bladder stones, or prostate surgery. They may also be interested in
+  the evaluation of blood in the urine.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: urology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

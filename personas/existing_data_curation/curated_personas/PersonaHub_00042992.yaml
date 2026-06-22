@@ -1,0 +1,17 @@
+id: 00042992
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42992
+persona_description: A healthcare professional who is trained in the recognition and treatment of heart attacks, with a focus on the unique challenges and warning signs associated with women and those with
+  non-typical symptoms. This person is skilled in preventing heart attacks and is trained to recognize when emergency medical services are needed.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

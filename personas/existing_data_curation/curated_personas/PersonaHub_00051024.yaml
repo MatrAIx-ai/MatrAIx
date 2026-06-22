@@ -1,0 +1,18 @@
+id: '00051024'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51024
+persona_description: An expert witness in law or medicine, who specializes in generating and presenting findings, opinions, and critical assessments of medical topics or legal disputes, typically on behalf
+  of one side or the other in a litigation or clinical research setting. The expert witness may have a background in fields such as medicine, law, or other scientific disciplines, and may have specialized
+  knowledge or training in specific areas of expertise, such as medical treatments, legal arguments, or scientific research methodologies.
+expertise:
+  general_domain_top1pct: law
+  specific_domain_top1pct: legal expertise
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

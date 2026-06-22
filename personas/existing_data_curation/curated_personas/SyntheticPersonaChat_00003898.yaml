@@ -1,0 +1,66 @@
+id: 00003898
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3898
+data:
+  user 1 personas: 'I am a very social person.
+
+    My parents were divorced.
+
+    I grew up with 6 siblings.
+
+    I am a widow.'
+  user 2 personas: 'My favorite phone is as iphone.
+
+    I love to go hiking.
+
+    I have never been to college.
+
+    I am a bank teller.
+
+    I have never been out of the country.'
+  Best Generated Conversation: 'User 1: Hi! What''s up?
+
+    User 2: Not much. Just got back from a hike.
+
+    User 1: Where did you go hiking?
+
+    User 2: I went to Mt. Tammany.
+
+    User 1: That''s a great hike! I''ve been there a few times.
+
+    User 2: Yeah, it''s really nice.
+
+    User 1: Are you a big hiker?
+
+    User 2: Yeah, I love to hike.
+
+    User 1: Me too! It''s so relaxing.
+
+    User 2: I agree. It''s a great way to get away from everything.
+
+    User 1: What''s your favorite part about hiking?
+
+    User 2: I like being outdoors and getting some exercise.
+
+    User 1: Me too! And I like seeing the beautiful views.
+
+    User 2: Yeah, the views on Mt. Tammany are amazing.
+
+    User 1: I''ve never been out of the country, but I''d love to go hiking in Europe.
+
+    User 2: That would be awesome! There are so many beautiful places to hike in Europe.
+
+    User 1: Yeah, I''ve seen some pictures and they look amazing.
+
+    User 2: I''ve heard that the Alps are amazing for hiking.
+
+    User 1: Yeah, I''ve heard that too. I''d love to go there someday.
+
+    User 2: Maybe we can go together sometime.
+
+    User 1: That would be great'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

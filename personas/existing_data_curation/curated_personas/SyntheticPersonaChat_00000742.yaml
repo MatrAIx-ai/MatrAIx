@@ -1,0 +1,70 @@
+id: '00000742'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 742
+data:
+  user 1 personas: 'I like to surf.
+
+    My mother is a school teacher.
+
+    I listen to country music.
+
+    I am a reality tv star.'
+  user 2 personas: 'I have a pet husky.
+
+    I like to race rc cars.
+
+    I like to play nintendo.
+
+    I love to eat fish.
+
+    I live in the great white north.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to race rc cars, play Nintendo, and eat fish.
+
+    User 1: That''s cool. I like to surf, listen to country music, and I''m a reality TV star.
+
+    User 2: That''s awesome. I''ve always wanted to surf.
+
+    User 1: It''s really fun. You should give it a try.
+
+    User 2: Maybe I will. What''s your favorite country music artist?
+
+    User 1: That''s a tough question. I have a lot of favorites. But I''d say Garth Brooks is probably my number one.
+
+    User 2: Garth Brooks is great. I love his music.
+
+    User 1: Me too. He''s an absolute legend.
+
+    User 2: What''s your favorite reality TV show?
+
+    User 1: I''m a big fan of Survivor. I''ve been watching it since the first season.
+
+    User 2: Survivor is great. I''ve been watching it since season 2.
+
+    User 1: It''s so good. I love the competition and the drama.
+
+    User 2: Me too. It''s the perfect show to watch when you''re bored.
+
+    User 1: I agree. It''s always so entertaining.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to race my rc car at the park.
+
+    User 1: That sounds fun. I''d love to watch.
+
+    User 2: You''re welcome to come.
+
+    User 1: Great. I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

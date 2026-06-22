@@ -1,0 +1,19 @@
+id: 00045379
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45379
+persona_description: A database administrator who is responsible for managing and maintaining a relational database system. This person is skilled in writing and executing transactions to enforce the logical
+  consistency of the data, ensuring that all data modifications are consistent with the organization's business rules. They are proficient in using locking facilities and logging facilities to preserve
+  transaction isolation and ensure durability, respectively. Additionally, they are knowledgeable in transaction management features that enforce transaction atomicity and consistency, and are adept at
+  rolling back any uncompleted transactions in the event of a system failure.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Database Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

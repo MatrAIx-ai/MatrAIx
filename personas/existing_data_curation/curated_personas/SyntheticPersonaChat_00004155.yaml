@@ -1,0 +1,56 @@
+id: '00004155'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4155
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I have 3 dogs.
+
+    I like to read horror novels.
+
+    I work as an accountant.'
+  user 2 personas: 'I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I m an ovo vegetarian.
+
+    I can t cook.
+
+    I can t stand beets.'
+  Best Generated Conversation: 'User 1: What''s your favorite color?
+
+    User 2: My favorite color is green, because it reminds me of nature.
+
+    User 1: I like green too! I have a blue dog named Buddy, and he''s a big part of my life.
+
+    User 2: Aw, that''s cute! I have a cat named Mittens, and I love her to death.
+
+    User 1: I love cats! I used to have a cat named Snowball, but he passed away a few years ago.
+
+    User 2: I''m sorry to hear that. I know how it feels to lose a furry friend.
+
+    User 1: Yeah, it was tough. But I''m glad I had him in my life for as long as I did.
+
+    User 2: Me too. Pets are the best.
+
+    User 1: I agree. So, what do you like to do for fun?
+
+    User 2: I like to sleep in on my days off, and I love horror movies.
+
+    User 1: I love horror movies too! I''m a big fan of the Saw series.
+
+    User 2: I love the Saw series too! I''m also a big fan of the Conjuring series.
+
+    User 1: Those are both great series! I''m really excited for the next Conjuring movie.
+
+    User 2: Me too! I think it''s going to be great.
+
+    User 1: Well, it was nice talking to you. I hope we can talk again soon.
+
+    User 2: It was nice talking to you too. I hope we can talk again soon too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

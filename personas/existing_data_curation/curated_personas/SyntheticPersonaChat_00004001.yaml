@@ -1,0 +1,94 @@
+id: '00004001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4001
+data:
+  user 1 personas: 'I have three dogs at home.
+
+    I have a bicycle.
+
+    I need to take my blood sugar everyday.
+
+    I hate to workout , but i need to.
+
+    I am very good at the drums.'
+  user 2 personas: 'I love to bake cakes.
+
+    My favorite book is david copperfield.
+
+    I m really short.
+
+    I have a twin brother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to bake cakes.
+
+    User 1: That''s cool. I don''t have much of a sweet tooth, but I can appreciate a good cake.
+
+    User 2: I also like to read. My favorite book is David Copperfield.
+
+    User 1: I''ve never read David Copperfield. Is it good?
+
+    User 2: It''s one of my favorites. It''s a classic for a reason.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should.
+
+    User 1: What else do you like to do?
+
+    User 2: I''m a twin.
+
+    User 1: Really? That''s cool. I''ve always wanted a twin.
+
+    User 2: It''s great. We''re always there for each other.
+
+    User 1: I''m sure. I''m glad you have someone to always be there for you.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite thing to do with your twin?
+
+    User 2: We like to go shopping together.
+
+    User 1: That''s fun. I love shopping too.
+
+    User 2: We also like to go to the movies.
+
+    User 1: Me too. I love seeing new movies.
+
+    User 2: We''re also really into music.
+
+    User 1: Me too. I love listening to music.
+
+    User 2: We like to go to concerts together.
+
+    User 1: That''s awesome. I love going to concerts too.
+
+    User 2: We''re also really into sports.
+
+    User 1: Me too. I love watching sports.
+
+    User 2: We like to go to games together.
+
+    User 1: That''s cool. I love going to games too.
+
+    User 2: We''re also really into travel.
+
+    User 1: Me too. I love traveling.
+
+    User 2: We like to go to different countries together.
+
+    User 1: That''s awesome. I love going to different countries too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

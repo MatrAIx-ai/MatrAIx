@@ -1,0 +1,84 @@
+id: 00003281
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3281
+data:
+  user 1 personas: 'I also like ford trucks.
+
+    I like ford cars.
+
+    My truck is black.
+
+    I have a ford f150.'
+  user 2 personas: 'I live in a big city.
+
+    This summer i went on vacation to italy.
+
+    I like italian cusine.
+
+    I work in the office , 9 till 5.
+
+    Sometimes i go to yoga classes.'
+  Best Generated Conversation: 'User 1: Hey! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to yoga classes, cook, and travel.
+
+    User 1: That''s cool! I like to go to the gym, play video games, and watch football.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play sports games, action games, and racing games.
+
+    User 2: I like to play sports games too. I also like to play puzzle games.
+
+    User 1: I''ve never really been into puzzle games.
+
+    User 2: They can be really challenging, but they''re also a lot of fun.
+
+    User 1: I might have to try one sometime.
+
+    User 2: I''m sure you''ll like it.
+
+    User 1: So, what''s your favorite thing about yoga?
+
+    User 2: I like how it makes me feel. It''s really relaxing and helps me to focus.
+
+    User 1: I''ve heard good things about yoga. I might have to try it sometime.
+
+    User 2: I think you''d like it.
+
+    User 1: So, what''s your favorite thing about Italian food?
+
+    User 2: I love the flavors and the spices. It''s so flavorful and delicious.
+
+    User 1: I agree! Italian food is one of my favorites.
+
+    User 2: Have you ever been to Italy?
+
+    User 1: I have! I went to Italy this summer. It was amazing!
+
+    User 2: I''m so jealous! I''ve always wanted to go to Italy.
+
+    User 1: You should definitely go! It''s a beautiful country with so much to see and do.
+
+    User 2: I will!
+
+    User 1: So, what''s your favorite thing about your job?
+
+    User 2: I like my coworkers. They''re all really nice and fun to work with.
+
+    User 1: I''m glad you have a good work environment.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

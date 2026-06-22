@@ -1,0 +1,68 @@
+id: 00001799
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1799
+data:
+  user 1 personas: 'I am an only child.
+
+    I like swimming.
+
+    My mother is a housemaid.
+
+    I have traveled to europe and mexico.
+
+    I love spicy food.'
+  user 2 personas: 'My favorite color is purple.
+
+    I am not a fan of science.
+
+    My dad works for ups.
+
+    I am currently looking for a job.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hello! My name is [name].
+
+    User 1: Nice to meet you, [name]. What are you interested in?
+
+    User 2: I''m interested in a lot of things, but I''m especially interested in music and travel.
+
+    User 1: I love music too! What kind of music do you like?
+
+    User 2: I like all kinds of music, but my favorite is probably rock.
+
+    User 1: Me too! I love rock music. Who are your favorite bands?
+
+    User 2: I love AC/DC, Metallica, and Guns N'' Roses.
+
+    User 1: Those are all great bands! I love them too.
+
+    User 2: What are some of your favorite places to travel?
+
+    User 1: I''ve been to a lot of places, but my favorite place is probably Europe.
+
+    User 2: I''ve always wanted to go to Europe! What was your favorite part about it?
+
+    User 1: I loved the culture, the food, and the history.
+
+    User 2: Those are all great things about Europe! I''m sure I would love it there.
+
+    User 1: I think you would too.
+
+    User 2: Well, I''m glad we have something in common.
+
+    User 1: Me too!
+
+    User 2: I''m currently looking for a job, so hopefully I''ll be able to travel soon.
+
+    User 1: I hope you find a great job!
+
+    User 2: Thanks!
+
+    User 1: Well, it was nice talking to you, [name].
+
+    User 2: It was nice talking to you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

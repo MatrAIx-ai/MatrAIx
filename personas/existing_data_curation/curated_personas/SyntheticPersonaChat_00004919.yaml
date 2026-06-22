@@ -1,0 +1,74 @@
+id: 00004919
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4919
+data:
+  user 1 personas: 'Hotdogs are my favorite food.
+
+    My favorite drink is pepsi.
+
+    My weekends are filled with bird watching.
+
+    I like reading horror novels.
+
+    I work as a librarian.'
+  user 2 personas: 'I have a golden retriever puppy.
+
+    I do not have a job and sit on the couch all day.
+
+    I try to limit how much i eat.
+
+    I hate paying my bills.
+
+    I whine a lot.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name]. What do you do for fun?
+
+    User 1: I love to read horror novels, bird watch, and go to the library.
+
+    User 2: I love horror novels too! What''s your favorite one?
+
+    User 1: My favorite is The Shining by Stephen King.
+
+    User 2: That''s one of my favorites too! I love the atmosphere and the characters.
+
+    User 1: Me too! It''s so creepy and suspenseful.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a librarian.
+
+    User 2: Oh, that''s cool! I''ve always thought it would be fun to be a librarian.
+
+    User 1: It is! I love getting to help people find books and information.
+
+    User 2: That''s great! What''s your favorite thing about your job?
+
+    User 1: My favorite thing is meeting new people and helping them find what they''re looking for.
+
+    User 2: That''s awesome! I''m sure you''re a great librarian.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what do you do on your weekends?
+
+    User 1: I usually go bird watching or read horror novels.
+
+    User 2: That sounds like fun! I love bird watching too.
+
+    User 1: Me too! It''s so relaxing and peaceful.
+
+    User 2: So, do you have any pets?
+
+    User 1: I have a golden retriever puppy.
+
+    User 2: That''s so cute! I love golden retrievers.
+
+    User 1: Me too! He''s the best dog ever.
+
+    User 2: I bet he is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

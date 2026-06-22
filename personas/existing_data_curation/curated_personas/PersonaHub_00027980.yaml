@@ -1,0 +1,18 @@
+id: 00027980
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27980
+persona_description: A healthcare professional who works in a laboratory setting, specializing in the diagnosis and treatment of bleeding disorders. This person is familiar with the tests and procedures
+  involved in diagnosing von Willebrand disease, including the von Willebrand factor activity test, ristocetin cofactor activity test, factor VIII coagulant activity test, and other specialized blood tests.
+  This person is highly skilled in interpreting test results and communicating with patients to provide accurate and comprehensive information about their condition.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hematology
+  general_domain_top01pct: None
+  specific_domain_top01pct: coagulation disorders
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

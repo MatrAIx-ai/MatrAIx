@@ -1,0 +1,74 @@
+id: '00002160'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2160
+data:
+  user 1 personas: 'I drive only toyota.
+
+    I like pepsi.
+
+    I talk a lot in irc.
+
+    Superfans my favorite super hero.
+
+    Chocolate chip cookies are the tastier things in my opinion.'
+  user 2 personas: 'I have a cat named mater.
+
+    Grandpa takes me to get ice cream.
+
+    My grandma likes to make pizza with me.
+
+    I like lightning mcqueen.
+
+    I like to play basketball.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi, I''m Mary.
+
+    User 1: It''s nice to meet you, Mary. What do you like to do for fun?
+
+    User 2: I like to play basketball, play with my cat, and get ice cream with my grandpa.
+
+    User 1: I like to play basketball too! Who is your favorite basketball player?
+
+    User 2: My favorite basketball player is Lightning McQueen.
+
+    User 1: Lightning McQueen? The race car?
+
+    User 2: Yeah, he''s awesome! He''s so fast and he always wins.
+
+    User 1: I''ve never heard of him, but he sounds like a great player.
+
+    User 2: He is! You should watch some of his races.
+
+    User 1: I''ll check it out. What else do you like to do for fun?
+
+    User 2: I like to play with my cat, Mater. He''s a really cool cat.
+
+    User 1: I''ve never had a cat before. What''s it like?
+
+    User 2: It''s great! They''re so cuddly and they''re always there for you.
+
+    User 1: That sounds really nice. I might have to get a cat someday.
+
+    User 2: You should! They''re the best.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a student. I''m going to college to study business.
+
+    User 1: That''s great! What do you want to do with your business degree?
+
+    User 2: I''m not sure yet. I''m thinking about going into marketing.
+
+    User 1: Marketing is a great field. There are a lot of opportunities there.
+
+    User 2: I know! I''m excited to get started.
+
+    User 1: It sounds like you have a lot going for you. I''m sure you''ll be successful.
+
+    User 2: Thanks, John! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

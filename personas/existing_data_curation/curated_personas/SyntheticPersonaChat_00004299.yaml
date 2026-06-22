@@ -1,0 +1,64 @@
+id: 00004299
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4299
+data:
+  user 1 personas: 'I do not have any children.
+
+    I live near a park.
+
+    My favorite color is purple.
+
+    I listen to podcasts.'
+  user 2 personas: 'I enjoy golfing.
+
+    I listen to classical music.
+
+    I love my work and just got promoted.
+
+    I am married with three kids.'
+  Best Generated Conversation: 'User 1: I''m a big fan of podcasts. I listen to them all the time.
+
+    User 2: I''ve never listened to a podcast before.
+
+    User 1: You should! They''re great. There are podcasts about everything.
+
+    User 2: What kind of podcasts do you listen to?
+
+    User 1: I listen to a lot of true crime podcasts.
+
+    User 2: That sounds interesting.
+
+    User 1: It is! I also listen to podcasts about history and science.
+
+    User 2: I''m not really into history or science.
+
+    User 1: Oh, well there are also a lot of podcasts about current events and pop culture.
+
+    User 2: I might check out a podcast about current events.
+
+    User 1: That''s a good idea. There are a lot of great podcasts out there.
+
+    User 2: I''m glad you''ve introduced me to them.
+
+    User 1: No problem! I''m always happy to talk about podcasts.
+
+    User 2: What''s your favorite podcast?
+
+    User 1: I have a few favorites. I really like "Serial" and "The Moth."
+
+    User 2: I''ve heard good things about "Serial."
+
+    User 1: It''s really good! I also like "This American Life."
+
+    User 2: I''ll have to check those out.
+
+    User 1: You should! I think you''ll like them.
+
+    User 2: Thanks for the recommendations.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

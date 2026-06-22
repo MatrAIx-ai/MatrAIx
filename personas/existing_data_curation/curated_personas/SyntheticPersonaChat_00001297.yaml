@@ -1,0 +1,74 @@
+id: 00001297
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1297
+data:
+  user 1 personas: 'I have long legs.
+
+    Like a skeleton.
+
+    I am dumpy.
+
+    I have long fingers.'
+  user 2 personas: 'I enjoy watching tennis and golf on tv.
+
+    My name is sarah.
+
+    I love to read and relax by the lake on the weekends.
+
+    I am a school teacher.
+
+    I teach 5th grade students near oakville , ny.'
+  Best Generated Conversation: 'User 1: Hi, I''m new here.
+
+    User 2: Hi, welcome! What''s your name?
+
+    User 1: My name is [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. What do you like to do for fun?
+
+    User 1: I like to read, watch TV, and go to the movies.
+
+    User 2: I like to read and watch TV too. What kind of books do you like to read?
+
+    User 1: I like to read mystery novels, historical fiction, and fantasy.
+
+    User 2: I like to read historical fiction and fantasy too. What''s your favorite book?
+
+    User 1: My favorite book is The Lord of the Rings.
+
+    User 2: That''s a great book! I''ve read it several times.
+
+    User 1: I''ve read it three times.
+
+    User 2: What''s your favorite part?
+
+    User 1: My favorite part is when Frodo and Sam are on their journey to Mordor.
+
+    User 2: That''s a great part. I love the relationship between Frodo and Sam.
+
+    User 1: Me too. They''re such good friends.
+
+    User 2: Yeah, they are.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love to go hiking and camping.
+
+    User 1: I love hiking too! I''ve never been camping, though.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: I''m sure I would too.
+
+    User 2: Well, it was nice talking to you, [user 1''s name].
+
+    User 1: It was nice talking to you too, Sarah.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00007977
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7977
+data:
+  user 1 personas: 'One of my favorite shows is face off on syfy.
+
+    I am a stay at home mom.
+
+    I enjoy a good run.
+
+    I enjoy cooking but not baking.
+
+    I like things in organized.'
+  user 2 personas: 'I wear glasses.
+
+    I have good health.
+
+    I have eight grandchildren.
+
+    I am retired.
+
+    I stay active.'
+  Best Generated Conversation: 'User 1: Hi, my name is [Name].
+
+    User 2: Hi, I''m [Name].
+
+    User 1: I''m a stay-at-home mom, and I enjoy running, cooking, and organizing.
+
+    User 2: That sounds like a great life. I''m retired and I have eight grandchildren. I stay active by walking and playing with my grandchildren.
+
+    User 1: That''s great! I love running and cooking, but I''m not very good at baking.
+
+    User 2: I''m not very good at baking either, but I love to eat it!
+
+    User 1: What''s your favorite show on TV?
+
+    User 2: My favorite show is Face Off on Syfy. I love the creativity and artistry of the contestants.
+
+    User 1: That''s a great show! I love seeing what the contestants come up with.
+
+    User 2: Me too! It''s always so impressive.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 1: I agree. It''s been nice talking to you.
+
+    User 2: You too. I hope we can talk again soon.
+
+    User 1: Me too. Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

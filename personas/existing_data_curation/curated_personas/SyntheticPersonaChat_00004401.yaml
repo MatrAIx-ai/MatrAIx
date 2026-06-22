@@ -1,0 +1,68 @@
+id: '00004401'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4401
+data:
+  user 1 personas: 'I like to play video games.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I play guitar on my free time.
+
+    I live alone.'
+  user 2 personas: 'I have freckles.
+
+    My best friend is from tanzania.
+
+    I like to bake brownies.
+
+    I love wearing flip flops.
+
+    I love laughing.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: What are you up to today?
+
+    User 2: I''m baking brownies!
+
+    User 1: Oh, that sounds delicious! I love brownies.
+
+    User 2: Me too! I''m making them for my best friend. She''s from Tanzania, and she loves brownies.
+
+    User 1: That''s so sweet of you!
+
+    User 2: Thanks! I love baking for her.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to play video games, cook, and play guitar.
+
+    User 1: That''s a lot of hobbies! I like to play video games too.
+
+    User 2: Which games do you like to play?
+
+    User 1: I like to play RPGs and adventure games.
+
+    User 2: Me too! I love the story-telling aspect of RPGs.
+
+    User 1: Me too! I''m also a big fan of open-world games.
+
+    User 2: Oh yeah, those are great too! I love being able to explore and do whatever I want.
+
+    User 1: Me too! So, what''s your favorite game of all time?
+
+    User 2: I think my favorite game of all time is Skyrim.
+
+    User 1: Skyrim is great! I love the exploration and the character customization.
+
+    User 2: Me too! I also love the combat and the magic system.
+
+    User 1: Me too! Skyrim is one of my favorite games of all time too.
+
+    User 2: It''s so good! I''m glad we agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

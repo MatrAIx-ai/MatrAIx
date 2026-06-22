@@ -1,0 +1,76 @@
+id: '00001166'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1166
+data:
+  user 1 personas: 'My name is omar.
+
+    I am the youngest of three brothers.
+
+    I have never been to the city.
+
+    I live on a small farm in ohio.
+
+    I play guitar in the local band.'
+  user 2 personas: 'I plan to retire in 6 months.
+
+    I have the support of my whole family.
+
+    I have studied ballet all my life.
+
+    My mother is a ballerina.'
+  Best Generated Conversation: 'User 1: Hi, I''m Omar.
+
+    User 2: Hi Omar, I''m Sarah.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a professional ballet dancer.
+
+    User 1: Oh, that''s cool! I''ve never been to a ballet.
+
+    User 2: You should come see one! It''s a beautiful experience.
+
+    User 1: I might just do that.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what are you planning to do after you retire?
+
+    User 2: I''m not sure yet. I''ve been thinking about teaching ballet.
+
+    User 1: That would be great! You''re so talented.
+
+    User 2: Thank you, Omar.
+
+    User 1: I''m sure you''ll be a great teacher.
+
+    User 2: I hope so.
+
+    User 1: So, do you have any siblings?
+
+    User 2: Yes, I have two sisters.
+
+    User 1: Oh, that''s nice.
+
+    User 2: Yes, I''m the youngest.
+
+    User 1: Me too! I have two older brothers.
+
+    User 2: Oh, that''s cool.
+
+    User 1: So, what''s your favorite thing to do outside of ballet?
+
+    User 2: I love to read.
+
+    User 1: Oh, me too! What kind of books do you like to read?
+
+    User 2: I like to read historical fiction and thrillers.
+
+    User 1: Oh, I love thrillers too!
+
+    User 2: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

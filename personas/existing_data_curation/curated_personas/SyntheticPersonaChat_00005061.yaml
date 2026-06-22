@@ -1,0 +1,70 @@
+id: '00005061'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5061
+data:
+  user 1 personas: 'I never learned how to drive.
+
+    My favorite number is 7.
+
+    I love to read books.
+
+    I sometimes scratch my nose for fun.
+
+    I am a deaf man.'
+  user 2 personas: 'I love candy.
+
+    I almost always wear a t shirt and jeans.
+
+    I have a crush on my co worker.
+
+    I go to college part time.
+
+    Skateboarding is a hobby of mine.'
+  Best Generated Conversation: 'User 1: Hello! I''m a deaf man.
+
+    User 2: Hi! I''m a college student.
+
+    User 1: What''s your favorite number?
+
+    User 2: Mine is 7! What''s yours?
+
+    User 1: Mine is also 7!
+
+    User 2: That''s so cool!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, skate, and eat candy.
+
+    User 1: I love to read too!
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but I''d have to say Harry Potter is my favorite.
+
+    User 2: I love Harry Potter too!
+
+    User 1: Me too!
+
+    User 2: I also love to skateboard.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to skate.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: I will!
+
+    User 2: What''s your favorite kind of candy?
+
+    User 1: I love gummy bears!
+
+    User 2: Me too!
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

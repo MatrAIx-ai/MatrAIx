@@ -1,0 +1,66 @@
+id: 00000847
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 847
+data:
+  user 1 personas: 'I love to surf.
+
+    I love pandas.
+
+    I am a vegetarian.
+
+    My favorite thing to do is to read books on the beach.'
+  user 2 personas: 'I make pottery.
+
+    I like to refurbish classic cars.
+
+    I once lived in a storage locker for two months.
+
+    I have appeared on the show jeopardy.
+
+    I am a recovering alcoholic.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make pottery, refurbish classic cars, and I once lived in a storage locker for two months.
+
+    User 1: Wow! That''s all very interesting! I''m a vegetarian and I love to surf. My favorite thing to do is read books on the beach.
+
+    User 2: That sounds like a lot of fun! I''ve never been surfing, but I''ve always wanted to try it.
+
+    User 1: You should! It''s really great.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a recovering alcoholic and I work as a counselor at a local rehab center.
+
+    User 1: That''s really great! I''m so glad you''re doing well.
+
+    User 2: Thanks! I''m trying my best.
+
+    User 1: I''m sure you''re doing great.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite thing about living in California?
+
+    User 2: I love the weather. It''s always sunny and warm.
+
+    User 1: That''s true! I love it too.
+
+    User 2: So, what are you doing today?
+
+    User 1: I''m going to the beach. I''m going to surf and read a book.
+
+    User 2: That sounds like a great day!
+
+    User 1: Thanks! I''m excited.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

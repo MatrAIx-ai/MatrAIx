@@ -1,0 +1,80 @@
+id: 00001086
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1086
+data:
+  user 1 personas: 'I love the rain.
+
+    I sleep on a single bed.
+
+    I drive a van.
+
+    I prefer winter.
+
+    My favorite food is pizza.'
+  user 2 personas: 'My mom is a palm reader in new orleans.
+
+    My favorite food is shrimp.
+
+    I sometimes spend too much money at the casino.
+
+    I love hanging out with my friends.
+
+    I once met a man i still believe was a vampire.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I like the rain.
+
+    User 2: Me too! It''s so peaceful and relaxing.
+
+    User 1: I know, right? It''s the best when you''re inside, warm and dry, and you can just listen to the rain falling.
+
+    User 2: Exactly! It''s like a lullaby.
+
+    User 1: I also love the smell of the rain. It''s so fresh and clean.
+
+    User 2: Me too! It''s like the air is being washed clean.
+
+    User 1: Do you sleep on a single bed, too?
+
+    User 2: No, I have a queen-sized bed.
+
+    User 1: Oh, that''s nice. I like having a lot of space to spread out.
+
+    User 2: Me too! I love to curl up and read a book before bed.
+
+    User 1: I love to read books, too! I love getting lost in a good story.
+
+    User 2: Me too! Reading is my favorite way to relax.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: My favorite food is shrimp. I love it any way it''s cooked.
+
+    User 1: I love shrimp, too! It''s so delicious.
+
+    User 2: It is! I love the taste and the texture.
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love hanging out with my friends and family. We love to go to the movies, play board games, or just sit around and talk.
+
+    User 1: That sounds like fun! I love spending time with my friends and family too.
+
+    User 2: Me too! It''s the best way to relax and have fun.
+
+    User 1: So, what''s your favorite place in the world?
+
+    User 2: My favorite place in the world is New Orleans. I love the culture, the food, and the music.
+
+    User 1: I''ve never been to New Orleans, but it''s always sounded like a fun place to visit.
+
+    User 2: It is! You should definitely go sometime.
+
+    User 1: I will! I''m sure it would be a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

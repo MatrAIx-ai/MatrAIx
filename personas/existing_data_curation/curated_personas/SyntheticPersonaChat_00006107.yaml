@@ -1,0 +1,80 @@
+id: '00006107'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6107
+data:
+  user 1 personas: 'Its good to eat a lot of veggies.
+
+    I do the shopping in my house.
+
+    I am lazy and pork tastes good.
+
+    I want to be a vegetarian.
+
+    I like meat too much.'
+  user 2 personas: 'My name is mary.
+
+    I am also a fulltime student studying radiology at local college.
+
+    I manage all the paperwork and incoming calls.
+
+    My weekends are spent studying and looking over client files.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is Mary.
+
+    User 1: It''s nice to meet you, Mary. I''m [user 1].
+
+    User 2: It''s nice to meet you too, [user 1].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a full-time student studying radiology at the local college.
+
+    User 1: Oh, that''s interesting! I''m sure it''s a lot of work.
+
+    User 2: It can be, but it''s also very rewarding. I''m excited to start working in the field once I graduate.
+
+    User 1: I''m sure you''ll do great things.
+
+    User 2: Thank you!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to spend time with my friends and family, go out to eat, and read.
+
+    User 1: Sounds like you have a lot of interests.
+
+    User 2: I do! I try to keep myself busy.
+
+    User 1: That''s good.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, go for walks, and watch movies.
+
+    User 2: Oh, I like video games too! What are some of your favorites?
+
+    User 1: I like a lot of different games, but my favorites are probably the Zelda and Mario series.
+
+    User 2: Those are both great series! I''m more of a fan of the Final Fantasy series myself.
+
+    User 1: Oh, I''ve never played any of those games.
+
+    User 2: You should! They''re really good.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You won''t be disappointed.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

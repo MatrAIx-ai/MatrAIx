@@ -1,0 +1,70 @@
+id: 00006810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6810
+data:
+  user 1 personas: 'I love to eat pita bread with hummus.
+
+    I go to work early in the morning as a nurse.
+
+    I am a mother of three.
+
+    I am thinking of becoming a mother next year.
+
+    I am bipolar.'
+  user 2 personas: 'I am a steelers fan.
+
+    My favorite band is the avett brother.
+
+    I love to travel.
+
+    I am a psychology major.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m (name).
+
+    User 2: Nice to meet you, (name). I''m (name).
+
+    User 1: What do you do for fun?
+
+    User 2: I love to travel, read, and listen to music.
+
+    User 1: I like to travel too! What''s your favorite place you''ve been to?
+
+    User 2: I loved Paris! The food was amazing and the architecture was beautiful.
+
+    User 1: I''ve never been to Paris, but I''ve always wanted to go.
+
+    User 2: You should definitely go! It''s a beautiful city.
+
+    User 1: What''s your favorite band?
+
+    User 2: I''m a big fan of the Avett Brothers.
+
+    User 1: I''ve heard good things about them! I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: What''s your favorite thing about being a psychology major?
+
+    User 2: I love learning about the human mind and how it works.
+
+    User 1: That''s interesting! I''m a nurse, so I''m always learning about the human body.
+
+    User 2: That''s cool! I''m sure you learn a lot about the human body.
+
+    User 1: I do! It''s always interesting to learn about how the body works.
+
+    User 2: It is! I''m glad you''re a nurse. Nurses do a lot of important work.
+
+    User 1: Thanks! I appreciate that. I''m glad I''m a nurse too. It''s a great job.
+
+    User 2: I''m sure it is! I''m glad we had this conversation. It was nice to meet you.
+
+    User 1: You too! It was nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

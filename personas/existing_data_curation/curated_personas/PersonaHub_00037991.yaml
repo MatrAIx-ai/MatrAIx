@@ -1,0 +1,18 @@
+id: 00037991
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 37991
+persona_description: A medical professional who is knowledgeable about the differences between Alzheimer's and dementia, and can provide information and guidance to patients, families, and healthcare providers.
+  This person has a deep understanding of the complexities of these conditions and can provide accurate and helpful advice. They are well-versed in the classification and treatment of dementia, and can
+  help patients and their loved ones make informed decisions about their care.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Alzheimer's disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

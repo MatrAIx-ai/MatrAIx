@@ -1,0 +1,94 @@
+id: '00000725'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 725
+data:
+  user 1 personas: 'I like to read.
+
+    I love country music.
+
+    I have been at my job for seven years.
+
+    I am a vegan.
+
+    I love the beach.'
+  user 2 personas: 'I love helping people.
+
+    My favorite food is pasta.
+
+    I live in a rural area.
+
+    I am a older woman.
+
+    I retired so i can spend more time with my husband and helping people.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you!
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I love to help people. I''m a retired nurse, and I now volunteer at a local soup kitchen.
+
+    User 1: That''s so great! I love helping people too. I''m a vegan, so I volunteer at a local animal shelter.
+
+    User 2: That''s amazing! I love animals too. I have a dog and a cat at home.
+
+    User 1: I love dogs! I have a cat, but I''ve always wanted a dog too.
+
+    User 2: You should get one! They''re so much fun.
+
+    User 1: I know, I know! I''ve been thinking about it.
+
+    User 2: Well, if you do, you can always bring them to the soup kitchen. We love dogs there!
+
+    User 1: That''s a great idea! I''ll definitely keep that in mind.
+
+    User 2: Good!
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love pasta! I could eat it every day.
+
+    User 1: Me too! I love pasta with tomato sauce.
+
+    User 2: That''s my favorite too!
+
+    User 1: I also love pesto pasta.
+
+    User 2: Oh, that''s good too!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to read. I''m always reading something.
+
+    User 1: Me too! What''s your favorite book?
+
+    User 2: I love Jane Austen. I''ve read all of her books.
+
+    User 1: I love Jane Austen too! I''ve read Pride and Prejudice and Sense and Sensibility.
+
+    User 2: Those are my favorites too!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a retired nurse. I worked at a hospital for 30 years.
+
+    User 1: That''s amazing! I''m sure you made a difference in a lot of people''s lives.
+
+    User 2: I hope so! I loved my job.
+
+    User 1: I''m sure you did. You seem like a very caring person.
+
+    User 2: Thank you! I try.
+
+    User 1: So, what do you do now that you''re retired?
+
+    User 2: I volunteer at a local soup kitchen. I also like to read and spend time with my family.
+
+    User 1: That sounds like a great life.
+
+    User 2: It is! I''m very happy.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

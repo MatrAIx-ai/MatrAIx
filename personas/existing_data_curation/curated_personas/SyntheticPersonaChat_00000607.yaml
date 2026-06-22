@@ -1,0 +1,68 @@
+id: '00000607'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 607
+data:
+  user 1 personas: 'I am an artist.
+
+    I speak french and english fluently.
+
+    I enjoy hiking.
+
+    I am planning to move to a new state soon.
+
+    I have two border collies.'
+  user 2 personas: 'I enjoy karaoke every friday night.
+
+    I enjoy crosswords , crocheting , and football.
+
+    I m a sixth grade teacher.
+
+    I m allergic to apples yet still eat them.
+
+    I coach the girl s volley ball team.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m an artist and I enjoy hiking. I''m planning to move to a new state soon. I have two border collies.
+
+    User 2: That''s cool! I''m a sixth grade teacher, I enjoy crosswords, crocheting and football. I''m allergic to apples but I still eat them. I coach the girl''s volleyball team.
+
+    User 1: That''s interesting! I''ve never coached a sports team before.
+
+    User 2: It''s fun! I love working with kids and teaching them new skills.
+
+    User 1: I can imagine! I love working with kids too.
+
+    User 2: What are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about moving to a new state, but I''m not sure where yet.
+
+    User 2: That''s exciting! I''m sure you''ll find a great place to live.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, paint, and spend time with my dogs.
+
+    User 2: That sounds like a lot of fun! I love to go hiking too.
+
+    User 1: Me too! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 2: I agree! So, what''s your favorite kind of art to paint?
+
+    User 1: I like to paint landscapes and portraits.
+
+    User 2: Those are both beautiful genres of art. I love seeing the different ways that artists capture the beauty of the world.
+
+    User 1: Me too! It''s amazing how different artists can interpret the same subject matter in such different ways.
+
+    User 2: It really is. I think it''s a testament to the creativity of the human spirit.
+
+    User 1: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

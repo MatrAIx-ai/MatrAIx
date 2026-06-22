@@ -1,0 +1,50 @@
+id: 00002528
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2528
+data:
+  user 1 personas: 'I like to take walks.
+
+    We plan to travel after he retires.
+
+    Many of my former students like to visit me.
+
+    I am a retired school teacher.'
+  user 2 personas: 'I am in between classes.
+
+    I volunteer with dogs.
+
+    Although i m studying to be a doctor , animals like me.
+
+    I am a graduate student.'
+  Best Generated Conversation: 'User 1: Hi there! What do you like to do for fun?
+
+    User 2: I enjoy spending time with animals, including my dog. I also like to volunteer with dogs at the local animal shelter.
+
+    User 1: That''s great! I''m also a big animal lover. I volunteer with dogs at the local animal shelter too.
+
+    User 2: That''s so cool! What kind of dogs do you like to volunteer with?
+
+    User 1: I like all kinds of dogs, but I have a special place in my heart for senior dogs. They''re so sweet and loving.
+
+    User 2: I agree! Senior dogs are the best. They''re so grateful for your time and attention.
+
+    User 1: I know, right? They''re just the best.
+
+    User 2: What do you like to do with your dogs when you''re volunteering?
+
+    User 1: We usually just play fetch or go for walks. I also like to brush their fur and give them treats.
+
+    User 2: That sounds like so much fun! I love doing those things with my dog too.
+
+    User 1: Me too! It''s so rewarding to see how happy they are.
+
+    User 2: I know, right? It''s the best feeling in the world.
+
+    User 1: I''m glad you''re a fellow animal lover. It''s so much fun to talk to someone who understands.
+
+    User 2: I agree! It''s always nice to meet someone who shares your passion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

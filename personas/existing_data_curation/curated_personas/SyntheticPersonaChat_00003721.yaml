@@ -1,0 +1,58 @@
+id: '00003721'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3721
+data:
+  user 1 personas: 'I like vintage furniture.
+
+    I collect stamps.
+
+    I play the bass.
+
+    I have a large cd collection.'
+  user 2 personas: 'My husband works at a telecom.
+
+    I am a mother of 2 daughters.
+
+    I m a people person.
+
+    I love adventures like mountain climbing.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go on adventures, like mountain climbing.
+
+    User 1: That sounds fun! I like to play music. I play the bass.
+
+    User 2: That''s cool! I''ve always wanted to learn to play an instrument.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might! What kind of music do you like to play?
+
+    User 1: I like to play a lot of different kinds of music, but I mostly play rock and blues.
+
+    User 2: I like rock and blues too! What are some of your favorite bands?
+
+    User 1: I like The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 2: Those are great bands! I like them too.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to rock and blues. I also like some country and folk music.
+
+    User 1: I like some country and folk music too. I''m glad we have similar taste in music.
+
+    User 2: Me too! It''s always nice to find someone who likes the same music as you.
+
+    User 1: It is. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

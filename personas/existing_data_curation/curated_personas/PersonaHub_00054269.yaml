@@ -1,0 +1,18 @@
+id: 00054269
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54269
+persona_description: A forensic scientist who specializes in DNA identification, particularly in the detection of suspects in criminal cases. They are skilled in interpreting DNA profiles to identify individuals
+  with a high degree of certainty, and are aware of the limitations of DNA identification in cases where the sample is degraded or contaminated. They are also aware of the prosecutor's fallacy, which is
+  the tendency to overestimate the probability of an innocent person being found guilty based on a small sample size.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: forensic statistics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

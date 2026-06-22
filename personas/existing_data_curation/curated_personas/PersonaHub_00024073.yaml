@@ -1,0 +1,18 @@
+id: '00024073'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24073
+persona_description: A healthcare professional with expertise in endocrinology and oncology. They are knowledgeable about the diagnosis, treatment, and management of pheochromocytoma and related conditions.
+  They are familiar with the use of lab tests, imaging, and surgery for treatment, as well as the options for targeted therapy. They have experience with rare tumors like pheochromocytoma and are aware
+  of the potential complications and co-occurring conditions associated with it.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: pheochromocytoma treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

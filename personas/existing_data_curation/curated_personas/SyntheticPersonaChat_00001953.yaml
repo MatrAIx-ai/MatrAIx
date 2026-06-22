@@ -1,0 +1,74 @@
+id: 00001953
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1953
+data:
+  user 1 personas: 'I like to exercise.
+
+    I have a boxer dog.
+
+    My father lives in china.
+
+    I like to listen to music.
+
+    I like baths.'
+  user 2 personas: 'I collect bugs in jars.
+
+    I build my own computers.
+
+    I ran for political office in 2004.
+
+    I was a mechanic for 6 years.
+
+    I thought of joining the military when i was younger.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to build my own computers, collect bugs in jars, and I ran for political office in 2004.
+
+    User 1: That''s interesting! I like to exercise, listen to music, and take baths.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I especially like rock, pop, and hip-hop.
+
+    User 2: I like all of those genres too!
+
+    User 1: What''s your favorite band?
+
+    User 2: I don''t really have a favorite band, but I like a lot of different bands, like The Beatles, The Rolling Stones, and The Clash.
+
+    User 1: I love The Beatles! They''re my favorite band.
+
+    User 2: They''re so good!
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I don''t really have a favorite song, but I like a lot of their songs, like "Yellow Submarine", "All You Need Is Love", and "Imagine".
+
+    User 1: Those are all great songs!
+
+    User 2: Yeah, they are!
+
+    User 1: What''s your favorite kind of bug?
+
+    User 2: I don''t really have a favorite kind, but I like collecting all kinds of bugs.
+
+    User 1: That''s cool! I''ve never been much of a bug collector, but I think it''s neat.
+
+    User 2: It''s a lot of fun!
+
+    User 1: I bet it is!
+
+    User 2: Yeah, it is!
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

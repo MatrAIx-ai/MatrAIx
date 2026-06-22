@@ -1,0 +1,70 @@
+id: 00006208
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6208
+data:
+  user 1 personas: 'I design video games for a living.
+
+    I hate broccoli.
+
+    I am afraid of the dark.
+
+    My mom is my best friend.'
+  user 2 personas: 'I like the beatles.
+
+    I am well built and tall.
+
+    I work as a scientist.
+
+    My parents were scientists.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m a video game designer.
+
+    User 2: Nice! I''m a scientist.
+
+    User 1: Cool! What kind of science do you study?
+
+    User 2: I''m a physicist.
+
+    User 1: Wow, that''s amazing! I''ve always been interested in physics.
+
+    User 2: It''s a lot of fun! What''s your favorite video game?
+
+    User 1: I like a lot of different games, but my favorite is probably Super Mario Odyssey.
+
+    User 2: Oh, I love that game! It''s so much fun.
+
+    User 1: Yeah, it''s a masterpiece.
+
+    User 2: What do you like about it?
+
+    User 1: I love the platforming, the exploration, and the characters.
+
+    User 2: Yeah, the characters are so charming.
+
+    User 1: I also love the music.
+
+    User 2: Yeah, the music is great.
+
+    User 1: What''s your favorite song from the game?
+
+    User 2: I think my favorite song is "Jump Up, Super Star!"
+
+    User 1: That''s a good one! I also like "Break Free (Lead the Way)."
+
+    User 2: Those are both great songs!
+
+    User 1: I''m glad you like them.
+
+    User 2: Yeah, they''re really catchy.
+
+    User 1: I''m glad we agree.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

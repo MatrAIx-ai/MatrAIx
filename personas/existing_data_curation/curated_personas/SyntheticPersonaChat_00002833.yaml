@@ -1,0 +1,78 @@
+id: 00002833
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2833
+data:
+  user 1 personas: 'I like to play tennis.
+
+    My dad is a veteran.
+
+    I love watching funny movies.
+
+    I listen to all kinds of music.
+
+    My favorite color is green.'
+  user 2 personas: 'I do not like acting.
+
+    I have 3 ex wives.
+
+    My father was a famous actor.
+
+    I do not like kids.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I like to play tennis. Do you play any sports?
+
+    User 2: No, I don''t like sports. I prefer to act.
+
+    User 1: Oh, that''s interesting. My dad is a veteran. He was in the army for 20 years.
+
+    User 2: Wow, that''s amazing! My father was a famous actor. He was in a lot of movies and TV shows.
+
+    User 1: That''s cool! I love watching funny movies. What''s your favorite type of movie?
+
+    User 2: I don''t really have a favorite type of movie. I like them all.
+
+    User 1: Me too! I listen to all kinds of music too. What''s your favorite type of music?
+
+    User 2: I like country music.
+
+    User 1: Oh, that''s cool! I don''t listen to a lot of country music, but I like some of it.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is green.
+
+    User 2: That''s a nice color.
+
+    User 1: I think so too.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s nice! I''ve always thought about being a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: I can imagine. So, what''s your favorite thing about teaching?
+
+    User 1: I love seeing the kids learn and grow.
+
+    User 2: That''s awesome.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite thing to do outside of work?
+
+    User 1: I like to play tennis, watch movies, and listen to music.
+
+    User 2: Sounds like we have a lot in common.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

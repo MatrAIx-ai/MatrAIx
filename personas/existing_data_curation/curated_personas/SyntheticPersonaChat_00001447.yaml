@@ -1,0 +1,77 @@
+id: '00001447'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1447
+data:
+  user 1 personas: 'I work part time.
+
+    My favorite animal is the koala.
+
+    I live with a roommate.
+
+    I do not like beer.'
+  user 2 personas: 'I vacation in florida every winter.
+
+    My sister is a published author.
+
+    I sing karaoke every thursday night.
+
+    My favorite color is yellow.
+
+    I was a champion downhill skier in college.'
+  Best Generated Conversation: '* * User 1: * * What''s your favorite animal?
+
+
+    * * User 2: * * My favorite animal is the koala.
+
+
+    * * User 1: * * Koalas are so cute! I love their little ears.
+
+
+    * * User 2: * * Yeah, they''re adorable. They''re also very lazy.
+
+
+    * * User 1: * * I know, right? They spend most of their time sleeping.
+
+
+    * * User 2: * * They''re perfect animals for me. I''m pretty lazy myself.
+
+
+    * * User 1: * * Me too. I''m not sure how I''d ever survive if I had a job that required me to be up early every morning.
+
+
+    * * User 2: * * Same here. I love my part-time job. It''s perfect for me.
+
+
+    * * User 1: * * What do you do for a living?
+
+
+    * * User 2: * * I''m a barista at a local coffee shop.
+
+
+    * * User 1: * * That sounds like a fun job.
+
+
+    * * User 2: * * It is. I get to meet all kinds of interesting people.
+
+
+    * * User 1: * * That''s cool. Do you have any other hobbies?
+
+
+    * * User 2: * * I like to sing karaoke every Thursday night.
+
+
+    * * User 1: * * Oh, that sounds fun. I''ve always wanted to try karaoke.
+
+
+    * * User 2: * * You should! It''s a lot of fun.
+
+
+    * * User 1: * * Maybe I will.
+
+
+    * * User 2: * * You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00022760'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22760
+persona_description: A space scientist who specializes in comet exploration and image capture. This persona is likely to be an ESA (European Space Agency) mission specialist or astronomer, responsible for
+  conducting research on the Rosetta spacecraft and its mission to Comet 67P. They would have expertise in spacecraft operations, image processing, and comet exploration, and would be involved in the analysis
+  and interpretation of the Rosetta's images, which would provide valuable insights into the comet's environment and behavior.
+expertise:
+  general_domain_top1pct: space science
+  specific_domain_top1pct: comet exploration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

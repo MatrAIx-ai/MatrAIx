@@ -1,0 +1,70 @@
+id: 00008719
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8719
+data:
+  user 1 personas: 'I am a fourteen year old living with my mom and grandparents.
+
+    I like swimming.
+
+    I am a girl who loves sports cars and video games.
+
+    My favorite thing to do is research race cars in my free time.
+
+    I only have three best friends.'
+  user 2 personas: 'I fly airplanes.
+
+    I enjoy building computers.
+
+    My favorite band is tool.
+
+    I am in the army.
+
+    I dropped out of college.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fly airplanes, build computers, and listen to Tool.
+
+    User 1: That''s cool! I like swimming, playing video games, and researching race cars.
+
+    User 2: I''ve never been a big fan of video games, but I love swimming. I don''t know much about race cars, but I''m always interested in learning new things.
+
+    User 1: I''m glad you''re open to learning new things! What''s your favorite band?
+
+    User 2: Tool. They''re a progressive metal band from Los Angeles.
+
+    User 1: I''ve heard of them, but I''ve never listened to them.
+
+    User 2: You should! They''re really good.
+
+    User 1: I''ll check them out.
+
+    User 2: I''m glad.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go hiking, camping, and fishing.
+
+    User 1: That sounds fun! I''ve never been fishing, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: I''m glad.
+
+    User 1: I''m going to have to go now. It was nice talking to you.
+
+    User 2: You too! I hope we can talk again soon.
+
+    User 1: Me too! Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

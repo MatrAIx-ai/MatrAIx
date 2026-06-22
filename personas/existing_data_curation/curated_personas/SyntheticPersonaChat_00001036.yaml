@@ -1,0 +1,64 @@
+id: '00001036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1036
+data:
+  user 1 personas: 'I like football.
+
+    We drink beer and eat food.
+
+    We watch the games together.
+
+    It s great fun.
+
+    My friends like watching it to.'
+  user 2 personas: 'I live in a medium sized city.
+
+    I have 3 sisters and 2 brothers.
+
+    I love to read.
+
+    My favorite place to spend time at is the beach.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read and spend time at the beach.
+
+    User 1: That sounds great! I love to read too. What kind of books do you like to read?
+
+    User 2: I love to read fiction, especially historical fiction and fantasy.
+
+    User 1: I love historical fiction too! What are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon and the Mistborn series by Brandon Sanderson.
+
+    User 1: I''ve heard good things about both of those series! I''ll have to check them out.
+
+    User 2: You definitely should! They''re both great.
+
+    User 1: What do you like about the beach?
+
+    User 2: I love the sound of the waves and the smell of the salt air. I also love swimming and sunbathing.
+
+    User 1: That sounds amazing! I love the beach too. It''s so relaxing.
+
+    User 2: It really is. I love spending my days at the beach.
+
+    User 1: I wish I could live near the beach.
+
+    User 2: Me too! It would be so much fun.
+
+    User 1: Well, I guess I''ll have to make do with visiting the beach when I can.
+
+    User 2: That''s a good plan! You should definitely come visit my city sometime. We have some great beaches.
+
+    User 1: I''ll definitely keep that in mind.
+
+    User 2: Good! I''d love to show you around.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

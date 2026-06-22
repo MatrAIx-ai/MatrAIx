@@ -1,0 +1,72 @@
+id: '00004311'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4311
+data:
+  user 1 personas: 'I enjoy baking and cooking.
+
+    My daughters say i am a great mother.
+
+    My mother is an immigrant from saudi arabia.
+
+    I am a woman.
+
+    I have a family of three daughters.'
+  user 2 personas: 'I am an amateur chef who cooks 5 different cuisines.
+
+    I am a scientist.
+
+    I live alone.
+
+    I like to play video games.
+
+    I play guitar on my free time.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m John, nice to meet you.
+
+    User 1: Hi John, my name is Mary. What do you do for a living?
+
+    User 2: I''m a scientist.
+
+    User 1: Oh, that''s cool. What kind of science do you do?
+
+    User 2: I''m a physicist.
+
+    User 1: Wow, that''s really impressive. What''s your favorite type of cuisine to cook?
+
+    User 2: I like to cook Italian food.
+
+    User 1: Oh, that''s my favorite too! What''s your favorite dish to cook?
+
+    User 2: I love to make lasagna.
+
+    User 1: Lasagna is my favorite! What''s your favorite way to play video games?
+
+    User 2: I like to play multiplayer games.
+
+    User 1: Me too! What''s your favorite multiplayer game to play?
+
+    User 2: I like to play Call of Duty.
+
+    User 1: I''ve never played Call of Duty, but I''ve heard good things about it.
+
+    User 2: It''s a really fun game. You should try it sometime.
+
+    User 1: I might have to.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: It sounds like it.
+
+    User 2: It is.
+
+    User 1: Well, it was nice talking to you, John.
+
+    User 2: You too, Mary. It was nice meeting you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

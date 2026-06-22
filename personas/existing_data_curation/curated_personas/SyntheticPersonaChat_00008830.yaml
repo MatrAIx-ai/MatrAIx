@@ -1,0 +1,86 @@
+id: 00008830
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8830
+data:
+  user 1 personas: 'The only music i listen to is pop , because it makes me feel happy.
+
+    My parents both are school teachers.
+
+    Watching nascar races is a great way to spend a sunday for me.
+
+    I want to own a house on a beach.'
+  user 2 personas: 'I have a parakeet.
+
+    I have 3 roommates.
+
+    I love gummy bears.
+
+    My favorite color is orange.
+
+    I am lactose intolerant.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for a living?
+
+    User 2: I am a teacher.
+
+    User 1: What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That must be fun. I can''t imagine teaching kindergarten.
+
+    User 2: It''s really rewarding, but it can also be challenging.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, read, and go to the beach.
+
+    User 1: I like to do all of those things too. What is your favorite movie?
+
+    User 2: My favorite movie is "The Shawshank Redemption."
+
+    User 1: That''s a great movie. I love it too.
+
+    User 2: What is your favorite book?
+
+    User 1: My favorite book is "The Catcher in the Rye."
+
+    User 2: That''s a great book too. I love J.D. Salinger''s writing style.
+
+    User 1: I do too. He''s a great writer.
+
+    User 2: What is your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: That''s a pretty color. My favorite color is orange.
+
+    User 1: Orange is a good color too.
+
+    User 2: I''m glad we agree.
+
+    User 1: Me too.
+
+    User 2: I''m lactose intolerant.
+
+    User 1: Me too! What are some of your favorite foods that you can eat?
+
+    User 2: I like to eat a lot of fruits and vegetables. I also like to eat pasta and rice.
+
+    User 1: Me too! I love pasta and rice. What are some of your favorite fruits and vegetables?
+
+    User 2: I like to eat apples, oranges, bananas, and carrots. I also like to eat broccoli and spinach.
+
+    User 1: Me too! I love all of those foods.
+
+    User 2: I''m glad we agree.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

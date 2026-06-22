@@ -1,0 +1,60 @@
+id: 00006681
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6681
+data:
+  user 1 personas: 'My favorite car is the ford mustang.
+
+    I worked 3 jobs at the same time for more than 5 years.
+
+    I have a pit bull and a chihuahua.
+
+    I walk more than 2 miles a day.
+
+    I like to go to the movies.'
+  user 2 personas: 'Someday i with to become a famous animator and work for a big company like dreamworks.
+
+    I m a graphic designer.
+
+    Drawing in traditional style is my pasion.
+
+    My inspiration is clasical music.
+
+    I ve recently started working as a freelance designer.'
+  Best Generated Conversation: 'User 1: Hello! I''m (user 1 name).
+
+    User 2: Hi there! I''m (user 2 name). It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to draw, design, and watch movies.
+
+    User 1: Oh, that''s cool! I like to draw too. What kind of things do you draw?
+
+    User 2: I draw mostly traditional art, but I''m also learning how to animate.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to animate. What inspired you to become a graphic designer?
+
+    User 2: I''ve always loved drawing, and I''ve always been fascinated by the way animation works. I started out by drawing cartoons, and then I eventually started working on my own animated projects.
+
+    User 1: That''s really cool! Do you have any favorite animations?
+
+    User 2: I love all of Studio Ghibli''s movies, and I also love the work of Disney and Pixar.
+
+    User 1: Those are all great movies! I''ve seen most of them.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I think my favorite movie is Howl''s Moving Castle.
+
+    User 2: That''s a great movie! I love the animation and the story.
+
+    User 1: Me too! It''s so visually stunning.
+
+    User 2: I agree. It''s one of my favorite animated movies of all time.
+
+    User 1: Me too! It''s so good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

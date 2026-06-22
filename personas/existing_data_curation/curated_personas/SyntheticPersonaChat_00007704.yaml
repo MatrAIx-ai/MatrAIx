@@ -1,0 +1,72 @@
+id: '00007704'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7704
+data:
+  user 1 personas: 'I drive more than an hour each way to work.
+
+    I love dragons.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.
+
+    I am a grandparent at 44.'
+  user 2 personas: 'I live in a nice attic apartment in portland or.
+
+    My brother thinks he s a viking.
+
+    I have a pet skunk.
+
+    My master s degree is in italian literature.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Where do you live?
+
+    User 2: I live in Portland, Oregon.
+
+    User 1: That''s cool! I''ve always wanted to visit Oregon.
+
+    User 2: You should! It''s a beautiful state.
+
+    User 1: I''m sure it is. What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: I like to read and play video games too! What are some of your favorite books?
+
+    User 2: I like a lot of different books, but I''m really into fantasy and science fiction.
+
+    User 1: Me too! I love dragons.
+
+    User 2: Dragons are the best! I have a pet skunk.
+
+    User 1: You have a pet skunk? That''s awesome! I''ve always wanted a pet skunk.
+
+    User 2: They''re great pets! They''re very friendly and affectionate.
+
+    User 1: They sound like they''d be great companions.
+
+    User 2: They are! I love my skunk.
+
+    User 1: So, what do you do for work?
+
+    User 2: I have a master''s degree in Italian literature, but I work as a barista.
+
+    User 1: That''s cool! I''ve always wanted to learn Italian.
+
+    User 2: It''s a beautiful language. I''m glad I got to study it.
+
+    User 1: So, what''s your favorite thing about Portland?
+
+    User 2: I love the food scene. There are so many great restaurants here.
+
+    User 1: I''ve heard that! I''m looking forward to trying some of the food.
+
+    User 2: You definitely should! There are some amazing restaurants here.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

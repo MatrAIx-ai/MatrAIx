@@ -1,0 +1,54 @@
+id: 00000836
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 836
+data:
+  user 1 personas: 'I love to shop.
+
+    My favorite french fries are from mcdonalds.
+
+    I live in toronto , canada.
+
+    My mom and dad are from japan.'
+  user 2 personas: 'I like nature.
+
+    My favorite color is blue.
+
+    I like to go hiking.
+
+    I love eating out.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is (name).
+
+    User 1: Nice to meet you (name). Where are you from?
+
+    User 2: I''m from Toronto, Canada.
+
+    User 1: Oh, I''ve always wanted to visit Canada!
+
+    User 2: It''s a beautiful country! You should definitely come visit sometime.
+
+    User 1: I will! What do you like to do in your free time?
+
+    User 2: I like to go hiking, go camping, and spend time in nature.
+
+    User 1: That sounds like a lot of fun! I like to go shopping and eat out.
+
+    User 2: Oh, I love shopping too! And I love trying new foods.
+
+    User 1: Have you ever been to Japan?
+
+    User 2: No, I haven''t. I''ve always wanted to go, though.
+
+    User 1: You should definitely go! It''s a beautiful country with a rich culture.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! It was nice chatting with you (name).
+
+    User 2: It was nice chatting with you too (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

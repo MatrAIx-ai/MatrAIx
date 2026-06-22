@@ -1,0 +1,70 @@
+id: '00001743'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1743
+data:
+  user 1 personas: 'I work at a hotel.
+
+    I like chicken nuggets.
+
+    I love reading.
+
+    My favorite band is a fine frenzy.
+
+    I love animals.'
+  user 2 personas: 'I live in a retirement home.
+
+    My children vist often.
+
+    I like to bake for them.
+
+    My grandson s favorite type of cake is chocolate.
+
+    I am an old woman.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just relaxing.
+
+    User 1: Where do you live?
+
+    User 2: I live in a retirement home.
+
+    User 1: Oh, cool. I''ve never been to a retirement home before.
+
+    User 2: It''s pretty nice here. We have a lot of activities and my children visit often.
+
+    User 1: That''s good to hear. What kind of activities do you have?
+
+    User 2: We have bingo, movies, and music. We also have a garden where we can grow our own vegetables.
+
+    User 1: That sounds really fun. I love gardening.
+
+    User 2: Me too! I love growing tomatoes and cucumbers.
+
+    User 1: What''s your favorite kind of cake?
+
+    User 2: My grandson''s favorite kind of cake is chocolate.
+
+    User 1: Chocolate cake is delicious! I love chocolate cake with vanilla frosting.
+
+    User 2: Me too! That''s my favorite kind of cake.
+
+    User 1: Do you like to read?
+
+    User 2: I love to read! I''m always reading a book.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is To Kill a Mockingbird by Harper Lee.
+
+    User 1: I love that book too! It''s one of my favorites.
+
+    User 2: It''s such a good book. I love the characters and the story.
+
+    User 1: Me too! It''s a classic for a reason.
+
+    User 2: I''m glad you like it too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

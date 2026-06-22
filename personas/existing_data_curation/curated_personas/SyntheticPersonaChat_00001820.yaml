@@ -1,0 +1,62 @@
+id: 00001820
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1820
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I love to be run.
+
+    I like to dance with my friends.'
+  user 2 personas: 'I would love to be a professional eater and not get fat.
+
+    I hate cleaning up after my husband and children.
+
+    I cannot choose between lollipops and rainbows.
+
+    To free my mind from feeling depressed i look up at the stars at night.
+
+    I believe in aliens.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to eat! I would love to be a professional eater, but I would never want to get fat.
+
+    User 1: That''s funny! I love to eat too, but I''m not sure I could eat enough to be a professional eater.
+
+    User 2: Yeah, it would be a lot of work! But it would be so much fun!
+
+    User 1: What''s your favorite food?
+
+    User 2: I have a few favorites, but I think my favorite food is lollipops.
+
+    User 1: Lollipops? That''s interesting! I''ve never met anyone who likes lollipops that much.
+
+    User 2: I know, it''s weird! But I just love the sweet, sugary taste.
+
+    User 1: I can understand that! I love sweets too.
+
+    User 2: Do you like rainbows?
+
+    User 1: Yes, I love rainbows! They''re so beautiful and colorful.
+
+    User 2: Me too! I love looking up at the stars at night. It always makes me feel peaceful.
+
+    User 1: I know what you mean! I love looking up at the stars too. It''s so amazing to think about all the possibilities out there in the universe.
+
+    User 2: I believe in aliens! I think it''s so possible that there''s other life out there in the universe.
+
+    User 1: I think it''s possible too! It would be amazing to meet an alien one day.
+
+    User 2: It would be! I wonder what they would be like.
+
+    User 1: I wonder what they would think of us.
+
+    User 2: Me too! I think it would be a very interesting experience.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

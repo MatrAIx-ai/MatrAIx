@@ -1,0 +1,70 @@
+id: 00005886
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5886
+data:
+  user 1 personas: 'I work in the office , 9 till 5.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.
+
+    I like italian cusine.'
+  user 2 personas: 'I have six siblings.
+
+    The future scares me.
+
+    I was adopted when i was a baby.
+
+    My adopted dad works at hp.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that''s cool. I''m an office worker.
+
+    User 2: Do you like your job?
+
+    User 1: It''s okay.
+
+    User 2: Where do you live?
+
+    User 1: I live in a big city.
+
+    User 2: Oh, that''s cool. I live in a small town.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go shopping and spend time with my kids.
+
+    User 1: Where did you go on vacation this summer?
+
+    User 2: I went to Italy.
+
+    User 1: Oh, that''s cool. I''ve always wanted to go to Italy.
+
+    User 2: It was amazing.
+
+    User 1: What did you like about it?
+
+    User 2: The food, the culture, and the people.
+
+    User 1: That''s sounds great.
+
+    User 2: Yeah, it was.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

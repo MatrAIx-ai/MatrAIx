@@ -1,0 +1,78 @@
+id: '00005451'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5451
+data:
+  user 1 personas: 'My mother is a school teacher.
+
+    I like to surf.
+
+    I worked as a clown in the circus.
+
+    I am a reality tv star.'
+  user 2 personas: 'I like to drink green tea.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I am an author.
+
+    I like to run so that i can clear my head.'
+  Best Generated Conversation: 'User 1: Hi there! What are you up to today?
+
+    User 2: I''m just sitting in my back yard, writing a story.
+
+    User 1: Oh, that sounds fun! What are you writing about?
+
+    User 2: I''m writing about a group of friends who go on a surfing trip.
+
+    User 1: That sounds cool! I love surfing.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: Have you ever been to Hawaii?
+
+    User 2: No, I haven''t. I''ve always wanted to go, though.
+
+    User 1: It''s beautiful there. The waves are perfect for surfing.
+
+    User 2: I bet! I''ll have to go sometime.
+
+    User 1: You should! It''s an amazing place.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to write, run, and drink green tea.
+
+    User 1: Oh, that''s cool! I like to surf, read, and go out with my friends.
+
+    User 2: That sounds fun! I love to read too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like to read anything by Stephen King, but my favorite book is probably "The Shining."
+
+    User 1: I''ve read "The Shining"! It was really good.
+
+    User 2: I know, right? It''s so creepy.
+
+    User 1: Yeah, it was. Have you seen the movie?
+
+    User 2: Yes, I have. It was really good too.
+
+    User 1: I agree. It was a really good adaptation of the book.
+
+    User 2: I thought so too.
+
+    User 1: It''s nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

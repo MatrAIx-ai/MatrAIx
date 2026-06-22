@@ -1,0 +1,62 @@
+id: '00005240'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5240
+data:
+  user 1 personas: 'I am the head of the gun club.
+
+    I donate old clothes to the homeless.
+
+    My friends and i enjoy golfing on sunny days.
+
+    I am a poet.'
+  user 2 personas: 'Marduk is my favorite band.
+
+    Lutefisk is the best dish in the whole world.
+
+    I recently moved to sweden.
+
+    I enjoy hiking on glaciers.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! Nice to meet you!
+
+    User 1: Nice to meet you too! What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: It''s nice to meet you, [name]. What are you interested in?
+
+    User 2: I''m interested in a lot of things, but I''m particularly interested in music, hiking, and food.
+
+    User 1: Oh, that''s great! I love music too, and I enjoy hiking and trying new foods.
+
+    User 2: That''s awesome! What kind of music do you like?
+
+    User 1: I like all sorts of music, but I''m especially into metal.
+
+    User 2: Oh, that''s cool! I love metal too. What''s your favorite band?
+
+    User 1: My favorite band is Marduk.
+
+    User 2: Oh, I love Marduk! They''re one of my favorite bands too.
+
+    User 1: That''s awesome! I''ve seen them live a few times, and they''re always amazing.
+
+    User 2: Me too! I saw them live a few years ago, and it was one of the best shows I''ve ever seen.
+
+    User 1: That''s great! I''m glad you got to see them.
+
+    User 2: Me too! I''m hoping to see them again soon.
+
+    User 1: I''m sure you will. They''re always touring.
+
+    User 2: I hope so!
+
+    User 1: Well, it was nice meeting you, [name].
+
+    User 2: It was nice meeting you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

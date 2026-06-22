@@ -1,0 +1,50 @@
+id: '00000450'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 450
+data:
+  user 1 personas: 'I have 3 kids.
+
+    I know karate.
+
+    I am a scientist.
+
+    I want to go to mars.'
+  user 2 personas: 'I am a kindergarten teacher.
+
+    I have a puppy named tiki.
+
+    I love music of the 1980s , especially the pretenders.
+
+    My favorite food is spicy tex mex.'
+  Best Generated Conversation: 'User 1: Hello, I am a scientist.
+
+    User 2: Hello, I am a kindergarten teacher.
+
+    User 1: I have 3 kids.
+
+    User 2: I have a puppy named tiki.
+
+    User 1: I love karate.
+
+    User 2: I love spicy tex mex.
+
+    User 1: I want to go to Mars.
+
+    User 2: I love the music of the 1980s.
+
+    User 1: I like you.
+
+    User 2: Me too!
+
+    User 1: I want to be your friend.
+
+    User 2: Me too!
+
+    User 1: Let''s hang out!
+
+    User 2: Sounds great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

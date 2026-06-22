@@ -1,0 +1,88 @@
+id: '00001764'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1764
+data:
+  user 1 personas: 'My name is gerald.
+
+    I like basketball.
+
+    I like rock music.
+
+    My favorite color is green.'
+  user 2 personas: 'I have beard that is longer.
+
+    I am a younger guy.
+
+    I own a dog that is small.
+
+    I like to play football.'
+  Best Generated Conversation: 'User 1: Hi, I''m Gerald.
+
+    User 2: Hi Gerald, I''m [user 2 name].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play football, go to the gym, and spend time with my dog.
+
+    User 1: That''s cool. I like to play basketball, listen to rock music, and watch movies.
+
+    User 2: I like basketball too! What''s your favorite team?
+
+    User 1: I''m a big fan of the Golden State Warriors.
+
+    User 2: Me too! They''re a great team.
+
+    User 1: I agree. They''re really fun to watch.
+
+    User 2: What''s your favorite band?
+
+    User 1: I like a lot of different bands, but my favorite is probably The Rolling Stones.
+
+    User 2: The Rolling Stones are great! I love their music.
+
+    User 1: Me too. They''re one of the best bands of all time.
+
+    User 2: I agree.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a personal trainer.
+
+    User 1: That sounds like a fun job. I''m sure you get to meet a lot of interesting people.
+
+    User 2: I do, and it''s great to help people get fit and healthy.
+
+    User 1: That''s awesome.
+
+    User 2: Thanks. So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That sounds like a challenging job.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you like to do for fun outside of work?
+
+    User 2: I like to go to the gym, spend time with my dog, and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to do a lot of the same things.
+
+    User 2: Cool.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to the gym or watch a movie.
+
+    User 1: That sounds like a good plan.
+
+    User 2: Thanks.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00000552'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 552
+data:
+  user 1 personas: 'I ride a bike.
+
+    I work as a waitress.
+
+    I have 5 brothers and sisters.
+
+    I like to draw.
+
+    I live in north dakota.'
+  user 2 personas: 'My favorite holiday is halloween because i like dressing up.
+
+    My best friend is my dog allie.
+
+    My favorite pass time is gazing at clouds.
+
+    I ride my red bike to work everyday.
+
+    I love chocolate milk shakes.'
+  Best Generated Conversation: 'User 1: I like to ride my bike to work. It''s a good way to get exercise and see the sights.
+
+    User 2: I ride my bike to work every day too! It''s great for getting around and saving money on gas.
+
+    User 1: I know, right? I love the feeling of the wind in my hair and the sun on my face.
+
+    User 2: Me too! It''s the best way to start the day.
+
+    User 1: I have 5 brothers and sisters. I''m the oldest of the bunch.
+
+    User 2: I have one brother and one sister. I''m the oldest too.
+
+    User 1: I like to draw. I''m not very good at it, but it''s a fun hobby.
+
+    User 2: I like to draw too! I''m not very good at it either, but I enjoy it.
+
+    User 1: I work as a waitress. I''ve been doing it for about 5 years.
+
+    User 2: I used to be a waitress. I quit because I couldn''t stand the long hours.
+
+    User 1: I know what you mean. The hours can be long and the work can be hard, but it''s a good job.
+
+    User 2: I agree. It''s a good job if you can handle the long hours.
+
+    User 1: I''m originally from North Dakota. I moved to California when I was 18.
+
+    User 2: I''ve always lived in California. I love it here.
+
+    User 1: I like California too. It''s a beautiful state.
+
+    User 2: It is. I love the weather and the people.
+
+    User 1: I''m glad you like it here.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

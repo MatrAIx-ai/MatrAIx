@@ -1,0 +1,64 @@
+id: '00005411'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5411
+data:
+  user 1 personas: 'My favorite animal is a zebra.
+
+    I am in preschool.
+
+    I like to play outside.
+
+    I am a girl.
+
+    I like to dance.'
+  user 2 personas: 'I am a personal chef.
+
+    I love creating new recipes.
+
+    In my free time , i watch movies and sleep.
+
+    I would like to open a restaurant someday.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: I''m [name].
+
+    User 2: Nice to meet you, [name]. I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a personal chef.
+
+    User 1: Oh, that''s cool! I love to cook.
+
+    User 2: Me too! I love creating new recipes and trying new things.
+
+    User 1: What''s your favorite food to cook?
+
+    User 2: I love cooking pasta dishes. I love the way the flavors come together and the pasta is so delicious.
+
+    User 1: Pasta is my favorite too! I love all the different types of pasta that you can make.
+
+    User 2: Me too! I love making different kinds of sauces to go with the pasta.
+
+    User 1: I love making homemade sauce. It''s so much better than store-bought sauce.
+
+    User 2: I agree! It''s so much more flavorful.
+
+    User 1: I''m really good at making meatballs.
+
+    User 2: Meatballs are my favorite! I love them in pasta or on their own.
+
+    User 1: I love them too! I love making them with different kinds of meat and seasonings.
+
+    User 2: Me too! I love experimenting with different flavors.
+
+    User 1: I think we would be great friends. We both love to cook and we both love pasta.
+
+    User 2: I agree! I think we would make a great team in the kitchen.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

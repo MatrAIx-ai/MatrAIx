@@ -1,0 +1,76 @@
+id: '00001350'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1350
+data:
+  user 1 personas: 'I love cooking !.
+
+    I like to swim when the weather is hot.
+
+    My father is from india.
+
+    My favourite colour is green.'
+  user 2 personas: 'I am currently going back to school to try and become a casino manager.
+
+    I know how to count cards in blackjack.
+
+    I have 3 kids.
+
+    I graduated with a statistics degree.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love going to the casino.
+
+    User 1: Oh, that''s interesting! Do you like to play any particular games?
+
+    User 2: I like to play blackjack.
+
+    User 1: I''ve never played blackjack before. What''s it like?
+
+    User 2: It''s a lot of fun! You try to get as close to 21 as possible without going over.
+
+    User 1: That sounds like it could be challenging.
+
+    User 2: It can be, but it''s also a lot of fun.
+
+    User 1: Do you ever win?
+
+    User 2: I do sometimes! But I''m not a professional gambler or anything.
+
+    User 1: That''s cool! I''m always up for trying new things.
+
+    User 2: Well, if you''re ever in Vegas, you should come and play blackjack with me.
+
+    User 1: I''ll keep that in mind!
+
+    User 1: What do you do for work?
+
+    User 2: I''m currently going back to school to try and become a casino manager.
+
+    User 1: Oh, that''s great! What made you want to do that?
+
+    User 2: I''ve always loved gambling, and I think it would be a lot of fun to work in the industry.
+
+    User 1: I can see why you''d like that. It does sound like a lot of fun.
+
+    User 2: Yeah, I think it would be a great career.
+
+    User 1: What did you study in school before?
+
+    User 2: I graduated with a statistics degree.
+
+    User 1: That''s cool! I always thought statistics was a really interesting subject.
+
+    User 2: Yeah, it''s really useful in a lot of different fields.
+
+    User 1: I bet it is. I''m glad you''re going back to school to get your degree.
+
+    User 2: Thanks! I''m excited to start my new career.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

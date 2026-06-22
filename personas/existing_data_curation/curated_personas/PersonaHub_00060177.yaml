@@ -1,0 +1,18 @@
+id: '00060177'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60177
+persona_description: A space scientist who is concerned about the growing amount of debris in orbit around the Earth and the potential risks it poses to active satellites. This persona is likely to be knowledgeable
+  about space debris, satellite technology, and the potential consequences of collisions between satellites and debris. They may be interested in exploring potential solutions to the problem, such as using
+  special satellites to capture and send debris to the Earth's surface, or considering the option of collecting more usable debris for recycling.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Space Technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Space Debris Mitigation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

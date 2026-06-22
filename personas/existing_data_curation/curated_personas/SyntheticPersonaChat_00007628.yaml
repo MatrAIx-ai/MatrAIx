@@ -1,0 +1,84 @@
+id: 00007628
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7628
+data:
+  user 1 personas: 'I love to walk my dog everyday after work.
+
+    I also dance and sing.
+
+    I just moved to los angeles from tokyo.
+
+    My english is not very good yet.
+
+    I want to be a famous actor.'
+  user 2 personas: 'My right foot only has 3 toes.
+
+    I love to read crime novels.
+
+    I am a zookeeper.
+
+    I eat 6 eggs every morning for breakfast.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1]. I just moved to Los Angeles from Tokyo.
+
+    User 2: Welcome to Los Angeles! I''m [User 2]. What do you like to do here?
+
+    User 1: I love to walk my dog, dance, and sing. I also want to be a famous actor.
+
+    User 2: That''s cool. I like to read crime novels and I''m a zookeeper.
+
+    User 1: Oh, that''s interesting. What kind of animals do you work with?
+
+    User 2: I work with tigers, lions, elephants, and monkeys.
+
+    User 1: Wow, that must be an amazing job.
+
+    User 2: It is. I love working with animals.
+
+    User 1: I can imagine. Do you have any pets?
+
+    User 2: Yes, I have a dog named Max.
+
+    User 1: Oh, I love dogs. What kind of dog is he?
+
+    User 2: He''s a Labrador Retriever.
+
+    User 1: Nice. I used to have a Labrador Retriever named Bailey.
+
+    User 2: Oh, that''s cool. How old was he when he passed away?
+
+    User 1: He was 15 years old.
+
+    User 2: Wow, that''s a long time.
+
+    User 1: Yeah, he was a good boy.
+
+    User 2: I''m sure he was.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and play video games.
+
+    User 1: Oh, I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read crime novels, but I also like to read historical fiction and nonfiction.
+
+    User 1: Nice. I like to read a lot of different genres too.
+
+    User 2: Oh, that''s cool.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. We could hang out if you want.
+
+    User 2: That sounds good. I''m free after 5.
+
+    User 1: Okay, I''ll pick you up at 5.
+
+    User 2: See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

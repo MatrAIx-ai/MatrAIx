@@ -1,0 +1,18 @@
+id: '00022044'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22044
+persona_description: A healthcare professional who is knowledgeable about the interpretation and management of blood tests related to iron levels, particularly those related to anaemia and hereditary hemochromatosis.
+  This individual is likely to be a medical doctor, nurse, or a lab technician who specializes in interpreting laboratory results and providing recommendations based on the results. They may work in a hospital,
+  clinic, or research laboratory setting.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hematology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,72 @@
+id: '00007100'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7100
+data:
+  user 1 personas: 'I am an avid fan of the boston celtics.
+
+    I love chocolate.
+
+    I work for a small , family owned restaurant.
+
+    I love walking in the park.
+
+    I have six older sisters.'
+  user 2 personas: 'I like to swim in the lake.
+
+    I have been to every state except alaska.
+
+    I like to visit places around the world.
+
+    I like to paddle board.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too! What do you do for fun?
+
+    User 1: I like to walk in the park, I love chocolate, and I''m an avid fan of the Boston Celtics.
+
+    User 2: Those all sound like fun! I like to swim in the lake, paddle board, and I''ve been to every state except Alaska.
+
+    User 1: Wow, that''s a lot of traveling! I''ve only been to a few states.
+
+    User 2: It''s been a lot of fun. I love seeing new places and meeting new people.
+
+    User 1: That sounds great. I''m glad you enjoy it.
+
+    User 2: Thanks! So what do you do for work?
+
+    User 1: I work for a small, family owned restaurant.
+
+    User 2: That sounds like a fun job. I''ve always thought about working in a restaurant.
+
+    User 1: It''s definitely a lot of work, but it''s also a lot of fun. I get to meet a lot of interesting people.
+
+    User 2: That sounds like a great experience.
+
+    User 1: It is. I love my job.
+
+    User 2: It''s good to hear that you enjoy your job.
+
+    User 1: Yeah, it''s really important to have a job that you enjoy.
+
+    User 2: I agree. So, what do you like to do in your free time?
+
+    User 1: I like to watch the Celtics, I love chocolate, and I like to walk in the park.
+
+    User 2: Those all sound like fun! I like to swim in the lake, paddle board, and I''ve been to every state except Alaska.
+
+    User 1: Wow, that''s a lot of traveling! I''ve only been to a few states.
+
+    User 2: It''s been a lot of fun. I love seeing new places and meeting new people.
+
+    User 1: That sounds great. I''m glad you enjoy it.
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

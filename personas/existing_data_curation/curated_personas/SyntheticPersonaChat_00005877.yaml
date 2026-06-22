@@ -1,0 +1,76 @@
+id: 00005877
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5877
+data:
+  user 1 personas: 'I work as a computer programmer.
+
+    I helped develop facebook.
+
+    I have two pitt bulls.
+
+    I like to donate time and money to charity.'
+  user 2 personas: 'My car is green and smells weird.
+
+    My favorite food is meatloaf.
+
+    My dog s name is toto.
+
+    My favorite band used to be toto.
+
+    My grandma is from denmark.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a mechanic.
+
+    User 1: Oh, that''s cool. I work as a computer programmer.
+
+    User 2: I''ve always been interested in computers.
+
+    User 1: You should try coding! It''s really fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love meatloaf.
+
+    User 1: Me too! I love it with mashed potatoes and gravy.
+
+    User 2: That''s my favorite way to eat it too!
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog named Toto.
+
+    User 1: What kind of dog is he?
+
+    User 2: He''s a mutt. I think he''s part terrier and part lab.
+
+    User 1: He sounds cute.
+
+    User 2: He is. He''s the best dog in the world.
+
+    User 1: I''m glad you have him.
+
+    User 2: Me too.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to the beach with my family.
+
+    User 2: That sounds fun. I wish I could go.
+
+    User 1: Maybe we can go together sometime.
+
+    User 2: That would be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

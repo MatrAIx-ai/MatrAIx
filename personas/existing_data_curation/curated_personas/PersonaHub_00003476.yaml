@@ -1,0 +1,18 @@
+id: '00003476'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3476
+persona_description: A meteorologist who is closely monitoring the Atlantic Ocean for signs of a hurricane. They are a seasoned expert on the patterns and behaviors of hurricanes, and are prepared to provide
+  updates and predictions on the potential impact of Ophelia on the United States. They are also aware of the historical context of hurricane activity in Florida and Louisiana, and can provide insights
+  into the factors that contribute to the increased storm activity this year.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: hurricane prediction
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

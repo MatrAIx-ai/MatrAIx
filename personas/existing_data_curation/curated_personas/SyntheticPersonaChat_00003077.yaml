@@ -1,0 +1,50 @@
+id: '00003077'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3077
+data:
+  user 1 personas: 'I have 5 grandchildren.
+
+    I like to go fishing on the lake.
+
+    I am a 70 year old man.
+
+    I own a boat.'
+  user 2 personas: 'I play video games all day.
+
+    I eat all take out.
+
+    I do not want a job.
+
+    I still live at home with my parents.
+
+    I am 32.'
+  Best Generated Conversation: 'User 1: Hello, I''m a 70 year old man. I have 5 grandchildren and I like to go fishing on the lake. I also own a boat.
+
+    User 2: Hello, I''m a 32 year old man. I play video games all day and I eat all take out. I do not want a job and I still live at home with my parents.
+
+    User 1: It sounds like you''re living the dream! I wish I could spend all day playing video games.
+
+    User 2: It''s not as great as it sounds. I get bored a lot and I feel like I''m not doing anything with my life.
+
+    User 1: I know what you mean. I used to play video games all day when I was younger, but I eventually got bored and started looking for other things to do.
+
+    User 2: What do you do now?
+
+    User 1: I go fishing on the lake. It''s a great way to relax and enjoy the outdoors.
+
+    User 2: I''ve never been fishing before.
+
+    User 1: You should try it sometime. It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: Great! I''m sure you''ll enjoy it.
+
+    User 2: Thanks for the advice.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

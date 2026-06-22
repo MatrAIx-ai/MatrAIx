@@ -1,0 +1,18 @@
+id: '00030100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30100
+persona_description: A person who is highly concerned about public health and has a deep understanding of the COVID-19 pandemic. They are aware of the symptoms, transmission, and prevention methods of the
+  virus. They are also aware of the current situation in the world, the number of cases, and the impact on the economy. They are looking for ways to protect themselves and their loved ones from the virus.
+  They are also interested in learning more about the virus, its origin, and its potential future impact on society.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

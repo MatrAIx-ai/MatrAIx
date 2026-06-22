@@ -1,0 +1,18 @@
+id: '00042435'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42435
+persona_description: A NASA employee who specializes in satellite operations and maintenance, particularly in the GOES satellite program. They are responsible for the daily maintenance passes and retransmission
+  of information from the satellite to ground stations around the world. They also have a monitoring and triangulation system for international emergency frequencies. Their expertise lies in the operation
+  and maintenance of the GOES satellite system, as well as the development and implementation of new technologies and systems.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: satellite operations and maintenance
+  general_domain_top01pct: None
+  specific_domain_top01pct: satellite operations and maintenance
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

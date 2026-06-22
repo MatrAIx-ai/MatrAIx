@@ -1,0 +1,140 @@
+id: '00003501'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3501
+data:
+  user 1 personas: 'I was born 20 years ago.
+
+    I was born male and transitioned to female when i was 17.
+
+    I love pizza.
+
+    I live in the usa.
+
+    My favorite color is blue.'
+  user 2 personas: 'I have three children.
+
+    I am named after my grandmother.
+
+    My best friend lives down the street.
+
+    I drive a honda civic.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Nice to meet you, [name]. I''m [name].
+
+    User 1: I see you have three children. What are their names?
+
+    User 2: Their names are [child 1], [child 2], and [child 3].
+
+    User 1: Oh, that''s nice. I love kids.
+
+    User 2: Me too. They''re the best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the park, play games, and read books.
+
+    User 1: I like to do those things too.
+
+    User 2: We should get together sometime and do something fun.
+
+    User 1: That sounds like a great idea. I''m free this weekend.
+
+    User 2: Me too. Let''s go to the park.
+
+    User 1: Okay, that sounds good. I''ll see you there.
+
+    User 2: See you then.
+
+
+    (The next day at the park)
+
+
+    User 1: Hi, [name].
+
+    User 2: Hi, [name].
+
+    User 1: It''s so nice to finally meet you in person.
+
+    User 2: You too. It''s nice to meet you too.
+
+    User 1: What did you want to do today?
+
+    User 2: I was thinking we could play tag.
+
+    User 1: That sounds like fun. I''m not very good at it, but I''ll try my best.
+
+    User 2: It doesn''t matter if you''re good at it. It''s just for fun.
+
+    User 1: Okay, let''s start.
+
+
+    (They play tag for a while.)
+
+
+    User 1: That was really fun.
+
+    User 2: I know, right? I''m so glad we decided to do this.
+
+    User 1: Me too. We should do it again sometime.
+
+    User 2: That sounds like a great idea.
+
+    User 1: I''m going to go get some water. Do you want anything?
+
+    User 2: No, I''m good. Thanks for asking.
+
+    User 1: Okay, I''ll be right back.
+
+
+    (The user gets some water and comes back.)
+
+
+    User 1: I''m back.
+
+    User 2: Good. I was about to get bored.
+
+    User 1: I''m sure we can find something to do.
+
+    User 2: We could go for a walk.
+
+    User 1: That sounds good. We can walk around the park.
+
+    User 2: Okay, let''s go.
+
+
+    (They walk around the park for a while.)
+
+
+    User 1: This is a nice park.
+
+    User 2: I know, right? It''s one of my favorite places to go.
+
+    User 1: I can see why. It''s so peaceful and relaxing.
+
+    User 2: It is. I love coming here to get away from the hustle and bustle of everyday life.
+
+    User 1: I know what you mean. It''s the perfect place to relax and forget about all your troubles.
+
+    User 2: I''m glad you like it.
+
+    User 1: Me too. It''s a great place to come and spend time with friends and family.
+
+    User 2: I know, right? It''s the perfect place to catch up and have some fun.
+
+    User 1: I''m glad we decided to come here.
+
+    User 2: Me too. It was a great idea.
+
+    User 1: I''m going to head home. It was nice meeting you, [name].
+
+    User 2: You too. I hope we can do this again sometime.
+
+    User 1: Me too. Bye, [name].
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

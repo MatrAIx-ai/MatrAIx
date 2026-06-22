@@ -1,0 +1,29 @@
+id: '00000770'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 770
+data:
+  user 1 personas: 'I love animals.
+
+    I have an 18 year old son.
+
+    I volunteer walking dogs twice a week.
+
+    I spend time signing a lot of petitions and donate to animal rights groups.'
+  user 2 personas: 'I volunteer at an animal shelter.
+
+    My favorite kind of food is italian.
+
+    I love going to concerts.
+
+    I am a librarian.'
+  Best Generated Conversation: "User 1: Hi! I'm interested in animals. \nUser 2: Oh, that's cool! I love animals too. I volunteer at an animal shelter.\nUser 1: That's awesome! I volunteer walking dogs\
+    \ twice a week.\nUser 2: That's great! I love dogs.\nUser 1: Me too! Do you have any pets?\nUser 2: I have a cat named Mittens. She's a stray that I adopted.\nUser 1: Aww, that's so cute! I have a dog\
+    \ named Charlie. He's a golden retriever.\nUser 2: Golden retrievers are so cute!\nUser 1: Yeah, he's the sweetest dog.\nUser 2: It's nice to meet you, Charlie!\n[Charlie barks]\nUser 1: Hi, Mittens!\n\
+    [Mittens meows]\nUser 2: What are your favorite things about animals?\nUser 1: I love their unconditional love. They always make me feel better when I'm down.\nUser 2: Me too! Animals are the best listeners.\n\
+    User 1: They are! I wish I could talk to my dog and tell him all my problems.\nUser 2: I know what you mean! I wish I could talk to my cat and tell her all my secrets.\nUser 1: I'm glad I met you. You\
+    \ seem like a really cool person.\nUser 2: Thanks! You too!\nUser 1: I hope we can talk again soon.\nUser 2: Me too!"
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

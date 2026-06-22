@@ -1,0 +1,60 @@
+id: 00008728
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8728
+data:
+  user 1 personas: 'I live with my sisters and they provide me with all my needs.
+
+    I enjoy reading.
+
+    I love to clean my house.
+
+    I am afraid to leave the house.'
+  user 2 personas: 'I love my parrot , todd.
+
+    I am a disappointment to my family.
+
+    I am the oldest of 5 children.
+
+    I have never been to the beach.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is [name].
+
+    User 1: It''s nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I love to read, clean my house, and play with my parrot, Todd.
+
+    User 1: Those all sound like fun activities! I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I especially enjoy historical fiction and mystery novels.
+
+    User 1: Those are both great genres! I''m a big fan of historical fiction myself.
+
+    User 2: What''s your favorite historical fiction book?
+
+    User 1: I have a few favorites, but one of my favorites is The Outlander series by Diana Gabaldon.
+
+    User 2: I''ve heard good things about that series! I''ve been meaning to give it a try.
+
+    User 1: You should! It''s a great series.
+
+    User 2: I will!
+
+    User 1: What about you? What''s your favorite mystery novel?
+
+    User 2: My favorite mystery novel is The Murder of Roger Ackroyd by Agatha Christie.
+
+    User 1: That''s a great choice! I love Agatha Christie''s books.
+
+    User 2: I know, right? She''s so good at creating suspense and mystery.
+
+    User 1: I agree! She''s a master of her craft.
+
+    User 2: I''m glad you like her books too.
+
+    User 1: Me too! I think we''re going to be good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

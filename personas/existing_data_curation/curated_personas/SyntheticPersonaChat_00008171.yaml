@@ -1,0 +1,64 @@
+id: 00008171
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8171
+data:
+  user 1 personas: 'I start my senior year of high school next week.
+
+    My mom is a painter.
+
+    My favorite sport is hockey.
+
+    I went to japan this summer.
+
+    My best friend just moved away.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am in high school.
+
+    I like skateboarding.
+
+    I am a female.
+
+    I have blonde hair.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Me too. I''m starting my senior year of high school next week.
+
+    User 2: Oh cool, what''s your favorite class?
+
+    User 1: I like history and English.
+
+    User 2: Me too! I love learning about new cultures and different ways of life.
+
+    User 1: Me too. I went to Japan this summer and it was amazing.
+
+    User 2: Wow, that''s so cool! I''ve always wanted to go to Japan.
+
+    User 1: You should definitely go sometime. It''s a beautiful country with a rich culture.
+
+    User 2: I know, I''ve seen pictures and it looks amazing.
+
+    User 1: It is. And the food is amazing too.
+
+    User 2: I''m a sucker for good food, so I''ll definitely have to try some Japanese food.
+
+    User 1: You won''t be disappointed.
+
+    User 2: So, what are you doing after high school?
+
+    User 1: I''m not sure yet. I''m thinking about going to college, but I''m not sure where or what I want to study.
+
+    User 2: That''s a tough decision. But you''ve got plenty of time to figure it out.
+
+    User 1: I know, but I''m still a little nervous about it.
+
+    User 2: Don''t be. You''ll figure it out.
+
+    User 1: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

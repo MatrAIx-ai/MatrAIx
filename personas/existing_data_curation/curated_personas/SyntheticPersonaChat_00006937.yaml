@@ -1,0 +1,54 @@
+id: 00006937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6937
+data:
+  user 1 personas: 'I blame myself for all of my problems.
+
+    I can t hold down a job for very long.
+
+    If i m not drinking , i m thinking , which makes me uncomfortable.
+
+    I am constantly drinking.
+
+    My family loves me , but keeps their distance.'
+  user 2 personas: 'I don t have many friends.
+
+    I draw during classes instead of taking notes.
+
+    I like lizards.
+
+    I have long hair for a boy.
+
+    I wish i could live in a fantasy world.'
+  Best Generated Conversation: 'User 1: I''m not sure what to do with my life.
+
+    User 2: I''m sorry to hear that. What are you struggling with?
+
+    User 1: I can''t hold down a job for very long.
+
+    User 2: That must be hard. What do you think is the reason for that?
+
+    User 1: I don''t know. I think I''m just not good enough.
+
+    User 2: I don''t think that''s true. Everyone is good at something. What do you like to do?
+
+    User 1: I like to draw.
+
+    User 2: That''s great! Have you thought about making a career out of it?
+
+    User 1: I''ve thought about it, but I''m not sure if I''m good enough.
+
+    User 2: You''re probably better than you think. You should give it a try.
+
+    User 1: I''ll think about it.
+
+    User 2: Great! In the meantime, don''t be too hard on yourself. Everyone makes mistakes. Just keep trying and you''ll eventually find your way.
+
+    User 1: Thanks for the advice.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

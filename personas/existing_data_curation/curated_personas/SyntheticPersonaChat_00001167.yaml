@@ -1,0 +1,72 @@
+id: '00001167'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1167
+data:
+  user 1 personas: 'My name is todd.
+
+    I am 8 years old.
+
+    My favorite hero is superman.
+
+    I want to grow up to be a superhero one day.
+
+    I love comic books.'
+  user 2 personas: 'I was adopted when i was a baby.
+
+    My adopted dad works at hp.
+
+    The future scares me.
+
+    I have six siblings.'
+  Best Generated Conversation: 'User 1: Hi, my name is Todd. I''m 8 years old. What''s your name?
+
+    User 2: Hi, my name is [user 2''s name]. I''m 10 years old.
+
+    User 1: What''s your favorite thing to do?
+
+    User 2: I like to read comic books and play video games.
+
+    User 1: Me too! I love comic books. My favorite hero is Superman.
+
+    User 2: Mine too! He''s so cool.
+
+    User 1: I know, right? I want to grow up to be a superhero one day.
+
+    User 2: That would be awesome!
+
+    User 1: I know, right?
+
+    User 2: What''s the most exciting thing you''ve ever done?
+
+    User 1: I once went to a comic book convention. It was so cool! I got to meet a lot of my favorite superheroes.
+
+    User 2: That sounds awesome! I''ve always wanted to go to a comic book convention.
+
+    User 1: You should! They''re so much fun.
+
+    User 2: I will!
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like to play Minecraft. It''s so creative.
+
+    User 1: Me too! I love building things in Minecraft.
+
+    User 2: Me too! I''ve built so many cool things.
+
+    User 1: Like what?
+
+    User 2: I''ve built a house, a castle, a farm, and even a roller coaster.
+
+    User 1: That''s awesome! I''ve never built a roller coaster before.
+
+    User 2: It was really fun! I could show you if you want.
+
+    User 1: That would be great!
+
+    User 2: Okay, I''ll start up my computer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

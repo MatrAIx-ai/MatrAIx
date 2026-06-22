@@ -1,0 +1,18 @@
+id: '00064646'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64646
+persona_description: A healthcare provider who is knowledgeable about the complexities of the immune system and the importance of allergy testing. They are familiar with the use of specific IgE serum testing
+  as a reliable and accurate method for identifying IgE allergies and have a keen interest in improving patient outcomes through the use of evidence-based practices. They are also aware of the potential
+  risks and benefits of different diagnostic approaches and are committed to providing the best possible care for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: allergy medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: allergy testing
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

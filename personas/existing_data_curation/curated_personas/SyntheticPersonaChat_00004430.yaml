@@ -1,0 +1,62 @@
+id: '00004430'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4430
+data:
+  user 1 personas: 'I love to shop on weekends.
+
+    I go to dance lessons with my boyfriend.
+
+    I have never been on a cruise ship.
+
+    I am a woman who wears a size 12.'
+  user 2 personas: 'I have a ford f150.
+
+    I also like ford trucks.
+
+    My truck is black.
+
+    I own a ford truck.'
+  Best Generated Conversation: 'User 1: Hi, I''m interested in learning more about you.
+
+    User 2: Sure, what would you like to know?
+
+    User 1: I see that you have a Ford F150. Is it your first truck?
+
+    User 2: No, I''ve had a few different Ford trucks over the years.
+
+    User 1: What do you like about Ford trucks?
+
+    User 2: I like that they''re reliable and durable. I also like the styling.
+
+    User 1: I see. I''ve heard that Ford trucks are great for off-roading. Have you ever taken yours off-roading?
+
+    User 2: Yes, I have. I took it to Moab, Utah, a few years ago. It was a lot of fun!
+
+    User 1: That sounds like it was a great experience. I''ve always wanted to go off-roading, but I don''t have a truck.
+
+    User 2: You should definitely try it sometime. It''s a lot of fun.
+
+    User 1: I will. Thanks for the suggestion.
+
+    User 2: No problem.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go shopping, go to the movies, and go out to dinner.
+
+    User 1: I like to do those things too.
+
+    User 2: We should go shopping together sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great! We can plan it for this weekend.
+
+    User 1: Sounds good. I''ll text you later.
+
+    User 2: Okay, see you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

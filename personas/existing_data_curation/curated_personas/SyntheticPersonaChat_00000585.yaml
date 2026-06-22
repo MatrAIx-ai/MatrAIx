@@ -1,0 +1,91 @@
+id: 00000585
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 585
+data:
+  user 1 personas: 'I am a student.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.
+
+    My mom is a lawyer.
+
+    I have 5 children.'
+  user 2 personas: 'I am a yoga instructor.
+
+    I have two chiuahuahs.
+
+    I have a son.
+
+    I collect seashells.
+
+    I love horses.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1]. What''s your name?
+
+
+    User 2: Hi there! I''m [user 2]. Nice to meet you.
+
+
+    User 1: It''s nice to meet you too. What do you do for a living?
+
+
+    User 2: I''m a yoga instructor.
+
+
+    User 1: That''s cool! I''ve always wanted to try yoga.
+
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+
+    User 1: I might just do that. So, what else do you like to do for fun?
+
+
+    User 2: I like to collect seashells, go fishing, and spend time with my son.
+
+
+    User 1: Those all sound like fun activities. I like to go fishing too.
+
+
+    User 2: Oh, really? What kind of fish do you like to catch?
+
+
+    User 1: I like to catch bass and trout.
+
+
+    User 2: Those are both great fish to eat!
+
+
+    User 1: Yeah, they are. I love to cook fish.
+
+
+    User 2: Me too! I''m a pretty good cook myself.
+
+
+    User 1: I''m sure you are. I love trying new recipes.
+
+
+    User 2: Me too! I''m always looking for new ways to cook fish.
+
+
+    User 1: Well, I''m sure we can come up with some great recipes together.
+
+
+    User 2: I''m sure we can! It sounds like we have a lot in common.
+
+
+    User 1: I think so too. It''s been nice talking to you.
+
+
+    User 2: You too! I hope we can talk again soon.
+
+
+    User 1: Me too! Have a great day!
+
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

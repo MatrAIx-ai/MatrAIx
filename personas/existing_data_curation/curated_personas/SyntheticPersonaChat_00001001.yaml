@@ -1,0 +1,86 @@
+id: '00001001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1001
+data:
+  user 1 personas: 'I hate tomatoes.
+
+    I have 2 kids.
+
+    I need a wheel chair to get around.
+
+    I am a female.'
+  user 2 personas: 'I am in college.
+
+    I have a crummy job at scrubway.
+
+    I enjoy playing video games.
+
+    I live life to its fullest.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: How are you?
+
+    User 2: I''m doing well, thank you! How are you?
+
+    User 1: I''m doing well too, thank you!
+
+    User 2: That''s great to hear!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in college.
+
+    User 1: Oh, that''s cool! What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Nice! I''m sure you''ll do great!
+
+    User 2: Thanks!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy playing video games.
+
+    User 1: I like to play video games too!
+
+    User 2: What games do you like to play?
+
+    User 1: I like to play role playing games, like D&D.
+
+    User 2: I''ve never played D&D, but I''ve heard good things about it.
+
+    User 1: It''s a lot of fun!
+
+    User 2: Maybe I''ll have to give it a try sometime.
+
+    User 1: You should! It''s a great way to meet new people and have fun.
+
+    User 2: I''m sure it is!
+
+    User 1: So, what''s your favorite video game?
+
+    User 2: My favorite video game is probably The Legend of Zelda: Ocarina of Time.
+
+    User 1: That''s a classic! I love that game too.
+
+    User 2: It''s so good!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!
+
+    User 1: Maybe we could play video games together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll give you my gamer tag.
+
+    User 2: Okay, I''ll add you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

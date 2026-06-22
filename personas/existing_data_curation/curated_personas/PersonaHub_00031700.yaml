@@ -1,0 +1,19 @@
+id: '00031700'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31700
+persona_description: A healthcare professional who specializes in breast imaging, particularly 3D mammography and ultrasound. They are skilled in the interpretation and analysis of breast images, and have
+  experience in performing breast biopsies and performing interventional breast work. They are proficient in using ultrasound and other imaging techniques to diagnose breast abnormalities and have a deep
+  understanding of the complexities of breast cancer detection and management. They are also experienced in collaborating with multidisciplinary teams to provide comprehensive care for patients with breast
+  cancer.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: breast imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: breast cancer diagnosis and management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

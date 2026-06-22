@@ -1,0 +1,62 @@
+id: '00003337'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3337
+data:
+  user 1 personas: 'I am from san fransisco.
+
+    I like to place blame on other people even when i know it is my fault.
+
+    My beer gut is so huge i have not seen my feet in two years.
+
+    I am always the one who buys the beers.
+
+    I like to smell my own farts.'
+  user 2 personas: 'I have several children.
+
+    We live in a rural area.
+
+    I am a woman.
+
+    My parents are still married.
+
+    We have a dog.'
+  Best Generated Conversation: 'User 1: Hi! My name is Bob. I''m from San Francisco.
+
+    User 2: Hi Bob! I''m Jane. I live in a rural area.
+
+    User 1: That''s cool! I''ve never been to a rural area before.
+
+    User 2: You should come visit! We have a lot of fun things to do here.
+
+    User 1: I''d love to! What kind of things do you like to do there?
+
+    User 2: We like to go hiking, camping, and fishing.
+
+    User 1: That sounds like a lot of fun! I love hiking and camping.
+
+    User 2: We also have a dog, so we like to take him for walks in the woods.
+
+    User 1: That sounds really nice. I''m not a big fan of dogs, but I can see how that would be fun.
+
+    User 2: We also have a few kids, so we like to play games with them and go swimming in the summer.
+
+    User 1: Sounds like you have a lot of fun! I''m glad I met you.
+
+    User 2: Me too! We should go camping together sometime.
+
+    User 1: That would be great! I''m free this weekend.
+
+    User 2: Me too! We can leave Friday night and come back Sunday morning.
+
+    User 1: Sounds good to me! I''ll bring the beer.
+
+    User 2: And I''ll bring the food!
+
+    User 1: Great! This is going to be a lot of fun!
+
+    User 2: I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

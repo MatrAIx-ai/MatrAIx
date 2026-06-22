@@ -1,0 +1,18 @@
+id: '00056456'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56456
+persona_description: A neurologist or medical professional who specializes in the diagnosis and treatment of multiple sclerosis. They are highly trained in the use of advanced diagnostic tools and criteria
+  to accurately confirm the diagnosis of MS. They are also skilled in interpreting the results of imaging, laboratory, and other tests to determine the extent of the disease and the appropriate course of
+  treatment.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: multiple sclerosis diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

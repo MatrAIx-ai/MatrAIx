@@ -1,0 +1,18 @@
+id: '00054067'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54067
+persona_description: A scientist or engineer who specializes in the development and application of advanced measurement techniques, particularly those related to pressure measurement and fluid dynamics.
+  They have expertise in the use of pressure gauges and are skilled in developing calibration methods to ensure high accuracy and precision. They are also experienced in the automation of calibration systems
+  and have a deep understanding of the limitations and requirements of such systems in order to optimize their performance.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: pressure measurement and fluid dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

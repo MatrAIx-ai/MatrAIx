@@ -1,0 +1,66 @@
+id: '00004003'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4003
+data:
+  user 1 personas: 'I have two border collies.
+
+    I am an artist.
+
+    I am planning to move to a new state soon.
+
+    I enjoy hiking.
+
+    I speak french and english fluently.'
+  user 2 personas: 'I like to make boats on the weekends.
+
+    I have a dog named bob.
+
+    I live on an island.
+
+    I enjoy fishing.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make boats on the weekends, fish, and play with my dog, Bob.
+
+    User 1: That sounds like fun! I like to hike, paint, and speak French and English.
+
+    User 2: Ooh, hiking sounds like a lot of fun. I''ve always wanted to go hiking in the Rockies.
+
+    User 1: I''ve been hiking in the Rockies a few times. It''s beautiful!
+
+    User 2: I''m sure it is. I''m actually planning a trip to the Rockies soon.
+
+    User 1: That''s awesome! You should let me know when you''re going. I''d love to join you.
+
+    User 2: Will do!
+
+    User 1: Where do you live?
+
+    User 2: I live on an island.
+
+    User 1: Oh, that''s cool! I''ve always wanted to live on an island.
+
+    User 2: It''s great! I love being close to the water.
+
+    User 1: Me too! I grew up near the beach.
+
+    User 2: Nice! What do you do for a living?
+
+    User 1: I''m an artist.
+
+    User 2: Oh, that''s cool! What kind of art do you do?
+
+    User 1: I paint, mostly landscapes and seascapes.
+
+    User 2: That sounds beautiful! I''d love to see some of your work.
+
+    User 1: Sure, I''ll send you some pictures.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

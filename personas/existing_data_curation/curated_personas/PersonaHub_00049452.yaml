@@ -1,0 +1,19 @@
+id: 00049452
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49452
+persona_description: This text is likely to be read by a structural engineer or a civil engineer who is using the ARTeMIS Modal Pro software to analyze and evaluate the dynamic response of structures. The
+  reader is interested in using the Damage Detection plugin to detect and quantify damage in the structure based on the uploaded reference state model and the uploaded measurement files. The reader may
+  also be interested in understanding the statistical thresholds and damage indicators used in the damage detection process, as well as the null space estimation of the reference state model. The reader
+  is familiar with the concepts of structural engineering and the analysis of dynamic response, and may have some experience with using software tools for structural analysis.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Structural Dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

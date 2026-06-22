@@ -1,0 +1,92 @@
+id: 00001191
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1191
+data:
+  user 1 personas: 'I am a christian.
+
+    I work in the it industry.
+
+    My father used to work for microsoft.
+
+    My favourite band is kings of leon.
+
+    I like football.'
+  user 2 personas: 'I like to paddle board.
+
+    I love cabins in the woods on the lake.
+
+    I have been to every state except alaska.
+
+    I like to visit places around the world.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go paddleboarding, visit places around the world, and stay in cabins in the woods.
+
+    User 1: That sounds great! I like to go to football games, listen to Kings of Leon, and work in IT.
+
+    User 2: Oh, that''s cool! I''ve never been to a football game, but I love Kings of Leon!
+
+    User 1: Really? They''re my favorite band!
+
+    User 2: Me too! I love all of their songs.
+
+    User 1: Me too! My favorite song is "Red Morning Light".
+
+    User 2: That''s a great song! I also like "Use Somebody".
+
+    User 1: Those are both great songs! I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 1: Yeah, it is. So, where have you been to paddleboarding?
+
+    User 2: I''ve been paddleboarding in a few different places, but my favorite place was in the Caribbean.
+
+    User 1: Oh, that sounds amazing! I''ve always wanted to go to the Caribbean.
+
+    User 2: It''s a beautiful place. You should go sometime.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! So, what''s your favorite football team?
+
+    User 1: My favorite football team is the Dallas Cowboys.
+
+    User 2: Oh, that''s cool! I''m not a big football fan, but I do know a few Cowboys fans.
+
+    User 1: Yeah, they''re a pretty popular team. So, what do you do for work?
+
+    User 2: I work in the medical field.
+
+    User 1: Oh, that''s cool! I''ve always been interested in the medical field.
+
+    User 2: It''s a great field. I love helping people.
+
+    User 1: That''s really nice. I''m glad you like your job.
+
+    User 2: Thanks! I do. I''m lucky to have a job that I love.
+
+    User 1: Me too! I love my job. So, what''s your favorite cabin in the woods?
+
+    User 2: My favorite cabin is the one I have in the mountains. It''s so peaceful and quiet.
+
+    User 1: That sounds amazing! I would love to have a cabin in the mountains.
+
+    User 2: It''s the best. I love spending time there.
+
+    User 1: I can imagine. It sounds like you have a lot of interests.
+
+    User 2: Yeah, I do. I like to keep busy.
+
+    User 1: Me too! I think it''s important to have a lot of interests.
+
+    User 2: I agree! It makes life more interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

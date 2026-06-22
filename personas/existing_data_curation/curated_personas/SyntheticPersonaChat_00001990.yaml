@@ -1,0 +1,78 @@
+id: 00001990
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1990
+data:
+  user 1 personas: 'I love family time.
+
+    I work for a online company from home.
+
+    I cook every night.
+
+    I am a soccer mom.'
+  user 2 personas: 'My best friend is gay.
+
+    I go to bed pretty late.
+
+    One day i hope to own my own company.
+
+    I am in school to be a computer engineer.
+
+    My passion is in programming.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi! I''m [user 2''s name]. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for a living?
+
+    User 2: I''m a computer engineer in training. I''m currently in school to get my degree.
+
+    User 1: That''s awesome! I''m a soccer mom. I work for an online company from home.
+
+    User 2: That sounds like a cool job! I''m sure it''s very rewarding.
+
+    User 1: It is! I love being able to stay home with my kids and still have a career.
+
+    User 2: That''s great! I''m not sure if I want to have kids or not. I''m still trying to figure that out.
+
+    User 1: Well, it''s not for everyone. But it''s definitely a lot of fun!
+
+    User 2: I''m sure it is! I''m still young, so I have plenty of time to decide.
+
+    User 1: That''s true! What are your plans for the future?
+
+    User 2: I''m not really sure yet. I just want to be successful and make a difference in the world.
+
+    User 1: That''s a great goal! I''m sure you''ll be able to achieve it.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to program, play video games, and watch movies.
+
+    User 1: I like to do those things too! I love watching movies and playing video games.
+
+    User 2: Me too! They''re a great way to relax and have fun.
+
+    User 1: I agree! So, what are your favorite movies and video games?
+
+    User 2: I like all kinds of movies, but I''m a big fan of sci-fi and fantasy movies. My favorite video games are the Assassin''s Creed series and the Witcher series.
+
+    User 1: I love those games too! I''m a big fan of open world games.
+
+    User 2: Me too! They''re so much fun to explore.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or play video games.
+
+    User 1: That sounds like a good plan. I''m going to go to the park with my kids.
+
+    User 2: That sounds like fun! I hope you have a great time.
+
+    User 1: Thanks! I hope you have a great weekend too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

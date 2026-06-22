@@ -1,0 +1,70 @@
+id: 00006578
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6578
+data:
+  user 1 personas: 'I am still living at home at age 30.
+
+    I am currently trying to open my own grocery store.
+
+    I have a college degree in marketing.
+
+    I am colorblind.'
+  user 2 personas: 'I m always looking for wildlife when i m outside.
+
+    I enjoy watching animal videos on the internet.
+
+    I visit animal shelters fairly often.
+
+    I get along better with animals than people.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi [name]. I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking and explore nature. I''m always looking for wildlife when I''m outside.
+
+    User 1: That sounds like fun. I like to go hiking too, but I''m not very good at it.
+
+    User 2: Don''t worry, it''s a learning experience. I''m sure you''ll get better at it the more you do it.
+
+    User 1: Thanks. I hope so. What else do you like to do for fun?
+
+    User 2: I enjoy watching animal videos on the internet. I also like to visit animal shelters.
+
+    User 1: That''s cool. I love animals too. I don''t know if I''m brave enough to work at an animal shelter though.
+
+    User 2: It''s not as bad as you might think. It''s actually really rewarding to help animals in need.
+
+    User 1: I can imagine. I''m sure it''s a lot of work, but it''s probably worth it.
+
+    User 2: It definitely is. I love being able to make a difference in the lives of animals.
+
+    User 1: That''s awesome. I''m glad you have such a passion for animals.
+
+    User 2: Thanks. I''m glad too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a marketing manager at a local grocery store.
+
+    User 1: Oh, that''s cool. I have a college degree in marketing too.
+
+    User 2: Really? That''s awesome! What kind of marketing do you do?
+
+    User 1: I mostly do social media marketing and website design.
+
+    User 2: Oh, that''s cool. I don''t know much about social media marketing.
+
+    User 1: It''s not too hard to learn. I''m sure you could pick it up if you wanted to.
+
+    User 2: Maybe I will. It might be a good way to get my foot in the door at another company.
+
+    User 1: That''s a great idea. Good luck!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

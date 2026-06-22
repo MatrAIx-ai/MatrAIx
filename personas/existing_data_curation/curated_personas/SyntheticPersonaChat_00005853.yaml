@@ -1,0 +1,64 @@
+id: 00005853
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5853
+data:
+  user 1 personas: 'I played in a band for 17 years.
+
+    My mother and father are both in the church choir.
+
+    I own my own music store.
+
+    I hope to retire to florida.
+
+    I am an animal rights activist.'
+  user 2 personas: 'I am learning how to play the piano.
+
+    Chocolate is my favorite food.
+
+    I am the youngest sibling of four.
+
+    I am a school psychologist.
+
+    I geocache in my spare time.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]. It''s nice to meet you!
+
+    User 1: Nice to meet you too!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I play in a band, I own my own music store, and I''m an animal rights activist.
+
+    User 2: That''s really cool! I''m learning how to play the piano, and I''m a school psychologist.
+
+    User 1: That''s awesome! I love music, and I''m always up for a good conversation about psychology.
+
+    User 2: Me too! I love music, and I''m always up for a good conversation about animals.
+
+    User 1: What''s your favorite kind of music?
+
+    User 2: I like all kinds of music, but I''m really into classic rock right now.
+
+    User 1: Me too! I love classic rock. I used to play in a band that covered a lot of classic rock songs.
+
+    User 2: That''s awesome! I would love to hear you play sometime.
+
+    User 1: I''d be happy to play for you.
+
+    User 2: Great! I''ll bring some chocolate.
+
+    User 1: Sounds good! I love chocolate.
+
+    User 2: Me too! It''s my favorite food.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

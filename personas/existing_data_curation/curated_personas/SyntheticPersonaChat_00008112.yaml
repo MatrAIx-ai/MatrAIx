@@ -1,0 +1,62 @@
+id: 00008112
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8112
+data:
+  user 1 personas: 'My mom is a checker at the local grocery store.
+
+    I love watching game of thrones.
+
+    I grew up in alabama.
+
+    I once saw the easter bunny hiding behind my closet door.
+
+    I do not like the song sweet home alabama.'
+  user 2 personas: 'I am a rapper.
+
+    I drive a ferrari.
+
+    I just bought a new mansion.
+
+    I am touring with frank ocean.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s your name?
+
+    User 2: Hi, my name is [name]. What do you like to do?
+
+    User 1: I like to watch Game of Thrones, and I''m from Alabama.
+
+    User 2: I''ve never seen Game of Thrones, but I''ve heard good things about it. I''m from New York City.
+
+    User 1: Oh, that''s cool. I''ve always wanted to visit New York City.
+
+    User 2: It''s a great city, but it''s really expensive.
+
+    User 1: I''m sure it is. What do you do for a living?
+
+    User 2: I''m a rapper.
+
+    User 1: Oh, that''s cool. I''ve never met a rapper before.
+
+    User 2: I''m not very famous, but I''m working on it.
+
+    User 1: Good luck! I''m sure you''ll make it big.
+
+    User 2: Thanks! What do you do for a living?
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s cool. I''m glad you''re helping people.
+
+    User 1: Me too. It''s a rewarding job.
+
+    User 2: I''m sure it is. I''m glad I met you, [name].
+
+    User 1: Me too, [name]. It was nice talking to you.
+
+    User 2: You too. Maybe we can chat again sometime.
+
+    User 1: That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00036100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36100
+persona_description: A scientist who studies the effects of global warming and the depletion of the ozone layer. This scientist is particularly interested in the rise in emissions of a key ozone-destroying
+  chemical, trichlorofluoromethane (CFC-11), despite its production being banned around the world. This scientist is conducting research to understand the reasons behind the increase in emissions and to
+  develop strategies to mitigate the effects of ozone depletion.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Atmospheric Science
+  general_domain_top01pct: None
+  specific_domain_top01pct: Atmospheric Chemistry
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

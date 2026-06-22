@@ -1,0 +1,82 @@
+id: '00002066'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2066
+data:
+  user 1 personas: 'I am a business man.
+
+    I am a karate black belt.
+
+    My wife has terminal cancer.
+
+    I love to sing.'
+  user 2 personas: 'I am also round.
+
+    I am short.
+
+    I am smart too.
+
+    I have big face cheeks.
+
+    I like reading.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a business man.
+
+    User 1: Oh, that''s cool. I''m a karate black belt.
+
+    User 2: Really? That''s impressive! I''ve always wanted to learn karate.
+
+    User 1: You should! It''s a great way to stay in shape and learn self-defense.
+
+    User 2: I know, I know. I''ve been meaning to sign up for a class, but I just haven''t had the time.
+
+    User 1: Well, you should definitely make time for it. It''s a lot of fun.
+
+    User 2: I will, I promise.
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m just reading a book.
+
+    User 1: Oh, what''s it about?
+
+    User 2: It''s a mystery novel.
+
+    User 1: Oh, I love mystery novels. What''s the name of it?
+
+    User 2: It''s called "The Murder of Roger Ackroyd".
+
+    User 1: Oh, I''ve heard of that one. It''s supposed to be really good.
+
+    User 2: Yeah, it is. I''m really enjoying it.
+
+    User 1: Well, I''m sure you''ll have to tell me all about it when you''re finished.
+
+    User 2: I will, if you''ll promise to tell me about your karate class.
+
+    User 1: Deal!
+
+    User 2: Great!
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to read, play video games, and hang out with my friends.
+
+    User 1: Me too! I love to read, play video games, and hang out with my friends.
+
+    User 2: We should hang out sometime.
+
+    User 1: That would be great!
+
+    User 2: Great! Let''s exchange numbers.
+
+    User 1: Sure'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

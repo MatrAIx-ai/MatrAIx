@@ -1,0 +1,90 @@
+id: '00007004'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7004
+data:
+  user 1 personas: 'I met my wife at a nickleback concert.
+
+    I m a pilot for southwest.
+
+    My favorite food is fried chicken.
+
+    My son was born completely blind.'
+  user 2 personas: 'I also like ford trucks.
+
+    My truck is black.
+
+    I own a ford truck.
+
+    I like ford cars.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is John.
+
+    User 1: Nice to meet you, John. My name is [user 1''s name].
+
+    User 2: Nice to meet you too, [user 1''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a pilot for Southwest Airlines.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a pilot.
+
+    User 2: It''s a great job! I get to travel all over the world and meet new people.
+
+    User 1: That sounds awesome! What''s your favorite place to travel?
+
+    User 2: I have a lot of favorite places, but I''d have to say my favorite is Hawaii.
+
+    User 1: That''s a great choice! Hawaii is beautiful.
+
+    User 2: It sure is! I love the beaches, the mountains, and the culture.
+
+    User 1: I''ve always wanted to go there.
+
+    User 2: You should definitely go sometime!
+
+    User 1: I will!
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is fried chicken.
+
+    User 2: Fried chicken is delicious! Do you have a favorite recipe?
+
+    User 1: I don''t really have a favorite recipe, but I love fried chicken from the restaurant Bojangles.
+
+    User 2: I''ve never had Bojangles fried chicken, but I''ve heard good things about it.
+
+    User 1: You should definitely try it sometime! It''s really good.
+
+    User 2: I will!
+
+    User 1: What''s your favorite car?
+
+    User 2: My favorite car is a Ford truck.
+
+    User 1: I like Ford trucks too! I have a Ford F-150.
+
+    User 2: That''s a great truck! I have a Ford Ranger.
+
+    User 1: I like the Rangers too. They''re great trucks.
+
+    User 2: They are!
+
+    User 1: Well, it was nice talking to you, John.
+
+    User 2: It was nice talking to you too, [user 1''s name].
+
+    User 1: Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

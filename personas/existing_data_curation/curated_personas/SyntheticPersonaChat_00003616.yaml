@@ -1,0 +1,77 @@
+id: '00003616'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3616
+data:
+  user 1 personas: 'I barely show up to work.
+
+    I make ask a year.
+
+    I own my company.
+
+    I am married with one child.
+
+    I pay my employees minimum wage.'
+  user 2 personas: 'I am a scientist.
+
+    I live alone.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I play guitar on my free time.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+
+    User 2: Hi, I''m [username].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a scientist.
+
+
+    User 1: That''s cool! What kind of science do you do?
+
+
+    User 2: I study food science.
+
+
+    User 1: That sounds interesting! What''s your favorite thing about your job?
+
+
+    User 2: I love being able to create new things and see how they work.
+
+
+    User 1: That''s awesome! Do you have any hobbies outside of work?
+
+
+    User 2: I like to cook, play guitar, and go hiking.
+
+
+    User 1: That sounds like a lot of fun! I like to cook too. What''s your favorite thing to cook?
+
+
+    User 2: I love making pasta dishes. I''m pretty good at making sauces.
+
+
+    User 1: That sounds delicious! I love pasta dishes too. I''m more of a simple sauce kind of person, though.
+
+
+    User 2: I like to mix it up a bit. I''ll make a simple sauce sometimes, but I also like to make more complex sauces with different flavors.
+
+
+    User 1: That sounds really interesting. I might have to try making a more complex sauce sometime.
+
+
+    User 2: You should! It''s a lot of fun to experiment with different ingredients and flavors.
+
+
+    User 1: Thanks for the tip! I''ll have to give it a try.
+
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

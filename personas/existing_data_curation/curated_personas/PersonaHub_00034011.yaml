@@ -1,0 +1,18 @@
+id: '00034011'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34011
+persona_description: A scientist who specializes in the study of bacteria and their diseases, particularly those caused by the Gram-negative bacterium Yersinia pestis. This scientist is interested in the
+  complete genome sequence of Y. pestis strain CO92, the causative agent of the plague, and its potential use as an agent of biological warfare. The scientist is also interested in the ongoing genetic flux
+  of Y. pestis, which poses a threat to human health.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: microbiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

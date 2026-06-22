@@ -1,0 +1,76 @@
+id: 00006328
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6328
+data:
+  user 1 personas: 'My favorite dessert is cheesecake.
+
+    I am bored of my maids.
+
+    I have more money than i know what to do with.
+
+    My children are a dissapointment.'
+  user 2 personas: 'I was born 20 years ago.
+
+    I live in the usa.
+
+    I was born male and transitioned to female when i was 17.
+
+    I love pizza.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, good. How about yourself?
+
+    User 1: I''m doing well, thanks. So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and read books.
+
+    User 1: Sounds like we have a lot in common. I love video games and books too.
+
+    User 2: That''s great! What are some of your favorite games?
+
+    User 1: I like all sorts of games, but I''m really into open world games right now.
+
+    User 2: Oh, cool! I like those too. What are some of your favorites?
+
+    User 1: I really like "The Witcher 3" and "Red Dead Redemption 2."
+
+    User 2: I''ve heard good things about both of those games. I''ve been meaning to try them out.
+
+    User 1: You should! They''re both really great. So, what kind of books do you like to read?
+
+    User 2: I like to read all sorts of books, but I''m really into fantasy and science fiction.
+
+    User 1: Oh, me too! I love those genres. What are some of your favorite books?
+
+    User 2: I really like "The Lord of the Rings" series and "The Hitchhiker''s Guide to the Galaxy" series.
+
+    User 1: I love both of those series too! We should exchange book recommendations sometime.
+
+    User 2: I''d love that!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m an engineer too.
+
+    User 2: What kind of engineering do you do?
+
+    User 1: I''m a civil engineer.
+
+    User 2: Oh, that''s cool! I''ve always thought civil engineering was really interesting.
+
+    User 1: It is! It''s a lot of fun to work on big projects that make a difference in the world.
+
+    User 2: I bet it is. So, what are some of your favorite projects that you''ve worked on?
+
+    User 1: I worked on a project to build a new bridge over a river. It was a lot of work, but it was really rewarding to see it finished.
+
+    User 2: That sounds awesome! I''d love to see it sometime.
+
+    User 1: Sure, I''d be happy to show you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

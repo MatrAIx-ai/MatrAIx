@@ -1,0 +1,70 @@
+id: '00001655'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1655
+data:
+  user 1 personas: 'I like rock music.
+
+    I like basketball.
+
+    I work at mcdonalds.
+
+    My favorite color is green.'
+  user 2 personas: 'Some call me a hopeless romantic.
+
+    I dropped out of college a month ago.
+
+    I wear my heart on my sleeve.
+
+    I live in my foreign car outside los angeles.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I dropped out of college a month ago and now live in my foreign car outside of Los Angeles.
+
+    User 1: Why did you drop out?
+
+    User 2: I was a hopeless romantic and I fell in love with someone who didn''t love me back.
+
+    User 1: I''m sorry to hear that.
+
+    User 2: It''s okay. I''m trying to move on.
+
+    User 1: I''m sure you''ll find someone who loves you for who you are.
+
+    User 2: I hope so.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to concerts and play basketball.
+
+    User 1: I like rock music too.
+
+    User 2: Me too! What''s your favorite band?
+
+    User 1: I like the Foo Fighters.
+
+    User 2: They''re great! I like them too.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I like "The Pretender".
+
+    User 1: That''s a good one. I like "Learn to Fly".
+
+    User 2: That''s a good one too.
+
+    User 1: So, what do you like about basketball?
+
+    User 2: I like the competition and the teamwork.
+
+    User 1: Me too. I''ve always wanted to play basketball, but I''m not very good.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a great way to stay in shape and have some fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

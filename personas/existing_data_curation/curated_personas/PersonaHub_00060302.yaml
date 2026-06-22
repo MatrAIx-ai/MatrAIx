@@ -1,0 +1,17 @@
+id: '00060302'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60302
+persona_description: A NASA engineer who is responsible for maintaining the space station's cooling systems and is in charge of conducting spacewalks to address any potential leaks. He is experienced and
+  skilled in spacewalks and has a deep understanding of the space station's systems. He is also responsible for ensuring the safety and well-being of the astronauts on board.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: spacewalk engineering or spacecraft systems engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

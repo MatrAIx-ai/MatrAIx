@@ -1,0 +1,86 @@
+id: '00002116'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2116
+data:
+  user 1 personas: 'I am an avid runner.
+
+    I run marathons twice a year , mostly in america.
+
+    I live in canada , near ontario.
+
+    My favorite sport is basketball.
+
+    My favorite basketball team is the vancouver grizzlies.'
+  user 2 personas: 'I am only 5 foot tall.
+
+    I have a thick full beard.
+
+    My hair is as red as the sunset.
+
+    I have 8 brothers and we are close.
+
+    My parents are in there 80s.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thank you for asking!
+
+    User 1: I''m glad to hear that. What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for fun?
+
+    User 2: I like to run marathons.
+
+    User 1: That''s awesome! I''ve always wanted to run a marathon, but I''m not sure if I''m up for it.
+
+    User 2: It''s a lot of work, but it''s worth it. You feel so accomplished when you finish.
+
+    User 1: I bet. What''s your favorite marathon?
+
+    User 2: I think my favorite marathon is the Boston Marathon. It''s so historic and challenging.
+
+    User 1: That sounds like a great marathon to run. I''ve heard it''s one of the most difficult marathons in the world.
+
+    User 2: It is, but it''s also one of the most rewarding.
+
+    User 1: I''m sure it is. I''m not sure if I''ll ever be brave enough to run the Boston Marathon, but I''ll definitely keep it in mind.
+
+    User 2: You should! It''s an experience you''ll never forget.
+
+    User 1: Thanks for the advice. I''ll definitely look into it.
+
+    User 2: You''re welcome. So, what do you do for fun?
+
+    User 1: I like to play basketball.
+
+    User 2: That''s awesome! I love basketball too. What''s your favorite team?
+
+    User 1: My favorite team is the Vancouver Grizzlies.
+
+    User 2: That''s a great team. I''m a big fan of theirs too.
+
+    User 1: I''m glad to hear that. I''m hoping they make the playoffs this year.
+
+    User 2: Me too. I think they have a good chance.
+
+    User 1: I hope so.
+
+    User 2: Me too. So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. What are yours?
+
+    User 2: I''m going to run a marathon.
+
+    User 1: That''s awesome! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

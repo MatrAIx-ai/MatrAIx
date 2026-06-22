@@ -1,0 +1,90 @@
+id: '00001315'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1315
+data:
+  user 1 personas: 'I like to garden.
+
+    I love the outdoors.
+
+    I am tall.
+
+    I like to build things.
+
+    I like to travel.'
+  user 2 personas: 'I love to cook.
+
+    I have three dogs.
+
+    I am looking for someone.
+
+    I work for an architect firm.
+
+    I enjoy fishing.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: It''s nice to meet you, [User 2''s name]. My name is [User 1''s name].
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, fish, and spend time with my dogs.
+
+    User 1: Oh, that sounds fun! I like to garden, go hiking, and travel.
+
+    User 2: I love gardening! I wish I had more time for it.
+
+    User 1: You should try to make some time. It''s very relaxing.
+
+    User 2: I will! I have a lot of plants at home, but I don''t really know what I''m doing.
+
+    User 1: I can help you with that! I''m a big gardener, and I love to share my knowledge.
+
+    User 2: That would be great! I would love to learn more about gardening.
+
+    User 1: Sure! I can give you some tips on how to start your own garden, what plants to grow, and how to care for them.
+
+    User 2: That would be great! Thanks so much!
+
+    User 1: No problem! I''m always happy to help out.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m an engineer.
+
+    User 2: Oh, that''s cool! What kind of engineering do you do?
+
+    User 1: I''m a civil engineer. I design and build bridges, roads, and other infrastructure.
+
+    User 2: Oh, that''s awesome! I''m always amazed by the things that civil engineers can do.
+
+    User 1: Thanks! It''s a lot of fun, but it can also be challenging.
+
+    User 2: I can imagine! But it sounds like you''re really good at it.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what do you do for fun besides gardening?
+
+    User 1: I like to go hiking, fishing, and travel. I also like to play video games and watch movies.
+
+    User 2: Oh, that sounds like fun! I like to do a lot of the same things.
+
+    User 1: Cool! We should hang out sometime and do some activities together.
+
+    User 2: That would be fun! I''d love to do that.
+
+    User 1: Great! We can exchange numbers and make plans later.
+
+    User 2: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

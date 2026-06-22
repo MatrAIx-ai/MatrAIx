@@ -1,0 +1,18 @@
+id: '00050724'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50724
+persona_description: A licensed health care provider who specializes in treating patients with traumatic brain injuries (TBI) and offers treatment for persistent concussion symptoms. They have expertise
+  in evaluating and monitoring patients with concussion and may refer them to physical, occupational, and speech language pathologists for further treatment. They are knowledgeable about the guidelines
+  for determining when patients should be referred to these specialists and have experience in treating persistent concussion symptoms using various treatment modalities.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: traumatic brain injury treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,74 @@
+id: '00001612'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1612
+data:
+  user 1 personas: 'I have a doberman.
+
+    My favorite food is pizza.
+
+    I am a man.
+
+    I work on trucks.'
+  user 2 personas: 'I am a couch potato.
+
+    I love the walking dead.
+
+    I do not have a job.
+
+    I eat junk food.
+
+    I love comics.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much. Just watching the Walking Dead.
+
+    User 1: Oh, that''s cool. I love that show.
+
+    User 2: Yeah, it''s pretty good.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m a couch potato. I don''t have a job.
+
+    User 1: Oh, why not?
+
+    User 2: I don''t know. I just don''t feel like working.
+
+    User 1: I see. So, what do you do all day?
+
+    User 2: I watch TV, play video games, and eat junk food.
+
+    User 1: That sounds like a pretty good life.
+
+    User 2: Yeah, it is.
+
+    User 1: I''m jealous.
+
+    User 2: Why?
+
+    User 1: I have a job and I have to work all the time.
+
+    User 2: That sucks.
+
+    User 1: Yeah, it does.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, fishing, and camping.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: Yeah, it is.
+
+    User 2: I wish I could do those things.
+
+    User 1: You can. You just have to make the time.
+
+    User 2: I know. I''ll try.
+
+    User 1: Good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00006214'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6214
+data:
+  user 1 personas: 'I design video games for a living.
+
+    My wife recently got laid off from her human resources job.
+
+    I am trying to create my own startup company in the gaming industry.
+
+    My son plays on the local football team.'
+  user 2 personas: 'My dad is a veteran.
+
+    I listen to all kinds of music.
+
+    My favorite color is green.
+
+    I like to play tennis.
+
+    I love watching funny movies.'
+  Best Generated Conversation: 'User 1: Hello! How are you today?
+
+    User 2: Hello! I am doing well, thanks for asking. How are you doing?
+
+    User 1: I am doing great, thanks! I am a video game designer and I am trying to create my own startup company in the gaming industry.
+
+    User 2: That sounds like a very exciting project! I hope it goes well for you.
+
+    User 1: Thanks! I''m putting a lot of hard work into it and I''m hoping it will pay off.
+
+    User 2: It sounds like you''re doing everything right. I''m sure it will be a success.
+
+    User 1: I hope so!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch movies, and go out with friends.
+
+    User 2: I like to do all those things too! What kind of movies do you like to watch?
+
+    User 1: I like to watch all kinds of movies, but I especially like funny movies and action movies.
+
+    User 2: Me too! I love watching funny movies to make me laugh.
+
+    User 1: What''s your favorite funny movie?
+
+    User 2: I love The Hangover. It''s so funny!
+
+    User 1: I love that movie too! It''s one of my favorites.
+
+    User 2: So, what kind of music do you like to listen to?
+
+    User 1: I listen to all kinds of music, but I especially like rock music.
+
+    User 2: Me too! I love rock music. What''s your favorite rock band?
+
+    User 1: I love Led Zeppelin. They''re my favorite band of all time.
+
+    User 2: Me too! They''re so good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

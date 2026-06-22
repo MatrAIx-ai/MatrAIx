@@ -1,0 +1,17 @@
+id: '00057217'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57217
+persona_description: A doctor who specializes in the diagnosis and treatment of retinal disorders. They are skilled in conducting electroretinography (ERG) tests and are equipped with the knowledge and
+  expertise to interpret the results. They are also knowledgeable about the potential risks and benefits of the ERG test, and are able to provide guidance and treatment recommendations based on the results.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: electroretinography
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

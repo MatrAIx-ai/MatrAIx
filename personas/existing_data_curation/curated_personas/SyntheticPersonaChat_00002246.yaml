@@ -1,0 +1,68 @@
+id: '00002246'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2246
+data:
+  user 1 personas: 'I have two children.
+
+    I like to donate time at the local animal shelter.
+
+    I like to hunt.
+
+    I had two cats growing up.
+
+    Both my parents were teachers.'
+  user 2 personas: 'I don t like to eat meat.
+
+    My favorite fruit is apple.
+
+    I like fruit.
+
+    I like green apples.'
+  Best Generated Conversation: 'User 1: Hey, what''s your name?
+
+    User 2: My name is Alex.
+
+    User 1: Nice to meet you, Alex. What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: I like reading and writing too. I don''t play video games much, but I used to.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially into science fiction and fantasy.
+
+    User 2: I like science fiction and fantasy too. I''ve been reading a lot of Brandon Sanderson lately.
+
+    User 1: I''ve read some of his books, and I really like them. I''m also a big fan of George R. R. Martin.
+
+    User 2: I''ve heard good things about George R. R. Martin, but I haven''t read any of his books yet.
+
+    User 1: You should! His books are really good.
+
+    User 2: I''ll have to check them out.
+
+    User 1: I also like to write. I''ve written a few short stories and poems, but I''m not very good at it.
+
+    User 2: I''m sure you''re better than you think. I''ve never written anything, but I''ve always wanted to try.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t have any pets. I always wanted a dog, but I''m not sure I have the time to take care of one.
+
+    User 1: I have two dogs. They''re a lot of work, but they''re also a lot of fun.
+
+    User 2: Maybe I''ll get a dog one day.
+
+    User 1: You should! They''re great pets.
+
+    User 2: Thanks for the advice'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

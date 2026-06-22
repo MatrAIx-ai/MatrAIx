@@ -1,0 +1,19 @@
+id: 00016991
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16991
+persona_description: A dam safety official or engineer who is responsible for ensuring the safety of dams and their associated infrastructure. This persona is interested in developing and updating dam break
+  forecasts using advanced modeling techniques, particularly those related to dam failures and their impact on downstream flood waves. They are also interested in improving the documentation and guidance
+  provided by the National Weather Service (NWS) on how to use existing models and tools for dam break forecasting. This persona may also have a background in hydrology, engineering, or related fields,
+  and is familiar with the latest advancements in dam safety and flood forecasting.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Hydrology/Fluid Dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

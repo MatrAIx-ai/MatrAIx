@@ -1,0 +1,72 @@
+id: '00005375'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5375
+data:
+  user 1 personas: 'I tutor kids in my spare time.
+
+    I have 3 small dogs.
+
+    I used to be very religious.
+
+    I have a personal trainer.
+
+    I love to ride bikes.'
+  user 2 personas: 'I read a lot.
+
+    I like to go to the park.
+
+    I work at a museum.
+
+    I am stuck in a wheel chair.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name]. I''m [user 2''s name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I work at a museum.
+
+    User 1: Oh, that sounds interesting. What kind of museum?
+
+    User 2: It''s a natural history museum.
+
+    User 1: I love natural history museums! I used to go to one all the time when I was a kid.
+
+    User 2: That''s cool! What was your favorite exhibit?
+
+    User 1: I liked the dinosaur exhibit the best.
+
+    User 2: Me too! I love dinosaurs.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go to the park, and spend time with my family.
+
+    User 1: I like to read too! What kind of books do you like to read?
+
+    User 2: I like to read a lot of different things, but I really like historical fiction.
+
+    User 1: I like historical fiction too! I love learning about different time periods.
+
+    User 2: Me too! I think it''s so interesting to see how people lived in different times.
+
+    User 1: I agree! So, what''s your favorite book?
+
+    User 2: That''s a hard question! I have so many favorite books. But one of my favorites is "To Kill a Mockingbird" by Harper Lee.
+
+    User 1: I love that book! It''s so good.
+
+    User 2: Me too! I think it''s one of the best books ever written.
+
+    User 1: I agree! It''s so powerful and moving.
+
+    User 2: Me too! I''m glad you like it.
+
+    User 1: Thanks! It''s one of my favorites too.
+
+    User 2: I''m glad to hear that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

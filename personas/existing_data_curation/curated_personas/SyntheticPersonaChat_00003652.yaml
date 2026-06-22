@@ -1,0 +1,58 @@
+id: '00003652'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3652
+data:
+  user 1 personas: 'I hate talking to people.
+
+    Nachos are my favorite food.
+
+    I play d and d.
+
+    I should beverage been born a prince.
+
+    I believe dragons are real.'
+  user 2 personas: 'I work graveyard in a hotel.
+
+    I like to surf every chance i get.
+
+    I love the snow.
+
+    My favorite actor is robert denaro.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: I love nachos!
+
+    User 1: Me too! What''s your favorite way to make them?
+
+    User 2: I like to make them with lots of cheese, guacamole, and sour cream.
+
+    User 1: That sounds delicious! I''m not much of a cook, but I can make a mean batch of nachos.
+
+    User 2: You should share the recipe with me sometime!
+
+    User 1: I will! What do you do for fun?
+
+    User 2: I like to surf, snow ski, and play D&D.
+
+    User 1: I''ve never been skiing, but I''ve always wanted to try it.
+
+    User 2: It''s a lot of fun! And it''s a great way to get some exercise.
+
+    User 1: I can imagine! What''s your favorite D&D class?
+
+    User 2: I like to play a paladin. They''re always ready to fight for justice.
+
+    User 1: Paladins are cool! I''ve always wanted to play a wizard.
+
+    User 2: Wizards are fun too! They can cast all sorts of powerful spells.
+
+    User 1: I know, right? I think I might try playing a wizard next time I play D&D.
+
+    User 2: You should! I''m sure you''d have a lot of fun.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

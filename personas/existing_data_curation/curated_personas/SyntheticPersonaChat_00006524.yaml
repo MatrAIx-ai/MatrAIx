@@ -1,0 +1,76 @@
+id: '00006524'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6524
+data:
+  user 1 personas: 'My favorite musician is bruno mars.
+
+    I am an accountant.
+
+    I drive a red car.
+
+    I enjoy running.'
+  user 2 personas: 'I m getting married in six months.
+
+    I m a babysitter.
+
+    I have a sweet tooth.
+
+    I drive a mercedes.'
+  Best Generated Conversation: 'User 1: Hi there, what''s your name?
+
+    User 2: Hi, my name is [name]. What''s yours?
+
+    User 1: I''m [name]. Nice to meet you.
+
+    User 2: You too. What do you do for a living?
+
+    User 1: I''m an accountant. What about you?
+
+    User 2: I''m a babysitter.
+
+    User 1: Oh, that''s cool. Do you enjoy it?
+
+    User 2: Yes, I do. I get to work with kids and I love that.
+
+    User 1: That''s great. I''m sure you''re good at it.
+
+    User 2: Thank you! I try my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go shopping, watch movies, and hang out with my friends.
+
+    User 1: Oh, that sounds fun. I like to go running, listen to music, and play video games.
+
+    User 2: I love listening to music too! Who''s your favorite musician?
+
+    User 1: I love Bruno Mars. He''s so talented.
+
+    User 2: I love him too! He''s my favorite artist.
+
+    User 1: Wow, we have a lot in common.
+
+    User 2: I know, right? It''s like we were meant to be friends.
+
+    User 1: I think so too.
+
+    User 2: So, what are you doing later?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to a concert with my friends. Do you want to come with us?
+
+    User 1: Oh, that sounds fun. I would love to come.
+
+    User 2: Great! I''ll text you the details later.
+
+    User 1: Sounds good.
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

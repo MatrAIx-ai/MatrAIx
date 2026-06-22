@@ -1,0 +1,18 @@
+id: '00050000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50000
+persona_description: A traveler who enjoys exploring rare astronomical phenomena and has a deep interest in the history of astronomical observations. This person is likely to have a passion for astronomy
+  and has a keen eye for details, making them interested in the specifics of the 2012 June 5-6 transit of Venus. They are also likely to be curious about the impact of human interference on the observation
+  process, such as the mishandling of equipment by TSA agents.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: astronomical observations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

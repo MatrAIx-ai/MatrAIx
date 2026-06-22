@@ -1,0 +1,17 @@
+id: '00054615'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54615
+persona_description: A team of doctors who specialize in the medical care of endangered great apes, particularly orangutans. They have extensive experience in performing complex surgeries on these animals
+  and have a deep understanding of their anatomy and physiology. They are passionate about their work and are committed to saving the lives of these majestic animals.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: primate medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: orangutan medicine
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

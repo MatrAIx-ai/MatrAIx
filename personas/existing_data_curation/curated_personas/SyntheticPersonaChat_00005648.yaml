@@ -1,0 +1,66 @@
+id: 00005648
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5648
+data:
+  user 1 personas: 'My family owns a grocery store.
+
+    I get my nails done every saturday.
+
+    I secretly love watching we wrestling.
+
+    I daydream about cafes in paris.'
+  user 2 personas: 'I am afraid of clowns.
+
+    I am a vegetarian.
+
+    Every fall i visit my sister in canada.
+
+    I take the subway to work everyday.'
+  Best Generated Conversation: 'User 1: I''m a huge fan of professional wrestling. I watch it every Saturday night.
+
+    User 2: Really? I''m afraid of clowns.
+
+    User 1: Really? Why?
+
+    User 2: I don''t know. They just creep me out.
+
+    User 1: I know what you mean. They''re kind of weird.
+
+    User 2: I''m also a vegetarian.
+
+    User 1: Oh, that''s cool. I''m not, but I respect it.
+
+    User 2: Thanks. I visit my sister in Canada every fall. She lives in Vancouver.
+
+    User 1: That sounds really nice. I''ve never been to Canada.
+
+    User 2: You should go! It''s beautiful.
+
+    User 1: I know, I know. It''s on my bucket list.
+
+    User 2: Good. You should definitely go.
+
+    User 1: Thanks for the advice.
+
+    User 2: You''re welcome.
+
+    User 1: So, what do you do for work?
+
+    User 2: I take the subway to work every day.
+
+    User 1: Oh, that''s cool. I''ve never been on the subway.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I know, I know. It''s on my bucket list.
+
+    User 2: Good. You should definitely try it.
+
+    User 1: Thanks for the advice.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

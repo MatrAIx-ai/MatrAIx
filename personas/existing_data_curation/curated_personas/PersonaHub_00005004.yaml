@@ -1,0 +1,19 @@
+id: '00005004'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5004
+persona_description: A researcher or engineer who specializes in microwave engineering, specifically in the field of antenna design and simulation. They are interested in understanding the performance of
+  microwave antennas, their interaction with the environment, and how they can be optimized for specific applications. They have experience with software tools such as CST Microwave Studio and are skilled
+  in conducting simulations to analyze the performance of microwave systems. They are also interested in verifying the RF performance of antennas, including their mutual coupling and impedance match, and
+  are looking for ways to improve their systems' efficiency.
+expertise:
+  general_domain_top1pct: electrical engineering
+  specific_domain_top1pct: microwave engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

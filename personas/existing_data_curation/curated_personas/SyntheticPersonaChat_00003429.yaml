@@ -1,0 +1,66 @@
+id: 00003429
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3429
+data:
+  user 1 personas: 'I like to play nintendo.
+
+    I love to eat fish.
+
+    I like to race rc cars.
+
+    I have a pet husky.'
+  user 2 personas: 'I have a missing pinky toe.
+
+    I do not like green eggs and ham.
+
+    I enjoy swimming.
+
+    I have 4 dogs.
+
+    I love cooking.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello there!
+
+    User 1: What are your hobbies?
+
+    User 2: I love cooking, swimming, and playing with my 4 dogs.
+
+    User 1: That sounds like a lot of fun! What are your favorite dishes to cook?
+
+    User 2: I love making pasta dishes, especially lasagna. What about you?
+
+    User 1: I love making seafood dishes, especially fish tacos.
+
+    User 2: I love fish tacos too! Do you have a favorite fish to use?
+
+    User 1: I like to use tilapia or halibut.
+
+    User 2: Those are good choices. I like to use salmon.
+
+    User 1: I like salmon too. Have you ever had salmon tacos?
+
+    User 2: No, I haven''t. How are they?
+
+    User 1: They''re really good! I like to use a chipotle lime sauce.
+
+    User 2: That sounds delicious! I''ll have to try it sometime.
+
+    User 1: You should! I think you''ll like it.
+
+    User 2: Thanks for the recommendation. I''m always looking for new recipes to try.
+
+    User 1: You''re welcome! I like to cook, so I''m always happy to share recipes.
+
+    User 2: Well, I''m glad I met you. You seem like a really nice person.
+
+    User 1: Thanks! You too!
+
+    User 2: I''m sure we''ll be friends.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

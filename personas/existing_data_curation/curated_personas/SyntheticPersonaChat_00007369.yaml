@@ -1,0 +1,78 @@
+id: 00007369
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7369
+data:
+  user 1 personas: 'I often play the clown to get attention.
+
+    I will work hard for whatever i want.
+
+    I want people to notice me.
+
+    I care deeply for my friends and others close to me.
+
+    I grew up as an orphan.'
+  user 2 personas: 'My favorite band is the rolling stones.
+
+    I am almost 7 feet tall.
+
+    I currently work for ibm in chicago.
+
+    I would like to retire to hawaii in the next 10 years.
+
+    I am not a basketball player though.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hello, I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play music, read, and travel.
+
+    User 1: Cool, me too! I love to play the guitar.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I play a lot of different styles, but my favorite is blues.
+
+    User 2: Nice! I love blues too. I play the harmonica.
+
+    User 1: That''s cool! I love harmonica players.
+
+    User 2: Thanks! What''s your favorite Rolling Stones song?
+
+    User 1: I can''t decide between "Gimme Shelter" and "Brown Sugar."
+
+    User 2: Those are both great songs! I love "Gimme Shelter."
+
+    User 1: Me too! I love the way the song builds and the lyrics are so powerful.
+
+    User 2: Totally! I also love the guitar solo.
+
+    User 1: Yeah, that''s one of my favorite guitar solos ever.
+
+    User 2: Me too! What''s your favorite thing to do in Chicago?
+
+    User 1: I love going to the museums.
+
+    User 2: That''s cool! I''ve been to the Field Museum a few times.
+
+    User 1: The Field Museum is great! I''ve also been to the Art Institute.
+
+    User 2: I''ve been to the Art Institute too. It''s a beautiful museum.
+
+    User 1: Yeah, it is. What''s your favorite thing to do in Hawaii?
+
+    User 2: I love going to the beach and surfing.
+
+    User 1: That''s cool! I''ve never been surfing, but it looks like a lot of fun.
+
+    User 2: It is! It''s a great way to relax and have some fun.
+
+    User 1: I''m sure it is. I''ll have to try it sometime.
+
+    User 2: You should! It''s really fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

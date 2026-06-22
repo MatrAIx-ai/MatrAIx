@@ -1,0 +1,88 @@
+id: '00006510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6510
+data:
+  user 1 personas: 'My favorite author is stephen king.
+
+    I am a vet tech.
+
+    I am a christian.
+
+    My favorite movie genre is horror.'
+  user 2 personas: 'I own a mansion that i do not live in.
+
+    I never met my parents.
+
+    I am a genius and know over 300 languages.
+
+    I am an international business man.'
+  Best Generated Conversation: 'User 1: Hi, my name is (name).
+
+    User 2: Hello (name), my name is (name).
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy reading, learning new languages, and traveling.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: I have many favorite books, but one of my favorites is "It" by Stephen King.
+
+    User 1: That''s one of my favorite books too! I love the way King creates such a creepy atmosphere.
+
+    User 2: I agree! He''s a master of horror.
+
+    User 1: What other languages do you know?
+
+    User 2: I know over 300 languages! I''m always learning new ones.
+
+    User 1: That''s amazing! How did you learn so many languages?
+
+    User 2: I''ve always been fascinated by languages, and I love learning new things. I''ve also had the opportunity to travel to many different countries, which has helped me to learn more languages.
+
+    User 1: That''s so cool! I''ve always wanted to travel more.
+
+    User 2: You should definitely do it! It''s a great way to learn about different cultures and languages.
+
+    User 1: I will! Thanks for the advice.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an international businessman. I travel around the world and meet with clients.
+
+    User 1: That sounds like a really interesting job.
+
+    User 2: It is! I get to see the world and meet new people.
+
+    User 1: I''m sure it''s also very challenging.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: I''m glad you think so.
+
+    User 1: So, what are some of your favorite places to travel?
+
+    User 2: I love to travel to all different places, but some of my favorite places include Paris, London, and Tokyo.
+
+    User 1: I''ve always wanted to go to Paris!
+
+    User 2: It''s a beautiful city. I highly recommend it.
+
+    User 1: I''ll definitely add it to my list.
+
+    User 2: You won''t regret it.
+
+    User 1: I''m sure I won''t.
+
+    User 2: Well, I should probably get going. It was nice talking to you, (name).
+
+    User 1: It was nice talking to you too, (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

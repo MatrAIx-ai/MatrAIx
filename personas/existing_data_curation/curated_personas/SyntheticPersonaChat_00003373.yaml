@@ -1,0 +1,90 @@
+id: '00003373'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3373
+data:
+  user 1 personas: 'I have a large mustache.
+
+    I am a recovering alcoholic.
+
+    I am a retired newspaper reporter.
+
+    I live in a condo.
+
+    My girl friend lives in the condo next door.'
+  user 2 personas: 'I am a scientist.
+
+    I have 3 kids.
+
+    I want to go to mars.
+
+    I know karate.
+
+    I am an avid artist.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a scientist.
+
+    User 1: Oh, that''s cool! What kind of scientist?
+
+    User 2: I study plants.
+
+    User 1: That''s really neat. What''s your favorite plant?
+
+    User 2: I like orchids. They''re so beautiful.
+
+    User 1: I''ve never seen an orchid in real life.
+
+    User 2: You should come over to my place and see mine. I have a whole collection.
+
+    User 1: That sounds great! I love seeing plants.
+
+    User 2: Awesome! I''ll give you my address.
+
+    User 1: Great! I''ll come over soon.
+
+    User 2: Looking forward to it!
+
+
+    [At user 2''s house]
+
+
+    User 1: Wow! These orchids are amazing!
+
+    User 2: Thanks! I''m glad you like them.
+
+    User 1: I''ve never seen so many different colors and shapes.
+
+    User 2: There are so many different kinds of orchids. They''re all beautiful.
+
+    User 1: I love the smell of them too.
+
+    User 2: Me too! They''re so relaxing.
+
+    User 1: I could stay here all day looking at these orchids.
+
+    User 2: You''re welcome to stay as long as you want.
+
+    User 1: Thanks! I think I will.
+
+    User 2: Awesome! I''ll make some tea.
+
+
+    [After tea]
+
+
+    User 1: I really enjoyed seeing your orchids. Thanks for showing them to me.
+
+    User 2: You''re welcome! I''m glad you liked them.
+
+    User 1: I''m definitely coming back again.
+
+    User 2: I''ll be waiting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00006301'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6301
+persona_description: A person who is interested in medical conditions and their treatment, particularly rheumatic heart diseases and their symptoms. This person may have a background in biology, medicine,
+  or a related field and is looking for information on the causes, symptoms, and treatments of rheumatic heart diseases. They may also be interested in learning about the causes of rheumatic fever and the
+  role of antibiotics in treating it.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

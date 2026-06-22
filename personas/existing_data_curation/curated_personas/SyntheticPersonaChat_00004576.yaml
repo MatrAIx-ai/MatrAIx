@@ -1,0 +1,76 @@
+id: '00004576'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4576
+data:
+  user 1 personas: 'I am a small business owner.
+
+    I give out sports information.
+
+    My clients are gamblers.
+
+    I have a consulting firm.
+
+    I help them win a lot of money.'
+  user 2 personas: 'I like to train dogs.
+
+    I like to make cookies.
+
+    My favorite drink is coke.
+
+    I like bagels with everything on them.
+
+    I like to run.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I like to run, train dogs, and make cookies.
+
+    User 1: That sounds fun! I like to run too. Do you ever run in marathons?
+
+    User 2: No, I''m not a competitive runner. I just run for fun.
+
+    User 1: That''s cool. I used to run marathons, but I don''t have the time anymore.
+
+    User 2: I understand. It takes a lot of time and dedication to train for a marathon.
+
+    User 1: Yes, it does. But it''s worth it when you finish.
+
+    User 2: I bet it is. I''ve never done a marathon, but I might try one someday.
+
+    User 1: You should! It''s a great experience.
+
+    User 2: I will! Thanks for the advice.
+
+    User 1: You''re welcome. So, what do you like about training dogs?
+
+    User 2: I love the challenge of it. It''s really rewarding to see a dog learn new commands and become obedient.
+
+    User 1: I bet it is. I''ve never had a dog, but I''ve always wanted one.
+
+    User 2: You should get one! They''re great companions.
+
+    User 1: I might just do that.
+
+    User 2: Good! You won''t regret it.
+
+    User 1: So, what''s your favorite thing about making cookies?
+
+    User 2: I love the smell of fresh-baked cookies. And it''s always fun to try new recipes.
+
+    User 1: I bet it is. I love cookies too.
+
+    User 2: You should come over and try some of mine sometime.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll bake some this weekend.
+
+    User 1: Thanks! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

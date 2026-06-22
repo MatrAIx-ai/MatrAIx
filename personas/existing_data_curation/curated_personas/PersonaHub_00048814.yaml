@@ -1,0 +1,19 @@
+id: 00048814
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48814
+persona_description: A healthcare professional who is interested in the study of blood analysis and its interpretation. This person is likely to be a medical doctor, a pathologist, a laboratory scientist,
+  or a researcher in the field of blood chemistry. They are knowledgeable about the various factors that can affect the levels of bilirubin in the blood, including liver diseases, biliary tract disorders,
+  blood diseases, and chemical poisoning. They are also familiar with the reference values and boundaries for normal bilirubin levels and are skilled in interpreting laboratory test results to diagnose
+  and manage various conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hematology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bilirubin analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

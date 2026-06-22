@@ -1,0 +1,78 @@
+id: '00007363'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7363
+data:
+  user 1 personas: 'I look forward to eating at restaurants.
+
+    I work 40 hours a week.
+
+    I work in a bank.
+
+    I am very polite and courteous.
+
+    I try to do my job as best as i can.'
+  user 2 personas: 'I love cats.
+
+    I have five children.
+
+    I like crocheting.
+
+    I am married to a man.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to crochet, read, and spend time with my family.
+
+    User 1: I like to eat at restaurants and go for walks.
+
+    User 2: That sounds fun! I love trying new foods.
+
+    User 1: I do too! I''m always looking for new restaurants to try.
+
+    User 2: Do you have any favorite restaurants?
+
+    User 1: I really like the Olive Garden.
+
+    User 2: I''ve been there before! I like their pasta.
+
+    User 1: Me too! I also like their breadsticks.
+
+    User 2: Me too! They''re so good.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read mysteries, thrillers, and romance novels.
+
+    User 1: I like to read mysteries too! I''m currently reading one by Agatha Christie.
+
+    User 2: I love Agatha Christie! She''s one of my favorite authors.
+
+    User 1: Me too! I''ve read a lot of her books.
+
+    User 2: I have too! I love her mysteries.
+
+    User 1: What do you like to do with your family?
+
+    User 2: We like to go to the park, play games, and go on vacation.
+
+    User 1: That sounds like a lot of fun! I love spending time with my family too.
+
+    User 2: Me too! It''s the best.
+
+    * * *
+
+    User 1: It was nice chatting with you!
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,59 @@
+id: '00007444'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7444
+data:
+  user 1 personas: 'I am a civil war reenactment participant.
+
+    I like to make short films.
+
+    My mother is a well known celebrity.
+
+    I have traveled overseas many times.
+
+    I have been on the tv news six times.'
+  user 2 personas: 'I love new gadgets.
+
+    I have 5 kids.
+
+    I love to draw.
+
+    I love to socialize.
+
+    I am great with babies.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. I''m a civil war reenactment participant, I love to make short films, my mother is a well known celebrity, I have traveled overseas many
+    times, and I have been on the TV news six times.
+
+    User 2: Hi, my name is [user 2]. I love new gadgets, I have 5 kids, I love to draw, I love to socialize, and I am great with babies.
+
+    User 1: Wow, you have 5 kids? That''s a lot!
+
+    User 2: Yeah, it is. But I love them all very much.
+
+    User 1: I can imagine. What''s it like being a mom?
+
+    User 2: It''s hard work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. I''ve never been a mom, but I have a lot of friends who are.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a civil war reenactment participant.
+
+    User 2: That sounds really interesting! What do you do in that role?
+
+    User 1: I dress up in period clothing and participate in reenactments of civil war battles.
+
+    User 2: That sounds really cool! I''ve always been interested in the civil war.
+
+    User 1: It''s a fascinating time period.
+
+    User 2: I''m sure it is. I''ve read a lot about it, but I''ve never seen any reenactments.
+
+    User 1: You should come to one sometime! They''re really fun.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

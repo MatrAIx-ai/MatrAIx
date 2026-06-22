@@ -1,0 +1,56 @@
+id: 00001078
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1078
+data:
+  user 1 personas: 'I love children.
+
+    I am twenty two years old.
+
+    I just moved into an apartment within the vicinity of my new job.
+
+    I just accepted a job at the elementary school in my hometown.
+
+    I just graduated college with my bachelor s degree in education.'
+  user 2 personas: 'My husband is a firefighter.
+
+    My favorite food is sushi.
+
+    We have two kids.
+
+    I graduated with a nursing degree.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi! How are you doing today?
+
+    User 1: I''m doing well, thanks. Just got done moving into my new apartment.
+
+    User 2: Oh, that''s exciting! Where did you move from?
+
+    User 1: I moved from the city to a small town. I just got a job at the elementary school here.
+
+    User 2: That''s great! I''m a nurse and my husband is a firefighter. We have two kids.
+
+    User 1: Oh, that''s nice. I love children. I have always wanted to be a teacher.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, camping, and fishing. I also like to watch movies and read books.
+
+    User 2: Oh, I like to do those things too! I love to go hiking and camping with my family.
+
+    User 1: That''s great! I''m sure you have a lot of fun together.
+
+    User 2: We do! We love spending time outdoors.
+
+    User 1: That''s awesome. I''m looking forward to getting to know you better.
+
+    User 2: Me too! I think we''ll get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00005485
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5485
+data:
+  user 1 personas: 'I am a fan of system of a down.
+
+    I am trying to play in a local band.
+
+    I am a vegan.
+
+    I learned piano at age 6.'
+  user 2 personas: 'My family is poor.
+
+    I love the natural world beauty.
+
+    I practice yoga and hike.
+
+    I believe in fairytales.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to hike and practice yoga. I also love to read fairytales.
+
+    User 1: Oh, that''s cool! I''m a big fan of System of a Down. I also play the piano.
+
+    User 2: That''s awesome! I''ve never met a vegan before. How did you decide to become one?
+
+    User 1: I decided to become a vegan because I believe it''s the best thing for my health and the environment.
+
+    User 2: That''s a great reason! I''m trying to eat more plant-based meals, but it''s hard because my family is poor.
+
+    User 1: I understand. I''m lucky that I have a lot of access to fresh produce. Do you have any favorite vegan recipes?
+
+    User 2: I love making tofu scrambles. I also love making pasta dishes with vegan pesto.
+
+    User 1: Those sound delicious! I''ll have to try them sometime.
+
+    User 2: You should! They''re really easy to make.
+
+    User 1: I have a lot of friends who are into hiking and yoga. We should go hiking together sometime.
+
+    User 2: That would be great! I love hiking with people who are passionate about it.
+
+    User 1: Me too! I''m free this weekend if you want to go hiking.
+
+    User 2: That sounds great! I''ll check the weather and let you know.
+
+    User 1: Perfect! I''ll see you then.
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00008848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8848
+data:
+  user 1 personas: 'I still have a thick accent so words like hippopotamus are difficult.
+
+    I am still single at the age of 35.
+
+    I teach both japanese and drawing classes.
+
+    I came from japan to teach high school over 10 years ago.
+
+    My dogs name is wonton.'
+  user 2 personas: 'My favorite french fries are from mcdonald.
+
+    My mom and dad are from japan.
+
+    I love to shop.
+
+    I live in toronto , canada.
+
+    I am an elementary school teacher.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m User 1, from Japan.
+
+    User 2: I''m User 2, from Toronto.
+
+    User 1: I''m a high school teacher.
+
+    User 2: I''m an elementary school teacher.
+
+    User 1: I have a dog named Wonton.
+
+    User 2: I love McDonald''s french fries.
+
+    User 1: I love to shop.
+
+    User 2: I love to travel.
+
+    User 1: I''m still single.
+
+    User 2: I''m married with two kids.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a cat named Snowball.
+
+    User 1: What''s your favorite thing to do in your free time?
+
+    User 2: I love to go shopping and spend time with my family.
+
+    User 1: That sounds great! I love to travel and spend time with my dog.
+
+    User 2: I''m glad to hear that. It sounds like we have a lot in common.
+
+    User 1: Yes, we do. I think we''re going to be good friends.
+
+    User 2: Me too! I''m looking forward to getting to know you better.
+
+    User 1: Me too! I''m sure we''re going to have a lot of fun together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

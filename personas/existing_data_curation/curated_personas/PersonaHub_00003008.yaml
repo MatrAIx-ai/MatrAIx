@@ -1,0 +1,18 @@
+id: 00003008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3008
+persona_description: A patient or caregiver who is interested in learning about myasthenia gravis, a rare autoimmune disorder that affects the neuromuscular junctions and causes muscle weakness and fatigue.
+  The person is seeking information about the disease's mechanism, treatments, and the role of the immune system in the disorder. They are likely to have a background in medicine or healthcare and are interested
+  in understanding the complexities of autoimmune disorders.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: myasthenia gravis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

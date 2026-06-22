@@ -1,0 +1,46 @@
+id: 00008545
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8545
+data:
+  user 1 personas: 'I don t like feeling obligated to hang out with someone.
+
+    I love winning.
+
+    Coffee is important to me.
+
+    I can tell right away if i m going to like someone.'
+  user 2 personas: 'I grew up in syracuse , ny with my parents and brother.
+
+    I d also like to study abroad in spain.
+
+    I am currently studying at union college and want to be an english teacher.
+
+    That way , after graduating , i can teach english there for a year or two.
+
+    I am a huge buffalo bills fan , and our family has season tickets.'
+  Best Generated Conversation: 'User 1: I''m a New Yorker who loves coffee and winning!  Where are you from?
+
+    User 2: I''m from Syracuse, NY! I''m a huge Buffalo Bills fan, and my family has season tickets.
+
+    User 1: Oh cool! I''m not a football fan, but I love to travel. Do you have any plans to study abroad?
+
+    User 2: I''d love to study abroad in Spain after I graduate! I''m currently studying at Union College, and I want to be an English teacher.
+
+    User 1: That''s awesome! I''m an English teacher too! What kind of things do you like to do for fun?
+
+    User 2: I love to read, go out to eat, and spend time with my family and friends.
+
+    User 1: Me too! We should get together sometime and have coffee.
+
+    User 2: That sounds like a great idea! Let me know when you''re free.
+
+    User 1: I''m free next weekend. What do you think about getting coffee on Saturday morning?
+
+    User 2: That sounds perfect! I''ll see you then!
+
+    User 1: Great! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

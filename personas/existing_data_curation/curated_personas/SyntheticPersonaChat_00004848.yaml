@@ -1,0 +1,60 @@
+id: 00004848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4848
+data:
+  user 1 personas: 'My favorite color is orange.
+
+    I have really long fingernails.
+
+    I own a hot pink moped.
+
+    I hate wearing make up.'
+  user 2 personas: 'I draw comic books.
+
+    I work in a corner grocery store during the day.
+
+    I like dr pepper and black jack gum , but not together.
+
+    My favorite show is scooby doo.
+
+    In the evenings i watch the door at a club where they play punkrock.'
+  Best Generated Conversation: 'User 1: Hi! I''m User 1.
+
+    User 2: Hi! I''m User 2.
+
+    User 1: I''m interested in comic books. Do you like them too?
+
+    User 2: Yes! I draw them for a living.
+
+    User 1: Really? That''s so cool! What''s your favorite comic book?
+
+    User 2: I like Scooby Doo.
+
+    User 1: That''s a classic! I love Scooby Doo too.
+
+    User 2: Me too!
+
+    User 1: What do you like about Scooby Doo?
+
+    User 2: I like the mystery and the characters.
+
+    User 1: Me too! The characters are so lovable.
+
+    User 2: I know! I love Shaggy.
+
+    User 1: Me too! He''s the best.
+
+    User 2: I''m glad you like Scooby Doo too.
+
+    User 1: Me too! It''s a great comic book.
+
+    User 2: It is!
+
+    User 1: I''m so glad I met you.
+
+    User 2: Me too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00001785
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1785
+data:
+  user 1 personas: 'I am a younger guy.
+
+    I like to ride my bike.
+
+    I have beard that is longer.
+
+    I own a dog that is small.
+
+    I like to play football.'
+  user 2 personas: 'I work graveyard in a hotel.
+
+    I am saving for college.
+
+    My favorite actor is robert denaro.
+
+    I love the snow.
+
+    I like to surf every chance i get.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to surf, snowboard, and go camping.
+
+    User 1: Oh, that sounds fun! I like to ride my bike and play football.
+
+    User 2: I like to ride my bike too! I don''t play football though.
+
+    User 1: That''s cool! What''s your favorite thing about surfing?
+
+    User 2: I love being in the water and the feeling of freedom.
+
+    User 1: I can imagine! I love being outside and being active.
+
+    User 2: Me too!
+
+    User 1: What do you do for work?
+
+    User 2: I work graveyard in a hotel.
+
+    User 1: Oh, that must be interesting!
+
+    User 2: It is! I get to meet a lot of interesting people.
+
+    User 1: That''s cool! What are you saving up for?
+
+    User 2: I''m saving up for college.
+
+    User 1: Oh, that''s good! I''m sure you''ll do great in college.
+
+    User 2: Thanks!
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is Goodfellas.
+
+    User 1: Oh, that''s a good one! I love Robert De Niro.
+
+    User 2: Me too! He''s one of my favorite actors.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m going to go surfing!
+
+    User 1: Oh, that sounds fun! Have a great time!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

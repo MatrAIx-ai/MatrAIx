@@ -1,0 +1,20 @@
+id: 00060974
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60974
+persona_description: An operational supervisor who is responsible for managing and coordinating air traffic control operations during periods of severe weather avoidance. They are tasked with facilitating
+  and engaging in actions to mitigate the impact of severe weather on the controller's workload, including establishing coordination patterns with the MET office, using all available information, informing
+  affected adjacent units, assessing the safety and feasibility of following procedures described in local letters of agreement, providing additional controllers as necessary, applying dynamic sectorisation
+  management, opening additional sectors, considering the application of reduced departure rates or specific departure separations, and coordinating with relevant parties to release temporary restricted
+  airspace or reject/adjourn planned maintenance work on technical equipment used for ATS provision.
+expertise:
+  general_domain_top1pct: aviation
+  specific_domain_top1pct: air traffic control
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,48 @@
+id: 00004769
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4769
+data:
+  user 1 personas: 'I want to go back to school.
+
+    I like to watch shows on netflix.
+
+    I want to move to las vegas.
+
+    My sister is my best friend.'
+  user 2 personas: 'I really like to go to school.
+
+    I like to dance with my friends.
+
+    I love to be run.
+
+    I have a family that are all tall.'
+  Best Generated Conversation: 'User 1: I''m thinking about going back to school. I''ve been watching a lot of shows on Netflix about people who go back to school and it''s really inspiring.
+
+    User 2: That''s awesome! What kind of school are you thinking about going back to?
+
+    User 1: I''m not sure yet. I''m thinking about going to a community college first and then transferring to a four-year university.
+
+    User 2: That''s a good idea. Community college is a great way to save money and get your basics out of the way.
+
+    User 1: Yeah, I think so too. I''m also thinking about moving to Las Vegas after I graduate.
+
+    User 2: Las Vegas is a great city! I''ve been there a few times and I love it.
+
+    User 1: I''ve never been there, but I''ve heard great things. I''m excited to explore it.
+
+    User 2: I''m sure you''ll love it. It''s a very vibrant and exciting city.
+
+    User 1: I''m also excited to meet new people. I''m not sure if I''ll make any new friends in school, but I''m sure I''ll meet some cool people in Las Vegas.
+
+    User 2: I''m sure you will. There are a lot of friendly people in Las Vegas.
+
+    User 1: That''s good to hear. I''m excited to start this new chapter in my life.
+
+    User 2: I''m sure it will be great. Just remember, if you ever need anything, I''m always here for you.
+
+    User 1: Thanks, I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

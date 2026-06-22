@@ -1,0 +1,86 @@
+id: 00008150
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8150
+data:
+  user 1 personas: 'I have always enjoyed telling stories to people.
+
+    My ultimate dream , however , is to be a writer.
+
+    I am a mother of two daughters.
+
+    My husband died a few years ago , so i am raising them alone.
+
+    I work as a english teacher.'
+  user 2 personas: 'I went to college and graduated few years ago.
+
+    I live in the city.
+
+    Now i also work at a bank.
+
+    My father used to work for a bank.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a bank.
+
+    User 1: Oh, that''s interesting. I''ve always been interested in banking.
+
+    User 2: It''s a good job. I like it.
+
+    User 1: What do you like about it?
+
+    User 2: I like the people I work with and the challenges that come with the job.
+
+    User 1: That''s great.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m an English teacher.
+
+    User 2: Oh, that''s cool. I''ve always liked writing.
+
+    User 1: Me too. I love telling stories.
+
+    User 2: That''s great. I''m sure you''re a great teacher.
+
+    User 1: Thank you. I try to be.
+
+    User 2: What are your daughters'' names?
+
+    User 1: Their names are [daughters'' names].
+
+    User 2: That''s a beautiful name.
+
+    User 1: Thank you.
+
+    User 2: What are they like?
+
+    User 1: They''re both very good girls. They''re kind and smart.
+
+    User 2: That''s great.
+
+    User 1: I''m very lucky to have them.
+
+    User 2: I''m sure you are.
+
+    User 1: Thanks.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: I hope we can talk again sometime.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

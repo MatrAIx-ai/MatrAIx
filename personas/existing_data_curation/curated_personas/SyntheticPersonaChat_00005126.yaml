@@ -1,0 +1,64 @@
+id: '00005126'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5126
+data:
+  user 1 personas: 'My favorite city is new york.
+
+    I love to run.
+
+    My wife just left me.
+
+    I am a lawyer.'
+  user 2 personas: 'I enjoy taking late night walks when its completely dark.
+
+    I like reading.
+
+    My favorite band is dream theater.
+
+    I like being by myself.'
+  Best Generated Conversation: 'User 1: I just moved to New York City from California.
+
+    User 2: That''s cool! I''ve always wanted to visit California.
+
+    User 1: It''s a great place to live.
+
+    User 2: What do you like to do there?
+
+    User 1: I love to go to the beach, hike, and run.
+
+    User 2: I love to go to the beach too. I''m not much of a hiker or runner.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read fantasy, science fiction, and mystery.
+
+    User 1: Me too! I love fantasy and science fiction.
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is "The Lord of the Rings".
+
+    User 2: I love that book too! I''ve read it multiple times.
+
+    User 1: It''s so good. I''ve also read the other books in the series.
+
+    User 2: Me too! I''m excited for the new movie coming out next year.
+
+    User 1: Me too! I''ve been waiting for it for years.
+
+    User 2: I''m glad we both like fantasy books.
+
+    User 1: Me too! It''s nice to find someone who has similar interests.
+
+    User 2: It is. Maybe we can read some books together sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

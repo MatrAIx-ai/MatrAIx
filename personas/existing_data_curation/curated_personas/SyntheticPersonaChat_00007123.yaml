@@ -1,0 +1,94 @@
+id: '00007123'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7123
+data:
+  user 1 personas: 'I eat out more than three times a week.
+
+    I went to an elite ivy league school.
+
+    I look down on people who didn t.
+
+    I work in finance.'
+  user 2 personas: 'I am a senior citizen.
+
+    I have 4 children.
+
+    I like to read.
+
+    My grandchildren range in age from 30 to 7.
+
+    My husband was a career soldier.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a senior citizen.
+
+    User 1: Oh, that''s great! I''m sure you have some interesting stories to tell.
+
+    User 2: I do! I have four children, and my grandchildren range in age from 30 to 7.
+
+    User 1: That''s wonderful! I''m sure you''re very close to your family.
+
+    User 2: I am! We''re always there for each other.
+
+    User 1: That''s what it''s all about.
+
+    User 2: I know! I''m so grateful for them.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read! I''m always reading something new.
+
+    User 1: That''s great! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction.
+
+    User 1: Oh, that''s a great genre! I love historical fiction too.
+
+    User 2: I know! It''s so interesting to learn about the past.
+
+    User 1: It is! I also love how historical fiction can make you feel like you''re actually there.
+
+    User 2: I know! It''s like you''re transported back in time.
+
+    User 1: It is! I love that feeling.
+
+    User 2: Me too!
+
+    * * *
+
+    User 1: What did you do before you retired?
+
+    User 2: I was a stay-at-home mom for most of my children''s lives.
+
+    User 1: That must have been a lot of work!
+
+    User 2: It was, but it was also very rewarding.
+
+    User 1: I''m sure it was!
+
+    User 2: I miss it sometimes, but I''m also enjoying my retirement.
+
+    User 1: I''m glad to hear that!
+
+    User 2: I''m sure I''ll be back to volunteer at my kids'' schools soon.
+
+    User 1: That''s great! I''m sure the kids will love it.
+
+    User 2: I know they will!
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! I hope we can talk again soon.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

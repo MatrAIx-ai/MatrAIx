@@ -1,0 +1,88 @@
+id: 00004863
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4863
+data:
+  user 1 personas: 'My favorite color is purple.
+
+    My favorite singer is kid rock.
+
+    I am a female.
+
+    I love to swim , and began at a young age.
+
+    I have a master s degree.'
+  user 2 personas: 'My favorite singer is justin timberlake.
+
+    My family and i go camping every month.
+
+    I am a full time mom.
+
+    I enjoy horseback riding.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What''s your favorite color?
+
+    User 2: Mine is purple. What''s yours?
+
+    User 1: Mine is also purple!
+
+    User 2: That''s cool! What do you like to do for fun?
+
+    User 1: I love to swim. I started swimming at a young age and I''ve been doing it ever since.
+
+    User 2: That''s great! I love swimming too. I used to compete in high school.
+
+    User 1: That''s awesome! I''ve always wanted to compete in swimming, but I never had the time.
+
+    User 2: It''s a lot of fun, but it can be really challenging too.
+
+    User 1: I bet it is. I''m glad you''re enjoying it.
+
+    User 2: Thanks! What else do you like to do for fun?
+
+    User 1: I also like to listen to music. My favorite singer is Kid Rock.
+
+    User 2: Oh, I love Kid Rock! He''s so great.
+
+    User 1: I know, right? He''s got some of the best songs ever.
+
+    User 2: I agree! What''s your favorite song by him?
+
+    User 1: I think my favorite song is "All Summer Long."
+
+    User 2: That''s a great song! I love the music video too.
+
+    User 1: Me too! It''s so fun and upbeat.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I have a master''s degree in education and I''m a teacher.
+
+    User 2: Oh, that''s awesome! I''m a full-time mom.
+
+    User 1: That''s great too! I''m sure you have a lot of fun with your kids.
+
+    User 2: I do! They''re the best part of my life.
+
+    User 1: I bet they are. So, what do you like to do with your family?
+
+    User 2: We go camping every month. We love the outdoors.
+
+    User 1: That sounds great! I''ve always wanted to go camping, but I''ve never had the chance.
+
+    User 2: You should definitely go! It''s so much fun.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! It was nice talking to you.
+
+    User 1: You too!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00007863
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7863
+data:
+  user 1 personas: 'My favorite thing to do is to go to museums.
+
+    I travel at least once a year.
+
+    I am currently listening to bach.
+
+    I love to watch the voice.'
+  user 2 personas: 'My mother stayed at home all day to raise me and my siblings.
+
+    I graduated valedictorian of my high school class.
+
+    I cannot stand salads.
+
+    I had to drop out of college to help with my grandparents.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, [name]. I''m [name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, go to museums, and watch TV.
+
+    User 1: Me too! I love to travel and I''m currently listening to Bach.
+
+    User 2: That''s cool! I''ve never really been into classical music, but I can appreciate it.
+
+    User 1: I''m a big fan of The Voice.
+
+    User 2: I''ve never watched it.
+
+    User 1: You should! It''s really good.
+
+    User 2: Maybe I will.
+
+    User 1: What are you doing today?
+
+    User 2: I''m just working on some homework.
+
+    User 1: Oh, me too.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying marketing.
+
+    User 2: Oh, that''s cool! I''m studying computer science.
+
+    User 1: Nice!
+
+    User 2: Yeah, it''s pretty interesting.
+
+    User 1: So, what do you want to do after college?
+
+    User 2: I''m not sure yet. I''m thinking about getting a job in the tech industry.
+
+    User 1: That sounds like a good plan.
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

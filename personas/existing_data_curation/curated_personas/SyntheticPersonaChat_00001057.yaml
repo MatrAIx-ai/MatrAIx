@@ -1,0 +1,102 @@
+id: '00001057'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1057
+data:
+  user 1 personas: 'I like to dance.
+
+    I like burritos.
+
+    I like pizza.
+
+    I like to shop.
+
+    I love shoes.'
+  user 2 personas: 'I think recycling is important.
+
+    I am from california.
+
+    I am a student.
+
+    I like to shop at goodwill.
+
+    I like to be outdoors.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to recycle, shop at goodwill, and be outdoors.
+
+    User 1: Oh, that''s cool. I like to dance, shop for shoes, and eat pizza.
+
+    User 2: I love pizza too! What''s your favorite kind?
+
+    User 1: I like pepperoni pizza. What about you?
+
+    User 2: I like everything on pizza!
+
+    User 1: Me too!
+
+    User 2: So, what do you like to do outdoors?
+
+    User 1: I like to go hiking, swimming, and camping.
+
+    User 2: I love hiking! What''s your favorite place to hike?
+
+    User 1: I like to hike in the mountains.
+
+    User 2: Me too! I''m from California, so I''m lucky to have a lot of mountains to choose from.
+
+    User 1: That''s awesome! I''m from the Midwest, so we don''t have a lot of mountains.
+
+    User 2: You should come visit California sometime! We have some great hiking trails.
+
+    User 1: I would love to!
+
+    User 2: You should! We''d love to have you.
+
+    User 1: Thanks!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a student.
+
+    User 2: Oh, cool! What are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: Nice! I''m studying environmental science.
+
+    User 1: Oh, that''s cool! I''m interested in environmental issues.
+
+    User 2: Me too! I''m passionate about protecting the environment.
+
+    User 1: Me too! I think it''s important to do our part to reduce our impact on the planet.
+
+    User 2: I agree! We all need to do our part.
+
+    User 1: So, what''s your favorite thing about California?
+
+    User 2: I love the weather. It''s always sunny and warm.
+
+    User 1: I like that too! I''m not a big fan of the cold weather.
+
+    User 2: Me neither! I love being able to go outside all year long.
+
+    User 1: Me too!
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to visit my family.
+
+    User 2: Oh, that sounds fun! I''m going to go hiking with some friends.
+
+    User 1: That sounds great! I hope you have a good time.
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

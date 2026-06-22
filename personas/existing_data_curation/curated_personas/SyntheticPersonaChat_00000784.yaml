@@ -1,0 +1,62 @@
+id: 00000784
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 784
+data:
+  user 1 personas: 'I love history.
+
+    I am a technician.
+
+    My mother was an rn.
+
+    My father was a dry wall finisher.
+
+    I love to play softball.'
+  user 2 personas: 'In my free time , i watch movies and sleep.
+
+    I would like to open a restaurant someday.
+
+    I am a personal chef.
+
+    My favorite color is hunter green.
+
+    I love creating new recipes.'
+  Best Generated Conversation: 'User 1: I''m [user 1 name]. What about you?
+
+    User 2: I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I love to cook, watch movies, and sleep.
+
+    User 1: Oh, I love to cook too! What''s your favorite dish to make?
+
+    User 2: I love to make lasagna. It''s so easy to make and it''s always a crowd pleaser.
+
+    User 1: Lasagna is my favorite too! I love how it can be so simple or so fancy, depending on what you add to it.
+
+    User 2: Exactly! I love being able to change it up every time I make it.
+
+    User 1: What''s your favorite movie?
+
+    User 2: Oh, that''s a tough question. I have so many favorites. I guess I would have to say the Lord of the Rings trilogy.
+
+    User 1: I love Lord of the Rings too! It''s one of my favorite book series as well.
+
+    User 2: Me too! I love the world that Tolkien created. It''s so immersive and detailed.
+
+    User 1: I agree. I love how he can create a world that feels so real, even though it''s completely fictional.
+
+    User 2: Me too. It''s like I''m there with the characters.
+
+    User 1: I know what you mean. It''s so easy to get lost in his world.
+
+    User 2: It is. I can''t wait to see what he does next.
+
+    User 1: Me too. I think he''s one of the best fantasy writers of all time.
+
+    User 2: I agree. He''s so creative and his stories are always so engaging.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00034710'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34710
+persona_description: A scientist or medical professional who specializes in the treatment and management of blood disorders, particularly those involving bone marrow failure and immune system disorders.
+  This persona may work in a research laboratory or a clinical setting, and is likely to be familiar with the latest developments in stem cell biology and immunology. They may have a deep understanding
+  of the mechanisms underlying aplastic anemia and other related diseases, and are skilled in the use of advanced medical treatments such as ATG and cyclosporine. They may also have experience working with
+  regulatory agencies and medical ethics committees, as they may be involved in the approval and evaluation of new therapies for these conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hematology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bone marrow failure and immunology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

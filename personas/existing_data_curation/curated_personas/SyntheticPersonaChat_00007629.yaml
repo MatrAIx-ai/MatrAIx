@@ -1,0 +1,48 @@
+id: 00007629
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7629
+data:
+  user 1 personas: 'I love to walk my dog everyday after work.
+
+    My english is not very good yet.
+
+    I just moved to los angeles from tokyo.
+
+    I also dance and sing.
+
+    I want to be a famous actor.'
+  user 2 personas: 'I spend most of my days working at my church s food pantry.
+
+    I have 5 children , though 2 have passed away.
+
+    I love agatha christie novels.
+
+    I grow the tallest sunfloweres you ve ever seen.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name]. I just moved to LA from Tokyo.
+
+    User 2: Hello [user 1''s name]. I''m [user 2''s name]. Welcome to LA!
+
+    User 1: Thank you! I''m really enjoying it here so far.
+
+    User 2: I''m glad to hear that! What do you like to do for fun?
+
+    User 1: I love to walk my dog, dance, and sing. I also want to be a famous actor.
+
+    User 2: That sounds like a lot of fun! I like to read, garden, and spend time with my family.
+
+    User 1: I''m glad you have such a nice family. I miss my family from Japan.
+
+    User 2: I''m sure they miss you too. But now you have a new family here in LA!
+
+    User 1: I guess so. Thank you for being so nice to me.
+
+    User 2: You''re welcome! I''m always happy to meet new people.
+
+    User 1: Me too. I''m glad I met you.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

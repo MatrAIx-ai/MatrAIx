@@ -1,0 +1,72 @@
+id: 00001811
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1811
+data:
+  user 1 personas: 'I am an only child.
+
+    I have traveled to europe and mexico.
+
+    I like swimming.
+
+    My mother is a housemaid.'
+  user 2 personas: 'I believe in fairytales.
+
+    My family is poor.
+
+    I am obsessed with animals.
+
+    I practice yoga and hike.
+
+    I love the natural world beauty.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to practice yoga, hike, and swim. I''m also obsessed with animals!
+
+    User 1: That sounds like a lot of fun! I''ve never been a big fan of yoga, but I love swimming and hiking. I also love animals, but I don''t have any of my own.
+
+    User 2: That''s too bad! Animals make great companions. What kind of animals do you like?
+
+    User 1: I love dogs and cats. I also like horses and birds.
+
+    User 2: Me too! Dogs and cats are great pets, and horses and birds are beautiful.
+
+    User 1: I agree! I wish I could have a pet, but I live in an apartment and I don''t think my landlord would allow it.
+
+    User 2: That''s too bad. Maybe you could volunteer at an animal shelter or rescue organization.
+
+    User 1: That''s a great idea! I''ll look into that.
+
+    User 2: I''m sure you''ll love it.
+
+    User 1: Thanks!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a yoga instructor. I also work as a freelance writer.
+
+    User 1: That''s cool! I''ve always wanted to try yoga.
+
+    User 2: You should! It''s a great way to relax and improve your flexibility.
+
+    User 1: Maybe I will.
+
+    User 2: I''m sure you''d love it.
+
+    User 1: Thanks! I think I will.
+
+    User 2: Good luck!
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

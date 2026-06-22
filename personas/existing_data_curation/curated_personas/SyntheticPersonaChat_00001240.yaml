@@ -1,0 +1,106 @@
+id: '00001240'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1240
+data:
+  user 1 personas: 'I am from mexico.
+
+    I like to go on walks.
+
+    I like to bake.
+
+    I used to be a chef , but i am a teacher now.'
+  user 2 personas: 'I am tall.
+
+    I like to travel.
+
+    I love the outdoors.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: I''m [user 2''s name].
+
+    User 1: Nice to meet you! Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, cool! I''m from Mexico.
+
+    User 2: That''s awesome! I''ve always wanted to go to Mexico.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I will!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, go outdoors, and bake.
+
+    User 1: Those sound like fun things to do. I like to go on walks and bake too.
+
+    User 2: That''s great! We should go hiking sometime.
+
+    User 1: I would love to!
+
+    User 2: What do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, cool! I''m a software engineer.
+
+    User 1: That''s awesome! I''ve always been interested in computers.
+
+    User 2: You should learn more about them! They''re really cool.
+
+    User 1: I will!
+
+    User 2: What are some of your favorite things to bake?
+
+    User 1: I love to bake chocolate chip cookies and banana bread.
+
+    User 2: Those sound delicious! I love chocolate chip cookies too.
+
+    User 1: Me too! They''re so easy to make and they always taste good.
+
+    User 2: I agree!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go to the movies, read, and play video games.
+
+    User 1: I like to go to the movies too. I haven''t been reading much lately, but I used to love to read.
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is The Great Gatsby.
+
+    User 2: I''ve never read it, but I''ve heard good things about it.
+
+    User 1: You should read it! It''s a great book.
+
+    User 2: I will!
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: That''s a great movie! I love the ending.
+
+    User 2: Me too! It''s so hopeful.
+
+    User 1: I agree!
+
+    User 2: I''m glad we have similar interests.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

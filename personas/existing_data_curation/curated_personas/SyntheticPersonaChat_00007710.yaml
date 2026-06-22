@@ -1,0 +1,84 @@
+id: '00007710'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7710
+data:
+  user 1 personas: 'I enjoy watching football and hockey games.
+
+    I am a proofreader for a greeting card company.
+
+    My favorite movie is goodfellas.
+
+    I love to read.'
+  user 2 personas: 'I like to travel.
+
+    I have traveled to both ireland and australia.
+
+    My father was born in australia.
+
+    My father was an author.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to travel. I''ve been to Ireland and Australia.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to travel to Australia.
+
+    User 2: It''s a beautiful country. I''m sure you''d love it.
+
+    User 1: What was your favorite thing about it?
+
+    User 2: I loved the beaches. They were so beautiful and relaxing.
+
+    User 1: I can imagine. I love the beach.
+
+    User 2: What do you like to do at the beach?
+
+    User 1: I like to swim, sunbathe, and read.
+
+    User 2: Those sound like fun activities.
+
+    User 1: They are. I love to spend the day at the beach.
+
+    User 2: Me too. It''s a great way to relax and unwind.
+
+    User 1: It is. I''m glad you enjoyed your trip to Australia.
+
+    User 2: Thank you. I''m glad I went.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to read and watch movies.
+
+    User 1: I like to read too. What are some of your favorite books?
+
+    User 2: I like to read a variety of books, but I''m a big fan of historical fiction.
+
+    User 1: I''m not usually into historical fiction, but I did enjoy reading "The Pillars of the Earth" by Ken Follett.
+
+    User 2: That''s a great book! I''m a big fan of Ken Follett.
+
+    User 1: I''ve read a few of his other books too. They''re all really good.
+
+    User 2: I''m glad you enjoy his books.
+
+    User 1: What are some of your favorite movies?
+
+    User 2: I like a lot of different movies, but I''m a big fan of the Marvel Cinematic Universe.
+
+    User 1: I''m a big fan of the MCU too! I''ve seen all of the movies.
+
+    User 2: Me too! I can''t wait for the new Doctor Strange movie.
+
+    User 1: Me neither! I''m excited to see what happens next in the MCU.
+
+    User 2: I''m sure it will be great.
+
+    User 1: I''m sure it will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: 00005960
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5960
+data:
+  user 1 personas: 'Before i die , i want to skydive.
+
+    I have a pet snake.
+
+    My dream is to move to the middle of the desert.
+
+    I start an internship in engineering later this year.
+
+    I am a famous video game character online.'
+  user 2 personas: 'I have always had long hair.
+
+    I worked at a movie theater for 4 years.
+
+    I like spicy food.
+
+    I enjoy running at night.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to run, watch movies, and eat spicy food.
+
+    User 1: Oh, cool! I like to run too. I also like to play video games.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I especially like playing first-person shooters.
+
+    User 2: Oh, me too! I love playing Call of Duty and Battlefield.
+
+    User 1: Me too! I''ve been playing Call of Duty since the first game came out.
+
+    User 2: Me too! That game was so much fun.
+
+    User 1: I know, right? I''m so excited for the new one.
+
+    User 2: Me too! I''ve been watching all the trailers and I can''t wait to play it.
+
+    User 1: Me too! It looks like it''s going to be a lot of fun.
+
+    User 2: I know, right? I''m so excited.
+
+    User 1: Well, it was nice talking to you. I hope we can play video games together sometime.
+
+    User 2: Me too! I''d love to play video games with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: 00005978
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5978
+persona_description: An application developer who is interested in optimizing the deployment and management of multiple applications on existing machines. This persona is likely to be familiar with VM technology
+  and its benefits in terms of efficient resource utilization and the ability to run multiple applications on a single physical machine. This persona may also have an interest in container technology and
+  how it can be used to deploy and manage applications, but may not have the same level of expertise as a container developer. This persona is interested in using VMs to host multiple applications and leveraging
+  the security and isolation capabilities of VMs to ensure the security and reliability of the applications. This persona may also be interested in the portability and deployment of containers and the ability
+  to manage resources and load balancing effectively.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Cloud Computing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

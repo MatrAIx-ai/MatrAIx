@@ -1,0 +1,62 @@
+id: 00000582
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 582
+data:
+  user 1 personas: 'I am a student.
+
+    I like cookies.
+
+    I like painting , i can cook well.
+
+    I also like ice cream.'
+  user 2 personas: 'I love the smell of beans.
+
+    I like collecting rocks.
+
+    I love huge paintings.
+
+    I like collectible dragon ball z figures.'
+  Best Generated Conversation: 'User 1: Hi, I''m a student.
+
+    User 2: Hi, I''m also a student.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect rocks and paint.
+
+    User 1: That sounds cool. I like to paint too.
+
+    User 2: Do you like to cook?
+
+    User 1: Yes, I love to cook. I''m pretty good at it too.
+
+    User 2: That''s awesome. I love to eat cookies.
+
+    User 1: Me too! I love chocolate chip cookies.
+
+    User 2: Me too! I also like ice cream.
+
+    User 1: Me too! I love chocolate ice cream.
+
+    User 2: Me too! I also love dragon ball z figures.
+
+    User 1: I''ve never heard of that.
+
+    User 2: It''s a Japanese anime.
+
+    User 1: Oh, I''ve heard of that. I''ve never watched it though.
+
+    User 2: You should! It''s really good.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s really good.
+
+    User 1: I''ve got to go now. It was nice talking to you.
+
+    User 2: You too! Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

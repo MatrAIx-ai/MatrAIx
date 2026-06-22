@@ -1,0 +1,86 @@
+id: 00008110
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8110
+data:
+  user 1 personas: 'My mom is a checker at the local grocery store.
+
+    I grew up in alabama.
+
+    I don t like the song sweet home alabama.
+
+    I once saw the easter bunny hiding behind my closet door.'
+  user 2 personas: 'I enjoy watching mystery movies.
+
+    I like to drink green tea.
+
+    I love to write stories while sitting in the grass in my back yard.
+
+    I like to run so that i can clear my head.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Alabama, where did you grow up?
+
+    User 2: I grew up in a small town in Illinois.
+
+    User 1: Oh, cool! I''ve never been to Illinois.
+
+    User 2: It''s a beautiful state! I love the cornfields and the big sky.
+
+    User 1: I''ve heard it''s very flat.
+
+    User 2: It is, but it''s also very peaceful.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, write, and watch mystery movies.
+
+    User 1: Me too! I love a good mystery.
+
+    User 2: I''ve always been a big fan of Agatha Christie.
+
+    User 1: I love her too! She''s one of my favorite authors.
+
+    User 2: I also like to run. It helps me clear my head.
+
+    User 1: I''ve never been a big runner, but I can see how it could be relaxing.
+
+    User 2: It is! I always feel better after a run.
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog named Toby. He''s a golden retriever.
+
+    User 1: I love golden retrievers! They''re so friendly.
+
+    User 2: They are! Toby is the best dog ever.
+
+    User 1: I''m sure he is!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to concerts, play video games, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun! I love concerts too.
+
+    User 1: Me too! I''ve been to a lot of concerts this year.
+
+    User 2: Nice! Who have you seen?
+
+    User 1: I''ve seen Panic! At The Disco, Twenty One Pilots, and The Killers.
+
+    User 2: Oh, that''s awesome! I''ve seen Twenty One Pilots too. They''re so good live.
+
+    User 1: They are! I love their energy.
+
+    User 2: So, what are you up to today?
+
+    User 1: I''m just hanging out at home. What are you doing?
+
+    User 2: I''m working on a story. I''m trying to finish it by the end of the week.
+
+    User 1: Good luck! I''m sure it will be great.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

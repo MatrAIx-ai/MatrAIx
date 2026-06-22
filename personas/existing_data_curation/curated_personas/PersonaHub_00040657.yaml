@@ -1,0 +1,19 @@
+id: '00040657'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40657
+persona_description: A healthcare professional who works in neurology or geriatrics, particularly in the diagnosis and management of secondary parkinsonism caused by various health problems such as brain
+  injury, diffuse Lewy body disease, and other neurological conditions. They have expertise in assessing the symptoms, conducting physical exams, and ordering tests to confirm or rule out other underlying
+  causes. They are also aware of the rare cases of secondary parkinsonism among IV drug users and the potential for side effects from treating the condition. They are highly skilled in monitoring patients
+  taking medicines that can cause secondary parkinsonism and are careful to prevent the condition from developing.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: neurology (secondary parkinsonism)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

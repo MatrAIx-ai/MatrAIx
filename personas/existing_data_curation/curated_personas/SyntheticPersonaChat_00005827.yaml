@@ -1,0 +1,64 @@
+id: 00005827
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5827
+data:
+  user 1 personas: 'I love to read true crime books.
+
+    I am in grad school.
+
+    My favorite drink is caramel cappuccino.
+
+    My parents live across the street from me.'
+  user 2 personas: 'I drive a ford truck.
+
+    I am nearly of tall.
+
+    I have long flowing hair.
+
+    My least favorite music is country.
+
+    My favorite outfit is thigh high leather boots and a skirt.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I love to read true crime books.
+
+    User 1: Oh, I love those too! What''s your favorite book?
+
+    User 2: My favorite book is The Girl on the Train.
+
+    User 1: I love that book! I''ve read it twice.
+
+    User 2: It''s so good, right?
+
+    User 1: Yeah, it''s one of my favorite books of all time.
+
+    User 2: What are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to the beach with my family.
+
+    User 1: Oh, that sounds fun! I love the beach.
+
+    User 2: Me too! It''s my favorite place to be.
+
+    User 1: I''m going to have to go to the beach soon. It''s been too long.
+
+    User 2: You should! It''s the perfect time of year to go.
+
+    User 1: Yeah, I know. I''ll see if I can make it happen.
+
+    User 2: You should! You won''t regret it.
+
+    User 1: Okay, I''ll try.
+
+    User 2: Good! I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

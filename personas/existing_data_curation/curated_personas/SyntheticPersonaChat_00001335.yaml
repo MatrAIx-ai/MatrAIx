@@ -1,0 +1,72 @@
+id: '00001335'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1335
+data:
+  user 1 personas: 'I live on a farm.
+
+    I have a beard.
+
+    I like rap music.
+
+    I drive a truck.
+
+    I graduated high school.'
+  user 2 personas: 'I am a gentle giant.
+
+    I prefer reading to sports.
+
+    I have survived near death experiences.
+
+    I sometimes drive fast.
+
+    My family comes first to me.'
+  Best Generated Conversation: 'User 1: Hi, I''m a 25 year old farmer who lives on a farm. I have a beard and I like rap music. I drive a truck and I graduated high school.
+
+    User 2: Hi, I''m a 26 year old gentle giant. I prefer reading to sports and I''ve survived near death experiences. I sometimes drive fast and my family comes first to me.
+
+    User 1: Wow, that''s really interesting. I''ve never met anyone who has survived a near death experience before.
+
+    User 2: It was pretty scary, but it also made me appreciate life a lot more.
+
+    User 1: I can imagine. I''m glad you''re okay.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read all sorts of things, but I''m especially interested in history and science.
+
+    User 1: Oh, that''s cool. I''m a big fan of history too.
+
+    User 2: Me too. What''s your favorite historical period?
+
+    User 1: I''m not sure I have a favorite, but I really enjoy learning about ancient history.
+
+    User 2: Ancient history is really interesting. I love learning about the different cultures and civilizations that existed back then.
+
+    User 1: Me too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go for walks in the country, listen to music, and play video games.
+
+    User 2: Oh, that sounds like a lot of fun. I love going for walks in the country too.
+
+    User 1: It''s the best way to relax and clear your head.
+
+    User 2: I agree.
+
+    User 1: So, what are you doing later today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to go for a walk in the country. Do you want to come with me?
+
+    User 2: That sounds like fun. I''ll meet you there.
+
+    User 1: Great. See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00008851
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8851
+data:
+  user 1 personas: 'I take forever to get tasks done so i start early and clock out late.
+
+    I think i need a vacation.
+
+    I work too much.
+
+    If things are not done right i will redo them again and again.'
+  user 2 personas: 'I sell clothing on facebook.
+
+    I do not like to clean house.
+
+    My husband is a pastor.
+
+    I have two children.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user].
+
+    User 2: Hi, I''m [user].
+
+    User 1: What are you interested in?
+
+    User 2: I like to sell clothing on Facebook.
+
+    User 1: That''s cool. I do a lot of work.
+
+    User 2: Do you like it?
+
+    User 1: I like it, but it takes a lot of time.
+
+    User 2: I can imagine. I don''t like to clean house.
+
+    User 1: Me neither. I''m always late to work because I have to clean.
+
+    User 2: That''s funny. I''m always early to work because I don''t have to clean.
+
+    User 1: Maybe we should trade lives.
+
+    User 2: I don''t think my husband would like that. He''s a pastor.
+
+    User 1: Oh, I see. I don''t have any kids.
+
+    User 2: I have two.
+
+    User 1: That must be a lot of work.
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: I am. I''m a happy person.
+
+    User 1: That''s good to hear.
+
+    User 2: Thank you.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

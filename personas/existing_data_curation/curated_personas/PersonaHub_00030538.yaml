@@ -1,0 +1,19 @@
+id: 00030538
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30538
+persona_description: A person who is interested in pathogen evolution, epidemic spread, and public health. They are familiar with Nextstrain, a project that provides a constantly updated view of publicly
+  available data with powerful analytics and visualizations showing pathogen evolution and epidemic spread. They are comfortable with the concept of fauna, a database used to store viral sequences and serological
+  data, and the titer database used to store titer measurements. They have experience with RethinkDB, a database management system, and have set up their own RethinkDB instance. They are familiar with the
+  GNU Affero General Public License (AGPL) and Nextstrain's distribution under this license.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

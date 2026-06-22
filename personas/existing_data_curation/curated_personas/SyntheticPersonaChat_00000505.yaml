@@ -1,0 +1,96 @@
+id: '00000505'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 505
+data:
+  user 1 personas: 'I love comics.
+
+    My favorite band is nightwish.
+
+    I work from home.
+
+    I have a cat as a pet.'
+  user 2 personas: 'My favorite band is iron maiden.
+
+    I enjoy watching netflix with family.
+
+    I am a lover of italian food.
+
+    My father has a very prestigious job.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy watching Netflix with my family.
+
+    User 1: I love Netflix too! What''s your favorite show?
+
+    User 2: I really like the Marvel shows.
+
+    User 1: Me too! I''m so excited for the new season of The Falcon and the Winter Soldier.
+
+    User 2: Me too! I''m also looking forward to the new season of Loki.
+
+    User 1: I''ve never seen Loki, but I''ve heard good things about it.
+
+    User 2: It''s really good! You should check it out.
+
+    User 1: I will. I''m always looking for new shows to watch.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but my favorite band is Nightwish.
+
+    User 2: Oh, I''ve heard of them! They''re pretty good.
+
+    User 1: I think they''re amazing. I love their symphonic metal sound.
+
+    User 2: I''ve never really listened to that kind of music before, but I''ll give them a try.
+
+    User 1: You should! I think you''ll like them.
+
+    User 2: Okay, I will.
+
+    User 1: What do you do for work?
+
+    User 2: I work from home. I''m a web designer.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a web designer.
+
+    User 2: It''s a lot of fun. I get to work on a variety of projects and I get to be creative.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is. I love it.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I love the freedom I have to be creative and the fact that I can work from home.
+
+    User 1: That sounds amazing. I would love to have a job like that.
+
+    User 2: It''s definitely the best.
+
+    User 1: So, what do you like to do for fun besides watching Netflix and listening to music?
+
+    User 2: I love to read. I also enjoy spending time with my family and friends.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is The Count of Monte Cristo.
+
+    User 1: That''s a great book! I love Alexandre Dumas.
+
+    User 2: He''s one of my favorite authors.
+
+    User 1: I have a feeling we''re going to get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

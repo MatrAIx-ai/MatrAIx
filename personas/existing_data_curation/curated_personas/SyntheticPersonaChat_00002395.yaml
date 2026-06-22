@@ -1,0 +1,62 @@
+id: 00002395
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2395
+data:
+  user 1 personas: 'I am an angry person.
+
+    I like to go to bars and people watch.
+
+    I don t have a lot of family members that i like.
+
+    I am an old man.'
+  user 2 personas: 'I m recently divorced.
+
+    I m very shy.
+
+    I m a children s librarian.
+
+    I have no children of my own.
+
+    I wear glasses.'
+  Best Generated Conversation: 'User 1: What''s your name?
+
+    User 2: My name is Alex.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a children''s librarian.
+
+    User 1: Oh, that''s cool. I like reading.
+
+    User 2: Me too! I love reading to children.
+
+    User 1: I''m not a big fan of children.
+
+    User 2: Oh, why not?
+
+    User 1: They''re loud and they don''t listen.
+
+    User 2: I know what you mean, but they can also be very sweet.
+
+    User 1: I guess.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to bars and people watch.
+
+    User 2: That sounds like fun. I''m not much of a drinker, but I like to go out and have fun.
+
+    User 1: I''m an angry person. I don''t have a lot of family members that I like.
+
+    User 2: I''m sorry to hear that. I''m a shy person, but I have a lot of friends.
+
+    User 1: I''m glad you have friends. I''m an old man.
+
+    User 2: I''m a young woman. I''m glad I met you.
+
+    User 1: I''m glad I met you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

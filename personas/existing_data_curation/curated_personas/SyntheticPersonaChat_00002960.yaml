@@ -1,0 +1,88 @@
+id: 00002960
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2960
+data:
+  user 1 personas: 'I am a baseball player.
+
+    I can play the piano.
+
+    My favourite colour is green.
+
+    I like to read books about chinese history.
+
+    My dog is called alfred.'
+  user 2 personas: 'I am a paramedic.
+
+    I live in a studio apartment.
+
+    I am studying to become a nurse.
+
+    My favorite band is the beatles.
+
+    I have three sisters.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hello, my name is [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. What do you do for a living?
+
+    User 2: I''m a paramedic.
+
+    User 1: Oh, that''s interesting. What''s it like being a paramedic?
+
+    User 2: It''s rewarding, but it can be stressful.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: My favorite part is being able to help people.
+
+    User 1: That''s a great answer. What''s your least favorite part of the job?
+
+    User 2: My least favorite part is dealing with the stress.
+
+    User 1: That''s understandable. What do you do for fun?
+
+    User 2: I like to read, play video games, and spend time with my family.
+
+    User 1: Oh, that sounds like fun. I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read historical fiction and fantasy.
+
+    User 1: Oh, me too! I love historical fiction. What''s your favorite historical fiction book?
+
+    User 2: My favorite historical fiction book is "The Name of the Rose" by Umberto Eco.
+
+    User 1: Oh, that''s a good one! I''ve read that book too. I loved it.
+
+    User 2: Me too! It''s one of my favorites.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to play video games, too. I''m a big fan of the Zelda series.
+
+    User 1: Oh, me too! I love the Zelda series.
+
+    User 2: What''s your favorite Zelda game?
+
+    User 1: My favorite Zelda game is "The Legend of Zelda: Breath of the Wild".
+
+    User 2: Oh, that''s a good one! I loved that game too.
+
+    User 1: So, what''s your favorite thing to do with your family?
+
+    User 2: I like to go on hikes with them.
+
+    User 1: That sounds like fun. I like to go on hikes too.
+
+    User 2: Me too! I love being outdoors.
+
+    User 1: So, what''s your favorite thing about yourself?
+
+    User 2: My favorite thing about myself is my ability to help others.
+
+    User 1: That''s a great answer. I think that''s a great trait to have.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

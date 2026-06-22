@@ -1,0 +1,70 @@
+id: 00008595
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8595
+data:
+  user 1 personas: 'My father is a school teacher , he teaches middle school.
+
+    I am 5 3 and am the shortest person in my family.
+
+    I have four siblings.
+
+    My youngest sister is in first grade.
+
+    I am the oldest sibling.'
+  user 2 personas: 'I have 1 pair of shoes.
+
+    I like having my back scratched.
+
+    My mother has 500 pairs of shoes.
+
+    I am allergic to shellfish and cats.
+
+    I only eat at restaurants.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: I''m the oldest of four siblings.
+
+    User 2: I''m the youngest of three siblings.
+
+    User 1: My youngest sister is in first grade.
+
+    User 2: My oldest sister is in college.
+
+    User 1: My dad is a school teacher.
+
+    User 2: My mom has 500 pairs of shoes.
+
+    User 1: Wow, that''s a lot of shoes!
+
+    User 2: Yeah, she''s really into shoes.
+
+    User 1: I''m allergic to shellfish and cats.
+
+    User 2: I''m allergic to shellfish too!
+
+    User 1: Really? That''s interesting.
+
+    User 2: Yeah, I can''t eat any seafood.
+
+    User 1: Me neither.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go to concerts and play video games.
+
+    User 2: I like to go to the movies and go out to eat.
+
+    User 1: I like to go out to eat too.
+
+    User 2: What kind of food do you like?
+
+    User 1: I like all kinds of food, but my favorite is pizza.
+
+    User 2: Me too! Pizza is the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,81 @@
+id: '00000713'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 713
+data:
+  user 1 personas: 'I like to hunt.
+
+    I love the tigers baseball team.
+
+    I am thin.
+
+    I am blonde.'
+  user 2 personas: 'I just dyed my hair hot pink with purple highlights.
+
+    My favorite hobby is chess.
+
+    I enjoy movies about aliens invading the earth.
+
+    Not a day goes by that i don t drink four mountain dews.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+
+    User 2: Hi, my name is [name].
+
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+
+    User 2: I like to play chess, watch movies about aliens invading the earth, and drink a lot of Mountain Dew.
+
+
+    User 1: That sounds fun! I like to hunt, watch baseball, and drink beer.
+
+
+    User 2: What''s your favorite team?
+
+
+    User 1: I like the Detroit Tigers.
+
+
+    User 2: Oh, I''ve never been to Detroit. What''s it like there?
+
+
+    User 1: It''s a great city! There''s a lot to do and see.
+
+
+    User 2: I''d like to visit sometime.
+
+
+    User 1: You should! It''s a lot of fun.
+
+
+    User 2: I''m not sure when I''ll be able to make it, but I''ll definitely keep it in mind.
+
+
+    User 1: Okay! I hope you can make it soon.
+
+
+    User 2: Me too!
+
+
+    User 1: So, what do you do for a living?
+
+
+    User 2: I''m a chess teacher.
+
+
+    User 1: Oh, that''s cool! I''ve never been taught chess before.
+
+
+    User 2: Well, if you''re ever in the mood for a lesson, I''d be happy to give you one.
+
+
+    User 1: I''ll definitely keep that in mind! Thanks!
+
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

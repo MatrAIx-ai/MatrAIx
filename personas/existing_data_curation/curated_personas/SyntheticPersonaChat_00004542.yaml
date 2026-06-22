@@ -1,0 +1,76 @@
+id: '00004542'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4542
+data:
+  user 1 personas: 'My favorite meal is brunch.
+
+    I do not own any pets.
+
+    I am a recruiter.
+
+    I lease my car.
+
+    My car is black.'
+  user 2 personas: 'I like spicy food.
+
+    I have always had long hair.
+
+    I enjoy running at night.
+
+    I am saving up to buy a new camera.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1]. I''m a recruiter. What do you do?
+
+    User 2: Hi! I''m [user 2]. I''m a nurse.
+
+    User 1: Cool! I''ve always been interested in nursing.
+
+    User 2: It''s a great job.
+
+    User 1: What do you like most about it?
+
+    User 2: I like helping people.
+
+    User 1: That''s awesome. I like to help people too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go to brunch. What about you?
+
+    User 2: I like spicy food.
+
+    User 1: Me too! Do you have any favorite restaurants?
+
+    User 2: I like this one place called [restaurant].
+
+    User 1: I''ve never been there. What''s it like?
+
+    User 2: It''s really good. They have a lot of different types of spicy food.
+
+    User 1: That sounds good. I''ll have to try it sometime.
+
+    User 2: You should!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to run.
+
+    User 1: Me too! What''s your favorite distance to run?
+
+    User 2: I like to run 5k''s.
+
+    User 1: That''s a good distance. I like to run 5k''s too.
+
+    User 2: Do you have any favorite running trails?
+
+    User 1: I like this one trail in [park].
+
+    User 2: I''ve never been there. What''s it like?
+
+    User 1: It''s a nice trail. It''s not too long, and it''s not too difficult.
+
+    User 2: That sounds good. I''ll have to try it sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

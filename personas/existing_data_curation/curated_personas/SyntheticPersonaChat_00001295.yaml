@@ -1,0 +1,84 @@
+id: 00001295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1295
+data:
+  user 1 personas: 'I have four cats.
+
+    I m a vegetarian.
+
+    I take the subway to work everyday.
+
+    Every fall i visit my sister in canada.'
+  user 2 personas: 'I do not have a job.
+
+    I eat junk food.
+
+    I love comics.
+
+    I love the walking dead.
+
+    I am a couch potato.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: I''m a vegetarian.
+
+    User 2: I''m not a vegetarian, I eat junk food.
+
+    User 1: I take the subway to work every day.
+
+    User 2: I don''t have a job.
+
+    User 1: I visit my sister in Canada every fall.
+
+    User 2: I love comics and The Walking Dead.
+
+    User 1: I''m not a big fan of comics, but I like The Walking Dead.
+
+    User 2: I''m a couch potato.
+
+    User 1: I like to be active.
+
+    User 2: I like to stay home and watch TV.
+
+    User 1: It seems like we have very different lifestyles.
+
+    User 2: That''s true, but I''m sure we can still be friends.
+
+    User 1: I agree. We can talk about our different interests and learn from each other.
+
+    User 2: That sounds like a good plan.
+
+    User 1: So, what do you want to talk about?
+
+    User 2: I don''t know, what do you want to talk about?
+
+    User 1: I''m interested in learning more about comics.
+
+    User 2: I can tell you all about them! I love comics and I know a lot about them.
+
+    User 1: That would be great! I''m always looking to learn new things.
+
+    User 2: Okay, let me start with the basics. Comics are a form of sequential art that tells a story. They''re typically printed on paper, but they can also be found online.
+
+    User 1: I see. So, what are some of the different types of comics?
+
+    User 2: There are many different types of comics, but the most common ones are superhero comics, adventure comics, and horror comics.
+
+    User 1: I''ve heard of superhero comics, but I don''t know much about the other two.
+
+    User 2: Adventure comics are about characters who go on adventures, usually in a fantasy or sci-fi setting. Horror comics are about characters who are faced with supernatural or other scary threats.
+
+    User 1: Those sound like they could be fun to read.
+
+    User 2: They are! I''m sure you''d like them.
+
+    User 1: I''ll have to check them out.
+
+    User 2: I''m sure you''ll enjoy them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

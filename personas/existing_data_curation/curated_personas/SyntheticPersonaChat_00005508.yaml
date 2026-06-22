@@ -1,0 +1,66 @@
+id: 00005508
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5508
+data:
+  user 1 personas: 'I am the youngest in my family.
+
+    I am a freshman at nyu.
+
+    I have two older brothers.
+
+    My favorite color is blue.
+
+    My passion is photography.'
+  user 2 personas: 'I am a diabetic.
+
+    I listen to podcasts.
+
+    Traffic makes me mad.
+
+    I have a long drive to work.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1!
+
+    User 2: Hi, I''m User 2!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to podcasts, read, and drive.
+
+    User 1: Wow, we have a lot in common! I love listening to podcasts too. What are your favorite podcasts?
+
+    User 2: I like listening to comedy podcasts, like "My Favorite Murder" and "The Dollop."
+
+    User 1: I love those podcasts too! I also like listening to educational podcasts, like "99% Invisible" and "Revisionist History."
+
+    User 2: Those sound interesting! I''ll have to check them out.
+
+    User 1: They''re great! What do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially into historical fiction and mystery novels.
+
+    User 1: I love historical fiction too! I''m currently reading a book about the Civil War.
+
+    User 2: That sounds interesting! I''m currently reading a book about the French Revolution.
+
+    User 1: Nice! I''ve never read a book about the French Revolution, but it''s always been something I''ve wanted to learn more about.
+
+    User 2: It''s a really fascinating topic. I''m learning a lot from it.
+
+    User 1: I''m sure I would too. I''ll have to add it to my reading list.
+
+    User 2: You should! It''s a great book.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: Well, it was nice talking to you, User 2!
+
+    User 2: You too, User 1!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

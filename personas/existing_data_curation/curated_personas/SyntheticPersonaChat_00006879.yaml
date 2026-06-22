@@ -1,0 +1,76 @@
+id: 00006879
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6879
+data:
+  user 1 personas: 'My favorite type of music is country.
+
+    I love to travel with my family.
+
+    My dog is a collie.
+
+    I love to snack between meals.
+
+    I have blue eyes and curly brown hair.'
+  user 2 personas: 'I have appeared on the show jeopardy.
+
+    I once lived in a storage locker for two months.
+
+    I make pottery.
+
+    I like to refurbish classic cars.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to make pottery, refurbish classic cars, and I once appeared on the show Jeopardy!
+
+    User 1: That''s so cool! I''ve never been on Jeopardy, but I love to watch it.
+
+    User 2: It was a lot of fun, but it was also really stressful.
+
+    User 1: I can imagine! What was your favorite part about it?
+
+    User 2: I think my favorite part was getting to meet Alex Trebek. He was such a nice guy.
+
+    User 1: I''ve heard he''s really nice.
+
+    User 2: He is. He was so friendly and welcoming.
+
+    User 1: What was your least favorite part about it?
+
+    User 2: My least favorite part was when I got a question wrong.
+
+    User 1: Oh, that''s always the worst.
+
+    User 2: Yeah, it was really embarrassing.
+
+    User 1: But you must''ve done well if you got to meet Alex Trebek!
+
+    User 2: I guess so.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to travel. I''ve been to a lot of different countries.
+
+    User 1: That''s awesome! I''ve only been to a few countries.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to Canada, Mexico, and the United States.
+
+    User 2: Oh, nice! I''ve been to all of those places too.
+
+    User 1: Cool! What''s your favorite place you''ve been?
+
+    User 2: I think my favorite place was Italy.
+
+    User 1: Italy is beautiful! I''ve always wanted to go there.
+
+    User 2: You should! It''s amazing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

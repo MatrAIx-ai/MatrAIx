@@ -1,0 +1,62 @@
+id: 00003093
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3093
+data:
+  user 1 personas: 'I have three daughters.
+
+    My wife and i like to go scuba diving.
+
+    I m a police officer in a suburb of detroit.
+
+    I grew up on a farm in kansas.'
+  user 2 personas: 'My family is from algeria.
+
+    I am a barista.
+
+    I play jazz piano in a band.
+
+    I can speak arabic , english , and french.
+
+    I like to go hiking on the weekends.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What do you do for a living?
+
+    User 2: I''m a barista at a coffee shop.
+
+    User 1: Oh, that''s cool! I love coffee.
+
+    User 2: Me too! I''m actually a jazz pianist in a band, but I work at the coffee shop to pay the bills.
+
+    User 1: That''s awesome! I''ve always wanted to learn to play the piano.
+
+    User 2: It''s a lot of fun! You should definitely give it a try.
+
+    User 1: I will! Thanks for the encouragement.
+
+    User 2: No problem! So, where are you from?
+
+    User 1: I grew up on a farm in Kansas, but I live in a suburb of Detroit now.
+
+    User 2: Oh, that''s cool! I''m from Algeria, but I''ve been living in the US for a few years now.
+
+    User 1: Nice to meet you, [user 2 name]. What do you do for fun?
+
+    User 2: I love to go hiking, play music, and read.
+
+    User 1: That''s awesome! I love to go hiking too.
+
+    User 2: Oh, that''s great! We should go hiking together sometime.
+
+    User 1: I would love that!
+
+    User 2: Perfect! We can exchange numbers and make plans.
+
+    User 1: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

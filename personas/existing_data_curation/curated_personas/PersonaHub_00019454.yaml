@@ -1,0 +1,21 @@
+id: 00019454
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 19454
+persona_description: A computational scientist and materials scientist who specializes in the design and analysis of 2D materials for nanoelectronic devices. They have expertise in first principles-based
+  methods for predicting exotic and application-specific properties in 2D materials, including the design of novel nanoelectronic devices based on 2D CDW materials. They are skilled in developing automated
+  high-throughput computational tools that combine structure-searching techniques with unsupervised machine learning to identify CDW phases from unit cells with inherited Kohn anomaly and metallic nature.
+  Their research involves the exploration of the energy landscape of CDWs using density functional theory calculations, and the use of unsupervised machine learning to cluster and identify phases in the
+  energy-distortion space. They are also proficient in manual inspection of experimental data for identifying CDW phases, but prefer using unsupervised machine learning for this purpose due to the sheer
+  volume of data and the potential for error-prone manual inspection.
+expertise:
+  general_domain_top1pct: Materials Science
+  specific_domain_top1pct: Computational Science
+  general_domain_top01pct: None
+  specific_domain_top01pct: Computational Materials Science
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

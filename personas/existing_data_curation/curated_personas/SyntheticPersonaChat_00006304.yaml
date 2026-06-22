@@ -1,0 +1,60 @@
+id: '00006304'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6304
+data:
+  user 1 personas: 'I work at the hospital as a nurse.
+
+    I live in the city of grand rapids , michigan.
+
+    I have pink hair.
+
+    I m the youngest of five.'
+  user 2 personas: 'I want to get married again.
+
+    I have 10 years experience in our industry , yet she gets promoted.
+
+    I m angry at my coworker.
+
+    I m not going to go the extra mile anymore.
+
+    I wish my boyfriend didn t want an open relationship.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just feeling a little frustrated at work.
+
+    User 1: What''s wrong?
+
+    User 2: My coworker got promoted over me, even though I have more experience.
+
+    User 1: That''s really unfair. What are you going to do about it?
+
+    User 2: I''m not sure yet. I''m thinking about talking to my boss.
+
+    User 1: That''s a good idea. You deserve to be recognized for your hard work.
+
+    User 2: Thanks. I''m just feeling a little discouraged right now.
+
+    User 1: I understand. But don''t let this get you down. You''re a great nurse, and you''ll eventually get the recognition you deserve.
+
+    User 2: Thanks. I hope you''re right.
+
+    User 1: I am right. You just have to keep your head up and keep working hard.
+
+    User 2: I''ll do that. Thanks for the pep talk.
+
+    User 1: Anytime. So, what are you doing after work today?
+
+    User 2: I''m not sure yet. Maybe I''ll go out with friends.
+
+    User 1: That sounds like a good idea. You need to relax and have some fun.
+
+    User 2: I know. I''m going to need it.
+
+    User 1: Well, I''m sure you''ll have a great time.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00008047
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8047
+data:
+  user 1 personas: 'My favorite movie is the last of the mohicans.
+
+    I did not finish college.
+
+    My dad was a preacher.
+
+    My car is over 20 years old.'
+  user 2 personas: 'I love my pet dog more than anything.
+
+    I like early 2000s indie music.
+
+    I m picky when it comes to food.
+
+    I d like to be a teacher in the future.
+
+    My temper is pretty short.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: What are you doing today?
+
+    User 2: Not much, just going to the park with my dog.
+
+    User 1: Oh, what kind of dog do you have?
+
+    User 2: I have a golden retriever named Bailey.
+
+    User 1: Bailey is such a cute name! I love golden retrievers.
+
+    User 2: Thanks! She''s the best dog ever.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to the park, play video games, and watch movies.
+
+    User 1: Oh, I like to do those things too! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of games, but I mostly play single-player RPGs.
+
+    User 1: Oh, I love RPGs too! What''s your favorite RPG?
+
+    User 2: My favorite RPG is probably The Witcher 3.
+
+    User 1: The Witcher 3 is amazing! I love the story and the characters.
+
+    User 2: Me too! I''ve played it through multiple times.
+
+    User 1: Me too! So, what''s your dream job?
+
+    User 2: My dream job is to be a teacher.
+
+    User 1: Oh, that''s awesome! I wanted to be a teacher when I was younger.
+
+    User 2: Why didn''t you become a teacher?
+
+    User 1: I decided I wanted to be a lawyer instead.
+
+    User 2: Oh, that''s cool too! What kind of law do you want to practice?
+
+    User 1: I''m not sure yet. I''m still in law school.
+
+    User 2: Oh, I see. Well, good luck in law school!
+
+    User 1: Thanks! I need it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

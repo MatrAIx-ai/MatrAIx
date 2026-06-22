@@ -1,0 +1,68 @@
+id: 00002595
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2595
+data:
+  user 1 personas: 'I love to tell jokes.
+
+    I hope to change the world.
+
+    I am always early to everything.
+
+    I work in a factory.'
+  user 2 personas: 'Paps likes to go mushroom hunting.
+
+    I sing in the school chorus.
+
+    Grandma makes jewelry.
+
+    I have a brown belt in karate.
+
+    I live with my paps and grandma.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to sing in the school chorus, go mushroom hunting with my paps, and make jewelry with my grandma.
+
+    User 1: That sounds like a lot of fun! I love to sing too. What''s your favorite song to sing?
+
+    User 2: My favorite song to sing is "Let it Go" from Frozen.
+
+    User 1: That''s a great song! I love to sing that one too.
+
+    User 2: Do you like to go mushroom hunting?
+
+    User 1: I''ve never been mushroom hunting before, but it sounds like a lot of fun.
+
+    User 2: It is! You should go with my paps and me sometime.
+
+    User 1: I would love to! I''m sure it would be a lot of fun.
+
+    User 2: I''m glad!
+
+    User 1: What do you like to make with your grandma?
+
+    User 2: I like to make jewelry, like necklaces and bracelets.
+
+    User 1: That''s so cool! I love jewelry.
+
+    User 2: I know, right? It''s so much fun to make it.
+
+    User 1: Do you sell your jewelry?
+
+    User 2: No, I just make it for fun.
+
+    User 1: That''s too bad. I would love to buy some of it.
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: I do! I think it''s really beautiful.
+
+    User 2: Thanks! I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

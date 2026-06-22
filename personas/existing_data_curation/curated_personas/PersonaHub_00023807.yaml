@@ -1,0 +1,19 @@
+id: 00023807
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23807
+persona_description: A scientist or researcher in the field of biology or microbiology who studies the mechanisms of chemotaxis in bacteria. This persona is likely to be interested in understanding how
+  bacteria use chemical cues to guide their movement and behavior, and how this process can be modulated by environmental factors such as the concentration of Ca2+ ion or a metabolite "compound X". This
+  person may also be interested in the theoretical aspects of chemotaxis, such as the role of the switch that controls tumbling and swimming, and the potential for this switch to be regulated by the concentration
+  of Ca2+ ion.
+expertise:
+  general_domain_top1pct: Biology
+  specific_domain_top1pct: Microbiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Chemotaxis in bacteria
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

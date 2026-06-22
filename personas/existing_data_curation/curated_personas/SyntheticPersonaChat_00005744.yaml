@@ -1,0 +1,54 @@
+id: '00005744'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5744
+data:
+  user 1 personas: 'I am learning to play the piano.
+
+    I keep my hair cut very short.
+
+    I am allergic to cats.
+
+    I love scary movies.'
+  user 2 personas: 'I enjoy home cooked meals.
+
+    My favorite music genre is pop.
+
+    My favorite color is blue.
+
+    My favorite tv show is game of thrones.
+
+    I like long walks on the beach.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I enjoy home cooked meals, long walks on the beach, and watching my favorite TV show, Game of Thrones.
+
+    User 1: That sounds nice. I like to play the piano, read scary books, and watch movies with my friends.
+
+    User 2: I''m allergic to cats, but I love dogs. I have a little white poodle named Snowball.
+
+    User 1: Aw, that''s cute! I love dogs too. I have a black Labrador retriever named Buddy.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like pop music, especially Taylor Swift and Ariana Grande.
+
+    User 2: I like pop music too! I''m a big fan of Ed Sheeran and Shawn Mendes.
+
+    User 1: Nice! I love their music too.
+
+    User 2: I''m going to go for a walk on the beach now. Do you want to come with me?
+
+    User 1: Sure, that sounds like fun!
+
+    User 2: Great! Let''s go.
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

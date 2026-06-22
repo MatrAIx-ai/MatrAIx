@@ -1,0 +1,94 @@
+id: 00001008
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1008
+data:
+  user 1 personas: 'I have epilepsy.
+
+    I have one son.
+
+    I like to go swimming.
+
+    I like to read.
+
+    My parents are not married anymore.'
+  user 2 personas: 'I speak english and spanish fluently.
+
+    I am from germany.
+
+    I like listening to blues music.
+
+    My favorite artist was prince.
+
+    I am mixed with puerto rica and chinese.'
+  Best Generated Conversation: 'User 1: Hey! I''m from the US. Where are you from?
+
+    User 2: I''m from Germany! I''ve been living in the US for a few years now.
+
+    User 1: Oh, that''s cool! Why did you move here?
+
+    User 2: I came here to study at a university.
+
+    User 1: What are you studying?
+
+    User 2: I''m studying business administration.
+
+    User 1: Oh, nice! I''m studying marketing.
+
+    User 2: That''s cool! What do you want to do with your marketing degree?
+
+    User 1: I''m not sure yet. I''m thinking about going into advertising or marketing research.
+
+    User 2: Oh, cool! I''m thinking about going into business consulting.
+
+    User 1: That''s a great idea! I''m sure you''ll do well.
+
+    User 2: Thanks! I hope so!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to music, read, and watch movies.
+
+    User 1: Me too! I love watching movies. What are some of your favorite movies?
+
+    User 2: I love the Blues Brothers, Pulp Fiction, and The Big Lebowski.
+
+    User 1: Oh, those are all great movies! I love the Blues Brothers too.
+
+    User 2: Me too! It''s such a classic.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I love The Lord of the Rings, The Hitchhiker''s Guide to the Galaxy, and The Catcher in the Rye.
+
+    User 1: Oh, those are all great books! I love The Lord of the Rings too.
+
+    User 2: Me too! It''s such a great fantasy series.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like listening to blues music, jazz, and rock and roll.
+
+    User 1: Oh, those are all great genres! I love listening to blues music too.
+
+    User 2: Me too! It''s such a soulful genre.
+
+    User 1: What are some of your favorite blues artists?
+
+    User 2: I love B.B. King, Muddy Waters, and Howlin'' Wolf.
+
+    User 1: Oh, those are all great artists! I love B.B. King too.
+
+    User 2: Me too! He''s such a legend.
+
+    User 1: What are some of your favorite jazz artists?
+
+    User 2: I love John Coltrane, Miles Davis, and Ella Fitzgerald.
+
+    User 1: Oh, those are all great artists! I love John Coltrane too.
+
+    User 2: Me too! He''s one of the greatest jazz musicians of all time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

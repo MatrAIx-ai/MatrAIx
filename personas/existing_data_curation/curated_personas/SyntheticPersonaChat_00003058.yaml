@@ -1,0 +1,74 @@
+id: 00003058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3058
+data:
+  user 1 personas: 'I enjoy playing tennis.
+
+    My father worked for ge.
+
+    I am an aspiring singer.
+
+    I love animals.'
+  user 2 personas: 'I won a lottery 6 years ago but nobody knows.
+
+    I am a painter.
+
+    I live a lie.
+
+    I paint organic scenes with pretty trees.'
+  Best Generated Conversation: 'User 1: Hi, I''m [your name].
+
+    User 2: Hi, I''m [your name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint.
+
+    User 1: Really? That''s cool. What do you like to paint?
+
+    User 2: I like to paint organic scenes with pretty trees.
+
+    User 1: Wow, that sounds really nice. Do you have any pictures of your work?
+
+    User 2: Sure, I can show you some.
+
+    User 1: Cool, I''d love to see them.
+
+    User 2: Here you go.
+
+    User 1: Wow, these are beautiful. You''re really talented.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: What made you decide to become a painter?
+
+    User 2: I''ve always loved art. I used to draw all the time when I was a kid. When I was in high school, I took a painting class and I fell in love with it.
+
+    User 1: That''s great. I''m glad you found something you love to do.
+
+    User 2: Me too.
+
+    User 1: So, what do you do with your paintings? Do you sell them?
+
+    User 2: I do sell some of them, but I mostly just give them away to friends and family.
+
+    User 1: That''s really nice of you.
+
+    User 2: It''s my way of sharing my art with the people I love.
+
+    User 1: That''s a great way to think about it.
+
+    User 2: Thanks.
+
+    User 1: Do you have any plans for your art in the future?
+
+    User 2: I''m not sure yet. I''m just enjoying painting for now.
+
+    User 1: That''s good. I''m sure you''ll figure it out.
+
+    User 2: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

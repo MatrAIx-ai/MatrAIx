@@ -1,0 +1,17 @@
+id: '00034256'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34256
+persona_description: A medical professional who is interested in the field of dermatology and allergy testing. They are looking for a safe and informative method to determine the cause of their skin condition.
+  They are also interested in learning about the latest technologies and techniques used in allergy testing and are open to trying new methods to improve their treatment options.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: allergy testing
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

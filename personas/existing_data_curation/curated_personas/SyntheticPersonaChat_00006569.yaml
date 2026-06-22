@@ -1,0 +1,92 @@
+id: 00006569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6569
+data:
+  user 1 personas: 'I am allergic to shellfish and cats.
+
+    My mother has 500 pairs of shoes.
+
+    I like having my back scratched.
+
+    I have 1 pair of shoes.'
+  user 2 personas: 'I watch a movie sundays evenings.
+
+    I love folk metal.
+
+    I own a cat.
+
+    I like tacos.
+
+    I talk in my sleep.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to watch movies, listen to music, and read.
+
+    User 1: Cool! I like to watch movies too. What are some of your favorite movies?
+
+    User 2: I like a lot of different movies, but some of my favorites are The Lord of the Rings trilogy, The Shawshank Redemption, and The Princess Bride.
+
+    User 1: Those are all great movies! I love The Lord of the Rings.
+
+    User 2: Me too! It''s such a great story.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different types of music, but I mostly listen to folk metal.
+
+    User 1: Folk metal? I''ve never heard of that before.
+
+    User 2: It''s a genre of heavy metal music that combines elements of folk music. It''s pretty cool stuff.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: So, you have a cat. What''s its name?
+
+    User 2: Her name is Luna. She''s a black cat with green eyes.
+
+    User 1: She sounds cute! I''ve always wanted a cat.
+
+    User 2: They''re great pets!
+
+    User 1: I''m allergic to cats, so I can''t have one.
+
+    User 2: That''s too bad. They''re really great companions.
+
+    User 1: I know. I wish I could have one.
+
+    User 2: Maybe you could get a hypoallergenic cat.
+
+    User 1: I''ll look into that.
+
+    User 2: So, you like tacos. What''s your favorite taco?
+
+    User 1: I like a good carne asada taco.
+
+    User 2: Me too! They''re so delicious.
+
+    User 1: They are!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, cool! What grade do you teach?
+
+    User 1: I teach third grade.
+
+    User 2: That''s awesome! I''m sure you''re a great teacher.
+
+    User 1: Thanks! I try my best.
+
+    User 2: I''m sure you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

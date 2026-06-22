@@ -1,0 +1,20 @@
+id: '00065075'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65075
+persona_description: A neurologist who is researching and developing new treatments for stroke, specifically focusing on the development of experimental stent-like devices to remove blood clots in stroke
+  patients. He is part of a team of researchers at the University of California Los Angeles, where he leads the study on the SOLITAIRE device. The device is a self-expanding, stent-like design that uses
+  a thin catheter tube to compress and trap blood clots, which are then removed by withdrawing the device. The study found that the SOLITAIRE device is more effective than standard mechanical treatment
+  in opening blocked blood vessels in stroke patients, with a 17.2 percent mortality rate compared to 38.2 percent with the older MERCI Retriever device. The device is a significant advancement in acute
+  stroke care and has the potential to revolutionize the way stroke is treated.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: stroke treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

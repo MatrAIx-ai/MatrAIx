@@ -1,0 +1,18 @@
+id: '00015220'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15220
+persona_description: A geologist who specializes in the study of Martian meteorites and their geological significance. This individual is highly interested in the history and evolution of Mars and has expertise
+  in using synchrotron techniques to analyze these meteorites. They have a deep understanding of the Solar System and its impacts on Earth, and are eager to contribute to the ongoing efforts to study Mars
+  through robotic missions.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: planetary geology/Mars geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

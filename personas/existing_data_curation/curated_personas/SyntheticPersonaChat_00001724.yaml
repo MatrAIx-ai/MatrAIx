@@ -1,0 +1,84 @@
+id: '00001724'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1724
+data:
+  user 1 personas: 'I play the violin.
+
+    My favorite color is red orange.
+
+    I enjoy watching horror flicks.
+
+    I want to be a music teacher.'
+  user 2 personas: 'I have 2 brothers.
+
+    I am a senior in high school.
+
+    I am interested in producing music.
+
+    I am going to start school at the university of kentucky.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey! How are you?
+
+    User 1: I''m good, thanks! What about you?
+
+    User 2: I''m doing well. Just got home from school.
+
+    User 1: Oh, cool. What grade are you in?
+
+    User 2: I''m a senior in high school.
+
+    User 1: Nice! I''m a freshman in college.
+
+    User 2: Oh, cool! What are you studying?
+
+    User 1: I''m studying music education.
+
+    User 2: Oh, that''s awesome! I''m interested in producing music.
+
+    User 1: That''s cool! I used to be really interested in producing music, but I didn''t have the time for it.
+
+    User 2: Oh, that''s too bad. It''s a lot of fun.
+
+    User 1: Yeah, I know. I''ve been thinking about getting back into it.
+
+    User 2: You should! It''s a great hobby.
+
+    User 1: Yeah, I think I will.
+
+    User 2: Good! What are some of your favorite horror flicks?
+
+    User 1: Oh, I love all kinds of horror movies, but my favorites are probably The Conjuring, The Conjuring 2, and The Witch.
+
+    User 2: Oh, those are all great movies! I love The Conjuring 2.
+
+    User 1: Me too! It''s so scary!
+
+    User 2: Yeah, it is! I love the way it builds up the tension.
+
+    User 1: Me too! It''s so good!
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is red orange.
+
+    User 2: Oh, that''s a good color! I like it.
+
+    User 1: Thanks! I think it''s a really happy color.
+
+    User 2: Yeah, it is! So, what do you do for fun?
+
+    User 1: Well, I play the violin. I also like to read, watch movies, and go to concerts.
+
+    User 2: Oh, that''s cool! I play the guitar. I also like to read, watch movies, and go to concerts.
+
+    User 1: Nice! We should go to a concert together sometime.
+
+    User 2: That would be fun! I''m always up for a good concert.
+
+    User 1: Cool! I''ll keep an eye out for some good concerts coming up.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

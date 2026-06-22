@@ -1,0 +1,72 @@
+id: 00001970
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1970
+data:
+  user 1 personas: 'I live in the city.
+
+    I love my girlfriend.
+
+    I have an older brother.
+
+    I work in a bookstore.'
+  user 2 personas: 'I like to create websites.
+
+    I try to find easy ways to make money.
+
+    I wish i could play the stock market well.
+
+    I really enjoy reading the news.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a web developer.
+
+    User 1: Oh, cool! I work in a bookstore.
+
+    User 2: Really? I love books! What kind of books do you like to read?
+
+    User 1: I like all kinds of books, but I''m really into fantasy and science fiction.
+
+    User 2: Me too! I love those genres. What''s your favorite book?
+
+    User 1: It''s hard to choose just one, but I''d say The Lord of the Rings is my favorite.
+
+    User 2: That''s a great choice! I love that series too.
+
+    User 1: What''s your favorite book?
+
+    User 2: I don''t know if I have a favorite book, but I really like The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: That''s a great book too! I''ve read it a few times.
+
+    User 2: Me too! I love the humor and the way it makes fun of everything.
+
+    User 1: Yeah, it''s definitely a unique book.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, play video games, and spend time with my girlfriend.
+
+    User 2: Sounds like you have a lot of fun! I like to do those things too, but I also like to go out and explore new places.
+
+    User 1: That sounds like a lot of fun too. I''m not really an outdoorsy person, but I do like to travel.
+
+    User 2: Where have you traveled to?
+
+    User 1: I''ve been to a few places, but my favorite trip was to Europe.
+
+    User 2: Europe is beautiful! I''ve always wanted to go there.
+
+    User 1: You should definitely go! It''s a great place to visit.
+
+    User 2: I will! I''m sure I''ll have a lot of fun.
+
+    User 1: I''m sure you will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,122 @@
+id: 00002937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2937
+data:
+  user 1 personas: 'Its cold where i live.
+
+    I like to go fishing on my viking boat.
+
+    My hobbies include pillaging and fine dining.
+
+    I am a viking.
+
+    I have a big beard.'
+  user 2 personas: 'I broke my nose in 5th grade.
+
+    I have glasses.
+
+    I hate skiing.
+
+    My favorite book is twilight.
+
+    I have 6 toes on one foot.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi! I''m a viking.
+
+    User 2: Hi! I''m a human.
+
+    User 1: It''s nice to meet you, human.
+
+    User 2: It''s nice to meet you too, viking.
+
+    User 1: Where do you live?
+
+    User 2: I live in a small town in the Midwest.
+
+    User 1: That sounds nice. I live in a small town in Norway.
+
+    User 2: Oh, that''s cool! I''ve always wanted to go to Norway.
+
+    User 1: You should definitely come visit! We have a lot of viking history here.
+
+    User 2: I would love to!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and hang out with my friends.
+
+    User 1: I like to do a lot of the same things! I also like to go fishing and hiking.
+
+    User 2: I''ve never been fishing, but I''ve always wanted to try it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll have to give it a try sometime.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: Thanks!
+
+    * * *
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Really? That''s great! I''ve always wanted to be a teacher.
+
+    User 2: It''s a lot of fun, but it can be challenging.
+
+    User 1: I can imagine. But it''s worth it to help shape the minds of the future.
+
+    User 2: I agree. It''s a very rewarding job.
+
+    User 1: What grade do you teach?
+
+    User 2: I teach third grade.
+
+    User 1: That''s great! I love third grade. They''re such a fun age.
+
+    User 2: They are! They''re so eager to learn and they always have so much energy.
+
+    User 1: I''m sure they''re a joy to teach.
+
+    User 2: They are! I love my job.
+
+    * * *
+
+    User 1: So, what are your hobbies?
+
+    User 2: I love to read, watch movies, and hang out with my friends.
+
+    User 1: Me too! I love to read, watch movies, and hang out with my friends.
+
+    User 2: That''s great! We should be friends.
+
+    User 1: I would love that!
+
+    User 2: Great! We can talk about books, movies, and our friends.
+
+    User 1: That sounds like a lot of fun!
+
+    * * *
+
+    User 1: It was nice talking to you!
+
+    User 2: It was nice talking to you too!
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too!
+
+    * * *
+
+    User 1: Goodbye!
+
+    User 2: Goodbye'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00004181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4181
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I like long walks on the beach.
+
+    I enjoy home cooked meals.
+
+    My favorite music genre is pop.
+
+    My favorite tv show is game of thrones.'
+  user 2 personas: 'I work many hours rehearsing for my show.
+
+    I like movies based on comedies.
+
+    I am a ballet dancer.
+
+    My parents passed away in a car accident.
+
+    My favorite food is hamburgers.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1 name].
+
+    User 2: Hi there! I''m [user 2 name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I''m a ballet dancer, so I work many hours rehearsing for my shows.
+
+    User 1: That sounds like a lot of work! But it must be really rewarding too.
+
+    User 2: It is! I love performing and getting to share my love of dance with others.
+
+    User 1: That''s great! I''m glad you have something you''re passionate about.
+
+    User 2: Me too! It''s what keeps me going.
+
+    User 1: So, what do you like to do outside of dance?
+
+    User 2: I love going for walks on the beach, reading, and watching movies.
+
+    User 1: Those all sound like fun! I love long walks on the beach too.
+
+    User 2: Me too! They''re so relaxing.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like movies based on comedies. They always make me laugh.
+
+    User 1: Me too! I love a good laugh.
+
+    User 2: So, what''s your favorite TV show?
+
+    User 1: My favorite TV show is Game of Thrones. It''s so addictive!
+
+    User 2: I''ve never seen it! But I''ve heard good things.
+
+    User 1: You should definitely watch it! It''s one of the best shows out there.
+
+    User 2: I''ll check it out! Thanks for the recommendation.
+
+    User 1: No problem! I''m always happy to share my favorite shows with people.
+
+    User 2: So, what are you looking forward to this weekend?
+
+    User 1: I''m going to visit my parents. They live in a small town about two hours away.
+
+    User 2: That sounds nice! I''m sure they''ll be happy to see you.
+
+    User 1: I know they will! I''m looking forward to catching up with them.
+
+    User 2: I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

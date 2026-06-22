@@ -1,0 +1,74 @@
+id: '00002107'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2107
+data:
+  user 1 personas: 'I am a veterinarian.
+
+    My brother is in the army.
+
+    Running is my way to relax.
+
+    I have two nephews.
+
+    I grew up on a farm.'
+  user 2 personas: 'I am an only child.
+
+    I m a girl.
+
+    My favorite song is barbie girl.
+
+    My name is nancy.
+
+    I like barbies.'
+  Best Generated Conversation: 'User 1: Hi, I''m Nancy! What''s your name?
+
+    User 2: Hi, I''m User 1!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play with my barbies!
+
+    User 1: That sounds like fun! I''m a veterinarian, so I like to take care of animals.
+
+    User 2: That''s really cool! I love animals too!
+
+    User 1: What''s your favorite animal?
+
+    User 2: I like dogs the best!
+
+    User 1: Me too! I have a dog named Charlie.
+
+    User 2: Oh, that''s a cute name! I have a dog named Sadie.
+
+    User 1: I love the name Sadie!
+
+    User 2: Thanks!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to read and play video games.
+
+    User 1: Me too! I love reading historical fiction and playing video games.
+
+    User 2: I love reading fantasy novels and playing action games.
+
+    User 1: That''s great! I love hearing about other people''s interests.
+
+    User 2: Me too! It''s always fun to meet new people and learn about their lives.
+
+    User 1: I agree! I''m glad we met, Nancy.
+
+    User 2: Me too! It''s been nice talking to you.
+
+    User 1: You too! Maybe we can hang out sometime and play some video games together.
+
+    User 2: That would be fun! I''ll bring Sadie too.
+
+    User 1: Sounds good! I''ll bring Charlie.
+
+    User 2: Great! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

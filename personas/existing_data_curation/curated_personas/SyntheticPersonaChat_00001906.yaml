@@ -1,0 +1,78 @@
+id: 00001906
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1906
+data:
+  user 1 personas: 'I have purple hair.
+
+    My favorite book is the tale of genii.
+
+    My mom died when i was six.
+
+    I am a petsitter.'
+  user 2 personas: 'I have a career in party planning.
+
+    My sister belongs to a cult and has not spoken to the family in years.
+
+    My father was a member of the communist party.
+
+    I enjoy deep sea diving.'
+  Best Generated Conversation: 'User 1: Hi! I''m user1.
+
+    User 2: Hi, I''m user2.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a party planner.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: It is! I get to plan all kinds of events, from birthday parties to weddings.
+
+    User 1: What''s the most interesting party you''ve ever planned?
+
+    User 2: I once planned a party for a billionaire who wanted to have a full-on medieval feast. We had live animals, actors in costumes, and a feast that would have put King Arthur to shame.
+
+    User 1: That sounds amazing!
+
+    User 2: It was! It was so much fun to see all the guests dressed up in their medieval garb and eating food off of wooden plates.
+
+    User 1: I''m glad you enjoyed it.
+
+    User 2: Thanks! What do you do for work?
+
+    User 1: I''m a petsitter.
+
+    User 2: Oh, that sounds like a fun job!
+
+    User 1: It is! I get to spend all day with animals, and I get to help people out.
+
+    User 2: That''s great! What''s the most interesting animal you''ve ever pet-sat?
+
+    User 1: I once pet-sat a tiger cub.
+
+    User 2: A tiger cub! That sounds amazing!
+
+    User 1: It was! It was so much fun to play with him and watch him run around.
+
+    User 2: I''m glad you enjoyed it.
+
+    User 1: Thanks! What''s your favorite book?
+
+    User 2: My favorite book is The Tale of Genji.
+
+    User 1: I''ve never heard of that book. What''s it about?
+
+    User 2: It''s a Japanese novel about a nobleman who has many affairs.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

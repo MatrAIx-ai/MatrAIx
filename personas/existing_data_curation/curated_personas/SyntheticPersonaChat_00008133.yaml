@@ -1,0 +1,80 @@
+id: 00008133
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8133
+data:
+  user 1 personas: 'I am trying to become a male model in hollywood.
+
+    I overcame urinary cancer at age 18.
+
+    I recently had a private lunch with will ferrell.
+
+    I am a huge fan of classical jazz.'
+  user 2 personas: 'I m getting married in six months.
+
+    I have a sweet tooth.
+
+    I drive a mercedes.
+
+    I m the middle child of 3 siblings.
+
+    I m a babysitter.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. My name is [user 1''s name].
+
+    User 2: Nice to meet you too, [user 1''s name]. What do you do for a living?
+
+    User 1: I''m a male model in Hollywood.
+
+    User 2: Oh, that''s cool! What made you want to become a model?
+
+    User 1: I''ve always loved fashion and I''ve always been interested in the entertainment industry. I think being a model is a great way to combine my two loves.
+
+    User 2: That''s awesome! I''m sure you''re really good at it.
+
+    User 1: Thank you! I''m trying my best.
+
+    User 2: So, what''s your favorite thing about being a model?
+
+    User 1: My favorite thing about being a model is getting to meet new people and travel all over the world. I''ve also been lucky enough to work with some amazing photographers and designers.
+
+    User 2: That sounds like an amazing experience! I''m sure you''ve had a lot of fun.
+
+    User 1: I have, it''s been a great experience so far.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: My plans for the future are to keep working hard and hopefully get some more big breaks. I''m also hoping to start my own clothing line one day.
+
+    User 2: That''s awesome! I''m sure you''ll be very successful.
+
+    User 1: Thank you! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to play golf, go to concerts, and watch movies.
+
+    User 2: That sounds like fun! I love to go to concerts too.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is the Beatles.
+
+    User 1: Oh, nice! They''re one of my favorites too.
+
+    User 2: I love their music.
+
+    User 1: Me too.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I also like to read, play video games, and go out to eat.
+
+    User 2: That sounds like a lot of fun! I like to do a lot of those things too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

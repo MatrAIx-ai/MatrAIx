@@ -1,0 +1,62 @@
+id: 00001797
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1797
+data:
+  user 1 personas: 'I am an only child.
+
+    I love dancing.
+
+    I have 3 cats.
+
+    I dye my hair blonde.'
+  user 2 personas: 'I am a software engineer.
+
+    I started at google on an internship.
+
+    I work at google.
+
+    I live in seattle.
+
+    My favorite seafood in lobster.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hello! I''m [user 2].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a software engineer at Google.
+
+    User 1: Wow, that''s awesome! I''m a dancer.
+
+    User 2: That''s cool! How long have you been dancing?
+
+    User 1: I''ve been dancing since I was a little girl. I love it!
+
+    User 2: That''s great! I''ve always wanted to try dancing, but I''m not very coordinated.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that! What kind of dance do you do?
+
+    User 1: I do a lot of different kinds of dance, but my favorite is ballet.
+
+    User 2: Ballet is beautiful! I''ve seen it performed live a few times.
+
+    User 1: It''s really amazing, isn''t it?
+
+    User 2: It is! I love the grace and precision of it.
+
+    User 1: Me too! I love the way it makes me feel.
+
+    User 2: I can imagine! It sounds like a wonderful way to express yourself.
+
+    User 1: It is! I love being able to move my body and tell a story with my dance.
+
+    User 2: That''s so cool! I''m glad you found something you love to do.
+
+    User 1: Thanks! I''m glad too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

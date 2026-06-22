@@ -1,0 +1,56 @@
+id: 00003915
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3915
+data:
+  user 1 personas: 'I am one of four children.
+
+    I enjoy going on hikes.
+
+    I have never traveled out of the country.
+
+    I was born under a blood moon.
+
+    I work some very odd jobs.'
+  user 2 personas: 'I drive a black car.
+
+    I have a black purse.
+
+    I like rock music.
+
+    My favorite artist is guns and roses.
+
+    I like to wear black.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: Good! I just got back from a hike.
+
+    User 1: Oh, that sounds fun! Where did you go?
+
+    User 2: I went to a state park near my house.
+
+    User 1: I love going on hikes. I''m always looking for new places to go.
+
+    User 2: Me too! I''ve never been outside of the country, but I''d love to travel one day.
+
+    User 1: Where would you like to go?
+
+    User 2: I''ve always wanted to go to Europe.
+
+    User 1: That would be amazing! I''ve been to Europe a few times, and it''s beautiful.
+
+    User 2: I bet! I''d love to see the Eiffel Tower and the Colosseum.
+
+    User 1: Those are both amazing landmarks. You''d also love the beaches in Greece and the canals in Italy.
+
+    User 2: Those sound amazing! I''d love to go to all of those places.
+
+    User 1: You should! I think you''d love it.
+
+    User 2: I will! Thanks for the inspiration.
+
+    User 1: No problem! I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

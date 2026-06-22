@@ -1,0 +1,82 @@
+id: '00002700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2700
+data:
+  user 1 personas: 'I also like ice cream.
+
+    I am a student.
+
+    I like pasta.
+
+    I like cookies.
+
+    I like painting , i can cook well.'
+  user 2 personas: 'My eyes are bright blue.
+
+    I love the desert.
+
+    I don t have a college degree.
+
+    I love to eat meat.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the desert and paint.
+
+    User 1: That sounds like a lot of fun! I''ve never been to the desert before.
+
+    User 2: You should go sometime! It''s beautiful there.
+
+    User 1: I''ll have to do that. What do you like to paint?
+
+    User 2: I like to paint landscapes and portraits.
+
+    User 1: I love landscapes! I''m not very good at painting, but I enjoy it.
+
+    User 2: I''m sure you''re better than you think!
+
+    User 1: Thanks! I''m not very good at drawing, but I''m learning.
+
+    User 2: That''s great! I love to learn new things.
+
+    User 1: Me too! I''m also a student.
+
+    User 2: Oh, what are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: That''s cool! I don''t have a college degree, but I work in the business world.
+
+    User 1: Oh, that''s interesting! What do you do?
+
+    User 2: I''m a sales manager.
+
+    User 1: That sounds like a fun job!
+
+    User 2: It is! I love meeting new people and helping them find the best products for their needs.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: Thanks! I am.
+
+    User 1: I''m sure you''re good at it too.
+
+    User 2: I try my best!
+
+    User 1: Well, it sounds like you have a lot of interesting hobbies.
+
+    User 2: I do! I love to keep busy.
+
+    User 1: That''s great! I''m the same way.
+
+    User 2: It''s good to have hobbies. It keeps us from getting bored.
+
+    User 1: I agree! I''m glad you have so much fun in the desert. It sounds like a beautiful place.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

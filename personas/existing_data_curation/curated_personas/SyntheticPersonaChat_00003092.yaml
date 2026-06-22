@@ -1,0 +1,76 @@
+id: 00003092
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3092
+data:
+  user 1 personas: 'I have three daughters.
+
+    I grew up on a farm in kansas.
+
+    My wife and i like to go scuba diving.
+
+    I love to go horseback riding.
+
+    I m a police officer in a suburb of detroit.'
+  user 2 personas: 'I dislike animals.
+
+    I have allergies.
+
+    I wish that i lived in the city.
+
+    I am a vegetarian.
+
+    I live on a pig farm.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: It''s nice to meet you. Where are you from?
+
+    User 2: I grew up on a pig farm in Kansas, but I live in the city now.
+
+    User 1: Oh, that''s cool. I grew up on a farm too.
+
+    User 2: Really? What kind of farm?
+
+    User 1: It was a wheat farm.
+
+    User 2: Oh, that''s cool. I''ve never been to a wheat farm.
+
+    User 1: They''re pretty boring, actually.
+
+    User 2: I can imagine. What do you do for fun now that you live in the city?
+
+    User 1: I like to go horseback riding.
+
+    User 2: Oh, that sounds fun. I''ve never been horseback riding before.
+
+    User 1: You should try it sometime. It''s really fun.
+
+    User 2: I might just do that.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go scuba diving.
+
+    User 1: Scuba diving? That''s really cool. I''ve always wanted to try that.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: What do you like about living in the city?
+
+    User 1: I like the convenience of everything being close together.
+
+    User 2: I can see that. I like the peace and quiet of the country.
+
+    User 1: I can see that too. I miss that sometimes.
+
+    User 2: It''s nice to meet you.
+
+    User 1: Nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

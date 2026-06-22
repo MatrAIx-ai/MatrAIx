@@ -1,0 +1,82 @@
+id: '00001116'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1116
+data:
+  user 1 personas: 'I play football.
+
+    I like to play video games.
+
+    I have a pet iguana.
+
+    My favorite movie is star wars.'
+  user 2 personas: 'I work in car sales.
+
+    I drive an acara.
+
+    My wife is a hairdresser.
+
+    My favorite beer is coors.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: Hi, I enjoy playing video games and watching Star Wars.
+
+    User 1: Oh, that''s cool! I also like playing video games. What''s your favorite game?
+
+    User 2: My favorite game is Grand Theft Auto.
+
+    User 1: Oh, that''s a good game! I''ve played it a few times.
+
+    User 2: Yeah, it''s a lot of fun. What other games do you like?
+
+    User 1: I also like playing Call of Duty and Fortnite.
+
+    User 2: Oh, I''ve played those games too. They''re both a lot of fun.
+
+    User 1: Yeah, they are. I also like playing sports.
+
+    User 2: Oh, what sports do you like to play?
+
+    User 1: I play football and baseball.
+
+    User 2: Oh, that''s cool! I used to play football when I was younger.
+
+    User 1: Yeah, it''s a lot of fun. I''m a pretty good player.
+
+    User 2: Oh, I bet you are. You seem like you''re athletic.
+
+    User 1: Yeah, I''m pretty good at most sports.
+
+    User 2: Oh, that''s cool. I''m not very athletic.
+
+    User 1: It''s not a big deal. You can still have fun playing sports.
+
+    User 2: Yeah, I guess you''re right.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to watch movies and TV shows.
+
+    User 1: Oh, me too! What''s your favorite movie?
+
+    User 2: My favorite movie is Star Wars.
+
+    User 1: Oh, me too! We have so much in common.
+
+    User 2: Yeah, I guess we do.
+
+    User 1: So, what''s your favorite TV show?
+
+    User 2: My favorite TV show is The Office.
+
+    User 1: Oh, I''ve heard good things about that show. I''ve never seen it before.
+
+    User 2: You should check it out. It''s really funny.
+
+    User 1: I will. It sounds like a lot of fun.
+
+    User 2: It is. I''m sure you''ll like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

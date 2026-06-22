@@ -1,0 +1,72 @@
+id: '00005672'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5672
+data:
+  user 1 personas: 'My favorite movie is star wars.
+
+    I like to play video games.
+
+    I have a pet iguana.
+
+    I work at mcdonald.
+
+    I play football.'
+  user 2 personas: 'I work part time.
+
+    My favorite animal is the koala.
+
+    I do not like beer.
+
+    I live with a roommate.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and read books.
+
+    User 1: Me too! I like to play video games and watch movies.
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is Star Wars.
+
+    User 2: Oh, I love Star Wars! What''s your favorite part?
+
+    User 1: I love the whole movie, but my favorite part is probably the battle between the Rebels and the Empire.
+
+    User 2: That''s a great part! I love the special effects.
+
+    User 1: Me too! What''s your favorite video game?
+
+    User 2: My favorite video game is The Legend of Zelda: Breath of the Wild.
+
+    User 1: Oh, I love that game too! I''ve played it through twice.
+
+    User 2: I''ve played it through once, but I''m still working on getting all the shrines.
+
+    User 1: It''s a lot of fun to collect all the shrines.
+
+    User 2: Yeah, it is.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read fantasy and science fiction books.
+
+    User 1: Me too! I love the Harry Potter series.
+
+    User 2: Oh, I love Harry Potter too! I''ve read all the books and seen all the movies.
+
+    User 1: Me too! What do you think of the new movie?
+
+    User 2: I thought it was great! I loved seeing the new characters and the new story.
+
+    User 1: Me too! I''m excited to see what happens next in the series.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

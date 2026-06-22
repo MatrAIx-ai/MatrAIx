@@ -1,0 +1,88 @@
+id: 00006295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6295
+data:
+  user 1 personas: 'I used to fly planes for a living.
+
+    I grew up in nevada.
+
+    I like dogs.
+
+    I am an orphan.'
+  user 2 personas: 'I like to go to the opera.
+
+    I enjoy classical music.
+
+    I love to vacation in paris.
+
+    I am six feet tall.'
+  Best Generated Conversation: 'User 1: Hello.
+
+    User 2: Hi there.
+
+    User 1: What''s your name?
+
+    User 2: My name is [name]. What''s yours?
+
+    User 1: My name is [name].
+
+    User 2: It''s nice to meet you, [name].
+
+    User 1: Nice to meet you too, [name].
+
+    User 2: What do you do for a living?
+
+    User 1: I used to fly planes for a living, but now I''m a stay-at-home mom.
+
+    User 2: That sounds like a fun job!
+
+    User 1: It was, but it was also a lot of work.
+
+    User 2: I bet it was.
+
+    User 1: Yeah, it was.
+
+    User 2: What''s your favorite thing to do?
+
+    User 1: I love to spend time with my kids.
+
+    User 2: That''s nice.
+
+    User 1: Yeah, it is.
+
+    User 2: Where do you live?
+
+    User 1: I live in Nevada.
+
+    User 2: Oh, I''ve never been to Nevada.
+
+    User 1: It''s a beautiful state.
+
+    User 2: I''m sure it is.
+
+    User 1: Yeah, it is.
+
+    User 2: What''s your favorite thing about Nevada?
+
+    User 1: I love the mountains.
+
+    User 2: I bet they''re beautiful.
+
+    User 1: They are.
+
+    User 2: I''d love to see them someday.
+
+    User 1: You should!
+
+    User 2: I will.
+
+    User 1: You''ll love it.
+
+    User 2: I''m sure I will.
+
+    User 1: Good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

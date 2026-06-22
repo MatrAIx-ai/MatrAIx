@@ -1,0 +1,76 @@
+id: '00003072'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3072
+data:
+  user 1 personas: 'I have 1 pair of shoes.
+
+    I am allergic to shellfish and cats.
+
+    I like having my back scratched.
+
+    I only eat at restaurants.'
+  user 2 personas: 'I play music in my spare time.
+
+    I work in academia at a local university.
+
+    I live in nashville.
+
+    I like to go to the farmer s market every weekend.'
+  Best Generated Conversation: 'User 1: Hi! I''m Brad. What''s your name?
+
+    User 2: Hi Brad, I''m Lisa.
+
+    User 1: Nice to meet you, Lisa. What do you do for fun?
+
+    User 2: I like to play music in my spare time.
+
+    User 1: That''s cool! What kind of music do you play?
+
+    User 2: I play mostly guitar, but I also sing a little bit.
+
+    User 1: I love music! What are some of your favorite bands?
+
+    User 2: I''m a big fan of the Beatles, the Rolling Stones, and the Beach Boys.
+
+    User 1: Those are all great bands! I love the Beatles.
+
+    User 2: Me too! They''re my favorite band of all time.
+
+    User 1: What do you like about them?
+
+    User 2: I love their music, their lyrics, and their style. They''re just so iconic.
+
+    User 1: I agree! They''re definitely one of the best bands ever.
+
+    User 2: So, what do you do for fun, Brad?
+
+    User 1: I like to go to the farmer''s market every weekend.
+
+    User 2: Oh, that''s cool! I love farmer''s markets too.
+
+    User 1: I love getting fresh produce and flowers.
+
+    User 2: Me too! And I love trying all the different food trucks.
+
+    User 1: Me too! The food trucks at the farmer''s market are always so good.
+
+    User 2: So, where do you live, Brad?
+
+    User 1: I live in Nashville.
+
+    User 2: Oh, cool! I live in Nashville too.
+
+    User 1: No way! That''s awesome!
+
+    User 2: Yeah, it is! We should go to the farmer''s market together sometime.
+
+    User 1: That would be fun! I''d love to.
+
+    User 2: Great! We can set something up soon.
+
+    User 1: Perfect!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

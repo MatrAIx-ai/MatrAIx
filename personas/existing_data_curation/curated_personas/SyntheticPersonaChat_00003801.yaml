@@ -1,0 +1,56 @@
+id: 00003801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3801
+data:
+  user 1 personas: 'I work at a retail store.
+
+    I am vegan.
+
+    I live close to the coast.
+
+    I have red hair.'
+  user 2 personas: 'I am the youngest of 8 kids.
+
+    My guilty pleasure is mcdonald s.
+
+    I have a close circle of friends i would do anything for.
+
+    I never stop looking for love.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I enjoy spending time with my friends and family, especially my younger siblings. I also love to read, go to the beach, and watch movies.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love all kinds of books, but I especially love historical fiction and fantasy. I''m currently reading a book about the Battle of Gettysburg.
+
+    User 1: That sounds really interesting! I''ve never been to Gettysburg, but I''ve always wanted to go.
+
+    User 2: It''s a beautiful place, and it''s really interesting to learn about the history of the battle.
+
+    User 1: I''m sure it is. I''ve heard that there are a lot of historical sites there.
+
+    User 2: There are, and they''re all really well-preserved.
+
+    User 1: That''s good to hear. I''ll have to add Gettysburg to my list of places to visit.
+
+    User 2: You definitely should! It''s a great place to learn about history and have a good time.
+
+    User 1: I''m sure it is. I''m always looking for new places to visit.
+
+    User 2: I know what you mean. I love to travel and explore new places.
+
+    User 1: Me too! It''s so much fun to experience different cultures and meet new people.
+
+    User 2: I agree. It''s really eye-opening.
+
+    User 1: It is. It''s amazing how different people can be from one another, but also how much we have in common.
+
+    User 2: I know what you mean. It''s always interesting to learn about other people''s lives.
+
+    User 1: It is. I love meeting new people and learning about their cultures.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

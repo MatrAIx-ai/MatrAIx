@@ -1,0 +1,56 @@
+id: 00004810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4810
+data:
+  user 1 personas: 'I work for a large law firm.
+
+    I listen to classical music.
+
+    I am married with three kids.
+
+    I enjoy golfing.'
+  user 2 personas: 'I am 5 3 and am the shortest person in my family.
+
+    My father is a school teacher , he teaches middle school.
+
+    My youngest sister is in first grade.
+
+    I am the oldest sibling.'
+  Best Generated Conversation: 'User 1: I work for a large law firm. I listen to classical music. I am married with three kids. I enjoy golfing.
+
+    User 2: I am 5''3" and am the shortest person in my family. My father is a school teacher, he teaches middle school. My youngest sister is in first grade. I am the oldest sibling.
+
+    User 1: I''m glad to hear you are enjoying your family life. I am also married with three kids. I am the oldest, but my brother is only 6''1", so I''m not the tallest.
+
+    User 2: That''s great! I''m sure we will have a lot to talk about then. I''m glad you are enjoying your law firm job. I''m not sure what I want to do with my life yet, but I''m sure I''ll figure it
+    out.
+
+    User 1: It can be tough to decide what you want to do with your life, but you''ll figure it out. I love my job, and I''m glad I decided to go into law.
+
+    User 2: It''s good that you love your job. I''m not sure what I want to do yet, but I''m sure I''ll figure it out.
+
+    User 1: I''m sure you will. You seem like a smart person.
+
+    User 2: Thank you. I think you''re pretty smart too.
+
+    User 1: Thank you. I''m glad you think so.
+
+    User 2: I''m glad to hear you are enjoying your family life. I am also married with three kids. I am the oldest, but my brother is only 6''1", so I''m not the tallest.
+
+    User 1: That''s great! I''m sure we will have a lot to talk about then. I''m glad you are enjoying your law firm job. I''m not sure what I want to do with my life yet, but I''m sure I''ll figure it
+    out.
+
+    User 2: It can be tough to decide what you want to do with your life, but you''ll figure it out. I love my job, and I''m glad I decided to go into law.
+
+    User 1: It''s good that you love your job. I''m not sure what I want to do yet, but I''m sure I''ll figure it out.
+
+    User 2: I''m sure you will. You seem like a smart person.
+
+    User 1: Thank you. I think you''re pretty smart too.
+
+    User 2: Thank you. I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

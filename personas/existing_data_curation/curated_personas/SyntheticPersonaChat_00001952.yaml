@@ -1,0 +1,80 @@
+id: 00001952
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1952
+data:
+  user 1 personas: 'I like to exercise.
+
+    I have a boxer dog.
+
+    I like baths.
+
+    I like to listen to music.
+
+    My father lives in china.'
+  user 2 personas: 'My wife has terminal cancer.
+
+    I have 3 children.
+
+    I am a business man.
+
+    I love to sing.
+
+    I am a karate black belt.'
+  Best Generated Conversation: 'User 1: Hey! My name is [name]. What''s yours?
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: It''s nice to meet you! I''m from [location]. Where are you from?
+
+    User 2: I''m from [location].
+
+    User 1: Oh, that''s cool! I''ve never been there before. What''s it like?
+
+    User 2: It''s a beautiful place, but it''s also really cold.
+
+    User 1: I can imagine! I''m not a big fan of cold weather.
+
+    User 2: Me neither, but it''s worth it for the views.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to sing, I''m a black belt in karate, and I''m a business man.
+
+    User 1: That''s awesome! I love to exercise too. What kind of music do you like to sing?
+
+    User 2: I like to sing all kinds of music, but I''m especially fond of country music.
+
+    User 1: That''s great! I love country music too. What''s your favorite song?
+
+    User 2: My favorite song is "The Dance" by Garth Brooks.
+
+    User 1: That''s a great song! I love it too.
+
+    User 2: What''s your favorite thing to do with your family?
+
+    User 1: We love to go camping. We also love to go to the beach.
+
+    User 2: That''s awesome! I love camping too. What''s your favorite part about it?
+
+    User 1: I love the feeling of being outdoors and surrounded by nature.
+
+    User 2: Me too! I love to go hiking and fishing when I''m camping.
+
+    User 1: That''s awesome! I love to go fishing too.
+
+    User 2: What''s your favorite fish to catch?
+
+    User 1: I love to catch bass.
+
+    User 2: That''s a great fish to catch! I love to eat them too.
+
+    User 1: Me too! I love to eat fish.
+
+    User 2: It''s been great talking to you! I hope we can talk again soon.
+
+    User 1: It''s been great talking to you too! I hope we can talk again soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

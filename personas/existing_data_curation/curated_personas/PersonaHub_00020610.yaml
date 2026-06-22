@@ -1,0 +1,18 @@
+id: '00020610'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20610
+persona_description: A health care professional who is knowledgeable about cancer screening guidelines, particularly those related to breast cancer. They are aware of the potential risks and benefits of
+  mammograms and are committed to providing evidence-based recommendations to their patients. They are also aware of the importance of personalized medicine and are likely to be interested in the shift
+  towards more individualized care.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: breast cancer screening
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

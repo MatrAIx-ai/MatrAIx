@@ -1,0 +1,66 @@
+id: 00006081
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6081
+data:
+  user 1 personas: 'I ve been married for five years.
+
+    I played football in college.
+
+    I work at a candy store.
+
+    I have a passion for politics.
+
+    I run two miles everyday.'
+  user 2 personas: 'I work out daily.
+
+    I own many cars.
+
+    Basketball is my favorite sport to watch.
+
+    I like watching sports.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to work out, watch sports, and play basketball.
+
+    User 1: I like working out too! I used to play football in college.
+
+    User 2: That''s cool! I''ve always wanted to play football, but I''m not very good at it.
+
+    User 1: It''s not easy, but it''s a lot of fun.
+
+    User 2: I''m sure it is. I''ve been working out for a few years now, and I''m still not very good at it.
+
+    User 1: It just takes practice. Keep at it, and you''ll get better.
+
+    User 2: I will. Thanks for the encouragement.
+
+    User 1: You''re welcome.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to read, listen to music, and watch movies.
+
+    User 2: I like reading too. What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I mostly read historical fiction and fantasy.
+
+    User 2: I like historical fiction too. I''ve been reading a lot about the Roman Empire lately.
+
+    User 1: That''s cool! I''ve always been fascinated by the Roman Empire.
+
+    User 2: Me too. It''s so interesting to learn about all the different cultures and empires that existed in the past.
+
+    User 1: I agree. It''s amazing to think about how much the world has changed over the centuries.
+
+    User 2: It sure is. I''m glad we''re living in the present day.
+
+    User 1: Me too. It''s a great time to be alive.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

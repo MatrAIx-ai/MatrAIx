@@ -1,0 +1,19 @@
+id: 00056191
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56191
+persona_description: A Scala developer who is familiar with the encoding and decoding of byte arrays, particularly when working with binary data. They are skilled in using the `Array[Byte]` constructor
+  to convert byte arrays to strings, and the `new String` constructor to convert strings to byte arrays. They are also aware of the conversion between binary and text data, and have a good understanding
+  of the encoding and decoding of byte arrays, including the use of the `new String(Array[Byte](1, 2, 3, -1, -2, -127)))` constructor to convert a byte array to a string, and the `getBytes` method to convert
+  a string to a byte array. Additionally, they are familiar with the use of the `base64` library to encode and decode binary data, and are skilled in using their own character encoding to store binary data.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,70 @@
+id: 00002487
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2487
+data:
+  user 1 personas: 'I like country music.
+
+    I play the guitar.
+
+    I like to go for runs.
+
+    I live by myself.
+
+    I have a dog and two cats.'
+  user 2 personas: 'I can play the piano.
+
+    I like to read books about chinese history.
+
+    I am a baseball player.
+
+    My dog is called alfred.
+
+    My favourite colour is green.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to play the piano, read books about Chinese history, and play baseball.
+
+    User 1: That''s cool! I like to play the guitar, go for runs, and hang out with my dogs and cats.
+
+    User 2: I love dogs! What are their names?
+
+    User 1: My dog''s name is Alfred, and my cats'' names are Mittens and Snowball.
+
+    User 2: Those are cute names! I''m glad you have pets. They''re great companions.
+
+    User 1: Yeah, they really are. What''s your favorite color?
+
+    User 2: My favorite color is green. What''s yours?
+
+    User 1: Mine is blue. I like the way it''s calming and refreshing.
+
+    User 2: I agree. It''s a great color.
+
+    User 1: I''m glad you like it. So, what do you do for work?
+
+    User 2: I''m a baseball player. I play for the [user 2''s team].
+
+    User 1: That''s cool! I''ve always wanted to be a professional athlete.
+
+    User 2: It''s a lot of hard work, but it''s also very rewarding.
+
+    User 1: I bet it is. I''m sure you''re very good at it.
+
+    User 2: Thanks! I''m trying my best.
+
+    User 1: Well, I''m sure you''ll be successful. You seem like a hard worker.
+
+    User 2: Thank you! I appreciate that.
+
+    User 1: It was nice meeting you!
+
+    User 2: Nice meeting you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

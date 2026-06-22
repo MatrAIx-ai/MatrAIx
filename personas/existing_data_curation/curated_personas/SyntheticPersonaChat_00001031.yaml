@@ -1,0 +1,72 @@
+id: '00001031'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1031
+data:
+  user 1 personas: 'I like cupcakes.
+
+    My favorite color is blue.
+
+    I have brown hair.
+
+    I like to read.'
+  user 2 personas: 'I want to be a doctor.
+
+    I play dungeons and dragons.
+
+    I love the band van haven.
+
+    I wear a lot of purple.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What are you interested in?
+
+    User 2: I want to be a doctor.
+
+    User 1: That''s awesome! I''ve always been interested in medicine myself.
+
+    User 2: What do you like about it?
+
+    User 1: I like the idea of helping people and making a difference in the world.
+
+    User 2: Me too! I think it''s a really important job.
+
+    User 1: Do you have any favorite medical shows or movies?
+
+    User 2: I really like "House" and "Grey''s Anatomy."
+
+    User 1: Me too! Those are both great shows.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Me too! It''s such a calming color.
+
+    User 1: I know right? I love it.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read all sorts of things, but I''m especially into fantasy and science fiction.
+
+    User 2: Me too! I love those genres.
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a few favorites, but one of my all-time favorites is "The Lord of the Rings."
+
+    User 1: Me too! That''s a great book.
+
+    User 2: It is! I love the story and the characters.
+
+    User 1: Me too! I''ve read it a few times and it never gets old.
+
+    User 2: I know right? It''s just so good.
+
+    User 1: I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

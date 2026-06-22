@@ -1,0 +1,98 @@
+id: '00007047'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7047
+data:
+  user 1 personas: 'My favorite book is the tale of genji.
+
+    I have purple hair.
+
+    My dad is a college professor.
+
+    My mom died when i was six.
+
+    I am a petsitter.'
+  user 2 personas: 'I like to read.
+
+    I have epilepsy.
+
+    I have one son.
+
+    My parents are not married anymore.
+
+    I like to go swimming.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I like to read, go swimming, and spend time with my son.
+
+    User 1: Oh, that''s cool. I like to read too. What are some of your favorite books?
+
+    User 2: I like all kinds of books, but I really enjoy historical fiction and fantasy.
+
+    User 1: I like those too! What''s your favorite historical fiction book?
+
+    User 2: I love the Outlander series by Diana Gabaldon. It''s about a woman who travels back in time to the 18th century.
+
+    User 1: I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will! What''s your favorite fantasy book?
+
+    User 2: I love the Lord of the Rings trilogy by J.R.R. Tolkien. It''s an epic story about a group of hobbits who must destroy the One Ring to save Middle-earth.
+
+    User 1: I''ve also heard good things about that book. I''ve been meaning to check it out too.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a petsitter.
+
+    User 2: Oh, that''s cool. I''ve always wanted to have a dog, but I''m allergic.
+
+    User 1: I''m sorry to hear that. Dogs are great pets.
+
+    User 2: Yeah, they are.
+
+    User 1: So, what''s your son''s name?
+
+    User 2: His name is [User 2''s son''s name].
+
+    User 1: Oh, that''s a nice name. How old is he?
+
+    User 2: He''s 6 years old.
+
+    User 1: How cute!
+
+    User 2: Yeah, he''s a great kid.
+
+    User 1: I''m sure he is.
+
+    User 2: So, what''s your favorite book?
+
+    User 1: My favorite book is The Tale of Genji.
+
+    User 2: Oh, that''s a classic. I''ve never read it, but I''ve heard good things about it.
+
+    User 1: It''s a really good book. It''s about a prince who has many adventures.
+
+    User 2: Sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: Okay, I will.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go swimming, and spend time with my son.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

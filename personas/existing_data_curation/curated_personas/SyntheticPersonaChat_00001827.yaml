@@ -1,0 +1,50 @@
+id: 00001827
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1827
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I really like to go to school.
+
+    I like to dance with my friends.
+
+    I love to be run.'
+  user 2 personas: 'I like to garden.
+
+    I make my own compost.
+
+    I have my own greenhouse.
+
+    I make my own soap.
+
+    I am a fruitarian.'
+  Best Generated Conversation: 'User 1: Hi, I''m six feet tall and I love to go to school, dance with my friends, and be run.
+
+    User 2: Hi, I''m six feet tall and I love to garden, make my own compost, have my own greenhouse, make my own soap, and am a fruitarian.
+
+    User 1: Wow, we have a lot in common! I love to garden too, and I''ve always wanted to have my own greenhouse.
+
+    User 2: That''s great! I love gardening because it''s a great way to be creative and to connect with nature.
+
+    User 1: I agree! I also love the feeling of growing my own food and knowing that it''s healthy.
+
+    User 2: Me too! I think it''s so important to eat healthy and fresh food.
+
+    User 1: I know what you mean. I''m trying to eat more fruits and vegetables, but it can be hard to find the time to cook them.
+
+    User 2: Yeah, I know what you mean. That''s why I make my own soap. It''s a great way to use up all of the extra fruits and vegetables that I have.
+
+    User 1: That''s a great idea! I''ve never thought of making my own soap.
+
+    User 2: It''s really easy! You just need some olive oil, water, lye, and essential oils.
+
+    User 1: That sounds simple enough. I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun and it''s a great way to save money.
+
+    User 1: Thanks for the tip! I''m sure I''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

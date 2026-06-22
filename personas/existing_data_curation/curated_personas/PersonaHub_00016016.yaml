@@ -1,0 +1,18 @@
+id: '00016016'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16016
+persona_description: A vehicle enthusiast who is interested in the design and mechanics of differentials. They are knowledgeable about the components and their functions, and are interested in the physics
+  behind how the differential works to transfer torque between the wheels. They are likely to be interested in off-road vehicles and high-performance vehicles, and are looking for information on how differentials
+  affect the performance and stability of these vehicles.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: vehicle mechanics
+  general_domain_top01pct: None
+  specific_domain_top01pct: differential mechanics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

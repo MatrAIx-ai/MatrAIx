@@ -1,0 +1,65 @@
+id: '00002276'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2276
+data:
+  user 1 personas: 'I live in nashville.
+
+    I like to go to the farmers market every weekend.
+
+    I work in academia at a local university.
+
+    I play music in my spare time.'
+  user 2 personas: 'I love music of the 1980s , especially the pretenders.
+
+    I am a kindergarten teacher.
+
+    My favorite food is spicy tex mex.
+
+    I have a puppy named tiki.
+
+    I studied early childhood education in college.'
+  Best Generated Conversation: 'User 1: Hi, my name is [Name]. I''m new to Nashville and I''m looking for some friends.
+
+
+    User 2: Hi, welcome to Nashville! I''m [Name], and I''m also a transplant. What are you interested in?
+
+
+    User 1: I love music and playing music. I''m also a big fan of the farmers market.
+
+
+    User 2: Oh, that''s great! I love the farmers market too. I''m actually a kindergarten teacher, and I love to cook with my students.
+
+
+    User 1: That''s awesome! I''ve always wanted to be a teacher. I''m a musician and I love playing music.
+
+
+    User 2: Oh, that''s great! What kind of music do you play?
+
+
+    User 1: I play guitar and piano. I love to play all different kinds of music, but my favorite is probably blues.
+
+
+    User 2: That''s awesome! I love blues music too. I actually play drums.
+
+
+    User 1: Oh, that''s great! We should jam sometime!
+
+
+    User 2: That would be awesome! I''d love to jam with you.
+
+
+    User 1: Great! I''m free this weekend. Do you want to come over to my place and jam?
+
+
+    User 2: That sounds great! I''ll bring my drums.
+
+
+    User 1: Awesome! I can''t wait to meet you.
+
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

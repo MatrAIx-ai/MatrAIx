@@ -1,0 +1,58 @@
+id: '00003715'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3715
+data:
+  user 1 personas: 'I like to go to the lake.
+
+    I like to read horror novels.
+
+    I work as an accountant.
+
+    I have 3 dogs.
+
+    My favorite color is blue.'
+  user 2 personas: 'I am on a diet.
+
+    I cannot drive.
+
+    I have been married eight years.
+
+    I am thirty two years old.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user1].
+
+    User 2: Hello, my name is [user2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my family.
+
+    User 1: That sounds great! I like to read horror novels, go to the lake, and spend time with my dogs.
+
+    User 2: I love horror novels! I have been reading a lot of them lately.
+
+    User 1: Me too! I just finished reading The Shining by Stephen King. It was amazing!
+
+    User 2: I love that book! It''s one of my favorites.
+
+    User 1: What are some of your other favorite horror novels?
+
+    User 2: I also love It, Misery, and The Stand by Stephen King.
+
+    User 1: Me too! I love all of those books!
+
+    User 2: I''m glad to see another Stephen King fan.
+
+    User 1: Me too! He''s one of my favorite authors.
+
+    User 2: Well, it was nice talking to you, [user1].
+
+    User 1: You too, [user2]. It was nice chatting with you about horror novels.
+
+    User 2: Maybe we can chat again sometime.
+
+    User 1: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

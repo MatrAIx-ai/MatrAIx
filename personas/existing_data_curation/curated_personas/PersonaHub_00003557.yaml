@@ -1,0 +1,18 @@
+id: '00003557'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3557
+persona_description: A scientist who is interested in space exploration, specifically the Apollo program and its lunar surface experiments. They are knowledgeable about the history and achievements of the
+  program, and are interested in the specific details of the ALSEP experiments, including their purpose, goals, and impact on our understanding of the moon's environment. They are also interested in the
+  technical aspects of the program, such as the use of RTGs and RHUs, and the experimental nature of the first landing of Apollo 11.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: Lunar surface experiments
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

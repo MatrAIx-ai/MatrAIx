@@ -1,0 +1,56 @@
+id: '00007603'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7603
+data:
+  user 1 personas: 'I have found the cure for the common cold.
+
+    My nickname is bubblegum.
+
+    My brother and i have bright red hair.
+
+    I love to sing in the shower.'
+  user 2 personas: 'I enjoy jazz music from when i was a girl.
+
+    I play bingo every wednesday with my husband.
+
+    I have 3 dogs and a parrot.
+
+    My left knee is filled with metal.
+
+    My family means the world to me.'
+  Best Generated Conversation: 'User 1: Hi, my name is Bubblegum!
+
+    User 2: Hello, my name is Alice.
+
+    User 1: It''s nice to meet you, Alice. What do you like to do for fun?
+
+    User 2: I enjoy playing bingo with my husband every Wednesday and listening to jazz music.
+
+    User 1: That sounds like fun! I love to sing in the shower.
+
+    User 2: That''s a great way to relax! I have a parrot and three dogs that keep me busy.
+
+    User 1: I love animals! I have a brother with bright red hair, just like me.
+
+    User 2: That''s cool! I had a red-headed boyfriend once, but we broke up.
+
+    User 1: Oh, I''m sorry to hear that. I hope you''re doing okay.
+
+    User 2: Yes, I''m doing great! Thanks for asking.
+
+    User 1: Good! So, what''s your favorite thing about your family?
+
+    User 2: My family is very close-knit. We always do things together and we''re always there for each other.
+
+    User 1: That sounds really nice. I''m happy for you.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: Well, it''s been nice talking to you, Alice. I hope we can talk again sometime.
+
+    User 2: It was nice talking to you too, Bubblegum. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

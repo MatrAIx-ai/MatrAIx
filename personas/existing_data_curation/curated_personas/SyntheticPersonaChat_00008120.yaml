@@ -1,0 +1,80 @@
+id: 00008120
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8120
+data:
+  user 1 personas: 'Sometimes i wish my computer would work faster.
+
+    I m always happy when the summer ends.
+
+    Rita hayworth is the woman of my dreams.
+
+    My glasses are always dirty and i can t seem to get them clean.
+
+    I like standing in the rain.'
+  user 2 personas: 'I have several children.
+
+    We live in a rural area.
+
+    I am a woman.
+
+    We have a dog.
+
+    My parents are still married.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [name].
+
+    User 1: Nice to meet you [name]. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: I like those things too! What do you like to read about?
+
+    User 2: I like to read about history, science, and nature.
+
+    User 1: Those are all great topics! I''m a big fan of history and science myself.
+
+    User 2: That''s cool! Maybe we could read some books together sometime.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll bring some books next time we meet.
+
+    User 1: Awesome!
+
+    User 2: What do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: That''s a great job! I''ve always wanted to be a teacher.
+
+    User 1: It''s a lot of fun, but it can be challenging.
+
+    User 2: I can imagine. What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That''s awesome! I love kindergarteners. They''re so cute and innocent.
+
+    User 1: They are! I love teaching them new things.
+
+    User 2: That''s great! I''m sure they love learning from you.
+
+    User 1: Thanks! I try my best.
+
+    User 2: It sounds like you''re a great teacher.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: I''m sure your students love you.
+
+    User 1: I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

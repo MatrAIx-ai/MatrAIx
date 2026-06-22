@@ -1,0 +1,72 @@
+id: 00001159
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1159
+data:
+  user 1 personas: 'My name is dave.
+
+    I go fishing on the weekends to relax.
+
+    I love hiking and staying fit.
+
+    I work as a personal trainer , 5 days a week.
+
+    I live in las vegas , nevada.'
+  user 2 personas: 'I love to go shopping.
+
+    My favorite pizza is pepperoni.
+
+    I teach first grade.
+
+    I drink lots of iced tea.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: My name is Dave. What''s yours?
+
+    User 2: I''m Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you do for a living?
+
+    User 2: I''m a first grade teacher.
+
+    User 1: Oh, that''s awesome! I love kids.
+
+    User 2: Me too! They''re so much fun.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go shopping, go to the movies, and hang out with my friends.
+
+    User 1: I like to do those things too! I also love to hike and go fishing.
+
+    User 2: I''ve never been fishing before, but it sounds like fun.
+
+    User 1: It''s really relaxing. You should try it sometime.
+
+    User 2: I will! I love to try new things.
+
+    User 1: What''s your favorite pizza?
+
+    User 2: Pepperoni.
+
+    User 1: Same here!
+
+    User 2: I love the salty, crispy pepperoni.
+
+    User 1: Me too! It''s the best.
+
+    User 2: I also like to add mushrooms and green peppers.
+
+    User 1: That sounds good! I''ll have to try that sometime.
+
+    User 2: You should! I love pizza.
+
+    User 1: Me too! I could eat it every day.
+
+    User 2: Me too! It''s so good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

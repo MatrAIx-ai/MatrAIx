@@ -1,0 +1,18 @@
+id: '00030644'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30644
+persona_description: A medical oncologist or a researcher working in the field of immunotherapy. This persona is interested in new cancer therapies that harness the power of the immune system to fight cancer
+  cells. They are likely to be familiar with the concept of immunotherapy, its benefits, and potential drawbacks. They are also interested in the latest developments in the field, such as the use of antibodies
+  to block CTLA-4 and cryoablation. Additionally, they are likely to be aware of the ethical and social implications of immunotherapy, such as the need for informed consent and the potential for side effects.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: immunotherapy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

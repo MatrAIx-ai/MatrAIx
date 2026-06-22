@@ -1,0 +1,74 @@
+id: '00005646'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5646
+data:
+  user 1 personas: 'My cat s name is leroy jenkins.
+
+    I enjoy playing retro video games on my 386.
+
+    My suspenders sometimes make my shoulders hurt.
+
+    I have ink stains on all my shirts.
+
+    I wish i had a real dragon i could train.'
+  user 2 personas: 'I am a night owl.
+
+    I enjoy hiking and riding my bicycle.
+
+    I am 29 years old.
+
+    My favorite band is pearl jam.
+
+    I live in a suburb of boston.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (user 1''s name). What''s your name?
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: It''s nice to meet you, (user 2''s name). What do you like to do for fun?
+
+    User 2: I like to hike and ride my bike. I also love listening to music.
+
+    User 1: That''s cool! I love to hike too. Where do you like to hike?
+
+    User 2: I like to hike in the mountains near my house. It''s so beautiful up there!
+
+    User 1: I can imagine! I love the mountains. Do you have any favorite hikes?
+
+    User 2: Yes, I love hiking Mount Tammany. It''s a challenging hike, but the views at the top are amazing!
+
+    User 1: That sounds like a great hike! I''ll have to add that to my list.
+
+    User 2: You should! It''s really worth it.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is Pearl Jam. I love their music and their live shows are amazing!
+
+    User 1: I''ve heard good things about Pearl Jam. I''ll have to check them out.
+
+    User 2: You should! They''re a great band.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to read, watch movies, and play video games.
+
+    User 1: I like reading too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite genre is science fiction.
+
+    User 1: I like science fiction too! What are some of your favorite books?
+
+    User 2: I love the Ender''s Game series by Orson Scott Card and the Dune series by Frank Herbert.
+
+    User 1: I''ve heard good things about those books! I''ll have to check them out.
+
+    User 2: You should! They''re both great series.
+
+    User 1: Well, it was nice talking to you, (user 2''s name).
+
+    User 2: You too, (user 1''s name). It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

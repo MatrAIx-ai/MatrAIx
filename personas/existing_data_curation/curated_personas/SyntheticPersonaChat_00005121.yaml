@@ -1,0 +1,78 @@
+id: '00005121'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5121
+data:
+  user 1 personas: 'My favorite band is bon over.
+
+    I am a vegan.
+
+    I work in public relations.
+
+    My parents raised me as a buddhist.'
+  user 2 personas: 'I sell paper products for a living.
+
+    I hate the taste of cheese.
+
+    I am under 6 feet tall.
+
+    I have a daughter.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: How''s it going?
+
+    User 2: Good, good. Yourself?
+
+    User 1: I''m doing well, thanks.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a public relations specialist.
+
+    User 2: Oh, that sounds interesting. What''s that like?
+
+    User 1: It''s a lot of fun! I get to work with a lot of different people and help them tell their stories.
+
+    User 2: That sounds really rewarding.
+
+    User 1: It is! I love helping people.
+
+    User 2: Me too! What''s your favorite band?
+
+    User 1: Bon Iver. They''re so beautiful.
+
+    User 2: I''ve never heard of them.
+
+    User 1: You should check them out! They''re amazing.
+
+    User 2: I will! What''s your favorite song by them?
+
+    User 1: "Holocene". It''s so hauntingly beautiful.
+
+    User 2: I''ll check it out. I''m not much of a music person, but I''ll try.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome. What''s your favorite food?
+
+    User 1: I love pizza!
+
+    User 2: Me too! What''s your favorite kind?
+
+    User 1: I like pepperoni and pineapple.
+
+    User 2: I''ve never had pineapple on pizza.
+
+    User 1: You should try it! It''s really good.
+
+    User 2: I might just do that.
+
+    User 1: You won''t regret it.
+
+    User 2: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

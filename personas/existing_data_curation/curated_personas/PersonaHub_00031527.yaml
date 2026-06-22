@@ -1,0 +1,18 @@
+id: '00031527'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31527
+persona_description: A dermatologist who specializes in the treatment and diagnosis of skin conditions, including moles and milia. They are knowledgeable about the medical term "naevus" and the potential
+  for moles to be formed due to genetic factors and sun damage. They are also skilled in identifying changes in growth, colour, or shape of moles, and in recommending further evaluation for any concerns
+  regarding malignancy.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: dermatological oncology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

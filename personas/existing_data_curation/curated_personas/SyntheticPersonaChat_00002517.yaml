@@ -1,0 +1,90 @@
+id: '00002517'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2517
+data:
+  user 1 personas: 'I like to go hunting.
+
+    My favorite holiday is halloween.
+
+    I like to remodel homes.
+
+    I like to shoot a bow.
+
+    I like to go shopping with my daughters.'
+  user 2 personas: 'I like to hunt.
+
+    I love basketball.
+
+    I like to sing.
+
+    Have both daughters and sons.'
+  Best Generated Conversation: 'User 1: My name is [name], what is your name?
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: It''s nice to meet you [name].
+
+    User 2: It''s nice to meet you too [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hunt, sing, and play basketball.
+
+    User 1: That sounds like fun. I like to go hunting, remodel homes, and go shopping with my daughters.
+
+    User 2: That''s cool. I love remodeling homes. It''s so much fun to make a space your own.
+
+    User 1: Me too. It''s a great way to express your creativity.
+
+    User 2: Exactly. I love seeing the finished product and knowing that I did it myself.
+
+    User 1: Me too. It''s a great feeling of accomplishment.
+
+    User 2: Yes it is.
+
+    User 1: So, what do you like about hunting?
+
+    User 2: I like being outdoors, being active, and the challenge of it.
+
+    User 1: I can understand that. I love being outdoors too.
+
+    User 2: It''s the best way to get away from everything and relax.
+
+    User 1: I agree. It''s so peaceful and quiet.
+
+    User 2: Exactly.
+
+    User 1: So, what do you like about basketball?
+
+    User 2: I love the competition and the teamwork.
+
+    User 1: I can understand that. I love playing team sports too.
+
+    User 2: It''s so much fun to work together with your teammates to win.
+
+    User 1: I agree.
+
+    User 2: So, what do you like about singing?
+
+    User 1: I love the way it makes me feel. It''s so therapeutic.
+
+    User 2: I can understand that. Singing is a great way to express yourself.
+
+    User 1: I agree. It''s a great way to let go of stress.
+
+    User 2: Exactly.
+
+    User 1: So, what do you like about having daughters and sons?
+
+    User 2: I love the way they make me laugh. They''re always so happy and full of life.
+
+    User 1: I can understand that. My daughters are my best friends.
+
+    User 2: They''re the best.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

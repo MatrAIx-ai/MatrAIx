@@ -1,0 +1,74 @@
+id: 00003082
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3082
+data:
+  user 1 personas: 'I have big face cheeks.
+
+    I am short.
+
+    I like reading.
+
+    I am also round.'
+  user 2 personas: 'I have played since i was 4 years old.
+
+    My mother was a nurse.
+
+    I recently discovered a new love for indian food.
+
+    I am a violinist.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi, nice to meet you!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the violin, read, and cook.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn to play the violin.
+
+    User 2: It''s a lot of fun! I''ve been playing since I was four years old.
+
+    User 1: Wow, that''s impressive! I''m not sure I''m that coordinated.
+
+    User 2: You could always give it a try! I''m sure you''d be great at it.
+
+    User 1: Thanks, I might just do that!
+
+    User 2: What do you like to read?
+
+    User 1: I like to read all sorts of things, but I especially like historical fiction and romance novels.
+
+    User 2: I love historical fiction too! What are some of your favorite books?
+
+    User 1: I really enjoyed the Outlander series by Diana Gabaldon and the Pillars of the Earth series by Ken Follett.
+
+    User 2: I''ve heard good things about both of those series! I''ll have to check them out.
+
+    User 1: You definitely should! They''re both great books.
+
+    User 2: So, what are you doing later this week?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to see a movie with some friends. Do you want to come with us?
+
+    User 1: That sounds like fun! What movie are you seeing?
+
+    User 2: We''re seeing the new Star Wars movie.
+
+    User 1: Oh, I''ve been wanting to see that! I''m in!
+
+    User 2: Great! I''ll text you the details later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

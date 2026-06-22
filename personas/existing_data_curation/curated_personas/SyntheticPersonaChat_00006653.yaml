@@ -1,0 +1,84 @@
+id: '00006653'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6653
+data:
+  user 1 personas: 'I walk three miles home every night.
+
+    I m looking for krav maga classes near my home.
+
+    My favorite mortal kombat character is mileena.
+
+    I always wear something purple.'
+  user 2 personas: 'I live by myself.
+
+    I like country music.
+
+    I play the guitar.
+
+    I have a dog and two cats.
+
+    I like to go for runs.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go for runs, play guitar, and watch movies.
+
+    User 1: That sounds fun! I like to go for walks, play video games, and watch movies.
+
+    User 2: Nice! What''s your favorite movie?
+
+    User 1: I really like the Lord of the Rings trilogy.
+
+    User 2: Me too! Those movies are so good.
+
+    User 1: What''s your favorite song?
+
+    User 2: I really like "The Gambler" by Kenny Rogers.
+
+    User 1: That''s a good song! I like that one too.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have a dog and two cats.
+
+    User 2: Aww, that''s cute! I have a dog too.
+
+    User 1: What kind of dog?
+
+    User 2: He''s a Golden Retriever.
+
+    User 1: Nice! I love Golden Retrievers.
+
+    User 2: They''re the best.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! What kind of software do you work on?
+
+    User 2: I mostly work on web applications.
+
+    User 1: That sounds interesting.
+
+    User 2: It is.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to a music festival with some friends.
+
+    User 1: Oh, that sounds fun! I''m jealous.
+
+    User 2: It should be a lot of fun.
+
+    User 1: Have a good time!
+
+    User 2: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

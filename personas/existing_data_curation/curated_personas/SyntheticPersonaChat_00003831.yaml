@@ -1,0 +1,56 @@
+id: 00003831
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3831
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I drink 10 cups of tea every day.
+
+    I really enjoy hiking.
+
+    I am deathly afraid of snakes , but not bugs.'
+  user 2 personas: 'I like fruit.
+
+    My favorite fruit is apple.
+
+    I like to eat the skin of the apple.
+
+    I like green apples.'
+  Best Generated Conversation: 'User 1: I love hiking! Do you like hiking too?
+
+    User 2: Yes, I love hiking! It''s so relaxing to be out in nature.
+
+    User 1: I know, right? It''s also a great way to get some exercise.
+
+    User 2: Exactly! And it''s a good way to see some beautiful scenery.
+
+    User 1: I love seeing the different plants and animals that live in the wild.
+
+    User 2: Me too! I''m always learning something new when I go hiking.
+
+    User 1: So, what''s your favorite type of hike?
+
+    User 2: I like to do a variety of hikes, but I especially like to do long, challenging hikes.
+
+    User 1: Me too! I love the feeling of accomplishment when I finish a long hike.
+
+    User 2: I know, right? It''s like you can do anything after that.
+
+    User 1: Do you have any favorite hiking spots?
+
+    User 2: I love hiking in the mountains. I think the scenery is the most beautiful there.
+
+    User 1: Me too! I love the feeling of being surrounded by mountains.
+
+    User 2: Do you have any favorite hiking trails?
+
+    User 1: I love the Appalachian Trail. It''s a long hike, but it''s worth it for the scenery.
+
+    User 2: I''ve heard good things about the Appalachian Trail. I''ll have to check it out sometime.
+
+    User 1: You should! It''s a great hike.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

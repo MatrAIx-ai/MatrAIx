@@ -1,0 +1,66 @@
+id: '00001356'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1356
+data:
+  user 1 personas: 'I love my impala.
+
+    I like classic radio programs.
+
+    Summer is my favorite season.
+
+    I enjoy fishing.'
+  user 2 personas: 'I am six feet tall.
+
+    I wish i was a tiger.
+
+    I speak fluent german.
+
+    I tell bad jokes on purpose.
+
+    My mom and dad are both red headed.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing great! Thank you for asking.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy fishing, reading, and spending time with my family.
+
+    User 1: That sounds fun. I love fishing too! What''s your favorite kind of fish to catch?
+
+    User 2: I like to catch bass, but I also enjoy catching trout.
+
+    User 1: I''ve never caught a trout before, but I''ve heard they''re delicious.
+
+    User 2: They are! They''re one of my favorite types of fish to eat.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all sorts of things, but I especially enjoy history and science fiction books.
+
+    User 1: I love science fiction too! What''s your favorite science fiction book?
+
+    User 2: It''s hard to say, but I think I''d have to go with Dune by Frank Herbert.
+
+    User 1: That''s a good choice! I''ve read it a few times myself.
+
+    User 2: It''s a great book. I love the world building and the characters.
+
+    User 1: Me too! I think it''s one of the best sci-fi novels ever written.
+
+    User 2: I agree! It''s definitely one of my favorites.
+
+    User 1: So, what''s your favorite thing to do with your family?
+
+    User 2: I love spending time with them, but I think our favorite thing to do together is go camping.
+
+    User 1: That sounds like fun! I''ve never been camping before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great way to spend time with your family and enjoy the outdoors.
+
+    User 1: I think I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

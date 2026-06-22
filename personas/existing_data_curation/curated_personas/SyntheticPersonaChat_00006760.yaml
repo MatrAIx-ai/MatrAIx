@@ -1,0 +1,72 @@
+id: '00006760'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6760
+data:
+  user 1 personas: 'I graduated with a statistics degree.
+
+    I know how to count cards in blackjack.
+
+    I have 3 kids.
+
+    I am a blackjack dealer.'
+  user 2 personas: 'I had to drop out of college to help with my grandparents.
+
+    My father used to be an insurance salesman.
+
+    I graduated valedictorian of my high school class.
+
+    My mother stayed at home all day to raise me and my siblings.'
+  Best Generated Conversation: 'User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Really? That''s awesome! I''ve always wanted to be a teacher, but I just don''t think I''m smart enough.
+
+    User 2: Oh, I''m sure you''re smart enough. What did you study in college?
+
+    User 1: I studied statistics.
+
+    User 2: Oh, that''s cool! I''ve always been terrible at math.
+
+    User 1: I actually really enjoyed math. I was even able to use my knowledge of statistics to learn how to count cards in blackjack.
+
+    User 2: That''s impressive! I don''t know anything about blackjack.
+
+    User 1: It''s a fun game. You should try it sometime.
+
+    User 2: Maybe I will.
+
+    User 1: So, what made you decide to become a teacher?
+
+    User 2: I always enjoyed working with kids. I also wanted to make a difference in the world.
+
+    User 1: That''s great. I''m sure you''re a great teacher.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite thing about being a teacher?
+
+    User 2: I love seeing the kids learn and grow. It''s so rewarding.
+
+    User 1: That''s amazing. I''m sure you''re a great role model for them.
+
+    User 2: I try my best.
+
+    User 1: Well, it sounds like you''re doing a great job.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, how long have you been a teacher?
+
+    User 2: For about five years now.
+
+    User 1: Wow, that''s a long time.
+
+    User 2: It is. I love it though.
+
+    User 1: I can imagine. It sounds like a really rewarding job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00003205'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3205
+data:
+  user 1 personas: 'I play the bass guitar.
+
+    My mother is a teacher in the city.
+
+    I work out daily.
+
+    I like to go out fishing.'
+  user 2 personas: 'I love the beach.
+
+    My major is business.
+
+    I like to party.
+
+    I work part time at a pizza restaurant.'
+  Best Generated Conversation: 'User 1: Hello, I am interested in talking about music.
+
+    User 2: I love music, what do you like to listen to?
+
+    User 1: I like to listen to a variety of music, but my favorite is rock.
+
+    User 2: Rock is great! I like to listen to rock when I''m working out.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is AC/DC.
+
+    User 1: I love AC/DC too! They''re one of my favorites.
+
+    User 2: What other bands do you like?
+
+    User 1: I also like Guns N'' Roses, Metallica, and Slayer.
+
+    User 2: Oh, I love all of those bands! We have similar music taste.
+
+    User 1: It seems like we do. What else do you like to do?
+
+    User 2: I like to go to the beach, party, and work out.
+
+    User 1: I like to go to the beach too. I don''t party much, but I like to work out.
+
+    User 2: We should go to the beach together sometime.
+
+    User 1: That would be fun. I''d like that.
+
+    User 2: We can make it a double date with our friends.
+
+    User 1: That sounds like a great idea. I''ll have to check my schedule and see when I''m free.
+
+    User 2: Okay, let me know. I''m free most weekends.
+
+    User 1: Thanks, I''ll do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

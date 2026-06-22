@@ -1,0 +1,50 @@
+id: '00002105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2105
+data:
+  user 1 personas: 'I am a truck driver.
+
+    I deliver baked goods in the state where i live.
+
+    I spend my weekends camping.
+
+    My favorite hobby is playing recreational baseball.
+
+    My wife and two kids camp with me.'
+  user 2 personas: 'I freeze up in social situations.
+
+    I was diagnosed with mild ocd in college.
+
+    Once a year , i take a week off and head to florida.
+
+    Sometimes i feel like i ve already been through life once before.
+
+    I work as a freelance accountant.'
+  Best Generated Conversation: 'User 1: I''m a truck driver. I deliver baked goods in the state where I live. I spend my weekends camping. My favorite hobby is playing recreational baseball. My wife and
+    two kids camp with me.
+
+    User 2: That sounds like a lot of fun! I''m a freelance accountant. I freeze up in social situations. I was diagnosed with mild OCD in college. Once a year, I take a week off and head to Florida. Sometimes
+    I feel like I''ve already been through life once before.
+
+    User 1: It sounds like you have a pretty interesting life. I''ve never been to Florida, but I''ve heard it''s beautiful.
+
+    User 2: It is! I love going to the beach and swimming in the ocean.
+
+    User 1: I love swimming too! I also love to go camping.
+
+    User 2: Me too! I love being in the outdoors and spending time with my family.
+
+    User 1: It sounds like we have a lot in common. Maybe we could get together sometime and go camping together.
+
+    User 2: That would be great! I''d love to meet you and your family.
+
+    User 1: We''ll have to make plans soon.
+
+    User 2: Sounds good! I''m free any time.
+
+    User 1: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

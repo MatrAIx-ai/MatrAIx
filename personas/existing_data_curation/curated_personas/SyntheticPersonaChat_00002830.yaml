@@ -1,0 +1,70 @@
+id: 00002830
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2830
+data:
+  user 1 personas: 'I like to play soccer.
+
+    My favorite book is pride and prejudice.
+
+    My favorite subject in school is math.
+
+    I have a little sister.
+
+    I have a golden retriever.'
+  user 2 personas: 'My favorite thing to do is float the river.
+
+    My dad was a cop until he was killed.
+
+    My favorite activity is fishing.
+
+    I once ran the mile in under 4 minutes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to float the river, fish, and run.
+
+    User 1: That sounds like fun! I like to play soccer, read, and do math.
+
+    User 2: I love reading too! What''s your favorite book?
+
+    User 1: My favorite book is Pride and Prejudice. It''s a classic romance novel by Jane Austen.
+
+    User 2: I''ve never read it, but I''ve heard good things about it.
+
+    User 1: You should definitely read it! It''s a great book.
+
+    User 2: I''ll put it on my list. What''s your favorite subject in school?
+
+    User 1: My favorite subject is math. I love solving problems and learning new things.
+
+    User 2: I like math too! It''s really satisfying when you figure out the answer to a problem.
+
+    User 1: I know, right? It''s like a puzzle.
+
+    User 2: Do you have any siblings?
+
+    User 1: Yes, I have a little sister. She''s in kindergarten.
+
+    User 2: That''s cute! I have a brother who''s in high school.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a golden retriever. His name is Buddy.
+
+    User 1: I love golden retrievers! They''re so friendly.
+
+    User 2: They are! He''s the best dog ever.
+
+    User 1: I bet he is! It sounds like you have a great family.
+
+    User 2: I do. They''re the best.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00001062'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1062
+data:
+  user 1 personas: 'I like to drink.
+
+    I do not believe in love.
+
+    I shop online , too much.
+
+    I write childrens books.
+
+    I live alone.'
+  user 2 personas: 'I live on the third floor in an apartment.
+
+    I have two dogs.
+
+    I like to cook.
+
+    I have two roommates.
+
+    I am scared of clowns.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do?
+
+    User 2: I love to cook! I''m always trying new recipes.
+
+    User 1: That''s cool! I love to cook too. I''m always in the kitchen.
+
+    User 2: What kind of things do you like to cook?
+
+    User 1: I like to cook all kinds of things, but I''m especially good at making pasta dishes.
+
+    User 2: Oh, that''s great! I love pasta too.
+
+    User 1: What are your favorite kinds of pasta dishes?
+
+    User 2: I like all kinds of pasta dishes, but I especially like lasagna and spaghetti.
+
+    User 1: Me too! Those are my favorites too.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I write children''s books.
+
+    User 2: Oh, that''s cool! I love reading children''s books.
+
+    User 1: Thanks! I love writing them. I''m currently working on a new book about a little girl who goes on an adventure.
+
+    User 2: That sounds really cool! I''d love to read it when it''s finished.
+
+    User 1: Thanks! I''ll let you know when it''s done.
+
+    User 2: Great! I''m looking forward to it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to cook, go for walks, and play with my dogs.
+
+    User 1: Oh, that''s cool! I like to do all of those things too.
+
+    User 2: We should hang out sometime!
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: Great! Let''s do it soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

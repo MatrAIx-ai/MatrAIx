@@ -1,0 +1,60 @@
+id: 00001848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1848
+data:
+  user 1 personas: 'I brew my own beer.
+
+    I live in portland , oregon.
+
+    I am gay.
+
+    I like to make my own coffee.'
+  user 2 personas: 'I visit animal shelters fairly often.
+
+    I get along better with animals than people.
+
+    I am always looking for wildlife when i am outside.
+
+    I enjoy watching animal videos on the internet.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m from Portland, Oregon.
+
+    User 2: Hi, I''m [user 2''s name]. I also live in Portland!
+
+    User 1: That''s great! I love it here.
+
+    User 2: Me too! It''s such a cool city.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to visit animal shelters. I love animals, and I think it''s important to help them out.
+
+    User 1: That''s really nice of you. I love animals too.
+
+    User 2: What do you like to do with animals?
+
+    User 1: I like to play with them and cuddle with them. I also love watching videos of them on the internet.
+
+    User 2: That sounds like a lot of fun. I love watching animal videos too.
+
+    User 1: What''s your favorite animal?
+
+    User 2: I think my favorite animal is the cat. They''re so cute and cuddly.
+
+    User 1: I love cats too! They''re the best.
+
+    User 2: Me too! I have two cats of my own.
+
+    User 1: That''s awesome! I wish I had a cat.
+
+    User 2: You should get one! They''re great pets.
+
+    User 1: Maybe I will. Thanks for the suggestion.
+
+    User 2: No problem! I''m always happy to talk about animals.
+
+    User 1: Me too! They''re the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

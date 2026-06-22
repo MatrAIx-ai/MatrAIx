@@ -1,0 +1,58 @@
+id: 00006905
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6905
+data:
+  user 1 personas: 'I am a painter and love to create art.
+
+    I have a set of identical twin brothers.
+
+    I am a talented singer and have won several competitions.
+
+    I am an aspiring writer.
+
+    I work as an extra for major motion pictures.'
+  user 2 personas: 'I like to go to comic con.
+
+    I play the guitar.
+
+    I am a lesbian.
+
+    I write short films.
+
+    My father recently had a heart attack.'
+  Best Generated Conversation: 'User 1: I like to go to comic con.
+
+    User 2: I do too! I love the cosplay and the atmosphere.
+
+    User 1: Me too! I also love the opportunity to meet my favorite comic book artists and authors.
+
+    User 2: I love meeting new people who share my interests.
+
+    User 1: Same here! What are some of your favorite comic books?
+
+    User 2: I love anything by Neil Gaiman or Alan Moore.
+
+    User 1: I love Neil Gaiman too! Have you read his Sandman series?
+
+    User 2: Yes! It''s one of my favorites. I love the mythology and the characters.
+
+    User 1: Me too! It''s so creative and imaginative.
+
+    User 2: I also love his book Coraline.
+
+    User 1: I haven''t read that one yet. What''s it about?
+
+    User 2: It''s about a young girl who moves into a new house and discovers a strange world behind a hidden door.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

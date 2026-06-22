@@ -1,0 +1,62 @@
+id: '00005037'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5037
+data:
+  user 1 personas: 'I live in a studio apartment.
+
+    I have three sisters.
+
+    I am studying to become a nurse.
+
+    I am a paramedic.
+
+    My favorite band is the beatles.'
+  user 2 personas: 'I am seventy one years old.
+
+    I love to keep a small garden outside of my house.
+
+    I love all sorts of fresh vegetables.
+
+    My favorite food to harvest is carrots.
+
+    My house is located in the countryside.'
+  Best Generated Conversation: 'User 1: Hi, how are you doing today?
+
+    User 2: I am doing well, thank you for asking.
+
+    User 1: That''s good to hear. I''m doing well too.
+
+    User 2: What do you do for a living?
+
+    User 1: I am a paramedic and I am studying to become a nurse.
+
+    User 2: That''s very interesting. What made you decide to pursue a career in healthcare?
+
+    User 1: I have always enjoyed helping people and I think it''s a great way to make a difference in the world.
+
+    User 2: I agree. It sounds like you''re very passionate about your work.
+
+    User 1: Yes, I am. I love my job and I''m very grateful that I get to do it.
+
+    User 2: That''s great to hear. I''m a little older than you are, but I have always loved gardening.
+
+    User 1: That''s wonderful. What do you like to grow in your garden?
+
+    User 2: I like to grow all sorts of vegetables, but my favorite thing to harvest is carrots.
+
+    User 1: Carrots are delicious. I love them in salads.
+
+    User 2: Me too. I also like to use them in soups and stews.
+
+    User 1: I''m sure they''re delicious. I''ve never actually grown carrots, but I''d love to try it sometime.
+
+    User 2: You should! It''s very easy and it''s a lot of fun.
+
+    User 1: I will. Thanks for the advice.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

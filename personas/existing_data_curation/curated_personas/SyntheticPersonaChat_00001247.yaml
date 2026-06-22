@@ -1,0 +1,80 @@
+id: '00001247'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1247
+data:
+  user 1 personas: 'I am not married.
+
+    I like to hunt.
+
+    I love basketball.
+
+    I like to sing.
+
+    Have both daughters and sons.'
+  user 2 personas: 'My dad died when i was in high school.
+
+    My favorite type of music is metal.
+
+    I work in commercials.
+
+    I like watching tv and movies.'
+  Best Generated Conversation: 'User 1: What''s your favorite type of music?
+
+    User 2: I like metal.
+
+    User 1: Cool, me too! What bands do you like?
+
+    User 2: I like Metallica, Slayer, and Megadeth.
+
+    User 1: Those are all great bands! I also like Iron Maiden and Black Sabbath.
+
+    User 2: Nice! I''ve seen Iron Maiden live a few times. They''re amazing.
+
+    User 1: Me too! They put on one hell of a show.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to hunt, sing, and play basketball.
+
+    User 2: Oh, that sounds cool. I''ve never been hunting before.
+
+    User 1: It''s a lot of fun. You should try it sometime.
+
+    User 2: Maybe I will. Do you have any kids?
+
+    User 1: Yeah, I have two daughters and a son.
+
+    User 2: Oh, that''s great. I have a son and a daughter.
+
+    User 1: Nice! How old are they?
+
+    User 2: My son is 14 and my daughter is 12.
+
+    User 1: My daughters are 15 and 13, and my son is 11.
+
+    User 2: Nice! It''s good to have kids.
+
+    User 1: Yeah, it is. They keep me busy.
+
+    User 2: I know what you mean.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in commercials.
+
+    User 1: Oh, that sounds cool. What do you do?
+
+    User 2: I write and produce commercials.
+
+    User 1: Oh, that sounds like a lot of fun.
+
+    User 2: It is. I love my job.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

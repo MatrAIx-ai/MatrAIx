@@ -1,0 +1,93 @@
+id: '00001053'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1053
+data:
+  user 1 personas: 'I like to dance.
+
+    I am a girl.
+
+    I am in preschool.
+
+    I like to play outside.'
+  user 2 personas: 'I listen to classical music.
+
+    I enjoy golfing.
+
+    I work for a large law firm.
+
+    I am married with three kids.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+
+    User 2: Hi, [user 1''s name]. My name is [user 2''s name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to listen to classical music, golf, and work.
+
+
+    User 1: I like to dance, play outside, and go to preschool.
+
+
+    User 2: That sounds fun! I love to dance too.
+
+
+    User 1: What kind of music do you like to listen to?
+
+
+    User 2: I like to listen to classical music, jazz, and blues.
+
+
+    User 1: I like some classical music, but I mostly like pop music.
+
+
+    User 2: That''s cool! I like some pop music too.
+
+
+    User 1: Do you like to play golf?
+
+
+    User 2: Yes, I do. I play golf with my friends and family every weekend.
+
+
+    User 1: That sounds like fun. I wish I could play golf.
+
+
+    User 2: You should try it! It''s a lot of fun.
+
+
+    User 1: I might just do that.
+
+
+    User 2: I''m glad.
+
+
+    User 1: What do you like about working?
+
+
+    User 2: I like the challenge of working on difficult legal cases and helping people.
+
+
+    User 1: That sounds like a rewarding job.
+
+
+    User 2: It is. I enjoy it a lot.
+
+
+    User 1: I''m glad you like your job.
+
+
+    User 2: Thanks.
+
+
+    User 1: I have to go now. It was nice meeting you.
+
+
+    User 2: Nice meeting you too. Have a good day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

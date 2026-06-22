@@ -1,0 +1,75 @@
+id: 00003190
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3190
+data:
+  user 1 personas: 'I m not really a blond.
+
+    My brother raised me after our parents died.
+
+    I often worry about where to park when i go somewhere new.
+
+    I think food trucks are awesome.'
+  user 2 personas: 'I love nighttime.
+
+    I just bought new hoop earrings.
+
+    I have a cat named charlie.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: I just came back from a food truck festival! It was amazing.
+
+
+    User 2: Oh, nice! What were some of your favorite foods?
+
+
+    User 1: I had some really good tacos, and some amazing pizza.
+
+
+    User 2: Pizza is my favorite food! What kind of pizza did you have?
+
+
+    User 1: It was a Margherita pizza with fresh mozzarella and basil. It was so good!
+
+
+    User 2: That sounds amazing! I love Margherita pizza.
+
+
+    User 1: I also had some really good ice cream.
+
+
+    User 2: I love ice cream! What kind did you have?
+
+
+    User 1: I had some chocolate chip cookie dough ice cream. It was so good!
+
+
+    User 2: That sounds delicious! I love cookie dough ice cream.
+
+
+    User 1: I also had some churros.
+
+
+    User 2: I love churros! What did you dip them in?
+
+
+    User 1: I dipped them in chocolate sauce. It was amazing!
+
+
+    User 2: That sounds amazing! I love churros with chocolate sauce.
+
+
+    User 1: I''m so glad we went to the food truck festival! It was so much fun.
+
+
+    User 2: Me too! I had a great time.
+
+
+    User 1: I hope they have another one soon!
+
+
+    User 2: Me too! I would love to go again.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

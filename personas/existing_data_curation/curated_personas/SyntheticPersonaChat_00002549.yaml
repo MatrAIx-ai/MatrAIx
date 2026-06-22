@@ -1,0 +1,64 @@
+id: 00002549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2549
+data:
+  user 1 personas: 'I live in pittsburgh.
+
+    I volunteer at an animal shelter.
+
+    My favorite kind of food is italian.
+
+    I love going to concerts.'
+  user 2 personas: 'I teach at a large school.
+
+    I graduated college in 2016.
+
+    My class has 26 kids.
+
+    I enjoys kayaking in my free time.
+
+    I teach kindergarten.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Pittsburgh. What about you?
+
+    User 2: I''m from New York, but I live in Pittsburgh now.
+
+    User 1: Oh, cool. What do you like to do for fun?
+
+    User 2: I like to go kayaking, go to concerts, and spend time with my family.
+
+    User 1: Me too! I love to go to concerts and spend time with my family. I also love Italian food.
+
+    User 2: I love Italian food too! I''m always looking for new restaurants to try.
+
+    User 1: Me too! I have a couple of favorites that I always go to.
+
+    User 2: Oh, that''s great! I''m always looking for new places to try.
+
+    User 1: Well, if you''re ever in Pittsburgh, I''ll be happy to take you to my favorite Italian restaurant.
+
+    User 2: Oh, that would be great! Thanks for the offer.
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I teach kindergarten at a large school.
+
+    User 1: Oh, that''s great! I''ve always wanted to be a teacher.
+
+    User 2: It''s a lot of fun, but it can also be challenging.
+
+    User 1: I bet! I''m sure it''s rewarding, though.
+
+    User 2: Yeah, it is. I love seeing my students grow and learn.
+
+    User 1: That''s great! I''m sure you''re a great teacher.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it sounds like you''re doing a great job.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

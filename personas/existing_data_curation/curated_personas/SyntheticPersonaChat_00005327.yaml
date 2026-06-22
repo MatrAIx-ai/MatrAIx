@@ -1,0 +1,72 @@
+id: '00005327'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5327
+data:
+  user 1 personas: 'I like thomas the tank engine.
+
+    My cat died.
+
+    I like books about trains.
+
+    My poppa has a train set that i play with.'
+  user 2 personas: 'My family and i go camping every month.
+
+    I am a full time mom.
+
+    I am a mother to two beautiful boys.
+
+    I enjoy horseback riding.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah.
+
+    User 2: Hi Sarah, I''m Jen.
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What are you into?
+
+    User 2: I''m a full time mom to two beautiful boys. I also enjoy horseback riding and camping.
+
+    User 1: Oh, that''s cool. I like to read books about trains and play with my poppa''s train set.
+
+    User 2: What''s your favorite train book?
+
+    User 1: I like the books about Thomas the Tank Engine.
+
+    User 2: Oh, I''ve read those books too! They''re really good.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to go camping with my family. We go every month.
+
+    User 2: Oh, that sounds fun. I''ve never been camping before.
+
+    User 1: You should try it! It''s really fun.
+
+    User 2: I might just do that.
+
+    User 1: Cool!
+
+    User 2: So, what''s your favorite thing about Thomas the Tank Engine?
+
+    User 1: I like how he''s always trying to help his friends. He''s always there for them when they need him.
+
+    User 2: That''s a good quality to have.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you want to be when you grow up?
+
+    User 1: I want to be a train engineer.
+
+    User 2: That''s a great goal! I''m sure you''ll achieve it.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

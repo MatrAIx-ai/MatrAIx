@@ -1,0 +1,100 @@
+id: 00006139
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6139
+data:
+  user 1 personas: 'My favorite movie is dirty harry.
+
+    I collect stamps.
+
+    I love the colors yellow and teal.
+
+    I am a mortician.
+
+    I want to learn how to fly an airplane.'
+  user 2 personas: 'I am a writer.
+
+    I am gluten free.
+
+    I have a dog.
+
+    I like rock climbing.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to write, rock climb, and hang out with my dog.
+
+    User 1: That''s cool! I like to collect stamps, watch movies, and learn new things.
+
+    User 2: What''s your favorite movie?
+
+    User 1: Dirty Harry. What''s yours?
+
+    User 2: I like the movie The Help. It''s about the civil rights movement in the 1960s.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should. It''s a really good movie.
+
+    User 1: What do you like to write about?
+
+    User 2: I write all sorts of things, but I mostly write short stories and poetry.
+
+    User 1: That''s really cool. I''ve always wanted to be a writer, but I''m not very good at it.
+
+    User 2: Everyone has to start somewhere. Just keep writing and you''ll get better.
+
+    User 1: Thanks for the encouragement.
+
+    User 2: You''re welcome.
+
+    User 1: So, what do you think about gluten free?
+
+    User 2: I think it''s a good choice for people who have celiac disease or gluten intolerance. But for most people, I don''t think it''s necessary.
+
+    User 1: That''s what I think too. I''ve been gluten free for a few years now, but I don''t think it''s made much of a difference.
+
+    User 2: Well, if it makes you feel better, then that''s all that matters.
+
+    User 1: Yeah, I guess so.
+
+    User 2: So, what do you like about rock climbing?
+
+    User 1: I like the challenge and the adrenaline rush. It''s also a great way to get in shape.
+
+    User 2: I can see why you like it. It sounds like a lot of fun.
+
+    User 1: It is. I''m glad I started doing it.
+
+    User 2: Me too.
+
+    User 1: So, what do you think about my dog?
+
+    User 2: He''s cute! What breed is he?
+
+    User 1: He''s a golden retriever.
+
+    User 2: I love golden retrievers! They''re so sweet and friendly.
+
+    User 1: Yeah, he''s a great dog. He''s always happy to see me.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you think of my stamps?
+
+    User 2: They''re really cool! I love the colors and the designs.
+
+    User 1: Thanks! I''ve been collecting them for years.
+
+    User 2: It shows. You have a really nice collection.
+
+    User 1: Thanks. I''m glad you like it.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

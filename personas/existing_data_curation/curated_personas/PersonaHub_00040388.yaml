@@ -1,0 +1,19 @@
+id: 00040388
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40388
+persona_description: A healthcare professional who is responsible for assessing and monitoring fluid balance in patients. They are skilled in interpreting central venous pressure (CVP) readings and are
+  aware of the normal range of CVP values. They are familiar with the assessment findings in a client with deficient fluid volume, including increased respirations, heart rate, weight loss, poor skin turgor,
+  dry mucous membranes, decreased urine volume, increased specific gravity of the urine, increased hematocrit, and altered level of consciousness. They are trained to recognize when a client has a low CVP
+  and to take appropriate action to address fluid balance issues.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: fluid balance management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,90 @@
+id: '00007426'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7426
+data:
+  user 1 personas: 'My friends and i go hiking all the time.
+
+    I am a hardcore biker.
+
+    I enjoy the outdoors.
+
+    My favorite breakfast is pancakes.'
+  user 2 personas: 'I do not like beer.
+
+    I live with a roommate.
+
+    My favorite animal is the koala.
+
+    I work part time.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking and biking.
+
+    User 1: That sounds fun! I love hiking too. Where do you like to hike?
+
+    User 2: I like to hike in the mountains. I live in Colorado, so we have some great hiking trails here.
+
+    User 1: That''s awesome! I''ve always wanted to go hiking in the mountains.
+
+    User 2: You should definitely do it! It''s so beautiful up there.
+
+    User 1: I will!
+
+    User 2: What else do you like to do?
+
+    User 1: I also like to go to the beach. I love swimming, sunbathing, and playing volleyball.
+
+    User 2: That sounds fun! I don''t go to the beach as often as I used to, but I do enjoy it when I do.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: That sounds like me! I also love to read, watch movies, and play video games.
+
+    User 2: That''s awesome! We should have a game night sometime.
+
+    User 1: That would be fun!
+
+    User 2: Do you have any pets?
+
+    User 1: I have two dogs.
+
+    User 2: That''s awesome! I love dogs.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What are their names?
+
+    User 1: Their names are Max and Luna.
+
+    User 2: Those are great names!
+
+    User 1: Thanks!
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I also like to cook. I''m not very good at it, but I enjoy it.
+
+    User 2: That''s cool! I''m not very good at cooking either, but I like to try new recipes.
+
+    User 1: Me too! I''m always looking for new recipes to try.
+
+    User 2: It sounds like we have a lot in common!
+
+    User 1: We do! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

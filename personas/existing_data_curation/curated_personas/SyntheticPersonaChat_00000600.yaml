@@ -1,0 +1,66 @@
+id: '00000600'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 600
+data:
+  user 1 personas: 'I am an artist.
+
+    I have four children.
+
+    I recently got a cat.
+
+    I love watching game of thrones.'
+  user 2 personas: 'My mind is set on things above.
+
+    My heart hurts from a broken relationship.
+
+    I am weak and selfish , but i want to change.
+
+    I trust in god.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love reading books and watching movies. I also love playing video games.
+
+    User 1: Me too! What are some of your favorite books and movies?
+
+    User 2: I love the Game of Thrones series and The Lord of the Rings series. I also love the movies Avatar and The Matrix.
+
+    User 1: Oh, I love those movies too! I''m a big fan of fantasy and sci-fi.
+
+    User 2: Me too! I love the way those genres allow me to escape from the real world and explore different worlds.
+
+    User 1: What about video games? What are some of your favorites?
+
+    User 2: I love the Zelda series and the Mario series. I also love the Final Fantasy series.
+
+    User 1: I love the Zelda series too! I''ve been playing them since I was a kid.
+
+    User 2: Me too! I remember playing Ocarina of Time for the first time and being blown away by the graphics and the story.
+
+    User 1: Ocarina of Time was amazing! It''s one of my favorite games of all time.
+
+    User 2: Me too! It''s so hard to believe that it came out more than 20 years ago. It still holds up today.
+
+    User 1: It really does! I''m glad they''re making a remake for the Switch.
+
+    User 2: Me too! I can''t wait to play it.
+
+    User 1: Me neither! So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to watch a movie. Do you want to come with me?
+
+    User 2: Sure! What movie are you going to watch?
+
+    User 1: I''m not sure yet. What do you want to see?
+
+    User 2: I''m not sure either. Let''s just pick something out when we get there.
+
+    User 1: Sounds good! I''ll pick you up at 7.
+
+    User 2: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

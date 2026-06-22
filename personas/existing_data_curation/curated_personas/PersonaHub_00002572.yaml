@@ -1,0 +1,19 @@
+id: '00002572'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2572
+persona_description: A person who is interested in and knowledgeable about computer arithmetic, specifically binary arithmetic, two's complement arithmetic, and the algorithms used for addition, subtraction,
+  and multiplication in binary arithmetic. This person is likely to be interested in the Am2901 and Am2903, which perform two's complement arithmetic and provide overflow checks. They are likely to be interested
+  in the various cases of binary multiplication, including the sign extension of the multiplicand and the proper alignment of the multiplicand and the multiplier. This person may also be interested in the
+  common algorithm used for binary arithmetic, which involves the use of partial product addition with alignment and the proper handling of the two's complement of the multiplicand at the end.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Digital Arithmetic
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

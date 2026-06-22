@@ -1,0 +1,82 @@
+id: 00000821
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 821
+data:
+  user 1 personas: 'I love to read.
+
+    I read three books a week.
+
+    I dropped out of high school.
+
+    I learned how to reads when i was three.'
+  user 2 personas: 'My favorite food is steak cooked well done.
+
+    I always have a beer after work.
+
+    I played football in high school.
+
+    I am a roofer.
+
+    I drive a lifted chevy truck.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! What''s up?
+
+    User 1: Not much, just reading a book.
+
+    User 2: Oh, what are you reading?
+
+    User 1: It''s a biography of Winston Churchill.
+
+    User 2: Oh, that sounds interesting. I''ve never read anything about him.
+
+    User 1: He''s a really fascinating person. He was a great leader and a great writer.
+
+    User 2: I''m sure he was. I''ll have to check him out sometime.
+
+    User 1: You should. He''s one of my favorite historical figures.
+
+    User 2: What''s your favorite thing about him?
+
+    User 1: I think it''s his ability to overcome adversity. He had a lot of challenges in his life, but he never gave up.
+
+    User 2: That''s really inspiring.
+
+    User 1: Yeah, I think he''s a great role model.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool. I''ve always thought about being a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: I''m sure it is. I think I would be too.
+
+    User 1: Well, if you ever decide to become a teacher, let me know. I can give you some tips.
+
+    User 2: Thanks, I''ll keep that in mind.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, that''s cool. I''ve never met a roofer before.
+
+    User 2: It''s a good job. I get to work outside and I''m my own boss.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: Yeah, it is. I love my job.
+
+    User 1: Well, it sounds like you have a great life.
+
+    User 2: I do. I''m really happy.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

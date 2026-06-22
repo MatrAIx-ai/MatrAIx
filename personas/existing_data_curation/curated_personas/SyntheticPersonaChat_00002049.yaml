@@ -1,0 +1,70 @@
+id: 00002049
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2049
+data:
+  user 1 personas: 'My hobby is sewing.
+
+    I like to go swimming.
+
+    I have a garden in my yard.
+
+    I like to make fresh pies.'
+  user 2 personas: 'I had 128 tackles last year.
+
+    I play football.
+
+    My position is linebacker.
+
+    The name of my team is the baltimore ravens.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I play football.
+
+    User 1: Really? That''s cool! What position do you play?
+
+    User 2: I''m a linebacker.
+
+    User 1: Oh, that''s a tough position.
+
+    User 2: Yeah, it is. But I love it.
+
+    User 1: What''s your favorite thing about playing football?
+
+    User 2: I love the competition. I also love the feeling of being part of a team.
+
+    User 1: I can understand that. I love working on projects with my team at work.
+
+    User 2: Yeah, it''s a great feeling.
+
+    User 1: So, what''s your team''s record this year?
+
+    User 2: We''re 6-0 so far.
+
+    User 1: That''s great! I''m sure you''re going to make it to the playoffs.
+
+    User 2: Thanks, I hope so!
+
+    User 1: Do you have any upcoming games?
+
+    User 2: We''re playing the Steelers next week.
+
+    User 1: Oh, that should be a good game.
+
+    User 2: Yeah, I''m excited for it.
+
+    User 1: Good luck!
+
+    User 2: Thanks!
+
+    User 1: I''m sure you''ll do great.
+
+    User 2: I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

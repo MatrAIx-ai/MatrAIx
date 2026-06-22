@@ -1,0 +1,66 @@
+id: '00005070'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5070
+data:
+  user 1 personas: 'I ride my bicycle everywhere.
+
+    I enjoy jazz music.
+
+    I broke my nose when i was ten.
+
+    I work at a factory.
+
+    My favorite city is seattle.'
+  user 2 personas: 'I hate school.
+
+    I am a average american youth.
+
+    I fell in love this summer.
+
+    I enjoy summer walking and reading.
+
+    I live on a lake.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What is your favorite thing to do in the summer?
+
+    User 2: I love to go for walks around the lake.
+
+    User 1: That sounds peaceful. I enjoy reading in the summer.
+
+    User 2: That''s nice. I used to love to read, but I haven''t had much time lately.
+
+    User 1: I know what you mean. I work at a factory, so I''m pretty busy.
+
+    User 2: What kind of factory do you work at?
+
+    User 1: I work at a factory that makes car parts.
+
+    User 2: That sounds like an interesting job.
+
+    User 1: It''s not bad. It''s a lot of work, but it pays well.
+
+    User 2: That''s good. I''m still in school, so I don''t really have to worry about that yet.
+
+    User 1: I remember those days. Enjoy them while you can!
+
+    User 2: I will! What''s your favorite city?
+
+    User 1: My favorite city is Seattle. I love the weather and the people there.
+
+    User 2: I''ve heard great things about Seattle. I''ve never been there, but I''d love to go someday.
+
+    User 1: You should! It''s a beautiful city.
+
+    User 2: I''ll definitely put it on my list.
+
+    User 1: Well, it was nice talking to you. I hope you have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

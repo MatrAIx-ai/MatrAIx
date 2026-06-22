@@ -1,0 +1,84 @@
+id: '00006672'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6672
+data:
+  user 1 personas: 'My favorite artist is justin bieber.
+
+    My family and i go camping every month.
+
+    I love to go horseback riding whenever i can.
+
+    I am a mother of two beautiful boys.'
+  user 2 personas: 'I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    I m the general manager of the local grocery store.
+
+    My hobbies include reading and cycling.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    My name is frank.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, nice to meet you. My name is [user 2].
+
+    User 1: What are your hobbies?
+
+    User 2: I like to read, cycle, and spend time in nature.
+
+    User 1: That sounds nice. I like to horseback ride and go camping.
+
+    User 2: I have never been horseback riding, but it sounds like fun.
+
+    User 1: It is. I love the feeling of being on top of a horse and riding through the woods.
+
+    User 2: I can imagine. I have always wanted to try it.
+
+    User 1: You should! It is a lot of fun.
+
+    User 2: I will have to keep that in mind.
+
+    User 1: Where do you live?
+
+    User 2: I live in Canada.
+
+    User 1: Oh, that''s nice. I have always wanted to go to Canada.
+
+    User 2: You should! It is beautiful here.
+
+    User 1: I will have to plan a trip sometime.
+
+    User 2: I hope you do. You would love it here.
+
+    User 1: Thank you. I appreciate that.
+
+    User 2: You''re welcome.
+
+    User 1: What do you do for work?
+
+    User 2: I am the general manager of the local grocery store.
+
+    User 1: Oh, that sounds like a challenging but rewarding job.
+
+    User 2: It is. I love working with people and helping them find what they need.
+
+    User 1: That''s great. I am a mother of two beautiful boys.
+
+    User 2: Oh, that sounds lovely. I am sure you have your hands full.
+
+    User 1: I do, but it is a lot of fun.
+
+    User 2: I am sure it is. I am looking forward to starting a family one day.
+
+    User 1: That''s great. I am sure you will be a great parent.
+
+    User 2: Thank you. I appreciate that.
+
+    User 1: It was nice to meet you, Frank.
+
+    User 2: It was nice to meet you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

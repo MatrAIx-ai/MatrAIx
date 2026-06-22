@@ -1,0 +1,18 @@
+id: '00050506'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50506
+persona_description: A scientist who is passionate about the field of biophysics and has expertise in developing innovative microscopy techniques. They have a deep understanding of the principles of STED,
+  PALM/STORM, and MINFLUX microscopy, and have successfully applied them to study the movement and function of molecules in living cells. They are skilled in creating algorithms to locate the positions
+  of individual molecules with high precision, and have achieved unprecedented spatio-temporal resolution in their research.
+expertise:
+  general_domain_top1pct: biophysics
+  specific_domain_top1pct: microscopy techniques
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

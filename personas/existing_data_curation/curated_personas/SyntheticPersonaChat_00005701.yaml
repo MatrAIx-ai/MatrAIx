@@ -1,0 +1,56 @@
+id: '00005701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5701
+data:
+  user 1 personas: 'My older sister plays clarinet.
+
+    I have a pomeranian.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My mom is a music teacher at the elementary school.'
+  user 2 personas: 'I played football in college.
+
+    I run two miles everyday.
+
+    I work at a candy store.
+
+    I have a passion for politics.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is John.
+
+    User 1: Nice to meet you, John! My name is Jessica.
+
+    User 2: Nice to meet you too, Jessica!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I run two miles every day, and I work at a candy store.
+
+    User 1: That sounds like a lot of fun! I love running, but I don''t get to do it as often as I would like.
+
+    User 2: It''s a great way to stay in shape! And I get to eat all the candy I want at work.
+
+    User 1: That''s a good perk! I''m not really a big fan of candy, but I do love chocolate.
+
+    User 2: Me too! I love all kinds of candy, but chocolate is definitely my favorite.
+
+    User 1: So, what are you passionate about?
+
+    User 2: I''m passionate about politics! I think it''s so important to be involved in our government and to make our voices heard.
+
+    User 1: I agree! I think it''s important to be informed and to vote.
+
+    User 2: Me too! I''m always looking for new ways to get involved in politics.
+
+    User 1: I''m glad to hear that! I''m not sure how involved I want to be in politics, but I definitely want to be informed.
+
+    User 2: That''s a good start! And you can always get more involved as you learn more about it.
+
+    User 1: I''m sure I will! I''m excited to learn more about politics.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

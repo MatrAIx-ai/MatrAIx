@@ -1,0 +1,94 @@
+id: '00000702'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 702
+data:
+  user 1 personas: 'I like to hike.
+
+    I write fiction for fun.
+
+    My mother is dead.
+
+    I have a golden retriever.
+
+    I work in advertising.'
+  user 2 personas: 'I don t like being asked a lot of questions.
+
+    I have a shopping addiction.
+
+    I think about food a lot.
+
+    I love the forest.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to hike.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: I also like to write fiction for fun.
+
+    User 1: That''s cool! I''ve always wanted to try writing fiction.
+
+    User 2: It''s fun! You should give it a try.
+
+    User 1: I might have to.
+
+    User 2: What do you do for work?
+
+    User 1: I work in advertising.
+
+    User 2: Oh, cool. I''ve always been interested in advertising.
+
+    User 1: It''s a lot of fun. I get to work on all sorts of different projects.
+
+    User 2: That sounds awesome.
+
+    User 1: So, what about you? What do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that sounds like a lot of work.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite thing to do when you''re not working?
+
+    User 1: I like to spend time with my golden retriever.
+
+    User 2: Oh, I love dogs! What''s your dog''s name?
+
+    User 1: His name is Buddy.
+
+    User 2: That''s a great name.
+
+    User 1: Thanks. So, what''s your favorite food?
+
+    User 2: I love all kinds of food, but I really love pasta.
+
+    User 1: Me too! I love pasta with tomato sauce.
+
+    User 2: Me too! That''s my favorite dish.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to hike in the forest.
+
+    User 2: That sounds fun! I love hiking in the forest.
+
+    User 1: I know, right? It''s the best.
+
+    User 2: So, do you want to go hiking together?
+
+    User 1: Sure! That would be great'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

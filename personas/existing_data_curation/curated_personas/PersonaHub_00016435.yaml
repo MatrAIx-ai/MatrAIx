@@ -1,0 +1,18 @@
+id: '00016435'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16435
+persona_description: A news reporter covering natural disasters and emergency situations, particularly those related to earthquakes, tsunamis, and other severe weather events. They have a keen eye for detail
+  and are familiar with the latest scientific research and warning systems. They are also well-versed in evacuation procedures and are trained in first aid and disaster response. They have a passion for
+  informing the public about the potential dangers and the steps they can take to stay safe during such events.
+expertise:
+  general_domain_top1pct: emergency response
+  specific_domain_top1pct: disaster reporting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

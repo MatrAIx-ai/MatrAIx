@@ -1,0 +1,70 @@
+id: 00006596
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6596
+data:
+  user 1 personas: 'I like having fried fish for supper.
+
+    My favorite singer is justin bieber.
+
+    My doctor told me i have six months to live.
+
+    I m really terrible at doing regular expressions.'
+  user 2 personas: 'I have six tattoos , all of cats.
+
+    I am from baltimore md.
+
+    I have a pencil thin mustache.
+
+    I am a medical file clerk.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and go to the beach.
+
+    User 1: Oh, that''s cool. I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I''m especially into historical fiction and mystery novels.
+
+    User 1: Oh, that''s cool. I like historical fiction too. What are some of your favorite books?
+
+    User 2: I really enjoyed Pillars of the Earth by Ken Follett and The Name of the Rose by Umberto Eco.
+
+    User 1: Oh, I''ve heard good things about both of those books. I''ll have to check them out.
+
+    User 2: I definitely recommend them.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a medical file clerk at a hospital.
+
+    User 1: Oh, that''s interesting. Do you like your job?
+
+    User 2: I do, it''s a lot of fun. I get to interact with a lot of different people and I''m always learning new things.
+
+    User 1: That sounds great.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite thing about Baltimore?
+
+    User 2: I love the history and the culture. There''s always something to do and see.
+
+    User 1: Oh, that''s cool. I''ve never been to Baltimore, but I''ve heard good things about it.
+
+    User 2: You should definitely come visit sometime.
+
+    User 1: I will.
+
+    User 2: Okay, well it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: 00005998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5998
+data:
+  user 1 personas: 'I do not like green eggs and ham.
+
+    I enjoy swimming.
+
+    I have 4 dogs.
+
+    I have a missing pinky toe.'
+  user 2 personas: 'My favorite animals are dolphins.
+
+    I have my own channel.
+
+    I enjoy making lets plays.
+
+    I love youtube.
+
+    My father works in advertising agency.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy making YouTube videos.
+
+    User 1: Oh, that''s cool! What kind of videos do you make?
+
+    User 2: I make let''s plays of video games.
+
+    User 1: Nice! I''ve seen some of those before. They''re pretty fun to watch.
+
+    User 2: Thanks! I''m glad you like them.
+
+    User 1: I have four dogs.
+
+    User 2: That''s awesome! I love dogs.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What are their names?
+
+    User 1: Their names are Buddy, Milo, Toby, and Bailey.
+
+    User 2: Those are great names!
+
+    User 1: Thanks!
+
+    User 2: I have a missing pinky toe.
+
+    User 1: Oh, no! How did that happen?
+
+    User 2: I was born with it.
+
+    User 1: That''s interesting. I''ve never met anyone with a missing pinky toe before.
+
+    User 2: Me neither! It''s always a fun conversation starter.
+
+    User 1: I''m sure it is!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I enjoy swimming.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: I know, right? I love being in the water.
+
+    User 2: Do you have a pool?
+
+    User 1: No, I don''t. I wish I did, though.
+
+    User 2: You should get one! They''re so much fun.
+
+    User 1: I know, I know. I''ll get one someday.
+
+    User 2: Good! You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: 00049904
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49904
+persona_description: A public health advocate and environmental scientist who specializes in developing real-time air quality maps and algorithms to assist the public in interpreting air quality data. They
+  have developed a method to blend model data, regulatory monitoring data, and calibrated/quality controlled low-cost sensor data to provide air quality index (AQI) values at 5 km resolution that are considerably
+  more accurate than previous methods, especially during wildfires. They have used statistical checks on two PurpleAir channels and compared the differences between the A and B channels over a one week
+  moving window using several statistical techniques to identify sensors with large bias or scatter between the two sensors. They have also considered wind speed and direction when interpolating monitoring
+  data and have used location-specific uncertainties for low-cost sensor data. They have a system that updates the map in near-real time and has siting criteria for Purple Air sensors.
+expertise:
+  general_domain_top1pct: environmental science
+  specific_domain_top1pct: air quality monitoring
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

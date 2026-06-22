@@ -1,0 +1,76 @@
+id: 00003840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3840
+data:
+  user 1 personas: 'My idol is theirry henry.
+
+    My favorite food is pizza.
+
+    I went to stanford.
+
+    I play soccer professionally.
+
+    I have a wife and a 4 year old son.'
+  user 2 personas: 'I do not own any pets.
+
+    My favorite meal is brunch.
+
+    I am a recruiter.
+
+    My car is black.'
+  Best Generated Conversation: 'User 1: What''s your favorite meal?
+
+    User 2: Brunch! I love eggs, bacon, and french toast.
+
+    User 1: Me too! I love brunch.
+
+    User 2: What''s your favorite thing about brunch?
+
+    User 1: I love being able to eat a big, delicious meal without having to feel guilty about it.
+
+    User 2: Me too! Brunch is the perfect way to start the day.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a recruiter.
+
+    User 1: Oh, that''s cool! Do you like it?
+
+    User 2: I love it! It''s a great way to meet new people and help them find their dream jobs.
+
+    User 1: That''s awesome! I''m glad you like it.
+
+    User 2: Thanks! What about you? What do you do for a living?
+
+    User 1: I''m a soccer player.
+
+    User 2: Oh, that''s cool! Do you play professionally?
+
+    User 1: Yes, I play for the LA Galaxy.
+
+    User 2: Oh wow! That''s awesome! I''m a huge soccer fan.
+
+    User 1: Thanks! I''m glad to hear that.
+
+    User 2: So, what''s your favorite thing about soccer?
+
+    User 1: I love the feeling of scoring a goal. It''s the best feeling in the world.
+
+    User 2: I can imagine! It must be so exciting.
+
+    User 1: It is! I love the thrill of competition.
+
+    User 2: Me too! I love the feeling of winning.
+
+    User 1: Winning is great! But I also love the feeling of losing. It makes me want to work harder next time.
+
+    User 2: That''s a good attitude to have.
+
+    User 1: Thanks! I think it''s important to always be learning and improving.
+
+    User 2: I agree! I think that''s the key to success in anything.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

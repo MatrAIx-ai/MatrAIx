@@ -1,0 +1,19 @@
+id: 00010802
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10802
+persona_description: A pediatrician who specializes in the diagnosis and treatment of non-alcoholic fatty liver disease (NAFLD) in children. He is interested in developing non-invasive diagnostic tools
+  to identify the presence of liver fibrosis in children with NAFLD. His expertise lies in the use of clinical features and laboratory exams to predict liver fibrosis in children with NAFLD, and he has
+  invested his expertise in the field of NAFLD into a new non-invasive diagnostic index, the Pediatric NAFLD Fibrosis Index (PNFI), which uses age, waist circumference, and triglycerides to predict the
+  likelihood of fibrosis.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hepatology/pediatric gastroenterology
+  general_domain_top01pct: None
+  specific_domain_top01pct: hepatology/pediatric gastroenterology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

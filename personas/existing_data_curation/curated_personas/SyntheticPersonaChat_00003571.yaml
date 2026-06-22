@@ -1,0 +1,66 @@
+id: '00003571'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3571
+data:
+  user 1 personas: 'I also like eating sushi.
+
+    I am studying for my master s.
+
+    Cooking is one of my pass times.
+
+    My favorite food is pizza.
+
+    I am a student in social sciences.'
+  user 2 personas: 'I love rock music.
+
+    I work as a contractor for a cab company.
+
+    I am taking courses online.
+
+    I like ice cream.'
+  Best Generated Conversation: '*User 1:* What are you doing for the weekend?
+
+    *User 2:* Not much, just hanging out and relaxing.
+
+    *User 1:* Me too! I''m going to watch a movie and cook dinner.
+
+    *User 2:* What movie are you going to see?
+
+    *User 1:* I''m not sure yet. I''m thinking about going to see a comedy.
+
+    *User 2:* That sounds fun! I love going to the movies.
+
+    *User 1:* Me too! It''s a great way to relax and have fun.
+
+    *User 2:* What do you like to cook?
+
+    *User 1:* I like to cook all kinds of things, but my favorite is pizza.
+
+    *User 2:* I love pizza! I could eat it every day.
+
+    *User 1:* Me too! It''s my favorite food.
+
+    *User 2:* I''m going to have to cook some pizza this weekend.
+
+    *User 1:* You should! It''s really easy to make.
+
+    *User 2:* I will! Thanks for the tip.
+
+    *User 1:* No problem! What''s your favorite kind of pizza?
+
+    *User 2:* I like pepperoni and pineapple.
+
+    *User 1:* That''s a good combination! I like pepperoni and sausage.
+
+    *User 2:* I like that too! I''m going to have to try that next time.
+
+    *User 1:* You should! It''s really good.
+
+    *User 2:* Thanks for the recommendation.
+
+    *User 1:* No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

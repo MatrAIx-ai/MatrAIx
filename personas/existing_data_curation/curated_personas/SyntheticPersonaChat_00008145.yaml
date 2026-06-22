@@ -1,0 +1,68 @@
+id: 00008145
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8145
+data:
+  user 1 personas: 'I go to the pool every thursday for three hours.
+
+    I don t have children.
+
+    I do yoga on tuesdays.
+
+    I work five days a week.
+
+    I enjoy shopping.'
+  user 2 personas: 'I live with my parents.
+
+    I get sad a lot.
+
+    I just lost my job and i m looking for something new.
+
+    I think i might need help.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to watch movies, play video games, and read.
+
+    User 1: I like those things too! What are some of your favorite movies?
+
+    User 2: I like a lot of different movies, but some of my favorites are The Lord of the Rings, The Harry Potter series, and The Matrix.
+
+    User 1: Those are all great movies! I love The Lord of the Rings too.
+
+    User 2: I know, right? It''s so good!
+
+    User 1: So, what do you do for work?
+
+    User 2: I just lost my job, so I''m looking for something new.
+
+    User 1: Oh, I''m sorry to hear that. What kind of work did you do?
+
+    User 2: I was a customer service representative.
+
+    User 1: That sounds like a tough job.
+
+    User 2: It was, but I liked it.
+
+    User 1: So, what are you looking for in a new job?
+
+    User 2: I''m just looking for something that pays well and is interesting.
+
+    User 1: I hope you find something soon!
+
+    User 2: Thanks! I''m trying!
+
+    User 1: Well, I have to go now. It was nice meeting you, [user 2''s name].
+
+    User 2: It was nice meeting you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

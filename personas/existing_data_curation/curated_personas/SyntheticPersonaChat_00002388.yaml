@@ -1,0 +1,78 @@
+id: 00002388
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2388
+data:
+  user 1 personas: 'I am a soccer player.
+
+    I joined a new team last month.
+
+    Nike cleats are my favorite.
+
+    I am a goalie.
+
+    My number is 42.'
+  user 2 personas: 'I often play the clown to get attention.
+
+    I will work hard for whatever i want.
+
+    I grew up as an orphan.
+
+    I want people to notice me.'
+  Best Generated Conversation: 'User 1: Hi! I''m a soccer player.
+
+    User 2: Hi! Me too! I love playing soccer. What position do you play?
+
+    User 1: I''m a goalie. What about you?
+
+    User 2: I''m a forward.
+
+    User 1: That''s cool! What team do you play for?
+
+    User 2: I play for the local team.
+
+    User 1: Oh, cool! I just joined a new team last month.
+
+    User 2: That''s awesome! What''s your team''s name?
+
+    User 1: It''s called the Blue Devils.
+
+    User 2: Oh, I''ve heard of them! They''re a good team.
+
+    User 1: Thanks! We''re trying to make it to the playoffs this year.
+
+    User 2: That''s awesome! I hope you make it!
+
+    User 1: Thanks! Me too!
+
+    User 2: What''s your favorite thing about playing soccer?
+
+    User 1: I love the teamwork and the competition.
+
+    User 2: Me too! It''s so much fun to play a team sport.
+
+    User 1: Yeah, it is.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: Yeah, I like to play video games and watch movies.
+
+    User 2: Oh, me too! What kind of video games do you like to play?
+
+    User 1: I like to play sports games and adventure games.
+
+    User 2: Me too! I love playing Mario Kart.
+
+    User 1: Oh, me too! That''s my favorite game.
+
+    User 2: It''s so much fun to play with friends.
+
+    User 1: Yeah, it is.
+
+    User 2: Well, it was nice talking to you. I hope you make it to the playoffs!
+
+    User 1: Thanks! Me too! It was nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

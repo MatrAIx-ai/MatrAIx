@@ -1,0 +1,56 @@
+id: '00000571'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 571
+data:
+  user 1 personas: 'I am a gymnast.
+
+    My favorite coffee is french vanilla.
+
+    I hate the feeling of chalk.
+
+    I have been dating my boyfriend for over 10 years.
+
+    I have a black and white cat named cow.'
+  user 2 personas: 'And , my best friend is abigail.
+
+    Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.
+
+    I am ten years old.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name]!
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to read, play video games, and hang out with my friends.
+
+    User 1: Cool, what kind of books do you like to read?
+
+    User 2: I like to read Harry Potter books, Percy Jackson books, and The Hunger Games books.
+
+    User 1: Oh, I love Harry Potter too! I''m a big fan of the series.
+
+    User 2: Me too! I''ve read all of the books and seen all of the movies.
+
+    User 1: What''s your favorite Harry Potter book?
+
+    User 2: My favorite book is Harry Potter and the Prisoner of Azkaban. It''s so good!
+
+    User 1: I agree! That''s one of my favorite books too.
+
+    User 2: What''s your favorite Harry Potter movie?
+
+    User 1: My favorite movie is Harry Potter and the Deathly Hallows: Part 2. It''s such a good ending to the series.
+
+    User 2: I agree! That''s my favorite movie too.
+
+    User 1: It''s been nice talking to you, [user 2''s name].
+
+    User 2: It''s been nice talking to you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

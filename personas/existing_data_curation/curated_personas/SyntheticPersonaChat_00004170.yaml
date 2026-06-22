@@ -1,0 +1,92 @@
+id: '00004170'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4170
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I m in the military.
+
+    I have one son.
+
+    I was a wrestler in high school.'
+  user 2 personas: 'I love coffee with cream.
+
+    I want to be a museum curator.
+
+    My favorite band is the beastie boys.
+
+    I went to new york city once.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hello! I''m (name).
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a museum curator.
+
+    User 1: That sounds like an interesting job. What''s your favorite part about it?
+
+    User 2: I love getting to work with artifacts and learn about history.
+
+    User 1: That sounds really cool! I''m in the military.
+
+    User 2: Oh, that''s interesting! What do you do in the military?
+
+    User 1: I''m a soldier.
+
+    User 2: Oh, cool! Have you ever been deployed?
+
+    User 1: Yes, I have. I was deployed to Afghanistan for 10 months.
+
+    User 2: Oh, wow! I can''t imagine what that must have been like.
+
+    User 1: It was tough, but it was also an amazing experience.
+
+    User 2: I''m sure it was.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to go to concerts. My favorite band is the Beastie Boys.
+
+    User 1: Oh, cool! I love the Beastie Boys too! They''re one of my favorite bands.
+
+    User 2: That''s awesome! What''s your favorite song by them?
+
+    User 1: My favorite song is "Sabotage".
+
+    User 2: Mine too! It''s such a good song.
+
+    User 1: It is.
+
+    User 2: So, do you have any kids?
+
+    User 1: Yes, I have one son.
+
+    User 2: Oh, that''s great! How old is he?
+
+    User 1: He''s 10 years old.
+
+    User 2: Oh, he''s a little older than my son. He''s 8 years old.
+
+    User 1: That''s great!
+
+    User 2: It is.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I want to be a museum curator.
+
+    User 1: That sounds like an awesome goal! I''m sure you''ll achieve it.
+
+    User 2: I hope so!
+
+    User 1: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

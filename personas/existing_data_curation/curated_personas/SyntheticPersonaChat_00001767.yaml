@@ -1,0 +1,76 @@
+id: '00001767'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1767
+data:
+  user 1 personas: 'My truck is black.
+
+    I have a ford f150.
+
+    I also like ford trucks.
+
+    I like ford cars.
+
+    I own a ford truck.'
+  user 2 personas: 'I have a hard time feeling connected with people.
+
+    I take my emotions out through art.
+
+    I care deeply about animals.
+
+    I sometimes need to scream to feel alive.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to take my emotions out through art.
+
+    User 1: That''s cool! I''m not much of an artist myself, but I appreciate it.
+
+    User 2: Thanks! What do you like to do?
+
+    User 1: I like to work on my truck.
+
+    User 2: Oh, cool! What kind of truck do you have?
+
+    User 1: I have a Ford F-150.
+
+    User 2: Nice! I''ve always wanted a Ford truck.
+
+    User 1: They''re great trucks!
+
+    User 2: So, what do you like about working on your truck?
+
+    User 1: I like the challenge of it, and I like the feeling of accomplishment when I''m done.
+
+    User 2: That makes sense. I can understand that.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to care deeply about animals.
+
+    User 1: That''s great! I love animals too.
+
+    User 2: I also like to sometimes need to scream to feel alive.
+
+    User 1: That''s interesting. I''ve never felt the need to do that before.
+
+    User 2: It''s not for everyone, but it''s something that helps me to feel connected to my emotions.
+
+    User 1: I understand. I''m glad you have something that helps you to feel alive.
+
+    User 2: Thanks. I''m glad you''re interested in what I do.
+
+    User 1: I am! It''s really interesting to learn about different people''s interests.
+
+    User 2: Me too. I think it''s important to be open to new experiences and learn about different cultures.
+
+    User 1: I agree. I think it''s the best way to grow as a person.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

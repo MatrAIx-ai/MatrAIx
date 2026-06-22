@@ -1,0 +1,60 @@
+id: 00001738
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1738
+data:
+  user 1 personas: 'I work 9 to 5 job.
+
+    When i retire i want to open a bakery.
+
+    I like to cook.
+
+    My family owned a small restaurant.'
+  user 2 personas: 'I am a hopeless romantic.
+
+    I have trouble getting motivated.
+
+    I have bad luck with relationships.
+
+    I daydream during work.'
+  Best Generated Conversation: 'User 1: I''m so bored at work right now. I''m just waiting for the day to end so I can go home and bake.
+
+    User 2: What are you going to bake?
+
+    User 1: I''m not sure yet. Maybe some cookies or cupcakes. I''m feeling creative today.
+
+    User 2: That sounds delicious. I love baking too. I always get really into it and forget about the time.
+
+    User 1: Me too! I''ve been known to stay up late baking when I get inspired.
+
+    User 2: I''m the same way. I''ll be up all night baking and then I''ll be exhausted the next day.
+
+    User 1: It''s worth it though, right?
+
+    User 2: Absolutely! Baking is so much fun.
+
+    User 1: I know, right? It''s the best.
+
+    User 2: I wish I could bake more often, but I just don''t have the time.
+
+    User 1: Me neither. It''s a shame.
+
+    User 2: Maybe we should start a bakery together.
+
+    User 1: That would be amazing! I''d love to do that.
+
+    User 2: We could call it "The Bakers Dozen."
+
+    User 1: That''s a great name! I love it.
+
+    User 2: We could make all kinds of delicious treats.
+
+    User 1: I can''t wait to start!
+
+    User 2: Me neither! This is going to be so much fun.
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

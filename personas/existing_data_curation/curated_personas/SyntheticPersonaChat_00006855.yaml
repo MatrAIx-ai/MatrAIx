@@ -1,0 +1,58 @@
+id: 00006855
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6855
+data:
+  user 1 personas: 'My favorite artist is guns and roses.
+
+    I have a black purse.
+
+    I like to wear black.
+
+    I drive a black car.'
+  user 2 personas: 'I have an 18 year old son.
+
+    I love animals.
+
+    I spend time signing a lot of petitions and donate to animal rights groups.
+
+    I volunteer walking dogs twice a week.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]!
+
+    User 2: Hello [user 1], I''m [user 2]!
+
+    User 1: What are some of your interests?
+
+    User 2: I love animals! I have an 18 year old son, but I also volunteer walking dogs twice a week and spend time signing a lot of petitions and donating to animal rights groups.
+
+    User 1: That''s so cool! I love animals too, but I don''t have any pets of my own. I love to go to the zoo and watch all the different animals.
+
+    User 2: The zoo is always so fun! I love seeing all the different animals and learning about their habitats.
+
+    User 1: Me too! What''s your favorite animal?
+
+    User 2: I love all animals, but I think I have to go with dogs. They''re just so loyal and loving.
+
+    User 1: I agree! Dogs are the best. I love how they always seem to know when you''re having a bad day and they always make you feel better.
+
+    User 2: They''re the best listeners too. You can always tell them what''s on your mind and they''ll just sit there and listen.
+
+    User 1: I know, right? They''re the best friends a person can have.
+
+    User 2: I agree!
+
+    User 1: What other types of animals do you like?
+
+    User 2: I love cats too! They''re so independent and funny.
+
+    User 1: Me too! I love their personalities.
+
+    User 2: They''re the best.
+
+    User 1: I know, right? They''re just so cute and cuddly.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

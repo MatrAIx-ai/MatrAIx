@@ -1,0 +1,74 @@
+id: 00005991
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5991
+data:
+  user 1 personas: 'I can say the alphabet backwards.
+
+    I ve danced since i was two.
+
+    I am a redhead.
+
+    I got engaged to be married in paris , france.'
+  user 2 personas: 'I am ten years old.
+
+    And , my best friend is abigail.
+
+    Tomorrow is my first day of safety patrol.
+
+    I take martial arts after school.'
+  Best Generated Conversation: 'User 1: Hi! I''m [your name].
+
+    User 2: Hi! I''m [their name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and read books.
+
+    User 1: I like video games too! What are some of your favorites?
+
+    User 2: I like Minecraft, Fortnite, and Call of Duty.
+
+    User 1: I''ve played Minecraft and Fortnite, but I''ve never played Call of Duty.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: I will!
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read fantasy and adventure books.
+
+    User 2: I like those too! Have you read the Harry Potter series?
+
+    User 1: Yes, I have! I love those books!
+
+    User 2: Me too! They''re my favorite books.
+
+    User 1: What else have you read?
+
+    User 2: I''ve read a lot of different books, but some of my favorites are The Hobbit, The Lord of the Rings, and The Hunger Games.
+
+    User 1: I''ve read The Hobbit and The Lord of the Rings, but I haven''t read The Hunger Games.
+
+    User 2: You should read it! It''s really good.
+
+    User 1: I will!
+
+    User 2: So, what do you want to do for our next conversation?
+
+    User 1: I''m not sure. What do you want to do?
+
+    User 2: We could play a game of Minecraft or something.
+
+    User 1: That sounds fun!
+
+    User 2: Great! I''ll start a server.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

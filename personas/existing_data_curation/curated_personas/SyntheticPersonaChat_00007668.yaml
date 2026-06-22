@@ -1,0 +1,70 @@
+id: 00007668
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7668
+data:
+  user 1 personas: 'My favorite music artist is isaiah rashed.
+
+    I work for a marketing agency.
+
+    I do not drink alcohol.
+
+    I would rather read a book than watch a movie.'
+  user 2 personas: 'My favorite food is steak cooked well done.
+
+    I played football in high school.
+
+    I always have a beer after work.
+
+    I am a roofer.
+
+    I drive a lifted chevy truck.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, that''s cool! I''ve always wondered what it''s like to be a roofer.
+
+    User 2: It''s hard work, but it''s also rewarding. I love being up on the roof, and I get to see a lot of different houses.
+
+    User 1: What''s your favorite thing about being a roofer?
+
+    User 2: I love the feeling of getting a job done. When I finish a roof, I feel like I''ve accomplished something.
+
+    User 1: That''s great! What''s your favorite food?
+
+    User 2: I love steak. I like it cooked well done.
+
+    User 1: I''ve never had steak cooked well done. How is it?
+
+    User 2: It''s delicious! It''s so tender and juicy.
+
+    User 1: I''ll have to try it sometime. What do you like to do for fun?
+
+    User 2: I like to play sports, go fishing, and watch football.
+
+    User 1: I like to play sports too. I used to play football in high school.
+
+    User 2: That''s cool! What position did you play?
+
+    User 1: I played quarterback.
+
+    User 2: Oh, that''s a tough position.
+
+    User 1: It was, but I loved it.
+
+    User 2: I can imagine. So, what do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like mystery novels.
+
+    User 2: I love mystery novels too!
+
+    User 1: What''s your favorite mystery novel?
+
+    User 2: My favorite mystery novel is "The Girl on the Train."
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

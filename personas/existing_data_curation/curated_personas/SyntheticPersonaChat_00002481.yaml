@@ -1,0 +1,68 @@
+id: 00002481
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2481
+data:
+  user 1 personas: 'I have four siblings.
+
+    I drive a blue honda civic.
+
+    I got hired last week at mcdonald.
+
+    I am scared of left turns.'
+  user 2 personas: 'I once wrote a biography of my favorite actor.
+
+    I believe in karma.
+
+    I have never been on a date.
+
+    I love to read.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: What''s your favorite book?
+
+    User 2: I love reading biographies. I once wrote a biography of my favorite actor.
+
+    User 1: That''s so cool! Who was your favorite actor?
+
+    User 2: He was a great actor. I love to read about his life and career.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I love to read biographies, but I also love to read mysteries and thrillers.
+
+    User 1: I like mysteries too. I love trying to figure out who did it.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: What''s your favorite mystery novel?
+
+    User 2: I don''t know if I can pick just one. I love Agatha Christie and Dean Koontz.
+
+    User 1: I love Agatha Christie too! I''ve read a lot of her books.
+
+    User 2: Me too! They''re so good.
+
+    User 1: I love how she always has a twist at the end.
+
+    User 2: Yes! I love that too. It''s so satisfying.
+
+    User 1: What''s your favorite Dean Koontz book?
+
+    User 2: I love the Odd Thomas series. It''s so good.
+
+    User 1: I''ve never read that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: I''m excited to read it.
+
+    User 2: I hope you like it!
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00001250'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1250
+data:
+  user 1 personas: 'I am very social.
+
+    I eat well.
+
+    I exercise.
+
+    I am in college.
+
+    I play football.'
+  user 2 personas: 'I have two dogs.
+
+    I am close to both of my brothers.
+
+    I work as a secretary at an insurance agency.
+
+    I travel every year to disney world.
+
+    I like to read true crime novels.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there! What''s up?
+
+    User 1: Not much, just hanging out. What about you?
+
+    User 2: I''m just getting ready to go to work.
+
+    User 1: Oh, where do you work?
+
+    User 2: I work as a secretary at an insurance agency.
+
+    User 1: Oh, that sounds interesting. What do you like about it?
+
+    User 2: I like the people I work with, and I like the work itself. It''s not too stressful, and I get to help people.
+
+    User 1: That''s great! What do you do for fun outside of work?
+
+    User 2: I like to read, watch movies, and go to Disney World every year.
+
+    User 1: Oh, I love Disney World! I''m actually going there next week!
+
+    User 2: Oh, that''s awesome! Have fun!
+
+    User 1: Thanks! I''m sure I will. What do you like to read?
+
+    User 2: I like to read true crime novels. I find them really interesting.
+
+    User 1: Oh, I''ve never read any true crime novels. What''s your favorite one?
+
+    User 2: My favorite one is "The Girl on the Train" by Paula Hawkins. It''s a really good story.
+
+    User 1: I''ll have to check it out. Thanks for the recommendation!
+
+    User 2: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

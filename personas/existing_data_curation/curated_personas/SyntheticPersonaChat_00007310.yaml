@@ -1,0 +1,64 @@
+id: '00007310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7310
+data:
+  user 1 personas: 'I design jewelry when i have spare time.
+
+    I live with my boyfriend in an apartment.
+
+    During the week , i work as a barista.
+
+    My favorite book is the bible.'
+  user 2 personas: 'Sometimes i volunteer at an urban farm.
+
+    I work at the grocery store.
+
+    I decided to become vegan a year ago.
+
+    I help around with bookkeeping and tours.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hello! What do you do for a living?
+
+    User 2: I work at the grocery store and volunteer at an urban farm.
+
+    User 1: That''s awesome! I used to volunteer at an urban farm too.
+
+    User 2: That''s great! What was your favorite part about it?
+
+    User 1: I loved working with the animals and learning about gardening.
+
+    User 2: Me too! I also loved the community atmosphere.
+
+    User 1: That was definitely one of my favorite parts too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to design jewelry, read, and go to the beach.
+
+    User 2: That sounds really fun! I like to read and cook.
+
+    User 1: Oh, I love to cook too! What''s your favorite thing to cook?
+
+    User 2: I love to make vegan dishes.
+
+    User 1: Oh, that''s awesome! I''m not vegan, but I love vegan food.
+
+    User 2: Me too! It''s so delicious and healthy.
+
+    User 1: I agree! I''ve been thinking about becoming vegan myself.
+
+    User 2: You should! It''s the best decision I ever made.
+
+    User 1: I''m not sure if I could give up meat.
+
+    User 2: There are so many delicious vegan alternatives to meat these days.
+
+    User 1: I know, I know. I''ll have to try some more vegan dishes before I make a decision.
+
+    User 2: Definitely! I''m sure you''ll love them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

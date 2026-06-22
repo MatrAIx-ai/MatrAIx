@@ -1,0 +1,80 @@
+id: 00000588
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 588
+data:
+  user 1 personas: 'I am a student.
+
+    I have an internship at a computer company.
+
+    I like to go fishing.
+
+    My mom is a lawyer.'
+  user 2 personas: 'I live near grand rapids , michigan.
+
+    My name is william , but people call me bill.
+
+    I live with my wife and kids.
+
+    I own a small farm where i herd cattle.
+
+    I have three beautiful dogs and one cat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m Bill.
+
+    User 1: Nice to meet you, Bill.
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: I''m a student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: That''s cool. I have an internship at a computer company.
+
+    User 1: Oh, that''s awesome! What kind of work do you do there?
+
+    User 2: I''m working on a project to develop a new software program.
+
+    User 1: That sounds really interesting.
+
+    User 2: It is. I''m enjoying it a lot.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go fishing.
+
+    User 2: That''s cool. I used to go fishing a lot when I was younger.
+
+    User 1: Me too. I haven''t been in a while, though.
+
+    User 2: You should go again sometime. It''s a lot of fun.
+
+    User 1: I will. Thanks for the suggestion.
+
+    User 2: No problem.
+
+    User 1: So, where do you live?
+
+    User 2: I live near Grand Rapids, Michigan.
+
+    User 1: Oh, cool. I''m from California.
+
+    User 2: Really? How do you like Michigan?
+
+    User 1: I like it a lot. It''s a beautiful state.
+
+    User 2: It is. I''m glad you like it here.
+
+    User 1: Thanks. I''m glad I met you, Bill.
+
+    User 2: Me too. It was nice meeting you, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

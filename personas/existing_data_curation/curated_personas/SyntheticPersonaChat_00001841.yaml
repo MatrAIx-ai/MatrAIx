@@ -1,0 +1,68 @@
+id: 00001841
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1841
+data:
+  user 1 personas: 'I am very athletic.
+
+    I hate carrots.
+
+    I wear contacts.
+
+    I have brown hair.
+
+    I love bicycling.'
+  user 2 personas: 'My favorite activity is fishing.
+
+    My dad was a cop until he was killed.
+
+    I once ran the mile in under 4 minutes.
+
+    My favorite thing to do is float the river.'
+  Best Generated Conversation: 'User 1: What''s your favorite hobby?
+
+    User 2: I love fishing!
+
+    User 1: That''s cool! I''ve never been fishing before.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: Do you like to catch anything in particular?
+
+    User 2: I like to catch trout and bass.
+
+    User 1: What''s the best catch you''ve ever had?
+
+    User 2: I once caught a 10-pound bass.
+
+    User 1: Wow! That''s amazing!
+
+    User 2: Yeah, it was pretty cool.
+
+    User 1: What''s your favorite way to fish?
+
+    User 2: I like to fly fish.
+
+    User 1: What''s that?
+
+    User 2: It''s a type of fishing where you use a fly rod to cast a fly into the water.
+
+    User 1: That sounds cool! I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Do you like to fish in freshwater or saltwater?
+
+    User 2: I like to fish in both freshwater and saltwater.
+
+    User 1: What''s your favorite place to fish?
+
+    User 2: I like to fish in the mountains.
+
+    User 1: That sounds beautiful! I''ve never been fishing in the mountains before.
+
+    User 2: You should try it sometime! It''s a great experience.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00008006
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8006
+data:
+  user 1 personas: 'I hope to be a football player when i grow up.
+
+    My favorite band is one direction.
+
+    I am currently in elementary school.
+
+    My mom is a professional tennis player.
+
+    My favorite food is spaghetti and meatballs.'
+  user 2 personas: 'I am a student.
+
+    I am in an education program , and hope to teach kindergarten when i graduate.
+
+    I just started dating someone new.
+
+    I am a vegan.
+
+    I like visiting art museums in my spare time.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to visit art museums, and I''m also a vegan.
+
+    User 1: That''s cool! I like to play football, and my mom is a professional tennis player.
+
+    User 2: Oh, that''s awesome! I''ve never played football before, but I''ve always wanted to try.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might do that. What''s your favorite food?
+
+    User 1: My favorite food is spaghetti and meatballs.
+
+    User 2: Oh, that''s one of my favorite foods too!
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is One Direction.
+
+    User 1: Oh, I love One Direction! They''re my favorite band too.
+
+    User 2: That''s awesome! I''m glad to meet someone else who loves them.
+
+    User 1: Me too!
+
+    User 2: So, what do you want to do when you grow up?
+
+    User 1: I want to be a football player.
+
+    User 2: That''s awesome! I hope you achieve your dream.
+
+    User 1: Thanks!
+
+    User 2: So, what do you do for school?
+
+    User 1: I''m in elementary school.
+
+    User 2: Oh, that''s cool! I''m a student in an education program, and I hope to teach kindergarten when I graduate.
+
+    User 1: That''s awesome! I hope you achieve your dream too.
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

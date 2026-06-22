@@ -1,0 +1,62 @@
+id: '00004577'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4577
+data:
+  user 1 personas: 'I am fascinated with ghosts.
+
+    I love 80s music.
+
+    I am a wedding planner.
+
+    When i was a child , i wanted to be an architect.'
+  user 2 personas: 'I cook well.
+
+    I can speak three languages.
+
+    I like to bike.
+
+    My mother is a teacher.
+
+    I love being in nature.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, bike, and be in nature.
+
+    User 1: I like cooking too! I love to make new recipes and try new things.
+
+    User 2: Me too! I love trying new recipes and finding new ways to use different ingredients.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I can make a lot of different kinds, and they''re always delicious.
+
+    User 1: I love pasta too! I make a lot of different kinds as well.
+
+    User 2: That''s great! We should have a pasta cook-off sometime.
+
+    User 1: That would be fun! I''m sure we could make some great dishes.
+
+    User 2: We could also go biking together sometime. I love biking through nature.
+
+    User 1: That would be great! I love biking too.
+
+    User 2: We could also go to a museum or something. I like learning new things.
+
+    User 1: That would be fun too! I love going to museums.
+
+    User 2: We should definitely get together sometime. We have a lot in common.
+
+    User 1: I agree! We should exchange numbers and make plans.
+
+    User 2: Great! I can''t wait to meet you again.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

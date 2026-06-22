@@ -1,0 +1,110 @@
+id: '00001171'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1171
+data:
+  user 1 personas: 'We own our home.
+
+    My wife stays home with our kids.
+
+    I drive a prius.
+
+    I hate tofu.
+
+    I work for a large law firm.'
+  user 2 personas: 'My hair is black.
+
+    I have a dog.
+
+    I like rock climbing.
+
+    I am a writer.
+
+    I am gluten free.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1 name). What''s your name?
+
+    User 2: Hi (user 1 name), I''m (user 2 name).
+
+    User 1: It''s nice to meet you (user 2 name). What do you do for a living?
+
+    User 2: I''m a writer.
+
+    User 1: That''s cool! What do you write?
+
+    User 2: Mostly fiction. I''m working on a novel right now.
+
+    User 1: Nice! I''m sure it''s great. I love to read.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to rock climb, go for hikes, and spend time with my dog.
+
+    User 1: Rock climbing sounds fun! I''ve never been.
+
+    User 2: You should try it sometime! It''s a great workout.
+
+    User 1: I will! Maybe we can go together sometime.
+
+    User 2: That would be fun!
+
+    User 1: So, are you gluten free?
+
+    User 2: Yes, I am.
+
+    User 1: Oh, that''s too bad. I love bread.
+
+    User 2: Me too! But I have to be careful because gluten gives me migraines.
+
+    User 1: I''m sorry to hear that.
+
+    User 2: It''s okay. I''ve found a lot of good gluten-free food that I love.
+
+    User 1: That''s good to hear.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a lawyer.
+
+    User 2: That''s interesting! What kind of law do you practice?
+
+    User 1: I mostly do civil litigation.
+
+    User 2: Oh, that sounds like a lot of work.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and spend time with my family.
+
+    User 1: Sounds like you have a lot of hobbies.
+
+    User 2: I do, but I love them all.
+
+    User 1: That''s good to hear.
+
+    User 2: So, what are your hobbies?
+
+    User 1: I like to play video games, watch movies, and go out to eat.
+
+    User 2: Oh, that sounds fun. I like to watch movies too.
+
+    User 1: Me too! What kind of movies do you like?
+
+    User 2: I like all kinds of movies, but I especially like comedies and horror movies.
+
+    User 1: I love horror movies too!
+
+    User 2: That''s great! We should watch a movie together sometime.
+
+    User 1: That would be fun! I would love to see a horror movie with you.
+
+    User 2: Perfect! We can make plans later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

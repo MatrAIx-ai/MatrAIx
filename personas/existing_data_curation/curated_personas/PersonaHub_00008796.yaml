@@ -1,0 +1,17 @@
+id: 00008796
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8796
+persona_description: A healthcare provider who specializes in gastrointestinal infections and performs stool cultures to identify and diagnose the causative organisms. They are likely to be a medical doctor
+  or a laboratory scientist who is knowledgeable in microbiology and has experience in performing stool cultures. They may also be involved in patient care and treatment plans for gastrointestinal infections.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: gastrointestinal microbiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

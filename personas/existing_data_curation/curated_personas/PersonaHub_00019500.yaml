@@ -1,0 +1,19 @@
+id: 00019500
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 19500
+persona_description: A 3D modeling and CAD enthusiast who is particularly interested in mesh geometry, Boolean operations, and NURBS surfaces. This individual is familiar with the concepts of closed and
+  open meshes, manifold and non-manifold geometry, and the differences between mesh and NURBS geometry. They have experience working with software such as Blender and SolidWorks, and are skilled in using
+  the Mesh Edges component to determine if a mesh is closed or open. This person is also aware of the challenges and complications that can arise from non-manifold geometry and the importance of considering
+  UV coordinates in mapping textures or images onto mesh geometry.
+expertise:
+  general_domain_top1pct: Computer-Aided Design (CAD) and 3D modeling
+  specific_domain_top1pct: Mesh geometry
+  general_domain_top01pct: None
+  specific_domain_top01pct: NURBS surfaces
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

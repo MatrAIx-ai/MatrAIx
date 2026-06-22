@@ -1,0 +1,58 @@
+id: 00008549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8549
+data:
+  user 1 personas: 'I like to grow my own herbs and vegetables in my garden.
+
+    My favorite food is raw onion.
+
+    I have long curly hair.
+
+    I sew my own clothes.
+
+    I am really into the powers of crystals.'
+  user 2 personas: 'I am blonde.
+
+    I like to hunt.
+
+    I like the tv show the walking dead.
+
+    I am thin.
+
+    I love the tigers baseball team.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to hunt, watch the walking dead, and go to baseball games.
+
+    User 1: That''s cool! I like to grow my own herbs and vegetables in my garden, sew my own clothes, and I love the power of crystals.
+
+    User 2: That''s really neat! I''ve never met anyone who grew their own herbs and vegetables.
+
+    User 1: It''s really fun! I love the fresh taste of homegrown produce.
+
+    User 2: I can imagine! I love to cook, so that would be really awesome.
+
+    User 1: You should try it! It''s not that hard, and it''s really rewarding.
+
+    User 2: I will! I''m always looking for new ways to improve my cooking.
+
+    User 1: Oh, you should also try sewing your own clothes! It''s a lot of fun, and it''s a great way to save money.
+
+    User 2: I''ve never sewn before, but I''m always up for trying new things.
+
+    User 1: You should! It''s really easy to learn, and there are tons of resources online that can help you get started.
+
+    User 2: I''ll definitely check it out! Thanks for the suggestion.
+
+    User 1: No problem! And let me know if you ever want any help with your garden or sewing.
+
+    User 2: Will do! Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

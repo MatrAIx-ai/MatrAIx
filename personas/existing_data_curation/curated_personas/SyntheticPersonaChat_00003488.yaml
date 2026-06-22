@@ -1,0 +1,66 @@
+id: 00003488
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3488
+data:
+  user 1 personas: 'I play many instruments.
+
+    I give lessons on string instruments.
+
+    I like to travel.
+
+    My favorite music genre is classical.
+
+    I like to cook with food i grow in my garden.'
+  user 2 personas: 'My name is frank.
+
+    I am the general manager of the local grocery store.
+
+    My hobbies include reading and cycling.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s your name?
+
+    User 2: Hi, my name is Frank. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too, Frank. What do you do for a living?
+
+    User 2: I''m the general manager of the local grocery store.
+
+    User 1: Oh, that sounds like a busy job.
+
+    User 2: It can be, but I like it.
+
+    User 1: What do you like about your job?
+
+    User 2: I like the people I work with, and I like helping people find what they need.
+
+    User 1: That''s great. What are your hobbies?
+
+    User 2: I like to read, cycle, and travel.
+
+    User 1: Oh, that''s cool. I like reading too. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially interested in history and nonfiction.
+
+    User 1: I like history too. I''ve been reading a lot about the Roman Empire lately.
+
+    User 2: Oh, that''s really cool. I''ve always been fascinated by ancient history.
+
+    User 1: Me too. I think it''s so interesting to learn about how people lived in the past.
+
+    User 2: Me too. It''s amazing to think about how different the world was just a few hundred years ago.
+
+    User 1: I know, right? I''m so glad we live in the present day.
+
+    User 2: Me too. It''s a great time to be alive.
+
+    User 1: I know, right? I''m excited to see what the future holds.
+
+    User 2: Me too. I think it''s going to be a bright one.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

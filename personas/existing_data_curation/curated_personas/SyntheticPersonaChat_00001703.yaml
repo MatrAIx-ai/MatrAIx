@@ -1,0 +1,70 @@
+id: '00001703'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1703
+data:
+  user 1 personas: 'I make 30k a year.
+
+    I like to watch tv.
+
+    I make cars for a living.
+
+    I like to sit on couch all day.
+
+    I love mac and cheese.'
+  user 2 personas: 'I like soccer.
+
+    My brother used to be in the navy.
+
+    My favorite food is mashed potatoes.
+
+    I love game of thrones.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Nice! What''s your favorite part about it?
+
+    User 2: I like the challenge of solving problems and the creativity involved in coming up with new solutions.
+
+    User 1: That makes sense. I''m a car mechanic. I like the hands-on work and the satisfaction of fixing something that''s broken.
+
+    User 2: That''s cool. What kind of cars do you work on?
+
+    User 1: I work on all kinds of cars, from small cars to big trucks.
+
+    User 2: Wow, that must be a lot of different work.
+
+    User 1: It is, but it''s also a lot of fun.
+
+    User 2: I can imagine. So, what do you like to do for fun?
+
+    User 1: I like to watch TV, play video games, and eat mac and cheese.
+
+    User 2: Nice! I like to play soccer, watch Game of Thrones, and eat mashed potatoes.
+
+    User 1: That''s funny, I love mashed potatoes too!
+
+    User 2: Me too! They''re so good.
+
+    User 1: So, what do you like about Game of Thrones?
+
+    User 2: I love the characters, the story, and the action. It''s so well-done.
+
+    User 1: I agree. It''s one of my favorite shows.
+
+    User 2: Me too! It''s so good.
+
+    User 1: So, what did you think of the latest season?
+
+    User 2: I thought it was really good! I was so excited to see what would happen.
+
+    User 1: Me too! I was on the edge of my seat the whole time.
+
+    User 2: It was so intense! I''m already looking forward to the next season.
+
+    User 1: Me too! I can''t wait to see what happens next.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

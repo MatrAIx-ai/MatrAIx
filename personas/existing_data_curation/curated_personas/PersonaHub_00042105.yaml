@@ -1,0 +1,20 @@
+id: '00042105'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42105
+persona_description: A bioinformatician who specializes in molecular signature analysis, particularly in the use of statistical frameworks and algorithms to detect aberrant regions in cancerous cell profiles.
+  The bioinformatician has expertise in circular binary segmentation, CGH-seg, GLAD, and their web-based tool CGHweb. They are skilled in cohort analysis of multiple individuals and have developed a simple
+  statistical framework for standardizing data across profiles before segmentation. The bioinformatician is familiar with the use of gain and loss events to identify amplification and deletion regions in
+  cancerous cell profiles. They are also proficient in applying the proposed procedure to identify aberrant regions in cell profiles, and have experience with the search for loss events separately from
+  gain events. The bioinformatician is likely to read this text to learn more about their field of expertise and to apply their knowledge to analyze molecular signatures in fibroblast cell lines.
+expertise:
+  general_domain_top1pct: Computational Biology
+  specific_domain_top1pct: Cancer Genomics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

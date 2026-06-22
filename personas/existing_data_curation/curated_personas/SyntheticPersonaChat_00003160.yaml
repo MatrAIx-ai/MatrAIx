@@ -1,0 +1,100 @@
+id: '00003160'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3160
+data:
+  user 1 personas: 'I live with a roommate.
+
+    I work part time.
+
+    I don t like beer.
+
+    My favorite animal is the koala.'
+  user 2 personas: 'I only surf when the tide is low.
+
+    Twilight is my favorite book series.
+
+    I want to find out what it s like to eat grasshoppers.
+
+    I m a huge fan of jason mraz.
+
+    I recently moved to florida.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: Hi, my name is Alex.
+
+    User 1: Nice to meet you Alex, my name is [User 1''s name].
+
+    User 2: Nice to meet you too [User 1''s name].
+
+    User 1: Where do you live?
+
+    User 2: I recently moved to Florida from California.
+
+    User 1: Oh wow, what made you move?
+
+    User 2: I wanted to be closer to my family.
+
+    User 1: That makes sense. What do you do for work?
+
+    User 2: I''m a surf instructor.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to surf.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. I''ve heard that you can only surf when the tide is low. Is that true?
+
+    User 2: That''s right. The tide has to be low enough for you to be able to stand up on the board.
+
+    User 1: I see. Well, I''ll keep that in mind if I ever decide to learn how to surf.
+
+    User 2: Sounds good.
+
+    User 1: What''s your favorite animal?
+
+    User 2: My favorite animal is the koala.
+
+    User 1: I''ve never seen a koala in person.
+
+    User 2: They''re very cute. They''re also very lazy. They spend most of their time sleeping.
+
+    User 1: I guess they have to save their energy for all that tree climbing.
+
+    User 2: Exactly.
+
+    User 1: So, do you have any other hobbies besides surfing?
+
+    User 2: I like to read. My favorite book series is Twilight.
+
+    User 1: I''ve heard of that series, but I''ve never read it.
+
+    User 2: You should! It''s a really good series.
+
+    User 1: Maybe I will.
+
+    User 2: You should.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to listen to music. My favorite artist is Jason Mraz.
+
+    User 1: I''ve heard of him, but I''ve never listened to his music.
+
+    User 2: You should! He''s a great artist.
+
+    User 1: Maybe I will.
+
+    User 2: You should.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun. Let''s do it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

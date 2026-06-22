@@ -1,0 +1,56 @@
+id: 00001179
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1179
+data:
+  user 1 personas: 'I am 7 foot tall.
+
+    I am hoping to play basketball overseas.
+
+    I recently had knee surgery.
+
+    I just graduated college.
+
+    I am hoping to play.'
+  user 2 personas: 'I work for a large company.
+
+    I like to eat food.
+
+    I listen to rock music.
+
+    I drive a fast car.
+
+    I dream of winning the lottery.'
+  Best Generated Conversation: 'User 1: I''m 7 feet tall!
+
+    User 2: Wow! That''s really tall! What''s it like being so tall?
+
+    User 1: It has its pros and cons. On the one hand, I can reach high shelves and see over crowds. On the other hand, it can be difficult to find clothes that fit and to get comfortable in small spaces.
+
+    User 2: I bet it is! What do you do for a living?
+
+    User 1: I''m a professional basketball player. I just graduated from college and I''m hoping to play overseas.
+
+    User 2: That''s awesome! I''ve always wanted to play basketball.
+
+    User 1: It''s a lot of fun! I love the challenge of playing against other people and the adrenaline rush of playing in a game.
+
+    User 2: I can imagine! What''s your favorite part of the game?
+
+    User 1: I love scoring points! It''s so satisfying to hit a big shot and help your team win.
+
+    User 2: That''s awesome! I''m sure you''re really good at it.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what''s next for you?
+
+    User 1: I''m going to try out for a team in Europe. I''m excited to see how it goes.
+
+    User 2: I''m sure you''ll do great! Good luck!
+
+    User 1: Thanks! I''ll need it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

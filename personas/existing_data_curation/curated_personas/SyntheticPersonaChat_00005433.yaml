@@ -1,0 +1,100 @@
+id: '00005433'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5433
+data:
+  user 1 personas: 'My favorite class is painting.
+
+    I like to work with acrylics.
+
+    I am in art school.
+
+    I aspire to paint murals.'
+  user 2 personas: 'I should beverage been born a prince.
+
+    Nachos are my favorite food.
+
+    I play d and d.
+
+    I hate talking to people.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: I''m [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. What do you like to do for fun?
+
+    User 2: I like to play D&D, watch TV, and eat nachos.
+
+    User 1: That sounds like fun. I like to paint and play video games.
+
+    User 2: I wish I was artistic. I can''t draw a straight line to save my life.
+
+    User 1: I can teach you. I''m not great, but I know my way around acrylics.
+
+    User 2: I''d love to learn. I''ve always wanted to be able to paint.
+
+    User 1: We can start tomorrow, if you want. I have some free time in the afternoon.
+
+    User 2: That would be great. I''ll bring the nachos.
+
+    User 1: Sounds like a plan. See you tomorrow.
+
+    User 2: Bye.
+
+    User 1: Bye.
+
+    [The next day]
+
+    User 1: [user 2]? Are you ready to paint?
+
+    User 2: Yeah, I''m ready.
+
+    User 1: Great. Let''s start with some basic supplies. You''ll need a canvas, some acrylic paint, and a paintbrush.
+
+    User 2: Okay. I have all of that.
+
+    User 1: Great. Now, we need to choose a subject. What do you want to paint?
+
+    User 2: I don''t know. What do you think?
+
+    User 1: We could paint a landscape, a portrait, or a still life.
+
+    User 2: I think I''d like to paint a landscape.
+
+    User 1: Okay. We can start with a simple landscape, like a field of flowers.
+
+    User 2: That sounds good.
+
+    User 1: Great. Now, let''s start by choosing a color palette. What colors do you want to use?
+
+    User 2: I think I''d like to use a lot of greens and blues.
+
+    User 1: Okay. That sounds like a good choice. Now, let''s start painting.
+
+    User 2: Okay.
+
+    [User 1 and User 2 paint the landscape.]
+
+    User 1: That looks great!
+
+    User 2: Thanks!
+
+    User 1: I''m glad you like it.
+
+    User 2: I''m going to frame it and hang it in my living room.
+
+    User 1: I''m sure it will look great there.
+
+    User 2: Thanks for teaching me how to paint.
+
+    User 1: You''re welcome. I''m glad I could help.
+
+    User 2: I can''t wait to paint another picture.
+
+    User 1: I''m sure you''ll do great.
+
+    User 2: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

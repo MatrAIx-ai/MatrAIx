@@ -1,0 +1,61 @@
+id: 00003785
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3785
+data:
+  user 1 personas: 'I want to be an explorer.
+
+    I do not like my job.
+
+    My favorite color is blue.
+
+    I visit india often.'
+  user 2 personas: 'I am a business man.
+
+    I love to sing.
+
+    I am a karate black belt.
+
+    My wife has terminal cancer.
+
+    I have 3 children.'
+  Best Generated Conversation: 'User 1: Hello! What do you do?
+
+    User 2: I''m a business man.
+
+    User 1: Oh, that''s cool. What do you like about your job?
+
+    User 2: I like the challenge and the opportunity to make a difference in the world.
+
+    User 1: That''s great. What do you do for fun?
+
+    User 2: I love to sing. I''m a karate black belt. I also have three children and a wife with terminal cancer.
+
+    User 1: Wow, you have a lot going on. I''m sorry to hear about your wife.
+
+    User 2: Thank you. She''s a fighter, and we''re all pulling for her.
+
+    User 1: I''m sure she''ll appreciate that. What do you like to do for fun?
+
+    User 2: I like to go on adventures, explore new places, and meet new people.
+
+    User 1: That sounds like a lot of fun. I''d love to hear about some of your adventures.
+
+    User 2: Sure, I''d love to tell you about them.
+
+    User 1: So, tell me about your first adventure.
+
+    User 2: I''m not sure if I can remember my first adventure, but I remember one of my first big ones. I was 10 years old, and my parents took me to India. It was amazing. I saw elephants, tigers, and
+    monkeys. I even got to ride a camel.
+
+    User 1: That sounds like an amazing trip. I''ve always wanted to go to India.
+
+    User 2: You should go! It''s a beautiful country with a lot to offer.
+
+    User 1: I''m sure I will someday. I''ve heard great things about it.
+
+    User 2: It''s a great place to travel. I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

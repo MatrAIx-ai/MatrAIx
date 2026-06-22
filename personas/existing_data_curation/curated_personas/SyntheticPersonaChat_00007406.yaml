@@ -1,0 +1,92 @@
+id: '00007406'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7406
+data:
+  user 1 personas: 'My favorite drink is caramel cappuccino.
+
+    I work in a coffee shop.
+
+    I love to read true crime books.
+
+    My parents live across the street from me.'
+  user 2 personas: 'I have two dogs.
+
+    I like potatoes.
+
+    I am male.
+
+    I work in accounting.
+
+    I lease my car.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], I work in a coffee shop and I love reading true crime books.
+
+
+    User 2: Hi! I''m [name], I work in accounting and I have two dogs.
+
+
+    User 1: Oh, cool! I love dogs. What are their names?
+
+
+    User 2: Their names are Milo and Bella. They''re both golden retrievers.
+
+
+    User 1: I love golden retrievers! They''re so friendly and cute.
+
+
+    User 2: They are! They''re my best friends.
+
+
+    User 1: Do you have any pictures of them?
+
+
+    User 2: Sure, here''s a picture of them playing in the park.
+
+
+    User 1: Aww, they''re so cute!
+
+
+    User 2: Thanks! I love them to death.
+
+
+    User 1: Me too. So, what do you like to do for fun?
+
+
+    User 2: I like to go hiking, biking, and swimming. I also like to play video games.
+
+
+    User 1: Oh, cool! I like hiking too. I''ve been trying to get into biking and swimming, but I''m not very good at them.
+
+
+    User 2: It''s not too hard to get into biking. Just start slow and work your way up.
+
+
+    User 1: Yeah, I''ll try that.
+
+
+    User 2: I''m sure you''ll be great at it.
+
+
+    User 1: Thanks! I hope so.
+
+
+    User 2: So, what do you like to read?
+
+
+    User 1: I like to read true crime books. I find them really interesting.
+
+
+    User 2: Oh, cool! I''ve never read a true crime book before.
+
+
+    User 1: You should! They''re really good.
+
+
+    User 2: I''ll have to check some out.
+
+
+    User 1: Good! I''m sure you''ll like them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

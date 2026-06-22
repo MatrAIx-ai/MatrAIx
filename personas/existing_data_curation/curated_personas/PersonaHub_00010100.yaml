@@ -1,0 +1,18 @@
+id: '00010100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10100
+persona_description: A medical professional who specializes in the anatomy and physiology of the chest and abdomen, with a focus on understanding the internal structures and functions of these organs. They
+  are likely to be interested in learning about the organs, their locations, functions, and how they interact with each other. They may also be interested in the diseases and conditions that can affect
+  these organs and how they can be treated.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: anatomy and physiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

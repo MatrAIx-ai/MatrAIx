@@ -1,0 +1,72 @@
+id: '00002465'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2465
+data:
+  user 1 personas: 'I enjoy taking walks.
+
+    I have three children.
+
+    I drive a honda civic.
+
+    My best friend lives down the street.'
+  user 2 personas: 'I am a gym rat that loves to play racquetball.
+
+    My favorite book that i ve read lately is middlesex.
+
+    My favorite tv shows are forensic files and jeopardy.
+
+    I love most music except country and jazz.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love working out, playing racquetball, and reading.
+
+    User 1: That sounds like fun. I like to take walks, play video games, and watch movies.
+
+    User 2: Have you seen the new Jurassic World movie?
+
+    User 1: No, I haven''t. Is it good?
+
+    User 2: It''s really good! It''s a lot of fun and the special effects are amazing.
+
+    User 1: I''ll have to check it out. Thanks for the recommendation.
+
+    User 2: No problem. What''s your favorite book that you''ve read lately?
+
+    User 1: I really enjoyed the book Middlesex. It''s about a person who is born intersex and how they navigate the world as a transgender person.
+
+    User 2: That sounds really interesting. I''ll have to check it out.
+
+    User 1: I''m glad. It''s a great book.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a stay-at-home mom. I have three children, all under the age of six.
+
+    User 2: That must keep you busy.
+
+    User 1: It does, but it''s also really rewarding.
+
+    User 2: I''m sure it is. So, what do you like to do with your kids?
+
+    User 1: We like to go to the park, play games, and read books. We also like to watch movies and go to the zoo.
+
+    User 2: That sounds like a lot of fun. I''m sure your kids love it.
+
+    User 1: They do. They''re always asking me to play with them.
+
+    User 2: That''s great. It sounds like you have a lot of fun with your kids.
+
+    User 1: I do. I''m really lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

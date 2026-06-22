@@ -1,0 +1,18 @@
+id: 00008797
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8797
+persona_description: A healthcare professional who is interested in understanding the distribution of hospital beds in different countries and how it relates to the availability of inpatient services. They
+  may be interested in comparing bed densities across different regions and identifying countries with high or low bed densities. They may also be interested in understanding the factors that influence
+  the number of hospital beds per 1,000 people and how it differs from country to country.
+expertise:
+  general_domain_top1pct: healthcare
+  specific_domain_top1pct: healthcare administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: healthcare data analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

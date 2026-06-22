@@ -1,0 +1,82 @@
+id: 00008177
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8177
+data:
+  user 1 personas: 'I work in a corner grocery store during the day.
+
+    My favorite show is scobby doo.
+
+    I like dr pepper and black jack gum , but not together.
+
+    I draw comic books.'
+  user 2 personas: 'My favorite food is tacos.
+
+    I am from france.
+
+    I am studying literature.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. I''m [user 1 name].
+
+    User 2: Nice to meet you too, [user 1 name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from France.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit France.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: What''s your favorite thing about France?
+
+    User 2: I love the food! French food is my favorite.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love tacos!
+
+    User 1: Tacos? That''s not very French!
+
+    User 2: I know, but I love them!
+
+    User 1: Well, I''m glad you like them.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and watch movies.
+
+    User 1: Me too! I love reading and writing. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and romance novels.
+
+    User 1: I love historical fiction too! I''m not much of a romance fan, though.
+
+    User 2: That''s okay! There are plenty of other genres to choose from.
+
+    User 1: Yeah, I know. I''ve been reading a lot of fantasy lately.
+
+    User 2: Fantasy is fun! I''ve been meaning to read more of it.
+
+    User 1: You should! There are so many great fantasy novels out there.
+
+    User 2: I know, I know. I''ll get around to it eventually.
+
+    User 1: Well, I''m glad we had this conversation. It was nice to meet you, [user 2 name].
+
+    User 2: It was nice to meet you too, [user 1 name].
+
+    User 1: Maybe we can meet up again sometime and talk about books.
+
+    User 2: That sounds like fun!
+
+    User 1: Great! I''ll let you know.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

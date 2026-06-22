@@ -1,0 +1,76 @@
+id: '00000621'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 621
+data:
+  user 1 personas: 'I dance ballet.
+
+    I am currently in nursing school.
+
+    I went to an all girls christian high school.
+
+    My mother was a sunday school teacher.'
+  user 2 personas: 'My favorite band is the beastie boys.
+
+    I want to be a museum curator.
+
+    I am a painter.
+
+    I love coffee with cream.
+
+    I went to new york city once.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you! Where are you from?
+
+    User 2: I''m from New York City.
+
+    User 1: Oh, cool! I''ve never been to New York City, but I''ve always wanted to go.
+
+    User 2: You should definitely go! It''s a great city.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint, listen to music, and go to museums.
+
+    User 1: That''s cool! I like to dance, go to the beach, and read.
+
+    User 2: I''ve always wanted to learn how to dance.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be a museum curator.
+
+    User 1: That''s a cool job! I love museums.
+
+    User 2: Me too! I think it would be so cool to be able to work in a museum and help people learn about history and culture.
+
+    User 1: I agree. It sounds like you''d be great at it.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like about painting?
+
+    User 2: I like the way it allows me to express myself creatively.
+
+    User 1: I can understand that. I feel the same way about dance.
+
+    User 2: It''s great to be able to use art to express yourself.
+
+    User 1: It is. I think it''s a very important way to communicate with others.
+
+    User 2: I agree. It''s a way to share your thoughts and feelings with the world.
+
+    User 1: I think that''s beautiful.
+
+    User 2: Thank you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

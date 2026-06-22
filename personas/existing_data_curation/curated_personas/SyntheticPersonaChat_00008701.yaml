@@ -1,0 +1,60 @@
+id: 00008701
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8701
+data:
+  user 1 personas: 'I m starting an internship at a construction site next week.
+
+    My mother raised me since my father left when i was five years old.
+
+    I love riding roller coasters.
+
+    I am training to be a welder.'
+  user 2 personas: 'I love to recycle.
+
+    I am a hippie.
+
+    I have curly , red hair.
+
+    I have two tattoos.
+
+    I drive a large , blue van.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a hippie. I work at a recycling center.
+
+    User 1: Oh, that''s cool! I''m starting an internship at a construction site next week.
+
+    User 2: That''s awesome! I love riding roller coasters. Do you like them?
+
+    User 1: I love them! I''ve been on a few really good ones.
+
+    User 2: Me too! I love the feeling of the wind in my hair and the adrenaline rush.
+
+    User 1: Me too! I think I''m going to go on a roller coaster this weekend.
+
+    User 2: That sounds like fun! I''m going to go on one next week.
+
+    User 1: Cool! Maybe we can go on one together sometime.
+
+    User 2: That would be great!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go camping, hiking, and swimming. I also like to read, write, and play music.
+
+    User 1: Me too! I love to go camping and hiking. I''m not very good at swimming, but I like to try. I love to read, write, and play music too.
+
+    User 2: That''s great! We should do something together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Awesome! Let''s exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

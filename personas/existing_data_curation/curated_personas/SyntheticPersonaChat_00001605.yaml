@@ -1,0 +1,64 @@
+id: '00001605'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1605
+data:
+  user 1 personas: 'I have a daughter.
+
+    I am under 6 feet tall.
+
+    I am a great cook.
+
+    I sell paper products for a living.
+
+    I hate the taste of cheese.'
+  user 2 personas: 'My family and i go camping every month.
+
+    I am a mother of two beautiful boys.
+
+    My favorite artist is justin bieber.
+
+    I love to go horseback riding whenever i can.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hello John, I''m Sarah.
+
+    User 1: I''m a single dad and a paper sales rep.
+
+    User 2: Wow, that must be tough, but very rewarding. I''m a married mom of 2 boys and I love to camp and horseback ride.
+
+    User 1: Nice to meet you, Sarah. What''s your favorite thing about being a mom?
+
+    User 2: My favorite thing about being a mom is watching my kids grow and learn. It''s so amazing to see them develop into their own unique people.
+
+    User 1: That''s great. My daughter is 7 and I love watching her grow and learn too.
+
+    User 2: I bet you do. Kids are a lot of fun at that age.
+
+    User 1: Yeah, they are. I''m also a great cook. What''s your favorite dish to cook?
+
+    User 2: My favorite dish to cook is chicken parmesan. It''s so easy and it''s always a hit with my family.
+
+    User 1: That sounds delicious. I love chicken parmesan too.
+
+    User 2: Me too. It''s a great comfort food.
+
+    User 1: I agree. So, what do you do for fun?
+
+    User 2: I love to go camping and horseback riding. I also like to go to concerts and plays.
+
+    User 1: That sounds like a lot of fun. I love to go camping too. I haven''t been horseback riding in a long time.
+
+    User 2: You should go again. It''s so much fun.
+
+    User 1: I will. I''ve been thinking about it.
+
+    User 2: Great! You should let me know if you go. I''d love to go with you.
+
+    User 1: I will. Thanks for the offer.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

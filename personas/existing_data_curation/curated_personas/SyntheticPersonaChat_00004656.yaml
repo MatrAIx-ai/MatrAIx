@@ -1,0 +1,74 @@
+id: '00004656'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4656
+data:
+  user 1 personas: 'I have blue and orange hair.
+
+    I have often been called a slacker.
+
+    I ride a skateboard.
+
+    I wear dingy clothes.
+
+    I am a weirdo.'
+  user 2 personas: 'I whine a lot.
+
+    I have a golden retriever puppy.
+
+    I don t have a job and sit on the couch all day.
+
+    I try to limit how much i eat.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to spend time with my dog, watch movies, and eat.
+
+    User 1: Cool, me too! I have a dog too. What kind of dog do you have?
+
+    User 2: I have a golden retriever puppy. He''s a lot of work, but he''s also a lot of fun.
+
+    User 1: I can imagine! I have a cat, and he''s a lot of work too. But he''s also a lot of fun.
+
+    User 2: What''s your cat''s name?
+
+    User 1: His name is Milo.
+
+    User 2: That''s a nice name.
+
+    User 1: Thanks. What''s your dog''s name?
+
+    User 2: His name is Buddy.
+
+    User 1: That''s also a nice name.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to watch on TV?
+
+    User 2: I like to watch a lot of different things, but I really like comedies.
+
+    User 1: Me too! I love comedies.
+
+    User 2: What''s your favorite comedy show?
+
+    User 1: I don''t know if I have a favorite, but I really like The Office, Parks and Rec, and Arrested Development.
+
+    User 2: I''ve heard good things about all of those shows.
+
+    User 1: They''re all really funny.
+
+    User 2: I''ll have to check them out.
+
+    User 1: You should!
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: 00003787
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3787
+data:
+  user 1 personas: 'I wear a uniform to work.
+
+    My house is paid for.
+
+    I drive a four wheel drive vehicle.
+
+    My favorite color is blue.
+
+    I like to draw and paint in my spare time.'
+  user 2 personas: 'I am an avid runner.
+
+    I run marathons twice a year , mostly in america.
+
+    My favorite sport is basketball.
+
+    I live in canada , near ontario.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. I''m an avid runner. I run marathons twice a year, mostly in America.
+
+    User 1: That''s amazing! I''m not much of a runner myself. I prefer to draw and paint in my spare time.
+
+    User 2: That''s cool too! I love art. I wish I had the patience to draw and paint.
+
+    User 1: Thanks! I like to think of myself as a pretty talented artist. What''s your favorite color?
+
+    User 2: My favorite color is blue. It''s so calming and serene. What''s your favorite sport?
+
+    User 1: My favorite sport is basketball. I love the excitement and competition of the game.
+
+    User 2: That''s great! I''m not very athletic myself. I prefer to just watch sports on TV.
+
+    User 1: That''s okay! There''s nothing wrong with being a couch potato.
+
+    User 2: Thanks! I like to think of myself as a bit of a foodie. What''s your favorite food?
+
+    User 1: My favorite food is pizza. I could eat it every day.
+
+    User 2: Me too! Pizza is the best.
+
+    User 1: I''m glad we agree on something.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

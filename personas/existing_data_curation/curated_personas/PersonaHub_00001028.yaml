@@ -1,0 +1,16 @@
+id: 00001028
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1028
+persona_description: A healthcare professional who uses a tongue depressor to inspect the mouth or throat.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

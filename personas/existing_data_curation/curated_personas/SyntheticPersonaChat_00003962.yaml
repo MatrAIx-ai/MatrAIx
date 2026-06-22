@@ -1,0 +1,66 @@
+id: 00003962
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3962
+data:
+  user 1 personas: 'I grew up with 6 siblings.
+
+    I ve broken my arm twice.
+
+    My parents were divorced.
+
+    I am a widow.
+
+    I am a very social person.'
+  user 2 personas: 'I own a custom upholstery shop.
+
+    I love my grandchildren.
+
+    I am a wife.
+
+    I am a mother.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello, how are you?
+
+    User 1: I''m doing well, thanks. How are you?
+
+    User 2: I''m doing well too, thank you.
+
+    User 1: That''s good to hear.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go out with friends, read books, and play video games.
+
+    User 2: That sounds fun. I like to go out with my family, read books, and watch TV.
+
+    User 1: I like to read books too. What are some of your favorite books?
+
+    User 2: I like to read a variety of books, but I especially like historical fiction and romance novels.
+
+    User 1: I like those genres too. I''ve been reading a lot of historical fiction lately.
+
+    User 2: That''s great. I''m always looking for new books to read.
+
+    User 1: What are some of your favorite historical fiction novels?
+
+    User 2: I like the Outlander series by Diana Gabaldon and the Pillars of the Earth series by Ken Follett.
+
+    User 1: I''ve heard good things about those books. I''ll have to check them out.
+
+    User 2: I think you''ll like them.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.
+
+    User 1: It was nice talking to you.
+
+    User 2: You too. I hope we can talk again soon.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

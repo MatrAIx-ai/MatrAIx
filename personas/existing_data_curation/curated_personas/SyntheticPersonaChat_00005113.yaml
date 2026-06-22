@@ -1,0 +1,100 @@
+id: '00005113'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5113
+data:
+  user 1 personas: 'My dad worked for home depot.
+
+    I love country music.
+
+    I am an aspiring fiction writer.
+
+    I like to work puzzles.'
+  user 2 personas: 'I love watching old movies.
+
+    I have two adopted kids.
+
+    I am a yoga instructor.
+
+    I hope to visit quebec , canada someday.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What are you into?
+
+    User 2: I''m into yoga, old movies, and I have two adopted kids.
+
+    User 1: I love yoga too! I also love country music and I''m an aspiring fiction writer.
+
+    User 2: That''s awesome! I love country music too. I''m not a writer, but I like to work puzzles.
+
+    User 1: That''s cool! I''ve never been to Quebec, but I''ve heard it''s beautiful.
+
+    User 2: It is! I hope to visit again soon.
+
+    User 1: I''m sure you will. It sounds like you have a lot of interesting hobbies.
+
+    User 2: Thanks, I do. I like to keep busy.
+
+    User 1: Me too. I think it''s important to have a lot of different interests.
+
+    User 2: I agree. It makes life more fun.
+
+    User 1: So, what do you like to do with your kids?
+
+    User 2: We like to go to the park, play games, and read books.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! They''re really good kids.
+
+    User 1: I''m sure they are.
+
+    User 2: Thanks.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun!
+
+    User 1: Great! We can figure out the details later.
+
+    User 2: Sounds good!
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I like a lot of different genres, but I''m especially fond of historical fiction and contemporary romance.
+
+    User 1: I love historical fiction too! I''ve read a lot of books about the Civil War.
+
+    User 2: That sounds really interesting. I''ve never read any books about the Civil War.
+
+    User 1: You should! They''re really good.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! I''m always happy to share my favorite books with people.
+
+    User 2: I appreciate it.
+
+    User 1: So, have you heard of the book "The Nightingale"?
+
+    User 2: No, I haven''t. What''s it about?
+
+    User 1: It''s about two sisters who live in France during World War II. One sister is a nurse and the other is a resistance fighter.
+
+    User 2: That sounds really interesting. I might have to check it out.
+
+    User 1: I highly recommend it. It''s a great book.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

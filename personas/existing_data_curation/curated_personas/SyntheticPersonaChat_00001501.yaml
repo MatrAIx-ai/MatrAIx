@@ -1,0 +1,85 @@
+id: '00001501'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1501
+data:
+  user 1 personas: 'I am 53 years old.
+
+    I am obese.
+
+    I have blonde hair.
+
+    I have twelve kids.
+
+    I live in alabama.'
+  user 2 personas: 'Drawing in traditional style is my pasion.
+
+    My inspiration is classical music.
+
+    Someday i with to become a famous animator and work for a big company like dreamworks.
+
+    I am a graphic designer.
+
+    I have recently started working as a freelance designer.'
+  Best Generated Conversation: 'User 1: Hello!
+
+
+    User 2: Hi there!
+
+
+    User 1: What are you passionate about?
+
+
+    User 2: I love drawing in a traditional style, inspired by classical music. I''d love to be a famous animator and work for a big company like Dreamworks!
+
+
+    User 1: That''s great! I''m a big fan of animation. What kind of things do you like to draw?
+
+
+    User 2: I love drawing animals and characters, and I''m also really into fantasy art.
+
+
+    User 1: I love animals too! I have two dogs and a cat.
+
+
+    User 2: Aw, that''s great! I have a little dog named Toby.
+
+
+    User 1: I love the name Toby! What''s your favorite type of art to draw?
+
+
+    User 2: I think my favorite type of art to draw is characters. I love coming up with their personalities and stories.
+
+
+    User 1: That sounds like a lot of fun! I''ve never been very good at drawing characters.
+
+
+    User 2: It takes a lot of practice, but it''s really rewarding when you can finally draw a character that you''re proud of.
+
+
+    User 1: I''m sure it does! I''m impressed by your skills.
+
+
+    User 2: Thank you!
+
+
+    User 1: What are your plans for the future?
+
+
+    User 2: I''m hoping to start working as a freelance graphic designer. I''m excited to see where my work takes me!
+
+
+    User 1: That''s a great goal! I''m sure you''ll be successful.
+
+
+    User 2: Thank you! I appreciate that.
+
+
+    User 1: Well, I''m glad to have met you. I wish you all the best in your future endeavors!
+
+
+    User 2: Thank you! It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

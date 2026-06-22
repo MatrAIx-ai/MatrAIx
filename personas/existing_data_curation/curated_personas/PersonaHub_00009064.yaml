@@ -1,0 +1,19 @@
+id: 00009064
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9064
+persona_description: A scientist or researcher who specializes in nucleic acid extraction and purification techniques, particularly using phenol/chloroform extraction. This persona is likely to have a deep
+  understanding of the specific details and protocols involved in this extraction method, including the importance of pH, the precautions to take, and the potential risks associated with the procedure.
+  This persona is also likely to have experience with commercial sources of phenol and chloroform, as well as the ability to equilibrate them to the appropriate pH. They may have a particular interest in
+  RNA extraction and may have worked with whole cell extracts in the past.
+expertise:
+  general_domain_top1pct: biochemistry
+  specific_domain_top1pct: nucleic acid extraction and purification
+  general_domain_top01pct: None
+  specific_domain_top01pct: phenol/chloroform extraction
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,92 @@
+id: 00005957
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5957
+data:
+  user 1 personas: 'Pizza is my most favorite thing.
+
+    I enjoy taking late night walks when its completely dark.
+
+    I like reading.
+
+    My favorite band is dream theater.
+
+    I like being by myself.'
+  user 2 personas: 'My mother was a famous ballet dancer in london.
+
+    I am twenty six years old this may.
+
+    My favorite band is the punk band rancid.
+
+    I will be moving to san diego in two months.
+
+    I work at a gas station as a cashier.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go for walks, read, and play music.
+
+    User 1: That''s cool! I like to read and go for walks too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but my favorite genre is fantasy.
+
+    User 2: I like fantasy too! I''m currently reading a book called "The Name of the Wind" by Patrick Rothfuss.
+
+    User 1: I''ve heard good things about that book! I''ve been meaning to read it.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: I will!
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is Dream Theater.
+
+    User 2: I''ve never heard of them.
+
+    User 1: They''re a progressive metal band from Boston.
+
+    User 2: Oh, that sounds interesting. I''ll have to check them out.
+
+    User 1: You should! I think you''ll like them.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I work at a gas station as a cashier.
+
+    User 1: That''s interesting!
+
+    User 2: Yeah, it''s a lot of work, but it pays the bills.
+
+    User 1: I''m sure it does.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to a concert with my friends.
+
+    User 2: Oh, that sounds fun! Who are you going to see?
+
+    User 1: I''m going to see Dream Theater!
+
+    User 2: No way! I''m so jealous!
+
+    User 1: I''m excited!
+
+    User 2: Well, have fun!
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

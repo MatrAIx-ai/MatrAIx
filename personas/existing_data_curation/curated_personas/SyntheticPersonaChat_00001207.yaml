@@ -1,0 +1,84 @@
+id: '00001207'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1207
+data:
+  user 1 personas: 'I am a night owl.
+
+    I am a vegetarian.
+
+    I am a dancer.
+
+    I love to sing.
+
+    I can play the piano.'
+  user 2 personas: 'My temper is pretty short.
+
+    I like early 2000s indie music.
+
+    I love my pet dog more than anything.
+
+    I would like to be a teacher in the future.
+
+    I am picky when it comes to food.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too! What are some of your interests?
+
+    User 2: I love early 2000s indie music, dogs, and teaching.
+
+    User 1: I love early 2000s indie music too! I''m a night owl, dancer, vegetarian, and I love to sing and play the piano.
+
+    User 2: Wow, you''re really talented! I''m a little bit of a night owl too, but I''m really picky when it comes to food.
+
+    User 1: I can understand that. I''m a vegetarian, so I have to be picky about what I eat.
+
+    User 2: That''s cool! I''m not a vegetarian, but I love animals. I have a pet dog who I love more than anything.
+
+    User 1: I love dogs too! I''ve had a few dogs in my life, but I don''t have one right now.
+
+    User 2: You should get one! They''re the best pets.
+
+    User 1: I''ll consider it!
+
+    User 2: You should! They''re so much fun.
+
+    User 1: So, what do you want to do when you grow up?
+
+    User 2: I want to be a teacher. I love working with kids.
+
+    User 1: That''s great! I''m sure you''d be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to listen to music, go for walks, and spend time with my family and friends.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I like to keep busy.
+
+    User 1: Me too. I like to have a lot of different interests.
+
+    User 2: That''s great! It''s important to have a lot of different things to do.
+
+    User 1: I agree. It makes life more interesting.
+
+    User 2: It does!
+
+    User 1: So, what''s your favorite thing to do?
+
+    User 2: I love to spend time with my family and friends.
+
+    User 1: That''s great! I love to do that too.
+
+    User 2: It''s the best!
+
+    User 1: I agree. It''s the best way to relax and have fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

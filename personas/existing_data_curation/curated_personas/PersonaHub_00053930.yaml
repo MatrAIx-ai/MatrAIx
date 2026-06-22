@@ -1,0 +1,18 @@
+id: 00053930
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53930
+persona_description: A medical professional with expertise in abdominal anatomy and hernia classification. They are likely to be a surgeon or a radiologist who specializes in imaging and diagnostic techniques.
+  They have a strong understanding of the human body and its systems, including the abdominal cavity, and are familiar with the various structures and functions involved in hernia formation and classification.
+  They may also have knowledge of the reproductive system and its associated structures, as well as the role of the spermatic cord and the round ligament in hernias.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: surgical anatomy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

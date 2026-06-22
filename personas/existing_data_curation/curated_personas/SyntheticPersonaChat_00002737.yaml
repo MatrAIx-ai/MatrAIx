@@ -1,0 +1,58 @@
+id: '00002737'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2737
+data:
+  user 1 personas: 'I can play the violin.
+
+    I want to have two kids.
+
+    I am from georgia.
+
+    I cannot sing very well.
+
+    I love chocolate.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am an artist.
+
+    I love nighttime.
+
+    I have a cat named charlie.'
+  Best Generated Conversation: 'User 1: I can play the violin! Do you play any instruments?
+
+    User 2: I don''t play any instruments, but I love to listen to music. What''s your favorite song?
+
+    User 1: I don''t have a favorite song, but I love all kinds of music. I''m from Georgia. Where are you from?
+
+    User 2: I''m from California. I love Georgia! I''ve always wanted to visit there.
+
+    User 1: You should! It''s a beautiful state. What do you do for fun?
+
+    User 2: I''m an artist. I love to paint and draw. I also love to go to art museums and galleries.
+
+    User 1: That''s cool! I''m not very artistic, but I love looking at art. I have two kids. Do you have any pets?
+
+    User 2: I have a cat named Charlie. He''s my best friend.
+
+    User 1: I love cats! I used to have a cat named Mittens, but she passed away a few years ago.
+
+    User 2: I''m sorry to hear that. I''m sure you miss her a lot.
+
+    User 1: I do. She was a great cat.
+
+    User 2: I''m sure she was.
+
+    User 1: What''s your favorite thing to do at night?
+
+    User 2: I love to go for walks in the moonlight. It''s so peaceful and relaxing.
+
+    User 1: That sounds nice. I love going for walks, too. I''m glad we met. You seem really cool.
+
+    User 2: Thanks! You seem cool too. Maybe we can hang out sometime.
+
+    User 1: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

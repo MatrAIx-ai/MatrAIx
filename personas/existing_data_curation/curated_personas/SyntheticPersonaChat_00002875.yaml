@@ -1,0 +1,62 @@
+id: 00002875
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2875
+data:
+  user 1 personas: 'I love to dance salsa.
+
+    My favorite food is pizza.
+
+    I decided to quick my job and travel for a couple of months.
+
+    I am an engineer.
+
+    I am currently working on a project that involves bitcoins.'
+  user 2 personas: 'Mom in telecommunications.
+
+    My dad works in the automotive industry.
+
+    I dream of playing music for a living.
+
+    I m a student living at home while pursuing my music industry degree.
+
+    Both my parents are creative.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: I''m an engineer who recently quit my job to travel for a couple of months.
+
+    User 2: That''s really cool! I''m a student studying music industry and I dream of playing music for a living.
+
+    User 1: That''s awesome! What kind of music do you play?
+
+    User 2: I play the guitar and sing. I''m really into blues music.
+
+    User 1: That''s great! I love blues music.
+
+    User 2: Me too! I''m really excited to start my music career.
+
+    User 1: I''m sure you''ll do great! What are some of your favorite bands?
+
+    User 2: I love B.B. King, Robert Johnson, and John Lee Hooker.
+
+    User 1: Those are all great bands! I love B.B. King too.
+
+    User 2: Me too! He''s my favorite blues musician.
+
+    User 1: What do you like about blues music?
+
+    User 2: I love the emotion and the soul in it. It''s so real and raw.
+
+    User 1: I agree. It''s definitely one of my favorite genres.
+
+    User 2: Me too! I''m so glad I met you. We should talk more about music sometime.
+
+    User 1: I''d love that!
+
+    User 2: Great! I''ll send you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

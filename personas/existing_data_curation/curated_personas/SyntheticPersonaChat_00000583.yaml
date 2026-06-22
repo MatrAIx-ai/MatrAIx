@@ -1,0 +1,70 @@
+id: 00000583
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 583
+data:
+  user 1 personas: 'I am a student.
+
+    I have 5 children.
+
+    My mom is a lawyer.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.'
+  user 2 personas: 'I am a baker.
+
+    I like to play tennis.
+
+    My mother is a dentist.
+
+    My favorite tv show is silicon valley.
+
+    I have 2 sisters.'
+  Best Generated Conversation: 'User 1: I''m a student at the University of California, Berkeley.
+
+    User 2: I''m a baker at a local bakery.
+
+    User 1: That''s cool! Do you like baking?
+
+    User 2: I love it! I love working with my hands and creating something delicious.
+
+    User 1: That''s awesome! I''m not very good at baking, but I love to eat baked goods.
+
+    User 2: What''s your favorite thing to eat?
+
+    User 1: I love chocolate chip cookies!
+
+    User 2: Me too! I make the best chocolate chip cookies.
+
+    User 1: I''m going to have to try some!
+
+    User 2: You won''t be disappointed.
+
+    User 1: So, what''s your favorite TV show?
+
+    User 2: My favorite TV show is Silicon Valley.
+
+    User 1: I''ve never seen it. Is it good?
+
+    User 2: It''s really funny! It''s about a group of tech entrepreneurs who are trying to start a company.
+
+    User 1: That sounds interesting! I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play tennis, go hiking, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to go hiking too.
+
+    User 2: Me too! It''s a great way to get outside and get some exercise.
+
+    User 1: Yeah, it is! I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

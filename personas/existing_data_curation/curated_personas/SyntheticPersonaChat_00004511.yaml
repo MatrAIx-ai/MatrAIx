@@ -1,0 +1,68 @@
+id: '00004511'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4511
+data:
+  user 1 personas: 'My adopted dad works at hp.
+
+    The future scares me.
+
+    I have six siblings.
+
+    My mom stays at home.'
+  user 2 personas: 'I collect dolls.
+
+    I am a romantic.
+
+    I like antiques.
+
+    I like victorian things.
+
+    I like jazz.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to collect dolls, listen to jazz, and read victorian literature.
+
+    User 1: That''s interesting. I''ve never been a big fan of dolls, but I love jazz and I enjoy reading historical fiction.
+
+    User 2: What do you like to do for work?
+
+    User 1: I''m a stay-at-home mom. I have six kids and I love spending time with them.
+
+    User 2: That sounds like a lot of fun. I''m single and I live on my own. I''m a nurse at a local hospital.
+
+    User 1: That''s great. I''m sure you''re a great nurse.
+
+    User 2: Thanks. I try my best.
+
+    User 1: So, what''s your favorite thing about being a nurse?
+
+    User 2: I love helping people. I also love the fact that I get to learn something new every day.
+
+    User 1: That''s great. What''s your favorite thing about collecting dolls?
+
+    User 2: I love the history behind them. I also love the different looks and designs that they come in.
+
+    User 3: That''s great. What''s your favorite thing about listening to jazz?
+
+    User 2: I love the way it makes me feel. It''s so relaxing and calming.
+
+    User 1: That''s great. What''s your favorite thing about reading victorian literature?
+
+    User 2: I love the way it takes me back in time. I love the way it makes me feel like I''m part of another world.
+
+    User 1: That''s great. I''m glad you have so many interesting hobbies.
+
+    User 2: Thanks. I''m glad you''re interested.
+
+    User 1: Me too. I''m always looking for new things to learn about.
+
+    User 2: That''s great. I''m sure you''ll find something you''re interested in.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

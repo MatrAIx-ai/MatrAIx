@@ -1,0 +1,18 @@
+id: '00002161'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2161
+persona_description: A sysadmin or system administrator who is responsible for troubleshooting and debugging applications that crash or have issues with memory allocation and security. This person is familiar
+  with Linux and its command line tools, such as ulimit, and is skilled in using the gdb command to debug applications. They are also familiar with open source software and can use tools like strace to
+  trace the process and see what it is doing.
+expertise:
+  general_domain_top1pct: computing
+  specific_domain_top1pct: system administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

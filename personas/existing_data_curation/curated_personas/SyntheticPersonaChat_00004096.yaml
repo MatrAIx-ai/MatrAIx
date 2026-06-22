@@ -1,0 +1,74 @@
+id: 00004096
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4096
+data:
+  user 1 personas: 'I regularly go to the gym.
+
+    I have a cat named george.
+
+    My favorite meal is chicken and rice.
+
+    My favorite band is metallica.
+
+    I read autobiographies before bed.'
+  user 2 personas: 'I wish i could live in iceland.
+
+    I enjoy cold winters and strong breezes.
+
+    I wait for something interesting to happen each day.
+
+    I listen to a lot of strange music.
+
+    I wish i could write in cursive.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey there!
+
+    User 1: I''m (user 1 name).
+
+    User 2: Nice to meet you, (user 1 name). I''m (user 2 name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to music, read books, and go to the gym.
+
+    User 1: Cool! I like to go to the gym too. What kind of music do you like to listen to?
+
+    User 2: I like to listen to a lot of different kinds of music, but my favorite band is Metallica.
+
+    User 1: Oh, I love Metallica! They''re one of my favorite bands too.
+
+    User 2: Cool! What''s your favorite song by them?
+
+    User 1: I don''t know if I can choose just one, but I really like "Enter Sandman" and "Nothing Else Matters."
+
+    User 2: Those are both great songs! I also like "The Unforgiven" and "Master of Puppets."
+
+    User 1: Those are great songs too!
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read autobiographies. I think they''re really interesting to learn about other people''s lives.
+
+    User 2: Cool! I''ve never really read an autobiography before. What''s your favorite one?
+
+    User 1: My favorite autobiography is "The Autobiography of Malcolm X." It''s a really eye-opening book about his life and his journey from being a criminal to a civil rights leader.
+
+    User 2: That sounds really interesting. I might have to check that out.
+
+    User 1: I think you would like it. It''s a really good book.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a personal trainer.
+
+    User 2: Oh, that''s cool! I''ve been thinking about getting a personal trainer.
+
+    User 1: I''d be happy to help you out. You can reach me at (user 1 contact info).
+
+    User 2: Thanks! I''ll definitely keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

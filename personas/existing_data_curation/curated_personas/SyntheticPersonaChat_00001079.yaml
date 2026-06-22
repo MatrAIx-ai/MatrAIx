@@ -1,0 +1,55 @@
+id: 00001079
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1079
+data:
+  user 1 personas: 'I love children.
+
+    I am twenty two years old.
+
+    I just moved into an apartment within the vicinity of my new job.
+
+    I just graduated college with my bachelor s degree in education.'
+  user 2 personas: 'As a child , i won a national spelling bee.
+
+    I have a severe phobia of wide open spaces.
+
+    I have been published in the new yorker magazine.
+
+    I am a gourmet cook.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m 22 years old and I just graduated from college with a bachelor''s degree in education. I''m really excited to start my career as a teacher.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher. I''m 40 years old and I''ve been published in The New Yorker magazine. I''m also a gourmet cook and I have a severe phobia of wide open spaces.
+
+    User 1: Wow, that''s impressive! I''ve never been published in a magazine before. I''m not sure I''d be able to cook like a gourmet chef, but I do love to cook. And I have a phobia of spiders, but not
+    wide open spaces.
+
+    User 2: That''s funny, I''m not afraid of spiders, but I am afraid of wide open spaces.
+
+    User 1: What''s your favorite thing about being a gourmet cook?
+
+    User 2: I love the creativity of it. I love coming up with new recipes and trying new things.
+
+    User 1: That sounds really fun. I wish I had more of a creative side.
+
+    User 2: You can always learn! There are a lot of great resources available online.
+
+    User 1: I''ll have to check that out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Thanks for the advice.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too. Have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

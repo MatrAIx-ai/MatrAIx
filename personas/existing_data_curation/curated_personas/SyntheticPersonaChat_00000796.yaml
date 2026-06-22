@@ -1,0 +1,68 @@
+id: 00000796
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 796
+data:
+  user 1 personas: 'I love to bake.
+
+    My mother is a retired teacher.
+
+    My favorite flower is a rose.
+
+    I am from texas.'
+  user 2 personas: 'I want to be a movie director when i grow up.
+
+    I really enjoy making friends.
+
+    I play the trumpet.
+
+    I am in my high school band.'
+  Best Generated Conversation: 'User 1: Hey there! What''s your name?
+
+    User 2: My name is Emily.
+
+    User 1: Nice to meet you, Emily! I''m [User 1''s name]. What do you like to do for fun?
+
+    User 2: I love to make movies. I want to be a movie director when I grow up.
+
+    User 1: That''s so cool! I love to watch movies. What kind of movies do you like to make?
+
+    User 2: I like to make all kinds of movies, but I especially like to make comedies.
+
+    User 1: Me too! I love to laugh. What''s your favorite movie?
+
+    User 2: My favorite movie is The Princess Bride. It''s so funny and heartwarming.
+
+    User 1: I love that movie too! It''s so quotable.
+
+    User 2: I know, right? I love quoting it with my friends.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also enjoy playing the trumpet. I''m in my high school band.
+
+    User 1: That''s awesome! I used to play the trumpet too.
+
+    User 2: Really? What kind of music did you like to play?
+
+    User 1: I liked to play all kinds of music, but I especially liked to play jazz.
+
+    User 2: Me too! I love the improvisational nature of jazz.
+
+    User 1: Me too! It''s so much fun to be able to make up your own music.
+
+    User 2: I know, right? It''s the best.
+
+    User 1: So, what do you think you''re going to do after high school?
+
+    User 2: I''m not sure yet, but I''m thinking about going to film school.
+
+    User 1: That would be a great idea! I''m sure you''d be a great movie director.
+
+    User 2: Thanks! I hope so.
+
+    User 1: I''m sure you will be.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

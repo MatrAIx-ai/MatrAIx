@@ -1,0 +1,18 @@
+id: '00010006'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10006
+persona_description: A healthcare provider who is concerned about the health of people living with HIV/AIDS, especially those at risk for kidney disease. They are knowledgeable about the risks and complications
+  of HIV infection, and the importance of regular kidney function testing. They understand the role of HIV in kidney disease, and are aware of the common causes and complications of kidney problems in people
+  living with HIV. They are committed to providing the best care possible to their patients, and are dedicated to improving outcomes for people living with HIV/AIDS.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: HIV/AIDS care
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

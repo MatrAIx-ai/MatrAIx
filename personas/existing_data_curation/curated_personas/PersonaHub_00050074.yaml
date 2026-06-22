@@ -1,0 +1,19 @@
+id: '00050074'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50074
+persona_description: A member of the Starfleet crew who is part of the Enterprise's crew, specifically a member of the science division. The individual is knowledgeable about the Starfleet mission, operations,
+  and the Starfleet mission objectives. They have experience in space exploration and have worked on shuttlecraft missions, particularly ones that involve transporting stasis boxes to Starbase 25. They
+  are skilled in handling stasis boxes and have experience with the Kzinti privateers who lured the shuttlecraft to an ice-bound planet in the system. They are also familiar with the Beta Lyrae system,
+  its location, and the circumstances surrounding the events described in the text.
+expertise:
+  general_domain_top1pct: Space Exploration
+  specific_domain_top1pct: Spacecraft Operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

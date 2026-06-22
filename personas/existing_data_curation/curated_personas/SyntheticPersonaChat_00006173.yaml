@@ -1,0 +1,68 @@
+id: '00006173'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6173
+data:
+  user 1 personas: 'Some call me a hopeless romantic.
+
+    I wear my heart on my sleeve.
+
+    I dropped out of college a month ago.
+
+    I live in my foreign car outside los angeles.'
+  user 2 personas: 'I am a christian.
+
+    I like football.
+
+    My father used to work for microsoft.
+
+    I work in the it industry.
+
+    My favourite band is kings of leon.'
+  Best Generated Conversation: 'User 1: Hi, I''m a hopeless romantic who just dropped out of college.
+
+    User 2: Hi, I''m a Christian who works in IT.
+
+    User 1: What do you do in IT?
+
+    User 2: I''m a software engineer.
+
+    User 1: That sounds interesting. What''s your favorite band?
+
+    User 2: My favorite band is Kings of Leon.
+
+    User 1: I''ve never heard of them.
+
+    User 2: They''re a rock band from Nashville.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You should. They''re really good.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play football, watch football, and listen to music.
+
+    User 1: I like football too. What''s your favorite team?
+
+    User 2: I like the Seattle Seahawks.
+
+    User 1: I like the Green Bay Packers.
+
+    User 2: I love the rivalry between those two teams.
+
+    User 1: Me too. It''s always so exciting.
+
+    User 2: So, what are you doing for the rest of the day?
+
+    User 1: I''m not sure yet. I might go to the park and play football.
+
+    User 2: That sounds fun. I''m going to go home and watch football.
+
+    User 1: Have fun!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

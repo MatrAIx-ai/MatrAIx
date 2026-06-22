@@ -1,0 +1,66 @@
+id: '00004405'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4405
+data:
+  user 1 personas: 'I like watching ufc fights.
+
+    I work in a factory.
+
+    Connor mcgreggor is my favorite fighter.
+
+    I love to drive my car.
+
+    I enjoy travel.'
+  user 2 personas: 'My favorite color is orange.
+
+    I have 3 roommates.
+
+    I am lactose intolerant.
+
+    I love gummy bears.'
+  Best Generated Conversation: 'User 1: I love watching UFC fights!
+
+    User 2: Me too! My favorite fighter is Connor McGregor.
+
+    User 1: He''s a beast! I love watching him fight.
+
+    User 2: I know, right? He''s so exciting.
+
+    User 1: I''ve been watching UFC for years now.
+
+    User 2: Me too! I''ve been a fan since I was a kid.
+
+    User 1: What''s your favorite fight of all time?
+
+    User 2: That''s tough to say. There have been so many great fights.
+
+    User 1: I know, right? I can''t even pick one.
+
+    User 2: But I think one of my favorites was when Conor McGregor beat Eddie Alvarez.
+
+    User 1: That was a great fight! I was so excited when Conor won.
+
+    User 2: Me too! It was such an amazing comeback.
+
+    User 1: I know, right? I couldn''t believe it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to drive my car. I''m a big car enthusiast.
+
+    User 2: Oh, that''s cool! I like to drive too, but I''m not as big of a car enthusiast as you are.
+
+    User 1: Yeah, I''m really into cars. I love learning about them and working on them.
+
+    User 2: That''s cool. I wish I was more into cars.
+
+    User 1: It''s a lot of fun. You should give it a try.
+
+    User 2: I might just do that.
+
+    User 1: Good! You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

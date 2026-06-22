@@ -1,0 +1,94 @@
+id: '00006060'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6060
+data:
+  user 1 personas: 'I love lasagna like i m garfield.
+
+    I want to be an astronaut when i grow up.
+
+    I have a poster of neil tyson degrasse on my wall.
+
+    My two dogs are the best friends a girl could have.'
+  user 2 personas: 'I work in fast food.
+
+    I walk three miles home every night.
+
+    I always wear something purple.
+
+    I m looking for krav maga classes near my home.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in fast food.
+
+    User 1: Oh, that''s cool. I''ve always wondered what it''s like to work in fast food.
+
+    User 2: It''s not bad. It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I bet it can be really busy at times.
+
+    User 2: Yeah, it can get pretty crazy. But it''s always fun to be busy.
+
+    User 1: What''s your favorite thing about working in fast food?
+
+    User 2: I like the people I work with. They''re all really nice and we always have a good time.
+
+    User 1: That''s awesome. I''m glad you like your job.
+
+    User 2: Thanks. I do.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to walk three miles home every night.
+
+    User 1: Why do you do that?
+
+    User 2: I like to get exercise and I also like to listen to music while I walk.
+
+    User 1: That''s cool. I like to walk too, but I usually don''t do it every day.
+
+    User 2: I try to walk every day, but sometimes I miss a day or two.
+
+    User 1: It''s hard to keep up the habit, but it''s good for you.
+
+    User 2: I know, right? It''s worth the effort, though.
+
+    User 1: So, what are you looking for?
+
+    User 2: I''m looking for krav maga classes near my home.
+
+    User 1: Krav maga? What''s that?
+
+    User 2: It''s a type of self-defense.
+
+    User 1: Oh, cool. I''ve never heard of it.
+
+    User 2: It''s really good. It teaches you how to defend yourself against multiple attackers.
+
+    User 1: That''s sounds really useful.
+
+    User 2: It is. I''ve been taking classes for a few months now and I feel much more confident in my ability to defend myself.
+
+    User 1: That''s great. I''m glad you''re enjoying it.
+
+    User 2: Thanks. I am.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That sounds like fun.
+
+    User 1: Great. Let''s grab some food and then go for a walk.
+
+    User 2: Sounds like a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

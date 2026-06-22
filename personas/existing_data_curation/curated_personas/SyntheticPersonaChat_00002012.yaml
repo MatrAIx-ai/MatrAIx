@@ -1,0 +1,96 @@
+id: '00002012'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2012
+data:
+  user 1 personas: 'I love video games.
+
+    I wear glasses all day.
+
+    I take medication.
+
+    I run track.
+
+    I swim often.'
+  user 2 personas: 'My favorite band is pearl jam.
+
+    I enjoy hiking and riding my bicycle.
+
+    I am a night owl.
+
+    I am 29 years old.
+
+    I live in a suburb of boston.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I enjoy hiking and riding my bicycle. I''m also a big fan of Pearl Jam.
+
+    User 1: That''s cool! I love video games and I run track and swim often.
+
+    User 2: That''s awesome! I used to play video games a lot when I was younger. What do you like to play?
+
+    User 1: I like to play a lot of different types of games, but my favorite genre is probably adventure games.
+
+    User 2: I''ve never really played adventure games, but I''m always up for trying new things. What are some of your favorite adventure games?
+
+    User 1: I really like the Uncharted series, the Tomb Raider series, and the Assassin''s Creed series.
+
+    User 2: Those all sound like great games! I''ll have to check them out.
+
+    User 1: You definitely should! They''re a lot of fun.
+
+    User 2: So, how long have you been playing video games?
+
+    User 1: I''ve been playing video games since I was a little kid. I used to play with my older brother all the time.
+
+    User 2: That''s awesome! I wish I had a brother to play video games with.
+
+    User 1: It was a lot of fun. We would play for hours on end.
+
+    User 2: I bet it was. Do you still play video games with your brother?
+
+    User 1: Not as often as we used to, but we still do every once in a while.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you like about hiking and biking?
+
+    User 2: I love being outdoors and getting some exercise. I also love the feeling of freedom that comes with hiking and biking.
+
+    User 1: I can understand that. I love being outdoors too.
+
+    User 2: It''s so peaceful.
+
+    User 1: Yeah, it is.
+
+    User 2: So, where do you like to go hiking and biking?
+
+    User 1: I like to go hiking in the mountains. I also like to bike on trails.
+
+    User 2: That sounds like fun. I''ve never been hiking in the mountains, but I''d love to try it sometime.
+
+    User 1: You definitely should! It''s amazing.
+
+    User 2: I will.
+
+    User 1: So, what''s your favorite Pearl Jam song?
+
+    User 2: I love all of their songs, but my favorite is probably "Alive."
+
+    User 1: That''s a great song! I love the guitar solo.
+
+    User 2: Me too! It''s so good.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to read, watch movies, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to do all of those things too.
+
+    User 2: We should hang out sometime.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

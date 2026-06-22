@@ -1,0 +1,20 @@
+id: '00016207'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16207
+persona_description: A scripting enthusiast who is familiar with the WMI scripting API and its capabilities. This person is interested in exploring the vast array of pre-installed WMI classes, such as CIM_LogicalDisk,
+  and how they can be accessed and controlled through the WMI scripting API. They are skilled in using the SWbemServices.InstancesOf method to retrieve all WMI Windows logical disk objects into a SWbemObjectSet
+  container object and then iterating through the objects in the collection. This person is also proficient in using WMI to query and manipulate class and instance information, including accessing properties
+  and methods with the Key qualifier. They are also aware of the importance of error handling in WMI scripts and how to create an SWbemLastError object to get WMI-specific information on the error that
+  occurred.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: WMI Scripting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

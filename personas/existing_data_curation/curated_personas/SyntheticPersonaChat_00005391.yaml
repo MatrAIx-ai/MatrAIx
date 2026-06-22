@@ -1,0 +1,68 @@
+id: 00005391
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5391
+data:
+  user 1 personas: 'I work as a stand up comedian.
+
+    I come from a small town.
+
+    I did a few small roles in tv series.
+
+    I had a gig at local theater last night.
+
+    My favorite drink is cuba libre.'
+  user 2 personas: 'I was in the army.
+
+    I work in construction.
+
+    I have freckles all over my face.
+
+    I drive a prius.
+
+    I love to read romance novels.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. I''m a stand up comedian.
+
+    User 2: Hi [name], my name is [name]. I''m in construction.
+
+    User 1: That''s cool. I''m from a small town. Where are you from?
+
+    User 2: I was in the army, but now I live in a big city.
+
+    User 1: Oh, that''s interesting. I did a few small roles in TV series, but I''m mostly a stand up comedian.
+
+    User 2: That''s cool. I like to read romance novels.
+
+    User 1: Oh, that''s funny. I don''t think I''ve ever met a construction worker who likes romance novels.
+
+    User 2: I know, it''s a bit of a stereotype, but it''s true. I love a good love story.
+
+    User 1: I can''t argue with that. I love a good love story too.
+
+    User 2: What''s your favorite drink?
+
+    User 1: My favorite drink is Cuba Libre.
+
+    User 2: Oh, that''s a good one. I''ve never had one before.
+
+    User 1: You should try it. It''s delicious.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for fun?
+
+    User 2: I like to go hiking, fishing, and camping.
+
+    User 1: Oh, that sounds fun. I like to do those things too.
+
+    User 2: We should go hiking together sometime.
+
+    User 1: I''d love to.
+
+    User 2: Great. We can exchange numbers and set up a date.
+
+    User 1: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

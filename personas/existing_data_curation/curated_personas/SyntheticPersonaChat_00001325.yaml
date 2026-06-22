@@ -1,0 +1,66 @@
+id: '00001325'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1325
+data:
+  user 1 personas: 'I like to travel.
+
+    I love the outdoors.
+
+    I am tall.
+
+    I like to garden.
+
+    I like to build things.'
+  user 2 personas: 'I have a daughter.
+
+    I am under 6 feet tall.
+
+    I sell paper products for a living.
+
+    I hate the taste of cheese.
+
+    I am a great cook.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you do for a living?
+
+    User 2: I sell paper products for a living.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: It''s okay. I''m not really passionate about it, but it pays the bills.
+
+    User 1: I see. What are your hobbies?
+
+    User 2: I love to cook! I''m actually a pretty good cook.
+
+    User 1: Oh, that''s awesome! I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I make a really good lasagna.
+
+    User 1: Lasagna is my favorite! I could eat it every day.
+
+    User 2: Me too! It''s so good.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I also like to travel. I''ve been to a few different countries, and I''m always looking for new places to visit.
+
+    User 1: That''s awesome! I love to travel too. I''ve been to a few countries, but I''ve always wanted to go to Europe.
+
+    User 2: Europe is amazing! I''ve been to Italy, France, and Spain.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to go to Italy.
+
+    User 2: It''s beautiful! You should definitely go there sometime.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

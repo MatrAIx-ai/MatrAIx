@@ -1,0 +1,76 @@
+id: 00008692
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8692
+data:
+  user 1 personas: 'I believe in ghosts and have seen them on several occasions.
+
+    I only buy convertible cars.
+
+    I own four german shepherds.
+
+    I do not celebrate any holidays.'
+  user 2 personas: 'I have 2 cats.
+
+    I am vegan.
+
+    I work in a veterinary office.
+
+    My favorite food is strawberries.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a veterinary office.
+
+    User 1: Oh, that''s cool. I have four German shepherds.
+
+    User 2: Really? That''s awesome! I love dogs.
+
+    User 1: I do too. They''re the best.
+
+    User 2: What''s your favorite kind of food?
+
+    User 1: I love strawberries.
+
+    User 2: Me too! They''re so sweet and juicy.
+
+    User 1: I know, right? I could eat them all day long.
+
+    User 2: Me too. So, what else do you like to do for fun?
+
+    User 1: I like to go on walks with my dogs.
+
+    User 2: That sounds like fun. I like to go hiking with my cats.
+
+    User 1: Oh, that''s cool. I''ve never tried hiking with a cat.
+
+    User 2: It''s a lot of fun. They love to explore.
+
+    User 1: I bet they do. So, what do you think about ghosts?
+
+    User 2: I think they''re really interesting. I''ve never seen one myself, but I''ve heard some pretty convincing stories.
+
+    User 1: I''ve seen them several times.
+
+    User 2: Really? That''s amazing. What were they like?
+
+    User 1: They were just kind of floating around, watching me.
+
+    User 2: That''s so creepy.
+
+    User 1: It was a little scary, but it was also kind of cool.
+
+    User 2: I guess it would be. So, what do you think they''re trying to communicate?
+
+    User 1: I don''t know. I think they''re just trying to say hello.
+
+    User 2: That''s kind of sweet.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

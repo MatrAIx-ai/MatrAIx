@@ -1,0 +1,18 @@
+id: '00064400'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64400
+persona_description: A scientist or entomologist who specializes in the study of insects, specifically webspinners. They are interested in the biology, behavior, and ecology of these fascinating creatures,
+  and may have a particular focus on the webspinners' role in the ecosystem or their conservation. They may also be interested in the use of webspinners in biological research or the development of insecticides
+  that mimic their natural behavior.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: webspinner biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

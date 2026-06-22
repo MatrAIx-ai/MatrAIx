@@ -1,0 +1,74 @@
+id: '00006024'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6024
+data:
+  user 1 personas: 'I have freckles all over my face.
+
+    I was in the army.
+
+    I love to read romance novels.
+
+    I drive a prius.
+
+    I work in construction.'
+  user 2 personas: 'My father used to be a cop.
+
+    I am single.
+
+    I am a cyclist.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is John.
+
+    User 1: Nice to meet you, John. What do you like to do for fun?
+
+    User 2: I like to cycle, read romance novels, and eat pizza.
+
+    User 1: I like to cycle too! What''s your favorite route?
+
+    User 2: I like to cycle along the riverfront. It''s a beautiful ride.
+
+    User 1: I''ve never been there. I''ll have to check it out sometime.
+
+    User 2: You should! It''s really nice. What about you, what do you like to read?
+
+    User 1: I love to read romance novels. They''re so heartwarming and romantic.
+
+    User 2: I''ve never read a romance novel. What''s your favorite one?
+
+    User 1: My favorite one is called "The Notebook." It''s a classic.
+
+    User 2: I''ll have to check it out. I''m always looking for new books to read.
+
+    User 1: You won''t be disappointed. It''s a great book.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work in construction. I''m a carpenter.
+
+    User 2: Oh, that''s interesting. What do you like about it?
+
+    User 1: I like the challenge of it. It''s always something new.
+
+    User 2: I can see how that would be fun.
+
+    User 1: Yeah, it is. I like building things.
+
+    User 2: What''s your favorite thing to build?
+
+    User 1: I like to build houses. They''re so rewarding.
+
+    User 2: I can imagine. I''ve never built a house before.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: Good! I''m sure you''d be great at it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

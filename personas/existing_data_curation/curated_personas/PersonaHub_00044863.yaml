@@ -1,0 +1,19 @@
+id: 00044863
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44863
+persona_description: A systems engineer or a digital imaging specialist who is interested in advanced image processing algorithms and their applications in improving the perceived brightness of images.
+  This persona is likely to be interested in the IntelliBright™ suite of image processing algorithms, specifically the Local Area Brightness Boost (LABB) algorithm, which adaptsively gains up regions of
+  an image that are dim relative to the average picture level. This algorithm is designed to overcome washed out images by applying significant gain to some regions of the image and applying little or no
+  gain to other regions. This persona may be involved in designing and implementing the LABB algorithm in a system, or they may be using the LABB algorithm in their own imaging applications.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Image Processing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

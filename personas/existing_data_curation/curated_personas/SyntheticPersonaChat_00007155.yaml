@@ -1,0 +1,59 @@
+id: '00007155'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7155
+data:
+  user 1 personas: 'I have one close friend i grew up with.
+
+    My dad is very strict with his kids.
+
+    I wished i was older so i could move out.
+
+    I worry about money even though i am in high school.
+
+    I am dissatisfied with the school life i have had so far.'
+  user 2 personas: 'I am 7 foot tall.
+
+    I just graduated college.
+
+    I am hoping to play.
+
+    I am hoping to play basketball overseas.
+
+    I recently had knee surgery.'
+  Best Generated Conversation: 'User 1: Hello! What''s your name?
+
+    User 2: My name is (User 2).
+
+    User 1: Nice to meet you, (User 2). What do you do?
+
+    User 2: I just graduated from college and I''m hoping to play basketball overseas.
+
+    User 1: That''s really cool! How tall are you?
+
+    User 2: I''m 7 feet tall.
+
+    User 1: Wow! That''s impressive. Are you from a tall family?
+
+    User 2: No, I''m the only tall one in my family.
+
+    User 1: That''s even more impressive. So, what do you like to do for fun?
+
+    User 2: I like to play basketball, of course, but I also like to read and play video games.
+
+    User 1: Me too! I love to read and play video games. What are some of your favorite books and video games?
+
+    User 2: I''m really into fantasy novels right now. I just finished reading The Name of the Wind by Patrick Rothfuss and I''m starting on The Way of Kings by Brandon Sanderson. For video games, I''m
+    really into League of Legends and Fortnite.
+
+    User 1: I''ve heard good things about The Name of the Wind. I''ve never played League of Legends or Fortnite, but I''ve heard they''re both really popular.
+
+    User 2: They are. I''m addicted to them both.
+
+    User 1: Well, it was nice talking to you. I hope you have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: 00002118
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2118
+data:
+  user 1 personas: 'I am buying a house.
+
+    I am a nurse and work in an emergency room at a busy hospital.
+
+    I play the piano.
+
+    I paddle board on my days off.
+
+    I am single.'
+  user 2 personas: 'My hair is a reddish brown.
+
+    My family is very supportive of my skiing.
+
+    I am a competitive ski racer.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    I broke my arm skiing once.'
+  Best Generated Conversation: 'User 1: I''m a nurse and I work in an emergency room at a busy hospital. What do you do for a living?
+
+    User 2: I''m a competitive ski racer. My family is very supportive of my skiing.
+
+    User 1: That''s awesome! I''ve always wanted to try skiing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Do you have any tips for beginners?
+
+    User 2: Just keep your skis parallel to the ground and don''t lean back.
+
+    User 1: Thanks for the tip! I''ll try to remember that.
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I like to paddle board on my days off. It''s a great way to relax and get some exercise.
+
+    User 2: That sounds like fun! I''ve never tried paddle boarding before.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to play the piano. I''ve been playing since I was a kid.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to play the piano.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going skiing with my family.
+
+    User 1: That sounds fun! I hope you have a great time.
+
+    User 2: Thanks! I hope you do too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

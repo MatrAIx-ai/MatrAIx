@@ -1,0 +1,102 @@
+id: '00002106'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2106
+data:
+  user 1 personas: 'I am a truck driver.
+
+    I deliver baked goods in the state where i live.
+
+    My favorite hobby is playing recreational baseball.
+
+    I spend my weekends camping.
+
+    My wife and two kids camp with me.'
+  user 2 personas: 'I am obsessed with animals.
+
+    I love the natural world beauty.
+
+    I practice yoga and hike.
+
+    My family is poor.
+
+    I believe in fairytales.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: How are you?
+
+    User 2: I''m doing well! Thanks for asking.
+
+    User 1: That''s good to hear! What do you like to do for fun?
+
+    User 2: I love hiking and exploring the natural world.
+
+    User 1: That sounds like fun! I love hiking too.
+
+    User 2: Me too! I''m so glad I found someone who shares my love for nature.
+
+    User 1: Me too! I''m always looking for new hiking buddies.
+
+    User 2: I''m always up for a hike! Do you have any plans for this weekend?
+
+    User 1: I was actually thinking about going for a hike. Would you like to come with me?
+
+    User 2: That would be great! I''d love to go hiking with you.
+
+    User 1: Perfect! I''ll pick you up at 10am.
+
+    User 2: Sounds good! See you then!
+
+
+    [The next day]
+
+
+    User 1: Hey, I''m here!
+
+    User 2: Hi, I''m ready to go!
+
+    User 1: Great! Let''s go!
+
+
+    [They drive to a nearby hiking trail]
+
+
+    User 1: This is a great trail! It''s not too difficult, but it''s challenging enough.
+
+    User 2: I agree! It''s beautiful too.
+
+    User 1: I know, right? I love hiking here.
+
+    User 2: Me too! This is the perfect way to spend a weekend.
+
+
+    [They hike for a few hours]
+
+
+    User 1: We''re almost to the top!
+
+    User 2: Yay! I can''t wait to see the view.
+
+
+    [They reach the top of the trail]
+
+
+    User 1: Wow! The view is amazing!
+
+    User 2: It is! This is so beautiful.
+
+    User 1: I''m so glad I came here with you. This is the perfect way to spend a weekend.
+
+    User 2: Me too! I''m so glad I met you.
+
+    User 1: Me too! I''m looking forward to hiking with you again sometime.
+
+    User 2: Me too! I''ll bring some snacks next time.
+
+    User 1: Great! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

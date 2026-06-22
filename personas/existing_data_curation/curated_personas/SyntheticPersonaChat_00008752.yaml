@@ -1,0 +1,92 @@
+id: 00008752
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8752
+data:
+  user 1 personas: 'I want to be a journalist but instead i sell washers at sears.
+
+    I have a french bulldog.
+
+    I love the band red hot chili peppers.
+
+    I play bass.'
+  user 2 personas: 'I love to shop on weekends.
+
+    I am planning a trip to europe.
+
+    I have never been on a cruise ship.
+
+    I am a woman who wears a size 12.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to shop, go to the movies, and spend time with my friends and family.
+
+    User 1: I like to play music, go to concerts, and hang out with my dog.
+
+    User 2: What kind of music do you play?
+
+    User 1: I play bass guitar.
+
+    User 2: Oh, that''s cool! I love the Red Hot Chili Peppers.
+
+    User 1: They''re one of my favorite bands too! What''s your favorite song by them?
+
+    User 2: I love "Under the Bridge".
+
+    User 1: That''s a great song!
+
+    User 2: What do you do for work?
+
+    User 1: I sell washers and dryers at Sears.
+
+    User 2: Oh, really? That must be interesting.
+
+    User 1: It can be, but it''s not my dream job.
+
+    User 2: What do you want to do for a living?
+
+    User 1: I want to be a journalist.
+
+    User 2: That''s a great goal! I''m sure you''ll be great at it.
+
+    User 1: Thanks!
+
+    User 2: What do you like about the Red Hot Chili Peppers?
+
+    User 1: I love their music, their energy, and their live performances.
+
+    User 2: They''re definitely one of the best live bands out there.
+
+    User 1: I agree!
+
+    User 2: So, what''s your favorite thing to do on the weekend?
+
+    User 1: I love to spend time with my dog, go to the movies, and play music.
+
+    User 2: That sounds like a great way to spend a weekend.
+
+    User 1: It is!
+
+    User 2: So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, cool! I''m from Michigan.
+
+    User 1: Nice! I''ve never been to Michigan.
+
+    User 2: You should come visit sometime!
+
+    User 1: I might just do that!
+
+    User 2: Great! I''ll show you around.
+
+    User 1: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

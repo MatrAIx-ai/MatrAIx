@@ -1,0 +1,62 @@
+id: '00002077'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2077
+data:
+  user 1 personas: 'I am a hair stylist.
+
+    My hair is colored purple.
+
+    I live on a boat.
+
+    I have my own salon.
+
+    I got married last year.'
+  user 2 personas: 'My family and i go camping every month.
+
+    I am a full time mom.
+
+    I am a mother to two beautiful boys.
+
+    I enjoy horseback riding.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], I''m a hair stylist.
+
+    User 2: Hi, I''m [name], nice to meet you.
+
+    User 1: You too. What do you do for a living?
+
+    User 2: I''m a full time mom to two beautiful boys.
+
+    User 1: Oh, that must be really fun.
+
+    User 2: It is! I love being a mom, but it can be a lot of work too.
+
+    User 1: I can imagine. What do you like to do for fun?
+
+    User 2: I love to go camping with my family. We go every month.
+
+    User 1: That sounds like a lot of fun. I love camping too.
+
+    User 2: It''s great. We get to spend time together and enjoy nature.
+
+    User 1: What''s your favorite part about camping?
+
+    User 2: I love the campfires. We always roast marshmallows and tell stories.
+
+    User 1: That sounds like a lot of fun. I love roasting marshmallows too.
+
+    User 2: Do you have any kids?
+
+    User 1: I do! I have a daughter who''s five years old.
+
+    User 2: Oh, that''s great. I bet she loves going camping with you.
+
+    User 1: She does! She loves playing in the woods and swimming in the lake.
+
+    User 2: That''s so cute. I''m sure she''ll have a lot of fun growing up.
+
+    User 1: Thanks, I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00008715
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8715
+data:
+  user 1 personas: 'My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    My best friend is my dog allie.
+
+    My favorite pass time is gazing at clouds.'
+  user 2 personas: 'My father used to be a mechanic.
+
+    I like to play video games.
+
+    I have been working the same job for two years.
+
+    I am a musician.
+
+    My favorite band is hop along.'
+  Best Generated Conversation: 'User 1: Hi there, what''s your name?
+
+    User 2: Hi, my name is John.
+
+    User 1: Nice to meet you, John. What do you do for a living?
+
+    User 2: I''m a musician.
+
+    User 1: That''s really cool! What kind of music do you play?
+
+    User 2: I play a variety of instruments, but I mostly play guitar.
+
+    User 1: I love to play guitar too! What''s your favorite band?
+
+    User 2: My favorite band is Hop Along.
+
+    User 1: I''ve never heard of them. What kind of music do they play?
+
+    User 2: They''re a rock band from Philadelphia. They have a really unique sound.
+
+    User 1: I''ll have to check them out. What''s your favorite song by them?
+
+    User 2: I really like their song "How Simple". It''s a really beautiful song.
+
+    User 1: I''ll have to check it out. Do you play in any bands?
+
+    User 2: Yeah, I play in a band called The Last Train.
+
+    User 1: Oh, that''s cool! What kind of music do you play?
+
+    User 2: We play a mix of rock and pop.
+
+    User 1: I''d love to hear you play sometime.
+
+    User 2: We''re playing at a local bar next week. You should come check us out.
+
+    User 1: I''ll definitely try to make it.
+
+    User 2: Great! It was nice meeting you, User 1.
+
+    User 1: Nice meeting you too, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

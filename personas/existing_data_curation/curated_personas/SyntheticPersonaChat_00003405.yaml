@@ -1,0 +1,88 @@
+id: '00003405'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3405
+data:
+  user 1 personas: 'I like tailgate parties.
+
+    I have never been on an airplane.
+
+    I had a girlfriend who eloped with my best friend one day.
+
+    I did not go to college because i run the family farm.'
+  user 2 personas: 'I am in the navy.
+
+    I listen to folk music.
+
+    I am an orphan who was in the foster care system.
+
+    I went to a community college and got a degree in communication.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in the navy.
+
+    User 1: Oh, that''s cool! What''s your favorite part of being in the navy?
+
+    User 2: I like the travel and the opportunity to meet new people.
+
+    User 1: I can imagine. What''s your least favorite part?
+
+    User 2: The long hours and the physical demands.
+
+    User 1: I bet. What''s your dream job?
+
+    User 2: I''m not sure. I''m still trying to figure that out.
+
+    User 1: Well, I''m sure you''ll figure it out.
+
+    User 2: Thanks. What about you? What do you do for a living?
+
+    User 1: I run the family farm.
+
+    User 2: Oh, that''s cool! What kind of farm?
+
+    User 1: We grow corn, soybeans, and wheat.
+
+    User 2: Wow, that''s a lot of work.
+
+    User 1: It is, but it''s also a lot of fun.
+
+    User 2: I can imagine. What''s your favorite part of running the farm?
+
+    User 1: I like working outside and getting my hands dirty.
+
+    User 2: I bet. What''s your least favorite part?
+
+    User 1: I don''t really have a least favorite part. I just love working on the farm.
+
+    User 2: That''s great.
+
+    User 1: So, what did you do before you joined the navy?
+
+    User 2: I went to a community college and got a degree in communication.
+
+    User 1: Oh, that''s cool! What did you want to do with your degree?
+
+    User 2: I wasn''t sure. I was thinking about going into advertising or public relations, but then I joined the navy.
+
+    User 1: That''s cool. I''m glad you''re enjoying it.
+
+    User 2: Thanks. I am.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to listen to music, go to concerts, and hang out with friends.
+
+    User 1: I like to do those things too!
+
+    User 2: Well, it''s been nice talking to you, [user 1''s name].
+
+    User 1: It''s been nice talking to you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

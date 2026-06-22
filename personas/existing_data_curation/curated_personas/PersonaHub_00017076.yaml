@@ -1,0 +1,18 @@
+id: '00017076'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 17076
+persona_description: A developer or maintainer of R packages that provide graphics devices, especially those related to plotting or visualization. This person is interested in improving the performance
+  and output quality of R graphics by experimenting with the new "canClip" setting in the graphics engine. They are looking for ways to remove clipping artifacts and improve the quality of output, particularly
+  when working with large values or when the graphics device cannot perform clipping itself.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: R Graphics Development
+  general_domain_top01pct: None
+  specific_domain_top01pct: R Graphics Optimization
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

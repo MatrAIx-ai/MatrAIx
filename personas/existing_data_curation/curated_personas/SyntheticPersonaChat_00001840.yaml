@@ -1,0 +1,78 @@
+id: 00001840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1840
+data:
+  user 1 personas: 'I am the president.
+
+    I used to own a casino.
+
+    I have lots of cash.
+
+    I have been bankrupt and back.'
+  user 2 personas: 'I am canadian.
+
+    I have two cats , milo and fio.
+
+    My favorite sport is soccer.
+
+    My brother works at best buy.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name] and I''m the president.
+
+    User 2: Hi, I''m [User 2''s name] and I''m Canadian.
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I like to play soccer and watch it too. I also have two cats named Milo and Fio.
+
+    User 1: That sounds fun. I used to own a casino, but I lost a lot of money and had to file for bankruptcy.
+
+    User 2: Oh, that''s too bad. I''m glad you''re doing better now.
+
+    User 1: Thanks. I''m trying to rebuild my empire.
+
+    User 2: Good luck with that.
+
+    User 1: Thanks. I''m going to need it.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I like The Godfather. It''s a classic.
+
+    User 2: Me too. I also like Casino.
+
+    User 1: That''s a good one too.
+
+    User 2: I like movies that are based on real stories.
+
+    User 1: Me too. They''re always more interesting.
+
+    User 2: What''s your favorite book?
+
+    User 1: I like The Great Gatsby. It''s a beautiful book.
+
+    User 2: Me too. I love the writing style.
+
+    User 1: It''s so poetic.
+
+    User 2: It is. I like how it captures the Jazz Age.
+
+    User 1: Me too. It''s a great book.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I like to play golf.
+
+    User 2: Me too. I''m not very good at it, but it''s fun.
+
+    User 1: It''s a challenging game.
+
+    User 2: It is. But it''s also a lot of fun.
+
+    User 1: I''m glad we''re having this conversation.
+
+    User 2: Me too. It''s nice to talk to someone who understands me.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

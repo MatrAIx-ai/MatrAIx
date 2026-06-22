@@ -1,0 +1,52 @@
+id: '00001535'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1535
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I have four cats.
+
+    I am afraid of clowns.
+
+    Every fall i visit my sister in canada.'
+  user 2 personas: 'I work at mcdonalds.
+
+    I write.
+
+    I watch youtube videos.
+
+    I have brown hair.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for work?
+
+    User 2: I work at McDonalds.
+
+    User 1: Oh cool! I love McDonalds. What''s your favorite thing to order there?
+
+    User 2: I love the Big Mac.
+
+    User 1: Me too! It''s so good. What else do you like to do for fun?
+
+    User 2: I like to write and watch YouTube videos.
+
+    User 1: I love writing too! What kind of things do you write?
+
+    User 2: I write fiction, mostly short stories and novellas.
+
+    User 1: That''s awesome! I''ve always wanted to write a novel, but I''m not sure where to start.
+
+    User 2: You should start by reading a lot of novels. That''s the best way to learn how to write a good story.
+
+    User 1: Thanks for the advice! I''ll definitely start reading more novels.
+
+    User 2: You''re welcome! I''m always happy to talk about writing.
+
+    User 1: Me too! It''s one of my favorite things to do.
+
+    User 2: Well, I''m glad we have something in common.
+
+    User 1: Me too! It''s nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

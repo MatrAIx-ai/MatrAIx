@@ -1,0 +1,19 @@
+id: '00000221'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 221
+persona_description: A healthcare professional with a specialization in endocrinology, particularly in the diagnosis and treatment of cerebral salt-wasting syndrome (CSWS). They are likely to have expertise
+  in the diagnosis and management of patients with CSWS, including the identification of the underlying causes, the use of appropriate medications, and the monitoring of fluid and electrolyte levels. They
+  may also have experience with the use of sodium chloride tablets and fludrocortisone in the treatment of CSWS. They may work in a clinical setting, such as a hospital or a clinic, where they would be
+  responsible for providing care to patients with CSWS.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: endocrinology
+  general_domain_top01pct: None
+  specific_domain_top01pct: cerebral salt-wasting syndrome (CSWS)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,60 @@
+id: '00003765'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3765
+data:
+  user 1 personas: 'I refuse to ride the bus.
+
+    I find joy in the littlest things.
+
+    I never work more than 4 days in a row.
+
+    I listen to music for more than 5 hours a day.'
+  user 2 personas: 'I am not very good at playing basketball.
+
+    I do not really like vegetables or fruit but i pretend.
+
+    I once rescued a baby on a highway.
+
+    I like playing badminton.
+
+    My family owns a dairy farm.'
+  Best Generated Conversation: 'User 1: I find joy in the littlest things.
+
+    User 2: Me too! I once rescued a baby on a highway.
+
+    User 1: Wow, that''s amazing! How did that happen?
+
+    User 2: I was driving home from work one day, and I saw a baby carriage in the middle of the highway. I pulled over and ran to get the baby, and I brought it to the nearest police station.
+
+    User 1: That''s so great of you! I''m sure the parents were so grateful.
+
+    User 2: I hope so! It was the least I could do.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a dairy farmer.
+
+    User 1: Oh, that''s cool! I''ve never met a dairy farmer before.
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I love working with animals.
+
+    User 1: I can imagine. I love animals too. What''s your favorite thing about being a dairy farmer?
+
+    User 2: I love getting to work outside and being my own boss. I also love the feeling of providing fresh, healthy food to people.
+
+    User 1: That''s great! I''m sure your customers appreciate it.
+
+    User 2: I hope so!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play badminton, read, and watch movies.
+
+    User 1: I like to do those things too! We should hang out sometime.
+
+    User 2: I''d love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

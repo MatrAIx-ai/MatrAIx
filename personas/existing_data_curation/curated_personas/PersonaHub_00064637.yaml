@@ -1,0 +1,19 @@
+id: '00064637'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64637
+persona_description: A researcher or scientist with expertise in astrophysics, specifically focusing on the study of asteroids and their internal structures. They are likely to be interested in the findings
+  of the research mentioned in the text, which suggests that the first evidence of highly varied internal structures in asteroids has been discovered. The text also highlights the potential applications
+  of this research, such as the possibility of mining asteroids. The persona is likely to be highly interested in understanding the formation of asteroids and how they interact with the Solar System, as
+  well as the potential for mining asteroids for resources.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: astrophysics
+  general_domain_top01pct: None
+  specific_domain_top01pct: asteroid science
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

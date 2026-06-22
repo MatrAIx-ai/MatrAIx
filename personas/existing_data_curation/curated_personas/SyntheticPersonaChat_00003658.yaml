@@ -1,0 +1,62 @@
+id: 00003658
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3658
+data:
+  user 1 personas: 'I have 4 cats and 2 dogs.
+
+    My car has to be as fast as my motorcycle.
+
+    I own 30 pairs of shoes.
+
+    I love to skate and ski.
+
+    I love the smell of leather.'
+  user 2 personas: 'I was the first test child for sesame street.
+
+    I always carry an edged weapon.
+
+    I speak six languages.
+
+    I work on the radio as a character voice.
+
+    I once started a forest fire in california.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, (name). I''m (name).
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to skate and ski.
+
+    User 1: Oh, that sounds fun. I used to skate a lot when I was younger.
+
+    User 2: Do you still skate?
+
+    User 1: Not as much as I used to, but I still like to do it when I can.
+
+    User 2: That''s cool. I also like to go hiking and camping.
+
+    User 1: I''ve never been hiking or camping before.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: Maybe I will. I''m not sure if I''m brave enough to go camping though.
+
+    User 2: It''s not as scary as it sounds. And it''s a lot of fun to be out in nature.
+
+    User 1: I''ll think about it.
+
+    User 2: Okay. Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

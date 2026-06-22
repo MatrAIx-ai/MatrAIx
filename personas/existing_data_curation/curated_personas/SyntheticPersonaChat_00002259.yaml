@@ -1,0 +1,49 @@
+id: 00002259
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2259
+data:
+  user 1 personas: 'I like to do crafts.
+
+    I like all types of music.
+
+    I am a mother of 5.
+
+    I like to draw.'
+  user 2 personas: 'I m always looking for wildlife when i m outside.
+
+    I have several different breeds of pets.
+
+    I get along better with animals than people.
+
+    I visit animal shelters fairly often.
+
+    I enjoy watching animal videos on the internet.'
+  Best Generated Conversation: 'User 1: I like to do crafts. I like all types of music. I am a mother of 5. I like to draw.
+
+    User 2: I''m always looking for wildlife when I''m outside. I have several different breeds of pets. I get along better with animals than people. I visit animal shelters fairly often. I enjoy watching
+    animal videos on the internet.
+
+    User 1: Wow, you seem to really love animals!
+
+    User 2: Yes, I do! I think they''re amazing creatures.
+
+    User 1: Me too! I love spending time with my pets.
+
+    User 2: I can see why! They''re so loving and caring.
+
+    User 1: Yes, they are. I''m so glad I have them in my life.
+
+    User 2: Me too! I don''t know what I would do without them.
+
+    User 1: Well, it sounds like we both have a lot in common!
+
+    User 2: Yes, I think we do! I''m glad we met.
+
+    User 1: Me too! I''m sure we''ll be friends for a long time.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

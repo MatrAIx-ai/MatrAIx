@@ -1,0 +1,80 @@
+id: '00003422'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3422
+data:
+  user 1 personas: 'I like to only eat fish.
+
+    I can jump straight up , out of a pool.
+
+    I am a democrat.
+
+    Both my parents were over 6 foot tall.
+
+    I have amazing eye sight.'
+  user 2 personas: 'I will graduate from college in two years.
+
+    My parents are divorced.
+
+    I am very popular and have a lot of friends.
+
+    I could not live without my dog , bart.'
+  Best Generated Conversation: 'User 1: What''s your name?
+
+    User 2: I''m Alice.
+
+    User 1: Hi Alice, nice to meet you. I''m [insert your name].
+
+    User 2: Nice to meet you too [insert your name].
+
+    User 1: What are you majoring in in college?
+
+    User 2: I''m majoring in business.
+
+    User 1: That''s cool. I''m majoring in computer science.
+
+    User 2: Oh, cool. Do you like it?
+
+    User 1: Yeah, I love it. It''s really challenging, but it''s also really interesting.
+
+    User 2: I''m glad you like it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the movies, go shopping, and hang out with my friends.
+
+    User 1: Oh, that sounds fun. I like to do those things too.
+
+    User 2: Me too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Princess Bride.
+
+    User 1: Oh, I love that movie too! It''s so funny and heartwarming.
+
+    User 2: Me too. It''s so good.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog named Bart.
+
+    User 1: Oh, that''s cool. I love dogs.
+
+    User 2: Me too. They''re the best.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Me too.
+
+    User 1: So, what are your plans after college?
+
+    User 2: I''m not sure yet. I''m thinking about going to graduate school, but I''m not sure what I want to study.
+
+    User 1: Oh, I see. Well, I''m sure you''ll figure it out.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

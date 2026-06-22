@@ -1,0 +1,70 @@
+id: 00002905
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2905
+data:
+  user 1 personas: 'I used to wear a cape.
+
+    I love going to the movies.
+
+    It s one of my favorite hobbies.
+
+    My parents would take my brother and i when we were little.
+
+    We liked to pretend we were superheroes.'
+  user 2 personas: 'I am single and not looking.
+
+    My favorite hobby is reading suspense novels.
+
+    My mom is a cancer survivor.
+
+    My favorite subject in school was science.
+
+    Pizza is my favorite food.'
+  Best Generated Conversation: 'User 1: What''s your favorite hobby?
+
+    User 2: I love to read suspense novels.
+
+    User 1: That''s cool! I used to love reading when I was a kid. I would read anything I could get my hands on.
+
+    User 2: Me too! I used to read so much that my parents would have to take away my books.
+
+    User 1: Haha, I know the feeling. I remember when I was in elementary school, I would read so much that I would fall asleep in class.
+
+    User 2: Oh no! I hope you didn''t get in trouble.
+
+    User 1: I did once, but it was worth it.
+
+    User 2: I''m sure it was! So, what''s your favorite suspense novel?
+
+    User 1: It''s hard to say. I''ve read so many good ones. But I think I''d have to say The Girl on the Train by Paula Hawkins.
+
+    User 2: That''s a great book! I loved it too.
+
+    User 1: Me too! It''s so suspenseful and the plot twists are crazy.
+
+    User 2: Yeah, it was definitely a page-turner.
+
+    User 1: So, what''s your favorite subject in school?
+
+    User 2: My favorite subject was science. I loved learning about the world around me.
+
+    User 1: Me too! I always loved science experiments.
+
+    User 2: Me too! I remember doing a science project in elementary school where I had to grow mold on bread.
+
+    User 1: Oh no! What happened?
+
+    User 2: It was disgusting! But it was also really cool.
+
+    User 1: I bet it was! So, what do you do for fun?
+
+    User 2: I like to go to the movies, read, and hang out with my friends.
+
+    User 1: That sounds like fun! I like to do those things too.
+
+    User 2: Oh, cool! I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

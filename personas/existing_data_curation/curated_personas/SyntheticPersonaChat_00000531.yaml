@@ -1,0 +1,68 @@
+id: '00000531'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 531
+data:
+  user 1 personas: 'I love sweets.
+
+    I am in high school.
+
+    I love bruno mars.
+
+    I cs and ds.
+
+    I sleep a lot.'
+  user 2 personas: 'I eat junk food.
+
+    I do not have a job.
+
+    I am a couch potato.
+
+    I love the walking dead.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi!
+
+    User 1: I''m in high school too!
+
+    User 2: That''s cool! What grade are you in?
+
+    User 1: I''m in 11th grade.
+
+    User 2: Oh cool, I''m in 12th grade.
+
+    User 1: Me too! What do you do for fun?
+
+    User 2: I love to watch movies, especially the Walking Dead.
+
+    User 1: Oh, I love the Walking Dead too! That''s awesome.
+
+    User 2: I also love to eat junk food.
+
+    User 1: Me too! What''s your favorite kind of junk food?
+
+    User 2: I love pizza.
+
+    User 1: Me too! I love all kinds of pizza.
+
+    User 2: What''s your favorite type of pizza?
+
+    User 1: I like pepperoni pizza the best.
+
+    User 2: Me too! That''s my favorite too.
+
+    User 1: Cool! We should get pizza together sometime.
+
+    User 2: That sounds like a plan.
+
+    User 1: Great! I''ll bring the soda.
+
+    User 2: And I''ll bring the pizza.
+
+    User 1: Perfect! We''ll have a pizza party!
+
+    User 2: Sounds good to me!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

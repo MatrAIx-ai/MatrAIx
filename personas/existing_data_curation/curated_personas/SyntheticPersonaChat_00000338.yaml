@@ -1,0 +1,56 @@
+id: 00000338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 338
+data:
+  user 1 personas: 'I play piano.
+
+    I hope to become a music teacher after retirement.
+
+    I am doing financial business now.
+
+    I graduated high school in 1986.'
+  user 2 personas: 'The weather here is very cold , but so beautiful in the spring.
+
+    My favorite band is one direction.
+
+    I love to hike in the summer.
+
+    I love to ski in the winter.
+
+    My name is mary and i am from colorado.'
+  Best Generated Conversation: 'User 1: Hello Mary, my name is John, where are you from?
+
+    User 2: I am from Colorado.
+
+    User 1: Nice, I have always wanted to visit there. I have heard that the weather is very cold.
+
+    User 2: It can be very cold in the winter, but it is also very beautiful in the spring.
+
+    User 1: I love hiking and skiing, so I would love to visit in the spring.
+
+    User 2: That sounds like a lot of fun. I love to hike in the summer and ski in the winter.
+
+    User 1: It''s funny, I like to ski in the summer and hike in the winter.
+
+    User 2: You are a bit odd, but I like that.
+
+    User 1: Thank you, I like to be different.
+
+    User 2: Me too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to listen to music, go to concerts, and watch movies.
+
+    User 1: Those are some of my favorite things to do too.
+
+    User 2: We should hang out sometime.
+
+    User 1: I would love that.
+
+    User 2: Great. I will text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

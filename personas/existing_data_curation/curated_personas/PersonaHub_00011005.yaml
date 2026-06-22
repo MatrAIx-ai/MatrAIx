@@ -1,0 +1,17 @@
+id: '00011005'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11005
+persona_description: A scientist and Nobel laureate in Chemistry, known for his work on determining the structure of insulin and developing the Dideoxy Termination Method for DNA sequencing. He is particularly
+  renowned for his contributions to the field of biochemistry and molecular biology, and is considered one of the most influential scientists of the 20th century.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: biochemistry
+  general_domain_top01pct: chemistry
+  specific_domain_top01pct: biochemistry
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,19 @@
+id: '00035352'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35352
+persona_description: A dermatologist who specializes in the diagnosis and treatment of psoriasis, particularly in the use of computer-aided measurement techniques for assessing the severity of psoriasis.
+  He or she is experienced in the development and implementation of automated procedures for measuring psoriatic area and severity, and has published research on the use of computer-aided measurement of
+  psoriatic lesion area in clinical trials. The persona is likely to be familiar with the Psoriasis Area and Severity Index (PASI) and its limitations, and is interested in exploring alternative methods
+  for assessing psoriasis severity that are more reproducible and accurate.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: psoriasis treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

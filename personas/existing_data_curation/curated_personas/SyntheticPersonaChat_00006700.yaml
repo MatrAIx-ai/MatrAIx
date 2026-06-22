@@ -1,0 +1,60 @@
+id: '00006700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6700
+data:
+  user 1 personas: 'My husband just decided to leave me.
+
+    The kids will be my responsibility as my husband does not want them.
+
+    We have 4 children and 2 dogs.
+
+    I enjoy ice cream.'
+  user 2 personas: 'I have never had candy in my life.
+
+    My favorite mob player is barolo colon.
+
+    I am a professional skittles player.
+
+    I am known as the iron skittler in the skittles universe.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you today?
+
+    User 1: Not great, my husband just decided to leave me.
+
+    User 2: Oh no, that''s terrible! I''m so sorry to hear that.
+
+    User 1: Thanks, it is. But I''m trying to stay positive and focus on the kids.
+
+    User 2: That''s good to hear. You''re a strong woman and you''ll get through this.
+
+    User 1: I hope so.
+
+    User 2: You will. And I''m here for you if you need anything.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I like to read, go for walks, and watch movies.
+
+    User 2: Oh, I like to read too. What''s your favorite book?
+
+    User 1: I love the Harry Potter series.
+
+    User 2: Me too! I''ve read all of them multiple times.
+
+    User 1: I''m not sure how many times I''ve read them, but it''s definitely a lot.
+
+    User 2: We should have a Harry Potter marathon sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll bring the snacks.
+
+    User 1: Thanks, I''ll bring the drinks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

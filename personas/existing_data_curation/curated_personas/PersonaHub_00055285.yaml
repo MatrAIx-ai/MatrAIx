@@ -1,0 +1,18 @@
+id: 00055285
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55285
+persona_description: A geologist or archaeologist who is interested in the study of ancient pyramids and their construction methods. This persona is likely to be interested in the text because it provides
+  detailed information about the construction of the pyramid at Visočica, including the use of stone slabs and the technology being used to map the site's hidden features. This information could be useful
+  for researchers studying ancient pyramids or for those interested in the history and construction techniques of these structures.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: archaeological geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,78 @@
+id: '00003365'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3365
+data:
+  user 1 personas: 'I go to bed pretty late.
+
+    I am in school to be a computer engineer.
+
+    My passion is in programming.
+
+    One day i hope to own my own company.
+
+    My best friend is gay.'
+  user 2 personas: 'My favorite band is hop along.
+
+    I like to play video games.
+
+    I have been working the same job for two years.
+
+    I am a musician.
+
+    My father used to be a mechanic.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Pretty good, thanks. What about you?
+
+    User 1: I''m doing well. I''m in school to be a computer engineer.
+
+    User 2: Oh, that''s cool. I''m a musician.
+
+    User 1: That''s awesome! What kind of music do you play?
+
+    User 2: I play guitar and sing. I''m in a band with some friends.
+
+    User 1: That''s great! What''s your band called?
+
+    User 2: Our band is called Hop Along.
+
+    User 1: I''ve never heard of you guys.
+
+    User 2: We''re not very well-known yet. We''re just starting out.
+
+    User 1: Well, I''ll have to check you out. I''m always looking for new music to listen to.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what do you like about being a musician?
+
+    User 2: I love being able to express myself through music. I also love the feeling of playing a great show and seeing the crowd react.
+
+    User 1: That makes sense. Music is a powerful form of expression.
+
+    User 2: It sure is.
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is probably The Beatles. They''re just so iconic and their music has stood the test of time.
+
+    User 1: I love The Beatles too! They''re one of my favorite bands too.
+
+    User 2: Awesome! I''m glad to meet someone else who loves them.
+
+    User 1: Me too. So, what are you up to this weekend?
+
+    User 2: I''m playing a show at a local bar. Do you want to come?
+
+    User 1: Sure, that sounds fun! I''d love to check out your band.
+
+    User 2: Great! I''ll send you the details.
+
+    User 1: Awesome! I''ll see you then.
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

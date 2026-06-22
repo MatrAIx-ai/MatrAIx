@@ -1,0 +1,106 @@
+id: 00000919
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 919
+data:
+  user 1 personas: 'I am an athlete.
+
+    I like to go fishing.
+
+    I have 4 daughters.
+
+    I like to play board games.'
+  user 2 personas: 'I pray to god for my family every morning.
+
+    Spiders scare the life out of me.
+
+    I have a condition that prevents me from going to high altitudes.
+
+    I always put my left sock on first.'
+  Best Generated Conversation: 'User 1: Hi, I''m Matt.
+
+    User 2: Hi Matt, I''m Sarah.
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s interesting.
+
+    User 2: Yeah, I like it.
+
+    User 1: Me too. I''m an athlete.
+
+    User 2: Oh, that''s cool. What sport do you play?
+
+    User 1: I play hockey.
+
+    User 2: Oh, that''s awesome. I''ve always wanted to play hockey, but I''m too scared of getting hurt.
+
+    User 1: It''s not as bad as you think.
+
+    User 2: I don''t know, I''ve seen some pretty nasty injuries.
+
+    User 1: Yeah, but those are rare.
+
+    User 2: I guess you''re right.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go fishing, play board games, and spend time with my family.
+
+    User 1: Oh, that''s cool. I like to go fishing too.
+
+    User 2: Oh, really? What kind of fish do you like to catch?
+
+    User 1: I like to catch bass, pike, and walleye.
+
+    User 2: Oh, those are all good fish.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what''s your favorite board game?
+
+    User 1: I like to play Monopoly, Scrabble, and Risk.
+
+    User 2: Oh, those are all good games. I like to play Monopoly too.
+
+    User 1: Me too. It''s a classic.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your family like?
+
+    User 2: I have two daughters and a husband.
+
+    User 1: Oh, that''s nice. I have four daughters.
+
+    User 2: Oh, wow! You must be busy.
+
+    User 1: Yeah, I am. But it''s a lot of fun.
+
+    User 2: I bet it is.
+
+    User 1: So, what do you like to do with your family?
+
+    User 2: We like to go camping, go to the beach, and play board games.
+
+    User 1: Oh, that''s nice. I like to do those things too.
+
+    User 2: Yeah, they''re a lot of fun.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun. I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

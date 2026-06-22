@@ -1,0 +1,62 @@
+id: 00003099
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3099
+data:
+  user 1 personas: 'I have very curly hair.
+
+    I love to cook ethnic foods.
+
+    I love to draw.
+
+    My family came from greece in the 1950s.'
+  user 2 personas: 'I have the support of my whole family.
+
+    My mother is a ballerina.
+
+    I am a white dancer.
+
+    I plan to retire in 6 months.'
+  Best Generated Conversation: 'User 1: Hey! I''m Nick.
+
+    User 2: Hello, I''m Jen.
+
+    User 1: It''s nice to meet you, Jen. What do you do for fun?
+
+    User 2: I love to dance.
+
+    User 1: Oh, that''s cool! What kind of dance do you do?
+
+    User 2: I''m a white dancer.
+
+    User 1: I''ve never heard of that before.
+
+    User 2: It''s a type of ballet that uses a lot of jumps and spins.
+
+    User 1: That sounds really fun!
+
+    User 2: It is! I''ve been dancing since I was a little girl.
+
+    User 1: That''s awesome! Do you have any family that dances?
+
+    User 2: My mom was a ballerina when she was younger.
+
+    User 1: Oh, that''s cool! Do you think she''ll ever teach you?
+
+    User 2: Maybe, but I''m not sure if I''m good enough.
+
+    User 1: I''m sure you''re great! You should give it a try.
+
+    User 2: I might, but I''m not sure if I have the time.
+
+    User 1: You should make time for it. It sounds like something you''d really enjoy.
+
+    User 2: Maybe, I''ll think about it.
+
+    User 1: Okay, I hope you do!
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

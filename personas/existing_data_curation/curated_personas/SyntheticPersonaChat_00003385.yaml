@@ -1,0 +1,62 @@
+id: 00003385
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3385
+data:
+  user 1 personas: 'I have an older brother.
+
+    I live in the city.
+
+    I love my girlfriend.
+
+    I dyed my hair pink.'
+  user 2 personas: 'Many of my former students like to visit me.
+
+    We plan to travel after he retires.
+
+    I am a retired school teacher.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel and explore new places. I also love reading and writing.
+
+    User 1: That''s great! I love to travel too. What''s your favorite place to visit?
+
+    User 2: I have a few favorite places, but I think my favorite would be Italy. I love the culture, the food, and the history.
+
+    User 1: Italy sounds amazing! I''ve always wanted to go there.
+
+    User 2: You should definitely go! It''s a beautiful country.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: You''re welcome!
+
+
+    [A few minutes later]
+
+
+    User 1: What do you think of the new Avatar movie?
+
+    User 2: I haven''t seen it yet, but I''m really excited to see it. I loved the first one.
+
+    User 1: Me too! I thought it was amazing.
+
+    User 2: I''m sure the new one will be just as good.
+
+    User 1: I hope so!
+
+
+    [A few minutes later]
+
+
+    User 1: I''m sure we''ll have a lot of fun together. I''m excited to get to know you better.
+
+    User 2: Me too! I''m sure we''ll be great friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

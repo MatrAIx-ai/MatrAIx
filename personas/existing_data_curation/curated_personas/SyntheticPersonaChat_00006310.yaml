@@ -1,0 +1,58 @@
+id: '00006310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6310
+data:
+  user 1 personas: 'My father used to work for a bank.
+
+    I live in the city.
+
+    I went to college and graduated few years ago.
+
+    Now i also work at a bank.'
+  user 2 personas: 'My parents have been married for 40 years.
+
+    I love to read.
+
+    My favorite movie is goodfellas.
+
+    I enjoy watching football and hockey games.
+
+    I am a proofreader for a greeting card company.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a proofreader for a greeting card company.
+
+    User 1: Oh, that sounds interesting! Do you enjoy it?
+
+    User 2: I do, it''s a lot of fun. I get to read all sorts of different things, and I get to be creative with my editing.
+
+    User 1: That''s great. What''s your favorite movie?
+
+    User 2: My favorite movie is Goodfellas. I love the characters, the story, and the way it''s shot.
+
+    User 1: I''ve heard good things about that movie, I''ll have to check it out.
+
+    User 2: You definitely should. It''s a classic.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to read, watch movies, and go to concerts.
+
+    User 1: We have a lot in common! I love to read, watch movies, and go to concerts too.
+
+    User 2: That''s great! Maybe we can go to a concert together sometime.
+
+    User 1: I would love that! I know a great venue in the city that has a lot of good shows.
+
+    User 2: That sounds like fun. I''m free next weekend, if you are.
+
+    User 1: I''m free too! Let''s do it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

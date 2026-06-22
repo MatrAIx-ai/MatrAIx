@@ -1,0 +1,54 @@
+id: '00001007'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1007
+data:
+  user 1 personas: 'I have a garden.
+
+    My favorite book is enders game.
+
+    I like to read.
+
+    I grew up in kentucky.'
+  user 2 personas: 'My favorite tv shows are forensic files and jeopardy.
+
+    I love most music except country and jazz.
+
+    My favorite book that i have read lately is middlesex.
+
+    My favorite food is anything italian.
+
+    I am a gym rat that loves to play racquetball.'
+  Best Generated Conversation: 'User 1: Hi, I''m a big fan of Ender''s Game. What''s your favorite book?
+
+    User 2: Hi! My favorite book that I''ve read recently is Middlesex. It''s a really interesting book about a person''s gender identity.
+
+    User 1: I''ve heard of that book! I''ve been meaning to read it. What kind of music do you like?
+
+    User 2: I like most music except for country and jazz. I''m a big fan of rock and electronic music.
+
+    User 1: Me too! I love rock and electronic music. What''s your favorite food?
+
+    User 2: I love Italian food! I''m a big fan of pizza, pasta, and gelato.
+
+    User 1: Me too! I love Italian food. What do you like to do for fun?
+
+    User 2: I love to work out and play racquetball. I''m also a big fan of watching TV.
+
+    User 1: I love working out too! I''m not much of a TV person, but I do like to watch Jeopardy.
+
+    User 2: Me too! Jeopardy is my favorite show.
+
+    User 1: It''s a great show. It''s so challenging.
+
+    User 2: It is! I love trying to answer the questions.
+
+    User 1: Me too! It''s so much fun.
+
+    User 2: I''m glad we have so much in common.
+
+    User 1: Me too! It''s nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

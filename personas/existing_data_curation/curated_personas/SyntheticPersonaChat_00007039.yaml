@@ -1,0 +1,92 @@
+id: 00007039
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7039
+data:
+  user 1 personas: 'My father works in advertising agency.
+
+    I have my own channel.
+
+    I enjoy making lets plays.
+
+    My favorite animals are dolphins.
+
+    I love youtube.'
+  user 2 personas: 'I am allergic to lactose.
+
+    I am really terrible at doing regular expressions.
+
+    My favorite singer is justin bieber.
+
+    My doctor told me i have six months to live.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1 name].
+
+
+    User 2: Hi [user 2 name], nice to meet you!
+
+
+    User 1: You too! What are you up to today?
+
+
+    User 2: Not much, just hanging out. I''m really bored.
+
+
+    User 1: Me too. I was thinking about doing a Let''s Play on my YouTube channel.
+
+
+    User 2: That sounds fun! What game are you going to play?
+
+
+    User 1: I was thinking about playing Minecraft.
+
+
+    User 2: I love Minecraft! I''m so bad at it though.
+
+
+    User 1: Me too! But it''s still really fun.
+
+
+    User 2: Do you want to play together?
+
+
+    User 1: Sure! That would be great!
+
+
+    User 2: Awesome! I''ll start up the game.
+
+
+    User 1: Okay, I''ll be right there.
+
+
+    [User 1 and User 2 start playing Minecraft together.]
+
+
+    User 1: This is so much fun!
+
+
+    User 2: I know right? It''s so relaxing.
+
+
+    User 1: I''m glad I decided to do this.
+
+
+    User 2: Me too. This is the best.
+
+
+    [User 1 and User 2 continue to play Minecraft for a while longer.]
+
+
+    User 1: I''m so glad we did this.
+
+
+    User 2: Me too. This was so much fun!
+
+
+    User 1: I''m going to have to do this again sometime.
+
+
+    User 2: Me too! This was the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

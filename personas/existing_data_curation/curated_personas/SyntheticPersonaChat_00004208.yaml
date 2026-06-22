@@ -1,0 +1,70 @@
+id: 00004208
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4208
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I like skateboarding.
+
+    I am a female.
+
+    I am in high school.
+
+    I have blonde hair.'
+  user 2 personas: 'I make my own clothes.
+
+    I ran into jimmy fallon just the other day.
+
+    I play the piano.
+
+    I am going bald.
+
+    I hate flowers.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi [user 1''s name], my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the piano, make my own clothes, and run into famous people.
+
+    User 1: That''s cool! I like to skateboard, eat pizza, and hang out with my friends.
+
+    User 2: Nice! I''ve never been skateboarding before, but it sounds like fun.
+
+    User 1: It is! It''s a great way to get exercise and have some fun.
+
+    User 2: I''m glad you enjoy it.
+
+    User 1: What''s it like to make your own clothes?
+
+    User 2: It''s really fun! I like being able to design and create my own pieces.
+
+    User 1: That''s cool! I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I think I will!
+
+    User 2: Great! What kind of clothes do you like to make?
+
+    User 1: I like to make dresses, skirts, and tops.
+
+    User 2: Nice! I like to make pants, shirts, and jackets.
+
+    User 1: Cool! I''ve never made pants before.
+
+    User 2: They''re not too hard to make.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! I''m sure you''d do a great job.
+
+    User 1: Thanks!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

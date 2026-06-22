@@ -1,0 +1,74 @@
+id: 00002199
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2199
+data:
+  user 1 personas: 'I have 3 small dogs.
+
+    I have a personal trainer.
+
+    I used to be very religious.
+
+    I love to ride bikes.
+
+    I tutor kids in my spare time.'
+  user 2 personas: 'I am divorced and looking to date.
+
+    I am a professional bowler.
+
+    I take care of my grandmother on weekdays.
+
+    I have two children , a boy and a girl.
+
+    I work at an insurance firm.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name], I have 3 small dogs, a personal trainer, used to be very religious, love to ride bikes and tutor kids in my spare time.
+
+    User 2: Hi! I''m [user 2 name], I''m divorced and looking to date, am a professional bowler, take care of my grandmother on weekdays, have two children, a boy and a girl, and work at an insurance firm.
+
+    User 1: It''s nice to meet you! Do you like to exercise?
+
+    User 2: I do! I''m a professional bowler.
+
+    User 1: That''s cool! I love to ride bikes.
+
+    User 2: That sounds fun! I''ve never been a biker, but I''m always looking for new things to try.
+
+    User 1: You should try it! It''s a great way to get exercise and see the sights.
+
+    User 2: I''ll keep that in mind.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to spend time with my kids, bowl, and watch movies.
+
+    User 1: That sounds like a lot of fun! I like to read, tutor kids, and ride bikes.
+
+    User 2: I''ve never been a big reader, but I like the idea of tutoring kids.
+
+    User 1: It''s a lot of fun! It''s rewarding to help kids learn and grow.
+
+    User 2: I''m sure it is. I might have to give it a try sometime.
+
+    User 1: You should! It''s a great way to give back to the community.
+
+    User 2: I''ll keep that in mind.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at an insurance firm.
+
+    User 1: Oh, that''s interesting! I''ve never worked in insurance before.
+
+    User 2: It''s a lot of fun! It''s always interesting to learn about different types of insurance policies.
+
+    User 1: I can imagine. It sounds like a challenging job.
+
+    User 2: It can be at times, but it''s always rewarding when I help a client find the right insurance policy for them.
+
+    User 1: I''m sure it is. It sounds like you have a really interesting job.
+
+    User 2: Thank you! I do. It''s a lot of fun and I get to help people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

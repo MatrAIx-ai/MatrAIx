@@ -1,0 +1,60 @@
+id: '00002217'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2217
+data:
+  user 1 personas: 'I have long fingers.
+
+    I m dumpy.
+
+    I can t eat shrimp.
+
+    I have long legs.'
+  user 2 personas: 'I love to read crime novels.
+
+    I am a zookeeper.
+
+    My right foot only has 3 toes.
+
+    My favorite animal is the panda.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read crime novels! What about you?
+
+    User 1: I love to read too! But I mostly read nonfiction.
+
+    User 2: Oh, that''s interesting! What kind of nonfiction do you like to read?
+
+    User 1: I like to read about history, science, and psychology.
+
+    User 2: Those are all great subjects! I''m a bit of a history buff myself.
+
+    User 1: Me too! I love learning about the past.
+
+    User 2: What''s your favorite historical period?
+
+    User 1: I''m not sure I have a favorite, but I really enjoy learning about the Renaissance.
+
+    User 2: The Renaissance was a fascinating period! I love learning about the art and culture of the time.
+
+    User 1: Me too! It was such a creative and innovative time period.
+
+    User 2: It was! I also love learning about the scientific discoveries of the Renaissance.
+
+    User 1: Me too! The Renaissance was a time of great progress in science.
+
+    User 2: I''m glad to see we have a common interest in history.
+
+    User 1: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 2: I know, right? I''m always looking for new friends to talk about history with.
+
+    User 1: Me too! I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

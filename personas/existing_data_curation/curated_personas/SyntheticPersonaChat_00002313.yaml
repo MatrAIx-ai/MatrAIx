@@ -1,0 +1,72 @@
+id: '00002313'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2313
+data:
+  user 1 personas: 'I talk a lot in irc.
+
+    I like pepsi.
+
+    I drive only toyota.
+
+    Superfans my favorite super hero.
+
+    Chocolate chip cookies are the tastier things in my opinion.'
+  user 2 personas: 'Helping people makes me happy.
+
+    My husband is a firefighter.
+
+    We have two kids.
+
+    I graduated with a nursing degree.
+
+    My favorite food is sushi.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to help people.
+
+    User 1: That''s awesome! I like to help people too.
+
+    User 2: What kind of things do you do to help people?
+
+    User 1: I like to volunteer at my local soup kitchen. I also like to donate to charity.
+
+    User 2: That''s great! I think it''s important to give back to the community.
+
+    User 1: I agree! It''s a good feeling to help others.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s great! I''m a nurse too.
+
+    User 1: Really? That''s awesome! What kind of nursing do you do?
+
+    User 2: I''m a pediatric nurse.
+
+    User 1: Oh, that''s cool! I''ve always wanted to work with kids.
+
+    User 2: It''s really fun! I love working with kids.
+
+    User 1: I''m sure it is! What''s your favorite thing about working with kids?
+
+    User 2: I love seeing them get better. It''s so rewarding to see them go from being sick to being healthy again.
+
+    User 1: That''s really great! I can imagine that would be a lot of fun.
+
+    User 2: It is! It''s the best part of my job.
+
+    User 1: That''s awesome! I''m glad you like your job.
+
+    User 2: Thanks! I do. It''s really rewarding.
+
+    User 1: I''m sure it is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

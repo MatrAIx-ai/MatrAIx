@@ -1,0 +1,18 @@
+id: '00031746'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31746
+persona_description: A microbiologist who specializes in the study of bacterial metabolism, specifically focusing on the development and analysis of analog-resistant mutants and their cultural characteristics.
+  This individual has expertise in the use of UV irradiation to induce mutations in bacteria, as well as the use of biochemical tests to analyze the resulting mutations. The microbiologist is also interested
+  in the morphological changes that occur in bacteria after being exposed to UV radiation, and in the production of acid and gas in carbohydrate breakdown tests.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: microbial genetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

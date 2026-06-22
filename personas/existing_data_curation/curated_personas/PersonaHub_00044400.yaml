@@ -1,0 +1,18 @@
+id: '00044400'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44400
+persona_description: A concerned public health official who is actively investigating a recent outbreak of E.coli illness in Hildale, Utah. The person is dedicated to understanding the source of the outbreak,
+  the affected individuals, and the potential public health implications. They are interested in the transmission of E.coli, the symptoms associated with the strain involved, and the best practices for
+  preventing infection.
+expertise:
+  general_domain_top1pct: epidemiology
+  specific_domain_top1pct: foodborne illness epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

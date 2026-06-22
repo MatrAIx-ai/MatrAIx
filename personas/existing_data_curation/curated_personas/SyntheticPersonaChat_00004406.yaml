@@ -1,0 +1,102 @@
+id: '00004406'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4406
+data:
+  user 1 personas: 'I listen to blues and jazz.
+
+    I collect single malt scotch.
+
+    I live in a tiny house to save money.
+
+    I tend bar on the weekends.'
+  user 2 personas: 'I am italian american.
+
+    I hate cleaning.
+
+    My favorite color is blue.
+
+    I paint with watercolors.
+
+    I work in finance.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint with watercolors.
+
+    User 1: That sounds fun! I''ve always wanted to try that.
+
+    User 2: You should! It''s really relaxing.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to listen to blues and jazz.
+
+    User 2: Oh, that''s cool! I like jazz too.
+
+    User 1: Me too! What are some of your favorite jazz albums?
+
+    User 2: I like "Kind of Blue" by Miles Davis and "Blue Train" by John Coltrane.
+
+    User 1: Those are both great albums! I love "Kind of Blue".
+
+    User 2: Me too! It''s a classic.
+
+    User 1: I also like "Blue Train". It''s so smooth.
+
+    User 2: I agree! It''s one of my favorite albums.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to collect single malt scotch.
+
+    User 1: That''s cool! I''ve never tried scotch before.
+
+    User 2: You should! It''s really good.
+
+    User 1: I''ll have to give it a try.
+
+    User 2: What do you do for work?
+
+    User 1: I tend bar on the weekends.
+
+    User 2: Oh, that sounds fun! I''ve always wanted to be a bartender.
+
+    User 1: It''s a lot of fun! I like meeting new people and making drinks.
+
+    User 2: I bet it is! I love meeting new people.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that sounds interesting! What do you do specifically?
+
+    User 2: I''m a financial analyst.
+
+    User 1: Oh, that''s cool! I''ve always been interested in finance.
+
+    User 2: It''s a lot of fun! I like working with numbers and helping people make money.
+
+    User 1: I bet it is! I love helping people.
+
+    User 2: So, what do you like to do outside of work?
+
+    User 1: I like to listen to music, paint, and spend time with my friends and family.
+
+    User 2: Oh, that sounds like fun! I like to do similar things.
+
+    User 1: I''m glad! It''s always nice to meet someone who has similar interests.
+
+    User 2: Me too! It''s been nice talking to you, [user 1 name].
+
+    User 1: You too, [user 2 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

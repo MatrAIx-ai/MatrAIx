@@ -1,0 +1,72 @@
+id: 00001299
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1299
+data:
+  user 1 personas: 'I have one child.
+
+    I own two boxer dogs.
+
+    I work for a clothes retailer.
+
+    My favorite drink is red wine.
+
+    I enjoy gardening.'
+  user 2 personas: 'My favorite show is battlestar galactica.
+
+    I think beets are the best vegetable.
+
+    I am a paper salesman.
+
+    I live on a beet farm.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you! Where do you live?
+
+    User 2: I live on a beet farm.
+
+    User 1: That''s interesting! What''s it like living on a beet farm?
+
+    User 2: It''s great! I love beets, and I love growing them.
+
+    User 1: What do you do with all the beets you grow?
+
+    User 2: I sell them to local restaurants and grocery stores.
+
+    User 1: That''s a great way to make money!
+
+    User 2: It is! And it''s also a lot of fun.
+
+    User 1: I''m glad you enjoy it. What''s your favorite thing to do on the farm?
+
+    User 2: I love to go for walks in the fields and pick beets.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to try beets, but I''ve never had the chance.
+
+    User 2: You should! They''re delicious.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What''s your favorite thing to do for fun?
+
+    User 1: I love to read, garden, and spend time with my family.
+
+    User 2: That''s all really great stuff! I love to read too. I''ve been reading a lot about beets lately.
+
+    User 1: Really? What have you learned about them?
+
+    User 2: I''ve learned that they''re really good for you. They''re high in vitamin C, iron, and potassium.
+
+    User 1: That''s good to know! I''ll have to eat more beets.
+
+    User 2: I''m sure you''ll like them.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

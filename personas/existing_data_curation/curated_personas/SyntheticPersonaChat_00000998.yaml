@@ -1,0 +1,86 @@
+id: 00000998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 998
+data:
+  user 1 personas: 'I hate cleaning.
+
+    My favorite color is blue.
+
+    I paint with watercolors.
+
+    I work in finance.
+
+    I m italian american.'
+  user 2 personas: 'I am a dancer.
+
+    I am a vegetarian.
+
+    I can play the piano.
+
+    I love to sing.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hello, my name is [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I''m a dancer, a pianist, and I love to sing.
+
+    User 1: Wow, that''s amazing! I''m a finance worker, but I love to paint with watercolors.
+
+    User 2: That''s so cool! I love art.
+
+    User 1: Me too! I''m also Italian-American.
+
+    User 2: That''s interesting! I''m a vegetarian.
+
+    User 1: Oh, I''ve never met a vegetarian before. What''s it like?
+
+    User 2: It''s great! I feel better for it, and I love animals.
+
+    User 1: That''s awesome! I''m glad you''re happy.
+
+    User 2: Thanks! So, what else do you like to do?
+
+    User 1: I love to travel, go to concerts, and hang out with friends.
+
+    User 2: That sounds like fun! I love to travel too, but I don''t get to go very often.
+
+    User 1: You should come with me sometime!
+
+    User 2: I would love to!
+
+    User 1: Great! I''ll have to plan something.
+
+    User 2: Sounds good!
+
+    User 1: So, what are you doing later today?
+
+    User 2: I''m going to a dance class.
+
+    User 1: Oh, that sounds fun! I''ve always wanted to take a dance class.
+
+    User 2: You should! It''s a great way to exercise and have fun.
+
+    User 1: I will!
+
+    User 2: Great!
+
+    User 1: So, what''s your favorite dance?
+
+    User 2: I love to salsa dance.
+
+    User 1: Oh, that''s one of my favorites too!
+
+    User 2: We should go salsa dancing sometime!
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

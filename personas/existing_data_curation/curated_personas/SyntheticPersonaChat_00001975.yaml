@@ -1,0 +1,66 @@
+id: 00001975
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1975
+data:
+  user 1 personas: 'I live near a park.
+
+    My favorite color is purple.
+
+    I do not have a car.
+
+    I listen to podcasts.
+
+    I do not have any children.'
+  user 2 personas: 'I work in a warehouse.
+
+    My wife and i enjoy long sunday drives.
+
+    I have a very tone body.
+
+    I have a collection of video games.
+
+    My son is a straight a student.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What are some of your interests?
+
+    User 2: I like to play video games, go on long drives with my wife, and work out.
+
+    User 1: Those sound like fun hobbies. I like to listen to podcasts, go for walks in the park, and cook.
+
+    User 2: I love podcasts too! Have you listened to the Joe Rogan Experience?
+
+    User 1: Yes, I have! I love that show. It''s so interesting.
+
+    User 2: Me too! I''ve learned so much from listening to it.
+
+    User 1: What''s your favorite episode?
+
+    User 2: I don''t know if I can pick just one favorite episode, but I really enjoyed the one with Jordan Peterson. He was so interesting.
+
+    User 1: I haven''t listened to that one yet. I''ll have to check it out.
+
+    User 2: You won''t be disappointed.
+
+    User 1: Do you have any kids?
+
+    User 2: Yes, I have a son. He''s in high school and he''s a straight A student.
+
+    User 1: That''s great! I don''t have any kids.
+
+    User 2: You should have some! They''re the best.
+
+    User 1: I''m not sure if I''m ready for that yet.
+
+    User 2: You''ll know when the time is right.
+
+    User 1: Thanks for the advice.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

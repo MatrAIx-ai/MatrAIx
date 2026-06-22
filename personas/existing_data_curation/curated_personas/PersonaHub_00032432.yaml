@@ -1,0 +1,18 @@
+id: '00032432'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32432
+persona_description: A scientist or engineer who is responsible for conducting a resistance measurement test on conductors at a specified reference temperature. The test aims to determine the conductor's
+  DC resistance using two methods, with the Kelvin Bridge Method being more accurate. The persona will perform visual examination of the sample, strip insulation from both ends, and place a low electrical
+  current and precision voltage on the test sample to record the voltage drop on the sample. The results will be reported including the calculated conductor resistance and test conditions.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Electrical Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: Electrical Measurement Techniques
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

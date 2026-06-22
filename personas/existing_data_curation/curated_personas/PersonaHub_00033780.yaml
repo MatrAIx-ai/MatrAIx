@@ -1,0 +1,18 @@
+id: 00033780
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33780
+persona_description: A meteorologist who is tracking the movement and strength of Tropical Cyclone Ita, a major hurricane that is currently approaching Australia. The meteorologist is monitoring the satellite
+  imagery and radar data to predict the system's path and intensity, and is preparing emergency response plans for affected areas. The meteorologist is also likely to be working with other meteorologists
+  and government officials to coordinate efforts to evacuate people from areas at risk of flooding or damage.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical cyclone prediction
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

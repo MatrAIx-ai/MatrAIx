@@ -1,0 +1,18 @@
+id: '00044111'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44111
+persona_description: A researcher in the field of multiple sclerosis, specifically focusing on the study of transcriptional signatures and their potential use in personalized medicine. The researcher has
+  expertise in extracting RNA from MS patients and identifying distinct sets of RNA among MS patients, which can help differentiate between two meaningful subsets of patients, MSa and MSb. The researcher
+  aims to use this knowledge to make important treatment decisions for MS patients.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: translational medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: multiple sclerosis research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,56 @@
+id: '00007262'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7262
+data:
+  user 1 personas: 'My hobbies include reading and cycling.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    My name is frank.'
+  user 2 personas: 'I love animals , especially dogs.
+
+    I like field hockey and soccer.
+
+    I am a 15 year old girl.
+
+    When i grow up , i want to be a veterinarian.
+
+    I get good grades in school.'
+  Best Generated Conversation: 'User 1: Hello! What is your name?
+
+    User 2: I am a 15 year old girl named Sarah.
+
+    User 1: It''s nice to meet you, Sarah! What do you like to do for fun?
+
+    User 2: I love to play field hockey and soccer. I also love animals, especially dogs.
+
+    User 1: That''s cool! I love to read and cycle. I also enjoy travelling up to Canada to relax and enjoy the view.
+
+    User 2: That sounds like a lot of fun! I''ve never been to Canada before, but I''d love to go sometime.
+
+    User 1: You should! It''s a beautiful country. What do you want to be when you grow up?
+
+    User 2: I want to be a veterinarian. I love animals and I think it would be a great job to help them.
+
+    User 1: That''s a great goal! I''m sure you''ll be a great veterinarian.
+
+    User 2: Thank you!
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or hang out with my friends.
+
+    User 1: Sounds like a good plan. I''m going to spend the weekend cycling. I''m hoping to go to Canada to relax and enjoy the view.
+
+    User 2: That sounds like a lot of fun! I''ve never been to Canada before, but I''d love to go sometime.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: Thank you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

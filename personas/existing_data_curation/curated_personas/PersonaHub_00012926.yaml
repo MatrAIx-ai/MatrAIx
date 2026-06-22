@@ -1,0 +1,18 @@
+id: 00012926
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12926
+persona_description: A user who is interested in using the Foundation Platform's UART functionality for communication with a remote device or for debugging purposes. They are familiar with basic programming
+  concepts and are comfortable with the Foundation Platform's command-line interface. They are interested in the platform's ability to connect to a free TCP port for telnet access and are looking for a
+  way to connect a terminal or program to a specific UART port. They may also be interested in using the --uart command-line parameter to redirect the output of each UART to a file or to stdout.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Embedded Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,54 @@
+id: '00005213'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5213
+data:
+  user 1 personas: 'Chocolate is my favorite food.
+
+    I am learning how to play the piano.
+
+    I geocache in my spare time.
+
+    I am a school psychologist.'
+  user 2 personas: 'I am a small business owner.
+
+    I help them win a lot of money.
+
+    I have a consulting firm.
+
+    My clients are gamblers.
+
+    I give out sports information.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for a living?
+
+    User 2: I''m a small business owner. I have a consulting firm that helps gamblers win a lot of money.
+
+    User 1: That''s interesting! What kind of information do you give out?
+
+    User 2: I give out sports information, like who''s going to win the game, how many points they''re going to score, and so on.
+
+    User 1: That must be really interesting! Do you ever get nervous when you''re giving out information?
+
+    User 2: Not really. I''m pretty confident in my ability to predict the outcomes of games.
+
+    User 1: That''s good! I''m not so good at predicting the outcomes of games. I''m more of a gambler than a sports fan.
+
+    User 2: That''s okay. I''m sure you''re good at something else.
+
+    User 1: Thanks! I like to think so. What''s your favorite thing about being a small business owner?
+
+    User 2: I love the freedom it gives me. I can set my own hours and work on my own projects.
+
+    User 1: That sounds great! I''ve always wanted to be a small business owner.
+
+    User 2: It''s definitely a lot of work, but it''s also really rewarding.
+
+    User 1: I''m sure it is. I''m definitely going to keep it in mind as a career option.
+
+    User 2: That''s great! I''m sure you''d be great at it.
+
+    User 1: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

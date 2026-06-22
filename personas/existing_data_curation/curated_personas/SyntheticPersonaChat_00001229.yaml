@@ -1,0 +1,62 @@
+id: 00001229
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1229
+data:
+  user 1 personas: 'I am always late.
+
+    I work in a diner.
+
+    I also own a cupcake business.
+
+    I live with my best friend.
+
+    I sing in the shower.'
+  user 2 personas: 'My uncle use to work on fish boats in florida.
+
+    I ve never been to the west coast of the united states.
+
+    My father use to drive a taxi cab in the 1970 s.
+
+    I ve been to canada two times my entire life.'
+  Best Generated Conversation: 'User 1: I am always late.
+
+    User 2: I''ve never been to the west coast of the United States.
+
+    User 1: Have you ever visited any other countries?
+
+    User 2: I''ve been to Canada twice.
+
+    User 1: That''s cool. I''ve never been to Canada.
+
+    User 2: It''s a beautiful country. I''ve been to the east coast and the west coast.
+
+    User 1: What was your favorite part about it?
+
+    User 2: I loved the mountains in the west coast.
+
+    User 1: I''ve heard they''re beautiful.
+
+    User 2: They are. I''ve also heard the east coast is beautiful.
+
+    User 1: I''ve heard that too. I''d like to visit Canada someday.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: I know. Maybe I''ll go next year.
+
+    User 2: You should! It''s beautiful in the summer.
+
+    User 1: I know. I''ll have to look into it.
+
+    User 2: You should. You won''t be disappointed.
+
+    User 1: I know. I''m excited to visit Canada.
+
+    User 2: You should be! It''s a great country.
+
+    User 1: I know. I can''t wait to go.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

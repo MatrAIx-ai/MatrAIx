@@ -1,0 +1,18 @@
+id: '00030053'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30053
+persona_description: A computer graphics researcher who specializes in developing image-based techniques for generating high-quality soft shadows in computer graphics. This researcher has developed and
+  combined two separate image-based techniques that build on an existing algorithm used to generate "hard" shadows. The researcher is interested in reducing the amount of computation required to generate
+  high-quality soft shadows and has shown that both image-based techniques can be used in concert to create an interactive lighting environment.
+expertise:
+  general_domain_top1pct: computer graphics
+  specific_domain_top1pct: image-based techniques for generating soft shadows
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,74 @@
+id: '00007000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7000
+data:
+  user 1 personas: 'I love the band red hot chili peppers.
+
+    I want to be a journalist but instead i sell washers at sears.
+
+    I play bass.
+
+    I have a french bulldog.'
+  user 2 personas: 'I am married and have 2 kids.
+
+    I am a lifestyle blogger.
+
+    I enjoy shopping.
+
+    I used to cheerlead in high school.'
+  Best Generated Conversation: 'User 1: I''m a big fan of the Red Hot Chili Peppers.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I can''t choose just one, but I really like "Californication" and "Give it Away."
+
+    User 1: Those are both great songs! I also like "Under the Bridge" and "Scar Tissue."
+
+    User 2: Those are good choices too!
+
+    User 1: What do you think of the new album?
+
+    User 2: I like it a lot! It''s definitely different from their older stuff, but it''s still good.
+
+    User 1: I agree. I think it''s a really great album.
+
+    User 2: Me too!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a lifestyle blogger.
+
+    User 1: Oh, that sounds fun! What kind of things do you blog about?
+
+    User 2: I blog about fashion, beauty, and home decor.
+
+    User 1: That sounds interesting! I''ve never been much of a blogger myself, but I love to read blogs.
+
+    User 2: It''s a lot of fun! It''s a great way to share your thoughts and opinions with others.
+
+    User 1: I can see why you enjoy it.
+
+    User 2: Yeah, it''s really rewarding.
+
+    User 1: So, are you married?
+
+    User 2: Yes, I am married and have two kids.
+
+    User 1: Oh, that''s great!
+
+    User 2: Yeah, it is. They''re my whole world.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, they keep me busy, but they''re also a lot of fun.
+
+    User 1: I''m sure they are.
+
+    User 2: Yeah, they are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

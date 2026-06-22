@@ -1,0 +1,78 @@
+id: 00001349
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1349
+data:
+  user 1 personas: 'I love cooking !.
+
+    My mother is from greece.
+
+    My favourite colour is green.
+
+    I like to swim when the weather is hot.'
+  user 2 personas: 'I live with my sisters and they provide me with all my needs.
+
+    I love to clean my house.
+
+    I enjoy reading.
+
+    I am afraid to leave the house.
+
+    When i was a child i was kidnapped by my uncle.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read and clean my house.
+
+    User 1: That''s cool! I love to cook.
+
+    User 2: Oh, that''s fun! What''s your favorite food to cook?
+
+    User 1: I love to make pasta dishes.
+
+    User 2: Me too! I love pasta.
+
+    User 1: What''s your favorite kind of pasta?
+
+    User 2: I love spaghetti.
+
+    User 1: Me too! I love it with meatballs and tomato sauce.
+
+    User 2: That sounds delicious! I love to make that too.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! What do you do for work?
+
+    User 1: I''m a chef.
+
+    User 2: Oh, that''s cool! I love to eat food.
+
+    User 1: I''m glad! I love making food.
+
+    User 2: What''s your favorite thing about being a chef?
+
+    User 1: I love the creativity of it. I get to come up with new recipes and make things that people love.
+
+    User 2: That sounds amazing! I''m so glad you enjoy your job.
+
+    User 1: Thanks! I do.
+
+    User 2: What''s your favorite place to travel?
+
+    User 1: I love to travel to Greece. My mom is from there, and I love the food and the culture.
+
+    User 2: Oh, that''s cool! I''ve always wanted to go to Greece.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I''ll have to put it on my list.
+
+    User 1: Good! You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

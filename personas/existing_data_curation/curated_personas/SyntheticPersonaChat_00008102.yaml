@@ -1,0 +1,68 @@
+id: 00008102
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8102
+data:
+  user 1 personas: 'I would like to spend more time with my family.
+
+    I like spending time with friends playing sports and going to country concerts.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.
+
+    Unfortunately , my family lives across the country from me.'
+  user 2 personas: 'I listen to music for more than 5 hours a day.
+
+    I refuse to ride the bus.
+
+    My parents are both dead.
+
+    I find joy in the littlest things.
+
+    I never work more than 4 days in a row.'
+  Best Generated Conversation: 'User 1: It''s nice to meet you. I''m [user 1''s name]. What''s your name?
+
+    User 2: Hello. My name is [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I listen to music and find joy in the littlest things.
+
+    User 1: I love music too! What kind of music do you listen to?
+
+    User 2: I listen to a variety of music, but my favorite is country music.
+
+    User 1: I love country music too! Do you go to a lot of concerts?
+
+    User 2: I do, whenever I can. I love the energy and atmosphere of live music.
+
+    User 1: Me too! I''m actually going to a country concert next weekend.
+
+    User 2: That''s awesome! What artist are you seeing?
+
+    User 1: I''m seeing Brad Paisley.
+
+    User 2: I love Brad Paisley! He''s a great performer.
+
+    User 1: Me too! I''m really excited to see him.
+
+    User 2: Well, have fun at the concert!
+
+    User 1: Thanks! I will.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to spend time with friends, go to the movies, and play sports.
+
+    User 2: That sounds fun. I like to do those things too.
+
+    User 1: I''m glad. It sounds like we have a lot in common.
+
+    User 2: We do! I''m glad we met.
+
+    User 1: Me too. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

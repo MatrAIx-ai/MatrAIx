@@ -1,0 +1,58 @@
+id: 00004138
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4138
+data:
+  user 1 personas: 'I work some very odd jobs.
+
+    I enjoy going on hikes.
+
+    I am one of four children.
+
+    I have never traveled out of the country.
+
+    I was born under a blood moon.'
+  user 2 personas: 'My mother is allergic to dogs.
+
+    I leave the dogs home when i visit my parents.
+
+    I love dogs.
+
+    I have 2 dogs as pets.'
+  Best Generated Conversation: 'User 1: I love going on hikes! It''s so peaceful and relaxing.
+
+    User 2: I know right! I love getting out in nature and exploring.
+
+    User 1: I''ve never traveled out of the country, but I''d love to go on a hike in some other countries.
+
+    User 2: You should! There are so many beautiful places in the world to hike.
+
+    User 1: I know, I''m definitely on my bucket list!
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: What''s your favorite kind of hike?
+
+    User 1: I like to do easy hikes that are just long enough to get me some exercise and see some nice views.
+
+    User 2: Me too! I''m not very fit, so I don''t like to push myself too hard.
+
+    User 1: I know what you mean. I''m not in the best shape either, but I still enjoy hiking.
+
+    User 2: Me too! It''s a great way to get some fresh air and exercise.
+
+    User 1: Exactly! And it''s a great way to explore new places.
+
+    User 2: I know, right! I love finding new places to hike.
+
+    User 1: Me too! I''m always looking for new hiking trails to explore.
+
+    User 2: Me too! I''m sure we''ll find some great hikes together.
+
+    User 1: I''m sure we will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

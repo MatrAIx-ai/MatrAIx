@@ -1,0 +1,70 @@
+id: '00001652'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1652
+data:
+  user 1 personas: 'I like crocheting.
+
+    I am a woman.
+
+    I am married to a man.
+
+    I love cats.
+
+    I have five children.'
+  user 2 personas: 'I like gardening.
+
+    I live in a small city.
+
+    My children are mostly grown.
+
+    I have a cat named felix and a small terror names emmy.
+
+    I like to cook.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+
+    User 2: Hi, I''m [user 2''s name].
+
+
+    User 1: It''s nice to meet you.
+
+
+    User 2: You too.
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to garden, cook, and spend time with my cats.
+
+
+    User 1: I like to crochet, read, and spend time with my family.
+
+
+    User 2: That''s great! I love cats too. What''s your favorite breed?
+
+
+    User 1: I like all cats, but I especially love ragdolls.
+
+
+    User 2: I''ve never heard of a ragdoll cat. What''s it like?
+
+
+    User 1: They''re very gentle and loving. They''re also very big and fluffy.
+
+
+    User 2: They sound adorable! I might have to look into getting one.
+
+
+    User 1: I definitely recommend it. They''re the best pets.
+
+
+    User 2: Well, I''m glad we have something in common. I''m sure we''ll get along great.
+
+
+    User 1: I''m sure we will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

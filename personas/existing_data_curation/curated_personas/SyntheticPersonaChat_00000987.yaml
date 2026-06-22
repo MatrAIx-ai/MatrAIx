@@ -1,0 +1,72 @@
+id: 00000987
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 987
+data:
+  user 1 personas: 'I fly airplanes.
+
+    My favorite band is tool.
+
+    I am in the army.
+
+    I enjoy building computers.'
+  user 2 personas: 'My mom is the best baker in my family.
+
+    I am in my second year of medical school.
+
+    I am a hindu living in louisiana.
+
+    I have two children but i am divorced.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is Tool.
+
+    User 1: Me too! I love their music.
+
+    User 2: I know, right? They''re so good.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in the army.
+
+    User 1: Oh, cool! What''s that like?
+
+    User 2: It''s challenging, but it''s also rewarding.
+
+    User 1: I bet it is.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to build computers.
+
+    User 2: That''s cool! I''ve never built a computer before.
+
+    User 1: It''s fun. You should try it sometime.
+
+    User 2: I might do that.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to read, play video games, and hang out with my friends.
+
+    User 1: Me too! I like to do all of those things.
+
+    User 2: It''s good to have similar interests.
+
+    User 1: Yeah, it is.
+
+    User 2: It makes it easier to get along with someone.
+
+    User 1: I agree.
+
+    User 2: I''m glad we have similar interests.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

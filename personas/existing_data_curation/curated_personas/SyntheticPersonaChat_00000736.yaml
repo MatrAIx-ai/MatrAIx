@@ -1,0 +1,54 @@
+id: '00000736'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 736
+data:
+  user 1 personas: 'I like to shop.
+
+    I love shoes.
+
+    I like to dance.
+
+    I like burritos.'
+  user 2 personas: 'I enjoy fishing.
+
+    I have a dog named bob.
+
+    I live on an island.
+
+    I like to make boats on the weekends.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just relaxing. I''m on an island.
+
+    User 1: Oh, that''s cool! I''ve never been to an island before.
+
+    User 2: You should come visit! It''s beautiful here.
+
+    User 1: I might just do that! What do you like to do on the island?
+
+    User 2: I like to go fishing, hang out with my dog, and make boats.
+
+    User 1: Fishing sounds fun. I''ve never made a boat before, but I''d love to try it.
+
+    User 2: It''s not too hard! I can give you some pointers if you want.
+
+    User 1: That would be great! I''ll bring my swimsuit so we can go swimming after we''re done making boats.
+
+    User 2: Sounds like a plan!
+
+    User 1: Hey, it''s me again! I''m just wondering if you''re still free this weekend to go fishing.
+
+    User 2: Sure, I''d love to go fishing. What time do you want to meet?
+
+    User 1: I''m free all day, so we can make it work.
+
+    User 2: How about we meet at the marina at 10am?
+
+    User 1: That sounds perfect! See you then!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

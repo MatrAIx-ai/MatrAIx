@@ -1,0 +1,70 @@
+id: 00002790
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2790
+data:
+  user 1 personas: 'I have three children.
+
+    I live in the suburbs of a major city.
+
+    I am a teacher.
+
+    I like to garden.'
+  user 2 personas: 'I am a cashier at a grocery store.
+
+    I like to go swimming.
+
+    I have a garden in my yard.
+
+    I like to make fresh pies.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a cashier at a grocery store.
+
+    User 1: Oh, that must be interesting.
+
+    User 2: It can be, but it''s also a lot of work.
+
+    User 1: I bet. What do you like to do outside of work?
+
+    User 2: I like to go swimming, garden, and make fresh pies.
+
+    User 1: That sounds like a lot of fun. Do you grow anything in your garden?
+
+    User 2: Yes, I grow vegetables, herbs, and flowers.
+
+    User 1: That''s so cool. I''ve always wanted to grow my own food.
+
+    User 2: It''s not as hard as you think. It''s a lot of fun, and it''s really rewarding to see your hard work pay off.
+
+    User 1: I''ll have to give it a try. What''s your favorite thing to grow?
+
+    User 2: I love growing tomatoes. They''re so delicious and easy to grow.
+
+    User 1: I''ve always loved tomatoes. I''ll have to try growing some.
+
+    User 2: You won''t regret it. What''s your favorite kind of pie to make?
+
+    User 1: I love making apple pie. It''s so simple and delicious.
+
+    User 2: Apple pie is my favorite too! I love the smell of it baking in the oven.
+
+    User 1: Me too! It''s so cozy and homey.
+
+    User 2: I love that you''re so passionate about gardening and pie making. It''s so refreshing to meet someone who is so excited about their hobbies.
+
+    User 1: Thank you! I''m glad you find it refreshing. I love talking about my hobbies. They make me so happy.
+
+    User 2: I can tell! You''re so enthusiastic. It''s really nice to meet you, [name].
+
+    User 1: It''s nice to meet you too, [name]. I hope we can talk again soon.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

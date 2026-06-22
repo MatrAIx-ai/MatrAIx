@@ -1,0 +1,72 @@
+id: 00006829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6829
+data:
+  user 1 personas: 'I think beets are the best vegetable.
+
+    I am a paper salesman.
+
+    My favorite show is battlestar galactica.
+
+    My favorite animal is a bear.
+
+    I live on a beet farm.'
+  user 2 personas: 'I am a recruiter.
+
+    My favorite meal is brunch.
+
+    I do not own any pets.
+
+    My car is black.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. I''m a paper salesman. What do you do?
+
+    User 2: Hi, I''m [user 2 name]. I''m a recruiter.
+
+    User 1: Oh, that''s interesting. What''s your favorite meal?
+
+    User 2: My favorite meal is brunch. I love having eggs, pancakes, and bacon all at once.
+
+    User 1: That sounds delicious! I''m a big fan of beets. I think they''re the best vegetable.
+
+    User 2: I''ve never had beets before. What do they taste like?
+
+    User 1: They''re sweet and earthy. They''re also really good for you.
+
+    User 2: I''ll have to try them sometime. What''s your favorite show?
+
+    User 1: My favorite show is Battlestar Galactica. It''s a sci-fi show about a group of humans who are fleeing their home planet after it is destroyed.
+
+    User 2: That sounds cool. I''ve never seen it before.
+
+    User 1: You should check it out. It''s really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you like to do for fun?
+
+    User 2: I like to go to brunch with my friends, read, and go for walks.
+
+    User 1: Those sound like fun things to do. I like to go to the beach, read, and play video games.
+
+    User 2: I''ve never been to the beach before.
+
+    User 1: You should go! It''s really nice.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and supportive.
+
+    User 1: I think we''d get along well. I''m all of those things.
+
+    User 2: I think so too.
+
+    User 1: Well, I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

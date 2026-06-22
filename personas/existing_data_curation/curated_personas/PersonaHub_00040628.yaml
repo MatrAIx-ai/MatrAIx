@@ -1,0 +1,18 @@
+id: 00040628
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40628
+persona_description: A scientist working for the Agricultural Research Service (ARS), specifically in the field of plant pathology and weed management. This persona is involved in research on bioherbicides,
+  focusing on the use of weak or nonvirulent fungi and oil emulsions to control broad-leaved weeds. They have expertise in saprophytic fungi, plant nutrition, and plant disease management. This persona
+  is interested in developing nature-based alternatives to conventional chemical controls and mitigating the risks associated with applying herbicides, such as drift and groundwater contamination.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: plant pathology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bioherbicides
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,54 @@
+id: 00001448
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1448
+data:
+  user 1 personas: 'My dad was a cop.
+
+    I am tall.
+
+    I spend my free time volunteering at nursing homes.
+
+    I like to water ski.
+
+    My favorite color is red.'
+  user 2 personas: 'I like to garden.
+
+    I make my own soap.
+
+    I make my own compost.
+
+    I have my own greenhouse.
+
+    I am a fruitarian.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to garden, make my own soap, make my own compost, and have my own greenhouse.
+
+    User 1: Oh, that''s cool! I''ve never been much of a gardener myself, but I think it''s a great hobby.
+
+    User 2: Yeah, it''s really relaxing and rewarding. I love being able to grow my own food and use it in my kitchen.
+
+    User 1: That''s awesome! I''m sure your food tastes amazing.
+
+    User 2: Thanks! It really does. I also love being able to control the ingredients in my food. I know exactly what''s going into it, so I can feel good about eating it.
+
+    User 1: That''s a great point. I''m trying to eat healthier, so maybe I should start gardening.
+
+    User 2: It''s definitely a good way to eat healthier. You can control the amount of pesticides and chemicals that go into your food.
+
+    User 1: That''s a good point. I''ll have to look into getting started.
+
+    User 2: There are a lot of great resources online. You can also find local gardening groups that can help you get started.
+
+    User 1: Thanks for the advice! I''m excited to get started.
+
+    User 2: You''re welcome! I''m sure you''ll have a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

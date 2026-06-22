@@ -1,0 +1,17 @@
+id: 00008250
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8250
+persona_description: A doctor who is concerned about the accuracy of blood pressure readings and wants to provide their patients with the most accurate information possible. They are also interested in
+  learning more about the latest research in the field of medicine and are open to new and innovative approaches to healthcare.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

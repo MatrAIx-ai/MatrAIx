@@ -1,0 +1,72 @@
+id: '00007270'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7270
+data:
+  user 1 personas: 'My major is in business administration.
+
+    My dad is a dentist and my mom is a teacher.
+
+    I am a college student.
+
+    I work at a daycare.'
+  user 2 personas: 'I like to watch movies.
+
+    I like to do crafts.
+
+    I like all types of music.
+
+    I like to draw.
+
+    I am a mother of 5.'
+  Best Generated Conversation: 'User 1: Hi, my name is [your name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch movies, do crafts, and listen to music.
+
+    User 1: I like to watch movies too! What''s your favorite movie?
+
+    User 2: I''m not sure I have a favorite movie, but I really like The Shawshank Redemption.
+
+    User 1: That''s a good movie! I''ve seen it a few times.
+
+    User 2: What do you like to do for work?
+
+    User 1: I''m a college student majoring in business administration. I also work at a daycare.
+
+    User 2: That''s cool! I''m a mother of five.
+
+    User 1: Oh wow, that must be a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I can imagine. So, what do you like to do with your kids?
+
+    User 2: We like to go to the park, play games, and read books together.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I''m glad I have them.
+
+    User 1: I''m glad too.
+
+    User 2: So, what do you want to do for the rest of the day?
+
+    User 1: I''m not sure. What do you want to do?
+
+    User 2: I don''t know. We could watch a movie or go for a walk.
+
+    User 1: I think I''d like to go for a walk.
+
+    User 2: That sounds good. We can go to the park.
+
+    User 1: Great! I''ll meet you there.
+
+    User 2: Okay, see you there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

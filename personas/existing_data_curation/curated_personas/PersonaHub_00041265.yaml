@@ -1,0 +1,19 @@
+id: '00041265'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41265
+persona_description: A scientist working on developing a rapid and accurate COVID-19 diagnostic test, specifically focusing on the development of a test that can detect the presence of antibodies against
+  the new coronavirus, with the goal of providing reliable estimates of infection and fatality rates. This scientist has expertise in immunology, virology, and molecular biology, and is collaborating with
+  other scientists to build a library of epitopes derived from the surface proteins of the new coronavirus. The scientist is also interested in using VirScan to inform vaccine development, identifying which
+  epitopes are useful targets against the new coronavirus and which are just noise.
+expertise:
+  general_domain_top1pct: biomedical research
+  specific_domain_top1pct: virology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

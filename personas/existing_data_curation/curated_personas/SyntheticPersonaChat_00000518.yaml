@@ -1,0 +1,72 @@
+id: 00000518
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 518
+data:
+  user 1 personas: 'I love my dog.
+
+    I enjoy walking around the park.
+
+    Wedding cakes are my specialty.
+
+    I like baking.'
+  user 2 personas: 'Nachos are my favorite food.
+
+    I should beverage been born a prince.
+
+    I play d and d.
+
+    I hate talking to people.
+
+    I believe dragons are real.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: I''m (user 1 name).
+
+    User 2: I''m (user 2 name).
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play D&D, watch movies, and eat nachos.
+
+    User 1: Oh, I love D&D! What''s your favorite class?
+
+    User 2: I''m a big fan of the barbarian class. I love the idea of being a big, strong warrior who can smash things.
+
+    User 1: That''s a great class! I''m a big fan of the ranger class. I love the idea of being able to track and hunt down my enemies.
+
+    User 2: Rangers are a great class too! They''re really versatile and can do a lot of different things.
+
+    User 1: Yeah, I love their versatility. What''s your favorite movie?
+
+    User 2: I''m a big fan of the Lord of the Rings trilogy. I love the story, the characters, and the world that Tolkien created.
+
+    User 1: Oh, I love the Lord of the Rings too! I read the books when I was younger and I''ve seen the movies multiple times.
+
+    User 2: I''m glad to hear that! The Lord of the Rings is one of my favorite fantasy series of all time.
+
+    User 1: Me too! What''s your favorite nacho topping?
+
+    User 2: I''m a big fan of cheese, sour cream, and guacamole.
+
+    User 1: I love those toppings too! I also like to add some salsa and bacon.
+
+    User 2: That sounds delicious! I''m going to have to try that next time I make nachos.
+
+    User 1: You won''t regret it!
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! It was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

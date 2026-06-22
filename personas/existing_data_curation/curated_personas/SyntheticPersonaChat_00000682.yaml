@@ -1,0 +1,58 @@
+id: 00000682
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 682
+data:
+  user 1 personas: 'I like to cook.
+
+    I have two dogs.
+
+    I live on the third floor in an apartment.
+
+    I am scared of clowns.'
+  user 2 personas: 'I work many hours rehearsing for my show.
+
+    My favorite food is hamburgers.
+
+    I like movies based on comedies.
+
+    My parents passed away in a car accident.
+
+    I am a ballet dancer.'
+  Best Generated Conversation: 'User 1: Hi there, what do you do for a living?
+
+    User 2: I''m a ballet dancer, I love it, but I also work many hours rehearsing for my show.
+
+    User 1: That sounds like a lot of hard work, but it''s also very impressive.
+
+    User 2: Thanks, I love it, but it''s also hard to find time for other things, like hobbies.
+
+    User 1: What are some of your hobbies?
+
+    User 2: I like to cook, but I''m not very good at it, I also like to watch movies, but I''m not very picky about what I watch.
+
+    User 1: That''s cool, I like to cook too, but I''m not very good at it either. I also like to watch movies, but I like comedies the best.
+
+    User 2: I like comedies too, but I also like dramas sometimes.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Princess Bride.
+
+    User 1: That''s a good movie, I''ve seen it a few times.
+
+    User 2: Me too, it''s always fun to watch.
+
+    User 1: I like the part where the giant breaks down the door and says, "Hello, my name is Inigo Montoya. You killed my father. Prepare to die."
+
+    User 2: That''s a great part, I love that movie.
+
+    User 1: Me too, it''s one of my favorites.
+
+    User 2: It''s nice to meet someone who likes the same movies as me.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

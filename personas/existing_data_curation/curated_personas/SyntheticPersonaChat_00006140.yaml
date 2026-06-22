@@ -1,0 +1,60 @@
+id: '00006140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6140
+data:
+  user 1 personas: 'My favorite movie is dirty harry.
+
+    I want to learn how to fly an airplane.
+
+    I collect stamps.
+
+    I am a mortician.'
+  user 2 personas: 'I love laughing.
+
+    I have freckles.
+
+    I like to bake brownies.
+
+    My best friend is from tanzania.
+
+    I love wearing flip flops.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your favorite movie?
+
+    User 2: I love watching comedies, so my favorite movie is probably Airplane!
+
+    User 1: I''ve never seen it. Is it good?
+
+    User 2: It''s hilarious! It''s about a pilot who has a heart attack mid-flight, and his co-pilot, who is also a nervous wreck, has to take over.
+
+    User 1: That sounds like a fun movie. I''ll have to check it out.
+
+    User 2: You should! What do you like to do for fun?
+
+    User 1: I love to collect stamps. I have a huge collection of stamps from all over the world.
+
+    User 2: That''s really cool! I''ve never been a big collector, but I think stamps are really neat.
+
+    User 1: They are! I love learning about the different countries and cultures that are represented in my collection.
+
+    User 2: That''s a great way to learn about the world.
+
+    User 1: It is! I also love to bake brownies. I''m not a very good cook, but I can make a mean brownie.
+
+    User 2: I love brownies! I''m not a very good cook either, but I can make some pretty good cookies.
+
+    User 1: I love cookies! We should have a bake-off sometime.
+
+    User 2: That would be fun! I''m sure we could come up with some delicious treats.
+
+    User 1: I''m looking forward to it!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

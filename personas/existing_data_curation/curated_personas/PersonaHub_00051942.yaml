@@ -1,0 +1,18 @@
+id: 00051942
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51942
+persona_description: A scientist with expertise in atmospheric science, specifically focused on studying weather patterns and their dynamics. They have a keen interest in the Great Red Spot on Jupiter,
+  which is a hurricane-like weather pattern that has been observed continuously since the 1800s and is now shrinking at an alarming rate. They are dedicated to understanding the causes of this phenomenon
+  and how it has persisted for centuries, which has led them to conduct extensive research using mathematical models and observations from the Hubble telescope.
+expertise:
+  general_domain_top1pct: atmospheric science
+  specific_domain_top1pct: atmospheric dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

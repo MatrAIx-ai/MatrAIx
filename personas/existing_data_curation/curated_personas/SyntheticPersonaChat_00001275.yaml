@@ -1,0 +1,70 @@
+id: '00001275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1275
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I go to the pool every thursday for three hours.
+
+    I don t have children.
+
+    I do yoga on tuesdays.'
+  user 2 personas: 'I am obsessed with my dog.
+
+    I love trips to the beach.
+
+    I m in my last year of grad school.
+
+    I m the world s best aunt.'
+  Best Generated Conversation: 'User 1: Hi! What''s up?
+
+    User 2: Hey, not much. Just enjoying a day off from grad school.
+
+    User 1: Nice! I''m going to the pool in a few minutes.
+
+    User 2: Oh, that sounds fun! I love going to the pool.
+
+    User 1: Me too! I go every Thursday for three hours.
+
+    User 2: Wow, that''s a lot! Do you do anything else for exercise?
+
+    User 1: Yeah, I do yoga on Tuesdays.
+
+    User 2: Oh, that''s cool! I''ve always wanted to try yoga.
+
+    User 1: You should! It''s really good for you.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what''s your dog''s name?
+
+    User 2: His name is Cooper. He''s a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so sweet.
+
+    User 2: Cooper is the sweetest dog ever. He''s so friendly and gentle.
+
+    User 1: I bet he''s a great companion.
+
+    User 2: He is! I love him so much.
+
+    User 1: So, what''s your favorite thing about grad school?
+
+    User 2: My favorite thing is the research. I love learning new things and working on new projects.
+
+    User 1: That sounds really cool! What are you studying?
+
+    User 2: I''m studying environmental engineering. I''m working on a project to develop a new way to filter water from rivers and streams.
+
+    User 1: That''s awesome! I''m sure you''re doing great work.
+
+    User 2: Thanks! I''m trying my best.
+
+    User 1: Well, it sounds like you''re having a great time. I''m glad to hear it.
+
+    User 2: Thanks! I am.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

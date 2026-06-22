@@ -1,0 +1,72 @@
+id: '00004052'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4052
+data:
+  user 1 personas: 'I love collecting teapots.
+
+    My grandmother lives in my guesthouse.
+
+    I ve been divorced for 2 years.
+
+    I m a cat person.'
+  user 2 personas: 'I have depression and anxiety so i don t really go out a lot.
+
+    I hope to move out soon.
+
+    I have a cat.
+
+    I live at home with my dad and brother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: I see you have a cat.
+
+    User 2: Yes, I do. Her name is Mittens.
+
+    User 1: She''s beautiful.
+
+    User 2: Thank you.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, bake, and play video games.
+
+    User 1: Those all sound like fun activities. I also like to read and bake.
+
+    User 2: That''s great! What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and fantasy.
+
+    User 2: I love historical fiction too! What''s your favorite book?
+
+    User 1: My favorite book is Pillars of the Earth by Ken Follett. It''s a historical novel set in the 12th century.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: It''s a great read. I highly recommend it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome.
+
+    User 2: So, what''s your favorite video game?
+
+    User 1: My favorite video game is The Legend of Zelda: Breath of the Wild. It''s a beautiful open-world game with a lot of exploration and adventure.
+
+    User 2: I''ve heard good things about that game. I''ll have to check it out.
+
+    User 1: It''s a great game. I highly recommend it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

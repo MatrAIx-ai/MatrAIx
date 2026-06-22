@@ -1,0 +1,46 @@
+id: 00008897
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8897
+data:
+  user 1 personas: 'I m a night owl , but i m an introvert so i don t go out much or anything.
+
+    I own a pug , and he s the most loyal pet you ll ever have.
+
+    I like playing ultimate in the park with my guys sometimes.
+
+    I live in new york and i love the local shops around here.
+
+    I m a graduate student studying law.'
+  user 2 personas: 'My wife and i enjoy long sunday drives.
+
+    I have a very tone body.
+
+    I have a collection of video games.
+
+    My son is a straight a student.'
+  Best Generated Conversation: 'User 1: I''m an introvert, but I love to play ultimate in the park with my guys sometimes.
+
+    User 2: I''m an extrovert, but I enjoy long sunday drives with my wife.
+
+    User 1: That''s cool! My pug is the most loyal pet you''ll ever have.
+
+    User 2: I have a son who is a straight A student.
+
+    User 1: That''s amazing! I''m a graduate student studying law.
+
+    User 2: I have a collection of video games.
+
+    User 1: That''s cool! I love playing video games too.
+
+    User 2: We should hang out sometime!
+
+    User 1: That sounds like fun! I''m free on Sunday.
+
+    User 2: Great! We can go for a long drive and play some video games.
+
+    User 1: Sounds like a plan! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

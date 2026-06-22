@@ -1,0 +1,51 @@
+id: '00000520'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 520
+data:
+  user 1 personas: 'I love my job.
+
+    I love all animals.
+
+    I am a vegan.
+
+    I used to work as an actress.
+
+    My favorite music is country.'
+  user 2 personas: 'Playing quake on slackware linux makes me happy.
+
+    I have three dogs and two cats.
+
+    I live in chicago.
+
+    I like to use a lot of exclamation marks when i type.
+
+    Both my moms tell me they love me when i call them.'
+  Best Generated Conversation: 'User 1: Hi, my name is Alice. I love my job, I love all animals, I am a vegan, I used to work as an actress, and my favorite music is country.
+
+    User 2: Hello Alice, my name is Bob. I love playing quake on slackware linux, I have three dogs and two cats, I live in Chicago, I like to use a lot of exclamation marks when I type, and both my moms
+    tell me they love me when I call them.
+
+    User 1: It''s nice to meet you, Bob. What''s your favorite thing about playing Quake on Slackware Linux?
+
+    User 2: I love the sense of community and the challenge. It''s a lot of fun to work together with other players to try to win the game.
+
+    User 1: That sounds really cool. I''ve never played Quake before, but it sounds like it''s a lot of fun.
+
+    User 2: It is! You should definitely give it a try.
+
+    User 1: I will. Thanks for the recommendation, Bob.
+
+    User 2: No problem. What do you like to do for fun, Alice?
+
+    User 1: I love animals, so I spend a lot of time volunteering at my local animal shelter. I also love music, so I like to go to concerts and listen to music in my free time.
+
+    User 2: That sounds like a lot of fun. I love animals too, so I''m sure I would enjoy volunteering at an animal shelter. I also love music, so I would enjoy going to concerts with you.
+
+    User 1: That would be great! We should get together sometime and go to a concert.
+
+    User 2: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

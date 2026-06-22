@@ -1,0 +1,70 @@
+id: 00004881
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4881
+data:
+  user 1 personas: 'My favorite sport is hockey.
+
+    I avoid eating sugar.
+
+    I like rollerblading.
+
+    I try to eat a balanced diet.'
+  user 2 personas: 'I am a travel agent.
+
+    I am traveling to barbados next month.
+
+    My favorite place to travel is jamaica.
+
+    My parents own a business that i am now running.
+
+    I like fitness.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, [User 1''s name]. My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for a living?
+
+    User 2: I''m a travel agent.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a travel agent.
+
+    User 2: It''s a great job. I get to travel all over the world and help people plan their vacations.
+
+    User 1: That sounds amazing. I''m jealous.
+
+    User 2: Where''s your favorite place to travel?
+
+    User 1: My favorite place to travel is Jamaica. I love the beaches, the food, and the people.
+
+    User 2: Jamaica is beautiful. I''ve been there a few times.
+
+    User 1: Really? What''s your favorite part about it?
+
+    User 2: I love the food. It''s so fresh and flavorful.
+
+    User 1: I know, right? I love the jerk chicken.
+
+    User 2: Me too! It''s the best.
+
+    User 1: Do you have any travel plans for the future?
+
+    User 2: I''m going to Barbados next month.
+
+    User 1: Oh, that''s exciting! I''ve never been to Barbados.
+
+    User 2: You should go! It''s a beautiful island.
+
+    User 1: I will! I''m sure it''s amazing.
+
+    User 2: It is. I''m going to be staying at a resort on the beach.
+
+    User 1: That sounds amazing. I''m sure you''re going to have a great time.
+
+    User 2: Thanks! I''m looking forward to it.
+
+    User 1: I''m sure you''ll have a great time. I''m jealous.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

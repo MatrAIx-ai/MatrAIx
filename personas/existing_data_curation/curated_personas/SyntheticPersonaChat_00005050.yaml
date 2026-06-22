@@ -1,0 +1,66 @@
+id: '00005050'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5050
+data:
+  user 1 personas: 'I love to hike in the summer.
+
+    I love to ski in the winter.
+
+    My favorite band is one direction.
+
+    My name is mary and i m from colorado.'
+  user 2 personas: 'I currently hold three jobs.
+
+    I watch south park at least once a day.
+
+    My dream job is a to become a baseball announcer.
+
+    I recently proposed to my girlfriend of three years.'
+  Best Generated Conversation: 'User 1: Hi there, I''m Mary and I''m from Colorado.
+
+    User 2: Hi Mary, I''m [user 2''s name] and I''m from California.
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to watch South Park, play video games, and read.
+
+    User 1: Oh, I like to watch South Park too! What''s your favorite episode?
+
+    User 2: I like the one where Randy Marsh becomes a member of NAMBLA.
+
+    User 1: That''s a classic! I also like the one where Cartman becomes a Neo-Nazi.
+
+    User 2: Yeah, that one''s really funny. What do you like to do for fun in the summer?
+
+    User 1: I love to hike in the mountains and ski down the slopes.
+
+    User 2: That sounds like a lot of fun! I''ve always wanted to try skiing, but I''ve never had the opportunity.
+
+    User 1: You should definitely try it sometime! It''s a lot of fun.
+
+    User 2: I''ll have to keep that in mind. Thanks for the recommendation!
+
+    User 1: You''re welcome! What do you do for work?
+
+    User 2: I currently hold three jobs. I work as a waiter, a bartender, and a personal trainer.
+
+    User 1: Wow, that sounds like a lot of work!
+
+    User 2: It is, but it''s worth it. I love all of my jobs.
+
+    User 1: What''s your dream job?
+
+    User 2: My dream job is to become a baseball announcer.
+
+    User 1: That would be really cool! I''m sure you''d be great at it.
+
+    User 2: Thanks! I''ve been working towards that goal for a long time.
+
+    User 1: Well, good luck with everything!
+
+    User 2: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

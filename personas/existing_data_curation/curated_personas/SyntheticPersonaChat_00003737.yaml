@@ -1,0 +1,52 @@
+id: '00003737'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3737
+data:
+  user 1 personas: 'I love to paint pictures.
+
+    My favorite food is pizza.
+
+    I love meat.
+
+    My wife use to be a teacher.'
+  user 2 personas: 'I love adventures like mountain climbing.
+
+    But i m a frustrated driver.
+
+    I am a mother of 2 daughters.
+
+    My husband works at a telecom.
+
+    I m a people person.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go on adventures, like hiking and climbing.
+
+    User 1: Me too! I love the feeling of being outside and exploring new places.
+
+    User 2: Me too! It''s so much fun to challenge yourself and see what you''re capable of.
+
+    User 1: I agree! I love the feeling of accomplishment when you reach the top of a mountain or hike a new trail.
+
+    User 2: Me too! It''s a great feeling to be able to say that you did something that you thought was impossible.
+
+    User 1: I know what you mean! I''m always looking for new adventures to try.
+
+    User 2: Me too! I''m always up for trying something new.
+
+    User 1: Maybe we should go on an adventure together sometime.
+
+    User 2: That would be fun! I''d love to explore new places with you.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

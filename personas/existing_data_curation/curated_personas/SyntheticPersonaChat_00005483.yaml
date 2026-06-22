@@ -1,0 +1,82 @@
+id: 00005483
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5483
+data:
+  user 1 personas: 'I am a fan of system of a down.
+
+    I am a vegan.
+
+    I own 9 guitars.
+
+    I learned piano at age 6.
+
+    I am trying to play in a local band.'
+  user 2 personas: 'I study philosophy at umass.
+
+    My eyes are brown.
+
+    I love going to concerts.
+
+    I m a vegan.
+
+    I have a tattoo of an angel on my hip.'
+  Best Generated Conversation: 'User 1: Hi! My name is (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to concerts.
+
+    User 1: Me too! What kind of music do you like?
+
+    User 2: I like all kinds of music, but I''m a big fan of System of a Down.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: I can''t pick just one! But I really like "B.Y.O.B." and "Toxicity."
+
+    User 2: Those are both great songs!
+
+    User 1: So, what are you studying at Umass?
+
+    User 2: I''m studying philosophy.
+
+    User 1: Oh, that''s cool! I''m not very good at philosophy, but I find it really interesting.
+
+    User 2: It''s a lot of fun! It''s always challenging, but it''s also really rewarding.
+
+    User 1: So, what are your plans after college?
+
+    User 2: I''m not sure yet. I''m thinking about going to graduate school, but I''m not sure what I want to specialize in.
+
+    User 1: Well, I''m sure you''ll figure it out. You seem like a smart person.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your favorite thing about Umass?
+
+    User 2: I like the campus. It''s really beautiful and there''s always something going on.
+
+    User 1: I agree! It''s a great place to be.
+
+    User 2: So, are you from Massachusetts?
+
+    User 1: No, I''m from California.
+
+    User 2: Oh, cool! How do you like it here?
+
+    User 1: I like it a lot! It''s really different from California, but I''m enjoying the change.
+
+    User 2: I''m glad! So, what''s your favorite thing about Massachusetts?
+
+    User 1: I like the seasons. It''s nice to have a change of pace from the weather in California.
+
+    User 2: Yeah, that''s one of the things I like about it too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

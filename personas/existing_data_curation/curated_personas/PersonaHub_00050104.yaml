@@ -1,0 +1,18 @@
+id: '00050104'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50104
+persona_description: A researcher or scientist with expertise in artificial neural networks (ANNs), particularly in the field of image processing and machine learning. The individual has experience working
+  with large datasets, such as the Sloan Digital Sky Survey, to analyze and improve the generalization ability of ANNs. They are interested in developing methods to detect and remove outliers from ANNs
+  to maintain the true generalization of the data. The persona is likely to read and analyze scientific papers, reports, and data sets related to ANN research and image processing.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: machine learning
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

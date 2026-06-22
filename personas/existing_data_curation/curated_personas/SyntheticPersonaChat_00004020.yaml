@@ -1,0 +1,62 @@
+id: '00004020'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4020
+data:
+  user 1 personas: 'I like to build furniture.
+
+    My father is a retired police officer.
+
+    I have been held hostage in a store robbery situation.
+
+    I have bowled a 300 game twice in my life.'
+  user 2 personas: 'I have blonde hair.
+
+    I aspire to paint murals.
+
+    My favorite class is painting.
+
+    I like to work with acrylics.
+
+    I am in art school.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name]. What do you do for fun?
+
+    User 1: I like to build furniture, bowl, and spend time with my family. What about you?
+
+    User 2: I like to paint murals, work with acrylics, and go to art school.
+
+    User 1: That''s cool! I''ve never tried painting a mural before.
+
+    User 2: It''s really fun! I love being able to create something big and beautiful.
+
+    User 1: I can imagine. Do you have any of your murals online?
+
+    User 2: Yes, I do! I''ll send you a link.
+
+    User 1: Awesome! I''ll check it out.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a carpenter. I build furniture and other wood items.
+
+    User 2: That''s great! I''ve always wanted to learn how to build furniture.
+
+    User 1: It''s not too hard! If you''re interested, I could teach you a few things.
+
+    User 2: That would be awesome! I''d love to learn.
+
+    User 1: Great! We could meet up at my shop sometime and I can show you the basics.
+
+    User 2: That sounds perfect! I''m free this weekend.
+
+    User 1: Okay, cool! I''ll send you a message with the details.
+
+    User 2: Great! See you then!
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

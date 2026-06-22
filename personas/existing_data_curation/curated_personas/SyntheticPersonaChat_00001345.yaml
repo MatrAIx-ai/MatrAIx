@@ -1,0 +1,90 @@
+id: '00001345'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1345
+data:
+  user 1 personas: 'I love chocolate.
+
+    I love walking in the park.
+
+    I am an avid fan of the boston celtics.
+
+    I work for a small , family owned restaurant.
+
+    I have six older sisters.'
+  user 2 personas: 'I have a missing pinky toe.
+
+    I do not like green eggs and ham.
+
+    I love cooking.
+
+    I enjoy swimming.
+
+    I have 4 dogs.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you! My name is [user 1''s name].
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love cooking, swimming, and spending time with my dogs.
+
+    User 1: That sounds like a lot of fun! I love cooking too. I''m not so good at swimming, but I enjoy it.
+
+    User 2: I have four dogs, a Golden Retriever, a Poodle, a Beagle, and a Chihuahua.
+
+    User 1: I love dogs! They''re so cute and cuddly.
+
+    User 2: They are! I love spending time with them.
+
+    User 1: I''m not so sure about green eggs and ham. I''ve never tried them, but I''m not sure I''d like them.
+
+    User 2: I don''t like them either. They''re too sweet for me.
+
+    User 1: What are some of your favorite foods?
+
+    User 2: I love pasta, pizza, and chicken.
+
+    User 1: Those are all great foods! I love them too.
+
+    User 2: I also love chocolate. It''s my favorite food.
+
+    User 1: Me too! I love chocolate. I could eat it all day long.
+
+    User 2: I know what you mean! It''s so delicious.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a chef at a small, family-owned restaurant.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a chef.
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I can imagine! I''m sure it''s very rewarding.
+
+    User 2: It is! I love making people happy with my food.
+
+    User 1: That''s a great way to look at it.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go swimming with my dogs.
+
+    User 1: That sounds like a lot of fun! I hope you have a great time.
+
+    User 2: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

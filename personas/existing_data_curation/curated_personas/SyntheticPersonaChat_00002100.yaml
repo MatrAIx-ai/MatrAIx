@@ -1,0 +1,62 @@
+id: '00002100'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2100
+data:
+  user 1 personas: 'I am a truck driver.
+
+    I spend my weekends camping.
+
+    My favorite hobby is playing recreational baseball.
+
+    My wife and two kids camp with me.
+
+    I deliver baked goods in the state where i live.'
+  user 2 personas: 'I love to play soccer.
+
+    My favorite movies are disney movies.
+
+    I work as a waitress.
+
+    I am an insatiable reader.
+
+    I live with my parents.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I like to play soccer, and I''m an insatiable reader.
+
+    User 1: That''s cool! I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read a lot of different kinds of books, but I''m a big fan of Disney movies.
+
+    User 1: I love Disney movies too! I''m a big fan of Mulan.
+
+    User 2: Mulan is a great movie! I also love The Lion King.
+
+    User 1: The Lion King is a classic! What do you like about Disney movies?
+
+    User 2: I love the way they make me feel. They''re always so uplifting and inspiring.
+
+    User 1: I agree! Disney movies are great for any age.
+
+    User 2: What''s your favorite Disney movie?
+
+    User 1: My favorite Disney movie is The Lion King. I love the characters, the story, and the music.
+
+    User 2: The Lion King is a great movie! I love the characters, the story, and the music.
+
+    User 1: What do you like about it?
+
+    User 2: I love the way the characters are so relatable. You can see yourself in them, and you can learn from their mistakes.
+
+    User 1: I agree! I also love the way the story is so inspiring. It''s about finding your true self and overcoming obstacles.
+
+    User 2: The Lion King is a great movie for anyone who needs a little inspiration.
+
+    User 1: It sure is! I''m glad we agree.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

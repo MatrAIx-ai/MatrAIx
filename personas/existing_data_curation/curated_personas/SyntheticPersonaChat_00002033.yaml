@@ -1,0 +1,58 @@
+id: '00002033'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2033
+data:
+  user 1 personas: 'I play quarterback.
+
+    Last season i was just getting started.
+
+    This season , i will become a playoff quarterback.
+
+    I play for the philadelphia eagles.
+
+    This is my second year in the league.'
+  user 2 personas: 'I like watching videos of surgery.
+
+    I enjoy playing with edged weapons.
+
+    Traveling and making friends is something i find delightful.
+
+    My favorite ice cream is pistachio.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, I''m [name]. What''s yours?
+
+    User 1: I''m [name]. I''m a quarterback for the Philadelphia Eagles.
+
+    User 2: Oh, cool! What''s it like to play in the NFL?
+
+    User 1: It''s a lot of fun, but it''s also a lot of work. I have to practice all the time to stay in shape and to learn the playbook.
+
+    User 2: That sounds like a lot of pressure.
+
+    User 1: It can be, but it''s also really rewarding. I love being able to play the game I love for a living.
+
+    User 2: What are your goals for this season?
+
+    User 1: My goal is to make the playoffs. We have a great team this year, and I think we have a real chance to win it all.
+
+    User 2: That''s awesome! I''m rooting for you!
+
+    User 1: Thanks! I appreciate it.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to travel. I''ve been to a lot of different countries, and I''m always looking for new places to explore.
+
+    User 2: That sounds like a lot of fun. I''ve only been to a few countries, but I''d love to travel more.
+
+    User 1: It''s definitely worth it. There''s so much to see and do in the world.
+
+    User 2: I agree. I''m looking forward to traveling more in the future.
+
+    User 1: Me too. It''s one of the best things in life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

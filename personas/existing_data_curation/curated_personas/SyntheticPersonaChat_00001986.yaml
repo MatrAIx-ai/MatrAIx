@@ -1,0 +1,66 @@
+id: 00001986
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1986
+data:
+  user 1 personas: 'I love comic books.
+
+    I want to grow up to be a superhero one day.
+
+    My favorite hero is superman.
+
+    My name is todd.'
+  user 2 personas: 'I like wide , open spaces.
+
+    I have 10 alpacas.
+
+    I only eat locally sourced food.
+
+    I am active on my city council.
+
+    I own a home with 5 acres of land.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just relaxing in my home.
+
+    User 1: Nice. I''m Todd.
+
+    User 2: Hi Todd, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to spend time outdoors, I have 10 alpacas and I love taking care of them.
+
+    User 1: That''s cool. I like comic books and video games.
+
+    User 2: Oh, I used to be really into video games when I was younger.
+
+    User 1: Really? What was your favorite game?
+
+    User 2: I loved playing Super Mario Bros.
+
+    User 1: That''s a classic!
+
+    User 2: Yeah, I still have it for my old Nintendo.
+
+    User 1: That''s awesome. I have a bunch of old video games too.
+
+    User 2: Cool, we should trade some games sometime.
+
+    User 1: Yeah, that would be fun.
+
+    User 2: I''m also really into politics, I''m active on my city council.
+
+    User 1: Oh, that''s cool. I''m not really into politics, but I do like to read about it sometimes.
+
+    User 2: I think it''s important to be involved in politics, it''s how we make our voices heard.
+
+    User 1: I agree, it''s important to have a say in how our government is run.
+
+    User 2: Yeah, I think we''re going to get along great.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,73 @@
+id: '00006542'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6542
+data:
+  user 1 personas: 'My husband is the ceo of taco bell.
+
+    I am next in line to become queen of england.
+
+    My favorite color is blue.
+
+    Madonna is my sister.
+
+    I have five cats.'
+  user 2 personas: 'I am considered a nerd by many.
+
+    I love computers.
+
+    I am very good at math and science.
+
+    I started working at google last week on self driving car research.
+
+    I i love logical and rational thinking.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+
+    User 2: Hi, I''m [user 2].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a computer scientist working on self-driving car research at Google.
+
+
+    User 1: That''s so cool! I''m a huge fan of self-driving cars.
+
+
+    User 2: Thanks! They''re really exciting technology.
+
+
+    User 1: So, how did you get into computer science?
+
+
+    User 2: I''ve always loved computers and math. I was the kind of kid who took apart his computer to see how it worked.
+
+
+    User 1: Me too! I used to build computers with my dad when I was a kid.
+
+
+    User 2: That''s awesome! I''m glad to hear there are other people who are passionate about computers.
+
+
+    User 1: Me too! It''s a great field.
+
+
+    User 2: I agree. It''s so rewarding to be able to use computers to solve real-world problems.
+
+
+    User 1: I know what you mean. I love being able to use my skills to make a difference in the world.
+
+
+    User 2: Me too! That''s why I love working at Google. We''re constantly working on new ways to use technology to make people''s lives better.
+
+
+    User 1: That''s so cool! I''m really glad to be working with you.
+
+
+    User 2: Me too! I think we''re going to do great things together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

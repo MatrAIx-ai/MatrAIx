@@ -1,0 +1,18 @@
+id: 00028807
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28807
+persona_description: A high-level FPGA designer who is interested in micro-sequencer-based microprocessors, particularly those with low FPGA lookup table (LUT) utilization. This persona is likely to be
+  familiar with the MCL86 and MCL51 processors, and is interested in the benefits of micro-sequencer-based processors in terms of smaller footprint and lower power consumption. This persona may also be
+  interested in the comparison between micro-sequencer-based processors and traditional logic-based processors, and may be looking for solutions with the smallest footprint and lowest power consumption.
+expertise:
+  general_domain_top1pct: electronics
+  specific_domain_top1pct: FPGA design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

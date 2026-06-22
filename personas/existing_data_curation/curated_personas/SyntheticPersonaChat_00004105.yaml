@@ -1,0 +1,74 @@
+id: '00004105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4105
+data:
+  user 1 personas: 'I smell like french fries.
+
+    I also eat too much french fries.
+
+    It was too small.
+
+    I just got a new sweater.'
+  user 2 personas: 'I prefer eating at home because people make me nervous.
+
+    I like running in marathons.
+
+    My dad owns a appliance store that i don t want to inherit.
+
+    I spend a lot of time watching obscure foreign film on netflix.'
+  Best Generated Conversation: 'User 1: I just got a new sweater!
+
+    User 2: Oh, nice! What kind of sweater?
+
+    User 1: It''s a black and white striped sweater.
+
+    User 2: Ooh, that sounds cute!
+
+    User 1: Thanks! I got it from my favorite store.
+
+    User 2: I love shopping at small stores.
+
+    User 1: Me too! It''s so much better than shopping at big box stores.
+
+    User 2: Yeah, I agree. The atmosphere is so much more friendly.
+
+    User 1: Exactly! And you''re more likely to find unique items.
+
+    User 2: That''s true! I love finding things that no one else has.
+
+    User 1: Me too! It''s so much fun to have a unique style.
+
+    User 2: I agree! So, what else do you like to do?
+
+    User 1: I love to run! I''ve been running marathons for a few years now.
+
+    User 2: That''s awesome! I''ve never been able to run a marathon.
+
+    User 1: You should try it! It''s so much fun.
+
+    User 2: I''m not sure I''m in that good of shape.
+
+    User 1: You don''t have to be in great shape to run a marathon! You just have to be willing to put in the work.
+
+    User 2: I''ll think about it!
+
+    User 1: You should! It''s a great experience.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to watch movies! I watch a lot of obscure foreign films on Netflix.
+
+    User 2: That''s cool! I like to watch movies too, but I''m not as adventurous as you. I usually stick to the big Hollywood blockbusters.
+
+    User 1: That''s okay! You don''t have to be adventurous to enjoy foreign films. They''re just different.
+
+    User 2: I guess I''ll have to give them a try sometime.
+
+    User 1: I think you''d like them! They''re usually very well made.
+
+    User 2: Okay, I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

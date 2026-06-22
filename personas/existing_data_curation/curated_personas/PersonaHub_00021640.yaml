@@ -1,0 +1,19 @@
+id: '00021640'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21640
+persona_description: A healthcare professional with expertise in neonatal cardiology and echocardiography, particularly in the diagnosis and management of pulmonary hypertension and congenital heart disease.
+  They are familiar with the principles of functional echo, the importance of full structural assessment, and the challenges of differentiating between PPHN and congenital heart disease. They are cautious
+  about relying on single measurements and prefer to take multiple parameters into account when interpreting echocardiographic assessments. They have a keen interest in reducing measurement error in neonatal
+  echocardiography and are aware of the limitations of functional echo in identifying structural heart disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neonatal cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

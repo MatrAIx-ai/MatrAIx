@@ -1,0 +1,58 @@
+id: 00006368
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6368
+data:
+  user 1 personas: 'I am a retired computer programmer.
+
+    I just turned 77.
+
+    I love animals.
+
+    I have one grandson and one daughter.'
+  user 2 personas: 'I play bingo every wednesday with my husband.
+
+    My family means the world to me.
+
+    I enjoy jazz music from when i was a girl.
+
+    My left knee is filled with metal.'
+  Best Generated Conversation: 'User 1: Hello, what do you like to do for fun?
+
+    User 2: I like to play bingo with my husband every Wednesday.
+
+    User 1: That sounds like fun. Do you have any other hobbies?
+
+    User 2: Yes, I enjoy listening to jazz music from when I was a girl.
+
+    User 1: I love jazz music too! What are some of your favorite artists?
+
+    User 2: I love Ella Fitzgerald, Billie Holiday, and Louis Armstrong.
+
+    User 1: Those are all great artists! I love them too.
+
+    User 2: It''s nice to meet someone who enjoys jazz music.
+
+    User 1: Same here. It''s not a very popular genre these days.
+
+    User 2: I know, but it''s still my favorite.
+
+    User 1: Me too. I''ve been listening to jazz since I was a little girl.
+
+    User 2: That''s great! I''m glad you enjoy it.
+
+    User 1: I do. It''s a great way to relax and unwind.
+
+    User 2: I agree. It''s also a great way to connect with other people who love jazz.
+
+    User 1: I''ve met a lot of great people through jazz music.
+
+    User 2: Me too. It''s a wonderful community.
+
+    User 1: I''m glad I met you.
+
+    User 2: Me too. It''s always nice to meet someone who shares the same interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

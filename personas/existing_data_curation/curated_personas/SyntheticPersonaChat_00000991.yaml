@@ -1,0 +1,80 @@
+id: 00000991
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 991
+data:
+  user 1 personas: 'I got a new job.
+
+    I like cats.
+
+    I like to travel.
+
+    I like cars.
+
+    Favorite color is green.'
+  user 2 personas: 'I love dogs and cats.
+
+    I live in a house.
+
+    I have a lot of friends.
+
+    My dad works at the mill and my mom is a teacher.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name].
+
+    User 2: Hello, my name is [user 2 name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to travel, read, and spend time with my friends and family.
+
+    User 1: I love to travel too! I have been to a few different countries. Where have you been?
+
+    User 2: I have been to Mexico, Canada, and the United States. I would love to travel to Europe one day.
+
+    User 1: Europe is amazing! I have been to France, Italy, and Spain. I would love to go back to Europe one day.
+
+    User 2: I love to read too! I mostly read fiction, but I also like to read nonfiction. What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I mostly read fiction. I love fantasy, science fiction, and historical fiction. What are some of your favorite books?
+
+    User 2: I love the Harry Potter series! I also love the Lord of the Rings series and the Hunger Games series. I have also read a lot of historical fiction, but I don''t have a favorite author yet.
+
+    User 1: Those are all great books! I love the Harry Potter series too. I also love the Lord of the Rings series. I haven''t read the Hunger Games series yet, but I have heard good things about it.
+
+    User 2: The Hunger Games series is really good! I read it all in one week. I would definitely recommend it.
+
+    User 1: I''ll have to check it out. Thanks for the recommendation!
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher. I teach kindergarten.
+
+    User 1: That''s awesome! I always wanted to be a teacher, but I''m not good at math.
+
+    User 2: Math can be hard, but it''s not impossible! I''m sure you could do it if you put your mind to it.
+
+    User 1: Thanks, but I think I''ll stick to reading.
+
+    User 2: That''s a good choice! Reading is a great way to learn new things.
+
+    User 1: I agree!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to travel, read, and spend time with my friends and family.
+
+    User 2: I like to do a lot of the same things! I love to travel, read, and spend time with my friends and family.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: I think so too!
+
+    User 1: It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

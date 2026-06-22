@@ -1,0 +1,70 @@
+id: 00001853
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1853
+data:
+  user 1 personas: 'I cook every night.
+
+    I am a soccer mom.
+
+    I love family time.
+
+    I teach cheerleading in my spare time.
+
+    I work for a online company from home.'
+  user 2 personas: 'My favorite is rock fish.
+
+    I live in cape hatteras.
+
+    I m going riding on my boat today.
+
+    I am a fisherman.
+
+    I love tuna.'
+  Best Generated Conversation: 'User 1: I''m looking for a recipe for rockfish. Do you have one?
+
+    User 2: Sure, I have a great one. I''ll send it to you.
+
+    User 1: Thank you! I love to cook, but I''m not very good at it.
+
+    User 2: I''m sure you''ll do great. I''m a fisherman, so I know a lot about fish.
+
+    User 1: That''s really cool. I''ve always wanted to go fishing, but I''ve never had the chance.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will. I know you said you''re going fishing today. Are you going to be catching rockfish?
+
+    User 2: Yes, I''m going to try to catch some rockfish. I''m also going to try to catch some tuna.
+
+    User 1: That sounds like fun. I hope you catch some big ones!
+
+    User 2: Thank you! I hope so too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a fisherman. I''ve been fishing since I was a kid.
+
+    User 1: That''s really cool. I''ve always wanted to try fishing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I hope so.
+
+    User 1: What kind of fish do you like to catch?
+
+    User 2: I like to catch all kinds of fish. But my favorite is probably tuna.
+
+    User 1: Tuna sounds delicious.
+
+    User 2: It is. I love to eat tuna.
+
+    User 1: So, where do you go fishing?
+
+    User 2: I usually go fishing in Cape Hatteras'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00002701'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2701
+data:
+  user 1 personas: 'I also like ice cream.
+
+    I like painting , i can cook well.
+
+    I like pasta.
+
+    I like cookies.'
+  user 2 personas: 'I like the color blue.
+
+    I changed my hair color to blue.
+
+    I own blue shoes.
+
+    I drive a blue car.
+
+    I like to listen to elvis.'
+  Best Generated Conversation: 'User 1: Hi there! I''m new here, so I''m just trying to meet some new people.
+
+    User 2: Hi! I''m always up for meeting new people. What''s your name?
+
+    User 1: My name is (name).
+
+    User 2: Nice to meet you, (name). What do you like to do for fun?
+
+    User 1: I like to paint, cook, and eat good food.
+
+    User 2: That sounds fun! I like to cook too. What''s your favorite thing to cook?
+
+    User 1: I love making pasta dishes. I think they''re so delicious and easy to make.
+
+    User 2: I agree! Pasta is one of my favorite foods.
+
+    User 1: What''s your favorite kind of pasta?
+
+    User 2: I love penne. It''s so versatile and can be used in so many different dishes.
+
+    User 1: I love penne too! It''s my favorite pasta shape.
+
+    User 2: Have you ever tried making pasta yourself?
+
+    User 1: No, I haven''t. But I''ve always wanted to try it.
+
+    User 2: It''s actually really easy to do. You just need some flour, eggs, water, and a rolling pin.
+
+    User 1: That doesn''t sound too hard. I might have to try it sometime.
+
+    User 2: You should! It''s really fun and you can make all sorts of different shapes.
+
+    User 1: I know, I''m excited to try it.
+
+    User 2: You should let me know how it goes.
+
+    User 1: I will. Thanks for the advice!
+
+    User 2: No problem! It was nice talking to you, (name).
+
+    User 1: You too, (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

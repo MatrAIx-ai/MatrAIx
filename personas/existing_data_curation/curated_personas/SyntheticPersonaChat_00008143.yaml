@@ -1,0 +1,104 @@
+id: 00008143
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8143
+data:
+  user 1 personas: 'I go to the pool every thursday for three hours.
+
+    I enjoy shopping.
+
+    I work five days a week.
+
+    I don t have children.'
+  user 2 personas: 'I work at a vet.
+
+    I have 3 dog.
+
+    My husband is a lawyer.
+
+    I have 2 kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a vet.
+
+    User 1: Oh, that''s cool. Do you like it?
+
+    User 2: Yes, I love it! I get to work with animals all day.
+
+    User 1: That''s awesome! I love animals too. I have three dogs.
+
+    User 2: Oh, that''s great! I have two dogs and a cat.
+
+    User 1: What are your dogs'' names?
+
+    User 2: My dogs'' names are Buddy and Bailey.
+
+    User 1: Those are great names! What kind of dog is Bailey?
+
+    User 2: Bailey is a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so sweet.
+
+    User 2: Yes, they are! They''re also very smart.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: My favorite thing about my job is getting to help animals. It''s so rewarding to see them get better and go back to their families.
+
+    User 1: That''s a great answer. I can imagine that must be very rewarding.
+
+    User 2: It is! It''s also a lot of work, but it''s worth it.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work five days a week as a sales manager.
+
+    User 2: Oh, that''s interesting. I''ve never met a sales manager before.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go shopping, go to the pool, and spend time with my family.
+
+    User 1: Those are all great things to do for fun. I love shopping too!
+
+    User 2: Me too! It''s so much fun to find new things.
+
+    User 1: I know what you mean.
+
+    User 2: So, are you married?
+
+    User 1: No, I''m not married. Do you have a husband?
+
+    User 2: Yes, I have a husband. He''s a lawyer.
+
+    User 1: Oh, that''s cool.
+
+    User 2: Yes, it is.
+
+    User 1: So, do you have kids?
+
+    User 2: Yes, I have two kids.
+
+    User 1: Oh, that''s great!
+
+    User 2: Yes, they''re a lot of fun.
+
+    User 1: I''m sure they are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00006013'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6013
+data:
+  user 1 personas: 'I have a cat named seven of nine.
+
+    I work at a coffee house.
+
+    I am a student at michigan state university.
+
+    My favorite tv show is dancing with the stars.'
+  user 2 personas: 'My wife makes the best pasta.
+
+    It takes me an hour to drive to work in the morning.
+
+    I listen to pink when i am painting.
+
+    I draw all the time and i am good at it.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hello [user 1 name], my name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you do for a living?
+
+    User 2: I''m a painter.
+
+    User 1: Oh, that''s cool. What kind of paintings do you do?
+
+    User 2: I do all kinds of paintings, but I specialize in landscapes.
+
+    User 1: That sounds really interesting. Do you sell your paintings?
+
+    User 2: Yes, I do. I sell them online and at art shows.
+
+    User 1: That''s great. I''d love to see some of your work sometime.
+
+    User 2: Sure, I''d be happy to show you. What''s your favorite kind of art?
+
+    User 1: I like all kinds of art, but I''m especially drawn to abstract art.
+
+    User 2: I love abstract art too. It''s so expressive.
+
+    User 1: Me too. It''s so much fun to look at and interpret.
+
+    User 2: I agree. It''s like a puzzle.
+
+    User 1: What''s your favorite painting?
+
+    User 2: I don''t know if I have a favorite painting, but I really love the work of Jackson Pollock.
+
+    User 1: I love Pollock too! His work is so dynamic and expressive.
+
+    User 2: I know, right? He''s one of my biggest inspirations.
+
+    User 1: I can see that. Your work has a similar energy to his.
+
+    User 2: Thank you. That''s a great compliment.
+
+    User 1: You''re welcome. I''m really enjoying our conversation.
+
+    User 2: Me too. It''s nice to meet someone who appreciates art.
+
+    User 1: It is. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

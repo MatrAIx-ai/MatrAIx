@@ -1,0 +1,20 @@
+id: 00038000
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38000
+persona_description: A Wisconsin School District Teacher with a focus on education policy and the evaluation of teacher qualifications. The persona is interested in analyzing data related to teacher qualifications,
+  specifically the percentage of teachers teaching core subjects who are ESEA qualified. They are also interested in understanding the associations between teacher qualifications and factors such as school
+  demographic characteristics, district spending, high-quality professional development opportunities, and staff climate. Additionally, the persona is interested in learning about the impact of teacher
+  qualifications on student academic performance, graduation rates, and other outcomes in their school or district. They are also interested in identifying schools with high teacher qualifications and how
+  these schools can be used as models for recruiting and retaining qualified teachers.
+expertise:
+  general_domain_top1pct: education
+  specific_domain_top1pct: education policy or teacher evaluation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

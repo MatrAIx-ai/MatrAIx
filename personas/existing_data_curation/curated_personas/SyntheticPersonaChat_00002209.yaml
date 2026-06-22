@@ -1,0 +1,72 @@
+id: 00002209
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2209
+data:
+  user 1 personas: 'I have a pet iguana.
+
+    I play football.
+
+    I like to play video games.
+
+    I work at mcdonald.
+
+    My favorite movie is star wars.'
+  user 2 personas: 'I am a nurse and work in an emergency room at a busy hospital.
+
+    I am buying a house.
+
+    I am single.
+
+    I paddle board on my days off.
+
+    I play the piano.'
+  Best Generated Conversation: 'User 1: Hi, I''m John. What''s your name?
+
+    User 2: Hi, I''m Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I like to paddle board, play piano, and play video games.
+
+    User 1: I like to paddle board too! I also like to play football and watch Star Wars.
+
+    User 2: Oh, cool! I''ve never been to a Star Wars movie.
+
+    User 1: You should! They''re really good. What kind of music do you like to listen to?
+
+    User 2: I like to listen to a lot of different kinds of music, but I really like classic rock.
+
+    User 1: Oh, nice! I like classic rock too. What''s your favorite band?
+
+    User 2: I''m not sure I have a favorite band, but I really like The Beatles.
+
+    User 1: The Beatles are great! I like them too.
+
+    User 2: What do you do for work?
+
+    User 1: I work at McDonald''s.
+
+    User 2: Oh, cool! I''ve never worked in a fast food restaurant.
+
+    User 1: It''s not bad, but it can be a lot of work.
+
+    User 2: I''m sure it can be. What do you like about it?
+
+    User 1: I like the people I work with and I like the feeling of helping people.
+
+    User 2: That''s great! What are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school to become a nurse.
+
+    User 2: Oh, that''s great! I''m sure you''d be a great nurse.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Well, it was nice talking to you, John.
+
+    User 1: You too, Sarah.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

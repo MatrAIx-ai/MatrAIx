@@ -1,0 +1,70 @@
+id: '00002150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2150
+data:
+  user 1 personas: 'I do not have a job.
+
+    I am a couch potato.
+
+    I love the walking dead.
+
+    I eat junk food.
+
+    I love comics.'
+  user 2 personas: 'I like to swim.
+
+    I am blue and tall.
+
+    I work for the navy.
+
+    My favorite show is thevoice.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, read, and watch The Voice.
+
+    User 1: I like to read comics and watch The Walking Dead.
+
+    User 2: I''ve never seen The Walking Dead. Is it any good?
+
+    User 1: It''s really good! It''s a post-apocalyptic zombie show.
+
+    User 2: That sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s really good. What do you do for work?
+
+    User 2: I work for the Navy.
+
+    User 1: Oh, cool! What do you do there?
+
+    User 2: I''m a sailor.
+
+    User 1: That sounds like a fun job. Do you like it?
+
+    User 2: Yeah, it''s a great job. I get to travel the world and meet new people.
+
+    User 1: That sounds awesome! I''m jealous.
+
+    User 2: You should join the Navy!
+
+    User 1: I don''t know if I''m fit enough.
+
+    User 2: You''d be surprised. The Navy has programs to help people get in shape.
+
+    User 1: Maybe I''ll look into it.
+
+    User 2: You should! It''s a great way to see the world and meet new people.
+
+    User 1: Thanks for the advice!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

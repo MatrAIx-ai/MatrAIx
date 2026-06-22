@@ -1,0 +1,112 @@
+id: '00006203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6203
+data:
+  user 1 personas: 'I am going on a cruise next month.
+
+    I breed maine coon cats and show them.
+
+    My brother is currently couch surfing at my house.
+
+    My parents recently moved to florida.'
+  user 2 personas: 'I can jump straight up , out of a pool.
+
+    I have amazing eye sight.
+
+    I am a democrat.
+
+    I like to only eat fish.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi, I''m going on a cruise next month!
+
+    User 2: Oh, that''s exciting! Where are you going?
+
+    User 1: I''m going to the Bahamas.
+
+    User 2: Wow, that sounds like a lot of fun!
+
+    User 1: Yeah, I''m really looking forward to it.
+
+    User 2: I''ve never been on a cruise, but I''ve always wanted to go.
+
+    User 1: You should! It''s a great way to relax and see new places.
+
+    User 2: Maybe I will one day.
+
+    User 1: I''m sure you''d enjoy it.
+
+    User 2: Thanks!
+
+    * * *
+
+    User 1: I breed Maine Coon cats and show them.
+
+    User 2: Oh, really? I''ve always wanted a Maine Coon cat. They''re so beautiful.
+
+    User 1: They are! I love them. They''re so friendly and cuddly.
+
+    User 2: I''ve heard they''re also really smart.
+
+    User 1: Yeah, they are. They''re really good listeners too.
+
+    User 2: That''s awesome. I''m really jealous of you.
+
+    User 1: Oh, you don''t have to be. I''m sure you''ll have one someday.
+
+    User 2: I hope so.
+
+    * * *
+
+    User 1: My brother is currently couch surfing at my house.
+
+    User 2: Oh, that''s too bad. Is he having trouble finding a place to live?
+
+    User 1: Yeah, he is. He''s been out of a job for a while and he''s having trouble getting back on his feet.
+
+    User 2: That''s rough. I''m sorry to hear that.
+
+    User 1: It''s okay. I''m happy to have him here.
+
+    User 2: That''s good to hear.
+
+    * * *
+
+    User 1: My parents recently moved to Florida.
+
+    User 2: Oh, that''s exciting! Do you miss them?
+
+    User 1: Not really. I''m glad they''re happy.
+
+    User 2: That''s great. I''m sure they''re happy to have you visit them.
+
+    User 1: Yeah, I''m planning on going to visit them soon.
+
+    User 2: That''s great. I''m sure they''ll be excited to see you.
+
+    User 1: Me too.
+
+    * * *
+
+    User 1: I like to only eat fish.
+
+    User 2: Oh, really? I''ve never met anyone who only eats fish.
+
+    User 1: Yeah, I''ve been pescatarian for a few years now.
+
+    User 2: That''s cool. Why did you decide to do that?
+
+    User 1: I just don''t like the taste of meat.
+
+    User 2: I see. I''m sure you still get a lot of protein from fish.
+
+    User 1: Yeah, I do. I eat a lot of salmon and tuna.
+
+    User 2: Nice. I''m glad you''ve found a diet that works for you.
+
+    User 1: Thanks! Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

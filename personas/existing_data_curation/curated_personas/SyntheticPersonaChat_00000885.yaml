@@ -1,0 +1,80 @@
+id: 00000885
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 885
+data:
+  user 1 personas: 'My name is tom.
+
+    I try to watch what i eat.
+
+    I enjoy eating italian food.
+
+    Pizza is my favorite.
+
+    I am east asian.'
+  user 2 personas: 'We just bought a house near her parents.
+
+    My girlfriend is 6 months pregnant.
+
+    I am proposing tonight.
+
+    I graduated college last week.'
+  Best Generated Conversation: 'User 1: Hi! I''m Tom. What''s your name?
+
+    User 2: Hi Tom, my name is [user 2''s name].
+
+    User 1: Nice to meet you! What are you up to today?
+
+    User 2: I''m actually proposing to my girlfriend tonight!
+
+    User 1: Oh, congratulations! That''s amazing!
+
+    User 2: Thank you! I''m really excited.
+
+    User 1: I''m sure she''ll be thrilled. What are you planning to do for the proposal?
+
+    User 2: We''re going to have a romantic dinner at home, and then I''m going to propose.
+
+    User 1: That sounds perfect. I''m sure she''ll love it.
+
+    User 2: I hope so!
+
+    User 1: So, tell me a little about yourself.
+
+    User 2: Sure. I just graduated from college last week, and I''m working at a tech company in the city.
+
+    User 1: Oh, that''s awesome! What are you studying in college?
+
+    User 2: I studied computer science.
+
+    User 1: Nice! I''m sure you''ll do great at your job.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to play video games, watch movies, and go out with friends.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite video game?
+
+    User 2: My favorite video game is The Legend of Zelda: Breath of the Wild.
+
+    User 1: Oh, that''s a good one. I loved that game.
+
+    User 2: Me too! It was so much fun.
+
+    User 1: So, what are you looking forward to in the future?
+
+    User 2: I''m looking forward to starting my career, getting married, and having kids.
+
+    User 1: That sounds great! I''m sure you''ll achieve all of your goals.
+
+    User 2: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

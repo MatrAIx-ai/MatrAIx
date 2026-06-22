@@ -1,0 +1,64 @@
+id: '00007441'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7441
+data:
+  user 1 personas: 'Driving in the country side is a pastime.
+
+    I live in a small town.
+
+    I wanted to be a nurse.
+
+    I like to go shopping.
+
+    I went to college.'
+  user 2 personas: 'I enjoy the outdoors.
+
+    I am 21 years old.
+
+    I am a cheerleader.
+
+    I live on a ranch.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m (name), what''s your name?
+
+    User 2: I''m (name). It''s nice to meet you!
+
+    User 1: It''s nice to meet you too! Where do you live?
+
+    User 2: I live on a ranch in the country.
+
+    User 1: Oh, that sounds nice! I live in a small town.
+
+    User 2: I like small towns! They''re so peaceful and quiet.
+
+    User 1: Yeah, they are. I like to go shopping in the city, but I always come back to the peace and quiet of my small town.
+
+    User 2: I totally understand. I like going to the city for a change of pace, but I always love coming back to the ranch.
+
+    User 1: I love the outdoors too. I like to go hiking and camping.
+
+    User 2: Me too! I love being in nature.
+
+    User 1: What do you like to do on the ranch?
+
+    User 2: I like to ride horses, go swimming, and play games.
+
+    User 1: Those sound like fun activities! I''ve always wanted to learn how to ride a horse.
+
+    User 2: You should! It''s really fun.
+
+    User 1: I might just have to take you up on that offer!
+
+    User 2: You''re welcome to come and visit the ranch anytime.
+
+    User 1: I''d love that!
+
+    User 2: Great! I''ll send you the address.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

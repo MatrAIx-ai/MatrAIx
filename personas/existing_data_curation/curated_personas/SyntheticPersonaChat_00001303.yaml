@@ -1,0 +1,68 @@
+id: '00001303'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1303
+data:
+  user 1 personas: 'I have pink hair.
+
+    I m the youngest of five.
+
+    I m allergic to bees.
+
+    I live in the city of grand rapids , michigan.
+
+    I work at the hospital as a nurse.'
+  user 2 personas: 'I live in alabama.
+
+    I m 53 years old.
+
+    I have blonde hair.
+
+    I am obese.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Alabama.
+
+    User 1: Oh, cool. I''m from Grand Rapids, Michigan.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a nurse at the hospital.
+
+    User 2: Wow, that''s great! I''m a nurse too.
+
+    User 1: Really? That''s awesome! What kind of nursing do you do?
+
+    User 2: I''m a pediatric nurse.
+
+    User 1: That''s so cool! I work in the emergency department.
+
+    User 2: Oh, that must be intense.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I bet it is. I love helping people.
+
+    User 1: Me too. So, what do you like to do for fun?
+
+    User 2: I like to go swimming, fishing, and hiking.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: We should do something together sometime.
+
+    User 1: That sounds like a great idea. I''ll let you know when I''m free.
+
+    User 2: Sounds good. I''m free most weekends.
+
+    User 1: Cool. I''ll let you know.
+
+    User 2: Great. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,86 @@
+id: 00007687
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7687
+data:
+  user 1 personas: 'My poppa has a train set that i play with.
+
+    I like books about trains.
+
+    I have a dog named percy.
+
+    My cat died.
+
+    I like thomas the tank engine.'
+  user 2 personas: 'My neighbor comes over all the time to watch rugby with me.
+
+    My car broke down last week.
+
+    I like to fly kites.
+
+    I love sports , but rugby is my favorite.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to watch rugby, fly kites, and play video games.
+
+    User 1: Oh, I like rugby too! What team do you support?
+
+    User 2: I support the New Zealand All Blacks.
+
+    User 1: Cool! I''m a fan of the South African Springboks.
+
+    User 2: That''s great! I''ve always wanted to visit South Africa.
+
+    User 1: It''s a beautiful country. You should definitely go there sometime.
+
+    User 2: I will! I''m sure I''ll enjoy it.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to fly kites.
+
+    User 1: That''s cool! I''ve never been able to fly a kite properly.
+
+    User 2: It''s not that hard. You just need a strong wind.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! What kind of software do you write?
+
+    User 2: I write software for web applications.
+
+    User 1: That''s interesting. I''ve always been curious about how web applications work.
+
+    User 2: It''s not as hard as you think. It''s just a lot of HTML, CSS, and JavaScript.
+
+    User 1: I''ll have to look into it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: My favorite book is "The Lord of the Rings".
+
+    User 1: That''s a great book! I love the movies too.
+
+    User 2: Yeah, the movies are great. I''ve seen them all multiple times.
+
+    User 1: Me too! I''m a big fan of Peter Jackson.
+
+    User 2: He''s a great director. I''m excited to see what he does next.
+
+    User 1: Me too! I''m sure it''ll be amazing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

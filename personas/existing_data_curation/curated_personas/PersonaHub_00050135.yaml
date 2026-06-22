@@ -1,0 +1,19 @@
+id: '00050135'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50135
+persona_description: A researcher or scientist working on the intersection of computer vision, machine learning, and security, particularly in the field of object detection and face recognition. This individual
+  is interested in developing new techniques to evade surveillance systems and protect personal privacy. They are likely to have expertise in deep learning, adversarial attacks, and image processing, and
+  are focused on finding ways to create clothing or other objects that can fool object detectors and face recognition systems. They are also likely to be interested in the potential implications of their
+  research on privacy and security, and how it could be applied in real-world scenarios.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: computer vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: adversarial attacks
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

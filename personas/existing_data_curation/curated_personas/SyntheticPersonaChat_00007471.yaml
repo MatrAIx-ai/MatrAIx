@@ -1,0 +1,52 @@
+id: '00007471'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7471
+data:
+  user 1 personas: 'I eat tuna fish salad at least every day.
+
+    My favorite music is two steps from hell and rock opera genre.
+
+    I can t get enough gummy worms to satisfy my sweet tooth.
+
+    I have sandy brown hair and green eyes.
+
+    I read sci fi space adventures with a passion.'
+  user 2 personas: 'I live in california.
+
+    I own a german shepard.
+
+    I am a mechanic.
+
+    I like to surf.
+
+    I own a corvette.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1 name]. I''m from California. What about you?
+
+    User 2: Hi [user 1 name], I''m [user 2 name]. I also live in California. I''m a mechanic. What do you do for a living?
+
+    User 1: I''m a writer. I love to read and write sci-fi space adventures. I also love gummy worms and listen to rock opera music. What do you like to do for fun?
+
+    User 2: I like to surf and hang out with my dog, a German Shepherd. I also love to drive my Corvette.
+
+    User 1: That sounds like a lot of fun. I''m more of an indoor person, but I do enjoy going to the beach sometimes.
+
+    User 2: I like to go to the beach to surf, but I also enjoy just relaxing there and reading a book.
+
+    User 1: I love reading sci-fi space adventures. What are some of your favorite books?
+
+    User 2: I love the Ender''s Game series by Orson Scott Card and the Dune series by Frank Herbert.
+
+    User 1: Those are both great series! I also love the Hyperion Cantos by Dan Simmons.
+
+    User 2: I''ve heard good things about that series, but I haven''t read it yet. I''ll have to check it out.
+
+    User 1: You definitely should. It''s a great read.
+
+    User 2: Thanks for the recommendation. I''m always looking for new books to read.
+
+    User 1: No problem. I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00000603'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 603
+data:
+  user 1 personas: 'I am an artist.
+
+    I recently got a cat.
+
+    I love watching game of thrones.
+
+    I enjoy walking for exercise.'
+  user 2 personas: 'The appalachian trail is my favorite.
+
+    I like folk music.
+
+    I work in marketing.
+
+    I love to hike.
+
+    My hiking boots are pink.'
+  Best Generated Conversation: 'User 1: I like to walk for exercise.
+
+    User 2: I love hiking! I''ve been to the Appalachian Trail and hiked a few miles.
+
+    User 1: That sounds awesome! I''ve always wanted to go hiking.
+
+    User 2: It''s a great way to get outdoors and get some exercise.
+
+    User 1: I love being outdoors. I recently got a cat.
+
+    User 2: Cats are great! I have a dog.
+
+    User 1: I love dogs too! I''m an artist and I love watching Game of Thrones.
+
+    User 2: I like folk music and I work in marketing.
+
+    User 1: That''s cool! What kind of folk music do you like?
+
+    User 2: I like a lot of different kinds of folk music, but I especially like bluegrass and folk rock.
+
+    User 1: I love bluegrass too! I''ve been playing guitar for a few years.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play guitar.
+
+    User 1: It''s a lot of fun! I''m sure you''d be great at it.
+
+    User 2: Thanks! I''m going to have to look into taking lessons.
+
+    User 1: You should! It''s a great way to relax and learn something new.
+
+    User 2: I know, I know! I''ll get on it.
+
+    User 1: Great! I can''t wait to hear you play.
+
+    User 2: Me too! I''ll have to show you sometime.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

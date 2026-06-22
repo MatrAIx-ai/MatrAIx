@@ -1,0 +1,64 @@
+id: 00008342
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8342
+data:
+  user 1 personas: 'I am very health conscious , and i watch what i eat.
+
+    I am a yoga instructor.
+
+    My favorite musician is ed sheeran.
+
+    I like to write poetry in my spare time.
+
+    I love romantic comedies.'
+  user 2 personas: 'I am proposing tonight.
+
+    My girlfriend is 6 months pregnant.
+
+    I graduated college last week.
+
+    I got a job as a coach at a local highschool.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], and I''m a yoga instructor.
+
+    User 2: Hi [name], I''m [name], and I''m a high school coach.
+
+    User 1: That''s great! I love yoga. What kind of coaching do you do?
+
+    User 2: I coach football.
+
+    User 1: Oh, that''s cool. I''ve never been a big fan of football, but I can appreciate the athleticism.
+
+    User 2: Yeah, it''s a great sport. I love working with my players and helping them improve their skills.
+
+    User 1: That''s awesome! What else do you like to do?
+
+    User 2: I like to go hiking, play video games, and watch movies.
+
+    User 1: Hiking sounds fun! I love being outdoors. What kind of video games do you like to play?
+
+    User 2: I mostly play sports games, but I also like action and adventure games.
+
+    User 1: Action and adventure games are my favorite too! What''s your favorite movie genre?
+
+    User 2: I love romantic comedies.
+
+    User 1: Me too! They''re so funny and heartwarming.
+
+    User 2: Yeah, I love the way they make me feel.
+
+    User 1: So, are you excited to propose to your girlfriend?
+
+    User 2: Yeah, I am! I''m so nervous, but I also can''t wait to spend the rest of my life with her.
+
+    User 1: That''s great! I''m sure she''ll say yes.
+
+    User 2: Thanks, I hope so!
+
+    User 1: Well, I have to go now. It was nice talking to you!
+
+    User 2: You too! Have a nice day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

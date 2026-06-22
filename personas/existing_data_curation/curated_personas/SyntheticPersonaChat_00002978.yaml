@@ -1,0 +1,70 @@
+id: 00002978
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2978
+data:
+  user 1 personas: 'I am a reality tv star.
+
+    I listen to country music.
+
+    I like to surf.
+
+    My mother is a school teacher.'
+  user 2 personas: 'I hate seafood but love mexican food.
+
+    I grew up in the deep south.
+
+    My favorite color is blue.
+
+    I love to hunt.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I like to hunt and fish. I also love to go hiking and camping.
+
+    User 1: That''s great! I love to go camping too. Do you have any favorite places to go camping?
+
+    User 2: I love to go camping in the mountains. I love the scenery and the fresh air.
+
+    User 1: Me too! I love the feeling of being surrounded by nature.
+
+    User 2: I also love the sound of the crickets at night.
+
+    User 1: Yes, that''s one of my favorite things about camping.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I like to surf, listen to country music, and watch reality TV.
+
+    User 2: Surfing sounds fun! I''ve always wanted to try it.
+
+    User 1: It''s a lot of fun! It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 2: I''m sure it is. I''ll have to give it a try sometime.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: What''s your favorite country music artist?
+
+    User 1: I like a lot of different country artists, but my favorite is probably George Strait.
+
+    User 2: I love George Strait! He''s one of my favorites too.
+
+    User 1: He''s so good!
+
+    User 2: What''s your favorite reality TV show?
+
+    User 1: I like a lot of different reality TV shows, but my favorite is probably The Real Housewives of Beverly Hills.
+
+    User 2: I love that show too!
+
+    User 1: It''s so much fun to watch.
+
+    User 2: It is!
+
+    User 1: It''s nice to meet you, [user 2''s name]. I think we''re going to be good friends.
+
+    User 2: It''s nice to meet you too, [user 1''s name]. I think you''re right. We''re going to be great friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

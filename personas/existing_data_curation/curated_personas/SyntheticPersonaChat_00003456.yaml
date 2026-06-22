@@ -1,0 +1,100 @@
+id: '00003456'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3456
+data:
+  user 1 personas: 'I love rage metal music.
+
+    I have two sons that i am raising by myself.
+
+    I sell cosmetics in my spare time.
+
+    I am a special ed teacher.
+
+    And , i love psychoanalyzing my friends.'
+  user 2 personas: 'I work as a teacher and love my job.
+
+    I have two dogs who are like my babies.
+
+    I have two children.
+
+    One child has autism.
+
+    I am a mother.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name].
+
+    User 2: You too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, cool! What grade do you teach?
+
+    User 2: I teach special education.
+
+    User 1: Oh, that''s awesome! I have a friend who is a special education teacher.
+
+    User 2: That''s great! It''s a very rewarding job.
+
+    User 1: I bet it is. I know it can be challenging, but it''s also very important.
+
+    User 2: Yeah, it can be challenging, but it''s always worth it.
+
+    User 1: That''s great to hear. So, what are your hobbies?
+
+    User 2: I love to read, go for walks, and spend time with my family.
+
+    User 1: Oh, that sounds like fun. I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I''m especially interested in historical fiction and nonfiction.
+
+    User 1: Oh, that''s cool. I like those types of books too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I like the Outlander series by Diana Gabaldon, the Harry Potter series by J.K. Rowling, and the Hunger Games series by Suzanne Collins.
+
+    User 2: Oh, I love those books too! I''ve read all of them.
+
+    User 1: Me too! They''re so good.
+
+    User 2: Yeah, they are.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go for walks, spend time with my family, and play with my dogs.
+
+    User 1: That sounds like fun. I like to go for walks too.
+
+    User 2: Yeah, it''s a great way to get exercise and clear your head.
+
+    User 1: Yeah, it is. I love walking in the park.
+
+    User 2: Me too! It''s so peaceful and relaxing.
+
+    User 1: Yeah, it is.
+
+    User 2: So, do you have any pets?
+
+    User 1: Yeah, I have two dogs.
+
+    User 2: Oh, that''s awesome! What kind of dogs are they?
+
+    User 1: I have a golden retriever and a black lab.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly and loving.
+
+    User 1: Yeah, they are. They''re the best dogs.
+
+    User 2: I bet they are.
+
+    User 1: Yeah, they are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

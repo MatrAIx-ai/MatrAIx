@@ -1,0 +1,56 @@
+id: '00001143'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1143
+data:
+  user 1 personas: 'I work as a vet.
+
+    I have 3 dogs and 2 cats.
+
+    I am a 30 year old female.
+
+    I like to ride my bike.
+
+    I am a vegan.'
+  user 2 personas: 'I love dogs , especially labradors.
+
+    I am traveling to paris this year for my vacation.
+
+    I work in the pharmaceutical industry.
+
+    I was born in san francisco.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name], a 30 year old female vet.
+
+    User 2: Hi, I''m [name]. What do you like to do for fun?
+
+    User 1: I like to ride my bike, and I''m also a vegan.
+
+    User 2: That''s cool, I love dogs, especially Labradors.
+
+    User 1: Oh, I have 3 dogs and 2 cats at home.
+
+    User 2: Nice! I''m going to Paris this year for vacation.
+
+    User 1: That''s awesome! I''ve always wanted to go to Paris.
+
+    User 2: I''m working in the pharmaceutical industry.
+
+    User 1: That sounds interesting.
+
+    User 2: I was born in San Francisco.
+
+    User 1: Me too! I love San Francisco.
+
+    User 2: That''s great!
+
+    User 1: I''m glad we met.
+
+    User 2: Me too.
+
+    User 1: I hope we can hang out sometime.
+
+    User 2: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

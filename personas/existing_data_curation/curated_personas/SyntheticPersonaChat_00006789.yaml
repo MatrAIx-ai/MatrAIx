@@ -1,0 +1,69 @@
+id: 00006789
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6789
+data:
+  user 1 personas: 'I like to make boats on the weekends.
+
+    I enjoy fishing.
+
+    I have a dog named bob.
+
+    I live on an island.'
+  user 2 personas: 'I am a guy that enjoys being a guy.
+
+    I love to binge watch shows on streaming services.
+
+    I am close to my mother , but not to my father.
+
+    My favorite thing to eat is a burrito.
+
+    I like to hike and spend time outdoors.'
+  Best Generated Conversation: 'User 1: Hi, my name is (name). I like to make boats on the weekends, enjoy fishing, have a dog named Bob, and live on an island.
+
+    User 2: Hi, my name is (name). I''m a guy that enjoys being a guy, love to binge watch shows on streaming services, am close to my mother but not to my father, my favorite thing to eat is a burrito,
+    and I like to hike and spend time outdoors.
+
+    User 1: That''s interesting. I''ve never met anyone who makes boats on the weekends. What''s it like to do that?
+
+    User 2: It''s really fun! I love the challenge of designing and building something from scratch. It''s also really rewarding to see the finished product in the water.
+
+    User 1: That sounds really cool. I''m not very good at building things, but I can appreciate the skill and effort that goes into it.
+
+    User 2: Thanks! It''s not always easy, but it''s definitely worth it.
+
+    User 1: So, what''s your favorite show to binge watch?
+
+    User 2: I''m currently watching The Umbrella Academy on Netflix. It''s a really good show about a family of superheroes who are brought back together to stop an apocalypse.
+
+    User 1: Oh, I''ve heard good things about that show. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, you''re close to your mother, but not your father?
+
+    User 2: Yeah, my parents got divorced when I was young, and I''ve never really had a good relationship with my dad.
+
+    User 1: That''s too bad. I''m sorry to hear that.
+
+    User 2: It''s okay. It''s just the way it is.
+
+    User 1: What''s your favorite thing to eat?
+
+    User 2: I love burritos! I could eat them every day.
+
+    User 1: Me too! They''re so delicious.
+
+    User 2: I know, right? They''re the perfect food.
+
+    User 1: So, you like to hike and spend time outdoors?
+
+    User 2: Yes, I do! I love being in nature. It''s so relaxing and peaceful.
+
+    User 1: I agree. I love hiking, too. It''s a great way to get exercise and clear your head.
+
+    User 2: Exactly! It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

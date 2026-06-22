@@ -1,0 +1,20 @@
+id: 00011468
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11468
+persona_description: A professional involved in the testing and evaluation of aviation fuel, specifically during extremely cold weather conditions or when the ambient temperature is close to or below -40°C.
+  This individual is likely to have expertise in the use of materials and equipment that could be hazardous, such as the Sulphur content of jet fuel beyond 2822 mg/kg sulphur, the accuracy of ASTM D7039
+  for the sulphur content of jet fuel beyond 2822 mg/kg sulphur, the additive requirements for aviation fuel, and the inspection of samples for testing. This persona is also likely to have experience with
+  the manual and automatic sampling methods used in ASTM D4057 and ASTM D4177, as well as the conversion of distillation temperature results to estimates of ASTM D86 results. Additionally, this persona
+  may have knowledge of the SI unit for kinematic viscosity, as mentioned in the text.
+expertise:
+  general_domain_top1pct: Materials Science
+  specific_domain_top1pct: Fuel Testing and Evaluation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

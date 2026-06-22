@@ -1,0 +1,60 @@
+id: 00001969
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1969
+data:
+  user 1 personas: 'I live in new york.
+
+    I have never traveled outside of the united states.
+
+    I am a dog walker.
+
+    My best friend lives in japan.'
+  user 2 personas: 'I auditionated in a cooking show.
+
+    I think i have talent for it.
+
+    I didn t pass the audition , but i ll keep trying.
+
+    Since young i ve loved to cook.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing about living in New York?
+
+    User 2: The diversity. There are so many different cultures and people here, and it''s really interesting to learn about them.
+
+    User 1: I agree. I''ve lived here all my life, and I''m still learning new things about the city every day.
+
+    User 2: Have you ever been outside of the United States?
+
+    User 1: No, I haven''t. I''ve always wanted to travel, but I''ve never had the chance.
+
+    User 2: You should definitely go! There''s so much to see and do in the world.
+
+    User 1: I know, I know. I''ll try to make it happen someday.
+
+    User 2: Good! I''m sure you''ll have a great time.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a chef. I love to cook, and I''m always trying new recipes.
+
+    User 1: That''s cool! I''ve never been a very good cook, but I love to eat.
+
+    User 2: Well, you''re always welcome to come over for dinner.
+
+    User 1: Thanks! I''ll take you up on that sometime.
+
+    User 2: So, I auditioned for a cooking show a few months ago, but I didn''t pass the audition.
+
+    User 1: Oh, that''s too bad. I''m sure you would have been great.
+
+    User 2: Thanks. I''ll keep trying, though. I really want to be a chef on a cooking show.
+
+    User 1: Well, I''m sure you''ll eventually get your chance. You just have to keep practicing and never give up.
+
+    User 2: Thanks for the encouragement. I really appreciate it.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

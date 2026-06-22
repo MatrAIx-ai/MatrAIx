@@ -1,0 +1,19 @@
+id: 00007483
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7483
+persona_description: A computer security professional with expertise in Windows operating systems, particularly in the areas of malware analysis, system analysis, and service detection. This individual
+  is well-versed in using tools such as Regedit, Tlist, and process spyware to detect and analyze Trojans and viruses that use the Svchost process to load data. They have experience in using process tools
+  to view module information in the Svchost process and identifying suspicious DLL files. They are skilled in clearing Trojans and viruses by stopping the infected service, deleting the service from the
+  Registry, and deleting the main file of the backdoor program.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: Windows operating systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

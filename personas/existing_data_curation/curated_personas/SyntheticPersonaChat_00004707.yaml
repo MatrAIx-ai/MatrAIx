@@ -1,0 +1,64 @@
+id: '00004707'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4707
+data:
+  user 1 personas: 'I love talking on the phone.
+
+    I have a gambling problem.
+
+    I always eat my vegetables.
+
+    I love to go hiking.
+
+    I am fluent in spanish.'
+  user 2 personas: 'I hate social obligations because i always say the wrong thing.
+
+    I like running in marathons.
+
+    I prefer eating at home because people make me nervous.
+
+    My dad owns a appliance store that i do not want to inherit.
+
+    I spend a lot of time watching obscure foreign film on netflix.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1]. I''m from Mexico.
+
+    User 2: Hello, my name is [User 2]. I''m from the United States.
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to run marathons, watch foreign films, and spend time with my family.
+
+    User 1: That''s cool! I like to go hiking, gamble, and eat vegetables.
+
+    User 2: I''ve never been hiking before, but it sounds like it would be fun. I love to eat vegetables, but I hate gambling.
+
+    User 1: Why do you hate gambling?
+
+    User 2: I''m just not good at it. I always lose more money than I win.
+
+    User 1: I know what you mean. I''ve lost a lot of money gambling too.
+
+    User 2: Yeah, it''s not a good idea.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at my dad''s appliance store. I don''t really want to inherit it, but I don''t know what else to do.
+
+    User 1: That''s tough. I''m sure you''ll figure it out.
+
+    User 2: Thanks. I hope so.
+
+    User 1: So, what''s your favorite foreign film?
+
+    User 2: I really like the movie "La Haine". It''s a French film about two friends who are trying to survive in a tough neighborhood.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should! It''s a great movie.
+
+    User 1: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

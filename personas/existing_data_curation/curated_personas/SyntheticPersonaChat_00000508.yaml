@@ -1,0 +1,90 @@
+id: 00000508
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 508
+data:
+  user 1 personas: 'I love hockey.
+
+    I sleep 8 hours.
+
+    My mother looks after my grandmother.
+
+    I prefer texting over phone calls.'
+  user 2 personas: 'I am a karate black belt.
+
+    My wife has terminal cancer.
+
+    I have 3 children.
+
+    I love to sing.
+
+    I am a business man.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a businessman.
+
+    User 1: Oh, that''s cool! What kind of business?
+
+    User 2: I own a karate studio.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to learn karate.
+
+    User 2: You should! It''s a great way to stay in shape and learn self-defense.
+
+    User 1: I know, I know. I''ve been meaning to sign up for a class.
+
+    User 2: You should do it! I''m sure you''d love it.
+
+    User 1: Thanks for the encouragement. I''ll definitely look into it.
+
+    User 2: Good!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to sing. I''m in a band with my friends.
+
+    User 1: Oh, that''s awesome! What kind of music do you play?
+
+    User 2: We play a mix of rock and pop.
+
+    User 1: That sounds cool! I''d love to hear you guys play sometime.
+
+    User 2: We''re always looking for new places to play. Maybe we can set something up.
+
+    User 1: That would be awesome!
+
+    User 2: Great!
+
+    User 1: So, tell me a little bit about your family.
+
+    User 2: I have three children, and my wife has terminal cancer.
+
+    User 1: I''m so sorry to hear that.
+
+    User 2: Thank you.
+
+    User 1: How are you coping with that?
+
+    User 2: It''s not easy, but we''re getting through it day by day.
+
+    User 1: I''m sure you are. You seem like a strong person.
+
+    User 2: Thank you. I''m trying.
+
+    User 1: So, what do you do to relax?
+
+    User 2: I spend a lot of time with my family. We go on walks, play games, and just hang out.
+
+    User 1: That sounds like a great way to relax.
+
+    User 2: It is. I love spending time with them.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

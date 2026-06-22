@@ -1,0 +1,60 @@
+id: '00003670'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3670
+data:
+  user 1 personas: 'I have a dog named percy.
+
+    I like thomas the tank engine.
+
+    My cat died.
+
+    I like books about trains.'
+  user 2 personas: 'My hobbies are sleeping and playing the guitar.
+
+    I have a wife and two kids.
+
+    I am a factory worker.
+
+    I want to be in a band someday.
+
+    I sleep 10 hours every day because my work is tiring.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to sleep and play the guitar.
+
+    User 1: I like sleeping too! What''s your favorite type of guitar?
+
+    User 2: I like acoustic guitars. They''re so relaxing to play.
+
+    User 1: I agree! I used to play the guitar when I was younger, but I haven''t had time to pick it up again lately.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I know, I know. I''ll try to find the time.
+
+    User 2: Good! What else do you like to do for fun?
+
+    User 1: I like to read books about trains. I love Thomas the Tank Engine.
+
+    User 2: Thomas the Tank Engine? That''s a classic! I used to watch that show all the time when I was a kid.
+
+    User 1: I know, right? It''s so good. I have a dog named Percy, and he''s named after the train on the show.
+
+    User 2: That''s so cute! I love dogs. I have a wife and two kids.
+
+    User 1: Oh, that''s nice. What do you do for work?
+
+    User 2: I''m a factory worker. It''s tiring, but I like it.
+
+    User 1: I''m sure it is. Do you have any plans for the future?
+
+    User 2: I''m hoping to start a band someday. I play the guitar, and I love writing songs.
+
+    User 1: That''s awesome! I wish you the best of luck.
+
+    User 2: Thanks'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00004150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4150
+data:
+  user 1 personas: 'My favorite beer is coors.
+
+    My wife is a hairdresser.
+
+    I love to play basketball.
+
+    I drive an acara.'
+  user 2 personas: 'I like tall men.
+
+    I am a runner.
+
+    I have red hair.
+
+    I have 2 dogs.
+
+    I enjoy reading and cooking.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Sarah, nice to meet you. I''m John.
+
+    User 2: Nice to meet you too, John.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, cook, and run.
+
+    User 1: Oh, that''s cool. I like to read and play basketball.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially into mysteries and thrillers.
+
+    User 2: Oh, I love mysteries too! I''m always looking for a good book to read.
+
+    User 1: Me too! I just finished reading a really good mystery novel called "The Silent Patient" by Alex Michaelides.
+
+    User 2: Oh, I''ve heard good things about that book! I''ll have to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a project manager at a software company.
+
+    User 2: Oh, that sounds interesting. Do you like it?
+
+    User 1: I do. It''s a lot of work, but it''s also very rewarding.
+
+    User 2: That''s great. It''s good to be happy with your work.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you like about your wife?
+
+    User 1: I love her sense of humor. She''s always laughing and making me laugh.
+
+    User 2: That''s a great quality to have in a partner.
+
+    User 1: Yeah, it is. She''s also very smart and caring.
+
+    User 2: Sounds like you''re lucky to have her.
+
+    User 1: I am. I love her very much.
+
+    User 2: That''s great to hear.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

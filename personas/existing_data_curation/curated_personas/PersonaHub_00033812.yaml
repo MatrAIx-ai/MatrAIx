@@ -1,0 +1,19 @@
+id: 00033812
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33812
+persona_description: A programmer who specializes in the use of the Obstack library, a C library for managing memory allocation and deallocation in a memory-efficient way. The programmer is skilled in defining
+  and using obstack_chunk_alloc and obstack_chunk_free macros to allocate and deallocate chunks of memory, respectively. They are familiar with the obstack library's chunk allocation algorithm and its limitations,
+  and are skilled in adjusting the chunk size to optimize memory usage. The programmer is also proficient in using the Obstack library to manage memory efficiently, especially when allocating large chunks
+  of memory for long objects. They are likely to be familiar with the obstack library's memory management mechanisms and its performance characteristics.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Memory Management
+  general_domain_top01pct: None
+  specific_domain_top01pct: Obstack Library
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

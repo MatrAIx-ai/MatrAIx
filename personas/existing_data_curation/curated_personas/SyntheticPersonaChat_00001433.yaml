@@ -1,0 +1,72 @@
+id: '00001433'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1433
+data:
+  user 1 personas: 'I work full time.
+
+    I like nature.
+
+    I love eating out.
+
+    My favorite color is blue.'
+  user 2 personas: 'I like to eat cheetos.
+
+    I like to ski.
+
+    My wife does not like me anymore.
+
+    I hate mexican food.
+
+    I have went to mexico 4 times this year.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing today?
+
+    User 2: I''m doing alright, thanks for asking.
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: I''m at work, unfortunately. But I''m looking forward to getting out of here and going to dinner with my friends.
+
+    User 2: Oh, fun! What kind of food are you going to get?
+
+    User 1: I''m not sure yet, but I''m thinking maybe Mexican.
+
+    User 2: Oh, that sounds good. I love Mexican food.
+
+    User 1: Me too! I''m going to miss it when I move to Canada next year.
+
+    User 2: Oh, why are you moving?
+
+    User 1: I''m getting a job in Vancouver.
+
+    User 2: Oh, that''s exciting! I''ve always wanted to go to Vancouver.
+
+    User 1: It''s a beautiful city. You should definitely visit sometime.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you like to do for fun?
+
+    User 2: I like to ski, go snowboarding, and play video games.
+
+    User 1: Oh, that sounds fun. I''ve never been skiing or snowboarding, but I''ve always wanted to try.
+
+    User 2: You should definitely try it! It''s a lot of fun.
+
+    User 1: I will! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I''m especially into first-person shooters and racing games.
+
+    User 1: Oh, I love first-person shooters! I''m not so good at racing games, though.
+
+    User 2: That''s okay, I''m not that good at them either.
+
+    User 1: Well, it sounds like we have a lot in common.
+
+    User 2: Yeah, it looks like we do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

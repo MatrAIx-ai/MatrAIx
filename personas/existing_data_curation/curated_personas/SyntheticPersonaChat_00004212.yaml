@@ -1,0 +1,72 @@
+id: '00004212'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4212
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I do not like animals.
+
+    I like to role play.
+
+    I am a morning person.'
+  user 2 personas: 'My favorite fruit is an apple.
+
+    I prefer morning to night.
+
+    I like to swim.
+
+    I prefer winter over fall.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite fruit is an apple.
+
+    User 1: Oh, I love apples too! I love eating them with peanut butter.
+
+    User 2: That sounds good! I prefer to eat them plain.
+
+    User 1: What''s your favorite time of day?
+
+    User 2: I prefer morning to night.
+
+    User 1: Me too! I love the feeling of waking up early and getting a fresh start on the day.
+
+    User 2: I like the morning because it''s usually quiet and peaceful.
+
+    User 1: Me too! It''s the perfect time to relax and enjoy a cup of coffee.
+
+    User 2: I like to swim in the morning.
+
+    User 1: That sounds like a great way to start the day! I''m not a very good swimmer, but I love to go to the beach.
+
+    User 2: I love the beach too! It''s so relaxing to just sit on the sand and watch the waves.
+
+    User 1: Me too! I love to go swimming, sunbathing, and building sandcastles.
+
+    User 2: I don''t like animals.
+
+    User 1: Oh, that''s too bad! I love animals. I have a dog and a cat.
+
+    User 2: I''m allergic to dogs and cats.
+
+    User 1: Oh, that''s too bad! I love role playing.
+
+    User 2: What''s role playing?
+
+    User 1: It''s a type of game where you pretend to be someone else.
+
+    User 2: Oh, that sounds fun! I''ve never done that before.
+
+    User 1: It''s a lot of fun! You can pretend to be anyone you want.
+
+    User 2: That sounds like something I''d like to try.
+
+    User 1: You should! It''s a great way to escape from the real world for a while.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

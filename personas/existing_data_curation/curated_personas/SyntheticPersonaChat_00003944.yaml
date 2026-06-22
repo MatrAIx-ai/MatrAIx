@@ -1,0 +1,66 @@
+id: 00003944
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3944
+data:
+  user 1 personas: 'I drink a lot of caffeine.
+
+    I am very skinny and energetic.
+
+    I have a very unhealthy diet.
+
+    I can run very fast for long distances.'
+  user 2 personas: 'I m in the military.
+
+    I was a wrestler in high school.
+
+    My favorite color is blue.
+
+    I have one son.
+
+    I am 25 years old.'
+  Best Generated Conversation: 'User 1: I''m in the military, too! What branch are you in?
+
+    User 2: I''m in the United States Army.
+
+    User 1: Oh, cool! I''m in the United States Air Force.
+
+    User 2: Nice! What''s your job?
+
+    User 1: I''m a pilot.
+
+    User 2: That''s awesome! I was a wrestler in high school.
+
+    User 1: Oh, cool! I was a runner.
+
+    User 2: I bet you''re really fast.
+
+    User 1: I am pretty fast. I can run very fast for long distances.
+
+    User 2: That''s impressive! I''m not very athletic.
+
+    User 1: No worries, I''m not very athletic either. I just have a lot of energy.
+
+    User 2: That''s good! You need a lot of energy to be in the military.
+
+    User 1: Yeah, I know. I drink a lot of caffeine to keep my energy up.
+
+    User 2: That''s not good for you.
+
+    User 1: I know, I know. I''m trying to cut back.
+
+    User 2: That''s good. You should take better care of yourself.
+
+    User 1: I will. I''m going to start eating healthier.
+
+    User 2: That''s great! You should also try to get more sleep.
+
+    User 1: I will. I''m going to try to go to bed earlier.
+
+    User 2: That''s good. I hope you get better.
+
+    User 1: Thanks. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

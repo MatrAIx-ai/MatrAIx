@@ -1,0 +1,92 @@
+id: '00003323'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3323
+data:
+  user 1 personas: 'I am almost 7 feet tall.
+
+    My favorite band is the rolling stones.
+
+    I would like to retire to hawaii in the next 10 years.
+
+    I currently work for ibm in chicago.
+
+    I am not a basketball player though.'
+  user 2 personas: 'I love going to concerts on the weekend.
+
+    Everyday i go swimming at the y.
+
+    My favorite color is blue.
+
+    I collect stamps.
+
+    My mom taught me how to play the cello.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m (user 1''s name).
+
+    User 2: Nice to meet you, (user 1''s name). I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I love going to concerts on the weekend. I also like to go swimming at the Y.
+
+    User 1: That sounds like fun! I like going to concerts too. Do you have a favorite band?
+
+    User 2: My favorite band is the Rolling Stones. I love their music and their live shows are always amazing.
+
+    User 1: I''ve never been to a Rolling Stones concert, but I''ve heard great things about them. I''m a big fan of their music too.
+
+    User 2: They''re one of the best bands in the world, in my opinion.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to collect stamps. I have a pretty big collection, and I love learning about the history of different stamps.
+
+    User 1: That''s really cool! I''ve never collected stamps before, but I think it would be a fun hobby.
+
+    User 2: It is! It''s a great way to learn about history and different cultures.
+
+    User 1: What''s your favorite stamp in your collection?
+
+    User 2: My favorite stamp is a 1958 United States stamp that features the Statue of Liberty. It''s a beautiful stamp, and it''s a reminder of our nation''s history.
+
+    User 1: That''s a really cool stamp! I''m glad you have such a great collection.
+
+    User 2: Thanks! I''m proud of it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer. I work for a big tech company in Chicago.
+
+    User 1: That sounds like a cool job! I''m a software engineer too. I work for a small tech company in San Francisco.
+
+    User 2: Nice! It''s always cool to meet another software engineer.
+
+    User 1: Yeah, it is! What do you like most about your job?
+
+    User 2: I love the challenge of working on new and innovative software. I also love the opportunity to work with smart and talented people.
+
+    User 1: I agree! Those are two of the best things about being a software engineer.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m thinking about going back to school to get my master''s degree.
+
+    User 1: That sounds like a great idea! What do you want to study?
+
+    User 2: I''m not sure yet. I''m thinking about studying computer science or business administration.
+
+    User 1: Both of those are great choices!
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, it was nice talking to you, (user 2''s name).
+
+    User 2: It was nice talking to you too, (user 1''s name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

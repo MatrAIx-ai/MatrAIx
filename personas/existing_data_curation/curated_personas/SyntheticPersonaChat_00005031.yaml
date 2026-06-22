@@ -1,0 +1,70 @@
+id: '00005031'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5031
+data:
+  user 1 personas: 'I like to work with acrylics.
+
+    My favorite class is painting.
+
+    I have blonde hair.
+
+    I am in art school.'
+  user 2 personas: 'I work in marketing for a large company.
+
+    I like to try different beers from various countries.
+
+    I like to work on cars.
+
+    My favorite music genre is classic rock.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just working on some marketing stuff.
+
+    User 1: Oh, cool. I''m in art school.
+
+    User 2: Oh, that''s cool! What kind of art do you do?
+
+    User 1: I like to work with acrylics.
+
+    User 2: Oh, that''s awesome! I like to paint too.
+
+    User 1: Really? What''s your favorite kind of painting to do?
+
+    User 2: I like to do abstracts.
+
+    User 1: Oh, that''s cool! I love abstracts too.
+
+    User 2: What''s your favorite class in art school?
+
+    User 1: My favorite class is painting.
+
+    User 2: Oh, that''s cool! I like painting too.
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: I bet it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out with friends, listen to music, and try new beers.
+
+    User 1: Oh, that''s cool. I like to go out with friends too.
+
+    User 2: Yeah, it''s a lot of fun.
+
+    User 1: What''s your favorite band?
+
+    User 2: I like classic rock.
+
+    User 1: Oh, that''s cool. I like classic rock too.
+
+    User 2: Yeah, it''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

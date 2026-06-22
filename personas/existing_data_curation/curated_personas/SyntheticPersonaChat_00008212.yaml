@@ -1,0 +1,48 @@
+id: 00008212
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8212
+data:
+  user 1 personas: 'I m headed to university of michigan in the fall.
+
+    I love tacos but hate spaghetti.
+
+    My favorite season is summer.
+
+    I just graduated high school.
+
+    I want to be a doctor when i graduate.'
+  user 2 personas: 'I often spend my free time engaging in activism work with friends and family.
+
+    I work as a legal assistant in a law firm that basically only handles real estate work.
+
+    I enjoy this type of activist work , as my job isn t very personally fulfilling.
+
+    I enjoying keeping up with the news and learning about political issues.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you like to do for fun?
+
+    User 2: I enjoy spending my free time engaging in activism work with friends and family.
+
+    User 1: That''s great! I''m also passionate about activism. What kinds of issues do you care about most?
+
+    User 2: I''m really interested in environmental issues and social justice. I also enjoy keeping up with the news and learning about political issues.
+
+    User 1: Me too! I think it''s important to be informed about the world around us and to get involved in making it a better place.
+
+    User 2: I agree. I think we can all make a difference if we work together.
+
+    User 1: I''m excited to see what we can do together.
+
+    User 2: Me too! I''m sure we can come up with some great ideas.
+
+    User 1: I''m glad we have something in common. I hope we can become friends.
+
+    User 2: Me too! I think we''d get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

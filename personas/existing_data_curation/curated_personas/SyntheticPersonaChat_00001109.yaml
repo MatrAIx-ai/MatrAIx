@@ -1,0 +1,72 @@
+id: 00001109
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1109
+data:
+  user 1 personas: 'I own many cars.
+
+    I like watching sports.
+
+    Ferrari is my favorite car company.
+
+    I work out daily.'
+  user 2 personas: 'I love eating barbeque sandwiches and pizza puffs.
+
+    I enjoy hanging out with my imaginary friends as a hobby.
+
+    My favorite show is tom and jerry.
+
+    I live down the street from miley cyrus and pnb rock.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1].
+
+    User 2: Hey! I''m [user 2].
+
+    User 1: What do you like to do?
+
+    User 2: I love to eat BBQ sandwiches and pizza puffs. I also enjoy hanging out with my imaginary friends.
+
+    User 1: That''s cool! I like working out and watching sports.
+
+    User 2: Do you like any sports?
+
+    User 1: I like football, basketball, and baseball.
+
+    User 2: I like football too! What''s your favorite team?
+
+    User 1: I''m a fan of the Packers.
+
+    User 2: Oh, cool! I''m a fan of the Chiefs.
+
+    User 1: They''re a good team! I''m looking forward to seeing them play this year.
+
+    User 2: Me too! I think they have a good chance of going to the Super Bowl.
+
+    User 1: I hope so! It would be great to see them win it all.
+
+    User 2: Me too! It would be a lot of fun to watch.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s great! I''m a doctor.
+
+    User 2: Oh, cool! What kind of doctor are you?
+
+    User 1: I''m a surgeon.
+
+    User 2: Oh, wow! That''s amazing! I''m so impressed.
+
+    User 1: Thank you! I''m glad you think so.
+
+    User 2: So, what''s it like being a surgeon?
+
+    User 1: It''s really rewarding. I get to help people every day.
+
+    User 2: That''s amazing! I''m so glad you enjoy your job.
+
+    User 1: I do! I love being a surgeon'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

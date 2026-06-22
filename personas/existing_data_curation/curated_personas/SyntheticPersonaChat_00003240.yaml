@@ -1,0 +1,74 @@
+id: '00003240'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3240
+data:
+  user 1 personas: 'In allergic to peanuts.
+
+    I love the beatles.
+
+    I like eating vegetables.
+
+    I am usually very shy.'
+  user 2 personas: 'I do not like feeling obligated to hang out with someone.
+
+    Coffee is important to me.
+
+    I love winning.
+
+    I can tell right away if i am going to like someone.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thanks! I''m a little shy, but I''m trying to be more outgoing.
+
+    User 2: That''s great! I''m glad to hear that. I''m pretty outgoing myself, so I can help you out if you need it.
+
+    User 1: Thanks! I appreciate that. So, what do you like to do for fun?
+
+    User 2: I love to play games, listen to music, and drink coffee.
+
+    User 1: Oh, cool! Me too! What games do you like to play?
+
+    User 2: I like to play a lot of different games, but my favorite is probably Mario Kart.
+
+    User 1: Mario Kart is awesome! I love playing that game too.
+
+    User 2: Me too! It''s so much fun. What kind of music do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but I mainly listen to rock, pop, and country.
+
+    User 2: Oh, cool! I like rock and pop music too. What''s your favorite band?
+
+    User 1: My favorite band is the Beatles.
+
+    User 2: The Beatles are awesome! I love their music.
+
+    User 1: Me too! They''re my favorite band of all time.
+
+    User 2: So, what do you like about the Beatles?
+
+    User 1: I love their music, their lyrics, and their overall sound. They''re just an amazing band.
+
+    User 2: I agree! They''re one of the best bands of all time.
+
+    User 1: I''m glad you agree!
+
+    User 2: So, what are you allergic to?
+
+    User 1: I''m allergic to peanuts.
+
+    User 2: Oh, that''s too bad. I love peanuts.
+
+    User 1: Me too! But I can''t eat them.
+
+    User 2: That''s a shame.
+
+    User 1: It is. But I''m used to it.
+
+    User 2: Well, I''m glad you''re doing well despite your allergy.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

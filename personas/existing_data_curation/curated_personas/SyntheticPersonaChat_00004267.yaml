@@ -1,0 +1,62 @@
+id: '00004267'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4267
+data:
+  user 1 personas: 'Green is my favorite color.
+
+    I am an aspiring singer.
+
+    I love animals.
+
+    I enjoy playing tennis.'
+  user 2 personas: 'Everyone says my pecan pie is the best they have ever had.
+
+    My landlord is raising my rent.
+
+    I am an excellent baker.
+
+    I went to law school.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], what''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to bake, play tennis, and spend time with my animals.
+
+    User 1: Baking sounds delicious! What''s your favorite thing to bake?
+
+    User 2: I love baking pecan pie. It''s my favorite pie, and everyone who''s tried it says it''s the best they''ve ever had.
+
+    User 1: That sounds delicious! I''ve never had pecan pie before, but now I''m really excited to try it.
+
+    User 2: You should! It''s so good.
+
+    User 1: So, what''s your favorite animal?
+
+    User 2: I love dogs. They''re so loyal and loving.
+
+    User 1: Dogs are the best! I have a dog named Max, and he''s my best friend.
+
+    User 2: I love dogs! They''re so loyal and loving.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a lawyer.
+
+    User 1: Oh, that''s cool. I''ve always thought about going to law school.
+
+    User 2: It''s a lot of work, but it''s also really rewarding.
+
+    User 1: So, what do you like most about being a lawyer?
+
+    User 2: I like helping people, and I like the challenge of it.
+
+    User 1: That makes sense. I think I would like being a lawyer too.
+
+    User 2: It''s a lot of fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

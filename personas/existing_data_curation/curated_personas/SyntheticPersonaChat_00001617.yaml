@@ -1,0 +1,52 @@
+id: '00001617'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1617
+data:
+  user 1 personas: 'I have black hair.
+
+    I enjoy the outdoors.
+
+    I live on a ranch.
+
+    I am a cheerleader.'
+  user 2 personas: 'I like to play outside.
+
+    I am a girl.
+
+    My favorite animal is a zebra.
+
+    I am in preschool.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to play outside.
+
+    User 1: Me too! I love going on hikes and exploring nature.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I love zebras! They''re so beautiful and graceful.
+
+    User 2: Me too! They''re my favorite animal too!
+
+    User 1: That''s so cool! We have a lot in common.
+
+    User 2: Yeah, we do! I like to play outside, and I love zebras.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to draw and paint.
+
+    User 1: That''s cool! I like to draw and paint too.
+
+    User 2: Maybe we can paint together sometime!
+
+    User 1: That would be so much fun!
+
+    User 2: I''m glad we met!
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

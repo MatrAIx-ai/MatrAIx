@@ -1,0 +1,21 @@
+id: 00031758
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31758
+persona_description: A cybersecurity analyst who is responsible for collecting, processing, and disseminating threat intelligence to ensure the organization's security and compliance. This persona is skilled
+  in various intelligence collection methods, including pulling metadata and logs from internal networks and security devices, subscribing to threat data feeds from industry organizations and cybersecurity
+  vendors, holding conversations and targeted interviews with knowledgeable sources, scraping and harvesting websites and forums, and infiltrating closed sources such as dark web forums. This persona is
+  adept at processing raw data, turning it into useful information, analyzing the information, and presenting it as actionable intelligence. This persona is responsible for disseminating threat intelligence
+  to the appropriate security teams, ensuring that the intelligence is easily understandable and actionable for each audience. This persona is also responsible for following up with security teams if they
+  have questions. This persona is supported by tools such as threat intelligence solutions and existing security tools.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Cybersecurity
+  general_domain_top01pct: None
+  specific_domain_top01pct: Threat Intelligence
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

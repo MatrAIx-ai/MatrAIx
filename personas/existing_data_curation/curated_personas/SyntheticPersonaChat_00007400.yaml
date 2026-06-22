@@ -1,0 +1,60 @@
+id: '00007400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7400
+data:
+  user 1 personas: 'Lady gaga is my current favorite singer.
+
+    Madonna is my all time favorite.
+
+    I love music.
+
+    I go to at least 10 concerts a year.'
+  user 2 personas: 'I enjoy reading.
+
+    I love country.
+
+    I love animals.
+
+    I m a vegan.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my animals.
+
+    User 1: That sounds nice. I like to go to concerts, play video games, and watch movies.
+
+    User 2: I like concerts too! What are some of your favorite bands?
+
+    User 1: I love Lady Gaga and Madonna. I also like some country music, like Carrie Underwood and Luke Bryan.
+
+    User 2: I''ve never been to a concert, but I''ve always wanted to go. I love Lady Gaga too!
+
+    User 1: You should definitely go to a concert! It''s a lot of fun.
+
+    User 2: Maybe I will. Do you have any recommendations?
+
+    User 1: Yeah, I''ve heard that Lady Gaga''s concerts are amazing. She puts on a really great show.
+
+    User 2: That sounds like a lot of fun. I''ll have to check it out.
+
+    User 1: You''re welcome! What kind of video games do you like to play?
+
+    User 2: I like a variety of games, but I''m a big fan of RPGs. I also like some action games and strategy games.
+
+    User 1: I''m not much of a gamer, but I''ve heard that RPGs are a lot of fun.
+
+    User 2: They can be! You should give one a try sometime.
+
+    User 1: Maybe I will. I''ve heard that Skyrim is a good one.
+
+    User 2: Yeah, Skyrim is a great game! I''ve spent hours playing it.
+
+    User 1: Maybe I''ll check it out.
+
+    User 2: You''re welcome to borrow my copy if you want.
+
+    User 1: Thanks! I might just take you up on that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

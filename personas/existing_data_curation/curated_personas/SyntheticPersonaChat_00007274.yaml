@@ -1,0 +1,82 @@
+id: '00007274'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7274
+data:
+  user 1 personas: 'My name is mary and i am from colorado.
+
+    My favorite band is one direction.
+
+    I love to hike in the summer.
+
+    The weather here is very cold , but so beautiful in the spring.'
+  user 2 personas: 'I go to church on sunday.
+
+    I have a 3 year old.
+
+    My father is a preacher.
+
+    I am a 1st grade teacher.'
+  Best Generated Conversation: 'User 1: Hello, my name is Mary and I''m from Colorado.
+
+    User 2: Hi Mary, my name is [name] and I''m from [state].
+
+    User 1: Nice to meet you, [name]. I love hiking in the summer. Do you like to hike?
+
+    User 2: I love hiking too! I used to hike a lot when I lived in Colorado.
+
+    User 1: That''s awesome! I''m glad to meet another hiker.
+
+    User 2: Me too! Where do you like to hike in Colorado?
+
+    User 1: I love hiking in the mountains. I''ve hiked in the Rocky Mountains, the San Juan Mountains, and the Sangre de Cristo Mountains.
+
+    User 2: Those are all beautiful places to hike. I''ve hiked in the Rocky Mountains a few times.
+
+    User 1: What''s your favorite hike in the Rocky Mountains?
+
+    User 2: My favorite hike in the Rocky Mountains is Mount Sneffels. It''s a challenging hike, but the views from the top are amazing.
+
+    User 1: Mount Sneffels is on my list of hikes to do! It looks like a beautiful hike.
+
+    User 2: It is! You should definitely do it.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! I''m glad I could help.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m a first grade teacher. I love working with kids.
+
+    User 1: That sounds like a rewarding job.
+
+    User 2: It is! I love seeing the kids learn and grow.
+
+    User 1: That''s great. I''m glad you love your job.
+
+    User 2: I do! It''s my passion.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thanks.
+
+    User 1: So, do you have any other hobbies?
+
+    User 2: I love to read, play piano, and watch movies.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Hunger Games series, and the Percy Jackson series.
+
+    User 1: I love those books too! I''ve read them all multiple times.
+
+    User 2: Me too! I''m glad we have similar interests.
+
+    User 1: Me too! It''s always nice to meet someone with similar interests.
+
+    User 2: I agree'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

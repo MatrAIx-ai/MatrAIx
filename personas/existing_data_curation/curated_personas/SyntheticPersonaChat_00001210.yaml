@@ -1,0 +1,72 @@
+id: '00001210'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1210
+data:
+  user 1 personas: 'I am a paramedic.
+
+    I love rap music.
+
+    I talk to my mom on the phone every day.
+
+    I am single.
+
+    I love going fishing.'
+  user 2 personas: 'My parents don t really speak english , but i speak italian and english.
+
+    I like to cook.
+
+    I have three children.
+
+    I moved to america when i was 14.
+
+    I got married when i was young.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, cool! How many kids do you have?
+
+    User 2: I have three children, all under the age of 10.
+
+    User 1: That must be a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I can imagine. I''m a paramedic, so I know how important it is to have a support system.
+
+    User 2: That''s great that you''re a paramedic! What do you like most about your job?
+
+    User 1: I like helping people and making a difference in their lives.
+
+    User 2: That''s so nice! I''m sure you''re a great paramedic.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like going fishing, listening to music, and hanging out with my friends.
+
+    User 2: I like fishing too! What kind of music do you like?
+
+    User 1: I like all kinds of music, but I especially like rap music.
+
+    User 2: That''s cool! I like rap music too.
+
+    User 1: We should go fishing together sometime!
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Great! I''m looking forward to it.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

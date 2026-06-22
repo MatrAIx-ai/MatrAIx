@@ -1,0 +1,64 @@
+id: '00005311'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5311
+data:
+  user 1 personas: 'I have two children under ten.
+
+    I have two cats.
+
+    I love eating kale.
+
+    I am in love with adam levine.
+
+    I need extra iron in my diet.'
+  user 2 personas: 'I try to take a break and see a movie in theaters every other month.
+
+    I currently work at target.
+
+    I live in a house in california.
+
+    Everyday after work i buy my dog a dog biscuit.
+
+    I am 5 7 tall.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the movies, see a play, or go to a concert.
+
+    User 1: I love going to the movies too! I saw the new Adam Levine movie last week.
+
+    User 2: Oh, I heard that was really good!
+
+    User 1: It was! I loved it. Adam Levine is so talented.
+
+    User 2: I agree! I love his music.
+
+    User 1: I have two cats, and they''re my best friends.
+
+    User 2: I love cats! I had one when I was a kid.
+
+    User 1: I''m glad you like cats. I love taking care of them.
+
+    User 2: Me too! I miss having a cat.
+
+    User 1: Maybe we can get a cat together.
+
+    User 2: That would be fun!
+
+    User 1: I need extra iron in my diet.
+
+    User 2: You should eat kale. It''s a good source of iron.
+
+    User 1: I love kale! I eat it all the time.
+
+    User 2: Me too! It''s so good.
+
+    User 1: I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

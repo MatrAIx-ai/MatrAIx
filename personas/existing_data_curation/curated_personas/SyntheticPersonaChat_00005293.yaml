@@ -1,0 +1,60 @@
+id: 00005293
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5293
+data:
+  user 1 personas: 'I have a black belt in karate.
+
+    I vacation along lake michigan every summer.
+
+    I love to eat shrimp and lobster.
+
+    I am in a jazz band and play the saxophone.
+
+    My favorite drink is iced coffee.'
+  user 2 personas: 'I love cabins in the woods on the lake.
+
+    I like to swim in the lake.
+
+    I have been to every state except alaska.
+
+    I like to visit places around the world.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim in the lake, go camping, and visit different places around the world.
+
+    User 1: That sounds fun! I like to go to the beach, play saxophone, and eat seafood.
+
+    User 2: I''ve been to the beach a few times, but I''ve never tried saxophone. What''s it like?
+
+    User 1: It''s really fun! I''ve been playing for a few years now, and I love it.
+
+    User 2: I''ve always wanted to learn how to play an instrument. What''s your favorite seafood?
+
+    User 1: I love shrimp and lobster. What''s your favorite place to go camping?
+
+    User 2: I love to go camping in the woods near the lake. I love the fresh air and the peacefulness of the woods.
+
+    User 1: That sounds amazing! I''ve never been camping in the woods before. I''ve only been camping in the mountains.
+
+    User 2: You should try it sometime. It''s really great.
+
+    User 1: I will! I''ve always wanted to try camping in a different environment.
+
+    User 2: You won''t regret it!
+
+    User 1: I''m sure I won''t.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: We do! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

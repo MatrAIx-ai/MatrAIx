@@ -1,0 +1,19 @@
+id: '00020010'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20010
+persona_description: A person who is knowledgeable about city databases, specifically in the United States and Canada. They are skilled in handling and analyzing large datasets, and have a deep understanding
+  of the structure and content of city names. They are adept at using regular expressions to filter and search for specific patterns within the city names, and have experience with databases and programming
+  languages such as Python. They are proficient in using the hangman-style string templates provided and are able to apply these templates to various city names to find specific matches. They are also familiar
+  with the concept of using vertical bar operators to filter geographic regions and have experience with Python regular expressions.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Geographic Information Systems (GIS) or Urban Computing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

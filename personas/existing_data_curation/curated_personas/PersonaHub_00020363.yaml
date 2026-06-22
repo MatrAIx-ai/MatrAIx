@@ -1,0 +1,18 @@
+id: '00020363'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20363
+persona_description: A person who is interested in the effects of opioids and their interactions with other substances. They may be a medical professional, researcher, or simply curious about the topic.
+  They are likely to be familiar with the terms "partial agonist" and "agonist", and may have a background in pharmacology or neuroscience. They may also be interested in the potential health effects of
+  opioids and other substances.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: pharmacology/neuroscience
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

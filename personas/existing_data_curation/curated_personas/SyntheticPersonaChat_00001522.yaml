@@ -1,0 +1,64 @@
+id: '00001522'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1522
+data:
+  user 1 personas: 'I am a older lady.
+
+    I like to cook stews.
+
+    I love to listen to frank sinatra.
+
+    I love to eat cheese.
+
+    I watch a lot of spongebob.'
+  user 2 personas: 'I like soccer.
+
+    I love game of thrones.
+
+    My brother used to be in the navy.
+
+    I am a vegan.
+
+    My favorite food is mashed potatoes.'
+  Best Generated Conversation: 'User 1: I''m an older lady. I love to cook stews, listen to Frank Sinatra, eat cheese, and watch Spongebob. What about you?
+
+    User 2: I like soccer, Game of Thrones, and my brother used to be in the Navy. I''m also a vegan and my favorite food is mashed potatoes.
+
+    User 1: Wow, that''s a lot of interests! I''m not a big fan of soccer, but I love Game of Thrones and my brother was also in the Navy. I''m not a vegan, but I love cheese and mashed potatoes.
+
+    User 2: That''s so cool! I''ve never met anyone else who''s been in the Navy. What was it like?
+
+    User 1: It was pretty tough, but it was also a lot of fun. I learned a lot and made some lifelong friends.
+
+    User 2: That''s great to hear. I''m glad you had a good experience.
+
+    User 1: Thanks. So, what do you like to do for fun?
+
+    User 2: I love to watch soccer, play video games, and hang out with my friends.
+
+    User 1: Those all sound like fun things to do. I love to cook, read, and go for walks in the park.
+
+    User 2: That''s so cool! I love to read too. I''m currently reading Game of Thrones.
+
+    User 1: I love that series! I''ve read the books and seen the show.
+
+    User 2: I''m only on the third book, but I''m really enjoying it so far.
+
+    User 1: The third book is my favorite! It''s so exciting and dramatic.
+
+    User 2: I can''t wait to finish it!
+
+    User 1: Me too! So, what''s your favorite food?
+
+    User 2: My favorite food is mashed potatoes. I could eat them every day.
+
+    User 1: That''s so funny! My favorite food is also mashed potatoes.
+
+    User 2: No way! We must be soulmates.
+
+    User 1: I think you''re right! We should be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

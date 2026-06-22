@@ -1,0 +1,18 @@
+id: 00002984
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2984
+persona_description: A patient seeking treatment for brain tumours, considering the various options available for treatment, including surgery, chemotherapy, radiation therapy, and tumour treating fields.
+  The patient is likely to have a medical background and is looking for a personalized treatment plan based on their specific situation and preferences. They may also be considering alternative treatments
+  or seeking second opinions. The patient is likely to have a strong desire to recover and regain their health, and is willing to undergo various treatments to achieve that goal.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

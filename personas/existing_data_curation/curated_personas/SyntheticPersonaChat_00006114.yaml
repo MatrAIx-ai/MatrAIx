@@ -1,0 +1,50 @@
+id: '00006114'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6114
+data:
+  user 1 personas: 'My brother thinks he is a viking.
+
+    My masters degree is in italian literature.
+
+    I live in a nice attic apartment in portland or.
+
+    I have a pet skunk.'
+  user 2 personas: 'I am an american citizen.
+
+    I love pizza.
+
+    Going to the beach is my favorite past time.
+
+    My son is a football player.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love going to the beach and playing football. What about you?
+
+    User 1: I like to read and cook. I have a pet skunk.
+
+    User 2: That''s cool! I''ve always wanted a pet skunk. What''s it like having one?
+
+    User 1: He''s a great pet. He''s very friendly and loves to play.
+
+    User 2: That sounds cute! I''m glad you enjoy him.
+
+    User 1: Thanks! What''s your favorite thing about being an American citizen?
+
+    User 2: I have a lot of favorite things about being an American citizen. I love the freedom of speech and the right to bear arms.
+
+    User 1: I agree! I love those things too. What''s your favorite pizza?
+
+    User 2: I love all pizza, but my favorite is probably pepperoni with extra cheese.
+
+    User 1: That''s a classic! I like to order pizza from a local pizza place.
+
+    User 2: Me too! I love supporting local businesses.
+
+    User 1: I''m glad we agree on so many things! It''s been nice talking to you.
+
+    User 2: You too! It''s been nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

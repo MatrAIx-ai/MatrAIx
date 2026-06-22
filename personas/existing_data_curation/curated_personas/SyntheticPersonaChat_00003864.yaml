@@ -1,0 +1,72 @@
+id: 00003864
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3864
+data:
+  user 1 personas: 'My nickname is bubblegum.
+
+    I am plotting on taking over the world.
+
+    I have found the cure for the common cold.
+
+    My brother and i have bright red hair.'
+  user 2 personas: 'The appalachian trail is my favorite.
+
+    I like folk music.
+
+    My hiking boots are pink.
+
+    I love to hike.
+
+    I work in marketing.'
+  Best Generated Conversation: 'User 1: Hi, my name is Bubblegum.
+
+    User 2: Hi Bubblegum, my name is [user 2]. I''m a marketing manager and I love to hike.
+
+    User 1: Oh, that''s cool! I love hiking too. I''ve hiked the Appalachian Trail twice.
+
+    User 2: Wow, that''s impressive! I''ve never hiked the whole thing, but I''ve done a few sections.
+
+    User 1: What''s your favorite part of hiking?
+
+    User 2: I love the feeling of being out in nature and exploring new places.
+
+    User 1: I know what you mean. It''s so peaceful and relaxing.
+
+    User 2: Exactly! And I love the challenge of hiking.
+
+    User 1: Me too! It''s a great way to get in shape.
+
+    User 2: Absolutely! And it''s a lot of fun.
+
+    User 1: I agree! Do you have any favorite hiking trails?
+
+    User 2: I love the Smoky Mountains National Park. There are so many great trails there.
+
+    User 1: I''ve heard great things about the Smoky Mountains. I''ll have to check them out sometime.
+
+    User 2: You definitely should! They''re beautiful.
+
+    User 1: I know I''m going to love it.
+
+    User 2: I''m sure you will.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem!
+
+    User 1: So, what''s your favorite folk music band?
+
+    User 2: I love the Indigo Girls. They''re so talented.
+
+    User 1: I''ve heard good things about them. I''ll have to check them out.
+
+    User 2: You definitely should! They''re great.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

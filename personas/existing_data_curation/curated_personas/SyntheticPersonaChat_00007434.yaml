@@ -1,0 +1,64 @@
+id: '00007434'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7434
+data:
+  user 1 personas: 'This summer i went on vacation to italy.
+
+    Sometimes i go to yoga classes.
+
+    I like italian cusine.
+
+    I live in a big city.
+
+    I work in the office , 9 till 5.'
+  user 2 personas: 'My car is green and smells weird.
+
+    My grandma is from denmark.
+
+    My favorite food is meatloaf.
+
+    My dog s name is toto.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I like to go to yoga classes and cook Italian food.
+
+    User 1: Oh, that sounds fun. I''ve always wanted to try yoga.
+
+    User 2: It''s great for relaxation and flexibility.
+
+    User 1: I''m sure it is. I''m also a big fan of Italian food.
+
+    User 2: Me too! I love making meatloaf.
+
+    User 1: Meatloaf is my favorite! I also like lasagna.
+
+    User 2: Lasagna is great too! I love making it for my family.
+
+    User 1: I bet it''s delicious. My family loves it when I make it for them.
+
+    User 2: I''m sure it is. I''m always looking for new recipes to try.
+
+    User 1: Me too! I love cooking new things.
+
+    User 2: It''s so much fun to experiment in the kitchen.
+
+    User 1: I agree! I love trying new flavors and ingredients.
+
+    User 2: Me too! I think it''s the best way to learn about different cultures.
+
+    User 1: I agree! I love learning about new cultures through food.
+
+    User 2: Me too! It''s such a great way to connect with people from all over the world.
+
+    User 1: I agree! I love traveling and trying new foods from different countries.
+
+    User 2: Me too! It''s the best way to experience different cultures.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

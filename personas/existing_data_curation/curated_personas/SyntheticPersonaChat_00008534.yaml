@@ -1,0 +1,94 @@
+id: 00008534
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8534
+data:
+  user 1 personas: 'My favorite basketball team is the vancouver grizzlies.
+
+    I run marathons twice a year , mostly in america.
+
+    I live in canada , near ontario.
+
+    My favorite sport is basketball.
+
+    I am an avid runner.'
+  user 2 personas: 'I like the movie godfather.
+
+    I weight 300 pounds.
+
+    I like candy and soda.
+
+    I am not healthy.
+
+    I am a man.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m from Canada. Where are you from?
+
+    User 2: I''m from the US.
+
+    User 1: Oh, cool! I''ve always wanted to visit the US.
+
+    User 2: You should! It''s a great place.
+
+    User 1: What part of the US are you from?
+
+    User 2: I''m from Florida.
+
+    User 1: Oh, I''ve been to Florida before. It''s a nice place.
+
+    User 2: Yeah, it is.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, play video games, and eat candy.
+
+    User 1: Oh, I like to watch movies too. What kind of movies do you like?
+
+    User 2: I like all kinds of movies, but my favorite is the Godfather.
+
+    User 1: The Godfather is a great movie! I love the characters and the plot.
+
+    User 2: Yeah, it''s a classic.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to code.
+
+    User 2: It''s not too hard to learn. There are a lot of resources available online.
+
+    User 1: Maybe I''ll look into it.
+
+    User 2: You should! It''s a great skill to have.
+
+    User 1: Thanks for the advice!
+
+    User 2: No problem!
+
+    User 1: So, what''s your favorite kind of candy?
+
+    User 2: I like Skittles.
+
+    User 1: Oh, I love Skittles too! They''re so good.
+
+    User 2: Yeah, they are.
+
+    User 1: So, do you think we should get together sometime and watch a movie?
+
+    User 2: That sounds like fun! I''m free this weekend.
+
+    User 1: Me too! What movie do you want to watch?
+
+    User 2: We could watch The Godfather.
+
+    User 1: That sounds great! I''ll see you this weekend.
+
+    User 2: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

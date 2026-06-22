@@ -1,0 +1,66 @@
+id: 00007784
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7784
+data:
+  user 1 personas: 'I am an middle school teacher for 8th grade.
+
+    I favorite brand of clothing is donna karen.
+
+    I sing in the church choir every sunday.
+
+    I love to go to the symphony orchestra.
+
+    I love to read the bible before i go to bed.'
+  user 2 personas: 'I owe 2 monitors for work.
+
+    I m single.
+
+    I love watching superheroes shows.
+
+    I prefer iphone over samsung.
+
+    I read ebooks more than hardcopies.'
+  Best Generated Conversation: 'User 1: Hi, I''m a middle school teacher for 8th grade. What do you do for a living?
+
+    User 2: I owe 2 monitors for work.
+
+    User 1: Oh, you must be a computer programmer or something.
+
+    User 2: I am single.
+
+    User 1: Oh, that''s interesting. Are you looking for love?
+
+    User 2: I love watching superheroes shows.
+
+    User 1: Me too! My favorite superhero is Superman.
+
+    User 2: I prefer iphone over samsung.
+
+    User 1: I like iPhones too, but I also like Androids.
+
+    User 2: I read ebooks more than hardcopies.
+
+    User 1: Oh, I like that too. Ebooks are so convenient.
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is The Lord of the Rings.
+
+    User 2: That''s a great book! I''ve read it a few times.
+
+    User 1: Me too! It''s so good.
+
+    User 2: It''s one of my favorites.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: I hope we can talk again soon.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

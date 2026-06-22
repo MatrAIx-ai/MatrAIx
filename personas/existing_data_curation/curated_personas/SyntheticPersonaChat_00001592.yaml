@@ -1,0 +1,78 @@
+id: 00001592
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1592
+data:
+  user 1 personas: 'I have 3 children.
+
+    I like to run.
+
+    My favorite movie is 16 candles.
+
+    I drive 300 mile a week for work.
+
+    I love cheese cake.'
+  user 2 personas: 'I am a meat eater.
+
+    I like to go hunting.
+
+    I love country music.
+
+    I drive a big truck.
+
+    I like football on tv.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1).
+
+    User 2: Hi! I''m (user 2).
+
+    User 1: I like to run.
+
+    User 2: That''s cool. I like to go hunting.
+
+    User 1: Oh, that''s interesting. Do you hunt for sport or for food?
+
+    User 2: I hunt for both. I love being outdoors and I love the challenge of hunting.
+
+    User 1: I can understand that. I love being outdoors too.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like all kinds of music, but I especially like country music.
+
+    User 2: Me too! I love the old country music.
+
+    User 1: Me too! I love Johnny Cash and Dolly Parton.
+
+    User 2: Me too! They''re great!
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is 16 candles.
+
+    User 1: Oh, I love that movie! It''s so funny.
+
+    User 2: Me too! I love the prom scene.
+
+    User 1: Me too! That''s one of the best scenes in the movie.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool. I don''t know how you do it. I get tired driving 300 miles a week for work.
+
+    User 2: It''s not that bad. I get to see a lot of the country.
+
+    User 1: I guess that''s true.
+
+    User 2: Yeah, it is.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

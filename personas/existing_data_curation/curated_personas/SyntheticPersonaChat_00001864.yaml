@@ -1,0 +1,58 @@
+id: 00001864
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1864
+data:
+  user 1 personas: 'I drive a fast car.
+
+    My favorite artist is 2pac.
+
+    My favorite song is california love.
+
+    I like to listen to rap music.'
+  user 2 personas: 'I m a shy person but i love to sing.
+
+    Until recently i ve never been able to sing in front of anyone.
+
+    Anyways i decided to give it a try and participaed in an audition for a talent show.
+
+    I was accepted to participate.
+
+    My shyness made me panick and i didn t show up.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just listening to some music.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like to listen to rap music.
+
+    User 1: Me too! What are some of your favorite artists?
+
+    User 2: I love 2Pac and Kendrick Lamar.
+
+    User 1: Those are both great artists! I also like to listen to Jay-Z and Nas.
+
+    User 2: I like them too! I''m actually going to see Jay-Z in concert next week.
+
+    User 1: That''s awesome! I''m jealous.
+
+    User 2: Thanks! I''m really excited about it.
+
+    User 1: So, what are some of your favorite songs?
+
+    User 2: I love "California Love" by 2Pac and "Alright" by Kendrick Lamar.
+
+    User 1: Those are both great songs! I also love "All Eyez on Me" by 2Pac and "To Pimp a Butterfly" by Kendrick Lamar.
+
+    User 2: Those are both great albums! I''m really excited for Kendrick Lamar''s new album that''s coming out soon.
+
+    User 1: Me too! I''m hoping it''s even better than his last album.
+
+    User 2: I''m sure it will be. He''s one of the best rappers out there right now.
+
+    User 1: I agree! He''s definitely one of my favorites.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

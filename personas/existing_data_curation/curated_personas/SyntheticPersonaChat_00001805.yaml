@@ -1,0 +1,81 @@
+id: 00001805
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1805
+data:
+  user 1 personas: 'I am an only child.
+
+    My favorite food is pizza.
+
+    I am a student.
+
+    My favorite color is red.'
+  user 2 personas: 'I volunteer at animal shelters.
+
+    Country music makes me cringe.
+
+    I have blonde hair that reaches my knees.
+
+    I m an amazing dancer.'
+  Best Generated Conversation: 'User 1: Hi! I''m (username).
+
+
+    User 2: Hi, I''m (username).
+
+
+    User 1: What do you like to do?
+
+
+    User 2: I love to dance, volunteer at animal shelters, and listen to music.
+
+
+    User 1: Wow, that''s really cool! I love to dance too. What kind of music do you like to listen to?
+
+
+    User 2: I like all kinds of music, but I really love country music.
+
+
+    User 1: Oh, really? I''m not really a fan of country music.
+
+
+    User 2: What''s your favorite kind of music?
+
+
+    User 1: I like pop music the most. I also like rock and hip hop.
+
+
+    User 2: I like some pop music, but I''m not really a fan of rock or hip hop.
+
+
+    User 1: That''s okay. We don''t have to like the same kind of music to be friends.
+
+
+    User 2: I agree. Friends don''t have to like the same things to get along.
+
+
+    User 1: I''m glad we agree. So, what else do you like to do?
+
+
+    User 2: I like to read, play video games, and spend time with my friends and family.
+
+
+    User 1: Me too! I love to read, play video games, and hang out with my friends and family.
+
+
+    User 2: We seem to have a lot in common.
+
+
+    User 1: Yeah, we do! I think we could be good friends.
+
+
+    User 2: I think so too!
+
+
+    User 1: Well, it was nice meeting you, (username).
+
+
+    User 2: You too, (username).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

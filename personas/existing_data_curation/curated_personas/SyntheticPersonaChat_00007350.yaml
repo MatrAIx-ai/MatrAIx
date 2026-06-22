@@ -1,0 +1,58 @@
+id: '00007350'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7350
+data:
+  user 1 personas: 'I hope to one day be a published author.
+
+    I work in a used book store.
+
+    I love art museums.
+
+    I write short stories in my free time.'
+  user 2 personas: 'I have a new job selling cars.
+
+    I love to paint pictures.
+
+    My favorite food is pizza.
+
+    My wife use to be a teacher.
+
+    I love meat.'
+  Best Generated Conversation: 'User 1: Hi, what do you do?
+
+    User 2: I sell cars, I just got a new job doing it.
+
+    User 1: Cool, I work in a used book store.
+
+    User 2: Oh, that sounds interesting. Do you like it?
+
+    User 1: Yeah, it''s fun. I get to read books all day.
+
+    User 2: That''s a good job. I have a wife and two kids, I really need the money.
+
+    User 1: Yeah, I can understand that. I''m trying to save up to be a published author.
+
+    User 2: That''s a great goal. I hope you can achieve it.
+
+    User 1: Thanks, I appreciate that. I love to write short stories in my free time.
+
+    User 2: Oh, that''s great. I love to paint pictures.
+
+    User 1: Cool, maybe we could trade some work? I could read your stories and you could paint me some pictures.
+
+    User 2: That''s a great idea! I''d love that.
+
+    User 1: Great! I''ll send you some of my stories later.
+
+    User 2: Awesome! I''ll get started on some pictures for you.
+
+    User 1: Great! Thanks so much.
+
+    User 2: No problem!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

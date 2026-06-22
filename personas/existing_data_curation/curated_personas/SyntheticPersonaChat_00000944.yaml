@@ -1,0 +1,80 @@
+id: 00000944
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 944
+data:
+  user 1 personas: 'I can t do math.
+
+    It was too small.
+
+    I just got a new sweater.
+
+    I smell like french fries.
+
+    I also eat too much french fries.'
+  user 2 personas: 'I work at walmart as a stocker.
+
+    My father is a mechanic.
+
+    I am vegan.
+
+    My favorite band is muse.'
+  Best Generated Conversation: 'User 1: I just got a new sweater!
+
+    User 2: Oh, cool! What kind of sweater?
+
+    User 1: It''s a black and white striped sweater.
+
+    User 2: Nice! I love stripes.
+
+    User 1: Thanks! I got it at Walmart.
+
+    User 2: Oh, I love Walmart. I''m a stocker there.
+
+    User 1: Really? That''s cool.
+
+    User 2: Yeah, it''s a pretty fun job.
+
+    User 1: What do you like about it?
+
+    User 2: I like getting to help people find what they''re looking for.
+
+    User 1: That''s a good thing to do.
+
+    User 2: Yeah, I think so.
+
+    User 1: So, what do you do after work?
+
+    User 2: I usually go home and relax.
+
+    User 1: Me too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to read, listen to music, and watch movies.
+
+    User 2: Oh, I like reading and listening to music too.
+
+    User 1: Cool! What kind of books do you like to read?
+
+    User 2: I like to read science fiction and fantasy novels.
+
+    User 1: Me too! I love Harry Potter.
+
+    User 2: Me too! It''s a great series.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like to listen to a lot of different kinds of music, but my favorite band is Muse.
+
+    User 1: Oh, I like Muse too!
+
+    User 2: Me too! They''re a great band.
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

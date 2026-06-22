@@ -1,0 +1,58 @@
+id: 00008228
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8228
+data:
+  user 1 personas: 'My college courses are on philosophy and history.
+
+    I ride my bike to class since it s only a mile away.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My newly bought laptop has a bum battery.'
+  user 2 personas: 'I live on the third floor in an apartment.
+
+    I like to cook.
+
+    I have two roomates.
+
+    I have two dogs.'
+  Best Generated Conversation: 'User 1: I''m studying philosophy and history in college. I love to write short stories in my document tab with the use of a prompting app. What''s something interesting about
+    you?
+
+
+    User 2: I live on the third floor in an apartment with my two roommates and two dogs. I like to cook. Do you like to cook?
+
+
+    User 1: I don''t cook very much, but I love to eat! I''m always looking for new recipes to try.
+
+
+    User 2: I''m a pretty good cook, so if you ever want some homemade food, I''m your guy.
+
+
+    User 1: That''s so nice of you! I''ll keep that in mind.
+
+
+    User 2: I also like to play video games. What''s your favorite video game?
+
+
+    User 1: I like a lot of different video games, but my favorite is probably Mario Kart.
+
+
+    User 2: Mario Kart is a classic! I love that game.
+
+
+    User 1: It''s so much fun to play with friends and family.
+
+
+    User 2: I agree. It''s a great way to bond with people.
+
+
+    User 1: I''m glad we have a lot in common. It''s always nice to meet someone new who shares your interests.
+
+
+    User 2: I agree. It''s been nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

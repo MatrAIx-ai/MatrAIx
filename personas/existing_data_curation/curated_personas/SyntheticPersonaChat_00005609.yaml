@@ -1,0 +1,60 @@
+id: 00005609
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5609
+data:
+  user 1 personas: 'I ride horses in my spare time.
+
+    I am an only child.
+
+    I work at an accounting firm.
+
+    I am adopted.'
+  user 2 personas: 'I wear a red purse.
+
+    I like to wear red shoes also.
+
+    I like to wear red.
+
+    I drive a red car.'
+  Best Generated Conversation: 'User 1: What do you like to do in your spare time?
+
+    User 2: I like to ride horses.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to ride.
+
+    User 2: It''s not too hard to learn. You just need to find a good riding school and take some lessons.
+
+    User 1: I might have to do that. It sounds like a lot of fun.
+
+    User 2: It is! You should definitely try it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an accountant at a local firm.
+
+    User 1: Oh, that sounds interesting. I''ve never been good at math.
+
+    User 2: It''s not too bad. You just have to learn the basics and then you''re good to go.
+
+    User 1: I''m sure I would have trouble with it.
+
+    User 2: You could always give it a try. You might surprise yourself.
+
+    User 1: I don''t know. I''m not very good at numbers.
+
+    User 2: Well, you could always try something else. What are you interested in?
+
+    User 1: I''m not sure. I''ve never really thought about it.
+
+    User 2: Well, you should take some time to think about it. There are a lot of different things you could do.
+
+    User 1: I know. I''ll have to do some research.
+
+    User 2: Good luck!
+
+    User 1: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

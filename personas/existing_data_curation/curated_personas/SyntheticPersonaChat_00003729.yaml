@@ -1,0 +1,86 @@
+id: 00003729
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3729
+data:
+  user 1 personas: 'I love romantic comedies.
+
+    I like to write poetry in my spare time.
+
+    I am a yoga instructor.
+
+    My favorite musician is ed sheeran.
+
+    I am very health conscious , and i watch what i eat.'
+  user 2 personas: 'I deliver baked goods in the state where i live.
+
+    My wife and two kids camp with me.
+
+    I spend my weekends camping.
+
+    I am a truck driver.
+
+    My favorite hobby is playing recreational baseball.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, cool! I''ve always thought that would be a fun job.
+
+    User 2: It can be, but it''s also a lot of work.
+
+    User 1: I bet. So, what do you do for fun?
+
+    User 2: I like to play baseball and go camping with my family.
+
+    User 1: That sounds fun! I love baseball too.
+
+    User 2: Me too! I used to play in college.
+
+    User 1: That''s awesome! What position did you play?
+
+    User 2: I was a pitcher.
+
+    User 1: Really? That''s cool! I was always a shortstop.
+
+    User 2: Nice! I''ve always admired shortstops.
+
+    User 1: Thanks! So, what kind of baseball do you play now?
+
+    User 2: I play recreational baseball.
+
+    User 1: That sounds fun! I''ve always wanted to play recreational baseball.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will!
+
+    User 2: You should! So, what do you like to do for fun?
+
+    User 1: I like to write poetry in my spare time.
+
+    User 2: That''s cool! I''ve never written poetry before.
+
+    User 1: It''s fun! You should try it sometime.
+
+    User 2: Maybe I will!
+
+    User 1: So, what''s your favorite thing to do in your spare time?
+
+    User 2: I like to spend time with my family.
+
+    User 1: That sounds great! I love spending time with my family too.
+
+    User 2: Yeah, it''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

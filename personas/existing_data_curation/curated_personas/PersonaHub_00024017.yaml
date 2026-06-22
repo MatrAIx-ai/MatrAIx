@@ -1,0 +1,18 @@
+id: '00024017'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24017
+persona_description: A pediatric ophthalmologist or optometrist who specializes in the diagnosis and treatment of esotropia, a condition where the eyes cross in an attempt to focus. They are experienced
+  in evaluating the visual acuity of infants and children with suspected esotropia, performing an examination to determine the child's refractive state, and fitting children with the appropriate glasses.
+  They may also recommend eyeglasses or contact lenses to correct farsightedness, or refer the child for surgery if ocular misalignment is detected.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: esotropia treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

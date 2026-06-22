@@ -1,0 +1,54 @@
+id: '00001404'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1404
+data:
+  user 1 personas: 'I own blue shoes.
+
+    I drive a blue car.
+
+    I like to listen to elvis.
+
+    I like the color blue.
+
+    I changed my hair color to blue.'
+  user 2 personas: 'I am married.
+
+    I have a passion for god.
+
+    My favorite book is the bible.'
+  Best Generated Conversation: 'User 1: I have a deep passion for the color blue.
+
+    User 2: I do too! It''s a beautiful color.
+
+    User 1: I agree! I love everything about it.
+
+    User 2: Me too! It''s a very calming and serene color.
+
+    User 1: Yes, it is. It''s also very bold and eye-catching.
+
+    User 2: I like that about it too. It''s a very versatile color.
+
+    User 1: Yes, it is. It can be used in so many different ways.
+
+    User 2: I love using it in my home décor.
+
+    User 1: Me too! It makes my home feel more inviting and cozy.
+
+    User 2: I agree! It''s a very warm color.
+
+    User 1: I love wearing blue clothes too.
+
+    User 2: Me too! It makes me feel more confident and put-together.
+
+    User 1: Yes, it does. Blue is a great color to wear for any occasion.
+
+    User 2: I agree! It''s a timeless classic.
+
+    User 1: I''m glad we agree on the awesomeness of blue!
+
+    User 2: Me too! It''s the best color!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

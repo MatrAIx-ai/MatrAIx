@@ -1,0 +1,19 @@
+id: 00013886
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13886
+persona_description: A healthcare professional who is responsible for evaluating diagnostic tests and interpreting test results. This individual may work in a laboratory, clinic, or research setting and
+  is familiar with various diagnostic tests, including those used for infectious diseases. They are skilled in calculating likelihood ratios, post-test probabilities, and other measures related to the accuracy
+  and reliability of diagnostic tests. This persona may also be involved in developing and implementing new diagnostic tests, as well as interpreting the results of existing tests in the context of clinical
+  scenarios.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: Clinical Epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

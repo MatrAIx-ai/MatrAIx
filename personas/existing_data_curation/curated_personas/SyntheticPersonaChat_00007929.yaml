@@ -1,0 +1,66 @@
+id: 00007929
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7929
+data:
+  user 1 personas: 'I saw a solar eclipse when i was 8 years old.
+
+    I simply walk around when i have nothing to do.
+
+    I have high speed internet.
+
+    I can beat anyone in chess.'
+  user 2 personas: 'I simply walk around when i have nothing to do.
+
+    I have high speed internet.
+
+    I got hired as a security guard.
+
+    I can beat anyone in chess.
+
+    I saw a solar eclipse when i was 8 years old.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello!
+
+    User 1: I see that you also saw a solar eclipse when you were 8 years old. I was 8 years old when I saw my first solar eclipse too.
+
+    User 2: That''s amazing! It was such a cool experience, wasn''t it?
+
+    User 1: It was! I remember being so excited to see it. I had to wait a long time for it to happen, but it was worth it.
+
+    User 2: Me too! I waited for a long time for it to happen, and it was so worth it. I''ll never forget it.
+
+    User 1: What was your favorite part about seeing the solar eclipse?
+
+    User 2: My favorite part was seeing the way the sun''s corona looked. It was so beautiful.
+
+    User 1: I know what you mean! The corona was so amazing. I''ve never seen anything like it before.
+
+    User 2: Me neither! It was like nothing else I''ve ever seen before.
+
+    User 1: I''m glad we both got to experience such a cool event. It was definitely a once-in-a-lifetime experience.
+
+    User 2: Me too! It''s something I''ll never forget.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play chess and walk around when I have nothing to do.
+
+    User 1: That''s cool! I like to play chess too. I''m actually really good at it.
+
+    User 2: Me too! I''ve beaten a lot of people in chess.
+
+    User 1: That''s awesome! I''ve never actually beaten anyone in chess.
+
+    User 2: Well, maybe I''ll have to give you a lesson sometime.
+
+    User 1: That would be awesome! I''d love to learn how to play chess better.
+
+    User 2: Sure! Just let me know when you''re free.
+
+    User 1: Will do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

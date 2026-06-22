@@ -1,0 +1,72 @@
+id: 00008092
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8092
+data:
+  user 1 personas: 'I sometimes spend too much money at the casino.
+
+    I once met a man i still believe was a vampire.
+
+    My favorite food is shrimp.
+
+    I love hanging out with my friends.
+
+    My mom is a palm reader in new orleans.'
+  user 2 personas: 'I love to play tennis.
+
+    I also love to travel.
+
+    I love the chainsmokers.
+
+    My dad works offshore.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [username].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to play tennis, travel, and listen to the Chainsmokers.
+
+    User 1: Oh, that''s cool! I love to play tennis too. Where do you like to travel to?
+
+    User 2: I like to travel all over the world, but my favorite place is Hawaii.
+
+    User 1: Hawaii is amazing! I''ve always wanted to go there. What do you like about it so much?
+
+    User 2: I love the beaches, the food, and the culture. It''s just a beautiful place.
+
+    User 1: I''m sure it is! I''ve heard great things about it.
+
+    User 2: Yeah, it''s definitely worth a visit.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s great! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That''s awesome! I have a little cousin in kindergarten.
+
+    User 2: Oh, that''s cool! I love working with kids that age.
+
+    User 1: I''m sure it''s a lot of fun.
+
+    User 2: It is! I love seeing them learn and grow.
+
+    User 1: That''s great!
+
+    User 2: Yeah, it''s a really rewarding job.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, it''s definitely the best job I''ve ever had.
+
+    User 1: Well, it sounds like you''re doing great things!
+
+    User 2: Thanks! I''m trying my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

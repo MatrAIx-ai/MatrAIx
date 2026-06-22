@@ -1,0 +1,58 @@
+id: 00001903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1903
+data:
+  user 1 personas: 'I have purple hair.
+
+    My favorite color is red.
+
+    I have 2 turtles.
+
+    I like to play video games.'
+  user 2 personas: 'I can t live without my friends.
+
+    I used to smoke.
+
+    I have 10 piercings.
+
+    I like to drive for hours.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to hang out with friends, go on road trips, and play video games.
+
+    User 1: That''s cool! I like to do those things too. I also have two turtles and love the color red.
+
+    User 2: Oh, that''s cool! I used to have a pet turtle but he died a few years ago.
+
+    User 1: I''m sorry to hear that. I love my turtles. They''re like my little babies.
+
+    User 2: That''s cute. I''m sure they''re great pets.
+
+    User 1: They are. I love to watch them swim around their tank. It''s so relaxing.
+
+    User 2: I can imagine. I used to love watching my turtle swim around too.
+
+    User 1: So, what do you like to play on your video games?
+
+    User 2: I like to play a lot of different games, but my favorites are first-person shooters and role-playing games.
+
+    User 1: I like those games too! I''m a big fan of the Call of Duty and Elder Scrolls series.
+
+    User 2: Oh, nice! I''ve played a few of the Call of Duty games, but I''ve never played any of the Elder Scrolls games.
+
+    User 1: You should check them out. They''re really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. It was nice meeting you, [name].
+
+    User 2: It was nice meeting you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

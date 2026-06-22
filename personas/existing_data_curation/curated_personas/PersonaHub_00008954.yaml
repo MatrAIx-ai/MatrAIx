@@ -1,0 +1,19 @@
+id: 00008954
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8954
+persona_description: A student enrolled in a course on computer hardware and software design, focusing on the interface between hardware and software, processor design, operating systems, and Verilog implementation.
+  The student is expected to understand the fundamentals of processor design, including instruction sets, memory hierarchy, and pipelining. They should also have a basic understanding of operating systems,
+  including memory management and software interrupts. Additionally, they should be able to implement a processor in Verilog and have a good grasp of control structures used in processor design. They should
+  also be able to read and write assembler code, understand the differences between RISC and CISC assembler, and appreciate the use of pipelining in processor design.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Computer Architecture
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

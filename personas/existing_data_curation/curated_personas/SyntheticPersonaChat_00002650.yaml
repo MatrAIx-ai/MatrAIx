@@ -1,0 +1,52 @@
+id: '00002650'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2650
+data:
+  user 1 personas: 'I work as a mall cop.
+
+    I am a huge fan of dogs.
+
+    I am recently divorced.
+
+    I wish to buy a corvette when i retire.'
+  user 2 personas: 'I volunteer in my spare time.
+
+    I hope to change the world.
+
+    I work in a factory.
+
+    I love to tell jokes.
+
+    I am always early to everything.'
+  Best Generated Conversation: 'User 1: Hi there, how are you?
+
+    User 2: I''m good, thanks for asking. How are you today?
+
+    User 1: I''m doing well, thank you! I''m a mall cop, and I love dogs.
+
+    User 2: That''s great! I''m a volunteer, and I love telling jokes.
+
+    User 1: That''s amazing! I wish I could be a volunteer. I''ve been divorced recently, and I''m hoping to buy a Corvette when I retire.
+
+    User 2: I''m sorry to hear about your divorce. I hope you''re doing okay. I work in a factory, and I love to change the world.
+
+    User 1: That''s so great! I hope you''re able to accomplish that. I''m always early to everything, so I''m sure I''ll be the first one in line to buy a Corvette when they''re released.
+
+    User 2: I''m sure you will! I''m always late to everything, so I''m not sure I''ll be able to get one.
+
+    User 1: Well, I''m sure you''ll find a way to get one. You seem like a very determined person.
+
+    User 2: Thank you! I appreciate that. I''m sure you''ll be able to get one too, since you''re so organized.
+
+    User 1: I''m sure I will! I''m just going to have to save up my money for a while.
+
+    User 2: That''s okay. It will be worth it in the end.
+
+    User 1: I''m sure it will! Thanks for talking to me.
+
+    User 2: No problem! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

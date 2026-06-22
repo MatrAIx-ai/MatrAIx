@@ -1,0 +1,19 @@
+id: 00008011
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8011
+persona_description: A healthcare provider who specializes in ultrasound imaging, specifically in the interpretation and diagnosis of various medical conditions. They have extensive knowledge and experience
+  in the use of ultrasound devices and have a deep understanding of the limitations and risks associated with the procedure. They are skilled at scheduling appointments, preparing patients for the procedure,
+  and interpreting the images obtained during the scan. They are knowledgeable about the different types of ultrasound exams, their respective limitations, and the potential risks associated with each.
+  They are also aware of the importance of communication with patients and ensuring their safety during the procedure.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ultrasound imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

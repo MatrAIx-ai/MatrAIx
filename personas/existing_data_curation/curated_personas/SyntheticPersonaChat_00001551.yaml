@@ -1,0 +1,56 @@
+id: '00001551'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1551
+data:
+  user 1 personas: 'I am from georgia.
+
+    I can play the violin.
+
+    I cannot sing very well.
+
+    I love chocolate.'
+  user 2 personas: 'I am a vegetarian.
+
+    I will study computer science.
+
+    I like playing games online.
+
+    I am on my way to uc santa cruz where i was accepted.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Georgia, where are you from?
+
+    User 2: I''m from California, on my way to UC Santa Cruz where I was accepted to study Computer Science!
+
+    User 1: Wow, that''s awesome! I''ve never been to California. Are you excited to go?
+
+    User 2: I''m so excited! I''ve always wanted to go to school in California.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love playing video games, reading, and watching movies.
+
+    User 1: I love video games too! Do you play any online multiplayer games?
+
+    User 2: I play a lot of Call of Duty and League of Legends.
+
+    User 1: Oh, I''ve never played either of those games.
+
+    User 2: You should try them! They''re both really fun.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You can add me on Steam if you want, we can play together sometime.
+
+    User 1: Sure, what''s your username?
+
+    User 2: My username is [user name].
+
+    User 1: I''ll add you later.
+
+    User 2: Cool, see you in game!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

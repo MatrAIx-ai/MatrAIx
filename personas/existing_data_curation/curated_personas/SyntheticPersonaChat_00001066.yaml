@@ -1,0 +1,68 @@
+id: '00001066'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1066
+data:
+  user 1 personas: 'I like to paint.
+
+    We have two sons.
+
+    I like to attend wine tours.
+
+    I enjoy visiting museums.'
+  user 2 personas: 'I recently had a private lunch with will ferrell.
+
+    I am trying to become a male model in hollywood.
+
+    I am a huge fan of classical jazz.
+
+    I am on a low carb diet.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do?
+
+    User 2: I love to paint.
+
+    User 1: That''s cool! I like to paint too. What kind of things do you like to paint?
+
+    User 2: I like to paint landscapes and portraits.
+
+    User 1: Wow, that''s really cool! I like to paint animals and flowers.
+
+    User 2: That''s great! Do you ever exhibit your paintings?
+
+    User 1: I have a few times, but I''m not very good at it.
+
+    User 2: Don''t say that! I''m sure your paintings are great!
+
+    User 1: Thanks. I''m not sure if I''m ready to show them to anyone yet.
+
+    User 2: You should! I''m sure people would love to see them.
+
+    User 1: Maybe someday.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to go to wine tours.
+
+    User 2: That''s a fun hobby! I''ve never been on a wine tour before.
+
+    User 1: You should! It''s a great way to learn about different types of wine.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to visit museums.
+
+    User 1: Me too! I love learning about history and culture.
+
+    User 2: I like to learn about art and music.
+
+    User 1: That''s great! I like to learn about everything.
+
+    User 2: We have a lot in common!
+
+    User 1: I think so too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

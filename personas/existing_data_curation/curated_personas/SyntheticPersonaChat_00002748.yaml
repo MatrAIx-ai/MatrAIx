@@ -1,0 +1,72 @@
+id: 00002748
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2748
+data:
+  user 1 personas: 'I do not own any pets.
+
+    My car is black.
+
+    I lease my car.
+
+    I am a recruiter.
+
+    My favorite meal is brunch.'
+  user 2 personas: 'I own two boxer dogs.
+
+    My favorite drink is red wine.
+
+    I work for a clothes retailer.
+
+    I have one child.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I work for a clothes retailer.
+
+    User 1: Oh, cool! I''m a recruiter.
+
+    User 2: That''s interesting! Do you like it?
+
+    User 1: I love it! I get to meet new people every day and help them find jobs that they love.
+
+    User 2: That sounds really rewarding.
+
+    User 1: It is! I''m really passionate about helping people.
+
+    User 2: That''s great! I''m glad you have a job that you love.
+
+    User 1: Thanks! I''m really lucky.
+
+    User 2: So, what''s your favorite meal?
+
+    User 1: I love brunch! I love the combination of eggs, bacon, pancakes, and waffles.
+
+    User 2: Me too! Brunch is the best.
+
+    User 1: What''s your favorite drink?
+
+    User 2: I love red wine.
+
+    User 1: Me too! Red wine is so good.
+
+    User 2: It''s the perfect drink to relax with.
+
+    User 1: I agree!
+
+    User 2: So, do you have any pets?
+
+    User 1: No, I don''t.
+
+    User 2: Oh, that''s too bad. I have two boxer dogs.
+
+    User 1: Boxer dogs are so cute!
+
+    User 2: They are! They''re the best dogs ever.
+
+    User 1: I''m glad you have them.
+
+    User 2: Me too! They''re my best friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

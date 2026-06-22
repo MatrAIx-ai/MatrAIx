@@ -1,0 +1,18 @@
+id: '00027530'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27530
+persona_description: A scientist who is deeply interested in space exploration and asteroid deflection, particularly in the use of nuclear weapons as a means to deflect a potentially harmful object such
+  as an asteroid. This persona is likely to be involved in NASA's efforts to identify, track, and deflect potential threats to Earth and may have expertise in astrophysics, space technology, and nuclear
+  weapons. They may also be interested in the potential consequences of using nuclear weapons in space and the ethical considerations involved.
+expertise:
+  general_domain_top1pct: astrophysics
+  specific_domain_top1pct: asteroid deflection
+  general_domain_top01pct: None
+  specific_domain_top01pct: nuclear weapons
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

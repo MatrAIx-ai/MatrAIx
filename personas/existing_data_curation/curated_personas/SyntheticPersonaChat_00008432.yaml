@@ -1,0 +1,80 @@
+id: 00008432
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8432
+data:
+  user 1 personas: 'I did not go to college because i run the family farm.
+
+    My favorite season is duck hunting season.
+
+    I have never been on an airplane.
+
+    I had a girlfriend who eloped with my best friend one day.
+
+    I like tailgate parties.'
+  user 2 personas: 'I freeze up in social situations.
+
+    I was diagnosed with mild ocd in college.
+
+    I work as a freelance accountant.
+
+    Once a year , i take a week off and head to florida.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a freelance accountant.
+
+    User 1: That''s cool. I''m a farmer.
+
+    User 2: Oh, that''s interesting. Do you like it?
+
+    User 1: I love it. I grew up on a farm, so I''ve always known what I wanted to do.
+
+    User 2: That''s great. What''s your favorite part of the job?
+
+    User 1: I love being outdoors and working with my hands. I also love seeing the animals grow and thrive.
+
+    User 2: That sounds really rewarding. What''s your least favorite part of the job?
+
+    User 1: I don''t really have a least favorite part of the job. There are some things that are hard, like when animals get sick or die, but overall I love my job.
+
+    User 2: I''m glad to hear that. I''m sure you''re a great farmer.
+
+    User 1: Thanks. I try my best.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hunting, fishing, and camping. I also like to go to tailgate parties.
+
+    User 2: That sounds like a lot of fun. I like to go fishing too.
+
+    User 1: Nice. Do you have any favorite fishing spots?
+
+    User 2: I like to go to the river near my house.
+
+    User 1: That sounds like a nice spot.
+
+    User 2: Yeah, it''s really peaceful.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: My favorite season is winter. I love the snow and the cold weather.
+
+    User 1: I like winter too. I love skiing and snowboarding.
+
+    User 2: Nice. I''ve never been skiing or snowboarding before.
+
+    User 1: You should try it sometime. It''s a lot of fun.
+
+    User 2: I might just have to do that.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

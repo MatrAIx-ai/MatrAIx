@@ -1,0 +1,96 @@
+id: '00001061'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1061
+data:
+  user 1 personas: 'I like to drink.
+
+    I write childrens books.
+
+    I live alone.
+
+    I shop online , too much.
+
+    I do not believe in love.'
+  user 2 personas: 'I love the natural world beauty.
+
+    I practice yoga and hike.
+
+    My family is poor.
+
+    I believe in fairytales.
+
+    I am obsessed with animals.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love spending time in nature, hiking, yoga, and being with animals.
+
+    User 1: That sounds great! I like to shop online, write children''s books, and drink.
+
+    User 2: I''m not big on shopping, but I love children''s books! What kind of books do you write?
+
+    User 1: I write picture books for kids aged 3-6. I love coming up with creative stories and illustrations.
+
+    User 2: That sounds like so much fun! I would love to see some of your books sometime.
+
+    User 1: I''d be happy to show you! I have a few copies on my phone.
+
+    User 2: Great! I''d love to see them.
+
+    User 1: Okay, let me just pull them up.
+
+    User 2: Sure, take your time.
+
+    User 1: Okay, here they are.
+
+    User 2: Wow, these are beautiful! I love the illustrations.
+
+    User 1: Thank you! I''m glad you like them.
+
+    User 2: I know my nieces would love these books.
+
+    User 1: I''m happy to hear that! I hope you get to share them with them soon.
+
+    User 2: I definitely will. Thanks for showing me your books.
+
+    User 1: You''re welcome! I''m glad you liked them.
+
+    User 2: I did. So, what else do you like to do for fun?
+
+    User 1: I also like to go to the movies, read, and play video games.
+
+    User 2: I love going to the movies! What kind of movies do you like to watch?
+
+    User 1: I like to watch a variety of movies, but I especially enjoy action movies, comedies, and dramas.
+
+    User 2: I love action movies too! What are some of your favorite action movies?
+
+    User 1: I love the Fast and Furious movies, the Mission Impossible movies, and the Bourne movies.
+
+    User 2: I love all of those movies! They''re so much fun to watch.
+
+    User 1: They are! I''m always on the edge of my seat when I watch them.
+
+    User 2: Me too! So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going hiking with my family. We''re going to a beautiful state park.
+
+    User 1: That sounds like fun! I love hiking.
+
+    User 2: I know you do! You''re always hiking.
+
+    User 1: I can''t help it. I love being outdoors.
+
+    User 2: Me too! We should go hiking together sometime.
+
+    User 1: I''d love that'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

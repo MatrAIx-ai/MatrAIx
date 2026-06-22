@@ -1,0 +1,76 @@
+id: '00001353'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1353
+data:
+  user 1 personas: 'I love hot wings.
+
+    I am a truck driver in the south.
+
+    I have three kids.
+
+    I sing in the church choir.
+
+    I grew up in the trailer park.'
+  user 2 personas: 'I have 3 science classes.
+
+    I work part time in the campus library.
+
+    I commute by bus.
+
+    I am living at home but hope to live in the dorms next year.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work part time in the campus library.
+
+    User 1: Oh, cool! I used to work in the library at my college.
+
+    User 2: Really? What did you do there?
+
+    User 1: I was a student assistant, so I helped with the circulation desk, shelving books, and other tasks.
+
+    User 2: That sounds like fun! I mostly just shelve books and help people find them.
+
+    User 1: Yeah, that''s what I mostly did too. But it was still a fun job.
+
+    User 2: Yeah, it is. I like working in a library.
+
+    User 1: Me too. It''s a nice, quiet place to work.
+
+    User 2: Yeah, it is. And I like the smell of books.
+
+    User 1: Me too! That''s one of my favorite things about libraries.
+
+    User 2: Yeah, me too.
+
+    User 1: So, what are you studying in college?
+
+    User 2: I''m studying biology.
+
+    User 1: Oh, cool! I always wanted to be a biologist.
+
+    User 2: It''s a lot of work, but it''s really interesting.
+
+    User 1: Yeah, I can imagine. But it''s worth it to study something you''re passionate about.
+
+    User 2: That''s true. I love learning about biology.
+
+    User 1: Me too. It''s such a fascinating field.
+
+    User 2: Yeah, it is.
+
+    User 1: What do you want to do with your biology degree?
+
+    User 2: I''m not sure yet. I''m thinking about going to med school.
+
+    User 1: Oh, that would be great!
+
+    User 2: Yeah, I think so too.
+
+    User 1: Good luck with everything!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

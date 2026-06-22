@@ -1,0 +1,66 @@
+id: '00001161'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1161
+data:
+  user 1 personas: 'My name is nick.
+
+    I have lots of friends.
+
+    I don t like music.
+
+    I like to ride my scooter.'
+  user 2 personas: 'My favorite car is the ford mustang.
+
+    I like to go to the movies.
+
+    I walk more than 2 miles a day.
+
+    I worked 3 jobs at the same time for more than 5 years.'
+  Best Generated Conversation: 'User 1: Hey! My name is Nick. What''s yours?
+
+
+    User 2: Hi Nick! My name is Alex.
+
+
+    User 1: It''s nice to meet you, Alex. What are you up to today?
+
+
+    User 2: Not much, just hanging out. What about you?
+
+
+    User 1: Same here. I''m just trying to decide what to do with my day.
+
+
+    User 2: Well, if you''re looking for something to do, I''m sure we can find something fun to do together.
+
+
+    User 1: That sounds great! I''m always up for a good time.
+
+
+    User 2: So, what are you interested in?
+
+
+    User 1: Well, I like to go to the movies, play sports, and hang out with friends.
+
+
+    User 2: Me too! I love going to the movies, and I''m also a big sports fan.
+
+
+    User 1: That''s great! We should go to the movies sometime.
+
+
+    User 2: That sounds like a plan. I''m free next Saturday.
+
+
+    User 1: Me too! Let''s go see a movie then.
+
+
+    User 2: Perfect! I''ll text you later to figure out what time we''re going.
+
+
+    User 1: Sounds good! See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00003242'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3242
+data:
+  user 1 personas: 'My birthday is in june.
+
+    I am currently unemployed.
+
+    Summer is my favorite season.
+
+    I have a cat.'
+  user 2 personas: 'My dad works in the automotive industry.
+
+    Both my parents are creative.
+
+    I m a student living at home while pursuing my music industry degree.
+
+    Mom in telecommunications.
+
+    I dream of playing music for a living.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play music and go to concerts.
+
+    User 1: Cool! What kind of music do you play?
+
+    User 2: I play the guitar and I sing. I''m also a songwriter.
+
+    User 1: That''s awesome! I love music too. What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but my favorite is rock music.
+
+    User 1: Me too! I love rock music. What are some of your favorite bands?
+
+    User 2: I love The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 1: Those are great bands! I love them too.
+
+    User 2: What are some of your favorite songs?
+
+    User 1: I love "Yellow Submarine" by The Beatles, "Satisfaction" by The Rolling Stones, and "Stairway to Heaven" by Led Zeppelin.
+
+    User 2: Those are all great songs! I love them too.
+
+    User 1: So, do you play music in a band?
+
+    User 2: I''m actually in a band with my friends. We''re called The Black Sheep.
+
+    User 1: That''s awesome! I''d love to hear you guys play sometime.
+
+    User 2: We''re playing at a local bar next weekend. Would you like to come?
+
+    User 1: That would be great! I''ll definitely be there.
+
+    User 2: Great! I''ll see you then.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

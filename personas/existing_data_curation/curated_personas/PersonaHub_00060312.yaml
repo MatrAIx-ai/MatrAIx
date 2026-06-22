@@ -1,0 +1,18 @@
+id: '00060312'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60312
+persona_description: A clinician who specializes in treating clients with co-occurring disorders, particularly those with depression and substance abuse/dependence. The clinician has extensive training
+  in mental health disorders, substance use, and assessment, and is skilled in creating client-centered treatment plans. The clinician is aware of the complex nature of these disorders and is careful not
+  to assume they know the client's experience due to observing or working with those in a similar situation. The clinician values active listening and building a strong therapeutic alliance with their clients.
+expertise:
+  general_domain_top1pct: psychology
+  specific_domain_top1pct: addiction treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: co-occurring disorders
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

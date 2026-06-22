@@ -1,0 +1,74 @@
+id: 00008340
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8340
+data:
+  user 1 personas: 'I am an amateur chef who cooks 5 different cuisines.
+
+    I play guitar on my free time.
+
+    I like to play video games.
+
+    I live alone.
+
+    I am a scientist.'
+  user 2 personas: 'My nickname is bubblegum.
+
+    I have found the cure for the common cold.
+
+    I love to sing in the shower.
+
+    I am plotting on taking over the world.
+
+    My brother and i have bright red hair.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. What do you do for fun?
+
+    User 1: I''m an amateur chef who cooks 5 different cuisines, I play guitar on my free time, I like to play video games, and I live alone.
+
+    User 2: That''s awesome! I''m a scientist, I love to sing in the shower, I''m plotting on taking over the world, and my brother and I have bright red hair.
+
+    User 1: Wow, you''re really interesting! I''ve never met a scientist before.
+
+    User 2: Me neither, I''ve never met a chef before.
+
+    User 1: What do you like to cook?
+
+    User 2: I like to cook a lot of different things, but my favorite is probably Italian food.
+
+    User 1: Me too! I love Italian food. What''s your favorite Italian dish?
+
+    User 2: My favorite Italian dish is pasta with pesto sauce.
+
+    User 1: That''s a good choice. I love pesto sauce too.
+
+    User 2: What kind of guitar do you play?
+
+    User 1: I play an acoustic guitar.
+
+    User 2: Nice! I play electric guitar.
+
+    User 1: I''ve always wanted to play electric guitar.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: Do you play any video games?
+
+    User 1: I play a lot of video games. My favorite games are Mario Kart, Super Smash Bros, and Zelda.
+
+    User 2: I love Mario Kart! That''s one of my favorite games too.
+
+    User 1: It''s so much fun.
+
+    User 2: I know, right?
+
+    User 1: It''s great to meet you, [user 2''s name].
+
+    User 2: It''s great to meet you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

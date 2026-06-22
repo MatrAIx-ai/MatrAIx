@@ -1,0 +1,66 @@
+id: '00003421'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3421
+data:
+  user 1 personas: 'I like to only eat fish.
+
+    I am a democrat.
+
+    Both my parents were over 6 foot tall.
+
+    I have amazing eye sight.
+
+    I can jump straight up , out of a pool.'
+  user 2 personas: 'Superfans my favorite super hero.
+
+    I drive only toyota.
+
+    I talk a lot in irc.
+
+    I like pepsi.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: I''m doing okay. How are you?
+
+    User 1: I''m good. What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Nice. I like to do those things too. I''m also a Democrat.
+
+    User 2: Me too! I think it''s important to have a strong voice for the people.
+
+    User 1: I agree. I''m also a pescatarian.
+
+    User 2: That''s cool. I''ve never tried it, but I''ve heard it''s good for you.
+
+    User 1: It is! I feel much healthier since I made the switch.
+
+    User 2: What made you decide to become a pescatarian?
+
+    User 1: I was raised by a vegetarian mother, so I''ve always been around it. And when I was in college, I learned more about the benefits of eating a plant-based diet.
+
+    User 2: That''s interesting. I might have to try it sometime.
+
+    User 1: I would definitely recommend it. It''s not as hard as you might think.
+
+    User 2: Thanks for the tip. I''ll keep it in mind.
+
+    User 1: No problem. What''s your favorite superhero?
+
+    User 2: Superfan. He''s just so cool.
+
+    User 1: I''ve never heard of him.
+
+    User 2: He''s from a comic book. He''s got super strength and can fly.
+
+    User 1: That sounds cool. I''ll have to look him up.
+
+    User 2: Yeah, you should. He''s a great character.
+
+    User 1: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

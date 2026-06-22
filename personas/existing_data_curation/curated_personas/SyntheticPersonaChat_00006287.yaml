@@ -1,0 +1,67 @@
+id: 00006287
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6287
+data:
+  user 1 personas: 'I recently graduated from college.
+
+    So i started a small business.
+
+    I haven t had luck with finding a job.
+
+    It s been doing better than i expected.
+
+    I sell miscelaneous stuff in local fairs.'
+  user 2 personas: 'I only listen to opera.
+
+    I get up at 4am everyday.
+
+    I have never been to canada.
+
+    I live in a condo.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a doctor.
+
+    User 1: That''s cool! I recently graduated from college, but I haven''t had luck finding a job. So I started a small business selling miscellaneous stuff in local fairs. It''s been doing better than
+    I expected.
+
+    User 2: That''s great! It''s always good to be your own boss.
+
+    User 1: Yeah, it is. I''m really enjoying it.
+
+    User 2: What kind of stuff do you sell?
+
+    User 1: I sell a lot of different things, but my most popular item is homemade jewelry.
+
+    User 2: That''s cool! I''m not really into jewelry, but I love opera.
+
+    User 1: I''ve never been to an opera before.
+
+    User 2: You should go! They''re really amazing.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: What''s your favorite opera?
+
+    User 2: I love all of them, but my favorite is Carmen.
+
+    User 1: I''ve heard of that one. It''s about a gypsy woman, right?
+
+    User 2: That''s right. It''s a tragic love story.
+
+    User 1: Sounds interesting. I might have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: Thanks for the recommendation. I''ll have to try it sometime.
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

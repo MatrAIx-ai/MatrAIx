@@ -1,0 +1,62 @@
+id: '00007021'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7021
+data:
+  user 1 personas: 'I won the spelling bee in third grade.
+
+    I own a bar in downtown chicago.
+
+    I ve been married five times.
+
+    I smoke a pipe.'
+  user 2 personas: 'I have 4 cats and 2 dogs.
+
+    I love to skate and ski.
+
+    My car has to be as fast as my motorcycle.
+
+    I love the smell of leather.'
+  Best Generated Conversation: 'User 1: Hi there! What are your hobbies?
+
+    User 2: I love to skate and ski. I also love to drive fast cars.
+
+    User 1: That''s cool! I love to skate too. I''ve never been skiing, but it looks like fun.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will! What kind of car do you have?
+
+    User 2: I have a Corvette. It''s a lot of fun to drive.
+
+    User 1: Corvettes are awesome! I''ve always wanted to drive one.
+
+    User 2: You should! They''re really fun.
+
+    User 1: What kind of pets do you have?
+
+    User 2: I have four cats and two dogs.
+
+    User 1: Oh wow! That''s a lot of pets!
+
+    User 2: Yeah, I know. But I love them all.
+
+    User 1: I can see why! They''re all so cute.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: What''s your favorite smell?
+
+    User 2: I love the smell of leather. It''s so rich and luxurious.
+
+    User 1: I can see why! Leather smells great.
+
+    User 2: It''s one of my favorite things.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to find someone who enjoys the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00002660'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2660
+data:
+  user 1 personas: 'I work in accounting.
+
+    I am male.
+
+    I have two dogs.
+
+    I like potatoes.
+
+    I lease my car.'
+  user 2 personas: 'I teach middle school art.
+
+    I still like unicorns even though i m an adult.
+
+    I want to write a book before i die.
+
+    I would love to visit the pyramids.
+
+    I am excellent at playing pool.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name). What''s your name?
+
+    User 2: Hello, my name is (user 2''s name). It''s nice to meet you.
+
+    User 1: It''s nice to meet you too.
+
+    User 2: What do you do for a living?
+
+    User 1: I work in accounting.
+
+    User 2: Oh, that sounds interesting. I teach middle school art.
+
+    User 1: I''ve never met a teacher before. What''s it like?
+
+    User 2: It''s really rewarding. I get to make a difference in kids'' lives.
+
+    User 1: That''s awesome.
+
+    User 2: What are your hobbies?
+
+    User 1: I like to play pool and I have two dogs.
+
+    User 2: I love dogs! What kind of dogs do you have?
+
+    User 1: I have a golden retriever and a lab mix.
+
+    User 2: They sound adorable.
+
+    User 1: They are.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I like to go hiking and camping.
+
+    User 2: Those sound like fun activities.
+
+    User 1: They are.
+
+    User 2: Do you have any plans for the weekend?
+
+    User 1: I''m going to visit the pyramids.
+
+    User 2: That sounds amazing! I''ve always wanted to go.
+
+    User 1: It should be a lot of fun.
+
+    User 2: I''m sure it will be.
+
+    User 1: I''m looking forward to it.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

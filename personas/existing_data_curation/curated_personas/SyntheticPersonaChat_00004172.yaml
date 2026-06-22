@@ -1,0 +1,70 @@
+id: '00004172'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4172
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    My house is paid for.
+
+    I wear a uniform to work.
+
+    I like to draw and paint in my spare time.
+
+    I drive a four wheel drive vehicle.'
+  user 2 personas: 'My favorite food is tacos.
+
+    I like to draw.
+
+    I am studying literature.
+
+    I am from france.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: I like to draw and paint in my spare time. What do you like to do for fun?
+
+    User 2: I like to draw too! I''m also studying literature.
+
+    User 1: That''s cool! I''m from France, where are you from?
+
+    User 2: I''m from California.
+
+    User 1: I''ve never been to California, but I''ve heard it''s beautiful.
+
+    User 2: It is! I love the weather and the beaches.
+
+    User 1: I''m sure you''ve had to drive a lot to get around California.
+
+    User 2: Not really, I live in San Francisco, so I can take public transportation everywhere.
+
+    User 1: Oh, that''s nice. I live in a small town in France, so I have to drive everywhere.
+
+    User 2: I think I would like living in a small town.
+
+    User 1: It''s pretty quiet, but it can be boring sometimes.
+
+    User 2: I can imagine. What''s your favorite thing about living in France?
+
+    User 1: I love the food! The food in France is amazing.
+
+    User 2: I''ve heard that! I''ve always wanted to try French food.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what are you studying in literature?
+
+    User 2: I''m studying French literature. I''m really enjoying it so far.
+
+    User 1: That''s great! I''m glad you''re enjoying it.
+
+    User 2: Thanks! I''m planning on becoming a writer.
+
+    User 1: That''s awesome! I''m sure you''ll be a great writer.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

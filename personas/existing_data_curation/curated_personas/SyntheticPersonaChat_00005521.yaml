@@ -1,0 +1,57 @@
+id: '00005521'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5521
+data:
+  user 1 personas: 'I can do convincing bird calls.
+
+    I do volunteer work for human rights organizations.
+
+    I like to make my own clothes.
+
+    I can recite the movie young frankenstein word for word.'
+  user 2 personas: 'I drink a lot of caffeine.
+
+    I have a cheap car my dad gave me.
+
+    I can run very fast for long distances.
+
+    I am very skinny and energetic.
+
+    I have a very unhealthy diet.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1''s name). What''s your name?
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to run long distances.
+
+    User 1: That''s cool! I''m not very athletic, but I do like to walk.
+
+    User 2: I used to be really skinny, but then I started running and now I''m a lot more muscular.
+
+    User 1: That''s great! I''m glad you found something that you enjoy doing and that''s good for you.
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to do a lot of things. I like to volunteer for human rights organizations, I like to make my own clothes, and I like to recite the movie Young Frankenstein word for word.
+
+    User 2: Wow! That''s a lot of interesting things. I''ve never heard of someone volunteering for human rights organizations, but it sounds like a really good cause. And I''ve never heard of anyone making
+    their own clothes, but it sounds like a really cool skill.
+
+    User 1: Thanks! I think it''s important to give back to the community, and I also think it''s important to be creative.
+
+    User 2: I agree! It''s important to help others, and it''s also important to have fun.
+
+    User 1: Exactly!
+
+    User 2: So, what''s your favorite thing to do for fun?
+
+    User 1: I think my favorite thing is to volunteer for human rights organizations. I really enjoy helping others, and it''s a great way to meet new people and learn about different cultures.
+
+    User 2: That''s really great! I''m glad you''re able to find something that you enjoy doing and that''s also good for the community.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

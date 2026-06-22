@@ -1,0 +1,19 @@
+id: '00040760'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40760
+persona_description: A scientist or geologist who is interested in studying the geology and geophysics of a particular area, particularly in the context of radon levels. This persona is likely to have a
+  background in geology or geophysics and may have a particular interest in studying the relationship between radon levels and geological features. They may have access to geologic maps, radioactivity maps,
+  and soil surveys that can help them understand the potential radon levels in a particular area. They may also have experience with radon measurements of local soil air and may be familiar with indoor
+  radon data that can be used to determine the potential radon levels in a particular home.
+expertise:
+  general_domain_top1pct: geology/geophysics
+  specific_domain_top1pct: None
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

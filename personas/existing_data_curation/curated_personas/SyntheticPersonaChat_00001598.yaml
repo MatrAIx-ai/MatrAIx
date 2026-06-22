@@ -1,0 +1,66 @@
+id: 00001598
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1598
+data:
+  user 1 personas: 'I have 3 children.
+
+    I have a vacation home in the mountains.
+
+    I have a law degree.
+
+    I drive an suv.
+
+    I have 3 dogs.'
+  user 2 personas: 'I wear cardigans because i hope it makes me look more cultured.
+
+    I had one step dad , and fortunately he ignored me.
+
+    I hate that i got my brain from the dad i never met.
+
+    I don t know if i enjoy programming , or if it s my only choice.
+
+    My last name is spanish , but i tell people that it s italian.'
+  Best Generated Conversation: 'User 1: I see you have a cardigan on. Do you like wearing them?
+
+    User 2: Yeah, I think they make me look more cultured.
+
+    User 1: I don''t think you need a cardigan to look cultured. You seem like a very smart person.
+
+    User 2: Thanks. I''m not sure if I''m smart or not. I''m just good at programming.
+
+    User 1: Well, that''s a good skill to have. What do you like to program?
+
+    User 2: I like to program games. I''m not very good at it, but it''s fun.
+
+    User 1: Well, I''m sure you''ll get better with practice.
+
+    User 2: Thanks. I hope so.
+
+    User 1: What other interests do you have?
+
+    User 2: I like to read, go to the movies, and play video games.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read fantasy and science fiction.
+
+    User 1: I like those genres too. What are some of your favorite books?
+
+    User 2: I like the Harry Potter series, the Lord of the Rings series, and the Ender''s Game series.
+
+    User 1: I love all of those series! What are some of your favorite movies?
+
+    User 2: I love the Lord of the Rings movies, the Harry Potter movies, and the Star Wars movies.
+
+    User 1: I love all of those movies too! What are some of your favorite video games?
+
+    User 2: I like the Elder Scrolls series, the Fallout series, and the Mass Effect series.
+
+    User 1: I love all of those games too! We have a lot in common.
+
+    User 2: Yeah, it looks like we do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

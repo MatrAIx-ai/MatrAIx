@@ -1,0 +1,18 @@
+id: '00030365'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30365
+persona_description: A veterinarian who specializes in the diagnosis and treatment of heart disease in dogs and cats. This veterinarian has extensive experience performing physical exams, chest x-rays,
+  echocardiograms, electrocardiograms, and blood tests to identify and treat heart disease in pets. They are knowledgeable in the latest diagnostic techniques and treatments for heart disease, and are dedicated
+  to providing the best care for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

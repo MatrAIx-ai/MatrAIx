@@ -1,0 +1,74 @@
+id: '00000572'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 572
+data:
+  user 1 personas: 'I am a lesbian.
+
+    I work in tv.
+
+    I like to cook breakfast on sundays.
+
+    I love to sing.'
+  user 2 personas: 'I work five days a week.
+
+    I do not have children.
+
+    I go to the pool every thursday for three hours.
+
+    I do yoga on tuesdays.
+
+    I enjoy shopping.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing great! How about you?
+
+    User 2: I''m doing well, thank you!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go shopping, do yoga, and go to the pool.
+
+    User 1: Oh, that sounds fun! I like to cook breakfast on Sundays and sing.
+
+    User 2: I love to sing too! What kind of music do you like to sing?
+
+    User 1: I like to sing all kinds of music, but I mostly sing country music.
+
+    User 2: That''s awesome! I love country music too.
+
+    User 1: What''s your favorite country song?
+
+    User 2: My favorite country song is "The Dance" by Garth Brooks.
+
+    User 1: That''s a great song! I love that one too.
+
+    User 2: What do you like about it?
+
+    User 1: I love the lyrics and the way it''s sung. It''s so emotional and beautiful.
+
+    User 2: I agree! It''s a really special song.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: Yes, I also like to go to the gym and play tennis.
+
+    User 1: That''s awesome! I love to go to the gym too.
+
+    User 2: What kind of music do you listen to?
+
+    User 1: I like to listen to all kinds of music, but I mostly listen to country music and pop music.
+
+    User 2: That''s cool! I like to listen to all kinds of music too, but I mostly listen to country music and rock music.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: Yes, it does! We should hang out sometime and listen to music together.
+
+    User 1: That would be great! I''d love to hang out with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

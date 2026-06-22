@@ -1,0 +1,62 @@
+id: 00002498
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2498
+data:
+  user 1 personas: 'I like rock climbing.
+
+    My hair is black.
+
+    I am a writer.
+
+    I am gluten free.'
+  user 2 personas: 'I like to come up with new hairstyles.
+
+    I like to play volleyball.
+
+    I like to do my nails.
+
+    I like to pickle eggs.
+
+    I like to go on long hikes.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play volleyball, pickle eggs, go on long hikes, and come up with new hairstyles.
+
+    User 1: That''s cool! I like to rock climb, write, and eat gluten-free food.
+
+    User 2: Rock climbing sounds like fun! I''ve never tried it before.
+
+    User 1: It''s really challenging, but it''s also a lot of fun.
+
+    User 2: I''m not sure I''m strong enough for it, but I might give it a try.
+
+    User 1: You should! It''s a great way to get in shape and have some fun.
+
+    User 2: I''ll keep that in mind. What kind of writing do you do?
+
+    User 1: I mostly write short stories and poetry. I''m also working on a novel.
+
+    User 2: That''s really cool! I''ve always wanted to write a novel, but I''m not sure if I have the patience.
+
+    User 1: It takes a lot of work, but it''s worth it. I''m really proud of the work I''ve done so far.
+
+    User 2: I''m sure you should be. I''m impressed that you''re able to write so many different things.
+
+    User 1: Thanks! I''m always trying new things. I like to keep my mind active.
+
+    User 2: I can tell! You seem like a really interesting person.
+
+    User 1: Thanks! I like to think so. I''m always up for a good conversation.
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too! I hope we can talk again soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

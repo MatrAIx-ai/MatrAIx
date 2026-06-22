@@ -1,0 +1,66 @@
+id: 00008802
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8802
+data:
+  user 1 personas: 'Last month the farm was foreclosed so i am looking for a new job.
+
+    I live in kansas.
+
+    I am an out of work farmhand.
+
+    I like watching reality television shows.
+
+    I would like to move some place warmer.'
+  user 2 personas: 'My favorite author is stephen king.
+
+    My favorite movie genre is horror.
+
+    I love to read.
+
+    I am a vet tech.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, especially horror novels.
+
+    User 1: Oh, I like horror movies. What''s your favorite Stephen King book?
+
+    User 2: It''s a tie between The Shining and The Stand.
+
+    User 1: Those are both great! I''ve read both of them.
+
+    User 2: Have you seen the movie adaptations?
+
+    User 1: Yeah, I have. The Shining is one of my favorite movies.
+
+    User 2: Me too! It''s so creepy.
+
+    User 1: What do you like about it?
+
+    User 2: I like the atmosphere and the characters. Jack Nicholson is so good as Jack Torrance.
+
+    User 1: I agree! He''s so terrifying in that role.
+
+    User 2: I know, right? It''s one of my favorite performances by an actor.
+
+    User 1: What''s your favorite horror movie?
+
+    User 2: I''m not sure I can pick just one. I love a lot of them.
+
+    User 1: Me too. I think my favorite horror movie is The Exorcist.
+
+    User 2: That''s a classic! I love that movie too.
+
+    User 1: I''m glad to meet someone who loves horror movies as much as I do.
+
+    User 2: Me too! We should watch some movies together sometime.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

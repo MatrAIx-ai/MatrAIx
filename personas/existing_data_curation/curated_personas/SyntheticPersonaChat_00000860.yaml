@@ -1,0 +1,80 @@
+id: 00000860
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 860
+data:
+  user 1 personas: 'I smoke a pipe.
+
+    I have been married five times.
+
+    I love to eat eggplant.
+
+    I won the spelling bee in third grade.'
+  user 2 personas: 'I walk three miles home every night.
+
+    I work in fast food.
+
+    I am looking for krav maga classes near my home.
+
+    I always wear something purple.'
+  Best Generated Conversation: 'User 1: Hi there, I''m (name). I''m interested in krav maga.
+
+    User 2: Hi, I''m (name). I''m also interested in krav maga. I work in fast food and I walk three miles home every night.
+
+    User 1: That''s a lot of walking! How do you stay motivated?
+
+    User 2: I listen to music and I think about how much better I''ll feel when I get home.
+
+    User 1: That''s a great way to stay motivated. I used to walk a lot when I was in college.
+
+    User 2: What did you do in college?
+
+    User 1: I studied English. I wanted to be a writer.
+
+    User 2: That''s cool. I''m not a very good writer.
+
+    User 1: Don''t worry, you''ll get better with practice.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem. So, what are your favorite foods?
+
+    User 2: I love eggplant, but I know it''s not everyone''s favorite.
+
+    User 1: I love eggplant too! It''s so delicious.
+
+    User 2: We should cook eggplant together sometime.
+
+    User 1: That would be fun! I''m not a very good cook, but I''m willing to learn.
+
+    User 2: I''m sure you''ll be a great cook.
+
+    User 1: Thanks for the encouragement.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: I like to play video games too!
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like a lot of different video games, but my favorite is probably Zelda: Breath of the Wild.
+
+    User 1: That''s a great game! I''ve played it a few times.
+
+    User 2: It''s so much fun! I love exploring the world and finding new things.
+
+    User 1: Me too. It''s a really immersive experience.
+
+    User 2: I agree. It''s one of the best video games I''ve ever played.
+
+    User 1: I''m glad you enjoyed it. I''m sure we''ll have a lot of fun together.
+
+    User 2: I think so too. It''s nice to meet you, (name).
+
+    User 1: Nice to meet you too, (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

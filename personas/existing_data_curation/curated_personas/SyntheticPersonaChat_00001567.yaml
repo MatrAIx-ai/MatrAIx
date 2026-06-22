@@ -1,0 +1,74 @@
+id: '00001567'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1567
+data:
+  user 1 personas: 'I don t like kids.
+
+    I have 3 ferrari cars in my garage.
+
+    I have 3 ex wives.
+
+    I don t like acting.'
+  user 2 personas: 'I like to come up with new hairstyles.
+
+    I like to play volleyball.
+
+    I like to do my nails.
+
+    I like to pickle eggs.
+
+    I like to go on long hikes.'
+  Best Generated Conversation: 'User 1: Hi, my name is (name).
+
+    User 2: Hi, (name), I''m (name).
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to play volleyball, pickle eggs, and go on long hikes.
+
+    User 1: I''ve never pickled eggs before. How do you do that?
+
+    User 2: It''s really easy! You just need to boil some eggs, then peel them and put them in a jar with vinegar, water, and salt.
+
+    User 1: That sounds delicious. I''ll have to try that sometime.
+
+    User 2: You should! It''s a great snack.
+
+    User 1: What else do you like to do?
+
+    User 2: I also like to come up with new hairstyles, do my nails, and go on long hikes.
+
+    User 1: I''m not very good at doing my nails.
+
+    User 2: Me neither! I just like to try new things.
+
+    User 1: What do you like about hikes?
+
+    User 2: I like being outdoors and getting exercise. I also like the challenge of hiking up a mountain.
+
+    User 1: I can see why you like that. I''ve never been hiking before, but I''d like to try it sometime.
+
+    User 2: You should! It''s a great way to see the world.
+
+    User 1: Thanks for the suggestion. I might just do that.
+
+    User 2: You''re welcome!
+
+    User 1: What''s the weirdest thing you''ve ever done?
+
+    User 2: I once went on a hike in the middle of the night.
+
+    User 1: That sounds really cool! Did you see anything interesting?
+
+    User 2: I saw a lot of stars! It was so beautiful.
+
+    User 1: I bet it was. I''ve always wanted to see the stars from a high place.
+
+    User 2: You should! It''s an amazing experience.
+
+    User 1: Thanks for the suggestion. I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,73 @@
+id: 00001877
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1877
+data:
+  user 1 personas: 'I have a big beard.
+
+    I am a viking.
+
+    Its cold where i live.
+
+    I like to go fishing on my viking boat.
+
+    My hobbies include pillaging and fine dining.'
+  user 2 personas: 'I like to go to bars and people watch.
+
+    I am an angry person.
+
+    I am an old man.
+
+    I don t have a lot of family members that i like.
+
+    I drive a jag.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: I''m doing okay.
+
+    User 1: That''s good to hear. What are you up to today?
+
+    User 2: I''m just hanging out, trying to find something to do.
+
+    User 1: Well, if you''re bored, I could take you fishing.
+
+    User 2: Fishing? That sounds like fun.
+
+    User 1: Great! I''ll meet you at the docks in an hour.
+
+    User 2: Okay, see you there!
+
+
+    (1 hour later)
+
+
+    User 1: I''m here at the docks.
+
+    User 2: Me too!
+
+    User 1: Great! Let''s go fishing!
+
+
+    (They go fishing and have a great time.)
+
+
+    User 1: That was so much fun!
+
+    User 2: I know, right? I''m so glad you invited me.
+
+    User 1: Me too. I''m glad we met.
+
+    User 2: Me too.
+
+    User 1: Well, I should probably head home. It was nice meeting you.
+
+    User 2: You too. Maybe we can fish again sometime.
+
+    User 1: Sounds good.
+
+
+    (They say goodbye and go their separate ways.)'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

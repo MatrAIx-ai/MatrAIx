@@ -1,0 +1,56 @@
+id: 00003487
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3487
+data:
+  user 1 personas: 'I play many instruments.
+
+    I like to travel.
+
+    I give lessons on string instruments.
+
+    I like to cook with food i grow in my garden.'
+  user 2 personas: 'My name is arnold.
+
+    I like to watch tv.
+
+    I love ham and cheese sandwiches.
+
+    I am 10 years old.'
+  Best Generated Conversation: 'User 1: Hi Arnold, what''s your favorite thing to do?
+
+    User 2: I like to watch TV.
+
+    User 1: What kind of TV do you like to watch?
+
+    User 2: I like to watch cartoons and sports.
+
+    User 1: Cartoons are fun! I like to watch Tom and Jerry.
+
+    User 2: Tom and Jerry is a great show! I also like to watch SpongeBob SquarePants.
+
+    User 1: SpongeBob is a classic! I''m not sure if it''s still on TV, though.
+
+    User 2: It is! I watch it every day after school.
+
+    User 1: That''s awesome! I''m glad you''re enjoying it.
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to play music. I play a lot of different instruments, and I also give lessons on string instruments.
+
+    User 2: That''s really cool! I''ve always wanted to learn how to play an instrument.
+
+    User 1: It''s never too late to learn! I''m sure you''d be great at it.
+
+    User 2: Maybe I''ll try it out sometime.
+
+    User 1: You should! I''m sure you''ll have a lot of fun.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

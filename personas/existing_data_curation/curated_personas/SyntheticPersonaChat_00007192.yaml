@@ -1,0 +1,80 @@
+id: 00007192
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7192
+data:
+  user 1 personas: 'I m a receptionist at a doctors office.
+
+    My name is mary.
+
+    I manage all the paperwork and incoming calls.
+
+    I m also a fulltime student studying radiology at local college.
+
+    My weekends are spent studying and looking over client files.'
+  user 2 personas: 'I run marathons twice a year , mostly in america.
+
+    My favorite basketball team is the vancouver grizzlies.
+
+    My favorite sport is basketball.
+
+    I live in canada , near ontario.
+
+    I am an avid runner.'
+  Best Generated Conversation: 'User 1: Hi, I''m Mary. I''m a receptionist at a doctor''s office.
+
+    User 2: Hi Mary, my name is John. I''m an avid runner and I like to run marathons.
+
+    User 1: That''s great, John! I''ve never done a marathon, but I''m always impressed by people who do.
+
+    User 2: Thanks Mary! It''s a lot of hard work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. What''s your favorite part of running a marathon?
+
+    User 2: I love the feeling of crossing the finish line. It''s such a sense of accomplishment.
+
+    User 1: I can imagine. I''m sure it''s a great feeling.
+
+    User 2: It is. Do you have any hobbies?
+
+    User 1: Yes, I''m a full-time student studying radiology at the local college.
+
+    User 2: Oh, that''s cool! I''ve always been interested in radiology.
+
+    User 1: It''s a great field. I love learning about the human body.
+
+    User 2: I can imagine. It must be fascinating.
+
+    User 1: It is. I''m really enjoying my classes so far.
+
+    User 2: That''s great. I''m sure you''ll be a great radiologist.
+
+    User 1: Thanks John! I appreciate that.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to read, watch movies, and play video games.
+
+    User 2: Oh, that''s cool. I like to read too.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read mystery novels, science fiction, and fantasy.
+
+    User 1: Oh, that''s cool. I like to read mystery novels too.
+
+    User 2: I''ve read a lot of good mystery novels lately.
+
+    User 1: Me too. I just finished a really good one called The Girl on the Train.
+
+    User 2: Oh, I''ve heard of that one. I''ve been meaning to read it.
+
+    User 1: It''s really good. I highly recommend it.
+
+    User 2: I''ll check it out. Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

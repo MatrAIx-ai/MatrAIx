@@ -1,0 +1,21 @@
+id: 00057190
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57190
+persona_description: A software developer who specializes in the development of DNS services, particularly in the use of the mDNS protocol for discovery and registration of services. They have experience
+  with the implementation of DNS services, including the use of the mDNS responder daemon and the callback functions provided by the DNS Service Discovery API. They are skilled in managing and configuring
+  DNS services, including the use of the service discovery reference and flags provided by the DNS Service Discovery API. They have experience with the use of TXT records and the ability to handle rare
+  exceptions such as updating text records associated with a service. They are proficient in using the mDNS responder daemon and the callback functions provided by the DNS Service Discovery API to communicate
+  with the daemon and manage the registration of services. They are skilled in managing DNS services and are capable of handling the common cases, such as waking, sleeping, shutting down, and changing IP
+  addresses, using the initialized service discovery reference.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: DNS Services
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

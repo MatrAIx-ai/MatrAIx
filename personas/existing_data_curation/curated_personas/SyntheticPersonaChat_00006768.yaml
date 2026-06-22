@@ -1,0 +1,64 @@
+id: 00006768
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6768
+data:
+  user 1 personas: 'I have never been out of the country.
+
+    I love to go hiking.
+
+    I have never been to college.
+
+    I am a bank teller.
+
+    My favorite phone is as iphone.'
+  user 2 personas: 'I have trouble feeling emotion.
+
+    My parents are distant.
+
+    I have an older brother that has gotten into trouble.
+
+    Sometimes i wish i didn t have to wake up in the morning.'
+  Best Generated Conversation: 'User 1: Hi, I''m [your name]. What''s your name?
+
+    User 2: Hi, I''m [other person''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking.
+
+    User 1: That''s cool! I like to go hiking too.
+
+    User 2: Where do you like to go hiking?
+
+    User 1: I like to go hiking in the mountains.
+
+    User 2: Me too! I love the views from the top of mountains.
+
+    User 1: Me too! It''s so peaceful and beautiful up there.
+
+    User 2: I know, right? It''s like the world is yours.
+
+    User 1: It really is. It''s so great to get away from everything and just relax.
+
+    User 2: Me too. It''s a great way to clear your head.
+
+    User 1: Definitely. I''m so glad you''re a hiker too.
+
+    User 2: Me too! We should go hiking together sometime.
+
+    User 1: That would be great! I''d love that.
+
+    User 2: Perfect! We can exchange numbers and make plans.
+
+    User 1: Sounds good! I''m excited to go hiking with you.
+
+    User 2: Me too! I know we''re going to have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

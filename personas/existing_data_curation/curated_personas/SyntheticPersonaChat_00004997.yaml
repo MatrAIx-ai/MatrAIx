@@ -1,0 +1,84 @@
+id: 00004997
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4997
+data:
+  user 1 personas: 'I have male pattern baldness.
+
+    My mother doesn t ! ove me.
+
+    I am a classicly trained chef.
+
+    I have a parrot named parrot.
+
+    I was born in baton rouge.'
+  user 2 personas: 'I have one sister.
+
+    I love dogs , especially labradors.
+
+    I am traveling to paris this year for my vacation.
+
+    I work in the pharmaceutical industry.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name]! I''m [user 2''s name].
+
+    User 1: Nice to meet you! Where are you from?
+
+    User 2: I''m from Baton Rouge, Louisiana.
+
+    User 1: Oh, cool! I''ve never been to Louisiana. What''s it like there?
+
+    User 2: It''s a beautiful state with a lot to offer. We have great food, music, and culture.
+
+    User 1: That sounds awesome! I''m sure I''d love it there.
+
+    User 2: I''m sure you would!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work in the pharmaceutical industry.
+
+    User 1: Oh, that''s interesting! What kind of work do you do?
+
+    User 2: I''m a research scientist. I work on developing new drugs.
+
+    User 1: That sounds like a really interesting job!
+
+    User 2: It is! I love it.
+
+    User 1: What are some of your hobbies?
+
+    User 2: I love to travel, read, and spend time with my family.
+
+    User 1: Those are all great hobbies! I love to travel too.
+
+    User 2: Me too! I''m actually going to Paris this year for my vacation.
+
+    User 1: That sounds amazing! I''ve always wanted to go to Paris.
+
+    User 2: You should! It''s a beautiful city.
+
+    User 1: I will!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I''m a classically trained chef. I love to cook and bake.
+
+    User 2: Oh, that''s really cool! I love to cook too.
+
+    User 1: Yeah, I''m a big foodie. I love trying new recipes and cooking for my family and friends.
+
+    User 2: That sounds like a lot of fun! I love to cook for my family and friends too.
+
+    User 1: It is! It''s one of my favorite things to do.
+
+    User 2: I can see why! It sounds like you''re a really talented chef.
+
+    User 1: Thank you! I appreciate that.
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

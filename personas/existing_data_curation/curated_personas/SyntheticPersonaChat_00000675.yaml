@@ -1,0 +1,80 @@
+id: '00000675'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 675
+data:
+  user 1 personas: 'I like fishing.
+
+    I drink beers and go to the creek.
+
+    I usually catch sunfish.
+
+    I cannot eat them but they are pretty.
+
+    I am a simple man.'
+  user 2 personas: 'I have purple hair.
+
+    My favorite movie is gone with the wind.
+
+    I have 2 turtles.
+
+    I like to play video games.
+
+    My favorite color is red.'
+  Best Generated Conversation: 'User 1: Hello
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and read books.
+
+    User 1: Me too! I like to fish, drink beers, and go to the creek.
+
+    User 2: Oh, that sounds fun! I''ve never been fishing before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: Maybe I will sometime.
+
+    User 1: You should! It''s a great way to relax and enjoy nature.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what kind of video games do you like to play?
+
+    User 2: I like to play action-adventure games, puzzle games, and role-playing games.
+
+    User 1: Oh, I like those too! I''ve been playing a lot of Elden Ring lately.
+
+    User 2: I''ve heard good things about that game. I''ve been wanting to try it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is Gone with the Wind.
+
+    User 1: Oh, that''s a classic! I''ve never seen it.
+
+    User 2: You should! It''s a really good movie.
+
+    User 1: Maybe I will.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Oh, that''s a nice color.
+
+    User 1: Thank you.
+
+    User 2: It''s nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

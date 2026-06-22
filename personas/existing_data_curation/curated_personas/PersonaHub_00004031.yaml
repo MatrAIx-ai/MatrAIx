@@ -1,0 +1,20 @@
+id: '00004031'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4031
+persona_description: A scientist who is studying the long-term consequences of climate change on human capital and economic outcomes. The scientist is interested in understanding the relationship between
+  season of birth, temperature exposure, and later life wellbeing, and how it varies across different states and countries. The scientist is also concerned about the small scale of the effect the authors
+  claim to have separated from what must be a great deal of noise, and is looking for ways to mitigate the temperature sensitivity in different states and countries. The scientist is likely to be a health-policy
+  professor at Stanford University, with expertise in administrative earnings records, fine-scale, daily weather data, and location and date of birth. The scientist is also likely to have a strong interest
+  in income disparities between states with similar climates.
+expertise:
+  general_domain_top1pct: Data Science, Environmental Science, Economics, Public Health
+  specific_domain_top1pct: Econometrics, Climate Change Economics, Regional Economics, Health Policy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

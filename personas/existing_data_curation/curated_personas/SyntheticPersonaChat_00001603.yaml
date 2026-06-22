@@ -1,0 +1,66 @@
+id: '00001603'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1603
+data:
+  user 1 personas: 'I have 5 children.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.
+
+    I am a student.'
+  user 2 personas: 'I love working out.
+
+    I am a freelance writer.
+
+    My favorite type of music is metal.
+
+    My parents live in kentucky.
+
+    I currently am engaged to my high school boyfriend.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey! How''s it going?
+
+    User 1: Pretty good! I''m just hanging out, enjoying my day off.
+
+    User 2: Nice! I''m working on a project for my freelance writing job.
+
+    User 1: Oh cool! What kind of writing do you do?
+
+    User 2: I mostly do blog posts and articles, but I''ve also done some marketing copy and website content.
+
+    User 1: That sounds interesting! I''ve always wanted to be a freelance writer, but I''m not sure where to start.
+
+    User 2: There are a lot of great resources online to help you get started. I would recommend checking out The Write Life and Freelance Writing Jobs.
+
+    User 1: Thanks! I''ll definitely check them out.
+
+    User 2: No problem! So what do you do for fun?
+
+    User 1: I like to go fishing, hike, and read. I also have five kids, so I keep pretty busy!
+
+    User 2: Wow, five kids! That must be a handful.
+
+    User 1: It can be, but it''s also a lot of fun. They''re my favorite people in the world.
+
+    User 2: That''s great to hear! So what do you like to do with your kids?
+
+    User 1: We love to go to the park, play games, and read books together.
+
+    User 2: Sounds like you have a lot of fun with your family.
+
+    User 1: We do! They''re the best.
+
+    User 2: I''m glad to hear that. So what are you looking for in a friend?
+
+    User 1: I''m looking for someone who is kind, funny, and loves to have fun. I''m also looking for someone who is understanding and supportive.
+
+    User 2: Those are all great qualities to look for in a friend. I think we would get along well.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

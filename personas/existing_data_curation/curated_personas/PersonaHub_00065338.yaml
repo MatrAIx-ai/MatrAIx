@@ -1,0 +1,20 @@
+id: 00065338
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65338
+persona_description: A bioinformatician or a bioinformatics scientist who specializes in sequence alignment and profiling. They are familiar with various bioinformatics tools and techniques, including profile
+  search algorithms and their applications. They have experience with databases of protein sequences and are skilled in the assembly of multiple sequence alignments, the construction of profile matrices,
+  and the comparison of these matrices to databases. They have a deep understanding of the statistical properties of alignment scores and the potential for identifying conserved and variable regions in
+  protein sequences. They are adept at using the profile search technique to find similarities between sequences with little or no sequence identity, and to distinguish known motifs in protein sequences.
+  They have experience with the PIR protein sequence database and the FASTP program, which they have used to compare sequences to globin profiles and to search the database with other probes.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: bioinformatics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

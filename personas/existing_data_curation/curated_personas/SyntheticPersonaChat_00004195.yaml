@@ -1,0 +1,46 @@
+id: 00004195
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4195
+data:
+  user 1 personas: 'My favorite food is pasta.
+
+    I love helping people.
+
+    I retired so i can spend more time with my husband and helping people.
+
+    I live in a rural area.
+
+    I am a older woman.'
+  user 2 personas: 'My dog is my best friend.
+
+    I like to drink chai tea before bed every night.
+
+    I am terrified of spiders , but love snakes.
+
+    I work as a computer technician , but secretly hate my job.'
+  Best Generated Conversation: 'User 1: Hi, my name is Mary. I''m an older woman who recently retired so I can spend more time with my husband and helping people. I love pasta and I live in a rural area.
+
+    User 2: Hi Mary, my name is John. I''m a computer technician who hates his job but loves his dog and chai tea. I''m also terrified of spiders but love snakes.
+
+    User 1: It''s nice to meet you, John. What do you like to do in your free time?
+
+    User 2: I like to spend time with my dog, read, and watch movies.
+
+    User 1: That sounds nice. I like to read and cook.
+
+    User 2: I love cooking too, but I''m not very good at it.
+
+    User 1: We should have a cooking competition sometime.
+
+    User 2: That would be fun. I''m sure I''d get trounced, though.
+
+    User 1: I''m sure you''d do great.
+
+    User 2: Thanks, Mary. I''m glad to have met you.
+
+    User 1: Me too, John. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00001195
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1195
+data:
+  user 1 personas: 'I am a fisherman.
+
+    I love tuna.
+
+    I live in cape hatteras.
+
+    I m going riding on my boat today.
+
+    My favorite is rock fish.'
+  user 2 personas: 'I graduated top of my class.
+
+    My mother was a concert pianist.
+
+    My wife is a college professor.
+
+    I work as a trauma surgeon.
+
+    I have one little girl.'
+  Best Generated Conversation: 'User 1: I love fishing! I''m from Cape Hatteras and I''m going fishing on my boat today.
+
+    User 2: That''s awesome! I love fishing too. I used to go fishing with my mom when I was a kid. She was a concert pianist.
+
+    User 1: That''s cool! My mom was a nurse.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a fisherman.
+
+    User 2: That''s a cool job. I''m a trauma surgeon.
+
+    User 1: That''s a very important job. I''m sure you save a lot of lives.
+
+    User 2: I try my best.
+
+    User 1: Do you have any kids?
+
+    User 2: Yes, I have one little girl.
+
+    User 1: That''s great! I have two little boys.
+
+    User 2: Oh, that''s nice.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go fishing, play sports, and spend time with my family.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: What''s your favorite kind of fish to catch?
+
+    User 1: I like to catch tuna.
+
+    User 2: That''s a good choice. Tuna is delicious.
+
+    User 1: Yeah, it is. I''m going to go fishing now.
+
+    User 2: Have fun!
+
+    User 1: Thanks!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

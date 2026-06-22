@@ -1,0 +1,74 @@
+id: 00003095
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3095
+data:
+  user 1 personas: 'I have three roommates.
+
+    I work at a coffee shop.
+
+    Both of my parents are teachers.
+
+    I have an eyebrown piercing.'
+  user 2 personas: 'I sing barbershop and rap.
+
+    My favorite season is winter.
+
+    I love to take naps.
+
+    I love watching basketball.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Hi [name], I''m [name].
+
+    User 2: Nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I like to sing, take naps, and watch basketball.
+
+    User 1: That''s cool! I like to sing too. Do you sing in a choir or anything?
+
+    User 2: I used to sing in a choir, but I don''t anymore.
+
+    User 1: That''s too bad. I love singing in a choir.
+
+    User 2: Me too. It''s so much fun.
+
+    User 1: What kind of music do you like to sing?
+
+    User 2: I like to sing all kinds of music, but I especially like to sing barbershop and rap.
+
+    User 1: That''s cool! I''ve never heard of barbershop.
+
+    User 2: It''s a style of a cappella singing.
+
+    User 1: Oh, I''ve heard of that. I don''t know much about it, though.
+
+    User 2: It''s really cool. You should look it up sometime.
+
+    User 1: I will! What''s your favorite basketball team?
+
+    User 2: I like the Golden State Warriors.
+
+    User 1: Oh, me too! They''re so good.
+
+    User 2: Yeah, they''re really fun to watch.
+
+    User 1: I''m excited to see how they do in the playoffs this year.
+
+    User 2: Me too! I think they have a good chance of winning the championship.
+
+    User 1: I hope so! I''m always rooting for them.
+
+    User 2: Me too! They''re my favorite team.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00000630'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 630
+data:
+  user 1 personas: 'I enjoy nature.
+
+    I am in a lot of debt.
+
+    I fantasize about living in another country.
+
+    I am failing some of my classes.'
+  user 2 personas: 'I work as a lifeguard at a beach.
+
+    I like spreading laughter and love everywhere i go.
+
+    I drive a yellow convertible in the rain.
+
+    I listen to katie perry while in the shower.
+
+    I am a breath of fresh air.'
+  Best Generated Conversation: 'User 1: What are you into?
+
+    User 2: I like spreading laughter and love wherever I go! What about you?
+
+    User 1: I''m into nature, I love to go for walks in the woods and I love animals.
+
+    User 2: That''s so cool! I wish I could get out in nature more often, but I work as a lifeguard at the beach so I don''t get much time off.
+
+    User 1: That must be a really fun job! I love the beach.
+
+    User 2: It is! I get to spend my days swimming and playing in the sun.
+
+    User 1: Sounds like a dream!
+
+    User 2: It is! But I do miss being out in nature sometimes.
+
+    User 1: I can understand that. I''m always looking for ways to get closer to nature.
+
+    User 2: Me too! I love spending time outdoors.
+
+    User 1: I guess we have that in common!
+
+    User 2: We sure do!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to listen to music, I love to sing, and I love to dance.
+
+    User 1: Oh wow! I love to dance too!
+
+    User 2: That''s awesome! We should dance together sometime!
+
+    User 1: That would be so much fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Awesome! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

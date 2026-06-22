@@ -1,0 +1,54 @@
+id: 00004846
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4846
+data:
+  user 1 personas: 'My favorite color is orange.
+
+    I enjoy watching baseball.
+
+    I hate running.
+
+    I am married with kids.
+
+    I have 2 cats and a dog.'
+  user 2 personas: 'Not a day goes by that i don t drink four mountain dews.
+
+    I enjoy movies about aliens invading the earth.
+
+    I just dyed my hair hot pink with purple highlights.
+
+    My favorite hobby is chess.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to play chess, watch movies, and play video games.
+
+    User 1: That sounds like a lot of fun. I like to watch baseball, and I have two cats and a dog.
+
+    User 2: I''ve never been a big fan of sports, but I love animals. Do you have any pictures of your pets?
+
+    User 1: Yes, I do! Here''s a picture of my cat, Mr. Snuggles.
+
+    User 2: He''s so cute! I love his orange fur.
+
+    User 1: Thanks! He''s a great cat. Here''s a picture of my dog, Max.
+
+    User 2: He''s adorable! I love his big, fluffy tail.
+
+    User 1: Thanks! He''s a great dog. I''m glad I have them both.
+
+    User 2: I bet they make great pets. I''ve always wanted a dog, but my apartment doesn''t allow them.
+
+    User 1: That''s too bad. Dogs are great companions.
+
+    User 2: They are. I''ll have to get one when I have a house.
+
+    User 1: Good luck! I''m sure you''ll find a great dog.
+
+    User 2: Thanks! I''ll keep you posted.
+
+    User 1: Sounds good. I''m sure you''ll love having a dog.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00002043'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2043
+data:
+  user 1 personas: 'I work at a museum.
+
+    I read a lot.
+
+    I am stuck in a wheel chair.
+
+    I like to go to the park.
+
+    I do not have a lot of friends.'
+  user 2 personas: 'I love travelling and discovering new cultures.
+
+    My favorite sport is football.
+
+    I have been married for 20 years.
+
+    I volunteer at my local animal shelter.
+
+    I am a military veteran.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hi there!
+
+    User 1: How''s your day going?
+
+    User 2: Pretty good, thank you! I''m just getting ready to head out to the park.
+
+    User 1: Oh, that sounds fun! I like to go to the park too.
+
+    User 2: What do you like to do there?
+
+    User 1: I like to read, people watch, and just relax.
+
+    User 2: Sounds nice. I like to play soccer there.
+
+    User 1: Oh, I love playing soccer too!
+
+    User 2: Maybe we can play together sometime!
+
+    User 1: That would be great!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work at a museum.
+
+    User 2: Oh, that sounds interesting! What do you do there?
+
+    User 1: I''m a curator. I''m in charge of collecting and organizing the museum''s collection.
+
+    User 2: That sounds like a really cool job!
+
+    User 1: It is! I love getting to work with all sorts of different artifacts.
+
+    User 2: I can imagine. What''s your favorite artifact in the collection?
+
+    User 1: I don''t know if I could pick just one. There are so many great ones.
+
+    User 2: Well, you could always tell me a few of your favorites.
+
+    User 1: Sure! I really like the collection of antique toys. And I also love the collection of Native American artifacts.
+
+    User 2: Those sound really cool! I''d love to see them sometime.
+
+    User 1: You''re welcome to come visit the museum sometime!
+
+    User 2: I''ll definitely do that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,98 @@
+id: 00002876
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2876
+data:
+  user 1 personas: 'I love to go shopping.
+
+    My favorite pizza is pepperoni.
+
+    I married my high school sweetheart.
+
+    I drink lots of iced tea.
+
+    I teach first grade.'
+  user 2 personas: 'Sometimes i like to visit thrift shops.
+
+    I enjoy clothing with exotic prints.
+
+    I like to sew my own clothing.
+
+    I am an art teacher.'
+  Best Generated Conversation: '* * *
+
+
+    User 1: Hi there!
+
+
+    User 2: Hello!
+
+
+    User 1: What''s your name?
+
+
+    User 2: My name is [User 2''s name].
+
+
+    User 1: Nice to meet you! My name is [User 1''s name].
+
+
+    User 2: Nice to meet you too!
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m an art teacher.
+
+
+    User 1: Oh, that''s cool! I love art.
+
+
+    User 2: Me too! I''m always looking for new ways to incorporate art into my lessons.
+
+
+    User 1: That''s great! I''m sure your students love it.
+
+
+    User 2: They do! I''m lucky to have such a creative group of kids.
+
+
+    User 1: So, do you have a favorite art style?
+
+
+    User 2: I love all kinds of art, but I''m particularly drawn to abstract art.
+
+
+    User 1: Me too! I love how abstract art can be so expressive and open to interpretation.
+
+
+    User 2: Exactly! I think abstract art is a great way to explore different emotions and ideas.
+
+
+    User 1: I agree! So, what do you do for fun?
+
+
+    User 2: I love to go shopping and I also like to sew my own clothes.
+
+
+    User 1: That''s cool! I love to go shopping too. I''m always on the lookout for a good deal.
+
+
+    User 2: Me too! I love finding a great bargain.
+
+
+    User 1: So, what''s your favorite thing to do when you''re not working?
+
+
+    User 2: I love to spend time with my family and friends.
+
+
+    User 1: That''s me too! I love spending time with my loved ones.
+
+
+    * * *'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

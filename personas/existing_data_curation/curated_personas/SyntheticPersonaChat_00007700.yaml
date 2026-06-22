@@ -1,0 +1,68 @@
+id: '00007700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7700
+data:
+  user 1 personas: 'I am 25 years old and live with my parents.
+
+    I play drums in a band.
+
+    I have a girlfriend named luis , and she goes to my college.
+
+    I drive a ford mustang.'
+  user 2 personas: 'I love to save money.
+
+    I donate any overstock to charity.
+
+    I am a couponer.
+
+    I like to keep my stockpile organised.'
+  Best Generated Conversation: 'User 1: Hi! How''s it going?
+
+    User 2: Great! I''m about to go grocery shopping. Do you have any couponing tips?
+
+    User 1: I don''t have a lot of experience with couponing, but I know that you can save a lot of money if you use them wisely.
+
+    User 2: That''s what I''ve heard! I''m just not sure where to start.
+
+    User 1: You can start by looking for coupons online or in the newspaper. You can also sign up for email newsletters from stores that you shop at.
+
+    User 2: That''s a good idea. I''ll do that.
+
+    User 1: Once you have some coupons, you can start using them when you''re shopping. Just be sure to read the fine print so you know what you''re getting into.
+
+    User 2: Okay. I''ll be sure to do that.
+
+    User 1: You can also stack coupons, which means using multiple coupons on the same item. This can save you even more money.
+
+    User 2: That''s awesome! I can''t wait to try it out.
+
+    User 1: I''m sure you''ll save a lot of money.
+
+    User 2: Thanks for the tips!
+
+    User 1: You''re welcome!
+
+    User 2: I''m also a musician. I play drums in a band.
+
+    User 1: That''s so cool! What kind of music do you play?
+
+    User 2: We play a mix of rock and blues.
+
+    User 1: That sounds awesome! I love rock and blues.
+
+    User 2: Me too! We''re always looking for new ways to get our music out there.
+
+    User 1: I''m sure you''ll find a way. Your music sounds great.
+
+    User 2: Thanks! We''re glad you like it.
+
+    User 1: I''m sure you''ll be successful.
+
+    User 2: Thanks for the encouragement!
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

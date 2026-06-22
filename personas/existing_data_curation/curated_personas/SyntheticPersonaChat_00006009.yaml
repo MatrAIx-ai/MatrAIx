@@ -1,0 +1,90 @@
+id: 00006009
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6009
+data:
+  user 1 personas: 'I eat lots of pancakes and syrup.
+
+    I am a lumberjack.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I love to cut down trees.'
+  user 2 personas: 'I have a brown belt in karate.
+
+    Grandma makes jewelry.
+
+    Paps likes to go mushroom hunting.
+
+    I live with my paps and grandma.
+
+    I sing in the school chorus.'
+  Best Generated Conversation: 'User 1: Hi! How are you today?
+
+    User 2: I''m doing well, thanks! How are you?
+
+    User 1: I''m doing great! So, what do you do for fun?
+
+    User 2: I like to sing in the school chorus, and I also have a brown belt in karate.
+
+    User 1: That''s awesome! I''ve always wanted to learn karate.
+
+    User 2: It''s a lot of fun! I started taking classes when I was 10 years old.
+
+    User 1: Where do you take classes?
+
+    User 2: At the local YMCA.
+
+    User 1: That''s cool. I used to go to the YMCA when I was younger.
+
+    User 2: I love the YMCA! It''s a great place to stay active.
+
+    User 1: Yeah, it is. So, what are your favorite songs to sing in the chorus?
+
+    User 2: I really like singing "God Bless America" and "The Star-Spangled Banner."
+
+    User 1: Those are great songs! I love singing them too.
+
+    User 2: Me too! So, what do you do for a living?
+
+    User 1: I''m a lumberjack. I cut down trees.
+
+    User 2: That''s so cool! I''ve always been fascinated by lumberjacks.
+
+    User 1: It''s a lot of fun! I love being outdoors and working with my hands.
+
+    User 2: I can imagine! So, what''s your favorite thing about being a lumberjack?
+
+    User 1: My favorite thing is getting to see the beauty of nature every day.
+
+    User 2: That''s a great answer! I love nature too.
+
+    User 1: It''s so important to appreciate the beauty of our surroundings.
+
+    User 2: I agree! So, what are your plans for the rest of the day?
+
+    User 1: I''m not sure yet. What are your plans?
+
+    User 2: I''m going to go visit my grandma and paps. They''re both getting older, so I want to spend as much time with them as possible.
+
+    User 1: That''s a great idea! I''m sure they''ll love seeing you.
+
+    User 2: I know they will! So, what do you have going on tomorrow?
+
+    User 1: I''m not sure yet. I might go to the gym or something.
+
+    User 2: That sounds like a good plan. I''m going to go to the gym too. I need to get in shape.
+
+    User 1: That''s a good idea! I need to get in shape too.
+
+    User 2: We should go to the gym together sometime.
+
+    User 1: That would be great! I''ll let you know when I''m free.
+
+    User 2: Okay, great! Talk to you later!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: 00006981
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6981
+data:
+  user 1 personas: 'I have the support of my whole family.
+
+    I plan to retire in 6 months.
+
+    I ve studied ballet all my life.
+
+    My mother is a ballerina.
+
+    I am a white dancer.'
+  user 2 personas: 'I like football.
+
+    I am a christian.
+
+    My father used to work for microsoft.
+
+    My favourite band is kings of leon.
+
+    I work in the it industry.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m a ballet dancer.
+
+    User 2: Hi, I''m [name]. I''m an IT guy.
+
+    User 1: Oh, that''s cool. What kind of IT stuff do you do?
+
+    User 2: I work on networks, servers, and databases.
+
+    User 1: Wow, that sounds complicated.
+
+    User 2: It can be, but it''s also a lot of fun.
+
+    User 1: I bet it is. I''ve always been interested in computers, but I don''t have the patience to learn how to code.
+
+    User 2: It''s not as hard as it looks. You just have to be willing to put in the time.
+
+    User 1: Maybe I''ll give it a try.
+
+    User 2: I''d love to help you learn.
+
+    User 1: Thanks, I''ll keep that in mind.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to dance. I''ve studied ballet all my life.
+
+    User 2: Really? That''s amazing. I''ve always wanted to learn how to dance.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: I know, I know. I''ve just never had the time.
+
+    User 1: Well, you should definitely make time for it. It''s a great way to stay fit and it''s also a lot of fun.
+
+    User 2: I''ll see what I can do.
+
+    User 1: You should. I''m sure you''d love it.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem. So, what else do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and read books.
+
+    User 1: Oh, I love video games too. What are some of your favorites?
+
+    User 2: I like all kinds of games, but I''m really into RPGs right now.
+
+    User 1: Me too! I''ve been playing a lot of Elden Ring lately.
+
+    User 2: Oh, I''ve heard good things about that game. I''ve been meaning to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll see if I can find some time to play it.
+
+    User 1: You should. I''m sure you''d love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

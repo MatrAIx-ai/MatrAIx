@@ -1,0 +1,98 @@
+id: 00000928
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 928
+data:
+  user 1 personas: 'I am in college.
+
+    I eat well.
+
+    I play football.
+
+    I am very social.
+
+    I exercise.'
+  user 2 personas: 'My favorite food is a cheeseburger.
+
+    I enjoy fishing.
+
+    I work on cars for a living.
+
+    I watch a lot of tv.
+
+    I live alone.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fish, watch TV, and work on cars.
+
+    User 1: Oh, that''s cool. I like to play football, exercise, and eat healthy.
+
+    User 2: I''ve never played football before, but I like to exercise too.
+
+    User 1: What do you like to eat?
+
+    User 2: My favorite food is a cheeseburger.
+
+    User 1: I like cheeseburgers too! I''m glad we have something in common.
+
+    User 2: Me too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work on cars for a living.
+
+    User 1: Oh, that''s interesting. I''ve always thought it would be cool to work on cars.
+
+    User 2: It''s a lot of fun, but it can be hard work.
+
+    User 1: I can imagine.
+
+    User 2: So, what''s your favorite TV show?
+
+    User 1: I don''t have a favorite TV show, but I like to watch a lot of different shows.
+
+    User 2: Me too. I like to watch anything that''s interesting.
+
+    User 1: Me too.
+
+    User 2: So, what do you do in college?
+
+    User 1: I''m in business school.
+
+    User 2: Oh, that''s cool. I''ve always thought about going to college, but I never got around to it.
+
+    User 1: It''s definitely worth it.
+
+    User 2: I''m glad you think so.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just taking it one day at a time.
+
+    User 1: That''s a good idea.
+
+    User 2: Thanks.
+
+    User 1: So, do you have any pets?
+
+    User 2: No, I don''t have any pets.
+
+    User 1: I have a cat.
+
+    User 2: Oh, that''s cool. I''ve always wanted a cat.
+
+    User 1: You should get one! They''re great pets.
+
+    User 2: I might have to look into it.
+
+    User 1: You should!
+
+    User 2: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00001566'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1566
+data:
+  user 1 personas: 'I don t like kids.
+
+    I have 3 ex wives.
+
+    I don t like acting.
+
+    My father was a famous actor.
+
+    I have 3 ferrari cars in my garage.'
+  user 2 personas: 'Helping people makes me happy.
+
+    I graduated with a nursing degree.
+
+    My husband is a firefighter.
+
+    My favorite food is sushi.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I like to help people, it makes me happy.
+
+    User 1: That''s great! I''m a nurse, so I also enjoy helping people.
+
+    User 2: That''s nice to hear! I graduated with a nursing degree.
+
+    User 1: Oh, really? Me too! What was your favorite thing about nursing school?
+
+    User 2: I loved learning about the human body and how to take care of patients.
+
+    User 1: Me too! I also loved the hands-on experience.
+
+    User 2: Yeah, that was definitely the best part.
+
+    User 1: So, what do you do for work now?
+
+    User 2: I''m a registered nurse at a local hospital.
+
+    User 1: Oh, cool! I''m a nurse at a private practice.
+
+    User 2: That''s great! I love working in a hospital setting.
+
+    User 1: Me too! It''s so rewarding to be able to help people.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to go to the beach, go camping, and go hiking.
+
+    User 1: Oh, I love to go to the beach too! It''s so relaxing.
+
+    User 2: Yeah, it is. I also love to go camping.
+
+    User 1: I''ve never been camping before.
+
+    User 2: Oh, you should go sometime! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should!
+
+    User 1: Well, I have to go now. It was nice talking to you.
+
+    User 2: You too! Have a nice day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

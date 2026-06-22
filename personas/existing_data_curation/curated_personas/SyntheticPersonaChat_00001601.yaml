@@ -1,0 +1,54 @@
+id: '00001601'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1601
+data:
+  user 1 personas: 'I have 4 children.
+
+    My grandchildren range in age from 30 to 7.
+
+    My husband was a career soldier.
+
+    I am a senior citizen.'
+  user 2 personas: 'I was the first born child.
+
+    I escaped and later became a carpenter.
+
+    I got married 10 years later.
+
+    I was a slave for 10 years.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hello, my name is [name].
+
+    User 1: It''s nice to meet you. I''m a senior citizen and have 4 children. My grandchildren range in age from 30 to 7. My husband was a career soldier.
+
+    User 2: It''s nice to meet you too. I was the first born child, a slave for 10 years, escaped and later became a carpenter. I got married 10 years later.
+
+    User 1: Wow, that''s quite a story! How did you escape from slavery?
+
+    User 2: I was able to escape with the help of a friend. We were able to make it to a safe place where we were able to start a new life.
+
+    User 1: That''s amazing! I''m glad you were able to find a way to escape.
+
+    User 2: Thank you. It was a difficult time, but I''m glad I was able to make it through.
+
+    User 1: I can imagine. What was it like to be a slave?
+
+    User 2: It was very difficult. I was constantly working and I was never allowed to leave the plantation. I was also beaten and abused on a regular basis.
+
+    User 1: That''s horrible. I''m so sorry you had to go through that.
+
+    User 2: Thank you. It was a difficult time, but I''m glad I was able to overcome it.
+
+    User 1: I''m glad you were able to too. It sounds like you''ve had a very interesting life.
+
+    User 2: Yes, I have. I''m grateful for every day that I have.
+
+    User 1: I''m glad to hear that. It''s nice to meet you, [name].
+
+    User 2: It''s nice to meet you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

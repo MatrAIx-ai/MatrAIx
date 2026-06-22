@@ -1,0 +1,18 @@
+id: 00001997
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1997
+persona_description: A researcher or scientist who is interested in the development of new drugs and treatments for neuromuscular diseases, particularly Duchenne muscular dystrophy and myotonic dystrophy.
+  They are likely to have expertise in pharmacological screening, molecular biology, and network pharmacology. They are also likely to be familiar with the use of robotic platforms for high-throughput screening
+  and the development of new drug therapies.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00031020'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31020
+persona_description: A scientist who specializes in the study of human genetics and the Human Genome Project, particularly in the deciphering of the DNA sequence of human chromosome 21. This scientist is
+  interested in understanding the origins of diseases such as Down syndrome, Alzheimer's disease, and others, and how changes in the genetic code can lead to these conditions. This scientist is passionate
+  about using the data from the Human Genome Project to answer questions about the genetic makeup of humans and to advance the field of genetics.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: genomics
+  general_domain_top01pct: None
+  specific_domain_top01pct: genetic disease research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

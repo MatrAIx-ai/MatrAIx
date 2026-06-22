@@ -1,0 +1,68 @@
+id: '00001320'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1320
+data:
+  user 1 personas: 'I like to garden.
+
+    I graduated college for secondary english education.
+
+    I live in the suburbs of a major city.
+
+    I have three children.
+
+    I am a teacher.'
+  user 2 personas: 'I just bought a new pair of sneakers and they feel great.
+
+    My favorite thing to do is sleep.
+
+    I love ergonomic keyboards and chairs.
+
+    I love ergonomic keyboards and chairs.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What''s your favorite thing to do?
+
+    User 2: I love to sleep.
+
+    User 1: That''s a good way to relax. I like to garden.
+
+    User 2: I love gardening too! What kind of plants do you like to grow?
+
+    User 1: I like to grow vegetables, flowers, and herbs.
+
+    User 2: That''s great! I used to grow vegetables, but I don''t have the time anymore.
+
+    User 1: You should get back into it! It''s very rewarding.
+
+    User 2: Maybe I will.
+
+    User 1: I also like to read. What are some of your favorite books?
+
+    User 2: I like to read mystery novels. What are you reading right now?
+
+    User 1: I''m reading a book about gardening.
+
+    User 2: That sounds interesting. I''ve never read a book about gardening before.
+
+    User 1: You should read it! It''s very informative.
+
+    User 2: Maybe I will.
+
+    User 1: I also like to go for walks in the park. Do you like to go for walks?
+
+    User 2: I love to go for walks!
+
+    User 1: We should go for a walk sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll text you sometime.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

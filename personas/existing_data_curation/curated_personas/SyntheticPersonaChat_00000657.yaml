@@ -1,0 +1,70 @@
+id: '00000657'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 657
+data:
+  user 1 personas: 'I have one cat.
+
+    I am not thin.
+
+    I like to sew.
+
+    My hair is brown.'
+  user 2 personas: 'I am male.
+
+    I work in accounting.
+
+    I lease my car.
+
+    I have two dogs.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go for walks with my dogs.
+
+    User 1: I love dogs! What kind of dogs do you have?
+
+    User 2: I have a Golden Retriever and a Beagle.
+
+    User 1: Aww, those are both great breeds!
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to sew, read, and play with my cat.
+
+    User 2: Oh, I love to read too! What are some of your favorite books?
+
+    User 1: I love anything by Jane Austen or Agatha Christie.
+
+    User 2: I''ve never read any Jane Austen, but I''ve heard good things.
+
+    User 1: You should definitely check her out! She''s one of my favorite authors.
+
+    User 2: I''ll put it on my list.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I get to work with a great team of people.
+
+    User 1: That''s always a plus!
+
+    User 2: Yeah, it makes the job a lot more enjoyable.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to visit my parents in Michigan.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: Yeah, I''m looking forward to it.
+
+    User 1: Have a great time!
+
+    User 2: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

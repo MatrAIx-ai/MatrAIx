@@ -1,0 +1,18 @@
+id: '00045320'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45320
+persona_description: A physics student or engineer who is interested in error and uncertainty analysis. This persona is likely to be interested in using the Ohm's Law equation to calculate the value of
+  current, and then estimating the uncertainty associated with the measurement results. They may also be interested in learning more about the provisional rules of propagation for products and quotients,
+  and how to propagate uncertainty when dealing with independent variables.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: electrical engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

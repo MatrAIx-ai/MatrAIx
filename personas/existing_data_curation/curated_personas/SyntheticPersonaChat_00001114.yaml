@@ -1,0 +1,70 @@
+id: '00001114'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1114
+data:
+  user 1 personas: 'I play football.
+
+    I like action movies.
+
+    I drive a restored mustang.
+
+    I am a college student.
+
+    My father is a doctor.'
+  user 2 personas: 'I have two siberian huskies.
+
+    I play guitar.
+
+    I have four daughters.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play guitar, read books, and spend time with my family.
+
+    User 1: That''s great! I like to play football, watch action movies, and drive my restored Mustang.
+
+    User 2: That''s awesome! I''ve never played football before, but I love watching action movies.
+
+    User 1: Yeah, they''re the best! Do you have any kids?
+
+    User 2: Yes, I have four daughters.
+
+    User 1: Oh, wow! That must be a lot of fun.
+
+    User 2: It is! They keep me busy, but they''re also the best thing that''s ever happened to me.
+
+    User 1: I''m sure they are! What do you do for a living?
+
+    User 2: I''m a doctor.
+
+    User 1: Oh, wow! That''s really impressive.
+
+    User 2: Thank you! It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I''m sure it is! What''s your favorite part of your job?
+
+    User 2: My favorite part is helping people.
+
+    User 1: That''s such a great answer.
+
+    User 2: Thank you!
+
+    User 1: I''m sure you''re a great doctor.
+
+    User 2: I try my best!
+
+    User 1: I''m sure you do!
+
+    User 2: Thanks!
+
+    User 1: It was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

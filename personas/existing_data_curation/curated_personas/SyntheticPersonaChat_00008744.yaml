@@ -1,0 +1,90 @@
+id: 00008744
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8744
+data:
+  user 1 personas: 'I am a nurse and work in an emergency room at a busy hospital.
+
+    I play the piano.
+
+    I paddle board on my days off.
+
+    I am buying a house.'
+  user 2 personas: 'I listen to rock music.
+
+    I dream of winning the lottery.
+
+    I work for a large company.
+
+    I like to eat food.
+
+    I drive a fast car.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. Where are you from?
+
+    User 2: I''m from [user 2 hometown].
+
+    User 1: Oh, I''ve never been there. What''s it like?
+
+    User 2: It''s a small town, but it''s very nice.
+
+    User 1: What do you do for work?
+
+    User 2: I work for a large company.
+
+    User 1: What do you do there?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a nurse.
+
+    User 2: Nurses are amazing. I appreciate you.
+
+    User 1: Thank you. What do you like to do for fun?
+
+    User 2: I like to listen to rock music, eat food, and drive fast.
+
+    User 1: I like to listen to rock music too. What''s your favorite band?
+
+    User 2: I like Led Zeppelin.
+
+    User 1: They''re great! I also like The Who.
+
+    User 2: I''ve never heard of them.
+
+    User 1: They''re a British band from the 60s. You should check them out.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for fun?
+
+    User 2: I like to eat food. I''m a huge foodie.
+
+    User 1: Me too! What''s your favorite food?
+
+    User 2: I like all food, but I especially love pizza.
+
+    User 1: Me too! I could eat pizza every day.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to drive fast. I have a fast car.
+
+    User 1: I''ve never been in a fast car.
+
+    User 2: You should try it. It''s a lot of fun.
+
+    User 1: I''ll have to take your word for it.
+
+    User 2: You won''t be disappointed.
+
+    User 1: I''m sure I''ll enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

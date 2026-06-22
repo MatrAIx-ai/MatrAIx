@@ -1,0 +1,64 @@
+id: '00003147'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3147
+data:
+  user 1 personas: 'I listen to folk music.
+
+    I am in the navy.
+
+    I am an orphan who was in the foster care system.
+
+    I went to a community college and got a degree in communication.'
+  user 2 personas: 'I often spend my free time engaging in activism work with friends and family.
+
+    I also enjoy reading novels by female authors and exploring new areas.
+
+    I enjoy this type of activist work , as my job isn t very personally fulfilling.
+
+    I work as a legal assistant in a law firm that basically only handles real estate work.
+
+    I enjoying keeping up with the news and learning about political issues.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a legal assistant at a law firm.
+
+    User 1: Oh, that sounds interesting. What kind of law do you do?
+
+    User 2: We mostly handle real estate law.
+
+    User 1: Oh, that''s cool. I''m in the navy.
+
+    User 2: Really? That''s awesome! What do you do in the navy?
+
+    User 1: I''m an engineer.
+
+    User 2: Oh, that''s cool. I''ve always been interested in engineering.
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to read, explore new areas, and engage in activism work with friends and family.
+
+    User 1: Oh, that''s awesome. I like to read too. What kind of books do you like to read?
+
+    User 2: I like to read novels by female authors, especially those that are about social justice issues.
+
+    User 1: Oh, that''s cool. I like to read books about history and science.
+
+    User 2: Oh, that''s cool too. I like learning new things.
+
+    User 1: Me too. I think it''s important to be informed about the world around us.
+
+    User 2: I agree. I think it''s important to be active in the community and to make a difference.
+
+    User 1: I agree. I think it''s important to help others and to make the world a better place.
+
+    User 2: I agree. I think we should all do what we can to make a difference.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

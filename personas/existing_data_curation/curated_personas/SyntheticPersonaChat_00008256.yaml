@@ -1,0 +1,74 @@
+id: 00008256
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8256
+data:
+  user 1 personas: 'I do not have a relationship with my deadbeat dad.
+
+    I still like combat boots with babydoll dresses.
+
+    I want to visit rome , but i cannot make myself go alone.
+
+    I flirted with the dmv officer in order to pass my driving exam.'
+  user 2 personas: 'I collect stamps.
+
+    I love the colors yellow and teal.
+
+    I am a mortician.
+
+    I want to learn how to fly an airplane.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi there!
+
+    User 1: I''m [user 1 name].
+
+    User 2: Nice to meet you, [user 1 name]. I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I collect stamps, love the colors yellow and teal, and am a mortician.
+
+    User 1: That''s so cool! I''m a student, and I like to dress up in combat boots with babydoll dresses. I also want to visit Rome, but I don''t want to go alone.
+
+    User 2: That''s interesting! I''ve never been to Rome, but it''s definitely on my list of places to visit. I also love babydoll dresses. They''re so cute!
+
+    User 1: Me too! I''m actually wearing one right now.
+
+    User 2: Oh, really? Can I see?
+
+    User 1: Sure. Here, check it out.
+
+    [User 1 shows User 2 her babydoll dress.]
+
+    User 2: Wow! It''s so cute!
+
+    User 1: Thanks! I got it at a thrift store.
+
+    User 2: You''re welcome! I love thrift stores. I always find the best stuff there.
+
+    User 1: Me too! I love the thrill of the hunt.
+
+    User 2: Me too! So, what are you doing later?
+
+    User 1: Not much. I''m just going to hang out with my friends.
+
+    User 2: Oh, that sounds fun. I''m going to be working.
+
+    User 1: Oh, that''s too bad. We could have hung out.
+
+    User 2: Maybe next time.
+
+    User 1: Yeah, for sure.
+
+    User 2: Well, it was nice talking to you, [user 1 name].
+
+    User 1: You too, [user 2 name].
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

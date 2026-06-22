@@ -1,0 +1,68 @@
+id: '00001544'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1544
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I take the subway to work everyday.
+
+    Every fall i visit my sister in canada.
+
+    I have four cats.'
+  user 2 personas: 'My favorite subject in school was science.
+
+    My mom is a cancer survivor.
+
+    My favorite hobby is reading suspense novels.
+
+    Pizza is my favorite food.
+
+    I am single and not looking.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just reading a suspense novel.
+
+    User 1: Oh, that sounds fun. What''s it about?
+
+    User 2: It''s about a serial killer who is targeting single women.
+
+    User 1: Oh, that sounds scary.
+
+    User 2: It is a little bit, but it''s also really good.
+
+    User 1: Do you like to read suspense novels often?
+
+    User 2: Yeah, I''m a big fan of the genre.
+
+    User 1: Me too! I love the way suspense novels keep me guessing until the end.
+
+    User 2: Me too! I also love the way they make me feel like I''m part of the story.
+
+    User 1: I know what you mean. I feel like I''m right there with the characters, trying to figure out what''s going to happen next.
+
+    User 2: That''s exactly it!
+
+    User 1: What''s your favorite suspense novel of all time?
+
+    User 2: That''s a tough one, but I think I''d have to say The Silence of the Lambs.
+
+    User 1: Oh, that''s a great one! I love that book.
+
+    User 2: Me too! It''s so suspenseful and the characters are so well-developed.
+
+    User 1: I agree. It''s definitely one of my favorites too.
+
+    User 2: Have you read any other books by Thomas Harris?
+
+    User 1: Yeah, I''ve read Red Dragon and Hannibal.
+
+    User 2: Oh, those are both great books too.
+
+    User 1: I agree! I''m a big fan of Thomas Harris''s work.
+
+    User 2: Me too! He''s one of my favorite authors.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

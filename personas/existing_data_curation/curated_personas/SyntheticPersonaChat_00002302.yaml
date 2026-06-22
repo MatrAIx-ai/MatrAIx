@@ -1,0 +1,70 @@
+id: '00002302'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2302
+data:
+  user 1 personas: 'I only take the bus.
+
+    My favorite color is yellow.
+
+    I babysit for the woman who lives next door.
+
+    I am an old woman who lives on a social security check.'
+  user 2 personas: 'I have blue eyes and curly brown hair.
+
+    My dog is a collie.
+
+    My favorite type of music is country.
+
+    I love to travel with my family.
+
+    I love to snack between meals.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m an old woman who lives on a social security check. What do you do for a living?
+
+    User 2: I''m a social worker. I help people who are struggling with poverty and homelessness.
+
+    User 1: That sounds like a very important job.
+
+    User 2: It is. I''m glad I can help people in need.
+
+    User 1: I''m sure you do a great job.
+
+    User 2: Thanks! I try my best.
+
+    User 1: I''m a big fan of country music. What are some of your favorite artists?
+
+    User 2: I love Willie Nelson, Dolly Parton, and Johnny Cash.
+
+    User 1: Me too! They''re all great artists.
+
+    User 2: I love their music. It''s so relaxing and uplifting.
+
+    User 1: I agree. It''s the perfect music to listen to when you''re feeling down.
+
+    User 2: I''m glad you like it.
+
+    User 1: I do! I''m also a big fan of dogs. What''s your favorite breed?
+
+    User 2: I have a collie named Scout. He''s the best dog in the world.
+
+    User 1: Collies are so cute! I''ve always wanted one.
+
+    User 2: They''re great dogs. I''m so glad I have him.
+
+    User 1: I''m sure he''s a great companion.
+
+    User 2: He is. He''s always there for me when I need him.
+
+    User 1: That''s great.
+
+    User 2: I''m glad I have him.
+
+    User 1: I''m sure you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

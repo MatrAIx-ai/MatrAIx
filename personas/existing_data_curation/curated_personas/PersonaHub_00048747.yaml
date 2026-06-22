@@ -1,0 +1,18 @@
+id: 00048747
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48747
+persona_description: A patient who is undergoing a heart valve surgery, seeking to understand the medical procedure and its potential risks and benefits. They are likely to have a background in medicine,
+  surgery, or related fields, and are interested in learning about the latest medical advancements and treatments. They may have concerns about the potential risks and complications of the surgery, and
+  seek to understand the best options and treatments available to them. They may also be seeking information about the recovery process, post-surgery care, and long-term management of the condition.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiothoracic surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

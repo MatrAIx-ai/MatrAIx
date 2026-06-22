@@ -1,0 +1,56 @@
+id: 00002393
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2393
+data:
+  user 1 personas: 'I am a weight lifter.
+
+    I can benchpress 345 pounds.
+
+    I am a olympian.
+
+    I can also squat 400 pounds.'
+  user 2 personas: 'My dad worked for home depot.
+
+    I like to work puzzles.
+
+    I am an aspiring fiction writer.
+
+    I am a teacher.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Hello, my name is [user 2''s name].
+
+    User 1: What are your hobbies?
+
+    User 2: I like to work on puzzles, read books, and write fiction.
+
+    User 1: I like to work out and play video games.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play action and adventure games.
+
+    User 2: Oh, I like those too. I''ve been playing a lot of Elden Ring lately.
+
+    User 1: I''ve heard good things about that game. I''ve been playing a lot of Horizon Forbidden West.
+
+    User 2: Oh, I''ve been wanting to try that game. What do you like about it?
+
+    User 1: I like the open world and the combat.
+
+    User 2: I''ve heard the combat is really good.
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: I think I''ll have to check that game out.
+
+    User 1: You should! It''s really good.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

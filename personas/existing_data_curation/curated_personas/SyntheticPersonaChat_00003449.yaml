@@ -1,0 +1,64 @@
+id: 00003449
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3449
+data:
+  user 1 personas: 'I live in ahuge mansion.
+
+    I make 35 million a year.
+
+    I am a professional basketball player.
+
+    I play for the washington wizards.'
+  user 2 personas: 'I cut down trees very fast , because i have a large ax.
+
+    I love to cut down trees.
+
+    I am a lumberjack.
+
+    I love to fish.
+
+    I eat lots of pancakes and syrup.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for a living?
+
+    User 2: I''m a lumberjack! I cut down trees for a living.
+
+    User 1: That''s cool! I''m a professional basketball player for the Washington Wizards.
+
+    User 2: Wow, that''s amazing! I''ve always wanted to be a professional athlete.
+
+    User 1: It''s a lot of work, but it''s also a lot of fun.
+
+    User 2: I bet it is. So, how much do you make a year?
+
+    User 1: I make about $35 million a year.
+
+    User 2: Wow! That''s a lot of money.
+
+    User 1: Yeah, it is. But it''s also a lot of work.
+
+    User 2: I''m sure it is. So, where do you live?
+
+    User 1: I live in a huge mansion in the suburbs of Washington, D.C.
+
+    User 2: That sounds amazing! I live in a small cabin in the woods.
+
+    User 1: That sounds nice too. I love the woods.
+
+    User 2: Me too! I love hiking and camping.
+
+    User 1: Me too! I love to go fishing too.
+
+    User 2: I love to fish too! I eat a lot of pancakes and syrup.
+
+    User 1: Me too! I love pancakes and syrup.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too! We should go fishing together sometime.
+
+    User 2: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00003504'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3504
+data:
+  user 1 personas: 'I wear a lot of leather.
+
+    I have boots i always wear.
+
+    I sleep in late during the day.
+
+    I listen to metal music.'
+  user 2 personas: 'I have long red hair.
+
+    I work at home on my computer.
+
+    I own 10 cats.
+
+    I do not eat asparagus.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to work on my computer at home.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a programmer.
+
+    User 1: That''s cool! I like to listen to metal music.
+
+    User 2: I don''t really listen to music.
+
+    User 1: That''s okay. I have a lot of boots.
+
+    User 2: I don''t really wear boots.
+
+    User 1: That''s okay. I sleep in late during the day.
+
+    User 2: I''m up early most days.
+
+    User 1: That''s okay. I have red hair.
+
+    User 2: I don''t have red hair.
+
+    User 1: That''s okay. I have 10 cats.
+
+    User 2: I don''t like cats.
+
+    User 1: That''s okay. I don''t like asparagus.
+
+    User 2: That''s good because I don''t eat it.
+
+    User 1: That''s okay. I like to learn about people.
+
+    User 2: That''s cool. I like to learn about computers.
+
+    User 1: That''s cool. I''m going to go now.
+
+    User 2: Okay. Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00006094
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6094
+persona_description: A virologist and immunologist who specializes in the study of COVID-19 and its effects on the immune system. They have published research on the fingerprint of COVID-19 in the blood
+  and have identified seven different "disease forms" in mild COVID-19. They have also shown that the immune system is still engaged with the disease several weeks after initial infection and that the cells
+  are able to memorize certain "moves" on the part of the virus and respond to them. They are likely to be interested in the development of a potent vaccine and have access to promising biomarkers and can
+  perform even better monitoring of the disease.
+expertise:
+  general_domain_top1pct: virology
+  specific_domain_top1pct: immunology of COVID-19
+  general_domain_top01pct: None
+  specific_domain_top01pct: COVID-19 vaccine development
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

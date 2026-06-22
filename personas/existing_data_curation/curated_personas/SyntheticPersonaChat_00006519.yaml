@@ -1,0 +1,82 @@
+id: 00006519
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6519
+data:
+  user 1 personas: 'My favorite musician is bruno mars.
+
+    I enjoy running.
+
+    I am an accountant.
+
+    I drive a red car.
+
+    I have 2 dogs.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am in high school.
+
+    I am a female.
+
+    I like skateboarding.
+
+    I have blonde hair.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to skateboard, play video games, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to run, play video games, and hang out with my dogs.
+
+    User 2: What kind of dogs do you have?
+
+    User 1: I have a golden retriever and a black lab.
+
+    User 2: Those are both great breeds. I''ve always wanted a golden retriever.
+
+    User 1: They''re great dogs. They''re very friendly and loving.
+
+    User 2: I''m sure they are.
+
+    User 1: What''s your favorite pizza topping?
+
+    User 2: I like pepperoni, sausage, and mushrooms.
+
+    User 1: Those are all good toppings. I like pepperoni, green peppers, and onions.
+
+    User 2: That sounds like a good combination.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m in high school.
+
+    User 1: Oh, me too. What grade are you in?
+
+    User 2: I''m in senior year.
+
+    User 1: Me too! What are you going to do after high school?
+
+    User 2: I''m not sure yet. I''m thinking about going to college.
+
+    User 1: That''s great. I''m going to college too. I''m going to study accounting.
+
+    User 2: That sounds like a good career path.
+
+    User 1: Thanks.
+
+    User 2: So, what are you doing after this?
+
+    User 1: I''m not sure yet. Maybe I''ll go for a walk or play some video games.
+
+    User 2: Sounds like a good plan. I''m going to go skateboarding.
+
+    User 1: Have fun!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

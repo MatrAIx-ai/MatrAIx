@@ -1,0 +1,72 @@
+id: 00008266
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8266
+data:
+  user 1 personas: 'I have been in band all four years of high school.
+
+    I am interested in producing music.
+
+    I am a senior in high school.
+
+    I have 2 brothers.
+
+    I am going to start school at the university of kentucky.'
+  user 2 personas: 'I am a deaf man.
+
+    I never learned how to drive.
+
+    I love to read books.
+
+    I sometimes scratch my nose for fun.
+
+    My favorite number is 7.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is Chris.
+
+    User 1: Nice to meet you, Chris! My name is (user 1''s name).
+
+    User 2: Nice to meet you too, (user 1''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read books, watch movies, and play video games.
+
+    User 1: That sounds like fun. I like to read books and play video games too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like fantasy, science fiction, and mystery novels.
+
+    User 2: I like to read those too! I''m currently reading a fantasy novel by Brandon Sanderson.
+
+    User 1: I''ve heard good things about Brandon Sanderson. I might have to check that out.
+
+    User 2: You should! It''s really good.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I especially like RPGs and action games.
+
+    User 1: I like those too! I''m currently playing a new RPG called "Elden Ring."
+
+    User 2: I''ve heard about that game! It looks really good.
+
+    User 1: It is! It''s a lot of fun.
+
+    User 2: I might have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: It does! We should hang out sometime and play some video games.
+
+    User 2: That sounds like fun! I''m free this weekend.
+
+    User 1: Me too! Let''s do it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

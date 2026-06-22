@@ -1,0 +1,54 @@
+id: '00004050'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4050
+data:
+  user 1 personas: 'I live in rural wisconsin.
+
+    I have an older brother who plays football in the nfl.
+
+    My favorite food is popcorn.
+
+    I like to snowboard.
+
+    I like to ride horses.'
+  user 2 personas: 'I ve started creating my own comics and presenting them to publishers.
+
+    I ve been rejected several times and thought of giving up with this.
+
+    And also love drawing.
+
+    I love comics.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I love drawing and creating my own comics.
+
+    User 1: That''s so cool! I love to draw too. Do you post your comics online?
+
+    User 2: I haven''t yet, but I''m thinking about it. I''m just not sure if I''m ready for the public''s opinion yet.
+
+    User 1: You should totally post them! I''m sure people would love them.
+
+    User 2: Thanks! I''ll think about it.
+
+    User 1: I also like to snowboard and ride horses. Do you do any winter sports?
+
+    User 2: I don''t really do winter sports, but I love to watch them! I''m always cheering on the skiers and snowboarders at the Olympics.
+
+    User 1: Me too! I love watching the winter Olympics. It''s so exciting to see all the different countries competing in their favorite winter sports.
+
+    User 2: I know, right? It''s so much fun to see everyone come together and celebrate the winter games.
+
+    User 1: I''m from rural Wisconsin, so I grew up skiing and snowboarding. It''s something I''ve always loved to do.
+
+    User 2: That''s so cool! I''ve always wanted to go skiing in Wisconsin. I''ve heard it''s beautiful there.
+
+    User 1: It is! The snow is always so powdery and soft. It''s the perfect place to go skiing.
+
+    User 2: I''m definitely going to have to go there someday.
+
+    User 1: You should! I''m sure you''d love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

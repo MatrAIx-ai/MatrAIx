@@ -1,0 +1,19 @@
+id: '00050660'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50660
+persona_description: A healthcare professional who specializes in infectious diseases and recommends vaccinations for both adults and children, emphasizing the importance of influenza and tetanus vaccines
+  for all adults, and the need for a tetanus booster shot every 10 years. He also mentions the importance of the pneumonia vaccine for individuals with lung diseases or compromised immune systems, and the
+  possibility of a blood test for certain individuals. He is knowledgeable about the CDC's new recommendations for adults and provides specific information on which vaccines are recommended for different
+  groups.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,66 @@
+id: 00004949
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4949
+data:
+  user 1 personas: 'I collect single malt scotch.
+
+    I tend bar on the weekends.
+
+    During the week i go to college to become a lawyer.
+
+    I listen to blues and jazz.
+
+    I live in a tiny house to save money.'
+  user 2 personas: 'I am a older gentlemen.
+
+    I have a passion for god.
+
+    I am married.
+
+    My favorite book is the bible.
+
+    I love to travel.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hello! My name is Tom.
+
+    User 1: Nice to meet you, Tom! My name is (User 1''s name).
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a pastor.
+
+    User 1: Oh, that''s cool! I''ve never met a pastor before.
+
+    User 2: Well, now you have!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel and read the Bible.
+
+    User 1: I love to travel too! I''ve never been to Europe, but I''d love to go one day.
+
+    User 2: Europe is beautiful! I''ve been to Italy and Spain, and they were both amazing.
+
+    User 1: I''ve heard great things about Italy! What was your favorite part about being there?
+
+    User 2: The food! The food in Italy is absolutely incredible.
+
+    User 1: I can imagine! I love Italian food.
+
+    User 2: I also loved the history and culture of Italy. It''s such a rich and vibrant country.
+
+    User 1: I''m sure it is! I''d love to go one day.
+
+    User 2: You definitely should! It''s a once in a lifetime experience.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

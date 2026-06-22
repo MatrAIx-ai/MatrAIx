@@ -1,0 +1,64 @@
+id: 00002448
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2448
+data:
+  user 1 personas: 'I do not like coffee.
+
+    I work in finance.
+
+    I live walking distance from work.'
+  user 2 personas: 'I spend time signing a lot of petitions and donate to animal rights groups.
+
+    I love animals.
+
+    I have an 18 year old son.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a vegan chef.
+
+    User 1: That''s cool! I''ve never met a vegan chef before.
+
+    User 2: I love cooking for people, and I love animals, so it''s a perfect fit for me.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love making vegan burgers. They''re so delicious and easy to make.
+
+    User 1: I''ve never had a vegan burger before, but I''m willing to try it.
+
+    User 2: You won''t be disappointed.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love spending time with my family and friends. I also love animals, so I spend a lot of time volunteering at my local animal shelter.
+
+    User 1: That''s really nice of you. I''m sure the animals appreciate it.
+
+    User 2: They do. I love making a difference in their lives.
+
+    User 1: You seem like a really great person.
+
+    User 2: Thank you. I try to be.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just enjoying life and taking it one day at a time.
+
+    User 1: That''s a good way to live.
+
+    User 2: I think so.
+
+    User 1: Well, it was nice meeting you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00000553'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 553
+data:
+  user 1 personas: 'I ride a bike.
+
+    I have 5 brothers and sisters.
+
+    I work as a waitress.
+
+    I like to draw.'
+  user 2 personas: 'I run two miles everyday.
+
+    I ve been married for five years.
+
+    I have a passion for politics.
+
+    I played football in college.
+
+    I work at a candy store.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I run two miles every day and I''m passionate about politics.
+
+    User 1: Wow, that''s impressive! I''m more of a bike rider myself, but I do enjoy running occasionally.
+
+    User 2: That''s great! I love biking too. I used to ride my bike everywhere when I was younger.
+
+    User 1: Me too! I used to bike everywhere in my neighborhood when I was a kid.
+
+    User 2: That''s awesome! What do you like to do now?
+
+    User 1: I work as a waitress and I like to draw.
+
+    User 2: That''s cool! I''ve always wanted to learn how to draw.
+
+    User 1: It''s really fun! I like to draw pictures of my friends and family.
+
+    User 2: That''s great! I''m sure they love them.
+
+    User 1: Yeah, they do. I''m glad you like drawing too.
+
+    User 2: Me too! It''s a great way to relax and express yourself.
+
+    User 1: I agree! It''s also a good way to make friends.
+
+    User 2: That''s true! I''ve made some great friends through drawing.
+
+    User 1: That''s awesome! I''m glad you have such a great hobby.
+
+    User 2: Me too! It''s been a part of my life for a long time.
+
+    User 1: I can tell! You''re really good at it.
+
+    User 2: Thank you! I appreciate that.
+
+    User 1: You''re welcome! I''m glad we got to talk.
+
+    User 2: Me too! It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

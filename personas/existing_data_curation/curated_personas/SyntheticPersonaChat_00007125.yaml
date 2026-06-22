@@ -1,0 +1,82 @@
+id: '00007125'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7125
+data:
+  user 1 personas: 'I enjoy dressing up to go out clubbing.
+
+    I don t think my girlfriend understands.
+
+    I hope to one day be happy with myself.
+
+    I love her though.'
+  user 2 personas: 'I like to dance.
+
+    I like pizza.
+
+    I love shoes.
+
+    I like burritos.
+
+    I like to shop.'
+  Best Generated Conversation: 'User 1: Hi, my name is (user 1).
+
+    User 2: Hello, nice to meet you! My name is (user 2).
+
+    User 1: It''s nice to meet you too, (user 2). What do you like to do for fun?
+
+    User 2: I like to dance, shop, and go out to eat. What about you?
+
+    User 1: I like to go out clubbing and dress up. I also love pizza.
+
+    User 2: That''s cool. I''ve never been clubbing before, but I''ve heard it''s fun. Pizza is amazing!
+
+    User 1: It is! I could eat it every day.
+
+    User 2: Me too! What''s your favorite kind of pizza?
+
+    User 1: I like pepperoni and pineapple.
+
+    User 2: That''s an interesting combination. I''ve never had it before.
+
+    User 1: You should try it! It''s really good.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a shoe salesperson.
+
+    User 1: That sounds fun! I love shoes.
+
+    User 2: Me too! I get to try on all the latest styles.
+
+    User 1: That must be really fun.
+
+    User 2: It is! I love my job.
+
+    User 1: I''m glad you like it.
+
+    User 2: Thanks! So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Nice! I''ve never been to California.
+
+    User 1: You should come visit! It''s a beautiful state.
+
+    User 2: I will! Thanks for the suggestion.
+
+    User 1: You''re welcome! So, what are you doing later today?
+
+    User 2: I''m going shopping with my friends.
+
+    User 1: That sounds fun! I''m going to go out to eat with my girlfriend.
+
+    User 2: Have fun!
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

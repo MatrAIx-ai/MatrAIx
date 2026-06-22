@@ -1,0 +1,76 @@
+id: 00001092
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1092
+data:
+  user 1 personas: 'I love to climb.
+
+    I have never been to the beach.
+
+    I love my parrot , todd.
+
+    I am a disappointment to my family.
+
+    I am the oldest of 5 children.'
+  user 2 personas: 'I like ice cream.
+
+    I love rock music.
+
+    I am taking courses online.
+
+    I work as a contractor for a cab company.
+
+    I am engaged.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to listen to rock music and eat ice cream.
+
+    User 1: Nice! I like rock music too. What are your favorite bands?
+
+    User 2: I like The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 1: Those are all great bands! I love The Beatles.
+
+    User 2: Me too! They''re my favorite band of all time.
+
+    User 1: What do you like about them?
+
+    User 2: I love their music, their lyrics, and their harmonies.
+
+    User 1: Me too! I also love their live performances.
+
+    User 2: Me too! They were incredible live.
+
+    User 1: What''s your favorite Beatles song?
+
+    User 2: It''s hard to choose, but I think I''d have to say "Strawberry Fields Forever."
+
+    User 1: That''s a great song! I love the harmonies in that song.
+
+    User 2: Me too! It''s so beautiful.
+
+    User 1: What do you like about rock music?
+
+    User 2: I love the energy and the passion. It''s just so exciting.
+
+    User 1: I agree! Rock music can be so much fun.
+
+    User 2: Yes, it can!
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to climb.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try climbing.
+
+    User 2: It''s a lot of fun! It''s a great way to get exercise and to challenge yourself.
+
+    User 1: I bet it is! It sounds like something I''d enjoy.
+
+    User 2: You should definitely give it a try!
+
+    User 1: I will! Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

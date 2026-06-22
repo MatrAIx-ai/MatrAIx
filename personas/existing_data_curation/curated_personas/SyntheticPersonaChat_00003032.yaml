@@ -1,0 +1,72 @@
+id: '00003032'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3032
+data:
+  user 1 personas: 'I collect bugs in jars.
+
+    I was a mechanic for 6 years.
+
+    I build my own computers.
+
+    I ran for political office in 2004.
+
+    I thought of joining the military when i was younger.'
+  user 2 personas: 'I don t drive.
+
+    My mom is a nurse.
+
+    I have three tattoos.
+
+    I never knew my dad.
+
+    I work at a bookstore.'
+  Best Generated Conversation: 'User 1: What kind of work do you do?
+
+    User 2: I work at a bookstore.
+
+    User 1: Oh, that''s cool. I love books.
+
+    User 2: Me too! I always have a book on hand.
+
+    User 1: What''s your favorite book?
+
+    User 2: It''s hard to say, but I''m really enjoying "The Great Gatsby" right now.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a classic for a reason.
+
+    User 1: What''s your favorite part about working at a bookstore?
+
+    User 2: I love getting to meet new people and talk about books.
+
+    User 1: I can imagine. I love talking about books too.
+
+    User 2: What''s your favorite book you''ve read lately?
+
+    User 1: I just finished reading "The Girl with the Dragon Tattoo." It was really good.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should. It''s a really good thriller.
+
+    User 2: What''s your favorite part about reading?
+
+    User 1: I love the way it can transport me to another world.
+
+    User 2: I agree. It''s a great way to escape from reality.
+
+    User 1: Have you ever thought about writing a book?
+
+    User 2: I have thought about it, but I''m not sure I have the patience.
+
+    User 1: It can be a lot of work, but it''s also very rewarding.
+
+    User 2: I might give it a try someday.
+
+    User 1: I hope you do. I''m sure you''d be great at it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

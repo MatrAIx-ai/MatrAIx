@@ -1,0 +1,86 @@
+id: 00002048
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2048
+data:
+  user 1 personas: 'My dog is a collie.
+
+    My favorite type of music is country.
+
+    I love to snack between meals.
+
+    I have blue eyes and curly brown hair.
+
+    I love to travel with my family.'
+  user 2 personas: 'I listen to podcasts.
+
+    I like to read.
+
+    I have a long drive to work.
+
+    Traffic makes me mad.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [User 2].
+
+    User 1: Nice to meet you, [User 2]. My name is [User 1].
+
+    User 2: It''s nice to meet you too, [User 1].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to podcasts, read, and watch movies.
+
+    User 1: I like to do those things too! What are some of your favorite podcasts?
+
+    User 2: I like listening to podcasts about true crime, history, and science.
+
+    User 1: I love true crime podcasts too! What''s your favorite one?
+
+    User 2: My favorite true crime podcast is Serial.
+
+    User 1: I''ve heard good things about Serial. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: My favorite book is The Great Gatsby.
+
+    User 1: I love The Great Gatsby! I read it in high school and loved it.
+
+    User 2: It''s such a good book! I''ve read it a few times now and I always enjoy it.
+
+    User 1: Me too! What are some of your favorite movies?
+
+    User 2: I love a lot of different types of movies, but my favorites are probably action movies and comedies.
+
+    User 1: I love action movies too! What''s your favorite action movie?
+
+    User 2: My favorite action movie is The Matrix.
+
+    User 1: That''s a great movie! I love the action scenes and the special effects.
+
+    User 2: Me too! I think the special effects in The Matrix are still some of the best ever made.
+
+    User 1: I agree! They''re really impressive.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to travel, go to concerts, and spend time with my family.
+
+    User 2: I love to travel too! Where have you been recently?
+
+    User 1: I recently went to Europe and I had a great time. I got to see a lot of different countries and I met some really interesting people.
+
+    User 2: That sounds amazing! I''ve always wanted to go to Europe.
+
+    User 1: You should definitely go! It''s a beautiful place with a lot to offer.
+
+    User 2: I will! I''m sure I''ll have a great time.
+
+    User 1: I''m sure you will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

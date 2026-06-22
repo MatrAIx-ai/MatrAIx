@@ -1,0 +1,80 @@
+id: '00001565'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1565
+data:
+  user 1 personas: 'I don t like beer.
+
+    I live with a roommate.
+
+    I work part time.
+
+    My favorite animal is the koala.'
+  user 2 personas: 'I love cooking !.
+
+    I like to swim when the weather is hot.
+
+    My father is from india.
+
+    My favourite colour is green.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to cook! What about you?
+
+    User 1: I don''t like cooking, but I do love to eat!
+
+    User 2: Well, that''s good! I''ll make you dinner sometime.
+
+    User 1: That''s a great offer! I''m free tomorrow night.
+
+    User 2: Perfect! I''ll start planning the menu.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love making Indian food. My dad is from India, so I grew up eating it.
+
+    User 1: Indian food is my favorite! I love curry.
+
+    User 2: Me too! I''ll make you some chicken tikka masala.
+
+    User 1: That sounds amazing! I can''t wait!
+
+    User 2: I''m glad you''re excited! I''ll see you tomorrow night.
+
+    User 1: Bye! I can''t wait!
+
+
+    Next day...
+
+
+    User 1: Hi! I''m here for dinner!
+
+    User 2: Hi! I''m so glad you could make it!
+
+    User 1: Me too! This smells amazing!
+
+    User 2: Thank you! I hope you like it!
+
+    User 1: I love it! This is the best chicken tikka masala I''ve ever had!
+
+    User 2: I''m so glad you like it!
+
+    User 1: This is so good, I''m going to have to come back for more.
+
+    User 2: You''re welcome to come anytime!
+
+    User 1: Thanks! I will!
+
+    User 2: So, how did you like the dinner?
+
+    User 1: It was amazing! The chicken tikka masala was so good, and the naan was perfect.
+
+    User 2: I''m glad you liked it! I love cooking Indian food.
+
+    User 1: Me too! It''s so delicious and flavorful.
+
+    User 2: I''m glad you enjoyed it! I''m always happy to cook for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

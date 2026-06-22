@@ -1,0 +1,20 @@
+id: '00014200'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14200
+persona_description: A meteorologist who specializes in atmospheric dispersion modeling and is responsible for predicting the spread of atmospheric contaminants over long distances. He or she is part of
+  the Met Office, a Regional Specialized Meteorological Centre (RSMC), and a contributor to the Comprehensive Test Ban Treaty Organisation (CTBTO). The persona is skilled in the use of NAME, a pollution
+  dispersion model, and has extensive experience in predicting the spread of atmospheric contaminants, including radioactive releases, industrial fires, volcanic eruptions, and animal diseases. The persona
+  is also involved in international emergency response activities, coordinating with other RSMCs and the International Atomic Energy Agency (IAEA) to provide accurate and timely advice for radiological
+  incidents.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: atmospheric dispersion modeling
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

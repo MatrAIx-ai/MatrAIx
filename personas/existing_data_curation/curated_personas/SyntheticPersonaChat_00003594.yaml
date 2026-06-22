@@ -1,0 +1,72 @@
+id: 00003594
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3594
+data:
+  user 1 personas: 'I am allergic to seafood.
+
+    I own a iphone 7.
+
+    My father worked 11 hours a day.
+
+    I drink hot chocolate during the winter.
+
+    My mother use to read me bed time stories.'
+  user 2 personas: 'I enjoy swimming.
+
+    I do not like green eggs and ham.
+
+    I have a missing pinky toe.
+
+    I have 4 dogs.
+
+    I love cooking.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for fun?
+
+    User 2: I love swimming! It''s so relaxing and I always feel better afterwards.
+
+    User 1: I love swimming too! It''s a great way to stay in shape.
+
+    User 2: I agree! Do you have a pool?
+
+    User 1: No, I live in an apartment building. I have to go to the pool at the rec center.
+
+    User 2: I used to have to do that too. It was always a pain to get there and back.
+
+    User 1: Yeah, it can be a hassle. But it''s worth it for the exercise!
+
+    User 2: I agree! What''s your favorite stroke?
+
+    User 1: I like to do freestyle. It''s the most efficient way to swim.
+
+    User 2: That''s what I like too! It''s also the most relaxing.
+
+    User 1: Yeah, it is. I like to just zone out when I''m swimming freestyle.
+
+    User 2: Me too! It''s a great way to clear your head.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love to cook! I''m always trying new recipes.
+
+    User 1: That''s awesome! I love to cook too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love to make pasta. It''s so easy to make and it''s always delicious.
+
+    User 2: I love pasta too! It''s one of my favorite foods.
+
+    User 1: What''s your favorite kind of pasta?
+
+    User 2: I like penne. It''s the perfect shape for holding sauce.
+
+    User 1: I agree! Penne is my favorite too.
+
+    User 2: It''s so good! We should cook pasta together sometime.
+
+    User 1: That would be fun! I love cooking with friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,100 @@
+id: 00003887
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3887
+data:
+  user 1 personas: 'I am a member of the ymca.
+
+    I am allergic to cats.
+
+    I love scary movies.
+
+    I keep my hair cut very short.
+
+    I am learning to play the piano.'
+  user 2 personas: 'I am a older lady.
+
+    I like to cook stews.
+
+    I love to listen to frank sinatra.
+
+    I love to eat cheese.
+
+    I watch a lot of spongebob.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hello! My name is Mary.
+
+    User 1: It''s nice to meet you, Mary. My name is [user 1''s name].
+
+    User 2: Nice to meet you too, [user 1''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, listen to music, and watch TV.
+
+    User 1: Oh, that''s great! I like to cook too. What kind of food do you like to cook?
+
+    User 2: I like to cook all kinds of food, but I especially love making stews.
+
+    User 1: Stews are delicious! I love them too.
+
+    User 2: What''s your favorite kind of stew?
+
+    User 1: I love beef stew. It''s so hearty and flavorful.
+
+    User 2: Me too! I love beef stew with lots of vegetables.
+
+    User 1: Me too! It''s so delicious.
+
+    User 2: I''m glad you like stew. I''m sure you''d love my stew if you ever tried it.
+
+    User 1: I''d love to try it! When can I come over for dinner?
+
+    User 2: How about next Friday? I''ll make my famous beef stew.
+
+    User 1: That sounds great! I''ll bring the wine.
+
+    User 2: Perfect! I''ll see you next Friday.
+
+    User 1: Looking forward to it!
+
+
+    (Next Friday)
+
+
+    User 1: Hi Mary! I''m here for dinner.
+
+    User 2: Hi [user 1''s name]! I''m so glad you could make it.
+
+    User 1: Me too! I''ve been looking forward to this all week.
+
+    User 2: It''s my pleasure. I hope you enjoy the stew.
+
+    User 1: I''m sure I will! It smells amazing.
+
+    User 2: Thanks! It''s my own recipe.
+
+    User 1: It''s delicious! Thank you for making it.
+
+    User 2: You''re welcome! I''m glad you like it.
+
+    User 1: I love it! I''m going to have to get the recipe from you.
+
+    User 2: Of course! You can have it.
+
+    User 1: Thanks! I''m going to have to make this all the time.
+
+    User 2: You''re welcome! I''m glad you like it.
+
+    User 1: I love it! It''s the best stew I''ve ever had.
+
+    User 2: Thank you! I''m glad you enjoyed it.
+
+    User 1: I really did. Thanks for having me over.
+
+    User 2: You''re welcome! I''m glad you came.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

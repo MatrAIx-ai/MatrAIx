@@ -1,0 +1,18 @@
+id: 00027891
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27891
+persona_description: A programmer who specializes in developing multithreaded applications and has experience with explicit locking mechanisms. They are familiar with the functions flockfile(), ftrylockfile(),
+  funlockfile() and understand the behavior and implications of using these functions in a multithreaded environment. They are skilled in implementing and debugging multithreaded applications that require
+  explicit locking to ensure thread safety and prevent data corruption. They are also familiar with the concept of log counts and how they relate to the behavior of flockfile() and related functions.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: multithreaded programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

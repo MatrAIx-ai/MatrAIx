@@ -1,0 +1,18 @@
+id: '00010327'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10327
+persona_description: A healthcare professional who works in the emergency department or a pediatric practice, responsible for diagnosing and treating children with major trauma. They are aware of the potential
+  risks associated with ionising radiation and strive to balance their patients' exposure to radiation with the need for diagnostic accuracy. They are familiar with the current guidelines on which body
+  part to scan and when in paediatric major trauma, and are dedicated to ensuring that all sustained injuries are identified and treated.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric trauma care
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,68 @@
+id: 00001379
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1379
+data:
+  user 1 personas: 'I love to travel.
+
+    My favorite band is the avett brother.
+
+    I am a psychology major.
+
+    I enjoy broadway shows.
+
+    I am a steelers fan.'
+  user 2 personas: 'I am a christian.
+
+    My favorite author is stephen king.
+
+    My favorite movie genre is horror.
+
+    I love to read.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m a psychology major. What are you studying?
+
+    User 2: I''m studying English literature.
+
+    User 1: Oh, cool! What''s your favorite book?
+
+    User 2: I love all of Stephen King''s books.
+
+    User 1: Me too! I''m a huge fan. What''s your favorite book of his?
+
+    User 2: I think my favorite is "The Stand."
+
+    User 1: That''s a great one! I also love "The Shining" and "It."
+
+    User 2: Those are both great too!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to read, watch movies, and listen to music.
+
+    User 1: Me too! I love to go to the theater to see musicals.
+
+    User 2: Oh, that sounds fun! I''ve never been to a Broadway show.
+
+    User 1: You should definitely go! They''re amazing.
+
+    User 2: I''ll have to check it out sometime.
+
+    User 1: So, do you have any plans for the weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could go to a movie or something?
+
+    User 2: That sounds like fun!
+
+    User 1: Great! I''ll let you know what I decide.
+
+    User 2: Okay! Talk to you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

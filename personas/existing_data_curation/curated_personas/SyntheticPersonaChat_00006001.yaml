@@ -1,0 +1,76 @@
+id: '00006001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6001
+data:
+  user 1 personas: 'I do not like working long hours.
+
+    Someday i would like a truck.
+
+    I work at a hospital.
+
+    I like toyota cars.
+
+    I like to vote.'
+  user 2 personas: 'I lift weights , but i never do squats.
+
+    I am entering the police academy this summer.
+
+    I drink protein powder with nothing but water.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m in the police academy this summer.
+
+    User 1: Oh, that sounds exciting! What made you want to become a police officer?
+
+    User 2: I''ve always wanted to help people, and I think it''s a great way to make a difference in the community.
+
+    User 1: That''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are you most looking forward to about the academy?
+
+    User 2: I''m really looking forward to learning how to use my firearm and other weapons.
+
+    User 1: That''s always fun! I used to be in the military, so I know a little bit about that.
+
+    User 2: Oh, really? What branch were you in?
+
+    User 1: I was in the Marine Corps for four years.
+
+    User 2: That''s cool! I''ve always wanted to join the military, but I didn''t have the time.
+
+    User 1: It was a great experience, but it''s definitely not for everyone.
+
+    User 2: I can imagine. I''m sure it was tough.
+
+    User 1: It was, but it was also really rewarding.
+
+    User 2: I''m glad you had a good experience.
+
+    User 1: Thanks!
+
+    User 2: So, what are you doing after the academy?
+
+    User 1: I''m not sure yet. I''m thinking about working in a small town or rural area.
+
+    User 2: That sounds like a good idea. I''ve heard that it''s a lot more rewarding to work in a small community.
+
+    User 1: I think so too. I want to be able to make a real difference in people''s lives.
+
+    User 2: That''s awesome! I''m sure you''ll be a great police officer.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

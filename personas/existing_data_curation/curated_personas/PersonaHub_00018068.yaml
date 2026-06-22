@@ -1,0 +1,18 @@
+id: 00018068
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 18068
+persona_description: A physician who specializes in genetics and has experience in ordering and interpreting genome and exome sequencing tests. They are knowledgeable about the strengths and weaknesses
+  of the testing and are willing to learn and use the technology clinically. They are also aware of the potential limitations and inconveniences of such tests and are prepared to refer patients to specialists
+  who are knowledgeable in genetics.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: genetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: genomics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

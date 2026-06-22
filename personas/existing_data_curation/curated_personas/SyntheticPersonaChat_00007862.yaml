@@ -1,0 +1,116 @@
+id: 00007862
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7862
+data:
+  user 1 personas: 'My favorite thing to do is to go to museums.
+
+    I travel at least once a year.
+
+    I love to watch the voice.
+
+    I graduated from princeton.'
+  user 2 personas: 'I have a boyfriend who lives in italy.
+
+    My mom lives with me.
+
+    I enjoy video games.
+
+    I hate cooking.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+    User 1: It''s nice to meet you! Where are you from?
+
+    User 2: I''m from [user 2 location].
+
+    User 1: Oh, I''ve been there! It''s beautiful.
+
+    User 2: It is! I''m glad you like it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and watch anime.
+
+    User 1: Oh, I love video games too! What are some of your favorite games?
+
+    User 2: I like [user 2 game 1], [user 2 game 2], and [user 2 game 3].
+
+    User 1: I''ve heard good things about [user 2 game 1]! I''ve never played it, but I''ve heard it''s really fun.
+
+    User 2: It is! You should try it sometime.
+
+    User 1: I will! What else do you like to do for fun?
+
+    User 2: I also like to go to museums and travel.
+
+    User 1: I love to travel too! I''ve been to [user 1 location 1], [user 1 location 2], and [user 1 location 3].
+
+    User 2: Oh, I''ve been to [user 2 location 1] and [user 2 location 2]! They''re both beautiful.
+
+    User 1: I know! I really enjoyed them.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a [user 1 job].
+
+    User 2: Oh, that sounds interesting.
+
+    User 1: It is! I love it.
+
+    User 2: What do you like about it?
+
+    User 1: I love working with people and helping them solve problems.
+
+    User 2: That''s a great thing to do.
+
+    User 1: Thanks! It is.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to go to the museum and then I''m going to have dinner with my family.
+
+    User 2: Oh, that sounds nice.
+
+    User 1: Yeah, it should be.
+
+    User 2: So, what''s your favorite museum?
+
+    User 1: My favorite museum is the [user 1 museum].
+
+    User 2: Oh, I''ve been there! It''s really great.
+
+    User 1: Yeah, it is!
+
+    User 2: So, what are you looking forward to in the future?
+
+    User 1: I''m looking forward to going on vacation.
+
+    User 2: Oh, where are you going?
+
+    User 1: I''m going to [user 1 vacation destination].
+
+    User 2: Oh, that sounds nice.
+
+    User 1: Yeah, it should be.
+
+    User 2: So, what do you want to do when you grow up?
+
+    User 1: I want to be a [user 1 career].
+
+    User 2: Oh, that sounds great.
+
+    User 1: Yeah, it does.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: My favorite food is [user 1 food].
+
+    User 2: Oh, I love [user 2 food]!
+
+    User 1: Yeah, it''s really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

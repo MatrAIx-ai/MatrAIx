@@ -1,0 +1,68 @@
+id: '00005163'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5163
+data:
+  user 1 personas: 'My favorite season is summer.
+
+    I am headed to university of michigan in the fall.
+
+    I just graduated high school.
+
+    I love tacos but hate spaghetti.
+
+    I want to be a doctor when i graduate.'
+  user 2 personas: 'I watch basketball.
+
+    I go to a local college.
+
+    I work at a smoothie shop.
+
+    I listen to classic rock.'
+  Best Generated Conversation: 'User 1: Hi, I''m going to the University of Michigan in the fall.
+
+    User 2: That''s great! What are you studying?
+
+    User 1: I''m going to be a pre-med student. I want to be a doctor when I graduate.
+
+    User 2: That''s awesome! I''m sure you''ll be a great doctor.
+
+    User 1: Thanks! I hope so.
+
+    User 2: What''s your favorite season?
+
+    User 1: My favorite season is summer. I love the warm weather and the long days.
+
+    User 2: Me too! I love swimming and going to the beach in the summer.
+
+    User 1: I love those things too! I also love going camping and hiking in the summer.
+
+    User 2: That sounds like a lot of fun. I''ve never been camping before.
+
+    User 1: You should try it! It''s a lot of fun to get out in nature and relax.
+
+    User 2: I might have to try it sometime.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and go out with friends.
+
+    User 2: I like to do all of those things too! What''s your favorite video game?
+
+    User 1: My favorite video game is The Legend of Zelda: Breath of the Wild.
+
+    User 2: I''ve heard good things about that game. I''ve never played it though.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might have to check it out.
+
+    User 1: You should! It''s a great game.
+
+    User 2: Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

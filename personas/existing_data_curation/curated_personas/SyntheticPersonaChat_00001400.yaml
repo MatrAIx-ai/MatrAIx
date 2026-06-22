@@ -1,0 +1,64 @@
+id: '00001400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1400
+data:
+  user 1 personas: 'I own a iphone 7.
+
+    My father worked 11 hours a day.
+
+    My mother use to read me bed time stories.
+
+    I drink hot chocolate during the winter.
+
+    I am allergic to seafood.'
+  user 2 personas: 'I have long legs.
+
+    I have long fingers.
+
+    I m dumpy.
+
+    Like a skeleton.'
+  Best Generated Conversation: 'User 1: I love hot chocolate in the winter.
+
+    User 2: Me too! It''s so delicious and comforting.
+
+    User 1: I know, right? It''s the best way to warm up on a cold day.
+
+    User 2: I agree. Do you have any other favorite winter beverages?
+
+    User 1: I like peppermint tea, too. It''s so refreshing and minty.
+
+    User 2: Oh, that sounds delicious! I''ll have to try it.
+
+    User 1: You should! It''s so good.
+
+    User 2: So, what do you like to do in the winter?
+
+    User 1: I love to go skiing! It''s so much fun to glide down the mountain and get some fresh air.
+
+    User 2: I''ve never been skiing before, but it sounds like a lot of fun.
+
+    User 1: You should try it! It''s a lot easier than it looks.
+
+    User 2: I''ll have to give it a try sometime.
+
+    User 1: So, what do you like about winter?
+
+    User 2: I love the snow! It''s so beautiful to see the ground covered in white.
+
+    User 1: I agree! It''s so peaceful and serene.
+
+    User 2: And I love the way it muffles all the sound. It''s like the world is sleeping.
+
+    User 1: I know, right? It''s so relaxing.
+
+    User 2: So, what do you think is the best thing about winter?
+
+    User 1: I think it''s the way it brings people together. When it''s cold outside, we all want to stay inside and be cozy, so we end up spending more time with our loved ones.
+
+    User 2: That''s a really nice way to think about it. I agree, winter is a great time to be with the people you love.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00005307'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5307
+data:
+  user 1 personas: 'I have danced since i was two.
+
+    I can say the alphabet backwards.
+
+    I got engaged to be married in paris , france.
+
+    I am a redhead.'
+  user 2 personas: 'I like to shop at goodwill.
+
+    I like to be outdoors.
+
+    I am a student.
+
+    I am from california.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do?
+
+    User 2: I like to go to thrift stores and look for deals.
+
+    User 1: That''s cool! I like to go to thrift stores too. I''ve found some great stuff there.
+
+    User 2: Me too! I love finding unique items that I can''t find anywhere else.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to be outdoors. I love going camping, hiking, and biking.
+
+    User 1: That''s awesome! I love being outdoors too. I''m not a big camper, but I love hiking and biking.
+
+    User 2: Where are you from?
+
+    User 1: I''m from California.
+
+    User 2: I''m from California too! What part of California are you from?
+
+    User 1: I''m from the Bay Area.
+
+    User 2: Me too! I''m from San Francisco.
+
+    User 1: Oh cool! I''ve been to San Francisco a few times. It''s a great city.
+
+    User 2: It is! I love living there.
+
+    User 1: So, what are you studying in school?
+
+    User 2: I''m studying business.
+
+    User 1: Oh cool! I''m thinking about going back to school to study business.
+
+    User 2: You should! It''s a great field.
+
+    User 1: Yeah, I think I will.
+
+    User 2: Good luck!
+
+    User 1: Thanks!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

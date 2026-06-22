@@ -1,0 +1,60 @@
+id: 00008345
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8345
+data:
+  user 1 personas: 'I care deeply for my friends and others close to me.
+
+    I grew up as an orphan.
+
+    I often play the clown to get attention.
+
+    I will work hard for whatever i want.'
+  user 2 personas: 'I work full time.
+
+    I like to go hiking.
+
+    I like nature.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing today?
+
+    User 2: I''m doing well, thanks for asking! How about you?
+
+    User 1: I''m doing great! I''m excited to be meeting you.
+
+    User 2: Me too! I''ve heard great things about you.
+
+    User 1: Well, I''m glad to hear that! I''m sure we''ll get along just fine.
+
+    User 2: I agree! So, what do you like to do for fun?
+
+    User 1: I love to go hiking and explore nature. I also love to read and watch movies.
+
+    User 2: That''s awesome! I love to go hiking too. I also like to go kayaking and fishing.
+
+    User 1: I''ve never been kayaking or fishing before, but they sound like they would be fun.
+
+    User 2: They are! You should definitely try them sometime.
+
+    User 1: I will! I''m always looking for new things to try.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher. I teach kindergarten.
+
+    User 2: That''s awesome! I love kids.
+
+    User 1: Me too! They''re so much fun to work with.
+
+    User 2: So, what''s your favorite thing about being a teacher?
+
+    User 1: My favorite thing is seeing the kids learn and grow. It''s so rewarding to be a part of their journey.
+
+    User 2: That''s so great! I can imagine it''s really rewarding to see the kids grow and learn.
+
+    User 1: It is! I love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

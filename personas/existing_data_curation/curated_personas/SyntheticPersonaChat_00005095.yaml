@@ -1,0 +1,64 @@
+id: 00005095
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5095
+data:
+  user 1 personas: 'I went to college in chicago.
+
+    I am the youngest of 3.
+
+    I love playing tennis.
+
+    I love reading mysteries in my free time.
+
+    I am pursuing my law degree.'
+  user 2 personas: 'My mom went crazy when i was three and i have not seen her since.
+
+    I am an accountant.
+
+    My dog is my best friend.
+
+    My hair is black and curly.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Chicago.
+
+    User 2: Nice! I''ve never been to Chicago. Is it a nice place?
+
+    User 1: Yeah, it''s great! There''s a lot to do there.
+
+    User 2: What''s your favorite thing to do there?
+
+    User 1: I love going to the museums. There''s a lot of history there.
+
+    User 2: That sounds cool! I''m not much of a history buff, but I could probably get into some museums.
+
+    User 1: Yeah, they''re really cool! What do you like to do for fun?
+
+    User 2: I like to play tennis. I''m not very good, but it''s a lot of fun.
+
+    User 1: Nice! I love playing tennis too. I''m not very good either, but it''s always a good workout.
+
+    User 2: That''s what I like about it. It''s a good way to get exercise and have fun at the same time.
+
+    User 1: Yeah, it''s great! Do you have any siblings?
+
+    User 2: I have one sister. She''s a year younger than me.
+
+    User 1: Nice! I have two sisters. They''re both older than me.
+
+    User 2: That''s cool! What do you do for work?
+
+    User 1: I''m a law student. I''m going to be a lawyer after I graduate.
+
+    User 2: That''s awesome! I''m an accountant. I work for a small firm.
+
+    User 1: Nice! I''ve always thought about being an accountant.
+
+    User 2: It''s a good job. It''s not as exciting as being a lawyer, but it''s stable and pays well.
+
+    User 1: That''s what I''ve heard. I''m glad you like it.
+
+    User 2: Yeah, I do. It''s a good job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

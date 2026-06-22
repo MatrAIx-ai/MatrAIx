@@ -1,0 +1,74 @@
+id: '00007531'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7531
+data:
+  user 1 personas: 'I work on the radio as a character voice.
+
+    I once started a forest fire in california.
+
+    I was the first test child for sesame street.
+
+    I always carry an edged weapon.'
+  user 2 personas: 'I own 10 cats.
+
+    My favorite jello is the blue one.
+
+    I do not eat asparagus.
+
+    I have long red hair.
+
+    I work at home on my computer.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name], what''s your name?
+
+    User 2: Hey, I''m [name], it''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I work at home on my computer.
+
+    User 1: Oh, that sounds interesting. What kind of work do you do?
+
+    User 2: I''m a writer.
+
+    User 1: Oh, cool! What kind of stuff do you write?
+
+    User 2: Mostly short stories and novels.
+
+    User 1: Oh, that''s really cool. I love to read.
+
+    User 2: Me too! What''s your favorite book?
+
+    User 1: It''s hard to say, but I really like The Great Gatsby.
+
+    User 2: Oh, that''s a great book. I love F. Scott Fitzgerald.
+
+    User 1: Me too! He''s one of my favorite authors.
+
+    User 2: What''s your favorite thing about The Great Gatsby?
+
+    User 1: I love the characters and the setting.
+
+    User 2: Me too! The characters are so well-developed and the setting is so atmospheric.
+
+    User 1: I know, right? It''s such a great book.
+
+    User 2: I agree. It''s one of my favorites.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Oh, me too! I love all those things.
+
+    User 2: Me too! We should get together sometime and watch a movie or something.
+
+    User 1: That sounds like fun. I''d love to do that.
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00002691
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2691
+data:
+  user 1 personas: 'Cooking is my passion.
+
+    My hair is long and blonde.
+
+    My mother died when i was a child.
+
+    My favorite color is blue.'
+  user 2 personas: 'I drive a restored mustang.
+
+    I m a college student.
+
+    I play football.
+
+    I like action movies.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: I''m (user 1), and I''m a chef.
+
+    User 2: Oh, that''s cool! I''m (user 2), and I''m a college student.
+
+    User 1: What do you study?
+
+    User 2: I''m studying business.
+
+    User 1: Nice! What do you want to do with your degree?
+
+    User 2: I''m not sure yet. I''m thinking about going into marketing.
+
+    User 1: That''s a good choice. I''m sure you''ll be great at it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and go out with friends.
+
+    User 1: I like to cook, watch movies, and go out with friends too.
+
+    User 2: That''s cool! We should hang out sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll send you a message.
+
+    User 1: Sounds good!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

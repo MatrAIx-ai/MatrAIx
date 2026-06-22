@@ -1,0 +1,78 @@
+id: '00000666'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 666
+data:
+  user 1 personas: 'I lease my car.
+
+    I work in accounting.
+
+    I like potatoes.
+
+    I am male.
+
+    I have two dogs.'
+  user 2 personas: 'I grew up in kentucky.
+
+    I am a veteran.
+
+    My favorite book is ender s game.
+
+    I have a garden.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi! I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too! Where are you from?
+
+    User 2: I grew up in Kentucky.
+
+    User 1: Oh, that''s cool! I''ve never been to Kentucky.
+
+    User 2: You should come visit sometime! We have some great food and scenery.
+
+    User 1: I''ll have to make a trip there sometime.
+
+    User 2: You won''t regret it!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a veteran.
+
+    User 1: Oh, thank you for your service!
+
+    User 2: No problem. I''m glad to have served.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, garden, and spend time with my family.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 1: I love science fiction and fantasy too! What are some of your favorite books?
+
+    User 2: Some of my favorite science fiction books are Ender''s Game, The Hitchhiker''s Guide to the Galaxy, and Dune.
+
+    User 1: Those are all great books! I love Ender''s Game and The Hitchhiker''s Guide to the Galaxy.
+
+    User 2: Me too! I''ve read them both multiple times.
+
+    User 1: I''ve only read Dune once, but I really liked it.
+
+    User 2: It''s a great book. I''m glad you enjoyed it.
+
+    User 1: I also like fantasy books. Some of my favorite fantasy books are The Lord of the Rings, A Song of Ice and Fire, and The Chronicles of Narnia.
+
+    User 2: Those are all great books! I''ve read them all too.
+
+    User 1: I''m glad to hear it! We should talk more about books sometime.
+
+    User 2: I''d love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

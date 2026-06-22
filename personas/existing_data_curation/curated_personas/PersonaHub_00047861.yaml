@@ -1,0 +1,18 @@
+id: 00047861
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 47861
+persona_description: A scientist with expertise in space weather research and monitoring, specifically focusing on the operation and maintenance of the SuperDARN radar system at the highest altitude and
+  most extreme environment. They are responsible for ensuring the system's reliability and accuracy, and are aware of the potential hazards it poses to communication networks and space weather forecasting.
+  They are also skilled in the analysis of plasma velocity and the evaluation of space-weather hazards, and have extensive experience in the field.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: space weather research
+  general_domain_top01pct: None
+  specific_domain_top01pct: space weather research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

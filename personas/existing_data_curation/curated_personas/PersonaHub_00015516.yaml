@@ -1,0 +1,17 @@
+id: '00015516'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15516
+persona_description: A person who is interested in vaccines and their mechanisms of action. They may be a healthcare professional, scientist, or someone who is curious about the science behind vaccines.
+  They may have a background in biology, medicine, or public health. They are likely to have a good understanding of the immune system and how vaccines work to protect against infectious diseases.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine science
+  general_domain_top01pct: None
+  specific_domain_top01pct: vaccine immunology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,68 @@
+id: '00001126'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1126
+data:
+  user 1 personas: 'I prefer winter.
+
+    I drive a van.
+
+    My favorite food is pizza.
+
+    I love the rain.'
+  user 2 personas: 'I am a fan of system of a down.
+
+    I am a vegan.
+
+    I learned piano at age 6.
+
+    I own 9 guitars.
+
+    I am trying to play in a local band.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name). I''m a big fan of System of a Down.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I''m not sure I could pick just one, but one of my favorites is "B.Y.O.B."
+
+    User 1: That''s a great song! I also love "Chop Suey!"
+
+    User 2: Yeah, that''s another classic.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a vegan chef.
+
+    User 1: Oh, that''s cool! I''ve been thinking about trying to go vegan.
+
+    User 2: It''s definitely worth it! It''s healthier and better for the environment.
+
+    User 1: Yeah, I''ve heard that. I''m just not sure how I would find vegan food everywhere I go.
+
+    User 2: It''s definitely more challenging, but it''s definitely possible. There are a lot of great vegan restaurants out there these days.
+
+    User 1: Yeah, I''ve seen a few. I''ll have to give it a try sometime.
+
+    User 2: You should! I think you''ll like it.
+
+    User 1: So, what other bands do you like?
+
+    User 2: I like a lot of different kinds of music. I''m a big fan of rock, metal, and punk.
+
+    User 1: Me too! I love music. I play the drums in a band.
+
+    User 2: Oh, that''s awesome! What kind of music do you play?
+
+    User 1: We play a mix of rock and punk.
+
+    User 2: That sounds cool! I''d love to hear you sometime.
+
+    User 1: Yeah, we''re always looking for new places to play.
+
+    User 2: Well, if you''re ever in my area, let me know. I''ll come check you out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

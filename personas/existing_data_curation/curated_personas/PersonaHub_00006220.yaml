@@ -1,0 +1,18 @@
+id: '00006220'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6220
+persona_description: A healthcare professional who is trained in the field of medicine and has experience in discussing and resolving patient conflicts related to medication management and autonomy. This
+  persona has strong communication skills and is skilled in navigating complex ethical and medical issues. They are knowledgeable about the principles of biomedical ethics and can apply these principles
+  to real-world scenarios. They are also skilled in providing support and guidance to patients and their families during difficult decision-making processes.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: medical ethics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

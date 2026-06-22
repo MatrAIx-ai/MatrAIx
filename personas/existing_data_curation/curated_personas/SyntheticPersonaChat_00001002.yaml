@@ -1,0 +1,106 @@
+id: '00001002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1002
+data:
+  user 1 personas: 'I hate tomatoes.
+
+    I am very short.
+
+    I have 2 kids.
+
+    I am a female.
+
+    I need a wheel chair to get around.'
+  user 2 personas: 'I enjoy cooking but not baking.
+
+    I enjoy a good run.
+
+    I am a stay at home mom.
+
+    I like things in organized.'
+  Best Generated Conversation: '**User 1:** Hi, I''m [user 1''s name].
+
+    **User 2:** Hi, I''m [user 2''s name].
+
+    **User 1:** Nice to meet you!
+
+    **User 2:** You too!
+
+    **User 1:** What do you like to do for fun?
+
+    **User 2:** I enjoy cooking, but not baking.
+
+    **User 1:** Oh, that''s interesting. Why don''t you like baking?
+
+    **User 2:** I don''t know, I just never got the hang of it.
+
+    **User 1:** I see. I love to bake, but I''m not very good at it.
+
+    **User 2:** Well, we can always learn together.
+
+    **User 1:** That sounds like a plan!
+
+    **User 2:** What else do you like to do?
+
+    **User 1:** I like to run.
+
+    **User 2:** Oh, me too! I love the feeling of being outside and getting some exercise.
+
+    **User 1:** Me too! I also like the way it makes me feel afterwards.
+
+    **User 2:** Me too! I feel so refreshed and energized after a good run.
+
+    **User 1:** I know, right? It''s the best.
+
+    **User 2:** So, what do you like about being a stay at home mom?
+
+    **User 1:** I like being able to spend time with my kids.
+
+    **User 2:** That''s great! I''m sure they love it.
+
+    **User 1:** They do. They''re always so excited to see me when I get home.
+
+    **User 2:** That''s so cute. I''m sure you''re a great mom.
+
+    **User 1:** Thank you! I try my best.
+
+    **User 2:** It sounds like you''re doing a great job.
+
+    **User 1:** Thanks! I''m glad you think so.
+
+    **User 2:** So, what else do you like to do?
+
+    **User 1:** I like to read.
+
+    **User 2:** Me too! What kind of books do you like to read?
+
+    **User 1:** I like to read a variety of books, but I especially like historical fiction and mysteries.
+
+    **User 2:** Oh, me too! I love historical fiction.
+
+    **User 1:** Me too! It''s so interesting to learn about other cultures and time periods.
+
+    **User 2:** Me too! I''m always learning something new when I read historical fiction.
+
+    **User 1:** I know, right? It''s the best.
+
+    **User 2:** So, what''s your favorite historical fiction book?
+
+    **User 1:** My favorite historical fiction book is "The Pillars of the Earth" by Ken Follett.
+
+    **User 2:** Oh, I''ve heard good things about that book.
+
+    **User 1:** It''s really good! It''s about a group of people who build a cathedral in medieval England.
+
+    **User 2:** That sounds really interesting. I might have to check it out.
+
+    **User 1:** You should! It''s a great book.
+
+    **User 2:** Thanks for the recommendation!
+
+    **User 1:** You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

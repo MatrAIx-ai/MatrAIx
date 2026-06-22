@@ -1,0 +1,18 @@
+id: 00020858
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20858
+persona_description: A person who is concerned about medical emergencies and is looking for information on how to treat internal bleeding, especially in the context of trauma or accidents. They are likely
+  to be a medical professional or someone who is familiar with medical procedures and treatments. They are also likely to be aware of the symptoms of internal bleeding and the importance of seeking medical
+  attention in such cases.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: trauma or emergency medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

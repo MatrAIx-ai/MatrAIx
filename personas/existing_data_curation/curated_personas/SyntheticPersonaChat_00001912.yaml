@@ -1,0 +1,62 @@
+id: 00001912
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1912
+data:
+  user 1 personas: 'I have two nephews.
+
+    Running is my way to relax.
+
+    I grew up on a farm.
+
+    I am a veterinarian.'
+  user 2 personas: 'My boyfriend is in the army.
+
+    My father is dead.
+
+    My favorite color is yellow.
+
+    My hair is short.
+
+    I play piano.'
+  Best Generated Conversation: 'User 1: Hi! I''m a veterinarian.
+
+    User 2: Oh, that''s cool! What kind of animals do you treat?
+
+    User 1: I mostly treat dogs and cats, but I also treat horses and other farm animals.
+
+    User 2: That''s awesome! I love animals.
+
+    User 1: Me too! I grew up on a farm, so I''ve always been around animals.
+
+    User 2: That''s cool! I grew up in the city, so I didn''t have a lot of experience with animals until I was older.
+
+    User 1: I''m sure you''ve made up for it since then!
+
+    User 2: Yes, I have! I have two nephews who are really into animals, so I get to play with them all the time.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love getting to teach them about animals and helping them take care of their pets.
+
+    User 1: That''s great! I''m glad you''re able to do that.
+
+    User 2: Me too! It''s one of my favorite things.
+
+    User 1: What kind of animals do your nephews have?
+
+    User 2: They have a dog, a cat, and a fish.
+
+    User 1: That''s a great mix of animals!
+
+    User 2: I know, right? They''re all really cute.
+
+    User 1: I bet they are!
+
+    User 2: They are! I love spending time with them.
+
+    User 1: I''m sure they love spending time with you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

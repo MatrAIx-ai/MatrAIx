@@ -1,0 +1,68 @@
+id: '00005011'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5011
+data:
+  user 1 personas: 'I just graduated high school.
+
+    I am headed to university of michigan in the fall.
+
+    I want to be a doctor when i graduate.
+
+    I love tacos but hate spaghetti.
+
+    My favorite season is summer.'
+  user 2 personas: 'My best friend just moved away.
+
+    I start my senior year of high school next week.
+
+    I went to japan this summer.
+
+    My mom is a painter.
+
+    My favorite sport is hockey.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What are you up to?
+
+    User 2: Not much. Just hanging out at home. How about you?
+
+    User 1: I''m just getting ready to go to the beach.
+
+    User 2: Nice! I love the beach. I wish I could go with you.
+
+    User 1: You should! It''s a great day for it.
+
+    User 2: I''m not sure if I can. I have to go to work in a few hours.
+
+    User 1: Oh, that''s too bad. Maybe next time.
+
+    User 2: Yeah, maybe.
+
+    User 1: So, what are you going to do for your senior year of high school?
+
+    User 2: I''m not sure yet. I''m thinking about going to college, but I''m not sure where I want to go yet.
+
+    User 1: I''m going to the University of Michigan in the fall. I''m going to be a pre-med major.
+
+    User 2: That''s cool! I''ve always wanted to be a doctor.
+
+    User 1: It''s a lot of work, but it''s worth it.
+
+    User 2: I know. I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what are you going to do after college?
+
+    User 1: I''m not sure yet. I''m thinking about going to medical school, but I''m not sure.
+
+    User 2: Well, whatever you do, I''m sure you''ll be great at it.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

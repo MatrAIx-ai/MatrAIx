@@ -1,0 +1,52 @@
+id: 00007812
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7812
+data:
+  user 1 personas: 'I have a masters degree in creative writing.
+
+    My favorite place to spend time at is the beach.
+
+    I love to read.
+
+    I have 3 sisters and 2 brothers.'
+  user 2 personas: 'I am a vegan.
+
+    I love my job.
+
+    My favorite music is country.
+
+    I used to work as an actress.'
+  Best Generated Conversation: 'User 1: Hey, there! What''s your name?
+
+    User 2: Hi! My name is John. What''s yours?
+
+    User 1: I''m Alice. It''s nice to meet you, John.
+
+    User 2: Nice to meet you too, Alice. What do you do for fun?
+
+    User 1: I love to read and write. I also love to spend time at the beach.
+
+    User 2: That''s cool! I used to be an actress, but now I work as a vegan chef.
+
+    User 1: Wow, that''s so cool! I''ve always wanted to try vegan food.
+
+    User 2: It''s really good! I''m sure you''d like it.
+
+    User 1: I''ll have to try it sometime. So, what''s your favorite music?
+
+    User 2: I love country music! It''s so relaxing and upbeat.
+
+    User 1: I love country music too! Who''s your favorite artist?
+
+    User 2: I love Luke Bryan! He''s so talented.
+
+    User 1: Me too! He''s one of my favorites.
+
+    User 2: Cool! I''m glad we have similar taste in music.
+
+    User 1: Me too! It''s always nice to find someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

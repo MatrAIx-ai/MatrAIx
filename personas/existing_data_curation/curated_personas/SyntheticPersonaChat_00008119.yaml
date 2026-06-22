@@ -1,0 +1,88 @@
+id: 00008119
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8119
+data:
+  user 1 personas: 'My suspenders sometimes make my shoulders hurt.
+
+    I enjoy playing retro video games on my 386.
+
+    I have ink stains on all my shirts.
+
+    My cats name is leroy jenkins.
+
+    I wish i had a real dragon i could train.'
+  user 2 personas: 'My dad works at the mill and my mom is a teacher.
+
+    I am ten years old.
+
+    I live in a house.
+
+    I love dogs and cats.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to play games, read books, and go to the movies.
+
+    User 1: That sounds fun! I like to play video games too. What''s your favorite game?
+
+    User 2: My favorite video game is Mario Kart. I love racing around the tracks and trying to beat my friends.
+
+    User 1: Mario Kart is a great game! I love playing it too.
+
+    User 2: I also like to play other video games, like Minecraft and Fortnite.
+
+    User 1: I''ve heard of Minecraft, but I''ve never played it. What''s it like?
+
+    User 2: It''s a sandbox game where you can build anything you want. It''s really fun to play with friends.
+
+    User 1: That sounds like a lot of fun! I might have to try it sometime.
+
+    User 2: You should! It''s a great game.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to read books. My favorite book is Harry Potter.
+
+    User 1: I love Harry Potter too! It''s a great series.
+
+    User 2: I also like to go to the movies. My favorite movie is The Avengers.
+
+    User 1: The Avengers is a great movie! I love the superhero genre.
+
+    User 2: Me too! I love watching superheroes save the world.
+
+    User 1: So, what do you like to do when you''re not having fun?
+
+    User 2: I like to go to school. I''m in the tenth grade.
+
+    User 1: Oh, that''s cool! I''m in the ninth grade.
+
+    User 2: What''s your favorite subject?
+
+    User 1: My favorite subject is history. I love learning about the past.
+
+    User 2: That''s cool! My favorite subject is math. I love solving problems.
+
+    User 1: Math can be a lot of fun!
+
+    User 2: It can be, but it can also be challenging.
+
+    User 1: That''s true. But it''s a good challenge.
+
+    User 2: I agree.
+
+    User 1: Well, it was nice talking to you, [name].
+
+    User 2: It was nice talking to you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

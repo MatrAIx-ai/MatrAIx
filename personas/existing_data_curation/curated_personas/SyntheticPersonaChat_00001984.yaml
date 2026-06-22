@@ -1,0 +1,64 @@
+id: 00001984
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1984
+data:
+  user 1 personas: 'I love comic books.
+
+    I am 8 years old.
+
+    My favorite hero is superman.
+
+    I want to grow up to be a superhero one day.
+
+    My name is todd.'
+  user 2 personas: 'My parents would take my brother and i when we were little.
+
+    I used to wear a cape.
+
+    Its one of my favorite hobbies.
+
+    We liked to pretend we were superheroes.'
+  Best Generated Conversation: 'User 1: What''s your favorite comic book?
+
+    User 2: I like Superman too! I used to wear a cape when I was little.
+
+    User 1: Me too! I used to pretend I was Superman all the time.
+
+    User 2: I used to pretend I was Superman and Batman.
+
+    User 1: That''s cool! What was your favorite thing about Superman?
+
+    User 2: I liked that he was always there to save the day.
+
+    User 1: Me too! He was the best.
+
+    User 2: What do you think your favorite superhero power would be?
+
+    User 1: I think I''d want the power to fly.
+
+    User 2: That would be so cool! I''d want the power to be invisible.
+
+    User 1: That would be fun! You could do so many things.
+
+    User 2: Yeah, you could spy on people!
+
+    User 1: That would be so much fun!
+
+    User 2: Yeah, it would be great.
+
+    User 1: I think we should start a superhero club.
+
+    User 2: That would be so much fun! We could meet up and pretend to be superheroes.
+
+    User 1: That would be awesome! We could even make costumes.
+
+    User 2: That would be so cool! We could call ourselves the Super Kids.
+
+    User 1: That''s a great name! I''m so excited to start the Super Kids.
+
+    User 2: Me too! I can''t wait to be a superhero.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

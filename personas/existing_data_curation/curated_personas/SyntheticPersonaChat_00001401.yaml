@@ -1,0 +1,90 @@
+id: '00001401'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1401
+data:
+  user 1 personas: 'I own a iphone 7.
+
+    I drink hot chocolate during the winter.
+
+    I am allergic to seafood.
+
+    My mother use to read me bed time stories.'
+  user 2 personas: 'I like to eat tune.
+
+    I like to read books.
+
+    I am a librarian in my current job.
+
+    My cats like to be read to.
+
+    I have two cats.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name].
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a librarian.
+
+    User 1: Oh, that''s cool! I love libraries.
+
+    User 2: Me too! I love reading books.
+
+    User 1: Me too! I love reading both fiction and nonfiction.
+
+    User 2: Me too! I love reading about history and science.
+
+    User 1: Oh, that''s interesting. I love reading about psychology and philosophy.
+
+    User 2: Those are both interesting subjects! I''ve never read a book about philosophy, though.
+
+    User 1: You should! It''s really interesting.
+
+    User 2: I might have to check one out.
+
+    User 1: You should! I''m sure you''d enjoy it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: You''re welcome!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''ve always been interested in programming.
+
+    User 1: It''s a lot of fun! I''ve been doing it for a few years now.
+
+    User 2: That''s really cool. I''m not sure if I''m good enough at math to do programming.
+
+    User 1: You don''t need to be good at math to be a good programmer.
+
+    User 2: Oh, that''s good to know.
+
+    User 1: Yeah, it''s more about logic and problem solving.
+
+    User 2: I''m good at problem solving.
+
+    User 1: Then you''d probably be a good programmer!
+
+    User 2: Maybe I''ll give it a try.
+
+    User 1: You should! I''m sure you''d enjoy it.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

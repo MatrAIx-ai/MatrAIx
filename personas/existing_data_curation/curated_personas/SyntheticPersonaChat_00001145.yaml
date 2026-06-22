@@ -1,0 +1,72 @@
+id: '00001145'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1145
+data:
+  user 1 personas: 'I work at a bar.
+
+    I can play piano.
+
+    I like to listen to country music.
+
+    People say i can cook well.'
+  user 2 personas: 'I am a guy that enjoys being a guy.
+
+    My favorite thing to eat is a burrito.
+
+    I love to binge watch shows on streaming services.
+
+    I like to hike and spend time outdoors.
+
+    I am close to my mother , but not to my father.'
+  Best Generated Conversation: 'User 1: Hello, what do you do for fun?
+
+    User 2: I like to hike and spend time outdoors.
+
+    User 1: Nice, that sounds like fun. I like to do that too.
+
+    User 2: What is your favorite place to hike?
+
+    User 1: I like to hike in the mountains. I love the views and the fresh air.
+
+    User 2: Me too! I have been hiking in the mountains a lot recently.
+
+    User 1: That''s great. I have been busy with work, but I am looking forward to going hiking again soon.
+
+    User 2: That''s great. We should go hiking together sometime.
+
+    User 1: That would be fun.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like country music.
+
+    User 2: Me too! I love to listen to country music while I am hiking.
+
+    User 1: That''s great. I love the way country music can make you feel relaxed and happy.
+
+    User 2: Me too. It''s a great way to enjoy the outdoors.
+
+    User 1: I agree.
+
+    User 2: What do you do for work?
+
+    User 1: I work at a bar.
+
+    User 2: Oh, that sounds fun. I have never worked at a bar before.
+
+    User 1: It can be fun. I get to meet a lot of different people.
+
+    User 2: That''s great. I like meeting new people.
+
+    User 1: I do too. It''s one of the best parts of my job.
+
+    User 2: It sounds like you have a great job.
+
+    User 1: I do. I am happy with it.
+
+    User 2: That''s good to hear.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

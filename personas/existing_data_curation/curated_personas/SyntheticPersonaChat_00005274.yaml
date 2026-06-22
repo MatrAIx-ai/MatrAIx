@@ -1,0 +1,90 @@
+id: '00005274'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5274
+data:
+  user 1 personas: 'I give out sports information.
+
+    I am a small business owner.
+
+    I have a consulting firm.
+
+    My clients are gamblers.
+
+    I help them win a lot of money.'
+  user 2 personas: 'I have two dogs.
+
+    I like to read true crime novels.
+
+    I am close to both of my brothers.
+
+    I work as a secretary at an insurance agency.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, I have two dogs and I''m close to both of my brothers.
+
+    User 1: That''s great! I like to read too. Do you have any favorite books?
+
+    User 2: I like to read true crime novels.
+
+    User 1: Oh, I''ve never read any true crime novels. What''s your favorite one?
+
+    User 2: My favorite one is The Devil in the White City by Erik Larson. It''s about the serial killer H.H. Holmes.
+
+    User 1: Oh, that sounds interesting. I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a secretary at an insurance agency.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: I do! It''s a good job and I get to work with a great team of people.
+
+    User 1: That''s great!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a small business owner. I have a consulting firm that helps gamblers win money.
+
+    User 2: Oh, that sounds interesting! How do you do that?
+
+    User 1: I give out sports information that helps my clients make better bets.
+
+    User 2: Oh, that''s cool!
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do when you''re not working?
+
+    User 1: I like to spend time with my family and friends. I also like to play sports and go to the movies.
+
+    User 2: That''s great!
+
+    User 1: So, what about you? What do you like to do when you''re not working?
+
+    User 2: I like to spend time with my family and friends. I also like to read, go to the movies, and play with my dogs.
+
+    User 1: That''s great!
+
+    User 2: So, what do you think about moving to Denver?
+
+    User 1: I think it would be a great opportunity! I''ve always wanted to live in a big city.
+
+    User 2: Me too! I think it would be a lot of fun.
+
+    User 1: So, what do you think? Are we ready to move to Denver?
+
+    User 2: I think so!
+
+    User 1: Great! Let''s pack our bags!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

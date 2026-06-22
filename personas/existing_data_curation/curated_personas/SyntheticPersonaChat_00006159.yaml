@@ -1,0 +1,80 @@
+id: 00006159
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6159
+data:
+  user 1 personas: 'My mother has 500 pairs of shoes.
+
+    I am allergic to shellfish and cats.
+
+    I like having my back scratched.
+
+    I only eat at restaurants.'
+  user 2 personas: 'I work in a warehouse.
+
+    I have a very tone body.
+
+    My son is a straight a student.
+
+    I have a collection of video games.
+
+    My wife and i enjoy long sunday drives.'
+  Best Generated Conversation: 'User 1: Hello! What''s your name?
+
+    User 2: My name is [User 2].
+
+    User 1: Nice to meet you, [User 2]. What do you like to do for fun?
+
+    User 2: I like to play video games, go for long drives with my wife, and work out.
+
+    User 1: I like video games too! What games do you like to play?
+
+    User 2: I like to play a lot of different games, but my favorite is probably [game name].
+
+    User 1: I''ve heard of that game! It looks like a lot of fun.
+
+    User 2: It is! It''s a really challenging game, but it''s also very rewarding.
+
+    User 1: I''m not very good at video games, but I''d love to try it out sometime.
+
+    User 2: You''re welcome to come over and play with me sometime!
+
+    User 1: That would be fun! I''ll let you know when I''m free.
+
+    User 2: Sounds good!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to go for long drives with my wife. We live in a beautiful area, so it''s always a lot of fun to just get out and explore.
+
+    User 1: That sounds really nice. I love going on drives too.
+
+    User 2: Yeah, it''s a great way to relax and spend time with your loved ones.
+
+    User 1: I agree. I''m glad you have such a fun hobby!
+
+    User 2: Thanks! I am too.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to work out. I have a very tone body.
+
+    User 1: Wow! You must be really dedicated to your fitness.
+
+    User 2: I am! I love working out and feeling good about myself.
+
+    User 1: That''s great! I wish I was more motivated to work out.
+
+    User 2: You should start! It''s a great way to improve your health and mood.
+
+    User 1: I know, I know. I''ll start tomorrow.
+
+    User 2: Good! I''ll hold you to it.
+
+    User 1: Thanks for the encouragement! I appreciate it.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

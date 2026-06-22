@@ -1,0 +1,72 @@
+id: '00001533'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1533
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I work for peta.
+
+    I like to make clothes.
+
+    I love animals.
+
+    I make 50k a year.'
+  user 2 personas: 'I go fishing on the weekends to relax.
+
+    I work as a personal trainer , 5 days a week.
+
+    I love hiking and staying fit.
+
+    I live in las vegas , nevada.
+
+    My name is dave.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hi, nice to meet you! I''m Dave.
+
+    User 1: Nice to meet you too, Dave. What do you do for a living?
+
+    User 2: I''m a personal trainer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a personal trainer.
+
+    User 2: It''s a great job! I love helping people get fit.
+
+    User 1: That''s awesome! I''m sure you''re a great trainer.
+
+    User 2: Thanks! I try my best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go fishing, hiking, and staying fit.
+
+    User 1: That sounds like a lot of fun! I like to go fishing too.
+
+    User 2: Really? Where do you like to go fishing?
+
+    User 1: I usually go fishing in the mountains.
+
+    User 2: Oh, that sounds nice. I''ve never been fishing in the mountains before.
+
+    User 1: You should try it sometime! It''s a lot of fun.
+
+    User 2: I might just do that!
+
+    User 1: What''s your favorite thing about being a personal trainer?
+
+    User 2: My favorite thing is helping people reach their fitness goals.
+
+    User 1: That''s awesome! I''m sure you''re a great trainer.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it''s been nice chatting with you, Dave. I have to go now, but it was nice meeting you.
+
+    User 2: You too! It was nice meeting you too. Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

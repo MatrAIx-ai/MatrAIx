@@ -1,0 +1,50 @@
+id: 00004008
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4008
+data:
+  user 1 personas: 'I helped develop facebook.
+
+    I make over 200 , 000 per year.
+
+    I have two pitt bulls.
+
+    I like to donate time and money to charity.
+
+    I work as a computer programmer.'
+  user 2 personas: 'I am a female.
+
+    My favorite color is purple.
+
+    My favorite singer is kid rock.
+
+    I have a masters degree.
+
+    I love to swim , and began at a young age.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thank you! How about you?
+
+    User 1: I''m doing good as well! I''m a computer programmer, and I make over $200,000 per year. I also have two pitt bulls, and I like to donate time and money to charity.
+
+    User 2: Wow, that''s amazing! I''m a female, and I have a master''s degree. I love to swim, and I started at a young age. My favorite color is purple, and my favorite singer is Kid Rock.
+
+    User 1: That''s really cool! I love swimming too, but I''m not very good at it. I''m more of a runner. What kind of work do you do?
+
+    User 2: I''m a teacher, and I love it! I get to work with kids all day long, and I love helping them learn.
+
+    User 1: That sounds like a great job! I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: It sounds like we have a lot in common! I''m sure we''d get along great.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

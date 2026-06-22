@@ -1,0 +1,48 @@
+id: 00001875
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1875
+data:
+  user 1 personas: 'I have 3 roommates.
+
+    I have a parakeet.
+
+    I am lactose intolerant.
+
+    My favorite color is orange.
+
+    I love gummy bears.'
+  user 2 personas: 'I like fruit.
+
+    I like to eat the skin of the apple.
+
+    I like green apples.
+
+    I do not like to eat meat.
+
+    My favorite fruit is apple.'
+  Best Generated Conversation: 'User 1: I''m having a hard time finding a good recipe for homemade gummy bears. Can you help me out?
+
+    User 2: Sure! I love making homemade gummy bears. I have a great recipe that I use.
+
+    User 1: Great! I''m lactose intolerant, so I need a recipe that doesn''t use milk.
+
+    User 2: No problem! I have a recipe that uses applesauce instead of milk.
+
+    User 1: Awesome! I''ll have to try that. Do you have any other tips for making homemade gummy bears?
+
+    User 2: Sure! I always use a candy thermometer to make sure that the sugar mixture reaches the correct temperature.
+
+    User 1: That''s a good tip. I''ll have to remember that.
+
+    User 2: You''re welcome! I also like to add a little bit of food coloring to my gummy bears. It makes them more fun.
+
+    User 1: That''s a great idea! I''ll have to try that too.
+
+    User 2: You''re welcome! I hope you enjoy making your homemade gummy bears.
+
+    User 1: Thank you! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

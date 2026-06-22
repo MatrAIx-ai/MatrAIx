@@ -1,0 +1,64 @@
+id: '00003654'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3654
+data:
+  user 1 personas: 'I hate the taste of fish.
+
+    I like to paint.
+
+    I am a vegan.
+
+    I have 23 cats at home.'
+  user 2 personas: 'I like to travel.
+
+    My mother was born in ireland.
+
+    I have traveled to both ireland and australia.
+
+    My father was an author.
+
+    My father was born in australia.'
+  Best Generated Conversation: 'User 1: Have you ever been to Ireland?
+
+    User 2: Yes, I have! My mother is from Ireland, so I used to visit her there when I was a child.
+
+    User 1: That''s cool! I''ve never been to Ireland, but I''ve always wanted to go.
+
+    User 2: You should definitely go! It''s a beautiful country with a rich history.
+
+    User 1: What did you like about Ireland the most?
+
+    User 2: The people were so friendly and welcoming. And the scenery was amazing. I loved the rolling green hills and the beautiful coastline.
+
+    User 1: That sounds amazing! I''m definitely going to have to go there someday.
+
+    User 2: You won''t regret it!
+
+    User 1: So, what''s your favorite place you''ve ever traveled to?
+
+    User 2: I''m not sure if I could choose just one favorite place, but I really loved Australia. The people were so friendly and the country was so beautiful. I loved the beaches and the rainforests.
+
+    User 1: Australia sounds amazing! I''ve always wanted to go there.
+
+    User 2: You should definitely go! It''s a great place to travel.
+
+    User 1: So, what did you like most about Australia?
+
+    User 2: I loved the beaches and the rainforests. The beaches were so beautiful and the rainforests were so lush and green. I also loved the kangaroos.
+
+    User 1: Kangaroos?
+
+    User 2: Yeah, they''re really cute.
+
+    User 1: I''ve never seen a kangaroo in person.
+
+    User 2: You should definitely go to Australia and see them!
+
+    User 1: I will! I''m sure I''ll love it.
+
+    User 2: You will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

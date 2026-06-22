@@ -1,0 +1,80 @@
+id: 00002449
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2449
+data:
+  user 1 personas: 'I do not like my job.
+
+    I visit india often.
+
+    My favorite color is blue.
+
+    I want to be an explorer.'
+  user 2 personas: 'I am a middle aged mother of two high school boys.
+
+    I coexist well with my husband.
+
+    I have a friend group , but i do not like any of them.
+
+    But , i feel lost and far away from who i truly am.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user1]. What''s your name?
+
+    User 2: Hi, I''m [user2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom to two high school boys.
+
+    User 1: Oh, that''s nice. I''m a software engineer.
+
+    User 2: That sounds interesting. I''ve always been curious about computer science.
+
+    User 1: It''s a lot of fun. I get to work on a lot of different projects.
+
+    User 2: That sounds like a great job.
+
+    User 1: It is. I''m lucky to have it.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to read, spend time with my family, and go out with friends.
+
+    User 1: Those are all great things to do.
+
+    User 2: Thanks. I try to keep busy.
+
+    User 1: I can tell.
+
+    User 2: What about you? What do you like to do in your free time?
+
+    User 1: I like to travel, go to concerts, and explore new places.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is. I love to experience new things.
+
+    User 2: I can understand that.
+
+    User 1: So, where have you traveled to?
+
+    User 2: I''ve been to India, Japan, and the United States.
+
+    User 1: Oh, wow! Those are all amazing places.
+
+    User 2: They are. I''m so lucky to have been able to see them.
+
+    User 1: I can imagine.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: That''s a beautiful color.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

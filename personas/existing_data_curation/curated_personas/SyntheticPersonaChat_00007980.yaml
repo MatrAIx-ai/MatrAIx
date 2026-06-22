@@ -1,0 +1,62 @@
+id: 00007980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7980
+data:
+  user 1 personas: 'I am an actress and i work at a grocery store.
+
+    I never cook.
+
+    I like to dress up for other people.
+
+    I take great care of my skin.'
+  user 2 personas: 'I love eating out.
+
+    I work full time.
+
+    I like nature.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for fun?
+
+    User 2: I love to eat out, go for walks in nature, and watch movies. What about you?
+
+    User 1: I like to act, work at the grocery store, and I never cook.
+
+    User 2: That''s interesting. I''ve never met an actress before.
+
+    User 1: It''s a lot of fun! I love getting to play different characters and tell stories.
+
+    User 2: I can imagine. I love watching movies and TV shows.
+
+    User 1: Me too! I love getting lost in a good story.
+
+    User 2: What''s your favorite movie?
+
+    User 1: It''s hard to choose just one, but I''d say The Princess Bride is one of my favorites.
+
+    User 2: That''s a great movie! I love the story and the characters.
+
+    User 1: Me too! It''s so funny and heartwarming.
+
+    User 2: I''m glad you like it. I''m always looking for new movies to watch.
+
+    User 1: Me too! I love watching movies.
+
+    User 2: Maybe we could watch a movie together sometime.
+
+    User 1: I''d love that! We could get some popcorn and watch a classic movie.
+
+    User 2: That sounds like a great plan.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

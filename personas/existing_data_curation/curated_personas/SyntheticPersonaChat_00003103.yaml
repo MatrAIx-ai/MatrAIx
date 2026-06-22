@@ -1,0 +1,70 @@
+id: '00003103'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3103
+data:
+  user 1 personas: 'I like being by myself.
+
+    I like reading.
+
+    My favorite band is dream theater.
+
+    I enjoy taking late night walks when it s completely dark.'
+  user 2 personas: 'I love to listen to frank sinatra.
+
+    I watch a lot of spongebob.
+
+    I like to cook stews.
+
+    I am a older lady.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to read, cook, and watch TV.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially fond of historical fiction.
+
+    User 1: I love historical fiction too! What are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon, the Pillars of the Earth series by Ken Follett, and the Shogun series by James Clavell.
+
+    User 1: Those are all great books! I''ve read all of them too.
+
+    User 2: What do you like to cook?
+
+    User 1: I like to cook all kinds of food, but I''m especially good at making pasta dishes.
+
+    User 2: I love pasta! What''s your favorite pasta dish to make?
+
+    User 1: My favorite pasta dish is lasagna. I love making it because it''s so easy and it always turns out delicious.
+
+    User 2: Lasagna is one of my favorite foods too! I love the way it''s so rich and creamy.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to watch on TV?
+
+    User 2: I love to watch a lot of different things, but my favorite shows are probably Seinfeld, Friends, and The Office.
+
+    User 1: Those are all great shows! I''ve seen them all too.
+
+    User 2: What''s your favorite thing about them?
+
+    User 1: I love the humor and the characters. They''re all so relatable.
+
+    User 2: Me too! I love how they make me laugh.
+
+    User 1: Me too! I''m glad we have similar tastes in TV shows.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

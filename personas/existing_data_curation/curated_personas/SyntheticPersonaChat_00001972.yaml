@@ -1,0 +1,72 @@
+id: 00001972
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1972
+data:
+  user 1 personas: 'I live in the city.
+
+    My horse never talks back to me.
+
+    I m the lead singer for an indie band.
+
+    I enjoy budweiser beer.
+
+    I m still a student , but i m gonna be a nurse.'
+  user 2 personas: 'I hate to lose.
+
+    I have blue eyes.
+
+    I love fishing.
+
+    My father died when i was 2.
+
+    My favorite season is spring.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name], and I''m the lead singer for an indie band.
+
+    User 2: Oh that''s cool! I love indie music. What''s your band''s name?
+
+    User 1: We''re called [band name]. We''ve been playing together for a few years now, and we''re just starting to get some traction.
+
+    User 2: That''s great! I''m sure you''ll go far. What''s your favorite song to perform?
+
+    User 1: It''s hard to pick just one, but I''d say our song "The World Is Yours" is one of my favorites.
+
+    User 2: I''ll have to check it out! I''m always looking for new music to listen to.
+
+    User 1: You can find us on Spotify, iTunes, and all the other major streaming platforms.
+
+    User 2: Awesome! I''ll definitely check you out.
+
+    User 1: Thanks! So, what do you do for fun?
+
+    User 2: I love to fish. I''m always up for a good fishing trip.
+
+    User 1: That''s cool! I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great way to relax and enjoy nature.
+
+    User 1: I might just do that. What kind of fish do you like to catch?
+
+    User 2: I like to catch bass, trout, and catfish.
+
+    User 1: Those are all good fish! I''m sure they''re delicious.
+
+    User 2: They are! I love to cook fish.
+
+    User 1: Me too! I''m a pretty good cook.
+
+    User 2: That''s good to know! I''ll have to bring you some of my fish sometime.
+
+    User 1: I''d love that!
+
+    User 2: It''s been nice talking to you, [user 1 name].
+
+    User 1: You too, [user 2 name]. It''s been nice meeting you.
+
+    User 2: I hope we can do this again sometime.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00002787
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2787
+data:
+  user 1 personas: 'I have three children.
+
+    I enjoy taking walks.
+
+    My best friend lives down the street.
+
+    I am named after my grandmother.
+
+    I drive a honda civic.'
+  user 2 personas: 'I have depression and anxiety so i do not really go out a lot.
+
+    I work at home , editing.
+
+    I have a cat.
+
+    I hope to move out soon.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]!
+
+    User 2: Hello, nice to meet you! I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy taking walks, but I don''t get out much because of my anxiety.
+
+    User 1: I''m sorry to hear that. I know how that feels. I have anxiety too.
+
+    User 2: It''s nice to know I''m not alone.
+
+    User 1: Yeah, me too. What do you do for work?
+
+    User 2: I''m an editor, and I work from home.
+
+    User 1: That''s cool! I work as a teacher.
+
+    User 2: I''ve always wanted to be a teacher!
+
+    User 1: It''s a lot of work, but it''s also really rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you like to do with your cat?
+
+    User 2: I like to play with her and cuddle with her. She''s my best friend.
+
+    User 1: Aww, that''s so cute! I have three kids, and they''re my best friends too.
+
+    User 2: I''m glad to hear that!
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m hoping to move out soon, so I can have more space for my cat.
+
+    User 1: That sounds like a great plan! I hope it works out for you.
+
+    User 2: Thank you! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

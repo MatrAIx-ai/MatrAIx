@@ -1,0 +1,83 @@
+id: '00006525'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6525
+data:
+  user 1 personas: 'My favorite musician is ed sheeran.
+
+    I am a yoga instructor.
+
+    I love romantic comedies.
+
+    I like to write poetry in my spare time.'
+  user 2 personas: 'My suspenders sometimes make my shoulders hurt.
+
+    My cat s name is leroy jenkins.
+
+    I wish i had a real dragon i could train.
+
+    I enjoy playing retro video games on my 386.
+
+    I have ink stains on all my shirts.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], and I''m a yoga instructor.
+
+
+    User 2: Hi, I''m [name], and I''m a software engineer.
+
+
+    User 1: Cool! What are some of your hobbies?
+
+
+    User 2: I like to play retro video games, and I have a cat named Leroy Jenkins.
+
+
+    User 1: Leroy Jenkins! That''s a great name for a cat. I like to write poetry in my spare time.
+
+
+    User 2: That''s awesome! I used to write poetry when I was younger, but I don''t have much time for it anymore.
+
+
+    User 1: I understand. I''m lucky to have a flexible schedule, so I can fit it in whenever I want.
+
+
+    User 2: I''m jealous. I wish I had more free time.
+
+
+    User 1: Well, maybe you can start a blog or something where you can share your poetry.
+
+
+    User 2: That''s a great idea! I''ll have to look into it.
+
+
+    User 1: Cool! Let me know if you do, I''d love to read it.
+
+
+    User 2: Thanks! I will.
+
+
+    User 1: So, what kind of music do you like?
+
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably Ed Sheeran.
+
+
+    User 1: I love Ed Sheeran! He''s so talented.
+
+
+    User 2: Yeah, he''s amazing. I''ve seen him in concert twice.
+
+
+    User 1: That''s awesome! I''ve always wanted to see him in concert.
+
+
+    User 2: You should definitely go if you get the chance. He puts on a great show.
+
+
+    User 1: I will. Thanks for the recommendation.
+
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

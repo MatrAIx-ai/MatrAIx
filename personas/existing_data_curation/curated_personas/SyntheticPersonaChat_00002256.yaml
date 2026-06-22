@@ -1,0 +1,70 @@
+id: '00002256'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2256
+data:
+  user 1 personas: 'I like to bake pies.
+
+    I am a chef.
+
+    I like to garden.
+
+    I like photography.'
+  user 2 personas: 'I am more of a cat person than a dog person.
+
+    I couldn t live without my cell phone.
+
+    I enjoy the occasional drink with friends.
+
+    My mom is my best friend.
+
+    I attend book club every week.'
+  Best Generated Conversation: 'User 1: Hello, I''m (User 1)!
+
+    User 2: Hey, I''m (User 2)! Nice to meet you.
+
+    User 1: It''s nice to meet you too! What do you do for a living?
+
+    User 2: I''m a chef.
+
+    User 1: Oh, that''s cool! I love to cook. What''s your favorite thing to make?
+
+    User 2: I love to bake pies.
+
+    User 1: Pies are my favorite! What''s your favorite kind to make?
+
+    User 2: I love making apple pies.
+
+    User 1: Apple pies are so good! I love the tartness of the apples and the sweetness of the crust.
+
+    User 2: Me too! I love making them with fresh apples.
+
+    User 1: Me too! I love the smell of fresh apples in the kitchen.
+
+    User 2: Me too! It''s so cozy and inviting.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to garden.
+
+    User 1: Oh, that''s cool! I love gardening too. What do you like to grow?
+
+    User 2: I like to grow vegetables and flowers.
+
+    User 1: Me too! I love the taste of fresh vegetables and the beauty of flowers.
+
+    User 2: Me too! It''s so rewarding to grow your own food and flowers.
+
+    User 1: It is! It''s also really relaxing.
+
+    User 2: Me too! I love spending time in my garden.
+
+    User 1: Me too! It''s so peaceful and quiet.
+
+    User 2: Me too! It''s the perfect place to relax and de-stress.
+
+    User 1: I agree! It''s the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

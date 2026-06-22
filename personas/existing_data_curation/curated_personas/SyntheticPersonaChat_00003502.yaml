@@ -1,0 +1,70 @@
+id: '00003502'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3502
+data:
+  user 1 personas: 'I was born 20 years ago.
+
+    I was born male and transitioned to female when i was 17.
+
+    I live in the usa.
+
+    My favorite color is blue.
+
+    I love pizza.'
+  user 2 personas: 'My parents are in there 80s.
+
+    I am only 5 foot tall.
+
+    I have 8 brothers and we are close.
+
+    My hair is as red as the sunset.'
+  Best Generated Conversation: 'User 1: Hi! How are you?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing well too! I''m just having a conversation with someone on the internet.
+
+    User 2: Oh, that sounds fun! What are you talking about?
+
+    User 1: We''re talking about our favorite colors. I like blue, and she likes red.
+
+    User 2: That''s cool! I like red too. I''m also really tall, so I like wearing red to make me look shorter.
+
+    User 1: That''s a good idea! I''m not very tall, so I don''t have to worry about that.
+
+    User 2: How old are you?
+
+    User 1: I''m 20 years old.
+
+    User 2: Oh, I''m 19 years old. I''m actually going to be 20 in a few months.
+
+    User 1: Happy early birthday!
+
+    User 2: Thanks!
+
+    User 1: I was born male and transitioned to female when I was 17.
+
+    User 2: That''s interesting! I''m not sure if I''ve ever met someone who has transitioned before.
+
+    User 1: It''s not too common, but it''s definitely happening more and more.
+
+    User 2: I''m glad to hear that. It''s important for people to be able to live their truth.
+
+    User 1: I agree.
+
+    User 2: I have 8 brothers and we are very close.
+
+    User 1: That''s a lot of brothers! Do you get along with them all?
+
+    User 2: For the most part, yeah. We have our fights like any other family, but we always work things out in the end.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, I''m lucky to have such a great family.
+
+    User 1: I''m sure they''re lucky to have you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

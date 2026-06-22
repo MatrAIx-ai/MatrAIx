@@ -1,0 +1,82 @@
+id: '00002424'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2424
+data:
+  user 1 personas: 'I am writing a novel.
+
+    I don t like pickles.
+
+    My favorite tv show is rick and morty.
+
+    My favorite color is black.
+
+    I own an iphone.'
+  user 2 personas: 'I want a dog , but that is a lot of commitment.
+
+    I sometimes think i m shallow.
+
+    If i want it , i buy it.
+
+    My mother is a professional make up artist.
+
+    I love to go outside at night and eavesdrop on my neighbor s arguments.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is (User 2''s name).
+
+    User 1: It''s nice to meet you, (User 2''s name). What do you do for fun?
+
+    User 2: I like to go outside at night and eavesdrop on my neighbor''s arguments.
+
+    User 1: That''s interesting! I''ve never done that before.
+
+    User 2: It''s really fun! You learn a lot about people.
+
+    User 1: I bet you do! I might have to try that sometime.
+
+    User 2: You should! It''s really entertaining.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go shopping, I like to go to the movies, I like to go out to eat, and I like to go to parties.
+
+    User 1: Sounds like you have a lot of fun!
+
+    User 2: I do! I try to make the most of every day.
+
+    User 1: That''s a good attitude to have.
+
+    User 2: Thanks!
+
+    User 1: What''s your favorite TV show?
+
+    User 2: My favorite TV show is Rick and Morty.
+
+    User 1: I love that show! It''s so funny.
+
+    User 2: It is! I love the characters and the writing.
+
+    User 1: Me too! I''m so glad they''re making a new season.
+
+    User 2: Me too! I can''t wait to see what happens next.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is black.
+
+    User 1: Black is a good color. It''s classic and elegant.
+
+    User 2: I agree! I like how it goes with everything.
+
+    User 1: I do too!
+
+    User 2: I''m glad we agree on something!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

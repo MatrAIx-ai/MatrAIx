@@ -1,0 +1,86 @@
+id: '00004162'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4162
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I have five cats.
+
+    My husband is the ceo of taco bell.
+
+    Madonna is my sister.
+
+    I am next in line to become queen of england.'
+  user 2 personas: 'I am a student.
+
+    I am in an education program , and hope to teach kindergarten when i graduate.
+
+    I am a vegan.
+
+    I like visiting art museums in my spare time.
+
+    I just started dating someone new.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: I see you''re vegan. Are you vegan by choice?
+
+    User 2: Yes, I am. I''ve been vegan for about 3 years now.
+
+    User 1: That''s great! I''ve been thinking about going vegan myself.
+
+    User 2: I''m glad to hear that. It''s a great decision for your health and the environment.
+
+    User 1: I know, right? I''m just not sure how I''m going to give up cheese.
+
+    User 2: There are a lot of great vegan cheese options out there. You''ll be surprised how much you like them.
+
+    User 1: I''ll have to try them. Thanks for the recommendation.
+
+    User 2: No problem. What do you do for fun?
+
+    User 1: I like to go to art museums. I also like to go to concerts.
+
+    User 2: That''s cool. I love going to art museums too. I''ve been to a lot of them all over the world.
+
+    User 1: Wow, that''s awesome. I''ve only been to a few art museums in the United States.
+
+    User 2: You should definitely travel to Europe and visit some of the art museums there. They''re amazing.
+
+    User 1: I will definitely do that. Thanks for the recommendation.
+
+    User 2: No problem. What kind of music do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but I mostly listen to rock music.
+
+    User 2: That''s cool. I like a lot of different kinds of music too, but I mostly listen to classical music.
+
+    User 1: That''s interesting. I don''t listen to much classical music, but I do enjoy it.
+
+    User 2: It''s a great genre. There''s so much variety to explore.
+
+    User 1: I agree. I''m definitely going to check out some more classical music.
+
+    User 2: I''m glad to hear that. It''s a beautiful genre.
+
+    User 1: I''m also a student. I''m in an education program, and I hope to teach kindergarten when I graduate.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thank you. I''m excited to start my career.
+
+    User 2: I''m sure you''ll be successful. You seem like a very intelligent and caring person.
+
+    User 1: Thank you. I''m glad you think so.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

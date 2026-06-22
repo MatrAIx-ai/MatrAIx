@@ -1,0 +1,66 @@
+id: 00002900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2900
+data:
+  user 1 personas: 'I speak six languages.
+
+    I was the first test child for sesame street.
+
+    I always carry an edged weapon.
+
+    I work on the radio as a character voice.'
+  user 2 personas: 'I enjoy watching horror flicks.
+
+    I want to be a music teacher.
+
+    I play the violin.
+
+    My grandma raised me.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s up?
+
+    User 2: Not much, just watching horror flicks.
+
+    User 1: Oh, I love horror movies! What are you watching?
+
+    User 2: I''m watching "The Conjuring."
+
+    User 1: I love that movie! It''s so creepy!
+
+    User 2: I know, right? It''s one of my favorites.
+
+    User 1: Me too! What other horror movies do you like?
+
+    User 2: I like a lot of them, but some of my favorites are "The Exorcist," "Silence of the Lambs," and "The Blair Witch Project."
+
+    User 1: Those are all great movies! I love them too.
+
+    User 2: Me too! I''m glad we have similar taste in horror movies.
+
+    User 1: Me too! What do you do for a living?
+
+    User 2: I''m a music teacher.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn to play an instrument.
+
+    User 2: Which instrument would you like to learn?
+
+    User 1: I''ve always wanted to learn to play the violin.
+
+    User 2: That''s a great instrument! I love the sound of the violin.
+
+    User 1: Me too! I think it''s so beautiful.
+
+    User 2: If you ever decide to learn to play the violin, let me know. I''d be happy to give you some lessons.
+
+    User 1: Thanks! I''ll keep that in mind.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00007167'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7167
+data:
+  user 1 personas: 'I i love logical and rational thinking.
+
+    I love computers.
+
+    I am considered a nerd by many.
+
+    I started working at google last week on self driving car research.
+
+    I am very good at math and science.'
+  user 2 personas: 'I own a cleaning company.
+
+    My favorite writer is nicholas sparks.
+
+    I am married.
+
+    I enjoy cooking.
+
+    My mother was a teacher.'
+  Best Generated Conversation: 'User 1: Hey, I''m User 1!
+
+    User 2: Hi, I''m User 2!
+
+    User 1: What do you do for a living?
+
+    User 2: I own a cleaning company.
+
+    User 1: That''s cool! I''m a software engineer at Google.
+
+    User 2: Oh, that''s really interesting! What kind of work do you do there?
+
+    User 1: I''m working on self-driving car research.
+
+    User 2: That''s awesome! I''m always amazed by the technology that goes into those cars.
+
+    User 1: Thanks! It''s really exciting work.
+
+    User 2: What''s your favorite part of the job?
+
+    User 1: I love the problem solving aspect of it. There''s always something new to learn and figure out.
+
+    User 2: That sounds really challenging.
+
+    User 1: It can be, but it''s also a lot of fun.
+
+    User 2: What kind of software do you use for your work?
+
+    User 1: I use a lot of different programming languages, but mostly Python and C++.
+
+    User 2: Those are two of my favorite languages too.
+
+    User 1: Nice! We should code together sometime.
+
+    User 2: That would be fun! I''m always looking for new people to collaborate with.
+
+    User 1: Great! I''ll give you my contact info.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

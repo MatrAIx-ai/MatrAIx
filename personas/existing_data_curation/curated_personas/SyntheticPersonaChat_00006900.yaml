@@ -1,0 +1,90 @@
+id: 00006900
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6900
+data:
+  user 1 personas: 'We also have three dogs and two cats.
+
+    My name is john and i live in dallas , tx.
+
+    I work as a physical therapist , and my wife is a school nurse.
+
+    Our kids are 14 and 12 years old.
+
+    My wife and i have 2 children.'
+  user 2 personas: 'I am a competitive ski racer.
+
+    My family is very supportive of my skiing.
+
+    My hair is a reddish brown.
+
+    I broke my arm skiing once.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Cool. I''m John, I live in Dallas, TX. What about you?
+
+    User 2: I''m Sarah, I live in Salt Lake City, UT.
+
+    User 1: Oh cool, I''ve been to Salt Lake City a few times. It''s a beautiful city.
+
+    User 2: Thanks! I love it here.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m a competitive ski racer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try skiing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will sometime.
+
+    User 2: You should!
+
+    User 1: So, what''s it like being a competitive ski racer?
+
+    User 2: It''s a lot of hard work, but it''s also a lot of fun. I get to travel all over the world and compete in different competitions.
+
+    User 1: That sounds amazing!
+
+    User 2: It is. I love it.
+
+    User 1: So, what are your goals for the future?
+
+    User 2: My goal is to make the Olympic team.
+
+    User 1: Oh, that''s awesome! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your family like?
+
+    User 2: My family is great. They''re really supportive of my skiing.
+
+    User 1: That''s awesome.
+
+    User 2: Yeah, they''re the best.
+
+    User 1: So, what do you do for fun with your family?
+
+    User 2: We go skiing a lot, but we also like to go hiking, camping, and fishing.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I love spending time with my family.
+
+    User 1: So, what''s your favorite thing to do with your family?
+
+    User 2: My favorite thing to do with my family is go skiing.
+
+    User 1: That''s awesome. I''ve always wanted to try skiing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

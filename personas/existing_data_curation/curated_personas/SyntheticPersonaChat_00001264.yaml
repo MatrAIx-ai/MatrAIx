@@ -1,0 +1,88 @@
+id: '00001264'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1264
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I have two tattoos.
+
+    My favorite hobby is knitting.
+
+    I work in an office.
+
+    I have a cat named speckles.'
+  user 2 personas: 'Sometimes i listen to gary numan to be ironic.
+
+    I like chasing komodo lizards on a private island.
+
+    I like eating fresh mangoes in the morning.
+
+    Going snorkeling is my favorite thing to do.
+
+    I only use apple products because i feel everything else is inferior.'
+  Best Generated Conversation: 'User 1: Hi there, what''s your name?
+
+    User 2: My name is [name]. What''s yours?
+
+    User 1: I''m [name]. It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: So, what are you interested in?
+
+    User 2: I''m interested in a lot of things. I like to go snorkeling, chasing komodo lizards, eating fresh mangoes, and listening to Gary Numan.
+
+    User 1: That''s a lot of interests! I''ve never been snorkeling, but it sounds like it would be fun. I love mangoes too.
+
+    User 2: Mangoes are my favorite fruit! They''re so sweet and juicy.
+
+    User 1: Yeah, they''re the best.
+
+    User 2: I''ve never chased a Komodo lizard, but it sounds like it would be an exciting experience.
+
+    User 1: It definitely is. They''re really fast and they have sharp teeth.
+
+    User 2: Yikes! Sounds like you have to be careful!
+
+    User 1: Yeah, you do. But it''s also really fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I work in an office too.
+
+    User 2: What do you do?
+
+    User 1: I''m a customer service representative.
+
+    User 2: Oh, that sounds like a tough job.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go snorkeling.
+
+    User 1: That sounds like a great idea. I''m going to be working.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, but I have to work.
+
+    User 2: Well, maybe next weekend we can go snorkeling together.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll give you my number.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

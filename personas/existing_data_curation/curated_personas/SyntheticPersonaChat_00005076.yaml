@@ -1,0 +1,70 @@
+id: '00005076'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5076
+data:
+  user 1 personas: 'I think i have talent for it.
+
+    I auditionated in a cooking show.
+
+    Since young i ve loved to cook.
+
+    I didn t pass the audition , but i ll keep trying.
+
+    I took classes while growing up.'
+  user 2 personas: 'I like to cook new recipes.
+
+    I like every post i see on social media.
+
+    I post a lot about the food i eat on social media.
+
+    I m from austin , texas.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hey, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook new recipes and post about them on social media.
+
+    User 1: That''s cool! I like to cook too. I actually auditioned for a cooking show once, but I didn''t pass.
+
+    User 2: Oh no! That''s too bad. But it''s good to know that you enjoy cooking.
+
+    User 1: Yeah, I love it. I''ve been taking cooking classes since I was a kid.
+
+    User 2: That''s awesome! I wish I had taken cooking classes when I was younger.
+
+    User 1: Well, you can always start now. There are a lot of great cooking classes available online.
+
+    User 2: Yeah, I''ve been thinking about it.
+
+    User 1: I think you should do it. You''ll love it!
+
+    User 2: Okay, I will. Thanks for the advice!
+
+    User 1: No problem!
+
+    User 2: So, what kind of food do you like to cook?
+
+    User 1: I like to cook all kinds of food, but my favorite is probably Italian.
+
+    User 2: Oh, I love Italian food! What''s your favorite Italian dish?
+
+    User 1: I love pasta! My favorite pasta dish is lasagna.
+
+    User 2: Lasagna is so good! I love it too.
+
+    User 1: Have you ever made lasagna?
+
+    User 2: No, I haven''t. But I''ve always wanted to try.
+
+    User 1: You should! It''s not too hard to make.
+
+    User 2: Okay, I will. Thanks for the suggestion!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00005207'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5207
+data:
+  user 1 personas: 'Ariel is my favorite princess.
+
+    I am in high school.
+
+    I love disney movies.
+
+    I am on a competitive dance team.'
+  user 2 personas: 'I wish i could write in cursive.
+
+    I enjoy cold winters and strong breezes.
+
+    I listen to a lot of strange music.
+
+    I wait for something interesting to happen each day.
+
+    I wish i could live in iceland.'
+  Best Generated Conversation: 'User 1: Hey! I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What''s your favorite Disney movie?
+
+    User 2: I like a lot of them, but I think Mulan is my favorite.
+
+    User 1: I love Mulan! I''m on a competitive dance team.
+
+    User 2: That''s cool! I wish I could dance.
+
+    User 1: It''s a lot of fun, but it can be hard work.
+
+    User 2: I can imagine. What do you like to do for fun?
+
+    User 1: I like to watch movies, listen to music, and hang out with friends.
+
+    User 2: Me too! I also like to read and go for walks.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I like a lot of different kinds of books, but I especially like historical fiction and fantasy.
+
+    User 1: Those are my favorite genres too! I''ve been reading a lot of fantasy books lately.
+
+    User 2: Me too! I just finished reading the Wheel of Time series.
+
+    User 1: Oh, I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go to the movies or hang out with friends.
+
+    User 2: Sounds fun! I''m going to go ice skating.
+
+    User 1: That sounds like fun too! I love ice skating.
+
+    User 2: Maybe we should go together sometime.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

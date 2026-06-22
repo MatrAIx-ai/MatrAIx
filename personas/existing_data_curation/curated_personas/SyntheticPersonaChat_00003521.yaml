@@ -1,0 +1,84 @@
+id: '00003521'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3521
+data:
+  user 1 personas: 'I work for the railroad.
+
+    I am an omnivore.
+
+    I really like watching star trek.
+
+    My favorite band is vnv nation.
+
+    I like eating pretzels.'
+  user 2 personas: 'I work in fast food.
+
+    I m looking for krav maga classes near my home.
+
+    My favorite mortal kombat character is mileena.
+
+    I always wear something purple.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for work?
+
+    User 2: I work in fast food.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I get to meet a lot of people.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch Mortal Kombat and play video games.
+
+    User 1: What''s your favorite Mortal Kombat character?
+
+    User 2: Mileena.
+
+    User 1: I like her too. She''s so cool.
+
+    User 2: What do you do for fun?
+
+    User 1: I work for the railroad, I like watching Star Trek, I''m an omnivore and I like eating pretzels.
+
+    User 2: What''s your favorite Star Trek movie?
+
+    User 1: The Wrath of Khan.
+
+    User 2: That''s a good one.
+
+    User 1: Yeah, it''s my favorite.
+
+    User 2: I like the one where they go to the future and meet Data''s daughter.
+
+    User 1: Oh, that one was good too.
+
+    User 2: So, do you like the new Star Trek series?
+
+    User 1: I haven''t seen it yet.
+
+    User 2: You should check it out. It''s pretty good.
+
+    User 1: Okay, I will.
+
+    User 2: So, what do you think of Krav Maga?
+
+    User 1: I''ve never heard of it.
+
+    User 2: It''s a self-defense system.
+
+    User 1: Oh, that sounds interesting.
+
+    User 2: I''m looking for a Krav Maga class near my home.
+
+    User 1: I''ll have to look into that.
+
+    User 2: Okay, thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00001206'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1206
+data:
+  user 1 personas: 'I am a night owl.
+
+    I am 29 years old.
+
+    I enjoy hiking and riding my bicycle.
+
+    I live in a suburb of boston.
+
+    My favorite band is pearl jam.'
+  user 2 personas: 'I graduated college a few years ago.
+
+    I was born outside the us.
+
+    I love food.
+
+    I ve a big family.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What are you interested in?
+
+    User 2: I love food! I''m from a big family, so we always have big dinners together.
+
+    User 1: That sounds great! I''m not much of a cook, but I love to eat.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love Italian food! Pizza, pasta, lasagna, you name it.
+
+    User 2: Me too! I love all types of pasta, especially spaghetti.
+
+    User 1: Me too! I''m not sure if I could ever get tired of spaghetti.
+
+    User 2: Me neither! I could eat it every day.
+
+    User 1: I''m glad we agree on something!
+
+    User 2: Me too!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go hiking and biking. I also enjoy reading and playing video games.
+
+    User 1: Hiking sounds like a lot of fun! I''ve never been hiking before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a great way to get exercise and enjoy nature.
+
+    User 1: I''ll definitely try it out sometime.
+
+    User 2: Good! You won''t regret it.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m going to go for a hike with my friends.
+
+    User 1: That sounds like fun! I''m going to go home and read a book.
+
+    User 2: Have fun!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

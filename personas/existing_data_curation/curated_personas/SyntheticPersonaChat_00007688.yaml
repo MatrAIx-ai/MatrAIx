@@ -1,0 +1,82 @@
+id: 00007688
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7688
+data:
+  user 1 personas: 'Now i am a fixture on a weekly telenovela.
+
+    I am an actor.
+
+    I made my first movie when i was 18.
+
+    I starred in television commercials when i was young.
+
+    I have been acting since i was ten years old.'
+  user 2 personas: 'I live alone.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I like to play video games.
+
+    I play guitar on my free time.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m an amateur chef who cooks five different cuisines.
+
+    User 1: That''s amazing! What''s your favorite dish to cook?
+
+    User 2: I love to make pasta! I''m always trying new recipes and I''m always learning new things.
+
+    User 1: I love pasta too! I''m not much of a cook myself, but I love to eat.
+
+    User 2: You should come over and I''ll cook you dinner!
+
+    User 1: That''s so kind of you! I would love that.
+
+    User 2: Great! I''ll make my famous lasagna.
+
+    User 1: That sounds delicious! I can''t wait.
+
+    User 2: See you soon!
+
+
+    (A few days later)
+
+
+    User 1: Hey, are you ready for dinner?
+
+    User 2: Yes, I''m just finishing up!
+
+    User 1: Great! I''ll be right over.
+
+
+    (A few minutes later)
+
+
+    User 1: Wow, that lasagna smells amazing!
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: It''s the best lasagna I''ve ever had!
+
+    User 2: I''m glad you like it!
+
+    User 1: Thank you so much for inviting me over. This was so much fun!
+
+    User 2: You''re welcome! I''m glad you had a good time.
+
+    User 1: I know I''ll be dreaming about this lasagna for weeks!
+
+    User 2: Haha, I''m glad!
+
+    User 1: I''m so glad we met!
+
+    User 2: Me too!
+
+    User 1: I hope we can do this again soon.
+
+    User 2: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

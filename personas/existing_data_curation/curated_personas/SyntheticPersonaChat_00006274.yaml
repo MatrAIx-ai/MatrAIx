@@ -1,0 +1,58 @@
+id: '00006274'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6274
+data:
+  user 1 personas: 'I m going riding on my boat today.
+
+    I live in cape hatteras.
+
+    I love tuna.'
+  user 2 personas: 'I am a classily trained chef.
+
+    I have male pattern baldness.
+
+    I was born in baton rouge.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What do you like to do for fun?
+
+    User 2: Hi, I''m [user 2''s name]. I like to cook.
+
+    User 1: Really? What kind of food do you like to cook?
+
+    User 2: I like to cook all kinds of food, but I especially like cooking seafood.
+
+    User 1: That''s cool! I love seafood too. I''m from Cape Hatteras, North Carolina, and we have a lot of great seafood there.
+
+    User 2: I''ve heard that Cape Hatteras is a great place for seafood. I''ve never been there, but I''d love to visit sometime.
+
+    User 1: You should! It''s beautiful there, and there''s so much to do.
+
+    User 2: I''ll put it on my list of places to visit.
+
+    User 1: So, what do you like to do for fun besides cooking?
+
+    User 2: I like to go fishing. I also like to go hiking and camping.
+
+    User 1: That sounds fun. I like to do those things too.
+
+    User 2: Great! We should go fishing together sometime.
+
+    User 1: That would be fun!
+
+    User 2: I''m free this weekend.
+
+    User 1: I''m free too. Let''s do it.
+
+    User 2: Great! I''ll bring the bait.
+
+    User 1: I''ll bring the beer.
+
+    User 2: Sounds good!
+
+    User 1: See you this weekend!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

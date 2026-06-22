@@ -1,0 +1,52 @@
+id: 00003084
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3084
+data:
+  user 1 personas: 'I have long curly hair.
+
+    My favorite food is raw onion.
+
+    I like to grow my own herbs and vegetables in my garden.
+
+    I sew my own clothes.'
+  user 2 personas: 'I spend an hour getting ready in the morning.
+
+    When i shower my skin is nearly red from how hard i scrub.
+
+    I have horrible allergies.
+
+    I still love my cat despite all this.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: It''s nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I like to spend time in my garden. I grow my own herbs and vegetables, and I love to cook with them.
+
+    User 1: That''s so cool! I''ve always wanted to grow my own garden, but I don''t have a lot of space.
+
+    User 2: You can grow a garden even in a small space! I have a little herb garden on my windowsill.
+
+    User 1: That''s a great idea! I''ll have to try that.
+
+    User 2: I also like to sew my own clothes.
+
+    User 1: Wow, that''s so impressive! I can''t sew at all.
+
+    User 2: It''s not that hard! I taught myself how to sew when I was in high school.
+
+    User 1: That''s amazing! I''m sure I would be terrible at it.
+
+    User 2: You''d be surprised! It''s actually a lot of fun.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s a great way to be creative and make something unique.
+
+    User 1: Thanks for the suggestion! I''ll definitely look into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

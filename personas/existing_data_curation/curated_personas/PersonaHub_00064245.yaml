@@ -1,0 +1,18 @@
+id: '00064245'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64245
+persona_description: A medical professional who works in an allergy clinic or emergency department, specializing in the diagnosis and treatment of allergic reactions. They have experience with skin-prick
+  and intradermal testing to determine the source of allergic reactions, as well as blood tests to measure IgE antibody levels in response to suspected insect venom. They are knowledgeable in the use of
+  RAST tests to measure the immune system's response to insect venom and are skilled in interpreting the results of these tests to diagnose and manage allergic reactions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: allergy medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

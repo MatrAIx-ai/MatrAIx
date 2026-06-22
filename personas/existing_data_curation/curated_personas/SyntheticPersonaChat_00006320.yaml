@@ -1,0 +1,68 @@
+id: '00006320'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6320
+data:
+  user 1 personas: 'My favorite band is one direction.
+
+    My mom is a professional tennis player.
+
+    I am currently in elementary school.
+
+    I hope to be a football player when i grow up.
+
+    My favorite food is spaghetti and meatballs.'
+  user 2 personas: 'Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.
+
+    And , my best friend is abigail.
+
+    I take martial arts after school.'
+  Best Generated Conversation: 'User 1: What''s your favorite book?
+
+    User 2: I really like the Harry Potter series.
+
+    User 1: Me too! I''m on the last book right now.
+
+    User 2: Oh, that''s awesome! I finished the series a few years ago.
+
+    User 1: What was your favorite book in the series?
+
+    User 2: I think it was the third book, The Prisoner of Azkaban.
+
+    User 1: That''s a good one! I liked the time-travel part.
+
+    User 2: Yeah, that was really cool.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and hang out with my friends.
+
+    User 1: That sounds like me! I also like to play video games and hang out with my friends.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of games, but my favorites are RPGs and strategy games.
+
+    User 2: I like RPGs too! I''ve been playing a lot of Skyrim lately.
+
+    User 1: I love Skyrim! It''s so much fun.
+
+    User 2: I know, right? I''ve been playing it for years and I still haven''t finished it.
+
+    User 1: I''m not surprised! There''s so much to do in that game.
+
+    User 2: Yeah, there is. I love exploring all the different areas and doing all the side quests.
+
+    User 1: Me too! I also love the combat system. It''s so fun to fight dragons and other monsters.
+
+    User 2: I know, right? It''s so satisfying to take them down.
+
+    User 1: I agree! I think Skyrim is the best RPG ever made.
+
+    User 2: I can''t disagree with you there! It''s definitely one of my favorite games of all time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

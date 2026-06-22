@@ -1,0 +1,86 @@
+id: '00001011'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1011
+data:
+  user 1 personas: 'I have freckles.
+
+    I like to bake brownies.
+
+    My best friend is from tanzania.
+
+    I love wearing flip flops.
+
+    I love laughing.'
+  user 2 personas: 'My newest car is a chevy.
+
+    I work at a power plant.
+
+    I like to eat spaghetti.
+
+    My favorite thing to do is read.
+
+    I live in california.'
+  Best Generated Conversation: 'User 1: Hi, what''s up?
+
+    User 2: Not much, just working.
+
+    User 1: What do you do for work?
+
+    User 2: I work at a power plant.
+
+    User 1: Oh, that''s cool! How do you like it?
+
+    User 2: It''s pretty great, I get to work with a lot of interesting people.
+
+    User 1: That''s awesome. What''s your favorite part about the job?
+
+    User 2: Probably the camaraderie, everyone is always willing to help each other out.
+
+    User 1: That sounds like a great place to work.
+
+    User 2: It is, I''m really happy here.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, cook, and go hiking.
+
+    User 1: Oh, I love to read too! What''s your favorite book?
+
+    User 2: I''m not sure I could pick just one, but I really like the Harry Potter series.
+
+    User 1: Me too! I''ve read them all multiple times.
+
+    User 2: They''re so good! I''m excited for the new movie.
+
+    User 1: Me too! I''m not sure how they''re going to do it, but I''m sure it will be great.
+
+    User 2: I''m sure it will be too.
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes, especially lasagna.
+
+    User 1: Lasagna is my favorite! I love how cheesy it is.
+
+    User 2: Me too! I always make a double batch so I have leftovers.
+
+    User 1: That''s a good idea, I always end up eating mine too fast.
+
+    User 2: Yeah, it''s hard to resist.
+
+    User 1: So, what''s your favorite place to hike?
+
+    User 2: I like to hike in the mountains, especially near my house in California.
+
+    User 1: That sounds beautiful. I''ve never been to California, but I''ve heard it''s gorgeous.
+
+    User 2: It is! You should definitely come visit sometime.
+
+    User 1: I would love to! I''m sure it would be a great experience.
+
+    User 2: It would'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

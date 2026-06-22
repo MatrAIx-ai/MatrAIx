@@ -1,0 +1,19 @@
+id: '00050644'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50644
+persona_description: A researcher in the field of genetics, particularly interested in the study of genetic mutations and their impact on the development of diseases. They are familiar with the use of software
+  tools to analyze genetic sequencing data and have expertise in the identification of causative variants of genetic diseases. They are interested in the development of new software tools that can aid in
+  the molecular diagnosis of genetic disorders and improve medical management for patients affected by genetic diseases. They are also interested in the use of probabilistic methods in the analysis of genome
+  sequencing data to prioritize the most likely genetic variants involved in a disease among tens of thousands of neutral mutations.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: genetic analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

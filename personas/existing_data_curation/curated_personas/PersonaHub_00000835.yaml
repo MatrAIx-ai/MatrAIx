@@ -1,0 +1,18 @@
+id: 00000835
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 835
+persona_description: A healthcare professional who is familiar with the procedures and terminology related to endometrial biopsy, and is trained in performing the procedure. They are likely to be a gynecologist
+  or a reproductive endocrinologist, and have experience with the diagnostic process and interpreting the results. They are also knowledgeable about the potential risks and benefits of the procedure, and
+  how to manage any complications that may arise.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: gynecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: reproductive endocrinology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

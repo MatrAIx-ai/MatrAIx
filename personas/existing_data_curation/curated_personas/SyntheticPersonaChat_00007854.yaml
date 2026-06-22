@@ -1,0 +1,116 @@
+id: 00007854
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7854
+data:
+  user 1 personas: 'My dad is journalist for the new york times.
+
+    I was born premature.
+
+    I have one older sister named mary.
+
+    I recently broke my leg.'
+  user 2 personas: 'I like to remodel homes.
+
+    I like to go shopping with my daughters.
+
+    I like to go hunting.
+
+    I like to shoot a bow.
+
+    My favorite holiday is halloween.'
+  Best Generated Conversation: 'User 1: Hello, my name is [User 1''s name]. I''m from New York City.
+
+
+    User 2: Hello [User 1''s name], my name is [User 2''s name]. I''m from Kansas City, Missouri.
+
+
+    User 1: It''s nice to meet you, [User 2''s name].
+
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to remodel homes, go shopping with my daughters, go hunting, and shoot a bow.
+
+
+    User 1: Those are all great hobbies! I like to read, write, and go for walks in the park.
+
+
+    User 2: That sounds nice. I love to read too. What are your favorite books?
+
+
+    User 1: I like to read a variety of books, but I especially enjoy historical fiction and mystery novels.
+
+
+    User 2: I like those genres too! I''ve recently been reading a lot of historical fiction novels set in the 19th century.
+
+
+    User 1: That sounds interesting. I''ve never read a historical fiction novel set in the 19th century.
+
+
+    User 2: You should! They''re really good. I''ve been reading one about the American Civil War.
+
+
+    User 1: That sounds like a great book. I''ll have to check it out.
+
+
+    User 2: You should! It''s really good.
+
+
+    User 1: So, what do you do for work?
+
+
+    User 2: I''m a nurse.
+
+
+    User 1: That''s great! I''m a nurse too.
+
+
+    User 2: That''s awesome! What kind of nursing do you do?
+
+
+    User 1: I''m a registered nurse. I work in a hospital.
+
+
+    User 2: That''s great! I''m a licensed practical nurse. I work in a nursing home.
+
+
+    User 1: That''s awesome! I''ve always wanted to work in a nursing home.
+
+
+    User 2: It''s a great job! I love working with the elderly.
+
+
+    User 1: That sounds like a great experience.
+
+
+    User 2: It is. I love my job.
+
+
+    User 1: So, what are you doing for Halloween?
+
+
+    User 2: I''m going to a Halloween party with my friends.
+
+
+    User 1: That sounds like fun! I''m going to a Halloween party with my family.
+
+
+    User 2: That sounds like a lot of fun.
+
+
+    User 1: It is. I''m excited to see what everyone is wearing.
+
+
+    User 2: Me too! I love Halloween.
+
+
+    User 1: Me too! It''s my favorite holiday.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

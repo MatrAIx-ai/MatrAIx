@@ -1,0 +1,50 @@
+id: '00001262'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1262
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I have two tattoos.
+
+    I work in an office.
+
+    My favorite hobby is knitting.'
+  user 2 personas: 'I hate to workout , but i need to.
+
+    I have three dogs at home.
+
+    I have a bicycle.
+
+    I need to take my blood sugar everyday.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I hate to workout, but I need to. I have three dogs at home and I have a bicycle. I need to take my blood sugar everyday.
+
+    User 1: Sounds like you have a busy lifestyle! I enjoy shopping, I have two tattoos, I work in an office and my favorite hobby is knitting.
+
+    User 2: That''s cool! I''ve never been a fan of shopping, but I do have a few tattoos. I''ve always wanted to learn how to knit, but I''m not very good at it.
+
+    User 1: It''s definitely a skill that takes practice! I started knitting when I was in high school and I''ve been hooked ever since.
+
+    User 2: I''m impressed! I''m sure your family and friends love your handmade gifts.
+
+    User 1: They do! I love making things for them. I''m actually working on a scarf for my sister right now.
+
+    User 2: That''s so sweet! I''m sure she''ll love it.
+
+    User 1: I hope so! What do you do for work?
+
+    User 2: I''m a teacher. I work at a local elementary school.
+
+    User 1: That must be a lot of fun! I''ve always wanted to be a teacher, but I''m not sure I could handle the kids.
+
+    User 2: It''s definitely challenging, but it''s also very rewarding. I love working with kids and helping them learn.
+
+    User 1: That''s really great! I''m sure you''re a great teacher.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

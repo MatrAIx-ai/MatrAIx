@@ -1,0 +1,72 @@
+id: 00001806
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1806
+data:
+  user 1 personas: 'I am an only child.
+
+    My favorite food is pizza.
+
+    My favorite color is red.
+
+    I am a student.
+
+    I have a pet dog.'
+  user 2 personas: 'I am studying to be a dental hygienist but i hate seeing patient s saliva.
+
+    I only wear silver jewelry.
+
+    I have a rose tattooed on my right ankle.
+
+    I work in a doctor s office.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m studying to be a dental hygienist, but I hate seeing patient''s saliva.
+
+    User 1: That''s a tough job! I''m a student too.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: Nice! What''s your favorite color?
+
+    User 1: Red! What''s yours?
+
+    User 2: Silver. I only wear silver jewelry.
+
+    User 1: I like silver too! Do you have any pets?
+
+    User 2: I have a dog.
+
+    User 1: What kind of dog?
+
+    User 2: A golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so cute.
+
+    User 2: They are! What''s your favorite food?
+
+    User 1: Pizza! I could eat it every day.
+
+    User 2: Me too! I love pizza.
+
+    User 1: What''s your favorite pizza topping?
+
+    User 2: Pineapple! I know it''s controversial, but I love it.
+
+    User 1: I like pineapple on pizza too! It''s so good.
+
+    User 2: I''m glad I''m not alone!
+
+    User 1: Me too!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

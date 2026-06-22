@@ -1,0 +1,68 @@
+id: 00001468
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1468
+data:
+  user 1 personas: 'My name is sarah.
+
+    I love to read and relax by the lake on the weekends.
+
+    I teach 5th grade students near oakville , ny.
+
+    I m a school teacher.
+
+    I enjoy watching tennis and golf on tv.'
+  user 2 personas: 'My favorite color is blue.
+
+    I love sushi.
+
+    I own a car.
+
+    I am a girl.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah!
+
+    User 2: Hi Sarah, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love to read, go for walks by the lake, and play tennis.
+
+    User 1: Me too! I love to read and relax by the lake on the weekends.
+
+    User 2: That sounds really nice. I love reading, but I don''t get to do it as often as I''d like.
+
+    User 1: I know what you mean. I have to read a lot for my job, so I don''t always have time to read for pleasure.
+
+    User 2: That must be tough. I''m lucky that I don''t have to read for my job.
+
+    User 1: Yeah, it can be. But it''s also rewarding to be able to help kids learn.
+
+    User 2: I''m sure it is. What grade do you teach?
+
+    User 1: I teach fifth grade.
+
+    User 2: Oh, that''s great! I love fifth graders. They''re so funny and creative.
+
+    User 1: I know what you mean. They''re a great age.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially into historical fiction and mystery novels.
+
+    User 2: Me too! I love historical fiction. It''s so interesting to learn about other cultures and time periods.
+
+    User 1: I know what you mean. I love being transported to another time and place.
+
+    User 2: So, what are some of your favorite books?
+
+    User 1: I have a lot of favorite books, but some of my favorites include "The Book Thief" by Markus Zusak, "The Secret History" by Donna Tartt, and "The Name of the Rose" by Umberto Eco.
+
+    User 2: I''ve read "The Book Thief" and "The Name of the Rose." They''re both great books! I''ve never heard of "The Secret History," but I''ll have to check it out.
+
+    User 1: You definitely should! It''s a great book.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

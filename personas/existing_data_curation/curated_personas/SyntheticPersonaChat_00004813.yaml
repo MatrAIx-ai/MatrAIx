@@ -1,0 +1,78 @@
+id: 00004813
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4813
+data:
+  user 1 personas: 'I work in a doctor s office.
+
+    I have a rose tattooed on my right ankle.
+
+    I am studying to be a dental hygienist but i hate seeing patient s saliva.
+
+    There are thorns tattooed on my toes.
+
+    I only wear silver jewelry.'
+  user 2 personas: 'I like video games.
+
+    My mother worked for apple.
+
+    I have never been employed.
+
+    My favorite genre of music is rock.
+
+    I am diabetic.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and listen to rock music.
+
+    User 1: Nice! I like video games too. What are your favorite games?
+
+    User 2: I love the Legend of Zelda series and the Final Fantasy series.
+
+    User 1: Those are great games! I''ve played a few of them myself.
+
+    User 2: What do you do for work?
+
+    User 1: I work in a doctor''s office.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It''s pretty interesting, but it can be a little gross sometimes.
+
+    User 2: I can imagine. What are your plans for the future?
+
+    User 1: I''m studying to be a dental hygienist, but I''m not sure if I want to work in a dentist''s office.
+
+    User 2: Oh, that''s cool! I''ve never met a dental hygienist before.
+
+    User 1: Me neither! I''m the only one in my family who''s going into the medical field.
+
+    User 2: That''s pretty cool. Do you have any tattoos?
+
+    User 1: I have a rose tattooed on my right ankle and thorns tattooed on my toes.
+
+    User 2: Oh, that''s cool! I''ve never seen tattoos like that before.
+
+    User 1: Thanks! I''m pretty happy with them.
+
+    User 2: I can imagine. They look really good.
+
+    User 1: Thanks!
+
+    User 2: Do you have any siblings?
+
+    User 1: No, I''m an only child.
+
+    User 2: Oh, that must be lonely sometimes.
+
+    User 1: It can be, but I also like being by myself.
+
+    User 2: That''s fair. I''m an only child too, so I know what you mean.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,110 @@
+id: 00007408
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7408
+data:
+  user 1 personas: 'My favorite drink is caramel cappuccino.
+
+    My parents live across the street from me.
+
+    I work in a coffee shop.
+
+    I am in grad school.
+
+    I love to read true crime books.'
+  user 2 personas: 'I hate evil.
+
+    My mind is set on things above.
+
+    I trust in god.
+
+    My heart hurts from a broken relationship.
+
+    I am weak and selfish , but i want to change.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name]. What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name].
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student at [University Name].
+
+    User 1: Oh, that''s cool! I''m a grad student at [University Name].
+
+    User 2: That''s awesome! What are you studying?
+
+    User 1: I''m studying [Field of Study].
+
+    User 2: That''s really cool! I''m studying [Field of Study].
+
+    User 1: Oh, that''s great! What are you hoping to do after grad school?
+
+    User 2: I''m not sure yet. I''m thinking about going into teaching.
+
+    User 1: That''s a great option! I''m sure you''d be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to read, write, and spend time with my friends and family.
+
+    User 1: That''s great! I love to read, too. What are your favorite books?
+
+    User 2: I love to read true crime books.
+
+    User 1: Oh, I love those too! I''ve read a lot of true crime books.
+
+    User 2: That''s great! What are some of your favorite true crime books?
+
+    User 1: I really enjoyed the book "I''ll Be Gone in the Dark" by Michelle McNamara.
+
+    User 2: Oh, I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: I also really enjoyed the book "The Stranger Beside Me" by Ann Rule.
+
+    User 2: Oh, that''s another one I''ve heard good things about. I''ll have to check it out too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool! I''m a doctor.
+
+    User 2: That''s awesome! I''m sure you''re a great doctor.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what are you doing tonight?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to a movie with my friends.
+
+    User 1: Oh, that sounds fun! What movie are you seeing?
+
+    User 2: We''re seeing "The Batman".
+
+    User 1: Oh, I''ve heard good things about that movie. I''m going to see it later this week.
+
+    User 2: That''s great! I''m sure you''ll enjoy it.
+
+    User 1: I hope so.
+
+    User 2: So, do you want to hang out with us?
+
+    User 1: Sure, that sounds fun!
+
+    User 2: Great! We''re meeting at the theater at 7:00.
+
+    User 1: Okay, I''ll see you there.
+
+    User 2: Great! See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

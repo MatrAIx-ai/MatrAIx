@@ -1,0 +1,80 @@
+id: '00000723'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 723
+data:
+  user 1 personas: 'I like to read.
+
+    I have brown hair.
+
+    I like cupcakes.
+
+    I work at a grocery store.'
+  user 2 personas: 'I have a harsh inner critic.
+
+    I do not like my reputation.
+
+    I wish i could take back a mistake.
+
+    I want to move.
+
+    I do not like feeling controlled.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I am a grocery store cashier.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: It''s not bad.
+
+    User 1: I like to read. What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I really enjoy historical fiction and thrillers.
+
+    User 1: I like historical fiction too. I just finished reading "The Nightingale" by Kristin Hannah. It was really good.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: It''s about two sisters during World War II. It''s a really emotional book, but it''s also really inspiring.
+
+    User 2: That sounds like something I would like.
+
+    User 1: I hope you like it!
+
+    User 2: Thanks!
+
+    User 1: So, why do you want to move?
+
+    User 2: I''m not really sure. I guess I just feel like I need a change.
+
+    User 1: That makes sense. I feel the same way sometimes.
+
+    User 2: I''m also not happy with my reputation.
+
+    User 1: What''s wrong with your reputation?
+
+    User 2: I''m not sure. I guess people just don''t like me.
+
+    User 1: I don''t think that''s true. I think you''re a great person.
+
+    User 2: Thanks. That means a lot.
+
+    User 1: You''re welcome.
+
+    User 2: I just wish I could take back a mistake I made.
+
+    User 1: We all make mistakes. It''s what makes us human.
+
+    User 2: I know, but I wish I could fix it.
+
+    User 1: You can''t change the past, but you can learn from it.
+
+    User 2: I know. I''m trying.
+
+    User 1: I''m sure you''ll figure it out.
+
+    User 2: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00001186
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1186
+data:
+  user 1 personas: 'I am a cat owner.
+
+    My mom is an osteopath.
+
+    I have one blue eye and one hazel eye.
+
+    I speak fluent italian.
+
+    My brother is an archaeologist.'
+  user 2 personas: 'I ride my bicycle everywhere.
+
+    I enjoy jazz music.
+
+    I broke my nose when i was ten.
+
+    I work at a factory.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love riding my bicycle everywhere!
+
+    User 1: That''s great! I love biking too. Where do you like to go biking?
+
+    User 2: I like to bike around the city. It''s a great way to get exercise and see the sights.
+
+    User 1: I agree! I love biking around the city too. It''s a great way to get around and see all the different neighborhoods.
+
+    User 2: Do you have a favorite bike?
+
+    User 1: I have a few different bikes, but my favorite is my road bike. It''s so fast and nimble!
+
+    User 2: Road bikes are great! I have one too. I love taking it on long rides.
+
+    User 1: I love taking my road bike on long rides too. It''s so much fun to go fast and explore new places.
+
+    User 2: I agree! Biking is the best way to get around.
+
+    User 1: Do you know any good places to go biking around here?
+
+    User 2: There are a few great places to bike around here. I like to go to the park or the beach.
+
+    User 1: The park and the beach are both great places to bike! I love going biking there too.
+
+    User 2: We should go biking together sometime!
+
+    User 1: That would be fun! I''d love to go biking with you.
+
+    User 2: Great! We can set up a time to go soon.
+
+    User 1: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

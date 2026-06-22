@@ -1,0 +1,78 @@
+id: '00004065'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4065
+data:
+  user 1 personas: 'I love to listen to music.
+
+    I am a happy person.
+
+    I love to go to the lake.
+
+    I love to knit and crochet.'
+  user 2 personas: 'I will study computer science.
+
+    I like playing games online.
+
+    I m a vegetarian.
+
+    I just graduated from high school.
+
+    I m on my way to uc santa cruz where i was accepted.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi [user 1''s name], my name is [user 2''s name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like playing games online, and I''m also a vegetarian.
+
+    User 1: Oh, cool! I love to play games online too. What kind of games do you like to play?
+
+    User 2: I mostly play strategy games and RPGs.
+
+    User 1: Oh, nice! I love those kinds of games too. What are some of your favorite games?
+
+    User 2: I like Civilization, Total War, and the Elder Scrolls series.
+
+    User 1: Oh, I love those games too! We should play together sometime.
+
+    User 2: That would be fun! I''m always looking for new people to play with.
+
+    User 1: Awesome! What''s your favorite place to play games online?
+
+    User 2: I usually play on Steam.
+
+    User 1: Me too! I love Steam.
+
+    User 2: What''s your Steam name?
+
+    User 1: It''s [user 1''s Steam name].
+
+    User 2: I''ll add you.
+
+    User 1: Great! I''ll look for you.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I love to go to the lake and knit or crochet.
+
+    User 2: Oh, that sounds relaxing. I like to go for walks in the park.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: I''m glad to hear that. It''s always nice to meet someone who has similar interests.
+
+    User 1: Me too! I''m always looking for new friends.
+
+    User 2: Me too. It''s been nice talking to you, [user 1''s name].
+
+    User 1: It''s been nice talking to you too, [user 2''s name].
+
+    User 2: I hope we can hang out sometime soon.
+
+    User 1: Me too! I''ll bring the yarn and hooks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

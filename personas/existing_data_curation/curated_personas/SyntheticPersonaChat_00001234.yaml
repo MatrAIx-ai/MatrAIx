@@ -1,0 +1,68 @@
+id: '00001234'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1234
+data:
+  user 1 personas: 'I am argentinian.
+
+    I like to wear boots.
+
+    I have many girlfriends.
+
+    I like to eat beef.
+
+    I like to ride horses.'
+  user 2 personas: 'I am a vegetarian.
+
+    I am catholic.
+
+    I just started working as a librarian.
+
+    I don t know how to swim.
+
+    My favorite band is nickelback.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Argentina. I like to wear boots and I have many girlfriends. I like to eat beef and I like to ride horses.
+
+    User 2: Hi, I''m from the United States. I''m a vegetarian and I just started working as a librarian. I''m Catholic and I don''t know how to swim. My favorite band is Nickelback.
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my friends.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 1: I like those genres too! What are some of your favorite books?
+
+    User 2: I love The Lord of the Rings series by J.R.R. Tolkien and The Girl on the Train by Paula Hawkins.
+
+    User 1: Those are both great books! I''ve read The Lord of the Rings series three times and I just finished The Girl on the Train last week.
+
+    User 2: I''m glad you liked them! What''s your favorite movie?
+
+    User 1: I have a lot of favorite movies, but some of my favorites include The Shawshank Redemption, The Godfather, and The Princess Bride.
+
+    User 2: Those are all great movies! I love The Shawshank Redemption and The Princess Bride. I haven''t seen The Godfather, but I''ve heard good things about it.
+
+    User 1: You should definitely see The Godfather. It''s one of the best movies ever made.
+
+    User 2: I''ll have to check it out.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the library or the movies.
+
+    User 1: The library is a great place to relax and read a book. I go to the library all the time.
+
+    User 2: I might go to the movies to see The Lion King. I''ve heard good things about it.
+
+    User 1: The Lion King is a great movie! I saw it last week and I loved it.
+
+    User 2: I''m glad you liked it! I''m going to go to the library and then I''m going to see The Lion King.
+
+    User 1: Have fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

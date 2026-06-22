@@ -1,0 +1,70 @@
+id: 00006387
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6387
+data:
+  user 1 personas: 'I enjoy listening to country music.
+
+    I am in college.
+
+    I have a crummy job at scrubway.
+
+    I enjoy playing video games.
+
+    I live life to its fullest.'
+  user 2 personas: 'I love to sing.
+
+    I do not treat my girlfriend very well.
+
+    I am a lesbian.
+
+    I work in tv.
+
+    I like to cook breakfast on sundays.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name]. I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to sing.
+
+    User 1: That''s awesome! Do you sing in a choir or anything?
+
+    User 2: No, I just sing in the shower and in my car.
+
+    User 1: That''s still cool. I love to sing too, but I''m not very good at it.
+
+    User 2: Oh, I''m sure you''re better than you think.
+
+    User 1: Thanks. I''m not so sure about that.
+
+    User 2: Well, you should give it a try sometime. I''m sure you''d surprise yourself.
+
+    User 1: Maybe I will. Thanks for the encouragement.
+
+    User 2: No problem. So, what else do you like to do?
+
+    User 1: I like to play video games and listen to country music.
+
+    User 2: Cool, I like to play video games too. What are some of your favorites?
+
+    User 1: I like to play a lot of different games, but my favorites are probably The Sims, Mario Kart, and Minecraft.
+
+    User 2: Oh, I love The Sims! I''ve played that game for hours.
+
+    User 1: Me too! I''m always coming up with new stories and characters for my Sims.
+
+    User 2: That''s so cool. I''m more of a builder than a story-teller.
+
+    User 1: That''s cool too. I love to build houses and apartments for my Sims.
+
+    User 2: Me too! I''m always trying to come up with new designs.
+
+    User 1: That''s awesome. I''m glad we have something in common.
+
+    User 2: Me too. It''s nice to meet someone who shares my love of video games.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

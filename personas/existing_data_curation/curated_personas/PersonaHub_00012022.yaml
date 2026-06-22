@@ -1,0 +1,19 @@
+id: '00012022'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12022
+persona_description: A healthcare professional who is responsible for interpreting medical test results and making decisions based on them. This person is trained to recognize when a test result falls outside
+  of the established reference range and to consider the various reasons why this may be the case. They are also skilled in evaluating test results in the context of a patient's medical history, physical
+  examination, and other relevant factors to determine if the result is significant. They may reorder the test or compare the latest test result to previous results to get a better idea of what is normal
+  for the patient.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: Clinical Decision Making
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

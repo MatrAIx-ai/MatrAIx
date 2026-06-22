@@ -1,0 +1,80 @@
+id: '00002637'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2637
+data:
+  user 1 personas: 'I want to go to mars.
+
+    I know karate.
+
+    I am a scientist.
+
+    I have 3 kids.
+
+    I am an avid artist.'
+  user 2 personas: 'I have never broken a bone.
+
+    I love cats.
+
+    I am a freshman in college.
+
+    I am athletic.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: I''m a scientist.
+
+    User 2: What kind of scientist?
+
+    User 1: I study the brain.
+
+    User 2: That sounds really interesting.
+
+    User 1: It is. I''m always learning new things.
+
+    User 2: I''m sure you do. What''s the most interesting thing you''ve learned recently?
+
+    User 1: I recently learned that the brain is much more complex than we thought.
+
+    User 2: Really? How so?
+
+    User 1: Well, we used to think that the brain was just a bunch of different parts that worked independently of each other. But now we know that the brain is actually a very interconnected system.
+
+    User 2: That''s really cool. I never thought of it that way.
+
+    User 1: Me neither. It''s really amazing how the brain works.
+
+    User 2: I bet it is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play video games and go to the gym.
+
+    User 1: I like to play video games too. What''s your favorite game?
+
+    User 2: I like to play Call of Duty.
+
+    User 1: Me too! That''s my favorite game too.
+
+    User 2: What''s your favorite part about the game?
+
+    User 1: I like the multiplayer mode. It''s so much fun to play against other people.
+
+    User 2: Me too. I love competing against other people.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to the gym. I''m trying to get in shape.
+
+    User 1: That''s good. I need to get in shape too.
+
+    User 2: You should come with me sometime.
+
+    User 1: I''ll do it.
+
+    User 2: Great! We can work out together.
+
+    User 1: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

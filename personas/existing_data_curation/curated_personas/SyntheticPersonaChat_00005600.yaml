@@ -1,0 +1,80 @@
+id: '00005600'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5600
+data:
+  user 1 personas: 'I own a custom upholstery shop.
+
+    I love my grandchildren.
+
+    I am a wife.
+
+    I live by a lake.
+
+    I am a mother.'
+  user 2 personas: 'I love animals.
+
+    I make 50k a year.
+
+    I am a vegetarian.
+
+    I like to make clothes.
+
+    I work for peta.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). I own a custom upholstery shop.
+
+    User 2: Hi, I''m (name). I''m a vegetarian and I work for PETA.
+
+    User 1: Oh, that''s cool. I love animals too! I have two dogs and two cats.
+
+    User 2: That''s great! I have a dog and a cat too.
+
+    User 1: What kind of dog do you have?
+
+    User 2: I have a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so friendly.
+
+    User 2: They are! What kind of cat do you have?
+
+    User 1: I have a tabby and a Siamese.
+
+    User 2: Oh, I love tabby cats! They''re so cute.
+
+    User 1: They are! My Siamese cat is a bit of a diva, but she''s also very affectionate.
+
+    User 2: That''s great! I love animals that have personality.
+
+    User 1: Me too! They make life more fun.
+
+    User 2: I agree.
+
+    User 1: So, what do you do for PETA?
+
+    User 2: I work on animal welfare issues, like fighting against factory farming and promoting adoption.
+
+    User 1: That''s great work! I''m so glad you''re doing something to help animals.
+
+    User 2: Thanks! I''m passionate about it.
+
+    User 1: Me too! I think animals are amazing creatures.
+
+    User 2: Me too! They''re so much better than humans.
+
+    User 1: I agree! They''re so innocent and kind.
+
+    User 2: They really are.
+
+    User 1: So, what''s your favorite animal?
+
+    User 2: I think my favorite animal is the dog. They''re just so loyal and loving.
+
+    User 1: I agree! They''re the best pets.
+
+    User 2: They are! I love dogs.
+
+    User 1: Me too! They''re so much fun to have around.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

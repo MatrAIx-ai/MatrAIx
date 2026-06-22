@@ -1,0 +1,76 @@
+id: '00005134'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5134
+data:
+  user 1 personas: 'My favorite flower is a rose.
+
+    I wait tables.
+
+    My hair is long and brown.
+
+    I have a little girl.'
+  user 2 personas: 'My favorite city is seattle.
+
+    I broke my nose when i was ten.
+
+    I work at a factory.
+
+    I enjoy jazz music.
+
+    I ride my bicycle everywhere.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. What''s yours?
+
+    User 1: I''m [user 1 name]. Nice to meet you!
+
+    User 2: Nice to meet you too! Where are you from?
+
+    User 1: I''m from [user 1 location]. Where are you from?
+
+    User 2: I''m from [user 2 location]. What do you do for a living?
+
+    User 1: I wait tables. What about you?
+
+    User 2: I work at a factory.
+
+    User 1: Oh, cool. I''ve never been to a factory. What''s it like?
+
+    User 2: It''s pretty loud and dirty, but it''s not bad.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I like the people I work with. They''re all really nice.
+
+    User 1: That''s good to hear. What''s your least favorite thing about your job?
+
+    User 2: The hours can be long, but it''s not too bad.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my bicycle. I also like to play jazz music.
+
+    User 1: Oh, that''s cool. I used to ride my bicycle a lot, but I don''t have one anymore.
+
+    User 2: You should get one! It''s a lot of fun.
+
+    User 1: I might have to. What''s your favorite kind of jazz music?
+
+    User 2: I like all kinds of jazz music, but I especially like bebop.
+
+    User 1: I''ve never really listened to bebop. What''s it like?
+
+    User 2: It''s a fast-paced and energetic style of jazz.
+
+    User 1: Oh, that sounds interesting. I''ll have to check it out.
+
+    User 2: You should! I think you''ll like it.
+
+    User 1: Thanks for the recommendation! I''m going to go now. It was nice talking to you!
+
+    User 2: It was nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

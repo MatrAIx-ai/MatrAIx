@@ -1,0 +1,76 @@
+id: 00005578
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5578
+data:
+  user 1 personas: 'I like field hockey and soccer.
+
+    I am a 15 year old girl.
+
+    I love animals , especially dogs.
+
+    When i grow up , i want to be a veterinarian.'
+  user 2 personas: 'My mother is a dentist.
+
+    I am a baker.
+
+    I have 2 sisters.
+
+    I like to play tennis.'
+  Best Generated Conversation: 'User 1: Hi, my name is [your name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tennis, bake, and go shopping.
+
+    User 1: I like to play field hockey and soccer. I also love animals, especially dogs.
+
+    User 2: I love animals too! I have two dogs and a cat.
+
+    User 1: That''s awesome! I only have one dog.
+
+    User 2: What''s your dog''s name?
+
+    User 1: Her name is Bella. She''s a golden retriever.
+
+    User 2: I love golden retrievers! They''re so cute and friendly.
+
+    User 1: They are! She''s the best dog I''ve ever had.
+
+    User 2: What do you want to be when you grow up?
+
+    User 1: I want to be a veterinarian. I love animals and I want to help them.
+
+    User 2: That''s a great goal! I''m sure you''ll be a great veterinarian.
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite animal?
+
+    User 1: I love dogs, but I also love cats. I think they''re both amazing pets.
+
+    User 2: I agree! I love both dogs and cats.
+
+    User 1: What''s your favorite thing to bake?
+
+    User 2: I love to bake cookies. They''re so easy to make and they always turn out delicious.
+
+    User 1: I love cookies too! I love chocolate chip cookies the most.
+
+    User 2: Me too! They''re my favorite.
+
+    User 1: So, what''s your favorite thing about tennis?
+
+    User 2: I love the competition. It''s so much fun to try to beat my opponent.
+
+    User 1: I agree! It''s also a lot of fun to play with friends.
+
+    User 2: It is! I love playing tennis with my friends.
+
+    User 1: It sounds like we have a lot in common. We both love animals, we both love to bake, and we both love sports.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

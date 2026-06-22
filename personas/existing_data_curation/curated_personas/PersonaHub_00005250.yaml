@@ -1,0 +1,17 @@
+id: '00005250'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5250
+persona_description: A chiropractor who specializes in treating temporomandibular disorders (TMD), particularly those associated with bruxism. The chiropractor is highly skilled in identifying the underlying
+  cause of the spasm and using specialized techniques to relax the temporalis muscle, resulting in improved sleep quality and overall health.
+expertise:
+  general_domain_top1pct: healthcare
+  specific_domain_top1pct: chiropractic care
+  general_domain_top01pct: None
+  specific_domain_top01pct: chiropractic care of TMD
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

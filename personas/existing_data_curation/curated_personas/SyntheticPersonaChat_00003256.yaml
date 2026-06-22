@@ -1,0 +1,84 @@
+id: '00003256'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3256
+data:
+  user 1 personas: 'My husband is a lawyer.
+
+    I have 2 kids.
+
+    I love flowers.
+
+    I have 3 dog.'
+  user 2 personas: 'I watch a movie sundays evenings.
+
+    I own a cat.
+
+    I talk in my sleep.
+
+    I like tacos.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies and eat tacos.
+
+    User 1: I love movies too! What''s your favorite kind of movie?
+
+    User 2: I like action movies and comedies.
+
+    User 1: Me too! What''s your favorite action movie?
+
+    User 2: I like The Matrix.
+
+    User 1: That''s a great movie! I love the special effects.
+
+    User 2: Me too! What''s your favorite comedy movie?
+
+    User 1: I like The Hangover.
+
+    User 2: That''s a great movie too! I love the cast.
+
+    User 1: Me too! I''m glad we have similar taste in movies.
+
+    User 2: Me too! I''m also a big fan of tacos.
+
+    User 1: Me too! I love the way they taste.
+
+    User 2: Me too! I love them with all kinds of toppings.
+
+    User 1: Me too! I love them with guacamole, sour cream, and cheese.
+
+    User 2: Those are my favorite toppings too! I also like them with tomatoes and onions.
+
+    User 1: Me too! I love tacos!
+
+    User 2: Me too! They''re my favorite food.
+
+    User 1: What do you like to do besides watch movies and eat tacos?
+
+    User 2: I like to go to the beach and play with my cat.
+
+    User 1: I love the beach! I like to swim and sunbathe.
+
+    User 2: Me too! I also like to play fetch with my cat.
+
+    User 1: I love cats! I have three dogs.
+
+    User 2: That must be a lot of work!
+
+    User 1: It is, but it''s also a lot of fun.
+
+    User 2: I''m sure it is! I''ve always wanted a dog, but I don''t have the time for one.
+
+    User 1: Maybe one day you''ll be able to have one.
+
+    User 2: I hope so!
+
+    User 1: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00005665'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5665
+data:
+  user 1 personas: 'My favorite food is hamburgers.
+
+    I like movies based on comedies.
+
+    I work many hours rehearsing for my show.
+
+    I am a ballet dancer.
+
+    My parents passed away in a car accident.'
+  user 2 personas: 'I now live in new mexico.
+
+    I grew up in nevada.
+
+    I am an orphan.
+
+    I like dogs.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: Where are you from?
+
+    User 2: I''m from Nevada, but I now live in New Mexico.
+
+    User 1: Oh, that''s cool! I''m from New York.
+
+    User 2: Nice! What do you do for a living?
+
+    User 1: I''m a ballet dancer.
+
+    User 2: Oh, that''s really cool! I''ve always wanted to learn ballet.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will! What''s your favorite part about being a ballet dancer?
+
+    User 1: I love the challenge of it. It''s always something new to learn.
+
+    User 2: That makes sense. I can imagine it being really challenging.
+
+    User 1: It is, but it''s also really rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a dog groomer.
+
+    User 1: Oh, that''s really cool! I love dogs.
+
+    User 2: Me too! I''ve always had dogs.
+
+    User 1: That''s awesome! I''ve always wanted a dog, but I don''t have the time for one right now.
+
+    User 2: Maybe you''ll get one someday.
+
+    User 1: I hope so!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, watch TV, and read.
+
+    User 2: I like to do those things too! I also like to go out to eat and travel.
+
+    User 1: Those sound like fun activities.
+
+    User 2: They are'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00004693
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4693
+data:
+  user 1 personas: 'I live in a retirement home.
+
+    I am an old woman.
+
+    My children vist often.
+
+    My grandsons favorite type of cake is chocolate.'
+  user 2 personas: 'I like to bake brownies.
+
+    I love laughing.
+
+    I love wearing flip flops.
+
+    I have freckles.
+
+    My best friend is from tanzania.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Tanzania.
+
+    User 1: Oh, that''s cool! I''ve never been to Tanzania.
+
+    User 2: You should come visit! It''s a beautiful country.
+
+    User 1: I would love to!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to bake, read, and watch movies.
+
+    User 2: I like to bake too! My best friend from Tanzania taught me how to make brownies.
+
+    User 1: That''s great! I love brownies. What''s your favorite kind?
+
+    User 2: I like chocolate brownies with walnuts.
+
+    User 1: That sounds delicious! I''ll have to try that recipe.
+
+    User 2: You should! It''s my favorite.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love to laugh. I think it''s the best medicine.
+
+    User 1: I agree! I love to laugh too. It''s a great way to relieve stress.
+
+    User 2: Me too! I always try to find something funny to laugh about.
+
+    User 1: You seem like a really fun person.
+
+    User 2: Thanks! I like to think so.
+
+    User 1: Well, I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

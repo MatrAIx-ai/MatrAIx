@@ -1,0 +1,78 @@
+id: '00003175'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3175
+data:
+  user 1 personas: 'I love fall and winter.
+
+    I have brown hair.
+
+    I like sleeping in.
+
+    I like eating healthy foods.
+
+    I sometimes wonder why i m not married.'
+  user 2 personas: 'I ve never been to the city.
+
+    I live on a small farm in ohio.
+
+    I play guitar in the local band.
+
+    My name is omar.
+
+    I am the youngest of three brothers.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, nice to meet you. My name is Omar.
+
+    User 1: It''s nice to meet you too, Omar. What do you do for a living?
+
+    User 2: I play guitar in a local band.
+
+    User 1: That''s cool. I''m a musician too. I play guitar and sing.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: I play a lot of different genres, but my favorite is folk music.
+
+    User 2: I love folk music too. What''s your favorite song?
+
+    User 1: My favorite song is "The Weight" by The Band.
+
+    User 2: That''s a great song. I love that one too.
+
+    User 1: Where do you live?
+
+    User 2: I live on a small farm in Ohio.
+
+    User 1: That''s cool. I''ve never been to Ohio.
+
+    User 2: You should come visit sometime. We have some great farms here.
+
+    User 1: I''d love to.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go hiking, camping, and fishing.
+
+    User 2: That sounds like fun. I like to go camping too.
+
+    User 1: Do you have any pets?
+
+    User 2: I have two dogs.
+
+    User 1: That''s nice. I have a cat.
+
+    User 2: Cats are cool.
+
+    User 1: Yeah, they are. I''m glad we met, Omar.
+
+    User 2: Me too. It was nice talking to you.
+
+    User 1: You too. Bye, Omar.
+
+    User 2: Bye, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

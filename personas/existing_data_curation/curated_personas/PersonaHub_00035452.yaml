@@ -1,0 +1,18 @@
+id: '00035452'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35452
+persona_description: A medical professional with expertise in respiratory medicine, specifically focused on the treatment of respiratory infections such as COVID-19. This individual is knowledgeable about
+  the clinical manifestations, pathophysiology, and treatment strategies of COVID-19, and is interested in developing new methods of diagnosis and treatment. They are also interested in the long-term effects
+  of COVID-19 on the respiratory system and the immune system.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: COVID-19
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

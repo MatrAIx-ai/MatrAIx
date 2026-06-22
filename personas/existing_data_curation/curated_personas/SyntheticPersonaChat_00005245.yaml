@@ -1,0 +1,66 @@
+id: '00005245'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5245
+data:
+  user 1 personas: 'I am touring with frank ocean.
+
+    I drive a ferrari.
+
+    I live in japan and own the biggest mansion in the country.
+
+    I am a rapper.'
+  user 2 personas: 'I like fitness.
+
+    My favorite place to travel is jamaica.
+
+    I am traveling to barbados next month.
+
+    My parents own a business that i m now running.
+
+    I am a travel agent.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a travel agent.
+
+    User 1: That sounds interesting. What''s your favorite place to travel?
+
+    User 2: Jamaica is my favorite place to travel.
+
+    User 1: I''ve heard Jamaica is beautiful. Have you ever been to Barbados?
+
+    User 2: I''m going to Barbados next month!
+
+    User 1: That''s awesome! I''ve always wanted to go to Barbados.
+
+    User 2: You should definitely go! It''s a beautiful place.
+
+    User 1: I will! I''m sure you''ll have a great time in Barbados.
+
+    User 2: Thanks! I''m looking forward to it.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to stay active. I run a lot and I work out at the gym.
+
+    User 1: That''s great! I like to stay active too. I go for walks and I play tennis.
+
+    User 2: We should get together and do something active sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! Let''s exchange numbers and we can figure out a time to get together.
+
+    User 1: Sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

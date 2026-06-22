@@ -1,0 +1,76 @@
+id: 00006128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6128
+data:
+  user 1 personas: 'My favorite book is ender s game.
+
+    I like to read.
+
+    I have a garden.
+
+    I grew up in kentucky.
+
+    I am a veteran.'
+  user 2 personas: 'I work at home on my computer.
+
+    I own 10 cats.
+
+    I have long red hair.
+
+    My favorite jello is the blue one.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, garden, and spend time with my cats.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read science fiction, fantasy, and historical fiction.
+
+    User 1: I like science fiction too! What''s your favorite book?
+
+    User 2: My favorite book is Ender''s Game.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What''s your favorite thing about it?
+
+    User 2: I like the way it explores the themes of war and peace. It''s also very thought-provoking.
+
+    User 1: I can see why you like it. It sounds like a great book.
+
+    User 2: It is. I hope you enjoy it if you decide to read it.
+
+    User 1: Thanks! I''m sure I will.
+
+    User 2: Where do you live?
+
+    User 1: I grew up in Kentucky, but I live in California now.
+
+    User 2: Oh, that''s cool. I''ve always wanted to visit California.
+
+    User 1: It''s a great place to live. The weather is nice and there''s a lot to do.
+
+    User 2: What do you like to do for fun in California?
+
+    User 1: I like to go hiking, swimming, and surfing. I also enjoy exploring the different cities and towns.
+
+    User 2: Those all sound like fun things to do.
+
+    User 1: They are! I love living in California.
+
+    User 2: It sounds like a great place to live.
+
+    User 1: It is. I''m glad I moved here.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

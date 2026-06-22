@@ -1,0 +1,20 @@
+id: '00000202'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 202
+persona_description: A meteorologist who specializes in forecasting severe winter weather events, including blizzards, heavy snow, and ice storms. They are experienced in using the above text to provide
+  accurate and timely warnings to the public about the potential impact of winter weather on their lives. They have a deep understanding of the weather patterns and conditions that lead to these severe
+  winter weather events, and can provide detailed and specific forecasts for different regions based on the current weather conditions and climate patterns. They are also skilled at communicating their
+  forecasts to the public through various channels, such as radio, television, and social media, to ensure that the public is aware of the potential risks and how to prepare for and respond to severe winter
+  weather events.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: severe winter weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

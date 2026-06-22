@@ -1,0 +1,64 @@
+id: 00003911
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3911
+data:
+  user 1 personas: 'I am often late for class.
+
+    I wish i was taller so i could reach the cookie jar.
+
+    I want a porsche.
+
+    I lay awake at night so i can watch the stars.'
+  user 2 personas: 'I make straight as.
+
+    I am in the band.
+
+    I am a high school student.
+
+    I eat healthy.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I like to play music, hang out with friends, and eat healthy food.
+
+    User 1: Nice! I like to play music too. What kind of music do you play?
+
+    User 2: I play the trumpet in the school band.
+
+    User 1: That''s awesome! I played the trumpet in the school band too.
+
+    User 2: Really? That''s great! I love playing the trumpet.
+
+    User 1: Me too! It''s a lot of fun.
+
+    User 2: Do you still play the trumpet?
+
+    User 1: Not as much as I used to, but I still play it sometimes.
+
+    User 2: That''s cool. I wish I could play the trumpet more often.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I know, I know. I''ll try to play it more often.
+
+    User 1: Good! I''m glad to hear that.
+
+    User 2: Me too.
+
+    User 1: So, what other things do you like to do for fun?
+
+    User 2: I like to hang out with my friends, go to the movies, and play video games.
+
+    User 1: Nice! I like to do those things too.
+
+    User 2: That''s cool! We should hang out sometime.
+
+    User 1: Yeah, that sounds like fun.
+
+    User 2: Great! I''ll text you my number.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

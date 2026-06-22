@@ -1,0 +1,68 @@
+id: 00003248
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3248
+data:
+  user 1 personas: 'My children vist often.
+
+    I live in a retirement home.
+
+    My grandsons favorite type of cake is chocolate.
+
+    I am an old woman.
+
+    I like to bake for them.'
+  user 2 personas: 'My favorite jello is the blue one.
+
+    I have long red hair.
+
+    I do not eat asparagus.
+
+    I work at home on my computer.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bake, play video games, and watch movies.
+
+    User 1: That sounds like fun! I like to bake too. What''s your favorite thing to bake?
+
+    User 2: I love baking cakes, especially chocolate cakes.
+
+    User 1: That''s great! I love chocolate cake too. I''m an old woman who lives in a retirement home, and my grandchildren love chocolate cake. I like to bake it for them.
+
+    User 2: That''s so sweet! I''m sure they love it.
+
+    User 1: They do! They always ask me to make it for them.
+
+    User 2: I''m glad you have such a close relationship with your grandchildren.
+
+    User 1: Thank you. I am too.
+
+    User 2: What kind of work do you do?
+
+    User 1: I work at home on my computer.
+
+    User 2: What do you do?
+
+    User 1: I''m a writer.
+
+    User 2: That sounds like a fun job.
+
+    User 1: It is! I love getting to tell stories and create characters.
+
+    User 2: I''m sure you''re very good at it.
+
+    User 1: Thank you! I try my best.
+
+    User 2: It sounds like you have a lot of interests.
+
+    User 1: I do! I like to keep busy.
+
+    User 2: That''s good! I think it''s important to have a lot of interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

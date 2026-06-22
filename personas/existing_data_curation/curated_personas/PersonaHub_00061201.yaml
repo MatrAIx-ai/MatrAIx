@@ -1,0 +1,18 @@
+id: '00061201'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61201
+persona_description: A Windows administrator who is familiar with the Server Message Block (SMB) protocol and its implementation on various systems, including Windows and other operating systems like Linux
+  and macOS. They have experience with configuring and managing SMB services and applications, and are knowledgeable about the differences between SMB over NetBIOS (port 139) and SMB over TCP/IP (port 445).
+  They are also familiar with the relationship between SMB and NetBIOS, and understand the importance of SMB in providing shared access to files, printers, and other resources over a network.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: network protocols
+  general_domain_top01pct: None
+  specific_domain_top01pct: SMB protocol
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

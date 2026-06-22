@@ -1,0 +1,58 @@
+id: 00007689
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7689
+data:
+  user 1 personas: 'Now i am a fixture on a weekly telenovela.
+
+    I made my first movie when i was 18.
+
+    I am an actor.
+
+    I starred in television commercials when i was young.
+
+    I have been acting since i was ten years old.'
+  user 2 personas: 'I m an amazing dancer.
+
+    I have blonde hair that reaches my knees.
+
+    I volunteer at animal shelters.
+
+    Country music makes me cringe.
+
+    I m a terrible speller.'
+  Best Generated Conversation: 'User 1: Hello, I''m an actor.
+
+    User 2: Hello, I''m a dancer and volunteer at animal shelters.
+
+    User 1: That''s great! I love animals too.
+
+    User 2: Me too! I volunteer at my local animal shelter every weekend.
+
+    User 1: That''s awesome! I wish I had the time to volunteer.
+
+    User 2: You should! It''s really rewarding.
+
+    User 1: I''ll definitely look into it.
+
+    User 2: You should! There are so many animals that need our help.
+
+    User 1: I know, and I feel terrible for them.
+
+    User 2: Me too. But we can make a difference.
+
+    User 1: We can!
+
+    User 2: We should go volunteer together sometime.
+
+    User 1: That would be so much fun!
+
+    User 2: Great! I''ll see you then.
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

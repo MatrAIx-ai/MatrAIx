@@ -1,0 +1,58 @@
+id: '00001511'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1511
+data:
+  user 1 personas: 'I am a lumberjack.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I love to cut down trees.
+
+    I love to fish.
+
+    I eat lots of pancakes and syrup.'
+  user 2 personas: 'I work as a waitress.
+
+    I like to draw.
+
+    I have 5 brothers and sisters.
+
+    I ride a bike.
+
+    I live in north dakota.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to draw, ride my bike, and spend time with my family.
+
+    User 1: That sounds great! I like to cut down trees, fish, and eat lots of pancakes and syrup.
+
+    User 2: That''s interesting! I''ve never met a lumberjack before.
+
+    User 1: I''m not sure if I would call myself a lumberjack, but I do love working with trees.
+
+    User 2: What do you like about cutting down trees?
+
+    User 1: It''s a lot of fun! I love the feeling of being outdoors and working with my hands. And I also love the challenge of felling a tree.
+
+    User 2: That sounds like a lot of fun! I''m not sure if I could do that, but I''m glad you enjoy it.
+
+    User 1: Thanks! What do you like about drawing?
+
+    User 2: I love being able to express myself creatively. I also like the challenge of drawing something that looks realistic.
+
+    User 1: That''s great! I''m not very good at drawing, but I enjoy it when I try.
+
+    User 2: I think everyone is good at drawing in their own way. It doesn''t matter if you''re not perfect, as long as you enjoy it.
+
+    User 1: You''re right! I should just try to relax and enjoy myself when I draw.
+
+    User 2: That''s the spirit!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

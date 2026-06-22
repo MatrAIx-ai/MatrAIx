@@ -1,0 +1,70 @@
+id: '00002722'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2722
+data:
+  user 1 personas: 'I am currently single.
+
+    I am a graphic designer.
+
+    I love to paint.
+
+    I enjoy walks on the beach.'
+  user 2 personas: 'I write in my spare time.
+
+    I enjoy video games.
+
+    Pop is my favorite music.
+
+    I work at a hotel overnight.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (USER 1''s name).
+
+    User 2: Hello! I''m (USER 2''s name).
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I like to write in my spare time. I also enjoy video games and pop music.
+
+    User 1: That''s cool! I''m a graphic designer and I love to paint. I also enjoy walks on the beach.
+
+    User 2: Oh, that''s awesome! I love to paint too. I''ve never been to the beach, but I''ve always wanted to go.
+
+    User 1: You should definitely go! It''s so relaxing.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome. So, what kind of things do you like to write about?
+
+    User 2: I like to write about my personal experiences, my thoughts and feelings, and my observations of the world around me.
+
+    User 1: That''s really cool! I love to read personal essays. I feel like I get to know the author better when I read their personal experiences.
+
+    User 2: I''m glad you like them! I''m always happy when someone enjoys my writing.
+
+    User 1: So, what are some of your favorite video games?
+
+    User 2: I like a lot of different video games, but my favorites are probably Zelda, Mario, and Animal Crossing.
+
+    User 1: Oh, those are all great games! I love the Zelda series.
+
+    User 2: Me too! It''s so much fun to explore the different worlds and solve the puzzles.
+
+    User 1: I agree! And the music is always so good.
+
+    User 2: Yes, it is! The music in Zelda is always so calming and atmospheric.
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I work at a hotel overnight. It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: That''s cool! I''ve never worked at a hotel before.
+
+    User 2: It''s definitely a different experience. You get to meet a lot of interesting people.
+
+    User 1: I bet! I''m sure it''s a lot of fun talking to all the guests.
+
+    User 2: It is! It''s always nice to meet new people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

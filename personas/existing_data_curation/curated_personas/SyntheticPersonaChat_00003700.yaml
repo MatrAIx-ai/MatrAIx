@@ -1,0 +1,84 @@
+id: '00003700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3700
+data:
+  user 1 personas: 'I just got a new sweater.
+
+    I also eat too much french fries.
+
+    I cannot do math.
+
+    I smell like french fries.'
+  user 2 personas: 'I have played since i was 4 years old.
+
+    I am a violinist.
+
+    I am gong to adopt a dog very soon.
+
+    I recently discovered a new love for indian food.
+
+    My mother was a nurse.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just practicing my violin.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to play the violin.
+
+    User 2: It''s a lot of fun! You should definitely give it a try.
+
+    User 1: Maybe I will.
+
+    User 2: So, what''s new with you?
+
+    User 1: Not much, just got a new sweater.
+
+    User 2: Oh, that''s nice! What color is it?
+
+    User 1: It''s a maroon color.
+
+    User 2: Maroon is a good color.
+
+    User 1: Thanks. I also just got a new job.
+
+    User 2: Oh, congratulations! What do you do?
+
+    User 1: I''m a data scientist.
+
+    User 2: Oh, that''s cool! I''ve always been interested in data science.
+
+    User 1: It''s a lot of fun! It''s basically using math and statistics to solve problems.
+
+    User 2: That sounds really interesting.
+
+    User 1: It is. I''m really enjoying it.
+
+    User 2: Well, that''s great. I''m glad you''re happy with your new job.
+
+    User 1: Thanks. I am.
+
+    User 2: So, what are you doing for dinner tonight?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to make some Indian food. I just recently discovered a new love for it.
+
+    User 1: Oh, that sounds good. I love Indian food.
+
+    User 2: It''s so good. I''m going to make some tikka masala.
+
+    User 1: That''s my favorite!
+
+    User 2: Well, if you''re interested, you''re welcome to come over and have some.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll start cooking.
+
+    User 1: Perfect. See you soon.
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

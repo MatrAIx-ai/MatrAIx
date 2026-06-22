@@ -1,0 +1,62 @@
+id: 00008373
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8373
+data:
+  user 1 personas: 'I work from home doing various jobs on the internet.
+
+    I enjoy playing guitar and video games.
+
+    I am in a very intimate and loving relationship.
+
+    I have a dog that has behavioral issues.'
+  user 2 personas: 'I love to eat shrimp and lobster.
+
+    My favorite drink is iced coffee.
+
+    I m in a jazz band and play the saxophone.
+
+    I vacation along lake michigan every summer.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you do for a living?
+
+    User 2: I''m a musician. I play the saxophone in a jazz band.
+
+    User 1: That''s cool! I love jazz music.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: What''s your favorite type of jazz?
+
+    User 2: I like all kinds of jazz, but I especially like bebop.
+
+    User 1: Me too! I love the improvisation and the energy.
+
+    User 2: Me too! It''s so much fun to play.
+
+    User 1: Where do you guys usually play?
+
+    User 2: We play at a lot of different places, but we usually play at a club called The Jazz Standard in New York City.
+
+    User 1: I''ve heard of that club! It''s supposed to be really good.
+
+    User 2: It is! It''s one of my favorite places to play.
+
+    User 1: Do you have any upcoming shows?
+
+    User 2: Yes, we have a show at The Jazz Standard next weekend.
+
+    User 1: Oh, cool! I might check it out.
+
+    User 2: I hope you do! It would be great to see you there.
+
+    User 1: I''ll definitely try to make it.
+
+    User 2: Great! I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

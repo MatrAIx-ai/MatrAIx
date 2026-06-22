@@ -1,0 +1,74 @@
+id: 00000797
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 797
+data:
+  user 1 personas: 'I love to cook.
+
+    I like to fish.
+
+    I love dogs.
+
+    My dad was a carsalesman.'
+  user 2 personas: 'I am deathly terrified of heights.
+
+    I like to do all my shopping at walmart.
+
+    I prefer to live where the weathers cold.
+
+    Winters my favorite time of the year.
+
+    I am really excited to see how game of thrones ends.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, fish, and play with my dogs.
+
+    User 1: Oh, that''s cool. I like to cook too. What''s your favorite dish to make?
+
+    User 2: I love to make pasta. I''m really good at making homemade pasta.
+
+    User 1: That''s awesome. I''ve always wanted to try making homemade pasta.
+
+    User 2: You should give it a try! It''s not as hard as it looks.
+
+    User 1: I might just do that. Thanks for the tip.
+
+    User 2: No problem. What kind of fish do you like to fish for?
+
+    User 1: I like to fish for trout. They''re really good to eat.
+
+    User 2: Trout are delicious. I''ve never had the chance to catch one, though.
+
+    User 1: You should! They''re not too hard to catch.
+
+    User 2: Maybe I will. Thanks for the suggestion.
+
+    User 1: No problem. I''m always happy to talk about fishing.
+
+    User 2: So, do you have any dogs?
+
+    User 1: Yes, I have two dogs. They''re both Labrador Retrievers.
+
+    User 2: Labs are great dogs. I''ve always wanted one.
+
+    User 1: They''re the best dogs ever. I love them to death.
+
+    User 2: I can see why. They look like they''re really sweet.
+
+    User 1: They are. They''re the best companions you could ask for.
+
+    User 2: That''s great. I''m glad you have such great dogs.
+
+    User 1: Me too. They make my life complete.
+
+    User 2: I can imagine. Dogs are amazing creatures.
+
+    User 1: They really are. I''m so grateful for them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

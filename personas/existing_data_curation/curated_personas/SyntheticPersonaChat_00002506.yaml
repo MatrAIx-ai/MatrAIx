@@ -1,0 +1,78 @@
+id: '00002506'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2506
+data:
+  user 1 personas: 'I like to create art.
+
+    I love to work in my garden.
+
+    I love to eat sushi and pizza.
+
+    My favorite band is ween.'
+  user 2 personas: 'I play guitar in the local band.
+
+    I am the youngest of three brothers.
+
+    I have never been to the city.
+
+    My name is omar.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is Ween.
+
+    User 1: Oh, I love them! I''ve seen them live a few times.
+
+    User 2: That''s awesome! I''ve never been to a concert before.
+
+    User 1: You should go! They''re a great live band.
+
+    User 2: Maybe I will.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play guitar in my band.
+
+    User 1: Oh, that''s cool! What kind of music do you play?
+
+    User 2: We play a mix of rock, blues, and country.
+
+    User 1: That sounds like fun.
+
+    User 2: It is. We''re playing a show at the local bar this weekend.
+
+    User 1: Oh, I might go see you!
+
+    User 2: That would be great!
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to garden and play video games.
+
+    User 1: That''s cool. I love to garden too.
+
+    User 2: What kind of plants do you have?
+
+    User 1: I have a lot of flowers, vegetables, and herbs.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I can imagine.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure yet either. Maybe we could hang out?
+
+    User 2: Sure, that sounds like fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

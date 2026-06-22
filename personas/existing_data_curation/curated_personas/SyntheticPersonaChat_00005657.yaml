@@ -1,0 +1,54 @@
+id: '00005657'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5657
+data:
+  user 1 personas: 'My favorite band is nickelback.
+
+    I am catholic.
+
+    I just started working as a librarian.
+
+    I don t know how to swim.'
+  user 2 personas: 'My mom is the best baker in my family.
+
+    I am in my second year of medical school.
+
+    My favorite thing to do is watch old movies.
+
+    I have two children but i am divorced.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there! How are you?
+
+    User 1: I''m doing well, thanks! I just started working as a librarian.
+
+    User 2: That sounds like a great job! I''m in my second year of medical school.
+
+    User 1: That''s awesome! I''ve always been fascinated by medicine.
+
+    User 2: Me too! It''s a really challenging but rewarding career.
+
+    User 1: I''m sure it is. I''m not sure what I want to do with my life yet.
+
+    User 2: Well, you have plenty of time to figure that out. Just keep exploring your interests and you''ll eventually find something you love.
+
+    User 1: Thanks, that''s good advice. What''s your favorite thing about medical school?
+
+    User 2: I love learning about how the human body works. It''s amazing how complex and amazing it is.
+
+    User 1: I agree! It''s so fascinating. What''s your least favorite thing about medical school?
+
+    User 2: The long hours. It can be tough to stay motivated when you''re working so many hours.
+
+    User 1: I can imagine. But it''s worth it when you finally become a doctor.
+
+    User 2: Definitely! I''m excited to start working with patients one day.
+
+    User 1: I''m sure you''ll be a great doctor. You seem very passionate about it.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

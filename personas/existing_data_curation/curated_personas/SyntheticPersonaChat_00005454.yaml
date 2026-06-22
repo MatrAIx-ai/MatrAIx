@@ -1,0 +1,54 @@
+id: '00005454'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5454
+data:
+  user 1 personas: 'My mother is allergic to dogs.
+
+    I work as a veterinarian s assistant.
+
+    I have 2 dogs as pets.
+
+    I leave the dogs home when i visit my parents.'
+  user 2 personas: 'I live on a pig farm.
+
+    I wish that i lived in the city.
+
+    I have allergies.
+
+    I dislike animals.
+
+    I am a vegetarian.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: I work as a veterinarian''s assistant.
+
+    User 2: Oh wow, that''s really cool! I''m a vegetarian.
+
+    User 1: Oh, that''s interesting! I have two dogs as pets, but I have to leave them at home when I visit my parents because my mother is allergic to dogs.
+
+    User 2: Oh no! That''s too bad. I live on a pig farm, so I''m surrounded by animals all the time.
+
+    User 1: That sounds like it could be really annoying.
+
+    User 2: It can be, but I''m used to it now.
+
+    User 1: Do you ever want to move to the city?
+
+    User 2: I do sometimes, but I like living on the farm too.
+
+    User 1: That''s fair. I guess it''s all about what you''re used to.
+
+    User 2: Exactly.
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00035725'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35725
+persona_description: An explosives investigator who specializes in sniffing out homemade explosives in bomb blasts and collecting bomb fragments to reassemble the device. They use techniques like ion mobility
+  spectrometry, color tests, and cross-referencing with databases to identify the type of explosive and the origin of the device. They are also skilled in preserving and detecting fingerprints and DNA evidence
+  on IEDs.
+expertise:
+  general_domain_top1pct: Forensic Science
+  specific_domain_top1pct: Explosives Investigation
+  general_domain_top01pct: None
+  specific_domain_top01pct: Bomb Disposal and Explosives Analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

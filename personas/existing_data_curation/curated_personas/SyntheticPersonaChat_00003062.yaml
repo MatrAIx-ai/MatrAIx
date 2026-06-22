@@ -1,0 +1,52 @@
+id: '00003062'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3062
+data:
+  user 1 personas: 'I grew up by the ocean.
+
+    I love to travel.
+
+    Dogs are my favorite animal.
+
+    I like to eat pizza.'
+  user 2 personas: 'I play the guitar.
+
+    I write short films.
+
+    I am a lesbian.
+
+    My father recently had a heart attack.'
+  Best Generated Conversation: 'User 1: I love to travel. I grew up by the ocean, so I''ve always been drawn to water. I''ve been to a lot of different countries, and I love seeing new places and meeting
+    new people.
+
+    User 2: That''s great! I love to travel too. I''ve only been to a few countries, but I''m always looking for new places to go. I love experiencing different cultures and trying new things.
+
+    User 1: Yeah, that''s the best part about traveling. You get to learn so much about different cultures and ways of life.
+
+    User 2: I agree. It''s really eye-opening.
+
+    User 1: So, what''s your favorite place you''ve ever traveled to?
+
+    User 2: That''s a hard question. I have a few favorites. I really love Japan. The food is amazing, the people are so friendly, and the culture is so rich. I also love Italy. The food is amazing, the
+    history is fascinating, and the scenery is beautiful.
+
+    User 1: Those sound like amazing places. I''ve always wanted to go to Japan.
+
+    User 2: You should! It''s definitely worth it.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what are some of your favorite things to do when you travel?
+
+    User 1: I love to explore new places. I like to walk around and see the sights, and I love to try new foods. I also like to meet new people and learn about their culture.
+
+    User 2: That sounds like a lot of fun. I''m the same way. I love to explore new places and try new things.
+
+    User 1: It''s the best way to experience a new place.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

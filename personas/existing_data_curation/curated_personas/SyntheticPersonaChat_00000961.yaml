@@ -1,0 +1,84 @@
+id: 00000961
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 961
+data:
+  user 1 personas: 'I drive a prius.
+
+    I cannot get enough ginger snaps.
+
+    I like hiking up volcanoes.
+
+    Sometimes , i like to relieve myself when on roses.'
+  user 2 personas: 'I like crab dipped in butter.
+
+    I like imagine dragons.
+
+    I run six miles a day.
+
+    I like to fly model airplanes.
+
+    I like to kayak.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, fly model airplanes, and kayak.
+
+    User 1: That''s cool. I like to hike, drive my Prius, and eat ginger snaps.
+
+    User 2: I''ve never been hiking, but I''ve heard it''s fun. I love ginger snaps!
+
+    User 1: They''re the best! What''s your favorite kind?
+
+    User 2: I like the ones with chocolate chips.
+
+    User 1: Those are my favorite too!
+
+    User 2: What kind of car do you drive?
+
+    User 1: I drive a Prius. It''s a hybrid car that gets really good gas mileage.
+
+    User 2: I''ve heard good things about those cars.
+
+    User 1: They''re great! I love not having to worry about gas.
+
+    User 2: That''s a good point.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a software engineer.
+
+    User 1: That''s cool. I''m still in school.
+
+    User 2: Oh, what are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: That''s awesome! I have a friend who''s also studying computer science.
+
+    User 1: That''s cool! I''m sure you''ve given him a lot of advice.
+
+    User 2: I try to help him out as much as I can.
+
+    User 1: That''s great. I''m sure he appreciates it.
+
+    User 2: I hope so.
+
+    User 1: So, what''s your favorite song by Imagine Dragons?
+
+    User 2: I like "Radioactive." It''s a really good song.
+
+    User 1: I like that song too! It''s really catchy.
+
+    User 2: I know, right?
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

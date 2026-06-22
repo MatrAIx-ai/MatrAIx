@@ -1,0 +1,56 @@
+id: '00005544'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5544
+data:
+  user 1 personas: 'I have a beautiful rose garden.
+
+    I have a cat named pickles.
+
+    My parents met at woodstock.
+
+    I love starbucks coffee.'
+  user 2 personas: 'I once saw the easter bunny hiding behind my closet door.
+
+    I love watching game of thrones.
+
+    I don t like the song sweet home alabama.
+
+    I grew up in alabama.'
+  Best Generated Conversation: 'User 1: My parents met at Woodstock.
+
+    User 2: That''s so cool! I grew up in Alabama.
+
+    User 1: Oh, really? What was that like?
+
+    User 2: It was pretty great. I loved going to the beach and fishing.
+
+    User 1: That sounds fun. I''ve never been to Alabama.
+
+    User 2: You should go sometime! It''s a beautiful state.
+
+    User 1: Maybe I will. I love roses. Do you have any in your garden?
+
+    User 2: No, I don''t have a garden. I''m not very good with plants.
+
+    User 1: I''m sorry to hear that. I have a beautiful rose garden. I love taking care of them.
+
+    User 2: That sounds like fun. I''m glad you have a hobby that you enjoy.
+
+    User 1: Thanks. I also love watching Game of Thrones. Have you seen it?
+
+    User 2: Yes, I have! I love it too. It''s so good.
+
+    User 1: Me too. I''m really excited for the new season.
+
+    User 2: Me too! I''m not sure what to expect, but I''m sure it will be great.
+
+    User 1: I''m sure it will be too. I''m just glad it''s not over yet.
+
+    User 2: Me too. I''m going to miss it when it''s over.
+
+    User 1: Me too. But I''m sure it will be worth the wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

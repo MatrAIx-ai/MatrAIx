@@ -1,0 +1,56 @@
+id: '00004765'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4765
+data:
+  user 1 personas: 'I want to get married again.
+
+    I am angry at my coworker.
+
+    I wish my boyfriend did not want an open relationship.
+
+    I am not going to go the extra mile anymore.
+
+    I have 10 years experience in our industry , yet she gets promoted.'
+  user 2 personas: 'I play the violin.
+
+    I have a pomeranian.
+
+    My older sister plays clarinet.
+
+    My mom is a music teacher at the elementary school.'
+  Best Generated Conversation: 'User 1: I''m so frustrated with my job right now. I have 10 years experience and she gets promoted.
+
+    User 2: That''s so unfair! What do you do?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, that''s a tough field. Are you looking for a new job?
+
+    User 1: I''m not sure yet. I''m just so angry right now.
+
+    User 2: I know how you feel. I''ve been there before.
+
+    User 1: It''s so hard to work with someone who is so much less experienced than me and gets rewarded for it.
+
+    User 2: It''s definitely frustrating. I would be angry too.
+
+    User 1: I don''t know what to do.
+
+    User 2: Well, you could always talk to your boss about it.
+
+    User 1: I don''t know if that would do any good.
+
+    User 2: It''s worth a try. You could also start looking for a new job.
+
+    User 1: I''m not sure if I''m ready for that.
+
+    User 2: Well, you don''t have to do anything right now. You can just take some time to think about it.
+
+    User 1: Thanks. I appreciate your advice.
+
+    User 2: You''re welcome. I''m always here for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

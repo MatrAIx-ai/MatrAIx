@@ -1,0 +1,58 @@
+id: 00008295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8295
+data:
+  user 1 personas: 'My mother and father are both in the church choir.
+
+    I played in a band for 17 years.
+
+    I own my own music store.
+
+    I am an animal rights activist.'
+  user 2 personas: 'My family is very important to me.
+
+    My brothers work with me.
+
+    I take pride in my job managing the restaurant.
+
+    I work all the time.'
+  Best Generated Conversation: 'User 1: I''m a huge animal rights activist. I''ve been working on this cause for over 20 years.
+
+    User 2: That''s great! I love animals too. I''m a vegetarian, and I don''t eat meat or dairy products.
+
+    User 1: That''s amazing! I have two dogs and a cat. They''re my best friends.
+
+    User 2: I have a dog too. He''s a golden retriever.
+
+    User 1: I love golden retrievers! They''re so friendly and loyal.
+
+    User 2: They are! He''s the best dog ever.
+
+    User 1: What''s your favorite thing about working in a restaurant?
+
+    User 2: I love the atmosphere. It''s always so busy and exciting.
+
+    User 1: I can imagine! I''ve never worked in a restaurant, but I''ve always wanted to.
+
+    User 2: It''s definitely a lot of work, but it''s also a lot of fun.
+
+    User 1: I''m sure it is. I''m really impressed with how well you manage everything.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite dish on the menu?
+
+    User 2: I love the lasagna. It''s my signature dish.
+
+    User 1: I''ll have to try it next time I come in.
+
+    User 2: You won''t be disappointed.
+
+    User 1: Thanks for talking to me! It was nice meeting you.
+
+    User 2: You too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

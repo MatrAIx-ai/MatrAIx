@@ -1,0 +1,72 @@
+id: 00005870
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5870
+data:
+  user 1 personas: 'I was adopted when i was a baby.
+
+    My adopted dad works at hp.
+
+    My mom stays at home.
+
+    The future scares me.
+
+    I have six siblings.'
+  user 2 personas: 'I escaped and later became a carpenter.
+
+    My favorite color is red.
+
+    I was the first born child.
+
+    I was a slave for 10 years.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m adopted.
+
+    User 2: Me too!
+
+    User 1: Cool! What''s your favorite color?
+
+    User 2: Red.
+
+    User 1: Mine too!
+
+    User 2: What''s your story?
+
+    User 1: I was adopted when I was a baby.
+
+    User 2: Me too! I was born in China and adopted by an American couple when I was 3 years old.
+
+    User 1: That''s cool! I was born in the United States.
+
+    User 2: Where did you grow up?
+
+    User 1: I grew up in a small town in the Midwest.
+
+    User 2: Me too! I grew up in a small town in Iowa.
+
+    User 1: What''s your family like?
+
+    User 2: I have one older brother and one younger sister.
+
+    User 1: Me too! I have two older sisters and one younger brother.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: Me too! I love video games and movies. I''m not much of a reader, though.
+
+    User 1: We should hang out sometime!
+
+    User 2: That would be fun! I''m free on Saturday.
+
+    User 1: Me too! Let''s go to the movies.
+
+    User 2: Sounds great! I''ll see you there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

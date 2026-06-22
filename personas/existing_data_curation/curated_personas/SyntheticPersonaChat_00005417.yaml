@@ -1,0 +1,68 @@
+id: '00005417'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5417
+data:
+  user 1 personas: 'My favorite band is hop along.
+
+    I am a musician.
+
+    I have been working the same job for two years.
+
+    My father used to be a mechanic.'
+  user 2 personas: 'I have a poodle named nanette.
+
+    I actually like wearing suits and ties.
+
+    I work on wall street.
+
+    I love smooth jazz.
+
+    I live in new york city.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. I''m a musician.
+
+    User 2: Hi, I''m [user 2]. I work on Wall Street.
+
+    User 1: What kind of music do you like?
+
+    User 2: I love smooth jazz.
+
+    User 1: Cool, me too! What are some of your favorite bands?
+
+    User 2: I like Kenny G, Dave Koz, and Grover Washington Jr.
+
+    User 1: Nice! I like them too. What''s your favorite song by Kenny G?
+
+    User 2: I love "Songbird." It''s so relaxing.
+
+    User 1: That''s a great song. I love it too. What''s your favorite song by Dave Koz?
+
+    User 2: I like "Lover''s Holiday." It''s so romantic.
+
+    User 1: That''s a great song too. I love it. What''s your favorite song by Grover Washington Jr.?
+
+    User 2: I like "Just the Two of Us." It''s such a classic.
+
+    User 1: That''s a great song too. I love it.
+
+    User 2: So, what do you do for fun besides playing music?
+
+    User 1: I like to go for walks, read, and watch movies.
+
+    User 2: I like to go for walks too, but I don''t read as much. I''m more of a TV watcher.
+
+    User 1: What kind of TV shows do you like?
+
+    User 2: I like reality shows, comedies, and dramas.
+
+    User 1: I like reality shows too, but I don''t watch as much comedy. I prefer dramas.
+
+    User 2: I like dramas too. What''s your favorite show?
+
+    User 1: I like "The Good Wife." It''s a really good show.
+
+    User 2: I''ve heard good things about it. I''ll have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

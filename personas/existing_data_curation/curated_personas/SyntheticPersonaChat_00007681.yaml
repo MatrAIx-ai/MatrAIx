@@ -1,0 +1,66 @@
+id: 00007681
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7681
+data:
+  user 1 personas: 'My mother use to read me bed time stories.
+
+    I am allergic to seafood.
+
+    I drink hot chocolate during the winter.
+
+    My father worked 11 hours a day.
+
+    I own a iphone 7.'
+  user 2 personas: 'I love to shop on weekends.
+
+    I am a woman who wears a size 12.
+
+    I have never been on a cruise ship.
+
+    I am planning a trip to europe.
+
+    I go to dance lessons with my boyfriend.'
+  Best Generated Conversation: 'User 1: What do you do for fun on the weekends?
+
+    User 2: I love to shop!
+
+    User 1: Really? Me too! I like to go to the mall and try on new clothes.
+
+    User 2: I love doing that too! What size are you?
+
+    User 1: I''m a size 10. What about you?
+
+    User 2: I''m a size 12.
+
+    User 1: Oh, that''s cool! I''m always looking for new friends to go shopping with.
+
+    User 2: Me too! It''s so much more fun to shop with someone else.
+
+    User 1: What are some of your favorite stores?
+
+    User 2: I love Nordstrom and Saks Fifth Avenue.
+
+    User 1: Me too! I also love Neiman Marcus.
+
+    User 2: I''ve never been to Neiman Marcus.
+
+    User 1: You should go! It''s amazing.
+
+    User 2: I will! I''m planning a trip to Europe soon, and I''m going to check out Neiman Marcus in London.
+
+    User 1: That''s so exciting! I''ve never been to Europe.
+
+    User 2: You should go! It''s amazing.
+
+    User 1: I''m planning on it!
+
+    User 2: Great! Maybe we can go shopping together when I get back.
+
+    User 1: That would be so much fun!
+
+    User 2: I''m looking forward to it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

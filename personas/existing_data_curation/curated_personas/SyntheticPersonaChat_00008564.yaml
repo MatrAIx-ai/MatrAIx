@@ -1,0 +1,66 @@
+id: 00008564
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8564
+data:
+  user 1 personas: 'I am a talented singer and have won several competitions.
+
+    I am a painter and love to create art.
+
+    I am an aspiring writer.
+
+    I have a set of identical twin brothers.'
+  user 2 personas: 'I like video games.
+
+    I have blonde hair.
+
+    My favorite food is macaroni and cheese.
+
+    I love ballet.
+
+    My favorite color is purple.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What are your hobbies?
+
+    User 2: I like to play video games, read, and dance ballet.
+
+    User 1: Oh, cool! I like to play video games too. What''s your favorite game?
+
+    User 2: I like to play a lot of different games, but my favorite is probably Super Mario Odyssey.
+
+    User 1: That''s a great game! I''ve played it a few times.
+
+    User 2: What other games do you like to play?
+
+    User 1: I also like to play The Legend of Zelda series, Pokémon, and Animal Crossing.
+
+    User 2: I''ve heard good things about Animal Crossing. I''ve never played it before.
+
+    User 1: It''s a lot of fun! You should try it sometime.
+
+    User 2: I will! What else do you like to do for fun?
+
+    User 1: I also like to paint and write. I''m an aspiring writer, and I''m hoping to get my first book published someday.
+
+    User 2: That''s great! I''m sure you''ll do it. I''m not very creative, so I don''t do much writing or painting.
+
+    User 1: That''s okay! Everyone has their own talents.
+
+    User 2: Thanks. I like to think that I''m pretty good at dancing.
+
+    User 1: I''m sure you are! What kind of dance do you do?
+
+    User 2: I mostly do ballet, but I also like to do jazz and hip hop.
+
+    User 1: That''s great! I''ve always wanted to try ballet, but I''m not very coordinated.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: Maybe I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

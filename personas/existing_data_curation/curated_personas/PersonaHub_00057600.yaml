@@ -1,0 +1,20 @@
+id: '00057600'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57600
+persona_description: A user who is familiar with MapServer and its features, particularly in the context of layering, class management, and rendering. They are comfortable with using regular expressions,
+  logical expressions, and string functions to build complex tests and create labels and legends. They are also skilled in using the GROUP and KEYIMAGE keywords to group and organize classes, and in using
+  the MAXSCALEDENOM and MINSCALEDENOM keywords to set the minimum and maximum scales for rendering. They are likely to have experience with rendering maps at various scales and using the LAYER CLASSITEM
+  parameter to define the attribute to use for comparison. They may also be familiar with using the OUTLINECOLOR keyword to set the color of the outline of a class, and with using the STATUS keyword to
+  set the display status of a class.
+expertise:
+  general_domain_top1pct: GIS/Geospatial Technology
+  specific_domain_top1pct: MapServer Configuration and Customization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

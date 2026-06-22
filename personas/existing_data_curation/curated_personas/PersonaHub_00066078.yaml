@@ -1,0 +1,18 @@
+id: 00066078
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 66078
+persona_description: A programmer who is interested in learning about the differences in byte ordering between different systems and the implications of these differences when communicating over a network.
+  This persona is likely to be interested in programming and networking, and may have experience with both Python and C++ programming languages. They are seeking to understand the nuances of socket programming
+  and how they can be used to communicate with machines that interpret and store data in incompatible ways.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Networking
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

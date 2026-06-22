@@ -1,0 +1,72 @@
+id: 00004980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4980
+data:
+  user 1 personas: 'I fix airplanes for a living.
+
+    I drive junk cars that no one else wants.
+
+    I think if i work hard enough i can fix the world.
+
+    I am never still.
+
+    I prefer vinyl records to any other music recording format.'
+  user 2 personas: 'I have red hair.
+
+    I work at a retail store.
+
+    I enjoy walking on the beach.
+
+    I live close to the coast.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you do for a living?
+
+    User 2: I work at a retail store.
+
+    User 1: Oh, cool! I''ve always thought it would be fun to work in retail.
+
+    User 2: It can be fun, but it can also be very stressful.
+
+    User 1: I can imagine. What do you like to do for fun?
+
+    User 2: I enjoy walking on the beach, reading, and listening to music.
+
+    User 1: Oh, nice! I like to do those things too.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but my favorite genre is probably rock.
+
+    User 2: Oh, nice! I like rock too. What are some of your favorite bands?
+
+    User 1: I like a lot of bands, but my favorite bands are probably The Beatles, Led Zeppelin, and The Rolling Stones.
+
+    User 2: Oh, nice! I like those bands too. What kind of books do you like to read?
+
+    User 1: I like all kinds of books, but my favorite genre is probably sci-fi.
+
+    User 2: Oh, nice! I like sci-fi too. What are some of your favorite sci-fi books?
+
+    User 1: I like a lot of sci-fi books, but my favorite books are probably Ender''s Game, Dune, and The Martian.
+
+    User 2: Oh, nice! I''ve heard of those books. I''ve never read them, but I''ve heard good things about them.
+
+    User 1: You should check them out. They''re really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

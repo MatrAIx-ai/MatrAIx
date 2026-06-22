@@ -1,0 +1,56 @@
+id: 00005887
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5887
+data:
+  user 1 personas: 'I work in the office , 9 till 5.
+
+    This summer i went on vacation to italy.
+
+    I live in a big city.
+
+    Sometimes i go to yoga classes.
+
+    I like italian cusine.'
+  user 2 personas: 'My favorite hobby is chess.
+
+    I just dyed my hair hot pink with purple highlights.
+
+    Not a day goes by that i don t drink four mountain dews.
+
+    I enjoy movies about aliens invading the earth.
+
+    Sometimes , i have sword fights with strangers in the park.'
+  Best Generated Conversation: 'User 1: I''m so glad I found someone to talk to about my vacation to Italy! It was amazing!
+
+    User 2: I''m glad I could be here for you! I''ve always wanted to go to Italy, it sounds like a beautiful place.
+
+    User 1: It was! I went to Rome, Florence, and Venice. They were all so amazing.
+
+    User 2: What was your favorite part of the trip?
+
+    User 1: I think my favorite part was eating all the delicious food! The pizza in Rome was incredible!
+
+    User 2: I love pizza! I''m sure it was amazing. What else did you do while you were there?
+
+    User 1: I went to a lot of museums and historical sites. I also did a lot of shopping. I had a great time!
+
+    User 2: That sounds like an amazing trip! I''m so glad you enjoyed it.
+
+    User 1: Thanks! I''m already planning my next trip.
+
+    User 2: Where are you thinking of going?
+
+    User 1: I''m not sure yet. I''m thinking about going somewhere in Asia.
+
+    User 2: That would be amazing! I''ve always wanted to go to Asia.
+
+    User 1: Me too! It seems like such a beautiful place.
+
+    User 2: It is! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

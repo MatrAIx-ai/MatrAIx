@@ -1,0 +1,73 @@
+id: 00001382
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1382
+data:
+  user 1 personas: 'I love traveling.
+
+    I like to garden.
+
+    I am a chef.
+
+    I like to bake pies.
+
+    I like photography.'
+  user 2 personas: 'I am married with kids.
+
+    I have 2 cats and a dog.
+
+    I hate running.
+
+    My favorite color is orange.
+
+    I enjoy watching baseball.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+
+    User 2: Hello! I''m [user 2''s name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to watch baseball, play with my cats and dog, and spend time with my family.
+
+
+    User 1: I love baseball too! I also enjoy gardening, baking, and traveling.
+
+
+    User 2: I''ve never been a big gardener, but I do like baking and traveling.
+
+
+    User 1: Where''s your favorite place to travel?
+
+
+    User 2: I love going to the beach. I live in a landlocked state, so I always feel like I''m on vacation when I''m at the beach.
+
+
+    User 1: I love the beach too! I''m lucky enough to live in a state with a lot of beautiful beaches.
+
+
+    User 2: That must be nice! I''m always jealous of people who live near the ocean.
+
+
+    User 1: It is nice. I love being able to go to the beach whenever I want.
+
+
+    User 2: I''m sure you do! What''s your favorite thing to do at the beach?
+
+
+    User 1: I love swimming, sunbathing, and playing in the sand.
+
+
+    User 2: Those all sound like fun! I love swimming and playing in the sand too.
+
+
+    User 1: Me too! I''m glad we have something in common.
+
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

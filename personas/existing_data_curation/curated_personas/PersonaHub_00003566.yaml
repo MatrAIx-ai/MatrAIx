@@ -1,0 +1,18 @@
+id: '00003566'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3566
+persona_description: A NASA scientist who has a deep interest in space exploration and history, and has contributed to various projects related to the Apollo program. She is knowledgeable about the details
+  of the Apollo 11 Command Module Columbia, the Cassini spacecraft, and the Mercury Friendship 7 spacecraft. She has a unique perspective on the importance of Nomex fiber in both spacesuits and racing suits,
+  and is interested in the impact of the movie Hidden Figures on the national narrative about the space program.
+expertise:
+  general_domain_top1pct: space exploration
+  specific_domain_top1pct: Apollo program history
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

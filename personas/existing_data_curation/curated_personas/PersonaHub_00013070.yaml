@@ -1,0 +1,18 @@
+id: '00013070'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13070
+persona_description: A medical researcher or a healthcare professional who is interested in new medical innovations and is looking for ways to improve the vaccination process. This person is curious about
+  the unique medical innovation mentioned in the text, which is a press-on patch that delivers flu vaccine painlessly and has similar immune response to a regular flu shot. This person is also interested
+  in the potential cost-effectiveness, ease of use, and acceptability of the patch as a flu vaccination option.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

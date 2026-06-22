@@ -1,0 +1,33 @@
+id: 00006568
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6568
+data:
+  user 1 personas: 'I am allergic to shellfish and cats.
+
+    I like having my back scratched.
+
+    I have 1 pair of shoes.
+
+    My mother has 500 pairs of shoes.
+
+    I only eat at restaurants.'
+  user 2 personas: 'I want to move to london when i get older.
+
+    I have 3 brothers.
+
+    I love soccer.
+
+    I work for nike as an accountant.
+
+    I like to invest in the stock market.'
+  Best Generated Conversation: "User 1: Hi there!\nUser 2: Hi there!\nUser 1: I'm allergic to shellfish and cats. What about you?\nUser 2: I'm allergic to nothing! I love cats too.\nUser 1: I'm not sure\
+    \ if I've ever met a cat person who wasn't allergic to them. \nUser 2: Haha, yeah it's pretty rare.\nUser 1: I like having my back scratched. Do you have any unusual likes or dislikes?\nUser 2: I love\
+    \ investing in the stock market. It's really fun to see your money grow.\nUser 1: I've never invested in the stock market. Is it hard to get started?\nUser 2: Not at all! There are a lot of resources\
+    \ available to help you get started.\nUser 1: I might have to look into that. I'm always looking for new ways to make money.\nUser 2: You should! It's a great way to grow your wealth.\nUser 1: I'm sure\
+    \ my mother would love it if I started investing. She loves shoes, and she has 500 pairs.\nUser 2: Wow, that's a lot of shoes!\nUser 1: Yeah, she's a bit of a shoe addict.\nUser 2: I can relate. I love\
+    \ shoes too.\nUser 1: I'm glad to meet someone who understands.\nUser 2: Me too! It's always nice to meet a fellow shoe lover."
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

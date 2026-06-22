@@ -1,0 +1,64 @@
+id: '00001010'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1010
+data:
+  user 1 personas: 'I have freckles.
+
+    I love laughing.
+
+    I love wearing flip flops.
+
+    My best friend is from tanzania.
+
+    I like to bake brownies.'
+  user 2 personas: 'I m scared of clowns.
+
+    I have two roomates.
+
+    I like to cook.
+
+    I live on the third floor in an apartment.
+
+    I have two dogs.'
+  Best Generated Conversation: 'User 1: I love laughing! What''s the funniest thing that happened to you recently?
+
+    User 2: I was walking my dogs and a clown came out of nowhere and scared me!
+
+    User 1: Oh no! I''m sorry, but that''s pretty funny.
+
+    User 2: Yeah, it was a little scary at first, but then I realized how funny it was.
+
+    User 1: Do you have any other funny stories?
+
+    User 2: Not really, I''m not that funny.
+
+    User 1: I''m sure you are! What do you like to do for fun?
+
+    User 2: I like to cook, bake, and play video games.
+
+    User 1: Oh, I love to cook too! What''s your favorite thing to make?
+
+    User 2: I love to make brownies.
+
+    User 1: Me too! They''re so easy to make and they always turn out delicious.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have two dogs.
+
+    User 2: Oh, that''s awesome! I have two dogs too.
+
+    User 1: What kind of dogs do you have?
+
+    User 2: I have a golden retriever and a poodle.
+
+    User 1: Oh, those are both great breeds! I have a golden retriever and a labrador retriever.
+
+    User 2: Oh, that''s awesome! I love golden retrievers.
+
+    User 1: They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

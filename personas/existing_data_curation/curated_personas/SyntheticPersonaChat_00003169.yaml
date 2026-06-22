@@ -1,0 +1,56 @@
+id: 00003169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3169
+data:
+  user 1 personas: 'I live with my parents.
+
+    I am saving money to buy my first car.
+
+    I am taking a year off before i start college.
+
+    I am eighteen years old.'
+  user 2 personas: 'I take care of my grandmother on weekdays.
+
+    I work at an insurance firm.
+
+    I am a professional bowler.
+
+    I have two children , a boy and a girl.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, nice to meet you. I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a professional bowler and I also work at an insurance firm.
+
+    User 1: That''s cool! I''ve never met a professional bowler before.
+
+    User 2: Thanks! It''s a lot of fun, but it can also be challenging.
+
+    User 1: I bet it is. What''s the hardest part of being a professional bowler?
+
+    User 2: The hardest part is staying consistent. Bowling is a sport where you have to be able to repeat your performance over and over again.
+
+    User 1: That makes sense. I can imagine that it would be hard to stay focused and motivated.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I bet it is. So, what do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends, bowl, and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: Great! Maybe we can do something together sometime.
+
+    User 1: That would be fun! I''m free on Saturday.
+
+    User 2: Me too! I''ll let you know what we can do.
+
+    User 1: Great! Looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

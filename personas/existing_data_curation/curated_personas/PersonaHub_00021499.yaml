@@ -1,0 +1,19 @@
+id: 00021499
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21499
+persona_description: A meteorologist who specializes in weather forecasting, particularly in understanding the patterns and dynamics of high pressure systems and their impact on weather patterns and climate.
+  This persona is interested in understanding the causes and effects of high pressure systems and how they influence weather patterns, particularly in the context of the winter season. They are likely to
+  be knowledgeable about the pole-equator temperature gradient, the polar front, and the impact of high pressure systems on the distribution of air masses and the formation of weather systems. They may
+  also be interested in the impact of high pressure systems on air quality and climate change.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

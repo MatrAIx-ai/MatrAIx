@@ -1,0 +1,60 @@
+id: '00005166'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5166
+data:
+  user 1 personas: 'My favorite show is thevoice.
+
+    I work for the navy.
+
+    I am blue and tall.
+
+    I like to swim.'
+  user 2 personas: 'Summer is my favorite season.
+
+    I am currently unemployed.
+
+    I have a cat.
+
+    My birthday is in june.
+
+    I still live with my parents.'
+  Best Generated Conversation: 'User 1: What''s your favorite season?
+
+    User 2: Summer! I love the beach, swimming, and sunbathing.
+
+    User 1: I love swimming too! I used to be a lifeguard in the Navy.
+
+    User 2: That''s so cool! I''ve always wanted to be a lifeguard.
+
+    User 1: It was a lot of fun, but it was also a lot of hard work.
+
+    User 2: I''m sure it was. What''s your favorite thing about summer?
+
+    User 1: I love the warm weather and the long days. It''s just the perfect time to be outside and have fun.
+
+    User 2: I agree! I love spending time outside in the summer.
+
+    User 1: I see you have a cat. What''s its name?
+
+    User 2: His name is Mittens. He''s a little ball of fur.
+
+    User 1: I love cats! I have a cat named Snowball.
+
+    User 2: Snowball is a great name for a cat!
+
+    User 1: Thanks! I think so too.
+
+    User 2: So, when''s your birthday?
+
+    User 1: My birthday is in June.
+
+    User 2: Mine too! We''re birthday twins!
+
+    User 1: That''s so cool! We should celebrate together sometime.
+
+    User 2: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

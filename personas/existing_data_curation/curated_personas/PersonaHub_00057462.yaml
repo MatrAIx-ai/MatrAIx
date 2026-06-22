@@ -1,0 +1,18 @@
+id: '00057462'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57462
+persona_description: A bot who is trained to understand and interpret information from various texts. This bot has a vast knowledge base and can identify the genus, species, and properties of trees, such
+  as deciduous trees, hard wood, and flavor of the concentrated sap. It can also provide specific information about the trees and their uses, such as furniture and flooring, as well as their cultural significance
+  and importance.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: botany
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

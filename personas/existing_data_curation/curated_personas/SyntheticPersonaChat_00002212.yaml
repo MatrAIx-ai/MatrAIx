@@ -1,0 +1,68 @@
+id: '00002212'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2212
+data:
+  user 1 personas: 'I have a pomeranian.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My mom is a music teacher at the elementary school.
+
+    I play the violin.'
+  user 2 personas: 'I am strong.
+
+    I never eat veggies.
+
+    I am tall.
+
+    I love to run fast.
+
+    I am young.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Same here. Do you like music?
+
+    User 2: Yeah, I love music!
+
+    User 1: Me too! What kind of music do you like?
+
+    User 2: I like all kinds of music, but I''m really into rock and roll right now.
+
+    User 1: That''s great! I love rock and roll too. I play the violin.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to learn how to play the violin.
+
+    User 1: It''s a lot of fun! Do you have any pets?
+
+    User 2: I have a dog, a golden retriever named Bailey.
+
+    User 1: That''s great! I have a dog too, a pomeranian named Peanut.
+
+    User 2: Oh, that''s so cute! I love pomeranians.
+
+    User 1: Me too! They''re the best.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play the violin, go for walks with my dog, and read books.
+
+    User 2: That sounds like a lot of fun. I like to run, go to the gym, and play video games.
+
+    User 1: That''s great! I love video games too.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: Yeah, we do. It''s nice to meet you, [user 2''s name].
+
+    User 2: It''s nice to meet you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

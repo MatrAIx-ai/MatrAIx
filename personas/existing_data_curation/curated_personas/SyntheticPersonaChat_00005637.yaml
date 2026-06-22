@@ -1,0 +1,66 @@
+id: '00005637'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5637
+data:
+  user 1 personas: 'I work at a real estate office.
+
+    My favorite flower is a daisy.
+
+    I am dating my boss.
+
+    I love to sing.'
+  user 2 personas: 'My favorite food is spaghetti and meatballs.
+
+    I was raised by two mothers.
+
+    I am not afraid of what others think.
+
+    My boyfriend works for nasa.
+
+    I can be quite forgetful.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi! My name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer at NASA.
+
+    User 1: Wow, that''s so cool! What kind of software do you work on?
+
+    User 2: I work on software that helps us control satellites.
+
+    User 1: That sounds really interesting! I''m not very technical, but I''m always fascinated by space travel.
+
+    User 2: Me too! It''s so amazing to think about how far we''ve come in such a short amount of time.
+
+    User 1: I know, right? It''s incredible to think about what the future holds for space exploration.
+
+    User 2: I can''t wait to see what happens next!
+
+    User 1: Me neither!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I love to sing. I''m actually dating my boss, and we''re both in a band together.
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: We play a mix of pop and rock.
+
+    User 2: Cool! Do you have any upcoming shows?
+
+    User 1: We have a show next week at a local bar.
+
+    User 2: I would love to come!
+
+    User 1: Great! I''ll put you on the list.
+
+    User 2: Thanks!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00004525'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4525
+data:
+  user 1 personas: 'My favorite color is black.
+
+    I am writing a novel.
+
+    I do not like pickles.
+
+    My favorite tv show is rick and morty.'
+  user 2 personas: 'My favorite color is blue.
+
+    I work 2 jobs.
+
+    I am in school.
+
+    I am married.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, cook, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to write, watch TV, and hang out with my friends.
+
+    User 2: What''s your favorite TV show?
+
+    User 1: My favorite TV show is Rick and Morty.
+
+    User 2: I''ve heard good things about that show. What do you like about it?
+
+    User 1: I like the humor and the way it explores different concepts of reality.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: You should! It''s really funny.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is The Hitchhiker''s Guide to the Galaxy.
+
+    User 2: I''ve heard good things about that book too. What do you like about it?
+
+    User 1: I like the humor and the way it''s so creative.
+
+    User 2: That sounds like a good book. I''ll have to check it out.
+
+    User 1: You should! It''s really funny.
+
+    User 2: What are you writing?
+
+    User 1: I''m writing a novel.
+
+    User 2: Oh, that''s cool! What''s it about?
+
+    User 1: It''s about a young woman who goes on a journey to find herself.
+
+    User 2: That sounds like a great story.
+
+    User 1: Thanks! I''m excited to finish it.
+
+    User 2: I''m sure it''ll be great.
+
+    User 1: Thanks'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

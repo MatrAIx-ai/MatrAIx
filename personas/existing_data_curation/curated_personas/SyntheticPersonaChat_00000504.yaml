@@ -1,0 +1,70 @@
+id: '00000504'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 504
+data:
+  user 1 personas: 'I love comics.
+
+    I love the walking dead.
+
+    I eat junk food.
+
+    I do not have a job.
+
+    I am a couch potato.'
+  user 2 personas: 'I like to drink tea.
+
+    I like to eat hard boiled eggs.
+
+    I like to draw other people.
+
+    I love people with a sense of humor.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to drink tea, draw people, and eat hard boiled eggs.
+
+    User 1: That''s cool! I like to eat junk food, read comics, and watch The Walking Dead.
+
+    User 2: Nice! I love comics too! What''s your favorite one?
+
+    User 1: I really like The Walking Dead.
+
+    User 2: Me too! I''m so excited for the new season.
+
+    User 1: Me too! I''m kind of worried about how they''re going to wrap things up, but I''m sure it will be good.
+
+    User 2: I''m sure it will be too. It''s been a great show.
+
+    User 1: Yeah, it has. I''m going to miss it when it''s over.
+
+    User 2: Me too. But I''m sure it will have a good ending.
+
+    User 1: I hope so.
+
+    User 2: So, what do you do for work?
+
+    User 1: I don''t have a job.
+
+    User 2: Oh, why not?
+
+    User 1: I''m still in school.
+
+    User 2: Oh, that''s cool. What are you studying?
+
+    User 1: I''m studying art.
+
+    User 2: Nice! I love art.
+
+    User 1: Me too! I''m excited to learn more about it.
+
+    User 2: I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

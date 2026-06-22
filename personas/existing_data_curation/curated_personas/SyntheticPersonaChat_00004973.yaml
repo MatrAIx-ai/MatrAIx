@@ -1,0 +1,84 @@
+id: 00004973
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4973
+data:
+  user 1 personas: 'I enjoy talking to strangers.
+
+    I want to live at the beach.
+
+    I love honey.
+
+    My favorite animal is a monkey.
+
+    I am good at throwing parties.'
+  user 2 personas: 'I love folk metal.
+
+    I like tacos.
+
+    I talk in my sleep.
+
+    I own a cat.
+
+    I watch a movie sundays evenings.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi [user 1''s name]! My name is [user 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to listen to folk metal, eat tacos, and watch movies on Sunday evenings.
+
+    User 1: That''s cool! I love to talk to strangers, throw parties, and eat honey.
+
+    User 2: I''ve never met someone who enjoys talking to strangers before! That''s so cool!
+
+    User 1: Thanks! I think it''s a great way to learn about new people and different cultures.
+
+    User 2: I agree! I love hearing about people''s stories.
+
+    User 1: What''s your favorite kind of honey?
+
+    User 2: I love buckwheat honey the best. It''s got a really rich, earthy flavor.
+
+    User 1: I''ve never tried buckwheat honey before. I''ll have to give it a try!
+
+    User 2: You should! It''s delicious.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yes, I have a cat named Mittens.
+
+    User 1: I love cats! I used to have a cat named Snowball.
+
+    User 2: Aww, Snowball is a great name for a cat!
+
+    User 1: Thanks! He was a very good cat.
+
+    User 2: I''m sure he was.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s great! I''m a teacher too.
+
+    User 2: Really? What grade do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That''s awesome! I love kindergarteners. They''re so funny and cute.
+
+    User 1: They are! I love teaching them new things.
+
+    User 2: I''m sure they love learning from you.
+
+    User 1: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

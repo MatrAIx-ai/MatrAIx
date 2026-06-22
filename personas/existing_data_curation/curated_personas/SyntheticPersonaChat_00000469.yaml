@@ -1,0 +1,58 @@
+id: 00000469
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 469
+data:
+  user 1 personas: 'I have braces.
+
+    I just started the tenth grade and my concentration is in science.
+
+    I live in america in the state of florida.
+
+    I am fifteen years old.'
+  user 2 personas: 'We are getting married in a park.
+
+    I am getting married next week.
+
+    My family hates my fiancé.
+
+    We will be traveling to niagra falls for our honeymoon.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). What''s your name?
+
+    User 2: Hi, I''m (name). I''m getting married next week!
+
+    User 1: Congratulations! That''s so exciting! Where are you getting married?
+
+    User 2: We''re getting married in a park.
+
+    User 1: Oh, that''s beautiful! I love parks.
+
+    User 2: Me too! We''re going to have a small ceremony with our closest friends and family.
+
+    User 1: That sounds perfect. I''m sure it will be a beautiful wedding.
+
+    User 2: Thank you! I''m so excited!
+
+    User 1: Where are you going for your honeymoon?
+
+    User 2: We''re going to Niagara Falls.
+
+    User 1: Oh, that''s amazing! I''ve always wanted to go to Niagara Falls.
+
+    User 2: Me too! It''s going to be a lot of fun.
+
+    User 1: I''m sure it will be. Congratulations again on your wedding!
+
+    User 2: Thank you!
+
+    User 1: What are you most looking forward to about your wedding?
+
+    User 2: I''m most looking forward to marrying my best friend.
+
+    User 1: That''s a great answer! I''m sure it will be a beautiful wedding.
+
+    User 2: Thank you! I''m so excited!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

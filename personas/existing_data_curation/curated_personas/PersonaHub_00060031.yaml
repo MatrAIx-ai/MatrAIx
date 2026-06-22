@@ -1,0 +1,19 @@
+id: '00060031'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60031
+persona_description: A physicist or engineer with expertise in nanoelectronics, specifically in the modeling and simulation of light-emitting diodes (LEDs) and their scattering processes. They are familiar
+  with the development and implementation of numerical tools, such as NEMO1D, for simulating quantum transport in LEDs and have experience with the use of nonequilibrium Green's function (NEGF) methods.
+  They are also knowledgeable about the scattering processes of phonons, interface roughness, and disorder in LED devices and have contributed to the development of efficient algorithms for simulating these
+  processes. They have likely participated in the Illinois Phys550 Molecular Biophysics Summer School and have experience with the use of ANGEL, a nonequilibrium Green's function code, for simulating LEDs.
+expertise:
+  general_domain_top1pct: physics/engineering
+  specific_domain_top1pct: nanoelectronics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

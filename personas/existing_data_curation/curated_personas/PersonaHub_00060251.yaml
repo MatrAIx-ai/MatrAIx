@@ -1,0 +1,19 @@
+id: '00060251'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60251
+persona_description: A professor at the University of Utah who specializes in ophthalmology and visual science, particularly in the field of neuroscience and neuroimaging. She has developed software to
+  create 3D models of the human brain from brain tissue scans, which can aid medical researchers in understanding how the brain's connectivity is disrupted in mental and neurological conditions such as
+  schizophrenia, depression, anxiety, and autism. She has also developed a new method to make brain tissue transparent and has adapted a software platform called VISUS to assemble high-resolution images
+  of different sections of the brain into one 3D model that can be viewed at different angles.
+expertise:
+  general_domain_top1pct: neuroscience
+  specific_domain_top1pct: neuroimaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

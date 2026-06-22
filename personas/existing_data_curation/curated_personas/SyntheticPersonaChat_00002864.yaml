@@ -1,0 +1,74 @@
+id: 00002864
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2864
+data:
+  user 1 personas: 'I love mac and cheese.
+
+    I make 30k a year.
+
+    I like to sit on couch all day.
+
+    I make cars for a living.
+
+    I like to watch tv.'
+  user 2 personas: 'My father is a doctor.
+
+    I drive a restored mustang.
+
+    I play football.
+
+    I am a college student.
+
+    I like action movies.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for a living?
+
+    User 2: I''m a college student.
+
+    User 1: Oh cool! What are you studying?
+
+    User 2: I''m studying to be a doctor.
+
+    User 1: Wow, that''s awesome! My dad is a doctor.
+
+    User 2: No way! That''s so cool.
+
+    User 1: Yeah, he''s a great doctor. He''s been a huge inspiration to me.
+
+    User 2: That''s really great. I''m sure he''s proud of you.
+
+    User 1: Thanks, I think he is.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to watch TV, play video games, and hang out with my friends.
+
+    User 2: Me too! I love watching action movies and playing video games.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I really like the Call of Duty series.
+
+    User 1: Me too! I''ve been playing Call of Duty since I was a kid.
+
+    User 2: That''s awesome. I''ve been playing since the first one came out.
+
+    User 1: I remember playing the first one on my friend''s Xbox.
+
+    User 2: Yeah, it was a lot of fun.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to play football, go to the gym, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to play football too.
+
+    User 2: Me too! I''m on the college football team.
+
+    User 1: No way! That''s awesome.
+
+    User 2: Thanks, it''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

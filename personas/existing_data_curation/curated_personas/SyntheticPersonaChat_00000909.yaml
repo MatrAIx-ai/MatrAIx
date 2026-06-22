@@ -1,0 +1,68 @@
+id: 00000909
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 909
+data:
+  user 1 personas: 'I am a vet tech.
+
+    I love to read.
+
+    My favorite author is stephen king.
+
+    I am a christian.
+
+    My favorite movie genre is horror.'
+  user 2 personas: 'I enjoy playing video games.
+
+    I am very inquisitive and enjoy learning new things.
+
+    I would rather stay up late than get up early.
+
+    I am the youngest sibling in my family.
+
+    My favorite foods are fried chicken and chocolate cake.'
+  Best Generated Conversation: 'User 1: What is your favorite book?
+
+    User 2: It''s hard to choose just one favorite book, but I''d say I''m partial to "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: I''ve heard good things about that book, but I haven''t read it yet.
+
+    User 2: It''s a great book, but it''s also a little sad.
+
+    User 1: I''m not usually into sad books, but I''ll give it a try.
+
+    User 2: You should! It''s a classic for a reason.
+
+    User 1: What else do you like to read?
+
+    User 2: I read a lot of different things, but I''m always looking for a good horror novel.
+
+    User 1: I''m not really into horror, but I can see how it would be exciting.
+
+    User 2: It''s definitely not for everyone, but it''s a great way to get your heart racing.
+
+    User 1: I guess I''ll have to give it a try sometime.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: What are some of your other favorite hobbies?
+
+    User 2: I love to play video games.
+
+    User 1: Me too! What are some of your favorite games?
+
+    User 2: I love all kinds of games, but I''m especially into RPGs and strategy games.
+
+    User 1: I like those too! I''m always looking for new games to play.
+
+    User 2: I''m the same way. I''m always looking for something new to get sucked into.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! We should definitely talk more about games sometime.
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00061088
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61088
+persona_description: A teacher or instructor who is responsible for designing and implementing exercises that require students to solve problems by performing multiple steps of operations, each of which
+  is complex enough to warrant its own instructions and a check on whether it has been done correctly. The exercises are typically Sequential in nature, with each step having instructions of varying lengths
+  and the exercise containing a total of four instructions regardless of the number of steps. The exercise may include a Multiple Choice with Console step, which is not a requirement for the exercise but
+  allows the instructor to test the student's ability to interpret the output. The exercise types are designed to be mixed, with some exercises consisting of Coding and Multiple Choice with Console steps.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Educational Technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

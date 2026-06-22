@@ -1,0 +1,90 @@
+id: 00005903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5903
+data:
+  user 1 personas: 'My favorite activity is fishing.
+
+    My dad was a cop until he was killed.
+
+    My favorite thing to do is float the river.
+
+    I once ran the mile in under 4 minutes.'
+  user 2 personas: 'I play for the washington wizards.
+
+    I am a professional basketball player.
+
+    I live in ahuge mansion.
+
+    I make 35 million a year.
+
+    I went to college in maryland.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a professional basketball player for the Washington Wizards.
+
+    User 1: Wow, that''s awesome!
+
+    User 2: Thanks, it is pretty cool.
+
+    User 1: I bet it''s a lot of work though.
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: What''s your favorite part about being a basketball player?
+
+    User 2: I love the competition. I also love the travel and the opportunity to meet new people.
+
+    User 1: That sounds really exciting.
+
+    User 2: It is.
+
+    User 1: So, what''s your favorite team to play against?
+
+    User 2: I don''t really have a favorite team to play against. I just love the challenge of playing against any team.
+
+    User 1: That''s a good attitude to have.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite thing to do when you''re not playing basketball?
+
+    User 2: I love to fish. I also like to read and watch movies.
+
+    User 1: That sounds really relaxing.
+
+    User 2: It is.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I like to read a lot of different kinds of books, but I''m a big fan of science fiction and fantasy.
+
+    User 1: Me too!
+
+    User 2: What are some of your favorite sci-fi and fantasy books?
+
+    User 1: I love The Hitchhiker''s Guide to the Galaxy series by Douglas Adams, The Lord of the Rings trilogy by J.R.R. Tolkien, and The Dune series by Frank Herbert.
+
+    User 2: I''ve read all of those books too! They''re all great.
+
+    User 1: I know, right?
+
+    User 2: So, what do you think about the new Star Wars movie?
+
+    User 1: I loved it! It was so much fun.
+
+    User 2: Me too! I''m excited to see the next one.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

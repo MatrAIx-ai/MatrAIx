@@ -1,0 +1,19 @@
+id: 00011790
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11790
+persona_description: A geologist who specializes in the study of earthquakes, particularly the mechanisms and processes behind phreatic eruptions. Their expertise lies in the analysis of seismic data recorded
+  before the 2014 phreatic eruption of Mount Ontake and the reconstruction of the earthquake catalog beneath the craters. They have a deep understanding of the relationships between the relocated shallow
+  VT and LP earthquakes and the pre-eruption seismicity, which provides new insights into the preparatory and precursory stages of the eruption. They are also skilled in applying a matched-filter detection
+  technique to seismic data, which allows them to identify and locate the VT and LP events with high accuracy.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology/earthquake science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

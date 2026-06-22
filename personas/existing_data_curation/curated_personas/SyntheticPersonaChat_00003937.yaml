@@ -1,0 +1,70 @@
+id: 00003937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3937
+data:
+  user 1 personas: 'I do not know how to swim.
+
+    My grandpa was in wwii.
+
+    I own a chevy tahoe.
+
+    My favorite food is steak.
+
+    My favorite genre of music is rock.'
+  user 2 personas: 'I have a brown belt in karate.
+
+    Grandma makes jewelry.
+
+    I sing in the school chorus.
+
+    Paps likes to go mushroom hunting.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What''s something interesting about yourself?
+
+    User 2: I have a brown belt in karate.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn karate.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might have to look into that. What else do you like to do?
+
+    User 2: I sing in the school chorus.
+
+    User 1: Oh, that''s awesome! I love to sing too. What kind of music do you like to sing?
+
+    User 2: I like to sing a lot of different kinds of music, but my favorite is probably pop.
+
+    User 1: Me too! I love pop music. What''s your favorite song?
+
+    User 2: My favorite song is probably "Shake It Off" by Taylor Swift.
+
+    User 1: That''s a great song! I love Taylor Swift.
+
+    User 2: Me too! She''s my favorite artist.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go mushroom hunting with my paps.
+
+    User 1: Oh, that sounds interesting! Do you find a lot of mushrooms?
+
+    User 2: We usually find a few. We usually go in the fall.
+
+    User 1: I''ve never been mushroom hunting before. I might have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I think I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

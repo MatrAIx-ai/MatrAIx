@@ -1,0 +1,18 @@
+id: '00005270'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5270
+persona_description: A healthcare professional who is a GP and has expertise in respiratory medicine. They are aware of the effects of cold weather on asthma and are trained to provide advice and guidance
+  to patients with asthma on how to manage their symptoms during the winter months. They are also aware of the importance of taking preventive measures and carrying a reliever inhaler with them in case
+  of an emergency.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

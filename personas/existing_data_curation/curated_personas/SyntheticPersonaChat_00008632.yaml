@@ -1,0 +1,76 @@
+id: 00008632
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8632
+data:
+  user 1 personas: 'I am currently working on a project that involves bitcoins.
+
+    I am an engineer.
+
+    I love to dance salsa.
+
+    I decided to quick my job and travel for a couple of months.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I vacation in florida every winter.
+
+    I was a champion downhill skier in college.
+
+    My sister is a published author.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: Hi, I''m user1.
+
+    User 2: Hi, I''m user2.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to go skiing.
+
+    User 1: That''s cool! I''m an engineer and I love to dance salsa.
+
+    User 2: Salsa dancing? That sounds like fun!
+
+    User 1: It is! I''ve been dancing for 3 years and I love it.
+
+    User 2: Have you ever competed?
+
+    User 1: No, I haven''t. I''m not really sure if I''m good enough.
+
+    User 2: I''m sure you would be great!
+
+    User 1: Thanks! I''m not sure if I''m brave enough to compete though.
+
+    User 2: You should give it a try! It would be a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: Great! I''m sure you''d be great.
+
+    User 1: Thanks!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m an engineer and I''m currently working on a project that involves bitcoins.
+
+    User 2: That sounds interesting! What do you like about it?
+
+    User 1: I like that it''s a new and innovative technology. It''s also a lot of fun to learn about.
+
+    User 2: I can imagine! It sounds like a really cool job.
+
+    User 1: Thanks! I think so too.
+
+    User 2: So, what are you doing for the holidays?
+
+    User 1: I''m going to Florida with my family.
+
+    User 2: That sounds like a lot of fun! I''m going to stay home with my family.
+
+    User 1: That sounds nice too. I''m looking forward to relaxing and spending time with my family.
+
+    User 2: Me too! I''m sure it will be a great holiday.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

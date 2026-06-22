@@ -1,0 +1,78 @@
+id: '00003075'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3075
+data:
+  user 1 personas: 'I have 23 cats at home.
+
+    I traveled around the world in a boat.
+
+    I like to paint.
+
+    I hate the taste of fish.
+
+    I am a vegan.'
+  user 2 personas: 'I recently got a cat.
+
+    I have four children.
+
+    I am an artist.
+
+    I enjoy walking for exercise.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint and walk for exercise.
+
+    User 1: Me too! I love to paint, and I enjoy walking in the park.
+
+    User 2: That''s great! I''m an artist, and I love to create new things.
+
+    User 1: That''s awesome! I''m not very good at art, but I love to see what other people can do.
+
+    User 2: I''m sure you''re better than you think! What do you like to paint?
+
+    User 1: I like to paint landscapes and animals. I think they''re beautiful.
+
+    User 2: I love those too! I''m actually working on a painting of a cat right now.
+
+    User 1: That''s awesome! I''d love to see it when it''s finished.
+
+    User 2: Sure! I''ll send you a picture.
+
+    User 1: Great! I''ll look forward to it.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a vegan chef. I love cooking and creating new recipes.
+
+    User 2: That sounds amazing! I love to cook too, but I''m not very good at it.
+
+    User 1: I''m sure you''re better than you think! What do you like to cook?
+
+    User 2: I love to cook pasta dishes and soups. I also like to make desserts.
+
+    User 1: Those all sound delicious! I''m sure you''re a great cook.
+
+    User 2: Thank you! I appreciate it.
+
+    User 1: So, do you have any other hobbies?
+
+    User 2: I like to read, play games, and spend time with my family.
+
+    User 1: Those all sound like great hobbies. I like to read and play games too.
+
+    User 2: That''s great! We should get together and play a game sometime.
+
+    User 1: That would be fun! I''d love to do that.
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

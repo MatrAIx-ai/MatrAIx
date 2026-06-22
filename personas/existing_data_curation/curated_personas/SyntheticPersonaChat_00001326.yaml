@@ -1,0 +1,62 @@
+id: '00001326'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1326
+data:
+  user 1 personas: 'I like to travel.
+
+    I love the outdoors.
+
+    I like to garden.
+
+    I like to build things.
+
+    I am tall.'
+  user 2 personas: 'I like to invest in the stock market.
+
+    I love soccer.
+
+    I work for nike as an accountant.
+
+    I want to move to london when i get older.
+
+    I have 3 brothers.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just chilling at home.
+
+    User 1: Nice, what do you like to do for fun?
+
+    User 2: I like to play soccer, watch movies, and hang out with my friends.
+
+    User 1: That sounds fun. I like to travel, garden, and build things.
+
+    User 2: I''ve never been good at gardening, but I''d love to learn more about it.
+
+    User 1: It''s not too difficult, you just need to know what plants you want to grow and how to care for them.
+
+    User 2: I''ll have to look into it, I love having fresh fruits and vegetables at home.
+
+    User 1: It''s definitely worth it, and it''s a lot of fun to watch your plants grow.
+
+    User 2: I bet. I''m also interested in learning more about building things.
+
+    User 1: That''s cool, what kind of things do you want to build?
+
+    User 2: I''m not sure yet, but I think it would be fun to build a treehouse or a shed.
+
+    User 1: Those would be cool projects. I''ve always wanted to build a treehouse, but I''ve never had the time.
+
+    User 2: Maybe we could build one together sometime.
+
+    User 1: That would be fun! I''m sure we could figure it out.
+
+    User 2: Great! I''ll let you know when I''m ready to start.
+
+    User 1: Sounds good. I''m excited to see what we can build.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

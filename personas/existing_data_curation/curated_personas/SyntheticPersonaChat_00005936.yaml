@@ -1,0 +1,76 @@
+id: 00005936
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5936
+data:
+  user 1 personas: 'My favorite sport is basketball.
+
+    My favorite basketball team is the vancouver grizzlies.
+
+    I live in canada , near ontario.
+
+    I am an avid runner.
+
+    I run marathons twice a year , mostly in america.'
+  user 2 personas: 'I love playing tennis.
+
+    I love reading mysteries in my free time.
+
+    I am the youngest of 3.
+
+    I went to college in chicago.
+
+    I am pursuing my law degree.'
+  Best Generated Conversation: 'User 1: What''s your favorite sport?
+
+    User 2: I love playing tennis!
+
+    User 1: That''s great! I used to play a lot of tennis when I was younger, but I don''t have as much time for it anymore.
+
+    User 2: I understand. It''s a lot of fun, but it can be really time-consuming.
+
+    User 1: What''s your favorite thing about tennis?
+
+    User 2: I love the competition and the challenge of trying to beat my opponent.
+
+    User 1: That''s what I love about it too! It''s so much fun to try to outwit your opponent and win the match.
+
+    User 2: Do you watch tennis on TV?
+
+    User 1: I do sometimes! I love watching the Grand Slam tournaments.
+
+    User 2: Me too! They''re always so exciting.
+
+    User 1: I''m a big fan of Roger Federer. He''s my favorite tennis player.
+
+    User 2: Me too! He''s an amazing player.
+
+    User 1: So, what''s your favorite mystery book?
+
+    User 2: I love all of the Agatha Christie novels!
+
+    User 1: Me too! She''s my favorite mystery writer.
+
+    User 2: I''m reading "The Murder of Roger Ackroyd" right now. It''s so good!
+
+    User 1: I''ve read that one! It''s one of my favorites.
+
+    User 2: I love how Christie keeps you guessing until the very end.
+
+    User 1: Me too! She''s a master of suspense.
+
+    User 2: So, what are you up to today?
+
+    User 1: I''m just working on a project for school.
+
+    User 2: Oh, what kind of project?
+
+    User 1: I''m writing a paper on the history of tennis.
+
+    User 2: That sounds interesting! I''m sure you''ll do a great job.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

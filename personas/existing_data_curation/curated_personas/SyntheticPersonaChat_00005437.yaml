@@ -1,0 +1,60 @@
+id: '00005437'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5437
+data:
+  user 1 personas: 'My favorite flower is a daisy.
+
+    I work at a real estate office.
+
+    I am in my 20s.
+
+    I love to sing.
+
+    I am dating my boss.'
+  user 2 personas: 'My english is not very good yet.
+
+    I love to walk my dog everyday after work.
+
+    I also dance and sing.
+
+    I just moved to los angeles from tokyo.'
+  Best Generated Conversation: 'User 1: Hi! How are you?
+
+    User 2: I am good, thank you! How are you?
+
+    User 1: I''m doing well, thanks. I just moved to LA from Tokyo, and I''m still getting used to the city.
+
+    User 2: Oh, that must be exciting! What do you like about LA so far?
+
+    User 1: I like the weather, and there are so many things to do. I''ve been going to the beach and hiking in the mountains.
+
+    User 2: That sounds great! I love hiking too. Where are you from in Tokyo?
+
+    User 1: I''m from the Shinjuku area. What about you?
+
+    User 2: I''m from the Shibuya area. I love that area! There are so many great restaurants and shops.
+
+    User 1: I agree! I miss all the good food.
+
+    User 2: I know what you mean. I''ve been trying to find some good Japanese restaurants in LA, but I haven''t had much luck.
+
+    User 1: I know a few good places. I can give you some recommendations if you want.
+
+    User 2: That would be great! I''m always looking for new places to eat.
+
+    User 1: Okay, I''ll send you a list of some of my favorites.
+
+    User 2: Thank you! I appreciate it.
+
+    User 1: No problem. It was nice meeting you.
+
+    User 2: You too! I hope we can hang out again sometime.
+
+    User 1: I''d love to. Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

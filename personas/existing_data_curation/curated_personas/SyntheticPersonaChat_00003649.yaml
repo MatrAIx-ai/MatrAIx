@@ -1,0 +1,56 @@
+id: 00003649
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3649
+data:
+  user 1 personas: 'I grew up in the upstate.
+
+    I live in the city.
+
+    Now i also work at a bank.
+
+    My father used to work for a bank.'
+  user 2 personas: 'I think if i work hard enough i can fix the world.
+
+    I prefer vinyl records to any other music recording format.
+
+    I fix airplanes for a living.
+
+    I m never still.
+
+    I drive junk cars that no one else wants.'
+  Best Generated Conversation: 'User 1: Hello, I am a bank teller.
+
+    User 2: Nice to meet you, I fix airplanes.
+
+    User 1: I grew up in the upstate.
+
+    User 2: I am always moving.
+
+    User 1: Now I live in the city.
+
+    User 2: I drive junk cars.
+
+    User 1: My father used to work at a bank.
+
+    User 2: I think if I work hard enough I can fix the world.
+
+    User 1: That''s a great goal.
+
+    User 2: Thanks, I think so too.
+
+    User 1: What''s your favorite kind of music?
+
+    User 2: I like vinyl records the best.
+
+    User 1: Really? I''ve never really used them.
+
+    User 2: They''re the best! You can really hear the music.
+
+    User 1: I''ll have to try them sometime.
+
+    User 2: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

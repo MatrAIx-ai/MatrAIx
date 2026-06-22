@@ -1,0 +1,62 @@
+id: 00001491
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1491
+data:
+  user 1 personas: 'I am 26 years old.
+
+    I have thrown up every day for the last 3 months with morning sickness.
+
+    I already have 3 children.
+
+    I found out that i am carrying twins.
+
+    I will be on bed rest for the next 5 months.'
+  user 2 personas: 'I am a very tall woman.
+
+    I love to cook ethnic foods.
+
+    I love to draw.
+
+    I have very curly hair.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1)! What''s your name?
+
+    User 2: Hi, I''m (user 2)! Nice to meet you!
+
+    User 1: It''s nice to meet you too! What do you like to do for fun?
+
+    User 2: I love to cook ethnic foods, draw, and read.
+
+    User 1: Oh, that''s cool! I love to cook too, but I''m not very good at it.
+
+    User 2: Everyone has to start somewhere! I''m sure you''ll get better with practice.
+
+    User 1: Thanks! I hope so. What''s your favorite ethnic food to cook?
+
+    User 2: I love to cook Indian food. It''s so flavorful and delicious.
+
+    User 1: Oh, I love Indian food too! I''ve never tried cooking it myself, but I''ve had it at restaurants and it''s always been amazing.
+
+    User 2: You should definitely try cooking it yourself! It''s not too difficult and it''s so much fun.
+
+    User 1: I will! Thanks for the tip!
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I love to read. I''m always reading something. I''m currently reading a book about the history of the British monarchy.
+
+    User 2: Oh, that sounds interesting! I''ve never read anything about the British monarchy before.
+
+    User 1: It''s really interesting! It''s a lot different than what I thought it would be.
+
+    User 2: I''ll have to check it out sometime.
+
+    User 1: You should! It''s really good.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

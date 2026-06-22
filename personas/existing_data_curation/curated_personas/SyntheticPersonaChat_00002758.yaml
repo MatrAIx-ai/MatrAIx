@@ -1,0 +1,58 @@
+id: 00002758
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2758
+data:
+  user 1 personas: 'I drive a ford taurus.
+
+    I drink diet coke.
+
+    I work in retail.
+
+    I spend too much time shopping.'
+  user 2 personas: 'This is my second year in the league.
+
+    I play for the philadelphia eagles.
+
+    I play quarterback.
+
+    Last season i was just getting started.'
+  Best Generated Conversation: 'User 1: I''m a big fan of the Eagles!
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: I''m excited for this season. Do you think you guys will make it to the playoffs?
+
+    User 2: We''re definitely going to try! We have a lot of new players this year, so it''s hard to say how we''ll do. But I''m confident in our team.
+
+    User 1: I''m sure you''ll do great! What position do you play?
+
+    User 2: I''m the quarterback.
+
+    User 1: That''s awesome! I bet you''re really good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: I''m sure you''re great! I''m a big fan of yours.
+
+    User 2: Thanks! That means a lot.
+
+    User 1: So, what do you do when you''re not playing football?
+
+    User 2: I like to spend time with my family and friends. I also like to play video games and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: We should get together sometime and play some video games or watch a movie.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! Let''s do it.
+
+    User 1: Great! I''ll text you the details later.
+
+    User 2: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

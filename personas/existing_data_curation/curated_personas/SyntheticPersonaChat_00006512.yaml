@@ -1,0 +1,58 @@
+id: '00006512'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6512
+data:
+  user 1 personas: 'My favorite author is stephen king.
+
+    I am a digital artist.
+
+    My husband is an author and we have twins together.
+
+    I was born in france and moved to canada.
+
+    My favorite hobby is reading.'
+  user 2 personas: 'My parents died in a plane crash.
+
+    I have an iq of 250.
+
+    My hobby creating houses out of matches.
+
+    I live alone with my dog.'
+  Best Generated Conversation: 'User 1: What''s your favorite book?
+
+    User 2: I love Stephen King''s books! My favorite is The Shining.
+
+    User 1: I love that book too! It''s so creepy.
+
+    User 2: Yeah, it is. I love the way he builds suspense.
+
+    User 1: Me too. He''s a really good writer.
+
+    User 2: I know, right? He''s one of my favorite authors.
+
+    User 1: Do you like any other Stephen King books?
+
+    User 2: I also like The Stand and It.
+
+    User 1: I love The Stand! It''s so epic.
+
+    User 2: Yeah, it is. I love the characters and the story.
+
+    User 1: Me too. It''s one of my favorite books of all time.
+
+    User 2: I know, right? It''s so good.
+
+    User 1: What''s your favorite thing about Stephen King''s books?
+
+    User 2: I love the way he creates such a creepy and suspenseful atmosphere.
+
+    User 1: Me too. He''s so good at it.
+
+    User 2: I know, right? He''s a master of horror.
+
+    User 1: I agree. He''s one of the best horror writers out there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00008515
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8515
+data:
+  user 1 personas: 'I love the water , any water , ocean , river , or lake.
+
+    My mother met elvis.
+
+    I moved out when i was 14.
+
+    I like cartoons more than movies.'
+  user 2 personas: 'I go to high school.
+
+    Math is my favorite subject.
+
+    I live in the united states.
+
+    I am a boy.
+
+    I play ice hockey.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m John.
+
+    User 1: Nice to meet you, John.
+
+    User 2: Nice to meet you too, [User 1].
+
+    User 1: Where are you from?
+
+    User 2: I''m from the United States.
+
+    User 1: Oh, cool! Me too.
+
+    User 2: What''s your favorite subject in school?
+
+    User 1: I like math.
+
+    User 2: Me too! I''m a math major in college.
+
+    User 1: Wow, that''s impressive! I''m still in high school.
+
+    User 2: Oh, cool! What year are you in?
+
+    User 1: I''m a junior.
+
+    User 2: Oh, cool! I''m a senior.
+
+    User 1: Oh, cool! Do you know what you want to do after high school?
+
+    User 2: I''m thinking about going to college to study math.
+
+    User 1: Oh, that''s great! I''m thinking about going to college to study business.
+
+    User 2: Oh, cool! I''m sure you''ll do great in business.
+
+    User 1: Thanks! I hope so too!
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too! Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,21 @@
+id: 00034587
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34587
+persona_description: A night sky enthusiast who is interested in measuring and comparing the brightness of the night sky at different sites. They want to document the evolution of light pollution in their
+  area and monitor sky brightness through the night, night-to-night, and year-to-year. They are also interested in investigating how sky brightness correlates with the solar cycle and month-to-month sunspot
+  activity. They want to make a correlation between the SQM reading and when the background reaches some ADC level, and they are willing to invest in the CCDS to calibrate the effect of sky brightness on
+  qualitative measures such as the Bortle Scale. They are looking for a hand-held meter that is unprecedentedly sensitive, quantitatively documents the evolution of light pollution in their area, and provides
+  local ground truth for future sky brightness prediction with the Clear Sky Clock. They are also interested in the precision readings at even the darkest sites, and the power-saving features designed in
+  for maximum battery life.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: astrophotometry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

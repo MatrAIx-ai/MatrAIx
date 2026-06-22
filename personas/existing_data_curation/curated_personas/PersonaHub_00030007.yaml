@@ -1,0 +1,20 @@
+id: '00030007'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30007
+persona_description: A healthcare professional who specializes in the diagnosis and treatment of infectious diseases, particularly those caused by Clostridium difficile. This persona is likely to have a
+  deep understanding of the mechanisms and pathogenesis of pseudomembranous colitis, and is familiar with the clinical presentation, laboratory findings, and treatment options for this condition. They are
+  also likely to be familiar with the molecular biology and genetics of Clostridium difficile, and the testing methods used to diagnose and monitor the disease. Additionally, they may have experience in
+  the use of antibiotics and other therapeutic agents in the treatment of pseudomembranous colitis, and may have a strong interest in the development and evaluation of new diagnostic tests for the detection
+  of C. difficile toxins.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

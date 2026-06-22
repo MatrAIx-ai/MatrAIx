@@ -1,0 +1,84 @@
+id: 00005949
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5949
+data:
+  user 1 personas: 'My name is jovannie and i am 19.
+
+    I love eating barbeque sandwiches and pizza puffs.
+
+    My favorite show is tom and jerry.
+
+    I enjoy hanging out with my imaginary friends as a hobby.
+
+    I live down the street from miley cyrus and pnb rock.'
+  user 2 personas: 'My best friend lives in a big city.
+
+    I go visit them sometimes.
+
+    My mother is a social worker for the school system.
+
+    She likes to grow plants in her garden.
+
+    I work at a grocery store.'
+  Best Generated Conversation: 'User 1: Hi! I''m Jovannie. What''s your name?
+
+    User 2: Hi Jovannie! I''m [name]. It''s nice to meet you!
+
+    User 1: Nice to meet you too! Where are you from?
+
+    User 2: I''m from [city].
+
+    User 1: Oh, cool! I''ve never been there before. What''s it like?
+
+    User 2: It''s a great city! There''s a lot to do and see.
+
+    User 1: What''s your favorite thing about it?
+
+    User 2: I love the food! There are so many great restaurants.
+
+    User 1: I''m a big fan of food too! What''s your favorite kind?
+
+    User 2: I love all kinds of food, but I especially love pizza.
+
+    User 1: Me too! I love pizza puffs.
+
+    User 2: I''ve never had pizza puffs before. What are they?
+
+    User 1: They''re like little pizza pockets. They''re really good!
+
+    User 2: I''ll have to try them sometime.
+
+    User 1: You should! They''re delicious.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to hang out with my friends, watch movies, and play video games.
+
+    User 2: That sounds like fun! I like to do the same things.
+
+    User 1: Where do you work?
+
+    User 2: I work at a grocery store.
+
+    User 1: Oh, cool! I used to work at a grocery store when I was in high school.
+
+    User 2: What was it like?
+
+    User 1: It was a lot of fun! I got to meet a lot of new people and learn a lot about different types of food.
+
+    User 2: That sounds like a great experience!
+
+    User 1: It was! I''m glad I did it.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m still trying to figure it out.
+
+    User 2: Well, I''m sure you''ll figure it out. You seem like a smart person.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

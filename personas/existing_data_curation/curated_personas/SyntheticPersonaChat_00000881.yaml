@@ -1,0 +1,70 @@
+id: 00000881
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 881
+data:
+  user 1 personas: 'My car is blue.
+
+    I am married.
+
+    I own my home.
+
+    I live in colorado.
+
+    I have an mba degree.'
+  user 2 personas: 'I clean houses for extra money.
+
+    I have been held hostage in a store robbery situation.
+
+    My father is a retired police officer.
+
+    I like to build furniture.
+
+    I have bowled a 300 game twice in my life.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: How are you?
+
+    User 2: I''m doing well, thanks. You?
+
+    User 1: I''m doing well too.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to clean houses for extra money.
+
+    User 1: Really? That''s interesting. Why do you like doing that?
+
+    User 2: I like helping people, and I also like the fact that I can work my own hours.
+
+    User 1: That''s great. I''m glad you''re able to find something that you enjoy doing.
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Oh, I like reading and video games too. What are some of your favorite books and games?
+
+    User 1: I really enjoyed the Harry Potter series, and I''m a big fan of the Assassin''s Creed games.
+
+    User 2: I''ve read the Harry Potter series too, and I love the Assassin''s Creed games too!
+
+    User 1: That''s great! What other interests do you have?
+
+    User 2: I like to build furniture, and I''m also a big fan of bowling.
+
+    User 1: I''ve never tried building furniture before, but it sounds like it could be fun.
+
+    User 2: It''s really relaxing, and it''s a great way to pass the time.
+
+    User 1: That''s great. I''m glad you''re able to find things that you enjoy doing.
+
+    User 2: Thanks! I''m glad you''re able to find things that you enjoy doing too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

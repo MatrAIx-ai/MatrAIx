@@ -1,0 +1,86 @@
+id: 00008469
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8469
+data:
+  user 1 personas: 'My favorite thing to do is to read books on the beach.
+
+    I am a vegetarian.
+
+    I love pandas.
+
+    I am starting a new juicing bar.
+
+    I love to surf.'
+  user 2 personas: 'I am strong.
+
+    I am tall.
+
+    I am young.
+
+    I never eat veggies.
+
+    I love to run fast.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Me too. I''m reading a book about pandas.
+
+    User 2: Pandas? Are you a vegetarian?
+
+    User 1: Yeah, I am.
+
+    User 2: That''s cool. I''ve never met a vegetarian before.
+
+    User 1: Really? There are a lot of us out there.
+
+    User 2: I guess so. I just never met one before.
+
+    User 1: Well, now you have.
+
+    User 2: Yeah, I guess so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to run.
+
+    User 1: Really? I love running too!
+
+    User 2: That''s cool. I''m really fast.
+
+    User 1: I''m not that fast.
+
+    User 2: You don''t have to be fast to enjoy running.
+
+    User 1: I know, but it''s still fun to be fast.
+
+    User 2: I guess so.
+
+    User 1: So, where do you like to run?
+
+    User 2: I like to run on the beach.
+
+    User 1: Me too! That''s my favorite place to run.
+
+    User 2: I know, right? It''s so peaceful and relaxing.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what are you doing later today?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going for a run on the beach.
+
+    User 1: Oh, that sounds fun. I might join you.
+
+    User 2: Sure, that would be great!
+
+    User 1: Cool. I''ll meet you there.
+
+    User 2: See you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

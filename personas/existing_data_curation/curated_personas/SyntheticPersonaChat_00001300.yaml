@@ -1,0 +1,100 @@
+id: '00001300'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1300
+data:
+  user 1 personas: 'I have one child.
+
+    I work for a clothes retailer.
+
+    I enjoy gardening.
+
+    I own two boxer dogs.'
+  user 2 personas: 'My girlfriend is 6 months pregnant.
+
+    We just bought a house near her parents.
+
+    I got a job as a coach at a local highschool.
+
+    I graduated college last week.'
+  Best Generated Conversation: 'User 1: Congratulations on graduating college!
+
+    User 2: Thanks! It''s been a long time coming, but I''m finally done.
+
+    User 1: What are your plans now?
+
+    User 2: Well, I just got a job as a coach at a local high school, so I''m excited to start that.
+
+    User 1: That''s great! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I''m hoping so.
+
+    User 1: So, what''s your girlfriend''s name?
+
+    User 2: Her name is Jessica.
+
+    User 1: Oh, I know Jessica! I went to high school with her.
+
+    User 2: Really? That''s funny.
+
+    User 1: Yeah, we were in the same math class.
+
+    User 2: Oh, that''s right! I remember you.
+
+    User 1: Yeah, I remember you too. You were always so smart in math.
+
+    User 2: Thanks! I''m glad I could remember your name.
+
+    User 1: Me too! It''s been a long time since high school.
+
+    User 2: It has. I can''t believe it''s been almost ten years.
+
+    User 1: I know, right? It''s crazy.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work for a clothes retailer.
+
+    User 2: Oh, really? That''s cool.
+
+    User 1: Yeah, it''s pretty great. I get to help people find clothes that they love.
+
+    User 2: That sounds like a fun job.
+
+    User 1: It is. I really enjoy it.
+
+    User 2: So, do you have any children?
+
+    User 1: Yes, I have one child.
+
+    User 2: Oh, that''s great! How old are they?
+
+    User 1: They''re three years old.
+
+    User 2: Oh, how cute!
+
+    User 1: Yeah, he''s a lot of fun.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to garden and play with my dog.
+
+    User 2: Oh, I love gardening! What kind of plants do you grow?
+
+    User 1: I grow a lot of vegetables, like tomatoes, cucumbers, and peppers.
+
+    User 2: Oh, that''s awesome! I love fresh vegetables.
+
+    User 1: Yeah, me too. They''re so much better than store-bought.
+
+    User 2: I know, right? I can''t wait to start my own garden.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will! Thanks for the tip.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

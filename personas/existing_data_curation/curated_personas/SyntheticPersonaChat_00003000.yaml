@@ -1,0 +1,56 @@
+id: '00003000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3000
+data:
+  user 1 personas: 'I am an avid fisherman.
+
+    I know how to play the guitar.
+
+    I hate fast food.
+
+    I have a george foreman grill at home.
+
+    I like to race go carts.'
+  user 2 personas: 'I m a receptionist at a doctors office.
+
+    I m also a fulltime student studying radiology at local college.
+
+    My weekends are spent studying and looking over client files.
+
+    My name is mary.'
+  Best Generated Conversation: 'User 1: Hi Mary! What do you do for fun?
+
+    User 2: I''m a full-time student studying radiology at a local college and I work part-time as a receptionist at a doctor''s office.
+
+    User 1: Wow, that must keep you busy! Do you have any hobbies or interests outside of work and school?
+
+    User 2: I love to read, go for walks, and spend time with my family and friends.
+
+    User 1: That sounds nice. Do you have any favorite books or authors?
+
+    User 2: I love to read historical fiction, especially books about the American Civil War.
+
+    User 1: I''ve always been interested in the Civil War, but I''ve never read any books about it. Do you have any recommendations?
+
+    User 2: Sure, I''d recommend "The Killer Angels" by Michael Shaara. It''s a really good book about the Battle of Gettysburg.
+
+    User 1: Thanks for the recommendation! I''ll check it out.
+
+    User 2: No problem! What about you? What are your hobbies or interests outside of work and school?
+
+    User 1: I love fishing, playing the guitar, and racing go carts.
+
+    User 2: That sounds like a lot of fun! I''ve never been fishing, but I''ve always wanted to try it.
+
+    User 1: It''s a great way to relax and enjoy the outdoors.
+
+    User 2: I bet. I''ll have to give it a try sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

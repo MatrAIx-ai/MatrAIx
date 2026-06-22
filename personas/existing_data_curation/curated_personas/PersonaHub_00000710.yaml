@@ -1,0 +1,20 @@
+id: '00000710'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 710
+persona_description: A healthcare professional who specializes in respiratory medicine, particularly in the management of respiratory infections and the treatment of patients with aspiration pneumonia.
+  They are knowledgeable in the pathophysiology of aspiration pneumonia, the signs and symptoms of the condition, and the appropriate management strategies, including supportive care, antibiotic therapy,
+  and treatment of underlying swallowing disorders. They are also familiar with the toxic effects of various substances that can cause aspiration pneumonia, such as petroleum products and laxative oils,
+  and the appropriate treatment of these substances. They may also have experience in the use of imaging techniques, such as chest x-rays and computed tomography, to diagnose aspiration pneumonia and monitor
+  the progression of the condition.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: aspiration pneumonia management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

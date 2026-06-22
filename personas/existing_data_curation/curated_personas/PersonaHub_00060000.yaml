@@ -1,0 +1,18 @@
+id: '00060000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60000
+persona_description: A local official responsible for managing flood control systems and emergency planning in a sparsely populated region affected by subsidence, including Dos Palos, population 5,400.
+  The official oversees the local effort to respond to the subsidence and is aware of the impact on local communities and the region's groundwater storage. The official is likely to be concerned about the
+  potential for flooding and the need for emergency plans to mitigate the risk.
+expertise:
+  general_domain_top1pct: emergency management
+  specific_domain_top1pct: flood control and emergency planning
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

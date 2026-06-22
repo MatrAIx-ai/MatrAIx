@@ -1,0 +1,70 @@
+id: 00007058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7058
+data:
+  user 1 personas: 'My favorite tv show is silicon valley.
+
+    I have 2 sisters.
+
+    I like to play tennis.
+
+    My mother is a dentist.
+
+    I am a baker.'
+  user 2 personas: 'My grandma raised me.
+
+    My favorite color is red orange.
+
+    I want to be a music teacher.
+
+    I enjoy watching horror flicks.
+
+    I play the violin.'
+  Best Generated Conversation: 'User 1: Hey! How are you?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing good too. What do you like to do for fun?
+
+    User 2: I like to play the violin, watch horror movies, and bake.
+
+    User 1: That sounds like fun! I like to play tennis, watch Silicon Valley, and bake.
+
+    User 2: I love Silicon Valley! What''s your favorite episode?
+
+    User 1: My favorite episode is the one where Richard gets fired. It''s so funny!
+
+    User 2: That is a great episode! I also love the one where Jared gets fired.
+
+    User 1: That''s a good one too! What''s your favorite kind of horror movie?
+
+    User 2: I like psychological thrillers. They''re the best!
+
+    User 1: I love those too! What''s your favorite psychological thriller?
+
+    User 2: My favorite is The Silence of the Lambs. It''s so creepy and suspenseful.
+
+    User 1: That''s a great movie! I love it too.
+
+    User 2: What''s your favorite food to bake?
+
+    User 1: I love to bake cookies. They''re so easy and delicious.
+
+    User 2: Me too! I love chocolate chip cookies.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What''s your favorite thing about being a baker?
+
+    User 1: I love being able to create something delicious and share it with others.
+
+    User 2: That''s a great feeling! I love being able to make people happy.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

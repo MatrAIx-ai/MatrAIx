@@ -1,0 +1,68 @@
+id: '00001364'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1364
+data:
+  user 1 personas: 'I love the beach.
+
+    I like to party.
+
+    I work part time at a pizza restaurant.
+
+    My major is business.
+
+    I am in college.'
+  user 2 personas: 'I write.
+
+    I work at mcdonald s.
+
+    I like sleeping.
+
+    I watch youtube videos.'
+  Best Generated Conversation: 'User 1: Hey, I''m User 1. What''s your name?
+
+    User 2: I''m User 2. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for fun?
+
+    User 2: I like to write, sleep, and watch YouTube videos.
+
+    User 1: Cool. I like to go to the beach, party, and work part time at a pizza restaurant.
+
+    User 2: Oh, that sounds fun. I''ve never been to the beach before.
+
+    User 1: You should go sometime. It''s really relaxing.
+
+    User 2: I will. Thanks for the suggestion.
+
+    User 1: No problem. So, what''s your major?
+
+    User 2: I''m majoring in English.
+
+    User 1: Oh, that''s cool. I''m majoring in business.
+
+    User 2: Nice. What do you want to do with your business degree?
+
+    User 1: I''m not sure yet. I''m thinking about going into marketing.
+
+    User 2: That sounds like a good field.
+
+    User 1: Yeah, I think so too. So, what do you want to do with your English degree?
+
+    User 2: I''m not sure yet. I''m thinking about becoming a teacher.
+
+    User 1: That sounds like a good job.
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, it was nice chatting with you.
+
+    User 2: You too.
+
+    User 1: I hope we can chat again sometime.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

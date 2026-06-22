@@ -1,0 +1,86 @@
+id: '00001454'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1454
+data:
+  user 1 personas: 'My hair is black.
+
+    I am gluten free.
+
+    I am a writer.
+
+    I like rock climbing.'
+  user 2 personas: 'I believe that mermaids are real.
+
+    I love iced tea.
+
+    My mom is my best friend.
+
+    I have four sisters.
+
+    I m terrified of heights.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+
+    User 2: Hi, I''m [user 2''s name].
+
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+
+    User 2: I''m a writer.
+
+
+    User 1: That''s cool! What do you write?
+
+
+    User 2: I write fiction, mostly. I''m working on a novel right now.
+
+
+    User 1: That sounds exciting! What''s it about?
+
+
+    User 2: It''s about a mermaid who falls in love with a human.
+
+
+    User 1: That sounds like a great story! I''d love to read it when you''re finished.
+
+
+    User 2: I''ll let you know when it''s done.
+
+
+    User 1: Great! What else do you like to do for fun?
+
+
+    User 2: I like to go rock climbing.
+
+
+    User 1: That''s really cool! I''ve always wanted to try it, but I''m terrified of heights.
+
+
+    User 2: It''s not so bad once you get started.
+
+
+    User 1: I''ll have to take your word for it.
+
+
+    User 2: You should! It''s a lot of fun.
+
+
+    User 1: Maybe I will someday.
+
+
+    User 2: You should!
+
+
+    User 1: Well, I should probably get going. It was nice talking to you.
+
+
+    User 2: You too! Have a good day.
+
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

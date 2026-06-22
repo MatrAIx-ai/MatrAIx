@@ -1,0 +1,18 @@
+id: 00036083
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36083
+persona_description: A healthcare professional with expertise in diagnosing and treating mesothelioma. They have a keen eye for identifying potential tumors and fluid build-up through imaging tests and
+  are skilled in interpreting the results to determine the cause of symptoms and the stage of the mesothelioma. They are also trained in conducting biopsies and have a deep understanding of the staining
+  techniques used to classify the cells, which can help in diagnosing mesothelioma and other forms of cancer.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: mesothelioma diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

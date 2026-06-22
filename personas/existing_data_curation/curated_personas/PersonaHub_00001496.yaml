@@ -1,0 +1,19 @@
+id: 00001496
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1496
+persona_description: A healthcare professional who specializes in neuromuscular disorders, particularly Duchenne Muscular Dystrophy (DMD). They have a keen interest in providing accurate and timely diagnoses
+  to families affected by DMD, and are committed to ensuring that all family members are informed about the general course of the disease, receive genetic counseling, and have access to appropriate treatment
+  options. They are likely to be a doctor with expertise in neuromuscular medicine and are trained to perform a comprehensive clinical assessment, initiate appropriate investigations, and interpret the
+  results. Additionally, they are likely to be a member of a multidisciplinary team that includes genetic counselors, to provide comprehensive support and care to families affected by DMD.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neuromuscular medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: genetic counseling in neuromuscular disorders
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

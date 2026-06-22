@@ -1,0 +1,92 @@
+id: '00004103'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4103
+data:
+  user 1 personas: 'I smell like french fries.
+
+    I can t do math.
+
+    I just got a new sweater.
+
+    It was too small.'
+  user 2 personas: 'I do yoga on tuesdays.
+
+    I go to the pool every thursday for three hours.
+
+    I work five days a week.
+
+    I don t have children.
+
+    I enjoy shopping.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy yoga, shopping, and going to the pool.
+
+    User 1: I love yoga too! Do you go to a studio or do you practice at home?
+
+    User 2: I go to a studio on Tuesdays.
+
+    User 1: Nice! I go to a studio on Thursdays.
+
+    User 2: That''s awesome! I''m going to the pool this afternoon. Do you want to come with me?
+
+    User 1: Sure! I''d love to.
+
+    User 2: Great! I''ll see you there.
+
+    (At the pool)
+
+    User 2: I''m so glad you came with me. I love spending time with you.
+
+    User 1: Me too. I''m having a great time.
+
+    User 2: Me too. I''m glad you''re not wearing your new sweater.
+
+    User 1: Why not?
+
+    User 2: Because it was too small.
+
+    User 1: Oh, I didn''t know that.
+
+    User 2: Yeah, I had to return it.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: It''s okay. I''ll find another one.
+
+    User 1: I''m sure you will.
+
+    User 2: Thanks.
+
+    (Continue to swim for a while)
+
+    User 1: I''m getting tired.
+
+    User 2: Me too.
+
+    User 1: I''m going to go get some ice cream.
+
+    User 2: Me too.
+
+    (Go get ice cream)
+
+    User 1: This is delicious!
+
+    User 2: It is!
+
+    User 1: Thanks for inviting me to the pool.
+
+    User 2: You''re welcome. I''m glad you came.
+
+    User 1: Me too.
+
+    (Continue to eat ice cream)'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

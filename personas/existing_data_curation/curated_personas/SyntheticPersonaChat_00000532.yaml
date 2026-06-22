@@ -1,0 +1,76 @@
+id: '00000532'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 532
+data:
+  user 1 personas: 'I love to run.
+
+    I ca swim very fast.
+
+    My favorite past time is cooking.
+
+    I have a lot of trophies from my childhood.
+
+    I love to sing.'
+  user 2 personas: 'I work at a bookstore.
+
+    I never knew my dad.
+
+    My mom is a nurse.
+
+    I don t drive.
+
+    I have three tattoos.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. Where do you work?
+
+    User 2: I work at a bookstore.
+
+    User 1: Oh, that sounds fun. I love books.
+
+    User 2: Me too! I read all the time.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like all kinds of books, but I really like historical fiction.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: Me too! I think that''s why I love historical fiction so much.
+
+    User 1: What are some of your favorite historical fiction books?
+
+    User 2: I really like the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You definitely should. It''s really good.
+
+    User 1: I know a little bit about swimming. I used to swim in high school.
+
+    User 2: Oh, really? How good were you?
+
+    User 1: I was pretty good. I made it to the state championships my senior year.
+
+    User 2: That''s really impressive! I can''t swim very well.
+
+    User 1: It''s not too hard. You should try it sometime.
+
+    User 2: Maybe I will.
+
+    User 1: I know a lot of people who love to swim. I''m not sure why. Maybe it''s because it''s a good way to exercise.
+
+    User 2: I think it''s also a good way to relax. I love being in the water.
+
+    User 1: Me too! It''s so peaceful.
+
+    User 2: I think we''re both going to be great friends.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

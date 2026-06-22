@@ -1,0 +1,78 @@
+id: 00004186
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4186
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I was born male and transitioned to female when i was 17.
+
+    I live in the usa.
+
+    I love pizza.'
+  user 2 personas: 'I like to eat food.
+
+    I dream of winning the lottery.
+
+    I listen to rock music.
+
+    I work for a large company.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello! How are you?
+
+    User 1: I''m doing well, thanks for asking! How about you?
+
+    User 2: I''m doing great!
+
+    User 1: That''s good to hear! What do you do for fun?
+
+    User 2: I like to eat food, listen to rock music, and dream of winning the lottery.
+
+    User 1: Those all sound like fun activities! I love pizza, too.
+
+    User 2: Pizza is my favorite food! What''s your favorite kind?
+
+    User 1: I like all kinds of pizza, but my favorite is probably pepperoni.
+
+    User 2: Pepperoni pizza is great! I also like cheese pizza.
+
+    User 1: Me too! I love how simple and delicious it is.
+
+    User 2: What''s your favorite rock band?
+
+    User 1: I love the Beatles! What about you?
+
+    User 2: I love the Beatles too! They''re one of my favorite bands of all time.
+
+    User 1: Me too! What''s your favorite song by them?
+
+    User 2: I love "Hey Jude"! What about you?
+
+    User 1: I love "All You Need Is Love"!
+
+    User 2: That''s a great song too! I love the message of peace and love.
+
+    User 1: Me too! It''s a beautiful song.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work for a large company.
+
+    User 2: Oh, that sounds interesting! What do you do there?
+
+    User 1: I''m a marketing manager.
+
+    User 2: Oh, that''s cool! I''ve always been interested in marketing.
+
+    User 1: It''s a great field! I get to work with a lot of different people and come up with creative ideas.
+
+    User 2: That sounds like fun! I''m glad you like your job.
+
+    User 1: I do! It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I''m sure it is! It sounds like you have a great job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

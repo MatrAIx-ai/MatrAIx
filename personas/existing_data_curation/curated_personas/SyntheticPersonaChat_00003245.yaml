@@ -1,0 +1,68 @@
+id: '00003245'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3245
+data:
+  user 1 personas: 'My children vist often.
+
+    I am an old woman.
+
+    I like to bake for them.
+
+    I live in a retirement home.'
+  user 2 personas: 'My favorite food is sushi.
+
+    I own my own business.
+
+    I have a timeshare in mexico.
+
+    My brother lives in england.
+
+    My favorite tv show is friends.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch Friends, and I also like to go to my timeshare in Mexico.
+
+    User 1: That sounds fun! I''ve never been to Mexico.
+
+    User 2: You should go sometime! It''s a beautiful country.
+
+    User 1: I''ll have to check it out. What else do you like to do?
+
+    User 2: I also like to eat sushi. It''s my favorite food.
+
+    User 1: Sushi is delicious! I love it too.
+
+    User 2: It''s so good! I could eat it every day.
+
+    User 1: Me too! I love the way it''s all fresh and clean.
+
+    User 2: Me too! It''s so healthy.
+
+    User 1: I''m glad you''re into healthy food.
+
+    User 2: Yes, I try to be.
+
+    User 1: Me too. I like to eat healthy and exercise.
+
+    User 2: That''s great! I should probably try to exercise more.
+
+    User 1: You should! It''s good for your health.
+
+    User 2: Yes, I know. I''ll try to do it more often.
+
+    User 1: Good for you!
+
+    User 2: Thanks!
+
+    User 1: I''m glad we met.
+
+    User 2: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

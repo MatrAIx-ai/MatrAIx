@@ -1,0 +1,56 @@
+id: 00008713
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8713
+data:
+  user 1 personas: 'My dad owns a appliance store that i do not want to inherit.
+
+    I spend a lot of time watching obscure foreign film on netflix.
+
+    I prefer eating at home because people make me nervous.
+
+    I hate social obligations because i always say the wrong thing.'
+  user 2 personas: 'I do not like music.
+
+    I have lots of friends.
+
+    I have red hair.
+
+    My name is nick.
+
+    I like to ride my scooter.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hey! What''s up?
+
+    User 1: Not much, just hanging out. What about you?
+
+    User 2: I''m just getting ready to go for a ride on my scooter.
+
+    User 1: Oh, that sounds fun! I don''t have a scooter, but I love riding my bike.
+
+    User 2: Me too! I used to race bikes when I was younger.
+
+    User 1: That''s awesome! I''ve always wanted to race bikes, but I''m not very good at it.
+
+    User 2: You just have to practice! I''m sure you''d be great at it.
+
+    User 1: Thanks! I''ll keep that in mind.
+
+    User 2: What are you doing later?
+
+    User 1: I''m not sure yet. What are you up to?
+
+    User 2: I''m going to hang out with some friends. Do you want to come with?
+
+    User 1: Sure! I''d love to meet your friends.
+
+    User 2: Great! I''ll pick you up at 7.
+
+    User 1: Sounds good! See you then.
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

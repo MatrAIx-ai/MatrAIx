@@ -1,0 +1,72 @@
+id: 00000798
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 798
+data:
+  user 1 personas: 'I love to cook.
+
+    I like to fish.
+
+    I am a happy person.
+
+    My dad was a carsalesman.'
+  user 2 personas: 'I still love my cat despite all this.
+
+    I spend an hour getting ready in the morning.
+
+    I have horrible allergies.
+
+    I cannot stand clutter or dust.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name]. Nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I like to cook, fish, and spend time with my cat.
+
+    User 1: That sounds fun! I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I love the smell of the garlic and olive oil cooking together.
+
+    User 1: That sounds delicious! I love pasta too. I''m not very good at making it, but I love to eat it.
+
+    User 2: You should try making it sometime. It''s not as hard as you think.
+
+    User 1: I will! Thanks for the tip. What''s your cat''s name?
+
+    User 2: His name is Mr. Snuggles. He''s a big fluffy orange cat.
+
+    User 1: Aww, he sounds cute! I love cats. I have a cat named Mittens.
+
+    User 2: Cats are the best! They''re so cuddly and cute.
+
+    User 1: I know, right? They''re the best companions.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go fishing. I love the peace and quiet of being on the water.
+
+    User 2: I''ve never been fishing before. Is it fun?
+
+    User 1: Yes, it''s very fun. It''s a great way to relax and spend time outdoors.
+
+    User 2: I might have to try it sometime. I love spending time outdoors.
+
+    User 1: You should! It''s a great way to relax and enjoy nature.
+
+    User 2: So, what are you doing later today?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go fishing with my friends. Do you want to come with us?
+
+    User 1: Sure! I would love to go fishing with you.
+
+    User 2: Great! I''ll pick you up at 8:00.
+
+    User 1: Sounds good! I''ll see you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

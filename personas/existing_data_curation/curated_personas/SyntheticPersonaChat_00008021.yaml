@@ -1,0 +1,62 @@
+id: 00008021
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8021
+data:
+  user 1 personas: 'I read sci fi space adventures with a passion.
+
+    I eat tuna fish salad at least every day.
+
+    I have sandy brown hair and green eyes.
+
+    My favorite music is two steps from hell and rock opera genre.'
+  user 2 personas: 'I work at the pizza parlor.
+
+    I m the oldest of three boys.
+
+    My mother was a single mother.
+
+    I grew up in the projects of chicago.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and read books.
+
+    User 1: Me too! What kind of video games do you like to play?
+
+    User 2: I like to play action-adventure games, like Zelda and Uncharted.
+
+    User 1: Those are both great games! I love the Zelda series.
+
+    User 2: Me too! What kind of books do you like to read?
+
+    User 1: I love to read sci-fi and fantasy novels.
+
+    User 2: Oh, I love those too! What are some of your favorite books?
+
+    User 1: I love the Hitchhiker''s Guide to the Galaxy series by Douglas Adams, and the Lord of the Rings series by J.R.R. Tolkien.
+
+    User 2: Those are both great series! I''ve read both of them multiple times.
+
+    User 1: Me too! I''m always looking for new sci-fi and fantasy novels to read.
+
+    User 2: I have a few recommendations, if you''re interested.
+
+    User 1: Sure, I''d love to hear them.
+
+    User 2: Well, I recently read the Red Rising series by Pierce Brown, and I really enjoyed it. It''s a sci-fi series set in a future where the society is divided into different castes.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: You definitely should. It''s a great series.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

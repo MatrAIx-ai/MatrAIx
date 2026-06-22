@@ -1,0 +1,18 @@
+id: 00045822
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45822
+persona_description: A radiologist who specializes in interpreting CT scans and has expertise in identifying and interpreting fat stranding on CT. They are trained to recognize the various causes and indications
+  of fat stranding on CT and to correlate it with other clinical findings to arrive at the most appropriate diagnosis. They are also skilled in using imaging tests to determine the importance of the finding
+  and to guide the appropriate management.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: radiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: CT scan interpretation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

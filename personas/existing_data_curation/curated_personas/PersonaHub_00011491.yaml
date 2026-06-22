@@ -1,0 +1,20 @@
+id: 00011491
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11491
+persona_description: A web server administrator who is responsible for managing and maintaining HTTP/1.1 and HTTP/1.0 servers, ensuring that they operate efficiently and effectively. They are skilled in
+  implementing and configuring the properties of the Connection header field as specified in section 14.10, and they are aware of the importance of maintaining persistent connections and using TCP's flow
+  control mechanisms to resolve temporary overloads. They are also aware of the potential issues with non-idempotent methods or sequences of methods, and they are prepared to handle any unexpected events
+  that may occur during the transport connection. They are committed to improving HTTP response times and avoiding congestion by limiting the number of simultaneous connections that a single-user client
+  maintains with any server or proxy.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: web server administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

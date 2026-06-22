@@ -1,0 +1,72 @@
+id: 00006068
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6068
+data:
+  user 1 personas: 'I m applying for publishing jobs.
+
+    The only autographs i ve ever wanted are from authors.
+
+    My favorite color is green.
+
+    My mother is a librarian.
+
+    I used to wear glasses as a child.'
+  user 2 personas: 'I cook every night.
+
+    I am a soccer mom.
+
+    I teach cheerleading in my spare time.
+
+    I work for a online company from home.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). What''s your name?
+
+    User 2: Hi, I''m (name).
+
+    User 1: Nice to meet you, (name).
+
+    User 2: Nice to meet you too, (name).
+
+    User 1: What do you do for a living?
+
+    User 2: I work for an online company from home.
+
+    User 1: That sounds interesting. What kind of company is it?
+
+    User 2: It''s a marketing company. We help businesses grow their online presence.
+
+    User 1: That''s cool. I used to work for a marketing company too.
+
+    User 2: Really? What did you do there?
+
+    User 1: I was a copywriter. I wrote marketing materials for the company''s website and social media.
+
+    User 2: That sounds like a fun job.
+
+    User 1: It was, but it was also a lot of work.
+
+    User 2: I''m sure it was.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to cook. I cook every night for my family.
+
+    User 1: That''s great. I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m really good at making homemade pasta.
+
+    User 1: That''s awesome. I love pasta too. I''m not very good at making homemade pasta, though.
+
+    User 2: You should try it. It''s not as hard as you think.
+
+    User 1: I might just do that.
+
+    User 2: You should! I''m sure you''ll be great at it.
+
+    User 1: Thanks, (name).
+
+    User 2: You''re welcome, (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

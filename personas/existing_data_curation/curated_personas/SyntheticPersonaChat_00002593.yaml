@@ -1,0 +1,62 @@
+id: 00002593
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2593
+data:
+  user 1 personas: 'I love to take walks.
+
+    I love to go to the lake.
+
+    I love to listen to music.
+
+    I am a happy person.
+
+    I love to knit and crochet.'
+  user 2 personas: 'I go to craft shows on the weekends.
+
+    I live with my boyfriend in an apartment.
+
+    During the week , i work as a barista.
+
+    I design jewelry when i have spare time.
+
+    My favorite book is the bible.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to craft shows on the weekends.
+
+    User 1: That sounds fun! I love to knit and crochet.
+
+    User 2: Oh, that''s cool! I love to design jewelry.
+
+    User 1: I''ve never tried designing jewelry, but it sounds like a lot of fun.
+
+    User 2: It is! I love being able to create something unique and beautiful.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I love the people I work with. We''re all so close and we have a lot of fun together.
+
+    User 1: That''s great! I''m glad you have a good work environment.
+
+    User 2: Me too! It makes all the difference.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: My favorite book is the Bible. It''s full of wisdom and inspiration.
+
+    User 1: I''ve never read the Bible, but I''ve heard good things about it.
+
+    User 2: You should definitely read it! It''s a great book.
+
+    User 1: I''ll have to check it out.
+
+    User 2: I''m sure you''ll enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

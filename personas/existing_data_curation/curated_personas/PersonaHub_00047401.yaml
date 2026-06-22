@@ -1,0 +1,18 @@
+id: '00047401'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 47401
+persona_description: A medical researcher at Heriot-Watt University in Edinburgh who specializes in developing new ultrasound techniques for early cancer detection. The persona is passionate about improving
+  diagnostic accuracy and has a deep understanding of the limitations of current ultrasound images. They are currently conducting trials on human patients to test their method and are optimistic about its
+  potential for expanding to other applications in cardiovascular disease, diabetes, liver disease, and transplant rejection.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: medical imaging
+  general_domain_top01pct: None
+  specific_domain_top01pct: ultrasound technology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

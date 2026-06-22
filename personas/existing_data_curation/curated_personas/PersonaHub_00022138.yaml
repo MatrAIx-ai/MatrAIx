@@ -1,0 +1,18 @@
+id: 00022138
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22138
+persona_description: A scientist who specializes in atmospheric science, specifically hurricane research and modeling. Dr. Jeff Masters is a co-founder of Wunderground, a weather forecasting company, and
+  has co-authored numerous studies on hurricanes and their impacts. He is known for his expertise in hurricane evacuation surveys and modeling storm surge effects. His co-author, Bob Henson, is also a meteorologist
+  and co-founder of Wunderground.
+expertise:
+  general_domain_top1pct: meteorology/atmospheric science
+  specific_domain_top1pct: hurricane research and modeling
+  general_domain_top01pct: None
+  specific_domain_top01pct: hurricane research and modeling
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

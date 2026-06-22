@@ -1,0 +1,18 @@
+id: '00010241'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10241
+persona_description: A chemist who is researching and developing new methods for increasing the efficiency of solar panels by using proteins from plants, specifically spinach, to boost power production.
+  The chemist is a professor at Vanderbilt University and has published several papers on the topic, including a recent study that reports on a new biohybrid solar cell that uses spinach's photosynthetic
+  protein to boost power production. The chemist is also interested in using this protein-silicon combination to create more efficient solar cells.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: biohybrid solar cells
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,82 @@
+id: '00002260'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2260
+data:
+  user 1 personas: 'I like to drink tea.
+
+    I like to draw other people.
+
+    I like to eat hard boiled eggs.
+
+    I like to mountain bike.'
+  user 2 personas: 'I love to go out to eat with my family.
+
+    I like to take drives in the country.
+
+    I like to chat with my friends.
+
+    I like to read books that are in a series.
+
+    I like to go to the movies.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out to eat with my family, take drives in the country, chat with my friends, read books that are in a series, and go to the movies.
+
+    User 1: That sounds like a lot of fun! I like to mountain bike, drink tea, draw other people, and eat hard boiled eggs.
+
+    User 2: That''s really interesting! I''ve never tried mountain biking before, but it sounds like it would be a lot of fun.
+
+    User 1: It is! It''s a great way to get exercise and explore the outdoors.
+
+    User 2: I would love to try it sometime.
+
+    User 1: I''m sure you''d love it!
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!
+
+    User 2: So, what are you up to today?
+
+    User 1: I''m just relaxing at home. I''m not feeling well, so I''m taking a break from my usual activities.
+
+    User 2: Oh, I''m sorry to hear that. I hope you feel better soon!
+
+    User 1: Thank you!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a graphic designer.
+
+    User 2: Oh, that sounds like a fun job!
+
+    User 1: It is! I love working with colors and shapes.
+
+    User 2: I can imagine.
+
+    User 1: So, what about you? What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s a very important job!
+
+    User 2: It is! I love helping people.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to draw, go hiking, and drink tea.
+
+    User 2: That sounds like a lot of fun! I like to read books, go out to eat with my family, and take drives in the country.
+
+    User 1: That sounds like a lot of fun too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

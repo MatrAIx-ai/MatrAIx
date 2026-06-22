@@ -1,0 +1,18 @@
+id: '00002033'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2033
+persona_description: A scientist or engineer specializing in vehicle noise analysis and recognition, focusing on the development and implementation of algorithms to classify and identify vehicle types based
+  on their unique noise patterns. This individual is likely to have expertise in signal processing, machine learning, and computer vision, and is skilled in data collection, analysis, and interpretation.
+  They may also have experience in field trials and operational testing to validate their algorithms in real-world scenarios.
+expertise:
+  general_domain_top1pct: science and engineering
+  specific_domain_top1pct: vehicle noise analysis and recognition
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

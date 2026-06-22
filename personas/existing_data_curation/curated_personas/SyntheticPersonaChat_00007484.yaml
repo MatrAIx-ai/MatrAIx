@@ -1,0 +1,60 @@
+id: 00007484
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7484
+data:
+  user 1 personas: 'I have never traveled out of the country.
+
+    I was born under a blood moon.
+
+    I work some very odd jobs.
+
+    I enjoy going on hikes.'
+  user 2 personas: 'My mother was a single mother.
+
+    I grew up in the projects of chicago.
+
+    I m the oldest of three boys.
+
+    I work at the pizza parlor.'
+  Best Generated Conversation: 'User 1: Where are you from?
+
+    User 2: I grew up in the projects of Chicago.
+
+    User 1: Wow, that must have been tough.
+
+    User 2: It was, but it also made me strong.
+
+    User 1: I''m sure it did. What do you do for fun now?
+
+    User 2: I like to go on hikes.
+
+    User 1: That sounds fun. Where do you go hiking?
+
+    User 2: I usually go to the mountains near my house.
+
+    User 1: Have you ever been out of the country?
+
+    User 2: No, I''ve never traveled outside of the US.
+
+    User 1: Me neither. I''d like to go to Europe one day.
+
+    User 2: That would be cool. I''d love to go to Italy.
+
+    User 1: Me too. I''ve heard it''s beautiful. What do you like to do for work?
+
+    User 2: I work at a pizza parlor.
+
+    User 1: Oh, that''s cool. Do you like it?
+
+    User 2: It''s okay. I''m looking for something new.
+
+    User 1: What are you looking for?
+
+    User 2: I''m not sure. I''m open to anything.
+
+    User 1: Well, I''m sure you''ll find something soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

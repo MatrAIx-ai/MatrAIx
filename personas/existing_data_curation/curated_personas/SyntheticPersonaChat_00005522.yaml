@@ -1,0 +1,73 @@
+id: '00005522'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5522
+data:
+  user 1 personas: 'I cannot stand clutter or dust.
+
+    I have horrible allergies.
+
+    I still love my cat despite all this.
+
+    I spend an hour getting ready in the morning.
+
+    When i shower my skin is nearly red from how hard i scrub.'
+  user 2 personas: 'My mother was a teacher.
+
+    I teach a yoga class.
+
+    I am single.
+
+    I enjoy nature.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, my name is [name].
+
+    User 1: It''s nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to teach yoga and spend time in nature.
+
+    User 1: That sounds nice. I like yoga too, but I don''t have a lot of time to practice.
+
+    User 2: You should try to practice more often. It''s a great way to relax and de-stress.
+
+    User 1: I know, I know. I''ll try to do it more often.
+
+    User 2: Good! What else do you like to do?
+
+    User 1: I love to read, go for walks, and spend time with my friends and family.
+
+    User 2: That sounds like a nice life. I''m glad you enjoy your time.
+
+    User 1: Yeah, I do. I''m a simple person with simple needs.
+
+    User 2: That''s great. I think it''s important to be happy with what you have.
+
+    User 1: I agree. I''m a pretty happy person.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a yoga instructor. I teach classes at a local studio.
+
+    User 1: That sounds like a fun job. Do you like it?
+
+    User 2: I love it! I get to meet new people and help them improve their lives.
+
+    User 1: That''s great. I''m glad you enjoy your job.
+
+    User 2: Thanks! I do.
+
+    User 1: So, what''s your favorite thing about teaching yoga?
+
+    User 2: I love seeing the transformation in my students. When they start out, they''re usually stiff and inflexible. But after a few months of practice, they''re able to move more easily and comfortably.
+    It''s really rewarding to be a part of that journey.
+
+    User 1: That''s amazing. I''m sure your students are grateful to have you.
+
+    User 2: I hope so! I love working with them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00006999
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6999
+data:
+  user 1 personas: 'I love the band red hot chili peppers.
+
+    My feet are size six women s.
+
+    I want to be a journalist but instead i sell washers at sears.
+
+    I have a french bulldog.'
+  user 2 personas: 'I have 6 toes on one foot.
+
+    I hate skiing.
+
+    My favorite book is twilight.
+
+    I broke my nose in 5th grade.'
+  Best Generated Conversation: 'User 1: What do you think of the Red Hot Chili Peppers?
+
+    User 2: They''re great! I saw them in concert last year.
+
+    User 1: Oh, that must have been awesome! I''ve always wanted to see them live.
+
+    User 2: It was definitely worth the money. They put on an amazing show.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I don''t know, I have so many favorites. I guess I''d have to say "Give It Away" or "Under the Bridge".
+
+    User 1: Those are both great songs! I love the guitar riff in "Under the Bridge".
+
+    User 2: Me too! It''s so catchy.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Me too! I love reading and watching movies. I''m not much of a gamer, though.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially into science fiction and fantasy.
+
+    User 2: Me too! I love the Harry Potter series and the Lord of the Rings trilogy.
+
+    User 1: Those are both great series! I''m also a big fan of the Percy Jackson series and the Hunger Games series.
+
+    User 2: I''ve heard good things about those series, but I haven''t read them yet.
+
+    User 1: You should! They''re both really good.
+
+    User 2: I will! I''m always looking for new books to read.
+
+    User 1: Me too! I love reading.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

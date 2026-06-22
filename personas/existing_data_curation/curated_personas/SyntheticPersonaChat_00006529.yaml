@@ -1,0 +1,62 @@
+id: 00006529
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6529
+data:
+  user 1 personas: 'My favorite singer is taylor swift.
+
+    My husband is a stay at home dad.
+
+    I am married.
+
+    I work for a beer distributor.'
+  user 2 personas: 'I graduated college last week.
+
+    My girlfriend is 6 months pregnant.
+
+    I am proposing tonight.
+
+    I got a job as a coach at a local highschool.'
+  Best Generated Conversation: 'User 1: Hey, congratulations on graduating college!
+
+    User 2: Thanks! I''m really excited to start my new job as a coach at the local high school.
+
+    User 1: That''s great! What sport do you coach?
+
+    User 2: I''ll be coaching baseball.
+
+    User 1: That''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I''m excited to get started.
+
+    User 1: So, what are your plans for tonight?
+
+    User 2: I''m going to propose to my girlfriend.
+
+    User 1: Oh my gosh, that''s so exciting!
+
+    User 2: Yeah, I''m really nervous but I''m also really excited.
+
+    User 1: I''m sure she''ll say yes.
+
+    User 2: I hope so! I''ve been planning this for a long time.
+
+    User 1: Well, good luck tonight!
+
+    User 2: Thanks! I''m going to need it!
+
+    User 1: So, how did it go?
+
+    User 2: It went great! She said yes!
+
+    User 1: Oh my gosh, congratulations!
+
+    User 2: Thanks! I''m so happy!
+
+    User 1: I''m so glad for you!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

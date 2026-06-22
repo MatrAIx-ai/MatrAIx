@@ -1,0 +1,80 @@
+id: 00008181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8181
+data:
+  user 1 personas: 'My favorite place to spend time at is the beach.
+
+    I have a masters degree in creative writing.
+
+    I live in a medium sized city.
+
+    I love to read.
+
+    I have 3 sisters and 2 brothers.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I have never broken a bone.
+
+    I love cats.
+
+    I am athletic.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is Emily.
+
+    User 1: Nice to meet you, Emily. My name is Sarah.
+
+    User 2: Nice to meet you too, Sarah.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, play sports, and go to the beach.
+
+    User 1: Those are all great things to do! I love to read too. What are some of your favorite books?
+
+    User 2: I love the Harry Potter series and the Hunger Games series.
+
+    User 1: I''ve read both of those series! They''re both great.
+
+    User 2: I know, right? I''m also a big fan of the Percy Jackson series.
+
+    User 1: I haven''t read that one yet. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a really good series.
+
+    User 1: So, what kind of sports do you like to play?
+
+    User 2: I like to play basketball, volleyball, and tennis.
+
+    User 1: Those are all great sports! I used to play basketball in high school.
+
+    User 2: I know, right? They''re so much fun.
+
+    User 1: So, what do you like about the beach?
+
+    User 2: I love the sand, the sun, and the waves.
+
+    User 1: I know, right? It''s so peaceful and relaxing.
+
+    User 2: I know, right? I could spend all day at the beach.
+
+    User 1: Me too!
+
+    User 2: It''s so nice to meet someone who likes all the same things I do.
+
+    User 1: Me too!
+
+    User 2: Maybe we can hang out sometime and do some of these things together.
+
+    User 1: That would be great!
+
+    User 2: Great! I''ll give you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

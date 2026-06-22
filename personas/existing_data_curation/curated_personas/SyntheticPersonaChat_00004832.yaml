@@ -1,0 +1,78 @@
+id: 00004832
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4832
+data:
+  user 1 personas: 'My car is over 20 years old.
+
+    My favorite movie is the last of the mohicans.
+
+    I did not finish college.
+
+    My mother was a school music teacher.'
+  user 2 personas: 'My favorite book that i ve read lately is middlesex.
+
+    My favorite food is anything italian.
+
+    My favorite tv shows are forensic files and jeopardy.
+
+    I am a gym rat that loves to play racquetball.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you! My name is [user 1''s name].
+
+    User 2: Nice to meet you too!
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book lately is Middlesex.
+
+    User 1: I''ve never heard of that before. What''s it about?
+
+    User 2: It''s about a person who is born intersex, and how they navigate the world as someone who doesn''t fit into a traditional gender role.
+
+    User 1: That sounds really interesting! I might have to check it out.
+
+    User 2: I definitely recommend it! What''s your favorite movie?
+
+    User 1: My favorite movie is The Last of the Mohicans.
+
+    User 2: That''s a great movie! I love the scenery and the action sequences.
+
+    User 1: Me too! I also love the characters. They''re all so well-developed and relatable.
+
+    User 2: I agree. It''s a really well-made movie.
+
+    User 1: What''s your favorite TV show?
+
+    User 2: My favorite TV shows are Forensic Files and Jeopardy.
+
+    User 1: I love Forensic Files! I''ve been watching it for years.
+
+    User 2: Me too! It''s so interesting and informative.
+
+    User 1: What''s your favorite thing about it?
+
+    User 2: I love how they solve the crimes. It''s so satisfying to watch them figure it all out.
+
+    User 1: I agree! It''s always great when they catch the bad guy.
+
+    User 2: What about you? What''s your favorite TV show?
+
+    User 1: My favorite TV show is Jeopardy. I love the trivia and the competition.
+
+    User 2: Me too! I always try to answer along with the contestants.
+
+    User 1: Me too! I''m not very good at it, but it''s still fun to try.
+
+    User 2: It''s definitely fun to try.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00004482
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4482
+data:
+  user 1 personas: 'I was a swimmer in college.
+
+    I have a cat named pickles.
+
+    I love starbucks coffee.
+
+    I have a beautiful rose garden.
+
+    My parents met at woodstock.'
+  user 2 personas: 'I am writing a novel.
+
+    I own an iphone.
+
+    My favorite tv show is rick and morty.
+
+    My favorite color is black.
+
+    I don t like pickles.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user1].
+
+    User 2: Hello, I''m [user2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write novels, watch TV, and play video games.
+
+    User 1: Cool, I used to write novels too. What kind of novels do you write?
+
+    User 2: I write science fiction and fantasy novels.
+
+    User 1: Oh, cool. I''ve always been a fan of sci-fi and fantasy.
+
+    User 2: Me too! What''s your favorite sci-fi or fantasy novel?
+
+    User 1: That''s a tough question, but I think I''d have to say Dune.
+
+    User 2: Dune is a great choice! It''s one of my favorite books too.
+
+    User 1: It''s so well-written and thought-provoking.
+
+    User 2: I agree. It''s also really complex, which I love.
+
+    User 1: Me too. It''s one of those books that you can read over and over again and still find new things to appreciate.
+
+    User 2: Exactly! I''ve read it at least three times, and I still find new things to learn every time.
+
+    User 1: Well, it was nice meeting you, [user2]. I hope we can talk again soon.
+
+    User 2: It was nice meeting you too, [user1]. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

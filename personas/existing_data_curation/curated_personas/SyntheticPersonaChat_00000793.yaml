@@ -1,0 +1,82 @@
+id: 00000793
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 793
+data:
+  user 1 personas: 'I love sunsets.
+
+    Sometimes i think i should get out and exercise more.
+
+    I eat breakfast then go right back to bed.
+
+    I work 60 hours a week.
+
+    I wake early to watch the sun rise every day.'
+  user 2 personas: 'I am going to school for writing.
+
+    My mother is a librarian.
+
+    I often help her sort books in the library.
+
+    I love to read fantasy novels and poetry.
+
+    I would like to be a journalist one day.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, write, and watch movies.
+
+    User 1: Me too! I love to read fantasy novels and poetry.
+
+    User 2: That''s great! I love fantasy novels too. What are some of your favorites?
+
+    User 1: I really like the Wheel of Time series by Robert Jordan.
+
+    User 2: I''ve heard good things about that series. I''ve been meaning to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will. What else do you like to read?
+
+    User 1: I also like to read historical fiction, like The Pillars of the Earth by Ken Follett.
+
+    User 2: I''ve read that one too! It''s really good.
+
+    User 1: I know, right? I love it.
+
+    User 2: What do you like to write?
+
+    User 1: I write poetry and short stories.
+
+    User 2: That''s great! I''ve always wanted to write a novel.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: You should! I''m sure it would be great.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: That''s cool! I''ve always thought about being a teacher.
+
+    User 1: It''s a lot of fun. I love working with kids.
+
+    User 2: I bet it is. I''m glad you like your job.
+
+    User 1: I do. It''s the best job in the world.
+
+    User 2: I''m sure it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

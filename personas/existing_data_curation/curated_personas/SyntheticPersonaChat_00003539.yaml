@@ -1,0 +1,60 @@
+id: 00003539
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3539
+data:
+  user 1 personas: 'My father was an author.
+
+    My mother was born in ireland.
+
+    I have traveled to both ireland and australia.
+
+    My father was born in australia.
+
+    I like to travel.'
+  user 2 personas: 'I work in marketing.
+
+    My hiking boots are pink.
+
+    The appalachian trail is my favorite.
+
+    I love to hike.
+
+    I like folk music.'
+  Best Generated Conversation: 'User 1: I''m from Ireland.
+
+    User 2: I''ve been to Ireland! It''s beautiful there.
+
+    User 1: Thanks! I love it there.
+
+    User 2: What do you like to do there?
+
+    User 1: I like to visit my family and friends, and I love to explore.
+
+    User 2: That sounds great! I''m from Australia, and I love to hike.
+
+    User 1: I love to hike too! Have you ever hiked the Appalachian Trail?
+
+    User 2: No, but I''ve heard great things about it. I''d love to hike it one day.
+
+    User 1: It''s amazing! I''ve hiked it twice, and it''s one of my favorite experiences.
+
+    User 2: That''s so cool! I''m sure I''d love it too.
+
+    User 1: Maybe we should hike it together sometime!
+
+    User 2: That would be great! We could make a whole trip out of it.
+
+    User 1: That would be amazing! I love planning trips.
+
+    User 2: Me too! We could have so much fun.
+
+    User 1: We could even go to Ireland and visit my family!
+
+    User 2: That would be perfect! I''ve always wanted to go to Ireland.
+
+    User 1: This is going to be a great trip'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

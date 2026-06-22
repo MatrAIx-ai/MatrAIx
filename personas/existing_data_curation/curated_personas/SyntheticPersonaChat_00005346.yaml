@@ -1,0 +1,56 @@
+id: '00005346'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5346
+data:
+  user 1 personas: 'I love agatha christie novels.
+
+    My husband and i have a suicide pact.
+
+    I spend most of my days working at my church s food pantry.
+
+    I grow the tallest sunfloweres you ve ever seen.'
+  user 2 personas: 'I m scared of clowns.
+
+    I have two dogs.
+
+    I like to cook.
+
+    I have two roomates.
+
+    I live on the third floor in an apartment.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to cook, I have two dogs, and I''m scared of clowns.
+
+    User 1: That''s interesting. I love to cook too, but I don''t have any pets. I''m not scared of anything, but I do have a suicide pact with my husband.
+
+    User 2: Really? Why do you have a suicide pact?
+
+    User 1: We''re both terminally ill, and we don''t want to suffer.
+
+    User 2: That''s so sad. I''m so sorry to hear that.
+
+    User 1: It''s okay. We''re both ready to go.
+
+    User 2: Well, I''m glad you have each other.
+
+    User 1: We do. We''re going to spend the rest of our time together making the most of it.
+
+    User 2: That''s great. I''m glad you''re happy.
+
+    User 1: Thanks.
+
+    User 2: Well, I should probably get going.
+
+    User 1: Okay. It was nice meeting you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

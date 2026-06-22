@@ -1,0 +1,72 @@
+id: '00007422'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7422
+data:
+  user 1 personas: 'My favorite singer is justin timberlake.
+
+    I enjoy horseback riding.
+
+    I am a full time mom.
+
+    I am a mother to two beautiful boys.
+
+    My family and i go camping every month.'
+  user 2 personas: 'I am a vegan.
+
+    I like to ride my bike.
+
+    I am a 30 year old female.
+
+    I work as a vet.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to ride my bike, and I''m a vegan.
+
+    User 1: That''s cool! I like to horseback ride, and I''m a mom to two beautiful boys.
+
+    User 2: Oh, that''s awesome! I''ve never been horseback riding before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: What do you like to do with your kids?
+
+    User 1: We go camping every month, and we love to play games together.
+
+    User 2: That sounds like a lot of fun. I''m glad you have such a great family.
+
+    User 1: Thanks! I am too.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a full-time mom, but I also like to paint in my spare time.
+
+    User 2: That''s cool! I''m a vet, so I work with animals all day long.
+
+    User 1: That must be a lot of fun.
+
+    User 2: It is! I love working with animals.
+
+    User 1: I''m glad you have a job that you enjoy.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice meeting you.
+
+    User 2: You too!
+
+    User 1: Maybe we can go horseback riding together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! We can exchange numbers.
+
+    User 2: Okay'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

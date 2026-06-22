@@ -1,0 +1,84 @@
+id: '00005710'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5710
+data:
+  user 1 personas: 'Sometimes i go to yoga classes.
+
+    I like italian cusine.
+
+    I live in a big city.
+
+    This summer i went on vacation to italy.
+
+    I work in the office , 9 till 5.'
+  user 2 personas: 'I have a golden retriever puppy.
+
+    I don t have a job and sit on the couch all day.
+
+    I whine a lot.
+
+    I try to limit how much i eat.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [name], I''m a stay-at-home mom with a golden retriever puppy.
+
+    User 1: That''s cool! I work in an office job and I like to go to yoga classes.
+
+    User 2: I''ve never been to yoga, is it fun?
+
+    User 1: Yeah, it''s really relaxing and I always feel good after I''ve gone.
+
+    User 2: I might have to check it out sometime.
+
+    User 1: You should! What do you like to do for fun?
+
+    User 2: I like to hang out with my puppy, go on walks, and play fetch.
+
+    User 1: That sounds like a lot of fun! I have a cat, but I don''t get to play with him as much as I''d like.
+
+    User 2: You should! Cats are really fun to play with.
+
+    User 1: I know, I''ll try to play with him more. What''s your favorite food?
+
+    User 2: I love Italian food! I could eat pasta every day.
+
+    User 1: Me too! Italian food is so good. I went to Italy this summer and had the best time.
+
+    User 2: I''m so jealous! I''ve always wanted to go to Italy.
+
+    User 1: You should definitely go! It''s an amazing country.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I don''t have a job, I just stay at home with my puppy.
+
+    User 1: That sounds like a lot of fun! I wish I could stay home with my cat all day.
+
+    User 2: It''s definitely a lot of work, but it''s also a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite thing to do in the city?
+
+    User 1: I like to go to the movies, go out to eat, and go to the park.
+
+    User 2: I love going to the movies! I go to the movies at least once a week.
+
+    User 1: That''s a lot of movies! I wish I had time to go to the movies that often.
+
+    User 2: I have a lot of free time, so I like to go to the movies a lot.
+
+    User 1: I''m jealous! I wish I had more free time.
+
+    User 2: You should try to make some time for yourself! It''s important to relax and have fun.
+
+    User 1: You''re right, I should. Thanks for the advice.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

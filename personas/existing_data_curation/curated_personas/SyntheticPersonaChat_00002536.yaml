@@ -1,0 +1,62 @@
+id: '00002536'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2536
+data:
+  user 1 personas: 'I like to wear boots.
+
+    I have many girlfriends.
+
+    I am argentinian.
+
+    I like to ride horses.'
+  user 2 personas: 'I love eating at mcdonalds.
+
+    My parents both are school teachers.
+
+    The only music i listen to is pop , because it makes me feel happy.
+
+    Watching nascar races is a great way to spend a sunday for me.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Argentina.
+
+    User 2: Hi, nice to meet you! I''m from the USA.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to eat at McDonald''s, watch NASCAR races, and listen to pop music.
+
+    User 1: Oh, I like to eat at McDonald''s too! I''m not really into NASCAR races, but I do like to listen to pop music.
+
+    User 2: What''s your favorite pop song?
+
+    User 1: I really like "Blinding Lights" by The Weeknd.
+
+    User 2: Oh, that''s a good song! I like that one too.
+
+    User 1: What do you like about it?
+
+    User 2: I like the beat and the melody. It''s a really catchy song.
+
+    User 1: I agree! It''s definitely one of my favorite songs.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to ride horses, go hiking, and spend time with my family.
+
+    User 2: Oh, that sounds nice! I like to go hiking too.
+
+    User 1: Where do you like to hike?
+
+    User 2: I like to hike in the mountains. I think it''s really beautiful up there.
+
+    User 1: I agree! I love the mountains. They''re so peaceful and relaxing.
+
+    User 2: Me too! I could spend hours hiking in the mountains.
+
+    User 1: Me too! It''s the best way to relax.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

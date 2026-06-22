@@ -1,0 +1,72 @@
+id: '00002044'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2044
+data:
+  user 1 personas: 'I work at a museum.
+
+    I like to go to the park.
+
+    I am stuck in a wheel chair.
+
+    I do not have a lot of friends.
+
+    I read a lot.'
+  user 2 personas: 'I go running a lot.
+
+    I love hamburgers.
+
+    I hate winter.
+
+    I work as an electrician.'
+  Best Generated Conversation: 'User 1: Hey, my name is [name]!
+
+    User 2: Hello [name], my name is [name]!
+
+    User 1: Nice to meet you [name], what do you do for fun?
+
+    User 2: I love running and I also work as an electrician.
+
+    User 1: That''s cool! I like to go to the park and read books.
+
+    User 2: I love reading too! What kind of books do you like to read?
+
+    User 1: I like to read mystery novels and historical fiction.
+
+    User 2: I love those too! Have you read any good books lately?
+
+    User 1: I just finished reading The Girl on the Train. It was really good!
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a really good read.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go to the museum with my family. We have a lot of fun exploring the exhibits and learning about new things.
+
+    User 2: That sounds like a lot of fun! I''ve never been to a museum.
+
+    User 1: You should go! There are so many interesting things to see and learn.
+
+    User 2: I will! I''m sure I''d enjoy it.
+
+    User 1: So, what''s your favorite thing about winter?
+
+    User 2: I love the snow! I love going sledding and building snowmen.
+
+    User 1: I love the snow too! It''s so beautiful.
+
+    User 2: I agree! It makes everything look so magical.
+
+    User 1: Do you have any plans for winter?
+
+    User 2: I''m not sure yet. I might go skiing or snowboarding.
+
+    User 1: That sounds like fun! I''ve never been skiing or snowboarding, but I''ve always wanted to try it.
+
+    User 2: You should! It''s really fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

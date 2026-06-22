@@ -1,0 +1,18 @@
+id: 00009530
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9530
+persona_description: A geologist who is interested in studying earthquakes and their measurement methods. This person may have a background in geology, seismology, or geophysics and is interested in learning
+  more about the scientific equipment used to measure earthquakes and the different scales used to classify their intensity. This person may also be interested in learning about the factors that contribute
+  to the size of an earthquake and the potential consequences of earthquakes on the earth's surface.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

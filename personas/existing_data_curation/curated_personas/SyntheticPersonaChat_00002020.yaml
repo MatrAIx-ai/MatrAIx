@@ -1,0 +1,66 @@
+id: '00002020'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2020
+data:
+  user 1 personas: 'I make my own soap.
+
+    I make my own compost.
+
+    I am a fruitarian.
+
+    I like to garden.'
+  user 2 personas: 'I don t like my reputation.
+
+    I don t like feeling controlled.
+
+    I want to move.
+
+    I have a harsh inner critic.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to garden, read, and play video games.
+
+    User 1: Oh, I like to garden too! What kind of things do you grow?
+
+    User 2: I grow vegetables, fruits, and flowers.
+
+    User 1: That''s awesome! I''m trying to grow some tomatoes this year.
+
+    User 2: Good luck! Tomatoes are a lot of fun to grow.
+
+    User 1: Thanks! What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m a big fan of science fiction and fantasy.
+
+    User 1: I like those genres too! What are some of your favorite books?
+
+    User 2: I really enjoyed the His Dark Materials trilogy by Philip Pullman and the Mistborn trilogy by Brandon Sanderson.
+
+    User 1: I''ve heard good things about both of those series! I''ll have to check them out.
+
+    User 2: I hope you enjoy them!
+
+    User 1: Thanks! What kind of video games do you like to play?
+
+    User 2: I like to play a lot of different kinds of games, but I''m a big fan of RPGs and adventure games.
+
+    User 1: I like those genres too! I''ve been playing a lot of Skyrim lately.
+
+    User 2: Skyrim is a great game! I''ve put a lot of hours into it.
+
+    User 1: Me too! I''m really enjoying the new DLC.
+
+    User 2: I haven''t played it yet, but I''m looking forward to it.
+
+    User 1: It''s really good! You should definitely check it out.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

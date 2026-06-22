@@ -1,0 +1,78 @@
+id: 00006877
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6877
+data:
+  user 1 personas: 'My favorite singer is jess greenberg.
+
+    I spend every waking hour i can at the archery center.
+
+    I ride a motorcycle , but it s not a harley.
+
+    Just this past week i got a job cleaning gutters.
+
+    I eat a lot of carbs even though my doctor tells me not to.'
+  user 2 personas: 'I drive a red car.
+
+    I use red lipstick.
+
+    I like to wear red.
+
+    I like to wear red shoes also.
+
+    I wear a red purse.'
+  Best Generated Conversation: 'User 1: I like your red purse!
+
+    User 2: Thanks! I like red.
+
+    User 1: Me too! I think it''s a great color.
+
+    User 2: It''s my favorite.
+
+    User 1: What else do you like about red?
+
+    User 2: I think it''s a bold color. It makes me feel confident.
+
+    User 1: I can see why. Red is definitely a powerful color.
+
+    User 2: I like to wear red when I want to make a statement.
+
+    User 1: That''s a great idea. I''ll have to start wearing more red.
+
+    User 2: You should! It''s a great color.
+
+    User 1: I think I will.
+
+    User 2: Good!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go shopping, go to the movies, and hang out with my friends.
+
+    User 1: Me too! I like to do all of those things.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I like to go to the movies. I love watching movies.
+
+    User 2: Me too! I love watching movies too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t know. I have so many favorites.
+
+    User 1: Me too. I can''t choose just one.
+
+    User 2: I like movies that make me feel something.
+
+    User 1: Me too. I like movies that make me laugh, cry, or think.
+
+    User 2: Me too. I like movies that make me feel all of those things.
+
+    User 1: I think we''re going to be good friends.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00001894
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1894
+data:
+  user 1 personas: 'I have blonde hair.
+
+    I like video games.
+
+    I love ballet.
+
+    My favorite color is purple.
+
+    My favorite food is macaroni and cheese.'
+  user 2 personas: 'I am a police officer in a suburb of detroit.
+
+    I love to go horseback riding.
+
+    My wife and i like to go scuba diving.
+
+    I have three daughters.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I''m a police officer in a suburb of Detroit.
+
+    User 1: That sounds like a tough job!
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go horseback riding.
+
+    User 1: That''s cool! I''ve always wanted to try horseback riding.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Do you have any kids?
+
+    User 2: Yes, I have three daughters.
+
+    User 1: Oh, that''s great! What are their names?
+
+    User 2: Their names are Sarah, Emily, and Abigail.
+
+    User 1: Those are beautiful names.
+
+    User 2: Thank you.
+
+    User 1: What do you like to do with your family?
+
+    User 2: We love to go on trips together, and we also like to play games.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: So, what''s your favorite game to play?
+
+    User 2: I love to play Monopoly.
+
+    User 1: That''s a classic!
+
+    User 2: It is!
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

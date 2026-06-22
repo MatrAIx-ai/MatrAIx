@@ -1,0 +1,20 @@
+id: 00008916
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8916
+persona_description: A scientist and engineer who specializes in the development and application of advanced computer vision and pattern recognition algorithms, as well as data fusion techniques to analyze
+  sensor information and generate automatic warning signals for local authorities to prevent dangerous situations such as fires, storms, and other environmental threats. This persona has expertise in developing
+  automatic early warning systems for archaeological and cultural sites, particularly in areas around the Mediterranean Sea, where extreme weather conditions such as storms and floods pose great risks.
+  This scientist and engineer has experience in developing and testing fire detection systems using CCTV cameras, PTZ cameras, IR cameras, and wireless sensors, and has expertise in assessing cost-effective
+  solutions for the use of infrared cameras.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: computer vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: computer vision for environmental monitoring
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

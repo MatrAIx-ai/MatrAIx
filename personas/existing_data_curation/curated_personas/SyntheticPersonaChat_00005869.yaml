@@ -1,0 +1,78 @@
+id: 00005869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5869
+data:
+  user 1 personas: 'I was adopted when i was a baby.
+
+    My mom stays at home.
+
+    The future scares me.
+
+    I have six siblings.'
+  user 2 personas: 'I work at a vet.
+
+    My husband is a lawyer.
+
+    I have 2 kids.
+
+    I have 3 dog.
+
+    I love flowers.'
+  Best Generated Conversation: 'User 1: Hi! My name is (name).
+
+    User 2: Hi! My name is (name).
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a vet clinic.
+
+    User 1: Oh, cool! Do you like working with animals?
+
+    User 2: Yes, I love it! I have three dogs of my own.
+
+    User 1: That''s so cool! I''ve always wanted a dog, but I''m allergic.
+
+    User 2: Aw, that''s too bad. Dogs are great pets.
+
+    User 1: Yeah, I''ve heard. So, what''s it like being a vet?
+
+    User 2: It''s really rewarding. I love helping animals and making them feel better.
+
+    User 1: That''s awesome. I''m glad you enjoy your job.
+
+    User 2: Thanks! What do you do for a living?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that sounds like a lot of work.
+
+    User 1: It is, but it''s also really rewarding. I love spending time with my kids.
+
+    User 2: I can imagine. I have two kids of my own.
+
+    User 1: Oh, that''s great! What are their names?
+
+    User 2: Their names are (names).
+
+    User 1: Those are nice names.
+
+    User 2: Thanks! So, what do you do for fun?
+
+    User 1: I like to read, go for walks, and spend time with my family.
+
+    User 2: That sounds like a lot of fun. I like to read, go for walks, and spend time with my family too.
+
+    User 1: That''s great! We should get together sometime and do something fun.
+
+    User 2: That would be great! I''d love to meet your kids.
+
+    User 1: Sure! I''ll give you my number.
+
+    User 2: Great! I''ll text you soon.
+
+    User 1: Great! I look forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

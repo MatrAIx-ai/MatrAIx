@@ -1,0 +1,19 @@
+id: 00048688
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48688
+persona_description: A researcher at Sandia National Laboratories who specializes in wind turbine blade design and development, focusing on the creation of more efficient and cost-effective blade designs.
+  They have developed a new wind turbine blade design named "STAR" for low-wind-speed regions like the Midwest, which features a gently curved tip and is made of fiberglass and epoxy resin. This design
+  allows the blade to twist more than traditional designs, thus relieving some of the effects of gusty turbulent wind on blade life, and it is expected to provide increased energy capture of 5-10 percent
+  while retaining the same expected fatigue life.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: wind energy engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

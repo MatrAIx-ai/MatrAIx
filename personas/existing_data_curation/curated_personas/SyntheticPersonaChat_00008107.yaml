@@ -1,0 +1,60 @@
+id: 00008107
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8107
+data:
+  user 1 personas: 'My hobbies are sleeping and playing the guitar.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I have a wife and two kids.'
+  user 2 personas: 'I played football in high school.
+
+    I drive a lifted chevy truck.
+
+    My favorite food is steak cooked well done.
+
+    I am a roofer.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, cool! I''ve never met a roofer before.
+
+    User 2: It''s a good job. I get to work outside and I get to meet a lot of new people.
+
+    User 1: That sounds nice. I work as a software engineer. It''s a lot of sitting at a desk, but I like the work.
+
+    User 2: I can understand that. I like to be active, so roofing is a good fit for me.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play football, go fishing, and hang out with my friends.
+
+    User 1: Those sound like fun hobbies. I like to play the guitar, sleep, and spend time with my family.
+
+    User 2: I like to play the guitar too! What kind of music do you like to play?
+
+    User 1: I like to play all kinds of music, but I mostly play country music.
+
+    User 2: I like country music too! What''s your favorite song?
+
+    User 1: It''s hard to pick just one, but I''d say my favorite song is "The Dance" by Garth Brooks.
+
+    User 2: That''s a great song! I love Garth Brooks.
+
+    User 1: Me too! I''m glad to meet someone else who likes country music.
+
+    User 2: Me too! It''s not a very popular genre around here, so it''s nice to find someone who appreciates it.
+
+    User 1: Yeah, I know what you mean. But I''m glad we met!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

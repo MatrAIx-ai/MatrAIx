@@ -1,0 +1,70 @@
+id: 00008194
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8194
+data:
+  user 1 personas: 'I am still a student , but i am gonna be a nurse.
+
+    I am the lead singer for an indie band.
+
+    I enjoy budweiser beer.
+
+    My horse never talks back to me.'
+  user 2 personas: 'I have three children.
+
+    I am named after my grandmother.
+
+    My best friend lives down the street.
+
+    I enjoy taking walks.
+
+    I drive a honda civic.'
+  Best Generated Conversation: 'User 1: Hello! My name is [user 1 name]. How are you today?
+
+    User 2: I''m doing well, thank you. My name is [user 2 name].
+
+    User 1: Nice to meet you! I''m a student, but I''m going to be a nurse someday. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom to three children.
+
+    User 1: Wow, that sounds like a lot of work! But I''m sure it''s very rewarding.
+
+    User 2: It is! I love being able to spend so much time with my kids.
+
+    User 1: What are your hobbies?
+
+    User 2: I enjoy taking walks, listening to music, and reading.
+
+    User 1: I like reading too! What kind of books do you like to read?
+
+    User 2: I like to read anything that''s interesting, but I especially enjoy historical fiction and mysteries.
+
+    User 1: Those are great genres! I love learning about history and solving mysteries.
+
+    User 2: Me too! I''m glad to meet someone else who enjoys reading.
+
+    User 1: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have a horse.
+
+    User 2: That''s so cool! I''ve always wanted a horse.
+
+    User 1: They''re great pets! They''re very gentle and loving.
+
+    User 2: I can imagine. They''re so majestic.
+
+    User 1: They are! I love taking care of my horse and spending time with him.
+
+    User 2: That sounds like a lot of fun. I''m glad you have such a great pet.
+
+    User 1: Thanks! I''m glad too.
+
+    User 2: Well, it was nice talking to you. I hope you have a great day.
+
+    User 1: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

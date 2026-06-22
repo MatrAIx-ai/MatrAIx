@@ -1,0 +1,72 @@
+id: '00000760'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 760
+data:
+  user 1 personas: 'I love animals.
+
+    I love country.
+
+    I am going back to school.
+
+    I enjoy reading.
+
+    I am a vegan.'
+  user 2 personas: 'I like burritos.
+
+    I like to dance.
+
+    I like pizza.
+
+    I like to shop.
+
+    I love shoes.'
+  Best Generated Conversation: 'User 1: I''m going back to school to get my degree in animal science.
+
+    User 2: That''s great! I''m a big fan of animals too. What kind of animals do you like the most?
+
+    User 1: I love all animals, but I''m especially fond of dogs. I have a golden retriever named Bailey.
+
+    User 2: I love dogs too! They''re so loyal and loving.
+
+    User 1: They are! I''m so glad I have Bailey in my life.
+
+    User 2: I''m sure you are. He sounds like a great dog.
+
+    User 1: He is. I''m so lucky to have him.
+
+    User 2: So, what are you going to do with your animal science degree?
+
+    User 1: I''m not sure yet. I''m thinking about working at a zoo or an animal shelter.
+
+    User 2: Those would be great jobs! You could help a lot of animals.
+
+    User 1: I know! I''m really excited about it.
+
+    User 2: I''m sure you''ll do great things.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love to read. I''m always reading about animals and nature.
+
+    User 2: That''s cool. I love to read too. What''s your favorite book?
+
+    User 1: I''m not sure I have a favorite book, but I really like the book "The Old Man and the Sea" by Ernest Hemingway.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go hiking and camping. I also like to go to the beach.
+
+    User 2: Those sound like fun activities. I like to go hiking and camping too. I''m not a big fan of the beach, though.
+
+    User 1: That''s okay. There are plenty of other fun things to do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

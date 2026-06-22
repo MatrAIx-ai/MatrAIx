@@ -1,0 +1,19 @@
+id: 00028206
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28206
+persona_description: An SME (Subject Matter Expert) with technical expertise in a specific field, such as engineering, who is responsible for designing and implementing training programs for their peers.
+  They are used to lecturing and may have concerns about the effectiveness of other methods. They are looking for ways to incorporate a variety of training methods to ensure complete and accurate learning
+  for their participants, while also considering factors such as the desired learning level, specific time available, and the need for a variety of methods to satisfy different learning styles. They need
+  guidance on selecting the best training method for each learning objective and are open to incorporating reference materials and audiovisuals to enhance the learning experience.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

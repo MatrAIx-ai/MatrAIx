@@ -1,0 +1,62 @@
+id: 00005683
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5683
+data:
+  user 1 personas: 'My favorite tv show is friends.
+
+    My favorite food is sushi.
+
+    I have a timeshare in mexico.
+
+    My brother lives in england.'
+  user 2 personas: 'I like green apples.
+
+    I do not like to eat meat.
+
+    My favorite fruit is apple.
+
+    I like fruit.
+
+    I like to eat the skin of the apple.'
+  Best Generated Conversation: 'User 1: What''s your favorite fruit?
+
+    User 2: Apples.
+
+    User 1: Me too! I love green apples.
+
+    User 2: Me too! I love the tartness.
+
+    User 1: I also love the texture.
+
+    User 2: Me too! It''s so crunchy.
+
+    User 1: Do you like to eat the skin?
+
+    User 2: Yes, I do! It''s my favorite part.
+
+    User 1: I love the skin too! It''s so sweet and tart.
+
+    User 2: Me too! I love the way it contrasts with the rest of the apple.
+
+    User 1: Me too! It''s so delicious.
+
+    User 2: I''m glad you agree! Apples are the best fruit, in my opinion.
+
+    User 1: I can''t argue with that! They''re so delicious and nutritious.
+
+    User 2: They''re also very versatile. You can eat them raw, cooked, or baked.
+
+    User 1: I know! I love apple pie.
+
+    User 2: Me too! It''s my favorite dessert.
+
+    User 1: I also love applesauce.
+
+    User 2: Me too! It''s so healthy and delicious.
+
+    User 1: I''m glad we agree! Apples are the best fruit, in my opinion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

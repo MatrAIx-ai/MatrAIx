@@ -1,0 +1,62 @@
+id: 00007492
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7492
+data:
+  user 1 personas: 'I help around with bookkeeping and tours.
+
+    I am vegan.
+
+    Sometimes i volunteer at an urban farm.
+
+    I work at the grocery store.
+
+    I decided to become vegan a year ago.'
+  user 2 personas: 'I have a little sister.
+
+    My favorite subject in school is math.
+
+    My favorite book is pride and prejudice.
+
+    I like to play soccer.
+
+    I have a golden retriever.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1].
+
+    User 2: Hi, nice to meet you. My name is [User 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, read, and spend time with my family.
+
+    User 1: That sounds fun. I like to volunteer at an urban farm and play soccer. I also work at a grocery store and help with bookkeeping and tours.
+
+    User 2: That''s awesome! I''ve been thinking about volunteering at an urban farm. Do you like it?
+
+    User 1: I love it! It''s a great way to get involved in the community and learn about sustainable agriculture.
+
+    User 2: That sounds really cool. I might have to check it out.
+
+    User 1: You should! It''s a great way to meet new people and learn about a new way of life.
+
+    User 2: I''m sure it would be. I''m always looking for ways to learn new things.
+
+    User 1: I''m glad. What''s your favorite book?
+
+    User 2: My favorite book is Pride and Prejudice. I love the characters and the story.
+
+    User 1: I''ve heard good things about that book. I''ve been meaning to read it for a while.
+
+    User 2: You should! It''s a classic for a reason.
+
+    User 1: I will! I''m always looking for a good book to read.
+
+    User 2: I''m sure you''ll enjoy it.
+
+    User 1: I hope so.
+
+    User 2: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00006515'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6515
+data:
+  user 1 personas: 'My favorite ice cream is pistachio.
+
+    Traveling and making friends is something i find delightful.
+
+    I like watching videos of surgery.
+
+    Britney spears is a wonderful singer who really touches me.'
+  user 2 personas: 'My favorite music genre is classical.
+
+    I play many instruments.
+
+    I like to travel.
+
+    I give lessons on string instruments.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, play classical music, and give lessons on string instruments.
+
+    User 1: That sounds like a lot of fun! I like to travel too, and I love listening to classical music.
+
+    User 2: What''s your favorite genre of classical music?
+
+    User 1: I like all kinds of classical music, but I especially like romantic music.
+
+    User 2: Romantic music is great! I love how it can be so passionate and emotional.
+
+    User 1: Me too! I think it''s the perfect music to listen to when you''re feeling romantic.
+
+    User 2: I agree! What''s your favorite romantic piece of music?
+
+    User 1: I have a few favorites, but one of my favorites is "Liebestraum" by Franz Liszt.
+
+    User 2: "Liebestraum" is a beautiful piece of music. I love the way it builds up to a crescendo and then melts away into a beautiful melody.
+
+    User 1: Me too! It''s such a moving piece of music.
+
+    User 2: Do you play any instruments?
+
+    User 1: No, I don''t play any instruments.
+
+    User 2: That''s too bad! I play a lot of instruments, but my favorite is the violin.
+
+    User 1: The violin is a beautiful instrument. I love the sound of it.
+
+    User 2: Me too! It''s such a versatile instrument. You can play anything from classical music to pop music to rock music.
+
+    User 1: I''m sure you''re a very talented violinist.
+
+    User 2: Thank you! I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

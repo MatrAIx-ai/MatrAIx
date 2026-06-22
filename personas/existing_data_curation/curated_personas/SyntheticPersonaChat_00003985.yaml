@@ -1,0 +1,72 @@
+id: 00003985
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3985
+data:
+  user 1 personas: 'I have a ten year old son.
+
+    I am doing financial business now.
+
+    I play piano.
+
+    I graduated high school in 1986.
+
+    I hope to become a music teacher after retirement.'
+  user 2 personas: 'I have always wanted a pot bellied pig.
+
+    My favorite book is anne of green gables.
+
+    I won a beauty pageant one time but did not feel like it was worth the effort.
+
+    I love owning nice office supplies.
+
+    My mom teaches kindergarten and my dad is a tax assessor.'
+  Best Generated Conversation: 'User 1: Hello, my name is John.
+
+    User 2: Hi John, my name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah.
+
+    User 2: You too, John.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read, play piano, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I play piano too. What''s your favorite book?
+
+    User 2: My favorite book is Anne of Green Gables. It''s a classic for a reason.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a really great story.
+
+    User 1: I''m glad you''re enjoying your time with your family. I''m a single parent, so I don''t get to spend as much time with my son as I would like.
+
+    User 2: I''m sorry to hear that. I know how important it is to spend time with your kids.
+
+    User 1: It is. But I make the most of the time I have with him.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a tax assessor. It''s a lot of work, but it''s interesting.
+
+    User 1: I''m sure it is. I''m in the financial business.
+
+    User 2: That''s cool. I''ve always thought about going into finance.
+
+    User 1: It''s a good field. There''s a lot of opportunity.
+
+    User 2: I''ll have to keep that in mind.
+
+    User 1: You should. It''s a good career.
+
+    User 2: Thanks for the advice, John.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00006381
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6381
+persona_description: A medical doctor specializing in the diagnosis and treatment of joint diseases, particularly osteoarthritis. They have experience in conducting physical examinations, analyzing patient
+  symptoms, and interpreting radiographs to confirm the diagnosis. They are skilled in prescribing analgesics and managing flare-ups of the condition. They are aware of the risk factors for osteoarthritis,
+  including obesity, and are able to evaluate pain using a visual analogue scale.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: orthopedic medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

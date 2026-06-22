@@ -1,0 +1,70 @@
+id: 00004804
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4804
+data:
+  user 1 personas: 'I work at the grocery store.
+
+    I help around with bookkeeping and tours.
+
+    I am vegan.
+
+    I decided to become vegan a year ago.
+
+    Sometimes i volunteer at an urban farm.'
+  user 2 personas: 'My favorite food is spaghetti and meatballs.
+
+    My favorite band is one direction.
+
+    I hope to be a football player when i grow up.
+
+    My mom is a professional tennis player.
+
+    I am currently in elementary school.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Hi [name], nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play sports, especially football. I also like to listen to music and watch movies.
+
+    User 1: That sounds like fun. I like to play sports too. I also like to read and go on walks.
+
+    User 2: I like reading too. What are some of your favorite books?
+
+    User 1: I like to read a lot of different types of books, but my favorite books are usually science fiction or fantasy.
+
+    User 2: I like those genres too. I''ve read a lot of Harry Potter and Lord of the Rings.
+
+    User 1: Those are great books! I''ve read them both multiple times.
+
+    User 2: I''ve been reading a lot of Brandon Sanderson lately. He''s a really good author.
+
+    User 1: I haven''t read any of his books, but I''ve heard good things about them.
+
+    User 2: You should definitely check them out. They''re really good.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem. What kind of music do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but my favorite genre is probably indie rock.
+
+    User 2: I like indie rock too. I''ve been listening to a lot of The National lately.
+
+    User 1: They''re a great band. I''ve seen them live a few times.
+
+    User 2: I''m jealous! I''ve always wanted to see them live.
+
+    User 1: They''re really good live. You should definitely try to see them if you ever get the chance.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. It was nice talking to you.
+
+    User 2: You too. Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

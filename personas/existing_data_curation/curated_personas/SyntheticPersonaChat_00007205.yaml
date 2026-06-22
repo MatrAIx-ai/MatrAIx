@@ -1,0 +1,90 @@
+id: '00007205'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7205
+data:
+  user 1 personas: 'I recently broke up with my girlfriend.
+
+    I m a 30 year old male.
+
+    I just finished training as a security guard.
+
+    I work nights now and like my job.'
+  user 2 personas: 'I play dungeons and dragons.
+
+    I wear a lot of purple.
+
+    I want to be a doctor.
+
+    I like going to canada.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1 name).
+
+    User 2: Hi there, I''m (user 2 name).
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to play D&D, wear a lot of purple, and go to Canada.
+
+    User 1: Oh cool, I like to play D&D too! What class do you play?
+
+    User 2: I usually play a wizard or a cleric.
+
+    User 1: Nice! I usually play a rogue or a fighter.
+
+    User 2: Cool! What''s your favorite thing about D&D?
+
+    User 1: I love the teamwork and the storytelling aspects of it.
+
+    User 2: Me too! It''s so much fun to create a story with your friends.
+
+    User 1: Yeah, it really is.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a security guard.
+
+    User 2: Oh cool, I''ve always been interested in security work.
+
+    User 1: It''s not bad. It''s a lot of night shifts, but I like it.
+
+    User 2: I can imagine. Do you have any plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school to be a doctor.
+
+    User 2: Oh wow, that''s awesome! That''s a lot of schooling, but it''s worth it.
+
+    User 1: Yeah, I know. I''m excited for it.
+
+    User 2: I''m sure you''ll be a great doctor.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to play video games, watch movies, and hang out with friends.
+
+    User 2: Me too! What kind of video games do you like to play?
+
+    User 1: I like to play RPGs, shooters, and platformers.
+
+    User 2: Oh cool, me too! I love RPGs.
+
+    User 1: Yeah, they''re so much fun.
+
+    User 2: So, what are you playing right now?
+
+    User 1: I''m playing a new game called Elden Ring.
+
+    User 2: Oh cool, I''ve heard good things about that game.
+
+    User 1: It''s really good. It''s a lot of fun.
+
+    User 2: I''m glad to hear that. I might have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: '00001217'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1217
+data:
+  user 1 personas: 'I am a petsitter.
+
+    I have purple hair.
+
+    My favorite book is the tale of genii.
+
+    My dad is a college professor.
+
+    My mom died when i was six.'
+  user 2 personas: 'Driving in the country side is a pastime.
+
+    I like to go shopping.
+
+    I live in a small town.
+
+    I wanted to be a nurse.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name]. What''s your favorite pastime?
+
+    User 2: I like to go shopping and drive in the country side.
+
+    User 1: That''s cool! I used to like shopping, but now I prefer to spend time with my pets.
+
+    User 2: What kind of pets do you have?
+
+    User 1: I have a dog and a cat.
+
+    User 2: Oh, that''s so cute! I''ve always wanted a cat, but my parents won''t let me.
+
+    User 1: That''s too bad. Cats are great pets.
+
+    User 2: I know, right? I''ve always loved them.
+
+    User 1: What do you like to do with your pets?
+
+    User 2: I like to play with them, take them for walks, and cuddle with them.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I love spending time with my pets.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s great! What''s it like being a nurse?
+
+    User 2: It''s very rewarding. I get to help people and make a difference in their lives.
+
+    User 1: That''s really great. I''m glad you''re a nurse.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go shopping, drive in the country side, and read.
+
+    User 1: That''s cool! I like to read too. What''s your favorite book?
+
+    User 2: My favorite book is "The Tale of Genji".
+
+    User 1: Oh, that''s a great book! I''ve heard good things about it.
+
+    User 2: It is a great book. It''s a classic Japanese novel that''s been around for centuries.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00042610'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42610
+persona_description: A nurse who is passionate about reviving and restoring consciousness in patients who have fallen unconscious. She is skilled in administering CPR and other emergency medical procedures,
+  and has a deep understanding of the brain's anatomy and function. Her expertise in the field of neuroscience is evident in her ability to revive patients who have suffered head injuries and other life-threatening
+  conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neuroscience
+  general_domain_top01pct: None
+  specific_domain_top01pct: neurocritical care
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

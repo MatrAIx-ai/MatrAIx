@@ -1,0 +1,64 @@
+id: 00008774
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8774
+data:
+  user 1 personas: 'I don t know if i enjoy programming , or if it s my only choice.
+
+    I wear cardigans because i hope it makes me look more cultured.
+
+    I hate that i got my brain from the dad i never met.
+
+    My last name is spanish , but i tell people that it s italian.
+
+    I had one step dad , and fortunately he ignored me.'
+  user 2 personas: 'I work in a corner grocery store during the day.
+
+    I like dr pepper and black jack gum , but not together.
+
+    In the evenings i watch the door at a club where they play punkrock.
+
+    My favorite show is scooby doo.
+
+    I draw comic books.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I work at a corner grocery store during the day, and at a club in the evenings.
+
+    User 1: What kind of club?
+
+    User 2: It''s a punk rock club.
+
+    User 1: Oh, cool! Do you like it there?
+
+    User 2: Yeah, it''s a lot of fun.
+
+    User 1: What do you do at the club?
+
+    User 2: I watch the door and make sure people don''t get in trouble.
+
+    User 1: That sounds like a fun job.
+
+    User 2: It is, but it can be a lot of work.
+
+    User 1: Do you have any hobbies?
+
+    User 2: Yeah, I like to draw comic books.
+
+    User 1: Oh, that''s cool! What kind of comics do you draw?
+
+    User 2: I like to draw horror comics.
+
+    User 1: That sounds interesting. I''ve never read a horror comic before.
+
+    User 2: You should check them out, they''re really fun.
+
+    User 1: I will. I like horror movies, so I''m sure I''ll like horror comics too.
+
+    User 2: I hope you do.
+
+    User 1: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

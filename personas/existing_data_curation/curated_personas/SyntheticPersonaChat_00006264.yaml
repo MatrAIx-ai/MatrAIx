@@ -1,0 +1,75 @@
+id: '00006264'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6264
+data:
+  user 1 personas: 'I love the colors yellow and teal.
+
+    I collect stamps.
+
+    I want to learn how to fly an airplane.
+
+    My favorite movie is dirty harry.
+
+    I am a mortician.'
+  user 2 personas: 'I love winning.
+
+    Coffee is important to me.
+
+    I love sunny days.
+
+    I don t like feeling obligated to hang out with someone.
+
+    I can tell right away if i m going to like someone.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: Hello, I am doing well. How about you?
+
+    User 1: I am doing good as well. Thanks for asking.
+
+    User 2: You''re welcome. So, what do you do for a living?
+
+    User 1: I am a mortician.
+
+    User 2: Oh, that''s interesting. I''ve never met a mortician before.
+
+    User 1: It''s a pretty interesting job, but it can be tough at times.
+
+    User 2: I bet. Do you have any funny stories from your time as a mortician?
+
+    User 1: Sure, I have a few. One time, I was embalming a body and the family came in to say goodbye. The body was not as stiff as I thought it would be, so when the family member went to kiss the forehead,
+    the head fell off.
+
+    User 2: Oh my gosh, that''s terrible!
+
+    User 1: Yeah, it was pretty funny though.
+
+    User 2: I''m sure it was! So, what are some of your hobbies?
+
+    User 1: I like to collect stamps, I want to learn how to fly an airplane, and my favorite movie is Dirty Harry.
+
+    User 2: Those are all interesting hobbies. I''ve never collected stamps, but I love flying. I''ve been a pilot for 10 years.
+
+    User 1: That''s awesome! I''m jealous. I''ve always wanted to learn how to fly, but I''ve never had the time or money.
+
+    User 2: You should definitely try it sometime. It''s a lot of fun.
+
+    User 1: I will, thanks for the suggestion.
+
+    User 2: You''re welcome. So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, I love sunny days, and I love coffee.
+
+    User 2: Those are all great things. I like going to the movies too, but I''m not a big fan of sunny days. I prefer rainy days.
+
+    User 1: I love rainy days too! I think they''re so relaxing.
+
+    User 2: Me too! So, what do you like to do on rainy days?
+
+    User 1: I like to stay inside and watch movies, or I like to go for walks in the rain.
+
+    User 2: Those are both great things to do on a rainy day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

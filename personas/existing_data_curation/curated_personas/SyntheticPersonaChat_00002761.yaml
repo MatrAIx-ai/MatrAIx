@@ -1,0 +1,72 @@
+id: '00002761'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2761
+data:
+  user 1 personas: 'I drive a honda civic.
+
+    I love rock climbing.
+
+    I like long walks on the beach.
+
+    My favorite movie is django unchained.
+
+    I work at a retail store.'
+  user 2 personas: 'I have found the cure for the common cold.
+
+    I am plotting on taking over the world.
+
+    I love to sing in the shower.
+
+    My brother and i have bright red hair.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. What do you do for fun?
+
+    User 1: I like to rock climb, go for long walks on the beach, and watch movies. What about you?
+
+    User 2: I like to sing in the shower, play video games, and read books.
+
+    User 1: I love to sing in the shower too! What''s your favorite song to sing?
+
+    User 2: I don''t really have a favorite song, but I like to sing a lot of Disney songs.
+
+    User 1: Me too! I love Disney songs. I also like to sing songs from musicals.
+
+    User 2: I love musicals too! I''ve seen a few of them, but I''ve never been on stage.
+
+    User 1: I''ve been on stage a few times. It''s a lot of fun, but it can be nerve-wracking.
+
+    User 2: I bet it would be. I''m not sure if I would have the courage to do it.
+
+    User 1: It''s definitely something you have to work up to. But it''s a great experience.
+
+    User 2: I''ll keep that in mind. Maybe I''ll try it someday.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work at a retail store. It''s not my favorite job, but it pays the bills.
+
+    User 2: I know how that is. I work in a laboratory. It''s not my favorite job either, but it''s good work.
+
+    User 1: I''m glad you like your job.
+
+    User 2: It''s not bad. It''s just not my passion.
+
+    User 1: I know what you mean. I''m not passionate about my job either. But I''m trying to find something I''m more passionate about.
+
+    User 2: I hope you find it.
+
+    User 1: Me too.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

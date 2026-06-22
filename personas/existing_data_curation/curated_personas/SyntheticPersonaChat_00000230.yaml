@@ -1,0 +1,78 @@
+id: '00000230'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 230
+data:
+  user 1 personas: 'I am bipolar.
+
+    I am a mother of three.
+
+    I go to work early in the morning as a nurse.
+
+    I love to eat pita bread with hummus.
+
+    I am thinking of becoming a mother next year.'
+  user 2 personas: 'I am one of four siblings.
+
+    I like to draw.
+
+    My mother is a teacher.
+
+    My favorite color is blue.
+
+    I live in an apartment.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: Nice to meet you! What is your name?
+
+    User 2: I''m Sarah, what''s your name?
+
+    User 1: My name is [user 1''s name]. It''s nice to meet you, Sarah.
+
+    User 2: It''s nice to meet you too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to draw, I''m actually pretty good at it!
+
+    User 1: Oh, really? That''s cool! I''ve always wanted to learn how to draw.
+
+    User 2: It''s never too late to start! I could teach you, if you''d like.
+
+    User 1: That would be really great! I''d love to learn.
+
+    User 2: Okay, so what do you want to draw?
+
+    User 1: I don''t know, what do you suggest?
+
+    User 2: We could draw a picture of a cat.
+
+    User 1: A cat, okay! I like cats.
+
+    User 2: Okay, so let''s start with the head.
+
+    User 1: Okay.
+
+    User 2: And then we''ll add the body, the legs, and the tail.
+
+    User 1: Okay.
+
+    User 2: And then we''ll add some details, like the eyes, the nose, and the whiskers.
+
+    User 1: Okay.
+
+    User 2: And there you have it, your very own cat drawing!
+
+    User 1: That''s so cool! I love it!
+
+    User 2: I''m glad you like it!
+
+    User 1: Thank you for teaching me how to draw!
+
+    User 2: You''re welcome! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

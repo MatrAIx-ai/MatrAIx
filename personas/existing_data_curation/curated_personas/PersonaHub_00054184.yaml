@@ -1,0 +1,20 @@
+id: 00054184
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54184
+persona_description: A meteorologist who specializes in weather forecasting and satellite imagery analysis. They are particularly interested in the advanced features and capabilities of the GOES satellite
+  system, including the Improved Imaging, Enhanced Detection of Lightning, Real-time Tracking of the Sun, Increased Capacity for Solar X-ray Imaging, and the ability to identify and track severe storms
+  and atmospheric disturbances. They are also interested in the unique orbit of the GOES satellites, which allows them to stay above a fixed spot on the Earth's surface for constant vigilance of atmospheric
+  "triggers" that can cause severe storms. Additionally, they are interested in the role of GOES satellites in improving storm intensity and hurricane tracking, as well as the collection of snowfall accumulations
+  and melt estimates, and their ability to detect ice fields and map the movement of sea ice.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Satellite Meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: GOES Satellite Operations
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

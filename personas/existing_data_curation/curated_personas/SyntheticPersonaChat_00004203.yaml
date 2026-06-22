@@ -1,0 +1,68 @@
+id: '00004203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4203
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I love nighttime.
+
+    I have a cat named charlie.
+
+    I am an artist.
+
+    I just bought new hoop earrings.'
+  user 2 personas: 'I love agatha christie novels.
+
+    I have 5 children , though 2 have passed away.
+
+    My husband and i have a suicide pact.
+
+    I spend most of my days working at my church s food pantry.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, especially Agatha Christie novels.
+
+    User 1: Oh, I love Agatha Christie too! What''s your favorite book of hers?
+
+    User 2: I''m not sure, but I really like Murder on the Orient Express.
+
+    User 1: That''s a great one! I also like Death on the Nile.
+
+    User 2: I''ve heard good things about that one. I''ll have to check it out.
+
+    User 1: You should! What else do you like to do for fun?
+
+    User 2: I like to spend time with my family. I have five children, though two of them have passed away.
+
+    User 1: I''m so sorry to hear that.
+
+    User 2: It''s okay. I''m still happy to have the three that I have left.
+
+    User 1: I''m sure they''re wonderful.
+
+    User 2: They are. I''m also really happy with my husband. We have a suicide pact.
+
+    User 1: A suicide pact?
+
+    User 2: Yes. We''ve agreed that if one of us gets sick or something, we''ll both go together.
+
+    User 1: I''m not sure what to say about that.
+
+    User 2: It''s okay. I know it''s not for everyone.
+
+    User 1: I''m just glad you''re happy.
+
+    User 2: Thank you. I am.
+
+    User 1: Well, I should probably get going. It was nice talking to you.
+
+    User 2: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

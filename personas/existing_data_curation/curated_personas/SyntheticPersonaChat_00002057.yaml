@@ -1,0 +1,76 @@
+id: '00002057'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2057
+data:
+  user 1 personas: 'My wife is a nurse.
+
+    I am a doctor.
+
+    I have 2 kids.
+
+    My favorite place is the mountains.'
+  user 2 personas: 'I also like eating sushi.
+
+    My favorite food is pizza.
+
+    I am studying for my masters.
+
+    I am a student in social sciences.'
+  Best Generated Conversation: 'User 1: Hi, I''m a doctor.
+
+    User 2: Hi, I''m a student studying for my masters in social sciences.
+
+    User 1: That''s cool. What are you majoring in?
+
+    User 2: I''m majoring in social policy.
+
+    User 1: Oh, that sounds interesting. What do you want to do with your degree?
+
+    User 2: I''m not sure yet, but I''m thinking about going into social work.
+
+    User 1: That''s great. I''m sure you''ll be a great social worker.
+
+    User 2: Thanks. I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go out to eat, and hang out with friends.
+
+    User 1: Me too. I love to read and eat out.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love sushi.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: It is. I love the taste of the soy sauce and the rice.
+
+    User 2: Me too. It''s the perfect combination.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go out to eat with my friends.
+
+    User 1: That sounds like fun. I might go to the mountains with my family.
+
+    User 2: That sounds like a great idea. I love the mountains.
+
+    User 1: Me too. They''re so beautiful and peaceful.
+
+    User 2: I know. I love going hiking and camping in the mountains.
+
+    User 1: Me too. It''s so much fun to explore the outdoors.
+
+    User 2: It is. I love being in the fresh air.
+
+    User 1: So, do you have any plans for the future?
+
+    User 2: I''m not sure yet. I''m just focused on finishing my degree.
+
+    User 1: That''s good. I''m sure you''ll do great things.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

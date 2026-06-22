@@ -1,0 +1,84 @@
+id: '00001035'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1035
+data:
+  user 1 personas: 'I like football.
+
+    I work in the it industry.
+
+    My favourite band is kings of leon.
+
+    I am a christian.
+
+    My father used to work for microsoft.'
+  user 2 personas: 'Going to the beach is my favorite past time.
+
+    I love pizza.
+
+    My son is a football player.
+
+    I am an american citizen.
+
+    I like reading mystery novels.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What are your interests?
+
+    User 2: I love going to the beach, reading mystery novels, and eating pizza.
+
+    User 1: I like going to the beach too! What''s your favorite thing to do there?
+
+    User 2: I love swimming and building sandcastles.
+
+    User 1: Me too! I also love collecting seashells.
+
+    User 2: I''ve never been much of a seashell collector, but I do love swimming.
+
+    User 1: Where do you like to go to the beach?
+
+    User 2: I like going to the beach in California. The water is always warm and the sand is soft.
+
+    User 1: I''ve never been to California, but I''ve heard it''s beautiful.
+
+    User 2: It is! I''m sure you''d love it.
+
+    User 1: What''s your favorite mystery novel?
+
+    User 2: I''m not sure I have a favorite, but I really like the Agatha Christie novels.
+
+    User 1: Me too! I love her Poirot books.
+
+    User 2: Me too! They''re so well-written.
+
+    User 1: What do you like about them?
+
+    User 2: I like the way she creates such a suspenseful atmosphere.
+
+    User 1: Me too! I always feel like I''m right there with Poirot, trying to solve the mystery.
+
+    User 2: Me too! I love that feeling.
+
+    User 1: What''s your favorite pizza?
+
+    User 2: I love pepperoni pizza.
+
+    User 1: Me too! I love the combination of the salty pepperoni and the gooey cheese.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: What''s your favorite thing about being an American citizen?
+
+    User 2: I love the freedom of speech and the right to vote.
+
+    User 1: Me too! Those are two of my favorite things about being an American citizen too.
+
+    User 2: I''m glad we agree.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

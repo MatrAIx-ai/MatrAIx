@@ -1,0 +1,88 @@
+id: '00005506'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5506
+data:
+  user 1 personas: 'I am planning a trip to europe.
+
+    I am a woman who wears a size 12.
+
+    I have never been on a cruise ship.
+
+    I love to shop on weekends.
+
+    I go to dance lessons with my boyfriend.'
+  user 2 personas: 'My father used to be a butcher.
+
+    I work at a newspaper.
+
+    My only friend is a dog.
+
+    I am a carnivore.
+
+    I am highly educated.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thanks for asking.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: That''s cool. I like to read, shop, and go to dance lessons with my boyfriend.
+
+    User 2: I''ve never been to a dance lesson before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might do that.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read fiction, non-fiction, and poetry.
+
+    User 1: What kind of fiction do you like?
+
+    User 2: I like to read mysteries, thrillers, and fantasy novels.
+
+    User 1: I like to read mysteries and thrillers too.
+
+    User 2: What kind of non-fiction do you like?
+
+    User 1: I like to read about history, science, and travel.
+
+    User 2: I like to read about history and science too.
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog.
+
+    User 1: What kind of dog?
+
+    User 2: A golden retriever.
+
+    User 1: I love golden retrievers! They''re so friendly and cute.
+
+    User 2: They are! I love my dog.
+
+    User 1: What do you do for work?
+
+    User 2: I work at a newspaper.
+
+    User 1: That''s cool. I''ve always thought about working at a newspaper.
+
+    User 2: It''s a lot of fun. I get to write articles and interview people.
+
+    User 1: That sounds really cool. I''m glad you like your job.
+
+    User 2: Thanks. I do.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

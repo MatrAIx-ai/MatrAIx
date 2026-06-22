@@ -1,0 +1,80 @@
+id: '00003234'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3234
+data:
+  user 1 personas: 'I work in construction.
+
+    I was in the army.
+
+    I drive a prius.
+
+    I love to read romance novels.
+
+    I have freckles all over my face.'
+  user 2 personas: 'I live with my wife and kids.
+
+    I live near grand rapids , michigan.
+
+    My name is william , but people call me bill.
+
+    I own a small farm where i herd cattle.
+
+    I have three beautiful dogs and one cat.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. I''m a construction worker.
+
+    User 2: Hi, my name is [user 2''s name]. I''m a farmer.
+
+    User 1: That''s cool! I''ve always been interested in farming.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: What kind of farm do you have?
+
+    User 2: I have a small farm where I herd cattle.
+
+    User 1: That''s awesome! I bet it''s beautiful out there.
+
+    User 2: It is! We have a lot of open space and beautiful views.
+
+    User 1: That''s great! I love to be outdoors.
+
+    User 2: Me too! It''s the best way to relax.
+
+    User 1: I agree! So, what''s your favorite thing about farming?
+
+    User 2: I love being able to work with my hands and create something beautiful.
+
+    User 1: That''s awesome! I can definitely see the appeal in that.
+
+    User 2: Yeah, it''s a lot of hard work, but it''s also very rewarding.
+
+    User 1: I''m sure it is! So, what do you do for fun?
+
+    User 2: I like to spend time with my family and friends, go fishing, and read.
+
+    User 1: That sounds like a lot of fun! I love to read too.
+
+    User 2: Me too! It''s the best way to relax and escape from the world.
+
+    User 1: I agree! So, what are your favorite books?
+
+    User 2: I love all kinds of books, but I especially love historical fiction and mysteries.
+
+    User 1: I love historical fiction too! It''s so interesting to learn about other cultures and time periods.
+
+    User 2: I agree! It''s the best way to travel without leaving your home.
+
+    User 1: I agree! So, what''s your favorite historical fiction book?
+
+    User 2: I love the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard great things about that series! I''ve been meaning to read it.
+
+    User 2: You should! It''s a great series.
+
+    User 1: I will! Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

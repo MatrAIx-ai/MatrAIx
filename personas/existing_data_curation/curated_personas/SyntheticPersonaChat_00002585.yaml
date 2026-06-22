@@ -1,0 +1,64 @@
+id: 00002585
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2585
+data:
+  user 1 personas: 'I love to eat cheese.
+
+    I am a older lady.
+
+    I love to listen to frank sinatra.
+
+    I watch a lot of spongebob.
+
+    I like to cook stews.'
+  user 2 personas: 'My favorite season is winter.
+
+    I love watching basketball.
+
+    I sing barbershop and rap.
+
+    I love to take naps.
+
+    My eyes are blue.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: I''m an older lady who loves to eat cheese, listen to Frank Sinatra, watch Spongebob, and cook stews.
+
+    User 2: I''m a fan of winter, basketball, barbershop music, naps, and my blue eyes.
+
+    User 1: It sounds like we have a lot in common! I also love winter, and I love taking naps.
+
+    User 2: Me too! I think winter is the best season. It''s so cozy and relaxing.
+
+    User 1: I totally agree. And I love curling up with a good book and a cup of hot chocolate on a winter day.
+
+    User 2: That sounds like the perfect way to spend a winter day.
+
+    User 1: I''m glad we agree! So, what do you like to do for fun?
+
+    User 2: I love watching basketball, and I also sing barbershop music.
+
+    User 1: I''ve never been to a basketball game, but I''ve heard they''re a lot of fun.
+
+    User 2: They are! The energy in the arena is amazing.
+
+    User 1: I bet it is. And I''ve never heard of barbershop music, but it sounds interesting.
+
+    User 2: It''s a type of a cappella music that''s sung by four-part harmony groups.
+
+    User 1: That sounds really cool! I''d love to hear you sing sometime.
+
+    User 2: Sure! I''d love to show you some time.
+
+    User 1: Great! I''m free this weekend.
+
+    User 2: Me too! Let''s do it then.
+
+    User 1: Perfect! I''ll send you a message with the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

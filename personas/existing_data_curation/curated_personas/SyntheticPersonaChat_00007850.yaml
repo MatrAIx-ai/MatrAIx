@@ -1,0 +1,88 @@
+id: 00007850
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7850
+data:
+  user 1 personas: 'My brother raised me after our parents died.
+
+    I am quiet but confident.
+
+    I am not really a blond.
+
+    I think food trucks are awesome.
+
+    I often worry about where to park when i go somewhere new.'
+  user 2 personas: 'I can speak three languages.
+
+    I have not gone home in over two years.
+
+    I live a nomadic lifestyle and travel frequently.
+
+    I work remotely as a programmer.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: I''m from (user 1''s hometown).
+
+    User 2: I''m from (user 2''s hometown).
+
+    User 1: Cool, what do you do for fun?
+
+    User 2: I like to travel, go to the gym, and play video games.
+
+    User 1: I love to travel too! I''ve been to a few different countries.
+
+    User 2: Me too! I''ve been to a lot of different countries. What''s your favorite country that you''ve visited?
+
+    User 1: I really liked Japan. The food was amazing and the people were so friendly.
+
+    User 2: I''ve never been to Japan, but it''s been on my list of places to visit for a while.
+
+    User 1: You should definitely go! It''s an amazing place.
+
+    User 2: I will eventually!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a programmer. I work remotely, so I can travel while I work.
+
+    User 1: That''s cool! I''ve always wanted to be a programmer.
+
+    User 2: It''s a great job. I love being able to work from anywhere.
+
+    User 1: So, what''s your favorite thing about your job?
+
+    User 2: I love the freedom to travel and the fact that I can set my own hours.
+
+    User 1: That sounds amazing.
+
+    User 2: It is! I love my job.
+
+    User 1: So, what''s your favorite video game?
+
+    User 2: I love Minecraft. I''ve been playing it for years.
+
+    User 1: I''ve never played Minecraft.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: It''s a great game to play with friends.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to the movies, read books, and spend time with my friends.
+
+    User 2: I like to do all of those things too.
+
+    User 1: That''s cool.
+
+    User 2: It is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

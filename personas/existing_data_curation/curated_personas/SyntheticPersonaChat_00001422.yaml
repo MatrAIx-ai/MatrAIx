@@ -1,0 +1,86 @@
+id: '00001422'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1422
+data:
+  user 1 personas: 'I want a porsche.
+
+    I lay awake at night so i can watch the stars.
+
+    I am often late for class.
+
+    I cuddle up with my dog every night.'
+  user 2 personas: 'My favorite color is purple.
+
+    I listen to podcasts.
+
+    I do not have any children.
+
+    I live near a park.'
+  Best Generated Conversation: 'User 1: I love watching the stars at night.
+
+    User 2: Me too! I have a telescope that I love to use.
+
+    User 1: That''s awesome! I wish I had a telescope.
+
+    User 2: You should get one! They''re really fun to use.
+
+    User 1: I''ll have to look into it.
+
+    User 2: Do you have any favorite constellations?
+
+    User 1: I like the Big Dipper. It''s so easy to find.
+
+    User 2: Me too! It''s one of my favorites.
+
+    User 1: I also like the Pleiades.
+
+    User 2: I''ve never seen the Pleiades.
+
+    User 1: They''re a beautiful cluster of stars. You can see them from almost anywhere in the world.
+
+    User 2: I''ll have to look for them next time I''m out at night.
+
+    User 1: You should! They''re really pretty.
+
+    User 2: I''m looking forward to it.
+
+    User 1: I''m also really into podcasts.
+
+    User 2: Oh, cool! I listen to a few podcasts, but not as much as I used to.
+
+    User 1: What are some of your favorites?
+
+    User 2: I like "Radiolab," "This American Life," and "99% Invisible."
+
+    User 1: I''ve heard of those! I''ve been meaning to check them out.
+
+    User 2: You should! They''re all really good.
+
+    User 1: I will.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a student.
+
+    User 2: Oh, what are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: That''s cool! I''ve always been interested in business.
+
+    User 1: It''s really interesting. I''m learning a lot.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work as a software engineer.
+
+    User 1: That''s cool! I''ve always been interested in programming.
+
+    User 2: It''s a lot of fun. I''m glad I decided to go into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

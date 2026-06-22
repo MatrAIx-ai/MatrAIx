@@ -1,0 +1,78 @@
+id: '00007770'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7770
+data:
+  user 1 personas: 'My mother is a professional make up artist.
+
+    I love to go outside at night and eavesdrop on my neighbor s arguments.
+
+    I want a dog , but that is a lot of commitment.
+
+    I sometimes think i m shallow.'
+  user 2 personas: 'I hate green beans.
+
+    I love to watch game shows.
+
+    I m very religious.
+
+    I m easily agitated.'
+  Best Generated Conversation: 'User 1: Hi! I''m [Name].
+
+    User 2: Hi, I''m [Name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to watch game shows!
+
+    User 1: Me too! What''s your favorite game show?
+
+    User 2: I like Family Feud and Wheel of Fortune.
+
+    User 1: Those are both great shows! I also love Jeopardy!
+
+    User 2: I''ve never been a big fan of Jeopardy! I think it''s too hard.
+
+    User 1: I guess it can be hard, but I like the challenge.
+
+    User 2: I''m not very competitive, so I prefer to watch shows that are more relaxed.
+
+    User 1: I can understand that. What else do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: I like to read too! What are some of your favorite books?
+
+    User 2: I like anything by John Grisham. He''s a great writer.
+
+    User 1: I''ve heard good things about his books. I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I can imagine. Do you have any kids?
+
+    User 2: I have two kids, a boy and a girl.
+
+    User 1: That''s great! I love kids.
+
+    User 2: They''re the best!
+
+    User 1: So, what do you like to do with your kids?
+
+    User 2: We like to go to the park, play games, and read books.
+
+    User 1: Those sound like fun activities.
+
+    User 2: They are! We love spending time together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

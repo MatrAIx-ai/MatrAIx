@@ -1,0 +1,76 @@
+id: '00000506'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 506
+data:
+  user 1 personas: 'I love comics.
+
+    I ve started creating my own comics and presenting them to publishers.
+
+    I decided to publish my creations on internet.
+
+    I ve been rejected several times and thought of giving up with this.
+
+    And also love drawing.'
+  user 2 personas: 'I love meat.
+
+    I have a new job selling cars.
+
+    I love to paint pictures.
+
+    My wife use to be a teacher.'
+  Best Generated Conversation: 'User 1: I love comics.
+
+    User 2: Me too! I love to read them and I also love to draw them.
+
+    User 1: That''s great! I''ve started creating my own comics and presenting them to publishers.
+
+    User 2: That''s awesome! What kind of comics do you create?
+
+    User 1: I create all kinds of comics, but I mainly focus on superhero comics.
+
+    User 2: That''s cool! I''ve always been a fan of superhero comics.
+
+    User 1: Me too! I love the way they can be used to tell any kind of story.
+
+    User 2: I agree! They''re so versatile.
+
+    User 1: I''ve been rejected several times and thought of giving up with this.
+
+    User 2: I''m sorry to hear that. But don''t give up! I''m sure you''ll find someone who will publish your comics.
+
+    User 1: Thanks for the encouragement! I''ll keep trying.
+
+    User 2: I''m sure you''ll be successful.
+
+    User 1: I hope so!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a student.
+
+    User 2: Oh, what are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: That''s cool! What do you want to do with your degree?
+
+    User 1: I''m not sure yet. But I''m interested in marketing.
+
+    User 2: That''s a good field. There are a lot of opportunities there.
+
+    User 1: Yeah, I think so too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, draw, and play video games.
+
+    User 2: That''s cool! I like to read, paint, and play video games too.
+
+    User 1: Oh, that''s cool! We should play video games sometime.
+
+    User 2: That would be fun! I''m always looking for new people to play with.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

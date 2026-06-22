@@ -1,0 +1,72 @@
+id: '00002734'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2734
+data:
+  user 1 personas: 'I can play the violin.
+
+    I love chocolate.
+
+    I am from georgia.
+
+    I cannot sing very well.'
+  user 2 personas: 'My days are filled with cross country try outs and basketball practice.
+
+    I coexist well with my husband.
+
+    But , i feel lost and far away from who i truly am.
+
+    I have a friend group , but i do not like any of them.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1]. What''s your name?
+
+    User 2: My name is [user 2]. Nice to meet you!
+
+    User 1: Nice to meet you too! Where are you from?
+
+    User 2: I''m from Georgia.
+
+    User 1: Oh, I''ve never been to Georgia. What''s it like there?
+
+    User 2: It''s beautiful! The weather is warm and sunny all year round, and there are lots of beautiful mountains and beaches.
+
+    User 1: That sounds amazing! I''m from California, so it''s really different here. It''s hot and sunny in the summer, but it''s cold and rainy in the winter.
+
+    User 2: Oh, I can imagine! I''ve never been to California.
+
+    User 1: You should come visit! It''s a beautiful state.
+
+    User 2: I''d love to!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play sports, read, and hang out with my friends.
+
+    User 1: Oh, that sounds fun! I like to play video games, read, and watch movies.
+
+    User 2: I love video games! What''s your favorite game?
+
+    User 1: I like to play Skyrim and Fallout.
+
+    User 2: Oh, I love Skyrim! I''ve played it so many times.
+
+    User 1: Me too! It''s such a good game.
+
+    User 2: I know, right?
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to go to concerts and watch movies.
+
+    User 1: Oh, that sounds fun! I like to go to concerts too, but I don''t watch a lot of movies.
+
+    User 2: I know, right? Movies are so expensive!
+
+    User 1: Yeah, they are.
+
+    User 2: Well, it was nice talking to you, [user 1].
+
+    User 1: You too, [user 2].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

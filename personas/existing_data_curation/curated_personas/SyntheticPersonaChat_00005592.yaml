@@ -1,0 +1,60 @@
+id: 00005592
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5592
+data:
+  user 1 personas: 'I listen to all kinds of music.
+
+    I love watching funny movies.
+
+    My dad is a veteran.
+
+    I like to play tennis.
+
+    My favorite color is green.'
+  user 2 personas: 'I am the oldest of three boys.
+
+    I grew up in the projects of chicago.
+
+    I work at the pizza parlor.
+
+    I play the drums.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is John.
+
+    User 1: Nice to meet you, John. What do you like to do for fun?
+
+    User 2: I like to play the drums, listen to music, and watch funny movies.
+
+    User 1: That sounds like fun! I like to play tennis, listen to all kinds of music, and watch funny movies too.
+
+    User 2: That''s great! What''s your favorite movie?
+
+    User 1: My favorite movie is The Princess Bride. It''s so funny and heartwarming.
+
+    User 2: I love that movie! It''s one of my favorites too.
+
+    User 1: That''s great! What kind of music do you like to listen to?
+
+    User 2: I like to listen to a variety of music, but my favorite genre is rock.
+
+    User 1: I like rock music too! I''m a big fan of The Beatles.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: So, what''s your favorite song by The Beatles?
+
+    User 2: My favorite song by The Beatles is "A Hard Day''s Night."
+
+    User 1: That''s a great song! It''s one of my favorites too.
+
+    User 2: It''s so catchy and upbeat. I love it.
+
+    User 1: Me too. I''m glad we have similar tastes in music.
+
+    User 2: Me too! It''s always nice to find someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

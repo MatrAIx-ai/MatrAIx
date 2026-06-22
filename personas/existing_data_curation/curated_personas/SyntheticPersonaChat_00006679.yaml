@@ -1,0 +1,68 @@
+id: 00006679
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6679
+data:
+  user 1 personas: 'My favorite car is the ford mustang.
+
+    I walk more than 2 miles a day.
+
+    I worked 3 jobs at the same time for more than 5 years.
+
+    I have a pit bull and a chihuahua.'
+  user 2 personas: 'I have entered into many violin competitions before and have placed in a few of them.
+
+    My older sister plays clarinet.
+
+    My mom is a music teacher at the elementary school.
+
+    I play the violin.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name], and I''m from California.
+
+    User 2: Nice to meet you, [name]. I''m [name], and I''m from New York.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the violin. I''ve been playing for 10 years now.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play the violin.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I also like to go to the movies and read books.
+
+    User 1: I like to go to the movies too. What kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but my favorites are action movies and comedy movies.
+
+    User 1: Me too! I like to watch action movies to get my adrenaline going, and I like to watch comedy movies to make me laugh.
+
+    User 2: I know what you mean. Action movies are always so exciting, and comedy movies are always so funny.
+
+    User 1: So, what kind of music do you like to listen to?
+
+    User 2: I like to listen to a lot of different kinds of music, but my favorite is classical music.
+
+    User 1: I''ve never really listened to classical music before.
+
+    User 2: You should! It''s really beautiful.
+
+    User 1: Maybe I will.
+
+    User 2: I also like to listen to jazz and rock music.
+
+    User 1: I like jazz music too. It''s so relaxing.
+
+    User 2: I know what you mean. It''s the perfect music to listen to while you''re working or studying.
+
+    User 1: Yeah, it is.
+
+    User 2: Well, it was nice talking to you. I hope we can talk again soon.
+
+    User 1: Me too. It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

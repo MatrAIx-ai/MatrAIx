@@ -1,0 +1,17 @@
+id: 00008559
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8559
+persona_description: A person who is interested in weather forecasting and disaster response, and wants to understand how the jet stream affects the weather patterns and the impact it has on different regions.
+  They are also interested in learning about the different types of storms and how they can be predicted and prepared for.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

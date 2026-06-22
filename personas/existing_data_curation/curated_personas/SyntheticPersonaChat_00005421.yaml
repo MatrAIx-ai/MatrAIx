@@ -1,0 +1,72 @@
+id: '00005421'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5421
+data:
+  user 1 personas: 'My favorite band is metallica.
+
+    I regularly go to the gym.
+
+    My favorite meal is chicken and rice.
+
+    I read autobiographies before bed.
+
+    I have a cat named george.'
+  user 2 personas: 'I am in art school.
+
+    My favorite class is painting.
+
+    I like to work with acrylics.
+
+    I have blonde hair.
+
+    I aspire to paint murals.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m in art school too. What''s your favorite class?
+
+    User 2: Painting!
+
+    User 1: That''s cool! I like painting too.
+
+    User 2: What kind of medium do you like to work with?
+
+    User 1: I like to work with acrylics.
+
+    User 2: Me too! I think they''re the most versatile medium.
+
+    User 1: Me too! I like how you can use them for so many different things.
+
+    User 2: What''s your favorite thing to paint?
+
+    User 1: I like to paint portraits.
+
+    User 2: Oh, cool! I like painting landscapes.
+
+    User 1: I like landscapes too. They''re so peaceful.
+
+    User 2: Yeah, they are.
+
+    User 1: I''ve been wanting to paint a mural for a while now.
+
+    User 2: That would be so cool! I''ve always wanted to paint a mural too.
+
+    User 1: Maybe we could collaborate on one.
+
+    User 2: That would be fun!
+
+    User 1: We could do a mural of a cityscape.
+
+    User 2: That would be awesome!
+
+    User 1: We could make it look like a futuristic city.
+
+    User 2: That would be so cool! I''m so excited to work on this project with you.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

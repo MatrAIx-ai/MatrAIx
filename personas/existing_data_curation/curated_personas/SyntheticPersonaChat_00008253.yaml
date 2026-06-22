@@ -1,0 +1,64 @@
+id: 00008253
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8253
+data:
+  user 1 personas: 'I do not have a lot of family members that i like.
+
+    I am an angry person.
+
+    I like to go to bars and people watch.
+
+    I drive a jag.'
+  user 2 personas: 'I listen to linking park , i do not know why.
+
+    I play games at the arcade , still.
+
+    I have not done anything since high school.
+
+    People in school said i was quiet.'
+  Best Generated Conversation: 'User 1: I''m not very close to my family. I don''t really like most of them.
+
+    User 2: I don''t really have any family.
+
+    User 1: That must be tough.
+
+    User 2: It is.
+
+    User 1: I''m sorry to hear that.
+
+    User 2: It''s okay.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I play video games at the arcade.
+
+    User 1: That sounds fun. I like to go to bars and people watch.
+
+    User 2: That sounds fun too. I''ve never been to a bar.
+
+    User 1: You should go! They''re a lot of fun.
+
+    User 2: I''ll have to try that sometime.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play fighting games and racing games.
+
+    User 1: I like fighting games too. I''m not very good at racing games.
+
+    User 2: I''m not very good at them either.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the arcade.
+
+    User 1: That sounds fun. I''m going to go to a bar with some friends.
+
+    User 2: Have fun!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

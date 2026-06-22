@@ -1,0 +1,18 @@
+id: '00015333'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15333
+persona_description: A dermatologist who is interested in learning about the physical signs and their diagnostic significance in dermatology. They are looking for a comprehensive reference book that includes
+  color images of lesions and their regional distribution, as well as detailed descriptions and explanations of the signs and their significance. They are also interested in learning about the diagnostic
+  significance of scales, crusts, plaques, papules, nodules, eruptions, ulcers, blisters, vesicles, pustules, excoriations, itch, and the associated eczematization.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

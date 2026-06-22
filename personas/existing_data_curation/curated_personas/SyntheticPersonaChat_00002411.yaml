@@ -1,0 +1,64 @@
+id: '00002411'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2411
+data:
+  user 1 personas: 'I am highly educated.
+
+    My father used to be a butcher.
+
+    My only friend is a dog.
+
+    I am a carnivore.
+
+    I work at a newspaper.'
+  user 2 personas: 'I am looking to start a business.
+
+    I have a brand new chevrolet.
+
+    I am a big sports fan.
+
+    I enjoy hanging out with friends and family.
+
+    I like to get involved in politics.'
+  Best Generated Conversation: 'User 1: Hey there, I''m [name].
+
+    User 2: Hello! I''m [name].
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I like to hang out with friends and family, go to sporting events, and get involved in politics.
+
+    User 1: Sounds like you have a lot of interests! What are you passionate about?
+
+    User 2: I''m passionate about starting my own business. I think it would be really rewarding to be my own boss and create something new.
+
+    User 1: That''s great! What kind of business are you thinking about starting?
+
+    User 2: I''m not sure yet, but I''m interested in something that''s related to my education. I''m highly educated and I have a lot of experience in the newspaper industry.
+
+    User 1: That sounds like a great idea! I''m sure you''ll be successful.
+
+    User 2: Thanks! I appreciate the encouragement.
+
+    User 1: You''re welcome! So, what do you think of my car?
+
+    User 2: It''s nice! I love Chevrolets. They''re reliable and stylish.
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: Me too! It''s a great car.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to a sporting event or hang out with friends.
+
+    User 1: That sounds like fun! I''m going to work on my newspaper article.
+
+    User 2: Good luck with that! I''m sure it will be great.
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

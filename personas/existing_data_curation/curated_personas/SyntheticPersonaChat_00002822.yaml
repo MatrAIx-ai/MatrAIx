@@ -1,0 +1,74 @@
+id: 00002822
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2822
+data:
+  user 1 personas: 'I like to make bagels.
+
+    I am a cartographer.
+
+    I like to arm wrestle.
+
+    I like to paint outdoors.'
+  user 2 personas: 'I never eat veggies.
+
+    I am young.
+
+    I am tall.
+
+    I love to run fast.
+
+    I am strong.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I''m a cartographer.
+
+    User 1: Oh, that''s cool! What''s that like?
+
+    User 2: It''s great! I love making maps.
+
+    User 1: What kind of maps do you make?
+
+    User 2: I make all kinds of maps, but my favorite are the ones of cities.
+
+    User 1: That''s cool! I''ve always loved maps.
+
+    User 2: Me too! I think they''re so beautiful.
+
+    User 1: I agree. So, what do you do for fun?
+
+    User 2: I like to run, arm wrestle, and paint.
+
+    User 1: Wow, you''re quite the active person!
+
+    User 2: I try to be! I like to keep my body and mind active.
+
+    User 1: That''s good. I''m more of a homebody myself. I like to paint, read, and watch movies.
+
+    User 2: That sounds like a nice way to relax.
+
+    User 1: It is. I love to just zone out and let my imagination run wild.
+
+    User 2: I can relate to that. I love to run because it helps me clear my head.
+
+    User 1: I can see why. It''s a great way to get in shape and relieve stress.
+
+    User 2: Exactly! So, what do you like to paint?
+
+    User 1: I like to paint landscapes, portraits, and still lifes.
+
+    User 2: Those are all great subjects! I can''t draw or paint anything to save my life.
+
+    User 1: You should give it a try! It''s a lot of fun and you might surprise yourself with how good you are.
+
+    User 2: I might just do that. Thanks for the suggestion.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

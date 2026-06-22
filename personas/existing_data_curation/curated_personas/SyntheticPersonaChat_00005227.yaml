@@ -1,0 +1,62 @@
+id: '00005227'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5227
+data:
+  user 1 personas: 'I am a national guard officer.
+
+    I work as a public affairs liaison.
+
+    I love cold , wintry weather and snow.
+
+    I eat too much fast food.'
+  user 2 personas: 'I am a great baker.
+
+    I am a nurse.
+
+    I surf often.
+
+    I was an army brat.'
+  Best Generated Conversation: 'User 1: I''m a national guard officer.
+
+    User 2: I was an army brat.
+
+    User 1: Oh, nice. Where did you live?
+
+    User 2: I was all over the place, but I spent most of my time in Hawaii.
+
+    User 1: That sounds amazing. I''ve never been to Hawaii.
+
+    User 2: You should go! It''s beautiful.
+
+    User 1: I''m sure it is. I''ve heard great things about it.
+
+    User 2: What do you do for a living?
+
+    User 1: I work as a public affairs liaison for the National Guard.
+
+    User 2: Oh, that sounds interesting. What does that entail?
+
+    User 1: I work with the media and other government agencies to communicate the National Guard''s mission and activities.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is. What do you like to do for fun?
+
+    User 1: I love to go skiing and snowboarding.
+
+    User 2: Me too! I used to do it all the time when I lived in Hawaii.
+
+    User 1: That''s awesome. I''m not as good as I used to be, but I still enjoy it.
+
+    User 2: Me too. I miss it so much.
+
+    User 1: Maybe we should go skiing together sometime.
+
+    User 2: That would be so much fun! I would love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

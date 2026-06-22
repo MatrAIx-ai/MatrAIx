@@ -1,0 +1,102 @@
+id: 00005338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5338
+data:
+  user 1 personas: 'I like to wear red shoes also.
+
+    I like to wear red.
+
+    I drive a red car.
+
+    I wear a red purse.
+
+    I use red lipstick.'
+  user 2 personas: 'I am really short.
+
+    My favorite book is david copperfield.
+
+    I have a twin brother.
+
+    I love to bake cakes.'
+  Best Generated Conversation: 'User 1: Hey! I really like red. It''s my favorite color.
+
+    User 2: Oh cool! I love red too! It''s a really pretty color.
+
+    User 1: Yeah, I think so too. I wear red a lot.
+
+    User 2: Me too! I have a red purse, a red car, and I even wear red lipstick.
+
+    User 1: Wow! You must really like red.
+
+    User 2: I do! It''s just so pretty and vibrant.
+
+    User 1: I agree. It''s a great color.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love to bake cakes.
+
+    User 2: Oh, that''s cool! I love to bake too.
+
+    User 1: I know, right? It''s so much fun.
+
+    User 2: Yeah, it is. I love the smell of fresh bread baking.
+
+    User 1: Me too! And the taste is even better.
+
+    User 2: I know, right? Baking is the best.
+
+    User 1: So, what''s your favorite cake to bake?
+
+    User 2: I love to bake chocolate cake.
+
+    User 1: Me too! Chocolate cake is the best.
+
+    User 2: I know, right? I love the chocolate frosting.
+
+    User 1: Me too! It''s so good.
+
+    User 2: So, do you have a favorite book?
+
+    User 1: My favorite book is David Copperfield by Charles Dickens.
+
+    User 2: Oh, I love that book! It''s so good.
+
+    User 1: I know, right? It''s one of my favorites.
+
+    User 2: So, what do you like about it?
+
+    User 1: I love the characters and the story. It''s just so well written.
+
+    User 2: I agree. It''s a great book.
+
+    User 1: So, do you have any siblings?
+
+    User 2: Yes, I have a twin brother.
+
+    User 1: Oh, that''s cool! I''ve always wanted a twin.
+
+    User 2: It''s fun sometimes, but it can also be a lot of work.
+
+    User 1: I can imagine. But it''s probably nice to always have someone to play with.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, bake, and spend time with my family.
+
+    User 1: Me too! I love to read, bake, and spend time with my family.
+
+    User 2: So, we have a lot in common.
+
+    User 1: I think so too.
+
+    User 2: We should hang out sometime.
+
+    User 1: I would love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00051076'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 51076
+persona_description: A geologist or seismologist who is interested in the history of earthquakes and their potential impact on human populations. This person is knowledgeable about the Great New Madrid
+  Earthquake and its effects on the United States, and is interested in predicting future earthquakes and their potential consequences. They are also interested in the potential for large earthquakes in
+  the United States and are working towards preventing such losses through research and public awareness.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: earthquake prediction
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

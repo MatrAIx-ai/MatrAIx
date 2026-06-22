@@ -1,0 +1,18 @@
+id: 00058420
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58420
+persona_description: A healthcare professional who is evaluating cases of mercury poisoning and is familiar with the laboratory criteria for diagnosis of inorganic mercury exposure. They are likely to be
+  a physician or a toxicology expert, and have experience in interpreting laboratory test results and determining the cause of poisoning. They are also aware of the potential long-term effects of inorganic
+  mercury exposure and are trained to recognize and treat these effects.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: toxicology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

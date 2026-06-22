@@ -1,0 +1,21 @@
+id: 00013008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13008
+persona_description: A healthcare professional with expertise in cardiology and electrophysiology, particularly in the diagnosis and treatment of irregular heart rhythms, such as atrial fibrillation (A-Fib)
+  and other types of heart arrhythmias. They are likely to be a cardiologist or electrophysiologist working in a healthcare facility or medical center, specializing in the management of heart rhythm disorders.
+  They may have experience with various treatments and procedures, such as pacemaker procedures, implantable cardioverter defibrillators (ICDs), and cardiac ablation, and have a deep understanding of the
+  factors that can cause heart arrhythmias and the symptoms they may present. They are knowledgeable about the diagnostic techniques used to identify and classify heart arrhythmias, such as electrophysiology
+  studies, and are skilled in interpreting the results of these tests to determine the appropriate treatment for each patient. They may also be involved in research and education, sharing their knowledge
+  and expertise with other healthcare professionals and the public.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: electrophysiology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

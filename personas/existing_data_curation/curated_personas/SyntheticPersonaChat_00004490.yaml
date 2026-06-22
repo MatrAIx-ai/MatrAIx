@@ -1,0 +1,58 @@
+id: 00004490
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4490
+data:
+  user 1 personas: 'I went to miami university.
+
+    I play for the baltimore orioles.
+
+    I am a baseball player.
+
+    I make a million dollars a year.'
+  user 2 personas: 'I am insecure.
+
+    I work too many hours in a week.
+
+    I am always hungry.
+
+    I have a wife and children.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a baseball player. I play for the Baltimore Orioles.
+
+    User 1: That sounds fun! What''s it like playing in the MLB?
+
+    User 2: It''s great! I love the competition and the thrill of the game.
+
+    User 1: I''m sure it''s a lot of pressure, too.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: What''s your favorite thing about playing baseball?
+
+    User 2: I love being able to compete against the best players in the world.
+
+    User 1: That must be really exciting.
+
+    User 2: It is! I love the challenge.
+
+    User 1: What''s your favorite memory from your baseball career?
+
+    User 2: I have a lot of great memories, but one of my favorites was when I hit a walk-off home run to win the game.
+
+    User 1: That must have been an amazing feeling!
+
+    User 2: It was! I''ll never forget it.
+
+    User 1: Do you have any plans after baseball?
+
+    User 2: I''m not sure yet. I''m going to take some time off and then figure out what I want to do next.
+
+    User 1: That sounds like a good idea.
+
+    User 2: Thanks. I''m sure I''ll figure it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

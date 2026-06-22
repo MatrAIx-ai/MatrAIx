@@ -1,0 +1,70 @@
+id: '00003510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3510
+data:
+  user 1 personas: 'I work at a candy store.
+
+    I run two miles everyday.
+
+    I ve been married for five years.
+
+    I played football in college.'
+  user 2 personas: 'I enjoy going to museums.
+
+    I am married.
+
+    I have ten nieces and nephews.
+
+    I live in new york city.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like going to museums.
+
+    User 1: That''s cool! I love museums too. Have you been to any good museums recently?
+
+    User 2: I went to the Metropolitan Museum of Art a few weeks ago. It was really amazing.
+
+    User 1: I love the Met! I went there a few years ago. I was really impressed with the Egyptian exhibit.
+
+    User 2: I love the Egyptian exhibit too! It''s so cool.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go to the movies, read, and spend time with my family.
+
+    User 1: That''s all pretty cool. I like to go to the movies too. I love watching action movies.
+
+    User 2: I love action movies too! I also like watching comedies.
+
+    User 1: I do too! What''s your favorite comedy movie?
+
+    User 2: My favorite comedy movie is Airplane! I love the jokes and the cast.
+
+    User 1: That''s a great movie! I love the jokes too.
+
+    User 2: Yeah, it''s a really funny movie.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go shopping. I love buying new clothes.
+
+    User 1: I do too! I love shopping for clothes. I always find the best deals at the mall.
+
+    User 2: I love going to the mall too! I always find the best deals there.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go to the beach. I love swimming and sunbathing.
+
+    User 1: I love the beach too! I love swimming and playing in the sand.
+
+    User 2: Yeah, the beach is the best!
+
+    User 1: It''s so relaxing.
+
+    User 2: Yeah, it''s the perfect place to relax.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

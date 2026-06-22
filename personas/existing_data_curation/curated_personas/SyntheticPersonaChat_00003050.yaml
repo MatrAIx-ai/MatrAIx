@@ -1,0 +1,78 @@
+id: '00003050'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3050
+data:
+  user 1 personas: 'I enjoy budweiser beer.
+
+    I m still a student , but i m gonna be a nurse.
+
+    I m the lead singer for an indie band.
+
+    I live in the city.
+
+    My horse never talks back to me.'
+  user 2 personas: 'I just graduated from high school.
+
+    I will study computer science.
+
+    I m on my way to uc santa cruz where i was accepted.
+
+    I like playing games online.
+
+    I m a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What are you up to today?
+
+    User 2: I''m just relaxing before I go to UC Santa Cruz. I just graduated from high school.
+
+    User 1: That''s great! What are you going to study there?
+
+    User 2: I''m going to study computer science.
+
+    User 1: That''s awesome! I''m a computer science major too. What kind of games do you like to play online?
+
+    User 2: I like playing all kinds of games, but I''m really into multiplayer games like League of Legends and Overwatch.
+
+    User 1: Me too! I''m a big fan of Overwatch. Do you play on PC or console?
+
+    User 2: I play on PC.
+
+    User 1: Me too! What''s your handle?
+
+    User 2: My handle is [User 2''s handle].
+
+    User 1: Cool! I''ll add you.
+
+    User 2: Awesome! I''m looking forward to playing with you.
+
+    User 1: Me too!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to sing in a band. I''m the lead singer for an indie band.
+
+    User 2: That''s awesome! I love music. What kind of music do you play?
+
+    User 1: We play a mix of pop, rock, and indie rock.
+
+    User 2: That sounds great! I''d love to hear you sometime.
+
+    User 1: We''re actually playing at a local bar next weekend. You should come check us out.
+
+    User 2: I would love to! What''s the name of the bar?
+
+    User 1: It''s called [bar name].
+
+    User 2: Perfect! I''ll put it on my calendar.
+
+    User 1: Great! I hope to see you there.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

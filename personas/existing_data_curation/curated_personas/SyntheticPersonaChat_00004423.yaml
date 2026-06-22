@@ -1,0 +1,54 @@
+id: '00004423'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4423
+data:
+  user 1 personas: 'I love going to the movies.
+
+    It s one of my favorite hobbies.
+
+    We liked to pretend we were superheroes.
+
+    My parents would take my brother and i when we were little.'
+  user 2 personas: 'I play jazz piano in a band.
+
+    I like to go hiking on the weekends.
+
+    I can speak arabic , english , and french.
+
+    My family is from algeria.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What are your hobbies?
+
+    User 2: I like to play jazz piano in a band, go hiking on the weekends, and speak Arabic, English, and French.
+
+    User 1: Wow, that''s impressive! I love going to the movies.
+
+    User 2: Me too! What''s your favorite movie?
+
+    User 1: I don''t know, I have a lot of favorites. I like the Lord of the Rings movies, the Harry Potter movies, and the Marvel movies.
+
+    User 2: Those are all great movies! I love the Lord of the Rings movies too.
+
+    User 1: Me too! I''m a big fan of fantasy movies.
+
+    User 2: Me too! What else do you like to do for fun?
+
+    User 1: I like to go hiking, play video games, and read.
+
+    User 2: Hiking sounds fun! I''ve always wanted to try it.
+
+    User 1: It''s really fun! You should definitely try it.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome! It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

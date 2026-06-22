@@ -1,0 +1,18 @@
+id: '00060232'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60232
+persona_description: A healthcare professional who is familiar with childhood vaccination programs and has expertise in the administration and safety of vaccines, particularly the Hib and hepatitis B vaccines.
+  They are knowledgeable about the potential side effects and off-label uses of the vaccine, and are aware of the concerns regarding thimerosal and aluminum content in vaccines. They are committed to providing
+  accurate and up-to-date information to parents about the safety and efficacy of the vaccine.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine administration and safety
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

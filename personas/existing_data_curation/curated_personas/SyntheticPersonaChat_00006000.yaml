@@ -1,0 +1,70 @@
+id: '00006000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6000
+data:
+  user 1 personas: 'I do not like wearing a swimsuit.
+
+    Winter is my favorite season.
+
+    My parents are lawyers.
+
+    If i cannot order it on the internet , i do not need it.'
+  user 2 personas: 'My favorite fruit is apple.
+
+    I like to eat the skin of the apple.
+
+    I like fruit.
+
+    I like green apples.
+
+    I do not like to eat meat.'
+  Best Generated Conversation: 'User 1: Hi! I''m a lawyer.
+
+    User 2: Oh, that''s cool! I''m a stay-at-home mom.
+
+    User 1: What''s your favorite fruit?
+
+    User 2: I love apples!
+
+    User 1: Me too! What''s your favorite kind?
+
+    User 2: I like green apples the best.
+
+    User 1: I like them too! They''re so tart and juicy.
+
+    User 2: I know, right? They''re the best!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bake and cook.
+
+    User 1: Me too! I love to make homemade bread.
+
+    User 2: Oh, that''s awesome! I love baking bread too.
+
+    User 1: Do you like to eat your bread with butter or jam?
+
+    User 2: I like to eat it with both!
+
+    User 1: Me too! Butter and jam is the best way to eat bread.
+
+    User 2: I know, right? It''s so good!
+
+    User 1: So, what''s your favorite recipe?
+
+    User 2: I love making apple pie.
+
+    User 1: Oh, that''s a good one! I love apple pie too.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: I''m sure it is! I''ll have to try it sometime.
+
+    User 2: You should! It''s really easy to make.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

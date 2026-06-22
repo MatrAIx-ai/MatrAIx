@@ -1,0 +1,56 @@
+id: 00004189
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4189
+data:
+  user 1 personas: 'My favorite drink is coke.
+
+    I like bagels with everything on them.
+
+    I like to make cookies.
+
+    I like to train dogs.
+
+    I like to run.'
+  user 2 personas: 'I have one child.
+
+    I enjoy gardening.
+
+    I work for a clothes retailer.
+
+    I own two boxer dogs.'
+  Best Generated Conversation: 'User 1: I like to train dogs.
+
+    User 2: I have two boxer dogs!
+
+    User 1: Oh my god! That''s awesome! I love boxer dogs. What are their names?
+
+    User 2: Their names are Diesel and Tank.
+
+    User 1: Great names! I love those names. So, what do you like to do with your dogs?
+
+    User 2: We go for walks, play fetch, and go to the park.
+
+    User 1: That sounds like a lot of fun! I bet your dogs are really happy.
+
+    User 2: They are! They love to play and they''re always up for an adventure.
+
+    User 1: That''s great! So, what do you like to do in your free time?
+
+    User 2: I like to garden, cook, and spend time with my family.
+
+    User 1: Sounds like you have a lot of interests! I like to run, bake cookies, and drink coke.
+
+    User 2: I love cookies! I''ll have to try some of yours sometime.
+
+    User 1: You can''t go wrong with a good chocolate chip cookie!
+
+    User 2: I''ll take you up on that!
+
+    User 1: Great! We can have a cookie party and play with your dogs.
+
+    User 2: That sounds like a lot of fun! I''m in!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

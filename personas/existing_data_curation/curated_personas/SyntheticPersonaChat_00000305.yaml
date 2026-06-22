@@ -1,0 +1,66 @@
+id: '00000305'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 305
+data:
+  user 1 personas: 'I love honey.
+
+    I am good at throwing parties.
+
+    My favorite animal is a monkey.
+
+    I want to live at the beach.'
+  user 2 personas: 'I like to plant flowers in my gardens.
+
+    I like to take my dog for long walks.
+
+    I enjoy cooking for people.
+
+    I have a lizard named nagini.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to cook for people, take my dog for walks, and plant flowers in my garden.
+
+    User 1: Those all sound like fun activities. I love honey, and I''m good at throwing parties.
+
+    User 2: That''s great! I love honey too. I''ve never been to a party thrown by you, but I''m sure it would be a lot of fun.
+
+    User 1: Thanks! I''m glad to hear that. What''s your favorite animal?
+
+    User 2: My favorite animal is my lizard named Nagini.
+
+    User 1: Oh, that''s a unique name. What kind of lizard is it?
+
+    User 2: It''s a green anole. They''re very common in Florida, but I love them.
+
+    User 1: I''ve never seen a green anole before. They must be really cute.
+
+    User 2: They are! They have little green bodies and blue tongues.
+
+    User 1: That sounds really cool. I''d love to see a picture of your lizard sometime.
+
+    User 2: Sure, I''d be happy to show you.
+
+    User 1: Thanks! I''m always interested in seeing new animals.
+
+    User 2: No problem!
+
+    User 1: So, do you like to live in Florida?
+
+    User 2: I love it here! The weather is always nice, and there''s always something to do.
+
+    User 1: I''ve heard that Florida is a great place to live. I''ve always wanted to visit.
+
+    User 2: You should! It''s a beautiful state.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

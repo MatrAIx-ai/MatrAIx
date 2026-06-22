@@ -1,0 +1,70 @@
+id: 00005996
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5996
+data:
+  user 1 personas: 'I do not like feeling controlled.
+
+    I wish i could take back a mistake.
+
+    I do not like my reputation.
+
+    I have a harsh inner critic.
+
+    I want to move.'
+  user 2 personas: 'I am an avid fan of the boston celtics.
+
+    I love walking in the park.
+
+    I have six older sisters.
+
+    I love chocolate.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love walking in the park, watching sports, and eating chocolate.
+
+    User 1: I like walking in the park too! What''s your favorite park?
+
+    User 2: I love going to the Common in Boston. It''s so beautiful and there''s always something to see.
+
+    User 1: I''ve never been to Boston, but it sounds like a great place to visit.
+
+    User 2: You should definitely go! It''s a beautiful city with a lot to offer.
+
+    User 1: What''s your favorite sports team?
+
+    User 2: I''m a huge fan of the Boston Celtics! I love watching them play basketball.
+
+    User 1: I''m not a big sports fan, but I''ve heard good things about the Celtics.
+
+    User 2: They''re a great team! They''ve won a lot of championships.
+
+    User 1: What''s your favorite kind of chocolate?
+
+    User 2: I love dark chocolate. It''s so rich and flavorful.
+
+    User 1: I like dark chocolate too! It''s the best.
+
+    User 2: Do you have any pets?
+
+    User 1: No, I don''t have any pets.
+
+    User 2: I have six older sisters.
+
+    User 1: That must be fun!
+
+    User 2: It can be! We''re always up to something.
+
+    User 1: It sounds like you have a great family.
+
+    User 2: I do! I''m very lucky.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

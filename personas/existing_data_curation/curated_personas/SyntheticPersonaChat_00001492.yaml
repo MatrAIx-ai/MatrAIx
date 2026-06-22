@@ -1,0 +1,72 @@
+id: 00001492
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1492
+data:
+  user 1 personas: 'I am 29 years old.
+
+    I live in a suburb of boston.
+
+    I am a night owl.
+
+    I enjoy hiking and riding my bicycle.'
+  user 2 personas: 'I am confined to my bed.
+
+    I love when my pets visit me in bed.
+
+    I enjoy playing computer games.
+
+    I spend a good deal of time on social media.'
+  Best Generated Conversation: '* * User 1: * * I''m from the Boston area too! What do you like to do for fun?
+
+
+    * * User 2: * * I enjoy playing video games and spending time on social media.
+
+
+    * * User 1: * * I love hiking and biking too! I''ve been trying to get out more lately, but it''s been so hard with the weather.
+
+
+    * * User 2: * * I know, it''s been really cold and rainy lately. I''m hoping it warms up soon so I can get out more.
+
+
+    * * User 1: * * Me too! I''m going to try to go hiking this weekend if it''s not too bad out.
+
+
+    * * User 2: * * That sounds great! I hope you have a good time.
+
+
+    * * User 1: * * Thanks! I''ll let you know how it goes.
+
+
+    * * User 2: * * Awesome! I''m looking forward to hearing about it.
+
+
+    * * User 1: * * So, what do you like to do about your pets?
+
+
+    * * User 2: * * I love when they visit me in bed! It makes me feel less lonely.
+
+
+    * * User 1: * * That''s so sweet! I can imagine that makes a big difference.
+
+
+    * * User 2: * * It does! I''m so grateful for them.
+
+
+    * * User 1: * * I''m sure they''re grateful for you too!
+
+
+    * * User 2: * * I hope so!
+
+
+    * * User 1: * * I think it''s great that you have such a loving relationship with your pets.
+
+
+    * * User 2: * * Thanks! I love them very much.
+
+
+    * * User 1: * * I''m sure they love you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

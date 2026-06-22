@@ -1,0 +1,65 @@
+id: '00003473'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3473
+data:
+  user 1 personas: 'I love watching sunsets.
+
+    I love to surf.
+
+    My hair is brown and curly.
+
+    I live near the ocean.
+
+    I hate red meat.'
+  user 2 personas: 'I have a harsh inner critic.
+
+    I wish i could take back a mistake.
+
+    I do not like feeling controlled.
+
+    I do not like my reputation.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+
+    User 2: Hello! I''m [user 2 name].
+
+
+    User 1: Nice to meet you! What are you interested in?
+
+
+    User 2: I''m interested in a lot of things, but I''m really passionate about learning and growth. I also love to travel and experience new cultures.
+
+
+    User 1: That''s great! I love to learn and grow too. I also love to travel. I''ve been to a few different countries, but I''d love to see more of the world.
+
+
+    User 2: Me too! I''ve only been to a few countries, but I''m hoping to visit more in the future.
+
+
+    User 1: What''s your favorite thing about traveling?
+
+
+    User 2: I love the feeling of being in a new place and experiencing something different. It''s so exciting to see new things and meet new people.
+
+
+    User 1: I know what you mean. I love the feeling of being lost in a new city. It''s like you''re in a whole new world.
+
+
+    User 2: Yes! It''s so much fun to explore and discover new things.
+
+
+    User 1: So, what are your plans for the future?
+
+
+    User 2: I''m not sure yet. I''m still in school, so I''m just focusing on finishing my degree. But I''m hoping to travel more and learn new things.
+
+
+    User 1: That sounds like a great plan. I''m sure you''ll do great things.
+
+
+    User 2: Thank you! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

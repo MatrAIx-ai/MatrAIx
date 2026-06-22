@@ -1,0 +1,66 @@
+id: 00002482
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2482
+data:
+  user 1 personas: 'I have four siblings.
+
+    My youngest sister is in first grade.
+
+    I am 5 3 and am the shortest person in my family.
+
+    My father is a school teacher , he teaches middle school.
+
+    I am the oldest sibling.'
+  user 2 personas: 'I just moved into an apartment within the vicinity of my new job.
+
+    I am twenty two years old.
+
+    I just graduated college with my bachelors degree in education.
+
+    I love children.
+
+    I just accepted a job at the elementary school in my hometown.'
+  Best Generated Conversation: 'User 1: Hi I''m Alex. I just moved to this town and I''m looking for new friends.
+
+    User 2: Hi Alex! I''m Sarah. I''m new here too. I just graduated from college and I got a job at the elementary school in town.
+
+    User 1: That''s awesome! What grade do you teach?
+
+    User 2: I''m a first grade teacher!
+
+    User 1: Oh that''s so cool! My youngest sister is in first grade.
+
+    User 2: That''s great! I love working with first graders. They''re so cute and innocent.
+
+    User 1: Yeah they are. My sister is a little ball of energy.
+
+    User 2: I bet she is! I love when they''re that age. They''re just starting to learn so much about the world and they''re always so excited about everything.
+
+    User 1: Yeah it''s really cute. I''m glad you''re a teacher. I think you''ll be great at it.
+
+    User 2: Thanks Alex! I''m really excited to get started.
+
+    User 1: Well I''m glad you''re here. It''s nice to meet you Sarah.
+
+    User 2: It''s nice to meet you too Alex.
+
+    User 1: So what do you like to do for fun?
+
+    User 2: I love to read, go to the movies, and hang out with friends.
+
+    User 1: That sounds like fun. I like to do all of those things too.
+
+    User 2: Great! Maybe we can hang out sometime.
+
+    User 1: That would be great! I''m free on Saturday.
+
+    User 2: That works for me! We can go to the movies or something.
+
+    User 1: Sounds good. Let''s see what''s playing.
+
+    User 2: Okay. I''ll text you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

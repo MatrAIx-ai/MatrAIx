@@ -1,0 +1,21 @@
+id: 00028791
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28791
+persona_description: A scientist or engineer with expertise in batch process control and continuous process optimization. They are interested in the challenges and opportunities in controlling temperature,
+  pH, concentration, and pressure in batch reactors and continuous processes. They are also interested in the tradeoffs between batch yield, quality, and production rate versus the ability to improve operating
+  conditions. They have experience in using PID controllers and tuning rules for integrating processes in batch processes and are familiar with the window of allowable PID gains. They are aware of the buildup
+  of contaminants, impurities, and inhibitors in batch processes and have a plan to prevent similar occurrences in continuous processes with extensive recycle. They are also skilled in translating the controlled
+  variable from batch concentration, pH, or temperature to a rate of change of concentration, pH, or temperature for control of the desired batch profile and are familiar with the use of integral action
+  and MP in continuous processes.
+expertise:
+  general_domain_top1pct: chemical engineering
+  specific_domain_top1pct: process control
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,58 @@
+id: 00004869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4869
+data:
+  user 1 personas: 'My favorite color is yellow.
+
+    I am fascinated with ghosts.
+
+    I am a wedding planner.
+
+    When i was a child , i wanted to be an architect.'
+  user 2 personas: 'My favorite sport is football.
+
+    I drive a truck for a living.
+
+    I am former military.
+
+    I recently bought a camper.
+
+    I exercise 4 times a week.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there! How are you doing today?
+
+    User 1: Doing great! I''m a wedding planner, and I''m currently planning a wedding for a client who''s a huge football fan.
+
+    User 2: That sounds like a lot of fun! I''m a former military man myself, and I love football. I''m also interested in ghosts.
+
+    User 1: That''s cool! I''ve never been to a football game, but I''ve always wanted to go. I''ve seen a few episodes of Ghost Hunters, but I''m not sure if I believe in ghosts.
+
+    User 2: You should come to a game with me sometime! It''s a lot of fun, and you''ll definitely get a kick out of it. And as for ghosts, I''ve never seen one, but I''ve heard some pretty spooky stories.
+
+    User 1: That sounds like a fun idea! I''ll have to see if I can make it to a game this season. And if I ever see a ghost, I''ll be sure to let you know!
+
+    User 2: Awesome! I''ll be waiting.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a truck driver. I love my job, but it can be challenging at times.
+
+    User 1: That''s cool! I''ve always wanted to be a truck driver, but I''m not sure if I could handle the long hours.
+
+    User 2: It''s not for everyone, but it''s a great job if you''re looking for something that''s always changing.
+
+    User 1: I can see that. I''m not sure if I''m ready for that kind of lifestyle, but it''s definitely something to think about.
+
+    User 2: It''s always a good idea to keep your options open.
+
+    User 1: I agree. Well, it was nice talking to you! I hope we can chat again sometime.
+
+    User 2: Me too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

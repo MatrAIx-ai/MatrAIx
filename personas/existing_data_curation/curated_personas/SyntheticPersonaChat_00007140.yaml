@@ -1,0 +1,76 @@
+id: '00007140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7140
+data:
+  user 1 personas: 'I have 2 dogs , both golden retrievers.
+
+    I like going to the moives.
+
+    My father and grandfather also worked in the circus.
+
+    I am on a keto diet.
+
+    I work in a circus as a juggler.'
+  user 2 personas: 'My favorite color is green.
+
+    I like rock music.
+
+    My name is gerald.
+
+    I like basketball.'
+  Best Generated Conversation: 'User 1: Hi, I''m Gerald.
+
+    User 2: Hi Gerald, I''m [user 1''s name].
+
+    User 1: Nice to meet you. I like rock music. Do you like any bands?
+
+    User 2: I like The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 1: I like those bands too! I also like Queen and AC/DC.
+
+    User 2: Oh, I love Queen! They''re one of my favorite bands.
+
+    User 1: Me too! They''re so good.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, play basketball, and hang out with my friends.
+
+    User 2: I like to do those things too! I also like to go to concerts.
+
+    User 1: Oh, I love going to concerts too! Who are some of your favorite bands?
+
+    User 2: I like The Killers, Imagine Dragons, and Twenty One Pilots.
+
+    User 1: I like those bands too! I also like The 1975, Arctic Monkeys, and The Neighbourhood.
+
+    User 2: Oh, I love The 1975! They''re so good.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to the movies or play basketball.
+
+    User 2: Oh, I''m going to a concert this weekend.
+
+    User 1: Oh, that sounds fun! Who are you seeing?
+
+    User 2: I''m seeing The Killers.
+
+    User 1: Oh, I love The Killers! I''m jealous.
+
+    User 2: You should come with me!
+
+    User 1: I would love to, but I have to work.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, I know. But maybe I can catch them next time they''re in town.
+
+    User 2: Yeah, that would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

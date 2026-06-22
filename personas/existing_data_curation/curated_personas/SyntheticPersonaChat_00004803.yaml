@@ -1,0 +1,84 @@
+id: 00004803
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4803
+data:
+  user 1 personas: 'I work at the grocery store.
+
+    My favorite band is metallica.
+
+    I own 4 cats.
+
+    I ride a unicycle.'
+  user 2 personas: 'One of my favorite artists is drake.
+
+    I like to go out to eat.
+
+    I like listening to other rap music too.
+
+    I also enjoy cooking.
+
+    A hobby of mine is the drums.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1 name). What''s your name?
+
+    User 2: Hey! I''m (user 2 name).
+
+    User 1: It''s nice to meet you, (user 2 name).
+
+    User 2: You too, (user 1 name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out to eat, listen to music, and cook.
+
+    User 1: Oh, cool! I like to go out to eat too. What kind of food do you like?
+
+    User 2: I like all kinds of food, but my favorite is probably Italian.
+
+    User 1: I love Italian food too! I have a favorite Italian restaurant near my house.
+
+    User 2: Oh, cool! I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: What''s your favorite thing to order there?
+
+    User 1: I always get the spaghetti and meatballs.
+
+    User 2: That sounds delicious! I''ll have to try it.
+
+    User 1: You should! I also like their lasagna.
+
+    User 2: I love lasagna too! I''ll have to order that next time.
+
+    User 1: You should! It''s really good.
+
+    User 2: Thanks for the recommendation! I''m excited to try it.
+
+    User 1: You''re welcome! I''m sure you''ll like it.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I work at the grocery store, and I ride a unicycle.
+
+    User 2: Oh, cool! I''ve always wanted to learn how to ride a unicycle.
+
+    User 1: It''s not as hard as it looks! I taught myself how to ride one.
+
+    User 2: That''s impressive! I don''t think I''m coordinated enough to ride one.
+
+    User 1: You''d be surprised. It''s actually pretty easy.
+
+    User 2: Maybe I''ll give it a try someday.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation! I''ll have to see if I can find a unicycle to buy.
+
+    User 1: You can get them online or at some sporting goods stores.
+
+    User 2: Thanks for the tip! I''ll look into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

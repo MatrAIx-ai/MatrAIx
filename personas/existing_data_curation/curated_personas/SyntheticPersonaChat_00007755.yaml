@@ -1,0 +1,104 @@
+id: '00007755'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7755
+data:
+  user 1 personas: 'My father used to be an insurance salesman.
+
+    My mother stayed at home all day to raise me and my siblings.
+
+    I had to drop out of college to help with my grandparents.
+
+    I graduated valedictorian of my high school class.'
+  user 2 personas: 'Paps likes to go mushroom hunting.
+
+    I have a brown belt in karate.
+
+    I sing in the school chorus.
+
+    I live with my paps and grandma.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sing in the school chorus and I have a brown belt in karate.
+
+    User 1: That''s cool! I used to sing in the school chorus too.
+
+    User 2: Really? What songs did you like to sing?
+
+    User 1: I liked to sing all sorts of songs, but my favorite was "The Sound of Music."
+
+    User 2: That''s a good song. I like to sing "My Heart Will Go On."
+
+    User 1: That''s a beautiful song. I love Celine Dion.
+
+    User 2: Me too! She''s my favorite singer.
+
+    User 1: What do you like to do for karate?
+
+    User 2: I like practicing the katas and sparring with my friends.
+
+    User 1: That sounds like fun. I used to do karate too, but I had to quit because I didn''t have enough time.
+
+    User 2: That''s too bad. Karate is a great way to stay in shape and learn self-defense.
+
+    User 1: I know. I miss it.
+
+    User 2: Maybe you can start up again someday.
+
+    User 1: Maybe.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and go out with my friends.
+
+    User 2: That sounds like fun. I like to do those things too.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like to play a lot of different video games, but my favorite is probably Mario Kart.
+
+    User 1: That''s a good game. I used to play it all the time when I was younger.
+
+    User 2: Me too. It''s still a lot of fun.
+
+    User 1: So, what movies do you like to watch?
+
+    User 2: I like to watch all sorts of movies, but my favorite genre is probably science fiction.
+
+    User 1: That''s a good genre. I like science fiction too.
+
+    User 2: What''s your favorite science fiction movie?
+
+    User 1: I like to watch a lot of different science fiction movies, but my favorite is probably Star Wars.
+
+    User 2: That''s a good choice. Star Wars is a classic.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you like to do with your friends?
+
+    User 1: We like to go out to eat, go to the movies, and play video games.
+
+    User 2: That sounds like fun. I like to do those things with my friends too.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to the movies with my friends.
+
+    User 2: That sounds like fun. What movie are you seeing?
+
+    User 1: We''re not sure yet. We''re still trying to decide.
+
+    User 2: Well, I hope you have a good time.
+
+    User 1: Thanks, you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: '00007733'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7733
+data:
+  user 1 personas: 'I m a student at a small community college.
+
+    I m twenty years old.
+
+    I love pasta.
+
+    I love to read fiction.
+
+    I work at a hospital.'
+  user 2 personas: 'I take her to the park.
+
+    We live in an apartment.
+
+    I have a 7 year old daughter.
+
+    My boyfriend is unemployed.'
+  Best Generated Conversation: 'User 1: Hey, I''m User 1!
+
+    User 2: Hey, I''m User 2!
+
+    User 1: What are you up to today?
+
+    User 2: I''m taking my daughter to the park.
+
+    User 1: That sounds like fun! I love the park.
+
+    User 2: Me too! It''s a great place to relax and let off some steam.
+
+    User 1: I hear you. I work at a hospital, so I don''t always get to relax.
+
+    User 2: I can imagine. I''m a stay-at-home mom, so I get plenty of relaxation time.
+
+    User 1: Lucky you! I love reading fiction, but I don''t have much time for it these days.
+
+    User 2: I love reading too! I usually read a book a week.
+
+    User 1: That''s amazing! I wish I had that kind of time.
+
+    User 2: I''m sure you''ll find some time to read soon.
+
+    User 1: I hope so! I''m going to try to get to the library this weekend.
+
+    User 2: That sounds like a great plan. I love the library!
+
+    User 1: Me too! It''s a great place to find books and relax.
+
+    User 2: I agree. I''m going to go, now. It was nice talking to you!
+
+    User 1: It was nice talking to you too! Have a great day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

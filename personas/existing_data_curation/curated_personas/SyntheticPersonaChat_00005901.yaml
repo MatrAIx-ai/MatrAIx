@@ -1,0 +1,80 @@
+id: 00005901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5901
+data:
+  user 1 personas: 'My father worked 11 hours a day.
+
+    My mother use to read me bed time stories.
+
+    I am allergic to seafood.
+
+    I own a iphone 7.'
+  user 2 personas: 'I like to play video games.
+
+    I work as a police officer.
+
+    I do not like broccoli.
+
+    I have 2 dogs.
+
+    I like to go hunting.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to play video games.
+
+    User 1: Oh, me too! What kind of games do you like to play?
+
+    User 2: I like to play all kinds of games, but my favorites are action and adventure games.
+
+    User 1: I like those too! What''s your favorite video game of all time?
+
+    User 2: That''s hard to say, but I think my favorite video game of all time is The Legend of Zelda: Breath of the Wild.
+
+    User 1: I''ve heard good things about that game. I''ve been meaning to check it out.
+
+    User 2: You should! It''s a really great game.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a police officer.
+
+    User 1: Oh, really? That''s cool! What''s it like being a police officer?
+
+    User 2: It''s challenging, but it''s also really rewarding. I get to help people and make a difference in my community.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: I do, it''s a lot of fun.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to go hunting, fishing, and hiking. I also like to play video games and watch movies.
+
+    User 1: Those sound like fun hobbies! I like to go hiking and fishing too.
+
+    User 2: That''s great! We should go hiking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, write, and go to the movies. I also like to go out to eat and spend time with my friends and family.
+
+    User 2: Those sound like fun things to do! I like to read and go to the movies too.
+
+    User 1: That''s great! We should go to the movies together sometime.
+
+    User 2: That would be fun!
+
+    User 1: So, what are you looking for in a partner?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent. I also want someone who is interested in the same things I am.
+
+    User 1: Those are all great qualities to look for in a partner. I''m sure you''ll find someone who is perfect for you.
+
+    User 2: Thanks! I''m sure I will too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

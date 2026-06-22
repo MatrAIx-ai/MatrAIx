@@ -1,0 +1,60 @@
+id: '00005751'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5751
+data:
+  user 1 personas: 'I can type 140 words per minute.
+
+    I think the moon landing was faked.
+
+    I talk very fast.
+
+    I like the color red.
+
+    I have 3 thumbs.'
+  user 2 personas: 'I like to shop.
+
+    I graduated college and immediately went to graduate school.
+
+    I love my dog.
+
+    I am a vegetarian but i eat fish , especially sushi.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, nice to meet you! My name is [user 2''s name].
+
+    User 1: It''s nice to meet you too! What do you do for fun?
+
+    User 2: I like to shop, go to the movies, and hang out with my friends.
+
+    User 1: Those are all great ways to spend time. I like to do a lot of the same things. I also enjoy writing and reading.
+
+    User 2: I love to read too! What are some of your favorite books?
+
+    User 1: I love Harry Potter, Percy Jackson, and The Lord of the Rings.
+
+    User 2: I love all of those books too! Harry Potter is my favorite series.
+
+    User 1: It''s mine too! I''ve read them all so many times.
+
+    User 2: Me too! I''m always looking for new books to read.
+
+    User 1: I know what you mean. I love reading so much. I''m always looking for new books to add to my collection.
+
+    User 2: What''s your favorite genre of books?
+
+    User 1: I like all kinds of books, but my favorites are fantasy and science fiction.
+
+    User 2: I love those genres too! I''m always looking for new books to read in those genres.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 1: It is. I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

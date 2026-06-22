@@ -1,0 +1,66 @@
+id: 00002319
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2319
+data:
+  user 1 personas: 'I use to own 6 cats.
+
+    I never learned how to write.
+
+    I had to call 911 when i had a terrible headache.
+
+    I got married to my highschool friend.
+
+    I can only see 200 feet in front of me.'
+  user 2 personas: 'She likes to grow plants in her garden.
+
+    I go visit them sometimes.
+
+    My best friend lives in a big city.
+
+    I work at a grocery store.
+
+    My mother is a social worker for the school system.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the park and play frisbee.
+
+    User 1: That sounds fun! I love playing frisbee.
+
+    User 2: What''s your favorite thing about frisbee?
+
+    User 1: I like the feeling of the wind in my hair and the sun on my face.
+
+    User 2: Me too! And I like the challenge of trying to get the frisbee to land in the basket.
+
+    User 1: That''s a lot of fun! I''m not very good at it, though.
+
+    User 2: I''m not either! But it''s still fun to try.
+
+    User 1: I know what you mean!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to read and watch movies.
+
+    User 2: Me too! What''s your favorite book?
+
+    User 1: I like a lot of different books, but my favorite is "The Lord of the Rings".
+
+    User 2: That''s a great book! I''ve read it a few times.
+
+    User 1: Me too! I love the story and the characters.
+
+    User 2: Me too! It''s so well-written.
+
+    User 1: It is! It''s one of my favorite books of all time.
+
+    User 2: Me too! I''m glad you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

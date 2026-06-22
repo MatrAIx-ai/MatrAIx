@@ -1,0 +1,62 @@
+id: 00008760
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8760
+data:
+  user 1 personas: 'I hate social obligations because i always say the wrong thing.
+
+    I spend a lot of time watching obscure foreign film on netflix.
+
+    My dad owns a appliance store that i don t want to inherit.
+
+    I prefer eating at home because people make me nervous.
+
+    I like running in marathons.'
+  user 2 personas: 'I listen to a lot of strange music.
+
+    I wish i could live in iceland.
+
+    I wait for something interesting to happen each day.
+
+    I wish i could write in cursive.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to listen to a lot of strange music.
+
+    User 1: What kind of strange music?
+
+    User 2: I like a lot of different kinds of music, but I''m really into experimental music and noise music.
+
+    User 1: I''ve never heard of noise music.
+
+    User 2: It''s a type of music that''s made using electronic instruments and samples. It''s usually very chaotic and abrasive, but it can be really interesting.
+
+    User 1: Interesting. I''ll have to check it out.
+
+    User 2: You should! It''s not for everyone, but it''s definitely worth a listen.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go to concerts and art galleries. I also like to read and write.
+
+    User 1: I like to go to concerts too! What kind of music do you like to see live?
+
+    User 2: I like a lot of different kinds of music, but I''m really into rock and electronic music.
+
+    User 1: I like rock music too! I''m a big fan of The Killers and The Strokes.
+
+    User 2: I love The Killers! I''m also a big fan of The Strokes and The White Stripes.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like a lot of different kinds of books, but I''m really into science fiction and fantasy.
+
+    User 1: I like science fiction and fantasy too! I''m a big fan of Isaac Asimov and Ursula K. Le Guin.
+
+    User 2: I love Isaac Asimov! I''m also a big fan of Octavia Butler and N.K. Jemisin.
+
+    User 1: We have a lot in common! I''m glad I met you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

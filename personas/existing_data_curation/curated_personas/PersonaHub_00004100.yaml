@@ -1,0 +1,19 @@
+id: '00004100'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4100
+persona_description: An engineer or a technician who is interested in understanding the power consumption and efficiency of different appliances, motors, and machines. They are looking for information on
+  the power rating given to engines and appliances to design machines for customized usage according to the requirements. They are also interested in the SI units of power, watt, kilowatt, and horsepower,
+  and the units used to measure electricity consumption per hour, heat content, and power of cooling/heating systems. They are likely to be familiar with the unit of power, watt, and the amount of power
+  required to freeze/melt ice in refrigeration.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: mechanical engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

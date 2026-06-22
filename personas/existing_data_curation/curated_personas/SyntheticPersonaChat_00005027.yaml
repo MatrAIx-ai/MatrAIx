@@ -1,0 +1,54 @@
+id: '00005027'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5027
+data:
+  user 1 personas: 'I like the color blue or red.
+
+    I ve always wanted to travel to ireland or puerto rico.
+
+    I use to be a wild child.
+
+    I love the country but enjoy visiting the city life.'
+  user 2 personas: 'Now i also work at a bank.
+
+    My father used to work for a bank.
+
+    I went to college and graduated few years ago.
+
+    I grew up in the upstate.'
+  Best Generated Conversation: 'User 1: I''ve always wanted to travel to Ireland or Puerto Rico.
+
+    User 2: I grew up in the upstate, so I''ve been to Puerto Rico a few times.
+
+    User 1: Oh, cool! What did you like about it?
+
+    User 2: I loved the beaches and the food. The people were really friendly too.
+
+    User 1: I''ve heard that the food is amazing. What''s your favorite dish?
+
+    User 2: Mofongo is my favorite. It''s a dish made with plantains and pork.
+
+    User 1: That sounds delicious! I''ll have to try that if I ever make it there.
+
+    User 2: You definitely should. It''s a must-try.
+
+    User 1: What''s your favorite thing to do in the city?
+
+    User 2: I love going to museums and art galleries. I also like going to concerts and seeing shows.
+
+    User 1: I love going to museums too. I''m not very good at art, but I love looking at it.
+
+    User 2: Me too! I''m not very good at art either, but I just love seeing the different styles and techniques.
+
+    User 1: I''m glad we agree on that. I feel like it''s a great way to learn about different cultures and history.
+
+    User 2: I agree. It''s also a great way to relax and de-stress.
+
+    User 1: Definitely. I''m glad we''re having this conversation. It''s been really interesting.
+
+    User 2: Me too. I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

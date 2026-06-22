@@ -1,0 +1,74 @@
+id: 00000934
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 934
+data:
+  user 1 personas: 'I am in college.
+
+    I am working on a biology degree.
+
+    1984 is my favorite book.
+
+    I love book.'
+  user 2 personas: 'I don t have a lot of friends.
+
+    I read a lot.
+
+    I am stuck in a wheel chair.
+
+    I like to go to the park.
+
+    I work at a museum.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What are you up to?
+
+    User 2: I''m just reading a book.
+
+    User 1: Oh, what book are you reading?
+
+    User 2: 1984.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: Really? What did you think of it?
+
+    User 1: I thought it was really thought-provoking. It made me think about a lot of things about society.
+
+    User 2: Me too. It''s one of those books that stays with you long after you''ve finished it.
+
+    User 1: I agree. So, are you a student?
+
+    User 2: Yes, I''m in college.
+
+    User 1: Oh, cool! What are you studying?
+
+    User 2: I''m studying biology.
+
+    User 1: Oh, that''s cool! I''m going to be a biology teacher.
+
+    User 2: That''s awesome! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so. So, what do you like to do for fun?
+
+    User 2: I like to read, go to the park, and hang out with my friends.
+
+    User 1: Oh, that sounds fun. I like to read, too. I''m not very good at going to the park, but I like to hang out with my friends.
+
+    User 2: We should hang out sometime!
+
+    User 1: That would be great! I''m free on Saturday.
+
+    User 2: Me too! We could go to the park or something.
+
+    User 1: That sounds good. I''ll bring a book.
+
+    User 2: Great! I''ll see you then.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

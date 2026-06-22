@@ -1,0 +1,19 @@
+id: '00027223'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27223
+persona_description: A scientist or engineer involved in the field of fluid dynamics, specifically studying the effects of flow patterns on the velocity fields within slightly tapering cylindrical liquid
+  jets traveling through still air. They use particle image velocimetry algorithms to calculate velocity fields from high speed images of the jets, correcting for optical distortions and investigating the
+  effect of jet speed on the velocity profiles downstream of the nozzle exit. They are likely familiar with ray tracing methods for correcting optical distortions and are interested in understanding the
+  relaxation rate for the velocity profile downstream of the nozzle exit, which is consistent with theoretical expectations for low Reynolds numbers and the fluid used.
+expertise:
+  general_domain_top1pct: physics/engineering
+  specific_domain_top1pct: fluid dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

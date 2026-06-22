@@ -1,0 +1,60 @@
+id: '00001071'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1071
+data:
+  user 1 personas: 'I like to party.
+
+    I love the beach.
+
+    I work part time at a pizza restaurant.
+
+    I am in college.'
+  user 2 personas: 'I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I enjoy eating pumpkins.
+
+    I use third party programs to read portable documents instead of adobe.
+
+    I enjoy watching videos on youtube.
+
+    I have a small beagle dog who i call droopy.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just working on a project.
+
+    User 1: Cool, what kind of project?
+
+    User 2: I''m working on a video for my YouTube channel.
+
+    User 1: Oh, that''s cool! What''s your YouTube channel about?
+
+    User 2: It''s about my love of food. I post recipes and reviews of different restaurants.
+
+    User 1: Oh, that sounds cool! I love food too. What''s your favorite kind of food?
+
+    User 2: I love all kinds of food, but my favorite is probably seafood.
+
+    User 1: Me too! I love shrimp, especially when they''re dipped in barbecue sauce.
+
+    User 2: Oh, that sounds delicious! I love barbecue sauce too.
+
+    User 1: So, what''s your favorite YouTube channel?
+
+    User 2: I like to watch cooking channels, like Tasty and Food Network.
+
+    User 1: Oh, I love those channels too! I also like watching travel channels.
+
+    User 2: Me too! I love watching videos of people exploring different countries.
+
+    User 1: So, what''s the best thing about your dog?
+
+    User 2: He''s so cute and cuddly! He''s always happy to see me.
+
+    User 1: That sounds like a great dog! I''m glad you have him.
+
+    User 2: Thanks! I love him very much.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

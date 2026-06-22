@@ -1,0 +1,78 @@
+id: 00005995
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5995
+data:
+  user 1 personas: 'I do not have a good social life.
+
+    I eat mainly chinese food.
+
+    I am a night owl.
+
+    I am single and live alone.
+
+    I make robots for a living.'
+  user 2 personas: 'I am 29 years old.
+
+    I enjoy hiking and riding my bicycle.
+
+    I live in a suburb of boston.
+
+    My favorite band is pearl jam.
+
+    I am a night owl.'
+  Best Generated Conversation: 'User 1: Hi! I''m Chris.
+
+    User 2: Hi Chris, I''m Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: That''s cool! I''m a robotics engineer.
+
+    User 2: Oh, that''s really interesting! What kind of robots do you make?
+
+    User 1: I mostly make industrial robots, but I''ve also made some robots for the military.
+
+    User 2: That''s awesome! I''ve always been interested in robots.
+
+    User 1: Me too! They''re so cool.
+
+    User 2: What''s your favorite kind of robot?
+
+    User 1: I think my favorite kind of robot is the kind that can help people.
+
+    User 2: That''s a great answer! I think robots can really make the world a better place.
+
+    User 1: I agree. I think they have the potential to solve a lot of problems.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I like to hike and ride my bike.
+
+    User 2: That''s cool! I love hiking too.
+
+    User 1: Where do you like to hike?
+
+    User 2: I like to hike in the White Mountains.
+
+    User 1: Oh, that''s awesome! I''ve hiked in the White Mountains a few times.
+
+    User 2: Really? What trails did you hike?
+
+    User 1: I hiked the Presidential Traverse and the Franconia Ridge Loop.
+
+    User 2: Those are both great trails! I''ve hiked both of them too.
+
+    User 1: That''s awesome! We should go hiking together sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! We can exchange contact information later.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

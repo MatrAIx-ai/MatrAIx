@@ -1,0 +1,56 @@
+id: 00008394
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8394
+data:
+  user 1 personas: 'I am a french girl , but i moved to the us last year.
+
+    I am in 3rd grade.
+
+    I live with my parents and my little brother.
+
+    I like to play soccer , draw and read asterix.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.'
+  user 2 personas: 'I prefer morning to night.
+
+    My favorite fruit is an apple.
+
+    I prefer winter over fall.
+
+    I like to swim.
+
+    I am a marathon runner.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, run marathons, and eat apples.
+
+    User 1: I like to read, play soccer, and draw.
+
+    User 2: That''s cool! I used to draw when I was younger, but I haven''t done it much lately.
+
+    User 1: I''m going to summer camp next week. I''m excited to make some new friends.
+
+    User 2: That sounds fun! I love summer camp. I went every summer when I was a kid.
+
+    User 1: I''m also going to play soccer in the fall. I hope to make some friends on my team.
+
+    User 2: That''s great! I used to play soccer when I was younger, but I quit because I wasn''t very good at it.
+
+    User 1: It doesn''t matter if you''re good at it. It''s still a lot of fun.
+
+    User 2: I know, but I was always the last one picked for teams.
+
+    User 1: That''s okay. You''ll find a team that will want you.
+
+    User 2: Thanks, I hope so.
+
+    User 1: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

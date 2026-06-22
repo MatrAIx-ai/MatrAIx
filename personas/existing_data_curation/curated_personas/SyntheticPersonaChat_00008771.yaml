@@ -1,0 +1,82 @@
+id: 00008771
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8771
+data:
+  user 1 personas: 'I do not know if i enjoy programming , or if its my only choice.
+
+    I had one step dad , and fortunately he ignored me.
+
+    My last name is spanish , but i tell people that its italian.'
+  user 2 personas: 'I have never been to the beach.
+
+    I am the oldest of 5 children.
+
+    I am a disappointment to my family.
+
+    I love my parrot , todd.
+
+    I love to climb.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, my name is [User 2''s name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love to climb and I have a parrot named Todd.
+
+    User 1: That sounds cool! I''ve never been climbing, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m not sure if I''m athletic enough, but I''ll give it a try.
+
+    User 2: You don''t have to be athletic to climb. It''s more about having the courage to try something new.
+
+    User 1: I guess you''re right. I''ll have to give it a try sometime.
+
+    User 2: Good!
+
+    User 1: What''s it like to have a parrot?
+
+    User 2: It''s great! Todd is my best friend. He''s always there for me and he makes me laugh.
+
+    User 1: That''s awesome! I''ve always wanted a parrot, but I''ve never had the time to take care of one.
+
+    User 2: They can be a lot of work, but they''re worth it.
+
+    User 1: I''m sure they are.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a programmer.
+
+    User 2: Really? That''s cool! I''ve always wanted to learn how to program.
+
+    User 1: It''s not too hard to learn. There are a lot of great resources online.
+
+    User 2: I''ll have to check them out.
+
+    User 1: You should!
+
+    User 2: Thanks for the tip.
+
+    User 1: No problem!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, play video games, and watch movies.
+
+    User 2: That sounds like fun! I like to do those things too.
+
+    User 1: Awesome! We should hang out sometime and do something fun.
+
+    User 2: That would be great!
+
+    User 1: Great! Let''s exchange numbers.
+
+    User 2: Sure'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00000720'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 720
+data:
+  user 1 personas: 'I like to read.
+
+    I like cupcakes.
+
+    I have brown hair.
+
+    I work at a grocery store.
+
+    My favorite color is blue.'
+  user 2 personas: 'I am a retired school teacher.
+
+    My husband will retire next year.
+
+    Many of my former students like to visit me.
+
+    We plan to travel after he retires.
+
+    I like to take walks.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hello, [name]. It''s nice to meet you.
+
+    User 1: You too. What do you do for a living?
+
+    User 2: I''m a retired school teacher.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a teacher.
+
+    User 2: It''s a great job. I loved working with children.
+
+    User 1: I bet. I''m sure you have some good stories.
+
+    User 2: I do. I have many stories from my time teaching.
+
+    User 1: I''d love to hear some of them.
+
+    User 2: Well, one time I had a student who was very shy.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: But I was able to help her come out of her shell.
+
+    User 1: How did you do that?
+
+    User 2: I just took the time to talk to her and get to know her.
+
+    User 1: That''s great. I''m sure she''s grateful.
+
+    User 2: She is. She still comes to visit me sometimes.
+
+    User 1: That''s nice. I''m glad you had a positive impact on her life.
+
+    User 2: Me too. It''s one of the things I love most about teaching.
+
+    User 1: I can see why. It sounds like you''re a great teacher.
+
+    User 2: Thank you. I try my best.
+
+    User 1: So, what are your plans for retirement?
+
+    User 2: My husband and I are planning to travel.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It will be. We''re excited to see new places.
+
+    User 1: I''m sure you''ll have a great time.
+
+    User 2: Thank you. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

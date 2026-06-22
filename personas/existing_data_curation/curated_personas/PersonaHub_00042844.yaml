@@ -1,0 +1,18 @@
+id: 00042844
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42844
+persona_description: A software engineer and researcher who specializes in the field of parallel computing and performance management. They have developed a prototype software called SyMMer that dynamically
+  maps processes to the right cores to balance performance across all cores. They have conducted research on the factors that affect the execution of programs on multicore processors, including the distribution
+  of interrupts, memory issues, and the programmer's impact on performance. Their research has led to a 10 to 15 percent improvement in the execution time of scientific applications using SyMMer.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: parallel computing
+  general_domain_top01pct: None
+  specific_domain_top01pct: performance management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,88 @@
+id: 00006801
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6801
+data:
+  user 1 personas: 'I love all sorts of fresh vegetables.
+
+    My favorite food to harvest is carrots.
+
+    My house is located in the countryside.
+
+    I am seventy one years old.
+
+    I love to keep a small garden outside of my house.'
+  user 2 personas: 'I love to read.
+
+    My favorite place to spend time at is the beach.
+
+    I live in a medium sized city.
+
+    I have a masters degree in creative writing.
+
+    I have 3 sisters and 2 brothers.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: I''m 71 years old and I love to grow vegetables in my garden.
+
+    User 2: That sounds like a lot of fun! I love to read and my favorite place to spend time is at the beach.
+
+    User 1: I love the beach too! I used to go there a lot when I was younger.
+
+    User 2: Where do you live?
+
+    User 1: I live in a small town in the countryside.
+
+    User 2: That sounds nice and peaceful.
+
+    User 1: It is. I love the fresh air and the beautiful scenery.
+
+    User 2: I bet! I''m from a big city, so I don''t get to see much nature.
+
+    User 1: I''m sure you''d love it here. The air is so clean and the trees are so tall.
+
+    User 2: I''ll have to come visit sometime.
+
+    User 1: You''re welcome to! I''d love to show you around.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I have a masters degree in creative writing and I work as a freelance writer.
+
+    User 1: That sounds like a really interesting job.
+
+    User 2: It is. I get to write about all sorts of different things.
+
+    User 1: That''s great. I''m a retired teacher.
+
+    User 2: Oh, that must have been a rewarding career.
+
+    User 1: It was. I loved working with kids.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to read, go to the beach, and spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun. I love to read and garden.
+
+    User 2: I love to garden too! I used to have a big garden at my old house.
+
+    User 1: That sounds amazing. I wish I had more space for a garden.
+
+    User 2: You should definitely get one when you can. It''s so much fun to grow your own food.
+
+    User 1: I agree. I''m going to look into it.
+
+    User 2: Good luck!
+
+    User 1: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

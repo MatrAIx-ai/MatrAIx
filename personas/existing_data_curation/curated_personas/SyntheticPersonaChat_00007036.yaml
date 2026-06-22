@@ -1,0 +1,92 @@
+id: '00007036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7036
+data:
+  user 1 personas: 'My father recently had a heart attack.
+
+    I am a lesbian.
+
+    I like to go to comic con.
+
+    I play the guitar.'
+  user 2 personas: 'I do the shopping in my house.
+
+    Its good to eat a lot of veggies.
+
+    I want to be a vegetarian.
+
+    I like meat too much.
+
+    I am lazy and pork tastes good.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: How are you doing today?
+
+    User 2: Good, thanks. And you?
+
+    User 1: I''m doing well.
+
+    User 2: That''s good to hear.
+
+    User 1: Thanks. So, what do you like to do for fun?
+
+    User 2: I like to go shopping, watch movies, and play video games.
+
+    User 1: Oh, that sounds like fun. I like to go to comic con, play the guitar, and read.
+
+    User 2: Comic con sounds like fun! I''ve never been to one before.
+
+    User 1: They''re really cool! You should go to one if you get the chance.
+
+    User 2: I will! So, what do you like to read?
+
+    User 1: I like to read a lot of different things, but I mostly read science fiction and fantasy.
+
+    User 2: Oh, I like those too! What''s your favorite book?
+
+    User 1: That''s a tough question. I have a lot of favorites, but I''d probably have to say The Lord of the Rings.
+
+    User 2: That''s a great book! I love The Hobbit too.
+
+    User 1: Me too! So, what kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to pop, rock, and country.
+
+    User 1: Oh, I like those too! I mostly listen to rock and alternative music.
+
+    User 2: That''s cool.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love all kinds of food, but I''m a big fan of pizza and pasta.
+
+    User 1: Me too! I love pizza and pasta!
+
+    User 2: That''s awesome!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be a lot of work!
+
+    User 2: It is, but it''s also really rewarding.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that sounds like a cool job.
+
+    User 1: It is, I like it a lot.
+
+    User 2: That''s great'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

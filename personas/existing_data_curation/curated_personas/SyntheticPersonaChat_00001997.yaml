@@ -1,0 +1,118 @@
+id: 00001997
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1997
+data:
+  user 1 personas: 'I love smooth jazz.
+
+    I live in new york city.
+
+    I have a poodle named nanette.
+
+    I work on wall street.'
+  user 2 personas: 'I am still a student , but i am gonna be a nurse.
+
+    I live in the city.
+
+    My horse never talks back to me.
+
+    I enjoy budweiser beer.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to ride my horse.
+
+    User 1: That sounds fun! I''ve always wanted to learn how to ride a horse.
+
+    User 2: It''s not as difficult as it looks, and it''s a lot of fun.
+
+    User 1: Maybe I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to get some exercise and have some fun.
+
+    User 1: I''m not sure if I could afford a horse, though.
+
+    User 2: You could always rent one! There are a lot of places that offer horse rental.
+
+    User 1: That''s a good idea! I''ll have to look into that.
+
+    User 2: You should! It''s a great way to experience the joy of riding a horse.
+
+    User 1: I''m sure it would be.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work on Wall Street.
+
+    User 2: Oh, really? What do you do there?
+
+    User 1: I''m a stockbroker.
+
+    User 2: That sounds like a challenging job.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what are you studying to be?
+
+    User 2: I''m studying to be a nurse.
+
+    User 1: Oh, that''s great! I''m sure you''ll be a great nurse.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what kind of music do you like?
+
+    User 2: I like all kinds of music, but I really like smooth jazz.
+
+    User 1: Me too! I love smooth jazz.
+
+    User 2: It''s so relaxing.
+
+    User 1: It is.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to read, go for walks, and spend time with my dog.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is.
+
+    User 2: I like to read too.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I really like historical fiction.
+
+    User 1: Me too! I love learning about different time periods.
+
+    User 2: Me too.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Book Thief by Markus Zusak.
+
+    User 1: That''s a great book! I''ve read it before.
+
+    User 2: It is! I love the story.
+
+    User 1: Me too.
+
+    User 2: So, what else do you like to do in your free time?
+
+    User 1: I like to go for walks with my dog, Nanette.
+
+    User 2: Oh, what kind of dog is she?
+
+    User 1: She''s a poodle.
+
+    User 2: Poodles are so cute!
+
+    User 1: They are! She''s my best friend.
+
+    User 2: I''m sure she is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

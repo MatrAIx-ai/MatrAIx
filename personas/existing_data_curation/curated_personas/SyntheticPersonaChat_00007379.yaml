@@ -1,0 +1,66 @@
+id: 00007379
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7379
+data:
+  user 1 personas: 'I talk to my mom on the phone every day.
+
+    I am a paramedic.
+
+    I love going fishing.
+
+    I am single.'
+  user 2 personas: 'We liked to pretend we were superheroes.
+
+    I love going to the movies.
+
+    It s one of my favorite hobbies.
+
+    My parents would take my brother and i when we were little.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi, I''m Sarah.
+
+    User 1: Nice to meet you, Sarah.
+
+    User 2: Nice to meet you too, John.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love going to the movies.
+
+    User 1: Me too! I love seeing superhero movies.
+
+    User 2: Me too! I love the action and the special effects.
+
+    User 1: What''s your favorite superhero movie?
+
+    User 2: I think my favorite superhero movie is The Avengers.
+
+    User 1: That''s a great movie! I love the team dynamic.
+
+    User 2: Me too! I love how they all work together to save the world.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to read and go fishing.
+
+    User 1: I love reading too! What kind of books do you like to read?
+
+    User 2: I like to read mystery novels and thrillers.
+
+    User 1: I like those too! I also like to read historical fiction.
+
+    User 2: I''ve never read any historical fiction. What''s it like?
+
+    User 1: It''s a great way to learn about history while being entertained.
+
+    User 2: That sounds interesting. I might have to check it out sometime.
+
+    User 1: I recommend it!
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

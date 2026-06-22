@@ -1,0 +1,78 @@
+id: '00007415'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7415
+data:
+  user 1 personas: 'My favorite music genre is classic rock.
+
+    I like to work on cars.
+
+    I work in marketing for a large company.
+
+    I like to try different beers from various countries.
+
+    I enjoy playing recreational games like cards , darts or billiards.'
+  user 2 personas: 'I listen to classic rock.
+
+    I work at a smoothie shop.
+
+    I go to a local college.
+
+    I watch basketball.'
+  Best Generated Conversation: 'User 1: What''s your favorite type of music?
+
+    User 2: I like classic rock.
+
+    User 1: Me too! What are some of your favorite bands?
+
+    User 2: I like Led Zeppelin, The Rolling Stones, and The Doors.
+
+    User 1: Those are all great bands! I like them too.
+
+    User 2: What kind of work do you do?
+
+    User 1: I work in marketing for a large company.
+
+    User 2: That sounds interesting! What do you like about it?
+
+    User 1: I like working with people and helping them to reach their goals.
+
+    User 2: That''s great! I''m glad you enjoy your job.
+
+    User 1: Thank you! What do you do for work?
+
+    User 2: I work at a smoothie shop.
+
+    User 1: That sounds fun! Do you like it?
+
+    User 2: It''s okay. I''m going to college next year, so I''m just saving up money right now.
+
+    User 1: That''s great! What are you going to study in college?
+
+    User 2: I''m going to study business.
+
+    User 1: That sounds like a good choice. I''m sure you''ll be successful.
+
+    User 2: Thank you! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch basketball.
+
+    User 1: That''s great! What''s your favorite team?
+
+    User 2: I''m a big fan of the Golden State Warriors.
+
+    User 1: They''re a great team! I like them too.
+
+    User 2: They''re so much fun to watch.
+
+    User 1: I agree! They''re a really exciting team.
+
+    User 2: I''m glad you like them too.
+
+    User 1: Me too! They''re my favorite team.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

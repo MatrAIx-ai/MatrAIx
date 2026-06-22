@@ -1,0 +1,58 @@
+id: 00001954
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1954
+data:
+  user 1 personas: 'I like to exercise.
+
+    I like to listen to music.
+
+    My father lives in china.
+
+    I have a boxer dog.'
+  user 2 personas: 'I cannot choose between lollipops and rainbows.
+
+    I would love to be a professional eater and not get fat.
+
+    I believe in aliens.
+
+    I hate cleaning up after my husband and children.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m Sarah. What''s yours?
+
+    User 1: Hi Sarah, I''m [name].
+
+    User 2: It''s nice to meet you, [name]. What do you like to do for fun?
+
+    User 1: I like to exercise, listen to music, and spend time with my family.
+
+    User 2: That sounds like a lot of fun! I like to exercise too, but I don''t like listening to music. I prefer to listen to the sounds of nature.
+
+    User 1: That''s interesting! I love nature, but I find it hard to focus on my exercise when I''m listening to the sounds of the forest.
+
+    User 2: I can understand that. I guess it just depends on what you''re in the mood for.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love to read, go for walks, and play with my dog.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love to read anything by Jane Austen, but I also love historical fiction and mysteries.
+
+    User 1: I''ve never read any Jane Austen, but I''ve heard good things. I''m more of a fantasy and science fiction reader myself.
+
+    User 2: I love fantasy and sci-fi too! I''m currently reading Dune.
+
+    User 1: Oh, I''ve heard good things about that book too. I''m not sure if I''m ready to read it yet, but I''m definitely adding it to my list.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: I''m sure it is. I''m glad we got to talk, Sarah. It was really nice to meet you.
+
+    User 2: You too, [name]. It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00005052'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5052
+data:
+  user 1 personas: 'I love watching funny movies.
+
+    My favorite color is green.
+
+    I listen to all kinds of music.
+
+    I like to play tennis.'
+  user 2 personas: 'I just bought a new house with my partner.
+
+    I live in portland , oregon.
+
+    I brew my own beer.
+
+    I am gay.
+
+    I like to make my own coffee.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you. Where are you from?
+
+    User 2: I live in Portland, Oregon.
+
+    User 1: Oh, I''ve heard great things about Portland.
+
+    User 2: It''s a great city. I just bought a new house with my partner.
+
+    User 1: That''s awesome! Congratulations.
+
+    User 2: Thanks. We''re really excited about it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to brew my own beer, make my own coffee, and play tennis.
+
+    User 1: That''s awesome. I love playing tennis too.
+
+    User 2: Do you play often?
+
+    User 1: I try to play at least once a week.
+
+    User 2: That''s great. I''m not as good as I used to be, but I still enjoy it.
+
+    User 1: Well, I''m not very good either, but I have fun.
+
+    User 2: That''s all that matters.
+
+    User 1: So, what kind of music do you like?
+
+    User 2: I listen to all kinds of music, but my favorite is indie rock.
+
+    User 1: I like indie rock too. I''ve been listening to a lot of Tame Impala lately.
+
+    User 2: Tame Impala is great! I''ve been listening to them a lot too.
+
+    User 1: So, what do you like to watch?
+
+    User 2: I love watching funny movies. My favorite movie is The Big Lebowski.
+
+    User 1: That''s a great movie. I love the Coen Brothers.
+
+    User 2: Me too. They''re my favorite filmmakers.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''ve always been interested in programming.
+
+    User 2: It''s a lot of fun. I love working on new projects.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

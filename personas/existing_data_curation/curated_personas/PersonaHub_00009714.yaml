@@ -1,0 +1,18 @@
+id: 00009714
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9714
+persona_description: A meteorologist who specializes in forecasting weather patterns and their impact on outdoor sports such as golf. Their expertise lies in predicting the effects of weather elements such
+  as rain, wind, and extreme temperatures on the course and how golfers can adapt to these conditions to improve their performance. They are also skilled in identifying and predicting weather changes that
+  could affect a round of golf, such as dew, rain showers, or lightning.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: golf meteorology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

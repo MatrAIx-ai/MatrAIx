@@ -1,0 +1,82 @@
+id: '00003101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3101
+data:
+  user 1 personas: 'I just started college.
+
+    I work part time in the campus library.
+
+    I commute by bus.
+
+    I have 3 science classes.'
+  user 2 personas: 'I have one son.
+
+    My favorite color is blue.
+
+    I am 25 years old.
+
+    I was a wrestler in high school.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name]. I just started college.
+
+    User 2: Hi, I''m [User 2''s name]. I''m also in college.
+
+    User 1: Oh, cool! What''s your major?
+
+    User 2: I''m majoring in business.
+
+    User 1: Nice! I''m majoring in biology.
+
+    User 2: That''s cool. I''ve always liked science.
+
+    User 1: Yeah, I''m really enjoying my science classes so far.
+
+    User 2: Me too! I''m taking chemistry, physics, and biology.
+
+    User 1: Nice! I''m taking biology, chemistry, and anatomy.
+
+    User 2: What''s your favorite class so far?
+
+    User 1: I think my favorite class is biology.
+
+    User 2: Mine too! I love learning about the human body.
+
+    User 1: Yeah, it''s really interesting.
+
+    User 2: What are your plans for after college?
+
+    User 1: I''m not sure yet. I''m thinking about going to medical school.
+
+    User 2: That''s a good choice! Medical school is tough, but it''s worth it.
+
+    User 1: Yeah, I know it''s a lot of work, but I think I''m up for the challenge.
+
+    User 2: I''m sure you are! You seem like a smart and dedicated person.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: No problem! So, what do you do for fun?
+
+    User 1: I like to read, go for walks, and play video games.
+
+    User 2: Me too! I love to read and play video games.
+
+    User 1: Nice! What''s your favorite video game?
+
+    User 2: My favorite video game is Skyrim.
+
+    User 1: Oh, nice! I''ve heard good things about that game.
+
+    User 2: It''s really good! I''ve spent hundreds of hours playing it.
+
+    User 1: I''ve never played it, but I''ve always wanted to try it.
+
+    User 2: You should! It''s really fun.
+
+    User 1: I''ll have to check it out.
+
+    User 2: Yeah, you should! It''s a great game.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

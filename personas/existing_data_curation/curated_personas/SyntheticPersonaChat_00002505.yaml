@@ -1,0 +1,56 @@
+id: '00002505'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2505
+data:
+  user 1 personas: 'I like to create art.
+
+    I love to work in my garden.
+
+    My favorite band is ween.
+
+    I love to eat sushi and pizza.'
+  user 2 personas: 'I love shoes.
+
+    I like to dance.
+
+    I like to shop.
+
+    I like pizza.
+
+    I like burritos.'
+  Best Generated Conversation: 'User 1: Hey there! I''m new to the neighborhood. What''s your name?
+
+    User 2: Hi! I''m (user 2''s name). What''s your name?
+
+    User 1: My name is (user 1''s name). It''s nice to meet you!
+
+    User 2: Nice to meet you too! What are you into?
+
+    User 1: I love to create art, work in my garden, and eat sushi and pizza.
+
+    User 2: That''s cool! I love shoes, dancing, shopping, pizza, and burritos.
+
+    User 1: Oh, we have some things in common! I love shopping and pizza too.
+
+    User 2: Me too! What kind of art do you create?
+
+    User 1: I mostly paint and draw, but I also do some sculpting.
+
+    User 2: That''s awesome! I''ve always wanted to take an art class.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will. I''m also really interested in gardening. I love growing my own vegetables and flowers.
+
+    User 1: That''s great! I''m not very good at gardening, but I love eating fresh vegetables.
+
+    User 2: I love it too! And it''s so much more satisfying to eat something you grew yourself.
+
+    User 1: I agree! Well, it was nice chatting with you. I hope to see you around the neighborhood.
+
+    User 2: Me too! It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: '00006373'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6373
+data:
+  user 1 personas: 'I am interested in producing music.
+
+    I have been in band all four years of high school.
+
+    I have 2 brothers.
+
+    I am a senior in high school.'
+  user 2 personas: 'I am a family man.
+
+    I am married with 2 children.
+
+    I am a pediatrician.
+
+    I spend as much time as i can with my family.
+
+    I like to bowl.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]!
+
+    User 2: Hi, I''m [user 2]!
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a pediatrician.
+
+    User 1: Oh, that''s cool! I''m a senior in high school, and I''m interested in producing music.
+
+    User 2: That''s awesome! I''ve always loved music, but I never had the time to learn how to play an instrument.
+
+    User 1: I''ve been playing the saxophone in band all four years of high school.
+
+    User 2: That''s awesome! I wish I could play an instrument.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to spend time with my family, bowl, and read.
+
+    User 1: That sounds like a lot of fun! I like to play video games, watch movies, and go to concerts.
+
+    User 2: I love going to concerts! I''ve seen a few of my favorite bands live.
+
+    User 1: I''ve only seen a few, but I''d love to see more.
+
+    User 2: You should definitely go to more concerts! They''re a lot of fun.
+
+    User 1: I will!
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to a concert or just hang out with my friends.
+
+    User 2: That sounds like a good plan.
+
+    User 1: Yeah, it does.
+
+    User 2: So, what do you think? Should we meet up sometime?
+
+    User 1: I would love to!
+
+    User 2: Great! How about we go to a concert this weekend?
+
+    User 1: That sounds like a great idea!
+
+    User 2: Awesome! I''ll send you the details.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

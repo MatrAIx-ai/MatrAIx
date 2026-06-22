@@ -1,0 +1,19 @@
+id: 00040368
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40368
+persona_description: A programmer or system administrator who is familiar with the Linux operating system's networking and socket programming. This person is likely to have experience with the Linux kernel
+  and its networking subsystem, and is comfortable with the platform's socket routines and I/O operations. They are skilled in using the BIO library, which provides a wrapper around the platform's socket
+  routines, and are adept at setting up and managing sockets for various applications and services. They may also be familiar with file descriptor-based networking and have experience with creating and
+  managing file descriptors in the Linux kernel.
+expertise:
+  general_domain_top1pct: Computer Science/Software Engineering
+  specific_domain_top1pct: Networking/Operating Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,64 @@
+id: '00001463'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1463
+data:
+  user 1 personas: 'My name is kevin.
+
+    I am studying software development.
+
+    I play the guitar.
+
+    I am a student in college.'
+  user 2 personas: 'I love to hike.
+
+    My hiking boots are pink.
+
+    I like folk music.
+
+    The appalachian trail is my favorite.'
+  Best Generated Conversation: 'User 1: Hey there! What''s up?
+
+    User 2: Not much, just getting ready to head out for a hike.
+
+    User 1: Awesome! Where are you hiking?
+
+    User 2: I''m going to the Appalachian Trail.
+
+    User 1: That''s a great trail! I''ve always wanted to hike it.
+
+    User 2: It''s definitely worth it. The views are amazing.
+
+    User 1: I bet. So what''s your favorite part about hiking?
+
+    User 2: I love the feeling of being outside and getting exercise. It''s also a great way to clear your head.
+
+    User 1: I totally agree. I love getting lost in the woods.
+
+    User 2: Me too! It''s so peaceful out there.
+
+    User 1: What''s your favorite thing to do when you''re hiking?
+
+    User 2: I like to stop and take pictures of the scenery. I also love to sing songs.
+
+    User 1: I love singing songs too! What kind of music do you like to sing?
+
+    User 2: I like to sing folk songs. They''re really relaxing.
+
+    User 1: I love folk music too! I''m actually learning to play the guitar.
+
+    User 2: That''s awesome! I''ve always wanted to learn to play the guitar.
+
+    User 1: It''s not that hard. I''m sure you could do it.
+
+    User 2: I don''t know. I''m not very musical.
+
+    User 1: You''d be surprised. I''m not very musical either, but I''m learning.
+
+    User 2: Well, maybe I''ll give it a try.
+
+    User 1: You should! It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

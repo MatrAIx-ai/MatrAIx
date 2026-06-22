@@ -1,0 +1,54 @@
+id: '00006270'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6270
+data:
+  user 1 personas: 'I love wearing name band clothing.
+
+    I prefer the night instead of the day.
+
+    I was once offered to play basketball professionally.
+
+    I spend my evening creating the perfect music playlist.'
+  user 2 personas: 'I hate the holidays.
+
+    I am a police officer.
+
+    I have a gun collection at home.
+
+    I drive a ford truck.'
+  Best Generated Conversation: 'User 1: I once had the chance to play basketball professionally, but I turned it down.
+
+    User 2: Why did you turn it down?
+
+    User 1: I didn''t want to give up my night life. I love going out to concerts and staying up late.
+
+    User 2: I''m the opposite. I prefer the day to the night. I''m a police officer, so I have to work nights.
+
+    User 1: That''s a tough job. I''m sure it''s not easy having to work nights and missing out on all the fun stuff.
+
+    User 2: It''s not always easy, but it''s rewarding. I get to help people and make a difference in the community.
+
+    User 1: That''s great. I admire people who put their lives on the line to help others.
+
+    User 2: Thank you. It''s a job that I love.
+
+    User 1: What about the holidays? Do you enjoy them?
+
+    User 2: Not really. I hate the hustle and bustle of the holidays. I''d rather just relax and enjoy my time off.
+
+    User 1: I can understand that. The holidays can be stressful.
+
+    User 2: Yeah, they can. But I''m glad that you enjoy them.
+
+    User 1: I do. I love spending time with my family and friends, eating good food, and opening presents.
+
+    User 2: Sounds like you have a lot of fun.
+
+    User 1: I do. I''m lucky to have such a great family and friends.
+
+    User 2: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,92 @@
+id: '00005747'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5747
+data:
+  user 1 personas: 'I am the youngest of 4 children.
+
+    I like to hike.
+
+    I lost my arm in a car accident.
+
+    I graduated from college.
+
+    I am a farmer.'
+  user 2 personas: 'I take my emotions out through art.
+
+    I sometimes need to scream to feel alive.
+
+    I have a hard time feeling connected with people.
+
+    I grew up homeschooled.'
+  Best Generated Conversation: 'User 1: Hi! I''m John.
+
+    User 2: Hi, I''m Sarah.
+
+    User 1: I''m a farmer. I like to hike and I''m the youngest of 4 children.
+
+    User 2: I''m homeschooled. I take my emotions out through art and I sometimes need to scream to feel alive.
+
+    User 1: That''s interesting. I''m glad you have a way to cope with your emotions.
+
+    User 2: Thanks. I''m glad you''re a farmer. I like the idea of being close to nature.
+
+    User 1: Me too. It''s very relaxing.
+
+    User 2: I''ve never been hiking before. Would you like to go with me sometime?
+
+    User 1: Sure, I''d love to. I know a few great trails.
+
+    User 2: Great! I''m free this weekend.
+
+    User 1: Perfect. We can go Saturday morning.
+
+    User 2: Sounds good. I''ll meet you at the trailhead at 9am.
+
+    User 1: See you then.
+
+    User 2: Bye.
+
+
+    (On Saturday morning)
+
+
+    User 1: Hi Sarah! I''m here at the trailhead.
+
+    User 2: Hi John! I''m here too.
+
+    User 1: Let''s get started.
+
+    User 2: Sounds good.
+
+
+    (After a few hours of hiking)
+
+
+    User 1: This was fun!
+
+    User 2: Me too! I''m glad you invited me.
+
+    User 1: Me too. I''m glad we could connect.
+
+    User 2: Me too.
+
+
+    (After hiking)
+
+
+    User 1: We should do this again sometime.
+
+    User 2: I''d love to.
+
+    User 1: Great! We can plan something for next weekend.
+
+    User 2: Sounds good.
+
+    User 1: See you then.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

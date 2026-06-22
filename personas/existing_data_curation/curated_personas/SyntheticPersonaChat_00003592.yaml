@@ -1,0 +1,56 @@
+id: 00003592
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3592
+data:
+  user 1 personas: 'I am allergic to peanuts.
+
+    My mom raised me by herself and taught me to play baseball.
+
+    I still love to line dry my clothes.
+
+    I will one day own a ferret.'
+  user 2 personas: 'I love the beach.
+
+    I am married.
+
+    I work 2 jobs.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just working on some projects. What about you?
+
+    User 1: I''m just hanging out. I''m allergic to peanuts, so I can''t go to the beach with you.
+
+    User 2: Oh, that''s too bad. I love the beach. What kind of projects are you working on?
+
+    User 1: I''m working on a quilt and some furniture. I''m also working on a book.
+
+    User 2: Wow, that''s a lot of work! Are you a stay-at-home mom?
+
+    User 1: No, I''m a writer. I also work as a tutor.
+
+    User 2: That''s cool. I used to be a tutor, but I got tired of it.
+
+    User 1: Why did you get tired of it?
+
+    User 2: I just didn''t like working with kids.
+
+    User 1: I understand. I used to be a teacher, but I quit because I didn''t like working with adults.
+
+    User 2: Wow, we are complete opposites. I like working with kids, but I don''t like working with adults.
+
+    User 1: That''s interesting. Well, I''m glad we''re both enjoying our jobs.
+
+    User 2: Me too. I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

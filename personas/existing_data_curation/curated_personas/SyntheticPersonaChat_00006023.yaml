@@ -1,0 +1,50 @@
+id: '00006023'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6023
+data:
+  user 1 personas: 'I have freckles all over my face.
+
+    I was in the army.
+
+    I work in construction.
+
+    I drive a prius.
+
+    I love to read romance novels.'
+  user 2 personas: 'I don t like being asked a lot of questions.
+
+    I don t like when people get too close to me.
+
+    I have a shopping addiction.
+
+    I think about food a lot.'
+  Best Generated Conversation: 'User 1: I''m a construction worker. I love my job. I get to work outside and I''m always learning new things.
+
+    User 2: That sounds interesting. I work in retail and I''m not so happy with it.
+
+    User 1: What don''t you like about it?
+
+    User 2: I don''t like being asked a lot of questions by customers.
+
+    User 1: I can see how that could be annoying.
+
+    User 2: It is. And I don''t like when people get too close to me.
+
+    User 1: That''s understandable. I''m a pretty private person myself.
+
+    User 2: I have a shopping addiction. I can''t stop buying things.
+
+    User 1: I''m not much of a shopper myself. I usually just buy what I need.
+
+    User 2: I think about food a lot. I love food.
+
+    User 1: Me too! Food is one of my favorite things.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00002766'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2766
+data:
+  user 1 personas: 'I enjoy being outside.
+
+    I love to swim.
+
+    I love the color pink.
+
+    My favorite singer is britney spears.'
+  user 2 personas: 'I just bought a new mansion.
+
+    I am a rapper.
+
+    I live in japan and own the biggest mansion in the country.
+
+    I drive a ferrari.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name]. I''m from [User 1''s hometown].
+
+    User 2: Hello, my name is [User 2''s name]. I''m from Japan.
+
+    User 1: Oh, cool! I''ve always wanted to visit Japan.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I''m sure it is. What''s it like living there?
+
+    User 2: It''s great! The people are very friendly, the food is delicious, and the culture is rich.
+
+    User 1: That sounds amazing! I''d love to visit someday.
+
+    User 2: You should! I''ll be happy to show you around.
+
+    User 1: Thanks, I''d love that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to swim, go for walks in nature, and listen to music.
+
+    User 2: That sounds like a lot of fun. I love to swim too.
+
+    User 1: Do you have a favorite place to swim?
+
+    User 2: I love to swim in the ocean.
+
+    User 1: Me too! It''s so refreshing.
+
+    User 2: What''s your favorite song?
+
+    User 1: I love "Toxic" by Britney Spears.
+
+    User 2: That''s a great song! I love it too.
+
+    User 1: I''m so glad we have similar taste in music.
+
+    User 2: Me too! It''s always nice to meet someone who likes the same things you do.
+
+    User 1: I agree. It''s a good way to make friends.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

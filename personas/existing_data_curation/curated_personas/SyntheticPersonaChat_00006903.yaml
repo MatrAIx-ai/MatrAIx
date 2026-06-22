@@ -1,0 +1,85 @@
+id: 00006903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6903
+data:
+  user 1 personas: 'Both my parents were over 6 foot tall.
+
+    I like to only eat fish.
+
+    I have amazing eye sight.
+
+    I am a democrat.
+
+    I can jump straight up , out of a pool.'
+  user 2 personas: 'I love the natural world beauty.
+
+    My family is poor.
+
+    I m obsessed with animals.
+
+    I practice yoga and hike.'
+  Best Generated Conversation: 'User 1: Hey, I''m looking to make some new friends. What do you like to do for fun?
+
+    User 2: Hi, I love hiking and yoga. I''m also really interested in the natural world.
+
+    User 1: That''s awesome! I love hiking too, and I''m really interested in animals.
+
+    User 2: Oh cool! We should go on a hike sometime.
+
+    User 1: That would be great! I''m free this weekend.
+
+    User 2: Me too! Let''s do it.
+
+    User 1: Great! I''ll meet you at the trailhead at 9am.
+
+    User 2: Sounds good. I''ll see you then.
+
+
+    (On the hike)
+
+    User 1: This is so beautiful! I love being out in nature.
+
+    User 2: Me too! This is my favorite place to be.
+
+    User 1: I know what you mean. It''s so peaceful and relaxing.
+
+    User 2: Yeah, it''s the perfect place to clear your head.
+
+    User 1: I''m glad I met you. This is a lot more fun than hiking alone.
+
+    User 2: Me too! I''m glad I met you too.
+
+
+    (After the hike)
+
+    User 1: That was so much fun! I''m glad we went on this hike.
+
+    User 2: Me too! It was great to get some exercise and explore the natural world.
+
+    User 1: I know what you mean. I feel so refreshed and relaxed.
+
+    User 2: Me too! I''m glad we did this.
+
+    User 1: Me too. I hope we can do it again sometime.
+
+    User 2: Me too! Let''s make it a regular thing.
+
+
+    (A few weeks later)
+
+    User 1: Hey, are you free this weekend?
+
+    User 2: Yeah, I am! What do you have in mind?
+
+    User 1: I was thinking we could go on another hike.
+
+    User 2: That would be great! I''ve been missing the outdoors.
+
+    User 1: Great! I''ll meet you at the trailhead at 9am.
+
+    User 2: Sounds good. I''ll see you then'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

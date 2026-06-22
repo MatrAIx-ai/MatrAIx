@@ -1,0 +1,58 @@
+id: 00004907
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4907
+data:
+  user 1 personas: 'A hobby of mine is the drums.
+
+    I also enjoy cooking.
+
+    I like listening to other rap music too.
+
+    I like to go out to eat.
+
+    One of my favorite artists is drake.'
+  user 2 personas: 'I am a musician.
+
+    I like to play video games.
+
+    I have been working the same job for two years.
+
+    My favorite band is hop along.'
+  Best Generated Conversation: 'User 1: I''m a musician. I play the drums.
+
+    User 2: That''s cool! I''m a musician too. I play the guitar.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I like to play all kinds of music, but I mostly play indie rock.
+
+    User 1: I like indie rock too! What are some of your favorite bands?
+
+    User 2: I like Hop Along, The Mountain Goats, and The Menzingers.
+
+    User 1: I like Hop Along too! I''ve never heard of The Mountain Goats or The Menzingers. I''ll have to check them out.
+
+    User 2: You should! They''re both really good bands.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, go out to eat, and hang out with friends.
+
+    User 1: I like to do those things too! I also like to cook.
+
+    User 2: I like cooking too! What''s your favorite thing to cook?
+
+    User 1: I like to cook all kinds of things, but my favorite thing to cook is probably pasta.
+
+    User 2: Pasta is my favorite too! I love making homemade pasta.
+
+    User 1: Me too! It''s so much better than store-bought pasta.
+
+    User 2: I know, right? It''s so easy to make too.
+
+    User 1: Yeah, it''s really easy. I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

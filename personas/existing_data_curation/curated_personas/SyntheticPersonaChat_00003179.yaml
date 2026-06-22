@@ -1,0 +1,64 @@
+id: 00003179
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3179
+data:
+  user 1 personas: 'I love to drive my car.
+
+    I work in a factory.
+
+    I like watching ufc fights.
+
+    Connor mcgreggor is my favorite fighter.
+
+    I enjoy travel.'
+  user 2 personas: 'My nails are painted green.
+
+    I live in a nice attic apartment in portland or.
+
+    I have a pet skunk.
+
+    My brother thinks he s a viking.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: I''m (user 1 name).
+
+    User 2: Nice to meet you, (user 1 name). I''m (user 2 name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint my nails, travel, and play with my pet skunk.
+
+    User 1: That''s cool! I like to drive my car, watch UFC fights, and travel.
+
+    User 2: Oh, you''re a UFC fan? Who''s your favorite fighter?
+
+    User 1: My favorite fighter is Connor McGregor.
+
+    User 2: Nice! He''s a great fighter. I''ve seen a few of his fights.
+
+    User 1: Yeah, he''s really good. I''m excited to see him fight again.
+
+    User 2: Me too! I think he''s going to win his next fight.
+
+    User 1: I hope so! He''s always so entertaining to watch.
+
+    User 2: Yeah, he''s definitely one of the most exciting fighters in the UFC.
+
+    User 1: So, where do you live?
+
+    User 2: I live in Portland, Oregon.
+
+    User 1: Oh, nice! I''ve always wanted to visit Oregon.
+
+    User 2: You should! It''s a beautiful state.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,59 @@
+id: '00003455'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3455
+data:
+  user 1 personas: 'I love rage metal music.
+
+    I am a special ed teacher.
+
+    I sell cosmetics in my spare time.
+
+    And , i love psychoanalyzing my friends.
+
+    I have two sons that i am raising by myself.'
+  user 2 personas: 'I have found the cure for the common cold.
+
+    My nickname is bubblegum.
+
+    I am plotting on taking over the world.
+
+    I love to sing in the shower.
+
+    My brother and i have bright red hair.'
+  Best Generated Conversation: 'User 1: Hi! I''m user 1.
+
+    User 2: Hi! I''m user 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to sing in the shower, I love to plot on taking over the world, and I have found the cure for the common cold.
+
+    User 1: Wow, you''re so interesting! I love listening to rage metal music, selling cosmetics in my spare time, and psychoanalyzing my friends. I''m also a special ed teacher and I have two sons that
+    I''m raising by myself.
+
+    User 2: That''s so cool! I''ve always wanted to be a special ed teacher.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you think of the weather today?
+
+    User 2: It''s a little chilly, but I''m not complaining.
+
+    User 1: I know, right? I love the weather in the fall.
+
+    User 2: Me too!
+
+    User 1: I''m so glad I met you. You seem like a really cool person.
+
+    User 2: Thanks! You too!
+
+    User 1: Maybe we can hang out sometime?
+
+    User 2: Sure! That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

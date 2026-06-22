@@ -1,0 +1,19 @@
+id: 00008100
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8100
+persona_description: A scientist or researcher in the field of acoustic science or agriculture, specifically focused on the detection and analysis of insect infestations in bulk-stored grain using acoustic
+  sensors. They are likely to be interested in understanding the range of sound transmission in grain, the impact of grain absorption on detecting insects, and the development of efficient acoustic detection
+  methods for insect infestations in bulk storage. They would be familiar with sound transmission theory in porous media, grain size and shape, and the effect of grain depth on insect detection. They may
+  also have experience with conducting tests and analyzing data to determine transmission characteristics and related parameters.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: acoustic science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

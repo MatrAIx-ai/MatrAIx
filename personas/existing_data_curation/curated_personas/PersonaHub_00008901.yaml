@@ -1,0 +1,19 @@
+id: 00008901
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8901
+persona_description: A neuro-oncologist who specializes in the study of gliomas, particularly the mechanisms of hypermutation and the therapeutic implications of this phenomenon in brain tumors. They have
+  conducted research on the immune response to checkpoint blockers in gliomas, and have found that the quality of mutations, not just their absolute number, may be important when predicting who will benefit
+  from immune checkpoint treatments. They have also studied the therapeutic implications of hypermutation in gliomas, including the use of chemotherapy drugs like temozolomide and lomustine, and have found
+  that treatment with lomustine is still effective in some patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neuro-oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: neuro-oncology (specifically, gliomas)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

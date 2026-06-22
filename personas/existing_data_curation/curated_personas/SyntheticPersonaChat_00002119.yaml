@@ -1,0 +1,62 @@
+id: 00002119
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2119
+data:
+  user 1 personas: 'I am dating my boss.
+
+    I am in my 20s.
+
+    I work at a real estate office.
+
+    My favorite flower is a daisy.
+
+    I love to sing.'
+  user 2 personas: 'I work at a non profit that helps children.
+
+    I love going to concerts and dancing hard.
+
+    I am allergic to shellfish.
+
+    My favorite food is cheese.
+
+    I like horseback riding.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for work?
+
+    User 2: I work at a non-profit that helps children.
+
+    User 1: Oh, that''s great! What do you do there?
+
+    User 2: I do a lot of different things, but mostly I work on fundraising and marketing.
+
+    User 1: That sounds really interesting!
+
+    User 2: It is! I love helping kids and I''m really passionate about my work.
+
+    User 1: That''s awesome! What''s your favorite thing about your job?
+
+    User 2: My favorite thing is getting to see the impact that we''re having on kids'' lives.
+
+    User 1: That must be really rewarding.
+
+    User 2: It is! It''s the best feeling in the world knowing that you''re making a difference.
+
+    User 1: That''s great! So, what do you like to do for fun?
+
+    User 2: I love going to concerts and dancing hard. I''m also allergic to shellfish, so I love cheese.
+
+    User 1: Oh, that''s cool! I love going to concerts too. I''m not allergic to anything, so I can eat whatever I want.
+
+    User 2: That''s good! I wish I could eat everything.
+
+    User 1: Well, you could always try some of my cheese. I have a lot of different types.
+
+    User 2: That would be great! I love trying new things.
+
+    User 1: Great! I''ll bring some over next time we hang out.
+
+    User 2: Sounds good! I can''t wait.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

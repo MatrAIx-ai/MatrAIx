@@ -1,0 +1,17 @@
+id: 00050933
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50933
+persona_description: A space scientist who specializes in asteroid research, particularly in the discovery and study of asteroid moons. They are knowledgeable about the discovery process, the characteristics
+  of asteroids, and the naming conventions of asteroid moons. They are interested in the history of asteroid research and the significance of Petit-Prince's discovery in the field.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: asteroid research
+  general_domain_top01pct: None
+  specific_domain_top01pct: asteroid moon discovery and study
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

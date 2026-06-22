@@ -1,0 +1,76 @@
+id: 00001080
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1080
+data:
+  user 1 personas: 'I love children.
+
+    I just moved into an apartment within the vicinity of my new job.
+
+    I am twenty two years old.
+
+    I just graduated college with my bachelors degree in education.
+
+    I just accepted a job at the elementary school in my hometown.'
+  user 2 personas: 'I still live at home with my parents.
+
+    I eat all take out.
+
+    I am 32.
+
+    I do not want a job.'
+  Best Generated Conversation: 'User 1: Hi, how''s it going?
+
+    User 2: I''m good. What about you?
+
+    User 1: I''m doing well, thanks. I just moved into an apartment in the city.
+
+    User 2: Oh, that''s great! Congratulations!
+
+    User 1: Thanks! I''m excited to be starting my new job as a teacher at the elementary school in my hometown.
+
+    User 2: That''s awesome! I''m sure you''ll be great at it.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and spend time with my friends and family.
+
+    User 2: That sounds fun. I like to do those things too, but I also like to play video games and watch TV.
+
+    User 1: Oh, I love video games too! What games do you like to play?
+
+    User 2: I like to play all kinds of games, but my favorites are Mario Kart, Zelda, and Pokémon.
+
+    User 1: Those are all great games! I''m a big fan of Mario Kart and Zelda too.
+
+    User 2: Me too! They''re so much fun.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a stay-at-home mom. I have two kids, a boy and a girl.
+
+    User 1: Oh, that must be fun! I love kids.
+
+    User 2: It is fun, but it can also be challenging.
+
+    User 1: I''m sure it can be. But I''m sure you''re doing a great job.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what do you like about living at home with your parents?
+
+    User 2: I like that I don''t have to worry about paying rent or buying food. I also like that I have their support.
+
+    User 1: That makes sense. I''m sure it''s a lot of help.
+
+    User 2: It is. I don''t know what I would do without them.
+
+    User 1: Well, it sounds like you''re both doing well. I''m happy for you.
+
+    User 2: Thanks! I''m happy too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

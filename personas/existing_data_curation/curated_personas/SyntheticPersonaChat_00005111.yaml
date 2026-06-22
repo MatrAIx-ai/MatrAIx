@@ -1,0 +1,62 @@
+id: '00005111'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5111
+data:
+  user 1 personas: 'My children are mostly grown.
+
+    I have a cat named felix and a small terror names emmy.
+
+    I like to cook.
+
+    I like gardening.'
+  user 2 personas: 'I like cats.
+
+    I like to travel.
+
+    Favorite color is green.
+
+    I got a new job.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, nice to meet you, [user 1''s name]. I''m [user 2''s name].
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to travel, cook, and garden.
+
+    User 1: Those all sound like great hobbies. I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to cook Italian food. My favorite thing to cook is pasta.
+
+    User 1: I love Italian food too! I make a mean lasagna.
+
+    User 2: That sounds delicious. I love lasagna.
+
+    User 1: I also like to garden. I have a lot of vegetables growing in my garden.
+
+    User 2: That''s awesome! I have a cat named Felix.
+
+    User 1: I love cats! I have two cats, Felix and Emmy.
+
+    User 2: Those are great names. I''m sure they''re adorable.
+
+    User 1: They are. They''re both very cuddly.
+
+    User 2: I love cuddly animals.
+
+    User 1: Me too. They''re the best.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: It does. It''s nice to meet someone who shares my interests.
+
+    User 2: Me too. It''s been nice talking to you.
+
+    User 1: You too. Maybe we can get together sometime and cook a meal together.
+
+    User 2: That would be fun. I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

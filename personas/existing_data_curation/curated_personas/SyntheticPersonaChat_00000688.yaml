@@ -1,0 +1,88 @@
+id: 00000688
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 688
+data:
+  user 1 personas: 'I like to cook.
+
+    I have a cat named kj.
+
+    My husband was a salesman.
+
+    I have lived in several different states.'
+  user 2 personas: 'My doctor told me i have six months to live.
+
+    I m really terrible at doing regular expressions.
+
+    I m allergic to lactose.
+
+    My favorite singer is justin bieber.
+
+    I like having fried fish for supper.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: Hello, I''m doing okay.
+
+    User 1: That''s good to hear. I''m doing well too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to cook, read, and spend time with my cat.
+
+    User 2: Those are all great hobbies. I love to cook too, but I''m not very good at it.
+
+    User 1: Everyone has to start somewhere! I''m sure you''ll get better with time.
+
+    User 2: Thanks, I hope so.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read a variety of things, but I especially enjoy historical fiction and mystery novels.
+
+    User 1: Those are both great genres. I love historical fiction too.
+
+    User 2: Me too! It''s so interesting to learn about other cultures and time periods.
+
+    User 1: I agree. What''s your favorite historical fiction book?
+
+    User 2: I have a few, but I think my favorite is "The Name of the Rose" by Umberto Eco.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a great read.
+
+    User 1: What''s your favorite mystery novel?
+
+    User 2: I''m a big fan of the Agatha Christie novels. I think "Death on the Nile" is my favorite.
+
+    User 1: That''s a good one! I''ve read it a few times.
+
+    User 2: Me too! It''s always a good read.
+
+    User 1: I''m glad we have similar interests.
+
+    User 2: Me too! It''s always nice to meet someone who enjoys the same things you do.
+
+    User 1: Agreed. So, what else do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends. I also like to go for walks, play games, and watch movies.
+
+    User 1: Those are all great ways to spend your time. I love spending time with my family and friends too.
+
+    User 2: Me too! It''s important to have people you can count on.
+
+    User 1: I agree. So, what''s your favorite movie?
+
+    User 2: I have a few, but I think my favorite is "The Shawshank Redemption".
+
+    User 1: That''s a good one! I''ve seen it a few times.
+
+    User 2: Me too! It''s always a good watch.
+
+    User 1: I''m glad we have similar movie tastes.
+
+    User 2: Me too! It''s always nice to meet someone who enjoys the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

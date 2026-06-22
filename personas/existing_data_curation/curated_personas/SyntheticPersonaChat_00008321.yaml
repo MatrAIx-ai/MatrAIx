@@ -1,0 +1,107 @@
+id: 00008321
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8321
+data:
+  user 1 personas: 'I ride my bike to class since its only a mile away.
+
+    My glasses are held together by tiger printed duct tape.
+
+    My newly bought laptop has a bum battery.
+
+    I write short stories in my document tab with the use of a prompting app.'
+  user 2 personas: 'I love dogs , especially labradors.
+
+    I am traveling to paris this year for my vacation.
+
+    I have one sister.
+
+    I work in the pharmaceutical industry.
+
+    I was born in san francisco.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+
+    User 2: Hello! I''m [user 2''s name].
+
+
+    User 1: Nice to meet you! Where are you from?
+
+
+    User 2: I was born in San Francisco, but I live in the suburbs now.
+
+
+    User 1: Oh, cool! I''m from the Midwest.
+
+
+    User 2: I''ve never been to the Midwest. What''s it like?
+
+
+    User 1: It''s pretty flat, but there are some nice cities.
+
+
+    User 2: What''s your favorite thing to do in your free time?
+
+
+    User 1: I like to read, write, and go for walks.
+
+
+    User 2: I love to read too! I''m currently reading a book about the history of Paris.
+
+
+    User 1: That sounds interesting! I''m a big fan of history.
+
+
+    User 2: Me too! I''m going to Paris this year for vacation, so I''m trying to learn as much as I can about the city before I go.
+
+
+    User 1: That''s awesome! I''m sure you''ll have a great time.
+
+
+    User 2: Thanks! I''m excited to see all the historical landmarks.
+
+
+    User 1: What''s your favorite dog breed?
+
+
+    User 2: I love labradors! They''re so friendly and loving.
+
+
+    User 1: I agree! They''re great dogs.
+
+
+    User 2: I have one sister. She''s 10 years younger than me.
+
+
+    User 1: Oh, cool! I have one sister too. She''s 7 years younger than me.
+
+
+    User 2: What do you do for a living?
+
+
+    User 1: I''m a writer. I write short stories and novels.
+
+
+    User 2: That''s awesome! I love writing too. I''m a pharmaceutical researcher.
+
+
+    User 1: That sounds like an interesting job.
+
+
+    User 2: It is! I get to work on new drugs that can help people.
+
+
+    User 1: That''s really cool.
+
+
+    User 2: Thanks!
+
+
+    User 1: I''m glad we met!
+
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

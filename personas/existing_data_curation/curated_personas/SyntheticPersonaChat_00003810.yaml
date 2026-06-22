@@ -1,0 +1,88 @@
+id: 00003810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3810
+data:
+  user 1 personas: 'My favorite band is muse.
+
+    I am vegan.
+
+    I work at walmart as a stocker.
+
+    I am leaving for college in three months.
+
+    My father is a mechanic.'
+  user 2 personas: 'I used to be very religious.
+
+    I tutor kids in my spare time.
+
+    I have 3 small dogs.
+
+    I have a personal trainer.
+
+    I love to ride bikes.'
+  Best Generated Conversation: 'User 1: Hi! I''m (USER 1''s name).
+
+    User 2: Hi! I''m (USER 2''s name).
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to tutor kids in my spare time.
+
+    User 1: That''s great! I''ve always wanted to be a tutor, but I never had the time.
+
+    User 2: It''s a lot of fun, and it''s really rewarding.
+
+    User 1: I can imagine. So, how many kids do you tutor?
+
+    User 2: I tutor three kids, all from different grade levels.
+
+    User 1: That''s a lot! How do you keep track of everything?
+
+    User 2: I use a planner to keep track of everything.
+
+    User 1: That''s a good idea. I should try using a planner.
+
+    User 2: It''s really helpful. So, what do you do for fun?
+
+    User 1: I like to listen to music and read.
+
+    User 2: Me too! What kind of music do you like to listen to?
+
+    User 1: I like to listen to a lot of different kinds of music, but my favorite band is Muse.
+
+    User 2: I''ve never heard of them. What kind of music do they play?
+
+    User 1: They play a mix of rock and electronic music.
+
+    User 2: Oh, that sounds interesting. I might have to check them out.
+
+    User 1: You should! They''re great. So, what kind of books do you like to read?
+
+    User 2: I like to read a lot of different genres, but my favorite is fiction.
+
+    User 1: Me too! I love to get lost in a good story.
+
+    User 2: Me too! So, what are you reading right now?
+
+    User 1: I''m reading a book called "The Martian" by Andy Weir.
+
+    User 2: Oh, I''ve heard good things about that book. What''s it about?
+
+    User 1: It''s about an astronaut who gets stranded on Mars.
+
+    User 2: Oh, that sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: Well, I have to go now. It was nice talking to you!
+
+    User 1: It was nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

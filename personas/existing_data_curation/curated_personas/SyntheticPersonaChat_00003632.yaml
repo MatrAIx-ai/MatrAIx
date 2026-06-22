@@ -1,0 +1,58 @@
+id: '00003632'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3632
+data:
+  user 1 personas: 'I drink coffee every day.
+
+    I am a teacher.
+
+    I do yoga every morning.
+
+    I love chocolate.
+
+    I have a twin sister.'
+  user 2 personas: 'My parents are in there 80s.
+
+    I am only 5 foot tall.
+
+    My hair is as red as the sunset.
+
+    I have 8 brothers and we are close.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name], how are you?
+
+    User 2: Hi [user 1''s name], I''m doing well, thank you for asking.
+
+    User 1: I''m glad to hear that. What do you like to do for fun?
+
+    User 2: I love to read, play games, and spend time with my family.
+
+    User 1: That sounds like fun. I love to read too, and I''m learning to play the guitar.
+
+    User 2: Oh, that''s awesome! I used to play the guitar, but I haven''t played in a while.
+
+    User 1: I hope you pick it back up again. It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: Cool. What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is "To Kill a Mockingbird" by Harper Lee.
+
+    User 1: Oh, that''s a great book. I read it in high school and I really enjoyed it.
+
+    User 2: Me too. It''s such a powerful story.
+
+    User 1: I agree. What''s your favorite thing about the book?
+
+    User 2: I think my favorite thing about the book is the way it explores the themes of racism and prejudice.
+
+    User 1: I agree. It''s a very important book.
+
+    User 2: It is. I think everyone should read it.
+
+    User 1: I know what you mean. It''s a book that everyone can learn from.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

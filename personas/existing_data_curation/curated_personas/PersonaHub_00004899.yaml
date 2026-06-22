@@ -1,0 +1,19 @@
+id: 00004899
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4899
+persona_description: A medical professional who is knowledgeable about the impact of network attacks on critical medical systems and the importance of implementing security measures to prevent such attacks.
+  They are aware of the potential consequences of a successful network attack on patients and medical facilities, including the risk of incorrect medication, additional testing, and extended hospital stays,
+  which could incur unnecessary expenses. They are also familiar with the techniques used by attackers to modify patient data in real-time on a medical network and the impact of these modifications on patients
+  and medical facilities.
+expertise:
+  general_domain_top1pct: Computer Security
+  specific_domain_top1pct: Cybersecurity in Healthcare
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

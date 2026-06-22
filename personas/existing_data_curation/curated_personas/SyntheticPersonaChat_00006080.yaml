@@ -1,0 +1,64 @@
+id: 00006080
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6080
+data:
+  user 1 personas: 'I take fridays off in the summer.
+
+    I always answer my cellphone.
+
+    When things go wrong , i do everything i can to make it right.
+
+    It s important to me to make my clients happy.
+
+    I work in sales.'
+  user 2 personas: 'Sometimes i volunteer at an urban farm.
+
+    I work at the grocery store.
+
+    I am vegan.
+
+    I decided to become vegan a year ago.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a vegan chef at a local grocery store.
+
+    User 1: Wow, that''s cool! I''ve been thinking about going vegan.
+
+    User 2: It''s a great decision! I''ve been vegan for a year now and I feel amazing.
+
+    User 1: What made you decide to go vegan?
+
+    User 2: I was watching a documentary about the meat industry and it really opened my eyes to the suffering that animals go through. I couldn''t justify eating meat anymore.
+
+    User 1: I can understand that. I''ve seen some of those documentaries too and they''re really hard to watch.
+
+    User 2: Yeah, they are. But they''re important to see so that we can make informed choices about what we eat.
+
+    User 1: I agree. I''m definitely going to give going vegan a try.
+
+    User 2: That''s great! I''m here to support you if you have any questions.
+
+    User 1: Thanks, I appreciate it.
+
+    User 2: No problem!
+
+    User 1: So, what''s your favorite vegan dish to make?
+
+    User 2: I love making vegan lasagna. It''s so easy and it''s always a hit with my friends and family.
+
+    User 1: That sounds delicious! I''ll have to try it sometime.
+
+    User 2: You definitely should!
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

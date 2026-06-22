@@ -1,0 +1,106 @@
+id: 00001069
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1069
+data:
+  user 1 personas: 'I like to paint.
+
+    I like to attend wine tours.
+
+    I enjoy visiting museums.
+
+    We have two sons.
+
+    My husband is 20 years older than me.'
+  user 2 personas: 'I am strong.
+
+    I never eat veggies.
+
+    I am tall.
+
+    I am young.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Nice to meet you, [name]. I''m [name].
+
+    User 1: What are you interested in?
+
+    User 2: I''m interested in strength training, and I also like to paint.
+
+    User 1: I love painting too! What kind of things do you like to paint?
+
+    User 2: I like to paint landscapes and portraits. I also like to do abstract paintings.
+
+    User 1: Those sound really cool! I''ve never been much of a landscape painter, but I love to do portraits and abstracts.
+
+    User 2: That''s great! We should paint together sometime.
+
+    User 1: That would be fun! I''m always up for painting with new people.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to visit museums, attend wine tours, and go out to eat.
+
+    User 2: I like to go out to eat too, but I''m not much of a museum person. I''ve never been on a wine tour.
+
+    User 1: You should go on a wine tour! They''re really fun and you get to learn a lot about wine.
+
+    User 2: I''ll keep that in mind.
+
+    User 1: What are some of your hobbies?
+
+    User 2: I like to play video games, go to the gym, and read.
+
+    User 1: I like to play video games too! What are some of your favorite games?
+
+    User 2: I like to play a lot of different games, but I''m really into role-playing games right now.
+
+    User 1: I''ve never played a role-playing game before.
+
+    User 2: You should give it a try! They''re really fun.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I like to read a lot of different types of books, but I''m really into historical fiction and science fiction.
+
+    User 2: I like historical fiction too! What are some of your favorite historical fiction books?
+
+    User 1: I like The Pillars of the Earth by Ken Follett and The Name of the Rose by Umberto Eco.
+
+    User 2: Those are both great books! I''ve read them both.
+
+    User 1: What are some of your favorite science fiction books?
+
+    User 2: I like The Martian by Andy Weir and Dune by Frank Herbert.
+
+    User 1: Those are both great books too! I''ve read The Martian, but I haven''t read Dune yet.
+
+    User 2: You should give it a try! It''s a really good book.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work in the marketing department of a large company.
+
+    User 2: Oh, that sounds interesting! I''m a software engineer.
+
+    User 1: That sounds like a cool job!
+
+    User 2: It is. I like it a lot.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to play video games, go to the gym, and read.
+
+    User 1: I like to do a lot of the same things.
+
+    User 2: That''s cool. We should hang out sometime.
+
+    User 1: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

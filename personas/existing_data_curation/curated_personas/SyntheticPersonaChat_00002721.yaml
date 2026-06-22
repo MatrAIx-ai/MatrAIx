@@ -1,0 +1,66 @@
+id: '00002721'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2721
+data:
+  user 1 personas: 'I am currently single.
+
+    I love to paint.
+
+    My favorite season is spring.
+
+    I enjoy walks on the beach.'
+  user 2 personas: 'I love sweets.
+
+    I cs and ds.
+
+    I love bruno mars.
+
+    I am in high school.
+
+    I sleep a lot.'
+  Best Generated Conversation: 'User 1: Hi there, I''m user 1!
+
+    User 2: Hello, I''m user 2!
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to eat sweets, go on hikes, and listen to Bruno Mars.
+
+    User 1: I love chocolate, too! I also love to go for walks on the beach.
+
+    User 2: Me too! I love the sound of the waves crashing on the shore.
+
+    User 1: That''s so relaxing. Have you ever been to the beach in the spring?
+
+    User 2: No, I haven''t. I''ve been to the beach in the summer, but never in the spring.
+
+    User 1: You should try it! The beach is so beautiful in the spring.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! What''s your favorite Bruno Mars song?
+
+    User 2: I love "24K Magic." It''s so catchy and upbeat.
+
+    User 1: Me too! I love the beat and the lyrics.
+
+    User 2: What do you like to do for school?
+
+    User 1: I''m in college, and I''m majoring in computer science.
+
+    User 2: Oh, that''s cool! I''m in high school, and I''m taking computer science classes.
+
+    User 1: That''s great! I love computer science. It''s a really interesting field.
+
+    User 2: Me too! I think it''s so cool how computers can do so many things.
+
+    User 1: I agree! Computers are amazing.
+
+    User 2: I''m glad we agree! Thanks for chatting with me, user 1.
+
+    User 1: No problem! It was nice talking to you, user 2.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

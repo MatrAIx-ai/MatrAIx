@@ -1,0 +1,76 @@
+id: 00008240
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8240
+data:
+  user 1 personas: 'I am a girl who loves sports cars and video games.
+
+    I like swimming.
+
+    I am a fourteen year old living with my mom and grandparents.
+
+    My favorite thing to do is research race cars in my free time.'
+  user 2 personas: 'I love my girlfriend.
+
+    I eat a lot of meat.
+
+    I am going to school to get my bachelors degree.
+
+    My father was also in the military.
+
+    I am a veteran.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: I''m Tom. What''s yours?
+
+    User 1: My name is Sarah.
+
+    User 2: Nice to meet you, Sarah.
+
+    User 1: It''s nice to meet you too, Tom.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games and swim.
+
+    User 2: I love video games too! What games do you like to play?
+
+    User 1: I like to play racing games and shooters.
+
+    User 2: I love racing games too! What''s your favorite racing game?
+
+    User 1: My favorite racing game is Forza Horizon 5.
+
+    User 2: I''ve never played that game. Is it fun?
+
+    User 1: It''s so much fun! You should check it out.
+
+    User 2: I will! Do you like any other sports?
+
+    User 1: I like basketball and soccer.
+
+    User 2: I love basketball! What''s your favorite basketball team?
+
+    User 1: My favorite basketball team is the Golden State Warriors.
+
+    User 2: I love the Warriors! I''m from California, so I''m a big fan of all the Bay Area teams.
+
+    User 1: That''s cool! I''m from Michigan, so I''m a big fan of the Detroit Pistons.
+
+    User 2: I''ve never been to Michigan, but I''ve heard it''s beautiful.
+
+    User 1: It''s really beautiful! I love the lakes and the forests.
+
+    User 2: I love nature too! I''m going to have to visit Michigan sometime.
+
+    User 1: You should! It''s a great state.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00006400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6400
+data:
+  user 1 personas: 'I get my nails done every saturday.
+
+    I work as a receptionist at a lawyer s office.
+
+    My family owns a grocery store.
+
+    I daydream about cafes in paris.
+
+    I secretly love watching wwe wrestling.'
+  user 2 personas: 'I make and me by waiting tables.
+
+    Until then i will make 215 an hour.
+
+    I am a college student who is a full time working mom.
+
+    I hope it to become a doctor one day.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I''m a college student and a full-time working mom.
+
+    User 1: Wow, that must be really busy! What do you study?
+
+    User 2: I''m studying to be a doctor.
+
+    User 1: That''s awesome! I''m sure you''ll make a great doctor. What''s your favorite thing about being a mom?
+
+    User 2: I love spending time with my kids and watching them grow up.
+
+    User 1: That''s great! I''m sure they love spending time with you too. What''s your favorite thing about your job?
+
+    User 2: I love the challenge of working in a fast-paced environment.
+
+    User 1: That''s great! I''m sure you''re a great server. What''s your favorite type of food?
+
+    User 2: I love all types of food, but my favorite is Italian.
+
+    User 1: That''s great! I love Italian food too. What''s your favorite restaurant in town?
+
+    User 2: I love the Olive Garden.
+
+    User 1: That''s great! I''ve been there before. It''s really good.
+
+    User 2: Yeah, it is. What''s your favorite place to go in Paris?
+
+    User 1: I love the cafes in Paris. They''re so relaxing and peaceful.
+
+    User 2: That sounds amazing! I''ve always wanted to go to Paris.
+
+    User 1: You should! It''s a beautiful city.
+
+    User 2: Thanks for the suggestion! I''ll definitely look into it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

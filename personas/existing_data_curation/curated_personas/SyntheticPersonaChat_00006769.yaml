@@ -1,0 +1,72 @@
+id: 00006769
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6769
+data:
+  user 1 personas: 'I have never been out of the country.
+
+    My favorite phone is as iphone.
+
+    I am a bank teller.
+
+    I love to go hiking.
+
+    I have never been to college.'
+  user 2 personas: 'My mother looks after my grandmother.
+
+    I sleep 8 hours.
+
+    I love hockey.
+
+    I prefer texting over phone calls.'
+  Best Generated Conversation: 'User 1: I''m a bank teller. Have you ever been to a bank?
+
+    User 2: My mother looks after my grandmother.
+
+    User 1: What does she do?
+
+    User 2: She cooks and cleans.
+
+    User 1: I bet she''s a great cook!
+
+    User 2: She is! She makes the best food.
+
+    User 1: I love to cook too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love to make pasta.
+
+    User 2: That''s my favorite too!
+
+    User 1: I like to make a lot of different kinds of pasta.
+
+    User 2: Me too! I love trying new recipes.
+
+    User 1: What''s your favorite kind of pasta?
+
+    User 2: I like spaghetti and meatballs.
+
+    User 1: That''s a classic!
+
+    User 2: It is! It''s so good.
+
+    User 1: I love to add in some vegetables too.
+
+    User 2: That sounds good! I''ll have to try that.
+
+    User 1: You should! It''s really good.
+
+    User 2: I love vegetables.
+
+    User 1: Me too! I think they''re so important.
+
+    User 2: They are! They''re good for you.
+
+    User 1: I know! I love to eat them.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

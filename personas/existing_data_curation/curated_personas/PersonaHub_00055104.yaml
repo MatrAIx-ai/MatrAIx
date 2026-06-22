@@ -1,0 +1,18 @@
+id: '00055104'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55104
+persona_description: A healthcare professional with expertise in genetic testing and disease diagnosis. They are particularly interested in the diagnosis and management of Tay-Sachs disease, a lysosomal
+  storage disorder caused by mutations in the HEXA gene. They are familiar with the genetic testing strategies and guidelines for Tay-Sachs disease and are capable of interpreting test results in the context
+  of clinical findings, family history, and other laboratory data. They are aware of the potential interference of previous bone marrow transplant procedures and are equipped to handle such situations.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: genetic disease diagnosis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

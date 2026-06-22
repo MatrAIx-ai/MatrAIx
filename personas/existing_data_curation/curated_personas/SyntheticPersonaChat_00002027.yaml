@@ -1,0 +1,62 @@
+id: '00002027'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2027
+data:
+  user 1 personas: 'I own a ford truck.
+
+    I have a ford f150.
+
+    My truck is black.
+
+    I like ford cars.'
+  user 2 personas: 'As long as i have a cup of coffee in my hand i am a happy person.
+
+    I listen to pink when i am painting.
+
+    My wife makes the best pasta.
+
+    It takes me an hour to drive to work in the morning.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to paint and listen to music.
+
+    User 1: That sounds like a lot of fun! Do you have any favorite artists?
+
+    User 2: I love Pink. Her music is always so upbeat and makes me happy.
+
+    User 1: I love Pink too! She''s so talented.
+
+    User 2: She''s amazing. I also love to paint. It''s so relaxing and therapeutic.
+
+    User 1: I''ve always wanted to try painting, but I''m not very good at it.
+
+    User 2: You should give it a try! It''s really fun and you can make some really beautiful things.
+
+    User 1: I might just do that. Thanks for the suggestion!
+
+    User 2: No problem! I''m always happy to talk about painting.
+
+    User 1: So, what''s your favorite type of music to paint to?
+
+    User 2: I like to paint to a variety of music, but I think Pink''s music is the best. It just gets me in the mood to create.
+
+    User 2: I also love to listen to music while I drive to work. It helps to make the time go by faster.
+
+    User 1: I can definitely relate to that. I listen to music all the time when I''m driving.
+
+    User 2: What''s your favorite thing to do on a weekend?
+
+    User 1: I like to spend time with my family and friends. We go out to eat, play games, or just relax at home.
+
+    User 2: That sounds like a lot of fun. I like to spend time with my wife and kids too. We like to go on walks, play games, or just watch movies together.
+
+    User 1: Sounds like we have a lot in common.
+
+    User 2: We do! I''m glad we met.
+
+    User 1: Me too. It''s always nice to meet someone new.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

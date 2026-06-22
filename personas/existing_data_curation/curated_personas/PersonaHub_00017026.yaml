@@ -1,0 +1,18 @@
+id: '00017026'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 17026
+persona_description: A researcher or scientist who specializes in the study of prokaryotic organisms, particularly pathogen detection and environmental sample surveying. This persona is likely to be interested
+  in using the NCBI 16S rRNA sequence database to identify and verify organisms in their samples, and to search for related information on the internet. They may also be interested in the curation process
+  of the NCBI 16S rRNA sequence database, and may have a particular interest in the types of bacteria and archaea that are currently included in the database.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: microbiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

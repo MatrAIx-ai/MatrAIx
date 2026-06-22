@@ -1,0 +1,72 @@
+id: 00004952
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4952
+data:
+  user 1 personas: 'I currently work at mcdonald.
+
+    I am taking a year off before i start college.
+
+    I am saving money to buy my first car.
+
+    I am eighteen years old.'
+  user 2 personas: 'I drive a honda civic.
+
+    My favorite movie is django unchained.
+
+    I love rock climbing.
+
+    I like long walks on the beach.
+
+    I work at a retail store.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to rock climb, go for long walks on the beach, and watch movies.
+
+    User 1: That''s cool! I like to go for walks on the beach too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is Django Unchained.
+
+    User 2: That''s a good movie! I love the soundtrack.
+
+    User 1: Me too! I''m a big fan of Ennio Morricone.
+
+    User 2: Me too! He''s one of my favorite composers.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at a retail store.
+
+    User 1: Oh, that''s cool. I work at McDonald''s.
+
+    User 2: Oh, really? I used to work there when I was in high school.
+
+    User 1: What''s your favorite thing about your job?
+
+    User 2: I like the people I work with.
+
+    User 1: Me too! My coworkers are the best.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m going to start college in the fall.
+
+    User 2: Oh, that''s exciting! What are you going to study?
+
+    User 1: I''m not sure yet. I''m thinking about business or marketing.
+
+    User 2: Those are both good options.
+
+    User 1: Thanks! I''m excited to start my new life.
+
+    User 2: I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

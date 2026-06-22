@@ -1,0 +1,58 @@
+id: 00002932
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2932
+data:
+  user 1 personas: 'I work in commercials.
+
+    My favorite type of music is metal.
+
+    I like watching tv and movies.
+
+    My dad died when i was in high school.'
+  user 2 personas: 'I am in school to be a computer engineer.
+
+    My best friend is gay.
+
+    One day i hope to own my own company.
+
+    My passion is in programming.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m good, thanks! How are you?
+
+    User 1: I''m good too. I''m a commercial actor and I love watching TV and movies.
+
+    User 2: That''s cool! I''m a computer engineering student and I love programming.
+
+    User 1: Oh, that''s interesting! What''s your favorite thing about programming?
+
+    User 2: I love the challenge of solving problems and creating something new.
+
+    User 1: That makes sense. I love the feeling of seeing my work come to life on screen.
+
+    User 2: Me too! It''s so satisfying.
+
+    User 1: So, what are your plans after school?
+
+    User 2: I hope to start my own company someday.
+
+    User 1: That''s great! I''m sure you''ll be successful.
+
+    User 2: Thanks! I hope so too.
+
+    User 1: So, what''s your favorite TV show?
+
+    User 2: I like Game of Thrones.
+
+    User 1: Oh, that''s a good one! I''ve been meaning to watch it.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

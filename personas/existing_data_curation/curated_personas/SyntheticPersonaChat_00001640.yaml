@@ -1,0 +1,104 @@
+id: '00001640'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1640
+data:
+  user 1 personas: 'I have three kids.
+
+    I love hot wings.
+
+    I sing in the church choir.
+
+    I m a truck driver in the south.
+
+    I grew up in the trailer park.'
+  user 2 personas: 'I only have three best friends.
+
+    I am a girl who loves sports cars and video games.
+
+    I like swimming.
+
+    I am a fourteen year old living with my mom and grandparents.'
+  Best Generated Conversation: 'User 1: Hi there! My name is [user 1''s name].
+
+    User 2: Hi! My name is [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name].
+
+    User 2: It''s nice to meet you too, [user 1''s name].
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to swim, play video games, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to play video games too. What are some of your favorite games?
+
+    User 2: I like to play racing games, action games, and adventure games.
+
+    User 1: I like racing games too. I''m not very good at them, but I still have fun.
+
+    User 2: I''m not very good at them either, but I still have fun too.
+
+    User 1: What kind of sports car do you like?
+
+    User 2: I like Corvettes and Ferraris.
+
+    User 1: Those are both great cars. I like Lamborghinis too.
+
+    User 2: Lamborghinis are nice too.
+
+    User 1: So, what do you like about swimming?
+
+    User 2: I like the exercise and the feeling of being in the water.
+
+    User 1: I agree. I also like the exercise and the feeling of being in the water.
+
+    User 2: Do you swim competitively?
+
+    User 1: No, I just swim for fun.
+
+    User 2: That''s cool. I used to swim competitively, but I stopped when I was 12.
+
+    User 1: Why did you stop?
+
+    User 2: I got bored with it.
+
+    User 1: I can understand that.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a truck driver.
+
+    User 2: That''s cool. I''ve always wanted to be a truck driver.
+
+    User 1: It''s a lot of fun. I get to see a lot of different places.
+
+    User 2: That sounds like fun.
+
+    User 1: It is.
+
+    User 2: So, what''s your favorite thing to do on your day off?
+
+    User 1: I like to spend time with my family.
+
+    User 2: That''s nice. I like to spend time with my friends.
+
+    User 1: I like to spend time with my friends too.
+
+    User 2: So, what''s your favorite thing to do with your friends?
+
+    User 1: We like to go out to eat, go to the movies, and play video games.
+
+    User 2: That sounds like fun. I like to do those things too.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That sounds like fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

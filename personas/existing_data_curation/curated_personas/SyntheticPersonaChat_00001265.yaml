@@ -1,0 +1,73 @@
+id: '00001265'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1265
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I work in an office.
+
+    I have two tattoos.
+
+    I have a cat named speckles.'
+  user 2 personas: 'I am proposing tonight.
+
+    I graduated college last week.
+
+    I got a job as a coach at a local highschool.
+
+    We just bought a house near her parents.
+
+    My girlfriend is 6 months pregnant.'
+  Best Generated Conversation: 'User 1: Hi! What are you up to today?
+
+    User 2: I''m proposing to my girlfriend tonight!
+
+    User 1: That''s so exciting! Congratulations!
+
+    User 2: Thanks! I''m really nervous but I''m also really excited.
+
+    User 1: I''m sure she''s going to say yes! She''s lucky to have you.
+
+    User 2: Thanks, I think she''s pretty lucky to have me too.
+
+    User 1: What are you going to do for the proposal?
+
+    User 2: I''m going to take her to our favorite restaurant and then I''m going to propose to her on the balcony overlooking the city.
+
+    User 1: That sounds perfect! I''m sure she''ll love it.
+
+    User 2: I hope so!
+
+    User 1: Well, I''m sure everything is going to go great. Good luck!
+
+    User 2: Thanks! I''m going to need it.
+
+
+    User 1: How did it go?
+
+    User 2: It went great! She said yes!
+
+    User 1: Congratulations! I''m so happy for you both!
+
+    User 2: Thanks!
+
+    User 1: What are you planning for the future?
+
+    User 2: We''re not sure yet, but we''re excited to see what happens.
+
+    User 1: Well, I''m sure everything is going to work out great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, I have to go now. But I''m so happy for you both!
+
+    User 2: Thanks!
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

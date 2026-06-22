@@ -1,0 +1,18 @@
+id: '00044276'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44276
+persona_description: A weather expert who predicts and analyzes the weather conditions across the country, particularly focusing on the effects of La Nina and North Atlantic Oscillation patterns on agriculture.
+  He is optimistic about the growing season but also warns of potential drought and flooding. His forecast is based on historical patterns and predictions, and he advises producers to closely monitor the
+  weather situation and its relationship to the markets.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: agricultural meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

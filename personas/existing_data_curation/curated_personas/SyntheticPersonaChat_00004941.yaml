@@ -1,0 +1,70 @@
+id: 00004941
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4941
+data:
+  user 1 personas: 'I am studying for my masters.
+
+    Cooking is one of my pass times.
+
+    My favorite food is pizza.
+
+    I also like eating sushi.
+
+    I am a student in social sciences.'
+  user 2 personas: 'I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I enjoy watching videos on youtube.
+
+    I enjoy eating pumpkins.
+
+    I have a small beagle dog who i call droopy.
+
+    I use third party programs to read portable documents instead of adobe.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: It''s nice to meet you, [name]. What do you do for fun?
+
+    User 2: I love to cook, watch YouTube videos, and eat shrimp.
+
+    User 1: Oh, I love to cook too! What''s your favorite thing to cook?
+
+    User 2: I love to make shrimp tacos. They''re so delicious!
+
+    User 1: I''ve never had shrimp tacos before. What do you put in them?
+
+    User 2: I use shrimp, corn, tomatoes, lettuce, cheese, and salsa.
+
+    User 1: That sounds delicious! I''ll have to try it sometime.
+
+    User 2: You definitely should! It''s one of my favorite meals.
+
+    User 1: What do you like to watch on YouTube?
+
+    User 2: I like to watch cooking videos, funny videos, and music videos.
+
+    User 1: I like to watch cooking videos too! I love learning new recipes.
+
+    User 2: Me too! I''m always looking for new ways to cook.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a small beagle dog named Droopy.
+
+    User 1: Aww, I love beagles! They''re such cute dogs.
+
+    User 2: They are! Droopy is the best dog.
+
+    User 1: I''m glad you have such a great dog.
+
+    User 2: Thanks! I''m lucky to have him.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

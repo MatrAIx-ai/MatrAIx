@@ -1,0 +1,62 @@
+id: 00002961
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2961
+data:
+  user 1 personas: 'I am a baseball player.
+
+    I can play the piano.
+
+    I like to read books about chinese history.
+
+    My favourite colour is green.
+
+    My dog is called alfred.'
+  user 2 personas: 'I am a viking.
+
+    I like to go fishing on my viking boat.
+
+    My hobbies include pillaging and fine dining.
+
+    Its cold where i live.
+
+    I have a big beard.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing on my viking boat.
+
+    User 1: That sounds like fun! Where do you like to fish?
+
+    User 2: I like to fish in the fjords of Norway.
+
+    User 1: Oh, that must be beautiful!
+
+    User 2: It is! The water is so clear and the scenery is amazing.
+
+    User 1: Do you ever catch any big fish?
+
+    User 2: I have caught some big cod and salmon.
+
+    User 1: That''s awesome! I''ve always wanted to go fishing in Norway.
+
+    User 2: You should come visit sometime! I would love to show you around.
+
+    User 1: That would be great! I''m sure Alfred would love to go fishing too.
+
+    User 2: Alfred?
+
+    User 1: My dog. He''s a golden retriever.
+
+    User 2: I love dogs! I''m sure Alfred would love to come fishing with me.
+
+    User 1: He would! He loves to play in the water.
+
+    User 2: Well, you''re welcome to come fishing with me anytime.
+
+    User 1: That''s very kind of you. I''ll definitely keep that in mind.
+
+    User 2: Great! I look forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00007758
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7758
+data:
+  user 1 personas: 'My favorite thing to do is float the river.
+
+    I once ran the mile in under 4 minutes.
+
+    My dad was a cop until he was killed.
+
+    I can t go a single day without eating ice cream.'
+  user 2 personas: 'I like to play basketball.
+
+    My grandma likes to make pizza with me.
+
+    I like lightning mcqueen.
+
+    I have a cat named mater.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi! My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to play basketball, go to the movies, and hang out with friends.
+
+    User 1: Cool! I like to do those things too. What''s your favorite movie?
+
+    User 2: My favorite movie is Cars. I love the animation and the story.
+
+    User 1: Me too! I love Cars. I think it''s one of the best Disney movies ever made.
+
+    User 2: I agree! It''s so funny and heartwarming.
+
+    User 1: What other movies do you like?
+
+    User 2: I also like the Toy Story movies, The Incredibles, and Finding Nemo.
+
+    User 1: Those are all great movies! I love Pixar movies.
+
+    User 2: Me too! They''re always so good.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to play basketball, go to the movies, hang out with friends, and play video games.
+
+    User 1: Cool! I like to do those things too. What''s your favorite video game?
+
+    User 2: My favorite video game is Mario Kart. I love the racing and the characters.
+
+    User 1: Me too! Mario Kart is so much fun. I love playing it with my friends.
+
+    User 2: Me too! It''s so much fun to compete with your friends.
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I work at a pizzeria. I make pizza and serve customers.
+
+    User 1: Cool! I love pizza. I could eat pizza every day.
+
+    User 2: Me too! Pizza is my favorite food.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to play basketball, go to the movies, hang out with friends, play video games, and make pizza.
+
+    User 1: Cool! I like to do those things too. We should hang out sometime.
+
+    User 2: That would be fun! I''d love to hang out with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

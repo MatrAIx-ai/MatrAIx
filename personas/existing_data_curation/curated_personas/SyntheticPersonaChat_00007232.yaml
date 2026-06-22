@@ -1,0 +1,76 @@
+id: '00007232'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7232
+data:
+  user 1 personas: 'I would like to move some place warmer.
+
+    I like watching reality television shows.
+
+    Last month the farm was foreclosed so i m looking for a new job.
+
+    I live in kansas.
+
+    I m an out of work farmhand.'
+  user 2 personas: 'I like to visit national parks.
+
+    I play the violin.
+
+    I met my husband when i was a freshman in college.
+
+    I am nurse.
+
+    I am married with 5 kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play the violin and visit national parks.
+
+    User 1: That''s cool. I''ve always wanted to learn how to play the violin.
+
+    User 2: It''s a lot of fun. I''ve been playing since I was a kid.
+
+    User 1: Where are some of your favorite national parks?
+
+    User 2: I really like Bryce Canyon and Zion National Park.
+
+    User 1: I''ve heard good things about Bryce Canyon. I''ve never been to Zion National Park.
+
+    User 2: You should go sometime. It''s beautiful.
+
+    User 1: I will.
+
+    User 2: What do you do for work?
+
+    User 1: I''m an out of work farmhand. The farm was foreclosed last month.
+
+    User 2: Oh, I''m sorry to hear that.
+
+    User 1: It''s okay. I''m looking for a new job.
+
+    User 2: I hope you find something soon.
+
+    User 1: Thanks.
+
+    User 2: What are some places you''d like to move to?
+
+    User 1: I''d like to move somewhere warmer. I''m tired of the cold weather in Kansas.
+
+    User 2: I can understand that. I love the warm weather.
+
+    User 1: Yeah, it''s so much better.
+
+    User 2: So, what are some places you''re considering moving to?
+
+    User 1: I''m not sure yet. I''m still thinking about it.
+
+    User 2: Well, I hope you find somewhere you like.
+
+    User 1: Thanks. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

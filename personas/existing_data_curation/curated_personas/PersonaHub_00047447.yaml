@@ -1,0 +1,19 @@
+id: '00047447'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 47447
+persona_description: A researcher or scientist who specializes in the field of proteomics, particularly in the development and application of cell-free protein array technology for the screening of proteins.
+  They are likely to be familiar with the NAPPA technology and its applications in the screening of proteins for various purposes such as identifying autoantibodies, identifying tumor antigens, identifying
+  proteins that trigger an adaptive immune response in cystic fibrosis and acutely infected patients, and identifying proteins that are potential TLR5 agonists in V. cholerae. They may also be interested
+  in the assembly of complete ORF collections for different bacteria, such as Psuedomonas aeruginosa.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: proteomics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

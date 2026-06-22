@@ -1,0 +1,46 @@
+id: 00004780
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4780
+data:
+  user 1 personas: 'I went to japan this summer.
+
+    My mom is a painter.
+
+    I start my senior year of high school next week.
+
+    My favorite sport is hockey.'
+  user 2 personas: 'I especially enjoy listening to the band the lumineers.
+
+    I enjoy reading and walking on sunny days.
+
+    I am a happy person.
+
+    I sing many songs.'
+  Best Generated Conversation: 'User 1: Hello, my name is (user 1''s name) and I love hockey. Have you ever gone to Japan before?
+
+    User 2: Hello, I''m (user 2''s name). I have not gone to Japan before but I would love to visit! What are some of your favorite things about hockey?
+
+    User 1: I love the speed and the physicality of the game. I also love the strategy and the teamwork involved. What kind of music do you like to listen to?
+
+    User 2: I love listening to The Lumineers! They''re a really great band. I also like to listen to a lot of different types of music, like folk, rock, and indie.
+
+    User 1: Oh, I love The Lumineers too! They''re one of my favorite bands. I''m glad to meet someone else who likes them. What are some of your favorite books?
+
+    User 2: I love reading books by John Green. He''s a really great writer. I also love reading books about history and science.
+
+    User 1: Oh, I love John Green too! I''ve read all of his books. I''m glad to meet someone else who likes him. What are some of your favorite things to do on sunny days?
+
+    User 2: I love to go for walks on sunny days. I also love reading and listening to music.
+
+    User 1: Oh, I love going for walks on sunny days too! I also love reading and listening to music.
+
+    User 2: That''s so cool! It sounds like we have a lot in common.
+
+    User 1: Yeah, it does! I''m glad to meet you, (user 2''s name).
+
+    User 2: Me too, (user 1''s name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

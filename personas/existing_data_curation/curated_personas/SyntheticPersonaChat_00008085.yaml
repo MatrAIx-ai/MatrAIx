@@ -1,0 +1,72 @@
+id: 00008085
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8085
+data:
+  user 1 personas: 'I once saw peyton manning at the grocery store.
+
+    I am a traveling encyclopedia salesman.
+
+    My hobbies include rock collecting and making macaroni art.
+
+    I work at the gas station as a part time job.
+
+    My lifes goal is to be the worlds foremost encyclopedia salesman.'
+  user 2 personas: 'I have a lot of allergies.
+
+    I work in commercials.
+
+    My favorite type of music is metal.
+
+    My dad died when i was in high school.
+
+    I like watching tv and movies.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, nice to meet you. My name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in commercials.
+
+    User 1: Oh, cool! That sounds like fun.
+
+    User 2: It is, I get to work with a lot of different people and make some cool things.
+
+    User 1: That''s great. What''s your favorite type of music?
+
+    User 2: I love metal.
+
+    User 1: Oh, me too! What are some of your favorite bands?
+
+    User 2: I love Iron Maiden, Metallica, Slayer, and Megadeth.
+
+    User 1: Those are all great bands! I love their music too.
+
+    User 2: Me too! I''ve seen all of them live.
+
+    User 1: That''s awesome! I''ve only seen Iron Maiden and Metallica live.
+
+    User 2: You should see Slayer and Megadeth live if you get a chance.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem. What''s your favorite thing to do for fun?
+
+    User 1: I love to go to the movies and watch TV. I also like to read and write.
+
+    User 2: Me too! I love all of those things.
+
+    User 1: It''s nice to meet someone who has similar interests.
+
+    User 2: Me too.
+
+    User 1: Well, I have to get going. It was nice meeting you.
+
+    User 2: You too. Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

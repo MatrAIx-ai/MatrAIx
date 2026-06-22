@@ -1,0 +1,72 @@
+id: 00006518
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6518
+data:
+  user 1 personas: 'My favorite music is rock and roll.
+
+    I go to school for business.
+
+    I love to travel.
+
+    I am from russia.
+
+    I enjoy skiing.'
+  user 2 personas: 'I have 2 cats.
+
+    My favorite food is strawberries.
+
+    I work in a veterinary office.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: I''m from Russia. What about you?
+
+    User 2: I''m from the United States.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel and explore new places.
+
+    User 1: I love to travel too! I''m actually in the United States right now.
+
+    User 2: Where are you from in Russia?
+
+    User 1: I''m from a small town near Moscow.
+
+    User 2: That''s cool! I''ve always wanted to visit Russia.
+
+    User 1: You should! It''s a beautiful country with a rich history and culture.
+
+    User 2: I''m sure it is! What''s your favorite thing about Russia?
+
+    User 1: I love the food! The Russian cuisine is so delicious.
+
+    User 2: I''ve heard that! I''m a big fan of borscht.
+
+    User 1: Borscht is my favorite Russian dish! It''s so hearty and flavorful.
+
+    User 2: I''m glad to hear that! I''ve never had it, but I''m definitely going to try it next time I''m in Russia.
+
+    User 1: You won''t be disappointed!
+
+    User 2: I''m sure I won''t!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to travel, read, and play with my cats.
+
+    User 1: That sounds like a lot of fun! I love to travel too, but I don''t have any cats.
+
+    User 2: You should get a cat! They''re great pets.
+
+    User 1: I''ve thought about it, but I''m not sure I''m ready for the responsibility.
+
+    User 2: It''s not as much responsibility as you think! Cats are pretty independent animals.
+
+    User 1: I''ll have to think about it.
+
+    User 2: You should! I think you''d love having a cat.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

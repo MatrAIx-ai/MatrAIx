@@ -1,0 +1,64 @@
+id: 00005195
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5195
+data:
+  user 1 personas: 'Summer is my favorite season.
+
+    I enjoy fishing.
+
+    I like classic radio programs.
+
+    I love decorating for christmas.
+
+    I love my impala.'
+  user 2 personas: 'I once saw the easter bunny hiding behind my closet door.
+
+    My mom is a checker at the local grocery store.
+
+    I grew up in alabama.
+
+    I do not like the song sweet home alabama.
+
+    I love watching game of thrones.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1 Name].
+
+    User 2: Hi, I''m [User 2 Name].
+
+    User 1: What''s your favorite season?
+
+    User 2: Summer! I love the warm weather and being able to go outside.
+
+    User 1: Me too! I love swimming and fishing in the summer.
+
+    User 2: I love going to the beach and swimming. I also like going to the lake and fishing.
+
+    User 1: I love fishing too! I''m not very good at it, but it''s always fun to try.
+
+    User 2: I''m not very good at it either, but I just enjoy being out on the water.
+
+    User 1: Me too! What are your other interests?
+
+    User 2: I love watching movies and TV shows. I''m also a big fan of Game of Thrones.
+
+    User 1: I love Game of Thrones too! I''m so excited for the next season.
+
+    User 2: Me too! I can''t wait to see what happens.
+
+    User 1: What else do you like to do?
+
+    User 2: I love to read and go to the library. I also like to cook and bake.
+
+    User 1: I love to cook too! I''m not very good at it, but I''m always trying new recipes.
+
+    User 2: Me too! I love trying new things in the kitchen.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: Yeah, we do! It''s nice to meet someone who has similar interests.
+
+    User 1: Me too! I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

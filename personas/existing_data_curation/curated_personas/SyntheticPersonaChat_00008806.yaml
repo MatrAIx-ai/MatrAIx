@@ -1,0 +1,66 @@
+id: 00008806
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8806
+data:
+  user 1 personas: 'Sometimes i feel like i ve already been through life once before.
+
+    I work as a freelance accountant.
+
+    I was diagnosed with mild ocd in college.
+
+    I freeze up in social situations.'
+  user 2 personas: 'I am ten years old.
+
+    I love to read harry potter books.
+
+    And , my best friend is abigail.
+
+    I take martial arts after school.
+
+    Tomorrow is my first day of safety patrol.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: I''m Abigail, and you are?
+
+    User 1: I''m glad to meet you, Abigail. My name is (user 1''s name).
+
+    User 2: It''s nice to meet you too, (user 1''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read Harry Potter books, take martial arts after school, and I''m on safety patrol.
+
+    User 1: Oh, I love Harry Potter too! What''s your favorite book?
+
+    User 2: I like the fourth book, Goblet of Fire.
+
+    User 1: That''s a good one! I like the second book, Chamber of Secrets.
+
+    User 2: Oh, that''s a good one too!
+
+    User 1: What martial arts do you take?
+
+    User 2: I take karate.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn karate.
+
+    User 2: It''s a lot of fun!
+
+    User 1: I''m sure it is.
+
+    User 2: I''m really excited for my first day of safety patrol tomorrow.
+
+    User 1: What''s safety patrol?
+
+    User 2: It''s a program where students help to keep the school safe by monitoring the hallways and helping students who are lost or need help.
+
+    User 1: Oh, that sounds like a great program.
+
+    User 2: Yeah, I''m really excited to be a part of it.
+
+    User 1: I''m sure you''ll do great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

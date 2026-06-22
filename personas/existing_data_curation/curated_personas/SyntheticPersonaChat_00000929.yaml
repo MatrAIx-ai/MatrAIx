@@ -1,0 +1,82 @@
+id: 00000929
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 929
+data:
+  user 1 personas: 'I am in college.
+
+    I like to swim.
+
+    I am a social butterfly.
+
+    I exercise everyday.'
+  user 2 personas: 'I am on a diet.
+
+    I can t drive.
+
+    I am a house wife.
+
+    I have been married eight years.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1 name].
+
+    User 2: Hello, I''m [User 2 name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I''m a housewife, and I love to cook and bake.
+
+    User 1: That''s great! I''m a college student, and I like to swim and exercise.
+
+    User 2: Oh, I''ve always wanted to learn how to swim.
+
+    User 1: It''s not too hard! I could teach you sometime.
+
+    User 2: That would be great! I''m always looking for new things to do.
+
+    User 1: Me too!
+
+    User 2: So, how long have you been in college?
+
+    User 1: I''m in my second year.
+
+    User 2: Oh, so you''re a sophomore?
+
+    User 1: Yes, that''s right.
+
+    User 2: What''s your major?
+
+    User 1: I''m majoring in business administration.
+
+    User 2: Oh, that''s a good choice.
+
+    User 1: Thanks! I''m excited to start my career after I graduate.
+
+    User 2: I''m sure you''ll do great things.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go swimming, exercise, and hang out with my friends.
+
+    User 2: That sounds like fun! I like to cook, bake, and spend time with my family.
+
+    User 1: Oh, I love to cook too! I''m always trying new recipes.
+
+    User 2: That''s great! I love trying new recipes as well.
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes.
+
+    User 1: Oh, that''s great! I love pasta too.
+
+    User 2: I know a great recipe for lasagna if you''re ever interested.
+
+    User 1: I''d love to try it!
+
+    User 2: Awesome! I''ll send you the recipe later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

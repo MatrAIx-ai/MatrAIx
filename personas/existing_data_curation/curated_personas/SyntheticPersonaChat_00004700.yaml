@@ -1,0 +1,60 @@
+id: '00004700'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4700
+data:
+  user 1 personas: 'I live in the united states.
+
+    I play ice hockey.
+
+    I go to high school.
+
+    I am a boy.'
+  user 2 personas: 'I live on a ranch.
+
+    I enjoy the outdoors.
+
+    I am 21 years old.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to spend time outdoors, especially on my ranch.
+
+    User 1: That sounds like fun! I like to go ice hockey.
+
+    User 2: That''s interesting! I''ve never seen ice hockey before.
+
+    User 1: It''s really fun! You should come watch a game sometime.
+
+    User 2: I might do that! I''ve heard it''s a lot of fun to watch.
+
+    User 1: It is! It''s really fast-paced and exciting.
+
+    User 2: That sounds great! I''m excited to try it.
+
+    User 1: You''ll have to let me know what you think!
+
+    User 2: I will!
+
+    User 1: Where do you live?
+
+    User 2: I live on a ranch in Texas.
+
+    User 1: That''s cool! I''ve never been to Texas before.
+
+    User 2: You should come visit sometime! It''s a beautiful state.
+
+    User 1: I might do that! I''ve heard it''s a lot of fun to go hunting and fishing there.
+
+    User 2: It is! There''s also a lot of good food there.
+
+    User 1: That sounds great! I''ll have to put it on my list of places to visit.
+
+    User 2: You won''t regret it!
+
+    User 1: Thanks for the advice!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

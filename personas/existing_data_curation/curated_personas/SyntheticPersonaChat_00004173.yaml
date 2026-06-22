@@ -1,0 +1,58 @@
+id: '00004173'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4173
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    Cooking is my passion.
+
+    My mother died when i was a child.
+
+    My hair is long and blonde.
+
+    I like to run.'
+  user 2 personas: 'I watch a lot of movies.
+
+    I am a stay at home mom.
+
+    I love to clean.
+
+    I do not have much energy.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I love to watch movies, I''m a bit of a movie buff.
+
+    User 1: Oh, that''s cool! What are some of your favorite movies?
+
+    User 2: I love all kinds of movies, but I''m really into sci-fi and horror.
+
+    User 1: Me too! I love sci-fi and horror movies.
+
+    User 2: What are some of your favorites?
+
+    User 1: I love the Alien movies, The Thing, and The Shining.
+
+    User 2: Oh, those are all great movies! I love The Shining too.
+
+    User 1: Me too! It''s such a creepy and atmospheric movie.
+
+    User 2: It is! I love the atmosphere and the acting.
+
+    User 1: Me too! What''s your favorite horror movie?
+
+    User 2: I''m not sure I could pick just one. I love so many of them.
+
+    User 1: Me too! They''re my favorite genre of movies.
+
+    User 2: I know, right? They''re so much fun to watch.
+
+    User 1: They are! They always keep me on the edge of my seat.
+
+    User 2: Me too! I can''t wait to watch more horror movies.
+
+    User 1: Me neither! They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

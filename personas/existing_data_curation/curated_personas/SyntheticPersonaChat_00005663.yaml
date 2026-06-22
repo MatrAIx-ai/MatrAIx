@@ -1,0 +1,75 @@
+id: '00005663'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5663
+data:
+  user 1 personas: 'My favorite drink is dr pepper.
+
+    I am a nurse.
+
+    I enjoy reading.
+
+    I work in the emergency room.'
+  user 2 personas: 'I don t have many friends.
+
+    I wish i could live in a fantasy world.
+
+    I like lizards.
+
+    I draw during classes instead of taking notes.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+
+    User 2: Hi, my name is [user 2 name].
+
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you like to do for fun?
+
+
+    User 2: I like to draw, read, and play video games.
+
+
+    User 1: Those sound like fun hobbies. I like to read and play video games too.
+
+
+    User 2: That''s cool! What kind of books do you like to read?
+
+
+    User 1: I like to read fantasy and science fiction books.
+
+
+    User 2: I like fantasy books too! What''s your favorite fantasy book?
+
+
+    User 1: My favorite fantasy book is The Lord of the Rings.
+
+
+    User 2: That''s a great book! I''ve read it a few times.
+
+
+    User 1: I''ve read it a few times too. It''s one of my favorite books of all time.
+
+
+    User 2: Me too! What''s your favorite video game?
+
+
+    User 1: My favorite video game is The Legend of Zelda: Ocarina of Time.
+
+
+    User 2: That''s a great game! I''ve played it a few times too.
+
+
+    User 1: I''ve played it a lot of times. It''s one of my favorite video games of all time.
+
+
+    User 2: Me too! I''m glad we have similar interests.
+
+
+    User 1: Me too! It''s always nice to meet someone who likes the same things I do.
+
+
+    User 2: Yeah, it is. I''m glad we got to chat.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

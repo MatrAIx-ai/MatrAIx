@@ -1,0 +1,88 @@
+id: '00006037'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6037
+data:
+  user 1 personas: 'I like cartoons more than movies.
+
+    My mother met elvis.
+
+    I love the water , any water , ocean , river , or lake.
+
+    I like to listen to someone else reading a book.'
+  user 2 personas: 'I had to get a job early as a child.
+
+    I never learned how to swim.
+
+    I am a meat eater.
+
+    I like anime shows.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name]. I''m from [location].
+
+    User 2: Hi, I''m [name]. I''m from [location].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch anime, read manga, and play video games.
+
+    User 1: I like anime too! What are some of your favorite shows?
+
+    User 2: I like Attack on Titan, Naruto, and My Hero Academia.
+
+    User 1: I''ve heard of those shows! I''ve never seen them, but they sound good.
+
+    User 2: They''re really good. You should check them out.
+
+    User 1: I will.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That sounds cool. I''m a nurse.
+
+    User 1: Nice. I''ve always thought about being a nurse.
+
+    User 2: It''s a good job. I like helping people.
+
+    User 1: I''m sure you''re a great nurse.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do for fun outside of work?
+
+    User 2: I like to go hiking, camping, and fishing.
+
+    User 1: I like hiking too! I''ve never been camping or fishing, but I''ve always wanted to try.
+
+    User 2: You should! They''re both great ways to get out in nature and relax.
+
+    User 1: I will.
+
+    User 2: So, what''s your favorite thing about cartoons?
+
+    User 1: I like the way they can be so creative and imaginative. They can take you to all sorts of different worlds and tell all sorts of different stories.
+
+    User 2: I agree. Cartoons are a great way to escape from reality.
+
+    User 1: They really are.
+
+    User 2: So, what''s your favorite cartoon of all time?
+
+    User 1: That''s a hard question to answer. I have so many favorites.
+
+    User 2: Same here.
+
+    User 1: I think I''ll have to go with The Simpsons. It''s been on the air for so long, and it''s still so funny.
+
+    User 2: I love The Simpsons too! It''s one of the best shows ever made.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

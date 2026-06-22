@@ -1,0 +1,19 @@
+id: 00060852
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60852
+persona_description: A software engineer who specializes in the development of data visualization tools. This individual has expertise in using VisIt, a popular data visualization software, and is proficient
+  in reading and understanding the NETCDF data file format used by various codes such as the CCSM, Lodi, FVCOM, and Basic NETCDF. This person is skilled in extending the basic NETCDF reader plugin to handle
+  non-standard data conventions and writing their own custom NETCDF readers to read advanced data formats that VisIt cannot automatically understand. They have a deep understanding of the conventions used
+  in writing NETCDF files and can create simple data conventions for rectilinear and curvilinear meshes using Python.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: data visualization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,68 @@
+id: '00006352'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6352
+data:
+  user 1 personas: 'Paps likes to go mushroom hunting.
+
+    I have a brown belt in karate.
+
+    Grandma makes jewelry.
+
+    I live with my paps and grandma.'
+  user 2 personas: 'I was born premature.
+
+    I have one older sister named mary.
+
+    My dad is journalist for the new york times.
+
+    I live in texas.'
+  Best Generated Conversation: 'User 1: I live with my paps and grandma.
+
+    User 2: I live with my dad and sister.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to write, read, and play video games.
+
+    User 1: I like to play sports, go camping, and do karate.
+
+    User 2: I love camping! I went camping with my family last weekend.
+
+    User 1: That''s awesome! Where did you go camping?
+
+    User 2: We went to a state park in Texas.
+
+    User 1: I''ve never been to Texas. Is it nice?
+
+    User 2: It''s beautiful! There are so many different landscapes to explore.
+
+    User 1: I''d love to go camping in Texas sometime.
+
+    User 2: You should! It''s a great place to spend time in nature.
+
+    User 1: I''m glad you like camping. I''m not sure my paps and grandma would be into it, though.
+
+    User 2: You could try! They might surprise you.
+
+    User 1: I''ll think about it.
+
+    User 2: Have you been to any cool places recently?
+
+    User 1: I went to the Grand Canyon last month.
+
+    User 2: That''s amazing! How was it?
+
+    User 1: It was incredible! I loved seeing all the different rock formations.
+
+    User 2: I''ve always wanted to go to the Grand Canyon.
+
+    User 1: You should! It''s a must-see.
+
+    User 2: I''ll put it on my list.
+
+    User 1: You should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

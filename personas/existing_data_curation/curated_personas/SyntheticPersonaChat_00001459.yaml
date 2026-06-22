@@ -1,0 +1,90 @@
+id: 00001459
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1459
+data:
+  user 1 personas: 'My hair is short.
+
+    My favorite color is yellow.
+
+    My boyfriend is in the army.
+
+    I play piano.'
+  user 2 personas: 'I love chickens.
+
+    I work on a farm.
+
+    I was born in kansas.
+
+    I know how to drive a truck.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to work on my farm and I love chickens.
+
+    User 1: I''ve never been to a farm before. What''s it like?
+
+    User 2: It''s really fun! I get to work with animals and I get fresh eggs every day.
+
+    User 1: That sounds awesome! I''ve always wanted to learn how to drive a truck.
+
+    User 2: It''s not that hard. You just have to be careful and make sure you''re paying attention.
+
+    User 1: I''m sure I could do it. I''m pretty good at driving.
+
+    User 2: Then you should definitely give it a try!
+
+    User 1: I will! Thanks for the advice.
+
+    User 2: No problem! So, what else do you like to do for fun?
+
+    User 1: I love to play the piano. I''ve been playing for about 10 years now.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play the piano.
+
+    User 1: You should definitely try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the encouragement.
+
+    User 1: No problem! So, what do you do for a living?
+
+    User 2: I work on a farm. I''m in charge of the chickens and the pigs.
+
+    User 1: That sounds like a lot of work.
+
+    User 2: It is, but it''s also a lot of fun. I love working with animals.
+
+    User 1: I can imagine. I''ve always loved animals.
+
+    User 2: So, are you from around here?
+
+    User 1: No, I''m from California. I just moved here a few months ago.
+
+    User 2: Oh, that''s cool. What brought you here?
+
+    User 1: I got a job at the local hospital.
+
+    User 2: Oh, that''s great! I''m glad you''re enjoying it here.
+
+    User 1: Me too! I''m really enjoying the change of scenery.
+
+    User 2: I can imagine. California is a lot different from Kansas.
+
+    User 1: It sure is. But I''m starting to love it here.
+
+    User 2: I''m glad to hear that. So, what do you like to do in your free time?
+
+    User 1: I like to read, go for walks, and play the piano.
+
+    User 2: That sounds like a lot of fun. I like to read and go for walks too.
+
+    User 1: We should go for a walk sometime.
+
+    User 2: I would love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

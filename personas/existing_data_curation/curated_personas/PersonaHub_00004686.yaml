@@ -1,0 +1,20 @@
+id: 00004686
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4686
+persona_description: A researcher or bioinformatician who specializes in small RNA studies, particularly focusing on the identification and analysis of small RNA signatures in specific coding regions of
+  genes, and the interpretation of the results in terms of potential biological functions and regulatory mechanisms. They are interested in the relationship between small RNA abundance and gene expression,
+  and the identification of unique small RNA signatures that may be indicative of specific biological processes or disease states. They are likely to be skilled in bioinformatics tools such as RNA-seq analysis
+  and the identification of small RNA signatures using algorithms like DESeq2 or DESeq. They may also have experience with computational methods for identifying repeat sequences and transposon-like sequences,
+  and may be familiar with the software tools like RepeatMasker for this purpose.
+expertise:
+  general_domain_top1pct: bioinformatics
+  specific_domain_top1pct: small RNA analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

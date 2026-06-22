@@ -1,0 +1,52 @@
+id: 00001879
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1879
+data:
+  user 1 personas: 'I have a big beard.
+
+    My hobbies include pillaging and fine dining.
+
+    I am a viking.
+
+    I like to go fishing on my viking boat.
+
+    Its cold where i live.'
+  user 2 personas: 'I do not like animals.
+
+    My favorite food is pizza.
+
+    I am a morning person.
+
+    I like to role play.
+
+    I love cars.'
+  Best Generated Conversation: 'User 1: Hello, my name is Ragnar and I am a Viking. I have a big beard and I like to go fishing on my Viking boat. I also love to go pillaging and fine dining.
+
+    User 2: Hi Ragnar, my name is Sara. I don''t like animals but my favorite food is pizza. I am a morning person and I love to role play. I also love cars.
+
+    User 1: It''s nice to meet you, Sara. It''s funny that you don''t like animals because I love them. I have a pet cat and dog at home.
+
+    User 2: I''m not a fan of fur or scales, but I don''t mind reptiles. I think they''re pretty cool.
+
+    User 1: I''ve never met a Viking before. What''s it like to live in a cold climate?
+
+    User 2: It can be pretty tough at times, but I like the challenge. I think it makes me stronger.
+
+    User 1: I can see how that would be. I''m from a warm climate so I can''t imagine living in a cold climate.
+
+    User 2: I''ve always lived in a cold climate so I''m used to it. I actually love the snow.
+
+    User 1: I''ve never been in the snow before. I''m not sure how I would feel about it.
+
+    User 2: You should come visit me sometime and I''ll show you around. You might surprise yourself and enjoy it.
+
+    User 1: I might just do that. Thanks for the offer.
+
+    User 2: No problem. It was nice talking to you, Ragnar.
+
+    User 1: You too, Sara.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

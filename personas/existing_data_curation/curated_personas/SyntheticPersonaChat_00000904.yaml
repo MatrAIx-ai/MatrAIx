@@ -1,0 +1,74 @@
+id: 00000904
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 904
+data:
+  user 1 personas: 'I am a romantic.
+
+    I like jazz.
+
+    I like victorian things.
+
+    I collect dolls.'
+  user 2 personas: 'I eat well.
+
+    I am very social.
+
+    I am in college.
+
+    I play football.
+
+    I exercise.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What are you up to?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Nice! I''m listening to some jazz.
+
+    User 2: Jazz is cool. I like it too.
+
+    User 1: Me too! I love the way it makes me feel.
+
+    User 2: It''s so relaxing, right?
+
+    User 1: Exactly!
+
+    User 2: What kind of jazz do you like?
+
+    User 1: I like all kinds, but I especially like swing and blues.
+
+    User 2: Me too! I love the energy of swing and the soulfulness of blues.
+
+    User 1: Me too! They''re both so passionate.
+
+    User 2: What''s your favorite jazz song?
+
+    User 1: That''s a hard question! I have so many favorites.
+
+    User 2: Me too! I could name a dozen.
+
+    User 1: I think I''d have to say "Summertime."
+
+    User 2: That''s a good one! I love the lyrics.
+
+    User 1: Me too! It''s so beautiful.
+
+    User 2: What''s your favorite jazz artist?
+
+    User 1: That''s another hard question! I have so many favorites.
+
+    User 2: Me too! I could name a dozen.
+
+    User 1: I think I''d have to say Ella Fitzgerald.
+
+    User 2: She''s my favorite too! She has such a beautiful voice.
+
+    User 1: Me too! She''s so talented.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

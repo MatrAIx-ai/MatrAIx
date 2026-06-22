@@ -1,0 +1,60 @@
+id: '00004341'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4341
+data:
+  user 1 personas: 'I have a garden in my yard.
+
+    I like to go swimming.
+
+    I like to make fresh pies.
+
+    My hobby is sewing.'
+  user 2 personas: 'I was raised by two mothers.
+
+    I am not afraid of what others think.
+
+    My favorite food is spaghetti and meatballs.
+
+    My boyfriend works for nasa.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is Ashley.
+
+    User 1: It''s nice to meet you, Ashley. My name is Adam.
+
+    User 2: It''s nice to meet you too, Adam.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go swimming, read, and play video games.
+
+    User 1: I like to go swimming too! What''s your favorite video game?
+
+    User 2: I like to play Mario Kart. What''s your favorite food?
+
+    User 1: I like spaghetti and meatballs. What''s your favorite hobby?
+
+    User 2: I like to sew. What''s your favorite thing about yourself?
+
+    User 1: I''m a good listener. What''s something you''re proud of?
+
+    User 2: I''m proud of the fact that I''m not afraid of what others think.
+
+    User 1: That''s a good quality. What are your goals for the future?
+
+    User 2: I want to be a writer. What are your goals?
+
+    User 1: I want to be a successful entrepreneur.
+
+    User 2: That''s a great goal. I wish you the best of luck with it.
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

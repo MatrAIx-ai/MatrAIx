@@ -1,0 +1,74 @@
+id: '00003230'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3230
+data:
+  user 1 personas: 'I work as a grill cook.
+
+    Running is a hobby.
+
+    I am looking for a second job.
+
+    My dream is to own my own restaurant.
+
+    My favorite band is pink floyd.'
+  user 2 personas: 'Sometimes i think i should get out and exercise more.
+
+    I love sunsets.
+
+    I wake early to watch the sun rise every day.
+
+    I work 60 hours a week.'
+  Best Generated Conversation: 'User 1: Hey, I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too. What do you do for a living?
+
+    User 1: I''m a grill cook.
+
+    User 2: Oh, that''s cool. I''ve always wanted to try cooking.
+
+    User 1: It''s not too hard. You just have to know what you''re doing.
+
+    User 2: I''m sure I could figure it out.
+
+    User 1: I''m sure you could. So, what do you do for a living?
+
+    User 2: I work as a personal trainer.
+
+    User 1: Oh, that''s really cool. I''ve always been interested in getting fit, but I''ve never really known where to start.
+
+    User 2: I could help you with that.
+
+    User 1: That would be great. Thanks!
+
+    User 2: No problem. So, what are your hobbies?
+
+    User 1: I like to run.
+
+    User 2: Oh, that''s cool. I love running too.
+
+    User 1: I''m training for a marathon right now.
+
+    User 2: Wow, that''s impressive. I''ve never run a marathon before.
+
+    User 1: It''s not as hard as you think. You just have to put in the time and effort.
+
+    User 2: I''m sure I could do it.
+
+    User 1: I''m sure you could too. So, what''s your dream job?
+
+    User 2: I would love to own my own gym.
+
+    User 1: Oh, that''s really cool. I think you could definitely do that.
+
+    User 2: Thanks! I''m working hard to make it happen.
+
+    User 1: I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

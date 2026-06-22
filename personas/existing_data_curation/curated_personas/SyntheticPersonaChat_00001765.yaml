@@ -1,0 +1,80 @@
+id: '00001765'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1765
+data:
+  user 1 personas: 'My name is gerald.
+
+    I like basketball.
+
+    I work at mcdonald.
+
+    I like rock music.'
+  user 2 personas: 'I currently work for ibm in chicago.
+
+    I am not a basketball player though.
+
+    I am almost 7 feet tall.
+
+    My favorite band is the rolling stones.
+
+    I would like to retire to hawaii in the next 10 years.'
+  Best Generated Conversation: 'User 1: Hi, my name is Gerald.
+
+    User 2: Hello Gerald, my name is [User 2''s name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I work as a software engineer for IBM in Chicago.
+
+    User 1: Oh, that''s cool. I work at McDonald''s.
+
+    User 2: What''s your favorite thing about your job?
+
+    User 1: I like working with people and I like the fast pace.
+
+    User 2: I can understand that. I like working with people too.
+
+    User 1: Do you have any hobbies?
+
+    User 2: Yes, I like playing basketball and I like to listen to music.
+
+    User 1: I like basketball too! I used to play in high school.
+
+    User 2: Oh, that''s awesome! What position did you play?
+
+    User 1: I was a point guard.
+
+    User 2: That''s cool! I was a power forward.
+
+    User 1: We should play basketball sometime.
+
+    User 2: I''d love to!
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is the Rolling Stones.
+
+    User 1: I like them too! They''re one of my favorite bands.
+
+    User 2: I''ve seen them in concert a few times.
+
+    User 1: I''m jealous! I''ve never seen them in concert.
+
+    User 2: You should definitely see them live if you get the chance.
+
+    User 1: I will!
+
+    User 2: So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, that''s cool. I''ve always wanted to visit California.
+
+    User 1: You should! It''s a beautiful state.
+
+    User 2: I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

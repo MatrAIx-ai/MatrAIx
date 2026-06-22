@@ -1,0 +1,86 @@
+id: '00006123'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6123
+data:
+  user 1 personas: 'My favorite band is rise against.
+
+    I like sports.
+
+    I usually go to bed late.
+
+    I am studying to be a dentist.
+
+    My favorite team is the raptors.'
+  user 2 personas: 'My favorite food is shrimp.
+
+    I sometimes spend too much money at the casino.
+
+    I once met a man i still believe was a vampire.
+
+    My mom is a palm reader in new orleans.
+
+    I love hanging out with my friends.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your favorite band?
+
+    User 2: I love Rise Against!
+
+    User 1: Me too! They''re so good.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: I like "Ready to Fall."
+
+    User 2: That''s a great one! I like "The Violence."
+
+    User 1: That''s a good one too! I love their lyrics.
+
+    User 2: Me too! They''re so poetic.
+
+    User 1: What other bands do you like?
+
+    User 2: I like a lot of different bands, but some of my favorites are The Offspring, Green Day, and Blink-182.
+
+    User 1: Nice! I like those bands too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and read.
+
+    User 2: I like video games too! What''s your favorite game?
+
+    User 1: I like a lot of different games, but some of my favorites are "The Last of Us," "Red Dead Redemption," and "Fallout 4."
+
+    User 2: Those are all great games! I''ve played them all.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the casino, hang out with my friends, and go to concerts.
+
+    User 1: I like going to concerts too! What''s your favorite concert you''ve ever been to?
+
+    User 2: I went to a Rise Against concert a few years ago and it was amazing!
+
+    User 1: I bet that was great! I wish I could have gone.
+
+    User 2: It was so good! I''m so glad I went.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go to my mom''s house in New Orleans a lot. She''s a palm reader and she''s really good at it.
+
+    User 1: That''s so cool! I''ve never met a palm reader before.
+
+    User 2: You should go to my mom''s some time! She''ll give you a reading for free.
+
+    User 1: I might just take you up on that!
+
+    User 2: You''re welcome to! She loves meeting new people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

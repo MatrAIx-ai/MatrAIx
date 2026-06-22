@@ -1,0 +1,18 @@
+id: '00050355'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50355
+persona_description: A mathematician or statistician who specializes in using complex mathematical formulas to solve complex problems related to aviation, particularly in the search for missing aircraft.
+  They have expertise in using optimal searching and Bayesian statistics to guide search efforts and have a strong understanding of the limitations and potential biases of these techniques. They are interested
+  in applying these formulas to solve the mystery of MH370 and have experience with the development and implementation of mathematical models to solve real-world problems.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: statistical mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: aviation-related statistical mathematics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,72 @@
+id: 00007090
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7090
+data:
+  user 1 personas: 'I am a financial analyst for a brewery.
+
+    I have been married for 6 years.
+
+    I like to go to the casino on weekends.
+
+    I have been to 7 countries in europe and 3 countries in asia.'
+  user 2 personas: 'I joined a new team last month.
+
+    I am a soccer player.
+
+    Nike cleats are my favorite.
+
+    My number is 42.
+
+    I am a goalie.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a professional soccer player.
+
+    User 1: Oh, that''s cool! What''s your position?
+
+    User 2: I''m a goalie.
+
+    User 1: Oh, that''s interesting! I''ve never met a professional soccer player before.
+
+    User 2: Really? That''s cool.
+
+    User 1: Yeah, what''s it like being a professional soccer player?
+
+    User 2: It''s great! I get to travel all over the world and play the sport I love.
+
+    User 1: That sounds amazing! What''s your favorite place you''ve traveled to?
+
+    User 2: I love going to Europe. The food is amazing and the history is fascinating.
+
+    User 1: I''ve never been to Europe, but I''ve heard it''s beautiful.
+
+    User 2: It is! You should definitely go one day.
+
+    User 1: I will! What''s your favorite thing about being a goalie?
+
+    User 2: I love the feeling of making a save and helping my team win.
+
+    User 1: That must be a great feeling!
+
+    User 2: It is!
+
+    User 1: So, what''s the best game you''ve ever played?
+
+    User 2: I''m not sure I can pick just one. I''ve had a lot of great games.
+
+    User 1: I bet!
+
+    User 2: Yeah, I''m just happy to be playing soccer and making a living doing something I love.
+
+    User 1: That''s great! I''m sure you''re a great goalie.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00003714'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3714
+data:
+  user 1 personas: 'I like to go out fishing.
+
+    My mother is a teacher in the city.
+
+    My favorite food is cheeseburgers.
+
+    I work out daily.
+
+    I play the bass guitar.'
+  user 2 personas: 'I love animals.
+
+    I have trouble losing weight.
+
+    I am near sighted and wear contact lenses.
+
+    I am a very short woman.
+
+    I don t cook and usually eat out.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What are your hobbies?
+
+    User 2: I love animals and I go fishing a lot.
+
+    User 1: That''s cool! I love fishing too. I''m also a musician. I play the bass guitar.
+
+    User 2: That''s really cool! I wish I could play an instrument.
+
+    User 1: It''s not too hard to learn. You should give it a try!
+
+    User 2: I might just do that.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a teacher. I teach kindergarten.
+
+    User 1: That''s great! My mom is also a teacher.
+
+    User 2: What does she teach?
+
+    User 1: She teaches third grade.
+
+    User 2: That''s awesome! What''s your favorite food?
+
+    User 1: My favorite food is cheeseburgers.
+
+    User 2: I love cheeseburgers too!
+
+    User 1: What''s your favorite thing to do on weekends?
+
+    User 2: I usually go out with my friends or family. We like to go to the movies or go bowling.
+
+    User 1: That sounds like a lot of fun. I like to go out with my friends too. We like to go to the beach or play video games.
+
+    User 2: I love going to the beach! It''s so relaxing.
+
+    User 1: Me too! It''s my favorite place to be.
+
+    User 2: It''s nice to meet you, [user 1 name].
+
+    User 1: Nice to meet you too, [user 2 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

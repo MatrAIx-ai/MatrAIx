@@ -1,0 +1,74 @@
+id: 00002939
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2939
+data:
+  user 1 personas: 'My best friend is gay.
+
+    My passion is in programming.
+
+    One day i hope to own my own company.
+
+    I am in school to be a computer engineer.
+
+    I go to bed pretty late.'
+  user 2 personas: 'I went to miami university.
+
+    I am a baseball player.
+
+    I m married and have three kids.
+
+    I make a million dollars a year.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baseball player.
+
+    User 1: That''s cool! I''m a computer engineer in training.
+
+    User 2: What do you like about programming?
+
+    User 1: I love the challenge of it. It''s always changing and there''s always something new to learn.
+
+    User 2: That''s true. What are you most passionate about?
+
+    User 1: I''m passionate about starting my own company. I think it would be really cool to be my own boss and make my own rules.
+
+    User 2: That''s awesome! I wish you the best of luck.
+
+    User 1: Thanks! What do you do in your free time?
+
+    User 2: I like to spend time with my family. I have three kids and we love to go to the park, play games, and watch movies.
+
+    User 1: That sounds like a lot of fun. I''m single, but I have a great group of friends. We like to go out to eat, go to the movies, and play games.
+
+    User 2: That sounds like a lot of fun too.
+
+    User 1: It is. So, what do you like to do for fun?
+
+    User 2: I like to play baseball, go to the gym, and watch movies.
+
+    User 1: That sounds like a lot of fun. I''m not much of a sports person, but I do like to go to the gym. I also like to read and watch movies.
+
+    User 2: That sounds like a lot of fun too.
+
+    User 1: It is. So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: That sounds great. I''m all of those things!
+
+    User 2: (laughing) I''m sure you are.
+
+    User 1: I am.
+
+    User 2: So, what do you think? Do you want to be friends?
+
+    User 1: Sure! I''d love to be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

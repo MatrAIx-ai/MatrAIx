@@ -1,0 +1,66 @@
+id: '00002060'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2060
+data:
+  user 1 personas: 'Running is a hobby.
+
+    My favorite band is pink floyd.
+
+    I am looking for a second job.
+
+    My dream is to own my own restaurant.'
+  user 2 personas: 'I like to listen to country music.
+
+    I work at a bar.
+
+    I surf everyday.
+
+    People say i can cook well.
+
+    I can play piano.'
+  Best Generated Conversation: 'User 1: I love running! It''s my favorite hobby.
+
+    User 2: I like to run too! It''s a great way to stay in shape.
+
+    User 1: Yeah, I agree. It''s also a great way to de-stress.
+
+    User 2: Definitely. I always feel better after a run.
+
+    User 1: Me too. So, what do you like to listen to while you run?
+
+    User 2: I usually listen to country music. It gets me pumped up and ready to go.
+
+    User 1: I like country music too! What are some of your favorite artists?
+
+    User 2: I like Luke Bryan, Toby Keith, and Keith Urban.
+
+    User 1: Those are all great artists! I love their music.
+
+    User 2: Me too! So, what do you do for a living?
+
+    User 1: I''m a teacher. I teach English to middle school students.
+
+    User 2: Oh, that sounds like a fun job. I always enjoyed English class.
+
+    User 1: It can be fun! It''s also challenging.
+
+    User 2: I''m sure it is. So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going back to school to get my master''s degree.
+
+    User 2: That''s a great idea! I''m sure you''d be a great teacher.
+
+    User 1: Thanks! I appreciate that. So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just enjoying my life and taking it day by day.
+
+    User 1: That''s a good plan. You don''t always have to have everything planned out.
+
+    User 2: Exactly. I''m just happy with where I''m at in life right now.
+
+    User 1: That''s great. I''m happy for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

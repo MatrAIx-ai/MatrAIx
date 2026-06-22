@@ -1,0 +1,78 @@
+id: '00000507'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 507
+data:
+  user 1 personas: 'I love comics.
+
+    I ve started creating my own comics and presenting them to publishers.
+
+    I ve been rejected several times and thought of giving up with this.
+
+    And also love drawing.
+
+    I decided to publish my creations on internet.'
+  user 2 personas: 'I like football.
+
+    We drink beer and eat food.
+
+    It s great fun.
+
+    We watch the games together.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: I''m watching the football game.
+
+    User 1: Oh, cool! I love football! What team are you rooting for?
+
+    User 2: I''m rooting for the Bears!
+
+    User 1: Oh, that''s a good team! I''m rooting for the Packers!
+
+    User 2: Oh, we''re on different sides then!
+
+    User 1: Yeah, looks like it!
+
+    User 2: Well, I hope you enjoy the game!
+
+    User 1: You too!
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to watch football, go to the gym, and hang out with my friends.
+
+    User 1: Oh, cool! I like to do those things too!
+
+    User 2: Oh, that''s great! We should hang out sometime!
+
+    User 1: Yeah, that would be fun!
+
+    User 2: Great! I''ll text you my number.
+
+    User 1: Okay, sounds good!
+
+    User 2: Hey, I just sent you my number.
+
+    User 1: Okay, I got it!
+
+    User 2: Great! Let''s hang out this weekend!
+
+    User 1: Okay, sounds good! What do you want to do?
+
+    User 2: How about we go to a football game?
+
+    User 1: That sounds like fun!
+
+    User 2: Great! I''ll text you the details.
+
+    User 1: Okay, sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

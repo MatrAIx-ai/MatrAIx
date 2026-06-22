@@ -1,0 +1,31 @@
+id: '00002422'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2422
+data:
+  user 1 personas: 'I am tall and blonde.
+
+    I love to lamp.
+
+    My favorite band is insane clown posse.
+
+    I work as an interior designer.'
+  user 2 personas: 'I worked at a movie theater for 4 years.
+
+    I have always had long hair.
+
+    I am saving up to buy a new camera.
+
+    I enjoy running at night.
+
+    I like spicy food.'
+  Best Generated Conversation: "User 1: Hey! How are you doing today?\nUser 2: I'm doing good, thanks! How are you?\nUser 1: I'm doing well too! What do you do for fun?\nUser 2: I love to run at night,\
+    \ I used to work at a movie theater and I love spicy food. \nUser 1: That's awesome! I also love spicy food, and I used to be a movie theater employee too.\nUser 2: That's so cool! What was your favorite\
+    \ movie to work on?\nUser 1: My favorite movie to work on was probably The Matrix.\nUser 2: That's a great movie! I love Keanu Reeves.\nUser 1: Me too! He's so awesome.\nUser 2: I hear he's a really\
+    \ nice guy in real life too.\nUser 1: I've heard that too. He seems like he would be.\nUser 2: So, what do you do for work now?\nUser 1: I'm an interior designer.\nUser 2: That's cool! Do you enjoy\
+    \ it?\nUser 1: I love it! It's so much fun to get to help people make their homes beautiful.\nUser 2: That's awesome! I love to decorate my own home.\nUser 1: I bet you do! You seem like you have a\
+    \ great sense of style.\nUser 2: Thank you! I try my best.\nUser 1: Well, it shows. You look great.\nUser 2: Thank you! You're too kind.\nUser 1: You're welcome! I'm just being honest."
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

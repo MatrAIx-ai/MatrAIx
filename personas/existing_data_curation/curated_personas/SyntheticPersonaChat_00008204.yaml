@@ -1,0 +1,78 @@
+id: 00008204
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8204
+data:
+  user 1 personas: 'I have been published in the new yorker magazine.
+
+    I have a severe phobia of wide open spaces.
+
+    I am a gourmet cook.
+
+    As a child , i won a national spelling bee.'
+  user 2 personas: 'I have a dog named bob.
+
+    I enjoy fishing.
+
+    I am a closet cannibal.
+
+    I live on an island.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I enjoy fishing.
+
+    User 1: That''s cool. Do you fish often?
+
+    User 2: Yes, I try to go fishing at least once a week.
+
+    User 1: Where do you like to go fishing?
+
+    User 2: I like to fish in the ocean. I live on an island, so there''s always a good spot to fish.
+
+    User 1: That sounds like a lot of fun. I''ve never been fishing in the ocean before.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might just have to do that.
+
+    User 2: Good. You won''t be disappointed.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to cook.
+
+    User 1: That''s cool. What kind of food do you like to cook?
+
+    User 2: I like to cook all sorts of food, but I''m especially good at cooking seafood.
+
+    User 1: That''s interesting. I''ve never been a big fan of seafood, but I''m sure your cooking would change my mind.
+
+    User 2: I''m sure it would. I''m a really good cook.
+
+    User 1: So, what''s your favorite thing to cook?
+
+    User 2: I love to cook seafood pasta. It''s my signature dish.
+
+    User 1: Seafood pasta sounds delicious. I might have to try it sometime.
+
+    User 2: You should. It''s really good.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I also like to read.
+
+    User 1: That''s cool. What do you like to read?
+
+    User 2: I like to read all sorts of books, but I''m especially interested in history and politics.
+
+    User 1: That''s interesting. I''m not much of a reader, but I do enjoy reading history books.
+
+    User 2: You should read more. It''s a great way to learn about the world.
+
+    User 1: I might just have to do that.
+
+    User 2: Good. You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

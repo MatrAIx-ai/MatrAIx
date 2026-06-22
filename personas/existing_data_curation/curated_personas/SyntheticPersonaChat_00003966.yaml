@@ -1,0 +1,78 @@
+id: 00003966
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3966
+data:
+  user 1 personas: 'I have a cat named jasper.
+
+    I work as a barista.
+
+    I am a vegan.
+
+    My favorite flower is a rose.'
+  user 2 personas: 'My older sister plays clarinet.
+
+    I have a pomeranian.
+
+    I play the violin.
+
+    I have entered into many violin competitions before and have placed in a few of them.
+
+    My mom is a music teacher at the elementary school.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I play the violin.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to play an instrument.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that. What kind of music do you like to play?
+
+    User 2: I like to play classical music, but I also like to play some pop music.
+
+    User 1: Nice! Do you play in any bands?
+
+    User 2: No, I don''t. I just play for fun.
+
+    User 1: That''s cool. I''m sure you''re really good at it.
+
+    User 2: Thanks! I''ve been playing for a long time.
+
+    User 1: I can tell.
+
+    User 2: What do you do for fun?
+
+    User 1: I work as a barista.
+
+    User 2: Oh, that sounds cool. Do you like it?
+
+    User 1: Yeah, it''s fun. I get to meet a lot of interesting people.
+
+    User 2: Nice! What''s your favorite flower?
+
+    User 1: My favorite flower is a rose.
+
+    User 2: Mine too! I love the smell of roses.
+
+    User 1: Me too! They''re so pretty.
+
+    User 2: I have a pomeranian.
+
+    User 1: Oh, that''s so cute! I love dogs.
+
+    User 2: My mom is a music teacher at the elementary school.
+
+    User 1: That''s awesome! I bet she''s really good at it.
+
+    User 2: She is! She''s been teaching for a long time.
+
+    User 1: I bet she''s really proud of you.
+
+    User 2: She is! She always tells me how proud she is of me.
+
+    User 1: That''s great! I''m sure you''re making her very happy.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00006642'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6642
+data:
+  user 1 personas: 'I take vitamin c when i have a cold.
+
+    My friend once bought me a car.
+
+    My favorite season is winter.
+
+    I am disabled and cannot walk.'
+  user 2 personas: 'I live with my parents and my little brother.
+
+    I am in 3rd grade.
+
+    I am a french girl , but i moved to the us last year.
+
+    I like to play soccer , draw and read asterix.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.'
+  Best Generated Conversation: 'User 1: Hey! I''m (user 1''s name). What''s your name?
+
+    User 2: Hi! I''m (user 2''s name). Nice to meet you!
+
+    User 1: Nice to meet you too! Where are you from?
+
+    User 2: I''m from France, but I moved to the US last year.
+
+    User 1: Oh, cool! I''ve always wanted to go to France. What''s it like there?
+
+    User 2: It''s beautiful! The food is amazing, and the people are so friendly.
+
+    User 1: That sounds amazing! I''m glad you like it here in the US.
+
+    User 2: I do! It''s a great country.
+
+    User 1: What''s your favorite thing to do in the US?
+
+    User 2: I love to play soccer. I also like to draw and read books.
+
+    User 1: That sounds like a lot of fun! I like to play soccer too.
+
+    User 2: Oh, cool! Do you play on a team?
+
+    User 1: I used to, but I can''t anymore because of my disability.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, but I still like to play sometimes.
+
+    User 2: That''s great!
+
+    User 1: So, what do you like to do in the summer?
+
+    User 2: I like to go to summer camp. I also like to go swimming and play outside.
+
+    User 1: That sounds like a lot of fun! I like to go swimming too.
+
+    User 2: Oh, cool! I''m glad we have something in common.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

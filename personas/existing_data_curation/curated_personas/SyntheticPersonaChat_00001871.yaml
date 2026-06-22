@@ -1,0 +1,70 @@
+id: 00001871
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1871
+data:
+  user 1 personas: 'I eat all take out.
+
+    I still live at home with my parents.
+
+    I do not want a job.
+
+    I am 32.'
+  user 2 personas: 'My favorite food is cheeseburgers.
+
+    I play the bass guitar.
+
+    My mother is a teacher in the city.
+
+    I like to go out fishing.
+
+    I work out daily.'
+  Best Generated Conversation: 'User 1: I''m looking for someone to go fishing with.
+
+    User 2: I love fishing! I go out fishing every weekend.
+
+    User 1: That''s great! I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: You''re in luck! I''m always looking for new people to go fishing with.
+
+    User 1: What do you need me to bring?
+
+    User 2: Just a fishing pole and some bait. I''ll take care of the rest.
+
+    User 1: Okay, sounds good. When are we going?
+
+    User 2: How about this weekend?
+
+    User 1: That works for me!
+
+    User 2: Great! I''ll pick you up at 7am.
+
+    User 1: Perfect! See you then!
+
+
+    (After fishing)
+
+
+    User 1: That was so much fun! I can''t believe I''ve never been fishing before.
+
+    User 2: I''m glad you enjoyed it! I told you you''d have a good time.
+
+    User 1: So, what''s next?
+
+    User 2: Well, we could always go back next weekend.
+
+    User 1: Or we could try a different type of fishing, like fly fishing.
+
+    User 2: That sounds like fun! I''ve always wanted to try fly fishing.
+
+    User 1: Great! I''ll do some research and we can plan a trip.
+
+    User 2: Sounds good to me!
+
+    User 1: Thanks for taking me fishing today. I really appreciate it.
+
+    User 2: No problem! I''m always happy to share my love of fishing with others.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

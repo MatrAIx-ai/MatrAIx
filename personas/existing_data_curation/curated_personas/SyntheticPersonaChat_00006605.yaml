@@ -1,0 +1,45 @@
+id: '00006605'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6605
+data:
+  user 1 personas: 'I live near grand rapids , michigan.
+
+    I live with my wife and kids.
+
+    My name is william , but people call me bill.
+
+    I own a small farm where i herd cattle.'
+  user 2 personas: 'I love to go out to eat with my family.
+
+    I like to take drives in the country.
+
+    I like to read books that are in a series.
+
+    I like to go to the movies.
+
+    I like to chat with my friends.'
+  Best Generated Conversation: 'User 1: Hi, I''m Bill. I''m from Grand Rapids, Michigan.
+
+    User 2: Hi Bill, I''m [name]. I''m from [city].
+
+    User 1: It''s nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to go out to eat with my family, take drives in the country, read books, go to the movies, and chat with my friends.
+
+    User 1: Sounds like you have a lot of interests! I like to go out to eat with my wife and kids too. I also like to take drives in the country and read books. I''m not much of a movie-goer, but I do
+    like to chat with my friends.
+
+    User 2: It''s funny that we have so many similar interests! I''m sure we''d have a lot of fun hanging out together.
+
+    User 1: I think we would too. Maybe we could get together sometime and go out to dinner or take a drive in the country.
+
+    User 2: That would be great! I''d love to do that.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Sounds good. I''ll be looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

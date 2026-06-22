@@ -1,0 +1,18 @@
+id: '00036120'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36120
+persona_description: A security expert who advises on the safe and secure use of programming languages and systems, particularly in the areas of web development and data analysis. They are aware of potential
+  security vulnerabilities and work to mitigate them through proper coding practices, testing, and implementation of security measures. They are familiar with the pitfalls of using eval() in PHP and encourage
+  the use of alternative methods for evaluating user input.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: web development security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

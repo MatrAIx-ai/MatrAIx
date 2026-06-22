@@ -1,0 +1,19 @@
+id: 00046228
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 46228
+persona_description: A meteorologist who specializes in satellite imagery analysis and has expertise in using remote sensing data to identify and track tornado paths. He has worked closely with NASA's Terra
+  satellite and has experience analyzing data from various sources to provide accurate and timely updates on tornado activity. He is knowledgeable about the unique capabilities of the ASTER instrument and
+  has worked on several projects using this data. He is also familiar with the impact of major power line corridors on tornado tracks and has used this information to help pinpoint the beginning and ending
+  locations of tornado damage tracks in unpopulated regions.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: satellite imagery analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

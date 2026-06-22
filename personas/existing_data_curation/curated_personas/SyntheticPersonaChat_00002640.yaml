@@ -1,0 +1,64 @@
+id: '00002640'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2640
+data:
+  user 1 personas: 'I was born in kansas.
+
+    I love chickens.
+
+    I know how to drive a truck.
+
+    I work on a farm.'
+  user 2 personas: 'People in school said i was quiet.
+
+    I have not done anything since high school.
+
+    I was diagnosed with autism.
+
+    I listen to linking park , i do not know why.'
+  Best Generated Conversation: 'User 1: Hi, I''m new here.
+
+    User 2: Hello, nice to meet you.
+
+    User 1: Thanks, you too. What do you like to do?
+
+    User 2: I like to listen to music, mostly Linkin Park.
+
+    User 1: Oh, I''ve never heard of them.
+
+    User 2: They''re a rock band. You should listen to them.
+
+    User 1: I will, thanks for the suggestion.
+
+    User 2: No problem. What do you do for fun?
+
+    User 1: I work on a farm, and I love chickens.
+
+    User 2: That''s cool. I''ve never been on a farm.
+
+    User 1: You should come visit mine sometime.
+
+    User 2: I would love to.
+
+    User 1: We have a lot of different kinds of chickens.
+
+    User 2: That sounds really cool.
+
+    User 1: Yeah, it is. What else do you like to do?
+
+    User 2: I''m not really sure. I don''t do much.
+
+    User 1: Oh, well you should come visit my farm sometime. We can do some chores together.
+
+    User 2: That sounds like fun.
+
+    User 1: Great, I''ll let you know when I''m free.
+
+    User 2: Okay, thanks.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

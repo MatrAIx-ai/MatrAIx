@@ -1,0 +1,110 @@
+id: '00003116'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3116
+data:
+  user 1 personas: 'I like italian cousine.
+
+    I work in the office , 9 till 5.
+
+    This summer i went on vacation to italy.
+
+    Sometimes i go to yoga classes.'
+  user 2 personas: 'I work as a trauma surgeon.
+
+    I have one little girl.
+
+    I graduated top of my class.
+
+    My wife is a college professor.
+
+    My mother was a concert pianist.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a trauma surgeon.
+
+    User 1: Wow, that must be a very stressful job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I can imagine. Do you have any hobbies outside of work?
+
+    User 2: I like to spend time with my family, and I also enjoy playing golf.
+
+    User 1: That''s nice. I like to go to yoga classes and cook Italian food.
+
+    User 2: I love Italian food! I went to Italy for vacation this summer.
+
+    User 1: Oh, that''s awesome! Where did you go?
+
+    User 2: I went to Rome and Florence. It was a beautiful trip.
+
+    User 1: I''m glad you had a good time. I''ve always wanted to go to Italy.
+
+    User 2: You should go! It''s a great place to visit.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem.
+
+    User 1: So, what''s your favorite thing about being a trauma surgeon?
+
+    User 2: I like the challenge of it. It''s always different and exciting.
+
+    User 1: I can imagine. Do you have any interesting stories from your time as a trauma surgeon?
+
+    User 2: Sure, I have a few. One time, I had a patient who was in a car accident. He was in critical condition, but I was able to save his life.
+
+    User 1: Wow, that''s amazing!
+
+    User 2: It was. I''m glad I was able to help him.
+
+    User 1: I''m sure he''s glad too.
+
+    User 2: Yeah, I think he was.
+
+    User 1: So, what''s your favorite thing about being a father?
+
+    User 2: I love spending time with my daughter. She''s the light of my life.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, she''s great.
+
+    User 1: So, what''s your favorite thing to do with your daughter?
+
+    User 2: We like to play games, go to the park, and read books together.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is.
+
+    User 1: So, what''s your favorite thing to do with your wife?
+
+    User 2: We like to go on walks, cook dinner together, and watch movies.
+
+    User 1: That sounds like a lot of fun too.
+
+    User 2: It is.
+
+    User 1: So, what''s your favorite thing about your wife?
+
+    User 2: She''s my best friend. I can talk to her about anything.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, she''s great.
+
+    User 1: Well, it''s been great chatting with you. I have to go now.
+
+    User 2: It''s been great chatting with you too. Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

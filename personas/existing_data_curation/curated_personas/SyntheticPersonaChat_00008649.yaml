@@ -1,0 +1,78 @@
+id: 00008649
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8649
+data:
+  user 1 personas: 'I live in japan and own the biggest mansion in the country.
+
+    I am touring with frank ocean.
+
+    I am a rapper.
+
+    I just bought a new mansion.'
+  user 2 personas: 'I love to hike.
+
+    I like to take photos.
+
+    I live alone.
+
+    I am an environmental engineer.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What are you doing today?
+
+    User 2: I''m hiking in the mountains.
+
+    User 1: Nice! I love hiking. Where are you hiking?
+
+    User 2: I''m hiking in the Japanese Alps.
+
+    User 1: That''s awesome! I''ve always wanted to go to Japan.
+
+    User 2: It''s a beautiful country. You should definitely go sometime.
+
+    User 1: I will! I''m going to need some time to save up for a trip though.
+
+    User 2: That''s understandable. It''s a long flight from here.
+
+    User 1: Yeah, it''s about 15 hours from here.
+
+    User 2: But it''s worth it. Japan is a beautiful country with so much to offer.
+
+    User 1: I''m sure it is. I''ve heard great things about it.
+
+    User 2: If you ever do decide to come, let me know. I''ll be happy to show you around.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: No problem.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m an environmental engineer.
+
+    User 1: Oh, that''s cool! What does that involve?
+
+    User 2: I design and build water treatment plants.
+
+    User 1: That sounds interesting.
+
+    User 2: It is. I like it a lot.
+
+    User 1: I can imagine. It''s important work.
+
+    User 2: Yeah, it is. I''m glad I can do it.
+
+    User 1: So, what''s it like to live in Japan?
+
+    User 2: It''s great! The people are friendly, the food is delicious, and the culture is rich and vibrant.
+
+    User 1: It sounds amazing. I can''t wait to visit.
+
+    User 2: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

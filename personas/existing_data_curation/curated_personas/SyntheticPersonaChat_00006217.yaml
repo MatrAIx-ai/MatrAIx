@@ -1,0 +1,50 @@
+id: '00006217'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6217
+data:
+  user 1 personas: 'I donate any overstock to charity.
+
+    I am a couponer.
+
+    I like to keep my stockpile organised.
+
+    I love to save money.'
+  user 2 personas: 'I dream of becoming a famous actress.
+
+    I am a writer.
+
+    I don t like the beach.
+
+    Zebras are my favorite animals.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I am a writer and I dream of becoming a famous actress.
+
+    User 1: That''s amazing! I am a couponer and I love to save money.
+
+    User 2: That''s interesting! Do you have a lot of coupons?
+
+    User 1: Yes, I have a lot of coupons. I like to keep my stockpile organized.
+
+    User 2: That''s really cool! I''m not very organized.
+
+    User 1: I don''t mind organizing. I also like to donate any overstock to charity.
+
+    User 2: That''s really nice of you! I don''t like the beach, but I love zebras.
+
+    User 1: Zebras are my favorite animals too! I think they''re so beautiful.
+
+    User 2: I agree! They''re so unique.
+
+    User 1: I''m glad we have something in common!
+
+    User 2: Me too! I''m sure we''ll have a lot of fun chatting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

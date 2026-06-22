@@ -1,0 +1,18 @@
+id: 00040387
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40387
+persona_description: A scientist or researcher who specializes in the study of plant genetics and crop improvement, particularly in the context of wheat. They have expertise in decoding the genetic sequence
+  of wheat and are interested in how this knowledge can be used to improve crop yields and adapt to the challenges of climate change, disease, and population growth. They are also aware of the importance
+  of politics and economics in food distribution and are cautious about relying solely on genetics to solve food security issues.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: plant genetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: crop improvement through genetic sequencing
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,19 @@
+id: '00013006'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13006
+persona_description: A professional with expertise in environmental studies and water quality monitoring, focusing on the analysis and interpretation of time-of-travel data for solutes in Mississippi streams.
+  They are interested in the significance of this information for environmental studies and the potential impact of spills of contaminants in waterways. They are likely to be familiar with the U.S. Geological
+  Survey's data collection methods and the importance of accurate time-of-travel estimation in assessing the impact of environmental changes. They may also have knowledge of the potential applications of
+  this information in areas such as water resource management and public health.
+expertise:
+  general_domain_top1pct: environmental science
+  specific_domain_top1pct: water quality monitoring
+  general_domain_top01pct: None
+  specific_domain_top01pct: time-of-travel data analysis for solutes in Mississippi streams
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

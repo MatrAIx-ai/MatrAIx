@@ -1,0 +1,62 @@
+id: 00008582
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8582
+data:
+  user 1 personas: 'I moved to ny to study in a prestigious designing school.
+
+    My desire is to becom a fashion designer.
+
+    Since young i ve loved fashion.
+
+    My inspirations are alexander mcqueen and coco chanel.
+
+    I love to go shopping and inspire myself in stylish stores.'
+  user 2 personas: 'My mother is an immigrant from saudi arabia.
+
+    My daughters say i am a great mother.
+
+    I have a family of three daughters.
+
+    I am a woman.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1 name)! I''m a fashion designer from New York. I love shopping and inspiring myself in stylish stores. What do you do for fun?
+
+
+    User 2: Hi, I''m (user 2 name)! I''m a mother of three daughters. I love my family and love being a mom. What''s your favorite fashion designer?
+
+
+    User 1: My favorite fashion designers are Alexander McQueen and Coco Chanel. I love their unique and avant-garde designs. What about you?
+
+
+    User 2: I love those designers too! I also like Stella McCartney and Carolina Herrera. I think they all create beautiful and timeless clothing.
+
+
+    User 1: I agree! They''re all very talented designers.
+
+
+    User 2: So, what are you working on right now?
+
+
+    User 1: I''m working on a new collection of dresses for my upcoming fashion show. I''m really excited about it!
+
+
+    User 2: That sounds amazing! I can''t wait to see it.
+
+
+    User 1: Thanks! I''ll be sure to send you an invite.
+
+
+    User 2: Great! I''ll definitely be there.
+
+
+    User 1: Well, it was nice talking to you! I have to go now.
+
+
+    User 2: You too! It was nice meeting you.
+
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

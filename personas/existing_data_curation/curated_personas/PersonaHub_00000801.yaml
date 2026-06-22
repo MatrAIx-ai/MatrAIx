@@ -1,0 +1,19 @@
+id: 00000801
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 801
+persona_description: A chemist or a chemical engineer who is interested in understanding the temperature dependence of reaction rates and the methods used to calculate them. They are likely to have experience
+  with experimental data analysis and may have a background in physical chemistry or chemical engineering. They may have expertise in collision theory and transition state theory, and may have knowledge
+  of experimental methods for determining reaction rate constants. They are likely to have a strong interest in understanding the factors that can affect the temperature dependence of reaction rates, such
+  as the Arrhenius Equation and the frequency factor.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: chemical kinetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

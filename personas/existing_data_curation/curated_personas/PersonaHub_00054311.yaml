@@ -1,0 +1,18 @@
+id: '00054311'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54311
+persona_description: A healthcare professional who is currently or has recently worked in a hospital or clinic in Wuhan, China. They are likely a doctor or a public health official who is responsible for
+  managing the COVID-19 pandemic in their area. They have expertise in respiratory infections and have likely been involved in the diagnosis and treatment of patients with COVID-19. They are also likely
+  familiar with the symptoms and signs of COVID-19 and have experience in managing patients with respiratory illnesses.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

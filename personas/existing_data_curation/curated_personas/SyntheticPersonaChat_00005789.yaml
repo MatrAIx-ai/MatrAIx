@@ -1,0 +1,83 @@
+id: 00005789
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5789
+data:
+  user 1 personas: 'I have problems chewing my food.
+
+    I have a lot of medical bills.
+
+    My mother is in the hospital.
+
+    I used to be able to run really fast.
+
+    I am very familiar with hospitals and doctors.'
+  user 2 personas: 'I like to sing broadway show tunes.
+
+    My favorite tv show is dancing with the stars.
+
+    I have a cat named seven of nine.
+
+    I work at a coffee house.
+
+    I am a student at michigan state university.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1). I''m a student at Michigan State University.
+
+    User 2: Hi, I''m (user 2). I''m also a student at MSU.
+
+    User 1: That''s cool. What are you studying?
+
+    User 2: I''m studying business administration.
+
+    User 1: Nice. I''m studying computer science.
+
+    User 2: Oh, that''s cool. I''ve always been interested in computers.
+
+    User 1: Me too. I used to be really good at running, but I had an accident a few years ago and now I have problems chewing my food.
+
+    User 2: Oh, that''s too bad. I''m sorry to hear that.
+
+    User 1: It''s okay. I''m still trying to get back to where I was.
+
+    User 2: Good luck with that.
+
+    User 1: Thanks.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: Oh, me too. I love reading books.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 1: Me too. I love the way they can transport you to another world.
+
+    User 2: Me too. I''m always looking for new books to read.
+
+    User 1: Well, I have a few recommendations if you''re interested.
+
+    User 2: Sure, I''d love to hear them.
+
+    User 1: Okay, so one book I would recommend is "The Martian" by Andy Weir. It''s a science fiction novel about an astronaut who gets stranded on Mars.
+
+    User 2: That sounds really interesting. I''ll have to check it out.
+
+    User 1: Yeah, it''s a great book. Another book I would recommend is "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams. It''s a comedy science fiction novel about a guy who gets caught up in a
+    series of misadventures.
+
+    User 2: That sounds like fun. I''ll have to check it out too.
+
+    User 1: Yeah, it''s a great book. I''ve read it multiple times.
+
+    User 2: Well, I''m definitely going to check out both of those books.
+
+    User 1: I hope you like them.
+
+    User 2: Thanks for the recommendations.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

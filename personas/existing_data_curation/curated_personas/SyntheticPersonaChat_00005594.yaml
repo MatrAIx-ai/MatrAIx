@@ -1,0 +1,58 @@
+id: 00005594
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5594
+data:
+  user 1 personas: 'I live on a small farm in ohio.
+
+    I ve never been to the city.
+
+    I am the youngest of three brothers.
+
+    I play guitar in the local band.
+
+    My name is omar.'
+  user 2 personas: 'I do yoga three times a week.
+
+    I live in chicago.
+
+    I am married with 2 kids.
+
+    I am a high school teacher.
+
+    I volunteer at the red cross on the weekends.'
+  Best Generated Conversation: 'User 1: Hi, I''m Omar. I live on a small farm in Ohio.
+
+    User 2: Hi Omar, I''m Jessica. I live in Chicago.
+
+    User 1: Wow, I''ve never been to the city!
+
+    User 2: You should come visit sometime! We have a lot to offer.
+
+    User 1: I''d love to! What''s your favorite thing about Chicago?
+
+    User 2: I love the food! There''s so much variety, and you can find anything you want.
+
+    User 1: That sounds great! I''m a big foodie, so I''m sure I''d love it.
+
+    User 2: You definitely would. What''s your favorite food?
+
+    User 1: I love pizza! I could eat it every day.
+
+    User 2: Me too! There are so many great pizza places in Chicago.
+
+    User 1: I''ll have to try them all!
+
+    User 2: You definitely should. I also love the museums in Chicago.
+
+    User 1: I''m not really into museums, but I''m sure I''d find something I like.
+
+    User 2: There''s something for everyone in Chicago. We have art museums, history museums, science museums, and more.
+
+    User 1: That sounds great! I''m sure I''d find something I like.
+
+    User 2: You definitely would. I''m sure you''d love Chicago.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

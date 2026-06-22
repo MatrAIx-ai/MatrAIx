@@ -1,0 +1,68 @@
+id: 00003049
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3049
+data:
+  user 1 personas: 'I enjoy broadway shows.
+
+    My favorite band is the avett brother.
+
+    I am a psychology major.
+
+    I am a steelers fan.
+
+    I love to travel.'
+  user 2 personas: 'I love working out.
+
+    My parents live in kentucky.
+
+    I am a freelance writer.
+
+    I currently am engaged to my high school boyfriend.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: Same here. I''m just watching a movie.
+
+    User 2: What movie are you watching?
+
+    User 1: It''s called The Sound of Music.
+
+    User 2: Oh, I love that movie!
+
+    User 1: Me too! It''s so good.
+
+    User 2: I''m actually a psychology major too.
+
+    User 1: Really? That''s awesome! What''s your favorite part about it?
+
+    User 2: I love learning about how the mind works.
+
+    User 1: Me too! It''s so interesting.
+
+    User 2: I''m also a big fan of the Pittsburgh Steelers.
+
+    User 1: Me too! They''re my favorite team.
+
+    User 2: I''m so glad I met you! We have so much in common.
+
+    User 1: Me too! I''m glad we met too.
+
+    User 2: I''m actually engaged to my high school boyfriend.
+
+    User 1: That''s great! Congratulations!
+
+    User 2: Thanks! We''re getting married next year.
+
+    User 1: That''s so exciting! I hope you have a wonderful wedding.
+
+    User 2: Thank you! I''m sure we will.
+
+    User 1: I''m glad we''re friends.
+
+    User 2: Me too! I''m so happy to have met you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

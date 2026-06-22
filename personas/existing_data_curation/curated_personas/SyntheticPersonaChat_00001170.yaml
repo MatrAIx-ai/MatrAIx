@@ -1,0 +1,74 @@
+id: '00001170'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1170
+data:
+  user 1 personas: 'We own our home.
+
+    I drive a prius.
+
+    My wife stays home with our kids.
+
+    I work for a large law firm.
+
+    I hate tofu.'
+  user 2 personas: 'I love laughing.
+
+    I have freckles.
+
+    I like to bake brownies.
+
+    My best friend is from tanzania.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey, what''s up?
+
+    User 1: Not much, just working on some legal briefs.
+
+    User 2: Oh, that sounds fun. I''m not very legal-minded.
+
+    User 1: Yeah, it''s not for everyone. So, what do you do for fun?
+
+    User 2: I like to bake brownies. I''m pretty good at it, too!
+
+    User 1: That''s awesome! I love brownies. What''s your favorite kind to make?
+
+    User 2: I like to make the classic chocolate chip brownies. But I also like to experiment with different flavors, like s''mores brownies or peppermint brownies.
+
+    User 1: Those sound delicious! I''ll have to try them sometime.
+
+    User 2: You should! They''re my best sellers.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to laugh. I think it''s the best way to make the most of life.
+
+    User 1: I agree! Laughter is definitely the best medicine.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a lawyer at a large law firm.
+
+    User 2: Oh, that sounds interesting! What kind of law do you practice?
+
+    User 1: I focus on civil litigation.
+
+    User 2: Oh, that sounds like it can be tough.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what''s your best friend like?
+
+    User 2: She''s amazing! She''s from Tanzania and she''s the funniest person I know.
+
+    User 1: That sounds like a great friend to have.
+
+    User 2: She is! I''m so lucky to have her in my life.
+
+    User 1: I''m sure you are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00004638
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4638
+data:
+  user 1 personas: 'I have a horse named beauty.
+
+    I am pregnant with my first child.
+
+    I live in a house in the country.
+
+    My husband is a soldier in the us army.
+
+    My father is a preacher.'
+  user 2 personas: 'I prefer the simpler times.
+
+    I like simple jokes.
+
+    Some jokes go too far.
+
+    I like the flintstones.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, [name]. I''m [name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch old movies and shows.
+
+    User 1: Me too! What are some of your favorites?
+
+    User 2: I like The Flintstones, Leave It to Beaver, and The Andy Griffith Show.
+
+    User 1: I love those shows too! They''re so funny and wholesome.
+
+    User 2: Yeah, they''re great.
+
+    User 1: What kind of jokes do you like?
+
+    User 2: I like simple jokes. I don''t like jokes that are too mean or offensive.
+
+    User 1: I like simple jokes too. I don''t like jokes that are too mean or offensive either.
+
+    User 2: Good.
+
+    User 1: So, what are you up to these days?
+
+    User 2: I''m just working and taking care of my family.
+
+    User 1: That sounds busy.
+
+    User 2: It is, but it''s good.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thanks.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

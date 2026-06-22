@@ -1,0 +1,80 @@
+id: '00007722'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7722
+data:
+  user 1 personas: 'I like eating fresh mangoes in the morning.
+
+    Sometimes i listen to gary numan to be ironic.
+
+    I only use apple products because i feel everything else is inferior.
+
+    I like chasing komodo lizards on a private island.
+
+    Going snorkeling is my favorite thing to do.'
+  user 2 personas: 'I am a student.
+
+    I have an internship at a computer company.
+
+    I like to go fishing.
+
+    My mom is a lawyer.
+
+    I have 5 children.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing, go to the movies, and hang out with friends.
+
+    User 1: I like to go snorkeling, go to the beach, and eat fresh mangoes in the morning.
+
+    User 2: That sounds fun! I''ve never been snorkeling before.
+
+    User 1: It''s amazing! You should try it sometime.
+
+    User 2: I will! What kind of music do you like to listen to?
+
+    User 1: I like to listen to a lot of different kinds of music, but my favorite artist is Gary Numan.
+
+    User 2: I''ve never heard of him.
+
+    User 1: He''s a really good artist. You should check him out.
+
+    User 2: I will! What kind of computer do you have?
+
+    User 1: I have a MacBook Pro.
+
+    User 2: I have a MacBook Air.
+
+    User 1: Nice! Do you like it?
+
+    User 2: Yeah, it''s great! I love the way it looks and feels.
+
+    User 1: Me too! It''s the best computer I''ve ever had.
+
+    User 2: I''m glad you like it.
+
+    User 1: Thank you! What''s your favorite thing to do at the beach?
+
+    User 2: I like to go swimming, play volleyball, and build sand castles.
+
+    User 1: Those all sound like fun things to do. I like to go swimming and snorkel too.
+
+    User 2: I''ve never been snorkeling before.
+
+    User 1: You should try it! It''s really amazing.
+
+    User 2: I will! I''m sure it''s a lot of fun.
+
+    User 1: It is! I could talk to you all day about snorkeling.
+
+    User 2: Me too! It''s such a great activity.
+
+    User 1: I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

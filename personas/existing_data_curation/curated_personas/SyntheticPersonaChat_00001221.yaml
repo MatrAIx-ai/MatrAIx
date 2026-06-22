@@ -1,0 +1,72 @@
+id: '00001221'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1221
+data:
+  user 1 personas: 'I am a scientist.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I play guitar on my free time.
+
+    I live alone.'
+  user 2 personas: 'I like to bowl.
+
+    I am a family man.
+
+    I am a pediatrician.
+
+    I am married with 2 children.'
+  Best Generated Conversation: 'User 1: Hello.
+
+    User 2: Hi there.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bowl.
+
+    User 1: Oh, that''s cool. I''ve never been bowling before.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might do that. What else do you like to do?
+
+    User 2: I like to spend time with my family. I''m married with two kids.
+
+    User 1: Oh, that''s nice. I live alone.
+
+    User 2: Do you have any pets?
+
+    User 1: I have a dog named Buster.
+
+    User 2: Oh, that''s cute. I like dogs.
+
+    User 1: Me too. He''s a great companion.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a scientist.
+
+    User 2: Oh, that''s cool. What kind of scientist are you?
+
+    User 1: I''m a research scientist. I work on developing new drugs.
+
+    User 2: Oh, that''s really cool. I''m a pediatrician.
+
+    User 1: Oh, that''s interesting. What''s it like being a pediatrician?
+
+    User 2: It''s great. I get to work with kids all day long. It''s a lot of fun.
+
+    User 1: I can imagine. I like kids.
+
+    User 2: Me too. They''re the best.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

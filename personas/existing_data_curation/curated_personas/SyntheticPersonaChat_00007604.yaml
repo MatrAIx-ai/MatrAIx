@@ -1,0 +1,70 @@
+id: '00007604'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7604
+data:
+  user 1 personas: 'I have found the cure for the common cold.
+
+    I love to sing in the shower.
+
+    My nickname is bubblegum.
+
+    My brother and i have bright red hair.'
+  user 2 personas: 'I just moved into an apartment within the vicinity of my new job.
+
+    I just accepted a job at the elementary school in my hometown.
+
+    I am twenty two years old.
+
+    I love children.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you! I just moved into an apartment in the city. What about you?
+
+    User 2: I just moved into an apartment in the city too!
+
+    User 1: What''s it like to be a teacher?
+
+    User 2: It''s great! I love working with kids.
+
+    User 1: I can imagine. I have a brother and I used to love playing with him when we were kids.
+
+    User 2: I have a brother too! He''s also a teacher.
+
+    User 1: That''s cool! Do you have any other siblings?
+
+    User 2: No, just my brother.
+
+    User 1: Oh, that''s too bad. I have three siblings.
+
+    User 2: That''s a lot!
+
+    User 1: Yeah, it can be a lot sometimes. But it''s also a lot of fun.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to read, go for walks, and play with my dog.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: I love Harry Potter! What about you?
+
+    User 1: I love Harry Potter too! I''m also a big fan of the Percy Jackson series.
+
+    User 2: I''ve never read Percy Jackson. What''s it about?
+
+    User 1: It''s about a boy who discovers that he''s a demigod and he has to go to a camp for demigods. It''s a really good series.
+
+    User 2: I''ll have to check it out!
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

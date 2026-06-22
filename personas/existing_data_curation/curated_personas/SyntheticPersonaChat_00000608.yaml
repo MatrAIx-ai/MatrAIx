@@ -1,0 +1,76 @@
+id: 00000608
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 608
+data:
+  user 1 personas: 'I am an author.
+
+    I like to run so that i can clear my head.
+
+    I enjoy watching mystery movies.
+
+    I love to write stories while sitting in the grass in my back yard.'
+  user 2 personas: 'I like to play tennis.
+
+    I have 2 sisters.
+
+    My mother is a dentist.
+
+    I am a baker.
+
+    My favorite tv show is silicon valley.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play tennis.
+
+    User 1: Oh, I love tennis! What''s your favorite shot?
+
+    User 2: I love the serve. It''s so satisfying when you hit a good one.
+
+    User 1: Me too! I love the feeling of power that comes with hitting a good serve.
+
+    User 2: Yeah, it''s the best.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to bake.
+
+    User 1: Oh, that''s cool! What''s your favorite thing to bake?
+
+    User 2: I love to bake cakes. They''re so fun to decorate.
+
+    User 1: I love cakes too! My favorite kind of cake is chocolate cake.
+
+    User 2: Chocolate cake is my favorite too!
+
+    User 1: Do you have any family?
+
+    User 2: Yes, I have two sisters.
+
+    User 1: Oh, that''s cool! What are their names?
+
+    User 2: Their names are Amanda and Sarah.
+
+    User 1: Those are nice names. Do you like watching TV?
+
+    User 2: Yes, I love watching TV. My favorite TV show is Silicon Valley.
+
+    User 1: I''ve heard of that show. It''s about the tech industry, right?
+
+    User 2: Yes, it is. It''s a really funny show.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: I''m sure you''ll like it.
+
+    User 1: Thanks for talking to me!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

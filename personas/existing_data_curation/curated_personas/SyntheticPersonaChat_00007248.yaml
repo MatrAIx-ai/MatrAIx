@@ -1,0 +1,74 @@
+id: 00007248
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7248
+data:
+  user 1 personas: 'My favorite place to travel is jamaica.
+
+    I am traveling to barbados next month.
+
+    My parents own a business that i am now running.
+
+    I like fitness.
+
+    I am a travel agent.'
+  user 2 personas: 'We own our home.
+
+    I work for a large law firm.
+
+    I drive a prius.
+
+    My wife stays home with our kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hello, I''m (user 2).
+
+    User 1: What do you do for a living?
+
+    User 2: I work for a large law firm.
+
+    User 1: Oh, that sounds interesting. I''m a travel agent.
+
+    User 2: That sounds like a fun job! I love to travel.
+
+    User 1: Me too! I''m going to Barbados next month.
+
+    User 2: Oh, that sounds amazing! I''ve always wanted to go to Barbados.
+
+    User 1: It''s my favorite place to travel. The beaches are beautiful and the people are so friendly.
+
+    User 2: That sounds amazing! I''m sure you''ll have a great time.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the gym, play video games, and read.
+
+    User 2: I like to go to the gym too. I also like to watch movies and play video games.
+
+    User 1: Oh, that''s cool. What kind of movies do you like to watch?
+
+    User 2: I like all kinds of movies, but I especially like action movies and comedies.
+
+    User 1: Me too! I love action movies.
+
+    User 2: I know, right? They''re so exciting!
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies or hang out with my friends.
+
+    User 1: Oh, that sounds fun. I''m going to the gym and then going to watch a movie.
+
+    User 2: That sounds like a good plan.
+
+    User 1: Yeah, it should be a fun night.
+
+    User 2: Well, it was nice talking to you. I hope you have a great time in Barbados.
+
+    User 1: Thank you! I hope you have a great weekend too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

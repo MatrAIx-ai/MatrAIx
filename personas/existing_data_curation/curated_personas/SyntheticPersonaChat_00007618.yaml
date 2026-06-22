@@ -1,0 +1,72 @@
+id: 00007618
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7618
+data:
+  user 1 personas: 'I like to read books that are in a series.
+
+    I like to take drives in the country.
+
+    I like to go to the movies.
+
+    I love to go out to eat with my family.'
+  user 2 personas: 'My family owns a grocery store.
+
+    I work as a receptionist at a lawyers office.
+
+    I get my nails done every saturday.
+
+    I daydream about cafes in paris.
+
+    I secretly love watching we wrestling.'
+  Best Generated Conversation: 'User 1: Hi, I''m Emma.
+
+    User 2: Hi Emma, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read books, go to the movies, and take drives in the country.
+
+    User 1: I love to read books too! What kind of books do you like to read?
+
+    User 2: I like to read books that are in a series. I like the feeling of getting invested in a story and following the characters'' journey.
+
+    User 1: Me too! I''m currently reading a series about a group of friends who are solving mysteries.
+
+    User 2: That sounds interesting! I''ll have to check it out.
+
+    User 1: You should! It''s really good. What else do you like to do for fun?
+
+    User 2: I also like to go to the movies. I love watching action movies and comedies.
+
+    User 1: I love action movies too! I''m not so big on comedies, but I do enjoy a good laugh every now and then.
+
+    User 2: What''s your favorite action movie?
+
+    User 1: I really like the Mission Impossible movies. They''re so exciting and the stunts are amazing.
+
+    User 2: I''ve never seen any of those movies. I''ll have to check them out.
+
+    User 1: You should! They''re really good. What''s your favorite comedy movie?
+
+    User 2: I love the Wedding Crashers. It''s so funny and the characters are so lovable.
+
+    User 1: I''ve heard good things about that movie. I''ll have to check it out.
+
+    User 2: You should! It''s really funny.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to take drives in the country. I love the peace and quiet of the countryside.
+
+    User 1: Me too! I love taking drives through the mountains. It''s so peaceful and beautiful.
+
+    User 2: I love going out to eat with my family too. We love trying new restaurants and exploring new cuisines.
+
+    User 1: Me too! I love trying new food. I''m always up for a good meal.
+
+    User 2: I''m glad we have so much in common!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

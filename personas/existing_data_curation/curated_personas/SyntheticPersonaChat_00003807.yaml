@@ -1,0 +1,72 @@
+id: 00003807
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3807
+data:
+  user 1 personas: 'My dog is my best friend.
+
+    I am an accountant.
+
+    I believe in leprechauns.
+
+    My mom went crazy when i was three and i have not seen her since.'
+  user 2 personas: 'I would travel the world if i could.
+
+    I like to read a lot of books.
+
+    I like spending time with my friends and family.
+
+    I like listening to all genres of music except country music.
+
+    I am not much of a fan of hot weather.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, cool! I''ve always thought about being an accountant, but I''m not sure I have the math skills for it.
+
+    User 1: It''s not as bad as you think! I just had to take a few extra math classes in college, but it''s not too hard.
+
+    User 2: Well, maybe I''ll give it a try then.
+
+    User 1: I''d definitely recommend it! It''s a good career with a lot of opportunities.
+
+    User 2: That''s good to know. Thanks for the advice!
+
+    User 1: No problem! What do you do for fun?
+
+    User 2: I like to read, spend time with my friends and family, and travel.
+
+    User 1: Those all sound like great hobbies! I love reading too. What are some of your favorite books?
+
+    User 2: I like a lot of different kinds of books, but I''m a big fan of science fiction and fantasy.
+
+    User 1: I''m a big fan of science fiction too! What are some of your favorite sci-fi books?
+
+    User 2: I really like the Ender''s Game series by Orson Scott Card, and the Dune series by Frank Herbert.
+
+    User 1: I''ve heard good things about both of those series! I''ve been meaning to check them out.
+
+    User 2: You definitely should! They''re both great books.
+
+    User 1: I will! Thanks for the recommendation!
+
+    User 2: No problem! What about you? What are some of your favorite books?
+
+    User 1: I like a lot of different books too, but I''m a big fan of historical fiction.
+
+    User 2: Oh, that''s a great genre! I love historical fiction too. What are some of your favorite historical fiction books?
+
+    User 1: I really like the Outlander series by Diana Gabaldon, and the Pillars of the Earth series by Ken Follett.
+
+    User 2: I''ve heard good things about both of those series! I''ve been meaning to check them out.
+
+    User 1: You definitely should! They''re both great books.
+
+    User 2: I will! Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00005718
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5718
+data:
+  user 1 personas: 'Whittling is my favorite hobby.
+
+    I am an orphan who was in the foster care system.
+
+    I listen to folk music.
+
+    I am in the navy.
+
+    I went to a community college and got a degree in communication.'
+  user 2 personas: 'I work for a large hospital.
+
+    I am a doctor.
+
+    I live in a large home.
+
+    Boating is my favorite activity.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well! I''m in the navy and I just got back from a deployment.
+
+    User 2: That sounds exciting! Where were you deployed to?
+
+    User 1: I was in the Persian Gulf.
+
+    User 2: Wow, that must have been a long time to be away from home.
+
+    User 1: It was, but it was worth it to serve my country.
+
+    User 2: I''m sure it was. What do you like to do for fun?
+
+    User 1: I like to whittle, listen to folk music, and go boating.
+
+    User 2: Whittling? That''s a unique hobby.
+
+    User 1: I know, right? I learned it in the foster care system.
+
+    User 2: What was it like growing up in foster care?
+
+    User 1: It wasn''t easy, but I made it through.
+
+    User 2: I''m glad to hear that. It sounds like you''ve had a lot of interesting experiences in your life.
+
+    User 1: I have, and I''m grateful for all of them.
+
+    User 2: You should be. You seem like a very interesting person.
+
+    User 1: Thank you. You seem pretty interesting yourself.
+
+    User 2: Thanks! I like to think so.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a doctor.
+
+    User 1: That''s cool! I''ve always been interested in medicine.
+
+    User 2: It''s a great field. I love helping people.
+
+    User 1: That''s what I like about whittling. It''s a way to create something beautiful and useful.
+
+    User 2: I can see how that would be satisfying.
+
+    User 1: It is. I''m glad I could share my story with you.
+
+    User 2: Me too. It was really interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

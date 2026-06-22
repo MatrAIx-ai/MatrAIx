@@ -1,0 +1,74 @@
+id: 00004148
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4148
+data:
+  user 1 personas: 'My favorite band is creed.
+
+    I am a carnivore.
+
+    I enjoy running.
+
+    My father is in prison.'
+  user 2 personas: 'I love to listen to frank sinatra.
+
+    I like to cook stews.
+
+    I am a older lady.
+
+    I love to eat cheese.'
+  Best Generated Conversation: 'User 1: What do you like to do in your spare time?
+
+    User 2: I like to cook stews, and I love to listen to Frank Sinatra.
+
+    User 1: That''s cool. I''m not a big fan of stews, but I love Frank Sinatra.
+
+    User 2: What''s your favorite song of his?
+
+    User 1: My favorite song is "My Way."
+
+    User 2: That''s a good one. I also like "New York, New York."
+
+    User 1: Yeah, that''s a classic.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a personal trainer.
+
+    User 2: Oh, that''s cool. Do you like it?
+
+    User 1: Yeah, I love it. I get to help people get in shape and feel better about themselves.
+
+    User 2: That''s awesome. I need to get in shape.
+
+    User 1: You should! I''d be happy to help you out.
+
+    User 2: Thanks, I might just take you up on that.
+
+    User 1: No problem.
+
+    User 2: So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, cool. I''m from New York.
+
+    User 1: Really? That''s cool. I''ve always wanted to go to New York.
+
+    User 2: You should! It''s a great city.
+
+    User 1: I''ll have to make a trip there someday.
+
+    User 2: You won''t regret it.
+
+    User 1: I''m sure. So, what''s your favorite thing about New York?
+
+    User 2: There''s so much to do here. There''s always something going on.
+
+    User 1: That sounds really cool. I''m looking forward to visiting someday.
+
+    User 2: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

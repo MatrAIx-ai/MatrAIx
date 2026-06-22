@@ -1,0 +1,92 @@
+id: '00004204'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4204
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I work on trucks.
+
+    I am twenty five years old.
+
+    I have a doberman.
+
+    I am a man.'
+  user 2 personas: 'I eat meat.
+
+    I used to travel the usa playing guitar.
+
+    I recently started to work online.
+
+    I used to work at a factory making boxes.'
+  Best Generated Conversation: 'User 1: Hi there, my name is [user 1''s name].
+
+    User 2: Nice to meet you, my name is [user 2''s name].
+
+    User 1: What do you do for work?
+
+    User 2: I work online now, but I used to travel around the US playing guitar.
+
+    User 1: That''s really cool! What kind of guitar do you play?
+
+    User 2: I play an acoustic guitar.
+
+    User 1: Nice! I love acoustic guitar. Do you have any favorite songs to play?
+
+    User 2: I like to play a lot of different songs, but some of my favorites are "Yesterday" by The Beatles, "Hallelujah" by Leonard Cohen, and "Stairway to Heaven" by Led Zeppelin.
+
+    User 1: Those are all great songs! I love them all.
+
+    User 2: What do you do for work?
+
+    User 1: I work on trucks.
+
+    User 2: Cool! I''ve never met anyone who works on trucks before. What''s it like?
+
+    User 1: It''s a lot of work, but it''s also a lot of fun. I like getting to fix things and make them work again.
+
+    User 2: That makes sense. I''ve always been interested in mechanics, but I never actually got into it.
+
+    User 1: You should! It''s a great field.
+
+    User 2: Maybe I will someday.
+
+    User 1: You should! I''m sure you''d be great at it.
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: Nice! I like to do all of those things too.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I like a lot of different games, but some of my favorites are "The Legend of Zelda: Ocarina of Time," "Mario Kart 64," and "Star Wars: Knights of the Old Republic."
+
+    User 1: Those are all great games! I''ve played all of them.
+
+    User 2: Nice! What''s your favorite movie?
+
+    User 1: I have a lot of favorite movies, but some of my favorites are "The Shawshank Redemption," "The Lord of the Rings: The Return of the King," and "The Godfather."
+
+    User 2: Those are all great movies! I''ve seen all of them.
+
+    User 1: Nice! What''s your favorite TV show?
+
+    User 2: I like a lot of different TV shows, but some of my favorites are "The Simpsons," "South Park," and "Rick and Morty."
+
+    User 1: Those are all great shows! I''ve seen all of them.
+
+    User 2: Nice! We seem to have a lot in common.
+
+    User 1: We do! I think we''d get along great.
+
+    User 2: I agree'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

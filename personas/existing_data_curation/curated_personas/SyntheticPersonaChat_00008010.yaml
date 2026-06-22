@@ -1,0 +1,80 @@
+id: 00008010
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8010
+data:
+  user 1 personas: 'I listen to music for more than 5 hours a day.
+
+    I refuse to ride the bus.
+
+    I find joy in the littlest things.
+
+    My parents are both dead.
+
+    I never work more than 4 days in a row.'
+  user 2 personas: 'I work in a flower shop.
+
+    I am a vegetarian.
+
+    I like cats.
+
+    I read a lot of used books.'
+  Best Generated Conversation: 'User 1: How long have you worked in a flower shop?
+
+    User 2: I''ve been working here for about 5 years now. I love it!
+
+    User 1: What''s your favorite thing about working there?
+
+    User 2: I love getting to work with flowers all day. They''re so beautiful and make me happy.
+
+    User 1: I agree! They''re really pretty.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a musician. I play guitar and sing.
+
+    User 2: That''s really cool! I love music.
+
+    User 1: Thanks! I listen to music for more than 5 hours a day.
+
+    User 2: Wow, that''s a lot of music!
+
+    User 1: I know, right? I love it!
+
+    User 2: What''s your favorite genre of music?
+
+    User 1: I love all kinds of music, but I''m especially fond of rock and roll.
+
+    User 2: I love rock too! I''m a big fan of The Beatles.
+
+    User 1: Me too! They''re one of my favorite bands of all time.
+
+    User 2: What''s your favorite Beatles song?
+
+    User 1: That''s a tough question! I have so many favorites. But I think I''d have to say "Here Comes the Sun".
+
+    User 2: That''s a great song! I love that one too.
+
+    User 1: It''s such a happy song.
+
+    User 2: It is. It always puts me in a good mood.
+
+    User 1: Me too.
+
+    User 2: So, what do you like to do for fun besides listen to music?
+
+    User 1: I like to play video games, read, and watch movies.
+
+    User 2: I love playing video games too! What''s your favorite game?
+
+    User 1: I''m a big fan of the Legend of Zelda series.
+
+    User 2: Me too! I love those games.
+
+    User 1: I think they''re the best video games ever made.
+
+    User 2: I agree'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

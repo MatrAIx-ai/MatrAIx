@@ -1,0 +1,56 @@
+id: 00001185
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1185
+data:
+  user 1 personas: 'I am a cat owner.
+
+    My mom is an osteopath.
+
+    I have one blue eye and one hazel eye.
+
+    I speak fluent italian.'
+  user 2 personas: 'I worked as a nurse for many years.
+
+    My husband was a salesman.
+
+    I have a cat named kj.
+
+    I have lived in several different states.'
+  Best Generated Conversation: 'User 1: I have one blue eye and one hazel eye.
+
+    User 2: That''s interesting! I have two blue eyes.
+
+    User 1: My mom is an osteopath.
+
+    User 2: My husband was a salesman.
+
+    User 1: I speak fluent Italian.
+
+    User 2: I''ve lived in several different states.
+
+    User 1: Do you like traveling?
+
+    User 2: Yes, I do! I''ve been to Europe, Asia, and South America.
+
+    User 1: Wow, that''s amazing! I''ve only been to Europe.
+
+    User 2: Where in Europe have you been?
+
+    User 1: I''ve been to Italy, France, and Spain.
+
+    User 2: I love Italy! I''ve been to Rome, Venice, and Florence.
+
+    User 1: Those are my favorite cities too! I''ve also been to Milan and Naples.
+
+    User 2: I''ve never been to Milan or Naples. I''ll have to add those to my list.
+
+    User 1: You definitely should! They''re both beautiful cities.
+
+    User 2: Thanks for the recommendation! I''m always looking for new places to travel.
+
+    User 1: You''re welcome! I''m happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

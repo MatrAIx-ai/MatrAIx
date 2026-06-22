@@ -1,0 +1,18 @@
+id: 00030438
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30438
+persona_description: A conservation biologist who specializes in the study of birds and their conservation status, particularly those that are considered near threatened due to their small population size
+  and expected rapid population decline. They are knowledgeable in the use of scientific literature, databases, and other resources to gather and analyze information on these species. They are also skilled
+  in communicating complex scientific information in a clear and accessible manner to a general audience.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: conservation biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bird conservation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

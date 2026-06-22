@@ -1,0 +1,18 @@
+id: '00001126'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1126
+persona_description: A medical professional who is interested in the anatomy and function of the cervical spine, particularly in the context of imaging techniques such as CT scans. They may be a radiologist,
+  neurologist, or orthopedic surgeon, and are likely to be familiar with the principles of radiation exposure and its potential risks. They may also have experience with contrast dye and its effects on
+  the body.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: radiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

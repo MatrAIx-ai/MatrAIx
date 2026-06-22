@@ -1,0 +1,74 @@
+id: 00006091
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6091
+data:
+  user 1 personas: 'I want to own a house on a beach.
+
+    Watching nascar races is a great way to spend a sunday for me.
+
+    My parents both are school teachers.
+
+    The only music i listen to is pop , because it makes me feel happy.
+
+    I love eating at mcdonalds.'
+  user 2 personas: 'My favorite flower is a lily.
+
+    I work at a doctor s office.
+
+    I love dogs.
+
+    I am single.
+
+    I enjoy reading.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you. What''s your favorite flower?
+
+    User 2: I love lilies. They''re so beautiful and delicate.
+
+    User 1: I agree! They''re one of my favorites too.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a teacher at a local elementary school.
+
+    User 2: Oh, that sounds like a fun job.
+
+    User 1: It is! I love working with kids.
+
+    User 2: Me too! I have a dog.
+
+    User 1: Oh, that''s great! What kind of dog?
+
+    User 2: A golden retriever.
+
+    User 1: I love golden retrievers! They''re so friendly and playful.
+
+    User 2: They are! I love taking him for walks in the park.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I also love to read.
+
+    User 1: Me too! What are you reading right now?
+
+    User 2: I''m reading "The Great Gatsby".
+
+    User 1: I''ve heard good things about that book.
+
+    User 2: It''s really good! I''m enjoying it a lot.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thanks.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

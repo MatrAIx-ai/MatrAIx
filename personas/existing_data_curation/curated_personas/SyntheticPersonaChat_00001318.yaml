@@ -1,0 +1,76 @@
+id: 00001318
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1318
+data:
+  user 1 personas: 'I like to garden.
+
+    I live in the suburbs of a major city.
+
+    I am a teacher.
+
+    I graduated college for secondary english education.'
+  user 2 personas: 'I teach at a large school.
+
+    I graduated college in 2016.
+
+    My class has 26 kids.
+
+    I teach kindergarten.
+
+    I enjoys kayaking in my free time.'
+  Best Generated Conversation: 'User 1: Hi! I''m a teacher. What do you do for a living?
+
+    User 2: I also teach! I''m a kindergarten teacher.
+
+    User 1: Oh, that''s great! I teach secondary English.
+
+    User 2: That''s really cool! I''ve always wanted to teach high school.
+
+    User 1: It''s fun! I love working with teenagers.
+
+    User 2: Me too! They''re so funny and creative.
+
+    User 1: Yes, they are! What''s your favorite thing about teaching kindergarten?
+
+    User 2: I love seeing my students learn and grow. It''s so rewarding to see them start the year as shy little ones and then blossom into confident, independent learners.
+
+    User 1: That''s so true! I love that feeling too.
+
+    User 2: Me too! What''s your favorite thing about teaching English?
+
+    User 1: I love being able to share my passion for literature with my students. I love seeing them get excited about reading and writing.
+
+    User 2: That''s awesome! I love that too.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to kayak, go camping, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to garden, read, and play video games.
+
+    User 2: Oh, I love to garden too! I have a small garden in my backyard.
+
+    User 1: That''s great! I have a large garden in my backyard. I love growing vegetables and flowers.
+
+    User 2: Me too! I love eating my own fresh vegetables.
+
+    User 1: Me too! It''s so much better than store-bought vegetables.
+
+    User 2: I know, right? So, what''s your favorite vegetable to grow?
+
+    User 1: I love growing tomatoes! They''re so delicious.
+
+    User 2: Me too! They''re one of my favorite vegetables too.
+
+    User 1: So, what''s your favorite flower to grow?
+
+    User 2: I love growing roses! They''re so beautiful.
+
+    User 1: Me too! They''re one of my favorite flowers too.
+
+    User 2: Great! I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

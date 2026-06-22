@@ -1,0 +1,60 @@
+id: '00006337'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6337
+data:
+  user 1 personas: 'My favorite movie is pretty woman.
+
+    I am a registered nurse.
+
+    I am a vegan.
+
+    I have two smartphones.
+
+    I enjoy reading.'
+  user 2 personas: 'I take vitamin c when i have a cold.
+
+    My favorite season is winter.
+
+    My friend once bought me a car.
+
+    I do not eat bread.
+
+    I am disabled and cannot walk.'
+  Best Generated Conversation: 'User 1: Hello! What''s your name?
+
+    User 2: Hi! My name is [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my friends.
+
+    User 1: That sounds like a lot of fun! I like to read too. What are some of your favorite books?
+
+    User 2: I like to read all sorts of books, but my favorites are usually historical fiction or science fiction.
+
+    User 1: I''ve never read much historical fiction, but I''ve heard good things about it. What are some of your favorite historical fiction books?
+
+    User 2: I really enjoyed The Help by Kathryn Stockett, and The Color Purple by Alice Walker.
+
+    User 1: I''ve heard about those books too! They sound really good.
+
+    User 2: They are! You should check them out sometime.
+
+    User 1: I will! What kind of science fiction do you like?
+
+    User 2: I like all kinds of science fiction, but my favorites are usually the ones that are set in space.
+
+    User 1: I like space science fiction too! I''ve read some really good books about space travel.
+
+    User 2: Oh, really? What are some of your favorites?
+
+    User 1: I really enjoyed The Martian by Andy Weir, and The Expanse by James S. A. Corey.
+
+    User 2: I''ve heard good things about both of those books! I''ll have to check them out sometime.
+
+    User 1: You should! They''re really good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

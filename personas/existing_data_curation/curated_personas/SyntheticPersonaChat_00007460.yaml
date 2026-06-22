@@ -1,0 +1,62 @@
+id: '00007460'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7460
+data:
+  user 1 personas: 'I don t like the song sweet home alabama.
+
+    I love watching game of thrones.
+
+    I once saw the easter bunny hiding behind my closet door.
+
+    I grew up in alabama.'
+  user 2 personas: 'I work at walmart as a stocker.
+
+    I am vegan.
+
+    My father is a mechanic.
+
+    I am leaving for college in three months.
+
+    My favorite band is muse.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Alabama.
+
+    User 2: Oh, cool! I''m from Alabama too.
+
+    User 1: Really? Where in Alabama?
+
+    User 2: I grew up in Montgomery.
+
+    User 1: Me too! What was your favorite thing about growing up in Alabama?
+
+    User 2: I loved the small town feel. Everyone knew everyone else, and there was always something going on.
+
+    User 1: I agree! I loved going to the local fair every summer.
+
+    User 2: Me too! That was always so much fun.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to play video games, watch movies, and read books.
+
+    User 1: Me too! What kind of video games do you like to play?
+
+    User 2: I like to play a lot of different games, but I''m really into open world games right now.
+
+    User 1: Oh, cool! I like open world games too. I''ve been playing a lot of Skyrim lately.
+
+    User 2: I love Skyrim! I''ve been playing it for years.
+
+    User 1: So, are you going to college in Alabama?
+
+    User 2: No, I''m going to college in California.
+
+    User 1: Oh, that''s cool! What are you going to study?
+
+    User 2: I''m going to study computer science.
+
+    User 1: Oh, that''s great! I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

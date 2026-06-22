@@ -1,0 +1,18 @@
+id: '00023760'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23760
+persona_description: A healthcare professional who is knowledgeable about the symptoms and treatment of pneumonia, including its signs, causes, complications, and treatment options. They are skilled in
+  diagnosing and managing pneumonia in both adults and children, and are familiar with the use of antibiotics, surgery, and other treatments. They have experience in monitoring the progression of the illness
+  and making decisions based on the severity and type of pneumonia. They are also aware of the potential complications and long-term effects of pneumonia, including the possibility of bacteremia and empyema.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pulmonology
+  general_domain_top01pct: None
+  specific_domain_top01pct: respiratory infectious disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

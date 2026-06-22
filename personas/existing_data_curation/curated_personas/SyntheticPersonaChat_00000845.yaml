@@ -1,0 +1,66 @@
+id: 00000845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 845
+data:
+  user 1 personas: 'I love to sing.
+
+    My favorite past time is cooking.
+
+    I have a lot of trophies from my childhood.
+
+    I love to run.'
+  user 2 personas: 'I like to play football.
+
+    I am a younger guy.
+
+    I have beard that is longer.
+
+    I own a dog that is small.
+
+    I like to ride my bike.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name].
+
+    User 2: Hi there! I''m [user 2''s name].
+
+    User 1: What are you up to today?
+
+    User 2: I''m just hanging out at home with my dog.
+
+    User 1: Oh, cool. I''m about to go for a run.
+
+    User 2: Do you like running?
+
+    User 1: Yeah, I love it! It''s a great way to stay in shape and clear my head.
+
+    User 2: I''ve never really been a runner, but I''ve been thinking about trying it out.
+
+    User 1: You should! It''s really fun and you''ll feel great afterwards.
+
+    User 2: I''ll keep that in mind. What kind of music do you like to listen to when you run?
+
+    User 1: I like to listen to a lot of different types of music, but I usually listen to upbeat music when I run.
+
+    User 2: I like to listen to upbeat music too. It helps me keep going.
+
+    User 1: Yeah, me too. So, what do you like to do for fun?
+
+    User 2: I like to play football, ride my bike, and hang out with my friends.
+
+    User 1: Oh, cool. I like to play football too. I used to play in college.
+
+    User 2: That''s awesome! I''ve always wanted to play in college, but I didn''t have the grades.
+
+    User 1: That''s too bad. But you can still play football now! There are a lot of adult leagues out there.
+
+    User 2: I''ve thought about it, but I''m not sure if I''m good enough.
+
+    User 1: You''re probably better than you think. And you''ll get better if you keep practicing.
+
+    User 2: Thanks for the encouragement. I might just give it a try.
+
+    User 1: Good! I''m sure you''ll have a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00045050'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45050
+persona_description: A chemist and researcher who has made significant contributions to the field of molecular biology and has won the Nobel Prize 2020 for Chemistry. Her work involves developing rapid
+  tests for the detection of pathogens, particularly the new coronavirus SARS-CoV-2. Her team's new rapid test uses CRISPR technology to detect traces of the virus within minutes, without the need for special
+  reagents or machinery. The test has the potential to significantly reduce the time and complexity of patient tracking and provide a more accurate picture of the spread of the virus.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: molecular biology
+  general_domain_top01pct: chemistry
+  specific_domain_top01pct: molecular biology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,96 @@
+id: '00004614'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4614
+data:
+  user 1 personas: 'I enjoy eating italian food.
+
+    Pizza is my favorite.
+
+    My name is tom.
+
+    I try to watch what i eat.
+
+    I am east asian.'
+  user 2 personas: 'I am a steelers fan.
+
+    I enjoy broadway shows.
+
+    I love to travel.
+
+    My favorite band is the avett brother.'
+  Best Generated Conversation: 'User 1: Hi there, I''m Tom.
+
+    User 2: Hi Tom, I''m [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: You too, Tom.
+
+    User 1: Where are you from?
+
+    User 2: I''m from Pittsburgh, Pennsylvania.
+
+    User 1: Oh, cool. I''ve never been to Pittsburgh.
+
+    User 2: You should come visit sometime! We have a lot of great restaurants and shows.
+
+    User 1: I''ll have to do that sometime.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like all kinds of music, but my favorite band is the Avett Brothers.
+
+    User 2: Oh, I love them! They''re so good.
+
+    User 1: Yeah, they''re one of my favorite bands.
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is pizza.
+
+    User 2: Oh, me too! What''s your favorite kind of pizza?
+
+    User 1: I like all kinds of pizza, but my favorite is probably pepperoni and mushroom.
+
+    User 2: That''s a good choice. I like pepperoni and sausage.
+
+    User 1: Me too!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Oh, me too! I love to read and watch movies.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t know if I could choose a favorite movie, but I really like The Godfather.
+
+    User 1: That''s a great movie. I love the Godfather movies.
+
+    User 2: Me too!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a software engineer too.
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: I know, right?
+
+    User 1: So, what''s your favorite thing about being a software engineer?
+
+    User 2: I like the challenge of solving problems and creating new things.
+
+    User 1: Me too. I love that feeling of accomplishment when you finish a project.
+
+    User 2: Yeah, it''s the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

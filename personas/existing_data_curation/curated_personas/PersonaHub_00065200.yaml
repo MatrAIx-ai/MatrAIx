@@ -1,0 +1,18 @@
+id: '00065200'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65200
+persona_description: A healthcare professional who is concerned about the health and well-being of older adults, particularly those who may be at risk for poor nutrition, weight loss, and weakened immunity
+  due to a loss of taste. They are aware of the importance of protecting the sense of taste and have taken steps to do so, including avoiding upper respiratory and middle ear infections, reviewing medications,
+  avoiding head injuries, and taking care of dental problems. They are also aware of the potential for exposure to toxic substances that can impair taste and seek medical advice if necessary.
+expertise:
+  general_domain_top1pct: healthcare
+  specific_domain_top1pct: geriatric nutrition
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

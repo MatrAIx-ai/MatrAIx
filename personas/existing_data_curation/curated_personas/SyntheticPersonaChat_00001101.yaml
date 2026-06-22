@@ -1,0 +1,80 @@
+id: '00001101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1101
+data:
+  user 1 personas: 'I love to laugh.
+
+    My husband works for the government.
+
+    I run a small bakery.
+
+    I have a son.'
+  user 2 personas: 'I am very smart.
+
+    I wear contacts.
+
+    I love the outdoors.
+
+    I love to drink whiskey.
+
+    I work as a janitor.'
+  Best Generated Conversation: 'User 1: I run a small bakery.
+
+    User 2: What kind of bakery do you have?
+
+    User 1: I make cupcakes, cakes, pies, cookies, and brownies.
+
+    User 2: That sounds amazing! I love sweets.
+
+    User 1: Me too! I''m always baking something new.
+
+    User 2: What''s your favorite thing to bake?
+
+    User 1: I love baking cookies. They''re so easy to make and they''re always a hit.
+
+    User 2: I love cookies too! What''s your favorite kind?
+
+    User 1: I love chocolate chip cookies. They''re my favorite.
+
+    User 2: Me too! They''re so good.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go hiking and fishing. I also love to play video games.
+
+    User 1: I love hiking too! I''ve been hiking in a lot of different places.
+
+    User 2: Me too! I love to explore new places.
+
+    User 1: What''s your favorite place to hike?
+
+    User 2: I love hiking in the mountains. I love the fresh air and the views.
+
+    User 1: Me too! I love hiking in the mountains.
+
+    User 2: What are your favorite video games?
+
+    User 1: I love playing Minecraft and Mario Kart.
+
+    User 2: Me too! Minecraft is my favorite game.
+
+    User 1: It''s such a fun game.
+
+    User 2: Yeah, it is.
+
+    User 1: I''ve been playing it since it came out.
+
+    User 2: Me too! I''ve played it for years.
+
+    User 1: It''s so much fun to build things.
+
+    User 2: Yeah, it is.
+
+    User 1: I love making my own worlds.
+
+    User 2: Me too! It''s so much fun to be creative.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,50 @@
+id: '00004152'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4152
+data:
+  user 1 personas: 'My favorite beer is coors.
+
+    I love to play basketball.
+
+    My wife is a hairdresser.
+
+    I work in car sales.'
+  user 2 personas: 'I am a vegan.
+
+    I love the beach.
+
+    I love country music.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hi, I''m a car salesman and my favorite beer is Coors. What''s your favorite beer?
+
+    User 2: I''m not much of a drinker, but I love country music. What''s your favorite country song?
+
+    User 1: I love "The Dance" by Garth Brooks. What''s your favorite book?
+
+    User 2: I love to read historical fiction. I just finished "The Book Thief" by Markus Zusak.
+
+    User 1: I''ve heard good things about that book. What''s your favorite thing to do at the beach?
+
+    User 2: I love to swim and sunbathe. What''s your favorite thing to do in the car?
+
+    User 1: I love to listen to music and talk on the phone. What''s your favorite thing about being a vegan?
+
+    User 2: I feel healthier and I have more energy. I also love animals and I don''t want to eat them.
+
+    User 1: That''s a great reason. I think I could go vegan if I had the willpower.
+
+    User 2: It''s not as hard as it seems. There are so many great vegan recipes out there.
+
+    User 1: I''ll have to try some. I''m always looking for new ways to cook.
+
+    User 2: I''m sure you''ll find some you like. It''s a lot of fun to experiment with new flavors and ingredients.
+
+    User 1: I''m excited to try it out.
+
+    User 2: I''m sure you''ll be glad you did.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

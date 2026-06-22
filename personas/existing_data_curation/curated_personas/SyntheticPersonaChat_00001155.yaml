@@ -1,0 +1,64 @@
+id: '00001155'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1155
+data:
+  user 1 personas: 'My car is black.
+
+    My favorite song is california love.
+
+    I drive a fast car.
+
+    I like to listen to rap music.'
+  user 2 personas: 'I have trouble getting motivated.
+
+    I slack off on my homework.
+
+    I m a hopeless romantic.
+
+    I have bad luck with relationships.
+
+    I daydream during work.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much. Just thinking about my day.
+
+    User 1: What did you do today?
+
+    User 2: Not much. I went to work, and then came home and watched TV.
+
+    User 1: Did anything interesting happen at work?
+
+    User 2: Not really. It was just a normal day.
+
+    User 1: I know the feeling. I slack off on my homework too.
+
+    User 2: I''m a hopeless romantic. I always have bad luck with relationships.
+
+    User 1: Me too. I daydream during work all the time.
+
+    User 2: I think we should get together and do something fun.
+
+    User 1: That''s a great idea. I''m free tomorrow.
+
+    User 2: Me too. What do you want to do?
+
+    User 1: Let''s go to the movies.
+
+    User 2: That sounds good. What movie do you want to see?
+
+    User 1: I don''t know. What do you want to see?
+
+    User 2: I''m not sure. What are you in the mood for?
+
+    User 1: I''m in the mood for a comedy.
+
+    User 2: Me too. There''s a new comedy movie out called "The Nice Guys."
+
+    User 1: That sounds good. I''ll see you tomorrow at the theater.
+
+    User 2: Great! I''ll be there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

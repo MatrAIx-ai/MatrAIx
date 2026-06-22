@@ -1,0 +1,76 @@
+id: 00002915
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2915
+data:
+  user 1 personas: 'I work as a bartender.
+
+    I used to be in the marines.
+
+    I m a vegetarian.
+
+    When i have nothing else to do , i read books.
+
+    I like to write poetry.'
+  user 2 personas: 'I am a baseball player.
+
+    My favourite colour is green.
+
+    I like to read books about chinese history.
+
+    I can play the piano.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a baseball player.
+
+    User 1: That''s cool! Do you play for a professional team?
+
+    User 2: I used to, but now I''m playing in the minor leagues.
+
+    User 1: Oh, that''s still really cool! What''s your favorite thing about playing baseball?
+
+    User 2: I love the competition and the teamwork.
+
+    User 1: I can imagine! What''s your favorite position to play?
+
+    User 2: I''m a pitcher.
+
+    User 1: That''s a tough position! What''s your favorite thing about pitching?
+
+    User 2: I love the challenge of trying to strike out batters.
+
+    User 1: I can imagine! So, what do you do for fun when you''re not playing baseball?
+
+    User 2: I like to read books, play the piano, and hang out with my friends.
+
+    User 1: That sounds like a great way to relax! What are some of your favorite books?
+
+    User 2: I love books about Chinese history. I also like to read poetry.
+
+    User 1: I''ve never read any books about Chinese history, but I''ve always been interested in it.
+
+    User 2: You should check out some books by Sima Qian. He''s one of my favorite historians.
+
+    User 1: I''ll definitely do that! Thanks for the recommendation.
+
+    User 2: No problem! I''m always happy to talk about books.
+
+    User 1: So, what do you like to do on the piano?
+
+    User 2: I like to play classical music. I also like to play jazz.
+
+    User 1: I''ve always wanted to learn to play the piano.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might have to give it a try.
+
+    User 2: You won''t regret it.
+
+    User 1: Thanks for the advice.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

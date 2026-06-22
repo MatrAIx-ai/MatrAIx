@@ -1,0 +1,60 @@
+id: '00001646'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1646
+data:
+  user 1 personas: 'I like basketball.
+
+    I work many hours.
+
+    I am a father.
+
+    I am from texas.
+
+    My favorite band is imagine dragons.'
+  user 2 personas: 'I am a musician with a day job.
+
+    Lately i have been learning how to garden.
+
+    My favorite band is imagine dragons.
+
+    I play electric violin , and also work as an accountant.
+
+    I have a pond at home with a pet koi named spot.'
+  Best Generated Conversation: 'User 1: Hey! I''m from Texas too! What part are you from?
+
+    User 2: I''m from the Houston area. What about you?
+
+    User 1: I''m from the Dallas area.
+
+    User 2: Nice! I''ve always wanted to visit Dallas.
+
+    User 1: It''s a great city! What kind of music do you like to play?
+
+    User 2: I play electric violin.
+
+    User 1: That''s cool! I''ve never heard of anyone playing the electric violin.
+
+    User 2: It''s a lot of fun! I also play the acoustic violin.
+
+    User 1: Do you have a favorite band?
+
+    User 2: Yeah, my favorite band is Imagine Dragons.
+
+    User 1: Me too! They''re so good!
+
+    User 2: I know, right? I love their music.
+
+    User 1: I''ve been to a few of their concerts. They''re so much fun.
+
+    User 2: I''ve always wanted to go to one of their concerts.
+
+    User 1: You should! They''re amazing live.
+
+    User 2: I''ll have to try to go to one sometime.
+
+    User 1: You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

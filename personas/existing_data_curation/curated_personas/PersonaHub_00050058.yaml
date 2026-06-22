@@ -1,0 +1,18 @@
+id: 00050058
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50058
+persona_description: A radiologist who specializes in the use of magnetic resonance imaging (MRI) to diagnose diseases of the brain and central nervous system. They are familiar with the processes involved
+  in creating MRI images and the potential risks associated with the procedure. They are likely to have a detailed understanding of the anatomy and physiology of the brain and nervous system, as well as
+  the technical aspects of MRI imaging. They may also have experience interpreting MRI images and using them to make accurate diagnoses.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neuroradiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: MRI interpretation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

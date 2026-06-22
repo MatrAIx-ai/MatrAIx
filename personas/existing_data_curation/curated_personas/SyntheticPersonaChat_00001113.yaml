@@ -1,0 +1,62 @@
+id: '00001113'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1113
+data:
+  user 1 personas: 'I play football.
+
+    I have a pet iguana.
+
+    I like to play video games.
+
+    I work at mcdonald s.
+
+    My favorite movie is star wars.'
+  user 2 personas: 'I am a vegan.
+
+    I like to ride my bike.
+
+    I have 3 dogs and 2 cats.
+
+    I work as a vet.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]
+
+    User 2: Hi, I''m [name]
+
+    User 1: What do you do for fun?
+
+    User 2: I like to ride my bike and volunteer at the animal shelter.
+
+    User 1: That''s cool! I like to play football and video games.
+
+    User 2: Do you have any pets?
+
+    User 1: I have a pet iguana.
+
+    User 2: I love iguanas! I have a dog, cat, and two other cats.
+
+    User 1: That''s a lot of pets!
+
+    User 2: I know, right? I love them all.
+
+    User 1: I''m a vegan, so I don''t eat any animals.
+
+    User 2: That''s cool! I''m not a vegan, but I do try to eat a lot of plant-based foods.
+
+    User 1: I work at McDonald''s, but I''m planning on getting a new job soon.
+
+    User 2: Oh, cool! What kind of job are you looking for?
+
+    User 1: I''m not sure yet, but I''m thinking about going back to school to be a vet.
+
+    User 2: That''s great! I''m sure you''d be a great vet.
+
+    User 1: Thanks! I hope so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

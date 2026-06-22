@@ -1,0 +1,70 @@
+id: 00003778
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3778
+data:
+  user 1 personas: 'I usually go to bed late.
+
+    I am studying to be a dentist.
+
+    My favorite team is the raptors.
+
+    I like sports.
+
+    My favorite band is rise against.'
+  user 2 personas: 'I am learning how to play the piano.
+
+    I geocache in my spare time.
+
+    I am a school psychologist.
+
+    Chocolate is my favorite food.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just learning to play the piano.
+
+    User 1: Cool! I''ve always wanted to learn how to play an instrument.
+
+    User 2: It''s really fun! I''m learning a song by Rise Against right now.
+
+    User 1: Oh, nice! I love Rise Against. They''re my favorite band.
+
+    User 2: They''re great, right? I''m actually going to see them in concert next month.
+
+    User 1: That''s awesome! I''m jealous.
+
+    User 2: You should go see them! They''re an amazing live band.
+
+    User 1: I might just do that.
+
+    User 2: Good!
+
+    User 1: So, what else do you like to do in your spare time?
+
+    User 2: I like to geocache. It''s a kind of treasure hunt where you use GPS coordinates to find hidden containers.
+
+    User 1: That sounds like fun! I''ve never heard of that before.
+
+    User 2: It''s really fun! You can learn more about it here.
+
+    User 1: Cool, I''ll check it out.
+
+    User 2: What do you like to do in your spare time?
+
+    User 1: I like to play sports, watch sports, and go to concerts.
+
+    User 2: Oh, nice! I like sports too. What''s your favorite sport?
+
+    User 1: I like basketball and hockey.
+
+    User 2: Me too! I''m a big fan of the Raptors.
+
+    User 1: Me too! They''re my favorite team.
+
+    User 2: Cool, we should go to a game together sometime.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

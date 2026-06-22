@@ -1,0 +1,70 @@
+id: 00008104
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8104
+data:
+  user 1 personas: 'My hobbies are sleeping and playing the guitar.
+
+    I am a factory worker.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I have a wife and two kids.'
+  user 2 personas: 'I live in vienna , austria now.
+
+    I live with my boyfriend of 5 years.
+
+    I paint in my free time.
+
+    I work in it.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I live in Vienna, Austria.
+
+    User 1: Oh, that''s cool! I''ve always wanted to go to Austria.
+
+    User 2: You should come! It''s a beautiful country.
+
+    User 1: I''m sure it is. What do you do for a living?
+
+    User 2: I''m a painter.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to paint.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that. What do you like to paint?
+
+    User 2: I like to paint all kinds of things, but I especially like painting landscapes.
+
+    User 1: That sounds beautiful. I love looking at paintings of landscapes.
+
+    User 2: Me too. They''re so peaceful.
+
+    User 1: So, what''s your favorite painting?
+
+    User 2: It''s hard to say, but I think I''d have to say my favorite painting is "The Starry Night" by Vincent van Gogh.
+
+    User 1: That''s a great painting! I love it too.
+
+    User 2: It''s so beautiful and peaceful.
+
+    User 1: So, what''s your favorite thing to do in Vienna?
+
+    User 2: I love going to the art museum.
+
+    User 1: That sounds like a lot of fun. I''ve always wanted to go to an art museum in Europe.
+
+    User 2: You should! There are so many beautiful paintings to see.
+
+    User 1: I''m sure I will. Thanks for talking to me!
+
+    User 2: No problem! It was nice talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

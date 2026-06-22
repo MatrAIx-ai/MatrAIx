@@ -1,0 +1,66 @@
+id: 00008453
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8453
+data:
+  user 1 personas: 'I still have a photo from my senior prom in my wallet.
+
+    My sister is becoming my mother and often asks me when i m getting married.
+
+    I own five pairs of the same pants.
+
+    I often think about quitting my job and becoming a roadie for justin bieber.
+
+    I am not a big fan of waiting in line.'
+  user 2 personas: 'I like ice cream.
+
+    I work as a contractor for a cab company.
+
+    I am taking courses online.
+
+    I am engaged.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a contractor for a cab company.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: Yeah, it''s a good job. I get to meet a lot of interesting people.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out to eat, I''m taking online courses and I like ice cream.
+
+    User 1: I''m not a big fan of waiting in line, but I like ice cream too.
+
+    User 2: Me too! What''s your favorite flavor?
+
+    User 1: I like chocolate chip cookie dough.
+
+    User 2: Me too! That''s my favorite too.
+
+    User 1: Where do you like to go for ice cream?
+
+    User 2: I like to go to this place called The Creamery. It''s the best ice cream I''ve ever had.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure. I might go to the park or something.
+
+    User 1: Oh, that sounds nice. I''m going to go home and relax.
+
+    User 2: Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

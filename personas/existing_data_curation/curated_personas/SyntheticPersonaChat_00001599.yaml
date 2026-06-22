@@ -1,0 +1,84 @@
+id: 00001599
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1599
+data:
+  user 1 personas: 'I have 3 ex wives.
+
+    I do not like acting.
+
+    I do not like kids.
+
+    I have 3 ferrari cars in my garage.'
+  user 2 personas: 'I work in it.
+
+    I live in vienna , austria now.
+
+    I was born in london.
+
+    I paint in my free time.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I was born in London, but I live in Vienna now.
+
+    User 1: Oh, that''s cool. I''m from Los Angeles.
+
+    User 2: Nice! I''ve always wanted to visit Los Angeles.
+
+    User 1: You should! It''s a great city.
+
+    User 2: Maybe I will someday.
+
+    User 1: What do you do for work?
+
+    User 2: I work in IT.
+
+    User 1: Oh, cool. I''ve always been interested in IT.
+
+    User 2: It''s a great field. There''s a lot of opportunity.
+
+    User 1: I''m sure.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to travel, play video games, and go to the movies.
+
+    User 2: That sounds fun. I like to paint in my free time.
+
+    User 1: Oh, that''s cool. I''ve always wanted to learn how to paint.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s really relaxing.
+
+    User 1: Thanks for the tip.
+
+    User 2: No problem.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption.
+
+    User 1: Oh, that''s a great movie! I love it too.
+
+    User 2: Me too! It''s so good.
+
+    User 1: What do you like about it?
+
+    User 2: I like the characters, the story, and the ending.
+
+    User 1: I agree. The characters are so well-developed, and the story is so interesting. The ending is really satisfying.
+
+    User 2: I''m glad you agree. It''s a great movie.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

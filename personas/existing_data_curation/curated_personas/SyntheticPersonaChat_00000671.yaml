@@ -1,0 +1,72 @@
+id: '00000671'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 671
+data:
+  user 1 personas: 'I like fishing.
+
+    I m a simple man.
+
+    I usually catch sunfish.
+
+    I drink beers and go to the creek.
+
+    I can t eat them but they re pretty.'
+  user 2 personas: 'I live in japan and own the biggest mansion in the country.
+
+    I drive a ferrari.
+
+    I just bought a new mansion.
+
+    I am a rapper.'
+  Best Generated Conversation: 'User 1: Hello, I am User 1. I live in Kansas and I like to fish.
+
+    User 2: Hello, I am User 2. I live in Japan and I drive a Ferrari.
+
+    User 1: What is it like to live in Japan?
+
+    User 2: It is very different from Kansas. The culture is different, the food is different, and the language is different.
+
+    User 1: I can imagine. I have always wanted to visit Japan.
+
+    User 2: You should! It is a beautiful country with a lot to offer.
+
+    User 1: Maybe I will someday.
+
+    User 2: I hope you do.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the movies, go to the park, and play video games.
+
+    User 1: Those sound like fun things to do.
+
+    User 2: They are. I also like to go fishing.
+
+    User 1: Really? What kind of fish do you catch?
+
+    User 2: I usually catch sunfish. They are not very good to eat, but they are pretty.
+
+    User 1: I have never caught a sunfish before.
+
+    User 2: They are not very hard to catch.
+
+    User 1: Maybe I will try to catch one someday.
+
+    User 2: You should. They are fun to catch.
+
+    User 1: Thank you for the advice.
+
+    User 2: You are welcome.
+
+    User 1: I should go now. It was nice talking to you.
+
+    User 2: It was nice talking to you too.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

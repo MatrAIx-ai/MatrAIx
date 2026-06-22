@@ -1,0 +1,68 @@
+id: '00001064'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1064
+data:
+  user 1 personas: 'I like to paint.
+
+    I am a vegan.
+
+    I traveled around the world in a boat.
+
+    I have 23 cats at home.
+
+    I hate the taste of fish.'
+  user 2 personas: 'I hate to lose.
+
+    I love fishing.
+
+    My favorite season is spring.
+
+    My father died when i was 2.
+
+    I have blue eyes.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi [name]. I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fish, play golf, and go camping.
+
+    User 1: I like to paint, travel, and spend time with my cats.
+
+    User 2: That''s cool. I''ve never met anyone who paints. What kind of things do you paint?
+
+    User 1: I like to paint landscapes and animals. I also do some abstract painting.
+
+    User 2: That sounds really cool. I''d love to see some of your paintings sometime.
+
+    User 1: Sure, I''d be happy to show you.
+
+    User 2: Thanks. I''m always looking for new art to enjoy.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: My favorite season is spring. I love the fresh air and the new growth.
+
+    User 1: I like spring too. It''s a great time for hiking and camping.
+
+    User 2: Yeah, I love being outdoors in the spring.
+
+    User 1: So, what''s your favorite fish to catch?
+
+    User 2: I like to catch trout. They''re a lot of fun to fight.
+
+    User 1: I''ve never caught a trout before. I''ll have to try it sometime.
+
+    User 2: You should. It''s a lot of fun.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

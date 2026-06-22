@@ -1,0 +1,76 @@
+id: 00000884
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 884
+data:
+  user 1 personas: 'My name is tom.
+
+    I am east asian.
+
+    I enjoy eating italian food.'
+  user 2 personas: 'I like to go hiking on the weekends.
+
+    I can speak arabic , english , and french.
+
+    I play jazz piano in a band.
+
+    My family is from algeria.
+
+    I am a barista.'
+  Best Generated Conversation: 'User 1: Hi! I''m Tom.
+
+    User 2: Hi Tom! I''m Karim.
+
+    User 1: It''s nice to meet you, Karim.
+
+    User 2: Nice to meet you too, Tom.
+
+    User 1: Where are you from?
+
+    User 2: I''m from Algeria.
+
+    User 1: Oh, that''s cool. I''ve never been to Algeria.
+
+    User 2: You should come visit sometime! It''s a beautiful country.
+
+    User 1: I''d love to.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to eat Italian food, go hiking, and watch movies.
+
+    User 2: Oh, I love Italian food too! Where is your favorite place to eat Italian food?
+
+    User 1: I love this little Italian restaurant in my neighborhood.
+
+    User 2: Oh, I''ve been there! I love their pasta.
+
+    User 1: Me too!
+
+    User 2: So, what kind of movies do you like to watch?
+
+    User 1: I like action movies, comedy movies, and drama movies.
+
+    User 2: Me too! I love all kinds of movies.
+
+    User 1: Me too!
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m going to go hiking with my friends.
+
+    User 2: Oh, that sounds fun! I love hiking.
+
+    User 1: Me too!
+
+    User 2: Well, it was nice talking to you, Tom.
+
+    User 1: You too, Karim.
+
+    User 2: Have a great weekend!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

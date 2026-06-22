@@ -1,0 +1,64 @@
+id: 00007933
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7933
+data:
+  user 1 personas: 'I spend an hour getting ready in the morning.
+
+    I have horrible allergies.
+
+    I still love my cat despite all this.
+
+    I can t stand clutter or dust.
+
+    When i shower my skin is nearly red from how hard i scrub.'
+  user 2 personas: 'I learned piano at age 6.
+
+    I am a fan of system of a down.
+
+    I am a vegan.
+
+    I own 9 guitars.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for fun?
+
+    User 2: I like to play the piano, listen to music, and play guitar.
+
+    User 1: Oh, that''s cool. I like to play the piano too. What''s your favorite song to play?
+
+    User 2: I like to play "Toxicity" by System of a Down. It''s a really fun song to play.
+
+    User 1: I''ve never heard of that song before. I''ll have to check it out.
+
+    User 2: You should, it''s a great song.
+
+    User 1: So, are you vegan?
+
+    User 2: Yes, I''ve been vegan for a few years now.
+
+    User 1: Why did you become vegan?
+
+    User 2: I did it for ethical reasons. I didn''t want to support the meat industry.
+
+    User 1: I respect that. I''m not vegan myself, but I know a lot of people who are.
+
+    User 2: Cool, do you play any other instruments?
+
+    User 1: No, I only play the piano.
+
+    User 2: That''s cool. I''ve always wanted to learn how to play the piano.
+
+    User 1: It''s not too hard to learn. You should give it a try.
+
+    User 2: I might. Thanks for the suggestion.
+
+    User 1: No problem. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

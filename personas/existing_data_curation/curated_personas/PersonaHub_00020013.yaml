@@ -1,0 +1,18 @@
+id: '00020013'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20013
+persona_description: A microbiologist who specializes in the detection and identification of bacteria using various molecular and biochemical techniques, including phage-based assays. This persona is likely
+  to be involved in research and development of new diagnostic tools for bacterial infections and has expertise in the use of phage reporters, luc genes, and lux genes to detect bacterial targets. They
+  are also knowledgeable about quorum sensing and the role of autoinducer molecules in bacterial communication.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: microbial detection and identification
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

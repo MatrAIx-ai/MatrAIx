@@ -1,0 +1,74 @@
+id: 00001813
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1813
+data:
+  user 1 personas: 'I am in art school.
+
+    I aspire to paint murals.
+
+    I like to work with acrylics.
+
+    I have blonde hair.'
+  user 2 personas: 'I work graveyard in a hotel.
+
+    I am saving for college.
+
+    My favorite actor is robert denaro.
+
+    I love the snow.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work graveyard in a hotel.
+
+    User 1: Oh, that must be interesting. Do you like it?
+
+    User 2: It''s okay. I get a lot of free time to do my own thing.
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to watch movies, play video games, and read.
+
+    User 1: Me too! I love movies, and I''m a big fan of Robert De Niro.
+
+    User 2: Oh, he''s great! I love his movies.
+
+    User 1: What''s your favorite movie of his?
+
+    User 2: Taxi Driver.
+
+    User 1: That''s a great movie. I love the ending.
+
+    User 2: Me too. It''s so iconic.
+
+    User 1: What are you saving up for college?
+
+    User 2: I''m not sure yet. I''m thinking about going into art school.
+
+    User 1: Oh, that''s great! I''m in art school too.
+
+    User 2: Really? What do you want to do with your art?
+
+    User 1: I want to be a mural artist.
+
+    User 2: That''s awesome! I love murals.
+
+    User 1: Thanks! I love painting with acrylics.
+
+    User 2: Acrylics are my favorite too!
+
+    User 1: We should paint together sometime.
+
+    User 2: I''d love that!
+
+    User 1: Great! We can exchange numbers and talk more.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

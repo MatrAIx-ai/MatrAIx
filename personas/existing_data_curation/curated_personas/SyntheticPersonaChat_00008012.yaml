@@ -1,0 +1,67 @@
+id: 00008012
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8012
+data:
+  user 1 personas: 'I listen to music for more than 5 hours a day.
+
+    I never work more than 4 days in a row.
+
+    I find joy in the littlest things.
+
+    My parents are both dead.
+
+    I refuse to ride the bus.'
+  user 2 personas: 'I work at an insurance firm.
+
+    I have two children , a boy and a girl.
+
+    I am divorced and looking to date.
+
+    I am a professional bowler.
+
+    I take care of my grandmother on weekdays.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user1].
+
+
+    User 2: Hi [user2]. What do you do for work?
+
+
+    User 1: I''m a musician, and I also do some freelance writing on the side.
+
+
+    User 2: That sounds really cool! I work as an insurance adjuster, and I also have two kids, a boy and a girl.
+
+
+    User 1: Oh, that''s great! I''m sure your kids are really cute.
+
+
+    User 2: They are! My son is 10 years old, and my daughter is 8 years old.
+
+
+    User 1: What do they like to do?
+
+
+    User 2: My son loves to play video games, and my daughter loves to read.
+
+
+    User 1: That''s great! I''m sure they''re a lot of fun to be around.
+
+
+    User 2: They are! I''m really lucky to have them in my life.
+
+
+    User 1: That''s great to hear. What are you looking for in a relationship?
+
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent. I''m also looking for someone who is interested in the same things that I am, such as music and writing.
+
+
+    User 1: That sounds great! I''m sure you''ll find someone perfect for you.
+
+
+    User 2: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

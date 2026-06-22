@@ -1,0 +1,68 @@
+id: 00006994
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6994
+data:
+  user 1 personas: 'I like to plant flowers in my gardens.
+
+    I enjoy cooking for people.
+
+    I have a lizard named nagini.
+
+    I like to take my dog for long walks.'
+  user 2 personas: 'I like to listen to country music.
+
+    I surf everyday.
+
+    I can play piano.
+
+    I work at a bar.
+
+    People say i can cook well.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to country music, surf, play piano, and cook.
+
+    User 1: That''s a lot of hobbies! I like to plant flowers in my gardens, enjoy cooking for people, and take my dog for long walks.
+
+    User 2: That''s awesome! I love dogs. Do you have a picture of yours?
+
+    User 1: Sure, I''ll send you a picture of him. What''s your favorite country music artist?
+
+    User 2: I love George Strait. He''s my favorite.
+
+    User 1: Me too! He''s so good. I saw him in concert last year.
+
+    User 2: Lucky! I''ve always wanted to see him in concert.
+
+    User 1: You should! He puts on a great show.
+
+    User 2: I will! I''m sure it would be amazing.
+
+    User 1: I think so too.
+
+    User 2: So, what do you like to cook?
+
+    User 1: I love to cook all kinds of food, but my favorite is probably Italian.
+
+    User 2: Me too! I love pasta and pizza.
+
+    User 1: Me too! I make a mean lasagna.
+
+    User 2: I bet you do! I''m a pretty good cook myself.
+
+    User 1: That''s awesome! We should cook together sometime.
+
+    User 2: That would be fun! I love meeting new people.
+
+    User 1: Me too! I think we''re going to be friends.
+
+    User 2: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

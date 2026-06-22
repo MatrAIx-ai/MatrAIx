@@ -1,0 +1,60 @@
+id: '00004312'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4312
+data:
+  user 1 personas: 'I enjoy building computers.
+
+    I fly airplanes.
+
+    I dropped out of college.
+
+    My favorite band is tool.
+
+    I am in the army.'
+  user 2 personas: 'My family loves me , but keeps their distance.
+
+    I blame myself for all of my problems.
+
+    If i m not drinking , i m thinking , which makes me uncomfortable.
+
+    I am constantly drinking.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1]. What''s yours?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: You too. What do you do for fun?
+
+    User 2: I enjoy spending time with my family and friends, but I also like to go on adventures.
+
+    User 1: What kind of adventures do you go on?
+
+    User 2: I like to go hiking, camping, and exploring new places.
+
+    User 1: That sounds fun. I love to go hiking too. I''m also a big fan of music. Do you listen to any music?
+
+    User 2: I love music! My favorite band is Tool.
+
+    User 1: I''ve heard of Tool. They''re a pretty good band. I''m more into classic rock myself.
+
+    User 2: Classic rock is great too. I love Led Zeppelin and The Beatles.
+
+    User 1: Those are some of my favorites too. I also like The Doors and Pink Floyd.
+
+    User 2: I love all of those bands. I think they''re all really talented.
+
+    User 1: They are. I''m glad we have similar taste in music.
+
+    User 2: Me too. It''s always nice to find someone who shares your interests.
+
+    User 1: Yeah, it is. Well, I should probably get going. It was nice talking to you, [user 2].
+
+    User 2: You too, [user 1]. I hope we can talk again soon.
+
+    User 1: Me too. Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

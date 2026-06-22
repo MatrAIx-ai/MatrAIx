@@ -1,0 +1,100 @@
+id: 00008001
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8001
+data:
+  user 1 personas: 'I have a wife and two kids back in the states.
+
+    I am not afraid to die.
+
+    I would be honored to give my life for my country.
+
+    I am an army ranger.
+
+    I secretly love my long deployments , because it gets me away from conventional life.'
+  user 2 personas: 'I collect bugs in jars.
+
+    I build my own computers.
+
+    I ran for political office in 2004.
+
+    I thought of joining the military when i was younger.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a computer engineer.
+
+    User 1: Oh, that''s cool. I''m an army ranger.
+
+    User 2: Really? That''s awesome! What made you want to join the military?
+
+    User 1: I wanted to serve my country.
+
+    User 2: That''s a noble reason.
+
+    User 1: Thank you.
+
+    User 2: What do you like most about being in the military?
+
+    User 1: I like the sense of camaraderie.
+
+    User 2: I can imagine.
+
+    User 1: And I also like the opportunity to travel and see new places.
+
+    User 2: That''s definitely a perk.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about staying in the military for a few more years, but I might also go back to school to get my master''s degree.
+
+    User 2: That sounds like a good plan.
+
+    User 1: Thank you.
+
+    User 2: So, what''s your favorite thing to do in your free time?
+
+    User 1: I like to spend time with my family and friends.
+
+    User 2: That''s nice.
+
+    User 1: I also like to play video games and watch movies.
+
+    User 2: I like video games too.
+
+    User 1: What are some of your favorites?
+
+    User 2: I like the Call of Duty series and the Battlefield series.
+
+    User 1: I''ve played a few of those games. They''re pretty fun.
+
+    User 2: Yeah, they are.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: I''m not sure. I have a lot of favorites.
+
+    User 1: Me too.
+
+    User 2: I like movies like The Shawshank Redemption, The Godfather, and The Dark Knight.
+
+    User 1: I''ve seen all of those movies. They''re all great.
+
+    User 2: I agree.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Maybe we can play some video games together sometime.
+
+    User 2: That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

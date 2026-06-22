@@ -1,0 +1,18 @@
+id: '00052221'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52221
+persona_description: A dermatologist with expertise in the treatment and management of skin disorders, particularly rosacea. They are knowledgeable about the underlying causes and triggers of the condition,
+  as well as the various treatment options available. They have experience with prescription medications, OTC products, and alternative treatments, and are skilled in the use of lasers and intense pulsed
+  light treatments for the potential vascular manifestations of rosacea. They are dedicated to providing personalized and effective treatment plans for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: rosacea treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

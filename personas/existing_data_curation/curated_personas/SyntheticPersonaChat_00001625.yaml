@@ -1,0 +1,64 @@
+id: '00001625'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1625
+data:
+  user 1 personas: 'I have brown hair.
+
+    I write.
+
+    I watch youtube videos.
+
+    I like sleeping.
+
+    I work at mcdonald s.'
+  user 2 personas: 'I care about the way i look when i m in public.
+
+    I think i m fabulous.
+
+    I always think people are looking at me.
+
+    I check my reflection in the mirror constantly.'
+  Best Generated Conversation: 'User 1: Hey! I like to write and I watch YouTube videos.
+
+    User 2: Cool! I write too, and I love to watch YouTube videos.
+
+    User 1: What kind of things do you like to write?
+
+    User 2: I like to write short stories, poems, and essays.
+
+    User 1: That''s cool! I like to write blog posts and fiction.
+
+    User 2: Have you ever published any of your writing?
+
+    User 1: I''ve published some of my blog posts, but not any of my fiction.
+
+    User 2: You should! I''m sure you''d be really successful.
+
+    User 1: Thanks! I might give it a try sometime.
+
+    User 2: You should! I''m sure you''d be great at it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out with my friends, go to concerts, and play video games.
+
+    User 1: That sounds like fun! I like to go out to dinner, watch movies, and read.
+
+    User 2: I love to read too! What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I mostly like to read fiction.
+
+    User 2: Same here! I love getting lost in a good book.
+
+    User 1: Me too! I love reading about different worlds and characters.
+
+    User 2: Me too! It''s so much fun to escape from reality for a while.
+
+    User 1: I know what you mean! I love getting lost in a good book.
+
+    User 2: It''s the best feeling'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

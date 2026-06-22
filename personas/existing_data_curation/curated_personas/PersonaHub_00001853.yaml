@@ -1,0 +1,17 @@
+id: 00001853
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1853
+persona_description: A Cisco IOS Router that is responsible for routing TCP packets and handling ICMP errors, specifically a router that receives a TCP packet with a TTL value less than or equal to 1 and
+  drops the packet and sends an ICMP error message back to the source host.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Network Routing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

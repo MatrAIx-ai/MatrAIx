@@ -1,0 +1,86 @@
+id: '00000757'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 757
+data:
+  user 1 personas: 'I like to swim.
+
+    My favorite show is thevoice.
+
+    I am blue and tall.
+
+    I like to read.'
+  user 2 personas: 'I am vegan.
+
+    I work at a retail store.
+
+    I enjoy walking on the beach.
+
+    I have red hair.
+
+    I live close to the coast.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1).
+
+    User 2: Hi (user 2). What do you like to do?
+
+    User 1: I like to swim, read, and watch The Voice.
+
+    User 2: I like to walk on the beach, and I''m a vegan.
+
+    User 1: Really? I love animals!
+
+    User 2: Me too! I work at a retail store.
+
+    User 1: Oh, that''s cool. I''m a student.
+
+    User 2: Oh, what are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: Oh, that''s cool. I wish I had gone to college.
+
+    User 1: Why didn''t you?
+
+    User 2: I didn''t have the money.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: Yeah, but I''m happy with my job now.
+
+    User 1: That''s good.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read mysteries and thrillers.
+
+    User 2: Oh, me too! I love Agatha Christie.
+
+    User 1: Me too! She''s my favorite author.
+
+    User 2: She''s so good! Have you read any of her Poirot novels?
+
+    User 1: Yes, I''ve read all of them! They''re so good.
+
+    User 2: Me too! I love them.
+
+    User 1: So, what do you like to do on your days off?
+
+    User 2: I like to go to the beach and walk my dog.
+
+    User 1: That sounds nice. I like to go swimming on my days off.
+
+    User 2: Oh, that''s cool. I wish I knew how to swim.
+
+    User 1: You should learn! It''s really fun.
+
+    User 2: I know, I know. I''ll get around to it one of these days.
+
+    User 1: Good!
+
+    User 2: Thanks for talking to me.
+
+    User 1: You''re welcome. It was fun talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,89 @@
+id: '00005512'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5512
+data:
+  user 1 personas: 'I am very polite and courteous.
+
+    I look forward to eating at restaurants.
+
+    I work in a bank.
+
+    I work 40 hours a week.'
+  user 2 personas: 'I ve never met my father.
+
+    My mother works at a bank.
+
+    My favorite food is mushroom ravioli.
+
+    I work in an animal shelter.
+
+    I speak fluent french.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1].
+
+
+    User 2: Hello, my name is [user 2].
+
+
+    User 1: It''s nice to meet you, [user 2].
+
+
+    User 2: It''s nice to meet you too, [user 1].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I work in an animal shelter.
+
+
+    User 1: Oh, that''s really cool! I''m a banker.
+
+
+    User 2: That''s interesting! What do you like about banking?
+
+
+    User 1: I like the fact that I get to help people with their finances.
+
+
+    User 2: That''s a great feeling! I love helping animals, so I''m glad I work in an animal shelter.
+
+
+    User 1: What''s your favorite food?
+
+
+    User 2: My favorite food is mushroom ravioli.
+
+
+    User 1: Mushroom ravioli is delicious! I love it too.
+
+
+    User 2: Do you have any siblings?
+
+
+    User 1: Yes, I have two sisters.
+
+
+    User 2: Me too! I have a brother and a sister.
+
+
+    User 1: That''s cool! We should get together sometime and have mushroom ravioli.
+
+
+    User 2: That sounds great! I''d love to do that.
+
+
+    User 1: Great! I''ll give you my number.
+
+
+    User 2: Okay, I''ll add you to my contacts.
+
+
+    User 1: Great! Let''s plan something soon.
+
+
+    User 2: Sounds good! I''m free next weekend.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

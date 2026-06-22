@@ -1,0 +1,74 @@
+id: '00007275'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7275
+data:
+  user 1 personas: 'My name is mary and i am from colorado.
+
+    The weather here is very cold , but so beautiful in the spring.
+
+    My favorite band is one direction.'
+  user 2 personas: 'I play piano.
+
+    I have a ten year old son.
+
+    I graduated high school in 1986.'
+  Best Generated Conversation: 'User 1: Hi there! I''m Mary. I''m from Colorado.
+
+    User 2: Hi Mary! I''m (name). I live in California.
+
+    User 1: Nice to meet you! What''s it like in California?
+
+    User 2: It''s pretty nice! The weather is usually warm and sunny, and there''s a lot to do.
+
+    User 1: That sounds nice! I love the weather in Colorado, but it can be really cold in the winter.
+
+    User 2: I know what you mean! The winters here can be pretty cold too.
+
+    User 1: Have you ever been to Colorado?
+
+    User 2: No, but I''ve always wanted to go! I''ve heard it''s beautiful.
+
+    User 1: It is! The mountains are amazing, and the hiking is great.
+
+    User 2: I love hiking! I''m sure I''d love it there.
+
+    User 1: You should definitely come visit sometime!
+
+    User 2: I will!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play piano, read, and spend time with my son.
+
+    User 1: That sounds like a lot of fun! I like to read too. What are some of your favorite books?
+
+    User 2: I love to read historical fiction and fantasy. I''m currently reading The Name of the Wind by Patrick Rothfuss.
+
+    User 1: I''ve heard good things about that book! I''ve been meaning to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will!
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is One Direction. I''ve been a fan of theirs for years.
+
+    User 2: I''ve heard of them! They''re pretty popular.
+
+    User 1: Yeah, they are. I love their music.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: My favorite song is "Perfect." It''s so beautiful.
+
+    User 2: I''ve heard that song! It''s really good.
+
+    User 1: I''m glad you like it!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

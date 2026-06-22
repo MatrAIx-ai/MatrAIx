@@ -1,0 +1,62 @@
+id: 00005158
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5158
+data:
+  user 1 personas: 'My favorite season is spring.
+
+    I have blue eyes.
+
+    I love fishing.
+
+    My father died when i was 2.'
+  user 2 personas: 'I like field hockey and soccer.
+
+    I love animals , especially dogs.
+
+    I get good grades in school.
+
+    When i grow up , i want to be a veterinarian.
+
+    I am a 15 year old girl.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi! My name is [name].
+
+    User 1: It''s nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to play field hockey and soccer. I also love animals, especially dogs.
+
+    User 1: That''s cool! I like to fish. What''s your favorite season?
+
+    User 2: My favorite season is spring. It''s a beautiful time of year and there''s so much to do.
+
+    User 1: I agree! Spring is my favorite season too. Do you have any other hobbies?
+
+    User 2: I like to read and write. I also like to watch movies.
+
+    User 1: That''s great! I like to read and write too. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite genre is mystery.
+
+    User 1: Me too! I love mystery novels. Do you have any favorite authors?
+
+    User 2: I love Agatha Christie and John Grisham.
+
+    User 1: Me too! I love their books.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: That''s awesome! I want to be a teacher when I grow up.
+
+    User 1: That''s great! I''m sure you''ll be a great teacher.
+
+    User 2: Thank you!
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

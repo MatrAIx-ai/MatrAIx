@@ -1,0 +1,19 @@
+id: '00050720'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50720
+persona_description: A nuclear physicist with expertise in reactor safety and radiation protection. They are familiar with the principles and regulations governing nuclear research reactors and are concerned
+  about the safety measures taken by the Institute for Energy Technology. They are particularly interested in the events surrounding the release of radioactive iodine from the Halden Reactor in October
+  2017 and are critical of the institute's handling of the situation. They are also aware of the potential risks associated with hydrogen formation in the reactor core and are concerned about the reactor's
+  stability in the event of further closures of the primary cooling circuit.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: nuclear physics
+  general_domain_top01pct: None
+  specific_domain_top01pct: nuclear reactor safety
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

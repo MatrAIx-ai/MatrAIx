@@ -1,0 +1,68 @@
+id: 00007896
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7896
+data:
+  user 1 personas: 'I go to work early in the morning as a nurse.
+
+    I am bipolar.
+
+    I am a mother of three.
+
+    I love to eat pita bread with hummus.
+
+    I am thinking of becoming a mother next year.'
+  user 2 personas: 'I live in the usa.
+
+    I love pizza.
+
+    I was born male and transitioned to female when i was 17.
+
+    I was born 20 years ago.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hello! How are you?
+
+    User 2: I''m doing well, thank you! How are you?
+
+    User 1: I''m doing great! Thanks for asking.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love pita bread with hummus!
+
+    User 2: That''s a great choice! I love pizza.
+
+    User 1: I love pizza too! What''s your favorite kind?
+
+    User 2: I love pepperoni pizza the most.
+
+    User 1: Me too! I also love cheese pizza.
+
+    User 2: I like cheese pizza too!
+
+    User 1: Where do you live?
+
+    User 2: I live in the USA.
+
+    User 1: Me too! What state do you live in?
+
+    User 2: I live in California.
+
+    User 1: I live in Florida!
+
+    User 2: Oh, nice! I''ve never been to Florida.
+
+    User 1: You should come visit! We have great beaches.
+
+    User 2: I would love to!
+
+    User 1: Well, I''m glad we met! It was nice talking to you.
+
+    User 2: It was nice talking to you too! I hope we can talk again soon.
+
+    User 1: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

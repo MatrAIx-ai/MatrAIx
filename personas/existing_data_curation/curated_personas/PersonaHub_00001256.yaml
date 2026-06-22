@@ -1,0 +1,18 @@
+id: '00001256'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1256
+persona_description: A dermatologist who specializes in treating skin cancer and providing awareness about skin cancer prevention. Dr. Zizmor is passionate about educating patients of all skin tones on
+  the importance of regular skin checks and the dangers of prolonged exposure to the sun's UV rays. He is dedicated to reducing the risk of skin cancer by promoting safe sun practices and advocating for
+  melanoma prevention.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: skin cancer treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

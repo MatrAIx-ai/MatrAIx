@@ -1,0 +1,66 @@
+id: 00000841
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 841
+data:
+  user 1 personas: 'I love to sing.
+
+    I can play the piano.
+
+    I am a vegetarian.
+
+    I am a night owl.'
+  user 2 personas: 'I never knew my dad.
+
+    I do not drive.
+
+    I work at a bookstore.
+
+    I have three tattoos.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, and I work at a bookstore.
+
+    User 1: Oh, that''s cool! I love to read too. What are some of your favorite books?
+
+    User 2: I love Harry Potter, Percy Jackson, and the Hunger Games series.
+
+    User 1: Me too! I love all those books. I''m also a vegetarian.
+
+    User 2: Really? Me too! I''ve been one for about 5 years now.
+
+    User 1: That''s awesome! I''ve been one for about 7 years now.
+
+    User 2: Cool! What kind of music do you like to listen to?
+
+    User 1: I like a lot of different types of music, but I mostly listen to pop, rock, and hip hop.
+
+    User 2: Me too! I love listening to music while I''m working.
+
+    User 1: That''s what I do too! I love how it can help me focus.
+
+    User 2: Yeah, it''s the best! So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! What kind of software do you engineer?
+
+    User 1: I mostly work on web applications.
+
+    User 2: Oh, that''s cool! I''ve always wanted to learn how to code.
+
+    User 1: It''s not too hard to learn! There are a lot of great resources online.
+
+    User 2: Yeah, I''ve heard that. Maybe I''ll try to learn it someday.
+
+    User 1: I think you should! It''s a really fun and rewarding skill to have.
+
+    User 2: Thanks for the encouragement! I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

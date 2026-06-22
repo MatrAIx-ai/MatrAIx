@@ -1,0 +1,66 @@
+id: 00008382
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8382
+data:
+  user 1 personas: 'My father and grandfather also worked in the circus.
+
+    I am on a keto diet.
+
+    I like going to the moves.
+
+    I have 2 dogs , both golden retrievers.'
+  user 2 personas: 'I draw all of my friends as my little pony characters.
+
+    I enjoy all things my little pony.
+
+    I like cats.
+
+    I like to watch anime.
+
+    I like being weird.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: It''s nice to meet you, [User 2''s name].
+
+    User 2: Nice to meet you too, [User 1''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch anime, draw, and play video games.
+
+    User 1: Oh, that''s cool! I like to draw too.
+
+    User 2: Really? What do you like to draw?
+
+    User 1: I like to draw people and animals.
+
+    User 2: Cool! I like to draw my friends as My Little Pony characters.
+
+    User 1: That''s really cool! I''ve never seen that before.
+
+    User 2: It''s a lot of fun! I like to make them look as realistic as possible.
+
+    User 1: That''s awesome! I''m sure they look great.
+
+    User 2: Thanks! I think they do too.
+
+    User 1: Well, I should let you get back to your drawing.
+
+    User 2: Okay. It was nice talking to you, [User 1''s name].
+
+    User 1: It was nice talking to you too, [User 2''s name].
+
+    User 2: Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation
