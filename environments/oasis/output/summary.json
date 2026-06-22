@@ -2,22 +2,23 @@
   "num_agents": 20,
   "num_steps": 10,
   "model": "Qwen/Qwen3-8B",
-  "duration_seconds": 317.68907952308655,
+  "duration_seconds": 449.1036431789398,
   "platform_stats": {
     "user": 20,
     "post": 212,
-    "follow": 203,
-    "like": 174,
+    "follow": 190,
+    "like": 69,
     "dislike": 0,
-    "comment": 0,
-    "trace": 653,
+    "comment": 256,
+    "trace": 727,
     "rec": 1000
   },
   "action_distribution": {
     "refresh": 200,
-    "create_post": 200,
-    "like_post": 200,
-    "follow": 53
+    "create_comment": 256,
+    "like_post": 71,
+    "create_post": 198,
+    "repost": 2
   },
   "posts_per_user": {
     "1": 10,
@@ -33,8 +34,8 @@
     "11": 10,
     "12": 10,
     "13": 10,
-    "14": 10,
-    "15": 10,
+    "14": 9,
+    "15": 9,
     "16": 10,
     "17": 10,
     "18": 10,
