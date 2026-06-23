@@ -19,6 +19,7 @@ from typing import Any, Callable, Dict, List, Optional, Sequence, Set
 
 import yaml
 
+from backend.service.config import harbor_persona_model
 from persona_eval.types import Persona, PersonaEvalConfig
 
 SCORER_PACKAGE_TARGET = "/app/persona_eval"
@@ -347,7 +348,7 @@ class HarborPersonaEvalRunner:
             "agents": [
                 {
                     "name": "persona-claude-code",
-                    "model_name": "anthropic/claude-sonnet-4-6",
+                    "model_name": harbor_persona_model(),
                     "kwargs": {"persona_path": str(persona_path)},
                 }
             ],

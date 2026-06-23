@@ -3,6 +3,7 @@ import type { ConfigEnvironment } from "./types";
 const configEnvironmentWithPromptOwnership: ConfigEnvironment = {
   runtime: "Harbor",
   personaAgent: "Harbor persona-claude-code",
+  personaModel: "anthropic/claude-haiku-4-5",
   applicationApi: "rec-agent-api sidecar",
   scorer: "Application scorer via Harbor verifier",
   cache: "Docker image + model cache volumes",

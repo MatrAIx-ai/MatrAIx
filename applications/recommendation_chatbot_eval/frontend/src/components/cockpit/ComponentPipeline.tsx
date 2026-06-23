@@ -90,13 +90,14 @@ export function ComponentPipeline({
   const persona = personaStatus(phase, rawPhase, hasPersona);
   const chatbot = chatbotStatus(phase, rawPhase, turnCount);
   const scorer = scorerStatus(phase, rawPhase, hasQuestionnaire);
+  const personaPromptOwner = environment?.promptOwnership.personaSystemPrompt ?? "Harbor native persona injection";
 
   const nodes: PipelineNode[] = [
     {
       key: "persona",
       label: "Persona",
       owner: environment?.personaAgent ?? "Harbor persona-claude-code",
-      detail: environment?.promptOwnership.personaSystemPrompt ?? "Harbor native persona injection",
+      detail: `${environment?.personaModel ?? "anthropic/claude-haiku-4-5"} · ${personaPromptOwner}`,
       icon: "badge",
       ...persona,
     },

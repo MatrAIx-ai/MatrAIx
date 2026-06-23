@@ -20,7 +20,24 @@ from __future__ import annotations
 import os
 from typing import Dict, List, Optional
 
-__all__ = ["ConfigError", "ConfigManager"]
+HARBOR_PERSONA_MODEL_ENV = "MATRIX_HARBOR_PERSONA_MODEL"
+DEFAULT_HARBOR_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
+
+__all__ = [
+    "ConfigError",
+    "ConfigManager",
+    "DEFAULT_HARBOR_PERSONA_MODEL",
+    "HARBOR_PERSONA_MODEL_ENV",
+    "harbor_persona_model",
+]
+
+
+def harbor_persona_model() -> str:
+    """Return the Harbor persona-agent model currently configured."""
+    return (
+        os.environ.get(HARBOR_PERSONA_MODEL_ENV, "").strip()
+        or DEFAULT_HARBOR_PERSONA_MODEL
+    )
 
 
 class ConfigError(ValueError):
@@ -203,7 +220,10 @@ class ConfigManager:
         return {
             "knobs": knobs,
             "defaults": dict(self.DEFAULTS),
-            "environment": dict(self.ENVIRONMENT),
+            "environment": {
+                **self.ENVIRONMENT,
+                "personaModel": harbor_persona_model(),
+            },
         }
 
     def normalize(self, cfg: Optional[Dict[str, object]]) -> Dict[str, str]:

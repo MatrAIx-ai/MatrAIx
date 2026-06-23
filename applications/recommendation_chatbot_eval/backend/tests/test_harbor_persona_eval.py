@@ -317,6 +317,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(tmp_p
         config_path = command[command.index("-c") + 1]
         config = yaml.safe_load(open(config_path, encoding="utf-8"))
         assert config["agents"][0]["name"] == "persona-claude-code"
+        assert config["agents"][0]["model_name"] == "anthropic/claude-haiku-4-5"
         assert config["environment"]["force_build"] is True
         assert config["environment"]["delete"] is False
         assert config["agents"][0]["kwargs"]["persona_path"].endswith("persona.yaml")
@@ -549,6 +550,80 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
     )
 
     assert result.to_dict()["questionnaire"]["overallRating"] == 8
+
+
+def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
+    monkeypatch.setenv("MATRIX_HARBOR_PERSONA_MODEL", "anthropic/claude-sonnet-4-6")
+    calls = []
+
+    def fake_command(command, *, cwd, env):
+        calls.append(command)
+        config = yaml.safe_load(
+            open(command[command.index("-c") + 1], encoding="utf-8")
+        )
+        output_dir = (
+            tmp_path
+            / "runs"
+            / config["job_name"]
+            / "recommender-agent_chat_api__fake"
+            / "artifacts"
+            / "app"
+            / "output"
+        )
+        output_dir.mkdir(parents=True)
+        (output_dir / "transcript.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "messages": [
+                        {"role": "user", "content": "I want a movie."},
+                        {"role": "assistant", "content": "Try Movie A."},
+                    ],
+                    "turns": [
+                        {
+                            "turnId": "0",
+                            "userMessage": "I want a movie.",
+                            "assistantMessage": "Try Movie A.",
+                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "recommendation_result.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    "turnsToRecommendation": 1,
+                }
+            ),
+            encoding="utf-8",
+        )
+        return 0
+
+    class Session:
+        turns = []
+
+    runner = HarborPersonaEvalRunner(
+        repo_root=tmp_path,
+        runs_root=tmp_path / "runs",
+        command_runner=fake_command,
+    )
+    runner(
+        Session(),
+        Persona(id="p1", name="Persona One", context="A careful viewer."),
+        "Movie recommender.",
+        PersonaEvalConfig(domain="movie"),
+        object(),
+        created_at="2026-06-23T00:00:00Z",
+    )
+
+    config = yaml.safe_load(open(calls[0][calls[0].index("-c") + 1], encoding="utf-8"))
+    assert config["agents"][0]["model_name"] == "anthropic/claude-sonnet-4-6"
 
 
 def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):

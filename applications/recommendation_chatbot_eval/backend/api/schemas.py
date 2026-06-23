@@ -129,9 +129,9 @@ class ConfigKnob(BaseModel):
 class ConfigEnvironment(BaseModel):
     """Read-only facts about the fixed parts of the stack.
 
-    ``runtime`` / ``personaAgent`` / ``applicationApi`` / ``scorer`` report the
-    Harbor-backed execution boundary. The ranker (native SASRec), the resource bundle
-    (``all_resources``), and the agent (``InteRecAgent``) are not
+    ``runtime`` / ``personaAgent`` / ``personaModel`` / ``applicationApi`` /
+    ``scorer`` report the Harbor-backed execution boundary. The ranker (native
+    SASRec), the resource bundle (``all_resources``), and the agent (``InteRecAgent``) are not
     user-configurable. ``promptOwnership`` reports the prompt boundary for
     Harbor runs: Harbor owns persona system prompt injection, while this
     application owns the task-specific simulation prompt.
@@ -141,6 +141,7 @@ class ConfigEnvironment(BaseModel):
 
     runtime: str
     personaAgent: str
+    personaModel: str
     applicationApi: str
     scorer: str
     cache: str

@@ -82,6 +82,7 @@ def test_options_environment_block(config_manager):
     assert set(env.keys()) == {
         "runtime",
         "personaAgent",
+        "personaModel",
         "applicationApi",
         "scorer",
         "cache",
@@ -92,6 +93,7 @@ def test_options_environment_block(config_manager):
     }
     assert env["runtime"] == "Harbor"
     assert env["personaAgent"] == "Harbor persona-claude-code"
+    assert env["personaModel"] == "anthropic/claude-haiku-4-5"
     assert env["applicationApi"] == "rec-agent-api sidecar"
     assert env["scorer"] == "Application scorer via Harbor verifier"
     assert env["cache"] == "Docker image + model cache volumes"

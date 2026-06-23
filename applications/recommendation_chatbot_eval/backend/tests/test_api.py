@@ -120,6 +120,7 @@ def test_config_options(client):
     # environment reports the fixed stack facts.
     assert body["environment"]["resources"] == "all_resources"
     assert body["environment"]["agent"] == "InteRecAgent"
+    assert body["environment"]["personaModel"] == "anthropic/claude-haiku-4-5"
     assert body["environment"]["scorer"] == "Application scorer via Harbor verifier"
     assert "SASRec" in body["environment"]["ranker"]
     assert body["environment"]["promptOwnership"] == {

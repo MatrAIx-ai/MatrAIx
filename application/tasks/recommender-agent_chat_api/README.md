@@ -34,7 +34,7 @@ After the Harbor runtime is available on the branch:
 export OPENAI_API_KEY=...
 uv run harbor run \
   -a persona-claude-code \
-  -m anthropic/claude-sonnet-4-6 \
+  -m "${MATRIX_HARBOR_PERSONA_MODEL:-anthropic/claude-haiku-4-5}" \
   --ak persona_path=persona/datasets/bench-dev-2000/persona_0042.yaml \
   -p application/tasks/recommender-agent_chat_api
 ```

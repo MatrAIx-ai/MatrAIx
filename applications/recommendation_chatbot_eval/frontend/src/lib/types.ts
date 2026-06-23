@@ -82,6 +82,7 @@ export interface PromptOwnership {
 export interface ConfigEnvironment {
   runtime: string;
   personaAgent: string;
+  personaModel: string;
   applicationApi: string;
   scorer: string;
   cache: string;
