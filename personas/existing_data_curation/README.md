@@ -444,6 +444,15 @@ and can be reused across resumed schema-mapping runs.
 If user histories were exported with `--include-metadata`, the evidence profile
 also sees compact product name/category context for each reviewed item.
 
+The evidence profile file is the reusable review memory. It is written before
+the granular schema extraction step and can be addressed with either
+`--evidence-profiles-output` or the clearer alias `--review-memory-output`.
+When the 1,339-dimension schema changes, rerun the script with the same review
+memory path and do not pass `--overwrite-profiles`; the script will reuse the
+saved review summaries and only redo schema mapping. Regenerate review memory
+only when the review histories, product metadata, broad evidence mapping, or
+summary prompt behavior changes.
+
 Inference outputs include `review_corpus_stats` for the construction split:
 row count, text-review count, rating count, rating-only row count, total review
 text characters, date span, category counts, and rating-only product/category
@@ -466,6 +475,7 @@ python scripts/infer_amazon_review_dimensions.py \
   --model "${OPENAI_LLM_MODEL:-gpt-5.4-mini}" \
   --dimensions-per-call 40 \
   --window-summary-threshold-chars 120000 \
+  --review-memory-output raw/amazon_reviews_2023/persona_dimension_inference/evidence_profiles.jsonl \
   --max-users 100 \
   --output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.jsonl \
   --yaml-output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.yaml
@@ -486,7 +496,7 @@ model output whose `value` is not one of that dimension's allowed `values` in
 in the JSONL output and are omitted from the YAML `dimensions` map.
 
 Use `--overwrite-profiles` only when you want to pay to regenerate compact
-profiles instead of reusing the existing profile cache. Use
+review memory instead of reusing the existing profile cache. Use
 `--no-amazon-default-schema-filter` if you intentionally want to test every
 selected schema dimension, including categories that Amazon reviews usually
 cannot support.

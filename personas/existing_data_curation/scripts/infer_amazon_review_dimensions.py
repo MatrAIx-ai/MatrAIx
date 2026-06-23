@@ -1273,12 +1273,24 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         "--evidence-profiles-output",
         type=Path,
         default=DEFAULT_EVIDENCE_PROFILE_PATH,
-        help=f"Reusable compact profile JSONL. Default: {DEFAULT_EVIDENCE_PROFILE_PATH}",
+        help=(
+            "Reusable review-memory JSONL written before schema mapping. "
+            f"Default: {DEFAULT_EVIDENCE_PROFILE_PATH}"
+        ),
+    )
+    parser.add_argument(
+        "--review-memory-output",
+        dest="evidence_profiles_output",
+        type=Path,
+        help=(
+            "Alias for --evidence-profiles-output. Stores/reuses compact review "
+            "summaries so schema extraction can be rerun without recompressing reviews."
+        ),
     )
     parser.add_argument(
         "--overwrite-profiles",
         action="store_true",
-        help="Regenerate compact evidence profiles instead of reusing existing profile rows.",
+        help="Regenerate compact review memory instead of reusing existing profile rows.",
     )
     parser.add_argument(
         "--no-amazon-default-schema-filter",
