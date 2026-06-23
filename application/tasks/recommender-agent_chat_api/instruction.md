@@ -84,15 +84,27 @@ You may omit `sessionId` on the first `/v1/messages` call and include
 
 `/app/output/user_feedback.json`:
 
-```json
-{
-  "productNeedConstraintSatisfaction": "yes|partially|no",
-  "personalPreferenceSatisfaction": "yes|partially|no",
-  "overallExperienceRating": 1,
-  "reason": "<string>",
-  "askedUsefulClarificationQuestions": true
-}
-```
+This file must be a valid JSON object with these fields:
+
+- `productNeedConstraintSatisfaction`: one of `"yes"`, `"partially"`, or
+  `"no"`.
+- `personalPreferenceSatisfaction`: one of `"yes"`, `"partially"`, or `"no"`.
+- `overallExperienceRating`: an integer from 1 to 10.
+- `reason`: a short string explaining the rating.
+- `askedUsefulClarificationQuestions`: a boolean.
+
+Use this rating scale for `overallExperienceRating`:
+
+- 9-10: grounded recommendations satisfy the user's main need, hard constraints,
+  and personal preferences with clear fit.
+- 7-8: the run is useful overall; the main need is satisfied, with minor misses,
+  extra steering, or imperfect explanations.
+- 5-6: the run is usable but important constraints or preferences are only
+  partly met.
+- 3-4: the run mostly misses the need; at most one useful grounded item appears,
+  or the agent needs repeated correction.
+- 1-2: no usable grounded recommendation is produced, or the recommender API
+  fails.
 
 Make sure the JSON files are valid JSON. Do not invent item ids; use item ids
 returned by `/v1/recommendations` or `/v1/messages`. The verifier requires

@@ -173,6 +173,10 @@ def test_build_recommender_simulation_prompt_is_task_specific_not_persona_identi
     assert "productNeedConstraintSatisfaction" in prompt
     assert "Finish within 7 user turns" in prompt
     assert "Do not simulate the recommender" in prompt
+    assert "`overallExperienceRating`: an integer from 1 to 10" in prompt
+    assert "7-8: the run is useful overall" in prompt
+    assert "3-4: the run mostly misses the need" in prompt
+    assert "catalog-grounded item ids" in prompt
 
 
 def test_resolve_repo_root_handles_local_and_container_layouts():

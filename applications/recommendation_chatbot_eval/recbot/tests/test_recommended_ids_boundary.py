@@ -7,7 +7,11 @@ recommendations. The ``start`` index bounds the scan to entries appended during
 the current turn.
 """
 
-from recbot.interecagent_bridge import _recommended_item_ids
+from recbot.interecagent_bridge import (
+    _choose_recommended_item_ids,
+    _recommended_item_ids,
+    _recommended_item_ids_from_response_text,
+)
 
 
 class _FakeCorpus:
@@ -15,9 +19,26 @@ class _FakeCorpus:
 
     def __init__(self, title_to_id: dict[str, str]) -> None:
         self._title_to_id = title_to_id
+        self._id_to_title = {item_id: title for title, item_id in title_to_id.items()}
+
+    def fuzzy_match(self, titles, col_name):
+        assert col_name == "title"
+        matches = []
+        for title in titles:
+            title_lower = title.lower()
+            for known in self._title_to_id:
+                if title_lower in known.lower() or known.lower() in title_lower:
+                    matches.append(known)
+                    break
+            else:
+                matches.append(next(iter(self._title_to_id)))
+        return matches
 
     def convert_title_2_info(self, titles, col_names):
         return {col_names: [self._title_to_id[t] for t in titles]}
+
+    def convert_id_2_info(self, ids, col_names):
+        return {col_names: [self._id_to_title[str(item_id)] for item_id in ids]}
 
 
 class _FakeBuffer:
@@ -67,3 +88,74 @@ def test_robust_to_missing_attributes():
         pass
 
     assert _recommended_item_ids(_Bare(), start=0) == []
+
+
+def test_response_text_grounding_extracts_catalog_titles():
+    agent = _FakeAgent(
+        [],
+        {
+            "In the Mood For Love (Fa yeung nin wa)": "3313",
+            "Goya in Bordeaux (Goya en Burdeos)": "7848",
+            "Yi Yi": "3695",
+        },
+    )
+    response = """
+    Here are my top picks:
+    1. **In the Mood for Love** - atmospheric and visually rich.
+    2. **Goya in Bordeaux** - art and historical biography.
+    3. **Yi Yi** - patient family drama.
+    """
+
+    assert _recommended_item_ids_from_response_text(agent, response) == [
+        "3313",
+        "7848",
+        "3695",
+    ]
+
+
+def test_response_text_grounding_handles_trailing_article_titles():
+    agent = _FakeAgent([], {"Debut, The": "8765"})
+
+    assert _recommended_item_ids_from_response_text(
+        agent, "1. **The Debut** - a cultural coming-of-age story."
+    ) == ["8765"]
+
+
+def test_response_text_grounding_rejects_unsafe_one_word_article_match():
+    agent = _FakeAgent([], {"Farewell My Concubine (Ba wang bie ji)": "151"})
+
+    assert _recommended_item_ids_from_response_text(
+        agent, "1. **The Farewell** - family and cultural identity."
+    ) == []
+
+
+def test_response_text_grounding_replaces_map_ids_not_mentioned_in_answer():
+    agent = _FakeAgent(
+        [],
+        {
+            "Ransom": "1135",
+            "In the Mood For Love (Fa yeung nin wa)": "3313",
+        },
+    )
+
+    assert _choose_recommended_item_ids(
+        agent,
+        ["1135"],
+        "My strongest pick is **In the Mood for Love** for its atmosphere.",
+    ) == ["3313"]
+
+
+def test_response_text_grounding_keeps_map_ids_mentioned_in_answer():
+    agent = _FakeAgent(
+        [],
+        {
+            "Ransom": "1135",
+            "In the Mood For Love (Fa yeung nin wa)": "3313",
+        },
+    )
+
+    assert _choose_recommended_item_ids(
+        agent,
+        ["1135"],
+        "1. **Ransom** - a tense drama.",
+    ) == ["1135"]

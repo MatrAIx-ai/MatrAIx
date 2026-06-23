@@ -50,6 +50,17 @@ def run_verifier_against(output_dir: Path) -> int:
     return module.main()
 
 
+def test_instruction_calibrates_user_feedback_rating():
+    instruction = Path(__file__).parents[1].joinpath("instruction.md").read_text(
+        encoding="utf-8"
+    )
+
+    assert "`overallExperienceRating`: an integer from 1 to 10" in instruction
+    assert "7-8: the run is useful overall" in instruction
+    assert "3-4: the run mostly misses the need" in instruction
+    assert '"overallExperienceRating": 1' not in instruction
+
+
 def test_verifier_rejects_recommendations_not_grounded_in_recbot_turns(tmp_path):
     write_artifacts(
         tmp_path / "output",

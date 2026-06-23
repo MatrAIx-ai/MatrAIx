@@ -175,6 +175,29 @@ def test_recommendations_are_deduped_across_turns(monkeypatch):
     ]
 
 
+def test_recommendations_prefer_latest_refined_turns():
+    turns = [
+        {
+            "recommendedItems": [
+                {"itemId": "old", "rank": 1, "title": "Old Broad Match"},
+                {"itemId": "shared", "rank": 2, "title": "Shared"},
+            ]
+        },
+        {
+            "recommendedItems": [
+                {"itemId": "new", "rank": 1, "title": "New Refined Match"},
+                {"itemId": "shared", "rank": 2, "title": "Shared"},
+            ]
+        },
+    ]
+
+    assert [item["itemId"] for item in server._recommended_items_from_turns(turns)] == [
+        "new",
+        "shared",
+        "old",
+    ]
+
+
 def test_unknown_session_returns_404(monkeypatch):
     client, _fake_state = client_with_fake_state(monkeypatch)
 

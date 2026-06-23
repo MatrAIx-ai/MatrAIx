@@ -120,7 +120,7 @@ def _get_session_or_404(session_id: str) -> Any:
 def _recommended_items_from_turns(turns: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     seen = set()
     items: List[Dict[str, Any]] = []
-    for turn in turns:
+    for turn in reversed(turns):
         for item in turn.get("recommendedItems") or []:
             if not isinstance(item, dict):
                 continue

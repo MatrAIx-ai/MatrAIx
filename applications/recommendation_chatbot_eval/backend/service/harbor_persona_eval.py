@@ -229,17 +229,24 @@ Required behavior:
 - Save `/app/output/recommendation_result.json`.
 - Save `/app/output/user_feedback.json`.
 
-The post-interaction questionnaire in `user_feedback.json` must use this schema:
+The post-interaction questionnaire in `user_feedback.json` must be valid JSON
+with these fields:
+- `productNeedConstraintSatisfaction`: one of "yes", "partially", or "no".
+- `personalPreferenceSatisfaction`: one of "yes", "partially", or "no".
+- `overallExperienceRating`: an integer from 1 to 10.
+- `reason`: a short explanation in your own voice.
+- `askedUsefulClarificationQuestions`: a boolean.
 
-```json
-{{
-  "productNeedConstraintSatisfaction": "yes|partially|no",
-  "personalPreferenceSatisfaction": "yes|partially|no",
-  "overallExperienceRating": 1,
-  "reason": "<short explanation in your own voice>",
-  "askedUsefulClarificationQuestions": true
-}}
-```
+Use this rating scale for `overallExperienceRating`:
+- 9-10: the grounded recommendations satisfy the user's main need, hard constraints, and personal preferences with clear fit.
+- 7-8: the run is useful overall; the main need is satisfied, with minor misses, extra steering, or imperfect explanations.
+- 5-6: the run is usable but important constraints or preferences are only partly met.
+- 3-4: the run mostly misses the need; at most one useful grounded item appears, or the agent needs repeated correction.
+- 1-2: no usable grounded recommendation is produced, or the recommender API fails.
+
+Base the rating on the full conversation and the catalog-grounded item ids in the
+saved transcript/recommendation artifacts, while giving credit for useful
+clarifying questions, adaptation after feedback, and acceptable final items.
 """.format(
         domain=domain,
         max_turns=max_turns,

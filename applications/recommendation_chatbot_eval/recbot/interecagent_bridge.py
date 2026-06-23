@@ -487,6 +487,146 @@ def _recommended_items_with_titles(agent: Any, item_ids: list[str]) -> list[dict
     return items
 
 
+def _title_candidates_from_response(response: str) -> list[str]:
+    """Extract likely item titles from a natural-language recommendation answer."""
+    candidates: list[str] = []
+
+    def add(raw: str) -> None:
+        title = raw.strip(" \t\r\n\"'“”‘’*`")
+        title = re.sub(r"\s+", " ", title)
+        if title and title not in candidates:
+            candidates.append(title)
+
+    for match in re.finditer(r"\*\*([^*\n]{2,160})\*\*", response):
+        add(match.group(1))
+    for match in re.finditer(r"(?<!\*)\*([^*\n]{2,160})\*(?!\*)", response):
+        add(match.group(1))
+    for line in response.splitlines():
+        match = re.match(
+            r"\s*(?:\d+[.)]|[-*])\s+(?:\*\*)?(.{2,160}?)(?:\*\*)?\s*(?:[-–—:]\s|$)",
+            line,
+        )
+        if match:
+            add(match.group(1))
+    return candidates
+
+
+def _normalize_title_for_match(title: str) -> str:
+    title = re.sub(r"\([^)]*\)", " ", title)
+    title = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+    return re.sub(r"\s+", " ", title)
+
+
+def _article_moved_variant(normalized: str) -> str:
+    parts = normalized.split()
+    if parts and parts[0] in {"a", "an", "the"} and len(parts) > 1:
+        return " ".join([*parts[1:], parts[0]])
+    return normalized
+
+
+def _title_match_is_safe(candidate: str, matched_title: str) -> bool:
+    candidate_norm = _normalize_title_for_match(candidate)
+    matched_norm = _normalize_title_for_match(matched_title)
+    if not candidate_norm or not matched_norm:
+        return False
+    candidate_variants = {candidate_norm, _article_moved_variant(candidate_norm)}
+    matched_variants = {matched_norm, _article_moved_variant(matched_norm)}
+    if candidate_variants & matched_variants:
+        return True
+
+    # Accept catalog titles with extra parenthetical/original-title suffixes, e.g.
+    # "In the Mood for Love" -> "In the Mood For Love (Fa yeung nin wa)".
+    token_count = len(candidate_norm.split())
+    if token_count >= 3:
+        return any(
+            matched.startswith(candidate_variant + " ")
+            or (" " + candidate_variant + " ") in (" " + matched + " ")
+            for candidate_variant in candidate_variants
+            for matched in matched_variants
+        )
+    return False
+
+
+def _coerce_first(value: Any) -> Any:
+    if isinstance(value, (list, tuple)):
+        return value[0] if value else None
+    return value
+
+
+def _resolve_candidate_title(item_corpus: Any, candidate: str) -> tuple[str, str] | None:
+    matched_titles = None
+    if hasattr(item_corpus, "fuzzy_match"):
+        try:
+            matched_titles = item_corpus.fuzzy_match([candidate], "title")
+        except Exception:
+            matched_titles = None
+    if not matched_titles:
+        matched_titles = [candidate]
+
+    matched_title = str(_coerce_first(matched_titles) or "").strip()
+    if not matched_title or not _title_match_is_safe(candidate, matched_title):
+        return None
+
+    for id_col in ("external_id", "id"):
+        try:
+            info = item_corpus.convert_title_2_info([matched_title], col_names=id_col)
+            item_id = _coerce_first(info[id_col])
+        except Exception:
+            continue
+        if item_id is not None and str(item_id).strip():
+            return str(item_id), matched_title
+    return None
+
+
+def _recommended_item_ids_from_response_text(
+    agent: Any, response: str, limit: int = 5
+) -> list[str]:
+    item_corpus = getattr(agent, "item_corups", None)
+    if item_corpus is None:
+        return []
+
+    item_ids: list[str] = []
+    seen: set[str] = set()
+    for candidate in _title_candidates_from_response(response):
+        resolved = _resolve_candidate_title(item_corpus, candidate)
+        if resolved is None:
+            continue
+        item_id, _matched_title = resolved
+        if item_id in seen:
+            continue
+        seen.add(item_id)
+        item_ids.append(item_id)
+        if len(item_ids) >= limit:
+            break
+    return item_ids
+
+
+def _response_mentions_title(response: str, title: str | None) -> bool:
+    if not title:
+        return False
+    response_norm = _normalize_title_for_match(response)
+    title_norm = _normalize_title_for_match(title)
+    if not title_norm:
+        return False
+    variants = {title_norm, _article_moved_variant(title_norm)}
+    return any((" " + variant + " ") in (" " + response_norm + " ") for variant in variants)
+
+
+def _choose_recommended_item_ids(
+    agent: Any, map_item_ids: list[str], response: str
+) -> list[str]:
+    text_item_ids = _recommended_item_ids_from_response_text(agent, response)
+    if not text_item_ids:
+        return map_item_ids
+    if not map_item_ids:
+        return text_item_ids
+
+    map_items = _recommended_items_with_titles(agent, map_item_ids)
+    if any(_response_mentions_title(response, item.get("title")) for item in map_items):
+        return map_item_ids
+    return text_item_ids
+
+
 def _as_int_or_none(value: Any):
     try:
         return int(value)
@@ -547,7 +687,9 @@ def run_turn(request: RecBotRequest) -> RecBotTurnResult:
     native_action = build_native_action(native_raw)
     response = _repair_empty_tool_plan_response(response, native_action, domain)
     raw_tool_plan = native_action.raw_tool_plan if isinstance(native_action.raw_tool_plan, list) else []
-    recommended_item_ids = _recommended_item_ids(agent, start=tracker_start)
+    recommended_item_ids = _choose_recommended_item_ids(
+        agent, _recommended_item_ids(agent, start=tracker_start), response
+    )
     trace = RecBotTrace(
         raw_tool_plan=raw_tool_plan,
         raw_tool_outputs=_raw_tool_outputs(agent),
