@@ -54,8 +54,9 @@ all ~9.9k movies / 8.7k games / 8.7k beauty products with no extra download.
 Browsing works out of the box; producing *real* recommendations needs two more
 things (a fresh clone has neither):
 
-1. **An OpenAI key** — `export OPENAI_API_KEY=sk-…` (or put it in a `.env.local`
-   file next to `run_demo.sh`).
+1. **An OpenAI key** — `export OPENAI_API_KEY=sk-…` (or copy
+   [`.env.local.example`](.env.local.example) to `.env.local` and fill it in —
+   it's gitignored and auto-loaded).
 2. **The recommender resource bundle** — the ~1.2 GB similarity matrices and
    SASRec checkpoints are too big for git, so a script fetches them:
 

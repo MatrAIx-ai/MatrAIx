@@ -32,7 +32,6 @@ set -euo pipefail
 # --- resolve paths -----------------------------------------------------------
 BACKEND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EVAL_DIR="$(cd "${BACKEND_DIR}/.." && pwd)"  # applications/recommendation_chatbot_eval
-REPO_ROOT="$(cd "${EVAL_DIR}/../.." && pwd)"  # repo root
 
 # --- interpreter: $VENV/bin/python if VENV is set, else `python` on PATH -------
 # (Python 3.9 + RecAI native — see RECAI_ENV_NOTES.md. Activate your venv, or
@@ -46,9 +45,9 @@ fi
 
 # --- load local secrets/env (gitignored) -------------------------------------
 # Put OPENAI_API_KEY (and, to stay in the scripted demo, RECBOT_STUDIO_DEMO=1)
-# in <repo>/.env.local for real turns; it is gitignored and auto-loaded here so
-# secrets never live on the command line.
-ENV_LOCAL="${REPO_ROOT}/.env.local"
+# in .env.local next to run_demo.sh (copy it from .env.local.example). It is
+# gitignored and auto-loaded here so secrets never live on the command line.
+ENV_LOCAL="${EVAL_DIR}/.env.local"
 if [[ -f "${ENV_LOCAL}" ]]; then
   echo "[run_dev] loading ${ENV_LOCAL}"
   set -a; source "${ENV_LOCAL}"; set +a

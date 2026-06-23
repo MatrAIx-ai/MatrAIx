@@ -8,8 +8,9 @@
 # full RecAI stack are NOT required to import the API or to run the unit tests
 # (the tests mock `run_turn`).
 #
-# Install (into the project .venv — see ../RECAI_ENV_NOTES.md for provisioning):
-#   /mira/u/qianfengwen/MatrAIx/.venv/bin/python -m pip install \
+# Install (into the project .venv — see ../RECAI_ENV_NOTES.md for provisioning).
+# From the repo root:
+#   .venv/bin/python -m pip install \
 #     -r applications/recommendation_chatbot_eval/backend/requirements.txt
 #
 # Pins use lower bounds so the harness rides along with the env's existing
