@@ -3,9 +3,9 @@
 
 This is the LLM prediction half of the V1 persona-validation flow. It reads the
 blind product-context-only targets produced by
-`evaluate_amazon_persona_rating_holdout.py`, joins them to persona inference
-outputs, calls an LLM in per-user batches, and writes `target_id` /
-`predicted_rating` rows that the evaluator can score.
+`evaluate_amazon_persona_rating_holdout.py`, joins them to persona YAML features
+or persona inference outputs, calls an LLM in per-user batches, and writes
+`target_id` / `predicted_rating` rows that the evaluator can score.
 
 The prediction prompt intentionally excludes held-out review title/text and true
 ratings. It should receive only the constructed persona and held-out product
@@ -42,6 +42,13 @@ DEFAULT_INFERENCE_PATH = (
     / "amazon_reviews_2023"
     / "persona_dimension_inference"
     / "inferred_dimensions.jsonl"
+)
+DEFAULT_PERSONA_YAML_PATH = (
+    BASE_DIR
+    / "raw"
+    / "amazon_reviews_2023"
+    / "persona_dimension_inference"
+    / "inferred_dimensions.yaml"
 )
 DEFAULT_OUTPUT_PATH = (
     BASE_DIR
@@ -184,6 +191,38 @@ def load_personas(inference_path: Path) -> dict[str, dict[str, Any]]:
     return personas
 
 
+def load_yaml_personas(yaml_path: Path) -> dict[str, dict[str, Any]]:
+    try:
+        import yaml
+    except ImportError as err:
+        raise RuntimeError(
+            "PyYAML is required for --persona-yaml. Install pyyaml or use --inference-output."
+        ) from err
+
+    with open(yaml_path, encoding="utf-8") as fh:
+        document = yaml.safe_load(fh)
+    if not isinstance(document, dict):
+        raise ValueError(f"Unexpected persona YAML document shape: {yaml_path}")
+    personas = {}
+    for persona in document.get("personas") or []:
+        if not isinstance(persona, dict):
+            continue
+        persona_id = persona.get("id")
+        persona_name = persona.get("name")
+        row = {
+            "user_id": persona_name or persona_id,
+            "source": "persona_yaml",
+            "persona_yaml": persona,
+        }
+        # Amazon persona YAML exports use raw Amazon user_id as `name`; generic
+        # persona YAMLs may only have `id`, so support both lookup keys.
+        if persona_name:
+            personas[str(persona_name)] = row
+        if persona_id:
+            personas.setdefault(str(persona_id), row)
+    return personas
+
+
 def load_existing_predictions(path: Path) -> set[str]:
     if not path.exists():
         return set()
@@ -227,6 +266,25 @@ def persona_context(
     max_attributes: int,
     max_evidence_items: int,
 ) -> dict[str, Any]:
+    yaml_persona = persona_row.get("persona_yaml")
+    if isinstance(yaml_persona, dict):
+        dimensions = yaml_persona.get("dimensions") or {}
+        if isinstance(dimensions, dict):
+            dimensions = {
+                key: dimensions[key]
+                for key in sorted(dimensions)[:max_attributes]
+            }
+        else:
+            dimensions = {}
+        return {
+            "source": "persona_yaml",
+            "persona_id": yaml_persona.get("id"),
+            "user_id": yaml_persona.get("name") or persona_row.get("user_id"),
+            "title": yaml_persona.get("title"),
+            "description": compact_text(yaml_persona.get("description"), 1800),
+            "dimensions": dimensions,
+        }
+
     context: dict[str, Any] = {
         "user_id": persona_row.get("user_id"),
         "source": persona_row.get("source"),
@@ -416,6 +474,16 @@ def write_dry_run_prompts(
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prediction-targets", type=Path, default=DEFAULT_TARGETS_PATH)
+    parser.add_argument(
+        "--persona-yaml",
+        type=Path,
+        default=None,
+        help=(
+            "Persona YAML with top-level personas list. Amazon exports should use "
+            "raw user_id as persona name. When supplied, this is used instead of "
+            "--inference-output."
+        ),
+    )
     parser.add_argument("--inference-output", type=Path, default=DEFAULT_INFERENCE_PATH)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
     parser.add_argument("--model", default=DEFAULT_MODEL)
@@ -453,14 +521,22 @@ def main(argv: Iterable[str]) -> int:
     args = parse_args(argv)
     if not args.prediction_targets.exists():
         raise FileNotFoundError(f"Prediction targets not found: {args.prediction_targets}")
-    if not args.inference_output.exists():
+    if args.persona_yaml:
+        if not args.persona_yaml.exists():
+            raise FileNotFoundError(f"Persona YAML not found: {args.persona_yaml}")
+    elif not args.inference_output.exists():
         raise FileNotFoundError(f"Inference output not found: {args.inference_output}")
     if args.targets_per_call <= 0:
         raise ValueError("--targets-per-call must be positive")
 
-    personas = load_personas(args.inference_output)
+    personas = (
+        load_yaml_personas(args.persona_yaml)
+        if args.persona_yaml
+        else load_personas(args.inference_output)
+    )
     if not personas:
-        raise ValueError(f"No personas loaded from {args.inference_output}")
+        source = args.persona_yaml or args.inference_output
+        raise ValueError(f"No personas loaded from {source}")
 
     skip_target_ids = set() if args.overwrite else load_existing_predictions(args.output)
     targets = load_targets(
@@ -470,8 +546,8 @@ def main(argv: Iterable[str]) -> int:
         skip_target_ids,
     )
     log(
-        f"Loaded {len(personas):,} personas and {len(targets):,} pending targets "
-        f"from {args.prediction_targets}"
+        f"Loaded {len(personas):,} persona lookup keys and {len(targets):,} "
+        f"pending targets from {args.prediction_targets}"
     )
 
     if args.dry_run:

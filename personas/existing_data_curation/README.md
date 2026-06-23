@@ -526,12 +526,12 @@ The blind prediction target file is
 `raw/amazon_reviews_2023/persona_rating_holdout_eval/prediction_targets.jsonl`.
 It excludes held-out review title, held-out review text, and true rating.
 
-Call the LLM predictor with constructed persona inference outputs:
+Call the LLM predictor with constructed persona YAML features:
 
 ```bash
 python scripts/predict_amazon_persona_holdout_ratings.py \
   --prediction-targets raw/amazon_reviews_2023/persona_rating_holdout_eval/prediction_targets.jsonl \
-  --inference-output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.jsonl \
+  --persona-yaml raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.yaml \
   --output raw/amazon_reviews_2023/persona_rating_holdout_eval/persona_predictions.jsonl \
   --persona-mode summary_dimensions \
   --prediction-method-name persona_dims_summary
