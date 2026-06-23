@@ -500,6 +500,42 @@ evidence profile, and estimates cost from serialized prompt/output character
 counts when `--user-histories` is provided. Exact billed token usage requires
 persisted API usage metadata.
 
+### V1 Persona Validation: Temporal Rating Holdout
+
+Use `scripts/evaluate_amazon_persona_rating_holdout.py` to prepare the first
+simple persona-validation benchmark from a current temporal-split
+`user_histories.jsonl` export. The script assigns users to loose cohorts from
+construction-split rating behavior only:
+
+- `harsh_low`
+- `high_variance`
+- `mostly_5`
+- `balanced_mixed`
+
+It writes a labeled scoring target file, a blind product-context-only target file
+for persona prediction, cohort/user summaries, and a Markdown report with MAE and
+within-1-star rates for built-in non-personalized baselines.
+
+```bash
+python scripts/evaluate_amazon_persona_rating_holdout.py \
+  --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
+  --output-dir raw/amazon_reviews_2023/persona_rating_holdout_eval
+```
+
+The blind prediction target file is
+`raw/amazon_reviews_2023/persona_rating_holdout_eval/prediction_targets.jsonl`.
+It excludes held-out review title, held-out review text, and true rating. Persona
+prediction outputs can be scored by writing JSONL rows with `target_id` and
+`predicted_rating`, then running:
+
+```bash
+python scripts/evaluate_amazon_persona_rating_holdout.py \
+  --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
+  --predictions raw/amazon_reviews_2023/persona_rating_holdout_eval/persona_predictions.jsonl \
+  --prediction-method-name persona_dims_summary \
+  --output-dir raw/amazon_reviews_2023/persona_rating_holdout_eval
+```
+
 ### 6) Literature and theory references
 
 This source creates a registry from reference-only manifests:
