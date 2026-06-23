@@ -21,7 +21,9 @@ import yaml
 
 from persona_eval.types import Persona, PersonaEvalConfig
 
-FeedbackScorer = Callable[..., Dict[str, Any]]
+SCORER_PACKAGE_TARGET = "/app/persona_eval"
+SCORER_PACKAGE_PARENT = "/app"
+SCORER_OUTPUT_PATH = "/app/output/user_feedback.json"
 
 
 def _path_prefix(parts: Sequence[str], end: int) -> Path:
@@ -58,9 +60,7 @@ def _default_harbor_runs_root() -> Path:
     )
 
 
-def _run_subprocess(
-    command: Sequence[str], *, cwd: Path, env: Dict[str, str]
-) -> int:
+def _run_subprocess(command: Sequence[str], *, cwd: Path, env: Dict[str, str]) -> int:
     return subprocess.run(
         list(command),
         cwd=str(cwd),
@@ -151,6 +151,43 @@ def _prompt_bundle(persona: Persona, task_prompt: str) -> Dict[str, str]:
     }
 
 
+def _scorer_mount(repo_root: Path) -> Dict[str, Any]:
+    return {
+        "type": "bind",
+        "source": str(
+            repo_root / "applications" / "recommendation_chatbot_eval" / "persona_eval"
+        ),
+        "target": SCORER_PACKAGE_TARGET,
+        "read_only": True,
+    }
+
+
+def _json_env(value: Dict[str, Any]) -> str:
+    return json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+
+
+def _verifier_env_assignments(
+    *, persona: Persona, sut_description: str, config: PersonaEvalConfig
+) -> Dict[str, str]:
+    return {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "OPENAI_BASE_URL": "${OPENAI_BASE_URL:-https://api.openai.com/v1}",
+        "MATRIX_SCORER_PACKAGE_PARENT": SCORER_PACKAGE_PARENT,
+        "MATRIX_SCORER_MODULE": "persona_eval.scoring",
+        "MATRIX_SCORER_OUTPUT_PATH": SCORER_OUTPUT_PATH,
+        "MATRIX_SCORER_PERSONA_JSON": _json_env(persona.to_dict()),
+        "MATRIX_SCORER_CONFIG_JSON": _json_env(config.to_dict()),
+        "MATRIX_SCORER_SUT_DESCRIPTION": sut_description,
+    }
+
+
+def _verifier_env_args(assignments: Dict[str, str]) -> List[str]:
+    args: List[str] = []
+    for key, value in assignments.items():
+        args.extend(["--verifier-env", "{}={}".format(key, value)])
+    return args
+
+
 def _normalize_prompts(
     prompts: Optional[Dict[str, Any]], *, persona: Persona
 ) -> Dict[str, str]:
@@ -229,8 +266,9 @@ Required behavior:
   `turns[*].recommendedItems` from the recommender API.
 - Save `/app/output/transcript.json`.
 - Save `/app/output/recommendation_result.json`.
-- The application feedback scorer will generate the post-interaction
-  questionnaire from the saved transcript and recommendation artifacts.
+- Harbor verifier will call the application feedback scorer to generate the
+  post-interaction questionnaire from the saved transcript and recommendation
+  artifacts.
 """.format(
         domain=domain,
         max_turns=max_turns,
@@ -247,12 +285,9 @@ class HarborPersonaEvalRunner:
         *,
         repo_root: Optional[Path] = None,
         runs_root: Optional[Path] = None,
-        command_runner: Callable[
-            [Sequence[str]], int
-        ] = _run_subprocess,
+        command_runner: Callable[[Sequence[str]], int] = _run_subprocess,
         harbor_command: Optional[Sequence[str]] = None,
         goal_context_description_for: Optional[Callable[[str], str]] = None,
-        feedback_scorer: Optional[FeedbackScorer] = None,
     ) -> None:
         self.repo_root = Path(repo_root) if repo_root is not None else _repo_root()
         self.runs_root = (
@@ -260,10 +295,9 @@ class HarborPersonaEvalRunner:
         )
         self.command_runner = command_runner
         self.harbor_command = tuple(harbor_command or _default_harbor_command())
-        self.goal_context_description_for = (
-            goal_context_description_for or (lambda goal_context_id: goal_context_id)
+        self.goal_context_description_for = goal_context_description_for or (
+            lambda goal_context_id: goal_context_id
         )
-        self.feedback_scorer = feedback_scorer
 
     def __call__(
         self,
@@ -308,6 +342,7 @@ class HarborPersonaEvalRunner:
                 "type": "docker",
                 "delete": _env_bool("MATRIX_HARBOR_DELETE", False),
                 "force_build": _env_bool("MATRIX_HARBOR_FORCE_BUILD", True),
+                "mounts": [_scorer_mount(self.repo_root)],
             },
             "agents": [
                 {
@@ -348,6 +383,13 @@ class HarborPersonaEvalRunner:
             str(job_config_path),
             "--agent-env",
             "CLAUDE_CODE_TMPDIR=/logs/agent/claude-tmp",
+            *_verifier_env_args(
+                _verifier_env_assignments(
+                    persona=persona,
+                    sut_description=sut_description,
+                    config=config,
+                )
+            ),
             "-y",
         ]
         if env_file.is_file():
@@ -369,14 +411,6 @@ class HarborPersonaEvalRunner:
             created_at=created_at,
             prompts=prompts,
         )
-        if self.feedback_scorer is not None:
-            result.questionnaire = self.feedback_scorer(
-                persona=persona,
-                sut_description=sut_description,
-                config=config,
-                turn_views=result.turn_views,
-                recommended_items=result.recommended_items,
-            )
         session.turns = list(result.turn_views)
         return result
 
@@ -389,9 +423,7 @@ class HarborPersonaEvalRunner:
             failure = _harbor_failure_summary(job_dir)
             if failure:
                 raise RuntimeError(
-                    "Harbor run did not produce output artifacts: {}".format(
-                        failure
-                    )
+                    "Harbor run did not produce output artifacts: {}".format(failure)
                 )
             raise FileNotFoundError(
                 "Harbor output artifacts not found under {}".format(job_dir)
@@ -448,17 +480,19 @@ def _build_turns_from_messages(transcript: Dict[str, Any]) -> List[Dict[str, Any
             pending_user = content
         elif role == "assistant" and pending_user is not None:
             index = len(turns)
-            turns.append({
-                "turnId": str(index),
-                "conversationId": transcript.get("sessionId"),
-                "backend": "interecagent",
-                "userMessage": pending_user,
-                "assistantMessage": content,
-                "plan": [],
-                "recommendedItems": [],
-                "nativeRaw": None,
-                "rawToolOutputs": None,
-            })
+            turns.append(
+                {
+                    "turnId": str(index),
+                    "conversationId": transcript.get("sessionId"),
+                    "backend": "interecagent",
+                    "userMessage": pending_user,
+                    "assistantMessage": content,
+                    "plan": [],
+                    "recommendedItems": [],
+                    "nativeRaw": None,
+                    "rawToolOutputs": None,
+                }
+            )
             pending_user = None
     return turns
 
@@ -471,6 +505,24 @@ def _turn_views(transcript: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def _questionnaire(feedback: Dict[str, Any]) -> Dict[str, Any]:
+    if "constraintSatisfaction" in feedback or "overallRating" in feedback:
+        return {
+            "constraintSatisfaction": _coerce_score(
+                feedback.get("constraintSatisfaction"), 3
+            ),
+            "constraintRationale": str(feedback.get("constraintRationale") or ""),
+            "preferenceSatisfaction": _coerce_score(
+                feedback.get("preferenceSatisfaction"), 3
+            ),
+            "preferenceRationale": str(feedback.get("preferenceRationale") or ""),
+            "overallRating": _coerce_overall(feedback.get("overallRating")),
+            "ratingReason": str(feedback.get("ratingReason") or ""),
+            "askedUsefulClarifyingQuestions": bool(
+                feedback.get("askedUsefulClarifyingQuestions", False)
+            ),
+            "clarifyingNotes": str(feedback.get("clarifyingNotes") or ""),
+        }
+
     reason = str(feedback.get("reason") or "")
     return {
         "constraintSatisfaction": _coerce_score(
@@ -497,9 +549,13 @@ def _recommended_ids_per_turn(turn_views: List[Dict[str, Any]]) -> List[List[str
         if not isinstance(items, list):
             per_turn.append([])
             continue
-        per_turn.append([
-            _item_id(item) for item in items if isinstance(item, dict) and _item_id(item)
-        ])
+        per_turn.append(
+            [
+                _item_id(item)
+                for item in items
+                if isinstance(item, dict) and _item_id(item)
+            ]
+        )
     return per_turn
 
 

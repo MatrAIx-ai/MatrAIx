@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import importlib
 import os
 import sys
 from pathlib import Path
@@ -122,6 +123,26 @@ def validate_recommendation_grounding(
 
 
 def validate_feedback(feedback: Dict[str, Any]) -> None:
+    if "constraintSatisfaction" in feedback or "overallRating" in feedback:
+        for key in (
+            "constraintRationale",
+            "preferenceRationale",
+            "ratingReason",
+            "clarifyingNotes",
+        ):
+            require_string(feedback.get(key), "user_feedback.{}".format(key))
+        for key in ("constraintSatisfaction", "preferenceSatisfaction"):
+            score = feedback.get(key)
+            if not isinstance(score, int) or score < 1 or score > 5:
+                fail("user_feedback.{} must be an integer 1-5".format(key))
+        rating = feedback.get("overallRating")
+        if not isinstance(rating, int) or rating < 1 or rating > 10:
+            fail("user_feedback.overallRating must be an integer 1-10")
+        asked = feedback.get("askedUsefulClarifyingQuestions")
+        if not isinstance(asked, bool):
+            fail("user_feedback.askedUsefulClarifyingQuestions must be boolean")
+        return
+
     for key in (
         "productNeedConstraintSatisfaction",
         "personalPreferenceSatisfaction",
@@ -134,6 +155,36 @@ def validate_feedback(feedback: Dict[str, Any]) -> None:
     asked = feedback.get("askedUsefulClarificationQuestions")
     if not isinstance(asked, bool):
         fail("user_feedback.askedUsefulClarificationQuestions must be boolean")
+
+
+def application_scorer_configured() -> bool:
+    return bool(os.environ.get("MATRIX_SCORER_PERSONA_JSON"))
+
+
+def run_application_scorer() -> Path:
+    package_parent = os.environ.get("MATRIX_SCORER_PACKAGE_PARENT")
+    if package_parent and package_parent not in sys.path:
+        sys.path.insert(0, package_parent)
+    module_name = os.environ.get("MATRIX_SCORER_MODULE", "persona_eval.scoring")
+    try:
+        module = importlib.import_module(module_name)
+    except Exception as exc:
+        fail("could not import application scorer {}: {}".format(module_name, exc))
+    scorer = getattr(module, "score_harbor_artifacts_from_env", None)
+    if scorer is None:
+        fail("{} must expose score_harbor_artifacts_from_env".format(module_name))
+    output_path = Path(os.environ.get("MATRIX_SCORER_OUTPUT_PATH", str(FEEDBACK_PATH)))
+    try:
+        scorer(
+            transcript_path=TRANSCRIPT_PATH,
+            recommendation_path=RESULT_PATH,
+            output_path=output_path,
+        )
+    except Exception as exc:
+        fail("application scorer failed: {}".format(exc))
+    if not output_path.is_file():
+        fail("application scorer did not write {}".format(output_path))
+    return output_path
 
 
 def main() -> int:
@@ -158,8 +209,11 @@ def main() -> int:
     if not isinstance(turns_to_recommendation, int) or turns_to_recommendation < 1:
         fail("turnsToRecommendation must be a positive integer")
 
-    if FEEDBACK_PATH.exists():
-        validate_feedback(load_json(FEEDBACK_PATH))
+    feedback_path = (
+        run_application_scorer() if application_scorer_configured() else FEEDBACK_PATH
+    )
+    if feedback_path.exists():
+        validate_feedback(load_json(feedback_path))
 
     print("PASS: recommender chat artifacts are valid")
     return 0

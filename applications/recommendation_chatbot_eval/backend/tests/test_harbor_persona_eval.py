@@ -14,56 +14,81 @@ from backend.service.harbor_persona_eval import (
 from persona_eval.types import Persona, PersonaEvalConfig
 
 
-def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics(tmp_path):
+def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics(
+    tmp_path,
+):
     output_dir = tmp_path / "output"
     output_dir.mkdir()
-    (output_dir / "transcript.json").write_text(json.dumps({
-        "sessionId": "ses_123",
-        "domain": "movie",
-        "messages": [
-            {"role": "user", "content": "I want something tense but not graphic."},
-            {"role": "assistant", "content": "Do you prefer mainstream or lesser-known films?"},
-            {"role": "user", "content": "Lesser-known is fine if it fits."},
-            {"role": "assistant", "content": "Try Movie A."},
-        ],
-        "turns": [
+    (output_dir / "transcript.json").write_text(
+        json.dumps(
             {
-                "turnId": "0",
-                "conversationId": "ses_123",
-                "backend": "interecagent",
-                "userMessage": "I want something tense but not graphic.",
-                "assistantMessage": "Do you prefer mainstream or lesser-known films?",
-                "plan": [],
-                "recommendedItems": [],
-                "nativeRaw": None,
-                "rawToolOutputs": None,
-            },
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "I want something tense but not graphic.",
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Do you prefer mainstream or lesser-known films?",
+                    },
+                    {"role": "user", "content": "Lesser-known is fine if it fits."},
+                    {"role": "assistant", "content": "Try Movie A."},
+                ],
+                "turns": [
+                    {
+                        "turnId": "0",
+                        "conversationId": "ses_123",
+                        "backend": "interecagent",
+                        "userMessage": "I want something tense but not graphic.",
+                        "assistantMessage": "Do you prefer mainstream or lesser-known films?",
+                        "plan": [],
+                        "recommendedItems": [],
+                        "nativeRaw": None,
+                        "rawToolOutputs": None,
+                    },
+                    {
+                        "turnId": "1",
+                        "conversationId": "ses_123",
+                        "backend": "interecagent",
+                        "userMessage": "Lesser-known is fine if it fits.",
+                        "assistantMessage": "Try Movie A.",
+                        "plan": [],
+                        "recommendedItems": [
+                            {"itemId": "42", "title": "Movie A", "rank": 1}
+                        ],
+                        "nativeRaw": None,
+                        "rawToolOutputs": None,
+                    },
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (output_dir / "recommendation_result.json").write_text(
+        json.dumps(
             {
-                "turnId": "1",
-                "conversationId": "ses_123",
-                "backend": "interecagent",
-                "userMessage": "Lesser-known is fine if it fits.",
-                "assistantMessage": "Try Movie A.",
-                "plan": [],
-                "recommendedItems": [{"itemId": "42", "title": "Movie A", "rank": 1}],
-                "nativeRaw": None,
-                "rawToolOutputs": None,
-            },
-        ],
-    }), encoding="utf-8")
-    (output_dir / "recommendation_result.json").write_text(json.dumps({
-        "sessionId": "ses_123",
-        "domain": "movie",
-        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-        "turnsToRecommendation": 2,
-    }), encoding="utf-8")
-    (output_dir / "user_feedback.json").write_text(json.dumps({
-        "productNeedConstraintSatisfaction": "partially",
-        "personalPreferenceSatisfaction": "yes",
-        "overallExperienceRating": 8,
-        "reason": "The final choice fit, but the first response was broad.",
-        "askedUsefulClarificationQuestions": True,
-    }), encoding="utf-8")
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                "turnsToRecommendation": 2,
+            }
+        ),
+        encoding="utf-8",
+    )
+    (output_dir / "user_feedback.json").write_text(
+        json.dumps(
+            {
+                "productNeedConstraintSatisfaction": "partially",
+                "personalPreferenceSatisfaction": "yes",
+                "overallExperienceRating": 8,
+                "reason": "The final choice fit, but the first response was broad.",
+                "askedUsefulClarificationQuestions": True,
+            }
+        ),
+        encoding="utf-8",
+    )
 
     result = build_result_from_harbor_artifacts(
         output_dir=output_dir,
@@ -71,7 +96,10 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
         persona=Persona(id="p1", name="Persona One", source="fixture"),
         sut_description="Movie recommender.",
         created_at="2026-06-23T00:00:00Z",
-        prompts={"harborPrompt": "Persona system prompt.", "taskPrompt": "Task prompt."},
+        prompts={
+            "harborPrompt": "Persona system prompt.",
+            "taskPrompt": "Task prompt.",
+        },
     )
 
     assert result.turn_views[1]["recommendedItems"] == [
@@ -103,28 +131,117 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
     }
 
 
-def test_build_result_from_harbor_artifacts_rejects_ungrounded_recommendations(tmp_path):
+def test_build_result_from_harbor_artifacts_accepts_application_scorer_questionnaire(
+    tmp_path,
+):
     output_dir = tmp_path / "output"
     output_dir.mkdir()
-    (output_dir / "transcript.json").write_text(json.dumps({
-        "sessionId": "ses_123",
-        "domain": "movie",
-        "messages": [
-            {"role": "user", "content": "I want a thoughtful movie."},
-            {"role": "assistant", "content": "What tone do you prefer?"},
-            {"role": "user", "content": "Quiet and reflective."},
-            {"role": "assistant", "content": "Any settings you like?"},
-            {"role": "user", "content": "Asian cinema would be good."},
-            {"role": "assistant", "content": "Here are some ideas."},
-        ],
-        "turns": [],
-    }), encoding="utf-8")
-    (output_dir / "recommendation_result.json").write_text(json.dumps({
-        "sessionId": "ses_123",
-        "domain": "movie",
-        "recommendedItems": [{"itemId": "movie_0001", "title": "Invented Movie"}],
-        "turnsToRecommendation": 3,
-    }), encoding="utf-8")
+    (output_dir / "transcript.json").write_text(
+        json.dumps(
+            {
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "messages": [
+                    {"role": "user", "content": "I want a movie."},
+                    {"role": "assistant", "content": "Try Movie A."},
+                ],
+                "turns": [
+                    {
+                        "turnId": "0",
+                        "conversationId": "ses_123",
+                        "backend": "interecagent",
+                        "userMessage": "I want a movie.",
+                        "assistantMessage": "Try Movie A.",
+                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (output_dir / "recommendation_result.json").write_text(
+        json.dumps(
+            {
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                "turnsToRecommendation": 1,
+            }
+        ),
+        encoding="utf-8",
+    )
+    (output_dir / "user_feedback.json").write_text(
+        json.dumps(
+            {
+                "constraintSatisfaction": 4,
+                "constraintRationale": "The item fits the stated constraint.",
+                "preferenceSatisfaction": 5,
+                "preferenceRationale": "It matches the persona taste.",
+                "overallRating": 8,
+                "ratingReason": "Good grounded recommendation.",
+                "askedUsefulClarifyingQuestions": True,
+                "clarifyingNotes": "The agent asked about tone.",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    result = build_result_from_harbor_artifacts(
+        output_dir=output_dir,
+        config=PersonaEvalConfig(domain="movie"),
+        persona=Persona(id="p1", name="Persona One"),
+        sut_description="Movie recommender.",
+        created_at="2026-06-23T00:00:00Z",
+    )
+
+    assert result.to_dict()["questionnaire"] == {
+        "constraintSatisfaction": 4,
+        "constraintRationale": "The item fits the stated constraint.",
+        "preferenceSatisfaction": 5,
+        "preferenceRationale": "It matches the persona taste.",
+        "overallRating": 8,
+        "ratingReason": "Good grounded recommendation.",
+        "askedUsefulClarifyingQuestions": True,
+        "clarifyingNotes": "The agent asked about tone.",
+    }
+
+
+def test_build_result_from_harbor_artifacts_rejects_ungrounded_recommendations(
+    tmp_path,
+):
+    output_dir = tmp_path / "output"
+    output_dir.mkdir()
+    (output_dir / "transcript.json").write_text(
+        json.dumps(
+            {
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "messages": [
+                    {"role": "user", "content": "I want a thoughtful movie."},
+                    {"role": "assistant", "content": "What tone do you prefer?"},
+                    {"role": "user", "content": "Quiet and reflective."},
+                    {"role": "assistant", "content": "Any settings you like?"},
+                    {"role": "user", "content": "Asian cinema would be good."},
+                    {"role": "assistant", "content": "Here are some ideas."},
+                ],
+                "turns": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (output_dir / "recommendation_result.json").write_text(
+        json.dumps(
+            {
+                "sessionId": "ses_123",
+                "domain": "movie",
+                "recommendedItems": [
+                    {"itemId": "movie_0001", "title": "Invented Movie"}
+                ],
+                "turnsToRecommendation": 3,
+            }
+        ),
+        encoding="utf-8",
+    )
 
     with pytest.raises(ValueError, match="grounded"):
         build_result_from_harbor_artifacts(
@@ -179,7 +296,9 @@ def test_build_recommender_simulation_prompt_is_task_specific_not_persona_identi
 
 def test_resolve_repo_root_handles_local_and_container_layouts():
     assert resolve_repo_root(
-        Path("/workspace/applications/recommendation_chatbot_eval/backend/service/harbor_persona_eval.py")
+        Path(
+            "/workspace/applications/recommendation_chatbot_eval/backend/service/harbor_persona_eval.py"
+        )
     ) == Path("/workspace")
     assert resolve_repo_root(
         Path("/app/backend/service/harbor_persona_eval.py")
@@ -201,16 +320,51 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(tmp_p
         assert config["environment"]["force_build"] is True
         assert config["environment"]["delete"] is False
         assert config["agents"][0]["kwargs"]["persona_path"].endswith("persona.yaml")
-        assert config["tasks"][0]["path"].endswith("application/tasks/recommender-agent_chat_api")
+        assert config["tasks"][0]["path"].endswith(
+            "application/tasks/recommender-agent_chat_api"
+        )
         prompt_path = config["extra_instruction_paths"][0]
         assert prompt_path.endswith("task_prompt.md")
-        assert "You are testing a movie recommendation system" in open(
-            prompt_path, encoding="utf-8"
-        ).read()
+        assert (
+            "You are testing a movie recommendation system"
+            in open(prompt_path, encoding="utf-8").read()
+        )
         assert env["INTERECAGENT_ENGINE"] == "gpt-4o"
         assert env["RECBOT_READY_DOMAIN"] == "movie"
         assert env["OPENAI_API_KEY"] == "sk-test-openai"
         assert env["ANTHROPIC_API_KEY"] == "sk-test-anthropic"
+        mount = config["environment"]["mounts"][0]
+        assert mount == {
+            "type": "bind",
+            "source": str(
+                tmp_path
+                / "applications"
+                / "recommendation_chatbot_eval"
+                / "persona_eval"
+            ),
+            "target": "/app/persona_eval",
+            "read_only": True,
+        }
+        verifier_env = {
+            command[index + 1].split("=", 1)[0]: command[index + 1].split("=", 1)[1]
+            for index, value in enumerate(command)
+            if value == "--verifier-env"
+        }
+        assert verifier_env["OPENAI_API_KEY"] == "${OPENAI_API_KEY}"
+        assert (
+            verifier_env["OPENAI_BASE_URL"]
+            == "${OPENAI_BASE_URL:-https://api.openai.com/v1}"
+        )
+        assert verifier_env["MATRIX_SCORER_PACKAGE_PARENT"] == "/app"
+        assert (
+            verifier_env["MATRIX_SCORER_OUTPUT_PATH"]
+            == "/app/output/user_feedback.json"
+        )
+        assert json.loads(verifier_env["MATRIX_SCORER_PERSONA_JSON"])["id"] == "p1"
+        assert (
+            json.loads(verifier_env["MATRIX_SCORER_CONFIG_JSON"])["engine"] == "gpt-4o"
+        )
+        assert verifier_env["MATRIX_SCORER_SUT_DESCRIPTION"] == "Movie recommender."
 
         output_dir = (
             tmp_path
@@ -222,33 +376,50 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(tmp_p
             / "output"
         )
         output_dir.mkdir(parents=True)
-        (output_dir / "transcript.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "messages": [
-                {"role": "user", "content": "I want a movie."},
-                {"role": "assistant", "content": "Try Movie A."},
-            ],
-            "turns": [{
-                "turnId": "0",
-                "userMessage": "I want a movie.",
-                "assistantMessage": "Try Movie A.",
-                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            }],
-        }), encoding="utf-8")
-        (output_dir / "recommendation_result.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            "turnsToRecommendation": 1,
-        }), encoding="utf-8")
-        (output_dir / "user_feedback.json").write_text(json.dumps({
-            "productNeedConstraintSatisfaction": "yes",
-            "personalPreferenceSatisfaction": "yes",
-            "overallExperienceRating": 9,
-            "reason": "Good fit.",
-            "askedUsefulClarificationQuestions": False,
-        }), encoding="utf-8")
+        (output_dir / "transcript.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "messages": [
+                        {"role": "user", "content": "I want a movie."},
+                        {"role": "assistant", "content": "Try Movie A."},
+                    ],
+                    "turns": [
+                        {
+                            "turnId": "0",
+                            "userMessage": "I want a movie.",
+                            "assistantMessage": "Try Movie A.",
+                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "recommendation_result.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    "turnsToRecommendation": 1,
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "user_feedback.json").write_text(
+            json.dumps(
+                {
+                    "productNeedConstraintSatisfaction": "yes",
+                    "personalPreferenceSatisfaction": "yes",
+                    "overallExperienceRating": 9,
+                    "reason": "Good fit.",
+                    "askedUsefulClarificationQuestions": False,
+                }
+            ),
+            encoding="utf-8",
+        )
         return 0
 
     class Session:
@@ -275,48 +446,32 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(tmp_p
 
     assert calls
     assert "--agent-env" in calls[0][0]
+    assert "--verifier-env" in calls[0][0]
     assert "--env-file" in calls[0][0]
     assert session.turns[0]["recommendedItems"][0]["itemId"] == "42"
     payload = result.to_dict()
     assert payload["questionnaire"]["overallRating"] == 9
     assert payload["prompts"]["harborPrompt"] == "A careful viewer."
-    assert "You are testing a movie recommendation system" in payload["prompts"]["taskPrompt"]
+    assert (
+        "You are testing a movie recommendation system"
+        in payload["prompts"]["taskPrompt"]
+    )
     assert {"type": "phase", "phase": "harbor_starting"} in events
     assert any(
         event.get("type") == "prompts"
         and event["prompts"]["harborPrompt"] == "A careful viewer."
-        and "You are testing a movie recommendation system" in event["prompts"]["taskPrompt"]
+        and "You are testing a movie recommendation system"
+        in event["prompts"]["taskPrompt"]
         for event in events
     )
     assert {"type": "phase", "phase": "harbor_collecting_artifacts"} in events
 
 
-def test_harbor_runner_uses_feedback_scorer_over_harbor_self_rating(tmp_path):
-    scorer_calls = []
-
-    def feedback_scorer(*, persona, sut_description, config, turn_views, recommended_items):
-        scorer_calls.append(
-            {
-                "persona": persona.id,
-                "sut": sut_description,
-                "domain": config.domain,
-                "turn_items": turn_views[0]["recommendedItems"],
-                "final_items": recommended_items,
-            }
-        )
-        return {
-            "constraintSatisfaction": 4,
-            "constraintRationale": "Original scorer judged the need mostly met.",
-            "preferenceSatisfaction": 4,
-            "preferenceRationale": "Original scorer judged preferences mostly met.",
-            "overallRating": 8,
-            "ratingReason": "Original scoring prompt output.",
-            "askedUsefulClarifyingQuestions": True,
-            "clarifyingNotes": "The recommender adapted after feedback.",
-        }
-
+def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp_path):
     def fake_command(command, *, cwd, env):
-        config = yaml.safe_load(open(command[command.index("-c") + 1], encoding="utf-8"))
+        config = yaml.safe_load(
+            open(command[command.index("-c") + 1], encoding="utf-8")
+        )
         output_dir = (
             tmp_path
             / "runs"
@@ -327,33 +482,53 @@ def test_harbor_runner_uses_feedback_scorer_over_harbor_self_rating(tmp_path):
             / "output"
         )
         output_dir.mkdir(parents=True)
-        (output_dir / "transcript.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "messages": [
-                {"role": "user", "content": "I want a movie."},
-                {"role": "assistant", "content": "Try Movie A."},
-            ],
-            "turns": [{
-                "turnId": "0",
-                "userMessage": "I want a movie.",
-                "assistantMessage": "Try Movie A.",
-                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            }],
-        }), encoding="utf-8")
-        (output_dir / "recommendation_result.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            "turnsToRecommendation": 1,
-        }), encoding="utf-8")
-        (output_dir / "user_feedback.json").write_text(json.dumps({
-            "productNeedConstraintSatisfaction": "no",
-            "personalPreferenceSatisfaction": "no",
-            "overallExperienceRating": 2,
-            "reason": "Harbor self-rating should be ignored.",
-            "askedUsefulClarificationQuestions": False,
-        }), encoding="utf-8")
+        (output_dir / "transcript.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "messages": [
+                        {"role": "user", "content": "I want a movie."},
+                        {"role": "assistant", "content": "Try Movie A."},
+                    ],
+                    "turns": [
+                        {
+                            "turnId": "0",
+                            "userMessage": "I want a movie.",
+                            "assistantMessage": "Try Movie A.",
+                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "recommendation_result.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    "turnsToRecommendation": 1,
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "user_feedback.json").write_text(
+            json.dumps(
+                {
+                    "constraintSatisfaction": 4,
+                    "constraintRationale": "Original scorer judged the need mostly met.",
+                    "preferenceSatisfaction": 4,
+                    "preferenceRationale": "Original scorer judged preferences mostly met.",
+                    "overallRating": 8,
+                    "ratingReason": "Original scoring prompt output.",
+                    "askedUsefulClarifyingQuestions": True,
+                    "clarifyingNotes": "The recommender adapted after feedback.",
+                }
+            ),
+            encoding="utf-8",
+        )
         return 0
 
     class Session:
@@ -363,7 +538,6 @@ def test_harbor_runner_uses_feedback_scorer_over_harbor_self_rating(tmp_path):
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        feedback_scorer=feedback_scorer,
     )
     result = runner(
         Session(),
@@ -375,15 +549,6 @@ def test_harbor_runner_uses_feedback_scorer_over_harbor_self_rating(tmp_path):
     )
 
     assert result.to_dict()["questionnaire"]["overallRating"] == 8
-    assert scorer_calls == [
-        {
-            "persona": "p1",
-            "sut": "Movie recommender.",
-            "domain": "movie",
-            "turn_items": [{"itemId": "42", "title": "Movie A"}],
-            "final_items": [{"itemId": "42", "title": "Movie A"}],
-        }
-    ]
 
 
 def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
@@ -391,12 +556,12 @@ def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
     monkeypatch.setenv("MATRIX_HARBOR_DELETE", "1")
 
     def fake_command(command, *, cwd, env):
-        config = yaml.safe_load(open(command[command.index("-c") + 1], encoding="utf-8"))
-        assert config["environment"] == {
-            "type": "docker",
-            "delete": True,
-            "force_build": False,
-        }
+        config = yaml.safe_load(
+            open(command[command.index("-c") + 1], encoding="utf-8")
+        )
+        assert config["environment"]["type"] == "docker"
+        assert config["environment"]["delete"] is True
+        assert config["environment"]["force_build"] is False
         output_dir = (
             tmp_path
             / "runs"
@@ -407,26 +572,38 @@ def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
             / "output"
         )
         output_dir.mkdir(parents=True)
-        (output_dir / "transcript.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "messages": [
-                {"role": "user", "content": "I want a movie."},
-                {"role": "assistant", "content": "Try Movie A."},
-            ],
-            "turns": [{
-                "turnId": "0",
-                "userMessage": "I want a movie.",
-                "assistantMessage": "Try Movie A.",
-                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            }],
-        }), encoding="utf-8")
-        (output_dir / "recommendation_result.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            "turnsToRecommendation": 1,
-        }), encoding="utf-8")
+        (output_dir / "transcript.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "messages": [
+                        {"role": "user", "content": "I want a movie."},
+                        {"role": "assistant", "content": "Try Movie A."},
+                    ],
+                    "turns": [
+                        {
+                            "turnId": "0",
+                            "userMessage": "I want a movie.",
+                            "assistantMessage": "Try Movie A.",
+                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "recommendation_result.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    "turnsToRecommendation": 1,
+                }
+            ),
+            encoding="utf-8",
+        )
         return 0
 
     class Session:
@@ -453,7 +630,9 @@ def test_harbor_runner_default_command_uses_configured_uv_path(tmp_path, monkeyp
 
     def fake_command(command, *, cwd, env):
         calls.append(command)
-        config = yaml.safe_load(open(command[command.index("-c") + 1], encoding="utf-8"))
+        config = yaml.safe_load(
+            open(command[command.index("-c") + 1], encoding="utf-8")
+        )
         output_dir = (
             tmp_path
             / "runs"
@@ -464,26 +643,38 @@ def test_harbor_runner_default_command_uses_configured_uv_path(tmp_path, monkeyp
             / "output"
         )
         output_dir.mkdir(parents=True)
-        (output_dir / "transcript.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "messages": [
-                {"role": "user", "content": "I want a movie."},
-                {"role": "assistant", "content": "Try Movie A."},
-            ],
-            "turns": [{
-                "turnId": "0",
-                "userMessage": "I want a movie.",
-                "assistantMessage": "Try Movie A.",
-                "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            }],
-        }), encoding="utf-8")
-        (output_dir / "recommendation_result.json").write_text(json.dumps({
-            "sessionId": "ses_123",
-            "domain": "movie",
-            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
-            "turnsToRecommendation": 1,
-        }), encoding="utf-8")
+        (output_dir / "transcript.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "messages": [
+                        {"role": "user", "content": "I want a movie."},
+                        {"role": "assistant", "content": "Try Movie A."},
+                    ],
+                    "turns": [
+                        {
+                            "turnId": "0",
+                            "userMessage": "I want a movie.",
+                            "assistantMessage": "Try Movie A.",
+                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        (output_dir / "recommendation_result.json").write_text(
+            json.dumps(
+                {
+                    "sessionId": "ses_123",
+                    "domain": "movie",
+                    "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                    "turnsToRecommendation": 1,
+                }
+            ),
+            encoding="utf-8",
+        )
         return 0
 
     class Session:
@@ -508,21 +699,28 @@ def test_harbor_runner_default_command_uses_configured_uv_path(tmp_path, monkeyp
 
 def test_harbor_runner_surfaces_trial_errors_when_artifacts_are_missing(tmp_path):
     def fake_command(command, *, cwd, env):
-        config = yaml.safe_load(open(command[command.index("-c") + 1], encoding="utf-8"))
+        config = yaml.safe_load(
+            open(command[command.index("-c") + 1], encoding="utf-8")
+        )
         job_dir = tmp_path / "runs" / config["job_name"]
         job_dir.mkdir(parents=True, exist_ok=True)
-        (job_dir / "result.json").write_text(json.dumps({
-            "stats": {
-                "n_errored_trials": 1,
-                "evals": {
-                    "persona-claude-code__claude-sonnet-4-6__adhoc": {
-                        "exception_stats": {
-                            "RuntimeError": ["recommender-agent_chat_api__fake"]
-                        }
+        (job_dir / "result.json").write_text(
+            json.dumps(
+                {
+                    "stats": {
+                        "n_errored_trials": 1,
+                        "evals": {
+                            "persona-claude-code__claude-sonnet-4-6__adhoc": {
+                                "exception_stats": {
+                                    "RuntimeError": ["recommender-agent_chat_api__fake"]
+                                }
+                            }
+                        },
                     }
-                },
-            }
-        }), encoding="utf-8")
+                }
+            ),
+            encoding="utf-8",
+        )
         trial_dir = job_dir / "recommender-agent_chat_api__fake"
         trial_dir.mkdir()
         (trial_dir / "exception.txt").write_text(

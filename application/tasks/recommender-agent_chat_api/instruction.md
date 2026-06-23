@@ -41,8 +41,9 @@ You may omit `sessionId` on the first `/v1/messages` call and include
 3. Save the exact conversation artifact returned by `/v1/conversation` to
    `/app/output/transcript.json`.
 4. Save the recommendation artifact to `/app/output/recommendation_result.json`.
-5. The application feedback scorer will generate the post-interaction
-   questionnaire from the saved transcript and recommendation artifacts.
+5. Harbor verifier will call the application feedback scorer to generate the
+   post-interaction questionnaire from the saved transcript and recommendation
+   artifacts.
 
 ## Output schemas
 
