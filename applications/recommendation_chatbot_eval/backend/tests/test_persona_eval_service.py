@@ -1,41 +1,75 @@
 import json
 import time
-from backend.service.persona_eval_service import PersonaEvalService, PersonaEvalProgress
-from persona_eval.types import Persona, Questionnaire, MetricScores, PersonaEvalConfig, PersonaEvalResult, PersonaEvalTurn
+from backend.service.persona_eval_service import PersonaEvalService
+from persona_eval.types import (
+    Persona,
+    Questionnaire,
+    MetricScores,
+    PersonaEvalResult,
+    PersonaEvalTurn,
+)
 
 
 class FakeSession:
-    def __init__(self): self.turns = []
+    def __init__(self):
+        self.turns = []
 
 
 def _persona():
-    return Persona(id="game-x", name="Marco", summary="s", context="ctx", source="Nemotron",
-                   preferences=[], dislikes=[], constraints=[], goal="g", communication_style="c")
+    return Persona(
+        id="game-x",
+        name="Marco",
+        summary="s",
+        context="ctx",
+        source="Nemotron",
+        preferences=[],
+        dislikes=[],
+        constraints=[],
+        goal="g",
+        communication_style="c",
+    )
 
 
 def _fake_runner(session, persona, sut, config, simulator, *, created_at, on_event):
     # emit two turns then done, mutating the session like the real runner's session does
     for i in (1, 2):
-        session.turns.append({"turnId": str(i), "userMessage": "u%d" % i,
-                              "assistantMessage": "a%d" % i,
-                              "recommendedItems": [{"itemId": "6574", "title": "X"}] if i == 2 else []})
+        session.turns.append(
+            {
+                "turnId": str(i),
+                "userMessage": "u%d" % i,
+                "assistantMessage": "a%d" % i,
+                "recommendedItems": [{"itemId": "6574", "title": "X"}]
+                if i == 2
+                else [],
+            }
+        )
         on_event({"type": "turn", "turn": session.turns[-1]})
     q = Questionnaire(4, "", 4, "", 8, "ok", True, "")
-    res = PersonaEvalResult(config=config, persona=persona, sut_description=sut,
-                         transcript=[PersonaEvalTurn(2, "u2", "a2", [{"id": "6574", "title": "X"}], "satisfied")],
-                         questionnaire=q, metric_scores=MetricScores(2, 2, 1), created_at=created_at)
+    res = PersonaEvalResult(
+        config=config,
+        persona=persona,
+        sut_description=sut,
+        transcript=[
+            PersonaEvalTurn(2, "u2", "a2", [{"id": "6574", "title": "X"}], "satisfied")
+        ],
+        questionnaire=q,
+        metric_scores=MetricScores(2, 2, 1),
+        created_at=created_at,
+    )
     on_event({"type": "done", "result": res.to_dict()})
     return res
 
 
-def _service(record=None, runs_dir=None):
+def _service(record=None, runs_dir=None, configs=None):
     def simulator_factory(engine, gid, domain):
         if record is not None:
             record.append((engine, gid, domain))
         return object()
 
     return PersonaEvalService(
-        session_builder=lambda config: FakeSession(),
+        session_builder=lambda config: (
+            (configs.append(config) if configs is not None else None) or FakeSession()
+        ),
         get_persona=lambda pid: _persona(),
         sut_for=lambda d: "desc",
         simulator_factory=simulator_factory,
@@ -67,9 +101,13 @@ def test_start_runs_and_streams_turns_then_done(tmp_path):
 
 
 def test_runner_return_populates_final_progress_without_done_event(tmp_path):
-    def runner_without_done(session, persona, sut, config, simulator, *, created_at, on_event):
+    def runner_without_done(
+        session, persona, sut, config, simulator, *, created_at, on_event
+    ):
         del simulator, on_event
-        session.turns.append({"turnId": "0", "userMessage": "u", "assistantMessage": "a"})
+        session.turns.append(
+            {"turnId": "0", "userMessage": "u", "assistantMessage": "a"}
+        )
         return PersonaEvalResult(
             config=config,
             persona=persona,
@@ -119,15 +157,19 @@ def test_prompt_event_and_result_prompts_reach_progress_and_persistence(tmp_path
                 },
             }
 
-    def runner_with_prompts(session, persona, sut, config, simulator, *, created_at, on_event):
+    def runner_with_prompts(
+        session, persona, sut, config, simulator, *, created_at, on_event
+    ):
         del session, simulator
-        on_event({
-            "type": "prompts",
-            "prompts": {
-                "harborPrompt": "Harbor persona prompt",
-                "taskPrompt": "Application task prompt",
-            },
-        })
+        on_event(
+            {
+                "type": "prompts",
+                "prompts": {
+                    "harborPrompt": "Harbor persona prompt",
+                    "taskPrompt": "Application task prompt",
+                },
+            }
+        )
         return ResultWithPrompts(config, persona, sut, created_at)
 
     svc = PersonaEvalService(
@@ -171,6 +213,21 @@ def test_goal_context_id_passes_through(tmp_path):
     assert record == [("gpt-4o-mini", "gradual_reveal", "game")]
 
 
+def test_persona_model_reaches_config(tmp_path):
+    configs = []
+    svc = _service(runs_dir=tmp_path, configs=configs)
+    job_id = svc.start(
+        "game",
+        "game-x",
+        6,
+        now=lambda: "t",
+        persona_model="anthropic/claude-sonnet-4-6",
+    )
+    view = _wait_done(svc, job_id)
+    assert view["status"] == "done"
+    assert configs[0].persona_model == "anthropic/claude-sonnet-4-6"
+
+
 def test_no_persona_domain_validation(tmp_path):
     # Persona is domain-free; any persona may run against any domain.
     svc = _service(runs_dir=tmp_path)
@@ -202,8 +259,12 @@ def test_done_run_is_persisted_to_runs_dir(tmp_path):
 
 def test_list_runs_returns_newest_first_summaries(tmp_path):
     svc = _service(runs_dir=tmp_path)
-    first = _wait_done(svc, svc.start("game", "game-x", 6, now=lambda: "2026-01-01T00:00:00Z"))
-    second = _wait_done(svc, svc.start("movie", "game-x", 6, now=lambda: "2026-02-02T00:00:00Z"))
+    first = _wait_done(
+        svc, svc.start("game", "game-x", 6, now=lambda: "2026-01-01T00:00:00Z")
+    )
+    second = _wait_done(
+        svc, svc.start("movie", "game-x", 6, now=lambda: "2026-02-02T00:00:00Z")
+    )
     assert first["status"] == "done" and second["status"] == "done"
     runs = svc.list_runs()
     assert len(runs) == 2
@@ -212,8 +273,14 @@ def test_list_runs_returns_newest_first_summaries(tmp_path):
     assert runs[1]["createdAt"] == "2026-01-01T00:00:00Z"
     summary = runs[0]
     assert set(summary.keys()) >= {
-        "id", "createdAt", "domain", "personaName", "source",
-        "goalContextId", "overallRating", "numTurns",
+        "id",
+        "createdAt",
+        "domain",
+        "personaName",
+        "source",
+        "goalContextId",
+        "overallRating",
+        "numTurns",
     }
     assert summary["domain"] == "movie"
     assert summary["personaName"] == "Marco"
@@ -237,9 +304,15 @@ def test_get_run_round_trips(tmp_path):
 def test_get_run_injects_id_for_legacy_artifact(tmp_path):
     # CLI-written artifacts predate _persist_run's id injection (no top-level id);
     # get_run must still satisfy the PersonaEvalResultView contract (id required).
-    (tmp_path / "legacy-persona.json").write_text(json.dumps({
-        "config": {"domain": "game"}, "questionnaire": {"overallRating": 7},
-    }), encoding="utf-8")
+    (tmp_path / "legacy-persona.json").write_text(
+        json.dumps(
+            {
+                "config": {"domain": "game"},
+                "questionnaire": {"overallRating": 7},
+            }
+        ),
+        encoding="utf-8",
+    )
     svc = _service(runs_dir=tmp_path)
     run = svc.get_run("legacy-persona")
     assert run is not None and run["id"] == "legacy-persona"
@@ -254,9 +327,16 @@ def test_no_persistence_without_runs_dir(tmp_path):
 
 
 def test_runner_exception_marks_error():
-    def boom(*a, **k): raise RuntimeError("kaboom")
-    svc = PersonaEvalService(session_builder=lambda c: FakeSession(), get_persona=lambda p: _persona(),
-                          sut_for=lambda d: "desc", simulator_factory=lambda e, g, d2: object(), runner=boom)
+    def boom(*a, **k):
+        raise RuntimeError("kaboom")
+
+    svc = PersonaEvalService(
+        session_builder=lambda c: FakeSession(),
+        get_persona=lambda p: _persona(),
+        sut_for=lambda d: "desc",
+        simulator_factory=lambda e, g, d2: object(),
+        runner=boom,
+    )
     job_id = svc.start("game", "game-x", 6, now=lambda: "t")
     view = _wait_done(svc, job_id)
     assert view["status"] == "error" and "kaboom" in view["error"]

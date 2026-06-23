@@ -14,6 +14,9 @@
 /** Allowed value for the `engine` knob (the chat LLM). */
 export type Engine = "gpt-4o-mini" | "gpt-4o";
 
+/** Allowed value for the Harbor persona-agent base model. */
+export type PersonaModel = "anthropic/claude-haiku-4-5" | "anthropic/claude-sonnet-4-6";
+
 /** Candidate ranking strategy. */
 export type RankerMode = "semantic_profile" | "native";
 
@@ -344,10 +347,15 @@ export interface StartPersonaEvalBody {
   maxTurns?: number;
   goalContextId?: string;
   /**
-   * The OpenAI chat model driving BOTH the recommender and the user-simulator.
+   * The OpenAI chat model driving the RecBot application.
    * Omitted -> the backend falls back to its canonical config default.
    */
   engine?: Engine;
+  /**
+   * The Harbor persona-agent model driving the simulated user.
+   * Omitted -> the backend falls back to its local Harbor default.
+   */
+  personaModel?: PersonaModel;
 }
 
 /**

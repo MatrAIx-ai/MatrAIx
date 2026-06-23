@@ -40,6 +40,7 @@ import type {
   Engine,
   GoalContext,
   GoalContextsResponse,
+  PersonaModel,
   PersonaEvalJobView,
   PersonaEvalPersona,
 } from "@/lib/types";
@@ -79,6 +80,7 @@ interface ExportSnapshot {
   config: {
     domain: Domain;
     engine: string;
+    personaModel: string;
     goalContextId: string | null;
     maxTurns: number;
   };
@@ -100,6 +102,9 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
   const [persona, setPersona] = useState<PersonaEvalPersona | null>(null);
   const [domain, setDomain] = useState<Domain>((options?.defaults.domain as Domain) ?? "movie");
   const [engine, setEngine] = useState<string>(options?.defaults.engine ?? "gpt-4o-mini");
+  const [personaModel, setPersonaModel] = useState<string>(
+    options?.environment.personaModel ?? "anthropic/claude-haiku-4-5",
+  );
   const [goalContextId, setGoalContextId] = useState<string | null>(null);
   const [maxTurns, setMaxTurns] = useState<number>(8);
   // Frozen persona + controls captured when a run reaches `done`; the export is
@@ -114,6 +119,7 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
     adoptedDefaults.current = true;
     setDomain((options.defaults.domain as Domain) ?? "movie");
     setEngine(options.defaults.engine ?? "gpt-4o-mini");
+    setPersonaModel(options.environment.personaModel ?? "anthropic/claude-haiku-4-5");
   }, [options]);
 
   // Mirror the run domain up so the shared (⌘K) catalog drawer browses the
@@ -144,11 +150,12 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
       config: {
         domain,
         engine,
+        personaModel,
         goalContextId: goalContextId ?? activeGoalContext?.id ?? null,
         maxTurns,
       },
     }),
-    [persona, domain, engine, goalContextId, activeGoalContext, maxTurns],
+    [persona, domain, engine, personaModel, goalContextId, activeGoalContext, maxTurns],
   );
   const liveControlsRef = useRef(liveControls);
   liveControlsRef.current = liveControls;
@@ -192,8 +199,9 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
       goalContextId: goalContextId ?? undefined,
       maxTurns,
       engine: engine as Engine,
+      personaModel: personaModel as PersonaModel,
     });
-  }, [persona, isRunning, run, domain, goalContextId, maxTurns, engine]);
+  }, [persona, isRunning, run, domain, goalContextId, maxTurns, engine, personaModel]);
 
   const handleRetry = useCallback(() => {
     if (timedOut || phase === "error") retry();
@@ -331,6 +339,8 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
           goalContexts={goalContexts}
           engine={engine}
           onEngine={setEngine}
+          personaModel={personaModel}
+          onPersonaModel={setPersonaModel}
           domain={domain}
           onDomain={setDomain}
           goalContextId={goalContextId}
@@ -341,6 +351,8 @@ export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: Pers
         />
         <ComponentPipeline
           environment={environment}
+          engine={engine}
+          personaModel={personaModel}
           phase={phase}
           jobPhase={job?.phase}
           hasPersona={persona !== null}

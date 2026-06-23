@@ -544,7 +544,7 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
         Session(),
         Persona(id="p1", name="Persona One", context="A careful viewer."),
         "Movie recommender.",
-        PersonaEvalConfig(domain="movie"),
+        PersonaEvalConfig(domain="movie", persona_model="anthropic/claude-sonnet-4-6"),
         object(),
         created_at="2026-06-23T00:00:00Z",
     )
@@ -553,7 +553,7 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
 
 
 def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
-    monkeypatch.setenv("MATRIX_HARBOR_PERSONA_MODEL", "anthropic/claude-sonnet-4-6")
+    monkeypatch.setenv("MATRIX_HARBOR_PERSONA_MODEL", "anthropic/claude-haiku-4-5")
     calls = []
 
     def fake_command(command, *, cwd, env):
@@ -617,7 +617,7 @@ def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
         Session(),
         Persona(id="p1", name="Persona One", context="A careful viewer."),
         "Movie recommender.",
-        PersonaEvalConfig(domain="movie"),
+        PersonaEvalConfig(domain="movie", persona_model="anthropic/claude-sonnet-4-6"),
         object(),
         created_at="2026-06-23T00:00:00Z",
     )

@@ -38,8 +38,10 @@ class _FakePersonaEvalService:
     def __init__(self) -> None:
         self.started: list = []
         #: The ``engine`` each ``start`` call received (parallel to ``started``),
-        #: so a test can assert the request's engine was forwarded.
+        #: so a test can assert the request's RecBot engine was forwarded.
         self.started_engines: list = []
+        #: The Harbor persona model each ``start`` call received.
+        self.started_persona_models: list = []
         self._view: Dict[str, Any] = {
             "jobId": "wt_fake123",
             "domain": "game",
@@ -66,11 +68,20 @@ class _FakePersonaEvalService:
             "error": None,
         }
 
-    def start(self, domain: str, persona_id: str, max_turns: int,
-              goal_context_id: str = "scenario_default", *, now,
-              engine: Optional[str] = None) -> str:
+    def start(
+        self,
+        domain: str,
+        persona_id: str,
+        max_turns: int,
+        goal_context_id: str = "scenario_default",
+        *,
+        now,
+        engine: Optional[str] = None,
+        persona_model: Optional[str] = None,
+    ) -> str:
         self.started.append((domain, persona_id, max_turns, goal_context_id))
         self.started_engines.append(engine)
+        self.started_persona_models.append(persona_model)
         return "wt_fake123"
 
     def view(self, job_id: str) -> Optional[Dict[str, Any]]:
@@ -97,11 +108,20 @@ class _FakePersonaEvalService:
             "id": "wt_run1",
             "createdAt": "2026-02-02T00:00:00Z",
             "config": {"domain": "movie", "goalContextId": "scenario_default"},
-            "persona": {"id": "game-lapsed-coop", "name": "Marco", "source": "Nemotron"},
+            "persona": {
+                "id": "game-lapsed-coop",
+                "name": "Marco",
+                "source": "Nemotron",
+            },
             "sutDescription": "desc",
             "transcript": [
-                {"turnIndex": 1, "userMessage": "u1", "assistantMessage": "a1",
-                 "recommendedItems": [{"id": "6574", "title": "X"}], "decision": "satisfied"}
+                {
+                    "turnIndex": 1,
+                    "userMessage": "u1",
+                    "assistantMessage": "a1",
+                    "recommendedItems": [{"id": "6574", "title": "X"}],
+                    "decision": "satisfied",
+                }
             ],
             "recommendedItemIds": {"perTurn": [["6574"]], "final": ["6574"]},
             "questionnaire": {"overallRating": 8},
@@ -175,9 +195,7 @@ def test_persona_eval_persona_detail(client):
 
 
 def test_persona_eval_persona_detail_unknown_404(client):
-    assert (
-        client.get("/api/persona-eval/personas/nope-not-real").status_code == 404
-    )
+    assert client.get("/api/persona-eval/personas/nope-not-real").status_code == 404
 
 
 # --------------------------------------------------------------------------- #
@@ -236,14 +254,27 @@ def test_start_persona_eval_passes_goal_context(client, fake_persona_eval):
 
 
 def test_start_persona_eval_forwards_engine(client, fake_persona_eval):
-    # The selected engine reaches the service (it drives both the recommender
-    # and the user-simulator), not just the cosmetic UI knob.
+    # The selected engine reaches the service as the RecBot base model, not just
+    # the cosmetic UI knob.
     resp = client.post(
         "/api/persona-eval",
         json={"domain": "game", "personaId": "game-lapsed-coop", "engine": "gpt-4o"},
     )
     assert resp.status_code == 200, resp.text
     assert fake_persona_eval.started_engines == ["gpt-4o"]
+
+
+def test_start_persona_eval_forwards_persona_model(client, fake_persona_eval):
+    resp = client.post(
+        "/api/persona-eval",
+        json={
+            "domain": "game",
+            "personaId": "game-lapsed-coop",
+            "personaModel": "anthropic/claude-sonnet-4-6",
+        },
+    )
+    assert resp.status_code == 200, resp.text
+    assert fake_persona_eval.started_persona_models == ["anthropic/claude-sonnet-4-6"]
 
 
 def test_start_persona_eval_defaults_engine_when_omitted(client, fake_persona_eval):
@@ -257,6 +288,7 @@ def test_start_persona_eval_defaults_engine_when_omitted(client, fake_persona_ev
     )
     assert resp.status_code == 200, resp.text
     assert fake_persona_eval.started_engines == [ConfigManager.DEFAULTS["engine"]]
+    assert fake_persona_eval.started_persona_models == ["anthropic/claude-haiku-4-5"]
 
 
 def test_start_persona_eval_any_persona_any_domain(client, fake_persona_eval):

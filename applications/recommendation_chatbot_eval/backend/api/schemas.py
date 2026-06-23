@@ -70,6 +70,10 @@ __all__ = [
 #: :class:`~backend.service.config.ConfigManager` (movie / beauty_product /
 #: game) so a bad domain is rejected here with a clean 422.
 SUPPORTED_DOMAINS = ("movie", "beauty_product", "game")
+SUPPORTED_PERSONA_MODELS = (
+    "anthropic/claude-haiku-4-5",
+    "anthropic/claude-sonnet-4-6",
+)
 
 
 # --------------------------------------------------------------------------- #
@@ -386,16 +390,30 @@ class StartPersonaEvalRequest(BaseModel):
     personaId: str
     maxTurns: int = Field(default=8, ge=1, le=20)
     goalContextId: Optional[str] = None
-    #: The OpenAI chat model that drives BOTH the recommender (per-run
-    #: ``INTERECAGENT_ENGINE``) and the user-simulator. ``None`` falls back to the
-    #: service default (``ConfigManager.DEFAULTS['engine']``).
+    #: The OpenAI chat model that drives the recommender (per-run
+    #: ``INTERECAGENT_ENGINE``). ``None`` falls back to the service default
+    #: (``ConfigManager.DEFAULTS['engine']``).
     engine: Optional[str] = None
+    #: Harbor persona-agent base model. ``None`` falls back to the local Harbor
+    #: persona model default / env override.
+    personaModel: Optional[str] = None
 
     @field_validator("domain")
     @classmethod
     def _validate_domain(cls, value: str) -> str:
         if value not in SUPPORTED_DOMAINS:
             raise ValueError("domain must be one of {}".format(list(SUPPORTED_DOMAINS)))
+        return value
+
+    @field_validator("personaModel")
+    @classmethod
+    def _validate_persona_model(cls, value: Optional[str]) -> Optional[str]:
+        if value is None:
+            return value
+        if value not in SUPPORTED_PERSONA_MODELS:
+            raise ValueError(
+                "personaModel must be one of {}".format(list(SUPPORTED_PERSONA_MODELS))
+            )
         return value
 
 

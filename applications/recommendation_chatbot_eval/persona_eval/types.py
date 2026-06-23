@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 _DECISIONS = {"continue", "satisfied", "give_up"}
+DEFAULT_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
 
 
 @dataclass
@@ -21,18 +22,24 @@ class Persona:
 
     def to_dict(self) -> Dict[str, Any]:
         return {
-            "id": self.id, "name": self.name,
-            "summary": self.summary, "context": self.context, "source": self.source,
+            "id": self.id,
+            "name": self.name,
+            "summary": self.summary,
+            "context": self.context,
+            "source": self.source,
             "preferences": list(self.preferences),
-            "dislikes": list(self.dislikes), "constraints": list(self.constraints),
-            "goal": self.goal, "communicationStyle": self.communication_style,
+            "dislikes": list(self.dislikes),
+            "constraints": list(self.constraints),
+            "goal": self.goal,
+            "communicationStyle": self.communication_style,
         }
 
     @classmethod
     def from_dict(cls, d: Dict[str, Any]) -> "Persona":
         # Back-compat: tolerate an old "domain" key by ignoring it.
         return cls(
-            id=d["id"], name=d["name"],
+            id=d["id"],
+            name=d["name"],
             summary=d.get("summary", ""),
             context=d.get("context", ""),
             source=d.get("source", ""),
@@ -40,7 +47,9 @@ class Persona:
             dislikes=list(d.get("dislikes", [])),
             constraints=list(d.get("constraints", [])),
             goal=d.get("goal", ""),
-            communication_style=d.get("communicationStyle", d.get("communication_style", "")),
+            communication_style=d.get(
+                "communicationStyle", d.get("communication_style", "")
+            ),
         )
 
 
@@ -48,15 +57,22 @@ class Persona:
 class PersonaEvalConfig:
     domain: str
     engine: str = "gpt-4o-mini"
+    persona_model: str = DEFAULT_PERSONA_MODEL
     ranker_mode: str = "native"
     resource_mode: str = "recai_resources"
     max_turns: int = 8
     goal_context_id: str = "scenario_default"
 
     def to_dict(self) -> Dict[str, Any]:
-        return {"domain": self.domain, "engine": self.engine,
-                "rankerMode": self.ranker_mode, "resourceMode": self.resource_mode,
-                "maxTurns": self.max_turns, "goalContextId": self.goal_context_id}
+        return {
+            "domain": self.domain,
+            "engine": self.engine,
+            "personaModel": self.persona_model,
+            "rankerMode": self.ranker_mode,
+            "resourceMode": self.resource_mode,
+            "maxTurns": self.max_turns,
+            "goalContextId": self.goal_context_id,
+        }
 
 
 @dataclass
@@ -83,10 +99,14 @@ class PersonaEvalTurn:
     duration_seconds: Optional[float] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        return {"turnIndex": self.turn_index, "userMessage": self.user_message,
-                "assistantMessage": self.assistant_message,
-                "recommendedItems": [dict(i) for i in self.recommended_items],
-                "decision": self.decision, "durationSeconds": self.duration_seconds}
+        return {
+            "turnIndex": self.turn_index,
+            "userMessage": self.user_message,
+            "assistantMessage": self.assistant_message,
+            "recommendedItems": [dict(i) for i in self.recommended_items],
+            "decision": self.decision,
+            "durationSeconds": self.duration_seconds,
+        }
 
 
 @dataclass
@@ -120,9 +140,11 @@ class MetricScores:
     recommended_item_count: int
 
     def to_dict(self) -> Dict[str, Any]:
-        return {"turnsToRecommendation": self.turns_to_recommendation,
-                "numTurns": self.num_turns,
-                "recommendedItemCount": self.recommended_item_count}
+        return {
+            "turnsToRecommendation": self.turns_to_recommendation,
+            "numTurns": self.num_turns,
+            "recommendedItemCount": self.recommended_item_count,
+        }
 
 
 @dataclass
@@ -148,7 +170,9 @@ class PersonaEvalResult:
             "sutDescription": self.sut_description,
             "transcript": [t.to_dict() for t in self.transcript],
             "recommendedItemIds": {
-                "perTurn": [[str(i["id"]) for i in t.recommended_items] for t in self.transcript],
+                "perTurn": [
+                    [str(i["id"]) for i in t.recommended_items] for t in self.transcript
+                ],
                 "final": self._final_ids(),
             },
             "questionnaire": self.questionnaire.to_dict(),

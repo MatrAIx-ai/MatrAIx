@@ -22,11 +22,16 @@ from typing import Dict, List, Optional
 
 HARBOR_PERSONA_MODEL_ENV = "MATRIX_HARBOR_PERSONA_MODEL"
 DEFAULT_HARBOR_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
+HARBOR_PERSONA_MODEL_OPTIONS = [
+    DEFAULT_HARBOR_PERSONA_MODEL,
+    "anthropic/claude-sonnet-4-6",
+]
 
 __all__ = [
     "ConfigError",
     "ConfigManager",
     "DEFAULT_HARBOR_PERSONA_MODEL",
+    "HARBOR_PERSONA_MODEL_OPTIONS",
     "HARBOR_PERSONA_MODEL_ENV",
     "harbor_persona_model",
 ]
@@ -87,14 +92,14 @@ class ConfigManager:
     #: single allowed value and is reported instead as a read-only fact in
     #: :attr:`ENVIRONMENT` (the native SASRec ranker / the ``all_resources``
     #: bundle), so the UI does not present a choice where none exists.
-    EDITABLE_KEYS: List[str] = ["engine", "domain", "botType"]
+    EDITABLE_KEYS: List[str] = ["engine", "personaModel", "domain", "botType"]
 
     #: Human-readable metadata per editable knob: a label, a one-line
     #: description, and per-value labels/descriptions. Keyed by config key; the
     #: allowed values come from :attr:`ALLOWED` so the two cannot drift.
     KNOB_META: Dict[str, Dict[str, object]] = {
         "engine": {
-            "label": "Model",
+            "label": "RecBot model",
             "description": "The OpenAI chat model that plans tool use and writes "
             "the assistant's replies.",
             "values": {
@@ -105,6 +110,21 @@ class ConfigManager:
                 "gpt-4o": {
                     "label": "GPT-4o",
                     "description": "Higher quality, slower and pricier.",
+                },
+            },
+        },
+        "personaModel": {
+            "label": "Persona model",
+            "description": "The Harbor persona-agent base model used to simulate "
+            "the user side of persona-eval runs.",
+            "values": {
+                "anthropic/claude-haiku-4-5": {
+                    "label": "Claude Haiku 4.5",
+                    "description": "Lower-cost Harbor persona simulation; the default.",
+                },
+                "anthropic/claude-sonnet-4-6": {
+                    "label": "Claude Sonnet 4.6",
+                    "description": "Stronger Harbor persona simulation at higher cost.",
                 },
             },
         },
@@ -198,7 +218,12 @@ class ConfigManager:
             value_meta = meta.get("values", {})
             value_meta = value_meta if isinstance(value_meta, dict) else {}
             option_views: List[Dict[str, str]] = []
-            for value in self.ALLOWED.get(key, []):
+            allowed_values = (
+                HARBOR_PERSONA_MODEL_OPTIONS
+                if key == "personaModel"
+                else self.ALLOWED.get(key, [])
+            )
+            for value in allowed_values:
                 vm = value_meta.get(value, {})
                 vm = vm if isinstance(vm, dict) else {}
                 option_views.append(

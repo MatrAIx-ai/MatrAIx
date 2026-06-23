@@ -1,8 +1,9 @@
 /**
  * RunConfigBar — the cockpit's editable knobs + read-only environment facts.
  *
- * Ports the mockup's config bar: Model · Domain · Conversation style knobs (the
- * `KnobSelect` dropdowns), a Max-turns slider, and the right-aligned
+ * Ports the mockup's config bar: RecBot model · Persona model · Domain ·
+ * Conversation style knobs (the `KnobSelect` dropdowns), a Max-turns slider,
+ * and the right-aligned
  * `EnvironmentPopover` of fixed-stack facts. The knob choices + their
  * descriptions come from the backend config metadata (`engine`/`domain` knobs)
  * and the goal-contexts (the "Conversation style"); the slider drives the run's
@@ -38,6 +39,9 @@ export interface RunConfigBarProps {
   /** Selected model (engine) value. */
   engine: string;
   onEngine: (value: string) => void;
+  /** Selected Harbor persona-agent model. */
+  personaModel: string;
+  onPersonaModel: (value: string) => void;
   /** Selected domain. */
   domain: Domain;
   onDomain: (value: Domain) => void;
@@ -64,6 +68,8 @@ export function RunConfigBar({
   goalContexts,
   engine,
   onEngine,
+  personaModel,
+  onPersonaModel,
   domain,
   onDomain,
   goalContextId,
@@ -75,6 +81,7 @@ export function RunConfigBar({
   const sliderId = useId();
 
   const engineOptions = optionsFor(knobs, "engine");
+  const personaModelOptions = optionsFor(knobs, "personaModel");
   const domainOptions = optionsFor(knobs, "domain");
   const styleOptions: KnobOption[] = goalContexts.map((g) => ({
     value: g.id,
@@ -86,7 +93,22 @@ export function RunConfigBar({
   return (
     <div className="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 border-b border-border-soft bg-surface-container-lowest px-lg py-2.5 shadow-sm">
       {engineOptions.length > 0 && (
-        <KnobSelect label="Model" value={engine} options={engineOptions} onChange={onEngine} disabled={disabled} />
+        <KnobSelect
+          label="RecBot model"
+          value={engine}
+          options={engineOptions}
+          onChange={onEngine}
+          disabled={disabled}
+        />
+      )}
+      {personaModelOptions.length > 0 && (
+        <KnobSelect
+          label="Persona model"
+          value={personaModel}
+          options={personaModelOptions}
+          onChange={onPersonaModel}
+          disabled={disabled}
+        />
       )}
       {domainOptions.length > 0 && (
         <KnobSelect

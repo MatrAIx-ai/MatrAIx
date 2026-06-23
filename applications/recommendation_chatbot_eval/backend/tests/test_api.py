@@ -104,7 +104,7 @@ def test_config_options(client):
     assert set(body.keys()) >= {"knobs", "defaults", "environment"}
 
     knobs = {k["key"]: k for k in body["knobs"]}
-    assert set(knobs.keys()) == {"engine", "domain", "botType"}
+    assert set(knobs.keys()) == {"engine", "personaModel", "domain", "botType"}
     # Each knob carries display metadata + per-value options + rebuild flag.
     engine = knobs["engine"]
     assert engine["label"]
@@ -112,6 +112,14 @@ def test_config_options(client):
     engine_values = {o["value"] for o in engine["options"]}
     assert engine_values == {"gpt-4o-mini", "gpt-4o"}
     assert all(o["label"] for o in engine["options"])
+    persona_model = knobs["personaModel"]
+    assert persona_model["label"]
+    assert persona_model["rebuildsAgent"] is False
+    persona_model_values = {o["value"] for o in persona_model["options"]}
+    assert persona_model_values == {
+        "anthropic/claude-haiku-4-5",
+        "anthropic/claude-sonnet-4-6",
+    }
 
     # defaults remain the full canonical config.
     assert body["defaults"]["engine"] == "gpt-4o-mini"

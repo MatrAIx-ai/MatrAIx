@@ -25,6 +25,7 @@ import type {
   JobStatus,
   PersonaEvalJobView,
   PersonaEvalPersonaDetail,
+  PersonaModel,
 } from "./types";
 
 /** How often to poll a live persona-eval job, in milliseconds. */
@@ -43,8 +44,10 @@ export interface RunPersonaEvalInput {
   personaId: string;
   maxTurns?: number;
   goalContextId?: string;
-  /** Chat model driving both the recommender and the user-simulator. */
+  /** Chat model driving the RecBot application. */
   engine?: Engine;
+  /** Harbor model driving the persona agent. */
+  personaModel?: PersonaModel;
 }
 
 /**

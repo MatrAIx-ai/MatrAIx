@@ -16,7 +16,7 @@ def test_options_returns_enriched_knobs(config_manager):
 
     knobs = {k["key"]: k for k in opts["knobs"]}
     # Editable knobs only — rankerMode / resourceMode are environment facts.
-    assert set(knobs.keys()) == {"engine", "domain", "botType"}
+    assert set(knobs.keys()) == {"engine", "personaModel", "domain", "botType"}
 
     for knob in opts["knobs"]:
         assert set(knob.keys()) >= {
@@ -39,6 +39,10 @@ def test_options_knob_values_match_allowed(config_manager):
     for key in ("engine", "domain", "botType"):
         values = [o["value"] for o in knobs[key]["options"]]
         assert values == config_manager.ALLOWED[key]
+    assert [o["value"] for o in knobs["personaModel"]["options"]] == [
+        "anthropic/claude-haiku-4-5",
+        "anthropic/claude-sonnet-4-6",
+    ]
 
 
 def test_options_rebuilds_agent_flag(config_manager):
@@ -49,6 +53,7 @@ def test_options_rebuilds_agent_flag(config_manager):
     assert knobs["domain"]["rebuildsAgent"] is True
     assert knobs["botType"]["rebuildsAgent"] is True
     assert knobs["engine"]["rebuildsAgent"] is True
+    assert knobs["personaModel"]["rebuildsAgent"] is False
 
 
 def test_bottype_change_requires_rebuild(config_manager):

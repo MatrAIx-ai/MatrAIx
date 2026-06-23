@@ -4,6 +4,8 @@ import type { PersonaEvalRunPhase } from "@/lib/usePersonaEval";
 
 interface ComponentPipelineProps {
   environment: ConfigEnvironment | null;
+  engine: string;
+  personaModel: string;
   phase: PersonaEvalRunPhase;
   jobPhase: string | null | undefined;
   hasPersona: boolean;
@@ -80,6 +82,8 @@ function toneClass(tone: PipelineNode["tone"]): string {
 
 export function ComponentPipeline({
   environment,
+  engine,
+  personaModel,
   phase,
   jobPhase,
   hasPersona,
@@ -97,7 +101,7 @@ export function ComponentPipeline({
       key: "persona",
       label: "Persona",
       owner: environment?.personaAgent ?? "Harbor persona-claude-code",
-      detail: `${environment?.personaModel ?? "anthropic/claude-haiku-4-5"} · ${personaPromptOwner}`,
+      detail: `${personaModel || environment?.personaModel || "anthropic/claude-haiku-4-5"} · ${personaPromptOwner}`,
       icon: "badge",
       ...persona,
     },
@@ -105,7 +109,7 @@ export function ComponentPipeline({
       key: "chatbot",
       label: "Chatbot",
       owner: environment?.applicationApi ?? "rec-agent-api sidecar",
-      detail: environment?.agent ?? "RecBot / RecAI / InteRecAgent",
+      detail: `${engine || "gpt-4o-mini"} · ${environment?.agent ?? "RecBot / RecAI / InteRecAgent"}`,
       icon: "forum",
       ...chatbot,
     },

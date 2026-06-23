@@ -50,7 +50,7 @@ from fastapi.responses import JSONResponse
 import backend.api  # noqa: F401  (side effect: sys.path wiring)
 from backend.api import schemas
 from backend.api.deps import AppState, build_state, state_from_request
-from backend.service.config import ConfigError, ConfigManager
+from backend.service.config import ConfigError, ConfigManager, harbor_persona_model
 
 __all__ = ["create_app", "app", "preflight_checks", "catalog_item_view"]
 
@@ -73,7 +73,9 @@ def _persona_blurb(persona: Any, max_chars: int = 160) -> str:
     to ``summary``. Collapses whitespace and truncates with an ellipsis so the
     card stays compact.
     """
-    text = (getattr(persona, "context", "") or getattr(persona, "summary", "") or "").strip()
+    text = (
+        getattr(persona, "context", "") or getattr(persona, "summary", "") or ""
+    ).strip()
     text = " ".join(text.split())
     if len(text) > max_chars:
         text = text[: max_chars - 1].rstrip() + "…"
@@ -585,15 +587,20 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         # `start` dispatches the persona-eval onto a daemon thread (serialized
         # process-globally) and returns a job id immediately; a bad
         # persona/domain pairing (or unknown persona) surfaces here as a 422.
-        # The selected engine drives BOTH the recommender and the user-simulator;
-        # an omitted/None engine falls back to the canonical config default so
-        # existing behavior is unchanged.
+        # `engine` selects the RecBot base model. `personaModel` selects the
+        # Harbor persona-agent base model. Omitted values fall back to local
+        # defaults so existing callers keep working.
         engine = body.engine or ConfigManager.DEFAULTS["engine"]
+        persona_model = body.personaModel or harbor_persona_model()
         try:
             job_id = services.persona_eval.start(
-                body.domain, body.personaId, body.maxTurns,
-                body.goalContextId or "scenario_default", now=_utc_now,
+                body.domain,
+                body.personaId,
+                body.maxTurns,
+                body.goalContextId or "scenario_default",
+                now=_utc_now,
                 engine=engine,
+                persona_model=persona_model,
             )
         except (ValueError, KeyError) as exc:
             raise HTTPException(status_code=422, detail=str(exc))

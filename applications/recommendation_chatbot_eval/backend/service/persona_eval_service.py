@@ -4,6 +4,7 @@ Persona-eval execution is serialized process-globally (`_RUN_LOCK`) because the
 underlying recommender resources and process-level environment are expensive and
 partly shared across runs.
 """
+
 from __future__ import annotations
 
 import json
@@ -15,13 +16,14 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 
 from persona_eval.runner import run_persona_eval as _default_runner
-from persona_eval.types import PersonaEvalConfig
+from persona_eval.types import DEFAULT_PERSONA_MODEL, PersonaEvalConfig
 
 _RUN_LOCK = threading.Lock()
 
 
 def _new_persona_eval_id() -> str:
     import uuid
+
     return "wt_" + uuid.uuid4().hex[:12]
 
 
@@ -37,7 +39,13 @@ def _default_runs_dir() -> Path:
     repo_root = here
     for _ in range(5):
         repo_root = os.path.dirname(repo_root)
-    return Path(repo_root) / "data" / "cache" / "recommendation_chatbot_eval" / "persona_eval_runs"
+    return (
+        Path(repo_root)
+        / "data"
+        / "cache"
+        / "recommendation_chatbot_eval"
+        / "persona_eval_runs"
+    )
 
 
 def _normalize_prompts(value: Any) -> Optional[Dict[str, str]]:
@@ -68,23 +76,34 @@ class PersonaEvalProgress:
 
     def to_view(self) -> Dict[str, Any]:
         return {
-            "jobId": self.job_id, "domain": self.domain, "personaId": self.persona_id,
-            "personaName": self.persona_name, "sutDescription": self.sut_description,
+            "jobId": self.job_id,
+            "domain": self.domain,
+            "personaId": self.persona_id,
+            "personaName": self.persona_name,
+            "sutDescription": self.sut_description,
             "goalContextId": self.goal_context_id,
-            "status": self.status, "phase": self.phase, "turns": list(self.turns),
-            "questionnaire": self.questionnaire, "metricScores": self.metric_scores,
+            "status": self.status,
+            "phase": self.phase,
+            "turns": list(self.turns),
+            "questionnaire": self.questionnaire,
+            "metricScores": self.metric_scores,
             "prompts": self.prompts,
             "error": self.error,
         }
 
 
 class PersonaEvalService:
-    def __init__(self, *, session_builder: Callable[[PersonaEvalConfig], Any],
-                 get_persona: Callable[[str], Any], sut_for: Callable[[str], str],
-                 simulator_factory: Callable[[str, str, str], Any],
-                 runner: Callable[..., Any] = _default_runner,
-                 engine: str = "gpt-4o-mini",
-                 runs_dir: Optional[Path] = None) -> None:
+    def __init__(
+        self,
+        *,
+        session_builder: Callable[[PersonaEvalConfig], Any],
+        get_persona: Callable[[str], Any],
+        sut_for: Callable[[str], str],
+        simulator_factory: Callable[[str, str, str], Any],
+        runner: Callable[..., Any] = _default_runner,
+        engine: str = "gpt-4o-mini",
+        runs_dir: Optional[Path] = None,
+    ) -> None:
         self._session_builder = session_builder
         self._get_persona = get_persona
         self._sut_for = sut_for
@@ -95,24 +114,40 @@ class PersonaEvalService:
         self._guard = threading.Lock()
         self._progress: Dict[str, PersonaEvalProgress] = {}
 
-    def start(self, domain: str, persona_id: str, max_turns: int,
-              goal_context_id: str = "scenario_default",
-              *, now: Callable[[], str], engine: Optional[str] = None) -> str:
+    def start(
+        self,
+        domain: str,
+        persona_id: str,
+        max_turns: int,
+        goal_context_id: str = "scenario_default",
+        *,
+        now: Callable[[], str],
+        engine: Optional[str] = None,
+        persona_model: Optional[str] = None,
+    ) -> str:
         # Persona is domain-free: any persona may run against any domain.
-        # ``engine`` drives the recommender side of the run; ``None`` keeps the
-        # service default so existing callers are unchanged.
+        # ``engine`` drives the recommender side of the run; ``persona_model``
+        # drives Harbor's persona agent. ``None`` keeps defaults so existing
+        # callers are unchanged.
         persona = self._get_persona(persona_id)
         run_engine = engine or self._engine
+        run_persona_model = persona_model or DEFAULT_PERSONA_MODEL
         job_id = _new_persona_eval_id()
         progress = PersonaEvalProgress(
-            job_id=job_id, domain=domain, persona_id=persona_id,
+            job_id=job_id,
+            domain=domain,
+            persona_id=persona_id,
             persona_name=getattr(persona, "name", persona_id),
             sut_description=self._sut_for(domain),
-            goal_context_id=goal_context_id)
+            goal_context_id=goal_context_id,
+        )
         with self._guard:
             self._progress[job_id] = progress
         thread = threading.Thread(
-            target=self._run, args=(progress, persona, max_turns, run_engine, now), daemon=True)
+            target=self._run,
+            args=(progress, persona, max_turns, run_engine, run_persona_model, now),
+            daemon=True,
+        )
         thread.start()
         return job_id
 
@@ -175,17 +210,19 @@ class PersonaEvalService:
             persona = data.get("persona") or {}
             questionnaire = data.get("questionnaire") or {}
             metric_scores = data.get("metricScores") or {}
-            summaries.append({
-                "id": data.get("id") or path.stem,
-                "createdAt": data.get("createdAt"),
-                "domain": config.get("domain"),
-                "personaName": persona.get("name"),
-                "source": persona.get("source"),
-                "goalContextId": config.get("goalContextId"),
-                "overallRating": questionnaire.get("overallRating"),
-                "numTurns": metric_scores.get("numTurns"),
-            })
-        summaries.sort(key=lambda s: (s.get("createdAt") or ""), reverse=True)
+            summaries.append(
+                {
+                    "id": data.get("id") or path.stem,
+                    "createdAt": data.get("createdAt"),
+                    "domain": config.get("domain"),
+                    "personaName": persona.get("name"),
+                    "source": persona.get("source"),
+                    "goalContextId": config.get("goalContextId"),
+                    "overallRating": questionnaire.get("overallRating"),
+                    "numTurns": metric_scores.get("numTurns"),
+                }
+            )
+        summaries.sort(key=lambda s: s.get("createdAt") or "", reverse=True)
         return summaries
 
     def get_run(self, run_id: str) -> Optional[Dict[str, Any]]:
@@ -203,14 +240,26 @@ class PersonaEvalService:
             data["id"] = data.get("id") or run_id
         return data
 
-    def _run(self, progress: PersonaEvalProgress, persona: Any, max_turns: int,
-             engine: str, now: Callable[[], str]) -> None:
+    def _run(
+        self,
+        progress: PersonaEvalProgress,
+        persona: Any,
+        max_turns: int,
+        engine: str,
+        persona_model: str,
+        now: Callable[[], str],
+    ) -> None:
         with _RUN_LOCK:  # serialize all RecAI-driving persona-evals
             try:
-                config = PersonaEvalConfig(domain=progress.domain, engine=engine,
-                                        ranker_mode="native", resource_mode="recai_resources",
-                                        max_turns=max_turns,
-                                        goal_context_id=progress.goal_context_id)
+                config = PersonaEvalConfig(
+                    domain=progress.domain,
+                    engine=engine,
+                    persona_model=persona_model,
+                    ranker_mode="native",
+                    resource_mode="recai_resources",
+                    max_turns=max_turns,
+                    goal_context_id=progress.goal_context_id,
+                )
                 session = self._session_builder(config)
                 with self._guard:
                     progress.status = "running"
@@ -223,7 +272,9 @@ class PersonaEvalService:
                             progress.phase = phase
                     elif etype == "turn":
                         with self._guard:
-                            progress.turns = list(getattr(session, "turns", progress.turns))
+                            progress.turns = list(
+                                getattr(session, "turns", progress.turns)
+                            )
                     elif etype == "prompts":
                         prompts = _normalize_prompts(event.get("prompts"))
                         with self._guard:
@@ -240,9 +291,16 @@ class PersonaEvalService:
                                 progress.prompts = prompts
 
                 result = self._runner(
-                    session, persona, progress.sut_description, config,
-                    self._simulator_factory(engine, progress.goal_context_id, progress.domain),
-                    created_at=now(), on_event=on_event)
+                    session,
+                    persona,
+                    progress.sut_description,
+                    config,
+                    self._simulator_factory(
+                        engine, progress.goal_context_id, progress.domain
+                    ),
+                    created_at=now(),
+                    on_event=on_event,
+                )
                 self._persist_run(progress.job_id, result)
                 try:
                     result_payload = result.to_dict()

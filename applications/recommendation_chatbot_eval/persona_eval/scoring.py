@@ -76,6 +76,11 @@ def _config_from_dict(value: Dict[str, Any]) -> PersonaEvalConfig:
     return PersonaEvalConfig(
         domain=str(value.get("domain") or "movie"),
         engine=str(value.get("engine") or "gpt-4o-mini"),
+        persona_model=str(
+            value.get(
+                "personaModel", value.get("persona_model", "anthropic/claude-haiku-4-5")
+            )
+        ),
         ranker_mode=str(value.get("rankerMode", value.get("ranker_mode", "native"))),
         resource_mode=str(
             value.get("resourceMode", value.get("resource_mode", "recai_resources"))

@@ -348,7 +348,7 @@ class HarborPersonaEvalRunner:
             "agents": [
                 {
                     "name": "persona-claude-code",
-                    "model_name": harbor_persona_model(),
+                    "model_name": config.persona_model or harbor_persona_model(),
                     "kwargs": {"persona_path": str(persona_path)},
                 }
             ],
