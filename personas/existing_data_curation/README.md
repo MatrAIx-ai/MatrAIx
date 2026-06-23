@@ -521,13 +521,15 @@ V1 stage contract:
 | Stage | Script | Inputs | Outputs | Behavior |
 | --- | --- | --- | --- | --- |
 | Prepare holdout targets | `evaluate_amazon_persona_rating_holdout.py` | Temporal-split `user_histories.jsonl` with construction `reviews` and held-out `validation_reviews` | `users.jsonl`, labeled `targets.jsonl`, blind `prediction_targets.jsonl`, `summary.json`, `report.md` | Assigns users to loose rating-behavior cohorts from construction ratings only; creates one target per held-out rating row; reports built-in baseline MAE and within-1-star rates. |
-| Predict ratings | `predict_amazon_persona_holdout_ratings.py` | Blind `prediction_targets.jsonl` plus persona YAML features from `inferred_dimensions.yaml` | `persona_predictions.jsonl` | Joins targets to YAML personas by Amazon user id in persona `name`; prompts the LLM with YAML `description` and `dimensions` plus blind holdout category/ASIN/date context; writes one predicted 1-5 rating per target. |
+| Predict ratings | `predict_amazon_persona_holdout_ratings.py` | Blind `prediction_targets.jsonl` plus persona YAML features from `inferred_dimensions.yaml` | `persona_predictions.jsonl` | Joins targets to YAML personas by Amazon user id in persona `name`; prompts the LLM with sanitized YAML `description` and `dimensions` plus blind holdout category/ASIN/date context; writes one predicted 1-5 rating per target. |
 | Score persona predictions | `evaluate_amazon_persona_rating_holdout.py --predictions ...` | Same temporal-split `user_histories.jsonl` plus `persona_predictions.jsonl` | Updated `summary.json` and `report.md` | Scores supplied predictions against held-out true ratings and reports MAE and within-1-star rates overall and by cohort. |
 
 The blind prediction target intentionally excludes held-out review title,
 held-out review text, and true rating. Product metadata is not required; when
 histories are not metadata-enriched, target context is limited to source
-category, ASIN/parent ASIN, and review date.
+category, ASIN/parent ASIN, and review date. The predictor also excludes cohort
+labels from the LLM prompt and strips explicit rating/star-behavior summaries
+from persona YAML description and dimensions before prediction.
 
 ```bash
 python scripts/evaluate_amazon_persona_rating_holdout.py \

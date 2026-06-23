@@ -18,6 +18,7 @@ import argparse
 import gzip
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -69,17 +70,31 @@ DEFAULT_MODEL = os.environ.get("OPENAI_LLM_MODEL", "gpt-4.1-mini")
 
 SYSTEM_PROMPT = """You predict future Amazon star ratings from a constructed persona.
 
-Core task: predict how this user would rate each held-out product on a 1-5 star scale using only the provided persona and product metadata.
+Core task: predict how this user would rate each held-out product on a 1-5 star scale using only the provided persona and blind product context.
 
 Rules:
 - Do not assume access to the held-out review text, held-out review title, or true rating.
-- Product context may include category, title, ASIN, parent ASIN, category path, and review date.
+- Product context may include source category, ASIN, parent ASIN, and review date.
 - Use the persona as the personalization signal. Avoid inventing demographics or facts not present in the persona.
-- If product context is sparse, use the persona's interests, preferences, and rating-relevant tendencies cautiously.
+- Do not use user cohort labels or explicit historical rating-behavior summaries.
+- If product context is sparse, use the persona's interests, preferences, values, and lifestyle context cautiously.
 - Return integer ratings only: 1, 2, 3, 4, or 5.
 - Acknowledge uncertainty with confidence and concise rationale.
 
 Return compact JSON only."""
+
+
+RATING_BEHAVIOR_RE = re.compile(
+    r"\b("
+    r"rating|ratings|rated|rates|rater|"
+    r"star|stars|five[- ]?star|four[- ]?star|three[- ]?star|two[- ]?star|one[- ]?star|"
+    r"5[- ]?star|4[- ]?star|3[- ]?star|2[- ]?star|1[- ]?star|"
+    r"harsh reviewer|critical reviewer|generous reviewer|positive reviewer|"
+    r"mostly positive|mostly negative|low[- ]?rating|high[- ]?rating|"
+    r"average rating|rating distribution"
+    r")\b",
+    re.IGNORECASE,
+)
 
 
 def log(message: str) -> None:
@@ -114,6 +129,34 @@ def compact_text(value: Any, max_chars: int) -> str:
     if len(text) <= max_chars:
         return text
     return text[: max_chars - 3].rstrip() + "..."
+
+
+def contains_rating_behavior(value: Any) -> bool:
+    return bool(RATING_BEHAVIOR_RE.search(str(value or "")))
+
+
+def sanitize_rating_behavior_text(value: Any) -> str:
+    """Remove explicit rating-style sentences from persona text.
+
+    The V1 predictor should use persona features, not direct summaries such as
+    "consistently rates products 5 stars". This keeps the prompt from solving
+    the task by copying historical rating tendency.
+    """
+    text = " ".join(str(value or "").split())
+    if not text:
+        return ""
+    # Split on common sentence boundaries while preserving compact text. This is
+    # intentionally conservative: if a sentence mentions rating/star behavior,
+    # drop the full sentence.
+    sentences = re.split(r"(?<=[.!?])\s+", text)
+    kept = [sentence for sentence in sentences if not contains_rating_behavior(sentence)]
+    return " ".join(kept).strip()
+
+
+def sanitize_dimension_value(value: Any) -> Any:
+    if isinstance(value, str):
+        return sanitize_rating_behavior_text(value)
+    return value
 
 
 def float_or_none(value: Any) -> float | None:
@@ -270,10 +313,17 @@ def persona_context(
     if isinstance(yaml_persona, dict):
         dimensions = yaml_persona.get("dimensions") or {}
         if isinstance(dimensions, dict):
-            dimensions = {
-                key: dimensions[key]
-                for key in sorted(dimensions)[:max_attributes]
-            }
+            sanitized_dimensions = {}
+            for key in sorted(dimensions):
+                value = dimensions[key]
+                if contains_rating_behavior(key) or contains_rating_behavior(value):
+                    continue
+                sanitized_value = sanitize_dimension_value(value)
+                if sanitized_value not in (None, ""):
+                    sanitized_dimensions[key] = sanitized_value
+                if len(sanitized_dimensions) >= max_attributes:
+                    break
+            dimensions = sanitized_dimensions
         else:
             dimensions = {}
         return {
@@ -281,8 +331,12 @@ def persona_context(
             "persona_id": yaml_persona.get("id"),
             "user_id": yaml_persona.get("name") or persona_row.get("user_id"),
             "title": yaml_persona.get("title"),
-            "description": compact_text(yaml_persona.get("description"), 1800),
+            "description": compact_text(
+                sanitize_rating_behavior_text(yaml_persona.get("description")),
+                1800,
+            ),
             "dimensions": dimensions,
+            "sanitization": "explicit rating/star behavior removed from description and dimensions",
         }
 
     context: dict[str, Any] = {
@@ -337,8 +391,9 @@ def prediction_payload(
         "task": "predict_amazon_holdout_product_ratings_from_persona",
         "user_id": user_id,
         "instructions": [
-            "Predict each target's star rating using only constructed persona context and product metadata.",
+            "Predict each target's star rating using only constructed persona context and blind product context.",
             "Do not use held-out review text, held-out review title, or true rating; they are intentionally unavailable.",
+            "Do not use user cohort labels or explicit historical rating-behavior summaries.",
             "Return one prediction for every target_id in targets.",
             "predicted_rating must be an integer from 1 to 5.",
             "Use confidence between 0 and 1.",
@@ -364,7 +419,6 @@ def prediction_payload(
         "targets": [
             {
                 "target_id": target.get("target_id"),
-                "cohort": target.get("cohort"),
                 "validation_index": target.get("validation_index"),
                 "product_context": target.get("product_context") or {},
             }
