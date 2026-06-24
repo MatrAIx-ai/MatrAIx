@@ -219,6 +219,81 @@ python personas/existing_data_curation/scripts/merge_wiki_results.py \
 The merge step refuses silent overwrites by skipping duplicate `global_idx`
 rows already present in the merged output.
 
+## Amazon Review Persona Inference Source
+
+The same range/archive interface can run the Amazon Reviews 2023 persona
+pipeline from `scripts/infer_amazon_review_dimensions.py`. Treat Amazon review
+histories as a separate source and protocol instead of reusing the Wikipedia
+field-extraction prompt.
+
+Build a collaboration database from PR73-style user histories:
+
+```bash
+python personas/existing_data_curation/scripts/build_amazon_collab_db.py \
+  --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
+  --product-metadata-sidecar raw/amazon_reviews_2023/persona_dimension_inference/user_histories.product_metadata.jsonl \
+  --out-db /tmp/matraix-amazon-users-2023-v1.sqlite \
+  --manifest /tmp/matraix-amazon-users-2023-v1.manifest.json \
+  --dataset-id matraix_amazon_reviews_2023_users_v1
+```
+
+Create assignments with the Amazon protocol:
+
+```bash
+python personas/existing_data_curation/scripts/make_wiki_assignments.py \
+  --dataset-manifest /tmp/matraix-amazon-users-2023-v1.manifest.json \
+  --protocol-dir personas/existing_data_curation/protocols/amazon_review_persona_inference_v1 \
+  --workers alice,bob,carol \
+  --chunk-size 100 \
+  --out /tmp/amazon_assignments.jsonl
+```
+
+Run an assigned Amazon range:
+
+```bash
+python personas/existing_data_curation/worker_kit/run_amazon_range.py \
+  --db /tmp/matraix-amazon-users-2023-v1.sqlite \
+  --protocol personas/existing_data_curation/protocols/amazon_review_persona_inference_v1 \
+  --range 0:100 \
+  --worker-id alice \
+  --dataset-id matraix_amazon_reviews_2023_users_v1 \
+  --dataset-sha256 DATASET_SHA256 \
+  --backend openai-api \
+  --inference-mode evidence_profile \
+  --review-memory-output /tmp/alice_review_memory.jsonl
+```
+
+Use `--backend mock` for smoke tests without calling the OpenAI API.
+
+Validate a returned Amazon archive:
+
+```bash
+python personas/existing_data_curation/scripts/validate_amazon_results.py \
+  --archive results_alice_amazon_review_persona_inference_v1_0000000000_0000000100.tar.gz \
+  --db /tmp/matraix-amazon-users-2023-v1.sqlite \
+  --assignment-json assignment_A0001.json \
+  --prompt-sha256 PROMPT_SHA256 \
+  --schema-path personas/dimensions+new.json
+```
+
+The Amazon validator checks the same assignment/provenance invariants as the
+Wikipedia validator, plus schema-specific constraints:
+
+```text
+every assigned global_idx appears in results or failures
+dimension_id exists in personas/dimensions+new.json
+value is one of the allowed values for that dimension
+evidence_review_ids are present and come only from construction reviews
+validation_reviews are not accepted as persona-construction evidence
+```
+
+For a UI or orchestration layer, expose this as a source selector:
+
+```text
+source = wikipedia_profile_extraction -> build_wiki_profile_db.py + run_range.py
+source = amazon_review_persona_inference -> build_amazon_collab_db.py + run_amazon_range.py
+```
+
 
 ## Default Model And Effort
 

@@ -463,7 +463,25 @@ only fills reviews that do not already include product metadata.
 
 The evidence profile file is the reusable review memory. It is written before
 the granular schema extraction step and can be addressed with either
-`--evidence-profiles-output` or the clearer alias `--review-memory-output`.
+`--evidence-profiles-output` or `--review-memory-output`.
+
+For multi-worker runs, the Amazon pipeline can also use the offline
+range/archive collaboration interface from `wiki_collab/README.md`. The
+collaboration path keeps the PR73 data pipeline intact, but wraps exported
+Amazon user histories as PR71-style assigned ranges:
+
+```text
+user_histories.jsonl
+-> build_amazon_collab_db.py
+-> make_wiki_assignments.py with amazon_review_persona_inference_v1
+-> worker_kit/run_amazon_range.py
+-> validate_amazon_results.py
+-> merge accepted archives
+```
+
+Use this path when the Amazon user set is too large for a single local process
+or when collaborators need deterministic range assignments and return archives.
+
 When the 1,339-dimension schema changes, rerun the script with the same review
 memory path and do not pass `--overwrite-profiles`; the script will reuse the
 saved review summaries and only redo schema mapping. Regenerate review memory
