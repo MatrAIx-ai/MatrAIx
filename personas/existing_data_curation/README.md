@@ -453,8 +453,11 @@ Use `scripts/infer_amazon_review_dimensions.py` to infer values from
 supports the schema attribute. The prompt is evidence-grounded but
 recall-oriented: it returns strong attributes and weak/suggestive non-sensitive
 attributes with calibrated lower confidence. Unsupported dimensions are
-omitted, sensitive demographics are not inferred from product stereotypes, and
-every returned value must include review evidence.
+omitted, and every returned value must include review evidence. Repeated
+health, family/caregiving, religion, politics, or identity-adjacent
+product/context evidence is preserved as contextual interests, needs, values,
+or topical engagement, but it is not converted into asserted sensitive
+identity/status/condition attributes unless the reviewer explicitly states it.
 
 Inspect prompts without calling the API:
 

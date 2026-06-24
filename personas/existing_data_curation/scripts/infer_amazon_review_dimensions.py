@@ -56,7 +56,7 @@ EVIDENCE_PROFILE_SYSTEM_PROMPT = """You create compact evidence profiles from Am
 
 Core rule: record only evidence directly supported by review text, product title, rating, category, or repeated review behavior. Do not make persona claims from stereotypes.
 
-Use the provided broad evidence categories as the organizing guide. Capture both strong and weak/suggestive non-sensitive signals so downstream schema mapping can choose more attributes with calibrated confidence. Capture explicit self-statements separately from behavioral signals. Do not infer protected or sensitive demographics, health status, family status, socioeconomic status, occupation, region, politics, or religion unless the reviewer explicitly states it in the evidence.
+Use the provided broad evidence categories as the organizing guide. Capture both strong and weak/suggestive non-sensitive signals so downstream schema mapping can choose more attributes with calibrated confidence. Preserve repeated health, family, religion, politics, or identity-adjacent product/context evidence as context signals when present, but separate those from asserted personal attributes. Do not assert protected or sensitive demographics, health status, family status, socioeconomic status, occupation, region, politics, religion, or identity unless the reviewer explicitly states it in the evidence.
 
 Return compact JSON only."""
 
@@ -68,9 +68,10 @@ Core rule: maximize useful non-sensitive persona coverage while staying evidence
 Evidence standards:
 - Prefer explicit self-statements and repeated behavioral evidence.
 - Include weak but plausible non-sensitive attributes when evidence is suggestive; mark them with lower confidence and explain the limited support.
+- Repeated sensitive-adjacent product/context evidence may support non-sensitive interests, needs, values, preferences, or topical engagement with calibrated confidence.
 - For each inferred dimension, choose exactly one allowed value from that dimension.
 - Every inferred dimension must cite profile evidence item ids and original review ids.
-- Do not infer sensitive demographics, health, family, socioeconomic, political, religious, or identity attributes unless the profile contains explicit quoted self-statements.
+- Do not assert sensitive demographics, health conditions, family status, socioeconomic status, political affiliation, religious identity, or identity attributes unless the profile contains explicit quoted self-statements. Product purchases alone can support contextual interests or needs, not identity/status labels.
 - Use confidence between 0 and 1. Use 0.35-0.6 for weak/suggestive non-sensitive attributes, 0.6-0.8 for moderate repeated evidence, and >=0.8 only for explicit or strongly repeated evidence.
 
 Return compact JSON only."""
@@ -117,6 +118,13 @@ SCHEMA_SIGNAL_CHECKLIST = [
         "preserve": [
             "direct quotes for occupation, education, family role, location, life stage, health context, identity, politics, religion, or other sensitive facts",
             "also record when these areas are unsupported so downstream schema mapping does not guess",
+        ],
+    },
+    {
+        "schema_area": "sensitive_adjacent_context",
+        "preserve": [
+            "repeated product/context evidence related to health, family/caregiving, religion, politics, or identity as contextual interests, needs, or topical engagement",
+            "avoid converting this context into an asserted condition, affiliation, identity, or family status unless there is an explicit self-statement",
         ],
     },
 ]
@@ -748,6 +756,7 @@ def evidence_profile_payload(
             "Use category_review_summary as aggregate behavioral context, especially category frequency and rating patterns.",
             "Use construction_corpus_summary for aggregate rating-only behavior; review_evidence contains text-bearing rows only when text-only context is enabled.",
             "Use product name/category only to interpret the reviewed item; do not infer sensitive attributes from product stereotypes.",
+            "Preserve repeated health, family/caregiving, religion, politics, or identity-adjacent product/context evidence as contextual needs or topical engagement, not as asserted personal status unless explicitly stated.",
             "Use schema_signal_checklist to preserve information likely to support the downstream 1,339-dimension persona schema without copying the whole schema.",
             "Preserve weak or suggestive non-sensitive signals as candidate evidence when they may support schema attributes; label them with lower confidence.",
             "Preserve enough distinct evidence to support downstream schema extraction; do not collapse unrelated interests, preferences, habits, skills, and values into one generic claim.",
@@ -781,6 +790,7 @@ def evidence_profile_payload(
                     "values_and_motivations": ["concise grounded bullets"],
                     "communication_style": ["concise grounded bullets"],
                     "explicit_self_statements": ["directly quoted or explicitly stated facts only"],
+                    "sensitive_adjacent_context": ["repeated sensitive-adjacent product/context signals without asserted identity/status claims"],
                     "unsupported_or_sensitive_boundaries": ["claims that should not be inferred"],
                 },
                 "evidence_items": [
@@ -796,7 +806,7 @@ def evidence_profile_payload(
                         ],
                         "schema_category_hints": ["schema categories this evidence could support"],
                         "confidence": "number from 0 to 1",
-                        "evidence_type": "explicit_self_statement | repeated_behavior | suggestive_behavior | product_interest | preference | expertise_signal | communication_style",
+                        "evidence_type": "explicit_self_statement | repeated_behavior | suggestive_behavior | sensitive_adjacent_context | product_interest | preference | expertise_signal | communication_style",
                     }
                 ],
                 "unsupported_or_blocked": [
@@ -831,7 +841,8 @@ def schema_mapping_payload(
         "user_id": user_row.get("user_id"),
         "instructions": [
             "Return strongly supported dimensions and weak/suggestive non-sensitive dimensions supported by the compact evidence profile.",
-            "Omit unsupported dimensions. Do not use product stereotypes as evidence for sensitive dimensions.",
+            "Omit unsupported dimensions. Do not use product stereotypes as evidence for sensitive identity/status/condition dimensions.",
+            "Repeated sensitive-adjacent product/context evidence can support interests, topical engagement, needs, values, or preferences, but not asserted health conditions, family status, religion, politics, identity, or other sensitive attributes unless explicitly self-stated.",
             "Use structured_memory to find candidate supported attributes, but cite evidence_item_ids and original review_ids for every returned attribute.",
             "For each inferred dimension, choose exactly one allowed value from that dimension.",
             "Every inferred dimension must include at least one evidence_item_id and at least one original review_id.",
