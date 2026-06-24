@@ -1,6 +1,9 @@
 """Tests for Docker/Linux CUA submission materialization."""
 
-from matraix.agents.persona.cua_submission import extract_book_interest_from_trajectory
+from matraix.agents.persona.cua_submission import (
+    extract_book_interest_from_trajectory,
+    extract_ecommerce_interaction_from_trajectory,
+)
 
 
 def test_extract_book_interest_from_done_action() -> None:
@@ -88,3 +91,66 @@ def test_extract_book_interest_prefers_latest_submission() -> None:
     }
     payload = extract_book_interest_from_trajectory(trajectory)
     assert payload["title"] == "Final"
+
+
+def test_extract_ecommerce_interaction_from_done_action() -> None:
+    trajectory = {
+        "steps": [
+            {
+                "source": "agent",
+                "tool_calls": [
+                    {
+                        "function_name": "computer_action",
+                        "arguments": {
+                            "type": "done",
+                            "result": (
+                                '{"selected_product_id": "desk-002", '
+                                '"selected_product_name": "FocusDesk Pro", '
+                                '"need_satisfaction": 8, "ease_of_use": 7, '
+                                '"overall_experience_rating": 8, '
+                                '"reason": "The comparison page made the tradeoffs clear."}'
+                            ),
+                        },
+                    }
+                ],
+            }
+        ]
+    }
+
+    payload = extract_ecommerce_interaction_from_trajectory(trajectory)
+
+    assert payload == {
+        "selected_product_id": "desk-002",
+        "selected_product_name": "FocusDesk Pro",
+        "need_satisfaction": 8,
+        "ease_of_use": 7,
+        "overall_experience_rating": 8,
+        "reason": "The comparison page made the tradeoffs clear.",
+    }
+
+
+def test_extract_ecommerce_interaction_rejects_boolean_scores() -> None:
+    trajectory = {
+        "steps": [
+            {
+                "source": "agent",
+                "tool_calls": [
+                    {
+                        "function_name": "computer_action",
+                        "arguments": {
+                            "type": "done",
+                            "result": (
+                                '{"selected_product_id": "desk-002", '
+                                '"selected_product_name": "FocusDesk Pro", '
+                                '"need_satisfaction": true, "ease_of_use": 7, '
+                                '"overall_experience_rating": 8, '
+                                '"reason": "The comparison page made the tradeoffs clear."}'
+                            ),
+                        },
+                    }
+                ],
+            }
+        ]
+    }
+
+    assert extract_ecommerce_interaction_from_trajectory(trajectory) is None

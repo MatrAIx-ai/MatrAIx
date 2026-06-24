@@ -1,0 +1,10 @@
+# Chatbot task API shared runtime dependencies.
+#
+# These are intentionally copied into the task-owned Docker build context so
+# chatbot sidecars do not depend on files under applications/persona_eval.
+
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2
+PyYAML>=5.4
+pyarrow>=7

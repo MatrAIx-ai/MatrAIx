@@ -246,11 +246,15 @@ persona/sources/Jun20_1k_persona_description/
 configs/jobs/application-task-job-recipe/*
 configs/jobs/persona-task-grounding-job-recipe/*
 
-# RecBot Studio local runtime artifacts
-applications/recommendation_chatbot_eval/frontend/node_modules/
-applications/recommendation_chatbot_eval/frontend/dist/
-applications/recommendation_chatbot_eval/recai/**/resources/
-applications/recommendation_chatbot_eval/**/resources/
+# PersonaEval local runtime artifacts
+applications/persona_eval/frontend/node_modules/
+applications/persona_eval/frontend/dist/
+applications/persona_eval/frontend/.vite/
+application/tasks/chatbot_chat_api/environment/chatbot_api/recai/**/resources/
+application/tasks/chatbot_chat_api/environment/chatbot_api/**/resources/
 applications/all_resources.zip
+application/tasks/chatbot_chat_api/environment/chatbot_api/all_resources.zip
+applications/recommendation_chatbot_eval/
+data/cache/persona_eval/
 data/cache/recommendation_chatbot_eval/
 .env.local

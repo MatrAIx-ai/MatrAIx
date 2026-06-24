@@ -10,6 +10,7 @@ MatrAIx supports **four Docker / no-use.computer** ways to run persona web scena
 | **browser-use** | `application/tasks/example-web-browser-use_books-interest/` | `persona-browser-use` | `docker` + `network_mode = "public"` | Dedicated browser agent loop; persona via `extend_system_message` |
 | **Cocoa** | `application/tasks/example-web-cocoa_books-interest/` | `persona-cocoa` | `docker` + AIO Sandbox image + `network_mode = "public"` | Unified browser + shell + files in one container |
 | **CUA** | `application/tasks/example-web-cua_books-interest/` | `persona-computer-1` | `docker` | Screenshot loop in Linux Xvfb; no `USE_COMPUTER_API_KEY` |
+| **Task-hosted CUA** | `application/tasks/web-ecommerce-platform_product-discovery/` | `persona-computer-1` | `docker` + compose web sidecar | Browser use against a task-specific hosted web app |
 
 ## Shared submission contract
 
@@ -139,5 +140,6 @@ For **macOS / iOS** screenshot CUA (system settings, not live web), use `applica
 | `application/tasks/example-web-browser-use_books-interest/` | browser-use + live URL |
 | `application/tasks/example-web-cocoa_books-interest/` | Cocoa + live URL |
 | `application/tasks/example-web-cua_books-interest/` | CUA + live URL (Docker) |
+| `application/tasks/web-ecommerce-platform_product-discovery/` | CUA + task-specific ecommerce host |
 
 See also [task-guide.md](./task-guide.md) and [choosing-an-agent.md](../environments/choosing-an-agent.md).

@@ -2,6 +2,11 @@
 
 Harbor tasks for **application product research**. Owned by the **Application team**.
 
+The shared protocol index lives in
+[`application_interface/`](application_interface/). It groups the current task
+family into survey, chatbot, and web/computer-use application protocols without
+moving existing Harbor task paths.
+
 ## Naming
 
 - **`example-*`** — reference tasks in the repo (copy from these).
@@ -24,6 +29,14 @@ Copy the closest `example-*` sibling (same interaction type), then edit files. S
 | **type** | Interaction form (`survey`, `chat`, `web`, `desktop`, `mobile`, …) |
 | **domain** | Vertical: `software` · `finance` · `healthcare` · `commerce-retail` |
 | **tags** | Task-specific (see `src/matraix/task_catalog.py`) |
+
+## Current application protocols
+
+| Protocol | Canonical runnable task |
+| --- | --- |
+| Survey | `survey_form` |
+| Chatbot | `chatbot_chat_api` |
+| Web / computer-use | `web-ecommerce-platform_product-discovery` |
 
 See [../../docs/applications/task-guide.md](../../docs/applications/task-guide.md) and [../../docs/applications/](../../docs/applications/).
 

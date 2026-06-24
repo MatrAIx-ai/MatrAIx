@@ -17,11 +17,13 @@ Harbor Job YAML under `configs/jobs/`. Run with `harbor run -c configs/jobs/<sub
 | `example-job-recipe/appSim-example-debug-local.yaml` | Quick local run: survey + chat |
 | `example-job-recipe/harbor-smoke-local.yaml` | Harbor hello-world smoke (no API key) |
 | `example-job-recipe/appSim-example-survey-local.yaml` | Survey task smoke |
+| `example-job-recipe/appSim-survey-form-local.yaml` | Generic survey form with checked-in instrument |
 | `example-job-recipe/appSim-example-chat-local.yaml` | Chat task smoke |
 | `example-job-recipe/appSim-example-web-playwright-local.yaml` | Web via `persona-openhands-sdk` |
 | `example-job-recipe/appSim-example-web-browser-use-local.yaml` | Web via `persona-browser-use` |
 | `example-job-recipe/appSim-example-web-cocoa-local.yaml` | Web via `persona-cocoa` |
 | `example-job-recipe/appSim-example-web-linux-cua-local.yaml` | Docker Linux web CUA |
+| `example-job-recipe/appSim-web-ecommerce-platform-local.yaml` | Docker Linux web CUA against task-hosted ecommerce |
 | `example-job-recipe/appSim-example-computer-use-linux-local.yaml` | Linux desktop notifications |
 | `example-job-recipe/appSim-example-computer-use-macos-local.yaml` | macOS desktop |
 | `example-job-recipe/appSim-example-computer-use-ios-local.yaml` | iOS Simulator |

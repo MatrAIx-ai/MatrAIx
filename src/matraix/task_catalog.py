@@ -75,6 +75,16 @@ EXAMPLE_TASK_METADATA: dict[str, dict[str, object]] = {
             },
         },
     },
+    "survey_form": {
+        "type": "survey",
+        "domain": DOMAIN_SOFTWARE,
+        "tags": [
+            "survey form",
+            "structured questionnaire",
+            "telemetry trajectory",
+            "persona model api",
+        ],
+    },
     "example-chat-api_support_chatbot": {
         "type": "chat",
         "domain": DOMAIN_COMMERCE_RETAIL,
@@ -135,6 +145,17 @@ EXAMPLE_TASK_METADATA: dict[str, dict[str, object]] = {
             "fiction catalog",
             "book purchase intent",
             "online bookshop",
+        ],
+    },
+    "web-ecommerce-platform_product-discovery": {
+        "type": "web",
+        "domain": DOMAIN_COMMERCE_RETAIL,
+        "tags": [
+            "ecommerce platform",
+            "product discovery",
+            "task-specific host",
+            "computer use",
+            "shopping experience",
         ],
     },
     "example-computer-use-macos_notification-preferences": {
@@ -273,10 +294,10 @@ def apply_example_metadata(data: dict, dirname: str) -> None:
 
 
 def task_dirname_from_harbor_path(task_path: str) -> str:
-    """``persona/tasks/example-survey_product-feedback`` → ``example-survey_product-feedback``."""
+    """Return the final task directory name from a Harbor task path."""
     name = task_path.rstrip("/").split("/")[-1]
-    if not name.startswith("example-"):
-        raise ValueError(f"Expected an example task path, got {task_path!r}")
+    if not name:
+        raise ValueError(f"Expected a task path, got {task_path!r}")
     return name
 
 
@@ -317,4 +338,3 @@ def confounder_values_from_grounding(
 def probe_dimension_from_grounding(grounding: dict[str, object]) -> str | None:
     probe = grounding.get("probe_dimension")
     return str(probe) if probe else None
-

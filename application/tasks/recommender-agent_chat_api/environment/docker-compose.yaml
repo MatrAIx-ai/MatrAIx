@@ -8,7 +8,7 @@ services:
     platform: linux/amd64
     image: ${RECBOT_API_IMAGE:-matraix-recommender-agent-api:local}
     build:
-      context: ../../../../applications/recommendation_chatbot_eval
+      context: ../../chatbot_chat_api/environment/chatbot_api
       dockerfile: harbor_api/Dockerfile
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}

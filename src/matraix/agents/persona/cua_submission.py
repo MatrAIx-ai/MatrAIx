@@ -14,6 +14,16 @@ _JSON_FENCE_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
 TERMINAL_COMPUTER_ACTION_TYPES = frozenset({"done", "answer", "terminate"})
 
 BOOK_INTEREST_REQUIRED_KEYS = frozenset({"title", "price_gbp", "interested", "reason"})
+ECOMMERCE_INTERACTION_REQUIRED_KEYS = frozenset(
+    {
+        "selected_product_id",
+        "selected_product_name",
+        "need_satisfaction",
+        "ease_of_use",
+        "overall_experience_rating",
+        "reason",
+    }
+)
 IOS_DECISION_REQUIRED_KEYS = frozenset({"keep_notifications_on", "app_reviewed", "reason"})
 
 
@@ -129,6 +139,31 @@ def extract_book_interest_from_trajectory(trajectory: dict[str, Any]) -> dict[st
     )
 
 
+def extract_ecommerce_interaction_from_trajectory(
+    trajectory: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Return the last valid ecommerce platform payload from a CUA trajectory."""
+
+    def _validate(data: dict[str, Any]) -> bool:
+        rating_fields = (
+            "need_satisfaction",
+            "ease_of_use",
+            "overall_experience_rating",
+        )
+        return all(
+            isinstance(data.get(key), int)
+            and not isinstance(data.get(key), bool)
+            and 1 <= data[key] <= 10
+            for key in rating_fields
+        )
+
+    return _extract_payload_from_trajectory(
+        trajectory,
+        required_keys=ECOMMERCE_INTERACTION_REQUIRED_KEYS,
+        accept_payload=_validate,
+    )
+
+
 async def materialize_json_file(
     environment: Any,
     logs_dir: Path,
@@ -200,8 +235,27 @@ async def materialize_book_interest_file(
     )
 
 
+async def materialize_ecommerce_interaction_file(
+    environment: Any,
+    logs_dir: Path,
+    *,
+    output_path: str = "/app/output/ecommerce_interaction.json",
+    logger: Any | None = None,
+) -> bool:
+    """Write ecommerce_interaction.json from a Docker Linux CUA submission."""
+    return await materialize_json_file(
+        environment,
+        logs_dir,
+        extractor=extract_ecommerce_interaction_from_trajectory,
+        output_path=output_path,
+        logger=logger,
+        log_label="ecommerce web submission",
+    )
+
+
 _SUBMISSION_PROFILES: dict[str, Callable[..., Any]] = {
     "book_interest": materialize_book_interest_file,
+    "ecommerce_interaction": materialize_ecommerce_interaction_file,
 }
 
 

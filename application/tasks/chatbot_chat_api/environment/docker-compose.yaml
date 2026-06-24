@@ -7,7 +7,7 @@ services:
   chatbot-api:
     image: ${CHATBOT_ROUTER_IMAGE:-matraix-chatbot-router:local}
     build:
-      context: ../../../../applications/recommendation_chatbot_eval
+      context: ./chatbot_api
       dockerfile: harbor_api/router.Dockerfile
     environment:
       CHATBOT_UPSTREAM_RECAI: ${CHATBOT_UPSTREAM_RECAI:-http://recai-api:8000}
@@ -38,7 +38,7 @@ services:
     platform: linux/amd64
     image: ${RECAI_API_IMAGE:-matraix-chatbot-recai-api:local}
     build:
-      context: ../../../../applications/recommendation_chatbot_eval
+      context: ./chatbot_api
       dockerfile: harbor_api/Dockerfile
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
@@ -67,7 +67,7 @@ services:
     profiles: ["finance"]
     image: ${FINANCE_API_IMAGE:-matraix-chatbot-finance-api:local}
     build:
-      context: ../../../../applications/recommendation_chatbot_eval
+      context: ./chatbot_api
       dockerfile: harbor_api/finance.Dockerfile
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
@@ -96,7 +96,7 @@ services:
     platform: linux/amd64
     image: ${OPENBB_MCP_IMAGE:-matraix-openbb-mcp:local}
     build:
-      context: ../../../../applications/recommendation_chatbot_eval
+      context: ./chatbot_api
       dockerfile: harbor_api/openbb-mcp.Dockerfile
     environment:
       OPENBB_MCP_CATEGORIES: ${OPENBB_MCP_CATEGORIES:-equity,etf,economy,news,crypto,fixedincome,index,technical}
