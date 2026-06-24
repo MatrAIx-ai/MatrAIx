@@ -1,0 +1,18 @@
+id: 00007569
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7569
+persona_description: A security professional responsible for maintaining the security of a large-scale web application, who is aware of the vulnerabilities in memcached and the potential risks of exposing
+  memcached servers to the Internet. They are aware of the importance of using security groups to isolate instances and direct traffic, and they are committed to preventing direct Internet access to memcached
+  servers in order to mitigate the risks associated with memcached vulnerabilities.
+expertise:
+  general_domain_top1pct: Computer Security
+  specific_domain_top1pct: Web Application Security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

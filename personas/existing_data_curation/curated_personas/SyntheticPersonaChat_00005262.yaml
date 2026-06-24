@@ -1,0 +1,71 @@
+id: '00005262'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5262
+data:
+  user 1 personas: 'I eat ice cream when i am sad.
+
+    I am a dog walker.
+
+    My best friend lives in japan.
+
+    I have never traveled outside of the united states.
+
+    I live in new york.'
+  user 2 personas: 'I am a big sports fan.
+
+    I have a brand new chevrolet.
+
+    I am looking to start a business.
+
+    I like to get involved in politics.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+
+    User 2: Hi, I''m [user 2].
+
+
+    User 1: What do you do for fun?
+
+
+    User 2: I''m a big sports fan, so I love watching and playing sports. I also like to get involved in politics.
+
+
+    User 1: That''s cool! I''m a dog walker, and I love animals. I''ve never been outside of the United States, but my best friend lives in Japan.
+
+
+    User 2: What''s your favorite sport?
+
+
+    User 1: I love football, but I also love basketball and baseball.
+
+
+    User 2: Me too! I''m a huge fan of the New York Jets.
+
+
+    User 1: What about politics? Are you involved in any political groups or organizations?
+
+
+    User 2: No, not really. I''m just interested in the news and what''s going on in the world.
+
+
+    User 1: That''s cool. I''m a member of the Democratic Party, and I''m really passionate about politics.
+
+
+    User 2: That''s interesting. I''m not really sure which party I identify with.
+
+
+    User 1: Well, you should definitely do some research and find out what you''re interested in.
+
+
+    User 2: I will. Thanks for the advice.
+
+
+    User 1: No problem. It was nice talking to you.
+
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

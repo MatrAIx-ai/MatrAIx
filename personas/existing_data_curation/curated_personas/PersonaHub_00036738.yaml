@@ -1,0 +1,18 @@
+id: 00036738
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36738
+persona_description: A business analyst who is responsible for analyzing and evaluating the performance and scalability of messaging systems in large-scale enterprises. This persona is interested in understanding
+  the use cases and trade-offs between ActiveMQ and Kafka, specifically focusing on the use cases where one messaging system is more suitable than the other. This person is also interested in the specific
+  differences in message handling, such as transaction support, delivery order, filtering, and scalability.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: messaging systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

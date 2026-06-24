@@ -1,0 +1,19 @@
+id: '00035313'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35313
+persona_description: A geologist who is interested in the study of earthquakes and their impact on the Earth's surface, particularly in the New Madrid seismic zone of southeast Missouri and adjacent States.
+  This individual is knowledgeable about the history of earthquakes in the area, the causes and effects of these earthquakes, and the ongoing seismic activity in the region. They are also interested in
+  the geological processes that generate earthquakes in the area, such as faulting and the movement of tectonic plates. This person is likely to be interested in the latest earthquake report from the US
+  Geological Survey and the potential impact of this event on the New Madrid seismic zone.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: New Madrid seismic zone
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

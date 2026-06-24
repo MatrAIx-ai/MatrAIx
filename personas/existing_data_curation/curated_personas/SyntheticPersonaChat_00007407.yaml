@@ -1,0 +1,88 @@
+id: '00007407'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7407
+data:
+  user 1 personas: 'My favorite drink is caramel cappuccino.
+
+    I work in a coffee shop.
+
+    My parents live across the street from me.
+
+    I love to read true crime books.'
+  user 2 personas: 'I have a pet husky.
+
+    I like to play nintendo.
+
+    I live in the great white north.
+
+    I love to eat fish.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you like to do for fun?
+
+    User 2: I like to play Nintendo, I have a pet husky and I love to eat fish.
+
+    User 1: Oh, that''s cool! I love to read true crime books and I work in a coffee shop.
+
+    User 2: Really? That''s so funny! I also love to read true crime books.
+
+    User 1: Oh, that''s awesome! What''s your favorite true crime book?
+
+    User 2: I really like the book "In Cold Blood" by Truman Capote.
+
+    User 1: Oh, I love that book too! It''s so well-written.
+
+    User 2: It is, isn''t it? I''ve read it multiple times.
+
+    User 1: Me too! I love the way Capote tells the story.
+
+    User 2: Me too. It''s so engaging.
+
+    User 1: So, what are you up to today?
+
+    User 2: Not much, just hanging out with my dog.
+
+    User 1: Oh, that''s nice. I''m just getting ready for work.
+
+    User 2: Oh, what do you do for work?
+
+    User 1: I work in a coffee shop.
+
+    User 2: Oh, that''s cool! I love coffee.
+
+    User 1: Me too! I love to drink it and I love to make it.
+
+    User 2: Oh, that''s awesome! I''m sure you''re really good at your job.
+
+    User 1: Thanks! I try my best.
+
+    User 2: I''m sure you''re great. You seem really nice.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, what are you doing after work?
+
+    User 1: I''m not sure yet. What are you up to?
+
+    User 2: I''m not sure yet either. Maybe we could hang out?
+
+    User 1: Oh, that would be fun! We could go to a coffee shop or something.
+
+    User 2: That sounds great! I love coffee.
+
+    User 1: Me too! We can meet at my coffee shop after work.
+
+    User 2: Sounds good! See you then.
+
+    User 1: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

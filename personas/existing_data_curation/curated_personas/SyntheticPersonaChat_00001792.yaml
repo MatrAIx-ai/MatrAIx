@@ -1,0 +1,86 @@
+id: 00001792
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1792
+data:
+  user 1 personas: 'I am an accountant.
+
+    My dog is my best friend.
+
+    I believe in leprechauns.
+
+    My mom went crazy when i was three and i have not seen her since.'
+  user 2 personas: 'I recently got a cat.
+
+    I am an artist.
+
+    I enjoy walking for exercise.
+
+    I have four children.
+
+    I love watching game of thrones.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thank you! How about you?
+
+    User 2: I''m doing great! I just got a new cat, and I''m really excited about it.
+
+    User 1: That''s great! I love cats. What''s your cat''s name?
+
+    User 2: Her name is Mittens.
+
+    User 1: That''s a cute name!
+
+    User 2: Thank you!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m an artist, so I like to paint and draw. I also enjoy walking for exercise, and I love watching Game of Thrones.
+
+    User 1: I''m an accountant, and I love playing with my dog. I also enjoy watching TV, and I''m a big fan of the NBA.
+
+    User 2: That''s cool! I''ve never met an accountant before.
+
+    User 1: Me neither! I''ve never met an artist before.
+
+    User 2: Well, now you have!
+
+    User 1: And now I have a cat.
+
+    User 2: That''s right! You should come over and see Mittens sometime.
+
+    User 1: I will! Thanks for the invite.
+
+    User 2: No problem!
+
+    User 1: So, what do you like to paint and draw?
+
+    User 2: I like to paint landscapes and animals. I also enjoy drawing portraits.
+
+    User 1: That''s cool! I''ve always been too scared to try painting or drawing.
+
+    User 2: You should give it a try! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! You''d be great at it.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem!
+
+    User 1: So, what''s your favorite thing about Game of Thrones?
+
+    User 2: I love the characters and the story. It''s so complex and engaging.
+
+    User 1: I agree! It''s one of my favorite shows.
+
+    User 2: Well, it''s nice to meet you, new friend.
+
+    User 1: It''s nice to meet you too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

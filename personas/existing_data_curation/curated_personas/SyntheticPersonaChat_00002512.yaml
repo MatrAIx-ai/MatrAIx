@@ -1,0 +1,70 @@
+id: '00002512'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2512
+data:
+  user 1 personas: 'I like to go fishing.
+
+    I like to play board games.
+
+    I am an athlete.
+
+    I race cars for a living.'
+  user 2 personas: 'I love all animals.
+
+    I love my job.
+
+    My favorite music is country.
+
+    I used to work as an actress.'
+  Best Generated Conversation: 'User 1: I love to go fishing.
+
+    User 2: I love all animals!
+
+    User 1: I love animals too! What is your favorite animal?
+
+    User 2: I love horses! They are so beautiful and majestic.
+
+    User 1: I love horses too! They are amazing animals.
+
+    User 2: Me too! I used to work as an actress, and I once got to ride a horse in a movie. It was so much fun!
+
+    User 1: That sounds like a lot of fun! I''ve never been in a movie before.
+
+    User 2: You should try it! It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I might have to try it someday! I''m not sure if I''m brave enough to ride a horse in a movie, though.
+
+    User 2: You can do it! I believe in you!
+
+    User 1: Thank you! I''ll keep that in mind.
+
+    User 2: What''s your favorite music?
+
+    User 1: I love country music!
+
+    User 2: Me too! I love listening to country music while I''m driving.
+
+    User 1: Me too! It''s the perfect music to relax to.
+
+    User 2: I agree! What''s your favorite country song?
+
+    User 1: I love "The Dance" by Garth Brooks.
+
+    User 2: Me too! That''s a classic!
+
+    User 1: I love the lyrics. They''re so beautiful.
+
+    User 2: I agree! They''re really meaningful.
+
+    User 1: What''s your favorite country singer?
+
+    User 2: I love Garth Brooks! He''s my favorite country singer of all time.
+
+    User 1: Me too! He''s so talented.
+
+    User 2: I agree! He''s an amazing singer and songwriter.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

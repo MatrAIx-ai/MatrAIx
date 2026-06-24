@@ -1,0 +1,80 @@
+id: '00004515'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4515
+data:
+  user 1 personas: 'My cats like to be read to.
+
+    I like to eat tune.
+
+    I am a librarian in my current job.
+
+    I have two cats.
+
+    I like to read books.'
+  user 2 personas: 'I like tailgate parties.
+
+    I have never been on an airplane.
+
+    I had a girlfriend who eloped with my best friend one day.
+
+    My favorite season is duck hunting season.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to tailgate parties.
+
+    User 1: What''s that?
+
+    User 2: It''s a party before a sports game.
+
+    User 1: Oh, I''ve heard of those.
+
+    User 2: Have you ever been to one?
+
+    User 1: No, I haven''t.
+
+    User 2: You should come to one sometime!
+
+    User 1: Maybe I will.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a librarian.
+
+    User 2: Oh, that''s cool! I love to read.
+
+    User 1: Me too! I have two cats.
+
+    User 2: I love cats! I have one cat named Mittens.
+
+    User 1: That''s a cute name!
+
+    User 2: Thanks! What''s your cats'' names?
+
+    User 1: Their names are Snowball and Shadow.
+
+    User 2: Those are great names too!
+
+    User 1: Thanks!
+
+    User 2: So, what''s your favorite season?
+
+    User 1: My favorite season is fall.
+
+    User 2: Mine too! I love the leaves changing colors.
+
+    User 1: Me too! And I love the cool weather.
+
+    User 2: Me too! We should go to a tailgate party together this fall.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when the next one is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: 00007898
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7898
+data:
+  user 1 personas: 'I have been acting since i was ten years old.
+
+    I am an actor.
+
+    I starred in television commercials when i was young.
+
+    Now i am a fixture on a weekly telenovela.'
+  user 2 personas: 'I also like to mountain bike.
+
+    I love to hike.
+
+    I have visited 12 national parks in the us.
+
+    I am an environmental activist.
+
+    I live in vermont.'
+  Best Generated Conversation: 'User 1: I love to hike.
+
+    User 2: Me too! I''ve been all over the US, and I''ve visited 12 national parks.
+
+    User 1: Wow! That''s amazing. I''ve only been to a few.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to Yosemite, Yellowstone, and the Grand Canyon.
+
+    User 2: Those are all great parks! I''ve been to Yosemite and Yellowstone too. They''re both so beautiful.
+
+    User 1: Yeah, they are. I''m hoping to go to some more national parks soon.
+
+    User 2: You should! They''re all amazing.
+
+    User 1: Yeah, I will. What are some of your favorite things to do when you''re hiking?
+
+    User 2: I love to explore new trails, take in the views, and see wildlife.
+
+    User 1: Me too! I love seeing all the different plants and animals.
+
+    User 2: Yeah, it''s so amazing how diverse nature is.
+
+    User 1: It really is. I''m so glad I love hiking. It''s such a great way to get outdoors and experience the beauty of nature.
+
+    User 2: Me too! I love being able to explore and learn about the world around me.
+
+    User 1: Me too. I think hiking is one of the best ways to learn about nature.
+
+    User 2: Definitely. I''m so glad you love hiking too. It''s always fun to meet fellow hikers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

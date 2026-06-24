@@ -1,0 +1,96 @@
+id: 00000787
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 787
+data:
+  user 1 personas: 'I love reading.
+
+    My favorite band is a fine frenzy.
+
+    I like chicken nuggets.
+
+    I love animals.
+
+    I work at a hotel.'
+  user 2 personas: 'My favorite food is mexican food.
+
+    I am a nurse at a hospital.
+
+    I love to read and cook.
+
+    I am a mother.'
+  Best Generated Conversation: 'User 1: Hey! My name is [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, cook, and spend time with my family.
+
+    User 1: Oh, that''s cool! I love reading too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I especially enjoy historical fiction and mystery novels.
+
+    User 1: Oh, me too! I love learning about new places and cultures through historical fiction. And I love the suspense in mystery novels.
+
+    User 2: Me too! I think it''s so exciting to try to figure out who the killer is before the end of the book.
+
+    User 1: I know, right? It''s like a puzzle that you have to solve.
+
+    User 2: Exactly!
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I have a lot of favorite books, but some of my favorites include "The Help" by Kathryn Stockett, "The Night Circus" by Erin Morgenstern, and "The Girl on the Train" by Paula Hawkins.
+
+    User 1: Oh, I''ve heard good things about all of those books! I''ve been meaning to read "The Help" for a while now.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse at a hospital.
+
+    User 1: Oh, that''s cool! I''ve always thought it would be interesting to be a nurse.
+
+    User 2: It can be really rewarding, but it can also be challenging.
+
+    User 1: I can imagine.
+
+    User 2: But it''s a good job. I love helping people.
+
+    User 1: That''s really great.
+
+    User 2: Thanks.
+
+    User 1: So, are you married or have kids?
+
+    User 2: Yes, I''m married and I have two kids.
+
+    User 1: Oh, that''s nice! How old are your kids?
+
+    User 2: They''re 5 and 7.
+
+    User 1: Oh, they''re at such a fun age.
+
+    User 2: They are!
+
+    User 1: So, what do you like to do with your family?
+
+    User 2: We like to go to the park, play games, and read books.
+
+    User 1: That sounds like fun!
+
+    User 2: It is!
+
+    User 1: Well, it was nice talking to you. I hope we can hang out sometime soon.
+
+    User 2: Me too! Let''s exchange numbers.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

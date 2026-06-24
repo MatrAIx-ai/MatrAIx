@@ -1,0 +1,106 @@
+id: 00000595
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 595
+data:
+  user 1 personas: 'I am a veteran.
+
+    I have a garden.
+
+    I grew up in kentucky.
+
+    I like to read.
+
+    My favorite book is enders game.'
+  user 2 personas: 'I work as a lifeguard at a beach.
+
+    I drive a yellow convertible in the rain.
+
+    I am a breath of fresh air.
+
+    I like spreading laughter and love everywhere i go.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. My name is [user 2''s name].
+
+    User 1: It''s nice to meet you too. What do you do for a living?
+
+    User 2: I''m a lifeguard at a beach.
+
+    User 1: That sounds like a fun job. I used to lifeguard at a pool when I was younger.
+
+    User 2: It is a lot of fun. I love being outside and swimming.
+
+    User 1: Me too. I love the water.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is Ender''s Game.
+
+    User 2: I''ve never read that book. What''s it about?
+
+    User 1: It''s about a boy named Ender who is taken from his home and trained to be a military leader.
+
+    User 2: That sounds like an interesting story. I''ll have to check it out.
+
+    User 1: You should. It''s a really good book.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go swimming, go to the beach, and play sports.
+
+    User 1: Me too! I love all of those things.
+
+    User 2: We should go swimming sometime.
+
+    User 1: I''d love that.
+
+    User 2: Great! I''ll text you my number.
+
+    User 1: Okay, perfect.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: I like to read and play video games too.
+
+    User 1: That''s awesome.
+
+    User 2: Yeah.
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read anything that I can get my hands on. I especially like science fiction and fantasy novels.
+
+    User 1: Me too! I love those genres.
+
+    User 2: They''re the best.
+
+    User 1: They sure are.
+
+    User 2: So, what are your favorite video games?
+
+    User 1: I like to play a lot of different games, but my favorites are usually RPGs and strategy games.
+
+    User 2: I like those genres too.
+
+    User 1: They''re the best.
+
+    User 2: Yeah.
+
+    User 1: So, what are you doing later today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to the beach. Do you want to come with me?
+
+    User 2: That sounds like fun. I''ll go.
+
+    User 1: Okay, great. I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00002013'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2013
+data:
+  user 1 personas: 'I m a photographer.
+
+    I love dogs.
+
+    I like to drink at bars with friends.
+
+    I have 4 dogs and i spend all my time with them.'
+  user 2 personas: 'I hope to visit quebec , canada someday.
+
+    I have two adopted kids.
+
+    I am a yoga instructor.
+
+    I love watching old movies.'
+  Best Generated Conversation: 'User 1: Hi, I''m a photographer.
+
+    User 2: Hi, I''m a yoga instructor.
+
+    User 1: That''s cool, I''ve always wanted to try yoga.
+
+    User 2: It''s a great way to relax and de-stress.
+
+    User 1: I''m sure it is. I''m always so busy taking pictures, I don''t have much time to relax.
+
+    User 2: You should make some time for yourself. It''s important to take care of your physical and mental health.
+
+    User 1: You''re right. I''ll try to find some time to go to a yoga class.
+
+    User 2: That''s great! I''m sure you''ll love it.
+
+    User 1: Thanks!
+
+    User 2: So, what kind of photography do you do?
+
+    User 1: I mostly do nature photography. I love taking pictures of animals and plants.
+
+    User 2: That sounds really cool! I love nature too.
+
+    User 1: Yeah, it''s so beautiful. I''m always amazed by the natural world.
+
+    User 2: Me too. I think it''s so important to appreciate nature and all it has to offer.
+
+    User 1: I agree. It''s something we all take for granted, but it''s really special.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are your kids like?
+
+    User 2: They''re great. They''re both really smart and funny.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, I''m lucky to have them.
+
+    User 1: I''m sure they''re lucky to have you too.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go out to dinner with my friends, watch movies, and read.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: Yeah, they''re always a good time.
+
+    User 1: So, what are you looking forward to?
+
+    User 2: I''m looking forward to visiting Quebec, Canada someday.
+
+    User 1: That sounds like a great place to visit.
+
+    User 2: Yeah, I''ve heard a lot of good things about it.
+
+    User 1: I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00003743'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3743
+persona_description: A researcher in the field of image interpretation and color analysis, particularly focused on the use of physical phenomena to derive information about the composition and structure
+  of objects and tissues from their color images. This person has expertise in cross-referencing object composition with their coloration, and has successfully applied this method to a variety of applications,
+  including skin cancer diagnosis, early diabetic retinopathy detection, FRET protein interaction studies, and cosmic hot gas X-ray spectral mapping. This interdisciplinary approach draws upon physics,
+  chemistry, applied mathematics, computer science, and visual perception, and has the potential to revolutionize non-destructive testing technologies.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: image analysis/computer vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,70 @@
+id: 00001996
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1996
+data:
+  user 1 personas: 'I love smooth jazz.
+
+    I work on wall street.
+
+    I have a poodle named nanette.
+
+    I actually like wearing suits and ties.
+
+    I live in new york city.'
+  user 2 personas: 'I love to hike.
+
+    I live in portland , maine.
+
+    I am an environmental engineer.
+
+    I live alone.
+
+    I like to take photos.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi! How are you doing?
+
+    User 1: I''m doing great! I''m from New York City, and I work on Wall Street.
+
+    User 2: Oh, that''s cool! I''m from Portland, Maine, and I''m an environmental engineer.
+
+    User 1: That''s awesome! I love the outdoors, so I''m sure you get to do some really cool things.
+
+    User 2: Yeah, I do! I love to hike, and I also like to take photos of the scenery.
+
+    User 1: That sounds like so much fun! I''ve always wanted to try hiking, but I''ve never had anyone to go with me.
+
+    User 2: Well, you''re more than welcome to join me sometime! I''m always looking for new hiking buddies.
+
+    User 1: I would love that! I''m free this weekend, if you want to go.
+
+    User 2: That sounds great! I''ll let you know what time I can get there.
+
+    User 1: Perfect! I''ll see you then.
+
+    User 2: Great!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to go hiking, like I said, and I also like to take photos. I''m also a big fan of environmentalism, so I''m always looking for ways to help the planet.
+
+    User 1: That''s awesome! I''m really glad to meet you.
+
+    User 2: Me too! I''m glad to meet you too.
+
+    User 1: So, what''s your favorite thing about Portland?
+
+    User 2: My favorite thing about Portland is probably the people. Everyone here is so friendly and welcoming.
+
+    User 1: That''s great! I''ve always heard great things about Portland.
+
+    User 2: It''s a really great city. I''m glad I moved here.
+
+    User 1: Me too! I''m sure we''re going to have a lot of fun hiking together.
+
+    User 2: I''m sure we will'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00055101'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55101
+persona_description: A Windows developer or administrator who is familiar with the use of Win32 APIs to start applications, particularly those marked with a manifest file. They are aware of the issue of
+  elevated privileges and the need to elevate applications through User Access Control (UAC) and are skilled in using ShellExecute() to launch applications. They understand the importance of the UseShellExecute
+  property in the ProcessStatInfo class and how to ensure that applications launched through ShellExecute() are elevated if necessary.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: Windows development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

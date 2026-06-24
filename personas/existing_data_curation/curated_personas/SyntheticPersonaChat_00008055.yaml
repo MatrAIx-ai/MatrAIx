@@ -1,0 +1,86 @@
+id: 00008055
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8055
+data:
+  user 1 personas: 'Everyday after work i buy my dog a dog biscuit.
+
+    I currently work at target.
+
+    I am 5 7 tall.
+
+    I live in a house in california.
+
+    I try to take a break and see a movie in theaters every other month.'
+  user 2 personas: 'I work for a large company.
+
+    I listen to rock music.
+
+    I dream of winning the lottery.
+
+    I drive a fast car.
+
+    I like to eat food.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I work for a large company.
+
+    User 1: Cool, what kind of company?
+
+    User 2: It''s a tech company.
+
+    User 1: Oh, nice. I''m a software engineer.
+
+    User 2: Oh, cool! What kind of software do you work on?
+
+    User 1: I mostly work on web applications.
+
+    User 2: Oh, nice. I''m more into mobile apps.
+
+    User 1: Oh, cool. I''ve always wanted to get into mobile apps.
+
+    User 2: It''s really fun.
+
+    User 1: Yeah, I bet.
+
+    User 2: Do you have any pets?
+
+    User 1: Yeah, I have a dog.
+
+    User 2: Oh, nice! What kind of dog?
+
+    User 1: A golden retriever.
+
+    User 2: Oh, nice! I love golden retrievers.
+
+    User 1: Yeah, they''re great dogs.
+
+    User 2: Do you take him to the park often?
+
+    User 1: Yeah, I try to take him every day.
+
+    User 2: Oh, that''s nice. I used to take my dog to the park every day, but now I don''t have time.
+
+    User 1: Yeah, I know what you mean. It''s hard to find time for everything.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to listen to music, watch movies, and play video games.
+
+    User 1: Oh, cool. I like to do those things too.
+
+    User 2: Oh, nice! What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but I mostly listen to rock music.
+
+    User 2: Oh, cool. I like rock music too.
+
+    User 1: Yeah, it''s the best.
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00001893
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1893
+data:
+  user 1 personas: 'I have blonde hair.
+
+    I am 53 years old.
+
+    I am obese.
+
+    I live in alabama.'
+  user 2 personas: 'I live in a big city.
+
+    On weekends i like to go hiking.
+
+    My major was american literature and education.
+
+    I want to teach kids in elementary school.
+
+    I just graduated college.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: Where are you from?
+
+    User 2: I''m from a big city.
+
+    User 1: Oh, cool. I''m from Alabama.
+
+    User 2: Alabama? That''s a beautiful state.
+
+    User 1: Thanks. I love it here.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go hiking.
+
+    User 2: That''s cool. I love hiking too.
+
+    User 1: Where do you like to hike?
+
+    User 2: I like to hike in the mountains.
+
+    User 1: Me too. I love the views from the top of a mountain.
+
+    User 2: Me too.
+
+    User 1: What do you do for work?
+
+    User 2: I just graduated college and I''m going to teach elementary school.
+
+    User 1: Oh, that''s awesome. What major were you in?
+
+    User 2: I majored in American literature and education.
+
+    User 1: Cool. I''m a teacher too.
+
+    User 2: Really? What grade do you teach?
+
+    User 1: I teach high school.
+
+    User 2: Oh, cool. I''ve always wanted to teach high school.
+
+    User 1: It''s a lot of fun.
+
+    User 2: I bet it is.
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

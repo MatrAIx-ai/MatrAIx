@@ -1,0 +1,84 @@
+id: 00008041
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8041
+data:
+  user 1 personas: 'My family migrated to america when i was five.
+
+    I will be graduating in september and hope to get a teaching job soon.
+
+    I am in college now and want to be a teacher.
+
+    My brother is in a metal band and travels the world.'
+  user 2 personas: 'I write short films.
+
+    I am a lesbian.
+
+    My father recently had a heart attack.
+
+    I play the guitar.
+
+    I like to go to comic con.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name]. What''s your story?
+
+    User 1: I''m from Canada, but my family migrated to America when I was five. I''m in college now and want to be a teacher. My brother is in a metal band and travels the world.
+
+    User 2: That''s cool! I''m from America, and I''m a lesbian writer who likes to go to comic con and play guitar. My dad recently had a heart attack, but he''s doing better now.
+
+    User 1: I''m sorry to hear about your dad. I''m glad he''s doing better.
+
+    User 2: Thanks.
+
+    User 1: What do you like to write about?
+
+    User 2: I write short films about social issues.
+
+    User 1: That sounds really interesting.
+
+    User 2: Thanks. I''m glad you think so.
+
+    User 1: Do you have any upcoming films?
+
+    User 2: Yes, I have a film coming out in September.
+
+    User 1: That''s great! I''ll be sure to check it out.
+
+    User 2: Thanks! I''d love to hear what you think.
+
+    User 1: I''m sure I''ll enjoy it.
+
+    User 2: Thanks.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to comic con and play guitar.
+
+    User 1: That sounds cool. I like to go to comic con too.
+
+    User 2: Me too! It''s so much fun to see all the different costumes and meet new people.
+
+    User 1: I agree. I love seeing all the amazing cosplay.
+
+    User 2: Me too! It''s always so inspiring.
+
+    User 1: So, what do you play on guitar?
+
+    User 2: I play a lot of different things, but I mostly play rock and blues.
+
+    User 1: That''s cool. I play guitar too, but I''m not very good at it.
+
+    User 2: Don''t worry, I''m not very good at it either.
+
+    User 1: Good to know.
+
+    User 2: Yeah, we can practice together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! Let''s exchange numbers'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

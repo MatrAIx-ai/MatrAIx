@@ -1,0 +1,18 @@
+id: 00002998
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2998
+persona_description: A scientist who specializes in the study of DNA repair pathways and cancer treatment, particularly PARP inhibitors. They are interested in the mechanism of action of PARP inhibitors,
+  their potential for personalized cancer medicine, and the development of resistance to these inhibitors. They are also interested in the potential of PARP inhibitors as a new standard of care for cancer
+  treatment.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: cancer research
+  general_domain_top01pct: None
+  specific_domain_top01pct: cancer treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

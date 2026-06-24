@@ -1,0 +1,84 @@
+id: '00005136'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5136
+data:
+  user 1 personas: 'My favorite flower is a rose.
+
+    I am from texas.
+
+    My mother is a retired teacher.
+
+    I love to ride horses.
+
+    I love to bake.'
+  user 2 personas: 'My mind is set on things above.
+
+    My heart hurts from a broken relationship.
+
+    I am weak and selfish , but i want to change.
+
+    I trust in god.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name].
+
+    User 2: Hi, nice to meet you! My name is [user 2 name].
+
+    User 1: It''s nice to meet you too! Where are you from?
+
+    User 2: I''m from Texas.
+
+    User 1: Oh, cool! I''m from Texas too!
+
+    User 2: Really? That''s so cool! What part of Texas are you from?
+
+    User 1: I''m from Austin.
+
+    User 2: Oh, cool! I''m from Houston.
+
+    User 1: Oh, cool! I''ve been to Houston a few times.
+
+    User 2: Yeah, it''s a pretty cool city.
+
+    User 1: Yeah, it is. So, what do you like to do for fun?
+
+    User 2: I like to read, write, and bake.
+
+    User 1: Oh, that''s cool! I like to read, ride horses, and bake too!
+
+    User 2: Oh, that''s so cool! I''ve never ridden a horse before.
+
+    User 1: Oh, you should try it! It''s really fun.
+
+    User 2: Maybe I will sometime.
+
+    User 1: So, what kind of books do you like to read?
+
+    User 2: I like to read a lot of different kinds of books, but I''m really into historical fiction and fantasy.
+
+    User 1: Oh, that''s cool! I like historical fiction too.
+
+    User 2: Yeah, it''s so interesting to learn about different times and places.
+
+    User 1: Yeah, I agree. So, what are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon and the His Dark Materials trilogy by Philip Pullman.
+
+    User 1: Oh, I''ve heard of Outlander! I''ve never read it, but I''ve heard good things about it.
+
+    User 2: Yeah, it''s really good. I love the historical setting and the characters.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m currently reading The Lord of the Rings trilogy by J. R. R. Tolkien.
+
+    User 1: Oh, that''s a classic! I''ve never read it, but I''ve heard it''s great.
+
+    User 2: Yeah, it''s really good. It''s a long book, but it''s worth it.
+
+    User 1: Maybe I''ll try reading it sometime.
+
+    User 2: I think you''d like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00002131'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2131
+data:
+  user 1 personas: 'I am in high school.
+
+    I sleep a lot.
+
+    I cs and ds.
+
+    I love sweets.
+
+    I love bruno mars.'
+  user 2 personas: 'I cannot choose between lollipops and rainbows.
+
+    I would love to be a professional eater and not get fat.
+
+    I hate cleaning up after my husband and children.
+
+    To free my mind from feeling depressed i look up at the stars at night.
+
+    I believe in aliens.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name), I''m in high school and I love Bruno Mars.
+
+    User 2: Hi (name), I''m (name), I love lollipops and rainbows.
+
+    User 1: Me too! I love eating lollipops and playing with rainbows.
+
+    User 2: I wish I could be a professional eater and not get fat.
+
+    User 1: That would be awesome! I would love to be able to eat all the food I want without gaining weight.
+
+    User 2: Me too! I hate cleaning up after my husband and kids.
+
+    User 1: I can imagine! That must be a lot of work.
+
+    User 2: It is! But I love them so it''s worth it.
+
+    User 1: I''m glad to hear that.
+
+    User 2: To free my mind from feeling depressed I look up at the stars at night.
+
+    User 1: That''s a great way to relax! I love stargazing too.
+
+    User 2: I believe in aliens!
+
+    User 1: Me too! I think it''s so cool that there could be other life out there in the universe.
+
+    User 2: I know right! It''s so exciting to think about.
+
+    User 1: Yeah, it is.
+
+    User 2: Well, it was nice chatting with you (name).
+
+    User 1: You too (name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

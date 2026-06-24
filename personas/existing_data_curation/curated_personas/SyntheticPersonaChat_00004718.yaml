@@ -1,0 +1,82 @@
+id: 00004718
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4718
+data:
+  user 1 personas: 'I love to work in my garden.
+
+    I am an older guy.
+
+    I like to create art.
+
+    I love to eat sushi and pizza.
+
+    My favorite band is ween.'
+  user 2 personas: 'I have a 3 year old.
+
+    My father is a preacher.
+
+    I am a 1st grade teacher.
+
+    My favorite color is purple.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1 name).
+
+    User 2: Hi, I''m (user 2 name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to teach, read, and play with my daughter.
+
+    User 1: That''s great! I like to garden, create art, and eat sushi and pizza.
+
+    User 2: That''s awesome! I love sushi and pizza too!
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is Ween.
+
+    User 1: I''ve never heard of them. What kind of music do they play?
+
+    User 2: They play a lot of different kinds of music, but they''re mostly known for their alternative rock and experimental rock.
+
+    User 1: That sounds interesting. I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: What do you like to do with your daughter?
+
+    User 2: I like to take her to the park, play games with her, and read to her.
+
+    User 1: That sounds like a lot of fun. I love spending time with my kids too.
+
+    User 2: Me too! They''re my best friends.
+
+    User 1: What''s your favorite thing about being a teacher?
+
+    User 2: I love seeing my students learn and grow. It''s so rewarding to be a part of their journey.
+
+    User 1: I can imagine. That must be a great feeling.
+
+    User 2: It is! I love being a teacher.
+
+    User 1: So, what do you do for fun when you''re not working?
+
+    User 2: I like to go out with my friends, watch movies, and read.
+
+    User 1: That sounds like a lot of fun. I love going out with my friends too.
+
+    User 2: Me too! It''s always nice to relax and have some fun.
+
+    User 1: I agree! It''s important to have a good work-life balance.
+
+    User 2: Definitely! I try to make sure I have time for both.
+
+    User 1: That''s a good idea. I''m glad you''re able to find a good balance.
+
+    User 2: Me too! It''s important to be happy and healthy.
+
+    User 1: I agree! I''m glad you''re doing well.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

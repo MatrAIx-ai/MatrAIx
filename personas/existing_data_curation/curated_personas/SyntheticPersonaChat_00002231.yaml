@@ -1,0 +1,54 @@
+id: '00002231'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2231
+data:
+  user 1 personas: 'I have my own salon.
+
+    I live on a boat.
+
+    My hair is colored purple.
+
+    I got married last year.
+
+    I am a hair stylist.'
+  user 2 personas: 'I am buying a house.
+
+    I paddle board on my days off.
+
+    I am single.
+
+    I play the piano.'
+  Best Generated Conversation: 'User 1: I live on a boat!
+
+    User 2: That''s so cool! I''ve always wanted to live on a boat.
+
+    User 1: It''s great! I love the freedom of being able to go anywhere I want, whenever I want.
+
+    User 2: I can imagine. It must be really nice to wake up in a different place every day.
+
+    User 1: It is! And it''s so much more affordable than living in a house.
+
+    User 2: That''s definitely a plus. I''m not sure I could give up my piano, though.
+
+    User 1: You could always bring it with you! I know a few people who live on boats and have pianos.
+
+    User 2: That''s true. I might have to look into that.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to paddle board, play the piano, and go hiking.
+
+    User 1: That sounds like a lot of fun. I''ve never tried paddle boarding, but I''ve always wanted to.
+
+    User 2: It''s really easy to learn! And it''s a lot of fun. You can go on calm waters or in the ocean.
+
+    User 1: That sounds great! I''ll have to give it a try.
+
+    User 2: You should! And if you ever want to go paddle boarding together, let me know.
+
+    User 1: I will! Thanks for the offer.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

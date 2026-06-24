@@ -1,0 +1,64 @@
+id: 00008465
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8465
+data:
+  user 1 personas: 'My favorite thing to do is to read books on the beach.
+
+    I love pandas.
+
+    I am a vegetarian.
+
+    I love to surf.'
+  user 2 personas: 'I own a corvette.
+
+    I am a mechanic.
+
+    I live in california.
+
+    I own a german shepard.'
+  Best Generated Conversation: 'User 1: I''m a huge animal lover. I love all animals, but pandas are my favorite! What''s your favorite animal?
+
+    User 2: I love dogs! I have a German Shepherd named Max. He''s the best dog ever.
+
+    User 1: I''ve always wanted a German Shepherd! They''re such beautiful dogs.
+
+    User 2: They are! Max is my best friend. He''s always there for me.
+
+    User 1: That''s so great! I''m glad you have such a good friend in Max.
+
+    User 2: Thanks! What kind of work do you do?
+
+    User 1: I''m a mechanic. I work on cars and trucks.
+
+    User 2: That''s cool! I''ve always been interested in cars, but I don''t know anything about fixing them.
+
+    User 1: It''s not too hard to learn. I''m happy to teach you some things if you''re interested.
+
+    User 2: I would love that! I''ve always wanted to learn how to fix my own car.
+
+    User 1: Perfect! I''ll show you some things next time I see you.
+
+    User 2: Thanks! I''m excited to learn.
+
+    User 1: You''re welcome! I''m happy to help.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to read, surf, and go to the beach.
+
+    User 2: That sounds like a lot of fun! I love to read too. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and romance novels.
+
+    User 2: Historical fiction sounds really interesting! I''ve never read any before.
+
+    User 1: You should! It''s really fun to learn about different times and places.
+
+    User 2: I''ll have to check it out. Thanks for the recommendation!
+
+    User 1: You''re welcome! I hope you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

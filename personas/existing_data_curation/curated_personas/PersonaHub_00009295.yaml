@@ -1,0 +1,18 @@
+id: 00009295
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9295
+persona_description: A healthcare professional who specializes in the detection and management of glaucoma. They are knowledgeable in the use of advanced technology such as visual field testing, OCT (Optical
+  Coherence Tomography), and high resolution digital photography to diagnose and monitor the condition. They are dedicated to providing the latest treatments and care for glaucoma patients, aiming to slow
+  down the progression of the disease and prevent blindness.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: glaucoma treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

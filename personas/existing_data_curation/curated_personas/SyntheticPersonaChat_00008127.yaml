@@ -1,0 +1,72 @@
+id: 00008127
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8127
+data:
+  user 1 personas: 'When i was a child i was kidnapped by my uncle.
+
+    I love to clean my house.
+
+    I enjoy reading.
+
+    I am afraid to leave the house.
+
+    I live with my sisters and they provide me with all my needs.'
+  user 2 personas: 'I believe that i can achieve anything.
+
+    I love to gossip.
+
+    I have never kissed a woman.
+
+    I watch jimmy fallon s show every night.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, gossip, and watch Jimmy Fallon''s show every night.
+
+    User 1: That''s cool. I like to clean my house, read, and I''m afraid to leave the house.
+
+    User 2: Why are you afraid to leave the house?
+
+    User 1: I was kidnapped by my uncle when I was a child.
+
+    User 2: Oh, that''s terrible. I''m so sorry.
+
+    User 1: Thanks. It''s okay, I''m just glad I''m safe now.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that''s cool. I''m a student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying to be a teacher.
+
+    User 2: Oh, that''s great!
+
+    User 1: Thanks.
+
+    User 2: Do you have any siblings?
+
+    User 1: Yes, I have two sisters.
+
+    User 2: Are you close to them?
+
+    User 1: Yes, I''m very close to them.
+
+    User 2: That''s good.
+
+    User 1: Yeah, I''m lucky to have them.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

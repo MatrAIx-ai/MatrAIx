@@ -1,0 +1,66 @@
+id: '00005006'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5006
+data:
+  user 1 personas: 'I have trouble losing weight.
+
+    I am a very short woman.
+
+    I am near sighted and wear contact lenses.
+
+    I love animals.
+
+    I do not cook and usually eat out.'
+  user 2 personas: 'I do not get along with my family.
+
+    Regular life disappoints me.
+
+    I wish that i could be an animal.
+
+    I enjoy classical music.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy classical music and I wish that I could be an animal.
+
+    User 1: That''s interesting! I love classical music too. What kind of music do you like?
+
+    User 2: I love all kinds of classical music, but I''m especially fond of Beethoven.
+
+    User 1: Beethoven is great! I love his symphonies.
+
+    User 2: Me too! I also love his piano concertos.
+
+    User 1: I''m not as familiar with his piano concertos, but I''ll have to check them out.
+
+    User 2: You definitely should! They''re beautiful.
+
+    User 1: What kind of animal would you like to be?
+
+    User 2: I would love to be a cat. They seem to have so much fun.
+
+    User 1: Cats are great! I have a cat named Mittens.
+
+    User 2: I love cats! They''re so cute and cuddly.
+
+    User 1: Mittens is pretty cute. He''s a big tuxedo cat.
+
+    User 2: I love tuxedo cats! They''re so stylish.
+
+    User 1: I''m glad you like him. He''s a good cat.
+
+    User 2: I''m sure he is. Cats are the best pets.
+
+    User 1: I agree! They''re so cuddly and loving.
+
+    User 2: I wish I had a cat.
+
+    User 1: You should get one! They''re great pets.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

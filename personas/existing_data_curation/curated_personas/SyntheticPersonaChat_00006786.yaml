@@ -1,0 +1,72 @@
+id: 00006786
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6786
+data:
+  user 1 personas: 'I like to invest in the stock market.
+
+    I have 3 brothers.
+
+    I love soccer.
+
+    I work for nike as an accountant.'
+  user 2 personas: 'I just finished training as a security guard.
+
+    I have two dogs.
+
+    I work nights now and like my job.
+
+    I am a 30 year old male.
+
+    I recently broke up with my girlfriend.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: Good, thank you for asking! How about yourself?
+
+    User 1: I''m doing well, thank you! I just got back from a soccer game.
+
+    User 2: Oh, that sounds fun! I used to play soccer when I was younger.
+
+    User 1: Really? What position did you play?
+
+    User 2: I was a goalie.
+
+    User 1: Oh, that''s cool! I was a striker.
+
+    User 2: I''ve always been a bit of a loner, but I''m trying to be more outgoing.
+
+    User 1: That''s good! I''m glad to hear that. I''m an introvert, but I''m also pretty outgoing.
+
+    User 2: It''s good to be both!
+
+    User 1: I agree! So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my dogs.
+
+    User 1: Oh, that sounds fun! I like to read, play soccer, and spend time with my family.
+
+    User 2: I recently broke up with my girlfriend, so I''ve been spending a lot of time with my dogs.
+
+    User 1: I''m sorry to hear that. I''m sure you''ll find someone new soon.
+
+    User 2: Thank you! I hope so.
+
+    User 1: So, what do you do for work?
+
+    User 2: I just finished training as a security guard.
+
+    User 1: Oh, that sounds interesting! What do you like about it?
+
+    User 2: I like the challenge of it. It''s also a good way to meet new people.
+
+    User 1: I can imagine! So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just going to take it one day at a time.
+
+    User 1: That''s a good plan. I''m sure you''ll do great things.
+
+    User 2: Thank you! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

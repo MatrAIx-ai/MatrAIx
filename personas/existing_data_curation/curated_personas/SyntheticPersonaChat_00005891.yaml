@@ -1,0 +1,68 @@
+id: 00005891
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5891
+data:
+  user 1 personas: 'Magic mike is my favorite movie.
+
+    I enjoy my job , as a teacher.
+
+    I enjoy video games.
+
+    I enjoy singing.
+
+    I live in a big city.'
+  user 2 personas: 'I love my impala.
+
+    I enjoy fishing.
+
+    I like classic radio programs.
+
+    Summer is my favorite season.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to fish, I have a 1960 impala that I love, and I like to listen to classic radio programs.
+
+    User 1: Cool, I like Magic Mike, I''m a teacher, I enjoy video games, and I like to sing.
+
+    User 2: Nice, I''ve heard good things about Magic Mike, I''ve never been fishing but I''ve always wanted to, and I love the summer.
+
+    User 1: Fishing is really fun, and the summer is my favorite season too. What''s your favorite song?
+
+    User 2: My favorite song is "Summer of ''69" by Bryan Adams.
+
+    User 1: That''s a great song! My favorite song is "Shallow" by Lady Gaga and Bradley Cooper.
+
+    User 2: That''s a good song too! I also like "I Will Survive" by Gloria Gaynor.
+
+    User 1: That''s a classic! I love that song.
+
+    User 2: Me too! It''s so uplifting.
+
+    User 1: What do you like to do in the summer?
+
+    User 2: I like to go fishing, go to the beach, and go camping.
+
+    User 1: Those sound like fun things to do. I like to go to the movies, go to the park, and go to the zoo in the summer.
+
+    User 2: Those sound like fun things to do too.
+
+    User 1: I''m glad we have some things in common.
+
+    User 2: Me too!
+
+    User 1: Maybe we can hang out sometime and go fishing together.
+
+    User 2: That would be fun! I''ll bring my impala.
+
+    User 1: Great! I''ll bring my fishing gear.
+
+    User 2: Awesome! We''re going to have a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,63 @@
+id: '00007600'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7600
+data:
+  user 1 personas: 'I have been in a relationship for 2 years.
+
+    My dad is a dentist and my mom is a teacher.
+
+    I work at a daycare.
+
+    I am a college student.
+
+    My major is in business administration.'
+  user 2 personas: 'My favorite color is red.
+
+    I like to water ski.
+
+    My dad was a cop.
+
+    I spend my free time volunteering at nursing homes.
+
+    I am tall.'
+  Best Generated Conversation: 'User 1: Hi! I''m a college student majoring in business administration. I''ve been in a relationship for two years and my dad is a dentist and mom is a teacher. I work at
+    a daycare.
+
+    User 2: Hi! My dad was a cop and my favorite color is red. I like to water ski and volunteer at nursing homes in my free time. I''m tall.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be tall but I''m only 5''5".
+
+    User 2: It''s not always fun being tall. I have to be careful not to bump my head on things.
+
+    User 1: Yeah, I can imagine that being a problem.
+
+    User 2: So, what''s your favorite thing about your job?
+
+    User 1: I love working with kids. They''re so funny and energetic.
+
+    User 2: I bet they are! I don''t have any kids of my own, but I love babysitting.
+
+    User 1: I don''t have any either, but I''m thinking about having some in the future.
+
+    User 2: That''s great! I''m sure you''ll be a great parent.
+
+    User 1: Thanks!
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go out with my friends or stay in and watch a movie.
+
+    User 2: That sounds like a good plan. I''m going to go water skiing with my friends.
+
+    User 1: That sounds like fun! I''ve never tried water skiing before.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

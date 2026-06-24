@@ -1,0 +1,50 @@
+id: '00006071'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6071
+data:
+  user 1 personas: 'I moved to america when i was 14.
+
+    My parents don t really speak english , but i speak italian and english.
+
+    I like to cook.
+
+    I got married when i was young.'
+  user 2 personas: 'My parents both are school teachers.
+
+    I want to own a house on a beach.
+
+    The only music i listen to is pop , because it makes me feel happy.
+
+    Watching nascar races is a great way to spend a sunday for me.
+
+    I love eating at mcdonalds.'
+  Best Generated Conversation: 'User 1: Hi, my name is Maria. I''m Italian but I moved to America when I was 14.
+
+    User 2: Hi, I''m John. I''m from California. My parents are both school teachers.
+
+    User 1: Oh, that''s cool. I like school teachers. My parents don''t really speak English, so I had to learn it on my own.
+
+    User 2: That''s impressive! I can only speak English and Spanish.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch NASCAR races, listen to pop music, and eat at McDonald''s.
+
+    User 1: Oh, I''ve never been to a NASCAR race. I like to cook, and I love to go to the beach.
+
+    User 2: That''s cool. I''ve never been to the beach. I''ve always wanted to go to Italy.
+
+    User 1: You should! It''s beautiful. And the food is amazing.
+
+    User 2: I''ll have to go sometime.
+
+    User 1: You should!
+
+    User 2: Thanks for the conversation, Maria. It was nice to meet you.
+
+    User 1: You too, John. Have a nice day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

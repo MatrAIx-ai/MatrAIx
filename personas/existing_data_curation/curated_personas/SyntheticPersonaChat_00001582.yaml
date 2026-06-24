@@ -1,0 +1,58 @@
+id: 00001582
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1582
+data:
+  user 1 personas: 'I enjoy ice cream.
+
+    I am 50 years old.
+
+    My husband just decided to leave me.
+
+    We have 4 children and 2 dogs.'
+  user 2 personas: 'I am a professional basketball player.
+
+    I went to college in maryland.
+
+    I live in huge mansion.
+
+    I play for the washington wizards.'
+  Best Generated Conversation: 'User 1: My husband just decided to leave me.
+
+    User 2: I''m sorry to hear that.
+
+    User 1: Thanks. I''m not sure what I''m going to do.
+
+    User 2: You could always move to Washington, DC. I have a huge mansion there.
+
+    User 1: That''s very kind of you, but I don''t think I''m ready to move.
+
+    User 2: I understand. I just wanted to offer.
+
+    User 1: Thanks. I appreciate it.
+
+    User 2: No problem.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I play basketball. I''m a professional basketball player.
+
+    User 1: That''s amazing! I love basketball.
+
+    User 2: Thanks. I''m pretty good at it.
+
+    User 1: I bet. I''m not very good at it. I''m more of a spectator.
+
+    User 2: That''s okay. I''m sure you''re good at something else.
+
+    User 1: I hope so.
+
+    User 2: I''m sure you are.
+
+    User 1: Thanks.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

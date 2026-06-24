@@ -1,0 +1,76 @@
+id: '00006154'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6154
+data:
+  user 1 personas: 'My husband will retire next year.
+
+    I like to take walks.
+
+    We plan to travel after he retires.
+
+    I am a retired school teacher.'
+  user 2 personas: 'My children are a disappointment.
+
+    My favorite dessert is cheesecake.
+
+    I have more money than i know what to do with.
+
+    I married miss usa.
+
+    I am bored of my maids.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: I''m [user 2''s name]. It''s nice to meet you!
+
+    User 1: You too! What do you do for a living?
+
+    User 2: I''m a retired school teacher.
+
+    User 1: Oh, that''s interesting! I''m a retired school teacher too.
+
+    User 2: No way! That''s so cool!
+
+    User 1: It is! What was your favorite subject to teach?
+
+    User 2: I loved teaching math.
+
+    User 1: Me too! I loved teaching science.
+
+    User 2: What are you doing now that you''re retired?
+
+    User 1: I like to take walks and travel.
+
+    User 2: That sounds like fun! I like to travel too.
+
+    User 1: Where have you traveled to?
+
+    User 2: I''ve been all over the world! I''ve been to Europe, Asia, Africa, and North America.
+
+    User 1: Wow, that''s amazing! I''ve only been to a few countries in Europe.
+
+    User 2: You should definitely travel more! It''s so much fun to see different cultures and meet new people.
+
+    User 1: I agree! I''ve always wanted to go to Russia.
+
+    User 2: Russia is beautiful! I would love to go back someday.
+
+    User 1: What''s your favorite thing about Russia?
+
+    User 2: I love the food! Russian food is so delicious.
+
+    User 1: I''ve heard that! What''s your favorite Russian food?
+
+    User 2: I love borscht, pelmeni, and syrniki.
+
+    User 1: Those all sound delicious! I''ll definitely have to try them when I visit Russia.
+
+    User 2: You won''t be disappointed!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

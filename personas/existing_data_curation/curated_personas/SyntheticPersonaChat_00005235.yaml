@@ -1,0 +1,58 @@
+id: '00005235'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5235
+data:
+  user 1 personas: 'I am good at throwing parties.
+
+    I want to live at the beach.
+
+    I love honey.
+
+    My favorite animal is a monkey.'
+  user 2 personas: 'I do not trust anyone.
+
+    I like the library.
+
+    I want to be alone sometimes.
+
+    I feel competitive against other women.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name]. What''s your name?
+
+    User 2: I''m [user 2 name].
+
+    User 1: Nice to meet you! What are you interested in?
+
+    User 2: I like to read and go to the library.
+
+    User 1: That''s cool! I love to read too. What are your favorite books?
+
+    User 2: I like to read a lot of different things, but I really like mystery and suspense novels.
+
+    User 1: Me too! I love a good mystery. What are some of your favorite mystery novels?
+
+    User 2: I like the Sherlock Holmes books by Arthur Conan Doyle. I also like the Poirot books by Agatha Christie.
+
+    User 1: Those are both great series! I''ve read a few of them myself.
+
+    User 2: I''ve also been reading a lot of books about true crime lately.
+
+    User 1: Oh, I love true crime! I''ve been watching a lot of documentaries about it lately.
+
+    User 2: I know, right? It''s so interesting!
+
+    User 1: I know! I just can''t get enough of it.
+
+    User 2: Me neither!
+
+    User 1: Well, it was nice talking to you. Maybe we can read some books together sometime.
+
+    User 2: That would be fun! I''d love to read some books with you.
+
+    User 1: Great! We can exchange contact information and set something up.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

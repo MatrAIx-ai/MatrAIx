@@ -1,0 +1,19 @@
+id: '00001004'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1004
+persona_description: A scientist or engineer who is interested in the development and application of rechargeable batteries, particularly lithium-ion batteries. This individual may have a background in
+  chemistry, materials science, or electrical engineering and is interested in the chemical reactions involved in rechargeable battery technology and the design and manufacturing of rechargeable battery
+  systems. This persona is likely to be knowledgeable about the chemistry of lithium, cobalt, and other materials used in rechargeable batteries, as well as the design and manufacturing processes for these
+  batteries. This individual may also be interested in the environmental impact of rechargeable batteries and the potential for renewable energy sources to replace traditional battery technologies.
+expertise:
+  general_domain_top1pct: Materials Science
+  specific_domain_top1pct: Battery Technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

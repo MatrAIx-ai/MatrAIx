@@ -1,0 +1,18 @@
+id: 00009228
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9228
+persona_description: A patient who is seeking medical advice for a condition related to the urinary tract, specifically a urethral stricture. They are likely to be a middle-aged male with a history of accidents
+  or medical procedures that may have led to the development of the condition. They may have experienced symptoms such as difficulty urinating, pain during urination, or a complete inability to urinate.
+  They are seeking information on the diagnosis, treatment, and potential complications associated with urethral stricture.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: urology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

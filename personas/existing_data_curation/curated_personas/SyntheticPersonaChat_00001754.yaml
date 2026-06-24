@@ -1,0 +1,64 @@
+id: '00001754'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1754
+data:
+  user 1 personas: 'My mom is a nurse.
+
+    I don t drive.
+
+    I work at a bookstore.
+
+    I never knew my dad.'
+  user 2 personas: 'I have two children.
+
+    I am thirty years old.
+
+    I am currently a stay at home mom while my husband is the sole provider.
+
+    I love to take my children on nature walks.
+
+    We have two pets as well.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for fun?
+
+    User 2: I love taking my kids on nature walks. We have two pets as well, a dog and a cat, and we love to go on hikes with them.
+
+    User 1: That sounds like a lot of fun! I love animals. I have a dog too. His name is Buddy.
+
+    User 2: Oh, that''s a cute name! I love dogs. They''re such loyal creatures.
+
+    User 1: They are. I''m so glad I have Buddy. He''s always there for me.
+
+    User 2: That''s great. I''m glad you have a good friend like that.
+
+    User 1: Yeah, he''s the best.
+
+    User 2: So, what kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I mostly like to read historical fiction.
+
+    User 2: Oh, that''s cool. I like to read a lot of different genres too. I''m currently reading a book about gardening.
+
+    User 1: That sounds interesting. I love gardening too. I have a little garden in my backyard.
+
+    User 2: That''s so cool! I wish I had a garden.
+
+    User 1: You should try it! It''s really fun and rewarding.
+
+    User 2: I might just do that.
+
+    User 1: I''m glad I could talk to you. You seem like a really nice person.
+
+    User 2: Thank you, you seem nice too.
+
+    User 1: Maybe we could get together and go for a walk sometime.
+
+    User 2: That would be fun! I''m free next weekend.
+
+    User 1: Okay, I''ll let you know.
+
+    User 2: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

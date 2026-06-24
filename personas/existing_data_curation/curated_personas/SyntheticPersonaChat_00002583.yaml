@@ -1,0 +1,92 @@
+id: 00002583
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2583
+data:
+  user 1 personas: 'I love to bake cakes.
+
+    I have a twin brother.
+
+    I m really short.
+
+    My favorite book is david copperfield.'
+  user 2 personas: 'My name is gerald.
+
+    I like basketball.
+
+    I work at mcdonalds.
+
+    My favorite color is green.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I like to play basketball, watch basketball, and listen to music.
+
+    User 1: That''s cool. I like to bake cakes, read books, and watch movies.
+
+    User 2: I love to bake cakes! What''s your favorite kind of cake to make?
+
+    User 1: I like to make chocolate cake, but I also like to make banana bread and cheesecake.
+
+    User 2: I love chocolate cake too! I also like to make carrot cake.
+
+    User 1: Carrot cake is really good. I''ve never made it before, but I''ve always wanted to try.
+
+    User 2: You should! It''s really easy to make.
+
+    User 1: Maybe I will next time I''m in the mood to bake.
+
+    User 2: Good! You won''t regret it.
+
+    User 1: I''m sure I won''t.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is David Copperfield. It''s a really good story about a young boy who grows up in poverty and overcomes many obstacles to achieve his dreams.
+
+    User 2: I''ve never read that book before, but it sounds like it''s really good.
+
+    User 1: It is! I highly recommend it.
+
+    User 2: I''ll have to check it out.
+
+    User 1: You won''t regret it.
+
+    User 2: I''m sure I won''t.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work at McDonald''s.
+
+    User 1: Oh, cool. What do you like about working there?
+
+    User 2: I like the people I work with, and I like the work itself. It''s a lot of fun.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are you doing later today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to bake a cake.
+
+    User 2: Oh, that sounds fun! What kind of cake are you making?
+
+    User 1: I''m not sure yet. I''m thinking about making a chocolate cake.
+
+    User 2: That sounds good. I love chocolate cake.
+
+    User 1: Me too.
+
+    User 2: Well, I should probably go. It was nice talking to you.
+
+    User 1: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

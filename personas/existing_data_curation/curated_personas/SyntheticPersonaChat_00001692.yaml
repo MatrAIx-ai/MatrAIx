@@ -1,0 +1,74 @@
+id: 00001692
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1692
+data:
+  user 1 personas: 'I love the forest.
+
+    I have a shopping addiction.
+
+    I don t like being asked a lot of questions.
+
+    I don t like when people get too close to me.
+
+    I think about food a lot.'
+  user 2 personas: 'I also love orange juice.
+
+    I love ham and cheese sandwiches.
+
+    I like to watch tv.
+
+    My name is arnold.
+
+    I am 10 years old.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and eat ham and cheese sandwiches.
+
+    User 1: I like to watch TV too. What''s your favorite show?
+
+    User 2: I like watching cartoons, like The Simpsons and Rick and Morty.
+
+    User 1: I love The Simpsons! I''ve been watching it since I was a kid.
+
+    User 2: Me too! It''s so funny.
+
+    User 1: What do you like to play on your video games?
+
+    User 2: I like to play Minecraft, Mario Kart, and Call of Duty.
+
+    User 1: I''ve never played Minecraft, but I''ve heard good things about it.
+
+    User 2: It''s a lot of fun. You can build whatever you want.
+
+    User 1: That sounds cool. I might have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you like to do in the forest?
+
+    User 2: I like to go for walks, look for animals, and play hide-and-seek.
+
+    User 1: That sounds like fun. I love going for walks in the forest. I love the fresh air and the peace and quiet.
+
+    User 2: Me too! I love the way the trees make the air smell.
+
+    User 1: I also love the sound of the birds singing.
+
+    User 2: Me too! It''s so peaceful.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! It''s nice to meet someone who likes the same things I do.
+
+    User 1: It is. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

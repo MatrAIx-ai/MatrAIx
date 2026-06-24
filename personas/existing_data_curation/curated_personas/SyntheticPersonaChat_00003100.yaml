@@ -1,0 +1,78 @@
+id: '00003100'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3100
+data:
+  user 1 personas: 'I just started college.
+
+    I have 3 science classes.
+
+    I am living at home but hope to live in the dorms next year.
+
+    I commute by bus.'
+  user 2 personas: 'I have a doberman.
+
+    My favorite food is pizza.
+
+    I am a man.
+
+    I work on trucks.
+
+    I am twenty five years old.'
+  Best Generated Conversation: 'User 1: Hello! I''m new to this school.
+
+    User 2: Hi! Welcome! What''s your name?
+
+    User 1: My name is (user 1''s name).
+
+    User 2: Nice to meet you, (user 1''s name). What are you studying?
+
+    User 1: I''m studying biology, chemistry, and physics.
+
+    User 2: Wow, that''s a lot of science! Do you like it?
+
+    User 1: Yeah, I like it a lot. I''m really interested in learning about the world around us.
+
+    User 2: Me too! I''m not very good at science, but I find it really interesting.
+
+    User 1: Well, you''re doing a great job so far! I''m sure you''ll be just fine.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to hang out with my friends, play video games, and watch TV.
+
+    User 1: Me too! I love playing video games. What kind of games do you like to play?
+
+    User 2: I like to play all sorts of games, but I''m really into RPGs right now.
+
+    User 1: Me too! I love RPGs. What''s your favorite RPG?
+
+    User 2: My favorite RPG is probably The Witcher 3. It''s such a great game.
+
+    User 1: I''ve heard good things about that game. I''ll have to check it out.
+
+    User 2: You should! It''s really fun.
+
+    User 1: So, what are you doing after school today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That sounds like fun! What do you want to do?
+
+    User 1: We could go to the movies or something.
+
+    User 2: That sounds like a plan. What movie do you want to see?
+
+    User 1: I don''t know. What do you want to see?
+
+    User 2: I''m not sure either. We could look at the listings and see what looks good.
+
+    User 1: Okay. We can do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00003055'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3055
+data:
+  user 1 personas: 'I enjoy playing tennis.
+
+    I love animals.
+
+    I am an aspiring singer.
+
+    My father worked for ge.'
+  user 2 personas: 'My father died when i was 2.
+
+    I have blue eyes.
+
+    I love fishing.
+
+    My favorite season is spring.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I love to fish, sing, and play tennis.
+
+    User 1: That''s great! I love to sing and play tennis too.
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, I''m not very good at it, but I enjoy it.
+
+    User 2: Me too. I''m not very good at it either, but it''s still fun.
+
+    User 1: What''s your favorite kind of music to sing?
+
+    User 2: I love to sing country music.
+
+    User 1: Me too! I love that old-school country music.
+
+    User 2: Me too! I love the sound of fiddles and steel guitars.
+
+    User 1: Yeah, me too. They''re so beautiful.
+
+    User 2: What''s your favorite season?
+
+    User 1: I love spring. The weather is so nice and the flowers are blooming.
+
+    User 2: Me too! I love the smell of the fresh air.
+
+    User 1: Yeah, it''s so refreshing.
+
+    User 2: What''s your favorite kind of animal?
+
+    User 1: I love dogs. They''re so loyal and loving.
+
+    User 2: Me too! I have a dog named Buddy. He''s the best dog ever.
+
+    User 1: I''m sure he is! Dogs are the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

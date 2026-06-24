@@ -1,0 +1,70 @@
+id: 00008560
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8560
+data:
+  user 1 personas: 'I also give blood monthly in honor of my sister who died.
+
+    I like jogging in my spare time.
+
+    I am hoping to move to australia soon to marry my boyfriend.
+
+    I am a waitress at a popular houston club.'
+  user 2 personas: 'I am a scientist.
+
+    I am an amateur chef who cooks 5 different cuisines.
+
+    I live alone.
+
+    I like to play video games.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hello! I''m [user 2''s name].
+
+    User 1: I''m from Houston, Texas. Where are you from?
+
+    User 2: I''m from Melbourne, Australia.
+
+    User 1: Oh, wow! I''m hoping to move to Australia soon.
+
+    User 2: That''s great! What do you like about Australia?
+
+    User 1: I love the beaches, the food, and the people.
+
+    User 2: The beaches are amazing, and the food is delicious!
+
+    User 1: I''m also a big fan of Australian science.
+
+    User 2: Oh, that''s great! I''m a scientist myself.
+
+    User 1: Really? What kind of science do you do?
+
+    User 2: I''m a biomedical scientist.
+
+    User 1: That''s so cool! What kind of research do you do?
+
+    User 2: I''m currently working on a project to develop new cancer treatments.
+
+    User 1: That''s amazing! I wish you all the best with that.
+
+    User 2: Thank you!
+
+    User 1: What do you do for fun besides science?
+
+    User 2: I love to cook, play video games, and go jogging.
+
+    User 1: Those are all great hobbies! I love to cook too.
+
+    User 2: I''m actually an amateur chef. I can cook five different cuisines.
+
+    User 1: Wow, that''s impressive! I can barely cook two.
+
+    User 2: It''s just a hobby for me. I love trying new recipes and experimenting in the kitchen.
+
+    User 1: That''s cool. I''m sure you''re a great chef.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

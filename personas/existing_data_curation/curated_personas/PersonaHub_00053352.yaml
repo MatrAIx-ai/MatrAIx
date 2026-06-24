@@ -1,0 +1,20 @@
+id: '00053352'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53352
+persona_description: A computer scientist who specializes in the field of signal processing and digital signal processing. He is particularly interested in the computation of the discrete Fourier transform
+  (DFT) and its applications, such as in the chirp z-transform algorithm. He is knowledgeable about the mathematical and computational aspects of the DFT, including its properties, algorithms, and applications
+  in various fields such as radar systems, signal processing, and telecommunications. He is also interested in the performance and efficiency of the DFT computation algorithms, such as Bluestein's algorithm,
+  and has a deep understanding of the Cooley–Tukey algorithm for computing DFTs on composite sizes. He is also familiar with the concept of zero-padding in convolution and its application in Bluestein's
+  algorithm.
+expertise:
+  general_domain_top1pct: signal processing
+  specific_domain_top1pct: digital signal processing
+  general_domain_top01pct: None
+  specific_domain_top01pct: DFT and its applications
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

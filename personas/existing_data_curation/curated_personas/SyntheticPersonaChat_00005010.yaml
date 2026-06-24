@@ -1,0 +1,58 @@
+id: '00005010'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5010
+data:
+  user 1 personas: 'I just graduated high school.
+
+    I love tacos but hate spaghetti.
+
+    I m headed to university of michigan in the fall.
+
+    My favorite season is summer.'
+  user 2 personas: 'I don t believe in love.
+
+    I shop online , too much.
+
+    I live alone.
+
+    I write children s books.
+
+    I like to drink.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for fun?
+
+    User 2: I like to write children''s books.
+
+    User 1: That''s cool! I love to read.
+
+    User 2: Do you have a favorite book?
+
+    User 1: I have a lot of favorite books, but I think my favorite is The Little Prince.
+
+    User 2: I love that book! It''s so beautiful.
+
+    User 1: Me too! It''s one of those books that you can read over and over again and always find something new in it.
+
+    User 2: That''s what I love about it too. It''s so simple, but it''s also so profound.
+
+    User 1: I agree. It''s a book that I think everyone should read at least once in their life.
+
+    User 2: I definitely agree. What other books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially interested in science fiction and fantasy.
+
+    User 2: Me too! I love the escape that I can get from reading those kinds of books.
+
+    User 1: Me too! They''re a great way to forget about all the stress of everyday life.
+
+    User 2: I agree. I''m always glad when I find a good book to read.
+
+    User 1: Me too. It''s one of my favorite things to do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

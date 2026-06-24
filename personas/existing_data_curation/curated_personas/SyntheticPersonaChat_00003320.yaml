@@ -1,0 +1,64 @@
+id: '00003320'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3320
+data:
+  user 1 personas: 'I am afraid of the dark.
+
+    I design video games for a living.
+
+    I hate broccoli.
+
+    My mom is my best friend.'
+  user 2 personas: 'I love to run.
+
+    My favorite past time is cooking.
+
+    I ca sim very fast.
+
+    I love to sing.
+
+    I have a lot of trophies from my childhood.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a chef.
+
+    User 1: That''s awesome! I love to cook, but I''m not very good at it.
+
+    User 2: I''m sure you''re better than you think.
+
+    User 1: I doubt it. I can''t even boil water without burning it.
+
+    User 2: Everyone has to start somewhere.
+
+    User 1: I guess you''re right.
+
+    User 2: What''s your favorite food to cook?
+
+    User 1: I like to make pasta. It''s easy and I can usually get it right.
+
+    User 2: Pasta is always a good choice. I love making pasta dishes too.
+
+    User 1: Me too. I think pasta is the perfect food.
+
+    User 2: I agree. It''s so versatile and delicious.
+
+    User 1: What''s your favorite pasta dish to make?
+
+    User 2: I love making a really simple pasta dish with pesto sauce, grilled chicken, and tomatoes.
+
+    User 1: That sounds delicious! I''ll have to try that sometime.
+
+    User 2: You should! It''s one of my favorite dishes to make.
+
+    User 1: I''m excited to try it.
+
+    User 2: I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

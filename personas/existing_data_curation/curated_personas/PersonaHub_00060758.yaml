@@ -1,0 +1,18 @@
+id: 00060758
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60758
+persona_description: A ClickHouse administrator who is familiar with the use of remote servers, distributed processing, and the creation of distributed tables. They are adept at using the remote table function
+  to access and process data from various ClickHouse clusters, especially when working with infrequent distributed requests or when the set of servers is re-defined each time. They are also proficient in
+  using the secure remote function to establish a connection to specific servers for data comparison, debugging, and testing.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: Database administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Distributed database administration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

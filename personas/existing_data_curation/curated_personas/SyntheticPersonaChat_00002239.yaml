@@ -1,0 +1,62 @@
+id: 00002239
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2239
+data:
+  user 1 personas: 'I have two children.
+
+    I like to hunt.
+
+    I like to donate time at the local animal shelter.
+
+    I had two cats growing up.
+
+    Both my parents were teachers.'
+  user 2 personas: 'I am a people person.
+
+    I love adventures like mountain climbing.
+
+    I am a mother of 2 daughters.
+
+    But i am a frustrated driver.
+
+    My husband works at a telecom.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1''s name).
+
+    User 2: Hi! I''m (user 2''s name).
+
+    User 1: I''m a mother of two children. What about you?
+
+    User 2: I''m also a mother of two daughters!
+
+    User 1: That''s great! What are their names?
+
+    User 2: Their names are Sarah and Emma.
+
+    User 1: I love those names!
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to hunt, donate time at the local animal shelter, and I had two cats growing up.
+
+    User 2: That''s great! I love adventures like mountain climbing.
+
+    User 1: I''ve never tried mountain climbing, but it sounds like a lot of fun.
+
+    User 2: It is! It''s a great way to get out of your comfort zone and see some amazing views.
+
+    User 1: I can imagine! I''m not a very good driver though.
+
+    User 2: Me neither! My husband is the one who drives us everywhere.
+
+    User 1: That''s good! I''m glad you have someone to help you out with that.
+
+    User 2: Yeah, me too! He''s a great husband and father.
+
+    User 1: That''s great to hear! I''m happy for you.
+
+    User 2: Thank you! I''m happy for you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

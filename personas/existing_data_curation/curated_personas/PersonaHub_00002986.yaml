@@ -1,0 +1,20 @@
+id: 00002986
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2986
+persona_description: A climate scientist who specializes in satellite data analysis and calibration, particularly focusing on the use of historical satellite data for climate modeling and prediction. They
+  are interested in the calibration of satellite data, particularly in the visible spectrum, and have a particular interest in the use of invariant targets, such as the moon and deserts, for calibration.
+  They have experience with the use of DCC clouds, which are stable and predictable targets, and have developed a method for calibration using IR thresholds. They are also interested in the angular distribution
+  of DCC radiance and the impact of the 0.65μm DCC radiance with the 11μm brightness temperature threshold and the DCC 0.65μm radiance difference over the tropical western pacific and the afternoon generated
+  DCC over land.
+expertise:
+  general_domain_top1pct: Earth Sciences
+  specific_domain_top1pct: Satellite Data Analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: Satellite Data Calibration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,82 @@
+id: 00004194
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4194
+data:
+  user 1 personas: 'My favorite food is pasta.
+
+    I love helping people.
+
+    I retired so i can spend more time with my husband and helping people.
+
+    I live in a rural area.'
+  user 2 personas: 'My favorite color is hunter green.
+
+    I would like to open a restaurant someday.
+
+    I am a personal chef.
+
+    In my free time , i watch movies and sleep.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thank you! And you?
+
+    User 1: I''m doing well too, thanks!
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to cook, watch movies, and sleep.
+
+    User 1: That''s cool! I like to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to cook pasta! It''s so easy and versatile.
+
+    User 1: That''s my favorite food too! What''s your favorite way to make pasta?
+
+    User 2: I love to make it with a tomato sauce and some fresh basil.
+
+    User 1: That sounds delicious! I''m going to have to try that sometime.
+
+    User 2: You should! It''s so good.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to make some pasta! Do you want to come over and join me?
+
+    User 2: That sounds like fun! I''ll be there in 30 minutes.
+
+    User 1: Great! See you then!
+
+
+    30 minutes later...
+
+
+    User 1: Welcome!
+
+    User 2: Thanks! This looks delicious!
+
+    User 1: Thanks! I''m glad you like it.
+
+    User 2: This is the best pasta I''ve ever had!
+
+    User 1: I''m glad you like it!
+
+    User 2: Thank you for inviting me over. This was a lot of fun.
+
+    User 1: You''re welcome! I''m glad you had a good time.
+
+    User 2: I''m sure I''ll be back for more pasta soon.
+
+    User 1: That would be great! I''m always happy to cook for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

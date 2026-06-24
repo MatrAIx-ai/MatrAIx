@@ -1,0 +1,72 @@
+id: '00005325'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5325
+data:
+  user 1 personas: 'I like reading mystery novels.
+
+    My son is a football player.
+
+    I am an american citizen.
+
+    I love pizza.'
+  user 2 personas: 'I like to cook with food i grow in my garden.
+
+    I like to travel.
+
+    My favorite music genre is classical.
+
+    I give lessons on string instruments.
+
+    I play many instruments.'
+  Best Generated Conversation: 'User 1: I''m a huge fan of mystery novels. What are some of your favorite authors?
+
+    User 2: I love Agatha Christie and John Grisham. I also like some of the newer mystery writers like Karin Slaughter and Gillian Flynn.
+
+    User 1: I''ve read a few Agatha Christie novels and I really enjoyed them. I''ve also read some John Grisham, but I haven''t read any of the newer mystery writers.
+
+    User 2: You should definitely check out Karin Slaughter and Gillian Flynn. They''re both great writers.
+
+    User 1: I will, thanks for the recommendation!
+
+    User 2: My pleasure!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to cook, especially with food I grow in my garden. I also love to travel and listen to classical music.
+
+    User 1: That sounds really nice. I love to cook too, but I don''t have a garden. I also love to travel, but I haven''t been anywhere in a while.
+
+    User 2: You should definitely come visit the U.K.! We have some beautiful gardens and there are so many different places to visit.
+
+    User 1: I would love to! I''ve always wanted to visit the U.K.
+
+    User 2: You should definitely do it! It''s a beautiful country.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: You''re welcome!
+
+    User 1: So, what instruments do you play?
+
+    User 2: I play the piano, violin, and guitar. I also give lessons on string instruments.
+
+    User 1: Wow, that''s really impressive! I can only play the guitar.
+
+    User 2: It''s never too late to learn another instrument!
+
+    User 1: I know, but I''m not sure I have the time.
+
+    User 2: You could always try learning on the side. It''s a lot of fun!
+
+    User 1: I might just do that!
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I know, I know. I''ll see what I can do.
+
+    User 2: Good luck!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

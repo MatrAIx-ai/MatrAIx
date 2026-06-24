@@ -1,0 +1,19 @@
+id: '00041710'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41710
+persona_description: An individual with a background in mining, who is interested in the reliability of coal mine escapeways during an underground mine fire. This person is likely to be a safety professional
+  or a researcher in the field of mining safety and disaster management. They may have expertise in fault tree analysis, underground mine fire safety, and the development and evaluation of mine escapeways.
+  They would be interested in learning about the use of fault tree analysis for evaluating escapeway reliability, the cut and path sets that reveal the occurrence probability of fatalities, and the frequency
+  of occurrence for fatalities in an underground mine fire.
+expertise:
+  general_domain_top1pct: mining
+  specific_domain_top1pct: mine safety and disaster management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

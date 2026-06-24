@@ -1,0 +1,19 @@
+id: '00065176'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65176
+persona_description: A data analyst who specializes in spatial analysis and database management. They have experience with Python scripting and have worked on large datasets with thousands of overlapping
+  polygons. They are skilled at automating data extraction and analysis loops and are comfortable working with shapefiles and feature classes. They are also familiar with ArcGIS software and have experience
+  with the Intersect tool and joining fields in the attribute table. They are looking for a way to calculate the percentage of overlap between polygons and write the results to a new record in a stand-alone
+  table.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: spatial analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

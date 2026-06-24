@@ -1,0 +1,61 @@
+id: '00004102'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4102
+data:
+  user 1 personas: 'I sleep in a princess bed.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I m a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.
+
+    I like playing outside in the sun with my dolls.'
+  user 2 personas: 'I am an orphan.
+
+    I like dogs.
+
+    I used to fly planes for a living.
+
+    I grew up in nevada.
+
+    I now live in new mexico.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m a four year old girl with brown eyes and hair. I sleep in a princess bed. My mommy makes me a picnic lunch to eat outside. My daddy brings home flowers for me. I like playing outside in
+    the sun with my dolls.
+
+    User 2: Wow! You sound like a lot of fun! I used to fly planes for a living, but now I''m an orphan and I live in New Mexico. I like dogs, and I grew up in Nevada.
+
+    User 1: That''s cool! I love dogs too. What''s your favorite breed?
+
+    User 2: I like golden retrievers the best. They''re so friendly and loving.
+
+    User 1: Me too! I have a golden retriever named Bailey. She''s the best dog in the world!
+
+    User 2: I bet she is! Dogs are the best companions.
+
+    User 1: I know! They''re always there for you, no matter what.
+
+    User 2: I wish I had a dog right now. I could really use one to keep me company.
+
+    User 1: I''m sure you''ll find a dog soon. There are so many great dogs in need of homes.
+
+    User 2: I hope so. I miss having a furry friend to cuddle with.
+
+    User 1: I know what you mean. Dogs are the best cuddlers.
+
+    User 2: I think I''m going to go to the shelter tomorrow and see if there are any dogs who need a home.
+
+    User 1: That''s a great idea! I''m sure you''ll find the perfect dog for you.
+
+    User 2: Thanks for the encouragement! I''m feeling a lot better about having a dog now.
+
+    User 1: I''m glad! I''m sure you''ll make a great dog owner.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

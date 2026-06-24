@@ -1,0 +1,60 @@
+id: '00001776'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1776
+data:
+  user 1 personas: 'I am a great baker.
+
+    I have few friends.
+
+    I like to hunt for my food.
+
+    I like to sew.'
+  user 2 personas: 'Ferrari is my favorite car company.
+
+    I like watching sports.
+
+    Basketball is my favorite sport to watch.
+
+    I work out daily.
+
+    I own many cars.'
+  Best Generated Conversation: 'User 1: Hi! I''m a great baker and I like to sew.
+
+    User 2: Nice! I love to watch sports, especially basketball.
+
+    User 1: That''s cool. I also like working out.
+
+    User 2: What are some of your favorite foods to bake?
+
+    User 1: I love baking cookies, cakes, and pies.
+
+    User 2: I love cookies! Do you have any tips for making them?
+
+    User 1: I always use fresh ingredients and I make sure to cream the butter and sugar together until they''re light and fluffy.
+
+    User 2: That sounds delicious! I''ll have to try that.
+
+    User 1: You should! I''m sure you''ll love it.
+
+    User 2: Thanks for the tip!
+
+    User 1: No problem! What''s your favorite sport to watch?
+
+    User 2: I love watching basketball! I''m a big fan of the Golden State Warriors.
+
+    User 1: Me too! I love watching Steph Curry play. He''s so talented.
+
+    User 2: He is! He''s one of the best players in the league.
+
+    User 1: I agree! I''m excited to see how they do this year.
+
+    User 2: Me too! I think they have a good chance of winning the championship.
+
+    User 1: I hope you''re right!
+
+    User 2: Thanks! I''m sure they''ll make it to the playoffs at least.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

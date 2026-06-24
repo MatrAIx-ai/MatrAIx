@@ -1,0 +1,62 @@
+id: 00004890
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4890
+data:
+  user 1 personas: 'My parents met at woodstock.
+
+    I love starbucks coffee.
+
+    I have a beautiful rose garden.
+
+    I have a cat named pickles.'
+  user 2 personas: 'I have a dog and two cats.
+
+    I live by myself.
+
+    I like to go for runs.
+
+    I like country music.
+
+    I play the guitar.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go for runs, play guitar, and listen to country music.
+
+    User 1: That sounds fun! I like to go for walks in the park, read books, and drink coffee.
+
+    User 2: I love coffee too! What''s your favorite kind?
+
+    User 1: I love Starbucks coffee. It''s the best!
+
+    User 2: I''ve never had Starbucks coffee before. What''s it like?
+
+    User 1: It''s really good! It''s strong and flavorful.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s really good.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to read books, especially historical fiction. I also like to go to the park and play with my dog.
+
+    User 2: What''s your favorite book?
+
+    User 1: I really like the Outlander series by Diana Gabaldon. It''s a historical fiction series about a woman who travels back in time to Scotland in the 1700s.
+
+    User 2: That sounds really interesting! I''ll have to check it out.
+
+    User 1: You should! It''s a great series.
+
+    User 2: I''m glad we''re having this conversation. I''m learning a lot about you.
+
+    User 1: Me too! I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

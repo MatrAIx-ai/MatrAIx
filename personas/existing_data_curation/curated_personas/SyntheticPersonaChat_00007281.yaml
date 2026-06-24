@@ -1,0 +1,64 @@
+id: 00007281
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7281
+data:
+  user 1 personas: 'She likes to grow plants in her garden.
+
+    My mother is a social worker for the school system.
+
+    I go visit them sometimes.
+
+    My best friend lives in a big city.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am a student.
+
+    I am an only child.
+
+    My favorite color is red.'
+  Best Generated Conversation: 'User 1: I like pizza too! I''m going to order some for dinner tonight.
+
+    User 2: That sounds good! I''m not sure what I''m going to have for dinner yet.
+
+    User 1: You should come over and have pizza with me!
+
+    User 2: That sounds like fun! I''ll bring my favorite red drink.
+
+    User 1: Great! I''ll send you the address.
+
+
+    User 1: My mother is a social worker for the school system. She''s really passionate about her job and she loves helping people.
+
+    User 2: That''s great! My mother is a nurse. She''s also really passionate about her job and she loves helping people.
+
+    User 1: It''s nice to have a parent who is so dedicated to their job.
+
+    User 2: It is! I''m really lucky to have her.
+
+
+    User 1: I have a best friend who lives in a big city. We met in college and we''ve been friends ever since.
+
+    User 2: That''s great! I''m an only child, so I''ve always wanted a best friend.
+
+    User 1: My best friend is like a sister to me. We always have each other''s backs.
+
+    User 2: I''m glad you have a good friend like that.
+
+
+    User 1: So, what are you studying in school?
+
+    User 2: I''m studying business. I want to be a business owner someday.
+
+    User 1: That sounds like a great goal. I''m sure you''ll be successful.
+
+    User 2: Thanks! I hope so.
+
+
+    User 1: I''m glad we had this chance to talk. I think we''re going to be good friends.
+
+    User 2: Me too! I''m looking forward to getting to know you better.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

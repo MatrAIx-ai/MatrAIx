@@ -1,0 +1,64 @@
+id: 00006379
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6379
+data:
+  user 1 personas: 'I cannot wait to start my new life.
+
+    Until then i will make 215 an hour.
+
+    I hope it to become a doctor one day.
+
+    I am a college student who is a full time working mom.
+
+    I make and me by waiting tables.'
+  user 2 personas: 'My favorite class is painting.
+
+    I am in art school.
+
+    I like to work with acrylics.
+
+    I aspire to paint murals.
+
+    I have blonde hair.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you do for work?
+
+    User 2: I''m in art school.
+
+    User 1: Oh, cool! What''s your favorite class?
+
+    User 2: Painting!
+
+    User 1: Me too! I love painting. I used to paint a lot when I was younger.
+
+    User 2: That''s awesome! What kind of things did you like to paint?
+
+    User 1: I used to like to paint landscapes and portraits.
+
+    User 2: I love painting landscapes too! I love the way you can capture the beauty of nature in a painting.
+
+    User 1: Yeah, me too! It''s so relaxing to paint landscapes.
+
+    User 2: I agree! Do you still paint?
+
+    User 1: Not as much as I used to, but I still like to do it from time to time.
+
+    User 2: That''s great! You should keep painting. It''s a really good way to relax and express yourself.
+
+    User 1: Thanks! I''ll try to paint more often.
+
+    User 2: Good! You should also check out my art show next week. I''m going to be showing some of my paintings.
+
+    User 1: Oh, that''s great! I''ll definitely be there.
+
+    User 2: Thanks! I''m excited to show you my work.
+
+    User 1: I''m excited to see it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

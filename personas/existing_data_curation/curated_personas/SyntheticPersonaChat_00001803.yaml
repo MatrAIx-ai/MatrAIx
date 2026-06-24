@@ -1,0 +1,81 @@
+id: 00001803
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1803
+data:
+  user 1 personas: 'I am an only child.
+
+    My favorite color is red.
+
+    I am a student.
+
+    I have a pet dog.'
+  user 2 personas: 'I am a farmer.
+
+    I hope to travel the world one day.
+
+    My hobbies include photography and hiking.
+
+    I have two pet dogs.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+
+    User 2: Hello, my name is [user 2''s name].
+
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for a living?
+
+
+    User 2: I am a farmer.
+
+
+    User 1: Oh, that''s interesting! What do you grow?
+
+
+    User 2: I grow wheat, corn, and soybeans.
+
+
+    User 1: Do you enjoy being a farmer?
+
+
+    User 2: I do, I love working outdoors and getting my hands dirty.
+
+
+    User 1: That''s great to hear! What are your hobbies?
+
+
+    User 2: My hobbies include photography, hiking, and traveling.
+
+
+    User 1: Those are all great hobbies! I love hiking and photography too.
+
+
+    User 2: Me too! I love taking pictures of nature and exploring new places.
+
+
+    User 1: Where have you traveled to?
+
+
+    User 2: I''ve traveled to a few countries in Europe, but I''d like to travel to more places in the future.
+
+
+    User 1: That''s great! I''ve only been to a few countries in Europe too, but I''d like to travel to more places in the world.
+
+
+    User 2: Me too! I think it''s important to see the world and learn about different cultures.
+
+
+    User 1: I agree! I think it''s a great way to grow as a person.
+
+
+    User 2: Me too! I''m glad we agree.
+
+
+    User 1: Me too! It was nice talking to you, [user 2''s name].
+
+
+    User 2: It was nice talking to you too, [user 1''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

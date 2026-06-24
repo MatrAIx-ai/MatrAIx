@@ -1,0 +1,80 @@
+id: 00008168
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8168
+data:
+  user 1 personas: 'I really like cake and do not prefer vegetables.
+
+    I take care of my mother and father.
+
+    I have one sister and a niece and nephew.
+
+    I am almost finished with my degree.'
+  user 2 personas: 'My father has a very prestigious job.
+
+    My favorite band is iron maiden.
+
+    I am a lover of italian food.
+
+    I enjoy watching netflix with family.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi! How are you?
+
+    User 1: I''m good! Just finished a long day of work.
+
+    User 2: Oh, how was it?
+
+    User 1: It was good! I''m almost finished with my degree.
+
+    User 2: Oh, that''s great! What are you studying?
+
+    User 1: I''m studying nursing.
+
+    User 2: Oh, that''s a really good career!
+
+    User 1: Yeah, I''m excited about it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to watch Netflix, read, and go out to eat with friends.
+
+    User 2: Oh, me too! I love watching Netflix.
+
+    User 1: What''s your favorite show?
+
+    User 2: I really like The Witcher.
+
+    User 1: Oh, I haven''t seen that one.
+
+    User 2: It''s really good! You should check it out.
+
+    User 1: I will!
+
+    User 2: So, you said you have a family?
+
+    User 1: Yeah, I have a mom, dad, sister, and niece and nephew.
+
+    User 2: Oh, that''s nice!
+
+    User 1: Yeah, I love spending time with them.
+
+    User 2: What do you like to do with them?
+
+    User 1: We like to go out to eat, go to the movies, and just hang out.
+
+    User 2: Oh, that sounds like fun!
+
+    User 1: Yeah, it is.
+
+    User 2: Well, I should probably get going. It was nice talking to you!
+
+    User 1: It was nice talking to you too!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

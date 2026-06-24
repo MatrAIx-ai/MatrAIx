@@ -1,0 +1,78 @@
+id: 00008059
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8059
+data:
+  user 1 personas: 'I am currently going to school to be an artist.
+
+    My favorite flower is a rose.
+
+    I live in a small apartment in new york.
+
+    I have a small pet cat.
+
+    I am twenty one years old.'
+  user 2 personas: 'I have a close circle of friends i would do anything for.
+
+    I never stop looking for love.
+
+    I sell real estate and wait tables on the weekends.
+
+    I am the youngest of 8 kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I sell real estate and wait tables on the weekends.
+
+    User 1: Oh, cool. I''m going to school to be an artist.
+
+    User 2: That''s awesome! What kind of art do you like to make?
+
+    User 1: I like to paint, mostly landscapes and portraits.
+
+    User 2: Oh, that''s really cool. I love painting, too!
+
+    User 1: What''s your favorite flower?
+
+    User 2: My favorite flower is a rose.
+
+    User 1: Oh, me too! I love the smell of roses.
+
+    User 2: Me too! I have a rose bush in my backyard.
+
+    User 1: That''s so nice! I wish I had a yard. I live in a small apartment in New York.
+
+    User 2: Oh, that''s too bad. I love living in New York.
+
+    User 1: I love it, too, but it''s definitely not the best place to have a pet.
+
+    User 2: I know what you mean. I have a small pet cat.
+
+    User 1: Oh, that''s cute! I love cats.
+
+    User 2: Me too!
+
+    User 1: So, how old are you?
+
+    User 2: I''m twenty-one.
+
+    User 1: Me too!
+
+    User 2: Oh, cool! What''s your sign?
+
+    User 1: I''m a Pisces.
+
+    User 2: I''m a Leo.
+
+    User 1: Oh, that''s cool. I''ve never met a Leo before.
+
+    User 2: Me neither. It''s nice to meet you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

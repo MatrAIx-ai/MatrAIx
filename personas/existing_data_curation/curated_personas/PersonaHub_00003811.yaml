@@ -1,0 +1,18 @@
+id: 00003811
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3811
+persona_description: A scientist or geologist who is interested in the exploration and study of Mars, particularly the geology and geophysics of the planet. They are knowledgeable about the Mars Descent
+  Imager (MARDI) and its capabilities, and are interested in the information it provides about the landing site and the larger geologic context surrounding it. They are also interested in the information
+  it will provide about the spacecraft's precise location after landing.
+expertise:
+  general_domain_top1pct: Geology
+  specific_domain_top1pct: Planetary Geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Planetary Geophysics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

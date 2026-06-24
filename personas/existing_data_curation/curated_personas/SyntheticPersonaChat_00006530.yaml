@@ -1,0 +1,64 @@
+id: '00006530'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6530
+data:
+  user 1 personas: 'My favorite type of music is metal.
+
+    My parents live in kentucky.
+
+    I currently am engaged to my high school boyfriend.
+
+    I love working out.'
+  user 2 personas: 'My favorite season is summer.
+
+    I am headed to university of michigan in the fall.
+
+    I just graduated high school.
+
+    I love tacos but hate spaghetti.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. Where are you from?
+
+    User 2: I just graduated from high school in [user 2''s hometown]. I''m headed to the University of Michigan in the fall.
+
+    User 1: That''s awesome! I''m from Kentucky. What are you going to study at UMich?
+
+    User 2: I''m going to study business. What do you do for a living?
+
+    User 1: I''m a personal trainer. I love working out and I love helping people get in shape.
+
+    User 2: That''s so cool! I love working out too. I''m not very good at it, but I love doing it.
+
+    User 1: I''m sure you''re better than you think. What''s your favorite type of workout?
+
+    User 2: I love running. I also love doing yoga.
+
+    User 1: Yoga is great! It''s so good for flexibility and balance.
+
+    User 2: It is! I love how it makes me feel.
+
+    User 1: Me too! What''s your favorite type of music?
+
+    User 2: I love all kinds of music, but my favorite is probably rock.
+
+    User 1: Me too! I love metal.
+
+    User 2: I''ve never really gotten into metal. What''s your favorite band?
+
+    User 1: I love a lot of different bands, but my favorite is probably Slipknot.
+
+    User 2: I''ve heard of them, but I''ve never listened to them.
+
+    User 1: You should! They''re great.
+
+    User 2: I''ll check them out.
+
+    User 1: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

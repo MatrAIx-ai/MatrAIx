@@ -1,0 +1,131 @@
+id: 00005169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5169
+data:
+  user 1 personas: 'My favourite colour is green.
+
+    My dog is called alfred.
+
+    I can play the piano.
+
+    I like to read books about chinese history.
+
+    I am a baseball player.'
+  user 2 personas: 'I work at a vet.
+
+    I have 2 kids.
+
+    I have 3 dog.
+
+    My husband is a lawyer.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1 name].
+
+
+    User 2: Hi, I''m [user 2 name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I love to read, go for walks in the park, and spend time with my family.
+
+
+    User 1: That sounds nice. I love to read too. What are some of your favorite books?
+
+
+    User 2: I love anything by Stephen King, but I also enjoy historical fiction.
+
+
+    User 1: I''ve never read any Stephen King, but I''ve heard good things. I''ll have to check him out.
+
+
+    User 2: You should! He''s a great writer.
+
+
+    User 1: What are some of your favorite historical fiction books?
+
+
+    User 2: I love the Outlander series by Diana Gabaldon, and I also like the Pillars of the Earth series by Ken Follett.
+
+
+    User 1: I''ve heard of Outlander, but I haven''t read it yet. I''ll have to check it out.
+
+
+    User 2: You should! It''s a great series.
+
+
+    User 1: So, what do you do for work?
+
+
+    User 2: I work at a vet clinic.
+
+
+    User 1: That''s cool! I''ve always wanted to be a vet.
+
+
+    User 2: It''s a great job. I love working with animals.
+
+
+    User 1: Do you have any pets of your own?
+
+
+    User 2: Yes, I have two dogs and three cats.
+
+
+    User 1: That''s a lot of pets!
+
+
+    User 2: I know, but I love them all.
+
+
+    User 1: What are their names?
+
+
+    User 2: My dogs are named Max and Charlie, and my cats are named Mittens, Snowball, and Oliver.
+
+
+    User 1: Those are great names!
+
+
+    User 2: Thanks!
+
+
+    User 1: So, what does your husband do?
+
+
+    User 2: He''s a lawyer.
+
+
+    User 1: That''s interesting.
+
+
+    User 2: Yeah, he''s pretty good at it too.
+
+
+    User 1: Do you have any kids?
+
+
+    User 2: Yes, I have two kids, a boy and a girl.
+
+
+    User 1: That''s great! How old are they?
+
+
+    User 2: They''re 10 and 8.
+
+
+    User 1: Wow, they''re growing up so fast.
+
+
+    User 2: I know, it''s crazy.
+
+
+    User 1: Well, it was nice talking to you.
+
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

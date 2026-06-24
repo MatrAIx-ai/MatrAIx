@@ -1,0 +1,18 @@
+id: '00011141'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11141
+persona_description: A healthcare professional, particularly a colorectal surgeon, who is experienced in identifying and treating a variety of digestive system issues. They are knowledgeable about the importance
+  of regular health checks and the signs and symptoms of potential diseases, such as colorectal cancer, and are trained to refer patients to appropriate specialists for further evaluation and treatment.
+  They are aware of the importance of early detection and treatment in managing these conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: colorectal surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

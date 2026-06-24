@@ -1,0 +1,86 @@
+id: 00001918
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1918
+data:
+  user 1 personas: 'I help my neighbor.
+
+    I live in a city.
+
+    I likw to go to the farmers markets to buy local veggies and fruits.
+
+    I am a grandmother.
+
+    I have a dog and we go for walks.'
+  user 2 personas: 'I once ran the mile in under 4 minutes.
+
+    My favorite thing to do is float the river.
+
+    My favorite activity is fishing.
+
+    My dad was a cop until he was killed.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to float the river and fish.
+
+    User 1: That sounds like fun. I used to fish a lot when I was younger.
+
+    User 2: Did you ever catch anything good?
+
+    User 1: I caught a few bass and some catfish.
+
+    User 2: That''s awesome! I''ve never caught a catfish before.
+
+    User 1: They''re not too hard to catch. You just have to know where to look.
+
+    User 2: Do you have any tips for fishing?
+
+    User 1: Sure! I always use live bait, and I try to find spots where there''s a lot of cover.
+
+    User 2: Thanks for the tips! I''ll have to try them out next time I go fishing.
+
+    User 1: You''re welcome! I hope you catch something big!
+
+    User 2: Thanks! Me too!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in software engineering.
+
+    User 2: It''s a lot of fun, but it can be challenging too.
+
+    User 1: I bet. Do you like your job?
+
+    User 2: Yeah, I do. It''s a great place to work.
+
+    User 1: That''s good to hear.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go for walks with my dog, and I like to read.
+
+    User 2: That sounds like fun. I like to go for walks too.
+
+    User 1: Me too! It''s a great way to get some exercise and clear your head.
+
+    User 2: I agree. I also like to read. What kind of books do you like to read?
+
+    User 1: I like to read a variety of different genres, but I especially like historical fiction.
+
+    User 2: I like historical fiction too! I''ve been reading a lot of books about the Roman Empire lately.
+
+    User 1: That sounds interesting! I''ve never read anything about the Roman Empire.
+
+    User 2: You should check it out! It''s really interesting.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00002054'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2054
+data:
+  user 1 personas: 'My mom is a lawyer.
+
+    I like to go fishing.
+
+    I have an internship at a computer company.
+
+    I am a student.
+
+    I have 5 children.'
+  user 2 personas: 'I am in high school.
+
+    I sleep a lot.
+
+    I cs and ds.
+
+    I love sweets.
+
+    I love bruno mars.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to sleep, do cross country and track, and eat sweets.
+
+    User 1: Cool! I like to go fishing, play video games, and read.
+
+    User 2: What kind of fish do you like to catch?
+
+    User 1: I like to catch trout and salmon.
+
+    User 2: I''ve never caught a salmon before.
+
+    User 1: They''re pretty fun to catch. You just have to be patient.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play a lot of different games, but my favorite is probably Minecraft.
+
+    User 2: I''ve never played Minecraft before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I''ll have to check it out.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read a lot of different kinds of books, but my favorite is probably fantasy.
+
+    User 1: I like fantasy books too. What are some of your favorites?
+
+    User 2: I like the Harry Potter series, The Lord of the Rings trilogy, and the Percy Jackson series.
+
+    User 1: I love those books! I''ve read them all multiple times.
+
+    User 2: Me too! They''re so good.
+
+    User 1: What''s your favorite song by Bruno Mars?
+
+    User 2: I love all of his songs, but my favorite is probably "Uptown Funk."
+
+    User 1: That''s a great song! I love dancing to it.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too! We should be friends.
+
+    User 1: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

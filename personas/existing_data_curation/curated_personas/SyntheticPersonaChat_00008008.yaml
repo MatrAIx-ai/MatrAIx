@@ -1,0 +1,76 @@
+id: 00008008
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8008
+data:
+  user 1 personas: 'I leave the dogs home when i visit my parents.
+
+    I work as a veterinarian s assistant.
+
+    I love dogs.
+
+    My mother is allergic to dogs.
+
+    I have 2 dogs as pets.'
+  user 2 personas: 'I love kids and dogs.
+
+    I like to go shopping with my daughters.
+
+    I am a foodie.
+
+    I love to chat with my friends.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go shopping, chat with my friends, and cook.
+
+    User 1: That sounds like a lot of fun! I like to go shopping too, and I love cooking.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love making pasta dishes. I''m not much of a baker, but I''m pretty good at cooking.
+
+    User 2: That''s great! I love pasta too. I usually make it with tomato sauce and cheese.
+
+    User 1: That sounds delicious! I like to make it with a pesto sauce or Alfredo sauce.
+
+    User 2: I''ve never had Alfredo sauce. Is it good?
+
+    User 1: It''s delicious! It''s a white sauce made with Parmesan cheese and cream.
+
+    User 2: That sounds amazing! I''ll have to try it sometime.
+
+    User 1: You should! It''s a great dish for a special occasion.
+
+    User 2: I have a few kids, so I don''t get to go out for special occasions very often. But I''ll try to make it sometime.
+
+    User 1: You should! It''s a great way to treat yourself and your family.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: You''re welcome!
+
+    User 2: So, what do you do for work?
+
+    User 1: I work as a veterinarian''s assistant. I help the veterinarian with everything from taking care of the animals to providing medical care.
+
+    User 2: That sounds like a really interesting job!
+
+    User 1: It is! I love working with animals and helping them get better.
+
+    User 2: That''s awesome! I''m sure you''re a great veterinarian''s assistant.
+
+    User 1: Thank you! I try my best.
+
+    User 2: Well, it sounds like you have a really great job.
+
+    User 1: I do! I love it.
+
+    User 2: That''s awesome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

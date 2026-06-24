@@ -1,0 +1,64 @@
+id: '00003221'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3221
+data:
+  user 1 personas: 'I watch youtube videos.
+
+    I like sleeping.
+
+    I have brown hair.
+
+    I work at mcdonald s.
+
+    I write.'
+  user 2 personas: 'My favorite team is the washington nationals.
+
+    My favorite food is pizza.
+
+    I prefer baseball over football.
+
+    I like sports.'
+  Best Generated Conversation: 'User 1: Hi Bard!
+
+    User 2: Hi there!
+
+    User 1: I''m a writer.
+
+    User 2: Nice! What kind of things do you write?
+
+    User 1: I write short stories, poems, and essays.
+
+    User 2: That''s awesome! I love writing too. What''s your favorite thing to write about?
+
+    User 1: I love writing about people and their relationships.
+
+    User 2: That''s cool! I love writing about sports.
+
+    User 1: What''s your favorite sport?
+
+    User 2: Baseball is my favorite sport.
+
+    User 1: I love baseball too! Who''s your favorite team?
+
+    User 2: My favorite team is the Washington Nationals.
+
+    User 1: That''s a great team! I''m a fan of the Mets.
+
+    User 2: Oh, cool! I''ve always liked the Mets.
+
+    User 1: Yeah, they''re a good team. I''m excited to see how they do this year.
+
+    User 2: Me too! I think they have a good chance of making the playoffs.
+
+    User 1: I hope so! I''d love to see them in the World Series.
+
+    User 2: Me too! That would be amazing.
+
+    User 1: Well, it was nice talking to you, Bard.
+
+    User 2: You too! It was nice chatting with you about writing and sports.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00007413'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7413
+data:
+  user 1 personas: 'My favorite movie is gone with the wind.
+
+    My favorite color is red.
+
+    I have 2 turtles.
+
+    I have purple hair.'
+  user 2 personas: 'I like playing badminton.
+
+    My family owns a dairy farm.
+
+    I am not very good at playing basketball.
+
+    I do not really like vegetables or fruit but i pretend.
+
+    I once rescued a baby on a highway.'
+  Best Generated Conversation: 'User 1: Hi! I''m looking for a new friend.
+
+    User 2: Hi there! Nice to meet you. I''m always looking for new friends too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play badminton, go for walks, and read.
+
+    User 1: I like to play badminton too! I also like to go for walks and read.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is Gone With the Wind.
+
+    User 2: I''ve never read that book, but I''ve heard good things about it.
+
+    User 1: It''s a really good book. It''s about the Civil War.
+
+    User 2: I''m not really into history, but I might check it out anyway.
+
+    User 1: You should! It''s a really good book.
+
+    User 2: I will!
+
+    User 1: So, what do you like about badminton?
+
+    User 2: I like that it''s a good workout and it''s also a lot of fun.
+
+    User 1: I agree! It''s a great way to get exercise and have some fun at the same time.
+
+    User 2: Do you play badminton often?
+
+    User 1: Not as often as I''d like to, but I try to play a few times a week.
+
+    User 2: That''s great! I try to play at least once a week.
+
+    User 1: It''s a good way to stay in shape.
+
+    User 2: It sure is!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go for walks, read, and watch movies.
+
+    User 1: I like all of those things too!
+
+    User 2: We have a lot in common!
+
+    User 1: We do! I think we''re going to be great friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

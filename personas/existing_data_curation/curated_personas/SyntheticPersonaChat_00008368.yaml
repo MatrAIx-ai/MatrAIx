@@ -1,0 +1,60 @@
+id: 00008368
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8368
+data:
+  user 1 personas: 'I used to follow the grateful dead when they toured.
+
+    I have a terrible singing voice.
+
+    I am a short order cook at a local diner.
+
+    Under a pen name , i write romance books.'
+  user 2 personas: 'I hope to visit quebec , canada someday.
+
+    My wife works as a diesel mechanic.
+
+    I am a yoga instructor.
+
+    I love watching old movies.'
+  Best Generated Conversation: 'User 1: Hello, my name is [name].
+
+    User 2: Hello, my name is [name].
+
+    User 1: Nice to meet you, [name]. Where are you from?
+
+    User 2: I''m from [place].
+
+    User 1: Oh, I''ve never been there before. What''s it like?
+
+    User 2: It''s a great place! There''s a lot of history, and the people are really friendly.
+
+    User 1: That sounds nice. I''m from [place].
+
+    User 2: Oh, I''ve heard of [place]. It''s a beautiful city.
+
+    User 1: Thank you! What do you like to do for fun?
+
+    User 2: I like to go hiking, camping, and fishing. I also love to read and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to go hiking and camping too. I don''t really fish, but I love to read and watch movies.
+
+    User 2: Oh, that''s great! We should go hiking together sometime.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! Let''s do it.
+
+    User 1: Great! I''ll bring the food and you can bring the drinks.
+
+    User 2: Sounds good! I''ll also bring a camera.
+
+    User 1: Great! We can take pictures of the scenery and the fish we catch.
+
+    User 2: That sounds like a lot of fun. I can''t wait!
+
+    User 1: Me neither'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

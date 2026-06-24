@@ -1,0 +1,74 @@
+id: 00004338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4338
+data:
+  user 1 personas: 'I have a cat named charlie.
+
+    I just bought new hoop earrings.
+
+    My favorite food is pizza.
+
+    I love nighttime.'
+  user 2 personas: 'In my spare time i like to play video games.
+
+    I do not drink alcohol.
+
+    I would rather read a book than watch a movie.
+
+    I work for a marketing agency.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi there!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, read books, and watch movies.
+
+    User 1: Oh, that''s cool. I like to play video games too. What kind of games do you like to play?
+
+    User 2: I like to play all kinds of games, but I mostly play single-player RPGs.
+
+    User 1: Me too! I love getting lost in a good story.
+
+    User 2: Me too! What''s your favorite game?
+
+    User 1: It''s hard to say, but I''d probably have to say Skyrim.
+
+    User 2: Oh, that''s a good one. I''ve played it a few times myself.
+
+    User 1: Do you have any pets?
+
+    User 2: I have a cat named Charlie.
+
+    User 1: Aw, that''s cute! I have a cat named Oliver.
+
+    User 2: I love cats! They''re so cuddly and affectionate.
+
+    User 1: They are! I''m so glad I have Oliver. He makes me happy every day.
+
+    User 2: I''m sure Charlie does the same for me.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work for a marketing agency.
+
+    User 1: Oh, that sounds interesting. What''s that like?
+
+    User 2: It''s a lot of fun! I get to work with a lot of different people and come up with creative ideas.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I''m really lucky to have it.
+
+    User 1: Me too! I''m glad we''re having this conversation.
+
+    User 2: Me too! I''m always up for meeting new people.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

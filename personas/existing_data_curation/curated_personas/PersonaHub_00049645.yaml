@@ -1,0 +1,18 @@
+id: 00049645
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49645
+persona_description: A healthcare professional with expertise in the diagnosis and treatment of urinary disorders, specifically those related to kidney failure, heart attack, stroke, and related conditions.
+  They are skilled in the use of diagnostic tests, treatments, and monitoring to manage these conditions effectively. They have a strong understanding of the physiological and biochemical processes involved
+  in these conditions and are capable of providing comprehensive care to patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: nephrology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

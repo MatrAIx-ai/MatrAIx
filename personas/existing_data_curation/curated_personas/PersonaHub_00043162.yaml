@@ -1,0 +1,18 @@
+id: '00043162'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43162
+persona_description: A computational chemistry expert who specializes in the analysis and interpretation of molecular dynamics simulations. This expert is skilled in identifying and calculating dihedral
+  angles and torsion angles for a variety of molecules and structures. They are adept at using custom dihedral types and can search for dihedral angles in specific ranges or based on custom atom names.
+  This expertise is particularly useful in the field of protein folding simulations and in the study of molecular interactions.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: computational chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

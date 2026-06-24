@@ -1,0 +1,60 @@
+id: 00004696
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4696
+data:
+  user 1 personas: 'I live in a rural community.
+
+    I have two kids.
+
+    I work at amazon.
+
+    I love robotics.'
+  user 2 personas: 'I am 6 foot tall.
+
+    I love to dance.
+
+    I have asthma.
+
+    I like to go running.
+
+    I used to play hockey.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to dance, go running, and play hockey.
+
+    User 1: That''s really cool! I love to dance too.
+
+    User 2: Oh, that''s awesome! What kind of dancing do you like to do?
+
+    User 1: I like to do a lot of different types of dancing, but I''m most into hip hop and jazz.
+
+    User 2: Oh, that''s great! I love hip hop too.
+
+    User 1: Have you ever taken any dance classes?
+
+    User 2: I have! I took a few years of hip hop classes when I was younger.
+
+    User 1: That''s awesome! I''ve never taken any dance classes, but I''ve been thinking about it.
+
+    User 2: You should definitely do it! It''s a lot of fun and it''s a great way to stay in shape.
+
+    User 1: Thanks for the advice! I''ll look into it.
+
+    User 2: No problem! So, what else do you like to do for fun?
+
+    User 1: I like to read, watch movies, and spend time with my family.
+
+    User 2: That''s great! I like to do a lot of those things too.
+
+    User 1: It''s nice to meet someone who has similar interests.
+
+    User 2: It''s nice to meet you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

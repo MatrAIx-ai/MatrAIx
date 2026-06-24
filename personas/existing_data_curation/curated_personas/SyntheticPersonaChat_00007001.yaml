@@ -1,0 +1,72 @@
+id: '00007001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7001
+data:
+  user 1 personas: 'I love to ride my bike on the weekend.
+
+    I am an insurance salesman.
+
+    My favorite color is blue.
+
+    I post on reduit often.'
+  user 2 personas: 'I have an internship at a computer company.
+
+    I have 5 children.
+
+    I like to go fishing.
+
+    My mom is a lawyer.
+
+    I am a student.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hey! How are you?
+
+    User 1: I''m doing well, thanks! What about you?
+
+    User 2: I''m doing great! I''m just finishing up my internship at a computer company.
+
+    User 1: That sounds exciting! What kind of work do you do there?
+
+    User 2: I''m working on a new software program that will help people manage their finances.
+
+    User 1: That''s really cool! I''m sure you''re learning a lot.
+
+    User 2: I am! It''s been a great experience so far.
+
+    User 1: That''s awesome! I''m glad to hear it.
+
+    User 2: Thanks! How about you, what do you do for work?
+
+    User 1: I''m an insurance salesman.
+
+    User 2: Oh, that''s interesting! What do you like about your job?
+
+    User 1: I like helping people find the right insurance policies for their needs.
+
+    User 2: That''s a good way to make a difference in people''s lives.
+
+    User 1: I think so too.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m going to ride my bike. I love to go for long rides on the weekends.
+
+    User 2: That sounds fun! I like to go fishing on the weekends.
+
+    User 1: Oh, that''s cool! I''ve never been fishing before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will!
+
+    User 2: I''m sure you would like it.
+
+    User 1: Thanks for the suggestion!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

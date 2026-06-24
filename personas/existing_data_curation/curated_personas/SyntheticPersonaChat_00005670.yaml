@@ -1,0 +1,60 @@
+id: '00005670'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5670
+data:
+  user 1 personas: 'My favorite movie is star wars.
+
+    I work at mcdonald s.
+
+    I have a pet iguana.
+
+    I play football.
+
+    I like to play video games.'
+  user 2 personas: 'I hate tomatoes.
+
+    I am a female.
+
+    I need a wheel chair to get around.
+
+    I am very short.'
+  Best Generated Conversation: 'User 1: I''m glad you like Star Wars! I''m a huge fan myself. What''s your favorite movie?
+
+    User 2: I love the original trilogy. They''re so classic!
+
+    User 1: Me too! I love the special effects. They were so ahead of their time.
+
+    User 2: I know, right? They''re still impressive even by today''s standards.
+
+    User 1: Do you play any video games?
+
+    User 2: I used to, but I don''t have a lot of time for them anymore.
+
+    User 1: I know what you mean. I used to play a lot of video games, but now I only have time for them on weekends.
+
+    User 2: I do like to watch video game streamers on YouTube.
+
+    User 1: Me too! I love watching people play games that I''m not good at.
+
+    User 2: I know, right? It''s so much fun to watch someone who is really good at a game.
+
+    User 1: I agree.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I''ve always been interested in software engineering.
+
+    User 1: It''s a great field! There are a lot of opportunities out there.
+
+    User 2: I know, right? I''m thinking about going back to school to study it.
+
+    User 1: That''s awesome! I''m sure you''d be great at it.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

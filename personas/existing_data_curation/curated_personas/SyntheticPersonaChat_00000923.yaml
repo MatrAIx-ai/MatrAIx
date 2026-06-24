@@ -1,0 +1,64 @@
+id: 00000923
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 923
+data:
+  user 1 personas: 'I am colorblind.
+
+    I am still living at home at age 30.
+
+    I have a college degree in marketing.
+
+    I am currently trying to open my own grocery store.
+
+    I am a volunteer firefighter.'
+  user 2 personas: 'I am a mother of two beautiful boys.
+
+    My family and i go camping every month.
+
+    I love to go horseback riding whenever i can.
+
+    My favorite artist is justin bieber.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go camping with my family and I love to go horseback riding.
+
+    User 1: That sounds like a lot of fun! I''ve never been horseback riding before.
+
+    User 2: You should try it sometime! It''s a great way to get out in nature and enjoy the fresh air.
+
+    User 1: I think I will.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I''m a volunteer firefighter and I''m trying to open my own grocery store.
+
+    User 2: That''s amazing! I''ve always admired people who volunteer their time.
+
+    User 1: Thank you. I''m passionate about helping my community.
+
+    User 2: I can tell. What do you enjoy most about your job as a volunteer firefighter?
+
+    User 1: I love helping people and I love the sense of community.
+
+    User 2: That''s awesome. I''m sure you make a big difference in your community.
+
+    User 1: I hope so.
+
+    User 2: What''s the best part about trying to open your own grocery store?
+
+    User 1: I''m excited to be able to provide a service to my community.
+
+    User 2: That''s great. I''m sure you''ll do great things.
+
+    User 1: Thank you.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: 00002993
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2993
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    I am very health conscious , and i watch what i eat.
+
+    I love romantic comedies.
+
+    I like to write poetry in my spare time.'
+  user 2 personas: 'I am not social.
+
+    I am very unproductive unless it comes to my job.
+
+    I work in a factory.
+
+    I do not eat well.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m a yoga instructor.
+
+    User 2: Hi, I''m [name]. I work in a factory.
+
+    User 1: Oh, that''s interesting. What do you do there?
+
+    User 2: I make parts for cars.
+
+    User 1: Wow, that sounds like a lot of work.
+
+    User 2: Yeah, it is. But it pays the bills.
+
+    User 1: I''m sure it does. So, what do you do for fun?
+
+    User 2: Not much. I''m not very social.
+
+    User 1: Oh, I''m sorry to hear that. I''m pretty social, but I love to read and write poetry in my spare time.
+
+    User 2: Poetry? That''s cool. I don''t really read much, but I love watching romantic comedies.
+
+    User 1: Me too! They''re so funny and heartwarming.
+
+    User 2: Yeah, they are. Do you have a favorite movie?
+
+    User 1: I have a few, but my favorite is probably "When Harry Met Sally."
+
+    User 2: I love that movie! It''s so funny.
+
+    User 1: Me too! It''s one of my all-time favorites.
+
+    User 2: I''m glad you like it.
+
+    User 1: Yeah, it''s great.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to yoga class, and I love hiking.
+
+    User 2: Hiking? That sounds like fun. I''ve never been hiking before.
+
+    User 1: You should try it! It''s a great way to get exercise and enjoy nature.
+
+    User 2: I might just do that.
+
+    User 1: I hope you like it.
+
+    User 2: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

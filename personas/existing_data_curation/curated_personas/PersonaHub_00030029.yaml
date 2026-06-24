@@ -1,0 +1,17 @@
+id: 00030029
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30029
+persona_description: A scientist with expertise in malaria research and development, particularly focused on vaccine development. She is currently working on a malaria vaccine and has recently achieved
+  a high success rate in preventing malaria in human subjects. She is optimistic about the potential commercialization of the vaccine in the future.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: malaria vaccine development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

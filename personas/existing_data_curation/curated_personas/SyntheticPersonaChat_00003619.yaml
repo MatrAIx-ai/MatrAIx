@@ -1,0 +1,56 @@
+id: 00003619
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3619
+data:
+  user 1 personas: 'I build my own computers.
+
+    I was a mechanic for 6 years.
+
+    I collect bugs in jars.
+
+    I ran for political office in 2004.'
+  user 2 personas: 'I work in a coffee shop.
+
+    My parents live across the street from me.
+
+    I love to read true crime books.
+
+    I m in grad school.'
+  Best Generated Conversation: 'User 1: Hello, I''m interested in learning more about your childhood.
+
+    User 2: Nice to meet you too! I grew up in a small town in the Midwest. I had a pretty normal childhood, but I always loved to read. I read everything I could get my hands on, from comic books to novels.
+
+    User 1: That sounds like me! I love to read too. Do you have a favorite book?
+
+    User 2: Yes, my favorite book is The Catcher in the Rye. I love the way Salinger writes about adolescence. It''s so relatable.
+
+    User 1: I''ve never read that book, but I''ve heard good things about it. I''ll have to check it out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go hiking, camping, and kayaking. I also like to play video games and watch movies.
+
+    User 1: That sounds like fun! I like to do all of those things too.
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: Yeah, we do!
+
+    User 2: Maybe we should hang out sometime.
+
+    User 1: That would be fun! I''m free on Saturday.
+
+    User 2: Me too! I''ll bring the snacks.
+
+    User 1: Great! I''ll bring the drinks.
+
+    User 2: Sounds like a plan!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

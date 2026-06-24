@@ -1,0 +1,96 @@
+id: 00002379
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2379
+data:
+  user 1 personas: 'I am a guitar player.
+
+    My parents do not know i am gay.
+
+    Welding is my career field.
+
+    I like playing video games.
+
+    I am primarily a meat eater.'
+  user 2 personas: 'I have three great danes.
+
+    I love the all american rejects.
+
+    I despise sweet potatoes.
+
+    I run marathons.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to run marathons.
+
+    User 1: That''s cool! I''ve never tried that before.
+
+    User 2: It''s a lot of fun! You should give it a try.
+
+    User 1: I might just do that.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a guitar player.
+
+    User 2: That''s cool! I love music.
+
+    User 1: Thanks! I''m pretty good at it.
+
+    User 2: I''m sure you are.
+
+    User 1: I like to play video games too.
+
+    User 2: That''s cool! I used to play a lot of video games, but I don''t have as much time for them anymore.
+
+    User 1: Yeah, I know what you mean.
+
+    User 2: What''s your favorite game?
+
+    User 1: I like a lot of different games, but I think my favorite is Call of Duty.
+
+    User 2: I''ve never played that game.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: Great! What do you do for work?
+
+    User 2: I''m a welder.
+
+    User 1: That''s cool! I''ve never met a welder before.
+
+    User 2: It''s a pretty interesting job.
+
+    User 1: I bet it is.
+
+    User 2: It can be.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to spend time with my dogs.
+
+    User 1: That''s nice! I love dogs.
+
+    User 2: I have three great danes.
+
+    User 1: That''s a lot of dogs!
+
+    User 2: I know, but I love them.
+
+    User 1: I''m sure you do.
+
+    User 2: Yeah, I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

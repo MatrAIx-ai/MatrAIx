@@ -1,0 +1,68 @@
+id: '00002115'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2115
+data:
+  user 1 personas: 'I am an avid artist.
+
+    I want to go to mars.
+
+    I have 3 kids.
+
+    I am a scientist.
+
+    I know karate.'
+  user 2 personas: 'I drive a ford taurus.
+
+    I drink diet coke.
+
+    I work in retail.
+
+    I love katy perry.
+
+    I spend too much time shopping.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: I''m an artist, a scientist, and a karate expert.
+
+    User 2: Wow, that''s really impressive! I''m a retail worker who loves Katy Perry and diet coke.
+
+    User 1: It sounds like we have a lot in common! I love Katy Perry too.
+
+    User 2: Me too! She''s my favorite singer. What''s your favorite song of hers?
+
+    User 1: I''m not sure if I have a favorite, but I really like "Firework" and "Roar."
+
+    User 2: Those are both great songs! I also like "Dark Horse" and "Chained to the Rhythm."
+
+    User 1: Those are both good too! I love her music.
+
+    User 2: Me too! She''s so talented.
+
+    User 1: I agree. So, what do you do for fun?
+
+    User 2: I like to shop, go to the movies, and spend time with my friends.
+
+    User 1: I like to do those things too! I also like to paint and go to the gym.
+
+    User 2: Those sound like fun hobbies! I''ve always wanted to paint, but I''m not very good at it.
+
+    User 1: You should give it a try! It''s a lot of fun, and you can learn a lot from it.
+
+    User 2: I might just do that! Thanks for the suggestion.
+
+    User 1: No problem! So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go shopping or see a movie.
+
+    User 1: Those sound like fun options! I''m going to paint a portrait of my friend''s dog.
+
+    User 2: That sounds like a great way to spend your weekend! I hope you have fun.
+
+    User 1: Thanks! I hope you have fun too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

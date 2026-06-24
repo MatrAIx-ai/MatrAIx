@@ -1,0 +1,70 @@
+id: 00000959
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 959
+data:
+  user 1 personas: 'I drive a prius.
+
+    I work for a large law firm.
+
+    We own our home.
+
+    I hate tofu.
+
+    My wife stays home with our kids.'
+  user 2 personas: 'I am an athlete.
+
+    I went to the university of north carolina.
+
+    I was drafted last years by the minnesota wolves.
+
+    I play basketball.
+
+    I get paid over 5 million a year to dribble a ball.'
+  Best Generated Conversation: 'User 1: I''m a lawyer.
+
+    User 2: I''m a basketball player.
+
+    User 1: Oh, cool! What team do you play for?
+
+    User 2: I play for the Minnesota Timberwolves.
+
+    User 1: Wow! That''s awesome! I''m a big basketball fan.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: So, how did you get into basketball?
+
+    User 2: I started playing when I was really young. I played all through high school and college.
+
+    User 1: That''s great! I''m sure you were really good.
+
+    User 2: I was pretty good, yeah. I was drafted by the Timberwolves last year.
+
+    User 1: That''s amazing! Congratulations!
+
+    User 2: Thanks!
+
+    User 1: So, what''s it like to be a professional basketball player?
+
+    User 2: It''s a lot of fun, but it''s also a lot of hard work.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, it''s a lot of traveling, and it''s tough to be away from your family for long periods of time.
+
+    User 1: But I''m sure it''s worth it.
+
+    User 2: It is. I love playing basketball.
+
+    User 1: That''s great! So, what are your goals for the future?
+
+    User 2: My goal is to win a championship with the Timberwolves.
+
+    User 1: That would be amazing! I''m rooting for you!
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

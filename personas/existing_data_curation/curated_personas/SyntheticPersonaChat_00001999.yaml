@@ -1,0 +1,70 @@
+id: 00001999
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1999
+data:
+  user 1 personas: 'I love smooth jazz.
+
+    I have a poodle named nanette.
+
+    I work on wall street.
+
+    I live in new york city.'
+  user 2 personas: 'I like to fish.
+
+    I love dogs.
+
+    I love to cook.
+
+    My dad was a carsalesman.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to fish! I grew up fishing with my dad, and I still love it to this day.
+
+    User 1: That''s so cool! I love dogs, and my best friend had a poodle named Nanette.
+
+    User 2: I love dogs too! I have a Golden Retriever named Bailey.
+
+    User 1: Bailey, that''s a cute name! I love dogs so much. I''m a dog person all the way.
+
+    User 2: Me too! I love their energy and their love for life.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a chef. I love cooking, and I love to experiment with new recipes.
+
+    User 1: That''s so cool! I love to cook too. I''m not very good at it, but I love trying new things.
+
+    User 2: Well, you''re in luck! I''m always happy to share my recipes.
+
+    User 1: That''s so nice of you! I would love that.
+
+    User 2: Sure! Here''s my favorite recipe for chocolate chip cookies.
+
+    User 1: Oh, my gosh! I love chocolate chip cookies!
+
+    User 2: I know, right? They''re the best!
+
+    User 1: Thanks so much for sharing your recipe! I can''t wait to try it.
+
+    User 2: You''re welcome! I hope you like it.
+
+    User 1: I''m sure I will! I love chocolate chip cookies.
+
+    User 2: Good! I''m glad to hear it.
+
+    User 1: So, what''s your favorite thing to do in New York City?
+
+    User 2: I love to go to the theater. There are so many great shows to see.
+
+    User 1: Me too! I love Broadway shows.
+
+    User 2: Me too! I love to go to the theater with my friends.
+
+    User 1: That sounds like so much fun! I''m glad to hear you have such a great time in New York City.
+
+    User 2: Thanks! I love it here.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

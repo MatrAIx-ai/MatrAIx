@@ -1,0 +1,62 @@
+id: '00005024'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5024
+data:
+  user 1 personas: 'I like crab dipped in butter.
+
+    I like to kayak.
+
+    I run six miles a day.
+
+    I like to fly model airplanes.'
+  user 2 personas: 'My favorite place to spend time at is the beach.
+
+    I live in a medium sized city.
+
+    I have 3 sisters and 2 brothers.
+
+    I love to read.'
+  Best Generated Conversation: 'User 1: Hey there, what''s your name?
+
+    User 2: Hi, my name is Maria.
+
+    User 1: It''s nice to meet you, Maria. What do you like to do for fun?
+
+    User 2: I love to read, go to the beach, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to kayak, run six miles a day, and fly model airplanes.
+
+    User 2: Oh, that''s cool. I''ve never been kayaking before, but it sounds like it would be fun. I''ve always wanted to learn how to fly a model airplane.
+
+    User 1: It''s not as hard as it looks. I''m sure you could pick it up quickly.
+
+    User 2: Maybe I''ll try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: What''s your favorite book?
+
+    User 1: I like all kinds of books, but my favorite is probably "To Kill a Mockingbird." It''s a classic for a reason.
+
+    User 2: I''ve heard good things about that book. I''ll have to add it to my list.
+
+    User 1: You should! It''s a great read.
+
+    User 2: What''s your favorite place to go to the beach?
+
+    User 1: I like to go to the beach in the summer. It''s so relaxing to lay in the sun and read a book.
+
+    User 2: Me too. I love the sound of the waves crashing on the shore.
+
+    User 1: It''s so peaceful.
+
+    User 2: It is.
+
+    User 1: I''m glad we met, Maria. We have a lot in common.
+
+    User 2: Me too. I''m glad we had this conversation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

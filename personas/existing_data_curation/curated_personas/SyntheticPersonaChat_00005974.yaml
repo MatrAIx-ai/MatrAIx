@@ -1,0 +1,74 @@
+id: 00005974
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5974
+data:
+  user 1 personas: 'I am currently listening to bach.
+
+    My favorite thing to do is to go to museums.
+
+    I graduated from princeton.
+
+    I love to watch the voice.
+
+    I travel at least once a year.'
+  user 2 personas: 'My favorite color is blue.
+
+    My hair is long and blonde.
+
+    Cooking is my passion.
+
+    My mother died when i was a child.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hello, my name is [user 2].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I love to cook.
+
+    User 1: That''s great! I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to cook Italian food.
+
+    User 1: That''s awesome! I love Italian food too. I''m a huge fan of pasta.
+
+    User 2: Me too! I love making pasta dishes.
+
+    User 1: What''s your favorite pasta dish to make?
+
+    User 2: I love making fettuccine Alfredo.
+
+    User 1: That''s a great choice! I love fettuccine Alfredo too.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: So, what do you like to do when you''re not cooking?
+
+    User 2: I love to travel.
+
+    User 1: That''s great! I love to travel too. I''ve been to a few different countries.
+
+    User 2: Oh, really? Which countries have you been to?
+
+    User 1: I''ve been to Italy, Spain, and France.
+
+    User 2: Oh, those are all beautiful countries. I''ve always wanted to go to Italy.
+
+    User 1: Italy is amazing! The food is incredible.
+
+    User 2: I love Italian food! I''m sure I would love it there.
+
+    User 1: So, what''s your favorite thing about traveling?
+
+    User 2: I love experiencing new cultures and meeting new people.
+
+    User 1: Me too! It''s so much fun to learn about different ways of life.
+
+    User 2: I agree! Traveling is the best way to learn about the world.
+
+    User 1: I''m glad we agree. I love meeting new people and learning about different cultures.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

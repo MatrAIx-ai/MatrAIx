@@ -1,0 +1,88 @@
+id: '00001556'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1556
+data:
+  user 1 personas: 'I am in 3rd grade.
+
+    I like to play soccer , draw and read asteria.
+
+    I do not have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.
+
+    I am a french girl , but i moved to the us last year.
+
+    I live with my parents and my little brother.'
+  user 2 personas: 'I still have a thick accent so words like hippopotamus are difficult.
+
+    My dogs name is wonton.
+
+    I teach both japanese and drawing classes.
+
+    I came from japan to teach high school over 10 years ago.
+
+    I am still single at the age of 35.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name]. I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Japan.
+
+    User 1: Oh, that''s cool! I''m from France.
+
+    User 2: I''ve always wanted to visit France.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: Maybe I will one day.
+
+    User 1: I hope so!
+
+    User 2: What grade are you in?
+
+    User 1: I''m in third grade.
+
+    User 2: Oh, that''s great! I''m a teacher.
+
+    User 1: Really? What grade do you teach?
+
+    User 2: I teach both Japanese and drawing.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love both of those subjects.
+
+    User 1: What''s your favorite thing about teaching?
+
+    User 2: I love seeing the students learn and grow.
+
+    User 1: That''s great! I''m sure you''re a great teacher.
+
+    User 2: Thank you!
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog named Wonton.
+
+    User 1: That''s a cute name!
+
+    User 2: Thanks! He''s a great dog.
+
+    User 1: I''m glad to hear that.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play soccer, draw, and read.
+
+    User 2: Those all sound like fun things to do.
+
+    User 1: Thank you!
+
+    User 2: It was nice meeting you, [user 1''s name].
+
+    User 1: It was nice meeting you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

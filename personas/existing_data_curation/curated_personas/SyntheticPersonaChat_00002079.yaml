@@ -1,0 +1,52 @@
+id: 00002079
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2079
+data:
+  user 1 personas: 'I am a happy person.
+
+    I like to fish.
+
+    I love dogs.
+
+    I love to cook.'
+  user 2 personas: 'My brother lives in england.
+
+    I have a timeshare in mexico.
+
+    My favorite food is sushi.
+
+    My favorite tv show is friends.
+
+    I own my own business.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m a happy person who loves to fish, cook, and dogs.
+
+    User 2: That sounds like a good life! I love sushi, my favorite tv show is Friends, I own my own business, and my brother lives in England.
+
+    User 1: That''s awesome! I''ve never been to England, but I''ve heard it''s beautiful. What''s your favorite thing about owning your own business?
+
+    User 2: I love the freedom and flexibility it gives me. I can set my own hours and work from anywhere in the world.
+
+    User 1: That sounds great! I can imagine it''s a lot of work, but it must be very rewarding.
+
+    User 2: It is! I love being my own boss and working on projects that I''m passionate about.
+
+    User 1: That''s awesome! I''m glad you''re happy with your life.
+
+    User 2: Thank you! I am very happy.
+
+    User 1: That''s great! It''s nice to meet you.
+
+    User 2: You too! It''s been nice chatting with you.
+
+    User 1: Yes, it has! Have a great day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

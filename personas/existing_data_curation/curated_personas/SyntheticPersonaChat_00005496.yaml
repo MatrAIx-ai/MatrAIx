@@ -1,0 +1,74 @@
+id: 00005496
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5496
+data:
+  user 1 personas: 'I am an environmental engineer.
+
+    I love to hike.
+
+    I live in portland , maine.
+
+    I like to take photos.
+
+    I live alone.'
+  user 2 personas: 'I am 19 years old.
+
+    I recently made the college baseball team.
+
+    I am going to be the starting shortstop.
+
+    My favorite player is mike trout.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. I''m an environmental engineer.
+
+    User 2: Hi, my name is [name]. I''m 19 years old and I recently made the college baseball team.
+
+    User 1: That''s awesome! What position do you play?
+
+    User 2: I''m the starting shortstop.
+
+    User 1: Nice! I love baseball. Who''s your favorite player?
+
+    User 2: My favorite player is Mike Trout.
+
+    User 1: He''s a great player! I''m from Portland, Maine, so I''m a big fan of the Red Sox.
+
+    User 2: I''m from California, so I''m a fan of the Los Angeles Angels.
+
+    User 1: Oh, that''s cool. I''m sure you''re excited to play baseball in college.
+
+    User 2: I am! I''m looking forward to learning from the coaches and getting better at the game.
+
+    User 1: That''s great! I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what are your plans for after college?
+
+    User 2: I''m not sure yet. I''m hoping to play professional baseball, but I''ll see what happens.
+
+    User 1: That''s great! I hope you make it.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play baseball, go hiking, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to hike and go out with my friends too.
+
+    User 2: That''s cool. Maybe we could go hiking together sometime.
+
+    User 1: That would be fun! I''d love to do that.
+
+    User 2: Great! We can exchange numbers and plan something.
+
+    User 1: Sounds good.
+
+    User 2: Nice meeting you, [name].
+
+    User 1: Nice meeting you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

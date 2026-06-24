@@ -1,0 +1,18 @@
+id: 00035961
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35961
+persona_description: A meteorologist who closely follows tropical storms and their impacts on the United States, with a particular interest in the history of these storms and their longevity. They are knowledgeable
+  about the historical records of the Atlantic and are interested in the impact of the longest-lived Atlantic July Tropical Storm on the region. They are also aware of the current conditions of the storm
+  and its potential impact on power outages.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical storm prediction and analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

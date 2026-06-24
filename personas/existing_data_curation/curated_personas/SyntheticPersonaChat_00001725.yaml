@@ -1,0 +1,70 @@
+id: '00001725'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1725
+data:
+  user 1 personas: 'I ride a unicycle.
+
+    My favorite band is metallica.
+
+    I am a college student.
+
+    I work at the grocery store.'
+  user 2 personas: 'I have been to 7 countries in europe and 3 countries in asia.
+
+    I am a financial analyst for a brewery.
+
+    I have tried 35 different types of beer in my lifetime.
+
+    I have been married for 6 years.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you. What do you do for a living?
+
+    User 2: I''m a financial analyst for a brewery.
+
+    User 1: Oh, cool! I''ve always been interested in beer.
+
+    User 2: Me too! I''ve been to 7 countries in Europe and 3 countries in Asia, and I''ve tried over 35 different types of beer.
+
+    User 1: That''s awesome! I''ve only been to a few countries in Europe, but I''ve never been to Asia.
+
+    User 2: You should definitely visit Asia sometime. There are so many amazing places to see and so much delicious food to eat.
+
+    User 1: I will! I''m sure I''ll have a lot of fun.
+
+    User 2: I''m sure you will. So, what do you do for fun?
+
+    User 1: I like to ride my unicycle.
+
+    User 2: Oh, cool! I''ve always wanted to learn how to ride a unicycle.
+
+    User 1: It''s not that hard. It just takes a little practice.
+
+    User 2: I''ll have to give it a try sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what kind of music do you like?
+
+    User 1: I like a lot of different types of music, but my favorite band is Metallica.
+
+    User 2: Oh, cool! I like Metallica too. They''re one of my favorite bands.
+
+    User 1: What''s your favorite album?
+
+    User 2: My favorite album is Ride the Lightning.
+
+    User 1: That''s a great album! My favorite is Master of Puppets.
+
+    User 2: Master of Puppets is a great album too.
+
+    User 1: I''m glad we have similar taste in music.
+
+    User 2: Me too! It''s always nice to find someone who likes the same music as you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

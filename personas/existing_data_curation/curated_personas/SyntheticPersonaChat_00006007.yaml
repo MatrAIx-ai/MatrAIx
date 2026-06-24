@@ -1,0 +1,72 @@
+id: '00006007'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6007
+data:
+  user 1 personas: 'I drive a 2011 volkswagen passat.
+
+    I work as a public affairs liaison.
+
+    I eat too much fast food.
+
+    I am a national guard officer.'
+  user 2 personas: 'My favorite singer is kid rock.
+
+    I have a master s degree.
+
+    My favorite color is purple.
+
+    I am a female.
+
+    I love to swim , and began at a young age.'
+  Best Generated Conversation: 'User 1: I''m a big fan of Kid Rock. What''s your favorite song of his?
+
+    User 2: I love "All Summer Long". It''s so catchy.
+
+    User 1: Me too! That''s one of my favorites too.
+
+    User 2: I also like "Cowboy". It''s a good song to get pumped up to.
+
+    User 1: Yeah, that''s a good one too.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a public affairs liaison for the National Guard.
+
+    User 2: Oh, that''s cool. I''m a swimmer.
+
+    User 1: Really? That''s awesome! I love swimming too.
+
+    User 2: I''ve been swimming since I was a little kid.
+
+    User 1: Me too! I used to swim competitively when I was younger.
+
+    User 2: That''s so cool! I wish I had done that.
+
+    User 1: It was a lot of fun, but it was also a lot of work.
+
+    User 2: I bet. But I''m sure it was worth it.
+
+    User 1: It was. I made a lot of great friends and I learned a lot about myself.
+
+    User 2: That''s great! I''m glad you had a good experience.
+
+    User 1: Thanks! So, what do you do for fun?
+
+    User 2: I like to go swimming, watch movies, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun. I like to do all of those things too.
+
+    User 2: Well, it looks like we have a lot in common.
+
+    User 1: I think so too.
+
+    User 2: We should hang out sometime.
+
+    User 1: That would be great. I''d love to hang out with you.
+
+    User 2: Great! Let''s exchange numbers so we can plan something.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

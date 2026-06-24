@@ -1,0 +1,18 @@
+id: 00011856
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11856
+persona_description: A scientist or environmental scientist who is interested in monitoring crop health and maintenance procedures, particularly in the context of spaceborne thermal emission and reflection
+  radiometer (ASTER) images. They are likely to have expertise in remote sensing, vegetation index calculations, and the analysis of thermal infrared channels. They would be interested in the use of different
+  bands of data to monitor crop health and the potential impacts of excess water on crop damage.
+expertise:
+  general_domain_top1pct: environmental science
+  specific_domain_top1pct: remote sensing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,76 @@
+id: '00002123'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2123
+data:
+  user 1 personas: 'I am dating my boss.
+
+    My favorite flower is a daisy.
+
+    I work at a real estate office.
+
+    I love to sing.'
+  user 2 personas: 'I have red hair.
+
+    I have lots of friends.
+
+    I don t like music.
+
+    I like to ride my scooter.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my scooter and hang out with my friends.
+
+    User 1: What kind of scooter do you have?
+
+    User 2: I have a Vespa.
+
+    User 1: Nice! I''ve always wanted a Vespa.
+
+    User 2: They''re a lot of fun.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to go to concerts and listen to music.
+
+    User 1: Me too! I love going to concerts.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but my favorite is probably country music.
+
+    User 2: I don''t really listen to country music.
+
+    User 1: That''s okay. There''s something for everyone.
+
+    User 2: Yeah, I guess so.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is. I love being with my kids.
+
+    User 1: Do you have any hobbies?
+
+    User 2: I like to crochet.
+
+    User 1: That''s cool. I''ve always wanted to learn how to crochet.
+
+    User 2: It''s not that hard to learn.
+
+    User 1: Maybe I''ll give it a try.
+
+    User 2: You should!
+
+    User 1: I think I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

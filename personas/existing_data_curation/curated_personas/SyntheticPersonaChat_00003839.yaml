@@ -1,0 +1,60 @@
+id: 00003839
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3839
+data:
+  user 1 personas: 'My hiking boots are pink.
+
+    I like folk music.
+
+    The appalachian trail is my favorite.
+
+    I love to hike.'
+  user 2 personas: 'I love to walk in the woods.
+
+    I love animals.
+
+    I love to watch ted talks.
+
+    I don t much like tv.'
+  Best Generated Conversation: 'User 1: Hey! I''m looking for someone to go hiking with.
+
+    User 2: Hi! I love hiking! I''m always looking for new trails to explore.
+
+    User 1: That''s great! I''m a big fan of the Appalachian Trail. Have you ever been?
+
+    User 2: No, but I''ve always wanted to go! It looks so beautiful.
+
+    User 1: It is! It''s one of the most amazing trails in the world.
+
+    User 2: I''m really impressed by your hiking boots. What''s the story behind them?
+
+    User 1: They''re my favorite hiking boots! I got them when I went on my first big hike.
+
+    User 2: That''s awesome! I''m always looking for new hiking gear.
+
+    User 1: I love folk music! Do you have any favorite artists?
+
+    User 2: I love The Avett Brothers and The Lumineers.
+
+    User 1: Me too! They''re both great bands.
+
+    User 2: I love going to concerts. Have you been to any good concerts lately?
+
+    User 1: I went to see The Lumineers a few months ago. It was an amazing show!
+
+    User 2: That''s awesome! I''m jealous!
+
+    User 1: I''m always looking for someone to go hiking with.
+
+    User 2: Me too! It''s always more fun to have company.
+
+    User 1: I''m free this weekend if you want to go hiking.
+
+    User 2: That sounds great! I''m free too.
+
+    User 1: Great! Let''s make a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

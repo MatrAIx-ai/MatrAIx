@@ -1,0 +1,60 @@
+id: 00000768
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 768
+data:
+  user 1 personas: 'I love animals.
+
+    I m going back to school.
+
+    I love country.
+
+    I m a vegan.'
+  user 2 personas: 'I am a military veteran.
+
+    I love travelling and discovering new cultures.
+
+    I volunteer at my local animal shelter.
+
+    I have been married for 20 years.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: You too. What do you do for fun?
+
+    User 2: I like to travel, discover new cultures, and volunteer at my local animal shelter.
+
+    User 1: That sounds great! I like to go to concerts, visit museums, and spend time with my family.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like country music.
+
+    User 2: Oh, me too! I love the old country music from the ''70s and ''80s.
+
+    User 1: Me too! I''m going back to school to be a music teacher.
+
+    User 2: That''s awesome! What kind of music are you going to teach?
+
+    User 1: I''m going to teach country music.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I''m excited to start.
+
+    User 2: I''m sure you''ll do great. What else do you like to do?
+
+    User 1: I love animals. I have two cats and a dog.
+
+    User 2: Oh, I love animals too! I have two dogs and a cat.
+
+    User 1: That''s awesome! We should go to the animal shelter together sometime.
+
+    User 2: I''d love to!
+
+    User 1: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

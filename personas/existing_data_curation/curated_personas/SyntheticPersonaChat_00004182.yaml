@@ -1,0 +1,62 @@
+id: 00004182
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4182
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    Everyday i go swimming at the y.
+
+    I collect stamps.
+
+    I love going to concerts on the weekend.
+
+    My mom taught me how to play the cello.'
+  user 2 personas: 'My name is todd.
+
+    I am 8 years old.
+
+    My favorite hero is superman.
+
+    I want to grow up to be a superhero one day.
+
+    I love comic books.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is Todd.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read comic books and watch superhero movies.
+
+    User 1: That''s cool! I like to read comic books too. What''s your favorite superhero?
+
+    User 2: My favorite superhero is Superman. He''s so strong and powerful.
+
+    User 1: I like Superman too! He''s my favorite superhero too.
+
+    User 2: Do you think you''ll grow up to be a superhero?
+
+    User 1: I don''t know, but I would like to try.
+
+    User 2: Me too! I think it would be so cool to be able to fly and have super strength.
+
+    User 1: Yeah, it would be awesome!
+
+    User 2: Maybe we can start our own superhero team one day.
+
+    User 1: That would be so cool! We could call ourselves the Blue and the Black.
+
+    User 2: Yeah, that''s a great name!
+
+    User 1: I think we should start practicing our superhero skills right away.
+
+    User 2: Okay, I''m ready!
+
+    User 1: Let''s go!
+
+    User 2: This is going to be so much fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00008948
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8948
+persona_description: A nuclear reactor engineer or nuclear technology expert who is interested in the design and analysis of pressurized water reactors, particularly those developed by Framatome ANP, Electricité
+  de France (EDF), and the German utilities. This persona is likely to have expertise in computational fluid dynamics, thermal hydraulics, and the development of numerical tools for hydraulics simulations.
+  They are also familiar with the design and operation of pressurized water reactors, and may have experience in the mechanical design of reactor internals.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: nuclear technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: nuclear technology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

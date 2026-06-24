@@ -1,0 +1,66 @@
+id: '00006113'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6113
+data:
+  user 1 personas: 'My brother thinks he is a viking.
+
+    My masters degree is in italian literature.
+
+    My nails are painted green.
+
+    I have a pet skunk.
+
+    I live in a nice attic apartment in portland or.'
+  user 2 personas: 'I am a blackjack dealer.
+
+    I graduated with a statistics degree.
+
+    I know how to count cards in blackjack.
+
+    I have 3 kids.
+
+    I am currently going back to school to try and become a casino manager.'
+  Best Generated Conversation: 'User 1: Hey! I''m a masters degree holder in Italian Literature.
+
+    User 2: Wow, that''s awesome! I graduated with a statistics degree.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a blackjack dealer, but I''m currently going back to school to try and become a casino manager.
+
+    User 1: That sounds interesting! I have a pet skunk, what kind of pets do you have?
+
+    User 2: I have three kids!
+
+    User 1: Wow, that''s a lot! Are they all boys or girls?
+
+    User 2: Two boys and one girl.
+
+    User 1: How old are they?
+
+    User 2: The oldest is 10, the middle one is 8, and the youngest is 5.
+
+    User 1: That''s great! I have a brother who thinks he''s a viking, what''s the most interesting thing about your kids?
+
+    User 2: The youngest one is obsessed with dinosaurs. He can name all of them and even knows some facts about them.
+
+    User 1: That''s amazing! I love dinosaurs too.
+
+    User 2: Me too! We''re going to the natural history museum this weekend.
+
+    User 1: That sounds like a lot of fun! I''m going to visit my brother in Portland soon.
+
+    User 2: Oh, that''s cool! I live in Portland.
+
+    User 1: I didn''t know that! We should meet up for coffee sometime.
+
+    User 2: That would be great! I love meeting new people.
+
+    User 1: Me too! I''ll DM you my number.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

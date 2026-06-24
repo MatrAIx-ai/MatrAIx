@@ -1,0 +1,20 @@
+id: 00021979
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21979
+persona_description: A computer scientist in Japan who specializes in cryptography and has developed a new way to break the WPA encryption system used in wireless routers. This breakthrough attack gives
+  hackers a way to read encrypted traffic sent between computers and certain types of routers that use the WPA encryption system. The attack was developed by Toshihiro Ohigashi and Masakatu Morii, who plan
+  to discuss further details at a technical conference set for Sept. 25 in Hiroshima. The earlier attack, developed by researchers Martin Beck and Erik Tews, worked on a smaller range of WPA devices and
+  took between 12 and 15 minutes to work. Both attacks work only on WPA systems that use the Temporal Key Integrity Protocol (TKIP) algorithm. They do not work on newer WPA 2 devices or on WPA systems that
+  use the stronger Advanced Encryption Standard (AES) algorithm.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Cryptography
+  general_domain_top01pct: None
+  specific_domain_top01pct: Cryptography
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: 00003708
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3708
+data:
+  user 1 personas: 'I like eating vegetables.
+
+    I allergic to peanuts.
+
+    I m usually very shy.
+
+    I have trouble getting along with family.'
+  user 2 personas: 'I like to use a lot of exclamation marks when i type.
+
+    I live in chicago.
+
+    Both my moms tell me they love me when i call them.
+
+    I have three dogs and two cats.
+
+    Playing quake on slackware linux makes me happy.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 2''s name]! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, and I love animals.
+
+    User 1: That''s cool! I like to play video games too, and I love animals too.
+
+    User 2: Oh, that''s great! What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I especially like action games and RPGs.
+
+    User 2: Oh, I love action games too! What are some of your favorite action games?
+
+    User 1: I love the Uncharted series, the God of War series, and the Tomb Raider series.
+
+    User 2: Oh, those are all great games! I love them too.
+
+    User 1: What kind of animals do you have?
+
+    User 2: I have three dogs and two cats.
+
+    User 1: Oh, that''s awesome! I love dogs and cats.
+
+    User 2: Me too! They''re the best pets.
+
+    User 1: I agree! So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a student.
+
+    User 2: Oh, that''s great! What are you studying?
+
+    User 1: I''m studying computer science.
+
+    User 2: Oh, that''s awesome! I''m a big fan of computer science.
+
+    User 1: I agree! It''s such a cool field.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and go out with friends.
+
+    User 1: That''s cool! I like to do those things too.
+
+    User 2: Oh, that''s great! We should get together sometime and play some video games or go to a movie.
+
+    User 1: That would be fun! I''d love to.
+
+    User 2: Great! I''ll send you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

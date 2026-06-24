@@ -1,0 +1,19 @@
+id: 00063994
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63994
+persona_description: A biochemist or a researcher in the field of neurodegenerative diseases, particularly focusing on the study of amyotrophic lateral sclerosis (ALS) and how protein folding plays a role
+  in the development of the disease. This persona is interested in understanding the molecular mechanisms behind protein misfolding and the resulting neurodegeneration. They are likely to have expertise
+  in protein engineering, crystallography, and nuclear magnetic resonance techniques, as well as a deep understanding of the role of superoxide dismutase 1 (SOD1) in the process. They are also likely to
+  be interested in pharmaceutical strategies to selectively stabilize SOD1 and prevent its pathological aggregation, which could potentially lead to the development of new treatments for ALS.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: neurodegenerative disease research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

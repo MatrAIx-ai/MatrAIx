@@ -1,0 +1,80 @@
+id: 00002838
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2838
+data:
+  user 1 personas: 'I like to play tennis.
+
+    I love watching funny movies.
+
+    I listen to all kinds of music.
+
+    My favorite color is green.'
+  user 2 personas: 'I am a vegan.
+
+    My favorite artist is bob ross.
+
+    My mother has her own fashion brand.
+
+    I got a job as an accountant 3 months ago.
+
+    I enjoy hiking.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hike, paint, and watch funny movies.
+
+    User 1: Wow, we have a lot in common! I also like to hike, paint, and watch funny movies.
+
+    User 2: That''s great! We should go hiking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: I''m free this weekend if you want to go.
+
+    User 1: I''m free too! What time do you want to meet?
+
+    User 2: Let''s meet at the park at 10am.
+
+    User 1: Sounds good! See you then.
+
+
+    User 1: Hey! We''re here.
+
+    User 2: I''m here too!
+
+    User 1: Let''s go find a trail to hike.
+
+    User 2: Okay, I''m game.
+
+
+    User 1: This trail looks good.
+
+    User 2: It does! Let''s start hiking.
+
+
+    User 1: This is so much fun!
+
+    User 2: I know, right? I love hiking.
+
+
+    User 1: Me too! It''s so peaceful and relaxing.
+
+    User 2: I know, right? I could do this all day.
+
+
+    User 1: We should do this again soon.
+
+    User 2: I would love that!
+
+
+    User 1: Bye! It was nice hiking with you.
+
+    User 2: Bye! It was nice hiking with you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

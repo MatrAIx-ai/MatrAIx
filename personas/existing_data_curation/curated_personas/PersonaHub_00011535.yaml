@@ -1,0 +1,19 @@
+id: '00011535'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11535
+persona_description: A chemist with expertise in atmospheric chemistry and air quality modeling, particularly in the fields of aerosol, water vapor, and ozone retrievals. He/she is interested in developing
+  and applying advanced numerical models and algorithms for quantitatively estimating aerosol properties from automated lidar ceilometers. The persona is also interested in the development of air quality
+  time series analysis and detection of interventions in air quality. Additionally, the persona is likely to be familiar with the use of meteorological normalisation techniques for air quality monitoring
+  and has experience in using a comprehensive chemical transport model to study air pollutants over urban areas.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: atmospheric chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,62 @@
+id: '00003533'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3533
+data:
+  user 1 personas: 'My dog is called alfred.
+
+    My favourite colour is green.
+
+    I like to read books about chinese history.
+
+    I am a baseball player.
+
+    I can play the piano.'
+  user 2 personas: 'I grew up with 6 siblings.
+
+    I ve broken my arm twice.
+
+    My parents were divorced.
+
+    I am a widow.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Jane.
+
+    User 1: Hi Jane, nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, play piano, and spend time with my dog.
+
+    User 1: That''s cool, I like to read and play piano too! What kind of books do you like to read?
+
+    User 2: I like to read historical fiction, especially books about China.
+
+    User 1: That''s interesting, I''ve never read a historical fiction book about China before. Do you have any recommendations?
+
+    User 2: Sure, I recommend "The Joy Luck Club" by Amy Tan. It''s a great book about four Chinese-American mothers and their daughters.
+
+    User 1: Thanks for the recommendation, I''ll check it out!
+
+    User 2: No problem! What kind of music do you like to play on the piano?
+
+    User 1: I like to play classical music, but I also like to play some popular songs.
+
+    User 2: That''s awesome, I love playing classical music too!
+
+    User 1: Me too! I think it''s so beautiful.
+
+    User 2: Yeah, it is. I also love the challenge of playing classical pieces.
+
+    User 1: Me too! It''s so satisfying when you finally get a piece down.
+
+    User 2: Exactly! I also like to play popular songs because they''re more fun to play.
+
+    User 1: Me too! I love getting everyone to sing along.
+
+    User 2: Yeah, it''s so much fun to play music with other people.
+
+    User 1: I agree! It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

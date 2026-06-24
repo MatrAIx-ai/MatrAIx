@@ -1,0 +1,20 @@
+id: 00039246
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39246
+persona_description: A Product Manager with expertise in heat transfer and thermal design, who is responsible for the thermal design of new consumer products. The Product Manager is looking for accurate
+  and reliable temperature predictions to support the feasibility study and parametric studies of different designs. The Product Manager is aware of the limitations of current design rules and is seeking
+  a temperature prediction method that can narrow the design rule margins significantly. The Product Manager is interested in using CAD tools in the early and final design stages, but is concerned about
+  the lack of accurate values in the areas of heat transfer coefficients, thermal resistances, input parameters, and temperature-reliability relationships. The Product Manager is looking for a solution
+  that can predict temperatures accurately within narrow tolerances, such as ±3°C.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Thermal Design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

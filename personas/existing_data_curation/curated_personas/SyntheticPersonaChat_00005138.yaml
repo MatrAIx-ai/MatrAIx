@@ -1,0 +1,58 @@
+id: 00005138
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5138
+data:
+  user 1 personas: 'My favorite flower is a rose.
+
+    My favorite color is orange.
+
+    I am a vegan.
+
+    I have a cat named jasper.'
+  user 2 personas: 'I think i have talent for it.
+
+    I did not pass the audition , but i will keep trying.
+
+    I auditionated in a cooking show.
+
+    Since young i have loved to cook.
+
+    I took classes while growing up.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to cook?
+
+    User 2: I really like to cook pasta, I''ve been taking classes since I was young and I think I have a talent for it.
+
+    User 1: That''s really cool! I love pasta too, what''s your favorite kind?
+
+    User 2: I really like penne, it''s so versatile and you can make so many different things with it.
+
+    User 1: I like penne too! I also like spaghetti, it''s so simple but so delicious.
+
+    User 2: I agree, spaghetti is always a good choice.
+
+    User 1: So, have you ever tried cooking anything vegan?
+
+    User 2: I have, but I''m not very good at it yet. I''m trying to learn more about it though, because I have a friend who''s vegan and I want to be able to cook for her.
+
+    User 1: That''s great! I''m sure you''ll get better at it the more you practice.
+
+    User 2: I hope so! I''ve been trying to find some good recipes, but it''s hard to find ones that are both vegan and good.
+
+    User 1: I know what you mean, it can be hard to find good vegan recipes. But I''m sure you''ll find some good ones eventually.
+
+    User 2: I hope so!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to cook, obviously, but I also like to read, go for walks, and play video games.
+
+    User 1: I like to cook too, and I also like to read, go for walks, and play video games.
+
+    User 2: That''s great! We have a lot in common.
+
+    User 1: I think so too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

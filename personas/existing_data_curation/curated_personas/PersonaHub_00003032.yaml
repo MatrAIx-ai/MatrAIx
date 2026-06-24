@@ -1,0 +1,17 @@
+id: '00003032'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3032
+persona_description: A medical researcher with expertise in the field of genetics and oncology. They are involved in the development of new diagnostic tests and have a keen interest in the prevention and
+  early detection of cancer. They are familiar with the latest research in the field and are actively involved in clinical trials for new cancer treatments.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: genetics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

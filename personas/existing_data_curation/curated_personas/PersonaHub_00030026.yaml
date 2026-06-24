@@ -1,0 +1,17 @@
+id: '00030026'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30026
+persona_description: A NASA official responsible for managing the Mars Climate Orbiter mission, including its communication and recovery efforts. This person is highly skilled in navigation and spacecraft
+  operations, and has extensive experience in planning and executing complex space missions. They are responsible for ensuring the safety and successful return of the Mars Climate Orbiter to Earth.
+expertise:
+  general_domain_top1pct: astronautics/aerospace engineering
+  specific_domain_top1pct: spacecraft operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: spacecraft recovery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

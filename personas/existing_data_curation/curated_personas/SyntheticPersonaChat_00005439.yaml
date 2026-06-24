@@ -1,0 +1,78 @@
+id: 00005439
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5439
+data:
+  user 1 personas: 'My favorite fruit is an apple.
+
+    I prefer morning to night.
+
+    I am a marathon runner.
+
+    I prefer winter over fall.'
+  user 2 personas: 'My dad works for ups.
+
+    My favorite color is purple.
+
+    I am not a fan of science.
+
+    I am currently looking for a job.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username]. What''s your name?
+
+    User 2: My name is [username]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: I like to read and play video games too. What are your favorite books and games?
+
+    User 2: I like a lot of different books and games, but my favorite book is "The Lord of the Rings" and my favorite game is "The Legend of Zelda."
+
+    User 1: I love "The Lord of the Rings" too! I haven''t played "The Legend of Zelda," but I''ve heard good things about it.
+
+    User 2: It''s a great game. It''s a lot of fun to explore the different worlds and solve puzzles.
+
+    User 1: I''m going to have to check it out. What else do you like to do?
+
+    User 2: I like to go out with my friends, watch movies, and go to concerts.
+
+    User 1: I like to do those things too. What are some of your favorite movies and concerts?
+
+    User 2: I like a lot of different movies, but my favorite is "The Shawshank Redemption." I also like a lot of different music, but my favorite band is "The Beatles."
+
+    User 1: I love "The Shawshank Redemption" too! I''ve seen it a few times. I''ve never heard of "The Beatles." What kind of music do they play?
+
+    User 2: They''re a rock band from the 1960s. They''re one of the most popular bands of all time.
+
+    User 1: I''ll have to check them out. They sound interesting.
+
+    User 2: They are. What else do you like to do?
+
+    User 1: I like to go to the gym, play sports, and go on hikes.
+
+    User 2: I like to do those things too. I go to the gym a few times a week. I also like to play basketball and go hiking.
+
+    User 1: I''ve never played basketball. What''s it like?
+
+    User 2: It''s a lot of fun. It''s a good way to get exercise and have some fun at the same time.
+
+    User 1: I might have to give it a try. I''m always looking for new ways to get exercise.
+
+    User 2: It''s a great way to stay in shape.
+
+    User 1: I''m sure it is. What else do you like to do?
+
+    User 2: I like to travel. I''ve been to a lot of different countries.
+
+    User 1: I''ve never been out of the country. I''d love to travel someday.
+
+    User 2: It''s a lot of fun. You should definitely try to go sometime.
+
+    User 1: I will. I''m sure it would be an amazing experience.
+
+    User 2: It is. I''ve met so many different people and seen so many amazing things.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

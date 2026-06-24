@@ -1,0 +1,62 @@
+id: '00003123'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3123
+data:
+  user 1 personas: 'I like to make cookies.
+
+    My favorite drink is coke.
+
+    I like to train dogs.
+
+    I like bagels with everything on them.'
+  user 2 personas: 'I play the drums.
+
+    I work at the pizza parlor.
+
+    I grew up in the projects of chicago.
+
+    I m the oldest of three boys.
+
+    My mother was a single mother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play drums, work at the pizza parlor, and hang out with my friends.
+
+    User 1: That sounds fun. I like to make cookies, train dogs, and go to the bagel shop.
+
+    User 2: Cool! What''s your favorite type of cookie?
+
+    User 1: I like chocolate chip cookies with everything on them.
+
+    User 2: Me too! Those are my favorite too.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I like to play rock and roll.
+
+    User 1: Me too! I love to play the drums to rock and roll music.
+
+    User 2: That''s awesome! I''m actually in a band.
+
+    User 1: Really? That''s so cool! What''s your band''s name?
+
+    User 2: Our band''s name is The Black Sheep.
+
+    User 1: That''s a great name! I''ll have to check out your music sometime.
+
+    User 2: Thanks! We''re actually playing a show next weekend.
+
+    User 1: Oh, cool! I''ll try to come.
+
+    User 2: Awesome! I hope you can make it.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

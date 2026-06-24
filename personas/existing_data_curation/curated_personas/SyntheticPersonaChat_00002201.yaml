@@ -1,0 +1,78 @@
+id: '00002201'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2201
+data:
+  user 1 personas: 'I have 3 small dogs.
+
+    I tutor kids in my spare time.
+
+    I used to be very religious.
+
+    I have a personal trainer.
+
+    I love to ride bikes.'
+  user 2 personas: 'I am not very good at playing basketball.
+
+    I don t really like vegetables or fruit but i pretend.
+
+    I like playing badminton.
+
+    My family owns a dairy farm.
+
+    I once rescued a baby on a highway.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m [User 1''s name].
+
+    User 2: Nice to meet you, I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play badminton, and I like to rescue babies on the highway.
+
+    User 1: That''s so interesting! I''ve never rescued a baby on the highway before.
+
+    User 2: It''s not something I recommend doing, but it was a really rewarding experience.
+
+    User 1: I''m sure it was. What are some other hobbies of yours?
+
+    User 2: I like to play basketball, but I''m not very good at it.
+
+    User 1: That''s okay, I''m not very good at basketball either.
+
+    User 2: I also like to ride bikes.
+
+    User 1: That''s a great hobby! I used to ride bikes a lot when I was younger.
+
+    User 2: I''m glad you think so.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work on a dairy farm.
+
+    User 1: That sounds like a fun job.
+
+    User 2: It is, I get to work with animals all day.
+
+    User 1: That''s great. So, what''s your favorite thing about yourself?
+
+    User 2: I''m a good listener.
+
+    User 1: That''s a great quality.
+
+    User 2: Thanks. What''s your favorite thing about yourself?
+
+    User 1: I''m a good tutor.
+
+    User 2: That''s also a great quality.
+
+    User 1: Thanks. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

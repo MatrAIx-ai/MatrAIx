@@ -1,0 +1,76 @@
+id: 00007695
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7695
+data:
+  user 1 personas: 'As a child , i won a national spelling bee.
+
+    I have been published in the new yorker magazine.
+
+    I am a gourmet cook.
+
+    I have perfect pitch.'
+  user 2 personas: 'I am very athletic.
+
+    I wear contacts.
+
+    I have brown hair.
+
+    I love bicycling.
+
+    I hate carrots.'
+  Best Generated Conversation: 'User 1: I''m a gourmet cook and have been published in the New Yorker.
+
+    User 2: That''s impressive! I''m not so much of a cook, I''m more of an athlete.
+
+    User 1: That''s cool! What sports do you like?
+
+    User 2: I love bicycling, it''s my favorite form of exercise.
+
+    User 1: That''s a great way to stay in shape.
+
+    User 2: Yeah, it''s a lot of fun too.
+
+    User 1: Do you ever compete?
+
+    User 2: I used to, but I don''t have as much time for it anymore.
+
+    User 1: That''s understandable.
+
+    User 2: Yeah, I still like to bike for fun though.
+
+    User 1: That''s great.
+
+    User 2: So, what''s your favorite food to cook?
+
+    User 1: I love making pasta dishes, especially lasagna.
+
+    User 2: Lasagna is delicious! I love it when it''s made with lots of cheese.
+
+    User 1: Me too! I always use a lot of cheese in my lasagna.
+
+    User 2: That''s the way to do it.
+
+    User 1: I also like to make seafood dishes.
+
+    User 2: I love seafood too! I could eat fish every day.
+
+    User 1: Me too! I love salmon, shrimp, and scallops.
+
+    User 2: Me too! I love all seafood.
+
+    User 1: So, what do you like to do when you''re not bicycling?
+
+    User 2: I like to read, watch movies, and hang out with friends.
+
+    User 1: That sounds fun. I like to do those things too.
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great! I''ll send you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

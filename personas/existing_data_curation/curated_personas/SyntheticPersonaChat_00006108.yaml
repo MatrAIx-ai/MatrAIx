@@ -1,0 +1,74 @@
+id: 00006108
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6108
+data:
+  user 1 personas: 'Many people want to be my friend.
+
+    I love to exercise.
+
+    I have a nice smile.
+
+    I like makeup.'
+  user 2 personas: 'My poppa has a train set that i play with.
+
+    I have a dog named percy.
+
+    I like thomas the tank engine.
+
+    My cat died.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play with my dog, Percy.
+
+    User 1: I like dogs too! What kind of dog is Percy?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so sweet and friendly.
+
+    User 2: Yeah, they are. Percy is the best dog ever.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to play with my train set.
+
+    User 1: You have a train set? That''s cool!
+
+    User 2: Yeah, my poppa gave it to me.
+
+    User 1: What''s your favorite thing about your train set?
+
+    User 2: I like to build new tracks and make my trains go through them.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: So, what are some of your favorite things about yourself?
+
+    User 2: I like that I''m always smiling and laughing.
+
+    User 1: That''s a great quality to have. I like that about you too.
+
+    User 2: Thanks!
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be a train engineer.
+
+    User 1: That''s a great goal! I hope you achieve it.
+
+    User 2: Thanks!
+
+    User 1: It was nice meeting you, [user 2 name].
+
+    User 2: It was nice meeting you too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

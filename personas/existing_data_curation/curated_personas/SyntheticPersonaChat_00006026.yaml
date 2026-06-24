@@ -1,0 +1,74 @@
+id: '00006026'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6026
+data:
+  user 1 personas: 'I have freckles all over my face.
+
+    I love to read romance novels.
+
+    I work in construction.
+
+    I was in the army.'
+  user 2 personas: 'I am a female.
+
+    I have blonde hair.
+
+    I like skateboarding.
+
+    My favorite food is pizza.
+
+    I am in high school.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name)!
+
+    User 2: Nice to meet you, I''m (name)!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to skateboard, what about you?
+
+    User 1: I like to read romance novels.
+
+    User 2: Oh, I''ve never read one before. What''s it like?
+
+    User 1: They''re usually about a woman who falls in love with a man, but there''s always some conflict in the way.
+
+    User 2: That sounds interesting.
+
+    User 1: Yeah, I''m a sucker for a good love story.
+
+    User 2: Me too! What''s your favorite romance novel?
+
+    User 1: I''m not sure I can pick just one, but I really like the "Bridget Jones" series.
+
+    User 2: Oh, I''ve heard of that one! I''ve never read it, but I''ve heard it''s good.
+
+    User 1: It is! It''s a really funny and heartwarming story.
+
+    User 2: I''ll have to check it out.
+
+    User 1: I hope you like it! So, what''s your favorite food?
+
+    User 2: My favorite food is pizza!
+
+    User 1: Me too! I love all kinds of pizza.
+
+    User 2: Me too! I especially like pepperoni and pineapple pizza.
+
+    User 1: That''s a good combination! I''m more of a plain cheese pizza kind of girl.
+
+    User 2: Nothing wrong with that!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to skateboard, hang out with friends, and go to the movies.
+
+    User 1: Me too! I like to do all of those things.
+
+    User 2: We should hang out sometime!
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

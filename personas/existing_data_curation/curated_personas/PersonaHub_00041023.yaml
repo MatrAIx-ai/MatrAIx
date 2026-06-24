@@ -1,0 +1,18 @@
+id: '00041023'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41023
+persona_description: A healthcare professional who specializes in cardiology and obstetrics, with a particular interest in the prevention and management of aortic diseases during pregnancy. She/He is knowledgeable
+  about the risks and complications associated with aortic dissection, and has experience in evaluating maternal and fetal risk, counseling, and genetic testing. The persona is also familiar with the importance
+  of pre-pregnancy care for women with known aortic disease and the potential for aortic dissections to occur during pregnancy.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardio-obstetrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: aortic disease management in pregnancy
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

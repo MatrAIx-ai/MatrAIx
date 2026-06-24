@@ -1,0 +1,68 @@
+id: 00006901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6901
+data:
+  user 1 personas: 'We also have three dogs and two cats.
+
+    I work as a physical therapist , and my wife is a school nurse.
+
+    My wife and i have 2 children.
+
+    My name is john and i live in dallas , tx.
+
+    Our kids are 14 and 12 years old.'
+  user 2 personas: 'So i started a small business.
+
+    It s been doing better than i expected.
+
+    I sell miscelaneous stuff in local fairs.
+
+    I haven t had luck with finding a job.
+
+    I recently graduated from college.'
+  Best Generated Conversation: 'User 1: I''m John, and I live in Dallas, TX. I work as a physical therapist, and my wife is a school nurse. We have two children, a boy and a girl, who are 14 and 12 years
+    old respectively. We also have three dogs and two cats.
+
+    User 2: Hi, my name is Mary. I recently graduated from college and haven''t had luck with finding a job, so I started a small business selling miscellaneous stuff at local fairs. It''s been doing better
+    than I expected!
+
+    User 1: That''s great! What kind of stuff do you sell?
+
+    User 2: I sell a little bit of everything, but my best-selling items are handmade jewelry, home decor, and candles.
+
+    User 1: Those sound really nice! I''m sure they''re selling well because they''re so unique.
+
+    User 2: Thanks! I''m glad you like them.
+
+    User 1: So, what are your plans for the future? Do you want to keep your business going or do you plan on looking for a job?
+
+    User 2: I''m not sure yet. I''m really enjoying running my own business, but I''m also open to finding a job if the right opportunity comes along.
+
+    User 1: Well, I''m sure you''ll make the right decision. You seem like a smart and capable person.
+
+    User 2: Thank you! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to read, cook, and spend time with my family and friends.
+
+    User 1: Those sound like great hobbies. I love to cook too!
+
+    User 2: Me too! I love trying new recipes and experimenting in the kitchen.
+
+    User 1: I know what you mean. I''m always trying to find new recipes to try.
+
+    User 2: It''s so much fun to see how your dishes turn out.
+
+    User 1: It is! And it''s even more fun to share them with your friends and family.
+
+    User 2: Exactly! That''s the best part.
+
+    User 1: I''m glad we''re on the same page about that.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

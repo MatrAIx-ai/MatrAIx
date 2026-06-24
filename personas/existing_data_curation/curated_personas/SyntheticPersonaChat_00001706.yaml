@@ -1,0 +1,60 @@
+id: '00001706'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1706
+data:
+  user 1 personas: 'I make 50k a year.
+
+    I work for peta.
+
+    I am a vegetarian.
+
+    I like to make clothes.'
+  user 2 personas: 'I listen to podcasts.
+
+    I have a long drive to work.
+
+    I like to read.
+
+    I am a diabetic.
+
+    Traffic makes me mad.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: I''m listening to a podcast about the history of the Roman Empire.
+
+    User 1: Oh, cool. I like history. What''s your favorite period?
+
+    User 2: I''m really interested in the Renaissance. I think it was a time of great artistic and cultural achievement.
+
+    User 1: Me too! I''m also a fan of the Victorian era. I love the clothes and the architecture.
+
+    User 2: I love the Victorian era too! It''s so romantic.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a software engineer. I have a long drive to work every day, but I get to listen to podcasts and audiobooks, so it''s not so bad.
+
+    User 1: I''m a vegetarian too! I like to make my own clothes.
+
+    User 2: That''s really cool! I''m not a vegetarian, but I do like to cook.
+
+    User 1: What do you like to cook?
+
+    User 2: I love to make Italian food. I''m also a big fan of Asian cuisine.
+
+    User 1: I love Italian food too! I''m not a big fan of Asian food, but I do like sushi.
+
+    User 2: I love sushi too! It''s so delicious.
+
+    User 1: I''m glad we have something in common!
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: That would be great! I''m free this weekend if you are.
+
+    User 2: I''m free this weekend too! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,83 @@
+id: 00006993
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6993
+data:
+  user 1 personas: 'I like to plant flowers in my gardens.
+
+    I enjoy cooking for people.
+
+    My mother lives with me.
+
+    I have a lizard named ragini.'
+  user 2 personas: 'I love to go running.
+
+    My favorite truck is a chevy drama.
+
+    My favorite store is american eagle.
+
+    I enjoy spending time with my family.
+
+    I do not like vegetables.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [name].
+
+
+    User 2: Hello, I''m [name].
+
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+
+    User 2: I love to go running.
+
+
+    User 1: Oh, that''s great! I love to run too. Where do you like to run?
+
+
+    User 2: I usually run in my neighborhood, but I also like to run on trails.
+
+
+    User 1: I love running on trails too. I think it''s so peaceful.
+
+
+    User 2: Me too! It''s a great way to get exercise and enjoy nature at the same time.
+
+
+    User 1: What other hobbies do you have?
+
+
+    User 2: I love to spend time with my family. We go out to eat a lot, and we also like to go on vacation together.
+
+
+    User 1: That sounds like a lot of fun! I love spending time with my family too.
+
+
+    User 2: What''s your favorite thing to do with your family?
+
+
+    User 1: I love to cook for them. I''m not a professional chef, but I like to experiment in the kitchen.
+
+
+    User 2: That''s great! I love to cook too. What''s your favorite thing to cook?
+
+
+    User 1: I love to cook Italian food. I make a mean lasagna.
+
+
+    User 2: Lasagna is my favorite! I''m a vegetarian, so I always have to make my own version.
+
+
+    User 1: I''m sure yours is delicious! I love vegetables, so I always put a lot of them in my lasagna.
+
+
+    User 2: I love vegetables too! We should have lasagna together sometime.
+
+
+    User 1: That would be great! I''ll bring the lasagna, and you can bring the wine.
+
+
+    User 2: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

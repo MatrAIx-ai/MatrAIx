@@ -1,0 +1,70 @@
+id: 00005797
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5797
+data:
+  user 1 personas: 'I kayak at the lake on weekends.
+
+    I am studying to be a special education teacher.
+
+    I was a navy brat and have attended 16 schools in 12 years.
+
+    I make friends fast and say goodbye fast.
+
+    I chew my nails.'
+  user 2 personas: 'I have entered into many violin competitions before and have placed in a few of them.
+
+    My older sister plays clarinet.
+
+    My mom is a music teacher at the elementary school.
+
+    I have a pomeranian.
+
+    I play the violin.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1 name]. I''m a navy brat and I''ve been to 16 schools in 12 years.
+
+    User 2: Oh, wow! That must have been hard. I''ve only been to two schools.
+
+    User 1: It was a bit, but I made some great friends along the way. I think it also helped me become more adaptable and flexible.
+
+    User 2: That''s a good point. I know I''m not very good at change.
+
+    User 1: Well, I''m sure you can learn to be better at it. It just takes time.
+
+    User 2: Thanks. I''m trying!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I play the violin. I''ve been playing since I was 8 years old.
+
+    User 1: Oh, that''s cool! I used to play the piano when I was younger, but I quit when I was 10.
+
+    User 2: Why did you quit?
+
+    User 1: I don''t know. I guess I just lost interest.
+
+    User 2: That''s too bad. It''s a beautiful instrument.
+
+    User 1: I know. I regret it sometimes.
+
+    User 2: Well, you could always start up again.
+
+    User 1: I might! I do miss playing.
+
+    User 2: You should! It''s a great way to relax.
+
+    User 1: I know. I''ll think about it.
+
+    User 2: Good! So, what else do you like to do for fun?
+
+    User 1: I like to go kayaking at the lake on weekends. It''s a great way to relax and spend some time in nature.
+
+    User 2: That sounds really nice. I''ve never been kayaking before, but it sounds like it would be fun.
+
+    User 1: It is! You should definitely try it sometime.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

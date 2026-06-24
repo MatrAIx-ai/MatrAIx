@@ -1,0 +1,19 @@
+id: 00006092
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6092
+persona_description: A meteorologist who specializes in weather forecasting and climate change. They are knowledgeable about the formation, movement, and impacts of various types of precipitation, including
+  rain, snow, and thunderstorms. They have a deep understanding of the water cycle and how moisture from the oceans evaporates, condenses, and precipitates into clouds, which ultimately leads to the formation
+  of precipitation. They are also well-versed in the mechanics of tornadoes, including the development of rotating air masses below heavy cumulonimbus clouds and the formation of tornadoes when the sun's
+  warmth has heated a large body of moist air near the surface.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,58 @@
+id: 00001768
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1768
+data:
+  user 1 personas: 'I am a bank teller.
+
+    I have never been to college.
+
+    My favorite phone is as iphone.
+
+    I love to go hiking.'
+  user 2 personas: 'I married my high school sweetheart.
+
+    I do not eat healthy.
+
+    I like the group the rolling stones.
+
+    I have 3 kids.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing?
+
+    User 2: I''m doing well, thanks for asking!
+
+    User 1: That''s great to hear. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom of three kids.
+
+    User 1: Wow, that''s a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, read, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to go hiking too.
+
+    User 2: That''s great! Have you ever been to the Grand Canyon?
+
+    User 1: No, I haven''t. I''ve always wanted to go though.
+
+    User 2: You should! It''s absolutely beautiful.
+
+    User 1: I''ll have to look into it. I''m sure my kids would love it too.
+
+    User 2: They definitely would. It''s a great place to explore.
+
+    User 1: I''m going to have to start planning a trip.
+
+    User 2: You should! It''s worth the trip.
+
+    User 1: Thanks for the recommendation. I''m sure we''ll have a great time.
+
+    User 2: I''m sure you will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

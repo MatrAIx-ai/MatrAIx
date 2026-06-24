@@ -1,0 +1,72 @@
+id: 00008106
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8106
+data:
+  user 1 personas: 'My hobbies are sleeping and playing the guitar.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I am a factory worker.
+
+    I want to be in a band someday.
+
+    I have a wife and two kids.'
+  user 2 personas: 'I am single.
+
+    I paddle board on my days off.
+
+    I am a nurse and work in an emergency room at a busy hospital.
+
+    I am buying a house.
+
+    I play the piano.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, nice to meet you. I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a nurse and I work in an emergency room at a busy hospital.
+
+    User 1: Oh, that sounds like a challenging job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go paddle boarding on my days off. It''s a great way to relax and enjoy the outdoors.
+
+    User 1: That sounds fun! I''ve always wanted to try paddle boarding.
+
+    User 2: You should! It''s really easy to learn and it''s a lot of fun.
+
+    User 1: Maybe I''ll give it a try sometime.
+
+    User 2: I''m sure you''ll love it.
+
+    User 1: So, what''s your favorite thing about being single?
+
+    User 2: I have a lot of freedom to do what I want when I want. I can go out with my friends whenever I want, and I don''t have to worry about anyone else''s schedule.
+
+    User 1: That sounds great! I''m glad you''re enjoying being single.
+
+    User 2: Thanks! I am.
+
+    User 1: So, what are you looking forward to in the future?
+
+    User 2: I''m buying a house. It''s a big step, but I''m excited to start this new chapter in my life.
+
+    User 1: That''s great! I''m sure you''ll be happy in your new house.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you. I hope we can chat again sometime.
+
+    User 2: Me too! Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

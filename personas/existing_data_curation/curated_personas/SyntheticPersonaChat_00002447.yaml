@@ -1,0 +1,72 @@
+id: '00002447'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2447
+data:
+  user 1 personas: 'I do not eat healthy.
+
+    I like the group the rolling stones.
+
+    I need a soda with me at all times.
+
+    I have 3 kids.
+
+    I married my high school sweetheart.'
+  user 2 personas: 'I have a girlfriend of 7 years.
+
+    I never have had alcohol in my life.
+
+    I watch every football game at alabama.
+
+    I am a geology major at alabama university.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. Nice to meet you!
+
+    User 1: Nice to meet you too. I see you''re a geology major at Alabama University. That''s really cool! I''m a huge fan of the geology department there.
+
+    User 2: Thanks! It''s a great program. I''m really enjoying it.
+
+    User 1: What do you like most about it?
+
+    User 2: I love the hands-on experience. We get to do a lot of field work, which is really fun.
+
+    User 1: That sounds awesome! I''ve always wanted to do more field work.
+
+    User 2: You should! It''s a great way to learn about geology.
+
+    User 1: I''ll definitely keep that in mind.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to concerts, watch movies, and spend time with my family.
+
+    User 2: That sounds like a lot of fun. I love going to concerts too.
+
+    User 1: What''s your favorite band?
+
+    User 2: I really like the Rolling Stones. They''re my favorite band of all time.
+
+    User 1: The Rolling Stones are great! I love their music.
+
+    User 2: Me too! I''m so glad I met you. I don''t know a lot of people who like the Rolling Stones.
+
+    User 1: Me neither! It''s nice to meet someone who does.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to a concert.
+
+    User 2: That sounds like fun. I''m going to a football game at Alabama.
+
+    User 1: Oh, that''s cool! I wish I could go.
+
+    User 2: You should come! It''ll be a lot of fun.
+
+    User 1: I''ll think about it. Thanks for the invite.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

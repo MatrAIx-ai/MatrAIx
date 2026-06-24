@@ -1,0 +1,72 @@
+id: 00001917
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1917
+data:
+  user 1 personas: 'I have two tattoos.
+
+    My favorite hobby is knitting.
+
+    I work in an office.
+
+    I enjoy shopping.'
+  user 2 personas: 'My country is russia.
+
+    I can also squat 400 pounds.
+
+    I am a weight lifter.
+
+    I can benchpress 345 pounds.
+
+    I am a olympian.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1].
+
+    User 2: Hello! I''m [user 2].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Russia.
+
+    User 1: Oh, that''s cool. I''ve always wanted to visit Russia.
+
+    User 2: It''s a beautiful country. You should come sometime.
+
+    User 1: I would love to! What do you do for a living?
+
+    User 2: I''m a weight lifter.
+
+    User 1: Really? That''s amazing! How much can you lift?
+
+    User 2: I can benchpress 345 pounds and squat 400 pounds.
+
+    User 1: Wow! That''s incredible!
+
+    User 2: Thanks. I''m an olympian.
+
+    User 1: Oh, that''s even cooler! What''s it like to be an olympian?
+
+    User 2: It''s a lot of hard work, but it''s also very rewarding. I love the feeling of competing at the highest level.
+
+    User 1: I can imagine. It must be an amazing experience.
+
+    User 2: It is. I''m so grateful for the opportunity to represent my country.
+
+    User 1: You should be proud of yourself. You''re an inspiration to us all.
+
+    User 2: Thank you. That means a lot to me.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends, read, and watch movies.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too. It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

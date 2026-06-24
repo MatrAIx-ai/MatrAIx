@@ -1,0 +1,68 @@
+id: '00006403'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6403
+data:
+  user 1 personas: 'I have 3 ferrari cars in my garage.
+
+    I don t like kids.
+
+    I don t like acting.
+
+    I have 3 ex wives.'
+  user 2 personas: 'I like imagine dragons.
+
+    I run six miles a day.
+
+    I like crab dipped in butter.
+
+    I like to kayak.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thank you for asking.
+
+    User 1: That''s good to hear. What do you like to do for fun?
+
+    User 2: I love to run, kayak, and listen to Imagine Dragons.
+
+    User 1: That sounds like a lot of fun. I like to drive my Ferraris and eat crab dipped in butter.
+
+    User 2: That sounds amazing. I wish I could try a Ferrari.
+
+    User 1: You should. They''re amazing cars.
+
+    User 2: I''ll have to try one sometime.
+
+    User 1: You should.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a lawyer.
+
+    User 2: Oh, that''s interesting. I''m a teacher.
+
+    User 1: That''s cool. I used to be a teacher.
+
+    User 2: What made you switch to law?
+
+    User 1: I wanted to make more money.
+
+    User 2: That makes sense.
+
+    User 1: I''m glad I did. I make a lot more money now.
+
+    User 2: I''m sure you do.
+
+    User 1: I do.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00010211'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10211
+persona_description: A medical oncologist who specializes in the treatment and management of salivary gland tumors, particularly acinic cell carcinoma (ACC). She has extensive knowledge and experience in
+  the diagnosis, treatment, and follow-up of patients with ACC, as well as in the development of new treatments and therapies for this rare and complex tumor. She is known for her expertise in the use of
+  surgery, radiation therapy, and chemotherapeutic agents to treat ACC, as well as for her role in the development of tumor molecular profiling and the initiation of clinical trials for patients with ACC.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: salivary gland cancer
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

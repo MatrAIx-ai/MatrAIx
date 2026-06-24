@@ -1,0 +1,62 @@
+id: 00007950
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7950
+data:
+  user 1 personas: 'I work as a personal trainer , 5 days a week.
+
+    I live in las vegas , nevada.
+
+    My name is dave.
+
+    I go fishing on the weekends to relax.'
+  user 2 personas: 'I secretly love watching wwe wrestling.
+
+    I get my nails done every saturday.
+
+    I daydream about cafes in paris.
+
+    I work as a receptionist at a lawyer s office.
+
+    My family owns a grocery store.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: Hi, my name is Amy. What''s yours?
+
+    User 1: I''m Dave, nice to meet you.
+
+    User 2: Nice to meet you too, Dave. Where are you from?
+
+    User 1: I''m from Las Vegas, Nevada.
+
+    User 2: Oh, that''s cool. I''ve never been to Vegas before.
+
+    User 1: You should come visit sometime! It''s a great place to be.
+
+    User 2: I might just do that! What do you like to do for fun?
+
+    User 1: I love to go fishing, I go every weekend.
+
+    User 2: That sounds fun! I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s a lot of fun and it''s a great way to relax.
+
+    User 2: Maybe I will! What kind of fish do you catch?
+
+    User 1: I usually catch trout, but I''ve also caught bass and salmon.
+
+    User 2: That sounds amazing! I''d love to go fishing with you sometime.
+
+    User 1: I''d love that! We can go fishing this weekend if you''re free.
+
+    User 2: I''m free this weekend! I''ll bring my fishing gear.
+
+    User 1: Great! I''ll meet you at the lake at 7am.
+
+    User 2: See you there!
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

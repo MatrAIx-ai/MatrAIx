@@ -1,0 +1,42 @@
+id: 00005958
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5958
+data:
+  user 1 personas: 'Pizza is my most favorite thing.
+
+    I enjoy taking late night walks when it s completely dark.
+
+    I like reading.
+
+    I like being by myself.
+
+    My favorite band is dream theater.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am a freshman in college.
+
+    I have never broken a bone.
+
+    I love cats.'
+  Best Generated Conversation: 'User 1: I love pizza. What''s your favorite kind?
+
+    User 2: I like pepperoni pizza. What''s your favorite band?
+
+    User 1: My favorite band is Dream Theater. What do you like to read?
+
+    User 2: I like to read science fiction and fantasy novels. I''m also a freshman in college. Have you broken any bones?
+
+    User 1: No, I''ve never broken a bone. I''m not very athletic. What''s your favorite thing to do?
+
+    User 2: I like to go for walks, especially at night. I also like to play video games and watch movies. I have a cat named Snowball. Do you have any pets?
+
+    User 1: I have a dog named Charlie. He''s a golden retriever. What''s your favorite thing about college?
+
+    User 2: I like the freedom to make my own choices. I also like the opportunity to meet new people and learn new things. What do you think about going to college?
+
+    User 1: I think it''s a great opportunity to learn and grow. I''m excited to see what the future holds.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00004789
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4789
+data:
+  user 1 personas: 'I wish my mom was healthier.
+
+    I wish i could go to a better school.
+
+    I worry about my image.
+
+    I worry about our neighbors yelling in the middle of the night.'
+  user 2 personas: 'My sister is a published author.
+
+    I vacation in florida every winter.
+
+    I was a champion downhill skier in college.
+
+    My favorite color is yellow.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name]. What''s yours?
+
+    User 1: My name is [user 1''s name].
+
+    User 2: Nice to meet you, [user 1''s name].
+
+    User 1: Nice to meet you too, [user 2''s name].
+
+    User 2: What do you do for fun?
+
+    User 1: I like to read, write, and go to the beach.
+
+    User 2: That sounds nice. I like to read, write, and ski.
+
+    User 1: Oh, cool! I''ve never been skiing before.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I might just do that.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is To Kill a Mockingbird.
+
+    User 1: Oh, I''ve heard good things about that book. I''ve been meaning to read it.
+
+    User 2: You should! It''s a great book.
+
+    User 1: I will.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: That''s my favorite color too!
+
+    User 1: Oh, really? That''s cool.
+
+    User 2: Yeah, I love the way it looks.
+
+    User 1: Me too.
+
+    User 2: Well, it was nice talking to you, [user 1''s name].
+
+    User 1: It was nice talking to you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

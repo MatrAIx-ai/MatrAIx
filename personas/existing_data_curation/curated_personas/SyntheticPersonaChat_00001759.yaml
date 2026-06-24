@@ -1,0 +1,76 @@
+id: 00001759
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1759
+data:
+  user 1 personas: 'My mother is dead.
+
+    Pink is my favorite color.
+
+    I am a yoga instructor.
+
+    I married my highschool sweetheart.
+
+    I enjoy being alone.'
+  user 2 personas: 'My favorite season is duck hunting season.
+
+    I like tailgate parties.
+
+    I didn t go to college because i run the family farm.
+
+    I had a girlfriend who eloped with my best friend one day.'
+  Best Generated Conversation: 'User 1: Hey, I''m Sarah.
+
+    User 2: Hi, I''m John.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hunting, tailgate at football games, and run the family farm.
+
+    User 1: Cool! I like to do yoga, go to concerts, and spend time with my family.
+
+    User 2: That''s great! I''ve never been to a yoga class, but I''ve heard they''re really good for you.
+
+    User 1: They are! I love how it makes me feel. It''s a great way to relax and de-stress.
+
+    User 2: I''m glad you enjoy it. I might have to try it sometime.
+
+    User 1: You should! It''s really fun.
+
+    User 2: What about you, what do you like about your job?
+
+    User 1: I love being a yoga instructor. It''s so much fun to help people learn and grow.
+
+    User 2: That''s great! It sounds like you''re really passionate about it.
+
+    User 1: I am! It''s my dream job.
+
+    User 2: That''s amazing! I''m glad you found something you love to do.
+
+    User 1: Thanks! I''m really lucky.
+
+    User 2: Me too.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: Duck hunting season!
+
+    User 1: Oh, that''s interesting. I''ve never been duck hunting before.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: Maybe I will.
+
+    User 2: You''d have a great time.
+
+    User 1: I''m sure I would.
+
+    User 2: Great! We should go together sometime.
+
+    User 1: That would be fun!
+
+    User 2: It would be!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

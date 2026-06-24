@@ -1,0 +1,70 @@
+id: 00005981
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5981
+data:
+  user 1 personas: 'I am looking to start a business.
+
+    I like to get involved in politics.
+
+    I have a brand new chevrolet.
+
+    I am a big sports fan.
+
+    I enjoy hanging out with friends and family.'
+  user 2 personas: 'I love dogs , especially labradors.
+
+    I work in the pharmaceutical industry.
+
+    I was born in san francisco.
+
+    I have one sister.
+
+    I am traveling to paris this year for my vacation.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just hanging out. How are you?
+
+    User 1: I''m good! I''m looking to start a business and I need some advice.
+
+    User 2: Oh, cool! What kind of business are you thinking about starting?
+
+    User 1: I''m not sure yet, but I''m thinking about something in the tech industry.
+
+    User 2: That''s a great idea! The tech industry is booming right now.
+
+    User 1: I know, right? I''m really excited about it.
+
+    User 2: Well, if you need any help, let me know. I''ve been working in the tech industry for a few years now, so I might be able to give you some pointers.
+
+    User 1: That''s really nice of you. Thanks!
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I like to hang out with my friends and family, go to sporting events, and watch movies.
+
+    User 2: That sounds like a lot of fun! I love going to sporting events too.
+
+    User 1: Me too! I''m a big sports fan.
+
+    User 2: What sports do you like to watch?
+
+    User 1: I like to watch football, basketball, and baseball.
+
+    User 2: Me too! I''m a big football fan.
+
+    User 1: I''m a big fan of the San Francisco 49ers.
+
+    User 2: Oh, cool! I''m a big fan of the Dallas Cowboys.
+
+    User 1: That''s cool! I''m going to be traveling to Paris this year for my vacation.
+
+    User 2: That''s awesome! I''ve always wanted to go to Paris.
+
+    User 1: It''s a beautiful city. I''m sure you''d love it.
+
+    User 2: I''m sure I would!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

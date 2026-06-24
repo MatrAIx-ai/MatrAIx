@@ -1,0 +1,64 @@
+id: 00007953
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7953
+data:
+  user 1 personas: 'I work as a secretary at an insurance agency.
+
+    I like to read true crime novels.
+
+    I travel every year to disney world.
+
+    I am close to both of my brothers.'
+  user 2 personas: 'My favorite music is country.
+
+    I am a vegetarian.
+
+    I like the internet.
+
+    I have a new job.
+
+    I like to make cakes.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Good, just got a new job!
+
+    User 1: Congratulations! What kind of job?
+
+    User 2: I''m a cake decorator now!
+
+    User 1: Oh, that''s awesome! I love cake.
+
+    User 2: Me too! I''ve always loved baking, so this is a dream job for me.
+
+    User 1: That''s great! I''m sure you''ll be really good at it.
+
+    User 2: Thanks! I''m excited to get started.
+
+    User 1: What kind of cakes do you like to make the most?
+
+    User 2: I love making wedding cakes. They''re so much fun to decorate.
+
+    User 1: That makes sense! They''re always so pretty.
+
+    User 2: Yeah, they are! I love making them look beautiful and unique.
+
+    User 1: I''m sure you do a great job.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what are you doing for your first cake?
+
+    User 2: I''m not sure yet. I''m thinking about doing a chocolate cake with vanilla frosting.
+
+    User 1: That sounds delicious!
+
+    User 2: Thanks! I''m excited to make it.
+
+    User 1: I''m sure it will be great.
+
+    User 2: Thanks! I''m hoping so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

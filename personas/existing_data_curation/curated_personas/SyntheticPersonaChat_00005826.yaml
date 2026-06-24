@@ -1,0 +1,58 @@
+id: 00005826
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5826
+data:
+  user 1 personas: 'I love the natural world beauty.
+
+    I practice yoga and hike.
+
+    I am obsessed with animals.
+
+    I believe in fairytales.
+
+    My family is poor.'
+  user 2 personas: 'My favorite movie is gone with the wind.
+
+    I have purple hair.
+
+    My favorite color is red.
+
+    I have 2 turtles.
+
+    I like to play video games.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name). I''m interested in nature, yoga, hiking, animals, fairytales, and my family.
+
+    User 2: Hi, I''m (user 2''s name). I''m interested in Gone with the Wind, purple hair, red, turtles, and video games.
+
+    User 1: Oh, I love Gone with the Wind! It''s one of my favorite movies.
+
+    User 2: Me too! It''s such a classic.
+
+    User 1: I also love hiking and yoga. Do you do either of those?
+
+    User 2: I love hiking, but I''ve never tried yoga.
+
+    User 1: You should! It''s really great for you.
+
+    User 2: I might give it a try sometime.
+
+    User 1: I also love animals. I have two cats and a dog.
+
+    User 2: I love animals too! I have two turtles.
+
+    User 1: Oh, that''s cool! I''ve never had a turtle before.
+
+    User 2: They''re great pets. They''re really low-maintenance.
+
+    User 1: I''ll have to look into getting one sometime.
+
+    User 2: You should! They''re really fun to watch.
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too! I think we''re going to get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

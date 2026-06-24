@@ -1,0 +1,60 @@
+id: '00000575'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 575
+data:
+  user 1 personas: 'I am a painter.
+
+    My favorite band is the beastie boys.
+
+    I love coffee with cream.
+
+    I went to new york city once.'
+  user 2 personas: 'If i were to be reincarnated , i d want to come back as a hippopotamus.
+
+    I smoke two packs of cigarettes most days.
+
+    I enjoy putting alcohol in my coffee.
+
+    I could eat meatloaf every night and never get tired of it.
+
+    I can t get enough of lindsey stirling s music.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I like to paint, read, and listen to music.
+
+    User 1: That sounds cool! I like to paint too. What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite band is the Beastie Boys.
+
+    User 1: Nice! I''ve heard of them but I''ve never listened to them. What kind of music do they play?
+
+    User 2: They''re a hip hop group from the 80s and 90s.
+
+    User 1: Oh, I''ve heard of them. I didn''t know they were a hip hop group.
+
+    User 2: Yeah, they were pretty popular back in the day.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: My favorite song is "Sabotage."
+
+    User 1: Oh, that''s a good one. I like that song too.
+
+    User 2: What kind of paintings do you like to paint?
+
+    User 1: I like to paint landscapes and still lifes.
+
+    User 2: Oh, that''s cool! I''ve never been very good at painting.
+
+    User 1: It''s not that hard to learn. Just takes some practice.
+
+    User 2: Maybe I''ll give it a try sometime.
+
+    User 1: I would love to see your paintings if you ever paint any.
+
+    User 2: Sure, I''ll let you know if I ever do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

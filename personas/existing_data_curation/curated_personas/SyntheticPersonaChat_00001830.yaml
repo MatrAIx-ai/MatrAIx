@@ -1,0 +1,70 @@
+id: 00001830
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1830
+data:
+  user 1 personas: 'I am six feet tall.
+
+    I have a family that are all tall.
+
+    I like to dance with my friends.
+
+    I love to be run.'
+  user 2 personas: 'I think i might need help.
+
+    I live with my parents.
+
+    I just lost my job and i m looking for something new.
+
+    I m bisexual.'
+  Best Generated Conversation: 'User 1: What''s going on? You seem stressed.
+
+    User 2: I just lost my job and I''m not sure what to do.
+
+    User 1: Oh no, that''s terrible! I''m so sorry to hear that.
+
+    User 2: Thanks. I''m not sure what I''m going to do.
+
+    User 1: Well, first of all, you need to take a deep breath and relax.
+
+    User 2: Okay.
+
+    User 1: Now, let''s start by thinking about what you can do to find a new job.
+
+    User 2: I''ve been looking, but there''s nothing out there.
+
+    User 1: Well, you could start by updating your resume and LinkedIn profile.
+
+    User 2: I already did that.
+
+    User 1: Okay, then you could start networking with people in your field.
+
+    User 2: I''ve been doing that too, but nothing''s coming up.
+
+    User 1: Well, don''t give up. Just keep trying and eventually you''ll find something.
+
+    User 2: I hope so.
+
+    User 1: I know you will. You''re a strong person and you''ll get through this.
+
+    User 2: Thanks. I needed that.
+
+    User 1: No problem. And if you need anything, just let me know.
+
+    User 2: Thanks. I appreciate that.
+
+    User 1: So, what are you going to do now?
+
+    User 2: I''m going to go home and relax.
+
+    User 1: That sounds like a good idea. And tomorrow, you can start looking for new jobs.
+
+    User 2: I will.
+
+    User 1: And good luck!
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

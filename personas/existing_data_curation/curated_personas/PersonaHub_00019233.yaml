@@ -1,0 +1,19 @@
+id: 00019233
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 19233
+persona_description: A neurologist and researcher who specializes in the study of Alzheimer's disease, amyloid plaques, and related brain changes. He or she is interested in identifying at-risk individuals
+  for preventive therapies and tracking the progression of neurodegenerative changes in cognitively normal individuals. The researcher is familiar with high-resolution magnetic resonance imaging, positron
+  emission tomography, and other imaging technologies used to study brain structure and function. The persona is also interested in the potential mechanisms underlying the development of Alzheimer's disease
+  and the role of amyloid plaques in the disease process.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Alzheimer's disease research
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

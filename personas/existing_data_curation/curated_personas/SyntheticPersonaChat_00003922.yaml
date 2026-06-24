@@ -1,0 +1,66 @@
+id: 00003922
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3922
+data:
+  user 1 personas: 'I am scared of left turns.
+
+    I have four siblings.
+
+    I drive a blue honda civic.
+
+    I think i am failing my women studies class.'
+  user 2 personas: 'I wish i was taller so i could reach the cookie jar.
+
+    I lay awake at night so i can watch the stars.
+
+    I am often late for class.
+
+    I cuddle up with my dog every night.
+
+    I want a porsche.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [User 1]. What''s your name?
+
+    User 2: Hi! I''m [User 2]. Nice to meet you!
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I love to read, watch movies, and cuddle up with my dog.
+
+    User 1: That sounds fun! I love reading too. What are some of your favorite books?
+
+    User 2: I love The Hunger Games series, Harry Potter series, and The Lord of the Rings series.
+
+    User 1: I''ve read all of those! They''re all great books.
+
+    User 2: I know, right? I love them all. What else do you like to do for fun?
+
+    User 1: I like to watch movies too. I''m a big fan of science fiction and fantasy movies.
+
+    User 2: Me too! I love Star Wars, Star Trek, and Marvel movies.
+
+    User 1: Those are all great movies! I''m a big fan of all three of those franchises.
+
+    User 2: Me too! I love the action, the adventure, and the special effects.
+
+    User 1: Me too! I love how they can take you to other worlds and tell such amazing stories.
+
+    User 2: Me too! They''re some of my favorite movies.
+
+    User 1: Me too! Do you watch any TV shows?
+
+    User 2: I watch a few. I like The Walking Dead, The Flash, and Game of Thrones.
+
+    User 1: Those are all great shows! I''m a big fan of The Walking Dead and Game of Thrones.
+
+    User 2: Me too! They''re both so well-made and have such great stories.
+
+    User 1: Me too! I can''t wait for the next season of Game of Thrones.
+
+    User 2: Me neither! It''s going to be awesome!
+
+    User 1: I know! I''m so excited!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

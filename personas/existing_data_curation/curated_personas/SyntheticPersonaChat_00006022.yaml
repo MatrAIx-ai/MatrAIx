@@ -1,0 +1,62 @@
+id: '00006022'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6022
+data:
+  user 1 personas: 'I have been married for 20 years.
+
+    I love travelling and discovering new cultures.
+
+    My favorite sport is football.
+
+    I volunteer at my local animal shelter.
+
+    I am a military veteran.'
+  user 2 personas: 'I like reading.
+
+    I like being by myself.
+
+    Pizza is my most favorite thing.
+
+    I enjoy taking late night walks when it s completely dark.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: It''s nice to meet you. What do you do for fun?
+
+    User 2: I like to read, take late night walks, and eat pizza.
+
+    User 1: That sounds like fun! I like to travel, discover new cultures, and play football. I''m also a military veteran and volunteer at my local animal shelter.
+
+    User 2: That''s really cool! I''ve never been to a football game, but I''ve always wanted to go.
+
+    User 1: You should! They''re a lot of fun.
+
+    User 2: Maybe I will sometime. I''m not sure how I''d feel about being around a lot of people, though.
+
+    User 1: There are always seats in the nosebleed section if you want to be more alone.
+
+    User 2: That''s a good idea. I''ll have to check it out.
+
+    User 1: You should!
+
+    User 2: So, what''s your favorite place you''ve travelled to?
+
+    User 1: I''ve been to a lot of great places, but my favorite is probably the Philippines. The people were so friendly and the food was amazing.
+
+    User 2: That sounds like a great place to visit. I''ve never been to Asia before.
+
+    User 1: You should! It''s a beautiful continent with so much to offer.
+
+    User 2: I''ll definitely have to put it on my list.
+
+    User 1: Good! I''m sure you''ll love it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

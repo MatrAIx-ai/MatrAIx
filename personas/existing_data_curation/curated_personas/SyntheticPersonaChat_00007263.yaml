@@ -1,0 +1,66 @@
+id: '00007263'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7263
+data:
+  user 1 personas: 'My hobbies include reading and cycling.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    I am the general manager of the local grocery store.'
+  user 2 personas: 'I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    I am a cat owner.
+
+    I speak fluent italian.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thanks. How are you?
+
+    User 1: I''m doing good as well. I like your profile. What do you like to do for fun?
+
+    User 2: I like to read, cycle, and travel. I also enjoy spending time with my family and friends.
+
+    User 1: That sounds like a lot of fun. I like to read, too. My favorite book is The Great Gatsby. What''s your favorite book?
+
+    User 2: My favorite book is To Kill a Mockingbird. I love the way Harper Lee tells the story.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a classic for a reason.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I like to cycle, too. I find it''s a great way to relax and get some exercise.
+
+    User 1: I agree. I love cycling. I''ve been doing it for years.
+
+    User 2: Where do you like to cycle?
+
+    User 1: I like to cycle around my neighborhood and in the park. I also like to go on long bike rides in the country.
+
+    User 2: I love cycling in the country. It''s so peaceful and relaxing.
+
+    User 1: I agree. It''s a great way to escape the city and get some fresh air.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I like to travel. I love visiting new places and experiencing different cultures.
+
+    User 2: I agree. Traveling is one of the best ways to learn about the world.
+
+    User 1: I have been to Canada a few times. I love the scenery and the people.
+
+    User 2: I''ve never been to Canada. I''d love to go one day.
+
+    User 1: You should. It''s a beautiful country.
+
+    User 2: I''m sure it is. I''ve heard good things about it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

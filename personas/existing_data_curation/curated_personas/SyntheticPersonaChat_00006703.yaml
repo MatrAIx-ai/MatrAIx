@@ -1,0 +1,100 @@
+id: '00006703'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6703
+data:
+  user 1 personas: 'My mother has her own fashion brand.
+
+    I got a job as an accountant 3 months ago.
+
+    I am a vegan.
+
+    I enjoy hiking.'
+  user 2 personas: 'I have a dog and two cats.
+
+    I like to go for runs.
+
+    I play the guitar.
+
+    I live by myself.
+
+    I like country music.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go for runs, play the guitar, and watch country music.
+
+    User 1: That''s cool! I like to hike, play the piano, and listen to jazz.
+
+    User 2: Oh, I''ve always wanted to learn to play the piano!
+
+    User 1: It''s a lot of fun!
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! What kind of music do you like to listen to?
+
+    User 2: I like country music.
+
+    User 1: Oh, me too! What are some of your favorite artists?
+
+    User 2: I like Chris Stapleton, Miranda Lambert, and Luke Bryan.
+
+    User 1: Those are all great artists! I love their music.
+
+    User 2: Me too!
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog and two cats.
+
+    User 1: That''s awesome! I love animals.
+
+    User 2: Me too!
+
+    User 1: What are your pets'' names?
+
+    User 2: My dog''s name is Luna and my cats'' names are Smokey and Ash.
+
+    User 1: Those are great names!
+
+    User 2: Thanks!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s so cool! I''ve always wanted to be a nurse.
+
+    User 2: It''s a great job!
+
+    User 1: I''m sure it is!
+
+    User 2: What do you do for work?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, that''s interesting!
+
+    User 1: It is!
+
+    User 2: How long have you been doing that?
+
+    User 1: I just started three months ago.
+
+    User 2: Oh, congratulations!
+
+    User 1: Thanks!
+
+    User 2: It must be exciting to start a new job.
+
+    User 1: It is! I''m really enjoying it so far.
+
+    User 2: That''s great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

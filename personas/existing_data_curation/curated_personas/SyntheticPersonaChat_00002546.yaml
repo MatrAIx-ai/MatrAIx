@@ -1,0 +1,80 @@
+id: '00002546'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2546
+data:
+  user 1 personas: 'I live in california.
+
+    My newest car is a chevy.
+
+    I work at a power plant.
+
+    My favorite thing to do is read.'
+  user 2 personas: 'I graduated college and immediately went to graduate school.
+
+    I m a vegetarian but i eat fish , especially sushi.
+
+    I love my dog.
+
+    I like to shop.
+
+    My parents pay my rent.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi [user 2''s name], nice to meet you.
+
+    User 1: Thanks, you too. Where are you from?
+
+    User 2: I''m from [user 2''s location].
+
+    User 1: Oh, that''s cool. I''m from [user 1''s location].
+
+    User 2: What do you do for work?
+
+    User 1: I work at a power plant.
+
+    User 2: Oh, that''s interesting. I''m in graduate school.
+
+    User 1: Oh, wow. What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: That''s great. What do you want to do after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about going into finance.
+
+    User 1: Oh, that would be cool. I''m sure you''ll do great.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go shopping, and hang out with my dog.
+
+    User 1: Oh, I love to read too. What are you reading right now?
+
+    User 2: I''m reading a book called "The Martian."
+
+    User 1: Oh, I''ve heard good things about that book.
+
+    User 2: Yeah, it''s really good.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, go to the gym, and play video games.
+
+    User 1: Oh, I love to go to the movies too.
+
+    User 2: Yeah, it''s a great way to relax.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: I don''t know, there are so many good ones. I guess I would have to say "The Shawshank Redemption."
+
+    User 1: Oh, that''s a great movie. I love it too.
+
+    User 2: Yeah, it''s one of my favorites.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

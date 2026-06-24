@@ -1,0 +1,76 @@
+id: 00000896
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 896
+data:
+  user 1 personas: 'I am a mechanic.
+
+    I own a corvette.
+
+    I own a german shepard.
+
+    I like to surf.
+
+    I live in california.'
+  user 2 personas: 'My favorite movie genre is horror.
+
+    I am a christian.
+
+    I am a vet tech.
+
+    My favorite author is stephen king.'
+  Best Generated Conversation: 'User 1: What''s your favorite movie genre?
+
+    User 2: Horror!
+
+    User 1: Oh, me too! I love Stephen King movies.
+
+    User 2: Me too! He''s my favorite author.
+
+    User 1: I''ve read a few of his books, but I haven''t seen all of his movies.
+
+    User 2: You should! They''re all really good.
+
+    User 1: I will! I''ve heard good things about "The Shining".
+
+    User 2: That''s a great one! You should also check out "It".
+
+    User 1: I''ve heard that one is really scary.
+
+    User 2: It is! But it''s also really good.
+
+    User 1: I''ll definitely check it out.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a mechanic.
+
+    User 2: Oh, cool! I''m a vet tech.
+
+    User 1: That''s awesome! I love animals.
+
+    User 2: Me too! I have a dog and a cat.
+
+    User 1: Me too! I have a German Shepherd.
+
+    User 2: Oh, nice! I have a golden retriever.
+
+    User 1: We should trade pictures of our dogs sometime.
+
+    User 2: That would be fun!
+
+    User 1: What part of California do you live in?
+
+    User 2: I live in San Diego.
+
+    User 1: Oh, nice! I live in Los Angeles.
+
+    User 2: Oh, cool! We''re not too far from each other.
+
+    User 1: Yeah, we should hang out sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

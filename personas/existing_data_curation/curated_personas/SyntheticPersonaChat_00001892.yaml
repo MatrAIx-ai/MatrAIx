@@ -1,0 +1,54 @@
+id: 00001892
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1892
+data:
+  user 1 personas: 'I have blonde hair.
+
+    I love ballet.
+
+    My favorite food is macaroni and cheese.
+
+    My favorite color is purple.
+
+    I like video games.'
+  user 2 personas: 'I love to put a smile on peoples faces.
+
+    I try not to think about death.
+
+    Sometimes , people worry i am crazy.
+
+    I am obsessed with filming.'
+  Best Generated Conversation: 'User 1: Hi there, what is your name?
+
+    User 2: Hello, my name is (user 2 name).
+
+    User 1: What do you do for fun?
+
+    User 2: I love to film things, and I also love to make people laugh.
+
+    User 1: That''s great! I love ballet, and I also love video games. What''s your favorite color?
+
+    User 2: My favorite color is purple, because it''s so vibrant. What''s your favorite food?
+
+    User 1: My favorite food is macaroni and cheese, because it''s so delicious.
+
+    User 2: That''s a great choice! I''ve never tried ballet, but it looks like a lot of fun.
+
+    User 1: It is a lot of fun, and it''s a great way to get exercise.
+
+    User 2: I''m glad to hear that. I''m always looking for new ways to get exercise.
+
+    User 1: I''m sure you would love ballet. It''s a great way to express yourself and have fun.
+
+    User 2: I might just have to try it sometime.
+
+    User 1: I hope you do! You might just surprise yourself.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

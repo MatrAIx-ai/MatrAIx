@@ -1,0 +1,72 @@
+id: 00005833
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5833
+data:
+  user 1 personas: 'I love watching game of thrones.
+
+    My mom is a checker at the local grocery store.
+
+    I grew up in alabama.
+
+    I once saw the easter bunny hiding behind my closet door.'
+  user 2 personas: 'I am seven years old.
+
+    I just got my rejection letter from the gifted program.
+
+    I like to play soccer.
+
+    And , my best friend is calden.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play soccer and hang out with my friends.
+
+    User 1: That''s cool. I like to play soccer too.
+
+    User 2: Oh, that''s awesome. Do you play on a team?
+
+    User 1: Yeah, I play for my school''s team. We''re not very good, but we have fun.
+
+    User 2: That''s still cool. I play for a rec league. We''re not very good either, but we have fun too.
+
+    User 1: Yeah, that''s what it''s all about.
+
+    User 2: What''s your favorite thing about soccer?
+
+    User 1: I like the exercise and the teamwork. I also like the competition.
+
+    User 2: I agree. I like the competition too. It''s always fun to try to beat the other team.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to watch TV, play video games, and read.
+
+    User 2: Me too! I love to watch TV and play video games. I don''t read as much as I used to, but I still like it.
+
+    User 1: Yeah, I don''t read as much as I used to either. But I''m trying to get back into it.
+
+    User 2: That''s good. Reading is a great way to relax and learn new things.
+
+    User 1: I agree. It is.
+
+    User 2: So, what''s your favorite TV show?
+
+    User 1: I like Game of Thrones. It''s a really good show.
+
+    User 2: I''ve heard good things about that show. I''ve been meaning to watch it.
+
+    User 1: You should. It''s really good.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

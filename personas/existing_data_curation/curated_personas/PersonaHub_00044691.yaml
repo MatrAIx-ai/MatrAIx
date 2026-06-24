@@ -1,0 +1,18 @@
+id: 00044691
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44691
+persona_description: A healthcare professional who is responsible for diagnosing and treating patients with sepsis. This persona is well-versed in the medical field and has experience in the diagnosis and
+  treatment of sepsis. They are skilled in recognizing the early signs of sepsis and are familiar with the treatment options available for this condition. This persona is also aware of the potential consequences
+  of missing a diagnosis of sepsis and is committed to providing prompt and effective treatment for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: sepsis treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

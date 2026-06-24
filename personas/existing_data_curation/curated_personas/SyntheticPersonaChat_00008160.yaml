@@ -1,0 +1,102 @@
+id: 00008160
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8160
+data:
+  user 1 personas: 'I like to drink chai tea before bed every night.
+
+    I work as a computer technician , but secretly hate my job.
+
+    My dog is my best friend.
+
+    At all times , i am wearing something black.'
+  user 2 personas: 'My grandpa was in wwii.
+
+    I own a chevy tahoe.
+
+    My favorite food is steak.
+
+    My favorite genre of music is rock.
+
+    I do not know how to swim.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''m a computer technician.
+
+    User 2: What do you like about your job?
+
+    User 1: I like the problem solving aspect of it.
+
+    User 2: I can understand that. I like the challenge of it.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games, listen to music, and eat steak.
+
+    User 1: I like to play video games too. What are some of your favorite games?
+
+    User 2: I like Call of Duty, Minecraft, and Grand Theft Auto.
+
+    User 1: Those are all great games. I''ve played a lot of Call of Duty and Grand Theft Auto.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love pizza.
+
+    User 2: Me too! What''s your favorite kind?
+
+    User 1: I like pepperoni and pineapple pizza.
+
+    User 2: That''s an interesting combination. I''ve never tried it before.
+
+    User 1: You should! It''s really good.
+
+    User 2: Maybe I will.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yes, I have a dog.
+
+    User 1: What kind of dog?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Golden retrievers are so cute!
+
+    User 2: They are! He''s my best friend.
+
+    User 1: I can see why.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to watch movies, read books, and go for walks.
+
+    User 2: I like to do those things too. I also like to play sports.
+
+    User 1: I like to play sports too. What sports do you play?
+
+    User 2: I play basketball, football, and baseball.
+
+    User 1: Those are all great sports. I used to play basketball a lot when I was younger.
+
+    User 2: I''m still playing basketball. I''m on my school''s team.
+
+    User 1: That''s awesome! I wish I was still playing basketball.
+
+    User 2: Maybe you should start playing again.
+
+    User 1: Maybe I will.
+
+    User 2: I''m sure you''d be great at it.
+
+    User 1: Thank you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

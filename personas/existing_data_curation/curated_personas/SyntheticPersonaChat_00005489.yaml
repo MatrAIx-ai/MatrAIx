@@ -1,0 +1,68 @@
+id: 00005489
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5489
+data:
+  user 1 personas: 'I am a musician with a day job.
+
+    I play electric violin , and also work as an accountant.
+
+    I have a pond at home with a pet koi named spot.
+
+    My favorite band is imagine dragons.
+
+    Lately i have been learning how to garden.'
+  user 2 personas: 'I am looking for a job.
+
+    I have a dog.
+
+    My favorite color is red.
+
+    I am not very tall.
+
+    I have two siblings.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I''m currently looking for a job, but I used to be a waiter.
+
+    User 1: Oh, that''s cool. I''m a musician. I play the electric violin.
+
+    User 2: That''s awesome! I love music. What''s your favorite band?
+
+    User 1: I love Imagine Dragons. They''re my favorite band.
+
+    User 2: I''ve heard of them, but I''ve never listened to them. I''ll have to check them out.
+
+    User 1: You should! They''re great. What''s your favorite color?
+
+    User 2: My favorite color is red. What''s yours?
+
+    User 1: Mine is blue. I love the color blue.
+
+    User 2: I like blue too. It''s a pretty color.
+
+    User 1: Do you have any siblings?
+
+    User 2: Yes, I have two sisters.
+
+    User 1: Oh, that''s cool. I have two brothers.
+
+    User 2: Do you like to garden?
+
+    User 1: I''m learning how to garden. I''m not very good at it yet, but I''m having fun.
+
+    User 2: That''s cool. I''ve never gardened before. I''m not sure if I''d be good at it.
+
+    User 1: It''s not that hard. You just need to know a little bit about plants and how to take care of them.
+
+    User 2: I guess I could try it. I might have to get a book or something to learn more about it.
+
+    User 1: That''s a good idea. There are a lot of great books out there about gardening.
+
+    User 2: Thanks for the tip.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

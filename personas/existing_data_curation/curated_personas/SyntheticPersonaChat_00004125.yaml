@@ -1,0 +1,66 @@
+id: '00004125'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4125
+data:
+  user 1 personas: 'I work at a grocery store.
+
+    I like to read.
+
+    I like cupcakes.
+
+    My favorite color is blue.'
+  user 2 personas: 'I am an avid fan of the boston celtics.
+
+    I love chocolate.
+
+    I work for a small , family owned restaurant.
+
+    I have six older sisters.
+
+    I love walking in the park.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, play video games, and walk in the park.
+
+    User 1: Oh, I love to read too! What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I especially like historical fiction and fantasy.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: What''s your favorite book?
+
+    User 1: I don''t know if I have a favorite book, but I really enjoyed "The Name of the Wind" by Patrick Rothfuss.
+
+    User 2: I''ve heard good things about that book! I''ll have to check it out.
+
+    User 1: You should! It''s a really good series.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play a variety of games, but I especially like RPGs and action games.
+
+    User 2: Me too! I love the challenge of RPGs and the excitement of action games.
+
+    User 1: What''s your favorite video game?
+
+    User 2: I don''t know if I have a favorite video game, but I really enjoyed "The Witcher 3".
+
+    User 1: I''ve heard good things about that game! I''ll have to check it out.
+
+    User 2: You should! It''s a really good game.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: Yeah, it does! We should talk more sometime.
+
+    User 1: I''d love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

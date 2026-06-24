@@ -1,0 +1,81 @@
+id: '00001111'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1111
+data:
+  user 1 personas: 'I play football.
+
+    I am an athlete.
+
+    I had 128 tackles last year.
+
+    My position is linebacker.
+
+    The name of my team is the baltimore ravens.'
+  user 2 personas: 'I like to take my dog for long walks.
+
+    I have a lizard named ragini.
+
+    I enjoy cooking for people.
+
+    I like to plant flowers in my gardens.
+
+    My mother lives with me.'
+  Best Generated Conversation: 'User 1: Hi Bard, what do you know about football?
+
+
+    User 2: Football is a popular sport played by two teams of eleven players on a field with a goal at each end. The object of the game is to score points by kicking or carrying the ball into the opponent''s
+    goal.
+
+
+    User 1: What position do you play?
+
+
+    User 2: I am a linebacker, which means I play in the middle of the defense. My job is to stop the offense from running the ball and to tackle the quarterback when he passes the ball.
+
+
+    User 1: How many tackles did you have last year?
+
+
+    User 2: I had 128 tackles last year, which was the second-highest total in the league.
+
+
+    User 1: That''s impressive! What team do you play for?
+
+
+    User 2: I play for the Baltimore Ravens. We''re one of the best teams in the NFL, and we''re looking to win the Super Bowl this year.
+
+
+    User 1: That would be great! I''m a big fan of the Ravens.
+
+
+    User 2: Thanks! We appreciate the support.
+
+
+    User 1: What''s your favorite thing about playing football?
+
+
+    User 2: My favorite thing about playing football is the feeling of being part of a team and working together to achieve a common goal. I also love the physical challenge of the game and the adrenaline
+    rush that comes from making a big play.
+
+
+    User 1: That makes sense. Football is a great sport.
+
+
+    User 2: I agree. It''s a lot of fun to play and watch.
+
+
+    User 1: Well, thanks for talking to me about football. I''m excited to see you play this year.
+
+
+    User 2: Thanks! I''m excited to play too.
+
+
+    User 1: Good luck!
+
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

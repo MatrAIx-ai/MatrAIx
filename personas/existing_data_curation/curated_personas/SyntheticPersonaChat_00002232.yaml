@@ -1,0 +1,72 @@
+id: '00002232'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2232
+data:
+  user 1 personas: 'I have my own salon.
+
+    I am a hair stylist.
+
+    I got married last year.
+
+    My hair is colored purple.'
+  user 2 personas: 'I am a family man.
+
+    I am married with 2 children.
+
+    I like to bowl.
+
+    I spend as much time as i can with my family.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah.
+
+    User 2: Hi Sarah, I''m John.
+
+    User 1: I''m a hair stylist and I have my own salon.
+
+    User 2: That''s really cool! I''m a family man and I''m married with two children.
+
+    User 1: Oh, that''s nice! I recently got married last year.
+
+    User 2: Congratulations! How is married life treating you so far?
+
+    User 1: It''s great! I''m really happy.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to bowl and spend time with my family.
+
+    User 1: That''s nice. I like to read and go to the movies.
+
+    User 2: Oh, I like to read too. What are some of your favorite books?
+
+    User 1: I like to read all sorts of books, but my favorite authors are Jane Austen and Charles Dickens.
+
+    User 2: Oh, I''ve read some of Jane Austen''s books. They''re really good.
+
+    User 1: I know, right? They''re some of my favorites.
+
+    User 2: So, what are you reading right now?
+
+    User 1: I''m currently reading "Pride and Prejudice" by Jane Austen.
+
+    User 2: Oh, that''s a great book! I''ve read it twice.
+
+    User 1: I''m really enjoying it so far.
+
+    User 2: I''m sure you''ll love it.
+
+    User 1: Thanks. I''m looking forward to finishing it.
+
+    User 2: Well, I''m going to go now. It was nice talking to you, Sarah.
+
+    User 1: It was nice talking to you too, John.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

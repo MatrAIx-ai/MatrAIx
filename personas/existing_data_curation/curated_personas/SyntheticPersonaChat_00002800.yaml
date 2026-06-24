@@ -1,0 +1,78 @@
+id: 00002800
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2800
+data:
+  user 1 personas: 'I like going barefoot.
+
+    My favorite book is jane austen s pride and prejudice.
+
+    I work as a tutor for english literature.
+
+    My sister is a guitarist.
+
+    I can knit.'
+  user 2 personas: 'Although i ski down high hills , i have a fear of heights.
+
+    My hair is a reddish brown.
+
+    I broke my arm skiing once.
+
+    My family is very supportive of my skiing.
+
+    I am a competitive ski racer.'
+  Best Generated Conversation: 'User 1: Hi! What''s your favorite book?
+
+    User 2: Pride and Prejudice! It''s so well-written and funny.
+
+    User 1: I love that book too! I''ve read it so many times.
+
+    User 2: Me too! It''s one of my favorites.
+
+    User 1: Have you ever seen the movie?
+
+    User 2: Yeah, I have. I really liked it.
+
+    User 1: Me too! It''s a great adaptation.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read, knit, and go to concerts.
+
+    User 2: I like to knit too! I''m not very good at it, but it''s fun.
+
+    User 1: It''s a great way to relax.
+
+    User 2: Yeah, it is. What kind of music do you like?
+
+    User 1: I like a lot of different types of music, but I mostly listen to rock and indie.
+
+    User 2: I like rock too! What are some of your favorite bands?
+
+    User 1: I like The Beatles, The Rolling Stones, and The Who.
+
+    User 2: I love The Beatles! They''re my favorite band.
+
+    User 1: Me too! They''re so good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a tutor for English literature.
+
+    User 2: Oh, that sounds fun! Do you like it?
+
+    User 1: Yeah, I really enjoy it. I get to help people learn and improve their English skills.
+
+    User 2: That''s great! It sounds like you have a lot of interests.
+
+    User 1: I do! I like to keep busy.
+
+    User 2: Me too! I like to try new things and explore.
+
+    User 1: Me too! It''s important to keep learning and growing.
+
+    User 2: I agree! It''s the best way to live life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

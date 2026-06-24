@@ -1,0 +1,18 @@
+id: 00000593
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 593
+persona_description: A climate scientist who is skeptical of the predictions made by climate models and believes that the models are not capable of accurately predicting the future climate of the Earth.
+  This persona is interested in understanding the limitations of climate models and the factors that contribute to their accuracy or lack thereof. They are also interested in the potential for climate models
+  to be misused or misinterpreted and are critical of the efforts made to prove the models wrong.
+expertise:
+  general_domain_top1pct: climate science
+  specific_domain_top1pct: climate modeling
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

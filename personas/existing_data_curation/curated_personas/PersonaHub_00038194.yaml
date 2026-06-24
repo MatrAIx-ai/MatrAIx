@@ -1,0 +1,21 @@
+id: 00038194
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38194
+persona_description: A scientist or engineer who specializes in the field of molecular flow modeling and simulation, particularly in the context of gas flow in complex geometries. They have expertise in
+  using the Angular Coefficient Method to simulate steady-state free molecular flows and have experience with reconstructing number densities on domains, boundaries, edges, and points. They are skilled
+  in using the Molecular Flow Module to model isothermal and nonisothermal flows, diffuse flux, evaporation, and reservoir conditions for inflow boundaries, and calculate the heat flux contribution from
+  the gas molecules. They have experience with using the module in applications such as semiconductor processing equipment, materials processing equipment, ultra-high vacuum chemical vapor deposition (UHV/CVD),
+  ion implantation, charge exchange cells, thermal evaporation, and have a strong background in using the Molecular Flow Module for computing the pressure in a system of outgassing pipes with a high aspect
+  ratio.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Molecular Flow Modeling and Simulation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

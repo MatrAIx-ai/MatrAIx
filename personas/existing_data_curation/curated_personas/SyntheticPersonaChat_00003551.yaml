@@ -1,0 +1,66 @@
+id: '00003551'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3551
+data:
+  user 1 personas: 'My only friend is a dog.
+
+    I am a carnivore.
+
+    I work at a newspaper.
+
+    I am highly educated.'
+  user 2 personas: 'My mother was a teacher.
+
+    I am single.
+
+    I enjoy nature.
+
+    My favorite food is salad.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Hello, my name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work as a teacher.
+
+    User 1: Oh, really? That''s great! I''ve always been interested in teaching, but I don''t have the patience for it.
+
+    User 2: I think it''s a great job. I love working with kids and helping them learn.
+
+    User 1: That''s really nice. What''s your favorite thing about teaching?
+
+    User 2: I love seeing the light bulb go on in a kid''s head when they finally understand something.
+
+    User 1: That must be a great feeling. What grade do you teach?
+
+    User 2: I teach second grade.
+
+    User 1: Oh, that''s a great age. Kids are so funny at that age.
+
+    User 2: They are! I love hearing their stories and seeing their imaginations at work.
+
+    User 1: Me too. What''s your favorite subject to teach?
+
+    User 2: I love teaching math. I think it''s a really important subject, and I love seeing kids learn how to solve problems.
+
+    User 1: That''s a great subject to teach. I always liked math too. What''s your least favorite subject to teach?
+
+    User 2: I don''t really have a least favorite subject, but I guess I''m not as passionate about teaching reading as I am about math.
+
+    User 1: That''s understandable. Reading can be a difficult subject for some kids. Do you have any pets?
+
+    User 2: Yes, I have a dog named Charlie. He''s a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re such sweet dogs.
+
+    User 2: Charlie is the best dog. He''s always happy to see me and he loves to play.
+
+    User 1: That sounds like a great dog. I''m glad you have him.
+
+    User 2: Thanks. I am too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00007905
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7905
+data:
+  user 1 personas: 'I like to cook with food i grow in my garden.
+
+    I like to travel.
+
+    I play many instruments.
+
+    My favorite music genre is classical.
+
+    I give lessons on string instruments.'
+  user 2 personas: 'My favorite sport is hockey.
+
+    My mom is a painter.
+
+    I start my senior year of high school next week.
+
+    I went to japan this summer.
+
+    My best friend just moved away.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]! What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you! What are you up to today?
+
+    User 2: Not much, just hanging out. I start my senior year of high school next week, so I''m a little bit nervous.
+
+    User 1: Oh, I know what you mean. Senior year is a big year. But I''m sure you''ll do great!
+
+    User 2: Thanks, I hope so!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play hockey, go to the movies, and hang out with my friends.
+
+    User 1: Hockey? That''s awesome! I love hockey too. What''s your favorite team?
+
+    User 2: My favorite team is the Boston Bruins.
+
+    User 1: Oh, nice! I''m a fan of the Montreal Canadiens.
+
+    User 2: Oh, that''s cool! I''m not really a fan of the Canadiens, but I respect them.
+
+    User 1: Thanks! So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, go to concerts, and play video games.
+
+    User 1: I like to go to the movies and play video games too! What are some of your favorite movies and video games?
+
+    User 2: Some of my favorite movies are The Lord of the Rings trilogy, The Matrix trilogy, and Star Wars.
+
+    User 1: Oh, those are all great movies! I love the Lord of the Rings trilogy and Star Wars.
+
+    User 2: Me too! I also like the Harry Potter movies and the Marvel Cinematic Universe.
+
+    User 1: I like those movies too! So, what are some of your favorite video games?
+
+    User 2: Some of my favorite video games are The Legend of Zelda, Mario, and Pokémon.
+
+    User 1: Oh, those are all great games! I love the Legend of Zelda series and Pokémon.
+
+    User 2: Me too! I also like the Super Mario Bros. series and the Metroid series.
+
+    User 1: I like those games too! I think we would get along great.
+
+    User 2: Me too! It''s nice to meet you, [user 1''s name].
+
+    User 1: It''s nice to meet you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

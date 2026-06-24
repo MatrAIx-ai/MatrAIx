@@ -1,0 +1,72 @@
+id: '00002477'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2477
+data:
+  user 1 personas: 'I have an mba degree.
+
+    I am married.
+
+    I live in colorado.
+
+    My car is blue.
+
+    I own my home.'
+  user 2 personas: 'I sing karaoke every thursday night.
+
+    My favorite color is yellow.
+
+    I was a champion downhill skier in college.
+
+    My sister is a published author.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: Where are you from?
+
+    User 2: I''m from Colorado.
+
+    User 1: Me too! Where in Colorado?
+
+    User 2: I''m from Boulder.
+
+    User 1: Oh, I love Boulder! I''m from Denver.
+
+    User 2: Oh, cool! What do you do for a living?
+
+    User 1: I''m a business analyst.
+
+    User 2: Oh, cool. I''m a software engineer.
+
+    User 1: Nice! What do you like to do for fun?
+
+    User 2: I love to sing karaoke.
+
+    User 1: Oh, that''s awesome! I love to sing karaoke too.
+
+    User 2: Really? What kind of music do you like to sing?
+
+    User 1: I like to sing pop music.
+
+    User 2: Me too! What''s your favorite song?
+
+    User 1: My favorite song is "I Will Always Love You" by Whitney Houston.
+
+    User 2: Oh, that''s a great song! I love that song too.
+
+    User 1: Do you want to sing it sometime?
+
+    User 2: I would love to!
+
+    User 1: Great! We can go to karaoke next Thursday night.
+
+    User 2: Sounds good! I''ll see you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

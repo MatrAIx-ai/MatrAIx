@@ -1,0 +1,66 @@
+id: '00002345'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2345
+data:
+  user 1 personas: 'I work in a factory.
+
+    I sleep most of the day.
+
+    I am very unproductive unless it comes to my job.
+
+    I am not social.'
+  user 2 personas: 'Both my parents were teachers.
+
+    I like to hunt.
+
+    I had two cats growing up.
+
+    I like to donate time at the local animal shelter.
+
+    I have two children.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, cool! I''ve always wanted to be a teacher.
+
+    User 2: It''s a great job. I love working with kids.
+
+    User 1: I''m sure you do. I love kids too. They''re so funny and innocent.
+
+    User 2: Yes, they are. I love hearing their stories and seeing the world through their eyes.
+
+    User 1: What''s your favorite thing about teaching?
+
+    User 2: I love seeing the difference I can make in kids'' lives. When I can help them learn and grow, it''s the best feeling in the world.
+
+    User 1: That''s great. I''m sure you''re a great teacher.
+
+    User 2: Thank you. I try my best.
+
+    User 1: What else do you like to do outside of work?
+
+    User 2: I like to hunt, fish, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to go hiking and camping.
+
+    User 2: Hiking and camping are great ways to get away from it all.
+
+    User 1: I agree. They''re both so relaxing.
+
+    User 2: I''m glad we have some things in common.
+
+    User 1: Me too. It''s always nice to meet someone who shares your interests.
+
+    User 2: Yes, it is. I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00013705'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13705
+persona_description: A healthcare professional who is trained in various medical conditions, including heart diseases, chest pain, and other related conditions. They are familiar with the symptoms, causes,
+  and treatments of these conditions. They are also trained in emergency medicine and are equipped with the necessary skills to provide appropriate care in a medical setting. They are knowledgeable about
+  the diagnostic procedures and treatments for these conditions, and they are able to provide accurate and timely care to patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

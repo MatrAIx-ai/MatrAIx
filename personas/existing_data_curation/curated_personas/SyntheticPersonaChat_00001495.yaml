@@ -1,0 +1,70 @@
+id: 00001495
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1495
+data:
+  user 1 personas: 'I am 29 years old.
+
+    I enjoy hiking and riding my bicycle.
+
+    My favorite band is pearl jam.
+
+    I am a night owl.'
+  user 2 personas: 'I have a beautiful rose garden.
+
+    I was a swimmer in college.
+
+    I have a cat named pickles.
+
+    My parents met at woodstock.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. What''s your name?
+
+    User 2: I''m [User 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to go swimming, I used to be a swimmer in college.
+
+    User 1: That''s cool! I like to go hiking and riding my bicycle.
+
+    User 2: That sounds like fun, I''ve always wanted to try hiking.
+
+    User 1: It''s great exercise and a beautiful way to see the outdoors.
+
+    User 2: I''m sure I''d enjoy it.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is Pearl Jam.
+
+    User 1: Oh, I love Pearl Jam! They''re one of my favorite bands too.
+
+    User 2: They''re great, I love their music.
+
+    User 1: Me too. I''ve seen them in concert a few times.
+
+    User 2: I''ve never seen them in concert, but I''d love to.
+
+    User 1: I''m sure you''d enjoy it, they put on a great show.
+
+    User 2: I''m sure I would.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to garden, I have a beautiful rose garden.
+
+    User 1: That''s great! I love gardening too, but I''m not very good at it.
+
+    User 2: It''s a lot of fun, and it''s really rewarding when you see your plants grow.
+
+    User 1: I''m sure it is. I''ll have to try my hand at gardening again sometime.
+
+    User 2: I''m sure you''d do great at it.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

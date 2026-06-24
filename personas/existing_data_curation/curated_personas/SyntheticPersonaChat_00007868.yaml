@@ -1,0 +1,58 @@
+id: 00007868
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7868
+data:
+  user 1 personas: 'The name of my team is the baltimore ravens.
+
+    I am an athlete.
+
+    I had 128 tackles last year.
+
+    I play football.
+
+    My position is linebacker.'
+  user 2 personas: 'I eat meat.
+
+    I recently started working online.
+
+    My favorite band is the story so far.
+
+    My friends don t call my by my real name.
+
+    I enjoy going to festivals.'
+  Best Generated Conversation: 'User 1: I''m an athlete who recently started working online. What do you do for a living?
+
+    User 2: I''m a musician and I recently started playing shows at festivals.
+
+    User 1: That''s cool! I used to play the drums, but I don''t play much anymore.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like a lot of different types of music, but my favorite band is The Story So Far.
+
+    User 2: I''ve heard of them! I''ve never seen them live, but I''ve heard good things.
+
+    User 1: They''re really good! They put on a great show.
+
+    User 2: I''m glad to hear that. I''ll have to check them out sometime.
+
+    User 1: You should! What are your favorite festivals?
+
+    User 2: I like going to music festivals, but I also like going to art festivals and food festivals.
+
+    User 1: I like going to music festivals too. I went to Lollapalooza last year and it was a blast.
+
+    User 2: I''ve always wanted to go to Lollapalooza! It looks like so much fun.
+
+    User 1: It was really fun! I got to see a lot of great bands and I had a great time with my friends.
+
+    User 2: That sounds amazing! I''m jealous.
+
+    User 1: You should go next year! It''s a lot of fun.
+
+    User 2: I''ll definitely consider it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

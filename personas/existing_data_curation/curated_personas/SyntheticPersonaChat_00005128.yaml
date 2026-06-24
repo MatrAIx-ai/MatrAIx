@@ -1,0 +1,54 @@
+id: 00005128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5128
+data:
+  user 1 personas: 'My favorite city is new york.
+
+    My favorite food is steak.
+
+    My wife just left me.
+
+    I love to run.'
+  user 2 personas: 'I like to upcycle my thrift shop finds and make new items.
+
+    Sometimes i like to visit thrift shops.
+
+    I enjoy clothing with exotic prints.
+
+    I am an art teacher.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear about your wife leaving you.
+
+    User 2: Thank you. It''s been a tough time.
+
+    User 1: I know what you mean. I went through a similar thing a few years ago.
+
+    User 2: Really? How did you cope?
+
+    User 1: I started running. It really helped me to clear my head and to focus on something else.
+
+    User 2: That''s a great idea. I might try that.
+
+    User 1: I''m sure you''ll like it. It''s a great way to get in shape and to relieve stress.
+
+    User 2: I know, I''ve been wanting to start running for a while now.
+
+    User 1: Well, now''s the time.
+
+    User 2: I think you''re right.
+
+    User 1: So, what are your plans for the day?
+
+    User 2: I''m not sure yet. What are you up to?
+
+    User 1: I''m going to go for a run. Do you want to join me?
+
+    User 2: That sounds like fun. I''ll meet you at the park in 10 minutes.
+
+    User 1: Great! See you there.
+
+    '
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

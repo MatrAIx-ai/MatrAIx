@@ -1,0 +1,66 @@
+id: 00001280
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1280
+data:
+  user 1 personas: 'I have 2 sisters.
+
+    I like to play tennis.
+
+    My mother is a dentist.
+
+    I am a baker.'
+  user 2 personas: 'I have 3 ex wives.
+
+    My father was a famous actor.
+
+    I don t like acting.
+
+    I have 3 ferrari cars in my garage.'
+  Best Generated Conversation: 'User 1: Hi, what are you up to today?
+
+    User 2: Not much, just relaxing. I have the day off.
+
+    User 1: Nice! I have to work today, but I''m looking forward to it.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a baker. I love my job!
+
+    User 2: That sounds really cool! I''ve always wanted to learn how to bake.
+
+    User 1: It''s not too hard, you just have to be patient.
+
+    User 2: I''m sure I could learn it if I put my mind to it.
+
+    User 1: I''m sure you could!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play tennis, read, and spend time with my family.
+
+    User 2: That sounds really nice. I like to go to the movies, play golf, and travel.
+
+    User 1: I love to travel too! I''ve been to a few different countries, but I''d love to go to more.
+
+    User 2: Me too! I''ve been to a few countries in Europe, but I''d love to go to Asia and South America.
+
+    User 1: That would be amazing! I''ve always wanted to see the Great Wall of China.
+
+    User 2: That would be so cool! I''d love to see the Taj Mahal.
+
+    User 1: That would be beautiful! I''m sure we''ll both get to travel to all of the places we want to see one day.
+
+    User 2: I hope so! It would be amazing to see the world.
+
+    User 1: It would! Well, I should probably get going. It was nice talking to you!
+
+    User 2: You too! It was nice meeting you.
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

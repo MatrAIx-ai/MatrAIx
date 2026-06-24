@@ -1,0 +1,68 @@
+id: 00001288
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1288
+data:
+  user 1 personas: 'I have allergies.
+
+    I live on a pig farm.
+
+    I dislike animals.
+
+    I am a vegetarian.'
+  user 2 personas: 'I have a dog and two cats.
+
+    I like to go for runs.
+
+    I live by myself.
+
+    I like country music.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: Good, thanks! How are you?
+
+    User 1: I''m doing well, thanks. I''m a vegetarian.
+
+    User 2: Oh, that''s interesting. I have a dog and two cats.
+
+    User 1: Do you like animals?
+
+    User 2: Yeah, I love animals! They''re so cute and cuddly.
+
+    User 1: I don''t like animals. They make me sneeze.
+
+    User 2: Oh, that''s too bad. I love playing with my pets.
+
+    User 1: I guess I''m just not a pet person.
+
+    User 2: That''s okay. I''m sure there are other things you like.
+
+    User 1: Yeah, I like watching movies and listening to music.
+
+    User 2: Oh, that''s cool. I like to do that too. What kind of movies do you like?
+
+    User 1: I like action movies, comedy movies, and horror movies.
+
+    User 2: I like those too! I''m a big fan of horror movies.
+
+    User 1: Me too! They''re so scary.
+
+    User 2: Yeah, they''re the best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go for runs, play video games, and watch movies.
+
+    User 1: Oh, that''s cool. I like to do those things too.
+
+    User 2: Yeah, I''m a pretty active person.
+
+    User 1: Me too. I like to keep busy.
+
+    User 2: That''s good. I think it''s important to be active.
+
+    User 1: Yeah, I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

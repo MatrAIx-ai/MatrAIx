@@ -1,0 +1,112 @@
+id: '00004166'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4166
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I am 25 years old.
+
+    I have one son.
+
+    I am in the military.'
+  user 2 personas: 'Pizza is my favorite food.
+
+    My favorite hobby is reading suspense novels.
+
+    My mom is a cancer survivor.
+
+    My favorite subject in school was science.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi [name]! I''m [name]. What are you up to?
+
+    User 1: I''m just hanging out, reading a book. What about you?
+
+    User 2: I''m about to go get some pizza. Do you want to come with me?
+
+    User 1: Sure, I love pizza!
+
+    User 2: Great! I''ll meet you at the pizza place in 10 minutes.
+
+    User 1: See you there!
+
+    [At the pizza place]
+
+    User 1: This pizza is delicious!
+
+    User 2: I know, right? I love this place.
+
+    User 1: What are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could go for a walk?
+
+    User 2: That sounds like fun!
+
+    User 1: Great! I''ll meet you at your place in 30 minutes.
+
+    User 2: See you then!
+
+    [At user 2''s place]
+
+    User 1: Your place is really nice!
+
+    User 2: Thanks! I like it here.
+
+    User 1: So, where do you want to go for our walk?
+
+    User 2: How about we go to the park?
+
+    User 1: That sounds great!
+
+    [At the park]
+
+    User 1: This is a nice park.
+
+    User 2: I know, right? I love coming here.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: Me too! I love to read suspense novels.
+
+    User 2: Oh, me too! What are some of your favorites?
+
+    User 1: I love "The Girl on the Train" by Paula Hawkins and "The Silent Patient" by Alex Michaelides.
+
+    User 2: I''ve read both of those! They were both great!
+
+    User 1: I know, right? I''m always looking for new suspense novels to read.
+
+    User 2: Me too! I love the feeling of being on the edge of my seat.
+
+    User 1: Me too! It''s so exciting!
+
+    User 2: So, what are you up to next weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m not sure either. We could make plans together.
+
+    User 1: That sounds like fun! What would you like to do?
+
+    User 2: I don''t know. What do you like to do?
+
+    User 1: I like to go out to eat, go to the movies, or just hang out.
+
+    User 2: Oh, I love going to the movies!
+
+    User 1: Me too! We could go see a movie next weekend.
+
+    User 2: That sounds like fun!
+
+    User 1: Great! I''ll let you know what time we''re going.
+
+    User 2: Okay, I''ll see you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

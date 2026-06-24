@@ -1,0 +1,19 @@
+id: '00031176'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31176
+persona_description: A statistician or data analyst who is familiar with the concepts and techniques of time series analysis, particularly in the context of seasonal data. This person is interested in finding
+  transformations of the series that make the variance constant and is looking for a plot of the range against mean or of the standard deviation against mean to determine whether a log transformation is
+  appropriate. They are also interested in the choice of whether to use the range or the standard deviation as a measure of variability and are familiar with the recommended group size for seasonal data.
+  This person is likely to have experience with G13AUF, G01AGF, and M01EAF routines and may have a background in statistics or econometrics.
+expertise:
+  general_domain_top1pct: statistics
+  specific_domain_top1pct: time series analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

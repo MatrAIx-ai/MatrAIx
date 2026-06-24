@@ -1,0 +1,65 @@
+id: 00008505
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8505
+data:
+  user 1 personas: 'I have been on the design team for over 65 video games.
+
+    I am trying to create my own startup company in the gaming industry.
+
+    My wife recently got laid off from her human resources job.
+
+    My son plays on the local football team.
+
+    I design video games for a living.'
+  user 2 personas: 'I am also a fulltime student studying radiology at local college.
+
+    I manage all the paperwork and incoming calls.
+
+    My name is mary.
+
+    I am a receptionist at a doctors office.'
+  Best Generated Conversation: '*Hi! I''m Mary, I''m a receptionist at a doctor''s office and I''m also a full-time student studying radiology. What about you?*
+
+
+    *Hi Mary, my name is John and I''m a video game designer. I have been on the design team for over 65 video games and I''m trying to create my own startup company in the gaming industry.*
+
+
+    *That''s so cool! I''ve always wanted to make video games, but I don''t know anything about programming.*
+
+
+    *It''s not as hard as you think! I''m sure you could learn it if you put your mind to it.*
+
+
+    *Thanks, I might look into it. What''s your favorite video game?*
+
+
+    *I have a lot of favorites, but I think my favorite is Super Mario Bros. It''s just so much fun to play!*
+
+
+    *I love that game too! I remember playing it all the time when I was a kid.*
+
+
+    *Me too! It''s one of those games that never gets old.*
+
+
+    *So, what''s your startup company going to be about?*
+
+
+    *I''m not sure yet, but I''m thinking about making a game that''s based on my son''s football team.*
+
+
+    *That''s a great idea! I''m sure your son would love it.*
+
+
+    *Thanks, I hope so.*
+
+
+    *Well, it was nice talking to you, John. Good luck with your startup company!*
+
+
+    *Thanks, Mary. You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

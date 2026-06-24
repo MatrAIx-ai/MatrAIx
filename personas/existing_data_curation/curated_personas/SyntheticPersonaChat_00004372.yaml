@@ -1,0 +1,68 @@
+id: '00004372'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4372
+data:
+  user 1 personas: 'I like the taste of cheese.
+
+    I hate to drive.
+
+    I am younger then 46.
+
+    I like the music group the backstreet boys.'
+  user 2 personas: 'I haven t spoken to my family in years.
+
+    I enjoy hitchhiking.
+
+    I live alone.
+
+    Formal situations make me uncomfortable.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi [User 1''s name], I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hitchhike and live alone.
+
+    User 1: Oh, that sounds interesting. I''ve never hitchhiked before.
+
+    User 2: It''s a great way to meet new people and see new things.
+
+    User 1: I can imagine. I''m not sure I''d be brave enough to do it, though.
+
+    User 2: It''s not as scary as it sounds. Just be sure to go with someone you trust.
+
+    User 1: Okay, I''ll keep that in mind. Thanks for the tip.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to listen to music, read, and watch movies.
+
+    User 2: Cool, me too. What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but my favorite is probably country music.
+
+    User 2: Me too! I love country music. Who are your favorite artists?
+
+    User 1: I like Kenny Chesney, Carrie Underwood, and Blake Shelton.
+
+    User 2: Those are all great artists. I love their music too.
+
+    User 1: Yeah, they''re really good. So, what are some of your favorite books?
+
+    User 2: I like to read a lot of different types of books, but my favorite is probably historical fiction.
+
+    User 1: Oh, I like historical fiction too. What are some of your favorite historical fiction books?
+
+    User 2: I like The Pillars of the Earth by Ken Follett, Outlander by Diana Gabaldon, and The Alienist by Caleb Carr.
+
+    User 1: Those are all great books. I''ve read The Pillars of the Earth and The Alienist, and I really enjoyed them. I''ve heard good things about Outlander, but I haven''t read it yet.
+
+    User 2: You should check it out. It''s a really good series.
+
+    User 1: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

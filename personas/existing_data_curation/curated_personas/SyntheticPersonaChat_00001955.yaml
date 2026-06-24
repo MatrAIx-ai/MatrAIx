@@ -1,0 +1,60 @@
+id: 00001955
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1955
+data:
+  user 1 personas: 'I like to stay fit.
+
+    I don t much like tv.
+
+    I love to watch ted talks.
+
+    I love animals.'
+  user 2 personas: 'I play the guitar.
+
+    I like to go for runs.
+
+    I like country music.
+
+    I live by myself.
+
+    I have a dog and two cats.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to play the guitar, go for runs, and listen to country music.
+
+    User 1: Oh, that''s cool. I like to stay fit too. I like to go to the gym and play racquetball.
+
+    User 2: I don''t much like TV, but I love to watch TED talks. They''re so interesting and informative.
+
+    User 1: I''ve never heard of TED talks, but they sound interesting. What are they about?
+
+    User 2: They''re a series of talks on a variety of topics, from science to business to art. They''re all very well-done and informative.
+
+    User 1: That sounds cool. I''ll have to check them out. What kind of music do you like?
+
+    User 2: I like country music, but I''ll listen to anything. I love discovering new music.
+
+    User 1: I like a lot of different kinds of music too. I''m always looking for new stuff to listen to.
+
+    User 2: Me too. I think it''s so important to have a wide range of musical interests.
+
+    User 1: I agree. It keeps things interesting.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love animals. I have a dog and two cats.
+
+    User 2: That''s so cool. I have a dog too. He''s my best friend.
+
+    User 1: I love dogs. They''re such loyal and loving creatures.
+
+    User 2: I agree. They''re the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

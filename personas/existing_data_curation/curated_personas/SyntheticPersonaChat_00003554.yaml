@@ -1,0 +1,52 @@
+id: '00003554'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3554
+data:
+  user 1 personas: 'My only friend is a dog.
+
+    I work at a newspaper.
+
+    My father used to be a butcher.'
+  user 2 personas: 'I am very smart.
+
+    I work as a janitor.
+
+    I love the outdoors.
+
+    I love to drink whiskey.'
+  Best Generated Conversation: 'User 1: Hi, I''m a reporter at the newspaper. I''m looking for a janitor to interview for my story. Do you want to be interviewed?
+
+    User 2: Sure, I''d be happy to be interviewed.
+
+    User 1: Great! What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: What do you like about being a janitor?
+
+    User 2: I like the fact that I get to keep my community clean. I also like the fact that I get to meet new people all the time.
+
+    User 1: What''s the most challenging part of being a janitor?
+
+    User 2: The most challenging part is dealing with the smells. But it''s all worth it to keep my community clean.
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love to drink whiskey and go hiking.
+
+    User 1: I''ve never tried whiskey before. What''s it like?
+
+    User 2: It''s a strong alcohol. It''s not for everyone, but I love it.
+
+    User 1: I''m not sure I''m ready to try it, but I might give it a try one day.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Thank you for your time! I enjoyed talking to you.
+
+    User 2: You''re welcome! It was nice to talk to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

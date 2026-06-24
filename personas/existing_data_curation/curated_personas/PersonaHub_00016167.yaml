@@ -1,0 +1,18 @@
+id: '00016167'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16167
+persona_description: A mechanical engineer who specializes in the design and control of DC motors. Their expertise lies in the optimization of motor speed and torque, and the analysis of power requirements
+  for various applications. They have experience with full-wave bridge converters and are skilled in controlling the speed of DC motors using these devices. They have a deep understanding of the physics
+  behind DC motors and are capable of accurately predicting the performance of the motor based on the given parameters.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: DC Motor Design and Control
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

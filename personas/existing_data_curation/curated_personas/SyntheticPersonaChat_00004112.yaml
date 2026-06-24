@@ -1,0 +1,70 @@
+id: '00004112'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4112
+data:
+  user 1 personas: 'I think i need a vacation.
+
+    I take forever to get tasks done so i start early and clock out late.
+
+    I work too much.
+
+    I am a perfectionist.
+
+    If things are not done right i will redo them again and again.'
+  user 2 personas: 'I am a hair stylist.
+
+    I live on a boat.
+
+    I have my own salon.
+
+    My hair is colored purple.
+
+    I got married last year.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a hair stylist.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a hair stylist.
+
+    User 2: It''s a lot of fun. I love getting to create new looks for people.
+
+    User 1: I bet! Do you have your own salon?
+
+    User 2: Yes, I do. I live on a boat and my salon is in the back.
+
+    User 1: That''s awesome! I''ve never seen a hair salon on a boat before.
+
+    User 2: It''s a lot of fun. I get to see the ocean every day.
+
+    User 1: That''s great! I love the ocean.
+
+    User 2: Me too! So, what do you do for a living?
+
+    User 1: I''m a perfectionist. I work too much and I think I need a vacation.
+
+    User 2: Oh, that''s not good. You need to take some time for yourself.
+
+    User 1: I know, I know. I''m trying to schedule one soon.
+
+    User 2: Good. You deserve it.
+
+    User 1: Thanks.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I like to go to the beach, read, and spend time with my friends and family.
+
+    User 2: That sounds like fun. I like to do a lot of the same things.
+
+    User 1: Me too! We should hang out sometime.
+
+    User 2: Sure, that would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

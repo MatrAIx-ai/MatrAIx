@@ -1,0 +1,20 @@
+id: 00049090
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49090
+persona_description: A security researcher who specializes in the analysis and manipulation of electronic voting machines, particularly those used in the United States. He works at Argonne National Laboratory
+  and has experience with international nuclear safeguards, indicating a background in security and cryptography. He has a part-time job of changing the course of fictitious elections on real electronic
+  voting machines that are used by a quarter of American voters. He has expertise in intercepting communication flows and manipulating voting information using a custom-made remote control device. His research
+  interests include security and effectiveness of electronic voting machines, and he has experience with vulnerabilities in the way the machines are made and transported. He is concerned about the potential
+  for tampering with electronic voting machines and the impact of just one malfunctioning machine on the outcome of an election.
+expertise:
+  general_domain_top1pct: Computer Security
+  specific_domain_top1pct: Voting Machine Security
+  general_domain_top01pct: None
+  specific_domain_top01pct: Voting Machine Security
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

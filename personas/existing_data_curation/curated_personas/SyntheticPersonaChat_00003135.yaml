@@ -1,0 +1,90 @@
+id: '00003135'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3135
+data:
+  user 1 personas: 'I like to watch movies.
+
+    I like to draw.
+
+    I like to do crafts.
+
+    I am a mother of 5.
+
+    I like all types of music.'
+  user 2 personas: 'I believe in love at first sight.
+
+    I have two brothers.
+
+    I work in a lab.
+
+    I love to sleep in.
+
+    I have been a vegan since i was 5.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m a mother of 5 kids.
+
+    User 2: Wow, that must be a lot of work!
+
+    User 1: It can be, but it''s also really rewarding.
+
+    User 2: I''m sure it is. What are your favorite hobbies?
+
+    User 1: I like to draw, do crafts, and watch movies.
+
+    User 2: I love to do crafts too! What kinds of crafts do you like to do?
+
+    User 1: I like to make jewelry, crochet, and sew.
+
+    User 2: Those all sound really cool! I''ve always wanted to learn how to crochet.
+
+    User 1: It''s not too hard to learn! There are lots of great tutorials online.
+
+    User 2: Maybe I''ll check some out.
+
+    User 1: You should! I''m sure you''ll love it.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem! What do you do for work?
+
+    User 2: I work in a lab.
+
+    User 1: Oh, that sounds interesting. What kind of lab?
+
+    User 2: I work in a research lab. We''re studying how to use plants to create new medicines.
+
+    User 1: That''s really cool! I''m always amazed by what scientists are able to do.
+
+    User 2: Me too! It''s a really exciting field.
+
+    User 1: So, do you have any brothers or sisters?
+
+    User 2: I have two brothers.
+
+    User 1: Oh, nice! Do you get along with them well?
+
+    User 2: Yeah, we''re pretty close.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, I''m lucky to have them.
+
+    User 1: So, what''s your favorite type of music?
+
+    User 2: I like all types of music, but I''m especially into rock and indie music.
+
+    User 1: Me too! I love rock and indie music.
+
+    User 2: That''s awesome! I''m glad we have that in common.
+
+    User 1: Me too! It''s always nice to find someone who shares your interests.
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

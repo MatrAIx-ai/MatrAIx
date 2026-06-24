@@ -1,0 +1,62 @@
+id: 00003295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3295
+data:
+  user 1 personas: 'I am a georgia resident.
+
+    My favorite fiction genres are sci fi and horror.
+
+    I like nfl and college football.
+
+    I play in a nfl fantasy football league.'
+  user 2 personas: 'I dance ballet.
+
+    I am an only child.
+
+    My mother was a sunday school teacher.
+
+    I went to an all girls christian high school.
+
+    I am currently in nursing school.'
+  Best Generated Conversation: 'User 1: I''m from Georgia!
+
+    User 2: Me too! Where are you from?
+
+    User 1: I''m from Atlanta.
+
+    User 2: I''m from Savannah.
+
+    User 1: Cool! What do you like to do in Savannah?
+
+    User 2: I like to go to the beach, dance ballet, and spend time with my friends.
+
+    User 1: That sounds fun! I like to go to the beach too. What kind of ballet do you dance?
+
+    User 2: I dance classical ballet. I''ve been dancing since I was a little girl.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to dance ballet.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will! What else do you like to do?
+
+    User 2: I also like to read, watch movies, and spend time with my family.
+
+    User 1: Me too! I love to read sci fi and horror books. What kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but I especially like romantic comedies and action movies.
+
+    User 1: Me too! I love romantic comedies and action movies too.
+
+    User 2: Cool! We should watch a movie together sometime.
+
+    User 1: That sounds like a lot of fun! I''d love to.
+
+    User 2: Great! We can exchange numbers and talk about it later.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

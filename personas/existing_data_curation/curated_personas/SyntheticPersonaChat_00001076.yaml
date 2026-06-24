@@ -1,0 +1,88 @@
+id: '00001076'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1076
+data:
+  user 1 personas: 'I listen to rap.
+
+    I drive a black car.
+
+    My favorite food is steak.
+
+    I like meat.
+
+    I am working in finance.'
+  user 2 personas: 'I like to role play.
+
+    My favorite food is pizza.
+
+    I love cars.
+
+    I do not like animals.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much. Just hanging out.
+
+    User 1: Nice. What are you doing today?
+
+    User 2: I''m going to go to the movies.
+
+    User 1: Oh, cool. What movie are you going to see?
+
+    User 2: I''m not sure yet. I''m still deciding.
+
+    User 1: I''m going to see the new Fast and Furious movie.
+
+    User 2: Oh, I''ve heard that''s good.
+
+    User 1: Yeah, it''s supposed to be really good.
+
+    User 2: Well, I hope you enjoy it.
+
+    User 1: Thanks. I will.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a financial analyst.
+
+    User 2: Oh, that sounds interesting.
+
+    User 1: It''s not bad. It''s a lot of work, but it''s also rewarding.
+
+    User 2: I''m glad you like it.
+
+    User 1: Yeah, it''s a good job.
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is steak.
+
+    User 2: Oh, me too! I love steak.
+
+    User 1: Yeah, it''s so good.
+
+    User 2: What do you like about it?
+
+    User 1: I like the flavor and the texture. It''s just a really delicious food.
+
+    User 2: I agree. It''s the best.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what are you doing later?
+
+    User 1: I''m not sure yet. I might go out to dinner.
+
+    User 2: Oh, that sounds fun.
+
+    User 1: Yeah, it does.
+
+    User 2: Well, I have to go. It was nice talking to you.
+
+    User 1: You too. Have a good day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

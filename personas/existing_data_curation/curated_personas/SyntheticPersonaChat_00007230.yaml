@@ -1,0 +1,74 @@
+id: '00007230'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7230
+data:
+  user 1 personas: 'I would like to move some place warmer.
+
+    I m an out of work farmhand.
+
+    I like watching reality television shows.
+
+    I live in kansas.'
+  user 2 personas: 'I am studying to be a dentist.
+
+    My favorite team is the raptors.
+
+    My favorite band is rise against.
+
+    I usually go to bed late.
+
+    I like sports.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi!
+
+    User 1: I''m from Kansas. Where are you from?
+
+    User 2: I''m from Toronto, Canada.
+
+    User 1: Oh, cool! I''ve always wanted to visit Canada.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m studying to be a dentist.
+
+    User 1: That''s cool! I''ve always thought dentistry would be a cool job.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play sports, watch sports, and listen to music.
+
+    User 1: Oh, me too! I love playing sports and listening to music.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but my favorite band is Rise Against.
+
+    User 2: I''ve heard of them! They''re a good band.
+
+    User 1: Yeah, they''re my favorite.
+
+    User 2: What sports do you like to play?
+
+    User 1: I like playing basketball, baseball, and soccer.
+
+    User 2: I like basketball and soccer too.
+
+    User 1: What''s your favorite team?
+
+    User 2: My favorite team is the Raptors.
+
+    User 1: Oh, cool! I''m a fan of the Raptors too.
+
+    User 2: That''s great! We should watch a game together sometime.
+
+    User 1: I''d love to'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

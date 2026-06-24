@@ -1,0 +1,78 @@
+id: '00002635'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2635
+data:
+  user 1 personas: 'I want to go to mars.
+
+    I have 3 kids.
+
+    I know karate.
+
+    I am an avid artist.
+
+    I am a scientist.'
+  user 2 personas: 'My english is not very good yet.
+
+    I love to walk my dog everyday after work.
+
+    I want to be a famous actor.
+
+    I just moved to los angeles from tokyo.
+
+    I also dance and sing.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to walk my dog, sing, and dance.
+
+    User 1: That sounds fun! I like to do karate and paint.
+
+    User 2: I''ve always wanted to learn karate. What''s it like?
+
+    User 1: It''s a lot of fun! It''s a great way to stay in shape and learn self-defense.
+
+    User 2: That sounds cool! I''m going to look into it.
+
+    User 1: You should! I''m sure you''d like it.
+
+    User 2: Thanks! What about you? What''s your job?
+
+    User 1: I''m a scientist.
+
+    User 2: Oh, that''s cool! What kind of science do you do?
+
+    User 1: I study the effects of climate change on the environment.
+
+    User 2: That sounds really important!
+
+    User 1: I think so too. I''m glad I can do something to help the planet.
+
+    User 2: That''s great! I''m glad you''re passionate about your work.
+
+    User 1: Thanks! I''m also a mom of three kids.
+
+    User 2: Oh, wow! That''s a lot of work!
+
+    User 1: It is, but it''s also really rewarding.
+
+    User 2: I''m sure it is! Do you have any pets?
+
+    User 1: Yes, I have a dog named Charlie.
+
+    User 2: I love dogs! What kind of dog is he?
+
+    User 1: He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly and playful.
+
+    User 1: He is! He''s the best dog in the world.
+
+    User 2: I''m sure he is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

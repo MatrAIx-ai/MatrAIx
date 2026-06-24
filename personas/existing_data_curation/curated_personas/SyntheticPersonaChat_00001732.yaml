@@ -1,0 +1,86 @@
+id: '00001732'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1732
+data:
+  user 1 personas: 'I was in the army.
+
+    I work in construction.
+
+    I drive a prius.
+
+    I have freckles all over my face.'
+  user 2 personas: 'My friend likes cartoons like south park.
+
+    Some jokes go too far.
+
+    I like the flintstones.
+
+    I like simple jokes.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I like to watch cartoons, play video games, and read.
+
+    User 1: Cool! I used to love watching cartoons when I was a kid.
+
+    User 2: Me too! I still watch cartoons sometimes.
+
+    User 1: What''s your favorite cartoon?
+
+    User 2: I like South Park.
+
+    User 1: I''ve heard of that, but I''ve never seen it.
+
+    User 2: It''s a funny cartoon about four boys who live in Colorado.
+
+    User 1: Sounds interesting. I''ll have to check it out.
+
+    User 2: You should. It''s really funny.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to play video games.
+
+    User 1: Me too! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I mostly like to play action-adventure games.
+
+    User 1: I like those too! I used to play a lot of Halo.
+
+    User 2: Halo is a great game! I''ve played it a few times.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read.
+
+    User 1: Me too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I mostly like to read fiction.
+
+    User 1: I like to read fiction too. I''ve been reading a lot of sci-fi lately.
+
+    User 2: Sci-fi is great! I love reading sci-fi.
+
+    User 1: What''s your favorite sci-fi book?
+
+    User 2: I don''t know if I have a favorite sci-fi book, but I really like the Ender''s Game series.
+
+    User 1: Ender''s Game is a great series! I''ve read all of the books in the series.
+
+    User 2: You''ve read all of them? That''s impressive!
+
+    User 1: Thanks! I love the Ender''s Game series.
+
+    User 2: Me too! It''s one of my favorite sci-fi series.
+
+    User 1: What other sci-fi books have you read?
+
+    User 2: I''ve read a lot of sci-fi books, but some of my favorites include Dune, The Hitchhiker''s Guide to the Galaxy, and The Martian.
+
+    User 1: Those are all great books! I''ve read them all too.
+
+    User 2: Me too! We have similar taste in books.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

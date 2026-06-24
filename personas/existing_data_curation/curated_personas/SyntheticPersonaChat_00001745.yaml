@@ -1,0 +1,86 @@
+id: '00001745'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1745
+data:
+  user 1 personas: 'I work in a diner.
+
+    I also own a cupcake business.
+
+    I am always late.
+
+    I live with my best friend.
+
+    I sing in the shower.'
+  user 2 personas: 'I have two kids i enjoy being on social media.
+
+    I love the summer.
+
+    I work at a animal clinic.
+
+    I love mexican food.'
+  Best Generated Conversation: 'User 1: Hi there, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name). Nice to meet you.
+
+    User 1: You too. What do you do for a living?
+
+    User 2: I work at an animal clinic.
+
+    User 1: Oh, that''s cool. I''ve always loved animals.
+
+    User 2: Me too! What about you? What do you do?
+
+    User 1: I work in a diner and I also own a cupcake business.
+
+    User 2: Oh, that''s so cool! I love cupcakes.
+
+    User 1: Thanks! I love making them.
+
+    User 2: What''s your favorite kind of cupcake?
+
+    User 1: I think my favorite is red velvet.
+
+    User 2: Oh, those are good. I like chocolate myself.
+
+    User 1: Chocolate is always a good choice.
+
+    User 2: What''s your favorite thing about working in a diner?
+
+    User 1: I like the people I work with. We''re all like family.
+
+    User 2: That''s great! I''m glad you have a good work environment.
+
+    User 1: Me too. What''s your favorite thing about working at an animal clinic?
+
+    User 2: I love helping animals. It''s so rewarding.
+
+    User 1: That''s awesome. I''m glad you find your job so rewarding.
+
+    User 2: Thanks. I do.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to the beach with my kids.
+
+    User 1: Oh, that sounds fun! I love the beach.
+
+    User 2: Me too! It''s my favorite place to be.
+
+    User 1: I''m going to be working, unfortunately.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, but I have to make money to support my cupcake business.
+
+    User 2: That''s true. You can''t make cupcakes if you don''t have money.
+
+    User 1: Exactly.
+
+    User 2: Well, I hope you have a good weekend at work.
+
+    User 1: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

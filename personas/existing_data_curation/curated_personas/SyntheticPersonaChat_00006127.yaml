@@ -1,0 +1,86 @@
+id: '00006127'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6127
+data:
+  user 1 personas: 'My favorite book is ender s game.
+
+    I like to read.
+
+    I have a garden.
+
+    I grew up in kentucky.'
+  user 2 personas: 'I read autobiographies before bed.
+
+    I have a cat named george.
+
+    I regularly go to the gym.
+
+    My favorite band is metallica.
+
+    My favorite meal is chicken and rice.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go to the gym, and play with my cat.
+
+    User 1: Me too! I love to read, and I have a garden that I love to take care of.
+
+    User 2: That sounds like a lot of fun. I''ve never been big on gardening, but I can see how it could be relaxing.
+
+    User 1: It really is. I love getting my hands dirty and working in the fresh air.
+
+    User 2: I can imagine. I do enjoy reading autobiographies before bed, though.
+
+    User 1: Oh, that''s interesting. I''ve never really read any autobiographies. What''s your favorite one?
+
+    User 2: My favorite is "The Autobiography of Malcolm X." It''s really inspiring and eye-opening.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out sometime.
+
+    User 2: You should! I think you''d really enjoy it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem. So, what''s your favorite meal?
+
+    User 1: My favorite meal is chicken and rice. It''s simple, but it''s always satisfying.
+
+    User 2: I love chicken and rice too! It''s so easy to make and it''s always delicious.
+
+    User 1: I know, right? It''s my go-to meal when I don''t know what else to make.
+
+    User 2: Me too! It''s always a hit with my family and friends.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I''m a teacher. I teach kindergarten.
+
+    User 2: That sounds like a fun job!
+
+    User 1: It is! I love working with kids.
+
+    User 2: I can imagine. I love my cat, George. He''s a big part of my life.
+
+    User 1: I love cats too! They''re so cute and cuddly.
+
+    User 2: I know, right? I''m so glad I have George.
+
+    User 1: Me too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, watch movies, and go to the gym.
+
+    User 2: Me too! I love to read, go to the gym, and play with my cat.
+
+    User 1: That sounds like a lot of fun. I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

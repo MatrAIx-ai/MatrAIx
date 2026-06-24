@@ -1,0 +1,60 @@
+id: '00003562'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3562
+data:
+  user 1 personas: 'My wife is legally deaf.
+
+    My parents are both over age 100.
+
+    I build aquariums for a living.
+
+    I have six brothers.
+
+    My brother in law runs a major hollywood studio.'
+  user 2 personas: 'I travel at least once a year.
+
+    I love to watch the voice.
+
+    I graduated from princeton.
+
+    My favorite thing to do is to go to museums.
+
+    I am currently listening to bach.'
+  Best Generated Conversation: 'User 1: Hi, I''m a 60-something year old guy who builds aquariums for a living. I have 6 brothers and my wife is legally deaf. What are you about?
+
+    User 2: Hi! I''m a 20-something year old woman who loves to travel, watch the voice, and go to museums. I graduated from Princeton and I''m currently listening to Bach.
+
+    User 1: That''s cool! I love Bach too. What''s your favorite piece?
+
+    User 2: I love the Brandenburg Concertos. They''re so beautiful and complex.
+
+    User 1: I agree! They''re one of my favorites too.
+
+    User 2: What''s your favorite thing about traveling?
+
+    User 1: I love seeing new places and meeting new people. I also love trying new foods and exploring different cultures.
+
+    User 2: Me too! I love learning about the different ways people live around the world.
+
+    User 1: So, what''s your favorite place you''ve ever traveled to?
+
+    User 2: I have so many favorites, but I think I''d have to say Italy. The food, the culture, the history...it was all amazing.
+
+    User 1: Italy is one of my favorites too! I love the Amalfi Coast.
+
+    User 2: I''ve never been to the Amalfi Coast, but I''ve heard great things about it.
+
+    User 1: It''s definitely worth a visit.
+
+    User 2: I''ll have to add it to my list.
+
+    User 1: Good! I''m sure you''ll love it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

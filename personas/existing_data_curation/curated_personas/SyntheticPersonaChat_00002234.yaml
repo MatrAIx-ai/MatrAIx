@@ -1,0 +1,88 @@
+id: '00002234'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2234
+data:
+  user 1 personas: 'I have my own salon.
+
+    My hair is colored purple.
+
+    I got married last year.
+
+    I am a hair stylist.
+
+    I live on a boat.'
+  user 2 personas: 'My favorite color is red.
+
+    I love to dance.
+
+    I drive a prius.
+
+    I work at a coffee shop.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. My name is [user 1].
+
+    User 2: Nice to meet you too, [user 1].
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work at a coffee shop.
+
+    User 1: Oh, that sounds cool. I''ve always wanted to work at a coffee shop.
+
+    User 2: It''s a lot of fun. I get to meet a lot of different people.
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is red.
+
+    User 1: Red is a great color. It''s so vibrant and energetic.
+
+    User 2: I know, right? I love it.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to dance. I take dance classes every week.
+
+    User 1: That''s awesome! I love to dance too. I wish I could take dance classes, but I don''t have the time.
+
+    User 2: You should make time for it. It''s so much fun.
+
+    User 1: I''ll try.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a hair stylist.
+
+    User 2: Oh, that''s cool. I''ve always wanted to get my hair done.
+
+    User 1: I''d be happy to do your hair.
+
+    User 2: Thanks, but I''m not ready yet. Maybe next time.
+
+    User 1: Sure, no problem.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to travel. I''ve been to a lot of different countries.
+
+    User 2: That''s awesome! I''ve only been to a few countries.
+
+    User 1: You should travel more. It''s a great way to see the world.
+
+    User 2: I know, I know. I''ll try.
+
+    User 1: So, what''s your favorite thing about living on a boat?
+
+    User 2: I love being able to wake up to the sound of the waves and the smell of the ocean.
+
+    User 1: That sounds amazing. I''ve always wanted to live on a boat.
+
+    User 2: It''s definitely a different lifestyle, but it''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

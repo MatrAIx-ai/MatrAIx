@@ -1,0 +1,64 @@
+id: '00007261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7261
+data:
+  user 1 personas: 'My hobbies include reading and cycling.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    I m the general manager of the local grocery store.
+
+    My name is frank.'
+  user 2 personas: 'I like basketball.
+
+    I m from texas.
+
+    My favorite band is imagine dragons.
+
+    I am a father.
+
+    I work many hours.'
+  Best Generated Conversation: 'User 1: Hello, I''m Frank. I''m the general manager of the local grocery store.
+
+    User 2: Hello Frank, I''m [user 2''s name]. I''m from Texas.
+
+    User 1: Oh, that''s cool. I''ve never been to Texas.
+
+    User 2: You should come sometime! It''s a great place to live.
+
+    User 1: I might have to do that. Do you like basketball?
+
+    User 2: I love basketball! I''m a big fan of the Dallas Mavericks.
+
+    User 1: Oh, that''s cool. I''m not much of a sports fan, but I do like to watch basketball occasionally.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to read and cycle. I also enjoy travelling.
+
+    User 2: Oh, that''s cool. I like to read too. What kind of books do you like to read?
+
+    User 1: I like to read mysteries and thrillers. I also like to read non-fiction books about history and science.
+
+    User 2: Oh, that''s cool. I like to read non-fiction books too. I''m a big fan of history books.
+
+    User 1: Me too! I think history is really interesting.
+
+    User 2: It is! I love learning about the past.
+
+    User 1: Me too! I think it''s important to learn about the past so we can understand the present.
+
+    User 2: I agree. It''s important to know where we came from so we can know where we''re going.
+
+    User 1: Exactly.
+
+    User 2: Well, it was nice talking to you, Frank.
+
+    User 1: You too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

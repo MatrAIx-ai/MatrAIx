@@ -1,0 +1,17 @@
+id: '00050450'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50450
+persona_description: A scientist with expertise in asteroid research and monitoring, particularly focusing on the closest known flyby of an asteroid by Earth. This scientist is responsible for monitoring
+  over 9,000 asteroids and believes that 1,800 of them are reasonably large.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: asteroid research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

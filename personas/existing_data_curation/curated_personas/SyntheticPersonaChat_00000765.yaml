@@ -1,0 +1,62 @@
+id: '00000765'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 765
+data:
+  user 1 personas: 'I love animals.
+
+    I enjoy playing tennis.
+
+    I am an aspiring singer.
+
+    Green is my favorite color.
+
+    My father worked for ge.'
+  user 2 personas: 'I like to stay fit.
+
+    I love to walk in the woods.
+
+    I love animals.
+
+    I don t much like tv.
+
+    I love to watch ted talks.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to stay fit, go for walks in the woods, and love animals.
+
+    User 1: That''s great! I love animals too. I have a dog and a cat.
+
+    User 2: That''s awesome! I have a dog and a cat too.
+
+    User 1: What kind of dog do you have?
+
+    User 2: I have a golden retriever.
+
+    User 1: That''s a great breed! I have a black lab.
+
+    User 2: I love black labs! They''re such sweet dogs.
+
+    User 1: They are! What kind of cat do you have?
+
+    User 2: I have a tabby cat.
+
+    User 1: That''s a great breed too! I have a tabby cat too.
+
+    User 2: That''s awesome! We should get our cats together for a play date.
+
+    User 1: That would be fun! I''m sure our cats would love to meet each other.
+
+    User 2: Me too! We should set it up sometime.
+
+    User 1: Okay! I''ll let you know when I''m free.
+
+    User 2: Okay! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

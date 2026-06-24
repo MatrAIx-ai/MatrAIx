@@ -1,0 +1,18 @@
+id: 00055383
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55383
+persona_description: A manufacturer or engineer responsible for circuit board assembly, particularly in the field of BGA components and sockets. They are familiar with the Intel strain guidance and are
+  interested in implementing a reliable strain measurement methodology to monitor board flexure. They are looking for guidance on how to create a strain report and compare the results to the Intel strain
+  guidance.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: electronics engineering or PCB assembly
+  general_domain_top01pct: None
+  specific_domain_top01pct: strain measurement or mechanical engineering
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

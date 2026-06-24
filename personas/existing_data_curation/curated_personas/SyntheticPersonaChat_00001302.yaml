@@ -1,0 +1,58 @@
+id: '00001302'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1302
+data:
+  user 1 personas: 'I have pink hair.
+
+    I m the youngest of five.
+
+    I m allergic to bees.
+
+    I live in the city of grand rapids , michigan.'
+  user 2 personas: 'My favorite rapper is yo gotti.
+
+    I am addicted to the hit show empire.
+
+    God has always been put first in my life.
+
+    I take pride in getting straight a s.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: Nice to meet you! What are your interests?
+
+    User 2: I like to listen to music, watch TV, and play video games.
+
+    User 1: Cool! I like to do those things too. What are your favorite shows?
+
+    User 2: I love Empire and Black-ish. What about you?
+
+    User 1: I love those shows too! I also like Modern Family and The Office.
+
+    User 2: Those are great shows! What about music? What do you like to listen to?
+
+    User 1: I like a lot of different kinds of music, but my favorite is hip-hop. Who is your favorite rapper?
+
+    User 2: My favorite rapper is Yo Gotti. I love his music. What about you?
+
+    User 1: I like Yo Gotti too! He''s one of my favorites. I also like J. Cole and Kendrick Lamar.
+
+    User 2: Those are great rappers! I like them too.
+
+    User 1: What about video games? What do you like to play?
+
+    User 2: I like to play a lot of different games, but my favorite is Call of Duty. What about you?
+
+    User 1: I like Call of Duty too! I also like Fortnite and Apex Legends.
+
+    User 2: Those are great games! I like them too.
+
+    User 1: It''s nice to meet you, [user 2]. We have a lot in common.
+
+    User 2: It''s nice to meet you too, [user 1]. I think we''re going to be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

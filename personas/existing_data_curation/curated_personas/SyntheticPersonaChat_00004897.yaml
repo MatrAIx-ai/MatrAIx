@@ -1,0 +1,106 @@
+id: 00004897
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4897
+data:
+  user 1 personas: 'Nike cleats are my favorite.
+
+    I am a soccer player.
+
+    My number is 42.
+
+    I joined a new team last month.
+
+    I am a goalie.'
+  user 2 personas: 'I have one sister.
+
+    I love dogs , especially labradors.
+
+    I work in the pharmaceutical industry.
+
+    I was born in san francisco.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, my name is [user 2''s name]. What''s yours?
+
+    User 1: I''m [user 1''s name]. Nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in the pharmaceutical industry.
+
+    User 1: Oh, that''s cool! I''ve always been interested in pharmaceuticals.
+
+    User 2: Yeah, it''s a really interesting field.
+
+    User 1: Do you like it?
+
+    User 2: I love it! I get to work with a lot of cool people and help people all over the world.
+
+    User 1: That''s awesome!
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I love to play with my dogs. I have a golden retriever and a Labrador retriever.
+
+    User 1: Oh, that''s awesome! I love dogs.
+
+    User 2: Yeah, they''re the best.
+
+    User 1: So, what''s your favorite thing to do with your dogs?
+
+    User 2: I love to take them for walks in the park. They love to run around and play.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do when you''re not playing with your dogs?
+
+    User 2: I like to watch movies and read books.
+
+    User 1: Oh, what kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but I especially like action and adventure movies.
+
+    User 1: Oh, me too! I love the adrenaline rush.
+
+    User 2: Yeah, me too!
+
+    User 1: So, what are some of your favorite movies?
+
+    User 2: I love the Fast and Furious movies, the Mission Impossible movies, and the Indiana Jones movies.
+
+    User 1: Oh, those are all great movies!
+
+    User 2: Yeah, they are.
+
+    User 1: So, what are some of your favorite books?
+
+    User 2: I love all kinds of books, but I especially like science fiction and fantasy books.
+
+    User 1: Oh, me too! I love the Lord of the Rings books and the Harry Potter books.
+
+    User 2: Oh, those are great books!
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading the Stormlight Archive series by Brandon Sanderson.
+
+    User 1: Oh, I''ve heard good things about that series.
+
+    User 2: Yeah, it''s really good!
+
+    User 1: I might have to check it out.
+
+    User 2: I definitely recommend it.
+
+    User 1: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00000835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 835
+data:
+  user 1 personas: 'I love to shop.
+
+    I live in toronto , canada.
+
+    My favorite french fries are from mcdonalds.
+
+    I am an elementary school teacher.'
+  user 2 personas: 'I have a dog.
+
+    She died when i was 18.
+
+    My mother is from russia.
+
+    I opened up a restaurant three years later.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: My name is [User 1 Name].
+
+    User 2: Nice to meet you [User 1 Name]. My name is [User 2 Name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Toronto, Canada.
+
+    User 1: Nice! I''m also from Toronto.
+
+    User 2: That''s great! What do you do for a living?
+
+    User 1: I''m an elementary school teacher.
+
+    User 2: Oh, that''s cool. I opened up a restaurant three years ago.
+
+    User 1: Wow! That''s awesome. What kind of restaurant is it?
+
+    User 2: It''s a Mexican restaurant.
+
+    User 1: Nice! I love Mexican food.
+
+    User 2: Me too! I have a dog.
+
+    User 1: Oh, nice! I have a dog too. She died when I was 18.
+
+    User 2: Oh, that''s too bad. I''m sorry to hear that.
+
+    User 1: Thanks. It was hard at first, but I''m doing better now.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go shopping, go to the movies, and play video games.
+
+    User 1: Oh, nice! I like to shop too. I also like to go to the movies and play video games.
+
+    User 2: Cool! We should hang out sometime.
+
+    User 1: I''d love that!
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

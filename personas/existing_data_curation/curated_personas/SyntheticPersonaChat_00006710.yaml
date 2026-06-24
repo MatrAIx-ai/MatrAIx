@@ -1,0 +1,70 @@
+id: '00006710'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6710
+data:
+  user 1 personas: 'My wife is a breast cancer survivor.
+
+    I am a zookeeper.
+
+    I have trained over 20 types of animals.
+
+    I work with my wife.
+
+    My daughter just graduated high school ranked at the top of her class.'
+  user 2 personas: 'I have blonde hair.
+
+    I have twelve kids.
+
+    I am 53 years old.
+
+    I am obese.
+
+    I live in alabama.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a homemaker.
+
+    User 1: Oh, that must be really rewarding.
+
+    User 2: It is! I love taking care of my family.
+
+    User 1: I can imagine. I''m a zookeeper.
+
+    User 2: That''s so cool! I love animals.
+
+    User 1: Me too! I''ve trained over 20 types of animals.
+
+    User 2: Wow! That''s amazing.
+
+    User 1: Thanks! I''m really proud of my work.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I have a lot of favorites, but I think my favorite is the elephant.
+
+    User 2: Elephants are amazing! I love their big ears.
+
+    User 1: Me too! They''re so gentle and intelligent.
+
+    User 2: I know! They''re one of my favorite animals too.
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love to spend time with my family. We go on a lot of adventures together.
+
+    User 1: That sounds like a lot of fun. I like to go hiking and camping with my family.
+
+    User 2: We love hiking too! We also love to go swimming.
+
+    User 1: That sounds like a lot of fun. I love swimming too.
+
+    User 2: We''re glad we have something in common!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

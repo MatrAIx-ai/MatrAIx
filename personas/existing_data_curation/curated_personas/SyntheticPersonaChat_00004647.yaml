@@ -1,0 +1,66 @@
+id: '00004647'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4647
+data:
+  user 1 personas: 'I have an eyebrown piercing.
+
+    I work at a coffee shop.
+
+    My sister and i are in a grunge band.
+
+    I have three roommates.
+
+    Both of my parents are teachers.'
+  user 2 personas: 'I am a vegetarian.
+
+    I am a dancer.
+
+    I love to sing.
+
+    I can play the piano.
+
+    I am a night owl.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name).
+
+    User 2: Hey, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to dance, sing, and play the piano.
+
+    User 1: Oh, that''s cool. I like to sing too.
+
+    User 2: What kind of music do you like to sing?
+
+    User 1: I like to sing all kinds of music, but I''m especially into pop and country.
+
+    User 2: Me too! I love Taylor Swift.
+
+    User 1: Me too! She''s my favorite artist.
+
+    User 2: I''m a vegetarian. Do you eat meat?
+
+    User 1: No, I''m a vegetarian too.
+
+    User 2: Oh, that''s cool. I didn''t know many people were vegetarians.
+
+    User 1: Me neither. It''s kind of hard to find vegetarian food sometimes.
+
+    User 2: I know what you mean. But I''ve found a few good places around town.
+
+    User 1: That''s good to hear. I''ll have to check them out.
+
+    User 2: You should. They''re really good.
+
+    User 1: Thanks for the tip.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

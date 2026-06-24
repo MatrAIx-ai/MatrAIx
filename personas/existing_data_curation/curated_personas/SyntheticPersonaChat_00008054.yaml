@@ -1,0 +1,56 @@
+id: 00008054
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8054
+data:
+  user 1 personas: 'When i have nothing else to do , i read books.
+
+    I like to write poetry.
+
+    I work as a bartender.
+
+    I used to be in the marines.'
+  user 2 personas: 'I have an 18 year old son.
+
+    I love animals.
+
+    I volunteer walking dogs twice a week.
+
+    I am a vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love animals. I have an 18 year old son and I volunteer walking dogs twice a week.
+
+    User 1: That''s really cool! I used to be in the Marines, but now I work as a bartender. In my free time, I love to read books and write poetry.
+
+    User 2: Wow, that''s amazing! I''ve always wanted to be in the military, but I was too scared.
+
+    User 1: It''s not as scary as it seems. It was tough, but it was also a lot of fun.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a lot of different things, but I''m especially interested in history, science, and philosophy.
+
+    User 2: That''s cool. I like to read a lot of fiction, especially historical fiction and fantasy.
+
+    User 1: That''s cool too. I love historical fiction. Have you read any good books lately?
+
+    User 2: I just finished reading "The Book of Dust" by Philip Pullman. It was really good.
+
+    User 1: Oh, I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a really good sequel to the "His Dark Materials" series.
+
+    User 1: I''ve read the "His Dark Materials" series, but it''s been a while. I''ll have to read it again before I read "The Book of Dust".
+
+    User 2: You should. It''s a really good series.
+
+    User 1: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00005078
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5078
+data:
+  user 1 personas: 'I try to eat a balanced diet.
+
+    I am caucasian.
+
+    I like rollerblading.
+
+    My favorite sport is hockey.
+
+    I avoid eating sugar.'
+  user 2 personas: 'I like playing outside in the sun with my dolls.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I m a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.
+
+    I sleep in a princess bed.'
+  Best Generated Conversation: 'User 1: What''s your favorite sport?
+
+    User 2: My favorite sport is hockey.
+
+    User 1: Oh, that''s cool! I used to play hockey when I was younger.
+
+    User 2: Really? That''s awesome! What position did you play?
+
+    User 1: I played forward.
+
+    User 2: Me too! What was your favorite thing about playing hockey?
+
+    User 1: I loved the speed and the excitement.
+
+    User 2: Me too! I also loved the teamwork.
+
+    User 1: That''s a great point. Hockey is really a team sport.
+
+    User 2: It is! I love playing hockey with my friends.
+
+    User 1: Me too! It''s a great way to stay active and have fun.
+
+    User 2: I agree! I''m so glad I met you today!
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too! We should play hockey together sometime.
+
+    User 1: That would be fun! I''ll bring my skates.
+
+    User 2: Great! I''ll bring my gear.
+
+    User 1: Awesome! I can''t wait to play hockey with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

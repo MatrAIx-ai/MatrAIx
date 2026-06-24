@@ -1,0 +1,70 @@
+id: '00000614'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 614
+data:
+  user 1 personas: 'I am in school.
+
+    I love the beach.
+
+    My favorite color is blue.
+
+    I am married.
+
+    I work 2 jobs.'
+  user 2 personas: 'I have appeared on the show jeopardy.
+
+    I make pottery.
+
+    I am a recovering alcoholic.
+
+    I once lived in a storage locker for two months.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1).
+
+    User 2: Hello! I''m (user 2).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a recovering alcoholic and I make pottery.
+
+    User 1: Wow, that''s really cool! I''ve always wanted to learn how to make pottery.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: I will! I love working with my hands.
+
+    User 2: Me too! I''m also in school.
+
+    User 1: What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Oh, that''s cool! I''m thinking about going back to school to study business.
+
+    User 2: You should! It''s a great field.
+
+    User 1: I know, I''m excited about it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love going to the beach. I also love to play video games.
+
+    User 2: Oh, I love video games too! What games do you like to play?
+
+    User 1: I like to play all kinds of games, but I really like playing Mario Kart.
+
+    User 2: I love Mario Kart! I''m really good at it.
+
+    User 1: Me too! I''m always beating my friends.
+
+    User 2: We should play together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! We can exchange contact info.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

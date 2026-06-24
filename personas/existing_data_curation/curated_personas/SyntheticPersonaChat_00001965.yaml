@@ -1,0 +1,58 @@
+id: 00001965
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1965
+data:
+  user 1 personas: 'I like video games.
+
+    My favorite food is macaroni and cheese.
+
+    I love ballet.
+
+    My favorite color is purple.'
+  user 2 personas: 'I live in a condo.
+
+    I get up at 4am everyday.
+
+    I have never been to canada.
+
+    I only listen to opera.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and listen to opera.
+
+    User 1: Oh, cool! I love video games too. What are some of your favorite games?
+
+    User 2: I like to play a lot of different games, but my favorites are probably The Witcher 3, Red Dead Redemption 2, and Skyrim.
+
+    User 1: Those are all great games! I''ve played all of them.
+
+    User 2: What''s your favorite food?
+
+    User 1: My favorite food is macaroni and cheese.
+
+    User 2: That''s a good choice! I''ve never been to Canada.
+
+    User 1: Oh, it''s a beautiful country! I''ve been there a few times.
+
+    User 2: Maybe I''ll have to go sometime.
+
+    User 1: You should! It''s really worth it.
+
+    User 2: Well, I''m sure I''ll get there eventually.
+
+    User 1: I hope so!
+
+    User 2: Thanks for talking to me!
+
+    User 1: No problem! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

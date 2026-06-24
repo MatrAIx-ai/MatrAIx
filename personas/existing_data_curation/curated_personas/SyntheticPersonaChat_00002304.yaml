@@ -1,0 +1,68 @@
+id: '00002304'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2304
+data:
+  user 1 personas: 'I own a chevy tahoe.
+
+    I do not know how to swim.
+
+    My favorite genre of music is rock.
+
+    My grandpa was in wwii.
+
+    My favorite food is steak.'
+  user 2 personas: 'I love to dance.
+
+    I work at a coffee shop.
+
+    My favorite color is red.
+
+    I drive a prius.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I love to dance!
+
+    User 1: Me too! What kind of dancing do you like?
+
+    User 2: I like to do all kinds of dancing, but I especially love ballroom dancing.
+
+    User 1: That''s great! I''ve always wanted to learn how to ballroom dance.
+
+    User 2: You should! It''s a lot of fun and it''s a great way to get in shape.
+
+    User 1: I know, right? I just need to find a good partner.
+
+    User 2: Well, if you ever need one, I''d be happy to partner up with you.
+
+    User 1: That''s a great offer! I''ll keep that in mind.
+
+    User 2: What do you do for work?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, that sounds like a tough job.
+
+    User 1: It can be, but it''s also pretty rewarding.
+
+    User 2: I''m sure it is. I work at a coffee shop.
+
+    User 1: Oh, that sounds fun! I love coffee.
+
+    User 2: Me too! I drink it every day.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t. I''ve always wanted a dog, but I just don''t have the time to take care of one.
+
+    User 1: I have a dog. He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly.
+
+    User 1: He is! He''s the best dog in the world.
+
+    User 2: I''m sure he is. Dogs are the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00038442
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38442
+persona_description: A healthcare professional with expertise in respiratory infections, particularly aerosol transmission. This persona attended a meeting with WHO officials to present evidence against
+  the hypothesis that SARS-CoV-2 could be transmitted through respiratory aerosols. This person is concerned about the responsibility of the WHO in ensuring the health and lives of people and the importance
+  of following the precautionary principle in situations where there is a potential risk. This person is also aware of the limitations of current research and the difficulty of studying aerosol transmission,
+  but believes that the WHO should have been more cautious in its statements.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: aerosol transmission of respiratory infections
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

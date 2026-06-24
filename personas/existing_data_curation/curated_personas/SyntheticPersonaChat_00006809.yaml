@@ -1,0 +1,83 @@
+id: 00006809
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6809
+data:
+  user 1 personas: 'I love to eat pita bread with hummus.
+
+    I am a mother of three.
+
+    I go to work early in the morning as a nurse.
+
+    I am bipolar.
+
+    I am thinking of becoming a mother next year.'
+  user 2 personas: 'Someday i with to become a famous animator and work for a big company like dreamworks.
+
+    My inspiration is classical music.
+
+    I am a graphic designer.
+
+    Drawing in traditional style is my pasion.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+
+    User 2: Hi, I''m [user 2 name].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a graphic designer.
+
+
+    User 1: Oh, that''s cool! I''m a nurse.
+
+
+    User 2: Really? That''s awesome! I respect nurses a lot.
+
+
+    User 1: Thanks! I appreciate that.
+
+
+    User 2: So, what are your hobbies?
+
+
+    User 1: I love to cook and bake. I also love to read and spend time with my family.
+
+
+    User 2: That''s great! I love to read too. I''m also a big fan of classical music.
+
+
+    User 1: That''s cool! I''m not really into classical music, but I do enjoy listening to it sometimes.
+
+
+    User 2: Oh, that''s fine. Everyone has their own musical preferences.
+
+
+    User 1: What are your goals for the future?
+
+
+    User 2: I want to become a famous animator and work for a big company like Dreamworks.
+
+
+    User 1: That''s a great goal! I''m sure you''ll achieve it.
+
+
+    User 2: Thanks! I appreciate that.
+
+
+    User 1: What do you think of the future of graphic design?
+
+
+    User 2: I think it''s going to be very exciting. There are so many new technologies that are emerging that are going to change the way we design.
+
+
+    User 1: That''s true. I''m excited to see what the future holds for graphic design.
+
+
+    User 2: Me too! I think it''s going to be a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

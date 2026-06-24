@@ -1,0 +1,112 @@
+id: '00001427'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1427
+data:
+  user 1 personas: 'I work at google.
+
+    My favorite seafood in lobster.
+
+    I am a software engineer.
+
+    I live in seattle.'
+  user 2 personas: 'I like to sing broadway show tunes.
+
+    I work at a coffee house.
+
+    I am a student at michigan state university.
+
+    My favorite tv show is dancing with the stars.
+
+    I have a cat named seven of nine.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, my name is [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to sing Broadway show tunes.
+
+    User 1: Oh, that''s cool! I''ve always wanted to take a singing class.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will. What''s your favorite show tune?
+
+    User 2: I love "Defying Gravity" from Wicked.
+
+    User 1: That''s a good one. I love that show.
+
+    User 2: Me too! I''ve seen it a few times.
+
+    User 1: I''ve only seen it once, but I loved it.
+
+    User 2: You should see it again sometime.
+
+    User 1: Maybe I will.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer at Google.
+
+    User 2: Oh, that''s cool! I''ve always wanted to work in tech.
+
+    User 1: It''s a lot of fun.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you do for school?
+
+    User 2: I''m a student at Michigan State University.
+
+    User 1: Oh, that''s cool! I''m from Michigan.
+
+    User 2: Really? Me too!
+
+    User 1: Where are you from?
+
+    User 2: I grew up in Ann Arbor.
+
+    User 1: Me too!
+
+    User 2: That''s awesome!
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite thing about Michigan?
+
+    User 1: I love the lakes.
+
+    User 2: Me too!
+
+    User 1: And the summers.
+
+    User 2: Me too!
+
+    User 1: And the winters.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to sing, watch TV, and play with my cat.
+
+    User 1: Oh, I love cats!
+
+    User 2: Me too!
+
+    User 1: What''s your cat''s name?
+
+    User 2: Her name is Seven of Nine.
+
+    User 1: That''s a cool name.
+
+    User 2: Thanks! It''s from Star Trek.
+
+    User 1: Oh, I love Star Trek!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

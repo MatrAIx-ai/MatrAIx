@@ -1,0 +1,88 @@
+id: '00006063'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6063
+data:
+  user 1 personas: 'I love to eat shrimp and lobster.
+
+    I am in a jazz band and play the saxophone.
+
+    I vacation along lake michigan every summer.
+
+    My favorite drink is iced coffee.
+
+    I have a black belt in karate.'
+  user 2 personas: 'I hate the taste of cheese.
+
+    I am a great cook.
+
+    I am under 6 feet tall.
+
+    I have a daughter.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to cook.
+
+    User 1: That''s great! I love to cook too. What kind of food do you like to cook?
+
+    User 2: I like to cook all kinds of food, but I''m especially good at making Italian food.
+
+    User 1: That''s awesome! I''m not very good at cooking Italian food. I love to eat it, though.
+
+    User 2: Well, I''m sure you''d love my cooking.
+
+    User 1: I''m sure I would. What''s your favorite Italian dish to make?
+
+    User 2: My favorite dish to make is lasagna.
+
+    User 1: Lasagna is delicious! I love lasagna.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Me too.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go to the beach. I vacation along Lake Michigan every summer.
+
+    User 2: That sounds like fun. I''ve never been to Lake Michigan.
+
+    User 1: It''s beautiful. You should go sometime.
+
+    User 2: I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: That must be a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what''s your favorite ice cream flavor?
+
+    User 1: My favorite ice cream flavor is chocolate chip cookie dough.
+
+    User 2: That''s a good choice. I like that flavor too.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That sounds like fun. Let''s do it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

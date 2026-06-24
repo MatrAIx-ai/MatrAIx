@@ -1,0 +1,70 @@
+id: '00005244'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5244
+data:
+  user 1 personas: 'I am touring with frank ocean.
+
+    I am a rapper.
+
+    I live in japan and own the biggest mansion in the country.
+
+    I drive a ferrari.
+
+    I just bought a new mansion.'
+  user 2 personas: 'I always put my left sock on first.
+
+    I have a condition that prevents me from going to high altitudes.
+
+    Spiders scare the life out of me.
+
+    My mother raised me by herself while working two jobs.
+
+    I pray to god for my family every morning.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1 name], I''m a rapper and I''m currently touring with Frank Ocean.
+
+    User 2: Hey [user 1 name], that''s awesome! I love Frank Ocean''s music.
+
+    User 1: Thanks! He''s a great artist. I''m actually on my way to Japan now to perform at his concert there.
+
+    User 2: Wow, that''s so cool! I''ve always wanted to go to Japan.
+
+    User 1: It''s a beautiful country. You should definitely go sometime.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: Oh, that''s cool. I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 1: Me too! I''ve been reading a lot of sci-fi lately.
+
+    User 2: Oh, what are you reading right now?
+
+    User 1: I''m reading the new Dune book, Dune Messiah.
+
+    User 2: Oh, I''ve heard good things about that one. I''ve never read any of the Dune books before, but I''ve been meaning to check them out.
+
+    User 1: You should definitely read them! They''re really good.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''ve always wanted to learn how to code.
+
+    User 2: It''s not as hard as you think. You should learn how to code!
+
+    User 1: Maybe I will! Thanks for the encouragement.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

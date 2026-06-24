@@ -1,0 +1,18 @@
+id: 00042059
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42059
+persona_description: A molecular biologist with expertise in the use of PCR and qPCR for DNA analysis, particularly in the detection and identification of specific species. This individual is highly skilled
+  in protein identification through electrophoretic and immunological methods, and is familiar with the limitations of these methods in detecting highly processed and heated products. This individual is
+  proficient in using the Xpert qDetect Duck kit for the detection of DNA from Duck in food samples, and is capable of interpreting the results in the context of species authenticity and food safety.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: molecular biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: food safety and authenticity testing
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

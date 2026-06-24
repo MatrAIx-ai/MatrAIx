@@ -1,0 +1,66 @@
+id: '00007651'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7651
+data:
+  user 1 personas: 'I teach both japanese and drawing classes.
+
+    My dogs name is wonton.
+
+    I am still single at the age of 35.
+
+    I came from japan to teach high school over 10 years ago.
+
+    I still have a thick accent so words like hippopotamus are difficult.'
+  user 2 personas: 'I make videos about makeup.
+
+    My dad is an airline pilot.
+
+    My car is pink.
+
+    I am a youtube.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I make videos about makeup.
+
+    User 1: Oh, that''s cool! I love makeup.
+
+    User 2: Thanks! What do you like to do for fun?
+
+    User 1: I like to read, draw, and spend time with my dog.
+
+    User 2: That sounds great! I love to draw too.
+
+    User 1: What kind of things do you draw?
+
+    User 2: I draw a lot of anime characters.
+
+    User 1: Oh, that''s awesome! I love anime.
+
+    User 2: Thanks! I''m glad you do.
+
+    User 1: So, what''s it like being a YouTuber?
+
+    User 2: It''s really fun! I get to meet a lot of people and share my love of makeup with them.
+
+    User 1: That sounds really cool.
+
+    User 2: It is! I love it.
+
+    User 1: What''s the most fun thing you''ve done as a YouTuber?
+
+    User 2: I got to go to Japan for a makeup convention.
+
+    User 1: That''s amazing! I''ve always wanted to go to Japan.
+
+    User 2: It was so much fun! I got to meet so many amazing people and see so many beautiful places.
+
+    User 1: That sounds incredible.
+
+    User 2: It was! I''m so glad I got to do it.
+
+    User 1: I''m sure you''re going to continue to do amazing things.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00005069
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5069
+data:
+  user 1 personas: 'I prefer iphone over samsung.
+
+    I read ebooks more than hardcopies.
+
+    I am single.
+
+    I love watching superheroes shows.
+
+    I owe 2 monitors for work.'
+  user 2 personas: 'I am a georgia resident.
+
+    I like nfl and college football.
+
+    I play in a nfl fantasy football league.
+
+    I love to read fiction books.
+
+    My favorite fiction genres are sci fi and horror.'
+  Best Generated Conversation: 'User 1: Hi, I''m (User 1).
+
+    User 2: Hi, I''m (User 2).
+
+    User 1: What''s your favorite genre of books?
+
+    User 2: I like sci-fi and horror.
+
+    User 1: Me too! I love reading about dystopian futures and supernatural creatures.
+
+    User 2: Me too! I''m currently reading a book about a group of people who are trying to survive in a post-apocalyptic world.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: It''s called "The Road" by Cormac McCarthy.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! What do you do for fun?
+
+    User 1: I like watching movies, playing video games, and reading books.
+
+    User 2: Me too! I love watching superhero movies and playing video games.
+
+    User 1: Me too! I''m a big fan of the Marvel Cinematic Universe.
+
+    User 2: Me too! I''m really excited for the new "Doctor Strange" movie.
+
+    User 1: Me too! I''m also excited for the new "Thor" movie.
+
+    User 2: Me too! I love Chris Hemsworth as Thor.
+
+    User 1: Me too! He''s a great actor.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That''s cool! I''m a marketing manager.
+
+    User 1: Nice! What''s your favorite thing about your job?
+
+    User 2: I love working with people and helping them grow their businesses.
+
+    User 1: That''s great! I love working with technology and helping people solve problems.
+
+    User 2: Me too! It''s a great feeling to know that you''re making a difference in the world.
+
+    User 1: I agree! It''s really rewarding.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00005300'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5300
+data:
+  user 1 personas: 'I have a new job selling cars.
+
+    I love to paint pictures.
+
+    My wife use to be a teacher.
+
+    I love meat.'
+  user 2 personas: 'I work in the office , 9 till 5.
+
+    I like italian cusine.
+
+    I live in a big city.
+
+    This summer i went on vacation to italy.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in an office from 9 to 5.
+
+    User 1: Me too! What kind of office?
+
+    User 2: I work in the marketing department for a big company.
+
+    User 1: Oh, cool! I''ve always been interested in marketing.
+
+    User 2: It''s a lot of fun, but it can be challenging too.
+
+    User 1: I can imagine. What do you like to do outside of work?
+
+    User 2: I love to cook, go out to dinner, and travel.
+
+    User 1: I love to cook too! I''m not very good at it, but it''s fun.
+
+    User 2: I''m sure you''re better than you think! I love to try new recipes.
+
+    User 1: Me too! I just made a new pasta dish the other day that was really good.
+
+    User 2: What kind of pasta dish?
+
+    User 1: It was a pesto pasta with chicken.
+
+    User 2: Oh, that sounds delicious! I love pesto.
+
+    User 1: Me too! I''m glad you like it.
+
+    User 2: I''m sure I would love it. I''m always looking for new recipes.
+
+    User 1: If you''re ever in the mood for a good pasta dish, you should try my recipe.
+
+    User 2: I will! Thanks for the offer.
+
+    User 1: No problem! I''m glad we had this conversation.
+
+    User 2: Me too! I''m glad to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

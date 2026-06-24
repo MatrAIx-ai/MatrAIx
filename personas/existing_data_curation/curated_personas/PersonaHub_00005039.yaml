@@ -1,0 +1,19 @@
+id: 00005039
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5039
+persona_description: A professional in the field of radar and electromagnetic compatibility, particularly focused on the analysis and optimization of radar cross section (RCS) in ships. This persona likely
+  has expertise in using software tools such as EMC Studio and EMCoS Antenna VLab for RCS calculations and has a deep understanding of the theory behind RCS, including the PO solution (ray-tracing algorithm)
+  and its application in ship design. They are familiar with the typical values of RCS for ships and can compare simulation results with analytical solutions and typical values to draw conclusions about
+  RCS problems in ships.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Radar and Electromagnetic Compatibility
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

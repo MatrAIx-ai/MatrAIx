@@ -1,0 +1,58 @@
+id: 00008172
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8172
+data:
+  user 1 personas: 'I start my senior year of high school next week.
+
+    My mom is a painter.
+
+    My best friend just moved away.
+
+    My favorite sport is hockey.'
+  user 2 personas: 'I am married.
+
+    I love to travel.
+
+    My favorite book is the bible.
+
+    I am a older gentlemen.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah!
+
+    User 2: Hello, my name is Mr. Smith.
+
+    User 1: It''s nice to meet you, Mr. Smith.
+
+    User 2: It''s nice to meet you too, Sarah.
+
+    User 1: What do you do for a living?
+
+    User 2: I am a retired professor.
+
+    User 1: That''s cool! What did you teach?
+
+    User 2: I taught history and philosophy.
+
+    User 1: That sounds like a fascinating subject.
+
+    User 2: It is! I love learning about the past and how it shaped the present.
+
+    User 1: Me too! What is your favorite period of history?
+
+    User 2: I would have to say the Renaissance. It was a time of great innovation and creativity.
+
+    User 1: That''s a good choice! The Renaissance was definitely a time of great change.
+
+    User 2: Yes, it was. And it was all for the better.
+
+    User 1: I agree. The Renaissance was a time of great progress.
+
+    User 2: Yes, it was. And it continues to influence our world today.
+
+    User 1: I can see that. The Renaissance has left a lasting legacy.
+
+    User 2: Yes, it has. And it is a legacy that we should all be proud of.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

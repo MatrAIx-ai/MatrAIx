@@ -1,0 +1,66 @@
+id: 00001328
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1328
+data:
+  user 1 personas: 'I like to travel.
+
+    My mother was born in ireland.
+
+    I have traveled to both ireland and australia.
+
+    My father was an author.'
+  user 2 personas: 'I work in finance.
+
+    I look down on people who didn t.
+
+    I eat out more than three times a week.
+
+    I believe the rich shouldn t be taxed as much.'
+  Best Generated Conversation: 'User 1: Hi! Where are you from?
+
+    User 2: I''m from the United States.
+
+    User 1: Oh, cool! I''m from Ireland.
+
+    User 2: Really? That''s awesome! I''ve always wanted to visit Ireland.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I definitely will! What do you do for a living?
+
+    User 1: I''m a writer.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a writer.
+
+    User 1: It''s a lot of fun, but it can be tough to make a living at it.
+
+    User 2: I''m sure it is. What kind of things do you write?
+
+    User 1: I write fiction, mostly short stories and novels.
+
+    User 2: Oh, that''s awesome! I love to read. What''s your favorite book?
+
+    User 1: That''s a tough question. I have so many favorites. But one of my favorites is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 2: Oh, I love that book too! It''s so tragic.
+
+    User 1: It is. But it''s also beautiful.
+
+    User 2: It is. So, what do you like to do for fun?
+
+    User 1: I like to travel, read, and watch movies.
+
+    User 2: Oh, we have a lot in common! I love to travel, read, and watch movies too.
+
+    User 1: That''s great! We should go on a trip together sometime.
+
+    User 2: That would be fun! I''d love to explore Ireland with you.
+
+    User 1: Me too! We can make it a writing trip. We can write about our experiences in Ireland.
+
+    User 2: That sounds perfect! I''m so excited to travel to Ireland with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

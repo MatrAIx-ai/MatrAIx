@@ -1,0 +1,58 @@
+id: 00003428
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3428
+data:
+  user 1 personas: 'I like to play nintendo.
+
+    I love to eat fish.
+
+    I have a pet husky.
+
+    I live in the great white north.'
+  user 2 personas: 'I drink 10 cups of tea every day.
+
+    I m deathly afraid of snakes , but not bugs.
+
+    My favorite color is red.
+
+    I watched the eclipse without using proper eye protection.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thanks! How are you?
+
+    User 1: I''m doing great, thanks! I''m just hanging out with my husky, playing Nintendo, and eating some fish.
+
+    User 2: That sounds like a nice way to spend a day! I''m a bit of a loner, so I like to stay in and relax on my own. I usually drink 10 cups of tea, watch some movies, and read books.
+
+    User 1: I''m an introvert too, so I can relate to that. I love to read books and watch movies. What are some of your favorite movies?
+
+    User 2: I love all kinds of movies, but my favorites are usually action and comedy. I also love horror movies, but I''m not so good with gore.
+
+    User 1: I love action movies too! I''m not a big fan of horror movies, but I can watch them if I''m not alone.
+
+    User 2: I have a pretty bad fear of snakes, but I''m not afraid of bugs. I don''t know why.
+
+    User 1: I''m not afraid of snakes either, but I do hate bugs. I''m not sure why.
+
+    User 2: It''s funny how we can be afraid of different things.
+
+    User 1: It is! I think it''s all about our own experiences and what we''ve been through.
+
+    User 2: I agree. I think that''s why I''m not afraid of bugs. I''ve never had a bad experience with them.
+
+    User 1: That''s lucky! I''ve been bitten by a few bugs, so I''m not so keen on them.
+
+    User 2: I can understand that. I''ve never been bitten by a snake, so I don''t have any reason to be afraid of them.
+
+    User 1: I''m glad we''re not afraid of each other!
+
+    User 2: Me too! I think we would make good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

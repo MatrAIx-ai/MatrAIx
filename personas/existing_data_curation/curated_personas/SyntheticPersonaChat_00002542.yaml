@@ -1,0 +1,62 @@
+id: '00002542'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2542
+data:
+  user 1 personas: 'I live in a big city.
+
+    I enjoy my job , as a teacher.
+
+    I enjoy singing.
+
+    Magic mike is my favorite movie.
+
+    I enjoy video games.'
+  user 2 personas: 'I am close to both of my brothers.
+
+    I work as a secretary at an insurance agency.
+
+    I have two dogs.
+
+    I like to read true crime novels.
+
+    I travel every year to disney world.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a secretary at an insurance agency.
+
+    User 1: Oh, that''s interesting. What do you like most about your job?
+
+    User 2: I like the people I work with, and I like the challenge of finding the best insurance policies for my clients.
+
+    User 1: That sounds really rewarding. I''m a teacher, and I love seeing my students learn and grow.
+
+    User 2: That''s great! I''m sure you make a big difference in their lives.
+
+    User 1: Thanks! I try my best. What are your hobbies?
+
+    User 2: I love to read, especially true crime novels. I also love to travel and go to Disney World every year.
+
+    User 1: That''s awesome! I love to read too, but I usually read fiction. I''ve never been to Disney World, but I''ve always wanted to go.
+
+    User 2: You should definitely go! It''s so much fun.
+
+    User 1: I''m sure it is. I''ll have to put it on my bucket list.
+
+    User 2: You should! What else do you like to do for fun?
+
+    User 1: I love to play video games and sing. I also love to spend time with my friends and family.
+
+    User 2: That sounds like a lot of fun. I love to spend time with my family too.
+
+    User 1: It''s the best!
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

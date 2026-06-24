@@ -1,0 +1,72 @@
+id: '00002203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2203
+data:
+  user 1 personas: 'I have a 3 year old.
+
+    My favorite color is purple.
+
+    I am a 1st grade teacher.
+
+    I go to church on sunday.
+
+    My father is a preacher.'
+  user 2 personas: 'I have two kids , ages 2 and 6.
+
+    My husband owns a small auto repair shop.
+
+    I work part time at aldi s.
+
+    I am from sterling heights , michigan.
+
+    My favorite movie is titanic.'
+  Best Generated Conversation: 'User 1: What''s your favorite color?
+
+    User 2: My favorite color is purple.
+
+    User 1: Me too! It''s such a beautiful color.
+
+    User 2: I know, right? It''s so calming and relaxing.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the movies, read books, and spend time with my family.
+
+    User 1: Those sound like great ways to relax.
+
+    User 2: They are! I love to go to the movies because I can just forget about everything else and get lost in the story.
+
+    User 1: I know what you mean. I love that feeling.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a 1st grade teacher.
+
+    User 2: That''s great! I''m a stay-at-home mom.
+
+    User 1: Oh, that sounds fun. I don''t think I could handle being a stay-at-home mom.
+
+    User 2: It''s definitely not easy, but it''s really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, where are you from?
+
+    User 1: I''m from Michigan.
+
+    User 2: Oh, me too! I''m from Sterling Heights.
+
+    User 1: Oh, cool! I''m from Lansing.
+
+    User 2: That''s not too far from me.
+
+    User 1: Yeah, it''s only about an hour away.
+
+    User 2: We should get together sometime and catch up.
+
+    User 1: That would be great! I''d love to meet you in person.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

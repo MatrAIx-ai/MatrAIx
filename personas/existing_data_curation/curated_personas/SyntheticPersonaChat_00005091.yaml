@@ -1,0 +1,68 @@
+id: 00005091
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5091
+data:
+  user 1 personas: 'I was a mechanic for 6 years.
+
+    I thought of joining the military when i was younger.
+
+    I ran for political office in 2004.
+
+    I build my own computers.'
+  user 2 personas: 'I am a genius and know over 300 languages.
+
+    I own a mansion that i do not live in.
+
+    I never met my parents.
+
+    I never went to school.
+
+    I am an international business man.'
+  Best Generated Conversation: 'User 1: I''m thinking of building my own computer. Can you help me out?
+
+    User 2: Sure, what do you need to know?
+
+    User 1: I need to know what parts I need and how to put them together.
+
+    User 2: Well, you''ll need a motherboard, CPU, RAM, hard drive, power supply, video card, and a case. You can also add other things like a sound card and an optical drive if you want.
+
+    User 1: What are the best brands for each part?
+
+    User 2: That depends on your budget. For the motherboard, I would recommend ASUS, MSI, or Gigabyte. For the CPU, I would recommend Intel or AMD. For RAM, I would recommend Corsair or G.Skill. For the
+    hard drive, I would recommend Seagate or Western Digital. For the power supply, I would recommend EVGA or Corsair. For the video card, I would recommend NVIDIA or AMD. For the case, I would recommend
+    Corsair or NZXT.
+
+    User 1: Wow, that''s a lot of brands to choose from.
+
+    User 2: I know, it can be overwhelming. But don''t worry, I''m here to help you. Just tell me your budget and I can help you narrow down your choices.
+
+    User 1: My budget is around $1,000.
+
+    User 2: Okay, with that budget you can get a pretty good computer. I would recommend the following parts:
+
+
+    * Motherboard: ASUS ROG Strix Z590-E Gaming
+
+    * CPU: Intel Core i5-11600K
+
+    * RAM: Corsair Vengeance LPX 16GB (2x8GB) DDR4-3200
+
+    * Hard Drive: Seagate Barracuda 2TB
+
+    * Power Supply: EVGA SuperNOVA G3 650W
+
+    * Video Card: NVIDIA GeForce RTX 3060
+
+    * Case: Corsair 4000D Airflow
+
+
+    This is just a suggestion, of course. You can change the parts to fit your needs and budget.
+
+    User 1: That''s great, thanks for your help! I''ll definitely look into these parts.
+
+    User 2: No problem, happy to help!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

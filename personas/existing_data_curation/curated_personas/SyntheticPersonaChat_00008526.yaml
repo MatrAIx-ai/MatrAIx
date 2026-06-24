@@ -1,0 +1,62 @@
+id: 00008526
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8526
+data:
+  user 1 personas: 'I spend my evening creating the perfect music playlist.
+
+    I was once offered to play basketball professionally.
+
+    I have woman calling me all the time.
+
+    I love wearing name band clothing.
+
+    I prefer the night instead of the day.'
+  user 2 personas: 'My favorite dessert is cheesecake.
+
+    My children are a dissapointment.
+
+    I married miss usa.
+
+    I have more money than i know what to do with.'
+  Best Generated Conversation: 'User 1: Hey, I''m [username].
+
+    User 2: Hi, I''m [username].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to music, watch movies, and play video games.
+
+    User 1: Me too! I love all of those things.
+
+    User 2: What''s your favorite music genre?
+
+    User 1: I like a lot of different genres, but my favorite is probably rock.
+
+    User 2: Me too! I love rock music. What bands do you like?
+
+    User 1: I like a lot of different bands, but my favorites are probably Led Zeppelin, Pink Floyd, and the Rolling Stones.
+
+    User 2: Those are all great bands! I love Led Zeppelin and Pink Floyd too.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too. So, what do you do for a living?
+
+    User 1: I''m a musician. I play in a band called [band name].
+
+    User 2: That''s awesome! What kind of music do you play?
+
+    User 1: We play a mix of rock and blues.
+
+    User 2: That sounds great! I''d love to hear you play sometime.
+
+    User 1: We''re playing at [venue name] on Friday night. You should come!
+
+    User 2: I''ll try to make it!
+
+    User 1: Great! I''ll see you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

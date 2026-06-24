@@ -1,0 +1,72 @@
+id: '00002601'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2601
+data:
+  user 1 personas: 'I m twenty years old.
+
+    I work at a hospital.
+
+    I love pasta.
+
+    I love to read fiction.
+
+    I m a student at a small community college.'
+  user 2 personas: 'I used to play hockey.
+
+    I love to dance.
+
+    I have asthma.
+
+    I am 6 foot tall.
+
+    I like to go running.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1)!
+
+    User 2: Hi, I''m (user 2)!
+
+    User 1: I''m 20 years old, I work at a hospital, and I love pasta and reading fiction.
+
+    User 2: I''m 6 feet tall, I used to play hockey, and I love dancing and going for runs.
+
+    User 1: That''s cool! I''ve always wanted to try playing hockey.
+
+    User 2: It''s a lot of fun! I used to play in a league, but I had to quit because of my asthma.
+
+    User 1: Oh, I''m sorry to hear that. Asthma can be a real pain.
+
+    User 2: It is, but it''s not the worst thing in the world.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to read, go for walks, and hang out with my friends.
+
+    User 2: Sounds like we have a lot in common! I love to read, too. What''s your favorite book?
+
+    User 1: I love "The Great Gatsby." It''s such a beautiful and tragic story.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a classic for a reason.
+
+    User 2: I will!
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read all kinds of things, but I especially love historical fiction and romance novels.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: Me too! It''s so interesting to see how people lived in the past.
+
+    User 1: I know, right? It''s amazing to think about how much the world has changed over the years.
+
+    User 2: It is! I''m so glad I''m alive in this time period.
+
+    User 1: Me too! It''s a great time to be alive.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

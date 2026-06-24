@@ -1,0 +1,66 @@
+id: '00004767'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4767
+data:
+  user 1 personas: 'I want to go back to school.
+
+    My sister is my best friend.
+
+    I like to watch shows on netflix.
+
+    I want to learn self defense.'
+  user 2 personas: 'I love hiking and staying fit.
+
+    I work as a personal trainer , 5 days a week.
+
+    I go fishing on the weekends to relax.
+
+    I live in las vegas , nevada.
+
+    My name is dave.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m Dave.
+
+    User 1: It''s nice to meet you, Dave. Where are you from?
+
+    User 2: I''m from Las Vegas, Nevada.
+
+    User 1: Oh, I''ve always wanted to visit Las Vegas.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: Do you have any good recommendations for places to visit?
+
+    User 2: I would definitely recommend checking out the Grand Canyon. It''s just a few hours away from Las Vegas and it''s absolutely stunning.
+
+    User 1: That sounds amazing! I''ll have to add that to my list.
+
+    User 2: You should! And if you''re into hiking, there are also some great trails in the area.
+
+    User 1: I love hiking! I''ll definitely have to check those out.
+
+    User 2: And if you''re looking for something a little more low-key, there are also some great casinos in Las Vegas.
+
+    User 1: I''m not much of a gambler, but I''ll definitely check them out.
+
+    User 2: You should! And if you''re looking for a good place to eat, there are some great restaurants in Las Vegas.
+
+    User 1: I love to eat! I''ll definitely have to check out some of the restaurants.
+
+    User 2: And if you''re looking for something to do at night, there are always some great shows to see in Las Vegas.
+
+    User 1: I love shows! I''ll definitely have to check out some of the shows.
+
+    User 2: And if you''re looking for a place to stay, there are some great hotels in Las Vegas.
+
+    User 1: I''m sure I can find something that fits my budget.
+
+    User 2: I''m sure you can! And if you have any other questions, please don''t hesitate to ask.
+
+    User 1: Thank you, Dave! I really appreciate your help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

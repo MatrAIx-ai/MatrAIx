@@ -1,0 +1,62 @@
+id: 00008402
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8402
+data:
+  user 1 personas: 'I have five different flavors of coffee in my fridge.
+
+    My dog introduced me to my first and second wives.
+
+    I have the gene that lets me know when someone s eaten asparagus.
+
+    I enjoy my steaks cooked medium rare.'
+  user 2 personas: 'I am a medical file clerk.
+
+    I am from baltimore md.
+
+    I have six tattoos , all of cats.
+
+    I have a pencil thin mustache.'
+  Best Generated Conversation: 'User 1: Hi! What are you up to today?
+
+    User 2: Not much, just working on some medical files.
+
+    User 1: Oh, cool! I work as a medical researcher.
+
+    User 2: That''s awesome! What do you research?
+
+    User 1: I''m working on a new treatment for cancer.
+
+    User 2: That''s amazing! I hope it works out.
+
+    User 1: Thanks! Me too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to cook. I have five different flavors of coffee in my fridge and I enjoy my steaks cooked medium rare.
+
+    User 2: That''s cool! I love to cook too. I''m not a professional, but I do enjoy it.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m from Baltimore, Maryland, so I love anything with crab.
+
+    User 1: That sounds delicious! I love crab.
+
+    User 2: Me too! I have six tattoos, all of cats. I also have a pencil thin mustache.
+
+    User 1: That''s awesome! I love cats too. I have a dog, but I''ve always wanted a cat.
+
+    User 2: You should get one! They''re great pets.
+
+    User 1: I''ll have to think about it.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

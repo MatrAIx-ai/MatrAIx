@@ -1,0 +1,56 @@
+id: '00005716'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5716
+data:
+  user 1 personas: 'Whittling is my favorite hobby.
+
+    I am in the navy.
+
+    I listen to folk music.
+
+    I am an orphan who was in the foster care system.'
+  user 2 personas: 'I have taken formal music lessons since i was 5.
+
+    I wish i could spend more time at home.
+
+    I like to write my own songs.
+
+    I am a musician.
+
+    My best friend is in a band with me.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to play music, write songs, and sing.
+
+    User 1: That''s cool! I like to whittle, listen to folk music, and read.
+
+    User 2: I''ve never tried whittling before. What''s it like?
+
+    User 1: It''s really relaxing and meditative. You just take a piece of wood and slowly carve it into something.
+
+    User 2: That sounds like it would be really fun. I might have to give it a try sometime.
+
+    User 1: You should! It''s a great way to relax and express yourself.
+
+    User 2: I''m glad you''re enjoying the music. I''ve been playing for a long time and it''s always been a passion of mine.
+
+    User 1: That''s awesome! What kind of music do you play?
+
+    User 2: I mostly play country music, but I also like to play folk music and rock and roll.
+
+    User 1: I love country music! I''m a big fan of Johnny Cash, Dolly Parton, and Willie Nelson.
+
+    User 2: Those are all great artists! I''m also a big fan of Waylon Jennings and Hank Williams.
+
+    User 1: I love Waylon Jennings too! He''s such a talented songwriter.
+
+    User 2: Yeah, he really is. He''s one of my biggest inspirations.
+
+    User 1: It''s really cool to meet someone who shares my love of music.
+
+    User 2: Me too! I''m always happy to meet people who appreciate good music.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

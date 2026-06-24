@@ -1,0 +1,86 @@
+id: 00001384
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1384
+data:
+  user 1 personas: 'I m a babysitter.
+
+    I have a sweet tooth.
+
+    I m getting married in six months.
+
+    I m the middle child of 3 siblings.'
+  user 2 personas: 'I look down on people who didn t.
+
+    I work in finance.
+
+    I eat out more than three times a week.
+
+    I went to an elite ivy league school.
+
+    I believe the rich shouldn t be taxed as much.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m [user 2 name]. What''s yours?
+
+    User 1: I''m [user 1 name]. What do you do for work?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that''s cool. I''m a babysitter.
+
+    User 2: Really? That''s a fun job.
+
+    User 1: It is! I get to play with kids all day.
+
+    User 2: Sounds like a lot of fun.
+
+    User 1: It is. I love it.
+
+    User 2: What are your hobbies?
+
+    User 1: I like to read, bake, and go shopping.
+
+    User 2: Oh, I like to bake too!
+
+    User 1: Really? What''s your favorite thing to bake?
+
+    User 2: I like to bake cakes.
+
+    User 1: Me too! I love making chocolate cake.
+
+    User 2: Oh, me too!
+
+    User 1: What are your plans for the weekend?
+
+    User 2: I''m not sure yet. What about you?
+
+    User 1: I''m getting married!
+
+    User 2: Oh, congratulations!
+
+    User 1: Thanks!
+
+    User 2: That''s so exciting!
+
+    User 1: It is!
+
+    User 2: Have fun!
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite thing about your fiancé?
+
+    User 1: He''s my best friend.
+
+    User 2: That''s so sweet!
+
+    User 1: He is.
+
+    User 2: You two are going to have a beautiful wedding.
+
+    User 1: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

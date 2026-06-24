@@ -1,0 +1,62 @@
+id: '00006433'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6433
+data:
+  user 1 personas: 'I hope to save enough money for it.
+
+    I m tired of having to read subtitles.
+
+    I started learning japanese at college.
+
+    I like to watch japanese cartoons anime in my free time.
+
+    Our class is planning a trip to japan.'
+  user 2 personas: 'I am not social.
+
+    I am very unproductive unless it comes to my job.
+
+    I work in a factory.
+
+    I do not eat well.
+
+    I sleep most of the day.'
+  Best Generated Conversation: 'User 1: My name is [user 1''s name]. What''s yours?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch movies and play video games.
+
+    User 1: That''s cool. I like to watch anime and play video games too.
+
+    User 2: Oh, really? What kind of anime do you like?
+
+    User 1: I like a lot of different kinds, but my favorites are action and adventure.
+
+    User 2: Me too! I love One Piece and Naruto.
+
+    User 1: Those are great anime! I''ve also seen Hunter x Hunter and Fullmetal Alchemist.
+
+    User 2: I''ve seen all of those too! They''re all so good.
+
+    User 1: I agree! I''m glad we have similar taste in anime.
+
+    User 2: Me too! What about video games? What do you like to play?
+
+    User 1: I like a lot of different video games, but my favorites are RPGs and fighting games.
+
+    User 2: Me too! I love Final Fantasy and Super Smash Bros.
+
+    User 1: Those are great games! I''ve also seen Street Fighter and Mortal Kombat.
+
+    User 2: I''ve played all of those too! They''re all so good.
+
+    User 1: I agree! I''m glad we have similar taste in video games too.
+
+    User 2: Me too! It''s always nice to find someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

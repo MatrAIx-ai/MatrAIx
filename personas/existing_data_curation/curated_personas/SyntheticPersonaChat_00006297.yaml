@@ -1,0 +1,60 @@
+id: 00006297
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6297
+data:
+  user 1 personas: 'I used to fly planes for a living.
+
+    I now live in new mexico.
+
+    I grew up in nevada.
+
+    I like dogs.'
+  user 2 personas: 'I am enrolled in several college credit courses.
+
+    I go to a private high school.
+
+    While both my parents have thick european accents , i do not.
+
+    My parents immigrated from europe before i was born.
+
+    I drive a motorcycle instead of a car.'
+  Best Generated Conversation: 'User 1: Hi, what''s up?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: I''m good. I''m actually in New Mexico right now. I used to live here, but I just moved back recently.
+
+    User 2: Oh, that''s cool. I''m from New Mexico too.
+
+    User 1: Really? What part?
+
+    User 2: I grew up in Las Cruces, but I''m in Albuquerque now.
+
+    User 1: Oh, I know Las Cruces. I used to live in El Paso.
+
+    User 2: Oh, cool. I''ve been to El Paso a few times.
+
+    User 1: I know what you mean. It''s a bit of a drive.
+
+    User 2: Yeah, it is. But it''s worth it for the food.
+
+    User 1: I agree! The food in New Mexico is amazing.
+
+    User 2: Definitely. What''s your favorite kind of food?
+
+    User 1: I love Mexican food.
+
+    User 2: Me too! I''m from New Mexico, so I guess I''m kind of biased.
+
+    User 1: No, it''s not biased. New Mexican food is the best.
+
+    User 2: I agree. I''m glad you agree.
+
+    User 1: Me too. It''s nice to meet someone who appreciates good food.
+
+    User 2: You too. It''s always nice to meet someone from New Mexico.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

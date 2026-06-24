@@ -1,0 +1,90 @@
+id: '00003261'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3261
+data:
+  user 1 personas: 'My parents are distant.
+
+    I see a therapist that doesn t really understand me.
+
+    Sometimes i wish i didn t have to wake up in the morning.
+
+    I have an older brother that has gotten into trouble.
+
+    I have trouble feeling emotion.'
+  user 2 personas: 'I am currently traveling in japan.
+
+    I live a nomadic lifestyle and travel frequently.
+
+    I can speak three languages.
+
+    I work remotely as a programmer.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too.
+
+    User 2: Where are you from?
+
+    User 1: I''m from [user 1''s hometown].
+
+    User 2: Oh, I''ve never been there. Is it nice?
+
+    User 1: It''s a small town, but it''s very peaceful and beautiful.
+
+    User 2: That sounds nice. I''m from [user 2''s hometown].
+
+    User 1: Oh, what''s it like there?
+
+    User 2: It''s a big city, but it''s also very diverse and exciting.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is, but it can be overwhelming sometimes.
+
+    User 1: I can imagine. So, what do you do for a living?
+
+    User 2: I''m a programmer. I work remotely, so I can travel whenever I want.
+
+    User 1: That sounds like a great job. I''m a therapist.
+
+    User 2: Oh, that sounds interesting. What kind of therapy do you do?
+
+    User 1: I do a lot of different types of therapy, but I specialize in helping people with anxiety and depression.
+
+    User 2: That''s really helpful. I know a lot of people who could benefit from that.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, go for walks, and spend time with my friends and family.
+
+    User 2: That sounds like fun. I like to travel, read, and play video games.
+
+    User 1: Oh, I love to play video games too.
+
+    User 2: We should play sometime.
+
+    User 1: That would be fun.
+
+    User 2: So, what do you think about my therapist?
+
+    User 1: I think they''re very good. They seem to be very knowledgeable and experienced.
+
+    User 2: That''s good to hear. I''m glad I chose them.
+
+    User 1: It sounds like you''re making some good progress.
+
+    User 2: I am. I''m feeling a lot better than I was when I started therapy.
+
+    User 1: That''s great to hear.
+
+    User 2: Thanks. I''m glad I met you.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

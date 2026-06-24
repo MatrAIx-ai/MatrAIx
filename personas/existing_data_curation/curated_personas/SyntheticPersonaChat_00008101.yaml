@@ -1,0 +1,86 @@
+id: 00008101
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8101
+data:
+  user 1 personas: 'I would like to spend more time with my family.
+
+    I like spending time with friends playing sports and going to country concerts.
+
+    I am recent college graduate looking for a job in marketing.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.
+
+    Unfortunately , my family lives across the country from me.'
+  user 2 personas: 'I like to play video games.
+
+    I play guitar on my free time.
+
+    I live alone.
+
+    I am a scientist.
+
+    I am an amateur chef who cooks 5 different cuisines.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thanks! How about you?
+
+    User 2: I''m doing great, thanks for asking!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just hanging out and playing some video games.
+
+    User 1: Nice! I love playing video games too.
+
+    User 2: Me too! What games do you like to play?
+
+    User 1: I like to play a lot of different games, but I really like playing RPGs.
+
+    User 2: Oh, me too! I love the story and character development in RPGs.
+
+    User 1: Me too! I also like the combat and exploration.
+
+    User 2: Yeah, the combat can be really fun. And exploring the world is always exciting.
+
+    User 1: What''s your favorite RPG?
+
+    User 2: That''s a tough question! I have a lot of favorites. But I think one of my favorites is Final Fantasy VII.
+
+    User 1: Oh, that''s a great game! I love the story and characters.
+
+    User 2: Me too! It''s such a classic game.
+
+    User 1: What other games do you like to play?
+
+    User 2: I also like playing multiplayer games. Like Call of Duty and Fortnite.
+
+    User 1: I''ve played those games before. They''re a lot of fun!
+
+    User 2: Yeah, they can be! I like the competitive aspect.
+
+    User 1: Me too! It''s always fun to try and beat your friends.
+
+    User 2: Yeah, it is! What other hobbies do you have?
+
+    User 1: I also like to cook. I''m not a professional chef, but I like to try new things.
+
+    User 2: Oh, that''s cool! I like to cook too. I''m not a professional chef either, but I''m pretty good.
+
+    User 1: Nice! What kind of food do you like to cook?
+
+    User 2: I like to cook a variety of foods, but my favorite is probably Italian food.
+
+    User 1: Oh, that''s one of my favorites too! I love Italian food.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: I''m glad we have something in common!
+
+    User 2: Yeah, me too! It''s always nice to meet someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

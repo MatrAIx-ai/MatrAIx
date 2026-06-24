@@ -1,0 +1,68 @@
+id: '00001644'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1644
+data:
+  user 1 personas: 'I have three pets.
+
+    I am currently on a diet.
+
+    I love going to the gym.
+
+    I love animals and i want to help them.'
+  user 2 personas: 'My husband will retire next year.
+
+    I like to take walks.
+
+    We plan to travel after he retires.
+
+    I am a retired school teacher.
+
+    Many of my former students like to visit me.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hello! I''m (name).
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to take walks, read, and spend time with my family.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a retired school teacher.
+
+    User 1: That''s great! How do you like retirement?
+
+    User 2: I love it! I have more time to do the things I enjoy.
+
+    User 1: That''s great! What are your plans for the future?
+
+    User 2: My husband is retiring next year, and we plan to travel a lot.
+
+    User 1: That sounds exciting! I''m sure you''ll have a great time.
+
+    User 2: Thank you! I''m looking forward to it.
+
+    User 1: I have three pets.
+
+    User 2: Oh, that''s great! What kind of pets?
+
+    User 1: I have a dog, a cat, and a fish.
+
+    User 2: That sounds like a lot of fun! I''ve always wanted a fish, but I don''t have the time to take care of one.
+
+    User 1: I love my pets. They''re the best companions.
+
+    User 2: I can imagine! I''m sure they''re very loving.
+
+    User 1: They are! They''re always there for me when I need them.
+
+    User 2: That''s great to hear. I''m glad you have such great pets.
+
+    User 1: Thanks! I''m glad you''re enjoying your retirement.
+
+    User 2: I am! It''s the best decision I''ve ever made.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

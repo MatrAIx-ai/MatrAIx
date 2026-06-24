@@ -1,0 +1,19 @@
+id: '00005103'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5103
+persona_description: A researcher or scientist who specializes in geology and biological research, particularly in the field of marine biology. They are interested in using remotely operated vehicles (ROVs)
+  and have expertise in fiber optic cables, HiPap positioning systems, and digital real-time video. They are also proficient in using Minerva, a ROV designed by Sperre AS, for biological research, sampling,
+  and geological investigations. They have experience using Minerva for archaeological surveys, supplying ground truth in geological investigations, and developing new research technology. They are familiar
+  with Minerva's capabilities and have used it in various courses at NTNU.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Marine Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: ROV Operations
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

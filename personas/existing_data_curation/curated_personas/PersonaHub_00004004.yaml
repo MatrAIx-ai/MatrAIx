@@ -1,0 +1,18 @@
+id: '00004004'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4004
+persona_description: A healthcare professional who specializes in the diagnosis and treatment of peripheral artery disease. They are highly skilled in identifying the symptoms, signs, and risk factors associated
+  with this condition. They are also knowledgeable about the various treatments available for peripheral artery disease, including medication and lifestyle changes. They have experience in managing patients
+  with peripheral artery disease and are committed to providing effective and compassionate care.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vascular medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: peripheral artery disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

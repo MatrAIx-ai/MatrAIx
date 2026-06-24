@@ -1,0 +1,74 @@
+id: '00005260'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5260
+data:
+  user 1 personas: 'I don t have a lot of friends.
+
+    I am stuck in a wheel chair.
+
+    I like to go to the park.
+
+    I read a lot.'
+  user 2 personas: 'I like to wear red.
+
+    I use red lipstick.
+
+    I like to wear red shoes also.
+
+    I drive a red car.
+
+    I wear a red purse.'
+  Best Generated Conversation: 'User 1: Hi, I''m looking for someone to go to the park with me.
+
+    User 2: Hi, I''m free. I love going to the park.
+
+    User 1: Awesome! I''m in a wheelchair, so I can''t walk far. Are you okay with that?
+
+    User 2: Of course! I''m always happy to help out.
+
+    User 1: Great! I''m really excited to go.
+
+    User 2: Me too!
+
+    [At the park]
+
+    User 1: This is so nice. I love the fresh air.
+
+    User 2: Me too. And it''s so pretty here.
+
+    User 1: It is. I''m really glad I came.
+
+    User 2: Me too.
+
+    [They walk around the park for a while.]
+
+    User 1: Do you want to sit down and have a snack?
+
+    User 2: Sure, that sounds great.
+
+    [They sit down on a bench and eat their snacks.]
+
+    User 1: This is so nice. I''m glad I met you.
+
+    User 2: Me too. I''m glad I could help.
+
+    User 1: I''m really enjoying the conversation.
+
+    User 2: Me too. I like talking to you.
+
+    User 1: I like talking to you too.
+
+    [They continue talking for a while longer.]
+
+    User 1: Well, I should probably get going. It was really nice talking to you.
+
+    User 2: You too. I hope we can do it again sometime.
+
+    User 1: Me too. Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

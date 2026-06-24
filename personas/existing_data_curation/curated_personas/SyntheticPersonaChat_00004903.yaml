@@ -1,0 +1,76 @@
+id: 00004903
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4903
+data:
+  user 1 personas: 'Yellow is my favorite color.
+
+    I like to read.
+
+    I love the game halo.
+
+    I work for a magazine.
+
+    I love to workout.'
+  user 2 personas: 'I am glad that i work from home.
+
+    I spend a good deal of time on social media.
+
+    I love when my pets visit me in bed.
+
+    I enjoy playing computer games.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read, play computer games, and spend time on social media.
+
+    User 1: That sounds fun! I like to read, too. What are your favorite books?
+
+    User 2: I love anything by Stephen King. I also love the Harry Potter series.
+
+    User 1: I''ve heard good things about Stephen King. I''ve never read any of his books, though.
+
+    User 2: You should! They''re really good.
+
+    User 1: I''ll have to check them out. What kind of computer games do you like to play?
+
+    User 2: I like to play a lot of different types of games, but I''m especially into RPGs and strategy games.
+
+    User 1: I''ve never really been into RPGs, but I do like strategy games.
+
+    User 2: What''s your favorite strategy game?
+
+    User 1: I like Civilization VI a lot.
+
+    User 2: I''ve heard good things about that game. I''ve never played it, though.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll have to check it out.
+
+    User 1: So, you work from home? What do you do?
+
+    User 2: I''m a web designer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in web design.
+
+    User 2: It''s a lot of fun! I get to be creative and I can work from anywhere I want.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is! I''m really lucky.
+
+    User 1: It sounds like you have a lot of hobbies.
+
+    User 2: I do! I like to keep busy.
+
+    User 1: Me too. I think it''s important to have a variety of interests.
+
+    User 2: I agree. It keeps life interesting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,54 @@
+id: 00006793
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6793
+data:
+  user 1 personas: 'I like to take drives in the country.
+
+    I love to go out to eat with my family.
+
+    I like to chat with my friends.
+
+    I like to go to the movies.'
+  user 2 personas: 'I take the subway to work everyday.
+
+    Every fall i visit my sister in canada.
+
+    I have four cats.
+
+    I m afraid of clowns.'
+  Best Generated Conversation: 'User 1: Hi! I like to take drives in the country. What do you like to do for fun?
+
+    User 2: Hi! I take the subway to work everyday. I also like to visit my sister in Canada every fall. What about you?
+
+    User 1: I love to go out to eat with my family. I also like to chat with my friends and go to the movies.
+
+    User 2: That sounds like fun! I love going to the movies too. I also like to read and write.
+
+    User 1: I like reading too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and romance novels.
+
+    User 1: I like those too! I also like to read mystery novels.
+
+    User 2: Oh, I love mystery novels too! I''m always trying to figure out who the killer is.
+
+    User 1: Me too! It''s so much fun to try to solve the mystery before the author reveals it.
+
+    User 2: I agree! It''s a great way to pass the time.
+
+    User 1: I think so too! So, what are you reading right now?
+
+    User 2: I''m reading a historical fiction novel about the American Revolution. It''s really good so far.
+
+    User 1: Oh, that sounds interesting! I''ve never read a historical fiction novel about the American Revolution.
+
+    User 2: You should! It''s a great way to learn about the history of our country.
+
+    User 1: I think I will! Thanks for the recommendation.
+
+    User 2: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

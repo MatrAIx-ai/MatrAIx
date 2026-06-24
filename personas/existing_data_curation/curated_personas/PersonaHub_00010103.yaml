@@ -1,0 +1,19 @@
+id: '00010103'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10103
+persona_description: A botanist specializing in the study of orchid species, particularly those from California's rocky ridges, slopes, cliffs, and canyons. They are well-versed in the taxonomy, ecology,
+  and conservation status of Thysanocarpus conchuliferus, a rare and threatened orchid species found in California. They have a keen eye for identifying and distinguishing between different species of orchids,
+  and are familiar with the unique characteristics and adaptations of this particular species. They are also aware of the threats to the species, including habitat loss and climate change, and are committed
+  to conservation efforts to protect this important species.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: botany
+  general_domain_top01pct: None
+  specific_domain_top01pct: orchid taxonomy and conservation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

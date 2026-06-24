@@ -1,0 +1,64 @@
+id: '00007171'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7171
+data:
+  user 1 personas: 'I know how to count cards in blackjack.
+
+    I am currently going back to school to try and become a casino manager.
+
+    I am a blackjack dealer.
+
+    I have 3 kids.
+
+    I graduated with a statistics degree.'
+  user 2 personas: 'I like to listen to country music.
+
+    I work at a bar.
+
+    I surf everyday.
+
+    I can play piano.
+
+    People say i can cook well.'
+  Best Generated Conversation: 'User 1: Hey there! What''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a bartender at a local bar.
+
+    User 1: Oh, that''s cool! I''ve never been a bartender, but I''ve always thought it would be a fun job.
+
+    User 2: It''s definitely a lot of fun! I get to meet all sorts of interesting people.
+
+    User 1: That sounds like it would be a lot of fun. What else do you like to do for fun?
+
+    User 2: I like to surf, play piano, and listen to country music.
+
+    User 1: Oh, that''s cool! I love to surf too. I''m not very good at it, but I have a lot of fun.
+
+    User 2: Same here! I''m not very good at it, but it''s still a lot of fun.
+
+    User 1: So, do you have any other hobbies?
+
+    User 2: I like to cook too. People say I''m pretty good at it.
+
+    User 1: Oh, that''s cool! I love to cook too. I''m not very good at it, but I love trying new recipes.
+
+    User 2: Well, if you ever want to try some of my cooking, you''re welcome to come over to my place.
+
+    User 1: That sounds great! I''d love to try some of your cooking.
+
+    User 2: Great! I''ll make you some of my famous lasagna.
+
+    User 1: That sounds delicious! I can''t wait to try it.
+
+    User 2: Well, it''s about time I got back to work. It was nice talking to you, [user 1''s name].
+
+    User 1: It was nice talking to you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

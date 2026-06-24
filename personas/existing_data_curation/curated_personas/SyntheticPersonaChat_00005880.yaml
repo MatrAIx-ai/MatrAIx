@@ -1,0 +1,84 @@
+id: 00005880
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5880
+data:
+  user 1 personas: 'I work as a computer programmer.
+
+    I like to donate time and money to charity.
+
+    I make over 200 , 000 per year.
+
+    I helped develop facebook.
+
+    I have two pitt bulls.'
+  user 2 personas: 'I like to go on long hikes.
+
+    I like to pickle eggs.
+
+    I like to play volleyball.
+
+    I like to do my nails.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user1].
+
+    User 2: Hi, I''m [user2].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a computer programmer.
+
+    User 1: That''s cool. I''m a software engineer.
+
+    User 2: Nice! Do you like it?
+
+    User 1: I love it! It''s a lot of fun and I get to work on cool projects.
+
+    User 2: That''s great. What kind of projects do you work on?
+
+    User 1: I''ve worked on a lot of different projects, but my favorite one was a social networking app that I helped develop.
+
+    User 2: Wow, that sounds cool! Did it get a lot of users?
+
+    User 1: Yeah, it actually got a lot of attention and was featured in a few magazines.
+
+    User 2: That''s awesome! What''s your favorite part of being a software engineer?
+
+    User 1: I love the challenge of working on new problems and coming up with creative solutions.
+
+    User 2: I can see why you like it. It sounds like a really rewarding career.
+
+    User 1: It is! I''m really glad I chose this path.
+
+    User 2: I''m glad you''re happy with your career.
+
+    User 1: Thanks! So, what do you like to do for fun?
+
+    User 2: I like to go on long hikes, pickle eggs, play volleyball, and do my nails.
+
+    User 1: That''s a lot of fun activities! I love going on hikes too.
+
+    User 2: Me too! It''s so relaxing to get out in nature and just walk.
+
+    User 1: I agree. Do you have any favorite hiking spots?
+
+    User 2: I love hiking in the mountains. There''s something so peaceful about being surrounded by trees.
+
+    User 1: I know what you mean. I love the fresh air and the beautiful scenery.
+
+    User 2: Me too! What about you? Do you have any favorite hiking spots?
+
+    User 1: I love hiking in the Redwoods. The trees are so tall and majestic.
+
+    User 2: That sounds amazing! I''ve never been to the Redwoods, but I''ve heard they''re beautiful.
+
+    User 1: They are! You should definitely check them out sometime.
+
+    User 2: I will! I''m sure I''d love them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: '00002503'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2503
+data:
+  user 1 personas: 'I like to create art.
+
+    I am an older guy.
+
+    I love to eat sushi and pizza.
+
+    I love to work in my garden.
+
+    My favorite band is ween.'
+  user 2 personas: 'My mother passed away in 1979.
+
+    I am a meat eater.
+
+    I like anime shows.
+
+    I had to get a job early as a child.'
+  Best Generated Conversation: 'User 1: I heard about the death of your mother. I''m sorry for your loss.
+
+    User 2: Thank you. It was a long time ago, but I still miss her.
+
+    User 1: I know what you mean. My father passed away a few years ago.
+
+    User 2: I''m sorry. How are you dealing with it?
+
+    User 1: I''m still trying to figure that out. But I''m trying to focus on the good memories I have of him.
+
+    User 2: That''s a good way to go about it. I try to do the same.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch anime shows. I also like to play video games.
+
+    User 1: Me too! I love anime. What are your favorite shows?
+
+    User 2: I like Attack on Titan, One Piece, and Hunter x Hunter.
+
+    User 1: Those are all great shows! I''ve seen them all.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to create art. I also like to work in my garden. I love to eat sushi and pizza.
+
+    User 2: I love sushi too! I also like to eat steak.
+
+    User 1: I''m a vegetarian, so I don''t eat meat.
+
+    User 2: That''s okay. I can still enjoy sushi with you.
+
+    User 1: Good! I love sushi.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

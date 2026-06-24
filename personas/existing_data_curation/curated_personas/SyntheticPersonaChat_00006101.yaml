@@ -1,0 +1,98 @@
+id: '00006101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6101
+data:
+  user 1 personas: 'I work at a restaurant as waiter.
+
+    I am a cyclist.
+
+    My favorite food is pizza.
+
+    My father used to be a cop.
+
+    I am single.'
+  user 2 personas: 'I am from georgia.
+
+    I can play the violin.
+
+    I love chocolate.
+
+    I want to have two kids.
+
+    I cannot sing very well.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Georgia.
+
+    User 1: Oh, that''s cool. I''ve never been to Georgia.
+
+    User 2: You should come visit sometime. It''s a beautiful state.
+
+    User 1: I''d love to. What do you like to do for fun?
+
+    User 2: I like to play the violin, listen to music, and eat chocolate.
+
+    User 1: That sounds like a lot of fun. I like to play the guitar, listen to music, and eat pizza.
+
+    User 2: Pizza is my favorite food too!
+
+    User 1: What''s your favorite kind of pizza?
+
+    User 2: I like pepperoni pizza with extra cheese.
+
+    User 1: Me too!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a waiter at a restaurant.
+
+    User 2: Oh, that sounds like a fun job.
+
+    User 1: It is. I get to meet a lot of interesting people.
+
+    User 2: That''s a good thing. I''m a stay-at-home mom.
+
+    User 1: Oh, that must be a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what are you looking for in a partner?
+
+    User 1: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 2: That sounds like a good list.
+
+    User 1: Yeah, I think it is.
+
+    User 2: Well, I''m kind, funny, and intelligent.
+
+    User 1: Oh, really?
+
+    User 2: Yeah, I am.
+
+    User 1: Well, you''re definitely my type.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what do you think?
+
+    User 2: I think we should go out sometime.
+
+    User 1: That sounds like a great idea.
+
+    User 2: What do you think about this weekend?
+
+    User 1: That sounds perfect.
+
+    User 2: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

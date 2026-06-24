@@ -1,0 +1,60 @@
+id: 00006910
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6910
+data:
+  user 1 personas: 'I am a waitress at a local restaurant.
+
+    I am a casual dresser.
+
+    My car needs some repairs.
+
+    My favorite band is nirvana.
+
+    I am overall happy with life.'
+  user 2 personas: 'My mom is a cancer survivor.
+
+    Pizza is my favorite food.
+
+    I am single and not looking.
+
+    My favorite hobby is reading suspense novels.'
+  Best Generated Conversation: 'User 1: Hey! I''m a waitress at a local restaurant. What do you do for a living?
+
+    User 2: I''m a stay-at-home mom. My mom is a cancer survivor, and I''m taking care of her.
+
+    User 1: Oh, I''m so sorry to hear that. I hope she''s doing well.
+
+    User 2: She''s doing much better, thanks! She''s a fighter.
+
+    User 1: That''s great to hear. What''s your favorite food?
+
+    User 2: Pizza! I love it.
+
+    User 1: Same here! What''s your favorite pizza place?
+
+    User 2: There''s this great pizza place down the street from me. It''s called "Pizza Joe''s".
+
+    User 1: I''ve heard good things about that place. I''ll have to check it out sometime.
+
+    User 2: You definitely should! They have the best pizza I''ve ever had.
+
+    User 1: What''s your favorite hobby?
+
+    User 2: I love to read. I''m always reading suspense novels.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love books by Gillian Flynn and Paula Hawkins.
+
+    User 1: I''ve heard good things about those authors. I''ll have to check out their books.
+
+    User 2: You definitely should! They''re great.
+
+    User 1: Thanks for the recommendations. I''m always looking for new books to read.
+
+    User 2: No problem! I''m always happy to share my love of reading with others.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

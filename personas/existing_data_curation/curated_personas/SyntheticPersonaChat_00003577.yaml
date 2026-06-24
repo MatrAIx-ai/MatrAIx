@@ -1,0 +1,64 @@
+id: '00003577'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3577
+data:
+  user 1 personas: 'I am a 43 year old woman.
+
+    My hair is short and pink.
+
+    I work as a freight truck driver.
+
+    I love to travel.'
+  user 2 personas: 'We help each other out in my family.
+
+    I despise my boss.
+
+    I lived most of my life not knowing who bob marley was.
+
+    When i cut loose , i lose control.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: I''m a 43 year old woman who loves to travel.
+
+    User 2: That''s cool! I love to travel too. Where have you been?
+
+    User 1: I''ve been to Europe, Asia, and North America.
+
+    User 2: Wow, that''s awesome! I''ve only been to Europe and North America.
+
+    User 1: You should definitely try to go to Asia sometime. It''s a beautiful continent.
+
+    User 2: I''ll definitely keep that in mind.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work as a software engineer.
+
+    User 1: That''s cool! I''ve always been interested in software engineering.
+
+    User 2: It''s a great field. I love the challenge of it.
+
+    User 1: I can imagine. So what''s your favorite thing to do in your free time?
+
+    User 2: I love to play video games and watch TV.
+
+    User 1: Me too! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of games, but I''m a big fan of RPGs.
+
+    User 1: Me too! I love the story and character development in RPGs.
+
+    User 2: Me too! They''re so immersive.
+
+    User 1: So, what''s your favorite RPG?
+
+    User 2: I''m not sure I could pick just one, but I''d say The Witcher 3 is one of my favorites.
+
+    User 1: That''s a great choice! I love that game too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

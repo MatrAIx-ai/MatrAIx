@@ -1,0 +1,80 @@
+id: 00001569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1569
+data:
+  user 1 personas: 'I drink diet coke.
+
+    I spend too much time shopping.
+
+    I work in retail.
+
+    I drive a ford taurus.
+
+    I love katy perry.'
+  user 2 personas: 'I believe that mermaids are real.
+
+    I have four sisters.
+
+    My mom is my best friend.
+
+    I love iced tea.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name].
+
+    User 2: Hey, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to go shopping, I have four sisters, my mom is my best friend, and I believe that mermaids are real.
+
+    User 1: That''s cool! I work in retail, I drink diet coke, I love Katy Perry, and I drive a Ford Taurus.
+
+    User 2: We have a lot in common! I love diet coke too.
+
+    User 1: That''s great! It''s my favorite drink.
+
+    User 2: What''s your favorite store to shop at?
+
+    User 1: I love to shop at Target. They have everything I need.
+
+    User 2: Me too! I love their clothes and makeup.
+
+    User 1: I know, right? They have the best deals.
+
+    User 2: What''s your favorite Katy Perry song?
+
+    User 1: I love all of her songs, but my favorite is probably "Firework."
+
+    User 2: That''s a good song! I like her song "Roar" too.
+
+    User 1: Me too! I love the beat.
+
+    User 2: What''s your favorite thing about your Ford Taurus?
+
+    User 1: I love the way it drives. It''s so smooth and comfortable.
+
+    User 2: I know, right? It''s a great car.
+
+    User 1: Yeah, I''m really happy with it.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work in retail. I''m a cashier at Walmart.
+
+    User 2: Oh, that''s cool! I''ve never worked in retail before.
+
+    User 1: It''s not bad. It can be a lot of work, but it''s also fun.
+
+    User 2: I''m sure it is. I''ve always been curious about what it''s like to work in retail.
+
+    User 1: It''s definitely a different experience.
+
+    User 2: I''m sure it is.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! It was nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00001900
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1900
+persona_description: A biologist or ecologist who specializes in the study of fish and their interactions with the environment, particularly in the context of fish habitat restoration and conservation.
+  This person is likely to have expertise in fish survival rates, fish passage conditions, and the physiological responses of fish to stressors. They are interested in conducting research on fish bypass
+  systems, including the design and modification of these systems, and evaluating their effectiveness in improving fish survival and passage conditions. They would be familiar with the specific fish species
+  studied in the text, such as subyearling Chinook salmon and yearling and subyearling Chinook salmon, as well as the northern pikeminnow.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: fish ecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

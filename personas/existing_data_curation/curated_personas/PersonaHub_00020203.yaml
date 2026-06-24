@@ -1,0 +1,19 @@
+id: '00020203'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20203
+persona_description: An Information Security Manager who is responsible for evaluating and prioritizing security vulnerabilities in their organization. They use the Common Vulnerability Scoring System (CVSS)
+  to assess the severity of these vulnerabilities and prioritize which ones to fix first. They also use the CVSS to gauge the impact of the vulnerabilities on their systems and make informed decisions about
+  security measures. They are familiar with the latest version of the CVSS, CVSS 3.0, and regularly use it to evaluate the security posture of their organization. They are also aware of the customizations
+  made by vendors such as Oracle to the CVSS and its use in their organization.
+expertise:
+  general_domain_top1pct: Information Security
+  specific_domain_top1pct: Vulnerability Assessment and Prioritization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

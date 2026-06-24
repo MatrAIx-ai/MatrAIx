@@ -1,0 +1,58 @@
+id: 00007973
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7973
+data:
+  user 1 personas: 'My name is william , but people call me bill.
+
+    I live with my wife and kids.
+
+    I have three beautiful dogs and one cat.
+
+    I live near grand rapids , michigan.
+
+    I own a small farm where i herd cattle.'
+  user 2 personas: 'My college courses are on philosophy and history.
+
+    I write short stories in my document tab with the use of a prompting app.
+
+    My glasses are held together by tiger printed duct tape.
+
+    My newly bought laptop has a bum battery.
+
+    I ride my bike to class since its only a mile away.'
+  Best Generated Conversation: 'User 1: Hello! My name is Bill. I''m a farmer from Grand Rapids, Michigan.
+
+    User 2: Hello, Bill! My name is Sarah. I''m a college student studying philosophy and history.
+
+    User 1: Nice to meet you, Sarah! What are you studying in college?
+
+    User 2: I''m studying philosophy and history. I''m really interested in learning about the human condition and how we got to where we are today.
+
+    User 1: That''s a great field of study! I''m sure you''ll learn a lot. What do you want to do with your degree?
+
+    User 2: I''m not sure yet. I''m thinking about going to law school, but I''m not sure. I''m still exploring my options.
+
+    User 1: Well, I''m sure you''ll figure it out. You seem like a smart person.
+
+    User 2: Thanks, Bill! I appreciate that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and go for walks. I also like to bike to class. It''s only a mile away, so it''s not too bad.
+
+    User 1: That sounds like fun! I like to read and write too. I also like to play video games.
+
+    User 2: I''ve never been much of a gamer. I''m more of a bookworm.
+
+    User 1: Well, I''m sure we can find something to do together.
+
+    User 2: I''m sure we can. I''m always looking for new friends.
+
+    User 1: Me too. It''s nice to meet you, Sarah.
+
+    User 2: It''s nice to meet you too, Bill.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

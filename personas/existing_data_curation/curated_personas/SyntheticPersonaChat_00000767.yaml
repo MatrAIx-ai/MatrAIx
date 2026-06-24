@@ -1,0 +1,50 @@
+id: '00000767'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 767
+data:
+  user 1 personas: 'I love animals.
+
+    I am an aspiring singer.
+
+    My father worked for ge.
+
+    I enjoy playing tennis.'
+  user 2 personas: 'I don t have many friends.
+
+    I like lizards.
+
+    I wish i could live in a fantasy world.
+
+    I have long hair for a boy.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: Hey, I''m doing alright. How about you?
+
+    User 1: I''m doing well, thanks. I''m an aspiring singer, and I love animals. What do you like to do?
+
+    User 2: I like lizards, and I wish I could live in a fantasy world.
+
+    User 1: Lizards are cool! I love watching them climb around in their tanks. What kind of fantasy world would you like to live in?
+
+    User 2: I would like to live in a world where there is no war or violence. Everyone would be kind and compassionate to each other, and there would be no poverty or hunger.
+
+    User 1: That sounds like a beautiful world. I would love to live in a world like that too.
+
+    User 2: Me too. Maybe we can work together to make it happen.
+
+    User 1: I''m up for that. Let''s start by spreading kindness and compassion to everyone we meet.
+
+    User 2: That''s a great idea. I''ll start by being kinder to my parents.
+
+    User 1: That''s a great start. I''m sure they''ll appreciate it.
+
+    User 2: Thanks. I''m glad we had this talk.
+
+    User 1: Me too. It was nice to meet you.
+
+    User 2: Nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

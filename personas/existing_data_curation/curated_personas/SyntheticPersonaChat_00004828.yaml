@@ -1,0 +1,88 @@
+id: 00004828
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4828
+data:
+  user 1 personas: 'My car is over 20 years old.
+
+    My dad was a preacher.
+
+    I did not finish college.
+
+    My mother was a school music teacher.
+
+    My favorite movie is the last of the mohicans.'
+  user 2 personas: 'I sleep 8 hours.
+
+    I use the computer all day.
+
+    I love hockey.
+
+    My mother looks after my grandmother.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a computer programmer.
+
+    User 1: Oh, that''s cool. I''m not very tech-savvy.
+
+    User 2: That''s okay, I can help you with that.
+
+    User 1: Thanks, I appreciate it. What''s your favorite movie?
+
+    User 2: My favorite movie is The Last of the Mohicans.
+
+    User 1: I''ve never seen that one. What''s it about?
+
+    User 2: It''s about a group of Native American warriors who are fighting for their land against the British.
+
+    User 1: That sounds interesting. I''ll have to check it out.
+
+    User 2: You should, it''s a really good movie.
+
+    User 1: So, what''s your favorite sport?
+
+    User 2: I love hockey.
+
+    User 1: Oh, that''s cool. I played hockey when I was younger, but I never got very good at it.
+
+    User 2: That''s okay, it''s not easy.
+
+    User 1: Do you play hockey now?
+
+    User 2: No, I don''t have time. I work too much.
+
+    User 1: I know what you mean. I work a lot too.
+
+    User 2: But at least we have hockey to watch.
+
+    User 1: Yeah, that''s true.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and camping.
+
+    User 2: Oh, that sounds fun. I like to go hiking too.
+
+    User 1: Do you like to go camping?
+
+    User 2: No, I''m not really a fan of camping.
+
+    User 1: That''s okay. I don''t mind going camping alone.
+
+    User 2: I''m sure you have a lot of fun.
+
+    User 1: I do. I like to explore new places and see nature.
+
+    User 2: That sounds like fun. I wish I could go camping with you sometime.
+
+    User 1: Sure, I''d love that.
+
+    User 2: Great! We can make plans soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00010528
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10528
+persona_description: A health care professional who is concerned about the potential risks and benefits of mammography screening for women. They are interested in the latest research and recommendations
+  from health organizations, such as the American Cancer Society and the U.S. Preventive Services Task Force, and want to weigh the pros and cons before making decisions about mammography screening. They
+  are also interested in the potential for false positives and the risks associated with unnecessary biopsies.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: breast cancer screening
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

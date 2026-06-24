@@ -1,0 +1,78 @@
+id: '00005755'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5755
+data:
+  user 1 personas: 'I deliver packages for a living.
+
+    I am a very funny woman.
+
+    I love candy.
+
+    I drive a honda car.
+
+    I own 3 cats.'
+  user 2 personas: 'I am a business man.
+
+    I have 3 children.
+
+    I am a karate black belt.
+
+    My wife has terminal cancer.
+
+    I love to sing.'
+  Best Generated Conversation: 'User 1: Hi, I''m Sarah. I''m a delivery driver.
+
+    User 2: Nice to meet you. I''m John, and I''m a business man.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy singing, and I''m a black belt in karate.
+
+    User 1: That''s awesome! What do you like to sing?
+
+    User 2: I like to sing pop music, and I''m also in a band with my friends.
+
+    User 1: That''s great! I love to sing too. Do you have any shows coming up?
+
+    User 2: We''re actually playing at a local bar next weekend. Do you want to come?
+
+    User 1: Oh, I would love to! What time is the show?
+
+    User 2: It starts at 8:00 p.m.
+
+    User 1: Great! I''ll be there.
+
+    User 2: Awesome! I''ll see you there.
+
+    (At the bar)
+
+    User 1: Hi, John!
+
+    User 2: Hi, Sarah! I''m so glad you could make it.
+
+    User 1: Me too! You guys are great!
+
+    User 2: Thanks! We''re glad you like it.
+
+    User 1: I''m really impressed with your singing. You''re really talented.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: What''s it like being in a band?
+
+    User 2: It''s a lot of fun. We get to play music together, and we get to travel and perform all over the place.
+
+    User 1: That sounds amazing! I wish I could be in a band.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might just have to do that.
+
+    User 2: Awesome! I''m sure you''d be great at it.
+
+    User 1: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

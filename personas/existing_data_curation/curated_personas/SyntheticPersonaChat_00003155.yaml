@@ -1,0 +1,58 @@
+id: '00003155'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3155
+data:
+  user 1 personas: 'I live in an apartment.
+
+    I am one of four siblings.
+
+    I like to draw.
+
+    My mother is a teacher.'
+  user 2 personas: 'I have red hair.
+
+    My name is nick.
+
+    I have lots of friends.
+
+    I like to ride my scooter.'
+  Best Generated Conversation: 'User 1: Hi! I''m user 1.
+
+    User 2: Hi! I''m user 2.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my scooter and draw.
+
+    User 1: Oh, that''s cool! I like to draw too.
+
+    User 2: What kind of things do you like to draw?
+
+    User 1: I like to draw animals and landscapes.
+
+    User 2: Oh, that sounds really cool. I like to draw characters from my favorite cartoons.
+
+    User 1: Oh, that''s awesome! I like to draw characters from my favorite movies too.
+
+    User 2: That''s really cool! I''m sure you''re a great artist.
+
+    User 1: Thanks! I try my best.
+
+    User 2: What''s it like living in an apartment?
+
+    User 1: It''s pretty nice. I have my own room and I can do whatever I want.
+
+    User 2: Oh, that sounds fun. I live with my parents and two brothers, so I don''t have much privacy.
+
+    User 1: Oh, that must be tough.
+
+    User 2: It''s not too bad. I''m used to it.
+
+    User 1: Well, I''m glad you''re having a good time.
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

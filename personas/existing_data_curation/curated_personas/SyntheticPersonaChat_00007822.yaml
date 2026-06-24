@@ -1,0 +1,66 @@
+id: 00007822
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7822
+data:
+  user 1 personas: 'I like watching british tv shows and movies.
+
+    I am a retired computer programmer.
+
+    I have one grandson and one daughter.
+
+    I just turned 77.
+
+    I love animals.'
+  user 2 personas: 'I fly airplanes.
+
+    I enjoy building computers.
+
+    I am in the army.
+
+    I dropped out of college.
+
+    My favorite band is tool.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: I''m doing well, thank you for asking! How are you doing today?
+
+    User 1: I''m doing well, thank you. I''m a retired computer programmer and I love watching British TV shows and movies. What do you do for a living?
+
+    User 2: I''m in the Army, and I enjoy building computers. I also like flying airplanes.
+
+    User 1: Wow, that''s a lot of different interests! What''s your favorite type of British TV show?
+
+    User 2: I like a lot of different British TV shows, but my favorite is probably Doctor Who.
+
+    User 1: Oh, I love Doctor Who! Who''s your favorite doctor?
+
+    User 2: My favorite doctor is David Tennant.
+
+    User 1: Mine too! He''s so good.
+
+    User 2: He is! I''m also a big fan of Peter Capaldi.
+
+    User 1: I like him too. He''s a great actor.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, watch movies, and spend time with my family.
+
+    User 2: That sounds nice. I like to do a lot of the same things. I also like to fly airplanes and build computers.
+
+    User 1: I''ve never flown an airplane before, but it sounds like a lot of fun.
+
+    User 2: It is! It''s a great way to see the world.
+
+    User 1: I''m sure it is. I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: Good! You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: '00004346'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4346
+data:
+  user 1 personas: 'I have a wife and two kids.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    I want to be in a band someday.
+
+    My hobbies are sleeping and playing the guitar.'
+  user 2 personas: 'Both of my parents are teachers.
+
+    My sister and i are in a grunge band.
+
+    I have three roommates.
+
+    I work at a coffee shop.
+
+    I have an eyebrows piercing.'
+  Best Generated Conversation: 'User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: I''m a guitarist.
+
+    User 2: Me too! I''m in a grunge band with my sister.
+
+    User 1: That''s awesome! What''s your band name?
+
+    User 2: We''re called "The Dirty Dishes".
+
+    User 1: That''s a great name!
+
+    User 2: Thanks!
+
+    User 1: What kind of music do you play?
+
+    User 2: We play a mix of grunge, punk, and metal.
+
+    User 1: That sounds awesome!
+
+    User 2: Thanks! We''re actually recording a new album right now.
+
+    User 1: That''s great! I''ll be sure to check it out.
+
+    User 2: Thanks! We''re really excited about it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work at a coffee shop.
+
+    User 1: Oh, that''s cool! I love coffee.
+
+    User 2: Me too! I''m a barista.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to make coffee.
+
+    User 2: It''s not that hard.
+
+    User 1: Maybe I''ll take a class at the local community center.
+
+    User 2: That''s a great idea!
+
+    User 1: Thanks!
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: We''re playing a show at a local bar.
+
+    User 1: Oh, that sounds cool! I''ll be sure to come check it out.
+
+    User 2: Great! We''ll be there at 8 pm.
+
+    User 1: I''ll be there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

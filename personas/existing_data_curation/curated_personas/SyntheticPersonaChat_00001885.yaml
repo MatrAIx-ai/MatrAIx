@@ -1,0 +1,90 @@
+id: 00001885
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1885
+data:
+  user 1 personas: 'I have a pet husky.
+
+    I live in the great white north.
+
+    I like to play nintendo.
+
+    I love to eat fish.'
+  user 2 personas: 'My favorite color is blue.
+
+    I was born male and transitioned to female when i was 17.
+
+    I live in the usa.
+
+    I was born 20 years ago.
+
+    I love pizza.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I was born in the USA, but I live in Canada now.
+
+    User 1: Oh, cool! I live in Canada too.
+
+    User 2: What part of Canada do you live in?
+
+    User 1: I live in Alberta.
+
+    User 2: Oh, nice! I live in Vancouver.
+
+    User 1: I''ve heard Vancouver is a beautiful city.
+
+    User 2: It is! I love it here.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play video games, watch movies, and go out to eat.
+
+    User 1: Me too! What are some of your favorite video games?
+
+    User 2: I love the Legend of Zelda series, the Pokemon series, and the Mario series.
+
+    User 1: I love the Legend of Zelda series too! I''ve played every game in the series.
+
+    User 2: Me too! I''m so excited for the new game coming out later this year.
+
+    User 1: Me too! I''ve been waiting for it for years.
+
+    User 2: What are some of your favorite movies?
+
+    User 1: I love the Lord of the Rings trilogy, the Harry Potter series, and the Star Wars prequels.
+
+    User 2: I love the Lord of the Rings trilogy too! I''ve read the books and watched the movies multiple times.
+
+    User 1: Me too! I love the story and the characters.
+
+    User 2: What are some of your favorite restaurants?
+
+    User 1: I love Pizza Hut, Olive Garden, and TGI Fridays.
+
+    User 2: I love pizza too! I''m a big fan of Pizza Hut.
+
+    User 1: Me too! I love their pizza crust.
+
+    User 2: Me too! It''s so delicious.
+
+    User 1: What do you like to do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a software engineer too.
+
+    User 2: Really? What company do you work for?
+
+    User 1: I work for Google.
+
+    User 2: Oh, nice! I''ve heard good things about Google.
+
+    User 1: It''s a great company to work for.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,100 @@
+id: 00002999
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2999
+data:
+  user 1 personas: 'I am an avid fisherman.
+
+    I like to race go carts.
+
+    I hate fast food.
+
+    I have a george foreman grill at home.'
+  user 2 personas: 'I have purple hair.
+
+    I am a petsitter.
+
+    My mom died when i was six.
+
+    My dad is a college professor.
+
+    My favorite book is the tale of genji.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to pet sit, read, and write.
+
+    User 1: That''s cool. I love pets too. What kind of pets do you have?
+
+    User 2: I don''t have any pets of my own, but I love to pet sit for other people.
+
+    User 1: That''s great. I have a cat named Snowball.
+
+    User 2: I love cats! They''re so cute.
+
+    User 1: I know, right? I love to cuddle with him.
+
+    User 2: I''m sure he loves it too.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Tale of Genji.
+
+    User 1: I''ve never heard of it. What''s it about?
+
+    User 2: It''s a Japanese novel about a court aristocrat. It''s a really long book, but it''s very good.
+
+    User 1: I''ll have to check it out. I''m always looking for new books to read.
+
+    User 2: It''s a classic. I''m sure you''ll like it.
+
+    User 1: Good to know. Thanks for the recommendation.
+
+    User 2: You''re welcome.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a petsitter.
+
+    User 1: That''s cool. I''ve always thought that would be a fun job.
+
+    User 2: It is! I love animals.
+
+    User 1: I can tell.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite part about being a petsitter?
+
+    User 2: I love getting to meet new animals and learn about their personalities.
+
+    User 1: I can imagine. That must be really rewarding.
+
+    User 2: It is! I love seeing how happy the animals are when they see me.
+
+    User 1: That''s really nice.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your least favorite part about being a petsitter?
+
+    User 2: I don''t really have any. I love my job!
+
+    User 1: That''s great.
+
+    User 2: Thanks.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Maybe we can get together sometime and pet some animals?
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

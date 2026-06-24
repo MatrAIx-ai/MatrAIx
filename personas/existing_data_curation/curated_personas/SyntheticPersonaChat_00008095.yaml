@@ -1,0 +1,64 @@
+id: 00008095
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8095
+data:
+  user 1 personas: 'I take pride in my job managing the restaurant.
+
+    I drive a nice car.
+
+    I work all the time.
+
+    My brothers work with me.'
+  user 2 personas: 'I work as a meeting coordinator.
+
+    I live in upstate new york.
+
+    I live with my husband and two children.
+
+    My favorite place to visit is seattle.'
+  Best Generated Conversation: 'User 1: I''m glad I got to meet you today. You seem very nice.
+
+    User 2: Thank you, you seem nice too. What do you do for a living?
+
+    User 1: I manage a restaurant. It''s a lot of work, but it''s rewarding.
+
+    User 2: Oh, that sounds interesting. I work as a meeting coordinator. It''s also a lot of work, but it''s fun.
+
+    User 1: What part of the country do you live in?
+
+    User 2: I live in upstate New York. It''s a beautiful area.
+
+    User 1: I''ve heard that. I''ve never been there, but I''d love to visit someday.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: What are some of your favorite things to do in your free time?
+
+    User 2: I like to spend time with my family, go for walks, and read.
+
+    User 1: That sounds relaxing. I like to go for walks too.
+
+    User 2: What''s your favorite place to walk?
+
+    User 1: I like to walk around my neighborhood. It''s a nice place to relax and get some exercise.
+
+    User 2: I like to walk around my neighborhood too. It''s a great way to get some fresh air and enjoy the outdoors.
+
+    User 1: What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is "To Kill a Mockingbird."
+
+    User 1: That''s a great book! I''ve read it several times.
+
+    User 2: Me too! It''s a classic for a reason.
+
+    User 1: I agree. It''s a great book.
+
+    User 2: It''s been nice chatting with you.
+
+    User 1: You too. It''s been nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

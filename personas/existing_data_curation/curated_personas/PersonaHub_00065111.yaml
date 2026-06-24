@@ -1,0 +1,19 @@
+id: '00065111'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65111
+persona_description: A healthcare professional who is interested in understanding the function and health of the heart, specifically the left ventricle, and how it can be assessed through various tests
+  and evaluations. They are likely to be familiar with medical history, physical exams, and echocardiograms, and may have a background in cardiology or a related field. They are interested in learning more
+  about the Cedars-Sinai hospital's performance on a measure that reports on the percentage of patients with heart failure who receive an in-depth evaluation of heart muscle function while in the hospital,
+  and may be looking for ways to improve their own practice in this area.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

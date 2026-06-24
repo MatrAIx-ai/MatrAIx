@@ -1,0 +1,84 @@
+id: '00001546'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1546
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    Every fall i visit my sister in canada.
+
+    I have four cats.
+
+    I take the subway to work everyday.'
+  user 2 personas: 'I am going to school for writing.
+
+    I love to read fantasy novels and poetry.
+
+    I would like to be a journalist one day.
+
+    My mother is a librarian.
+
+    I often help her sort books in the library.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read fantasy novels and poetry.
+
+    User 1: Oh, that''s cool! I like to read too. What''s your favorite book?
+
+    User 2: It''s hard to say, but I really liked the "Harry Potter" series.
+
+    User 1: Me too! I''ve read all of the books.
+
+    User 2: Oh, wow! I''ve only read the first six.
+
+    User 1: You should definitely read the seventh one. It''s really good.
+
+    User 2: I will!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to write. I''m going to school for writing.
+
+    User 1: Oh, that''s awesome! I used to want to be a writer, but I never had the patience.
+
+    User 2: It''s definitely not easy, but it''s really rewarding.
+
+    User 1: I bet. What do you want to be when you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about being a journalist, but I''m still open to other options.
+
+    User 1: Well, I''m sure you''ll do great whatever you decide to do.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your mom''s job?
+
+    User 2: My mom is a librarian.
+
+    User 1: Oh, that''s cool! I love libraries.
+
+    User 2: Me too! I used to go to the library all the time when I was a kid.
+
+    User 1: I bet you read a lot of books.
+
+    User 2: I did! I still read a lot of books, but not as much as I used to.
+
+    User 1: Well, it''s never too late to start reading more books.
+
+    User 2: I know, I know.
+
+    User 1: Well, I''m glad I met you.
+
+    User 2: Me too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

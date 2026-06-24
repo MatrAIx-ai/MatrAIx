@@ -1,0 +1,72 @@
+id: 00008643
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8643
+data:
+  user 1 personas: 'I like watching action adventure movies and eating popcorn.
+
+    I am training to be a welder.
+
+    I love riding roller coasters.
+
+    I am starting an internship at a construction site next week.'
+  user 2 personas: 'I went to college in chicago.
+
+    I am the youngest of 3.
+
+    I am pursuing my law degree.
+
+    I love playing tennis.'
+  Best Generated Conversation: 'User 1: Hi, what''s up?
+
+    User 2: Hey, not much. Just studying for my law school finals.
+
+    User 1: Oh, that sounds tough. Good luck!
+
+    User 2: Thanks! I''ll need it.
+
+    User 1: So, what are you studying?
+
+    User 2: I''m studying contract law.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: It''s okay. It''s not my favorite, but it''s not too bad.
+
+    User 1: What''s your favorite subject?
+
+    User 2: I really like criminal law.
+
+    User 1: Oh, that''s interesting. Why is that?
+
+    User 2: I just find it really fascinating. I think it''s important to understand the law and how it works, especially when it comes to criminal law.
+
+    User 1: I see. So, what do you want to do after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about either becoming a prosecutor or a defense attorney.
+
+    User 1: Oh, that sounds exciting! I''m sure you''ll be great at it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play tennis, read, and watch movies.
+
+    User 1: Oh, that''s cool. I like to do those things too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is The Lord of the Rings: The Return of the King.
+
+    User 2: Oh, that''s a good one. I love that movie too.
+
+    User 1: It''s so good! I could watch it over and over again.
+
+    User 2: Me too! It''s one of my favorite movies of all time.
+
+    User 1: Mine too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

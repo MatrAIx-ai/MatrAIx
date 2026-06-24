@@ -1,0 +1,60 @@
+id: '00000623'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 623
+data:
+  user 1 personas: 'I drive an suv.
+
+    I have 3 dogs.
+
+    I have a vacation home in the mountains.
+
+    I have 3 children.'
+  user 2 personas: 'I dream of playing music for a living.
+
+    Both my parents are creative.
+
+    My dad works in the automotive industry.
+
+    Mom in telecommunications.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play music, write songs, and go hiking.
+
+    User 1: That''s great! I love to play music too. What kind of music do you play?
+
+    User 2: I play the guitar and sing. I like to play a lot of different styles of music, but my favorite is probably rock music.
+
+    User 1: That''s cool! I play the piano and sing. I also like to play a lot of different styles of music, but my favorite is probably classical music.
+
+    User 2: That''s awesome! I love classical music too.
+
+    User 1: What kind of music do you like to write?
+
+    User 2: I like to write songs about love, life, and relationships. I also like to write songs about social issues.
+
+    User 1: That''s great! I like to write songs about everything under the sun. I love to write about my life experiences, my thoughts, and my feelings.
+
+    User 2: That''s awesome! I love hearing about other people''s lives and their experiences.
+
+    User 1: Me too! I love hearing about other people''s stories.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go hiking, camping, and fishing. I also like to go to concerts and watch movies.
+
+    User 2: That''s awesome! I love to go hiking and camping too. I also like to go to concerts and watch movies.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: Yeah, we do! We should definitely hang out sometime.
+
+    User 1: That would be great! I would love to hang out with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

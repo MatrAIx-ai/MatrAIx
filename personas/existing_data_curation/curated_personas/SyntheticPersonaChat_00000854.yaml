@@ -1,0 +1,72 @@
+id: 00000854
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 854
+data:
+  user 1 personas: 'I make pottery.
+
+    I like to refurbish classic cars.
+
+    I once lived in a storage locker for two months.
+
+    I am a recovering alcoholic.'
+  user 2 personas: 'I have thrown up every day for the last 3 months with morning sickness.
+
+    I already have 3 children.
+
+    I found out that i am carrying twins.
+
+    I am 26 years old.
+
+    I will be on bed rest for the next 5 months.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1 name)! What''s your name?
+
+    User 2: I''m (user 2 name)! It''s nice to meet you.
+
+    User 1: You too! What do you do for fun?
+
+    User 2: I like to read, go for walks, and play with my kids.
+
+    User 1: That sounds nice! I like to make pottery, refurbish classic cars, and hang out with my friends.
+
+    User 2: That''s cool! I''ve always wanted to learn how to make pottery.
+
+    User 1: It''s not too hard! It''s a lot of fun too.
+
+    User 2: Maybe I''ll try it sometime.
+
+    User 1: You should! It''s really rewarding.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem! What''s your favorite book?
+
+    User 2: I love the Harry Potter series!
+
+    User 1: Me too! I''m a huge fan of Harry Potter.
+
+    User 2: I''m glad to hear it! I''m reading the series again right now.
+
+    User 1: I''m jealous! I wish I could read them for the first time again.
+
+    User 2: It''s such a good series.
+
+    User 1: It is! I love the characters and the story.
+
+    User 2: Me too! I''ve been a fan since I was a kid.
+
+    User 1: Me too! I grew up watching the movies.
+
+    User 2: Me too! I loved the movies.
+
+    User 1: They were so good!
+
+    User 2: They were!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

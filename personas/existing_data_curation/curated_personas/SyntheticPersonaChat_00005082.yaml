@@ -1,0 +1,76 @@
+id: 00005082
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5082
+data:
+  user 1 personas: 'I ve never been to the beach.
+
+    I m a disappointment to my family.
+
+    I love to climb.
+
+    I love my parrot , todd.'
+  user 2 personas: 'My favorite video game is halo 3.
+
+    I struggle with maintaining eye contact.
+
+    I drive a moped.
+
+    I sing in the shower.
+
+    I like to take cold showers.'
+  Best Generated Conversation: 'User 1: Hello! I''m Todd.
+
+    User 2: Hi Todd, I''m Sarah.
+
+    User 1: It''s nice to meet you, Sarah.
+
+    User 2: You too, Todd.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games, drive my moped, and sing in the shower.
+
+    User 1: That''s cool! I like to climb and play video games too.
+
+    User 2: What''s your favorite video game?
+
+    User 1: My favorite video game is Halo 3.
+
+    User 2: I''ve never played Halo 3, but I''ve heard good things about it.
+
+    User 1: You should try it! It''s a really fun game.
+
+    User 2: I might just do that.
+
+    User 1: What''s your favorite thing to do outside?
+
+    User 2: I like to go hiking and camping.
+
+    User 1: That''s cool! I''ve never been camping before, but I''ve always wanted to go.
+
+    User 2: You should definitely try it! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: What''s your favorite thing to do indoors?
+
+    User 1: I like to watch movies, play video games, and read books.
+
+    User 2: I like to watch movies and play video games too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Lord of the Rings.
+
+    User 1: That''s a great movie! I love the Lord of the Rings trilogy.
+
+    User 2: Me too! It''s my favorite movie series of all time.
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too! I think we''re going to be good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

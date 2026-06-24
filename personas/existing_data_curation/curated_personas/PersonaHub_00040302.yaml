@@ -1,0 +1,18 @@
+id: '00040302'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40302
+persona_description: A cardiologist or a physiologist who is interested in understanding the cardiovascular system and its functions, particularly the stroke volume and its impact on cardiac output and
+  ejection fraction. This person is likely to have a background in echocardiography and cardiovascular magnetic resonance imaging, and may have expertise in stroke volume measurement and its physiological
+  implications. They may also be familiar with the reference values for stroke volume and its relationship with heart rate, body surface area, and other parameters.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

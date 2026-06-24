@@ -1,0 +1,78 @@
+id: '00006073'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6073
+data:
+  user 1 personas: 'I play for the baltimore orioles.
+
+    I m married and have three kids.
+
+    I am a baseball player.
+
+    I went to miami university.
+
+    I make a million dollars a year.'
+  user 2 personas: 'I enjoy working out and learning new things.
+
+    I am a student in college.
+
+    I am studying software development.
+
+    I play the guitair.
+
+    My name is kevin.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1 name). What''s your name?
+
+    User 2: Hi, I''m (user 2 name).
+
+    User 1: Nice to meet you, (user 2 name). What do you do for a living?
+
+    User 2: I''m a student in college studying software development.
+
+    User 1: Oh, that''s cool! I''m a baseball player for the Baltimore Orioles.
+
+    User 2: That''s awesome! I''ve always been a big fan of baseball.
+
+    User 1: Thanks! I''m glad to hear that.
+
+    User 2: So, what''s it like playing for the Orioles?
+
+    User 1: It''s a lot of fun! I love playing baseball and I''m lucky to be able to do it for a living.
+
+    User 2: That''s great! What''s your favorite part of playing baseball?
+
+    User 1: I love the competition and the feeling of winning.
+
+    User 2: I can imagine! So, what''s your favorite team to play against?
+
+    User 1: I don''t really have a favorite team to play against. I just love the competition.
+
+    User 2: That''s fair. So, what are your goals for the season?
+
+    User 1: I want to help the Orioles win the World Series.
+
+    User 2: That would be amazing! I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so too.
+
+    User 2: So, what''s your favorite thing to do outside of baseball?
+
+    User 1: I enjoy working out and learning new things.
+
+    User 2: That''s cool! I like working out too.
+
+    User 1: Yeah, it''s a great way to stay in shape.
+
+    User 2: I agree! So, what do you like to learn about?
+
+    User 1: I like to learn about anything and everything. I''m always curious about new things.
+
+    User 2: That''s awesome! I''m the same way.
+
+    User 1: Well, it was nice meeting you, (user 2 name).
+
+    User 2: It was nice meeting you too, (user 1 name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

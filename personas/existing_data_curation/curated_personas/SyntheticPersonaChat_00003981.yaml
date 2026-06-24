@@ -1,0 +1,80 @@
+id: 00003981
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3981
+data:
+  user 1 personas: 'I have a lot of allergies.
+
+    My favorite type of music is metal.
+
+    My dad died when i was in high school.
+
+    I work in commercials.
+
+    I like watching tv and movies.'
+  user 2 personas: 'My mom teaches kindergarten and my dad is a tax assessor.
+
+    I have always wanted a pot bellied pig.
+
+    I love owning nice office supplies.
+
+    I won a beauty pageant one time but did not feel like it was worth the effort.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. I''m [name].
+
+    User 2: Nice to meet you too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s nice. What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that must be fun. I always loved kindergarten when I was a kid.
+
+    User 2: It is! I love working with kids.
+
+    User 1: What''s your favorite thing about teaching kindergarten?
+
+    User 2: I love seeing the excitement on their faces when they learn something new.
+
+    User 1: That''s so sweet.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to watch movies and TV shows.
+
+    User 1: Oh, me too! What are some of your favorite shows?
+
+    User 2: I like The Office, Parks and Recreation, and Arrested Development.
+
+    User 1: I love those shows too!
+
+    User 2: Yeah, they''re so funny.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to the movies, read books, and hang out with my friends.
+
+    User 1: Oh, that sounds like fun.
+
+    User 2: It is.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: We do!
+
+    User 1: I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

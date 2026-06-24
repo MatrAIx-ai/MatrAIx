@@ -1,0 +1,96 @@
+id: '00005046'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5046
+data:
+  user 1 personas: 'I love going to comedy clubs.
+
+    I recently lost both my parents to an automobile accident.
+
+    I am a model building enthusiast.
+
+    I like camping and the outdoors in general.
+
+    I m originally from london , england.'
+  user 2 personas: 'I work in an animal shelter.
+
+    I ve never met my father.
+
+    I speak fluent french.
+
+    My favorite food is mushroom ravioli.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]! What''s your name?
+
+    User 2: Hi, I''m [username]! It''s nice to meet you.
+
+    User 1: It''s nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to go to comedy clubs. I also like to volunteer at an animal shelter.
+
+    User 1: I''ve never been to a comedy club, but I''ve heard they can be really fun. I love animals, too! What kind of animals do you volunteer with?
+
+    User 2: I mostly work with cats, but I also help with dogs and other small animals.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to volunteer at an animal shelter, but I''ve never had the time.
+
+    User 2: You should definitely look into it! It''s a great way to give back to the community and help animals in need.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: No problem! So, what else do you like to do for fun?
+
+    User 1: I like to go camping and hiking. I also love to build models.
+
+    User 2: Camping sounds really fun! I''ve never been hiking, but I''ve always wanted to try it. I love building models too! What kind of models do you build?
+
+    User 1: I mostly build military models, but I also build some other types of models.
+
+    User 2: That''s really cool! I wish I had the patience to build models.
+
+    User 1: It''s not as hard as it looks! You just have to be patient and take your time.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem! So, where are you from?
+
+    User 2: I''m from California.
+
+    User 1: I''m from London!
+
+    User 2: That''s cool! I''ve always wanted to visit England.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I will!
+
+    User 1: So, what do you like about California?
+
+    User 2: I like the weather and the beaches.
+
+    User 1: The weather is nice there! I love the beach, too.
+
+    User 2: I''ve never been to a beach in England.
+
+    User 1: You should! The beaches in England are beautiful.
+
+    User 2: I will!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in an animal shelter.
+
+    User 1: That sounds like a lot of fun! I love animals.
+
+    User 2: It is! I love helping them.
+
+    User 1: That''s great!
+
+    User 2: Yeah, I''m really happy with my job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00001959
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1959
+data:
+  user 1 personas: 'I like to wear red.
+
+    I drive a red car.
+
+    I wear a red purse.
+
+    I use red lipstick.
+
+    I like to wear red shoes also.'
+  user 2 personas: 'I am a cat owner.
+
+    I speak fluent italian.
+
+    I have one blue eye and one hazel eye.
+
+    My mom is an osteopath.
+
+    My brother is an archaeologist.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to read, write, and travel.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 1: I love historical fiction too! What''s your favorite historical fiction book?
+
+    User 2: My favorite historical fiction book is The Pillars of the Earth by Ken Follett.
+
+    User 1: That''s a great book! I''ve read it twice.
+
+    User 2: I love the way it brings the Middle Ages to life.
+
+    User 1: Me too! What''s your favorite mystery novel?
+
+    User 2: My favorite mystery novel is The Da Vinci Code by Dan Brown.
+
+    User 1: I love that book too! It''s so suspenseful.
+
+    User 2: Me too! It''s one of my favorite books of all time.
+
+    User 1: Do you like to travel?
+
+    User 2: I love to travel! I''ve been to a lot of different countries.
+
+    User 1: What''s your favorite place you''ve ever been?
+
+    User 2: My favorite place is Rome. I love the history and the culture.
+
+    User 1: Rome is amazing! I''ve been there twice.
+
+    User 2: I''m glad you liked it!
+
+    User 1: I did. It''s a beautiful city.
+
+    User 2: It is. I''m glad I got to meet you.
+
+    User 1: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

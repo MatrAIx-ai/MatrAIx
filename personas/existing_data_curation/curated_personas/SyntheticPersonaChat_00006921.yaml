@@ -1,0 +1,58 @@
+id: 00006921
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6921
+data:
+  user 1 personas: 'I am single and go on dates regularly.
+
+    I enjoy playing tennis.
+
+    I was born completely deaf.
+
+    I have a pug named corky.
+
+    My favorite place to go is the mall.'
+  user 2 personas: 'I slack off on my homework.
+
+    I have bad luck with relationships.
+
+    I am a hopeless romantic.
+
+    I have trouble getting motivated.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to go out on dates and spend time with my friends.
+
+    User 1: Me too! I love going on dates and I have a great group of friends.
+
+    User 2: That''s great! What''s your favorite thing to do on a date?
+
+    User 1: I love going to the movies, going out to eat, or just going for walks.
+
+    User 2: Those sound like a lot of fun! I love going to the movies and eating out too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I''m not sure I have a favorite movie, but I love the Lord of the Rings movies.
+
+    User 1: Oh, I love those movies too! I''ve seen them all so many times.
+
+    User 2: Me too! They''re so good.
+
+    User 1: What about you? What''s your favorite thing to do with your friends?
+
+    User 2: I love to go out to eat, go to concerts, or just hang out and talk.
+
+    User 1: Those all sound like a lot of fun! I love going to concerts and just hanging out with my friends too.
+
+    User 2: That''s great! I''m glad we have some things in common.
+
+    User 1: Me too! It''s always nice to meet someone who likes the same things you do.
+
+    User 2: Exactly! I''m glad I met you.
+
+    User 1: Me too! I''m sure we''ll be good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

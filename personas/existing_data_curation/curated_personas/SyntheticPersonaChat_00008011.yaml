@@ -1,0 +1,106 @@
+id: 00008011
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8011
+data:
+  user 1 personas: 'I listen to music for more than 5 hours a day.
+
+    I refuse to ride the bus.
+
+    I never work more than 4 days in a row.
+
+    I find joy in the littlest things.'
+  user 2 personas: 'I have a pencil thin mustache.
+
+    I am from baltimore md.
+
+    My mother is a ballet dancer.
+
+    I have six tattoos , all of cats.'
+  Best Generated Conversation: 'User 1: Hi, I''m (User 1''s name).
+
+    User 2: Hi, I''m (User 2''s name).
+
+    User 1: I''m from (User 1''s home town).
+
+    User 2: I''m from Baltimore, MD.
+
+    User 1: Oh, that''s cool! I''ve never been to Baltimore.
+
+    User 2: It''s a great city! It''s home to the Baltimore Orioles baseball team and the Baltimore Ravens football team.
+
+    User 1: I love baseball! I''m a big fan of the Chicago Cubs.
+
+    User 2: Oh, I''m a fan of the Boston Red Sox.
+
+    User 1: I''ve been to Fenway Park! It''s a beautiful stadium.
+
+    User 2: I''ve been to Wrigley Field! It''s a great atmosphere.
+
+    User 1: I''ve never been to Baltimore for a baseball game, but I''d love to go one day.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do?
+
+    User 2: I like to listen to music, go to concerts, and play video games.
+
+    User 1: Oh, I like to listen to music too! What kind of music do you like?
+
+    User 2: I like a variety of music, but I mostly listen to rock and alternative.
+
+    User 1: Me too! I love rock and alternative.
+
+    User 2: What''s your favorite band?
+
+    User 1: I love the Foo Fighters!
+
+    User 2: Oh, they''re great! I also love the Red Hot Chili Peppers.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: I also like the Arctic Monkeys.
+
+    User 1: Oh, I''ve heard good things about them. I''ll have to check them out.
+
+    User 2: You should! They''re a great band.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a software engineer too.
+
+    User 2: Really? That''s great! What kind of software do you work on?
+
+    User 1: I work on a variety of software, but mostly web applications.
+
+    User 2: Oh, I work on web applications too.
+
+    User 1: That''s cool! What''s your favorite part of being a software engineer?
+
+    User 2: I love the creative aspect of it. I like coming up with new ideas and seeing them come to life.
+
+    User 1: I agree! That''s my favorite part too.
+
+    User 2: So, what are you doing later?
+
+    User 1: I don''t have any plans yet. What are you doing?
+
+    User 2: I''m going to see a movie.
+
+    User 1: Oh, that sounds fun! What movie are you seeing?
+
+    User 2: I''m seeing No Time to Die.
+
+    User 1: Oh, I''ve heard good things about that movie.
+
+    User 2: Me too! I''m excited to see it.
+
+    User 1: Me too! I hope you enjoy it.
+
+    User 2: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

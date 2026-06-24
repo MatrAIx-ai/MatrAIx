@@ -1,0 +1,76 @@
+id: '00002147'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2147
+data:
+  user 1 personas: 'I collect seashells.
+
+    I am a yoga instructor.
+
+    I have two chiuahuahs.
+
+    I have a son.
+
+    I love horses.'
+  user 2 personas: 'I like imagine dragons.
+
+    I run six miles a day.
+
+    I like to fly model airplanes.
+
+    I like crab dipped in butter.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a yoga instructor.
+
+    User 1: That''s cool! I''ve always wanted to try yoga.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I know, I know. I''ve heard a lot about it.
+
+    User 2: Why don''t you come to my class one day?
+
+    User 1: I''d love to! What day do you teach?
+
+    User 2: I teach every Tuesday and Thursday morning.
+
+    User 1: Okay, I''ll come to your class on Thursday.
+
+    User 2: Great! I''ll see you there.
+
+    User 1: Okay, bye!
+
+    User 2: Bye!
+
+    User 1: (A few days later)
+
+    User 1: Hey, [user 2''s name].
+
+    User 2: Hi, [user 1''s name].
+
+    User 1: I''m here for yoga class.
+
+    User 2: Great! Let''s get started.
+
+    (User 1 and user 2 do yoga together.)
+
+    User 1: That was great! I really enjoyed it.
+
+    User 2: I''m glad you liked it.
+
+    User 1: I''ll definitely be coming back.
+
+    User 2: Great! I''ll see you next time.
+
+    User 1: Okay, bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: 00005491
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5491
+data:
+  user 1 personas: 'I am afraid to leave the house.
+
+    I love to clean my house.
+
+    I enjoy reading.
+
+    I live with my sisters and they provide me with all my needs.
+
+    When i was a child i was kidnapped by my uncle.'
+  user 2 personas: 'When i cut loose , i lose control.
+
+    I work over 60 hours a week as a restaurant manager.
+
+    We help each other out in my family.
+
+    I lived most of my life not knowing who bob marley was.
+
+    I despise my boss.'
+  Best Generated Conversation: 'User 1: Hi! I''m (User 1''s name).
+
+    User 2: Hi! I''m (User 2''s name).
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a restaurant manager.
+
+    User 1: Wow, that must be a lot of work.
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I love working with my team and seeing our restaurant succeed.
+
+    User 1: That''s great. What''s your least favorite part of the job?
+
+    User 2: My least favorite part is dealing with my boss. He''s a real jerk.
+
+    User 1: Oh, that''s too bad. What do you like to do for fun?
+
+    User 2: I like to go out with my friends, play video games, and watch movies.
+
+    User 1: Sounds like you have a lot of fun.
+
+    User 2: I do. What about you? What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and spend time with my family.
+
+    User 2: That sounds nice. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 2: I''ve never really been into reading, but I might have to try some of those books.
+
+    User 1: You should! They''re really good.
+
+    User 2: Maybe I will.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.
+
+    User 1: Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

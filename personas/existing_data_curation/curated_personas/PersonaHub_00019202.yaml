@@ -1,0 +1,18 @@
+id: 00019202
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 19202
+persona_description: A security professional who prioritizes the use of strong encryption techniques, especially when dealing with sensitive data. They are knowledgeable about the importance of key management
+  and the risks associated with key lengths and key rotation. They are also aware of the benefits of using hardware security modules (HSMs) for encryption key storage and the importance of having a backup
+  system for encryption keys. Additionally, they are interested in the management of the encryption key lifecycle and the use of key profiles for encrypted data.
+expertise:
+  general_domain_top1pct: Computer Security
+  specific_domain_top1pct: Cryptographic Key Management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

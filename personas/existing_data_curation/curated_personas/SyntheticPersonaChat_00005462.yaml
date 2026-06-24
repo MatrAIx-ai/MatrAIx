@@ -1,0 +1,110 @@
+id: '00005462'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5462
+data:
+  user 1 personas: 'My mother was born in ireland.
+
+    My father was born in australia.
+
+    I have traveled to both ireland and australia.
+
+    I like to travel.'
+  user 2 personas: 'I like tacos.
+
+    I enjoy swimming.
+
+    My favorite color is orange.
+
+    I am a secretary.
+
+    I have 3 cats.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, I''ve always wanted to go to California!
+
+    User 2: You should, it''s beautiful.
+
+    User 1: Where are your parents from?
+
+    User 2: My mom is from Ireland and my dad is from Australia.
+
+    User 1: Wow, that''s cool! I''ve never met anyone who had parents from two different countries.
+
+    User 2: Yeah, it''s pretty neat. I''ve been to both Ireland and Australia and they''re both beautiful countries.
+
+    User 1: I''ve always wanted to travel to Ireland.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: What''s your favorite thing about Ireland?
+
+    User 2: The people are really friendly and the food is amazing.
+
+    User 1: What''s your favorite food in Ireland?
+
+    User 2: I love their seafood. They have some of the freshest seafood I''ve ever had.
+
+    User 1: That sounds delicious. I''ll have to try it when I go there.
+
+    User 2: You definitely should.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a secretary.
+
+    User 1: Oh, that sounds interesting. What''s your favorite part about your job?
+
+    User 2: I like the people I work with. They''re all really nice.
+
+    User 1: That''s great.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s awesome! What grade do you teach?
+
+    User 1: I teach first grade.
+
+    User 2: Oh, that''s a great grade. I love little kids.
+
+    User 1: Me too! They''re so funny.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go out to eat, and travel.
+
+    User 2: Oh, I like to read too. What are your favorite books?
+
+    User 1: I love anything by John Grisham.
+
+    User 2: Oh, I''ve read a few of his books. They''re really good.
+
+    User 1: Yeah, they are. I also like to read historical fiction.
+
+    User 2: Oh, I like that too. I''ve read a few books by Ken Follett.
+
+    User 1: Oh, I''ve read his books too. They''re really good.
+
+    User 2: So, what''s your favorite place to travel?
+
+    User 1: I love to go to Italy.
+
+    User 2: Oh, I''ve always wanted to go to Italy.
+
+    User 1: It''s a beautiful country. The food is amazing and the people are so friendly.
+
+    User 2: That sounds amazing. I''ll have to go there sometime.
+
+    User 1: You definitely should.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

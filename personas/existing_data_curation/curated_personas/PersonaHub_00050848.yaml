@@ -1,0 +1,17 @@
+id: 00050848
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50848
+persona_description: A healthcare provider who is knowledgeable about obstetrics and pediatrics, specifically in the context of Rh-negative mothers and their children. They are aware of the potential risks
+  associated with skipping the RhoGAM shot and are committed to providing accurate information and recommendations to their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: obstetrics and pediatrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

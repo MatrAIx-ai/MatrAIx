@@ -1,0 +1,64 @@
+id: 00001519
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1519
+data:
+  user 1 personas: 'I am a meataholic.
+
+    I love rap music.
+
+    I like smoking weed.
+
+    I have a job as an it agent.'
+  user 2 personas: 'I graduated college for secondary english education.
+
+    I am a teacher.
+
+    I like to garden.
+
+    I live in the suburbs of a major city.'
+  Best Generated Conversation: 'User 1: What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably rap.
+
+    User 1: I like rap too! What are some of your favorite artists?
+
+    User 2: I like Kendrick Lamar, J. Cole, and Drake.
+
+    User 1: Nice! I like all of them too.
+
+    User 2: What kind of job do you have?
+
+    User 1: I''m an IT agent.
+
+    User 2: Oh, cool! What does that involve?
+
+    User 1: I help businesses with their IT problems.
+
+    User 2: That sounds interesting.
+
+    User 1: It is. I like it a lot.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to smoke weed and listen to music.
+
+    User 2: Oh, I don''t smoke weed, but I like listening to music too.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably country.
+
+    User 1: Nice! I like country too.
+
+    User 2: What''s your favorite country song?
+
+    User 1: I don''t really have a favorite country song, but I like "The Devil Went Down to Georgia" by Charlie Daniels Band.
+
+    User 2: That''s a good song! I like that one too.
+
+    User 1: I''m glad.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

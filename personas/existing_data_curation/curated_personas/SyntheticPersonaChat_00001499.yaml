@@ -1,0 +1,82 @@
+id: 00001499
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1499
+data:
+  user 1 personas: 'I am 50 years old.
+
+    My husband just decided to leave me.
+
+    We have 4 children and 2 dogs.
+
+    The kids will be my responsibility as my husband does not want them.
+
+    I enjoy ice cream.'
+  user 2 personas: 'I can do many celebrity impressions.
+
+    I work as a plumber.
+
+    I am an award winning th member.
+
+    I volunteer in my sons boy scout troop.
+
+    I can speak four languages fluently.'
+  Best Generated Conversation: 'User 1: Hi there, I''m looking for someone to talk to.
+
+    User 2: Hi, I''m (user 2 name), I''m a plumber.
+
+    User 1: Nice to meet you, I''m (user 1 name), I''m 50 years old and my husband just decided to leave me.
+
+    User 2: Oh, I''m sorry to hear that.
+
+    User 1: Thanks. It''s been hard. I have four children and two dogs, and I''m not sure how I''m going to make it all work on my own.
+
+    User 2: You''re not alone. Many people have been through this before. I''m sure you''ll figure it out.
+
+    User 1: I hope so. I''m trying to stay positive, but it''s hard.
+
+    User 2: I understand. It''s okay to grieve. It''s okay to be sad. But don''t forget that you''re strong. You''ve got this.
+
+    User 1: Thank you. I needed to hear that.
+
+    User 2: You''re welcome. So, what do you like to do for fun?
+
+    User 1: I like to read, watch movies, and bake.
+
+    User 2: Oh, I like to watch movies too. What''s your favorite movie?
+
+    User 1: I have a lot of favorites, but one of my favorites is The Shawshank Redemption.
+
+    User 2: That''s a good movie. I like the ending.
+
+    User 1: Me too. It''s so hopeful.
+
+    User 2: Yeah, it is. What else do you like to do for fun?
+
+    User 1: I like to take walks, go for bike rides, and play with my dogs.
+
+    User 2: Oh, I like to go for walks too. I have a dog too.
+
+    User 1: What kind of dog?
+
+    User 2: I have a black lab.
+
+    User 1: Oh, nice. I have a golden retriever.
+
+    User 2: Oh, they''re such sweet dogs.
+
+    User 1: Yeah, they are.
+
+    User 2: So, what are you looking for in a friend?
+
+    User 1: I''m looking for someone who is kind, supportive, and understanding.
+
+    User 2: I think I can be that person.
+
+    User 1: I hope so.
+
+    User 2: I do too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00007225'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7225
+data:
+  user 1 personas: 'I wish to buy a corvette when i retire.
+
+    I work as a mall cop.
+
+    I am a huge fan of dogs.
+
+    I am recently divorced.
+
+    I am trying to write an ebook on animals.'
+  user 2 personas: 'I like to play soccer , draw and read asterix.
+
+    I live with my parents and my little brother.
+
+    I am a french girl , but i moved to the us last year.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.'
+  Best Generated Conversation: 'User 1: Hello, I''m [name]. What''s your name?
+
+    User 2: Bonjour, je m''appelle [name].
+
+    User 1: It''s nice to meet you! Where are you from?
+
+    User 2: Je suis de France.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit France.
+
+    User 2: Vous devriez venir! C''est un pays magnifique.
+
+    User 1: I know, I know! I''ve been meaning to go for a while now.
+
+    User 2: Quand vous venez, vous devez visiter Paris, Lyon, et la Côte d''Azur.
+
+    User 1: Merci, je le ferai!
+
+    User 2: Je suis contente de vous entendre dire ça.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: J''aime jouer au soccer, dessiner, et lire les Asterix.
+
+    User 1: Oh, I love Asterix too! They''re so funny.
+
+    User 2: Oui, ils sont très drôles!
+
+    User 1: So, do you have any plans for the summer?
+
+    User 2: Oui, je vais aller à un camp de jour et je vais aussi faire du soccer à l''automne.
+
+    User 1: Oh, that sounds like fun! I''m sure you''ll make some new friends at camp.
+
+    User 2: J''espère! Je suis un peu nerveuse, mais j''ai aussi hâte.
+
+    User 1: I''m sure you''ll be fine! You seem like a really nice person.
+
+    User 2: Merci, je vous en prie!
+
+    User 1: So, what are you looking forward to the most this summer?
+
+    User 2: Je suis surtout impatiente de jouer au soccer et de faire de nouvelles connaissances.
+
+    User 1: Oh, that sounds great! I''m sure you''ll have a lot of fun.
+
+    User 2: J''espère!
+
+    User 1: Well, it was nice talking to you, [name]. I hope we can talk again soon.
+
+    User 2: C''était un plaisir de te parler, [name]. Au revoir!
+
+    User 1: Au revoir!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00000777'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 777
+data:
+  user 1 personas: 'I love animals.
+
+    I like watching british tv shows and movies.
+
+    I just turned 77.
+
+    I have one grandson and one daughter.'
+  user 2 personas: 'My favorite movie is titanic.
+
+    I have two kids , ages 2 and 6.
+
+    I work part time at aldis.
+
+    I am from sterling heights , michigan.
+
+    My husband owns a small auto repair shop.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there! How are you doing today?
+
+    User 1: I''m doing well, thanks for asking. How about you?
+
+    User 2: I''m doing good too. Thanks for asking.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, go for walks, and read books.
+
+    User 1: I like to do those things too! I also like to play video games and watch British TV shows.
+
+    User 2: Oh, I''ve never watched any British TV shows. What are some of your favorites?
+
+    User 1: I like Doctor Who, Sherlock, and Downton Abbey.
+
+    User 2: Those sound interesting! I''ll have to check them out.
+
+    User 1: You should! They''re really good.
+
+    User 2: What''s your favorite movie?
+
+    User 1: That''s a tough question. I have a lot of favorites, but I think my favorite is probably The Shawshank Redemption.
+
+    User 2: I''ve seen that one! It''s a really good movie.
+
+    User 1: It is! I love the story and the characters.
+
+    User 2: Me too! I''m glad you like it.
+
+    User 1: Thanks! I''m glad I could recommend it.
+
+    User 2: You''re welcome! It''s always nice to meet someone who has similar interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

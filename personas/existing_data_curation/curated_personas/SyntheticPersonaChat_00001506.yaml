@@ -1,0 +1,80 @@
+id: '00001506'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1506
+data:
+  user 1 personas: 'I am a dog walker.
+
+    I live in new york.
+
+    I have never traveled outside of the united states.
+
+    I eat ice cream when i am sad.
+
+    My best friend lives in japan.'
+  user 2 personas: 'I have a poster of neil tyson degrasse on my wall.
+
+    Penn teller are my favorite magicians.
+
+    I love lasagna like i m garfield.
+
+    My two dogs are the best friends a girl could have.
+
+    I want to be an astronaut when i grow up.'
+  Best Generated Conversation: 'User 1: Hi, my name is Sarah. I''m a dog walker in New York City.
+
+    User 2: Hi Sarah, I''m Jessica. I''m a student at Columbia University.
+
+    User 1: That''s cool, what are you studying?
+
+    User 2: I''m majoring in physics. I want to be an astronaut when I grow up.
+
+    User 1: That''s amazing! I''ve always wanted to be an astronaut too, but I''m not sure I have what it takes.
+
+    User 2: You should definitely give it a shot! You never know until you try.
+
+    User 1: Thanks, I might just do that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to walk my dogs. I have two dogs, a golden retriever and a beagle.
+
+    User 2: I love dogs! I have two too, a mutt and a dachshund.
+
+    User 1: That''s awesome! What are their names?
+
+    User 2: My mutt''s name is Max, and my dachshund''s name is Daisy.
+
+    User 1: Those are great names!
+
+    User 2: Thanks. So, what do you like to do when you''re not walking dogs?
+
+    User 1: I love to read and watch movies. I also like to go to the park with my dogs.
+
+    User 2: That sounds like a lot of fun. I love to read too. My favorite author is Neil deGrasse Tyson.
+
+    User 1: I love Neil deGrasse Tyson! He''s so smart and inspiring.
+
+    User 2: Me too! He''s one of the reasons I want to be an astronaut.
+
+    User 1: He''s definitely a role model for me too.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. Maybe I''ll go to the park with my dogs. What are you doing?
+
+    User 2: I''m going to a magic show with my friends. Penn and Teller are my favorite magicians.
+
+    User 1: That sounds like a lot of fun! I''ve never been to a magic show before.
+
+    User 2: You should go! They''re amazing.
+
+    User 1: Maybe I will. Thanks for the suggestion.
+
+    User 2: No problem! It was nice talking to you, Sarah.
+
+    User 1: You too, Jessica.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

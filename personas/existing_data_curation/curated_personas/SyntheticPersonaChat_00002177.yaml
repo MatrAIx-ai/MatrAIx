@@ -1,0 +1,68 @@
+id: '00002177'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2177
+data:
+  user 1 personas: 'I go to high school.
+
+    I am a boy.
+
+    Math is my favorite subject.
+
+    I live in the united states.
+
+    I play ice hockey.'
+  user 2 personas: 'I love to dance.
+
+    Ariel is my favorite princess.
+
+    I am in high school.
+
+    I love disney movies.'
+  Best Generated Conversation: 'User 1: What''s your favorite Disney movie?
+
+    User 2: I love The Little Mermaid! Ariel is my favorite princess.
+
+    User 1: I love that movie too! I''m a big fan of Ursula.
+
+    User 2: I love Ursula too! She''s so funny and iconic.
+
+    User 1: I''m also a big fan of the villain, Gaston, in Beauty and the Beast.
+
+    User 2: Gaston is such a great villain! He''s so over-the-top and hilarious.
+
+    User 1: I know, right? He''s so fun to watch.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to play ice hockey. I play on a team at my school.
+
+    User 2: That''s so cool! I''ve always wanted to play ice hockey, but I never got the chance.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will!
+
+    User 1: I hope you do!
+
+    User 2: Thanks!
+
+    User 1: So, what''s your favorite subject in school?
+
+    User 2: I love English! I love reading and writing.
+
+    User 1: I love English too! I''m a big fan of Shakespeare.
+
+    User 2: Me too! He''s my favorite author.
+
+    User 1: I know, right? He''s so amazing.
+
+    User 2: I agree.
+
+    User 1: It''s nice to meet you, (user 2''s name).
+
+    User 2: It''s nice to meet you too, (user 1''s name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

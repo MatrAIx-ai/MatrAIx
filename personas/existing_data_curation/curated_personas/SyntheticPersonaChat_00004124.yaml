@@ -1,0 +1,98 @@
+id: '00004124'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4124
+data:
+  user 1 personas: 'I was born in baton rouge.
+
+    I am a classicly trained chef.
+
+    I have a parrot named parrot.
+
+    I have male pattern baldness.
+
+    My mother doesn t ! ove me.'
+  user 2 personas: 'I would like to retire to hawaii in the next 10 years.
+
+    I currently work for ibm in chicago.
+
+    My favorite band is the rolling stones.
+
+    I am almost 7 feet tall.
+
+    I am not a basketball player though.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi, I''m [username].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Chicago.
+
+    User 1: Oh, cool. I''m from Baton Rouge.
+
+    User 2: Oh, that''s a nice place. I''ve never been there.
+
+    User 1: It is. It''s a small city, but it''s very charming.
+
+    User 2: I''m glad you like it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work for IBM in Chicago.
+
+    User 1: Oh, cool. What do you do there?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s interesting. What''s your favorite part of the job?
+
+    User 2: I like the problem solving aspect of it. I also like the fact that it''s always changing and there''s always something new to learn.
+
+    User 1: That''s awesome. I''m a chef.
+
+    User 2: Oh, really? What kind of food do you cook?
+
+    User 1: I cook classic French cuisine.
+
+    User 2: Oh, that''s cool. I love French food.
+
+    User 1: Me too. I grew up in a French restaurant, so I learned to cook French food from a young age.
+
+    User 2: That''s awesome. I''m sure you''re a great chef.
+
+    User 1: Thank you. I''m glad you think so.
+
+    User 2: So, what''s your favorite dish to cook?
+
+    User 1: My favorite dish to cook is boeuf bourguignon.
+
+    User 2: Oh, that''s a good one. I love boeuf bourguignon.
+
+    User 1: Me too. It''s so hearty and delicious.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to cook, obviously. I also like to read, play video games, and go to the movies.
+
+    User 2: Oh, that''s cool. I like to read, too. What''s your favorite book?
+
+    User 1: My favorite book is The Great Gatsby.
+
+    User 2: Oh, that''s a good one. I love that book.
+
+    User 1: Me too. It''s so sad and beautiful.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m not sure either. Maybe we could hang out?
+
+    User 1: That sounds like fun. We could go to a movie or something.
+
+    User 2: That sounds like a great idea.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

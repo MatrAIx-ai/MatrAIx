@@ -1,0 +1,54 @@
+id: 00008876
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8876
+data:
+  user 1 personas: 'I am currently a stay at home mom while my husband is the sole provider.
+
+    I am thirty years old.
+
+    We have two pets as well.
+
+    I have two children.'
+  user 2 personas: 'I am a woman.
+
+    I like crocheting.
+
+    I have five children.
+
+    I love cats.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1''s name], I''m a 30 year old stay at home mom with two children. What about you?
+
+    User 2: I''m [user 2''s name], I''m a woman with five children and I love crocheting.
+
+    User 1: Wow! Five children, that must keep you busy!
+
+    User 2: It does, but it''s also very rewarding.
+
+    User 1: I''m sure it is. I have two children myself and it can be tough, but it''s so much fun watching them grow and learn.
+
+    User 2: I agree, it''s the best feeling in the world.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love crocheting, reading, and spending time with my family.
+
+    User 1: Those all sound like great things to do. I love to read and spend time with my family too.
+
+    User 2: We should get together sometime and have a crocheting party!
+
+    User 1: That would be so much fun! I love crocheting and it would be great to meet new people who share my interest.
+
+    User 2: Great! I''ll send you my number and we can make plans.
+
+    User 1: Sounds good! I can''t wait to meet you!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

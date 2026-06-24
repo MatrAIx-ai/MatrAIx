@@ -1,0 +1,18 @@
+id: '00025003'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25003
+persona_description: A medical professional who specializes in the diagnosis and treatment of gynecological conditions, particularly those related to the female reproductive system. They have experience
+  with the treatment of shallow vaginal canals, pain during sexual activity, and other gynecological issues. They may also have expertise in the use of biofeedback and stress reduction techniques to treat
+  symptoms of vulvodynia.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: gynecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: vulvodynia treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

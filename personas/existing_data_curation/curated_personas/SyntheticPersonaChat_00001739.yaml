@@ -1,0 +1,76 @@
+id: 00001739
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1739
+data:
+  user 1 personas: 'I work 9 to 5 job.
+
+    When i retire i want to open a bakery.
+
+    I like to cook.
+
+    Sometimes i volunteer at the soup kitchen.
+
+    My family owned a small restaurant.'
+  user 2 personas: 'I am married to my wonderful husband.
+
+    I am a woman.
+
+    I own my own small marketing consulting agency.
+
+    My favorite band is radiohead.
+
+    We have two dogs small dogs.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I own my own small marketing consulting agency.
+
+    User 1: That sounds like a lot of work!
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I love helping my clients grow their businesses.
+
+    User 1: That''s really great.
+
+    User 2: Thanks!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to cook, read, and spend time with my family.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, we have two small dogs.
+
+    User 1: That''s great! What are their names?
+
+    User 2: Their names are Luna and Milo.
+
+    User 1: Those are cute names!
+
+    User 2: Thanks!
+
+    User 1: Do you have any plans for the weekend?
+
+    User 2: Not really, just going to relax and spend time with my family.
+
+    User 1: That sounds like a great plan.
+
+    User 2: Thanks!
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Have a good day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

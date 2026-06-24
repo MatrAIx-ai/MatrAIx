@@ -1,0 +1,82 @@
+id: 00006280
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6280
+data:
+  user 1 personas: 'I only date people taller than me.
+
+    I wish i could live forever.
+
+    I really like technology.
+
+    I like free diving.'
+  user 2 personas: 'I am content with my life.
+
+    I am very shy.
+
+    I have never had alcohol.
+
+    I own a dog who is my best friend.
+
+    I sing in the shower.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to sing in the shower, play with my dog, and read books.
+
+    User 1: That sounds fun! I like to sing in the shower too. What kind of books do you like to read?
+
+    User 2: I like to read mystery novels and nonfiction books.
+
+    User 1: I like mystery novels too! What''s your favorite mystery novel?
+
+    User 2: I don''t have a favorite mystery novel, but I really like the ones by Agatha Christie.
+
+    User 1: I love Agatha Christie! She''s my favorite mystery writer.
+
+    User 2: She''s so good! I''ve read all of her books.
+
+    User 1: I''ve read a few of her books, but I still have a lot to read.
+
+    User 2: You should read them all! They''re all great.
+
+    User 1: I will! I''ve been meaning to.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That''s cool! I''m a teacher.
+
+    User 1: That''s a great job! I bet you get to meet a lot of interesting people.
+
+    User 2: I do! It''s really rewarding.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you like to do for fun besides free diving?
+
+    User 1: I like to go hiking, rock climbing, and play video games.
+
+    User 2: Those all sound like fun activities! I''ve always wanted to try rock climbing.
+
+    User 1: It''s a lot of fun! You should give it a try.
+
+    User 2: I will!
+
+    User 1: So, what do you like to do with your dog?
+
+    User 2: I like to take him for walks, play fetch, and go to the dog park.
+
+    User 1: Those all sound like great activities! I love dogs.
+
+    User 2: Me too! They''re the best.
+
+    User 1: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00008835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8835
+data:
+  user 1 personas: 'I try to take a break and see a movie in theaters every other month.
+
+    I live in a house in california.
+
+    Everyday after work i buy my dog a dog biscuit.
+
+    I currently work at target.'
+  user 2 personas: 'My mom is my best friend.
+
+    Rock music is my favorite.
+
+    I hate broccoli.
+
+    I design video games for a living.
+
+    I am afraid of the dark.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just working on a video game.
+
+    User 1: Oh cool! What kind of video game?
+
+    User 2: It''s a racing game.
+
+    User 1: Nice! I love racing games.
+
+    User 2: Me too! I''m a big fan of Mario Kart.
+
+    User 1: Me too! That''s my favorite racing game.
+
+    User 2: Mine too! I used to play it all the time when I was a kid.
+
+    User 1: Me too! I still play it sometimes.
+
+    User 2: That''s awesome! I''m going to have to play it again soon.
+
+    User 1: You should! It''s still really fun.
+
+    User 2: I will!
+
+    User 1: What''s your favorite band?
+
+    User 2: I like a lot of bands, but my favorite is probably Queen.
+
+    User 1: Oh, I love Queen! They''re so good.
+
+    User 2: Me too! I love their music and Freddie Mercury was an amazing singer.
+
+    User 1: He really was! I also love their music videos.
+
+    User 2: Me too! They''re so creative and fun.
+
+    User 1: I think we''re going to be friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00032893
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32893
+persona_description: A PCB layout designer who specializes in the optimization of PCB ground plane layouts for RF and power amplifiers. They have extensive experience with WLAN board design and understand
+  the importance of avoiding cross-interference and providing real grounding for RF signals. They are skilled at routing signal ground returns to the solid ground plane in the shortest path possible and
+  have a keen understanding of the effects of vias on ground plane layout and decoupling capacitors. They are also aware of the challenges of PLL implementation and the importance of good grounding separation
+  for satisfactory spur level performance.
+expertise:
+  general_domain_top1pct: electronics engineering
+  specific_domain_top1pct: PCB layout design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

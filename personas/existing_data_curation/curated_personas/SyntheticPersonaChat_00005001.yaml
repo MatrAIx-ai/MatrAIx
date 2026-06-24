@@ -1,0 +1,58 @@
+id: '00005001'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5001
+data:
+  user 1 personas: 'I have never been to college.
+
+    My favorite phone is as iphone.
+
+    I love to go hiking.
+
+    I am a bank teller.
+
+    I have never been out of the country.'
+  user 2 personas: 'I think i might need help.
+
+    I get sad a lot.
+
+    I am bisexual.
+
+    I just lost my job and i am looking for something new.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing today?
+
+    User 2: Not so good. I just lost my job and I''m feeling really down.
+
+    User 1: I''m sorry to hear that. What happened?
+
+    User 2: My company was bought out and they laid off a bunch of people.
+
+    User 1: That''s tough. I know how you feel. I lost my job a few years ago and it was really hard.
+
+    User 2: Yeah, it''s not easy. I''m not sure what I''m going to do.
+
+    User 1: Well, you''re not alone. There are a lot of people out there who have been through the same thing. And you can do this.
+
+    User 2: Thanks. I appreciate that.
+
+    User 1: So, what are you interested in? What would you like to do with your life?
+
+    User 2: I''ve always wanted to be a writer. I love to write stories and poems.
+
+    User 1: That''s great! You should definitely pursue that.
+
+    User 2: I''m not sure how to get started.
+
+    User 1: Well, there are a lot of resources out there to help you. You can start by reading books and articles about writing. You can also take classes or workshops.
+
+    User 2: That''s a good idea. I''ll look into that.
+
+    User 1: You''re welcome. And if you ever need someone to talk to, I''m always here for you.
+
+    User 2: Thank you. That means a lot.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

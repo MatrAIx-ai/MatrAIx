@@ -1,0 +1,61 @@
+id: '00003203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3203
+data:
+  user 1 personas: 'I play drums in a band.
+
+    I am 25 years old and live with my parents.
+
+    I have a girlfriend named luis , and she goes to my college.
+
+    I drive a ford mustang.'
+  user 2 personas: 'I like to go to the movies.
+
+    I like to take drives in the country.
+
+    I like to chat with my friends.
+
+    I love to go out to eat with my family.'
+  Best Generated Conversation: 'User 1: Hello! I''m Jake. What''s your name?
+
+    User 2: I''m Lisa. It''s nice to meet you!
+
+    User 1: It''s nice to meet you too, Lisa. What are your interests?
+
+    User 2: I like to go to the movies, take drives in the country, chat with my friends, and go out to eat with my family.
+
+    User 1: Sounds like we have a lot in common! I also like to go to the movies, take drives in the country, and go out to eat with my family. I don''t really chat with my friends, but I love to play drums
+    in my band.
+
+    User 2: That''s so cool! What kind of music do you play?
+
+    User 1: I play rock and roll. We''re called "The Jake and Lisa Show."
+
+    User 2: That''s awesome! I love rock and roll. I''ve always wanted to see a live performance.
+
+    User 1: We''re actually playing at the local bar this weekend. You should come check us out!
+
+    User 2: I would love to! I''ll be there.
+
+    User 1: Great! I''ll see you there!
+
+    User 2: See you then!
+
+    User 1: Hey Lisa, I''m so glad you could make it to our show tonight!
+
+    User 2: I''m glad I could too! You guys were amazing!
+
+    User 1: Thanks! We''re glad you enjoyed it.
+
+    User 2: I really did! I''m so glad I came.
+
+    User 1: Thanks for coming!
+
+    User 2: I''ll definitely be back to see you guys again soon!
+
+    User 1: We''ll be here!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

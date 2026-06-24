@@ -1,0 +1,18 @@
+id: '00040375'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40375
+persona_description: A healthcare provider who specializes in diagnosing and treating children with autism and related disorders. They are familiar with the signs and symptoms of regression in children
+  with autism, including loss of communication, gestures, and social interactions. They are also aware of the typical age range for regression and the average age of onset. They are trained to be alert
+  to signs of regression in children and to provide appropriate support and intervention.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

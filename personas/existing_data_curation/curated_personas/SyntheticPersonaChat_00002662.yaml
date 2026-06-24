@@ -1,0 +1,62 @@
+id: '00002662'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2662
+data:
+  user 1 personas: 'I work in accounting.
+
+    I like potatoes.
+
+    I have two dogs.
+
+    I lease my car.'
+  user 2 personas: 'I can speak four languages fluently.
+
+    I volunteer in my sons boy scout troop.
+
+    I can do many celebrity impressions.
+
+    I am an award winning th member.'
+  Best Generated Conversation: 'User 1: I work in accounting.
+
+    User 2: I can speak four languages fluently.
+
+    User 1: Wow, that''s really impressive! I can only speak English.
+
+    User 2: Thanks! I''ve always been interested in languages, and I''ve had the opportunity to study them in school and travel to different countries.
+
+    User 1: That''s cool. I''ve always wanted to travel, but I haven''t had the chance yet.
+
+    User 2: You should! It''s a great way to learn about different cultures and meet new people.
+
+    User 1: I know, I know. I''ll get there eventually.
+
+    User 2: Good!
+
+    User 1: So, what else do you do for fun?
+
+    User 2: I volunteer in my son''s boy scout troop.
+
+    User 1: That''s great! I''m sure he really appreciates that.
+
+    User 2: He does. It''s a lot of fun, and we get to do a lot of cool things together.
+
+    User 1: That''s awesome.
+
+    User 2: Yeah, I''m lucky to have him.
+
+    User 1: So, what are some of your favorite things to do?
+
+    User 2: I love spending time with my family and friends. I also love playing sports, reading, and going for walks.
+
+    User 1: Those all sound like great things to do.
+
+    User 2: Thanks! I try to keep myself busy.
+
+    User 1: That''s good. It''s important to have a lot of interests.
+
+    User 2: Yeah, I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

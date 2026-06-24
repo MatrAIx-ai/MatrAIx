@@ -1,0 +1,80 @@
+id: 00005783
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5783
+data:
+  user 1 personas: 'I have been married for 6 years.
+
+    I have been to 7 countries in europe and 3 countries in asia.
+
+    I am a financial analyst for a brewery.
+
+    I have tried 35 different types of beer in my lifetime.'
+  user 2 personas: 'I am the middle child of 3 siblings.
+
+    I am getting married in six months.
+
+    I am a babysitter.
+
+    I have a sweet tooth.
+
+    I drive a mercedes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: Nice to meet you, [name]. I see you''re getting married in six months. Congratulations!
+
+    User 2: Thanks! I''m pretty excited.
+
+    User 1: How did you meet your fiance?
+
+    User 2: We met at a party.
+
+    User 1: Oh, that''s nice. What do you do for a living?
+
+    User 2: I''m a babysitter.
+
+    User 1: That sounds like a fun job. Do you like it?
+
+    User 2: It''s really rewarding. I love getting to know kids and help them learn and grow.
+
+    User 1: That''s great. I''m sure the kids love you too.
+
+    User 2: I hope so!
+
+    User 1: So, what are you looking forward to most about your wedding?
+
+    User 2: I''m looking forward to spending the rest of my life with my best friend.
+
+    User 1: That''s a beautiful sentiment. I''m sure you''ll have a wonderful wedding.
+
+    User 2: Thanks, I hope so too.
+
+    User 1: So, what kind of music do you like?
+
+    User 2: I like all kinds of music, but I''m especially a fan of country music.
+
+    User 1: Oh, I love country music too! Who are some of your favorite artists?
+
+    User 2: I love Luke Bryan, Eric Church, and Carrie Underwood.
+
+    User 1: Nice! I like all of them too.
+
+    User 2: What about you? Who are some of your favorite artists?
+
+    User 1: I like a lot of different artists, but my favorites are probably Ed Sheeran, Taylor Swift, and Bruno Mars.
+
+    User 2: Nice! I like all of them too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to concerts, go hiking, and spend time with my family.
+
+    User 1: Sounds like you have a lot of fun.
+
+    User 2: I do! I''m a pretty lucky girl.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

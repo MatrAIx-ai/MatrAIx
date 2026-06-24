@@ -1,0 +1,70 @@
+id: 00002895
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2895
+data:
+  user 1 personas: 'I really enjoy hiking.
+
+    I am deathly afraid of snakes , but not bugs.
+
+    My favorite color is red.
+
+    I watched the eclipse without using proper eye protection.
+
+    I drink 10 cups of tea every day.'
+  user 2 personas: 'I cannot stand pizza.
+
+    My girlfriend just broke up with me.
+
+    I work at a school as an art teacher.
+
+    I do not own a television.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with friends and family.
+
+    User 1: Nice! I like to go hiking and drink tea. Do you like snakes?
+
+    User 2: No, I''m afraid of them. How about you?
+
+    User 1: I''m not afraid of them, but I''m not a fan either.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a teacher at a local school.
+
+    User 2: Oh, that sounds fun! I''m an art teacher.
+
+    User 1: That''s awesome! I love art. What''s your favorite color to work with?
+
+    User 2: Red is my favorite color, but I like to use all different colors.
+
+    User 1: Me too! I love how different colors can create different moods.
+
+    User 2: Yes, they can! I use a lot of red in my paintings because it''s a passionate color.
+
+    User 1: That''s a great way to use it! I bet your paintings are beautiful.
+
+    User 2: Thank you! I''m glad you think so.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going on a hike with some friends. Do you want to come?
+
+    User 2: That sounds like fun! I''d love to.
+
+    User 1: Great! We''ll meet up at the trailhead at 9am.
+
+    User 2: Okay, I''ll see you there!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

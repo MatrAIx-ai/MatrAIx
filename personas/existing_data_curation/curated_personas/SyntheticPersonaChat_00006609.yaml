@@ -1,0 +1,64 @@
+id: 00006609
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6609
+data:
+  user 1 personas: 'I live with my boyfriend of 5 years.
+
+    I work in it.
+
+    I paint in my free time.
+
+    I was born in london.'
+  user 2 personas: 'I am a female and love to be surrounded by males.
+
+    People say i have a cute laugh.
+
+    I am still in love with my ex boyfriend.
+
+    I working in a publishing building.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work in a publishing building.
+
+    User 1: What''s that like?
+
+    User 2: It''s great! I get to work with a lot of creative people.
+
+    User 1: That sounds fun! What kind of things do you do for work?
+
+    User 2: I do a lot of editing, and I also help with the marketing.
+
+    User 1: That sounds like a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is. What do you like to do in your free time?
+
+    User 2: I love to read, and I also love to paint.
+
+    User 1: Me too! I love to read, and I also love to draw.
+
+    User 2: That''s awesome! I''m sure we''d be good friends.
+
+    User 1: I think we would too. What''s your favorite book?
+
+    User 2: I love "The Great Gatsby."
+
+    User 1: That''s one of my favorites too! I love the writing style and the characters.
+
+    User 2: Me too! It''s a classic for a reason.
+
+    User 1: I know, right? It''s so good. What''s your favorite painting?
+
+    User 2: I love "The Starry Night" by Vincent van Gogh.
+
+    User 1: That''s one of my favorites too! I love the colors and the way the stars look.
+
+    User 2: Me too! It''s so beautiful.
+
+    User 1: I know, right? It''s one of the best paintings ever made.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

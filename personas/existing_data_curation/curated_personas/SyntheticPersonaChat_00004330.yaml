@@ -1,0 +1,84 @@
+id: '00004330'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4330
+data:
+  user 1 personas: 'I grew up in new hampshire.
+
+    I enjoy reading history books.
+
+    My favorite food is mexican.
+
+    I am a teacher.'
+  user 2 personas: 'I have two cats.
+
+    I am a librarian in my current job.
+
+    I like to eat tune.
+
+    My cats like to be read to.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: Nice to meet you. Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Oh, cool. I''m from New Hampshire.
+
+    User 2: That''s nice. I''ve never been to New Hampshire.
+
+    User 1: You should come visit sometime. It''s a beautiful state.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a librarian.
+
+    User 1: Oh, that''s cool. I love libraries.
+
+    User 2: Me too. I love working in a library.
+
+    User 1: What''s your favorite thing about being a librarian?
+
+    User 2: I love getting to help people find what they''re looking for.
+
+    User 1: That''s a great feeling.
+
+    User 2: It is.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love tacos.
+
+    User 1: Me too! I love Mexican food.
+
+    User 2: I love the way it smells.
+
+    User 1: Me too.
+
+    User 2: Do you have any pets?
+
+    User 1: I have two dogs.
+
+    User 2: Oh, nice. I have two cats.
+
+    User 1: I love cats.
+
+    User 2: Me too.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to the library with my cats.
+
+    User 1: Oh, fun! I''m going to visit my family.
+
+    User 2: That sounds nice.
+
+    User 1: Yeah, it should be a good time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

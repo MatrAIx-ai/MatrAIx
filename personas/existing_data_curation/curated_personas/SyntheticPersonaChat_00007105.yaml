@@ -1,0 +1,58 @@
+id: '00007105'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7105
+data:
+  user 1 personas: 'I am tired of having to read subtitles.
+
+    Our class is planning a trip to japan.
+
+    I hope to save enough money for it.
+
+    I like to watch japanese cartoons anime in my free time.'
+  user 2 personas: 'I like to drink green tea.
+
+    I am an author.
+
+    I enjoy watching mystery movies.
+
+    I love to write stories while sitting in the grass in my back yard.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I like to watch Japanese cartoons in my free time.
+
+    User 2: Oh, I love anime too! I''m actually an author, and I love to write stories about Japanese culture.
+
+    User 1: That''s so cool! I''ve always wanted to write a book, but I''m not sure where to start.
+
+    User 2: I would love to help you with that! I''m always looking for new writing partners.
+
+    User 1: That would be amazing! I''ll have to send you some of my writing so you can see what I''m working with.
+
+    User 2: Sounds great! I''m looking forward to it.
+
+    User 1: So, what are some of your favorite anime?
+
+    User 2: I love so many of them, but some of my favorites include Naruto, One Piece, and Fullmetal Alchemist.
+
+    User 1: I''ve heard a lot about Naruto and One Piece. I''ve been meaning to check them out.
+
+    User 2: You definitely should! They''re both really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! So, what are you looking forward to most about the trip to Japan?
+
+    User 1: I''m really excited to see all of the historical sites and try the different food.
+
+    User 2: That sounds great! I''m sure you''ll have a lot of fun.
+
+    User 1: I hope so! Thanks for talking to me.
+
+    User 2: No problem! I''m glad we could meet.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

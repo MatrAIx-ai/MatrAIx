@@ -1,0 +1,78 @@
+id: '00005555'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5555
+data:
+  user 1 personas: 'I have been married five times.
+
+    I love to eat eggplant.
+
+    I won the spelling bee in third grade.
+
+    I own a bar in downtown chicago.'
+  user 2 personas: 'I want to be a journalist but instead i sell washers at sears.
+
+    I love the band red hot chili peppers.
+
+    My feet are size six womens.
+
+    I have a french bulldog.
+
+    I play bass.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: It''s nice to meet you.
+
+    User 2: You too!
+
+    User 1: I''m (user 1''s name).
+
+    User 2: Nice to meet you, (user 1''s name). I''m (user 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I sell washers at Sears.
+
+    User 1: Oh, really? That sounds interesting.
+
+    User 2: It''s not bad, but it''s not my dream job. I actually want to be a journalist.
+
+    User 1: That''s cool! I''ve always wanted to be a journalist too.
+
+    User 2: Really? What''s stopping you?
+
+    User 1: I''m not sure. I''ve just never been able to figure out how to get started.
+
+    User 2: Well, if you ever want to talk about it, I''m always here to listen.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to read, write, and play music.
+
+    User 2: Oh, cool! I love to read and write too. I used to play music too, but I don''t have as much time for it anymore.
+
+    User 1: What kind of music did you play?
+
+    User 2: I played bass guitar in a rock band.
+
+    User 1: That''s awesome! I love rock music.
+
+    User 2: Me too! I''m actually going to see a Red Hot Chili Peppers concert next week.
+
+    User 1: That''s cool! I love the Red Hot Chili Peppers. I''ve seen them in concert a few times.
+
+    User 2: Oh, really? What was that like?
+
+    User 1: It was amazing! They put on a great show.
+
+    User 2: I''m so jealous! I can''t wait to see them.
+
+    User 1: I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

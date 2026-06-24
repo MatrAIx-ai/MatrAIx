@@ -1,0 +1,60 @@
+id: '00003125'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3125
+data:
+  user 1 personas: 'I like to make cookies.
+
+    I like bagels with everything on them.
+
+    I like to train dogs.
+
+    I like to run.'
+  user 2 personas: 'I enjoy the outdoors.
+
+    My friends and i go hiking all the time.
+
+    I am a hardcore biker.
+
+    I got a girlfriend last month.
+
+    My favorite breakfast is pancakes.'
+  Best Generated Conversation: 'User 1: Hey, I''m looking for someone to go hiking with me. Do you like to hike?
+
+    User 2: Yes, I love hiking! I go hiking with my friends all the time.
+
+    User 1: That''s great! I''m always looking for new hiking buddies.
+
+    User 2: What''s your favorite thing about hiking?
+
+    User 1: I love being outdoors and being active. I also love the challenge of hiking new trails.
+
+    User 2: I agree! I love the feeling of accomplishment when I reach the top of a mountain.
+
+    User 1: Me too! Do you have any favorite hiking trails?
+
+    User 2: I love hiking in the mountains. Some of my favorite trails are in the Sierra Nevadas.
+
+    User 1: The Sierras are beautiful! I''ve been hiking there a few times.
+
+    User 2: What''s your favorite trail in the Sierras?
+
+    User 1: I really like the John Muir Trail. It''s a long hike, but it''s worth it for the views.
+
+    User 2: I''ve heard good things about the John Muir Trail. I''ll have to check it out sometime.
+
+    User 1: You should! It''s a great hike.
+
+    User 2: So, do you want to go hiking sometime this week?
+
+    User 1: I''m free on Saturday. Do you want to go then?
+
+    User 2: Sounds good to me! I''ll text you the details.
+
+    User 1: Great! See you then!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00041514'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41514
+persona_description: A security researcher who specializes in detecting and removing rootkits from Android operating systems, particularly those developed by Trustwave. The researcher is planning to demonstrate
+  a new rootkit for Android at DEF CON next month. The researcher is known for their expertise in developing and testing rootkits and is interested in exploring the potential for malicious rootkits in Android.
+  They are looking for vulnerabilities in the Android operating system and are working on creating a rootkit that can be activated on an Android device to track the location of the phone's owner, read private
+  SMS messages, and redirect calls to bogus numbers.
+expertise:
+  general_domain_top1pct: security
+  specific_domain_top1pct: Android rootkit detection and removal
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

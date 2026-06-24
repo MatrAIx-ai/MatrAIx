@@ -1,0 +1,70 @@
+id: 00001872
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1872
+data:
+  user 1 personas: 'I enjoy a good run.
+
+    I enjoy cooking but not baking.
+
+    I like things in organized.
+
+    I am a stay at home mom.
+
+    One of my favorite shows is face off on say.'
+  user 2 personas: 'I want a dog , but that is a lot of commitment.
+
+    I love to go outside at night and eavesdrop on my neighbors arguments.
+
+    If i want it , i buy it.
+
+    I sometimes think i am shallow.
+
+    My mother is a professional make up artist.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]. What''s your name?
+
+    User 2: Hi, I''m [User 2].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to go for walks, listen to music, and watch movies.
+
+    User 1: Me too! I love walking and listening to music. I''ve been really into country music lately.
+
+    User 2: Oh, I love country music too! I''m a big fan of Blake Shelton.
+
+    User 1: Me too! I love his music. He''s so talented.
+
+    User 2: I agree! He''s one of my favorite singers.
+
+    User 1: I also like to watch movies. I''m a big fan of horror movies.
+
+    User 2: Oh, I hate horror movies! They''re so scary.
+
+    User 1: I know, they can be really scary. But I love the adrenaline rush.
+
+    User 2: I guess I''m just not that brave.
+
+    User 1: That''s okay. Not everyone likes scary movies.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to cook, but I''m not very good at baking.
+
+    User 2: I love to bake! I''m actually really good at it.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to be good at baking.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: Maybe I will. I know my kids would love it.
+
+    User 2: They definitely would.
+
+    User 1: Thanks for chatting with me. It was nice to meet you.
+
+    User 2: You too! It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

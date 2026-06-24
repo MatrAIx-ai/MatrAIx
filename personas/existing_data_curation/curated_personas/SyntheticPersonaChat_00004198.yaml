@@ -1,0 +1,92 @@
+id: 00004198
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4198
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I am a female.
+
+    I like skateboarding.
+
+    I am in high school.
+
+    I have blonde hair.'
+  user 2 personas: 'I hate seafood but love mexican food.
+
+    I love to hunt.
+
+    I grew up in the deep south.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: Nice to meet you too.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: I love pizza!
+
+    User 2: Me too! What kind of pizza do you like?
+
+    User 1: I like all kinds of pizza, but my favorite is pepperoni.
+
+    User 2: I love pepperoni pizza too! What else do you like to do for fun?
+
+    User 1: I like to skateboard.
+
+    User 2: That''s cool! I''ve never tried skateboarding before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to hunt and fish.
+
+    User 1: Oh, that''s cool! I''ve never been hunting before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Mine too!
+
+    User 1: That''s cool!
+
+    User 2: So, where are you from?
+
+    User 1: I''m from the deep south.
+
+    User 2: Oh, that''s cool! I''m from California.
+
+    User 1: Oh, that''s cool! I''ve never been to California.
+
+    User 2: You should try it! It''s a beautiful state.
+
+    User 1: Maybe I will.
+
+    User 2: So, what grade are you in?
+
+    User 1: I''m in high school.
+
+    User 2: Oh, that''s cool! I''m in college.
+
+    User 1: Oh, that''s cool! What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Oh, that''s cool! I''m not sure what I want to study yet.
+
+    User 2: You have plenty of time to figure that out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

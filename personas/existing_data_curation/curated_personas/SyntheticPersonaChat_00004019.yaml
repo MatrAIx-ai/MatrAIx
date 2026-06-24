@@ -1,0 +1,90 @@
+id: 00004019
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4019
+data:
+  user 1 personas: 'I like going to the beach.
+
+    I have a dog named george.
+
+    I like my job.
+
+    I used to work for a cable company.'
+  user 2 personas: 'I used to be a nurse.
+
+    I like to make bagels.
+
+    I am a cartographer.
+
+    I like to paint outdoors.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name). What do you do for a living?
+
+    User 1: I''m a cartographer.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to do that.
+
+    User 1: It''s pretty cool. I get to travel all over the world and make maps of different places.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is. I love getting to see new places and meet new people.
+
+    User 2: What''s your favorite place you''ve been to?
+
+    User 1: I think my favorite place was Peru. The mountains were amazing and the food was delicious.
+
+    User 2: Peru sounds amazing. I''ve always wanted to go there.
+
+    User 1: You should go! It''s a beautiful country.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: That''s really cool. I''ve always admired nurses.
+
+    User 2: Thank you. I love my job. It''s really rewarding.
+
+    User 1: I can imagine. It''s nice to be able to help people.
+
+    User 2: It is. I feel like I''m making a difference in the world.
+
+    User 1: That''s great. I''m glad you have a job that you love.
+
+    User 2: I am too. It''s the best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to make bagels.
+
+    User 1: That''s interesting. I''ve never made bagels before.
+
+    User 2: It''s actually not that hard. I have a recipe that I use and it always turns out great.
+
+    User 1: I might have to try that sometime.
+
+    User 2: You should! It''s really fun.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the beach.
+
+    User 1: Me too! I love the beach.
+
+    User 2: It''s so relaxing.
+
+    User 1: It is. I love swimming and sunbathing.
+
+    User 2: Me too. I also love playing in the sand.
+
+    User 1: Me too. We should go to the beach sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

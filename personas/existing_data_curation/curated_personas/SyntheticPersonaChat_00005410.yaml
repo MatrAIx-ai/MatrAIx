@@ -1,0 +1,57 @@
+id: '00005410'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5410
+data:
+  user 1 personas: 'My favorite animal is a zebra.
+
+    I am in preschool.
+
+    I like to dance.
+
+    I am a girl.
+
+    I like to play outside.'
+  user 2 personas: 'I am the head of the gun club.
+
+    I have a beta fish.
+
+    I donate old clothes to the homeless.
+
+    My friends and i enjoy golfing on sunny days.
+
+    I am a poet.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there! How are you doing today?
+
+    User 1: I''m doing well, thanks for asking! I''m a preschooler and I love to dance and play outside.
+
+    User 2: That''s great! I''m glad to hear that you''re enjoying your childhood. I''m a poet and I love to write. I also like to donate old clothes to the homeless and go golfing with my friends on sunny
+    days.
+
+    User 1: That''s so cool! I''ve never met a poet before. What kind of poems do you write?
+
+    User 2: I write all kinds of poems, but my favorite ones are about love and nature.
+
+    User 1: My favorite animal is a zebra!
+
+    User 2: Zebras are cool! They''re so beautiful and graceful.
+
+    User 1: I know, right? I love watching them run. They''re so fast!
+
+    User 2: Yeah, they''re definitely one of the fastest animals in the world.
+
+    User 1: Have you ever seen a zebra in real life?
+
+    User 2: No, I haven''t. I''ve always wanted to, though.
+
+    User 1: Me too! I think it would be amazing to see one up close.
+
+    User 2: It definitely would! Maybe one day we''ll both get to see a zebra in real life.
+
+    User 1: That would be so cool!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00056761'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56761
+persona_description: A healthcare professional who is interested in lung health and disease. This person is likely to have a background in respiratory medicine or pulmonology and has experience interpreting
+  spirometry results. They are also familiar with the limitations of current lung function charts and are eager to find a more consistent and accurate benchmark for lung function testing. This person is
+  likely to be involved in research or advocacy for lung disease awareness and treatment.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pulmonology
+  general_domain_top01pct: None
+  specific_domain_top01pct: lung function testing
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,78 @@
+id: '00001406'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1406
+data:
+  user 1 personas: 'I own my company.
+
+    I make 70k a year.
+
+    I barely show up to work.
+
+    I pay my employees minimum wage.
+
+    I am married with one child.'
+  user 2 personas: 'I ve two siblings.
+
+    I m not very tall.
+
+    My favorite color is red.
+
+    I m looking for a job.
+
+    I ve a dog.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for work?
+
+    User 2: I''m looking for a job right now.
+
+    User 1: What kind of job are you looking for?
+
+    User 2: I''m not sure, I''m just looking for something that pays well.
+
+    User 1: What are you good at?
+
+    User 2: I''m good at a lot of things. I''m a hard worker, I''m good at learning new things, and I''m good at dealing with people.
+
+    User 1: You sound like you''d be a great employee. I''m actually looking for someone to help me out at my company.
+
+    User 2: What kind of company do you own?
+
+    User 1: I own a small business that sells and repairs computers.
+
+    User 2: That sounds really interesting. I''ve always been interested in computers.
+
+    User 1: Well, I''m looking for someone to help me with the repairs. I''m not very good at it myself.
+
+    User 2: I''m sure I could help you out with that. I''ve repaired computers before.
+
+    User 1: That''s great! I''ll send you a link to my company website. You can take a look at the job posting and apply if you''re interested.
+
+    User 2: Thanks, I''ll take a look.
+
+    User 1: No problem.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to spend time with my family, go camping, and play video games.
+
+    User 2: That sounds like fun. I like to go camping too. What''s your favorite thing about camping?
+
+    User 1: I love the fresh air and the beautiful scenery.
+
+    User 2: Me too. I also love the campfires and the s''mores.
+
+    User 1: S''mores are the best!
+
+    User 2: They sure are.
+
+    User 1: So, what kind of dog do you have?
+
+    User 2: I have a golden retriever. He''s the sweetest dog ever.
+
+    User 1: Golden retrievers are great dogs. I''ve always wanted one.
+
+    User 2: You should get one! They''re the best dogs.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

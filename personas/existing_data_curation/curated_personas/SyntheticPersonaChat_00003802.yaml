@@ -1,0 +1,66 @@
+id: 00003802
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3802
+data:
+  user 1 personas: 'I work at home , editing.
+
+    I have a cat.
+
+    I have depression and anxiety so i do not really go out a lot.
+
+    I hope to move out soon.
+
+    I live at home with my dad and brother.'
+  user 2 personas: 'I have 3 children.
+
+    I like to run.
+
+    I love cheese cake.
+
+    I drive 300 mile a week for work.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1 name). What''s your name?
+
+    User 2: Hi, I''m (user 2 name). It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s cool. I work from home as an editor.
+
+    User 2: That sounds interesting. Do you like it?
+
+    User 1: I do, it gives me a lot of freedom.
+
+    User 2: That''s good. I like being able to set my own hours.
+
+    User 1: Me too. I have anxiety and depression, so it''s nice to be able to work from home when I need to.
+
+    User 2: I understand. I have three children, so it''s nice to be able to be there for them when I need to.
+
+    User 1: That''s great. I live at home with my dad and brother. I hope to move out soon.
+
+    User 2: I''m sure you''ll do it when you''re ready.
+
+    User 1: Thanks. I like to run. What do you do for fun?
+
+    User 2: I love cheese cake. I''m a runner too. I drive 300 miles a week for work.
+
+    User 1: Wow, that''s a lot of driving. I like to go out to eat, read, and watch movies.
+
+    User 2: I like to go out to eat too. I love trying new restaurants.
+
+    User 1: Me too. I''m always looking for new places to try.
+
+    User 2: I like to read too. I''m reading a book about a woman who runs across the country.
+
+    User 1: That sounds interesting. I''ve never read a book about running.
+
+    User 2: It''s really good. You should check it out.
+
+    User 1: I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00007791
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7791
+data:
+  user 1 personas: 'I am unemployed and living off a trust fund.
+
+    I own a french bulldog.
+
+    I like drinking expensive wine.
+
+    I like getting my nails done.
+
+    I once lost a diamond at a debutante ball.'
+  user 2 personas: 'My favorite car is the ford mustang.
+
+    I worked 3 jobs at the same time for more than 5 years.
+
+    I walk more than 2 miles a day.
+
+    I have a pit bull and a chihuahua.
+
+    I like to go to the movies.'
+  Best Generated Conversation: '* User 1: I am unemployed and living off a trust fund.
+
+    * User 2: My favorite car is the ford mustang.
+
+    * User 1: I own a french bulldog.
+
+    * User 2: I have a pit bull and a chihuahua.
+
+    * User 1: I like drinking expensive wine.
+
+    * User 2: I like to go to the movies.
+
+    * User 1: I once lost a diamond at a debutante ball.
+
+    * User 2: I worked 3 jobs at the same time for more than 5 years.
+
+    * User 1: Wow, you''re very busy! I''m sure you must be tired.
+
+    * User 2: I am, but I love being busy. It keeps me from getting bored.
+
+    * User 1: I can understand that. I like to keep myself busy too, but I don''t have the energy to work 3 jobs at once.
+
+    * User 2: It''s not easy, but it''s worth it. I was able to save up a lot of money and I was able to buy a house.
+
+    * User 1: That''s awesome! I''m glad you were able to achieve your goal.
+
+    * User 2: Thanks! It wasn''t easy, but it was worth it.
+
+    * User 1: I''m sure it was. So, what do you like to do for fun?
+
+    * User 2: I like to go to the movies, I like to walk my dogs, and I like to go out to eat.
+
+    * User 1: That sounds like fun! I like to do those things too.
+
+    * User 2: We should go to the movies together sometime.
+
+    * User 1: That would be fun! I''d love to.
+
+    * User 2: Great! I''ll let you know when I''m free'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

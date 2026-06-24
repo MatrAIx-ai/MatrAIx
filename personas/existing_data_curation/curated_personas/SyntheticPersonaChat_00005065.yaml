@@ -1,0 +1,68 @@
+id: '00005065'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5065
+data:
+  user 1 personas: 'I played football in college.
+
+    I run two miles everyday.
+
+    I ve been married for five years.
+
+    I work at a candy store.'
+  user 2 personas: 'I play the violin.
+
+    My grandma raised me.
+
+    I enjoy watching horror flicks.
+
+    I want to be a music teacher.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I play the violin, I enjoy watching horror flicks, and I want to be a music teacher.
+
+    User 1: That''s interesting. I played football in college, I run two miles every day, and I''ve been married for five years.
+
+    User 2: That''s cool. I''m not a big fan of sports, but I do enjoy running.
+
+    User 1: What made you want to become a music teacher?
+
+    User 2: I''ve always loved music, and I think it''s a great way to teach kids. I also think it''s a really important skill to have.
+
+    User 1: I agree. Music is a great way to express yourself, and it can also help you learn other skills, like math and science.
+
+    User 2: Yeah, I think so too.
+
+    User 1: So, what do you want to do with your music degree?
+
+    User 2: I''m not sure yet. I might want to teach in a public school, or I might want to teach private lessons.
+
+    User 1: Either way, I''m sure you''ll be great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your favorite horror movie?
+
+    User 2: I''m not sure. I like a lot of them.
+
+    User 1: Me too. I''m a big fan of the Saw movies.
+
+    User 2: I''ve never seen those.
+
+    User 1: You should! They''re really good.
+
+    User 2: Maybe I will.
+
+    User 1: You should.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

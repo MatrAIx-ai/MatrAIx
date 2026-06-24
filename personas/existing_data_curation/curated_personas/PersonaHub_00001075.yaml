@@ -1,0 +1,19 @@
+id: '00001075'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1075
+persona_description: A chemist who specializes in the analysis of chemical elements, particularly in the determination of the chemical composition of substances using analytical techniques such as flame
+  AAS, ICP-OES, and photometry. Their expertise lies in the interpretation and interpretation of results obtained from these methods, and they have a deep understanding of the properties and behavior of
+  different chemical elements, including their atomic numbers, atomic weights, and physical properties. They are also familiar with the chemical reactions and interactions of these elements, and they are
+  able to predict and interpret the results of their analyses with accuracy and precision.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: analytical chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

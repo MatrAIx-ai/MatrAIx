@@ -1,0 +1,58 @@
+id: '00002675'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2675
+data:
+  user 1 personas: 'My hair is very long.
+
+    I have a boyfriend who lives in italy.
+
+    My mom lives with me.
+
+    I hate cooking.
+
+    I enjoy video games.'
+  user 2 personas: 'I am adopted.
+
+    I work at an accounting firm.
+
+    I ride horses in my spare time.
+
+    I do not believe in love.
+
+    I am an only child.'
+  Best Generated Conversation: 'User 1: I''m so excited to meet you! I''ve heard a lot about you.
+
+    User 2: Thanks! It''s nice to meet you too. What have you heard about me?
+
+    User 1: I''ve heard that you''re adopted, and that you work at an accounting firm.
+
+    User 2: That''s right! I''m adopted, and I work at an accounting firm.
+
+    User 1: That''s so cool! I''ve always been interested in adoption.
+
+    User 2: It''s a great experience. I''m so grateful to my parents for adopting me.
+
+    User 1: That''s awesome! I''m glad you had a good experience.
+
+    User 2: Thanks! What about you? What''s your story?
+
+    User 1: Well, I have a boyfriend who lives in Italy. I love him very much, but I hate cooking for him. I''m not very good at it.
+
+    User 2: That''s okay! I''m not very good at it either. I usually order takeout or eat out.
+
+    User 1: I do that too! I love video games. I''m a huge gamer.
+
+    User 2: Me too! What games do you like to play?
+
+    User 1: I like to play role-playing games, like World of Warcraft and Dungeons & Dragons.
+
+    User 2: I love those games! I also like to play first-person shooters, like Call of Duty and Battlefield.
+
+    User 1: Those are good games too! I love playing video games.
+
+    User 2: Me too! They''re so much fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

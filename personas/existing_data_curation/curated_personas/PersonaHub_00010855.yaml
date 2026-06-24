@@ -1,0 +1,18 @@
+id: 00010855
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10855
+persona_description: A scientist conducting research on soil infiltration rates in mountainous watersheds, specifically focusing on volcanic and granitic soils after wildfires. They are interested in understanding
+  the differences in infiltration rates between burned and unburned sites and the implications for water management and soil conservation. They are likely to be a soil scientist or a geologist with expertise
+  in hydrology and soil science.
+expertise:
+  general_domain_top1pct: hydrology
+  specific_domain_top1pct: soil hydrology
+  general_domain_top01pct: None
+  specific_domain_top01pct: wildfire-impacted soil hydrology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,62 @@
+id: 00002497
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2497
+data:
+  user 1 personas: 'I like rock climbing.
+
+    I am gluten free.
+
+    I am a writer.
+
+    I have a dog.
+
+    My hair is black.'
+  user 2 personas: 'I like to read.
+
+    My favorite color is blue.
+
+    I like cupcakes.
+
+    I have brown hair.'
+  Best Generated Conversation: '* * User 1: Hi, I''m [user 1]!
+
+    User 2: Hi, I''m [user 2]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and bake cupcakes.
+
+    User 1: Oh, that''s cool! I like to rock climb, write, and spend time with my dog.
+
+    User 2: Rock climbing sounds fun! I''ve never tried it before.
+
+    User 1: You should! It''s a great way to get exercise and enjoy the outdoors.
+
+    User 2: I might just have to try it sometime.
+
+    User 1: I''m sure you''d like it. What''s your favorite thing to read?
+
+    User 2: I love reading mysteries and thrillers. I also like reading romance novels.
+
+    User 1: I''m a big fan of mysteries and thrillers too. I also like reading historical fiction.
+
+    User 2: Historical fiction is great! I love learning about other cultures and time periods.
+
+    User 1: Me too! I''m also a writer. I write fiction and nonfiction.
+
+    User 2: That''s awesome! I''ve always wanted to write a book.
+
+    User 1: You should! It''s a lot of fun and it''s a great way to express yourself.
+
+    User 2: I might just have to try it.
+
+    User 1: I''m sure you''d be great at it.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

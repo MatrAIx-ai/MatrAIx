@@ -1,0 +1,62 @@
+id: '00007332'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7332
+data:
+  user 1 personas: 'I have been in 2 car crashes in my life.
+
+    I am going to school to get a degree now.
+
+    I like to play sports and get fresh air.
+
+    Food and water are essential to me in life.
+
+    I like watching tv in my free time as well.'
+  user 2 personas: 'My favorite singer is justin bieber.
+
+    My doctor told me i have six months to live.
+
+    I am really terrible at doing regular expressions.
+
+    I like having fried fish for supper.
+
+    I am allergic to lactose.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you like to do for fun?
+
+    User 2: I like to play sports and get fresh air.
+
+    User 1: Oh, that''s cool. I like to play sports too. What kind of sports do you like to play?
+
+    User 2: I like to play basketball, soccer, and softball.
+
+    User 1: Those are all great sports. I like to play basketball too. I''m not very good at soccer, but I enjoy playing it. I''ve never played softball before.
+
+    User 2: Softball is a lot of fun. It''s a good workout too.
+
+    User 1: I''m sure it is. I''ll have to give it a try sometime.
+
+    User 2: You should. It''s a great way to meet new people and get some exercise.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to watch TV and go out to eat.
+
+    User 1: Me too. I love to watch TV. What are some of your favorite shows?
+
+    User 2: I like to watch a variety of shows, but my favorites are usually comedies.
+
+    User 1: I like comedies too. I like to watch The Office, Parks and Rec, and The Good Place.
+
+    User 2: I love those shows! I also like Brooklyn Nine-Nine, and New Girl.
+
+    User 1: Those are great shows too. I''m glad we have similar taste in TV shows.
+
+    User 2: Me too. It''s always nice to find someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

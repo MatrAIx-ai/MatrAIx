@@ -1,0 +1,19 @@
+id: '00061105'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61105
+persona_description: A hepatologist who specializes in the diagnosis and treatment of cholangiocarcinoma, with a particular focus on the management of biliary obstruction and the identification of genetic
+  drivers of cholangiocarcinoma progression. This persona is knowledgeable about the diverse group of cholangiocarcinomas and their anatomical locations, and has expertise in advanced cytological tests
+  such as fluorescence in-situ hybridisation for aneusomy. They are aware of the importance of liver transplantation as a curative option for selected patients with perihilar cholangiocarcinoma, and are
+  part of international efforts to identify the genetic drivers of cholangiocarcinoma progression.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: hepatobiliary cancer
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,52 @@
+id: '00006673'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6673
+data:
+  user 1 personas: 'My favorite band is imagine dragons.
+
+    I am a father.
+
+    I m from texas.
+
+    I work many hours.'
+  user 2 personas: 'I like watching tv in my free time as well.
+
+    I have been in 2 car crashes in my life.
+
+    Food and water are essential to me in life.
+
+    I am going to school to get a degree now.'
+  Best Generated Conversation: 'User 1: Hi, what''s your favorite band?
+
+    User 2: Hi! My favorite band is Imagine Dragons. What''s yours?
+
+    User 1: Mine is also Imagine Dragons! They''re so good.
+
+    User 2: I know, right? I love their music.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I think my favorite song is "Believer".
+
+    User 1: That''s a great song! I love that one too.
+
+    User 2: What do you like about it?
+
+    User 1: I like the lyrics and the melody. It''s just a really catchy song.
+
+    User 2: I agree! It''s one of my favorite songs to sing along to.
+
+    User 1: Me too! I love singing it in the car.
+
+    User 2: I think I''m going to listen to it right now.
+
+    User 1: Me too! I''m going to put it on my playlist.
+
+    User 2: I hope you have a great rest of your day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

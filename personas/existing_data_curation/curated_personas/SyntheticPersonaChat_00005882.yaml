@@ -1,0 +1,70 @@
+id: 00005882
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5882
+data:
+  user 1 personas: 'I work in the office , 9 till 5.
+
+    I like italian cusine.
+
+    I live in a big city.
+
+    This summer i went on vacation to italy.'
+  user 2 personas: 'I have never been employed.
+
+    I am diabetic.
+
+    I like video games.
+
+    My mother worked for apple.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: Nice to meet you [user 2 name]. What do you do for fun?
+
+    User 2: I like to play video games.
+
+    User 1: Me too! What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I''m especially into RPGs.
+
+    User 1: I''ve never played an RPG before. What''s that?
+
+    User 2: An RPG is a role-playing game. It''s a type of game where you take on the role of a character and make decisions that affect the story.
+
+    User 1: That sounds interesting. I might have to check one out sometime.
+
+    User 2: You should! They''re really fun. What do you like to do for fun?
+
+    User 1: I like to go to the movies, eat Italian food, and go shopping.
+
+    User 2: I love Italian food! What''s your favorite Italian dish?
+
+    User 1: I love pasta carbonara.
+
+    User 2: That''s a good choice. I love it too.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too.
+
+    User 1: So, where do you live?
+
+    User 2: I live in [user 2 city].
+
+    User 1: Me too! What part of [user 2 city] do you live in?
+
+    User 2: I live in the [user 2 neighborhood].
+
+    User 1: I''ve never been to [user 2 neighborhood]. What''s it like?
+
+    User 2: It''s a nice neighborhood. It''s quiet and there are lots of trees.
+
+    User 1: That sounds nice. I might have to check it out sometime.
+
+    User 2: You should! It''s a great place to live.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

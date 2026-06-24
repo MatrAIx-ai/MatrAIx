@@ -1,0 +1,46 @@
+id: '00005117'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5117
+data:
+  user 1 personas: 'My father was a famous actor.
+
+    I do not like acting.
+
+    I have 3 ferrari cars in my garage.
+
+    I do not like kids.'
+  user 2 personas: 'I like wide , open spaces.
+
+    I am active on my city council.
+
+    I only eat locally sourced food.
+
+    I have 10 alpacas.'
+  Best Generated Conversation: 'User 1: I''m glad you like wide, open spaces. I love going for hikes in the mountains.
+
+    User 2: Me too! I''m on the city council, and we''re working on getting more open space in our city.
+
+    User 1: That''s great! I think it''s important to have places where people can relax and enjoy nature.
+
+    User 2: I agree. And I think it''s important to eat locally sourced food too.
+
+    User 1: I do too! I try to buy as much of my food as possible from local farmers.
+
+    User 2: That''s great! I have 10 alpacas, and I use their wool to make yarn.
+
+    User 1: That''s amazing! I''ve never seen an alpaca before.
+
+    User 2: You should come over and see them sometime. I''m sure they''d love to meet you.
+
+    User 1: I would love that!
+
+    User 2: Great! I''ll send you my address.
+
+    User 1: Awesome! Thanks.
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

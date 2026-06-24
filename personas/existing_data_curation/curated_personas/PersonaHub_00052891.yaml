@@ -1,0 +1,18 @@
+id: 00052891
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52891
+persona_description: A scientist who specializes in planetary science, particularly the study of Titan, a moon of Saturn. This scientist is knowledgeable about the Cassini spacecraft and its instruments,
+  and has expertise in infrared spectroscopy. They have a keen interest in understanding the features and phenomena observed on Titan, and are eager to test the hypothesis that the bright red spot on the
+  moon is a hot spot.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: planetary science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

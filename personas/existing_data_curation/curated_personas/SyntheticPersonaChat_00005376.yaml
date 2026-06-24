@@ -1,0 +1,62 @@
+id: '00005376'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5376
+data:
+  user 1 personas: 'I tutor kids in my spare time.
+
+    I love to ride bikes.
+
+    I used to be very religious.
+
+    I have 3 small dogs.'
+  user 2 personas: 'My favorite movie is good burger.
+
+    I like canning and whittling.
+
+    I eat exclusively meat.
+
+    In high school , i came in 6th in the 100 meter dash.
+
+    To stay in shape , i chase cheetahs at the zoo.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m a tutor. I love to ride bikes. I used to be very religious. I have 3 small dogs.
+
+    User 2: That''s interesting. I love canning and whittling. I eat exclusively meat. I ran track in high school and came in 6th in the 100 meter dash. To stay in shape, I chase cheetahs at the zoo.
+
+    User 1: I''ve never been to the zoo. I''ve never seen a cheetah in real life.
+
+    User 2: They''re pretty amazing animals. I''ve been chasing them for a few years now. It''s a great way to stay in shape.
+
+    User 1: I bet it is. I''m not sure I''d be brave enough to chase a cheetah.
+
+    User 2: You''d be surprised how brave you are when you''re hungry.
+
+    User 1: I guess so. I''ll have to keep that in mind the next time I''m at the zoo.
+
+    User 2: Good idea.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, watch movies, and go for walks. I also like to can and whittle.
+
+    User 1: That sounds like fun. I like to read and go for walks too.
+
+    User 2: We should go for a walk sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great! I''ll bring my dogs.
+
+    User 1: Sounds good.
+
+    User 2: I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

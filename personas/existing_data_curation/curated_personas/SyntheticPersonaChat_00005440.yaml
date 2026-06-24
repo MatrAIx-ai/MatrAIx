@@ -1,0 +1,84 @@
+id: '00005440'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5440
+data:
+  user 1 personas: 'My favorite fruit is an apple.
+
+    I prefer morning to night.
+
+    I prefer winter over fall.
+
+    I like to swim.
+
+    I am a marathon runner.'
+  user 2 personas: 'My parents were like this as well.
+
+    I am all about family and fun.
+
+    I like to live off of the land.
+
+    I am a free spirit.'
+  Best Generated Conversation: 'User 1: Hi, I''m a marathon runner.
+
+    User 2: Hi, I like to live off the land.
+
+    User 1: Really? What does that mean?
+
+    User 2: I like to grow my own food and live in a sustainable way.
+
+    User 1: That''s awesome! I''ve always wanted to do something like that.
+
+    User 2: It''s really great. You should give it a try.
+
+    User 1: I might just do that.
+
+    User 2: I''m sure you''d love it.
+
+    User 1: I''m glad we met.
+
+    User 2: Me too. What''s your name?
+
+    User 1: My name is Sarah.
+
+    User 2: Hi, Sarah. My name is David.
+
+    User 1: Nice to meet you, David.
+
+    User 2: You too, Sarah.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go camping, hiking, and fishing.
+
+    User 1: That sounds like a lot of fun. I''m not much of an outdoorsman myself, but I could definitely see the appeal.
+
+    User 2: It''s a great way to relax and get away from it all.
+
+    User 1: I can imagine.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to read, run, and watch movies.
+
+    User 2: Those all sound like great ways to spend your time.
+
+    User 1: They are. I like to keep busy.
+
+    User 2: I can tell.
+
+    User 1: I''m glad.
+
+    User 2: Me too.
+
+    User 1: Well, it was nice meeting you, David.
+
+    User 2: You too, Sarah.
+
+    User 1: I hope we can get together again sometime.
+
+    User 2: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

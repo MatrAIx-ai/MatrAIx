@@ -1,0 +1,19 @@
+id: 00022943
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22943
+persona_description: A professional with expertise in meteorology, specifically focusing on tropical cyclone forecasting. This individual is knowledgeable about the National Geodetic Vertical Datum of 1929
+  (NGVD29) and the North American Vertical Datum of 1988 (NAVD88), as well as the importance of using consistent vertical datums in comparing water level observations with other observations, models, or
+  models to other models. They are likely to read about the use of vertical reference datums in tropical cyclone forecasting, the importance of consistency in vertical datum usage, and the implications
+  of using outdated or unsupported vertical datums.
+expertise:
+  general_domain_top1pct: geography
+  specific_domain_top1pct: tropical cyclone forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: vertical datums in meteorology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

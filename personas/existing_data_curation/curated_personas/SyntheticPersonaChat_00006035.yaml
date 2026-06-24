@@ -1,0 +1,72 @@
+id: '00006035'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6035
+data:
+  user 1 personas: 'I know how to drive a stickshift.
+
+    We lived in virginia while i was growing up.
+
+    My father was a cop.
+
+    I am a truck driver.
+
+    My mother was a teacher.'
+  user 2 personas: 'I see a therapist that does not really understand me.
+
+    I have an older brother that has gotten into trouble.
+
+    My parents are distant.
+
+    Sometimes i wish i did not have to wake up in the morning.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool. Do you like it?
+
+    User 2: It''s okay. It can be a lot of work, but it''s also pretty interesting.
+
+    User 1: I bet. I''ve never driven a stickshift before.
+
+    User 2: It''s not too bad once you get the hang of it.
+
+    User 1: I''m sure. Where do you usually drive to?
+
+    User 2: All over the country. I''ve been to a lot of different places.
+
+    User 1: That sounds like it would be fun.
+
+    User 2: It is. I get to see a lot of different things.
+
+    User 1: I''m sure. What''s your favorite place that you''ve been to?
+
+    User 2: I''m not sure. I''ve been to a lot of cool places.
+
+    User 1: Me too. I''ve been to a lot of different countries.
+
+    User 2: That''s awesome. I''d love to travel more.
+
+    User 1: You should. It''s a great experience.
+
+    User 2: I know. I''m trying to save up some money so I can go on a big trip.
+
+    User 1: That sounds like a great idea.
+
+    User 2: Yeah, I think so too.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, read, and play video games.
+
+    User 1: I like to do all of those things too.
+
+    User 2: That''s cool. We should hang out sometime.
+
+    User 1: That sounds like fun.
+
+    User 2: Great. I''ll give you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

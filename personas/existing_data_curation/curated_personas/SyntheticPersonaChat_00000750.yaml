@@ -1,0 +1,104 @@
+id: '00000750'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 750
+data:
+  user 1 personas: 'I like to swim.
+
+    I like to read.
+
+    My favorite show is thevoice.
+
+    I am blue and tall.
+
+    I work for the navy.'
+  user 2 personas: 'I hate red meat.
+
+    I love to surf.
+
+    I live near the ocean.
+
+    My hair is brown and curly.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to surf!
+
+    User 1: That''s so cool! I''ve always wanted to learn how to surf.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will!
+
+    User 2: Where do you live?
+
+    User 1: I live in California.
+
+    User 2: Oh, that''s great! There are a lot of great places to surf in California.
+
+    User 1: Yeah, I know! I''ve been wanting to go surfing for a while now.
+
+    User 2: You should definitely do it! It''s a great way to relax and have fun.
+
+    User 1: I will!
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to read, swim, and watch TV.
+
+    User 2: That''s great! I like to read and swim too.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and romance novels.
+
+    User 1: I love historical fiction too! I''ve read a lot of books about the American Civil War.
+
+    User 2: That''s awesome! I''ve read a few books about the Civil War too.
+
+    User 1: What''s your favorite book about the Civil War?
+
+    User 2: My favorite book about the Civil War is "The Killer Angels" by Michael Shaara.
+
+    User 1: That''s a great book! I''ve read it too.
+
+    User 2: It''s one of my favorite books of all time.
+
+    User 1: Me too!
+
+    User 2: What''s your favorite TV show?
+
+    User 1: My favorite TV show is "The Voice".
+
+    User 2: I love "The Voice" too! I''ve been watching it since it first came out.
+
+    User 1: Me too! It''s such a great show.
+
+    User 2: Yeah, it is.
+
+    User 1: What''s your favorite season of "The Voice"?
+
+    User 2: My favorite season is season three.
+
+    User 1: That''s my favorite season too! I loved that season with Christina Aguilera and Adam Levine.
+
+    User 2: Yeah, that was a great season!
+
+    User 1: I''m so glad we have the same favorite season of "The Voice".
+
+    User 2: Me too! It''s such a great season.
+
+    User 1: I wonder if they''ll ever bring Christina Aguilera back.
+
+    User 2: I hope so! She was so great on the show.
+
+    User 1: Me too! I miss her.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

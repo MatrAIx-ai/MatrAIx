@@ -1,0 +1,112 @@
+id: '00003012'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3012
+data:
+  user 1 personas: 'I am from san fransico.
+
+    I like to smell my own farts.
+
+    I like to place blame on other people even when i know it is my fault.
+
+    My beer gut is so huge i haven t seen my feet in two years.
+
+    I am always the one who buys the beers.'
+  user 2 personas: 'I like football.
+
+    My favourite band is kings of leon.
+
+    I work in the it industry.
+
+    I am a christian.
+
+    My father used to work for microsoft.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. Where are you from?
+
+    User 2: I''m from San Francisco.
+
+    User 1: Oh, nice! I''ve never been to San Francisco. What''s it like there?
+
+    User 2: It''s a great city! There''s always something to do, and the people are really friendly.
+
+    User 1: That sounds fun. I might have to visit sometime.
+
+    User 2: You should!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play football, go to concerts, and hang out with my friends.
+
+    User 1: Football? That''s cool! I''ve never played football before, but I''ve always wanted to.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: So, what''s your favorite band?
+
+    User 1: I don''t really have a favorite band, but I like Kings of Leon.
+
+    User 2: Oh, they''re great! I saw them in concert a few years ago. It was amazing.
+
+    User 1: Really? That''s awesome! I wish I could have seen them.
+
+    User 2: Maybe they''ll come back to town again sometime.
+
+    User 1: I hope so.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m in the IT industry.
+
+    User 2: Oh, that''s cool. What kind of work do you do?
+
+    User 1: I do a lot of programming and systems administration.
+
+    User 2: Oh, that sounds complicated.
+
+    User 1: It''s not too bad. It''s just a lot of problem solving.
+
+    User 2: I can imagine.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a Christian minister.
+
+    User 1: Oh, really? That''s awesome! I''m not very religious, but I respect people who are.
+
+    User 2: Thank you. That''s nice of you to say.
+
+    User 1: So, what do you do as a minister?
+
+    User 2: I preach sermons, teach Sunday school, and counsel people.
+
+    User 1: Oh, that sounds like a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go out to dinner, go to the movies, and read.
+
+    User 2: Oh, me too! I love going out to dinner.
+
+    User 1: Me too! What kind of food do you like to eat?
+
+    User 2: I like all kinds of food, but I''m especially fond of Italian food.
+
+    User 1: Me too! Italian food is my favorite.
+
+    User 2: Oh, that''s awesome! We should go out to dinner together sometime.
+
+    User 1: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

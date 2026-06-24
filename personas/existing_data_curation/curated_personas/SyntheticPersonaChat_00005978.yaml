@@ -1,0 +1,48 @@
+id: 00005978
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5978
+data:
+  user 1 personas: 'I am going to school for writing.
+
+    I love to read fantasy novels and poetry.
+
+    My mother is a librarian.
+
+    I would like to be a journalist one day.'
+  user 2 personas: 'I like victorian things.
+
+    I am a romantic.
+
+    I collect dolls.
+
+    I like antiques.'
+  Best Generated Conversation: 'User 1: Hello! I''m (user 1).
+
+    User 2: Hello! I''m (user 2).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read fantasy novels and poetry. I collect dolls and antiques. I also love going to the library.
+
+    User 1: That sounds great! I love reading fantasy novels and poetry too. My mother is a librarian.
+
+    User 2: That''s awesome! I think it''s so cool that you''re going to school for writing. I''ve always wanted to be a journalist, but I''m not sure if I''m brave enough.
+
+    User 1: You should go for it! I''m sure you''d be great. What kind of stories do you like to write?
+
+    User 2: I like to write romance novels. I love writing about love and relationships.
+
+    User 1: That sounds great! I love reading romance novels. I''m always looking for new authors to read.
+
+    User 2: Well, you should check out my books! I''m sure you''d love them.
+
+    User 1: I will! Thanks for the suggestion.
+
+    User 2: No problem! It was nice to meet you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00000852
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 852
+data:
+  user 1 personas: 'I love winning.
+
+    I don t like feeling obligated to hang out with someone.
+
+    I love sunny days.
+
+    Coffee is important to me.'
+  user 2 personas: 'I do not like green eggs and ham.
+
+    I love cooking.
+
+    I have a missing pinky toe.
+
+    I enjoy swimming.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! Nice to meet you!
+
+    User 1: Nice to meet you too! What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I love cooking, swimming, and spending time with my friends and family.
+
+    User 1: Those all sound like fun things to do! I love sunny days, coffee, and winning too!
+
+    User 2: I''m not a big fan of coffee, but I love sunny days and winning too!
+
+    User 1: What''s your favorite thing about sunny days?
+
+    User 2: I love being able to go outside and do activities without having to worry about the weather.
+
+    User 1: Me too! I love going for walks, biking, and playing sports on sunny days.
+
+    User 2: Those are all great activities to do on a sunny day!
+
+    User 1: So, what do you like to cook?
+
+    User 2: I love cooking all sorts of things, but my favorite thing to cook is probably pasta.
+
+    User 1: Pasta is delicious! I love it with marinara sauce.
+
+    User 2: Marinara sauce is my favorite too!
+
+    User 1: I''m glad we agree!
+
+    User 2: Me too!
+
+    User 1: So, what''s your favorite thing to do with your friends and family?
+
+    User 2: I love spending time with my friends and family, but my favorite thing to do with them is probably go on vacation.
+
+    User 1: Vacations are always so much fun!
+
+    User 2: They are! I love being able to relax and spend time with the people I love.
+
+    User 1: Me too! Vacations are the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

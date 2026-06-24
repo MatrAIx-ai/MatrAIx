@@ -1,0 +1,64 @@
+id: '00001441'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1441
+data:
+  user 1 personas: 'I work on trucks.
+
+    I have a doberman.
+
+    I am a man.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I work as a legal assistant in a law firm that basically only handles real estate work.
+
+    I enjoying keeping up with the news and learning about political issues.
+
+    I also enjoy reading novels by female authors and exploring new areas.
+
+    I often spend my free time engaging in activism work with friends and family.
+
+    I enjoy this type of activist work , as my job is not very personally fulfilling.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for work?
+
+    User 2: I work as a legal assistant in a law firm that basically only handles real estate work.
+
+    User 1: Oh, that sounds interesting. What do you enjoy most about your job?
+
+    User 2: I enjoy the research and writing aspects of my job, and I also like getting to know my clients.
+
+    User 1: That''s good to hear. What do you do for fun?
+
+    User 2: I enjoy keeping up with the news and learning about political issues. I also enjoy reading novels by female authors and exploring new areas.
+
+    User 1: Those all sound like great hobbies. I like to read novels by female authors too. Do you have any recommendations?
+
+    User 2: Sure, I really enjoyed "A Woman in the River" by Sarah Perry and "The Red Tent" by Anita Diamant.
+
+    User 1: Thanks for the recommendations! I''ll check them out. What about exploring new areas? Have you been to any interesting places lately?
+
+    User 2: I recently went to New York City for a weekend with my friends. It was a lot of fun exploring the city and seeing all the sights.
+
+    User 1: That sounds like a great trip. I''ve always wanted to go to New York City.
+
+    User 2: You should definitely go! It''s a great city.
+
+    User 1: I think I will one day.
+
+    User 2: Good! I hope you have a great time.
+
+    User 1: Thanks. I''m sure I will.
+
+    User 2: So, what else do you enjoy doing for fun?
+
+    User 1: I also enjoy working on my truck. I like to fix it up and make it look nice.
+
+    User 2: That sounds like a fun hobby. Do you have any pictures of your truck?
+
+    User 1: Sure, I can show you some.
+
+    User 2: Great! I''d love to see them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

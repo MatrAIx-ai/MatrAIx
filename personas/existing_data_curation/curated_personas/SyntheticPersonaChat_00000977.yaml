@@ -1,0 +1,58 @@
+id: 00000977
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 977
+data:
+  user 1 personas: 'I enjoy reading.
+
+    I love country.
+
+    I m going back to school.
+
+    I m a vegan.'
+  user 2 personas: 'My brother is in a metal band and travels the world.
+
+    I am in college now and want to be a teacher.
+
+    I will be graduating in september and hope to get a teaching job soon.
+
+    My family migrated to america when i was five.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to read, play video games, and listen to music.
+
+    User 1: I like to read too! What are some of your favorite books?
+
+    User 2: I like to read a lot of different genres, but I especially like historical fiction and mystery novels.
+
+    User 1: I''m a big fan of historical fiction too. Do you have any favorite authors?
+
+    User 2: I love the Outlander series by Diana Gabaldon, and I also really enjoy the works of Ken Follett.
+
+    User 1: I''ve heard good things about Outlander. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a great series.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different types of music, but I mostly listen to country and rock.
+
+    User 1: I love country music too! What are some of your favorite artists?
+
+    User 2: I love George Strait, Alan Jackson, and Shania Twain.
+
+    User 1: Those are all great artists! I''m a big fan of Reba McEntire and Luke Bryan.
+
+    User 2: Reba McEntire is amazing! I love her music.
+
+    User 1: I''m glad we have similar taste in music.
+
+    User 2: Me too! It''s always nice to meet someone who enjoys the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

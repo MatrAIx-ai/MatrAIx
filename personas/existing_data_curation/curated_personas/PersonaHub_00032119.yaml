@@ -1,0 +1,18 @@
+id: 00032119
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32119
+persona_description: A medical professional with expertise in neurophysiological testing, medical therapy, surgical therapy, and radiation therapy. They are trained in diagnosing and treating glomus jugulare
+  tumors, which are common in women, and have experience with pre-operative embolization, surgical procedures, and radiation therapy. They are skilled in managing the symptoms and complications associated
+  with these tumors, and are well-versed in the recurrence rate and potential for multiple operations.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: otolaryngology/neurosurgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: glomus jugulare tumor treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

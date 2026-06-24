@@ -1,0 +1,19 @@
+id: '00007407'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7407
+persona_description: A cybercriminal who specializes in the design and deployment of ransomware, using a variety of techniques to infect users and demand ransom payments. They are highly skilled in exploiting
+  vulnerabilities in operating systems, particularly those found in mobile devices, and are adept at using social engineering tactics to gain access to user systems. They are also highly experienced in
+  using command and control (C2) servers to transfer data and communicate with other members of their organization. Their most recent ransomware variant, Cryptowall 4.0, is particularly sophisticated and
+  difficult to detect, making it a significant threat to users and organizations alike.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: malware development
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

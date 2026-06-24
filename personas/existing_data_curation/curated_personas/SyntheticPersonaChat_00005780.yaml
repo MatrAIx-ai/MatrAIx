@@ -1,0 +1,86 @@
+id: 00005780
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5780
+data:
+  user 1 personas: 'I have been married for 6 years.
+
+    I like to go to the casino on weekends.
+
+    I am a financial analyst for a brewery.
+
+    I have tried 35 different types of beer in my lifetime.'
+  user 2 personas: 'I live in the mountains.
+
+    I know how to pilot a plane.
+
+    My hobby is photography.
+
+    I am a lawyer.
+
+    I do not own a television.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: I''m a financial analyst for a brewery.
+
+    User 2: Oh, that''s cool. I''m a lawyer.
+
+    User 1: Really? What kind of law do you practice?
+
+    User 2: I mostly do environmental law.
+
+    User 1: That''s interesting. I''ve never met an environmental lawyer before.
+
+    User 2: Yeah, it''s a pretty niche field.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go hiking and camping in the mountains. I also like to take photos of the scenery.
+
+    User 1: That sounds like fun. I''ve never been a big hiker, but I do like camping.
+
+    User 2: Well, you should come up to the mountains sometime. I''ll show you some of the best trails.
+
+    User 1: I''d love to.
+
+    User 2: Great! We''ll have to plan a trip.
+
+    User 1: Sounds good.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to go to the casino on weekends. I''ve been married for 6 years, and my wife doesn''t like to go, so I go with my friends.
+
+    User 2: Oh, that sounds fun. I''ve never been to a casino before.
+
+    User 1: You should go sometime. It''s a lot of fun.
+
+    User 2: I might have to.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to try different types of food. I''ve tried 35 different types of beer in my lifetime.
+
+    User 1: That''s a lot of beer! I''ve never tried that many different types of beer.
+
+    User 2: I like to try different beers from different countries. I''ve even tried some beers from Africa.
+
+    User 1: That''s awesome. I''ve never tried any beer from Africa.
+
+    User 2: You should try it sometime. It''s really good.
+
+    User 1: I might have to.
+
+    User 2: So, what do you think? Are you ready for a trip to the mountains?
+
+    User 1: I''m definitely ready.
+
+    User 2: Great! We can plan a trip next weekend.
+
+    User 1: Sounds good. I''ll start packing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

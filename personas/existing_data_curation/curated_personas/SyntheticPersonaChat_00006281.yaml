@@ -1,0 +1,76 @@
+id: 00006281
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6281
+data:
+  user 1 personas: 'I own a dog who is my best friend.
+
+    I have never had alcohol.
+
+    I am content with my life.
+
+    I sing in the shower.
+
+    I am very shy.'
+  user 2 personas: 'I am very religious.
+
+    I love to watch game shows.
+
+    I am easily agitated.
+
+    I hate green beans.
+
+    I just took a trip to london.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I love to watch game shows!
+
+    User 1: That''s really cool! I''ve never been a big fan of game shows, but I can see the appeal.
+
+    User 2: I love the excitement of it all! And I love trying to guess who''s going to win.
+
+    User 1: I guess that makes sense. I''m more of a sports fan myself.
+
+    User 2: Oh, that''s cool! What''s your favorite sport?
+
+    User 1: I love football! I''m a big fan of the [user 1''s favorite team].
+
+    User 2: That''s awesome! I''m a big fan of [user 2''s favorite team].
+
+    User 1: Nice! Maybe we can catch a game together sometime.
+
+    User 2: That would be fun!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to travel! I just got back from a trip to London.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to go to London.
+
+    User 2: It was amazing! I loved seeing all the historical sites.
+
+    User 1: I bet it was! I''m sure you took some great pictures.
+
+    User 2: I did! I''ll have to show you them sometime.
+
+    User 1: I''d love to see them!
+
+    User 2: So, what do you think? Are we going to catch a game sometime?
+
+    User 1: Yeah, that would be great!
+
+    User 2: Awesome! I''ll let you know when I''m free.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

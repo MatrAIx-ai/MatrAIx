@@ -1,0 +1,70 @@
+id: 00006090
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6090
+data:
+  user 1 personas: 'I want to own a house on a beach.
+
+    Watching nascar races is a great way to spend a sunday for me.
+
+    I love eating at mcdonalds.
+
+    My parents both are school teachers.'
+  user 2 personas: 'I work for a government agency.
+
+    My favorite food is pizza.
+
+    I prefer baseball over football.
+
+    My favorite team is the washington nationals.'
+  Best Generated Conversation: 'User 1: I just got back from a trip to the beach. It was so relaxing!
+
+    User 2: That sounds amazing! I love the beach. I wish I could go more often.
+
+    User 1: You should! It''s a great place to relax and unwind.
+
+    User 2: I know, I know. I''ll try to get away there more often.
+
+    User 1: Good! Now, what do you like to do for fun?
+
+    User 2: I like to play video games, watch baseball, and eat pizza.
+
+    User 1: Pizza is my favorite food too! What''s your favorite kind?
+
+    User 2: I like pepperoni pizza the most, but I''ll eat any kind of pizza.
+
+    User 1: Me too! I love pizza. What''s your favorite baseball team?
+
+    User 2: I''m a big fan of the Washington Nationals.
+
+    User 1: Oh, that''s cool! I''m a fan of the Baltimore Orioles.
+
+    User 2: Nice! I''m actually from Maryland, so I grew up watching the Orioles.
+
+    User 1: That''s cool! I''m from Pennsylvania, so I grew up watching the Pirates.
+
+    User 2: Oh, that''s awesome! I''ve always liked the Pirates.
+
+    User 1: What''s your favorite baseball memory?
+
+    User 2: My favorite baseball memory is when I went to a game at Nationals Park and saw Bryce Harper hit a walk-off home run.
+
+    User 1: That''s awesome! I''ve always wanted to see Bryce Harper play live.
+
+    User 2: He''s really exciting to watch. He''s got so much power.
+
+    User 1: I know! He''s a beast.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''ve always been interested in software engineering.
+
+    User 1: It''s a lot of fun! I get to work on cool projects and solve interesting problems.
+
+    User 2: That''s awesome! I''m glad you enjoy your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

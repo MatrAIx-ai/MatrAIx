@@ -1,0 +1,62 @@
+id: 00008380
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8380
+data:
+  user 1 personas: 'My family has three dogs and my dog is named maddie.
+
+    I just started the tenth grade and my concentration is in science.
+
+    I live in america in the state of florida.
+
+    I am fifteen years old.
+
+    I have braces.'
+  user 2 personas: 'I volunteer in my sons boy scout troop.
+
+    I can speak four languages fluently.
+
+    I can do many celebrity impressions.
+
+    I am an award winning th member.
+
+    I work as a plumber.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. I''m new in town and I''m looking for people to hang out with.
+
+    User 2: Hi, I''m [name]. What are your interests?
+
+    User 1: I like to read, write, and play video games. I also have three dogs and my dog''s name is Maddie.
+
+    User 2: That''s cool! I also like to read and play video games. I''m not really a dog person, but I can respect the love you have for your dog.
+
+    User 1: Thanks! What are some of your favorite books?
+
+    User 2: I like a lot of different types of books, but my favorites are probably fantasy and science fiction.
+
+    User 1: Me too! I love the Harry Potter series and the Lord of the Rings series.
+
+    User 2: Those are great! I also love the Percy Jackson series and the Hunger Games series.
+
+    User 1: Nice! What are some of your favorite video games?
+
+    User 2: I like a lot of different video games, but my favorites are probably the Mario series, the Zelda series, and the Final Fantasy series.
+
+    User 1: Those are great! I also love the Mario series and the Zelda series.
+
+    User 2: Me too! They''re both so classic and fun to play.
+
+    User 1: I''m glad we have so much in common.
+
+    User 2: Me too! Maybe we can hang out sometime and play some video games together.
+
+    User 1: That would be great! I''ll give you my number and we can figure something out.
+
+    User 2: Sounds good! I''m free most weekends.
+
+    User 1: Great! I''ll text you later.
+
+    User 2: Sounds good! Talk to you later.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

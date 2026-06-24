@@ -1,0 +1,84 @@
+id: 00000967
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 967
+data:
+  user 1 personas: 'I enjoy fishing.
+
+    I watch a lot of tv.
+
+    I work on cars for a living.
+
+    I live alone.'
+  user 2 personas: 'I take her to the park.
+
+    My boyfriend is unemployed.
+
+    We live in an apartment.
+
+    I have a 7 year old daughter.
+
+    I am 25 years old.'
+  Best Generated Conversation: 'User 1: Hi! What are you up to?
+
+    User 2: Not much, just watching TV.
+
+    User 1: Me too! What are you watching?
+
+    User 2: I''m watching a documentary about fishing.
+
+    User 1: Oh, that''s cool! I love fishing!
+
+    User 2: Me too! I used to fish with my dad when I was a kid.
+
+    User 1: That''s awesome! I''m glad you have a good memory of your dad.
+
+    User 2: Yeah, he was a great man.
+
+    User 1: I''m sorry to hear that he''s gone.
+
+    User 2: Thanks.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is, but it''s also a lot of work.
+
+    User 1: I''m sure it is.
+
+    User 2: But I love it.
+
+    User 1: I''m glad you do.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work on cars for a living.
+
+    User 2: Oh, that''s cool!
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite thing to do?
+
+    User 1: I like fishing, watching TV, and working on cars.
+
+    User 2: Those are all great things to do!
+
+    User 1: Yeah, they are.
+
+    User 2: So, what''s your favorite type of fish to catch?
+
+    User 1: I like to catch bass.
+
+    User 2: Oh, nice! I like to catch bass too.
+
+    User 1: We should go fishing sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

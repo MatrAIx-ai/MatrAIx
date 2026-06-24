@@ -1,0 +1,88 @@
+id: '00000712'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 712
+data:
+  user 1 personas: 'I like to hunt.
+
+    Have both daughters and sons.
+
+    I love basketball.
+
+    I am not married.'
+  user 2 personas: 'My husband is a pastor.
+
+    I have two children.
+
+    I sell clothing on facebook.
+
+    I do not like to clean house.
+
+    My hair is curly and dark.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sell clothing on Facebook.
+
+    User 1: That''s cool! I love to hunt.
+
+    User 2: Oh, really? That''s so interesting!
+
+    User 1: Yeah, I love being outdoors and getting exercise.
+
+    User 2: I can understand that. I''m not much of an outdoors person myself.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends.
+
+    User 1: That''s great! I have a lot of family and friends too.
+
+    User 2: I also like to read and watch movies.
+
+    User 1: I love to read too! I read a lot of nonfiction and thrillers.
+
+    User 2: I like to read romance and historical fiction.
+
+    User 1: That''s cool! I''ve never been much into romance or historical fiction, but I''m always open to trying new things.
+
+    User 2: You should! I''m sure you''d like them.
+
+    User 1: I''ll have to check them out sometime.
+
+    User 2: You do! They''re really great.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that''s cool! I''m not married.
+
+    User 2: Oh, really? Why not?
+
+    User 1: I''m not sure. I''ve just never met the right person.
+
+    User 2: I''m sure you will someday.
+
+    User 1: I hope so.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great! I''ve always wanted to be a teacher.
+
+    User 1: It''s a great job! I love working with kids.
+
+    User 2: I bet you do! I''m not sure if I could handle being around kids all day.
+
+    User 1: It''s not always easy, but it''s definitely rewarding.
+
+    User 2: I''m sure it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

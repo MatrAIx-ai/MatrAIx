@@ -1,0 +1,82 @@
+id: 00006082
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6082
+data:
+  user 1 personas: 'I volunteer at an animal shelter.
+
+    I am a librarian.
+
+    My favorite kind of food is italian.
+
+    I live in pittsburgh.'
+  user 2 personas: 'I have owned two mustangs.
+
+    My favorite color is purple.
+
+    I am not a fan of science.
+
+    I am currently looking for a job.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m currently looking for a job, but I used to be a librarian.
+
+    User 1: Oh, cool! I love books. What was your favorite part about being a librarian?
+
+    User 2: I loved helping people find the books they were looking for. I also loved working with kids and getting them excited about reading.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It was! I''m sad that I had to leave the library, but I''m excited to start a new chapter in my career.
+
+    User 1: I''m sure you''ll find something great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are you looking for in a new job?
+
+    User 2: I''m looking for something that''s challenging and rewarding. I''m also looking for a job that will help me make a difference in the world.
+
+    User 1: That''s great. I''m sure you''ll find something that fits your needs.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I love to read, go to the movies, and spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I try to make the most of my free time.
+
+    User 1: I like that.
+
+    User 2: So, what are you doing today?
+
+    User 1: I''m just hanging out. I''m not really doing anything exciting.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, but I''m not complaining. I''m enjoying the peace and quiet.
+
+    User 2: I can understand that.
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m going to go to the library and check out some books.
+
+    User 1: That sounds like fun. I love the library.
+
+    User 2: Me too! I''m excited to see what they have.
+
+    User 1: I''m sure you''ll find some great books.
+
+    User 2: I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

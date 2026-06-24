@@ -1,0 +1,70 @@
+id: 00006018
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6018
+data:
+  user 1 personas: 'I have a dog and we go for walks.
+
+    I help my neighbor.
+
+    I live in a city.
+
+    I like to go to the farmers markets to buy local veggies and fruits.'
+  user 2 personas: 'I have 3 children.
+
+    I have a law degree.
+
+    I drive an suv.
+
+    I have 3 dogs.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go to the farmers markets to buy local veggies and fruits.
+
+    User 1: That''s great! I love farmers markets too. I like to get fresh produce and support local farmers.
+
+    User 2: Me too! I love trying new fruits and veggies that I wouldn''t normally find in the grocery store.
+
+    User 1: What''s your favorite thing to buy at the farmers market?
+
+    User 2: I love buying fresh tomatoes and cucumbers. They''re so delicious!
+
+    User 1: Me too! I love making salads with fresh tomatoes and cucumbers.
+
+    User 2: I love salads too! I like to add fresh herbs and feta cheese.
+
+    User 1: That sounds delicious! I might have to try that.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go for walks with my dog.
+
+    User 1: That''s great! I love dogs. What kind of dog do you have?
+
+    User 2: I have a golden retriever.
+
+    User 1: Golden retrievers are so sweet! I had one growing up.
+
+    User 2: They are! They''re the best dogs.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a lawyer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in law.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I can imagine. So, what''s your favorite part about being a lawyer?
+
+    User 2: I like helping people. I feel good knowing that I''m making a difference in people''s lives.
+
+    User 1: That''s a great reason to be a lawyer. I''m sure you''re doing a great job.
+
+    User 2: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

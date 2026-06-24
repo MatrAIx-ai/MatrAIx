@@ -1,0 +1,60 @@
+id: 00002128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2128
+data:
+  user 1 personas: 'I am in high school.
+
+    I cs and ds.
+
+    I love sweets.
+
+    I sleep a lot.'
+  user 2 personas: 'I sing karaoke every thursday night.
+
+    I was a champion downhill skier in college.
+
+    My favorite color is yellow.
+
+    I vacation in florida every winter.
+
+    My sister is a published author.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to ski, sing karaoke, and travel.
+
+    User 1: I love to ski too! I''m also a big fan of karaoke.
+
+    User 2: That''s great! Do you have a favorite song to sing?
+
+    User 1: I love to sing "I Will Survive" by Gloria Gaynor.
+
+    User 2: That''s a great song! I love to sing "Don''t Stop Me Now" by Queen.
+
+    User 1: That''s another great song! I love to sing it too.
+
+    User 2: Do you like to travel?
+
+    User 1: I love to travel! I''ve been to a lot of different places, but my favorite place to travel is Florida.
+
+    User 2: I love Florida too! I go to Florida every winter with my family.
+
+    User 1: That''s great! I love to go to Florida in the winter too.
+
+    User 2: What do you like to do in Florida?
+
+    User 1: I like to go to the beach, swim, and sunbathe.
+
+    User 2: That sounds like fun! I like to do the same things in Florida.
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: It''s nice to meet you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

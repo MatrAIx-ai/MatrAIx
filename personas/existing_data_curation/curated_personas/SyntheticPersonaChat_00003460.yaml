@@ -1,0 +1,66 @@
+id: '00003460'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3460
+data:
+  user 1 personas: 'I love the chainsmokers.
+
+    I work as a lifeguard.
+
+    I also love to travel.
+
+    My dad works offshore.'
+  user 2 personas: 'I am a baseball player.
+
+    I went to miami university.
+
+    I make a million dollars a year.
+
+    I play for the baltimore orioles.
+
+    I am married and have three kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baseball player for the Baltimore Orioles.
+
+    User 1: Oh, that''s cool! I love baseball.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: So, what''s it like to play for the Orioles?
+
+    User 2: It''s great! I love being a part of such a historic organization.
+
+    User 1: I bet. What''s your favorite thing about playing baseball?
+
+    User 2: I love the competition. It''s always fun to try to beat the other team.
+
+    User 1: I can imagine. What''s your favorite part of living in Baltimore?
+
+    User 2: I love the food! There are so many great restaurants here.
+
+    User 1: I''ve heard good things about the food in Baltimore. What''s your favorite restaurant?
+
+    User 2: I love The Helmand. It''s an Afghan restaurant with amazing food.
+
+    User 1: I''ll have to check it out! So, what''s your favorite thing about being a baseball player?
+
+    User 2: I love the travel. I get to see a lot of different places.
+
+    User 1: That''s a good perk. What''s your favorite place you''ve ever traveled to?
+
+    User 2: I loved going to Japan. The culture is so different from here.
+
+    User 1: I bet. I''ve always wanted to go to Japan.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I''ll definitely put it on my list.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00007360'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7360
+data:
+  user 1 personas: 'I live with my husband and two children.
+
+    I love to take road trips.
+
+    I work as a meeting coordinator.
+
+    I live in upstate new york.
+
+    My favorite place to visit is seattle.'
+  user 2 personas: 'It s important to me to make my clients happy.
+
+    I work in sales.
+
+    I always answer my cellphone.
+
+    When things go wrong , i do everything i can to make it right.
+
+    I take fridays off in the summer.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I''m a sales manager.
+
+    User 1: Oh, that sounds interesting. What''s your favorite part of the job?
+
+    User 2: I like working with people and helping them find the right products or services.
+
+    User 1: That''s great. What''s your least favorite part of the job?
+
+    User 2: Probably the long hours.
+
+    User 1: I can imagine. I work as a meeting coordinator, so I can relate to that.
+
+    User 2: It''s tough, but it''s worth it when you see your clients happy.
+
+    User 1: I know what you mean. My favorite part of my job is seeing the people I work with happy.
+
+    User 2: That''s what it''s all about.
+
+    User 1: Do you have any hobbies?
+
+    User 2: I love to take road trips. I''ve been all over the country.
+
+    User 1: Me too! I''ve been to most of the states. My favorite place to visit is Seattle.
+
+    User 2: I love Seattle! I''ve been there a few times for work.
+
+    User 1: It''s such a beautiful city. I love the mountains and the waterfront.
+
+    User 2: Me too. I love going hiking in the mountains and kayaking on the waterfront.
+
+    User 1: I''m so glad I met you. We have so much in common.
+
+    User 2: Me too. I hope we can stay in touch.
+
+    User 1: Definitely! We should go on a road trip together sometime.
+
+    User 2: That would be awesome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

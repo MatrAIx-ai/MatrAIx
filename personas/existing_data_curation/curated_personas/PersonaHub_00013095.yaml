@@ -1,0 +1,19 @@
+id: 00013095
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 13095
+persona_description: A meteorologist who specializes in the use of numerical weather prediction models to simulate and predict atmospheric conditions, including wind, temperature, humidity, and vertical
+  air mixing, to accurately model and simulate pollutant formation in air quality modeling processes. The persona has expertise in meteorological modeling, including the use of state-of-the-science, four-dimensional
+  computer models that incorporate atmospheric physical laws and measured observations to accurately predict weather conditions over time and space, and the role of a meteorological model in air quality
+  modeling. The persona is also proficient in processing observed meteorological data and preparing meteorological model outputs for the photochemical model.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: numerical weather prediction and air quality modeling
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

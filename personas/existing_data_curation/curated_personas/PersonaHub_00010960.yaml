@@ -1,0 +1,18 @@
+id: 00010960
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10960
+persona_description: A user who is interested in using AutoCAD and is looking for methods to delete, restore, and manage objects in the drawing. They are likely to be proficient in using the ERASE command
+  and are familiar with the concepts of objects, such as blocks, dimensions, layers, linetypes, and text styles. They may also be interested in using the OOPS command to restore erased objects and the PURGE
+  command to remove unused named items.
+expertise:
+  general_domain_top1pct: Computer-Aided Design (CAD)
+  specific_domain_top1pct: AutoCAD
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

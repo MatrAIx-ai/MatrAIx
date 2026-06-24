@@ -1,0 +1,20 @@
+id: '00002531'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2531
+persona_description: A scientist with expertise in environmental science and water quality, specifically focused on the study of dissolved solids in streams. They are responsible for analyzing and interpreting
+  data from field measurements and modeling studies to provide comprehensive assessments of the Nation's streams. They are skilled in statistical modeling, environmental impacts, and decision-making processes
+  related to water quality. They have a deep understanding of the sources and transport processes leading to dissolved solids concentrations observed in field measurements and are capable of estimating
+  contributions from different dissolved-solids sources and the resulting concentrations in unmonitored streams. They are also proficient in developing decision support systems for evaluating reductions
+  scenarios that target one or multiple sources and assessing the change in the amount of dissolved solids transported downstream waters.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Water Quality
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

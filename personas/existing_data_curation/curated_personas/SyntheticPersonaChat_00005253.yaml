@@ -1,0 +1,104 @@
+id: '00005253'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5253
+data:
+  user 1 personas: 'I currently work at mcdonalds.
+
+    I live with my parents.
+
+    I am saving money to buy my first car.
+
+    I am taking a year off before i start college.
+
+    I am eighteen years old.'
+  user 2 personas: 'I talk very fast.
+
+    I think the moon landing was faked.
+
+    I can type 140 words per minute.
+
+    I like the color red.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi, I''m [username].
+
+    User 1: I''m eighteen years old. What about you?
+
+    User 2: I''m twenty-two.
+
+    User 1: Where do you live?
+
+    User 2: I live in [city]. What about you?
+
+    User 1: I live in [city].
+
+    User 2: Oh, that''s cool. What do you do for work?
+
+    User 1: I''m currently working at McDonald''s. What about you?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''ve always wanted to be a software engineer.
+
+    User 2: It''s a lot of fun. What are your plans after high school?
+
+    User 1: I''m taking a year off before I start college. I''m saving up money to buy my first car.
+
+    User 2: That''s smart. I wish I had done that.
+
+    User 1: Do you have any siblings?
+
+    User 2: I have one sister.
+
+    User 1: Oh, that''s cool. I have two brothers.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: Me too! I love playing video games.
+
+    User 1: What''s your favorite game?
+
+    User 2: I''m not sure. I have a lot of favorites.
+
+    User 1: I like to play Call of Duty.
+
+    User 2: I''ve never played that game.
+
+    User 1: It''s a lot of fun. You should try it.
+
+    User 2: I might.
+
+    User 1: So, what do you think of the moon landing?
+
+    User 2: I think it was faked.
+
+    User 1: Really? Why do you think that?
+
+    User 2: I don''t know. There are just a lot of things about it that don''t make sense.
+
+    User 1: Like what?
+
+    User 2: Like the fact that there are no stars in the pictures.
+
+    User 1: That''s because the astronauts used a flash.
+
+    User 2: But why would they do that?
+
+    User 1: To make the pictures brighter.
+
+    User 2: But that''s not how a flash works.
+
+    User 1: Yes, it is.
+
+    User 2: No, it''s not.
+
+    User 1: Okay, let''s agree to disagree.
+
+    User 2: Sure.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

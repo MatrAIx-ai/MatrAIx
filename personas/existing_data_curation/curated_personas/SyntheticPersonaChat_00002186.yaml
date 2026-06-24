@@ -1,0 +1,52 @@
+id: 00002186
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2186
+data:
+  user 1 personas: 'I grew up on a farm.
+
+    I eat eggs and bacon for breakfast.
+
+    On weekends i go out with friends.
+
+    When i turned 18 , my family moved across the country.'
+  user 2 personas: 'I do not work.
+
+    I hate tacos.
+
+    I like to swim.
+
+    My favorite drink is chocolate milk.
+
+    I am bald.'
+  Best Generated Conversation: 'User 1: I grew up on a farm.
+
+    User 2: I''m not sure I''ve ever met anyone who grew up on a farm. What was it like?
+
+    User 1: It was a lot of hard work, but it was also a lot of fun. I loved being outside all the time and getting to work with animals.
+
+    User 2: That sounds like it was a great experience. I''m not sure I''m cut out for that kind of work, though. I''m more of a city person.
+
+    User 1: I can understand that. I like being in the city too, but I also love the peace and quiet of the countryside.
+
+    User 2: I guess I could see how that would be appealing. So, what do you like to do for fun on the weekends?
+
+    User 1: I like to go out with my friends, go to the movies, or just relax at home. I also like to read and go swimming.
+
+    User 2: That sounds like a lot of fun. I like to go out with my friends too, but I also like to spend time alone. I like to read, watch movies, and play video games.
+
+    User 1: I like to read too, but I don''t really play video games. I''m not really good at them.
+
+    User 2: That''s okay. I''m not very good at them either, but I still have fun playing them.
+
+    User 1: I guess I could see how that would be fun. I''m just not sure I have the patience for it.
+
+    User 2: It''s not for everyone. But it''s a lot of fun to play with friends.
+
+    User 1: I can see that. Well, it was nice talking to you.
+
+    User 2: You too. Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00002750'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2750
+data:
+  user 1 personas: 'I do yoga on tuesdays.
+
+    I work five days a week.
+
+    I enjoy shopping.
+
+    I don t have children.
+
+    I go to the pool every thursday for three hours.'
+  user 2 personas: 'I work at a hospital.
+
+    I m twenty years old.
+
+    I love pasta.
+
+    I m a student at a small community college.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read and I also enjoy playing video games.
+
+    User 1: Me too! I love to read novels and play video games.
+
+    User 2: That''s great! What''s your favorite book?
+
+    User 1: I have so many favorite books, but one of my favorites is "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a really funny book.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I love playing "The Legend of Zelda" series.
+
+    User 2: I''ve never played that game before. What''s it about?
+
+    User 1: It''s a fantasy adventure game where you play as Link, a young hero who must save the princess Zelda from Ganon, the evil wizard.
+
+    User 2: That sounds like a fun game. I''ll have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: What do you do for work?
+
+    User 1: I work as a software engineer.
+
+    User 2: Oh, that''s cool! What kind of software do you work on?
+
+    User 1: I work on software for a small company that makes medical devices.
+
+    User 2: That sounds like interesting work.
+
+    User 1: It is! I really like it.
+
+    User 2: What do you like most about your job?
+
+    User 1: I like the challenge of working on new and innovative software. I also like the fact that my work is helping people.
+
+    User 2: That''s great! It sounds like you have a really good job.
+
+    User 1: I do! I''m very lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

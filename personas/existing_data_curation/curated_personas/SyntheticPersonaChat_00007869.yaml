@@ -1,0 +1,84 @@
+id: 00007869
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7869
+data:
+  user 1 personas: 'We lived in virginia while i was growing up.
+
+    My mother was a teacher.
+
+    My father was a cop.
+
+    I know how to drive a stickshift.
+
+    I am a truck driver.'
+  user 2 personas: 'My major is in business administration.
+
+    I am a college student.
+
+    My dad is a dentist and my mom is a teacher.
+
+    I work at a daycare.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. I''m a truck driver.
+
+    User 2: Hi, my name is [user 2''s name]. I''m a college student majoring in business administration.
+
+    User 1: Cool! What do you want to do with your degree?
+
+    User 2: I''m not sure yet. I''m thinking about going into consulting or working in a corporate setting.
+
+    User 1: That sounds great! I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your family like?
+
+    User 2: My parents are both teachers. My dad is a dentist and my mom is a kindergarten teacher.
+
+    User 1: Oh, that''s nice! My mom was a teacher too.
+
+    User 2: Really? That''s cool. What did she teach?
+
+    User 1: She taught kindergarten.
+
+    User 2: That''s funny, my mom teaches kindergarten too.
+
+    User 1: Oh, that''s cool! What''s her name?
+
+    User 2: Her name is [user 2''s mom''s name].
+
+    User 1: Oh, I know her! She''s a great teacher.
+
+    User 2: You''ve met her?
+
+    User 1: Yeah, I went to her kindergarten class when I was little.
+
+    User 2: That''s so cool! What did you think of her class?
+
+    User 1: I loved it! She was really fun and made learning really enjoyable.
+
+    User 2: That''s great to hear!
+
+    User 1: So, what''s your dad like?
+
+    User 2: He''s a really great guy. He''s always been there for me and my brother.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, he''s the best.
+
+    User 1: So, what are you doing after college?
+
+    User 2: I''m not sure yet. I''m thinking about going into consulting or working in a corporate setting.
+
+    User 1: That sounds great! I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00004163'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4163
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I love the beach.
+
+    I work 2 jobs.
+
+    I am in school.'
+  user 2 personas: 'My favorite food is mexican.
+
+    I enjoy reading history books.
+
+    I love to dance.
+
+    I am a teacher.
+
+    I grew up in new hampshire.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: It''s nice to meet you, Sarah. What do you do for fun?
+
+    User 2: I love to read history books, dance, and cook Mexican food.
+
+    User 1: Those are all great hobbies! I love history too. What''s your favorite historical period?
+
+    User 2: I''m really interested in the Renaissance period. I love learning about all the different inventions and discoveries that were made during that time.
+
+    User 1: Me too! The Renaissance was a really exciting time in history. I also love learning about all the different art and music that was created during that time.
+
+    User 2: Me too! I love listening to Renaissance music. It''s so beautiful and calming.
+
+    User 1: Have you ever been to New Hampshire?
+
+    User 2: I have! I grew up there.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit New Hampshire. What''s your favorite thing about it?
+
+    User 2: I love the mountains and the lakes. It''s so beautiful there.
+
+    User 1: It sounds amazing! I''ll have to put it on my list of places to visit.
+
+    User 2: You should! It''s a beautiful state.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

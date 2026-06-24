@@ -1,0 +1,80 @@
+id: '00001226'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1226
+data:
+  user 1 personas: 'I am a zookeeper.
+
+    I work with my wife.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I have trained over 20 types of animals.
+
+    My wife is a breast cancer survivor.'
+  user 2 personas: 'I am the youngest sibling in my family.
+
+    I am very inquisitive and enjoy learning new things.
+
+    My favorite foods are fried chicken and chocolate cake.
+
+    I would rather stay up late than get up early.
+
+    I enjoy playing video games.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a zookeeper!
+
+    User 1: Wow, that''s really cool! I''ve always wanted to work with animals.
+
+    User 2: It''s a lot of fun! I get to work with a variety of animals, including elephants, lions, and tigers.
+
+    User 1: That''s amazing! I''ve never seen a tiger in person.
+
+    User 2: They''re really beautiful animals.
+
+    User 1: I bet! What''s your favorite animal to work with?
+
+    User 2: I think I''d have to say elephants. They''re so intelligent and gentle.
+
+    User 1: I''ve heard that! They''re also really big.
+
+    User 2: They are! They''re the largest land animals on Earth.
+
+    User 1: That''s incredible! I''m glad you get to work with such amazing animals.
+
+    User 2: Me too! It''s the best job in the world.
+
+    User 1: I can imagine! So, what''s your favorite part about being a zookeeper?
+
+    User 2: I love getting to interact with the animals. It''s so rewarding to see them learn and grow.
+
+    User 1: That''s so great! I''m sure it''s a lot of work, but it''s worth it.
+
+    User 2: It is! I love my job.
+
+    User 1: So, what are some of your goals for the future?
+
+    User 2: I''m hoping to become a senior zookeeper one day. I''m also working on a book about my experiences working with animals.
+
+    User 1: That''s awesome! I''m sure your book will be a hit.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: I love fried chicken!
+
+    User 1: Me too! What''s your favorite kind of fried chicken?
+
+    User 2: I like it with a little bit of hot sauce.
+
+    User 1: That''s my favorite too!
+
+    User 2: We should go out for fried chicken sometime!
+
+    User 1: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

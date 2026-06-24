@@ -1,0 +1,74 @@
+id: '00005162'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5162
+data:
+  user 1 personas: 'My favorite season is summer.
+
+    I want to be a doctor when i graduate.
+
+    I love tacos but hate spaghetti.
+
+    I just graduated high school.'
+  user 2 personas: 'I am going bald.
+
+    I ran into jimmy fallon just the other day.
+
+    I hate flowers.
+
+    I make my own clothes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What''s your favorite season?
+
+    User 2: I like summer because it''s warm and I can go swimming.
+
+    User 1: I love summer too! I love going to the beach and swimming.
+
+    User 2: I love the beach too! I love swimming, sunbathing, and playing in the sand.
+
+    User 1: What''s your favorite kind of food?
+
+    User 2: I love tacos! I love the combination of the meat, cheese, and guacamole.
+
+    User 1: I love tacos too! I love them with all the fixings.
+
+    User 2: What do you want to be when you graduate?
+
+    User 1: I want to be a doctor. I love helping people and I think being a doctor would be a great way to do that.
+
+    User 2: That''s great! I''m sure you''ll be a great doctor.
+
+    User 1: Thanks! I hope so.
+
+    User 2: What''s your favorite thing about high school?
+
+    User 1: I like my friends. We''ve all been friends since middle school and we''re really close.
+
+    User 2: I like my friends too. We''re all really different people, but we get along really well.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to make my own clothes. I''m pretty good at it and I like to wear my own designs.
+
+    User 1: That''s cool! I like to sew too. I''ve made a few dresses and skirts.
+
+    User 2: Nice! I''ve made a few dresses, skirts, and pants.
+
+    User 1: I hate flowers.
+
+    User 2: I don''t like them either. They''re just pretty weeds.
+
+    User 1: I ran into Jimmy Fallon just the other day.
+
+    User 2: That''s so cool! He seems like a really nice guy.
+
+    User 1: He is. He was really nice to me and we took a picture together.
+
+    User 2: That''s awesome! I''m jealous.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

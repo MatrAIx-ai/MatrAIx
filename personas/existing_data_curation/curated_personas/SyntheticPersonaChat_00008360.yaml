@@ -1,0 +1,64 @@
+id: 00008360
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8360
+data:
+  user 1 personas: 'I prefer the night to the day , but i love sunshine.
+
+    I can never decide between a chili corn dog and a cheesy hot dog.
+
+    I drive more than an hour each way to work.
+
+    I love dragons.
+
+    I am a grandparent at 44.'
+  user 2 personas: 'I love to fish.
+
+    I eat lots of pancakes and syrup.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I am a lumberjack.'
+  Best Generated Conversation: 'User 1: Hello! What do you do for work?
+
+    User 2: I''m a lumberjack!
+
+    User 1: Wow, that''s cool! I''ve never met a lumberjack before.
+
+    User 2: It''s a good job. I get to work outside and I''m always learning new things.
+
+    User 1: That''s awesome. I love working outside too. Do you have any favorite stories from your work?
+
+    User 2: Sure, I have a few. One time, I was cutting down a tree and it fell on a house.
+
+    User 1: Oh no! Was anyone hurt?
+
+    User 2: No, thankfully no one was hurt. But it was a close call.
+
+    User 1: That''s scary! I''m glad no one was hurt.
+
+    User 2: Yeah, me too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to fish. I also like to cook and eat pancakes.
+
+    User 1: I love to fish too! What''s your favorite fish to catch?
+
+    User 2: I like to catch bass. They''re a good fight and they taste great.
+
+    User 1: I agree, bass are delicious. I love eating them fried.
+
+    User 2: Me too! They''re the best.
+
+    User 1: So, what''s your favorite thing about being a lumberjack?
+
+    User 2: I love the fresh air and the exercise. I also love the challenge of the job.
+
+    User 1: That sounds really great. I''m glad you enjoy your job.
+
+    User 2: Thanks, me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

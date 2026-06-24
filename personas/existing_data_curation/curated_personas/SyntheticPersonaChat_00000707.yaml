@@ -1,0 +1,66 @@
+id: '00000707'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 707
+data:
+  user 1 personas: 'I like to hunt.
+
+    I have two children.
+
+    Both my parents were teachers.
+
+    I had two cats growing up.
+
+    I like to donate time at the local animal shelter.'
+  user 2 personas: 'My back hurts chronically.
+
+    I am an old soul.
+
+    I tend to work myself up.
+
+    I am passionate about a lot of things.
+
+    I just want my voice to be heard.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What are you passionate about?
+
+    User 2: I''m passionate about a lot of things, but I''m especially passionate about animal rights and the environment.
+
+    User 1: I''m passionate about animal rights too! I used to volunteer at a local animal shelter.
+
+    User 2: That''s great! I love volunteering at animal shelters. I''ve worked with a lot of different animals, but I have a special place in my heart for dogs.
+
+    User 1: Me too! I love dogs. I have two dogs of my own.
+
+    User 2: That''s awesome! What kind of dogs do you have?
+
+    User 1: I have a golden retriever and a black lab.
+
+    User 2: Those are two great breeds! I''ve always wanted a black lab.
+
+    User 1: They''re great dogs! They''re both very friendly and loving.
+
+    User 2: I''m glad to hear that. I''ve heard that they''re great family dogs.
+
+    User 1: They are! They''re both very good with kids.
+
+    User 2: That''s great! I''m looking forward to having kids someday.
+
+    User 1: I''m sure you''ll be a great parent.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too!
+
+    User 1: I hope we can talk again sometime.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

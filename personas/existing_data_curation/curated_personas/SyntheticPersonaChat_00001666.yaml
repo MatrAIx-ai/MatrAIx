@@ -1,0 +1,80 @@
+id: '00001666'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1666
+data:
+  user 1 personas: 'I live in a house.
+
+    My dad works at the mill and my mom is a teacher.
+
+    I am ten years old.
+
+    I have a lot of friends.
+
+    I love dogs and cats.'
+  user 2 personas: 'I love music.
+
+    I work in retail.
+
+    Lady gaga is my current favorite singer.
+
+    Madonna is my all time favorite.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name). What''s your name?
+
+    User 2: Hi, (name). I''m (name).
+
+    User 1: It''s nice to meet you, (name).
+
+    User 2: You too. What do you like to do for fun?
+
+    User 1: I like to play with my friends, go to the park, and read books.
+
+    User 2: That sounds like fun. I like to go to concerts and listen to music.
+
+    User 1: I love music too! My favorite artist is Madonna.
+
+    User 2: Madonna is great! She''s been my favorite artist since I was a kid.
+
+    User 1: Me too! I''ve seen her in concert twice.
+
+    User 2: I''m so jealous! I''ve never seen her in concert.
+
+    User 1: You should go see her next time she''s in town. It''s an amazing experience.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I work in retail.
+
+    User 1: Oh, really? What kind of store do you work at?
+
+    User 2: I work at a music store.
+
+    User 1: That sounds cool! Do you get to listen to music all day?
+
+    User 2: I do! It''s the best part of the job.
+
+    User 1: That''s awesome. So, what''s your favorite song right now?
+
+    User 2: My favorite song right now is "Chromatica" by Lady Gaga.
+
+    User 1: I love that song! It''s so catchy.
+
+    User 2: It is! I''ve been listening to it on repeat.
+
+    User 1: Me too! So, what do you do for fun outside of work?
+
+    User 2: I like to go to concerts, go out to eat, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to do a lot of the same things.
+
+    User 2: It''s nice to meet someone who has similar interests.
+
+    User 1: You too. I''m glad we had this conversation.
+
+    User 2: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

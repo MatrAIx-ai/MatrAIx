@@ -1,0 +1,60 @@
+id: '00001334'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1334
+data:
+  user 1 personas: 'I live in kansas.
+
+    I like watching reality television shows.
+
+    Last month the farm was foreclosed so i am looking for a new job.
+
+    I would like to move some place warmer.
+
+    I am an out of work farmhand.'
+  user 2 personas: 'My brother in law runs a major hollywood studio.
+
+    My wife is legally deaf.
+
+    My parents are both over age 100.
+
+    I build aquariums for a living.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Kansas.
+
+    User 2: Hi! I''m from California.
+
+    User 1: I''m an out of work farmhand.
+
+    User 2: I build aquariums for a living.
+
+    User 1: I''m looking for a new job.
+
+    User 2: I''m always looking for new employees.
+
+    User 1: I''ve been watching a lot of reality TV shows lately.
+
+    User 2: I don''t really watch TV.
+
+    User 1: I''d like to move to someplace warmer.
+
+    User 2: I love California. It''s always warm here.
+
+    User 1: I''ve never been to California.
+
+    User 2: You should come visit!
+
+    User 1: I''d love to!
+
+    User 2: When are you free?
+
+    User 1: I''m free anytime.
+
+    User 2: How about next weekend?
+
+    User 1: That sounds great!
+
+    User 2: I''ll send you the details.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

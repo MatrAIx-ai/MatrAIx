@@ -1,0 +1,56 @@
+id: 00008223
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8223
+data:
+  user 1 personas: 'I work for the discovery channel creating videos.
+
+    I love the outdoors.
+
+    I have no technological skills.
+
+    I am a savage.'
+  user 2 personas: 'I listen to death metal.
+
+    I like cartoons.
+
+    My mom is a janitor.
+
+    I still live at home.
+
+    I am in college.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to listen to death metal and watch cartoons.
+
+    User 1: Oh, that''s cool. I like to watch documentaries and go to the beach.
+
+    User 2: I love the beach! I love to go swimming and body surfing.
+
+    User 1: That''s fun. I''m not very good at swimming, but I love to go snorkeling.
+
+    User 2: I''ve never tried snorkeling. It sounds like fun.
+
+    User 1: It is! You get to see all the fish and coral reefs.
+
+    User 2: That''s awesome. I''ll have to try it sometime.
+
+    User 1: You should! It''s a great way to explore the ocean.
+
+    User 2: I''m sure it is. I''m not very outdoorsy, but I''m always up for trying new things.
+
+    User 1: I''m glad to hear that. Maybe we can go snorkeling together sometime.
+
+    User 2: That would be awesome! I''d love to learn more about the ocean.
+
+    User 1: Sounds like a plan.
+
+    User 2: I''m sure we''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

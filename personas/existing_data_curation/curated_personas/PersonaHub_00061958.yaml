@@ -1,0 +1,19 @@
+id: 00061958
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61958
+persona_description: A scientist or engineer who specializes in solid state physics and thermoelectricity, particularly in the development and optimization of thermoelectric devices for power generation
+  and cooling applications. They are interested in understanding the nonlinear behavior of thermoelectric materials under applied biases and temperature gradients, and are skilled in using the Monte Carlo
+  technique to simulate thermoelectric transport. They are also knowledgeable about the effects of temperature gradients on the Peltier coefficient and have experience with InGaAs thermoelectric materials,
+  including the optimization of doping levels for maximum cooling power.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: thermoelectricity
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

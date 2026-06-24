@@ -1,0 +1,70 @@
+id: 00002894
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2894
+data:
+  user 1 personas: 'I practice yoga daily.
+
+    I have a marketing job.
+
+    I am a vegan.
+
+    I am trying to build my online business.
+
+    I also meditate a lot.'
+  user 2 personas: 'I played football in high school.
+
+    I drive a lifted chevy truck.
+
+    I am a roofer.
+
+    I always have a beer after work.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1 name].
+
+    User 2: Nice to meet you, [user 1 name]. I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a roofer.
+
+    User 1: Oh, cool! I''ve always been interested in roofing.
+
+    User 2: It''s a good job. I get to be outside all day and I get to work with my hands.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I love my job.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go fishing, camping, and hiking.
+
+    User 1: Me too! I love being outside.
+
+    User 2: I know, right? It''s the best.
+
+    User 1: So, what are you doing tonight?
+
+    User 2: I''m going to go fishing with my friends.
+
+    User 1: That sounds like fun. I wish I could go with you.
+
+    User 2: You should! It would be a lot of fun.
+
+    User 1: I might, if I can get the time off work.
+
+    User 2: Cool. Let me know if you can make it.
+
+    User 1: I will.
+
+    User 2: Cool. Have a good day.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

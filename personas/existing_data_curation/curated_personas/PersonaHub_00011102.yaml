@@ -1,0 +1,18 @@
+id: '00011102'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11102
+persona_description: A neuroscientist or psychiatrist who is interested in the effects of neuroleptic and selective serotonin reuptake inhibitor (SSRI) medications on emotional recognition in individuals
+  with Huntington's disease (HD). They are particularly interested in the differences in emotion recognition performance between symptomatic and asymptomatic HD patients, as well as the effects of medication
+  use on emotional recognition. They are also interested in the potential implications of these findings for HD patient care and communication.
+expertise:
+  general_domain_top1pct: psychology/neuroscience
+  specific_domain_top1pct: neuropharmacology/neuropsychiatry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,66 @@
+id: 00001480
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1480
+data:
+  user 1 personas: 'I am 19 years old.
+
+    I am going to be the starting shortstop.
+
+    My favorite player is mike trout.
+
+    I am a huge fan of baseball.
+
+    I recently made the college baseball team.'
+  user 2 personas: 'I have braces.
+
+    I live in america in the state of florida.
+
+    I am fifteen years old.
+
+    I just started the tenth grade and my concentration is in science.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: I''m working on a science project!
+
+    User 1: That sounds fun! What''s it about?
+
+    User 2: It''s about the effect of temperature on the rate of chemical reactions.
+
+    User 1: That''s really interesting! I''m sure you''ll do a great job.
+
+    User 2: Thank you!
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to play video games, watch anime, and read manga.
+
+    User 1: I like video games too! What''s your favorite game?
+
+    User 2: My favorite game is Breath of the Wild.
+
+    User 1: I''ve heard great things about that game! I''ve been meaning to play it.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: I will! I''m excited to try it.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I play baseball. I''m going to be the starting shortstop for my college team this year.
+
+    User 2: That''s so cool! I''ve always wanted to play baseball.
+
+    User 1: You should! It''s a great sport.
+
+    User 2: I might have to try it out sometime.
+
+    User 1: You should! I''m sure you''d be good at it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

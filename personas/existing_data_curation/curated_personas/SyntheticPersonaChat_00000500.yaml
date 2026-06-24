@@ -1,0 +1,68 @@
+id: '00000500'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 500
+data:
+  user 1 personas: 'I love ballet.
+
+    My favorite color is purple.
+
+    My favorite food is macaroni and cheese.
+
+    I have blonde hair.'
+  user 2 personas: 'My hair is as red as the sunset.
+
+    I have a thick full beard.
+
+    I have 8 brothers and we are close.
+
+    My parents are in there 80 s.
+
+    I am only 5 foot tall.'
+  Best Generated Conversation: 'User 1: Hello there, what''s your name?
+
+    User 2: Hello, my name is [User 2].
+
+    User 1: Nice to meet you, I''m [User 1].
+
+    User 2: It''s nice to meet you too.
+
+    User 1: So, tell me about yourself.
+
+    User 2: Well, I''m a 5''6" redhead with a thick full beard. I have 8 brothers and we are all very close. My parents are in their 80s and I love spending time with them.
+
+    User 1: That sounds like a lot of fun. I have two sisters but we aren''t very close.
+
+    User 2: I''m sorry to hear that. My brothers are my best friends.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to go hiking, fishing, and camping. I also enjoy playing music and spending time with my family.
+
+    User 1: That sounds like a lot of fun. I like to go to the movies, read, and play video games.
+
+    User 2: I love to read too! What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and mysteries.
+
+    User 2: I love historical fiction too! What''s your favorite book?
+
+    User 1: My favorite book is "The Pillars of the Earth" by Ken Follett.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should, it''s a great book.
+
+    User 2: Well, it sounds like we have a lot in common. I''d love to get to know you better.
+
+    User 1: Me too. We should hang out sometime.
+
+    User 2: That would be fun.
+
+    User 1: Great! I''ll give you my number and we can make plans.
+
+    User 2: Sounds good. I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

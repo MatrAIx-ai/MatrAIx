@@ -1,0 +1,58 @@
+id: 00004392
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4392
+data:
+  user 1 personas: 'I like to play video games.
+
+    I have 2 dogs.
+
+    I like to go hunting.
+
+    I do not like broccoli.'
+  user 2 personas: 'I am in college.
+
+    I play football.
+
+    I eat well.
+
+    I exercise.'
+  Best Generated Conversation: 'User 1: Hey, my name is [user 1''s name]. What''s your name?
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games, go hunting, and hang out with my friends.
+
+    User 1: Nice. I like to play video games too. What kind of games do you like to play?
+
+    User 2: I like to play all kinds of games, but I''m especially into shooters and RPGs.
+
+    User 1: Same here! I''m a big fan of the Halo and Mass Effect series.
+
+    User 2: Oh, I love Mass Effect! I''m actually playing through the Legendary Edition right now.
+
+    User 1: Nice! I''m on my second playthrough of the original trilogy.
+
+    User 2: Awesome! I''m really enjoying it so far.
+
+    User 1: Me too! It''s so good to be back in the Mass Effect universe.
+
+    User 2: I know, right? It''s been a long time since the last game came out.
+
+    User 1: Yeah, but it''s worth the wait.
+
+    User 2: Definitely. I''m so glad I got the chance to play the Legendary Edition.
+
+    User 1: Me too. It''s so much fun.
+
+    User 2: I know, right? It''s like I''m playing the games for the first time all over again.
+
+    User 1: Me too! I''m so glad I found someone who enjoys Mass Effect as much as I do.
+
+    User 2: Me too! It''s rare to find someone who loves the series as much as I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

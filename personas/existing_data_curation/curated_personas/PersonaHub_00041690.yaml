@@ -1,0 +1,20 @@
+id: 00041690
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41690
+persona_description: A researcher or scientist interested in the study of neuroscience and neurology, particularly in the area of neurology of mice. The individual is likely to be interested in understanding
+  the relationship between the number of neurons in a mouse and the time that has passed since the initial measurement of the number of neurons. The individual is also likely to be interested in the mathematical
+  modeling of the relationship between the number of neurons and the time, and would be familiar with the given function N(t)=N0*(1-r)^(t/τ), where N0 is the initial number of neurons at time t=0, r is
+  a rate where 0＜r ＜1, and τ, measured in months, is a constant. The individual may also be interested in the concept of a constant, which is a fixed amount that remains unchanged over time, and would be
+  familiar with the term "fixed amount" in the context of the given function.
+expertise:
+  general_domain_top1pct: neuroscience
+  specific_domain_top1pct: neurology of mice
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

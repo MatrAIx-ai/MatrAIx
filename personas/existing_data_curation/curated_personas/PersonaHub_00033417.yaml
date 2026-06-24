@@ -1,0 +1,18 @@
+id: '00033417'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33417
+persona_description: A scientist or engineer with expertise in planetary science and robotic exploration, specifically focused on the use of rover missions to study the surface and composition of Mars.
+  This persona is interested in the technical aspects of the Curiosity rover's operations, including its decontamination process and the quality-assurance procedures it follows. They are likely to be knowledgeable
+  about the Mars Science Laboratory/Curiosity mission, its development, and its objectives.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: planetary exploration
+  general_domain_top01pct: None
+  specific_domain_top01pct: planetary rover operations
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

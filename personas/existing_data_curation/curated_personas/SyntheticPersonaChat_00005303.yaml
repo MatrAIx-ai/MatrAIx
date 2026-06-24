@@ -1,0 +1,78 @@
+id: '00005303'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5303
+data:
+  user 1 personas: 'I have a passion for politics.
+
+    I work at a candy store.
+
+    I run two miles everyday.
+
+    I have been married for five years.
+
+    I played football in college.'
+  user 2 personas: 'I like to wear red.
+
+    I wear a red purse.
+
+    I like to wear red shoes also.
+
+    I use red lipstick.
+
+    I drive a red car.'
+  Best Generated Conversation: 'User 1: Hi, I''m Joe.
+
+    User 2: Hi, I''m Mary.
+
+    User 1: I like your red purse.
+
+    User 2: Thanks, I like to wear red.
+
+    User 1: Me too, I think it''s a very bold color.
+
+    User 2: I agree, it''s definitely not for everyone.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a nurse.
+
+    User 1: Oh, that''s interesting. I work at a candy store.
+
+    User 2: Really? That''s cool. I love candy.
+
+    User 1: Me too! I''m actually trying to lose weight, but it''s so hard to resist candy.
+
+    User 2: I know what you mean. I love candy too much.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the movies, go shopping, and read.
+
+    User 1: I like to do those things too. I also like to play sports.
+
+    User 2: Me too! I played football in college.
+
+    User 1: That''s awesome! I played football in high school.
+
+    User 2: What position did you play?
+
+    User 1: I played quarterback.
+
+    User 2: That''s cool. I played receiver.
+
+    User 1: Nice! I always wanted to be a receiver.
+
+    User 2: It''s a lot of fun.
+
+    User 1: I bet it is.
+
+    User 2: So, what do you like about working at a candy store?
+
+    User 1: I like the people I work with, and I like being able to help people find the perfect candy.
+
+    User 2: That''s great. I like my job too. I like helping people, and I like being able to make a difference in their lives.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

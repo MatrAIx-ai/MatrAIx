@@ -1,0 +1,72 @@
+id: '00004612'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4612
+data:
+  user 1 personas: 'I enjoy eating italian food.
+
+    I am east asian.
+
+    Pizza is my favorite.
+
+    I try to watch what i eat.
+
+    My name is tom.'
+  user 2 personas: 'I like to go shopping.
+
+    I live in a small town.
+
+    I wanted to be a nurse.
+
+    Driving in the country side is a pastime.
+
+    I went to college.'
+  Best Generated Conversation: 'User 1: Hello, my name is Tom.
+
+    User 2: Hello Tom, my name is Jane.
+
+    User 1: It''s nice to meet you, Jane.
+
+    User 2: You too, Tom.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go shopping, go for walks in the country, and drive my car.
+
+    User 1: Those sound like fun things to do. I like to eat Italian food, go to the movies, and play video games.
+
+    User 2: Italian food is my favorite! I love pizza.
+
+    User 1: Me too! I like to make pizza at home.
+
+    User 2: That''s cool. I''ve never made pizza before.
+
+    User 1: You should try it. It''s really easy.
+
+    User 2: I might just do that.
+
+    User 1: Good. I''m sure you''ll enjoy it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: I know you said you like to go to the movies. What are some of your favorite movies?
+
+    User 1: I like a lot of different kinds of movies, but my favorite movies are usually comedies.
+
+    User 2: I like comedies too. Some of my favorites are The Hangover, Bridesmaids, and Airplane.
+
+    User 1: Those are all great movies! I also love Anchorman and Zoolander.
+
+    User 2: Me too! Those are two of my favorite comedies.
+
+    User 1: It''s nice to meet someone who likes the same kind of movies as me.
+
+    User 2: Me too. I''m glad we met, Tom.
+
+    User 1: Me too, Jane.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

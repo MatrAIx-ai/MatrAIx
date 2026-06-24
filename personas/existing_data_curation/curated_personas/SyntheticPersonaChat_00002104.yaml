@@ -1,0 +1,59 @@
+id: '00002104'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2104
+data:
+  user 1 personas: 'I am a truck driver.
+
+    I deliver baked goods in the state where i live.
+
+    I spend my weekends camping.
+
+    My favorite hobby is playing recreational baseball.'
+  user 2 personas: 'I can t stand clutter or dust.
+
+    I spend an hour getting ready in the morning.
+
+    I have horrible allergies.
+
+    When i shower my skin is nearly red from how hard i scrub.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go camping.
+
+    User 1: Oh, that''s cool! I like to go camping too.
+
+    User 2: Do you go often?
+
+    User 1: I try to go as often as I can, but it can be hard with my work schedule.
+
+    User 2: I know what you mean. I have a busy schedule too.
+
+    User 1: What''s your favorite part about camping?
+
+    User 2: I like being outdoors and getting away from the hustle and bustle of city life.
+
+    User 1: Me too! I also like the challenge of having to live in the wilderness for a few days.
+
+    User 2: I love that too! It''s a good way to test your endurance and skills.
+
+    User 1: I agree! It''s also a great way to bond with friends and family.
+
+    User 2: I know what you mean. I love spending time with my family and friends when we go camping.
+
+    User 1: What''s your favorite camping memory?
+
+    User 2: I have so many great camping memories, but I think my favorite one was when I went camping with my family when I was a kid. We went to a state park in the mountains and we had a lot of fun hiking,
+    fishing, and swimming. It was a great way to spend time together.
+
+    User 1: That sounds like a great memory! I''m glad you have so many good camping memories.
+
+    User 2: Thanks! I''m glad too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

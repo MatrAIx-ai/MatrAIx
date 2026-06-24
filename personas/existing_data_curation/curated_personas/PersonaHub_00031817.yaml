@@ -1,0 +1,18 @@
+id: 00031817
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31817
+persona_description: A cloud administrator who is responsible for managing and optimizing virtual machines (VMs) in a cloud environment. They are familiar with the concept of virtual central processing
+  units (vCPUs) and how they are assigned to each VM within a VM. They understand the limitations of the number of vCPUs that can be used on a server and how the VMs can be automatically migrated to another
+  host server if necessary. They are also knowledgeable about the complex sharing algorithms used by VMware's CPU Scheduler to allocate CPU time to VMs.
+expertise:
+  general_domain_top1pct: computing
+  specific_domain_top1pct: cloud computing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

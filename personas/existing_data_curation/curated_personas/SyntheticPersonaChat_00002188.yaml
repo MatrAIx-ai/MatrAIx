@@ -1,0 +1,66 @@
+id: 00002188
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2188
+data:
+  user 1 personas: 'I grew up on a farm.
+
+    When i turned 18 , my family moved across the country.
+
+    I like going to rock concerts.
+
+    I eat eggs and bacon for breakfast.
+
+    On weekends i go out with friends.'
+  user 2 personas: 'I have never been on an airplane.
+
+    I did not go to college because i run the family farm.
+
+    I like tailgate parties.
+
+    My favorite season is duck hunting season.
+
+    I had a girlfriend who eloped with my best friend one day.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: I grew up on a farm too! Where did you grow up?
+
+    User 2: I grew up in Illinois.
+
+    User 1: Oh, cool! I grew up in Missouri.
+
+    User 2: Did you ever go to college?
+
+    User 1: Yeah, I went to college in Kansas City.
+
+    User 2: Oh, that''s cool. I''m not sure if I''ll ever go to college. I''m running the family farm.
+
+    User 1: Oh, that''s cool! I''ve never been on a farm before.
+
+    User 2: You should come visit sometime! We''d love to have you.
+
+    User 1: I''d love to!
+
+    User 2: What''s your favorite season?
+
+    User 1: I love fall. The weather is perfect for going for walks in the woods.
+
+    User 2: Me too! I love the colors of fall.
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to go hunting and fishing. I also like to go to tailgate parties.
+
+    User 1: Oh, that''s cool! I''ve never been hunting or fishing before.
+
+    User 2: You should come with me sometime! I''d love to show you how to do it.
+
+    User 1: I''d love to!
+
+    User 2: Great! We''ll have to plan a trip soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

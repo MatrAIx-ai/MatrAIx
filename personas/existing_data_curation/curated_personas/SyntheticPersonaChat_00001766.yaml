@@ -1,0 +1,74 @@
+id: '00001766'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1766
+data:
+  user 1 personas: 'My truck is black.
+
+    I like ford cars.
+
+    I also like ford trucks.
+
+    I own a ford truck.'
+  user 2 personas: 'I love to read true crime books.
+
+    I m in grad school.
+
+    My parents live across the street from me.
+
+    My favorite drink is caramel cappuccino.'
+  Best Generated Conversation: 'User 1: Hello, I''m (user 1).
+
+    User 2: Hello, I''m (user 2).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, especially true crime books.
+
+    User 1: That''s interesting! I like to read too, but I usually read fiction.
+
+    User 2: What kind of fiction do you like?
+
+    User 1: I like romance novels, historical fiction, and mystery novels.
+
+    User 2: I''ve never read a romance novel, but I''ve heard they''re good.
+
+    User 1: They are! They''re a great way to escape from reality.
+
+    User 2: I''ll have to give them a try. What''s your favorite book?
+
+    User 1: That''s a hard question. I have a lot of favorite books, but I think my favorite is "The Princess Bride."
+
+    User 2: I''ve never heard of that one. What''s it about?
+
+    User 1: It''s a story about a young man who goes on an adventure to find the perfect woman. It''s a funny and heartwarming story that I always enjoy reading.
+
+    User 2: It sounds like a good book. I''ll have to check it out.
+
+    User 1: You should! It''s a classic.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go for walks, go hiking, and spend time with my family and friends.
+
+    User 2: That sounds like a lot of fun. I like to do those things too.
+
+    User 1: I''m glad! What do you do for work?
+
+    User 2: I''m in grad school studying to be a teacher.
+
+    User 1: That''s awesome! I''m sure you''ll be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what''s your favorite drink?
+
+    User 2: I love caramel cappuccinos.
+
+    User 1: That''s my favorite too! We should get one together sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00002407'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2407
+data:
+  user 1 personas: 'I am from california.
+
+    I like to shop at goodwill.
+
+    I am a student.
+
+    I think recycling is important.'
+  user 2 personas: 'I wait for something interesting to happen each day.
+
+    I wish i could write in cursive.
+
+    I enjoy cold winters and strong breezes.
+
+    I listen to a lot of strange music.
+
+    I wish i could live in iceland.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1 name]. I am from California and I am a student.
+
+
+    User 2: Hi, I am [user 2 name]. I wish I could write in cursive. I enjoy cold winters and strong breezes. I listen to a lot of strange music. I wish I could live in Iceland.
+
+
+    User 1: It''s nice to meet you, [user 2 name]. I like to shop at Goodwill. I think recycling is important.
+
+
+    User 2: It''s nice to meet you too, [user 1 name]. I like to wait for something interesting to happen each day.
+
+
+    User 1: What''s your favorite thing about cold weather?
+
+
+    User 2: I love the feeling of the wind on my face and the smell of the snow.
+
+
+    User 1: I love that too! I also love the way the snow makes everything look so clean and peaceful.
+
+
+    User 2: Me too! I also love going sledding and building snowmen.
+
+
+    User 1: Me too! I love spending time in the snow with my family and friends.
+
+
+    User 2: Me too! It''s the best!
+
+
+    User 1: I''m glad we have so much in common!
+
+
+    User 2: Me too! I think we''re going to be great friends.
+
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

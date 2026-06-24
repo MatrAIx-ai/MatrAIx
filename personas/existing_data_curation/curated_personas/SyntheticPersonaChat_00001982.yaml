@@ -1,0 +1,62 @@
+id: 00001982
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1982
+data:
+  user 1 personas: 'I love butterflies.
+
+    My favorite hero is flash.
+
+    I do not like dresses.
+
+    I prefer summer.
+
+    I type one handed.'
+  user 2 personas: 'I am a female.
+
+    I have blonde hair.
+
+    I am in high school.
+
+    I like skateboarding.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to skateboard, listen to music, and hang out with my friends.
+
+    User 1: That sounds fun. I like to skateboard too. What''s your favorite trick?
+
+    User 2: I can do a kickflip and a ollie.
+
+    User 1: I can do a kickflip too, but I can''t do an ollie.
+
+    User 2: You should try it. It''s not that hard.
+
+    User 1: I''ll try it. What''s your favorite food?
+
+    User 2: My favorite food is pizza.
+
+    User 1: Me too! What kind of pizza do you like?
+
+    User 2: I like pepperoni and cheese pizza.
+
+    User 1: Me too! I also like veggie pizza.
+
+    User 2: Veggie pizza is good too.
+
+    User 1: So, what do you like to do for a living?
+
+    User 2: I''m still in high school.
+
+    User 1: Oh, I see. What do you want to do when you graduate?
+
+    User 2: I want to be a nurse.
+
+    User 1: That''s a good goal. I''m sure you''ll be a great nurse.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

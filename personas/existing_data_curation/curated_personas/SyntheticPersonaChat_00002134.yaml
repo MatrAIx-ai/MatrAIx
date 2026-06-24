@@ -1,0 +1,70 @@
+id: '00002134'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2134
+data:
+  user 1 personas: 'I am in high school.
+
+    I am on a competitive dance team.
+
+    I love to dance.
+
+    I love disney movies.
+
+    Ariel is my favorite princess.'
+  user 2 personas: 'Sometimes i wish i did not have to wake up in the morning.
+
+    My parents are distant.
+
+    I have an older brother that has gotten into trouble.
+
+    I see a therapist that does not really understand me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: Cool, I like to do those things too! What kind of books do you like to read?
+
+    User 2: I like to read fantasy and science fiction.
+
+    User 1: Me too! What are some of your favorite books?
+
+    User 2: I like the Harry Potter series, the Lord of the Rings series, and the Hunger Games series.
+
+    User 1: Those are all great books! I''ve read them all too.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play action and adventure games.
+
+    User 2: Me too! What are some of your favorite games?
+
+    User 1: I like the Assassin''s Creed series, the Uncharted series, and the God of War series.
+
+    User 2: Those are all great games! I''ve played them all too.
+
+    User 1: What do you like to do when you''re not doing fun things?
+
+    User 2: I like to go to school, hang out with my friends, and spend time with my family.
+
+    User 1: Sounds like you have a busy life.
+
+    User 2: Yeah, I do. But I like it that way.
+
+    User 1: Me too. I like to be busy.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

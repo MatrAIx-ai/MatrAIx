@@ -1,0 +1,60 @@
+id: 00000699
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 699
+data:
+  user 1 personas: 'I like to draw.
+
+    I have 5 brothers and sisters.
+
+    I ride a bike.
+
+    I work as a waitress.'
+  user 2 personas: 'I am very shy.
+
+    I am a childrens librarian.
+
+    I have no children of my own.
+
+    I wear glasses.
+
+    I am recently divorced.'
+  Best Generated Conversation: 'User 1: Hi, I''m user 1! What do you do for a living?
+
+    User 2: Hi, I''m user 2! I''m a children''s librarian.
+
+    User 1: Oh, that sounds cool! I love reading to kids.
+
+    User 2: It''s so much fun! I get to help kids discover new worlds and learn about new things.
+
+    User 1: That''s awesome! I''ve always wanted to be a librarian, but I''m not sure I''m shy enough.
+
+    User 2: I used to be very shy, but working with kids has helped me come out of my shell.
+
+    User 1: That''s great! I''m glad you''ve found a job you love.
+
+    User 2: Thanks! Me too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my friends and family.
+
+    User 1: Sounds like you have a lot of hobbies!
+
+    User 2: I do! I like to keep busy.
+
+    User 1: Me too. I love to try new things and experience new things.
+
+    User 2: That''s awesome! I''m glad you''re so adventurous.
+
+    User 1: Thanks! I''m glad you''re so nice to talk to.
+
+    User 2: You''re welcome! I''m always happy to chat with new people.
+
+    User 1: Me too! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

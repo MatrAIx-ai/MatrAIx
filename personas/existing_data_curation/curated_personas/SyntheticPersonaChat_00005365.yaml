@@ -1,0 +1,74 @@
+id: '00005365'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5365
+data:
+  user 1 personas: 'I play music in my spare time.
+
+    I like to go to the farmer s market every weekend.
+
+    I live in nashville.
+
+    I work in academia at a local university.'
+  user 2 personas: 'I love to drive my car.
+
+    I enjoy travel.
+
+    I work in a factory.
+
+    Connor mcgreggor is my favorite fighter.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, nice to meet you. I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to travel and drive my car.
+
+    User 1: That''s great! I love to travel too. Where have you been?
+
+    User 2: I''ve been to a lot of places, but my favorite is Japan.
+
+    User 1: That''s awesome! I''ve always wanted to go to Japan.
+
+    User 2: You should go! It''s such a beautiful country.
+
+    User 1: I''m sure I will someday.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a professor at the university.
+
+    User 2: That''s really cool! What do you teach?
+
+    User 1: I teach music.
+
+    User 2: That''s awesome! I love music.
+
+    User 1: Me too! I play music in my spare time.
+
+    User 2: That''s great! What kind of music do you play?
+
+    User 1: I play guitar and sing.
+
+    User 2: That''s awesome! I love to sing too.
+
+    User 1: Do you ever go to the farmer''s market?
+
+    User 2: I love to go to the farmer''s market!
+
+    User 1: Me too! I go to the farmer''s market every weekend.
+
+    User 2: That''s great! I love to buy fresh vegetables and fruits.
+
+    User 1: Me too! I love to cook with fresh ingredients.
+
+    User 2: Me too! I love to cook.
+
+    User 1: That''s great! We should go to the farmer''s market together sometime.
+
+    User 2: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

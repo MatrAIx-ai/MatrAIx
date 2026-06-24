@@ -1,0 +1,18 @@
+id: '00033162'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33162
+persona_description: A security professional who specializes in identifying and mitigating vulnerabilities in software systems, particularly those related to the OpenSSL library. They have expertise in
+  the Heartbleed bug, its impact on the Internet, and the steps taken to patch the vulnerability and mitigate its impact. They are knowledgeable about SSL connections, encryption keys, and the implications
+  of the Heartbleed bug on user security. They are aware of the potential for exploitation and the importance of remaining cautious about what sites one trusts.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: vulnerability identification and mitigation
+  general_domain_top01pct: None
+  specific_domain_top01pct: OpenSSL and vulnerability mitigation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

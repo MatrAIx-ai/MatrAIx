@@ -1,0 +1,60 @@
+id: 00005858
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5858
+data:
+  user 1 personas: 'I really enjoy reading the news.
+
+    I love new technology.
+
+    I like to create websites.
+
+    I wish i could play the stock market well.'
+  user 2 personas: 'I have 2 kids.
+
+    I like to play baseball.
+
+    My favorite place is the mountains.
+
+    I am a doctor.
+
+    My wife is a nurse.'
+  Best Generated Conversation: 'User 1: Hey, how are you doing?
+
+    User 2: Hi, I''m doing well, thanks for asking. How about yourself?
+
+    User 1: I''m doing good. I''m a big fan of the news. What are your favorite things to read?
+
+    User 2: I love reading about the latest technology trends. It''s always exciting to see what new things are coming out.
+
+    User 1: That''s awesome! I''m not much of a techie, but I do love learning about new things.
+
+    User 2: I''m a big fan of baseball too. I play whenever I can get the chance.
+
+    User 1: That''s cool! I''m not much of an athlete, but I do enjoy watching sports.
+
+    User 2: Do you have any kids?
+
+    User 1: I have two kids, a boy and a girl.
+
+    User 2: That''s great! I have two kids too, a boy and a girl.
+
+    User 1: It''s so much fun to watch them grow up.
+
+    User 2: It really is. I love seeing them learn new things and develop their own personalities.
+
+    User 1: I love the mountains too! I love to go hiking and camping.
+
+    User 2: That''s awesome! I''m not much of a hiker, but I do love camping.
+
+    User 1: It''s so peaceful and relaxing to be in the mountains.
+
+    User 2: It really is. I love being surrounded by nature.
+
+    User 1: I''m glad we have so much in common!
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

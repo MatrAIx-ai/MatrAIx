@@ -1,0 +1,102 @@
+id: '00004011'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4011
+data:
+  user 1 personas: 'I like all types of music.
+
+    I like to do crafts.
+
+    I like to draw.
+
+    I like to watch movies.
+
+    I am a mother of 5.'
+  user 2 personas: 'I have 3 ferrari cars in my garage.
+
+    I do not like acting.
+
+    My father was a famous actor.
+
+    I have 3 ex wives.
+
+    I do not like kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the movies, play video games, and drive my Ferraris.
+
+    User 1: I like to do crafts, draw, and watch movies.
+
+    User 2: What kind of crafts do you like to do?
+
+    User 1: I like to do paper crafts, knitting, and sewing.
+
+    User 2: I''ve never done any crafts before.
+
+    User 1: You should try it! It''s really fun and relaxing.
+
+    User 2: Maybe I will.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Godfather.
+
+    User 1: That''s a good movie! I love the acting.
+
+    User 2: Me too! The acting is amazing.
+
+    User 1: What''s your favorite song?
+
+    User 2: My favorite song is "Free Bird" by Lynyrd Skynyrd.
+
+    User 1: That''s a good song! I love the guitar solo.
+
+    User 2: Me too! It''s one of the best guitar solos ever.
+
+    User 1: I''m glad we have similar taste in movies and music.
+
+    User 2: Me too! It''s always nice to find someone who has similar interests.
+
+    User 1: I agree. So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! What kind of software do you engineer?
+
+    User 2: I mostly work on enterprise software.
+
+    User 1: That sounds interesting.
+
+    User 2: It is. I get to work on a lot of different projects.
+
+    User 1: That''s great. So, you''re pretty busy with work?
+
+    User 2: Yeah, I work a lot of hours.
+
+    User 1: Me too. I''m a stay-at-home mom with five kids.
+
+    User 2: Wow, that must be a lot of work!
+
+    User 1: It is, but it''s also a lot of fun.
+
+    User 2: I can imagine. So, what do you like to do with your kids?
+
+    User 1: We like to go to the park, play games, and read books.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is. I love spending time with my kids.
+
+    User 2: I''m sure they love spending time with you too.
+
+    User 1: I hope so.
+
+    User 2: I''m sure they do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

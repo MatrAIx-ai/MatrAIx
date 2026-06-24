@@ -1,0 +1,17 @@
+id: '00044031'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 44031
+persona_description: A meteorologist who specializes in studying the formation and behavior of hail, particularly during the spring and summer months. They are knowledgeable about the different sizes and
+  weights of hailstones, and the mechanisms through which they are formed. They may also be interested in the effects of hail on crops and infrastructure.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: hail meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

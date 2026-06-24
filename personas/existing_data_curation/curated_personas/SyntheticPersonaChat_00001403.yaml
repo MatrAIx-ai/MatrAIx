@@ -1,0 +1,76 @@
+id: '00001403'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1403
+data:
+  user 1 personas: 'I own blue shoes.
+
+    I drive a blue car.
+
+    I like the color blue.
+
+    I changed my hair color to blue.
+
+    I like to listen to elvis.'
+  user 2 personas: 'I have a wife and two kids back in the states.
+
+    I am not afraid to die.
+
+    I would be honored to give my life for my country.
+
+    I am an army ranger.'
+  Best Generated Conversation: 'User 1: I love Elvis!
+
+    User 2: Me too! He''s my favorite artist.
+
+    User 1: I''ve seen him in concert twice.
+
+    User 2: I''m so jealous! I''ve never seen him in concert.
+
+    User 1: He was amazing! I still listen to his music all the time.
+
+    User 2: Me too! I love his music.
+
+    User 1: What''s your favorite song?
+
+    User 2: I love so many of his songs, but my favorite is probably "Jailhouse Rock."
+
+    User 1: That''s a great song! I love the music video.
+
+    User 2: Me too! It''s so iconic.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m an army ranger.
+
+    User 1: Oh, cool! I''ve heard about army rangers. They''re really brave.
+
+    User 2: Yeah, we have to be brave. We do a lot of dangerous things.
+
+    User 1: Like what?
+
+    User 2: We have to go on missions where we might get shot at or blown up.
+
+    User 1: That sounds scary.
+
+    User 2: It can be, but it''s also exciting.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, cool! I''ve always thought about being a teacher.
+
+    User 1: It''s a great job. I love working with kids.
+
+    User 2: Me too! I think I would be good at it.
+
+    User 1: I''m sure you would. You seem like a great person.
+
+    User 2: Thank you. I try to be.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00003873
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3873
+data:
+  user 1 personas: 'My skin is olive colored.
+
+    My purse has a picture of a skunk on it.
+
+    My eyes are green.
+
+    I want to be a librarian.'
+  user 2 personas: 'I love to save money.
+
+    I am a couponed.
+
+    I like to keep my stockpile organised.
+
+    I donate any overstock to charity.
+
+    I shop several times a week.'
+  Best Generated Conversation: 'User 1: Hi! I''m a librarian in training.
+
+    User 2: Hello, I''m a couponer.
+
+    User 1: That''s interesting, what does that entail?
+
+    User 2: I shop several times a week and always look for coupons.
+
+    User 1: Do you ever get any good deals?
+
+    User 2: Sometimes I can get things for free!
+
+    User 1: That''s awesome! I wish I was better at saving money.
+
+    User 2: It''s a lot of work, but it''s worth it in the end.
+
+    User 1: I''m sure it is. Do you donate any of your overstock to charity?
+
+    User 2: Yes, I always try to give back.
+
+    User 1: That''s great! I think that''s really important.
+
+    User 2: Thanks. It''s something I''m passionate about.
+
+    User 1: I can tell.
+
+    User 2: I''m glad.
+
+    User 1: So, what are you looking for at the library today?
+
+    User 2: I''m not sure yet. I''m just browsing.
+
+    User 1: Okay. I''m sure you''ll find something interesting.
+
+    User 2: Thanks. I hope so.
+
+    User 1: Well, I''m going to get back to work.
+
+    User 2: Okay. Thanks for talking to me.
+
+    User 1: No problem. Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

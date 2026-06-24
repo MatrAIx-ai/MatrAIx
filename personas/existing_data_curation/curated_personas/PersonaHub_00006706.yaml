@@ -1,0 +1,18 @@
+id: '00006706'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 6706
+persona_description: A scientist who specializes in semiconductor materials, particularly those used in the production of integrated circuits. She is particularly interested in the use of arsenic in these
+  materials and is questioning whether it is a wise choice for use in integrated circuits. She is also interested in the use of magnetic disks and is curious about the materials used in their manufacturing
+  process.
+expertise:
+  general_domain_top1pct: materials science
+  specific_domain_top1pct: semiconductor materials
+  general_domain_top01pct: None
+  specific_domain_top01pct: arsenic-based semiconductor materials
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: '00000530'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 530
+data:
+  user 1 personas: 'I love sweets.
+
+    I am in high school.
+
+    I cs and ds.
+
+    I love bruno mars.
+
+    I sleep a lot.'
+  user 2 personas: 'My dream is to own my own restaurant.
+
+    I work as a grill cook.
+
+    My favorite band is pink floyd.
+
+    I am looking for a second job.
+
+    Running is a hobby.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just working on some recipes for my future restaurant.
+
+    User 1: Oh, that''s cool! What kind of restaurant are you going to open?
+
+    User 2: I''m not sure yet, but I''m thinking something with a mix of American and Italian food.
+
+    User 1: That sounds delicious! I''m sure it will be a success.
+
+    User 2: Thanks! I hope so.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love pizza!
+
+    User 1: Me too! What''s your favorite kind?
+
+    User 2: I like pepperoni and pineapple.
+
+    User 1: Oh, that''s an interesting combination. I''ve never tried it before.
+
+    User 2: You should! It''s really good.
+
+    User 1: I will.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: Cool! I like to do those things too.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I love The Breakfast Club.
+
+    User 1: Me too! That''s a great movie.
+
+    User 2: I know, right? What''s your favorite video game?
+
+    User 1: I like Mario Kart.
+
+    User 2: Me too! That''s a classic.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what grade are you in?
+
+    User 1: I''m a senior.
+
+    User 2: Oh, cool! I''m a junior.
+
+    User 1: Cool! What school do you go to?
+
+    User 2: I go to High School.
+
+    User 1: Oh, cool! I go to High School too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

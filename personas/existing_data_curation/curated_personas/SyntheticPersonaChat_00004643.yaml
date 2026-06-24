@@ -1,0 +1,96 @@
+id: '00004643'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4643
+data:
+  user 1 personas: 'I have a long drive to work.
+
+    I am a diabetic.
+
+    I like to read.
+
+    I listen to podcasts.'
+  user 2 personas: 'I m always early.
+
+    I am a graduate student.
+
+    I am in between classes.
+
+    I volunteer with dogs.'
+  Best Generated Conversation: 'User 1: Hi there.
+
+
+    User 2: Hello.
+
+
+    User 1: How are you today?
+
+
+    User 2: I am doing well, thank you. And you?
+
+
+    User 1: I am doing well too. I am on my way to work.
+
+
+    User 2: Oh, where do you work?
+
+
+    User 1: I work at a hospital.
+
+
+    User 2: That sounds interesting. I am a graduate student.
+
+
+    User 1: Oh, that sounds cool. What are you studying?
+
+
+    User 2: I am studying business.
+
+
+    User 1: Nice. I am a diabetic.
+
+
+    User 2: I am sorry to hear that.
+
+
+    User 1: It''s okay. I manage it well.
+
+
+    User 2: That''s good.
+
+
+    User 1: I like to read and listen to podcasts.
+
+
+    User 2: I like to do those things too.
+
+
+    User 1: I am always early to class.
+
+
+    User 2: I am always early to places.
+
+
+    User 1: I volunteer with dogs.
+
+
+    User 2: That sounds fun.
+
+
+    User 1: It is.
+
+
+    User 2: I like dogs.
+
+
+    User 1: Me too.
+
+
+    User 2: Well, I have to go to class now. It was nice talking to you.
+
+
+    User 1: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

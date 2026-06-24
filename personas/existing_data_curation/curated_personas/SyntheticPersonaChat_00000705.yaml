@@ -1,0 +1,76 @@
+id: '00000705'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 705
+data:
+  user 1 personas: 'I like to hike.
+
+    I lost my arm in a car accident.
+
+    I am a farmer.
+
+    I graduated from college.
+
+    I am the youngest of 4 children.'
+  user 2 personas: 'I m learning to play the guitar.
+
+    I like to go fishing.
+
+    My favorite music is jimi hendrix.
+
+    I m a college drop out.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: My name is Amy.
+
+    User 1: Nice to meet you Amy! What do you like to do for fun?
+
+    User 2: I like to go fishing, play the guitar, and listen to Jimi Hendrix.
+
+    User 1: Oh, that''s cool! I like to go hiking, play video games, and read books.
+
+    User 2: I''ve never been hiking before, but it sounds like it would be fun.
+
+    User 1: It''s great! You get to see some beautiful scenery and get some exercise.
+
+    User 2: Maybe I''ll give it a try sometime.
+
+    User 1: I hope you do!
+
+    User 2: What''s your favorite book?
+
+    User 1: It''s hard to say, but I really like "The Lord of the Rings" series.
+
+    User 2: Oh, I love that series! I''ve read them all multiple times.
+
+    User 1: Me too! They''re so good.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a farmer.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a farmer.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a college dropout.
+
+    User 1: Oh, why did you drop out?
+
+    User 2: I wasn''t really sure what I wanted to do with my life, so I decided to take some time off to figure it out.
+
+    User 1: That''s understandable. I''m glad you''re figuring it out now.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you Amy.
+
+    User 2: You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

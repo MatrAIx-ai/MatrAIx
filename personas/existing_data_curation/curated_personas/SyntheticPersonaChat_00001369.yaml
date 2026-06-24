@@ -1,0 +1,88 @@
+id: 00001369
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1369
+data:
+  user 1 personas: 'I love to travel.
+
+    I am married.
+
+    I am a older gentlemen.
+
+    My favorite book is the bible.'
+  user 2 personas: 'I hate the taste of fish.
+
+    I have 23 cats at home.
+
+    I like to paint.
+
+    I traveled around the world in a boat.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi! I''m (name).
+
+    User 1: Where are you from?
+
+    User 2: I''m from (place).
+
+    User 1: Oh, nice! I''m from (place).
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to travel. I''ve been to (list of places).
+
+    User 2: Wow, that''s awesome! I''ve never been out of the country.
+
+    User 1: You should! It''s a great experience.
+
+    User 2: I know, I know. I''ve been meaning to go on a trip for a while.
+
+    User 1: Well, if you ever need someone to go with you, I''m always up for an adventure.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to paint. I have a studio in my house and I paint every day.
+
+    User 1: Oh, that''s cool! I love to paint too.
+
+    User 2: Really? What kind of things do you paint?
+
+    User 1: I usually paint landscapes and portraits.
+
+    User 2: Wow, that''s amazing! I''d love to see some of your work sometime.
+
+    User 1: Sure, I can send you some pictures.
+
+    User 2: Great! I''d love that.
+
+    User 1: So, what else do you do for fun?
+
+    User 2: I have 23 cats at home. They''re my best friends.
+
+    User 1: Oh, that''s awesome! I love cats.
+
+    User 2: Me too! They''re so cute and cuddly.
+
+    User 1: I''ve always wanted a cat, but I''m allergic.
+
+    User 2: That''s too bad. Cats are the best pets.
+
+    User 1: I know, I know. I''m really jealous.
+
+    User 2: Well, you can always come over and visit my cats.
+
+    User 1: I would love that!
+
+    User 2: Great! You''re always welcome.
+
+    User 1: Thanks! I''m glad I met you.
+
+    User 2: Me too! It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

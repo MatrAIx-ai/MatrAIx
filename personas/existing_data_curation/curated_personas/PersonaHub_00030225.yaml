@@ -1,0 +1,18 @@
+id: '00030225'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30225
+persona_description: A healthcare professional who is familiar with the latest medical developments and trends in infectious diseases. They have expertise in flu vaccinations and have likely seen the impact
+  of the current season's flu on their patients. They are aware of the importance of the vaccination and are likely to recommend it to others. They are also aware of the recent deaths from the flu in their
+  state and are aware of the potential severity and length of illness after being vaccinated.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

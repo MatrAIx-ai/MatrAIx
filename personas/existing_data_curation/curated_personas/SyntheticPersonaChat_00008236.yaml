@@ -1,0 +1,68 @@
+id: 00008236
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8236
+data:
+  user 1 personas: 'My wife hates me , she thinks i am lazy and poor.
+
+    I live a lie.
+
+    I am a painter.
+
+    I paint organic scenes with pretty trees.
+
+    I won a lottery 6 years ago but nobody knows.'
+  user 2 personas: 'I play tabletop games with friends.
+
+    I still live at home.
+
+    I have a crush on my co worker.
+
+    I need to use an inhaler sometimes.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1).
+
+    User 2: Hey, I''m (user 2). What do you like to do for fun?
+
+    User 1: I like to paint organic scenes with pretty trees. I also play tabletop games with friends.
+
+    User 2: That''s cool! I like playing tabletop games too. I also like to go hiking and camping.
+
+    User 1: That''s awesome! I love the outdoors. I used to go camping a lot when I was younger.
+
+    User 2: I still go camping a few times a year. It''s a great way to relax and get away from the hustle and bustle of city life.
+
+    User 1: I agree! I love being in nature. It''s so peaceful and relaxing.
+
+    User 2: Me too! I love the sound of the birds singing and the smell of the fresh air.
+
+    User 1: It''s the best! I''m glad we both like the outdoors.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 1: Exactly! So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go camping with some friends. What are you doing?
+
+    User 1: I''m actually not sure either. I might go to the park with my dog.
+
+    User 2: That sounds fun! I love dogs. What kind of dog do you have?
+
+    User 1: I have a golden retriever. He''s the sweetest dog ever.
+
+    User 2: I love golden retrievers! They''re so friendly and playful.
+
+    User 1: They are! He''s the best dog I could ever ask for.
+
+    User 2: I''m glad you have such a great dog. I''m sure he makes your life a lot richer.
+
+    User 1: He does! He''s always there for me when I need him.
+
+    User 2: That''s what dogs are for! They''re the best friends a person could ask for.
+
+    User 1: Exactly! I''m so glad I got him.
+
+    User 2: Me too! It sounds like you have a great dog.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

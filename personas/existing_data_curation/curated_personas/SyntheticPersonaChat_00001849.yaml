@@ -1,0 +1,72 @@
+id: 00001849
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1849
+data:
+  user 1 personas: 'I brew my own beer.
+
+    I like to make my own coffee.
+
+    I just bought a new house with my partner.
+
+    I am gay.'
+  user 2 personas: 'I love to listen to religious music.
+
+    I love my family.
+
+    I don t talk a lot.
+
+    I like playing basketball.
+
+    I am a middle aged woman.'
+  Best Generated Conversation: 'User 1: I just bought a new house with my partner!
+
+    User 2: That''s awesome! Congratulations!
+
+    User 1: Thanks! We''re really excited.
+
+    User 2: I''m sure you are! It''s a big step.
+
+    User 1: Yeah, it is. But we''re both ready for it.
+
+    User 2: That''s great.
+
+    User 1: We''ve been together for a long time, and we''ve been wanting to buy a house together for a while.
+
+    User 2: That''s so sweet.
+
+    User 1: Yeah, it is. We''re both really happy.
+
+    User 2: I''m glad to hear that.
+
+    User 1: Thanks.
+
+    User 2: So, what are you going to do with your old house?
+
+    User 1: We''re going to sell it.
+
+    User 2: Oh, okay.
+
+    User 1: Yeah, we''re not going to need two houses.
+
+    User 2: That makes sense.
+
+    User 1: Yeah, it does.
+
+    User 2: Well, good luck with the new house!
+
+    User 1: Thanks! We''re going to need it.
+
+    User 2: I''m sure you''ll do great.
+
+    User 1: I hope so.
+
+    User 2: Well, I''m going to go now.
+
+    User 1: Okay, bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

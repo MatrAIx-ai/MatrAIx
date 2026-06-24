@@ -1,0 +1,62 @@
+id: '00007401'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7401
+data:
+  user 1 personas: 'Lady gaga is my current favorite singer.
+
+    Madonna is my all time favorite.
+
+    I work in retail.
+
+    I love music.'
+  user 2 personas: 'I am a meat eater.
+
+    I like football on tv.
+
+    I love country music.
+
+    I drive a big truck.
+
+    I like to go hunting.'
+  Best Generated Conversation: 'User 1: I love listening to music.
+
+    User 2: What kind of music do you listen to?
+
+    User 1: I like a lot of different kinds of music, but my current favorite singer is Lady Gaga.
+
+    User 2: I''ve heard of her. I''m not really into pop music, but I''ve heard she''s good.
+
+    User 1: Yeah, she''s great. I also love Madonna. She''s my all-time favorite.
+
+    User 2: I''ve never really listened to Madonna. What kind of music does she sing?
+
+    User 1: She sings a lot of different genres, but she''s best known for her pop music. She''s also known for her live performances, which are always amazing.
+
+    User 2: I''ll have to check her out sometime. I''m not really into pop music, but I''ve heard good things about her.
+
+    User 1: Yeah, you should. She''s really talented.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work in retail. I''m a sales associate at a clothing store.
+
+    User 2: Oh, that''s cool. I used to work in retail when I was younger.
+
+    User 1: Yeah, it''s not bad. It can be a lot of work, but it''s also fun.
+
+    User 2: Yeah, I know what you mean. What do you like to do for fun?
+
+    User 1: I like to go out to concerts, listen to music, and hang out with my friends.
+
+    User 2: Nice. I like to do a lot of the same things. I also like to go hunting and fishing.
+
+    User 1: Oh, that''s cool. I''ve never been hunting or fishing, but I''ve always wanted to try it.
+
+    User 2: You should. It''s a lot of fun.
+
+    User 1: Maybe I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

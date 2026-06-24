@@ -1,0 +1,19 @@
+id: 00033599
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33599
+persona_description: A woodworker who specializes in using jack planes to plane and dimension wood boards, with a preference for using a jack plane with a moderate camber and an attack angle of about 50̊.
+  They are familiar with the setup and use of a jack plane, including the importance of the blade's camber and the need to use it diagonally across the grain for accurate removal of surface distortions
+  and prevention of tearout. They are also knowledgeable about the negative consequences of using a blade sharpened with too large an angle and the importance of back off the blade projection to improve
+  surface quality.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: woodworking
+  general_domain_top01pct: None
+  specific_domain_top01pct: jack plane usage
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

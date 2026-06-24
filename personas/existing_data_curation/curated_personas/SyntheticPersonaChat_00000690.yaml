@@ -1,0 +1,74 @@
+id: 00000690
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 690
+data:
+  user 1 personas: 'I like to cook.
+
+    My children are mostly grown.
+
+    I have a cat named felix and a small terrer names emmy.
+
+    I live in a small city.'
+  user 2 personas: 'I play in a nfl fantasy football league.
+
+    I like nfl and college football.
+
+    I love to read fiction books.
+
+    I am a georgia resident.
+
+    My favorite fiction genres are sci fi and horror.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read fiction books, especially science fiction and horror.
+
+    User 1: Me too! I''ve been reading a lot of science fiction lately.
+
+    User 2: What have you been reading?
+
+    User 1: I just finished reading the Foundation series by Isaac Asimov. It was really good!
+
+    User 2: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 1: You should! It''s a great series.
+
+    User 2: What else do you like to read?
+
+    User 1: I also like to read horror books.
+
+    User 2: Me too! I love Stephen King.
+
+    User 1: Me too! He''s my favorite author.
+
+    User 2: Have you read his new book, The Institute?
+
+    User 1: No, I haven''t yet. I''m waiting for it to come out in paperback.
+
+    User 2: It''s really good! You should check it out.
+
+    User 1: I will! I love his books.
+
+    User 2: Me too!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to play football.
+
+    User 1: That''s cool! I played football in high school.
+
+    User 2: I play in a fantasy football league.
+
+    User 1: Oh, that''s cool! I''ve never played fantasy football before.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will! It sounds like a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

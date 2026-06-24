@@ -1,0 +1,66 @@
+id: '00006251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6251
+data:
+  user 1 personas: 'I like painting , i can cook well.
+
+    I like cookies.
+
+    I am a student.
+
+    I also like ice cream.'
+  user 2 personas: 'I am single and go on dates regularly.
+
+    I was born completely deaf.
+
+    I enjoy playing tennis.
+
+    My favorite place to go is the mall.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m a student and I like to paint, cook, and eat cookies and ice cream. What do you like to do?
+
+    User 2: I like to play tennis, and I enjoy going to the mall. I''m also single and go on dates regularly.
+
+    User 1: That''s cool! I''ve never been to the mall, but I''ve always wanted to go. What''s it like?
+
+    User 2: It''s a lot of fun! There are so many different stores to shop at, and you can always find something you like.
+
+    User 1: That sounds great! I''m definitely going to have to check it out sometime.
+
+    User 2: You should! I''m sure you''ll have a lot of fun.
+
+    User 1: So, what''s your favorite thing about playing tennis?
+
+    User 2: I love the competition. It''s so much fun to try and beat your opponent.
+
+    User 1: That makes sense. I can imagine it would be really exciting to try and win a game.
+
+    User 2: It is! And it''s also really fun to just hang out with your friends and play a few sets.
+
+    User 1: I can imagine. I''ve always wanted to learn how to play tennis. Maybe I''ll take some lessons sometime.
+
+    User 2: You should! It''s a great sport to learn.
+
+    User 1: Thanks for the suggestion! I might just do that.
+
+    User 2: No problem! I''m always happy to help.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, watch TV, and play video games. I also like to read and go for walks.
+
+    User 1: That sounds like a lot of fun! I like to do all of those things too.
+
+    User 2: I''m glad! It''s always nice to meet someone who has similar interests.
+
+    User 1: Yeah, it is! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

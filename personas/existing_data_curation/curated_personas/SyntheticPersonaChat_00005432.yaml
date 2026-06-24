@@ -1,0 +1,70 @@
+id: '00005432'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5432
+data:
+  user 1 personas: 'My favorite class is painting.
+
+    I aspire to paint murals.
+
+    I like to work with acrylics.
+
+    I have blonde hair.'
+  user 2 personas: 'My favorite band is the muggers.
+
+    I go surfing any chance i get.
+
+    I could never be locked down to one partner.
+
+    My dreams are often bizarre.'
+  Best Generated Conversation: 'User 1: I love painting! It''s my favorite class.
+
+    User 2: Me too! I love the way you can express yourself with paint.
+
+    User 1: I know, right? It''s so therapeutic.
+
+    User 2: What kind of paintings do you like to do?
+
+    User 1: I like to do murals, but I also like to paint landscapes and portraits.
+
+    User 2: Oh, murals are cool! I''ve never tried painting one.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I might have to try it sometime.
+
+    User 1: What kind of band do you like?
+
+    User 2: I like The Muggers. They''re a punk rock band from the 80s.
+
+    User 1: Oh, I''ve never heard of them.
+
+    User 2: You should check them out! They''re really good.
+
+    User 1: I will!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to surf, go to the beach, and hang out with my friends.
+
+    User 2: I like to surf too! I wish I could go more often.
+
+    User 1: You should! It''s really fun.
+
+    User 2: I will!
+
+    User 1: What''s your favorite dream?
+
+    User 2: My favorite dream is the one where I''m flying.
+
+    User 1: That sounds amazing! I''ve never had a dream like that.
+
+    User 2: It is! It''s so much fun.
+
+    User 1: I''m glad you have such a great dream.
+
+    User 2: Thanks! It''s one of my favorites.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

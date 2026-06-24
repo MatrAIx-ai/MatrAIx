@@ -1,0 +1,74 @@
+id: '00005463'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5463
+data:
+  user 1 personas: 'My right foot only has 3 toes.
+
+    My favorite animal is the panda.
+
+    I eat 6 eggs every morning for breakfast.
+
+    I am a zookeeper.'
+  user 2 personas: 'I love to run fast.
+
+    I am strong.
+
+    I am young.
+
+    I am tall.
+
+    I never eat veggies.'
+  Best Generated Conversation: 'User 1: Hi, I''m a zookeeper.
+
+    User 2: Cool, what kind of animals do you work with?
+
+    User 1: I work with pandas, elephants, lions, tigers, and bears.
+
+    User 2: Wow, that sounds like an amazing job!
+
+    User 1: It is, I love it.
+
+    User 2: I bet you do.
+
+    User 1: Yeah, I get to work with all sorts of amazing animals.
+
+    User 2: That''s so cool.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to run.
+
+    User 1: Really? That''s awesome.
+
+    User 2: Yeah, I love the feeling of being free and moving fast.
+
+    User 1: I can understand that.
+
+    User 2: I also love the challenge of running a race and seeing how fast I can go.
+
+    User 1: That''s great. I''m not much of a runner myself, but I can appreciate the challenge.
+
+    User 2: Thanks.
+
+    User 1: What''s your favorite thing to eat?
+
+    User 2: I love pizza.
+
+    User 1: Me too! I could eat pizza every day.
+
+    User 2: Me too, I love the combination of cheese, sauce, and toppings.
+
+    User 1: I know, it''s so good.
+
+    User 2: Do you like vegetables?
+
+    User 1: Not really, I don''t like the taste.
+
+    User 2: Me neither, I always pick them out of my food.
+
+    User 1: That''s a good idea.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

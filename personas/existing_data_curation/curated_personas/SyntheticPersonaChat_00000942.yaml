@@ -1,0 +1,82 @@
+id: 00000942
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 942
+data:
+  user 1 personas: 'I am very smart.
+
+    I love to drink whiskey.
+
+    I wear contacts.
+
+    I work as a janitor.
+
+    I love the outdoors.'
+  user 2 personas: 'I enjoy playing video games.
+
+    I have a crummy job at scrubway.
+
+    I enjoy listening to country music.
+
+    I am in college.
+
+    I live life to its fullest.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I play video games, watch movies, and hang out with my friends.
+
+    User 1: Me too! I love video games. What games do you like to play?
+
+    User 2: I like to play all kinds of games, but my favorite is probably Minecraft.
+
+    User 1: I love Minecraft too! It''s such a fun game. I can spend hours playing it.
+
+    User 2: Me too! I love building things and exploring the world.
+
+    User 1: What kind of things do you like to build?
+
+    User 2: I like to build houses, farms, and castles. I also like to build machines and contraptions.
+
+    User 1: That sounds really cool! I''m not very good at building things, but I like to watch people who are.
+
+    User 2: I''m sure you''re better than you think you are! You should give it a try sometime.
+
+    User 1: I might just do that!
+
+    User 2: Awesome! I''m sure you''ll have a lot of fun.
+
+    User 1: Thanks! What do you like to do for work?
+
+    User 2: I work at Scrubway. It''s a crummy job, but it pays the bills.
+
+    User 1: I''m sorry to hear that. I hope you can find a better job someday.
+
+    User 2: Thanks. Me too.
+
+    User 1: What do you do for college?
+
+    User 2: I''m in college studying computer science.
+
+    User 1: That''s cool! I''m a computer science major too!
+
+    User 2: Really? That''s awesome! What year are you in?
+
+    User 1: I''m a sophomore.
+
+    User 2: Me too! What''s your favorite class so far?
+
+    User 1: I really like my data structures class.
+
+    User 2: Me too! That''s my favorite class too.
+
+    User 1: It''s so interesting to learn about how data structures work.
+
+    User 2: I know, right? It''s so cool to think about how we can store data in different ways to make it more efficient.
+
+    User 1: It''s definitely cool! I''m glad we''re in the same class.
+
+    User 2: Me too! It''s nice to have someone to talk to about it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

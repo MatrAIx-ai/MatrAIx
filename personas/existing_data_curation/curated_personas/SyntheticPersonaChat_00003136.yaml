@@ -1,0 +1,62 @@
+id: '00003136'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3136
+data:
+  user 1 personas: 'I like to watch movies.
+
+    I am a mother of 5.
+
+    I like to draw.
+
+    I like to do crafts.
+
+    I like all types of music.'
+  user 2 personas: 'I haven t done anything since high school.
+
+    People in school said i was quiet.
+
+    I play games at the arcade , still.
+
+    I listen to linkin park , i don t know why.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name]!
+
+    User 2: Hey! I''m [user 2 name]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play games at the arcade.
+
+    User 1: Oh, that''s cool! I''ve never been to an arcade before.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will! What''s your favorite game to play?
+
+    User 2: I like to play all sorts of games, but my favorite is probably Pac-Man.
+
+    User 1: Pac-Man is a classic! I used to play that all the time when I was younger.
+
+    User 2: Me too! It''s still so much fun.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to listen to music, draw, and do crafts.
+
+    User 1: Oh, that''s cool! I like to do all of those things too!
+
+    User 2: Really? That''s awesome! We should hang out sometime and do some crafts together.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! I''ll text you my number.
+
+    User 1: Sounds good!
+
+    User 2: Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

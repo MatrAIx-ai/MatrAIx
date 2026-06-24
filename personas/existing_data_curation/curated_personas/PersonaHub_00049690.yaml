@@ -1,0 +1,20 @@
+id: 00049690
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49690
+persona_description: A researcher or practitioner who is interested in understanding the sensitivity of a complex model to changes in its input variables. This person may be working in fields such as engineering,
+  economics, or environmental science, where they are concerned with optimizing systems or making predictions with limited data. They may be looking for ways to reduce the computational expense of running
+  the model by selecting subsets of input variables that have a significant impact on the output, or they may be interested in identifying which input variables are most sensitive to changes. This person
+  may also be interested in the trade-off between exploring the assumptions of the model and the resulting inference, and may be looking for ways to identify the most credible assumptions and the narrowest
+  intervals of inferences that are useful for decision-making.
+expertise:
+  general_domain_top1pct: mathematics
+  specific_domain_top1pct: statistical mathematics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

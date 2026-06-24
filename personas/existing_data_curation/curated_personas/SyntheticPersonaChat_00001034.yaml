@@ -1,0 +1,72 @@
+id: '00001034'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1034
+data:
+  user 1 personas: 'I like football.
+
+    I am a christian.
+
+    My father used to work for microsoft.
+
+    My favourite band is kings of leon.'
+  user 2 personas: 'My sister is becoming my mother and often asks me when i m getting married.
+
+    I am not a big fan of waiting in line.
+
+    I often think about quitting my job and becoming a roadie for justin bieber.
+
+    I still have a photo from my senior prom in my wallet.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to concerts, and I love music.
+
+    User 1: Me too! What kind of music do you like?
+
+    User 2: I like all kinds of music, but I really like Kings of Leon.
+
+    User 1: I love Kings of Leon too! They''re my favorite band.
+
+    User 2: Oh, that''s awesome! What''s your favorite song by them?
+
+    User 1: I love all their songs, but my favorite is probably "Sex on Fire".
+
+    User 2: That''s a great song! I love the music video too.
+
+    User 1: Me too! It''s so creative.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to play video games, and I''m a huge fan of football.
+
+    User 2: I love video games too! What''s your favorite game?
+
+    User 1: I like all sorts of games, but my favorite is probably The Witcher 3.
+
+    User 2: Oh, that''s a great game! I''ve been meaning to play it for a while.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will!
+
+    User 1: What about football? Do you have a favorite team?
+
+    User 2: I''m a big fan of the New York Giants.
+
+    User 1: Oh, that''s cool! I''m a fan of the Green Bay Packers.
+
+    User 2: Nice! We should play a game of Madden sometime.
+
+    User 1: That would be fun!
+
+    User 2: We should exchange numbers.
+
+    User 1: Okay'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

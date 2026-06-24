@@ -1,0 +1,74 @@
+id: 00005148
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5148
+data:
+  user 1 personas: 'My favorite hobby is reading.
+
+    I am a digital artist.
+
+    My husband is an author and we have twins together.
+
+    I was born in france and moved to canada.
+
+    My favorite author is stephen king.'
+  user 2 personas: 'And , i love psychoanalyzing my friends.
+
+    I love rage metal music.
+
+    I am a special ed teacher.'
+  Best Generated Conversation: 'User 1: I love reading! I''m a big Stephen King fan.
+
+    User 2: Me too! I love his books. I''ve read all of them.
+
+    User 1: Wow, that''s impressive! I''ve only read a few of them.
+
+    User 2: Which ones have you read?
+
+    User 1: I''ve read The Shining, Misery, and The Stand.
+
+    User 2: Those are all great books! Have you heard of The Dark Tower series?
+
+    User 1: Yes, I''ve heard of it. It''s on my to-read list.
+
+    User 2: You should definitely read it. It''s one of my favorite series.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem. So, what do you do for a living?
+
+    User 1: I''m a digital artist.
+
+    User 2: Oh, that''s cool! Do you work from home?
+
+    User 1: Yes, I do. I work from my studio.
+
+    User 2: That''s awesome. I''m a special education teacher.
+
+    User 1: Oh, that''s great! I have a lot of respect for teachers.
+
+    User 2: Thanks! It''s a rewarding job.
+
+    User 1: I''m sure it is. So, what do you like to do for fun?
+
+    User 2: I love to psychoanalyze my friends.
+
+    User 1: What do you mean by that?
+
+    User 2: I just like to try to figure out why they do the things they do.
+
+    User 1: That''s interesting. I''ve never thought about doing that.
+
+    User 2: It''s fun. You can learn a lot about people.
+
+    User 1: I''m sure you can. So, what''s your favorite thing about being a teacher?
+
+    User 2: I love seeing the light bulb go on when my students finally understand something.
+
+    User 1: That''s a great feeling.
+
+    User 2: It is. It''s why I keep doing it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

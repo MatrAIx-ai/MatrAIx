@@ -1,0 +1,72 @@
+id: '00002641'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2641
+data:
+  user 1 personas: 'I was born in london.
+
+    I work in it.
+
+    I live in vienna , austria now.
+
+    I live with my boyfriend of 5 years.
+
+    I paint in my free time.'
+  user 2 personas: 'I m allergic to shellfish.
+
+    I like horseback riding.
+
+    My favorite food is cheese.
+
+    I love going to concerts and dancing hard.
+
+    I work at a non profit that helps children.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you! What do you do for a living?
+
+    User 2: I work at a non-profit that helps children.
+
+    User 1: That''s great! I''m sure you''re making a difference in the world.
+
+    User 2: I hope so! It''s really rewarding work.
+
+    User 1: Where are you from?
+
+    User 2: I was born in California, but I''ve lived in Austria for the past 10 years.
+
+    User 1: Oh, really? What brought you to Austria?
+
+    User 2: I fell in love with a guy from Austria and moved there to be with him.
+
+    User 1: That''s so romantic! How long have you been together?
+
+    User 2: We''ve been together for 5 years now.
+
+    User 1: Congratulations! That''s a long time.
+
+    User 2: Thank you! I''m really lucky to have him in my life.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go to concerts and dance. I also love horseback riding.
+
+    User 1: I love to go to concerts too! What''s your favorite band?
+
+    User 2: I don''t have a favorite band, but I love a lot of different music.
+
+    User 1: Me too! What kind of music do you like?
+
+    User 2: I like a little bit of everything, but I mostly listen to rock, pop, and hip-hop.
+
+    User 1: That''s cool! I like a lot of those genres too.
+
+    User 2: Nice! We should go to a concert together sometime.
+
+    User 1: That would be fun! I''m always looking for new people to go to concerts with.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

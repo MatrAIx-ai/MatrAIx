@@ -1,0 +1,78 @@
+id: '00001562'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1562
+data:
+  user 1 personas: 'I despise my boss.
+
+    I work over 60 hours a week as a restaurant manager.
+
+    We help each other out in my family.
+
+    When i cut loose , i lose control.'
+  user 2 personas: 'My favorite season is summer.
+
+    I love tacos but hate spaghetti.
+
+    I want to be a doctor when i graduate.
+
+    I m headed to university of michigan in the fall.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student at the University of Michigan.
+
+    User 1: Oh, cool! What are you studying?
+
+    User 2: I''m studying to be a doctor.
+
+    User 1: That''s awesome! What''s your favorite season?
+
+    User 2: My favorite season is summer.
+
+    User 1: Me too! I love the beach and the sun.
+
+    User 2: I love swimming and going to the beach.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love tacos!
+
+    User 1: Me too! I love how they''re so filling and flavorful.
+
+    User 2: I love all the different toppings you can put on them.
+
+    User 1: What''s your least favorite food?
+
+    User 2: I hate spaghetti.
+
+    User 1: Why is that?
+
+    User 2: I just don''t like the taste or the texture.
+
+    User 1: I can understand that. I''m not a big fan of spaghetti either.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I love to go out to eat and explore new places.
+
+    User 2: Me too! I love trying new foods and learning about different cultures.
+
+    User 1: Do you have any family?
+
+    User 2: Yes, I have a big family.
+
+    User 1: Me too! I love my family.
+
+    User 2: I love my family too. They''re always there for me.
+
+    User 1: I''m glad you have a good family. That''s important.
+
+    User 2: It is! I''m lucky to have them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,98 @@
+id: 00000984
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 984
+data:
+  user 1 personas: 'I enjoy singing.
+
+    I live in a big city.
+
+    I enjoy video games.
+
+    I enjoy my job , as a teacher.
+
+    Magic mike is my favorite movie.'
+  user 2 personas: 'My favorite color is blue.
+
+    I like nature.
+
+    I like to go hiking.
+
+    I work full time.
+
+    I love eating out.'
+  Best Generated Conversation: 'User 1: Hello! What''s your name?
+
+    User 2: Hello! My name is [name]. What''s yours?
+
+    User 1: My name is [name]. It''s nice to meet you, [name].
+
+    User 2: It''s nice to meet you too, [name].
+
+    User 1: Where do you live?
+
+    User 2: I live in a small town in the mountains.
+
+    User 1: That sounds nice! I live in a big city.
+
+    User 2: I''ve always wanted to live in a big city. What''s it like?
+
+    User 1: It''s very busy and crowded, but there''s always something to do.
+
+    User 2: I can imagine. I like the peace and quiet of the mountains.
+
+    User 1: I can understand that. There''s something to be said for both.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a teacher.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I can imagine. I love working with kids.
+
+    User 1: Me too! What do you do for a living?
+
+    User 2: I work full time.
+
+    User 1: Oh, what do you do?
+
+    User 2: I don''t like to talk about my job.
+
+    User 1: Okay, that''s fine.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to sing, play video games, and eat out.
+
+    User 2: Oh, that''s cool! I like to hike, go camping, and go fishing.
+
+    User 1: I''ve never been hiking or camping, but I''ve always wanted to try them.
+
+    User 2: You should! They''re both a lot of fun.
+
+    User 1: I will!
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is Magic Mike.
+
+    User 2: Oh, that''s a good movie! I like the first one better than the second one.
+
+    User 1: Me too! I think the first one is more original.
+
+    User 2: I agree. What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Oh, that''s my favorite color too!
+
+    User 1: That''s so cool! We have a lot in common.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

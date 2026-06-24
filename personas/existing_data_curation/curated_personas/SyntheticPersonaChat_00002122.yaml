@@ -1,0 +1,78 @@
+id: '00002122'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2122
+data:
+  user 1 personas: 'I am dating my boss.
+
+    My favorite flower is a daisy.
+
+    I am in my 20 s.
+
+    I work at a real estate office.
+
+    I love to sing.'
+  user 2 personas: 'I do not like vegetables.
+
+    I enjoy spending time with my family.
+
+    My favorite store is american eagle.
+
+    I love to go running.
+
+    My favorite truck is a chevy duramax.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you! What do you do for fun?
+
+    User 2: I like to go running, spend time with my family, and go shopping.
+
+    User 1: That sounds great! I love to sing, go to the movies, and play video games.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play all kinds of video games, but I''m really into RPGs and action games.
+
+    User 2: I''ve never really played any RPGs, but I''ve heard they''re a lot of fun.
+
+    User 1: They are! They''re a great way to escape from the real world for a while.
+
+    User 2: That sounds like something I''d enjoy.
+
+    User 1: You should try playing one!
+
+    User 2: I will.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse at a local hospital.
+
+    User 1: That must be a lot of work.
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I can imagine. What''s your favorite part of your job?
+
+    User 2: Helping people.
+
+    User 1: That''s a great answer. I''m sure you''re a great nurse.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what do you like to do for your birthday?
+
+    User 2: I usually go out to dinner with my family and friends.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

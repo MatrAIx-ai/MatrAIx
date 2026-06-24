@@ -1,0 +1,19 @@
+id: '00052340'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52340
+persona_description: A geologist or hydrologist who is interested in studying drainage systems and their relationship with valley-bottom gradient. This person is likely to have expertise in using data from
+  fieldwork and laboratory experiments to analyze the characteristics of drainage systems, including the relationship between catchment area and valley-bottom gradient. They may have experience working
+  with large datasets, such as those used in the analysis of the plots in the text, and may have a background in computer science or statistics to help interpret and visualize the data. They may also have
+  an interest in the role of debris flows in the erosion of drainage systems.
+expertise:
+  general_domain_top1pct: data analysis
+  specific_domain_top1pct: geology/hydrology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

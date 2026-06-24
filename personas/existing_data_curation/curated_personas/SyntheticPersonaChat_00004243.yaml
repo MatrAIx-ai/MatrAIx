@@ -1,0 +1,94 @@
+id: '00004243'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4243
+data:
+  user 1 personas: 'My favourite band is rush.
+
+    I can speak three languages english , french and spanish.
+
+    I am a mother of two.
+
+    I am currently looking for employment.'
+  user 2 personas: 'I drive a 2011 volkswagen passa.
+
+    I work as a public affairs liaison.
+
+    I eat too much fast food.
+
+    I am a national guard officer.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is Sarah.
+
+    User 1: Nice to meet you, Sarah. I''m [user 1 name].
+
+    User 2: Nice to meet you too, [user 1 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a public affairs liaison for the National Guard.
+
+    User 1: Oh, that''s cool! Do you like your job?
+
+    User 2: I do, it''s very rewarding.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I like working with the public and helping them understand the National Guard.
+
+    User 1: That sounds like a great job. I''m a stay-at-home mom of two kids.
+
+    User 2: Oh, that sounds like a lot of work!
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: What are your kids'' names?
+
+    User 1: Their names are Alex and Emily.
+
+    User 2: What do they like to do?
+
+    User 1: They like to play video games, read books, and play outside.
+
+    User 2: Sounds like they''re a lot of fun.
+
+    User 1: They are!
+
+    User 2: So, what are you looking for in a new job?
+
+    User 1: I''m looking for something that''s flexible and allows me to be with my kids.
+
+    User 2: I understand. I''m sure you''ll find something perfect.
+
+    User 1: I hope so!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, watch movies, and go out to eat.
+
+    User 2: What are your favorite books?
+
+    User 1: I love to read mysteries and thrillers.
+
+    User 2: Me too! What are your favorite movies?
+
+    User 1: I like action movies and comedies.
+
+    User 2: I like those too! What are your favorite restaurants?
+
+    User 1: I like Italian food and sushi.
+
+    User 2: Me too! Sounds like we have a lot in common.
+
+    User 1: We do! It''s been nice talking to you, Sarah.
+
+    User 2: It''s been nice talking to you too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

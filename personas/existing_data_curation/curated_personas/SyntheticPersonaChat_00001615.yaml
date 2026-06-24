@@ -1,0 +1,70 @@
+id: '00001615'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1615
+data:
+  user 1 personas: 'I have a parakeet.
+
+    I have 3 roommates.
+
+    I love gummy bears.
+
+    My favorite color is orange.'
+  user 2 personas: 'I have two kids i enjoy being on social media.
+
+    I love mexican food.
+
+    I love the summer.
+
+    I work at a animal clinic.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the beach in the summer, and I love Mexican food.
+
+    User 1: I love the beach too! What''s your favorite beach?
+
+    User 2: I like to go to the beach in San Diego. It''s so beautiful and there''s always something to do.
+
+    User 1: I''ve never been to San Diego, but I''ve heard great things about it.
+
+    User 2: You should definitely go sometime! It''s a great place to relax and have fun.
+
+    User 1: Maybe I will! I''m always looking for new places to explore.
+
+    User 2: What do you like to do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I work at an animal clinic.
+
+    User 1: That sounds like a fun job! I love animals.
+
+    User 2: Yeah, it''s great! I get to work with all kinds of animals every day.
+
+    User 1: That''s awesome! I''m sure you have some great stories.
+
+    User 2: Yeah, I do! I''ll have to tell you some of them sometime.
+
+    User 1: I would love that!
+
+    User 2: We should get together sometime and swap stories.
+
+    User 1: That sounds like a great idea!
+
+    User 2: Great! I''ll give you my number.
+
+    User 1: Thanks! I''ll text you soon.
+
+    User 2: Sounds good!
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

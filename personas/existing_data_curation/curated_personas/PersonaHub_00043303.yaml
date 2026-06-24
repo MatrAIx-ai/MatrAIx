@@ -1,0 +1,18 @@
+id: '00043303'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 43303
+persona_description: A healthcare professional who is responsible for monitoring and preventing the spread of infectious diseases, particularly in high-risk populations. This person is knowledgeable about
+  the biology and behavior of mosquitoes, and the measures that can be taken to reduce the risk of mosquito bites and the spread of diseases like West Nile Virus. They are aware of the symptoms of the disease
+  and the importance of seeking medical attention if one develops.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: vector-borne disease prevention
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

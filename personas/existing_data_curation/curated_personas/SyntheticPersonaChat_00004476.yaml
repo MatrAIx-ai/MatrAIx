@@ -1,0 +1,66 @@
+id: '00004476'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4476
+data:
+  user 1 personas: 'I want to become an author.
+
+    I m currently unemployed so i have time to write.
+
+    After finishing my career i discovered that i m not that pasionate about it.
+
+    I m a profesional translator.
+
+    I m writing my first novel and hope to finish before the end of the year.'
+  user 2 personas: 'I am not a basketball player though.
+
+    I would like to retire to hawaii in the next 10 years.
+
+    I currently work for ibm in chicago.
+
+    I am almost 7 feet tall.
+
+    My favorite band is the rolling stones.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work for IBM in Chicago.
+
+    User 1: Oh, that''s cool! I''ve heard good things about IBM.
+
+    User 2: It''s a great company to work for.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play basketball, listen to music, and hang out with friends.
+
+    User 1: I like those things too! I love music, and I''m also a big basketball fan.
+
+    User 2: What''s your favorite band?
+
+    User 1: I like a lot of different bands, but my favorite is probably The Rolling Stones.
+
+    User 2: I love The Rolling Stones too! They''re one of my favorite bands as well.
+
+    User 1: What do you like about them?
+
+    User 2: I love their music, and I also love their energy. They''re always so lively and fun to watch.
+
+    User 1: I agree! They''re a great band.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go see a movie, or I might just hang out with friends.
+
+    User 2: That sounds like a good plan. I''m not sure what I''m doing either. I might go to a concert, or I might just stay home and relax.
+
+    User 1: Whatever you do, have a good weekend!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: 00009808
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9808
+persona_description: A scientist who specializes in environmental science and is particularly knowledgeable about the Great Lakes and their health. This scientist is likely to be interested in the forecast
+  for toxic algae blooms in Lake Erie and the potential impact on the region's tourism economy. They are also likely to be interested in the causes of toxic algae blooms and the measures being taken to
+  reduce phosphorus runoff into the lake.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: environmental science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

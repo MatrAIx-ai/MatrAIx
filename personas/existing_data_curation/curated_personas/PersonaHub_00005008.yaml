@@ -1,0 +1,18 @@
+id: 00005008
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5008
+persona_description: A space program spokesman who specializes in space rendezvous and docking, particularly the implementation of the fast-rendezvous scheme for the International Space Station (ISS) and
+  the associated spacecraft. He has extensive experience in space navigation, orbital mechanics, and spacecraft design. His expertise is valued by space station operators and spacefaring nations seeking
+  to establish a presence in space.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: spacecraft design and navigation
+  general_domain_top01pct: None
+  specific_domain_top01pct: space rendezvous and docking
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

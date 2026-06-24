@@ -1,0 +1,84 @@
+id: '00006647'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6647
+data:
+  user 1 personas: 'I try to do my job as best as i can.
+
+    I work in a bank.
+
+    I am very polite and courteous.
+
+    I look forward to eating at restaurants.
+
+    I work 40 hours a week.'
+  user 2 personas: 'My parents were divorced.
+
+    I am a very social person.
+
+    I have broken my arm twice.
+
+    I am a widow.
+
+    I grew up with 6 siblings.'
+  Best Generated Conversation: 'User 1: Hi! My name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go out with friends, travel, and read.
+
+    User 1: Me too! I love going out to eat at restaurants. What''s your favorite kind of food?
+
+    User 2: I love Italian food. I used to work in a restaurant that served Italian food, so I got to eat it all the time.
+
+    User 1: That''s awesome! I love Italian food too. I have a favorite Italian restaurant that I go to all the time.
+
+    User 2: Oh, really? What''s it called?
+
+    User 1: It''s called [restaurant name]. Have you been there before?
+
+    User 2: No, I haven''t. I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for work?
+
+    User 2: I''m a social worker.
+
+    User 1: Oh, that''s interesting. What''s it like working in that field?
+
+    User 2: It''s rewarding. I get to help people, and I get to see the positive impact that I''m making in their lives.
+
+    User 1: That''s great. I''m sure that''s a very fulfilling job.
+
+    User 2: It is. I love it.
+
+    User 1: So, are you married?
+
+    User 2: No, I''m a widow.
+
+    User 1: Oh, I''m sorry.
+
+    User 2: It''s okay.
+
+    User 1: How many kids do you have?
+
+    User 2: I have six kids.
+
+    User 1: Oh, wow. That must be a lot of work.
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go out with friends, travel, and read.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

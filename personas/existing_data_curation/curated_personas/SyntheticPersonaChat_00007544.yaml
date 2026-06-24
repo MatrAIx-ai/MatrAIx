@@ -1,0 +1,76 @@
+id: '00007544'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7544
+data:
+  user 1 personas: 'My favorite book is anne of green gables.
+
+    I have always wanted a pot bellied pig.
+
+    I love owning nice office supplies.
+
+    My mom teaches kindergarten and my dad is a tax assessor.
+
+    I won a beauty pageant one time but did not feel like it was worth the effort.'
+  user 2 personas: 'I only date people taller than me.
+
+    I really like technology.
+
+    My dog is smaller than my cat.
+
+    I wish i could live forever.
+
+    I like free diving.'
+  Best Generated Conversation: 'User 1: What''s your favorite book?
+
+    User 2: My favorite book is Anne of Green Gables.
+
+    User 1: That''s a great book! I love the story of Anne.
+
+    User 2: Me too! She''s such a strong and independent character.
+
+    User 1: I agree. She''s a role model for young girls.
+
+    User 2: Definitely. She''s someone who always stands up for what she believes in.
+
+    User 1: What do you think is the most important lesson Anne teaches us?
+
+    User 2: I think she teaches us that it''s important to be yourself, no matter what.
+
+    User 1: That''s a great lesson. I think everyone should learn that.
+
+    User 2: Me too. It''s important to be proud of who you are.
+
+    User 1: I agree. So, what do you do for a living?
+
+    User 2: I work in technology.
+
+    User 1: Oh, that''s cool. What kind of technology?
+
+    User 2: I work on software development.
+
+    User 1: Oh, that''s interesting. What''s your favorite part about your job?
+
+    User 2: I like working on new and innovative projects.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I''m always learning new things.
+
+    User 1: That''s great. What are some of your hobbies?
+
+    User 2: I like to free dive.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try that.
+
+    User 2: It''s a lot of fun. You get to see some really cool things underwater.
+
+    User 1: That sounds amazing. I''m jealous.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might just do that. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

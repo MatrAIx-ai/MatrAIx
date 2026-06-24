@@ -1,0 +1,18 @@
+id: '00066010'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 66010
+persona_description: A researcher or scientist involved in conducting clinical trials for cancer treatments, especially in the field of oncology. They are likely to be familiar with the complex process
+  of designing and conducting clinical trials, the different types of trials, and the statistical analysis required to evaluate the effectiveness of the treatments. They are also likely to have expertise
+  in the specific type of cancer being studied and the treatments being evaluated.
+expertise:
+  general_domain_top1pct: medicine/healthcare
+  specific_domain_top1pct: oncology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

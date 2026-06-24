@@ -1,0 +1,18 @@
+id: '00003001'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3001
+persona_description: A researcher in the field of robotics and artificial intelligence, particularly in the development of intuitive human-robot interactions. This person has expertise in using brain signals
+  and hand gestures to control robots more intuitively and precisely, and has demonstrated this system on a task involving a robot moving a power drill to one of three possible targets on a mock plane.
+  They have published a paper on this work and are likely interested in further developing and implementing this system in real-world settings.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: human-robot interactions
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,76 @@
+id: 00003833
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3833
+data:
+  user 1 personas: 'My favorite color is red.
+
+    I m deathly afraid of snakes , but not bugs.
+
+    I watched the eclipse without using proper eye protection.
+
+    I drink 10 cups of tea every day.'
+  user 2 personas: 'I have 3 dogs and 2 cats.
+
+    I am a 30 year old female.
+
+    I work as a vet.
+
+    I am a vegan.
+
+    I like to ride my bike.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride my bike, play with my dogs, and watch movies.
+
+    User 1: I like to ride my bike too! And I love dogs, but I''m deathly afraid of snakes.
+
+    User 2: Oh no! I love snakes! They''re so cool.
+
+    User 1: I know, right? They''re so fascinating. But I just can''t get over the fact that they could kill me.
+
+    User 2: I get it. I''m not a fan of spiders, even though they''re harmless.
+
+    User 1: I like spiders! I think they''re really cool.
+
+    User 2: I can''t tell if you''re messing with me or not.
+
+    User 1: I''m not! I really do like spiders.
+
+    User 2: Well, you''re definitely different from me.
+
+    User 1: I guess so. But I think it''s good to have different interests.
+
+    User 2: I agree. It makes the world more interesting.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the movies, play video games, and read books.
+
+    User 1: I love to read books too! What''s your favorite book?
+
+    User 2: It''s hard to say, but I think I would have to say "The Lord of the Rings".
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: Me too! I love the world Tolkien created.
+
+    User 1: Me too! It''s so detailed and immersive.
+
+    User 2: It really is. I''m a big fan of fantasy books in general.
+
+    User 1: Me too! I think they''re so creative and imaginative.
+
+    User 2: I agree. They''re a great escape from reality.
+
+    User 1: I know what you mean. I love getting lost in a good book.
+
+    User 2: Me too! It''s the best feeling.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

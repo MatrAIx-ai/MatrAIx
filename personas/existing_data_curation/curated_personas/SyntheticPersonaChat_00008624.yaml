@@ -1,0 +1,66 @@
+id: 00008624
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8624
+data:
+  user 1 personas: 'I try to go hunting with my brothers several times a year.
+
+    I just bought my first home.
+
+    I am a writer.
+
+    I love to barbecue.
+
+    I live in springfield , mo.'
+  user 2 personas: 'I work at a retail store.
+
+    My favorite movie is django unchained.
+
+    I drive a honda civic.
+
+    I like long walks on the beach.
+
+    I love rock climbing.'
+  Best Generated Conversation: 'User 1: I just bought my first home in Springfield, Missouri.
+
+    User 2: Congratulations! That''s a big milestone.
+
+    User 1: Thanks! I''m really excited about it.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to write, barbecue, and go hunting with my brothers.
+
+    User 2: That''s cool! I love to go for long walks on the beach.
+
+    User 1: That sounds nice. I''ve never been to the beach.
+
+    User 2: You should go! It''s so relaxing.
+
+    User 1: I''ll have to do that sometime.
+
+    User 2: You should. It''s really nice out there.
+
+    User 1: I might go this weekend.
+
+    User 2: That would be fun! I could go with you.
+
+    User 1: That would be great!
+
+    User 2: Cool! We can make a day of it.
+
+    User 1: Sounds good.
+
+    User 2: We can go swimming, sunbathing, and play in the sand.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It will be!
+
+    User 1: I''m excited.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

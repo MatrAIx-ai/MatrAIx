@@ -1,0 +1,56 @@
+id: 00001391
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1391
+data:
+  user 1 personas: 'I m a vegetarian.
+
+    I take the subway to work everyday.
+
+    Every fall i visit my sister in canada.
+
+    I have four cats.'
+  user 2 personas: 'I currently suffer from social anxiety.
+
+    I watch every football game at alabama.
+
+    I am a geology major at alabama university.
+
+    I have a girlfriend of 7 years.
+
+    I never have had alcohol in my life.'
+  Best Generated Conversation: 'User 1: I''m a vegetarian. I take the subway to work everyday. Every fall I visit my sister in Canada. I have four cats.
+
+    User 2: I currently suffer from social anxiety. I watch every football game at Alabama. I am a geology major at Alabama University. I have a girlfriend of 7 years. I never have had alcohol in my life.
+
+    User 1: That''s cool. I''ve never been to Canada. What''s it like there?
+
+    User 2: It''s beautiful! The scenery is amazing. I love going hiking there.
+
+    User 1: That sounds really nice. I''d love to go there sometime.
+
+    User 2: You should! It''s worth the trip.
+
+    User 1: I might just have to.
+
+    User 2: Well, if you do, I know a great place to stay.
+
+    User 1: Oh, that''s good to know. Thanks!
+
+    User 2: No problem!
+
+    User 1: So, what''s it like being a geology major?
+
+    User 2: It''s really interesting! I love learning about the earth and how it works.
+
+    User 1: That''s cool. I''m not sure what I want to do with my life yet.
+
+    User 2: You have time to figure it out. Just keep exploring your interests and you''ll find something you''re passionate about.
+
+    User 1: Thanks for the advice.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

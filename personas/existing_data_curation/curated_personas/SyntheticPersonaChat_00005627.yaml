@@ -1,0 +1,68 @@
+id: '00005627'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5627
+data:
+  user 1 personas: 'I want to be in a band someday.
+
+    I have a wife and two kids.
+
+    I sleep 10 hours every day because my work is tiring.
+
+    My hobbies are sleeping and playing the guitar.
+
+    I am a factory worker.'
+  user 2 personas: 'I enjoy watching tennis and golf on tv.
+
+    I m a school teacher.
+
+    I teach 5th grade students near oakville , ny.
+
+    My name is sarah.
+
+    I love to read and relax by the lake on the weekends.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a school teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach 5th grade.
+
+    User 1: Oh, nice! I used to teach 5th grade.
+
+    User 2: Really? What was it like?
+
+    User 1: It was a lot of fun. I loved working with kids that age.
+
+    User 2: I can imagine! They''re so energetic and curious.
+
+    User 1: Yeah, they''re the best! What do you like to do for fun?
+
+    User 2: I love to read and relax by the lake on the weekends.
+
+    User 1: That sounds like a great way to spend your time. I love to read too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I love anything by Stephen King, but I also like to read a lot of non-fiction.
+
+    User 2: I''ve never read anything by Stephen King, but I''ve heard good things.
+
+    User 1: You should definitely check him out! He''s a great writer.
+
+    User 2: I will! What''s your favorite non-fiction book?
+
+    User 1: I''m currently reading a book about the history of the Black Panther Party. It''s really interesting.
+
+    User 2: That sounds like a good book. I''ll have to check it out.
+
+    User 1: You should! It''s a really good read.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00007112'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7112
+data:
+  user 1 personas: 'I can run very fast for long distances.
+
+    I drink a lot of caffeine.
+
+    I am very skinny and energetic.
+
+    I have a cheap car my dad gave me.
+
+    I have a very unhealthy diet.'
+  user 2 personas: 'I like to eat cheetos.
+
+    I like to ski.
+
+    My wife does not like me anymore.
+
+    I have went to mexico 4 times this year.
+
+    I hate mexican food.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing okay.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ski.
+
+    User 1: That''s cool. I''ve never tried skiing.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might do that. What''s your favorite thing about skiing?
+
+    User 2: I like the feeling of being free and in control while going down the mountain.
+
+    User 1: That sounds fun. I''m not sure if I''d have the balance for it, though.
+
+    User 2: You''d be surprised. It''s not as hard as it looks.
+
+    User 1: I''ll take your word for it.
+
+    User 2: Do you have any hobbies?
+
+    User 1: I like to run. I''m pretty good at it.
+
+    User 2: That''s cool. I don''t think I could run very far.
+
+    User 1: It''s actually not that hard. You just have to keep at it.
+
+    User 2: I''ll take your word for it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s cool. I''m in school right now.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: That''s a good field. What do you want to do when you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going to law school.
+
+    User 2: That''s a good idea. Law school is hard, but it''s worth it in the end.
+
+    User 1: I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00002142'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2142
+data:
+  user 1 personas: 'I can t stand beets.
+
+    I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I m an ovo vegetarian.'
+  user 2 personas: 'I enjoy hiking and riding my bicycle.
+
+    I am a night owl.
+
+    I am 29 years old.
+
+    My favorite band is pearl jam.
+
+    I live in a suburb of boston.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m an ovo vegetarian, which means I don''t eat meat or fish, but I do eat eggs.
+
+    User 2: That''s interesting! I''m a pescatarian, which means I don''t eat meat, but I do eat fish.
+
+    User 1: Oh, cool! Have you ever tried ovo vegetarianism?
+
+    User 2: No, I haven''t. I''ve always been a pescatarian, but I''ve heard good things about ovo vegetarianism.
+
+    User 1: I think it''s great! I love eggs, and I feel like I''m getting all the nutrients I need without having to eat meat.
+
+    User 2: That''s good to hear! I might have to give it a try sometime.
+
+    User 1: I hope you do! It''s a great way to eat healthy and still enjoy your favorite foods.
+
+    User 2: Thanks for the suggestion! I''ll definitely keep it in mind.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love hiking and riding my bicycle. I also love to go camping and fishing.
+
+    User 1: That sounds fun! I love hiking too, but I''m not very good at biking.
+
+    User 2: It''s a fun way to get exercise and enjoy the outdoors.
+
+    User 1: I know! I need to get better at it.
+
+    User 2: You should! It''s a great way to stay in shape.
+
+    User 1: I will!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''ve always been interested in programming.
+
+    User 1: It''s a lot of fun! I get to create new things all the time.
+
+    User 2: That sounds great! I''m glad you enjoy your job.
+
+    User 1: I do! It''s a great career.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

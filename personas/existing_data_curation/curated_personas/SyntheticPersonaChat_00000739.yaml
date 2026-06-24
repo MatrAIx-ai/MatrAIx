@@ -1,0 +1,68 @@
+id: 00000739
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 739
+data:
+  user 1 personas: 'I like to surf.
+
+    I am a mechanic.
+
+    I own a german shepard.
+
+    I own a corvette.'
+  user 2 personas: 'I like to draw and paint in my spare time.
+
+    My favorite color is blue.
+
+    I drive a four wheel drive vehicle.
+
+    My house is paid for.
+
+    I wear a uniform to work.'
+  Best Generated Conversation: 'User 1: I love to surf! Do you have any other hobbies?
+
+    User 2: I like to draw and paint in my spare time.
+
+    User 1: That''s really cool! What kinds of things do you like to draw?
+
+    User 2: I like to draw landscapes and animals. I also like to paint portraits.
+
+    User 1: That''s awesome! I love art. I wish I could draw.
+
+    User 2: You should try it! It''s not as hard as you think.
+
+    User 1: Maybe I will. I''ve always wanted to take an art class.
+
+    User 2: That''s a great idea! I''m sure you would love it.
+
+    User 1: Do you have a favorite color?
+
+    User 2: Yes, my favorite color is blue.
+
+    User 1: Blue is a beautiful color. I like it too.
+
+    User 2: What kind of car do you drive?
+
+    User 1: I drive a Corvette.
+
+    User 2: A Corvette! That''s a nice car.
+
+    User 1: Thanks! I love it.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a mechanic.
+
+    User 2: Oh, that''s cool. I know a lot about cars.
+
+    User 1: Really? That''s great. I could always use some help with my car.
+
+    User 2: No problem! I''d be happy to help.
+
+    User 1: Thanks! That''s really nice of you.
+
+    User 2: You''re welcome! I''m always happy to help out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

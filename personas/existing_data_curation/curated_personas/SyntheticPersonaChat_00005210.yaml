@@ -1,0 +1,70 @@
+id: '00005210'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5210
+data:
+  user 1 personas: 'Both my parents were teachers.
+
+    I had two cats growing up.
+
+    I like to donate time at the local animal shelter.
+
+    I have two children.'
+  user 2 personas: 'I like victorian things.
+
+    I like jazz.
+
+    I collect dolls.
+
+    I am a romantic.
+
+    I like antiques.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect dolls, listen to jazz, and read Victorian novels.
+
+    User 1: Wow, I''ve never met anyone who likes Victorian novels before!
+
+    User 2: Really? I love them! They''re so romantic and beautiful.
+
+    User 1: I can see why you like them. They''re definitely very unique.
+
+    User 2: I''m glad you think so! What do you like to do for fun?
+
+    User 1: I like to spend time with my family, donate time at the local animal shelter, and read all kinds of books.
+
+    User 2: That sounds like a lot of fun! I''m sure your family loves spending time with you.
+
+    User 1: They do! We''re all really close.
+
+    User 2: That''s great! I''m not very close with my family, so I always envy people who have a good relationship with theirs.
+
+    User 1: I''m sorry to hear that. I know how important it is to have a good relationship with your family.
+
+    User 2: It''s okay. I''ve learned to make the best of it.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially fond of historical fiction and fantasy novels.
+
+    User 2: I like historical fiction too! I''m not as big on fantasy novels, but I''ve read a few that I''ve really enjoyed.
+
+    User 1: What''s your favorite historical fiction novel?
+
+    User 2: I think my favorite is The Help. I love the way it tells the story of the civil rights movement from the perspective of the black domestic workers.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great read.
+
+    User 1: I''m definitely going to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

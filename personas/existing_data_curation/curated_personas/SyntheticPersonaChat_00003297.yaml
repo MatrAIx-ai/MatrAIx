@@ -1,0 +1,70 @@
+id: 00003297
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3297
+data:
+  user 1 personas: 'I am a graduate student.
+
+    I am in between classes.
+
+    I volunteer with dogs.
+
+    I am always early.
+
+    Although i am studying to be a doctor , animals like me.'
+  user 2 personas: 'I listen to metal music.
+
+    I have black spiky hair.
+
+    I wear a lot of leather.
+
+    I have boots i always wear.
+
+    I sleep in late during the day.'
+  Best Generated Conversation: 'User 1: Hi! How are you?
+
+    User 2: Hey! I''m doing well. How are you?
+
+    User 1: I''m doing great! I''m just in between classes right now, so I''m killing time on the internet.
+
+    User 2: Oh cool. I''m a graduate student, too. I''m working on my dissertation in literature.
+
+    User 1: That''s awesome! What are you studying?
+
+    User 2: I''m studying the representation of gender in Victorian literature.
+
+    User 1: Interesting! I''m not sure I know much about Victorian literature.
+
+    User 2: It''s a really interesting period. There was a lot of social and cultural change going on, and it''s reflected in the literature of the time.
+
+    User 1: That sounds really cool. I''m always interested in learning new things.
+
+    User 2: Me too! It''s the best way to stay sharp.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to listen to metal music, read, and hang out with friends.
+
+    User 1: Oh cool. I like to listen to metal music too. I''m not much of a reader, but I like to go out and explore.
+
+    User 2: That sounds like a lot of fun. I''m always looking for new places to go.
+
+    User 1: Me too. I''m a big fan of hiking.
+
+    User 2: Oh, that''s awesome. I''ve always wanted to go hiking, but I''ve never had the chance.
+
+    User 1: You should! It''s a great way to get some exercise and enjoy the outdoors.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! We should go hiking together sometime.
+
+    User 2: That would be great! I''d love to learn more about it.
+
+    User 1: Sounds good! I''ll let you know when I''m free.
+
+    User 2: Great! I look forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

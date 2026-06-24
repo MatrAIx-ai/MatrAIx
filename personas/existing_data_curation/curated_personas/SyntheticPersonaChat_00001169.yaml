@@ -1,0 +1,96 @@
+id: 00001169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1169
+data:
+  user 1 personas: 'My name is todd.
+
+    I want to grow up to be a superhero one day.
+
+    My favorite hero is superman.
+
+    I love comic books.'
+  user 2 personas: 'My last name is spanish , but i tell people that it s italian.
+
+    I don t know if i enjoy programming , or if it s my only choice.
+
+    I hate that i got my brain from the dad i never met.
+
+    I wear cardigans because i hope it makes me look more cultured.
+
+    I had one step dad , and fortunately he ignored me.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2''s name].
+
+    User 1: Nice to meet you! My name is Todd.
+
+    User 2: Nice to meet you too, Todd!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and watch movies.
+
+    User 1: Cool! I like to read and watch movies too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I have a lot of favorites, but one of my favorites is The Shawshank Redemption.
+
+    User 2: That''s a great movie! I love the ending.
+
+    User 1: Me too! It''s so satisfying.
+
+    User 2: So, what do you want to be when you grow up?
+
+    User 1: I want to be a superhero!
+
+    User 2: That''s awesome! What kind of superhero do you want to be?
+
+    User 1: I want to be a super genius like Batman.
+
+    User 2: That would be so cool! You could use your genius to help people.
+
+    User 1: I would love to! I think it would be so much fun to be a superhero.
+
+    User 2: I agree! It would be a great way to make a difference in the world.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a programmer.
+
+    User 1: Oh, cool! I''ve always been interested in programming, but I''m not very good at it.
+
+    User 2: It''s not easy, but it''s a lot of fun.
+
+    User 1: Do you enjoy it?
+
+    User 2: I do, but I''m not sure if it''s my only choice.
+
+    User 1: What do you mean?
+
+    User 2: Well, I don''t know if I have any other skills that would make me a good candidate for another job.
+
+    User 1: I''m sure you''re good at something else!
+
+    User 2: Maybe, but I don''t know what it is.
+
+    User 1: Well, you could always take some time to figure it out.
+
+    User 2: I guess I could.
+
+    User 1: And in the meantime, you can always keep practicing your programming.
+
+    User 2: I will.
+
+    User 1: Great! And maybe one day you''ll be a superhero programmer!
+
+    User 2: Thanks, Todd! I''m sure I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

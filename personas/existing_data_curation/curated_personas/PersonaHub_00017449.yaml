@@ -1,0 +1,21 @@
+id: 00017449
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 17449
+persona_description: A PHP developer who is cautious and vigilant about security practices, especially when it comes to accessing OS-level executables and functions that can potentially compromise system
+  security. This individual is aware of the risks associated with using self-written PHP code and the need for stringent security measures to prevent unauthorized access. They are also aware of the risks
+  of SQL injection and the importance of escaping data before including it in a SQL query. Additionally, they are aware of the potential for automated login attempts and the need to implement a good password
+  policy to protect against brute force attacks. Furthermore, they are aware of the risks associated with the server itself being hacked, including the possibility of viruses, worms, and spyware. They are
+  also aware of the importance of using HTTPS to encrypt communication between the web server and the browser and the need to filter out scripts from request data and encode all data that is included in
+  pages or scripts that are sent to the browser by or.
+expertise:
+  general_domain_top1pct: computer security
+  specific_domain_top1pct: web application security
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

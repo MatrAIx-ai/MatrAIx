@@ -1,0 +1,86 @@
+id: '00000665'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 665
+data:
+  user 1 personas: 'I lease my car.
+
+    I am a recruiter.
+
+    My favorite meal is brunch.
+
+    I do not own any pets.
+
+    My car is black.'
+  user 2 personas: 'I hope to one day be a published author.
+
+    I work in a used book store.
+
+    I love art museums.
+
+    I write short stories in my free time.'
+  Best Generated Conversation: '* * User 1: * * Hi! I''m [user 1 name]. I''m a recruiter.
+
+    * * User 2: * * Hi, I''m [user 2 name]. I work in a used book store.
+
+    * * User 1: * * Oh, that''s interesting. I love books!
+
+    * * User 2: * * Me too! I hope to one day be a published author.
+
+    * * User 1: * * That''s great! I''m sure you''ll do it. What kind of books do you write?
+
+    * * User 2: * * I write short stories and novellas. I''m currently working on a novel.
+
+    * * User 1: * * That''s awesome! I love short stories. I''ve been reading a lot of them lately.
+
+    * * User 2: * * Which authors do you like to read?
+
+    * * User 1: * * I like to read a variety of authors, but I''m really into short story collections right now. I just finished reading The Best American Short Stories 2022.
+
+    * * User 2: * * Oh, I love that collection! I read it last year.
+
+    * * User 1: * * Did you like it?
+
+    * * User 2: * * I loved it! I thought it was a great selection of stories.
+
+    * * User 1: * * Me too! I''m glad you liked it.
+
+    * * User 2: * * Thanks! Do you have any favorite short stories?
+
+    * * User 1: * * I have a few! I really like "The Lottery" by Shirley Jackson and "The Tell-Tale Heart" by Edgar Allan Poe.
+
+    * * User 2: * * I love those stories too! They''re both so creepy.
+
+    * * User 1: * * They are! I love how they both create a sense of unease and dread.
+
+    * * User 2: * * Me too! I think that''s what makes them so good.
+
+    * * User 1: * * I agree.
+
+    * * User 2: * * So, what do you like to do for fun besides reading?
+
+    * * User 1: * * I like to go to art museums. I also like to go to concerts and plays.
+
+    * * User 2: * * Oh, I love art museums too! I''m going to the MoMA this weekend.
+
+    * * User 1: * * Nice! I love the MoMA. I went there last year.
+
+    * * User 2: * * What did you see there?
+
+    * * User 1: * * I saw a lot of great stuff, but my favorite was the Lichtenstein exhibit.
+
+    * * User 2: * * Oh, I love Lichtenstein! I saw his exhibit at the Whitney last year.
+
+    * * User 1: * * Nice! He''s so great.
+
+    * * User 2: * * I agree.
+
+    * * User 1: * * So, what do you think? Do you want to go to the MoMA with me this weekend?
+
+    * * User 2: * * I''d love to!
+
+    * * User 1: * * Great! I''ll text you the details'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00001013'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1013
+data:
+  user 1 personas: 'I have red hair.
+
+    I have 2 dogs.
+
+    I enjoy reading and cooking.
+
+    I am a runner.
+
+    I like tall men.'
+  user 2 personas: 'I recently discovered a new love for indian food.
+
+    I am gong to adopt a dog very soon.
+
+    My mother was a nurse.
+
+    I have played since i was 4 years old.
+
+    I am a violinist.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read and cook.
+
+    User 1: Me too! I love to read and cook. What''s your favorite thing to cook?
+
+    User 2: I love to make Indian food.
+
+    User 1: That sounds delicious! I''ve never had Indian food before.
+
+    User 2: You should try it! It''s so good.
+
+    User 1: I will! I love trying new things.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read all kinds of things, but my favorite genre is romance.
+
+    User 2: I love romance novels too! I''m currently reading a romance novel about a violinist.
+
+    User 1: That sounds interesting! What''s the name of the book?
+
+    User 2: It''s called "The Violinist''s Heart".
+
+    User 1: I''ll have to check it out! I love romance novels about musicians.
+
+    User 2: Me too! I find them to be so romantic.
+
+    User 1: I agree! So, how long have you been playing the violin?
+
+    User 2: I''ve been playing since I was 4 years old.
+
+    User 1: Wow! That''s amazing! I''ve always wanted to learn how to play the violin.
+
+    User 2: It''s never too late to start!
+
+    User 1: I know, I know. I''m just not sure if I have the time or the money.
+
+    User 2: You could always take lessons online. It''s a lot cheaper than taking lessons in person.
+
+    User 1: That''s a good idea. I''ll have to look into that.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too! I hope we can talk again soon.
+
+    User 2: Me too! Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

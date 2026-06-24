@@ -1,0 +1,62 @@
+id: 00008270
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8270
+data:
+  user 1 personas: 'I like to donate time at the local animal shelter.
+
+    I had two cats growing up.
+
+    I have two children.
+
+    I like to hunt.
+
+    Both my parents were teachers.'
+  user 2 personas: 'I work as an extra for major motion pictures.
+
+    I am an aspiring writer.
+
+    I am a painter and love to create art.
+
+    I have a set of identical twin brothers.
+
+    I am a talented singer and have won several competitions.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: Hello! I''m doing well, thank you for asking.
+
+    User 1: That''s good to hear. What are you up to today?
+
+    User 2: I''m currently working on a painting of a beautiful landscape.
+
+    User 1: Wow, that sounds really nice. I love painting. What kind of paintings do you like to do?
+
+    User 2: I love to do landscapes, as well as portraits and abstracts. I''m also an aspiring writer, and I''ve been working on a novel for the past few years.
+
+    User 1: That''s awesome! I''ve always wanted to write a novel, but I''ve never been able to finish one.
+
+    User 2: It''s definitely a challenge, but it''s also very rewarding.
+
+    User 1: I can imagine. What''s your novel about?
+
+    User 2: It''s a historical fiction novel set in the 19th century. It''s about a young woman who goes on a journey to find her father, who has been missing for years.
+
+    User 1: That sounds really interesting! I''d love to read it when it''s finished.
+
+    User 2: Thanks! I''m still working on it, but I''m hoping to have it finished by the end of the year.
+
+    User 1: Good luck with it! I''m sure it''s going to be great.
+
+    User 2: Thanks!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to hunt, I have two children, and I donate time at the local animal shelter.
+
+    User 2: That''s awesome! I love animals too. I have a set of identical twin brothers and I am a talented singer who has won several competitions.
+
+    User 1: That''s really cool! I''m glad to hear that you have such a great life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

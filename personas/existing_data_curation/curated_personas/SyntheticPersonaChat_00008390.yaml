@@ -1,0 +1,88 @@
+id: 00008390
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8390
+data:
+  user 1 personas: 'My parents immigrated from europe before i was born.
+
+    While both my parents have thick european accents , i do not.
+
+    I drive a motorcycle instead of a car.
+
+    I am enrolled in several college credit courses.
+
+    I go to a private high school.'
+  user 2 personas: 'I am partially blind.
+
+    I can do convincing bird calls.
+
+    I do volunteer work for human rights organizations.
+
+    I can recite the movie young frankenstein word for word.
+
+    I like to make my own clothes.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, my name is [name].
+
+    User 1: I''m from [location].
+
+    User 2: I''m from [location].
+
+    User 1: I''m partially blind.
+
+    User 2: I''m sorry to hear that.
+
+    User 1: It''s not so bad. I can still do most things that other people can.
+
+    User 2: That''s good to hear.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a volunteer for human rights organizations.
+
+    User 1: That''s great! I''m impressed.
+
+    User 2: Thanks. I enjoy it.
+
+    User 1: Me too. I like helping people.
+
+    User 2: Me too.
+
+    User 1: What are some of your hobbies?
+
+    User 2: I like to make my own clothes.
+
+    User 1: That''s interesting. I''ve never tried that.
+
+    User 2: It''s really fun. You should try it sometime.
+
+    User 1: I might just do that.
+
+    User 2: Great!
+
+    User 1: So, what do you think of my motorcycle?
+
+    User 2: It''s pretty cool. I''ve never seen one like it before.
+
+    User 1: Thanks. I like it a lot.
+
+    User 2: It looks like you''re having a lot of fun.
+
+    User 1: I am. It''s a lot of fun to drive.
+
+    User 2: I can imagine.
+
+    User 1: Thanks for chatting with me.
+
+    User 2: You''re welcome. It was nice meeting you.
+
+    User 1: You too.
+
+    User 2: Have a nice day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

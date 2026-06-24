@@ -1,0 +1,66 @@
+id: 00008210
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8210
+data:
+  user 1 personas: 'I m currently unemployed so i have time to write.
+
+    After finishing my career i discovered that i m not that pasionate about it.
+
+    I want to become an author.
+
+    I m writing my first novel and hope to finish before the end of the year.'
+  user 2 personas: 'My horse never talks back to me.
+
+    I m the lead singer for an indie band.
+
+    I m still a student , but i m gonna be a nurse.
+
+    I enjoy budweiser beer.'
+  Best Generated Conversation: 'User 1: I am writing my first novel and hope to finish before the end of the year.
+
+    User 2: That''s great! What''s it about?
+
+    User 1: It''s a fantasy novel about a young woman who discovers she has magic powers.
+
+    User 2: That sounds really cool! I love fantasy novels.
+
+    User 1: Thanks! I''m having a lot of fun writing it.
+
+    User 2: I can imagine. Writing a novel takes a lot of time and effort, but it''s so rewarding when you finish it.
+
+    User 1: It is. I''m really excited to see how it turns out.
+
+    User 2: I''m sure it will be great!
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you do for a living?
+
+    User 1: Right now I''m unemployed, but I''m hoping to get a job as a writer after I finish my novel.
+
+    User 2: That''s great! I''m sure you''ll find a job.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: Me too! I love reading and playing video games.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but my favorite genre is probably adventure games.
+
+    User 1: Me too! I love adventure games. They''re so much fun.
+
+    User 2: Yeah, they are. I love the feeling of exploring a new world and solving puzzles.
+
+    User 1: Me too. It''s like being on an adventure yourself.
+
+    User 2: Exactly! That''s what I love about them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

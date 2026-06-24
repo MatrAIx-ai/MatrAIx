@@ -1,0 +1,60 @@
+id: 00003817
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3817
+data:
+  user 1 personas: 'My favorite band is worn.
+
+    I own a home.
+
+    I like swimming.
+
+    My favorite color is purple.'
+  user 2 personas: 'I just dyed my hair hot pink with purple highlights.
+
+    Sometimes , i have sword fights with strangers in the park.
+
+    My favorite hobby is chess.
+
+    I enjoy movies about aliens invading the earth.
+
+    Not a day goes by that i do not drink four mountain dews.'
+  Best Generated Conversation: 'User 1: Hey! My favorite band is WORN. What''s your favorite color?
+
+    User 2: My favorite color is purple too! I just dyed my hair hot pink with purple highlights.
+
+    User 1: That''s awesome! I like your hair.
+
+    User 2: Thanks! I like it too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play chess, watch movies about aliens invading the earth, and have sword fights with strangers in the park.
+
+    User 1: That sounds like a lot of fun! I''ve never tried playing chess, but I''ve always wanted to. And I love movies about aliens!
+
+    User 2: You should try playing chess! It''s a lot of fun. And if you ever want to have a sword fight, I''m always up for it.
+
+    User 1: Thanks for the offer! I''ll definitely have to take you up on that.
+
+    User 2: Sounds good!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a chess teacher, but my real passion is sword fighting.
+
+    User 1: That''s so cool! I''ve always thought sword fighting would be so much fun.
+
+    User 2: It is! It''s a great way to get exercise and have some fun.
+
+    User 1: I can imagine. I''m not very athletic, but I''m sure I could give it a try.
+
+    User 2: You should! It''s never too late to learn a new skill.
+
+    User 1: I''ll keep that in mind. Thanks for the suggestion.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

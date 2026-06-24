@@ -1,0 +1,56 @@
+id: '00002777'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2777
+data:
+  user 1 personas: 'I have a cat as a pet.
+
+    My favorite band is nightfish.
+
+    I love comics.
+
+    I work from home.
+
+    I love reading.'
+  user 2 personas: 'I am applying for publishing jobs.
+
+    My favorite color is green.
+
+    The only autographs i have ever wanted are from authors.
+
+    My mother is a librarian.'
+  Best Generated Conversation: 'User 1: I like comics, what about you?
+
+    User 2: I love them! I''ve been reading comics since I was a kid.
+
+    User 1: What''s your favorite comic book series?
+
+    User 2: That''s a tough question, but I''d have to say Sandman.
+
+    User 1: Sandman is great! I love the stories and the artwork.
+
+    User 2: Me too! I''m also a big fan of Neil Gaiman''s other works, like Coraline and The Graveyard Book.
+
+    User 1: I haven''t read Coraline, but I''ve heard good things about it. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a great children''s book.
+
+    User 1: I''m glad you like comics. I work from home, so I have a lot of time to read.
+
+    User 2: That''s awesome! I wish I could work from home. I''m currently applying for publishing jobs.
+
+    User 1: Oh, that''s cool! I used to work in publishing, but I got burned out.
+
+    User 2: Why did you get burned out?
+
+    User 1: I just didn''t like the work environment. It was too competitive and stressful.
+
+    User 2: I can understand that. I''m hoping to find a job in a more relaxed environment.
+
+    User 1: I hope you do! I''m sure you''ll find something great.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00008304
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8304
+data:
+  user 1 personas: 'I am a four year old girl with brown eyes and hair.
+
+    I like playing outside in the sun with my dolls.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    My daddy brings home flowers for me.'
+  user 2 personas: 'I collect stamps.
+
+    My favorite movie is dirty harry.
+
+    I love the colors yellow and teal.
+
+    I am a mortician.
+
+    I want to learn how to fly an airplane.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to collect stamps and learn about different cultures.
+
+    User 1: That''s cool! I like to play outside with my dolls and eat picnic lunches.
+
+    User 2: Do you have a favorite doll?
+
+    User 1: Yes, I have a doll named Molly. She''s my best friend.
+
+    User 2: That''s sweet. I have a collection of stamps from all over the world. I love learning about different cultures.
+
+    User 1: My mommy makes me a picnic lunch every day when we go outside to play. It''s so much fun!
+
+    User 2: That''s really nice of your mom. My dad brings me flowers when he comes home from work.
+
+    User 1: My daddy is a firefighter. He''s very brave.
+
+    User 2: That''s cool! My dad is a mortician. He helps people who have died.
+
+    User 1: Oh, that must be a hard job.
+
+    User 2: It can be, but it''s also very rewarding. I like helping people.
+
+    User 1: That''s very nice of you. I want to be a teacher when I grow up.
+
+    User 2: That''s a great goal! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

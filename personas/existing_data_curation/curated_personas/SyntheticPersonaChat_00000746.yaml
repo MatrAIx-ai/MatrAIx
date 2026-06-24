@@ -1,0 +1,74 @@
+id: '00000746'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 746
+data:
+  user 1 personas: 'I like to swim.
+
+    I don t work.
+
+    I hate tacos.
+
+    My favorite drink is chocolate milk.
+
+    I am bald.'
+  user 2 personas: 'I enjoy going to festivals.
+
+    My friends don t call my by my real name.
+
+    I eat meat.
+
+    My favorite band is the story so far.
+
+    I recently started working online.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Cool, me too. I just got done swimming.
+
+    User 2: Oh, that sounds fun. I''ve always wanted to learn how to swim.
+
+    User 1: It''s not too hard. You just have to be careful not to drown.
+
+    User 2: Thanks for the tip. I''ll keep that in mind.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like going to festivals and concerts.
+
+    User 1: Oh, that''s cool. I like going to festivals too.
+
+    User 2: What''s your favorite festival?
+
+    User 1: My favorite festival is Coachella. It''s so much fun and there''s always something new to see.
+
+    User 2: I''ve heard good things about Coachella. I''ve always wanted to go.
+
+    User 1: You should! It''s definitely worth it.
+
+    User 2: Maybe I will next year.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to go to the movies, play video games, and read.
+
+    User 2: Oh, I like video games too. What''s your favorite game?
+
+    User 1: My favorite game is The Witcher 3. It''s a really long and immersive game.
+
+    User 2: I''ve heard good things about that game. I''ve been meaning to check it out.
+
+    User 1: You should! It''s definitely worth your time.
+
+    User 2: Maybe I will next time I''m in the mood for a long game.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the suggestion. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

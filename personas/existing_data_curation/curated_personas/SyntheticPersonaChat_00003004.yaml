@@ -1,0 +1,100 @@
+id: '00003004'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3004
+data:
+  user 1 personas: 'I am fifteen years old.
+
+    I have braces.
+
+    I live in america in the state of florida.
+
+    I just started the tenth grade and my concentration is in science.
+
+    My family has three dogs and my dog is named maddie.'
+  user 2 personas: 'I am a psychology major.
+
+    I am a steelers fan.
+
+    I enjoy broadway shows.
+
+    My favorite band is the avert brother.
+
+    I love to travel.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1).
+
+    User 2: Hi, I''m (user 2).
+
+    User 1: What are you interested in?
+
+    User 2: I''m interested in psychology, Broadway shows, the Avett Brothers, and traveling.
+
+    User 1: Oh, I''ve heard of Broadway shows. They''re really popular.
+
+    User 2: They are! I''ve seen a few of them and they''re always amazing.
+
+    User 1: I''ve never been to one, but I''d like to go sometime.
+
+    User 2: You should! It''s a really fun experience.
+
+    User 1: What''s your favorite Broadway show?
+
+    User 2: It''s hard to say. I really like a lot of them. But I think my favorite is probably "Hamilton."
+
+    User 1: Oh, I''ve heard good things about that one.
+
+    User 2: It''s really good! Lin-Manuel Miranda is an amazing writer.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: I''m sure I would.
+
+    User 2: So, what are you interested in?
+
+    User 1: I''m interested in science, my dog, and traveling.
+
+    User 2: Oh, cool! What kind of science are you interested in?
+
+    User 1: I''m interested in all kinds of science, but my favorite is biology.
+
+    User 2: That''s great! I love biology too. What do you like about it?
+
+    User 1: I like learning about how living things work and interact with each other.
+
+    User 2: That''s really interesting. I like learning about the different types of animals and plants.
+
+    User 1: Me too! I think animals are amazing.
+
+    User 2: I agree! They''re so interesting and diverse.
+
+    User 1: I love dogs! I have a dog named Maddie.
+
+    User 2: Oh, that''s cute! I love dogs too. I used to have a dog named Buddy.
+
+    User 1: What kind of dog was he?
+
+    User 2: He was a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so friendly.
+
+    User 2: They are! He was the best dog.
+
+    User 1: I''m sorry he''s gone.
+
+    User 2: Thanks. Me too. But I''m glad I had him for the time that I did.
+
+    User 1: I''m sure he was a great dog.
+
+    User 2: He was.
+
+    User 1: So, what do you like about traveling?
+
+    User 2: I like seeing new places and learning about new cultures.
+
+    User 1: That''s great! I like that too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

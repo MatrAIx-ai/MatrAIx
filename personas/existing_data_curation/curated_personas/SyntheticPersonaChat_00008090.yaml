@@ -1,0 +1,58 @@
+id: 00008090
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8090
+data:
+  user 1 personas: 'I own my own small marketing consulting agency.
+
+    I am married to my wonderful husband.
+
+    My favorite band is radiolead.
+
+    We have two dogs small dogs.'
+  user 2 personas: 'My husband is a corporate attorney.
+
+    I am allergic to cats.
+
+    I love to have my nails done.
+
+    I use to compete in beauty pageants.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for a living?
+
+    User 2: I''m a corporate attorney.
+
+    User 1: Interesting! What''s that like?
+
+    User 2: It''s challenging and rewarding. I get to work on a variety of cases, and I''m always learning new things.
+
+    User 1: That sounds great! What''s your favorite part of the job?
+
+    User 2: I love the feeling of helping my clients achieve their goals. It''s also rewarding to be able to use my legal skills to make a difference in the world.
+
+    User 1: That''s awesome! What are some of your favorite hobbies?
+
+    User 2: I love to read, travel, and spend time with my family.
+
+    User 1: That sounds like a great mix of hobbies! What are some of your favorite books?
+
+    User 2: I love reading anything by John Grisham or Stephen King. I also love reading historical fiction.
+
+    User 1: I love John Grisham too! I''ve read most of his books.
+
+    User 2: He''s one of my favorite authors. I''m always excited to read his new books.
+
+    User 1: Me too! Have you read his latest one, The Judge''s List?
+
+    User 2: No, I haven''t had a chance to read it yet. Is it good?
+
+    User 1: It''s really good! It''s one of my favorites of his books.
+
+    User 2: I''ll have to check it out. Thanks for the recommendation!
+
+    User 1: No problem! It''s been really nice talking to you.
+
+    User 2: You too! It''s nice to meet someone who has similar interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00063264'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63264
+persona_description: A scientist or researcher who specializes in GPS and satellite navigation technology, particularly in the field of animal tracking. They are familiar with the process of filtering GPS
+  data to remove spurious fixes and suspicious data, and understand the importance of accurate location data in the context of animal behavior and conservation. They may have experience with the use of
+  GPS units in various settings, including indoor and dense cover environments, and have developed a specialized approach to filtering data to accurately represent the paths of animals. They may also be
+  interested in the potential ethical implications of using GPS data in animal tracking and conservation efforts.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: GPS and satellite navigation technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Animal tracking and conservation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

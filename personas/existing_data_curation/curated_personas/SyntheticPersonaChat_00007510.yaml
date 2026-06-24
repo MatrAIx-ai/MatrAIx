@@ -1,0 +1,66 @@
+id: '00007510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7510
+data:
+  user 1 personas: 'I make friends fast and say goodbye fast.
+
+    I kayak at the lake on weekends.
+
+    I am studying to be a special education teacher.
+
+    I was a navy brat and have attended 16 schools in 12 years.
+
+    I chew my nails.'
+  user 2 personas: 'I love to go hiking.
+
+    I am a bank teller.
+
+    I have never been out of the country.
+
+    I have never been to college.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to go hiking.
+
+    User 1: That''s great! I love hiking too. I''ve been to a lot of different places and seen some amazing things.
+
+    User 2: Where have you been?
+
+    User 1: I''ve been to the mountains, the beach, and the desert. I''ve also been to some different countries.
+
+    User 2: That''s really cool! I''ve never been out of the country.
+
+    User 1: You should definitely go sometime! It''s a great experience.
+
+    User 2: I know! I''m planning on going to Europe next year.
+
+    User 1: That''s awesome! I''ve been to Europe a few times and I love it there.
+
+    User 2: What''s your favorite place you''ve ever been?
+
+    User 1: I''m not sure I could pick just one. I love the mountains in Colorado, the beaches in California, and the cities in Europe.
+
+    User 2: Those all sound amazing! I can''t wait to experience them for myself.
+
+    User 1: I''m sure you''ll love them.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go kayaking, biking, and camping. I also like to read and play video games.
+
+    User 2: That''s cool! I like to do some of those things too. I love to go camping and kayaking.
+
+    User 1: Yeah, they''re both really fun. I''ve never been biking or camping before.
+
+    User 2: You should definitely try them sometime! They''re both really fun and you can get some exercise.
+
+    User 1: I will! I''m always looking for new things to try.
+
+    User 2: Good! I''m sure you''ll love them.
+
+    User 1: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

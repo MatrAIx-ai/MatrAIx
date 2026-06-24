@@ -1,0 +1,70 @@
+id: '00001025'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1025
+data:
+  user 1 personas: 'I like antiques.
+
+    I like jazz.
+
+    I am a romantic.
+
+    I collect dolls.
+
+    I like victorian things.'
+  user 2 personas: 'I i love logical and rational thinking.
+
+    I am very good at math and science.
+
+    I am considered a nerd by many.
+
+    I started working at google last week on self driving car research.
+
+    I love computers.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1].
+
+    User 2: Hi there! I''m [user 2].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love logic and rational thinking. I''m also very good at math and science, and I love computers.
+
+    User 1: That''s cool! I like old things and antique furniture. I also love jazz and collect dolls.
+
+    User 2: Antiques are interesting! What do you like about them?
+
+    User 1: I like the history behind them, and I think they''re beautiful. I also love the way they make me feel.
+
+    User 2: I can see why you like them! They do have a certain charm to them.
+
+    User 1: Yes, they do! I also love jazz. It''s so relaxing and easy to listen to.
+
+    User 2: I''ve never really listened to jazz before. What''s your favorite song?
+
+    User 1: I like "Summertime" by Louis Armstrong. It''s a beautiful song.
+
+    User 2: I''ll have to give it a listen.
+
+    User 1: You should! It''s a classic.
+
+    User 2: I know a little bit about dolls, but I don''t collect them.
+
+    User 1: They''re a lot of fun to collect! I have a whole collection of Victorian dolls.
+
+    User 2: Victorian dolls? That sounds interesting!
+
+    User 1: They are! They''re very beautiful and detailed.
+
+    User 2: I''ll have to look into them.
+
+    User 1: You should! I think you''d like them.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: No problem! It was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

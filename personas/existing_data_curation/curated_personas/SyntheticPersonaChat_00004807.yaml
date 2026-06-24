@@ -1,0 +1,64 @@
+id: 00004807
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4807
+data:
+  user 1 personas: 'I work for a large hospital.
+
+    Boating is my favorite activity.
+
+    I live in a large home.
+
+    I enjoy vacations at the beach.
+
+    I am a doctor.'
+  user 2 personas: 'I like classic radio programs.
+
+    I love my impala.
+
+    I enjoy fishing.
+
+    Summer is my favorite season.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello! How are you doing?
+
+    User 1: I''m doing great! What about you?
+
+    User 2: I''m doing well, thank you!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to fish, and I also enjoy listening to classic radio programs.
+
+    User 1: That''s awesome! I love fishing too. What''s your favorite kind of fish to catch?
+
+    User 2: I like to catch bass, but I also enjoy catching catfish.
+
+    User 1: Those are both great fish! I''ve never caught a catfish, but I''ve heard they''re delicious.
+
+    User 2: They are! They''re also a lot of fun to catch.
+
+    User 1: What''s your favorite classic radio program?
+
+    User 2: I love listening to old westerns. They''re so relaxing.
+
+    User 1: I love westerns too! I''ve always been a big fan of John Wayne.
+
+    User 2: Me too! He was a great actor.
+
+    User 1: He was! What''s your favorite John Wayne movie?
+
+    User 2: I think my favorite is The Searchers. It''s such a classic.
+
+    User 1: That''s a great movie! I love the story and the characters.
+
+    User 2: Me too! It''s one of my favorites.
+
+    User 1: It''s great to meet someone who shares my love of fishing and classic radio programs!
+
+    User 2: It''s great to meet you too! I''m sure we''ll have a lot of fun together.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

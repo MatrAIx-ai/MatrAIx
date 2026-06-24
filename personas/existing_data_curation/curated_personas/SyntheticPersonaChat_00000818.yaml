@@ -1,0 +1,76 @@
+id: 00000818
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 818
+data:
+  user 1 personas: 'I love to larp.
+
+    I am tall and blonde.
+
+    I work as an interior designer.
+
+    My favorite band is insane clown posse.
+
+    I am chubby.'
+  user 2 personas: 'I live with my parents.
+
+    My favorite movies are disney movies.
+
+    I am an insatiable reader.
+
+    I work as a waitress.
+
+    I love to play soccer.'
+  Best Generated Conversation: 'User 1: Hey, I''m Jen!
+
+
+    User 2: Hi Jen, I''m Sarah!
+
+
+    User 1: Nice to meet you, Sarah! What do you do for fun?
+
+
+    User 2: I like to read, play soccer, and watch Disney movies.
+
+
+    User 1: Cool! I like to play soccer too. What''s your favorite team?
+
+
+    User 2: I''m a big fan of the US Women''s National Team.
+
+
+    User 1: Me too! They''re amazing.
+
+
+    User 2: I''m also a huge fan of Disney movies. I love the princesses and the magic.
+
+
+    User 1: I love Disney movies too! They''re so magical.
+
+
+    User 2: What''s your favorite Disney movie?
+
+
+    User 1: I think my favorite is The Little Mermaid. I love Ariel and her story.
+
+
+    User 2: The Little Mermaid is a great movie! I love the music and the animation.
+
+
+    User 1: Me too! It''s so beautiful.
+
+
+    User 2: I''m glad you like Disney movies. I love meeting other people who like them.
+
+
+    User 1: Me too! It''s always nice to find people who share your interests.
+
+
+    User 2: I think we''re going to be friends.
+
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

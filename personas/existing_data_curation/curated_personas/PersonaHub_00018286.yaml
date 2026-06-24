@@ -1,0 +1,19 @@
+id: 00018286
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 18286
+persona_description: A researcher or biologist who specializes in bird population studies and has experience with point-count surveys. They are interested in developing models to estimate detection probabilities
+  and density of birds, and have a background in statistics and ecology. They are looking for ways to improve detection probabilities and density estimates from point-count surveys, and may have expertise
+  in developing removal models and maximum-likelihood estimators. They are also interested in studying the factors that influence detection probability, such as singing frequency, and how detection probabilities
+  vary among species, throughout the season, and among different observers.
+expertise:
+  general_domain_top1pct: statistics
+  specific_domain_top1pct: wildlife statistics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,60 @@
+id: 00006925
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6925
+data:
+  user 1 personas: 'I am single and go on dates regularly.
+
+    My favorite place to go is the mall.
+
+    I have a pug named corky.
+
+    I enjoy playing tennis.'
+  user 2 personas: 'I am an artist and create with my mind and my hands.
+
+    My parents taught me to find inspiration in the world.
+
+    I live in a house with a yard.
+
+    I m a mom with two sons and a husband.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to create art.
+
+    User 1: Oh, that''s cool! What kind of art do you create?
+
+    User 2: I like to paint and draw.
+
+    User 1: That''s awesome! I love art.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: I''m single and go on dates regularly. Do you have a partner?
+
+    User 2: I''m a mom with two sons and a husband.
+
+    User 1: Oh, that''s great! I''m glad you have a happy family.
+
+    User 2: Thank you! What''s your favorite place to go?
+
+    User 1: I like to go to the mall.
+
+    User 2: That''s cool! I like to go shopping.
+
+    User 1: Me too! I have a pug named Corky.
+
+    User 2: That''s cute! I love dogs.
+
+    User 1: Me too! I enjoy playing tennis. Do you play any sports?
+
+    User 2: I don''t play any sports, but I enjoy watching them.
+
+    User 1: That''s cool! I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

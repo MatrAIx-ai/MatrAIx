@@ -1,0 +1,70 @@
+id: 00004991
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4991
+data:
+  user 1 personas: 'I have a lizard named nagini.
+
+    My mother lives with me.
+
+    I like to take my dog for long walks.
+
+    I like to plant flowers in my gardens.
+
+    I enjoy cooking for people.'
+  user 2 personas: 'My life s passion is designer french fries.
+
+    I am the leader of the french fry research department at del taco.
+
+    I once fell up a whole flight of stairs.
+
+    My daily driver is a bicycle that you pedal with your hands.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for work?
+
+    User 2: I''m the leader of the french fry research department at Del Taco.
+
+    User 1: That''s really cool! I love french fries.
+
+    User 2: Thanks! I''m passionate about them.
+
+    User 1: I can tell. What''s your favorite kind of french fry?
+
+    User 2: I love the waffle fries.
+
+    User 1: Me too! I love the way they get all crispy.
+
+    User 2: Me too! They''re so good.
+
+    User 1: I''ve never heard of a bicycle that you pedal with your hands.
+
+    User 2: It''s a hand cycle. It''s for people who can''t use their legs.
+
+    User 1: That''s really cool. I''ve never seen one before.
+
+    User 2: They''re pretty rare. But they''re really fun to ride.
+
+    User 1: I bet. I''d love to try one sometime.
+
+    User 2: You should! They''re a lot of fun.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I love to cook. I love trying new recipes and experimenting in the kitchen.
+
+    User 1: That''s awesome! I love cooking too. I love trying new recipes and seeing how they turn out.
+
+    User 2: We should cook together sometime.
+
+    User 1: That would be fun! I''d love to learn some new recipes.
+
+    User 2: Great! I''ll bring the ingredients.
+
+    User 1: Perfect! I''ll bring the wine.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

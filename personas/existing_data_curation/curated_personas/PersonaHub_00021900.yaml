@@ -1,0 +1,20 @@
+id: 00021900
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21900
+persona_description: A forest scientist with expertise in the study of riparian forests, specifically bottomland hardwood forests along the Mississippi, Missouri, Illinois, and Des Moines rivers. The author
+  has developed height-diameter equations for 13 riparian tree species using data from these forests. The focus is on predicting tree heights given diameter, with the equations providing a reasonable means
+  of estimating unknown tree heights. The paper also discusses the use of geostatistical methods for predicting diameter distributions in wetland tree species, and the comparison of fixed-height diameter-measurement
+  points against variable-height measurement points for predicting cubic volume. The paper also examines the use of a mixture model to describe the bivariate diameter-height distribution of trees growing
+  in a pure, uneven-aged beech forest, and the general question of assessing the fit of models for bivariate data.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: forest science/forest ecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

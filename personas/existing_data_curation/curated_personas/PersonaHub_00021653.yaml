@@ -1,0 +1,19 @@
+id: '00021653'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 21653
+persona_description: A meteorologist who specializes in predicting weather systems and their development, particularly those involving low-pressure systems and occlusions. This person has experience working
+  with weather models and has a keen understanding of the dynamics and mechanics of weather systems, including how they develop, intensify, and interact with each other. They are knowledgeable about the
+  processes involved in occlusion, such as the formation of an occluded front, the movement of the low pressure system, and the effects on the surrounding atmosphere. They are also skilled in interpreting
+  weather data and using it to make predictions and forecasts.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: low-pressure systems and occlusions
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

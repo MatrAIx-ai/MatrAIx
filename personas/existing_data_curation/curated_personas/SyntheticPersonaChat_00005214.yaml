@@ -1,0 +1,58 @@
+id: '00005214'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5214
+data:
+  user 1 personas: 'Chocolate is my favorite food.
+
+    I am learning how to play the piano.
+
+    I am the youngest sibling of four.
+
+    I geocache in my spare time.
+
+    I am a school psychologist.'
+  user 2 personas: 'I start my senior year of high school next week.
+
+    My favorite sport is hockey.
+
+    I went to japan this summer.
+
+    My best friend just moved away.
+
+    My mom is a painter.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just getting ready for my senior year of high school.
+
+    User 1: That''s exciting! What are you most looking forward to?
+
+    User 2: I''m excited to be able to take more electives, and I''m also excited to start playing hockey again.
+
+    User 1: That''s awesome! I used to play hockey when I was in high school. It''s a lot of fun.
+
+    User 2: Yeah, it is. I went to Japan this summer and got to play hockey with some of the locals. It was a lot of fun.
+
+    User 1: That''s awesome! I''ve always wanted to go to Japan.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I know, it''s definitely on my list of places to visit.
+
+    User 2: What are you doing for your senior year?
+
+    User 1: I''m going to be a school psychologist.
+
+    User 2: Oh, that''s cool! What made you decide to do that?
+
+    User 1: I''ve always been interested in helping people, and I think that being a school psychologist is a great way to do that.
+
+    User 2: That''s awesome! I''m sure you''ll be a great psychologist.
+
+    User 1: Thanks! I''m excited to get started.
+
+    User 2: I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

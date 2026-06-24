@@ -1,0 +1,66 @@
+id: '00007226'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7226
+data:
+  user 1 personas: 'I wish to buy a corvette when i retire.
+
+    I am trying to write an ebook on animals.
+
+    I am a huge fan of dogs.
+
+    I am recently divorced.
+
+    I work as a mall cop.'
+  user 2 personas: 'I am a recruiter.
+
+    My car is black.
+
+    I do not own any pets.
+
+    I lease my car.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there, how''s it going?
+
+    User 1: Good, thanks. I''m a mall cop, and I''m recently divorced.
+
+    User 2: Oh, sorry to hear that.
+
+    User 1: It''s okay. I''m trying to keep busy.
+
+    User 2: That''s good. What are you doing to keep busy?
+
+    User 1: I''m working on writing an ebook about animals.
+
+    User 2: Oh, that''s cool. I like animals too.
+
+    User 1: Yeah, they''re great. I have two dogs of my own.
+
+    User 2: Oh, really? What kind of dogs?
+
+    User 1: I have a golden retriever and a black lab.
+
+    User 2: Oh, I love golden retrievers! They''re so cute.
+
+    User 1: Yeah, they''re great dogs.
+
+    User 2: So, what''s the ebook about?
+
+    User 1: It''s about different types of animals and their habitats.
+
+    User 2: Oh, that sounds really interesting.
+
+    User 1: Yeah, I think it''s going to be a lot of fun to write.
+
+    User 2: I''m sure it will be. I''d love to read it when you''re finished.
+
+    User 1: Thanks, I''ll let you know when it''s done.
+
+    User 2: Great! In the meantime, I''ll let you know if I have any questions about animals.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

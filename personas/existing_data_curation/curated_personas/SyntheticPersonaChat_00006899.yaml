@@ -1,0 +1,62 @@
+id: 00006899
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6899
+data:
+  user 1 personas: 'We also have three dogs and two cats.
+
+    Our kids are 14 and 12 years old.
+
+    I work as a physical therapist , and my wife is a school nurse.
+
+    My name is john and i live in dallas , tx.'
+  user 2 personas: 'I live in nashville.
+
+    I like to go to the farmers market every weekend.
+
+    I work in academia at a local university.
+
+    I am committed to the environment.
+
+    I play music in my spare time.'
+  Best Generated Conversation: 'User 1: Hello! I''m John, and I live in Dallas, TX. I''m a physical therapist, and my wife is a school nurse. We have two kids, ages 14 and 12, and we also have three dogs
+    and two cats.
+
+    User 2: Hi John! I''m James, and I live in Nashville, TN. I work in academia at a local university, and I''m committed to the environment. I like to go to the farmers market every weekend, and I play
+    music in my spare time.
+
+    User 1: It''s nice to meet you, James! I''ve always wanted to visit Nashville. What''s it like living there?
+
+    User 2: Nashville is a great city! It''s a lot of fun, and there''s always something to do. There''s a great music scene, and there''s a lot of history here too.
+
+    User 1: That sounds like a lot of fun! I''ll have to come visit sometime.
+
+    User 2: You definitely should! I''d be happy to show you around.
+
+    User 1: Thanks! I appreciate that.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go hiking, biking, and camping. I also like to play video games and watch movies.
+
+    User 2: Those all sound like fun activities! I like to do some of those things too. I also like to go to concerts and art museums.
+
+    User 1: I''ve been to a few concerts, but I''ve never been to an art museum.
+
+    User 2: You should go! There are a lot of great art museums in Nashville.
+
+    User 1: I''ll have to check them out next time I''m in town.
+
+    User 2: You definitely should!
+
+    User 1: Thanks for the recommendations, James. I''m glad I met you.
+
+    User 2: You''re welcome! I''m glad I met you too.
+
+    User 1: Maybe we can hang out sometime when I''m in Nashville.
+
+    User 2: That would be great! I''d love to show you around.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

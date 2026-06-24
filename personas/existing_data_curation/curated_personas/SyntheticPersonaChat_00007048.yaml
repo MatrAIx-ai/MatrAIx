@@ -1,0 +1,84 @@
+id: 00007048
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7048
+data:
+  user 1 personas: 'My favorite movie is django unchained.
+
+    I love rock climbing.
+
+    I drive a honda civic.
+
+    I like long walks on the beach.'
+  user 2 personas: 'My lifes passion is designer french fries.
+
+    I am the leader of the french fry research department at del taco.
+
+    I once fell up a whole flight of stairs.
+
+    My favorite band is up.
+
+    My daily driver is a bicycle that you pedal with your hands.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What''s your favorite movie?
+
+    User 2: Django Unchained.
+
+    User 1: Oh, I love that movie too! What''s your favorite part?
+
+    User 2: The part where he kills the slave owner and his family.
+
+    User 1: That was so satisfying.
+
+    User 2: I know, right?
+
+    User 1: What do you do for a living?
+
+    User 2: I''m the leader of the french fry research department at Del Taco.
+
+    User 1: That''s so cool! I love french fries.
+
+    User 2: Me too! I''m obsessed with them.
+
+    User 1: What''s your favorite kind of french fry?
+
+    User 2: I like the ones with the cheese sauce.
+
+    User 1: Me too! Those are my favorite.
+
+    User 2: What''s your favorite band?
+
+    User 1: My favorite band is Up.
+
+    User 2: I''ve never heard of them.
+
+    User 1: They''re a really good band. You should check them out.
+
+    User 2: I will.
+
+    User 1: What''s your daily driver?
+
+    User 2: I ride a bicycle that you pedal with your hands.
+
+    User 1: That''s so cool! I''ve never seen one of those before.
+
+    User 2: They''re really fun to ride.
+
+    User 1: I bet they are.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to rock climb, go on long walks on the beach, and watch movies.
+
+    User 2: Rock climbing sounds really cool. I''ve always wanted to try it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

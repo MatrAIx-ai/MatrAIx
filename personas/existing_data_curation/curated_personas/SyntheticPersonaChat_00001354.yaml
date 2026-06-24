@@ -1,0 +1,60 @@
+id: '00001354'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1354
+data:
+  user 1 personas: 'I love my impala.
+
+    I enjoy fishing.
+
+    I like classic radio programs.
+
+    I love decorating for christmas.'
+  user 2 personas: 'I i love logical and rational thinking.
+
+    I started working at google last week on self driving car research.
+
+    I am very good at math and science.
+
+    I love computers.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1]. What''s your name?
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. What do you do for a living?
+
+    User 2: I just started working at Google last week on self-driving car research.
+
+    User 1: Wow, that''s so cool! What''s that like?
+
+    User 2: It''s really challenging, but also really exciting. I''m learning a lot about math and science, and I''m working with some really smart people.
+
+    User 1: That sounds amazing! I''m not very good at math or science, but I love computers.
+
+    User 2: Oh, that''s great! I''m a big fan of computers too. I love how they can be used to solve complex problems.
+
+    User 1: Me too! I think computers are the future.
+
+    User 2: I agree! I think they''re going to change the world in a lot of ways.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I like to read, watch movies, and go for walks.
+
+    User 1: Me too! I love to read classic radio programs.
+
+    User 2: I''ve never heard of those. What are they?
+
+    User 1: They''re like old-time radio shows, but they''re based on classic novels. I love the way they use sound effects to create a sense of atmosphere.
+
+    User 2: That sounds really cool! I''ll have to check them out.
+
+    User 1: You should! I think you''d like them.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

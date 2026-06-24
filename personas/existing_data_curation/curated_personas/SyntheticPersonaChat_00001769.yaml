@@ -1,0 +1,68 @@
+id: 00001769
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1769
+data:
+  user 1 personas: 'I am a bank teller.
+
+    I have never been out of the country.
+
+    My favorite phone is as iphone.
+
+    I have never been to college.
+
+    I love to go hiking.'
+  user 2 personas: 'I m from texas.
+
+    I like basketball.
+
+    I work many hours.
+
+    My favorite band is imagine dragons.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name]. What''s your name?
+
+    User 2: Hello! I''m [User 2''s name]. Nice to meet you.
+
+    User 1: You too! Where are you from?
+
+    User 2: I''m from Texas.
+
+    User 1: Oh, cool! I''ve never been to Texas before. What''s it like there?
+
+    User 2: It''s great! The people are friendly, the food is amazing, and the weather is nice most of the time.
+
+    User 1: That sounds nice. I''m from Pennsylvania, so the weather can be pretty unpredictable.
+
+    User 2: Yeah, I''ve heard that Pennsylvania can get pretty cold.
+
+    User 1: Yeah, it can. But it''s also really beautiful, especially in the fall.
+
+    User 2: I''ve heard that the fall foliage in Pennsylvania is amazing.
+
+    User 1: It is! It''s one of my favorite things about living here.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a bank teller.
+
+    User 2: Oh, cool! I work in finance too. I''m a financial analyst.
+
+    User 1: Oh, that''s great! What''s your favorite thing about your job?
+
+    User 2: I like the challenge of it. It''s always changing, and there''s always something new to learn.
+
+    User 1: I can see why you like that. I like learning new things too.
+
+    User 2: Me too! What''s your favorite thing to do for fun?
+
+    User 1: I love to go hiking. It''s a great way to relax and get some exercise.
+
+    User 2: That sounds like fun! I''ve never been hiking before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s a great way to see nature and get some fresh air.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

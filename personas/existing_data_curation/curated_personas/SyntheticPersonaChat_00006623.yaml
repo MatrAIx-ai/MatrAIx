@@ -1,0 +1,64 @@
+id: '00006623'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6623
+data:
+  user 1 personas: 'I married my high school sweetheart.
+
+    I was an army brat.
+
+    I am a nurse.
+
+    I am a great baker.'
+  user 2 personas: 'I want to climb mount everest.
+
+    I like to play with clay models.
+
+    I cry when i watch gone with the wind.
+
+    I am not a good artist.
+
+    I have shot a lion.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from the Midwest.
+
+    User 1: Me too! I grew up in an army family.
+
+    User 2: Oh, that''s cool! I''ve always wanted to travel the world.
+
+    User 1: I have! I''ve been to Europe and Asia.
+
+    User 2: That sounds amazing! I''m jealous.
+
+    User 1: I''m a nurse.
+
+    User 2: Oh, that''s a great job! I''m not very good at science.
+
+    User 1: I''m not a great artist either, but I love baking.
+
+    User 2: I love to play with clay models.
+
+    User 1: That sounds really cool! I''ve never tried it.
+
+    User 2: You should! It''s really relaxing.
+
+    User 1: I might just have to do that.
+
+    User 2: I''m going to go climb Mount Everest.
+
+    User 1: That''s awesome! I''ve always wanted to do that, but I''m not sure I''m fit enough.
+
+    User 2: I''m sure you can do it if you set your mind to it.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

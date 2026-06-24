@@ -1,0 +1,70 @@
+id: 00001469
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1469
+data:
+  user 1 personas: 'My name is sarah.
+
+    I love to read and relax by the lake on the weekends.
+
+    I teach 5th grade students near oakville , ny.
+
+    I enjoy watching tennis and golf on tv.'
+  user 2 personas: 'I was drafted last years by the minnesota wolves.
+
+    I am an athlete.
+
+    I get paid over 5 million a year to dribble a ball.
+
+    I went to the university of north carolina.
+
+    I play basketball.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m Sarah, I''m a teacher.
+
+    User 2: Nice to meet you, Sarah! I''m Kevin, I''m an athlete.
+
+    User 1: Oh, cool! What kind of athlete?
+
+    User 2: I play basketball.
+
+    User 1: That''s great! I love watching basketball.
+
+    User 2: Thanks! I''m actually a professional basketball player.
+
+    User 1: Wow, that''s amazing! What team do you play for?
+
+    User 2: I play for the Minnesota Timberwolves.
+
+    User 1: Oh, that''s awesome! I''m from Minnesota, so I''ll have to root for you.
+
+    User 2: Thanks, Sarah! I appreciate the support.
+
+    User 1: So, what''s it like to be a professional athlete?
+
+    User 2: It''s really exciting! I get to travel all over the country and play basketball for a living.
+
+    User 1: That''s awesome! I can imagine it''s a lot of hard work, but it must be really fun too.
+
+    User 2: It is! I love playing basketball, and I love the competition.
+
+    User 1: So, what''s your favorite part of being a professional athlete?
+
+    User 2: I think my favorite part is the opportunity to inspire kids. I love knowing that I can be a role model for young people, and I hope that I can encourage them to follow their dreams.
+
+    User 1: That''s a great answer! I''m sure you''re a great role model.
+
+    User 2: Thanks, Sarah! I try to be.
+
+    User 1: Well, I''m sure you have to go now, but it was really nice to meet you, Kevin!
+
+    User 2: It was nice to meet you too, Sarah! Good luck with your teaching!
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

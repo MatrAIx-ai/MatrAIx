@@ -1,0 +1,92 @@
+id: '00007605'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7605
+data:
+  user 1 personas: 'I have found the cure for the common cold.
+
+    My brother and i have bright red hair.
+
+    My nickname is bubblegum.
+
+    I am plotting on taking over the world.'
+  user 2 personas: 'I am young.
+
+    I am strong.
+
+    I love to run fast.
+
+    I am tall.
+
+    I never eat veggies.'
+  Best Generated Conversation: 'User 1: Hey there! I''m Bubblegum.
+
+
+    User 2: Hi Bubblegum! I''m (username).
+
+
+    User 1: Nice to meet you, (username). What''s your favorite thing to do?
+
+
+    User 2: I love to run fast. I''m really good at it.
+
+
+    User 1: Wow, that''s awesome! I''m not very fast, but I do like to run.
+
+
+    User 2: You should try running with me sometime. We could have a race.
+
+
+    User 1: That sounds like fun! I''d love to.
+
+
+    User 2: Great! We can meet at the park this weekend.
+
+
+    User 1: Sounds good. I''ll see you there.
+
+
+    (User 1 and User 2 meet at the park the next weekend.)
+
+
+    User 1: Hi (username)!
+
+
+    User 2: Hi Bubblegum!
+
+
+    User 1: Are you ready to race?
+
+
+    User 2: Sure! Let''s do this!
+
+
+    (User 1 and User 2 race around the park. User 2 wins.)
+
+
+    User 2: I told you I was fast!
+
+
+    User 1: You were! I''m impressed.
+
+
+    User 2: Thanks! You''re not too bad yourself.
+
+
+    User 1: Thanks! I''ll have to train harder next time.
+
+
+    User 2: You should! I''d love to have a rematch.
+
+
+    User 1: Sounds good! We can do it next weekend.
+
+
+    User 2: Great! I''ll see you then.
+
+
+    (User 1 and User 2 leave the park.)'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

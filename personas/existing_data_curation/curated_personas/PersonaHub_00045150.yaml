@@ -1,0 +1,18 @@
+id: '00045150'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 45150
+persona_description: A medical professional with expertise in infectious diseases, particularly smallpox and anthrax. This person is interested in disaster-related infections, bioterrorism, and the medical
+  management of these threats. They are likely to be knowledgeable about the epidemiology, diagnosis, and treatment of smallpox and anthrax, as well as the medical management of bioterrorism. They may have
+  experience working with infectious disease outbreaks, biodefense, and the use of vaccines in post-event vaccination programs.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious diseases
+  general_domain_top01pct: None
+  specific_domain_top01pct: bioterrorism and disaster-related infections
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

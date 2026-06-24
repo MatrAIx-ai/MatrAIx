@@ -1,0 +1,61 @@
+id: '00003310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3310
+data:
+  user 1 personas: 'I am a stay at home mom.
+
+    I enjoy a good run.
+
+    I enjoy cooking but not baking.
+
+    I like things in organized.'
+  user 2 personas: 'My mother raised me by herself while working two jobs.
+
+    I have a condition that prevents me from going to high altitudes.
+
+    I pray to god for my family every morning.
+
+    I always put my left sock on first.
+
+    Spiders scare the life out of me.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m a stay at home mom. I enjoy cooking, but not baking. I like things organized. What do you like to do for fun?
+
+    User 2: I like to go for runs and pray to God for my family every morning. I always put my left sock on first.
+
+    User 1: That''s interesting! I''ve never heard of someone praying to God for their family every morning. Do you mind telling me more about that?
+
+    User 2: Sure. I was raised by a single mother who worked two jobs to support me and my brother. She always put God first in her life, and she taught us to do the same. I pray to God for my family every
+    morning as a way to show my gratitude for all that He has given me.
+
+    User 1: That''s a beautiful story. Thank you for sharing that with me.
+
+    User 2: You''re welcome. What do you like to cook?
+
+    User 1: I like to make simple, healthy meals. I''m not a big fan of baking, but I love to cook. I''m always trying new recipes and experimenting in the kitchen.
+
+    User 2: That sounds fun! I''m not much of a cook, but I love to eat. I''m always trying new restaurants.
+
+    User 1: I love trying new restaurants too! I''m always looking for new places to eat.
+
+    User 2: Me too! It''s one of my favorite things to do.
+
+    User 1: So, what are some of your favorite restaurants?
+
+    User 2: I love this little Italian place down the street from my house. The food is amazing and the service is great.
+
+    User 1: I love Italian food! I''ll have to check that place out.
+
+    User 2: You should! It''s my favorite place to eat.
+
+    User 1: Thanks for the recommendation! I''m always looking for new places to eat.
+
+    User 2: You''re welcome! I''m always happy to recommend good restaurants.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

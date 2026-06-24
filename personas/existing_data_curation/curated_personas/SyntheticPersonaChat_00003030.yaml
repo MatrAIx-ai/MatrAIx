@@ -1,0 +1,62 @@
+id: '00003030'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3030
+data:
+  user 1 personas: 'I am the youngest of 3.
+
+    I love reading mysteries in my free time.
+
+    I went to college in chicago.
+
+    I love playing tennis.'
+  user 2 personas: 'I like playing outside in the sun with my dolls.
+
+    I sleep in a princess bed.
+
+    I am a four year old girl with brown eyes and hair.
+
+    My daddy brings home flowers for me.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: I''m [user 2''s name]. I''m four years old.
+
+    User 1: Wow, you''re so young! I''m [user 1''s age].
+
+    User 2: I know. I''m still learning a lot.
+
+    User 1: What do you like to do?
+
+    User 2: I like to play outside in the sun with my dolls. I also like to sleep in my princess bed.
+
+    User 1: That sounds like fun. I like playing tennis and reading mysteries in my free time.
+
+    User 2: I''ve never played tennis before. Do you think I could try it sometime?
+
+    User 1: Sure, I''d love to show you how to play.
+
+    User 2: Great! I''ll be ready.
+
+    User 1: So, what do you like to do at school?
+
+    User 2: I like to read books and learn new things. I also like to play games with my friends.
+
+    User 1: That sounds like a lot of fun. I like to learn new things too.
+
+    User 2: Me too. I like to learn about different countries and cultures.
+
+    User 1: That''s great! I like to learn about different animals and plants.
+
+    User 2: Me too! I love animals. I have a dog and a cat at home.
+
+    User 1: That''s great! I have a dog and a cat too.
+
+    User 2: We should have a playdate sometime.
+
+    User 1: That sounds like fun! I''d love to meet your pets.
+
+    User 2: Great! I''ll let you know when we''re free.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

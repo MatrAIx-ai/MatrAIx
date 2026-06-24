@@ -1,0 +1,80 @@
+id: '00005160'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5160
+data:
+  user 1 personas: 'My favorite season is summer.
+
+    I just graduated high school.
+
+    I love tacos but hate spaghetti.
+
+    I want to be a doctor when i graduate.
+
+    I am headed to university of michigan in the fall.'
+  user 2 personas: 'I am a vegetarian.
+
+    I work for peta.
+
+    I love animals.
+
+    I make 50k a year.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]!
+
+    User 2: Hi, I''m [User 2]!
+
+    User 1: I just graduated high school!
+
+    User 2: Congratulations! What are you planning to do next?
+
+    User 1: I''m going to the University of Michigan in the fall to study medicine.
+
+    User 2: Wow, that''s great! What made you want to be a doctor?
+
+    User 1: I''ve always loved science and helping people. I think it would be an amazing job to be able to help people and make a difference in their lives.
+
+    User 2: That''s a great reason to become a doctor. I''m sure you''ll be a great one!
+
+    User 1: Thanks! I hope so!
+
+    User 2: So, what''s your favorite subject in school?
+
+    User 1: My favorite subject is science. I love learning about the world and how it works.
+
+    User 2: That''s great! I''m a science major too.
+
+    User 1: Oh, really? What''s your favorite kind of science?
+
+    User 2: I really like biology. I love learning about the different animals and plants in the world.
+
+    User 1: That''s cool! I like biology too. I think it''s so interesting how all the different organisms interact with each other.
+
+    User 2: Me too! It''s amazing how everything is connected.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work for PETA. I''m a vegetarian and I love animals.
+
+    User 1: Oh, cool! I''ve heard about PETA. What do you do there?
+
+    User 2: I do a lot of different things. I help to educate people about animal rights, I work on campaigns to help animals, and I also do some fundraising.
+
+    User 1: That sounds like a really rewarding job.
+
+    User 2: It is! I love being able to help animals.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too! Have a nice day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

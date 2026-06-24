@@ -1,0 +1,78 @@
+id: '00001324'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1324
+data:
+  user 1 personas: 'I like to travel.
+
+    I like to garden.
+
+    I am tall.
+
+    I like to build things.'
+  user 2 personas: 'I am a genius and know over 300 languages.
+
+    I own a mansion that i do not live in.
+
+    I am an international business man.
+
+    I never met my parents.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thanks! I''m just getting started on my day.
+
+    User 2: That''s great! I''m just getting ready to start my day too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an international business man. I travel all over the world and meet with clients.
+
+    User 1: That sounds like an exciting job!
+
+    User 2: It is! I get to see the world and meet new people.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I love the challenge of meeting new people and learning about their cultures.
+
+    User 1: That sounds really interesting!
+
+    User 2: It is! I''ve learned so much about the world and different cultures by traveling.
+
+    User 1: What''s your favorite place you''ve visited?
+
+    User 2: I have so many favorite places! I love the beaches in Brazil, the mountains in Switzerland, and the cities in Japan.
+
+    User 1: Those all sound like amazing places! I''d love to visit them someday.
+
+    User 2: You should! They''re all worth a visit.
+
+    User 1: I''m sure they are.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to travel, garden, and build things.
+
+    User 2: That sounds like a lot of fun! I love to travel too, but I''m not very good at gardening or building things.
+
+    User 1: I''m not very good at gardening either, but I enjoy it. And I''m learning how to build things.
+
+    User 2: That''s great! I''m sure you''ll be a great builder.
+
+    User 1: Thanks!
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to the beach or the park.
+
+    User 2: Those both sound like great options! I''m going to the beach this weekend.
+
+    User 1: That sounds fun! I''d love to go with you.
+
+    User 2: Sure! I''d love the company.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

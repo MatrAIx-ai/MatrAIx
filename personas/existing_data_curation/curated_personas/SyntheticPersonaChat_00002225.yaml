@@ -1,0 +1,90 @@
+id: '00002225'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2225
+data:
+  user 1 personas: 'I have lots of cash.
+
+    I have been bankrupt and back.
+
+    I am the president.
+
+    I used to own a casino.'
+  user 2 personas: 'I live in a rural community.
+
+    I work at amazon.
+
+    I have two kids.
+
+    I love robotics.'
+  Best Generated Conversation: 'User 1: Hi, I''m (USER 1''s name).
+
+    User 2: Hi, I''m (USER 2''s name).
+
+    User 1: Where do you live?
+
+    User 2: I live in a rural community.
+
+    User 1: Oh, really? I''ve always wanted to live in a rural community.
+
+    User 2: It''s nice. It''s a lot quieter than living in a city.
+
+    User 1: I can imagine. What do you do for work?
+
+    User 2: I work at Amazon.
+
+    User 1: Oh, cool. I''ve heard good things about Amazon.
+
+    User 2: It''s a good company. I like it there.
+
+    User 1: Do you have any kids?
+
+    User 2: Yes, I have two kids.
+
+    User 1: Oh, that''s great. How old are they?
+
+    User 2: They''re both in elementary school.
+
+    User 1: That''s so cute. I love kids.
+
+    User 2: Me too. They''re the best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, go for walks, and do puzzles.
+
+    User 1: Those all sound like fun things to do. I like to read, too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and fantasy.
+
+    User 2: Oh, I like those too! What''s your favorite book?
+
+    User 1: That''s a hard question. I have a lot of favorite books, but I think my favorite is probably "The Lord of the Rings."
+
+    User 2: I love that book! It''s so good.
+
+    User 1: Me too. It''s one of my all-time favorites.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I like to play video games and watch movies.
+
+    User 2: Oh, I like video games too. What kind of games do you like to play?
+
+    User 1: I like to play all kinds of games, but I especially like RPGs and action games.
+
+    User 2: Oh, I like those too. What''s your favorite RPG?
+
+    User 1: That''s a tough question. I have a lot of favorite RPGs, but I think my favorite is probably "The Witcher 3."
+
+    User 2: I love that game! It''s so good.
+
+    User 1: Me too. It''s one of my all-time favorites.
+
+    User 2: I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

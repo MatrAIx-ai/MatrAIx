@@ -1,0 +1,82 @@
+id: '00006520'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6520
+data:
+  user 1 personas: 'My favorite musician is bruno mars.
+
+    I drive a red car.
+
+    I am an accountant.
+
+    I enjoy running.'
+  user 2 personas: 'My favorite color is blue.
+
+    I love pizza.
+
+    I was born 20 years ago.
+
+    I live in the usa.'
+  Best Generated Conversation: 'User 1: Hi! My name is [your name].
+
+    User 2: Hi [your name], my name is [other name].
+
+    User 1: What''s your favorite color?
+
+    User 2: I love blue! It''s so calming and relaxing.
+
+    User 1: That''s a great choice! I like blue too, especially when it''s paired with white.
+
+    User 2: Me too! I love the way the two colors look together.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love pizza! I could eat it every day.
+
+    User 1: Me too! Pizza is so good. What''s your favorite kind of pizza?
+
+    User 2: I like pepperoni and pineapple pizza the best. What about you?
+
+    User 1: I like pepperoni and mushroom pizza the best.
+
+    User 2: That''s a good choice! I''ve never had mushroom pizza before, but I''ve heard good things about it.
+
+    User 1: You should try it! It''s really good.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what do you do for fun?
+
+    User 2: I like to go for walks, read, and watch movies.
+
+    User 1: I like to do those things too! I also like to run and play video games.
+
+    User 2: I''ve never been a runner, but I like playing video games too. What games do you like to play?
+
+    User 1: I like playing Mario Kart, Super Smash Bros., and Zelda.
+
+    User 2: I''ve played Mario Kart, but I''ve never played Super Smash Bros. or Zelda.
+
+    User 1: You should try them! They''re both really fun.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I''m a student at the University of California, Berkeley.
+
+    User 1: Oh, that''s cool! What are you studying?
+
+    User 2: I''m studying computer science.
+
+    User 1: That''s a great field! I''m an accountant.
+
+    User 2: Oh, that''s interesting! What''s it like being an accountant?
+
+    User 1: It''s challenging, but it''s also very rewarding. I like the fact that I get to help people and make a difference in the world.
+
+    User 2: That''s great! I''m glad you enjoy your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: '00026546'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 26546
+persona_description: A computational biologist who specializes in molecular phylogenetics, particularly in the use of Bayesian inference methods such as Markov chain Monte Carlo (MCMC) algorithms for maximum
+  likelihood estimation of phylogenetic trees from DNA sequences. They are likely to be familiar with software tools such as MrBayes, BEAST, and MrModeltest, as well as theoretical concepts in molecular
+  evolution, such as the relationship between molecular phylogenetics and phylogenetic inference. They may also have expertise in data analysis, such as the use of NEXUS file format for systematic information
+  and the use of NEXUS format in phylogenetic analysis. They may also be interested in the reliability and accuracy of Bayesian posterior probabilities and bootstrap frequencies in phylogenetic inference,
+  as evidenced by their references to Felsenstein and Swofford.
+expertise:
+  general_domain_top1pct: Computational Biology
+  specific_domain_top1pct: Molecular Phylogenetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Bayesian Phylogenetics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

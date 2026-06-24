@@ -1,0 +1,64 @@
+id: 00005492
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5492
+data:
+  user 1 personas: 'I am afraid to leave the house.
+
+    When i was a child i was kidnapped by my uncle.
+
+    I live with my sisters and they provide me with all my needs.
+
+    I love to clean my house.
+
+    I enjoy reading.'
+  user 2 personas: 'I work at a coffee shop.
+
+    I drive a prius.
+
+    My mom was a hairdresser.
+
+    My favorite color is red.
+
+    I love to dance.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear about what happened to you. That must have been really traumatic.
+
+    User 2: It was. But I''m trying to move on and live my life.
+
+    User 1: That''s good. I''m glad you''re not letting it hold you back.
+
+    User 2: Thanks. I''m trying.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, clean my house, and dance.
+
+    User 1: That sounds like a lot of fun. I love to read too.
+
+    User 2: What are some of your favorite books?
+
+    User 1: I love the Harry Potter series. I also love the Hunger Games series.
+
+    User 2: I''ve heard good things about the Harry Potter series. I''ll have to check it out.
+
+    User 1: You should! It''s a great series.
+
+    User 2: So, what do you like about reading?
+
+    User 1: I love the way it can take me to a different world. I can escape from my own problems and just enjoy the story.
+
+    User 2: I can see why you would like that. I love that too.
+
+    User 1: What do you like about dancing?
+
+    User 2: I love the way it makes me feel. It''s so freeing and expressive.
+
+    User 1: I can see why you would like that. It does look like a lot of fun.
+
+    User 2: It is! I''m glad you''re not letting your past hold you back. I think you''re really strong.
+
+    User 1: Thank you. That means a lot'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

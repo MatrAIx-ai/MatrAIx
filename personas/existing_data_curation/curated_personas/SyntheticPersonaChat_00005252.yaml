@@ -1,0 +1,78 @@
+id: '00005252'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5252
+data:
+  user 1 personas: 'I currently work at mcdonalds.
+
+    I live with my parents.
+
+    I am saving money to buy my first car.
+
+    I am taking a year off before i start college.
+
+    I am eighteen years old.'
+  user 2 personas: 'My favorite music is country.
+
+    I used to work as an actress.
+
+    I love all animals.
+
+    I love my job.'
+  Best Generated Conversation: 'User 1: I''m currently working at McDonalds. I''m saving money to buy my first car.
+
+    User 2: That''s awesome! What kind of car are you thinking of getting?
+
+    User 1: I''m not sure yet. I''m still saving up money. I think I''m going to get something used.
+
+    User 2: That''s a good idea. I love used cars. They''re so much cheaper.
+
+    User 1: Yeah, me too. I''m also taking a year off before I start college.
+
+    User 2: That''s cool. What are you going to do with your time off?
+
+    User 1: I''m not sure yet. I might travel or get a part-time job.
+
+    User 2: That sounds like a great plan. I''m sure you''ll figure it out.
+
+    User 1: Thanks. I''m sure I will.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and hang out with my friends.
+
+    User 2: Me too! I love video games. I''m a big fan of the Mario series.
+
+    User 1: Me too! I love Mario games. I also love the Legend of Zelda series.
+
+    User 2: Oh, I love Zelda too! I''m so excited for the new game coming out.
+
+    User 1: Me too! I can''t wait to play it.
+
+    User 2: So, what''s your favorite kind of music?
+
+    User 1: I like country music. I love the way it makes me feel.
+
+    User 2: That''s cool. I like country music too. I love how relaxed it makes me feel.
+
+    User 1: Yeah, it''s the best.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love animals. I have a dog and a cat.
+
+    User 2: That''s awesome! I love animals too. I have a dog and a cat too.
+
+    User 1: Oh, that''s cool. What kind of dog do you have?
+
+    User 2: I have a golden retriever. What kind of dog do you have?
+
+    User 1: I have a labrador retriever.
+
+    User 2: Oh, that''s cool. I love labrador retrievers.
+
+    User 1: Yeah, they''re the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

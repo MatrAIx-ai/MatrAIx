@@ -1,0 +1,62 @@
+id: '00002030'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2030
+data:
+  user 1 personas: 'I play quarterback.
+
+    This is my second year in the league.
+
+    I play for the philadelphia eagles.
+
+    Last season i was just getting started.'
+  user 2 personas: 'My english is not very good yet.
+
+    I also dance and sing.
+
+    I want to be a famous actor.
+
+    I just moved to los angeles from tokyo.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Me too. I''m just watching some TV.
+
+    User 2: Oh, cool. What are you watching?
+
+    User 1: It''s a documentary about the history of football.
+
+    User 2: Oh, that sounds interesting. I love football.
+
+    User 1: Me too. I''m a big fan of the Philadelphia Eagles.
+
+    User 2: Oh, cool. I''m from Tokyo, so I don''t really know much about football. But I''ve always wanted to learn more about it.
+
+    User 1: Well, I''d be happy to tell you more about it.
+
+    User 2: Thanks, I''d appreciate that.
+
+    User 1: So, the Eagles are one of the oldest teams in the NFL. They''ve been around since 1933.
+
+    User 2: Wow, that''s a long time.
+
+    User 1: Yeah, it is. They''ve had a lot of success over the years. They''ve won three Super Bowls.
+
+    User 2: That''s really impressive.
+
+    User 1: Yeah, it is. They''re one of the most popular teams in the league.
+
+    User 2: I can see why. They sound like a great team.
+
+    User 1: They are. I''m a big fan.
+
+    User 2: I''m glad you''re a fan. I''m sure you''ll enjoy watching them this season.
+
+    User 1: I''m sure I will. Thanks for telling me more about them.
+
+    User 2: No problem. I''m happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: 00003109
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3109
+data:
+  user 1 personas: 'I like eating pretzels.
+
+    My favorite band is vnv nation.
+
+    I really like watching star trek.
+
+    I work for the railroad.'
+  user 2 personas: 'I am a happy person.
+
+    I love to take walks.
+
+    I love to listen to music.
+
+    I love to go to the lake.
+
+    I love to knit and crochet.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hello [name], I''m [name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to take walks, listen to music, and go to the lake. I also love to knit and crochet.
+
+    User 1: I like to do some of those things too! I love listening to music and going to the lake. I''ve never tried knitting or crocheting, but it sounds like fun.
+
+    User 2: It is! It''s a great way to relax and de-stress.
+
+    User 1: I''m glad to hear that. I might have to give it a try.
+
+    User 2: You should! It''s really easy to learn.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like all kinds of music, but I especially like rock, pop, and indie.
+
+    User 1: I like rock and pop too! I''m not too familiar with indie music, but I''m always willing to give new things a try.
+
+    User 2: You should! There''s a lot of great indie music out there.
+
+    User 1: I''ll check it out. What''s your favorite band?
+
+    User 2: My favorite band is probably The Killers. I also love Twenty One Pilots, The 1975, and Green Day.
+
+    User 1: I love The Killers too! They''re one of my favorite bands. I''ve also heard good things about Twenty One Pilots and Green Day.
+
+    User 2: They''re all great bands! What''s your favorite song by The Killers?
+
+    User 1: My favorite song by The Killers is "Somebody Told Me." It''s such a catchy song.
+
+    User 2: That''s a great song! I also love "Mr. Brightside."
+
+    User 1: That''s another great song! I love the way the chorus builds up.
+
+    User 2: Me too! It''s so powerful.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work for a small company that makes custom jewelry.
+
+    User 1: That sounds interesting! What do you like about your job?
+
+    User 2: I like the creative aspect of it. I get to come up with new designs and see them come to life.
+
+    User 1: That sounds really fun! I''m not very creative, so I think I would be bad at that.
+
+    User 2: It''s not as hard as you think! It just takes some practice.
+
+    User 1: Maybe I''ll give it a try sometime.
+
+    User 2: You should! I''m sure you''d be great at it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

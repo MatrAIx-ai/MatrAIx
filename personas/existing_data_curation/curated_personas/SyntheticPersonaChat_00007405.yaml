@@ -1,0 +1,76 @@
+id: '00007405'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7405
+data:
+  user 1 personas: 'My favorite drink is caramel cappuccino.
+
+    I m in grad school.
+
+    My parents live across the street from me.
+
+    I work in a coffee shop.
+
+    I love to read true crime books.'
+  user 2 personas: 'I am a musician.
+
+    My favorite band is hop along.
+
+    I have been working the same job for two years.
+
+    My father used to be a mechanic.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a musician.
+
+    User 1: That''s cool! What kind of music do you play?
+
+    User 2: I mostly play folk music.
+
+    User 1: Oh, cool. I love folk music. Who are some of your favorite bands?
+
+    User 2: I love Hop Along, The Decemberists, and Fleet Foxes.
+
+    User 1: I love those bands too! I''ve seen Hop Along live a couple of times. They''re so good.
+
+    User 2: I''m jealous! I''ve always wanted to see them live.
+
+    User 1: They''re amazing. You should definitely check them out if you get the chance.
+
+    User 2: I definitely will.
+
+    User 1: What''s your favorite song by Hop Along?
+
+    User 2: I think my favorite song is "The Knocking Song."
+
+    User 1: That''s a great song! I love the lyrics.
+
+    User 2: Yeah, they''re really powerful.
+
+    User 1: Do you have any other hobbies besides music?
+
+    User 2: I like to read and write.
+
+    User 1: Me too! What kind of books do you like to read?
+
+    User 2: I like to read true crime books and nonfiction.
+
+    User 1: Oh, cool. I love true crime books too.
+
+    User 2: What''s your favorite true crime book?
+
+    User 1: I think my favorite is "In Cold Blood" by Truman Capote.
+
+    User 2: That''s a great book. I love the way he tells the story.
+
+    User 1: Me too. It''s so well written.
+
+    User 2: I like to read books that make me think.
+
+    User 1: Me too. I think books are a great way to learn about the world and about ourselves.
+
+    User 2: I agree. They''re a powerful tool for understanding the human experience.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: 00018344
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 18344
+persona_description: A Java Virtual Machine (JVM) programmer or system administrator who is responsible for managing the JVM's memory allocation and optimization. They are familiar with the JVM's memory
+  management techniques, including the use of fixed-size and dynamically expanding Java virtual machine stacks, and the heap's role in storing objects and class instances. They are also knowledgeable about
+  the automatic storage management system's garbage collection process and how it handles memory allocation for the heap. Additionally, they are adept at adjusting the JVM's size settings using the `-Xms`
+  and `-Xmx` switches to specify the initial and maximum heap sizes, respectively. They are skilled in optimizing the JVM's performance and ensuring that it can handle large computations without throwing
+  out StackOverflowError or OutOfMemoryError exceptions.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Java Virtual Machine Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

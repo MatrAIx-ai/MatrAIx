@@ -1,0 +1,18 @@
+id: '00056003'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56003
+persona_description: A medical researcher with expertise in the study of the immune system and its role in the development of COVID-19. This person is particularly interested in understanding the mechanisms
+  behind cytokine storms and their potential role in the overreaction of the immune system. They are also familiar with the limitations and uncertainties surrounding the hypothesis that the overreaction
+  of the immune system is the primary cause of COVID-19 deaths and hospitalizations.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: immunology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

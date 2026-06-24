@@ -1,0 +1,80 @@
+id: '00007576'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7576
+data:
+  user 1 personas: 'I am a waitress at a popular houston club.
+
+    I am hoping to move to australia soon to marry my boyfriend.
+
+    I also give blood monthly in honor of my sister who died.
+
+    I like jogging in my spare time.'
+  user 2 personas: 'I would like to be a teacher in the future.
+
+    I am picky when it comes to food.
+
+    My temper is pretty short.
+
+    I like early 2000s indie music.
+
+    I love my pet dog more than anything.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a waitress at a popular Houston club.
+
+    User 1: Oh, that sounds fun! I''m a teacher.
+
+    User 2: Really? That''s great! I''ve always wanted to be a teacher, but I''m not sure if I''m cut out for it.
+
+    User 1: Oh, you''re definitely cut out for it! You seem like a very patient and understanding person.
+
+    User 2: Thank you, I try to be.
+
+    User 1: So, what do you like to do in your spare time?
+
+    User 2: I like to listen to early 2000s indie music, and I love my pet dog more than anything.
+
+    User 1: Oh, cool! I love early 2000s indie music too! What are some of your favorite bands?
+
+    User 2: I love The Strokes, The Killers, and The White Stripes.
+
+    User 1: Oh, I love those bands too!
+
+    User 2: I also like to go jogging in my spare time.
+
+    User 1: That''s awesome! I used to jog, but I haven''t in a while.
+
+    User 2: You should get back into it! It''s a great way to stay fit.
+
+    User 1: I know, you''re right. I''ll definitely start jogging again.
+
+    User 2: That''s great!
+
+    User 1: So, what do you think of Houston?
+
+    User 2: I love it! It''s a great city with a lot to offer.
+
+    User 1: Yeah, I like it too. It''s a great place to live and work.
+
+    User 2: I agree.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to go jogging, then I''m going to make dinner.
+
+    User 2: Oh, that sounds fun! I might go jogging with you.
+
+    User 1: That would be great! I''ll text you the details.
+
+    User 2: Perfect!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00005802
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5802
+data:
+  user 1 personas: 'I like movies based on comedies.
+
+    I work many hours rehearsing for my show.
+
+    I am a ballet dancer.
+
+    My favorite food is hamburgers.
+
+    My parents passed away in a car accident.'
+  user 2 personas: 'I have a daughter.
+
+    I am a great cook.
+
+    I am under 6 feet tall.
+
+    I sell paper products for a living.'
+  Best Generated Conversation: 'User 1: Hey! What do you do for a living?
+
+    User 2: I sell paper products for a living.
+
+    User 1: Oh, that''s cool! I''ve always been interested in paper.
+
+    User 2: Yeah, it''s pretty interesting. I like learning about all the different types of paper and how they''re used.
+
+    User 1: Me too! I think it''s really cool how paper can be used in so many different ways.
+
+    User 2: Yeah, it''s amazing. I never really thought about it before I got into this job, but paper is really important.
+
+    User 1: Yeah, it is. It''s used in everything from books to newspapers to food packaging.
+
+    User 2: Exactly! It''s crazy to think about how much we use paper every day.
+
+    User 1: Yeah, it is. I''m glad we have paper, though. It makes life a lot easier.
+
+    User 2: Me too! I don''t know what I would do without it.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I love to cook. I''m not a professional chef, but I''m pretty good.
+
+    User 1: Oh, that''s cool! I love to cook too. I''m not very good at it, but I enjoy it.
+
+    User 2: Well, you''re in luck! I''m a great teacher.
+
+    User 1: Really? That''s awesome! I''d love to learn how to cook from you.
+
+    User 2: Sure! I''d be happy to teach you.
+
+    User 1: Great! I''ll bring the ingredients, and you can show me how to cook a delicious meal.
+
+    User 2: Sounds like a plan'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

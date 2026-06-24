@@ -1,0 +1,72 @@
+id: '00001073'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1073
+data:
+  user 1 personas: 'I like to skate.
+
+    I sing in a punk band.
+
+    I sometimes write poetry.
+
+    I want to visit the uk.
+
+    My favorite color is black.'
+  user 2 personas: 'I will be moving to san diego in two months.
+
+    My mother was a famous ballet dancer in london.
+
+    My favorite band is the punk band rancid.
+
+    I am twenty six years old this may.
+
+    I work at a gas station as a cashier.'
+  Best Generated Conversation: 'User 1: I like punk music too! What''s your favorite band?
+
+    User 2: Rancid is my favorite band, but I also like the Clash, NOFX, and Bad Religion.
+
+    User 1: Nice! I''ve heard of Rancid, but I''m not familiar with the others.
+
+    User 2: You should check them out! They''re all great bands.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem. So, what do you do for fun?
+
+    User 1: I like to skate, sing in a punk band, and write poetry.
+
+    User 2: That sounds really cool! I like to play video games, go to concerts, and hang out with my friends.
+
+    User 1: Nice! I like video games too. What are your favorite games?
+
+    User 2: I like a lot of different games, but my favorite is probably Final Fantasy 7.
+
+    User 1: That''s a great game! I love the story and the characters.
+
+    User 2: Me too! I''ve played it through so many times.
+
+    User 1: I''ve only played it once, but I''m planning on playing it again soon.
+
+    User 2: You should! It''s a great game to play again.
+
+    User 1: I will!
+
+    User 2: So, what''s it like to be in a punk band?
+
+    User 1: It''s a lot of fun! We get to play music that we love and make people happy.
+
+    User 2: That sounds really cool! I''ve always wanted to be in a band.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will!
+
+    User 1: I hope you do!
+
+    User 2: Thanks!
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

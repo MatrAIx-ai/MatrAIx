@@ -1,0 +1,19 @@
+id: 00031954
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31954
+persona_description: A MySQL administrator who is interested in managing and optimizing the performance of MySQL clusters. They are skilled in using the mysqladmin command-line tool to manage connections,
+  threads, and statements, and are familiar with the PROCESSLIST table to identify and kill threads. They have a deep understanding of the connection management and thread management processes in MySQL
+  and are proficient in using the mysqladmin processlist and mysqladmin kill commands to examine and kill threads. They also have experience using the mysqladmin kill command with thread-specific kill flags
+  to control the timing of thread termination.
+expertise:
+  general_domain_top1pct: Database Administration
+  specific_domain_top1pct: MySQL Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

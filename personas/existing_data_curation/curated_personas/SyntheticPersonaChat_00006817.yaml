@@ -1,0 +1,78 @@
+id: 00006817
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6817
+data:
+  user 1 personas: 'I m originally from london , england.
+
+    I love going to comedy clubs.
+
+    I recently lost both my parents to an automobile accident.
+
+    I like camping and the outdoors in general.'
+  user 2 personas: 'I have a very unhealthy diet.
+
+    I drink a lot of caffeine.
+
+    I am very skinny and energetic.
+
+    I have a cheap car my dad gave me.'
+  Best Generated Conversation: '* * User 1: * * Hey! I''m from London, England.
+
+    * * User 2: * * Oh cool! I''m from the US. Where do you live now?
+
+    * * User 1: * * I''m living in New York City now.
+
+    * * User 2: * * That''s cool! I''ve always wanted to go to New York City.
+
+    * * User 1: * * You should! It''s a great city.
+
+    * * User 2: * * What''s your favorite thing about it?
+
+    * * User 1: * * I love the energy of the city. There''s always something going on.
+
+    * * User 2: * * That sounds awesome! I''m more of a laid-back person, but I can see how that would be appealing.
+
+    * * User 1: * * Yeah, it''s definitely not for everyone.
+
+    * * User 2: * * What do you do for fun in New York City?
+
+    * * User 1: * * I love going to comedy clubs. There are so many great ones here.
+
+    * * User 2: * * That''s awesome! I''ve never been to a comedy club before.
+
+    * * User 1: * * You should! It''s a lot of fun.
+
+    * * User 2: * * I''ll have to check it out.
+
+    * * User 1: * * You''ll definitely have a good time.
+
+    * * User 2: * * Thanks for the recommendation!
+
+    * * User 1: * * You''re welcome!
+
+    * * User 2: * * So, what''s your story?
+
+    * * User 1: * * My story?
+
+    * * User 2: * * Yeah, I mean, how did you end up in New York City?
+
+    * * User 1: * * Well, I moved here a few years ago for grad school. I got my degree and ended up staying.
+
+    * * User 2: * * Oh, cool! What did you study?
+
+    * * User 1: * * I studied comedy writing.
+
+    * * User 2: * * That''s awesome! Are you a comedian?
+
+    * * User 1: * * I''m not a professional comedian, but I do perform at open mics sometimes.
+
+    * * User 2: * * That''s cool! I''d love to see you perform sometime.
+
+    * * User 1: * * Maybe I''ll put something on the calendar.
+
+    * * User 2: * * That would be awesome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

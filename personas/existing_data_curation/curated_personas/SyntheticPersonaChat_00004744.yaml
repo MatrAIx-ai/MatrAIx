@@ -1,0 +1,72 @@
+id: '00004744'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4744
+data:
+  user 1 personas: 'I sell clothing on facebook.
+
+    My hair is curly and dark.
+
+    My husband is a pastor.
+
+    I do not like to clean house.
+
+    I have two children.'
+  user 2 personas: 'I got married when i was young.
+
+    I like to cook.
+
+    I have three children.
+
+    I moved to america when i was 14.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: I see you have three children. How old are they?
+
+    User 2: They''re 10, 8, and 6.
+
+    User 1: Oh, that''s a lot of work!
+
+    User 2: It is, but it''s also a lot of fun.
+
+    User 1: I bet. I have two children, but I''m not sure I could handle a third.
+
+    User 2: It''s definitely not for everyone, but I wouldn''t have it any other way.
+
+    User 1: That''s good to hear. I''m glad you''re happy.
+
+    User 2: Thank you.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to cook, read, and watch movies.
+
+    User 1: I like to cook too! What''s your favorite dish to make?
+
+    User 2: I love to make pasta dishes. I have a lot of recipes that I''ve been collecting over the years.
+
+    User 1: That sounds delicious! I love pasta too.
+
+    User 2: I''m glad.
+
+    User 1: So, what are you currently reading?
+
+    User 2: I''m currently reading a book about the history of America. I''m really enjoying it.
+
+    User 1: That sounds interesting. I''ve always wanted to learn more about the history of America.
+
+    User 2: It''s a lot to learn, but it''s really interesting.
+
+    User 1: I bet it is. I''ll have to check out that book.
+
+    User 2: You should. It''s really good.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

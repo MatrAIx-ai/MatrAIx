@@ -1,0 +1,78 @@
+id: '00001144'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1144
+data:
+  user 1 personas: 'I work as a vet.
+
+    I am a 30 year old female.
+
+    I have 3 dogs and 2 cats.
+
+    I like to ride my bike.
+
+    I am a vegan.'
+  user 2 personas: 'My mother stayed at home all day to raise me and my siblings.
+
+    My father used to be an insurance salesman.
+
+    I cannot stand salads.
+
+    I graduated valedictorian of my high school class.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m a vet.
+
+    User 2: Oh, that''s cool! I have a dog and two cats.
+
+    User 1: That''s great! I love animals.
+
+    User 2: Me too! I''m a vegan, though.
+
+    User 1: Oh, that''s interesting. I''ve never met a vegan vet before.
+
+    User 2: Yeah, there''s not a lot of us.
+
+    User 1: Well, it''s good to meet you!
+
+    User 2: You too!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in programming.
+
+    User 2: It''s a lot of fun!
+
+    User 1: I''m sure it is.
+
+    User 2: Do you have any pets?
+
+    User 1: No, I don''t. I''ve always wanted a dog, but I''m not sure if I have the time to take care of one.
+
+    User 2: Yeah, it can be a lot of work.
+
+    User 1: Well, I''m glad you have your dog and cats.
+
+    User 2: Me too! They''re my best friends.
+
+    User 1: I''m sure they are.
+
+    User 2: So, what''s your favorite thing about being a vet?
+
+    User 1: I love helping animals. It''s so rewarding to see them get better.
+
+    User 2: That''s great! I''m glad you love your job.
+
+    User 1: Thanks! I do.
+
+    User 2: Well, I''m glad we met.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

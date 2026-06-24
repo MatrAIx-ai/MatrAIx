@@ -1,0 +1,58 @@
+id: '00002167'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2167
+data:
+  user 1 personas: 'I eat a lot of meat.
+
+    I love my girlfriend.
+
+    I am a veteran.
+
+    My father was also in the military.
+
+    I am going to school to get my bachelors degree.'
+  user 2 personas: 'I like to dress up for other people.
+
+    I take great care of my skin.
+
+    I am an actress and i work at a grocery store.
+
+    I never cook.'
+  Best Generated Conversation: 'User 1: Hello, I''m user1!
+
+    User 2: Hello, I''m user2!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an actress and I work at a grocery store.
+
+    User 1: That''s cool! I''m a veteran and I''m going to school to get my bachelors degree.
+
+    User 2: Wow, that''s impressive! What was your time in the military like?
+
+    User 1: It was tough at times, but I learned a lot about myself and I made some great friends.
+
+    User 2: That''s awesome! What do you like to do for fun?
+
+    User 1: I love to spend time with my girlfriend, and I also enjoy cooking and playing video games.
+
+    User 2: I love cooking too! What''s your favorite dish to make?
+
+    User 1: I love making steak. It''s so easy and it always tastes delicious.
+
+    User 2: Steak sounds delicious! I''ve never actually made one myself.
+
+    User 1: You should try it! It''s really easy and it''s a great way to impress your guests.
+
+    User 2: I''ll definitely give it a try!
+
+    User 1: Great! I''m sure you''ll love it.
+
+    User 2: Thanks for the tip!
+
+    User 1: No problem! I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

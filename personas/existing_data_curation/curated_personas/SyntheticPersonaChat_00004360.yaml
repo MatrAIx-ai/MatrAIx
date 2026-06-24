@@ -1,0 +1,56 @@
+id: '00004360'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4360
+data:
+  user 1 personas: 'I have never broken a bone.
+
+    My favorite food is pizza.
+
+    I am a freshman in college.
+
+    I love cats.
+
+    I am athletic.'
+  user 2 personas: 'I am a fan of system of a down.
+
+    I own 9 guitars.
+
+    I learned piano at age 6.
+
+    I am a vegan.
+
+    I am trying to play in a local band.'
+  Best Generated Conversation: 'User 1: Hi! I''m a freshman in college, too! What''s your favorite thing about college so far?
+
+    User 2: Hi there! My favorite thing about college is the freedom to explore my interests and meet new people. How about you?
+
+    User 1: I love the freedom to choose my own classes and the opportunity to learn from professors who are experts in their field. I also love meeting new people from all over the world.
+
+    User 2: That''s awesome! I''m also a big fan of the freedom to choose my own classes. I love being able to learn about whatever I''m interested in.
+
+    User 1: Me too! I''ve been taking a lot of classes in my major, but I''ve also been able to take some electives that I''m really interested in.
+
+    User 2: That''s great! I''m glad you''re taking advantage of all that college has to offer.
+
+    User 1: Thanks! I''m really enjoying my time here so far.
+
+    User 2: I''m glad to hear that! I''m sure you''re going to have a great time the rest of the year.
+
+    User 1: Thanks! I hope so too.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: I love pizza! What about you?
+
+    User 2: Me too! I love all kinds of pizza, but my favorite is probably pepperoni pizza.
+
+    User 1: I love pepperoni pizza too! It''s so good.
+
+    User 2: I''m glad to hear that! I think we''re going to be good friends.
+
+    User 1: Me too! I think we''ll have a lot in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

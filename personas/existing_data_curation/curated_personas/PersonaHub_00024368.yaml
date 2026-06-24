@@ -1,0 +1,19 @@
+id: 00024368
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24368
+persona_description: A programmer who is familiar with C programming language, specifically the time.h library and its usage for converting calendar time to local time. They are proficient in using the
+  localtime_r() function to convert calendar time into local time, and may have experience with time-related operations such as time() and date(). They are likely to be familiar with the concepts of time
+  zones and how to establish and use local time zones using the tzset() function. They may also have experience with setting the computer's internal clock using Coordinated Universal Time (UTC) and may
+  be familiar with the date command to set the internal clock.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Operating Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,66 @@
+id: 00006863
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6863
+data:
+  user 1 personas: 'My favorite food is mushroom ravioli.
+
+    I ve never met my father.
+
+    My mother works at a bank.
+
+    I work in an animal shelter.'
+  user 2 personas: 'I don t like feeling controlled.
+
+    I have a harsh inner critic.
+
+    I don t like my reputation.
+
+    I wish i could take back a mistake.
+
+    I want to move.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Not great, but I''m trying to stay positive.
+
+    User 1: What''s wrong?
+
+    User 2: I''ve just been feeling down lately.
+
+    User 1: I''m sorry to hear that. What''s been getting you down?
+
+    User 2: A lot of things, really. I just feel like I''m not good enough.
+
+    User 1: I''m sure you''re good enough. Everyone has their own strengths and weaknesses.
+
+    User 2: But I don''t feel like I have any strengths.
+
+    User 1: I''m sure you have a lot of strengths. You just have to focus on them.
+
+    User 2: I don''t know how.
+
+    User 1: Well, what do you like to do?
+
+    User 2: I like to work with animals.
+
+    User 1: That''s a great strength! Animals love you.
+
+    User 2: I guess.
+
+    User 1: Yes, you guess? You work in an animal shelter, don''t you?
+
+    User 2: Yeah, but I don''t know if it''s enough.
+
+    User 1: It''s more than enough. You''re making a difference in the lives of animals.
+
+    User 2: I guess you''re right.
+
+    User 1: I''m always right.
+
+    User 2: (laughs) Thanks for talking to me.
+
+    User 1: No problem. I''m always here for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

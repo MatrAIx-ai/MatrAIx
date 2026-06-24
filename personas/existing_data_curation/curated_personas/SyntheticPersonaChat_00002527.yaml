@@ -1,0 +1,66 @@
+id: '00002527'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2527
+data:
+  user 1 personas: 'I like to skateboard.
+
+    I like the guitar.
+
+    I am a vegan.
+
+    I like to go for bike rides.'
+  user 2 personas: 'I hate flowers.
+
+    I play the piano.
+
+    I make my own clothes.
+
+    I ran into jimmy fallon just the other day.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play the piano.
+
+    User 1: Oh, that''s cool! I love playing the guitar.
+
+    User 2: I''ve always wanted to learn how to play the guitar.
+
+    User 1: It''s not too hard to learn. I''m sure you could do it.
+
+    User 2: Thanks! I''ll have to give it a try.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to make my own clothes.
+
+    User 1: Oh, that''s interesting! I''ve never tried that.
+
+    User 2: It''s a lot of fun. It''s a great way to express yourself.
+
+    User 1: I can see how that would be. Do you ever sell your clothes?
+
+    User 2: I''ve thought about it, but I haven''t done it yet.
+
+    User 1: You should! I''m sure people would love to buy them.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go for bike rides.
+
+    User 1: Oh, that''s cool! I love bike rides too.
+
+    User 2: We should go biking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

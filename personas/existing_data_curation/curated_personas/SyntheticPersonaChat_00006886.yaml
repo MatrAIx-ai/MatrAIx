@@ -1,0 +1,74 @@
+id: 00006886
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6886
+data:
+  user 1 personas: 'One of my favorite hobbies is gaming.
+
+    I enjoy running.
+
+    My favorite color is green.
+
+    I enjoy visiting national parks.
+
+    I currently work in an office job.'
+  user 2 personas: 'I don t like music.
+
+    My name is nick.
+
+    I have lots of friends.
+
+    I have red hair.
+
+    I like to ride my scooter.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m Nick.
+
+    User 1: Nice to meet you, Nick. What do you do for fun?
+
+    User 2: I like to ride my scooter, play video games, and hang out with my friends.
+
+    User 1: I like to do a lot of those things too! I also enjoy running and visiting national parks.
+
+    User 2: That''s cool! I''ve never been to a national park.
+
+    User 1: They''re really beautiful. You should check them out sometime.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. What''s your favorite color?
+
+    User 2: My favorite color is red.
+
+    User 1: Mine is green.
+
+    User 2: That''s an interesting color. Why do you like it?
+
+    User 1: I don''t know. I just always have.
+
+    User 2: Well, it''s a good color.
+
+    User 1: Thanks. What do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: That''s cool. What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is. I love working with kids.
+
+    User 1: I''m sure they love you too.
+
+    User 2: I hope so.
+
+    User 1: Well, it was nice talking to you, Nick.
+
+    User 2: You too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

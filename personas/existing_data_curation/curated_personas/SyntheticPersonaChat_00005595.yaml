@@ -1,0 +1,54 @@
+id: 00005595
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5595
+data:
+  user 1 personas: 'I love to chat with my friends.
+
+    I like to cook.
+
+    I am a foodie.
+
+    I love kids and dogs.'
+  user 2 personas: 'I like to play tennis.
+
+    I have 2 sisters.
+
+    I am a baker.
+
+    My favorite tv show is silicon valley.
+
+    My mother is a dentist.'
+  Best Generated Conversation: 'User 1: Hello! What is your name?
+
+    User 2: My name is Amy.
+
+    User 1: It''s nice to meet you, Amy. My name is [username].
+
+    User 2: Nice to meet you too, [username]. What do you like to do for fun?
+
+    User 1: I like to chat with my friends, cook, and eat food. I also love kids and dogs.
+
+    User 2: That''s great! I like to play tennis, bake, and watch TV. I also have two sisters and my mother is a dentist.
+
+    User 1: I''ve never played tennis, but I love watching it. I''ve also never baked, but I''m sure it would be fun to try. I love all kinds of TV shows, but my favorite is probably Silicon Valley.
+
+    User 2: I love Silicon Valley too! It''s so funny and smart. I''m also a big fan of The Office and Friends.
+
+    User 1: Those are both great shows! I''m also a fan of The Big Bang Theory and Parks and Recreation.
+
+    User 2: I love all of those shows! I''m also a big fan of Seinfeld and The Simpsons.
+
+    User 1: Those are two of my favorite shows too! I love how they can make me laugh no matter how many times I watch them.
+
+    User 2: Me too! I could watch them all day long.
+
+    User 1: Me too! I''m glad we have similar taste in TV shows.
+
+    User 2: Me too! I think we''re going to get along great.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

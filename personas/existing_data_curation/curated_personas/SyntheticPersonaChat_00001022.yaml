@@ -1,0 +1,64 @@
+id: '00001022'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1022
+data:
+  user 1 personas: 'I have two dogs.
+
+    I like potatoes.
+
+    I work in accounting.
+
+    I lease my car.'
+  user 2 personas: 'My parents have been married for 40 years.
+
+    I am a proofreader for a greeting card company.
+
+    My favorite movie is goodfellas.
+
+    I enjoy watching football and hockey games.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a proofreader for a greeting card company.
+
+    User 1: That sounds interesting. What do you like about it?
+
+    User 2: I like getting to see all the different kinds of cards that people send to each other. It''s also fun to come up with new ways to make the cards more creative and fun.
+
+    User 1: That''s cool. I work in accounting.
+
+    User 2: Oh, that must be interesting. What do you like about it?
+
+    User 1: I like the challenge of working with numbers and figuring out how to make them work for me.
+
+    User 2: That''s cool. I also like to watch football and hockey games.
+
+    User 1: Me too! I''m a big fan of the Patriots and the Bruins.
+
+    User 2: Nice! I''m a fan of the Giants and the Rangers.
+
+    User 1: Oh, that''s cool. We can always watch games together sometime.
+
+    User 2: That would be fun!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my friends and family.
+
+    User 1: That sounds like a lot of fun. I like to do similar things.
+
+    User 2: It''s nice to meet someone with similar interests.
+
+    User 1: You too! It was nice talking to you.
+
+    User 2: You too. I hope we can talk again sometime.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,94 @@
+id: '00007215'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7215
+data:
+  user 1 personas: 'I want to learn how to fly an airplane.
+
+    My favorite movie is dirty harry.
+
+    I collect stamps.
+
+    I love the colors yellow and teal.'
+  user 2 personas: 'I am a grown woman.
+
+    I have never lost a fight.
+
+    I am in a motorcycle club.
+
+    I have more then 10 tattoos.'
+  Best Generated Conversation: 'User 1: I''m looking to learn how to fly an airplane. Do you know of any good places to take lessons?
+
+    User 2: I''m not sure, but I can ask around. Do you have any experience flying?
+
+    User 1: I haven''t flown an airplane before, but I''m a fast learner.
+
+    User 2: Okay, I''ll see what I can find out.
+
+    User 1: Thanks!
+
+    User 2: No problem!
+
+
+    (Later)
+
+
+    User 2: Hey, I found a place that offers flight lessons. Do you want to go check it out?
+
+    User 1: Sure, that sounds great!
+
+    User 2: Okay, I''ll meet you there in an hour.
+
+    User 1: See you then!
+
+
+    (An hour later)
+
+
+    User 1: Hey, I''m here.
+
+    User 2: Hi! So, this is the flight school.
+
+    User 1: Wow, it''s really nice!
+
+    User 2: Yeah, it''s one of the best in the area.
+
+    User 1: I can see why.
+
+    User 2: So, what do you think? Do you want to take a lesson?
+
+    User 1: Sure, I''m ready!
+
+    User 2: Okay, let''s go inside and get started.
+
+
+    (Inside the flight school)
+
+
+    User 2: Here, let me introduce you to the instructor.
+
+    User 1: Hi, nice to meet you.
+
+    Instructor: Nice to meet you too.
+
+    User 1: I''m ready to learn how to fly!
+
+    Instructor: Okay, let''s start with the basics.
+
+
+    (After the lesson)
+
+
+    User 1: That was really fun! I can''t wait to take another lesson.
+
+    Instructor: I''m glad you enjoyed it. We have a few more spots open if you''re interested.
+
+    User 1: I definitely am!
+
+    Instructor: Great! I''ll see you next time.
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

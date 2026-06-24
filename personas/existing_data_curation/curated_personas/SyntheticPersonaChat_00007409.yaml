@@ -1,0 +1,64 @@
+id: 00007409
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7409
+data:
+  user 1 personas: 'My favorite drink is caramel cappuccino.
+
+    My parents live across the street from me.
+
+    I love to read true crime books.
+
+    I m in grad school.
+
+    I work in a coffee shop.'
+  user 2 personas: 'When i shower my skin is nearly red from how hard i scrub.
+
+    I have horrible allergies.
+
+    I can t stand clutter or dust.
+
+    I spend an hour getting ready in the morning.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do in your free time?
+
+    User 2: I like to read, bake, and go for walks in the park.
+
+    User 1: I like those things too! I also love to watch true crime documentaries.
+
+    User 2: Me too! I''m always looking for new ones to watch.
+
+    User 1: Have you seen the one about the Zodiac Killer?
+
+    User 2: No, I haven''t. Is it good?
+
+    User 1: It''s really good! It''s about a serial killer who was never caught.
+
+    User 2: That sounds really interesting. I''ll have to check it out.
+
+    User 1: You should! I also like the one about the Manson family murders.
+
+    User 2: I''ve heard good things about that one too. I''ll have to add it to my list.
+
+    User 1: I have a lot of true crime books too. Do you like to read them?
+
+    User 2: I do! I love reading about all the different cases.
+
+    User 1: Me too! I think it''s so fascinating to learn about the psychology behind crimes.
+
+    User 2: Me too! It''s really interesting to try to understand why people do the things they do.
+
+    User 1: Yeah, it is. I think it''s important to try to understand the human condition, even when it''s dark and twisted.
+
+    User 2: I agree. It''s important to learn from our mistakes and try to make the world a better place.
+
+    User 1: I think so too. I''m glad we agree on something!
+
+    User 2: Me too! I''m glad we met.
+
+    User 1: Me too! I hope we can talk again sometime.
+
+    User 2: I''d like that too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

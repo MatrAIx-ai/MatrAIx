@@ -1,0 +1,94 @@
+id: '00000512'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 512
+data:
+  user 1 personas: 'I love hockey.
+
+    I have flown out of the country.
+
+    I have a younger sibling.
+
+    My befriend is from out of town.
+
+    I studied business as my major.'
+  user 2 personas: 'I have no technological skills.
+
+    I am stuck in the past due to remoteness.
+
+    I am a savage.
+
+    I work for the discovery channel creating videos.
+
+    I love the outdoors.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+
+    User 2: Hello! My name is [name]. It''s nice to meet you.
+
+
+    User 1: It''s nice to meet you too! I''m a big fan of hockey. Do you like hockey too?
+
+
+    User 2: I''ve never actually played hockey before, but I''ve seen it on TV and it looks like a lot of fun.
+
+
+    User 1: It is! It''s a great sport to play and watch. I''ve been playing hockey since I was a kid.
+
+
+    User 2: That''s cool! I''ve always wanted to try playing, but I''ve never had the chance.
+
+
+    User 1: You should definitely give it a try! It''s a lot of fun and it''s a great way to get exercise.
+
+
+    User 2: I''ll keep that in mind! Thanks for the recommendation.
+
+
+    User 1: No problem! So, what do you do for a living?
+
+
+    User 2: I work for the Discovery Channel creating videos.
+
+
+    User 1: Oh, that''s awesome! What kind of videos do you create?
+
+
+    User 2: I create videos about all sorts of different topics, but mostly about the outdoors.
+
+
+    User 1: That sounds really interesting! I love learning about the outdoors.
+
+
+    User 2: Me too! It''s so beautiful and there''s so much to explore.
+
+
+    User 1: I agree! I love going for hikes and camping.
+
+
+    User 2: Me too! I love being out in nature.
+
+
+    User 1: So, what''s your favorite thing to do in the outdoors?
+
+
+    User 2: I love to go fishing. I love being out on the water and catching fish.
+
+
+    User 1: That sounds like a lot of fun! I''ve never been fishing before, but I''ve always wanted to try it.
+
+
+    User 2: You should definitely try it! It''s a lot of fun and it''s a great way to relax.
+
+
+    User 1: I''ll keep that in mind! Thanks for the suggestion.
+
+
+    User 2: No problem! I''m always happy to talk about fishing.
+
+
+    User 1: Me too! It''s such a great hobby.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

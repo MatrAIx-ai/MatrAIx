@@ -1,0 +1,82 @@
+id: 00001901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1901
+data:
+  user 1 personas: 'I have purple hair.
+
+    I am a petsitter.
+
+    My dad is a college professor.
+
+    My mom died when i was six.
+
+    My favorite book is the tale of genii.'
+  user 2 personas: 'I would be honored to give my life for my country.
+
+    I am not afraid to die.
+
+    I have a wife and two kids back in the states.
+
+    I am an army ranger.
+
+    I secretly love my long deployments , because it gets me away from conventional life.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an army ranger.
+
+    User 1: That''s interesting! What do you like most about it?
+
+    User 2: I like the challenge and the sense of purpose.
+
+    User 1: I can imagine. I''m sure it''s a lot of hard work, but it must be rewarding.
+
+    User 2: It is. I''m proud to serve my country.
+
+    User 1: I''m sure your family is proud of you too.
+
+    User 2: They are.
+
+    User 1: What''s your favorite book?
+
+    User 2: The Tale of Genji.
+
+    User 1: I''ve never heard of it.
+
+    User 2: It''s a Japanese novel from the 11th century. It''s considered one of the greatest works of literature ever written.
+
+    User 1: Wow, that sounds really interesting. I''ll have to check it out.
+
+    User 2: You should. It''s a great read.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.
+
+    User 1: So, what are you doing for the rest of the day?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going to the library to check out some books.
+
+    User 2: That sounds like a good idea. I need to read more too.
+
+    User 1: Maybe we can go to the library together sometime?
+
+    User 2: That would be fun.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Okay, sounds good.
+
+    User 1: It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: '00001341'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1341
+data:
+  user 1 personas: 'I love chocolate.
+
+    I have a twin sister.
+
+    I am a teacher.
+
+    I do yoga every morning.
+
+    I drink coffee every day.'
+  user 2 personas: 'My parents recently moved to florida.
+
+    I love to cook.
+
+    My brother is currently couch surfing at my house.
+
+    I breed maine coon cats and show them.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, cool! I''m a teacher.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: What do you teach?
+
+    User 1: I teach kindergarten.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is! I love working with kids.
+
+    User 2: I do too. I have a twin sister who''s a teacher.
+
+    User 1: Really? That''s cool.
+
+    User 2: Yeah, she teaches first grade.
+
+    User 1: Nice. What do you like to do for fun?
+
+    User 2: I love to cook.
+
+    User 1: That''s cool. I love to cook too.
+
+    User 2: I''m actually a really good cook. I''ve been cooking for my family since I was a kid.
+
+    User 1: Oh, cool! I''d love to try some of your cooking sometime.
+
+    User 2: Sure! I''d be happy to make you dinner.
+
+    User 1: That would be great!
+
+    User 2: So, what do you do for fun?
+
+    User 1: I do yoga every morning, and I drink coffee every day.
+
+    User 2: Yoga sounds like fun. I''ve never tried it before.
+
+    User 1: You should! It''s really good for your body and mind.
+
+    User 2: Maybe I will.
+
+    User 1: I also love chocolate.
+
+    User 2: Me too! It''s my favorite food.
+
+    User 1: Mine too! We should get together sometime and have a chocolate-tasting party.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

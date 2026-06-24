@@ -1,0 +1,58 @@
+id: 00008040
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8040
+data:
+  user 1 personas: 'My family migrated to america when i was five.
+
+    I am in college now and want to be a teacher.
+
+    I will be graduating in september and hope to get a teaching job soon.
+
+    My brother is in a metal band and travels the world.'
+  user 2 personas: 'My newest car is a chevy.
+
+    I work at a power plant.
+
+    My favorite thing to do is read.
+
+    I live in california.
+
+    I like to eat spaghetti.'
+  Best Generated Conversation: 'User 1: Hi there, what''s your name?
+
+    User 2: My name is John. Nice to meet you.
+
+    User 1: Nice to meet you too, John. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: That sounds like fun. I like to read too. What are some of your favorite books?
+
+    User 2: I like to read a lot of different types of books, but I''m really into history and science fiction.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: Yeah, history is so interesting. I''ve always been fascinated by the Roman Empire.
+
+    User 1: Me too! I''ve read a lot of books about the Roman Empire. I''m also really interested in the Renaissance.
+
+    User 2: The Renaissance was a really interesting time. I''m glad you''re a reader. There are so many great books out there.
+
+    User 1: I know, right? It''s hard to choose just one book to read.
+
+    User 2: Yeah, I know what you mean. I have a long list of books that I want to read.
+
+    User 1: Me too! I''m always looking for new books to read.
+
+    User 2: I''m glad we both like to read. It''s a great way to learn new things and relax.
+
+    User 1: I agree. It''s a great way to escape from the world for a while.
+
+    User 2: Yeah, it is. I''m glad we met.
+
+    User 1: Me too. It''s nice to meet someone who shares my love of reading.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

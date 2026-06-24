@@ -1,0 +1,50 @@
+id: 00000587
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 587
+data:
+  user 1 personas: 'I am a student.
+
+    My favorite color is red.
+
+    I have a pet dog.
+
+    I am an only child.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I am a vegan.
+
+    I love the beach.
+
+    I have been at my job for seven years.
+
+    I love country music.'
+  Best Generated Conversation: 'User 1: Hey! What do you like to do for fun?
+
+    User 2: I love to go to the beach and relax. I''m also a big fan of country music.
+
+    User 1: That sounds cool! I love to go to the beach too. I''m not really into country music, but I like some other genres.
+
+    User 2: What kind of genres do you like?
+
+    User 1: I like a lot of different genres, but I''m really into rock music. I also like some pop music and some hip-hop music.
+
+    User 2: I like some pop music too. I''m not really into hip-hop, but I can appreciate it.
+
+    User 1: Have you ever been to a concert?
+
+    User 2: Yes, I''ve been to a few concerts. I saw Blake Shelton a few years ago and it was amazing!
+
+    User 1: Wow! That sounds like it was a great time. I''ve never seen Blake Shelton live, but I''ve seen other country artists.
+
+    User 2: I''ve also been to a few rock concerts. I saw Linkin Park a few years ago and it was one of the best concerts I''ve ever been to.
+
+    User 1: Wow! That sounds amazing! I''ve never seen Linkin Park live, but I''ve heard good things about them.
+
+    User 2: They''re great live! I''m sure you''d like them if you ever get the chance to see them.
+
+    User 1: I''ll keep that in mind! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

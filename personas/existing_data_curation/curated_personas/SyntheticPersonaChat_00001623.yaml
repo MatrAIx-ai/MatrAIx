@@ -1,0 +1,82 @@
+id: '00001623'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1623
+data:
+  user 1 personas: 'I have brown hair.
+
+    I write.
+
+    I like sleeping.
+
+    I work at mcdonalds.'
+  user 2 personas: 'I drive a red car.
+
+    My favorite musician is bruno mars.
+
+    I enjoy running.
+
+    I have 2 dogs.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a writer.
+
+    User 1: That''s cool! What kind of things do you write?
+
+    User 2: I write mostly fiction, but I''ve also written some nonfiction.
+
+    User 1: What''s your favorite thing about being a writer?
+
+    User 2: I love the freedom to be creative and to tell stories that I''m passionate about.
+
+    User 1: That sounds great! What''s your favorite thing to do in your free time?
+
+    User 2: I love to run and listen to music.
+
+    User 1: That''s cool! I also like to run.
+
+    User 2: What''s your favorite music to listen to while you run?
+
+    User 1: I like to listen to all kinds of music, but I especially like to listen to Bruno Mars when I run.
+
+    User 2: I love Bruno Mars too! He''s so talented.
+
+    User 1: Yeah, he''s one of my favorite artists.
+
+    User 2: What''s your favorite song by him?
+
+    User 1: I have a lot of favorite songs by him, but I think my favorite one is "24K Magic."
+
+    User 2: That''s a great song! I love the beat.
+
+    User 1: Yeah, it''s so catchy.
+
+    User 2: So, do you have any pets?
+
+    User 1: No, I don''t have any pets.
+
+    User 2: Oh, that''s too bad. I have two dogs.
+
+    User 1: What kind of dogs do you have?
+
+    User 2: I have a golden retriever and a Labrador retriever.
+
+    User 1: Oh, those are both great breeds.
+
+    User 2: Yeah, they''re both great dogs.
+
+    User 1: I''ve always wanted a dog, but I don''t have the time to take care of one right now.
+
+    User 2: Yeah, they do take a lot of time.
+
+    User 1: Maybe one day I''ll get a dog.
+
+    User 2: I hope you do! They''re great companions.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

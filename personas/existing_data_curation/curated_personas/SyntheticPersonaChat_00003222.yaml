@@ -1,0 +1,66 @@
+id: '00003222'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3222
+data:
+  user 1 personas: 'I watch youtube videos.
+
+    I work at mcdonald s.
+
+    I like sleeping.
+
+    I have brown hair.
+
+    I write.'
+  user 2 personas: 'My favorite hobby is playing recreational baseball.
+
+    I am a truck driver.
+
+    My wife and two kids camp with me.
+
+    I deliver baked goods in the state where i live.'
+  Best Generated Conversation: 'User 1: What is the last thing you watched on YouTube?
+
+    User 2: I watched a video of a baseball game.
+
+    User 1: I like baseball too! What''s your favorite team?
+
+    User 2: I don''t really have a favorite team, but I like watching the game.
+
+    User 1: What''s your favorite thing about baseball?
+
+    User 2: I like the strategy of the game and how the players have to use their heads to win.
+
+    User 1: I agree! Baseball is a very strategic game.
+
+    User 2: Yeah, it is. I also like the atmosphere of a baseball game. The fans are always so excited and it''s a really fun atmosphere to be in.
+
+    User 1: I agree! Baseball games are always so much fun.
+
+    User 2: Yeah, they are. I''m glad you like baseball too.
+
+    User 1: Thanks! What do you do for work?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool! I''ve always thought about being a truck driver.
+
+    User 2: It''s a good job. You get to see a lot of the country and meet a lot of interesting people.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I enjoy it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I play baseball, go camping with my family, and deliver baked goods.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is. I enjoy my life.
+
+    User 1: I''m glad you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

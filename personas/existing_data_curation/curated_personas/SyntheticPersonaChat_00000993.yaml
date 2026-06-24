@@ -1,0 +1,72 @@
+id: 00000993
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 993
+data:
+  user 1 personas: 'I hate broccoli.
+
+    I design video games for a living.
+
+    My mom is my best friend.
+
+    Rock music is my favorite.
+
+    I am afraid of the dark.'
+  user 2 personas: 'I enjoy playing with edged weapons.
+
+    I like watching videos of surgery.
+
+    My favorite ice cream is pistachio.
+
+    Britney spears is a wonderful singer who really touches me.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hey! What''s up?
+
+    User 1: Not much, just working on a new video game design.
+
+    User 2: That''s cool! I''m not very good at video games, but I enjoy watching people play them.
+
+    User 1: Oh, really? What''s your favorite kind of video game?
+
+    User 2: I like action games and adventure games. I also like games that are really scary.
+
+    User 1: Me too! I love the adrenaline rush you get from playing a scary game.
+
+    User 2: I know, right? It''s so much fun!
+
+    User 1: So, what''s your favorite scary game?
+
+    User 2: My favorite scary game is Silent Hill. It''s so creepy and atmospheric.
+
+    User 1: I''ve never played Silent Hill, but I''ve heard good things about it.
+
+    User 2: You should definitely try it! It''s a classic.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! So, what else do you do for fun?
+
+    User 1: I like to read, go for walks, and hang out with my friends.
+
+    User 2: That sounds like fun! I like to do those things too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like horror novels and books about serial killers.
+
+    User 1: Oh, I''ve never read any books about serial killers.
+
+    User 2: They''re really interesting! I like to learn about the psychology of serial killers.
+
+    User 1: I can see why that would be interesting. I''m not sure if I''m brave enough to read a book about a serial killer, though.
+
+    User 2: It can be a little scary, but it''s also really fascinating.
+
+    User 1: Maybe I''ll give it a try.
+
+    User 2: You should! It''s definitely worth it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

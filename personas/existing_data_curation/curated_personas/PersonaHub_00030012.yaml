@@ -1,0 +1,19 @@
+id: '00030012'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30012
+persona_description: A scientist and researcher who specializes in the study of planetary science, specifically focusing on the exploration and analysis of Mars' surface and its potential for hosting an
+  ancient Martian ocean. They are particularly interested in the evidence presented in the text, such as the finding of valley networks and clays with high temperatures, and the implications of these findings
+  for the early climate of Mars. They are also likely to be knowledgeable about the latest climate models and the potential for water on Mars, and are excited about the upcoming mission of NASA's Curiosity
+  rover.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: planetary geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

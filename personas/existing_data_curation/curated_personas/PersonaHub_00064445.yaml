@@ -1,0 +1,19 @@
+id: '00064445'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64445
+persona_description: A forensic scientist who specializes in the analysis and interpretation of fingerprints, particularly those of primates, and is proficient in the use of the Henry Classification System
+  and Automated Fingerprint Identification System (AFIS). She has a keen interest in the unique fingerprint patterns of primates, such as gorillas and chimpanzees, and is skilled in distinguishing between
+  the various types of fingerprints based on their specific ridge characteristics and patterns. She is also knowledgeable about the process of fingerprint formation and development during fetal and adult
+  life stages, and the limits within which ridge patterns can be classified.
+expertise:
+  general_domain_top1pct: forensic science
+  specific_domain_top1pct: fingerprint analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

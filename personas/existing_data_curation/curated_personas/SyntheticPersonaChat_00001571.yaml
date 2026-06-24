@@ -1,0 +1,66 @@
+id: '00001571'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1571
+data:
+  user 1 personas: 'I drive a ferrari.
+
+    I live in japan and own the biggest mansion in the country.
+
+    I am a rapper.
+
+    I just bought a new mansion.'
+  user 2 personas: 'I m retired.
+
+    I enjoy dating women.
+
+    I like to go to the gym and work out.
+
+    I like cooking healthy meals.
+
+    I like to go out to the bars.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name)!
+
+    User 2: Hi (user 1''s name), I''m (user 2''s name)!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the gym, work out, and cook healthy meals.
+
+    User 1: That''s cool, I like to cook too! Do you have any favorite recipes?
+
+    User 2: I love making salmon with a side of broccoli.
+
+    User 1: That sounds delicious! I''ll have to try that sometime.
+
+    User 2: You should! It''s really easy to make and it''s healthy too.
+
+    User 1: I''m always looking for new healthy recipes to try.
+
+    User 2: Well, you''re in luck! I have a lot of healthy recipes that I love to share.
+
+    User 1: That''s great! I''d love to try them out.
+
+    User 2: I''ll send you some of my favorite recipes later.
+
+    User 1: Thanks, I appreciate it!
+
+    User 2: You''re welcome!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go out to the bars and socialize with friends.
+
+    User 1: That sounds like fun! I don''t get out to the bars much, but I do like to go out and socialize with friends.
+
+    User 2: Well, if you''re ever in the area, let me know and we can go out for drinks.
+
+    User 1: Sounds good! I''ll keep that in mind.
+
+    User 2: Great! It was nice meeting you, (user 1''s name).
+
+    User 1: You too, (user 2''s name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

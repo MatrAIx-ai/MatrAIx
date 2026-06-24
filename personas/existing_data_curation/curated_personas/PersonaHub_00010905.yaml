@@ -1,0 +1,17 @@
+id: 00010905
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10905
+persona_description: A historian who specializes in ancient Greek military history, particularly the Peloponnesian War. The author of the text presents a detailed analysis of the battle of Aigospotamoi,
+  drawing on the accounts of Plutarch, Xenophon, and Herodotus. The author's expertise in ancient Greek history and the strategic significance of the battle make them the ideal reader for this text.
+expertise:
+  general_domain_top1pct: history
+  specific_domain_top1pct: ancient Greek history
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

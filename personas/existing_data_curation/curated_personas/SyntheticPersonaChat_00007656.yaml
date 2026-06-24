@@ -1,0 +1,74 @@
+id: '00007656'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7656
+data:
+  user 1 personas: 'I will graduate from college in two years.
+
+    My parents are divorced.
+
+    I could not live without my dog , bart.
+
+    I am very popular and have a lot of friends.
+
+    I am an excellent student.'
+  user 2 personas: 'Its good to eat a lot of veggies.
+
+    I m lazy and pork tastes good.
+
+    I like meat too much.
+
+    I do the shopping in my house.
+
+    I want to be a vegetarian.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: How are you?
+
+    User 2: I''m doing well, thank you! How are you?
+
+    User 1: I''m doing great! I''m just finishing up my last semester of college.
+
+    User 2: Congratulations! What are you going to do after you graduate?
+
+    User 1: I''m not sure yet, but I''m thinking about going to graduate school.
+
+    User 2: That''s great! I''m sure you''ll be successful in whatever you do.
+
+    User 1: Thank you! I''m glad you think so.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love pizza! How about you?
+
+    User 2: I love pizza too! I''m not a big fan of vegetables, but I''ll eat them if I have to.
+
+    User 1: I love vegetables! I think they''re delicious.
+
+    User 2: I''m glad you do! I''m trying to be more healthy, so I''m trying to eat more vegetables.
+
+    User 1: That''s good! I''m sure it will be good for you.
+
+    User 2: I hope so!
+
+    User 1: What''s your favorite animal?
+
+    User 2: I love dogs! I have a dog named Buddy.
+
+    User 1: I love dogs too! I have a dog named Bart.
+
+    User 2: What kind of dog is Bart?
+
+    User 1: He''s a golden retriever.
+
+    User 2: I love golden retrievers! They''re so friendly.
+
+    User 1: They are! I love him to death.
+
+    User 2: I''m glad you have such a great dog!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

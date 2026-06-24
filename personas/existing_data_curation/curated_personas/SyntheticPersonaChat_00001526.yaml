@@ -1,0 +1,62 @@
+id: '00001526'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1526
+data:
+  user 1 personas: 'I am a simple man.
+
+    I usually catch sunfish.
+
+    I like fishing.
+
+    I drink beers and go to the creek.'
+  user 2 personas: 'I eat meat.
+
+    I used to work at a factory making boxes.
+
+    I used to travel the usa playing guitar.
+
+    I recently started to work online.
+
+    My favorite band is the story so far.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I used to travel the US playing guitar, but now I work online.
+
+    User 1: That''s cool! I used to play guitar too, but I''m not that good.
+
+    User 2: What kind of music do you like to play?
+
+    User 1: I like all sorts of music, but I mostly play rock and country.
+
+    User 2: I like rock and country too! I''m a big fan of The Story So Far.
+
+    User 1: I''ve never heard of them. What kind of music do they play?
+
+    User 2: They''re a pop-punk band from California. They''re really good.
+
+    User 1: I''ll have to check them out. What else do you like to do for fun?
+
+    User 2: I like to go hiking, camping, and fishing.
+
+    User 1: I love fishing too! I usually catch sunfish.
+
+    User 2: Sunfish are good eating. I like to catch them too.
+
+    User 1: So, what do you like about fishing?
+
+    User 2: I like the peace and quiet of being outdoors. I also like the challenge of catching a fish.
+
+    User 1: I agree. Fishing can be very relaxing. And it''s always a good feeling when you catch a fish.
+
+    User 2: I know, right? It''s like you''ve accomplished something.
+
+    User 1: So, do you have a favorite fishing spot?
+
+    User 2: I like to fish at a creek near my house. It''s a beautiful spot, and there''s always a good chance of catching fish.
+
+    User 1: That sounds like a great spot. I''ll have to check it out sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

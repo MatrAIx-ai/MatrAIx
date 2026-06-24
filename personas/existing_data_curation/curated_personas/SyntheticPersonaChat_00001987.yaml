@@ -1,0 +1,69 @@
+id: 00001987
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1987
+data:
+  user 1 personas: 'I love eating kale.
+
+    I am in love with adam levine.
+
+    I need extra iron in my diet.
+
+    I have two cats.
+
+    I have two children under ten.'
+  user 2 personas: 'I love to watch ted talks.
+
+    I love animals.
+
+    I do not much like tv.
+
+    I like to stay fit.
+
+    I love to walk in the woods.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m Jen.
+
+    User 1: Nice to meet you, Jen. I''m [user 1''s name].
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch TED talks and go for walks in the woods.
+
+    User 1: Those sound like fun activities. I love watching TED talks too. I also like to go for walks, but I don''t do it as often as I would like to.
+
+    User 2: I''m glad you enjoy TED talks. They''re so informative and inspiring. I also love going for walks. It''s a great way to clear my head and relax.
+
+    User 1: I agree. I love the feeling of being out in nature and taking in the fresh air.
+
+    User 2: Me too. It''s so peaceful.
+
+    User 1: What''s your favorite TED talk?
+
+    User 2: That''s a tough question. I have so many favorites. But one that really stands out is "The Power of Habit" by Charles Duhigg. It''s a fascinating talk about how habits work and how we can change
+    them.
+
+    User 1: I''ve heard that talk. It''s really good. I love how it explains how habits are formed and how we can break them.
+
+    User 2: Me too. It''s a really eye-opening talk.
+
+    User 1: What''s your favorite thing to do in the woods?
+
+    User 2: I love hiking. It''s so peaceful and relaxing. I also love looking for animals. I''ve seen deer, rabbits, squirrels, and even a bear once.
+
+    User 1: That''s amazing! I''ve never seen a bear in the wild. I''ve seen deer, rabbits, and squirrels, but that''s it.
+
+    User 2: It''s not too common, but it is possible.
+
+    User 1: I''m glad you''ve been lucky enough to see one.
+
+    User 2: Me too. It was a really amazing experience.
+
+    User 1: I''m sure it was.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

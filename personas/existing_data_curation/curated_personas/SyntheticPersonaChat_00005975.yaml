@@ -1,0 +1,78 @@
+id: 00005975
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5975
+data:
+  user 1 personas: 'I am currently looking for a job.
+
+    My favorite color is purple.
+
+    I am not a fan of science.
+
+    My dad works for ups.'
+  user 2 personas: 'I have an iphone.
+
+    I travel often.
+
+    I live with my parents.
+
+    I prefer headsets over earbuds.'
+  Best Generated Conversation: 'User 1: Hi there! I''m (User 1''s name).
+
+    User 2: Hi, I''m (User 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a web developer.
+
+    User 2: Nice! What kind of projects do you work on?
+
+    User 1: I mostly work on small businesses'' websites.
+
+    User 2: That''s cool. I''ve always wanted to build my own website.
+
+    User 1: You should! It''s not too hard.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to travel, listen to music, and watch movies.
+
+    User 1: Oh, I like to travel too! Where have you been?
+
+    User 2: I''ve been to a lot of places, but my favorite place is Spain.
+
+    User 1: Spain is beautiful! I''ve never been, but I''ve always wanted to go.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: Maybe I will. What kind of music do you like to listen to?
+
+    User 2: I like all kinds of music, but my favorite is rock.
+
+    User 1: Oh, I like rock too! What are some of your favorite bands?
+
+    User 2: I like the Beatles, the Rolling Stones, and Led Zeppelin.
+
+    User 1: Nice! I like those bands too.
+
+    User 2: So, what do you like to watch?
+
+    User 1: I like to watch movies and TV shows.
+
+    User 2: What kind of movies and TV shows do you like?
+
+    User 1: I like all kinds of movies and TV shows, but my favorite is horror.
+
+    User 2: Oh, I like horror too! What are some of your favorite horror movies?
+
+    User 1: I like The Conjuring, The Conjuring 2, and The Exorcist.
+
+    User 2: Nice! I like those movies too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

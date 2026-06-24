@@ -1,0 +1,19 @@
+id: 00028009
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28009
+persona_description: A database administrator who works with large amounts of text data, specifically CLOB data types. This individual is skilled in managing and manipulating large text fields in databases,
+  and may need to work with additional text data types such as tinytext, mediumtext, and longtext. They are likely to be familiar with the use of CLOBs for storing large amounts of text data, and may have
+  experience working with database management systems that support CLOBs. They may also be knowledgeable about the limitations and potential issues associated with using CLOBs, such as the inability to
+  run certain text operations on CLOB fields and the need to use other character data types for smaller text values.
+expertise:
+  general_domain_top1pct: Database Administration
+  specific_domain_top1pct: Text Data Management in Databases
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

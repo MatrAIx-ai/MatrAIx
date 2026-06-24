@@ -1,0 +1,61 @@
+id: 00007975
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7975
+data:
+  user 1 personas: 'My name is william , but people call me bill.
+
+    I live near grand rapids , michigan.
+
+    I own a small farm where i herd cattle.
+
+    I live with my wife and kids.
+
+    I have three beautiful dogs and one cat.'
+  user 2 personas: 'I like to listen to rap music.
+
+    My favorite artist is 2pac.
+
+    My favorite song is california love.
+
+    I drive a fast car.
+
+    My car is black.'
+  Best Generated Conversation: 'User 1: Hello, my name is Bill. I live near Grand Rapids, Michigan. I own a small farm where I herd cattle. I live with my wife and kids. I have three beautiful dogs and
+    one cat.
+
+    User 2: Hi Bill, I''m [user 2 name]. I like to listen to rap music. My favorite artist is 2Pac. My favorite song is California Love. I drive a fast car. My car is black.
+
+    User 1: That''s cool. I''ve heard of 2Pac. He''s a great rapper. I''ve never been to California, but I''ve heard it''s a beautiful state. I love driving my truck. I take it out on the farm all the time.
+
+    User 2: I''ve been to California once. It was a great experience. I got to see the Golden Gate Bridge and the Hollywood Sign. I''ve never been to a farm, but I''ve always wanted to go.
+
+    User 1: You should definitely visit a farm. It''s a great way to learn about agriculture and how food is produced.
+
+    User 2: I will, thanks for the recommendation.
+
+    User 1: No problem. So, what do you do for fun?
+
+    User 2: I like to listen to music, play video games, and go for walks.
+
+    User 1: That''s cool. I like to listen to music, play video games, and read books.
+
+    User 2: I like reading books too. I''ve been reading a lot of history books lately.
+
+    User 1: That''s cool. I''m more of a fiction reader. I like to read mysteries and thrillers.
+
+    User 2: I like those too. I''ve been reading a lot of Stephen King lately.
+
+    User 1: Stephen King is a great author. I''ve read a few of his books.
+
+    User 2: Me too. I love his books. They''re so scary.
+
+    User 1: They are. But they''re also really good.
+
+    User 2: I agree. I''m glad we have similar interests.
+
+    User 1: Me too. It''s always nice to meet someone who shares your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

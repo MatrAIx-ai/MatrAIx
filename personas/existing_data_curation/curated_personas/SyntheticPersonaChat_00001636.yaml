@@ -1,0 +1,80 @@
+id: '00001636'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1636
+data:
+  user 1 personas: 'I have many homes.
+
+    I like to ride motorcycles.
+
+    I try to limit how much meat i eat for health reasons.
+
+    I collect vintage cars.'
+  user 2 personas: 'I work as a scientist.
+
+    My parents were scientists.
+
+    I am in gymnastics.
+
+    I like the beatles.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for work?
+
+    User 2: I''m a scientist, like my parents.
+
+    User 1: That''s cool. What kind of science do you do?
+
+    User 2: I work in genetics.
+
+    User 1: That''s interesting. I''ve always been interested in genetics.
+
+    User 2: Me too. It''s so cool to learn about how our bodies work.
+
+    User 1: I agree. It''s incredible how our cells know exactly what to do to keep us alive.
+
+    User 2: It really is. I''m so lucky to be able to study it.
+
+    User 1: So, what kind of projects are you working on?
+
+    User 2: Right now, I''m working on a project that looks at how genes can influence behavior.
+
+    User 1: That sounds really interesting. Do you have any results yet?
+
+    User 2: Not yet, but we''re still in the early stages of the project.
+
+    User 1: Well, good luck with it. I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what else do you like to do besides science?
+
+    User 2: I like to read, write, and play the piano.
+
+    User 1: Oh, that''s cool. I like to read and write too.
+
+    User 2: Me too. It''s so relaxing to curl up with a good book.
+
+    User 1: I agree. And writing is a great way to express yourself.
+
+    User 2: It is. I love being able to put my thoughts and ideas down on paper.
+
+    User 1: So, what do you like to write about?
+
+    User 2: I like to write about anything that interests me. I''ve written short stories, poems, and even a novel.
+
+    User 1: That''s great. I''ve always wanted to write a novel.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ll have to think about it.
+
+    User 2: Well, I''m sure you''ll do great. You seem like a very talented writer.
+
+    User 1: Thanks! That means a lot.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: 00008032
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8032
+data:
+  user 1 personas: 'I would rather read a book than watch a movie.
+
+    My favorite music artist is isaiah rashad.
+
+    In my spare time i like to play video games.
+
+    I don t drink alcohol.
+
+    I work for a marketing agency.'
+  user 2 personas: 'I take martial arts after school.
+
+    I am ten years old.
+
+    And , my best friend is abigail.
+
+    Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Hi, nice to meet you. My name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, play video games, and spend time with my friends.
+
+    User 1: That sounds like a lot of fun! I like to read, play video games, and watch movies.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I especially like science fiction and fantasy.
+
+    User 2: Me too! I love Harry Potter and Lord of the Rings.
+
+    User 1: I love Harry Potter too! I''ve read all of the books and seen all of the movies.
+
+    User 2: Me too! I''m so excited for the new movie coming out.
+
+    User 1: Me too! I''ve been waiting for years.
+
+    User 2: Maybe we can watch it together when it comes out.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when it''s out.
+
+    User 1: Okay, thanks.
+
+    User 2: So, what do you like to do for work?
+
+    User 1: I work for a marketing agency. I create marketing campaigns for companies.
+
+    User 2: That sounds like a fun job!
+
+    User 1: It is! I get to work on a lot of different projects and meet new people.
+
+    User 2: That''s great! I''m glad you like your job.
+
+    User 1: Thanks. I do!
+
+    User 2: So, what do you do for fun on the weekends?
+
+    User 1: I usually like to relax and catch up on my reading. I also like to play video games and watch movies.
+
+    User 2: That sounds like a lot of fun! I like to do a lot of the same things.
+
+    User 1: Great! We should hang out sometime.
+
+    User 2: That would be fun!
+
+    User 1: Okay, I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

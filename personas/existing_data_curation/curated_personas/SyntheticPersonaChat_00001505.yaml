@@ -1,0 +1,66 @@
+id: '00001505'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1505
+data:
+  user 1 personas: 'I am 77 years old.
+
+    My favorite hobby is gardening.
+
+    My family gets together every saturday.
+
+    My husband died last year.'
+  user 2 personas: 'I am afraid to leave the house.
+
+    I enjoy reading.
+
+    When i was a child i was kidnapped by my uncle.
+
+    I love to clean my house.
+
+    I live with my sisters and they provide me with all my needs.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: Not much, just reading and cleaning my house.
+
+    User 1: That sounds nice. I''m doing some gardening.
+
+    User 2: I love gardening! I wish I could do it more often, but I''m afraid to leave the house.
+
+    User 1: Oh, I''m sorry to hear that. What happened?
+
+    User 2: When I was a child, I was kidnapped by my uncle. I''ve been afraid to leave the house ever since.
+
+    User 1: That''s terrible. I''m so sorry you had to go through that.
+
+    User 2: Thank you. It was a long time ago, but it still affects me today.
+
+    User 1: Well, I''m glad you''re doing better now. And I''m glad you enjoy reading. I love to read too.
+
+    User 2: Me too! I love to escape into a good book. It''s like I''m somewhere else for a little while.
+
+    User 1: Me too! I love that feeling.
+
+    User 2: What are you reading right now?
+
+    User 1: I''m reading a book about gardening. It''s really interesting.
+
+    User 2: Oh, that sounds cool! I''ve always wanted to learn more about gardening.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: You should! I''m sure you''d like it.
+
+    User 2: Thanks for the suggestion.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

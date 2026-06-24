@@ -1,0 +1,74 @@
+id: 00003508
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3508
+data:
+  user 1 personas: 'I work as an accountant.
+
+    I like to read horror novels.
+
+    My favorite color is blue.
+
+    I like to go to the lake.'
+  user 2 personas: 'I ride a bike.
+
+    I like to draw.
+
+    I have 5 brothers and sisters.
+
+    I work as a waitress.'
+  Best Generated Conversation: 'User 1: Hi, what do you do for a living?
+
+    User 2: I work as a waitress.
+
+    User 1: Oh, that sounds like a fun job.
+
+    User 2: It is, but it can be stressful.
+
+    User 1: I''m sure it can be. What''s your favorite part about it?
+
+    User 2: I like meeting new people and getting to know them.
+
+    User 1: That sounds like a great perk. What''s your least favorite part about it?
+
+    User 2: I don''t like dealing with rude customers.
+
+    User 1: Yeah, I can understand that. What do you like to do for fun?
+
+    User 2: I like to draw.
+
+    User 1: That''s cool! What kind of things do you like to draw?
+
+    User 2: I like to draw people, animals, and landscapes.
+
+    User 1: Those are all great subjects. Do you have any favorites?
+
+    User 2: I like to draw people the most.
+
+    User 1: That''s interesting. Why do you like to draw people?
+
+    User 2: I like to capture their expressions and emotions.
+
+    User 1: That''s a great reason to draw people. What''s your favorite color to draw with?
+
+    User 2: I like to draw with blue pencils.
+
+    User 1: Blue pencils are my favorite too! What''s your favorite kind of paper to draw on?
+
+    User 2: I like to draw on watercolor paper.
+
+    User 1: Watercolor paper is great for drawing. I like it too.
+
+    User 2: It''s so nice to meet someone who likes to draw.
+
+    User 1: It''s nice to meet you too. Do you have any art shows or exhibitions coming up?
+
+    User 2: Yes, I have a show coming up in a few weeks.
+
+    User 1: Oh, that''s great! I''ll be sure to check it out.
+
+    User 2: Thank you, I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

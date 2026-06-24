@@ -1,0 +1,48 @@
+id: '00007357'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7357
+data:
+  user 1 personas: 'I like to visit places around the world.
+
+    I have been to every state except alaska.
+
+    I like to swim in the lake.
+
+    I love cabins in the woods on the lake.'
+  user 2 personas: 'My son is a football player.
+
+    I like reading mystery novels.
+
+    I love pizza.
+
+    I am an american citizen.
+
+    Going to the beach is my favorite past time.'
+  Best Generated Conversation: 'User 1: Hi! I''m looking for someone to go on an adventure with me.
+
+    User 2: Hi! I''m always up for an adventure!
+
+    User 1: Awesome! I''ve been to every state in the US except Alaska, and I''d love to go there sometime. Would you be interested in going with me?
+
+    User 2: That would be so cool! I''ve never been to Alaska either.
+
+    User 1: Great! I''ve been doing some research, and I think it would be really cool to go to Denali National Park.
+
+    User 2: Denali National Park looks amazing! I love the mountains.
+
+    User 1: Me too! I think it would be so cool to see Denali, the tallest mountain in North America.
+
+    User 2: That would be amazing! I''ve always wanted to see a really tall mountain.
+
+    User 1: We could also go hiking, fishing, and camping in the park.
+
+    User 2: That sounds like a lot of fun! I''m definitely up for it.
+
+    User 1: Awesome! We should start planning our trip.
+
+    User 2: Sounds good! I can''t wait to go on this adventure with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,84 @@
+id: 00006813
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6813
+data:
+  user 1 personas: 'I m currently looking for employment.
+
+    I can speak three languages english , french and spanish.
+
+    My favourite band is rush.
+
+    I am colour blind.'
+  user 2 personas: 'My favorite pass time is gazing at clouds.
+
+    My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    My best friend is my dog allie.
+
+    I love chocolate milk shakes.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What are you interested in?
+
+    User 2: I like to gaze at clouds, dress up for Halloween, and ride my bike to work. I''m also a big fan of chocolate milk shakes.
+
+    User 1: That''s cool. I like to read, play video games, and watch movies. I''m also trying to learn Spanish.
+
+    User 2: That''s interesting. I''m trying to learn French.
+
+    User 1: Oh, that''s cool. I know a little French, but I''m not very good at it.
+
+    User 2: Me neither. I''m only in the beginning stages.
+
+    User 1: Well, I''m sure you''ll do great.
+
+    User 2: Thanks. I hope so.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s nice. I''ve always thought about being a teacher.
+
+    User 2: It''s a great job. I love working with kids.
+
+    User 1: I can imagine. So, what do you like to do for fun?
+
+    User 2: I like to go on bike rides, read, and watch movies. I also like to play with my dog.
+
+    User 1: That sounds like a lot of fun. I love dogs. What''s your dog''s name?
+
+    User 2: Her name is Allie.
+
+    User 1: Allie is a nice name.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like about your job?
+
+    User 2: I like working with kids and helping them learn. I also like the sense of community that you get from being a teacher.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is. I''m glad I chose to become a teacher.
+
+    User 1: I''m sure you''re a great teacher.
+
+    User 2: Thanks. I try my best.
+
+    User 1: Well, I''m sure you''re doing a great job.
+
+    User 2: Thanks.
+
+    User 1: It was nice talking to you, [name].
+
+    User 2: It was nice talking to you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

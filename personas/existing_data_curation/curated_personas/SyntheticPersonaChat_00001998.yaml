@@ -1,0 +1,104 @@
+id: 00001998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1998
+data:
+  user 1 personas: 'I love smooth jazz.
+
+    I live in new york city.
+
+    I actually like wearing suits and ties.
+
+    I work on wall street.
+
+    I have a poodle named nanette.'
+  user 2 personas: 'I visit comic con.
+
+    I love anime.
+
+    I read a lot.
+
+    I draw comics.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to draw comics, read, and go to comic con.
+
+    User 1: Oh, that''s cool! I love comic con too. I''ve been a few times.
+
+    User 2: Me too! I always have a great time there.
+
+    User 1: What''s your favorite comic book character?
+
+    User 2: I like Spider-Man a lot. He''s my favorite superhero.
+
+    User 1: Spider-Man is cool! He''s one of my favorites too.
+
+    User 2: Yeah, he''s a great character.
+
+    User 1: I like that he''s a normal guy who just happens to have superpowers.
+
+    User 2: Me too! It''s relatable.
+
+    User 1: What other comics do you like?
+
+    User 2: I like a lot of different comics. I like X-Men, The Avengers, and Batman.
+
+    User 1: I like those too! I also like Superman, Wonder Woman, and Green Lantern.
+
+    User 2: Oh, those are great comics too.
+
+    User 1: I''m glad we have similar taste in comics.
+
+    User 2: Me too! It''s always nice to find someone who likes the same things you do.
+
+    User 1: Yeah, it is.
+
+    User 2: So, what do you do for work?
+
+    User 1: I work on Wall Street as a financial analyst.
+
+    User 2: Oh, that sounds cool! I''ve always wanted to work on Wall Street.
+
+    User 1: It''s not as glamorous as it seems.
+
+    User 2: Oh, I can imagine.
+
+    User 1: But it''s a good job.
+
+    User 2: Yeah, I''m sure it is.
+
+    User 1: So, what do you do for fun besides drawing comics, reading, and going to comic con?
+
+    User 2: I like to watch anime.
+
+    User 1: Oh, that''s cool! I like anime too.
+
+    User 2: Oh, really? What''s your favorite anime?
+
+    User 1: My favorite anime is Fullmetal Alchemist.
+
+    User 2: Oh, that''s a good one! I like that one too.
+
+    User 1: What other anime do you like?
+
+    User 2: I like Dragon Ball Z, Naruto, and My Hero Academia.
+
+    User 1: I like those too!
+
+    User 2: Oh, I see you''re a person of culture as well.
+
+    User 1: I like to think so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

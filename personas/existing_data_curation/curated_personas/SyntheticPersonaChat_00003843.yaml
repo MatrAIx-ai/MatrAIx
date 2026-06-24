@@ -1,0 +1,66 @@
+id: 00003843
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3843
+data:
+  user 1 personas: 'My mom is my best friend.
+
+    I m terrified of heights.
+
+    I have four sisters.
+
+    I believe that mermaids are real.'
+  user 2 personas: 'I have won tap dance competitions.
+
+    My favorite book is david copperfield.
+
+    I have a twin brother.
+
+    I love to bake cakes.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to tap dance, bake cakes, and read books.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to tap dance.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: Maybe I will. What''s your favorite book?
+
+    User 2: My favorite book is David Copperfield. It''s a really good story.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a classic.
+
+    User 1: So, what''s your favorite thing to bake?
+
+    User 2: I love to bake cakes. I''m not sure what my favorite cake is, but I love to make them for my family and friends.
+
+    User 1: I bet they love them! I know I would love a cake from you.
+
+    User 2: Thanks! I''m glad you like them.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a baker. I work at a bakery in town.
+
+    User 1: Oh, that''s cool! I''m sure you make a lot of delicious cakes.
+
+    User 2: I do! I love my job.
+
+    User 1: What''s your favorite part about your job?
+
+    User 2: My favorite part is getting to see the smiles on people''s faces when they eat my cakes.
+
+    User 1: That''s so sweet! I''m sure you make a lot of people happy.
+
+    User 2: I try! I love seeing people enjoy my work.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

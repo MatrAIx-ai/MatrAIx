@@ -1,0 +1,68 @@
+id: '00001430'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1430
+data:
+  user 1 personas: 'I work from home.
+
+    I love reading.
+
+    I love comics.
+
+    My favorite band is nightfish.
+
+    I have a cat as a pet.'
+  user 2 personas: 'I have a wife and two kids back in the states.
+
+    I secretly love my long deployments , because it gets me away from conventional life.
+
+    I would be honored to give my life for my country.
+
+    I am an army ranger.
+
+    I am not afraid to die.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m an Army Ranger, I''m currently deployed overseas.
+
+    User 1: That sounds dangerous!
+
+    User 2: It is, but I''m used to it.
+
+    User 1: What do you like to do in your spare time?
+
+    User 2: I love to read, comics are my favorite.
+
+    User 1: Me too! I love reading Nightfish.
+
+    User 2: I''ve never heard of that band.
+
+    User 1: They''re a great indie rock band from the UK.
+
+    User 2: I''ll have to check them out.
+
+    User 1: You should! What do you like to do with your family?
+
+    User 2: We like to go camping and hiking.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: I''m glad you have a good family to support you.
+
+    User 2: Thank you.
+
+    User 1: I''m sure you''re a great dad.
+
+    User 2: I try my best.
+
+    User 1: I''m sure your kids are proud of you.
+
+    User 2: I hope so.
+
+    User 1: I''m sure they are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

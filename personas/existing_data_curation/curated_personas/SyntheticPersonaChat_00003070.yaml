@@ -1,0 +1,58 @@
+id: '00003070'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3070
+data:
+  user 1 personas: 'I hate wearing make up.
+
+    My favorite color is orange.
+
+    I own a hot pink moped.
+
+    I have really long fingernails.'
+  user 2 personas: 'I have never lost a fight.
+
+    I am a grown woman.
+
+    I am in a motorcycle club.
+
+    I have more then 10 tattoos.'
+  Best Generated Conversation: 'User 1: I''m not a big fan of make up either. I think it''s a waste of time and money.
+
+    User 2: I agree! I only wear it when I have to.
+
+    User 1: What''s your favorite color?
+
+    User 2: Orange! It''s so bright and cheerful.
+
+    User 1: Me too! I have a hot pink moped.
+
+    User 2: That sounds awesome! I love mopeds.
+
+    User 1: Me too! They''re so much fun to ride.
+
+    User 2: I bet! Do you have any tattoos?
+
+    User 1: No, I don''t. I''ve always been too afraid of the pain.
+
+    User 2: I know what you mean. But it''s worth it! I love my tattoos.
+
+    User 1: I''m glad you like them!
+
+    User 2: Thanks! I''m in a motorcycle club too.
+
+    User 1: That''s cool! I''ve never been in a motorcycle club.
+
+    User 2: You should join one! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! I''m sure you''d like it.
+
+    User 1: Thanks for the suggestion!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

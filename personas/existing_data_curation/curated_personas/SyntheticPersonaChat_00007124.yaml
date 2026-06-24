@@ -1,0 +1,86 @@
+id: '00007124'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7124
+data:
+  user 1 personas: 'I eat out more than three times a week.
+
+    I believe the rich should not be taxed as much.
+
+    I went to an elite ivy league school.
+
+    I look down on people who did not.
+
+    I work in finance.'
+  user 2 personas: 'I am a hair stylist.
+
+    I have my own salon.
+
+    I live on a boat.
+
+    My hair is colored purple.
+
+    I got married last year.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1 name] and I work in finance.
+
+    User 2: Hello, I''m [user 2 name] and I''m a hair stylist.
+
+    User 1: Oh, that''s interesting! How long have you been doing that?
+
+    User 2: I''ve been doing it for about 10 years now.
+
+    User 1: Wow, that''s a long time! How do you like it?
+
+    User 2: I love it! I get to meet new people every day and I get to be creative.
+
+    User 1: That sounds great! Do you have your own salon?
+
+    User 2: Yes, I do. I live on a boat and my salon is on the deck.
+
+    User 1: Wow, that''s so cool! I''ve never seen a hair salon on a boat before.
+
+    User 2: It''s a lot of fun! I get to see the city from a different perspective.
+
+    User 1: I can imagine! So, what''s your favorite thing about your job?
+
+    User 2: I love being able to make people feel good about themselves. When I give someone a new hairdo, it can change their whole outlook on life.
+
+    User 1: That''s so true! I''ve had my hair done by you before and I always feel great afterwards.
+
+    User 2: I''m glad! I love making people happy.
+
+    User 1: So, what''s your favorite color to dye hair?
+
+    User 2: I love purple! It''s so vibrant and fun.
+
+    User 1: I agree! It''s my favorite color too.
+
+    User 2: What''s your favorite thing to do in your free time?
+
+    User 1: I like to go out to eat, go shopping, and travel.
+
+    User 2: That sounds like a lot of fun! I love to go out to eat too.
+
+    User 1: Where''s your favorite place to eat?
+
+    User 2: I love going to this little Italian restaurant in the city. The food is amazing!
+
+    User 1: I''ve never been there before, but I''ll have to check it out.
+
+    User 2: It''s called "L''Atelier du Chef".
+
+    User 1: Thanks, I''ll look it up.
+
+    User 2: You''re welcome.
+
+    User 1: Well, it was nice talking to you, [user 2 name].
+
+    User 2: It was nice talking to you too, [user 1 name].
+
+    User 1: Maybe I''ll see you around sometime.
+
+    User 2: Maybe!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

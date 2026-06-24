@@ -1,0 +1,81 @@
+id: '00007003'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7003
+data:
+  user 1 personas: 'I m tired of having to read subtitles.
+
+    I started learning japanese at college.
+
+    Our class is planning a trip to japan.
+
+    I hope to save enough money for it.'
+  user 2 personas: 'I am in a very intimate and loving relationship.
+
+    I have a dog that has behavioral issues.
+
+    I enjoy playing guitar and video games.
+
+    I love beef.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1''s name].
+
+
+    User 2: Hi [user 2''s name]! It''s nice to meet you.
+
+
+    User 1: You too! What are some of your hobbies?
+
+
+    User 2: I love playing guitar, video games, and spending time with my dog.
+
+
+    User 1: That sounds like a lot of fun! I love to play video games too. I just got a new puppy a few weeks ago.
+
+
+    User 2: That''s great! What kind of dog did you get?
+
+
+    User 1: I got a golden retriever.
+
+
+    User 2: Oh my gosh, golden retrievers are the best! They''re so friendly and loving.
+
+
+    User 1: I know, right? I''m so glad I got him.
+
+
+    User 2: What''s his name?
+
+
+    User 1: His name is Max.
+
+
+    User 2: That''s a great name! I''m sure he''s a great dog.
+
+
+    User 1: He is! He''s so sweet and playful.
+
+
+    User 2: I''m glad to hear that. I love dogs.
+
+
+    User 1: Me too! They''re the best.
+
+
+    User 2: So, what are you doing for the rest of the day?
+
+
+    User 1: I''m not sure yet. I might go for a walk with Max or play some video games.
+
+
+    User 2: That sounds like a good idea. I''m going to go practice guitar for a while.
+
+
+    User 1: Have fun! I''ll see you later.
+
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

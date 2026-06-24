@@ -1,0 +1,86 @@
+id: 00004193
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4193
+data:
+  user 1 personas: 'My favorite food is jello.
+
+    I enjoy magic the gathering , it is a card game.
+
+    I have 4 pets.
+
+    I live in an apartment.'
+  user 2 personas: 'I drive a ford truck.
+
+    I hate the holidays.
+
+    I have a gun collection at home.
+
+    I am a police officer.
+
+    I have been married 3 times.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: My favorite food is jello.
+
+    User 1: That''s interesting. I''ve never met anyone who likes jello.
+
+    User 2: I know, it''s not a very popular food. But I love it!
+
+    User 1: What do you like about it?
+
+    User 2: I like the texture and the taste. It''s also really easy to make.
+
+    User 1: So, you''re a big fan of Jell-O?
+
+    User 2: Yes, I am! I love all kinds of jello, but my favorite is cherry jello.
+
+    User 1: I''ve never had cherry jello.
+
+    User 2: You should try it! It''s delicious.
+
+    User 1: I will, next time I''m at the store.
+
+    User 2: Good! I hope you like it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a police officer.
+
+    User 1: Oh, really? That must be a dangerous job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: I bet it is. I''m not sure I could do it.
+
+    User 2: It takes a special kind of person to be a police officer.
+
+    User 1: I''m sure you''re right.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I enjoy playing Magic: the Gathering.
+
+    User 2: I''ve never heard of that.
+
+    User 1: It''s a card game. It''s really fun and strategic.
+
+    User 2: It sounds interesting.
+
+    User 1: It is! I''m glad you''re interested.
+
+    User 2: So, you have four pets?
+
+    User 1: Yes, I have two dogs, a cat, and a fish.
+
+    User 2: Wow! That''s a lot of pets.
+
+    User 1: I know, but I love them all.
+
+    User 2: I''m sure they love you too.
+
+    User 1: They do. They''re my best friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

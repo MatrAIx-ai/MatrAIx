@@ -1,0 +1,18 @@
+id: '00033101'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33101
+persona_description: A person who is highly skilled and experienced in managing a law firm. They are known for their expertise in handling a wide range of cases, including personal injury claims, divorces,
+  and child custody cases, but their main source of income comes from medical malpractice lawsuits. They are known for their reliability and dependability, and are often referred to as the "bread and butter"
+  player on their team.
+expertise:
+  general_domain_top1pct: law
+  specific_domain_top1pct: medical malpractice law
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

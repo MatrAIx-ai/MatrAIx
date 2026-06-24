@@ -1,0 +1,88 @@
+id: 00005349
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5349
+data:
+  user 1 personas: 'I love to go horseback riding.
+
+    I have three daughters.
+
+    I grew up on a farm in kansas.
+
+    I am a police officer in a suburb of detroit.
+
+    My wife and i like to go scuba diving.'
+  user 2 personas: 'I am athletic.
+
+    My favorite food is pizza.
+
+    I am a freshman in college.
+
+    I have never broken a bone.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: Pizza!
+
+    User 1: Me too! I love pizza. What kind of pizza do you like?
+
+    User 2: I like all kinds of pizza, but my favorite is probably pepperoni and pineapple.
+
+    User 1: That''s a unique combination! I''ve never tried pepperoni and pineapple before.
+
+    User 2: You should! It''s really good.
+
+    User 1: Maybe I will next time I order pizza.
+
+    User 2: You won''t regret it!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I''m an athletic person, so I like to go hiking, swimming, and playing sports.
+
+    User 1: That sounds like fun! I used to be more athletic, but I don''t get out as much as I used to.
+
+    User 2: You should start getting out more! It''s a great way to stay healthy and fit.
+
+    User 1: I know, I know. I''ll try to get out more.
+
+    User 2: Good!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a freshman in college. I''m studying business.
+
+    User 1: Oh, that''s cool. I''m a police officer in a suburb of Detroit.
+
+    User 2: That''s interesting! What''s it like being a police officer?
+
+    User 1: It''s challenging, but rewarding. I get to help people and make a difference in the community.
+
+    User 2: That''s great! I''m glad you enjoy your job.
+
+    User 1: Thanks!
+
+    User 2: So, what''s your favorite thing about living in Michigan?
+
+    User 1: I love the lakes! I grew up on a farm in Kansas, so I didn''t have access to lakes or oceans.
+
+    User 2: That makes sense! I love being near the water.
+
+    User 1: Me too!
+
+    User 2: So, what are some of your hobbies?
+
+    User 1: I love to go horseback riding. I also like to go scuba diving with my wife.
+
+    User 2: That sounds like fun! I''ve never gone horseback riding or scuba diving.
+
+    User 1: You should try it! They''re both great hobbies.
+
+    User 2: Maybe I will!
+
+    User 1: You should!
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

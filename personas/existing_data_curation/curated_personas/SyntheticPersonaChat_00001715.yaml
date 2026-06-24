@@ -1,0 +1,94 @@
+id: '00001715'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1715
+data:
+  user 1 personas: 'I play the guitar.
+
+    I am a lesbian.
+
+    My father recently had a heart attack.
+
+    I like to go to comic con.
+
+    I write short films.'
+  user 2 personas: 'My favorite color is blue.
+
+    I am italian american.
+
+    I paint with watercolors.
+
+    I work in finance.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi [user 1''s name], my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint with watercolors, read, and go to comic con.
+
+    User 1: Oh, that''s cool! I like to play the guitar, write short films, and go to comic con too.
+
+    User 2: What''s your favorite comic book character?
+
+    User 1: I really like Harley Quinn.
+
+    User 2: Me too! She''s so funny and relatable.
+
+    User 1: Yeah, she is. What do you like to paint with watercolors?
+
+    User 2: I like to paint flowers, landscapes, and animals.
+
+    User 1: Oh, that''s really nice. I''ve never been very good at painting.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: What do you like to write short films about?
+
+    User 1: I like to write about different kinds of things, but my favorite thing to write about is love.
+
+    User 2: Oh, that sounds really interesting. I''d love to see one of your films sometime.
+
+    User 1: I''ll let you know if I ever make one.
+
+    User 2: Great!
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that''s cool. What''s your favorite thing about your job?
+
+    User 2: I like the challenge of it, and I like working with people.
+
+    User 1: That''s good. I''m glad you like your job.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to spend time with my family and friends, and I like to travel.
+
+    User 1: Oh, that sounds like a lot of fun. I like to travel too.
+
+    User 2: Where have you traveled to?
+
+    User 1: I''ve been to a lot of places, but my favorite place is Italy.
+
+    User 2: Oh, that''s cool. I''ve always wanted to go to Italy.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I will!
+
+    User 1: So, what do you think about going to comic con together?
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: Great! I''ll let you know when the next one is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

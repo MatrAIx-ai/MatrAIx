@@ -1,0 +1,18 @@
+id: 00011268
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11268
+persona_description: An IT Administrator who is responsible for managing the domain environment and ensuring smooth logon processes. This individual is familiar with the setup and management of logon scripts,
+  batch files, and network shares, and is skilled in the use of Windows NT and related technologies. They are responsible for configuring and maintaining the default share for logon scripts, ensuring that
+  all users can access the logon scripts and other files defined in the directory, and using logon scripts to synchronize system clocks with the server.
+expertise:
+  general_domain_top1pct: IT Administration
+  specific_domain_top1pct: Windows NT Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,72 @@
+id: 00007887
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7887
+data:
+  user 1 personas: 'I am in high school apart of the school band.
+
+    Music has always been my number one passion.
+
+    My mom is my favorite person of all people.
+
+    I have to live by a schedule in order to keep my mind right.'
+  user 2 personas: 'My favorite band is one direction.
+
+    I love to hike in the summer.
+
+    My name is mary and i am from colorado.
+
+    The weather here is very cold , but so beautiful in the spring.
+
+    I love to ski in the winter.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi [user 1''s name], my name is Mary.
+
+    User 1: It''s nice to meet you, Mary.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to hike in the summer and ski in the winter.
+
+    User 1: That sounds like fun! I''ve never been skiing before, but I''ve always wanted to try it.
+
+    User 2: You should definitely try it! It''s so much fun!
+
+    User 1: I will! I''m from [place], but I''m currently in [place] for school.
+
+    User 2: Oh, that''s cool! I''m from [place].
+
+    User 1: What do you do for fun in [place]?
+
+    User 2: I love to go hiking, skiing, and fishing.
+
+    User 1: That sounds like fun! I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: You should definitely try it! It''s really relaxing.
+
+    User 1: I will! I''m sure I''ll love it.
+
+    User 2: I''m sure you will!
+
+    User 1: So, what kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite band is One Direction.
+
+    User 1: Oh, I love One Direction! I saw them in concert a few years ago.
+
+    User 2: That''s so cool! I''ve always wanted to see them in concert.
+
+    User 1: It was amazing! They put on a great show.
+
+    User 2: I''m sure they did! I''m so jealous.
+
+    User 1: You should definitely try to see them if they come to your area.
+
+    User 2: I will! I''m sure I''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

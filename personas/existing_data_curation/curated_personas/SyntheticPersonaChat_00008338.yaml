@@ -1,0 +1,66 @@
+id: 00008338
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8338
+data:
+  user 1 personas: 'I am a vegetarian but i eat fish , especially sushi.
+
+    I graduated college and immediately went to graduate school.
+
+    I love my dog.
+
+    I like to shop.'
+  user 2 personas: 'I am allergic to nuts.
+
+    I am working on a biology degree.
+
+    1984 is my favorite book.
+
+    I love book.
+
+    I am in college.'
+  Best Generated Conversation: 'User 1: What''s your favorite book?
+
+    User 2: 1984 by George Orwell.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: Have you read Animal Farm?
+
+    User 1: Yes, I have. It''s also a great book.
+
+    User 2: I''m working on a biology degree. What are you studying?
+
+    User 1: I''m in graduate school for marketing.
+
+    User 2: That sounds interesting.
+
+    User 1: It is. I''m learning a lot about how to market products and services.
+
+    User 2: That''s good. I''m sure you''ll do well.
+
+    User 1: Thanks. I hope so.
+
+    User 2: What''s your favorite type of food?
+
+    User 1: I love sushi.
+
+    User 2: I love sushi too! I''m allergic to nuts, so I can''t have a lot of sushi.
+
+    User 1: That''s a shame. I love the variety of sushi.
+
+    User 2: Me too. I wish I could eat more of it.
+
+    User 1: Maybe you could find a restaurant that has sushi that''s made without nuts.
+
+    User 2: That''s a good idea. I''ll have to look into that.
+
+    User 1: I''m sure you''ll find something.
+
+    User 2: Thanks.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

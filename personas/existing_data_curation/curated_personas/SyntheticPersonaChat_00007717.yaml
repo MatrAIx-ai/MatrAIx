@@ -1,0 +1,72 @@
+id: '00007717'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7717
+data:
+  user 1 personas: 'I have an internship at a computer company.
+
+    I am a student.
+
+    I have 5 children.
+
+    I like to go fishing.'
+  user 2 personas: 'My parents are not married anymore.
+
+    I like to read.
+
+    I have one son.
+
+    I like to go swimming.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1]!
+
+    User 2: Hello, I''m [User 2]!
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I like to read, go swimming, and spend time with my son.
+
+    User 1: That sounds fun! I like to go fishing, play video games, and spend time with my 5 kids.
+
+    User 2: Oh, you have 5 kids? That''s a lot!
+
+    User 1: Yes, it is! But it''s also a lot of fun.
+
+    User 2: I can imagine! What''s it like having 5 kids?
+
+    User 1: It''s definitely challenging, but it''s also very rewarding. I love being a father.
+
+    User 2: That''s great to hear! How old are your kids?
+
+    User 1: They''re all under the age of 10.
+
+    User 2: Oh, wow! That''s a lot of energy to keep up with.
+
+    User 1: Yes, it is! But it''s worth it.
+
+    User 2: I''m sure it is! So, what do you do for work?
+
+    User 1: I''m a student, but I also have an internship at a computer company.
+
+    User 2: Oh, that sounds interesting! What kind of work do you do at the computer company?
+
+    User 1: I mostly do software development.
+
+    User 2: Oh, that''s cool! I''ve always been interested in computer science.
+
+    User 1: It''s a lot of fun!
+
+    User 2: I can imagine! So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about going into software engineering.
+
+    User 2: Oh, that sounds like a great career!
+
+    User 1: Thanks! I think so too.
+
+    User 2: Well, it was nice talking to you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

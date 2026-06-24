@@ -1,0 +1,64 @@
+id: '00004062'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4062
+data:
+  user 1 personas: 'I love the smell of beans.
+
+    I like collecting rocks.
+
+    I like collectible dragon ball z figures.
+
+    I love huge paintings.'
+  user 2 personas: 'I like to play video games.
+
+    I am a musician.
+
+    My father used to be a mechanic.
+
+    I have been working the same job for two years.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: I like to collect rocks. What are your hobbies?
+
+    User 2: I like to play video games and I''m a musician.
+
+    User 1: That''s cool! I like video games too. What kind of music do you play?
+
+    User 2: I play piano.
+
+    User 1: Oh, that''s nice! I used to play piano but I''m not very good at it.
+
+    User 2: It''s never too late to learn.
+
+    User 1: I know. I''ve been thinking about taking lessons again.
+
+    User 2: That''s a great idea!
+
+    User 1: Thanks! What''s your favorite video game?
+
+    User 2: I like a lot of different games, but my favorite is probably Final Fantasy VII.
+
+    User 1: Oh, that''s a good one! I''ve played it a few times.
+
+    User 2: It''s so good! I''ve played it through a bunch of times.
+
+    User 1: I can see why. It''s a really fun game.
+
+    User 2: Yeah. I''m really excited for the remake that''s coming out next year.
+
+    User 1: Me too! I''ve been waiting for that for a long time.
+
+    User 2: I know. It''s been a long time coming.
+
+    User 1: Well, it''s almost here!
+
+    User 2: I know! I can''t wait!
+
+    User 1: Me neither!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

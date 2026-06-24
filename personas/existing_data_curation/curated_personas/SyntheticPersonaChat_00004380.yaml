@@ -1,0 +1,72 @@
+id: 00004380
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4380
+data:
+  user 1 personas: 'I like to go on long hikes.
+
+    I like to play volleyball.
+
+    I like to come up with new hairstyles.
+
+    I like to pickle eggs.
+
+    I like to do my nails.'
+  user 2 personas: 'I don t have a lot of family members that i like.
+
+    I drive a jag.
+
+    I like to go to bars and people watch.
+
+    I am an angry person.
+
+    I am an old man.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to bars and people watch.
+
+    User 1: That sounds fun! I like to go to the beach and people watch.
+
+    User 2: I love the beach! I used to go to the beach every summer when I was a kid.
+
+    User 1: Me too! I love swimming and sunbathing.
+
+    User 2: I love swimming too, but I don''t like sunbathing.
+
+    User 1: Oh, that''s too bad. I love getting a tan.
+
+    User 2: I just don''t like the sun''s rays on my skin.
+
+    User 1: Well, I guess we can''t all be the same.
+
+    User 2: I guess not. So, what else do you like to do for fun?
+
+    User 1: I like to go on long hikes. I also like to play volleyball and pickle eggs.
+
+    User 2: Pickle eggs? I''ve never heard of that.
+
+    User 1: It''s a delicious way to preserve eggs. I''ll have to show you how to do it sometime.
+
+    User 2: I''d love to learn! So, you like to do a lot of active things.
+
+    User 1: I do! I like to stay busy. What about you?
+
+    User 2: I like to be active too, but I also like to relax. I like to go to the movies and read books.
+
+    User 1: I like to read books too! I''m reading a book about the history of the United States right now.
+
+    User 2: That sounds interesting. I''m not much of a history buff, but I do like to read fiction.
+
+    User 1: I like reading both fiction and nonfiction. I like to learn new things.
+
+    User 2: I like to learn new things too, but I also like to be entertained.
+
+    User 1: Me too! I think that''s why I like reading so much. It''s a great way to learn new things and be entertained at the same time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

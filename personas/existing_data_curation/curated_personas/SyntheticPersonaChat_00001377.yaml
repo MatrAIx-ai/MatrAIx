@@ -1,0 +1,74 @@
+id: '00001377'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1377
+data:
+  user 1 personas: 'I love to travel.
+
+    My favorite music is rock and roll.
+
+    I am from russia.
+
+    I enjoy skiing.'
+  user 2 personas: 'I volunteer at an animal shelter.
+
+    I love going to concerts.
+
+    My favorite kind of food is italian.
+
+    I am a librarian.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! I''m Sarah.
+
+    User 1: Nice to meet you, Sarah! My name is Dmitri. Where are you from?
+
+    User 2: I''m from the US. What about you?
+
+    User 1: I''m from Russia.
+
+    User 2: Oh, cool! I''ve always wanted to go to Russia.
+
+    User 1: You should come visit sometime! It''s a beautiful country.
+
+    User 2: I will! What do you like to do for fun?
+
+    User 1: I love to travel, listen to rock and roll music, and ski.
+
+    User 2: That sounds like fun! I love to go to concerts and volunteer at my local animal shelter.
+
+    User 1: That''s awesome! I love animals too.
+
+    User 2: Me too! I''m a librarian, so I get to work with books and animals all day long.
+
+    User 1: That sounds like a great job!
+
+    User 2: It is! I love it.
+
+    User 1: So, what''s your favorite Italian food?
+
+    User 2: I love pasta! I could eat it every day.
+
+    User 1: Me too! I love pasta with marinara sauce.
+
+    User 2: That''s my favorite too!
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m going to a concert with my friends.
+
+    User 1: That sounds like fun! What band are you seeing?
+
+    User 2: I''m seeing the Foo Fighters.
+
+    User 1: Oh, I love the Foo Fighters! They''re great live.
+
+    User 2: Me too! I''m so excited.
+
+    User 1: Well, have fun!
+
+    User 2: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,86 @@
+id: 00005581
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5581
+data:
+  user 1 personas: 'I like long walks on the beach.
+
+    My favorite music genre is pop.
+
+    My favorite color is blue.
+
+    I enjoy home cooked meals.
+
+    My favorite tv show is game of thrones.'
+  user 2 personas: 'My mother has her own fashion brand.
+
+    My favorite artist is bob ross.
+
+    I got a job as an accountant 3 months ago.
+
+    I enjoy hiking.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hike, watch Bob Ross, and play video games.
+
+    User 1: Oh, I love Bob Ross too! I like to paint along with his videos.
+
+    User 2: That''s awesome! I''ve never tried that before.
+
+    User 1: It''s really fun! You should give it a try.
+
+    User 2: I will! What kind of games do you like to play?
+
+    User 1: I like to play a lot of different kinds of games, but my favorite is probably The Witcher 3.
+
+    User 2: I''ve heard good things about that game. What do you like about it?
+
+    User 1: I like the story, the characters, and the gameplay. It''s a really immersive game.
+
+    User 2: I''ve been meaning to try it out. I''ll have to add it to my list.
+
+    User 1: You should! It''s a really great game.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m an accountant.
+
+    User 2: Oh, cool! I just started a new job as an accountant a few months ago.
+
+    User 1: That''s great! How do you like it so far?
+
+    User 2: It''s good so far! It''s a lot of work, but it''s also really rewarding.
+
+    User 1: I know what you mean. I''ve been an accountant for about 5 years now, and it''s still challenging, but I love it.
+
+    User 2: It''s good to hear that you like your job. I''m glad I''m not the only one who finds accounting challenging but rewarding.
+
+    User 1: I''m sure you''ll be great at it!
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go hiking, play video games, and watch Bob Ross.
+
+    User 1: Me too! I love Bob Ross! I like to paint along with his videos.
+
+    User 2: That''s awesome! I''ve never tried that before.
+
+    User 1: It''s really fun! You should give it a try.
+
+    User 2: I will! I love to paint, so I''m sure I''d like it.
+
+    User 1: So, what''s your favorite Bob Ross painting?
+
+    User 2: My favorite one is probably the one where he paints the happy little trees.
+
+    User 1: That''s a good one! I love that one too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

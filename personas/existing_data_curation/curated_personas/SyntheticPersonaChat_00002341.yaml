@@ -1,0 +1,66 @@
+id: '00002341'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2341
+data:
+  user 1 personas: 'I work for the navy.
+
+    I like to read.
+
+    I am blue and tall.
+
+    I like to swim.
+
+    My favorite show is thevoice.'
+  user 2 personas: 'I enjoy cooking.
+
+    I am married.
+
+    My mother was a teacher.
+
+    My favorite writer is nicholas sparks.
+
+    I own a cleaning company.'
+  Best Generated Conversation: 'User 1: Hi, my name is Ben. What''s your name?
+
+    User 2: Hi, I''m Hannah.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, read, and spend time with my family.
+
+    User 1: Those are all great hobbies! I like to read too. What are some of your favorite books?
+
+    User 2: I love the books by Nicholas Sparks.
+
+    User 1: Me too! I''ve read all of his books.
+
+    User 2: That''s great! Which one is your favorite?
+
+    User 1: I think my favorite is "The Notebook."
+
+    User 2: That''s a good choice. I love that book too.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes.
+
+    User 1: Me too! I love making spaghetti and meatballs.
+
+    User 2: That''s a classic! I also love making lasagna.
+
+    User 1: Lasagna is so good. I love the cheese and the sauce.
+
+    User 2: Me too! I love cooking for my family. It''s a great way to show them how much I love them.
+
+    User 1: That''s so sweet. I love spending time with my family too.
+
+    User 2: It''s the best!
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00003980
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3980
+data:
+  user 1 personas: 'I have a golden retriever.
+
+    My favorite book is pride and prejudice.
+
+    My favorite subject in school is math.
+
+    I have a little sister.'
+  user 2 personas: 'I have a brother but we don t talk much yet.
+
+    I have a few pet iguanas.
+
+    I am pretty poor financially.
+
+    I think dogs could learn to read if they were trained well.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: I''m (name). What''s your name?
+
+    User 2: My name is (name). It''s nice to meet you.
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I like to read, play video games, and watch movies. What about you?
+
+    User 1: I like to read too! My favorite book is Pride and Prejudice. What''s yours?
+
+    User 2: I''ve never read that one. I''ll have to check it out. I really like the Harry Potter series.
+
+    User 1: I love Harry Potter! I''ve read all the books and seen all the movies.
+
+    User 2: Me too! I''m a big fan.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to play video games. I''m a big fan of the Zelda series.
+
+    User 1: I''ve never played Zelda. What''s it about?
+
+    User 2: It''s a fantasy action-adventure game where you play as Link, who is on a quest to save Princess Zelda from Ganondorf.
+
+    User 1: That sounds cool! I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''ve also heard that you have a few pet iguanas.
+
+    User 2: Yes, I do. They''re my little babies.
+
+    User 1: How many do you have?
+
+    User 2: I have three. They''re all girls.
+
+    User 1: What are their names?
+
+    User 2: Their names are Sally, Mary, and Jane.
+
+    User 1: Those are cute names.
+
+    User 2: Thanks! I think so too.
+
+    User 1: I''ve never seen an iguana in real life.
+
+    User 2: They''re pretty cool creatures. They''re not very big, but they''re very friendly.
+
+    User 1: I''d love to see them sometime.
+
+    User 2: You''re welcome to come over and visit them any time.
+
+    User 1: Thanks! I might just take you up on that offer.
+
+    User 2: You''re welcome! I''m always happy to have visitors.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

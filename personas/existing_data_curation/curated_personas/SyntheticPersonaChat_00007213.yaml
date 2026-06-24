@@ -1,0 +1,92 @@
+id: '00007213'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7213
+data:
+  user 1 personas: 'I volunteer at my local animal shelter.
+
+    I have been married for 20 years.
+
+    I love travelling and discovering new cultures.
+
+    I am a military veteran.'
+  user 2 personas: 'I am an aspiring singer.
+
+    My father worked for ge.
+
+    I enjoy playing tennis.
+
+    Green is my favorite color.
+
+    I love animals.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi! I''m [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: It''s nice to meet you too, [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to sing and play tennis.
+
+    User 1: Oh, that''s nice! I love to sing too.
+
+    User 2: We should go sing together sometime!
+
+    User 1: That would be fun! I''d love to.
+
+    User 2: Great! I''m free on Friday night.
+
+    User 1: I''m free on Saturday.
+
+    User 2: Saturday sounds good to me.
+
+    User 1: Great! How about we meet at the local karaoke bar at 7pm?
+
+    User 2: That sounds perfect!
+
+    User 1: See you then!
+
+    User 2: See you!
+
+
+    (On Saturday at 7pm)
+
+
+    User 1: Hi, [name]. I''m here for our karaoke date.
+
+    User 2: Hi, [name]. It''s nice to see you.
+
+    User 1: You too.
+
+    User 2: So, what do you want to sing?
+
+    User 1: I''m not sure. What do you want to sing?
+
+    User 2: I''d love to sing "Shallow" by Lady Gaga and Bradley Cooper.
+
+    User 1: That''s a great song! I''d love to sing that with you.
+
+    User 2: Great! Let''s go up!
+
+
+    (The two people sing "Shallow" by Lady Gaga and Bradley Cooper.)
+
+
+    User 1: That was so much fun!
+
+    User 2: I know, right? We should do this again sometime.
+
+    User 1: That would be great!
+
+    User 2: Great! I''ll talk to you soon.
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00001151'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1151
+data:
+  user 1 personas: 'I work in a lab.
+
+    I have been a vegan since i was 5.
+
+    I have two brothers.
+
+    I love to sleep in.
+
+    I believe in love at first sight.'
+  user 2 personas: 'I love non gmo foods.
+
+    Favorite band is red hot chilli peppers.
+
+    I love cold weather.
+
+    I love dark clothes.
+
+    I work two jobs as a cashier.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work two jobs as a cashier.
+
+    User 1: Oh, that must be interesting.
+
+    User 2: It can be, but it''s also a lot of work.
+
+    User 1: I bet. I''m a lab tech, so I have to work long hours too.
+
+    User 2: Oh, really? What kind of lab work do you do?
+
+    User 1: I work in a cancer research lab.
+
+    User 2: That''s so cool! I''ve always been interested in cancer research.
+
+    User 1: It''s really interesting, but it can be also be really sad.
+
+    User 2: I can imagine. So, what''s your favorite thing to do outside of work?
+
+    User 1: I love to sleep in.
+
+    User 2: Me too! I''m always tired.
+
+    User 1: I know, right? I blame it on working long hours.
+
+    User 2: Me too. So, what else do you like to do?
+
+    User 1: I love to hang out with my friends and family.
+
+    User 2: Me too. I have two brothers.
+
+    User 1: Oh, that''s cool. I have two brothers too.
+
+    User 2: Really? That''s so funny. We should hang out sometime.
+
+    User 1: Sure! That sounds like fun.
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

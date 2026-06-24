@@ -1,0 +1,84 @@
+id: '00002004'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2004
+data:
+  user 1 personas: 'I love to eat meat.
+
+    I don t have a college degree.
+
+    I love the desert.
+
+    My eyes are bright blue.'
+  user 2 personas: 'I saw a solar eclipse when i was 8 years old.
+
+    I simply walk around when i have nothing to do.
+
+    I have high speed internet.
+
+    I got hired as a security guard.
+
+    I can beat anyone in chess.'
+  Best Generated Conversation: 'User 1: Hey there! How are you doing today?
+
+    User 2: I''m doing great, thanks! How are you doing?
+
+    User 1: I''m doing pretty well, thanks! So, what do you like to do for fun?
+
+    User 2: I love to go for walks, play chess, and read books.
+
+    User 1: Those sound like great things to do! I also love to read books. What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Lord of the Rings series, and the Hunger Games series.
+
+    User 1: Those are all great series! I''ve read all of them too.
+
+    User 2: What do you like to do for work?
+
+    User 1: I''m a security guard.
+
+    User 2: Oh, that''s interesting! I''ve never met a security guard before.
+
+    User 1: It''s a pretty interesting job. I get to meet a lot of people and I get to see a lot of things.
+
+    User 2: That sounds like a lot of fun! What''s the most interesting thing you''ve ever seen while working as a security guard?
+
+    User 1: I once saw a solar eclipse. It was amazing!
+
+    User 2: That sounds really cool! I''ve never seen a solar eclipse before.
+
+    User 1: It was really something special.
+
+    User 2: I''m sure it was! So, what else do you like to do?
+
+    User 1: I like to go hiking and camping. I also like to play video games.
+
+    User 2: Those sound like fun things to do! I''ve never been hiking or camping before, but I''ve always wanted to try it.
+
+    User 1: You should definitely try it! It''s a lot of fun.
+
+    User 2: I will!
+
+    User 1: So, what''s your favorite thing to do?
+
+    User 2: I love to play chess. I''m really good at it.
+
+    User 1: That''s awesome! I''ve never been good at chess.
+
+    User 2: You should try playing it sometime. It''s a lot of fun.
+
+    User 1: I will!
+
+    User 2: So, what are you doing later today?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to play chess with my friend.
+
+    User 1: Oh, that sounds fun! I''d love to join you.
+
+    User 2: Sure! We''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: 00008463
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8463
+data:
+  user 1 personas: 'My favorite book is jane austen s pride and prejudice.
+
+    I like going barefoot.
+
+    I work as a tutor for english literature.
+
+    I can knit.'
+  user 2 personas: 'I love ergonomic keyboards and chairs.
+
+    I can t get enough of rap music , it s so good.
+
+    I just bought a new pair of sneakers and they feel great.
+
+    My favorite thing to do is sleep.
+
+    I love ergonomic keyboards and chairs.'
+  Best Generated Conversation: 'User 1: Hi! My name is User 1. What''s your name?
+
+    User 2: Hi! My name is User 2.
+
+    User 1: Nice to meet you! I''m a tutor for English literature. What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: That''s cool! I love computers.
+
+    User 2: Me too! I''m really into ergonomics.
+
+    User 1: What''s that?
+
+    User 2: It''s the study of how to design objects and environments so that they work well with the human body.
+
+    User 1: Oh, that''s interesting. I''ve never heard of that before.
+
+    User 2: It''s really important, especially for people who work at computers all day.
+
+    User 1: I can imagine. I''m always getting aches and pains from sitting at my desk too long.
+
+    User 2: Yeah, it''s a real problem. But there are a lot of things you can do to make it better.
+
+    User 1: Like what?
+
+    User 2: Well, you can get a standing desk, or a chair that supports your back and neck. You can also take breaks throughout the day to stretch and move around.
+
+    User 1: That''s a good idea. I''ll have to try that.
+
+    User 2: I hope it helps!
+
+    User 1: Thanks! So, what do you like to do for fun?
+
+    User 2: I love listening to rap music. It''s so good.
+
+    User 1: I''ve never really been into rap music, but I can understand why people like it. It''s definitely got a lot of energy.
+
+    User 2: Yeah, it''s the best. What do you like to do for fun?
+
+    User 1: I like to read, knit, and go barefoot.
+
+    User 2: I love reading too! What''s your favorite book?
+
+    User 1: My favorite book is Pride and Prejudice by Jane Austen.
+
+    User 2: Oh, I love that book! It''s so funny and well-written.
+
+    User 1: I know, right? It''s one of my all-time favorites.
+
+    User 2: Mine too. So, what are you reading right now?
+
+    User 1: I''m reading a book called The Little Prince by Antoine de Saint-Exupéry.
+
+    User 2: Oh, I''ve heard good things about that book.
+
+    User 1: It''s really good. It''s about a pilot who crashes in the desert and meets a little prince who comes from another planet.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: I hope you like it!
+
+    User 2: Thanks! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

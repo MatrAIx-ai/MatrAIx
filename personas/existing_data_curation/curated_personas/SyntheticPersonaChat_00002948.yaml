@@ -1,0 +1,64 @@
+id: 00002948
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2948
+data:
+  user 1 personas: 'She taught me to cook.
+
+    She died when i was 18.
+
+    I have a dog.
+
+    My mother is from russia.'
+  user 2 personas: 'I have always had long hair.
+
+    I worked at a movie theater for 4 years.
+
+    I m saving up to buy a new camera.
+
+    I enjoy running at night.
+
+    I like spicy food.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thank you for asking! How are you today?
+
+    User 1: I''m doing well, thank you! What do you like to do for fun?
+
+    User 2: I like to run, read, and cook.
+
+    User 1: That''s cool! I like to run too, but I''m not very good at it.
+
+    User 2: Me neither! But it''s fun to try.
+
+    User 1: I agree! Do you like spicy food?
+
+    User 2: Yes, I love it! I''m from India, so I grew up eating a lot of spicy food.
+
+    User 1: That''s awesome! I''m not from India, but I love spicy food too.
+
+    User 2: Me too! What''s your favorite spicy food?
+
+    User 1: I love Indian food, especially curries.
+
+    User 2: Me too! I love Indian food.
+
+    User 1: Do you work in the movie industry?
+
+    User 2: Yes, I do! I work at a movie theater.
+
+    User 1: That''s cool! I''ve always wanted to work in the movie industry.
+
+    User 2: It''s a lot of fun! I get to see movies for free, and I get to meet a lot of interesting people.
+
+    User 1: That sounds awesome! I''m jealous!
+
+    User 2: You should apply for a job at a movie theater!
+
+    User 1: I might just do that!
+
+    User 2: You should! It''s a great job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

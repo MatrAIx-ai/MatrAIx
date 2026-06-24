@@ -1,0 +1,78 @@
+id: 00001888
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1888
+data:
+  user 1 personas: 'I have a pet skunk.
+
+    My masters degree is in italian literature.
+
+    My brother thinks he is a viking.
+
+    My nails are painted green.'
+  user 2 personas: 'I have two children but i am divorced.
+
+    I am in my second year of medical school.
+
+    My favorite thing to do is watch old movies.
+
+    I am a hindu living in louisiana.
+
+    My mom is the best baker in my family.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1 name].
+
+    User 2: Hello! I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you do for a living?
+
+    User 2: I''m a doctor in my second year of medical school.
+
+    User 1: Wow, that''s impressive! What''s your favorite thing about being a doctor?
+
+    User 2: I love being able to help people and make a difference in their lives.
+
+    User 1: That''s a great answer. I''m sure you''re a great doctor.
+
+    User 2: Thank you! I try my best.
+
+    User 1: So, do you have any hobbies outside of being a doctor?
+
+    User 2: Yes, I love to watch old movies.
+
+    User 1: That''s cool. I used to love watching old movies when I was younger.
+
+    User 2: What''s your favorite old movie?
+
+    User 1: I don''t know if I have a single favorite, but I really like the old James Bond movies.
+
+    User 2: Those are great! I love Sean Connery as James Bond.
+
+    User 1: Me too! He''s the best Bond actor, in my opinion.
+
+    User 2: I agree. He''s so cool and suave.
+
+    User 1: So, what''s your favorite thing about living in Louisiana?
+
+    User 2: I love the food! The food in Louisiana is amazing.
+
+    User 1: That''s true! I love Cajun food.
+
+    User 2: Me too! It''s so good.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go see a movie or something.
+
+    User 1: That sounds like a plan. I might do the same.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: It was nice talking to you too.
+
+    User 2: Have a good day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

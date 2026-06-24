@@ -1,0 +1,18 @@
+id: 00038742
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38742
+persona_description: A healthcare professional who specializes in spine surgery, particularly the treatment of spinal fractures and the management of osteoporosis. Their expertise includes the use of bone
+  cement and the injection of cement into the spine to strengthen the collapsed bone and prevent further collapse. They are also skilled in communicating with patients about their health history and medications,
+  preparing them for the procedure, and monitoring their recovery post-surgery.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: orthopedic surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: spine surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

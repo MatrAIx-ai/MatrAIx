@@ -1,0 +1,72 @@
+id: 00005680
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5680
+data:
+  user 1 personas: 'My favorite rapper is yo gotti.
+
+    I am currently looking for a job in baltimore.
+
+    God has always been put first in my life.
+
+    I take pride in getting straight as.
+
+    I am addicted to the hit show empire.'
+  user 2 personas: 'I work too much.
+
+    I think i need a vacation.
+
+    I am a perfectionist.
+
+    If things are not done right i will redo them again and again.
+
+    I take forever to get tasks done so i start early and clock out late.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I see that you''re looking for a job in Baltimore. What kind of job are you interested in?
+
+    User 2: I''m not sure yet. I''m open to anything that''s a good fit for me.
+
+    User 1: I see. Well, I''m sure you''ll find something great. You seem like a very hard worker.
+
+    User 2: Thank you! I try my best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and go out with my friends.
+
+    User 1: What shows do you like to watch?
+
+    User 2: I like to watch Empire, Power, and Game of Thrones.
+
+    User 1: Oh, I love Empire! I''m so excited for the new season.
+
+    User 2: Me too! I can''t wait to see what happens.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play open-world RPGs, like Skyrim and The Witcher.
+
+    User 1: Oh, I love those games too! I''ve been playing Skyrim for years.
+
+    User 2: Me too! It''s so much fun.
+
+    User 1: What do you like to do with your friends?
+
+    User 2: We go out to eat, go to movies, and play video games.
+
+    User 1: Oh, that sounds fun. I wish I had more friends to do things with.
+
+    User 2: You should try joining a club or a group that shares your interests.
+
+    User 1: I''ll think about it.
+
+    User 2: Good! I''m sure you''ll make some great friends.
+
+    User 1: Thanks! I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

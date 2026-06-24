@@ -1,0 +1,76 @@
+id: 00002529
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2529
+data:
+  user 1 personas: 'I like to take walks.
+
+    We plan to travel after he retires.
+
+    Many of my former students like to visit me.
+
+    I am a retired school teacher.'
+  user 2 personas: 'My favorite hobby is gardening.
+
+    I am 77 years old.
+
+    My family gets together every saturday.
+
+    Black coffee is my addiction.
+
+    My husband died last year.'
+  Best Generated Conversation: 'User 1: I retired from being a school teacher.
+
+    User 2: I am 77 years old and I like to garden.
+
+    User 1: I enjoy taking walks and I am planning on traveling after my husband retires.
+
+    User 2: My husband died last year.
+
+    User 1: I''m so sorry to hear that. I hope you have a good support system.
+
+    User 2: My family gets together every Saturday and they are very supportive.
+
+    User 1: That''s good to hear. I''m glad you have such a loving family.
+
+    User 2: Thank you.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to garden and I also enjoy reading and watching movies.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I like to read historical fiction and mysteries.
+
+    User 1: Oh, me too! I recently read the book "The Secret Garden" and I loved it.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great read.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem. So, what are some of your favorite movies?
+
+    User 2: I like a lot of different kinds of movies, but I''m a big fan of romantic comedies.
+
+    User 1: Me too! I love romantic comedies. What are some of your favorites?
+
+    User 2: I love "When Harry Met Sally," "Sleepless in Seattle," and "The Notebook."
+
+    User 1: Those are all great movies! I love them too.
+
+    User 2: Me too! I love the way they make me feel.
+
+    User 1: Yeah, me too. They''re just so heartwarming and romantic.
+
+    User 2: I''m glad we have similar taste in movies.
+
+    User 1: Me too! It''s always fun to find someone who enjoys the same things you do.
+
+    User 2: Exactly'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

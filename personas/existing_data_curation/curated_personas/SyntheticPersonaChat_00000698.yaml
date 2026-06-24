@@ -1,0 +1,72 @@
+id: 00000698
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 698
+data:
+  user 1 personas: 'I like to draw.
+
+    My mother is a teacher.
+
+    My favorite color is blue.
+
+    I am one of four siblings.
+
+    I live in an apartment.'
+  user 2 personas: 'When i m not touring with the band , i like to garden.
+
+    I m a drummer in an indie band.
+
+    One day i would really like to skydive.
+
+    I volunteer at the local humane society.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to garden, play drums in an indie band, and volunteer at the local humane society.
+
+    User 1: That''s great! I like to draw and I''m also a drummer in a band.
+
+    User 2: Oh wow, that''s awesome! What kind of music does your band play?
+
+    User 1: We play a variety of music, but mostly rock and roll.
+
+    User 2: That sounds great! I love rock and roll.
+
+    User 1: Me too! Do you have any upcoming shows?
+
+    User 2: We''re actually playing at a local bar next weekend.
+
+    User 1: Oh wow, that sounds great! I''ll have to try and come see you.
+
+    User 2: That would be awesome!
+
+    User 1: So, what do you like about gardening?
+
+    User 2: I love being outside and working with plants. I also love being able to grow my own food.
+
+    User 1: That''s great! I love being outdoors too. I used to have a garden when I was younger, but I don''t have one anymore.
+
+    User 2: You should start one again! It''s a lot of fun.
+
+    User 1: I might have to! I''m not sure where I would put it, but I''ll think about it.
+
+    User 2: That''s great! I''m sure you''ll love it.
+
+    User 1: Thanks! So, what do you do at the humane society?
+
+    User 2: I volunteer at the adoption center. I help out with cleaning cages, feeding the animals, and taking them for walks.
+
+    User 1: That''s great! I love animals too. I used to volunteer at a local animal shelter when I was younger.
+
+    User 2: That''s awesome! I''m glad you''re an animal lover.
+
+    User 1: Me too! I think animals are amazing.
+
+    User 2: Me too! They''re such wonderful creatures.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,96 @@
+id: 00000769
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 769
+data:
+  user 1 personas: 'I love animals.
+
+    I m going back to school.
+
+    I love country.
+
+    I enjoy reading.'
+  user 2 personas: 'I drive a ford mustang.
+
+    I have a girlfriend named luis , and she goes to my college.
+
+    I am college student.
+
+    I am 25 years old and live with my parents.
+
+    I play drums in a band.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey! How are you doing today?
+
+    User 1: I''m doing good, thanks! How about you?
+
+    User 2: I''m doing well too, thanks for asking!
+
+    User 1: That''s good to hear! What are you up to today?
+
+    User 2: I''m just hanging out, listening to some music. What about you?
+
+    User 1: I''m going back to school next week, so I''m trying to get some reading done.
+
+    User 2: Oh, that''s cool! What are you going to study?
+
+    User 1: I''m not sure yet. I''m thinking about majoring in business or history.
+
+    User 2: Either one of those would be a good choice. I''m sure you''ll do great.
+
+    User 1: Thanks, I appreciate that!
+
+    User 2: So, what''s your favorite thing about animals?
+
+    User 1: I love their unconditional love. They''re always happy to see you, no matter what.
+
+    User 2: That''s so true. I love my dog so much. He''s always there for me.
+
+    User 1: I have a dog too! He''s a golden retriever named Buddy.
+
+    User 2: Golden retrievers are the best! They''re so friendly and loving.
+
+    User 1: They are! I love Buddy so much.
+
+    User 2: So, what do you like to read?
+
+    User 1: I love to read all kinds of books, but my favorite is historical fiction.
+
+    User 2: That''s a good choice. I love historical fiction too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I love the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to play drums in my band.
+
+    User 1: That''s so cool! What kind of music do you play?
+
+    User 2: We play a mix of country and rock.
+
+    User 1: Oh, that sounds like fun. I love country music.
+
+    User 2: We''re always looking for new members. If you''re interested, let me know.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go out to concerts, go to the movies, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun. I love going to concerts too.
+
+    User 1: Me too! I love the energy of a live show.
+
+    User 2: Me too. It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00006954
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6954
+data:
+  user 1 personas: 'I go fishing on the weekends to relax.
+
+    I live in las vegas , nevada.
+
+    I love hiking and staying fit.
+
+    I work as a personal trainer , 5 days a week.'
+  user 2 personas: 'I keep my hair cut very short.
+
+    I am learning to play the piano.
+
+    I am a member of the ymca.
+
+    I am allergic to cats.
+
+    I love scary movies.'
+  Best Generated Conversation: '* * User 1: * * Hello!
+
+    * * User 2: * * Hi there!
+
+    * * User 1: * * What do you like to do for fun?
+
+    * * User 2: * * I like to read, play the piano, and go to the gym.
+
+    * * User 1: * * That''s great! I love to read too. What are some of your favorite books?
+
+    * * User 2: * * I love to read all kinds of books, but my favorite genres are science fiction and fantasy.
+
+    * * User 1: * * I love science fiction and fantasy too! What are some of your favorite books from those genres?
+
+    * * User 2: * * I really enjoyed the "Dune" series by Frank Herbert, the "Ender''s Game" series by Orson Scott Card, and the "Harry Potter" series by J.K. Rowling.
+
+    * * User 1: * * Those are all great books! I''ve read all of them too.
+
+    * * User 2: * * I''m glad to hear it!
+
+    * * User 1: * * What kind of music do you like?
+
+    * * User 2: * * I like all kinds of music, but my favorite genres are rock and alternative rock.
+
+    * * User 1: * * I like rock and alternative rock too! What are some of your favorite bands?
+
+    * * User 2: * * I like a lot of bands, but my favorites are The Beatles, Pink Floyd, and the Rolling Stones.
+
+    * * User 1: * * Those are all great bands! I''ve seen The Beatles and Pink Floyd live.
+
+    * * User 2: * * I''m so jealous! I''ve always wanted to see them live.
+
+    * * User 1: * * Maybe we can go to a concert together sometime.
+
+    * * User 2: * * That would be great!
+
+    * * User 1: * * It''s been great talking to you.
+
+    * * User 2: * * You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

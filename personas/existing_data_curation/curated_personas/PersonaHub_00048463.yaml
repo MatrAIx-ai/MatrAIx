@@ -1,0 +1,20 @@
+id: 00048463
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48463
+persona_description: A general practitioner who is a specialist in hypertension management. This persona has a thorough understanding of the intricacies and nuances of hypertension and is skilled in identifying
+  the underlying causes of a patient's blood pressure problem. They are able to tailor treatment to the individual's needs, using available drugs to bring and keep high blood pressure under control. They
+  are knowledgeable about the side effects that may prompt patients to abandon therapy and are skilled in prescribing the best treatment for each patient. They are also aware of the "intricacies and nuances"
+  of the dozens of available medications and are able to determine which is appropriate to a certain patient. This persona is skilled in working with patients to manage their hypertension, with minimal
+  side effects and at a reasonable cost.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: hypertension management
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00052441'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52441
+persona_description: A patient who has been diagnosed with Charles Bonnet Syndrome (CBS) and is seeking medical treatment to manage their visual hallucinations. They are likely to be elderly, have a history
+  of vision loss, and have insight into the nature of their hallucinations. They are looking for a diagnosis, treatment options, and reassurance about their sanity. They may also be seeking information
+  on the underlying causes of CBS and how it affects different age groups.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

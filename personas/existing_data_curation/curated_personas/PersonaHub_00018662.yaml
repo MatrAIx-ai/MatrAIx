@@ -1,0 +1,20 @@
+id: 00018662
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 18662
+persona_description: A healthcare professional who works in an intensive care unit (ICU) and specializes in the assessment and management of delirium in patients. This persona has experience in managing
+  acute confusion in patients and is familiar with the Confusion Assessment Method for assessing delirium. They are skilled in communicating with clients, their families, and other healthcare providers,
+  and are aware of the physiological and behavioral manifestations of delirium. This persona has expertise in the treatment of underlying causes of delirium and in maintaining normal fluid and electrolyte
+  balance, body temperature, oxygenation, blood glucose levels, blood pressure, and elimination patterns in patients with delirium. They are also skilled in planning care that allows for appropriate sleep-wake
+  cycles in patients with delirium.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: critical care medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: delirium management in ICU
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

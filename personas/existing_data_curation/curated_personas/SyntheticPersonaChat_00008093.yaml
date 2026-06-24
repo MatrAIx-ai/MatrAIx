@@ -1,0 +1,70 @@
+id: 00008093
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8093
+data:
+  user 1 personas: 'I studied early childhood education in college.
+
+    I have a puppy named tiki.
+
+    My favorite food is spicy tex mex.
+
+    I am a kindergarten teacher.'
+  user 2 personas: 'I have 2 kids.
+
+    My wife is a nurse.
+
+    My favorite place is the mountains.
+
+    I like to play baseball.
+
+    I am a doctor.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, I''m [name]. It''s nice to meet you.
+
+    User 1: You too! What do you do for a living?
+
+    User 2: I''m a doctor.
+
+    User 1: Oh, that''s great! I''m a kindergarten teacher.
+
+    User 2: That''s awesome! I love kids.
+
+    User 1: Me too! I have a puppy named Tiki.
+
+    User 2: Oh, that''s cute! What kind of dog is it?
+
+    User 1: She''s a golden retriever.
+
+    User 2: Golden retrievers are the best! I have two golden retrievers of my own.
+
+    User 1: Oh, that''s awesome! What are their names?
+
+    User 2: Their names are Rocky and Bailey.
+
+    User 1: Those are great names!
+
+    User 2: Thanks! So, what''s your favorite food?
+
+    User 1: My favorite food is spicy Tex-Mex.
+
+    User 2: Oh, that''s a good choice! I love Mexican food.
+
+    User 1: Me too! I love the combination of spicy and sour.
+
+    User 2: Me too! So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go to the movies or something.
+
+    User 2: That sounds like fun! I might go to the mountains. I love hiking and fishing.
+
+    User 1: That sounds great! I love the mountains too.
+
+    User 2: Well, it was nice talking to you. I hope we can talk again soon.
+
+    User 1: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

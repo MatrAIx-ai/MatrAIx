@@ -1,0 +1,52 @@
+id: '00004130'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4130
+data:
+  user 1 personas: 'I work at a smoothie shop.
+
+    I enjoy eating vegetarian food.
+
+    I watch basketball.
+
+    I listen to classic rock.'
+  user 2 personas: 'I like to garden.
+
+    I like photography.
+
+    I am a chef.
+
+    I love traveling.
+
+    I like to bake pies.'
+  Best Generated Conversation: 'User 1: What is your favorite kind of food to cook?
+
+    User 2: I love making vegetarian dishes. I find that it''s a lot more creative and challenging to come up with new recipes that are both delicious and healthy.
+
+    User 1: That makes sense. I''ve been trying to eat more vegetarian food myself, but I''m not very good at cooking it yet.
+
+    User 2: I''m sure you''ll get better with practice! There are a lot of great recipes out there that are easy to follow.
+
+    User 1: What''s your favorite vegetarian dish to cook?
+
+    User 2: I love making lasagna with tofu instead of meat. It''s so flavorful and satisfying, and it''s a great way to get your family to eat more vegetables.
+
+    User 1: That sounds delicious! I''ll have to try that recipe sometime.
+
+    User 2: I''m sure you''ll love it!
+
+    User 1: I also love listening to classic rock music. What are some of your favorite bands?
+
+    User 2: I love The Beatles, The Rolling Stones, and Led Zeppelin. I also like some newer bands like The Black Keys and The White Stripes.
+
+    User 1: Me too! I love all of those bands. They''re some of the best bands of all time.
+
+    User 2: I agree! They''re all so talented and they''ve made some amazing music.
+
+    User 1: I''m glad we have similar taste in music.
+
+    User 2: Me too! It''s always nice to meet someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

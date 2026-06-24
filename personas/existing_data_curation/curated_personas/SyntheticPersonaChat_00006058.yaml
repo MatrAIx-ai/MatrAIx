@@ -1,0 +1,82 @@
+id: 00006058
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6058
+data:
+  user 1 personas: 'I love ham and cheese sandwiches.
+
+    My name is arnold.
+
+    I am 10 years old.
+
+    I also love orange juice.'
+  user 2 personas: 'I like field hockey and soccer.
+
+    When i grow up , i want to be a veterinarian.
+
+    I love animals , especially dogs.
+
+    I am a 15 year old girl.'
+  Best Generated Conversation: 'User 1: Hi, my name is Arnold. What''s your name?
+
+    User 2: Hi Arnold, my name is Emily.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play field hockey and soccer.
+
+    User 1: Oh, I love playing field hockey too!
+
+    User 2: Really? That''s awesome!
+
+    User 1: Yeah, I''ve been playing since I was 8 years old.
+
+    User 2: Me too!
+
+    User 1: What''s your favorite position to play?
+
+    User 2: I like to play forward.
+
+    User 1: Me too! I love scoring goals.
+
+    User 2: Me too!
+
+    User 1: What other sports do you like to play?
+
+    User 2: I also like to play soccer.
+
+    User 1: Oh, I love soccer too!
+
+    User 2: Me too!
+
+    User 1: What''s your favorite position to play in soccer?
+
+    User 2: I like to play striker.
+
+    User 1: Me too! I love scoring goals in soccer too.
+
+    User 2: Me too!
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love animals, especially dogs.
+
+    User 1: Oh, I love animals too! I have a dog named Buddy.
+
+    User 2: What kind of dog is Buddy?
+
+    User 1: He''s a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly.
+
+    User 1: Yeah, Buddy is really friendly.
+
+    User 2: I love to pet dogs.
+
+    User 1: You''re welcome to pet Buddy anytime you want.
+
+    User 2: Thanks, I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00001048
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1048
+data:
+  user 1 personas: 'I like swimming.
+
+    I only have three best friends.
+
+    My favorite thing to do is research race cars in my free time.
+
+    I am a fourteen year old living with my mom and grandparents.'
+  user 2 personas: 'Superman s my favorite super hero.
+
+    Chocolate chip cookies are the tastier things in my opinion.
+
+    I talk a lot in irc.
+
+    I drive only toyota.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hey there! How are you doing today?
+
+    User 1: I''m doing well, thanks for asking. How about you?
+
+    User 2: I''m doing great! What do you like to do for fun?
+
+    User 1: I like to swim, play video games, and research race cars.
+
+    User 2: Oh cool! I like to swim too. What kind of video games do you like to play?
+
+    User 1: I like to play racing games, action games, and puzzle games.
+
+    User 2: Nice! I like racing games too. What''s your favorite racing game?
+
+    User 1: My favorite racing game is Forza Horizon 5.
+
+    User 2: Oh nice! I''ve heard good things about that game.
+
+    User 1: It''s a lot of fun. I''ve been playing it a lot lately.
+
+    User 2: What''s your favorite part about the game?
+
+    User 1: I like the open world and the variety of cars you can drive.
+
+    User 2: Yeah, the open world is really cool. And there are so many different cars to choose from.
+
+    User 1: Yeah, it''s a really fun game.
+
+    User 2: It sounds like it. I might have to check it out sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Okay, I will. Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

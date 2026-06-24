@@ -1,0 +1,62 @@
+id: 00003836
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3836
+data:
+  user 1 personas: 'My favorite is rock fish.
+
+    I m going riding on my boat today.
+
+    I love tuna.
+
+    I live in cape hatteras.
+
+    I am a fisherman.'
+  user 2 personas: 'She taught me to cook.
+
+    She died when i was 18.
+
+    My mother is from russia.
+
+    I have a dog.'
+  Best Generated Conversation: 'User 1: Hey! I''m a fisherman from Cape Hatteras. What do you do for a living?
+
+    User 2: I''m a chef. My mother taught me to cook.
+
+    User 1: That''s cool! What kind of food do you like to cook?
+
+    User 2: I like to cook a lot of different things, but I''m especially fond of Russian food.
+
+    User 1: Oh, that''s cool. My mother is from Russia too.
+
+    User 2: That''s awesome! What did she teach you to cook?
+
+    User 1: She taught me how to make borscht, pelmeni, and solyanka.
+
+    User 2: Those are all delicious! I love borscht.
+
+    User 1: Me too! It''s my favorite Russian dish.
+
+    User 2: Do you have any other hobbies besides fishing?
+
+    User 1: I like to go hiking and camping. I also like to play guitar.
+
+    User 2: I love hiking and camping too! I haven''t played the guitar in a while, but I used to play a lot.
+
+    User 1: You should pick it up again! It''s a lot of fun.
+
+    User 2: I will! I need to find a guitar first.
+
+    User 1: I have an extra guitar you can borrow.
+
+    User 2: That''s so kind of you! Thank you!
+
+    User 1: You''re welcome! It''s just sitting in my closet collecting dust.
+
+    User 2: I''ll come pick it up later today.
+
+    User 1: Sounds good! I''ll be here.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

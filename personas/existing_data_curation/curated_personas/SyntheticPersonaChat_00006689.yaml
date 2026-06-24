@@ -1,0 +1,90 @@
+id: 00006689
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6689
+data:
+  user 1 personas: 'My favorite place to go is the mall.
+
+    I am single and go on dates regularly.
+
+    I have a pug named corky.
+
+    I enjoy playing tennis.'
+  user 2 personas: 'I enjoy baking and cooking.
+
+    My mother is an immigrant from saudi arabia.
+
+    I have a family of three daughters.
+
+    My daughters say i am a great mother.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to bake and cook.
+
+    User 1: That''s great! I love to cook too. What kind of things do you like to make?
+
+    User 2: I like to make all sorts of things, but I especially love making desserts.
+
+    User 1: Me too! I love making cookies and cakes.
+
+    User 2: Those are my favorites too!
+
+    User 1: What''s your favorite dessert to make?
+
+    User 2: I think my favorite dessert to make is chocolate chip cookies.
+
+    User 1: Those are my favorite too! I love how they smell when they''re baking.
+
+    User 2: Me too! They''re so delicious.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: Yes, I love to read. I also love to go shopping.
+
+    User 1: I love reading too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially love historical fiction and romance novels.
+
+    User 1: Those are my favorites too! I love getting lost in a good book.
+
+    User 2: Me too! I can read for hours on end.
+
+    User 1: I''m the same way. I love to read when I have some free time.
+
+    User 2: Me too! It''s the perfect way to relax.
+
+    User 1: What are your favorite stores to go shopping at?
+
+    User 2: I like to go to the mall. I also like to shop online.
+
+    User 1: I love the mall too! It''s so much fun to browse the different stores.
+
+    User 2: Me too! I love trying on clothes and finding new things to wear.
+
+    User 1: Me too! I can spend hours at the mall.
+
+    User 2: Me too! It''s the perfect place to relax and have some fun.
+
+    * * *
+
+    User 1: It was nice talking to you!
+
+    User 2: You too! I hope we can talk again soon.
+
+    User 1: Me too! Have a nice day.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

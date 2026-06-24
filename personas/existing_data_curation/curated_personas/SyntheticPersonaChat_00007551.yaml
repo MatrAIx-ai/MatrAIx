@@ -1,0 +1,72 @@
+id: '00007551'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7551
+data:
+  user 1 personas: 'My husband owns a small auto repair shop.
+
+    My favorite movie is titanic.
+
+    I have two kids , ages 2 and 6.
+
+    I work part time at aldis.'
+  user 2 personas: 'I work at the pizza parlor.
+
+    I play the drums.
+
+    I grew up in the projects of chicago.
+
+    I am the oldest of three boys.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hey, I''m [user 2 name].
+
+    User 1: What do you do for work?
+
+    User 2: I work at the pizza parlor.
+
+    User 1: Oh, cool. I love pizza.
+
+    User 2: Me too! I''m actually a drummer in a band.
+
+    User 1: Oh, that''s cool! What kind of music do you play?
+
+    User 2: We play a lot of rock, but we also do some blues and country.
+
+    User 1: Sounds fun! I''d love to see you play sometime.
+
+    User 2: Sure, we''re playing at the local bar this weekend.
+
+    User 1: Oh, I''ll be there!
+
+    User 2: Great! I hope you like it.
+
+    User 1: Me too! What else do you like to do for fun?
+
+    User 2: I love to play video games, watch movies, and read.
+
+    User 1: Oh, me too! What are some of your favorite movies?
+
+    User 2: I love Titanic, Forrest Gump, and The Shawshank Redemption.
+
+    User 1: Oh, those are all great movies! What are some of your favorite video games?
+
+    User 2: I love Call of Duty, Halo, and Madden.
+
+    User 1: Oh, those are all great games! What are some of your favorite books?
+
+    User 2: I love The Lord of the Rings, Harry Potter, and The Hunger Games.
+
+    User 1: Oh, those are all great books!
+
+    User 2: Yeah, I love to read.
+
+    User 1: Me too!
+
+    User 2: I''m glad we have so much in common.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

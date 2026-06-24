@@ -1,0 +1,58 @@
+id: 00008820
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8820
+data:
+  user 1 personas: 'I enjoy playing recreational games like cards , darts or billiards.
+
+    My favorite music genre is classic rock.
+
+    I like to try different beers from various countries.
+
+    I like to work on cars.'
+  user 2 personas: 'Marduk is my favorite band.
+
+    Lutefisk is the best dish in the whole world.
+
+    I always seem to be losing things , most recently , my mind.
+
+    I enjoy hiking on glaciers.'
+  Best Generated Conversation: 'User 1: Hey, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to hike on glaciers, play music, and eat lutefisk.
+
+    User 1: I''ve never been hiking on a glacier before, but it sounds like it would be a lot of fun.
+
+    User 2: It''s definitely a once-in-a-lifetime experience.
+
+    User 1: What kind of music do you play?
+
+    User 2: I play the guitar. I''m mostly into metal, but I also like classic rock and blues.
+
+    User 1: I love metal! What bands do you like?
+
+    User 2: My favorite band is Marduk. I also like Opeth, Amorphis, and Dark Tranquillity.
+
+    User 1: I''ve heard of Marduk, but I haven''t listened to them much. I''ll have to check them out.
+
+    User 2: You should! They''re great.
+
+    User 1: So, what''s your favorite thing about lutefisk?
+
+    User 2: I love the taste and the texture. It''s a very unique dish.
+
+    User 1: I''ve never had it, but I''m always willing to try new things.
+
+    User 2: I''m sure you''ll like it.
+
+    User 1: Well, I''m glad to have met you. It sounds like we have a lot in common.
+
+    User 2: Me too! It was nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

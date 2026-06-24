@@ -1,0 +1,66 @@
+id: '00001460'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1460
+data:
+  user 1 personas: 'My name is frank.
+
+    My hobbies include reading and cycling.
+
+    I m the general manager of the local grocery store.
+
+    I hope to someday compete professionally or atleast qualify for an event.'
+  user 2 personas: 'I like to watch tv.
+
+    I make 30k a year.
+
+    I love mac and cheese.
+
+    I like to sit on couch all day.
+
+    I make cars for a living.'
+  Best Generated Conversation: 'User 1: Hey! I''m Frank, what''s your name?
+
+    User 2: Hi, I''m Matt.
+
+    User 1: It''s nice to meet you, Matt. What do you do for a living?
+
+    User 2: I''m a car mechanic.
+
+    User 1: Oh, that''s cool. I like cars too.
+
+    User 2: What kind of cars do you like?
+
+    User 1: I like all kinds of cars, but I''m especially fond of classic cars.
+
+    User 2: Me too! I have a 1967 Camaro that I''m restoring.
+
+    User 1: That''s awesome! I''d love to see it sometime.
+
+    User 2: Sure, I''ll take you for a ride sometime.
+
+    User 1: Cool! What else do you like to do for fun?
+
+    User 2: I like to watch TV, play video games, and eat mac and cheese.
+
+    User 1: Mac and cheese is my favorite food!
+
+    User 2: Me too! I could eat it every day.
+
+    User 1: So, what are you doing later today?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we can hang out?
+
+    User 2: Sure, that sounds like fun.
+
+    User 1: Great! I''ll pick you up at 7.
+
+    User 2: See you then!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00006303'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6303
+data:
+  user 1 personas: 'I work at the hospital as a nurse.
+
+    I have pink hair.
+
+    I m allergic to bees.
+
+    I m the youngest of five.
+
+    I live in the city of grand rapids , michigan.'
+  user 2 personas: 'I have a twin sister named jessica.
+
+    My son was born completely blind.
+
+    I m a pilot for southwest.
+
+    My favorite food is fried chicken.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1''s name], I''m a nurse at the hospital. What''s your name?
+
+    User 2: Hello! I''m [user 2''s name], I''m a pilot for Southwest Airlines. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What''s your favorite food?
+
+    User 2: My favorite food is fried chicken! How about you?
+
+    User 1: I love fried chicken too! I also love chocolate.
+
+    User 2: Chocolate is delicious! I love it in all forms, especially in cakes and cookies.
+
+    User 1: Me too! I love chocolate chip cookies and chocolate cakes.
+
+    User 2: I''m glad we have similar tastes in food.
+
+    User 1: Me too! It makes it more fun to talk about food.
+
+    User 2: Definitely! Do you have any allergies?
+
+    User 1: I''m allergic to bees. What about you?
+
+    User 2: I''m allergic to peanuts.
+
+    User 1: Oh, that must be tough.
+
+    User 2: It can be, but it''s not too bad. I just have to be careful what I eat.
+
+    User 1: I''m glad you can manage it.
+
+    User 2: Thanks! So, what do you like to do for fun?
+
+    User 1: I love to read, go for walks, and spend time with my family.
+
+    User 2: Sounds like you have a lot of fun hobbies.
+
+    User 1: I do! I try to keep myself busy.
+
+    User 2: That''s great! It''s important to have things to do that you enjoy.
+
+    User 1: I agree! Do you have any hobbies?
+
+    User 2: I love to fly, play video games, and watch movies.
+
+    User 1: Those all sound like fun hobbies. I''ve always wanted to learn how to fly.
+
+    User 2: It''s not too hard! I''m sure you could do it.
+
+    User 1: Maybe I''ll take some lessons someday.
+
+    User 2: That would be awesome! I''m sure you''d love it.
+
+    User 1: Thanks! I''m glad we''re chatting. I''ve been having a great time.
+
+    User 2: Me too! It''s been nice to meet you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00000901
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 901
+data:
+  user 1 personas: 'I am a musician.
+
+    I wish i could spend more time at home.
+
+    My best friend is in a band with me.
+
+    I have taken formal music lessons since i was 5.'
+  user 2 personas: 'I live in a condo.
+
+    I have never been to canada.
+
+    My favorite food is steak.
+
+    I get up at 4am everyday.
+
+    I only listen to opera.'
+  Best Generated Conversation: 'User 1: Hi, I''m a musician.
+
+    User 2: Hi, I live in a condo.
+
+    User 1: I wish I could spend more time at home.
+
+    User 2: I get up at 4am everyday.
+
+    User 1: My best friend is in a band with me.
+
+    User 2: I have never been to Canada.
+
+    User 1: I''ve taken formal music lessons since I was 5.
+
+    User 2: My favorite food is steak.
+
+    User 1: I only listen to opera.
+
+    User 2: What do you think about the music industry?
+
+    User 1: I think it''s really competitive, but it''s also very rewarding.
+
+    User 2: I can imagine.
+
+    User 1: Do you like to go to concerts?
+
+    User 2: Yeah, I love live music!
+
+    User 1: Me too! What''s your favorite concert you''ve ever been to?
+
+    User 2: I saw Andrea Bocelli a few years ago, and it was amazing.
+
+    User 1: Wow, that must have been incredible!
+
+    User 2: It was! He''s such a talented singer.
+
+    User 1: I''ve heard a lot about him.
+
+    User 2: He''s definitely worth listening to.
+
+    User 1: I''ll have to check him out.
+
+    User 2: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

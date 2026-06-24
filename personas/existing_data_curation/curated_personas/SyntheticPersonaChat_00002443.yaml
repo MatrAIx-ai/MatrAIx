@@ -1,0 +1,90 @@
+id: '00002443'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2443
+data:
+  user 1 personas: 'I can play the piano.
+
+    I like to read books about chinese history.
+
+    My favourite colour is green.
+
+    I am a baseball player.'
+  user 2 personas: 'My favorite food is cheeseburgers.
+
+    I play the bass guitar.
+
+    I work out daily.
+
+    I like to go out fishing.
+
+    My mother is a teacher in the city.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to play the bass guitar, go out fishing, and work out daily.
+
+    User 1: That''s cool! I play the piano and like to read books about Chinese history.
+
+    User 2: I''ve always wanted to learn to play the piano. What kind of music do you like to play?
+
+    User 1: I like to play classical music, jazz, and pop.
+
+    User 2: That''s cool. I mostly play rock and blues.
+
+    User 1: Nice! I like rock and blues too.
+
+    User 2: What''s your favorite color?
+
+    User 1: My favorite color is green. What''s yours?
+
+    User 2: My favorite color is blue.
+
+    User 1: That''s a nice color.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher. What do you do?
+
+    User 1: I''m a baseball player.
+
+    User 2: That''s cool! I''ve always wanted to play baseball.
+
+    User 1: It''s a lot of fun.
+
+    User 2: I bet it is.
+
+    User 1: So, what''s your favorite food?
+
+    User 2: My favorite food is cheeseburgers. What''s yours?
+
+    User 1: My favorite food is pizza.
+
+    User 2: That''s a good choice.
+
+    User 1: It is.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going fishing with my friends.
+
+    User 1: That sounds fun.
+
+    User 2: It is.
+
+    User 1: Well, I have to go now. It was nice talking to you.
+
+    User 2: You too. Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

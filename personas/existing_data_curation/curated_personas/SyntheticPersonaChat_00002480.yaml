@@ -1,0 +1,72 @@
+id: 00002480
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2480
+data:
+  user 1 personas: 'I have four children.
+
+    I love watching game of thrones.
+
+    I enjoy walking for exercise.
+
+    I recently got a cat.'
+  user 2 personas: 'I love to cook.
+
+    I love dogs.
+
+    I am a happy person.
+
+    My dad was a carsalesman.'
+  Best Generated Conversation: 'User 1: Hey! I''m [User 1''s name]. What''s your name?
+
+    User 2: Hi! I''m [User 2''s name]. Nice to meet you!
+
+    User 1: Nice to meet you too! What do you like to do for fun?
+
+    User 2: I love to cook, and I also love dogs.
+
+    User 1: Oh, that''s cool! I love to cook too. Do you have any pets?
+
+    User 2: Yes, I have a dog named Buddy. He''s a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so cute!
+
+    User 2: Yes, they are! He''s my best friend.
+
+    User 1: That''s great! I have four children, so I don''t have time for a pet right now, but I''ve always wanted a dog.
+
+    User 2: You should definitely get one! They''re so much fun.
+
+    User 1: I know, I know! I''ll have to get one someday.
+
+    User 2: You should! In the meantime, you can come over and visit Buddy anytime.
+
+    User 1: Thanks! I will!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I love to watch Game of Thrones. It''s my favorite show!
+
+    User 2: Oh, I love Game of Thrones too! Who''s your favorite character?
+
+    User 1: I love Tyrion. He''s so funny.
+
+    User 2: Me too! He''s my favorite character too.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. Maybe I''ll go out to dinner with some friends.
+
+    User 1: That sounds fun! I''m going to spend the weekend with my kids.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I love spending time with them.
+
+    User 2: I''m sure you do! They''re lucky to have such a great mom.
+
+    User 1: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

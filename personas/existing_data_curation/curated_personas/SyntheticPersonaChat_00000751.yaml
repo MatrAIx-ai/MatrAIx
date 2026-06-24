@@ -1,0 +1,73 @@
+id: '00000751'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 751
+data:
+  user 1 personas: 'I like to swim.
+
+    I am in college.
+
+    I am a social butterfly.
+
+    I exercise everyday.'
+  user 2 personas: 'I was adopted.
+
+    I work at a local party store.
+
+    Christmas is my favorite holiday.
+
+    I met my birth mother when i was sixteen.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], I''m in college and I love to swim.
+
+    User 2: Nice to meet you, [name]! I''m [name], I work at a local party store.
+
+    User 1: That''s cool! Do you like it?
+
+    User 2: Yeah, it''s a lot of fun. I get to help people have a great time.
+
+    User 1: That''s awesome! I''m glad you like it.
+
+    User 2: Thanks! What do you do for fun?
+
+    User 1: I love to swim! I also like to exercise and be social.
+
+    User 2: That''s great! I used to swim when I was younger, but I don''t have as much time for it now.
+
+    User 1: I understand! I''m lucky that I have a pool at my college, so I can swim whenever I want.
+
+    User 2: That''s awesome! I''m jealous.
+
+    User 1: So, what''s your favorite holiday?
+
+    User 2: Christmas! I love the lights, the presents, and spending time with my family.
+
+    User 1: Me too! Christmas is my favorite holiday as well. I love everything about it.
+
+    User 2: It''s so nice to meet someone who feels the same way!
+
+    User 1: Yeah, me too!
+
+    User 2: So, what are you doing for Christmas this year?
+
+    User 1: I''m not sure yet. I''m thinking about going home to visit my family.
+
+    User 2: That sounds like a great plan! I''m sure you''ll have a lot of fun.
+
+    User 1: Thanks! I''m looking forward to it.
+
+    User 2: So, what''s your story? How did you end up meeting your birth mother?
+
+    User 1: I was adopted when I was a baby, and I always wanted to know who my birth mother was. When I was sixteen, I met her for the first time. It was a very emotional experience, but it was also very
+    rewarding.
+
+    User 2: That must have been amazing! I''m so glad you got to meet her.
+
+    User 1: Me too! It was something I''ve always wanted to do, and I''m so glad I finally had the chance.
+
+    User 2: I''m sure it was a very special moment.
+
+    User 1: It was! It''s a day I''ll never forget.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

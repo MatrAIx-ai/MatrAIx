@@ -1,0 +1,74 @@
+id: '00000042'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 42
+data:
+  user 1 personas: 'I am vegan.
+
+    I love to go to the beach.
+
+    I have 2 cats.
+
+    My favorite food is strawberries.
+
+    I work in a veterinary office.'
+  user 2 personas: 'I almost always wear a t shirt and jeans.
+
+    Skateboarding is a hobby of mine.
+
+    I go to college part time.
+
+    I have a crush on my co worker.
+
+    I love candy.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: What''s your favorite food?
+
+    User 2: I love candy!
+
+    User 1: Me too! I love strawberries.
+
+    User 2: I''ve never had strawberries.
+
+    User 1: You should try them! They''re delicious.
+
+    User 2: I''ll have to do that. What do you do for fun?
+
+    User 1: I like to go to the beach and play with my cats.
+
+    User 2: I love the beach! I used to go skateboarding there all the time.
+
+    User 1: I''ve never tried skateboarding.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might have to try it. What do you do for work?
+
+    User 2: I work part-time at a coffee shop.
+
+    User 1: Oh, cool. I''ve always wanted to work at a coffee shop.
+
+    User 2: It''s fun! I get to meet a lot of different people.
+
+    User 1: That sounds like a great job.
+
+    User 2: It is. What about you?
+
+    User 1: I work at a veterinary office.
+
+    User 2: Oh, that''s cool! I love animals.
+
+    User 1: Me too! I have two cats.
+
+    User 2: That''s awesome! I''ve always wanted a cat.
+
+    User 1: You should get one! They''re great pets.
+
+    User 2: I might have to do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

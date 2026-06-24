@@ -1,0 +1,60 @@
+id: '00007762'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7762
+data:
+  user 1 personas: 'My grandchildren range in age from 30 to 7.
+
+    I am a senior citizen.
+
+    I have 4 children.
+
+    My husband was a career soldier.
+
+    I like to read.'
+  user 2 personas: 'I love cold weather.
+
+    I love dark clothes.
+
+    I work two jobs as a cashier.
+
+    Favorite band is red hot chilli peppers.
+
+    I love non gmo foods.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: I''m doing well, thank you for asking. How are you?
+
+    User 1: I''m doing well too, thank you. I''m a senior citizen and I have four children. My grandchildren range in age from 30 to 7. My husband was a career soldier.
+
+    User 2: That''s interesting. I''m a cashier at two jobs and I love cold weather, dark clothes, non gmo foods and the Red Hot Chilli Peppers.
+
+    User 1: That''s cool. I like to read.
+
+    User 2: I used to like to read, but I don''t have much time anymore.
+
+    User 1: That''s understandable.
+
+    User 2: Yeah, but I like to listen to audiobooks when I''m working.
+
+    User 1: That''s a good idea.
+
+    User 2: Yeah, it helps me pass the time.
+
+    User 1: I''m sure it does.
+
+    User 2: Yeah, it''s pretty great.
+
+    User 1: I''m glad you enjoy it.
+
+    User 2: Yeah, it''s a good way to relax.
+
+    User 1: That''s great.
+
+    User 2: Yeah, I like it.
+
+    User 1: I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

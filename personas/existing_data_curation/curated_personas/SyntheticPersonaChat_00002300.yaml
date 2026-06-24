@@ -1,0 +1,98 @@
+id: '00002300'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2300
+data:
+  user 1 personas: 'I never knew my dad.
+
+    I have three tattoos.
+
+    I work at a bookstore.
+
+    I don t drive.
+
+    My mom is a nurse.'
+  user 2 personas: 'I wish i knew where i belonged.
+
+    I never sleep in.
+
+    I train horses for a living.
+
+    I write in my spare time.
+
+    I hate my parents , but i love my job.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is (user 2 name).
+
+    User 1: Nice to meet you, (user 2 name). What do you do for a living?
+
+    User 2: I train horses for a living.
+
+    User 1: That''s cool! I''ve always wanted to learn how to ride a horse.
+
+    User 2: It''s really fun! You should try it sometime.
+
+    User 1: I will! What''s your favorite thing about your job?
+
+    User 2: I love working with animals. They''re so much fun and they always make me smile.
+
+    User 1: That makes sense. I love animals too.
+
+    User 2: What do you do for a living?
+
+    User 1: I work at a bookstore.
+
+    User 2: Oh, that sounds cool! I love books.
+
+    User 1: Me too! I read a lot in my spare time.
+
+    User 2: What''s your favorite book?
+
+    User 1: I have a lot of favorite books, but one of my favorites is "The Great Gatsby."
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: I will! What''s your favorite thing to do in your spare time?
+
+    User 1: I like to read, go for walks, and hang out with my friends.
+
+    User 2: That sounds like a nice life.
+
+    User 1: It is! I''m pretty happy with it.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what do you like to do in your spare time?
+
+    User 2: I like to write, ride horses, and hang out with my friends.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is! I like my life.
+
+    User 1: That''s good to hear.
+
+    User 2: So, what are you looking for in a friend?
+
+    User 1: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 2: That''s a good list of qualities.
+
+    User 1: I think so too.
+
+    User 2: I think I might be the person you''re looking for.
+
+    User 1: I think you might be too.
+
+    User 2: Well, then we should hang out sometime.
+
+    User 1: I''d love that.
+
+    User 2: Great! We can exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

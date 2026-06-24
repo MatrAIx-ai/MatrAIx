@@ -1,0 +1,86 @@
+id: 00003943
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3943
+data:
+  user 1 personas: 'I drink a lot of caffeine.
+
+    I have a very unhealthy diet.
+
+    I am very skinny and energetic.
+
+    I can run very fast for long distances.
+
+    I have a cheap car my dad gave me.'
+  user 2 personas: 'I am colorblind.
+
+    I am still living at home at age 30.
+
+    I am a volunteer firefighter.
+
+    I am currently trying to open my own grocery store.
+
+    I have a college degree in marketing.'
+  Best Generated Conversation: 'User 1: Hey there, how are you doing?
+
+    User 2: I''m doing well, thanks for asking! How about you?
+
+    User 1: I''m doing good, thanks! I''m just getting ready to head out for a run.
+
+    User 2: Oh, that sounds fun! I love running. I used to run cross country in high school.
+
+    User 1: That''s awesome! I''m not that fast, but I like to run for the exercise.
+
+    User 2: Me too! It''s a great way to clear your head and get some fresh air.
+
+    User 1: Definitely! I''m looking forward to getting out there.
+
+    User 2: Have fun! I''m sure you''ll do great.
+
+    User 1: Thanks!
+
+
+    (After the run)
+
+
+    User 1: Hey, I''m back from my run! I feel great!
+
+    User 2: That''s awesome! I''m glad you enjoyed it.
+
+    User 1: Me too! I''m thinking about going for another one tomorrow.
+
+    User 2: That sounds like a great idea! I''ll probably join you.
+
+    User 1: Awesome! We can make it a competition.
+
+    User 2: Sounds good! I''m sure I''ll beat you.
+
+    User 1: We''ll see about that!
+
+
+    (The next day)
+
+
+    User 1: Hey, I''m ready for our run!
+
+    User 2: Me too! Let''s do this!
+
+
+    (After the run)
+
+
+    User 1: I think I won!
+
+    User 2: No way! I''m the one who''s been running cross country since high school!
+
+    User 1: Well, I''m the one who just ran two miles!
+
+    User 2: True, but I was still faster.
+
+    User 1: We can do this again sometime.
+
+    User 2: Sounds good! I''m always up for a challenge.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

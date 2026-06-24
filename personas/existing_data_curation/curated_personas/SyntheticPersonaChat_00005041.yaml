@@ -1,0 +1,56 @@
+id: '00005041'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5041
+data:
+  user 1 personas: 'I live in las vegas , nevada.
+
+    I work as a personal trainer , 5 days a week.
+
+    I go fishing on the weekends to relax.
+
+    I love hiking and staying fit.'
+  user 2 personas: 'I live in america in the state of florida.
+
+    My family has three dogs and my dog is named maddie.
+
+    I have braces.
+
+    I just started the tenth grade and my concentration is in science.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking with my dogs.
+
+    User 1: That sounds fun! I love hiking too. Where are some of your favorite places to hike?
+
+    User 2: I like to hike in the mountains. I live in Florida, so there are a lot of beautiful mountains here.
+
+    User 1: That''s cool. I''m from Vegas, so I don''t have any mountains close by.
+
+    User 2: You should come visit Florida sometime. We have some amazing hiking trails.
+
+    User 1: I will! I''ve always wanted to go hiking in the mountains.
+
+    User 2: You won''t be disappointed.
+
+    User 1: I''m sure! What other hobbies do you have?
+
+    User 2: I like to go fishing.
+
+    User 1: That''s another hobby of mine! I love fishing in the ocean.
+
+    User 2: I usually go fishing in the lakes. I like to catch bass.
+
+    User 1: I''ve never caught a bass before.
+
+    User 2: You should try it sometime. They''re a lot of fun to catch.
+
+    User 1: I will! I''m always looking for new hobbies.
+
+    User 2: I''m glad! You should definitely come visit Florida sometime and we can go hiking and fishing together.
+
+    User 1: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00001494
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1494
+data:
+  user 1 personas: 'I am 29 years old.
+
+    I live in a suburb of boston.
+
+    I enjoy hiking and riding my bicycle.
+
+    I am a night owl.
+
+    My favorite band is pearl jam.'
+  user 2 personas: 'I like to play volleyball.
+
+    I like to go on long hikes.
+
+    I like to pickle eggs.
+
+    I like to do my nails.
+
+    I like to come up with new hairstyles.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi there! I''m [User 2''s name]. What''s yours?
+
+    User 1: I''m [User 1''s name]. Nice to meet you!
+
+    User 2: Nice to meet you too! Where are you from?
+
+    User 1: I''m from a suburb of Boston. How about you?
+
+    User 2: I''m from the Midwest.
+
+    User 1: Oh, cool! I''ve always wanted to visit the Midwest.
+
+    User 2: You should! It''s beautiful out there.
+
+    User 1: I will! What are some of your hobbies?
+
+    User 2: I like to play volleyball, go on long hikes, pickle eggs, do my nails, and come up with new hairstyles.
+
+    User 1: Wow, you have a lot of hobbies! I like to hike and ride my bike. I''m also a night owl.
+
+    User 2: I love hiking too! It''s so peaceful and relaxing.
+
+    User 1: It is! I love being out in nature.
+
+    User 2: Me too! So, what do you like to do for fun?
+
+    User 1: I like to watch movies, play video games, and read.
+
+    User 2: I love movies too! What''s your favorite movie?
+
+    User 1: I have a lot of favorite movies, but one of my favorites is The Shawshank Redemption.
+
+    User 2: I love that movie! It''s so good.
+
+    User 1: Me too! It''s one of my all-time favorites.
+
+    User 2: It''s so good! I''m glad we agree.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

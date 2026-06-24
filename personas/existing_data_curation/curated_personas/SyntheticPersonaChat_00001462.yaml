@@ -1,0 +1,70 @@
+id: '00001462'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1462
+data:
+  user 1 personas: 'My name is kevin.
+
+    I am studying software development.
+
+    I play the guitar.
+
+    I am a student in college.'
+  user 2 personas: 'I practice yoga daily.
+
+    I am a vegan.
+
+    I am trying to build my online business.
+
+    I have a marketing job.'
+  Best Generated Conversation: 'User 1: Hi, I''m Kevin. What''s your name?
+
+    User 2: Hi, I''m Ashley.
+
+    User 1: Nice to meet you Ashley. What do you do for a living?
+
+    User 2: I''m a marketing manager at a tech company.
+
+    User 1: Cool! I''m studying software development in college.
+
+    User 2: That''s awesome! I''ve always been interested in software development, but I never had the opportunity to learn it.
+
+    User 1: You should definitely give it a try! It''s a lot of fun and it''s a great way to make a living.
+
+    User 2: I might just do that! What kind of software do you develop?
+
+    User 1: I''m mostly working on web applications right now, but I''m also interested in mobile development.
+
+    User 2: Web applications are cool! I''ve used a few of them.
+
+    User 1: Yeah, they''re pretty neat. I''m glad you''ve enjoyed them.
+
+    User 2: Me too. So, what kind of guitar do you play?
+
+    User 1: I play an acoustic guitar. I''ve been playing for about six years now.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to learn how to play the guitar.
+
+    User 1: You should definitely give it a try! It''s a lot of fun and it''s a great way to relax.
+
+    User 2: I might just do that! Thanks for the suggestion.
+
+    User 1: No problem! I''m always happy to help.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go to a concert or just hang out with friends.
+
+    User 2: That sounds like a good plan. I''m going to be working on my online business.
+
+    User 1: Oh, that''s cool! What kind of online business do you have?
+
+    User 2: I sell handmade jewelry.
+
+    User 1: Oh, that''s awesome! I love handmade jewelry.
+
+    User 2: Me too! I''m glad you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

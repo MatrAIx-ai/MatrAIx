@@ -1,0 +1,86 @@
+id: '00001557'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1557
+data:
+  user 1 personas: 'I am in 3rd grade.
+
+    I am a french girl , but i moved to the us last year.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.
+
+    I live with my parents and my little brother.
+
+    I like to play soccer , draw and read asterix.'
+  user 2 personas: 'I have 5 kids.
+
+    I love to socialize.
+
+    I love new gadgets.
+
+    I am great with babies.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1]
+
+    User 2: Hi [User 2], I''m [User 2]!
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: I''m in 3rd grade.
+
+    User 2: Oh, that''s great! I have 5 kids, two of which are in 3rd grade.
+
+    User 1: Wow, that must be a lot of fun!
+
+    User 2: It is! I love being a mom.
+
+    User 1: Me too! I love my parents and my little brother.
+
+    User 2: That''s great! What do you like to do for fun?
+
+    User 1: I like to play soccer, draw, and read Asterix.
+
+    User 2: Oh, those are all great activities! I love to play soccer too.
+
+    User 1: That''s great! We should play together sometime.
+
+    User 2: I would love that!
+
+    User 1: What are your favorite new gadgets?
+
+    User 2: I love my new phone! It''s so much faster and has more features than my old phone.
+
+    User 1: That sounds great! I''m going to get a new phone soon.
+
+    User 2: You should! It''s so much fun to have a new phone.
+
+    User 1: I know! I''m excited for mine.
+
+    User 2: Me too!
+
+    User 1: So, what do you like to do for work?
+
+    User 2: I''m a stay-at-home mom, but I used to be a nurse.
+
+    User 1: Oh, that''s cool! I''m going to be a nurse when I grow up.
+
+    User 2: That''s great! Nursing is a great career.
+
+    User 1: I know! I''m excited to start.
+
+    User 2: Me too!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to go to the park, go shopping, and watch movies.
+
+    User 1: That sounds like a lot of fun! I like to do all of those things too.
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

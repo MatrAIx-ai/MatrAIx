@@ -1,0 +1,64 @@
+id: 00002687
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2687
+data:
+  user 1 personas: 'The future scares me.
+
+    I have six siblings.
+
+    I was adopted when i was a baby.
+
+    My adopted dad works at hp.'
+  user 2 personas: 'I help my neighbor.
+
+    I have a dog and we go for walks.
+
+    I live in a city.
+
+    I like to go to the farmers markets to buy local veggies and fruits.
+
+    I am a grandmother.'
+  Best Generated Conversation: 'User 1: I''m a little nervous about the future. What do you think the future holds?
+
+    User 2: I think the future is bright. We have so many amazing technologies that are making our lives better.
+
+    User 1: I know, but I''m still worried about climate change and other global problems.
+
+    User 2: I hear you. Those are definitely serious problems. But I think we can solve them if we work together.
+
+    User 1: I hope you''re right. I''m not sure I''m brave enough to face the future.
+
+    User 2: You''re braver than you think. You''ve already faced a lot in your life, and you''ve come out stronger.
+
+    User 1: Thanks for that. I needed to hear that.
+
+    User 2: You''re welcome. So, what do you do for fun?
+
+    User 1: I like to read, write, and play video games.
+
+    User 2: I like to read too. What kind of books do you like to read?
+
+    User 1: I like to read science fiction, fantasy, and historical fiction.
+
+    User 2: I like to read those genres too. I just finished reading a really good book called "The Martian."
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should. It''s a really good story.
+
+    User 1: So, what do you like to do with your dog?
+
+    User 2: We go for walks in the park, play fetch, and just hang out together.
+
+    User 1: That sounds really nice. I wish I had a dog.
+
+    User 2: You should get one! They''re great companions.
+
+    User 1: I know, I know. I''ve been thinking about it.
+
+    User 2: You should definitely do it. You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

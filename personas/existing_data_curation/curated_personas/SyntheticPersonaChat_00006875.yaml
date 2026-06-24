@@ -1,0 +1,76 @@
+id: 00006875
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6875
+data:
+  user 1 personas: 'My favorite singer is jess greenberg.
+
+    I ride a motorcycle , but it s not a harley.
+
+    Just this past week i got a job cleaning gutters.
+
+    I eat a lot of carbs even though my doctor tells me not to.'
+  user 2 personas: 'I like to play nintendo.
+
+    I live in the great white north.
+
+    I like to race rc cars.
+
+    I love to eat fish.
+
+    I have a pet husky.'
+  Best Generated Conversation: 'User 1: Hey! My name is Jess.
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play Nintendo, race RC cars, and eat fish.
+
+    User 1: Cool! I like to play video games too. What games do you like to play?
+
+    User 2: I like playing Mario Kart, Zelda, and Animal Crossing.
+
+    User 1: Nice! I''ve played Mario Kart and Zelda, but I''ve never played Animal Crossing.
+
+    User 2: It''s a really fun game. You should check it out.
+
+    User 1: I will. Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a nurse.
+
+    User 2: That''s really important work.
+
+    User 1: Thanks! It can be challenging, but it''s also very rewarding.
+
+    User 2: I bet it is.
+
+    User 1: So, what do you do for fun outside of work?
+
+    User 2: I like to race RC cars and play with my husky.
+
+    User 1: I love dogs! I used to have a golden retriever.
+
+    User 2: Huskies are great dogs. They''re very loyal and affectionate.
+
+    User 1: They sound like it. I''ve never met a husky before.
+
+    User 2: You should meet mine sometime.
+
+    User 1: I would love to.
+
+    User 2: It''s a date!
+
+    User 1: Great! I''ll bring my golden retriever.
+
+    User 2: Sounds like a great time!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

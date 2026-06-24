@@ -1,0 +1,19 @@
+id: 00057085
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 57085
+persona_description: A meteorologist who specializes in predicting weather patterns and forecasting severe weather events, particularly snowstorms. They have a keen eye for detecting low-pressure systems
+  and their potential for producing heavy snowfall in the winter months. They have experience in monitoring and analyzing weather patterns and have a deep understanding of the climatological conditions
+  that allow for the formation of these systems. They are also skilled in predicting and forecasting the impact of these systems on specific regions, such as the Twin Cities, and have experience in coordinating
+  and coordinating with local authorities and emergency services to prepare for and respond to severe weather events.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: severe weather forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

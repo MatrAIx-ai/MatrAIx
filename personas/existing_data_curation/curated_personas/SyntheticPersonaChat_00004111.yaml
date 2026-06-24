@@ -1,0 +1,90 @@
+id: '00004111'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4111
+data:
+  user 1 personas: 'I think i need a vacation.
+
+    If things are not done right i will redo them again and again.
+
+    I am a perfectionist.
+
+    I take forever to get tasks done so i start early and clock out late.
+
+    I work too much.'
+  user 2 personas: 'I like to hunt.
+
+    I am not married.
+
+    I love basketball.
+
+    I like to sing.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. What do you do for fun?
+
+    User 2: I like to hunt, sing, and play basketball.
+
+    User 1: That sounds like fun. I like to play video games, read books, and go for walks.
+
+    User 2: I''ve never been much of a video gamer. I do like to read books, though.
+
+    User 1: What kinds of books do you like to read?
+
+    User 2: I like to read thrillers, mysteries, and romance novels.
+
+    User 1: I like to read thrillers and mysteries too. I''m not much of a romance novel person, though.
+
+    User 2: I know a lot of people who aren''t into romance novels. I guess they''re just not everyone''s cup of tea.
+
+    User 1: Yeah, I guess so. So, what do you like to do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool. I''ve always been interested in coding, but I''ve never been able to get the hang of it.
+
+    User 2: It''s not that hard once you get the hang of it. It''s just a lot of practice.
+
+    User 1: Yeah, I guess so. So, what''s your favorite thing about your job?
+
+    User 2: I like the problem solving aspect of it. I like coming up with solutions to complex problems.
+
+    User 1: I can see how that would be fun. So, what''s your least favorite thing about your job?
+
+    User 2: I don''t really have a least favorite thing about my job. I like it all.
+
+    User 1: That''s good to hear. So, what do you like to do for fun outside of work?
+
+    User 2: I like to hunt, sing, and play basketball.
+
+    User 1: I''ve already heard that.
+
+    User 2: Oh, right. I''m sorry. I get excited when I talk about things I like.
+
+    User 1: That''s okay. I like to talk about things I like too.
+
+    User 2: Do you have any pets?
+
+    User 1: I have a cat named Mittens.
+
+    User 2: What kind of cat is it?
+
+    User 1: She''s a tabby.
+
+    User 2: Tabby cats are so cute! I love their little faces.
+
+    User 1: I know, right? They''re the best.
+
+    User 2: So, what do you think of me so far?
+
+    User 1: I think you''re really cool. We have a lot in common.
+
+    User 2: I think you''re cool too. I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

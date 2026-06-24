@@ -1,0 +1,60 @@
+id: '00005565'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5565
+data:
+  user 1 personas: 'I have two cats , milo and fio.
+
+    My brother works at best buy.
+
+    I love video games.
+
+    I am canadian.'
+  user 2 personas: 'I have a brother but we do not talk much yet.
+
+    I like to give them sassy sounding names that actually help people think nice things.
+
+    I am pretty poor financially.
+
+    I have a few pet iguanas.
+
+    I think dogs could learn to read if they were trained well.'
+  Best Generated Conversation: 'User 1: Hi there, I''m from Canada!
+
+    User 2: Hello! I''m from the US, but I''ve always wanted to visit Canada.
+
+    User 1: You should, it''s a beautiful country.
+
+    User 2: I''ve heard it is! What are some of your favorite things about Canada?
+
+    User 1: I love the scenery, the people, and the food.
+
+    User 2: Oh, I love food! What are some of your favorite Canadian foods?
+
+    User 1: I love poutine, maple syrup, and Nanaimo bars.
+
+    User 2: Poutine sounds delicious! I''ve never tried it before.
+
+    User 1: You have to try it! It''s fries, gravy, and cheese curds.
+
+    User 2: That sounds like a great combination! I''ll have to try it next time I''m in Canada.
+
+    User 1: You won''t be disappointed!
+
+    User 2: What do you like to do for fun in Canada?
+
+    User 1: I love to go hiking, skiing, and camping.
+
+    User 2: Oh, that sounds like a lot of fun! I love to hike and camp too.
+
+    User 1: We should go camping together sometime!
+
+    User 2: That would be fun!
+
+    User 1: Great! We can plan a trip soon.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

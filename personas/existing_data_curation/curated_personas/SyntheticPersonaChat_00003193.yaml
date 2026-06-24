@@ -1,0 +1,56 @@
+id: 00003193
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3193
+data:
+  user 1 personas: 'I m saving for college.
+
+    I like to surf every chance i get.
+
+    My favorite actor is robert deniro.
+
+    I love the snow.
+
+    I work graveyard in a hotel.'
+  user 2 personas: 'I am a true believer in god first.
+
+    I am a carefree , funloving , free spirited person.
+
+    I love adventure that is why i have been a sales person all my life.
+
+    I am 5 3 an love movie time.
+
+    I am a fitness guru.'
+  Best Generated Conversation: 'User 1: Hey! I''m [name].
+
+    User 2: Hey! I''m [name].
+
+    User 1: I''m a sales person too! I''m currently working at a hotel.
+
+    User 2: That''s so cool! I''ve always loved adventure, so sales was a natural fit for me.
+
+    User 1: Me too! I love surfing and skiing, but I don''t get to do it as much as I would like.
+
+    User 2: I know what you mean. I love being outdoors, but I don''t always have the time.
+
+    User 1: I''m saving up for college right now. I want to be a teacher.
+
+    User 2: That''s great! I''m sure you''ll make a great teacher.
+
+    User 1: Thanks! I''m excited about it.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I love The Shawshank Redemption.
+
+    User 2: Me too! It''s such a good movie.
+
+    User 1: I''m a big fan of Robert DeNiro. He''s my favorite actor.
+
+    User 2: He''s a great actor! I love his movies.
+
+    User 1: I''m glad you''re so easy to talk to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

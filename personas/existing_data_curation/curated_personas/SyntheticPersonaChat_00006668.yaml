@@ -1,0 +1,57 @@
+id: 00006668
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6668
+data:
+  user 1 personas: 'My daddy brings home flowers for me.
+
+    I like playing outside in the sun with my dolls.
+
+    My mommy makes me a picnic lunch to eat outside.
+
+    I sleep in a princess bed.
+
+    I am a four year old girl with brown eyes and hair.'
+  user 2 personas: 'I am the leader of the french fry research department at del taco.
+
+    My daily driver is a bicycle that you pedal with your hands.
+
+    My favorite band is up.
+
+    I once fell up a whole flight of stairs.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: My name is (name). I am (age) years old. I have (hair color) hair and (eye color) eyes. I like to play outside in the sun with my dolls. I also like to sleep in a princess bed.
+
+    User 2: That sounds like a lot of fun! I''m (name). I''m (age) years old. I have (hair color) hair and (eye color) eyes. I''m the leader of the french fry research department at Del Taco. I ride a bicycle
+    that you pedal with your hands. My favorite band is U2. I once fell up a whole flight of stairs.
+
+    User 1: That''s really interesting! I''ve never met anyone who works in the french fry research department before.
+
+    User 2: It''s a lot of fun! We get to experiment with all sorts of different flavors and textures.
+
+    User 1: That sounds awesome! I love french fries.
+
+    User 2: Me too! I could eat them every day.
+
+    User 1: What''s your favorite flavor of french fry?
+
+    User 2: I like them all, but I think my favorite is the sweet potato fry.
+
+    User 1: I''ve never tried those before. I''ll have to give them a try next time I''m at Del Taco.
+
+    User 2: You won''t be disappointed!
+
+    User 1: Thanks for talking to me! I''m having a lot of fun.
+
+    User 2: You''re welcome! I''m glad to hear that.
+
+    User 1: I''m going to go play outside now. Bye!
+
+    User 2: Bye! Have fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

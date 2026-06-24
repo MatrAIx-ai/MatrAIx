@@ -1,0 +1,18 @@
+id: '00053025'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53025
+persona_description: A scientist who specializes in genetic engineering and has expertise in manipulating and controlling gene expression in trees. This scientist is currently leading a team that has successfully
+  used gene manipulation to double the growth rate of trees, making them larger and more leafy. This discovery could lead to significant advancements in reforestation efforts and could potentially help
+  mitigate the effects of deforestation.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: genetic engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: genetic engineering of trees
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

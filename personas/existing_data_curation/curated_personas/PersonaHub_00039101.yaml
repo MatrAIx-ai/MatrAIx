@@ -1,0 +1,20 @@
+id: 00039101
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39101
+persona_description: A professional engineer who specializes in the design and implementation of industrial signal processing systems, particularly in the field of temperature measurement. They are experienced
+  in the use of analog-to-digital converters (A/D converters) and microcontrollers to interface with various types of sensors, including thermocouples, RTDs, and thermistors. They are skilled in the use
+  of background calibration techniques to maintain the accuracy of the sensor signals over time and temperature, and are familiar with the use of spi interfaces for serial communication. They are also experienced
+  in the use of a variety of sensors, including current loops, and are skilled in the design and implementation of low-power, high-precision industrial 4-20mA current loops. They are also familiar with
+  the use of ultra-low quiescent current linear regulators for the power supply of the current loop transmitter.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: industrial signal processing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

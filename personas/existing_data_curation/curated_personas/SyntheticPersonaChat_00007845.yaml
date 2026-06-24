@@ -1,0 +1,58 @@
+id: 00007845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7845
+data:
+  user 1 personas: 'I wish i could be more serious about school.
+
+    I have been in a lot of romantic relationships that have ended up poorly.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I get distracted easily.'
+  user 2 personas: 'I love to eat shrimp and lobster.
+
+    I vacation along lake michigan every summer.
+
+    My favorite drink is iced coffee.
+
+    I have a black belt in karate.
+
+    I am in a jazz band and play the saxophone.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play music, go on vacation, and eat seafood.
+
+    User 1: That''s cool! I like to play video games, go out with friends, and read.
+
+    User 2: I''ve never been very good at video games, but I love reading. What are some of your favorite books?
+
+    User 1: I like to read a lot of different things, but I''m really into fantasy and science fiction.
+
+    User 2: Me too! I love the Lord of the Rings series and The Hitchhiker''s Guide to the Galaxy.
+
+    User 1: I love those books too! I''m also a big fan of the Wheel of Time series and the Dune series.
+
+    User 2: I''ve never heard of those, but I''ll have to check them out.
+
+    User 1: You should! They''re both really good.
+
+    User 2: So, what are you doing this summer?
+
+    User 1: I''m not sure yet. I''m thinking about going on vacation, but I''m not sure where yet.
+
+    User 2: I''m going to vacation in Lake Michigan with my family. It''s a beautiful place.
+
+    User 1: That sounds nice! I''ve never been to Lake Michigan before.
+
+    User 2: You should go! It''s a great place to relax and have fun.
+
+    User 1: Maybe I will. Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

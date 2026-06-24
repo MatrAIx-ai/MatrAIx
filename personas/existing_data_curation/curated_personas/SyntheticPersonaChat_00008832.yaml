@@ -1,0 +1,68 @@
+id: 00008832
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8832
+data:
+  user 1 personas: 'I likw to go to the farmers markets to buy local veggies and fruits.
+
+    I have a dog and we go for walks.
+
+    I help my neighbor.
+
+    I am a grandmother.
+
+    I live in a city.'
+  user 2 personas: 'My weekends are filled with bird watching.
+
+    My favorite drink is pepsi.
+
+    I like reading horror novels.
+
+    I work as a librarian.'
+  Best Generated Conversation: 'User 1: Hi! I''m Lisa.
+
+    User 2: Hi Lisa, I''m James.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go bird watching, read horror novels, and work as a librarian.
+
+    User 1: That''s cool! I like to go to the farmers markets, walk my dog, and help my neighbor.
+
+    User 2: Do you have any kids?
+
+    User 1: I have two kids.
+
+    User 2: That''s great! What are their names?
+
+    User 1: Their names are Peter and Mary.
+
+    User 2: Are they in school?
+
+    User 1: Yes, they are both in school. Peter is in preschool and Mary is in kindergarten.
+
+    User 2: That''s great! I love kids.
+
+    User 1: Me too! They''re so much fun.
+
+    User 2: What do you like most about them?
+
+    User 1: I love their imaginations and their sense of humor.
+
+    User 2: I know what you mean! Kids are always so funny.
+
+    User 1: They are! They make me laugh all the time.
+
+    User 2: I''m glad to hear that! You seem like a great mom.
+
+    User 1: Thanks! I try my best.
+
+    User 2: I''m sure you do. It sounds like you''re doing a great job.
+
+    User 1: Thanks for saying that.
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00000580
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 580
+data:
+  user 1 personas: 'I am a student.
+
+    I like pasta.
+
+    I like cookies.
+
+    I like painting , i can cook well.
+
+    I also like ice cream.'
+  user 2 personas: 'I have a cat.
+
+    I have depression and anxiety so i don t really go out a lot.
+
+    I hope to move out soon.
+
+    I work at home , editing.'
+  Best Generated Conversation: 'User 1: I''m a student too! What are you studying?
+
+    User 2: I''m studying editing. I hope to move out soon, but I''m not sure where I''ll go.
+
+    User 1: I''m not sure where I''ll go either, but I''m looking forward to the adventure!
+
+    User 2: I hope you have a good time!
+
+    User 1: Thanks! I''m sure I will.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to paint, cook, and eat ice cream.
+
+    User 2: I love ice cream! What''s your favorite flavor?
+
+    User 1: I love chocolate chip cookie dough ice cream.
+
+    User 2: That sounds delicious! I''ve never had that before.
+
+    User 1: You should try it! It''s really good.
+
+    User 2: I will! I''m always looking for new ice cream flavors to try.
+
+    User 1: Me too! I love trying new things.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like all kinds of music, but I especially like rock and pop.
+
+    User 2: I like rock too! What are your favorite bands?
+
+    User 1: I like The Beatles, The Rolling Stones, and Queen.
+
+    User 2: I love The Beatles! I''ve been listening to them since I was a kid.
+
+    User 1: Me too! They''re my favorite band of all time.
+
+    User 2: They''re so good!
+
+    User 1: Yeah, they really are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

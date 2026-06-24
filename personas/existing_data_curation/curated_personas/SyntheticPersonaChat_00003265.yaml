@@ -1,0 +1,76 @@
+id: '00003265'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3265
+data:
+  user 1 personas: 'My parents are lawyers.
+
+    I would like to work for the smithsonian.
+
+    I once swam with manta rays.
+
+    My favorite show is csi.'
+  user 2 personas: 'I like to cook.
+
+    I am a foodie.
+
+    I love kids and dogs.
+
+    I like to go shopping with my daughters.
+
+    I love to chat with my friends.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, [name], my name is [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, go shopping, and chat with my friends.
+
+    User 1: I like to cook too! What''s your favorite thing to cook?
+
+    User 2: I love to cook anything Italian, but my favorite thing to cook is lasagna.
+
+    User 1: Lasagna is one of my favorites too! I love how it''s so easy to make and it always turns out delicious.
+
+    User 2: Me too! I love lasagna so much, I could eat it every day.
+
+    User 1: I know what you mean! I''m always looking for new lasagna recipes to try.
+
+    User 2: Me too! I love finding new ways to make lasagna even more delicious.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go shopping with my daughters, or I might just stay home and cook lasagna.
+
+    User 1: If you decide to stay home and cook lasagna, I''d love to come over and help.
+
+    User 2: That sounds like fun! I''ll let you know what I decide.
+
+    User 1: Great! I can''t wait to hear from you.
+
+    User 2: You''re welcome!
+
+    User 1: So, you like to chat with your friends. What kind of things do you talk about?
+
+    User 2: We talk about everything! Our lives, our families, our jobs, our hobbies.
+
+    User 1: That sounds like a lot of fun! I love talking to my friends too.
+
+    User 2: Me too! It''s always nice to have someone to talk to about things that are important to you.
+
+    User 1: I know what you mean! I feel like I can always talk to my friends about anything.
+
+    User 2: Me too! That''s what makes them so special.
+
+    User 1: I agree! I''m so glad I have such great friends.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

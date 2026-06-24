@@ -1,0 +1,73 @@
+id: '00007620'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7620
+data:
+  user 1 personas: 'I live in america in the state of florida.
+
+    I have braces.
+
+    My family has three dogs and my dog is named maddie.
+
+    I am fifteen years old.
+
+    I just started the tenth grade and my concentration is in science.'
+  user 2 personas: 'I like to make short films.
+
+    I have traveled overseas many times.
+
+    My mother is a well known celebrity.
+
+    I am a civil war reenactment participant.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m 15 years old and I live in Florida. I love science and I''m just starting tenth grade. I have braces and my family has three dogs.
+
+    User 2: Hi, I''m [name]. I''m 16 years old and I live in California. I like to make short films and I''ve traveled overseas many times. My mother is a well known celebrity and I''m a civil war reenactment
+    participant.
+
+    User 1: That''s cool! I''ve always wanted to travel overseas. Where have you been?
+
+    User 2: I''ve been to Europe, Asia, and Africa. I really like traveling because it''s a great way to learn about different cultures and meet new people.
+
+    User 1: I can imagine. I''ve never been outside of the United States, but I''d love to travel someday.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I know, I know. I''ll try to plan a trip soon.
+
+    User 2: Good! I''m sure you''ll have a great time.
+
+    User 1: Thanks.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and read books. I also like to go for walks with my dog.
+
+    User 2: I like to do a lot of the same things. I also like to make short films and play guitar.
+
+    User 1: Cool! I''ve always wanted to learn to play guitar.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I know, I know. I''ll try to learn sometime.
+
+    User 2: Good! I''m sure you''ll be great at it.
+
+    User 1: Thanks.
+
+    User 2: So, what''s your favorite book?
+
+    User 1: My favorite book is The Lord of the Rings.
+
+    User 2: Me too! I love that book.
+
+    User 1: It''s so good. I''ve read it multiple times.
+
+    User 2: Me too. I love the characters and the story.
+
+    User 1: Me too. I think it''s a classic.
+
+    User 2: I agree. It''s one of my favorite books of all time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

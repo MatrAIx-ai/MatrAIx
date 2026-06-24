@@ -1,0 +1,82 @@
+id: '00006643'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6643
+data:
+  user 1 personas: 'I travel every year to disney world.
+
+    I have two dogs.
+
+    I like to read true crime novels.
+
+    I am close to both of my brothers.
+
+    I work as a secretary at an insurance agency.'
+  user 2 personas: 'I have a pet snake.
+
+    My dream is to move to the middle of the desert.
+
+    Before i die , i want to skydive.
+
+    I am a famous video game character online.
+
+    I start an internship in engineering later this year.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to play video games, skydive, and read true crime novels.
+
+    User 1: That''s cool! I love to read true crime novels too. Do you have any favorites?
+
+    User 2: I really like the Hannibal Lecter series.
+
+    User 1: I''ve heard good things about those. I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to travel and spend time with my family and friends.
+
+    User 1: I love to travel too! Where have you been to recently?
+
+    User 2: I went to Europe last year and it was amazing! I''m planning to go to Japan next year.
+
+    User 1: Japan sounds amazing! I''ve always wanted to go there.
+
+    User 2: You should definitely go! It''s a beautiful country with a rich culture.
+
+    User 1: I''m sure I will someday.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I like to go to Disney World every year. I also have two dogs that I love to spend time with.
+
+    User 2: I''ve never been to Disney World but I''ve heard great things about it. I''m not really a dog person but I can see why people love them.
+
+    User 1: They''re great companions!
+
+    User 2: So, what do you do for work?
+
+    User 1: I work as a secretary at an insurance agency.
+
+    User 2: That sounds interesting! I''m starting an internship in engineering later this year.
+
+    User 1: That''s great! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just taking things day by day.
+
+    User 1: That''s okay. You have plenty of time to figure it out.
+
+    User 2: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

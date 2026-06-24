@@ -1,0 +1,76 @@
+id: 00000812
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 812
+data:
+  user 1 personas: 'I love to hike.
+
+    The appalachian trail is my favorite.
+
+    My hiking boots are pink.'
+  user 2 personas: 'My favorite food to harvest is carrots.
+
+    I love to keep a small garden outside of my house.
+
+    I am seventy one years old.
+
+    My house is located in the countryside.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just working in my garden.
+
+    User 1: Oh, nice! What do you grow?
+
+    User 2: I grow a lot of different things, but my favorite is carrots.
+
+    User 1: Carrots are delicious! I''m not much of a gardener, but I love to eat fresh vegetables.
+
+    User 2: It''s never too late to start! I''m sure you''d be great at it.
+
+    User 1: Thanks! I might just have to give it a try.
+
+    User 2: You should! I can give you some tips if you need them.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I love to hike. I''ve hiked all over the United States, but my favorite trail is the Appalachian Trail.
+
+    User 2: That''s awesome! I''ve never been hiking before, but I''ve always wanted to try it.
+
+    User 1: It''s a lot of fun. You get to see some amazing scenery and you get a great workout.
+
+    User 2: It sounds like something I would really enjoy.
+
+    User 1: I''m sure you would. You should definitely give it a try.
+
+    User 2: Thanks for the suggestion! I''ll have to look into it.
+
+    User 1: You''re welcome! So, what do you do for work?
+
+    User 2: I''m a retired teacher. I taught for 30 years.
+
+    User 1: That''s amazing! I''m sure you had a lot of great experiences.
+
+    User 2: I did. I loved teaching.
+
+    User 1: I can imagine. It must be a really rewarding job.
+
+    User 2: It is. I''m glad I got to do it.
+
+    User 1: So, what do you do with your time now that you''re retired?
+
+    User 2: I spend a lot of time in my garden. I also like to read and travel.
+
+    User 1: That sounds like a great way to spend your retirement.
+
+    User 2: It is. I''m really enjoying it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

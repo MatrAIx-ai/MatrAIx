@@ -1,0 +1,64 @@
+id: 00006349
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6349
+data:
+  user 1 personas: 'My wife and two kids camp with me.
+
+    I deliver baked goods in the state where i live.
+
+    I am a truck driver.
+
+    My favorite hobby is playing recreational baseball.
+
+    I spend my weekends camping.'
+  user 2 personas: 'I hate fast food.
+
+    I am an avid fisherman.
+
+    I know how to play the guitar.
+
+    I like to race go carts.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to fish, play the guitar, and race go carts.
+
+    User 1: Oh, that''s cool! I like to play recreational baseball.
+
+    User 2: That sounds like fun! I''ve never played baseball before.
+
+    User 1: It''s a great game! What do you like to do for fun?
+
+    User 2: I like to go camping, go hiking, and go fishing.
+
+    User 1: Oh, I love camping! I usually go camping with my family.
+
+    User 2: That sounds like fun! I usually go camping with my friends.
+
+    User 1: What''s your favorite thing to do when you go camping?
+
+    User 2: I love to go hiking and explore the woods.
+
+    User 1: That sounds like fun! I love exploring new places.
+
+    User 2: Me too! I''m always looking for new places to explore.
+
+    User 1: I think we''d get along well! I''m always looking for people to go camping with.
+
+    User 2: Me too! I''d love to go camping with you sometime.
+
+    User 1: Sounds like a plan! What about this weekend?
+
+    User 2: I''m free this weekend! I''d love to go camping with you.
+
+    User 1: Great! I''ll let you know the details.
+
+    User 2: Okay! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00007251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7251
+data:
+  user 1 personas: 'My favorite store to shop at is costco.
+
+    In my freetime i enjoy cloud watching.
+
+    I work a dead end 9 to 5 job as a snakeskin oil salesman.
+
+    My idea of flirting is to stare from a distance.'
+  user 2 personas: 'My father lives in china.
+
+    I like to listen to music.
+
+    I have a boxer dog.
+
+    I like baths.
+
+    I like to exercise.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, [user 2''s name] nice to meet you.
+
+    User 1: You too. Where are you from?
+
+    User 2: I''m from China.
+
+    User 1: That''s cool! I''ve never been to China.
+
+    User 2: You should come visit sometime!
+
+    User 1: I''d love to.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to cloud watch, shop at Costco, and stare at people from a distance.
+
+    User 2: Cloud watching? That sounds relaxing.
+
+    User 1: It is. I like to go to the park and just lay down and watch the clouds go by.
+
+    User 2: That sounds nice. I like to listen to music.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like all kinds of music, but I especially like jazz and classical.
+
+    User 1: I like jazz too.
+
+    User 2: Cool. I have a boxer dog.
+
+    User 1: Oh, that''s cool. I''ve always wanted a dog.
+
+    User 2: They''re great pets. I love playing with him.
+
+    User 1: That sounds fun.
+
+    User 2: Do you like to exercise?
+
+    User 1: Yeah, I do. I like to go for walks and run.
+
+    User 2: I like to run too. I run 5k''s every week.
+
+    User 1: That''s impressive. I can only run for a few minutes at a time.
+
+    User 2: You''ll get better with time.
+
+    User 1: Thanks. I hope so.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

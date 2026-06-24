@@ -1,0 +1,58 @@
+id: 00003934
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3934
+data:
+  user 1 personas: 'I do not consume caffeine.
+
+    My favorite band is the rolling stones.
+
+    I have had the same job for 8 years.
+
+    Mo mother worked as a nurse.'
+  user 2 personas: 'I like listening to other rap music too.
+
+    One of my favorite artists is drake.
+
+    I also enjoy cooking.
+
+    A hobby of mine is the drums.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I enjoy listening to music, cooking, and playing the drums.
+
+    User 1: What kind of music do you like?
+
+    User 2: I like listening to rap music, but I also enjoy other genres.
+
+    User 1: Cool! What are some of your favorite artists?
+
+    User 2: Some of my favorite artists are Drake, Kanye West, and Kendrick Lamar.
+
+    User 1: I like Drake too! What do you like about his music?
+
+    User 2: I like his lyrics and his flow. I also like the production on his songs.
+
+    User 1: Yeah, his music is really good. I''m excited to see him in concert next month.
+
+    User 2: Nice! I''m going to see him in concert later this year.
+
+    User 1: That''s going to be so much fun! I''m sure you''ll have a great time.
+
+    User 2: Thanks! I''m looking forward to it.
+
+    User 1: Have you ever thought about learning to play an instrument?
+
+    User 2: Yes, I have thought about it. I''ve always wanted to learn how to play the drums.
+
+    User 1: That''s a great instrument to learn! I''m sure you''d be great at it.
+
+    User 2: Thanks! I think I''m going to start taking lessons soon.
+
+    User 1: That''s great! I''m sure you''ll have a lot of fun.
+
+    User 2: Thanks! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

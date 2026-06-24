@@ -1,0 +1,74 @@
+id: '00004426'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4426
+data:
+  user 1 personas: 'I love to knit and crochet.
+
+    I love to go to the lake.
+
+    I am a happy person.
+
+    I love to listen to music.
+
+    I love to take walks.'
+  user 2 personas: 'Every fall i visit my sister in canada.
+
+    I am afraid of clowns.
+
+    I have four cats.
+
+    I take the subway to work everyday.'
+  Best Generated Conversation: 'User 1: Hey! What''s your name?
+
+    User 2: Hi! My name is [user 2 name].
+
+    User 1: Nice to meet you [user 2 name]! What do you like to do for fun?
+
+    User 2: I like to go to the lake, knit, and crochet. I also like to listen to music and take walks.
+
+    User 1: Wow, those all sound like fun things to do! I like to go to the lake too. What do you like to do there?
+
+    User 2: I like to swim, sunbathe, and fish. I also like to go hiking in the woods around the lake.
+
+    User 1: That sounds great! I love hiking too. I''m not very good at fishing, but I enjoy it.
+
+    User 2: Well, you''re welcome to join me on my next fishing trip. I''m sure you''ll catch a fish or two!
+
+    User 1: That would be great! I''d love to go fishing with you.
+
+    User 2: Awesome! We can make plans soon.
+
+    User 1: Sounds good!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to listen to music, take walks, and read. I also like to knit and crochet.
+
+    User 2: I like to knit and crochet too! I have a lot of fun making scarves, hats, and mittens.
+
+    User 1: Me too! I love making gifts for my friends and family.
+
+    User 2: I love making gifts too! It''s so much fun to see their faces light up when they open them.
+
+    User 1: I agree! I think it''s the best feeling ever.
+
+    User 2: Me too! So, what kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I mostly listen to pop, rock, and country.
+
+    User 2: I like all of those too! My favorite band is probably Taylor Swift.
+
+    User 1: Me too! I love her music.
+
+    User 2: She''s so talented! I''ve seen her in concert twice.
+
+    User 1: I''m so jealous! I''ve always wanted to see her in concert.
+
+    User 2: You should definitely go if you ever get the chance. It''s an amazing experience.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

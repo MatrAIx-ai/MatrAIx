@@ -1,0 +1,19 @@
+id: '00035001'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35001
+persona_description: A mining engineer who specializes in the design and selection of AC induction motors for applications in the cement industry. They are familiar with the torque characteristics of motors
+  and understand the distinction between the running and starting load conditions of the driven equipment. They have experience with the National Electrical Manufacturers Association (NEMA) classifications
+  of motors and are able to select the appropriate motor enclosure for the application. They are aware of the potential for excessive stall conditions in crushers and mills and have experience in designing
+  motors with appropriate protection against these conditions.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Electrical Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: Motor Design and Selection
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

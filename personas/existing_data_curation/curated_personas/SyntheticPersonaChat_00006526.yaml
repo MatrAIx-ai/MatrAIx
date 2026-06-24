@@ -1,0 +1,60 @@
+id: '00006526'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6526
+data:
+  user 1 personas: 'My favorite musician is ed sheeran.
+
+    I love romantic comedies.
+
+    I like to write poetry in my spare time.
+
+    I am a yoga instructor.
+
+    I am very health conscious , and i watch what i eat.'
+  user 2 personas: 'I like bagels with everything on them.
+
+    I like to train dogs.
+
+    I like to make cookies.
+
+    My favorite drink is coke.'
+  Best Generated Conversation: 'User 1: Hello there! What''s your name?
+
+    User 2: Hi there! My name is (name).
+
+    User 1: Nice to meet you, (name). What do you do for fun?
+
+    User 2: I like to train dogs, bake cookies, and eat bagels with everything on them.
+
+    User 1: That sounds like a lot of fun! I''m a yoga instructor, and I love romantic comedies.
+
+    User 2: Oh, that''s cool! I''ve never tried yoga, but I''ve heard it''s great for your health.
+
+    User 1: It is! It''s a great way to relieve stress and improve your flexibility.
+
+    User 2: I might have to give it a try sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m glad we have something in common. I''m a big fan of Ed Sheeran.
+
+    User 1: Me too! He''s such a talented artist. I love his music.
+
+    User 2: I know, right? He''s one of my favorite musicians.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a dog trainer. I love working with dogs and helping them learn new skills.
+
+    User 1: That sounds like a great job. I''m sure you''re very good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it''s been nice talking to you, (name). I hope we can chat again sometime.
+
+    User 2: It was nice talking to you too, (name). I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

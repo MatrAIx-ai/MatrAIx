@@ -1,0 +1,64 @@
+id: '00003051'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3051
+data:
+  user 1 personas: 'I enjoy going on hikes.
+
+    I have never traveled out of the country.
+
+    I work some very odd jobs.
+
+    I am one of four children.'
+  user 2 personas: 'I am an animal rights activist.
+
+    I hope to retire to florida.
+
+    I played in a band for 17 years.
+
+    My mother and father are both in the church choir.'
+  Best Generated Conversation: 'User 1: Hey there! What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you do for fun?
+
+    User 2: I love going on hikes and camping. I''m also an animal rights activist.
+
+    User 1: That''s awesome! I love hiking too. I''ve never been camping before, but I''ve always wanted to try it.
+
+    User 2: You should definitely give it a try! It''s a great way to get outdoors and experience nature.
+
+    User 1: I will! I''ve been hearing a lot about how amazing the national parks are.
+
+    User 2: They''re definitely worth a visit. I''ve been to a few, and they''re all so beautiful.
+
+    User 1: What''s your favorite national park?
+
+    User 2: It''s hard to say, but I think I''d have to say Yellowstone. It''s just so vast and beautiful.
+
+    User 1: I''ve heard great things about Yellowstone. I''ll have to add it to my list of places to visit.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also play guitar. I''ve been playing for 17 years.
+
+    User 1: That''s awesome! I''ve always wanted to learn to play guitar.
+
+    User 2: You should definitely give it a try! It''s a lot of fun.
+
+    User 1: I will! I''ve been hearing a lot about how guitar is a great way to relax.
+
+    User 2: It is! I love playing guitar when I''m feeling stressed or overwhelmed.
+
+    User 1: I can see why! It sounds like you''re really passionate about guitar.
+
+    User 2: I am! It''s one of my favorite things to do.
+
+    User 1: That''s great! I''m glad you found something you''re so passionate about.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

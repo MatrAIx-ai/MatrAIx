@@ -1,0 +1,78 @@
+id: 00003168
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3168
+data:
+  user 1 personas: 'I live with my parents.
+
+    I prefer headsets over earbuds.
+
+    I travel often.
+
+    I have an iphone.'
+  user 2 personas: 'My brother and i have bright red hair.
+
+    I love to sing in the shower.
+
+    I have found the cure for the common cold.
+
+    I am plotting on taking over the world.
+
+    My nickname is bubblegum.'
+  Best Generated Conversation: 'User 1: My name is [user 1]. What''s your name?
+
+    User 2: My name is [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. Where are you from?
+
+    User 2: I''m from [place].
+
+    User 1: Oh, that''s cool. I''ve never been to [place].
+
+    User 2: It''s a great place. You should visit sometime.
+
+    User 1: Maybe I will.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a [occupation].
+
+    User 2: Oh, that''s cool. I''m a [occupation].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, sing in the shower, and plot on taking over the world.
+
+    User 1: I like to travel too. Where have you been?
+
+    User 2: I''ve been to [place] and [place].
+
+    User 1: Oh, nice. I''ve been to [place] but not to [place].
+
+    User 2: I love to sing in the shower too. What kind of music do you like to sing?
+
+    User 1: I like to sing all kinds of music, but my favorite is probably country music.
+
+    User 2: I love country music too! What''s your favorite country song?
+
+    User 1: My favorite country song is "The Gambler" by Kenny Rogers.
+
+    User 2: That''s a good song. I like that one too.
+
+    User 1: I also like to plot on taking over the world. What''s your plan?
+
+    User 2: My plan is to take over the world one country at a time. I''ve already started with [place].
+
+    User 1: Oh, wow. You''re making good progress.
+
+    User 2: I''m going to take over the world one day.
+
+    User 1: I think you''re going to do it. You''re very smart and you have a great plan.
+
+    User 2: Thank you. I appreciate the compliment.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

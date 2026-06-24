@@ -1,0 +1,19 @@
+id: '00007776'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7776
+persona_description: A farmer who relies on soil moisture and freeze/thaw information for managing their crops and livestock. They are interested in using this information to improve their crop productivity,
+  decision-making processes, and overall water management. They may also be interested in learning more about the impact of climate fluctuations on crop yields and how to manage agriculturally-important
+  pests and diseases. They value the ability to use direct observations of soil moisture status and the timing and extent of potential frost damage from SMAP to improve their field readiness and decision-making
+  processes.
+expertise:
+  general_domain_top1pct: Agriculture
+  specific_domain_top1pct: Precision Agriculture
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,92 @@
+id: 00005856
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5856
+data:
+  user 1 personas: 'I prefer baseball over football.
+
+    I work for a government agency.
+
+    My favorite team is the washington nationals.
+
+    My favorite food is pizza.
+
+    I like sports.'
+  user 2 personas: 'We also have three dogs and two cats.
+
+    Our kids are 14 and 12 years old.
+
+    My name is john and i live in dallas , tx.
+
+    I work as a physical therapist , and my wife is a school nurse.
+
+    My wife and i have 2 children.'
+  Best Generated Conversation: 'User 1: Hi John! I''m a big fan of baseball too. My favorite team is the Washington Nationals.
+
+    User 2: Hi there! Me too! I''m glad to meet another baseball fan.
+
+    User 1: What''s your favorite thing about baseball?
+
+    User 2: I love the strategy of the game. It''s so much more than just hitting the ball and running around the bases.
+
+    User 1: I agree! I also love the excitement of the game. You never know what''s going to happen next.
+
+    User 2: That''s for sure! Baseball is a great sport to watch.
+
+    User 1: So, what''s your favorite baseball memory?
+
+    User 2: I have a few good ones, but my favorite is probably the time I saw the Nationals win the World Series.
+
+    User 1: That''s awesome! I''m so jealous. I''ve never been to a World Series game.
+
+    User 2: It was an incredible experience. I''ll never forget it.
+
+    User 1: I bet! So, what do you do for a living?
+
+    User 2: I''m a physical therapist.
+
+    User 1: Oh, that''s cool! I''ve never met a physical therapist before.
+
+    User 2: It''s a great job. I get to help people get back to doing the things they love.
+
+    User 1: That''s amazing! I''m sure your job is very rewarding.
+
+    User 2: It is! I love my job.
+
+    User 1: So, what''s your family like?
+
+    User 2: I have two kids, a boy and a girl. They''re 14 and 12 years old.
+
+    User 1: Oh, that''s awesome! I love kids.
+
+    User 2: They''re great kids. I''m lucky to have them.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play baseball, go hiking, and spend time with my family.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is! I love being active.
+
+    User 1: Me too! I love to go hiking and biking.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to try biking.
+
+    User 1: It''s a lot of fun. You should try it sometime.
+
+    User 2: I will! I''m sure I''d love it.
+
+    User 1: So, what are you looking for in a relationship?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: That sounds great! I''m sure you''ll find someone perfect for you.
+
+    User 2: I hope so!
+
+    User 1: I''m sure you will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

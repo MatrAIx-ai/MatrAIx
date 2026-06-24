@@ -1,0 +1,62 @@
+id: '00005620'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5620
+data:
+  user 1 personas: 'I try not to think about death.
+
+    I am obsessed with filming.
+
+    Sometimes , people worry i am crazy.
+
+    I love to put a smile on people s faces.
+
+    I am a very bad liar.'
+  user 2 personas: 'I have a terrible singing voice.
+
+    I am a short order cook at a local diner.
+
+    Under a pen name , i write romance books.
+
+    This past summer i hiked the appalachian trail.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to hike and I write romance novels under a pen name.
+
+    User 1: That''s awesome! I love hiking too. What''s your favorite trail?
+
+    User 2: I recently hiked the Appalachian Trail and it was amazing!
+
+    User 1: Wow, that''s a long hike! How long did it take you?
+
+    User 2: It took me about 6 months, but it was worth it.
+
+    User 1: That''s incredible! I''m not sure if I''m that brave.
+
+    User 2: You should do it! It''s a great experience.
+
+    User 1: Maybe I will someday.
+
+    User 2: In the meantime, you can read my romance novels!
+
+    User 1: I''ll check them out.
+
+    User 2: Thanks! What else do you like to do for fun?
+
+    User 1: I love to film videos and edit them. I''m a bit of an amateur filmmaker.
+
+    User 2: That''s cool! I''ve always wanted to learn how to film.
+
+    User 1: It''s not that hard, you just need a camera and some editing software.
+
+    User 2: Maybe I''ll give it a try.
+
+    User 1: I''d be happy to help you get started.
+
+    User 2: Thanks! I might just take you up on that.
+
+    User 1: Great! I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

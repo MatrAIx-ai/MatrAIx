@@ -1,0 +1,19 @@
+id: 00030197
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30197
+persona_description: A healthcare provider who specializes in the diagnosis and management of medical conditions related to kidney disease, particularly those that involve proteinuria. They may be a urologist,
+  nephrologist, or other medical specialist who regularly performs quantitative Bence-Jones protein tests as part of their clinical practice. They are knowledgeable about the specific methods and procedures
+  involved in performing the test, as well as the potential clinical implications of the test results. They may also be familiar with the use of the test in the context of other medical conditions, such
+  as multiple myeloma, and may have experience interpreting the results in these settings.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: nephrology
+  general_domain_top01pct: None
+  specific_domain_top01pct: proteinuria diagnosis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

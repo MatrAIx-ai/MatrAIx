@@ -1,0 +1,82 @@
+id: 00005381
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5381
+data:
+  user 1 personas: 'I want to climb mount everest.
+
+    I like to play with clay models.
+
+    I have shot a lion.
+
+    I cry when i watch gone with the wind.'
+  user 2 personas: 'I work in finance.
+
+    I enjoy playing soccer.
+
+    I rent an apartment.
+
+    I do not like coffee.'
+  Best Generated Conversation: 'User 1: Hello, I''m User 1.
+
+    User 2: Hello, I''m User 2.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that''s interesting. I''ve always been fascinated by finance.
+
+    User 2: It''s not as glamorous as it seems.
+
+    User 1: I''m sure it''s still interesting. What kind of work do you do?
+
+    User 2: I work in investment banking.
+
+    User 1: Oh, that''s cool. I''ve heard that''s a tough industry to get into.
+
+    User 2: It is, but it''s worth it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer.
+
+    User 1: That''s great! I used to play soccer when I was younger.
+
+    User 2: I still play in a recreational league.
+
+    User 1: That''s awesome. I wish I could still play.
+
+    User 2: You should! It''s a great way to stay active.
+
+    User 1: I might have to start playing again.
+
+    User 2: Good. You''ll love it.
+
+    User 1: I''m sure I will. What else do you like to do for fun?
+
+    User 2: I like to go hiking.
+
+    User 1: Me too! I love being outdoors.
+
+    User 2: I also like to go camping.
+
+    User 1: I''ve never been camping.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I might have to give it a try.
+
+    User 2: Good. You''ll love it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: You''re welcome.
+
+    User 1: I''m going to go now. It was nice meeting you.
+
+    User 2: You too. It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

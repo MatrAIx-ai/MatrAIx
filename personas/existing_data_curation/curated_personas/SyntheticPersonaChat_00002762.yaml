@@ -1,0 +1,78 @@
+id: '00002762'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2762
+data:
+  user 1 personas: 'I drive a honda civic.
+
+    I have three children.
+
+    I enjoy taking walks.
+
+    My best friend lives down the street.'
+  user 2 personas: 'I like to play soccer.
+
+    I am seven years old.
+
+    And , my best friend is cayden.
+
+    I just got my rejection letter from the gifted program.'
+  Best Generated Conversation: 'User 1: Hello, my name is [name]. What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: It''s nice to meet you, [name].
+
+    User 2: Nice to meet you too, [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, and I just got my rejection letter from the gifted program.
+
+    User 1: Oh, I''m sorry to hear that. But don''t worry, there are plenty of other ways to be successful in life.
+
+    User 2: Thanks. I''m trying to stay positive.
+
+    User 1: I''m sure you will. What else do you like to do?
+
+    User 2: I also like to play video games, and I like to go to the park with my best friend, Cayden.
+
+    User 1: That sounds fun. I like to go to the park too.
+
+    User 2: Do you have any kids?
+
+    User 1: Yes, I have three children.
+
+    User 2: Oh, that''s nice. How old are they?
+
+    User 1: They''re all under the age of 10.
+
+    User 2: That''s cute.
+
+    User 1: Yeah, they''re pretty great.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: That''s cool. I like teachers.
+
+    User 1: Thanks. I like my job.
+
+    User 2: So, what do you like about it?
+
+    User 1: I like getting to work with kids and helping them learn.
+
+    User 2: That sounds like a really rewarding job.
+
+    User 1: It is. I love it.
+
+    User 2: Well, it sounds like you have a great life.
+
+    User 1: I do. I''m really happy.
+
+    User 2: That''s good. I''m glad to hear that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

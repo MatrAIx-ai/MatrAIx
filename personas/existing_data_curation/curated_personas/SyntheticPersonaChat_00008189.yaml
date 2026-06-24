@@ -1,0 +1,80 @@
+id: 00008189
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8189
+data:
+  user 1 personas: 'I am 5 3 and am the shortest person in my family.
+
+    I have four siblings.
+
+    My father is a school teacher , he teaches middle school.
+
+    My youngest sister is in first grade.
+
+    I am the oldest sibling.'
+  user 2 personas: 'I am a stay at home mom.
+
+    I enjoy cooking but not baking.
+
+    One of my favorite shows is face off on say.
+
+    I like things in organized.
+
+    I enjoy a good run.'
+  Best Generated Conversation: 'User 1: Hello, my name is [name].
+
+    User 2: Hello, [name], my name is [name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: I am the oldest of four siblings.
+
+    User 2: Oh, that must have been fun.
+
+    User 1: It was, but it was also a lot of work.
+
+    User 2: I can imagine. What are your siblings like?
+
+    User 1: They''re all great. My sister is in first grade, and she''s so cute. My brothers are both in high school, and they''re both very smart.
+
+    User 2: That''s sounds like a great family.
+
+    User 1: It is.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to go for runs, read, and watch TV.
+
+    User 2: I like to run too, but I''m not very good at it.
+
+    User 1: That''s okay, it''s a good way to get exercise.
+
+    User 2: I know, I just don''t have the time.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: Yeah, but I''m trying to make more time for it.
+
+    User 1: That''s great.
+
+    User 2: Thanks.
+
+    User 1: So, what do you like to watch on TV?
+
+    User 2: I like to watch reality shows, like Top Chef and Face Off.
+
+    User 1: I love Face Off! I''ve been watching it since it first came out.
+
+    User 2: Me too! It''s so good.
+
+    User 1: I know, right? I love the creativity of the contestants.
+
+    User 2: Yeah, me too. It''s so inspiring.
+
+    User 1: I know.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

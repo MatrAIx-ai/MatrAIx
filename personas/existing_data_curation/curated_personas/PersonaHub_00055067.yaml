@@ -1,0 +1,19 @@
+id: '00055067'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55067
+persona_description: A space scientist with expertise in exoplanet research, specifically in the use of the Transiting Exoplanet Survey Satellite (TESS) to detect Earth-sized planets orbiting bright stars.
+  TESS's all-sky transit survey aims to provide high-precision photometry of more than 200,000 stars during a two-year mission, enabling the detection of planets and the determination of their masses and
+  atmospheric compositions. The TESS instrument list includes a variety of instruments that are essential for the successful execution of the satellite's mission, such as the Transit Camera, which is capable
+  of detecting transits of planets and the Full Frame Imager, which allows users to conduct photometry on any target within the 24x96 degree field-of-view.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: exoplanet research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

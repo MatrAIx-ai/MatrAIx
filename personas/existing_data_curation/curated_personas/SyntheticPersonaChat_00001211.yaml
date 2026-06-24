@@ -1,0 +1,68 @@
+id: '00001211'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1211
+data:
+  user 1 personas: 'I am a paramedic.
+
+    I love rap music.
+
+    I talk to my mom on the phone every day.
+
+    I love going fishing.'
+  user 2 personas: 'My favorite drink is pepsi.
+
+    My weekends are filled with bird watching.
+
+    I like reading horror novels.
+
+    I work as a librarian.
+
+    Hotdogs are my favorite food.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a librarian.
+
+    User 1: Oh, that''s cool! I''ve always wanted to be a librarian.
+
+    User 2: It''s a lot of fun, but it can be a lot of work too.
+
+    User 1: I can imagine. What''s your favorite part of the job?
+
+    User 2: I love helping people find the books they''re looking for.
+
+    User 1: That''s a great feeling! I love when I can help someone find a book they''ve been looking for.
+
+    User 2: Me too! It''s so rewarding.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love reading horror novels, bird watching, and playing video games.
+
+    User 1: Oh, I love horror novels too! What are some of your favorites?
+
+    User 2: I love the Stephen King books, especially It and The Shining.
+
+    User 1: Those are great books! I also love the Stephen King books, especially Pet Sematary and Misery.
+
+    User 2: Those are great books too! What video games do you like to play?
+
+    User 1: I love all kinds of video games, but my favorite genre is definitely horror.
+
+    User 2: Me too! I love the Resident Evil series and the Silent Hill series.
+
+    User 1: Those are great games! I also love the Five Nights at Freddy''s series and the Outlast series.
+
+    User 2: Those are great games too! I love the atmosphere and the scares in those games.
+
+    User 1: Me too! They''re so much fun to play.
+
+    User 2: I agree! They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

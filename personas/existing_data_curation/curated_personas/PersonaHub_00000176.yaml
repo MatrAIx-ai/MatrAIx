@@ -1,0 +1,18 @@
+id: '00000176'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 176
+persona_description: A scientist with expertise in photobioreactor design and algae cultivation, specifically focused on the production of hydrogen from algae. This person has developed innovative methods
+  for algae cultivation that are economically feasible and has successfully produced hydrogen from algae. They have a deep understanding of the step-by-step process involved in producing hydrogen from algae,
+  including the optimal conditions for algae growth and the specific methods used to convert algae into hydrogen.
+expertise:
+  general_domain_top1pct: biotechnology
+  specific_domain_top1pct: photobioreactor design and algae cultivation
+  general_domain_top01pct: None
+  specific_domain_top01pct: hydrogen production from algae
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,74 @@
+id: 00003549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3549
+data:
+  user 1 personas: 'My mother was a teacher.
+
+    My favorite food is salad.
+
+    I am single.
+
+    I teach a yoga class.
+
+    I enjoy nature.'
+  user 2 personas: 'I listen to a fall out boy record every day.
+
+    I am looking forward to reading the latest political thriller.
+
+    I love watching sitcoms on television.
+
+    Sometimes , i sit by strangers on the subway and strike up a conversation.
+
+    I drive a honda that is seen better days.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What''s your favorite food?
+
+    User 2: I love salad! What about you?
+
+    User 1: Me too! I love all kinds of salad. What''s your favorite kind?
+
+    User 2: I like a good Caesar salad with lots of croutons and Parmesan cheese.
+
+    User 1: That sounds delicious! I love Caesar salad too.
+
+    User 2: What''s your favorite thing to do for fun?
+
+    User 1: I love to go hiking and camping. I also love to read.
+
+    User 2: Me too! I love hiking and camping. I don''t read as much as I used to, but I still enjoy it.
+
+    User 1: What''s your favorite book?
+
+    User 2: I''m not sure I can pick a favorite book, but I really enjoyed the latest political thriller I read.
+
+    User 1: Oh, I love political thrillers! What was it about?
+
+    User 2: It was about a political scandal that threatens to bring down a government.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach fifth grade.
+
+    User 1: That must be fun!
+
+    User 2: It is! I love working with kids.
+
+    User 1: I can imagine. Well, it was nice talking to you.
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

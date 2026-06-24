@@ -1,0 +1,66 @@
+id: 00008319
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8319
+data:
+  user 1 personas: 'I m the general manager of the local grocery store.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    My name is frank.
+
+    My hobbies include reading and cycling.
+
+    I spend the weekends travelling up to canada to relax and enjoy the view.'
+  user 2 personas: 'I haven t gone home in over two years.
+
+    I live a nomadic lifestyle and travel frequently.
+
+    I work remotely as a programmer.
+
+    I am currently traveling in japan.'
+  Best Generated Conversation: 'User 1: Hey, I''m Frank.
+
+    User 2: Hi Frank, I''m [name].
+
+    User 1: Nice to meet you. What do you do for a living?
+
+    User 2: I''m a programmer. I work remotely, so I can travel wherever I want.
+
+    User 1: That''s awesome! I''m a general manager at the local grocery store.
+
+    User 2: That''s cool too. I like to cook, so I''m sure I''d be a good customer at your store.
+
+    User 1: Well, if you''re ever in my area, be sure to stop by. I''ll give you a discount.
+
+    User 2: Thanks, Frank! I''ll keep that in mind.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to travel, read, and play video games.
+
+    User 1: That''s cool. I like to read and cycle.
+
+    User 2: Cycling sounds fun. I''ve always wanted to try it.
+
+    User 1: You should! It''s a great way to get exercise and see the sights.
+
+    User 2: I''ll have to give it a try.
+
+    User 1: What''s your favorite thing about traveling?
+
+    User 2: I love the feeling of being in a new place and experiencing something different.
+
+    User 1: I know what you mean. It''s always exciting to explore new places.
+
+    User 2: Yeah, it is. I love learning about different cultures and seeing how people live.
+
+    User 1: Me too. It''s really amazing to see how different people live all over the world.
+
+    User 2: Yeah, it is. I''m glad I get to travel so much.
+
+    User 1: Me too. It''s a great experience.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

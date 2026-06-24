@@ -1,0 +1,19 @@
+id: 00055368
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55368
+persona_description: A pediatric neurologist or neurosurgeon with expertise in the treatment of epilepsy and neurodegenerative disorders, particularly in the context of valproate-induced hepatic failure
+  and Alpers-Huttenlocher disease. This individual is knowledgeable about the diagnostic criteria, clinical presentation, treatment options, and long-term outcomes of these conditions, and is likely to
+  be involved in the management of young children with aggressive focal epilepsy and mitochondrial DNA depletion. This persona is also likely to be familiar with the latest research and developments in
+  the field, including the identification of POLG1 mutations and the potential implications for the treatment of Alpers-Huttenlocher disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatric neurology/neurosurgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: Alpers-Huttenlocher disease
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

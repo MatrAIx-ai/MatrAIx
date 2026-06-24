@@ -1,0 +1,82 @@
+id: 00001835
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1835
+data:
+  user 1 personas: 'I am ten years old.
+
+    Tomorrow is my first day of safety patrol.
+
+    I love to read harry potter books.
+
+    And , my best friend is abigail.'
+  user 2 personas: 'I love eating at mcdonald.
+
+    My parents both are school teachers.
+
+    The only music i listen to is pop , because it makes me feel happy.
+
+    Watching nascar races is a great way to spend a sunday for me.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to watch NASCAR races.
+
+    User 1: Really? That''s cool! I''ve never been to one, but I''ve heard they''re really exciting.
+
+    User 2: They are! You should definitely go to one sometime.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What else do you like to do?
+
+    User 1: I love to read Harry Potter books.
+
+    User 2: Oh, I love those books too! I''ve read them all multiple times.
+
+    User 1: Me too! They''re so good.
+
+    User 2: What''s your favorite book in the series?
+
+    User 1: I think my favorite is "The Half-Blood Prince."
+
+    User 2: That''s a good one! I like "The Order of the Phoenix" the best.
+
+    User 1: I love that one too! The books are all so good.
+
+    User 2: They really are. I''m so excited for the new movie coming out next year.
+
+    User 1: Me too! I''m sure it will be great.
+
+    User 2: I hope so.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! I''m going to be a teacher when I grow up.
+
+    User 2: That''s great! I love being a teacher.
+
+    User 1: I''m sure I will too.
+
+    User 2: So, what do you want to teach?
+
+    User 1: I''m not sure yet. I''m thinking about elementary school.
+
+    User 2: That''s a great choice. Elementary school teachers are so important.
+
+    User 1: Thanks! I think so too.
+
+    User 2: So, what do you like to do for fun besides reading and watching NASCAR races?
+
+    User 1: I like to hang out with my friends, go to the movies, and play video games.
+
+    User 2: Oh, I like to do all of those things too.
+
+    User 1: Cool! We should hang out sometime.
+
+    User 2: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

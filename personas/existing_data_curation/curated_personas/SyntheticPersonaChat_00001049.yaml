@@ -1,0 +1,62 @@
+id: 00001049
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1049
+data:
+  user 1 personas: 'I like swimming.
+
+    I have traveled to europe and mexico.
+
+    My mother is a housemaid.
+
+    I love spicy food.
+
+    I am an only child.'
+  user 2 personas: 'I love helping people.
+
+    I retired so i can spend more time with my husband and helping people.
+
+    My favorite food is pasta.
+
+    I live in a rural area.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing well, thank you for asking! How about yourself?
+
+    User 1: I''m doing well, thanks! I''m just hanging out today, trying to relax.
+
+    User 2: That sounds like a good way to spend a day. I''m doing some gardening today.
+
+    User 1: Oh, that sounds fun! Do you have a lot of plants?
+
+    User 2: Yes, I have a lot of different plants, both inside and outside.
+
+    User 1: That''s great! I love plants. I have a few succulents, but I''m not very good at keeping them alive.
+
+    User 2: Haha, succulents can be tricky! I have a lot of luck with them, but I also have a lot of experience with gardening.
+
+    User 1: That''s impressive! I''m sure your garden looks beautiful.
+
+    User 2: Thank you! It''s not as big as some, but it''s my little slice of heaven.
+
+    User 1: It sounds like it! I''m sure it''s a great place to relax.
+
+    User 2: It is! I love spending time in my garden. It''s so peaceful and relaxing.
+
+    User 1: I can imagine! I think I might need to start a garden of my own.
+
+    User 2: You should! It''s a lot of fun, and it''s a great way to get outside and get some exercise.
+
+    User 1: I''ll have to look into it. Thanks for the suggestion!
+
+    User 2: You''re welcome! It was nice chatting with you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

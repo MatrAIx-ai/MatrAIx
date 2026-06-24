@@ -1,0 +1,19 @@
+id: 00000944
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 944
+persona_description: A healthcare professional who is deeply concerned about the quality and efficacy of medical interventions and the patient-physician relationship. They value shared decision-making,
+  accurate information, and the use of evidence-based medicine in their practice. They are passionate about the potential of technology, such as electronic medical records, to improve patient care and physician
+  productivity. They believe that the current healthcare system is slow to adapt to the changing needs of patients and the medical field, and that there is a need for more innovative and effective approaches
+  to medical care. They are committed to using their expertise and experience to improve the healthcare system and help patients make informed decisions about their health.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: healthcare quality improvement
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

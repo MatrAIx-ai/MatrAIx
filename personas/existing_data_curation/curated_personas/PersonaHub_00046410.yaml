@@ -1,0 +1,17 @@
+id: '00046410'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 46410
+persona_description: A person who is interested in medical procedures and has a particular interest in removing skin tags. They may be a dermatologist, a plastic surgeon, or someone who is interested in
+  alternative medicine. They are knowledgeable about skin cancer and its treatment and may have experience with skin tags as part of their treatment plan.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: dermatological surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

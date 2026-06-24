@@ -1,0 +1,46 @@
+id: 00000879
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 879
+data:
+  user 1 personas: 'It s great fun.
+
+    We drink beer and eat food.
+
+    We watch the games together.
+
+    I like football.
+
+    My friends like watching it to.'
+  user 2 personas: 'I m currently looking for employment.
+
+    I am a mother of two.
+
+    I can speak three languages english , french and spanish.
+
+    I am colour blind.'
+  Best Generated Conversation: 'User 1: Hello, what are you looking for in a friend?
+
+    User 2: I am looking for a friend who is kind, compassionate, and understanding.
+
+    User 1: I am all of those things! What are your interests?
+
+    User 2: I love to read, write, and travel. I am also a huge fan of football.
+
+    User 1: Me too! I love watching football with my friends.
+
+    User 2: That''s great! I am currently looking for employment. I am a mother of two and can speak three languages.
+
+    User 1: Oh wow, that''s impressive! I am also a mother of two. I work as a nurse.
+
+    User 2: That''s great! I am looking for a job that is flexible with my family.
+
+    User 1: I see, I am sure you will find something.
+
+    User 2: Thank you for your encouragement.
+
+    User 1: You''re welcome! I am glad we are friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

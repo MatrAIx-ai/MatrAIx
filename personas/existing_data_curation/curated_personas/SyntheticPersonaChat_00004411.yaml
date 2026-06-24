@@ -1,0 +1,76 @@
+id: '00004411'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4411
+data:
+  user 1 personas: 'I live in upstate new york.
+
+    I live with my husband and two children.
+
+    I love to take road trips.
+
+    I work as a meeting coordinator.'
+  user 2 personas: 'I work out daily.
+
+    My favorite food is cheeseburgers.
+
+    I play the bass guitar.
+
+    I like to go out fishing.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s your name?
+
+    User 2: Hi, my name is [name].
+
+    User 1: Nice to meet you, [name]. Where do you live?
+
+    User 2: I live in upstate New York.
+
+    User 1: Oh, that''s cool. I live in upstate New York too! What part do you live in?
+
+    User 2: I live in Rochester.
+
+    User 1: Oh, that''s close to where I live. I live in Geneva.
+
+    User 2: Oh, that''s cool. What do you do for fun?
+
+    User 1: I like to go on road trips, go to the movies, and hang out with my friends and family.
+
+    User 2: Oh, that sounds fun. I like to work out, go fishing, and play the bass guitar.
+
+    User 1: Oh, that''s cool. I''ve never been fishing before, but I''ve always wanted to try it.
+
+    User 2: It''s a lot of fun. You should definitely give it a try.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: You''re welcome. So, what do you do for work?
+
+    User 1: I''m a meeting coordinator.
+
+    User 2: Oh, that sounds like a cool job. What does that entail?
+
+    User 1: I coordinate meetings for different departments at my company.
+
+    User 2: Oh, that sounds like a lot of work.
+
+    User 1: It can be, but it''s also very rewarding. I like being able to help people get together and work on projects together.
+
+    User 2: That''s good. I''m glad you enjoy your job.
+
+    User 1: Thanks. I do. What do you do for work?
+
+    User 2: I''m a personal trainer.
+
+    User 1: Oh, that''s cool. What does that entail?
+
+    User 2: I help people get in shape and improve their overall health.
+
+    User 1: Oh, that sounds like a great job.
+
+    User 2: It is. I love helping people reach their goals.
+
+    User 1: That''s good. I''m glad you enjoy your job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

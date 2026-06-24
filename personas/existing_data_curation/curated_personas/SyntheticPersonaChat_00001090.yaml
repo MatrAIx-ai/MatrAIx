@@ -1,0 +1,85 @@
+id: 00001090
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1090
+data:
+  user 1 personas: 'I love to clean.
+
+    I watch a lot of movies.
+
+    I do not have much energy.
+
+    I love fast food.
+
+    I am a stay at home mom.'
+  user 2 personas: 'I used to work for monsanto.
+
+    I enjoy swimming.
+
+    I enjoy shopping online.
+
+    I read fantasy fiction novels.
+
+    I am a mother.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+
+    User 2: I like to swim, shop online, and read.
+
+
+    User 1: Oh, I like to swim too! Do you go to the pool often?
+
+
+    User 2: Not as often as I would like to, but I try to go a few times a week.
+
+
+    User 1: What''s your favorite thing to do when you swim?
+
+
+    User 2: I like to go for long swims and just relax.
+
+
+    User 1: That sounds nice. I like to do that too.
+
+
+    User 2: I also like to shop online. What are your favorite online stores?
+
+
+    User 1: I like to shop on Amazon and eBay. I also like to buy clothes from online boutiques.
+
+
+    User 2: I like to shop on Amazon too. I have found some great deals on there.
+
+
+    User 1: I know, right? I love finding deals on Amazon.
+
+
+    User 2: What are your favorite books?
+
+
+    User 1: I like to read fantasy novels. I''m a big fan of the Harry Potter series and the Lord of the Rings series.
+
+
+    User 2: I love Harry Potter! I''ve read the whole series multiple times.
+
+
+    User 1: Me too! It''s such a good series.
+
+
+    User 2: I also like to read fantasy novels. I''m a big fan of the Mistborn series and the Kingkiller Chronicle series.
+
+
+    User 1: I''ve heard good things about those series. I''ll have to check them out.
+
+
+    User 2: You should! They''re both really good.
+
+
+    User 1: Thanks for the recommendations! I''m always looking for new books to read.
+
+
+    User 2: You''re welcome! I''m always happy to recommend books.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

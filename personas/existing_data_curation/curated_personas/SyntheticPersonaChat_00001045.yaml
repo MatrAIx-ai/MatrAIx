@@ -1,0 +1,72 @@
+id: '00001045'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1045
+data:
+  user 1 personas: 'I like swimming.
+
+    I love spicy food.
+
+    My mother is a housemaid.
+
+    I am an only child.'
+  user 2 personas: 'I am a mother of three.
+
+    I am thinking of becoming a mother next year.
+
+    I love to eat pita bread with hummus.
+
+    I am bipolar.
+
+    I go to work early in the morning as a nurse.'
+  Best Generated Conversation: 'User 1: I love swimming. Do you like any water sports?
+
+    User 2: I do! I love swimming, too. I also love to go kayaking and paddleboarding.
+
+    User 1: That sounds fun! I''ve never been kayaking or paddleboarding before.
+
+    User 2: You should try it! It''s a lot of fun and it''s a great way to get exercise.
+
+    User 1: I might just have to! What''s your favorite thing about swimming?
+
+    User 2: I love being in the water. It''s so peaceful and relaxing. I also love the feeling of being able to move my body freely in the water.
+
+    User 1: I agree! Swimming is so much fun. It''s my favorite way to exercise.
+
+    User 2: That''s great! I''m glad to hear that.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a nurse. I work early in the morning, so I''m usually up by 6:00 am.
+
+    User 1: Oh, that''s early! What''s it like being a nurse?
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I get to help people every day, and that''s really important to me.
+
+    User 1: That''s really great! I''m sure you''re a great nurse.
+
+    User 2: Thank you!
+
+    User 1: So, do you have any children?
+
+    User 2: Yes, I have three children. They''re all boys.
+
+    User 1: Oh, that''s great! How old are they?
+
+    User 2: They''re all under the age of 10.
+
+    User 1: That must be a lot of fun.
+
+    User 2: It is! They keep me busy, but I wouldn''t have it any other way.
+
+    User 1: I''m sure. So, what are your plans for next year?
+
+    User 2: I''m thinking of becoming a mother again. I''m not sure when I''ll start trying, but it''s something I''ve been thinking about.
+
+    User 1: That''s great! I''m sure you''ll be a great mother.
+
+    User 2: Thank you! I''m excited for the challenge.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

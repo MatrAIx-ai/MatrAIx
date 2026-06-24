@@ -1,0 +1,62 @@
+id: 00001497
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1497
+data:
+  user 1 personas: 'I am 50 years old.
+
+    We have 4 children and 2 dogs.
+
+    I enjoy ice cream.
+
+    The kids will be my responsibility as my husband doesn t want them.'
+  user 2 personas: 'I love to travel.
+
+    I like to eat pizza.
+
+    Dogs are my favorite animal.
+
+    I enjoy cooking and baking.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Nice to meet you, [name]. I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to travel, cook, and bake.
+
+    User 1: That''s great! I love to travel too. What''s your favorite place you''ve ever been?
+
+    User 2: I love Italy. I''ve been there twice and I can''t wait to go back.
+
+    User 1: I''ve never been to Italy, but it''s definitely on my bucket list.
+
+    User 2: You should definitely go! It''s an amazing country with so much to see and do.
+
+    User 1: I''ll have to put it on my list.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I love to spend time with my family and friends. We like to go to the beach, play games, and just relax.
+
+    User 2: That sounds like a lot of fun. I love spending time with my family and friends too. We like to go camping, fishing, and hiking.
+
+    User 1: Those sound like great activities. I''ve never been camping, but I''ve always wanted to try it.
+
+    User 2: You should definitely go! It''s a lot of fun.
+
+    User 1: I will have to try it sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: I''m sure I won''t.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too. Have a nice day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

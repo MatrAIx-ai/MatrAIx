@@ -1,0 +1,86 @@
+id: '00001545'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1545
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I just started working as a librarian.
+
+    I don t know how to swim.
+
+    I am catholic.
+
+    My favorite band is nickelback.'
+  user 2 personas: 'I love to read.
+
+    I believe in karma.
+
+    I once wrote a biography of my favorite actor.
+
+    I ve never been on a date.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi! I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read! I''ve read over 100 books this year.
+
+    User 1: Wow, that''s a lot! I''ve only read about 20 books this year.
+
+    User 2: I love to read about history, science, and biography.
+
+    User 1: Me too! I love learning new things.
+
+    User 2: I once wrote a biography of my favorite actor.
+
+    User 1: That''s amazing! What actor was it?
+
+    User 2: It was David Tennant. He''s my favorite actor from Doctor Who.
+
+    User 1: I love Doctor Who! I''ve been a fan since I was a kid.
+
+    User 2: Me too! It''s such a great show.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a writer. I write biographies, fiction, and screenplays.
+
+    User 1: That''s so cool! I''ve always wanted to be a writer.
+
+    User 2: It''s a lot of fun, but it''s also a lot of work.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a librarian. I just started working at a new library this week.
+
+    User 2: That''s great! I love libraries.
+
+    User 1: Me too! They''re such a great place to learn and to relax.
+
+    User 2: So, what''s your favorite book?
+
+    User 1: It''s hard to choose just one, but I''d have to say "The Lord of the Rings" by J.R.R. Tolkien.
+
+    User 2: That''s a great choice! I love that book too.
+
+    User 1: So, what''s your favorite band?
+
+    User 2: My favorite band is Nickelback.
+
+    User 1: I''ve never heard of them.
+
+    User 2: They''re a rock band from Canada.
+
+    User 1: Oh, I''ll have to check them out.
+
+    User 2: You should! They''re really good.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

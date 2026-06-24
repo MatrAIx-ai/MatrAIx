@@ -1,0 +1,70 @@
+id: 00008770
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8770
+data:
+  user 1 personas: 'The weather here is very cold , but so beautiful in the spring.
+
+    I love to ski in the winter.
+
+    My name is mary and i am from colorado.
+
+    I love to hike in the summer.
+
+    My favorite band is one direction.'
+  user 2 personas: 'I do not like vegetables.
+
+    I love to go running.
+
+    I enjoy spending time with my family.
+
+    My favorite truck is a chevy drama.
+
+    My favorite store is american eagle.'
+  Best Generated Conversation: 'User 1: Hi, my name is Mary and I''m from Colorado.
+
+    User 2: Hi Mary, I''m (user 2''s name) and I''m from Florida.
+
+    User 1: Oh, cool! How''s the weather down there?
+
+    User 2: It''s very hot and humid, but I love it.
+
+    User 1: I bet! I love the snow here in Colorado, but it can be very cold.
+
+    User 2: I''ve never been skiing before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s so much fun.
+
+    User 2: I might just have to do that.
+
+    User 1: What do you like to do for fun in Florida?
+
+    User 2: I love to go running, go to the beach, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I love to hike and go skiing in the summer.
+
+    User 2: That sounds like a great way to stay active.
+
+    User 1: It is! I also love to listen to music. What kind of music do you like?
+
+    User 2: I like a lot of different kinds of music, but my favorite band is One Direction.
+
+    User 1: Oh, I love One Direction too! I saw them in concert last year.
+
+    User 2: That must have been amazing! I''m so jealous.
+
+    User 1: It was! They were so good live.
+
+    User 2: I''m glad you had a good time.
+
+    User 1: Me too!
+
+    User 2: Well, it was nice talking to you, Mary.
+
+    User 1: You too! Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

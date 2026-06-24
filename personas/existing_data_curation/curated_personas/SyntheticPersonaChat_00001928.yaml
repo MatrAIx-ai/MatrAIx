@@ -1,0 +1,50 @@
+id: 00001928
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1928
+data:
+  user 1 personas: 'I like photography.
+
+    I like to garden.
+
+    I am a chef.
+
+    I love traveling.'
+  user 2 personas: 'I just started college.
+
+    I work part time in the campus library.
+
+    I am living at home but hope to live in the dorms next year.
+
+    I have 3 science classes.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hi, I''m (name).
+
+    User 1: Nice to meet you, (name). What do you do for fun?
+
+    User 2: I just started college, so I''m pretty busy with my classes. But I like to work part-time in the campus library and I hope to live in the dorms next year.
+
+    User 1: That sounds exciting! I''m a chef, so I''m always on the go. But I love to travel and I like to garden.
+
+    User 2: That''s great! I love to cook, but I''m not very good at it. I''ve never gardened before, but I''ve always wanted to try.
+
+    User 1: You should! It''s a lot of fun and you can grow your own food.
+
+    User 2: I''ll have to try it sometime. So, what''s your favorite thing about college so far?
+
+    User 1: I love learning new things and meeting new people. And I love the freedom to choose my own classes.
+
+    User 2: That''s what I''m looking forward to the most. I''m excited to learn more about my chosen field and meet new people.
+
+    User 1: I''m sure you''ll do great. You seem like a smart and motivated person.
+
+    User 2: Thank you! I''m trying my best.
+
+    User 1: Well, I have to go now. It was nice talking to you, (name).
+
+    User 2: You too! Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

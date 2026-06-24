@@ -1,0 +1,62 @@
+id: 00008162
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8162
+data:
+  user 1 personas: 'I like to listen to someone else reading a book.
+
+    I like cartoons more than movies.
+
+    I moved out when i was 14.
+
+    My mother met elvis.
+
+    I love the water , any water , ocean , river , or lake.'
+  user 2 personas: 'I like going on walks.
+
+    I have a son.
+
+    I run a small bakery.
+
+    I love to laugh.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go on walks, run my bakery, and laugh.
+
+    User 1: Oh, that sounds like fun. I like to listen to someone else reading a book, like audiobooks.
+
+    User 2: I love audiobooks too! I love being able to listen to a book while I''m doing other things.
+
+    User 1: Me too! I like to listen to audiobooks while I''m cleaning or cooking.
+
+    User 2: That''s a great idea! I''ll have to try that sometime.
+
+    User 1: You should! It''s a great way to pass the time and get things done.
+
+    User 2: I love the water , any water , ocean , river , or lake.
+
+    User 1: Me too! I love swimming and fishing.
+
+    User 2: I love swimming too! I''m not very good at fishing, but I enjoy it.
+
+    User 1: That''s okay! Fishing is more about the experience than the catch.
+
+    User 2: I agree! It''s so peaceful and relaxing to sit on the dock and fish.
+
+    User 1: It is! I love spending time by the water.
+
+    User 2: Me too! It''s so calming and relaxing.
+
+    User 1: I''m glad we have so much in common!
+
+    User 2: Me too! I think we''re going to be great friends.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

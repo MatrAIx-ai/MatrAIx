@@ -1,0 +1,70 @@
+id: '00006440'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6440
+data:
+  user 1 personas: 'I love dogs , especially labradors.
+
+    I was born in san francisco.
+
+    I work in the pharmaceutical industry.
+
+    I am traveling to paris this year for my vacation.'
+  user 2 personas: 'My father was a member of the communist party.
+
+    I like to perform stand up comedy.
+
+    I have a career in party planning.
+
+    I enjoy deep sea diving.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you. Where are you from?
+
+    User 2: I was born in San Francisco, but I''ve lived in a lot of different places.
+
+    User 1: Oh, really? What''s your favorite place you''ve ever lived?
+
+    User 2: I''ve really enjoyed living in New York City. It''s such a vibrant and exciting place.
+
+    User 1: I''ve heard great things about New York City. I''ve never been, but I''d love to visit one day.
+
+    User 2: You definitely should! It''s an amazing city.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a party planner. I love helping people plan their special events.
+
+    User 1: That sounds like a really fun job.
+
+    User 2: It is! I get to meet all sorts of interesting people and help them create amazing memories.
+
+    User 1: What''s the most interesting event you''ve ever planned?
+
+    User 2: I once planned a wedding for a couple who met on a cruise ship. It was a beautiful ceremony and the couple had a great time.
+
+    User 1: That sounds really special.
+
+    User 2: It was! I was really happy to be a part of it.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I love to perform stand-up comedy. I''ve been doing it for a few years and I really enjoy it.
+
+    User 1: That''s awesome! I''ve always wanted to try stand-up comedy.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! I''m sure you''d be great at it.
+
+    User 1: Thanks, I appreciate the encouragement.
+
+    User 2: No problem. I''m always happy to help people find their passion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

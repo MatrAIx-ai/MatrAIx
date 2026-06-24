@@ -1,0 +1,19 @@
+id: 00018802
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 18802
+persona_description: A logic designer who specializes in the design of array-based circuits. They are responsible for the detailed modeling of transistors, resistors, diodes, and other basic device elements.
+  They use simulation tools to evaluate the circuit at the functional module level, partial circuit level, and the entire array level. They are aware of the limitations imposed by the array vendor and ensure
+  that the simulation output files are reformatted and processed correctly before submission. They have experience with the use of automatic test generators (ATGs) and have done proper design for test (DFT)
+  to support the use of the ATG. They are knowledgeable about the testing problem and the limitations imposed by the array vendor.
+expertise:
+  general_domain_top1pct: Electrical Engineering
+  specific_domain_top1pct: Digital Circuit Design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

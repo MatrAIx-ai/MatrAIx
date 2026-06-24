@@ -1,0 +1,60 @@
+id: 00008470
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8470
+data:
+  user 1 personas: 'My favorite thing to do is to read books on the beach.
+
+    I am a vegetarian.
+
+    I love to surf.
+
+    I love pandas.'
+  user 2 personas: 'My favorite band is the beastie boys.
+
+    I love coffee with cream.
+
+    I am a painter.
+
+    I went to new york city once.
+
+    I want to be a museum curator.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I am doing well, thank you for asking!
+
+    User 1: That is good to hear. What do you do for fun?
+
+    User 2: I like to paint, I am a painter.
+
+    User 1: That sounds like a fun hobby. I like to read books on the beach.
+
+    User 2: I love to read too! What are some of your favorite books?
+
+    User 1: I like to read books about history and science.
+
+    User 2: Those are great genres! I love to read books about art and music.
+
+    User 1: I have never been to New York City, have you?
+
+    User 2: Yes, I went to New York City once when I was a child.
+
+    User 1: What was it like?
+
+    User 2: It was amazing! I saw the Statue of Liberty, the Empire State Building, and the Metropolitan Museum of Art.
+
+    User 1: Those are all amazing places! I would love to go to New York City someday.
+
+    User 2: You should! It is a truly amazing city.
+
+    User 1: What are your dreams for the future?
+
+    User 2: I want to be a museum curator.
+
+    User 1: That sounds like a great career! I am sure you will be successful.
+
+    User 2: Thank you! I appreciate your support.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

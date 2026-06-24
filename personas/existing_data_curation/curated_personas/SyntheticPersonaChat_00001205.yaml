@@ -1,0 +1,72 @@
+id: '00001205'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1205
+data:
+  user 1 personas: 'I am a night owl.
+
+    I am 29 years old.
+
+    My favorite band is pearl jam.
+
+    I enjoy hiking and riding my bicycle.
+
+    I live in a suburb of boston.'
+  user 2 personas: 'I love to sleep in.
+
+    I work in a lab.
+
+    I have two brothers.
+
+    I have been a vegan since i was 5.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi! I''m [name]. What''s up?
+
+    User 1: Not much, just hanging out. I''m a night owl, so I''m still up.
+
+    User 2: Me too! I love sleeping in.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in a lab.
+
+    User 1: Oh, cool! What kind of lab?
+
+    User 2: I work in a biological research lab.
+
+    User 1: That''s awesome! I love biology.
+
+    User 2: Me too! I''ve been a vegan since I was 5.
+
+    User 1: Oh wow! That''s really cool. I''ve been thinking about going vegan myself.
+
+    User 2: It''s really easy! There are so many great vegan recipes out there.
+
+    User 1: I know, I''ve been looking into them. I''m just not sure how to start.
+
+    User 2: It''s easy! Just start by cutting out meat and dairy. Then, gradually add more vegan foods into your diet.
+
+    User 1: Okay, I''ll try it! Thanks for the advice.
+
+    User 2: No problem! I''m happy to help.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to hike, bike, and read.
+
+    User 1: Me too! I love hiking and biking. What are your favorite places to hike?
+
+    User 2: I love hiking in the mountains. I also like hiking in the city.
+
+    User 1: I love hiking in the mountains too. I''ve never hiked in the city, though.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I will!
+
+    User 2: I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

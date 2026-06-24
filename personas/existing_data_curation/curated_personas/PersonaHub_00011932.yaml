@@ -1,0 +1,18 @@
+id: 00011932
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11932
+persona_description: A healthcare professional who is interested in respiratory health and has knowledge of the risks and symptoms associated with Tuberculosis (TB). They may be a healthcare worker, public
+  health official, or a person with a personal connection to someone who has contracted TB. They are likely to be interested in the latest information on TB treatment, prevention, and support resources,
+  and may be looking for ways to help those affected by the disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory health
+  general_domain_top01pct: None
+  specific_domain_top01pct: TB treatment and prevention
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

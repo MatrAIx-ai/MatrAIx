@@ -1,0 +1,19 @@
+id: '00054661'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54661
+persona_description: A paramedic who works in an emergency department and is responsible for assessing and treating patients in a high-pressure environment. They are trained to recognize and respond to
+  the signs and symptoms of injuries sustained during motor vehicle accidents, particularly those related to airbag deployment. They are also knowledgeable about the mechanisms of action and deployment
+  of airbags and their potential risks and benefits. They are familiar with the importance of proper positioning of the driver and passenger in the event of an airbag deployment and the need for appropriate
+  imaging to rule out serious chest wall injuries.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: Emergency Medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

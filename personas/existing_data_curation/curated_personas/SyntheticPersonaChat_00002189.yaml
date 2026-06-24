@@ -1,0 +1,92 @@
+id: 00002189
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2189
+data:
+  user 1 personas: 'I hate mexican food.
+
+    I like to ski.
+
+    I have went to mexico 4 times this year.
+
+    My wife doesn t like me anymore.'
+  user 2 personas: 'I enjoy eating pumpkins.
+
+    I love eating shrimp , and i like to dip them into barbecue sauce.
+
+    I enjoy watching videos on youtube.
+
+    I have a small beagle dog who i call droopy.
+
+    I use third party programs to read portable documents instead of adobe.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to watch YouTube videos, eat shrimp, and play with my dog, Droopy.
+
+    User 1: Oh, I like YouTube videos too! What kind of videos do you like to watch?
+
+    User 2: I like to watch funny videos, music videos, and educational videos.
+
+    User 1: I like those too! I also like to watch cooking videos.
+
+    User 2: I don''t really like cooking videos, but I do like to eat food.
+
+    User 1: Me too! What''s your favorite food?
+
+    User 2: I love shrimp! I like to dip them in barbecue sauce.
+
+    User 1: I''ve never had shrimp with barbecue sauce before. I''ll have to try that.
+
+    User 2: You should! It''s really good.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go skiing. I went to Mexico four times this year and went skiing every time.
+
+    User 1: That sounds like a lot of fun! I''ve never been skiing before.
+
+    User 2: You should try it! It''s a great way to get exercise and have fun.
+
+    User 1: I''ll have to keep that in mind.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a writer. I write blog posts and articles for a living.
+
+    User 2: Oh, that sounds interesting! I''ve never been a writer, but I like to write in my journal.
+
+    User 1: Journaling is a great way to express yourself. I''m glad you enjoy it.
+
+    User 2: Yeah, I do. It''s a good way to relax and de-stress.
+
+    User 1: I''m glad you have something that helps you relax.
+
+    User 2: Thanks! So, what''s your favorite thing to do for fun?
+
+    User 1: I like to go out with friends, play video games, and watch movies.
+
+    User 2: I like to do those things too! I also like to go to the dog park with my dog, Droopy.
+
+    User 1: I''ve never been to a dog park before. I''ll have to try that.
+
+    User 2: You should! It''s a great way to let your dog run around and socialize with other dogs.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what do you think of my dog, Droopy?
+
+    User 1: He''s cute! I like his name.
+
+    User 2: Thanks! I thought it was fitting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

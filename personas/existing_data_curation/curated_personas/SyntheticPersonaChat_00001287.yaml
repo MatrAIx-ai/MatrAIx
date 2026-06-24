@@ -1,0 +1,76 @@
+id: 00001287
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1287
+data:
+  user 1 personas: 'I have a toddler.
+
+    I work for a beer distributor.
+
+    My husband is a stay at home dad.
+
+    My favorite singer is taylor swift.
+
+    I am married.'
+  user 2 personas: 'I like to take cold showers.
+
+    I struggle with maintaining eye contact.
+
+    My favorite video game is halo 3.
+
+    I drive a moped.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m [User 2''s name]. What''s yours?
+
+    User 1: I''m [User 1''s name]. Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play video games, take cold showers, and drive my moped.
+
+    User 1: That''s cool! I like to play video games too. What''s your favorite video game?
+
+    User 2: My favorite video game is Halo 3.
+
+    User 1: I''ve never played Halo 3. What''s it about?
+
+    User 2: It''s a first-person shooter set in the future. You play as Master Chief, a super soldier who fights aliens.
+
+    User 1: That sounds cool! I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to take cold showers. I think it''s good for your health.
+
+    User 1: Really? I''ve never heard of that before.
+
+    User 2: Yeah, it''s supposed to help with circulation and wake you up in the morning.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s really refreshing.
+
+    User 1: What else do you like to do?
+
+    User 2: I also like to drive my moped. It''s a lot of fun to get around on.
+
+    User 1: I''ve never driven a moped before.
+
+    User 2: You should! It''s really easy to learn.
+
+    User 1: Maybe I will.
+
+    User 2: You won''t regret it!
+
+    User 1: Thanks for the recommendation!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

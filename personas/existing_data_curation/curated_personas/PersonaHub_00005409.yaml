@@ -1,0 +1,18 @@
+id: 00005409
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5409
+persona_description: An environmental scientist who specializes in monitoring and studying volcanic eruptions and their impact on the environment. This persona is interested in the details of the Grímsvötn
+  volcano eruption, including the monitoring of the eruption plume, the distribution of tephra, and the comparison of the retrieved values with in situ measurements. They are also likely to be interested
+  in the statistical calibration of the volcanic ash radar retrieval algorithm and the review of the accuracy of the weather radar records.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Volcanology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

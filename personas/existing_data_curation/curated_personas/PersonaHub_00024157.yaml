@@ -1,0 +1,19 @@
+id: '00024157'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24157
+persona_description: A radiopharmacist who specializes in the production and use of positron emission tomography (PET) tracers, particularly those containing fluorine-18. This person is knowledgeable about
+  the complex and expensive process of producing PET tracers, including the use of a cyclotron to produce [18F]fluoride, the preparation of the radioisotope, and the incorporation of the radioisotope into
+  the precursor molecule. They are also skilled in the use of emerging technologies to address bottlenecks in PET tracer production, such as kit-based synthesizers and miniaturized radiosynthesizers based
+  on microfluidics.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: nuclear chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: PET tracer production
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

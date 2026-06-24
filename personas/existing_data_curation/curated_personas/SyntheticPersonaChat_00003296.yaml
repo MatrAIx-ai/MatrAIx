@@ -1,0 +1,56 @@
+id: 00003296
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3296
+data:
+  user 1 personas: 'I am a graduate student.
+
+    I volunteer with dogs.
+
+    I am in between classes.
+
+    I m always early.'
+  user 2 personas: 'I go to a local college.
+
+    I work at a smoothie shop.
+
+    I listen to classic rock.
+
+    I enjoy eating vegetarian food.'
+  Best Generated Conversation: 'User 1: I''m a graduate student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying psychology.
+
+    User 2: That''s cool! I''ve always been interested in psychology.
+
+    User 1: Me too! It''s so fascinating.
+
+    User 2: Yeah, it is. What''s your favorite thing about psychology?
+
+    User 1: I love learning about how the mind works.
+
+    User 2: That makes sense. Psychology is all about the mind.
+
+    User 1: Yeah, it is. It''s so interesting to learn about how different people think and feel.
+
+    User 2: I agree. It''s really interesting to see how people''s minds work.
+
+    User 1: Yeah, it is. I love it.
+
+    User 2: What do you want to do with your psychology degree?
+
+    User 1: I''m not sure yet. I''m thinking about going into counseling.
+
+    User 2: That''s a great idea! Counseling can be a really rewarding career.
+
+    User 1: Yeah, I think it would be. I''m excited to learn more about it.
+
+    User 2: Me too. I''m sure you''ll do great things.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

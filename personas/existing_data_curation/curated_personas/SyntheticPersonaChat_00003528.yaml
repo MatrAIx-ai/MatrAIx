@@ -1,0 +1,68 @@
+id: 00003528
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3528
+data:
+  user 1 personas: 'My clients are gamblers.
+
+    I have a consulting firm.
+
+    I am a small business owner.
+
+    I give out sports information.'
+  user 2 personas: 'My dad was a carsalesman.
+
+    I love dogs.
+
+    I like to fish.
+
+    I am a happy person.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a car salesman.
+
+    User 1: Oh, really? What''s that like?
+
+    User 2: It''s a lot of fun! I get to meet new people and help them find the perfect car for their needs.
+
+    User 1: That sounds great! I''m a small business owner.
+
+    User 2: Oh, cool! What kind of business?
+
+    User 1: I have a consulting firm.
+
+    User 2: That sounds interesting! What kind of consulting do you do?
+
+    User 1: I help gamblers make better decisions.
+
+    User 2: Oh, that''s interesting! I''ve never met someone who does that before.
+
+    User 1: It''s a lot of fun! I get to help people learn how to gamble more wisely.
+
+    User 2: That''s awesome! I''m glad you''re doing something you love.
+
+    User 1: Thanks! I am too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go fishing, play video games, and watch sports.
+
+    User 2: Oh, cool! I like to fish too. What''s your favorite type of fish to catch?
+
+    User 1: I like to catch bass. They''re a lot of fun to fight.
+
+    User 2: I''ve never caught a bass before. I''m not very good at fishing.
+
+    User 1: You can always learn! I''m sure you''d be a good fisherman.
+
+    User 2: Thanks! I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''m glad you''re happy with your job. It sounds like you''re doing a lot of good things with it.
+
+    User 1: Thanks! I''m trying to make a difference in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

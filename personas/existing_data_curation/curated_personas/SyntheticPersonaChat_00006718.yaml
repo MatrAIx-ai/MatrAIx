@@ -1,0 +1,53 @@
+id: 00006718
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6718
+data:
+  user 1 personas: 'I am a shy person but i love to sing.
+
+    Until recently i have never been able to sing in front of anyone.
+
+    Anyways i decided to give it a try and participated in an audition for a talent show.
+
+    I was accepted to participate.
+
+    My shyness made me panick and i did not show up.'
+  user 2 personas: 'I love going to the movies.
+
+    Its one of my favorite hobbies.
+
+    My parents would take my brother and i when we were little.
+
+    We liked to pretend we were superheroes.
+
+    I used to wear a cape.'
+  Best Generated Conversation: 'User 1: I love to sing. I was even accepted to participate in a talent show, but my shyness made me panic and I didn''t show up.
+
+    User 2: That''s too bad. I''m sure you would have been great. I love singing too. It''s one of my favorite hobbies. My parents would take my brother and I to the movies when we were little. We liked
+    to pretend we were superheroes. I used to wear a cape.
+
+    User 1: That sounds like a lot of fun. I''m not sure I could ever pull off a cape. I''m too shy.
+
+    User 2: You should give it a try. It''s a lot of fun. What''s your favorite type of music to sing?
+
+    User 1: I like to sing all sorts of music, but I''m especially fond of pop music.
+
+    User 2: Me too! I love singing along to pop songs.
+
+    User 1: Me too! I think it''s so much fun to let go and sing at the top of your lungs.
+
+    User 2: I totally agree. It''s the best feeling in the world.
+
+    User 1: I''m glad we agree. Do you ever go to karaoke?
+
+    User 2: I do sometimes. It''s so much fun to sing with other people.
+
+    User 1: Me too! I''ve never been to a karaoke bar before, but I''ve always wanted to go.
+
+    User 2: You should definitely go. It''s a lot of fun.
+
+    User 1: I think I will. Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00005190
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5190
+data:
+  user 1 personas: 'My wife makes the best pasta.
+
+    I draw all the time and i am good at it.
+
+    It takes me an hour to drive to work in the morning.
+
+    I listen to pink when i am painting.'
+  user 2 personas: 'Boating is my favorite activity.
+
+    I live in a large home.
+
+    I work for a large hospital.
+
+    I am a doctor.'
+  Best Generated Conversation: 'User 1: Hello, what do you like to do for fun?
+
+    User 2: I enjoy boating, it''s my favorite activity.
+
+    User 1: That''s interesting! I''ve never been boating before.
+
+    User 2: Oh, you''re missing out! It''s so much fun to cruise around the lake and go swimming.
+
+    User 1: I''ll have to try it sometime!
+
+    User 2: You should! It''s a great way to relax and enjoy the outdoors.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to read and play video games.
+
+    User 1: Oh, I like to read too! What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m really into science fiction and fantasy novels.
+
+    User 1: Me too! I love the way they can transport you to another world.
+
+    User 2: Exactly! I love that feeling of being completely immersed in a book.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play a lot of different games, but I''m really into first-person shooters and racing games.
+
+    User 1: I like first-person shooters too! What''s your favorite one?
+
+    User 2: My favorite one is Call of Duty: Modern Warfare.
+
+    User 1: Oh, I love that game! I''ve played it so much.
+
+    User 2: Me too! It''s so much fun to team up with friends and take on the world.
+
+    User 1: I agree! It''s a great game to play with friends.
+
+    User 2: It is! I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

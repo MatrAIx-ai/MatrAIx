@@ -1,0 +1,60 @@
+id: 00008663
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8663
+data:
+  user 1 personas: 'I work as a computer technician , but secretly hate my job.
+
+    I am terrified of spiders , but love snakes.
+
+    I like to drink chai tea before bed every night.
+
+    At all times , i am wearing something black.
+
+    My dog is my best friend.'
+  user 2 personas: 'Unfortunately , my family lives across the country from me.
+
+    I graduated with a business degree , and marketing is all that i really enjoyed.
+
+    I would like to spend more time with my family.
+
+    I am recent college graduate looking for a job in marketing.
+
+    I like spending time with friends playing sports and going to country concerts.'
+  Best Generated Conversation: 'User 1: Hi, I''m a computer technician, but I secretly hate my job.
+
+    User 2: Hi, I''m a recent college graduate looking for a job in marketing.
+
+    User 1: What''s your favorite thing about marketing?
+
+    User 2: I like the creative aspect of it. I also like the idea of being able to help businesses grow.
+
+    User 1: That makes sense. I''m actually not very creative, so that''s why I''m not very good at my job.
+
+    User 2: I''m sure you''re better at your job than you think you are.
+
+    User 1: Thanks, but I''m really not. I just don''t have the passion for it that I think I need to be successful.
+
+    User 2: I''m sorry to hear that. Do you have any plans to change careers?
+
+    User 1: I''m not sure yet. I''m still trying to figure out what I want to do.
+
+    User 2: Well, I hope you find something you''re passionate about.
+
+    User 1: Thanks, I appreciate it.
+
+    User 2: No problem. So, what do you like to do for fun?
+
+    User 1: I like to play video games, watch movies, and spend time with my dog.
+
+    User 2: That sounds like fun. I like to do a lot of the same things.
+
+    User 1: That''s great. Maybe we could hang out sometime and do something fun.
+
+    User 2: I''d love that. Let''s exchange numbers and we can make plans.
+
+    User 1: Sounds good. I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

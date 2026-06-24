@@ -1,0 +1,18 @@
+id: 00054691
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54691
+persona_description: A meteorologist who monitors and analyzes weather patterns, particularly tropical storms and their development. They are knowledgeable about the GPM mission and its satellite analysis
+  tools, and are skilled in interpreting satellite data to predict storm intensity and track its movement. They are also familiar with the region where Tropical Storm Lester is located, and can provide
+  information on the storm's current status and expected future behavior.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: meteorology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

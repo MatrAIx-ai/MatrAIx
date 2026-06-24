@@ -1,0 +1,70 @@
+id: 00008443
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8443
+data:
+  user 1 personas: 'I have two dogs , one pitbull and old english bulldog.
+
+    I like the color blue or red.
+
+    I use to be a wild child.
+
+    I love the country but enjoy visiting the city life.
+
+    I ve always wanted to travel to ireland or puerto rico.'
+  user 2 personas: 'I have a friend group , but i don t like any of them.
+
+    I am a middle aged mother of two high school boys.
+
+    But , i feel lost and far away from who i truly am.
+
+    My days are filled with cross country try outs and basketball practice.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends, and I also like to travel.
+
+    User 1: That sounds fun! I love to travel too. Have you ever been to Ireland or Puerto Rico?
+
+    User 2: No, I haven''t. I''ve always wanted to go to Ireland, though.
+
+    User 1: It''s beautiful there! I went last year and I had a great time.
+
+    User 2: That''s good to know. Maybe I''ll add it to my list of places to travel.
+
+    User 1: You should! It''s a great place to visit.
+
+    User 2: Thanks for the suggestion!
+
+    User 1: You''re welcome! So, what do you do for a living?
+
+    User 2: I''m a middle school teacher.
+
+    User 1: Oh, that''s cool! I''ve always thought about teaching.
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: That''s what I''ve heard.
+
+    User 2: So, what about you? What do you do for a living?
+
+    User 1: I''m a dog groomer.
+
+    User 2: Oh, that''s cool! I love dogs.
+
+    User 1: Me too! I have two dogs of my own.
+
+    User 2: What kind of dogs?
+
+    User 1: I have a pitbull and an old English bulldog.
+
+    User 2: Oh, those are both great breeds!
+
+    User 1: Thanks! I love them both very much.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

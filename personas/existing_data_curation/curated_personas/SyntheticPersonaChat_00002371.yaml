@@ -1,0 +1,88 @@
+id: '00002371'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2371
+data:
+  user 1 personas: 'I am a ballet dancer.
+
+    I work many hours rehearsing for my show.
+
+    I like movies based on comedies.
+
+    My parents passed away in a car accident.
+
+    My favorite food is hamburgers.'
+  user 2 personas: 'I am a middle aged woman.
+
+    I love to listen to religious music.
+
+    I do not talk a lot.
+
+    I like playing basketball.
+
+    I love my family.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play basketball and listen to religious music.
+
+    User 1: That''s cool! I love to play basketball too.
+
+    User 2: Oh, really? What''s your favorite position?
+
+    User 1: I''m a point guard. I like to control the pace of the game.
+
+    User 2: That''s a good position. I''m a center. I like to rebound and protect the paint.
+
+    User 1: I see. So, what do you do for work?
+
+    User 2: I''m a middle school teacher.
+
+    User 1: Oh, that''s awesome! What grade do you teach?
+
+    User 2: I teach sixth grade.
+
+    User 1: That''s great! I''m a ballet dancer. I work many hours rehearsing for my show.
+
+    User 2: That''s amazing! I''m sure you must be very talented.
+
+    User 1: Thank you! I love dancing. It''s my passion.
+
+    User 2: That''s great! I''m glad you have something you love to do.
+
+    User 1: Thank you. So, what do you like to do for fun?
+
+    User 2: I love to spend time with my family. We go out to eat a lot. We also like to play basketball together.
+
+    User 1: That''s nice. I love spending time with my family too. We go to movies a lot.
+
+    User 2: Oh, that''s cool! What kind of movies do you like?
+
+    User 1: I like comedies the best. They always make me laugh.
+
+    User 2: Me too! I love watching comedies.
+
+    User 1: Do you have any favorite movies?
+
+    User 2: I love the movie "The Hangover". It''s so funny.
+
+    User 1: I love that movie too! It''s so funny.
+
+    User 2: I''m glad you like it too.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m going to be playing basketball with my family.
+
+    User 1: That sounds like fun.
+
+    User 2: Yeah, I''m looking forward to it.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

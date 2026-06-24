@@ -1,0 +1,70 @@
+id: '00002366'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2366
+data:
+  user 1 personas: 'My mom is a painter.
+
+    My best friend just moved away.
+
+    I start my senior year of high school next week.
+
+    My favorite sport is hockey.'
+  user 2 personas: 'I like to ride horses.
+
+    I have an older brother who plays football in the nfl.
+
+    My favorite food is popcorn.
+
+    I like to snowboard.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride horses, snowboard, and eat popcorn.
+
+    User 1: Cool! I like to play hockey and go to the movies.
+
+    User 2: Oh, I love hockey! Who''s your favorite team?
+
+    User 1: I''m a big fan of the Montreal Canadiens.
+
+    User 2: Nice! I''m a fan of the Toronto Maple Leafs.
+
+    User 1: Oh, that''s cool. I''ve always liked Auston Matthews.
+
+    User 2: Yeah, he''s a great player.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that must be fun!
+
+    User 2: It is! I love working with kids.
+
+    User 1: That''s great!
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: Not much, just going to watch some hockey and hang out with friends.
+
+    User 2: Nice! I''m going to snowboard with my friends.
+
+    User 1: Oh, that sounds fun!
+
+    User 2: Yeah, it should be.
+
+    User 1: Well, it was nice talking to you, [user 2 name].
+
+    User 2: You too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

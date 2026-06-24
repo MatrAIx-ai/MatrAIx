@@ -1,0 +1,18 @@
+id: '00050203'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50203
+persona_description: A dental surgeon who specializes in periodontal disease treatment, specifically osseous surgery. They are skilled in performing invasive surgical procedures and have a deep understanding
+  of the effects of periodontal disease on the body, including bone loss and root sensitivity. They are highly trained in the use of fluoride treatments and are committed to providing comprehensive care
+  to their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: periodontal surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: osseous surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

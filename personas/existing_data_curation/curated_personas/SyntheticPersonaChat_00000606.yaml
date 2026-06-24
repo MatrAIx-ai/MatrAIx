@@ -1,0 +1,62 @@
+id: '00000606'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 606
+data:
+  user 1 personas: 'I am an artist.
+
+    I love watching game of thrones.
+
+    I recently got a cat.
+
+    I enjoy walking for exercise.'
+  user 2 personas: 'I use red lipstick.
+
+    I like to wear red.
+
+    I like to wear red shoes also.
+
+    I wear a red purse.
+
+    I drive a red car.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], what''s yours?
+
+    User 2: Hi [name], I''m [name]. It''s nice to meet you!
+
+    User 1: Nice to meet you too! What do you do for fun?
+
+    User 2: I like to draw and paint. I''m also a big fan of Game of Thrones.
+
+    User 1: Oh, cool! I love Game of Thrones too! What''s your favorite house?
+
+    User 2: I''m a big fan of House Stark. I love their loyalty and honor.
+
+    User 1: Me too! They''re my favorite house as well.
+
+    User 2: What kind of art do you like to create?
+
+    User 1: I like to draw and paint landscapes. I also like to create digital art.
+
+    User 2: That''s awesome! I love digital art. I''ve been wanting to get into it, but I don''t know where to start.
+
+    User 1: There are a lot of great tutorials online. You could also check out some art classes in your area.
+
+    User 2: Thanks for the advice! I''ll definitely look into it.
+
+    User 1: No problem! So, what do you do for work?
+
+    User 2: I''m a fashion designer. I love creating clothes and accessories.
+
+    User 1: That''s so cool! I''ve always been interested in fashion design.
+
+    User 2: You should definitely give it a try! It''s a lot of fun.
+
+    User 1: I might just do that! Thanks for the inspiration.
+
+    User 2: No problem! It was nice talking to you, [name].
+
+    User 1: You too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

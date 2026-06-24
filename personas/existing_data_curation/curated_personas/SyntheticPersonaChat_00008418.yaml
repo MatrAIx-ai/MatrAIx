@@ -1,0 +1,80 @@
+id: 00008418
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8418
+data:
+  user 1 personas: 'In high school , i came in 6th in the 100 meter dash.
+
+    I like canning and whittling.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    My favorite movie is good burger.'
+  user 2 personas: 'I teach kindergarten.
+
+    I teach at a large school.
+
+    I graduated college in 2016.
+
+    My class has 26 kids.
+
+    I enjoys kayaking in my free time.'
+  Best Generated Conversation: 'User 1: I''m a kindergarten teacher.
+
+    User 2: I''ve never met a kindergarten teacher before.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, what''s that like?
+
+    User 2: It''s really fun! I get to work on new projects all the time.
+
+    User 1: That sounds cool. What''s your favorite project that you''ve ever worked on?
+
+    User 2: I worked on a project that helped people to save money on their energy bills.
+
+    User 1: That''s really cool! Do you like your job?
+
+    User 2: I love my job! It''s challenging and rewarding.
+
+    User 1: That''s great!
+
+    User 2: What''s your favorite thing about being a kindergarten teacher?
+
+    User 1: I love working with kids. They''re so funny and creative.
+
+    User 2: I can imagine!
+
+    User 1: What''s the best thing about being a software engineer?
+
+    User 2: I love the problem-solving aspect of it.
+
+    User 1: That makes sense.
+
+    User 2: Do you have any hobbies?
+
+    User 1: I like to can and whittle in my free time.
+
+    User 2: That sounds interesting!
+
+    User 1: It is! I also love to watch movies.
+
+    User 2: Me too! What''s your favorite movie?
+
+    User 1: My favorite movie is Good Burger.
+
+    User 2: I''ve never seen that one.
+
+    User 1: You should! It''s a classic.
+
+    User 2: I''ll check it out.
+
+    User 1: I''m sure you''ll like it.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

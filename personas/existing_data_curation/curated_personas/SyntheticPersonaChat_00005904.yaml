@@ -1,0 +1,74 @@
+id: 00005904
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5904
+data:
+  user 1 personas: 'My favorite activity is fishing.
+
+    I once ran the mile in under 4 minutes.
+
+    I cannot go a single day without eating ice cream.
+
+    My dad was a cop until he was killed.
+
+    My favorite thing to do is float the river.'
+  user 2 personas: 'I am married.
+
+    I live in new york city.
+
+    I am a writer.
+
+    I enjoy going to museums.
+
+    I have ten nieces and nephews.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hi, I''m [name]. What''s yours?
+
+    User 1: I''m [name]. It''s nice to meet you.
+
+    User 2: You too. Where are you from?
+
+    User 1: I''m from [hometown]. Where are you from?
+
+    User 2: I''m from [hometown]. What do you do for a living?
+
+    User 1: I''m a writer. What about you?
+
+    User 2: I''m a stay-at-home mom. How many kids do you have?
+
+    User 1: I have two kids. How many do you have?
+
+    User 2: I have ten nieces and nephews. I love spending time with them.
+
+    User 1: I bet you do. I love spending time with my kids too. What do you like to do for fun?
+
+    User 2: I enjoy going to museums, reading, and writing. What about you?
+
+    User 1: I like to go fishing, float the river, and play video games.
+
+    User 2: Those sound like fun activities. I''ve never been fishing before, but I''d love to try it sometime.
+
+    User 1: You should! It''s a lot of fun. What''s your favorite museum?
+
+    User 2: I like the Metropolitan Museum of Art. It''s the largest art museum in the United States.
+
+    User 1: I''ve been there once. It''s really amazing. What''s your favorite book?
+
+    User 2: I love The Great Gatsby by F. Scott Fitzgerald. It''s a classic American novel.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great read.
+
+    User 1: Thanks for the recommendation. I''m always looking for new books to read.
+
+    User 2: You''re welcome. I love talking about books.
+
+    User 1: Me too. I''m glad we met.
+
+    User 2: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

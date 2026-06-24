@@ -1,0 +1,19 @@
+id: 00009673
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9673
+persona_description: A market-oriented energy analyst who specializes in the measurement and valuation of electricity generation capacity, particularly in the context of combined-cycle units and their ability
+  to capture peak prices while minimizing shoulder period and off-peak losses. This persona is interested in developing new metrics to better understand and value these resources, and is particularly interested
+  in the Economic Dispatch Factor (EDF) as a way to measure the extent to which a unit's operation matches the perfect operating decision. This persona is also interested in the physical limitations of
+  generating units and the potential for wear and tear, as well as the complexities of hourly generator price data and marginal operating costs.
+expertise:
+  general_domain_top1pct: Energy Economics
+  specific_domain_top1pct: Electricity Generation Capacity Valuation
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

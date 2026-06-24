@@ -1,0 +1,73 @@
+id: 00001866
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1866
+data:
+  user 1 personas: 'I drive a fast car.
+
+    My favorite song is california love.
+
+    I like to listen to rap music.
+
+    My favorite artist is 2pac.
+
+    My car is black.'
+  user 2 personas: 'I am a yoga instructor.
+
+    I have two chiuahuahs.
+
+    I collect seashells.
+
+    I have a son.
+
+    I love horses.'
+  Best Generated Conversation: 'User 1: Hello, I am a fast driver and my favourite song is California Love by 2pac.
+
+
+    User 2: Hello there. I love horses and I am a yoga instructor.
+
+
+    User 1: That''s cool. My car is black.
+
+
+    User 2: Nice. I have two chihuahuas and I collect seashells.
+
+
+    User 1: Wow. That''s a lot of dogs. What''s your favorite kind of seashell?
+
+
+    User 2: I like abalone shells. What''s your favorite song by 2pac?
+
+
+    User 1: California Love is my favorite. I love the beat.
+
+
+    User 2: Me too! It''s so catchy. What else do you like to do for fun?
+
+
+    User 1: I like to go to the movies and play video games.
+
+
+    User 2: I like to go to the movies too. I don''t play video games as much as I used to.
+
+
+    User 1: What do you do for fun now?
+
+
+    User 2: I teach yoga and spend time with my family.
+
+
+    User 1: That sounds like a lot of fun. I wish I could do yoga.
+
+
+    User 2: You should try it! It''s a great way to relax and de-stress.
+
+
+    User 1: I''ll have to give it a try.
+
+
+    User 2: I hope you like it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: 00006785
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6785
+data:
+  user 1 personas: 'I like to go to the gym and work out.
+
+    I like to go out to the bars.
+
+    I m retired.
+
+    I like cooking healthy meals.
+
+    I enjoy dating women.'
+  user 2 personas: 'My mom is my best friend.
+
+    I am afraid of the dark.
+
+    Rock music is my favorite.
+
+    I hate broccoli.'
+  Best Generated Conversation: 'User 1: What are your hobbies?
+
+    User 2: I love going to the gym and working out, and I also like going out to the bars.
+
+    User 1: I like working out too, but I''m not much of a bar person.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like cooking healthy meals, and I also enjoy dating women.
+
+    User 2: I''m not much of a cook, but I love to go out to eat.
+
+    User 1: What''s your favorite type of food?
+
+    User 2: I love all kinds of food, but I''m especially fond of Italian food.
+
+    User 1: Me too! I love pizza, pasta, and lasagna.
+
+    User 2: Me too! I also love garlic bread and tiramisu.
+
+    User 1: I''ve never had tiramisu before. What''s it like?
+
+    User 2: It''s a delicious Italian dessert made with ladyfingers, mascarpone cheese, and coffee.
+
+    User 1: That sounds amazing! I''ll have to try it sometime.
+
+    User 2: You definitely should! It''s one of my favorite desserts.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a stay-at-home mom, but I used to be a teacher.
+
+    User 1: Oh, I''m a teacher too! What grade did you teach?
+
+    User 2: I taught high school English.
+
+    User 1: That''s awesome! I teach middle school math.
+
+    User 2: I love English, but I''m not very good at math.
+
+    User 1: It''s okay, I''m not very good at English.
+
+    User 2: Well, we''re both teachers, so we''re both doing something right.
+
+    User 1: I guess so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

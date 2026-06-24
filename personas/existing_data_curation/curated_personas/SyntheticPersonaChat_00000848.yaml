@@ -1,0 +1,62 @@
+id: 00000848
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 848
+data:
+  user 1 personas: 'I love to surf.
+
+    I am a vegetarian.
+
+    I love pandas.
+
+    My favorite thing to do is to read books on the beach.
+
+    I am starting a new juicing bar.'
+  user 2 personas: 'I do not like vegetables.
+
+    My favorite store is american eagle.
+
+    My favorite truck is a chevy drama.
+
+    I love to go running.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name], what''s your name?
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to go running, and I''m also a big fan of American Eagle.
+
+    User 1: I''ve never been to American Eagle before. What do you like about it?
+
+    User 2: They have a lot of cute clothes, and the sales are always really good.
+
+    User 1: I''ll have to check it out sometime. What else do you like to do for fun?
+
+    User 2: I also like to go camping, fishing, and hiking.
+
+    User 1: Sounds like you like the outdoors! I love to go surfing.
+
+    User 2: I''ve never been surfing before. What''s it like?
+
+    User 1: It''s a lot of fun! It''s a great way to get some exercise and enjoy the beach.
+
+    User 2: I''ll have to try it sometime. Do you have any other hobbies?
+
+    User 1: I love to read books, especially on the beach. I''m also starting a new juicing bar.
+
+    User 2: I''m not a big reader, but I love the beach. I''m not sure what a juicing bar is.
+
+    User 1: A juicing bar is a place where you can get fresh juices and smoothies.
+
+    User 2: That sounds healthy! I might have to check it out.
+
+    User 1: You should! I''m sure you''ll like it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! I''m always happy to talk about my hobbies.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

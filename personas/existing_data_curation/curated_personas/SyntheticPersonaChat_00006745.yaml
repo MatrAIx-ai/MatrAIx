@@ -1,0 +1,76 @@
+id: '00006745'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6745
+data:
+  user 1 personas: 'I enjoy my steaks cooked medium rare.
+
+    I m too short to reach the top shelf.
+
+    I have five different flavors of coffee in my fridge.
+
+    I have the gene that lets me know when someone s eaten asparagus.
+
+    My dog introduced me to my first and second wives.'
+  user 2 personas: 'I am allergic to nuts.
+
+    I am working on a biology degree.
+
+    I love book.
+
+    1984 is my favorite book.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Nice to meet you, [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read books, especially science fiction and fantasy.
+
+    User 1: Me too! I love 1984 by George Orwell.
+
+    User 2: That''s a great book! I also love Brave New World by Aldous Huxley.
+
+    User 1: I''ve never read that one, but I''ve heard good things about it.
+
+    User 2: You should definitely check it out. It''s a classic.
+
+    User 1: I will. What else do you like to read?
+
+    User 2: I also like to read historical fiction, like The Pillars of the Earth by Ken Follett.
+
+    User 1: I''ve heard good things about that book too.
+
+    User 2: It''s really good! It''s about the building of a cathedral in 12th century England.
+
+    User 1: That sounds really interesting. I''ll have to check it out.
+
+    User 2: You should. It''s a great book.
+
+    User 1: So, what are you working on for your biology degree?
+
+    User 2: I''m working on a project about the genetic basis of cancer.
+
+    User 1: That sounds really interesting. What are you learning about?
+
+    User 2: I''m learning about how certain genes can cause cells to become cancerous.
+
+    User 1: That''s really cool. I''m not sure I understand it all, but it sounds really interesting.
+
+    User 2: It''s a lot of information, but it''s really cool to learn about.
+
+    User 1: I can imagine. It sounds like you''re doing some really important work.
+
+    User 2: I hope so! I''m trying to make a difference in the world.
+
+    User 1: I''m sure you will. You seem like a really smart and dedicated person.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it was nice talking to you. I hope you have a good day.
+
+    User 2: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

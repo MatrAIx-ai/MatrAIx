@@ -1,0 +1,62 @@
+id: '00005122'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5122
+data:
+  user 1 personas: 'My favorite band is bon over.
+
+    I work in public relations.
+
+    I am from seattle.
+
+    My parents raised me as a buddhist.'
+  user 2 personas: 'I take martial arts after school.
+
+    I am ten years old.
+
+    And , my best friend is abigail.
+
+    Tomorrow is my first day of safety patrol.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: Great! I''m excited for my first day of safety patrol tomorrow.
+
+    User 1: That''s awesome! Safety patrol is a great way to give back to your community.
+
+    User 2: I know, I''m really looking forward to it.
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I like to play video games, read, and hang out with my friends.
+
+    User 1: Me too! I love to play video games and read.
+
+    User 2: What are some of your favorite video games?
+
+    User 1: I love all the Zelda games, and I also love the Mario games.
+
+    User 2: I love the Zelda games too! They''re so much fun.
+
+    User 1: Me too! I''m so excited for the new Zelda game coming out next year.
+
+    User 2: Me too! I can''t wait to play it.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I love all the Harry Potter books, and I also love the Percy Jackson books.
+
+    User 1: I love the Harry Potter books too! I''ve read them all multiple times.
+
+    User 2: Me too! They''re so good.
+
+    User 1: So, what are you looking forward to in the future?
+
+    User 2: I''m looking forward to going to college and studying law.
+
+    User 1: That''s great! I''m sure you''ll do great things.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

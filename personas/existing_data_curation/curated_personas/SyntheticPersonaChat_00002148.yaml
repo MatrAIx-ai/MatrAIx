@@ -1,0 +1,70 @@
+id: 00002148
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2148
+data:
+  user 1 personas: 'I do not have a job.
+
+    I love comics.
+
+    I love the walking dead.
+
+    I eat junk food.'
+  user 2 personas: 'I am 29 years old.
+
+    I enjoy hiking and riding my bicycle.
+
+    I am a night owl.
+
+    I live in a suburb of boston.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I enjoy hiking and riding my bicycle.
+
+    User 1: That''s cool. I''ve never been hiking before.
+
+    User 2: You should try it! It''s a great way to get outside and enjoy the fresh air.
+
+    User 1: I''ll have to give it a try. What''s your favorite hike?
+
+    User 2: I like the trails in the White Mountains. They''re challenging, but the views are amazing.
+
+    User 1: That sounds great. I''ll have to check them out. Do you ever go camping?
+
+    User 2: I do sometimes, but not very often. I prefer to hike during the day and go home at night.
+
+    User 1: That''s fair enough. I love camping, but I know it''s not for everyone.
+
+    User 2: What are you up to today?
+
+    User 1: Not much. I''m just hanging out and watching TV.
+
+    User 2: Me too. I''m watching the walking dead. Have you seen it?
+
+    User 1: I have! I love it. It''s my favorite show.
+
+    User 2: Me too! It''s so good. What do you think is going to happen in the next season?
+
+    User 1: I don''t know. I''m not sure if Rick is going to make it.
+
+    User 2: I hope he does. He''s my favorite character.
+
+    User 1: Me too. He''s so badass.
+
+    User 2: Yeah, he is. What else do you like to watch?
+
+    User 1: I like to watch a lot of different things. I like sci-fi, horror, and comedy.
+
+    User 2: Me too. I love sci-fi and horror.
+
+    User 1: What''s your favorite sci-fi movie?
+
+    User 2: I like the Alien movies. They''re so scary.
+
+    User 1: Me too! I love the first one.
+
+    User 2: That''s my favorite one too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

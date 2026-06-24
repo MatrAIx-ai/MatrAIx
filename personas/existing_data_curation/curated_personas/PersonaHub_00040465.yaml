@@ -1,0 +1,18 @@
+id: '00040465'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40465
+persona_description: A person who is interested in geology and has a deep understanding of the formation and structure of mountains, including their ridges. They are knowledgeable about the geological processes
+  that create these features and how they are affected by weathering, erosion, and other natural forces. They may also be interested in the historical and cultural significance of mountain ranges and their
+  impact on the environment and human settlements.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: mountain formation and structure
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

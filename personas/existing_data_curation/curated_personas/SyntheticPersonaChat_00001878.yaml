@@ -1,0 +1,68 @@
+id: 00001878
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1878
+data:
+  user 1 personas: 'I have a big beard.
+
+    Its cold where i live.
+
+    I like to go fishing on my viking boat.
+
+    I am a viking.'
+  user 2 personas: 'My hair is brown and curly.
+
+    I love to surf.
+
+    I love watching sunsets.
+
+    I live near the ocean.'
+  Best Generated Conversation: 'User 1: Hello there!
+
+    User 2: Hello! How are you doing today?
+
+    User 1: I''m doing well, thank you! How are you?
+
+    User 2: I''m doing great! Thanks for asking.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to surf and swim. I also love watching sunsets.
+
+    User 1: That sounds like fun! I''ve never surfed before, but I''ve always wanted to try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will someday. So, where do you live?
+
+    User 2: I live near the ocean. It''s so beautiful here.
+
+    User 1: That sounds amazing! I live in a pretty cold place.
+
+    User 2: I''ve never been to a cold place before.
+
+    User 1: It''s not as fun as you might think.
+
+    User 2: I guess I''ll have to take your word for it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a surf instructor.
+
+    User 1: That sounds like a fun job!
+
+    User 2: It is! I love getting to teach people how to surf.
+
+    User 1: I bet. So, what''s your favorite thing about surfing?
+
+    User 2: I love the feeling of being out on the water and the challenge of catching a wave.
+
+    User 1: That sounds amazing. I''m jealous.
+
+    User 2: You should try it sometime!
+
+    User 1: Maybe I will'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

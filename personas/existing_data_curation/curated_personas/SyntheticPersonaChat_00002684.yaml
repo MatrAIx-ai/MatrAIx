@@ -1,0 +1,62 @@
+id: 00002684
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2684
+data:
+  user 1 personas: 'One child has autism.
+
+    I have two children.
+
+    I am a mother.
+
+    I work as a teacher and love my job.
+
+    I have two dogs who are like my babies.'
+  user 2 personas: 'I prefer vinyl records to any other music recording format.
+
+    I am never still.
+
+    I drive junk cars that no one else wants.
+
+    I think if i work hard enough i can fix the world.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing great, thanks for asking! How about you?
+
+    User 1: I''m doing well too, thank you.
+
+    User 2: What do you do for fun?
+
+    User 1: I love to read, write, and spend time with my family.
+
+    User 2: That sounds great! I like to read, write, and play music.
+
+    User 1: Oh, what kind of music do you play?
+
+    User 2: I play the guitar and piano.
+
+    User 1: Nice! I love to listen to music, but I don''t play any instruments.
+
+    User 2: That''s okay, I''m sure you could learn if you wanted to.
+
+    User 1: Maybe I will! I love music.
+
+    User 2: I''m glad to hear that!
+
+    User 1: What''s your favorite kind of music?
+
+    User 2: I love all kinds of music, but I''m especially fond of classic rock.
+
+    User 1: Oh, me too! I love listening to classic rock while I read or write.
+
+    User 2: Me too! It''s the perfect music to relax to.
+
+    User 1: I agree.
+
+    User 2: Well, it was nice talking to you. I hope you have a good day.
+
+    User 1: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

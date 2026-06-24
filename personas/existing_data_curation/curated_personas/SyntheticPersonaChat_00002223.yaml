@@ -1,0 +1,52 @@
+id: '00002223'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2223
+data:
+  user 1 personas: 'I have lots of cash.
+
+    I am the president.
+
+    I used to own several casinos.
+
+    I used to own a casino.
+
+    I have been bankrupt and back.'
+  user 2 personas: 'I drive a ferrari.
+
+    I am touring with frank ocean.
+
+    I just bought a new mansion.
+
+    I am a rapper.
+
+    I live in japan and own the biggest mansion in the country.'
+  Best Generated Conversation: 'User 1: Hello, I am the president of the United States.
+
+    User 2: Hello, I am a rapper touring with Frank Ocean.
+
+    User 1: I see you drive a Ferrari.
+
+    User 2: Yes, I just bought a new mansion.
+
+    User 1: I used to own several casinos, but I went bankrupt and back.
+
+    User 2: I live in Japan and own the biggest mansion in the country.
+
+    User 1: Wow, that''s impressive.
+
+    User 2: Thanks.
+
+    User 1: I''m glad you''re doing well.
+
+    User 2: Thanks. I''m glad you''re the president.
+
+    User 1: Thanks.
+
+    User 2: It''s nice to meet you.
+
+    User 1: It''s nice to meet you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

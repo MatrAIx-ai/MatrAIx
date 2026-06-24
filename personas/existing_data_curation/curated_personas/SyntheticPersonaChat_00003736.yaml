@@ -1,0 +1,70 @@
+id: '00003736'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3736
+data:
+  user 1 personas: 'I love to paint pictures.
+
+    I love meat.
+
+    I have a new job selling cars.
+
+    My favorite food is pizza.
+
+    My wife use to be a teacher.'
+  user 2 personas: 'I got married 10 years later.
+
+    I was the first born child.
+
+    I was a slave for 10 years.
+
+    I escaped and later became a carpenter.
+
+    My favorite color is red.'
+  Best Generated Conversation: 'User 1: I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you. I love to paint pictures. What do you like to do?
+
+    User 2: I like to paint pictures too! I also like to read and write.
+
+    User 1: That''s awesome. I love to read too. What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings. I love the story and the characters.
+
+    User 1: I love that book too! I''ve read it a few times.
+
+    User 2: Me too! I love how the story is so epic and the characters are so well-developed.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Shawshank Redemption. I love the story and the characters.
+
+    User 1: I love that movie too! It''s so inspiring.
+
+    User 2: Me too! I love how Andy Dufresne never gives up hope, even when he''s in prison.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is pizza. I love the cheese and the sauce.
+
+    User 1: I love pizza too! I love the variety of toppings you can put on it.
+
+    User 2: Me too! I love pepperoni, sausage, and mushrooms.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a carpenter. I love building things with my hands.
+
+    User 1: That''s awesome! I''m a painter. I love creating things with my mind.
+
+    User 2: I love that. I think art is so important. It can make people feel happy and inspired.
+
+    User 1: I agree. Art can make people feel a lot of different emotions.
+
+    User 2: I''m glad you agree. I think art is one of the most important things in the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

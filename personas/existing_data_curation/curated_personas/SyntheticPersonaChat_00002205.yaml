@@ -1,0 +1,76 @@
+id: '00002205'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2205
+data:
+  user 1 personas: 'I have a big family.
+
+    I graduated college a few years ago.
+
+    I was born outside the us.
+
+    I prefer summer over winter.'
+  user 2 personas: 'I like toyota cars.
+
+    I do not like working long hours.
+
+    I like to vote.
+
+    Someday i would like a truck.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi, [user 2]. I''m [user 2].
+
+    User 1: Where are you from?
+
+    User 2: I was born in the US, but I''ve lived in a few different countries.
+
+    User 1: What''s your favorite thing about the US?
+
+    User 2: I love the variety of landscapes and cultures.
+
+    User 1: What''s your favorite thing about the countries you''ve lived in?
+
+    User 2: I love the food!
+
+    User 1: Me too! What''s your favorite food?
+
+    User 2: I love Mexican food.
+
+    User 1: Me too! I love tacos and burritos.
+
+    User 2: Me too! And enchiladas.
+
+    User 1: I love enchiladas too!
+
+    User 2: What''s your favorite type of music?
+
+    User 1: I like all kinds of music, but I especially like rock and roll.
+
+    User 2: Me too! I love the energy of rock and roll.
+
+    User 1: Me too! What''s your favorite band?
+
+    User 2: I love The Beatles.
+
+    User 1: Me too! They''re my favorite band too.
+
+    User 2: Great! What''s your favorite album?
+
+    User 1: My favorite album is Abbey Road.
+
+    User 2: Me too! It''s a classic.
+
+    User 1: What''s your favorite song?
+
+    User 2: My favorite song is "Here Comes the Sun".
+
+    User 1: Me too! It''s such a beautiful song.
+
+    User 2: It is. I love the lyrics.
+
+    User 1: Me too. They''re so simple, but so beautiful.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

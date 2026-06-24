@@ -1,0 +1,78 @@
+id: 00005806
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5806
+data:
+  user 1 personas: 'I like to dance with my friends.
+
+    I really like to go to school.
+
+    I love to be run.
+
+    I am six feet tall.'
+  user 2 personas: 'I moved far from home.
+
+    My family owns a farm.
+
+    I am skilled in computer repair.
+
+    I have red hair.
+
+    I like to eat meat.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hi, I''m [username].
+
+    User 1: Where are you from?
+
+    User 2: I moved far from home to go to college.
+
+    User 1: Oh, that must have been hard.
+
+    User 2: It was at first, but I''m used to it now.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to dance, go to school, and run.
+
+    User 1: I like to dance too! What kind of dancing do you like?
+
+    User 2: I like to do all kinds of dancing, but I''m best at hip-hop.
+
+    User 1: That''s cool. I''m not very good at dancing, but I have fun when I do it.
+
+    User 2: I''m sure you''re better than you think.
+
+    User 1: Thanks.
+
+    User 2: So, what do you do for school?
+
+    User 1: I''m studying computer science.
+
+    User 2: Oh, that''s cool. I''m not very good with computers.
+
+    User 1: It''s not that hard, once you get the hang of it.
+
+    User 2: I''ll have to take your word for it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the movies, play video games, and eat meat.
+
+    User 1: I like to go to the movies too. I''m not much of a video game player, but I do like to eat meat.
+
+    User 2: That''s cool. We should hang out sometime and do something fun.
+
+    User 1: That sounds like a plan.
+
+    User 2: Great. I''ll give you my number and we can figure out a time to meet up.
+
+    User 1: Sounds good.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

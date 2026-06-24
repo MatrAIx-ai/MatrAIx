@@ -1,0 +1,19 @@
+id: 00010128
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10128
+persona_description: A medical professional with a special interest in bone and cancer research, specifically focusing on bone metastases caused by cancer cells breaking off from the primary tumor and attaching
+  to the bones. They are knowledgeable about the immune system's role in cancer cell spread and the unique surfaces and chemicals that cancer cells use to attach to the target area or bone, and how these
+  attachments lead to the cancer cells' growth and break down of bone. They are interested in the latest research and treatments for bone metastases and have a passion for understanding how cancer cells
+  can evade the immune system and cause bone damage.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cancer biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

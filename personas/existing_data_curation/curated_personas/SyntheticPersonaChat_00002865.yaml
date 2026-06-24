@@ -1,0 +1,66 @@
+id: 00002865
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2865
+data:
+  user 1 personas: 'I love mac and cheese.
+
+    I make cars for a living.
+
+    I like to watch tv.
+
+    I make 30k a year.
+
+    I like to sit on couch all day.'
+  user 2 personas: 'I love country.
+
+    I enjoy reading.
+
+    I m going back to school.
+
+    I love animals.
+
+    I m a vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi, John. I''m Sarah.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, play with animals, and listen to country music.
+
+    User 1: I love to watch TV, eat mac and cheese, and make cars.
+
+    User 2: That''s a lot of different things! What do you do for work?
+
+    User 1: I''m a car maker.
+
+    User 2: That''s interesting. How did you get into that line of work?
+
+    User 1: I''ve always loved cars. When I was a kid, I would spend hours watching my dad work on his car. I always wanted to be a car maker, so I went to school for engineering.
+
+    User 2: That''s really cool. So, you''re passionate about your job?
+
+    User 1: Yeah, I love it. I''m really good at it too. I''ve been working at the same company for 10 years now.
+
+    User 2: Wow, that''s a long time. I''ve only been at my job for a year.
+
+    User 1: Well, you''re doing great so far.
+
+    User 2: Thanks, I''m trying my best.
+
+    User 1: I can tell. So, what are you going back to school for?
+
+    User 2: I''m going to get my master''s degree in education.
+
+    User 1: That''s awesome! What do you want to do when you graduate?
+
+    User 2: I want to be a teacher.
+
+    User 1: That''s great. I''m sure you''ll be a great teacher.
+
+    User 2: Thanks, John. I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

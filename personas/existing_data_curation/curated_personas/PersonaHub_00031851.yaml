@@ -1,0 +1,18 @@
+id: 00031851
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31851
+persona_description: A healthcare professional with expertise in first aid for back and neck injuries, particularly in treating unconsciousness, breathing difficulties, and paralysis. They are trained to
+  immediately call for emergency medical assistance and follow specific steps to prevent further injury until medical professionals arrive, including maintaining the victim's airway and breathing until
+  help arrives. They are knowledgeable in the ABCs of emergency response and rescue breathing techniques.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: None
+  general_domain_top01pct: Healthcare
+  specific_domain_top01pct: Emergency Medical Response
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

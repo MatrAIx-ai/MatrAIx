@@ -1,0 +1,68 @@
+id: '00003542'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3542
+data:
+  user 1 personas: 'My hobby is photography.
+
+    I do not own a television.
+
+    I live in the mountains.
+
+    I know how to pilot a plane.'
+  user 2 personas: 'I like simple jokes.
+
+    My friend likes cartoons like south park.
+
+    Some jokes go too far.
+
+    I like the flintstones.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello there!
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I like to watch cartoons, especially South Park.
+
+    User 1: I''ve never seen South Park. Is it good?
+
+    User 2: It''s great! It''s a really funny show.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should! What do you like to do for fun?
+
+    User 1: I like to take pictures. I''m a photographer.
+
+    User 2: That''s really cool! Do you like to take pictures of people or nature?
+
+    User 1: I like to take pictures of both. But I love taking pictures of nature in the mountains.
+
+    User 2: That sounds beautiful. I''ve always wanted to go to the mountains.
+
+    User 1: You should! It''s really nice.
+
+    User 2: Maybe I will.
+
+    User 1: You should!
+
+    User 2: So, do you have any other hobbies?
+
+    User 1: I also know how to pilot a plane.
+
+    User 2: Really? That''s so cool!
+
+    User 1: Yeah, I''ve been flying planes for a few years now.
+
+    User 2: That''s amazing. I''ve always wanted to learn how to fly a plane.
+
+    User 1: You should! It''s really fun.
+
+    User 2: Maybe I will.
+
+    User 1: You should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,92 @@
+id: '00002016'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2016
+data:
+  user 1 personas: 'I m in grad school.
+
+    I work in a coffee shop.
+
+    I love to read true crime books.
+
+    My favorite drink is caramel cappuccino.'
+  user 2 personas: 'My favorite song is barbie girl.
+
+    My name is nancy.
+
+    I am an only child.
+
+    I like barbies.
+
+    I m a girl.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi, I''m Nancy.
+
+    User 1: What are you up to today?
+
+    User 2: I''m just hanging out.
+
+    User 1: Do you have any plans for the weekend?
+
+    User 2: Not really, I''m just going to relax.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, watch TV, and play with my Barbie dolls.
+
+    User 1: I like to read too. What are you reading right now?
+
+    User 2: I''m reading a true crime book.
+
+    User 1: Oh, that sounds interesting. What''s it about?
+
+    User 2: It''s about a serial killer who was never caught.
+
+    User 1: That sounds really scary!
+
+    User 2: It is. But it''s also really interesting.
+
+    User 1: I''m not sure I could read something like that.
+
+    User 2: It''s not for everyone.
+
+    User 1: So, what else do you like to do?
+
+    User 2: I like to go to the movies.
+
+    User 1: What''s your favorite movie?
+
+    User 2: My favorite movie is The Wizard of Oz.
+
+    User 1: That''s a classic! I love that movie too.
+
+    User 2: I know, right? It''s so good.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a waitress at a local diner.
+
+    User 1: Oh, that''s cool. Do you like it?
+
+    User 2: Yeah, it''s fun. I get to meet a lot of interesting people.
+
+    User 1: That''s cool. So, what''s your favorite thing about yourself?
+
+    User 2: My favorite thing about myself is my sense of humor.
+
+    User 1: That''s a great quality. I love laughing.
+
+    User 2: Me too! I think laughter is the best medicine.
+
+    User 1: I agree. So, what are you looking for in a partner?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: Those are all great qualities. I think you''ll find someone perfect for you.
+
+    User 2: Thank you. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

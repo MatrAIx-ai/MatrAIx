@@ -1,0 +1,107 @@
+id: '00003164'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3164
+data:
+  user 1 personas: 'I live with my parents.
+
+    I have an iphone.
+
+    I prefer headsets over earbuds.
+
+    My favorite color is red.'
+  user 2 personas: 'I work at a power plant.
+
+    My favorite thing to do is read.
+
+    I like to eat spaghetti.
+
+    My newest car is a chevy.
+
+    I live in california.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and play games.
+
+    User 1: Those all sound like fun things to do. Do you have any favorite books?
+
+    User 2: I really like the Harry Potter series.
+
+    User 1: I love Harry Potter too! What''s your favorite book in the series?
+
+    User 2: I think my favorite book is "Harry Potter and the Order of the Phoenix".
+
+    User 1: That''s a great book! I love the part where Harry finds out he''s a Horcrux.
+
+    User 2: Me too! That was such a cool reveal.
+
+    User 1: What else do you like to read?
+
+    User 2: I also like to read fantasy and science fiction novels.
+
+    User 1: Do you have any favorite authors?
+
+    User 2: I like J.K. Rowling, Brandon Sanderson, and Terry Pratchett.
+
+    User 1: Those are all great authors! I''ve read a lot of their books too.
+
+    User 2: Nice! What''s your favorite book by any of them?
+
+    User 1: I think my favorite book by J.K. Rowling is "Harry Potter and the Half-Blood Prince". My favorite book by Brandon Sanderson is "The Way of Kings". And my favorite book by Terry Pratchett is
+    "The Hogfather".
+
+    User 2: Those are all great choices! I agree, they''re all amazing books.
+
+    User 1: Thanks! I''m glad you like them.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a student at [university].
+
+    User 2: Oh, nice! What''s your major?
+
+    User 1: I''m majoring in computer science.
+
+    User 2: Cool! I''m a software engineer.
+
+    User 1: That''s cool! I''m thinking about going into software engineering after I graduate.
+
+    User 2: It''s a great field! There are a lot of job opportunities.
+
+    User 1: I know, I''m excited about it.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play video games, go for walks, and read.
+
+    User 2: Those all sound like fun things to do. Do you have any favorite video games?
+
+    User 1: I like a lot of different games, but my favorite is probably "The Legend of Zelda: Breath of the Wild".
+
+    User 2: That''s a great game! I love the open world and the exploration.
+
+    User 1: Me too! It''s so much fun to just explore and find new things.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. I might go for a walk or play some video games.
+
+    User 2: Oh, nice! I''m going to be working on a project for work.
+
+    User 1: Good luck! I hope it goes well.
+
+    User 2: Thanks! I hope you have a fun weekend.
+
+    User 1: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00011307'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11307
+persona_description: A cardiologist who specializes in the treatment of heart attacks, specifically those with ST-elevation myocardial infarction (STEMI). The cardiologist is highly skilled in identifying
+  STEMI using electrocardiograms (ECGs) and is familiar with various treatments and protocols for STEMI management. The cardiologist is also knowledgeable in the use of new medications and the importance
+  of educating patients and their families in the care after a STEMI.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: 00025868
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25868
+persona_description: A scientist working at Sandia National Lab in Albuquerque, New Mexico, who specializes in developing new materials and technologies to combat the use of improvised explosive devices.
+  The scientist is highly skilled in chemistry and has expertise in developing new fertilizers that can improve soil health and increase the levels of iron in food. The scientist is dedicated to making
+  the new mixture of iron sulfate and ammonium nitrate fertilizer freely available, hoping that it will be adopted by farmers and manufacturers in order to combat the use of improvised explosive devices.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: explosives/IED countermeasures
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

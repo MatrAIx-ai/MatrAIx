@@ -1,0 +1,76 @@
+id: '00002014'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2014
+data:
+  user 1 personas: 'I m a photographer.
+
+    I love dogs.
+
+    I have 4 dogs and i spend all my time with them.
+
+    I like to drink at bars with friends.
+
+    I have a sleeve of tattoos.'
+  user 2 personas: 'I eat 6 eggs every morning for breakfast.
+
+    I am a zookeeper.
+
+    My right foot only has 3 toes.
+
+    My favorite animal is the panda.'
+  Best Generated Conversation: 'User 1: Hello, I''m a photographer.
+
+    User 2: Hello, I''m a zookeeper.
+
+    User 1: That''s cool, what do you like about being a zookeeper?
+
+    User 2: I get to work with animals all day, which is my favorite thing in the world.
+
+    User 1: That''s amazing, I love animals too.
+
+    User 2: What''s your favorite animal?
+
+    User 1: I think my favorite animal is the panda.
+
+    User 2: I love pandas too! They''re so cute and cuddly.
+
+    User 1: I know, right? I would love to have one as a pet.
+
+    User 2: Me too, but they''re not really domesticated animals.
+
+    User 1: That''s true, they''re more like wild animals.
+
+    User 2: Yeah, but they''re still so cute.
+
+    User 1: I know, they''re my favorite animal.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have four dogs.
+
+    User 2: That''s a lot of dogs!
+
+    User 1: I know, I love dogs.
+
+    User 2: What are their names?
+
+    User 1: Their names are Max, Molly, Buddy, and Charlie.
+
+    User 2: Those are great names.
+
+    User 1: Thanks.
+
+    User 2: Do you like to take pictures of your dogs?
+
+    User 1: Yes, I love taking pictures of my dogs.
+
+    User 2: That''s awesome. I love seeing pictures of dogs.
+
+    User 1: I''ll have to show you some of my pictures of my dogs.
+
+    User 2: That would be great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

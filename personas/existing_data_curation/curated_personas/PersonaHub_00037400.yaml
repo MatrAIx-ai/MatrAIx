@@ -1,0 +1,18 @@
+id: '00037400'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 37400
+persona_description: A geologist with expertise in flood sediment layers, archaeological excavations, and the preservation of ancient structures. Specializes in using geophysical surveying techniques to
+  uncover buried archaeological sites and artifacts, including those from ancient temples and religious structures. Has a unique understanding of the complex and sensitive preservation and restoration of
+  historical sites.
+expertise:
+  general_domain_top1pct: Geology
+  specific_domain_top1pct: Geophysical surveying for archaeological sites
+  general_domain_top01pct: None
+  specific_domain_top01pct: Ancient structure preservation and restoration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

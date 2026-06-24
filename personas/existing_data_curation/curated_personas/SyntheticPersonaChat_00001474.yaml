@@ -1,0 +1,68 @@
+id: '00001474'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1474
+data:
+  user 1 personas: 'We have two sons.
+
+    I enjoy visiting museums.
+
+    I like to attend wine tours.
+
+    I like to paint.
+
+    My husband is 20 years older than me.'
+  user 2 personas: 'I drive a large , blue van.
+
+    I love to recycle.
+
+    I have two tattoos.
+
+    I am a hippie.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1)!
+
+    User 2: Hi (user 1)! I''m (user 2)!
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I love to recycle, paint, and travel.
+
+    User 1: That sounds like fun! I enjoy visiting museums, taking wine tours, and painting.
+
+    User 2: That''s great! I love to visit museums as well. Have you ever been to the Louvre Museum in Paris?
+
+    User 1: No, I haven''t. I''ve always wanted to go, though!
+
+    User 2: It''s amazing! There''s so much to see and learn.
+
+    User 1: I bet! I''m sure I would love it there.
+
+    User 2: You should definitely go if you ever get the chance.
+
+    User 1: I will! Thanks for the recommendation!
+
+    User 2: No problem! What''s your favorite kind of wine?
+
+    User 1: I love red wine.
+
+    User 2: Me too! What''s your favorite type of red wine?
+
+    User 1: I love Cabernet Sauvignon.
+
+    User 2: That''s a great choice! It''s my favorite too.
+
+    User 1: I''m glad we agree! What''s your favorite museum?
+
+    User 2: I love the Metropolitan Museum of Art in New York City.
+
+    User 1: That''s a great choice! I''ve been there a few times. It''s amazing.
+
+    User 2: It''s incredible! There''s so much to see and learn.
+
+    User 1: I agree! I''m always in awe when I leave.
+
+    User 2: Me too! I''m glad you like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: '00007260'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7260
+persona_description: A tower controller who is responsible for operating and maintaining Surface Movement Radar (SMR) equipment in a control tower. The controller needs to obtain an additional endorsement
+  GMS to operate the SMR equipment on the ADI rating. The controller's primary role is to enhance the situational awareness of tower personnel regarding the manoeuvring area, monitor the movement of aircraft
+  and vehicles on the manoeuvring area, provide routing information to pilots and vehicle drivers as necessary, and provide advice and assistance for the safe and efficient movement of aircraft and vehicles
+  on the manoeuvring area. The controller also needs to be familiar with the working principle of the SMR and its limitations, and be able to combine it with an ADS-B receiver to display additional information
+  on the controller screen.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: aviation control tower operations
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

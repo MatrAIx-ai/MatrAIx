@@ -1,0 +1,76 @@
+id: '00004617'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4617
+data:
+  user 1 personas: 'I enjoy reading and cooking.
+
+    I have 2 dogs.
+
+    I like tall men.
+
+    I have red hair.
+
+    I am a runner.'
+  user 2 personas: 'I drive a truck.
+
+    I have a beard.
+
+    I live on a farm.
+
+    I graduated high school.
+
+    I like rap music.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [User 1''s name].
+
+    User 2: Hi there, I''m [User 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to drive my truck, listen to rap music, and work on my farm.
+
+    User 1: That sounds like a lot of fun! I like to read, cook, and run.
+
+    User 2: I''ve never been a runner, but I do enjoy reading and cooking.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read a lot of different things, but I''m especially interested in history and philosophy.
+
+    User 1: I love history! I''m currently reading a book about the American Civil War.
+
+    User 2: Oh, that sounds really interesting! I''ve never read a book about the Civil War, but I''ve always been interested in it.
+
+    User 1: It''s a really good book, I''m sure you''d like it.
+
+    User 2: Maybe I''ll check it out.
+
+    User 1: I hope you do.
+
+    User 2: So, what do you like to cook?
+
+    User 1: I love to cook all kinds of food, but my favorite is probably Italian food.
+
+    User 2: I love Italian food too! I''m not a very good cook, but I love to eat it.
+
+    User 1: I''m sure you''re a better cook than you think.
+
+    User 2: Maybe.
+
+    User 1: So, what''s your favorite Italian dish?
+
+    User 2: I love lasagna!
+
+    User 1: Me too! I make a mean lasagna.
+
+    User 2: I''m sure it''s delicious.
+
+    User 1: It is!
+
+    User 2: Maybe I''ll come over for dinner sometime.
+
+    User 1: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

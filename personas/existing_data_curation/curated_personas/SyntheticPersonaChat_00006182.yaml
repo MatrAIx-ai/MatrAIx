@@ -1,0 +1,58 @@
+id: 00006182
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6182
+data:
+  user 1 personas: 'I am a cashier at a grocery store.
+
+    I have a garden in my yard.
+
+    I like to make fresh pies.
+
+    My hobby is sewing.'
+  user 2 personas: 'My house is located in the countryside.
+
+    I am seventy one years old.
+
+    I love to keep a small garden outside of my house.
+
+    I love all sorts of fresh vegetables.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to garden, I have a small garden in my backyard and I grow all sorts of vegetables.
+
+    User 1: That''s so cool! I have a garden too, but I''m not very good at it.
+
+    User 2: Oh, don''t worry, it takes time to learn. I''ve been gardening for years and I''m still learning new things.
+
+    User 1: What''s your favorite vegetable to grow?
+
+    User 2: I love tomatoes, they''re so delicious and easy to grow.
+
+    User 1: I''ve never tried growing tomatoes, but I''ll have to give it a try.
+
+    User 2: You should! They''re really easy to grow and you can''t beat the taste of fresh tomatoes.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to sew, I make a lot of clothes for my grandchildren.
+
+    User 1: That''s so nice! I''ve always wanted to learn how to sew.
+
+    User 2: It''s not hard, you just need some patience.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to relax and make something useful.
+
+    User 1: Thanks for the advice! I''m going to have to go now, but it was nice talking to you.
+
+    User 2: You too! Have a great day!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

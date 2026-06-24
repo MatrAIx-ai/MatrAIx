@@ -1,0 +1,20 @@
+id: 00031281
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31281
+persona_description: An environmental scientist with a specialization in satellite imagery analysis and agricultural patterns. This persona is interested in understanding the impact of human activities
+  on the Earth's ecosystems and the patterns of agriculture around the world. They are particularly intrigued by the ways in which satellite imagery can reveal the complexities of farming practices and
+  the social and economic factors that shape them. This persona is likely to be familiar with the use of satellite data to study the distribution of crops, irrigation systems, and farming practices in different
+  regions of the world. They may also have expertise in the analysis of satellite images to identify patterns and trends in agricultural landscapes, and in the interpretation of these patterns to inform
+  policy decisions and conservation efforts.
+expertise:
+  general_domain_top1pct: environmental science
+  specific_domain_top1pct: satellite imagery analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

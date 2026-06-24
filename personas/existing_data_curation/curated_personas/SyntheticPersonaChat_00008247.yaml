@@ -1,0 +1,47 @@
+id: 00008247
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8247
+data:
+  user 1 personas: 'I am traveling to paris this year for my vacation.
+
+    I have one sister.
+
+    I was born in san francisco.
+
+    I love dogs , especially labradors.
+
+    I work in the pharmaceutical industry.'
+  user 2 personas: 'My hobby is sewing.
+
+    I like to go swimming.
+
+    I like to make fresh pies.
+
+    I am a cashier at a grocery store.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: Hello, I am doing well, thank you for asking. How are you?
+
+    User 1: I am doing well, thank you. I am excited to be traveling to Paris this year for my vacation.
+
+    User 2: That sounds exciting! I have always wanted to visit Paris. What are you looking forward to seeing and doing there?
+
+    User 1: I am looking forward to seeing the Eiffel Tower, the Louvre, and the Champs-Elysees. I am also looking forward to trying the local cuisine.
+
+    User 2: Those are all great things to see and do in Paris. The Eiffel Tower is amazing, and the Louvre is home to some of the most famous works of art in the world. The Champs-Elysees is also a great
+    place to visit, especially for shopping and people-watching. I am sure you will have a wonderful time in Paris.
+
+    User 1: Thank you, I am sure I will too. I am also excited to try the local cuisine. I have heard that the food in Paris is delicious.
+
+    User 2: The food in Paris is definitely delicious. Some of my favorites include escargot, steak frites, and coq au vin. I am sure you will find something you like.
+
+    User 1: I am sure I will too. I am looking forward to trying everything I can.
+
+    User 2: I am sure you will have a great time in Paris. Let me know if you have any questions while you are there.
+
+    User 1: Thank you, I appreciate that. I will be sure to do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

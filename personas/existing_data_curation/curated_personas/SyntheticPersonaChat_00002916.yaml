@@ -1,0 +1,66 @@
+id: 00002916
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2916
+data:
+  user 1 personas: 'I work as a bartender.
+
+    I used to be in the marines.
+
+    When i have nothing else to do , i read books.
+
+    I m a vegetarian.'
+  user 2 personas: 'The future scares me.
+
+    My mom stays at home.
+
+    My adopted dad works at hp.
+
+    I have six siblings.
+
+    I was adopted when i was a baby.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to read books, watch movies, and spend time with my family.
+
+    User 1: I like to read books too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like historical fiction and mysteries.
+
+    User 1: I love historical fiction too! I''ve been reading a lot of books about the Civil War lately.
+
+    User 2: Oh, that sounds interesting! I''ve never read a book about the Civil War.
+
+    User 1: You should! It''s a really fascinating time period.
+
+    User 2: I''ll have to check it out. What''s your favorite book about the Civil War?
+
+    User 1: My favorite book is The Killer Angels by Michael Shaara. It''s about the Battle of Gettysburg.
+
+    User 2: I''ve heard good things about that book. I''ll have to add it to my list.
+
+    User 1: You should! It''s a great book.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a bartender.
+
+    User 2: Oh, that sounds fun! I''ve never been a bartender before.
+
+    User 1: It''s a lot of fun, but it can be challenging too.
+
+    User 2: I can imagine. What''s your favorite part of the job?
+
+    User 1: My favorite part of the job is getting to meet new people and make them feel welcome.
+
+    User 2: That sounds great! I''m sure you''re a great bartender.
+
+    User 1: Thanks! I try my best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

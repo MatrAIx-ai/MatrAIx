@@ -1,0 +1,84 @@
+id: 00002988
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2988
+data:
+  user 1 personas: 'I am a yoga instructor.
+
+    I have two chiuahuahs.
+
+    I collect seashells.
+
+    I have a son.
+
+    I love horses.'
+  user 2 personas: 'I live in the united states.
+
+    I am a boy.
+
+    Math is my favorite subject.
+
+    I go to high school.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi! What''s your name?
+
+    User 1: My name is [user 1''s name].
+
+    User 2: Nice to meet you [user 1''s name]. My name is [user 2''s name].
+
+    User 1: It''s nice to meet you too [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to play video games and go to the movies.
+
+    User 1: I like to do those things too! I also like to yoga and collect seashells.
+
+    User 2: I''ve never done yoga before, but it sounds interesting. What kind of seashells do you collect?
+
+    User 1: I collect all kinds of seashells, but my favorite are conch shells.
+
+    User 2: Conch shells are cool! I''ve seen them on the beach before.
+
+    User 1: Yeah, they''re really pretty. I have a whole collection of them.
+
+    User 2: That''s really cool!
+
+    User 1: Thanks! So, what do you like to do in your free time?
+
+    User 2: I like to hang out with my friends, play video games, and go to the movies.
+
+    User 1: Sounds like you have a lot of fun!
+
+    User 2: Yeah, I do. I like to keep busy.
+
+    User 1: That''s good. I like to keep busy too.
+
+    User 2: It''s important to stay active.
+
+    User 1: I agree.
+
+    User 2: So, what are you doing now?
+
+    User 1: I''m just hanging out. What about you?
+
+    User 2: I''m just playing video games.
+
+    User 1: Oh, cool. What game are you playing?
+
+    User 2: I''m playing Fortnite.
+
+    User 1: I''ve never played that game before.
+
+    User 2: It''s a lot of fun. You should try it sometime.
+
+    User 1: I might.
+
+    User 2: You should. It''s a lot of fun.
+
+    User 1: Okay, I''ll try it.
+
+    User 2: Cool!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: '00000716'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 716
+data:
+  user 1 personas: 'I like to read.
+
+    I am a veteran.
+
+    I have a garden.
+
+    I grew up in kentucky.'
+  user 2 personas: 'I like to sing.
+
+    I am not married.
+
+    I love basketball.
+
+    Have both daughters and sons.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi, how''s it going?
+
+    User 1: It''s going great! I''m just getting ready to go for a run.
+
+    User 2: Oh, that sounds fun! I love to run too.
+
+    User 1: Me too! It''s such a great way to get in shape and clear your head.
+
+    User 2: I agree! I usually run in the mornings, but I''m not feeling so great today.
+
+    User 1: Oh, I''m sorry to hear that. Maybe you should take it easy today.
+
+    User 2: Yeah, I think I will. Do you want to come over and watch a movie with me?
+
+    User 1: That sounds like a great idea! I love movies.
+
+    User 2: Great! I''m in the mood for something funny.
+
+    User 1: Me too! We could watch The Hangover or Wedding Crashers.
+
+    User 2: The Hangover sounds good.
+
+    User 1: Great! I''ll head over to your place in a few minutes.
+
+    User 2: Sounds good! I''ll put on some popcorn.
+
+    User 1: Awesome! I can''t wait to see you.
+
+    User 2: Me neither! Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

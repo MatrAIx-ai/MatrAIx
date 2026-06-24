@@ -1,0 +1,18 @@
+id: 00061289
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61289
+persona_description: A scientist or engineer who specializes in the field of space exploration and weighs objects in micro-gravity environments. They are interested in developing new methods for measuring
+  weight and mass in space, as well as the implications of these methods for medical applications in space. They are likely to be familiar with the traditional method of weighing objects using a stool connected
+  to oscillating springs, and are interested in exploring alternative methods using the Kinect to estimate weight based on volume estimates.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: aerospace engineering or space exploration engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

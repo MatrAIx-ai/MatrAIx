@@ -1,0 +1,74 @@
+id: '00002270'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2270
+data:
+  user 1 personas: 'I like to watch mma.
+
+    I m entering the police academy this summer.
+
+    I drink protein powder with nothing but water.
+
+    I lift weights , but i never do squats.
+
+    My prized possession is a bowie knife.'
+  user 2 personas: 'I prefer iphone over samsung.
+
+    I read ebooks more than hardcopies.
+
+    I owe 2 monitors for work.
+
+    I love watching superheroes shows.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi there!
+
+    User 1: What are your hobbies?
+
+    User 2: I love watching superhero shows! What do you like to do for fun?
+
+    User 1: I like to watch MMA and lift weights.
+
+    User 2: Oh, I''ve never been to an MMA fight, but I''ve heard they''re pretty intense.
+
+    User 1: They can be! I''ve been to a few and they''re always a lot of fun.
+
+    User 2: Do you have a favorite fighter?
+
+    User 1: My favorite fighter is Jon Jones. He''s a really talented fighter and he''s always exciting to watch.
+
+    User 2: I''ve heard good things about him. I''ll have to check him out.
+
+    User 1: You should! He''s a lot of fun to watch.
+
+    User 2: What do you like to lift?
+
+    User 1: I mostly lift weights for aesthetic purposes, so I focus on my arms and chest.
+
+    User 2: I''ve never been much of a lifter, but I''ve been trying to get into it more recently.
+
+    User 1: It''s a lot of fun! It''s a great way to stay in shape and it can really boost your confidence.
+
+    User 2: I''ve heard that. I''m not sure if I can commit to it, but I''ll give it a try.
+
+    User 1: I''m sure you''ll love it!
+
+    User 2: Thanks! I hope so.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in software engineering, but I don''t think I have the math skills for it.
+
+    User 2: It''s not as hard as you think! It''s a lot of problem solving, but it''s also a lot of fun.
+
+    User 1: I''m sure it is! I''ve always been more of a creative type, so I''m not sure if I''d be a good fit for it.
+
+    User 2: You never know until you try!
+
+    User 1: True. Maybe I''ll give it a shot.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

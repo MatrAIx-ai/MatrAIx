@@ -1,0 +1,60 @@
+id: '00003443'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3443
+data:
+  user 1 personas: 'I listen to death metal.
+
+    I still live at home.
+
+    I like cartoons.
+
+    I am in college.'
+  user 2 personas: 'I enjoy crosswords , crocheting , and football.
+
+    I coach the girl s volley ball team.
+
+    I m allergic to apples yet still eat them.
+
+    I m a sixth grade teacher.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy crosswords, crocheting, and football.
+
+    User 1: I love crosswords! I also like to watch cartoons.
+
+    User 2: Cartoons are great! What are some of your favorites?
+
+    User 1: I like Adventure Time, Steven Universe, and Rick and Morty.
+
+    User 2: I love Adventure Time! I''ve never seen Steven Universe or Rick and Morty, but I''ve heard good things about them.
+
+    User 1: You should definitely check them out! They''re both really funny and well-made.
+
+    User 2: I will! What else do you like to do for fun?
+
+    User 1: I like to go to the movies, read books, and play video games.
+
+    User 2: I like to go to the movies too! I don''t read as much as I used to, but I do enjoy video games.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play action games, RPGs, and strategy games.
+
+    User 1: I like action games too! I''ve been playing a lot of Call of Duty lately.
+
+    User 2: I''ve heard good things about Call of Duty. I''ve never played it, but I might have to check it out.
+
+    User 1: You should! It''s really fun.
+
+    User 2: I will! It''s been nice talking to you, [user 1].
+
+    User 1: You too, [user 2].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

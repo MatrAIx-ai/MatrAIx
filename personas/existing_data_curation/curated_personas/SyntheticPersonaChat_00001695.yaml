@@ -1,0 +1,60 @@
+id: 00001695
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1695
+data:
+  user 1 personas: 'I love to recycle.
+
+    I drive a large , blue van.
+
+    I am a hippie.
+
+    I have two tattoos.
+
+    I have curly , red hair.'
+  user 2 personas: 'I have one cat.
+
+    My hair is brown.
+
+    I like to sew.
+
+    I am not thin.
+
+    I am short.'
+  Best Generated Conversation: 'User 1: Hi, I''m User 1! What''s your name?
+
+    User 2: Hi! I''m User 2.
+
+    User 1: It''s nice to meet you, User 2. What do you like to do for fun?
+
+    User 2: I like to sew, read, and play with my cat.
+
+    User 1: That sounds like fun! I like to sew and read too. I also love to go on road trips.
+
+    User 2: Road trips sound like a lot of fun! I''ve never been on one.
+
+    User 1: You should try it! They''re a great way to see new places and meet new people.
+
+    User 2: I might have to do that! Do you have any recommendations for where to go?
+
+    User 1: I love to go to the beach, but I also like to visit national parks. There are so many beautiful places in the United States.
+
+    User 2: The beach sounds nice! I''ve always wanted to go to the Grand Canyon.
+
+    User 1: The Grand Canyon is amazing! I went there a few years ago and it was one of the most beautiful places I''ve ever seen.
+
+    User 2: I''m glad to hear it''s as amazing as I''ve always thought it was!
+
+    User 1: It definitely is! I''m sure you''d love it.
+
+    User 2: I''ll have to put it on my list of places to visit!
+
+    User 1: You should! I''m sure you''d love it.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

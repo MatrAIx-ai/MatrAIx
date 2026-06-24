@@ -1,0 +1,56 @@
+id: 00005979
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5979
+data:
+  user 1 personas: 'I am going to school for writing.
+
+    I often help her sort books in the library.
+
+    My mother is a librarian.
+
+    I would like to be a journalist one day.
+
+    I love to read fantasy novels and poetry.'
+  user 2 personas: 'I love to run fast.
+
+    I am strong.
+
+    I never eat veggies.
+
+    I am young.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: My name is [username].
+
+    User 2: Nice to meet you! I''m [username].
+
+    User 1: I''m a writer.
+
+    User 2: Oh, that''s cool! I''m a runner.
+
+    User 1: Really? That''s awesome! What kind of running do you do?
+
+    User 2: I mostly do long distance running. I''ve run a few marathons.
+
+    User 1: Wow, that''s amazing! I''ve always wanted to run a marathon, but I''m not sure if I''m in shape enough.
+
+    User 2: You can do it! Just keep training and you''ll get there.
+
+    User 1: Thanks for the encouragement! I''m going to start training soon.
+
+    User 2: That''s great! I''m sure you''ll do great.
+
+    User 1: Thanks! I''m excited to start this new chapter in my life.
+
+    User 2: I''m sure you''ll do great!
+
+    User 1: Thanks for talking to me! It''s been really nice chatting with you.
+
+    User 2: You too! It''s been nice meeting you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

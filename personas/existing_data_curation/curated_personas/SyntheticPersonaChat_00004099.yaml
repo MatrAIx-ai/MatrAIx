@@ -1,0 +1,66 @@
+id: 00004099
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4099
+data:
+  user 1 personas: 'I sing barbershop and rap.
+
+    I love to take naps.
+
+    I love watching basketball.
+
+    My eyes are blue.
+
+    My favorite season is winter.'
+  user 2 personas: 'I decided to publish my creations on internet.
+
+    I ve been rejected several times and thought of giving up with this.
+
+    I love comics.
+
+    I ve started creating my own comics and presenting them to publishers.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a comic artist.
+
+    User 1: Oh, that''s cool! What''s your favorite comic book series?
+
+    User 2: I love the Sandman series by Neil Gaiman.
+
+    User 1: I''ve heard good things about that series. I''ve never read it, though.
+
+    User 2: You should check it out! It''s really good.
+
+    User 1: I will! Do you have any other hobbies?
+
+    User 2: I like to play video games.
+
+    User 1: Oh, me too! What''s your favorite video game?
+
+    User 2: I like the Final Fantasy series.
+
+    User 1: I''ve never played any of those games.
+
+    User 2: You should! They''re really good.
+
+    User 1: I will! What other hobbies do you have?
+
+    User 2: I like to read.
+
+    User 1: Oh, me too! What''s your favorite book?
+
+    User 2: I like the Harry Potter series by J.K. Rowling.
+
+    User 1: I love Harry Potter! I''ve read the series so many times.
+
+    User 2: It''s so good! I''m really excited for the new movie.
+
+    User 1: Me too! I''m hoping it''s good.
+
+    User 2: I''m sure it will be.
+
+    User 1: I hope so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

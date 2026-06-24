@@ -1,0 +1,20 @@
+id: '00030316'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30316
+persona_description: A scientist working at Lincoln Laboratory, focusing on developing a microburst prediction algorithm for the FAA Integrated Terminal Weather System, which is aimed at providing an additional
+  margin of safety for pilots in avoiding wind shear hazards. The persona's expertise lies in understanding the physics of thunderstorm evolution and downdraft development, and incorporating heuristic and
+  statistical methods in their algorithm design. They are also skilled in using image processing and data fusion techniques to produce an "interest" image and combining radar data, temperature structures,
+  lightning flash rates, and storm motion to predict the microburst location, timing, and outflow strength. Additionally, they have developed a feedback system to desensitize prediction thresholds in the
+  event of false predictions. The persona is likely to be a highly specialized individual with a deep understanding of meteorology and aviation weather information systems.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Aviation Weather Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

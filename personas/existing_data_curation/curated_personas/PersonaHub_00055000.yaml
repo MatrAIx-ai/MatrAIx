@@ -1,0 +1,18 @@
+id: '00055000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55000
+persona_description: A structural engineer with expertise in reinforced concrete design and the calculation of reinforcement bar lengths. They are familiar with the IS 456 code and the relevant standards
+  for reinforcing bars in RCC design. They have a deep understanding of the importance of accurate calculations and the need for precision in the industry. They are also knowledgeable about the various
+  grades of steel and their respective minimum yield strengths.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Structural Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

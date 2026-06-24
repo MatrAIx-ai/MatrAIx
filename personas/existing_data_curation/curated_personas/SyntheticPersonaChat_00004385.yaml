@@ -1,0 +1,62 @@
+id: 00004385
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4385
+data:
+  user 1 personas: 'I like to hunt for my food.
+
+    I like katy perry as a musician.
+
+    I have few friends.
+
+    I like to sew.
+
+    I am a great baker.'
+  user 2 personas: 'I worry about our neighbors yelling in the middle of the night.
+
+    I wish i could go to a better school.
+
+    I worry about my image.
+
+    I live in a bad neighborhood.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to go to the gym and read.
+
+    User 1: That''s cool! I like to sew and bake.
+
+    User 2: I''ve never really been interested in sewing, but baking sounds fun!
+
+    User 1: It is! I love making cakes and pies.
+
+    User 2: I''m more of a cookie person myself.
+
+    User 1: Cookies are delicious! I love chocolate chip cookies.
+
+    User 2: Me too! I also love snickerdoodles.
+
+    User 1: Those are great! Do you like Katy Perry?
+
+    User 2: I love her! She''s so talented.
+
+    User 1: Me too! I love her music.
+
+    User 2: What''s your favorite song by her?
+
+    User 1: I have a lot of favorites, but I think I''d have to say "Firework."
+
+    User 2: That''s a great song! I love it too.
+
+    User 1: I also love "Wide Awake."
+
+    User 2: That''s a good one too! I love the music video.
+
+    User 1: Me too! It''s so beautiful.
+
+    User 2: I''m glad we agree on Katy Perry. She''s one of my favorite artists.
+
+    User 1: She''s mine too! I''m glad we have something in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

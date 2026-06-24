@@ -1,0 +1,72 @@
+id: '00003432'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3432
+data:
+  user 1 personas: 'I like to race go carts.
+
+    I am an avid fisherman.
+
+    I hate fast food.
+
+    I have a george foreman grill at home.'
+  user 2 personas: 'I only date people taller than me.
+
+    I wish i could live forever.
+
+    I like free diving.
+
+    My dog is smaller than my cat.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go swimming and free diving.
+
+    User 1: That sounds fun! I''ve never tried free diving before.
+
+    User 2: It''s really great! You should try it sometime.
+
+    User 1: I will! What else do you like to do?
+
+    User 2: I also like to go fishing.
+
+    User 1: That''s cool! I used to fish a lot when I was younger.
+
+    User 2: Oh, really? What kind of fish did you catch?
+
+    User 1: I used to catch a lot of trout and bass.
+
+    User 2: Those are both great fish! I''ve never caught a trout before.
+
+    User 1: They''re really fun to catch!
+
+    User 2: I''m sure they are.
+
+    User 1: What else do you like to do?
+
+    User 2: I also like to go race go carts.
+
+    User 1: That sounds really fun! I''ve never done that before.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will! Thanks for the suggestion!
+
+    User 2: No problem!
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could go fishing together?
+
+    User 2: That sounds like fun! I''d love to.
+
+    User 1: Great! I''ll text you my number.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

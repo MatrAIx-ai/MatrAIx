@@ -1,0 +1,72 @@
+id: 00008610
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8610
+data:
+  user 1 personas: 'I have lots of friends and can hold a conversation easily.
+
+    I wish i could be more serious about school.
+
+    I have been in a lot of romantic relationships that have ended up poorly.
+
+    I am very athletic.'
+  user 2 personas: 'I loove zumba.
+
+    I love the smell of beans.
+
+    I like collectible dragon ball z figures.
+
+    I like collecting rocks.'
+  Best Generated Conversation: 'User 1: Hey, I''m [User 1].
+
+    User 2: Hi, I''m [User 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love Zumba, collecting rocks, and Dragon Ball Z figurines.
+
+    User 1: Oh, that''s cool. I used to do Zumba a lot, but I''ve gotten out of shape.
+
+    User 2: You should try it again! It''s a great workout.
+
+    User 1: I know, I know. I''m really going to start going again soon.
+
+    User 2: That''s great! I''m sure you''ll be happy you did.
+
+    User 1: Thanks. What are your favorite rocks?
+
+    User 2: I like agate, quartz, and obsidian.
+
+    User 1: Those are all really cool. I''ve never been much of a rock collector, but I can see the appeal.
+
+    User 2: Yeah, they''re really interesting. I love looking at them and learning about their different properties.
+
+    User 1: I can imagine. So, what do you like about Dragon Ball Z?
+
+    User 2: I love the action, the characters, and the story. It''s just a really fun show.
+
+    User 1: I know, right? It''s one of my favorites too.
+
+    User 2: Have you seen the new movie?
+
+    User 1: No, I haven''t. I''ve been meaning to, but I haven''t had a chance.
+
+    User 2: You should definitely check it out. It''s really good.
+
+    User 1: I will, thanks for the recommendation.
+
+    User 2: No problem. So, what else do you like to do for fun?
+
+    User 1: I like to go hiking, swimming, and playing video games.
+
+    User 2: Oh, I love hiking too. I''ve been hiking all over the world.
+
+    User 1: That''s awesome. I''ve only been hiking in a few places, but I''d love to do more.
+
+    User 2: You should definitely do it. It''s a great way to see the world.
+
+    User 1: I will, thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

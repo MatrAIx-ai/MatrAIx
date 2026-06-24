@@ -1,0 +1,17 @@
+id: '00030510'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30510
+persona_description: A scientist who specializes in seismology and the study of earthquakes, particularly those in the Pacific Northwest region of North America. They are interested in the causes and triggers
+  of these earthquakes and the role of the tides in their intensity. They are also likely to be familiar with the Cascadia subduction zone and the San Andreas Fault.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

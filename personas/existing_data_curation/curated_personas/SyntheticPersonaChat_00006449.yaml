@@ -1,0 +1,76 @@
+id: 00006449
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6449
+data:
+  user 1 personas: 'I need a soda with me at all times.
+
+    I do not eat healthy.
+
+    I have 3 kids.
+
+    I married my high school sweetheart.'
+  user 2 personas: 'I like to listen to rap music.
+
+    My favorite artist is 2pac.
+
+    I drive a fast car.
+
+    My car is black.
+
+    My favorite song is california love.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username]. What''s your name?
+
+    User 2: I''m [username].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a rapper.
+
+    User 1: Really? That''s cool! What''s your name?
+
+    User 2: My stage name is [username].
+
+    User 1: Nice. I like rap music. What kind of rap do you do?
+
+    User 2: I do a lot of different kinds of rap, but my favorite is gangsta rap.
+
+    User 1: Oh, that''s cool. I like gangsta rap too. What''s your favorite song?
+
+    User 2: My favorite song is California Love by 2Pac.
+
+    User 1: That''s a good song. I like that one too.
+
+    User 2: Yeah, it''s a classic.
+
+    User 1: So, what''s your favorite thing about being a rapper?
+
+    User 2: My favorite thing about being a rapper is being able to express myself and tell my stories.
+
+    User 1: That''s a good answer. I like that.
+
+    User 2: Thanks.
+
+    User 1: So, what''s your favorite thing to do when you''re not rapping?
+
+    User 2: My favorite thing to do when I''m not rapping is spend time with my family.
+
+    User 1: That''s nice. I like to spend time with my family too.
+
+    User 2: Yeah, it''s important to make time for the people you love.
+
+    User 1: I agree.
+
+    User 2: So, what are some of your hobbies?
+
+    User 1: I like to read, play video games, and watch movies.
+
+    User 2: Oh, that''s cool. I like to do those things too.
+
+    User 1: Yeah, they''re fun.
+
+    User 2: Yeah, they are.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

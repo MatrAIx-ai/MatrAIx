@@ -1,0 +1,80 @@
+id: '00007715'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7715
+data:
+  user 1 personas: 'I have a severe phobia of wide open spaces.
+
+    I have perfect pitch.
+
+    As a child , i won a national spelling bee.
+
+    I am a gourmet cook.
+
+    I have been published in the new yorker magazine.'
+  user 2 personas: 'I have red hair.
+
+    I work at a retail store.
+
+    I am vegan.
+
+    I enjoy walking on the beach.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [redhair].
+
+    User 1: Nice to meet you, [redhair]. My name is [perfect pitch].
+
+    User 2: It''s nice to meet you too, [perfect pitch].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a retail store.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It''s okay, but I''m not really passionate about it.
+
+    User 1: What are you passionate about?
+
+    User 2: I''m passionate about veganism.
+
+    User 1: Oh, that''s cool! I''m not vegan myself, but I respect people who make that choice.
+
+    User 2: Thanks! I do a lot of work to promote veganism. I''m also a member of PETA.
+
+    User 1: That''s awesome! I''m sure you do a lot of good work.
+
+    User 2: I try my best.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to walk on the beach. I also like to cook.
+
+    User 1: Oh, that''s cool! I like to cook too.
+
+    User 2: Really? What''s your favorite thing to cook?
+
+    User 1: I like to make all kinds of things, but my favorite is probably pasta.
+
+    User 2: Oh, that''s sounds delicious! I love pasta.
+
+    User 1: Yeah, it''s really good. I''m actually planning on making some for dinner tonight.
+
+    User 2: Oh, that''s awesome! I love homemade pasta.
+
+    User 1: I''m glad you like it! I''m sure you''d like my recipe.
+
+    User 2: I''d love to try it!
+
+    User 1: Great! I''ll send it to you later.
+
+    User 2: Awesome! Thank you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

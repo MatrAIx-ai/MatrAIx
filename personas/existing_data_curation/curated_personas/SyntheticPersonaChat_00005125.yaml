@@ -1,0 +1,66 @@
+id: '00005125'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5125
+data:
+  user 1 personas: 'My favorite book is twilight.
+
+    I broke my nose in 5th grade.
+
+    I have 6 toes on one foot.
+
+    I have glasses.
+
+    I hate skiing.'
+  user 2 personas: 'I work out daily.
+
+    I play the bass guitar.
+
+    My mother is a teacher in the city.
+
+    My favorite food is cheeseburgers.
+
+    I like to go out fishing.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name]. Nice to meet you.
+
+    User 1: You too. What do you do for fun?
+
+    User 2: I like to go fishing, play bass guitar, and work out.
+
+    User 1: That''s cool. I like to read, play video games, and go to the movies.
+
+    User 2: Oh, I love to read too! What''s your favorite book?
+
+    User 1: My favorite book is Twilight.
+
+    User 2: Oh, I''ve heard good things about that. What''s it about?
+
+    User 1: It''s about a girl who falls in love with a vampire.
+
+    User 2: That sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to play video games, go to the movies, and hang out with my friends.
+
+    User 2: That sounds like a lot of fun. I like to do all those things too.
+
+    User 1: What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of video games, but I especially like action games and RPGs.
+
+    User 1: I like those too! I''ve been playing a lot of Elden Ring lately.
+
+    User 2: Oh, I''ve heard good things about that game. I might have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

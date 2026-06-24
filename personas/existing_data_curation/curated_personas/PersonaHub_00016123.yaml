@@ -1,0 +1,19 @@
+id: '00016123'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16123
+persona_description: A scientist or researcher who specializes in atmospheric science, particularly in the field of aerosol physics. They are interested in understanding the distribution and behavior of
+  aerosol particles in the troposphere, including their seasonal variations, temperature effects, and the impact of different sources and sinks on their concentration. They are likely to be involved in
+  model simulations and have a keen interest in the results, including the steady state concentration distribution of aerosol particles and the agreement with measured data. They may also be interested
+  in the effects of changes in emissions on the distribution of aerosol particles and the resulting impact on air quality.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: atmospheric physics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

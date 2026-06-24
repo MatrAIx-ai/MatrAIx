@@ -1,0 +1,86 @@
+id: '00003772'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3772
+data:
+  user 1 personas: 'I sometimes write poetry.
+
+    I want to visit the uk.
+
+    My favorite color is black.
+
+    I like to skate.
+
+    I sing in a punk band.'
+  user 2 personas: 'I have always had long hair.
+
+    I enjoy running at night.
+
+    I worked at a movie theater for 4 years.
+
+    I like spicy food.
+
+    I am saving up to buy a new camera.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you like to do for fun?
+
+    User 2: I like to run at night, watch movies, and eat spicy food.
+
+    User 1: I like to run at night too! I also like to skate and play music.
+
+    User 2: That''s cool! What kind of music do you play?
+
+    User 1: I sing in a punk band.
+
+    User 2: That''s awesome! I love punk music.
+
+    User 1: Thanks! I''m glad to hear that.
+
+    User 2: So, where are you from?
+
+    User 1: I''m from [hometown].
+
+    User 2: Oh, cool! I''ve always wanted to visit the UK.
+
+    User 1: It''s a great place to visit! There''s so much history and culture.
+
+    User 2: I''m sure there is. I''m especially interested in the castles.
+
+    User 1: There are a lot of beautiful castles in the UK. You should definitely visit one if you ever get the chance.
+
+    User 2: I will! Thanks for the tip.
+
+    User 1: You''re welcome!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a writer.
+
+    User 2: That''s awesome! I''ve always wanted to be a writer.
+
+    User 1: It''s a lot of fun, but it can also be challenging.
+
+    User 2: I can imagine. I''m not sure I''m brave enough to put my work out there for everyone to see.
+
+    User 1: It can be scary, but it''s also really rewarding.
+
+    User 2: I''m sure it is. I''m glad you''re doing something that you love.
+
+    User 1: Thanks! I am too.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m still working on my next book.
+
+    User 2: That''s exciting! I can''t wait to read it.
+
+    User 1: Thanks! I''ll let you know when it''s done.
+
+    User 2: Great! I''ll be looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

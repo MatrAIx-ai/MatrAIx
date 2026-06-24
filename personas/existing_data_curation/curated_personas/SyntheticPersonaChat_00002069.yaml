@@ -1,0 +1,86 @@
+id: 00002069
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2069
+data:
+  user 1 personas: 'I am a cartographer.
+
+    I like to arm wrestle.
+
+    I used to be a nurse.
+
+    I like to paint outdoors.'
+  user 2 personas: 'I am a woman.
+
+    My favorite band is radiohead.
+
+    We have two dogs small dogs.
+
+    I own my own small marketing consulting agency.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I own my own marketing consulting agency.
+
+    User 1: Oh, that''s cool. What''s it like being your own boss?
+
+    User 2: It''s great! I have a lot of freedom and I can set my own hours.
+
+    User 1: That sounds nice. What kind of marketing do you do?
+
+    User 2: I do a lot of social media marketing, SEO, and email marketing.
+
+    User 1: Oh, that''s interesting. I''m not very good at marketing.
+
+    User 2: Don''t worry, it''s not that hard to learn.
+
+    User 1: I guess so. What''s your favorite band?
+
+    User 2: My favorite band is Radiohead.
+
+    User 1: Oh, I like Radiohead too! They''re one of my favorite bands.
+
+    User 2: Me too! I love their music.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to concerts, hang out with friends, and play video games.
+
+    User 1: Me too! I love concerts and playing video games.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I like a lot of different video games, but my favorite is probably The Legend of Zelda: Breath of the Wild.
+
+    User 2: Oh, I love that game! I''ve played it through twice.
+
+    User 1: Me too! It''s such a good game.
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go hiking, fishing, and camping.
+
+    User 2: Me too! I love the outdoors.
+
+    User 1: So, what''s your favorite thing to do in the outdoors?
+
+    User 2: I like to go hiking in the mountains.
+
+    User 1: Me too! I love the views from the top of a mountain.
+
+    User 2: Me too! I love the fresh air and the exercise.
+
+    User 1: So, what are you doing later?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Let''s hang out and figure it out.
+
+    User 2: That sounds like a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

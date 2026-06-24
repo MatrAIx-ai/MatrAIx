@@ -1,0 +1,64 @@
+id: '00003430'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3430
+data:
+  user 1 personas: 'I like to play nintendo.
+
+    I live in the great white north.
+
+    I like to race rc cars.
+
+    I have a pet husky.
+
+    I love to eat fish.'
+  user 2 personas: 'My favorite band is the beastie boys.
+
+    I am a painter.
+
+    I love coffee with cream.
+
+    I want to be a museum curator.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m from Canada, what about you?
+
+    User 2: I''m from Chicago!
+
+    User 1: Oh cool! I''ve never been to Chicago.
+
+    User 2: You should come visit! There''s a lot to see and do.
+
+    User 1: I might just do that! What do you like to do for fun?
+
+    User 2: I love to paint, and I''m also a big fan of the Beastie Boys.
+
+    User 1: I love the Beastie Boys too! They''re so good.
+
+    User 2: Me too! What''s your favorite song by them?
+
+    User 1: It''s hard to choose, but I think I''d have to say "Fight for Your Right."
+
+    User 2: That''s a good one! I also like "No Sleep Till Brooklyn."
+
+    User 1: Me too! Those are both classics.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to play video games, and I also like to race RC cars.
+
+    User 2: That''s cool! I''ve never been racing RC cars before, but it sounds like fun.
+
+    User 1: It''s a lot of fun! I have a pet husky, and he loves to race with me.
+
+    User 2: That sounds cute! I love dogs.
+
+    User 1: Me too! They''re the best.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

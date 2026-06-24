@@ -1,0 +1,64 @@
+id: '00001236'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1236
+data:
+  user 1 personas: 'I am argentinian.
+
+    I have many girlfriends.
+
+    I like to wear boots.
+
+    I like to ride horses.'
+  user 2 personas: 'I like to swim.
+
+    I prefer winter over fall.
+
+    I prefer morning to night.
+
+    I am a marathon runner.
+
+    My favorite fruit is an apple.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How are you?
+
+    User 1: I''m doing well, thank you. How are you?
+
+    User 2: I''m good, thanks. I''m just getting ready to go swimming.
+
+    User 1: Oh, that sounds nice. I love swimming.
+
+    User 2: Me too. I''m a marathon runner, so I need to do something to keep in shape.
+
+    User 1: That''s awesome. I''ve always wanted to run a marathon, but I''m not sure if I''m in shape enough.
+
+    User 2: It''s not as hard as you think. Just start small and work your way up.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should. It''s a great way to stay in shape and clear your head.
+
+    User 1: I''m sure it is. So, what do you like to do for fun?
+
+    User 2: I like to go out with friends, watch movies, and read.
+
+    User 1: Me too. I love to read. What are some of your favorite books?
+
+    User 2: I like to read a lot of different things, but I''m especially into historical fiction.
+
+    User 1: That''s cool. I''ve always wanted to read more historical fiction.
+
+    User 2: You should. There are some great books out there.
+
+    User 1: I''ll have to check some out.
+
+    User 2: You should. I''m sure you''ll like them.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

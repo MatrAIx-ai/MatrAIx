@@ -1,0 +1,60 @@
+id: '00004271'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4271
+data:
+  user 1 personas: 'I am a high school student.
+
+    I eat healthy.
+
+    I am in the band.
+
+    I am very social.'
+  user 2 personas: 'I am taking a year off before i start college.
+
+    I am saving money to buy my first car.
+
+    I currently work at mcdonalds.
+
+    I live with my parents.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to go out with friends, watch movies, and play video games.
+
+    User 1: I like to do those things too! What are some of your favorite movies?
+
+    User 2: I love all kinds of movies, but my favorites are usually action or comedy.
+
+    User 1: Me too! I love action movies, especially superhero movies.
+
+    User 2: I love superhero movies too! What''s your favorite superhero?
+
+    User 1: I love Batman! He''s my favorite superhero of all time.
+
+    User 2: Batman is cool! I like Spider-Man a lot too.
+
+    User 1: Spider-Man is great! I love his spidey sense.
+
+    User 2: Me too! I also like his quips.
+
+    User 1: His quips are the best! What do you think about the new Batman movie?
+
+    User 2: I thought it was great! The action was awesome and the story was really good.
+
+    User 1: I agree! I thought it was one of the best Batman movies ever made.
+
+    User 2: It was definitely one of the best Batman movies.
+
+    User 1: What do you think about the new Spider-Man movie?
+
+    User 2: I thought it was okay. It wasn''t as good as the first one, but it was still fun to watch.
+
+    User 1: I agree. I thought the first one was a lot better.
+
+    User 2: Me too. But overall, I thought both movies were good.
+
+    User 1: I agree. They were both fun movies to watch.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

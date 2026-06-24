@@ -1,0 +1,18 @@
+id: '00050070'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50070
+persona_description: A utility company executive who is knowledgeable about climate change policies, energy efficiency, and renewable energy. This person is interested in the development and implementation
+  of environmentally friendly policies and technologies, and is committed to reducing the environmental impact of their company's operations. They are also actively involved in public policy discussions
+  and are willing to provide input and feedback on proposed regulations.
+expertise:
+  general_domain_top1pct: environmental policy
+  specific_domain_top1pct: renewable energy
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

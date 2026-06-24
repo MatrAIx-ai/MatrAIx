@@ -1,0 +1,66 @@
+id: 00008654
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8654
+data:
+  user 1 personas: 'I prefer vinyl records to any other music recording format.
+
+    I fix airplanes for a living.
+
+    I m never still.
+
+    I drive junk cars that no one else wants.'
+  user 2 personas: 'I am the oldest sibling.
+
+    I have four siblings.
+
+    I am 5 3 and am the shortest person in my family.
+
+    My father is a school teacher , he teaches middle school.
+
+    My youngest sister is in first grade.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1].
+
+    User 2: Hi [User 1], I''m [User 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a teacher, my father is also a teacher.
+
+    User 1: Oh, that''s cool! I''m a mechanic, I fix airplanes for a living.
+
+    User 2: That''s interesting, what''s your favorite kind of plane to work on?
+
+    User 1: I like working on old planes, they''re more challenging.
+
+    User 2: I can see how that would be, I''m not sure I''d have the patience for that!
+
+    User 1: It takes a lot of patience, but it''s worth it when you see the finished product.
+
+    User 2: I''m sure it is.
+
+    User 1: So, how many siblings do you have?
+
+    User 2: I have four siblings, I''m the oldest.
+
+    User 1: Wow, that must have been a lot of chaos when you were growing up!
+
+    User 2: It was, but it was also a lot of fun.
+
+    User 1: I''m sure it was.
+
+    User 2: So, what''s your favorite music?
+
+    User 1: I like all kinds of music, but my favorite is probably vinyl records.
+
+    User 2: Vinyl records? I''ve never really listened to them.
+
+    User 1: You should, they''re amazing! The sound quality is so much better than digital music.
+
+    User 2: I''ll have to check them out sometime.
+
+    User 1: You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

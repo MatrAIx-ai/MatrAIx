@@ -1,0 +1,76 @@
+id: '00002273'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2273
+data:
+  user 1 personas: 'I like to water ski.
+
+    My favorite color is red.
+
+    My dad was a cop.
+
+    I am tall.'
+  user 2 personas: 'I like cooking healthy meals.
+
+    I enjoy dating women.
+
+    I m retired.
+
+    I like to go out to the bars.'
+  Best Generated Conversation: 'User 1: Hey there, my name is (user 1 name).
+
+    User 2: Nice to meet you, my name is (user 2 name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook healthy meals, go out to the bars, and date women.
+
+    User 1: Oh, that sounds fun! I like to water ski, read books, and go for walks.
+
+    User 2: Water skiing sounds like a lot of fun! I''ve never tried it before.
+
+    User 1: It''s really fun! You should try it sometime.
+
+    User 2: I might just do that. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and mystery novels.
+
+    User 2: I like historical fiction too! What''s your favorite historical fiction book?
+
+    User 1: My favorite historical fiction book is "The Book Thief" by Markus Zusak. It''s about a young girl who is living in Nazi Germany during World War II.
+
+    User 2: That sounds like a really good book! I''ll have to check it out.
+
+    User 1: You should! It''s a really good read.
+
+    User 2: So, what''s your favorite mystery novel?
+
+    User 1: My favorite mystery novel is "The Girl with the Dragon Tattoo" by Stieg Larsson. It''s about a journalist who is investigating a series of murders in Sweden.
+
+    User 2: That sounds like a good book too! I''ll have to check that one out too.
+
+    User 1: You should! They''re both great books.
+
+    User 2: Thanks for the recommendations! I''ll be sure to check them out.
+
+    User 1: No problem! What do you do for a living?
+
+    User 2: I''m retired.
+
+    User 1: Oh, nice! What did you do before you retired?
+
+    User 2: I was a police officer for 30 years.
+
+    User 1: Oh, that''s interesting! What was it like being a police officer?
+
+    User 2: It was a lot of fun! I met a lot of interesting people and I got to help a lot of people.
+
+    User 1: That sounds like a really rewarding job.
+
+    User 2: It was! I''m glad I did it.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00040156'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 40156
+persona_description: A medical professional specializing in orthopedic surgery, with a particular interest in the spine and its disorders. This persona is highly trained and experienced in performing a
+  wide range of procedures, including cervical discectomy, fusion, foraminotomy, and corpectomy. They have a strong understanding of the anatomy and biomechanics of the spine and are skilled in diagnosing
+  and treating a variety of conditions that can affect the spine. This persona is highly detail-oriented and meticulous, ensuring that every aspect of the surgery is performed with precision and care to
+  minimize risk and ensure the best possible outcome for their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: orthopedic surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: spine surgery
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

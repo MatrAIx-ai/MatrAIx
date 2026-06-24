@@ -1,0 +1,80 @@
+id: 00000948
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 948
+data:
+  user 1 personas: 'I chew my nails.
+
+    I was a navy brat and have attended 16 schools in 12 years.
+
+    I kayak at the lake on weekends.
+
+    I am studying to be a special education teacher.
+
+    I make friends fast and say goodbye fast.'
+  user 2 personas: 'I work at the local bank.
+
+    My grandmother lives in my guesthouse.
+
+    I ve been divorced for 2 years.
+
+    I love collecting teapots.
+
+    I m a cat person.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name].
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: Nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: I''m a navy brat and I''ve attended 16 schools in 12 years.
+
+    User 2: Wow, that must have been a lot of moving around.
+
+    User 1: It was, but it also helped me to make friends fast and say goodbye fast.
+
+    User 2: That''s a good way to look at it.
+
+    User 1: I''m also studying to be a special education teacher.
+
+    User 2: That''s great! I''m sure you''ll be a great teacher.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to kayak at the lake on weekends. It''s a great way to relax and enjoy the outdoors.
+
+    User 2: That sounds like a lot of fun. I love the outdoors too.
+
+    User 1: Me too. I also love collecting teapots.
+
+    User 2: That''s an interesting hobby.
+
+    User 1: I know, right? I love the different designs and colors.
+
+    User 2: I can see why. They''re so beautiful.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, what do you like to do with your grandmother?
+
+    User 1: We usually just chat and watch TV. She''s a great listener and I always enjoy spending time with her.
+
+    User 2: That sounds nice. I''m glad you have such a good relationship with her.
+
+    User 1: Me too.
+
+    User 2: Well, it''s been nice talking to you, [name].
+
+    User 1: It''s been nice talking to you too, [name].
+
+    User 2: Maybe we can talk again sometime.
+
+    User 1: I''d love that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

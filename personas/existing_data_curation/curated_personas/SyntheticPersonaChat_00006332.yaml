@@ -1,0 +1,52 @@
+id: '00006332'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6332
+data:
+  user 1 personas: 'My favorite food is fried chicken.
+
+    I have a twin sister named jessica.
+
+    My son was born completely blind.
+
+    I met my wife at a tickleback concert.'
+  user 2 personas: 'I can speak three languages.
+
+    My mother is a teacher.
+
+    I cook well.
+
+    I love being in nature.'
+  Best Generated Conversation: 'User 1: Hello, my name is Alex.
+
+    User 2: Hello Alex, my name is Mary.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy cooking, hiking, and reading.
+
+    User 1: Those all sound like great hobbies! I like to cook too, but I''m not very good at it.
+
+    User 2: Don''t worry, everyone has to start somewhere.
+
+    User 1: Thanks, Mary. I''m glad to know you''re a teacher. I''m a big fan of learning new things.
+
+    User 2: What do you like to learn about?
+
+    User 1: I''m interested in history, science, and technology.
+
+    User 2: Those are all great topics! I''m particularly interested in history and technology.
+
+    User 1: It''s great to meet someone who is interested in the same things I am.
+
+    User 2: It is! I think we would get along very well.
+
+    User 1: I think so too.
+
+    User 2: Well, Alex, it was nice chatting with you. I have to go now, but I hope to talk to you again soon.
+
+    User 1: It was nice chatting with you too, Mary. I hope to talk to you again soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

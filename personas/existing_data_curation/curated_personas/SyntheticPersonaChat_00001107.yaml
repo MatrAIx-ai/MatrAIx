@@ -1,0 +1,78 @@
+id: '00001107'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1107
+data:
+  user 1 personas: 'I own an iphone.
+
+    My favorite color is black.
+
+    I am writing a novel.
+
+    My favorite tv show is rick and morty.
+
+    I don t like pickles.'
+  user 2 personas: 'I have lots of friends.
+
+    My name is nick.
+
+    I have red hair.
+
+    I like to ride my scooter.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Nick, nice to meet you.
+
+    User 1: Hi Nick, I''m [user 1]. Nice to meet you too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to write, watch TV shows, and play video games.
+
+    User 2: Oh, that''s cool. I like to play video games too. What''s your favorite game?
+
+    User 1: My favorite video game is The Last of Us. It''s a really good story-driven game.
+
+    User 2: I''ve never played it before, but I''ve heard good things about it.
+
+    User 1: You should check it out. It''s definitely worth playing.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem.
+
+    User 2: What do you like to write?
+
+    User 1: I write novels, short stories, and poems. I''m currently working on a novel about a group of friends who go on a road trip together.
+
+    User 2: That sounds really cool. I''ve always wanted to write a novel, but I''m not sure where to start.
+
+    User 1: You could start by writing a short story or a poem. That will help you get used to the process of writing and storytelling.
+
+    User 2: That''s a good idea. I''ll give it a try.
+
+    User 1: You can do it!
+
+    User 2: Thanks for the encouragement.
+
+    User 1: No problem.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: My favorite color is black. It''s a classic color that goes with everything.
+
+    User 2: Black is a good color. I like it too.
+
+    User 1: What about you? What''s your favorite color?
+
+    User 2: My favorite color is red. It''s a bold color that makes me feel happy.
+
+    User 1: Red is a good choice. It''s a very energetic color.
+
+    User 2: Thanks.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

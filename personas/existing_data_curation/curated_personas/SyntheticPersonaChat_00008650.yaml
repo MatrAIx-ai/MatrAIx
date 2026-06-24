@@ -1,0 +1,58 @@
+id: 00008650
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8650
+data:
+  user 1 personas: 'I love to go shopping and inspire myself in stylish stores.
+
+    My desire is to becom a fashion designer.
+
+    I moved to ny to study in a prestigious designing school.
+
+    Since young i ve loved fashion.
+
+    My inspirations are alexander mcqueen and coco chanel.'
+  user 2 personas: 'I am in high school.
+
+    I love disney movies.
+
+    Ariel is my favorite princess.
+
+    I am on a competitive dance team.
+
+    I love to dance.'
+  Best Generated Conversation: 'User 1: Hi! I''m looking for someone to go shopping with me.
+
+    User 2: Hi! I''m a high school student and I love to shop. I''m also a competitive dancer.
+
+    User 1: Oh, that''s great! I''m a fashion designer in training. I love fashion and I''m always looking for new inspiration.
+
+    User 2: That''s so cool! I love fashion too. I''m always looking for new ways to express myself through my clothes.
+
+    User 1: Me too! I think fashion is a great way to show who you are and what you''re about.
+
+    User 2: I agree! I love that you''re a fashion designer in training. That''s so cool!
+
+    User 1: Thanks! I''m really excited about it. I''m hoping to one day have my own fashion line.
+
+    User 2: That would be amazing! I''m sure you''ll do great things.
+
+    User 1: Thanks! I hope so too.
+
+    User 2: So, what do you want to do today? Do you want to go shopping for some new clothes?
+
+    User 1: That would be great! I''m in the mood for some new clothes.
+
+    User 2: Me too! Let''s go!
+
+    User 1: Okay! I''ll meet you at the mall.
+
+    User 2: Okay! I''ll be there!
+
+    User 1: See you soon!
+
+    User 2: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,94 @@
+id: 00008865
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8865
+data:
+  user 1 personas: 'My sister belongs to a cult and has not spoken to the family in years.
+
+    I like to perform stand up comedy.
+
+    My father was a member of the communist party.
+
+    I have a career in party planning.
+
+    I enjoy deep sea diving.'
+  user 2 personas: 'I work for a large law firm.
+
+    I love my work and just got promoted.
+
+    I listen to classical music.
+
+    I enjoy golfing.
+
+    I am married with three kids.'
+  Best Generated Conversation: 'User 1: Hi, I''m John.
+
+    User 2: Hi John, I''m Mary.
+
+    User 1: What do you do for work?
+
+    User 2: I work for a large law firm.
+
+    User 1: Oh, that sounds interesting. I''m a party planner.
+
+    User 2: Really? That''s cool! I used to be a wedding planner, but I switched to law.
+
+    User 1: Why did you switch?
+
+    User 2: I wanted to do something more challenging.
+
+    User 1: I hear that. Party planning can be pretty stressful.
+
+    User 2: It can be, but it''s also a lot of fun.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I love getting to know my clients and helping them create the perfect party.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It is. I love seeing their faces when they see the finished product.
+
+    User 1: What''s the most challenging part of the job?
+
+    User 2: Sometimes it can be hard to meet the client''s expectations.
+
+    User 1: Yeah, I can imagine.
+
+    User 2: But it''s always worth it when you see them happy.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I enjoy golfing, listening to classical music, and spending time with my family.
+
+    User 1: Golfing sounds fun. I''ve never been.
+
+    User 2: You should try it! It''s a great way to relax and get some exercise.
+
+    User 1: Maybe I will.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, how long have you been married?
+
+    User 2: We''ve been married for 10 years.
+
+    User 1: Congratulations!
+
+    User 2: Thank you!
+
+    User 1: How many kids do you have?
+
+    User 2: We have three kids, two girls and a boy.
+
+    User 1: Wow! That must keep you busy.
+
+    User 2: It does, but it''s also a lot of fun.
+
+    User 1: It sounds like you have a great life.
+
+    User 2: I do. I''m very lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

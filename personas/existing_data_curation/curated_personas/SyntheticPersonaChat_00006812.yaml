@@ -1,0 +1,121 @@
+id: 00006812
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6812
+data:
+  user 1 personas: 'I m currently looking for employment.
+
+    I am colour blind.
+
+    I am a mother of two.
+
+    I can speak three languages english , french and spanish.
+
+    My favourite band is rush.'
+  user 2 personas: 'Our kids are 14 and 12 years old.
+
+    My name is john and i live in dallas , tx.
+
+    I work as a physical therapist , and my wife is a school nurse.
+
+    My wife and i have 2 children.
+
+    We also have three dogs and two cats.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+
+    User 2: Hi, nice to meet you! I''m John.
+
+
+    User 1: Nice to meet you too, John. I''m originally from [user 1''s original hometown], but I''ve been living in [user 1''s current city] for a few years now.
+
+
+    User 2: Oh, cool! I''m from Dallas, TX.
+
+
+    User 1: Oh, nice! I''ve been to Dallas once, but I didn''t get to see much.
+
+
+    User 2: Yeah, it''s a big city. There''s a lot to see and do.
+
+
+    User 1: I''m sure. I''d like to go back and explore it more sometime.
+
+
+    User 2: You should! I''m sure you''d have a good time.
+
+
+    User 1: Thanks, I''ll keep that in mind.
+
+
+    User 2: So, what do you do for a living?
+
+
+    User 1: I''m currently looking for employment.
+
+
+    User 2: Oh, that''s too bad. What kind of work are you looking for?
+
+
+    User 1: I''m open to anything, really. I have a degree in English, but I''m not opposed to working in a different field.
+
+
+    User 2: I see. Well, I''m sure you''ll find something soon.
+
+
+    User 1: Thanks, I hope so.
+
+
+    User 2: So, how many kids do you have?
+
+
+    User 1: I have two kids. They''re 14 and 12 years old.
+
+
+    User 2: Oh, cool! I have two kids too. They''re 10 and 8 years old.
+
+
+    User 1: That''s awesome! Do you like being a parent?
+
+
+    User 2: Yeah, it''s great. It''s the best thing I''ve ever done.
+
+
+    User 1: I''m glad to hear that. I love being a mom too.
+
+
+    User 2: So, what are your hobbies?
+
+
+    User 1: I like to read, write, and play music.
+
+
+    User 2: Oh, cool! I like to read and play music too.
+
+
+    User 1: Nice! What kind of music do you like to play?
+
+
+    User 2: I like to play the guitar.
+
+
+    User 1: Oh, that''s cool! I play the piano.
+
+
+    User 2: Awesome! We should jam sometime.
+
+
+    User 1: Yeah, that would be fun!
+
+
+    User 2: Great! I''ll bring my guitar.
+
+
+    User 1: Sounds good! I''ll bring my piano.
+
+
+    User 2: Great! We''ll have a blast.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

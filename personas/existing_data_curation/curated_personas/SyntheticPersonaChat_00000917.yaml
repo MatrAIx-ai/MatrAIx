@@ -1,0 +1,74 @@
+id: 00000917
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 917
+data:
+  user 1 personas: 'I am an athlete.
+
+    I play basketball.
+
+    I went to the university of north carolina.
+
+    I get paid over 5 million a year to dribble a ball.
+
+    I was drafted last years by the minnesota wolves.'
+  user 2 personas: 'My favorite food is jello.
+
+    I live in an apartment.
+
+    I cannot whistle.
+
+    I have 4 pets.
+
+    I enjoy magic the gathering , it is a card game.'
+  Best Generated Conversation: 'User 1: Hello! I''m a professional basketball player.
+
+    User 2: Hello! I''m a huge fan of basketball. What team do you play for?
+
+    User 1: I play for the Minnesota Timberwolves.
+
+    User 2: That''s awesome! I''ve always wanted to see a Timberwolves game.
+
+    User 1: You should come to one! We''re playing at home next week.
+
+    User 2: I''ll try to make it! What position do you play?
+
+    User 1: I''m a point guard.
+
+    User 2: That''s a great position! I love watching point guards play.
+
+    User 1: Thanks! I''m glad you enjoy it.
+
+    User 2: So, how did you get started playing basketball?
+
+    User 1: I started playing when I was in elementary school. I loved the game, and I was always pretty good at it.
+
+    User 2: That''s awesome! I started playing in middle school. I wasn''t very good at it, but I loved it anyway.
+
+    User 1: It''s never too late to improve!
+
+    User 2: You''re right! I''m still trying to get better.
+
+    User 1: I''m sure you''ll do great!
+
+    User 2: Thanks! I appreciate the encouragement.
+
+    User 1: No problem! So, what do you like to do for fun?
+
+    User 2: I like to play video games, read, and watch movies.
+
+    User 1: Me too! I love playing video games.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I don''t have a favorite video game, but I like playing a lot of different games.
+
+    User 2: Me too! I like to try new games all the time.
+
+    User 1: It''s always fun to find a new game that you enjoy.
+
+    User 2: I agree! It''s one of the best parts of playing video games.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

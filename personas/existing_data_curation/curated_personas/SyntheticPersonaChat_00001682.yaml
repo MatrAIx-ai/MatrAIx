@@ -1,0 +1,100 @@
+id: 00001682
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1682
+data:
+  user 1 personas: 'I love bruno mars.
+
+    I am in high school.
+
+    I cs and ds.
+
+    I love sweets.
+
+    I sleep a lot.'
+  user 2 personas: 'I am 17.
+
+    I go to a catholic high school in new england.
+
+    I have lived a very sheltered life.
+
+    I am about to go off to college at a very liberal school soon.
+
+    I plan to raise hell and sew my wild oats.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What''s your favorite song?
+
+    User 2: I like a lot of different songs, but my favorite is probably "Locked Out of Heaven" by Bruno Mars.
+
+    User 1: That''s a good one! I love Bruno Mars.
+
+    User 2: Me too! He''s so talented.
+
+    User 1: What''s your favorite thing to do?
+
+    User 2: I love to go to concerts. I''ve been to a lot of Bruno Mars concerts.
+
+    User 1: That''s awesome! I''ve only been to one concert, but it was a lot of fun.
+
+    User 2: What concert did you go to?
+
+    User 1: I went to a One Direction concert.
+
+    User 2: Oh, cool! I''ve always wanted to see One Direction.
+
+    User 1: They''re really good live.
+
+    User 2: I bet they are.
+
+    User 1: So, what do you plan to do after high school?
+
+    User 2: I''m going to college at a liberal school in California.
+
+    User 1: That''s awesome! I''m going to college at a liberal school in New York.
+
+    User 2: Oh, cool! We should keep in touch so we can compare notes.
+
+    User 1: Yeah, that would be great.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I love to read, write, and play video games.
+
+    User 2: I love to read and write too. I''m not so good at video games, though.
+
+    User 1: I''m not very good at them either, but they''re fun.
+
+    User 2: I guess they are.
+
+    User 1: So, what are you looking forward to the most about college?
+
+    User 2: I''m looking forward to meeting new people and learning new things.
+
+    User 1: Me too! I''m also looking forward to being independent and making my own decisions.
+
+    User 2: I can''t wait to be independent either.
+
+    User 1: So, what do you want to do after college?
+
+    User 2: I''m not sure yet. I''m thinking about going to law school.
+
+    User 1: That''s a good option.
+
+    User 2: Yeah, I think it would be a good fit for me.
+
+    User 1: So, what are you going to do now?
+
+    User 2: I''m going to go back to my dorm and start packing.
+
+    User 1: Oh, okay. I''m going to go home and finish my homework.
+
+    User 2: Okay, bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

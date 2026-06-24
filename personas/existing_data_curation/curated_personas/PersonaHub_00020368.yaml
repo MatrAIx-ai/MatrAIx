@@ -1,0 +1,18 @@
+id: 00020368
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20368
+persona_description: A healthcare professional who is responsible for administering vaccines to children, particularly those who are part of the National Immunisation Program (NIP). This person is likely
+  to be a General Practitioner (GP) or a pediatrician who is familiar with the guidelines and recommendations for administering vaccines. They are aware of the importance of minimizing the risk of fever
+  and febrile convulsion and are trained to administer the MMRV vaccine only as a second dose, as the first dose in children aged 9-30 months is associated with an increased rate of fever and febrile convulsions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pediatrics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,56 @@
+id: '00001641'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1641
+data:
+  user 1 personas: 'I have three kids.
+
+    I sing in the church choir.
+
+    I am a truck driver in the south.'
+  user 2 personas: 'I live on a lake.
+
+    I fell in love this summer.
+
+    I enjoy summer walking and reading.'
+  Best Generated Conversation: 'User 1: What''s your favorite thing to do in the summer?
+
+    User 2: I love to walk around the lake near my house. It''s so peaceful and relaxing.
+
+    User 1: That sounds nice. I love to go for walks too.
+
+    User 2: I also love to read in the summer. It''s so nice to just relax and lose myself in a good book.
+
+    User 1: I love to read too! What are you reading right now?
+
+    User 2: I''m reading a book called "The Great Gatsby." It''s a classic novel by F. Scott Fitzgerald.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: It''s a great book. You''ll love it.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a writer. I write for a magazine.
+
+    User 1: That sounds interesting. What kind of magazine do you write for?
+
+    User 2: I write for a magazine about food and travel.
+
+    User 1: That sounds really cool. I love to travel.
+
+    User 2: Me too! I love seeing new places and trying new foods.
+
+    User 1: What''s your favorite place you''ve ever been to?
+
+    User 2: My favorite place I''ve ever been to is Italy. The food was amazing and the people were so friendly.
+
+    User 1: That''s awesome! I''ve always wanted to go to Italy.
+
+    User 2: You should! It''s an amazing place.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

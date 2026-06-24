@@ -1,0 +1,90 @@
+id: '00004535'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4535
+data:
+  user 1 personas: 'My favorite drink is pepsi.
+
+    I like reading horror novels.
+
+    I work as a librarian.
+
+    My weekends are filled with bird watching.
+
+    Hotdogs are my favorite food.'
+  user 2 personas: 'I work for a large law firm.
+
+    I enjoy golfing.
+
+    I am married with three kids.
+
+    I love my work and just got promoted.
+
+    I listen to classical music.'
+  Best Generated Conversation: 'User 1: Hi! My name is [User 1''s name]. What''s your name?
+
+    User 2: Hi! My name is [User 2''s name].
+
+    User 1: It''s nice to meet you! What do you do for a living?
+
+    User 2: I work for a large law firm.
+
+    User 1: Oh, that''s interesting! What''s your favorite part of your job?
+
+    User 2: I love working with people and helping them solve their problems.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: Thanks! What do you do for a living?
+
+    User 1: I''m a librarian.
+
+    User 2: Oh, that''s cool! What''s your favorite part of your job?
+
+    User 1: I love helping people find the information they need.
+
+    User 2: That''s great! I''m glad you enjoy your job too.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I love golfing, listening to classical music, and spending time with my family.
+
+    User 1: Sounds like you have a lot of fun hobbies! I like reading horror novels and bird watching.
+
+    User 2: Oh, that''s cool! I''ve never been bird watching before.
+
+    User 1: It''s really fun! You can see all sorts of different birds.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a great way to relax.
+
+    User 2: Thanks for the tip!
+
+    User 1: No problem!
+
+    User 2: So, what''s your favorite horror novel?
+
+    User 1: I really like "The Shining" by Stephen King.
+
+    User 2: Oh, that''s a classic! I''ve read it a few times.
+
+    User 1: Me too! It''s so good.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m going to be golfing with my friends.
+
+    User 1: Oh, that sounds fun! I wish I could go golfing with you.
+
+    User 2: You should! It''s a great way to spend time with friends.
+
+    User 1: I will! Thanks for the invite.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

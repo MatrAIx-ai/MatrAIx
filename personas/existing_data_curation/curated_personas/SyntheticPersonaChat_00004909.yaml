@@ -1,0 +1,66 @@
+id: 00004909
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4909
+data:
+  user 1 personas: 'Black coffee is my addiction.
+
+    My husband died last year.
+
+    My family gets together every saturday.
+
+    I am 77 years old.'
+  user 2 personas: 'My husband is the ceo of taco bell.
+
+    I have five cats.
+
+    I am next in line to become queen of england.
+
+    My favorite color is blue.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi [user 1''s name], I''m [user 2''s name].
+
+    User 1: Nice to meet you.
+
+    User 2: Same here. What do you do for fun?
+
+    User 1: I like to drink black coffee, spend time with my family, and read.
+
+    User 2: Oh, I love black coffee too! What''s your favorite kind?
+
+    User 1: I like dark roast coffee. It''s the best.
+
+    User 2: Me too! I can''t get enough of it.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, spend time with my family, and play with my cats.
+
+    User 1: Oh, I have two cats too! What are their names?
+
+    User 2: Their names are Mittens and Snowball.
+
+    User 1: Those are cute names!
+
+    User 2: Thanks. So, what do you like to read?
+
+    User 1: I like to read a variety of things, but I mostly like to read historical fiction and thrillers.
+
+    User 2: Oh, I love historical fiction too! What are some of your favorite books?
+
+    User 1: I love the Outlander series by Diana Gabaldon. It''s a great historical fiction series.
+
+    User 2: I''ve heard good things about that series! I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: I''m glad to hear that. I''m always looking for new books to read.
+
+    User 1: Me too! I love to read.
+
+    User 2: Me too! It''s one of my favorite hobbies.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

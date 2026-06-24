@@ -1,0 +1,58 @@
+id: 00000971
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 971
+data:
+  user 1 personas: 'I enjoy fishing.
+
+    Summer is my favorite season.
+
+    I like classic radio programs.
+
+    I love my impala.'
+  user 2 personas: 'I would travel the world if i could.
+
+    I like listening to all genres of music except country music.
+
+    I like spending time with my friends and family.
+
+    I like to read a lot of books.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read a lot, spend time with friends and family, and listen to all genres of music except country music.
+
+    User 1: That''s cool! I like reading a lot too, and I love fishing. What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but I think my favorite would be "To Kill a Mockingbird" by Harper Lee. It''s such a powerful and moving story.
+
+    User 1: I love that book! I read it in school and it''s one of my favorites too.
+
+    User 2: What''s your favorite genre of music?
+
+    User 1: I like classic rock, country, and pop. I also like listening to music from other cultures.
+
+    User 2: That''s cool! I like listening to music from all over the world too. I think it''s a great way to learn about different cultures.
+
+    User 1: I agree! It''s also a great way to relax and enjoy yourself.
+
+    User 2: What do you like to do in the summer?
+
+    User 1: I like to go fishing, swimming, and camping. I also like to go to the beach and play volleyball.
+
+    User 2: That sounds like a lot of fun! I love to go swimming and camping too. I''ve never been to the beach, but I''d love to go sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I think I will!
+
+    User 1: Great! We can go together sometime.
+
+    User 2: That would be great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

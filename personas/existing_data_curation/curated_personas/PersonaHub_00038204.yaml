@@ -1,0 +1,19 @@
+id: 00038204
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38204
+persona_description: A researcher who studies the biology and behavior of gorillas, focusing on their intelligence, habitat loss, and the threats they face due to commercial hunting and the Ebola virus.
+  This individual is knowledgeable about the current state of the gorilla populations, including their estimated numbers and the specific areas where they live. They are also aware of the ongoing threats
+  to the gorillas' survival, such as habitat loss and the potential impact of the Ebola virus. This persona is interested in the latest research and conservation efforts related to gorillas, and is dedicated
+  to protecting these magnificent animals from extinction.
+expertise:
+  general_domain_top1pct: Biology
+  specific_domain_top1pct: Primate biology
+  general_domain_top01pct: None
+  specific_domain_top01pct: Gorilla conservation
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

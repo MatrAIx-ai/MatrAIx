@@ -1,0 +1,62 @@
+id: '00003246'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3246
+data:
+  user 1 personas: 'My children vist often.
+
+    I like to bake for them.
+
+    My grandsons favorite type of cake is chocolate.
+
+    I live in a retirement home.
+
+    I am an old woman.'
+  user 2 personas: 'I go to craft shows on the weekends.
+
+    I design jewelry when i have spare time.
+
+    I live with my boyfriend in an apartment.
+
+    My favorite book is the bible.
+
+    During the week , i work as a barista.'
+  Best Generated Conversation: 'User 1: Hi! I''m a retired old woman and I live in a retirement home. I love to bake and my grandsons love my chocolate cake. What about you?
+
+    User 2: Hi! I''m a barista during the week and I love to go to craft shows and design jewelry in my spare time. I live with my boyfriend in an apartment and my favorite book is the Bible.
+
+    User 1: That''s so cool! I''ve always wanted to be a barista. I love coffee and I think it would be a fun job.
+
+    User 2: It is! It''s a lot of work, but it''s also very rewarding. I get to meet a lot of interesting people and I get to make them happy with my coffee.
+
+    User 1: That''s great! I''m glad you like your job.
+
+    User 2: Thanks! I do. It''s a lot of fun.
+
+    User 1: What kinds of jewelry do you design?
+
+    User 2: I design a lot of different kinds of jewelry, but my favorite is probably bracelets. I love the way they can be so personalized and unique.
+
+    User 1: That''s so cool! I''ve always thought bracelets were so beautiful.
+
+    User 2: Thanks! I''m glad you think so.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m going to a craft show with my boyfriend. We''re both really excited to see all the different vendors and buy some handmade jewelry.
+
+    User 1: That sounds like a lot of fun! I hope you have a great time.
+
+    User 2: Thanks! I know we will.
+
+    User 1: So, what''s your favorite part of your job?
+
+    User 2: I love getting to know my customers and helping them find the perfect jewelry for them. I also love the challenge of designing new jewelry.
+
+    User 1: That''s so great! I''m glad you like your job.
+
+    User 2: Thanks! I do. It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00005101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5101
+data:
+  user 1 personas: 'I work in the emergency room.
+
+    I am a nurse.
+
+    My favorite drink is dr pepper.
+
+    I am divorced.'
+  user 2 personas: 'My favorite thing to do is sleep.
+
+    I love ergonomic keyboards and chairs.
+
+    I just bought a new pair of sneakers and they feel great.
+
+    I can t get enough of rap music , it s so good.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name], what''s your name?
+
+    User 2: Hello! My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you do for a living?
+
+    User 2: I''m a nurse in the emergency room.
+
+    User 1: Oh, that''s interesting! How do you like it?
+
+    User 2: It''s definitely challenging, but it''s also very rewarding.
+
+    User 1: What''s your favorite part of the job?
+
+    User 2: I love helping people and making a difference in their lives.
+
+    User 1: That''s great! What''s your least favorite part of the job?
+
+    User 2: I don''t like seeing people suffer.
+
+    User 1: I can imagine. What do you do for fun outside of work?
+
+    User 2: I love to sleep, listen to rap music, and play video games.
+
+    User 1: That sounds like a lot of fun! I love to sleep too. What kind of video games do you like to play?
+
+    User 2: I mostly play fighting games and action games.
+
+    User 1: Cool! I used to play a lot of fighting games when I was younger.
+
+    User 2: Me too! I still play them sometimes.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: I think so too!
+
+    User 1: Maybe we could hang out sometime and play some video games?
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll let you know when I''m free.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

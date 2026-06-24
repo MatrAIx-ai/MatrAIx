@@ -1,0 +1,62 @@
+id: '00001164'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1164
+data:
+  user 1 personas: 'My name is omar.
+
+    I live on a small farm in ohio.
+
+    I play guitar in the local band.
+
+    I am the youngest of three brothers.'
+  user 2 personas: 'I don t like trying new things.
+
+    I want to be alone sometimes.
+
+    I like the library.
+
+    I don t trust anyone.
+
+    I feel competitive against other women.'
+  Best Generated Conversation: 'User 1: Hi, my name is Omar. I''m a farmer from Ohio.
+
+    User 2: Hi Omar, I''m (user 2 name). I''m a librarian from Ohio.
+
+    User 1: Nice to meet you. What''s your favorite thing about the library?
+
+    User 2: I love the quiet and the books. I love to just get lost in a good book.
+
+    User 1: I know what you mean. I love to read too. I''m trying to get my brothers to read more, but they''re not very interested.
+
+    User 2: That''s too bad. Reading is so important. It can open up a whole new world to you.
+
+    User 1: I know! I''m hoping they''ll come around eventually.
+
+    User 2: Maybe you could start a book club for them. That might get them interested.
+
+    User 1: That''s a great idea! I''ll have to look into it.
+
+    User 2: Good luck! I hope they get into reading.
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite book?
+
+    User 1: It''s hard to say. I have so many favorites. But I think one of my favorites is "The Catcher in the Rye."
+
+    User 2: That''s a great book! I read it in high school and loved it.
+
+    User 1: Me too! It''s so relatable.
+
+    User 2: Yeah, it really is.
+
+    User 1: I''m glad you liked it.
+
+    User 2: Thanks. I''m glad we met.
+
+    User 1: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

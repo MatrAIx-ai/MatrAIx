@@ -1,0 +1,18 @@
+id: 00049851
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49851
+persona_description: The text is likely to be read by a chemist or a molecular biologist who is interested in understanding the structure and properties of macromolecules. They may be looking for a way
+  to represent and analyze the substructures within these molecules, such as aminoacid residues or bases within nucleic acids. The text mentions the Chemistry::Domain class, which is a useful tool for representing
+  such substructures within larger molecules.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: bioinformatics/computational chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

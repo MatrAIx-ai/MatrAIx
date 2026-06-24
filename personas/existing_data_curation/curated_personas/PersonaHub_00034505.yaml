@@ -1,0 +1,17 @@
+id: '00034505'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34505
+persona_description: A geologist who specializes in the study of the northern Chilean fault zone and the Nazca plate sliding underneath the South America plate. He has extensively studied the fault zone
+  and has been monitoring its activity, predicting the likelihood of a powerful earthquake in the area. He is aware of the potential risks and has been preparing for such events.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: seismology or tectonics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

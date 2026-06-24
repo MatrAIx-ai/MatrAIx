@@ -1,0 +1,18 @@
+id: 00008758
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8758
+persona_description: A public health official who is responsible for investigating and managing outbreaks of infectious diseases, particularly in the context of vaccination campaigns and public health policy.
+  They are knowledgeable about the transmission, symptoms, and treatment of measles, as well as the importance of vaccination and the potential for outbreaks to occur in areas where vaccination rates are
+  low. They are also likely to be familiar with the current status of measles in the United States and the strategies being employed to control the spread of the disease.
+expertise:
+  general_domain_top1pct: public health
+  specific_domain_top1pct: epidemiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

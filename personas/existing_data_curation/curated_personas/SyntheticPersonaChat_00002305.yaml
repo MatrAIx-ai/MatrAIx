@@ -1,0 +1,74 @@
+id: '00002305'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2305
+data:
+  user 1 personas: 'I own a chevy tahoe.
+
+    My favorite food is steak.
+
+    I do not know how to swim.
+
+    My grandpa was in wwii.
+
+    My favorite genre of music is rock.'
+  user 2 personas: 'My father worked for ge.
+
+    I am an aspiring singer.
+
+    I love animals.
+
+    Green is my favorite color.
+
+    I enjoy playing tennis.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]
+
+    User 2: Hi, I''m [user 2 name]
+
+    User 1: What are your interests?
+
+    User 2: I love animals, I''m an aspiring singer, and I enjoy playing tennis.
+
+    User 1: That''s cool! I love animals too, and I like to play guitar.
+
+    User 2: That''s great! What kind of music do you like to play?
+
+    User 1: I like to play rock music.
+
+    User 2: Oh, cool! I like rock music too.
+
+    User 1: Do you have any pets?
+
+    User 2: I have a dog and a cat.
+
+    User 1: Oh, that''s awesome! I have a dog too.
+
+    User 2: What kind of dog do you have?
+
+    User 1: I have a golden retriever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly.
+
+    User 1: Yeah, they are.
+
+    User 2: What''s your dog''s name?
+
+    User 1: My dog''s name is Buddy.
+
+    User 2: That''s a great name!
+
+    User 1: Thanks.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to concerts, play guitar, and watch movies.
+
+    User 2: Oh, that''s cool! I like to do those things too.
+
+    User 1: We should hang out sometime.
+
+    User 2: I''d love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

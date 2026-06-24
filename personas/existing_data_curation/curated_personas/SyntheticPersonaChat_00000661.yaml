@@ -1,0 +1,50 @@
+id: '00000661'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 661
+data:
+  user 1 personas: 'I have one son.
+
+    I m in the military.
+
+    My favorite color is blue.
+
+    I was a wrestler in high school.'
+  user 2 personas: 'I simply walk around when i have nothing to do.
+
+    I have high speed internet.
+
+    I can beat anyone in chess.
+
+    I saw a solar eclipse when i was 8 years old.'
+  Best Generated Conversation: 'User 1: I''m in the military and I have one son.
+
+    User 2: I see, I simply walk around when I have nothing to do.
+
+    User 1: Oh, that''s interesting. I''m more of a homebody.
+
+    User 2: I have high speed internet, so I can do a lot of things from home.
+
+    User 1: That''s cool. I''m more of a bookworm, so I like to read when I have free time.
+
+    User 2: I love books too! I read a lot of fantasy novels.
+
+    User 1: Me too! I''m a big fan of the Lord of the Rings series.
+
+    User 2: I love the Lord of the Rings! I also like the Harry Potter series.
+
+    User 1: I''ve never read Harry Potter.
+
+    User 2: You should! It''s a great series.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You won''t regret it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

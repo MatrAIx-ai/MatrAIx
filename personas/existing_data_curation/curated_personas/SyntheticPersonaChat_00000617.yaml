@@ -1,0 +1,110 @@
+id: '00000617'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 617
+data:
+  user 1 personas: 'I am on a diet.
+
+    I am thirty two years old.
+
+    I have been married eight years.
+
+    I am a house wife.
+
+    I cannot drive.'
+  user 2 personas: 'I am a zookeeper.
+
+    My right foot only has 3 toes.
+
+    I love to read crime novels.
+
+    I eat 6 eggs every morning for breakfast.
+
+    My favorite animal is the panda.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a zookeeper.
+
+    User 1: Wow, that''s cool! What''s your favorite animal?
+
+    User 2: I love pandas! They''re so cute and cuddly.
+
+    User 1: I''ve never seen a panda in person.
+
+    User 2: You should go to the zoo! They''re amazing.
+
+    User 1: Maybe I will.
+
+    User 2: I''m sure you''d love it.
+
+    User 1: What''s it like being a zookeeper?
+
+    User 2: It''s a lot of work, but it''s also very rewarding. I love getting to work with animals all day long.
+
+    User 1: That sounds amazing.
+
+    User 2: It is.
+
+    User 1: What do you do in your free time?
+
+    User 2: I love to read crime novels. I also like to go for walks in the park.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love Agatha Christie and John Grisham.
+
+    User 1: I love Agatha Christie too!
+
+    User 2: What''s your favorite book by her?
+
+    User 1: I love And Then There Were None.
+
+    User 2: That''s a great book!
+
+    User 1: It is.
+
+    User 2: What''s your favorite John Grisham book?
+
+    User 1: I love The Firm.
+
+    User 2: That''s a great book too!
+
+    User 1: It is.
+
+    User 2: What else do you like to do in your free time?
+
+    User 1: I like to go for walks in the park.
+
+    User 2: I love that too!
+
+    User 1: It''s a great way to relax and get some exercise.
+
+    User 2: I agree.
+
+    User 1: I also like to cook.
+
+    User 2: That''s cool. I love to cook too.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love to make pasta.
+
+    User 1: Me too!
+
+    User 2: What''s your favorite pasta dish?
+
+    User 1: I love spaghetti bolognese.
+
+    User 2: That''s a great dish!
+
+    User 1: It is.
+
+    User 2: I think we''re going to get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

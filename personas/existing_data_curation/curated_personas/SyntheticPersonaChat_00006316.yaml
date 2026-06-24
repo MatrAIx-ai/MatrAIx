@@ -1,0 +1,52 @@
+id: '00006316'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6316
+data:
+  user 1 personas: 'My favorite author is jane austen.
+
+    I eat a lot of fish.
+
+    I live near the ocean.
+
+    I own a boat.'
+  user 2 personas: 'I am young.
+
+    I am strong.
+
+    I am tall.
+
+    I never eat veggies.
+
+    I love to run fast.'
+  Best Generated Conversation: 'User 1: My favorite author is Jane Austen. What''s your favorite book?
+
+    User 2: I don''t really read. I''m more of a physical activity person.
+
+    User 1: Oh, I see. I love to go for walks on the beach. Do you like to go swimming?
+
+    User 2: I love to swim! I used to be a competitive swimmer.
+
+    User 1: That''s awesome! I''ve never been a competitive swimmer, but I love to go swimming for fun.
+
+    User 2: Do you live near the ocean?
+
+    User 1: Yes, I live right on the coast.
+
+    User 2: That''s awesome! I love the ocean.
+
+    User 1: Me too! I love to go fishing and boating.
+
+    User 2: I don''t have a boat, but I''d love to go fishing sometime.
+
+    User 1: We could go together! I have a boat and I know a lot about fishing.
+
+    User 2: That would be fun! I''d love to learn how to fish.
+
+    User 1: Great! We could go fishing this weekend.
+
+    User 2: Sounds good! I''ll be there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00000653'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 653
+data:
+  user 1 personas: 'I have a beard.
+
+    I drive a truck.
+
+    I like rap music.
+
+    I graduated high school.
+
+    I live on a farm.'
+  user 2 personas: 'I like candy and soda.
+
+    I am not healthy.
+
+    I am a man.
+
+    I weight 300 pounds.'
+  Best Generated Conversation: 'User 1: What''s up?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Same here. I''m just sitting here on my farm, listening to some rap music.
+
+    User 2: Nice. I like rap music too.
+
+    User 1: What''s your favorite song?
+
+    User 2: I don''t know, I have a lot of favorites. But I really like "Gucci Gang" by Lil Pump.
+
+    User 1: That''s a good one. I like "Migos" by Migos.
+
+    User 2: Oh yeah, that''s a good one too.
+
+    User 1: Do you like other types of music?
+
+    User 2: Yeah, I like a lot of different types of music. I also like country music, rock music, and R&B.
+
+    User 1: Me too. I like to listen to a variety of music.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a farmer. I live on a farm with my wife and kids.
+
+    User 2: Oh, that''s cool. I''ve never been on a farm before.
+
+    User 1: You should come visit sometime. We''d love to have you.
+
+    User 2: I''d love to. I''ll come visit the next time I''m in town.
+
+    User 1: Sounds good. We''ll be waiting for you.
+
+    User 2: Thanks.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

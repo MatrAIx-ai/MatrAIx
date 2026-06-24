@@ -1,0 +1,54 @@
+id: 00008753
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8753
+data:
+  user 1 personas: 'I want to be a journalist but instead i sell washers at sears.
+
+    I love the band red hot chili peppers.
+
+    I have a french bulldog.
+
+    My feet are size six womens.'
+  user 2 personas: 'My father use to drive a taxi cab in the 1970s.
+
+    I have never been to the west coast of the united states.
+
+    I was once on the local news , and not for anything illegal.
+
+    I have been to canada two times my entire life.
+
+    My uncle use to work on fish boats in florida.'
+  Best Generated Conversation: 'User 1: Hi! I''m User 1.
+
+    User 2: Hi, I''m User 2.
+
+    User 1: I want to be a journalist, but instead I sell washers at Sears.
+
+    User 2: My father used to drive a taxi cab in the 1970s.
+
+    User 1: That''s cool. I''ve never been to the west coast of the United States.
+
+    User 2: I''ve been to Canada two times in my entire life.
+
+    User 1: I love the band Red Hot Chili Peppers.
+
+    User 2: I was once on the local news, and not for anything illegal.
+
+    User 1: That''s interesting. I have a French bulldog.
+
+    User 2: My uncle used to work on fish boats in Florida.
+
+    User 1: That''s cool. I have size six women''s feet.
+
+    User 2: That''s small.
+
+    User 1: I know.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

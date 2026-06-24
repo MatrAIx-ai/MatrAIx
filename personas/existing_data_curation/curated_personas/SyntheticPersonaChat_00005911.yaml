@@ -1,0 +1,76 @@
+id: 00005911
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5911
+data:
+  user 1 personas: 'My favorite animal is the panda.
+
+    I love to read crime novels.
+
+    My right foot only has 3 toes.
+
+    I am a zookeeper.
+
+    I eat 6 eggs every morning for breakfast.'
+  user 2 personas: 'I like photography.
+
+    I love traveling.
+
+    I like to garden.
+
+    I like to bake pies.
+
+    I am a chef.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a chef.
+
+    User 1: Oh, that''s cool. I''m a zookeeper.
+
+    User 2: Really? That''s awesome! What''s your favorite animal?
+
+    User 1: My favorite animal is the panda.
+
+    User 2: I love pandas! They''re so cute.
+
+    User 1: I know, right? They''re also very gentle and intelligent animals.
+
+    User 2: What''s it like being a zookeeper?
+
+    User 1: It''s really great! I get to work with animals all day long. It''s a lot of hard work, but it''s also very rewarding.
+
+    User 2: I can imagine. What''s your favorite part of the job?
+
+    User 1: My favorite part is getting to interact with the animals. I love learning about them and seeing them interact with each other.
+
+    User 2: That sounds amazing. I''ve always wanted to be a zookeeper.
+
+    User 1: It''s a great job. I''m really lucky to be able to do it.
+
+    User 2: What''s your favorite crime novel?
+
+    User 1: My favorite crime novel is "The Girl with the Dragon Tattoo" by Stieg Larsson. It''s a great mystery novel with a lot of twists and turns.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: I highly recommend it. What''s your favorite type of photography?
+
+    User 2: I like taking pictures of nature. I think it''s so beautiful.
+
+    User 1: I agree. I love taking pictures of animals.
+
+    User 2: I love taking pictures of animals too. They''re so cute and photogenic.
+
+    User 1: I think we''d make a great team.
+
+    User 2: I think so too. We should go on a photography trip together.
+
+    User 1: That would be so fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

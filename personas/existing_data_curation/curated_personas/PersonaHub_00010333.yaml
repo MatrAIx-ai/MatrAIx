@@ -1,0 +1,20 @@
+id: '00010333'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10333
+persona_description: An amateur radio operator who primarily uses a PSK31 software application for communicating with other amateur radio operators, often using a commercially available interface/modem
+  device between their computers and radios. This operator is familiar with the basics of PSK31, including the binary phase shift keying (BPSK) variant, and is skilled in switching between BPSK and QPSK
+  variants if necessary. The operator is also proficient in configuring and adjusting the software to handle the necessary impedance matching and sound level adjustments to transmit radio audio to a sound
+  card input and inject it into the microphone input of the computer. The operator is likely to be a member of a local amateur radio club or group, and is comfortable with the technical aspects of amateur
+  radio communication.
+expertise:
+  general_domain_top1pct: electronics
+  specific_domain_top1pct: Amateur Radio Communication
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

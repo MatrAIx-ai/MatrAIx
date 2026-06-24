@@ -1,0 +1,62 @@
+id: 00002878
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2878
+data:
+  user 1 personas: 'I love to play soccer.
+
+    I live with my parents.
+
+    My favorite movies are disney movies.
+
+    I work as a waitress.'
+  user 2 personas: 'I like to read.
+
+    I am a diabetic.
+
+    I have a long drive to work.
+
+    Traffic makes me mad.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: I like to play soccer, go for walks, and watch movies.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I like Disney movies the most.
+
+    User 2: I like Disney movies too! What''s your favorite Disney movie?
+
+    User 1: I like Beauty and the Beast the most.
+
+    User 2: That''s one of my favorites too!
+
+    User 1: What do you do for work?
+
+    User 2: I''m a diabetic, so I have to work in a hospital to be close to the medicine.
+
+    User 1: That sounds like a tough job.
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: I bet it is.
+
+    User 2: I have a long drive to work, but I always find it worth it.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thank you.
+
+    User 1: It was nice talking to you.
+
+    User 2: It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

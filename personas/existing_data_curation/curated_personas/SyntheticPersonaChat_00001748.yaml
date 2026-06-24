@@ -1,0 +1,62 @@
+id: 00001748
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1748
+data:
+  user 1 personas: 'My eyes are brown.
+
+    I love going to concerts.
+
+    I m a vegan.
+
+    I study philosophy at umass.'
+  user 2 personas: 'I have a lot of friends.
+
+    I am ten years old.
+
+    I live in a house.
+
+    I love dogs and cats.'
+  Best Generated Conversation: 'User 1: Hi, what do you like to do for fun?
+
+    User 2: I like to play video games and go to the park with my friends.
+
+    User 1: Oh, that sounds fun. I like to go to concerts and eat vegan food.
+
+    User 2: I''ve never been to a concert, but I love vegan food! What''s your favorite vegan dish?
+
+    User 1: My favorite vegan dish is tofu stir-fry. It''s so good!
+
+    User 2: I''ve never had tofu stir-fry, but it sounds delicious. I''ll have to try it sometime.
+
+    User 1: You should! It''s so easy to make, and it''s really healthy.
+
+    User 2: I''m sure I will. Thanks for the suggestion!
+
+    User 1: No problem. So, what do you think about philosophy?
+
+    User 2: I think it''s really interesting, but I don''t know a lot about it.
+
+    User 1: It''s a really fascinating subject. I''m studying it at UMass Amherst.
+
+    User 2: That''s awesome! I''m sure you''re learning a lot.
+
+    User 1: Yeah, it''s really interesting. I''m learning a lot about the world and how people think.
+
+    User 2: That sounds really cool. I''m glad you''re enjoying it.
+
+    User 1: Thanks. I am. So, what do you like to do in your free time?
+
+    User 2: I like to play video games, watch TV, and hang out with my friends.
+
+    User 1: Oh, that sounds fun. I like to do similar things in my free time.
+
+    User 2: That''s cool. We should hang out sometime.
+
+    User 1: I would love to! We can exchange numbers and set something up.
+
+    User 2: Okay, great! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00008134
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8134
+data:
+  user 1 personas: 'I care about the way i look when i am in public.
+
+    I think i am fabulous.
+
+    I shop online a lot.
+
+    I check my reflection in the mirror constantly.'
+  user 2 personas: 'My favorite food is mexican food.
+
+    I love to read and cook.
+
+    I am a mother.
+
+    My favorite band is the rolling stones.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: I''m doing well, thanks for asking. How are you?
+
+    User 1: I''m doing well, thank you. I''m glad to hear that.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to shop online, cook, and read.
+
+    User 2: Oh, that''s great! I love to cook too. What do you like to cook?
+
+    User 1: I love to cook Mexican food. I make a mean enchilada.
+
+    User 2: Oh my gosh, I love enchiladas! I make them all the time.
+
+    User 1: Really? That''s great! We should cook them together sometime.
+
+    User 2: That would be fun! I''m free next weekend.
+
+    User 1: Awesome! I''ll bring the ingredients.
+
+    User 2: Perfect! I''ll make the enchilada sauce.
+
+    User 1: Sounds good to me.
+
+    User 2: I''m also a big fan of The Rolling Stones.
+
+    User 1: Me too! What''s your favorite song?
+
+    User 2: I love "Gimme Shelter."
+
+    User 1: That''s a great song! I also love "Paint It Black" and "Brown Sugar."
+
+    User 2: Those are both great songs too! I''m glad you like The Rolling Stones.
+
+    User 1: Me too! They''re one of my favorite bands.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

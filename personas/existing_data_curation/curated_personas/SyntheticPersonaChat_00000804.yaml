@@ -1,0 +1,60 @@
+id: 00000804
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 804
+data:
+  user 1 personas: 'I love to draw.
+
+    I love to cook ethnic foods.
+
+    I am a very tall woman.
+
+    My family came from greece in the 1950 s.'
+  user 2 personas: 'My parents are distant.
+
+    I see a therapist that doesn t really understand me.
+
+    Sometimes i wish i didn t have to wake up in the morning.
+
+    I have an older brother that has gotten into trouble.
+
+    I have trouble feeling emotion.'
+  Best Generated Conversation: 'User 1: I love to cook ethnic foods.  How about you?
+
+    User 2: I love to cook too, but I''m not very good at it.  I can''t seem to get the flavors right.
+
+    User 1: What kind of food do you like to cook?
+
+    User 2: I like to cook Italian food, but I also like to try new things.
+
+    User 1: Do you have any favorite recipes?
+
+    User 2: I like to make spaghetti with meatballs.  I also like to make lasagna.
+
+    User 1: Those are both great dishes!  I love lasagna.
+
+    User 2: Me too!  I usually make it for dinner when I have friends over.
+
+    User 1: That sounds like a great way to entertain.  I love having people over for dinner.
+
+    User 2: Me too!  It''s always more fun to eat with other people.
+
+    User 1: I agree.  I love trying new foods and hearing about other people''s cultures.
+
+    User 2: Me too!  It''s so interesting to learn about other people''s lives.
+
+    User 1: I think it''s important to be open to new experiences.
+
+    User 2: I agree.  It''s the only way to grow as a person.
+
+    User 1: I''m glad we agree.  I think it''s important to have open conversations with people from different cultures.
+
+    User 2: I agree.  It''s the only way to learn about each other.
+
+    User 1: I think we''re going to be great friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

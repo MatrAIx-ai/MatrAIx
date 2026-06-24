@@ -1,0 +1,52 @@
+id: '00002047'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2047
+data:
+  user 1 personas: 'My dog is a collie.
+
+    I love to travel with my family.
+
+    I have blue eyes and curly brown hair.
+
+    My favorite type of music is country.'
+  user 2 personas: 'I go visit them sometimes.
+
+    My best friend lives in a big city.
+
+    My mother is a social worker for the school system.
+
+    I work at a grocery store.'
+  Best Generated Conversation: 'User 1: I love country music! Do you have any favorite artists?
+
+    User 2: I love Luke Bryan and Thomas Rhett.
+
+    User 1: I love Luke Bryan too! He''s so funny.
+
+    User 2: Yes, he is. My best friend''s family lives in Nashville, so we go there sometimes to see him in concert.
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to go to Nashville.
+
+    User 2: You should go! It''s a great city. My mother is a social worker for the school system there.
+
+    User 1: Wow, that''s cool! What kind of social work does she do?
+
+    User 2: She works with kids from low-income families. She helps them get the resources they need to succeed in school.
+
+    User 1: That''s really great of her. I''m sure she makes a big difference in their lives.
+
+    User 2: I think she does too. She loves her job.
+
+    User 1: That''s awesome. I''m glad she has a job she loves.
+
+    User 2: Me too. She''s a great mom and a great social worker.
+
+    User 1: It sounds like she''s really accomplished.
+
+    User 2: She is. I''m really lucky to have her as my mom.
+
+    User 1: I''m sure you are. She sounds like a great person.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

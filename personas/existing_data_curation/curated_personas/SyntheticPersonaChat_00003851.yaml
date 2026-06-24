@@ -1,0 +1,90 @@
+id: 00003851
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3851
+data:
+  user 1 personas: 'My mother is a housemaid.
+
+    I love spicy food.
+
+    I like swimming.
+
+    I am an only child.
+
+    I have traveled to europe and mexico.'
+  user 2 personas: 'I drive a big truck.
+
+    I like to go hunting.
+
+    I love country music.
+
+    I like football on tv.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: I''m (user 1''s name).
+
+    User 2: Nice to meet you, (user 1''s name). My name is (user 2''s name).
+
+    User 1: It''s nice to meet you too.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a student.
+
+    User 2: Oh, cool. What are you studying?
+
+    User 1: I''m studying law.
+
+    User 2: Nice. I''m a truck driver.
+
+    User 1: Oh, that''s cool. I''ve never met a truck driver before.
+
+    User 2: It''s a good job. I get to see a lot of different places.
+
+    User 1: That sounds fun.
+
+    User 2: Yeah, it is. I like to go hunting when I''m not working.
+
+    User 1: Oh, that''s cool. I''ve never been hunting.
+
+    User 2: You should try it sometime. It''s a lot of fun.
+
+    User 1: I might have to.
+
+    User 2: You should. It''s a good way to get outdoors and have some fun.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch football on TV and listen to country music.
+
+    User 1: Oh, me too. I love country music.
+
+    User 2: Yeah, it''s the best.
+
+    User 1: So, what''s your favorite team?
+
+    User 2: I''m a Cowboys fan.
+
+    User 1: Oh, me too! They''re my favorite team too.
+
+    User 2: Yeah, they''re a good team.
+
+    User 1: I think they''re going to win the Super Bowl this year.
+
+    User 2: I hope so. They''ve been waiting a long time for another one.
+
+    User 1: Yeah, they have.
+
+    User 2: Well, it was nice meeting you, (user 1''s name).
+
+    User 1: You too, (user 2''s name).
+
+    User 2: I hope we can talk again soon.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

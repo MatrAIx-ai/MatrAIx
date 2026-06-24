@@ -1,0 +1,19 @@
+id: 00055390
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55390
+persona_description: A healthcare professional who works in a public health clinic or hospital, specializing in the diagnosis and treatment of malaria. They have extensive knowledge of the clinical manifestations,
+  epidemiology, pathogenesis, diagnosis, and treatment of malaria, and are well-versed in the importance of considering malaria in all febrile patients with a history of travel to malarious areas. They
+  are also knowledgeable about the relapsing species of malaria, including Plasmodium vivax and P. ovale, and the incubation periods for these species. They have experience with the treatment options available
+  for malaria, including antimalarial drugs, and are aware of the importance of early diagnosis and treatment to prevent severe disease.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: malaria treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: malaria treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,74 @@
+id: 00005368
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5368
+data:
+  user 1 personas: 'I really enjoy making friends.
+
+    I play the trumpet.
+
+    I am in my high school band.
+
+    My dad and i own over 600 movies.
+
+    I want to be a movie director when i grow up.'
+  user 2 personas: 'I am a great baker.
+
+    I like katy perry as a musician.
+
+    I like to sew.
+
+    I have few friends.
+
+    I like to hunt for my food.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to bake, sew, and hunt for my food.
+
+    User 1: That''s cool! I''m not very good at sewing, but I do enjoy baking.
+
+    User 2: Baking is great! What''s your favorite thing to bake?
+
+    User 1: I like to make chocolate chip cookies.
+
+    User 2: Chocolate chip cookies are delicious! I love making them too.
+
+    User 1: Do you have any family?
+
+    User 2: I have a few friends, but not a lot of family.
+
+    User 1: I''m sorry to hear that. I have a big family, but we''re not always close.
+
+    User 2: That''s okay. I''m used to it.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a baker.
+
+    User 1: That''s cool! I''ve always wanted to be a baker.
+
+    User 2: It''s a lot of work, but it''s also a lot of fun.
+
+    User 1: I''m sure it is. Do you have any pets?
+
+    User 2: I have a dog.
+
+    User 1: That''s great! I love dogs.
+
+    User 2: Me too. He''s my best friend.
+
+    User 1: I''m glad you have a friend. I''m not very good at making friends.
+
+    User 2: It''s not easy, but it''s worth it.
+
+    User 1: I''ll try my best.
+
+    User 2: I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

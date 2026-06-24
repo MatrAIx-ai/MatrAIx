@@ -1,0 +1,59 @@
+id: '00001455'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1455
+data:
+  user 1 personas: 'My hair is black.
+
+    I like rock climbing.
+
+    I am a writer.
+
+    I am gluten free.'
+  user 2 personas: 'I am currently on a diet.
+
+    I would like to go to school to become a veterinarian.
+
+    I love animals and i want to help them.
+
+    I love going to the gym.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: Hi! I love going to the gym and eating healthy. I want to go to school to become a veterinarian. What about you?
+
+    User 1: I love rock climbing and writing. I am a writer and my hair is black. I am currently gluten free.
+
+    User 2: That''s cool! I have never tried rock climbing. What kind of things do you like to write?
+
+    User 1: I like to write science fiction and fantasy novels. I am working on a novel about a group of friends who go on an adventure to the moon.
+
+    User 2: That sounds really cool! I love science fiction and fantasy. What is your favorite science fiction or fantasy novel?
+
+    User 1: My favorite science fiction novel is Dune by Frank Herbert. It''s about a planet called Arrakis, which is the only place where spice can be found. Spice is a valuable substance that gives people
+    increased powers of perception and longevity.
+
+    User 2: That sounds really interesting! I have never heard of it before. I will have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: It sounds like it.
+
+    User 1: So, what are your goals for the future?
+
+    User 2: I want to go to school to become a veterinarian. I love animals and I want to help them.
+
+    User 1: That''s a great goal! I''m sure you will be a great veterinarian.
+
+    User 2: Thank you! I hope so.
+
+    User 1: So, what are you doing now?
+
+    User 2: I am currently on a diet. I want to get healthy and fit so that I can be a good veterinarian.
+
+    User 1: That''s great! I am sure you will be healthy and fit in no time.
+
+    User 2: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

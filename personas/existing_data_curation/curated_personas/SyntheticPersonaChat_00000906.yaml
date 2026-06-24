@@ -1,0 +1,72 @@
+id: 00000906
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 906
+data:
+  user 1 personas: 'I am a vet tech.
+
+    I love to read.
+
+    I am a christian.
+
+    My favorite movie genre is horror.'
+  user 2 personas: 'Driving in the country side is a pastime.
+
+    I like to go shopping.
+
+    I wanted to be a nurse.
+
+    I went to college.'
+  Best Generated Conversation: 'User 1: I''m a vet tech.
+
+    User 2: I wanted to be a nurse.
+
+    User 1: Oh cool! What made you change your mind?
+
+    User 2: I didn''t like the idea of working in a hospital.
+
+    User 1: I can understand that. Hospitals can be pretty stressful.
+
+    User 2: Yeah, they can. I''m glad I decided to go into vet tech instead.
+
+    User 1: Me too! I love working with animals.
+
+    User 2: Me too! They''re so cute and cuddly.
+
+    User 1: I know right! They''re the best.
+
+    User 2: What''s your favorite type of animal?
+
+    User 1: I love dogs! They''re so loyal and loving.
+
+    User 2: Me too! Dogs are the best.
+
+    User 1: I have a dog at home. His name is Buddy.
+
+    User 2: What kind of dog is he?
+
+    User 1: He''s a golden retriever.
+
+    User 2: Oh my gosh! I love golden retrievers! They''re so cute!
+
+    User 1: Yeah, they are!
+
+    User 2: What''s your favorite movie genre?
+
+    User 1: I love horror movies!
+
+    User 2: Me too! What''s your favorite horror movie?
+
+    User 1: I don''t know if I have a favorite, but I love all the old Universal Monsters movies.
+
+    User 2: Oh my gosh! Me too! I love Frankenstein and Dracula.
+
+    User 1: Those are my favorites too!
+
+    User 2: We should watch one of those movies together sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

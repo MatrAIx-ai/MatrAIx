@@ -1,0 +1,82 @@
+id: '00005360'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5360
+data:
+  user 1 personas: 'I m lazy and pork tastes good.
+
+    Its good to eat a lot of veggies.
+
+    I like meat too much.
+
+    I do the shopping in my house.
+
+    I want to be a vegetarian.'
+  user 2 personas: 'I use to compete in beauty pageants.
+
+    I m allergic to cats.
+
+    I love to have my nails done.
+
+    My husband is a corporate attorney.'
+  Best Generated Conversation: 'User 1: I''m looking for a vegetarian recipe. Can you help me?
+
+    User 2: I can try. What are you looking for?
+
+    User 1: I''m not sure. I''m thinking of something that''s easy to make and that my husband will like.
+
+    User 2: What does your husband like?
+
+    User 1: He likes meat, but I''m trying to get him to eat more vegetables.
+
+    User 2: I have a recipe for tofu scramble that he might like.
+
+    User 1: That sounds good. Can you send me the recipe?
+
+    User 2: Sure. Here it is:
+
+    Ingredients:
+
+    1 block of tofu, crumbled
+
+    1 tablespoon olive oil
+
+    1/2 cup chopped onion
+
+    1/2 cup chopped green bell pepper
+
+    1/2 cup chopped red bell pepper
+
+    1/4 cup chopped carrot
+
+    1/4 cup chopped celery
+
+    2 eggs
+
+    1/4 cup soy milk
+
+    2 tablespoons nutritional yeast
+
+    1/4 teaspoon salt
+
+    1/4 teaspoon black pepper
+
+    Instructions:
+
+    1. Heat the olive oil in a large skillet over medium heat.
+
+    2. Add the onion, green bell pepper, red bell pepper, carrot, and celery. Cook for 5 minutes, or until softened.
+
+    3. Add the tofu, eggs, soy milk, nutritional yeast, salt, and pepper. Cook for 5 minutes, or until the eggs are cooked through.
+
+    4. Serve immediately.
+
+    User 1: Thanks! I''ll try this out.
+
+    User 2: Let me know what he thinks.
+
+    User 1: I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,58 @@
+id: 00005942
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5942
+data:
+  user 1 personas: 'My horse never talks back to me.
+
+    I live in the city.
+
+    I am still a student , but i am gonna be a nurse.
+
+    I am the lead singer for an indie band.'
+  user 2 personas: 'Many people want to be my friend.
+
+    I like makeup.
+
+    I love to exercise.
+
+    I am not a nice person.
+
+    I have a nice smile.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name]. What do you like to do for fun?
+
+    User 1: I like to sing, ride horses, and go to the gym.
+
+    User 2: I like to exercise too, but I''m not very good at it.
+
+    User 1: That''s okay, everyone starts somewhere! What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to pop and hip hop.
+
+    User 1: Me too! I love going to concerts. Have you ever been to any?
+
+    User 2: I''ve been to a few, but not very many. I''m not really a huge fan of crowds.
+
+    User 1: I can understand that. I like going to concerts with a small group of friends.
+
+    User 2: That sounds like a lot of fun. I''m sure you have a great time.
+
+    User 1: I do! I love singing and dancing at concerts. It''s so much fun to let loose and be yourself.
+
+    User 2: That''s awesome! I wish I was more like you.
+
+    User 1: You can be! Just go out and have some fun. You don''t have to be perfect.
+
+    User 2: Thanks, I''ll try.
+
+    User 1: Good! I''m sure you''ll have a great time.
+
+    User 2: I hope so!
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00001507'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1507
+data:
+  user 1 personas: 'I am a family man.
+
+    I spend as much time as i can with my family.
+
+    I am a pediatrician.
+
+    I am married with 2 children.'
+  user 2 personas: 'I work on cars for a living.
+
+    My favorite food is a cheeseburger.
+
+    I live alone.
+
+    I enjoy fishing.'
+  Best Generated Conversation: 'User 1: Hi, I''m [username].
+
+    User 2: Hello, [username]. I''m [username].
+
+    User 1: What do you do for a living?
+
+    User 2: I work on cars for a living.
+
+    User 1: Oh, that''s cool. I''m a pediatrician.
+
+    User 2: Really? That''s a great job. I''m sure you''re really good at it.
+
+    User 1: Thank you. I try my best.
+
+    User 2: Do you have a family?
+
+    User 1: Yes, I am married with two children.
+
+    User 2: That''s great. I live alone.
+
+    User 1: Do you like it?
+
+    User 2: It has its pros and cons. I do enjoy my freedom, but I sometimes miss having someone to come home to.
+
+    User 1: I can understand that. I enjoy my family, but I also enjoy my freedom.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I enjoy spending time with my family, fishing, and reading.
+
+    User 2: Those all sound like great hobbies.
+
+    User 1: Thanks. I''m sure you have some great hobbies too.
+
+    User 2: I do. I like to work on cars, play video games, and go fishing.
+
+    User 1: That sounds like fun. I like to play video games too.
+
+    User 2: Oh, really? What games do you like to play?
+
+    User 1: I like to play all kinds of games, but I''m really into role-playing games right now.
+
+    User 2: Oh, cool. I''ve never really played those.
+
+    User 1: You should give it a try. They''re a lot of fun.
+
+    User 2: I might just do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

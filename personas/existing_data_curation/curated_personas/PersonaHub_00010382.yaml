@@ -1,0 +1,18 @@
+id: 00010382
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10382
+persona_description: A scientist working in the field of chemistry or materials science, specifically focused on the study of protein structures and their potential applications in medicine and agriculture.
+  This persona is likely to have expertise in the field of chemistry and materials science, with a specific interest in the development of new pesticides and the creation of antidotes for chemical warfare
+  agents. They are likely to have a strong background in molecular biology and protein structure analysis, and have a keen interest in the potential applications of these discoveries in real-world scenarios.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: protein structure analysis
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

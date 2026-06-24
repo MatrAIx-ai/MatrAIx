@@ -1,0 +1,68 @@
+id: '00001343'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1343
+data:
+  user 1 personas: 'I love chocolate.
+
+    I want to have two kids.
+
+    I can t sing very well.
+
+    I am from georgia.
+
+    I can play the violin.'
+  user 2 personas: 'My father worked 11 hours a day.
+
+    I own a iphone 7.
+
+    My mother use to read me bed time stories.
+
+    I drink hot chocolate during the winter.
+
+    I am allergic to seafood.'
+  Best Generated Conversation: 'User 1: Hi! I''m from Georgia and I love chocolate. How about you?
+
+    User 2: Hi! I like chocolate too, and I''m from New York.
+
+    User 1: Nice! I''ve been to New York a few times. What''s it like living there?
+
+    User 2: It''s a lot of fun! There''s always something to do, and there are so many different people from all over the world.
+
+    User 1: I can imagine! It''s definitely on my list of places to visit again.
+
+    User 2: You should!
+
+    User 1: I also love to play the violin. What are your hobbies?
+
+    User 2: I like to read, go for walks, and play video games.
+
+    User 1: I like to read too! What are some of your favorite books?
+
+    User 2: I love anything by Stephen King or Agatha Christie.
+
+    User 1: I''ve read a few Stephen King books, but I''ve never read anything by Agatha Christie.
+
+    User 2: You should! She''s a great mystery writer.
+
+    User 1: I''ll have to check her out.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what do you think about having two kids?
+
+    User 2: I think it would be great! I''ve always wanted a big family.
+
+    User 1: Me too! I think it would be so much fun to raise a family.
+
+    User 2: I agree!
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too! Have a nice day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

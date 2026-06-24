@@ -1,0 +1,94 @@
+id: 00001929
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1929
+data:
+  user 1 personas: 'I like photography.
+
+    I like to bake pies.
+
+    I am a chef.
+
+    I like to garden.
+
+    I love traveling.'
+  user 2 personas: 'I enjoy making 3d models for video games and animations.
+
+    I am a lover of italian food.
+
+    I enjoy watching netflix with family.
+
+    My favorite band is iron maiden.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name]. I''m a chef.
+
+    User 2: Hello, I''m [user 2 name]. I''m a 3D modeler.
+
+    User 1: That''s cool! What kind of things do you model?
+
+    User 2: I mostly model characters and environments for video games and animations.
+
+    User 1: That sounds really interesting! I''ve always been fascinated by video games and animation.
+
+    User 2: It''s a lot of fun! I love being able to create my own worlds and characters.
+
+    User 1: I bet! I''ve always wanted to try my hand at it.
+
+    User 2: You should! It''s not as hard as you might think.
+
+    User 1: I might have to give it a try sometime.
+
+    User 2: I''m sure you''d be great at it!
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to cook, bake, garden, and travel.
+
+    User 2: Oh, that''s cool! I love to cook too. What kind of food do you like to cook?
+
+    User 1: I like to cook all kinds of food, but I especially like Italian food.
+
+    User 2: Me too! Italian food is my favorite.
+
+    User 1: What''s your favorite Italian dish?
+
+    User 2: I love lasagna!
+
+    User 1: Me too! Lasagna is my favorite too.
+
+    User 2: I''m glad we have something in common!
+
+    User 1: Me too!
+
+    User 2: So, what are your favorite places to travel?
+
+    User 1: I love to travel all over the world, but my favorite place is Italy.
+
+    User 2: I''ve always wanted to go to Italy!
+
+    User 1: You should go! It''s a beautiful country with so much to offer.
+
+    User 2: I will!
+
+    User 1: So, what else do you like to do in your free time?
+
+    User 2: I love to watch movies and TV shows with my family.
+
+    User 1: That''s a fun way to spend time with your family.
+
+    User 2: It is! We love to watch movies and TV shows together.
+
+    User 1: What are some of your favorite movies and TV shows?
+
+    User 2: I love all kinds of movies and TV shows, but some of my favorites include The Godfather, The Sopranos, and Stranger Things.
+
+    User 1: Those are all great movies and TV shows! I love them too.
+
+    User 2: I''m glad we have similar taste in movies and TV shows.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

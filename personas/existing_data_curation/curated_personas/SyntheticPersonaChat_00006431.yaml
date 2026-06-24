@@ -1,0 +1,66 @@
+id: '00006431'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6431
+data:
+  user 1 personas: 'I have two full sleeves of tattoos.
+
+    I love to travel.
+
+    I work as a freight truck driver.
+
+    I am a 43 year old woman.
+
+    My hair is short and pink.'
+  user 2 personas: 'I love to read the bible before i go to bed.
+
+    I am an middle school teacher for 8th grade.
+
+    I love to go to the symphony orchestra.
+
+    I sing in the church choir every sunday.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go to the symphony, and sing in the church choir.
+
+    User 1: That''s cool! I like to travel, read, and play video games.
+
+    User 2: I''ve always wanted to travel but I''ve never had the chance.
+
+    User 1: You should! It''s a great way to see the world and experience new things.
+
+    User 2: I know, I know. I''ll definitely try to go some time soon.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read a variety of things, but I''m mostly into fiction. I love to get lost in a good book.
+
+    User 1: Me too! I love to read books that transport me to another world.
+
+    User 2: What''s your favorite book?
+
+    User 1: It''s hard to say, but I think my favorite book is probably The Great Gatsby.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out sometime.
+
+    User 1: You should! It''s a classic for a reason.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I''m a big fan of open world games. I love to explore and get lost in a big, open world.
+
+    User 2: I''m not really a gamer, but I have played a few open world games. They''re really fun!
+
+    User 1: Yeah, they are! They''re my favorite type of game.
+
+    User 2: Well, it was nice to meet you, [User 1''s name].
+
+    User 1: It was nice to meet you too, [User 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

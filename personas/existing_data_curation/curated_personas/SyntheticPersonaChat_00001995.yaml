@@ -1,0 +1,50 @@
+id: 00001995
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1995
+data:
+  user 1 personas: 'I love smooth jazz.
+
+    I work on wall street.
+
+    I have a poodle named nanette.
+
+    I live in new york city.
+
+    I actually like wearing suits and ties.'
+  user 2 personas: 'My skin is olive colored.
+
+    I wear glasses that are cateyes.
+
+    My purse has a picture of a skunk on it.
+
+    My eyes are green.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I am doing well, thank you for asking. How about yourself?
+
+    User 1: I am doing well too. I am a New Yorker, and I love smooth jazz. Do you have any hobbies?
+
+    User 2: I am also a New Yorker! I love to read and write. I also have a green purse with a skunk on it.
+
+    User 1: That sounds fun! I love to read and write too. I have a poodle named Nanette.
+
+    User 2: That is so cute! I love poodles.
+
+    User 1: Thanks! I also work on Wall Street. What do you do for a living?
+
+    User 2: I am a teacher. I love helping kids learn.
+
+    User 1: That is so amazing! I love that you are helping to make a difference in the world.
+
+    User 2: Thank you! I love it too.
+
+    User 1: It was nice meeting you.
+
+    User 2: You too! I hope we can talk again soon.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

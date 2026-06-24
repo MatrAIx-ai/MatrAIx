@@ -1,0 +1,88 @@
+id: 00005149
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5149
+data:
+  user 1 personas: 'My favorite hobby is reading.
+
+    My favorite author is stephen king.
+
+    I was born in france and moved to canada.
+
+    My husband is an author and we have twins together.'
+  user 2 personas: 'One of my favorite shows is face off on say.
+
+    I like things in organized.
+
+    I am a stay at home mom.
+
+    I enjoy a good run.
+
+    I enjoy cooking but not baking.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 1], I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to cook, run, and watch TV.
+
+    User 1: I love to cook too! What''s your favorite thing to make?
+
+    User 2: I love making pasta. I''m really good at making it from scratch.
+
+    User 1: That''s impressive! I''ve never tried making pasta from scratch.
+
+    User 2: It''s not too hard, but it does take a little bit of time.
+
+    User 1: I''m sure it''s worth it. I''ll have to try it sometime.
+
+    User 2: You should! I''m sure you''ll love it.
+
+    User 1: What''s your favorite TV show?
+
+    User 2: I love Face Off on SyFy. It''s a competition show where makeup artists create prosthetic makeup effects.
+
+    User 1: That sounds really cool! I''ve never seen it before.
+
+    User 2: It''s a lot of fun. It''s really impressive what the artists can do.
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should! It''s on every Tuesday night at 9pm.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a stay at home mom.
+
+    User 1: That must be a lot of work!
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: It''s the best job in the world.
+
+    User 1: I''m sure it is!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a writer.
+
+    User 2: That''s cool! What kind of things do you write?
+
+    User 1: I write short stories and novels.
+
+    User 2: That''s awesome! I love to read.
+
+    User 1: I''m glad! I hope you enjoy my work.
+
+    User 2: I''m sure I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00001610'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1610
+data:
+  user 1 personas: 'I have a daughter.
+
+    I like getting packages in the mail.
+
+    I like fantasizing.
+
+    I wish magic was real.'
+  user 2 personas: 'I am not very good at playing basketball.
+
+    I once rescued a baby on a highway.
+
+    I like playing badminton.
+
+    My family owns a dairy farm.
+
+    I don t really like vegetables or fruit but i pretend.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like playing badminton, basketball, and reading.
+
+    User 1: That''s cool! I like playing badminton and reading too.
+
+    User 2: Oh, what kind of books do you like to read?
+
+    User 1: I like to read fiction, especially fantasy and science fiction.
+
+    User 2: Oh, I love fantasy and science fiction too! What are some of your favorite books?
+
+    User 1: I like the Harry Potter series, the Lord of the Rings series, and the Hunger Games series.
+
+    User 2: Oh, I love all of those books! I also like the Percy Jackson series and the Divergent series.
+
+    User 1: Oh, I''ve never read those series, but I''ve heard good things about them.
+
+    User 2: You should definitely check them out! They''re both really good.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What else do you like to do for fun?
+
+    User 1: I like playing video games, watching movies, and hanging out with my friends.
+
+    User 2: Oh, I like playing video games too! What are some of your favorite games?
+
+    User 1: I like playing Call of Duty, Fortnite, and Mario Kart.
+
+    User 2: Oh, I love all of those games! I also like playing Minecraft, Overwatch, and Pokemon.
+
+    User 1: Oh, I''ve never played Minecraft, but I''ve heard good things about it.
+
+    User 2: You should definitely check it out! It''s a really fun game.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00031370'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31370
+persona_description: A healthcare professional with expertise in sinus disorders and respiratory infections, specializing in the analysis and interpretation of mucus and phlegm colors as indicators of infection
+  and illness severity. She is familiar with the various shades and hues of mucus and phlegm, and can provide insights into their meaning and potential implications for diagnosis and treatment. Her knowledge
+  and expertise in the field make her an ideal source for patients seeking information about the colors of their secretions and their potential impact on their health.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: respiratory medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: mucus and phlegm analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

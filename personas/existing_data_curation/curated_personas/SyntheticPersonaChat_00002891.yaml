@@ -1,0 +1,50 @@
+id: 00002891
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2891
+data:
+  user 1 personas: 'I moved far from home.
+
+    I am skilled in computer repair.
+
+    My family owns a farm.
+
+    I like to eat meat.'
+  user 2 personas: 'I like getting my nails done.
+
+    I own a french bulldog.
+
+    I like drinking expensive wine.
+
+    I am unemployed and living off a trust fund.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. I''m new to this city and I''m looking for some friends. Do you have any suggestions for things to do?
+
+    User 2: Sure, there are a lot of great things to do in this city. What are you interested in?
+
+    User 1: I''m interested in trying new things, but I also love to eat meat.
+
+    User 2: Well, there are a few great steakhouses in this city. There''s also a really good barbecue joint that I love.
+
+    User 1: I''ve never had barbecue before. I''ll have to check it out.
+
+    User 2: You definitely should. It''s really good.
+
+    User 1: What else is there to do around here?
+
+    User 2: There are a lot of great museums and art galleries. There''s also a really nice park where you can go for walks or bike rides.
+
+    User 1: I love museums and art galleries. I''ll have to check those out.
+
+    User 2: And if you''re looking for something a little more active, there are a lot of great hiking trails in the area.
+
+    User 1: I love hiking. I''ll have to check those out too.
+
+    User 2: It sounds like you''re going to have a lot of fun in this city.
+
+    User 1: I think I am too. Thanks for the suggestions!
+
+    User 2: You''re welcome! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

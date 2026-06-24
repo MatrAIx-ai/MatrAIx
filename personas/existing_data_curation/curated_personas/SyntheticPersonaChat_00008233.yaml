@@ -1,0 +1,76 @@
+id: 00008233
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8233
+data:
+  user 1 personas: 'My favorite fiction genres are sci fi and horror.
+
+    I play in a nfl fantasy football league.
+
+    I love to read fiction books.
+
+    I like nfl and college football.'
+  user 2 personas: 'I like to make cookies.
+
+    I like to train dogs.
+
+    My favorite drink is coke.
+
+    I like to run.
+
+    I like bagels with everything on them.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What are your hobbies?
+
+    User 2: I like to bake cookies, train dogs, run, and drink coke.
+
+    User 1: That''s cool. I like to read fiction books, play fantasy football, and watch football games.
+
+    User 2: Nice! I like sci-fi and horror books.
+
+    User 1: Me too! What''s your favorite sci-fi book?
+
+    User 2: It''s hard to choose just one, but I really like the Ender''s Game series.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: What''s your favorite horror book?
+
+    User 2: I really like Stephen King''s books.
+
+    User 1: Me too! I''ve read a lot of his books.
+
+    User 2: Which ones are your favorites?
+
+    User 1: I like The Shining, It, and Pet Sematary.
+
+    User 2: I''ve read all of those too! They''re all great books.
+
+    User 1: Yeah, they are. I''m a big fan of Stephen King''s work.
+
+    User 2: Me too! He''s one of my favorite authors.
+
+    User 1: What''s your favorite fantasy book?
+
+    User 2: I really like The Lord of the Rings series.
+
+    User 1: Me too! That''s a great series.
+
+    User 2: Yeah, it is. I''ve read it a few times.
+
+    User 1: I''ve read it twice.
+
+    User 2: That''s awesome.
+
+    User 1: Yeah, it was a good book.
+
+    User 2: I''m glad you enjoyed it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

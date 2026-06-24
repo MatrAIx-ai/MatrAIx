@@ -1,0 +1,66 @@
+id: 00003924
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3924
+data:
+  user 1 personas: 'I am scared of left turns.
+
+    I got hired last week at mcdonald.
+
+    I have four siblings.
+
+    I think i am failing my women studies class.
+
+    I drive a blue honda civic.'
+  user 2 personas: 'My favorite season is winter.
+
+    I sing barbershop and rap.
+
+    I love watching basketball.
+
+    I love to take naps.
+
+    My eyes are blue.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1]
+
+    User 2: Hi, my name is [user 2]
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sing barbershop and rap. I also love watching basketball.
+
+    User 1: That''s cool! I like to listen to music, but I''m not much of a singer myself.
+
+    User 2: What kind of music do you like to listen to?
+
+    User 1: I like all kinds of music, but I''m really into hip-hop and R&B right now.
+
+    User 2: Me too! I love rap and R&B.
+
+    User 1: What are your favorite songs right now?
+
+    User 2: I''m really into the new Lil Nas X song, "Montero (Call Me by Your Name)".
+
+    User 1: Me too! That song is so catchy.
+
+    User 2: I know, right? I can''t stop listening to it.
+
+    User 1: What do you think of the video?
+
+    User 2: I think it''s amazing! It''s so creative and visual.
+
+    User 1: I know, right? I love the way he''s playing with gender and sexuality in the video.
+
+    User 2: Me too! It''s so refreshing to see a mainstream artist being so open about their sexuality.
+
+    User 1: I know, right? It''s important for young people to see that they can be whoever they want to be.
+
+    User 2: I agree! It''s so important to be represented in the media.
+
+    User 1: Well, I''m glad we agree on something.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

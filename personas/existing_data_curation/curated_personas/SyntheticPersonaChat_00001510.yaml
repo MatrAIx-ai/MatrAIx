@@ -1,0 +1,78 @@
+id: '00001510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1510
+data:
+  user 1 personas: 'I am a lumberjack.
+
+    I eat lots of pancakes and syrup.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I love to fish.
+
+    I love to cut down trees.'
+  user 2 personas: 'I make ask a year.
+
+    I am married with one child.
+
+    I barely show up to work.
+
+    I own my company.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I own my own company.
+
+    User 1: Oh, that''s cool. What kind of company?
+
+    User 2: I''m in the tech industry.
+
+    User 1: Oh, wow. That must be really interesting.
+
+    User 2: It is. I love it.
+
+    User 1: What''s the hardest part about your job?
+
+    User 2: The hardest part is balancing my work and family life.
+
+    User 1: I can imagine. I''m sure it''s tough to be away from your family so much.
+
+    User 2: It is, but it''s worth it.
+
+    User 1: Do you have any hobbies?
+
+    User 2: I love to fish.
+
+    User 1: That''s great! I love to fish too.
+
+    User 2: Where do you like to fish?
+
+    User 1: I like to fish in the mountains.
+
+    User 2: That sounds beautiful.
+
+    User 1: It is. I love the peace and quiet of the mountains.
+
+    User 2: I can imagine. Do you have any pets?
+
+    User 1: Yes, I have a dog and a cat.
+
+    User 2: Oh, that''s great. What are their names?
+
+    User 1: My dog''s name is Buddy and my cat''s name is Mittens.
+
+    User 2: Those are great names.
+
+    User 1: Thanks. So, what''s your favorite thing to do in the mountains?
+
+    User 2: I love to hike.
+
+    User 1: Me too. I love the views from the top of the mountain.
+
+    User 2: Me too. I love the feeling of accomplishment when I reach the top.
+
+    User 1: I know what you mean. It''s a great feeling.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

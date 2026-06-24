@@ -1,0 +1,64 @@
+id: 00005409
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5409
+data:
+  user 1 personas: 'My dog is smaller than my cat.
+
+    I only date people taller than me.
+
+    I like free diving.
+
+    I wish i could live forever.'
+  user 2 personas: 'I love wearing flip flops.
+
+    I like to bake brownies.
+
+    I love laughing.
+
+    I have freckles.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to bake brownies, go for walks, and laugh.
+
+    User 1: That sounds like fun! I like to go for walks too. What''s your favorite kind of brownie?
+
+    User 2: I like the classic chocolate brownie with nuts on top.
+
+    User 1: Those are my favorite too! I love the combination of chocolate and nuts.
+
+    User 2: Me too! What''s your favorite thing to do when you''re not working?
+
+    User 1: I like to free dive. It''s a great way to relax and clear my head.
+
+    User 2: That sounds really cool! I''ve never been free diving before.
+
+    User 1: It''s a lot of fun! You should try it sometime.
+
+    User 2: I might just do that! Thanks for the suggestion.
+
+    User 1: No problem! What else do you like to do?
+
+    User 2: I like to hang out with my friends and family. I also like to read and watch movies.
+
+    User 1: Those are all great things to do! I also like to read and watch movies.
+
+    User 2: We sound like we have a lot in common!
+
+    User 1: I think so too! We should hang out sometime.
+
+    User 2: That would be fun! I''m free this weekend.
+
+    User 1: Me too! We can go to the movies or something.
+
+    User 2: That sounds good to me. I''ll see you then!
+
+    User 1: See you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

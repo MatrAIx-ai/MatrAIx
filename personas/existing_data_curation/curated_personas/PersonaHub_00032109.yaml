@@ -1,0 +1,19 @@
+id: 00032109
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 32109
+persona_description: A programmer who specializes in socket programming, particularly in the use of the send() function to initiate transmission of messages over a socket. This person has experience in
+  developing and maintaining applications that use sockets for communication, and is skilled in using the send() function to send messages over the network. They may also have knowledge of other socket
+  functions such as recv(), recvfrom(), and sendto(), and may be familiar with the underlying protocols and protocols-specific semantics of out-of-band data transmission. They may also be interested in
+  the potential errors and failures that can occur when using the send() function, such as EAGAIN or EWOULDBLOCK, and may have experience in diagnosing and troubleshooting these issues.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Socket Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,64 @@
+id: 00008312
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8312
+data:
+  user 1 personas: 'I enjoy doing beadwork and writing my own patterns.
+
+    I just moved from va to pa.
+
+    Since i have fibromyalgia , the harsher winters here in pa will be rough on me.
+
+    I grew up on a large farm.
+
+    I love reading.'
+  user 2 personas: 'I drive an suv.
+
+    I have 3 dogs.
+
+    I have a vacation home in the mountains.
+
+    I have a law degree.'
+  Best Generated Conversation: 'User 1: Hello! I''m user 1.
+
+    User 2: Hi, I''m user 2.
+
+    User 1: Nice to meet you. Where are you from?
+
+    User 2: I''m from Philadelphia.
+
+    User 1: Oh, me too! I just moved here from Virginia.
+
+    User 2: Oh, wow! How do you like it so far?
+
+    User 1: It''s a lot different, but I''m getting used to it.
+
+    User 2: I''m sure you will. What do you like to do for fun?
+
+    User 1: I like to read, beadwork, and go hiking.
+
+    User 2: Oh, I like to read too! What are you reading now?
+
+    User 1: I''m reading a book about the history of Pennsylvania.
+
+    User 2: That sounds interesting. I''ve never been much of a history buff.
+
+    User 1: I guess it''s not for everyone. What do you do for fun?
+
+    User 2: I like to go camping, hiking, and playing with my dogs.
+
+    User 1: Oh, I love camping! I used to go camping a lot when I was younger.
+
+    User 2: We have a vacation home in the mountains, so we go camping a lot in the summer.
+
+    User 1: That sounds amazing! I''ve never been to the mountains.
+
+    User 2: You should come visit us sometime! We''d love to have you.
+
+    User 1: I''d love to!
+
+    User 2: Great! We''ll have to plan a trip sometime.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

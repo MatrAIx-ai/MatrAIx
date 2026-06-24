@@ -1,0 +1,52 @@
+id: 00002840
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2840
+data:
+  user 1 personas: 'I like to play tennis.
+
+    I listen to all kinds of music.
+
+    I love watching funny movies.
+
+    My dad is a veteran.'
+  user 2 personas: 'I am a vegan.
+
+    I love country music.
+
+    I love the beach.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]. What''s your name?
+
+    User 2: I''m [user 2''s name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What are you interested in?
+
+    User 2: I love country music, reading, and going to the beach.
+
+    User 1: Oh, that''s cool. I like country music too. I also love playing tennis and watching funny movies.
+
+    User 2: I''ve never played tennis, but I love watching funny movies too. I''m a vegan, so I don''t eat meat.
+
+    User 1: Oh, that''s interesting. I''m not a vegan, but I do like to eat healthy.
+
+    User 2: I love reading too. What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and mysteries.
+
+    User 2: Oh, that''s cool. I like to read historical fiction too. I''m a big fan of Ken Follett.
+
+    User 1: I''ve never read anything by Ken Follett, but I''ve heard good things.
+
+    User 2: You should check him out. He''s a great author.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

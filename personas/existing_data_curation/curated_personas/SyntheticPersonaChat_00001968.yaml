@@ -1,0 +1,76 @@
+id: 00001968
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1968
+data:
+  user 1 personas: 'I live in colorado.
+
+    I have an mba degree.
+
+    I own my home.
+
+    My car is blue.
+
+    I am married.'
+  user 2 personas: 'I work in academia at a local university.
+
+    I live in nashville.
+
+    I like to go to the farmer s market every weekend.
+
+    I am committed to the environment.'
+  Best Generated Conversation: 'User 1: Hi there! I''m from Colorado.
+
+    User 2: Hi, I''m from Nashville!
+
+    User 1: Nice! I''ve always wanted to visit Nashville.
+
+    User 2: You should! It''s a great city.
+
+    User 1: I''m sure it is. What do you like to do there?
+
+    User 2: I love going to the farmer''s market every weekend. It''s a great place to find fresh produce and local goods.
+
+    User 1: That sounds like a lot of fun. I love farmers'' markets too.
+
+    User 2: Me too! I''m also committed to the environment, so I like to support local businesses.
+
+    User 1: That''s great! I''m also committed to the environment. I try to reduce my carbon footprint as much as possible.
+
+    User 2: That''s awesome! I do the same thing. I try to recycle and compost as much as possible.
+
+    User 1: Me too! I also try to walk or bike instead of driving when I can.
+
+    User 2: That''s great! I try to do the same thing.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work in academia at a local university.
+
+    User 1: Oh, that''s cool! What do you teach?
+
+    User 2: I teach environmental science.
+
+    User 1: That''s awesome! I''m sure that''s a really interesting job.
+
+    User 2: It is! I love it.
+
+    User 1: So, what are you doing in Colorado?
+
+    User 2: I''m here for a conference.
+
+    User 1: Oh, that''s cool! What kind of conference?
+
+    User 2: It''s a sustainability conference.
+
+    User 1: Oh, that sounds really interesting! I''m sure you''ll learn a lot.
+
+    User 2: I hope so!
+
+    User 1: Well, it was nice talking to you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

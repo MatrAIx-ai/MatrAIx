@@ -1,0 +1,80 @@
+id: '00005266'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5266
+data:
+  user 1 personas: 'I enjoy my job , as a teacher.
+
+    I enjoy singing.
+
+    I enjoy video games.
+
+    I live in a big city.
+
+    Magic mike is my favorite movie.'
+  user 2 personas: 'I don t drive.
+
+    I work at a bookstore.
+
+    I never knew my dad.
+
+    My mom is a nurse.
+
+    I have three tattoos.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hello! My name is [User 2].
+
+    User 1: Nice to meet you, [User 2]. My name is [User 1].
+
+    User 2: It''s nice to meet you too, [User 1].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a bookstore.
+
+    User 1: Oh, that''s cool! I love books.
+
+    User 2: Me too! I read a lot of different kinds of books.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is "The Great Gatsby."
+
+    User 1: I love that book too! It''s so sad, but so beautiful.
+
+    User 2: I know, right? It''s one of those books that stays with you long after you''ve finished it.
+
+    User 1: Yeah, it does.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to sing, play video games, and watch movies.
+
+    User 2: I like singing too! What kind of music do you like to sing?
+
+    User 1: I like to sing all kinds of music, but my favorite is probably pop music.
+
+    User 2: I like pop music too! We should sing together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll bring my guitar.
+
+    User 1: I''ll bring my voice.
+
+    User 2: Sounds like a plan.
+
+    User 1: So, what do you think of the new Magic Mike movie?
+
+    User 2: I haven''t seen it yet, but I''m excited to. I love the first one.
+
+    User 1: It''s really good! I saw it a few weeks ago.
+
+    User 2: I''ll definitely have to check it out soon.
+
+    User 1: You should. It''s a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

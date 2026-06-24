@@ -1,0 +1,65 @@
+id: '00007210'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7210
+data:
+  user 1 personas: 'I started learning japanese at college.
+
+    I hope to save enough money for it.
+
+    Our class is planning a trip to japan.
+
+    I am tired of having to read subtitles.
+
+    I like to watch japanese cartoons anime in my free time.'
+  user 2 personas: 'I am proposing tonight.
+
+    I graduated college last week.
+
+    My girlfriend is 6 months pregnant.
+
+    I got a job as a coach at a local highschool.'
+  Best Generated Conversation: 'User 1: What are you doing tonight?
+
+    User 2: I''m proposing to my girlfriend!
+
+    User 1: Congratulations! That''s so exciting!
+
+    User 2: Thank you! We''re both so excited.
+
+    User 1: I''m sure she''ll say yes.
+
+    User 2: I hope so!
+
+    User 1: So, what made you decide to propose tonight?
+
+    User 2: Well, we''ve been dating for a few years now and I know she''s the one. I also just graduated college and got a job as a coach at a local high school, so I''m finally in a place where I can
+    support her and a family.
+
+    User 1: That''s great! I''m so happy for you both.
+
+    User 2: Thank you!
+
+    User 1: I''m sure you''ll have a beautiful wedding.
+
+    User 2: I hope so!
+
+    User 1: So, what are your plans for the future?
+
+    User 2: We''re not sure yet, but we''re both excited to start our lives together.
+
+    User 1: That''s great! I''m sure you''ll do great things.
+
+    User 2: Thank you!
+
+    User 1: Well, I should probably get going. I have to work in the morning.
+
+    User 2: Okay, it was nice talking to you!
+
+    User 1: You too! Have a great night!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

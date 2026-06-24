@@ -1,0 +1,66 @@
+id: '00004030'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4030
+data:
+  user 1 personas: 'I like to drive for hours.
+
+    I have 10 piercings.
+
+    I cannot live without my friends.
+
+    I used to smoke.'
+  user 2 personas: 'I like camping and the outdoors in general.
+
+    I am a model building enthusiast.
+
+    I recently lost both my parents to an automobile accident.
+
+    I am originally from london , england.
+
+    I love going to comedy clubs.'
+  Best Generated Conversation: 'User 1: I like to drive for hours.
+
+    User 2: I like camping and the outdoors in general.
+
+    User 1: I used to smoke.
+
+    User 2: I recently lost both my parents to an automobile accident.
+
+    User 1: I cannot live without my friends.
+
+    User 2: I am originally from London, England.
+
+    User 1: I love going to comedy clubs.
+
+    User 2: What kind of camping do you do?
+
+    User 1: I like to go car camping. I have a pop-up camper and I just drive to a nice spot and set up camp.
+
+    User 2: That sounds like a lot of fun. I''ve never been car camping before.
+
+    User 1: You should try it! It''s a lot more convenient than backpacking.
+
+    User 2: I might have to sometime. I love being outdoors, but I don''t always have the energy for a long backpacking trip.
+
+    User 1: I know what you mean. Backpacking can be really tiring.
+
+    User 2: So, what''s your favorite thing about camping?
+
+    User 1: I love the feeling of being away from civilization. It''s so peaceful and quiet.
+
+    User 2: That sounds amazing. I could definitely use some peace and quiet.
+
+    User 1: I know, right? It''s so relaxing.
+
+    User 2: So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go camping with some friends.
+
+    User 2: That sounds like a great idea. I hope you have fun!
+
+    User 1: Thanks, I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

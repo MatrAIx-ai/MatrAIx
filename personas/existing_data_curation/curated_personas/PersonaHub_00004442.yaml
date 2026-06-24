@@ -1,0 +1,20 @@
+id: '00004442'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 4442
+persona_description: A researcher and expert in the field of unmanned aerial vehicle (UAV) rule-based systems, specifically focusing on emergency management and decision-making. This individual has studied
+  and analyzed various scenarios and events that could trigger the need for a diversion to an alternate airfield, including off-board factors such as airfield issues and weather, and on- board factors like
+  electrical and mechanical failures. They have developed a set of rules and behaviors that can be incorporated into an expert rule base system for use on UAV platforms, and have cross-referenced these
+  rules with the onboard failures that could influence the airfield choice. The researcher has also conducted an unpowered flight analysis and a flight over populated areas study to provide specific guidelines
+  and procedures for planning flights over populated areas. They have identified potential limitations and recommendations for future experimentation programs to evaluate the rules identified in this study.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: UAV Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: UAV Emergency Management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

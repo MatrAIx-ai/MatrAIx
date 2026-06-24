@@ -1,0 +1,62 @@
+id: '00002036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2036
+data:
+  user 1 personas: 'I talk in my sleep.
+
+    I watch a movie sundays evenings.
+
+    I love folk metal.
+
+    I own a cat.'
+  user 2 personas: 'I ride a unicycle.
+
+    I own 4 cats.
+
+    I am a college student.
+
+    I work at the grocery store.'
+  Best Generated Conversation: 'User 1: I love folk metal! What are your favorite bands?
+
+    User 2: I love Insomnium, Ensiferum, and Eluveitie.
+
+    User 1: Those are great bands! I''m also a big fan of Korpiklaani and Turisas.
+
+    User 2: Oh, I love Korpiklaani! I haven''t heard of Turisas before, though.
+
+    User 1: Turisas is a Finnish folk metal band that''s really good. You should check them out.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem. So, what else do you like to do for fun?
+
+    User 2: I like to ride my unicycle.
+
+    User 1: Really? That''s awesome! I''ve always wanted to learn how to ride a unicycle.
+
+    User 2: It''s not that hard. You just have to practice.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What else do you like to do?
+
+    User 2: I work at the grocery store and I''m a college student.
+
+    User 1: Oh, cool. I''m a student too. What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: Nice! I''m studying computer science.
+
+    User 2: Oh, that''s cool. I''ve always been interested in computers.
+
+    User 1: Me too! I''m really excited to start my career in the tech industry.
+
+    User 2: That''s awesome! I''m sure you''ll do great things.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

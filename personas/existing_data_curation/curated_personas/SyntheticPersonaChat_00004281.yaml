@@ -1,0 +1,56 @@
+id: 00004281
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4281
+data:
+  user 1 personas: 'I am engaged to be married.
+
+    My parents are divorced.
+
+    I am in a local theater company.
+
+    I love animals and like working with them.'
+  user 2 personas: 'I collect comic books.
+
+    I have an autograph collection with more than 2000 signatures.
+
+    I only eat organic food.
+
+    I own two snakes.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you, [name]. What do you do for fun?
+
+    User 2: I collect comic books and autographs. I also like to read and play video games.
+
+    User 1: That''s cool! I like to read and play video games too. What are some of your favorite books and games?
+
+    User 2: I''m a big fan of the Harry Potter series and the Lord of the Rings series. I also love the Legend of Zelda games and the Super Mario games.
+
+    User 1: Those are some great choices! I love Harry Potter too. I''ve never read the Lord of the Rings series, but I''ve seen the movies.
+
+    User 2: You should definitely read the books! They''re even better than the movies.
+
+    User 1: I''ll have to check them out.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I''m in a local theater company and I love working with animals. I also love to travel.
+
+    User 2: That''s awesome! I''ve always wanted to be in a theater company. What kind of shows do you perform?
+
+    User 1: We do a variety of shows, from musicals to comedies to dramas. We''re actually in the middle of rehearsing for a production of Les Misérables.
+
+    User 2: That sounds amazing! I''d love to see it.
+
+    User 1: You''re welcome to come! We''re performing it next weekend.
+
+    User 2: I''ll definitely try to make it.
+
+    User 1: Great! It''ll be fun to meet you there.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

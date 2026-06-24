@@ -1,0 +1,66 @@
+id: 00006882
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6882
+data:
+  user 1 personas: 'My mother was a school music teacher.
+
+    My dad was a preacher.
+
+    I did not finish college.
+
+    My car is over 20 years old.
+
+    My favorite movie is the last of the mohicans.'
+  user 2 personas: 'My favorite band is the story so far.
+
+    I recently started to work online.
+
+    I used to travel the usa playing guitar.
+
+    I used to work at a factory making boxes.
+
+    I eat meat.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I recently started to work online. I used to travel the USA playing guitar.
+
+    User 1: That''s cool! I''ve always wanted to travel the USA. What was your favorite place you visited?
+
+    User 2: I really enjoyed New Orleans. The music and food there were amazing.
+
+    User 1: I''ve heard great things about New Orleans. I''ve never been, but I''d love to go one day.
+
+    User 2: You should definitely go! It''s a great place to visit.
+
+    User 1: What kind of music do you play?
+
+    User 2: I play a lot of different genres, but I mostly play indie rock.
+
+    User 1: I love indie rock! What are some of your favorite bands?
+
+    User 2: I like The Story So Far, The Front Bottoms, and The Wonder Years.
+
+    User 1: I love The Story So Far! I''ve seen them live a few times.
+
+    User 2: They''re so good live! I''ve seen them a few times too.
+
+    User 1: What are some of your favorite songs?
+
+    User 2: I love "Nerve" by The Story So Far, "The Upsides" by The Front Bottoms, and "Came Out Swinging" by The Wonder Years.
+
+    User 1: Those are all great songs! I love them all.
+
+    User 2: Me too! They''re some of my favorites.
+
+    User 1: Well, it was nice talking to you. I hope you have a great day.
+
+    User 2: You too! It was nice talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

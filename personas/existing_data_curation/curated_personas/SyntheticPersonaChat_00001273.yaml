@@ -1,0 +1,74 @@
+id: '00001273'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1273
+data:
+  user 1 personas: 'I enjoy shopping.
+
+    I used to cheerlead in high school.
+
+    I am a lifestyle blogger.
+
+    I am married and have 2 kids.
+
+    I live in celebration , florida.'
+  user 2 personas: 'I like to use a lot of exclamation marks when i type.
+
+    I have three dogs and two cats.
+
+    Playing quake on slackware linux makes me happy.
+
+    I live in chicago.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name].
+
+    User 2: Hi, my name is [User 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play video games!
+
+    User 1: Me too! What do you like to play?
+
+    User 2: I love to play Quake on Slackware Linux!
+
+    User 1: I''ve never heard of that game.
+
+    User 2: It''s a really old game, but it''s still a lot of fun!
+
+    User 1: I''ll have to check it out.
+
+    User 2: You should! It''s free.
+
+    User 1: Thanks for the tip! So, what else do you like to do?
+
+    User 2: I love to read books and watch movies.
+
+    User 1: Me too! What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Lord of the Rings series, and the Hunger Games series.
+
+    User 1: Me too! I''ve read all of those series.
+
+    User 2: What are some of your favorite movies?
+
+    User 1: I love the Lord of the Rings movies, the Harry Potter movies, and the Hunger Games movies.
+
+    User 2: Me too! We have similar taste in books and movies.
+
+    User 1: We do! I''m glad to meet someone who likes the same things I do.
+
+    User 2: Me too!
+
+    User 1: Well, it was nice talking to you. I have to go now.
+
+    User 2: It was nice talking to you too. Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

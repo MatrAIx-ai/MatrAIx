@@ -1,0 +1,41 @@
+id: '00003731'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3731
+data:
+  user 1 personas: 'I love to cut down trees.
+
+    I am a lumberjack.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I eat lots of pancakes and syrup.
+
+    I love to fish.'
+  user 2 personas: 'I have two dogs.
+
+    I work as a secretary at an insurance agency.
+
+    I am close to both of my brothers.
+
+    I travel every year to disney world.'
+  Best Generated Conversation: 'User 1: Hello, my name is Jack. I am a lumberjack and I love to cut down trees. Do you know anything about my work?
+
+    User 2: Hello Jack, nice to meet you. I am a secretary at an insurance agency. I know that lumberjacks are in charge of cutting down trees. I think it is a dangerous job but it is also very important.
+    I don''t know much about it but I would love to learn more.
+
+    User 1: It is a dangerous job but it is also very rewarding. I love the feeling of working outside and being able to see the results of my work. I also love the challenge of working in a team and solving
+    problems together.
+
+    User 2: That sounds like a really interesting job. I am glad that you enjoy it so much. I know that my brother has always wanted to be a lumberjack. Maybe I can ask him more about it the next time I
+    talk to him.
+
+    User 1: That would be great! I am always happy to talk about my job and I am sure your brother would be interested in hearing more about it.
+
+    User 2: Thank you for the conversation Jack. I have learned a lot about lumberjacks today. I hope you have a great day.
+
+    User 1: You too! It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

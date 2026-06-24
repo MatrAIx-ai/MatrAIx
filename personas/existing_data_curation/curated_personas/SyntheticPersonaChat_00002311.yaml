@@ -1,0 +1,64 @@
+id: '00002311'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2311
+data:
+  user 1 personas: 'I shop online a lot.
+
+    I think i m fabulous.
+
+    I check my reflection in the mirror constantly.
+
+    I always think people are looking at me.
+
+    I care about the way i look when i m in public.'
+  user 2 personas: 'I grew up in kentucky.
+
+    I have a garden.
+
+    I am a veteran.
+
+    I like to read.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What are some things you like to do?
+
+    User 2: I like to read, garden, and I''m a veteran.
+
+    User 1: That''s cool. I like to shop online, check my reflection in the mirror, and care about the way I look when I''m in public.
+
+    User 2: Are you a fashionista?
+
+    User 1: No, I''m just a bit vain.
+
+    User 2: I see. What do you like to read?
+
+    User 1: I like to read romance novels and thrillers.
+
+    User 2: I like to read history and science fiction.
+
+    User 1: I like history too. I''m not much of a science fiction fan, though.
+
+    User 2: That''s okay. We can still be friends.
+
+    User 1: Sure, we can.
+
+    User 2: Do you have any pets?
+
+    User 1: No, I don''t. Do you?
+
+    User 2: Yes, I have two cats.
+
+    User 1: I love cats!
+
+    User 2: They''re the best.
+
+    User 1: I''m glad we''re getting along.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00004994
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4994
+data:
+  user 1 personas: 'I have a lizard named ragini.
+
+    I like to plant flowers in my gardens.
+
+    I enjoy cooking for people.
+
+    I like to take my dog for long walks.
+
+    My mother lives with me.'
+  user 2 personas: 'The kids will be my responsibility as my husband does not want them.
+
+    My husband just decided to leave me.
+
+    We have 4 children and 2 dogs.
+
+    I enjoy ice cream.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go for walks with my dogs, cook, and plant flowers in my garden.
+
+    User 1: That sounds like fun! I like to cook and go for walks too.
+
+    User 2: I''m glad! I have a lizard named Ragini. Do you have any pets?
+
+    User 1: I don''t have any pets, but I''ve always wanted a dog.
+
+    User 2: You should get one! They''re great companions.
+
+    User 1: I know, I''m trying to convince my mom to let me get one.
+
+    User 2: I''m sure she''ll come around eventually.
+
+    User 1: I hope so!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to read, watch movies, and go to concerts.
+
+    User 2: That sounds like a lot of fun! I like to do those things too.
+
+    User 1: I''m glad! I''m also a big fan of ice cream.
+
+    User 2: Me too! I love chocolate chip cookie dough ice cream.
+
+    User 1: That''s my favorite too!
+
+    User 2: We should go get some ice cream sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Okay, sounds good.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,77 @@
+id: '00002763'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2763
+data:
+  user 1 personas: 'I drive a honda civic.
+
+    I have three children.
+
+    I enjoy taking walks.
+
+    My best friend lives down the street.
+
+    I am named after my grandmother.'
+  user 2 personas: 'I hate to drive.
+
+    I am younger then 46.
+
+    I like the taste of cheese.
+
+    I like the music group the backstreet boys.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to listen to music, go for walks, and read books.
+
+    User 1: I like to do those things too! I also like to cook and bake.
+
+    User 2: I love to cook, but I''m not very good at baking.
+
+    User 1: You should try my chocolate chip cookies. They''re the best!
+
+    User 2: I love chocolate chip cookies! I''ll have to try them sometime.
+
+    User 1: You''re welcome to come over and I''ll make them for you.
+
+    User 2: That would be great! I love trying new things.
+
+    User 1: How about this weekend?
+
+    User 2: That sounds perfect! I''ll be there.
+
+    User 1: Great! I''ll see you then.
+
+
+    [On the weekend]
+
+    User 1: Hi! I''m so glad you could make it.
+
+    User 2: Me too! I''m excited to try your cookies.
+
+    User 1: Okay, let''s get started.
+
+
+    [After making the cookies]
+
+    User 2: These are delicious! I love them!
+
+    User 1: I''m glad you like them!
+
+    User 2: I know what I''m having for breakfast tomorrow.
+
+    User 1: I''m sure you will. They''re really good.
+
+
+    [After eating the cookies]
+
+    User 2: Thank you so much for having me. I had a great time.
+
+    User 1: You''re welcome! I''m glad you enjoyed yourself.
+
+    User 2: I know what I''m doing next weekend. I''m coming back for more cookies.
+
+    User 1: You''re welcome to come over anytime. I''ll always be happy to make you cookies.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

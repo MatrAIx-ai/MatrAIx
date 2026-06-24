@@ -1,0 +1,68 @@
+id: '00001362'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1362
+data:
+  user 1 personas: 'I love role play.
+
+    I visit comic con.
+
+    I read a lot.
+
+    I draw comics.
+
+    I love anime.'
+  user 2 personas: 'I like to draw.
+
+    I ride a bike.
+
+    I have 5 brothers and sisters.
+
+    I live in north dakota.
+
+    I work as a waitress.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to draw, ride my bike, and go to concerts.
+
+    User 1: That''s cool. I like to read, draw comics, and watch anime.
+
+    User 2: I love anime too! Have you seen any good ones lately?
+
+    User 1: Yeah, I just finished watching Attack on Titan. It was really good.
+
+    User 2: I''ve been meaning to watch that one. What''s it about?
+
+    User 1: It''s about humans who are fighting against giant humanoids called titans.
+
+    User 2: That sounds cool. I''ll have to check it out.
+
+    User 1: You should. It''s really good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a waitress.
+
+    User 2: Oh, that sounds cool. Do you like it?
+
+    User 1: Yeah, it''s fun. I get to meet a lot of different people.
+
+    User 2: That''s a good thing. I''m a waitress too.
+
+    User 1: That''s funny. I guess we have more in common than we thought.
+
+    User 2: Yeah, we do. It''s nice to meet someone who understands what it''s like to be a waitress.
+
+    User 1: Me too. It''s not always easy, but it''s a good job.
+
+    User 2: Yeah, it is. I''m glad we''re friends.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

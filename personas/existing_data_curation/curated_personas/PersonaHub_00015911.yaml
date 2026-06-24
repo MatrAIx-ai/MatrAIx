@@ -1,0 +1,18 @@
+id: 00015911
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15911
+persona_description: A person who is interested in understanding the long-term patterns and variations in temperature, humidity, precipitation, wind, and other atmospheric conditions in a given region over
+  a period of time. They are likely to be a meteorologist, climatologist, or environmental scientist who studies climate change and its impacts on the Earth's ecosystems and human societies. They may also
+  be involved in research on the impact of climate change on weather patterns, agriculture, and public health.
+expertise:
+  general_domain_top1pct: science
+  specific_domain_top1pct: meteorology/climatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

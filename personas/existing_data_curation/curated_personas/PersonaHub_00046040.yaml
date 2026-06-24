@@ -1,0 +1,18 @@
+id: '00046040'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 46040
+persona_description: A web developer who is concerned about the security and stability of web applications. They are aware of the risks associated with common web vulnerabilities such as SQL injection,
+  XSS attacks, and cookie exposure. They are skilled in implementing best practices for input validation, sanitization, and escaping, and are familiar with the use of frameworks and libraries that automatically
+  handle XSS attacks and prevent SQL injections. They are also aware of the importance of using HTTPS and HTTP-Only cookies to secure user sessions and prevent cookie-based attacks.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Web Security
+  general_domain_top01pct: None
+  specific_domain_top01pct: Web Security
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

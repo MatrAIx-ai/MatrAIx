@@ -1,0 +1,18 @@
+id: 00059357
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 59357
+persona_description: A system administrator who is familiar with the low-level system calls used to send signals and data to processes or threads. They are skilled in using the rt_sigqueueinfo() and rt_tgsigqueueinfo()
+  system calls to send signals and data to processes or threads, and are aware of the limitations and requirements for these calls. They are also familiar with the kernel source files and the Linux kernel's
+  signal queue mechanism.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Operating System Internals
+  general_domain_top01pct: None
+  specific_domain_top01pct: Linux Kernel Development
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

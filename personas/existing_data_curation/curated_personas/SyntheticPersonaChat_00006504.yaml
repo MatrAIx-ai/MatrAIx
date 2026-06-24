@@ -1,0 +1,72 @@
+id: '00006504'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6504
+data:
+  user 1 personas: 'My family owned a small restaurant.
+
+    When i retire i want to open a bakery.
+
+    I like to cook.
+
+    Sometimes i volunteer at the soup kitchen.'
+  user 2 personas: 'I have a job as a dj at a radio station.
+
+    I have many friends.
+
+    I use a cane to help me get around.
+
+    I once drove a car ! my friend told me what to do while i drove.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I''m a DJ at a radio station.
+
+    User 1: That sounds fun! Do you get to play music that you like?
+
+    User 2: Yes, I do! I love playing music for people.
+
+    User 1: What''s your favorite kind of music to play?
+
+    User 2: I like to play a variety of music, but my favorite is rock and roll.
+
+    User 1: I like rock and roll too! What''s your favorite band?
+
+    User 2: I like a lot of bands, but my favorite is probably the Rolling Stones.
+
+    User 1: The Rolling Stones are great! I saw them in concert a few years ago.
+
+    User 2: That''s awesome! I wish I could see them in concert.
+
+    User 1: I hope you get to see them someday.
+
+    User 2: Thanks!
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to spend time with my friends and family. I also like to cook and bake.
+
+    User 1: I like to cook and bake too! What''s your favorite thing to bake?
+
+    User 2: I love to bake cookies. I''m not very good at it, but they''re still delicious.
+
+    User 1: I''m sure they''re delicious! I love cookies too.
+
+    User 2: Me too!
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go to the movies with my friends.
+
+    User 1: That sounds like fun!
+
+    User 2: It does!
+
+    User 1: Well, I''m sure you''re going to have a great weekend.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

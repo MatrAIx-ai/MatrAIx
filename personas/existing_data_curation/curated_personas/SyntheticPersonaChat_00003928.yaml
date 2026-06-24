@@ -1,0 +1,90 @@
+id: 00003928
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3928
+data:
+  user 1 personas: 'I am thirty two years old.
+
+    I am a house wife.
+
+    I cannot drive.
+
+    I am on a diet.
+
+    I have been married eight years.'
+  user 2 personas: 'I have an internship at a computer company.
+
+    I like to go fishing.
+
+    My mom is a lawyer.
+
+    I am a student.
+
+    I have 5 children.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi!
+
+    User 1: I''m thirty two years old. I''m a house wife. I cannot drive. I''m on a diet. I''ve been married eight years.
+
+    User 2: I''m a student. I have five children. I have an internship at a computer company. I like to go fishing. My mom is a lawyer.
+
+    User 1: That''s great! What are you studying?
+
+    User 2: I''m studying computer science.
+
+    User 1: That''s cool! What''s your favorite thing about computer science?
+
+    User 2: I like the problem solving aspect of it.
+
+    User 1: That''s awesome! I''m not very good at math, so I''m not sure I would be very good at computer science.
+
+    User 2: You don''t have to be good at math to be good at computer science.
+
+    User 1: Well, I don''t know anything about it.
+
+    User 2: There are a lot of resources out there to learn about computer science.
+
+    User 1: I''ll have to look into it.
+
+    User 2: You should! It''s a very interesting field.
+
+    User 1: I''m sure it is.
+
+    User 2: Do you have any hobbies?
+
+    User 1: Yes, I like to read, cook, and garden.
+
+    User 2: That''s cool! I like to read too. What are your favorite books?
+
+    User 1: I like to read mysteries and thrillers.
+
+    User 2: Me too! I just finished reading "The Girl on the Train".
+
+    User 1: I love that book! I''ve read it twice.
+
+    User 2: It''s so good! I just finished reading the sequel, "The Girl in the Mirror".
+
+    User 1: I''m going to have to check that out.
+
+    User 2: You should! It''s really good.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go fishing, hunting, and hiking.
+
+    User 2: That sounds like a lot of fun! I don''t get out in the woods much.
+
+    User 1: You should! It''s a great way to relax.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s really fun.
+
+    User 2: I''m sure it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

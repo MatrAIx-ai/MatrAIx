@@ -1,0 +1,60 @@
+id: 00002508
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2508
+data:
+  user 1 personas: 'I like to go fishing.
+
+    I have 5 children.
+
+    My mom is a lawyer.
+
+    I am a student.'
+  user 2 personas: 'I have no parents or siblings.
+
+    I only sleep 3 hours a day.
+
+    I always travel alone.
+
+    My favorite meal is steak.
+
+    I am incredibly smart.'
+  Best Generated Conversation: 'User 1: Hey, my name is User 1. What''s your name?
+
+    User 2: Hello, my name is User 2.
+
+    User 1: Nice to meet you. I''m a student and I have 5 children.
+
+    User 2: That''s a lot of children! I don''t have any parents or siblings.
+
+    User 1: Wow, that''s interesting. I only sleep for 7 hours a night.
+
+    User 2: I only sleep for 3 hours a night.
+
+    User 1: Wow, that''s very little sleep. I would be exhausted if I only slept for 3 hours a night.
+
+    User 2: I''m used to it. I''m always up and about and I''m always productive.
+
+    User 1: That''s good to hear. I''m glad you''re able to get by with so little sleep.
+
+    User 2: Thanks. I appreciate it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to travel, but I always travel alone. I don''t like being around other people.
+
+    User 1: That''s interesting. I like to travel with my family.
+
+    User 2: I''m not very good at socializing, so I prefer to travel alone.
+
+    User 1: That''s okay. I''m sure you have a lot of fun traveling alone.
+
+    User 2: I do. I get to see all the places I want to see and I don''t have to worry about anyone else''s needs.
+
+    User 1: That sounds great. I''m glad you''re able to enjoy your travels.
+
+    User 2: Thanks. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

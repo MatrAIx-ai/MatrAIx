@@ -1,0 +1,62 @@
+id: '00005040'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5040
+data:
+  user 1 personas: 'I live in a studio apartment.
+
+    My favorite band is the beatles.
+
+    I am studying to become a nurse.
+
+    I have three sisters.
+
+    I am a paramedic.'
+  user 2 personas: 'Dancing is my passion.
+
+    I drive a silver lexus.
+
+    I m a college student.
+
+    I have a dog named socks.
+
+    I m terrible at math.'
+  Best Generated Conversation: 'User 1: I like dancing too! Do you have a favorite dance style?
+
+    User 2: I love salsa dancing! It''s so fun and upbeat.
+
+    User 1: I''ve always wanted to learn salsa dancing. Do you know of any good places to take lessons?
+
+    User 2: There are a few studios around town that offer salsa dancing lessons. I took lessons at The Salsa Room, and I really enjoyed it.
+
+    User 1: I''ll have to check that out. Thanks for the recommendation!
+
+    User 2: No problem! What''s your favorite Beatles song?
+
+    User 1: It''s hard to choose, but I think I''d have to say "Yesterday." It''s such a beautiful and timeless song.
+
+    User 2: I love that song too! It''s so sad and beautiful at the same time.
+
+    User 1: Yeah, it is. It''s one of those songs that always makes me feel something.
+
+    User 2: Me too. What are you studying to be a nurse?
+
+    User 1: I''m going to school to be a pediatric nurse. I''ve always loved working with kids, and I think it would be a great career.
+
+    User 2: That''s great! I''m sure you''ll be a great nurse.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go for walks, and watch movies.
+
+    User 2: Me too! I love reading and going for walks. I don''t watch a lot of movies, though.
+
+    User 1: That''s okay. I''m sure we can find something to do together.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,20 @@
+id: 00061269
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61269
+persona_description: A system administrator who is responsible for managing the scheduling and scheduling policies of a system. This persona is interested in optimizing system performance by determining
+  the appropriate timeslice values for different types of tasks, such as I/O bound and CPU bound tasks. They are familiar with the Linux O(1) scheduler and its implementation, including the runqueue data
+  structure and scheduling policies. This persona has experience in implementing and optimizing scheduling algorithms and policies, and is skilled in analyzing system performance metrics to identify areas
+  for improvement. They are also knowledgeable about the importance of scheduling policies in achieving optimal system performance and are interested in continuously improving their understanding of scheduling
+  algorithms and policies.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Operating System Scheduling
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

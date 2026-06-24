@@ -1,0 +1,74 @@
+id: 00007368
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7368
+data:
+  user 1 personas: 'I often play the clown to get attention.
+
+    I want people to notice me.
+
+    I grew up as an orphan.
+
+    I will work hard for whatever i want.'
+  user 2 personas: 'I love going to the gym.
+
+    I have three pets.
+
+    I am currently on a diet.
+
+    I love animals and i want to help them.
+
+    I would like to go to school to become a veterinarian.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just working out.
+
+    User 1: Oh cool, what do you do for a living?
+
+    User 2: I''m a personal trainer.
+
+    User 1: Oh wow, that''s awesome! I''m trying to get fit, maybe you could help me out?
+
+    User 2: Sure, I''d love to help. What are your goals?
+
+    User 1: I want to lose some weight and get in shape.
+
+    User 2: Okay, great. We can start with some simple exercises and then we can work our way up.
+
+    User 1: Thanks, I really appreciate it.
+
+    User 2: No problem, I''m happy to help.
+
+    User 1: So, what''s your favorite thing about being a personal trainer?
+
+    User 2: I love helping people get fit and healthy. It''s so rewarding to see them make progress and achieve their goals.
+
+    User 1: That''s awesome. I can imagine it''s a really satisfying job.
+
+    User 2: It is. I love helping people and I love seeing them succeed.
+
+    User 1: So, what are your goals for the future?
+
+    User 2: I want to open my own gym one day.
+
+    User 1: Oh wow, that''s great! I''m sure you''ll be a great success.
+
+    User 2: Thanks, I hope so!
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I love spending time with my pets. I have three dogs and a cat.
+
+    User 1: Oh wow, that''s a lot of pets!
+
+    User 2: I know, right? I love animals.
+
+    User 1: Me too! I have two dogs and a cat.
+
+    User 2: We should get together and have a playdate!
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

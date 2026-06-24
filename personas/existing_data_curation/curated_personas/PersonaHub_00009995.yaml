@@ -1,0 +1,19 @@
+id: 00009995
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9995
+persona_description: A systems administrator who is interested in optimizing database performance and is familiar with the challenges of I/O wait time and the potential solutions through the use of solid
+  state disks (SSDs). This individual is likely to be interested in the latest technologies in storage and their impact on database performance, as well as the potential trade-offs between increasing the
+  number of disks, moving frequently accessed files to their own disks, and implementing RAID. They may also be interested in the unique properties of solid state disks and how they differ from conventional
+  storage devices in terms of storage speed, non-volatility, and potential performance improvements.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: database performance optimization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

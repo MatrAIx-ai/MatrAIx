@@ -1,0 +1,84 @@
+id: 00002489
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2489
+data:
+  user 1 personas: 'I like meat too much.
+
+    I do the shopping in my house.
+
+    I m lazy and pork tastes good.
+
+    I want to be a vegetarian.
+
+    Its good to eat a lot of veggies.'
+  user 2 personas: 'One child has autism.
+
+    I work as a teacher and love my job.
+
+    I am a mother.
+
+    I have two dogs who are like my babies.
+
+    I have two children.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: I''m [name].
+
+    User 2: I''m [name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s great! What grade do you teach?
+
+    User 2: I teach second grade.
+
+    User 1: That''s awesome! I love kids.
+
+    User 2: Me too! They''re so funny and creative.
+
+    User 1: I know! I have two kids myself.
+
+    User 2: Oh, really? What are their names?
+
+    User 1: My son is named Jack, and my daughter is named Jill.
+
+    User 2: Those are cute names!
+
+    User 1: Thanks!
+
+    User 2: So, do you like your job?
+
+    User 1: I love it! I get to spend my days with kids, and I get to teach them important things.
+
+    User 2: That sounds like a great job.
+
+    User 1: It is! I''m really lucky to have it.
+
+    User 2: Do you have any pets?
+
+    User 1: Yes, I have two dogs.
+
+    User 2: Oh, that''s great! What are their names?
+
+    User 1: Their names are Buddy and Bailey.
+
+    User 2: Those are cute names!
+
+    User 1: Thanks!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go on hikes, read, and spend time with my family.
+
+    User 2: Oh, that sounds like a lot of fun!
+
+    User 1: It is! I''m really glad I have such a great life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

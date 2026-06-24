@@ -1,0 +1,68 @@
+id: '00003020'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3020
+data:
+  user 1 personas: 'I am married with kids.
+
+    I hate running.
+
+    I enjoy watching baseball.
+
+    My favorite color is orange.
+
+    I have 2 cats and a dog.'
+  user 2 personas: 'I work for the discovery channel creating videos.
+
+    I have no technological skills.
+
+    I am a savage.
+
+    I am stuck in the past due to remoteness.
+
+    I love the outdoors.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name]. I''m married with kids. I hate running, but I enjoy watching baseball. My favorite color is orange, and I have two cats and a dog.
+
+    User 2: Hi! I''m [user 2''s name]. I work for the Discovery Channel creating videos. I have no technological skills, I''m a savage, and I''m stuck in the past due to remoteness. I also love the outdoors.
+
+    User 1: That''s cool that you work for the Discovery Channel! I love watching their shows.
+
+    User 2: Thanks! It''s a lot of fun.
+
+    User 1: I''m sorry to hear that you have no technological skills. I''m a bit of a tech nerd myself.
+
+    User 2: It''s okay. I''m not really interested in technology.
+
+    User 1: I can respect that. I love the outdoors too. I go hiking and camping all the time.
+
+    User 2: That''s awesome! I love going hiking and camping too. I''m actually going on a camping trip this weekend.
+
+    User 1: That sounds like a lot of fun! I wish I could go.
+
+    User 2: You should come with me!
+
+    User 1: I''d love to, but I''m busy this weekend.
+
+    User 2: That''s okay. I''ll let you know next time I go on a camping trip.
+
+    User 1: Great! I''d love to go with you.
+
+    User 2: Sounds like a plan.
+
+    User 1: So, what do you like to do for fun besides work and camping?
+
+    User 2: I like to watch movies, play video games, and read books.
+
+    User 1: That''s cool. I like to do those things too.
+
+    User 2: We should get together sometime and watch a movie or play video games.
+
+    User 1: That would be fun! I''ll have to check my schedule and see when I''m free.
+
+    User 2: Great! I''ll be waiting.
+
+    User 1: See you later!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

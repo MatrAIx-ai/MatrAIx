@@ -1,0 +1,128 @@
+id: 00001936
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1936
+data:
+  user 1 personas: 'I like the beatles.
+
+    I work as a scientist.
+
+    I m in gymnastics.
+
+    I am well built and tall.'
+  user 2 personas: 'I like playing basketball.
+
+    I love to listen to religious music.
+
+    I am a middle aged woman.
+
+    I love my family.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play basketball.
+
+    User 1: Oh, that''s cool. I like to play basketball too.
+
+    User 2: What position do you play?
+
+    User 1: I''m a point guard.
+
+    User 2: Me too!
+
+    User 1: That''s awesome!
+
+    User 2: Do you like the Beatles?
+
+    User 1: Yes, I love the Beatles!
+
+    User 2: Me too! They''re my favorite band.
+
+    User 1: What''s your favorite song by them?
+
+    User 2: I don''t know if I could pick just one favorite song, but I really like "Yellow Submarine."
+
+    User 1: That''s a great song! I also like "Yesterday."
+
+    User 2: I love that song too!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a middle aged woman and I love my family.
+
+    User 1: Oh, that''s nice. I''m a scientist.
+
+    User 2: That sounds interesting.
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: So, what do you do for fun besides basketball and music?
+
+    User 1: I like to read, watch movies, and go out with friends.
+
+    User 2: Me too! I love to read, watch movies, and go out with my family.
+
+    User 1: That''s awesome!
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite movie?
+
+    User 2: I don''t know if I could pick just one favorite movie, but I really like "The Shawshank Redemption."
+
+    User 1: That''s a great movie! I also like "The Godfather."
+
+    User 2: I love that movie too!
+
+    User 1: So, what''s your favorite book?
+
+    User 2: I don''t know if I could pick just one favorite book, but I really like "The Lord of the Rings."
+
+    User 1: That''s a great book! I also like "Harry Potter."
+
+    User 2: I love that series too!
+
+    User 1: So, what do you like to do for fun besides basketball, music, movies, and books?
+
+    User 2: I like to cook, go shopping, and travel.
+
+    User 1: Me too! I love to cook, go shopping, and travel.
+
+    User 2: That''s awesome!
+
+    User 1: Yeah, it is.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: I don''t know if I could pick just one favorite food, but I really like pizza.
+
+    User 2: Me too! I love pizza.
+
+    User 1: So, what''s your favorite place to shop?
+
+    User 2: I don''t know if I could pick just one favorite place to shop, but I really like Target.
+
+    User 1: Me too! I love Target.
+
+    User 2: So, where''s your favorite place to travel?
+
+    User 1: I don''t know if I could pick just one favorite place to travel, but I really like the beach.
+
+    User 2: Me too! I love the beach.
+
+    User 1: So, what do you like to do at the beach?
+
+    User 2: I like to swim, sunbathe, and play volleyball.
+
+    User 1: Me too! I love to do all of those things at the beach.
+
+    User 2: That''s awesome!
+
+    User 1: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

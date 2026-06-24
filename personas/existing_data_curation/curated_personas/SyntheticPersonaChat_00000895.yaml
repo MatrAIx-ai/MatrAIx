@@ -1,0 +1,80 @@
+id: 00000895
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 895
+data:
+  user 1 personas: 'I am a mechanic.
+
+    I own a corvette.
+
+    I live in california.
+
+    I own a german shepard.
+
+    I like to surf.'
+  user 2 personas: 'I recently started to work online.
+
+    I used to travel the usa playing guitar.
+
+    I eat meat.
+
+    I used to work at a factory making boxes.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I recently started working online.
+
+    User 1: Oh, that''s cool! What do you do online?
+
+    User 2: I''m a writer.
+
+    User 1: Oh, that''s awesome! What kind of stuff do you write?
+
+    User 2: I write short stories and poems.
+
+    User 1: That''s great! I''m a big fan of short stories.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and play guitar.
+
+    User 1: Oh, that''s cool! I like to read and play guitar too.
+
+    User 2: Really? What kind of music do you like to play?
+
+    User 1: I like to play all sorts of music, but my favorite is blues.
+
+    User 2: Oh, that''s cool! I like blues too.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yes, I have a dog.
+
+    User 1: Oh, what kind of dog?
+
+    User 2: A German Shepherd.
+
+    User 1: Oh, that''s cool! I have a dog too. He''s a Golden Retriever.
+
+    User 2: Oh, that''s cool! Golden Retrievers are awesome dogs.
+
+    User 1: Yeah, they are. So, what do you like to do in California?
+
+    User 2: I like to go to the beach, go surfing, and just hang out.
+
+    User 1: Oh, that''s cool! I like to do all of those things too.
+
+    User 2: So, what''s your favorite thing to do?
+
+    User 1: I don''t know, I think I like to surf the most.
+
+    User 2: Oh, that''s cool! I love surfing too.
+
+    User 1: Yeah, it''s so much fun.
+
+    User 2: Yeah, it is.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

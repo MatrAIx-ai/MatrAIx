@@ -1,0 +1,18 @@
+id: '00033040'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33040
+persona_description: A healthcare professional who is knowledgeable about the safety and effectiveness of vaccines, particularly for pregnant women and breastfeeding women. They are also familiar with the
+  risks and benefits of the COVID-19 vaccine and have experience in discussing these topics with pregnant women. They are aware of the false information spread by anti-vaccine groups and the harm caused
+  to pregnant women by the virus.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine safety and effectiveness
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

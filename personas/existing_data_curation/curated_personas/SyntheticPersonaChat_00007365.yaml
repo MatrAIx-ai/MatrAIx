@@ -1,0 +1,74 @@
+id: '00007365'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7365
+data:
+  user 1 personas: 'I love going to concerts on the weekend.
+
+    I collect stamps.
+
+    My mom taught me how to play the cello.
+
+    My favorite color is blue.
+
+    Everyday i go swimming at the y.'
+  user 2 personas: 'I grew up in alabama.
+
+    My mom is a checker at the local grocery store.
+
+    I don t like the song sweet home alabama.
+
+    I love watching game of thrones.'
+  Best Generated Conversation: 'User 1: Hi! I''m Alice.
+
+    User 2: Hi, I''m Bob. Nice to meet you.
+
+    User 1: Nice to meet you too. What''s your favorite thing to do?
+
+    User 2: I love watching Game of Thrones.
+
+    User 1: Oh, I love that show too! Who''s your favorite character?
+
+    User 2: Tyrion Lannister, hands down.
+
+    User 1: Me too! He''s so funny and witty.
+
+    User 2: I know, right? I love his one-liners.
+
+    User 1: What''s your favorite episode?
+
+    User 2: I think it''s "The Rains of Castamere."
+
+    User 1: Oh, that''s a good one. I love the Red Wedding.
+
+    User 2: Me too! That episode was so intense.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, really? What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that must be fun. I love working with kids.
+
+    User 2: It is! They''re so funny and creative.
+
+    User 1: Where did you grow up?
+
+    User 2: I grew up in Alabama.
+
+    User 1: Oh, cool! I''ve never been to Alabama.
+
+    User 2: You should come visit sometime. We have some great beaches.
+
+    User 1: I will! Thanks for the tip.
+
+    User 2: No problem. It was nice meeting you, Alice.
+
+    User 1: You too, Bob. Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

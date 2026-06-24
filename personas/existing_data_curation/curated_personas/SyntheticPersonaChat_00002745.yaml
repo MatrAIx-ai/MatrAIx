@@ -1,0 +1,72 @@
+id: '00002745'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2745
+data:
+  user 1 personas: 'I collect comic books.
+
+    I have an autograph collection with more than 2000 signatures.
+
+    I only eat organic food.
+
+    I am allergic to dust.'
+  user 2 personas: 'My major was american literature and education.
+
+    I just graduated college.
+
+    On weekends i like to go hiking.
+
+    I want to teach kids in elementary school.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1)!
+
+    User 2: Nice to meet you, (user 1)! I''m (user 2)!
+
+    User 1: What''s your major?
+
+    User 2: My major was American Literature and Education.
+
+    User 1: Oh, that''s cool! I just graduated from college too.
+
+    User 2: Congratulations! What was your major?
+
+    User 1: I majored in Psychology.
+
+    User 2: Oh, that''s interesting. What do you want to do with your degree?
+
+    User 1: I''m not sure yet. I''m considering going to graduate school.
+
+    User 2: That''s a good option. I''m not sure what I want to do either. I''m thinking about teaching kids in elementary school.
+
+    User 1: That''s a great idea! I''m sure you''d be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go hiking, read, and watch movies.
+
+    User 1: I like to go hiking too! I also like to collect comic books and autographs.
+
+    User 2: That''s cool! I''ve never been into comic books, but I do like autographs.
+
+    User 1: Yeah, autographs are great. I have a collection of over 2000 signatures.
+
+    User 2: Wow, that''s a lot!
+
+    User 1: Yeah, I''ve been collecting them for years.
+
+    User 2: I''m impressed.
+
+    User 1: Thanks! I''m kind of a nerd when it comes to comics and autographs.
+
+    User 2: That''s okay, I''m a nerd when it comes to hiking and books.
+
+    User 1: Well, it sounds like we have a lot in common.
+
+    User 2: Yeah, we do. I''m glad we met.
+
+    User 1: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

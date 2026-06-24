@@ -1,0 +1,62 @@
+id: '00002146'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2146
+data:
+  user 1 personas: 'I collect seashells.
+
+    I am a yoga instructor.
+
+    I have a son.
+
+    I love horses.'
+  user 2 personas: 'I like cartoons more than movies.
+
+    I like to listen to someone else reading a book.
+
+    I love the water , any water , ocean , river , or lake.
+
+    My mother met elvis.
+
+    I moved out when i was 14.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go swimming, listen to audiobooks, and watch cartoons.
+
+    User 1: Oh, that sounds fun! I like to go swimming too, but I don''t like cartoons. I like to watch documentaries.
+
+    User 2: I like documentaries too! What''s your favorite one?
+
+    User 1: I really liked the one about the history of the Titanic. It was so interesting!
+
+    User 2: I''ve never seen that one, but I''ll have to check it out. I love learning about history.
+
+    User 1: It''s really good! I also like the ones about animals.
+
+    User 2: Me too! I think animals are so cool.
+
+    User 1: Me too! I love learning about their different behaviors and habitats.
+
+    User 2: Me too! I think it''s amazing how animals can adapt to different environments.
+
+    User 1: It is! I could talk about animals all day long.
+
+    User 2: Me too! I could talk about animals and history all day long!
+
+    User 1: That''s awesome! I''m glad we have something in common.
+
+    User 2: Me too! I''m always looking for new people to talk to about animals and history.
+
+    User 1: Well, I''m glad I met you!
+
+    User 2: Me too! I hope we can talk again soon.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

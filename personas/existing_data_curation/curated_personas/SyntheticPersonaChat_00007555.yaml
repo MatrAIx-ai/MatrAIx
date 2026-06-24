@@ -1,0 +1,80 @@
+id: '00007555'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7555
+data:
+  user 1 personas: 'My next job will be in the federal court.
+
+    I used to be a lawyer.
+
+    I give everybody that comes in front me a fair chance.
+
+    I m a judge in the circuit court.
+
+    My name is albert.'
+  user 2 personas: 'I love to read fiction books.
+
+    My favorite fiction genres are sci fi and horror.
+
+    I am a georgia resident.
+
+    I play in a nfl fantasy football league.
+
+    I like nfl and college football.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to read fiction books, especially sci fi and horror.
+
+    User 1: Cool, I like sci fi too. What are some of your favorite books?
+
+    User 2: I really like the Ender''s Game series by Orson Scott Card, the Dune series by Frank Herbert, and the Foundation series by Isaac Asimov.
+
+    User 1: Those are all great books! I''ve read all of them.
+
+    User 2: Me too! They''re all so good.
+
+    User 1: What do you think of the new Star Wars movies?
+
+    User 2: I liked the first one, but I thought the second one was a bit of a letdown.
+
+    User 1: I agree. I thought the first one was really good, but the second one was kind of boring.
+
+    User 2: Yeah, I think they were trying to do too much with the second one.
+
+    User 1: Yeah, I think they should have just focused on the story of Rey and Kylo Ren.
+
+    User 2: I agree. I think that would have been a lot better.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a lawyer.
+
+    User 1: Oh, that''s cool. I used to be a lawyer too.
+
+    User 2: Really? What kind of law did you practice?
+
+    User 1: I was a criminal defense lawyer.
+
+    User 2: Oh, that''s tough. I''m a civil litigator.
+
+    User 1: Yeah, it was tough. But it was also really rewarding.
+
+    User 2: I can imagine. So, what do you do now?
+
+    User 1: I''m a judge in the circuit court.
+
+    User 2: Oh, that''s awesome! I''m sure you''re a great judge.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what''s your next job going to be?
+
+    User 1: I''m going to be a judge in the federal court.
+
+    User 2: Oh, that''s great! I''m sure you''ll do a great job.
+
+    User 1: Thanks! I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

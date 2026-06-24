@@ -1,0 +1,94 @@
+id: '00002140'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2140
+data:
+  user 1 personas: 'I believe in aliens.
+
+    To free my mind from feeling depressed i look up at the stars at night.
+
+    I cannot choose between lollipops and rainbows.
+
+    I would love to be a professional eater and not get fat.
+
+    I hate cleaning up after my husband and children.'
+  user 2 personas: 'I love to paint pictures.
+
+    I have a new job selling cars.
+
+    I love meat.
+
+    My favorite food is pizza.
+
+    My wife use to be a teacher.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name].
+
+    User 2: Hi, I''m [User 2''s name].
+
+    User 1: It''s nice to meet you. What do you do for a living?
+
+    User 2: I''m a car salesman.
+
+    User 1: Oh, that''s cool. I''ve never been good at selling things.
+
+    User 2: It''s not for everyone. What do you do for work?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that must be fun.
+
+    User 1: It is, but it can also be challenging.
+
+    User 2: I can imagine. What do you like to do for fun?
+
+    User 1: I love to paint pictures and read books.
+
+    User 2: That''s cool. I love to paint too.
+
+    User 1: Really? What kind of things do you like to paint?
+
+    User 2: I like to paint landscapes and nature scenes.
+
+    User 1: Oh, that''s beautiful. I like to paint abstract art.
+
+    User 2: I''ve never tried that before.
+
+    User 1: It''s fun. You just kind of let your imagination go wild.
+
+    User 2: I might have to give it a try sometime.
+
+    User 1: You should. It''s really relaxing.
+
+    User 2: I''m glad to hear that.
+
+    User 1: What''s your favorite food?
+
+    User 2: My favorite food is pizza.
+
+    User 1: Oh, me too! What kind of pizza do you like?
+
+    User 2: I like pepperoni pizza the best.
+
+    User 1: That''s my favorite too!
+
+    User 2: I''m glad to hear that.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog named Charlie.
+
+    User 1: Oh, that''s cute. What kind of dog is he?
+
+    User 2: He''s a Golden Retriever.
+
+    User 1: Golden Retrievers are so cute.
+
+    User 2: He''s the best dog ever.
+
+    User 1: I''m glad to hear that.
+
+    User 2: Thank you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00002125'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2125
+persona_description: A computer enthusiast who is familiar with the intricacies of operating systems, including their file management and defragmentation processes. This person is likely to be interested
+  in learning how to optimize their computer's performance by defragmenting their hard drive. They are also likely to be interested in learning about the importance of file fragmentation and how to prevent
+  it, as well as the potential consequences of not defragmenting certain files, such as the NTFS Master File Table and the Virtual Memory Paging file. They may also be interested in learning about the methods
+  for defragmenting these files, such as re-creating the paging file on a different drive and reducing the minimum and maximum size of the original paging file to 0M bytes.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Operating System Optimization
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

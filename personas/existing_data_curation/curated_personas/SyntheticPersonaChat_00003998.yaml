@@ -1,0 +1,76 @@
+id: 00003998
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3998
+data:
+  user 1 personas: 'I have owned two mustangs.
+
+    My dad works for ups.
+
+    I am not a fan of science.
+
+    My favorite color is purple.'
+  user 2 personas: 'I am hoping to play basketball overseas.
+
+    I am hoping to play.
+
+    I recently had knee surgery.
+
+    I just graduated college.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi! How are you doing today?
+
+    User 1: I''m doing well, thank you! How about you?
+
+    User 2: I''m doing good! Just got out of knee surgery, so I''m trying to take it easy.
+
+    User 1: Oh, no! I hope you''re feeling okay.
+
+    User 2: I''m doing better, thanks! Just a little sore.
+
+    User 1: That''s good to hear. What are you hoping to do after you recover?
+
+    User 2: I''m hoping to play basketball overseas. I just graduated college, so I''m looking for opportunities to play professionally.
+
+    User 1: That''s awesome! I hope you make it!
+
+    User 2: Thank you! I''m working hard on it!
+
+    User 1: So, what''s your favorite color?
+
+    User 2: My favorite color is blue.
+
+    User 1: Mine too! What kind of blue?
+
+    User 2: I like navy blue.
+
+    User 1: Me too! It''s a classic color.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play basketball, watch movies, and hang out with my friends.
+
+    User 1: Me too! I love to watch movies.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I don''t know if I have a favorite movie, but I really like The Shawshank Redemption.
+
+    User 2: I''ve never seen it. What''s it about?
+
+    User 1: It''s about a man who is wrongly convicted of murder and sent to prison. He escapes and starts a new life.
+
+    User 2: That sounds interesting. I''ll have to check it out.
+
+    User 1: You should! It''s a great movie.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

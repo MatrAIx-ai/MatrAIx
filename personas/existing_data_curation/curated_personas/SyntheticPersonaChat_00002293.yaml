@@ -1,0 +1,74 @@
+id: 00002293
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2293
+data:
+  user 1 personas: 'I love to take naps.
+
+    My eyes are blue.
+
+    I love watching basketball.
+
+    I sing barbershop and rap.'
+  user 2 personas: 'I surf often.
+
+    I married my high school sweetheart.
+
+    I am a great baker.
+
+    I am a nurse.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: It''s nice to meet you, [user 2 name]. What do you like to do for fun?
+
+    User 2: I love to surf, bake, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I love to surf too. Do you go surfing often?
+
+    User 2: I try to surf as often as I can, but it can be difficult to find the time with my busy schedule.
+
+    User 1: I know what you mean. I''m a nurse, so I work long hours.
+
+    User 2: Oh, that must be tough. I''m a baker, so I also work long hours.
+
+    User 1: I know what you mean. It''s hard to find the time to do the things you enjoy when you work long hours.
+
+    User 2: I try to find time for my hobbies, but it can be difficult.
+
+    User 1: I know what you mean. I try to find time for my hobbies too, but it can be hard.
+
+    User 2: What''s your favorite hobby?
+
+    User 1: I love to sing barbershop and rap.
+
+    User 2: That sounds like fun! I''ve never heard of barbershop before.
+
+    User 1: It''s a type of a cappella music that originated in the United States.
+
+    User 2: Oh, that sounds cool! I''ll have to look it up.
+
+    User 1: You should! It''s really fun.
+
+    User 2: I will. What''s your favorite rap song?
+
+    User 1: I don''t really have a favorite rap song. I like a lot of different rap music.
+
+    User 2: Me too. I like a lot of different types of music.
+
+    User 1: That''s cool. I''m glad you''re so open to different types of music.
+
+    User 2: Yeah, I think it''s important to be open to new things.
+
+    User 1: I agree. It''s the only way to learn and grow.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

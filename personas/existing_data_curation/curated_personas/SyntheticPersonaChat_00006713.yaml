@@ -1,0 +1,55 @@
+id: '00006713'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6713
+data:
+  user 1 personas: 'Twilight is my favorite book series.
+
+    I m a huge fan of jason mraz.
+
+    I recently moved to florida.
+
+    I want to find out what it s like to eat grasshoppers.
+
+    I only surf when the tide is low.'
+  user 2 personas: 'My car is black.
+
+    My favorite song is california love.
+
+    I drive a fast car.
+
+    My favorite artist is 2pac.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m new to Florida, what should I check out?
+
+    User 2: There are a lot of great things to do in Florida! What are you interested in?
+
+    User 1: I''m interested in music, books, and nature.
+
+    User 2: Well, you''re in luck! Florida has a lot to offer in all of those areas.
+
+    User 1: That''s great to hear! Do you have any recommendations for places to visit?
+
+    User 2: Sure! If you''re a music fan, you should check out the Florida Music Festival. It''s a great way to see some of the best local and national musicians.
+
+    User 1: That sounds like a lot of fun! I''ll definitely check it out.
+
+    User 2: And if you''re a book fan, you should definitely check out the Miami Book Fair. It''s one of the largest book fairs in the country, and it''s a great place to meet authors and get your hands
+    on some new books.
+
+    User 1: That sounds amazing! I can''t wait to check it out.
+
+    User 2: And if you''re a nature lover, you should definitely check out the Everglades. It''s a beautiful and unique ecosystem that''s home to a wide variety of wildlife.
+
+    User 1: That sounds like a great place to relax and enjoy nature. I''ll definitely add it to my list.
+
+    User 2: I''m glad I could help! I hope you have a great time in Florida!
+
+    User 1: Thank you! I''m sure I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

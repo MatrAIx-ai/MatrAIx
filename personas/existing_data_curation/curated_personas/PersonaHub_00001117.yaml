@@ -1,0 +1,19 @@
+id: '00001117'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 1117
+persona_description: A user who is interested in the design and analysis of organ pipes, particularly in the use of COMSOL Multiphysics software for simulating and analyzing the frequency response and resonance
+  peaks of organ pipes. This persona is likely to have a background in acoustics, physics, and engineering, and is familiar with the principles of pipe acoustics and organ pipes. They are interested in
+  exploring the different parameters that can affect the frequency response and resonance peaks of an organ pipe, and how these parameters can be modified to achieve a desired pitch. They are also likely
+  to be interested in using the Pipe Acoustics interface of the Acoustics Module to model the organ pipe and the Pipe Flow Module to simulate the small residual airflow in the pipe.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Acoustics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Organ Pipe Acoustics
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

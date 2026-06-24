@@ -1,0 +1,18 @@
+id: '00007110'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7110
+persona_description: A healthcare professional who is interested in participating in clinical trials and has a background in pharmacology. They are looking for information about the phases of clinical trials
+  and the processes involved in obtaining approval for new drugs. They are also interested in understanding the importance of monitoring the safety and effectiveness of experimental drugs after they have
+  been approved.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pharmacology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

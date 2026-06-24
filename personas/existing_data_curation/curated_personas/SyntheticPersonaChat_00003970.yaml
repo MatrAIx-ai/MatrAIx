@@ -1,0 +1,68 @@
+id: 00003970
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3970
+data:
+  user 1 personas: 'I have a dog named george.
+
+    I like my job.
+
+    I love to ride my bike.
+
+    I like going to the beach.'
+  user 2 personas: 'I am a dog walker.
+
+    I have never traveled outside of the united states.
+
+    I live in new york.
+
+    My best friend lives in japan.
+
+    I eat ice cream when i am sad.'
+  Best Generated Conversation: 'User 1: I''m so excited to have a conversation with you today!
+
+    User 2: Me too! I''m always looking for new friends.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to walk my dog, go to the beach, and ride my bike.
+
+    User 1: That''s great! I love to go to the beach too. What''s your favorite kind of dog?
+
+    User 2: I love all dogs, but I''m a big fan of golden retrievers.
+
+    User 1: I love golden retrievers too! They''re so friendly and loving.
+
+    User 2: They are! I''m so glad I have one.
+
+    User 1: What''s your dog''s name?
+
+    User 2: His name is George.
+
+    User 1: Oh, that''s a great name!
+
+    User 2: Thanks! I named him after my favorite president.
+
+    User 1: I love that! George Washington was a great president.
+
+    User 2: He was! I''m a big history buff.
+
+    User 1: That''s awesome! I love history too.
+
+    User 2: Do you have a favorite historical figure?
+
+    User 1: I have a few, but I think my favorite is Abraham Lincoln.
+
+    User 2: Lincoln was a great man! He saved our country.
+
+    User 1: He did! He was a true leader.
+
+    User 2: I''m glad we agree.
+
+    User 1: Me too! I''m sure we''ll have many more conversations in the future.
+
+    User 2: I''m looking forward to it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

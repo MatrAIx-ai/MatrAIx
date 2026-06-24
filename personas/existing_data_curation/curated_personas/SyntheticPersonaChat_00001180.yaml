@@ -1,0 +1,50 @@
+id: 00001180
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1180
+data:
+  user 1 personas: 'I am a carnivore.
+
+    I enjoy running.
+
+    My father is in prison.
+
+    My favorite band is creed.
+
+    I went on welfare last month , which makes me want to run into traffic in front of big trucks.'
+  user 2 personas: 'I am seventy one years old.
+
+    I love to keep a small garden outside of my house.
+
+    My favorite food to harvest is carrots.
+
+    I love all sorts of fresh vegetables.
+
+    My house is located in the countryside.'
+  Best Generated Conversation: 'User 1: Hey there! I''m (name). What''s your name?
+
+    User 2: Hello (name), I''m (name).
+
+    User 1: It''s nice to meet you (name). I''m from the city, but I''ve always loved the countryside. How long have you lived here?
+
+    User 2: I''ve been living here since I was born. I love the peace and quiet, and I love being surrounded by nature.
+
+    User 1: I can see why. It''s so beautiful here. I love going for walks in the woods.
+
+    User 2: Me too! I love to see all the different types of plants and animals.
+
+    User 1: I do too. I love to learn about them.
+
+    User 2: That''s great! I''m always learning new things about nature.
+
+    User 1: Me too. I love being outdoors.
+
+    User 2: Me too. I''ve always loved the outdoors.
+
+    User 1: I guess we''re both kindred spirits.
+
+    User 2: I guess so!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

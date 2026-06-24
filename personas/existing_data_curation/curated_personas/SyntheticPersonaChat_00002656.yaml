@@ -1,0 +1,60 @@
+id: '00002656'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2656
+data:
+  user 1 personas: 'I work at a hospital.
+
+    I like toyota cars.
+
+    I like to vote.
+
+    I do not like working long hours.'
+  user 2 personas: 'I am smart too.
+
+    I am short.
+
+    I like reading.
+
+    I am also round.'
+  Best Generated Conversation: 'User 1: Hey there, what''s your name?
+
+    User 2: Hi, I''m (name).
+
+    User 1: Nice to meet you (name), I''m (name). What do you do for fun?
+
+    User 2: I like reading, writing, and playing video games.
+
+    User 1: Oh, that''s cool. I like reading and video games too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I mostly read fantasy and science fiction.
+
+    User 2: Me too! I love fantasy books.
+
+    User 1: What''s your favorite fantasy book?
+
+    User 2: It''s hard to say, but I really like the Lord of the Rings series.
+
+    User 1: Me too! I''ve read it multiple times.
+
+    User 2: I have too. It''s so good.
+
+    User 1: What''s your favorite video game?
+
+    User 2: It''s hard to say, but I really like the Legend of Zelda series.
+
+    User 1: Me too! I love the Zelda games.
+
+    User 2: I have to go now, but it was nice talking to you.
+
+    User 1: It was nice talking to you too. I hope we can talk again sometime.
+
+    User 2: Me too. Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

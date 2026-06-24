@@ -1,0 +1,62 @@
+id: '00002501'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2501
+data:
+  user 1 personas: 'I like to cook stews.
+
+    I am a older lady.
+
+    I watch a lot of spongebob.
+
+    I love to eat cheese.'
+  user 2 personas: 'My car is over 20 years old.
+
+    My favorite movie is the last of the mohicans.
+
+    My mother was a school music teacher.
+
+    My dad was a preacher.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to watch old movies, especially The Last of the Mohicans.
+
+    User 1: I''ve never seen that movie. Is it good?
+
+    User 2: It''s my favorite movie of all time. It''s so beautiful, and the story is so epic.
+
+    User 1: I''ll have to check it out. I love watching movies.
+
+    User 2: What kind of movies do you like?
+
+    User 1: I like all kinds of movies, but I especially like comedies and action movies.
+
+    User 2: I like those too. I also like drama and horror movies.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a cat named Mittens.
+
+    User 1: What a cute name! I have a dog named Buddy.
+
+    User 2: I love dogs! They''re so cute and cuddly.
+
+    User 1: They are. I love playing with Buddy.
+
+    User 2: I''m glad you have a pet. They''re great companions.
+
+    User 1: They are. I don''t know what I would do without Buddy.
+
+    User 2: I know what you mean. I don''t know what I would do without Mittens.
+
+    User 1: I''m glad we have pets. They make life so much better.
+
+    User 2: I agree.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

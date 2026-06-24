@@ -1,0 +1,60 @@
+id: 00004291
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4291
+data:
+  user 1 personas: 'I am twenty five years old.
+
+    My favorite food is pizza.
+
+    I work on trucks.
+
+    I am a man.
+
+    I have a doberman.'
+  user 2 personas: 'I play guitar.
+
+    I love chocolate cake with extra frosting.
+
+    I am a michigan state trooper.
+
+    I have two siberian huskies.
+
+    I have four daughters.'
+  Best Generated Conversation: 'User 1: Hi, I''m a 25 year old man who works on trucks. My favorite food is pizza and I have a doberman.
+
+    User 2: Hi, I''m a 35 year old woman who is a Michigan State Trooper. I love chocolate cake with extra frosting and I have two Siberian huskies. I also have four daughters.
+
+    User 1: That''s cool! I''ve never met a Michigan State Trooper before.
+
+    User 2: It''s a good job. I get to help people and keep the peace.
+
+    User 1: That sounds rewarding. What do you do with your daughters?
+
+    User 2: We go to the park, play games, and watch movies.
+
+    User 1: That sounds like fun. I just have my one dog.
+
+    User 2: Dogs are great. They''re loyal and loving.
+
+    User 1: I agree. I''m glad I have mine.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to play video games, watch movies, and read books.
+
+    User 2: That sounds like me. I like to do all of those things too.
+
+    User 1: It''s always nice to meet someone who likes the same things I do.
+
+    User 2: Me too. It''s nice to have someone to talk to about it.
+
+    User 1: I agree. Well, it was nice talking to you. I hope we can get to know each other better.
+
+    User 2: I''d like that too. Bye!
+
+    User 1: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

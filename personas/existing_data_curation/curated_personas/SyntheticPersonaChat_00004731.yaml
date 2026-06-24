@@ -1,0 +1,54 @@
+id: '00004731'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4731
+data:
+  user 1 personas: 'I play jazz piano in a band.
+
+    My family is from algeria.
+
+    I like to go hiking on the weekends.
+
+    I am a barista.'
+  user 2 personas: 'My wife is a hairdresser.
+
+    I drive an acura.
+
+    I love to play basketball.
+
+    My favorite beer is coors.'
+  Best Generated Conversation: 'User 1: Hi, my name is John. I play jazz piano in a band. What do you do for fun?
+
+    User 2: Hi, I''m Mary. My wife is a hairdresser and I love to play basketball. What''s your favorite type of music?
+
+    User 1: I love jazz music. I play piano in a jazz band. Do you like hiking?
+
+    User 2: I love hiking! I go hiking with my wife and our dog every weekend. What type of beer do you like?
+
+    User 1: I love Coors beer. It''s my favorite. What''s your favorite color?
+
+    User 2: My favorite color is blue. I love the ocean and the sky. What''s your favorite food?
+
+    User 1: I love sushi. I could eat it every day. What''s your favorite animal?
+
+    User 2: My favorite animal is a cat. I love their independence and their love of naps.
+
+    User 1: I love cats too! They''re so cute and cuddly. What''s your favorite book?
+
+    User 2: My favorite book is The Great Gatsby. I love the story and the characters.
+
+    User 1: I''ve never read The Great Gatsby. I''ll have to check it out. What''s your favorite movie?
+
+    User 2: My favorite movie is The Princess Bride. I love the humor and the romance.
+
+    User 1: I''ve seen The Princess Bride. It''s a great movie! What''s your favorite TV show?
+
+    User 2: My favorite TV show is The Office. I love the characters and the humor.
+
+    User 1: I''ve seen The Office too. It''s a great show! I love Michael Scott.
+
+    User 2: Me too! Michael Scott is the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

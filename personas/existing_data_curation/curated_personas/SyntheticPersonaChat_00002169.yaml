@@ -1,0 +1,62 @@
+id: 00002169
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2169
+data:
+  user 1 personas: 'I enjoy hitchhiking.
+
+    Formal situations make me uncomfortable.
+
+    I live alone.
+
+    I have over 4000 friends on facebook.
+
+    I have not spoken to my family in years.'
+  user 2 personas: 'I have a few pet iguanas.
+
+    I am pretty poor financially.
+
+    I like to give them sassy sounding names that actually help people think nice things.
+
+    I think dogs could learn to read if they were trained well.
+
+    I have a brother but we do not talk much yet.'
+  Best Generated Conversation: 'User 1: Hi, I''m John. I enjoy hitchhiking.
+
+    User 2: Hi, I''m Mary. I have a few pet iguanas.
+
+    User 1: Cool, I''ve always wanted a pet reptile.
+
+    User 2: They''re pretty fun. What''s your favorite thing about hitchhiking?
+
+    User 1: I like the freedom of it. I can go wherever I want, whenever I want.
+
+    User 2: That''s true. It can be a lot of fun. I''m not very good at it, though.
+
+    User 1: It takes some practice. But once you get the hang of it, it''s great.
+
+    User 2: I''ll have to give it a try sometime.
+
+    User 1: You should. It''s a lot of fun. What''s your favorite kind of music?
+
+    User 2: I like a lot of different kinds of music. But I''m really into rock and roll right now.
+
+    User 1: Me too! I love rock and roll. What are some of your favorite bands?
+
+    User 2: I like a lot of different bands, but I''m really into the Foo Fighters right now.
+
+    User 1: The Foo Fighters are great! I saw them in concert a few years ago. They were amazing.
+
+    User 2: I''m so jealous! I''ve always wanted to see them in concert.
+
+    User 1: You should definitely go if you ever get the chance. They''re a great live band.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. It was nice talking to you, Mary.
+
+    User 2: You too, John. Have a nice day.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

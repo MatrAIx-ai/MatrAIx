@@ -1,0 +1,74 @@
+id: '00001104'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1104
+data:
+  user 1 personas: 'I own 9 guitars.
+
+    I am a vegan.
+
+    I learned piano at age 6.
+
+    I am trying to play in a local band.'
+  user 2 personas: 'I think i am failing my women studies class.
+
+    I drive a blue honda civic.
+
+    I am scared of left turns.
+
+    I got hired last week at mcdonald.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What are you up to?
+
+    User 2: I''m just studying for my women''s studies class.
+
+    User 1: Oh, that''s cool! I''m not familiar with women''s studies.
+
+    User 2: It''s a study of women''s history, politics, and culture.
+
+    User 1: That sounds really interesting! What do you like about it?
+
+    User 2: I like learning about the different ways women have been oppressed and how they''ve fought back.
+
+    User 1: That''s really important. I''m glad you''re taking the class.
+
+    User 2: Thanks! I''m really enjoying it so far.
+
+    User 1: What do you want to do after you graduate?
+
+    User 2: I''m not sure yet. I''m thinking about going into social work or law.
+
+    User 1: Those are both great options! I''m sure you''ll do great.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to play video games, read, and go to the movies.
+
+    User 1: That sounds like fun! I love video games too.
+
+    User 2: Me too! What games do you like to play?
+
+    User 1: I like to play open world games like Skyrim and Fallout.
+
+    User 2: Those are great games! I love playing them too.
+
+    User 1: So, what are you looking forward to this week?
+
+    User 2: I''m looking forward to getting my first paycheck from McDonald''s.
+
+    User 1: Oh, that''s exciting! How much are you going to make?
+
+    User 2: I''m not sure yet, but I''m hoping it''s enough to buy a new guitar.
+
+    User 1: That would be great! I''m sure you''ll find a great guitar.
+
+    User 2: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

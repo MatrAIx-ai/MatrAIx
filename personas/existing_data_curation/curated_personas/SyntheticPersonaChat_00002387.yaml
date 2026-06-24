@@ -1,0 +1,78 @@
+id: 00002387
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2387
+data:
+  user 1 personas: 'I am a soccer player.
+
+    I joined a new team last month.
+
+    I am a goalie.
+
+    Nike cleats are my favorite.'
+  user 2 personas: 'I play ice hockey.
+
+    I live in the united states.
+
+    I am a boy.
+
+    Math is my favorite subject.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1''s name]. I''m a soccer player.
+
+    User 2: Hi, I''m [User 2''s name]. I play ice hockey.
+
+    User 1: That''s cool! I''ve never played ice hockey before.
+
+    User 2: It''s a lot of fun. It''s a fast-paced game, and it''s really physical.
+
+    User 1: I can imagine. I''m used to playing soccer, which is a lot slower-paced.
+
+    User 2: Yeah, they''re two very different sports.
+
+    User 1: So, where do you play ice hockey?
+
+    User 2: I play in the United States.
+
+    User 1: Oh, that''s cool. I''m from the United States too.
+
+    User 2: What state are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, cool. I''m from New York.
+
+    User 1: That''s cool. I''ve always wanted to visit New York.
+
+    User 2: You should! It''s a great city.
+
+    User 1: I''ll have to do that sometime.
+
+    User 2: So, what''s your favorite thing about soccer?
+
+    User 1: I love the team aspect of the game. It''s really fun to work together to score goals.
+
+    User 2: I agree. That''s what I like about ice hockey too.
+
+    User 1: What''s your favorite thing about ice hockey?
+
+    User 2: I love the speed of the game. It''s so exciting to watch the players skate up and down the ice.
+
+    User 1: I can imagine. I''ve seen videos of ice hockey games, and it looks like a lot of fun.
+
+    User 2: It is! It''s a great sport to watch and play.
+
+    User 1: So, what''s your favorite subject in school?
+
+    User 2: My favorite subject is math. I love the challenge of solving math problems.
+
+    User 1: That''s cool. I''m not so good at math.
+
+    User 2: Don''t worry, I''m not either. But I still love it.
+
+    User 1: Well, I''m glad you enjoy it.
+
+    User 2: Thanks. Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00000685
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 685
+data:
+  user 1 personas: 'I like to cook.
+
+    I have two roomates.
+
+    I m scared of clowns.
+
+    I live on the third floor in an apartment.'
+  user 2 personas: 'Sometimes , i sit by strangers on the subway and strike up a conversation.
+
+    I love watching sitcoms on television.
+
+    I drive a honda that s seen better days.
+
+    I m looking forward to reading the latest political thriller.'
+  Best Generated Conversation: 'User 1: Hi there, what do you like to do for fun?
+
+    User 2: I like to watch sitcoms on television, and I love reading political thrillers.
+
+    User 1: Oh, I love sitcoms too! What are some of your favorites?
+
+    User 2: I love The Office, Parks and Recreation, and Seinfeld.
+
+    User 1: Those are all great shows! I''m a big fan of The Office and Parks and Recreation.
+
+    User 2: What do you like about them?
+
+    User 1: I love the characters and the humor. They''re both so funny and relatable.
+
+    User 2: I agree! They''re both great shows.
+
+    User 1: So, what are you looking forward to reading?
+
+    User 2: I''m really excited to read the latest political thriller by Tom Clancy.
+
+    User 1: I''ve read a few of his books, and I really enjoyed them.
+
+    User 2: I''m glad to hear that! I''m hoping this one will be just as good.
+
+    User 1: Well, I''m sure it will be great. Tom Clancy is a great author.
+
+    User 2: I agree! He''s one of my favorite authors.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to cook. I love trying new recipes and experimenting with different flavors.
+
+    User 1: Oh, that sounds like fun! I love cooking too.
+
+    User 2: What''s your favorite thing to cook?
+
+    User 1: I love making pasta dishes. I love all the different types of sauces you can make.
+
+    User 2: I agree! Pasta dishes are so delicious.
+
+    User 1: So, what''s your favorite pasta dish?
+
+    User 2: I love a good carbonara.
+
+    User 1: Me too! Carbonara is so creamy and delicious.
+
+    User 2: I know, right? It''s the perfect comfort food.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go for walks in the park.
+
+    User 1: Oh, that sounds nice! I like going for walks too.
+
+    User 2: I like to go to the park and just relax.
+
+    User 1: Me too! It''s a great way to get some exercise and clear your head.
+
+    User 2: I agree'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

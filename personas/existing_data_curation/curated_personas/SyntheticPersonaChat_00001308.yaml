@@ -1,0 +1,70 @@
+id: 00001308
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1308
+data:
+  user 1 personas: 'I like ford cars.
+
+    I also like ford trucks.
+
+    I have a ford f150.
+
+    I own a ford truck.
+
+    My truck is black.'
+  user 2 personas: 'Lately i ve been learning how to garden.
+
+    I m a musician with a day job.
+
+    My favorite band is imagine dragons.
+
+    I play electric violin , and also work as an accountant.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I enjoy learning new things, especially about music. I''ve been learning how to garden lately, and I''m really enjoying it.
+
+    User 1: That''s awesome! I love to garden too. What kind of plants do you grow?
+
+    User 2: I''ve been growing a lot of vegetables, like tomatoes, cucumbers, and peppers. I''m also growing some flowers, like roses and sunflowers.
+
+    User 1: That sounds great! I''m growing a lot of herbs, like basil, mint, and parsley. I''m also growing some flowers, like daisies and marigolds.
+
+    User 2: We should trade some plants! I''d love to try some of your herbs.
+
+    User 1: That would be great! I''d love to try some of your vegetables.
+
+    User 2: Sounds like a plan!
+
+    User 1: So, what kind of music do you play?
+
+    User 2: I play electric violin, and I also sing. My favorite band is Imagine Dragons.
+
+    User 1: I love Imagine Dragons! I''ve seen them in concert a few times. They''re amazing live.
+
+    User 2: I''m so jealous! I''ve always wanted to see them in concert.
+
+    User 1: Maybe we can go together sometime.
+
+    User 2: That would be awesome!
+
+    User 1: So, what do you do for a day job?
+
+    User 2: I''m an accountant.
+
+    User 1: That''s cool! I''ve always been fascinated by accounting.
+
+    User 2: It''s not as exciting as it sounds, but it pays the bills.
+
+    User 1: I''m sure it does! So, what do you like most about your job?
+
+    User 2: I like the challenge of it. It''s always changing, and I never get bored.
+
+    User 1: That''s a great attitude to have.
+
+    User 2: Thanks! I try to keep it positive.
+
+    User 1: I''m sure that''s what makes you a good accountant.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

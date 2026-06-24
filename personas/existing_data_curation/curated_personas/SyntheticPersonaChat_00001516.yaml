@@ -1,0 +1,72 @@
+id: '00001516'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1516
+data:
+  user 1 personas: 'I am a meat eater.
+
+    I never learned how to swim.
+
+    I had to get a job early as a child.
+
+    My mother passed away in 1979.'
+  user 2 personas: 'I love owning nice office supplies.
+
+    My mom teaches kindergarten and my dad is a tax assessor.
+
+    My favorite book is anne of green gables.
+
+    I have always wanted a pot bellied pig.
+
+    I won a beauty pageant one time but did not feel like it was worth the effort.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: My name is [Name].
+
+    User 1: Nice to meet you [Name]. What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: Those are all great hobbies! Do you have a favorite book?
+
+    User 2: My favorite book is Anne of Green Gables.
+
+    User 1: That''s a great book! I''ve read it several times.
+
+    User 2: I love the characters and the story. It''s so heartwarming.
+
+    User 1: I agree. It''s a classic for a reason.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That sounds interesting. Do you like it?
+
+    User 1: I love it! I get to work on cool projects and solve interesting problems.
+
+    User 2: That''s great! I''m glad you enjoy your job.
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite food?
+
+    User 1: I love all food, but I especially love pizza.
+
+    User 2: Me too! Pizza is the best.
+
+    User 1: I agree! I could eat pizza every day.
+
+    User 2: I could too!
+
+    User 1: Well, it was nice talking to you, [Name].
+
+    User 2: It was nice talking to you too, [Name].
+
+    User 1: I hope we can talk again soon.
+
+    User 2: I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

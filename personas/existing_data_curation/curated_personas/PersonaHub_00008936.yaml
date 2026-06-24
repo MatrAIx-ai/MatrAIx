@@ -1,0 +1,19 @@
+id: 00008936
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8936
+persona_description: A professional in the field of analog-to-digital converter (ADC) design and implementation, particularly focused on the design and optimization of sampling circuits for high-speed ADCs
+  with a sampling capacitor. This persona is likely to have expertise in circuit design, signal processing, and electronic engineering, and may have experience with various ADC types, including successive
+  approximation ADCs, and have a keen interest in understanding the impact of sampling time on ADC performance, especially in terms of transient voltage decay and bit error rate. They may also be interested
+  in the use of local storage capacitors and RC time constants in ADCs.
+expertise:
+  general_domain_top1pct: electrical engineering
+  specific_domain_top1pct: analog-to-digital converter (ADC) design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

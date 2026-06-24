@@ -1,0 +1,75 @@
+id: '00002022'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2022
+data:
+  user 1 personas: 'I make straight as.
+
+    I am a high school student.
+
+    I am very social.
+
+    I am in the band.'
+  user 2 personas: 'I had a gig at local theater last night.
+
+    I come from a small town.
+
+    I did a few small roles in tv series.
+
+    My favorite drink is cuba libre.
+
+    I work as a stand up comedian.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for a living?
+
+    User 2: I''m a stand up comedian.
+
+    User 1: Really? That''s awesome! I love stand up comedy.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: So, what''s your favorite joke?
+
+    User 2: I have a lot of favorite jokes, but I think my favorite one right now is about a guy who goes to the doctor and says, "Doctor, I think I''m addicted to Twitter." The doctor says, "Don''t worry,
+    you''re not alone. I''ve been following you for weeks!"
+
+    User 1: Haha, that''s a good one!
+
+    User 2: Thanks!
+
+    User 1: So, where are you from?
+
+    User 2: I''m from a small town in the Midwest.
+
+    User 1: Oh, cool! I''m from a small town in the South.
+
+    User 2: Nice! I''ve always wanted to visit the South.
+
+    User 1: You should! It''s beautiful down there.
+
+    User 2: I will!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to the movies, go out to eat, and hang out with my friends.
+
+    User 1: Nice! Me too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I don''t know if I have a favorite movie, but I really like The Breakfast Club.
+
+    User 2: That''s a classic! I love that movie too.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the beach or go shopping.
+
+    User 1: Nice! I''m going to the beach with my family.
+
+    User 2: That sounds fun! Have a good time!
+
+    User 1: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

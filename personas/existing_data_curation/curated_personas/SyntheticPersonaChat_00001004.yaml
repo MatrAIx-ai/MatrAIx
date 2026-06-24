@@ -1,0 +1,88 @@
+id: '00001004'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1004
+data:
+  user 1 personas: 'I hate tomatoes.
+
+    I am very short.
+
+    I need a wheel chair to get around.
+
+    I have 2 kids.'
+  user 2 personas: 'I worked at a movie theater for 4 years.
+
+    I am saving up to buy a new camera.
+
+    I like spicy food.
+
+    I have always had long hair.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1 name]. What''s your name?
+
+    User 2: Hi! I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I like to go to the movies, play video games, and read.
+
+    User 1: I like to do those things too! What''s your favorite movie?
+
+    User 2: I don''t have a favorite movie, but I really like the Lord of the Rings trilogy.
+
+    User 1: Me too! I love those movies.
+
+    User 2: What''s your favorite video game?
+
+    User 1: I really like Zelda: Breath of the Wild.
+
+    User 2: That''s a great game! I love the open-world aspect of it.
+
+    User 1: Yeah, me too! It''s so much fun to explore.
+
+    User 2: What''s your favorite book?
+
+    User 1: I don''t have a favorite book, but I really like the Harry Potter series.
+
+    User 2: Me too! I love those books.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach third grade.
+
+    User 1: That''s awesome! I always wanted to be a teacher.
+
+    User 2: It''s a great job! I love working with kids.
+
+    User 1: I can imagine! They''re so funny and smart.
+
+    User 2: Yeah, they are! I love hearing their ideas and seeing them learn.
+
+    User 1: That''s so great!
+
+    User 2: What do you do for work?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: Oh, that''s great! I love being around kids.
+
+    User 1: Me too! They''re so much fun.
+
+    User 2: I can imagine! I love hearing their stories and seeing them play.
+
+    User 1: That''s so great!
+
+    User 2: What''s it like being a stay-at-home mom?
+
+    User 1: It''s a lot of work, but it''s also very rewarding. I love being able to spend all day with my kids and watch them grow up.
+
+    User 2: That''s awesome! I can imagine! I love hearing their stories and seeing them play.
+
+    User 1: That''s so great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

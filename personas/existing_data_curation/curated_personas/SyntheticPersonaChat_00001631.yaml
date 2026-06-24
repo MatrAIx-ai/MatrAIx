@@ -1,0 +1,74 @@
+id: '00001631'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1631
+data:
+  user 1 personas: 'I have brown hair.
+
+    My favorite color is blue.
+
+    I work at a grocery store.
+
+    I like to read.
+
+    I like cupcakes.'
+  user 2 personas: 'My dad is a college professor.
+
+    I am a petsitter.
+
+    My mom died when i was six.
+
+    My favorite book is the tale of genji.
+
+    I have purple hair.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi! I''m [name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a petsitter.
+
+    User 1: Oh, that''s interesting! What''s your favorite part about it?
+
+    User 2: I love getting to interact with different animals and seeing them happy.
+
+    User 1: I can see how that would be fun! What''s your favorite animal?
+
+    User 2: I love cats. They''re so independent and affectionate.
+
+    User 1: I like cats too! I have a brown tabby cat named Mittens.
+
+    User 2: Oh, I love tabbies! They''re so cute.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to read, cook, and go on walks.
+
+    User 1: I love to read too! What are some of your favorite books?
+
+    User 2: I love The Tale of Genji. It''s a classic Japanese novel that''s full of beautiful poetry and prose.
+
+    User 1: I''ve never heard of it, but I''ll have to check it out.
+
+    User 2: It''s a really long book, but it''s worth it.
+
+    User 1: I''m sure I''ll like it. What do you like to cook?
+
+    User 2: I love to make pasta dishes. I''m a big fan of Italian food.
+
+    User 1: I love Italian food too! I make a mean lasagna.
+
+    User 2: I love lasagna! I''m going to have to try your recipe sometime.
+
+    User 1: You''re welcome to. I''m sure you''ll like it.
+
+    User 2: Thanks! It sounds like we have a lot in common.
+
+    User 1: It does seem like we do. I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

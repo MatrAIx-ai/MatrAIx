@@ -1,0 +1,19 @@
+id: '00033000'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33000
+persona_description: A meteorologist who specializes in studying atmospheric pressure patterns and their effects on weather and climate. They are particularly interested in the melt season in Greenland
+  and its impact on the ice sheet melting. They are knowledgeable about the effects of high and low pressure systems on weather patterns and the role of atmospheric pressure in influencing climate. They
+  have a keen interest in the unique conditions in September 2022 and the impact of these conditions on the melt season in Greenland. They are also interested in the relationship between atmospheric pressure
+  patterns and the amount of meltwater produced during the melt season.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: atmospheric pressure patterns and their effects on weather and climate
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

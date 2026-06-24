@@ -1,0 +1,62 @@
+id: 00004187
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4187
+data:
+  user 1 personas: 'My favorite color is grey.
+
+    I love to do yoga.
+
+    I work for a newspaper.
+
+    My passion is writing.'
+  user 2 personas: 'I am a stay at home mom.
+
+    I watch a lot of movies.
+
+    I love to clean.
+
+    I do not have much energy.
+
+    I love fast food.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to watch movies, clean, and cook.
+
+    User 1: That''s cool! I love to do yoga, write, and read.
+
+    User 2: I used to do yoga a lot, but I don''t have much energy anymore.
+
+    User 1: I know what you mean. I get tired easily too.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially love historical fiction and mystery novels.
+
+    User 2: I love historical fiction too! I''m currently reading a book about the French Revolution.
+
+    User 1: That sounds really interesting! I''m reading a book about the Battle of Waterloo.
+
+    User 2: I''ve read a few books about Waterloo. It''s a fascinating battle.
+
+    User 1: I know, right? It''s so crazy that Napoleon could have won if he had just attacked the British from the front.
+
+    User 2: I know! It''s a shame he made that mistake.
+
+    User 1: Yeah, but it''s what makes history so interesting.
+
+    User 2: I know, right? It''s so easy to look back at things and say "if only they had done this differently."
+
+    User 1: Yeah, but that''s all part of the fun!
+
+    User 2: I know, right? I love talking about history.
+
+    User 1: Me too! It''s the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

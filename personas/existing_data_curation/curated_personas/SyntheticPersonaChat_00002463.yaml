@@ -1,0 +1,68 @@
+id: '00002463'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2463
+data:
+  user 1 personas: 'I drive a ford truck.
+
+    I am a police officer.
+
+    I have been married 3 times.
+
+    I have a gun collection at home.'
+  user 2 personas: 'I am italian american.
+
+    My favorite color is blue.
+
+    I paint with watercolors.
+
+    I work in finance.
+
+    I hate cleaning.'
+  Best Generated Conversation: 'User 1: Hi, I''m John. I''m a police officer.
+
+    User 2: Hi John, I''m Maria. I''m an artist.
+
+    User 1: That''s cool. What kind of art do you do?
+
+    User 2: I paint with watercolors.
+
+    User 1: Oh, that''s really cool. I''ve always wanted to learn how to paint.
+
+    User 2: It''s not that hard. You just need some paint, brushes, and paper.
+
+    User 1: Well, maybe I''ll give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What are some of your favorite things to paint?
+
+    User 2: I like to paint landscapes and still lifes.
+
+    User 1: That''s cool. I''d love to see some of your work sometime.
+
+    User 2: Sure, I''d be happy to show you some.
+
+    User 1: Thanks! What do you like about being an artist?
+
+    User 2: I love being able to express myself creatively. I also love the challenge of trying to create something beautiful.
+
+    User 1: That''s great. I''m glad you enjoy your work.
+
+    User 2: Thanks! I do.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to go to concerts, art museums, and the beach.
+
+    User 1: Oh, that''s cool. I like to do those things too.
+
+    User 2: We should go to a concert together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll keep an eye out for some good shows.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

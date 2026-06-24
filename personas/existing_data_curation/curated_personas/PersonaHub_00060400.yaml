@@ -1,0 +1,18 @@
+id: '00060400'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60400
+persona_description: A photographer who is interested in understanding the principles of depth of field and its effects on the visual appearance of a photograph. They are curious about the relationship
+  between focal length, subject distance, and the resulting depth of field, as well as the factors that affect the field of view and the appearance of the background in their photographs. They may also
+  be interested in the relationship between depth of field and the size and resolution of the output image, and how it can impact the final appearance of the photograph.
+expertise:
+  general_domain_top1pct: photography
+  specific_domain_top1pct: depth of field
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

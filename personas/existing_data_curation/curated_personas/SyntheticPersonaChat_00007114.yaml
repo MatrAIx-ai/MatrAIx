@@ -1,0 +1,60 @@
+id: '00007114'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7114
+data:
+  user 1 personas: 'I can run very fast for long distances.
+
+    I have a very unhealthy diet.
+
+    I drink a lot of caffeine.
+
+    I have a cheap car my dad gave me.'
+  user 2 personas: 'I live in a city.
+
+    I help my neighbor.
+
+    I have a dog and we go for walks.
+
+    I am a grandmother.
+
+    I likw to go to the farmers markets to buy local veggies and fruits.'
+  Best Generated Conversation: 'User 1: I''m a very fast runner. I can run long distances without getting tired.
+
+    User 2: That''s impressive! I''m not very good at running. I get tired very quickly.
+
+    User 1: You should try it more often! It''s a great way to get exercise.
+
+    User 2: I know, I know. I just need to find the motivation.
+
+    User 1: Well, if you ever need a running buddy, I''m always up for it.
+
+    User 2: That''s so nice of you! I might take you up on that offer.
+
+    User 1: Great! I''d love to help you get better at running.
+
+    User 2: Thank you.
+
+    User 1: So, what else do you like to do?
+
+    User 2: Well, I like to go to the farmers market to buy local veggies and fruits.
+
+    User 1: That''s cool! I love the farmers market too. It''s a great way to get fresh, healthy food.
+
+    User 2: Yeah, it is. I also like to cook with the food I buy at the farmers market.
+
+    User 1: That''s awesome! I love cooking too. I''m not very good at it, but I''m learning.
+
+    User 2: Well, you''re always welcome to come over and cook with me sometime.
+
+    User 1: That''s so nice of you! I would love that.
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Thanks!
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

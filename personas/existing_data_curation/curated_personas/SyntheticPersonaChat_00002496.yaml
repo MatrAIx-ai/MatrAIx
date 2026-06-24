@@ -1,0 +1,78 @@
+id: 00002496
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2496
+data:
+  user 1 personas: 'I like rock climbing.
+
+    I am a writer.
+
+    I am gluten free.
+
+    My hair is black.
+
+    I have a dog.'
+  user 2 personas: 'I am an orphan.
+
+    I grew up in nevada.
+
+    I used to fly planes for a living.
+
+    I like dogs.
+
+    I now live in new mexico.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What are your hobbies?
+
+    User 2: I like to fly planes, read books, and play video games.
+
+    User 1: That''s cool! I like rock climbing, writing, and playing with my dog.
+
+    User 2: I''ve never been rock climbing, but it looks like fun!
+
+    User 1: It is! It''s a great way to get exercise and see some amazing views.
+
+    User 2: I''m sure I''d like it.
+
+    User 1: You should definitely give it a try sometime.
+
+    User 2: I will! I''m always looking for new things to try.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I''m especially interested in history and science.
+
+    User 1: I love history too! I''m currently reading a book about the Roman Empire.
+
+    User 2: That sounds interesting! I''ve always been fascinated by the Roman Empire.
+
+    User 1: It''s a fascinating topic. I''m learning a lot about it.
+
+    User 2: I''m sure you are. It''s a very complex topic with a lot of history.
+
+    User 1: Yeah, it is. But it''s also very interesting.
+
+    User 2: I agree. It''s one of my favorite topics to learn about.
+
+    User 1: What do you like to do with your dog?
+
+    User 2: I like to take him for walks, play fetch with him, and cuddle with him.
+
+    User 1: That sounds like a lot of fun! I love dogs too. I have a black lab named Buddy.
+
+    User 2: Black labs are the best! They''re so sweet and loving.
+
+    User 1: Yeah, they are! Buddy is the best dog ever.
+
+    User 2: I''m sure he is.
+
+    User 1: He is! He''s always there for me when I need him.
+
+    User 2: That''s what dogs are for'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

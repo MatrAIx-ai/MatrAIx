@@ -1,0 +1,19 @@
+id: '00042211'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42211
+persona_description: A reliability engineer who specializes in modeling and estimating the failure rates of semiconductor products using bathtub curves, probability distributions, and reliability functions.
+  They are skilled in using TI's reliability estimator to calculate failure rates and are familiar with the three primary phases of semiconductor product lifetime, including the early life failure rate,
+  normal life, and wearout phase. They are also knowledgeable in the use of failure rate terminology, such as average failure rate, failure in time, and MTTF, and are adept at interpreting and analyzing
+  failure data to estimate the reliability of semiconductor products.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: reliability engineering of semiconductor products
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

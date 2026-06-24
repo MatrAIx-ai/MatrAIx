@@ -1,0 +1,68 @@
+id: '00003530'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3530
+data:
+  user 1 personas: 'My clients are gamblers.
+
+    I give out sports information.
+
+    I am a small business owner.
+
+    I help them win a lot of money.'
+  user 2 personas: 'I like to upcycle my thrift shop finds and make new items.
+
+    I am an art teacher.
+
+    I like to sew my own clothing.
+
+    I enjoy clothing with exotic prints.
+
+    Sometimes i like to visit thrift shops.'
+  Best Generated Conversation: 'User 1: Hi, how are you doing today?
+
+    User 2: I''m doing well, thanks for asking!
+
+    User 1: That''s great to hear! What do you do for a living?
+
+    User 2: I''m an art teacher.
+
+    User 1: Oh, that''s cool! I''ve always enjoyed art.
+
+    User 2: Me too! I love seeing the creativity of my students.
+
+    User 1: Do you ever use thrift shop items in your art?
+
+    User 2: Yes, I love upcycling thrift shop finds! I think it''s so fun to take something that''s old and broken and turn it into something new and beautiful.
+
+    User 1: That''s such a cool idea! I''ve always been too afraid to try it myself.
+
+    User 2: You should give it a try! It''s really easy to get started.
+
+    User 1: Maybe I will!
+
+    User 2: I would love to see what you create.
+
+    User 1: I''ll be sure to send you some pictures.
+
+    User 2: Great!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I love to sew my own clothing. I also enjoy going to thrift shops and finding unique items.
+
+    User 1: That sounds like fun! I''ve never tried sewing before.
+
+    User 2: You should! It''s a great way to learn how to make your own clothes.
+
+    User 1: Maybe I will!
+
+    User 2: I would love to see what you make.
+
+    User 1: I''ll be sure to send you some pictures.
+
+    User 2: Great!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

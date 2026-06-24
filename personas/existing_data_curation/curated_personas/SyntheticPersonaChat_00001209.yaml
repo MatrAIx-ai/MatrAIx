@@ -1,0 +1,78 @@
+id: 00001209
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1209
+data:
+  user 1 personas: 'I am a night owl.
+
+    I make robots for a living.
+
+    I eat mainly chinese food.
+
+    I do not have a good social life.'
+  user 2 personas: 'I have two roomates.
+
+    I m scared of clowns.
+
+    I like to cook.
+
+    I live on the third floor in an apartment.
+
+    I have two dogs.'
+  Best Generated Conversation: 'User 1: Hi there! I''m User 1!
+
+    User 2: Hi, I''m User 2!
+
+    User 1: I''m a night owl, I make robots for a living, I eat mainly Chinese food, and I don''t have a good social life.
+
+    User 2: I''m scared of clowns, I live on the third floor in an apartment, I have two dogs, and I cook a lot.
+
+    User 1: I''ve never met a night owl before! What do you like to do at night?
+
+    User 2: I like to watch movies, read books, and play video games.
+
+    User 1: I like to do all of those things too!
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is The Shawshank Redemption.
+
+    User 2: I''ve never seen that one, but I''ve heard good things about it.
+
+    User 1: You should watch it! It''s a really good movie.
+
+    User 2: I''ll check it out.
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings.
+
+    User 1: I love that series! I''ve read it multiple times.
+
+    User 2: I''ve only read it once, but I''m planning on reading it again soon.
+
+    User 1: You should! It''s a great book.
+
+    User 2: I''ll check it out.
+
+    User 1: What''s your favorite video game?
+
+    User 2: My favorite video game is The Legend of Zelda: Ocarina of Time.
+
+    User 1: That''s a classic! I love that game too.
+
+    User 2: I''ve played it multiple times.
+
+    User 1: Me too!
+
+    User 2: I''m glad we have so much in common.
+
+    User 1: Me too!
+
+    User 2: I hope we can talk again sometime.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: '00003243'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3243
+data:
+  user 1 personas: 'My birthplace is spain.
+
+    I work as a veterinarian.
+
+    I am married and have five children.
+
+    I am a vegetarian.'
+  user 2 personas: 'I like to run so that i can clear my head.
+
+    I enjoy watching mystery movies.
+
+    I like to drink green tea.
+
+    I am an author.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hi, my name is [name]. What''s yours?
+
+    User 1: My name is [name]. I''m from Spain. What about you?
+
+    User 2: I''m from the United States. I''ve always wanted to visit Spain.
+
+    User 1: You should! It''s a beautiful country.
+
+    User 2: I''m sure it is. I hear the food is amazing.
+
+    User 1: It is! I''m a vegetarian, but there are still so many delicious things to eat.
+
+    User 2: I''m not a vegetarian, but I love trying new foods.
+
+    User 1: Well, if you ever visit Spain, you have to try the paella. It''s a traditional rice dish with seafood, chicken, and vegetables.
+
+    User 2: That sounds delicious! I''ll definitely have to try it.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a veterinarian. I love working with animals.
+
+    User 2: That''s awesome! I''ve always wanted to be a vet, but I''m not sure if I could handle the blood and gore.
+
+    User 1: It''s not always easy, but it''s definitely rewarding. I love helping animals and making them feel better.
+
+    User 2: That''s great. I''m sure you''re a great vet.
+
+    User 1: Thanks! I try my best.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to run. It''s a great way to clear my head. I also enjoy watching mystery movies and reading.
+
+    User 2: That sounds like fun. I like to run too, but I don''t get to do it as often as I''d like. I also enjoy watching mystery movies and reading.
+
+    User 1: Well, it looks like we have a lot in common.
+
+    User 2: I think so too. We should get together sometime and do something fun.
+
+    User 1: That would be great! I''d love to get to know you better.
+
+    User 2: Me too! Let''s do it soon.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

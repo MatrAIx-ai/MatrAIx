@@ -1,0 +1,78 @@
+id: '00005571'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5571
+data:
+  user 1 personas: 'I like drinking expensive wine.
+
+    I own a french bulldog.
+
+    I once lost a diamond at a debutante ball.
+
+    I am unemployed and living off a trust fund.
+
+    I like getting my nails done.'
+  user 2 personas: 'I am vegan.
+
+    Sometimes i volunteer at an urban farm.
+
+    I help around with bookkeeping and tours.
+
+    I work at the grocery store.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I volunteer at an urban farm.
+
+    User 1: That''s cool! I''ve always wanted to try volunteering at one.
+
+    User 2: It''s a lot of work, but it''s also really rewarding.
+
+    User 1: I bet it is. I love being around plants and animals.
+
+    User 2: Me too! It''s really peaceful.
+
+    User 1: I can imagine. Do you have any pets?
+
+    User 2: Yes, I have a dog.
+
+    User 1: What kind of dog?
+
+    User 2: A beagle.
+
+    User 1: Beagles are so cute!
+
+    User 2: They are! He''s my best friend.
+
+    User 1: I''m glad you have a pet. They''re great companions.
+
+    User 2: Yeah, they are. What do you do for fun?
+
+    User 1: I like to go out to dinner, see movies, and travel.
+
+    User 2: I like to go out to dinner too. What''s your favorite restaurant?
+
+    User 1: I like going to this little Italian place near my house. The food is amazing.
+
+    User 2: I love Italian food! I''ll have to try that place out.
+
+    User 1: You should! It''s really good.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I like a lot of different movies, but I think my favorite is The Shawshank Redemption.
+
+    User 2: I''ve never seen that one. Is it good?
+
+    User 1: It''s one of the best movies ever made. It''s a classic.
+
+    User 2: I''ll have to check it out.
+
+    User 1: You should! I''m sure you''ll like it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

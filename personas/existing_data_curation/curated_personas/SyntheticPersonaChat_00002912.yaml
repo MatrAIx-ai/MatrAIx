@@ -1,0 +1,76 @@
+id: 00002912
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2912
+data:
+  user 1 personas: 'I wish magic was real.
+
+    I love christmas.
+
+    I like getting packages in the mail.
+
+    I have a daughter.
+
+    I like fantasizing.'
+  user 2 personas: 'I don t like the beach.
+
+    Zebras are my favorite animals.
+
+    I dream of becoming a famous actress.
+
+    I am a writer.
+
+    I m allergic to milk.'
+  Best Generated Conversation: 'User 1: Hi! I''m [username].
+
+    User 2: Hi! I''m [username]. What do you like to do for fun?
+
+    User 1: I like to write, read, and play video games.
+
+    User 2: Oh, I''m an aspiring actress, I also like to read and write.
+
+    User 1: That''s cool! What kind of things do you like to write?
+
+    User 2: I like to write short stories and poems. I''m also working on a novel.
+
+    User 1: That''s awesome! I''ve always wanted to write a novel, but I''ve never gotten around to it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I might have to give it a try.
+
+    User 2: You should! I''m sure you''d be great at it.
+
+    User 1: Thanks!
+
+    User 2: What do you like to read?
+
+    User 1: I like to read a lot of different things, but I mostly read fantasy and science fiction.
+
+    User 2: Oh, that''s cool! I love fantasy and science fiction too.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Lord of the Rings series, and the Hunger Games series.
+
+    User 1: I love those books too!
+
+    User 2: What do you like to play?
+
+    User 1: I like to play a lot of different video games, but I mostly play RPGs and adventure games.
+
+    User 2: Oh, that''s cool! I love RPGs and adventure games too.
+
+    User 1: What are some of your favorite video games?
+
+    User 2: I love the Legend of Zelda series, the Final Fantasy series, and the Mass Effect series.
+
+    User 1: I love those games too!
+
+    User 2: It''s nice to meet someone who likes the same things I do.
+
+    User 1: It''s nice to meet you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

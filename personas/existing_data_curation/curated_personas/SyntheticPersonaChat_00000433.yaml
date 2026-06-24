@@ -1,0 +1,75 @@
+id: '00000433'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 433
+data:
+  user 1 personas: 'I eat healthy.
+
+    I am a high school student.
+
+    I am in the band.
+
+    I am very social.'
+  user 2 personas: 'I love hot wings.
+
+    I have three kids.
+
+    I sing in the church choir.
+
+    I grew up in the trailer park.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [User 1].
+
+
+    User 2: Hi there! I''m [User 2].
+
+
+    User 1: What do you do for a living?
+
+
+    User 2: I''m a stay-at-home mom.
+
+
+    User 1: Oh, that''s cool! I''m a high school student.
+
+
+    User 2: That must be fun!
+
+
+    User 1: It is! I''m in the band, and I love playing music.
+
+
+    User 2: That''s awesome! I love to sing, too. I sing in the church choir.
+
+
+    User 1: That''s great! Do you do any other singing?
+
+
+    User 2: I used to sing in a band, but I don''t have much time for it anymore.
+
+
+    User 1: That''s too bad. I''m sure you were great.
+
+
+    User 2: Thanks! I hope so.
+
+
+    User 1: What do you do for fun?
+
+
+    User 2: I like to spend time with my kids, go shopping, and cook.
+
+
+    User 1: That sounds like fun. I like to go out with my friends, play video games, and watch movies.
+
+
+    User 2: That sounds like a lot of fun!
+
+
+    User 1: It is! I''m glad we met.
+
+
+    User 2: Me too! It''s nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

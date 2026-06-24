@@ -1,0 +1,70 @@
+id: '00003057'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3057
+data:
+  user 1 personas: 'I enjoy playing tennis.
+
+    I am an aspiring singer.
+
+    My father worked for ge.
+
+    Green is my favorite color.
+
+    I love animals.'
+  user 2 personas: 'I am a software engineer.
+
+    I started at google on an internship.
+
+    I work at google.
+
+    My favorite seafood in lobster.
+
+    I live in seattle.'
+  Best Generated Conversation: 'User 1: Hi, I''m an aspiring singer!
+
+    User 2: That''s cool! I''m a software engineer.
+
+    User 1: Oh, I''ve always been fascinated by coding. What''s your favorite language?
+
+    User 2: I''m really into machine learning and artificial intelligence. I''m working on a project using Google Cloud Platform to help detect fraud in online advertising.
+
+    User 1: That sounds really cool! I''m not sure I understand what all of that means, but it sounds like you''re really smart.
+
+    User 2: Thanks! I''m just a nerd who likes to solve problems.
+
+    User 1: I can respect that. I''m a big fan of problem solving too. I actually started playing tennis because I was really bad at it. I wanted to learn how to get better, so I started taking lessons.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to play tennis.
+
+    User 1: It''s a lot of fun. You should give it a try!
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome! What''s your favorite seafood?
+
+    User 2: I love lobster! I can eat it every day if I could.
+
+    User 1: Me too! Lobster is so delicious.
+
+    User 2: It''s the best!
+
+    User 1: I''m glad we agree on something.
+
+    User 2: Me too!
+
+    User 1: So, where are you from?
+
+    User 2: I''m from Seattle.
+
+    User 1: Oh, cool! I''ve always wanted to visit Seattle.
+
+    User 2: You should! It''s a great city.
+
+    User 1: Maybe I will!
+
+    User 2: I hope you do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

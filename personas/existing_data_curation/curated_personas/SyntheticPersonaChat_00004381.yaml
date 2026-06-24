@@ -1,0 +1,60 @@
+id: 00004381
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4381
+data:
+  user 1 personas: 'I like to go to the movies.
+
+    I walk more than 2 miles a day.
+
+    I have a pit bull and a chihuahua.
+
+    My favorite car is the ford mustang.'
+  user 2 personas: 'I love history.
+
+    My father was a dry wall finisher.
+
+    I love to play softball.
+
+    I am a technician.'
+  Best Generated Conversation: 'User 1: Hello, my name is Amy!
+
+    User 2: Hello, my name is Bob!
+
+    User 1: Nice to meet you, Bob! What do you like to do for fun?
+
+    User 2: I love to play softball and read about history.
+
+    User 1: That''s great! I love to go to the movies and walk my dogs.
+
+    User 2: What kind of dogs do you have?
+
+    User 1: I have a pit bull and a chihuahua.
+
+    User 2: Oh, that sounds cute! I love pit bulls.
+
+    User 1: They''re great dogs! What''s your favorite thing about history?
+
+    User 2: I love learning about different cultures and how people lived in the past.
+
+    User 1: That''s really interesting! I love learning about the past too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I don''t have a favorite movie, but I really like the Marvel movies.
+
+    User 2: I love Marvel movies too! I''m excited for the new Thor movie.
+
+    User 1: Me too! I can''t wait to see it.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too! It was nice talking to you, Bob.
+
+    User 2: You too, Amy. I hope we can talk again soon.
+
+    User 1: We should!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

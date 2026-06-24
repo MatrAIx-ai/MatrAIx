@@ -1,0 +1,64 @@
+id: 00008863
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8863
+data:
+  user 1 personas: 'My daughter just graduated high school ranked at the top of her class.
+
+    I am a zookeeper.
+
+    My wife is a breast cancer survivor.
+
+    I work with my wife.
+
+    I have trained over 20 types of animals.'
+  user 2 personas: 'I love animals.
+
+    I am an aspiring singer.
+
+    Green is my favorite color.
+
+    I enjoy playing tennis.'
+  Best Generated Conversation: 'User 1: Hey there!
+
+    User 2: Hello!
+
+    User 1: I''m a zookeeper.
+
+    User 2: That''s amazing! What kind of animals do you work with?
+
+    User 1: I work with a variety of animals, including tigers, lions, elephants, and giraffes.
+
+    User 2: Wow, that must be so cool! I love animals.
+
+    User 1: It is! I love getting to know them and learn about their behavior.
+
+    User 2: I''m a singer. I love to sing.
+
+    User 1: That''s great! What kind of music do you sing?
+
+    User 2: I sing mostly pop music. I''m an aspiring singer.
+
+    User 1: Wow, that''s awesome! I hope you make it big one day.
+
+    User 2: Thanks! Me too!
+
+    User 1: What''s your favorite color?
+
+    User 2: My favorite color is green.
+
+    User 1: Mine too! What''s your favorite thing to do on your free time?
+
+    User 2: I love to play tennis. I play tennis every weekend.
+
+    User 1: That''s great! I love tennis too. I play tennis every week.
+
+    User 2: Wow, we have a lot in common!
+
+    User 1: Yes, we do! I''m so glad to meet you!
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

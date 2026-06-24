@@ -1,0 +1,19 @@
+id: 00036139
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 36139
+persona_description: A weather expert and climate scientist who is monitoring and forecasting weather conditions in the Central Pacific Basin. They are responsible for producing the Central Pacific hurricane
+  outlook, which is a general guide to the overall seasonal hurricane activity in the central Pacific and does not predict whether, where, when, or how many of these systems will affect Hawaii. They are
+  also responsible for continuously monitoring weather conditions, employing a network of satellites, land- and ocean-based sensors, and aircraft reconnaissance missions to supply information for complex
+  computer modeling and human expertise that serves as the basis for the hurricane center’s track and intensity forecasts that extend out five days.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical meteorology/hurricane forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

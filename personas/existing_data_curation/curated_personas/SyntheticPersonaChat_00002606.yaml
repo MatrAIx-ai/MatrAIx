@@ -1,0 +1,82 @@
+id: '00002606'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2606
+data:
+  user 1 personas: 'I own two boxer dogs.
+
+    I work for a clothes retailer.
+
+    My favorite drink is red wine.
+
+    I enjoy gardening.'
+  user 2 personas: 'My favorite food is jello.
+
+    I cannot whistle.
+
+    I enjoy magic the gathering , it is a card game.
+
+    I have 4 pets.
+
+    I live in an apartment.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1].
+
+    User 2: Hi, I''m [User 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy playing Magic the Gathering, it''s a card game.
+
+    User 1: Oh, I''ve never heard of that.
+
+    User 2: It''s a lot of fun, you can play with friends or even online.
+
+    User 1: I might have to check it out.
+
+    User 2: It''s free to play online, so you can give it a try.
+
+    User 1: Cool, I''ll do that. What else do you like to do?
+
+    User 2: I like to watch anime, play video games, and I love to read.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: My favorite book is Harry Potter and the Sorcerer''s Stone.
+
+    User 1: That''s a great book! I love the whole Harry Potter series.
+
+    User 2: Me too! I''ve read them all multiple times.
+
+    User 1: What do you do for work?
+
+    User 2: I work as a software engineer at a tech company.
+
+    User 1: Oh, cool. I work for a clothes retailer.
+
+    User 2: That sounds fun! Do you like it?
+
+    User 1: I do, it''s a great job.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what are your pets?
+
+    User 2: I have four cats and a dog.
+
+    User 1: Wow, that''s a lot of pets!
+
+    User 2: Yeah, I know. They''re all great though.
+
+    User 1: I bet they are.
+
+    User 2: So, what are your dogs like?
+
+    User 1: They''re both boxers, they''re very sweet and playful.
+
+    User 2: That sounds great. I love dogs.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

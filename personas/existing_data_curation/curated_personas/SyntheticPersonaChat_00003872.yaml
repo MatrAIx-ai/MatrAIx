@@ -1,0 +1,74 @@
+id: 00003872
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3872
+data:
+  user 1 personas: 'My skin is olive colored.
+
+    My eyes are green.
+
+    My purse has a picture of a skunk on it.
+
+    I wear glasses that are cateyes.'
+  user 2 personas: 'My name is gerald.
+
+    I work at mcdonalds.
+
+    I like basketball.
+
+    My favorite color is green.
+
+    I like rock music.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+
+    User 2: Hi, I''m Gerald. Nice to meet you.
+
+
+    User 1: Nice to meet you too, Gerald. What do you like to do for fun?
+
+
+    User 2: I like to play basketball, listen to rock music, and watch movies.
+
+
+    User 1: Oh, that sounds fun. I like to watch movies too. What kind of movies do you like to watch?
+
+
+    User 2: I like to watch action movies, comedy movies, and horror movies.
+
+
+    User 1: Oh, I like those too. What''s your favorite action movie?
+
+
+    User 2: My favorite action movie is The Matrix. What''s yours?
+
+
+    User 1: My favorite action movie is Die Hard. I love John McClane.
+
+
+    User 2: Oh, Die Hard is a great movie. I love Bruce Willis.
+
+
+    User 1: Yeah, he''s a great actor. So, what do you like about basketball?
+
+
+    User 2: I like the competition, the teamwork, and the athleticism.
+
+
+    User 1: Oh, I see. I''ve never played basketball, but it looks like a lot of fun.
+
+
+    User 2: It is. If you ever get a chance to play, I recommend it.
+
+
+    User 1: I''ll keep that in mind. Thanks for the recommendation.
+
+
+    User 2: No problem. Nice talking to you, (user 1''s name).
+
+
+    User 1: You too, Gerald.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

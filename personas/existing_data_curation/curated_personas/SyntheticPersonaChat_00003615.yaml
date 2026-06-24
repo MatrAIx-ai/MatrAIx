@@ -1,0 +1,66 @@
+id: '00003615'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3615
+data:
+  user 1 personas: 'I barely show up to work.
+
+    I make 70k a year.
+
+    I pay my employees minimum wage.
+
+    I own my company.'
+  user 2 personas: 'I m a student.
+
+    I like visiting art museums in my spare time.
+
+    I am a vegan.
+
+    I just started dating someone new.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a student.
+
+    User 1: Oh, cool. What do you study?
+
+    User 2: I''m studying art history.
+
+    User 1: That''s really interesting! I''ve always enjoyed art museums.
+
+    User 2: Me too! I love going to them in my spare time.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go hiking, cook, and spend time with my friends and family.
+
+    User 1: Sounds like you have a lot of interests.
+
+    User 2: I do! I like to keep myself busy.
+
+    User 1: That''s good. What''s your favorite thing about yourself?
+
+    User 2: I''m a hard worker and I''m always willing to help others.
+
+    User 1: That''s great. What''s your least favorite thing about yourself?
+
+    User 2: I can be a little too stubborn sometimes.
+
+    User 1: Everyone has their flaws. What''s your biggest dream?
+
+    User 2: To be a successful artist.
+
+    User 1: That''s a great dream. I''m sure you''ll achieve it.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

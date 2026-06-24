@@ -1,0 +1,68 @@
+id: '00005224'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5224
+data:
+  user 1 personas: 'I am a michigan state trooper.
+
+    I have two siberian huskies.
+
+    I have four daughters.
+
+    I love chocolate cake with extra frosting.
+
+    I play guitar.'
+  user 2 personas: 'I am a vegan.
+
+    I am from seattle.
+
+    My favorite band is bon over.
+
+    I work in public relations.
+
+    My parents raised me as a buddhist.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work in public relations.
+
+    User 1: That sounds interesting! What''s your favorite part about it?
+
+    User 2: I like getting to meet new people and learn about different businesses and organizations.
+
+    User 1: That''s cool! I''m a Michigan State trooper.
+
+    User 2: Oh, that''s cool! What''s your favorite part about being a trooper?
+
+    User 1: I like helping people and making a difference in my community.
+
+    User 2: That''s awesome! I''m sure you''re a great trooper.
+
+    User 1: Thanks! I try my best.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play guitar, go fishing, and spend time with my family.
+
+    User 2: That sounds like a lot of fun! I like to play guitar too.
+
+    User 1: Oh, that''s cool! What kind of music do you like to play?
+
+    User 2: I like to play blues, rock, and country.
+
+    User 1: Oh, that''s awesome! I like to play country and blues too.
+
+    User 2: Cool! Maybe we could play together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll give you my number and we can set something up.
+
+    User 1: Sounds good!
+
+    User 2: Great! I''m glad we met!
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

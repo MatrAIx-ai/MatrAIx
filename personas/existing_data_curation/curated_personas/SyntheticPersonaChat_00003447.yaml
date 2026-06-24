@@ -1,0 +1,76 @@
+id: '00003447'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3447
+data:
+  user 1 personas: 'I live alone in a cabin.
+
+    I own a boat.
+
+    I have 5 grandchildren.
+
+    I am a 70 year old man.
+
+    I like to go fishing on the lake.'
+  user 2 personas: 'I am in 3rd grade.
+
+    I am a french girl , but i moved to the us last year.
+
+    I live with my parents and my little brother.
+
+    I do not have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: Hello, my name is Jeanne.
+
+    User 1: Jeanne, it is nice to meet you. I am (user 1''s name).
+
+    User 2: Nice to meet you too, (user 1''s name).
+
+    User 1: What grade are you in?
+
+    User 2: I am in the 3rd grade.
+
+    User 1: That''s great! I am in the 70th grade.
+
+    User 2: Wow! You are very old.
+
+    User 1: Yes, I am. But I am still young at heart.
+
+    User 2: That''s good.
+
+    User 1: So, where do you live?
+
+    User 2: I live in the US.
+
+    User 1: Oh, I see. I live in a cabin in the woods.
+
+    User 2: That sounds nice. I live with my parents and my little brother.
+
+    User 1: That sounds nice too. I have five grandchildren.
+
+    User 2: Wow! That must be a lot of fun.
+
+    User 1: It is. I love spending time with them.
+
+    User 2: That''s great.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to summer camp and play soccer.
+
+    User 1: That sounds like fun. I like to go fishing on the lake.
+
+    User 2: That sounds nice too.
+
+    User 1: So, what are you looking forward to this summer?
+
+    User 2: I am looking forward to going to summer camp and making new friends.
+
+    User 1: That''s great. I am sure you will have a lot of fun.
+
+    User 2: Thank you. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: 00038492
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 38492
+persona_description: A scientist who specializes in planetary science, particularly the study of Jupiter and its moons. This persona is interested in the extreme conditions experienced by the spacecraft
+  Juno as it approaches Jupiter, the custom radiation vault designed to protect it from the deadly radiation storms, and the potential consequences of the spacecraft's radiation exposure, including memory
+  failure, computer errors, and potential hardware problems that could jeopardize scientific research and cause Juno to spiral out of control. This persona is also interested in the history and development
+  of Juno, the spacecraft that was built to withstand the deadly radiation storms of Jupiter.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: planetary science
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

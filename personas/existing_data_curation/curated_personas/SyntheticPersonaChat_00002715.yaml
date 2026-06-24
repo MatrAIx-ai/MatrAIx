@@ -1,0 +1,65 @@
+id: '00002715'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2715
+data:
+  user 1 personas: 'I am allergic to milk.
+
+    I do not like the beach.
+
+    Zebras are my favorite animals.
+
+    I am a writer.'
+  user 2 personas: 'I babysit for the woman who lives next door.
+
+    I only take the bus.
+
+    I often do not have the money to pay my utility bills.
+
+    I am an old woman who lives on a social security check.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: How are you doing today?
+
+    User 2: I''m doing okay, thank you.
+
+    User 1: That''s good to hear.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a writer.
+
+    User 2: Oh, that''s interesting. What kind of things do you write?
+
+    User 1: I write short stories and novels.
+
+    User 2: That sounds cool. I''m not much of a reader myself.
+
+    User 1: No worries. I''m not much of a beach person myself. I''m allergic to milk.
+
+    User 2: Oh, that''s too bad. I love going to the beach.
+
+    User 1: I know, it''s a bummer. But I love zebras, so I guess that makes up for it.
+
+    User 2: Zebras are pretty cool. I''m an old woman who lives on a social security check and often do not have the money to pay my utility bills, but I babysit for the woman who lives next door, so that
+    helps.
+
+    User 1: That''s good to hear. I''m glad you''re able to find some work.
+
+    User 2: Yeah, it''s not much, but it helps.
+
+    User 1: It''s better than nothing.
+
+    User 2: I know.
+
+    User 1: Well, I''m going to go now. It was nice talking to you.
+
+    User 2: You too. Have a good day.
+
+    User 1: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

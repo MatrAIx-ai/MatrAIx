@@ -1,0 +1,70 @@
+id: 00000697
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 697
+data:
+  user 1 personas: 'I like to draw.
+
+    I live in an apartment.
+
+    I am one of four siblings.
+
+    My favorite color is blue.'
+  user 2 personas: 'I prefer summer.
+
+    My favorite hero is flash.
+
+    I type one handed.
+
+    I do not like dresses.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, write, and play video games.
+
+    User 1: I like to draw, read, and play video games too!
+
+    User 2: That''s cool! What kind of things do you like to draw?
+
+    User 1: I like to draw characters from anime and video games.
+
+    User 2: That''s awesome! I love anime too!
+
+    User 1: Me too! What''s your favorite anime?
+
+    User 2: My favorite anime is Naruto.
+
+    User 1: That''s a great anime! I love Naruto too!
+
+    User 2: What''s your favorite character from Naruto?
+
+    User 1: My favorite character from Naruto is Sasuke.
+
+    User 2: That''s a good choice! Sasuke is a great character.
+
+    User 1: He is! I love his character development.
+
+    User 2: I agree! He''s really well-written.
+
+    User 1: Do you have any other favorite anime?
+
+    User 2: Yes, I also like Attack on Titan, My Hero Academia, and Demon Slayer.
+
+    User 1: I''ve heard good things about those anime! I''ll have to check them out.
+
+    User 2: I highly recommend them! They''re all really good.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

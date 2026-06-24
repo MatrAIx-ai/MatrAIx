@@ -1,0 +1,60 @@
+id: 00002879
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2879
+data:
+  user 1 personas: 'I love to play soccer.
+
+    My favorite movies are disney movies.
+
+    I live with my parents.
+
+    I am an insatiable reader.'
+  user 2 personas: 'I like to grow my own herbs and vegetables in my garden.
+
+    My favorite food is raw onion.
+
+    I m really into the powers of crystals.
+
+    I sew my own clothes.
+
+    I have long curly hair.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to grow my own herbs and vegetables, and I''m really into the powers of crystals.
+
+    User 1: That''s cool! I love to read and play soccer.
+
+    User 2: I love Disney movies! I''m an insatiable reader too.
+
+    User 1: That''s awesome! I''m really into the history of Disney and their movies.
+
+    User 2: I love that! I''m also into the history of crystals and their powers.
+
+    User 1: That''s really cool! I''m not sure I believe in the powers of crystals, but I think they''re pretty.
+
+    User 2: They are! I love the way they look.
+
+    User 1: What do you like to do with your crystals?
+
+    User 2: I wear them, I put them in my garden, and I use them for healing.
+
+    User 1: That''s really cool! I''ve never used crystals for healing before.
+
+    User 2: You should try it! It can be really helpful.
+
+    User 1: I might! I''m always looking for new ways to improve my health.
+
+    User 2: It''s worth a try!
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

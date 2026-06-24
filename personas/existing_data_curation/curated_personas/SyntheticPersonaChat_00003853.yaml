@@ -1,0 +1,52 @@
+id: 00003853
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3853
+data:
+  user 1 personas: 'My mother is a librarian.
+
+    I love to read fantasy novels and poetry.
+
+    I am going to school for writing.
+
+    I would like to be a journalist one day.
+
+    I often help her sort books in the library.'
+  user 2 personas: 'I love to take road trips.
+
+    I live in upstate new york.
+
+    My favorite place to visit is seattle.
+
+    I live with my husband and two children.
+
+    I work as a meeting coordinator.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name].
+
+    User 2: Hello! I''m [name].
+
+    User 1: It''s nice to meet you! What do you do for fun?
+
+    User 2: I love to take road trips. I live in upstate New York, but my favorite place to visit is Seattle.
+
+    User 1: That sounds like fun! I love to read fantasy novels and poetry.
+
+    User 2: Oh, that''s cool! I''m more of a nonfiction reader myself, but I do enjoy a good novel every now and then.
+
+    User 1: I''m going to school for writing. I would like to be a journalist one day.
+
+    User 2: That''s great! I have always admired people who can write well.
+
+    User 1: Thank you! My mother is a librarian, so I grew up around books. I often help her sort books in the library.
+
+    User 2: That''s awesome! I love libraries. I go to the library in my town all the time.
+
+    User 1: I''m glad to hear that! I''m always happy to meet a fellow book lover.
+
+    User 2: Me too! It''s nice to meet you, [name].
+
+    User 1: It''s nice to meet you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

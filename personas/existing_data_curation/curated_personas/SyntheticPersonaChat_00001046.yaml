@@ -1,0 +1,74 @@
+id: '00001046'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1046
+data:
+  user 1 personas: 'I like swimming.
+
+    I love spicy food.
+
+    I have traveled to europe and mexico.
+
+    I am an only child.'
+  user 2 personas: 'My favorite animal is the panda.
+
+    I am a zookeeper.
+
+    I love to read crime novels.
+
+    My right foot only has 3 toes.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read crime novels, and I''m a zookeeper.
+
+    User 1: Oh, that''s cool! I like to swim, and I''ve been to Europe and Mexico.
+
+    User 2: That''s great! I''ve always wanted to travel to Europe.
+
+    User 1: It''s amazing! I love the history and culture there.
+
+    User 2: What''s your favorite place that you''ve been to?
+
+    User 1: I think my favorite place was Rome. I loved the architecture and the food.
+
+    User 2: That''s one of my favorite places too! I love the Colosseum.
+
+    User 1: Me too! It''s so impressive.
+
+    User 2: What''s your favorite type of crime novel?
+
+    User 1: I like the ones that are set in different countries. I recently read one that was set in Japan, and it was really good.
+
+    User 2: I''ve never read a crime novel set in Japan. I''ll have to check that out.
+
+    User 1: You should! It''s called "Tokyo Vice".
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem! So, what''s it like being a zookeeper?
+
+    User 2: It''s great! I love working with animals.
+
+    User 1: What''s your favorite animal?
+
+    User 2: My favorite animal is the panda.
+
+    User 1: That''s a great choice! Pandas are so cute.
+
+    User 2: They are! I love watching them eat bamboo.
+
+    User 1: I''ve never seen a panda in real life.
+
+    User 2: You should! They''re amazing creatures.
+
+    User 1: I''ll have to put that on my bucket list.
+
+    User 2: You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

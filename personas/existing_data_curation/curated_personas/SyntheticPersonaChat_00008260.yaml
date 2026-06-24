@@ -1,0 +1,82 @@
+id: 00008260
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8260
+data:
+  user 1 personas: 'I do not like wearing pants when i do not have to.
+
+    I enjoy john gresham movies , but not his books.
+
+    My girlfriend tells me she is going to leave me almost every day.
+
+    I am a really , really good guitar player.
+
+    My parents used to work in politics , until they discovered the goodness within themselves.'
+  user 2 personas: 'I run more then 2 miles a day even though i hate it.
+
+    I like snowboarding.
+
+    I have been in 3 triathlons.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user1].
+
+    User 2: Hi [user1], my name is [user2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to run, snowboard, and I''ve been in 3 triathlons.
+
+    User 1: That''s cool! I''ve never done a triathlon, but I''ve always wanted to try.
+
+    User 2: You should! It''s a great way to challenge yourself.
+
+    User 1: I know, I know. I''m just not very good at running.
+
+    User 2: Well, you have to start somewhere!
+
+    User 1: I know, I know.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play guitar, watch movies, and go to concerts.
+
+    User 2: That''s cool! I like to do those things too.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but I mostly listen to rock and metal.
+
+    User 1: Me too! I love rock and metal. What bands do you like?
+
+    User 2: I like a lot of bands, but some of my favorites are Metallica, Black Sabbath, and Slayer.
+
+    User 1: Those are great bands! I love Metallica and Slayer.
+
+    User 2: Me too! What do you think of Black Sabbath?
+
+    User 1: I think they''re one of the greatest metal bands of all time.
+
+    User 2: I agree! I love their music.
+
+    User 1: Me too!
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go snowboarding.
+
+    User 1: That sounds fun! I wish I could go with you.
+
+    User 2: You should! It''s a great way to get some exercise.
+
+    User 1: I know, I know. I''ll try to go sometime soon.
+
+    User 2: Good! You won''t regret it.
+
+    User 1: I hope not.
+
+    User 2: You won''t.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

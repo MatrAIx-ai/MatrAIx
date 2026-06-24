@@ -1,0 +1,60 @@
+id: 00001285
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1285
+data:
+  user 1 personas: 'I have a new job.
+
+    I like to make cakes.
+
+    I like the internet.
+
+    I am a vegetarian.'
+  user 2 personas: 'I believe in love at first sight.
+
+    I have two brothers.
+
+    I ve been a vegan since i was 5.
+
+    I love to sleep in.
+
+    I work in a lab.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for work?
+
+    User 2: I work in a lab. I''m a scientist.
+
+    User 1: That sounds interesting! What kind of science?
+
+    User 2: I study plants. I''m trying to find ways to help them grow better.
+
+    User 1: That''s cool! I like plants. I''m a vegetarian.
+
+    User 2: Oh, that''s funny. I''m a vegan. I''ve been one since I was 5 years old.
+
+    User 1: Wow, that''s young! What made you decide to become a vegan?
+
+    User 2: I was watching a documentary about factory farming, and I was really upset by what I saw. I decided that I couldn''t be a part of that industry anymore.
+
+    User 1: I can understand that. I''ve seen some of those documentaries too, and they''re really eye-opening.
+
+    User 2: Yeah, they are. They''re hard to watch, but they''re important.
+
+    User 1: I agree. I think it''s important for people to know what happens to animals in factory farms.
+
+    User 2: I think so too. That''s why I''m so passionate about veganism. I want to help people make the connection between their food choices and the animals that are harmed in the process.
+
+    User 1: I think you''re doing great work. I''m really impressed by your dedication to this cause.
+
+    User 2: Thank you. I''m just glad that I can make a difference.
+
+    User 1: You''re definitely making a difference. I''m sure you''ve inspired a lot of people to think about their food choices.
+
+    User 2: I hope so. That''s what I''m hoping for.
+
+    User 1: Well, I''m glad I met you. You''re an inspiration.
+
+    User 2: Thank you. It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

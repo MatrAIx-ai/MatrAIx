@@ -1,0 +1,19 @@
+id: 00054895
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 54895
+persona_description: A software engineer who specializes in C++ programming and has expertise in handling optional objects. They are familiar with the use of pointers to refer to optional objects and have
+  experience in using smart pointers to handle the details of shallow copying. They are also skilled in using the OptionalPointee concept to convey the notion of optionality in expressions that use dereference
+  and access operators. They have a deep understanding of the limitations of pointers for handling optional objects and are aware of the benefits of using automatic storage and deep-copy semantics to manipulate
+  optional values. They are proficient in using the OptionalPointee concept to handle the access to the possibly undefined value because of the idiomatic aid present in the concept.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: C++ Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: Optional Object Handling in C++
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,66 @@
+id: 00005845
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5845
+data:
+  user 1 personas: 'I only eat locally sourced food.
+
+    I am active on my city council.
+
+    I like wide , open spaces.
+
+    I own a home with 5 acres of land.'
+  user 2 personas: 'I keep my hair cut very short.
+
+    I am allergic to cats.
+
+    I am a member of the ymca.
+
+    I love scary movies.
+
+    I am learning to play the piano.'
+  Best Generated Conversation: 'User 1: Hello! What''s your name?
+
+    User 2: I''m David, it''s nice to meet you.
+
+    User 1: Nice to meet you too, David! What do you like to do for fun?
+
+    User 2: I enjoy playing the piano, going to the gym, and watching scary movies.
+
+    User 1: Oh, that''s cool! I like to go to the gym too. Do you have any pets?
+
+    User 2: I''m allergic to cats, so I don''t have any pets.
+
+    User 1: Oh, that''s too bad. I have a cat named Mittens.
+
+    User 2: I''m sure she''s a very sweet cat.
+
+    User 1: She is! She''s very playful and loves to cuddle.
+
+    User 2: I''m glad to hear that.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a member of the YMCA. I''m also a volunteer for a local community garden.
+
+    User 1: That''s great! I''m active on my city council.
+
+    User 2: Oh, that''s interesting! What''s your favorite part of being on the city council?
+
+    User 1: I like being able to help make decisions that affect my community.
+
+    User 2: That''s a great reason to be on the city council!
+
+    User 1: Thanks! What''s your favorite scary movie?
+
+    User 2: I really like The Conjuring.
+
+    User 1: I''ve heard good things about that movie! I''ve never seen it before.
+
+    User 2: You should definitely check it out. It''s really scary!
+
+    User 1: I will! Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

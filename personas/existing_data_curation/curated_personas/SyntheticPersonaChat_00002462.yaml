@@ -1,0 +1,63 @@
+id: '00002462'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2462
+data:
+  user 1 personas: 'I drive a ford truck.
+
+    I am a police officer.
+
+    I hate the holidays.
+
+    I have a gun collection at home.
+
+    I have been married 3 times.'
+  user 2 personas: 'My favorite musician in charlie daniels.
+
+    I am from tennessee.
+
+    I am married.
+
+    I love to fish.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hey there!
+
+    User 1: What are you up to today?
+
+    User 2: I''m just relaxing at home.
+
+    User 1: Nice. I''m just getting ready for work.
+
+    User 2: Oh, what do you do for a living?
+
+    User 1: I''m a police officer.
+
+    User 2: That''s cool! I''ve always been interested in law enforcement.
+
+    User 1: It''s a great job. I love helping people.
+
+    User 2: I bet. I''m sure it''s a lot of work, though.
+
+    User 1: It can be, but it''s also very rewarding.
+
+    User 2: I can imagine. Do you have any interesting stories from your time on the force?
+
+    User 1: Sure, I have a few. One time, I was called to a domestic disturbance. When I got there, the husband was drunk and belligerent. He was threatening to hurt his wife and kids. I was able to talk
+    him down and defuse the situation.
+
+    User 2: Wow, that''s intense. I''m glad you were able to help.
+
+    User 1: Thanks. That''s just one of many stories I could tell you.
+
+    User 2: I''d love to hear more.
+
+    User 1: I''ll tell you about them sometime. For now, I have to get going. I have to be at work in an hour.
+
+    User 2: Okay, have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

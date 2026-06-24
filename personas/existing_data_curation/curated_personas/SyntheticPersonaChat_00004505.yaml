@@ -1,0 +1,72 @@
+id: '00004505'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4505
+data:
+  user 1 personas: 'I work in a doctors office.
+
+    There are thorns tattooed on my toes.
+
+    I am studying to be a dental hygienist but i hate seeing patients saliva.
+
+    I have a rose tattooed on my right ankle.'
+  user 2 personas: 'I babysit for the woman who lives next door.
+
+    My favorite color is yellow.
+
+    I am an old woman who lives on a social security check.
+
+    I only take the bus.
+
+    I often do not have the money to pay my utility bills.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is Mary.
+
+    User 1: Nice to meet you, Mary! My name is John.
+
+    User 2: Nice to meet you too, John!
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a retired nurse.
+
+    User 1: Oh, that''s cool! I work in a doctor''s office.
+
+    User 2: Really? That''s awesome! What do you do there?
+
+    User 1: I''m a receptionist.
+
+    User 2: Oh, that sounds like a fun job!
+
+    User 1: It is! I get to meet a lot of interesting people.
+
+    User 2: That''s awesome! What are your hobbies?
+
+    User 1: I love to read and watch movies.
+
+    User 2: Oh, me too! What are some of your favorite books and movies?
+
+    User 1: I love to read historical fiction and romantic comedies.
+
+    User 2: Oh, me too! I love Pride and Prejudice and When Harry Met Sally.
+
+    User 1: Those are both great movies! I love them too.
+
+    User 2: Me too! What are some of your favorite books?
+
+    User 1: I love the Outlander series by Diana Gabaldon and the Bridgerton series by Julia Quinn.
+
+    User 2: Oh, I love those series too! I''m so excited for the new Bridgerton season.
+
+    User 1: Me too! I''m going to binge watch it as soon as it comes out.
+
+    User 2: Me too! It sounds like we have a lot in common.
+
+    User 1: We do! It''s nice to meet you, Mary.
+
+    User 2: It''s nice to meet you too, John.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

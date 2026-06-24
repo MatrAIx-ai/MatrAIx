@@ -1,0 +1,20 @@
+id: 00005668
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5668
+persona_description: A NASA mission planner who specializes in the development and execution of human spaceflight missions to asteroids and other small bodies, with a focus on the design and operation of
+  rovers and hoppers, the use of radar tomography for interior structure analysis, and the planning of human missions to these targets. The persona is also knowledgeable about the roles of the crew and
+  the use of the ISS as a first mission step for a Deep Space Habitat simulation of the human missions. The persona is responsible for the planning and execution of robotic missions to these targets, including
+  the collection of macroscopic samples, the investigation of NEO interior characteristics, and the measurement of density and macroporosity. The persona is also responsible for the development of the roadmap
+  for such missions, including the decomposing of the exploration of NEOs into logical steps and the use of the ISS as a prime location for such missions.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Space Mission Planning
+  general_domain_top01pct: Aerospace Engineering
+  specific_domain_top01pct: Asteroid Exploration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

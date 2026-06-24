@@ -1,0 +1,60 @@
+id: '00005236'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5236
+data:
+  user 1 personas: 'I am in love with adam levine.
+
+    I have two children under ten.
+
+    I need extra iron in my diet.
+
+    I have two cats.'
+  user 2 personas: 'I skydive frequently.
+
+    I like the band queens of the stone age.
+
+    I need certain medications to live.
+
+    I like fast food too much.
+
+    I have won an olympic medal.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to skydive, play video games, and watch movies.
+
+    User 1: That sounds fun! I like to play video games too. Do you have any favorite games?
+
+    User 2: I like playing Call of Duty and Minecraft. What about you?
+
+    User 1: I like playing Call of Duty and Fortnite. What do you do for a living?
+
+    User 2: I''m an Olympic athlete. I won a medal in swimming.
+
+    User 1: That''s amazing! What kind of medication do you need to live?
+
+    User 2: I have diabetes. I take insulin to manage my blood sugar levels.
+
+    User 1: Oh, I see. I''m glad you''re able to manage your diabetes.
+
+    User 2: Thank you.
+
+    User 1: I''m also a mother. I have two children under ten.
+
+    User 2: That''s great! What are their names?
+
+    User 1: Their names are Emily and Sarah.
+
+    User 2: They''re beautiful names.
+
+    User 1: Thank you. I''m glad we met.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

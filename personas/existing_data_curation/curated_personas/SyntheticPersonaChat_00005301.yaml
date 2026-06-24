@@ -1,0 +1,66 @@
+id: '00005301'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5301
+data:
+  user 1 personas: 'I have a new job selling cars.
+
+    I love to paint pictures.
+
+    My wife use to be a teacher.
+
+    I love meat.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I like to cook.
+
+    I like gardening.
+
+    My children are mostly grown.
+
+    I live in a small city.
+
+    I have a cat named felix and a small terror names emmy.'
+  Best Generated Conversation: 'User 1: Hi! I''m new here.
+
+    User 2: Hi! Welcome! What do you do for fun?
+
+    User 1: I like to paint pictures and play video games.
+
+    User 2: Nice! I like to cook and garden.
+
+    User 1: Oh, that''s cool! I love pizza.
+
+    User 2: Me too! I make the best pizza.
+
+    User 1: I''m sure you do! What''s your secret?
+
+    User 2: I use fresh ingredients and I cook it in a wood-fired oven.
+
+    User 1: That sounds delicious! I''ll have to try it sometime.
+
+    User 2: You should! I''m sure you''ll love it.
+
+    User 1: What do you like to cook?
+
+    User 2: I like to cook all sorts of things, but my favorite is probably pasta.
+
+    User 1: Oh, I love pasta! What''s your favorite pasta dish?
+
+    User 2: I love making a simple pasta dish with fresh tomatoes, basil, and garlic.
+
+    User 1: That sounds amazing! I''ll have to try that sometime.
+
+    User 2: You should! It''s really easy to make and it''s so delicious.
+
+    User 1: I''m sure it is! I''m getting hungry just thinking about it.
+
+    User 2: Me too! I''m going to have to make some pasta soon.
+
+    User 1: You should! I''ll be there for dinner.
+
+    User 2: Deal!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

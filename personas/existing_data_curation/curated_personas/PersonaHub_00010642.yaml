@@ -1,0 +1,18 @@
+id: '00010642'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10642
+persona_description: A dermatologist who specializes in the diagnosis and treatment of skin disorders, particularly those involving moles and skin cancer. They have a deep understanding of the anatomy and
+  physiology of the skin, and are skilled in the use of medical terminology and diagnostic tools. They are likely to be familiar with the NCI Dictionary of Cancer Terms and the various types of moles, including
+  junctional nevi.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: dermatology
+  general_domain_top01pct: None
+  specific_domain_top01pct: dermatological oncology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

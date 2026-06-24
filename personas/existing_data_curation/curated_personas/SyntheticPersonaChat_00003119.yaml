@@ -1,0 +1,58 @@
+id: 00003119
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3119
+data:
+  user 1 personas: 'I like the flintstones.
+
+    My friend likes cartoons like south park.
+
+    I prefer the simpler times.
+
+    Some jokes go too far.
+
+    I like simple jokes.'
+  user 2 personas: 'My nickname is bubblegum.
+
+    I love to sing in the shower.
+
+    My brother and i have bright red hair.
+
+    I am plotting on taking over the world.
+
+    I have found the cure for the common cold.'
+  Best Generated Conversation: 'User 1: Hey, what''s your name?
+
+    User 2: My name is Bubblegum.
+
+    User 1: That''s a cool nickname! How did you get it?
+
+    User 2: My brother and I have bright red hair, so my parents used to call us bubblegum and blueberry.
+
+    User 1: That''s a cute story! What do you like to do for fun?
+
+    User 2: I love to sing in the shower! I also like to read and play video games.
+
+    User 1: I love to sing in the shower too! What kind of music do you like to sing?
+
+    User 2: I like to sing all kinds of music, but my favorite is probably pop music.
+
+    User 1: Nice! I love pop music too. Do you have any favorite artists?
+
+    User 2: I love Taylor Swift, Katy Perry, and Ariana Grande.
+
+    User 1: Me too! They''re all so talented. What are some of your favorite video games?
+
+    User 2: I love the Mario games, the Legend of Zelda games, and the Animal Crossing games.
+
+    User 1: Those are all great games! I love the Mario games too.
+
+    User 2: Me too! They''re so much fun.
+
+    User 1: It''s been great talking to you, Bubblegum!
+
+    User 2: It''s been great talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

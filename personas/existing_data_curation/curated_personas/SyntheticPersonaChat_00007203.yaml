@@ -1,0 +1,80 @@
+id: '00007203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7203
+data:
+  user 1 personas: 'I own a small farm where i herd cattle.
+
+    I live with my wife and kids.
+
+    I live near grand rapids , michigan.
+
+    I have three beautiful dogs and one cat.
+
+    My name is william , but people call me bill.'
+  user 2 personas: 'I am currently going to school to be an artist.
+
+    I have a small pet cat.
+
+    I live in a small apartment in new york.
+
+    My favorite flower is a rose.
+
+    I am twenty one years old.'
+  Best Generated Conversation: 'User 1: Hi, I''m Bill.
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I''m an artist, and I''m currently going to school to learn more about it.
+
+    User 1: That''s cool! I''m a farmer.
+
+    User 2: Really? That''s so interesting! What kind of farm do you have?
+
+    User 1: I have a small farm where I herd cattle.
+
+    User 2: That''s amazing! I''ve always wanted to learn more about farming.
+
+    User 1: It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I can imagine. I''m sure it''s a lot of fun too.
+
+    User 1: It is! I love working with animals.
+
+    User 2: That''s great! I''m glad you enjoy your job.
+
+    User 1: Thanks. I do. So, what are you doing in New York?
+
+    User 2: I''m going to school here. I''m studying art.
+
+    User 1: That''s awesome! What''s your favorite thing about New York?
+
+    User 2: I love the art scene here. There''s so much to see and do.
+
+    User 1: I can imagine. I''ve never been to New York, but I''ve heard great things about it.
+
+    User 2: You should definitely come visit sometime!
+
+    User 1: I will! I''ve been wanting to go for a long time.
+
+    User 2: Great! You won''t be disappointed.
+
+    User 1: I''m sure I won''t. So, what are you doing after school?
+
+    User 2: I''m not sure yet. I''m thinking about moving to California after I graduate.
+
+    User 1: California? That''s a big change!
+
+    User 2: I know, but I think it would be a good opportunity.
+
+    User 1: I think it would be too. California is a beautiful state.
+
+    User 2: I''m glad you think so. I''m really excited about the prospect of moving there.
+
+    User 1: I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00000745'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 745
+data:
+  user 1 personas: 'I like to swim.
+
+    I am bald.
+
+    I hate tacos.
+
+    I don t work.'
+  user 2 personas: 'I enjoy reading.
+
+    I am a nurse.
+
+    I work in the emergency room.
+
+    My favorite drink is dr pepper.
+
+    I am divorced.'
+  Best Generated Conversation: 'User 1: I''m glad I was able to meet you here, thanks for suggesting this place.
+
+    User 2: No problem, I''m always happy to meet new people.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a nurse, and I work in the emergency room.
+
+    User 1: That sounds like a challenging job.
+
+    User 2: It can be, but it''s also very rewarding.
+
+    User 1: What''s your favorite part about your job?
+
+    User 2: I love being able to help people, and I love the adrenaline rush of working in the emergency room.
+
+    User 1: That''s great. Do you have any hobbies?
+
+    User 2: I love reading, and I also enjoy going swimming.
+
+    User 1: I love reading too! What are some of your favorite books?
+
+    User 2: I like to read a variety of books, but I''m a big fan of historical fiction and mystery novels.
+
+    User 1: Those are two of my favorite genres too! What''s your favorite historical fiction book?
+
+    User 2: My favorite historical fiction book is "The Book Thief" by Markus Zusak.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: Well, I should probably get going. It was nice meeting you.
+
+    User 2: It was nice meeting you too.
+
+    User 1: I hope we can get together again soon.
+
+    User 2: Me too. Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

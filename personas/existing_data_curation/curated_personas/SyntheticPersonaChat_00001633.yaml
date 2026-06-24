@@ -1,0 +1,74 @@
+id: '00001633'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1633
+data:
+  user 1 personas: 'I have many homes.
+
+    I collect vintage cars.
+
+    I like to ride motorcycles.
+
+    I ride horses.
+
+    I try to limit how much meat i eat for health reasons.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I have never broken a bone.
+
+    I love cats.
+
+    I am athletic.
+
+    I am a freshman in college.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to play sports, read, and hang out with friends.
+
+    User 1: What kind of sports do you play?
+
+    User 2: I play basketball, soccer, and tennis.
+
+    User 1: Do you play on any teams?
+
+    User 2: I play on a basketball team and a tennis team.
+
+    User 1: That''s great! I used to play basketball and tennis when I was younger.
+
+    User 2: What do you like to read?
+
+    User 1: I like to read all kinds of books, but I mostly read fiction.
+
+    User 2: What''s your favorite book?
+
+    User 1: My favorite book is "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 2: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 1: You should! It''s a great book.
+
+    User 2: What do you like to do with your friends?
+
+    User 1: We like to go to the movies, play games, and just hang out.
+
+    User 2: That sounds like fun. I like to do those things too.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: I think so too!
+
+    User 1: Well, it was nice talking to you, [name].
+
+    User 2: You too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

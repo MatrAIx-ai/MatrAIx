@@ -1,0 +1,18 @@
+id: '00064430'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64430
+persona_description: A developer who specializes in the C programming language and is skilled in the use of the malloc(2) function. This person is familiar with the Quickfit algorithm and the allocation
+  methods used by the malloc(2) function, including the smalloc and mallocz functions. They are comfortable with the use of interrupt handlers and have experience with the smalloc function's retry mechanism.
+  This person is also familiar with the use of the Msize function to grow the allocated block to encompass unused space.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: C Programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: Memory Management in C
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

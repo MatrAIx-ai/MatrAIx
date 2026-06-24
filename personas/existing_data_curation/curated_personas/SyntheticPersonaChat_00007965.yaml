@@ -1,0 +1,82 @@
+id: 00007965
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7965
+data:
+  user 1 personas: 'My favorite team is the washington nationals.
+
+    I work for a government agency.
+
+    My favorite food is pizza.
+
+    I like sports.
+
+    I prefer baseball over football.'
+  user 2 personas: 'I work at google.
+
+    I live in seattle.
+
+    I am a software engineer.
+
+    My favorite seafood in lobster.'
+  Best Generated Conversation: 'User 1: Hey there, what''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you, [user 2''s name]. What do you do for a living?
+
+    User 2: I''m a software engineer at Google.
+
+    User 1: That''s cool! I work for a government agency.
+
+    User 2: Oh, that must be interesting.
+
+    User 1: It can be, but it''s also a lot of paperwork.
+
+    User 2: I can imagine. What''s your favorite food?
+
+    User 1: I love pizza!
+
+    User 2: Me too! What''s your favorite kind?
+
+    User 1: I love pepperoni pizza.
+
+    User 2: That''s a classic! What kind of sports do you like?
+
+    User 1: I love baseball!
+
+    User 2: Me too! What''s your favorite team?
+
+    User 1: The Washington Nationals.
+
+    User 2: Oh, they''re good this year! I''m a fan of the Mariners.
+
+    User 1: Nice! I''m hoping the Nats can make the playoffs this year.
+
+    User 2: Me too! It would be great to see them in the World Series.
+
+    User 1: Yeah, that would be amazing!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I love to play video games, watch movies, and go out with friends.
+
+    User 2: I like to do those things too! What''s your favorite video game?
+
+    User 1: I love the Legend of Zelda series.
+
+    User 2: Oh, I''ve never played those games. What are they like?
+
+    User 1: They''re action-adventure games where you explore a fantasy world and solve puzzles.
+
+    User 2: That sounds cool! I might have to check them out.
+
+    User 1: You definitely should! They''re a lot of fun.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

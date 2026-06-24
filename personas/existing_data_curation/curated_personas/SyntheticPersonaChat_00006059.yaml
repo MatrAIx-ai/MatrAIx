@@ -1,0 +1,88 @@
+id: 00006059
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6059
+data:
+  user 1 personas: 'I love ham and cheese sandwiches.
+
+    My name is arnold.
+
+    I am 10 years old.
+
+    I also love orange juice.
+
+    I like to watch tv.'
+  user 2 personas: 'I love to paint.
+
+    I am a graphic designer.
+
+    My favorite season is spring.
+
+    I enjoy walks on the beach.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2].
+
+    User 1: Nice to meet you! My name is Arnold.
+
+    User 2: Nice to meet you too, Arnold!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to paint, watch tv, and go for walks on the beach.
+
+    User 1: That sounds cool! I like to watch tv too. What kind of shows do you like to watch?
+
+    User 2: I like to watch a lot of different kinds of shows, but my favorite is probably The Office.
+
+    User 1: Oh, I love The Office! It''s one of my favorite shows too!
+
+    User 2: Yeah, it''s so funny!
+
+    User 1: So, what do you like to paint?
+
+    User 2: I like to paint all sorts of things, but my favorite is probably landscapes.
+
+    User 1: That sounds really cool! I''ve always wanted to try painting, but I''m not very good at it.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: Maybe I will.
+
+    User 2: You should! You might be surprised how good you are at it.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: You''re welcome!
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a graphic designer.
+
+    User 1: Oh, that sounds cool! What do you like about it?
+
+    User 2: I like the creative aspect of it. I also like being able to see my work come to life.
+
+    User 1: That makes sense. I can see how that would be satisfying.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: My favorite season is spring. I love the fresh air and the beautiful flowers.
+
+    User 1: That makes sense. Spring is a really nice time of year.
+
+    User 2: Yeah, it is.
+
+    User 1: Well, it was nice talking to you, [user 2].
+
+    User 2: You too, Arnold.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

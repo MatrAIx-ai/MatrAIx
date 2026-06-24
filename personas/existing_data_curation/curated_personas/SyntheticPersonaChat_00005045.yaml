@@ -1,0 +1,58 @@
+id: '00005045'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5045
+data:
+  user 1 personas: 'I love chocolate milk shakes.
+
+    My favorite pass time is gazing at clouds.
+
+    My favorite holiday is halloween because i like dressing up.
+
+    My best friend is my dog allie.'
+  user 2 personas: 'I like field hockey and soccer.
+
+    I get good grades in school.
+
+    I love animals , especially dogs.
+
+    I am a 15 year old girl.'
+  Best Generated Conversation: 'User 1: Hello, what''s your name?
+
+    User 2: Hi, my name is Zoe. What''s yours?
+
+    User 1: I''m [User 1], it''s nice to meet you.
+
+    User 2: Nice to meet you too. What do you like to do for fun?
+
+    User 1: I like to gaze at clouds, play video games, and read books.
+
+    User 2: I love gazing at clouds too! What''s your favorite thing about it?
+
+    User 1: I like how it''s so relaxing and peaceful. It''s like the only time I can really clear my head.
+
+    User 2: I know what you mean. I also like how clouds can look like different things. Sometimes I like to imagine that I''m on a quest to find the pot of gold at the end of the rainbow.
+
+    User 1: That''s a great idea! I love making up stories about clouds.
+
+    User 2: Me too! Do you have any pets?
+
+    User 1: Yes, I have a dog named Allie.
+
+    User 2: I love dogs! What kind of dog is she?
+
+    User 1: She''s a golden retriever.
+
+    User 2: Golden retrievers are so cute! I''m sure she''s a great companion.
+
+    User 1: She is! She''s the best dog in the world.
+
+    User 2: I''m glad to hear that. I love animals.
+
+    User 1: Me too! They make the world a better place.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00000829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 829
+data:
+  user 1 personas: 'I love to read.
+
+    I once wrote a biography of my favorite actor.
+
+    I believe in karma.
+
+    I adopted all my dogs.
+
+    I have never been on a date.'
+  user 2 personas: 'I love to go to the symphony orchestra.
+
+    I favorite brand of clothing is donna karen.
+
+    I am an middle school teacher for 8th grade.
+
+    I love to read the bible before i go to bed.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I love to read, go to the symphony orchestra, and spend time with my family.
+
+    User 1: That sounds great! I love reading too. What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but I really enjoy historical fiction and biographies.
+
+    User 1: Me too! I love learning about new things. I''ve actually written a biography of my favorite actor.
+
+    User 2: That''s amazing! I''ve always wanted to write a book, but I''ve never had the time.
+
+    User 1: It was a lot of work, but it was really rewarding. I''m glad I did it.
+
+    User 2: I''m sure it was. I''m impressed.
+
+    User 1: Thanks! So, what do you do for a living?
+
+    User 2: I''m a middle school teacher for eighth grade.
+
+    User 1: Oh, that sounds fun! I''ve always wanted to be a teacher.
+
+    User 2: It''s a great job. I love working with kids.
+
+    User 1: I can imagine. So, what''s your favorite thing about being a teacher?
+
+    User 2: My favorite thing is seeing the kids learn and grow. It''s so rewarding to know that I''m making a difference in their lives.
+
+    User 1: That''s such a great feeling. I''m sure you''re a great teacher.
+
+    User 2: Thank you! I try my best.
+
+    User 1: Well, it''s been nice talking to you. I have to go now, but I hope we can talk again sometime.
+
+    User 2: Me too! It was nice to meet you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

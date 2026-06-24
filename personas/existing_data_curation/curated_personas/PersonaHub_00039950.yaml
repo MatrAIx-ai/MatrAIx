@@ -1,0 +1,20 @@
+id: 00039950
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39950
+persona_description: A data scientist who specializes in feature selection and model building using machine learning algorithms. They have expertise in incorporating feature selection within the learner,
+  specifically using the SmallLearner and OptimizedSmallLearner learners, to estimate the optimal number of features for a given training dataset. Their experience includes using cross-validation to evaluate
+  feature set sizes and selecting the best number of features for classification tasks. They are skilled in using Python libraries such as Orange for data manipulation and feature selection, and are proficient
+  in implementing machine learning algorithms like Naive Bayes. They are likely to be interested in research projects that involve developing and evaluating machine learning models for predictive analytics
+  and data mining.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Machine Learning
+  general_domain_top01pct: None
+  specific_domain_top01pct: Feature Selection in Machine Learning
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

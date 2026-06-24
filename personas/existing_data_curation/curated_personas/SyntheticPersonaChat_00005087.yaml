@@ -1,0 +1,64 @@
+id: 00005087
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5087
+data:
+  user 1 personas: 'I want to learn self defense.
+
+    I want to move to las vegas.
+
+    I want to go back to school.
+
+    My sister is my best friend.
+
+    I like to watch shows on netflix.'
+  user 2 personas: 'I love the band van haven.
+
+    I like going to canada.
+
+    I play dungeons and dragons.
+
+    I want to be a doctor.
+
+    I wear a lot of purple.'
+  Best Generated Conversation: 'User 1: Hey, I''m (name)!
+
+    User 2: Hello, nice to meet you! I''m (name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play dungeons and dragons, go to Canada, and listen to the band Van Halen.
+
+    User 1: Cool! I like to watch shows on Netflix, go back to school, and learn self defense.
+
+    User 2: Those all sound like fun activities! What''s your favorite show on Netflix?
+
+    User 1: I like to watch The Office, Grey''s Anatomy, and The Big Bang Theory.
+
+    User 2: I''ve heard good things about The Office, but I''ve never seen it.
+
+    User 1: You should! It''s a really funny show.
+
+    User 2: Maybe I will.
+
+    User 1: What''s your favorite thing about dungeons and dragons?
+
+    User 2: I like the creativity and the teamwork involved.
+
+    User 1: That sounds fun! I''ve never played before, but I''ve always been curious about it.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: What do you want to be when you grow up?
+
+    User 1: I want to be a doctor.
+
+    User 2: That''s a great goal! I''m sure you''ll do great things.
+
+    User 1: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

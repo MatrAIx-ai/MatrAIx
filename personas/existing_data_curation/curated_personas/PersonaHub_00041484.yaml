@@ -1,0 +1,19 @@
+id: 00041484
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 41484
+persona_description: A scientist with expertise in entomology and vector biology, particularly focused on the control of Culicoides biting midges that transmit vector-borne diseases such as bluetongue virus.
+  The scientist is experienced in the use of entomopathogenic fungi as potential biocontrol agents against adult Culicoides, having previously successfully used the entomopathogenic fungus Metarhizium anisopliae
+  against C. nubeculosus. The scientist is aware of the limitations of insecticides as chemical control measures for Culicoides, and is exploring alternative strategies such as the use of entomopathogenic
+  fungi and other biological control agents.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: entomopathology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

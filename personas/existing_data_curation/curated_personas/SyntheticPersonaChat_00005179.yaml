@@ -1,0 +1,80 @@
+id: 00005179
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5179
+data:
+  user 1 personas: 'My mother was a weightlifter.
+
+    I love money.
+
+    My feet smell.
+
+    I have blonde hair.
+
+    I have brown eyes.'
+  user 2 personas: 'I run track.
+
+    I love video games.
+
+    I wear glasses all day.
+
+    I swim often.
+
+    I take medication.'
+  Best Generated Conversation: 'User 1: Hi, I''m (your name). What''s your name?
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play video games, run track, and swim.
+
+    User 1: That sounds fun. I like to play video games too.
+
+    User 2: What games do you like to play?
+
+    User 1: I like to play action-adventure games, puzzle games, and racing games.
+
+    User 2: I like to play action-adventure games too. What''s your favorite game?
+
+    User 1: My favorite game is Zelda: Breath of the Wild.
+
+    User 2: I''ve heard good things about that game. I''ve been meaning to try it.
+
+    User 1: It''s a really good game. You should definitely try it.
+
+    User 2: I will. Thanks for the recommendation.
+
+    User 1: No problem. So, what do you like about running track?
+
+    User 2: I like the challenge of it. I also like the feeling of being outside and running.
+
+    User 1: I can understand that. I used to run track when I was in high school.
+
+    User 2: Did you like it?
+
+    User 1: I did. I made some great friends on the team.
+
+    User 2: That''s awesome. I''m glad you had a good experience.
+
+    User 1: Me too. So, what do you like about swimming?
+
+    User 2: I like the feeling of being in the water. I also like the challenge of swimming laps.
+
+    User 1: I can understand that. I''ve always enjoyed swimming too.
+
+    User 2: That''s good to hear.
+
+    User 1: So, what''s your favorite thing to do when you''re not running track or swimming?
+
+    User 2: I like to play video games, watch movies, and read.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: That''s great. We should hang out sometime.
+
+    User 1: That sounds like a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

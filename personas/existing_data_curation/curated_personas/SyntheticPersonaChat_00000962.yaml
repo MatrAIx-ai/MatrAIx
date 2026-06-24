@@ -1,0 +1,58 @@
+id: 00000962
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 962
+data:
+  user 1 personas: 'I drive a prius.
+
+    My wife stays home with our kids.
+
+    I work for a large law firm.
+
+    We own our home.'
+  user 2 personas: 'I am a guy that enjoys being a guy.
+
+    I like to hike and spend time outdoors.
+
+    I love to binge watch shows on streaming services.
+
+    My favorite thing to eat is a burrito.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thank you for asking. How about yourself?
+
+    User 1: I''m doing great. I just got back from a hike in the mountains.
+
+    User 2: That sounds amazing! I love to hike. Where did you go?
+
+    User 1: I went to Mount Tammany in New Jersey. It was a beautiful day and I got to see some amazing views.
+
+    User 2: That''s awesome! I''ve always wanted to go to New Jersey.
+
+    User 1: You should definitely go. It''s a beautiful state.
+
+    User 2: I''m sure I will someday. So, what do you do for work?
+
+    User 1: I''m a lawyer at a large law firm.
+
+    User 2: Oh, that''s cool. I''ve always been interested in law.
+
+    User 1: It''s a good job, but it can be demanding.
+
+    User 2: I can imagine. So, what do you like to do for fun?
+
+    User 1: I like to spend time with my family, go hiking, and watch movies.
+
+    User 2: That sounds like a lot of fun. I like to do those things too.
+
+    User 1: That''s great! We should get together sometime and go hiking or something.
+
+    User 2: That would be fun! I''m free this weekend.
+
+    User 1: Great! Let''s do it.
+
+    User 2: Awesome! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

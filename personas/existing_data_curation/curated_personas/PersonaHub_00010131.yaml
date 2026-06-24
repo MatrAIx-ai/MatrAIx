@@ -1,0 +1,18 @@
+id: '00010131'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10131
+persona_description: A chemist and materials scientist who specializes in the development of efficient and scalable catalysts for solar water splitting. His research focuses on the synthesis and characterization
+  of novel materials that can be grown directly on substrates without damaging them, such as the FeMnP catalyst mentioned in the text. His work is currently being used to demonstrate the potential of this
+  catalyst for use in high-surface-area semiconductor photoelectrochemical cells.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: materials science
+  general_domain_top01pct: None
+  specific_domain_top01pct: catalyst development
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

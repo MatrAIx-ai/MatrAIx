@@ -1,0 +1,68 @@
+id: 00000586
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 586
+data:
+  user 1 personas: 'I am a student.
+
+    I also like ice cream.
+
+    I like painting , i can cook well.
+
+    I like cookies.
+
+    I like pasta.'
+  user 2 personas: 'I like to swim.
+
+    I eat large meals.
+
+    I am in college.
+
+    I exercise everyday.
+
+    I am a social butterfly.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is [name].
+
+    User 1: Nice to meet you, [name]. My name is [name].
+
+    User 2: Nice to meet you too!
+
+    User 1: Where do you live?
+
+    User 2: I live in [city].
+
+    User 1: Oh, that''s cool. I live in [city] too.
+
+    User 2: No way! That''s awesome.
+
+    User 1: Do you like swimming?
+
+    User 2: I love it! I swim every day.
+
+    User 1: That''s great! I used to swim a lot when I was younger, but I haven''t in a while.
+
+    User 2: You should start swimming again! It''s really good for you.
+
+    User 1: I know, I know. I''ll try to get back into it.
+
+    User 2: Good!
+
+    User 1: So what do you do for fun?
+
+    User 2: I like to go out with my friends, go to concerts, and play video games.
+
+    User 1: Oh, that''s cool. I like to do those things too.
+
+    User 2: Me too! We should hang out sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! Let''s exchange numbers.
+
+    User 1: Okay!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

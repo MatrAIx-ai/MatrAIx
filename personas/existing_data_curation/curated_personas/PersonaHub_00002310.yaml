@@ -1,0 +1,19 @@
+id: '00002310'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 2310
+persona_description: A meteorologist at the National Hurricane Center who is monitoring and issuing advisories on Hurricane Fiona, a system that is located just southeast of the Turks and Caicos islands.
+  The meteorologist is responsible for predicting the path and intensity of the hurricane, and is constantly monitoring the system's progress and environmental conditions. The meteorologist also works closely
+  with other meteorologists and scientists to gather and analyze data, and may also be involved in developing models and forecasts for the hurricane. The persona is highly skilled in forecasting and predicting
+  weather systems, and has a deep understanding of atmospheric conditions and their impact on weather patterns.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: hurricane forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

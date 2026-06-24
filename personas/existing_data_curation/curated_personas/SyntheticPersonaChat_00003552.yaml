@@ -1,0 +1,66 @@
+id: '00003552'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3552
+data:
+  user 1 personas: 'My only friend is a dog.
+
+    I am a carnivore.
+
+    My father used to be a butcher.
+
+    I work at a newspaper.'
+  user 2 personas: 'My favorite place to spend time at is the beach.
+
+    I have 3 sisters and 2 brothers.
+
+    I love to read.
+
+    I have a masters degree in creative writing.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is Emily.
+
+    User 1: Nice to meet you, Emily. I''m John.
+
+    User 2: Nice to meet you too, John.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, write, and spend time at the beach.
+
+    User 1: Wow, I love to read and write too! But I''ve never been to the beach.
+
+    User 2: You should definitely go! It''s one of my favorite places to be.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: So, what do you do for work?
+
+    User 2: I have a masters degree in creative writing, and I work at a newspaper.
+
+    User 1: Oh, that''s cool! I''ve always been interested in writing, but I''m not very good at it.
+
+    User 2: You can always learn! It takes practice.
+
+    User 1: I know, but I''m not sure if I have the patience.
+
+    User 2: You''d be surprised what you can do if you set your mind to it.
+
+    User 1: You''re right. I''ll give it a try.
+
+    User 2: Good for you!
+
+    User 1: Thanks, Emily. You''re nice to talk to.
+
+    User 2: You''re welcome, John. It was nice meeting you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

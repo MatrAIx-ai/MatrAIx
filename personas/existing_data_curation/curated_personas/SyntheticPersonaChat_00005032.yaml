@@ -1,0 +1,72 @@
+id: '00005032'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5032
+data:
+  user 1 personas: 'I like to work with acrylics.
+
+    My favorite class is painting.
+
+    I have blonde hair.
+
+    I aspire to paint murals.'
+  user 2 personas: 'My mother looks after my grandmother.
+
+    I prefer texting over phone calls.
+
+    I use the computer all day.
+
+    I love hockey.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to play hockey, text, and use the computer.
+
+    User 1: I love hockey too! I also like to paint.
+
+    User 2: That''s cool! What kind of painting do you like to do?
+
+    User 1: I like to paint acrylics. I want to paint murals one day.
+
+    User 2: Wow, that''s awesome! I''ve never been able to paint.
+
+    User 1: It''s not that hard. You just have to practice.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the advice.
+
+    User 1: No problem.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a painter. I work in a studio.
+
+    User 2: That''s cool! I''ve always wanted to be a painter.
+
+    User 1: It''s a lot of fun. I love getting to create things with my own hands.
+
+    User 2: I bet it is. I''m not very creative, so I''m always impressed by people who are.
+
+    User 1: It''s all about practice. Anyone can be creative if they put their mind to it.
+
+    User 2: I guess you''re right. I''ll have to start practicing more.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the advice.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00003163'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3163
+data:
+  user 1 personas: 'I live with a roommate.
+
+    I do not like beer.
+
+    My favorite animal is the koala.
+
+    I work part time.'
+  user 2 personas: 'I walk three miles home every night.
+
+    I work in fast food.
+
+    I always wear something purple.
+
+    My favorite mortal combat character is milena.
+
+    I am looking for krav maga classes near my home.'
+  Best Generated Conversation: 'User 1: Hey, I''m user 1.
+
+    User 2: Hi, I''m user 2.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in fast food.
+
+    User 1: Oh, that sounds tough.
+
+    User 2: It''s not bad.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to walk home from work. It''s three miles, but it''s good for me.
+
+    User 1: That''s impressive! I don''t think I could walk that far.
+
+    User 2: I don''t mind it. It gives me time to think.
+
+    User 1: What do you think about?
+
+    User 2: Mostly about my life. What I want to do with it.
+
+    User 1: That''s good. It''s important to think about what you want to do with your life.
+
+    User 2: I know. I''ve been thinking about taking krav maga classes.
+
+    User 1: Krav maga? What''s that?
+
+    User 2: It''s a self-defense martial art. I think it would be good for me to learn.
+
+    User 1: That''s a good idea. It could come in handy.
+
+    User 2: I know. I''m going to look for classes near my home.
+
+    User 1: Good luck! I''m sure you''ll find something.
+
+    User 2: Thanks! I''m excited to start.
+
+    User 1: I''m sure you''ll love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

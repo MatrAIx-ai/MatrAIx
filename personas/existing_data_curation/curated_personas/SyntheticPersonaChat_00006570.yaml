@@ -1,0 +1,66 @@
+id: '00006570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6570
+data:
+  user 1 personas: 'I am allergic to shellfish and cats.
+
+    My mother has 500 pairs of shoes.
+
+    I like having my back scratched.
+
+    I have 1 pair of shoes.
+
+    I only eat at restaurants.'
+  user 2 personas: 'I like to play tennis.
+
+    My favorite food is a burger.
+
+    I work as an accountant.
+
+    My favorite musical is hamilton.'
+  Best Generated Conversation: 'User 1: Hello, I''m a bit of an oddball.
+
+    User 2: That''s okay, I''m sure I can handle it.
+
+    User 1: Well, I have a few allergies, I am allergic to shellfish and cats.
+
+    User 2: That must be tough, I can''t imagine life without shellfish.
+
+    User 1: Yeah, it can be a pain, but I''ve managed to find ways to work around it.
+
+    User 2: That''s good to hear. What else about you is odd?
+
+    User 1: Well, I like to have my back scratched.
+
+    User 2: That''s an interesting one. Do you have a reason for that?
+
+    User 1: I''m not sure, I''ve just always liked it.
+
+    User 2: I''m not sure I understand, but I''m not judging.
+
+    User 1: Thanks. What about you, what''s your favorite thing about yourself?
+
+    User 2: I''m not sure I have one favorite thing about myself, but I like to think I''m a good listener.
+
+    User 1: That''s a good trait to have. What do you like to do for fun?
+
+    User 2: I like to play tennis, go for walks, and watch movies.
+
+    User 1: Tennis sounds fun, I''ve always wanted to try it but I''m not very coordinated.
+
+    User 2: It''s not too hard to learn, and it''s a great way to get exercise.
+
+    User 1: Maybe I''ll give it a try sometime. What''s your favorite musical?
+
+    User 2: My favorite musical is Hamilton, it''s so good!
+
+    User 1: I''ve heard good things about it, I''ll have to check it out.
+
+    User 2: You should, it''s a lot of fun.
+
+    User 1: Thanks for the recommendation, I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

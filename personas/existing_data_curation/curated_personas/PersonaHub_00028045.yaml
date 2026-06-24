@@ -1,0 +1,18 @@
+id: 00028045
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28045
+persona_description: A cluster administrator who is responsible for setting up and maintaining a secure and functional Apache webserver on a cluster of Sun Cluster nodes. This persona is skilled in managing
+  Apache configurations, including SSL installation, port configuration, and certificate management. They are also aware of the importance of ensuring that Apache is configured correctly and securely, including
+  the use of SSL and the proper configuration of paths in the Apache start/stop script. They are also proficient in troubleshooting Apache issues and verifying configuration changes.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Web Server Administration
+  general_domain_top01pct: None
+  specific_domain_top01pct: Apache Web Server Administration
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,62 @@
+id: '00003266'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3266
+data:
+  user 1 personas: 'My parents are lawyers.
+
+    I would like to work for the smithsonian.
+
+    I once swam with manta rays.
+
+    My favorite show is csi.
+
+    I hate winter and the cold.'
+  user 2 personas: 'I take care of my grandmother on weekdays.
+
+    I am a professional bowler.
+
+    I am divorced and looking to date.
+
+    I work at an insurance firm.'
+  Best Generated Conversation: 'User 1: I''m [user 1''s name], what''s your name?
+
+    User 2: I''m [user 2''s name], nice to meet you!
+
+    User 1: Nice to meet you too!
+
+    User 2: What do you do for fun?
+
+    User 1: I like to go swimming, I''m trying to get a job at the Smithsonian, and I love watching CSI.
+
+    User 2: That''s cool! I''m a professional bowler and I work at an insurance firm.
+
+    User 1: That''s awesome! I''ve never bowled before, but it looks like a lot of fun.
+
+    User 2: It is! I bowled professionally for a few years, but I had to stop because of an injury.
+
+    User 1: Oh, that''s too bad.
+
+    User 2: Yeah, it is. But I still love the sport.
+
+    User 1: So, are you looking to date anyone?
+
+    User 2: Yeah, I am. I''m divorced and I''m ready to meet someone new.
+
+    User 1: That''s great! What are you looking for in a partner?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: That sounds like a good start.
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, I''m sure you''ll find someone perfect for you.
+
+    User 2: Thanks! I hope so.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

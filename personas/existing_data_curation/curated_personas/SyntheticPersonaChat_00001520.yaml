@@ -1,0 +1,74 @@
+id: '00001520'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1520
+data:
+  user 1 personas: 'I am a meataholic.
+
+    My dad works for stifle.
+
+    I love rap music.
+
+    I like smoking weed.
+
+    I have a job as an it agent.'
+  user 2 personas: 'I take great care of my skin.
+
+    I think i will be famous one day.
+
+    I like to dress up for other people.
+
+    I never cook.
+
+    I am an actress and i work at a grocery store.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. What do you do for a living?
+
+    User 2: I''m an actress and I work at a grocery store.
+
+    User 1: That''s cool! I''ve always wanted to be an actress.
+
+    User 2: It''s a lot of fun, but it can be tough.
+
+    User 1: I bet. What''s the hardest part of being an actress?
+
+    User 2: The hardest part is probably the rejection. You have to be prepared to go on a lot of auditions and not get the part.
+
+    User 1: I can imagine. But it sounds like you''re really good at it.
+
+    User 2: Thanks, I appreciate that.
+
+    User 1: So, what''s your favorite thing to do for fun?
+
+    User 2: I like to dress up for other people. I think it''s fun to play different characters and see how people react.
+
+    User 1: That sounds like a lot of fun. I''m not very good at it, but I do enjoy it.
+
+    User 2: You should try it more often! It''s a great way to express yourself.
+
+    User 1: I will! Thanks for the tip.
+
+    User 2: No problem! What''s your favorite type of music to listen to?
+
+    User 1: I like rap music. It''s so upbeat and energetic.
+
+    User 2: I love rap music too! I like the way it can tell a story.
+
+    User 1: Me too. It''s so much more than just music.
+
+    User 2: I agree. It''s a form of art.
+
+    User 1: It definitely is. I''m glad we have something in common.
+
+    User 2: Me too! It''s always nice to meet someone who shares your interests.
+
+    User 1: Agreed. I hope we can be friends.
+
+    User 2: I would love that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

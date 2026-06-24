@@ -1,0 +1,123 @@
+id: 00003358
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3358
+data:
+  user 1 personas: 'I enjoy shopping online.
+
+    I read fantasy fiction novels.
+
+    I enjoy swimming.
+
+    I used to work for monsanto.'
+  user 2 personas: 'I have three dogs.
+
+    I love to cook.
+
+    I am looking for someone.
+
+    I work for an architect firm.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m a software engineer.
+
+
+    User 2: Hi, I''m [name]. I''m an architect.
+
+
+    User 1: What kind of architecture do you do?
+
+
+    User 2: I do mostly residential architecture.
+
+
+    User 1: That''s cool. I''m an avid cook, so I''ve always been interested in the design of kitchens.
+
+
+    User 2: That''s funny, I''m actually a pretty good cook myself.
+
+
+    User 1: Really? What''s your favorite dish to make?
+
+
+    User 2: I love to make pasta dishes.
+
+
+    User 1: Me too! I make a mean lasagna.
+
+
+    User 2: I''ve always wanted to learn how to make lasagna.
+
+
+    User 1: It''s actually pretty easy. I can give you a recipe if you want.
+
+
+    User 2: That would be great!
+
+
+    User 1: Sure, here it is:
+
+
+    [Gives recipe]
+
+
+    User 2: Thanks, I''ll have to try it sometime.
+
+
+    User 1: You''re welcome.
+
+
+    User 2: So, what else do you like to do for fun?
+
+
+    User 1: I love to read, go swimming, and shop online.
+
+
+    User 2: Me too! I love to read fantasy fiction novels.
+
+
+    User 1: I love those too! I''m currently reading The Name of the Wind by Patrick Rothfuss.
+
+
+    User 2: I''ve heard good things about that book. I''m currently reading The Way of Kings by Brandon Sanderson.
+
+
+    User 1: That''s a great book! I''ve read it twice.
+
+
+    User 2: I''m really enjoying it so far.
+
+
+    User 1: I''m glad.
+
+
+    User 2: So, what else do you like to do for fun?
+
+
+    User 1: I also like to go to the movies, go to concerts, and play video games.
+
+
+    User 2: Me too! I love going to the movies. I just saw The Batman last weekend.
+
+
+    User 1: I heard that was really good. I''m going to see it this weekend.
+
+
+    User 2: You''re going to love it.
+
+
+    User 1: I hope so.
+
+
+    User 2: So, what are you doing this weekend?
+
+
+    User 1: I''m not sure yet. I might go to the movies or go shopping.
+
+
+    User 2: If you go to the movies, you should see The Batman.
+
+
+    User 1: I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00005017'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5017
+persona_description: A researcher in the field of phylogenetics, particularly focusing on the analysis of evolutionary rates and the use of Bayesian methods. The text likely belongs to a scientist who has
+  expertise in the use of Bayesian statistical methods to analyze evolutionary data, specifically focusing on the calibration of phylogenetic trees and the comparison of evolutionary rates among different
+  markers. The text may also discuss the use of different methods for calibrating the phylogenetic trees, such as the uncorrelated gamma method implemented in PHYLOBAYES and the log-normal autocorrelated
+  method implemented in PHYLOBAYES. The use of multidivision time (MULTIDIVTIME) in the text could indicate the scientist's interest in using multiple time scales to analyze evolutionary relationships.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: phylogenetics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

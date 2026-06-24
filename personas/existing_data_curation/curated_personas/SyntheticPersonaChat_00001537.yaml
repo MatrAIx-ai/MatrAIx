@@ -1,0 +1,62 @@
+id: '00001537'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1537
+data:
+  user 1 personas: 'I am a vegetarian.
+
+    I am afraid of clowns.
+
+    I take the subway to work everyday.
+
+    Every fall i visit my sister in canada.'
+  user 2 personas: 'I try to limit how much i eat.
+
+    I whine a lot.
+
+    I hate paying my bills.
+
+    I do not have a job and sit on the couch all day.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to watch movies and play video games.
+
+    User 1: Me too! What kind of movies do you like to watch?
+
+    User 2: I like action movies and comedies.
+
+    User 1: I love action movies too! I''m not a big fan of comedies, though.
+
+    User 2: What kind of video games do you like to play?
+
+    User 1: I like to play role-playing games and action-adventure games.
+
+    User 2: I''m not very good at video games, but I like to play them anyway.
+
+    User 1: That''s okay! I''m not very good at them either, but I still have a lot of fun.
+
+    User 2: What else do you like to do?
+
+    User 1: I like to read, go for walks, and visit my sister in Canada.
+
+    User 2: I like to read too! I''m not very active, so I don''t go for walks very often.
+
+    User 1: That''s okay! I like to go for walks because I like to get some exercise.
+
+    User 2: I understand. I''m not very good at exercise either.
+
+    User 1: That''s okay! We can do it together.
+
+    User 2: That sounds like fun! I''m always up for a challenge.
+
+    User 1: Great! I''ll let you know when I''m free to go for a walk.
+
+    User 2: Okay! I''ll be waiting.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

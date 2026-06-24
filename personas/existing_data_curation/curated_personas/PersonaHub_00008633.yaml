@@ -1,0 +1,18 @@
+id: 00008633
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8633
+persona_description: A scientist who studies the impact of agricultural transformation on biodiversity, particularly in the context of reptile communities in southeastern Australia. This scientist uses
+  a novel co-occurrence network approach to analyze the changes in species co-occurrence, richness, and composition under agricultural transformation. They are interested in the complex changes in the number
+  and distribution of pair-wise co-occurrence links and the classification of species susceptibility to agricultural transformation.
+expertise:
+  general_domain_top1pct: ecology
+  specific_domain_top1pct: agroecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: reptile community ecology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,84 @@
+id: 00000872
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 872
+data:
+  user 1 personas: 'I want to move.
+
+    I don t like feeling controlled.
+
+    I don t like my reputation.
+
+    I wish i could take back a mistake.
+
+    I have a harsh inner critic.'
+  user 2 personas: 'I like fruit.
+
+    My favorite fruit is apple.
+
+    I don t like to eat meat.
+
+    I like to eat the skin of the apple.
+
+    I like green apples.'
+  Best Generated Conversation: 'User 1: I''m trying to think of something to do this weekend. Do you have any suggestions?
+
+    User 2: I''m going to the farmer''s market. Do you want to come with me?
+
+    User 1: I love going to the farmer''s market! I''ll be there.
+
+    User 2: Great! See you there.
+
+
+    (At the farmer''s market)
+
+    User 1: This is so much fun! I love all the fresh fruit and vegetables.
+
+    User 2: Me too! I''m going to make a lot of delicious salads and smoothies this week.
+
+    User 1: That sounds great! I''m going to make an apple pie.
+
+    User 2: Apple pie is my favorite! I''ll bring some over when it''s done.
+
+    User 1: Thanks! I love homemade apple pie.
+
+
+    (At home)
+
+    User 1: This apple pie is so good! I''m so glad you brought some over.
+
+    User 2: I''m glad you like it! I love making apple pie.
+
+    User 1: I can tell. It''s perfect.
+
+    User 2: Thanks! I''m glad you enjoyed it.
+
+
+    (The next day)
+
+    User 1: I made a smoothie with the fruit I bought from the farmer''s market. It''s so delicious!
+
+    User 2: That sounds amazing! I love smoothies.
+
+    User 1: You should try this one. It''s made with banana, strawberries, blueberries, and apple juice.
+
+    User 2: That sounds delicious! I''ll have to try it.
+
+    User 1: You won''t be disappointed.
+
+
+    (A few days later)
+
+    User 1: I''m so glad I went to the farmer''s market with you. I''ve been eating so much delicious food this week.
+
+    User 2: Me too! I''m glad I could introduce you to the farmer''s market.
+
+    User 1: I''m really glad you did. I''m going to have to go back soon.
+
+    User 2: You should! It''s the best place to get fresh, healthy food.
+
+    User 1: I know! I can''t wait to go back.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

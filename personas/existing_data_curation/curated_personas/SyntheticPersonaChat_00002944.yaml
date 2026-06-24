@@ -1,0 +1,70 @@
+id: 00002944
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2944
+data:
+  user 1 personas: 'My mother was a nurse.
+
+    I am a violinist.
+
+    I recently discovered a new love for indian food.
+
+    I am gong to adopt a dog very soon.'
+  user 2 personas: 'My favorite color is purple.
+
+    I have owned two mustangs.
+
+    I am currently looking for a job.
+
+    My dad works for ups.'
+  Best Generated Conversation: 'User 1: What is your favorite food?
+
+    User 2: I like Indian food.
+
+    User 1: Me too! I''ve been on a real Indian food kick lately.
+
+    User 2: What kind of Indian food do you like?
+
+    User 1: I love all kinds, but I''m especially fond of tikka masala and butter chicken.
+
+    User 2: Those are both great choices! I also like vindaloo and biryani.
+
+    User 1: Oh yeah, vindaloo is really good. I''ve never had biryani though.
+
+    User 2: You should try it! It''s a rice dish with meat and vegetables. It''s really flavorful.
+
+    User 1: I will, thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: What are you doing for work?
+
+    User 2: I''m currently looking for a job.
+
+    User 1: Oh, that''s tough. What kind of job are you looking for?
+
+    User 2: I''m not really sure. I''m open to anything.
+
+    User 1: Well, I''m sure you''ll find something. You seem like a hard worker.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to play video games, go for walks, and read.
+
+    User 1: Me too! I love playing video games. What kind of games do you like to play?
+
+    User 2: I like all kinds of games, but I''m especially fond of RPGs and strategy games.
+
+    User 1: I like RPGs too! I''ve been playing a lot of Elden Ring lately.
+
+    User 2: I''ve heard good things about that game. I''ve been meaning to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will, thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

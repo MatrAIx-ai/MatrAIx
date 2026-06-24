@@ -1,0 +1,58 @@
+id: 00008357
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8357
+data:
+  user 1 personas: 'I love the country but enjoy visiting the city life.
+
+    I have always wanted to travel to ireland or puerto rico.
+
+    I use to be a wild child.
+
+    I have two dogs , one pitbull and old english bulldog.
+
+    I like the color blue or red.'
+  user 2 personas: 'I broke my nose when i was ten.
+
+    I ride my bicycle everywhere.
+
+    I enjoy jazz music.
+
+    My favorite city is seattle.
+
+    I work at a factory.'
+  Best Generated Conversation: 'User 1: Hey, how''s it going?
+
+    User 2: Not bad, just got done riding my bike.
+
+    User 1: Nice! I love riding my bike too. Where do you like to ride?
+
+    User 2: I usually ride around the city. It''s a great way to get some exercise and see the sights.
+
+    User 1: I agree, I love exploring new places on my bike.
+
+    User 2: What''s your favorite city to visit?
+
+    User 1: I''m not sure, I''ve never been out of the country.
+
+    User 2: Oh, you should definitely travel! It''s a great way to experience new cultures and meet new people.
+
+    User 1: Yeah, I''ve always wanted to travel. I''ve heard great things about Ireland.
+
+    User 2: I''ve been to Ireland, it''s a beautiful country. The people are really friendly too.
+
+    User 1: That''s good to know! I''ve also heard good things about Puerto Rico.
+
+    User 2: Puerto Rico is great too! The beaches are beautiful and there''s a lot of history there.
+
+    User 1: I think I''m going to have to start planning a trip!
+
+    User 2: You definitely should! It''ll be a great experience.
+
+    User 1: Thanks for the advice!
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

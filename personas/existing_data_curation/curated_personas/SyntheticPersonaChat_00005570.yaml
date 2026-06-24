@@ -1,0 +1,64 @@
+id: '00005570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5570
+data:
+  user 1 personas: 'I like drinking expensive wine.
+
+    I own a french bulldog.
+
+    I once lost a diamond at a debutante ball.
+
+    I like getting my nails done.
+
+    I am unemployed and living off a trust fund.'
+  user 2 personas: 'I believe that mermaids are real.
+
+    I am terrified of heights.
+
+    I have four sisters.
+
+    I love iced tea.'
+  Best Generated Conversation: 'User 1: Hi there, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to drink iced tea, read books, and play video games.
+
+    User 1: I like to drink expensive wine, get my nails done, and go to the opera.
+
+    User 2: I''ve never been to the opera. What''s it like?
+
+    User 1: It''s amazing! The music is beautiful and the costumes are incredible.
+
+    User 2: I''ll have to check it out sometime.
+
+    User 1: You should! I''m sure you''d love it.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m unemployed. I live off a trust fund.
+
+    User 2: Really? That''s awesome! I''m always jealous of people who don''t have to work.
+
+    User 1: It''s not always as great as it sounds. I get bored a lot.
+
+    User 2: I can understand that. But it sounds like you have a lot of time to do the things you love.
+
+    User 1: Yeah, I do. I love spending time with my dog, reading, and getting my nails done.
+
+    User 2: Sounds like you have a great life.
+
+    User 1: I do, thanks. I''m glad I met you.
+
+    User 2: Me too. It''s been nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

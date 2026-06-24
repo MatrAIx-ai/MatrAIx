@@ -1,0 +1,17 @@
+id: 00022945
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22945
+persona_description: A researcher interested in agricultural sciences, specifically in the classification and mapping of fruit-tree crops in specific regions, such as the Aconcagua Valley, Chile. This person
+  is looking for innovative approaches to improve crop type classification accuracy by incorporating new spectral indices derived from Landsat 8 images.
+expertise:
+  general_domain_top1pct: agriculture
+  specific_domain_top1pct: agricultural sciences
+  general_domain_top01pct: None
+  specific_domain_top01pct: remote sensing and geospatial analysis
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

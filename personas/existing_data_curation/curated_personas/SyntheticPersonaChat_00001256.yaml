@@ -1,0 +1,98 @@
+id: '00001256'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1256
+data:
+  user 1 personas: 'I commute by bus.
+
+    I work part time in the campus library.
+
+    I have 3 science classes.
+
+    I am living at home but hope to live in the dorms next year.
+
+    I just started college.'
+  user 2 personas: 'I owe 2 monitors for work.
+
+    I am single.
+
+    I read ebooks more than hardcopies.
+
+    I love watching superheroes shows.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from [user 2 hometown].
+
+    User 1: Oh, I''m from [user 1 hometown].
+
+    User 2: Cool! What are you doing in [current city]?
+
+    User 1: I''m just starting college here.
+
+    User 2: Oh, cool! What are you studying?
+
+    User 1: I''m studying science.
+
+    User 2: Oh, cool! I love science! What''s your favorite subject?
+
+    User 1: My favorite subject is biology.
+
+    User 2: Oh, cool! I love biology too! I''m going to be a doctor when I grow up.
+
+    User 1: Oh, that''s awesome!
+
+    User 2: Yeah, I''m really excited about it.
+
+    User 1: What do you like about biology?
+
+    User 2: I like learning about all the different organisms and how they function.
+
+    User 1: Me too! I think it''s amazing how complex and diverse life is.
+
+    User 2: Yeah, it''s really amazing.
+
+    User 1: So, what do you want to do after you graduate?
+
+    User 2: I want to go to medical school and become a doctor.
+
+    User 1: That''s awesome! I''m sure you''ll be a great doctor.
+
+    User 2: Thanks!
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read, watch movies, and play video games.
+
+    User 1: Oh, I like to read too! What kind of books do you like to read?
+
+    User 2: I like to read science fiction and fantasy.
+
+    User 1: Oh, me too! I love reading about all the different worlds and characters.
+
+    User 2: Me too! I think it''s so cool to be able to escape reality for a while.
+
+    User 1: Yeah, it''s a great way to relax.
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are you reading right now?
+
+    User 2: I''m reading a book called "The Martian."
+
+    User 1: Oh, I''ve heard good things about that book.
+
+    User 2: Yeah, it''s really good. It''s about a guy who gets stranded on Mars and has to figure out how to survive.
+
+    User 1: Oh, that sounds interesting.
+
+    User 2: Yeah, it is. I''m really enjoying it.
+
+    User 1: I might have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

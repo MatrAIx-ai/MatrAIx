@@ -1,0 +1,17 @@
+id: 00008048
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8048
+persona_description: A computer scientist who specializes in image processing and shape recognition, particularly in identifying basic shapes such as circles, ovals, and polygons, and subtypes like right
+  triangles, squares, etc., from a set of (x,y) coordinates. They are interested in using algorithms to classify shapes and identifying the best fitting conic to determine the shape of a boundary.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Computer Vision
+  general_domain_top01pct: None
+  specific_domain_top01pct: Computer Vision (Shape Recognition)
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

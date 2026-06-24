@@ -1,0 +1,70 @@
+id: 00002781
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2781
+data:
+  user 1 personas: 'I have a twin brother.
+
+    My favorite book is david copperfield.
+
+    I have won tap dance competitions.
+
+    I love to bake cakes.
+
+    I am really short.'
+  user 2 personas: 'My best friend is in a band with me.
+
+    I like to write my own songs.
+
+    I have taken formal music lessons since i was 5.
+
+    I am a musician.
+
+    I wish i could spend more time at home.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to play music. I''ve been playing since I was 5 years old.
+
+    User 1: That''s cool! I''ve always wanted to learn how to play an instrument.
+
+    User 2: What kind of instrument would you like to learn?
+
+    User 1: I''m not sure. I''ve always liked the piano, but I''m also interested in learning the guitar.
+
+    User 2: The piano is a great instrument to learn. It''s very versatile and you can play a lot of different types of music on it.
+
+    User 1: I know, right? I think it would be really fun to learn.
+
+    User 2: If you ever decide to learn how to play, I can help you get started.
+
+    User 1: Thanks, I appreciate that.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I love to bake. I''m not very good at it, but I enjoy the process.
+
+    User 2: Baking is a lot of fun. I love trying new recipes and seeing how they turn out.
+
+    User 1: Me too! I''ve been trying to perfect my chocolate chip cookie recipe for years.
+
+    User 2: I love chocolate chip cookies! I''m sure yours are delicious.
+
+    User 1: Thanks, I hope so.
+
+    User 2: So, what are you up to today?
+
+    User 1: I''m not sure yet. I might go for a walk or bake some cookies.
+
+    User 2: That sounds like a good plan. I''m going to practice my music.
+
+    User 1: Have fun!
+
+    User 2: Thanks, you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

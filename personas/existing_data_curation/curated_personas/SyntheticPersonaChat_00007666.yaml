@@ -1,0 +1,62 @@
+id: '00007666'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7666
+data:
+  user 1 personas: 'My family is very supportive of my skiing.
+
+    I broke my arm skiing once.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    My hair is a reddish brown.
+
+    I am a competitive ski racer.'
+  user 2 personas: 'I just bought a new pair of sneakers and they feel great.
+
+    My favorite thing to do is sleep.
+
+    I love ergonomic keyboards and chairs.
+
+    I love ergonomic keyboards and chairs.
+
+    My favorite thing to do is sleep.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much, just got a new pair of sneakers.
+
+    User 1: Oh nice, what kind are they?
+
+    User 2: They''re Nike Air Force 1s.
+
+    User 1: Those are classic! I love them.
+
+    User 2: Me too, they''re so comfortable.
+
+    User 1: I know, right? They''re great for walking around.
+
+    User 2: Yeah, I''ve been wearing them all day and my feet don''t hurt at all.
+
+    User 1: That''s good to hear.
+
+    User 2: Yeah, I''m really happy with them.
+
+    User 1: So, what else have you been up to?
+
+    User 2: Not much, just hanging out.
+
+    User 1: Same here.
+
+    User 2: I''m going to go play some video games now.
+
+    User 1: Have fun!
+
+    User 2: Thanks!
+
+    User 1: I''m going to go do some homework.
+
+    User 2: Okay, good luck!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

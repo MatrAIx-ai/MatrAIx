@@ -1,0 +1,58 @@
+id: 00003882
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3882
+data:
+  user 1 personas: 'I already have 3 children.
+
+    I will be on bed rest for the next 5 months.
+
+    I found out that i am carrying twins.
+
+    I have thrown up every day for the last 3 months with morning sickness.'
+  user 2 personas: 'I work from home doing various jobs on the internet.
+
+    I enjoy playing guitar and video games.
+
+    I have a dog that has behavioral issues.
+
+    I am in a very intimate and loving relationship.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I work from home doing various jobs on the internet.
+
+    User 1: Interesting! What kind of jobs?
+
+    User 2: I do a lot of different things, but mostly I write content, edit videos, and design websites.
+
+    User 1: Cool! That sounds like a lot of fun.
+
+    User 2: It is, but it can also be a lot of work.
+
+    User 1: I bet. What kind of video games do you like to play?
+
+    User 2: I like to play all kinds of games, but I mostly play multiplayer online games with my friends.
+
+    User 1: That sounds fun. Do you have any pets?
+
+    User 2: I have a dog, but he has behavioral issues.
+
+    User 1: Oh, I''m sorry to hear that. What kind of issues does he have?
+
+    User 2: He''s very aggressive towards other dogs and people.
+
+    User 1: That must be tough to deal with.
+
+    User 2: It can be, but I love him very much.
+
+    User 1: Well, it sounds like you have a lot going on. Are you feeling overwhelmed?
+
+    User 2: Sometimes, but I''m managing.
+
+    User 1: I''m glad to hear that. It sounds like you''re a very strong person.
+
+    User 2: Thanks, I try.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

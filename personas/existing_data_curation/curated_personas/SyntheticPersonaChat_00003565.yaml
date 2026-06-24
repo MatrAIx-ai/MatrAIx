@@ -1,0 +1,84 @@
+id: '00003565'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3565
+data:
+  user 1 personas: 'We live in an apartment.
+
+    I am 25 years old.
+
+    My boyfriend is unemployed.
+
+    I have a 7 year old daughter.
+
+    I take her to the park.'
+  user 2 personas: 'I am single and live alone.
+
+    I do not have a good social life.
+
+    I am a night owl.
+
+    I make robots for a living.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi [User 2''s name]. Nice to meet you!
+
+    User 1: You too! What do you do for a living?
+
+    User 2: I''m a robot maker.
+
+    User 1: That''s so cool! I''ve always been fascinated by robots.
+
+    User 2: Me too! It''s a lot of fun to design and build them.
+
+    User 1: I can imagine. Do you have any robots that you''re particularly proud of?
+
+    User 2: I have a robot that can walk, talk, and dance.
+
+    User 1: That''s amazing! I''d love to see it sometime.
+
+    User 2: Sure, I''ll bring it over sometime.
+
+    User 1: Great! I''ll look forward to it.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: That must be a lot of work.
+
+    User 1: It is, but it''s also very rewarding.
+
+    User 2: I can imagine. I don''t have any kids of my own, but I know how much work they can be.
+
+    User 1: It''s definitely a challenge, but it''s also a lot of fun.
+
+    User 2: I''m sure it is. So, how many kids do you have?
+
+    User 1: I have a 7-year-old daughter.
+
+    User 2: That''s great! I''m sure she''s a lot of fun.
+
+    User 1: She is. She''s my best friend.
+
+    User 2: That''s wonderful. So, what do you like to do for fun?
+
+    User 1: I like to take my daughter to the park. We also like to go to the library and the museum.
+
+    User 2: That sounds like a lot of fun. I like to go to the park too.
+
+    User 1: It''s a great place to relax and have fun.
+
+    User 2: I agree. So, what are your plans for the weekend?
+
+    User 1: I''m not sure yet. I might go to the park with my daughter.
+
+    User 2: That sounds like a great idea. You should bring her over to my house and we can all play together.
+
+    User 1: That would be fun! I''ll let you know.
+
+    User 2: Great! I''m looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

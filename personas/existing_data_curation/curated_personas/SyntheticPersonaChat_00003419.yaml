@@ -1,0 +1,104 @@
+id: 00003419
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3419
+data:
+  user 1 personas: 'I like to go out to eat.
+
+    I like listening to other rap music too.
+
+    One of my favorite artists is drake.
+
+    A hobby of mine is the drums.
+
+    I also enjoy cooking.'
+  user 2 personas: 'I have a dog named george.
+
+    I like going to the beach.
+
+    I like my job.
+
+    I love to ride my bike.
+
+    I used to work for a cable company.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to the beach, ride my bike, and spend time with my dog.
+
+    User 1: Oh, I like to ride my bike too! What kind of bike do you have?
+
+    User 2: I have a mountain bike. I love taking it on trails.
+
+    User 1: That sounds fun! I''ve never been on a mountain bike before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to cook, go out to eat, and listen to music.
+
+    User 2: Oh, I like to cook too! What kind of food do you like to cook?
+
+    User 1: I like to cook all kinds of food, but my favorite is probably Italian.
+
+    User 2: Oh, I love Italian food! I make a mean lasagna.
+
+    User 1: I love lasagna! Maybe you can make it for me sometime.
+
+    User 2: I would love to!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m in IT too.
+
+    User 2: What do you do in IT?
+
+    User 1: I''m a systems administrator.
+
+    User 2: Oh, nice! I used to work for a cable company.
+
+    User 1: Oh, cool! I''ve never worked for a cable company.
+
+    User 2: It was a lot of work, but it was also a lot of fun.
+
+    User 1: I bet it was!
+
+    User 2: It was. I miss the work sometimes, but I don''t miss the long hours.
+
+    User 1: Yeah, I can imagine.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. I might go to the beach or go out to eat.
+
+    User 2: Oh, that sounds fun! I''m going to the beach with my dog.
+
+    User 1: Oh, that sounds like fun! I''ve never been to the beach with a dog before.
+
+    User 2: It''s a lot of fun! They love playing in the sand and swimming in the water.
+
+    User 1: I bet they do!
+
+    User 2: Yeah, they do.
+
+    User 1: Well, it''s been nice talking to you.
+
+    User 2: You too! Have a nice day.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

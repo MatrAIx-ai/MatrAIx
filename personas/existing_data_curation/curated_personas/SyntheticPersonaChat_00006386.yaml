@@ -1,0 +1,54 @@
+id: 00006386
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6386
+data:
+  user 1 personas: 'I enjoy karaoke every friday night.
+
+    I am allergic to apples yet still eat them.
+
+    I coach the girls volley ball team.
+
+    I am a sixth grade teacher.
+
+    I enjoy crosswords , crocheting , and football.'
+  user 2 personas: 'I worry about money even though i am in high school.
+
+    My dad is very strict with his kids.
+
+    I have one close friend i grew up with.
+
+    I am dissatisfied with the school life i have had so far.
+
+    I wished i was older so i could move out.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name], a sixth grade teacher who enjoys crocheting, karaoke, crosswords, and football. What about you?
+
+    User 2: I''m [user 2 name], a high school student who worries about money, has one close friend, is dissatisfied with school life, and wishes I was older so I could move out.
+
+    User 1: It sounds like you''re going through a lot right now. What''s up?
+
+    User 2: Well, I''m worried about money because my dad is very strict with his kids and doesn''t give us a lot of money.
+
+    User 1: I''m sorry to hear that. Do you have any close friends or family members that you can talk to about this?
+
+    User 2: I have one close friend, but I don''t want to bother her with my problems.
+
+    User 1: It''s okay to talk about your problems with your friends. They''re there to support you.
+
+    User 2: I know, but I don''t want to burden her with my problems.
+
+    User 1: You''re not a burden. She''s your friend, and she wants to help.
+
+    User 2: I know, but I still feel bad about it.
+
+    User 1: It''s okay to feel bad, but you don''t have to go through this alone.
+
+    User 2: Thanks. I''ll try to talk to her about it.
+
+    User 1: Good. I''m here for you if you need anything.
+
+    User 2: Thanks. I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

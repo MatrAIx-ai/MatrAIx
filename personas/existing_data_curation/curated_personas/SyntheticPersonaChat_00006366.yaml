@@ -1,0 +1,90 @@
+id: '00006366'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6366
+data:
+  user 1 personas: 'I am a librarian in my current job.
+
+    I have two cats.
+
+    I like to read books.
+
+    My cats like to be read to.'
+  user 2 personas: 'I like cookies.
+
+    I like pasta.
+
+    I also like ice cream.
+
+    I like painting , i can cook well.
+
+    I am a student.'
+  Best Generated Conversation: 'User 1: Hi, I''m a librarian.
+
+    User 2: Hi! I''m a student.
+
+    User 1: What are you studying?
+
+    User 2: I''m studying art.
+
+    User 1: That''s great! I love art. I''m a painter myself.
+
+    User 2: Oh, really? That''s awesome! I love painting too.
+
+    User 1: What kind of things do you like to paint?
+
+    User 2: I like to paint landscapes, mostly.
+
+    User 1: That''s great! I love painting landscapes too.
+
+    User 2: Do you have any paintings you''d like to show me?
+
+    User 1: Sure! I have a few on my phone.
+
+    User 2: Oh, cool! Let me see!
+
+    User 1: Here you go.
+
+    User 2: Wow! These are beautiful!
+
+    User 1: Thank you!
+
+    User 2: You''re welcome! I love the colors and the way you capture the light.
+
+    User 1: Thanks! I''m glad you like them.
+
+    User 2: Do you ever sell your paintings?
+
+    User 1: Sometimes, I do. I have a few pieces in a local gallery.
+
+    User 2: Oh, that''s awesome! I''ll have to go see them sometime.
+
+    User 1: You''re welcome to.
+
+    User 2: Thanks! So, what do you like to do for fun?
+
+    User 1: I like to read, paint, and spend time with my cats.
+
+    User 2: Oh, you have cats? That''s awesome! I love cats.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What are their names?
+
+    User 1: Their names are Mittens and Whiskers.
+
+    User 2: Oh, cute names!
+
+    User 1: Thanks! They''re both very cute.
+
+    User 2: I bet they''re very sweet too.
+
+    User 1: They are. They''re the best friends I could ask for.
+
+    User 2: I''m glad you have them.
+
+    User 1: Me too. They make my life so much better.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

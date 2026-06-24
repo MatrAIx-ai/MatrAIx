@@ -1,0 +1,62 @@
+id: 00002931
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2931
+data:
+  user 1 personas: 'I work in advertising.
+
+    I have a golden retriever.
+
+    My mother is dead.
+
+    I write fiction for fun.'
+  user 2 personas: 'I have an above average iq.
+
+    I love the desert.
+
+    I love to eat meat.
+
+    I do not have a college degree.'
+  Best Generated Conversation: 'User 1: Hi! I''m (user 1 name).
+
+    User 2: Hi! I''m (user 2 name).
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read, write, and go to the desert.
+
+    User 1: That''s cool! I love to write fiction for fun.
+
+    User 2: That''s awesome! What kind of fiction do you write?
+
+    User 1: I write mostly fantasy and sci-fi.
+
+    User 2: That''s so cool! I love both of those genres.
+
+    User 1: Me too! I''m glad you like them.
+
+    User 2: What''s your favorite book?
+
+    User 1: That''s a tough question. I have a lot of favorite books, but I think my favorite might be The Lord of the Rings.
+
+    User 2: That''s a great book! I''ve read it a few times myself.
+
+    User 1: I''ve read it a few times too. It''s always so good.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go to the movies, hang out with friends, and play video games.
+
+    User 2: That''s so cool! I like to do all of those things too.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: I think we do too.
+
+    User 1: It''s nice to meet you!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

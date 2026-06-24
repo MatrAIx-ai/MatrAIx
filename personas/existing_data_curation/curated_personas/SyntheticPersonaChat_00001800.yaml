@@ -1,0 +1,90 @@
+id: 00001800
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1800
+data:
+  user 1 personas: 'I am an only child.
+
+    I love spicy food.
+
+    My mother is a housemaid.
+
+    I like swimming.'
+  user 2 personas: 'I have two cats.
+
+    I need extra iron in my diet.
+
+    I m in love with adam levine.
+
+    I love eating kale.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name]. What''s yours?
+
+    User 1: My name is [name]. Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, eat kale, and listen to Adam Levine.
+
+    User 1: I love swimming too! What''s your favorite kind of food?
+
+    User 2: I love kale! It''s so healthy and delicious.
+
+    User 1: I''ve never had kale before, but I''ve heard good things about it.
+
+    User 2: You should try it! It''s really good.
+
+    User 1: I will! What''s your favorite song by Adam Levine?
+
+    User 2: I love "Sugar." It''s so catchy and upbeat.
+
+    User 1: I''ve heard that one! It''s a great song.
+
+    User 2: I know, right?
+
+    User 1: What do you do for work?
+
+    User 2: I''m a housemaid.
+
+    User 1: Oh, that''s interesting. What''s it like?
+
+    User 2: It''s a lot of work, but it''s also very rewarding.
+
+    User 1: I bet it is.
+
+    User 2: It is.
+
+    User 1: Do you have any siblings?
+
+    User 2: I have two cats.
+
+    User 1: Oh, cute! I''m an only child.
+
+    User 2: That''s cool.
+
+    User 1: So, what are you up to today?
+
+    User 2: I''m just relaxing at home. What about you?
+
+    User 1: I''m going to go swimming.
+
+    User 2: That sounds fun. I wish I could join you.
+
+    User 1: You should! It''s a great way to relax and get some exercise.
+
+    User 2: I might just do that.
+
+    User 1: Great! Have fun!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

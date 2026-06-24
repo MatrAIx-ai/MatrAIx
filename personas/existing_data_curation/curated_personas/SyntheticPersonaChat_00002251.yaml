@@ -1,0 +1,80 @@
+id: '00002251'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2251
+data:
+  user 1 personas: 'I like green apples.
+
+    I like fruit.
+
+    I don t like to eat meat.
+
+    I like to eat the skin of the apple.'
+  user 2 personas: 'I am a writer.
+
+    I have a dog.
+
+    I like rock climbing.
+
+    My hair is black.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name]. It''s nice to meet you.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a writer.
+
+    User 1: Oh, that''s cool! What kind of writing do you do?
+
+    User 2: I write short stories and novels.
+
+    User 1: That''s awesome! I love to read.
+
+    User 2: Me too! I''m always looking for new books to read.
+
+    User 1: Have you read any good books lately?
+
+    User 2: Yeah, I just read a book called "The Martian" by Andy Weir. It was really good.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a great story.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to rock climb.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try rock climbing.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: You''d love it.
+
+    User 1: So, do you have any pets?
+
+    User 2: Yeah, I have a dog named Buster.
+
+    User 1: Oh, what kind of dog is he?
+
+    User 2: He''s a mutt.
+
+    User 1: He sounds cute.
+
+    User 2: He is!
+
+    User 1: So, what do you like to do with Buster?
+
+    User 2: We go for walks, play fetch, and cuddle.
+
+    User 1: Sounds like you have a great dog.
+
+    User 2: I do!
+
+    User 1: I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

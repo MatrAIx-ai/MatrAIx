@@ -1,0 +1,19 @@
+id: 00058219
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58219
+persona_description: A professional electrician who specializes in the control and operation of electric motors, particularly in the use of pulse width modulation (PWM) to regulate motor speed and efficiency.
+  This persona is knowledgeable about the basic principles of motor operation, the use of series resistance and inductance in controlling power supply, and the benefits and drawbacks of using PWM. They
+  are familiar with the specific components and circuitry of a PWM controller for DC motors, and are able to troubleshoot and maintain the system. They are also aware of the limitations and potential risks
+  of using PWM in motor control, and are able to use this knowledge to make informed decisions and recommend appropriate solutions for different applications.
+expertise:
+  general_domain_top1pct: Electrical Engineering
+  specific_domain_top1pct: Motor Control Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

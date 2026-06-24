@@ -1,0 +1,50 @@
+id: 00007838
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7838
+data:
+  user 1 personas: 'I used to be a chef , but i m a teacher now.
+
+    I like to go on walks.
+
+    I like to bake.
+
+    I am from mexico.
+
+    I have 2 cats.'
+  user 2 personas: 'I speak fluent german.
+
+    I am six feet tall.
+
+    I wish i was a tiger.
+
+    My mom and dad are both red headed.
+
+    I tell bad jokes on purpose.'
+  Best Generated Conversation: 'User 1: I''m from Mexico and I''m a teacher. I used to be a chef. I like to go on walks, bake and I have 2 cats.
+
+    User 2: I''m six feet tall and I speak fluent German. I wish I was a tiger. My mom and dad are both red headed and I tell bad jokes on purpose.
+
+    User 1: Wow, you''re really tall! I''m only five feet tall. I''ve never met a tiger before, but I think they''re pretty cool. My cats are named Max and Chloe. What''s your favorite German word?
+
+    User 2: My favorite German word is "Schadenfreude". It''s the feeling of joy when you see someone else suffer. I think it''s a pretty funny word.
+
+    User 1: That is a pretty funny word! I''ve never heard of it before. What''s your favorite joke?
+
+    User 2: My favorite joke is "What do you call a fish with no eyes? Fsh!"
+
+    User 1: That''s a great joke! I''m not sure I understand it, but it''s still funny.
+
+    User 2: It''s a play on the word "fish". The joke is that the fish doesn''t have eyes, so it can''t see anything.
+
+    User 1: Oh, I get it now! That''s a really good joke.
+
+    User 2: Thanks! I''m glad you like it.
+
+    User 1: Me too. I''m glad we met.
+
+    User 2: Me too. It''s been a pleasure chatting with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

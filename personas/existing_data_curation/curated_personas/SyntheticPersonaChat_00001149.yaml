@@ -1,0 +1,72 @@
+id: 00001149
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1149
+data:
+  user 1 personas: 'I work for peta.
+
+    I like to make clothes.
+
+    I love animals.
+
+    I am a vegetarian.
+
+    I make 50k a year.'
+  user 2 personas: 'I have two cats , milo and fio.
+
+    My favorite sport is soccer.
+
+    My brother works at best buy.
+
+    I am canadian.
+
+    I love video games.'
+  Best Generated Conversation: 'User 1: Hello, I''m [name]!
+
+    User 2: Hello, I''m [name]!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love playing video games and watching soccer.
+
+    User 1: That''s cool! I love video games too. What''s your favorite game?
+
+    User 2: Right now, I''m really into Elden Ring.
+
+    User 1: I''ve heard great things about that game! I''m still playing Horizon Forbidden West.
+
+    User 2: That''s a good one too! I''m also a big fan of the Zelda games.
+
+    User 1: Me too! I''ve been playing Zelda games since I was a kid.
+
+    User 2: That''s awesome! What''s your favorite Zelda game?
+
+    User 1: It''s hard to say, but I think I''d have to go with Ocarina of Time.
+
+    User 2: That''s a classic! I love Ocarina of Time too.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''m a designer.
+
+    User 2: That''s cool too! I''ve always been interested in design.
+
+    User 1: Yeah, it''s a lot of fun.
+
+    User 2: I''m sure it is.
+
+    User 1: So, where are you from?
+
+    User 2: I''m from Canada.
+
+    User 1: Oh, that''s cool! I''ve always wanted to visit Canada.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I definitely will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

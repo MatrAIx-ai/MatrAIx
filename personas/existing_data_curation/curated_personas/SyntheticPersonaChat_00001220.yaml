@@ -1,0 +1,66 @@
+id: '00001220'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1220
+data:
+  user 1 personas: 'I am a scientist.
+
+    I have 3 kids.
+
+    I want to go to mars.
+
+    I am an avid artist.
+
+    I know karate.'
+  user 2 personas: 'I wear cardigans because i hope it makes me look more cultured.
+
+    I had one step dad , and fortunately he ignored me.
+
+    My last name is spanish , but i tell people that it s italian.
+
+    I hate that i got my brain from the dad i never met.'
+  Best Generated Conversation: 'User 1: Hi, I''m a scientist and I want to go to Mars. What do you do for a living?
+
+    User 2: I''m a cardigan enthusiast.
+
+    User 1: What''s that?
+
+    User 2: I wear cardigans because I hope it makes me look more cultured.
+
+    User 1: That''s an interesting hobby. Do you have any other hobbies?
+
+    User 2: Not really. I like to watch movies, but I don''t have a lot of free time.
+
+    User 1: What kind of movies do you like to watch?
+
+    User 2: I like action movies and comedies. I don''t really like drama movies.
+
+    User 1: I like action movies too. I''m not a big fan of comedies, but I like some of them.
+
+    User 2: What''s your favorite action movie?
+
+    User 1: My favorite action movie is probably The Matrix.
+
+    User 2: I''ve never seen that movie.
+
+    User 1: You should! It''s a great movie.
+
+    User 2: I''ll have to check it out.
+
+    User 1: So, what''s your favorite thing about cardigans?
+
+    User 2: I like the way they make me look. I feel more sophisticated and put-together when I wear them.
+
+    User 1: I see. I''ve never really been a fan of cardigans, but I can see how they could make you feel more confident.
+
+    User 2: I think you should give them a try. They''re really comfortable and they can be dressed up or down.
+
+    User 1: I''ll think about it.
+
+    User 2: Good! I hope you like them.
+
+    User 1: Thanks! I think I might.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

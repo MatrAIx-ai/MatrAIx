@@ -1,0 +1,17 @@
+id: '00010425'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10425
+persona_description: A researcher in astronomy and physics, specifically focused on studying X-ray pulsars and their behavior. The person is interested in the evolution and variability of these sources,
+  as well as the influence of their magnetic fields on their behavior. They are also curious about the correlation between their pulse phase and flux and the location of the hot spot.
+expertise:
+  general_domain_top1pct: physics
+  specific_domain_top1pct: X-ray pulsars
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

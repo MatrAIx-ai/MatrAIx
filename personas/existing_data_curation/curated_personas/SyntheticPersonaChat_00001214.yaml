@@ -1,0 +1,82 @@
+id: '00001214'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1214
+data:
+  user 1 personas: 'I am a paramedic.
+
+    I love going fishing.
+
+    I talk to my mom on the phone every day.
+
+    I am single.
+
+    I love rap music.'
+  user 2 personas: 'I enjoy dressing up to go out clubbing.
+
+    Currently , i am saving up to get some procedures done.
+
+    I do not think my girlfriend understands.
+
+    I hope to one day be happy with myself.
+
+    I love her though.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just got home from work.
+
+    User 1: Oh, cool. What do you do for work?
+
+    User 2: I''m a paramedic.
+
+    User 1: Oh, that''s really cool! I''ve always been interested in that field.
+
+    User 2: It''s a lot of fun, but it can be stressful.
+
+    User 1: I can imagine. What''s your favorite part about it?
+
+    User 2: I like helping people and making a difference in their lives.
+
+    User 1: That''s really great. What''s your least favorite part about it?
+
+    User 2: The long hours and the stress.
+
+    User 1: I can understand that. So, what do you like to do for fun?
+
+    User 2: I like to go fishing, read, and watch movies.
+
+    User 1: Oh, that''s cool. I like to go fishing too.
+
+    User 2: Really? Where do you like to go fishing?
+
+    User 1: I like to go to the lake.
+
+    User 2: That''s cool. I like to go to the ocean.
+
+    User 1: Do you have a favorite fish to catch?
+
+    User 2: I like to catch bass.
+
+    User 1: Me too! They''re so much fun to catch.
+
+    User 2: Yeah, they are.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t know if I have a favorite movie, but I like a lot of different movies.
+
+    User 1: Me too. I like a lot of different genres of movies.
+
+    User 2: Yeah, me too.
+
+    User 1: So, what''s your favorite song?
+
+    User 2: I don''t know if I have a favorite song, but I like a lot of different songs.
+
+    User 1: Me too. I like a lot of different genres of music.
+
+    User 2: Yeah, me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

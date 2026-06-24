@@ -1,0 +1,18 @@
+id: '00012620'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12620
+persona_description: A person who is interested in understanding the physical interface between the Raspberry Pi and the outside world, and how to control devices connected to a Raspberry Pi on the network
+  using the GPIO header. They are familiar with the 40-pin and 26-pin GPIO header on the Raspberry Pi, and have experience using the pigpio library to control GPIO pins remotely over the network. They are
+  also familiar with the concept of 1-Wire devices and how to use the GPIO header to interface with them.
+expertise:
+  general_domain_top1pct: electronics
+  specific_domain_top1pct: Raspberry Pi programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: Raspberry Pi GPIO programming
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

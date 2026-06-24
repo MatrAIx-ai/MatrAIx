@@ -1,0 +1,86 @@
+id: 00000823
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 823
+data:
+  user 1 personas: 'I love to read.
+
+    I have never been on a date.
+
+    I once wrote a biography of my favorite actor.
+
+    I adopted all my dogs.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I also like eating sushi.
+
+    I am studying for my masters.
+
+    I am a student in social sciences.
+
+    Cooking is one of my pass times.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+
+    User 2: I love to read, cook, and go out to eat.
+
+
+    User 1: That''s cool! I love to read and cook too. What kind of books do you like to read?
+
+
+    User 2: I like to read all kinds of books, but I especially love historical fiction.
+
+
+    User 1: Me too! I love learning about different time periods and cultures. Have you read any good historical fiction lately?
+
+
+    User 2: I just finished reading The Nightingale by Kristin Hannah. It was really good. It''s set during the Nazi occupation of France.
+
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+
+    User 2: You should! It''s really moving.
+
+
+    User 1: So, what kind of cooking do you like to do?
+
+
+    User 2: I like to cook all kinds of food, but I especially love Italian food.
+
+
+    User 1: That''s my favorite too! Have you ever made pizza?
+
+
+    User 2: Yes, I have! I make it all the time.
+
+
+    User 1: That''s awesome! I love pizza. I''m not very good at making it, though.
+
+
+    User 2: You should try making it sometime. It''s not as hard as you think.
+
+
+    User 1: I will! Thanks for the tip.
+
+
+    User 2: No problem! So, what are you studying for your masters in?
+
+
+    User 1: I''m studying social work.
+
+
+    User 2: That''s great! I''ve always been interested in social work.
+
+
+    User 1: It''s a really rewarding field. I''m excited to start working with people.
+
+
+    User 2: I''m sure you''ll do great things.
+
+
+    User 1: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

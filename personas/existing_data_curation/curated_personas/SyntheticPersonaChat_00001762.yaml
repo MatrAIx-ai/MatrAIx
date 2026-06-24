@@ -1,0 +1,86 @@
+id: '00001762'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1762
+data:
+  user 1 personas: 'My name is albert.
+
+    I used to be a lawyer.
+
+    My next job will be in the federal court.
+
+    I am a judge in the circuit court.'
+  user 2 personas: 'I am a mother of 5.
+
+    I like to draw.
+
+    I like to do crafts.
+
+    I like to watch movies.'
+  Best Generated Conversation: 'User 1: Hi! I''m Albert, what''s your name?
+
+    User 2: Hi, I''m [name]. Nice to meet you.
+
+    User 1: Nice to meet you too. What do you do for a living?
+
+    User 2: I''m a mother of 5.
+
+    User 1: Wow, that''s a lot of kids! What are their names?
+
+    User 2: Their names are [list of names].
+
+    User 1: That''s a great collection of names.
+
+    User 2: Thanks. I like to think so too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to draw, do crafts, and watch movies.
+
+    User 1: I like drawing and watching movies too.
+
+    User 2: What kind of movies do you like to watch?
+
+    User 1: I like comedies, dramas, and thrillers.
+
+    User 2: I like all of those too.
+
+    User 1: What are some of your favorite movies?
+
+    User 2: Some of my favorites are The Princess Bride, Forrest Gump, and The Shawshank Redemption.
+
+    User 1: Those are all great movies. I love The Princess Bride.
+
+    User 2: Me too. It''s such a classic.
+
+    User 1: So, what do you like to draw?
+
+    User 2: I like to draw people, animals, and landscapes.
+
+    User 1: I like drawing people too. I''m not very good at it, but I enjoy it.
+
+    User 2: You''re probably better than you think.
+
+    User 1: Thanks. I hope so.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to the movies with my kids.
+
+    User 1: Oh, that sounds like fun. What are you going to see?
+
+    User 2: We''re not sure yet. We''re going to wait until we get to the theater.
+
+    User 1: That sounds like a good plan.
+
+    User 2: Yeah, we''re not very picky.
+
+    User 1: Well, have fun.
+
+    User 2: Thanks, you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

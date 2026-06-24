@@ -1,0 +1,66 @@
+id: '00002034'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2034
+data:
+  user 1 personas: 'I play quarterback.
+
+    This season , i will become a playoff quarterback.
+
+    This is my second year in the league.
+
+    I play for the philadelphia eagles.
+
+    Last season i was just getting started.'
+  user 2 personas: 'I love art.
+
+    My husband in an engineer.
+
+    I have a severe anxiety disorder.
+
+    I am a stay at home mom.'
+  Best Generated Conversation: 'User 1: Hi.
+
+    User 2: Hi there.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love art. I like to paint, draw, and sculpt.
+
+    User 1: That''s cool. I''m not very artistic, but I do enjoy looking at art.
+
+    User 2: Do you have any favorite artists?
+
+    User 1: I like Salvador Dali and Van Gogh. What about you?
+
+    User 2: I like Monet and Picasso.
+
+    User 1: I''ve seen some of Monet''s paintings in person. They''re really beautiful.
+
+    User 2: I know, right? I''m a big fan of his impressionist style.
+
+    User 1: What about Picasso?
+
+    User 2: I like his cubist style. It''s so unique and interesting.
+
+    User 1: I agree. He was a very talented artist.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I''m a quarterback for the Philadelphia Eagles. This is my second season in the league, and I''m hoping to make the playoffs this year.
+
+    User 2: Wow, that''s so cool! I''ve always been a big football fan.
+
+    User 1: Thanks! It''s a lot of fun, but it can be a lot of pressure too.
+
+    User 2: I can imagine. But I''m sure you''re doing great.
+
+    User 1: I''m trying my best!
+
+    User 2: I''m sure you''ll make the playoffs this year.
+
+    User 1: Thanks for the encouragement! I hope you''re right.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

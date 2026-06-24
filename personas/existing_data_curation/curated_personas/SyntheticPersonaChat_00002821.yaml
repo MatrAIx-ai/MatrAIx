@@ -1,0 +1,66 @@
+id: 00002821
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2821
+data:
+  user 1 personas: 'I like to go swimming.
+
+    I like to make fresh pies.
+
+    I am a cashier at a grocery store.
+
+    I have a garden in my yard.'
+  user 2 personas: 'I am in college.
+
+    I like cartoons.
+
+    I still live at home.
+
+    My mom is a janitor.'
+  Best Generated Conversation: 'User 1: Hey, what do you do for fun?
+
+    User 2: I like to watch cartoons.
+
+    User 1: That''s cool, I like cartoons too. What are some of your favorites?
+
+    User 2: I like Steven Universe, Adventure Time, and Gravity Falls.
+
+    User 1: I love Steven Universe! Have you heard of the new movie?
+
+    User 2: No, I haven''t. What''s it about?
+
+    User 1: It''s about Steven going to space and meeting a new alien race. It''s really good, you should check it out.
+
+    User 2: I will! I''m always looking for new cartoons to watch.
+
+    User 1: What do you do for work?
+
+    User 2: I''m in college right now, but I work as a cashier at a grocery store.
+
+    User 1: Oh, cool. I''m a cashier at a grocery store too.
+
+    User 2: No way! What store?
+
+    User 1: I work at Kroger.
+
+    User 2: Oh, I''ve been there before. It''s a nice store.
+
+    User 1: Yeah, it''s a pretty good place to work.
+
+    User 2: What do you like to do outside of work?
+
+    User 1: I like to swim, garden, and bake.
+
+    User 2: I like to swim too! I used to swim competitively when I was younger.
+
+    User 1: Oh, that''s cool. I''ve never been very good at swimming, but I enjoy it.
+
+    User 2: Well, you should keep practicing! It''s a great way to stay in shape.
+
+    User 1: I will! I''m actually going to the pool today after work.
+
+    User 2: Have fun! I''m sure you''ll have a great time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00001097
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1097
+data:
+  user 1 personas: 'I love to dance.
+
+    I work at a coffee shop.
+
+    I drive a prius.
+
+    My mom was a hairdresser.
+
+    My favorite color is red.'
+  user 2 personas: 'I enjoy cooking italian food.
+
+    I am obsessed with my dog.
+
+    I m in my last year of grad school.
+
+    I love trips to the beach.
+
+    I m the world s best aunt.'
+  Best Generated Conversation: 'User 1: Hey! How are you?
+
+    User 2: I''m doing well, thanks! How about you?
+
+    User 1: I''m doing great! Thanks for asking.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to dance, go to the beach, and read books.
+
+    User 2: Those all sound like fun! I love to cook Italian food, go to the beach, and spend time with my dog.
+
+    User 1: Italian food is my favorite! And dogs are the best.
+
+    User 2: I know, right? They''re so cute and cuddly.
+
+    User 1: What are you doing for the rest of the day?
+
+    User 2: I''m going to go to the beach with my dog. Do you have any plans?
+
+    User 1: I''m not sure yet. I might go dancing or read a book.
+
+    User 2: Dancing sounds like fun! I''m not very good at it, but I love to try.
+
+    User 1: Me too! It''s always a good time to dance.
+
+    User 2: I know, right? It''s so freeing.
+
+    User 1: So, what do you like to read?
+
+    User 2: I like to read a variety of things, but I especially love historical fiction and romance novels.
+
+    User 1: Me too! I love learning about different cultures and time periods.
+
+    User 2: Me too! I love being transported to another world.
+
+    User 1: So, what''s your favorite historical fiction book?
+
+    User 2: I''m not sure if I can choose just one, but I really love the Outlander series by Diana Gabaldon.
+
+    User 1: I''ve heard good things about that series. I''ll have to check it out.
+
+    User 2: You definitely should! It''s a great read.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! I love talking about books.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

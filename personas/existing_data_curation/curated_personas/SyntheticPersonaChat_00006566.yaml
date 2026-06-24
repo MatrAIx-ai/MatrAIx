@@ -1,0 +1,70 @@
+id: '00006566'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6566
+data:
+  user 1 personas: 'I am allergic to shellfish and cats.
+
+    I have 1 pair of shoes.
+
+    My mother has 500 pairs of shoes.
+
+    I like having my back scratched.'
+  user 2 personas: 'I have a toddler.
+
+    My favorite singer is taylor swift.
+
+    I work for a beer distributor.
+
+    I am married.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to listen to Taylor Swift and go to beer tastings.
+
+    User 1: Oh, I love Taylor Swift! I have all of her albums.
+
+    User 2: That''s awesome! I''m going to see her in concert next month.
+
+    User 1: Lucky you! I''d love to see her in concert.
+
+    User 2: It''s going to be a lot of fun.
+
+    User 1: I''m sure it will be.
+
+    User 2: What about you, what do you do for fun?
+
+    User 1: I like to go for walks, read, and have my back scratched.
+
+    User 2: I love walks too! I don''t read much, but I love having my back scratched too.
+
+    User 1: We should go for a walk together sometime.
+
+    User 2: That would be great!
+
+    User 1: I''m allergic to shellfish and cats.
+
+    User 2: I don''t have any pets, but I love seafood.
+
+    User 1: That''s good to know.
+
+    User 2: What do you do for work?
+
+    User 1: I''m a stay-at-home mom.
+
+    User 2: That sounds like a lot of work.
+
+    User 1: It is, but it''s also really rewarding.
+
+    User 2: I''m sure it is.
+
+    User 1: I''m glad you think so.
+
+    User 2: Me too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00005055'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5055
+data:
+  user 1 personas: 'I m in love with adam levine.
+
+    I have two children under ten.
+
+    I love eating kale.
+
+    I have two cats.'
+  user 2 personas: 'I used to be a meat eater but i m now a vegan.
+
+    My favorite sport is hockey.
+
+    I go to yoga.
+
+    Watching sports is fun.'
+  Best Generated Conversation: 'User 1: Hi there! I''m Adam Levine''s biggest fan.
+
+    User 2: Oh wow, that''s great! I used to be a big fan of his, but I''ve since become a vegan.
+
+    User 1: That''s interesting. Why did you become a vegan?
+
+    User 2: I became a vegan for ethical reasons. I didn''t want to eat animals anymore.
+
+    User 1: I can respect that. I know a lot of people who are vegan for ethical reasons.
+
+    User 2: It''s a great way to live.
+
+    User 1: I''m glad you''re happy with your decision. I''m not vegan myself, but I do try to eat less meat.
+
+    User 2: That''s good to hear. I think everyone should try to eat less meat, even if they don''t go full vegan.
+
+    User 1: I agree. I think it''s important to be mindful of the impact our food choices have on the environment.
+
+    User 2: I think so too. It''s important to be aware of where our food comes from and how it''s made.
+
+    User 1: I''m glad we could chat about this. It''s always nice to talk to someone who''s passionate about their beliefs.
+
+    User 2: Me too. I''m glad we could have this conversation.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: Yes, I love to play hockey and go to yoga.
+
+    User 1: Oh wow, that''s cool! I''ve always wanted to try yoga.
+
+    User 2: It''s a great way to relax and de-stress.
+
+    User 1: I can imagine. I''ve heard that it can be really challenging, though.
+
+    User 2: It can be, but it''s also really rewarding.
+
+    User 1: I might have to give it a try sometime.
+
+    User 2: I would definitely recommend it.
+
+    User 1: Thanks for the recommendation. I''m sure I''ll enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,114 @@
+id: 00002038
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2038
+data:
+  user 1 personas: 'I wear a red purse.
+
+    I drive a red car.
+
+    I like to wear red.
+
+    I like to wear red shoes also.
+
+    I use red lipstick.'
+  user 2 personas: 'I am a geology major at alabama university.
+
+    I have a girlfriend of 7 years.
+
+    I currently suffer from social anxiety.
+
+    I never have had alcohol in my life.
+
+    I watch every football game at alabama.'
+  Best Generated Conversation: 'User 1: Hello, how are you today?
+
+    User 2: I''m doing well, thank you for asking. How are you?
+
+    User 1: I''m doing well too, thanks for asking.
+
+    User 2: I''m glad to hear that.
+
+    User 1: So, what''s your name?
+
+    User 2: My name is [user 2 name].
+
+    User 1: Nice to meet you, [user 2 name].
+
+    User 2: Nice to meet you too, [user 1 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a geology major at Alabama University.
+
+    User 1: Oh, that''s interesting. Do you like it?
+
+    User 2: I love it! I''m really passionate about geology.
+
+    User 1: That''s great.
+
+    User 2: Thank you.
+
+    User 1: So, what''s your favorite thing about geology?
+
+    User 2: I love learning about the Earth and how it works. I also love exploring new places and finding new things.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is!
+
+    User 1: So, what''s your favorite thing about Alabama?
+
+    User 2: I love the people and the culture. I also love the football team.
+
+    User 1: I''m not a big football fan, but I can understand why you like the team.
+
+    User 2: They''re a lot of fun to watch.
+
+    User 1: So, do you have any hobbies?
+
+    User 2: I like to play video games and watch movies.
+
+    User 1: Oh, me too! What kind of games do you like to play?
+
+    User 2: I like to play all kinds of games, but I''m especially into open world RPGs.
+
+    User 1: Oh, me too! I just finished playing The Witcher 3 and I''m so sad it''s over.
+
+    User 2: I know, right? That game was amazing!
+
+    User 1: So, what are you up to this weekend?
+
+    User 2: I''m not sure yet. I might go to the football game on Saturday.
+
+    User 1: Oh, that sounds like fun. I''m not sure if I''ll be going to the game. I might just stay home and watch it on TV.
+
+    User 2: That sounds like a plan.
+
+    User 1: So, do you have any plans for the future?
+
+    User 2: I''m not sure yet. I''m hoping to get a job after I graduate, but I''m not sure where I want to live.
+
+    User 1: I know what you mean. I''m still trying to figure out what I want to do with my life.
+
+    User 2: It''s hard to make decisions when there are so many options.
+
+    User 1: I know, right? But I''m sure we''ll figure it out eventually.
+
+    User 2: I hope so.
+
+    User 1: So, what are your plans for after this conversation?
+
+    User 2: I''m not sure. I might go for a walk or watch a movie.
+
+    User 1: Oh, that sounds like a plan.
+
+    User 2: Yeah, it does.
+
+    User 1: Well, it was nice talking to you, [user 2 name].
+
+    User 2: You too, [user 1 name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

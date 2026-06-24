@@ -1,0 +1,50 @@
+id: '00004623'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4623
+data:
+  user 1 personas: 'I go to school for business.
+
+    I enjoy skiing.
+
+    I love to travel.
+
+    I am from russia.
+
+    My favorite music is rock and roll.'
+  user 2 personas: 'I usually catch sunfish.
+
+    I m a simple man.
+
+    I can t eat them but they re pretty.
+
+    I like fishing.'
+  Best Generated Conversation: 'User 1: I like to go skiing in the winter. It''s a lot of fun!
+
+    User 2: I''ve never been skiing. I''m more of a fishing guy.
+
+    User 1: Fishing is fun too! I used to go fishing with my dad when I was a kid.
+
+    User 2: What kind of fish do you like to catch?
+
+    User 1: I like to catch trout. They''re really beautiful fish.
+
+    User 2: I''ve never caught a trout before. I usually catch sunfish.
+
+    User 1: Sunfish are pretty too! I like the orange and black ones.
+
+    User 2: Yeah, they''re pretty cool. I like to catch them because they''re easy to catch.
+
+    User 1: I guess I''m more of a challenge seeker. I like to go after the big fish.
+
+    User 2: I''m not that good of a fisherman. I''m happy with whatever I catch.
+
+    User 1: That''s the spirit! Fishing is supposed to be fun, not stressful.
+
+    User 2: I agree! I just like to relax and enjoy nature.
+
+    User 1: Me too! Fishing is a great way to do that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

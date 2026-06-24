@@ -1,0 +1,64 @@
+id: '00005154'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5154
+data:
+  user 1 personas: 'My favorite music is country.
+
+    I love all animals.
+
+    I used to work as an actress.
+
+    I love my job.'
+  user 2 personas: 'I like simple jokes.
+
+    I prefer the simpler times.
+
+    I like the flintstones.
+
+    My friend likes cartoons like south park.'
+  Best Generated Conversation: 'User 1: What''s your favorite type of music?
+
+    User 2: I like simple songs, like the kind on the radio.
+
+    User 1: Me too! I love country music.
+
+    User 2: I''ve heard of country music, but I''ve never really listened to it.
+
+    User 1: You should! It''s a great genre of music.
+
+    User 2: What''s your favorite country song?
+
+    User 1: I''m not sure I have a favorite, but I really like "The Dance" by Garth Brooks.
+
+    User 2: I''ll have to check that out.
+
+    User 1: What''s your favorite cartoon?
+
+    User 2: I like the Flintstones.
+
+    User 1: Me too! I love Wilma and Betty.
+
+    User 2: They''re my favorite characters.
+
+    User 1: What''s your favorite thing about them?
+
+    User 2: I like how they''re always there for each other.
+
+    User 1: Me too. They''re a great example of friendship.
+
+    User 2: I like that they''re not afraid to be themselves.
+
+    User 1: Me too. They''re always true to themselves.
+
+    User 2: I like that they''re always happy.
+
+    User 1: Me too. They''re always in a good mood.
+
+    User 2: I like that they''re always positive.
+
+    User 1: Me too. They''re always looking for the best in life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

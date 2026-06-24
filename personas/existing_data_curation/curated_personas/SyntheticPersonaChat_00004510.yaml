@@ -1,0 +1,84 @@
+id: '00004510'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4510
+data:
+  user 1 personas: 'My adopted dad works at hp.
+
+    My mom stays at home.
+
+    I have six siblings.
+
+    I was adopted when i was a baby.'
+  user 2 personas: 'I am an old woman who lives on a social security check.
+
+    I often do not have the money to pay my utility bills.
+
+    My favorite color is yellow.
+
+    I only take the bus.
+
+    I babysit for the woman who lives next door.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]
+
+    User 2: Hi there, my name is [user 2''s name]
+
+    User 1: It''s nice to meet you, [user 2''s name]
+
+    User 2: You too, [user 1''s name]
+
+    User 1: What do you do for a living?
+
+    User 2: I babysit for the woman who lives next door
+
+    User 1: That sounds like fun! I''m a student at the local college
+
+    User 2: That''s great! What are you studying?
+
+    User 1: I''m studying computer science
+
+    User 2: Wow, that''s a tough major!
+
+    User 1: It is, but I''m enjoying it so far
+
+    User 2: I''m sure you''ll do great
+
+    User 1: Thanks, I hope so
+
+    User 2: So, how many siblings do you have?
+
+    User 1: I have six siblings
+
+    User 2: Wow, that''s a lot!
+
+    User 1: Yeah, it can be a lot of fun, but it can also be chaotic
+
+    User 2: I bet!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, knit, and take walks
+
+    User 1: That sounds relaxing
+
+    User 2: It is
+
+    User 1: I like to watch movies, play video games, and go for hikes
+
+    User 2: That sounds fun
+
+    User 1: It is
+
+    User 2: It was nice talking to you, [user 1''s name]
+
+    User 1: You too, [user 2''s name]
+
+    User 2: Maybe we can hang out sometime
+
+    User 1: That would be fun
+
+    User 2: Great! I''ll give you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

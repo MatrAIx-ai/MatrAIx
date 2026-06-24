@@ -1,0 +1,64 @@
+id: '00003332'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3332
+data:
+  user 1 personas: 'I am confined to my bed.
+
+    I love when my pets visit me in bed.
+
+    I spend a good deal of time on social media.
+
+    I am glad that i work from home.
+
+    I enjoy playing computer games.'
+  user 2 personas: 'I have a gun collection at home.
+
+    I have been married 3 times.
+
+    I hate the holidays.
+
+    I drive a ford truck.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: I''m confined to my bed, but I love when my pets visit me!
+
+    User 2: I''m sorry to hear that. What kind of pets do you have?
+
+    User 1: I have a cat and a dog.
+
+    User 2: Aww, that''s cute! I love animals.
+
+    User 1: Me too! They''re the best.
+
+    User 2: What do you do for fun?
+
+    User 1: I spend a lot of time on social media, and I love playing video games.
+
+    User 2: I''m not really into social media, but I love video games too! What kind of games do you like to play?
+
+    User 1: I like all kinds of games, but I''m really into RPGs and adventure games.
+
+    User 2: Me too! I love a good story.
+
+    User 1: What''s your favorite game of all time?
+
+    User 2: That''s a tough question! I think I''d have to say Skyrim.
+
+    User 1: I love Skyrim too! It''s such a great game.
+
+    User 2: I know, right? It''s so immersive and has so much to do.
+
+    User 1: I''ve been playing it for years and I still haven''t finished it.
+
+    User 2: Me neither! There''s just so much to do.
+
+    User 1: Well, it''s been nice chatting with you.
+
+    User 2: You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

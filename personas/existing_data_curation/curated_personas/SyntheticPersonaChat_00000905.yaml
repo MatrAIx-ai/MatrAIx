@@ -1,0 +1,88 @@
+id: 00000905
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 905
+data:
+  user 1 personas: 'I am a romantic.
+
+    I like victorian things.
+
+    I like antiques.
+
+    I like jazz.
+
+    I collect dolls.'
+  user 2 personas: 'My favorite fruit is an apple.
+
+    I like to swim.
+
+    I am a marathon runner.
+
+    I prefer morning to night.
+
+    I prefer winter over fall.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to swim, run, and go for walks.
+
+    User 1: Oh, that''s nice. I like to collect dolls, listen to jazz, and read.
+
+    User 2: Dolls? That''s interesting. What kind of dolls do you collect?
+
+    User 1: I collect antique dolls, mostly from the Victorian era.
+
+    User 2: Wow, that''s really cool. I''ve never met someone who collects dolls before.
+
+    User 1: Really? It''s a pretty big hobby. There are even doll conventions and museums dedicated to them.
+
+    User 2: That''s amazing. I''ll have to check that out sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what''s your favorite thing about dolls?
+
+    User 1: I love their history and their beauty. They''re just so interesting.
+
+    User 2: I can see why you like them. They do seem really cool.
+
+    User 1: Thanks. I''m glad you think so.
+
+    User 2: So, what''s your favorite jazz musician?
+
+    User 1: I have a lot of favorites, but I would say Ella Fitzgerald is my all-time favorite.
+
+    User 2: Oh, she''s great! I love her voice.
+
+    User 1: Me too! She''s so talented.
+
+    User 2: So, what''s your favorite jazz song?
+
+    User 1: That''s a tough question. I have a lot of favorites, but I would say "My Favorite Things" by John Coltrane.
+
+    User 2: Oh, that''s a great song. I love that one too.
+
+    User 1: Me too! It''s so upbeat and happy.
+
+    User 2: So, what''s your favorite thing to do in the winter?
+
+    User 1: I like to go ice skating and skiing.
+
+    User 2: Oh, that''s nice. I''ve never been skiing before, but I''ve always wanted to try it.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00005333'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5333
+data:
+  user 1 personas: 'I like to listen to rap music.
+
+    My favorite song is california love.
+
+    My favorite artist is 2pac.
+
+    I drive a fast car.
+
+    My car is black.'
+  user 2 personas: 'I have only one child.
+
+    I run more then 2 miles a day even though i hate it.
+
+    My daughter just graduated college.
+
+    I like snowboarding.'
+  Best Generated Conversation: 'User 1: What do you like to listen to?
+
+    User 2: I like to listen to a lot of different music, but I mostly like rap and hip-hop.
+
+    User 1: Me too! I love rap music. What are some of your favorite artists?
+
+    User 2: I like 2Pac, Kendrick Lamar, J. Cole, and Kanye West.
+
+    User 1: Those are all great artists! I love their music too.
+
+    User 2: What''s your favorite song?
+
+    User 1: My favorite song is California Love by 2Pac.
+
+    User 2: That''s a great song! I love the beat and the lyrics.
+
+    User 1: Me too! It''s such a classic song.
+
+    User 2: Do you like to go to concerts?
+
+    User 1: I love going to concerts! I''ve been to a lot of rap concerts, but I''ve also been to some rock and pop concerts.
+
+    User 2: Me too! I love the energy of a good concert.
+
+    User 1: Me too! It''s so much fun to dance and sing along with your favorite artists.
+
+    User 2: What''s your favorite concert experience?
+
+    User 1: My favorite concert experience was when I saw Kendrick Lamar at Madison Square Garden. It was an amazing show.
+
+    User 2: That sounds like an amazing experience! I''ve always wanted to see Kendrick Lamar live.
+
+    User 1: You should definitely go see him if you ever get the chance. He''s an incredible performer.
+
+    User 2: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

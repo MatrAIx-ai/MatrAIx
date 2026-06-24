@@ -1,0 +1,70 @@
+id: 00006181
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6181
+data:
+  user 1 personas: 'Grandpa takes me to get ice cream.
+
+    I like lightning mcqueen.
+
+    My grandma likes to make pizza with me.
+
+    I have a cat named mater.'
+  user 2 personas: 'My best friend is my dog allie.
+
+    My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    I love chocolate milk shakes.'
+  Best Generated Conversation: 'User 1: My grandma likes to make pizza with me.
+
+    User 2: That''s nice! My best friend is my dog Allie.
+
+    User 1: That''s cool! I have a cat named Mater.
+
+    User 2: Mater? That''s a cute name!
+
+    User 1: Yeah, I think so too.
+
+    User 2: I like to ride my red bike to work every day.
+
+    User 1: Wow, that''s far!
+
+    User 2: It''s not that far, it''s only a few miles.
+
+    User 1: Do you have any other pets?
+
+    User 2: No, Allie is my only pet.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to dress up for Halloween.
+
+    User 1: That''s a fun holiday! I like to go trick-or-treating.
+
+    User 2: Me too! I love getting candy.
+
+    User 1: I like to eat chocolate milkshakes.
+
+    User 2: Me too! They''re the best.
+
+    User 1: What''s your favorite thing to do on a weekend?
+
+    User 2: I like to go to the park with Allie.
+
+    User 1: That sounds like fun! I like to go to the park too.
+
+    User 2: I like to play fetch with Allie.
+
+    User 1: That''s a fun game! I like to play fetch with my cat too.
+
+    User 2: I like to go for walks with Allie.
+
+    User 1: That sounds like a lot of fun!
+
+    User 2: It is!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,57 @@
+id: '00005015'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5015
+data:
+  user 1 personas: 'I like canning and whittling.
+
+    I eat exclusively meat.
+
+    My favorite movie is good burger.
+
+    To stay in shape , i chase cheetahs at the zoo.
+
+    In high school , i came in 6th in the 100 meter dash.'
+  user 2 personas: 'My daughters say i am a great mother.
+
+    I have a family of three daughters.
+
+    I am a woman.
+
+    I enjoy baking and cooking.'
+  Best Generated Conversation: 'User 1: I like to can and whittle. I eat exclusively meat. My favorite movie is Good Burger. To stay in shape, I chase cheetahs at the zoo. In high school, I came in 6th
+    in the 100 meter dash.
+
+    User 2: My daughters say I am a great mother. I have a family of three daughters. I am a woman. I enjoy baking and cooking.
+
+    User 1: That''s interesting! I''ve never met a woman who likes to chase cheetahs.
+
+    User 2: I''m not sure if it''s because I''m a woman or because I''m a mother, but I do love the challenge. It''s a lot of fun to get out there and run around with the cheetahs.
+
+    User 1: I can imagine! It sounds like a great way to stay in shape.
+
+    User 2: It is! And it''s also a lot of fun.
+
+    User 1: So, what do you like to bake and cook?
+
+    User 2: I love to bake anything and everything, but my favorite thing to make is chocolate chip cookies.
+
+    User 1: Chocolate chip cookies are my favorite too!
+
+    User 2: I''m glad to hear it!
+
+    User 1: So, what''s your favorite thing about being a mother?
+
+    User 2: My favorite thing is watching my daughters grow and learn. It''s amazing to see all the things they accomplish.
+
+    User 1: I can imagine! It must be so rewarding.
+
+    User 2: It is!
+
+    User 1: It sounds like you have a great life.
+
+    User 2: I do! I''m very lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00005997
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5997
+data:
+  user 1 personas: 'I do not like green eggs and ham.
+
+    I love cooking.
+
+    I have a missing pinky toe.
+
+    I enjoy swimming.'
+  user 2 personas: 'I love to be run.
+
+    I like to dance with my friends.
+
+    I really like to go to school.
+
+    I am six feet tall.'
+  Best Generated Conversation: 'User 1: Hello! I''m [user 1]!
+
+    User 2: Hello! I''m [user 2]!
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I like to run and dance with my friends. I also really like going to school.
+
+    User 1: That''s great! I love to cook and swim. I also have a missing pinky toe, but I don''t let it hold me back!
+
+    User 2: I''m sorry to hear about your pinky toe, but it sounds like you''re still living your life to the fullest!
+
+    User 1: Thanks! I try to be.
+
+    User 2: I''m impressed by your cooking skills. I''m not very good at it myself.
+
+    User 1: It''s not that hard! I''m sure you could learn if you wanted to.
+
+    User 2: Maybe I will! I''ve always wanted to learn how to make a good pot of chili.
+
+    User 1: Chili is a great dish to start with. It''s easy to make and it''s always a crowd-pleaser.
+
+    User 2: Thanks for the tip! I''ll definitely have to try it sometime.
+
+    User 1: You''re welcome!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to go out with my friends, watch movies, and play video games. I also enjoy reading and writing.
+
+    User 2: I love reading and writing too! What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially interested in history, science, and mystery novels.
+
+    User 2: I like those genres too! I''m also a big fan of fantasy and science fiction.
+
+    User 1: We have a lot in common! I''m sure we''ll get along great.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

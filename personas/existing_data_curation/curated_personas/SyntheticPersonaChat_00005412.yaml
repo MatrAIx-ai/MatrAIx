@@ -1,0 +1,84 @@
+id: '00005412'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5412
+data:
+  user 1 personas: 'My favorite animal is a zebra.
+
+    I like to play outside.
+
+    I am in preschool.
+
+    I am a girl.
+
+    I like to dance.'
+  user 2 personas: 'I have a cat named kj.
+
+    I have lived in several different states.
+
+    My husband was a salesman.
+
+    I worked as a nurse for many years.
+
+    I like to cook.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook and bake.
+
+    User 1: That''s cool. I like to dance.
+
+    User 2: That''s fun! Have you ever been in a dance recital?
+
+    User 1: No, I haven''t. I''ve always wanted to, though.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: What''s your favorite animal?
+
+    User 1: Zebras.
+
+    User 2: Zebras? That''s an interesting choice. Why do you like them?
+
+    User 1: I think they''re beautiful. And they''re so unique.
+
+    User 2: I can see why you like them. They are pretty cool.
+
+    User 1: Thanks. What''s your favorite animal?
+
+    User 2: I like cats.
+
+    User 1: Cats are great! I have a cat named Kj.
+
+    User 2: That''s a cute name.
+
+    User 1: Thanks. I like it.
+
+    User 2: What''s your favorite food?
+
+    User 1: I love pizza.
+
+    User 2: Pizza is always good.
+
+    User 1: It is. Do you like to travel?
+
+    User 2: I love to travel! I''ve been to a lot of different places.
+
+    User 1: That''s awesome! I''ve never been out of the country.
+
+    User 2: You should go! It''s so much fun.
+
+    User 1: Maybe I will.
+
+    User 2: I hope you do!
+
+    User 1: Thanks.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

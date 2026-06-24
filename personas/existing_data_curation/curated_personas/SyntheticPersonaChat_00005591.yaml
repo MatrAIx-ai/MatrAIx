@@ -1,0 +1,56 @@
+id: 00005591
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5591
+data:
+  user 1 personas: 'I like to visit national parks.
+
+    I am nurse.
+
+    I met my husband when i was a freshman in college.
+
+    I play the violin.
+
+    I am married with 5 kids.'
+  user 2 personas: 'My major is business.
+
+    I love the beach.
+
+    I work part time at a pizza restaurant.
+
+    I like to party.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hey, I''m [name]. What do you do for fun?
+
+    User 1: I like to visit national parks, play the violin, and spend time with my family.
+
+    User 2: That sounds fun! I like to go to the beach, party, and work on my business degree.
+
+    User 1: Oh, cool! I''ve never been to the beach, but I''ve heard it''s really nice.
+
+    User 2: It''s the best! I love swimming, sunbathing, and playing in the sand.
+
+    User 1: I can imagine! I''m sure it''s very relaxing.
+
+    User 2: It is! I love going to the beach to escape the hustle and bustle of city life.
+
+    User 1: I can see why! It sounds like you have a lot of fun in your free time.
+
+    User 2: I do! I like to keep busy and try new things.
+
+    User 1: That''s a great attitude! I try to do the same thing.
+
+    User 2: It''s important to have fun and enjoy life.
+
+    User 1: I agree! What are you majoring in?
+
+    User 2: I''m majoring in business. I''m hoping to get a job in marketing or sales after I graduate.
+
+    User 1: That sounds like a great plan! I''m sure you''ll do great.
+
+    User 2: Thank you! I''m excited to see what the future holds.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

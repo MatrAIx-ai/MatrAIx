@@ -1,0 +1,82 @@
+id: 00005999
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5999
+data:
+  user 1 personas: 'I do not like green eggs and ham.
+
+    I have a missing pinky toe.
+
+    I love cooking.
+
+    I enjoy swimming.'
+  user 2 personas: 'I love to run.
+
+    My favorite city is new york.
+
+    My wife just left me.
+
+    I am a lawyer.'
+  Best Generated Conversation: 'User 1: Hi! I''m [User 1''s name].
+
+    User 2: Hi! I''m [User 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, cook, and read.
+
+    User 1: I love to cook too! What are some of your favorite dishes to make?
+
+    User 2: I love making pasta dishes, especially lasagna.
+
+    User 1: Lasagna is one of my favorite foods! What''s your favorite lasagna recipe?
+
+    User 2: I have a really good one that I''ve been making for years. I''ll have to send it to you sometime.
+
+    User 1: That would be great! I love trying new recipes.
+
+    User 2: What about you? What do you like to do for fun?
+
+    User 1: I love swimming, reading, and baking.
+
+    User 2: I love swimming too! What''s your favorite stroke?
+
+    User 1: I like the freestyle stroke the best. It''s the most efficient way to swim.
+
+    User 2: I like the butterfly stroke. It''s the most challenging, but it''s also the most rewarding.
+
+    User 1: I''ve never tried the butterfly stroke. I''m not sure if I''m coordinated enough for it.
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+    User 1: I might just do that.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read a lot of different things, but I''m especially interested in history and science.
+
+    User 2: I love history too! What''s your favorite historical period?
+
+    User 1: I''m not sure if I have a favorite historical period, but I really enjoy learning about the Roman Empire.
+
+    User 2: The Roman Empire is really interesting! What do you find most interesting about it?
+
+    User 1: I find the history of Rome to be fascinating. It''s a story of expansion, conquest, and decline.
+
+    User 2: It''s definitely a complex story.
+
+    User 1: I''m also interested in science. I love learning about new discoveries and how the world works.
+
+    User 2: I love science too! What''s your favorite scientific discovery?
+
+    User 1: I''m not sure if I have a favorite scientific discovery, but I really enjoy learning about the latest advances in medicine.
+
+    User 2: Me too! Medicine is an amazing field. It''s so cool to see what scientists are able to accomplish.
+
+    User 1: It is! I''m really excited to see what the future holds for medicine.
+
+    User 2: Me too! I think it''s going to be a very exciting time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,18 @@
+id: '00033126'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33126
+persona_description: A researcher in the field of metabolomics, specifically focused on using this field to predict and prevent COVID-19. The persona is a professor at Leiden University, leading a consortium
+  of universities, academic hospitals, and industrial partners in their efforts to improve patient care for COVID-19 patients. The persona is interested in using metabolomics to gain insights into the unique
+  chemical fingerprints that COVID-19 patients leave behind, which can be used for diagnostics, personalized medicine, and improving patient care for at-risk groups.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: metabolomics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

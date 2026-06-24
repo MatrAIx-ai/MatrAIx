@@ -1,0 +1,93 @@
+id: 00000579
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 579
+data:
+  user 1 personas: 'I am a redhead.
+
+    I got engaged to be married in paris , france.
+
+    I lost my job as a banker a month ago.
+
+    I ve danced since i was two.'
+  user 2 personas: 'I like to draw.
+
+    My mother is a teacher.
+
+    I am one of four siblings.
+
+    I live in an apartment.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+
+    User 2: Hi, nice to meet you, I''m [user 2 name].
+
+
+    User 1: What do you like to do for fun?
+
+
+    User 2: I like to draw, paint, and play music.
+
+
+    User 1: Cool, I love to dance. I''ve been dancing since I was two.
+
+
+    User 2: Wow, that''s amazing! I''ve always wanted to learn how to dance.
+
+
+    User 1: You should! It''s so much fun.
+
+
+    User 2: I might just do that.
+
+
+    User 1: Great! I know you''ll love it.
+
+
+    User 2: What do you do for work?
+
+
+    User 1: I was a banker, but I lost my job a month ago.
+
+
+    User 2: Oh, I''m sorry to hear that.
+
+
+    User 1: Thanks. It''s okay, I''m sure I''ll find something else soon.
+
+
+    User 2: I''m sure you will. You seem like a smart and capable person.
+
+
+    User 1: Thanks, I appreciate that.
+
+
+    User 2: So, what are you doing for fun these days?
+
+
+    User 1: Well, I''m starting to take some drawing lessons. And I''m also going to start looking for a new job.
+
+
+    User 2: That sounds like a good plan.
+
+
+    User 1: Yeah, I think it is.
+
+
+    User 2: So, what do you like to do in your free time?
+
+
+    User 1: I like to go out with friends, read, and watch movies.
+
+
+    User 2: Cool, me too. I like to go out with friends, read, and watch movies.
+
+
+    User 1: Nice! We should hang out sometime.
+
+
+    User 2: Yeah, that would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

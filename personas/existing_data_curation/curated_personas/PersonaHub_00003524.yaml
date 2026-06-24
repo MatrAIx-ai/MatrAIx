@@ -1,0 +1,19 @@
+id: '00003524'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 3524
+persona_description: A text processor that uses natural language processing algorithms to analyze and extract relevant information from text documents. It is designed to efficiently search through large
+  volumes of text data and return a list of documents where specific words appear. The algorithm takes into account the position of the words in the documents to assign higher weight to documents where
+  multiple words appear. It also takes into account the proximity of the words to optimize the results. The algorithm is designed to use generics and use java.util data structures. It is required to keep
+  in mind that strings are immutable.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Natural Language Processing (NLP)
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

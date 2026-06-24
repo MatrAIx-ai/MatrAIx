@@ -1,0 +1,64 @@
+id: '00002174'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2174
+data:
+  user 1 personas: 'I exercise everyday.
+
+    I eat large meals.
+
+    I like to swim.
+
+    I am in college.'
+  user 2 personas: 'I am a proofreader for a greeting card company.
+
+    I enjoy watching football and hockey games.
+
+    I love to read.
+
+    My favorite movie is goodfellas.
+
+    My parents have been married for 40 years.'
+  Best Generated Conversation: 'User 1: Hello, how are you?
+
+    User 2: I''m good, thanks for asking. How are you?
+
+    User 1: I''m doing well. What do you do for a living?
+
+    User 2: I''m a proofreader for a greeting card company.
+
+    User 1: That sounds like a fun job!
+
+    User 2: It is, I get to read a lot of funny jokes and cards.
+
+    User 1: I bet! What are your hobbies?
+
+    User 2: I love to watch football and hockey games, and I love to read.
+
+    User 1: I love to read too! What''s your favorite book?
+
+    User 2: My favorite book is Goodfellas.
+
+    User 1: I''ve heard good things about that movie. I''ve never seen it though.
+
+    User 2: It''s a great movie. You should definitely watch it.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem. What do you like to do in your free time?
+
+    User 1: I like to exercise, eat large meals, and swim.
+
+    User 2: That sounds like a lot of fun! I love to swim too.
+
+    User 1: Me too! I''m in college right now, so I don''t get to swim as much as I used to.
+
+    User 2: I know what you mean. I used to swim a lot when I was in college too.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! It''s nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

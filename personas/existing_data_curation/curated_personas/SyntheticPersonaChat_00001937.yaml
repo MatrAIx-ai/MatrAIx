@@ -1,0 +1,72 @@
+id: 00001937
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1937
+data:
+  user 1 personas: 'I like the beatles.
+
+    I am well built and tall.
+
+    I am in gymnastics.
+
+    My parents were scientists.
+
+    I work as a scientist.'
+  user 2 personas: 'I went to law school.
+
+    My landlord is raising my rent.
+
+    I am an excellent baker.
+
+    I was born on christmas day.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too! What do you like to do for fun?
+
+    User 2: I like to bake, read, and play video games.
+
+    User 1: I like to bake too! What''s your favorite thing to bake?
+
+    User 2: I love to bake cookies. I''m really good at it.
+
+    User 1: I love cookies too! I''m not so good at baking, but I enjoy it.
+
+    User 2: Well, you''re in luck. I''m planning on making some cookies this weekend. Do you want to come over and help?
+
+    User 1: That sounds like a lot of fun! I''d love to help.
+
+    User 2: Great! I''ll send you the address.
+
+    User 1: Sounds good.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a scientist. I work for a pharmaceutical company.
+
+    User 2: That sounds really interesting. What kind of research do you do?
+
+    User 1: I mostly do research on cancer drugs.
+
+    User 2: That''s really important work.
+
+    User 1: Thanks. I think so too.
+
+    User 2: So, what are some of your favorite Beatles songs?
+
+    User 1: I love all of their songs, but my favorites are "Yesterday," "Eleanor Rigby," and "Strawberry Fields Forever."
+
+    User 2: Those are all great songs! I love "Eleanor Rigby" too.
+
+    User 1: Me too! It''s so sad and beautiful.
+
+    User 2: I''m glad we have something in common.
+
+    User 1: Me too. It''s always nice to meet someone who loves the Beatles.
+
+    User 2: Definitely! I''m glad I met you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

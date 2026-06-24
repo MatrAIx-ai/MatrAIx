@@ -1,0 +1,60 @@
+id: '00005201'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5201
+data:
+  user 1 personas: 'Winter is my favorite season.
+
+    I don t like wearing a swimsuit.
+
+    My parents are lawyers.
+
+    If i can t order it on the internet , i don t need it.'
+  user 2 personas: 'I love computers.
+
+    I am very good at math and science.
+
+    I am considered a nerd by many.
+
+    I i love logical and rational thinking.
+
+    I started working at google last week on self driving car research.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a software engineer at Google.
+
+    User 1: That''s awesome! What kind of software do you work on?
+
+    User 2: I''m working on self-driving cars.
+
+    User 1: That''s so cool! I''ve always been interested in self-driving cars.
+
+    User 2: Me too! It''s a really exciting field.
+
+    User 1: What''s your favorite part about working on self-driving cars?
+
+    User 2: I love the challenge of it. It''s a really complex problem, and there''s a lot of room for innovation.
+
+    User 1: I can imagine. It''s definitely a field that''s still in its early stages.
+
+    User 2: Yeah, but I think it has a lot of potential to change the world.
+
+    User 1: I agree. I think self-driving cars could make our roads safer and more efficient.
+
+    User 2: I hope so! It would be great to see self-driving cars become a reality.
+
+    User 1: Me too! I think it would be a great way to improve transportation.
+
+    User 2: I''m glad you''re excited about it. It''s a really cool field.
+
+    User 1: I am! I think it''s one of the most exciting fields in technology right now.
+
+    User 2: I agree. It''s definitely a field that''s going to change the world.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

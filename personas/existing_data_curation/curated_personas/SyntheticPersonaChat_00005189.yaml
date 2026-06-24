@@ -1,0 +1,76 @@
+id: 00005189
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5189
+data:
+  user 1 personas: 'My wife makes the best pasta.
+
+    I listen to pink when i am painting.
+
+    As long as i have a cup of coffee in my hand i am a happy person.
+
+    It takes me an hour to drive to work in the morning.'
+  user 2 personas: 'My hair is brown.
+
+    I am short.
+
+    I like to sew.
+
+    I am not thin.'
+  Best Generated Conversation: 'User 1: Hey, what do you like to do for fun?
+
+    User 2: I like to sew, listen to music, and play video games.
+
+    User 1: I like to sew too! What kind of things do you sew?
+
+    User 2: I like to make clothes, blankets, and other household items.
+
+    User 1: That''s really cool! I don''t have much experience with sewing, but I''ve always wanted to learn.
+
+    User 2: It''s not too hard to learn! There are a lot of great resources available online and in libraries.
+
+    User 1: I''ll have to check it out! What kind of music do you like to listen to?
+
+    User 2: I like a lot of different genres, but my favorite is probably rock.
+
+    User 1: Me too! I love rock music. What are some of your favorite bands?
+
+    User 2: I like The Killers, The Strokes, and The 1975.
+
+    User 1: I love those bands too! I''m going to see The Killers in concert next month.
+
+    User 2: Oh wow, that''s awesome! I''m jealous.
+
+    User 1: I''m excited! I''ve never seen them before.
+
+    User 2: I''m sure you''ll have a great time.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh wow, that''s cool! I''ve always been interested in programming.
+
+    User 1: It''s a lot of fun! I love working on new projects and seeing my code come to life.
+
+    User 2: That''s awesome! Do you have any projects you''re working on right now?
+
+    User 1: Yeah, I''m working on a new app for a client.
+
+    User 2: Oh wow, that''s exciting! What kind of app is it?
+
+    User 1: It''s a mobile app that helps users track their spending.
+
+    User 2: Oh, that''s cool! I could use an app like that.
+
+    User 1: I''m glad you think so! I''m hoping to have it finished by the end of the month.
+
+    User 2: Oh, that''s so soon! Good luck!
+
+    User 1: Thanks! I appreciate it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

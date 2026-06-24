@@ -1,0 +1,76 @@
+id: '00003302'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3302
+data:
+  user 1 personas: 'I am a psychology major.
+
+    I love to travel.
+
+    I enjoy broadway shows.
+
+    I am a steelers fan.'
+  user 2 personas: 'I am still living at home at age 30.
+
+    I am currently trying to open my own grocery store.
+
+    I am colorblind.
+
+    I am a volunteer firefighter.
+
+    I have a college degree in marketing.'
+  Best Generated Conversation: 'User 1: Hi! I''m Sarah.
+
+    User 2: Hello, I''m John.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m currently trying to open my own grocery store.
+
+    User 1: That''s interesting! Why do you want to open a grocery store?
+
+    User 2: I''ve always loved food and I think it''s a great way to help people.
+
+    User 1: That''s a great goal. I wish you the best of luck with it.
+
+    User 2: Thank you!
+
+    User 1: What''s your favorite thing to do for fun?
+
+    User 2: I love to travel. I''ve been to a lot of different countries and I love experiencing new cultures.
+
+    User 1: That sounds amazing! What''s your favorite place that you''ve ever been?
+
+    User 2: It''s hard to say, but I think I''d have to say Italy. The food is amazing and the people are so friendly.
+
+    User 1: Italy is definitely on my list of places to visit. I''ve heard great things about it.
+
+    User 2: You won''t be disappointed.
+
+    User 1: Do you have any other hobbies or interests?
+
+    User 2: I love to watch Broadway shows. I''ve seen a lot of them and I always enjoy them.
+
+    User 1: That''s cool! I''ve never been to a Broadway show, but I''ve always wanted to.
+
+    User 2: You should definitely go! They''re a lot of fun.
+
+    User 1: I''ll keep that in mind.
+
+    User 2: So, what''s your favorite football team?
+
+    User 1: I''m a Steelers fan.
+
+    User 2: Oh, nice! I''m a Bengals fan.
+
+    User 1: Oh no! We''re rivals!
+
+    User 2: Yeah, we are. But I''m always willing to have a friendly debate about football.
+
+    User 1: Me too! I love talking about football.
+
+    User 2: Good! I think we''re going to get along just fine.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

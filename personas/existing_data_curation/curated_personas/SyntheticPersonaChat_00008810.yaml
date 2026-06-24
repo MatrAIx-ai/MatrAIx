@@ -1,0 +1,78 @@
+id: 00008810
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8810
+data:
+  user 1 personas: 'I am the leader of the french fry research department at del taco.
+
+    My favorite band is up.
+
+    My daily driver is a bicycle that you pedal with your hands.
+
+    I once fell up a whole flight of stairs.
+
+    My lifes passion is designer french fries.'
+  user 2 personas: 'I drive only toyota.
+
+    Chocolate chip cookies are the tastier things in my opinion.
+
+    I like pepsi.
+
+    Superfans my favorite super hero.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What''s up?
+
+    User 2: Not much, just hanging out. What about you?
+
+    User 1: I''m doing great! I''m the leader of the french fry research department at Del Taco.
+
+    User 2: That sounds like an interesting job!
+
+    User 1: It is! I get to create new and innovative french fry recipes.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I also get to travel all over the country to promote our french fries.
+
+    User 2: That sounds like a great job!
+
+    User 1: It is! I love it! What do you do for a living?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: That sounds like a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I''m sure it is! What are your hobbies?
+
+    User 2: I like to bake, read, and watch movies.
+
+    User 1: Those are all great hobbies! I like to bake too.
+
+    User 2: Me too! I love making chocolate chip cookies.
+
+    User 1: I love chocolate chip cookies too! They''re my favorite.
+
+    User 2: Mine too! What''s your favorite kind of pizza?
+
+    User 1: I like pepperoni pizza.
+
+    User 2: Me too! It''s so good.
+
+    User 1: Do you like any other kinds of pizza?
+
+    User 2: I like chicken bacon ranch pizza too.
+
+    User 1: That sounds good! I''ve never had it before.
+
+    User 2: You should try it! It''s delicious.
+
+    User 1: I will! Thanks for the recommendation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,88 @@
+id: '00001201'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1201
+data:
+  user 1 personas: 'I am a mortician.
+
+    I collect stamps.
+
+    My favorite movie is dirty harry.
+
+    I love the colors yellow and teal.'
+  user 2 personas: 'My family comes first to me.
+
+    I sometimes drive fast.
+
+    I prefer reading to sports.
+
+    I have survived near death experiences.
+
+    I am a gentle giant.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, spend time with my family, and go for walks.
+
+    User 1: That sounds nice. I like reading too. What do you like to read?
+
+    User 2: I like to read mystery novels and historical fiction.
+
+    User 1: Oh, I like mystery novels too! What''s your favorite one?
+
+    User 2: My favorite mystery novel is The Girl in the Train.
+
+    User 1: I haven''t read that one yet, but I''ve heard good things about it.
+
+    User 2: You should check it out. It''s really good.
+
+    User 1: I will! What''s your favorite historical fiction novel?
+
+    User 2: My favorite historical fiction novel is The Pillars of the Earth.
+
+    User 1: I''ve heard good things about that one too. I''ll have to check it out.
+
+    User 2: You should. It''s really good.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a teacher.
+
+    User 1: Oh, that''s cool! What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that''s awesome! I love kindergarten.
+
+    User 2: It''s a lot of fun.
+
+    User 1: It sounds like you have a lot of interests.
+
+    User 2: I do. I like to keep busy.
+
+    User 1: That''s good. It''s important to have things to do.
+
+    User 2: I agree.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go out with my friends or just stay home and relax.
+
+    User 1: Oh, that sounds nice. I''m going to the beach with my family.
+
+    User 2: Oh, that sounds fun. I love the beach.
+
+    User 1: Me too. It''s my favorite place to be.
+
+    User 2: I''m glad you''re enjoying your weekend.
+
+    User 1: Thanks. I am.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

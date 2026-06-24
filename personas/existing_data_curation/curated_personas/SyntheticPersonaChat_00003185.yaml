@@ -1,0 +1,80 @@
+id: 00003185
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3185
+data:
+  user 1 personas: 'I love to ride my bike.
+
+    I like going to the beach.
+
+    I have a dog named george.
+
+    I like my job.
+
+    I used to work for a cable company.'
+  user 2 personas: 'I am fascinated with ghosts.
+
+    I love 80 s music.
+
+    My favorite color is yellow.
+
+    I m a wedding planner.
+
+    When i was a child , i wanted to be an architect.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the beach, ride my bike, and play with my dog.
+
+    User 1: Oh, I love to go to the beach too. I have a dog named George.
+
+    User 2: That''s funny, I have a dog named George too!
+
+    User 1: No way! What breed is he?
+
+    User 2: He''s a golden retriever.
+
+    User 1: Oh, I love golden retrievers! They''re so friendly and playful.
+
+    User 2: They are! I love taking him to the park.
+
+    User 1: I used to work for a cable company, but I quit to go back to school.
+
+    User 2: Oh, that''s interesting. What are you studying?
+
+    User 1: I''m studying architecture.
+
+    User 2: Wow, that''s really cool! I''ve always been fascinated by architecture.
+
+    User 1: Thanks! I love it so far.
+
+    User 2: I bet you do. It seems like a really creative field.
+
+    User 1: It is! I love coming up with new designs and seeing them come to life.
+
+    User 2: That''s awesome. I''m sure you''ll be a great architect.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what do you want to do when you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going into private practice, but I''m also considering working for a firm.
+
+    User 2: Both of those sound like great options.
+
+    User 1: Thanks! I''ll have to make a decision soon.
+
+    User 2: Well, I''m sure you''ll make the right choice.
+
+    User 1: Thanks! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

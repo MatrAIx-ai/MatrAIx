@@ -1,0 +1,80 @@
+id: 00002929
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2929
+data:
+  user 1 personas: 'I work in a warehouse.
+
+    I have a very tone body.
+
+    I have a collection of video games.
+
+    My son is a straight a student.'
+  user 2 personas: 'I like folk music.
+
+    My hiking boots are pink.
+
+    The appalachian trail is my favorite.
+
+    I love to hike.
+
+    I work in marketing.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you do for a living?
+
+    User 2: I work in marketing.
+
+    User 1: Oh, that''s cool. I work in a warehouse.
+
+    User 2: Do you like it?
+
+    User 1: It''s okay. I''m not very good at it, but it''s a job.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to play video games. I have a big collection.
+
+    User 2: Oh, that''s cool. I like to hike.
+
+    User 1: I''ve never been hiking.
+
+    User 2: You should try it! It''s really fun.
+
+    User 1: Maybe I will. What''s your favorite place to hike?
+
+    User 2: The Appalachian Trail is my favorite.
+
+    User 1: Where is that?
+
+    User 2: It''s a long trail that goes from Maine to Georgia.
+
+    User 1: Wow, that''s a lot of hiking!
+
+    User 2: It is, but it''s worth it.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should! It''s a beautiful trail.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to listen to folk music.
+
+    User 1: Oh, that''s cool. I''ve never been a big fan of folk music, but I''ve heard it''s good.
+
+    User 2: It is. I like to go to folk music festivals.
+
+    User 1: That sounds like fun. I''ve never been to a folk music festival.
+
+    User 2: You should go! They''re a lot of fun.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00003774'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3774
+data:
+  user 1 personas: 'I sometimes write poetry.
+
+    My favorite color is black.
+
+    I want to visit the uk.
+
+    I sing in a punk band.'
+  user 2 personas: 'When i turned 18 , my family moved across the country.
+
+    On weekends i go out with friends.
+
+    I eat eggs and bacon for breakfast.
+
+    I like going to rock concerts.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1].
+
+    User 2: Hi [user 1]. I''m [user 2].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like going out with friends, going to rock concerts, and eating eggs and bacon for breakfast.
+
+    User 1: That''s cool! I like writing poetry, singing in a punk band, and visiting the UK.
+
+    User 2: Wow, you''re so versatile! I''ve never been to the UK, but I''d love to go.
+
+    User 1: It''s really beautiful there! I''ve been a few times and I always have a great time.
+
+    User 2: I''m sure I would too. What kind of poetry do you write?
+
+    User 1: I write all kinds of poetry, but I''m most interested in writing about love, loss, and the human experience.
+
+    User 2: Those are all great topics! I''d love to read some of your work sometime.
+
+    User 1: I''d be happy to share it with you! Do you like to go to punk concerts?
+
+    User 2: I do! I love the energy and the music.
+
+    User 1: Me too! I''ve been to a few punk concerts and I always have a great time.
+
+    User 2: I''m glad to hear that! Do you have a favorite band?
+
+    User 1: I have a few favorite bands, but I''d have to say my favorite is The Clash.
+
+    User 2: The Clash! I love them too! They''re one of my favorite bands.
+
+    User 1: I''m glad to hear that! They''re a great band.
+
+    User 2: I agree! They''re so talented.
+
+    User 1: They are! I''m glad we have something in common.
+
+    User 2: Me too! I think it''s great to meet people who share your interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: 00001978
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1978
+data:
+  user 1 personas: 'I love all animals.
+
+    My favorite music is country.
+
+    I am a vegan.
+
+    I used to work as an actress.'
+  user 2 personas: 'I am not very tall.
+
+    I am looking for a job.
+
+    I have a dog.
+
+    I have two siblings.'
+  Best Generated Conversation: 'User 1: Hey! What''s up?
+
+    User 2: Not much, just hanging out with my dog. What about you?
+
+    User 1: I''m just getting ready for work. I''m an actress.
+
+    User 2: Oh, that''s cool! What kind of roles do you play?
+
+    User 1: I mostly play villains. I guess I have a mean face.
+
+    User 2: Haha, I''m sure you''re not that mean.
+
+    User 1: I''m not really, but I do like to play mean characters.
+
+    User 2: Well, I''m sure you''re great at it. What kind of music do you like to listen to?
+
+    User 1: I love country music. It''s my favorite.
+
+    User 2: Oh, me too! I love the old country music.
+
+    User 1: Me too! I love Johnny Cash and Dolly Parton.
+
+    User 2: Those are two of my favorites too! What kind of food do you like?
+
+    User 1: I love all kinds of food, but my favorite is probably pizza.
+
+    User 2: Pizza is delicious! I love pizza.
+
+    User 1: Me too! I could eat pizza every day.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I love to watch movies and go for walks in the park.
+
+    User 2: I love to do those things too! I also love to read and play with my dog.
+
+    User 1: I love to read too! I''m a big reader.
+
+    User 2: Me too! I love reading all kinds of books.
+
+    User 1: Me too! I read everything from fiction to nonfiction.
+
+    User 2: That''s great! I''m glad we have so much in common.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: '00002265'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2265
+data:
+  user 1 personas: 'I like to role play.
+
+    I am a morning person.
+
+    I do not like animals.
+
+    My favorite food is pizza.
+
+    I love cars.'
+  user 2 personas: 'I still live at home with my parents.
+
+    I eat all take out.
+
+    I play video games all day.
+
+    I am 32.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi, how''s it going?
+
+    User 1: Pretty good, thanks! I''m a morning person, and I''m excited to start my day. What about you?
+
+    User 2: I''m doing okay, but I''m not a morning person at all. I''m still in bed, actually.
+
+    User 1: Oh, that''s too bad. I love getting up early and doing things.
+
+    User 2: I wish I could be like that. But I just love sleeping in.
+
+    User 1: I get it. I used to be like that when I was younger. But now I can''t get enough of mornings.
+
+    User 2: Well, I''m glad you''re enjoying it.
+
+    User 1: Thanks! So, what are you doing today?
+
+    User 2: I''m not sure yet. I might play video games all day.
+
+    User 1: Oh, that sounds fun. I used to love playing video games. But I don''t have as much time for them anymore.
+
+    User 2: Yeah, I know what you mean. I only have time to play them when I''m not working.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a web developer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to code.
+
+    User 2: It''s not that hard. You just have to be patient and keep practicing.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure it is. So, what do you like to do for fun?
+
+    User 2: I like to play video games, watch movies, and hang out with friends.
+
+    User 1: Oh, that''s cool. I like all of those things too.
+
+    User 2: Yeah, we should hang out sometime.
+
+    User 1: I''d love to.
+
+    User 2: Great! We can exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

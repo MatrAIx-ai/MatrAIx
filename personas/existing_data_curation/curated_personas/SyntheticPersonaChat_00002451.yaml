@@ -1,0 +1,60 @@
+id: '00002451'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2451
+data:
+  user 1 personas: 'I do not like my job.
+
+    My favorite color is blue.
+
+    I am an athlete.
+
+    I visit india often.
+
+    I want to be an explorer.'
+  user 2 personas: 'My favorite season is winter.
+
+    I take vitamin c when i have a cold.
+
+    I do not eat bread.
+
+    I am disabled and cannot walk.
+
+    My friend once bought me a car.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hi! My name is John.
+
+    User 1: Nice to meet you, John. What do you like to do for fun?
+
+    User 2: I like to read, write, and watch movies.
+
+    User 1: I like to do those things too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like science fiction and fantasy.
+
+    User 1: I love science fiction and fantasy too! What are some of your favorite books?
+
+    User 2: Some of my favorite science fiction books are "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams, "Ender''s Game" by Orson Scott Card, and "The Martian" by Andy Weir.
+
+    User 1: Those are all great books! I''ve read them all. What are some of your favorite fantasy books?
+
+    User 2: Some of my favorite fantasy books are "The Lord of the Rings" by J.R.R. Tolkien, "The Wheel of Time" by Robert Jordan, and "A Song of Ice and Fire" by George R.R. Martin.
+
+    User 1: Those are all great books too! I''ve read them all too.
+
+    User 2: Wow, we have a lot in common!
+
+    User 1: I know, right? We should be friends.
+
+    User 2: I''d like that.
+
+    User 1: Great! What do you want to do first?
+
+    User 2: How about we go to the library and check out some books?
+
+    User 1: That sounds like a great idea!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

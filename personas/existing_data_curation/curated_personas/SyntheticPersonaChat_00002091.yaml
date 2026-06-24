@@ -1,0 +1,74 @@
+id: 00002091
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2091
+data:
+  user 1 personas: 'I am a photographer.
+
+    I love dogs.
+
+    I have 4 dogs and i spend all my time with them.
+
+    I like to drink at bars with friends.
+
+    I have a sleeve of tattoos.'
+  user 2 personas: 'I love to read crime novels.
+
+    I am a zookeeper.
+
+    My right foot only has 3 toes.
+
+    My favorite animal is the panda.
+
+    I eat 6 eggs every morning for breakfast.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi!
+
+    User 1: I''m a photographer and I love dogs. What do you do for fun?
+
+    User 2: I''m a zookeeper and I love pandas!
+
+    User 1: That''s awesome! I''ve always wanted to work with animals.
+
+    User 2: It''s a great job! I get to work with all sorts of amazing animals, including pandas.
+
+    User 1: That sounds like a dream come true!
+
+    User 2: It is! I love my job.
+
+    User 1: What''s your favorite thing about being a zookeeper?
+
+    User 2: I love being able to interact with the animals and learn more about them.
+
+    User 1: That must be a really rewarding experience.
+
+    User 2: It is! I love being able to make a difference in the lives of animals.
+
+    User 1: What''s your favorite animal to work with?
+
+    User 2: My favorite animal is the panda! They''re so cute and cuddly.
+
+    User 1: I love pandas too! They''re so adorable.
+
+    User 2: I know, right? They''re the best!
+
+    User 1: I''m so glad you get to work with them every day.
+
+    User 2: Me too! It''s a dream come true.
+
+    User 1: What''s the most interesting thing about working with animals?
+
+    User 2: I think the most interesting thing is learning how different animals communicate with each other.
+
+    User 1: That''s really cool! I''ve always been fascinated by animal communication.
+
+    User 2: Me too! It''s so complex and fascinating.
+
+    User 1: I''m glad you get to experience that every day.
+
+    User 2: Me too! It''s a really special experience.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

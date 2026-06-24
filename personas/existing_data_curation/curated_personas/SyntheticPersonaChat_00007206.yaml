@@ -1,0 +1,88 @@
+id: '00007206'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7206
+data:
+  user 1 personas: 'I recently broke up with my girlfriend.
+
+    I work nights now and like my job.
+
+    I have two dogs.
+
+    I m a 30 year old male.'
+  user 2 personas: 'I like horseback riding.
+
+    My favorite food is cheese.
+
+    I m allergic to shellfish.
+
+    I love going to concerts and dancing hard.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name], how are you?
+
+    User 2: I''m doing well, thanks for asking! How about yourself?
+
+    User 1: I''m doing okay, I recently broke up with my girlfriend.
+
+    User 2: Oh no, I''m so sorry to hear that. Are you doing okay?
+
+    User 1: Yeah, I''m getting through it.
+
+    User 2: That''s good to hear.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go horseback riding, I love cheese, and I''m allergic to shellfish.
+
+    User 1: That''s cool! I''ve never been horseback riding, but I''ve always wanted to try it.
+
+    User 2: You should definitely try it! It''s a lot of fun.
+
+    User 1: What kind of cheese do you like the most?
+
+    User 2: I like cheddar cheese the most, but I also like gouda and mozzarella.
+
+    User 1: Oh, I love cheddar cheese too!
+
+    User 2: Me too!
+
+    User 1: What kind of shellfish are you allergic to?
+
+    User 2: I''m allergic to all shellfish, but I''m mostly allergic to shrimp and crab.
+
+    User 1: Oh, that''s too bad. I love shrimp and crab.
+
+    User 2: Me too, but I can''t eat them.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go to concerts and dance hard.
+
+    User 1: That sounds like fun! I like to go to concerts too, but I''m not very good at dancing.
+
+    User 2: That''s okay, you don''t have to be good at dancing to have fun.
+
+    User 1: I know, but I still feel like I''m in the way when I''m dancing.
+
+    User 2: Don''t worry about it, everyone is there to have fun.
+
+    User 1: Thanks, I''ll try not to worry about it.
+
+    User 2: Good! So, what do you do for a living?
+
+    User 1: I work nights now, I like my job.
+
+    User 2: That''s cool! What do you do?
+
+    User 1: I''m a security guard.
+
+    User 2: Oh, that''s cool! I''ve always been interested in security.
+
+    User 1: It''s a good job, I get to meet a lot of different people.
+
+    User 2: That sounds like fun!
+
+    User 1: It is, I like it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,72 @@
+id: 00005280
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5280
+data:
+  user 1 personas: 'I go to a private high school.
+
+    While both my parents have thick european accents , i do not.
+
+    I am enrolled in several college credit courses.
+
+    I drive a motorcycle instead of a car.
+
+    My parents immigrated from europe before i was born.'
+  user 2 personas: 'My mother was a sunday school teacher.
+
+    I went to an all girls christian high school.
+
+    I am currently in nursing school.
+
+    I dance ballet.'
+  Best Generated Conversation: 'User 1: Hello, my name is [name].
+
+    User 2: Hello, my name is [name].
+
+    User 1: It''s nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, dance ballet, and spend time with my family.
+
+    User 1: I love reading too! What kind of books do you like to read?
+
+    User 2: I like to read a variety of books, but my favorite genres are mystery and romance.
+
+    User 1: Those are two of my favorite genres too! I love the feeling of getting lost in a good book.
+
+    User 2: Me too! It''s so relaxing and it''s a great way to escape from the real world for a little while.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to dance ballet. I''ve been dancing since I was a little girl and it''s a big part of my life.
+
+    User 1: That''s awesome! I''ve always wanted to learn how to dance ballet.
+
+    User 2: You should give it a try! It''s a lot of fun and it''s a great way to stay in shape.
+
+    User 1: I might just do that!
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m currently in high school, but I''m planning on going to college to study business.
+
+    User 2: Oh, that''s great! I''m currently in nursing school.
+
+    User 1: That''s awesome! I''ve always admired nurses.
+
+    User 2: Thanks! It''s a lot of hard work, but it''s also very rewarding.
+
+    User 1: I''m sure it is. What made you decide to become a nurse?
+
+    User 2: I''ve always wanted to help people and I think nursing is a great way to do that.
+
+    User 1: That''s a great reason to become a nurse. I''m sure you''ll be a great nurse.
+
+    User 2: Thank you! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

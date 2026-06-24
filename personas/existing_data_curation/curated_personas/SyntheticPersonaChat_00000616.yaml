@@ -1,0 +1,68 @@
+id: '00000616'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 616
+data:
+  user 1 personas: 'I am on a diet.
+
+    I am a house wife.
+
+    I have been married eight years.
+
+    I can t drive.
+
+    I am thirty two years old.'
+  user 2 personas: 'My favorite food is pizza.
+
+    I am single.
+
+    I am a cyclist.
+
+    I work at a restaurant as waiter.
+
+    My father used to be a cop.'
+  Best Generated Conversation: 'User 1: Hello, I am a 32 year old house wife who has been married for 8 years. I am on a diet and can''t drive.
+
+    User 2: Hello, I am a single cyclist who works as a waiter at a restaurant. My favorite food is pizza and my father used to be a cop.
+
+    User 1: That''s interesting, I have never met a cyclist before.
+
+    User 2: It''s a great way to stay in shape and I get to see a lot of different places.
+
+    User 1: That''s true, I would love to be able to bike more but I can''t drive so it''s hard to get around.
+
+    User 2: You could always get a bike share membership, that way you can bike wherever you need to go without having to worry about driving.
+
+    User 1: That''s a good idea, I will look into that.
+
+    User 2: You''re welcome. So, what do you like to do for fun?
+
+    User 1: I like to read, cook, and spend time with my family.
+
+    User 2: That sounds nice, I like to read and cook too. I also enjoy going out with friends and cycling.
+
+    User 1: I love to cook but I''m not very good at it.
+
+    User 2: Don''t worry, everyone has to start somewhere. I''m sure you''ll be a great cook in no time.
+
+    User 1: Thanks, I hope so.
+
+    User 2: So, what kind of food do you like to cook?
+
+    User 1: I like to cook all kinds of food but my favorite is Italian.
+
+    User 2: Me too! I love pasta and pizza.
+
+    User 1: Me too! I love making homemade pizza.
+
+    User 2: That sounds delicious. I''m sure it''s better than anything you can buy at a restaurant.
+
+    User 1: Thank you, I think so too.
+
+    User 2: Well, it''s been nice talking to you. I have to go now but I hope we can talk again soon.
+
+    User 1: It was nice talking to you too. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

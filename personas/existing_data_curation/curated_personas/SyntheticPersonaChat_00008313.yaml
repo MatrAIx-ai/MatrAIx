@@ -1,0 +1,98 @@
+id: 00008313
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8313
+data:
+  user 1 personas: 'I get paid over 5 million a year to dribble a ball.
+
+    I went to the university of north carolina.
+
+    I was drafted last years by the minnesota wolves.
+
+    I play basketball.
+
+    I am an athlete.'
+  user 2 personas: 'My favorite activity is fishing.
+
+    I once ran the mile in under 4 minutes.
+
+    My dad was a cop until he was killed.
+
+    My favorite thing to do is float the river.
+
+    I can t go a single day without eating ice cream.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [User 1''s name], I''m a basketball player for the Minnesota Timberwolves.
+
+    User 2: Hi [User 1''s name], I''m [User 2''s name], I love fishing.
+
+    User 1: That''s awesome! I used to love fishing when I was younger.
+
+    User 2: You should go fishing with me sometime!
+
+    User 1: I would love to!
+
+    User 2: Great! We can go to the river this weekend.
+
+    User 1: That sounds like a plan!
+
+    User 2: Awesome! I''ll see you then.
+
+    User 1: See you!
+
+    User 2: [Later, at the river.]
+
+    User 2: [User 1]! I''m so glad you came!
+
+    User 1: Me too! This is beautiful.
+
+    User 2: I know, right? I love it here.
+
+    User 1: So, what do we need to do to get started?
+
+    User 2: We just need to cast our lines in the water and wait for a bite.
+
+    User 1: Okay, sounds easy enough.
+
+    User 2: It is!
+
+    User 1: [After a few minutes.]
+
+    User 1: Got a bite!
+
+    User 2: You did? What is it?
+
+    User 1: I think it''s a bass.
+
+    User 2: Nice!
+
+    User 1: I''m going to reel it in.
+
+    User 1: [After a few minutes of reeling.]
+
+    User 1: Got it!
+
+    User 2: Nice! That''s a big one!
+
+    User 1: I know, right?
+
+    User 2: Let''s take a picture!
+
+    User 1: Great idea!
+
+    [User 1 and User 2 take a picture of the fish.]
+
+    User 2: This is a great picture!
+
+    User 1: I know, right?
+
+    User 2: I''m so glad we came fishing!
+
+    User 1: Me too! This was a lot of fun.
+
+    User 2: I agree! We should do it again sometime.
+
+    User 1: I would love to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

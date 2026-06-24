@@ -1,0 +1,62 @@
+id: '00007345'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7345
+data:
+  user 1 personas: 'I have trained over 20 types of animals.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I am a zookeeper.
+
+    I work with my wife.
+
+    My wife is a breast cancer survivor.'
+  user 2 personas: 'My wife just left me.
+
+    My favorite city is new york.
+
+    I love to run.
+
+    I am a lawyer.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: Not so great. I just found out my wife is leaving me.
+
+    User 1: Oh, no! I''m so sorry to hear that.
+
+    User 2: Thanks. It''s been a rough day.
+
+    User 1: I can imagine. Do you want to talk about it?
+
+    User 2: I don''t know. I''m not sure what to say.
+
+    User 1: Well, you can start by telling me how you feel.
+
+    User 2: I''m just feeling really lost and alone. Like I don''t know what to do or where to go.
+
+    User 1: I can understand that. It''s a lot to take in.
+
+    User 2: It is. I just don''t understand why she''s doing this.
+
+    User 1: There could be a lot of reasons. It''s not necessarily anything you did wrong.
+
+    User 2: I don''t know. I feel like I must have done something wrong.
+
+    User 1: You don''t know that for sure. Maybe she just needs some time to figure things out.
+
+    User 2: I hope so. I just don''t know what to do right now.
+
+    User 1: Well, you don''t have to do anything right now. You just need to take some time to process everything.
+
+    User 2: I guess you''re right. I just wish I knew what the future held.
+
+    User 1: I don''t know either. But I can tell you that you''re not alone. There are a lot of people who have been through this and come out stronger.
+
+    User 2: Thanks. That means a lot.
+
+    User 1: Of course. I''m here for you if you need anything.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: '00007644'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7644
+data:
+  user 1 personas: 'I sell miscellaneous stuff in local fairs.
+
+    I recently graduated from college.
+
+    So i started a small business.
+
+    I have not had luck with finding a job.
+
+    Its been doing better than i expected.'
+  user 2 personas: 'My favorite food is fried chicken.
+
+    I have a twin sister named jessica.
+
+    My son was born completely blind.
+
+    I am a pilot for southwest.'
+  Best Generated Conversation: 'User 1: I''ve recently graduated from college.
+
+    User 2: Congratulations!
+
+    User 1: Thank you! I''ve started a small business selling miscellaneous stuff at local fairs.
+
+    User 2: That''s great! I''ve always wanted to start my own business.
+
+    User 1: It''s been doing better than I expected!
+
+    User 2: That''s wonderful! What kind of things do you sell?
+
+    User 1: I sell a variety of things, including jewelry, clothing, and home goods.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I love getting to meet new people and learn about their interests.
+
+    User 2: That''s great! I''m glad you''re enjoying your new business.
+
+    User 1: Thank you! I am. I''m excited to see where it takes me.
+
+    User 2: I''m sure it will go far!
+
+    User 1: Thanks! I appreciate your support.
+
+    User 2: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

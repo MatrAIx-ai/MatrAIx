@@ -1,0 +1,66 @@
+id: '00005423'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5423
+data:
+  user 1 personas: 'My favorite band is pearl jam.
+
+    I enjoy hiking and riding my bicycle.
+
+    I live in a suburb of boston.
+
+    I am a night owl.'
+  user 2 personas: 'My favorite sport is football.
+
+    I volunteer at my local animal shelter.
+
+    I love travelling and discovering new cultures.
+
+    I am a military veteran.'
+  Best Generated Conversation: 'User 1: I love Pearl Jam! Have you seen them in concert?
+
+    User 2: Yes! I saw them a few years ago at Fenway Park. It was an amazing show.
+
+    User 1: That''s awesome! I''ve always wanted to see them live.
+
+    User 2: You should definitely go if you get a chance. They''re one of the best live bands out there.
+
+    User 1: I''ll definitely keep an eye out for them.
+
+    User 2: Good! What else do you like to do for fun?
+
+    User 1: I like to hike and ride my bicycle. I also like to travel.
+
+    User 2: I love hiking and biking too! I don''t get to do it as much as I''d like, but it''s always a great time.
+
+    User 1: Me too! I''m lucky to live in a place with so many great hiking and biking trails.
+
+    User 2: Where do you live?
+
+    User 1: I live in a suburb of Boston.
+
+    User 2: Oh, that''s cool! I''ve been to Boston a few times. It''s a beautiful city.
+
+    User 1: It is! I love it here.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, cool! I''ve always wanted to be a software engineer.
+
+    User 1: It''s a great job! I love it.
+
+    User 2: What do you like about it?
+
+    User 1: I like the challenge of solving problems and the creativity involved in designing software.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is! I''m lucky to have a job that I love.
+
+    User 2: It sounds like you do'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,70 @@
+id: '00004177'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4177
+data:
+  user 1 personas: 'My favorite color is blue.
+
+    I paint with watercolors.
+
+    I work in finance.
+
+    I am italian american.
+
+    I hate cleaning.'
+  user 2 personas: 'I am a doctor.
+
+    I have 2 kids.
+
+    I like to play baseball.
+
+    My favorite place is the mountains.
+
+    My wife is a nurse.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a doctor.
+
+    User 1: Oh wow, that''s cool! What kind of doctor?
+
+    User 2: I''m a pediatrician.
+
+    User 1: Oh, that''s great! I''m sure you''re really good at your job.
+
+    User 2: Thanks! I try my best.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play baseball, go to the mountains, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! Do you have any kids?
+
+    User 2: Yes, I have two kids.
+
+    User 1: Oh, how old are they?
+
+    User 2: They''re 6 and 8 years old.
+
+    User 1: Aw, they must be so cute!
+
+    User 2: They are!
+
+    User 1: What do you like about being a doctor?
+
+    User 2: I like helping people and making a difference in their lives.
+
+    User 1: That''s really great. What''s the most challenging part of being a doctor?
+
+    User 2: The most challenging part is dealing with the stress and long hours.
+
+    User 1: I can imagine. But it sounds like you''re really good at your job.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it sounds like you have a great life.
+
+    User 2: I do! I''m very lucky.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00001971
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1971
+data:
+  user 1 personas: 'I live in the city.
+
+    I grew up in the upstate.
+
+    Now i also work at a bank.
+
+    I went to college and graduated few years ago.'
+  user 2 personas: 'I like to read books.
+
+    I am a librarian in my current job.
+
+    I have two cats.
+
+    My cats like to be read to.
+
+    I like to eat tune.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How are you today?
+
+    User 1: I''m doing well, thanks for asking!
+
+    User 2: I''m doing well too! I''m glad to hear that.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read books and spend time with my cats.
+
+    User 1: Oh, I love to read books too! What are some of your favorite books?
+
+    User 2: I love the Harry Potter series, the Hunger Games series, and the Percy Jackson series.
+
+    User 1: Oh, I love all of those series too! They''re so good.
+
+    User 2: I know, right? They''re some of my favorites.
+
+    User 1: So, where do you work?
+
+    User 2: I work as a librarian at the local library.
+
+    User 1: Oh, that''s so cool! I''ve always wanted to be a librarian.
+
+    User 2: It''s a great job! I get to help people find books and I get to read all day long.
+
+    User 1: That sounds like a dream come true!
+
+    User 2: It is! I love my job.
+
+    User 1: So, what are some of your favorite books that you''ve read lately?
+
+    User 2: I just finished reading "The Midnight Library" by Matt Haig and I really enjoyed it.
+
+    User 1: Oh, I''ve heard good things about that book! I''ll have to check it out.
+
+    User 2: You should! It''s a really good book.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem! I''m glad I could help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

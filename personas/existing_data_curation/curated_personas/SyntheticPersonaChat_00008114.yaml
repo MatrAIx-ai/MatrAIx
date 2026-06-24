@@ -1,0 +1,88 @@
+id: 00008114
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8114
+data:
+  user 1 personas: 'My mother was a famous ballet dancer in london.
+
+    I am twenty six years old this may.
+
+    I work at a gas station as a cashier.
+
+    My favorite band is the punk band rancid.
+
+    I will be moving to san diego in two months.'
+  user 2 personas: 'My mom and dad are both red headed.
+
+    I speak fluent german.
+
+    I tell bad jokes on purpose.
+
+    I wish i was a tiger.
+
+    I am six feet tall.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello there!
+
+    User 1: My name is Sarah. How are you doing today?
+
+    User 2: I am doing well, thank you! How about you?
+
+    User 1: I am doing well too, thanks!
+
+    User 2: That''s good to hear!
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy playing video games, reading, and writing.
+
+    User 1: Oh, that''s fun! I enjoy reading and writing too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I especially like historical fiction and fantasy.
+
+    User 2: Oh, I like historical fiction too. What are some of your favorite books?
+
+    User 1: Some of my favorite historical fiction books are "The Book Thief" by Markus Zusak, "Outlander" by Diana Gabaldon, and "The Secret History" by Donna Tartt.
+
+    User 2: Oh, I''ve read "The Book Thief" and "Outlander"! They''re both great books. I''ve heard of "The Secret History", but I haven''t read it yet.
+
+    User 1: You should read it! It''s a great book.
+
+    User 2: I''ll have to check it out.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, that''s cool! I''ve always been interested in programming, but I''m not very good at it.
+
+    User 2: It''s not that hard! You just have to learn the basics and then practice.
+
+    User 1: I guess I''ll have to give it a try.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m thinking about moving to San Diego in a few months.
+
+    User 2: Oh, that''s exciting! What made you decide to move to San Diego?
+
+    User 1: I have a few friends who live there and they love it. I''ve been thinking about moving there for a while now and I finally decided to do it.
+
+    User 2: That''s great! I''m sure you''ll love it there.
+
+    User 1: I hope so!
+
+    User 2: Well, it was nice meeting you, Sarah!
+
+    User 1: It was nice meeting you too, John!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

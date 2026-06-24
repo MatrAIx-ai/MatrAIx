@@ -1,0 +1,78 @@
+id: '00007502'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7502
+data:
+  user 1 personas: 'I love reading mysteries in my free time.
+
+    I am pursuing my law degree.
+
+    I love playing tennis.
+
+    I am the youngest of 3.'
+  user 2 personas: 'My brother lives in england.
+
+    I have a timeshare in mexico.
+
+    I own my own business.
+
+    My favorite food is sushi.'
+  Best Generated Conversation: 'User 1: What do you like to do in your free time?
+
+    User 2: I love to read mysteries, and I also love playing tennis.
+
+    User 1: Me too! I love reading mysteries. I''m currently reading the Alex Cross series by James Patterson.
+
+    User 2: I''ve never read any of those, but I''ve heard good things about them.
+
+    User 1: They''re really good! Have you ever read any Agatha Christie?
+
+    User 2: No, I haven''t.
+
+    User 1: You should! She''s one of the best mystery writers of all time.
+
+    User 2: I''ll check her out. Thanks for the recommendation.
+
+    User 1: No problem. What do you like about playing tennis?
+
+    User 2: I love the challenge of it. It''s a great way to get exercise and to clear my head.
+
+    User 1: I agree! It''s a really fun sport.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Yeah, me too. We should play tennis together sometime.
+
+    User 2: That would be fun! I''m free on Saturday.
+
+    User 1: Me too! How about we meet at the tennis courts at 10?
+
+    User 2: Perfect! I''ll see you there.
+
+
+    (On Saturday)
+
+
+    User 1: Hey, are you ready to play?
+
+    User 2: Yeah, I''m all warmed up.
+
+    User 1: Okay, let''s do this.
+
+
+    (After they play)
+
+
+    User 1: That was so much fun!
+
+    User 2: Me too! We should do it again sometime.
+
+    User 1: Definitely! We could make it a weekly thing.
+
+    User 2: That would be great! I''ll see you next Saturday.
+
+    User 1: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00003625'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3625
+data:
+  user 1 personas: 'I do not believe in love.
+
+    I am adopted.
+
+    I am an only child.
+
+    I ride horses in my spare time.'
+  user 2 personas: 'I have horrible allergies.
+
+    I spend an hour getting ready in the morning.
+
+    I still love my cat despite all this.
+
+    I cannot stand clutter or dust.
+
+    When i shower my skin is nearly red from how hard i scrub.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m adopted and I don''t believe in love.
+
+    User 2: Hi, I''m [user 2''s name]. I have horrible allergies, but I still love my cat.
+
+    User 1: That''s interesting. I''ve never met anyone who has allergies that bad.
+
+    User 2: Yeah, it''s not fun. I have to take medication every day and I have to avoid a lot of things.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to spend time with my cat, go for walks, and read.
+
+    User 1: That sounds nice. I like to ride horses in my spare time.
+
+    User 2: That''s cool! I''ve always wanted to try horseback riding.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you think of my bio?
+
+    User 2: I think it''s interesting. I''ve never met anyone who doesn''t believe in love.
+
+    User 1: Yeah, it''s not a common belief. But I''ve just never seen the point in it.
+
+    User 2: I guess I can understand that. It can be hard to find someone you really connect with.
+
+    User 1: Exactly. And when you do, it''s not always easy to make it work.
+
+    User 2: Yeah, relationships are hard work. But they can also be really rewarding.
+
+    User 1: I guess I''m just not willing to put in the work.
+
+    User 2: That''s your choice. But I think you''re missing out on something great.
+
+    User 1: Maybe I am. But I''m happy with my life the way it is.
+
+    User 2: That''s all that matters.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

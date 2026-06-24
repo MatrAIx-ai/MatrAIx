@@ -1,0 +1,62 @@
+id: '00002412'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2412
+data:
+  user 1 personas: 'I am in the military.
+
+    I have one son.
+
+    My favorite color is blue.
+
+    I am 25 years old.
+
+    I was a wrestler in high school.'
+  user 2 personas: 'My favorite truck is a chevy drama.
+
+    I do not like vegetables.
+
+    I enjoy spending time with my family.
+
+    My favorite store is american eagle.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to spend time with my family and friends.
+
+    User 1: That sounds like fun. What do you like to do together?
+
+    User 2: We like to go to the movies, play games, and go out to eat.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: What''s your favorite movie?
+
+    User 1: I like a lot of different movies, but my favorite is probably The Shawshank Redemption.
+
+    User 2: I''ve never seen that one. What''s it about?
+
+    User 1: It''s about a man who is wrongly convicted of murder and sent to prison. He spends many years in prison, but he never gives up hope.
+
+    User 2: That sounds really interesting. I''ll have to check it out.
+
+    User 1: You should! It''s a really good movie.
+
+    User 2: What''s your favorite store to shop at?
+
+    User 1: I like to shop at American Eagle. They have a lot of good clothes.
+
+    User 2: I like American Eagle too! I always find good deals there.
+
+    User 1: Me too! I like their jeans.
+
+    User 2: Me too! They''re really comfortable.
+
+    User 1: I''m glad we have the same taste in stores.
+
+    User 2: Me too! It makes shopping more fun.
+
+    User 1: Yeah, it does.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

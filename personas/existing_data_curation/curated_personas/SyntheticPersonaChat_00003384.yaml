@@ -1,0 +1,62 @@
+id: 00003384
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3384
+data:
+  user 1 personas: 'I have a very tone body.
+
+    I have a collection of video games.
+
+    My wife and i enjoy long sunday drives.
+
+    My son is a straight a student.
+
+    I work in a warehouse.'
+  user 2 personas: 'I like fruit.
+
+    My favorite fruit is apple.
+
+    I like to eat the skin of the apple.
+
+    I like green apples.'
+  Best Generated Conversation: 'User 1: I like to play video games.
+
+    User 2: Me too! What''s your favorite game?
+
+    User 1: I''m really into the new Zelda game.
+
+    User 2: I''ve heard good things about it. I''m more of a Mario fan myself.
+
+    User 1: I like Mario too. I think he''s a lot of fun.
+
+    User 2: Do you have any other hobbies?
+
+    User 1: I like to go for walks on the beach with my wife and son.
+
+    User 2: That sounds nice. I like to go for hikes in the woods.
+
+    User 1: I like hiking too, but I''m not very good at it.
+
+    User 2: It''s a good workout!
+
+    User 1: I''m sure it is. I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a teacher.
+
+    User 1: Really? What grade do you teach?
+
+    User 2: I teach kindergarten.
+
+    User 1: That''s great! I''m sure you''re a great teacher.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, I''m sure your students are lucky to have you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

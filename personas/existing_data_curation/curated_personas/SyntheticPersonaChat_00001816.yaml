@@ -1,0 +1,72 @@
+id: 00001816
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1816
+data:
+  user 1 personas: 'I am nearly 6 tall.
+
+    I drive a ford truck.
+
+    I have long flowing hair.
+
+    My least favorite music is country.'
+  user 2 personas: 'I am a doctor.
+
+    I like to play baseball.
+
+    My wife is a nurse.
+
+    I have 2 kids.
+
+    My favorite place is the mountains.'
+  Best Generated Conversation: 'User 1: I''m not a fan of country music either.
+
+    User 2: Oh really? What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but my favorite is probably rock.
+
+    User 2: I like rock too! What bands do you like?
+
+    User 1: I like a lot of different bands, but my favorite is probably Queen.
+
+    User 2: I love Queen! They''re one of my favorites too.
+
+    User 1: What do you like about them?
+
+    User 2: I love their music and their energy. They''re just so much fun to listen to.
+
+    User 1: I agree! They''re one of the best bands ever.
+
+    User 2: I''m glad you agree! What else do you like to do for fun?
+
+    User 1: I like to play video games, go for walks, and read.
+
+    User 2: I like to play video games too! What kind of games do you like?
+
+    User 1: I like a lot of different kinds of games, but my favorite is probably open world RPGs.
+
+    User 2: I love open world RPGs too! I''ve been playing a lot of Elden Ring lately.
+
+    User 1: I''ve heard good things about Elden Ring. I''ve been meaning to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I will! What else do you like to do for fun?
+
+    User 2: I like to go for walks in the mountains. I live near the mountains, so it''s a great place to relax and get away from it all.
+
+    User 1: That sounds nice. I like to go for walks too.
+
+    User 2: What''s your favorite place to walk?
+
+    User 1: I like to walk in the park. It''s a nice place to relax and enjoy the scenery.
+
+    User 2: I like to walk in the park too!
+
+    User 1: It''s a great way to get some exercise and fresh air.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

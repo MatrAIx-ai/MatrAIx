@@ -1,0 +1,68 @@
+id: 00004128
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4128
+data:
+  user 1 personas: 'I work at a smoothie shop.
+
+    I listen to classic rock.
+
+    I watch basketball.
+
+    I enjoy eating vegetarian food.'
+  user 2 personas: 'I graduated college in 2016.
+
+    I teach kindergarten.
+
+    I teach at a large school.
+
+    My class has 26 kids.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for a living?
+
+    User 2: I teach kindergarten.
+
+    User 1: Oh, that''s awesome! I''ve always thought about teaching.
+
+    User 2: It''s a lot of fun, but it can be challenging.
+
+    User 1: I bet it is. How many kids do you have in your class?
+
+    User 2: I have 26 kids in my class.
+
+    User 1: Wow, that''s a lot!
+
+    User 2: It can be, but it''s also a lot of fun.
+
+    User 1: I''m sure it is. Do you like teaching kindergarten?
+
+    User 2: I love it! It''s the best job in the world.
+
+    User 1: That''s great to hear.
+
+    User 2: What do you do for a living?
+
+    User 1: I work at a smoothie shop.
+
+    User 2: Oh, that''s cool! Do you like it?
+
+    User 1: I do, it''s a lot of fun.
+
+    User 2: That''s great to hear.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go to concerts, watch movies, and read.
+
+    User 1: Oh, that''s cool! I like to do all of those things too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: Sure! That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

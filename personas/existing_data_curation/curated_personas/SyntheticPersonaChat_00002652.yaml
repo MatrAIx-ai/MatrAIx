@@ -1,0 +1,86 @@
+id: '00002652'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2652
+data:
+  user 1 personas: 'I work as a waitress.
+
+    I live in north dakota.
+
+    I like to draw.
+
+    I have 5 brothers and sisters.'
+  user 2 personas: 'My favorite band is rise against.
+
+    My favorite team is the raptors.
+
+    I usually go to bed late.
+
+    I like sports.
+
+    I am studying to be a dentist.'
+  Best Generated Conversation: '* * User 1: * * Hi! I''m (name). What''s your name?
+
+    * * User 2: * * Hi, I''m (name). It''s nice to meet you!
+
+    * * User 1: * * Nice to meet you too! Where are you from?
+
+    * * User 2: * * I''m from Toronto, Canada.
+
+    * * User 1: * * Oh, that''s cool! I''ve always wanted to visit Canada.
+
+    * * User 2: * * You should! It''s a beautiful country.
+
+    * * User 1: * * I''m sure it is. What do you do for work?
+
+    * * User 2: * * I''m studying to be a dentist.
+
+    * * User 1: * * Oh, that''s cool! I''ve never met a dentist before.
+
+    * * User 2: * * Really? That''s surprising. There are a lot of dentists in the world.
+
+    * * User 1: * * I guess I just don''t know a lot of people.
+
+    * * User 2: * * Well, now you know one!
+
+    * * User 1: * * Yeah! What''s your favorite band?
+
+    * * User 2: * * Rise Against.
+
+    * * User 1: * * I''ve heard of them. They''re pretty good.
+
+    * * User 2: * * Yeah, I love their music.
+
+    * * User 1: * * What''s your favorite song by them?
+
+    * * User 2: * * "The Good Left Undone."
+
+    * * User 1: * * That''s a good one. I like "Ready to Fall."
+
+    * * User 2: * * That''s a good one too.
+
+    * * User 1: * * What''s your favorite sport?
+
+    * * User 2: * * Basketball.
+
+    * * User 1: * * Me too! I''m a big Raptors fan.
+
+    * * User 2: * * Oh, nice! I''m a big fan of the Golden State Warriors.
+
+    * * User 1: * * They''re a good team.
+
+    * * User 2: * * Yeah, they''re my favorite team in the NBA.
+
+    * * User 1: * * I''m sure they''ll win the championship this year.
+
+    * * User 2: * * I hope so!
+
+    * * User 1: * * Me too! Well, it was nice talking to you.
+
+    * * User 2: * * You too! Have a nice day.
+
+    * * User 1: * * You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

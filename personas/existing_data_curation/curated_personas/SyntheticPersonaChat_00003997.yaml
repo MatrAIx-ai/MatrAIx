@@ -1,0 +1,82 @@
+id: 00003997
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3997
+data:
+  user 1 personas: 'I have never lost a fight.
+
+    I have more then 10 tattoos.
+
+    I am a grown woman.
+
+    I am in a motorcycle club.
+
+    I have gone 208 mph for for than 10 minutes.'
+  user 2 personas: 'I have two siblings.
+
+    I am looking for a job.
+
+    I am not very tall.
+
+    My favorite color is red.
+
+    I have a dog.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name].
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the movies, read, and hang out with my friends.
+
+    User 1: Oh, cool. I like to go to the movies too. I haven''t read a book in a long time, but I used to love to read.
+
+    User 2: What kind of books did you like to read?
+
+    User 1: I liked to read a lot of different kinds of books, but I especially liked fantasy and science fiction.
+
+    User 2: Oh, cool. I like those too. What are some of your favorite books?
+
+    User 1: I really like the Harry Potter series, the Lord of the Rings series, and the Ender''s Game series.
+
+    User 2: Oh, I love those books too! I also like the Percy Jackson series and the Hunger Games series.
+
+    User 1: Oh, I haven''t read the Percy Jackson series yet, but I''ve heard good things about it. I''ll have to check it out.
+
+    User 2: You definitely should. It''s a great series.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m looking for a job right now. I just graduated from college.
+
+    User 1: Oh, that''s exciting. What did you study in college?
+
+    User 2: I studied business.
+
+    User 1: Oh, cool. I''m sure you''ll find a job soon.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, what are your hobbies?
+
+    User 2: I like to go to the gym, play video games, and hang out with my friends.
+
+    User 1: Oh, cool. I like to go to the gym too. I don''t play video games much, but I like to watch them.
+
+    User 2: Yeah, I like to watch video games too. I''m a big fan of League of Legends.
+
+    User 1: Oh, I''ve heard of that game. I''ve never played it, but it looks really cool.
+
+    User 2: It''s a lot of fun. You should check it out.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

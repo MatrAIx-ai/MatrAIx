@@ -1,0 +1,78 @@
+id: 00000965
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 965
+data:
+  user 1 personas: 'I drive a truck.
+
+    I graduated high school.
+
+    I like rap music.
+
+    I live on a farm.'
+  user 2 personas: 'One of my favorite hobbies is gaming.
+
+    I enjoy visiting national parks.
+
+    I currently work in an office job.
+
+    I enjoy running.
+
+    My favorite color is green.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy visiting national parks, gaming, and running.
+
+    User 1: Cool! I''ve been to a few national parks, but I''ve never been gaming.
+
+    User 2: It''s a lot of fun! You should try it sometime.
+
+    User 1: I will! What''s your favorite game?
+
+    User 2: I really like the Assassin''s Creed series.
+
+    User 1: I''ve heard good things about that game. What''s it about?
+
+    User 2: It''s a series of action-adventure games set in different historical eras.
+
+    User 1: That sounds really cool! I''ll have to check it out.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work in an office job.
+
+    User 1: Oh, really? What kind of job?
+
+    User 2: I''m a marketing manager.
+
+    User 1: That sounds like a cool job!
+
+    User 2: It is! I get to work with a lot of different people and learn about different industries.
+
+    User 1: That''s awesome! I''m glad you like your job.
+
+    User 2: Thanks! I do. What about you? What do you do for work?
+
+    User 1: I drive a truck.
+
+    User 2: Oh, really? Where do you drive to?
+
+    User 1: I drive all over the country. I deliver goods to different businesses.
+
+    User 2: That sounds like a lot of fun!
+
+    User 1: It is! I get to see a lot of different places and meet a lot of different people.
+
+    User 2: That''s awesome! I''m glad you like your job.
+
+    User 1: Thanks! I do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

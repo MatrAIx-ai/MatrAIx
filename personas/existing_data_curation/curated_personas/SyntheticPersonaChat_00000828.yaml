@@ -1,0 +1,56 @@
+id: 00000828
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 828
+data:
+  user 1 personas: 'I love to read.
+
+    I have a masters degree in creative writing.
+
+    I have 3 sisters and 2 brothers.
+
+    My favorite place to spend time at is the beach.
+
+    I live in a medium sized city.'
+  user 2 personas: 'I like to take photos.
+
+    I love to hike.
+
+    I live in portland , maine.
+
+    I am an environmental engineer.'
+  Best Generated Conversation: 'User 1: Hi there! I''m looking for someone to chat with about my favorite book, "The Great Gatsby."
+
+    User 2: Hi! I love to read, too. I''m not sure if I''ve read "The Great Gatsby," but I''ll be happy to check it out.
+
+    User 1: Oh, it''s so good! It''s about the American dream and the pursuit of happiness. It''s set in the Roaring Twenties, and it''s full of beautiful imagery and complex characters.
+
+    User 2: It sounds like something I''d really enjoy. I''ll add it to my reading list.
+
+    User 1: You won''t regret it! What kind of books do you like to read?
+
+    User 2: I like all kinds of books, but I''m especially drawn to historical fiction and mystery novels. I also love to read about the environment.
+
+    User 1: I love historical fiction, too! I''ve been reading a lot of books about the Civil War lately.
+
+    User 2: The Civil War is so interesting! I''ve been reading a lot about the environmental impact of the war.
+
+    User 1: That sounds really interesting! I''ll have to check it out.
+
+    User 2: I''m sure you''ll find it fascinating.
+
+    User 1: So, you live in Portland, Maine? What''s it like there?
+
+    User 2: Portland is a great city! It''s a small city, but it has a lot to offer. There''s a lot of art and culture, and it''s a great place to be outdoors.
+
+    User 1: It sounds like a beautiful place to live. I''ve never been to Maine, but I''ve always wanted to visit.
+
+    User 2: You should definitely visit! Maine is a beautiful state, and there''s so much to see and do.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! I''m always happy to talk about books and travel.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

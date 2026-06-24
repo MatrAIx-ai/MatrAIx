@@ -1,0 +1,98 @@
+id: '00001165'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1165
+data:
+  user 1 personas: 'My name is omar.
+
+    I live on a small farm in ohio.
+
+    I am the youngest of three brothers.
+
+    I play guitar in the local band.
+
+    I have never been to the city.'
+  user 2 personas: 'I work at the local bank.
+
+    I have been divorced for 2 years.
+
+    I love collecting teapots.
+
+    My grandmother lives in my guesthouse.
+
+    I am a cat person.'
+  Best Generated Conversation: 'User 1: Hi, my name is Omar.
+
+    User 2: Hello Omar, my name is Linda.
+
+    User 1: It''s nice to meet you Linda.
+
+    User 2: You too, Omar.
+
+    User 1: Where do you live?
+
+    User 2: I live in a small town in Ohio.
+
+    User 1: Oh, that''s cool. I live on a small farm in Ohio.
+
+    User 2: That''s interesting. Do you like it there?
+
+    User 1: I love it. It''s peaceful and quiet.
+
+    User 2: That sounds nice. I live in a pretty busy town.
+
+    User 1: I bet it is. I''ve never been to a big city before.
+
+    User 2: You should go sometime. It''s a lot of fun.
+
+    User 1: I might do that. I''ve always been curious about what it''s like.
+
+    User 2: You''d probably like it.
+
+    User 1: I think I would too.
+
+    User 2: What do you do for a living?
+
+    User 1: I play guitar in a local band.
+
+    User 2: That sounds cool. What kind of music do you play?
+
+    User 1: We play a variety of music, but mostly country and blues.
+
+    User 2: That sounds great. I love country music.
+
+    User 1: Me too. It''s so fun to play.
+
+    User 2: I bet it is.
+
+    User 1: It is. I love being on stage and playing music for people.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play guitar, go fishing, and go hiking.
+
+    User 2: That sounds like a lot of fun. I like to go hiking too.
+
+    User 1: Me too. It''s so peaceful out in the woods.
+
+    User 2: I agree. It''s the best way to clear your head.
+
+    User 1: It is.
+
+    User 2: I''m glad we met, Omar.
+
+    User 1: Me too, Linda.
+
+    User 2: Maybe we can go hiking together sometime.
+
+    User 1: That would be fun.
+
+    User 2: Great. I''ll give you my number'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

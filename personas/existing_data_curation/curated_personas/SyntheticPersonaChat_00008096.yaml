@@ -1,0 +1,56 @@
+id: 00008096
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8096
+data:
+  user 1 personas: 'I take pride in my job managing the restaurant.
+
+    I work all the time.
+
+    I drive a nice car.
+
+    My brothers work with me.'
+  user 2 personas: 'I am saving money to buy my first car.
+
+    I live with my parents.
+
+    I currently work at mcdonalds.
+
+    I am taking a year off before i start college.
+
+    I am eighteen years old.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, [name]. I''m [name].
+
+    User 1: Nice to meet you.
+
+    User 2: You too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m currently working at McDonalds while I save up for my first car.
+
+    User 1: That''s great! I''m a manager at a restaurant.
+
+    User 2: Oh, that''s cool. Do you like it?
+
+    User 1: I love it! I get to work with my brothers and I take pride in my job.
+
+    User 2: That''s awesome. I''m glad you enjoy your job.
+
+    User 1: Thanks! What are your plans for after college?
+
+    User 2: I''m not sure yet. I''m thinking about going to school for business.
+
+    User 1: That''s a great idea! I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: It was nice meeting you, [name].
+
+    User 2: You too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

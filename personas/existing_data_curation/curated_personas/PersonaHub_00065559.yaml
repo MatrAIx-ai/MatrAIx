@@ -1,0 +1,18 @@
+id: 00065559
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 65559
+persona_description: A person who is knowledgeable about weather and storm warnings, particularly in the context of post-tropical cyclones and the impact of hurricanes and tropical storms on coastal areas.
+  This individual is likely to be a meteorologist, hurricane specialist, or someone who is involved in emergency management or disaster response. They are familiar with the changes in warning systems and
+  the implications of these changes for public safety. They have a deep understanding of the science behind hurricanes and the impact of storms on coastal communities.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: post-tropical cyclones and hurricanes
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

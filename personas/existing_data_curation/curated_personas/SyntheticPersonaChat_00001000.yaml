@@ -1,0 +1,98 @@
+id: '00001000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1000
+data:
+  user 1 personas: 'I hate tomatoes.
+
+    I am a female.
+
+    I need a wheel chair to get around.
+
+    I have 2 kids.'
+  user 2 personas: 'I escaped and later became a carpenter.
+
+    My favorite color is red.
+
+    I got married 10 years later.
+
+    I was the first born child.
+
+    I was a slave for 10 years.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hello! What''s up?
+
+    User 1: Nothing much, just hanging out in my wheelchair.
+
+    User 2: Oh, that''s not fun. What happened?
+
+    User 1: I have a disability that makes it hard to walk.
+
+    User 2: I''m sorry to hear that. But I''m glad you''re doing okay.
+
+    User 1: Thanks. I''m trying my best.
+
+    User 2: That''s all that matters.
+
+    User 1: I guess so.
+
+    User 2: So, what else do you do for fun?
+
+    User 1: I like to read and play video games.
+
+    User 2: Me too! What''s your favorite book?
+
+    User 1: I don''t really have a favorite book, but I like anything by Stephen King.
+
+    User 2: I love Stephen King too! What''s your favorite book by him?
+
+    User 1: I think my favorite is "The Stand".
+
+    User 2: That''s a great book! I love the ending.
+
+    User 1: Me too! It''s so satisfying.
+
+    User 2: So, what kind of video games do you like to play?
+
+    User 1: I like all kinds of games, but I mostly play RPGs and action games.
+
+    User 2: Me too! I love RPGs. I''m really excited for the new "Elden Ring" game.
+
+    User 1: Me too! I''ve been waiting for that game for years.
+
+    User 2: It looks so good! I can''t wait to play it.
+
+    User 1: Me neither! It looks like it''s going to be a lot of fun.
+
+    User 2: I''m sure it will be.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a carpenter.
+
+    User 1: That''s cool! Do you like it?
+
+    User 2: Yeah, I love it. It''s a lot of fun working with my hands.
+
+    User 1: I can imagine.
+
+    User 2: Yeah, it''s great.
+
+    User 1: So, what do you like to do outside of work?
+
+    User 2: I like to go hiking, fishing, and camping.
+
+    User 1: Me too! I love the outdoors.
+
+    User 2: Yeah, it''s the best.
+
+    User 1: I''m glad we have something in common.
+
+    User 2: Me too! I think we would get along really well.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

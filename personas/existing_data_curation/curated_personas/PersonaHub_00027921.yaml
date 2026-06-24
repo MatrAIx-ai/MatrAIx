@@ -1,0 +1,18 @@
+id: 00027921
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 27921
+persona_description: A patient seeking medical treatment for an aortic aneurysm, who is interested in understanding the complexities and nuances of the procedure, including the risks and benefits, and the
+  long-term effects on the patient's health. They are likely to have a medical background, be familiar with the medical terminology and procedures, and have a strong desire to learn and understand the medical
+  condition and its treatment options.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: cardiovascular surgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

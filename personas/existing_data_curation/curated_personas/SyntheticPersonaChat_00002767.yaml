@@ -1,0 +1,56 @@
+id: '00002767'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2767
+data:
+  user 1 personas: 'I enjoy being outside.
+
+    I love to swim.
+
+    My favorite singer is britney spears.
+
+    I love the color pink.'
+  user 2 personas: 'I eat mainly chinese food.
+
+    I make robots for a living.
+
+    I am a night owl.
+
+    I am single and live alone.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I make robots for a living.
+
+    User 1: That''s really cool! What''s your favorite part of the job?
+
+    User 2: I like the problem solving aspect of it.
+
+    User 1: I can imagine. I''m not very good at math, but I think robots are really cool.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to swim and go outside. I also love to sing. My favorite singer is Britney Spears.
+
+    User 2: I''m not a big fan of swimming, but I do like going outside. I also like to eat Chinese food.
+
+    User 1: I love Chinese food! I''m not a night owl, but I do like staying up late sometimes.
+
+    User 2: I''m a night owl. I usually stay up until 2 or 3 in the morning.
+
+    User 1: I guess we''re opposites in that way.
+
+    User 2: We are. But I think it''s good to have opposites in a relationship.
+
+    User 1: I agree. I think it''s important to have different perspectives on things.
+
+    User 2: I think we''re going to get along just fine.
+
+    User 1: I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

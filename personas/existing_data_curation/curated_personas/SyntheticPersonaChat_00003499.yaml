@@ -1,0 +1,70 @@
+id: 00003499
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3499
+data:
+  user 1 personas: 'I was born 20 years ago.
+
+    I love pizza.
+
+    I was born male and transitioned to female when i was 17.
+
+    My favorite color is blue.'
+  user 2 personas: 'I love ballet.
+
+    I have blonde hair.
+
+    My favorite food is macaroni and cheese.
+
+    My favorite color is purple.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1].
+
+    User 2: Hi, my name is [user 2].
+
+    User 1: What are you interested in?
+
+    User 2: I love ballet and I have blonde hair.
+
+    User 1: That''s cool! I love pizza and I was born male and transitioned to female when I was 17.
+
+    User 2: Wow, that''s interesting! What made you decide to transition?
+
+    User 1: I always felt like I was in the wrong body, and when I was 17 I decided to finally do something about it.
+
+    User 2: That''s great that you were able to make that decision for yourself.
+
+    User 1: Thanks! I''m glad I did too.
+
+    User 2: What''s your favorite kind of pizza?
+
+    User 1: I love pepperoni and pineapple pizza!
+
+    User 2: That''s a weird combination, but I''ve heard it''s really good.
+
+    User 1: It is! It''s the best!
+
+    User 2: Well, I''m not sure if I''m brave enough to try it, but I''m sure it''s good if you like it.
+
+    User 1: You should definitely try it! You might be surprised.
+
+    User 2: Okay, I''ll keep that in mind.
+
+    User 1: Do you have any pets?
+
+    User 2: No, I don''t have any pets. I''ve always wanted a dog, but I''ve never had the time to take care of one.
+
+    User 1: That''s too bad. Dogs are great pets!
+
+    User 2: I know! I''ve always wanted a golden retriever.
+
+    User 1: Golden retrievers are great dogs! They''re so friendly and loving.
+
+    User 2: I know! They''re so cute too!
+
+    User 1: I''m sure you''ll get one someday.
+
+    User 2: Thanks! Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

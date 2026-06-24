@@ -1,0 +1,72 @@
+id: 00003018
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3018
+data:
+  user 1 personas: 'I am in medical school.
+
+    I really wanted to be an actor.
+
+    I do community theater when i am not in school.
+
+    I am in love with a girl who is unaware of it.
+
+    Both of my parents are doctors.'
+  user 2 personas: 'I love to cook.
+
+    I like to fish.
+
+    I am a happy person.
+
+    My dad was a carsalesman.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, fish, and spend time with my dogs.
+
+    User 1: I love to cook too! What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m always experimenting with new recipes.
+
+    User 1: That sounds delicious! I''m not much of a cook, but I love to eat.
+
+    User 2: You should try cooking more! It''s really fun and rewarding.
+
+    User 1: I might just do that! What''s your favorite fish to fish for?
+
+    User 2: I like to fish for salmon. It''s a challenging fish to catch, but it''s so delicious.
+
+    User 1: I''ve never tried fishing for salmon, but I''ve heard it''s a lot of fun.
+
+    User 2: It is! It''s a great way to relax and enjoy nature.
+
+    User 1: I''m sure it is. I''d love to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what are your dogs like?
+
+    User 2: They''re great! They''re both golden retrievers and they''re the sweetest dogs ever.
+
+    User 1: I love golden retrievers! They''re so friendly and playful.
+
+    User 2: They are! I love them to death.
+
+    User 1: I''m sure they''re great companions.
+
+    User 2: They are! They always make me happy.
+
+    User 1: I''m glad to hear that. You seem like a really happy person.
+
+    User 2: I am! I have a great life.
+
+    User 1: That''s great to hear!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

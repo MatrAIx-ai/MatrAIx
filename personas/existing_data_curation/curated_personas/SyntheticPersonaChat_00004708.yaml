@@ -1,0 +1,66 @@
+id: 00004708
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4708
+data:
+  user 1 personas: 'I love talking on the phone.
+
+    I have a gambling problem.
+
+    I always eat my vegetables.
+
+    I am fluent in spanish.
+
+    I love to go hiking.'
+  user 2 personas: 'My mom is my best friend.
+
+    I am terrified of heights.
+
+    I believe that mermaids are real.
+
+    I love iced tea.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love to go hiking, read books, and spend time with my friends and family.
+
+    User 1: Those all sound like great things to do! I love hiking too. Do you have any favorite trails?
+
+    User 2: Yes, I love hiking in the mountains. I have a favorite trail in my hometown that goes to the top of a mountain and has a beautiful view.
+
+    User 1: That sounds amazing! I''d love to go hiking with you sometime.
+
+    User 2: I''d love that! We could plan a trip sometime.
+
+    User 1: Great! I''m always up for an adventure.
+
+    User 2: Me too! So, what else do you like to do?
+
+    User 1: I love to read books. I''m a big fan of science fiction and fantasy.
+
+    User 2: I love to read too! I usually read mystery novels or historical fiction.
+
+    User 1: Those are both great genres! I''ve read a few mystery novels myself.
+
+    User 2: What''s your favorite mystery novel?
+
+    User 1: I really enjoyed the "Girl with a Dragon Tattoo" series.
+
+    User 2: I''ve heard good things about that series. I might have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: I will! So, what else do you like to do?
+
+    User 1: I also love spending time with my friends and family. We go out to dinner, watch movies, and play games together.
+
+    User 2: Those sound like great things to do! I love spending time with my family and friends too.
+
+    User 1: I''m glad! I''m always up for a good time.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

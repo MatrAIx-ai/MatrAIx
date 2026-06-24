@@ -1,0 +1,19 @@
+id: 00008883
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 8883
+persona_description: A person who is interested in astronomy and space exploration, particularly interested in the study of the Moon and its phases. They are likely to be a scientist or engineer who specializes
+  in lunar exploration, or a space enthusiast who is interested in learning about the Moon's phases and the technology used to observe and map it. They are likely to be familiar with the Clementine spacecraft
+  and its mapping of the lunar surface onto a sphere, and are interested in the process of rendering virtual Sun images and mapping them onto the spherical Moon. They are also likely to be interested in
+  the concept of geometric distortion and its effects on the depiction of lunar surface features.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: lunar exploration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

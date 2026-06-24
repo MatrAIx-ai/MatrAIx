@@ -1,0 +1,19 @@
+id: 00022086
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 22086
+persona_description: A scientist at GE Global Research (GRC) who specializes in computational fluid dynamics and simulations, focusing on the modeling and prediction of ice accumulation on wind turbine
+  blades. The scientist is using supercomputers, such as Titan Cray XK7 at Oak Ridge National Laboratory, to study the growth and behavior of ice droplets on wind turbine blades. The scientist is also developing
+  icephobic surfaces to prevent ice formation and build up. The scientist's research has applications in various industries, including wind energy and offshore oil and gas drilling and production rigs,
+  where cold weather and ice accumulation can cause safety risks and financial losses.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: computational fluid dynamics
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

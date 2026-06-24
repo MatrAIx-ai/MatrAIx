@@ -1,0 +1,18 @@
+id: '00025267'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 25267
+persona_description: A patient who is seeking medical advice and treatment for thyroid disorders, particularly hypothyroidism and hyperthyroidism. They are likely to be concerned about the common symptoms
+  of these conditions, such as fatigue, weakness, cold intolerance, and weight change. They may also be interested in the physical findings associated with these disorders, such as swelling of the face
+  and eyelids, yellow skin color, and thickening of the tongue. Additionally, they may be seeking information on the treatment options available for thyroid disorders, such as medication or surgery.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: endocrinology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,92 @@
+id: 00000995
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 995
+data:
+  user 1 personas: 'I hate cleaning.
+
+    I work in finance.
+
+    I m italian american.
+
+    I paint with watercolors.
+
+    My favorite color is blue.'
+  user 2 personas: 'I love to dance.
+
+    I love disney movies.
+
+    I am on a competitive dance team.
+
+    I am in high school.
+
+    Ariel is my favorite princess.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to dance. I''m on a competitive dance team.
+
+    User 1: That''s so cool! I wish I could dance.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I''m not sure I''m coordinated enough.
+
+    User 2: You never know until you try!
+
+    User 1: I guess you''re right.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I work in finance, but I paint with watercolors in my spare time.
+
+    User 2: That''s so interesting! Do you sell your paintings?
+
+    User 1: No, I just do them for fun.
+
+    User 2: I think you should sell them! I''m sure people would love them.
+
+    User 1: Maybe I will someday.
+
+    User 2: I hope you do!
+
+    User 1: Thank you.
+
+    User 2: So, what''s your favorite color?
+
+    User 1: Blue.
+
+    User 2: Me too! It''s such a calming color.
+
+    User 1: I agree.
+
+    User 2: So, what''s your favorite Disney movie?
+
+    User 1: The Little Mermaid.
+
+    User 2: That''s my favorite too!
+
+    User 1: I love Ariel.
+
+    User 2: Me too! She''s so brave and independent.
+
+    User 1: I agree.
+
+    User 2: So, what are some of your other hobbies?
+
+    User 1: I love to read, go for walks, and spend time with my family.
+
+    User 2: That sounds like a lot of fun.
+
+    User 1: It is! I''m a pretty simple person.
+
+    User 2: Me too. I like to keep things simple.
+
+    User 1: I think it''s the best way to live.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

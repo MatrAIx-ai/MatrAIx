@@ -1,0 +1,54 @@
+id: '00003662'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3662
+data:
+  user 1 personas: 'I have a cat named leela.
+
+    I make videos about makeup.
+
+    My car is pink.
+
+    My dad is an airline pilot.
+
+    I am a youtuber.'
+  user 2 personas: 'I love chocolate milk shakes.
+
+    My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    My best friend is my dog allie.
+
+    My favorite pass time is gazing at clouds.'
+  Best Generated Conversation: 'User 1: Hey, I''m a youtuber who makes videos about makeup. What do you do for fun?
+
+    User 2: I ride my red bike to work everyday and gaze at clouds in my free time.
+
+    User 1: That sounds peaceful. I have a cat named Leela and I love chocolate milk shakes.
+
+    User 2: What kind of videos do you make for YouTube?
+
+    User 1: I make makeup tutorials and tutorials on how to do hair.
+
+    User 2: That sounds cool. I love makeup and hair tutorials.
+
+    User 1: I''m glad you like them. My dad is an airline pilot and my car is pink.
+
+    User 2: That''s cool. My best friend is my dog Allie and my favorite holiday is Halloween because I like dressing up.
+
+    User 1: Halloween is one of my favorite holidays too. I love dressing up too.
+
+    User 2: We should get together sometime and dress up for Halloween.
+
+    User 1: That would be fun. We could make a YouTube video about it too.
+
+    User 2: That would be awesome. I''m always looking for new people to collaborate with.
+
+    User 1: Me too. I''ll send you a DM so we can talk more.
+
+    User 2: Sounds good. I''ll be looking forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

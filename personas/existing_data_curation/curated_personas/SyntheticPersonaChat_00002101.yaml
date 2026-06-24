@@ -1,0 +1,72 @@
+id: '00002101'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2101
+data:
+  user 1 personas: 'I am a truck driver.
+
+    I know how to drive a stickshift.
+
+    My father was a cop.
+
+    My mother was a teacher.'
+  user 2 personas: 'I like sports.
+
+    My favorite band is rise against.
+
+    I usually go to bed late.
+
+    My favorite team is the raptors.
+
+    I am studying to be a dentist.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for fun?
+
+    User 2: I like to go to sports games. My favorite team is the Raptors.
+
+    User 1: I''ve heard good things about them! I''m not much of a sports fan, though.
+
+    User 2: That''s okay! What do you like to do for fun?
+
+    User 1: I like to go out to eat, see movies, and read books.
+
+    User 2: Oh, what kind of books do you like to read?
+
+    User 1: I like to read a lot of different genres, but I''m especially interested in historical fiction and science fiction.
+
+    User 2: I''ve never been a big reader, but I''m trying to get into it. I just finished reading "The Martian" by Andy Weir and I really enjoyed it.
+
+    User 1: I''ve heard good things about that book! I''m glad you enjoyed it.
+
+    User 2: Thanks! What''s your favorite book?
+
+    User 1: I''m not sure I could pick just one favorite book, but I really enjoyed "The Count of Monte Cristo" by Alexandre Dumas.
+
+    User 2: That''s a great book! I''ve read it a few times.
+
+    User 1: It''s one of my favorites! What do you do for a living?
+
+    User 2: I''m a dentist in training.
+
+    User 1: Oh, cool! I know a few dentists. They all seem to really enjoy their jobs.
+
+    User 2: Yeah, it''s a lot of work, but it''s really rewarding.
+
+    User 1: I''m sure it is.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a truck driver.
+
+    User 2: Oh, really? What''s that like?
+
+    User 1: It''s a lot of driving, but it''s also a lot of fun. I get to see a lot of different places.
+
+    User 2: That sounds like it would be interesting.
+
+    User 1: It is! I get to meet a lot of interesting people too.
+
+    User 2: That''s cool!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

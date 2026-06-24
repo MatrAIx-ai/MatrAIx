@@ -1,0 +1,42 @@
+id: '00003413'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3413
+data:
+  user 1 personas: 'I like to bake for them.
+
+    I live in a retirement home.
+
+    I am an old woman.
+
+    My grandson s favorite type of cake is chocolate.
+
+    My children vist often.'
+  user 2 personas: 'I sleep 10 hours every day because my work is tiring.
+
+    I have a wife and two kids.
+
+    I am a factory worker.
+
+    I want to be in a band someday.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1''s name].
+
+    User 2: Hello, my name is [user 2''s name].
+
+    User 1: I''m retired now and I live in a retirement home.
+
+    User 2: Oh, that sounds nice. I''m a factory worker and I sleep 10 hours every day because my work is tiring.
+
+    User 1: I see. I have two kids and two grandchildren. I love to bake for them. My grandson''s favorite type of cake is chocolate.
+
+    User 2: That''s sweet. I want to be in a band someday.
+
+    User 1: That sounds like fun. I hope you achieve your dream.
+
+    User 2: Thank you. It''s nice to meet you, [user 1''s name].
+
+    User 1: It''s nice to meet you too, [user 2''s name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

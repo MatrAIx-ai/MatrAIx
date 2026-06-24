@@ -1,0 +1,80 @@
+id: 00001198
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1198
+data:
+  user 1 personas: 'I am a fisherman.
+
+    My father was a cook.
+
+    He taught me right from wrong.
+
+    He later became a bartender.
+
+    He worked hard.'
+  user 2 personas: 'My favorite author is jane austen.
+
+    I own a boat.
+
+    I eat a lot of fish.
+
+    I only wear tennis shoes.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. I''m a fisherman.
+
+    User 2: Hi, I''m [name]. I''m a big fan of Jane Austen.
+
+    User 1: Oh, that''s cool! I''ve never read any of her books, but I''ve heard good things.
+
+    User 2: You should check them out! They''re really good.
+
+    User 1: I will, thanks for the recommendation.
+
+    User 2: No problem. So, what do you do for fun?
+
+    User 1: I like to go fishing, obviously. I also like to play video games and watch movies.
+
+    User 2: Nice! I like to go fishing too. I also like to read and play tennis.
+
+    User 1: Oh, that''s cool. I''ve never played tennis before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: I will, thanks for the recommendation.
+
+    User 2: No problem. So, what''s your favorite kind of fish to catch?
+
+    User 1: I like to catch salmon. They''re really delicious.
+
+    User 2: Nice! I like to catch bass. They''re a lot of fun to fight.
+
+    User 1: I''ve never caught a bass before.
+
+    User 2: You should try it! They''re a lot of fun to catch.
+
+    User 1: I will, thanks for the recommendation.
+
+    User 2: No problem. So, what''s your favorite thing about fishing?
+
+    User 1: I like the peace and quiet. It''s a nice way to relax and clear my head.
+
+    User 2: I agree. It''s a great way to escape from the stresses of everyday life.
+
+    User 1: It really is. So, what''s your favorite thing about Jane Austen?
+
+    User 2: I love her wit and humor. Her characters are so relatable and her stories are so well-written.
+
+    User 1: I can see why you like her. She''s a great writer.
+
+    User 2: She really is. I''ve read all of her books at least twice.
+
+    User 1: Wow! That''s a lot of books.
+
+    User 2: I know, I''m a big fan.
+
+    User 1: I can tell. It''s nice meeting you, [name].
+
+    User 2: It''s nice meeting you too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

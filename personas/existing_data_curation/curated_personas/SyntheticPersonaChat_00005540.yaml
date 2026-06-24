@@ -1,0 +1,84 @@
+id: '00005540'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5540
+data:
+  user 1 personas: 'I enjoy playing computer games.
+
+    I spend a good deal of time on social media.
+
+    I am glad that i work from home.
+
+    I love when my pets visit me in bed.'
+  user 2 personas: 'I have two roomates.
+
+    I like to cook.
+
+    I have two dogs.
+
+    I live on the third floor in an apartment.'
+  Best Generated Conversation: 'User 1: Hey, how are you?
+
+    User 2: Good! Thanks for asking.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, read, and spend time with my dogs.
+
+    User 1: That sounds fun! Do you have any pets?
+
+    User 2: Yes, I have two dogs.
+
+    User 1: What kind of dogs are they?
+
+    User 2: They''re both golden retrievers.
+
+    User 1: Aww, I love golden retrievers! They''re so cute.
+
+    User 2: Yeah, they are. They''re the best dogs.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! I''m a software engineer too.
+
+    User 2: Really? That''s awesome! What kind of software do you work on?
+
+    User 1: I work on web applications.
+
+    User 2: Oh, that''s cool. I work on mobile applications.
+
+    User 1: Nice! What are your favorite things about your job?
+
+    User 2: I like the creativity and the challenge.
+
+    User 1: Me too! I also like the problem-solving aspect.
+
+    User 2: Yeah, that''s a lot of fun.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. Maybe I''ll go for a hike with my dogs.
+
+    User 1: That sounds fun! I love hiking.
+
+    User 2: Yeah, me too. It''s a great way to get some exercise and enjoy nature.
+
+    User 1: So, what''s your favorite type of food?
+
+    User 2: I love Italian food.
+
+    User 1: Me too! I love pizza.
+
+    User 2: Me too! I also love pasta.
+
+    User 1: Me too! I could eat pizza and pasta every day.
+
+    User 2: Yeah, me too. I''m so glad we''re on the same page about food.
+
+    User 1: Me too! It''s the best.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

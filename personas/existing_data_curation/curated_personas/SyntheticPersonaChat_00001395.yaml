@@ -1,0 +1,62 @@
+id: 00001395
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1395
+data:
+  user 1 personas: 'I never sleep in.
+
+    I train horses for a living.
+
+    I hate my parents , but i love my job.
+
+    I wish i knew where i belonged.'
+  user 2 personas: 'My favorite food is tacos.
+
+    I like to draw.
+
+    I am from france.
+
+    I am studying literature.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: I''m from the United States. Where are you from?
+
+    User 2: I''m from France.
+
+    User 1: Cool! Do you like it there?
+
+    User 2: Yes, it''s a beautiful country.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to draw, read, and eat tacos.
+
+    User 1: I love tacos too! Do you have a favorite kind?
+
+    User 2: My favorite kind is carne asada tacos.
+
+    User 1: Yum! Those are good. What are you studying in college?
+
+    User 2: I''m studying literature.
+
+    User 1: That''s cool. I''m not very good at reading, but I love books.
+
+    User 2: Me too! I love the way books can transport you to another world.
+
+    User 1: I know what you mean. What''s your favorite book?
+
+    User 2: My favorite book is Les Misérables by Victor Hugo.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s a classic.
+
+    User 1: I will. Thanks for the recommendation.
+
+    User 2: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

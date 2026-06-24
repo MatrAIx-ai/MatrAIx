@@ -1,0 +1,102 @@
+id: 00005685
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5685
+data:
+  user 1 personas: 'My favourite food is ice cream.
+
+    I am a college student.
+
+    I work as a construction worker during the summers.
+
+    My parents are divorced.
+
+    I love to travel.'
+  user 2 personas: 'I am an avid fisherman.
+
+    I know how to play the guitar.
+
+    I have a george foreman grill at home.
+
+    I hate fast food.
+
+    I like to race go carts.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: Nice to meet you.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go fishing, play the guitar, and race go carts.
+
+    User 1: That sounds fun. I like to travel, ice skate, and work as a construction worker during the summers.
+
+    User 2: Wow, we have a lot in common!
+
+    User 1: I know, right? It''s great to find someone who has similar interests.
+
+    User 2: Yeah, it really is.
+
+    User 1: So, what''s your favorite thing about fishing?
+
+    User 2: I love being outdoors and the challenge of catching a fish.
+
+    User 1: I know what you mean. I also love being outdoors.
+
+    User 2: What''s your favorite type of ice skating?
+
+    User 1: I like to go ice skating at the rink, but I also like to go ice skating on ponds and lakes.
+
+    User 2: I like to ice skate on ponds and lakes too.
+
+    User 1: It''s so much fun!
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite thing about working as a construction worker?
+
+    User 2: I like being able to build things with my hands.
+
+    User 1: I know what you mean. I like being able to create something.
+
+    User 2: Yeah, it''s really rewarding.
+
+    User 1: It is.
+
+    User 2: So, what''s your favorite thing about traveling?
+
+    User 1: I love seeing new places and meeting new people.
+
+    User 2: I know what you mean. I also love seeing new places.
+
+    User 1: Yeah, it''s so much fun!
+
+    User 2: Yeah, it is.
+
+    User 1: So, what''s your favorite thing about race car go carts?
+
+    User 2: I love the speed and the excitement.
+
+    User 1: I know what you mean. It''s so much fun!
+
+    User 2: Yeah, it is.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m going ice skating at the rink.
+
+    User 2: That sounds fun! I might join you.
+
+    User 1: That would be great!
+
+    User 2: Yeah, it would.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: '00006715'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6715
+data:
+  user 1 personas: 'Twilight is my favorite book series.
+
+    I want to find out what its like to eat grasshoppers.
+
+    I recently moved to florida.
+
+    I am a huge fan of jason mraz.
+
+    I only surf when the tide is low.'
+  user 2 personas: 'I am working in finance.
+
+    I like meat.
+
+    I drive a black car.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Where are you from?
+
+    User 2: I''m from Florida.
+
+    User 1: Me too! I just moved here a few months ago.
+
+    User 2: Oh, that''s cool. Where were you living before?
+
+    User 1: I was living in California.
+
+    User 2: Oh, I''ve always wanted to visit California.
+
+    User 1: It''s beautiful, but it''s also very expensive.
+
+    User 2: I can imagine. What do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s awesome. What grade do you teach?
+
+    User 1: I teach first grade.
+
+    User 2: That''s great. I love kids.
+
+    User 1: Me too. They''re so much fun to teach.
+
+    User 2: What''s your favorite thing about teaching?
+
+    User 1: I love seeing the kids learn and grow. It''s so rewarding.
+
+    User 2: I can imagine. I bet it''s amazing to see the light bulb go on in their heads.
+
+    User 1: It is! It''s one of the best parts of the job.
+
+    User 2: What''s your favorite book series?
+
+    User 1: I love the Twilight series.
+
+    User 2: I''ve never read them. Are they good?
+
+    User 1: They''re my favorite books of all time. They''re about vampires and werewolves and stuff.
+
+    User 2: Oh, that sounds interesting. I might have to check them out.
+
+    User 1: You definitely should. They''re great.
+
+    User 2: Cool. I''ll add them to my reading list.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

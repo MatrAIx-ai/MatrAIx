@@ -1,0 +1,64 @@
+id: '00001200'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1200
+data:
+  user 1 personas: 'I am a librarian.
+
+    My favorite kind of food is italian.
+
+    I live in pittsburgh.
+
+    I love going to concerts.'
+  user 2 personas: 'I am a student in social sciences.
+
+    I am studying for my masters.
+
+    My favorite food is pizza.
+
+    I also like eating sushi.
+
+    Cooking is one of my pass times.'
+  Best Generated Conversation: 'User 1: What''s your favorite kind of food?
+
+    User 2: My favorite food is pizza. I like all kinds of pizza, but my favorite is pepperoni with extra cheese.
+
+    User 1: I love pizza too! I''m a big fan of Italian food in general.
+
+    User 2: Me too! I love pasta, lasagna, and all kinds of Italian food.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to go to concerts, cook, and hang out with my friends.
+
+    User 1: I love going to concerts too! I''ve been to a few really great shows lately.
+
+    User 2: I went to a concert last weekend. It was so much fun!
+
+    User 1: What band were you seeing?
+
+    User 2: I was seeing The Killers. They were amazing!
+
+    User 1: I love The Killers! I''ve seen them live a few times. They''re always so good.
+
+    User 2: They''re my favorite band. I''ve been a fan of theirs for years.
+
+    User 1: Me too! I love all of their songs.
+
+    User 2: What''s your favorite song by them?
+
+    User 1: I can''t choose just one! I love all of their songs. But I think my favorite might be "Human."
+
+    User 2: That''s a good song! I love that one too.
+
+    User 1: I love how they used the sample from "Human Nature" by Michael Jackson.
+
+    User 2: Me too! It''s such a good song.
+
+    User 1: I''m so glad we''re both fans of The Killers!
+
+    User 2: Me too! They''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

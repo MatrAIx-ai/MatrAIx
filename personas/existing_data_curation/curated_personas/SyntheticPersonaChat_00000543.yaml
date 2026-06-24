@@ -1,0 +1,64 @@
+id: '00000543'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 543
+data:
+  user 1 personas: 'I m a student.
+
+    I m from california.
+
+    I like to shop at goodwill.
+
+    I think recycling is important.
+
+    I like to be outdoors.'
+  user 2 personas: 'I drive a black car.
+
+    I have a black purse.
+
+    I like rock music.
+
+    My favorite artist is guns and roses.
+
+    I like to wear black.'
+  Best Generated Conversation: 'User 1: Hi, I''m (username). I''m a student from California. I like to shop at Goodwill, think recycling is important, and love to be outdoors.
+
+    User 2: Hi (username), I''m (username). I drive a black car, have a black purse, like rock music, my favorite artist is Guns N'' Roses, and I like to wear black.
+
+    User 1: That''s interesting, I also like rock music! What are some of your favorite bands?
+
+    User 2: I love Guns N'' Roses, Metallica, AC/DC, and The Rolling Stones.
+
+    User 1: Oh, nice! I love all those bands too!
+
+    User 2: What about you? Where are you from?
+
+    User 1: I''m from California too! I''m a student at UCLA.
+
+    User 2: Oh, that''s cool! I''m from the Bay Area.
+
+    User 1: Oh, cool! I''ve always wanted to visit the Bay Area.
+
+    User 2: You should come! It''s a beautiful place.
+
+    User 1: I definitely will! Do you have any favorite places to visit in the Bay Area?
+
+    User 2: I love going to the beach. I also love going to the mountains.
+
+    User 1: That sounds nice. I love the beach too.
+
+    User 2: What''s your favorite thing to do in California?
+
+    User 1: I love going to concerts. I also love going to the beach.
+
+    User 2: Me too! I love going to concerts and the beach.
+
+    User 1: It sounds like we have a lot in common!
+
+    User 2: Yeah, we do! It''s nice to meet you, (username).
+
+    User 1: Nice to meet you too, (username).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

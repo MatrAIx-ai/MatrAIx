@@ -1,0 +1,80 @@
+id: '00006545'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6545
+data:
+  user 1 personas: 'My mom and dad are both red headed.
+
+    I speak fluent german.
+
+    I am six feet tall.
+
+    I tell bad jokes on purpose.'
+  user 2 personas: 'I find joy in the littlest things.
+
+    My parents are both dead.
+
+    I listen to music for more than 5 hours a day.
+
+    I never work more than 4 days in a row.'
+  Best Generated Conversation: 'User 1: Hey! I''m [user 1''s name]. What''s your name?
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: Nice to meet you [user 2''s name]. What do you like to do for fun?
+
+    User 2: I like to listen to music, read, and spend time with my friends and family.
+
+    User 1: What kind of music do you like to listen to?
+
+    User 2: I like a lot of different kinds of music, but my favorite is probably rock and roll.
+
+    User 1: Me too! I love rock and roll. What are some of your favorite bands?
+
+    User 2: I love The Beatles, The Rolling Stones, and The Who.
+
+    User 1: Those are all great bands! I love them too.
+
+    User 2: What are some of your hobbies?
+
+    User 1: I love to read, write, and play video games.
+
+    User 2: I love to read too! What are some of your favorite books?
+
+    User 1: I love a lot of different kinds of books, but my favorite is probably Harry Potter.
+
+    User 2: Me too! I love Harry Potter!
+
+    User 1: What are some of your favorite video games?
+
+    User 2: I love a lot of different kinds of video games, but my favorite is probably Mario Kart.
+
+    User 1: Mario Kart is a classic! I love it too.
+
+    User 2: What are some of your favorite things to do with your friends and family?
+
+    User 1: I love to go to concerts, play board games, and go to the movies.
+
+    User 2: I love to go to concerts too! What are some of your favorite concerts that you''ve been to?
+
+    User 1: I love a lot of different kinds of concerts, but my favorite was probably when I saw The Beatles in concert.
+
+    User 2: Me too! I love The Beatles!
+
+    User 1: What are some of your favorite things to do with your family?
+
+    User 2: I love to go to the beach, go camping, and play board games.
+
+    User 1: I love to go to the beach too! What are some of your favorite things to do at the beach?
+
+    User 2: I love to swim, build sand castles, and play volleyball.
+
+    User 1: I love to do all of those things too!
+
+    User 2: It sounds like we have a lot in common.
+
+    User 1: Yes, we do! I think we''re going to be good friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,78 @@
+id: '00003710'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3710
+data:
+  user 1 personas: 'I like lightning mcqueen.
+
+    I have a cat named mater.
+
+    My grandma likes to make pizza with me.
+
+    Grandpa takes me to get ice cream.
+
+    I like to play basketball.'
+  user 2 personas: 'I design video games for a living.
+
+    I have been on the design team for over 65 video games.
+
+    My son plays on the local football team.
+
+    I am trying to create my own startup company in the gaming industry.
+
+    My wife recently got laid off from her human resources job.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: Nice to meet you!
+
+    User 2: You too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to design video games.
+
+    User 1: Oh, that''s cool! What kind of games do you design?
+
+    User 2: I mostly design action games, but I''ve also designed some racing games and puzzle games.
+
+    User 1: That sounds really fun! I''ve always wanted to learn how to design video games.
+
+    User 2: It''s not too hard, but it takes a lot of time and effort.
+
+    User 1: I''m sure it does. I''m impressed that you''ve designed so many games.
+
+    User 2: Thanks! I''ve been working in the gaming industry for a long time.
+
+    User 1: What''s your favorite video game that you''ve ever designed?
+
+    User 2: It''s hard to say, but I think my favorite is a racing game called "Race Driver: GRID."
+
+    User 1: I''ve heard of that game! It looks really fun.
+
+    User 2: It is! I''m glad you''ve heard of it.
+
+    User 1: So, what''s your current project?
+
+    User 2: I''m working on a new action game called "Project: Mayhem."
+
+    User 1: That sounds exciting! What''s it about?
+
+    User 2: It''s about a group of rebels who are trying to overthrow a corrupt government.
+
+    User 1: That sounds like a great premise for a game!
+
+    User 2: Thanks! I think it''s going to be a lot of fun.
+
+    User 1: I hope you''re right! I''m looking forward to playing it.
+
+    User 2: Thanks! I''ll let you know when it''s ready.
+
+    User 1: Great! I''ll be sure to check it out.
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

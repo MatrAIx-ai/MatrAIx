@@ -1,0 +1,62 @@
+id: 00002902
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2902
+data:
+  user 1 personas: 'I used to be a lawyer.
+
+    I am a judge in the circuit court.
+
+    I give everybody that comes in front me a fair chance.
+
+    My name is albert.
+
+    My next job will be in the federal court.'
+  user 2 personas: 'I live near a park.
+
+    I do not have a car.
+
+    My favorite color is purple.
+
+    I do not have any children.
+
+    I listen to podcasts.'
+  Best Generated Conversation: 'User 1: Hi, I''m Albert.
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a podcaster.
+
+    User 1: Oh, that''s cool. What kind of podcasts do you do?
+
+    User 2: I do a lot of different things, but my main focus is on true crime.
+
+    User 1: Interesting. I''ve always been fascinated by true crime.
+
+    User 2: Yeah, it''s a really interesting topic. I love learning about the different cases and trying to figure out what happened.
+
+    User 1: Do you ever get scared when you''re researching cases?
+
+    User 2: Sometimes, but it''s usually more exciting than scary.
+
+    User 1: I can imagine. I''m sure it''s a lot of fun to learn about all the different cases.
+
+    User 2: It is. It''s also a lot of work, but it''s worth it when I get to share the stories with people.
+
+    User 1: That''s great. I''m sure your listeners appreciate it.
+
+    User 2: I hope so. I try my best to make the stories as informative and engaging as possible.
+
+    User 1: I''m sure you do. I''m going to have to check out your podcast sometime.
+
+    User 2: You should! I''d love to know what you think.
+
+    User 1: I''m sure I''ll enjoy it.
+
+    User 2: Great! I hope you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

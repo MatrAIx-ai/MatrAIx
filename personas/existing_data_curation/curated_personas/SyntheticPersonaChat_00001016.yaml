@@ -1,0 +1,78 @@
+id: '00001016'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1016
+data:
+  user 1 personas: 'I have red hair.
+
+    I live close to the coast.
+
+    I work at a retail store.
+
+    I enjoy walking on the beach.
+
+    I am vegan.'
+  user 2 personas: 'I am single.
+
+    My favorite food is salad.
+
+    I enjoy nature.
+
+    My mother was a teacher.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hi, how are you?
+
+    User 1: I''m doing well, thanks! How about you?
+
+    User 2: I''m good, thanks.
+
+    User 1: I see you''re vegan. I''m vegan too!
+
+    User 2: Oh, that''s awesome! I don''t meet many other vegans.
+
+    User 1: Me neither. It''s always nice to meet someone who understands.
+
+    User 2: I agree. So, where do you live?
+
+    User 1: I live in a small town close to the coast.
+
+    User 2: Oh, that sounds nice. I love the beach.
+
+    User 1: Me too! I love to go walking on the beach.
+
+    User 2: Me too! I like to collect seashells.
+
+    User 1: That''s a fun hobby. I like to collect rocks.
+
+    User 2: Rocks are cool too. I like to go hiking in nature.
+
+    User 1: I like hiking too! It''s a great way to get exercise and enjoy nature.
+
+    User 2: I agree. So, what do you do for work?
+
+    User 1: I work at a retail store.
+
+    User 2: Oh, that sounds fun. What kind of store?
+
+    User 1: I work at a clothing store.
+
+    User 2: Oh, cool. I like clothes.
+
+    User 1: Me too! I like to try on new clothes and see how they look on me.
+
+    User 2: Me too! I like to find clothes that make me feel good.
+
+    User 1: I agree. So, what do you like to do for fun?
+
+    User 2: I like to go out to eat, go to the movies, and hang out with friends.
+
+    User 1: Sounds like we have similar interests. I like to go out to eat, go to the movies, and hang out with friends too.
+
+    User 2: That''s great! We should hang out sometime.
+
+    User 1: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

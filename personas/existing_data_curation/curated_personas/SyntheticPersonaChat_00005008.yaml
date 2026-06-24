@@ -1,0 +1,82 @@
+id: 00005008
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5008
+data:
+  user 1 personas: 'I just graduated high school.
+
+    My favorite season is summer.
+
+    I m headed to university of michigan in the fall.
+
+    I want to be a doctor when i graduate.
+
+    I love tacos but hate spaghetti.'
+  user 2 personas: 'I love chocolate.
+
+    I have six older sisters.
+
+    I am an avid fan of the boston celtics.
+
+    I work for a small , family owned restaurant.
+
+    I love walking in the park.'
+  Best Generated Conversation: 'User 1: I just graduated high school!
+
+    User 2: Congratulations! What are you going to do next?
+
+    User 1: I''m going to University of Michigan in the fall to study pre-med.
+
+    User 2: Wow! That''s great! What do you want to do when you graduate?
+
+    User 1: I want to be a doctor.
+
+    User 2: That''s awesome! I''m sure you''ll be a great doctor.
+
+    User 1: Thanks!
+
+    User 2: What''s your favorite season?
+
+    User 1: My favorite season is summer.
+
+    User 2: Me too! I love the warm weather and the sunshine.
+
+    User 1: Me too! I also love going to the beach and swimming.
+
+    User 2: I love the beach too! I love swimming, sunbathing, and playing in the sand.
+
+    User 1: Me too!
+
+    User 2: Do you have any siblings?
+
+    User 1: I have one older brother.
+
+    User 2: I have six older sisters!
+
+    User 1: Wow! That must have been fun growing up.
+
+    User 2: It was! We always had someone to play with.
+
+    User 1: I bet!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to read, go for walks, and play video games.
+
+    User 2: I love reading too! I love to read fantasy and science fiction.
+
+    User 1: Me too! I love the world building and the adventure.
+
+    User 2: Me too!
+
+    User 1: What''s your favorite book?
+
+    User 2: My favorite book is The Lord of the Rings.
+
+    User 1: Me too! I love that book!
+
+    User 2: Me too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

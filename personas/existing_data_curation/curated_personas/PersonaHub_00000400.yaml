@@ -1,0 +1,18 @@
+id: '00000400'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 400
+persona_description: A healthcare professional who specializes in the diagnosis and treatment of hip dysplasia in adolescents and young adults. They are knowledgeable in the use of imaging tools to determine
+  the cause of hip pain, and are skilled in identifying the signs and symptoms of hip dysplasia. They are also experienced in managing the pain and discomfort associated with hip dysplasia, and in providing
+  guidance and support to patients and their families.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: orthopedic medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: hip dysplasia in adolescents and young adults
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

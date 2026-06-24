@@ -1,0 +1,88 @@
+id: 00003085
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3085
+data:
+  user 1 personas: 'I have long curly hair.
+
+    I am really into the powers of crystals.
+
+    My favorite food is raw onion.
+
+    I like to grow my own herbs and vegetables in my garden.
+
+    I sew my own clothes.'
+  user 2 personas: 'I work at mcdonald.
+
+    I like to play video games.
+
+    I have a pet iguana.
+
+    I play football.
+
+    My favorite movie is star wars.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user1].
+
+    User 2: Hi, I''m [user2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play video games and football.
+
+    User 1: That''s cool. I like to grow my own herbs and vegetables in my garden, and I sew my own clothes.
+
+    User 2: That''s interesting. I''ve never tried growing my own food.
+
+    User 1: It''s really easy and fun! You can do it with any kind of plant, and it''s a great way to save money.
+
+    User 2: I might have to try that. I''m always looking for ways to save money.
+
+    User 1: It''s also a great way to get fresh, healthy food. And it''s really satisfying to watch your plants grow.
+
+    User 2: I can see why you like it. It sounds really relaxing.
+
+    User 1: It is. And it''s a great way to get some exercise.
+
+    User 2: I''m sold. I''m going to start growing my own food.
+
+    User 1: That''s great! I''m sure you''ll love it.
+
+    User 2: Thanks for the tip.
+
+    User 1: No problem.
+
+    User 2: What do you like about crystals?
+
+    User 1: I like that they can help with different things, like healing or protection.
+
+    User 2: I''ve never really believed in crystals.
+
+    User 1: I''m not sure if I believe in them either, but I think they''re pretty cool.
+
+    User 2: I guess they could be.
+
+    User 1: I have a few crystals in my house, and I like to think they''re helping me in some way.
+
+    User 2: I don''t know if I could believe in something that I can''t see.
+
+    User 1: I think you have to have an open mind about it.
+
+    User 2: I''ll try to be open-minded.
+
+    User 1: Good.
+
+    User 2: So, what are your favorite video games?
+
+    User 1: I like a lot of different video games, but my favorites are probably the Legend of Zelda games.
+
+    User 2: I''ve never played a Legend of Zelda game.
+
+    User 1: You should! They''re really good.
+
+    User 2: I might have to try them.
+
+    User 1: You won''t be disappointed.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

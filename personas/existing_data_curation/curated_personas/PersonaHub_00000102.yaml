@@ -1,0 +1,19 @@
+id: '00000102'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 102
+persona_description: A scientist or researcher who is interested in the origin and formation of the Moon, particularly the giant impact hypothesis and the fission hypothesis. They are curious about the
+  process by which the Moon was formed and the evidence that supports each theory. They are also interested in the potential for georeactors to be a source of energy for the formation of the Moon. They
+  may have a background in physics, geology, or astronomy and are familiar with the theories and research related to these topics. They are also likely to be skeptical of the giant impact hypothesis due
+  to the discrepancy between the measured isotopic content of the Moon and the predicted make up of the impactor.
+expertise:
+  general_domain_top1pct: Astronomy
+  specific_domain_top1pct: Lunar formation theories
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

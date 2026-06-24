@@ -1,0 +1,68 @@
+id: '00006256'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6256
+data:
+  user 1 personas: 'I like to surf every chance i get.
+
+    I love the snow.
+
+    My favorite actor is robert deniro.
+
+    I m saving for college.'
+  user 2 personas: 'I have red hair.
+
+    I like to ride my scooter.
+
+    I don t like music.
+
+    I have lots of friends.'
+  Best Generated Conversation: 'User 1: Hi, I''m user 1!
+
+    User 2: Hi user 1! I''m user 2!
+
+    User 1: What''s your favorite thing to do?
+
+    User 2: I like to ride my scooter.
+
+    User 1: That sounds fun! I like to surf.
+
+    User 2: I''ve never surfed before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might!
+
+    User 1: What else do you like to do?
+
+    User 2: I like to hang out with my friends.
+
+    User 1: Me too! I have a lot of friends too.
+
+    User 2: That''s cool. What are some of your favorite things to do with your friends?
+
+    User 1: We like to go to the movies, play video games, and go out to eat.
+
+    User 2: That sounds like a lot of fun! I like to do similar things with my friends.
+
+    User 1: What''s your favorite movie?
+
+    User 2: I don''t really have a favorite movie. I like a lot of different movies.
+
+    User 1: Me too! I like all kinds of movies.
+
+    User 2: That''s cool. What kind of music do you like?
+
+    User 1: I like all kinds of music, but I mostly listen to rock.
+
+    User 2: I don''t really like music.
+
+    User 1: That''s okay! I can still be your friend.
+
+    User 2: Thanks! I''m glad.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

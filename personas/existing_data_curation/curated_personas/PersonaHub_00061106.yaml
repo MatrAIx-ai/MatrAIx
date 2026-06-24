@@ -1,0 +1,18 @@
+id: '00061106'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61106
+persona_description: A medical professional with expertise in neurosurgery and brain tumor management, particularly in the diagnosis and treatment of low-grade gliomas. They are highly trained in the latest
+  research and treatment approaches, and are dedicated to providing personalized care to patients with these complex tumors. They may also have experience with advanced imaging techniques and genetic testing
+  to help tailor treatment to individual patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurosurgery
+  general_domain_top01pct: None
+  specific_domain_top01pct: brain tumor management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

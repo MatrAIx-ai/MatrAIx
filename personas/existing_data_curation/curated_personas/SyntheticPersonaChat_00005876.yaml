@@ -1,0 +1,56 @@
+id: 00005876
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5876
+data:
+  user 1 personas: 'I wish that i lived in the city.
+
+    I live on a pig farm.
+
+    I am a vegetarian.
+
+    I have allergies.'
+  user 2 personas: 'I love cats.
+
+    I am athletic.
+
+    My favorite food is pizza.
+
+    I am a freshman in college.
+
+    I have never broken a bone.'
+  Best Generated Conversation: 'User 1: I wish that I lived in the city.
+
+    User 2: Why''s that?
+
+    User 1: I love the hustle and bustle. I feel like there''s always something going on.
+
+    User 2: I can understand that. I like the peace and quiet of the suburbs.
+
+    User 1: I guess I just need some excitement in my life.
+
+    User 2: Well, you''re definitely not going to find it on a pig farm!
+
+    User 1: Haha, no, I''m not. But I do love living on a farm. I get to work with animals all day.
+
+    User 2: That''s awesome! I''ve always wanted to work with animals.
+
+    User 1: It''s really great. I love getting to know them and learning about their different personalities.
+
+    User 2: I can imagine. I love animals so much. I have two cats of my own.
+
+    User 1: Cats are great! I''ve always wanted one, but I can''t have any pets on the farm.
+
+    User 2: That''s too bad. They''re such good companions.
+
+    User 1: I know. I''ll have to get one when I move to the city.
+
+    User 2: You definitely should! They''ll make your life so much happier.
+
+    User 1: Thanks for the advice! I''ll definitely keep that in mind.
+
+    User 2: No problem! I''m always happy to talk about cats.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

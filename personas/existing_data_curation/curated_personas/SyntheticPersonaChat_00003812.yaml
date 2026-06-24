@@ -1,0 +1,64 @@
+id: 00003812
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3812
+data:
+  user 1 personas: 'My favorite band is tool.
+
+    I fly airplanes.
+
+    I dropped out of college.
+
+    I enjoy building computers.'
+  user 2 personas: 'I work as a lifeguard.
+
+    I also love to travel.
+
+    My dad works offshore.
+
+    I love to play tennis.
+
+    I love the chainsmokers.'
+  Best Generated Conversation: 'User 1: Hi! What do you do for fun?
+
+    User 2: I love to travel and play tennis.
+
+    User 1: I like to travel too! Where have you been?
+
+    User 2: I''ve been to a lot of places, but my favorite is Hawaii.
+
+    User 1: That''s awesome! I''ve always wanted to go to Hawaii.
+
+    User 2: It''s definitely worth it. The beaches are beautiful and the people are friendly.
+
+    User 1: What do you like to do when you travel?
+
+    User 2: I love to go swimming, scuba diving, and snorkeling.
+
+    User 1: That sounds like a lot of fun! I''ve never been scuba diving, but it''s something I''ve always wanted to try.
+
+    User 2: You should definitely try it! It''s so much fun to see all the different fish and marine life.
+
+    User 1: I''ll definitely look into it.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to build computers. I think it''s really cool to be able to take a bunch of parts and put them together to make something that works.
+
+    User 2: That''s really cool! I''ve never built a computer before, but it sounds like it would be a lot of fun.
+
+    User 1: It is! It''s also a great way to learn about how computers work.
+
+    User 2: I''m not very good at math, so I''m not sure if I would be good at building a computer.
+
+    User 1: It''s not that hard! There are a lot of resources online that can help you learn how to do it.
+
+    User 2: I''ll have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

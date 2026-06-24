@@ -1,0 +1,18 @@
+id: '00064110'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64110
+persona_description: A healthcare professional who is interested in exploring the potential benefits and drawbacks of using Hydroxychloroquine (HCQ) for COVID-19 treatment. This persona is likely to be
+  a medical doctor or a public health expert who is knowledgeable about the medical aspects of the disease and the efficacy of HCQ in treating it. They are also likely to be aware of the potential risks
+  and side effects associated with HCQ use, and are looking for reliable information to make an informed decision about its use in their patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: infectious disease medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

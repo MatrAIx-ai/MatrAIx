@@ -1,0 +1,70 @@
+id: '00003145'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3145
+data:
+  user 1 personas: 'I like watching sports.
+
+    Ferrari is my favorite car company.
+
+    I work out daily.
+
+    I own many cars.
+
+    Basketball is my favorite sport to watch.'
+  user 2 personas: 'I enjoy working out and learning new things.
+
+    I play the guitair.
+
+    I am studying software development.
+
+    I am a student in college.'
+  Best Generated Conversation: 'User 1: Hey, I''m (user 1''s name). What''s your name?
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I enjoy working out and learning new things.
+
+    User 1: Me too! I work out daily and I''m always looking for new things to learn.
+
+    User 2: That''s great! What are some of your favorite things to learn about?
+
+    User 1: I''m interested in a lot of different things, but my favorite topics are history, science, and technology.
+
+    User 2: Those are all great topics! I like learning about history and technology too.
+
+    User 1: Me too! I think it''s important to know about the past in order to understand the present. And technology is changing the world so fast, it''s important to stay up-to-date on the latest trends.
+
+    User 2: I agree! I think it''s also important to learn new skills in order to stay competitive in the job market.
+
+    User 1: That''s a good point. I''m currently learning software development, which is a growing field.
+
+    User 2: That''s awesome! I''m sure you''ll be successful in that field.
+
+    User 1: Thanks! I hope so!
+
+    User 2: So, what else do you like to do for fun?
+
+    User 1: I like to play sports, watch sports, and listen to music.
+
+    User 2: I like to play sports too! What''s your favorite sport to play?
+
+    User 1: I like basketball the most, but I also enjoy playing soccer, tennis, and golf.
+
+    User 2: Those are all great sports! I like playing basketball too.
+
+    User 1: What''s your favorite team?
+
+    User 2: I''m a big fan of the Los Angeles Lakers.
+
+    User 1: Me too! They''re my favorite team too.
+
+    User 2: That''s awesome! We should go to a game together sometime.
+
+    User 1: That would be great! I''d love to go to a Lakers game with you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,65 @@
+id: 00002829
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2829
+data:
+  user 1 personas: 'I like to play soccer.
+
+    I have a little sister.
+
+    My favorite book is pride and prejudice.
+
+    I have a golden retriever.
+
+    My favorite subject in school is math.'
+  user 2 personas: 'I do not like to eat meat.
+
+    I like fruit.
+
+    My favorite fruit is apple.
+
+    I like green apples.
+
+    I like to eat the skin of the apple.'
+  Best Generated Conversation: 'User 1: Hi, my name is [username]. I like to play soccer, I have a little sister, my favorite book is Pride and Prejudice, I have a golden retriever, and my favorite subject
+    in school is math.
+
+    User 2: Hi, my name is [username]. I don''t like to eat meat, I like fruit, my favorite fruit is apple, I like green apples, and I like to eat the skin of the apple.
+
+    User 1: That''s interesting, I like apples too. I like to eat them with peanut butter.
+
+    User 2: I''ve never tried apples with peanut butter. I''ll have to give it a try.
+
+    User 1: You should, it''s delicious. So, what do you like to do for fun?
+
+    User 2: I like to read, I like to go for walks, and I like to play video games.
+
+    User 1: I like to read too, but I don''t like video games. I like to go for walks too, but I don''t like to do it alone.
+
+    User 2: I know what you mean, I like to go for walks with my friends.
+
+    User 1: Me too. So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we could hang out?
+
+    User 2: That would be fun. I''m free on Saturday.
+
+    User 1: Great, me too. What do you want to do?
+
+    User 2: We could go for a walk in the park.
+
+    User 1: That sounds like a great idea. I love the park.
+
+    User 2: Me too. It''s so peaceful and relaxing.
+
+    User 1: So, what time do you want to meet?
+
+    User 2: How about 10:00am?
+
+    User 1: Perfect. See you then.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

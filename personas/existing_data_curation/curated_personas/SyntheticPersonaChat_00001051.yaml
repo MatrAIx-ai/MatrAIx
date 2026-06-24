@@ -1,0 +1,112 @@
+id: '00001051'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1051
+data:
+  user 1 personas: 'I like tall men.
+
+    I am a runner.
+
+    I have red hair.
+
+    I have 2 dogs.'
+  user 2 personas: 'I really enjoy hiking.
+
+    I watched the eclipse without using proper eye protection.
+
+    I m deathly afraid of snakes , but not bugs.
+
+    My favorite color is red.
+
+    I drink 10 cups of tea every day.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name).
+
+    User 2: Hi (name), I''m (name). It''s nice to meet you!
+
+    User 1: Nice to meet you too!
+
+    User 2: What do you like to do for fun?
+
+    User 1: I like to run, read, and play with my dogs.
+
+    User 2: That sounds fun! I like to hike, read, and drink tea.
+
+    User 1: Cool! I love hiking too. What''s your favorite place to hike?
+
+    User 2: I like hiking in the mountains. I love the views and the fresh air.
+
+    User 1: Me too! I love the feeling of being out in nature.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: Do you have any pets?
+
+    User 2: I have two cats.
+
+    User 1: Oh, I love cats! What are their names?
+
+    User 2: Their names are Mittens and Oliver.
+
+    User 1: Those are cute names!
+
+    User 2: Thanks!
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all sorts of things, but I especially like historical fiction and mystery novels.
+
+    User 1: I like historical fiction too! What''s your favorite book?
+
+    User 2: My favorite book is Pillars of the Earth by Ken Follett.
+
+    User 1: I''ve heard good things about that book. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a software engineer.
+
+    User 1: Oh, cool! What kind of software do you engineer?
+
+    User 2: I mostly work on web applications.
+
+    User 1: That sounds interesting!
+
+    User 2: It is! I like it a lot.
+
+    User 1: Do you have any hobbies outside of work?
+
+    User 2: I like to play video games and watch movies.
+
+    User 1: I like video games too! What''s your favorite game?
+
+    User 2: My favorite game is The Legend of Zelda: Breath of the Wild.
+
+    User 1: I''ve heard good things about that game. I''ll have to check it out.
+
+    User 2: You should! It''s really good.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!
+
+    User 1: So, what are you looking for in a friend?
+
+    User 2: I''m looking for someone who is kind, funny, and intelligent.
+
+    User 1: I''m all of those things!
+
+    User 2: I''m sure you are!
+
+    User 1: So, what do you think? Do you want to be friends?
+
+    User 2: Sure! I''d love to be friends.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

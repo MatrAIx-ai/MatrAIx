@@ -1,0 +1,18 @@
+id: '00000425'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 425
+persona_description: A biologist with expertise in the field of protein structure and function, particularly in the Rhesus protein family. Proficient in crystallography and molecular biology techniques,
+  interested in the mechanisms of ammonium transport across cell membranes. Keen on the implications of the new X-ray crystal structure of a Rhesus protein and its potential impact on human transfusion
+  medicine.
+expertise:
+  general_domain_top1pct: biology
+  specific_domain_top1pct: protein structure and function
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

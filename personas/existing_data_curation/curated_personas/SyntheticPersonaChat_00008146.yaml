@@ -1,0 +1,68 @@
+id: 00008146
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8146
+data:
+  user 1 personas: 'I go to the pool every thursday for three hours.
+
+    I work five days a week.
+
+    I do yoga on tuesdays.
+
+    I enjoy shopping.
+
+    I do not have children.'
+  user 2 personas: 'I recently started to work online.
+
+    My favorite band is the story so far.
+
+    I used to travel the usa playing guitar.
+
+    I used to work at a factory making boxes.
+
+    I eat meat.'
+  Best Generated Conversation: 'User 1: Hi there! What do you do for fun?
+
+    User 2: I like to play guitar, I used to travel around the US playing and now I do it online.
+
+    User 1: That''s awesome! I used to play guitar too, but I don''t have the time anymore.
+
+    User 2: What do you do for fun now?
+
+    User 1: I work five days a week, go to the pool on Thursdays, and do yoga on Tuesdays. I also enjoy shopping.
+
+    User 2: I used to work at a factory making boxes, but now I work online.
+
+    User 1: How do you like working online?
+
+    User 2: It''s great! I can work from anywhere in the world, and I have more flexibility in my schedule.
+
+    User 1: That sounds amazing! I wish I could work online.
+
+    User 2: You could! There are a lot of online jobs available now.
+
+    User 1: I''ll have to look into that.
+
+    User 2: Good luck!
+
+    User 1: Thanks!
+
+    User 2: So, what''s your favorite band?
+
+    User 1: I don''t have one favorite band, but I really like The Story So Far.
+
+    User 2: Oh, I love them! They''re so good.
+
+    User 1: I know, right? I saw them live a few years ago and it was amazing.
+
+    User 2: I''m so jealous! I''ve always wanted to see them live.
+
+    User 1: They''re really good live. You should definitely see them if you get the chance.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

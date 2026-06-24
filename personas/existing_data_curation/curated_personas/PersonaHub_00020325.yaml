@@ -1,0 +1,18 @@
+id: '00020325'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 20325
+persona_description: A developer who is interested in understanding and implementing the pthread_atfork function in C programming, as it allows for the registration of handler functions to be called at
+  fork(2) time, which is useful for managing resources and preventing race conditions in concurrent processes. The developer may have expertise in C programming and may be looking for ways to optimize and
+  improve the performance of their code by leveraging pthread_atfork.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: concurrency programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

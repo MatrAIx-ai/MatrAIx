@@ -1,0 +1,60 @@
+id: '00003106'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3106
+data:
+  user 1 personas: 'I like classical music.
+
+    I am a pharmacist.
+
+    I was a wild child in my younger years.
+
+    I am an avid quilter.
+
+    My grand children mean the world to me.'
+  user 2 personas: 'I like to eat cheetos.
+
+    I hate mexican food.
+
+    I have went to mexico 4 times this year.
+
+    I like to ski.
+
+    My wife doesn t like me anymore.'
+  Best Generated Conversation: 'User 1: I''m a pharmacist and I love classical music. What do you do for a living?
+
+    User 2: I work in a ski resort and I hate Mexican food.
+
+    User 1: I don''t ski, but I love to ski. What''s your favorite thing to do on the ski slopes?
+
+    User 2: I love to go down the mountain as fast as I can.
+
+    User 1: I love that too! I always try to go down the mountain as fast as I can, but I''m not very good at it.
+
+    User 2: Do you have any kids?
+
+    User 1: Yes, I have three grandchildren.
+
+    User 2: Do you quilt?
+
+    User 1: Yes, I love to quilt. I''m an avid quilter.
+
+    User 2: That''s awesome! I''ve never been able to do that.
+
+    User 1: It''s not too hard. You just need to be patient and have a good eye for color.
+
+    User 2: I''m not very good at art.
+
+    User 1: That''s okay. Quilting isn''t really about art. It''s more about the process of creating something beautiful with your own hands.
+
+    User 2: That''s a good point. I might give it a try.
+
+    User 1: I think you''d be good at it.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: You''re welcome.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

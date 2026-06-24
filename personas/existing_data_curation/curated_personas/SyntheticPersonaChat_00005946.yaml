@@ -1,0 +1,64 @@
+id: 00005946
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5946
+data:
+  user 1 personas: 'My mother was a concert pianist.
+
+    My wife is a college professor.
+
+    I work as a trauma surgeon.
+
+    I have one little girl.'
+  user 2 personas: 'I am doing financial business now.
+
+    I play piano.
+
+    I hope to become a music teacher after retirement.
+
+    I have a ten year old son.
+
+    I graduated high school in 1986.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I am in financial business.
+
+    User 1: Oh, that''s interesting! I''m a trauma surgeon.
+
+    User 2: Wow, that''s a very important job!
+
+    User 1: Thank you. I enjoy it, but it can be stressful.
+
+    User 2: I can imagine. I play piano as a hobby.
+
+    User 1: That''s nice! I wish I could play an instrument.
+
+    User 2: You should learn! It''s a lot of fun.
+
+    User 1: Maybe I will. I have a little girl, and I would love to teach her how to play.
+
+    User 2: That would be great!
+
+    User 1: What are your plans for the future?
+
+    User 2: I''m hoping to become a music teacher after I retire.
+
+    User 1: That''s awesome! I''m sure you''ll be great at it.
+
+    User 2: Thank you! I hope so.
+
+    User 1: So, what are you doing for your son''s birthday?
+
+    User 2: We''re having a party at home with his friends and family.
+
+    User 1: That sounds fun! What are you doing for food?
+
+    User 2: We''re having pizza and ice cream.
+
+    User 1: That sounds delicious! I hope you have a great time.
+
+    User 2: Thank you! I''m sure we will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

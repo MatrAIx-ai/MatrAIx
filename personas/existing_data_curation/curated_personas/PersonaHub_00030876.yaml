@@ -1,0 +1,17 @@
+id: 00030876
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30876
+persona_description: A healthcare professional with expertise in neurological disorders, particularly those related to movement and neuromuscular conditions. This person is knowledgeable about the symptoms,
+  treatment, and management of chorea, sydenham's chorea, and other related disorders. They are also familiar with the genetic factors and environmental triggers associated with these conditions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: neuromuscular disorders
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

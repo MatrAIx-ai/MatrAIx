@@ -1,0 +1,88 @@
+id: 00002799
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2799
+data:
+  user 1 personas: 'I like going barefoot.
+
+    My favorite book is jane austen s pride and prejudice.
+
+    I work as a tutor for english literature.
+
+    I can knit.'
+  user 2 personas: 'I am a georgia resident.
+
+    I love to read fiction books.
+
+    My favorite fiction genres are sci fi and horror.
+
+    I play in a nfl fantasy football league.'
+  Best Generated Conversation: '* * User 1: * * Hi!
+
+    * * User 2: * * Hello!
+
+    * * User 1: * * What''s up?
+
+    * * User 2: * * Not much, just relaxing.
+
+    * * User 1: * * Nice. I''m a tutor for English literature. What do you do for a living?
+
+    * * User 2: * * I''m a resident of Georgia.
+
+    * * User 1: * * Oh, cool! I''ve never been to Georgia.
+
+    * * User 2: * * You should come visit sometime! It''s a beautiful state.
+
+    * * User 1: * * I would love to.
+
+    * * User 2: * * What''s your favorite book?
+
+    * * User 1: * * My favorite book is Pride and Prejudice by Jane Austen.
+
+    * * User 2: * * Oh, that''s a great book! I love Jane Austen.
+
+    * * User 1: * * Me too! She''s my favorite author.
+
+    * * User 2: * * What do you like about her books?
+
+    * * User 1: * * I love her humor and her insights into human nature.
+
+    * * User 2: * * I agree! She''s so witty and clever.
+
+    * * User 1: * * What are your favorite genres of books?
+
+    * * User 2: * * I love sci-fi and horror.
+
+    * * User 1: * * Oh, cool! I like those genres too.
+
+    * * User 2: * * What''s your favorite sci-fi book?
+
+    * * User 1: * * My favorite sci-fi book is Dune by Frank Herbert.
+
+    * * User 2: * * Oh, that''s a great book! I love the world he created.
+
+    * * User 1: * * Me too! It''s so immersive.
+
+    * * User 2: * * What''s your favorite horror book?
+
+    * * User 1: * * My favorite horror book is The Shining by Stephen King.
+
+    * * User 2: * * Oh, that''s a great book too! I love the atmosphere he created.
+
+    * * User 1: * * Me too! It''s so creepy.
+
+    * * User 2: * * So, do you play in any fantasy football leagues?
+
+    * * User 1: * * Yes, I do! I''m in a league with my friends.
+
+    * * User 2: * * Oh, that''s cool! How''s your team doing?
+
+    * * User 1: * * Not too bad! We''re in second place right now.
+
+    * * User 2: * * Oh, nice! Good luck!
+
+    * * User 1: * * Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

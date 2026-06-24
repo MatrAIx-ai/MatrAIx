@@ -1,0 +1,66 @@
+id: 00005295
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5295
+data:
+  user 1 personas: 'I have a lot of medical bills.
+
+    I used to be able to run really fast.
+
+    I m very familiar with hospitals and doctors.
+
+    I have problems chewing my food.'
+  user 2 personas: 'I enjoy movies about aliens invading the earth.
+
+    My favorite hobby is chess.
+
+    Sometimes , i have sword fights with strangers in the park.
+
+    Not a day goes by that i don t drink four mountain dews.'
+  Best Generated Conversation: 'User 1: Hi! What''s your name?
+
+    User 2: Hello! I''m [user 2].
+
+    User 1: Nice to meet you, [user 2]. I''m [user 1].
+
+    User 2: It''s nice to meet you too, [user 1]. What do you like to do for fun?
+
+    User 1: I like to read, go for walks, and play video games.
+
+    User 2: Those all sound like great ways to relax. I like to play chess and sword fight in the park.
+
+    User 1: Chess sounds like a lot of fun. I''ve never tried sword fighting before.
+
+    User 2: You should try it! It''s a lot of fun.
+
+    User 1: Maybe I will.
+
+    User 2: I''m sure you''d be good at it.
+
+    User 1: Thanks! I appreciate it. What do you do for work?
+
+    User 2: I''m a doctor.
+
+    User 1: Oh, really? That''s cool!
+
+    User 2: Thanks! I like it a lot.
+
+    User 1: I''m sure you do. What''s your favorite part of the job?
+
+    User 2: My favorite part is helping people.
+
+    User 1: That''s a great answer. I''m sure you''re a great doctor.
+
+    User 2: Thanks! I try my best.
+
+    User 1: I''m sure you do. You seem like a really nice person.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it''s been nice talking to you, [user 2].
+
+    User 2: It''s been nice talking to you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

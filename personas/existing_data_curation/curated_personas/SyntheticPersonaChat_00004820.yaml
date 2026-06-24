@@ -1,0 +1,72 @@
+id: 00004820
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4820
+data:
+  user 1 personas: 'Mo mother worked as a nurse.
+
+    My favorite band is the rolling stones.
+
+    I have had the same job for 8 years.
+
+    I do not consume caffeine.'
+  user 2 personas: 'I enjoy playing recreational games like cards , darts or billiards.
+
+    My favorite music genre is classic rock.
+
+    I like to work on cars.
+
+    I work in marketing for a large company.
+
+    I like to try different beers from various countries.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like to play games, work on cars, and try new beers.
+
+    User 1: I like games too! What kind of games do you like to play?
+
+    User 2: I like to play cards, darts, and billiards.
+
+    User 1: I like to play cards too! What''s your favorite card game?
+
+    User 2: I like to play poker. What about you?
+
+    User 1: I like to play poker too! I also like to play blackjack.
+
+    User 2: Blackjack is a lot of fun! I also like to play roulette.
+
+    User 1: I''ve never played roulette before.
+
+    User 2: You should try it sometime! It''s a lot of fun.
+
+    User 1: I will! Do you play any other games?
+
+    User 2: I also like to play video games. What about you?
+
+    User 1: I don''t play video games very often.
+
+    User 2: That''s too bad! They''re a lot of fun.
+
+    User 1: I know, I know. I should really try them more often.
+
+    User 2: You should! There are so many great games out there.
+
+    User 1: I know, I know. I''ll have to give them a try.
+
+    User 2: Good! You won''t be disappointed.
+
+    User 1: Thanks for the recommendation!
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

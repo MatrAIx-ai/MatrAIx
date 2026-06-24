@@ -1,0 +1,17 @@
+id: '00061156'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 61156
+persona_description: A Spanish scientist who specializes in the study of infant cry classification and has published research on the dynamics of infant crying based on facial expressions and sound patterns.
+  His expertise lies in understanding the causes of infant crying and how parents interpret their child's crying, particularly when it's due to pain.
+expertise:
+  general_domain_top1pct: psychology
+  specific_domain_top1pct: infant development and behavior
+  general_domain_top01pct: None
+  specific_domain_top01pct: infant pain assessment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

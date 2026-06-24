@@ -1,0 +1,18 @@
+id: 00058112
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 58112
+persona_description: A scientist at NASA's Ames Research Center who specializes in robotics and space exploration, particularly in the development of mobile robotic systems for the International Space Station.
+  The person is knowledgeable about the integration of smartphones into robotic systems and has experience with designing and programming handheld devices for space missions. They are also interested in
+  the potential of mobile robots to perform mundane tasks aboard the space station and are looking for ways to improve their capabilities for future missions.
+expertise:
+  general_domain_top1pct: robotics
+  specific_domain_top1pct: mobile robotic systems for space exploration
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,18 @@
+id: '00060650'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60650
+persona_description: A healthcare professional who specializes in mammography and breast cancer screening. They have extensive knowledge and experience in the use of x-ray technology to detect tumors and
+  distinguish between benign and malignant breast conditions. They are likely to be knowledgeable about the process of resting the breast on a flat surface, compressing it horizontally and obliquely, and
+  taking an x-ray image of each position. They may also be familiar with the importance of early detection and the need for regular mammograms to monitor breast health.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: mammography
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

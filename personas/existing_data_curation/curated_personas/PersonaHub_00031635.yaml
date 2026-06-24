@@ -1,0 +1,18 @@
+id: '00031635'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 31635
+persona_description: A medical professional who specializes in the diagnosis and treatment of appendicitis, particularly in the elderly population. They are well-versed in the function of the appendix,
+  its causes, and the appropriate treatment options. They are knowledgeable about the use of antibiotics and safe surgical procedures, as well as the risks and complications associated with appendicitis.
+  They are also aware of the rare causes of appendicitis, such as cancer of the colon.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: appendicitis treatment
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,56 @@
+id: '00001626'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1626
+data:
+  user 1 personas: 'I have brown hair.
+
+    I like to read.
+
+    My favorite color is blue.
+
+    I work at a grocery store.'
+  user 2 personas: 'I love to drive my car.
+
+    I enjoy travel.
+
+    I work in a factory.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hello!
+
+    User 1: What do you do for fun?
+
+    User 2: I love to drive my car. I go on a lot of road trips.
+
+    User 1: That sounds like fun! I love to read. I''ve been on a lot of road trips to visit libraries.
+
+    User 2: What''s your favorite book?
+
+    User 1: I like "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 2: I haven''t read that one yet. What''s it about?
+
+    User 1: It''s about the American Dream and the pursuit of happiness. It''s a really good book.
+
+    User 2: I''ll have to check it out. What''s your favorite color?
+
+    User 1: My favorite color is blue.
+
+    User 2: Mine too! I like the way it looks on cars.
+
+    User 1: Me too! I have a blue car.
+
+    User 2: What kind of car do you have?
+
+    User 1: I have a Ford Mustang.
+
+    User 2: Nice! I''ve always wanted a Mustang.
+
+    User 1: It''s a great car. I''ve had it for a few years and I''ve never had any problems with it.
+
+    User 2: That''s good to hear. I''m glad you''re enjoying it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

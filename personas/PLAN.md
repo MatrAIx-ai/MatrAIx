@@ -8,7 +8,7 @@
 
 Collect and summarize existing persona work, grouped into the subsections below.
 
-**Owner(s):** @Shirley-Huang, @Eliza_Fan, @Yixuan-He, @Xiaoyi-Liu (add more as needed)
+**Owner(s):** @Shirley-Huang, @Eliza_Fan, @Yixuan-He, @Xiaoyi-Liu @heming03 (add more as needed)
 
 > 📌 **Default item format** — each entry should look like:
 >
@@ -60,7 +60,7 @@ _Existing persona datasets / profile collections (also log scale + how to compar
 - ~5,648 new synthetic personas with ~11K conversations (plus a 4,723-persona / 10,906-conversation PersonaChat extension); a mixture-of-experts Critic iteratively filters quality, cutting the Turing-test losing rate vs human PersonaChat from 17.2% to 8.8% over three rounds.
 - Relevance: a Generator–Critic quality-control loop relevant to MatrAIx's synthetic-persona pipeline, with a measured fidelity signal (Turing-test win rate vs human personas) for how human generated personas read.
 
-### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576)
+### [Virtual Personas for LMs via an Anthology of Backstories](https://arxiv.org/abs/2407.06576) (Keyang Xuan)
 - A persona conditiong method that uses open-ended first-person life narratives to steer LLMs toward more representative, consistent, and diverse virtual personas for approximating human survey respondents.
 - Scale/method: prompt the LLM with open-ended questions to self-generate a large anthology of backstories, then greedy-match backstories to real survey respondents to build aligned "virtual subjects".
 - Relevance: a persona-generation recipe which is relevant to MatrAIxPersona's narrative-expansion step (Task 1, Step 3), offering a generation-plus-validation pattern for population-grounded personas through respondent matching and distribution/consistency metrics.
@@ -191,10 +191,37 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 - Emphasizes long-horizon interactions and human-like user behavior.
 - Relevance: provides evaluation settings for testing whether MatrAIx personas behave realistically when interacting with agents rather than only answering survey questions.
 
+### [SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents](https://arxiv.org/abs/2310.11667)(@heming03)
+- Introduces an open-ended environment for evaluating social intelligence in language agents through role-play interactions under diverse social scenarios.
+- Uses assigned roles, private social goals, interactive dialogue, and SOTOPIA-Eval to measure agents' goal completion, believability, and social reasoning.
+- Relevance: provides an interaction-based benchmark design for MatrAIxPersonaBench, testing whether persona agents behave plausibly in social contexts rather than only answering static profile-conditioned questions.
+
+### [LaMP: When Large Language Models Meet Personalization](https://aclanthology.org/2024.acl-long.399/)(@heming03)
+- Introduces a benchmark for training and evaluating LLMs on personalized outputs conditioned on user profiles or historical user data.
+- Contains seven personalized tasks across text classification and text generation, with multiple entries per user profile.
+- Relevance: complements persona-role benchmarks by testing whether user/persona information changes concrete downstream task behavior; useful for MatrAIxPersonaBench and MatrAIxPersonaTrain.
+
+### [PersonalLLM: Tailoring LLMs to Individual Preferences](https://openreview.net/forum?id=2R7498e2Tx)(@heming03)
+- Studies how to adapt LLMs to heterogeneous individual user preferences rather than broad demographic or role-level personas.
+- Provides a public benchmark and dataset with open-ended prompts, multiple high-quality responses, and preference signals from simulated users with diverse latent preferences.
+- Relevance: useful for defining preference-oriented persona dimensions and testing whether MatrAIx personas induce genuinely individualized preferences instead of homogeneous behavior.
+
 ### [SimBench: Benchmarking the Ability for Large Language Models to Simulate Human Behaviors](https://openreview.net/pdf?id=PL51SpN6ZJ)
 - Introduces the first large-scale benchmark for evaluating whether LLMs can faithfully simulate group-level human behavior, unifying 20 datasets spanning moral decisions, economic choices, surveys, and social science tasks.
 - Finds that current models achieve only modest simulation fidelity (best score ≈40.8/100), with performance improving as model size increases but showing little benefit from additional inference-time reasoning.
 - Relevance: provides a standardized evaluation framework for MatrAIx-style personas, measuring whether generated personas can reproduce realistic population and demographic-group behaviors rather than only producing plausible persona descriptions.
+
+### [The Personality Illusion: Revealing Dissociation Between Self-Reports & Behavior in LLMs](https://arxiv.org/abs/2509.03730) (added by @Peiyang-Song)
+
+* Systematically evaluates whether LLM “personality” is behaviorally meaningful by tracing trait profiles across training stages, testing whether psychometric self-reports predict downstream behavior, and measuring the effects of persona prompting.
+* Finds that instruction tuning and alignment make self-reported traits more stable and human-like, yet only 24% of tested trait–behavior relationships are significant—and barely half of those follow the directions expected from human psychology. Persona prompts reliably alter reported traits but have little or inconsistent effect on behavior.
+* Establishes a central validity requirement of persona evaluation: persona fidelity cannot be inferred from questionnaires or plausible self-description alone, but must be verified through behaviorally grounded tasks that test whether simulated traits actually govern agents’ decisions.
+
+### [Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior](https://arxiv.org/abs/2606.12730) (added by @Peiyang-Song)
+
+* Identifies the conditions under which LLM self-reports can predict behavior, contrasting the broad Big Five framework with the behavior-specific Theory of Planned Behavior across four tasks, 11 frontier LLMs, shared versus separate conversations, and different identity-induction methods.
+* Shows that task-specific self-reports achieve human-level behavioral coherence within a shared conversation, while Big Five traits remain weak predictors. Across separate sessions, coherence persists for externally anchored behaviors such as implicit bias, but collapses for context-sensitive behavior such as sycophancy; persona prompting stabilizes self-reports without reliably aligning behavior.
+* Provides a measurement-design blueprint for persona evaluation: use behavior-specific constructs, distinguish within-context consistency from durable cross-session persona fidelity, and evaluate persona agents across tasks whose behavior varies in contextual sensitivity and persistence.
 
 ### [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442) (Xiaoyi-Liu added, Yuexing-Hao posted in Discord discussion)
 ### [Human Relations Area Files(eHRAF ​​World Culture)](https://hraf.yale.edu/resources/reference/outline-of-cultural-materials/) (Xiaoyi-Liu added, Ziyan-Wang posted in Discord)
@@ -224,6 +251,16 @@ _Benchmarks, evaluation, related work that doesn't fit above._
 ### [Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization](https://aclanthology.org/2024.findings-emnlp.969/) (Xiaoyi-Liu)
 ### [Population-Aligned Persona Generation for LLM-based Social Simulation](https://arxiv.org/abs/2509.10127) (Xiaoyi-Liu)
 
+Some none-ML references for attributes that the team (and previous works organized in the above) has been using:
+
+### The stories we live by: Personal myths and the making of the self. (Xiaoyi-Liu)
+- basis for using personal experiences and social norms in persona problems
+### [An alternative "description of personality": The Big-Five factor structure](https://psycnet.apa.org/record/1991-09869-001) (Xiaoyi-Liu)
+- basis for "Big 5" or OCEAN for persona problems
+### [Universals in the Content and Structure of Values: Theoretical Advances and Empirical Tests in 20 Countries](https://www.researchgate.net/publication/230557790_Universals_in_the_Content_and_Structure_of_Values_Theoretical_Advances_and_Empirical_Tests_in_20_Countries) (Xiaoyi-Liu)
+- also known as the Schwartz values after the author. 
+### [Primal world beliefs](https://psycnet.apa.org/record/2018-49649-001) (Xiaoyi-Liu)
+- another psychology reference for persona design
 
 ---
 
@@ -317,7 +354,7 @@ Build the raw persona pool through four complementary sources, all conforming to
 |---|---------|-------------|----------|
 | 2.1 | 📥 **Collect open-source datasets** | Gather existing persona datasets (from the related work), clean and normalize into the MatrAIx schema. | @Xiaoyi-Liu, @AravindMohan10, @Eliza_Fan |
 | 2.2 | 🧪 **Heuristic + synthetic generation** | Per-domain attribute combination + generation with multiple strong models (GPT, Claude, DeepSeek). Seed with real-world demographic priors for realism. | @ElegantLin, @AravindMohan10, @brihijoshi @isgla @Eliza_Fan|
-| 2.3 | 🧑 **Personas from real human info** | Build personas seeded by public/real signals (public figures, social profiles, chat/conversation data), properly anonymized. | @Laerdon Kim, @brihijoshi, @rosierogao, @ziweil2 |
+| 2.3 | 🧑 **Personas from real human info** | Build personas seeded by public/real signals (public figures, social profiles, chat/conversation data), properly anonymized. | @brihijoshi, @rosierogao, @ziweil2 @Eliza_Fan |
 | 2.4 | 📝 **Questionnaire → volunteers** | Design a questionnaire, collect volunteer data, and expand each response into a full persona via synthetic augmentation. | _@name1, @name2, @name3_ |
 | 2.5 | 🔁 **Continuous-growth intake** | Let contributors keep adding personas over time (upload conversations, fill/extend a profile) so the pool grows; gate on the Task 3 quality bar. | _@name1, @name2, @name3_ |
 

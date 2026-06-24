@@ -1,0 +1,19 @@
+id: 00009902
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 9902
+persona_description: A systems engineer who specializes in the design and implementation of bootloaders for various devices, including U-Boot and eMMC boot partitions. They are skilled in the development
+  of parallel bootloaders and have experience with the eMMC specification version 4.3, which requires 2 separate hardware boot partitions for the bootloader. They are also knowledgeable about the risks
+  associated with bricked boards and the limitations of the OTA update process, and have a deep understanding of the Mender Update Module framework, which allows for the support of custom update types through
+  a plugin architecture.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Embedded Systems Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: Bootloader Design
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

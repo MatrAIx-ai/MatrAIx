@@ -1,0 +1,58 @@
+id: '00003461'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3461
+data:
+  user 1 personas: 'I love the chainsmokers.
+
+    I work as a lifeguard.
+
+    I love to play tennis.
+
+    My dad works offshore.
+
+    I also love to travel.'
+  user 2 personas: 'I work 9 to 5 job.
+
+    My family owned a small restaurant.
+
+    I like to cook.
+
+    When i retire i want to open a bakery.'
+  Best Generated Conversation: 'User 1: Hi there! What''s your name?
+
+    User 2: Hi! My name is [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]! What do you like to do for fun?
+
+    User 2: I like to cook, travel, and read. I also love to play tennis.
+
+    User 1: Oh, that''s cool! I love to cook too. What''s your favorite thing to cook?
+
+    User 2: I love to make pasta dishes. I''m also really good at making desserts.
+
+    User 1: I love pasta! Do you have any favorite recipes?
+
+    User 2: Yes, I have a few! I''m sure you''d like my spaghetti carbonara. It''s really easy to make and it''s always a hit with everyone.
+
+    User 1: I''ll have to try it sometime! I love pasta carbonara!
+
+    User 2: It''s my favorite! What kind of music do you like?
+
+    User 1: I love a lot of different kinds of music, but I''m really into electronic music right now.
+
+    User 2: Oh, that''s cool! I like some electronic music too. What are some of your favorite artists?
+
+    User 1: I love The Chainsmokers, Zedd, and Flume.
+
+    User 2: I love The Chainsmokers too! I''ve seen them live twice.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to see them live.
+
+    User 2: They''re amazing live. You should definitely go see them if you get the chance.
+
+    User 1: I will! Thanks for the recommendation!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

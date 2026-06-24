@@ -1,0 +1,18 @@
+id: '00063217'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 63217
+persona_description: A doctor with expertise in neurology and psychiatry, specializing in the diagnosis and treatment of tremors, particularly essential tremor and Parkinson's disease. She has experience
+  with a wide range of medications and treatments for tremors and is well-versed in the symptoms and causes of tremors. She is also familiar with the distinction between tremors caused by alcohol and essential
+  tremor, and can diagnose tremors with confidence.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: neurology
+  general_domain_top01pct: None
+  specific_domain_top01pct: tremor diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

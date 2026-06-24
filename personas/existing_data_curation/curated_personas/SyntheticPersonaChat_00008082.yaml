@@ -1,0 +1,86 @@
+id: 00008082
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8082
+data:
+  user 1 personas: 'I once met a man i still believe was a vampire.
+
+    My mom is a palm reader in new orleans.
+
+    My favorite food is shrimp.
+
+    I love hanging out with my friends.'
+  user 2 personas: 'My dad is an airline pilot.
+
+    I have a cat named leela.
+
+    I make videos about makeup.
+
+    I am a youtuber.
+
+    My car is pink.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi [user 2''s name], it''s nice to meet you.
+
+    User 1: Same here. What do you do for a living?
+
+    User 2: I''m a YouTuber, I make videos about makeup.
+
+    User 1: Oh, that''s cool! I love watching makeup tutorials.
+
+    User 2: Me too! I''m glad you like them.
+
+    User 1: So, what''s your favorite thing to do in your free time?
+
+    User 2: I love to hang out with my friends, and I also love to travel.
+
+    User 1: I love to travel too! Where have you been recently?
+
+    User 2: I was just in Hawaii a few weeks ago, it was amazing!
+
+    User 1: Oh, I''ve always wanted to go to Hawaii!
+
+    User 2: You should go, it''s so beautiful.
+
+    User 1: I will, one day.
+
+    User 2: So, what''s your favorite food?
+
+    User 1: I love shrimp, I could eat it every day.
+
+    User 2: Shrimp is delicious! I love it with garlic butter and lemon.
+
+    User 1: Me too!
+
+    User 2: So, what''s your favorite thing about being a YouTuber?
+
+    User 1: I love being able to connect with people and share my love of makeup.
+
+    User 2: That''s awesome! I love being able to connect with my viewers and share my love of makeup and travel.
+
+    User 1: So, what''s your favorite thing about yourself?
+
+    User 2: I love that I''m always up for a good adventure.
+
+    User 1: Me too! I love trying new things and going new places.
+
+    User 2: So, what''s your favorite thing about [user 2''s name]?
+
+    User 1: I love that she''s so positive and always has a smile on her face.
+
+    User 2: Aww, thanks! I love that about you too.
+
+    User 1: So, what do you think about [user 1''s name]?
+
+    User 2: I think [user 1''s name] is really cool and I''m glad to have met them.
+
+    User 1: Thanks! I''m glad to have met you too.
+
+    User 2: We should hang out again sometime.
+
+    User 1: That would be fun!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

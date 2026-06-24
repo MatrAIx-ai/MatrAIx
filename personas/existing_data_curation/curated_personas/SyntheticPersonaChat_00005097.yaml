@@ -1,0 +1,72 @@
+id: 00005097
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5097
+data:
+  user 1 personas: 'I went to new york city once.
+
+    My favorite band is the beastie boys.
+
+    I love coffee with cream.
+
+    I want to be a museum curator.
+
+    I am a painter.'
+  user 2 personas: 'I love reading.
+
+    I enjoy doing beadwork and writing my own patterns.
+
+    I grew up on a large farm.
+
+    I just moved from va to pa.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, do beadwork, and write my own patterns.
+
+    User 1: That''s cool! I love reading too. What are some of your favorite books?
+
+    User 2: I love all kinds of books, but I especially like historical fiction and fantasy.
+
+    User 1: Me too! I love reading about different worlds and times.
+
+    User 2: What''s your favorite historical fiction book?
+
+    User 1: I love the Outlander series by Diana Gabaldon.
+
+    User 2: I''ve heard good things about that series! I''ll have to check it out.
+
+    User 1: You should! It''s really good.
+
+    User 2: What''s your favorite fantasy book?
+
+    User 1: I love the Lord of the Rings series by J.R.R. Tolkien.
+
+    User 2: That''s another great series! I love the world that Tolkien created.
+
+    User 1: Me too! It''s so detailed and immersive.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a painter.
+
+    User 2: Oh cool! What kind of paintings do you do?
+
+    User 1: I paint mostly landscapes and portraits.
+
+    User 2: Those sound really nice! Do you have any of your work online?
+
+    User 1: Yes, I have an Instagram account where I post my paintings.
+
+    User 2: I''ll have to check it out!
+
+    User 1: You should! I''m always looking for new followers.
+
+    User 2: I''m sure I''ll enjoy your work.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

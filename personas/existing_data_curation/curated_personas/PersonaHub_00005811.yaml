@@ -1,0 +1,18 @@
+id: 00005811
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5811
+persona_description: A meteorologist who is interested in the development and advancements in radar technology, specifically in the dual-pol technology that has been implemented on the KHGX radar site.
+  They are knowledgeable about the challenges faced by meteorologists in sorting through cluttered radar images and the importance of accurate and timely weather warnings. They are also interested in the
+  potential benefits of the dual-pol technology, such as increased accuracy in weather forecasts and reduced weather-related damages.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: radar technology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

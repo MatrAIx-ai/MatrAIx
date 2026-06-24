@@ -1,0 +1,19 @@
+id: '00053161'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 53161
+persona_description: A developer with a background in Windows programming and a keen interest in the Python language and its signal-handling mechanisms. The developer has experience working with Windows's
+  native IPC mechanisms and has a basic understanding of Posix signals. They are interested in the details of how Python's signal handling mechanism works and how it differs from Windows' implementation.
+  They may also be interested in learning more about the Windows-specific Ctrl-C handling and the interaction between Python's signal handling, the internal wrapper around the C runtime's implementation
+  of fgets, and the recently-added Windows event-handling.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: Windows programming
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

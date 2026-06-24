@@ -1,0 +1,64 @@
+id: '00005265'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5265
+data:
+  user 1 personas: 'I eat ice cream when i am sad.
+
+    I have never traveled outside of the united states.
+
+    My best friend lives in japan.
+
+    I am a dog walker.
+
+    I live in new york.'
+  user 2 personas: 'My parents are still married.
+
+    We have a dog.
+
+    I have several children.
+
+    I am a woman.
+
+    We live in a rural area.'
+  Best Generated Conversation: 'User 1: Hi, I''m [your name]. What''s your name?
+
+    User 2: Hi, I''m [your name].
+
+    User 1: Nice to meet you! I''m a dog walker in New York City.
+
+    User 2: That''s cool! I''m a mom of several kids and we have a dog.
+
+    User 1: What''s your dog''s name?
+
+    User 2: His name is Buddy.
+
+    User 1: I love dogs! I have a best friend in Japan who has a dog named Haru.
+
+    User 2: That''s a cute name!
+
+    User 1: I know, right? I''ve never traveled outside of the United States, but I''d love to visit Japan someday.
+
+    User 2: You should! It''s a beautiful country.
+
+    User 1: I''m sure it is! I''ve heard great things about it.
+
+    User 2: What''s your favorite thing about being a dog walker?
+
+    User 1: I love getting to spend time with dogs and making them happy.
+
+    User 2: That''s so sweet! I can imagine that''s a lot of fun.
+
+    User 1: It is! I love seeing the dogs'' faces light up when they see me.
+
+    User 2: I bet that''s the best part of the job.
+
+    User 1: It is! I love making dogs happy.
+
+    User 2: That''s so nice of you!
+
+    User 1: Thanks! I''m glad I could make you smile.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

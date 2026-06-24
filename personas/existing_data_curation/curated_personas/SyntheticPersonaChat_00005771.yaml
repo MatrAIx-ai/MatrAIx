@@ -1,0 +1,60 @@
+id: '00005771'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5771
+data:
+  user 1 personas: 'I have 3 sisters and 2 brothers.
+
+    My favorite place to spend time at is the beach.
+
+    I have a masters degree in creative writing.
+
+    I love to read.
+
+    I live in a medium sized city.'
+  user 2 personas: 'I like to cook.
+
+    I am a foodie.
+
+    I like to go shopping with my daughters.
+
+    I love to chat with my friends.
+
+    I love kids and dogs.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: I love all kinds of food, but I''m a big foodie. I love trying new things and exploring different cuisines.
+
+    User 1: Oh, that''s cool. I''m more of a homebody. I love to cook and bake.
+
+    User 2: That''s awesome! I love cooking too. I''m not very good at baking, though.
+
+    User 1: Oh, I love baking. I think it''s so therapeutic.
+
+    User 2: I can see how it would be. I love the smell of fresh bread baking.
+
+    User 1: Me too! I always get so excited when I smell fresh bread baking.
+
+    User 2: What''s your favorite thing to bake?
+
+    User 1: I love making cakes. I also love making pies and cookies.
+
+    User 2: I love cakes too! I''m not very good at making pies, but I love eating them.
+
+    User 1: I''m not very good at making pies either, but I still love them.
+
+    User 2: I''m glad to hear it. I love sharing my baking with people.
+
+    User 1: Me too! I love giving away my baked goods.
+
+    User 2: I''m sure your friends and family love that.
+
+    User 1: They do! They always ask me to make them things.
+
+    User 2: I''m sure they do. You seem like a great baker.
+
+    User 1: Thank you! I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

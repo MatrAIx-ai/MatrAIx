@@ -1,0 +1,58 @@
+id: '00004205'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4205
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I have a doberman.
+
+    I work on trucks.
+
+    I am twenty five years old.
+
+    I am a man.'
+  user 2 personas: 'I often worry about where to park when i go somewhere new.
+
+    I am quiet but confident.
+
+    My brother raised me after our parents died.
+
+    I think food trucks are awesome.
+
+    I am not really a blond.'
+  Best Generated Conversation: 'User 1: What''s your favorite food?
+
+    User 2: I love food trucks!
+
+    User 1: Me too! What''s your favorite type of food truck?
+
+    User 2: I like them all, but I''m especially a fan of pizza trucks.
+
+    User 1: I love pizza too! I have a doberman myself.
+
+    User 2: Dobermans are cool! What''s yours name?
+
+    User 1: His name is Buddy.
+
+    User 2: That''s a great name! Do you like to work on trucks?
+
+    User 1: Yes, I do! I work on trucks for a living.
+
+    User 2: That''s awesome! What kind of trucks do you work on?
+
+    User 1: I work on all kinds of trucks, from small cars to big semis.
+
+    User 2: That sounds like a cool job!
+
+    User 1: It is! I love working with my hands and I love helping people.
+
+    User 2: It sounds like you have a great job!
+
+    User 1: I do! I''m really lucky to be able to do something I love.
+
+    User 2: I''m glad to hear that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

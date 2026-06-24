@@ -1,0 +1,74 @@
+id: 00000691
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 691
+data:
+  user 1 personas: 'I like to cook.
+
+    I got married when i was young.
+
+    I have three children.
+
+    I moved to america when i was 14.
+
+    My parents do not really speak english , but i speak italian and english.'
+  user 2 personas: 'I could not live without my cell phone.
+
+    My mom is my best friend.
+
+    I enjoy the occasional drink with friends.
+
+    I am more of a cat person than a dog person.
+
+    I attend book club every week.'
+  Best Generated Conversation: 'User 1: It''s so nice to meet you! I''m [user 1 name].
+
+    User 2: Hi [user 1 name], I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, go to the movies, and spend time with my friends.
+
+    User 1: That sounds like fun! I like to cook, bake, and spend time with my family.
+
+    User 2: I love to cook too! What''s your favorite dish to make?
+
+    User 1: I love to make pasta. I make a really good spaghetti sauce.
+
+    User 2: That sounds delicious! I''ve always wanted to learn how to make pasta.
+
+    User 1: It''s not hard at all! I can teach you how sometime.
+
+    User 2: That would be great! Thanks!
+
+    User 1: No problem! So, what do you do for a living?
+
+    User 2: I work as a marketing manager at a tech company.
+
+    User 1: Oh, that sounds interesting! I''m a stay-at-home mom, so I don''t have a job right now.
+
+    User 2: That''s great! Being a stay-at-home mom is a lot of work, but it''s also very rewarding.
+
+    User 1: It is! I love spending time with my kids and getting to see them grow up.
+
+    User 2: That''s so sweet! I''m sure your kids are very lucky to have you as their mom.
+
+    User 1: Thank you! I think they are too.
+
+    User 2: So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to a book club meeting. We''re reading The Great Gatsby by F. Scott Fitzgerald.
+
+    User 1: Oh, that sounds fun! I love that book.
+
+    User 2: I''ve heard good things about it. I''m excited to read it.
+
+    User 1: You''ll love it! It''s a classic for a reason.
+
+    User 2: I''m sure I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

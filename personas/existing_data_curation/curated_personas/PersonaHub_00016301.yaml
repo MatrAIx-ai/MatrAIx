@@ -1,0 +1,18 @@
+id: '00016301'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16301
+persona_description: A healthcare professional who is interested in understanding the medical procedures used for diagnosing and treating various gynecological conditions. They are looking for information
+  on the types of hysteroscopes available, the types of anesthesia used, and the risks and complications associated with hysteroscopy. They may also be interested in reading patient comments and reviews
+  to get an idea of the overall experience.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: gynecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

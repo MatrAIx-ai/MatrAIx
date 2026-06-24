@@ -1,0 +1,68 @@
+id: '00002055'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2055
+data:
+  user 1 personas: 'My mom is a lawyer.
+
+    I have an internship at a computer company.
+
+    I like to go fishing.
+
+    I have 5 children.
+
+    I am a student.'
+  user 2 personas: 'I live alone in a cabin.
+
+    I like to go fishing on the lake.
+
+    I own a boat.
+
+    I have 5 grandchildren.
+
+    I am a 70 year old man.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1].
+
+    User 2: Hello! I''m [user 2].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go fishing on the lake.
+
+    User 1: Me too! What do you catch?
+
+    User 2: I catch a lot of different fish, but my favorite is probably bass.
+
+    User 1: I love bass too! They''re so delicious.
+
+    User 2: I agree! I love to cook them up and eat them fresh.
+
+    User 1: Me too! Do you have a favorite recipe?
+
+    User 2: I do! I like to make them with a simple lemon and butter sauce.
+
+    User 1: That sounds delicious! I''ll have to try that sometime.
+
+    User 2: You should! It''s really easy to make.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I also like to go boating. I have a boat on the lake and I love to take it out for rides.
+
+    User 1: That sounds like a lot of fun! I''ve never been boating before.
+
+    User 2: You should try it! It''s really relaxing.
+
+    User 1: I might have to! Do you have any tips for a beginner?
+
+    User 2: Sure! Just make sure you wear a life jacket and be careful not to go out too far.
+
+    User 1: I will! Thanks for the advice.
+
+    User 2: No problem! It was nice talking to you.
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

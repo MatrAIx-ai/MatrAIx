@@ -1,0 +1,66 @@
+id: '00003133'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3133
+data:
+  user 1 personas: 'I like to ride my bike.
+
+    I am a younger guy.
+
+    I have beard that is longer.
+
+    I like to play football.'
+  user 2 personas: 'I drink a lot of tea.
+
+    I hope to one day be a published author.
+
+    I love art museums.
+
+    I work in a used book store.
+
+    I write short stories in my free time.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hello!
+
+    User 1: What do you like to do in your free time?
+
+    User 2: I write short stories and love going to art museums.
+
+    User 1: That sounds really cool! I love art museums too.
+
+    User 2: Me too! It''s so nice to be able to see so much beautiful art in one place.
+
+    User 1: I know, right? It''s like a whole different world.
+
+    User 2: Exactly! It''s so peaceful and relaxing.
+
+    User 1: Do you have any favorite pieces of art?
+
+    User 2: Yes, I love the painting ''The Starry Night'' by Vincent van Gogh.
+
+    User 1: That''s a beautiful painting! I love the colors.
+
+    User 2: Me too! It''s so vibrant and alive.
+
+    User 1: Do you have any other hobbies?
+
+    User 2: I also love to drink tea.
+
+    User 1: That''s a great hobby! What''s your favorite type of tea?
+
+    User 2: I love green tea! It''s so refreshing and healthy.
+
+    User 1: I love green tea too! It''s my favorite type of tea.
+
+    User 2: That''s great! We should go to an art museum together sometime and then get some tea.
+
+    User 1: That sounds like a great plan! I''d love to go to an art museum with you.
+
+    User 2: Great! We can make it a date.
+
+    User 1: Sounds good to me!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

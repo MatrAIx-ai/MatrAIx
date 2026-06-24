@@ -1,0 +1,18 @@
+id: 00039729
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 39729
+persona_description: A healthcare professional who specializes in the diagnosis and treatment of sleep disorders, particularly obstructive sleep apnea. They are skilled in conducting overnight sleep studies
+  at an overnight sleep lab and have developed a portable sleep monitoring device that allows patients to monitor their sleep patterns in the comfort of their own home without interrupting their normal
+  nightly routine. They are also knowledgeable in analyzing the data collected by the home sleep study device to recommend appropriate treatment methods for patients.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: sleep medicine
+  general_domain_top01pct: None
+  specific_domain_top01pct: sleep disorder diagnosis and treatment
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

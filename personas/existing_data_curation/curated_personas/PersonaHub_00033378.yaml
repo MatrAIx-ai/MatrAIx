@@ -1,0 +1,20 @@
+id: 00033378
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 33378
+persona_description: A scientist who specializes in computational systems, particularly those related to artificial intelligence and machine learning. They are working on a project called Robo Brain, which
+  is an expansive computational system that learns from publicly available internet resources, computer simulations, and real-life robot trials. The system is currently downloading information from one
+  billion images, 120,000 YouTube videos, and 100 million how-to documents and appliance manuals, and is storing the information in a Markov model. The project received funding from various organizations,
+  including Google, Qualcomm, Microsoft, and the National Science Foundation. The persona is likely to be interested in the latest developments in artificial intelligence and machine learning, and may have
+  expertise in areas such as computer vision, natural language processing, and robotics.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: artificial intelligence and machine learning
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

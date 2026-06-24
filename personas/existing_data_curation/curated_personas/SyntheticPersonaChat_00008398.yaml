@@ -1,0 +1,74 @@
+id: 00008398
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8398
+data:
+  user 1 personas: 'I didn t go to college because i run the family farm.
+
+    I have never been on an airplane.
+
+    I had a girlfriend who eloped with my best friend one day.
+
+    My favorite season is duck hunting season.
+
+    I like tailgate parties.'
+  user 2 personas: 'I was the first test child for sesame street.
+
+    I speak six languages.
+
+    I once started a forest fire in california.
+
+    I always carry an edged weapon.
+
+    I work on the radio as a character voice.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1''s name]. I''m from [user 1''s hometown].
+
+    User 2: Hi, I''m [user 2''s name]. I''m from [user 2''s hometown].
+
+    User 1: What do you do for a living?
+
+    User 2: I work on the radio as a character voice.
+
+    User 1: That sounds like a fun job!
+
+    User 2: It is, I get to play all sorts of different characters.
+
+    User 1: That''s cool. What''s your favorite character to play?
+
+    User 2: I like playing the villain, it''s more fun to be evil.
+
+    User 1: I can imagine. What other languages do you speak?
+
+    User 2: I speak six languages.
+
+    User 1: That''s impressive! What languages do you speak?
+
+    User 2: I speak English, Spanish, French, German, Italian, and Russian.
+
+    User 1: Wow, that''s a lot of languages! Do you know any other interesting facts about yourself?
+
+    User 2: I was the first test child for Sesame Street.
+
+    User 1: That''s really cool! What was that like?
+
+    User 2: It was a lot of fun, I got to play with all the Muppets.
+
+    User 1: That sounds amazing! I wish I had been a test child for Sesame Street.
+
+    User 2: It was a great experience.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go hiking, camping, and fishing.
+
+    User 1: That sounds like fun. I like to do those things too.
+
+    User 2: We should go hiking together sometime.
+
+    User 1: That would be great! I''ll bring my dog.
+
+    User 2: Sounds like a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

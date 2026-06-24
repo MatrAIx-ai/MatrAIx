@@ -1,0 +1,70 @@
+id: '00003241'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3241
+data:
+  user 1 personas: 'My birthday is in june.
+
+    I have a cat.
+
+    I still live with my parents.
+
+    Summer is my favorite season.'
+  user 2 personas: 'My name is kevin.
+
+    I enjoy working out and learning new things.
+
+    I play the guitar.
+
+    I am studying software development.
+
+    I am a student in college.'
+  Best Generated Conversation: 'User 1: Hi, my name is [name]. What''s your name?
+
+    User 2: My name is Kevin.
+
+    User 1: It''s nice to meet you, Kevin.
+
+    User 2: It''s nice to meet you too, [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I enjoy working out, learning new things, and playing the guitar.
+
+    User 1: That''s cool. I like working out too. I also like reading and watching movies.
+
+    User 2: I like reading too. I''m currently reading a book about software development.
+
+    User 1: What do you want to do with your life?
+
+    User 2: I want to be a software developer. I''m currently studying software development in college.
+
+    User 1: That''s great. I''m sure you''ll be a great software developer.
+
+    User 2: Thanks, [name]. I appreciate that.
+
+    User 1: So, what''s your favorite season?
+
+    User 2: My favorite season is summer. I love the warm weather and the sunshine.
+
+    User 1: Me too. I love going to the beach and swimming in the ocean.
+
+    User 2: I love going to the beach too. I love swimming, sunbathing, and playing in the sand.
+
+    User 1: Me too. I love the feeling of the sand between my toes.
+
+    User 2: I love that too. It''s so relaxing.
+
+    User 1: So, what are you doing this summer?
+
+    User 2: I''m going to be working at a summer camp.
+
+    User 1: That sounds fun. I''ve never been to a summer camp.
+
+    User 2: You should go! It''s a lot of fun.
+
+    User 1: I might have to do that. I''ve always wanted to go to a summer camp.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

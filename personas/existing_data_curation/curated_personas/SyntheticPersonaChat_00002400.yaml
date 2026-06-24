@@ -1,0 +1,86 @@
+id: '00002400'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2400
+data:
+  user 1 personas: 'I am college student.
+
+    I play drums in a band.
+
+    I drive a ford mustang.
+
+    I am 25 years old and live with my parents.
+
+    I have a girlfriend named luis , and she goes to my college.'
+  user 2 personas: 'I am the youngest of 4 children.
+
+    I lost my arm in a car accident.
+
+    I am a farmer.
+
+    I graduated from college.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a farmer.
+
+    User 1: Oh, that''s cool! I''ve always wanted to try farming.
+
+    User 2: It''s hard work, but it''s rewarding.
+
+    User 1: I bet. Do you have any tips for someone who wants to start farming?
+
+    User 2: The best advice I can give is to get your hands dirty and start learning. There are a lot of different ways to farm, so you''ll need to find what works best for you.
+
+    User 1: That''s good advice. I''ll keep that in mind.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a college student.
+
+    User 2: Oh, that''s cool! What are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: Oh, that''s a great field. I''m sure you''ll do well.
+
+    User 1: Thanks! I hope so.
+
+    User 2: What do you want to do with your degree?
+
+    User 1: I''m not sure yet. I''m thinking about going into business consulting.
+
+    User 2: Oh, that sounds like a great career.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what are you doing after college?
+
+    User 1: I''m not sure yet. I''m thinking about moving to a bigger city.
+
+    User 2: Oh, that sounds exciting.
+
+    User 1: It does. I''m looking forward to it.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to play music, read, and watch movies.
+
+    User 2: Oh, that''s cool! I like to play music too. What kind of music do you play?
+
+    User 1: I play drums.
+
+    User 2: Oh, that''s awesome! I play guitar.
+
+    User 1: Cool! Maybe we could jam together sometime.
+
+    User 2: That would be great! I''d love to.
+
+    User 1: Awesome! We''ll exchange numbers and make plans.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

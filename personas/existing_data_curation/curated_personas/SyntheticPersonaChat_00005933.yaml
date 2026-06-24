@@ -1,0 +1,104 @@
+id: 00005933
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5933
+data:
+  user 1 personas: 'My favorite musical is hamilton.
+
+    My favorite food is a burger.
+
+    My favorite color is red.
+
+    I work as an accountant.
+
+    I like to play tennis.'
+  user 2 personas: 'I am a writer.
+
+    I like rock climbing.
+
+    I have a dog.
+
+    My hair is black.
+
+    I am gluten free.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hi, I''m (user 2''s name).
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a writer.
+
+    User 1: That''s cool. I''m an accountant.
+
+    User 2: What''s your favorite musical?
+
+    User 1: Hamilton.
+
+    User 2: Me too! It''s so good.
+
+    User 1: I know, right? I''ve seen it three times.
+
+    User 2: Wow, I''m only on my second time.
+
+    User 1: You should see it again. It''s even better the second time.
+
+    User 2: I''ll take your word for it.
+
+    User 1: What''s your favorite food?
+
+    User 2: Burgers.
+
+    User 1: Me too! What''s your favorite burger place?
+
+    User 2: Shake Shack.
+
+    User 1: I love Shake Shack! I get the ShackBurger every time.
+
+    User 2: Me too! It''s the best.
+
+    User 1: What''s your favorite color?
+
+    User 2: Red.
+
+    User 1: Mine too! It''s such a happy color.
+
+    User 2: I know, right? It''s my favorite color for anything.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to rock climb.
+
+    User 1: I''ve never tried rock climbing.
+
+    User 2: You should! It''s so much fun.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: I hope not.
+
+    User 2: You should also try to get your dog to rock climb with you.
+
+    User 1: I don''t know if she''ll like it.
+
+    User 2: You never know until you try.
+
+    User 1: I''ll see.
+
+    User 2: Maybe you could take her to a dog park with a climbing wall.
+
+    User 1: That''s a good idea.
+
+    User 2: Well, it was nice meeting you, (user 1''s name).
+
+    User 1: You too, (user 2''s name).
+
+    User 2: Maybe we can hang out sometime and rock climb together.
+
+    User 1: That would be fun'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

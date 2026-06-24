@@ -1,0 +1,72 @@
+id: '00004513'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4513
+data:
+  user 1 personas: 'My cats like to be read to.
+
+    I have two cats.
+
+    I like to eat tune.
+
+    I am a librarian in my current job.
+
+    I like to read books.'
+  user 2 personas: 'I listen to metal music.
+
+    I have boots i always wear.
+
+    I have black spiky hair.
+
+    I wear a lot of leather.
+
+    I sleep in late during the day.'
+  Best Generated Conversation: 'User 1: Hello! What do you like to do for fun?
+
+    User 2: I like to listen to metal music and go to concerts.
+
+    User 1: Oh, that''s cool! I love metal music too. What are some of your favorite bands?
+
+    User 2: I like Slipknot, Slayer, and Black Sabbath.
+
+    User 1: Those are all great bands! I''ve seen Slipknot and Slayer in concert. They put on a great show.
+
+    User 2: I''ve seen Slipknot and Black Sabbath in concert. They''re both amazing!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read books, watch movies, and play video games.
+
+    User 1: Oh, me too! I love to read books and watch movies. I''m not very good at video games, though.
+
+    User 2: That''s okay, I''m not very good at them either.
+
+    User 1: Do you have any pets?
+
+    User 2: I have two cats.
+
+    User 1: Oh, that''s cool! I have two cats too.
+
+    User 2: What are their names?
+
+    User 1: Their names are Mittens and Shadow.
+
+    User 2: Those are cute names!
+
+    User 1: Thanks!
+
+    User 2: Do you like your job as a librarian?
+
+    User 1: I love it! I get to help people find books and resources.
+
+    User 2: That sounds like a great job.
+
+    User 1: It is!
+
+    User 2: It was nice talking to you!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

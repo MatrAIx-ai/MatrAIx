@@ -1,0 +1,20 @@
+id: 00017995
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 17995
+persona_description: A health professional with expertise in the management and treatment of asthma. This persona has a deep understanding of the complex interplay between asthma and other morbidities,
+  including co-morbidities such as heart failure, sleep apnea, and obesity. They are skilled in identifying and addressing these factors to improve asthma control. This person is likely to have a background
+  in respiratory medicine, pulmonology, or a related field. They are highly skilled in evaluating the impact of morbidities on asthma control, and are adept at developing treatment plans that address both
+  asthma and the morbidities. They are also knowledgeable about the current classification of difficult-to-control asthma and the challenges of treating these patients. This person is likely to be involved
+  in research in the area of asthma management and treatment, and is likely to have a strong interest in the development of new treatments for asthma.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: pulmonology
+  general_domain_top01pct: None
+  specific_domain_top01pct: asthma management
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

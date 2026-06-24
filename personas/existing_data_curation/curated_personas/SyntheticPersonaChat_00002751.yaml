@@ -1,0 +1,68 @@
+id: '00002751'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2751
+data:
+  user 1 personas: 'I do yoga on tuesdays.
+
+    I work five days a week.
+
+    I don t have children.
+
+    I go to the pool every thursday for three hours.
+
+    I enjoy shopping.'
+  user 2 personas: 'I m not going to go the extra mile anymore.
+
+    I want to get married again.
+
+    I have 10 years experience in our industry , yet she gets promoted.
+
+    I m angry at my coworker.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hey, I''m [user 2 name]. Nice to meet you.
+
+    User 1: You too! What do you like to do for fun?
+
+    User 2: I like to go shopping, go to the movies, and hang out with my friends.
+
+    User 1: I like to do those things too! I also like to go to the pool and do yoga.
+
+    User 2: Oh, that''s cool! I''ve never done yoga before.
+
+    User 1: You should try it! It''s really good for you.
+
+    User 2: Maybe I will. Thanks for the recommendation.
+
+    User 1: No problem. What''s your favorite thing about your job?
+
+    User 2: I like the people I work with. They''re all really nice and supportive.
+
+    User 1: That''s great! I''m glad you have a good work environment.
+
+    User 2: Me too. What''s your favorite thing about your job?
+
+    User 1: I like the variety of things I do. I get to work on a lot of different projects, which keeps things interesting.
+
+    User 2: Oh, that''s cool! I like to have a variety of things to do too.
+
+    User 1: Yeah, it makes the day go by faster.
+
+    User 2: I agree. So, what are you doing this weekend?
+
+    User 1: I''m going to the beach with my friends.
+
+    User 2: Oh, that sounds fun! I wish I could go.
+
+    User 1: You should come! It''s going to be a lot of fun.
+
+    User 2: Maybe I will. Thanks for the invitation.
+
+    User 1: No problem. It was nice talking to you.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

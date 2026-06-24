@@ -1,0 +1,64 @@
+id: '00004606'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4606
+data:
+  user 1 personas: 'I can speak three languages.
+
+    I have not gone home in over two years.
+
+    I work remotely as a programmer.
+
+    I am currently traveling in japan.'
+  user 2 personas: 'I own 10 cats.
+
+    I work at home on my computer.
+
+    I do not eat asparagus.
+
+    I have long red hair.
+
+    My favorite jello is the blue one.'
+  Best Generated Conversation: 'User 1: Hi! What are you up to today?
+
+    User 2: I''m just hanging out with my cats. They''re so cute!
+
+    User 1: Aww, I love cats! I have one cat named George. He''s a tabby.
+
+    User 2: I have 10 cats! They''re all different breeds.
+
+    User 1: Wow, that''s a lot of cats! Do you have a favorite?
+
+    User 2: I like them all equally, but I guess I would say my orange tabby is my favorite.
+
+    User 1: Orange cats are the best! They''re so friendly.
+
+    User 2: They are! I love them.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read, play video games, and hang out with my cats.
+
+    User 1: Me too! I love reading, playing video games, and hanging out with my cat.
+
+    User 2: We should be friends!
+
+    User 1: I''d love to be friends!
+
+    User 2: Great! Let''s exchange phone numbers.
+
+    User 1: Sure! Here''s my number: 123-456-7890.
+
+    User 2: Thanks! Here''s mine: 098-765-4321.
+
+    User 1: Awesome! We should hang out sometime.
+
+    User 2: I''d love to! Let''s plan something for next weekend.
+
+    User 1: Great! I''ll check my schedule and get back to you.
+
+    User 2: Okay, sounds good'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

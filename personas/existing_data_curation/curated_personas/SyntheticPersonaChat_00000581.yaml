@@ -1,0 +1,72 @@
+id: 00000581
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 581
+data:
+  user 1 personas: 'I am a student.
+
+    I like cookies.
+
+    I also like ice cream.
+
+    I like painting , i can cook well.'
+  user 2 personas: 'I sleep 10 hours every day because my work is tiring.
+
+    I have a wife and two kids.
+
+    My hobbies are sleeping and playing the guitar.
+
+    I want to be in a band someday.
+
+    I am a factory worker.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hi, I''m [user 2]. It''s nice to meet you.
+
+    User 1: Nice to meet you too.
+
+    User 2: What do you do for fun?
+
+    User 1: I like to paint, cook, and eat ice cream.
+
+    User 2: Oh, that''s cool. I like to sleep, play guitar, and spend time with my family.
+
+    User 1: What kind of guitar do you play?
+
+    User 2: I play an acoustic guitar.
+
+    User 1: Oh, cool. I play the piano.
+
+    User 2: Oh, that''s nice. Do you have any other hobbies?
+
+    User 1: I also like to read and watch movies.
+
+    User 2: Oh, that''s cool. I like to read too.
+
+    User 1: What kind of books do you like to read?
+
+    User 2: I like to read mystery novels and historical fiction.
+
+    User 1: Oh, that''s cool. I like to read mystery novels too.
+
+    User 2: Oh, that''s nice. What''s your favorite mystery novel?
+
+    User 1: My favorite mystery novel is The Da Vinci Code.
+
+    User 2: Oh, that''s a good one. I''ve read that one.
+
+    User 1: What''s your favorite historical fiction novel?
+
+    User 2: My favorite historical fiction novel is The Three Musketeers.
+
+    User 1: Oh, that''s a good one too. I''ve seen the movie.
+
+    User 2: Oh, that''s nice. I''ve seen the movie too.
+
+    User 1: I think it''s a good book.
+
+    User 2: I think it''s a good movie too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

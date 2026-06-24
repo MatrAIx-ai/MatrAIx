@@ -1,0 +1,72 @@
+id: '00005546'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5546
+data:
+  user 1 personas: 'I have a crush on my co worker.
+
+    I love rpg computer games.
+
+    I still live at home.
+
+    I play tabletop games with friends.'
+  user 2 personas: 'I have 2 cats.
+
+    My favorite food is strawberries.
+
+    I love to go to the beach.
+
+    I am vegan.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go to the beach, play with my cats, and eat strawberries.
+
+    User 1: That sounds fun. I like to play RPG computer games, tabletop games, and go to the beach with my friends.
+
+    User 2: Oh, I''ve never played an RPG computer game. What''s it like?
+
+    User 1: It''s a lot of fun! You create a character and go on an adventure, fighting monsters and solving puzzles.
+
+    User 2: That sounds like it would be cool. I''ll have to try it sometime.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a software engineer.
+
+    User 2: That sounds interesting. What do you like about it?
+
+    User 1: I like the challenge of solving problems and creating new things.
+
+    User 2: That makes sense. I like to solve problems too.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a stay-at-home mom.
+
+    User 1: Oh, that must be fun.
+
+    User 2: It is. I love spending time with my kids.
+
+    User 1: I''m sure they love you too.
+
+    User 2: They do. They''re my best friends.
+
+    User 1: That''s so sweet.
+
+    User 2: Thank you.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

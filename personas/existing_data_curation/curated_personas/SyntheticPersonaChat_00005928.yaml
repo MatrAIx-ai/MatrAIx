@@ -1,0 +1,66 @@
+id: 00005928
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5928
+data:
+  user 1 personas: 'My favorite movie is goodfellas.
+
+    I am a proofreader for a greeting card company.
+
+    I enjoy watching football and hockey games.
+
+    I love to read.'
+  user 2 personas: 'My mom is a nurse.
+
+    I have three tattoos.
+
+    I work at a bookstore.
+
+    I never knew my dad.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I work at a bookstore.
+
+    User 1: Oh, that''s cool! I love reading.
+
+    User 2: Me too! I have three tattoos.
+
+    User 1: Really? That''s cool! What are they of?
+
+    User 2: One is of my mom, who is a nurse.
+
+    User 1: Aww, that''s sweet.
+
+    User 2: The other two are of my favorite movies, Goodfellas and The Godfather.
+
+    User 1: I love Goodfellas! That''s a great movie.
+
+    User 2: Me too! It''s my favorite movie of all time.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and go out to eat.
+
+    User 1: I like to do a lot of the same things. I love to go to the movies, especially horror movies.
+
+    User 2: I love horror movies too! I''ve seen all of the Saw movies.
+
+    User 1: I''ve seen a few of them, but I''m not a huge fan. I prefer more psychological horror movies.
+
+    User 2: I like those too! I''ve seen The Witch and Hereditary.
+
+    User 1: I love The Witch! I haven''t seen Hereditary yet, but I''ve heard good things about it.
+
+    User 2: It''s really good! It''s one of the scariest movies I''ve ever seen.
+
+    User 1: I''ll have to check it out sometime.
+
+    User 2: You should! It''s definitely worth watching.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00010115'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 10115
+persona_description: A teacher who is interested in comparing the English mastery of monolingual and bilingual students, specifically in the context of the English National Exam and TOEFL test. The teacher
+  is looking for insights on the consistency of the results and the influence of non-formal education on the English mastery of these students. The teacher is also interested in predicting the potential
+  challenges that bilingual students might face in learning a new language, such as Japanese, and taking steps to address these challenges. The teacher has a particular interest in the Japanese Department
+  at the university and is eager to use the data from the English proficiency tests to help the students in their language learning journey.
+expertise:
+  general_domain_top1pct: education
+  specific_domain_top1pct: language acquisition
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

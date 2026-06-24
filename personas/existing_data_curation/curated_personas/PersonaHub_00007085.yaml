@@ -1,0 +1,18 @@
+id: 00007085
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7085
+persona_description: A chemist or a biochemist who is interested in understanding the structure and properties of organic compounds. They are looking for tools that can help them analyze and interpret chemical
+  formulas, and are particularly interested in tools that can compute the degrees of unsaturation (DoU) of organic compounds. They are also interested in learning about the various possible combinations
+  of rings and pi bonds that can be present in a chemical structure, and are looking for tools that can automate these calculations.
+expertise:
+  general_domain_top1pct: chemistry
+  specific_domain_top1pct: organic chemistry
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,72 @@
+id: '00004036'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4036
+data:
+  user 1 personas: 'I like to make fresh pies.
+
+    I am a cashier at a grocery store.
+
+    I like to go swimming.
+
+    I have a garden in my yard.
+
+    My hobby is sewing.'
+  user 2 personas: 'I am single.
+
+    My favorite food is pizza.
+
+    I am a cyclist.
+
+    My father used to be a cop.
+
+    I work at a restaurant as waiter.'
+  Best Generated Conversation: 'User 1: Hi, I''m new here and I''m looking for some friends.
+
+    User 2: Hi, I''m always looking for new friends too. What''s your name?
+
+    User 1: My name is [User 1''s name].
+
+    User 2: Nice to meet you, [User 1''s name].
+
+    User 1: Nice to meet you too, [User 2''s name].
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to make fresh pies, go swimming, and garden.
+
+    User 2: That''s cool! I like to eat pizza, cycle, and work.
+
+    User 1: Do you have any hobbies?
+
+    User 2: I like to play video games and watch movies.
+
+    User 1: Me too! I also like to read books and listen to music.
+
+    User 2: What kind of music do you like?
+
+    User 1: I like all kinds of music, but I''m especially fond of rock and pop.
+
+    User 2: Me too! I love classic rock and pop.
+
+    User 1: What''s your favorite band?
+
+    User 2: I like The Beatles, The Rolling Stones, and Led Zeppelin.
+
+    User 1: Those are all great bands! I love The Beatles and The Rolling Stones.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Me too! I think we''d be great friends.
+
+    User 2: I think so too! We should hang out sometime.
+
+    User 1: That would be great! I''m free next weekend.
+
+    User 2: Me too! I''ll call you and we can make plans.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,50 @@
+id: 00008389
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8389
+data:
+  user 1 personas: 'My parents immigrated from europe before i was born.
+
+    While both my parents have thick european accents , i do not.
+
+    I go to a private high school.
+
+    I am enrolled in several college credit courses.
+
+    I drive a motorcycle instead of a car.'
+  user 2 personas: 'I work on semi trucks for a living.
+
+    My father was a driver himself.
+
+    I got off the road when i married my sweetheart.
+
+    I want to take her on vacations one day.
+
+    My motor never stops running.'
+  Best Generated Conversation: 'User 1: Hi, I''m from Europe. My parents immigrated there before I was born.
+
+    User 2: That''s cool. I work on semi trucks for a living. My father was a driver himself.
+
+    User 1: That''s interesting. How did you get into that line of work?
+
+    User 2: Well, my dad always loved working on trucks. He used to take me to work with him when I was a kid.
+
+    User 1: That''s awesome. I like to learn about different cultures.
+
+    User 2: Me too. It''s always interesting to hear about people''s experiences.
+
+    User 1: I''m going to a private high school. I''m enrolled in several college credit courses. I''m planning on going to college after high school.
+
+    User 2: That''s great. What do you want to study?
+
+    User 1: I''m not sure yet. I''m interested in a lot of things.
+
+    User 2: Well, you have plenty of time to decide.
+
+    User 1: Thanks. I''m glad I met you.
+
+    User 2: Me too. I like talking to people from different cultures'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

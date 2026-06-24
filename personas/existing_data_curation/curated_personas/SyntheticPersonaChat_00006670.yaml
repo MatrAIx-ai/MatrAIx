@@ -1,0 +1,64 @@
+id: '00006670'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6670
+data:
+  user 1 personas: 'My favorite artist is justin bieber.
+
+    My family and i go camping every month.
+
+    I am a mother of two beautiful boys.
+
+    I love to go horseback riding whenever i can.'
+  user 2 personas: 'I am a painter.
+
+    My favorite band is the beastie boys.
+
+    I want to be a museum curator.
+
+    I love coffee with cream.
+
+    I went to new york city once.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1). What''s your name?
+
+    User 2: Hi, I''m (user 2). It''s nice to meet you.
+
+    User 1: Nice to meet you too. What do you like to do for fun?
+
+    User 2: I love to paint, and I also love going to museums.
+
+    User 1: That''s great! I love to go to museums too. What kind of things do you like to paint?
+
+    User 2: I like to paint landscapes and portraits.
+
+    User 1: That''s awesome! I''m not much of an artist, but I love to admire other people''s work.
+
+    User 2: It''s great that you appreciate art.
+
+    User 1: What''s your favorite museum?
+
+    User 2: I love the Metropolitan Museum of Art in New York City.
+
+    User 1: That''s a great museum! I''ve been there once, and I loved it.
+
+    User 2: Have you been to any other museums?
+
+    User 1: Yes, I''ve been to a few others, but the Metropolitan Museum of Art is definitely my favorite.
+
+    User 2: It''s a great museum. I''m glad you enjoyed it.
+
+    User 1: Me too. What do you like about it?
+
+    User 2: I love the collection of art, and I also love the architecture of the building.
+
+    User 1: I agree. The building is really beautiful.
+
+    User 2: It is. I''m glad you enjoyed it.
+
+    User 1: Me too. It was great talking to you.
+
+    User 2: It was great talking to you too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

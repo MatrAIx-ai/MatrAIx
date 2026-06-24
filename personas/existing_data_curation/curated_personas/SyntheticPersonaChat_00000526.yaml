@@ -1,0 +1,80 @@
+id: '00000526'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 526
+data:
+  user 1 personas: 'I love soccer.
+
+    I have 3 brothers.
+
+    I want to move to london when i get older.
+
+    I like to invest in the stock market.'
+  user 2 personas: 'I go visit them sometimes.
+
+    I work at a grocery store.
+
+    She likes to grow plants in her garden.
+
+    My best friend lives in a big city.
+
+    My mother is a social worker for the school system.'
+  Best Generated Conversation: 'User 1: Hi there!
+
+    User 2: Hey! How''s it going?
+
+    User 1: Good, thanks! What about you?
+
+    User 2: I''m doing well, thanks!
+
+    User 1: Where are you from?
+
+    User 2: I''m from a small town in the Midwest.
+
+    User 1: Oh, cool! I''m from a big city in the East Coast.
+
+    User 2: I''ve always wanted to live in a big city!
+
+    User 1: It''s definitely different from living in a small town.
+
+    User 2: I can imagine! What do you like about living in a big city?
+
+    User 1: I like the excitement and the energy. There''s always something going on.
+
+    User 2: That sounds fun! I''m sure it''s nice to have a lot of things to do.
+
+    User 1: Yeah, it is. I also like the diversity. There are people from all over the world living in a big city.
+
+    User 2: That''s something I''ve always liked about big cities too. It''s interesting to learn about different cultures.
+
+    User 1: Yeah, it is. I''ve learned a lot about different cultures from living in a big city.
+
+    User 2: That''s great! Do you have any brothers or sisters?
+
+    User 1: Yes, I have three brothers.
+
+    User 2: Oh, cool! What are they like?
+
+    User 1: They''re all really great guys. They''re all older than me, so they''ve always been there for me.
+
+    User 2: That''s nice! I have a best friend who''s like a brother to me.
+
+    User 1: That''s great! I love having close friends.
+
+    User 2: Me too! What do you do for fun?
+
+    User 1: I love to play soccer. I also like to go to the movies, play video games, and read.
+
+    User 2: Oh, cool! I love to play soccer too! I also like to go to the movies, but I don''t really play video games or read.
+
+    User 1: That''s cool! We should play soccer sometime!
+
+    User 2: That would be fun! I''ll have to bring my cleats.
+
+    User 1: Great! I''ll bring my ball.
+
+    User 2: Sounds like a plan!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

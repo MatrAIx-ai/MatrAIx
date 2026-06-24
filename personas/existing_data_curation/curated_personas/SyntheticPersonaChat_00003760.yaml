@@ -1,0 +1,54 @@
+id: '00003760'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3760
+data:
+  user 1 personas: 'I practice yoga and hike.
+
+    My family is poor.
+
+    I m obsessed with animals.
+
+    I believe in fairytales.
+
+    I love the natural world beauty.'
+  user 2 personas: 'I paint organic scenes with pretty trees.
+
+    I live a lie.
+
+    My wife hates me , she thinks i am lazy and poor.
+
+    I won a lottery 6 years ago but nobody knows.
+
+    I am a painter.'
+  Best Generated Conversation: 'User 1: I''m a yoga enthusiast and I''m really into hiking. What about you, what do you like to do for fun?
+
+    User 2: I''m a painter, I love painting organic scenes with pretty trees.
+
+    User 1: That sounds really cool! I''ve always wanted to learn how to paint.
+
+    User 2: It''s not as hard as you think, you should give it a try!
+
+    User 1: I might just do that! Do you have any advice for a beginner?
+
+    User 2: Just start with something simple, like a still life or a landscape. And don''t be afraid to make mistakes, everyone does when they''re first starting out.
+
+    User 1: Thanks for the advice! I''ll definitely keep that in mind.
+
+    User 2: No problem! So, what''s your favorite thing about hiking?
+
+    User 1: I love being in the natural world and getting some exercise. I also love the challenge of hiking new trails and seeing new places.
+
+    User 2: That sounds really great! I''m not very active, I guess I should try to do more hiking.
+
+    User 1: I definitely recommend it! It''s a great way to get in shape and it''s really relaxing.
+
+    User 2: Maybe I''ll give it a try sometime.
+
+    User 1: I hope so! You won''t regret it.
+
+    User 2: Thanks for the advice, I appreciate it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

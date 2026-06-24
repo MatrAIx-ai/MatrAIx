@@ -1,0 +1,82 @@
+id: '00006641'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6641
+data:
+  user 1 personas: 'I take vitamin c when i have a cold.
+
+    My favorite season is winter.
+
+    I am disabled and cannot walk.
+
+    My friend once bought me a car.'
+  user 2 personas: 'My passion is in programming.
+
+    I go to bed pretty late.
+
+    I am in school to be a computer engineer.
+
+    One day i hope to own my own company.
+
+    My best friend is gay.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m looking for someone to talk to about programming.
+
+    User 2: I''m a computer engineer student, so I can definitely help you out!
+
+    User 1: That''s great! What''s your favorite programming language?
+
+    User 2: I''m really into Python right now. It''s so versatile and powerful.
+
+    User 1: I''ve heard good things about Python. I''m still learning the basics of programming.
+
+    User 2: That''s okay! It takes time to get good at programming.
+
+    User 1: Yeah, I''m finding that out. What''s your favorite thing about programming?
+
+    User 2: I love the feeling of creating something new and useful.
+
+    User 1: I can see why you would like that. It must be really rewarding.
+
+    User 2: It is! I also love the challenge of solving problems with code.
+
+    User 1: That sounds like a lot of fun. I''m sure I''ll get there eventually.
+
+    User 2: I''m sure you will! Just keep practicing and you''ll be a pro in no time.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem! So, what are you working on right now?
+
+    User 1: I''m trying to build a simple website.
+
+    User 2: Oh, that''s cool! What kind of website?
+
+    User 1: I''m not sure yet. I''m just playing around with different ideas.
+
+    User 2: That sounds fun! Let me know if you need any help.
+
+    User 1: Thanks! I will.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go for walks, and watch movies.
+
+    User 2: I like to read too! What are some of your favorite books?
+
+    User 1: I like to read a lot of different genres, but I especially like historical fiction and mysteries.
+
+    User 2: I love historical fiction too! I''m currently reading a book about the French Revolution.
+
+    User 1: That sounds interesting! I''ve never read anything about the French Revolution.
+
+    User 2: It''s a really good book. I''m learning a lot about the history of France.
+
+    User 1: I''m glad to hear that! I might have to check it out.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

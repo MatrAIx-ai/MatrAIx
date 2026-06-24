@@ -1,0 +1,56 @@
+id: '00003570'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3570
+data:
+  user 1 personas: 'I also like eating sushi.
+
+    I am studying for my masters.
+
+    I am a student in social sciences.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I was born 20 years ago.
+
+    I live in the usa.
+
+    My favorite color is blue.
+
+    I was born male and transitioned to female when i was 17.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]! What''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you! What are you studying?
+
+    User 2: I''m studying social sciences.
+
+    User 1: Oh, that''s cool! I''m studying for my masters in social sciences.
+
+    User 2: Really? That''s awesome! What are you specializing in?
+
+    User 1: I''m specializing in gender studies.
+
+    User 2: Oh, that''s cool! I''m actually transgender.
+
+    User 1: Oh, that''s really interesting! What was your transition like?
+
+    User 2: It was long and difficult, but I''m really happy with the results.
+
+    User 1: I''m glad to hear that! I''m always interested in hearing about people''s experiences with gender transition.
+
+    User 2: Me too. I think it''s important to share our stories so that other people can learn about what it''s like.
+
+    User 1: I agree. I think it''s important to be open and honest about our experiences.
+
+    User 2: Me too. I think it''s the best way to break down stereotypes and create a more inclusive society.
+
+    User 1: I agree. I think we''re making progress, but there''s still a lot of work to be done.
+
+    User 2: I agree. But I''m hopeful for the future.
+
+    User 1: Me too. I think we can make a difference.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00007474'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7474
+persona_description: A Google Cloud administrator who is responsible for managing DNS records for internal projects and services. This person is likely to be familiar with the intricacies of DNS management,
+  including the use of private zones, DNS peering, and the use of Cloud DNS for Service Directory-backed zones. They are also likely to be skilled in configuring VPC networks and managing reverse lookup
+  zones, as well as understanding the different types of Cloud DNS managed private zones and their configurations. They are also likely to be aware of the use of Cloud DNS for non-RFC 1918 addresses, and
+  the use of forwarding zones and peering zones for resolving names.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: Cloud DNS and Google Cloud infrastructure
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

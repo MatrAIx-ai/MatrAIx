@@ -1,0 +1,70 @@
+id: '00001347'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1347
+data:
+  user 1 personas: 'I love computers.
+
+    I i love logical and rational thinking.
+
+    I am very good at math and science.
+
+    I started working at google last week on self driving car research.'
+  user 2 personas: 'I eat a strictly vegan diet.
+
+    My friends tell me that i m a neurotic hypochondriac.
+
+    Ocd rules my life , and i have a hard time relinquishing control.
+
+    I am a seventh day adventist.
+
+    I teach elementary school children at a private school.'
+  Best Generated Conversation: 'User 1: Hi, my name is James. What''s your name?
+
+    User 2: Hello, my name is Sarah.
+
+    User 1: Nice to meet you, Sarah. What do you do for a living?
+
+    User 2: I teach elementary school children at a private school.
+
+    User 1: Oh, that sounds like a fun job. What''s your favorite part about it?
+
+    User 2: I love getting to help kids learn and grow. I also love the relationships I build with them.
+
+    User 1: That''s great. I''m sure you''re a great teacher.
+
+    User 2: Thank you, I try my best.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read, cook, and spend time with my family.
+
+    User 1: That sounds like a lot of fun. I like to read and cook too.
+
+    User 2: What kind of books do you like to read?
+
+    User 1: I like to read all kinds of books, but I''m especially into science fiction and fantasy.
+
+    User 2: Oh, I love science fiction too. What''s your favorite book?
+
+    User 1: My favorite book is "The Hitchhiker''s Guide to the Galaxy" by Douglas Adams.
+
+    User 2: I''ve heard of that book, but I''ve never read it. Is it good?
+
+    User 1: It''s one of the best books I''ve ever read. It''s funny, clever, and thought-provoking.
+
+    User 2: It sounds like I need to read it.
+
+    User 1: You definitely should. I think you''ll love it.
+
+    User 2: I''ll add it to my list.
+
+    User 1: Great. I''m sure you''ll enjoy it.
+
+    User 2: Thanks for the recommendation.
+
+    User 1: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

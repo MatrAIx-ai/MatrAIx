@@ -1,0 +1,62 @@
+id: '00002151'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2151
+data:
+  user 1 personas: 'I do not like music.
+
+    My name is nick.
+
+    I have lots of friends.
+
+    I like to ride my scooter.'
+  user 2 personas: 'I work as a physical therapist , and my wife is a school nurse.
+
+    We also have three dogs and two cats.
+
+    My wife and i have 2 children.
+
+    My name is john and i live in dallas , tx.'
+  Best Generated Conversation: 'User 1: Hey there, my name is Nick.
+
+    User 2: Hello Nick, my name is John.
+
+    User 1: Nice to meet you John. Where are you from?
+
+    User 2: I live in Dallas, Texas.
+
+    User 1: Oh cool, I''ve always wanted to visit Texas.
+
+    User 2: You should! It''s a great place to live.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a physical therapist.
+
+    User 1: Oh cool, I''ve never met a physical therapist before.
+
+    User 2: It''s a good job, I get to help people get better.
+
+    User 1: That''s awesome. What''s your favorite part about it?
+
+    User 2: Seeing the progress of my patients.
+
+    User 1: That makes sense. What''s your favorite thing to do outside of work?
+
+    User 2: I like to spend time with my family and friends.
+
+    User 1: Me too. What do you like to do with your family?
+
+    User 2: We like to go camping, hiking, and fishing.
+
+    User 1: That sounds like fun. What do you like to do with your friends?
+
+    User 2: We like to go to the movies, play sports, and have game nights.
+
+    User 1: Sounds like you have a lot of fun. I''m glad to meet you John.
+
+    User 2: You too Nick.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

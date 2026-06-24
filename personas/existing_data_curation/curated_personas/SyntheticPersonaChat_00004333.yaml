@@ -1,0 +1,62 @@
+id: '00004333'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4333
+data:
+  user 1 personas: 'I hate winter and the cold.
+
+    My parents are lawyers.
+
+    I once swam with manta rays.
+
+    My favorite show is csi.'
+  user 2 personas: 'I daydream during work.
+
+    I have bad luck with relationships.
+
+    I have trouble getting motivated.
+
+    I slack off on my homework.'
+  Best Generated Conversation: 'User 1: Hey, what''s up?
+
+    User 2: Not much. Just working on some homework.
+
+    User 1: Oh, what class is it for?
+
+    User 2: It''s for my English class. We''re supposed to write a story about a time we were scared.
+
+    User 1: Oh, that sounds like a good assignment. I love writing stories.
+
+    User 2: Me too. But I''m having trouble getting started.
+
+    User 1: What''s your problem?
+
+    User 2: I''m not sure what to write about. I don''t want to write about anything too boring or too cliche.
+
+    User 1: Well, what''s a scary experience you''ve had?
+
+    User 2: I''ve had a few. But one that really stands out is the time I swam with manta rays.
+
+    User 1: Woah, that sounds awesome!
+
+    User 2: It was, until I realized that there were sharks in the water too.
+
+    User 1: Sharks! That''s terrifying.
+
+    User 2: Yeah, it was. I thought I was going to be eaten.
+
+    User 1: Wow, that''s a crazy story. I''m glad you made it out alive.
+
+    User 2: Me too.
+
+    User 1: So, what do you think you''re going to write about?
+
+    User 2: I think I''m going to write about the time I went scuba diving with sharks.
+
+    User 1: That sounds like a great idea. I can''t wait to read it.
+
+    User 2: Thanks. I''ll let you know when it''s done.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

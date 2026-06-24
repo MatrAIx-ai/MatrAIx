@@ -1,0 +1,76 @@
+id: '00001253'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1253
+data:
+  user 1 personas: 'I cannot do math.
+
+    I smell like french fries.
+
+    It was too small.
+
+    I just got a new sweater.
+
+    I also eat too much french fries.'
+  user 2 personas: 'I do not own a television.
+
+    I like to read.
+
+    I work at a school as an art teacher.
+
+    My girlfriend just broke up with me.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to read, watch movies, and play games.
+
+    User 1: Me too! I love to read, especially fantasy and science fiction.
+
+    User 2: Oh, cool! I''m more into historical fiction and romance.
+
+    User 1: I''ve never really been into romance novels.
+
+    User 2: They''re not for everyone. What are some of your favorite books?
+
+    User 1: I love the Harry Potter series, The Lord of the Rings, and The Hunger Games.
+
+    User 2: I''ve heard good things about all of those. I''ve read The Hunger Games and I really liked it.
+
+    User 1: It''s a great series! I''m excited to see the movie.
+
+    User 2: Me too! I''m a little worried that it won''t live up to the books, but I''m still looking forward to it.
+
+    User 1: I''m sure it will be good. The cast is great.
+
+    User 2: I agree! Jennifer Lawrence is perfect for Katniss.
+
+    User 1: What are you looking forward to this weekend?
+
+    User 2: Not much. I''m just going to hang out with my friends and watch some movies.
+
+    User 1: Sounds like a good plan. I''m going to be working this weekend.
+
+    User 2: Oh, that''s too bad.
+
+    User 1: Yeah, but it''s not too bad. I get to make some extra money.
+
+    User 2: That''s true.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m an art teacher at a local elementary school.
+
+    User 1: Oh, that''s cool! I love art.
+
+    User 2: Me too! It''s my passion.
+
+    User 1: That''s great!
+
+    User 2: Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

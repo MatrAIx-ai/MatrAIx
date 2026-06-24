@@ -1,0 +1,60 @@
+id: '00006010'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6010
+data:
+  user 1 personas: 'I freeze up in social situations.
+
+    I work as a freelance accountant.
+
+    Sometimes i feel like i ve already been through life once before.
+
+    I was diagnosed with mild ocd in college.'
+  user 2 personas: 'I wish i could be more serious about school.
+
+    I have been in a lot of romantic relationships that have ended up poorly.
+
+    I get distracted easily.
+
+    I have lots of friends and can hold a conversation easily.
+
+    I am very athletic.'
+  Best Generated Conversation: 'User 1: What do you do for work?
+
+    User 2: I''m a student, but I''m working on my degree part-time.
+
+    User 1: Oh, cool! What are you studying?
+
+    User 2: I''m studying business.
+
+    User 1: That''s great! I''m a freelance accountant.
+
+    User 2: Oh, that''s cool! Do you like it?
+
+    User 1: Yeah, I really enjoy it. It''s a lot of work, but it''s also very rewarding.
+
+    User 2: I''m glad to hear that! I''m hoping to get a job in the business world when I graduate.
+
+    User 1: I''m sure you''ll find something great! You seem like you''re very smart and ambitious.
+
+    User 2: Thank you! I try my best.
+
+    User 1: What are some of your other interests?
+
+    User 2: I love to go hiking, biking, and swimming. I''m also a big fan of sports.
+
+    User 1: That''s great! I love to go hiking and biking too. I''m not as big into sports, but I do enjoy watching them.
+
+    User 2: What are some of your favorite sports?
+
+    User 1: I love football, basketball, and baseball. I also enjoy watching hockey and soccer.
+
+    User 2: Those are all great sports! I''m a big fan of football and basketball too.
+
+    User 1: It sounds like we have a lot in common. I''m glad I met you!
+
+    User 2: Me too! It''s always nice to meet someone who shares my interests.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

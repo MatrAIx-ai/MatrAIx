@@ -1,0 +1,58 @@
+id: 00004927
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4927
+data:
+  user 1 personas: 'I am a mother of 2 daughters.
+
+    My husband works at a telecom.
+
+    I m a people person.
+
+    But i m a frustrated driver.'
+  user 2 personas: 'I want a porsche.
+
+    I lay awake at night so i can watch the stars.
+
+    I wish i was taller so i could reach the cookie jar.
+
+    I m often late for class.'
+  Best Generated Conversation: 'User 1: I''m so frustrated. I got stuck in traffic for hours on my way home today!
+
+    User 2: Oh no! That''s the worst. I hate being late.
+
+    User 1: Me too! I''m a people person, so I like to be on time so I can meet people.
+
+    User 2: I like that! I''m more of an introvert, so I don''t mind being late.
+
+    User 1: I guess we''re opposites then!
+
+    User 2: I guess so! But we can still be friends.
+
+    User 1: Of course! I''m always looking for new friends.
+
+    User 2: Me too! What do you like to do for fun?
+
+    User 1: I like to go out with my friends and family. I also like to read and watch movies.
+
+    User 2: I like to do those things too! I also like to go on hikes and explore new places.
+
+    User 1: That sounds like fun! I''ve always wanted to go on a hike.
+
+    User 2: You should! It''s a great way to get exercise and see some beautiful scenery.
+
+    User 1: I''ll have to find a good place to go.
+
+    User 2: There are a lot of great hiking trails in the area.
+
+    User 1: I''ll have to look into it.
+
+    User 2: I''m sure you''ll find something you like.
+
+    User 1: Thanks! I''m excited to try it.
+
+    User 2: You''re welcome! I hope you enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00007243'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7243
+data:
+  user 1 personas: 'My favorite band is the rolling stones.
+
+    I am not a basketball player though.
+
+    I am almost 7 feet tall.
+
+    I would like to retire to hawaii in the next 10 years.
+
+    I currently work for ibm in chicago.'
+  user 2 personas: 'I m a photographer.
+
+    I have a sleeve of tattoos.
+
+    I like to drink at bars with friends.
+
+    I have 4 dogs and i spend all my time with them.
+
+    I love dogs.'
+  Best Generated Conversation: 'User 1: Hi there! I''m Paul, I work for IBM in Chicago.
+
+    User 2: Hey Paul, I''m Sarah, I''m a photographer.
+
+    User 1: Oh cool, I love photography! What kind of photography do you do?
+
+    User 2: I do a lot of different types of photography, but I specialize in nature and animal photography.
+
+    User 1: That sounds really cool! I love seeing pictures of nature and animals.
+
+    User 2: Me too! I love being outdoors and taking pictures of the beauty of nature.
+
+    User 1: That''s great! I''m glad you have a passion for something you love.
+
+    User 2: Thanks! I''m really lucky to have found my passion.
+
+    User 1: So, how many dogs do you have?
+
+    User 2: I have four dogs! They''re the best part of my life.
+
+    User 1: Four dogs, that''s a lot! Do you have any pictures of them?
+
+    User 2: Of course! Here''s a picture of my two golden retrievers, Luna and Oliver.
+
+    User 1: Oh my goodness, they''re so cute! I love golden retrievers.
+
+    User 2: Thanks! They''re the sweetest dogs. And here''s a picture of my two pugs, Hazel and Milo.
+
+    User 1: Awww, they''re so adorable! I love pugs too.
+
+    User 2: Me too! They''re such funny and loving dogs.
+
+    User 1: I''m glad you have such a great family.
+
+    User 2: Thanks! I''m really lucky to have them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

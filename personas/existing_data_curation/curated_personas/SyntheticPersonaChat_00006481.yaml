@@ -1,0 +1,86 @@
+id: 00006481
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6481
+data:
+  user 1 personas: 'I vacation in florida every winter.
+
+    I was a champion downhill skier in college.
+
+    I sing karaoke every thursday night.
+
+    My sister is a published author.
+
+    My favorite color is yellow.'
+  user 2 personas: 'I am the youngest of three brothers.
+
+    I live on a small farm in ohio.
+
+    I play guitar in the local band.
+
+    My name is omar.
+
+    I ve never been to the city.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name]. What''s your name?
+
+    User 2: Hi, my name is Omar.
+
+    User 1: I''m from Florida, where do you live?
+
+    User 2: I live on a small farm in Ohio.
+
+    User 1: Oh, that''s cool! I''ve never been to Ohio.
+
+    User 2: You should come visit sometime! We have a lot of beautiful scenery here.
+
+    User 1: I''d love to! I''m sure it''s very different from Florida.
+
+    User 2: It is, but it''s also very beautiful.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I play guitar in the local band.
+
+    User 1: Oh, that''s cool! What kind of music do you play?
+
+    User 2: We play a lot of different kinds of music, but we mostly play country music.
+
+    User 1: I like country music! Do you guys ever play live?
+
+    User 2: Yeah, we play at local bars and festivals.
+
+    User 1: That''s awesome! I''d love to see you guys play sometime.
+
+    User 2: We''d love to have you!
+
+    User 1: What are some of your favorite things to do on the farm?
+
+    User 2: I like to go fishing in the pond, and I like to ride my horses.
+
+    User 1: Oh, that sounds like fun! I love fishing.
+
+    User 2: It''s great! I always catch something, and I love the fresh air.
+
+    User 1: What kind of horses do you have?
+
+    User 2: I have a couple of quarter horses, and I have a Tennessee Walker.
+
+    User 1: Oh, those are beautiful horses! I''ve always wanted a horse.
+
+    User 2: They''re great animals! I love them.
+
+    User 1: So, what do you do for work on the farm?
+
+    User 2: I help my dad with the crops, and I take care of the animals.
+
+    User 1: Oh, that sounds like a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I bet it is! I''m glad you enjoy it.
+
+    User 2: I do! It''s a good life.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

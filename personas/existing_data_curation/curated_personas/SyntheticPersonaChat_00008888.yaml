@@ -1,0 +1,68 @@
+id: 00008888
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8888
+data:
+  user 1 personas: 'I spend the weekends travelling up to canada to relax and enjoy the view.
+
+    My name is frank.
+
+    I hope to someday compete professionally or atleast qualify for an event.
+
+    My hobbies include reading and cycling.
+
+    I m the general manager of the local grocery store.'
+  user 2 personas: 'Last season i was just getting started.
+
+    I play for the philadelphia eagles.
+
+    This is my second year in the league.
+
+    This season , i will become a playoff quarterback.'
+  Best Generated Conversation: 'User 1: Hi, I''m Frank.
+
+    User 2: Hi, I''m Sam.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a quarterback for the Philadelphia Eagles.
+
+    User 1: Oh, wow! That''s awesome.
+
+    User 2: Thanks.
+
+    User 1: So, what are your goals for this season?
+
+    User 2: To make the playoffs.
+
+    User 1: Good luck with that!
+
+    User 2: Thanks.
+
+    User 1: What are your hobbies?
+
+    User 2: I like to read and play sports.
+
+    User 1: Cool. I like to read and cycle.
+
+    User 2: Cycling sounds like fun.
+
+    User 1: It is. I like to go for long rides on the weekends.
+
+    User 2: That sounds relaxing.
+
+    User 1: It is.
+
+    User 2: Well, it was nice talking to you.
+
+    User 1: You too.
+
+    User 2: I''m going to go now.
+
+    User 1: Bye.
+
+    User 2: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

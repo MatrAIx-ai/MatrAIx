@@ -1,0 +1,59 @@
+id: '00006161'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6161
+data:
+  user 1 personas: 'My parents died in a plane crash.
+
+    I live alone with my dog.
+
+    My hobby creating houses out of matches.
+
+    I have an iq of 250.'
+  user 2 personas: 'Pudding makes me gassy.
+
+    Ke ha is my favorite singer of all time.
+
+    I have a friend named james who secretly rules the world.
+
+    I have never done drugs because i do not know where to buy them.
+
+    I love living in texas.'
+  Best Generated Conversation: 'User 1: My parents died in a plane crash. I live alone with my dog. My hobby creating houses out of matches. I have an IQ of 250.
+
+    User 2: Pudding makes me gassy. Kesha is my favorite singer of all time. I have a friend named James who secretly rules the world. I have never done drugs because I do not know where to buy them. I
+    love living in Texas.
+
+    User 1: Oh, that''s sad. I''m sorry about your parents.
+
+    User 2: It''s okay. It was a long time ago.
+
+    User 1: Do you have any siblings?
+
+    User 2: No, I''m an only child.
+
+    User 1: That must be lonely.
+
+    User 2: It''s not so bad. I have my dog and I''m always busy with my hobbies.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, write, and play music. I also like to go for walks with my dog.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is. I''m a pretty happy person.
+
+    User 1: That''s good to hear.
+
+    User 2: I''m glad we met.
+
+    User 1: Me too.
+
+    User 2: Maybe we can hang out sometime.
+
+    User 1: That would be fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

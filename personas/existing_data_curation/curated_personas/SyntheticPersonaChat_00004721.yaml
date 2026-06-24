@@ -1,0 +1,80 @@
+id: '00004721'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4721
+data:
+  user 1 personas: 'I m an out of work farmhand.
+
+    I would like to move some place warmer.
+
+    I like watching reality television shows.
+
+    Last month the farm was foreclosed so i m looking for a new job.
+
+    I live in kansas.'
+  user 2 personas: 'I like going to canada.
+
+    I love the band van halen.
+
+    I want to be a doctor.
+
+    I play dungeons and dragons.'
+  Best Generated Conversation: 'User 1: Hey, I''m [user 1 name]. What''s your name?
+
+    User 2: Hi, I''m [user 2 name]. What do you do for a living?
+
+    User 1: I''m an out of work farmhand. I used to work on a farm, but it was foreclosed last month, so I''m looking for a new job.
+
+    User 2: That''s too bad. I''m sorry to hear that.
+
+    User 1: Thanks. It''s been a tough time. But I''m trying to stay positive and looking for new opportunities.
+
+    User 2: That''s good to hear. Where are you from?
+
+    User 1: I''m from Kansas.
+
+    User 2: Oh, really? I love going to Canada.
+
+    User 1: That''s cool. I''ve never been to Canada.
+
+    User 2: You should go sometime. It''s beautiful there.
+
+    User 1: I''d love to.
+
+    User 2: What are some of your hobbies?
+
+    User 1: I like watching reality television shows.
+
+    User 2: Me too! What''s your favorite show?
+
+    User 1: I like The Bachelor.
+
+    User 2: That''s a good one. I like The Voice.
+
+    User 1: I''ve never seen that show.
+
+    User 2: You should check it out. It''s really good.
+
+    User 1: I will.
+
+    User 2: What else do you like to do for fun?
+
+    User 1: I like to go hiking.
+
+    User 2: That''s cool. I like to go camping.
+
+    User 1: Me too.
+
+    User 2: What''s your favorite place to hike?
+
+    User 1: I like to hike in the mountains.
+
+    User 2: Me too. I love the views from the top of a mountain.
+
+    User 1: Me too. I could hike all day long.
+
+    User 2: Me too. I love the feeling of being outdoors.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

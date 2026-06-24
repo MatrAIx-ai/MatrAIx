@@ -1,0 +1,20 @@
+id: '00034502'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 34502
+persona_description: A scientist who specializes in agricultural research, particularly in the field of integrated crop management. They are responsible for developing and implementing crop forecasting
+  models and have experience in using data collection and analysis techniques to improve crop yields. They are based at Iowa State University Extension and Outreach and are involved in the pilot Yield Forecast
+  project, which combines the use of agricultural production systems simulator (APSIM) cropping systems model, the Weather Research and Forecast Model (WRF), and parallel in-field data collection to provide
+  in-season systems-level forecasts. They are interested in the impact of precipitation events on crop growth and yield and have expertise in using crop models to predict crop yields in different scenarios.
+  They are also interested in the use of machine learning techniques to improve the accuracy of crop forecasts.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Agricultural Informatics
+  general_domain_top01pct: None
+  specific_domain_top01pct: Crop Modeling
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

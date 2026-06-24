@@ -1,0 +1,19 @@
+id: 00049846
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49846
+persona_description: An engineer or technician who is responsible for analyzing and monitoring the performance of rotating machinery, such as turbines, generators, and engines. They are interested in obtaining
+  accurate and precise measurements of the machinery's rotational speed and order, and are seeking to set the sampling rate for their analog input channels to ensure the highest possible accuracy. They
+  may also be interested in using counter devices to acquire the tachometer signal at a faster rate than the DAQ device, and may require assistance from a mathematics professor with expertise in group theory
+  and subgroup isomorphisms.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Mechanical Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

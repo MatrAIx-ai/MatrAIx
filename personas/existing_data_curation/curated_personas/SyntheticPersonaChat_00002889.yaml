@@ -1,0 +1,78 @@
+id: 00002889
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2889
+data:
+  user 1 personas: 'I moved far from home.
+
+    My family owns a farm.
+
+    I have red hair.
+
+    I like to eat meat.'
+  user 2 personas: 'I have 3 cats.
+
+    My favorite color is orange.
+
+    I like tacos.
+
+    I enjoy swimming.
+
+    I am a secretary.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hey! How are you doing?
+
+    User 1: Good. I just moved far from home.
+
+    User 2: Oh, that''s a big change! Are you adjusting well?
+
+    User 1: Yeah, I''m getting there. It''s just hard being away from my family.
+
+    User 2: I can imagine. But I''m sure you''ll make new friends and have a great time here.
+
+    User 1: Thanks, I hope so.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to read, go for walks, and play video games.
+
+    User 2: Me too! I love to read, and I also like to go swimming.
+
+    User 1: I like swimming too, but I don''t get to do it as much as I''d like.
+
+    User 2: Well, you should come to the pool with me sometime. I''m always looking for people to swim with.
+
+    User 1: That would be fun! I''ll let you know when I''m free.
+
+    User 2: Great!
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a secretary at a law firm.
+
+    User 1: Oh, that sounds interesting. Do you like it?
+
+    User 2: I do, it''s a lot of fun. I get to work with a lot of different people, and I learn a lot about the law.
+
+    User 1: That sounds really cool. I''m glad you like it.
+
+    User 2: Thanks!
+
+    User 1: So, what are your favorite tacos?
+
+    User 2: I love all kinds of tacos, but my favorite are probably fish tacos.
+
+    User 1: Fish tacos are good! I like them with a little bit of pico de gallo and guacamole.
+
+    User 2: Me too! I also like them with a little bit of sour cream.
+
+    User 1: That sounds delicious. I might have to try that next time I get tacos.
+
+    User 2: You should! It''s really good.
+
+    User 1: Thanks for the tip!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

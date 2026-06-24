@@ -1,0 +1,60 @@
+id: 00007596
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7596
+data:
+  user 1 personas: 'I enjoy the occasional drink with friends.
+
+    I couldn t live without my cell phone.
+
+    I attend book club every week.
+
+    I am more of a cat person than a dog person.
+
+    My mom is my best friend.'
+  user 2 personas: 'I love chocolate.
+
+    I am a teacher.
+
+    I have a twin sister.
+
+    I drink coffee every day.
+
+    I do yoga every morning.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: Nice to meet you, [user 2''s name]. What do you like to do for fun?
+
+    User 2: I love chocolate, I am a teacher, I have a twin sister, I drink coffee every day and I do yoga every morning.
+
+    User 1: That''s cool. I love chocolate too! I am not a teacher, but I do love reading and I go to book club every week. I don''t have a twin sister, but I love my mom. She''s my best friend.
+
+    User 2: That''s great! I love book club too. I''m glad you have a great relationship with your mom.
+
+    User 1: Thanks! Me too. So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. Maybe I''ll go shopping. What about you?
+
+    User 1: I''m going to go to the beach with my friends.
+
+    User 2: Oh, that sounds fun! I love the beach.
+
+    User 1: Me too! We''re going to go swimming, sunbathing, and build sandcastles.
+
+    User 2: That sounds like a great time. I wish I could come with you.
+
+    User 1: You should! We''d love to have you.
+
+    User 2: Thanks, but I have to work. Maybe next time.
+
+    User 1: Okay, we''ll keep in touch.
+
+    User 2: Great! Have fun at the beach.
+
+    User 1: Thanks! You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

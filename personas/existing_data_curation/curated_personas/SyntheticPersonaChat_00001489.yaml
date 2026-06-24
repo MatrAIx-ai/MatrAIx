@@ -1,0 +1,60 @@
+id: 00001489
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1489
+data:
+  user 1 personas: 'I am 26 years old.
+
+    I found out that i am carrying twins.
+
+    I will be on bed rest for the next 5 months.
+
+    I already have 3 children.
+
+    I have thrown up every day for the last 3 months with morning sickness.'
+  user 2 personas: 'I like fast food too much.
+
+    I need certain medications to live.
+
+    I like the band queens of the stone age.
+
+    I have won an olympic medal.'
+  Best Generated Conversation: 'User 1: Hi, I''m (user 1''s name).
+
+    User 2: Hello, I''m (user 2''s name).
+
+    User 1: What do you do for fun?
+
+    User 2: I like to listen to Queens of the Stone Age and eat fast food.
+
+    User 1: I like them too! I also like to read books.
+
+    User 2: That''s great! I''m not much of a reader.
+
+    User 1: Me neither, but I like to read books about pregnancy and parenting.
+
+    User 2: Oh, that makes sense. I can imagine that''s a lot of work.
+
+    User 1: It is, but it''s also really rewarding.
+
+    User 2: I''m sure it is. I''m glad you''re happy.
+
+    User 1: Thank you. What are your plans for the future?
+
+    User 2: I''m not sure yet. I''m just going to take it day by day.
+
+    User 1: That''s a good plan. I''m going to be on bed rest for the next five months, so I''m not sure what I''m going to do with myself.
+
+    User 2: You could always read books or watch movies.
+
+    User 1: That''s a good idea. I could also catch up on my sleep.
+
+    User 2: That sounds like a good plan.
+
+    User 1: Thanks. I''m glad we met.
+
+    User 2: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

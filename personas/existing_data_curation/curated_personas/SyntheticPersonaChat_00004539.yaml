@@ -1,0 +1,60 @@
+id: 00004539
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4539
+data:
+  user 1 personas: 'My favorite fruit is apple.
+
+    I like green apples.
+
+    I do not like to eat meat.
+
+    I like to eat the skin of the apple.'
+  user 2 personas: 'I am very health conscious , and i watch what i eat.
+
+    I love romantic comedies.
+
+    I like to write poetry in my spare time.
+
+    My favorite musician is ed sheeran.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hello, I''m [user 2].
+
+    User 1: What''s your favorite fruit?
+
+    User 2: I like apples, especially green apples.
+
+    User 1: Me too! I love the tartness of green apples.
+
+    User 2: Me too! I love eating them with the skin on.
+
+    User 1: I like to eat them with peanut butter.
+
+    User 2: That''s a good idea! I''ll have to try that.
+
+    User 1: What''s your favorite type of music?
+
+    User 2: I love romantic comedies.
+
+    User 1: Me too! What''s your favorite romantic comedy?
+
+    User 2: I love "When Harry Met Sally."
+
+    User 1: Me too! That''s one of my favorites too.
+
+    User 2: I also love "The Princess Bride."
+
+    User 1: That''s a great movie! I love the sword fighting and the romance.
+
+    User 2: Me too! It''s a perfect movie.
+
+    User 1: I''m glad we have similar tastes in music and movies.
+
+    User 2: Me too! I think we''re going to be good friends.
+
+    User 1: I agree! I''m looking forward to getting to know you better.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,56 @@
+id: '00001120'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1120
+data:
+  user 1 personas: 'I play the bass.
+
+    I like vintage furniture.
+
+    I collect stamps.
+
+    Favorite band is the beetles.
+
+    I have a large cd collection.'
+  user 2 personas: 'I sometimes think i am shallow.
+
+    I love to go outside at night and eavesdrop on my neighbors arguments.
+
+    My mother is a professional make up artist.
+
+    If i want it , i buy it.'
+  Best Generated Conversation: 'User 1: Hi! What are your hobbies?
+
+    User 2: I love to go outside at night and eavesdrop on my neighbors arguments.
+
+    User 1: That''s a very interesting hobby! Do you ever get caught?
+
+    User 2: No, I''m very good at it. I can hear them from a long distance away.
+
+    User 1: That''s impressive! What do you find most interesting about their arguments?
+
+    User 2: I find it interesting to hear what people are really thinking about each other. It''s also interesting to see how people react in the heat of the moment.
+
+    User 1: I can imagine! Do you ever feel bad about listening in on their conversations?
+
+    User 2: No, not really. I think it''s important to be aware of what''s going on around you.
+
+    User 1: That''s a good point. I guess I''m just not as brave as you!
+
+    User 2: It''s not about being brave, it''s about being curious.
+
+    User 1: I guess you''re right. I''m just not sure I''m that curious about my neighbors!
+
+    User 2: Well, you''re missing out. It''s really interesting to see what people are really like.
+
+    User 1: I''ll have to take your word for it!
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m not sure if I''m brave enough.
+
+    User 2: You don''t have to be brave, just curious.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

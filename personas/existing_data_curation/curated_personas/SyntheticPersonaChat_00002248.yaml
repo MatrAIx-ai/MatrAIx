@@ -1,0 +1,76 @@
+id: 00002248
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2248
+data:
+  user 1 personas: 'I have two pet dogs.
+
+    I hope to travel the world one day.
+
+    My favorite music genre is rock.
+
+    I am a farmer.'
+  user 2 personas: 'I am a french girl , but i moved to the us last year.
+
+    I don t have too many friends in the us yet , but i am going to summer camp and i hope to make friends then ! i also think that i may make friends as soccer in the fall.
+
+    I live with my parents and my little brother.
+
+    I am in 3rd grade.
+
+    I like to play soccer , draw and read asterix.'
+  Best Generated Conversation: 'User 1: Hi there! My name is [user 1''s name].
+
+    User 2: Hi [user 1''s name], my name is [user 2''s name].
+
+    User 1: It''s nice to meet you! Where are you from?
+
+    User 2: I''m from France, but I moved to the US last year.
+
+    User 1: Oh, that''s cool! How do you like it here?
+
+    User 2: It''s a lot different than France, but I''m starting to get used to it.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play soccer, draw, and read Asterix comics.
+
+    User 1: Oh, I love soccer too! I used to play on my high school team.
+
+    User 2: That''s awesome! I''m not very good at it, but I have fun.
+
+    User 1: It''s still a lot of fun even if you''re not very good at it.
+
+    User 2: I know, right? I just like to run around and kick the ball.
+
+    User 1: Me too! It''s a great way to get exercise.
+
+    User 2: Yeah, it is. I also like to draw. I''m not very good at it, but I like to do it.
+
+    User 1: That''s great! I''m not very good at drawing either, but I still like to do it.
+
+    User 2: I know, right? It''s a fun way to express yourself.
+
+    User 1: Yeah, it is. I like to draw pictures of my friends and family.
+
+    User 2: That''s nice! I like to draw pictures of my favorite characters from books and movies.
+
+    User 1: That''s cool! I like to read Asterix comics.
+
+    User 2: Oh, I love Asterix comics! They''re so funny.
+
+    User 1: Yeah, they are. I love the way they make fun of the Romans.
+
+    User 2: Me too! I also love the way they depict ancient Gaul.
+
+    User 1: Yeah, it''s so different from what we think of as ancient Rome.
+
+    User 2: I know, right? It''s really cool.
+
+    User 1: I''m glad we''re both Asterix fans.
+
+    User 2: Me too! It''s always nice to meet someone who likes the same things you do.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

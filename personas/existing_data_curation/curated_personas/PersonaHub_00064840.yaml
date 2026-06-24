@@ -1,0 +1,19 @@
+id: 00064840
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 64840
+persona_description: A professional geologist who is responsible for developing and implementing groundwater monitoring plans for specific aquifers, focusing on the assessment of long-term water quality
+  and potential threats to well-field water quality. This person has extensive experience in groundwater flow modeling, particle-tracking analysis, and water-quality data collection. They are skilled in
+  determining the source contributions to monitoring wells and supply wells, as well as selecting monitoring wells for annual sampling based on groundwater travel times and contributing recharge areas.
+  This individual is responsible for providing an estimate of the maximum potential lead time available for remedial action, while minimizing sample redundancy.
+expertise:
+  general_domain_top1pct: geology
+  specific_domain_top1pct: hydrogeology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

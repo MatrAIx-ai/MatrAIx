@@ -1,0 +1,102 @@
+id: 00000970
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 970
+data:
+  user 1 personas: 'I enjoy fishing.
+
+    I have a dog named bob.
+
+    I like to make boats on the weekends.
+
+    I live on an island.'
+  user 2 personas: 'I have never been on a date.
+
+    I love to read.
+
+    I once wrote a biography of my favorite actor.
+
+    I believe in karma.
+
+    I adopted all my dogs.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What''s your name?
+
+    User 2: My name is [User 2''s name].
+
+    User 1: Nice to meet you, [User 2''s name]. What do you like to do for fun?
+
+    User 2: I love to read, write, and spend time with my dogs.
+
+    User 1: That sounds like a lot of fun! I love to read too. What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but I especially like biographies, mystery novels, and historical fiction.
+
+    User 1: I love biographies too! I once wrote a biography of my favorite actor.
+
+    User 2: That''s awesome! I''m sure it was a great read.
+
+    User 1: Thanks! It was a lot of fun to write. I''m glad you think so.
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to fish, go camping, and make boats on the weekends.
+
+    User 2: Fishing and camping sound like a lot of fun! I''ve never been fishing before.
+
+    User 1: You should try it sometime! It''s really relaxing.
+
+    User 2: I might have to try it. I''m always up for trying new things.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a writer.
+
+    User 1: That''s awesome! I''ve always wanted to be a writer.
+
+    User 2: It''s a lot of fun, but it can be hard work sometimes.
+
+    User 1: I bet it is. But I''m sure it''s rewarding too.
+
+    User 2: It is. I love getting to create stories and characters and share them with the world.
+
+    User 1: That''s great! I''m sure you''re very good at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: That''s a tough question. I have so many favorites. But I think I''d have to say "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: That''s a great book! I loved it too.
+
+    User 2: Me too! It''s so beautiful and tragic.
+
+    User 1: It is. It''s one of my favorite books of all time.
+
+    User 2: Mine too. So, what do you think of karma?
+
+    User 1: I believe in karma. I think it''s important to do good things and treat people well, because you never know what karma will bring back to you.
+
+    User 2: I agree. I think karma is a powerful force.
+
+    User 1: Me too. I try to live my life with karma in mind.
+
+    User 2: That''s a good way to live. I try to do the same.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m not sure yet. I might go to the beach or go camping.
+
+    User 1: Those both sound like fun! I''m going fishing with some friends.
+
+    User 2: That sounds like a great time! I hope you catch a lot of fish.
+
+    User 1: Thanks! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,68 @@
+id: 00008716
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8716
+data:
+  user 1 personas: 'My favorite holiday is halloween because i like dressing up.
+
+    I ride my red bike to work everyday.
+
+    My favorite pass time is gazing at clouds.
+
+    I love chocolate milk shakes.
+
+    My best friend is my dog allie.'
+  user 2 personas: 'I work at a hotel overnight.
+
+    Pop is my favorite music.
+
+    I eat more junk food than i really should.
+
+    I enjoy video games.
+
+    I write in my spare time.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to write, play video games, and listen to pop music.
+
+    User 1: That''s cool! I like to ride my bike, gaze at clouds, and eat chocolate milk shakes.
+
+    User 2: Those all sound like fun things to do!
+
+    User 1: What''s your favorite holiday?
+
+    User 2: Halloween! I love dressing up and going to parties.
+
+    User 1: Me too! I also love the food and decorations.
+
+    User 2: What do you like to do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: That sounds like a fun job!
+
+    User 1: It is! I love helping kids learn.
+
+    User 2: I can imagine. What''s your favorite thing to teach?
+
+    User 1: I like to teach science. I think it''s so interesting!
+
+    User 2: Science is cool! I love learning about the world around us.
+
+    User 1: Me too! That''s why I love teaching science.
+
+    User 2: I''m glad you enjoy your job.
+
+    User 1: Thanks! I do. I''m glad I could chat with you today.
+
+    User 2: Me too! Have a good day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

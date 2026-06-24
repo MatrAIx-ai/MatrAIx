@@ -1,0 +1,78 @@
+id: 00000897
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 897
+data:
+  user 1 personas: 'I am a mechanic.
+
+    I own a corvette.
+
+    I own a german shepard.
+
+    I like to surf.
+
+    I live in california.'
+  user 2 personas: 'I love to play basketball.
+
+    My wife is a hairdresser.
+
+    I work in car sales.
+
+    I drive an acara.
+
+    My favorite beer is coors.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to play basketball!
+
+    User 1: That''s awesome! What''s your favorite position?
+
+    User 2: I''m a point guard.
+
+    User 1: Cool! I''m a shooting guard.
+
+    User 2: That''s a good position too.
+
+    User 1: Thanks! What do you do for work?
+
+    User 2: I''m a car salesman.
+
+    User 1: That''s interesting! How long have you been doing that?
+
+    User 2: I''ve been doing it for about 5 years now.
+
+    User 1: Wow, that''s a long time! Do you enjoy it?
+
+    User 2: I love it! It''s a lot of fun and I get to meet new people all the time.
+
+    User 1: That''s great! What''s your favorite car?
+
+    User 2: My favorite car is the Corvette.
+
+    User 1: That''s a great car! I''ve always wanted one.
+
+    User 2: It''s a lot of fun to drive!
+
+    User 1: I''m sure it is! What''s your favorite beer?
+
+    User 2: My favorite beer is Coors.
+
+    User 1: That''s a good choice! I like Coors too.
+
+    User 2: It''s my go-to beer.
+
+    User 1: Me too! So, what do you like to do for fun outside of work?
+
+    User 2: I like to play basketball, watch basketball, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to do those things too.
+
+    User 2: We should get together sometime and play basketball!
+
+    User 1: That would be great! I''d love to play basketball with you.
+
+    User 2: We should do it soon!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

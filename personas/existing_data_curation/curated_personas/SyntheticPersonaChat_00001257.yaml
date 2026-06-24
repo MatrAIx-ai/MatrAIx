@@ -1,0 +1,66 @@
+id: '00001257'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1257
+data:
+  user 1 personas: 'I could eat less.
+
+    My three ring binder has my drawings of ponies all over it.
+
+    People say i talk when i am not supposed to.
+
+    I hate that my mom made me get braces.'
+  user 2 personas: 'I have a dog and two cats.
+
+    I like to go for runs.
+
+    I live by myself.
+
+    I play the guitar.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is Alex.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go for runs, play the guitar, and hang out with my animals.
+
+    User 1: I like to go for runs too! What kind of animals do you have?
+
+    User 2: I have a dog and two cats.
+
+    User 1: What''s your dog''s name?
+
+    User 2: His name is Buddy. He''s a golden retriever.
+
+    User 1: I love golden retrievers! They''re so friendly.
+
+    User 2: Yeah, he''s the best. What''s your favorite thing to do?
+
+    User 1: I like to draw. I have a three ring binder full of my drawings.
+
+    User 2: Really? What do you draw?
+
+    User 1: Mostly ponies. I''m a big fan of My Little Pony.
+
+    User 2: I''ve never seen that show. What''s it about?
+
+    User 1: It''s a cartoon about a group of magical ponies who live in a magical land. It''s really cute and fun.
+
+    User 2: It sounds interesting. I might have to check it out.
+
+    User 1: You should! It''s a lot of fun.
+
+    User 2: So, what do you like about drawing?
+
+    User 1: I like being able to express myself creatively. I also like the challenge of trying to capture what I see in my mind on paper.
+
+    User 2: I can see why you like it. It''s a great way to express yourself.
+
+    User 1: Thanks. I''m glad you like it.
+
+    User 2: I do. It''s really cool.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

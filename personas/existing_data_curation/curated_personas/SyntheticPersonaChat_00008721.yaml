@@ -1,0 +1,78 @@
+id: 00008721
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8721
+data:
+  user 1 personas: 'I am a fourteen year old living with my mom and grandparents.
+
+    I like swimming.
+
+    My favorite thing to do is research race cars in my free time.
+
+    I only have three best friends.'
+  user 2 personas: 'I currently work in an office job.
+
+    I enjoy running.
+
+    My favorite color is green.
+
+    I enjoy visiting national parks.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, go to national parks, and read.
+
+    User 1: Oh, I like running too! What''s your favorite race distance?
+
+    User 2: I like running marathons. I''ve run two in the past year.
+
+    User 1: Wow, that''s impressive! I''ve never run a marathon before.
+
+    User 2: You should try it! It''s a great experience.
+
+    User 1: I might, but I''m not sure I''m ready for that yet.
+
+    User 2: You''ll get there! Just keep training and you''ll be ready in no time.
+
+    User 1: Thanks for the encouragement!
+
+    User 2: No problem!
+
+    User 1: What are your favorite national parks?
+
+    User 2: I like Bryce Canyon and Zion National Parks. They''re both beautiful and have some amazing hiking trails.
+
+    User 1: I''ve heard good things about Bryce Canyon. I''ve always wanted to go there.
+
+    User 2: You should! It''s a great place to visit.
+
+    User 1: Maybe I will next summer.
+
+    User 2: That would be fun!
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to read, watch movies, and spend time with my family and friends.
+
+    User 1: Sounds like you have a lot of interests.
+
+    User 2: I do! I try to stay busy.
+
+    User 1: That''s good. What''s your favorite book?
+
+    User 2: I have a lot of favorite books, but one of my favorites is "The Great Gatsby."
+
+    User 1: I''ve heard good things about that book. I''ve never read it, but I''ve been meaning to.
+
+    User 2: You should! It''s a great story.
+
+    User 1: Maybe I will. Thanks for the recommendation.
+
+    User 2: No problem!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

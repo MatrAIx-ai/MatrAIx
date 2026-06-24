@@ -1,0 +1,76 @@
+id: '00000672'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 672
+data:
+  user 1 personas: 'I like fishing.
+
+    I m a simple man.
+
+    I drink beers and go to the creek.
+
+    I usually catch sunfish.
+
+    I can t eat them but they re pretty.'
+  user 2 personas: 'I am going bald.
+
+    I make my own clothes.
+
+    I ran into jimmy fallon just the other day.
+
+    I play the piano.'
+  Best Generated Conversation: 'User 1: Hey there! I''m [user 1 name], what''s your name?
+
+    User 2: Hi there, nice to meet you. My name is [user 2 name].
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to make my own clothes, play the piano, and go bald.
+
+    User 1: That''s interesting! I''ve never heard of someone who makes their own clothes before.
+
+    User 2: I''ve been making my own clothes since I was a kid. I like to be creative and I like to wear clothes that are unique.
+
+    User 1: That''s really cool! I''ve always wanted to learn how to sew.
+
+    User 2: It''s not too hard! There are a lot of great resources online that can teach you how to start.
+
+    User 1: I''ll have to check that out.
+
+    User 2: You should! It''s really fun and it''s a great way to express your creativity.
+
+    User 1: Do you sell your clothes?
+
+    User 2: Yeah, I do! I have an online store where I sell my handmade clothes.
+
+    User 1: Oh, that''s awesome! I''ll have to check it out.
+
+    User 2: You should! I''m always adding new designs.
+
+    User 1: What kind of music do you like to play?
+
+    User 2: I like to play a variety of music, but my favorite is classical music.
+
+    User 1: Oh, that''s cool! I''ve always wanted to learn how to play the piano.
+
+    User 2: It''s not too hard! There are a lot of great resources online that can teach you how to start.
+
+    User 1: I''ll have to check that out.
+
+    User 2: You should! It''s really fun and it''s a great way to relax.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a musician. I play the piano and I write my own music.
+
+    User 1: That''s awesome! I''ve always wanted to be a musician.
+
+    User 2: It''s a lot of fun! But it''s also a lot of work.
+
+    User 1: I bet. But it''s worth it if you love what you do.
+
+    User 2: I agree!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: '00005150'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5150
+data:
+  user 1 personas: 'My favorite hobby is reading.
+
+    My husband is an author and we have twins together.
+
+    I am a digital artist.
+
+    I was born in france and moved to canada.
+
+    My favorite author is stephen king.'
+  user 2 personas: 'My favorite color is purple.
+
+    I go to church on sunday.
+
+    I have a 3 year old.
+
+    I am a 1st grade teacher.
+
+    My father is a preacher.'
+  Best Generated Conversation: 'User 1: Hi there! I''m a digital artist from Canada.
+
+    User 2: Hi! I''m a 1st grade teacher from the US.
+
+    User 1: That''s cool! I love art. I''m also a big fan of Stephen King.
+
+    User 2: Me too! I love his books. I''m currently reading The Stand.
+
+    User 1: That''s a great book! I''ve read it a few times.
+
+    User 2: I''m almost finished with it. It''s so good!
+
+    User 1: I''m glad you''re enjoying it.
+
+    User 2: Yeah, I''m really enjoying it. I''m a big fan of post-apocalyptic fiction.
+
+    User 1: Me too! I love the idea of a world where everything has changed.
+
+    User 2: Yeah, it''s so interesting to think about how the world would be different if everything was gone.
+
+    User 1: It really is. I think it would be a lot harder, but it could also be a lot more free.
+
+    User 2: I think you''re right. It would be a lot harder, but it could also be a lot more exciting.
+
+    User 1: Yeah, I think it would be an interesting experience.
+
+    User 2: Me too. I''d love to live in a post-apocalyptic world for a day or two.
+
+    User 1: Me too! I think it would be a lot of fun.
+
+    User 2: Yeah, it would be.
+
+    User 1: Well, it was nice talking to you.
+
+    User 2: You too'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

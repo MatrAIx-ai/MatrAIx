@@ -1,0 +1,64 @@
+id: 00003519
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3519
+data:
+  user 1 personas: 'I work at a power plant.
+
+    I like to eat spaghetti.
+
+    My favorite thing to do is read.
+
+    My newest car is a chevy.'
+  user 2 personas: 'I love the summer.
+
+    I love mexican food.
+
+    I work at a animal clinic.
+
+    I have two kids i enjoy being on social media.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, my name is [user 2''s name].
+
+    User 1: Where do you work?
+
+    User 2: I work at an animal clinic.
+
+    User 1: Oh, that''s cool. I like animals.
+
+    User 2: Me too! What''s your favorite animal?
+
+    User 1: I think my favorite animal is the penguin. They''re so cute and adorable.
+
+    User 2: I love penguins too! They''re so funny and graceful.
+
+    User 1: Me too! What''s your favorite thing to do at work?
+
+    User 2: I love working with the animals. It''s so rewarding to help them get better.
+
+    User 1: That''s great! What''s the most challenging part of your job?
+
+    User 2: The most challenging part is when animals are sick or injured. It''s hard to see them hurting.
+
+    User 1: I can imagine. Do you have any pets?
+
+    User 2: Yes, I have two dogs and a cat.
+
+    User 1: Oh, that''s great! What are their names?
+
+    User 2: My dogs are named Bailey and Buddy, and my cat is named Mittens.
+
+    User 1: Those are great names! Do you have any other hobbies?
+
+    User 2: Yes, I love to read and go to the beach.
+
+    User 1: Me too! I love to read books and swim in the ocean.
+
+    User 2: That''s great! We have a lot in common.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

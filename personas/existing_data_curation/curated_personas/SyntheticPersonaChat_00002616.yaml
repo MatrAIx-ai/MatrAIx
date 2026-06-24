@@ -1,0 +1,94 @@
+id: '00002616'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2616
+data:
+  user 1 personas: 'I sing in the shower.
+
+    I am very shy.
+
+    I have never had alcohol.
+
+    I am content with my life.
+
+    I own a dog who is my best friend.'
+  user 2 personas: 'I like to read a lot of books.
+
+    I like spending time with my friends and family.
+
+    I am not much of a fan of hot weather.
+
+    I like listening to all genres of music except country music.
+
+    I would travel the world if i could.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: Nice to meet you!
+
+    User 2: Nice to meet you too!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, spend time with friends and family, and listen to music.
+
+    User 1: That sounds fun! I like to sing in the shower, spend time with my dog, and I''m content with my life.
+
+    User 2: Oh, that''s cool! I''ve never heard of someone singing in the shower.
+
+    User 1: It''s a great way to relax and have some fun.
+
+    User 2: I might have to try that sometime.
+
+    User 1: I''m sure you''d like it.
+
+    User 2: So, what do you like to read?
+
+    User 1: I like to read a variety of things, but I''m mostly interested in science fiction and fantasy.
+
+    User 2: Oh, that''s cool! I like to read a lot of different things too, but I''m not much of a fan of hot weather.
+
+    User 1: I can understand that. I''m not a fan of cold weather myself.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I''m a software engineer.
+
+    User 2: Oh, that''s cool! I''m a nurse.
+
+    User 1: Oh, that''s awesome! I''ve always respected nurses.
+
+    User 2: Thank you! I think it''s a great profession.
+
+    User 1: So, what do you think about traveling the world?
+
+    User 2: I would love to travel the world if I could! I''ve always wanted to see the Great Wall of China.
+
+    User 1: That would be amazing! I would love to see that too.
+
+    User 2: So, what do you like most about your life?
+
+    User 1: I love my dog. He''s my best friend.
+
+    User 2: Oh, that''s sweet! I love my dog too.
+
+    User 1: So, what do you think about our conversation so far?
+
+    User 2: I think it''s been great! I''ve learned a lot about you.
+
+    User 1: I''m glad you enjoyed it! I''ve learned a lot about you too.
+
+    User 2: So, what do you want to do next?
+
+    User 1: I''m not sure yet. What do you want to do?
+
+    User 2: We could chat for a while longer, or we could do something else.
+
+    User 1: I think we could chat for a while longer.
+
+    User 2: Sounds good. I''m enjoying our conversation.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

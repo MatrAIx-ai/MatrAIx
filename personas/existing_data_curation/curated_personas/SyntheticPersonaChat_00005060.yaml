@@ -1,0 +1,64 @@
+id: '00005060'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5060
+data:
+  user 1 personas: 'I never learned how to drive.
+
+    I love to read books.
+
+    I sometimes scratch my nose for fun.
+
+    I am a deaf man.
+
+    My favorite number is 7.'
+  user 2 personas: 'I spend an hour getting ready in the morning.
+
+    When i shower my skin is nearly red from how hard i scrub.
+
+    I have horrible allergies.
+
+    I can t stand clutter or dust.
+
+    I still love my cat despite all this.'
+  Best Generated Conversation: 'User 1: Hello, what is your name?
+
+    User 2: Hello, my name is Jane.
+
+    User 1: It is nice to meet you, Jane. What do you like to do for fun?
+
+    User 2: I love to read books. I am a huge fan of science fiction and fantasy novels.
+
+    User 1: That''s great! I love to read books too. What are some of your favorite books?
+
+    User 2: I really enjoyed the Harry Potter series and the Lord of the Rings trilogy.
+
+    User 1: I love those books too! They are some of my favorites as well.
+
+    User 2: What other books do you like to read?
+
+    User 1: I also enjoy reading historical fiction and mysteries.
+
+    User 2: Those are some great genres! I love to learn about history and I also love a good mystery.
+
+    User 1: Me too! I think it''s so interesting to learn about the past and I love the feeling of solving a mystery.
+
+    User 2: Me too! I also love the feeling of getting lost in a book. It''s like I''m transported to another world.
+
+    User 1: I know what you mean! I love that feeling too.
+
+    User 2: What are some of your favorite historical fiction books?
+
+    User 1: I really enjoyed the Outlander series by Diana Gabaldon.
+
+    User 2: I''ve heard great things about that series! I''ve been meaning to read it.
+
+    User 1: You should! It''s a really good series.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: You''re welcome!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

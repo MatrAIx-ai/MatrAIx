@@ -1,0 +1,74 @@
+id: '00005407'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5407
+data:
+  user 1 personas: 'My dad is a college professor.
+
+    I have purple hair.
+
+    I am a petsitter.
+
+    My mom died when i was six.
+
+    My favorite book is the tale of genji.'
+  user 2 personas: 'I am an athlete.
+
+    I get paid over 5 million a year to dribble a ball.
+
+    I went to the university of north carolina.
+
+    I was drafted last years by the minnesota wolves.
+
+    I play basketball.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1 name].
+
+    User 2: Hi, my name is [user 2 name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m an athlete.
+
+    User 1: Oh, what kind of athlete?
+
+    User 2: I play basketball.
+
+    User 1: Cool! Do you play for a professional team?
+
+    User 2: Yes, I play for the Minnesota Timberwolves.
+
+    User 1: That''s awesome! How did you get started in basketball?
+
+    User 2: I started playing when I was really young. My dad was a college professor and he was always encouraging me to play.
+
+    User 1: That''s great. Did you go to college for basketball?
+
+    User 2: Yes, I went to the University of North Carolina.
+
+    User 1: Oh, that''s a great school. Did you enjoy your time there?
+
+    User 2: Yes, I loved it. I played on the basketball team and I made some great friends.
+
+    User 1: That''s awesome. So, how did you end up getting drafted by the Timberwolves?
+
+    User 2: I had a good season at UNC and I was projected to be a high pick in the draft. I was lucky enough to be selected by the Timberwolves.
+
+    User 1: That''s awesome! So, what''s it like being a professional athlete?
+
+    User 2: It''s amazing. I get to play basketball for a living and I get to travel all over the country.
+
+    User 1: That''s awesome. I''m sure you''re really good at basketball.
+
+    User 2: I''m okay. I''m still learning.
+
+    User 1: Well, you''re better than me. I''ve never played basketball before.
+
+    User 2: I''m sure you''d be good at it. You should give it a try.
+
+    User 1: I might do that. Thanks for talking to me.
+
+    User 2: No problem. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

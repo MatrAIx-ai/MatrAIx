@@ -1,0 +1,19 @@
+id: 00012487
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12487
+persona_description: A scientist and engineer with expertise in seismology, particularly in the analysis of seismic signals and the determination of source characteristics of near and above-ground explosions.
+  The individual has developed a method to track above-ground explosions and has used it to analyze the seismic signals from explosions in New Mexico and Syria. The researcher is interested in understanding
+  the precise cause of explosions and is seeking to extend the method to other classes of events, including mining events, military explosions, industrial accidents, plane crashes, and potential terrorist
+  attacks. The scientist is also interested in the tradeoffs between yield and depth in determining the strength and source of near and above-ground blasts.
+expertise:
+  general_domain_top1pct: earth sciences
+  specific_domain_top1pct: seismology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

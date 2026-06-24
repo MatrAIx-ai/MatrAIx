@@ -1,0 +1,74 @@
+id: '00005233'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5233
+data:
+  user 1 personas: 'I am disabled and cannot walk.
+
+    I do not eat bread.
+
+    I take vitamin c when i have a cold.
+
+    My friend once bought me a car.'
+  user 2 personas: 'I like to go shopping.
+
+    I wanted to be a nurse.
+
+    I live in a small town.
+
+    I went to college.
+
+    Driving in the country side is a pastime.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go shopping, go for walks in the countryside, and play video games.
+
+    User 1: I love to go shopping too! I also like to read and watch movies.
+
+    User 2: What kind of movies do you like to watch?
+
+    User 1: I like to watch all kinds of movies, but I especially like horror movies and comedies.
+
+    User 2: I love horror movies too! What''s your favorite horror movie?
+
+    User 1: My favorite horror movie is The Conjuring.
+
+    User 2: That''s a great movie! I love the atmosphere and the scares.
+
+    User 1: Me too! I also like the characters.
+
+    User 2: Yeah, they''re really well-developed.
+
+    User 1: What''s your favorite comedy movie?
+
+    User 2: My favorite comedy movie is The Hangover.
+
+    User 1: That''s a great movie! I love the cast and the humor.
+
+    User 2: Me too! I also love the story.
+
+    User 1: What else do you like to do for fun?
+
+    User 2: I like to go for walks in the countryside. I live in a small town, so there''s lots of beautiful scenery to enjoy.
+
+    User 1: That sounds really nice. I love being out in nature.
+
+    User 2: Me too! It''s so peaceful and relaxing.
+
+    User 1: What else do you like about your town?
+
+    User 2: I love the community. Everyone knows everyone else, and there''s always something going on.
+
+    User 1: That sounds really nice. I''ve always wanted to live in a small town.
+
+    User 2: You should do it! It''s a great place to raise a family.
+
+    User 1: I might just do that!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

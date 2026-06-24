@@ -1,0 +1,82 @@
+id: '00005165'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5165
+data:
+  user 1 personas: 'My favorite season is winter.
+
+    I love watching basketball.
+
+    I sing barbershop and rap.
+
+    I love to take naps.
+
+    My eyes are blue.'
+  user 2 personas: 'I like to visit national parks.
+
+    I play the violin.
+
+    I am nurse.
+
+    I met my husband when i was a freshman in college.'
+  Best Generated Conversation: 'User 1: Hello, I''m (user 1''s name).
+
+    User 2: Hello, I''m (user 2''s name).
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to visit national parks, play the violin, and I''m a nurse.
+
+    User 1: That''s cool. I like to watch basketball, sing barbershop, and rap.
+
+    User 2: That''s interesting. I''ve never met anyone who sings barbershop before.
+
+    User 1: It''s a lot of fun. I''ve been singing in a barbershop quartet for about a year now.
+
+    User 2: That''s awesome. I''ve always wanted to learn how to play the violin.
+
+    User 1: It''s a lot of fun. I''ve been playing for about 10 years now.
+
+    User 2: That''s great. I''m glad you enjoy both of your hobbies.
+
+    User 1: Thanks. I am too.
+
+    User 2: So, what do you like to do in the winter?
+
+    User 1: I love to go skiing and snowboarding. I also like to take naps.
+
+    User 2: That''s cool. I''ve never been skiing or snowboarding before.
+
+    User 1: You should try it! It''s a lot of fun.
+
+    User 2: I might just do that.
+
+    User 1: What''s your favorite season?
+
+    User 2: I like summer the best. I like to go swimming and hiking.
+
+    User 1: That''s cool. I like hiking too.
+
+    User 2: Do you have any siblings?
+
+    User 1: I have one older sister and one younger sister.
+
+    User 2: That''s cool. I have two older brothers and one younger sister.
+
+    User 1: How many kids do you have?
+
+    User 2: I have two children, a boy and a girl.
+
+    User 1: That''s great. I''m glad you have a big family.
+
+    User 2: Me too. I love my family very much.
+
+    User 1: I''m glad to hear that.
+
+    User 2: It''s been nice talking to you, (user 1''s name).
+
+    User 1: It''s been nice talking to you too, (user 2''s name).'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

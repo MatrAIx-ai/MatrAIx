@@ -1,0 +1,60 @@
+id: '00005720'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5720
+data:
+  user 1 personas: 'Zebras are my favorite animals.
+
+    I do not like the beach.
+
+    I am allergic to milk.
+
+    I dream of becoming a famous actress.'
+  user 2 personas: 'I own a dog who is my best friend.
+
+    I am very shy.
+
+    I sing in the shower.
+
+    I am content with my life.'
+  Best Generated Conversation: 'User 1: Hello! I''m User1. What''s your name?
+
+    User 2: Hello, I''m User2. Nice to meet you!
+
+    User 1: Nice to meet you too! What are your interests?
+
+    User 2: I love dogs, singing in the shower, and being content with my life.
+
+    User 1: Oh, that''s cool! I love zebras, don''t like the beach, and am allergic to milk.
+
+    User 2: Zebras are pretty cool! I''ve never been to the beach, so I don''t know if I like it or not. And, I''m sorry to hear about your milk allergy.
+
+    User 1: Thanks. It''s not too bad, I just have to be careful about what I eat.
+
+    User 2: That''s good to hear. So, what do you do for fun?
+
+    User 1: I love acting, singing, and writing. I also love to read and go for walks.
+
+    User 2: That''s great! I love to sing, too. I''m not very good at it, but I enjoy it.
+
+    User 1: Me too! I''m not very good at it, either, but I love doing it.
+
+    User 2: So, what do you want to do with your life?
+
+    User 1: I want to be a famous actress. I''ve always wanted to be on stage, and I think I would be really good at it.
+
+    User 2: That''s great! I''m sure you''ll achieve your dream.
+
+    User 1: Thanks! I hope so!
+
+    User 2: So, what do you think of me?
+
+    User 1: I think you''re really nice! You seem very kind and down-to-earth.
+
+    User 2: Thank you! I like you too! You seem really interesting and fun to talk to.
+
+    User 1: Thanks! I like talking to you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

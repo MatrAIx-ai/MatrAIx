@@ -1,0 +1,68 @@
+id: 00006688
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6688
+data:
+  user 1 personas: 'My favorite place to go is the mall.
+
+    I was born completely deaf.
+
+    I enjoy playing tennis.
+
+    I have a pug named corky.
+
+    I am single and go on dates regularly.'
+  user 2 personas: 'I love to do yoga.
+
+    I work for a newspaper.
+
+    My favorite color is grey.
+
+    My passion is writing.'
+  Best Generated Conversation: 'User 1: What''s your favorite way to spend your free time?
+
+    User 2: I love to do yoga and write.
+
+    User 1: What kind of writing do you do?
+
+    User 2: I''m a writer for a newspaper.
+
+    User 1: That''s cool! I love to read the newspaper.
+
+    User 2: Thanks! I''m glad to hear that.
+
+    User 1: What''s your favorite thing about writing for the newspaper?
+
+    User 2: I love being able to share my stories with people.
+
+    User 1: That''s a great way to give back to the community.
+
+    User 2: I think so too.
+
+    User 1: What''s your favorite thing to write about?
+
+    User 2: I like to write about local news and events.
+
+    User 1: That''s really interesting. I''m not very good at keeping up with local news.
+
+    User 2: You should try reading the newspaper more often!
+
+    User 1: I will! I''m sure I''d learn a lot.
+
+    User 2: I''m sure you would.
+
+    User 1: What''s your favorite thing about yoga?
+
+    User 2: I love the way it helps me to relax and de-stress.
+
+    User 1: That''s great! I''ve always wanted to try yoga, but I''ve never had the time.
+
+    User 2: You should definitely try it! It''s really good for you.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: You''re welcome! I hope you enjoy it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

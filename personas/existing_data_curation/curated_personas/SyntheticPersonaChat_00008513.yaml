@@ -1,0 +1,89 @@
+id: 00008513
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8513
+data:
+  user 1 personas: 'I lived most of my life not knowing who bob marley was.
+
+    I work over 60 hours a week as a restaurant manager.
+
+    I despise my boss.
+
+    When i cut loose , i lose control.
+
+    We help each other out in my family.'
+  user 2 personas: 'I love the rain.
+
+    I sleep on a single bed.
+
+    I drive a van.
+
+    I prefer winter.
+
+    My favorite food is pizza.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to read, cook, and go for walks in the rain.
+
+    User 1: That sounds nice. I like to read too. What are some of your favorite books?
+
+    User 2: I like to read a lot of different genres, but I''m especially fond of historical fiction and mystery novels.
+
+    User 1: I like those genres too! What are some of your favorite books in those genres?
+
+    User 2: For historical fiction, I love the Outlander series by Diana Gabaldon and the Pillars of the Earth series by Ken Follett. For mysteries, I like the Jane Austen mysteries by Stephanie Barron
+    and the Harry Bosch series by Michael Connelly.
+
+    User 1: Those are all great books! I''ve read some of them too.
+
+    User 2: Oh, that''s great! We have a lot in common then.
+
+    User 1: Yeah, I think so too.
+
+    User 2: So, what do you do for a living?
+
+    User 1: I work as a restaurant manager.
+
+    User 2: Oh, that must be a lot of work.
+
+    User 1: It is, but I love it. I get to meet a lot of interesting people and I get to be creative with the menu.
+
+    User 2: That sounds really cool. I''m glad you like your job.
+
+    User 1: Thanks. I do.
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: In my free time, I like to go out with friends, watch movies, and read.
+
+    User 2: That sounds like fun. I like to do a lot of the same things.
+
+    User 1: Oh, that''s great! We should get together sometime and do something fun.
+
+    User 2: That would be great!
+
+    User 1: Great! Let''s exchange numbers.
+
+    User 2: Okay.
+
+    User 1: Here''s my number.
+
+    User 2: Thanks.
+
+    User 1: No problem.
+
+    User 2: I''ll text you later.
+
+    User 1: Okay.
+
+    User 2: Bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

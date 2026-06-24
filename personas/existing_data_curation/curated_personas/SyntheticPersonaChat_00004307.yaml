@@ -1,0 +1,68 @@
+id: '00004307'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4307
+data:
+  user 1 personas: 'I drive a restored mustang.
+
+    I m a college student.
+
+    My father is a doctor.
+
+    I like action movies.'
+  user 2 personas: 'I wait tables.
+
+    My hair is long and brown.
+
+    I have a little girl.
+
+    My favorite flower is a rose.
+
+    I m taking online classes.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: I''m (user 2''s name).
+
+    User 1: It''s nice to meet you, (user 2''s name). What do you do for a living?
+
+    User 2: I''m a waitress.
+
+    User 1: Oh, that''s cool! I''m a college student.
+
+    User 2: What are you studying?
+
+    User 1: I''m studying business.
+
+    User 2: Oh, that''s a good major. What do you want to do with it?
+
+    User 1: I''m not sure yet. Maybe I''ll go into business consulting.
+
+    User 2: That would be a good job.
+
+    User 1: Yeah, I think so too.
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to go to the movies, play video games, and hang out with my friends.
+
+    User 2: Oh, that''s cool. I like to do the same things.
+
+    User 1: Nice! We should hang out sometime.
+
+    User 2: Yeah, that would be fun.
+
+    User 1: Great! I''ll let you know when I''m free.
+
+    User 2: Okay, sounds good.
+
+    User 1: Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

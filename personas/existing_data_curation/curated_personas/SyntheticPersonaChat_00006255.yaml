@@ -1,0 +1,80 @@
+id: '00006255'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6255
+data:
+  user 1 personas: 'I like to perform stand up comedy.
+
+    My sister belongs to a cult and has not spoken to the family in years.
+
+    My father was a member of the communist party.
+
+    I enjoy deep sea diving.'
+  user 2 personas: 'My favorite sport is football.
+
+    I am former military.
+
+    I recently bought a camper.
+
+    I drive a truck for a living.
+
+    I exercise 4 times a week.'
+  Best Generated Conversation: 'User 1: My sister belongs to a cult and has not spoken to the family in years.
+
+    User 2: That''s really sad. What kind of cult?
+
+    User 1: It''s a Scientology cult.
+
+    User 2: Oh, I''ve heard about those. They''re pretty weird.
+
+    User 1: Yeah, they are. I''m glad I''m not involved in it.
+
+    User 2: Me too.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, cool. I''ve always wanted to be a truck driver.
+
+    User 2: It''s a lot of fun. I get to see a lot of different places.
+
+    User 1: That''s what I like about it.
+
+    User 2: I also like the freedom of being my own boss.
+
+    User 1: That''s a big plus.
+
+    User 2: Yeah, I''m pretty happy with my job.
+
+    User 1: That''s great.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a stand-up comedian.
+
+    User 2: Oh, that''s cool. I''ve never been to a stand-up comedy show.
+
+    User 1: You should go! They''re really funny.
+
+    User 2: I will sometime.
+
+    User 1: You won''t regret it.
+
+    User 2: I hope not.
+
+    User 1: So, what kind of comedy do you do?
+
+    User 2: I do a lot of observational comedy.
+
+    User 1: Oh, that''s what I like.
+
+    User 2: Yeah, I think it''s really relatable.
+
+    User 1: It is. I''m sure you''re great.
+
+    User 2: Thanks. I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00002000'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2000
+data:
+  user 1 personas: 'I love the beatles.
+
+    I have trouble getting along with family.
+
+    In allergic to peanuts.
+
+    I am usually very shy.'
+  user 2 personas: 'I had a gig at local theater last night.
+
+    I work as a stand up comedian.
+
+    I come from a small town.
+
+    My favorite drink is cuba libre.
+
+    I did a few small roles in tv series.'
+  Best Generated Conversation: 'User 1: Hi! How are you?
+
+    User 2: I''m great! I just had a gig at a local theater last night.
+
+    User 1: Oh, that''s awesome! What kind of gig?
+
+    User 2: I''m a stand up comedian.
+
+    User 1: Really? That''s so cool! I''ve always wanted to try stand up comedy.
+
+    User 2: It''s a lot of fun! But it can be tough to get started.
+
+    User 1: I can imagine. So, what''s it like being a stand up comedian?
+
+    User 2: It''s really challenging, but it''s also really rewarding. I love getting up on stage and making people laugh.
+
+    User 1: That''s awesome! I''m sure you''re great at it.
+
+    User 2: Thanks! I''m still learning, but I''m getting better every day.
+
+    User 1: Well, I''m sure you''ll do great.
+
+    User 2: Thanks! I appreciate it.
+
+    User 1: So, what''s your favorite thing about being a stand up comedian?
+
+    User 2: My favorite thing is making people laugh. I love being able to make someone''s day a little brighter.
+
+    User 1: That''s so sweet! I''m sure you make a lot of people happy.
+
+    User 2: I hope so!
+
+    User 1: Well, I''m sure you''re going to do great things.
+
+    User 2: Thanks! I appreciate that.
+
+    User 1: No problem! Have a good day!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

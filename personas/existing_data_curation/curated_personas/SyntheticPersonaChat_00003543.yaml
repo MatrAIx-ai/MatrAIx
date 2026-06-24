@@ -1,0 +1,56 @@
+id: '00003543'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3543
+data:
+  user 1 personas: 'My mother lives with me.
+
+    I like to plant flowers in my gardens.
+
+    I like to take my dog for long walks.
+
+    I have a lizard named nagini.
+
+    I enjoy cooking for people.'
+  user 2 personas: 'I m applying for publishing jobs.
+
+    The only autographs i ve ever wanted are from authors.
+
+    I used to wear glasses as a child.
+
+    My mother is a librarian.
+
+    My favorite color is green.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I love to read books, and I''m applying for publishing jobs.
+
+    User 1: That''s great! I also love to read. What are some of your favorite books?
+
+    User 2: I love all kinds of books, but my favorite genre is fantasy.
+
+    User 1: Me too! I love the world building in fantasy books.
+
+    User 2: Me too! I love getting lost in a different world.
+
+    User 1: I also like to cook for people. What are your favorite foods to cook?
+
+    User 2: I love to make pasta dishes. I''m not very good at cooking other things, but I''m a pro at pasta.
+
+    User 1: I love pasta too! I''m not very good at cooking it, but I love eating it.
+
+    User 2: We should cook together sometime! I''ll teach you how to make some of my favorite pasta dishes.
+
+    User 1: That would be great! I love learning new things.
+
+    User 2: Me too! I love learning about new cultures and different ways to cook.
+
+    User 1: I think we''ll get along great. We seem to have a lot in common.
+
+    User 2: I think so too! I''m glad I met you.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

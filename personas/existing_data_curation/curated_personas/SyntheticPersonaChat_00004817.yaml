@@ -1,0 +1,68 @@
+id: 00004817
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4817
+data:
+  user 1 personas: 'Math is my favorite subject.
+
+    I go to high school.
+
+    I live in the united states.
+
+    I play ice hockey.
+
+    I am a boy.'
+  user 2 personas: 'Cooking is my passion.
+
+    My favorite color is blue.
+
+    I like to run.
+
+    My hair is long and blonde.'
+  Best Generated Conversation: 'User 1: Hi! My name is [user 1].
+
+    User 2: Hi! My name is [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to cook, run, and read.
+
+    User 1: I like to play ice hockey and math is my favorite subject.
+
+    User 2: I''ve never played ice hockey before. Is it fun?
+
+    User 1: It''s really fun! You get to skate around and hit a puck into a goal.
+
+    User 2: That sounds like it would be really exciting!
+
+    User 1: It is! I love the rush of adrenaline when you score a goal.
+
+    User 2: I can imagine! I''ve never been much of a sports person, but I think I could get into ice hockey.
+
+    User 1: You should definitely try it! It''s a lot of fun.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! What do you like to read about?
+
+    User 2: I like to read about history, cooking, and science.
+
+    User 1: I like to read about history too! I''m a big fan of the American Civil War.
+
+    User 2: That''s a really interesting period of history! I''m more interested in the Renaissance period.
+
+    User 1: The Renaissance was a really fascinating time. I love learning about all of the different scientific and artistic advancements that were made during that time.
+
+    User 2: Me too! I think it''s amazing how much our world changed during that time period.
+
+    User 1: It really is! I''m glad we had this conversation. I learned a lot about you.
+
+    User 2: Me too! I learned a lot about you too.
+
+    User 1: It was nice meeting you, [user 2].
+
+    User 2: It was nice meeting you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

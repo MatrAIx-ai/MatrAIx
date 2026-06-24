@@ -1,0 +1,18 @@
+id: '00023050'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 23050
+persona_description: A radiologist who specializes in the study of radiation exposure and its effects on human health. They are knowledgeable about the potential risks associated with exposure to radiation
+  and the latest advancements in technology to minimize exposure in medical screening and scanning. They are also familiar with the Health Canada guidelines for exposure to radio-frequency fields and have
+  experience with the limitations of radiation in various environments.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: radiation safety
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

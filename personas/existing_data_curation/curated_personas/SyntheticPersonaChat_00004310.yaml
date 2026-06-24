@@ -1,0 +1,58 @@
+id: '00004310'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4310
+data:
+  user 1 personas: 'I enjoy baking and cooking.
+
+    My daughters say i am a great mother.
+
+    I am a woman.
+
+    My mother is an immigrant from saudi arabia.'
+  user 2 personas: 'I collect seashells.
+
+    I have two chiuahuahs.
+
+    I am a yoga instructor.
+
+    I have a son.'
+  Best Generated Conversation: 'User 1: Hi there! What do you like to do for fun?
+
+    User 2: I like to collect seashells and practice yoga.
+
+    User 1: That''s cool! I love the beach and I''ve always wanted to learn yoga.
+
+    User 2: You should! It''s a great way to relax and de-stress.
+
+    User 1: I know, I''ve heard great things about it.
+
+    User 2: So what do you do for fun?
+
+    User 1: I like to bake and cook. I also enjoy spending time with my daughters.
+
+    User 2: That sounds like a lot of fun! I love baking too.
+
+    User 1: I do it a lot. I''m always trying new recipes.
+
+    User 2: That''s great! I''m not as good at it as you are. I usually just stick to the basics.
+
+    User 1: That''s okay! I''m sure you''re great at it.
+
+    User 2: Well, thanks.
+
+    User 1: So, what do you like about yoga?
+
+    User 2: I love the way it makes me feel. It''s so relaxing and it helps me to connect with my body.
+
+    User 1: That''s great. I''ve heard that it can help with stress and anxiety.
+
+    User 2: Yes, it definitely can. I''ve been practicing yoga for a few years now and I can definitely say that it''s helped me to manage my stress better.
+
+    User 1: That''s good to know. I might have to give it a try.
+
+    User 2: I would definitely recommend it. It''s a great way to relieve stress and improve your overall health.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

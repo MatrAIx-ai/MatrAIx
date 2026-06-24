@@ -1,0 +1,66 @@
+id: '00001521'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1521
+data:
+  user 1 personas: 'I am a meataholic.
+
+    I have a job as an it agent.
+
+    I like smoking weed.
+
+    I love rap music.
+
+    My dad works for stifel.'
+  user 2 personas: 'I work in finance.
+
+    I hate cleaning.
+
+    I m italian american.
+
+    My favorite color is blue.
+
+    I paint with watercolors.'
+  Best Generated Conversation: 'User 1: Hi, how are you?
+
+    User 2: I''m doing well, thanks for asking.
+
+    User 1: What do you do for a living?
+
+    User 2: I work in finance.
+
+    User 1: Oh, that sounds interesting. What''s your favorite part of your job?
+
+    User 2: I like working with numbers and solving problems.
+
+    User 1: That''s cool. Do you have any hobbies?
+
+    User 2: I like to paint with watercolors.
+
+    User 1: Oh, that''s awesome! I''ve always wanted to try watercolor painting.
+
+    User 2: You should! It''s really fun.
+
+    User 1: Maybe I will. I like to listen to rap music.
+
+    User 2: Oh, me too! What are some of your favorite artists?
+
+    User 1: I like Kendrick Lamar, J. Cole, and Lil Wayne.
+
+    User 2: Nice! I like them too.
+
+    User 1: What do you like about rap music?
+
+    User 2: I like the beat and the lyrics.
+
+    User 1: Yeah, me too. I like how it can be so different from one song to the next.
+
+    User 2: Me too. It''s always interesting to hear new artists and new sounds.
+
+    User 1: Yeah, it is. I''m glad we had this conversation. It''s always nice to meet someone who shares my interests.
+
+    User 2: Me too. It was nice talking to you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

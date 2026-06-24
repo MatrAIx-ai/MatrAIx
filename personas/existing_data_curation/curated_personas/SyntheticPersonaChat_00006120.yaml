@@ -1,0 +1,68 @@
+id: '00006120'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6120
+data:
+  user 1 personas: 'My favorite animals are dolphins.
+
+    I enjoy making let s plays.
+
+    My father works in advertising agency.
+
+    I have my own channel.
+
+    I love youtube.'
+  user 2 personas: 'I went to college in maryland.
+
+    I am a professional basketball player.
+
+    I live in ahuge mansion.
+
+    I make 35 million a year.'
+  Best Generated Conversation: 'User 1: Hi, my name is [User 1''s name]. What''s yours?
+
+    User 2: Hi, I''m [User 2''s name]. I''m a professional basketball player.
+
+    User 1: Oh, that''s cool! I''m a YouTuber.
+
+    User 2: That''s awesome! What kind of content do you make?
+
+    User 1: I make let''s plays of video games.
+
+    User 2: That''s cool! I love video games.
+
+    User 1: Me too! What''s your favorite game?
+
+    User 2: I like a lot of different games, but my favorite is probably NBA 2K.
+
+    User 1: That''s a great game! I''m not very good at it, but I love watching it.
+
+    User 2: I''m actually pretty good at it. I played basketball in college, so I have a lot of experience with the game.
+
+    User 1: That''s cool! I would love to see you play sometime.
+
+    User 2: I''d be happy to show you some of my moves.
+
+    User 1: That would be great!
+
+    User 2: So, what do you do for YouTube?
+
+    User 1: I make videos of myself playing video games. I also do commentary and reviews.
+
+    User 2: That''s really cool! I''ve always wanted to make videos like that, but I don''t have the time.
+
+    User 1: It''s not that hard. You just need a computer and a video camera.
+
+    User 2: I know, but I''m always so busy with basketball.
+
+    User 1: I understand. It''s a lot of work, but it''s also a lot of fun.
+
+    User 2: Yeah, it looks like it. I might have to give it a try sometime.
+
+    User 1: I would recommend it! It''s a great way to share your love of video games with others.
+
+    User 2: Thanks for the advice! I''ll think about it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: 00002009
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2009
+data:
+  user 1 personas: 'I love to sleep in.
+
+    I work in a lab.
+
+    I ve been a vegan since i was 5.
+
+    I believe in love at first sight.'
+  user 2 personas: 'My name is john and i live in dallas , tx.
+
+    We also have three dogs and two cats.
+
+    My wife and i have 2 children.
+
+    Our kids are 14 and 12 years old.
+
+    I work as a physical therapist , and my wife is a school nurse.'
+  Best Generated Conversation: 'User 1: Hi! My name is (User 1) and I''m from (User 1''s location).
+
+    User 2: Hi (User 1)! My name is John and I live in Dallas, TX.
+
+    User 1: Nice to meet you, John! What do you do for a living?
+
+    User 2: I''m a physical therapist, and my wife is a school nurse.
+
+    User 1: That''s great! I work in a lab.
+
+    User 2: What kind of lab?
+
+    User 1: I work in a research lab at a university.
+
+    User 2: That sounds interesting! What kind of research do you do?
+
+    User 1: I study the effects of different foods on cancer cells.
+
+    User 2: That''s really cool! I''m glad you''re doing something that you love.
+
+    User 1: Thanks! I am too.
+
+    User 2: What do you like to do for fun?
+
+    User 1: I love to sleep in, go to the beach, and read.
+
+    User 2: Sounds like we have a lot in common! I love to sleep in too, and I love the beach.
+
+    User 1: I''ve been a vegan since I was 5 years old.
+
+    User 2: That''s really impressive! I''ve been trying to be a vegetarian, but it''s hard.
+
+    User 1: It''s not as hard as you think! There are so many delicious vegan and vegetarian options these days.
+
+    User 2: I know, but I''m so used to eating meat.
+
+    User 1: You could try cutting back on meat slowly, or you could start by trying some vegan recipes.
+
+    User 2: I''ll try that! Thanks for the suggestion.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

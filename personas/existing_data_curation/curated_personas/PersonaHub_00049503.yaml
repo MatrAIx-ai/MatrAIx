@@ -1,0 +1,18 @@
+id: 00049503
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49503
+persona_description: A scientist who specializes in the study of astronomical phenomena, particularly those related to meteor impacts and the behavior of asteroids and comets in the Earth's atmosphere.
+  This individual has a deep understanding of the scientific method and has conducted extensive research in the field, including the use of computer models to simulate the behavior of smaller impactors.
+  They are knowledgeable about the potential risks posed by these objects and are actively involved in the search for new information about these impacts.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: asteroid and comet impact research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

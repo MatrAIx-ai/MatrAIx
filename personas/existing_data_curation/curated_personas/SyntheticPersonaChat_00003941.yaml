@@ -1,0 +1,78 @@
+id: 00003941
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3941
+data:
+  user 1 personas: 'I do not own a television.
+
+    I know how to pilot a plane.
+
+    I am a lawyer.
+
+    My hobby is photography.
+
+    I live in the mountains.'
+  user 2 personas: 'I grew up on a farm.
+
+    My brother is in the army.
+
+    I am a veterinarian.
+
+    I have two nephews.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a veterinarian.
+
+    User 1: Oh, cool! I''ve always wanted to be a veterinarian.
+
+    User 2: It''s a great job! I love working with animals.
+
+    User 1: Me too! I have a dog and a cat.
+
+    User 2: Nice! What kind of dog?
+
+    User 1: A golden retriever.
+
+    User 2: I love golden retrievers! They''re so friendly.
+
+    User 1: They are! They''re the best dogs.
+
+    User 2: What''s your cat''s name?
+
+    User 1: Her name is Luna.
+
+    User 2: That''s a beautiful name.
+
+    User 1: Thank you!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to take pictures. I''m a hobbyist photographer.
+
+    User 2: Oh, that''s cool! Do you have a website or anything?
+
+    User 1: I do! It''s [user 1''s website].
+
+    User 2: Cool! I''ll check it out.
+
+    User 1: Thanks!
+
+    User 2: So, do you live in the mountains?
+
+    User 1: I do! I love it here. The views are amazing.
+
+    User 2: I can imagine! I''ve always wanted to live in the mountains.
+
+    User 1: You should! It''s the best.
+
+    User 2: Maybe I will someday.
+
+    User 1: I hope you do!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,82 @@
+id: 00008645
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8645
+data:
+  user 1 personas: 'I like watching action adventure movies and eating popcorn.
+
+    I m starting an internship at a construction site next week.
+
+    I love riding roller coasters.
+
+    My mother raised me since my father left when i was five years old.'
+  user 2 personas: 'I wish i could write in cursive.
+
+    I wait for something interesting to happen each day.
+
+    I wish i could live in iceland.
+
+    I enjoy cold winters and strong breezes.
+
+    I listen to a lot of strange music.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What kind of music do you like?
+
+    User 2: I listen to a lot of strange music.
+
+    User 1: What do you mean by strange music?
+
+    User 2: I mean music that''s not very popular or mainstream.
+
+    User 1: Oh, I see. What kind of strange music do you like?
+
+    User 2: I like a lot of different kinds of music, but I''m really into industrial music right now.
+
+    User 1: Industrial music? I''ve never heard of that before.
+
+    User 2: It''s a type of music that''s made using electronic instruments. It''s often dark and noisy, but it can also be very beautiful.
+
+    User 1: It sounds interesting. I''ll have to check it out.
+
+    User 2: You should! I think you''d like it.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to read, write, and watch movies. I also like to go to concerts and art shows.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: We should hang out sometime!
+
+    User 1: I''d love to!
+
+    User 2: Great! We can exchange numbers and make plans.
+
+    User 1: Sounds good.
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a student. I''m starting an internship at a construction site next week.
+
+    User 2: Oh, that''s cool! I''ve always wanted to work in construction.
+
+    User 1: It can be a lot of work, but it''s also very rewarding.
+
+    User 2: I bet it is. I''m sure you''ll do great.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, what are your plans after you graduate?
+
+    User 1: I''m not sure yet. I''m thinking about going to graduate school.
+
+    User 2: That sounds like a good plan.
+
+    User 1: Thanks! I''m excited to see what the future holds.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

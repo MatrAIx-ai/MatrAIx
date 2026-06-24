@@ -1,0 +1,78 @@
+id: '00001775'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1775
+data:
+  user 1 personas: 'I am a great baker.
+
+    I have few friends.
+
+    I like to sew.
+
+    I like katy perry as a musician.
+
+    I like to hunt for my food.'
+  user 2 personas: 'My favorite thing to do is to read books on the beach.
+
+    I am a vegetarian.
+
+    I love to surf.
+
+    I love pandas.
+
+    I am starting a new juicing bar.'
+  Best Generated Conversation: 'User 1: Hi, my name is Bob.
+
+    User 2: Hi, my name is Jane.
+
+    User 1: What do you do for fun?
+
+    User 2: I love to read books on the beach.
+
+    User 1: That sounds relaxing. Do you have a favorite book?
+
+    User 2: I love the Harry Potter series.
+
+    User 1: I''ve heard good things about it. What do you like about it?
+
+    User 2: I love the magic and the adventure. It''s a great escape from reality.
+
+    User 1: I can see why you like it. I''ve been meaning to read it for a while.
+
+    User 2: You should! It''s a great series.
+
+    User 1: I will. What else do you like to do for fun?
+
+    User 2: I love to surf.
+
+    User 1: That sounds fun! I''ve never tried surfing before.
+
+    User 2: You should! It''s a great way to get exercise and have some fun.
+
+    User 1: I might have to try it sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: What do you do for work?
+
+    User 2: I''m starting a new juicing bar.
+
+    User 1: That sounds exciting! What kind of juices do you make?
+
+    User 2: I make all sorts of juices, but my specialty is green juices.
+
+    User 1: I''ve never had a green juice before.
+
+    User 2: You should try one! They''re really healthy and delicious.
+
+    User 1: I might have to try one sometime.
+
+    User 2: You won''t regret it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: '00001132'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1132
+data:
+  user 1 personas: 'I surf everyday.
+
+    People say i can cook well.
+
+    I can play piano.
+
+    I work at a bar.
+
+    I like to listen to country music.'
+  user 2 personas: 'I can speak three languages.
+
+    I cook well.
+
+    I like to bike.
+
+    I love being in nature.
+
+    My mother is a teacher.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to bike, cook, and be in nature.
+
+    User 1: Oh, that''s cool! I like to surf, cook, and play music.
+
+    User 2: That''s awesome! I''ve always wanted to learn how to surf.
+
+    User 1: It''s pretty fun. It''s a bit hard to get started, but once you get the hang of it, it''s really enjoyable.
+
+    User 2: I''m sure I''d love it. What kind of music do you play?
+
+    User 1: I play the piano and guitar.
+
+    User 2: Oh, that''s cool! I play guitar too.
+
+    User 1: Really? That''s great! What kind of music do you like to play?
+
+    User 2: I like to play all kinds of music, but I mostly play country music.
+
+    User 1: Oh, that''s cool! I like country music too.
+
+    User 2: Awesome! We should definitely jam sometime.
+
+    User 1: That would be fun! I''d love to jam with you.
+
+    User 2: Great! We can exchange numbers and make plans later.
+
+    User 1: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

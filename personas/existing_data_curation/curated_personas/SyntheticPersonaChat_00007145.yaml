@@ -1,0 +1,74 @@
+id: '00007145'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7145
+data:
+  user 1 personas: 'I have always wanted a pot bellied pig.
+
+    I won a beauty pageant one time but didn t feel like it was worth the effort.
+
+    My mom teaches kindergarten and my dad is a tax assessor.
+
+    I love owning nice office supplies.
+
+    My favorite book is anne of green gables.'
+  user 2 personas: 'I dye my hair blonde.
+
+    I like going to foreign countries.
+
+    I love dancing.
+
+    I have 3 cats.
+
+    I am an only child.'
+  Best Generated Conversation: 'User 1: Hi! I''m [name]. What''s your name?
+
+    User 2: Hi [name], I''m [name].
+
+    User 1: Nice to meet you, [name]. What do you do for fun?
+
+    User 2: I like dancing, going to foreign countries, and dyeing my hair blonde.
+
+    User 1: Oh, that sounds fun! I''ve always wanted to dye my hair, but I''m too afraid to try.
+
+    User 2: You should go for it! It''s a lot of fun to change up your look.
+
+    User 1: Maybe I will someday. What''s your favorite country to visit?
+
+    User 2: I really like Thailand. The food is amazing, the people are friendly, and the beaches are beautiful.
+
+    User 1: I''ve heard great things about Thailand. I''d love to go there someday.
+
+    User 2: You should! It''s a great place to travel.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I''m a hair stylist. I love working with hair and helping people feel their best.
+
+    User 1: That sounds like a fun job! I''m sure you''re great at it.
+
+    User 2: Thanks! I try my best.
+
+    User 1: Well, it sounds like you have a lot of interesting hobbies and a great job. I''m sure you''re a very interesting person.
+
+    User 2: Thank you! I try to be.
+
+    User 1: So, what''s the most interesting thing about yourself?
+
+    User 2: I''m not sure. Maybe that I''m an only child?
+
+    User 1: That''s interesting! I''m an only child too.
+
+    User 2: Oh, really? That''s cool!
+
+    User 1: Yeah, it''s definitely different from having siblings.
+
+    User 2: I can imagine.
+
+    User 1: Well, it was nice meeting you, [name].
+
+    User 2: You too, [name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

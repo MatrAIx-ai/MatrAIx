@@ -1,0 +1,54 @@
+id: '00000755'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 755
+data:
+  user 1 personas: 'I like to swim.
+
+    I am a marathon runner.
+
+    I prefer morning to night.
+
+    My favorite fruit is an apple.
+
+    I prefer winter over fall.'
+  user 2 personas: 'I like the guitar.
+
+    I like music.
+
+    I am a vegan.
+
+    I like to go for bike rides.
+
+    I like to skateboard.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to play the guitar, go for bike rides, and skateboard.
+
+    User 1: Oh, that''s cool. I like to swim, run marathons, and eat apples.
+
+    User 2: I love apples too! I''m not much of a morning person, though. I prefer to stay up late and sleep in.
+
+    User 1: I''m the opposite. I''m a morning person and I love to get up early and go for a run.
+
+    User 2: That''s cool. I don''t have the energy to get up early enough to do that.
+
+    User 1: Well, I''m sure you''re good at something that I''m not good at.
+
+    User 2: I''m not sure if I''m good at anything, but I''m sure I''m good at something.
+
+    User 1: Well, we can always try new things together and see what we''re good at.
+
+    User 2: That sounds like a plan. I''m always up for trying new things.
+
+    User 1: Great! I''m glad we met.
+
+    User 2: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

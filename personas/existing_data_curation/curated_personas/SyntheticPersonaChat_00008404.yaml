@@ -1,0 +1,54 @@
+id: 00008404
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8404
+data:
+  user 1 personas: 'I like to use a lot of exclamation marks when i type.
+
+    Both my moms tell me they love me when i call them.
+
+    Playing quake on slackware linux makes me happy.
+
+    I have three dogs and two cats.'
+  user 2 personas: 'I am a full time mom.
+
+    My family and i go camping every month.
+
+    I enjoy horseback riding.
+
+    My favorite singer is justin timberlake.'
+  Best Generated Conversation: 'User 1: Hey! What are you up to today?
+
+    User 2: I''m just hanging out with my family, getting ready to go camping this weekend.
+
+    User 1: That sounds fun! I love camping.
+
+    User 2: Me too! It''s a great way to get away from the hustle and bustle of everyday life.
+
+    User 1: I know what you mean. I love being able to relax in the woods and enjoy the fresh air.
+
+    User 2: Yeah, it''s so peaceful. I also love hiking and spending time by the campfire.
+
+    User 1: Me too! I love being outside, and camping is the perfect way to do that.
+
+    User 2: What kind of dog do you have?
+
+    User 1: I have a golden retriever named Buddy. He''s the sweetest dog ever.
+
+    User 2: Oh, I love golden retrievers! They''re so friendly and playful.
+
+    User 1: Yeah, he is. He''s the perfect dog for me.
+
+    User 2: I''m glad you have him. He sounds like a great companion.
+
+    User 1: He is. I love him to death.
+
+    User 2: Well, I''m glad we got to chat. I have to go now. We''re heading out to the campsite.
+
+    User 1: Have fun! I''m jealous.
+
+    User 2: Thanks! I will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

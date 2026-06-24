@@ -1,0 +1,66 @@
+id: 00008824
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8824
+data:
+  user 1 personas: 'I started working at google last week on self driving car research.
+
+    I love computers.
+
+    I i love logical and rational thinking.
+
+    I am considered a nerd by many.
+
+    I am very good at math and science.'
+  user 2 personas: 'I only listen to opera.
+
+    I have never been to canada.
+
+    I live in a condo.
+
+    I get up at 4am everyday.
+
+    My favorite food is steak.'
+  Best Generated Conversation: 'User 1: Hi, I''m a computer scientist working on self driving cars at Google.
+
+    User 2: Hi, that''s cool! I''m a software engineer working on video games.
+
+    User 1: Nice, what kind of games?
+
+    User 2: Mostly action RPGs.
+
+    User 1: Oh, cool. I love playing action RPGs. What''s your favorite one?
+
+    User 2: I really like Skyrim.
+
+    User 1: Me too! I''ve played it through a few times.
+
+    User 2: Nice! What''s your favorite part about it?
+
+    User 1: I love the freedom to explore and the character customization.
+
+    User 2: Me too! I also love the combat.
+
+    User 1: It''s so satisfying to take down a dragon.
+
+    User 2: It really is! I''ve also been playing a lot of Elden Ring lately.
+
+    User 1: Oh, I''ve heard good things about that game.
+
+    User 2: It''s really good! It''s a lot harder than Skyrim, though.
+
+    User 1: I''m not surprised. FromSoftware games are always challenging.
+
+    User 2: Yeah, but it''s a lot of fun.
+
+    User 1: It looks like it. I''ll have to check it out sometime.
+
+    User 2: You should! I''m sure you''d like it.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

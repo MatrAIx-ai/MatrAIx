@@ -1,0 +1,84 @@
+id: '00001227'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1227
+data:
+  user 1 personas: 'I am a zookeeper.
+
+    My daughter just graduated high school ranked at the top of her class.
+
+    I work with my wife.
+
+    I have trained over 20 types of animals.
+
+    My wife is a breast cancer survivor.'
+  user 2 personas: 'I am a freshman at nyu.
+
+    I am the youngest in my family.
+
+    My favorite color is blue.
+
+    I have two older brothers.
+
+    My passion is photography.'
+  Best Generated Conversation: 'User 1: Hi! I''m a zookeeper, I work with my wife, my daughter just graduated high school ranked at the top of her class, and I''ve trained over 20 types of animals.
+
+    User 2: Hi! I''m a freshman at NYU, I''m the youngest in my family, my favorite color is blue, I have two older brothers, and my passion is photography.
+
+    User 1: That''s really cool! What do you like to photograph the most?
+
+    User 2: I love to photograph animals. I think they''re so beautiful and interesting.
+
+    User 1: I agree! I love animals too. I''m actually a zookeeper, so I get to work with them every day.
+
+    User 2: That''s amazing! What''s your favorite animal to work with?
+
+    User 1: I love working with all of the animals, but I think my favorite is the elephants. They''re so smart and gentle.
+
+    User 2: I''ve always wanted to see an elephant in real life. They''re so majestic.
+
+    User 1: They are! I''m sure you''d love to see them.
+
+    User 2: Maybe one day I''ll come visit you at the zoo.
+
+    User 1: That would be great! I''d love to show you around.
+
+    User 2: Thanks! I''ll keep that in mind.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to go hiking and explore new places. I also like to play video games and watch movies.
+
+    User 1: I love hiking too! I''m always looking for new places to explore.
+
+    User 2: Me too! I love the feeling of being outdoors and getting some exercise.
+
+    User 1: I know what you mean! It''s so refreshing.
+
+    User 2: I also love video games! What are some of your favorites?
+
+    User 1: I love a lot of different games, but some of my favorites are the Legend of Zelda series, the Final Fantasy series, and the Uncharted series.
+
+    User 2: Those are all great games! I''ve played a few of them myself.
+
+    User 1: They''re really fun! I''m always looking for new games to play.
+
+    User 2: Me too! I love trying out new games.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. I might go hiking or hang out with some friends.
+
+    User 1: That sounds like fun! I''m going to the zoo with my family.
+
+    User 2: That sounds like a great time! I love the zoo.
+
+    User 1: Me too! It''s always so much fun to see all the different animals.
+
+    User 2: I know what you mean! It''s like a whole different world.
+
+    User 1: It really is! I love it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

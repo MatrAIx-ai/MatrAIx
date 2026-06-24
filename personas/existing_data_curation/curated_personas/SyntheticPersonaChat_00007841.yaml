@@ -1,0 +1,64 @@
+id: 00007841
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7841
+data:
+  user 1 personas: 'I will be on bed rest for the next 5 months.
+
+    I already have 3 children.
+
+    I have thrown up every day for the last 3 months with morning sickness.
+
+    I am 26 years old.'
+  user 2 personas: 'I do not like waking up early.
+
+    I love the sound of the rain.
+
+    I love photography.
+
+    I like to use candles instead of lights.
+
+    I enjoy spending a lot of money on my hobbies.'
+  Best Generated Conversation: 'User 1: What''s your favorite hobby?
+
+    User 2: I love photography.
+
+    User 1: That''s cool! What kind of photography do you like to do?
+
+    User 2: I like to take photos of nature and landscapes.
+
+    User 1: That''s beautiful. I love the sound of the rain too.
+
+    User 2: Me too! It''s so relaxing.
+
+    User 1: I''m sorry to hear that you''ve been having morning sickness.
+
+    User 2: Thank you. It''s been a rough few months.
+
+    User 1: I can imagine. But at least you''re on bed rest now, so you can relax and enjoy your time off.
+
+    User 2: Yeah, I''m trying to make the best of it.
+
+    User 1: So, how many children do you have?
+
+    User 2: I have three children.
+
+    User 1: Oh wow! That''s a lot of kids.
+
+    User 2: Yeah, it is. But I love them all very much.
+
+    User 1: I''m sure they''re lucky to have you as their mom.
+
+    User 2: Thank you. I try my best.
+
+    User 1: It sounds like you''re doing a great job.
+
+    User 2: I''m doing my best.
+
+    User 1: Well, I''m sure everything will be okay. You''re in good hands.
+
+    User 2: Thank you. I appreciate that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

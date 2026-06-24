@@ -1,0 +1,19 @@
+id: 00015979
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 15979
+persona_description: A radiation protection engineer who specializes in assessing and mitigating the effects of non-uniform neutron radiation fields on glove box radiation workers. The engineer is responsible
+  for understanding the complex radiation dose estimation process and developing effective strategies to minimize the risks associated with occupational exposure to neutron radiation. They must consider
+  various factors such as the type and location of the source material, the position of the dosimeter, and the geometry of the radiation field to accurately estimate the radiation dose received by the worker.
+  They must also be able to apply computational and experimental results to make informed decisions and recommendations for improving the safety and efficiency of glove box radiation environments.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: radiation protection engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

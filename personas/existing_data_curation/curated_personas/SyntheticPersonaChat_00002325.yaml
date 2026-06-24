@@ -1,0 +1,66 @@
+id: '00002325'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2325
+data:
+  user 1 personas: 'I watch a lot of tv.
+
+    I live alone.
+
+    My favorite food is a cheeseburger.
+
+    I enjoy fishing.
+
+    I work on cars for a living.'
+  user 2 personas: 'I believe the rich should not be taxed as much.
+
+    I went to an elite ivy league school.
+
+    I work in finance.
+
+    I eat out more than three times a week.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work in finance.
+
+    User 1: Oh cool! What''s that like?
+
+    User 2: It''s challenging but rewarding. I work with a lot of smart people, and I get to see the impact my work has on the world.
+
+    User 1: That''s awesome! What do you think about the wealth gap in the US?
+
+    User 2: I think it''s a problem, but I don''t think the answer is to tax the rich more. I think we need to focus on creating more opportunities for people from all walks of life to succeed.
+
+    User 1: That''s a good point. I think we need to make sure that everyone has a chance to get a good education, regardless of their socioeconomic status.
+
+    User 2: I agree. I think that''s the key to reducing the wealth gap.
+
+    User 1: What''s your favorite food?
+
+    User 2: I love cheeseburgers!
+
+    User 1: Me too! I love the way they taste and smell.
+
+    User 2: Me too! I could eat them every day.
+
+    User 1: I know, right? They''re so delicious!
+
+    User 2: Do you like to cook?
+
+    User 1: I do, but I''m not very good at it.
+
+    User 2: Me neither! I always burn things.
+
+    User 1: I know, right? It''s so frustrating!
+
+    User 2: Yeah, but it''s fun to try!
+
+    User 1: I know! It''s a good way to relax.
+
+    User 2: Yeah, I love cooking with friends.
+
+    User 1: Me too! It''s always more fun that way.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

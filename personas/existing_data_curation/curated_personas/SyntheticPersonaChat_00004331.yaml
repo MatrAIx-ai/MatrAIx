@@ -1,0 +1,50 @@
+id: '00004331'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4331
+data:
+  user 1 personas: 'I hate winter and the cold.
+
+    My parents are lawyers.
+
+    My favorite show is csi.
+
+    I once swam with manta rays.'
+  user 2 personas: 'My favorite singer is britney spears.
+
+    I love pasta.
+
+    I love the color pink.
+
+    I love to swim.
+
+    I enjoy being outside.'
+  Best Generated Conversation: 'User 1: I''m so glad it''s not winter anymore! I hate the cold.
+
+    User 2: Me too! I love the summer. It''s so much better to swim and be outside.
+
+    User 1: I agree! I once swam with manta rays in the ocean. It was amazing!
+
+    User 2: Wow! That sounds amazing! I''ve always wanted to swim with dolphins.
+
+    User 1: I''ve swam with dolphins too! It was really cool. They''re so playful and friendly.
+
+    User 2: I''m so jealous! I''m sure that was an amazing experience.
+
+    User 1: It was! I''m glad I got to share it with you.
+
+    User 2: Thanks for sharing! It sounds like you''ve had some really amazing adventures.
+
+    User 1: I have! I''m always looking for new things to do.
+
+    User 2: I''m the same way. I love trying new things and exploring new places.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Me too! I think we''re going to get along great.
+
+    User 1: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,52 @@
+id: '00005613'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5613
+data:
+  user 1 personas: 'I spend too much time shopping.
+
+    I drive a ford taurus.
+
+    I drink diet coke.
+
+    I love katy perry.'
+  user 2 personas: 'I don t like feeling obligated to hang out with someone.
+
+    I love winning.
+
+    I can tell right away if i m going to like someone.
+
+    Coffee is important to me.'
+  Best Generated Conversation: 'User 1: Hi! What do you like to do for fun?
+
+    User 2: I love to win! I also like to play video games and go hiking.
+
+    User 1: That sounds fun! I love to go shopping and listen to music. Do you have any pets?
+
+    User 2: I have a dog named Buddy. He''s a Golden Retriever.
+
+    User 1: Aww, I love Golden Retrievers! I used to have one named Bailey.
+
+    User 2: They''re the best dogs! What do you do for work?
+
+    User 1: I''m a teacher. What about you?
+
+    User 2: I''m a software engineer.
+
+    User 1: That sounds really cool! Do you enjoy it?
+
+    User 2: I love it! It''s a lot of fun and challenging.
+
+    User 1: That''s great! I''m glad you enjoy your job.
+
+    User 2: Thanks! What''s your favorite thing about your job?
+
+    User 1: I love seeing the kids learn and grow. It''s so rewarding.
+
+    User 2: That''s great! I can imagine it''s really rewarding.
+
+    User 1: It is! It''s the best part of my job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,80 @@
+id: '00001311'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1311
+data:
+  user 1 personas: 'I like ice cream.
+
+    I love rock music.
+
+    I am engaged.
+
+    I work as a contractor for a cab company.'
+  user 2 personas: 'My favorite place to visit is seattle.
+
+    I live with my husband and two children.
+
+    I love to take road trips.
+
+    I work as a meeting coordinator.'
+  Best Generated Conversation: 'User 1: Hi, my name is John!
+
+    User 2: Nice to meet you, John! My name is Sarah.
+
+    User 1: It''s nice to meet you too, Sarah! What do you do for a living?
+
+    User 2: I work as a meeting coordinator.
+
+    User 1: That sounds like a fun job! I work as a contractor for a cab company.
+
+    User 2: Oh, that''s interesting! Do you enjoy it?
+
+    User 1: I do, it''s a lot of fun! I get to meet a lot of different people.
+
+    User 2: That sounds great! I love meeting new people too.
+
+    User 1: Me too! So, what''s your favorite place to visit?
+
+    User 2: My favorite place to visit is Seattle. I love the mountains and the ocean.
+
+    User 1: Oh, that sounds beautiful! I''ve never been to Seattle, but I''ve heard great things about it.
+
+    User 2: You should definitely go sometime! It''s a great city.
+
+    User 1: I will! Thanks for the recommendation!
+
+    User 2: No problem! So, what do you like to do for fun?
+
+    User 1: I like to go to concerts, play video games, and watch movies.
+
+    User 2: Oh, I love concerts too! What''s your favorite band?
+
+    User 1: I love the Foo Fighters! They''re so good live.
+
+    User 2: Me too! I saw them in concert a few years ago and they were amazing.
+
+    User 1: I know, right? They''re so talented.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet, maybe go to a concert or something.
+
+    User 2: Oh, that sounds fun! I''m going to go on a road trip with my family.
+
+    User 1: That sounds like a lot of fun! Where are you going?
+
+    User 2: We''re going to the beach!
+
+    User 1: Oh, that sounds amazing! I love the beach.
+
+    User 2: Me too! I''m so excited.
+
+    User 1: So, I''m John and I work as a contractor for a cab company. I like ice cream and rock music. I''m engaged.
+
+    User 2: I''m Sarah and I work as a meeting coordinator. I love to take road trips and my favorite place to visit is Seattle. I live with my husband and two children.
+
+    User 1: It''s nice to meet you, Sarah!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

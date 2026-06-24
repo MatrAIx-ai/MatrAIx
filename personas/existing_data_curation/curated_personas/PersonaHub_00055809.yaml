@@ -1,0 +1,20 @@
+id: 00055809
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55809
+persona_description: A professional mechanic with expertise in turbine engine maintenance, particularly in minimizing the effects of sulfidation attacks. They are aware of the turbine's vulnerability and
+  take proactive measures to reduce the risk of corrosion and damage. They perform regular maintenance checks and desalination/desulfidation washes to slow down corrosion effects and monitor engine condition.
+  They also recommend performance recovery washes, desalination and desulfidation washes, and "Engine Condition Trend Monitoring" procedures to record flight performance data. They have a deep understanding
+  of the turbine's hot section and the factors that contribute to sulfidation, such as high temperature and high power conditions during start-up and take-off/cruise. They are knowledgeable about proper
+  fuel handling techniques and the complex process of fuel handling. They are also aware of the aircraft's operating temperature and the potential for sulfidation.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Aircraft Turbine Engine Maintenance
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

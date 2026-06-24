@@ -1,0 +1,19 @@
+id: 00030394
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 30394
+persona_description: A scientist or engineer involved in the field of nanotechnology, specifically focused on the development and characterization of nanomaterials. The person is likely to have expertise
+  in the fabrication of nanoparticles through methods like ICBD, and has experience with advanced techniques such as atomic force microscopy, high-resolution transmission electron microscopy, photoluminescence
+  spectroscopy, and Fourier transform analysis. The person is interested in understanding the size distribution, morphology, and physical properties of TiN nanoparticles on Si (111) substrates at room temperature,
+  and has performed research on the visible luminescence of TiN nanoparticles due to the reduced size.
+expertise:
+  general_domain_top1pct: science/engineering
+  specific_domain_top1pct: nanotechnology
+  general_domain_top01pct: None
+  specific_domain_top01pct: nanomaterials
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

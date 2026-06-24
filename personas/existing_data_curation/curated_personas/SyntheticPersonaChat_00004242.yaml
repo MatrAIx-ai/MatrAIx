@@ -1,0 +1,66 @@
+id: '00004242'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4242
+data:
+  user 1 personas: 'My favourite band is rush.
+
+    I am colour blind.
+
+    I am a mother of two.
+
+    I can speak three languages english , french and spanish.'
+  user 2 personas: 'I have a garden in my yard.
+
+    I like to make fresh pies.
+
+    My hobby is sewing.
+
+    I like to go swimming.
+
+    I am a cashier at a grocery store.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello, how are you today?
+
+    User 1: I am doing well, thank you! How are you?
+
+    User 2: I am doing well, thank you!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to sew, go swimming, and bake fresh pies.
+
+    User 1: Oh, that sounds fun! I like to bake too, but I''m not very good at it.
+
+    User 2: Don''t worry, I''m not that good at it either. But it''s fun to try new things!
+
+    User 1: I agree! What''s your favorite thing to sew?
+
+    User 2: I like to sew clothes for my children.
+
+    User 1: Oh, that''s sweet! I''m sure they love it.
+
+    User 2: Yes, they do! I also like to sew blankets and pillows.
+
+    User 1: That sounds cozy! I''m not very good at sewing, but I like to knit.
+
+    User 2: I''ve never tried knitting. What''s it like?
+
+    User 1: It''s fun! It''s a little hard to get the hang of at first, but once you do, it''s really easy.
+
+    User 2: I might have to try it sometime!
+
+    User 1: You should! It''s a great way to relax and make something beautiful.
+
+    User 2: I''m sure I would enjoy it. I''m always looking for new ways to relax.
+
+    User 1: I know what you mean. I''m always looking for new ways to relax too.
+
+    User 2: I''m glad we have something in common!
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

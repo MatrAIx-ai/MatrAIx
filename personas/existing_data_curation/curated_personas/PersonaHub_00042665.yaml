@@ -1,0 +1,19 @@
+id: '00042665'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 42665
+persona_description: A system administrator who is familiar with the Windows operating system, especially its features related to exception handling, such as structured exception handling (SEH) and the
+  handling of exceptions in processes. This persona is likely to be interested in learning more about the specific examples and exploits related to SEH, such as the CodeRed exploit that used SEH to trigger
+  exceptions and cause Windows to execute exploit code in the stack. They may also be interested in understanding the process of exception handling in Windows and how it can be used to handle errors and
+  exceptions in processes.
+expertise:
+  general_domain_top1pct: computer science
+  specific_domain_top1pct: operating systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

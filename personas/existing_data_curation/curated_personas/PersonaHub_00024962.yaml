@@ -1,0 +1,19 @@
+id: 00024962
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 24962
+persona_description: A scientist specializing in meteorology and climate research, particularly focused on the study of tropical cyclones and their genesis. This scientist has conducted research using high-resolution
+  ensemble forecasts, breeding vector methods, and relative operating characteristics (ROCs) to predict the environmental precursors on Hurricane Ernesto's genesis. Their expertise lies in understanding
+  the roles of important environmental parameters such as moist conditions, vertical wind shear, the strength of a pre-existing wave, and upper-level warming in determining the likelihood of a tropical
+  cyclone's genesis. Their work has been published in a scientific journal, Typhoon Research and Forecasting, and is available at the link provided.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: tropical cyclone research
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

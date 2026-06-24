@@ -1,0 +1,68 @@
+id: '00001032'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1032
+data:
+  user 1 personas: 'I like cupcakes.
+
+    My favorite color is blue.
+
+    I have brown hair.
+
+    I like to read.
+
+    I work at a grocery store.'
+  user 2 personas: 'I was a navy brat and have attended 16 schools in 12 years.
+
+    I make friends fast and say goodbye fast.
+
+    I kayak at the lake on weekends.
+
+    I chew my nails.
+
+    I am studying to be a special education teacher.'
+  Best Generated Conversation: 'User 1: I like cupcakes too! What''s your favorite flavor?
+
+    User 2: I love red velvet! What''s your favorite color?
+
+    User 1: My favorite color is blue! I love the ocean.
+
+    User 2: Me too! I used to live in Hawaii, so I miss the ocean a lot.
+
+    User 1: I''ve always wanted to go to Hawaii! I hear it''s beautiful.
+
+    User 2: It is! I would love to go back someday.
+
+    User 1: What are you studying to be?
+
+    User 2: I''m studying to be a special education teacher.
+
+    User 1: That''s awesome! I''m sure you''ll be a great teacher.
+
+    User 2: Thanks! I hope so.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to kayak at the lake on weekends. I also like to read and watch movies.
+
+    User 1: I like to kayak too! It''s so peaceful and relaxing.
+
+    User 2: I know, right? It''s my favorite way to spend a weekend day.
+
+    User 1: What do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite genre is nonfiction.
+
+    User 1: I like to read nonfiction too! I love learning new things.
+
+    User 2: Me too! I think it''s so important to be well-informed.
+
+    User 1: I agree! I love learning about new cultures and history.
+
+    User 2: Me too! I think it''s so important to be open-minded and to learn about other people''s perspectives.
+
+    User 1: I agree! I love talking to people from different cultures and learning about their lives.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

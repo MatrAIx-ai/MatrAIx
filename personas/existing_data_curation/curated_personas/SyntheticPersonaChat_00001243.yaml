@@ -1,0 +1,86 @@
+id: '00001243'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1243
+data:
+  user 1 personas: 'I am gluten free.
+
+    I like rock climbing.
+
+    My hair is black.
+
+    I have a dog.'
+  user 2 personas: 'I recently broke my leg.
+
+    I was born premature.
+
+    I have one older sister named mary.
+
+    I live in texas.'
+  Best Generated Conversation: 'User 1: Hello, I''m glad to meet you!
+
+    User 2: Thank you, nice to meet you too.
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go rock climbing.
+
+    User 1: That''s cool! I''ve never tried rock climbing before.
+
+    User 2: You should! It''s really fun.
+
+    User 1: I might have to give it a try sometime.
+
+    User 2: You should! It''s a great way to get exercise and have fun.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, I have a dog.
+
+    User 1: What breed of dog?
+
+    User 2: He''s a golden retriever.
+
+    User 1: I love golden retrievers! They''re so cute.
+
+    User 2: They are! He''s a great dog.
+
+    User 1: I''m glad to hear that.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to read, write, and go to the movies.
+
+    User 2: Oh, I love to read and write too! What kind of books do you like to read?
+
+    User 1: I like to read a variety of books, but I especially enjoy historical fiction and mysteries.
+
+    User 2: I love historical fiction too! I''m currently reading a book about the French Revolution.
+
+    User 1: That sounds interesting! I''ll have to check that out.
+
+    User 2: You should! It''s a great book.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a student.
+
+    User 1: Oh, what are you studying?
+
+    User 2: I''m studying English.
+
+    User 1: That''s cool! I''m a big fan of English literature.
+
+    User 2: Me too! I love reading English literature.
+
+    User 1: So, what do you want to do with your English degree?
+
+    User 2: I''m not sure yet. I''m still thinking about it.
+
+    User 1: Well, good luck with everything!
+
+    User 2: Thanks! You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

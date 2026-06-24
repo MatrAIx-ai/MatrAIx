@@ -1,0 +1,74 @@
+id: 00001183
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1183
+data:
+  user 1 personas: 'I am a cat owner.
+
+    I speak fluent italian.
+
+    My mom is an osteopath.
+
+    I have one blue eye and one hazel eye.
+
+    My brother is an archaeologist.'
+  user 2 personas: 'My favorite color is blue.
+
+    I work at a grocery store.
+
+    I like to read.
+
+    I like cupcakes.
+
+    I have brown hair.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hi there!
+
+    User 1: I''m Italian, do you know Italian?
+
+    User 2: I know a little bit, but not much.
+
+    User 1: That''s okay! I know a little bit of English too, but not much.
+
+    User 2: That''s good! We can practice together.
+
+    User 1: Yes, we can! What do you like to do for fun?
+
+    User 2: I like to read, bake, and play games.
+
+    User 1: Me too! I like to read, bake, and play video games.
+
+    User 2: That''s great! We can bake some cupcakes together.
+
+    User 1: Yes, we can! I love cupcakes!
+
+    User 2: Me too! They''re so delicious.
+
+    User 1: What''s your favorite book?
+
+    User 2: I don''t have a favorite book, but I like to read a lot of different genres.
+
+    User 1: Me too! I like to read books about history, science, and romance.
+
+    User 2: I like to read books about history, fantasy, and mystery.
+
+    User 1: That''s great! We can recommend books to each other.
+
+    User 2: Yes, we can! I love book recommendations.
+
+    User 1: What''s your favorite game?
+
+    User 2: I like to play board games, video games, and card games.
+
+    User 1: Me too! I like to play board games like Catan and Monopoly, video games like Mario Kart and Call of Duty, and card games like Magic the Gathering and UNO.
+
+    User 2: I like to play board games like Monopoly, Scrabble, and Clue, video games like Mario Kart and Zelda, and card games like Magic the Gathering and Yu-Gi-Oh.
+
+    User 1: That''s great! We can play games together.
+
+    User 2: Yes, we can! I love playing games.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

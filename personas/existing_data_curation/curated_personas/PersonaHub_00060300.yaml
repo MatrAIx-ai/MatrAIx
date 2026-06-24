@@ -1,0 +1,18 @@
+id: '00060300'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 60300
+persona_description: A scientist or researcher who specializes in the study of Titan, a moon of Saturn, and its unique geology and atmosphere. This person has expertise in the field of cryovolcanology,
+  specifically studying the ice volcanoes or cryovolcanoes on Titan. They are likely to be familiar with the Cassini spacecraft and its observations of Titan, and have a keen interest in understanding the
+  geology and atmosphere of Titan. They may also have a background in astronomy or space science, and be interested in exploring the potential for life on Titan.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: planetary geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: cryovolcanology
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

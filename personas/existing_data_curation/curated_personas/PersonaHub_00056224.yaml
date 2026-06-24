@@ -1,0 +1,19 @@
+id: '00056224'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 56224
+persona_description: A medical professional with expertise in sleep disorders, particularly sleepwalking. This person has conducted research on sleepwalking and has experience treating individuals with
+  this condition. They are knowledgeable about the symptoms, diagnosis, and treatment options for sleepwalking. They understand the risks associated with sleepwalking, such as the possibility of driving
+  while asleep, and are knowledgeable about safety measures to prevent accidents and injuries. They are also aware of the potential for sleepwalking to lead to violent behavior and hallucinations, and have
+  experience treating these symptoms.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: sleep disorders
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

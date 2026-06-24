@@ -1,0 +1,64 @@
+id: 00001549
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1549
+data:
+  user 1 personas: 'I am colour blind.
+
+    I am a mother of two.
+
+    My favourite band is rush.
+
+    I m currently looking for employment.
+
+    I can speak three languages english , french and spanish.'
+  user 2 personas: 'I enjoy hiking on glaciers.
+
+    I always seem to be losing things , most recently , my mind.
+
+    Lutefisk is the best dish in the whole world.
+
+    I recently moved to sweden.'
+  Best Generated Conversation: 'User 1: Hello, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy hiking on glaciers.
+
+    User 1: That sounds like fun! I''ve never been hiking on a glacier before.
+
+    User 2: You should definitely try it sometime. It''s a great way to see the beauty of nature.
+
+    User 1: I''ll have to look into it. I''m also interested in learning more about lutefisk.
+
+    User 2: Lutefisk is a traditional Norwegian dish made from dried cod that has been soaked in lye. It''s not for everyone, but I love it!
+
+    User 1: I''ve heard that it''s an acquired taste.
+
+    User 2: It is, but it''s definitely worth trying.
+
+    User 1: I''ll have to give it a try sometime. Where are you from?
+
+    User 2: I''m from Sweden. I recently moved to the United States.
+
+    User 1: Welcome to the US! What do you think so far?
+
+    User 2: I''m really enjoying it! I love the people and the culture.
+
+    User 1: I''m glad to hear that.
+
+    User 2: What about you? Where are you from?
+
+    User 1: I''m from Canada. I''ve lived in the US for a few years now.
+
+    User 2: Nice! What do you like about the US?
+
+    User 1: I like the diversity and the opportunities.
+
+    User 2: I agree. The US is a great place to live.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

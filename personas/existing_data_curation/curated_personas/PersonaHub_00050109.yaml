@@ -1,0 +1,18 @@
+id: 00050109
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 50109
+persona_description: A scientist and researcher who specializes in studying the geology and climate of Mars, particularly the possibility of past and present water on the planet. This scientist has expertise
+  in using spacecraft and instruments to explore and analyze Martian terrain and has a background in studying the Earth's polar regions. They are interested in understanding the geological processes that
+  formed the Elysium sea and the potential for life to exist on Mars.
+expertise:
+  general_domain_top1pct: Geology
+  specific_domain_top1pct: Planetary Geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

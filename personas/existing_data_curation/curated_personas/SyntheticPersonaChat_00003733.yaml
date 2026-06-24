@@ -1,0 +1,72 @@
+id: '00003733'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3733
+data:
+  user 1 personas: 'I love to cut down trees.
+
+    I cut down trees very fast , because i have a large ax.
+
+    I am a lumberjack.
+
+    I love to fish.
+
+    I eat lots of pancakes and syrup.'
+  user 2 personas: 'My parents are still married.
+
+    We live in a rural area.
+
+    I am a woman.
+
+    I have several children.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you do for fun?
+
+    User 2: I like to go fishing.
+
+    User 1: That''s great! I love fishing too. I''m a lumberjack and I love to cut down trees.
+
+    User 2: Wow, that''s cool! I''ve never met a lumberjack before.
+
+    User 1: It''s a pretty good job. I get to work outside and I''m always doing something different.
+
+    User 2: That sounds great! I''m a stay-at-home mom and I have a lot of kids.
+
+    User 1: That must be a lot of work!
+
+    User 2: It is, but it''s also very rewarding.
+
+    User 1: I bet it is. I''m glad you enjoy it.
+
+    User 2: Me too.
+
+    User 1: Do you have any pets?
+
+    User 2: Yes, we have a dog and a cat.
+
+    User 1: That''s great! I love animals.
+
+    User 2: Me too.
+
+    User 1: So, what do you like to do for fun in your spare time?
+
+    User 2: I like to go for walks in the woods, read books, and cook.
+
+    User 1: That sounds like a lot of fun. I like to do those things too.
+
+    User 2: That''s great! We should hang out sometime and do something together.
+
+    User 1: That would be fun! I''m free this weekend.
+
+    User 2: Me too! We can go for a walk in the woods.
+
+    User 1: Sounds good! I''ll bring my axe.
+
+    User 2: That''s great! I''ll bring the fishing poles.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,66 @@
+id: '00004207'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4207
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I like to role play.
+
+    I do not like animals.
+
+    I am a morning person.
+
+    I love cars.'
+  user 2 personas: 'I have a brown belt in karate.
+
+    I live with my paps and grandma.
+
+    Paps likes to go mushroom hunting.
+
+    Grandma makes jewelry.
+
+    I sing in the school chorus.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name]. It''s nice to meet you.
+
+    User 1: It''s nice to meet you too. What do you like to do for fun?
+
+    User 2: I like to sing in the school chorus.
+
+    User 1: That''s really cool! I''ve always wanted to be able to sing.
+
+    User 2: It''s a lot of fun. I also like to go mushroom hunting with my paps.
+
+    User 1: Mushroom hunting? That sounds fun!
+
+    User 2: It is. My paps knows all about mushrooms. He''s even got a brown belt in karate!
+
+    User 1: Wow! A brown belt in karate? That''s impressive.
+
+    User 2: Yeah, he''s really good at it.
+
+    User 1: So, what do you like to do with your grandmother?
+
+    User 2: My grandmother makes jewelry. She''s really good at it.
+
+    User 1: That''s really cool! I''ve never met anyone who makes jewelry.
+
+    User 2: Yeah, she''s a lot of fun.
+
+    User 1: It sounds like you have a really great family.
+
+    User 2: Yeah, I do. They''re the best.
+
+    User 1: Well, I''m glad I met you. It was nice talking to you.
+
+    User 2: You too. I hope we can talk again soon.
+
+    User 1: Me too. Bye!
+
+    User 2: Bye!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

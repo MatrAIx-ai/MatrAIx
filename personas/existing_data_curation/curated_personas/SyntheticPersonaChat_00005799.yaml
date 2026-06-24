@@ -1,0 +1,60 @@
+id: 00005799
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5799
+data:
+  user 1 personas: 'I like jogging in my spare time.
+
+    I also give blood monthly in honor of my sister who died.
+
+    I am hoping to move to australia soon to marry my boyfriend.
+
+    I am a waitress at a popular houston club.'
+  user 2 personas: 'I love tacos but hate spaghetti.
+
+    I m headed to university of michigan in the fall.
+
+    My favorite season is summer.
+
+    I just graduated high school.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi! How''s it going?
+
+    User 1: It''s going well! I''m just on my lunch break.
+
+    User 2: Nice! Me too. I just graduated from high school and I''m headed to Michigan State University in the fall.
+
+    User 1: Oh, that''s great! I''m a waitress at a popular Houston club.
+
+    User 2: Wow! That sounds like a fun job. I''m not sure what I want to do with my life yet.
+
+    User 1: Well, I hope you find something you love!
+
+    User 2: Thank you! I hope so too.
+
+    User 1: What''s your favorite season?
+
+    User 2: My favorite season is summer. I love the heat and the sunshine.
+
+    User 1: Me too! I love going to the beach and swimming.
+
+    User 2: Me too! I love swimming and playing in the sand.
+
+    User 1: What are some of your hobbies?
+
+    User 2: I love to read and go to the movies. I also love to hang out with my friends and family.
+
+    User 1: Me too! I love to read and go to the movies. I also love to play video games.
+
+    User 2: I love video games too! I love playing Mario Kart and Animal Crossing.
+
+    User 1: Me too! I love playing Mario Kart and Animal Crossing.
+
+    User 2: It''s nice to meet you!
+
+    User 1: It''s nice to meet you too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

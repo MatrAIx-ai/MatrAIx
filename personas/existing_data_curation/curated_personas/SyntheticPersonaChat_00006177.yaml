@@ -1,0 +1,62 @@
+id: '00006177'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6177
+data:
+  user 1 personas: 'We are getting married in a park.
+
+    My dog is the ring bearer.
+
+    I am getting married next week.
+
+    We will be traveling to niagra falls for our honeymoon.
+
+    My family hates my fiancé.'
+  user 2 personas: 'I love chickens.
+
+    I work on a farm.
+
+    I know how to drive a truck.
+
+    I eat eggs for breakfast.'
+  Best Generated Conversation: 'User 1: I am getting married next week!
+
+    User 2: Congratulations! That''s so exciting!
+
+    User 1: Thank you! We are getting married in a park.
+
+    User 2: That sounds beautiful!
+
+    User 1: My dog is the ring bearer.
+
+    User 2: Aww, that''s so cute!
+
+    User 1: Yeah, we''re really excited about it.
+
+    User 2: I''m sure it will be a beautiful wedding.
+
+    User 1: Thank you! We''re also going to Niagara Falls for our honeymoon.
+
+    User 2: Niagara Falls is beautiful! I''ve been there once.
+
+    User 1: We''re really excited to see it.
+
+    User 2: I''m sure you''ll have a wonderful time.
+
+    User 1: Thank you!
+
+    User 2: So, what''s your fiancé like?
+
+    User 1: He''s great! He''s funny, kind, and smart.
+
+    User 2: He sounds perfect.
+
+    User 1: He is! I''m so lucky to have him.
+
+    User 2: I''m sure you''re going to have a long and happy marriage.
+
+    User 1: Thank you! I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

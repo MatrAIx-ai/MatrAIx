@@ -1,0 +1,18 @@
+id: 00014899
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 14899
+persona_description: A scientist with expertise in lunar exploration, specifically focusing on the LROC team's work with the Lunar Reconnaissance Orbiter Camera. This persona is likely to be interested
+  in the discovery and analysis of lunar features, particularly those related to mare deposits and the impact of meteoroids. They may also be interested in the study of lunar geology and the impact of solar
+  radiation on lunar landscapes.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: lunar geology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

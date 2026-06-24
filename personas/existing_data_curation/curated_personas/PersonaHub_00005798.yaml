@@ -1,0 +1,18 @@
+id: 00005798
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 5798
+persona_description: A software engineer who is interested in optimizing the performance of applications running on high-end CPUs with Non Uniform Memory Access (NUMA) technology. They are looking for ways
+  to improve the efficiency of their code by minimizing the overhead of the automatic NUMA balancing process and configuring the behavior of the task scanner to balance the overhead with the time taken
+  to scan the data. They are also interested in monitoring and profiling the performance of the application to ensure that the automatic NUMA balancing feature is being used effectively.
+expertise:
+  general_domain_top1pct: Computer Science
+  specific_domain_top1pct: Computer Architecture
+  general_domain_top01pct: None
+  specific_domain_top01pct: NUMA Optimization
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

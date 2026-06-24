@@ -1,0 +1,20 @@
+id: 00029094
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 29094
+persona_description: A professional in the field of network engineering and database management, with expertise in designing and implementing high-performance, scalable databases using distributed systems.
+  This individual is familiar with various data transport mechanisms and is proficient in utilizing NDB Cluster, a distributed database management system that allows for the communication between nodes
+  in a network to be optimized for data transmission. This persona is likely to be interested in the detailed documentation and technical information provided in the NDB Cluster TCP/IP Connections section,
+  as well as the shared memory (SHM) connection mechanism. They are likely to be familiar with the specialized hardware, software, and MySQL binaries required for using SCI transporters in NDB Cluster and
+  would appreciate the information provided in the NDB Cluster TCP/IP Connections Using Direct Connections section.
+expertise:
+  general_domain_top1pct: Computer Science/Computer Engineering
+  specific_domain_top1pct: Distributed Database Systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

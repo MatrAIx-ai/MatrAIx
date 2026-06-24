@@ -1,0 +1,68 @@
+id: '00003002'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3002
+data:
+  user 1 personas: 'I am an ovo vegetarian.
+
+    I enjoy sleeping in on my days off.
+
+    Every day i drive an hour to work in this horrible traffic.
+
+    I cannot cook.'
+  user 2 personas: 'My mom is my best friend.
+
+    I believe that mermaids are real.
+
+    I love iced tea.
+
+    I have four sisters.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1''s name].
+
+    User 2: Hi! I''m [user 2''s name].
+
+    User 1: What are your interests?
+
+    User 2: I love iced tea, I have four sisters, and my mom is my best friend.
+
+    User 1: Oh, that''s cool! I''m an ovo vegetarian, I enjoy sleeping in on my days off, and I drive an hour to work every day.
+
+    User 2: Wow, you must be tired when you get home from work!
+
+    User 1: I am! But I always make time for a cup of tea before I go to bed.
+
+    User 2: That''s a good way to relax.
+
+    User 1: Yeah, it is. What do you do for work?
+
+    User 2: I''m a stay-at-home mom, so I have a lot of time to make iced tea and hang out with my family.
+
+    User 1: That sounds nice! I''m a software engineer, so I work long hours.
+
+    User 2: I can imagine! Do you like your job?
+
+    User 1: It''s okay. It can be a lot of stress, but it''s also pretty rewarding.
+
+    User 2: I''m glad you find it rewarding.
+
+    User 1: Yeah, I do. It''s a good job, and I''m good at it.
+
+    User 2: That''s great to hear!
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: That sounds like a lot of fun! I like to read, too. I also like to watch movies, play video games, and go out with friends.
+
+    User 2: Those all sound like great ways to relax.
+
+    User 1: Yeah, they are. I''m glad we have some things in common.
+
+    User 2: Me too! I think we''re going to get along great.
+
+    User 1: I think so, too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

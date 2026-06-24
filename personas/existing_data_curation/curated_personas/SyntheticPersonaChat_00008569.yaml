@@ -1,0 +1,72 @@
+id: 00008569
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8569
+data:
+  user 1 personas: 'I am going to start school at the university of kentucky.
+
+    I am interested in producing music.
+
+    I am a senior in high school.
+
+    I have 2 brothers.'
+  user 2 personas: 'I have a boxer dog.
+
+    I like baths.
+
+    I like to exercise.
+
+    My father lives in china.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: What''s your name?
+
+    User 2: My name is James.
+
+    User 1: It''s nice to meet you, James. What do you like to do for fun?
+
+    User 2: I like to exercise, take baths, and play with my dog.
+
+    User 1: That sounds fun! I like to exercise too, but I don''t have a dog.
+
+    User 2: You should get one! They''re great companions.
+
+    User 1: I might have to! I''ve always wanted a boxer dog.
+
+    User 2: Boxers are great dogs! They''re friendly and playful.
+
+    User 1: That sounds like my kind of dog!
+
+    User 2: What are you going to do after high school?
+
+    User 1: I''m going to start school at the University of Kentucky.
+
+    User 2: Oh, that''s great! What are you going to study?
+
+    User 1: I''m not sure yet, but I''m interested in producing music.
+
+    User 2: That sounds like a great career! I''m sure you''ll do well.
+
+    User 1: Thanks! I hope so.
+
+    User 2: So, where are you from?
+
+    User 1: I''m from California.
+
+    User 2: Oh, cool! I''ve never been to California.
+
+    User 1: It''s a great place! I love the weather.
+
+    User 2: I''m sure it is! I love warm weather.
+
+    User 1: Well, it was nice talking to you, James.
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,62 @@
+id: 00005781
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5781
+data:
+  user 1 personas: 'I have been married for 6 years.
+
+    I like to go to the casino on weekends.
+
+    I have tried 35 different types of beer in my lifetime.
+
+    I am a financial analyst for a brewery.'
+  user 2 personas: 'On weekends i like to go hiking.
+
+    I just graduated college.
+
+    I want to teach kids in elementary school.
+
+    I live in a big city.
+
+    My major was american literature and education.'
+  Best Generated Conversation: 'User 1: It''s a beautiful day outside, isn''t it?
+
+    User 2: Yes, it is! I''m going to go hiking.
+
+    User 1: That sounds fun! I love hiking.
+
+    User 2: Where do you like to hike?
+
+    User 1: I usually go to the mountains or the beach.
+
+    User 2: I love the beach! I used to live in Hawaii, so I would go to the beach all the time.
+
+    User 1: That must have been amazing! I''ve never been to Hawaii.
+
+    User 2: It was! I miss it every day.
+
+    User 1: What''s it like to live in a big city?
+
+    User 2: It''s exciting! There''s always something going on.
+
+    User 1: I''ve never lived in a big city before. I''m from a small town.
+
+    User 2: I love small towns! They''re so peaceful.
+
+    User 1: Yeah, they are. But I like the excitement of the city.
+
+    User 2: I can see why. There''s always something to do.
+
+    User 1: What are your plans for the future?
+
+    User 2: I want to be a teacher.
+
+    User 1: That''s great! I''m sure you''ll be a great teacher.
+
+    User 2: Thanks! I''m excited to start my career.
+
+    User 1: I''m sure you''ll do great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

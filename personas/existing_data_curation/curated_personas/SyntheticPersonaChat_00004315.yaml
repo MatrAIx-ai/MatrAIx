@@ -1,0 +1,62 @@
+id: '00004315'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4315
+data:
+  user 1 personas: 'I enjoy cooking and baking.
+
+    I love to travel.
+
+    I grew up by the ocean.
+
+    I like to eat pizza.
+
+    Dogs are my favorite animal.'
+  user 2 personas: 'I sometimes scratch my nose for fun.
+
+    I never learned how to drive.
+
+    I love to read books.
+
+    My favorite number is 7.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name]. What''s your name?
+
+    User 2: Hi, I''m [name].
+
+    User 1: Nice to meet you, [name]. Where are you from?
+
+    User 2: I''m from California.
+
+    User 1: Me too! I grew up in San Diego.
+
+    User 2: Oh, I''ve been to San Diego a few times. It''s a beautiful city.
+
+    User 1: Thanks! I love it here. What do you like to do for fun?
+
+    User 2: I love to read books. I also like to go for walks and explore new places.
+
+    User 1: I like to read books too! What kind of books do you like to read?
+
+    User 2: I like to read all kinds of books, but my favorite genres are mystery and romance.
+
+    User 1: I love mystery books too! I''m currently reading a series about a private investigator.
+
+    User 2: Oh, that sounds interesting. I''ll have to check it out.
+
+    User 1: You should! It''s a great series. What else do you like to do for fun?
+
+    User 2: I like to go for walks in the park. I also like to go to the beach and play in the sand.
+
+    User 1: I like the beach too! I love swimming and sunbathing.
+
+    User 2: Me too! I also love playing in the sand.
+
+    User 1: It sounds like we have a lot in common.
+
+    User 2: Yeah, we do! It''s nice to meet someone who likes the same things I do.
+
+    User 1: Me too! I''m glad we met.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: 00005509
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5509
+data:
+  user 1 personas: 'I am the youngest in my family.
+
+    I have two older brothers.
+
+    My passion is photography.
+
+    I am a freshman at nyu.'
+  user 2 personas: 'I work as a vet.
+
+    I like to ride my bike.
+
+    I am a vegan.
+
+    I am a 30 year old female.
+
+    I have 3 dogs and 2 cats.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a veterinarian.
+
+    User 1: Oh, that''s cool! I love animals. I have two dogs and a cat.
+
+    User 2: That''s awesome! I have three dogs and two cats myself.
+
+    User 1: Really? What kind of dogs do you have?
+
+    User 2: I have a golden retriever, a labrador retriever, and a German shepherd.
+
+    User 1: Wow, that''s a lot of dogs! I''m sure they keep you busy.
+
+    User 2: They do, but they''re also a lot of fun.
+
+    User 1: I bet! Do you have any other pets?
+
+    User 2: Yes, I have a cat named Luna and a cat named Shadow.
+
+    User 1: Those are great names! I love cats.
+
+    User 2: Me too! They''re so cute and cuddly.
+
+    User 1: What''s your favorite thing about being a veterinarian?
+
+    User 2: I love helping animals and making them feel better.
+
+    User 1: That''s awesome! I''m sure you''re a great vet.
+
+    User 2: Thanks! I try my best.
+
+    User 1: So, what''s your favorite thing to do outside of work?
+
+    User 2: I love to ride my bike.
+
+    User 1: That''s cool! I love to bike too.
+
+    User 2: We should go biking together sometime.
+
+    User 1: That would be fun!
+
+    User 2: Great! I''ll let you know when I''m free.
+
+    User 1: Perfect! I look forward to it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

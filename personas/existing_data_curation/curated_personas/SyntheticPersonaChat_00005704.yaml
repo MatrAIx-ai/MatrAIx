@@ -1,0 +1,66 @@
+id: '00005704'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5704
+data:
+  user 1 personas: 'My wife is a college professor.
+
+    I have one little girl.
+
+    My mother was a concert pianist.
+
+    I graduated top of my class.'
+  user 2 personas: 'My mother is a dentist.
+
+    My favorite tv show is silicon valley.
+
+    I am a baker.
+
+    I have 2 sisters.
+
+    I like to play tennis.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I''m a baker.
+
+    User 1: Oh, that''s cool! I love baking.
+
+    User 2: What''s your favorite thing to bake?
+
+    User 1: I love making chocolate chip cookies.
+
+    User 2: Me too! I love the smell of chocolate chip cookies in the oven.
+
+    User 1: Me too! I also love the taste of them.
+
+    User 2: They''re so delicious! What''s your favorite movie?
+
+    User 1: I love the movie "The Shawshank Redemption."
+
+    User 2: Me too! It''s a great movie.
+
+    User 1: I also love the movie "The Dark Knight."
+
+    User 2: That''s another great movie! Do you have any siblings?
+
+    User 1: Yes, I have one sister.
+
+    User 2: Me too! I have two sisters.
+
+    User 1: What do they do for a living?
+
+    User 2: One of them is a nurse and the other one is a teacher.
+
+    User 1: Oh, that''s cool! My sister is a stay-at-home mom.
+
+    User 2: That''s great! I''m glad she''s able to stay home with her kids.
+
+    User 1: Me too! She loves being a mom.
+
+    User 2: I can tell. She''s very good at it.
+
+    User 1: Thanks! I think so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

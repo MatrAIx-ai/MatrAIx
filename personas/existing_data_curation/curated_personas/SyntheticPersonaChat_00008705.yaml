@@ -1,0 +1,58 @@
+id: 00008705
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8705
+data:
+  user 1 personas: 'I was once on the local news , and not for anything illegal.
+
+    My uncle use to work on fish boats in florida.
+
+    I ve never been to the west coast of the united states.
+
+    My father use to drive a taxi cab in the 1970 s.'
+  user 2 personas: 'I am very good at math and science.
+
+    I am considered a nerd by many.
+
+    I i love logical and rational thinking.
+
+    I started working at google last week on self driving car research.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I work at Google on self-driving car research.
+
+    User 1: That''s so cool! I''m a big fan of self-driving cars.
+
+    User 2: Me too! I think they''re going to revolutionize transportation.
+
+    User 1: I agree. They''re so much more efficient than human drivers.
+
+    User 2: Yeah, and they''re also safer.
+
+    User 1: Yeah, I''m really excited to see how self-driving cars change the world.
+
+    User 2: Me too! I think they have the potential to make the world a much better place.
+
+    User 1: I agree. So, what''s it like working at Google?
+
+    User 2: It''s amazing! I''m surrounded by incredibly smart and talented people.
+
+    User 1: That must be awesome! I can imagine the work environment is very stimulating.
+
+    User 2: It is! I''m always learning new things and growing as a professional.
+
+    User 1: I''m really happy for you! It sounds like you''re in a great position.
+
+    User 2: Thanks! I am very grateful for my job.
+
+    User 1: So, what''s your favorite thing about working at Google?
+
+    User 2: My favorite thing is the people. I love working with such a talented and intelligent team.
+
+    User 1: That''s great! It sounds like you''re really enjoying your job.
+
+    User 2: I am! It''s a dream come true.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

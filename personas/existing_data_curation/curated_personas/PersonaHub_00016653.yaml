@@ -1,0 +1,18 @@
+id: '00016653'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 16653
+persona_description: A meteorologist who specializes in forecasting snowfall patterns and is particularly adept at identifying and interpreting satellite imagery to predict the intensity and location of
+  snow bands. This individual has experience with satellite data analysis and has a keen eye for identifying patterns and connections in the data. They are also knowledgeable about the geography of the
+  Great Lakes region and can use this knowledge to interpret the satellite imagery in the context of the region's climate and weather patterns.
+expertise:
+  general_domain_top1pct: meteorology
+  specific_domain_top1pct: snowfall pattern forecasting
+  general_domain_top01pct: None
+  specific_domain_top01pct: satellite imagery analysis for snowfall forecasting
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

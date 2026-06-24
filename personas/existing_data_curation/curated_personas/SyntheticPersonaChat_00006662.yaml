@@ -1,0 +1,90 @@
+id: '00006662'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6662
+data:
+  user 1 personas: 'I work as a teacher and love my job.
+
+    I have two dogs who are like my babies.
+
+    I am a mother.
+
+    One child has autism.
+
+    I have two children.'
+  user 2 personas: 'My weekends are spent studying and looking over client files.
+
+    I manage all the paperwork and incoming calls.
+
+    I am a receptionist at a doctors office.
+
+    I am also a fulltime student studying radiology at local college.
+
+    My name is mary.'
+  Best Generated Conversation: 'User 1: Hi, I''m [your name].
+
+    User 2: Hi, [your name], I''m Mary.
+
+    User 1: It''s nice to meet you, Mary.
+
+    User 2: Nice to meet you too.
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a receptionist at a doctor''s office.
+
+    User 1: That sounds like an interesting job.
+
+    User 2: It can be, but it''s also a lot of work.
+
+    User 1: I''m sure it is. What are some of your responsibilities?
+
+    User 2: I manage all the paperwork and incoming calls, and I also greet and check in patients.
+
+    User 1: That sounds like a lot to keep track of.
+
+    User 2: It can be, but I''m used to it now.
+
+    User 1: So, what do you do outside of work?
+
+    User 2: I''m a full-time student studying radiology at the local college.
+
+    User 1: That''s awesome! What made you decide to study radiology?
+
+    User 2: I''ve always been interested in the medical field, and I think radiology is a really fascinating area.
+
+    User 1: It sounds like you''re really passionate about it.
+
+    User 2: I am, and I''m really excited to start my career in the field.
+
+    User 1: I''m sure you''ll be great at it.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, go for walks, and spend time with my family.
+
+    User 1: That sounds like a lot of fun.
+
+    User 2: It is, and I love it.
+
+    User 1: So, what are your plans for the weekend?
+
+    User 2: I''m going to be studying for my exams, but I''m also going to try to relax and have some fun.
+
+    User 1: That sounds like a good plan.
+
+    User 2: Yeah, I think so too.
+
+    User 1: Well, it was nice talking to you, Mary.
+
+    User 2: Nice talking to you too, [your name].
+
+    User 1: Have a great weekend!
+
+    User 2: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

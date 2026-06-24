@@ -1,0 +1,72 @@
+id: '00005066'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5066
+data:
+  user 1 personas: 'I played football in college.
+
+    I have a passion for politics.
+
+    I ve been married for five years.
+
+    I work at a candy store.'
+  user 2 personas: 'My mother has her own fashion brand.
+
+    My favorite artist is bob ross.
+
+    I got a job as an accountant 3 months ago.
+
+    I am a vegan.
+
+    I enjoy hiking.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1 name].
+
+    User 2: Hi, I''m [user 2 name].
+
+    User 1: What do you do for fun?
+
+    User 2: I like to hike and paint.
+
+    User 1: Oh, that sounds fun! I used to play football in college, but I''ve never really gotten into painting.
+
+    User 2: I''ve always loved art. My mother has her own fashion brand, and I''ve always been inspired by her work.
+
+    User 1: That''s really cool! I''ve always admired people who can draw or paint. I can barely draw stick figures.
+
+    User 2: You don''t have to be good at drawing to enjoy it. It''s just about expressing yourself.
+
+    User 1: I guess you''re right. I''ve always been more interested in sports than art, but I might try painting sometime.
+
+    User 2: I''d love to see what you create!
+
+    User 1: Thanks! I''ll let you know if I ever give it a try.
+
+    User 2: Okay! I''m also a vegan, so I like to cook a lot of plant-based meals.
+
+    User 1: That''s really cool! I''ve been thinking about trying to eat less meat, but I''m not sure where to start.
+
+    User 2: There are a lot of great resources online that can help you get started. I know it can be a little overwhelming at first, but it''s definitely worth it.
+
+    User 1: I''ll have to check it out. Thanks for the tip!
+
+    User 2: You''re welcome! So, what do you do for work?
+
+    User 1: I work at a candy store. It''s a lot of fun, but it can be pretty busy at times.
+
+    User 2: That sounds like a lot of fun! I''ve never worked in a candy store before.
+
+    User 1: It''s definitely a lot different than working at a regular store. I get to try all the candy, which is always a plus.
+
+    User 2: That''s a pretty sweet deal!
+
+    User 1: It is! I''ve actually been trying to get my wife to try some of the more exotic candies, but she''s not really a fan.
+
+    User 2: Oh, that''s too bad. I love trying new things, so I''m always up for trying new candy.
+
+    User 1: I''ll have to bring some in for you to try next time I see you.
+
+    User 2: That would be great! Thanks!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

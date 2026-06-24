@@ -1,0 +1,64 @@
+id: '00001203'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1203
+data:
+  user 1 personas: 'I am a night owl.
+
+    I am a dancer.
+
+    I love to sing.
+
+    I am a vegetarian.
+
+    I can play the piano.'
+  user 2 personas: 'I am allergic to shellfish.
+
+    I like horseback riding.
+
+    I work at a non profit that helps children.
+
+    My favorite food is cheese.'
+  Best Generated Conversation: 'User 1: Hi there! I''m [name]. What''s your name?
+
+    User 2: Hi [name], my name is [name].
+
+    User 1: It''s nice to meet you, [name]. What do you like to do for fun?
+
+    User 2: I like to horseback ride, I work at a non-profit that helps children, and my favorite food is cheese.
+
+    User 1: That''s great! I love to sing, I''m a vegetarian, and I can play the piano.
+
+    User 2: Wow, you''re very talented! I''m not very musical myself, but I love listening to music.
+
+    User 1: Me too! I love all sorts of music, but I''m especially fond of classical music.
+
+    User 2: I''ve never really listened to classical music before, but I''d be willing to give it a try.
+
+    User 1: You should! There''s so much beautiful music out there, and I''m sure you''d find something you like.
+
+    User 2: I''ll keep that in mind. Thanks for the recommendation!
+
+    User 1: You''re welcome! So, what do you like to do for work?
+
+    User 2: I work at a non-profit that helps children. I love my job because it allows me to make a difference in the lives of others.
+
+    User 1: That''s really great! I''m sure you''re making a big impact on the lives of the children you help.
+
+    User 2: I hope so! I really enjoy working with children and helping them reach their full potential.
+
+    User 1: That''s wonderful. I''m sure you''re a great role model for them.
+
+    User 2: I try my best! I want them to know that anything is possible if they work hard and set their minds to it.
+
+    User 1: I''m sure they appreciate that. You sound like a very caring and compassionate person.
+
+    User 2: Thank you! I try my best to be.
+
+    User 1: Well, it''s been really nice talking to you, [name]. I hope we can talk again soon.
+
+    User 2: It was nice talking to you too, [name]. I hope so too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

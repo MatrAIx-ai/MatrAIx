@@ -1,0 +1,78 @@
+id: 00005118
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5118
+data:
+  user 1 personas: 'My father was a famous actor.
+
+    I do not like acting.
+
+    I have 3 ferrari cars in my garage.
+
+    I do not like kids.
+
+    I have 3 ex wives.'
+  user 2 personas: 'I love the water , any water , ocean , river , or lake.
+
+    My mother met elvis.
+
+    I moved out when i was 14.
+
+    I like cartoons more than movies.
+
+    I like to listen to someone else reading a book.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello!
+
+    User 1: I''m [user 1''s name].
+
+    User 2: I''m [user 2''s name].
+
+    User 1: It''s nice to meet you!
+
+    User 2: It''s nice to meet you too!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to spend time in the water. I love swimming, boating, and fishing.
+
+    User 1: That sounds like a lot of fun! I don''t like water that much. I''m more of a landlubber.
+
+    User 2: I understand. Not everyone likes water. What do you like to do on land?
+
+    User 1: I like to read, listen to music, and watch movies.
+
+    User 2: I like to read too! What''s your favorite book?
+
+    User 1: I don''t have a favorite book, but I really like the Harry Potter series.
+
+    User 2: I''ve heard good things about Harry Potter. I''ve never read them, but I''ve seen the movies.
+
+    User 1: The movies are good, but the books are even better.
+
+    User 2: I''ll have to check them out sometime.
+
+    User 1: You should! They''re really good.
+
+    User 2: Thanks for the recommendation!
+
+    User 1: No problem!
+
+    User 2: So, what else do you like to do?
+
+    User 1: I like to go to the movies, go to the park, and hang out with friends.
+
+    User 2: I like to do all of those things too!
+
+    User 1: Cool! We should hang out sometime.
+
+    User 2: That would be fun!
+
+    User 1: Great! I''ll give you my number.
+
+    User 2: Okay'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

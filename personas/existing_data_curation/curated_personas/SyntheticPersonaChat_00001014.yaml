@@ -1,0 +1,72 @@
+id: '00001014'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1014
+data:
+  user 1 personas: 'I have red hair.
+
+    I moved far from home.
+
+    I like to eat meat.
+
+    My family owns a farm.
+
+    I am skilled in computer repair.'
+  user 2 personas: 'I am a guy that enjoys being a guy.
+
+    I am close to my mother , but not to my father.
+
+    My favorite thing to eat is a burrito.
+
+    I love to binge watch shows on streaming services.
+
+    I like to hike and spend time outdoors.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! How''s it going?
+
+    User 1: I''m doing well! I just moved to a new city, and I''m trying to meet new people.
+
+    User 2: Oh, that''s exciting! What city did you move to?
+
+    User 1: I moved to Denver.
+
+    User 2: Nice! I''ve heard great things about Denver.
+
+    User 1: It''s really beautiful here. I''m enjoying the mountains.
+
+    User 2: I''m sure! I''ve been wanting to go hiking in the mountains there.
+
+    User 1: You should! It''s beautiful.
+
+    User 2: I definitely will! What do you do for fun?
+
+    User 1: I like to cook, read, and play video games.
+
+    User 2: I like to cook too! What''s your favorite thing to cook?
+
+    User 1: I love to make pasta.
+
+    User 2: Me too! I love making spaghetti.
+
+    User 1: I''m more of a lasagna person myself.
+
+    User 2: That''s a good choice too! I love lasagna.
+
+    User 1: What about you? What do you like to do for fun?
+
+    User 2: I like to binge watch shows on streaming services.
+
+    User 1: Me too! I just finished watching The Witcher on Netflix.
+
+    User 2: I loved that show! I''m excited for the second season.
+
+    User 1: Me too! I''m also looking forward to the new season of Stranger Things.
+
+    User 2: Me too! I love that show.
+
+    User 1: I think we''re going to get along great.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,74 @@
+id: '00003111'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3111
+data:
+  user 1 personas: 'I like going to canada.
+
+    I love the band van halen.
+
+    I wear a lot of purple.
+
+    I want to be a doctor.'
+  user 2 personas: 'I am six feet tall.
+
+    I love to be run.
+
+    I have a family that are all tall.
+
+    I like to dance with my friends.'
+  Best Generated Conversation: 'User 1: Hi, I''m (name).
+
+    User 2: Hi, I''m (name).
+
+    User 1: Where are you from?
+
+    User 2: I''m from Canada.
+
+    User 1: Oh, I love Canada! I''ve been to Vancouver a few times.
+
+    User 2: That''s great! I''m from Toronto.
+
+    User 1: Oh, I''ve never been to Toronto. What''s it like?
+
+    User 2: It''s a great city! It''s very multicultural and there''s always something to do.
+
+    User 1: That sounds awesome! I''ll have to check it out sometime.
+
+    User 2: You definitely should!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to run, dance, and hang out with my friends.
+
+    User 1: I like to run too! I''m not very good at it, but it''s fun.
+
+    User 2: I''m not very good at it either, but it''s a great way to stay in shape.
+
+    User 1: Yeah, I agree.
+
+    User 2: What do you like to listen to?
+
+    User 1: I like a lot of different music, but my favorite band is Van Halen.
+
+    User 2: I love Van Halen! They''re one of my favorite bands too.
+
+    User 1: Oh, cool! What''s your favorite song by them?
+
+    User 2: I don''t know if I have a favorite song, but I really like "Jump" and "Panama."
+
+    User 1: Those are two of my favorites too!
+
+    User 2: Nice!
+
+    User 1: What do you want to be when you grow up?
+
+    User 2: I want to be a doctor.
+
+    User 1: Oh, that''s a great goal! I''m sure you''ll be a great doctor.
+
+    User 2: Thank you! I hope so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

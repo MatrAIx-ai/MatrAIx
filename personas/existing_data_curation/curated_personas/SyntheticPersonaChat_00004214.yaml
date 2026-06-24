@@ -1,0 +1,69 @@
+id: '00004214'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4214
+data:
+  user 1 personas: 'My favorite food is pizza.
+
+    I love to dance salsa.
+
+    I am currently working on a project that involves bitcoins.
+
+    I am an engineer.'
+  user 2 personas: 'I have a golden retriever.
+
+    I work in advertising.
+
+    I like to hike.
+
+    My mother is dead.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What''s your favorite food?
+
+    User 2: I love pizza!
+
+    User 1: Me too! What''s your favorite kind?
+
+    User 2: I like pepperoni and pineapple.
+
+    User 1: That''s a classic! What do you do for work?
+
+    User 2: I work in advertising.
+
+    User 1: That sounds interesting. What do you like about it?
+
+    User 2: I like the creative aspect of it. I get to come up with new ideas and see them come to life.
+
+    User 1: That''s cool! What kind of creative projects have you worked on?
+
+    User 2: I''ve worked on a lot of different projects, but one of my favorites was a campaign for a new pizza restaurant. We came up with a really fun and creative way to promote the restaurant, and it
+    was a huge success.
+
+    User 1: That''s great! I''m glad to hear that your work is successful.
+
+    User 2: Thanks! I''m really passionate about it.
+
+    User 1: Me too! I love to see my creativity come to life.
+
+    User 2: What do you do for fun?
+
+    User 1: I love to dance salsa. It''s a great workout and it''s so much fun.
+
+    User 2: That sounds amazing! I''ve always wanted to learn how to dance salsa.
+
+    User 1: You should! It''s a lot of fun and it''s a great way to meet new people.
+
+    User 2: I''ll definitely look into it.
+
+    User 1: I''m sure you''ll love it.
+
+    User 2: Thanks! I''m glad I met you.
+
+    User 1: Me too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

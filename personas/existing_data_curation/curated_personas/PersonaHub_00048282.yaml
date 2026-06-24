@@ -1,0 +1,18 @@
+id: 00048282
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 48282
+persona_description: A software developer who specializes in the creation and maintenance of software routines for converting drawings from AutoCAD to Geospatial Information System (GIS) format. This routine
+  is designed to recreate boundaries around hatch patterns in a drawing and convert them into Gis polygons, using a process that is similar to the one used by common desktop GIS when importing drawings.
+  The routine is tested on AutoCAD 2012 and can be loaded from the Tools menu > AutoLISP > Load application in Autocad.
+expertise:
+  general_domain_top1pct: Software Development
+  specific_domain_top1pct: Geospatial Software Development
+  general_domain_top01pct: None
+  specific_domain_top01pct: Geospatial Software Development for AutoCAD
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

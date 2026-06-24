@@ -1,0 +1,74 @@
+id: '00005243'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5243
+data:
+  user 1 personas: 'I am the oldest of three boys.
+
+    I grew up in the projects of chicago.
+
+    I work at the pizza parlor.
+
+    My mother was a single mother.
+
+    I play the drums.'
+  user 2 personas: 'Sometimes i listen to gary human to be ironic.
+
+    I like eating fresh mangoes in the morning.
+
+    Going snorkeling is my favorite thing to do.
+
+    I like chasing comodo lizards on a private island.
+
+    I only use apple products because i feel everything else is inferior.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to eat fresh mangoes in the morning, chase komodo lizards on a private island, and go snorkeling.
+
+    User 1: Wow, that sounds like a lot of fun! I''ve never been snorkeling before, but I''ve always wanted to try it.
+
+    User 2: You should definitely try it! It''s so much fun. You can see all sorts of cool fish and coral reefs.
+
+    User 1: I will! What else do you like to do?
+
+    User 2: I like to play the drums. I''m self-taught, and I''ve been playing for about 10 years now.
+
+    User 1: That''s really cool! I used to play the drums, but I haven''t played in a while.
+
+    User 2: You should start playing again! It''s a lot of fun.
+
+    User 1: I will! What kind of music do you like to play?
+
+    User 2: I like to play all sorts of music, but I mostly play rock and blues.
+
+    User 1: Me too! I love rock and blues.
+
+    User 2: It''s so much fun to play music with other people. It''s a great way to connect with others and have fun.
+
+    User 1: I agree! It''s such a great feeling to be able to make music with other people.
+
+    User 2: So, what are you up to this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to go snorkeling with my friends. We''re going to a private island in the Caribbean.
+
+    User 1: That sounds like a lot of fun! I wish I could go with you.
+
+    User 2: You should come! It would be so much fun.
+
+    User 1: I don''t know. I don''t have a passport.
+
+    User 2: You can get one in a few days. It''s not too hard.
+
+    User 1: I''ll think about it.
+
+    User 2: You should! It would be a lot of fun.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

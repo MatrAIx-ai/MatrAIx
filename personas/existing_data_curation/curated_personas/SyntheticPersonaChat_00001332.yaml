@@ -1,0 +1,66 @@
+id: '00001332'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1332
+data:
+  user 1 personas: 'I live in a city.
+
+    I help my neighbor.
+
+    I like to go to the farmers markets to buy local veggies and fruits.
+
+    I am a grandmother.'
+  user 2 personas: 'I am from tennessee.
+
+    My favorite musician in charlie daniels.
+
+    I have a black lab.
+
+    I love to fish.
+
+    I am married.'
+  Best Generated Conversation: 'User 1: Hello!
+
+    User 2: Hello! What''s up?
+
+    User 1: Not much, just getting ready for my day. How about you?
+
+    User 2: I''m about to head out fishing with my black lab.
+
+    User 1: That sounds like fun! I love fishing.
+
+    User 2: Me too! Where do you like to fish?
+
+    User 1: I usually go to the local lake.
+
+    User 2: I love fishing in lakes! I''ve been fishing in Tennessee a few times.
+
+    User 1: Tennessee is beautiful! I''ve never been there, but I''d love to go.
+
+    User 2: You should definitely go! It''s a great place to fish.
+
+    User 1: Maybe I will! I''ve heard that Charlie Daniels is from Tennessee.
+
+    User 2: Yes, he is! He''s one of my favorite musicians.
+
+    User 1: Me too! I love his music.
+
+    User 2: Have you ever been to any of his concerts?
+
+    User 1: No, I haven''t. I''ve always wanted to, but I''ve never had the chance.
+
+    User 2: You should definitely go! His concerts are amazing.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! I''m always happy to help a fellow musician.
+
+    User 1: Well, I should probably get going. It was nice talking to you!
+
+    User 2: You too! Have a great day!
+
+    User 1: You too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

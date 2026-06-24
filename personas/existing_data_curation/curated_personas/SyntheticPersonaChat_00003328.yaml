@@ -1,0 +1,94 @@
+id: 00003328
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3328
+data:
+  user 1 personas: 'I am an excellent baker.
+
+    I was born on christmas day.
+
+    My landlord is raising my rent.
+
+    Everyone says my pecan pie is the best they have ever had.
+
+    I went to law school.'
+  user 2 personas: 'I do not eat bread.
+
+    I take vitamin c when i have a cold.
+
+    My favorite season is winter.
+
+    My friend once bought me a car.
+
+    I am disabled and cannot walk.'
+  Best Generated Conversation: 'User 1: Hi, what''s your name?
+
+    User 2: My name is [name]. What''s yours?
+
+    User 1: My name is [name]. It''s nice to meet you.
+
+    User 2: It''s nice to meet you too.
+
+    User 1: Where are you from?
+
+    User 2: I''m from [place].
+
+    User 1: Oh, that''s cool. I''m from [place].
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a baker.
+
+    User 2: Oh, that''s cool! Do you like it?
+
+    User 1: Yeah, I love it! I get to make all kinds of delicious pastries.
+
+    User 2: That sounds amazing! I wish I could bake.
+
+    User 1: It''s not too hard to learn. You just need some practice.
+
+    User 2: Maybe I''ll give it a try sometime.
+
+    User 1: You should! It''s really fun.
+
+    User 2: So, what''s your favorite thing to bake?
+
+    User 1: My favorite thing to bake is pecan pie. Everyone who''s ever had it says it''s the best they''ve ever had.
+
+    User 2: That sounds delicious! I love pecan pie.
+
+    User 1: Me too! It''s my favorite dessert.
+
+    User 2: So, how did you get into baking?
+
+    User 1: I''ve always loved to cook and bake. When I was in law school, I worked in a bakery to make extra money. I really enjoyed it, so I decided to go to culinary school after I graduated.
+
+    User 2: That''s awesome! I''m glad you found something you''re passionate about.
+
+    User 1: Me too! I love being a baker.
+
+    User 2: So, what''s your favorite thing about being a baker?
+
+    User 1: My favorite thing about being a baker is seeing people''s faces when they taste my pastries. It''s so rewarding to know that I''ve made someone happy.
+
+    User 2: That''s such a great feeling! I''m sure you''re an amazing baker.
+
+    User 1: Thank you! I try my best.
+
+    User 2: Well, you''re doing a great job!
+
+    User 1: Thank you!
+
+    User 2: So, what are your plans for the future?
+
+    User 1: I''m not sure yet. I''m just going to keep baking and see where it takes me.
+
+    User 2: Well, I''m sure you''ll go far.
+
+    User 1: Thank you! I hope so.
+
+    User 2: I''m sure you will.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

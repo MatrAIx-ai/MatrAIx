@@ -1,0 +1,74 @@
+id: 00002378
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2378
+data:
+  user 1 personas: 'I am a guitar player.
+
+    Welding is my career field.
+
+    I am primarily a meat eater.
+
+    My parents do not know i am gay.
+
+    I like playing video games.'
+  user 2 personas: 'I enjoy building computers.
+
+    I am in the army.
+
+    I fly airplanes.
+
+    My favorite band is tool.
+
+    I dropped out of college.'
+  Best Generated Conversation: 'User 1: Hi, my name is [user 1''s name].
+
+    User 2: Hi, I''m [user 2''s name].
+
+    User 1: What do you do for fun?
+
+    User 2: I enjoy building computers and flying airplanes.
+
+    User 1: Oh, that''s cool! I like to play video games.
+
+    User 2: Me too! What kind of games do you like to play?
+
+    User 1: I like to play RPGs and shooters.
+
+    User 2: I''m more of a simulation and strategy gamer myself.
+
+    User 1: That''s cool. I used to play more strategy games, but I haven''t played any in a while.
+
+    User 2: You should get back into it! There are some really great strategy games out there.
+
+    User 1: I might have to check some out.
+
+    User 2: You should! What kind of music do you like?
+
+    User 1: I like a lot of different kinds of music, but my favorite band is Tool.
+
+    User 2: Tool is great! I''m a fan of theirs as well.
+
+    User 1: They''re one of the best bands out there.
+
+    User 2: I agree. What do you do for work?
+
+    User 1: I''m a welder.
+
+    User 2: That''s cool! I''ve always thought welding was a cool job.
+
+    User 1: It can be, but it can also be dangerous.
+
+    User 2: I can imagine. So, what are you doing this weekend?
+
+    User 1: I''m not sure yet. What are you doing?
+
+    User 2: I''m going to be building a new computer.
+
+    User 1: Oh, that sounds fun! I might have to come over and watch.
+
+    User 2: You''re welcome to!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

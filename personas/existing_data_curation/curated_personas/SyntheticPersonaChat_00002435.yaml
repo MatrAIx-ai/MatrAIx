@@ -1,0 +1,58 @@
+id: '00002435'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2435
+data:
+  user 1 personas: 'I can play the piano.
+
+    I am a dancer.
+
+    I am a night owl.
+
+    I love to sing.'
+  user 2 personas: 'I love iced tea.
+
+    My mom is my best friend.
+
+    I m terrified of heights.
+
+    I have four sisters.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I love to read, watch movies, and play video games.
+
+    User 1: Me too! I love reading fantasy novels and watching action movies.
+
+    User 2: I love fantasy too! I''m currently reading a series by Brandon Sanderson.
+
+    User 1: I love Brandon Sanderson! I''ve read all of his books.
+
+    User 2: Oh, cool! What''s your favorite book?
+
+    User 1: My favorite book is The Way of Kings.
+
+    User 2: That''s a great book! I love the world that Sanderson created.
+
+    User 1: Me too! It''s so detailed and immersive.
+
+    User 2: Yeah, it really is. I could spend hours just reading about the world.
+
+    User 1: Me too! I love all of the different characters and their stories.
+
+    User 2: Yeah, me too! They''re all so well-developed.
+
+    User 1: I''m glad you like Sanderson! He''s one of my favorite authors.
+
+    User 2: Me too! He''s so talented.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I love to go on hikes. I''m not afraid of heights, but I''m not a fan of spiders. I have four sisters and my mom is my best friend.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

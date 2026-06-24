@@ -1,0 +1,90 @@
+id: 00008712
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8712
+data:
+  user 1 personas: 'My dad owns a appliance store that i do not want to inherit.
+
+    I prefer eating at home because people make me nervous.
+
+    I spend a lot of time watching obscure foreign film on netflix.
+
+    I hate social obligations because i always say the wrong thing.'
+  user 2 personas: 'I am a college student.
+
+    I work at the grocery store.
+
+    I own 4 cats.
+
+    My favorite band is metallica.'
+  Best Generated Conversation: 'User 1: Hi! I''m (name) and I''m a (age)-year-old (gender) from (location).
+
+    User 2: Hi! I''m (name) and I''m a (age)-year-old (gender) from (location).
+
+    User 1: It''s nice to meet you, (name). What do you do for fun?
+
+    User 2: I like to watch movies, go out to eat, and hang out with my friends.
+
+    User 1: That sounds like fun. I like to watch movies, too. What kind of movies do you like to watch?
+
+    User 2: I like to watch all kinds of movies, but I especially like action movies and comedies.
+
+    User 1: Me too! I love action movies. What''s your favorite action movie?
+
+    User 2: My favorite action movie is The Avengers. What''s yours?
+
+    User 1: My favorite action movie is also The Avengers! I love that movie.
+
+    User 2: It''s such a good movie! I''m so excited for the new one.
+
+    User 1: Me too! I can''t wait to see it.
+
+    User 2: I''m sure it will be great.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to go out to eat. What''s your favorite restaurant?
+
+    User 1: My favorite restaurant is The Cheesecake Factory. What''s yours?
+
+    User 2: I love The Cheesecake Factory! My favorite is the cheesecake.
+
+    User 1: Me too! I love their cheesecake.
+
+    User 2: It''s so good.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I also like to hang out with my friends. What do you like to do with your friends?
+
+    User 1: I like to go out to eat, go to the movies, and play games.
+
+    User 2: That sounds like fun. I like to do all of those things, too.
+
+    User 1: So, what are you doing this weekend?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Maybe we can hang out?
+
+    User 2: That would be fun!
+
+    User 1: Great! What do you want to do?
+
+    User 2: I''m not sure. What do you want to do?
+
+    User 1: We could go to the movies or go out to eat.
+
+    User 2: I''m up for whatever.
+
+    User 1: Great! Let''s go to the movies.
+
+    User 2: Sounds good!
+
+    User 1: Great! I''ll pick you up at 7.
+
+    User 2: See you then!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,71 @@
+id: 00008411
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8411
+data:
+  user 1 personas: 'I start an internship in engineering later this year.
+
+    My dream is to move to the middle of the desert.
+
+    Before i die , i want to skydive.
+
+    I have a pet snake.
+
+    I am a famous video game character online.'
+  user 2 personas: 'I like spending time with my friends and family.
+
+    I like to read a lot of books.
+
+    I like listening to all genres of music except country music.
+
+    I am not much of a fan of hot weather.
+
+    I would travel the world if i could.'
+  Best Generated Conversation: 'User 1: Hi, my name is [Name]!
+
+    User 2: Hi, [Name]! My name is [Name].
+
+    User 1: Nice to meet you, [Name]. What do you like to do for fun?
+
+    User 2: I like to spend time with my friends and family, read a lot of books, and listen to all genres of music except country music.
+
+    User 1: That''s cool! I like to spend time with my friends and family too. I also like reading, but I''m not much of a fan of hot weather.
+
+    User 2: That''s understandable. Hot weather can be pretty uncomfortable.
+
+    User 1: What are some of your favorite books?
+
+    User 2: I like a lot of different kinds of books, but I''m really into science fiction and fantasy. I also like historical fiction and mystery novels.
+
+    User 1: Me too! I love science fiction and fantasy. I also like historical fiction and mystery novels. What are some of your favorite authors?
+
+    User 2: I love Ursula K. Le Guin, Brandon Sanderson, and J.K. Rowling. I also like Agatha Christie and Lee Child.
+
+    User 1: Those are all great authors! I love Ursula K. Le Guin and Brandon Sanderson too. I''ve never read any Agatha Christie or Lee Child, but I''ve heard good things about them.
+
+    User 2: You should definitely check them out! They''re both great writers.
+
+    User 1: I will! Thanks for the recommendation.
+
+    User 2: No problem! What are some of your favorite video games?
+
+    User 1: I like a lot of different video games, but I''m really into role-playing games and action-adventure games. I also like sports games and racing games.
+
+    User 2: Me too! I love role-playing games and action-adventure games. I also like sports games and puzzle games. What are some of your favorite video games?
+
+    User 1: I love the Legend of Zelda series, the Elder Scrolls series, and the Final Fantasy series. I also like the Super Mario series, the Sonic the Hedgehog series, and the Grand Theft Auto series.
+
+    User 2: Those are all great games! I love the Legend of Zelda series, the Elder Scrolls series, and the Grand Theft Auto series too. I''ve never played any Final Fantasy games, but I''ve heard good
+    things about them.
+
+    User 1: You should definitely check them out! They''re all really good games.
+
+    User 2: I will! Thanks for the recommendation.
+
+    User 1: No problem! It was nice talking to you, [Name].
+
+    User 2: It was nice talking to you too, [Name].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

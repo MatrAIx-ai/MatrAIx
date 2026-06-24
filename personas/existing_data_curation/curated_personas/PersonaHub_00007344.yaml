@@ -1,0 +1,19 @@
+id: '00007344'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 7344
+persona_description: A user who is interested in 3D printing and has a specific interest in 3D printing models and the process of slicing them into layers. This persona is likely to have a background in
+  engineering, computer science, or related fields and has experience with 3D modeling software such as Cura. They are interested in learning how to properly slice 3D models for printing and have a curiosity
+  about the process of creating and printing 3D objects. This persona is likely to have a strong interest in learning about the settings and parameters that affect the quality of the print and how to properly
+  support the model during printing.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: 3D printing
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

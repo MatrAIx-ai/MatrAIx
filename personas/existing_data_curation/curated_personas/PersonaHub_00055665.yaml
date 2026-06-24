@@ -1,0 +1,19 @@
+id: '00055665'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 55665
+persona_description: A professional operator who is responsible for measuring and analyzing the internal DC resistance of electronic loads connected to a DUT (Device Under Test) according to specific standards
+  and protocols. This operator uses a load to measure the terminal voltage and current of the DUT at two predefined load levels, calculates the internal resistance from the difference of the measured voltages
+  and currents, and saves the results to a connected USB memory for local operation. The operator's expertise lies in understanding and applying the principles of DC resistance measurement and its application
+  in battery and accumulator testing.
+expertise:
+  general_domain_top1pct: Engineering
+  specific_domain_top1pct: Electronics Engineering
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

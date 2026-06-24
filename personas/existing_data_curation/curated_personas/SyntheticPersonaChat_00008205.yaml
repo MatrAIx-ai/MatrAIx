@@ -1,0 +1,68 @@
+id: 00008205
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8205
+data:
+  user 1 personas: 'I have been published in the new yorker magazine.
+
+    I have a severe phobia of wide open spaces.
+
+    As a child , i won a national spelling bee.
+
+    I am a gourmet cook.
+
+    I have perfect pitch.'
+  user 2 personas: 'I am a professional skittles player.
+
+    I am known as the iron skittler in the skittles universe.
+
+    In my free time , i watch anime and baseball.
+
+    My favorite mob player is barolo colon.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1]. What''s your name?
+
+    User 2: Hello, my name is [user 2]. What''s yours?
+
+    User 1: It''s nice to meet you. What do you like to do for fun?
+
+    User 2: I like to play skittles. I''m a professional skittles player.
+
+    User 1: Really? That''s so cool! What''s your favorite thing about playing skittles?
+
+    User 2: I love the competition. It''s so much fun to try and beat the other players.
+
+    User 1: I can imagine. What''s the highest score you''ve ever gotten?
+
+    User 2: I once got a 500 on a single game.
+
+    User 1: Wow! That''s amazing!
+
+    User 2: Thanks. I''m pretty proud of it.
+
+    User 1: So, what''s your dream? Is it to go pro?
+
+    User 2: Yeah, that''s the goal. I''ve been working hard to try and make it happen.
+
+    User 1: I''m sure you will. You seem like a really talented player.
+
+    User 2: Thanks. I appreciate that.
+
+    User 1: So, what''s the best part about being a pro skittles player?
+
+    User 2: I think the best part is getting to travel all over the world and compete in tournaments. I''ve been to some really amazing places because of skittles.
+
+    User 1: That sounds really cool. I''ve always wanted to travel the world.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I will! Thanks for the advice.
+
+    User 2: No problem. It was nice talking to you.
+
+    User 1: You too. Have a nice day.
+
+    User 2: You too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

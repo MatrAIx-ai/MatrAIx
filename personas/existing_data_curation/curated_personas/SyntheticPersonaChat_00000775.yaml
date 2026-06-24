@@ -1,0 +1,78 @@
+id: '00000775'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 775
+data:
+  user 1 personas: 'I love animals.
+
+    My favorite band is a fine frenzy.
+
+    I work at a hotel.
+
+    I love reading.'
+  user 2 personas: 'My idea of flirting is to stare from a distance.
+
+    In my freetime i enjoy cloud watching.
+
+    My favorite store to shop at is costco.
+
+    I work a dead end 9 to 5 job as a snakeskin oil salesman.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: Nice to meet you! What do you like to do for fun?
+
+    User 2: I like to read, watch movies, and listen to music.
+
+    User 1: Me too! I love to read and listen to music. I also like to play video games.
+
+    User 2: I''ve never been much of a gamer, but I do like to watch people play video games.
+
+    User 1: What''s your favorite band?
+
+    User 2: My favorite band is a Fine Frenzy. They''re a really talented group of musicians.
+
+    User 1: I''ve never heard of them before, but I''ll check them out.
+
+    User 2: You should! They''re great.
+
+    User 1: What''s your favorite thing to read?
+
+    User 2: I like to read anything that''s interesting, but I especially like historical fiction.
+
+    User 1: Me too! I love learning about the past.
+
+    User 2: What''s your favorite movie?
+
+    User 1: My favorite movie is The Shawshank Redemption. It''s such a good movie.
+
+    User 2: I''ve never seen it, but I''ve heard good things about it.
+
+    User 1: You should definitely see it! It''s a classic.
+
+    User 2: I''ll check it out.
+
+    User 1: So, what do you do for work?
+
+    User 2: I work as a snakeskin oil salesman. It''s not the most exciting job, but it pays the bills.
+
+    User 1: I''m sure it''s not as bad as it sounds.
+
+    User 2: It''s not too bad, but it''s definitely not my dream job.
+
+    User 1: What''s your dream job?
+
+    User 2: My dream job would be to be a writer. I love to write, and I think it would be so amazing to be able to do it for a living.
+
+    User 1: I think you should go for it! I''m sure you''d be great at it.
+
+    User 2: Thanks! I''ve been thinking about it for a while now.
+
+    User 1: Well, if you ever decide to go for it, I''m sure I can help you find a job.
+
+    User 2: Thanks, I appreciate it!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

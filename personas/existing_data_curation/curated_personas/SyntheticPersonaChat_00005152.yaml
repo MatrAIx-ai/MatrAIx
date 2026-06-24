@@ -1,0 +1,64 @@
+id: '00005152'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5152
+data:
+  user 1 personas: 'My favorite movie is titanic.
+
+    I have two kids , ages 2 and 6.
+
+    I am from sterling heights , michigan.
+
+    My husband owns a small auto repair shop.'
+  user 2 personas: 'I live in a tiny house to save money.
+
+    I tend bar on the weekends.
+
+    During the week i go to college to become a lawyer.
+
+    I listen to blues and jazz.
+
+    I collect single malt scotch.'
+  Best Generated Conversation: 'User 1: Hey, I''m from Sterling Heights, Michigan! What about you?
+
+    User 2: I''m from Detroit originally, but I''ve been living in a tiny house in the suburbs for the past few years.
+
+    User 1: That''s so cool! I''ve always been interested in tiny houses.
+
+    User 2: It''s great! It''s a lot cheaper than living in a traditional house, and it''s a lot more eco-friendly.
+
+    User 1: I bet! I''m sure it''s a lot more cozy too.
+
+    User 2: It is! I love it.
+
+    User 1: What do you do for work?
+
+    User 2: I''m a bartender on the weekends, and I''m in college during the week to become a lawyer.
+
+    User 1: Wow, that''s a lot going on!
+
+    User 2: It is, but it''s good. I like to keep busy.
+
+    User 1: I can tell! What''s your favorite band?
+
+    User 2: I like a lot of different bands, but I''d say my favorite is probably The Black Keys.
+
+    User 1: Oh, I love them too! I saw them in concert a few years ago. It was amazing.
+
+    User 2: Me too! I saw them a few years ago too. They put on a great show.
+
+    User 1: What''s your favorite kind of scotch?
+
+    User 2: I like Lagavulin. It''s a single malt scotch from Islay.
+
+    User 1: Oh, I love Lagavulin too! It''s so smoky and delicious.
+
+    User 2: It is! I love it.
+
+    User 1: We should go out for drinks sometime.
+
+    User 2: That would be fun! I''d love to.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

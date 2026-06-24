@@ -1,0 +1,60 @@
+id: 00003779
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3779
+data:
+  user 1 personas: 'I usually go to bed late.
+
+    My favorite team is the raptors.
+
+    I am studying to be a dentist.
+
+    My favorite band is rise against.'
+  user 2 personas: 'I don t like wearing pants when i don t have to.
+
+    My parents used to work in politics , until they discovered the goodness within themselves.
+
+    I m a really , really good guitar player.
+
+    I enjoy john grisham movies , but not his books.
+
+    My girlfriend tells me she s going to leave me almost every day.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I like to play guitar and go to concerts.
+
+    User 1: Cool! Me too! What kind of music do you like to play?
+
+    User 2: I mostly play country music, but I also like to play other genres.
+
+    User 1: That''s awesome! I love country music. What''s your favorite country band?
+
+    User 2: I love a lot of country bands, but my favorite is probably Zac Brown Band.
+
+    User 1: Me too! They''re so good. I love their music.
+
+    User 2: Me too! What''s your favorite song by them?
+
+    User 1: I love "Chicken Fried" and "Toes."
+
+    User 2: Me too! Those are great songs.
+
+    User 1: So, what kind of concerts do you like to go to?
+
+    User 2: I like to go to country music concerts, but I also like to go to concerts of other genres.
+
+    User 1: Cool! Do you go to concerts often?
+
+    User 2: I try to go to as many as I can.
+
+    User 1: That''s awesome! I wish I could go to more concerts.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I know, I know. I''ll try to go to more.
+
+    User 2: Good! You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

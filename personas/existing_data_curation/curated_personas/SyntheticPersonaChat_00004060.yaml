@@ -1,0 +1,62 @@
+id: '00004060'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4060
+data:
+  user 1 personas: 'I love the band van haven.
+
+    I want to be a doctor.
+
+    I play dungeons and dragons.
+
+    I like going to canada.
+
+    I wear a lot of purple.'
+  user 2 personas: 'I have an eyebrows piercing.
+
+    My sister and i are in a grunge band.
+
+    I work at a coffee shop.
+
+    Both of my parents are teachers.'
+  Best Generated Conversation: 'User 1: What do you do for fun?
+
+    User 2: I play in a grunge band with my sister.
+
+    User 1: That sounds fun! What''s your favorite song to play?
+
+    User 2: We have a lot of fun playing "Smells Like Teen Spirit" by Nirvana.
+
+    User 1: That''s a great song! I love Nirvana.
+
+    User 2: Me too! They''re one of my favorite bands.
+
+    User 1: What other bands do you like?
+
+    User 2: I also like the Foo Fighters, Pearl Jam, and Alice in Chains.
+
+    User 1: I like those bands too! We have similar taste in music.
+
+    User 2: Yeah, it seems so.
+
+    User 1: What''s your favorite thing about being in a band?
+
+    User 2: I love the feeling of performing live in front of a crowd. It''s so exhilarating.
+
+    User 1: I can imagine! I''ve never performed live in front of a crowd, but I think it would be amazing.
+
+    User 2: It''s definitely a lot of fun.
+
+    User 1: Do you have any plans to tour?
+
+    User 2: We''re actually working on our first album right now, and we''re hoping to tour once it''s released.
+
+    User 1: That''s great! I''ll definitely be there to see you perform.
+
+    User 2: Thanks! We''ll let you know when we have more details.
+
+    User 1: Awesome! I can''t wait to see you guys perform.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

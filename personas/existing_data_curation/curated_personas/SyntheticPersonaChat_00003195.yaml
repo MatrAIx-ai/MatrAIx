@@ -1,0 +1,74 @@
+id: 00003195
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3195
+data:
+  user 1 personas: 'I never went to school.
+
+    I am a genius and know over 300 languages.
+
+    I am an international business man.
+
+    I never met my parents.'
+  user 2 personas: 'I also like to mountain bike.
+
+    I love to hike.
+
+    I have visited 12 national parks in the us.
+
+    I am an environmental activist.
+
+    I live in vermont.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi there!
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to hike, mountain bike, and go camping.
+
+    User 1: Nice! I love to hike too. I''ve been to 12 national parks in the US.
+
+    User 2: Wow, that''s amazing! I''ve only been to a few.
+
+    User 1: Which ones have you been to?
+
+    User 2: I''ve been to Arches, Zion, and Yellowstone.
+
+    User 1: Those are all great parks! I''ve been to Arches and Zion as well.
+
+    User 2: They''re so beautiful! I love the red rocks in Arches.
+
+    User 1: Me too! And the canyons in Zion are amazing.
+
+    User 2: Have you been to any other countries?
+
+    User 1: I''ve been to a few. I''ve been to England, France, and Italy.
+
+    User 2: Wow, that''s cool! I''ve only been to Canada.
+
+    User 1: Canada is beautiful too! I''ve been to Banff National Park.
+
+    User 2: I''ve heard great things about Banff!
+
+    User 1: It''s really beautiful. I''m sure you''d love it.
+
+    User 2: I''m sure I would!
+
+    User 1: What''s your favorite national park in the US?
+
+    User 2: I think my favorite is Yellowstone. It''s so vast and there''s so much to see and do.
+
+    User 1: I agree! Yellowstone is amazing. It''s my favorite too.
+
+    User 2: We should go backpacking together sometime!
+
+    User 1: I''d love to!
+
+    User 2: Great! I''ll start planning a trip.
+
+    User 1: Awesome! I can''t wait!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

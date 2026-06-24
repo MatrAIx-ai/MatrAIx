@@ -1,0 +1,19 @@
+id: 00012090
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 12090
+persona_description: An engineer with expertise in agricultural machinery systems, particularly in the design and analysis of rotating elements such as pulleys and axles. The engineer is interested in using
+  computer-aided engineering (CAE) applications to predict and evaluate natural and forced frequency modes of these elements, and to reduce the undesired effect of vibration for agricultural machinery systems.
+  The engineer has experience in conducting torque and cycle measurements of the larger pulley of a fodder crushing machine and using this data to simulate resonance frequency modes through finite element
+  analysis.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: agricultural machinery systems
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

@@ -1,0 +1,76 @@
+id: '00006030'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6030
+data:
+  user 1 personas: 'I have six tattoos , all of cats.
+
+    I am from baltimore md.
+
+    My mother is a ballet dancer.
+
+    I have a pencil thin mustache.'
+  user 2 personas: 'I get good grades in school.
+
+    I like field hockey and soccer.
+
+    I love animals , especially dogs.
+
+    When i grow up , i want to be a veterinarian.
+
+    I am a 15 year old girl.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: What''s your name?
+
+    User 2: My name is [user 2].
+
+    User 1: It''s nice to meet you, [user 2]. My name is [user 1].
+
+    User 2: It''s nice to meet you too, [user 1].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to play field hockey and soccer. I also love animals, especially dogs.
+
+    User 1: That''s great! I like to play soccer too. I also love animals, but I don''t have any pets of my own.
+
+    User 2: That''s too bad. I have a dog named Buddy. He''s a golden retriever.
+
+    User 1: Golden retrievers are so cute! I''ve always wanted one.
+
+    User 2: They''re great dogs. They''re friendly and playful.
+
+    User 1: So, what do you want to be when you grow up?
+
+    User 2: I want to be a veterinarian. I love animals and I want to help them.
+
+    User 1: That''s a great goal! I''m sure you''ll make a great veterinarian.
+
+    User 2: Thanks! I hope so.
+
+    User 1: So, what grade are you in?
+
+    User 2: I''m in 10th grade.
+
+    User 1: Oh, cool. I''m in 11th grade.
+
+    User 2: Oh, that''s cool. What''s your favorite subject in school?
+
+    User 1: I like science and English.
+
+    User 2: Me too! I love learning about how the world works.
+
+    User 1: I agree. And I love reading and writing.
+
+    User 2: Me too! I''m glad we have something in common.
+
+    User 1: Me too. It''s nice to meet you, [user 2].
+
+    User 2: It''s nice to meet you too, [user 1].'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

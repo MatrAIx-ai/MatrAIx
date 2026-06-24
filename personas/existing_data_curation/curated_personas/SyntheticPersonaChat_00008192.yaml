@@ -1,0 +1,60 @@
+id: 00008192
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 8192
+data:
+  user 1 personas: 'I am an orphan who was in the foster care system.
+
+    Whittling is my favorite hobby.
+
+    I am in the navy.
+
+    I went to a community college and got a degree in communication.'
+  user 2 personas: 'I have a friend group , but i don t like any of them.
+
+    I coexist well with my husband.
+
+    I am a middle aged mother of two high school boys.
+
+    But , i feel lost and far away from who i truly am.
+
+    My days are filled with cross country try outs and basketball practice.'
+  Best Generated Conversation: 'User 1: Hello, my name is [user 1].
+
+    User 2: Hello, I''m [user 2].
+
+    User 1: I''m in the navy, and I like to whittle in my spare time. I''m an orphan who was in the foster care system.
+
+    User 2: I''m a middle-aged mother of two high school boys. I coexist well with my husband, but I feel lost and far away from who I truly am.
+
+    User 1: I''m sorry to hear that you''re feeling lost. What do you think is missing from your life?
+
+    User 2: I''m not sure. I just feel like I''m not living my best life. I''m not sure what I want to do with my life.
+
+    User 1: That''s understandable. It can be difficult to find your way in life. But I believe that you can do it.
+
+    User 2: Thank you. I appreciate your support.
+
+    User 1: No problem. I''m always here to chat if you need someone to talk to.
+
+    User 2: Thanks. I''ll keep that in mind.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to cross country and basketball practice.
+
+    User 1: That sounds like fun. I love to whittle. It''s a great way to relax and clear your mind.
+
+    User 2: I''ve never tried whittling before. Do you have any advice for me?
+
+    User 1: Sure! The best way to learn is to just start whittling. There are a lot of great YouTube videos that can teach you the basics.
+
+    User 2: Thanks for the advice! I''ll check out some videos.
+
+    User 1: No problem! I''m always happy to help.
+
+    User 2: Thanks again. I appreciate it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

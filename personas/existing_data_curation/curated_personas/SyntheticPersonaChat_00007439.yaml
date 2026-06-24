@@ -1,0 +1,66 @@
+id: 00007439
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7439
+data:
+  user 1 personas: 'Driving in the country side is a pastime.
+
+    I went to college.
+
+    I wanted to be a nurse.
+
+    I live in a small town.
+
+    I like to go shopping.'
+  user 2 personas: 'My favorite team is the washington nationals.
+
+    My favorite food is pizza.
+
+    I like sports.
+
+    I work for a government agency.
+
+    I prefer baseball over football.'
+  Best Generated Conversation: 'User 1: I love to go shopping.
+
+    User 2: Me too! I love buying new clothes and shoes.
+
+    User 1: What are your favorite stores?
+
+    User 2: I love Target and Nordstrom.
+
+    User 1: Me too! I love their clothes and accessories.
+
+    User 2: Do you like sports?
+
+    User 1: I do! I love watching football and basketball.
+
+    User 2: Me too! My favorite team is the Washington Nationals.
+
+    User 1: I''ve never heard of them. What sport do they play?
+
+    User 2: They play baseball.
+
+    User 1: Oh, okay. I don''t watch baseball very much.
+
+    User 2: That''s okay. I''m more of a baseball fan than a football or basketball fan.
+
+    User 1: What are you doing tonight?
+
+    User 2: I''m not sure yet. What are you doing?
+
+    User 1: I''m not sure either. Do you want to go out to dinner?
+
+    User 2: That sounds like fun! What kind of food do you like?
+
+    User 1: I like all kinds of food.
+
+    User 2: Me too! I''m not picky.
+
+    User 1: There''s a great Italian restaurant near my house. Do you want to go there?
+
+    User 2: That sounds great! Let''s go.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

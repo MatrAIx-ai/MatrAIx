@@ -1,0 +1,19 @@
+id: '00011363'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11363
+persona_description: A forest researcher with expertise in dynamic stratification for estimating stand level forest characteristics, specifically in estimating basal areas, mean diameter, mean height, and
+  mean age. The research involves the use of Landsat TM principal components as auxiliary data, and the study of species mixture and prescribed burning. The persona is interested in studying the effect
+  of species composition and the use of development stage class as an auxiliary variable to achieve more accurate estimates. They are also interested in the effect of the prescribed burning of forest areas
+  on the regeneration of tree species.
+expertise:
+  general_domain_top1pct: Environmental Science
+  specific_domain_top1pct: Forest Ecology
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

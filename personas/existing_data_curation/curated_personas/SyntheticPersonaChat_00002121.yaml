@@ -1,0 +1,66 @@
+id: '00002121'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2121
+data:
+  user 1 personas: 'I am dating my boss.
+
+    I am in my 20 s.
+
+    I work at a real estate office.
+
+    I love to sing.'
+  user 2 personas: 'I drive a ford taurus.
+
+    I love katy perry.
+
+    I drink diet coke.
+
+    I spend too much time shopping.'
+  Best Generated Conversation: 'User 1: I''m dating my boss.
+
+    User 2: Oh, that''s cool! What kind of work do you do?
+
+    User 1: I''m a real estate agent.
+
+    User 2: That sounds like a fun job! Do you like it?
+
+    User 1: I love it! I get to meet new people all the time and help them find their dream homes.
+
+    User 2: That''s awesome! I''m glad you enjoy your job.
+
+    User 1: Thanks! I''m also a singer.
+
+    User 2: Really? That''s so cool! Do you perform often?
+
+    User 1: Not as often as I''d like, but I do sing at my church sometimes.
+
+    User 2: That''s great! I''m sure you''re really good.
+
+    User 1: Thanks! I''m glad you think so.
+
+    User 2: So, what kind of music do you like to sing?
+
+    User 1: I like to sing a variety of genres, but I mostly sing country music.
+
+    User 2: Oh, that''s cool! I love country music too.
+
+    User 1: Me too! I''m glad we have something in common.
+
+    User 2: Yeah, me too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to shop, listen to music, and spend time with my friends and family.
+
+    User 1: Me too! I love to shop and spend time with my friends and family.
+
+    User 2: That''s great! I''m glad we have so much in common.
+
+    User 1: Me too! I think we''re going to be good friends.
+
+    User 2: I think so too!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,64 @@
+id: '00005321'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5321
+data:
+  user 1 personas: 'I like going to rock concerts.
+
+    On weekends i go out with friends.
+
+    When i turned 18 , my family moved across the country.
+
+    I grew up on a farm.'
+  user 2 personas: 'People say i can cook well.
+
+    I work at a bar.
+
+    I can play piano.
+
+    I like to listen to country music.'
+  Best Generated Conversation: 'User 1: I love going to rock concerts! Do you like any bands in particular?
+
+    User 2: I love the band Little Big Town! They''re great!
+
+    User 1: I''ve never heard of them, what kind of music do they play?
+
+    User 2: They''re a country music band. They''re really good, you should check them out!
+
+    User 1: I will! What''s your favorite song by them?
+
+    User 2: My favorite song is "Boondocks." It''s a really catchy song.
+
+    User 1: I''ll check it out! What else do you like to do for fun?
+
+    User 2: I like to go out with friends and play piano.
+
+    User 1: Oh, that''s cool! I love to play piano too.
+
+    User 2: Really? What kind of music do you like to play?
+
+    User 1: I like to play a lot of different kinds of music, but my favorite is probably classical music.
+
+    User 2: That''s really cool! I''ve never been able to play classical music.
+
+    User 1: It''s not that hard, you just have to practice a lot!
+
+    User 2: I might have to give it a try!
+
+    User 1: You should! It''s really fun!
+
+    User 2: So, what do you do for work?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s cool! I''ve always wanted to be a teacher.
+
+    User 1: It''s a great job! I love working with kids.
+
+    User 2: I''m sure you do! They''re so cute.
+
+    User 1: Yeah, they''re the best!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

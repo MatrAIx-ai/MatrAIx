@@ -1,0 +1,102 @@
+id: '00001021'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1021
+data:
+  user 1 personas: 'I have two dogs.
+
+    I like to cook.
+
+    I m scared of clowns.
+
+    I have two roomates.'
+  user 2 personas: 'My hair is a reddish brown.
+
+    Although i ski down high hills , i have a fear of heights.
+
+    I am a competitive ski racer.
+
+    My family is very supportive of my skiing.'
+  Best Generated Conversation: 'User 1: Hi! I''m [user 1 name].
+
+    User 2: Hi! I''m [user 2 name].
+
+    User 1: It''s nice to meet you! What do you like to do for fun?
+
+    User 2: I love skiing! I''m actually a competitive ski racer.
+
+    User 1: That''s so cool! I''ve never been skiing before, but I''ve always wanted to try it.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: I''m scared of heights, though.
+
+    User 2: I used to be scared of heights too, but I got over it by skiing.
+
+    User 1: How did you do that?
+
+    User 2: I just started skiing on smaller hills and worked my way up to bigger hills.
+
+    User 1: That''s a good idea. I might try that.
+
+    User 2: I''m sure you''d like it.
+
+    User 1: I''m not sure. I''m really scared of heights.
+
+    User 2: Well, you don''t have to go down any hills that you''re not comfortable with.
+
+    User 1: Okay, I''ll think about it.
+
+    User 2: Good. And if you do decide to go skiing, let me know! I''d be happy to teach you.
+
+    User 1: Thanks! I might take you up on that.
+
+    User 2: You''re welcome!
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to cook, read, and watch movies.
+
+    User 1: I like to cook too! I love trying new recipes.
+
+    User 2: Me too! I''m always looking for new recipes to try.
+
+    User 1: What''s your favorite thing to cook?
+
+    User 2: I love making pasta dishes.
+
+    User 1: Me too! They''re so easy to make and they''re always delicious.
+
+    User 2: Right? I love all the different sauces you can make.
+
+    User 1: Me too! I''m always trying new sauces.
+
+    User 2: So, what''s your favorite sauce?
+
+    User 1: I''m not sure I have a favorite. I like them all!
+
+    User 2: Me too! They''re all so good.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a ski instructor.
+
+    User 1: That''s so cool! I''ve always wanted to be a ski instructor.
+
+    User 2: It''s a lot of fun! I get to teach people how to ski and watch them progress.
+
+    User 1: That sounds really rewarding.
+
+    User 2: It is! I love seeing people learn something new.
+
+    User 1: So, what do you like most about being a ski instructor?
+
+    User 2: I love getting to teach people something new and watching them progress. I also love being outside and being active.
+
+    User 1: Those sound like great reasons to be a ski instructor.
+
+    User 2: They are! I love my job.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

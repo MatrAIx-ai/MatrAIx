@@ -1,0 +1,82 @@
+id: '00003777'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3777
+data:
+  user 1 personas: 'I usually go to bed late.
+
+    I am studying to be a dentist.
+
+    I like sports.
+
+    My favorite team is the raptors.'
+  user 2 personas: 'My mother was a famous ballet dancer in london.
+
+    I will be moving to san diego in two months.
+
+    I work at a gas station as a cashier.
+
+    My favorite band is the punk band rancid.'
+  Best Generated Conversation: 'User 1: Hey!
+
+    User 2: Hey!
+
+    User 1: What''s up?
+
+    User 2: Not much, just working.
+
+    User 1: Oh, where do you work?
+
+    User 2: At a gas station.
+
+    User 1: Oh, cool. I used to work at a gas station when I was in high school.
+
+    User 2: Really? What was that like?
+
+    User 1: It was fun. I got to meet a lot of interesting people.
+
+    User 2: That''s cool. I don''t really meet that many interesting people at my job.
+
+    User 1: What''s your favorite part of your job?
+
+    User 2: I like the people I work with.
+
+    User 1: That''s good. What''s your least favorite part of your job?
+
+    User 2: I don''t really like the smell of gas.
+
+    User 1: Yeah, that smell can be pretty strong.
+
+    User 2: It can.
+
+    User 1: So, what are you doing after work?
+
+    User 2: I''m going to San Diego in two months.
+
+    User 1: Oh, cool! What are you going to do there?
+
+    User 2: I''m going to visit my mom.
+
+    User 1: Oh, that''s nice. I''m sure she''ll be happy to see you.
+
+    User 2: I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to listen to music, play video games, and go to the gym.
+
+    User 1: Oh, I like to listen to music too. What kind of music do you like?
+
+    User 2: I like punk rock, metal, and alternative rock.
+
+    User 1: Oh, me too! I love punk rock.
+
+    User 2: Cool! What''s your favorite punk rock band?
+
+    User 1: My favorite punk rock band is Rancid.
+
+    User 2: Oh, cool! I like Rancid too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

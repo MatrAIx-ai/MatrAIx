@@ -1,0 +1,62 @@
+id: '00003437'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3437
+data:
+  user 1 personas: 'I like to remodel homes.
+
+    I like to go shopping with my daughters.
+
+    I like to go hunting.
+
+    My favorite holiday is halloween.
+
+    I like to shoot a bow.'
+  user 2 personas: 'I like to watch movies.
+
+    I am a mother of 5.
+
+    I like to draw.
+
+    I like to do crafts.
+
+    I like all types of music.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to watch movies, draw, do crafts, and listen to all types of music.
+
+    User 1: Nice! I like to remodel homes, go shopping with my daughters, go hunting, and shoot a bow.
+
+    User 2: That''s cool! I''ve never been hunting before, but it sounds like fun.
+
+    User 1: It is! And it''s a great way to get outdoors and get some exercise.
+
+    User 2: I''m sure it is.
+
+    User 1: What''s your favorite movie?
+
+    User 2: That''s a tough question. I have a lot of favorites. But one of my favorites is "The Shawshank Redemption".
+
+    User 1: That''s a great movie! I love it too.
+
+    User 2: Me too! What kind of music do you like to listen to?
+
+    User 1: I like all types of music, but I especially like country music.
+
+    User 2: I like country music too! I love the old country music from the 70s and 80s.
+
+    User 1: Me too! I love listening to Merle Haggard and Johnny Cash.
+
+    User 2: Me too! They''re two of my favorite country singers.
+
+    User 1: I think they''re the best country singers ever.
+
+    User 2: I agree! They''re amazing.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

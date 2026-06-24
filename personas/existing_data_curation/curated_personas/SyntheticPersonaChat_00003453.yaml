@@ -1,0 +1,60 @@
+id: '00003453'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3453
+data:
+  user 1 personas: 'I live in new york city.
+
+    I have a poodle named nanette.
+
+    I love smooth jazz.
+
+    I actually like wearing suits and ties.'
+  user 2 personas: 'I have a dog.
+
+    She taught me to cook.
+
+    I opened up a restaurant three years later.
+
+    My mother is from russia.
+
+    She died when i was 18.'
+  Best Generated Conversation: 'User 1: Hey, I''m new in this city. What can you tell me about it?
+
+    User 2: Sure, it''s a great place to live. There''s always something to do, and there''s a lot of culture and history here.
+
+    User 1: Oh, that''s great to hear. I''m looking forward to exploring.
+
+    User 2: I''m sure you''ll love it. There are a lot of great restaurants, too. What kind of food do you like?
+
+    User 1: I love all kinds of food, but I''m especially fond of Italian food.
+
+    User 2: There are a lot of great Italian restaurants here. I know a few, if you''re interested.
+
+    User 1: That would be great!
+
+    User 2: Okay, there''s this one place called La Trattoria. It''s a really small, family-run restaurant, but the food is amazing.
+
+    User 1: That sounds perfect. I''ll have to check it out.
+
+    User 2: You''re in for a treat.
+
+    User 1: Thanks for the recommendation.
+
+    User 2: No problem. What else do you like to do for fun?
+
+    User 1: I like to go to the movies, read, and play video games.
+
+    User 2: There''s a great movie theater downtown. And there are a lot of great bookshops here, too.
+
+    User 1: I''ll have to check them out.
+
+    User 2: You definitely should.
+
+    User 1: Thanks for the suggestions.
+
+    User 2: No problem. I''m always happy to help.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

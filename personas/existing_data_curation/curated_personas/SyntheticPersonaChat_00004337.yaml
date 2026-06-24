@@ -1,0 +1,68 @@
+id: '00004337'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 4337
+data:
+  user 1 personas: 'I have a cat named charlie.
+
+    I love nighttime.
+
+    I am an artist.
+
+    I just bought new hoop earrings.
+
+    My favorite food is pizza.'
+  user 2 personas: 'I am adopted.
+
+    I don t believe in love.
+
+    I ride horses in my spare time.
+
+    I work at an accounting firm.
+
+    I am an only child.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hello, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to ride horses, I''m an only child, and I work at an accounting firm.
+
+    User 1: That''s cool. I like to paint, I have a cat named Charlie, and I love pizza.
+
+    User 2: I don''t believe in love, I''m adopted, and I just got new hoop earrings.
+
+    User 1: That''s a lot to unpack!
+
+    User 2: It is.
+
+    User 1: So, what do you think of the weather?
+
+    User 2: It''s nice outside, but I''m not really feeling it.
+
+    User 1: I know what you mean. I''m not really feeling it either.
+
+    User 2: Well, I''m going to go for a ride on my horse.
+
+    User 1: Okay, have fun.
+
+    User 2: You too.
+
+    User 1: So, what are you going to do today?
+
+    User 2: I''m not sure yet. Maybe I''ll go see a movie or something.
+
+    User 1: That sounds like a plan.
+
+    User 2: Yeah, I think it is.
+
+    User 1: Well, I''m going to go now.
+
+    User 2: Okay, bye.
+
+    User 1: Bye.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

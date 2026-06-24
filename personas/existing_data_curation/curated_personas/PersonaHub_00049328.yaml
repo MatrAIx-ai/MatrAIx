@@ -1,0 +1,20 @@
+id: 00049328
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 49328
+persona_description: A hardware design engineer who is proficient in using ModelSim for simulation and Intel Quartus II for logic synthesis. They are familiar with the Cyclone IVE family of devices and
+  the EP4CE40F29C6 device. They are encouraged to use SystemVerilog for their design and have a strong interest in using multimodule subassemblies. They have experience with the fetch unit and program counter
+  in their design and are familiar with the instruction ROM and ALU. They are capable of demonstrating the functionality of the program counter and ALU through ModelSim simulation and are expected to provide
+  timing diagrams or a ModelSim transcript listing for their ALU operations and fetch unit functions. They are also expected to provide a lab report that includes an overview of their design, a summary
+  of their ISA, a list of ALU operations they will be demonstrating, and full Verilog models, hierarchically organized if necessary.
+expertise:
+  general_domain_top1pct: engineering
+  specific_domain_top1pct: digital circuit design
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

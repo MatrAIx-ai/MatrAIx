@@ -1,0 +1,88 @@
+id: 00001983
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1983
+data:
+  user 1 personas: 'I love cheese cake.
+
+    I have 3 children.
+
+    I like to run.
+
+    My favorite movie is 16 candles.'
+  user 2 personas: 'I am a teacher.
+
+    I am an aspiring fiction writer.
+
+    I love country music.
+
+    I like to work puzzles.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name]. Nice to meet you.
+
+    User 1: It''s nice to meet you too.
+
+    User 2: What do you do for a living?
+
+    User 1: I''m a teacher.
+
+    User 2: Oh, that''s great! What grade do you teach?
+
+    User 1: I teach high school English.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to be a teacher.
+
+    User 1: It''s a great job! I love working with kids.
+
+    User 2: I can imagine! I love kids too.
+
+    User 1: So, what do you do for fun?
+
+    User 2: I like to write fiction.
+
+    User 1: Oh, that''s cool! I love to read. What kind of fiction do you write?
+
+    User 2: I write mostly romance novels.
+
+    User 1: Oh, that''s awesome! I love romance novels too.
+
+    User 2: Me too! They''re so much fun to write.
+
+    User 1: I can imagine! I love getting lost in a good love story.
+
+    User 2: Me too! It''s the best feeling in the world.
+
+    User 1: So, what are you working on right now?
+
+    User 2: I''m working on a new romance novel about a girl who falls in love with a boy who is very different from her.
+
+    User 1: Oh, that sounds interesting! I''d love to read it when it''s finished.
+
+    User 2: Thanks! I''ll let you know when it''s out.
+
+    User 1: Perfect!
+
+    User 2: So, what do you like to do for fun?
+
+    User 1: I like to run, read, and spend time with my family.
+
+    User 2: Oh, that sounds nice! I like to run too.
+
+    User 1: Really? What kind of running do you do?
+
+    User 2: I do mostly distance running. I ran a marathon last year.
+
+    User 1: Oh, that''s amazing! I''m not sure if I could ever run a marathon.
+
+    User 2: It''s not as hard as you think. You just have to keep training.
+
+    User 1: I''ll have to give it a try sometime.
+
+    User 2: You should! It''s a great way to get in shape and meet new people.
+
+    User 1: I''ll keep that in mind.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

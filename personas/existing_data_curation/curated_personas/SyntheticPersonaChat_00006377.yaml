@@ -1,0 +1,68 @@
+id: '00006377'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6377
+data:
+  user 1 personas: 'I am very good at math and science.
+
+    I love computers.
+
+    I started working at google last week on self driving car research.
+
+    I i love logical and rational thinking.
+
+    I am considered a nerd by many.'
+  user 2 personas: 'I love to go horseback riding whenever i can.
+
+    My favorite artist is justin bieber.
+
+    I am a mother of two beautiful boys.
+
+    My family and i go camping every month.'
+  Best Generated Conversation: 'User 1: Hi, I''m [name].
+
+    User 2: Hi, I''m [name].
+
+    User 1: What do you do for fun?
+
+    User 2: I love to go horseback riding, camping, and spending time with my family.
+
+    User 1: That sounds great! I love horses too. I''m not very good at riding them, but I love the experience.
+
+    User 2: That''s okay, I''m not that great either. But it''s still a lot of fun.
+
+    User 1: Yeah, it is. What''s your favorite kind of horse?
+
+    User 2: I like quarter horses the best. They''re pretty and they''re really good at riding.
+
+    User 1: Those are nice horses. I like thoroughbreds. They''re really fast.
+
+    User 2: Thoroughbreds are great too. I just like the look of quarter horses better.
+
+    User 1: That''s fair. They are pretty horses.
+
+    User 2: Yeah, they are. So, what do you do for work?
+
+    User 1: I just started working at Google last week. I''m doing research on self-driving cars.
+
+    User 2: Oh, that''s cool! I''ve heard about those. They''re pretty amazing.
+
+    User 1: Yeah, they are. It''s really exciting to be a part of the team that''s working on them.
+
+    User 2: I bet it is. That''s a great job.
+
+    User 1: Thanks, I''m really enjoying it so far.
+
+    User 2: That''s great to hear. So, you''re a pretty big nerd, huh?
+
+    User 1: Yeah, I guess so. I like math and science and all that stuff.
+
+    User 2: That''s cool. I like to go camping and horseback riding, but I''m not really a nerd.
+
+    User 1: That''s okay. We can still be friends.
+
+    User 2: Yeah, we can. I''d like that.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

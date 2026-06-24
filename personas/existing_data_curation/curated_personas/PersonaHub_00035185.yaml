@@ -1,0 +1,19 @@
+id: 00035185
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 35185
+persona_description: A user who is interested in preparing Phase II proposals for Cycle 25 and later COS observations. This user is familiar with the COS/FUV Wavelength Tool and its functionalities, which
+  allows them to visualize how the wavelength ranges covered by the allowed COS FUV settings overlap with those of settings that have been withdrawn. This user is likely to be a scientist or researcher
+  working in the field of astronomy, particularly in the area of space missions and observations. They may have experience with COS observations and the COS FUV detector, and are looking to optimize their
+  proposal by understanding the potential overlap between their proposed observations and the withdrawn settings.
+expertise:
+  general_domain_top1pct: astronomy
+  specific_domain_top1pct: space mission planning
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

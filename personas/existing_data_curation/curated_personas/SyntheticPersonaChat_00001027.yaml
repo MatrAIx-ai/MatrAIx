@@ -1,0 +1,66 @@
+id: '00001027'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1027
+data:
+  user 1 personas: 'I like burritos.
+
+    I like to shop.
+
+    I like pizza.
+
+    I like to dance.'
+  user 2 personas: 'Both my parents were over 6 foot tall.
+
+    I am a democrat.
+
+    I like to only eat fish.
+
+    I can jump straight up , out of a pool.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to shop, go to the beach, and play sports.
+
+    User 1: What''s your favorite kind of food?
+
+    User 2: I like to eat fish. I''m a pescatarian.
+
+    User 1: I''ve never met anyone who only eats fish!
+
+    User 2: It''s not too bad. I just don''t like the taste of meat.
+
+    User 1: What do you like about shopping?
+
+    User 2: I like finding new clothes and accessories. I love fashion.
+
+    User 1: I''m not very good at fashion. I usually just wear jeans and a t-shirt.
+
+    User 2: That''s okay. Not everyone is good at fashion.
+
+    User 1: I like going to the beach, but I''m not very good at swimming.
+
+    User 2: I''m not very good at swimming either. I just like to play in the sand and relax.
+
+    User 1: I like to dance. I''m not very good at it, but it''s fun.
+
+    User 2: I''m not very good at dancing either, but I like to do it anyway.
+
+    User 1: Do you have any family?
+
+    User 2: Yes, I have two parents and a brother.
+
+    User 1: What are their names?
+
+    User 2: My mom''s name is Sarah, my dad''s name is John, and my brother''s name is David.
+
+    User 1: What are they like?
+
+    User 2: They''re all very nice people. My mom is a stay-at-home mom, my dad is a lawyer, and my brother is a student at the local university.
+
+    User 1: That sounds like a nice family.
+
+    User 2: It is. I''m very lucky to have them.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

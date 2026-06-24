@@ -1,0 +1,80 @@
+id: 00003950
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3950
+data:
+  user 1 personas: 'I enjoy home cooked meals.
+
+    I like long walks on the beach.
+
+    My favorite tv show is game of thrones.
+
+    My favorite music genre is pop.'
+  user 2 personas: 'My doctor told me i have six months to live.
+
+    I m really terrible at doing regular expressions.
+
+    I like having fried fish for supper.
+
+    My favorite singer is justin bieber.
+
+    I m allergic to lactose.'
+  Best Generated Conversation: 'User 1: I''m so sorry to hear that you have six months to live.
+
+    User 2: It''s okay. I''ve accepted it.
+
+    User 1: That''s good. I know it''s not easy.
+
+    User 2: It''s not, but I''m trying to make the most of my time.
+
+    User 1: That''s great. I''m sure you''ll have a lot of adventures.
+
+    User 2: I hope so.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to go for long walks on the beach.
+
+    User 1: That sounds nice. I love the beach.
+
+    User 2: Me too. It''s so relaxing.
+
+    User 1: I know. What else do you like to do?
+
+    User 2: I like to watch Game of Thrones.
+
+    User 1: That''s a great show. I''m really excited for the new season.
+
+    User 2: Me too. I''m not sure how it''s going to end, but I''m sure it''s going to be good.
+
+    User 1: I''m sure it will be. So, what kind of music do you like?
+
+    User 2: I like pop music.
+
+    User 1: Me too. I love Justin Bieber.
+
+    User 2: Me too. He''s so good.
+
+    User 1: I know. He''s my favorite singer.
+
+    User 2: Mine too.
+
+    User 1: So, what do you like to eat?
+
+    User 2: I like fried fish.
+
+    User 1: That''s a good choice. I love fried fish.
+
+    User 2: Me too. It''s so good.
+
+    User 1: I know. It''s a little unhealthy, but it''s so good.
+
+    User 2: Me too. I don''t care how unhealthy it is. It''s so good.
+
+    User 1: I know. It''s a little hard to resist.
+
+    User 2: Me too. I can''t help it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

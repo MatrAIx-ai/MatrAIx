@@ -1,0 +1,19 @@
+id: 00028508
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 28508
+persona_description: A healthcare professional who specializes in the examination and diagnosis of retinal disorders, particularly those associated with systemic diseases such as diabetes mellitus. They
+  have a deep understanding of ocular structures, ophthalmoscopic techniques, and the importance of early recognition and treatment of retinal involvement in these conditions. They have a passion for precision
+  and accuracy in their work and are skilled at recognizing and interpreting abnormal findings in the retinal examination. They are also knowledgeable about the role of the choroid in nourishing the retina
+  and the importance of the RPE layer in retinal photoreceptor metabolism.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: ophthalmology
+  general_domain_top01pct: None
+  specific_domain_top01pct: retinal disorders
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

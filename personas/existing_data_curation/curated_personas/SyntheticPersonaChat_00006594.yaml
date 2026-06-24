@@ -1,0 +1,52 @@
+id: 00006594
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6594
+data:
+  user 1 personas: 'I had to get a job early as a child.
+
+    I never learned how to swim.
+
+    I like anime shows.
+
+    My mother passed away in 1979.
+
+    I am a meat eater.'
+  user 2 personas: 'I want to own a house on a beach.
+
+    My parents both are school teachers.
+
+    The only music i listen to is pop , because it makes me feel happy.
+
+    I love eating at mcdonalds.'
+  Best Generated Conversation: 'User 1: Hi, I''m [User 1 name]. What''s your name?
+
+    User 2: Hi, I''m [User 2 name]. What do you like to do for fun?
+
+    User 1: I like to watch anime shows and eat meat. What about you?
+
+    User 2: I love eating at McDonald''s and listening to pop music. What do you like about anime?
+
+    User 1: I like the way the stories are told and the characters are developed. What do you like about pop music?
+
+    User 2: I like the upbeat tempo and the catchy melodies. I also love the way it makes me feel happy.
+
+    User 1: I can understand that. I also like how it can make me forget about my troubles for a while.
+
+    User 2: Me too. It''s a great way to relax and have fun.
+
+    User 1: I agree. So, what are your plans for the future?
+
+    User 2: I''m not sure yet. I''m still trying to figure out what I want to do with my life.
+
+    User 1: I know what you mean. I''m still trying to figure that out too.
+
+    User 2: Well, I''m sure we''ll both figure it out eventually.
+
+    User 1: I''m sure we will. In the meantime, we can enjoy our favorite things.
+
+    User 2: That sounds like a plan.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

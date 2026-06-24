@@ -1,0 +1,17 @@
+id: '00047172'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 47172
+persona_description: A medical researcher and immunologist with expertise in vaccine development and addiction treatment. Professors like Professor Shankar Vallabhajosula are interested in developing vaccines
+  that can treat addiction by preventing the drug from reaching the brain. They aim to use molecular imaging techniques to assess the efficacy of these vaccines in treating different types of addictions.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: vaccine development
+  general_domain_top01pct: None
+  specific_domain_top01pct: addiction treatment with molecular imaging techniques
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

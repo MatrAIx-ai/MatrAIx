@@ -1,0 +1,76 @@
+id: 00007487
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7487
+data:
+  user 1 personas: 'I have one sister and a niece and nephew.
+
+    I am 49 , male and live in dublin , ireland.
+
+    I really like cake and do not prefer vegetables.
+
+    I take care of my mother and father.
+
+    I am almost finished with my degree.'
+  user 2 personas: 'I like thomas the tank engine.
+
+    I like books about trains.
+
+    My cat died.
+
+    I have a dog named percy.
+
+    My poppa has a train set that i play with.'
+  Best Generated Conversation: 'User 1: Hello, my name is [username].
+
+    User 2: Hello, my name is [username].
+
+    User 1: Nice to meet you. What do you like to do for fun?
+
+    User 2: I like to read books about trains, and I like to play with my train set.
+
+    User 1: That''s cool. I like to read books about history and politics.
+
+    User 2: I like history too. I''m really interested in the history of trains.
+
+    User 1: That''s great. I''m not very interested in trains, but I can still appreciate their history.
+
+    User 2: Yeah, they''re pretty cool. I have a train set that my grandpa built for me when I was a kid.
+
+    User 1: That''s awesome. I wish I had a train set when I was a kid.
+
+    User 2: You could always get one now. They''re not that expensive.
+
+    User 1: I might do that. I''ve always been curious about them.
+
+    User 2: You should. They''re a lot of fun.
+
+    User 1: Thanks for the suggestion.
+
+    User 2: You''re welcome.
+
+    User 1: So, what else do you like to do for fun?
+
+    User 2: I like to play with my dog, Percy.
+
+    User 1: That''s nice. I like to play with my dog, too.
+
+    User 2: Percy is a great dog. He''s always happy to see me.
+
+    User 1: My dog, Bella, is the same way. She''s always excited to see me.
+
+    User 2: That''s great. Dogs are the best.
+
+    User 1: I agree. They''re such loyal companions.
+
+    User 2: They really are. I''m so glad I have Percy.
+
+    User 1: Me too. I''m so glad I have Bella.
+
+    User 2: I''m glad you have a dog. They make life so much better.
+
+    User 1: I agree. They''re the best companions you can ask for.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,19 @@
+id: '00052510'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 52510
+persona_description: A news reader who is interested in analyzing and understanding the world events mentioned in news articles. They are looking for a system that can efficiently extract information about
+  events from news articles and store them in a registry for further analysis. They are likely to be familiar with event extraction techniques and interested in using machine learning algorithms to identify
+  events in news articles. They may also be interested in using the system for research purposes, such as studying the frequency and types of events mentioned in news articles, or identifying trends in
+  the news media.
+expertise:
+  general_domain_top1pct: None
+  specific_domain_top1pct: event extraction
+  general_domain_top01pct: None
+  specific_domain_top01pct: None
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

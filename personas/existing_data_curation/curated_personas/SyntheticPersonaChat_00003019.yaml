@@ -1,0 +1,64 @@
+id: 00003019
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3019
+data:
+  user 1 personas: 'I am looking for a job.
+
+    I have a dog.
+
+    I have two siblings.
+
+    My favorite color is red.'
+  user 2 personas: 'I never met my parents.
+
+    I own a mansion that i do not live in.
+
+    I am a genius and know over 300 languages.
+
+    I never went to school.'
+  Best Generated Conversation: 'User 1: What do you do for a living?
+
+    User 2: I never went to school, so I don''t have a career. I mostly just live off my trust fund.
+
+    User 1: Oh, that''s interesting. Are you from a wealthy family?
+
+    User 2: Yes, my parents were very rich. I never met them, though. They died in a plane crash when I was a baby.
+
+    User 1: That''s so sad. I''m sorry to hear that.
+
+    User 2: It''s okay. I''m used to it by now.
+
+    User 1: So, what do you like to do for fun?
+
+    User 2: I like to read, write, and play music. I also like to travel.
+
+    User 1: That sounds like a lot of fun. I love to read and write too. I don''t play music, but I love to listen to it.
+
+    User 2: Well, if you''re ever in need of a concert buddy, let me know. I know a lot of good bands.
+
+    User 1: Thanks, I''ll keep that in mind.
+
+    User 1: So, what''s your favorite book?
+
+    User 2: That''s a tough question. I have so many favorites. But I think I''d have to say "The Great Gatsby" by F. Scott Fitzgerald.
+
+    User 1: That''s a great book! I love it too.
+
+    User 2: Yeah, it''s one of the best.
+
+    User 1: So, what''s your favorite color?
+
+    User 2: My favorite color is red.
+
+    User 1: That''s a good choice. Red is a very vibrant color.
+
+    User 2: Yeah, I love it. It''s so energetic and exciting.
+
+    User 1: I agree. It''s a great color.
+
+    User 2: I''m glad you think so.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

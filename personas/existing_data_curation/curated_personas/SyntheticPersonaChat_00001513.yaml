@@ -1,0 +1,70 @@
+id: '00001513'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 1513
+data:
+  user 1 personas: 'I am a meat eater.
+
+    I love country music.
+
+    I drive a big truck.
+
+    I like football on tv.
+
+    I like to go hunting.'
+  user 2 personas: 'My father was a cop.
+
+    I know how to drive a stickshift.
+
+    We lived in virginia while i was growing up.
+
+    My mother was a teacher.
+
+    I am a truck driver.'
+  Best Generated Conversation: 'User 1: What do you like to do for fun?
+
+    User 2: I like to go hunting, fishing, and camping.
+
+    User 1: I like to go hunting too! Where do you like to hunt?
+
+    User 2: I usually go hunting in the mountains. I live in Virginia, so there are a lot of good hunting spots around here.
+
+    User 1: I''ve never been hunting in the mountains, but it sounds like a lot of fun.
+
+    User 2: It''s great! You get to see some beautiful scenery and you get to try to shoot some big game.
+
+    User 1: I''m not much of a fisherman, but I like to go camping. What kind of camping do you like to do?
+
+    User 2: I like to go car camping, but I also like to go backpacking.
+
+    User 1: I''ve never been backpacking, but it sounds like it would be a lot of fun.
+
+    User 2: It''s great! You get to see some amazing scenery and you get a good workout.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You should! It''s a lot of fun.
+
+    User 1: So, what do you do for work?
+
+    User 2: I''m a truck driver.
+
+    User 1: Oh, that''s cool! I''ve always been interested in truck driving.
+
+    User 2: It''s a great job! You get to see a lot of different places and meet a lot of interesting people.
+
+    User 1: I can imagine! I would love to see some of the places you''ve been to.
+
+    User 2: I''ve been all over the country. I''ve been to California, Texas, New York, and Florida.
+
+    User 1: Wow! That''s amazing! I''ve never been to any of those places.
+
+    User 2: You should go! They''re all great places to visit.
+
+    User 1: I''ll have to put them on my bucket list.
+
+    User 2: You should'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

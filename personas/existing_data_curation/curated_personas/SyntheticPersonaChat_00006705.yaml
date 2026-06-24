@@ -1,0 +1,66 @@
+id: '00006705'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 6705
+data:
+  user 1 personas: 'My mother is a well known celebrity.
+
+    I like to make short films.
+
+    I have traveled overseas many times.
+
+    I am a civil war reenactment participant.
+
+    I have been on the tv news six times.'
+  user 2 personas: 'I work 60 hours a week.
+
+    I eat breakfast then go right back to bed.
+
+    Sometimes i think i should get out and exercise more.
+
+    I love sunsets.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name]. I''m a civil war reenactment participant.
+
+    User 2: Oh, that''s cool! I''ve never been to a reenactment.
+
+    User 1: They''re really fun! You should check one out sometime.
+
+    User 2: Maybe I will.
+
+    User 1: So, what do you do for a living?
+
+    User 2: I work as a software engineer.
+
+    User 1: Oh, cool. I''ve always wanted to be a software engineer.
+
+    User 2: It''s a lot of fun, but it can be challenging at times.
+
+    User 1: I can imagine.
+
+    User 2: So, what do you do for fun?
+
+    User 1: I like to make short films.
+
+    User 2: Oh, that''s awesome! I''ve always wanted to make a short film.
+
+    User 1: You should give it a try! It''s a lot of fun.
+
+    User 2: Maybe I will.
+
+    User 1: So, what''s your favorite thing to do on your days off?
+
+    User 2: I like to go for walks and watch sunsets.
+
+    User 1: Oh, that sounds nice. I love sunsets too.
+
+    User 2: Yeah, they''re so calming.
+
+    User 1: So, what are you looking forward to this weekend?
+
+    User 2: Not much, just relaxing and hanging out.
+
+    User 1: Sounds like a good plan. I''m looking forward to a relaxing weekend too.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,60 @@
+id: 00000951
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 951
+data:
+  user 1 personas: 'I collect dolls.
+
+    I am a romantic.
+
+    I like jazz.
+
+    I like antiques.'
+  user 2 personas: 'I rent an apartment.
+
+    I do not like coffee.
+
+    I live walking distance from work.
+
+    I work in finance.'
+  Best Generated Conversation: 'User 1: Hi! How are you doing today?
+
+    User 2: I''m doing well! How about you?
+
+    User 1: I''m doing great! I just got back from a trip to Paris.
+
+    User 2: Oh, that sounds amazing! I''ve always wanted to go to Paris.
+
+    User 1: It was so much fun! I went to the Eiffel Tower, the Louvre, and the Champs-Élysées.
+
+    User 2: Those are all amazing places to visit! I''m sure you had a great time.
+
+    User 1: I did! I''m already planning my next trip.
+
+    User 2: That''s great! Where are you thinking of going next?
+
+    User 1: I''m not sure yet, but I''m thinking about going to Italy.
+
+    User 2: Italy is beautiful! I''ve been to Rome and Venice.
+
+    User 1: Oh, those are two of the places I''m interested in visiting!
+
+    User 2: You''ll have a great time. I love Italian food.
+
+    User 1: Me too! I''m always looking for new restaurants to try.
+
+    User 2: I know a great place in my neighborhood. I can take you there sometime.
+
+    User 1: That would be great! I love trying new things.
+
+    User 2: Awesome! I''ll let you know when I''m free.
+
+    User 1: Great! I''m excited to try it.
+
+    User 2: Me too! I''m sure you''ll love it.
+
+    User 1: I''m sure I will!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

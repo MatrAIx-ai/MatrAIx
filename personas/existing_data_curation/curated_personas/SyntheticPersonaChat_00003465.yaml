@@ -1,0 +1,62 @@
+id: '00003465'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3465
+data:
+  user 1 personas: 'I love to play softball.
+
+    My father was a dry wall finisher.
+
+    I love history.
+
+    My mother was an rn.'
+  user 2 personas: 'I m angry at my coworker.
+
+    I want to get married again.
+
+    I m not going to go the extra mile anymore.
+
+    I have 10 years experience in our industry , yet she gets promoted.
+
+    I wish my boyfriend didn t want an open relationship.'
+  Best Generated Conversation: 'User 1: Hi, what''s up?
+
+    User 2: I''m kind of angry right now.
+
+    User 1: Oh no, what happened?
+
+    User 2: My coworker got promoted over me, even though I have 10 years experience and she''s only been here for 2.
+
+    User 1: That''s so unfair! What a slap in the face.
+
+    User 2: I know, right? I''m so frustrated.
+
+    User 1: I can imagine. Have you talked to your boss about it?
+
+    User 2: I did, but he said there was nothing he could do.
+
+    User 1: That sucks. I''m so sorry.
+
+    User 2: Thanks.
+
+    User 1: So, what are you going to do now?
+
+    User 2: I''m not sure. I''m thinking about quitting.
+
+    User 1: Quitting might be the best option. You don''t want to work for a company that doesn''t appreciate your hard work.
+
+    User 2: I know, you''re right. I''m going to start looking for a new job.
+
+    User 1: Good idea. I''m sure you''ll find a job that''s a better fit for you.
+
+    User 2: Thanks, I hope so.
+
+    User 1: So, what else is going on?
+
+    User 2: Not much. I''m just trying to stay positive.
+
+    User 1: That''s good. I''m sure things will work out for you.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

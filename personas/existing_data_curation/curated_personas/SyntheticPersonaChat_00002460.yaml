@@ -1,0 +1,74 @@
+id: '00002460'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 2460
+data:
+  user 1 personas: 'I drive a ford truck.
+
+    I hate the holidays.
+
+    I have a gun collection at home.
+
+    I have been married 3 times.
+
+    I am a police officer.'
+  user 2 personas: 'I am the head of the gun club.
+
+    I am a poet.
+
+    I have a beta fish.
+
+    I donate old clothes to the homeless.
+
+    My friends and i enjoy golfing on sunny days.'
+  Best Generated Conversation: 'User 1: Hi!
+
+    User 2: Hi!
+
+    User 1: I''m a police officer.
+
+    User 2: Oh, that''s cool! What''s your favorite part of the job?
+
+    User 1: I like helping people.
+
+    User 2: That''s great! I''m a poet.
+
+    User 1: That''s awesome! What kind of poetry do you write?
+
+    User 2: I write all kinds of poetry, but I mostly write about nature.
+
+    User 1: That''s cool! I love nature.
+
+    User 2: Me too! I have a beta fish.
+
+    User 1: That''s cool! I have a cat.
+
+    User 2: Oh, I love cats!
+
+    User 1: I do too!
+
+    User 2: Do you have any other pets?
+
+    User 1: No, just my cat.
+
+    User 2: That''s okay. I have enough pets for the both of us!
+
+    User 1: Haha, yeah!
+
+    User 2: So, what do you like to do in your free time?
+
+    User 1: I like to go golfing.
+
+    User 2: Oh, that''s cool! I like to go golfing too.
+
+    User 1: We should go golfing together sometime!
+
+    User 2: That would be fun!
+
+    User 1: Great! We can exchange numbers and figure it out later.
+
+    User 2: Sounds good!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

@@ -1,0 +1,76 @@
+id: 00005389
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 5389
+data:
+  user 1 personas: 'I will study computer science.
+
+    I am on my way to uc santa cruz where i was accepted.
+
+    I am a vegetarian.
+
+    I like playing games online.'
+  user 2 personas: 'I work in advertising.
+
+    My mother is dead.
+
+    I like to hike.
+
+    I have a golden retriever.
+
+    I write fiction for fun.'
+  Best Generated Conversation: '* * *
+
+    User 1: Hi, my name is [user 1]. I''m on my way to UC Santa Cruz, where I was accepted to study computer science. What about you?
+
+
+    User 2: Hi, I''m [user 2]. I work in advertising and I like to hike. I have a golden retriever and I write fiction for fun.
+
+
+    User 1: That sounds like a lot of fun! I''ve always wanted to try hiking.
+
+
+    User 2: You should! It''s a great way to get exercise and see some beautiful scenery.
+
+
+    User 1: What do you like to write fiction about?
+
+
+    User 2: I like to write about different genres, but my favorite is fantasy.
+
+
+    User 1: That sounds really cool! I''ve never tried writing fiction before.
+
+
+    User 2: You should give it a try! It''s a lot of fun.
+
+
+    User 1: Maybe I will. Thanks for the suggestion.
+
+
+    User 2: No problem. So, what are you looking forward to most about college?
+
+
+    User 1: I''m looking forward to meeting new people and learning new things.
+
+
+    User 2: That''s what I was looking forward to the most when I started college. It''s a great experience.
+
+
+    User 1: I''m also looking forward to being more independent.
+
+
+    User 2: That''s also a big part of college. It''s a great time to learn how to take care of yourself.
+
+
+    User 1: I''m sure it will be.
+
+
+    User 2: I''m sure you''ll do great!
+
+
+    * * *'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

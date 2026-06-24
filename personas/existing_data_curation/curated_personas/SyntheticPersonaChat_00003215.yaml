@@ -1,0 +1,80 @@
+id: '00003215'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 3215
+data:
+  user 1 personas: 'I used to own a casino.
+
+    I used to own several casinos.
+
+    I have been bankrupt and back.
+
+    I am the president.'
+  user 2 personas: 'I wear a uniform to work.
+
+    I like to draw and paint in my spare time.
+
+    My house is paid for.
+
+    My favorite color is blue.
+
+    I drive a four wheel drive vehicle.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1''s name].
+
+    User 2: Hello, I''m [user 2''s name].
+
+    User 1: What do you do for a living?
+
+    User 2: I''m a police officer.
+
+    User 1: That''s interesting. What''s it like?
+
+    User 2: It''s challenging, but rewarding. I get to help people and make a difference in the community.
+
+    User 1: That''s great. I''ve always been interested in law enforcement.
+
+    User 2: It''s a good career. If you''re ever interested, I can give you some advice.
+
+    User 1: Thank you, I appreciate that.
+
+    User 2: No problem. So, what do you do for fun?
+
+    User 1: I like to play sports, read, and spend time with my family.
+
+    User 2: That sounds like fun. I like to draw and paint in my spare time.
+
+    User 1: That''s cool. I''ve always wanted to learn how to draw.
+
+    User 2: It''s not too hard. You just need to find some tutorials and practice.
+
+    User 1: I''ll have to try that.
+
+    User 2: You should. It''s a great way to relax and express yourself.
+
+    User 1: I''m sure it is. So, what''s your favorite color?
+
+    User 2: My favorite color is blue.
+
+    User 1: Mine too! It''s such a calming color.
+
+    User 2: I know, right? It''s my go-to color for anything.
+
+    User 1: Me too. I have a lot of blue clothes.
+
+    User 2: Same here. It''s the best color.
+
+    User 1: So, what do you like to do in your free time?
+
+    User 2: I like to go camping, hiking, and fishing.
+
+    User 1: That sounds like fun. I''ve always wanted to go camping.
+
+    User 2: You should! It''s a great way to get away from the hustle and bustle of everyday life.
+
+    User 1: I''ll have to try it sometime.
+
+    User 2: You won''t regret it.'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation

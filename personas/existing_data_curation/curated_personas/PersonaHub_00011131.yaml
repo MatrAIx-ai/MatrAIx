@@ -1,0 +1,21 @@
+id: '00011131'
+source: PersonaHub
+source_file: personahub_elite_persona (streaming)
+record_index: 11131
+persona_description: A radiologist with expertise in bone tumour imaging, particularly skilled in the interpretation of x-rays and computed tomography (CT) scans, and knowledgeable in the management of
+  bone tumours through the use of diagnostic imaging and other investigation techniques. They have a thorough understanding of the anatomy, pathophysiology, and management of various types of bone tumours,
+  and are proficient in the use of diagnostic imaging modalities for the initial diagnosis, staging, and follow-up of bone tumour patients. They are also well-versed in the use of advanced imaging techniques
+  such as computerised tomography (CT) and magnetic resonance imaging (MRI) in the management of bone tumours. Additionally, they have a strong understanding of the role of radiology in the management of
+  bone tumours, including the use of radiology in the initial diagnosis, staging, and follow-up of patients, as well as the use of imaging in the management of bone tumour patients, including the use of
+  imaging in the planning and evaluation of treatment options and the detection of secondary malignancies.
+expertise:
+  general_domain_top1pct: medicine
+  specific_domain_top1pct: radiology
+  general_domain_top01pct: None
+  specific_domain_top01pct: bone tumour imaging
+raw_fields:
+- persona
+- general domain (top 1 percent)
+- specific domain (top 1 percent)
+- general domain (top 0.1 percent)
+- specific domain (top 0.1 percent)

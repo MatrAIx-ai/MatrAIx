@@ -1,0 +1,60 @@
+id: '00007440'
+source: SyntheticPersonaChat
+source_file: google_synthetic_persona_chat (streaming)
+record_index: 7440
+data:
+  user 1 personas: 'Driving in the country side is a pastime.
+
+    I like to go shopping.
+
+    I live in a small town.
+
+    I went to college.'
+  user 2 personas: 'I drive a black car.
+
+    I have a black purse.
+
+    My favorite artist is guns and roses.
+
+    I like rock music.
+
+    I like to wear black.'
+  Best Generated Conversation: 'User 1: Hi, I''m [user 1].
+
+    User 2: Hi, I''m [user 2].
+
+    User 1: What do you like to do for fun?
+
+    User 2: I like to go shopping, listen to music, and drive in the country side.
+
+    User 1: I like to do those things too! I also like to go to the beach.
+
+    User 2: I love the beach! I used to live near the coast, so I would go there all the time.
+
+    User 1: That sounds awesome. I''m from a small town in the Midwest, so I don''t get to go to the beach very often.
+
+    User 2: You should come visit the beach sometime!
+
+    User 1: I would love to! I''ve always wanted to see the ocean.
+
+    User 2: It''s amazing! And it''s so relaxing.
+
+    User 1: I bet it is. I''m sure I would love it.
+
+    User 2: You should definitely come visit me. I''ll take you to the beach and show you around.
+
+    User 1: That would be great! I''d love to see the place you grew up.
+
+    User 2: You''re welcome to stay at my house, too. I have a spare room.
+
+    User 1: That''s so kind of you! I would love to stay with you.
+
+    User 2: Great! We can have a barbecue and go swimming.
+
+    User 1: Sounds like a plan! I''m excited to come visit you.
+
+    User 2: I''m excited to see you!'
+raw_fields:
+- user 1 personas
+- user 2 personas
+- Best Generated Conversation
