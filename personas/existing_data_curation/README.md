@@ -460,17 +460,16 @@ Inspect prompts without calling the API:
 python scripts/infer_amazon_review_dimensions.py \
   --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
   --product-metadata-sidecar raw/amazon_reviews_2023/persona_dimension_inference/user_histories.product_metadata.jsonl \
-  --inference-mode evidence_profile \
   --max-users 2 \
-  --dimensions-per-call 40 \
+  --dimensions-per-call 200 \
   --dry-run
 ```
 
-The recommended inference mode is `evidence_profile`. It first compresses each
-review history into a compact, evidence-cited profile using broad Amazon-review
-evidence categories from `amazon_review_evidence_mapping.json`, then maps that
-profile to the persona schema. This avoids resending the same raw reviews for
-every schema batch. Evidence profiles are written to
+The inference pipeline first compresses each review history into a compact,
+evidence-cited profile using broad Amazon-review evidence categories from
+`amazon_review_evidence_mapping.json`, then maps that profile to the persona
+schema. This avoids resending the same raw reviews for every schema batch.
+Evidence profiles are written to
 `raw/amazon_reviews_2023/persona_dimension_inference/evidence_profiles.jsonl`
 and can be reused across resumed schema-mapping runs.
 If `--product-metadata-sidecar` is supplied, the evidence profile also sees
@@ -490,15 +489,19 @@ summary prompt behavior changes.
 Inference outputs include `review_corpus_stats` for the construction split:
 row count, text-review count, rating count, rating-only row count, total review
 text characters, date span, category counts, and rating-only product/category
-summary stats. In `evidence_profile` mode, only rows with review text are sent
-as `review_evidence`; rating-only rows are represented through aggregate rating,
-product-name, and product-category stats in `construction_corpus_summary`. Users
-with very large construction text histories are summarized in temporal windows
-before schema mapping. By default, windowing triggers when construction review
-text exceeds `--window-summary-threshold-chars 120000`; each window is capped by
-`--window-summary-max-chars 60000` and `--window-summary-max-rows 200`, and the
-combined window memory keeps up to `--max-window-evidence-items 100` evidence
-items.
+summary stats. Only rows with review text are sent as `review_evidence`;
+rating-only rows are represented through aggregate rating, product-name, and
+product-category stats in `construction_corpus_summary`. Review text rows are
+selected with `--context-selection-strategy category_temporal` by default so the
+bounded context preserves temporal coverage plus category diversity. Users with
+very large construction text histories are summarized in temporal windows before
+schema mapping. By default, windowing triggers when construction review text
+exceeds `--window-summary-threshold-chars 40000`; each window is capped by
+`--window-summary-max-chars 40000` and `--window-summary-max-rows 80`, and the
+combined review memory keeps up to `--max-evidence-items 120` evidence items.
+Power reviewers can use a larger selected text-review cap through the adaptive
+defaults: `--max-reviews-per-user 80`, `--power-user-min-reviews 1000`,
+`--power-user-min-text-chars 250000`, and `--power-user-max-reviews 200`.
 
 Run OpenAI inference with the optimized evidence-profile pipeline:
 
@@ -507,12 +510,10 @@ export OPENAI_API_KEY=...
 python scripts/infer_amazon_review_dimensions.py \
   --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
   --product-metadata-sidecar raw/amazon_reviews_2023/persona_dimension_inference/user_histories.product_metadata.jsonl \
-  --inference-mode evidence_profile \
   --schema-path ../dimensions+new.json \
   --model "${OPENAI_LLM_MODEL:-gpt-5.4-mini}" \
-  --dimensions-per-call 40 \
-  --window-summary-threshold-chars 120000 \
-  --max-window-evidence-items 100 \
+  --dimensions-per-call 200 \
+  --max-evidence-items 120 \
   --review-memory-output raw/amazon_reviews_2023/persona_dimension_inference/evidence_profiles.jsonl \
   --max-users 100 \
   --output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.jsonl \
@@ -544,15 +545,10 @@ For cheaper pilots, restrict the schema surface first:
 ```bash
 python scripts/infer_amazon_review_dimensions.py \
   --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
-  --inference-mode evidence_profile \
   --dimension-categories "Interests: Hobbies,Interests: Topics,Behavior: Preferences,Expertise: Domains" \
   --max-users 20 \
   --dry-run
 ```
-
-The original direct raw-review batching path is still available with
-`--inference-mode raw_reviews`, but it is more expensive because each schema
-batch receives the same review context again.
 
 Render a readable Markdown report from inference JSONL outputs:
 
