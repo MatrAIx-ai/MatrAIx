@@ -73,6 +73,17 @@ def test_instruction_delegates_feedback_rating_to_application_scorer():
     assert '"overallExperienceRating": 1' not in instruction
 
 
+def test_verifier_shell_uses_python3_available_in_task_image():
+    test_script = (
+        Path(__file__).parents[1]
+        .joinpath("tests", "test.sh")
+        .read_text(encoding="utf-8")
+    )
+
+    assert "python3 /tests/test_state.py" in test_script
+    assert "python /tests/test_state.py" not in test_script
+
+
 def test_verifier_calls_application_scorer_when_context_is_present(
     tmp_path, monkeypatch
 ):

@@ -118,15 +118,16 @@ service layer behind a smaller synchronous REST contract for persona agents:
 | GET | `/v1/conversation?sessionId=...` | Fetch transcript and turns. |
 | GET | `/v1/recommendations?sessionId=...` | Fetch recommended item ids across turns. |
 
-The Harbor task is `application/tasks/recommender-agent_chat_api/`. It runs this
-adapter as the `rec-agent-api` sidecar and asks the persona agent to save
-`/app/output/transcript.json` and `/app/output/recommendation_result.json`.
+The Harbor task is `application/tasks/chatbot_chat_api/`. It runs the chatbot
+application router sidecar, lets the task controller drive the selected
+application, and writes `/app/output/transcript.json`,
+`/app/output/application_result.json`, and the persona self-report artifacts.
 
 Contract tests:
 
 ```bash
 PYTHONPATH=applications/recommendation_chatbot_eval \
-  /Users/liuyifan/Desktop/MatrAIx/.venv-arm64/bin/python \
+  .venv/bin/python \
   -m pytest applications/recommendation_chatbot_eval/harbor_api/tests/test_server.py -q
 ```
 

@@ -1,8 +1,13 @@
 from __future__ import annotations
 
+import threading
+import time
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import pytest
+from fastapi import HTTPException
 from fastapi.testclient import TestClient
 
 from harbor_api import server
@@ -212,6 +217,70 @@ def test_unknown_session_returns_404(monkeypatch):
     )
 
     assert response.status_code == 404
+
+
+def test_recai_turns_are_serialized_process_wide(monkeypatch):
+    class SlowManager:
+        def __init__(self) -> None:
+            self.active = 0
+            self.max_active = 0
+            self.entered = threading.Event()
+            self.guard = threading.Lock()
+
+        def run_turn_sync(self, session_id: str, message: str) -> Dict[str, Any]:
+            del session_id, message
+            with self.guard:
+                self.active += 1
+                self.max_active = max(self.max_active, self.active)
+                self.entered.set()
+            time.sleep(0.1)
+            with self.guard:
+                self.active -= 1
+            return {
+                "assistantMessage": "done",
+                "recommendedItems": [],
+            }
+
+    manager = SlowManager()
+    monkeypatch.setattr(server, "build_state", lambda: type("State", (), {"manager": manager})())
+    server.reset_state_for_tests()
+
+    first = threading.Thread(target=server._run_turn, args=("ses_1", "first"))
+    second = threading.Thread(target=server._run_turn, args=("ses_2", "second"))
+    first.start()
+    assert manager.entered.wait(1)
+    second.start()
+    first.join()
+    second.join()
+
+    assert manager.max_active == 1
+
+
+def test_recai_turn_execution_value_error_is_server_error(monkeypatch):
+    class BrokenManager:
+        def run_turn_sync(self, session_id: str, message: str) -> Dict[str, Any]:
+            del session_id, message
+            raise ValueError("ranker failed")
+
+    monkeypatch.setattr(
+        server, "build_state", lambda: type("State", (), {"manager": BrokenManager()})()
+    )
+    server.reset_state_for_tests()
+
+    with pytest.raises(HTTPException) as exc_info:
+        server._run_turn("ses_1", "recommend something")
+
+    assert exc_info.value.status_code == 500
+    assert "ranker failed" in str(exc_info.value.detail)
+
+
+def test_recai_dockerfile_removes_downloaded_resource_zip():
+    dockerfile = (
+        Path(__file__).parents[1].joinpath("Dockerfile").read_text(encoding="utf-8")
+    )
+
+    assert "setup_resources.py &&" in dockerfile
+    assert "rm -f /all_resources.zip" in dockerfile
 
 
 def test_health_reports_generic_chatbot_applications(monkeypatch):

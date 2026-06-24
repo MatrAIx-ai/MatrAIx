@@ -80,6 +80,7 @@ _ready_lock = threading.Lock()
 _ready_keys: set[tuple[str, str]] = set()
 _finance_application: Any = None
 _finance_lock = threading.Lock()
+_recai_turn_lock = threading.Lock()
 
 
 def reset_state_for_tests() -> None:
@@ -187,11 +188,10 @@ def _grounded_items_from_turns(turns: List[Dict[str, Any]]) -> List[Dict[str, An
 def _run_turn(session_id: str, message: str) -> Dict[str, Any]:
     state = get_state()
     try:
-        return state.manager.run_turn_sync(session_id, message)
+        with _recai_turn_lock:
+            return state.manager.run_turn_sync(session_id, message)
     except KeyError:
         raise HTTPException(status_code=404, detail="session not found")
-    except ValueError as exc:
-        raise HTTPException(status_code=422, detail=str(exc))
     except Exception as exc:  # noqa: BLE001 - surface real RecBot failures cleanly.
         raise HTTPException(status_code=500, detail=str(exc))
 

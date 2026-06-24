@@ -39,7 +39,8 @@ RUN python -m pip install --no-cache-dir --upgrade pip "setuptools<81" wheel && 
       "transformers==4.27.4" && \
     python -m pip install --no-cache-dir -r /tmp/backend-requirements.txt
 
-RUN python /app/scripts/setup_resources.py
+RUN python /app/scripts/setup_resources.py && \
+    rm -f /all_resources.zip
 
 COPY . /app
 
