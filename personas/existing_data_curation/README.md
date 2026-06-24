@@ -365,30 +365,45 @@ bucket=ab/source_category=Electronics/part-000000.parquet
 
 ### Export Candidate Histories
 
+The current reusable Amazon artifacts are mirrored on Hugging Face at
+[`MatrAIx/MatrAIx/amazon/modal_artifacts`](https://huggingface.co/datasets/MatrAIx/MatrAIx/tree/main/amazon/modal_artifacts).
+Use the Hugging Face-backed export commands below for candidate selection,
+history retrieval, and metadata sidecars. The older Modal-volume export
+commands are still available when rebuilding or debugging artifacts directly
+inside the Modal volume.
+
+These Hugging Face-backed commands spawn Modal workers to read the Parquet
+artifacts, so your laptop does not need to download the full artifact folders.
+The Modal image already includes `huggingface_hub` and `pyarrow`.
+
 First export candidate users from the same eligible-user pool used to build the
 review index. This keeps the candidate list and review index aligned:
 
 ```bash
-modal run modal_amazon_user_index.py::export_candidate_users \
+modal run modal_amazon_user_index.py::export_candidate_users_from_hf \
+  --repo-id MatrAIx/MatrAIx \
+  --path-prefix amazon/modal_artifacts \
   --eligible-prefix amazon_reviews_2018_2023_eligible_users_min30_verified70_text3000 \
   --top-n 100 \
   --min-history-days 365 \
   --output raw/amazon_reviews_2023/candidates/eligible_candidates_top100.jsonl
 ```
 
-The tracked `samples/amazon_reviews_2023/candidate_users_top100.jsonl` file is
-a lightweight collaborator sample from an earlier candidate pool. It is useful
-for code smoke tests, but newly generated candidates should come from the
-current eligible-user prefix. Full candidate pools and retrieved review
-histories stay under `raw/` and are intentionally ignored by Git.
+For a quick connectivity smoke test, add `--buckets 00 --top-n 1
+--top-n-per-bucket 1` and write to a temporary output path.
 
-Export selected users from the Modal user-indexed review artifact into the local
+Full candidate pools and retrieved review histories stay under `raw/` and are
+intentionally ignored by Git.
+
+Export selected users from the Hugging Face user-indexed review artifact into the local
 JSONL format expected by the inference script:
 
 ```bash
-modal run modal_amazon_user_index.py::export_user_histories \
+modal run modal_amazon_user_index.py::export_user_histories_from_hf \
   --candidate-users raw/amazon_reviews_2023/candidates/eligible_candidates_top100.jsonl \
   --top-n 100 \
+  --repo-id MatrAIx/MatrAIx \
+  --path-prefix amazon/modal_artifacts \
   --review-prefix amazon_reviews_2018_2023_user_buckets_min30_verified70_text3000 \
   --temporal-train-fraction 0.8 \
   --output raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl
@@ -417,8 +432,10 @@ Export product metadata as a separate compact sidecar after user histories are
 retrieved. This keeps retrieval fast and makes metadata enrichment optional:
 
 ```bash
-modal run modal_amazon_user_index.py::export_history_metadata \
+modal run modal_amazon_user_index.py::export_history_metadata_from_hf \
   --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
+  --repo-id MatrAIx/MatrAIx \
+  --path-prefix amazon/modal_artifacts \
   --output raw/amazon_reviews_2023/persona_dimension_inference/user_histories.product_metadata.jsonl
 ```
 

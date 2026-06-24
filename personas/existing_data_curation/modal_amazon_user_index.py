@@ -547,6 +547,17 @@ def bucket_values(bucket_chars: int = 2) -> list[str]:
     return [f"{idx:0{bucket_chars}x}" for idx in range(16**bucket_chars)]
 
 
+def parse_buckets(value: str, bucket_chars: int = 2) -> list[str]:
+    if value == "all":
+        return bucket_values(bucket_chars)
+    parsed = [part.strip().lower() for part in value.split(",") if part.strip()]
+    valid = set(bucket_values(bucket_chars))
+    unknown = sorted(set(parsed) - valid)
+    if unknown:
+        raise ValueError(f"Unknown user buckets: {', '.join(unknown)}")
+    return parsed
+
+
 def read_parquet_rows(path: Path) -> list[dict[str, Any]]:
     import pyarrow.parquet as pq
 
@@ -561,6 +572,51 @@ def read_parquet_rows_with_columns(path: Path, columns: list[str]) -> list[dict[
     import pyarrow.parquet as pq
 
     table = pq.ParquetFile(path).read(columns=columns)
+    return table.to_pylist()
+
+
+def hf_path(path_prefix: str, *parts: str) -> str:
+    path_parts = [path_prefix.strip("/")]
+    path_parts.extend(str(part).strip("/") for part in parts if str(part).strip("/"))
+    return "/".join(path_parts)
+
+
+def hf_api():
+    from huggingface_hub import HfApi
+
+    token = os.environ.get("HF_TOKEN") or None
+    return HfApi(token=token)
+
+
+def hf_repo_files(repo_id: str, revision: str = "main") -> list[str]:
+    return hf_api().list_repo_files(
+        repo_id=repo_id,
+        repo_type="dataset",
+        revision=revision,
+    )
+
+
+def hf_files_under(repo_files: list[str], prefix: str) -> list[str]:
+    normalized_prefix = prefix.strip("/") + "/"
+    return sorted(path for path in repo_files if path.startswith(normalized_prefix))
+
+
+def read_hf_parquet_rows(
+    repo_id: str,
+    path_in_repo: str,
+    revision: str = "main",
+    columns: list[str] | None = None,
+) -> list[dict[str, Any]]:
+    from huggingface_hub import hf_hub_download
+    import pyarrow.parquet as pq
+
+    local_path = hf_hub_download(
+        repo_id=repo_id,
+        repo_type="dataset",
+        filename=path_in_repo,
+        revision=revision,
+    )
+    table = pq.ParquetFile(local_path).read(columns=columns)
     return table.to_pylist()
 
 
@@ -1750,6 +1806,177 @@ def export_candidate_users(
     )
 
 
+def load_candidate_users_for_bucket_from_hf(
+    bucket: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    eligible_prefix: str = DEFAULT_ELIGIBLE_USERS_PREFIX,
+    revision: str = "main",
+    top_n_per_bucket: int = 100,
+    min_category_count: int = 1,
+    min_history_days: int = 0,
+) -> dict[str, Any]:
+    """Read one eligible-user bucket from Hugging Face and return candidate rows."""
+    path_in_repo = hf_path(
+        path_prefix,
+        eligible_prefix,
+        f"bucket={bucket}",
+        "eligible_users.parquet",
+    )
+    candidates = []
+    rows_seen = 0
+    try:
+        rows = read_hf_parquet_rows(repo_id, path_in_repo, revision=revision)
+    except Exception as err:
+        return {
+            "summary": {
+                "bucket": bucket,
+                "repo_id": repo_id,
+                "path_in_repo": path_in_repo,
+                "eligible_prefix": eligible_prefix,
+                "rows_seen": 0,
+                "rows_kept": 0,
+                "returned": 0,
+                "error": str(err),
+            },
+            "candidates": [],
+        }
+    for row in rows:
+        rows_seen += 1
+        if int(row.get("category_count") or 0) < min_category_count:
+            continue
+        first_ts = row.get("first_timestamp")
+        last_ts = row.get("last_timestamp")
+        history_days = 0.0
+        if first_ts is not None and last_ts is not None:
+            history_days = max(0.0, (int(last_ts) - int(first_ts)) / 86_400_000)
+        if history_days < min_history_days:
+            continue
+        row["history_days"] = round(history_days, 2)
+        row["history_years"] = round(history_days / 365.25, 2)
+        candidates.append(row)
+
+    candidates.sort(
+        key=lambda row: (
+            -int(row.get("review_count") or 0),
+            -int(row.get("text_chars") or 0),
+            -int(row.get("category_count") or 0),
+            str(row.get("user_id") or ""),
+        )
+    )
+    if top_n_per_bucket:
+        candidates = candidates[:top_n_per_bucket]
+    return {
+        "summary": {
+            "bucket": bucket,
+            "repo_id": repo_id,
+            "path_in_repo": path_in_repo,
+            "eligible_prefix": eligible_prefix,
+            "rows_seen": rows_seen,
+            "rows_kept": len(candidates),
+            "returned": len(candidates),
+            "min_category_count": min_category_count,
+            "min_history_days": min_history_days,
+        },
+        "candidates": candidates,
+    }
+
+
+@app.function(
+    timeout=60 * 60,
+    cpu=2,
+    memory=8192,
+)
+def load_candidate_users_for_bucket_from_hf_remote(
+    bucket: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    eligible_prefix: str = DEFAULT_ELIGIBLE_USERS_PREFIX,
+    revision: str = "main",
+    top_n_per_bucket: int = 100,
+    min_category_count: int = 1,
+    min_history_days: int = 0,
+) -> dict[str, Any]:
+    """Modal worker: read one HF eligible-user bucket and return candidate rows."""
+    return load_candidate_users_for_bucket_from_hf(
+        bucket=bucket,
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+        eligible_prefix=eligible_prefix,
+        revision=revision,
+        top_n_per_bucket=top_n_per_bucket,
+        min_category_count=min_category_count,
+        min_history_days=min_history_days,
+    )
+
+
+@app.local_entrypoint()
+def export_candidate_users_from_hf(
+    output: str = "raw/amazon_reviews_2023/candidates/eligible_candidates_top100.jsonl",
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    eligible_prefix: str = DEFAULT_ELIGIBLE_USERS_PREFIX,
+    revision: str = "main",
+    buckets: str = "all",
+    top_n: int = 100,
+    top_n_per_bucket: int = 100,
+    min_category_count: int = 1,
+    min_history_days: int = 0,
+) -> None:
+    """Export ranked candidate users from Hugging Face artifact parquet files."""
+    selected_buckets = parse_buckets(buckets)
+    print(
+        f"Exporting candidate users from hf://datasets/{repo_id}/"
+        f"{hf_path(path_prefix, eligible_prefix)}: "
+        f"{len(selected_buckets)} buckets, top {top_n_per_bucket} per bucket"
+    )
+    candidates = []
+    rows_seen = 0
+    calls = [
+        load_candidate_users_for_bucket_from_hf_remote.spawn(
+            bucket,
+            repo_id=repo_id,
+            path_prefix=path_prefix,
+            eligible_prefix=eligible_prefix,
+            revision=revision,
+            top_n_per_bucket=top_n_per_bucket,
+            min_category_count=min_category_count,
+            min_history_days=min_history_days,
+        )
+        for bucket in selected_buckets
+    ]
+    for bucket, call in zip(selected_buckets, calls, strict=True):
+        print(f"bucket={bucket}: {call.object_id}")
+    for bucket, call in zip(selected_buckets, calls, strict=True):
+        try:
+            result = call.get()
+        except Exception as err:
+            print(f"bucket={bucket}: failed: {err}")
+            raise
+        summary = result["summary"]
+        rows_seen += int(summary.get("rows_seen") or 0)
+        candidates.extend(result["candidates"])
+        print(f"bucket={bucket}: completed {summary}")
+
+    candidates.sort(
+        key=lambda row: (
+            -int(row.get("review_count") or 0),
+            -int(row.get("text_chars") or 0),
+            -int(row.get("category_count") or 0),
+            str(row.get("user_id") or ""),
+        )
+    )
+    if top_n:
+        candidates = candidates[:top_n]
+
+    output_path = Path(output)
+    written = write_local_jsonl(output_path, iter(candidates))
+    print(
+        f"Wrote {written:,} candidates to {output_path}. "
+        f"Eligible rows scanned: {rows_seen:,}."
+    )
+
+
 @app.local_entrypoint()
 def export_user_histories(
     candidate_users: str = "samples/amazon_reviews_2023/candidate_users_top100.jsonl",
@@ -1977,6 +2204,402 @@ def export_user_histories(
     )
 
 
+def export_user_histories_for_bucket_from_hf(
+    bucket: str,
+    user_ids: list[str],
+    repo_files: list[str],
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    review_prefix: str = DEFAULT_ELIGIBLE_REVIEW_PREFIX,
+    revision: str = "main",
+    filter_fulfillment_reviews: bool = True,
+) -> dict[str, Any]:
+    """Read one user bucket from Hugging Face artifacts and return selected histories."""
+    selected_user_ids = set(user_ids)
+    review_root = hf_path(path_prefix, review_prefix, f"bucket={bucket}")
+    parquet_files = [
+        path
+        for path in hf_files_under(repo_files, review_root)
+        if path.endswith(".parquet") and "/category=" in path
+    ]
+    histories: dict[str, list[dict[str, Any]]] = {user_id: [] for user_id in selected_user_ids}
+    scanned_rows = 0
+    kept_rows = 0
+    selected_rows = 0
+    removed_rows = 0
+    removed_by_category: dict[str, int] = {}
+    removed_by_user: dict[str, int] = {}
+    removed_by_user_category: dict[str, dict[str, int]] = {}
+    removed_by_pattern: dict[str, int] = {}
+    columns = [
+        "source",
+        "category",
+        "user_id",
+        "user_bucket",
+        "parent_asin",
+        "asin",
+        "timestamp",
+        "date",
+        "rating",
+        "title",
+        "text",
+        "verified_purchase",
+        "helpful_vote",
+    ]
+    for parquet_path in parquet_files:
+        for row in read_hf_parquet_rows(
+            repo_id,
+            parquet_path,
+            revision=revision,
+            columns=columns,
+        ):
+            scanned_rows += 1
+            user_id = row.get("user_id")
+            if user_id not in selected_user_ids:
+                continue
+            selected_rows += 1
+            if filter_fulfillment_reviews:
+                pattern = fulfillment_or_template_review_match(row)
+                if pattern:
+                    category = str(row.get("category") or "Unknown")
+                    user_id = str(user_id)
+                    removed_rows += 1
+                    removed_by_category[category] = removed_by_category.get(category, 0) + 1
+                    removed_by_user[user_id] = removed_by_user.get(user_id, 0) + 1
+                    user_categories = removed_by_user_category.setdefault(user_id, {})
+                    user_categories[category] = user_categories.get(category, 0) + 1
+                    removed_by_pattern[pattern] = removed_by_pattern.get(pattern, 0) + 1
+                    continue
+            histories.setdefault(str(user_id), []).append(row)
+            kept_rows += 1
+
+    histories = {
+        user_id: sorted(reviews, key=lambda row: row.get("timestamp") or 0)
+        for user_id, reviews in histories.items()
+        if reviews
+    }
+    summary = {
+        "bucket": bucket,
+        "source": "huggingface",
+        "repo_id": repo_id,
+        "review_prefix": review_prefix,
+        "filter_fulfillment_reviews": filter_fulfillment_reviews,
+        "requested_users": len(selected_user_ids),
+        "users_found": len(histories),
+        "parquet_files": len(parquet_files),
+        "scanned_rows": scanned_rows,
+        "selected_rows": selected_rows,
+        "kept_rows": kept_rows,
+        "removed_rows": removed_rows,
+        "removed_by_category": dict(sorted(removed_by_category.items())),
+        "removed_by_user": dict(sorted(removed_by_user.items())),
+        "removed_by_user_category": {
+            user_id: dict(sorted(category_counts.items()))
+            for user_id, category_counts in sorted(removed_by_user_category.items())
+        },
+        "removed_by_pattern": dict(sorted(removed_by_pattern.items())),
+    }
+    print(f"[hf_amazon_export] {bucket}: {json.dumps(summary)}", flush=True)
+    return {"summary": summary, "histories": histories}
+
+
+@app.function(
+    timeout=6 * 60 * 60,
+    cpu=4,
+    memory=32768,
+)
+def export_user_histories_for_bucket_from_hf_remote(
+    bucket: str,
+    user_ids: list[str],
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    review_prefix: str = DEFAULT_ELIGIBLE_REVIEW_PREFIX,
+    revision: str = "main",
+    filter_fulfillment_reviews: bool = True,
+) -> dict[str, Any]:
+    """Modal worker: read selected histories from Hugging Face user-index artifacts."""
+    repo_files = hf_repo_files(repo_id, revision=revision)
+    return export_user_histories_for_bucket_from_hf(
+        bucket=bucket,
+        user_ids=user_ids,
+        repo_files=repo_files,
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+        review_prefix=review_prefix,
+        revision=revision,
+        filter_fulfillment_reviews=filter_fulfillment_reviews,
+    )
+
+
+def write_temporal_user_histories(
+    histories_by_user: dict[str, list[dict[str, Any]]],
+    candidate_by_user: dict[str, dict[str, Any]],
+    candidate_path: Path,
+    output_path: Path,
+    review_prefix: str,
+    metadata_prefix: str,
+    include_metadata: bool,
+    filter_fulfillment_reviews: bool,
+    temporal_train_fraction: float,
+    filter_summary_output: str,
+    total_scanned: int,
+    total_selected: int,
+    total_kept: int,
+    total_removed: int,
+    removed_by_category: dict[str, int],
+    removed_by_user: dict[str, int],
+    removed_by_user_category: dict[str, dict[str, int]],
+    removed_by_pattern: dict[str, int],
+    artifact_source: str,
+) -> None:
+    category_stats_all_users: dict[str, dict[str, Any]] = {}
+    category_stats_by_user: dict[str, dict[str, dict[str, Any]]] = {}
+    validation_category_stats_all_users: dict[str, dict[str, Any]] = {}
+    validation_category_stats_by_user: dict[str, dict[str, dict[str, Any]]] = {}
+    total_construction_reviews = 0
+    total_validation_reviews = 0
+    total_construction_text_reviews = 0
+    total_validation_text_reviews = 0
+    total_construction_ratings = 0
+    total_validation_ratings = 0
+    total_construction_rating_only = 0
+    total_validation_rating_only = 0
+
+    def rows() -> Iterator[dict[str, Any]]:
+        nonlocal total_construction_reviews, total_validation_reviews
+        nonlocal total_construction_text_reviews, total_validation_text_reviews
+        nonlocal total_construction_ratings, total_validation_ratings
+        nonlocal total_construction_rating_only, total_validation_rating_only
+        for user_id, reviews in sorted(
+            histories_by_user.items(),
+            key=lambda item: (-len(item[1]), str(item[0])),
+        ):
+            construction_reviews, validation_reviews, split_summary = temporal_train_validation_split(
+                reviews,
+                temporal_train_fraction,
+            )
+            total_construction_reviews += len(construction_reviews)
+            total_validation_reviews += len(validation_reviews)
+            total_construction_text_reviews += int(split_summary["construction_text_review_count"])
+            total_validation_text_reviews += int(split_summary["validation_text_review_count"])
+            total_construction_ratings += int(split_summary["construction_rating_count"])
+            total_validation_ratings += int(split_summary["validation_rating_count"])
+            total_construction_rating_only += int(split_summary["construction_rating_only_count"])
+            total_validation_rating_only += int(split_summary["validation_rating_only_count"])
+            categories = sorted(
+                {
+                    str(review.get("category"))
+                    for review in construction_reviews
+                    if review.get("category")
+                }
+            )
+            validation_categories = sorted(
+                {
+                    str(review.get("category"))
+                    for review in validation_reviews
+                    if review.get("category")
+                }
+            )
+            user_category_stats = category_review_stats(construction_reviews)
+            user_validation_category_stats = category_review_stats(validation_reviews)
+            category_stats_by_user[user_id] = user_category_stats
+            validation_category_stats_by_user[user_id] = user_validation_category_stats
+            merge_category_review_stats(category_stats_all_users, user_category_stats)
+            merge_category_review_stats(validation_category_stats_all_users, user_validation_category_stats)
+            yield {
+                "source": "amazon_reviews_2023",
+                "artifact_source": artifact_source,
+                "user_id": user_id,
+                "review_count": len(construction_reviews),
+                "retrieved_review_count": len(reviews),
+                "validation_review_count": len(validation_reviews),
+                "categories": categories,
+                "validation_categories": validation_categories,
+                "temporal_split": split_summary,
+                "category_review_stats": user_category_stats,
+                "validation_category_review_stats": user_validation_category_stats,
+                "first_timestamp": construction_reviews[0].get("timestamp") if construction_reviews else None,
+                "last_timestamp": construction_reviews[-1].get("timestamp") if construction_reviews else None,
+                "validation_first_timestamp": validation_reviews[0].get("timestamp") if validation_reviews else None,
+                "validation_last_timestamp": validation_reviews[-1].get("timestamp") if validation_reviews else None,
+                "candidate_user_stats": candidate_by_user.get(user_id, {}),
+                "review_filter_summary": {
+                    "filter_fulfillment_reviews": filter_fulfillment_reviews,
+                    "removed_reviews": removed_by_user.get(user_id, 0),
+                    "removed_by_category": removed_by_user_category.get(user_id, {}),
+                },
+                "reviews": construction_reviews,
+                "validation_reviews": validation_reviews,
+            }
+
+    written = write_local_jsonl(output_path, rows())
+    missing = len(candidate_by_user) - written
+    filter_summary = {
+        "artifact_source": artifact_source,
+        "candidate_users": str(candidate_path),
+        "output": str(output_path),
+        "review_prefix": review_prefix,
+        "metadata_prefix": metadata_prefix if include_metadata else "",
+        "include_metadata": include_metadata,
+        "filter_fulfillment_reviews": filter_fulfillment_reviews,
+        "temporal_split": {
+            "method": "per_user_temporal",
+            "unit": "review_or_rating_row",
+            "train_fraction": temporal_train_fraction,
+            "construction_reviews": total_construction_reviews,
+            "validation_reviews": total_validation_reviews,
+            "construction_text_reviews": total_construction_text_reviews,
+            "validation_text_reviews": total_validation_text_reviews,
+            "construction_ratings": total_construction_ratings,
+            "validation_ratings": total_validation_ratings,
+            "construction_rating_only_rows": total_construction_rating_only,
+            "validation_rating_only_rows": total_validation_rating_only,
+        },
+        "requested_users": len(candidate_by_user),
+        "written_users": written,
+        "missing_users": missing,
+        "scanned_indexed_rows": total_scanned,
+        "selected_reviews_before_filter": total_selected,
+        "kept_reviews": total_kept,
+        "removed_reviews": total_removed,
+        "category_review_stats": finalize_category_review_stats(category_stats_all_users),
+        "validation_category_review_stats": finalize_category_review_stats(
+            validation_category_stats_all_users
+        ),
+        "user_category_review_stats": {
+            user_id: category_stats
+            for user_id, category_stats in sorted(category_stats_by_user.items())
+        },
+        "user_validation_category_review_stats": {
+            user_id: category_stats
+            for user_id, category_stats in sorted(validation_category_stats_by_user.items())
+        },
+        "removed_by_category": dict(sorted(removed_by_category.items())),
+        "removed_by_user": dict(sorted(removed_by_user.items())),
+        "removed_by_user_category": {
+            user_id: dict(sorted(category_counts.items()))
+            for user_id, category_counts in sorted(removed_by_user_category.items())
+        },
+        "removed_by_pattern": dict(sorted(removed_by_pattern.items())),
+    }
+    summary_path = (
+        Path(filter_summary_output)
+        if filter_summary_output
+        else output_path.with_suffix(output_path.suffix + ".filter_summary.json")
+    )
+    write_json(summary_path, filter_summary)
+    print(
+        f"Wrote {written:,} user histories to {output_path}. "
+        f"Missing users: {missing:,}. Scanned indexed rows: {total_scanned:,}; "
+        f"selected reviews: {total_selected:,}; removed reviews: {total_removed:,}; "
+        f"kept reviews: {total_kept:,}; construction reviews: {total_construction_reviews:,}; "
+        f"validation reviews: {total_validation_reviews:,}. Filter summary: {summary_path}"
+    )
+
+
+@app.local_entrypoint()
+def export_user_histories_from_hf(
+    candidate_users: str = "raw/amazon_reviews_2023/candidates/eligible_candidates_top100.jsonl",
+    output: str = str(DEFAULT_LOCAL_HISTORY_OUTPUT),
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    review_prefix: str = DEFAULT_ELIGIBLE_REVIEW_PREFIX,
+    revision: str = "main",
+    top_n: int = 100,
+    filter_fulfillment_reviews: bool = True,
+    temporal_train_fraction: float = 0.8,
+    filter_summary_output: str = "",
+) -> None:
+    """Export selected user histories from Hugging Face user-index artifacts."""
+    candidate_path = Path(candidate_users)
+    output_path = Path(output)
+    candidate_rows = list(iter_local_jsonl_or_gz(candidate_path))
+    if top_n:
+        candidate_rows = candidate_rows[:top_n]
+    candidate_by_user = {
+        str(row["user_id"]): row
+        for row in candidate_rows
+        if row.get("user_id")
+    }
+    users_by_bucket: dict[str, list[str]] = {}
+    for user_id in candidate_by_user:
+        users_by_bucket.setdefault(user_bucket(user_id), []).append(user_id)
+
+    print(
+        f"Exporting {len(candidate_by_user):,} users from {len(users_by_bucket):,} "
+        f"Hugging Face user buckets in {hf_path(path_prefix, review_prefix)}"
+    )
+    histories_by_user: dict[str, list[dict[str, Any]]] = {}
+    total_scanned = 0
+    total_selected = 0
+    total_kept = 0
+    total_removed = 0
+    removed_by_category: dict[str, int] = {}
+    removed_by_user: dict[str, int] = {}
+    removed_by_user_category: dict[str, dict[str, int]] = {}
+    removed_by_pattern: dict[str, int] = {}
+
+    def add_counts(target: dict[str, int], source: dict[str, Any]) -> None:
+        for key, value in source.items():
+            target[str(key)] = target.get(str(key), 0) + int(value or 0)
+
+    calls = [
+        export_user_histories_for_bucket_from_hf_remote.spawn(
+            bucket,
+            user_ids,
+            repo_id=repo_id,
+            path_prefix=path_prefix,
+            review_prefix=review_prefix,
+            revision=revision,
+            filter_fulfillment_reviews=filter_fulfillment_reviews,
+        )
+        for bucket, user_ids in sorted(users_by_bucket.items())
+    ]
+    for bucket, call in zip(sorted(users_by_bucket), calls, strict=True):
+        print(f"bucket={bucket}: {call.object_id}")
+    for bucket, call in zip(sorted(users_by_bucket), calls, strict=True):
+        try:
+            result = call.get()
+        except Exception as err:
+            print(f"bucket={bucket}: failed: {err}")
+            raise
+        summary = result["summary"]
+        total_scanned += int(summary.get("scanned_rows") or 0)
+        total_selected += int(summary.get("selected_rows") or 0)
+        total_kept += int(summary.get("kept_rows") or 0)
+        total_removed += int(summary.get("removed_rows") or 0)
+        add_counts(removed_by_category, summary.get("removed_by_category", {}))
+        add_counts(removed_by_user, summary.get("removed_by_user", {}))
+        add_counts(removed_by_pattern, summary.get("removed_by_pattern", {}))
+        for user_id, category_counts in summary.get("removed_by_user_category", {}).items():
+            user_target = removed_by_user_category.setdefault(str(user_id), {})
+            add_counts(user_target, category_counts)
+        histories_by_user.update(result["histories"])
+        print(f"bucket={bucket}: completed {summary}")
+
+    write_temporal_user_histories(
+        histories_by_user=histories_by_user,
+        candidate_by_user=candidate_by_user,
+        candidate_path=candidate_path,
+        output_path=output_path,
+        review_prefix=review_prefix,
+        metadata_prefix="",
+        include_metadata=False,
+        filter_fulfillment_reviews=filter_fulfillment_reviews,
+        temporal_train_fraction=temporal_train_fraction,
+        filter_summary_output=filter_summary_output,
+        total_scanned=total_scanned,
+        total_selected=total_selected,
+        total_kept=total_kept,
+        total_removed=total_removed,
+        removed_by_category=removed_by_category,
+        removed_by_user=removed_by_user,
+        removed_by_user_category=removed_by_user_category,
+        removed_by_pattern=removed_by_pattern,
+        artifact_source=f"huggingface:{repo_id}/{path_prefix}@{revision}",
+    )
+
+
 @app.function(
     volumes={str(VOLUME_MOUNT): volume},
     timeout=2 * 60 * 60,
@@ -2072,6 +2695,181 @@ def export_history_metadata(
     write_json(
         summary_path,
         {
+            "user_histories": str(history_path),
+            "output": str(output_path),
+            "metadata_prefix": metadata_prefix,
+            "requested_category_parent_asin_pairs": requested,
+            "matched_category_parent_asin_pairs": matched,
+            "written_rows": written,
+            "categories": summaries,
+        },
+    )
+    print(
+        f"Wrote {written:,} compact metadata rows to {output_path}. "
+        f"Requested pairs: {requested:,}; matched pairs: {matched:,}. "
+        f"Summary: {summary_path}"
+    )
+
+
+def metadata_for_parent_asins_from_hf(
+    parent_asins_by_category: dict[str, set[str]],
+    repo_files: list[str],
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    metadata_prefix: str = DEFAULT_METADATA_PREFIX,
+    revision: str = "main",
+) -> dict[str, dict[str, Any]]:
+    metadata: dict[str, dict[str, Any]] = {}
+    columns = [
+        "parent_asin",
+        "source_category",
+        "main_category",
+        "title",
+        "average_rating",
+        "rating_number",
+        "categories_json",
+    ]
+    for category, parent_asins in parent_asins_by_category.items():
+        parent_asins_by_bucket: dict[str, set[str]] = {}
+        for parent_asin in parent_asins:
+            parent_asins_by_bucket.setdefault(parent_asin_bucket(parent_asin), set()).add(parent_asin)
+        for bucket, bucket_parent_asins in parent_asins_by_bucket.items():
+            metadata_root = hf_path(
+                path_prefix,
+                metadata_prefix,
+                f"bucket={bucket}",
+                f"source_category={category}",
+            )
+            parquet_files = [
+                path
+                for path in hf_files_under(repo_files, metadata_root)
+                if path.endswith(".parquet")
+            ]
+            for parquet_path in parquet_files:
+                for row in read_hf_parquet_rows(
+                    repo_id,
+                    parquet_path,
+                    revision=revision,
+                    columns=columns,
+                ):
+                    parent_asin = row.get("parent_asin")
+                    if parent_asin in bucket_parent_asins:
+                        metadata[parent_asin] = row
+    return metadata
+
+
+@app.function(
+    timeout=2 * 60 * 60,
+    cpu=2,
+    memory=8192,
+)
+def export_metadata_sidecar_for_category_from_hf_remote(
+    category: str,
+    parent_asins: list[str],
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    metadata_prefix: str = DEFAULT_METADATA_PREFIX,
+    revision: str = "main",
+) -> dict[str, Any]:
+    """Modal worker: fetch compact product metadata from Hugging Face artifacts."""
+    requested = set(parent_asins)
+    repo_files = hf_repo_files(repo_id, revision=revision)
+    metadata = metadata_for_parent_asins_from_hf(
+        {category: requested},
+        repo_files=repo_files,
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+        metadata_prefix=metadata_prefix,
+        revision=revision,
+    )
+    rows_by_parent_asin = {
+        parent_asin: compact_metadata_sidecar_row(row)
+        for parent_asin, row in metadata.items()
+    }
+    summary = {
+        "category": category,
+        "source": "huggingface",
+        "repo_id": repo_id,
+        "metadata_prefix": metadata_prefix,
+        "requested_parent_asins": len(requested),
+        "matched_parent_asins": len(rows_by_parent_asin),
+        "missing_parent_asins": len(requested) - len(rows_by_parent_asin),
+    }
+    print(f"[hf_amazon_metadata_sidecar] {category}: {json.dumps(summary)}", flush=True)
+    return {"summary": summary, "metadata_rows": list(rows_by_parent_asin.values())}
+
+
+@app.local_entrypoint()
+def export_history_metadata_from_hf(
+    user_histories: str,
+    output: str = "",
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    metadata_prefix: str = DEFAULT_METADATA_PREFIX,
+    revision: str = "main",
+) -> None:
+    """Export compact product metadata sidecar from Hugging Face artifacts."""
+    history_path = Path(user_histories)
+    output_path = (
+        Path(output)
+        if output
+        else history_path.with_suffix(history_path.suffix + ".product_metadata.jsonl")
+    )
+    parent_asins_by_category = parent_asins_by_category_from_histories(history_path)
+    total_parent_asins = sum(len(parent_asins) for parent_asins in parent_asins_by_category.values())
+    print(
+        f"Exporting compact metadata for {total_parent_asins:,} category-parent_asin "
+        f"pairs across {len(parent_asins_by_category):,} categories from "
+        f"hf://datasets/{repo_id}/{hf_path(path_prefix, metadata_prefix)}"
+    )
+    calls = [
+        export_metadata_sidecar_for_category_from_hf_remote.spawn(
+            category,
+            sorted(parent_asins),
+            repo_id=repo_id,
+            path_prefix=path_prefix,
+            metadata_prefix=metadata_prefix,
+            revision=revision,
+        )
+        for category, parent_asins in sorted(parent_asins_by_category.items())
+    ]
+    for category, call in zip(sorted(parent_asins_by_category), calls, strict=True):
+        print(f"{category}: {call.object_id}")
+
+    rows_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    summaries = []
+    requested = 0
+    matched = 0
+    for category, call in zip(sorted(parent_asins_by_category), calls, strict=True):
+        try:
+            result = call.get()
+        except Exception as err:
+            print(f"{category}: failed: {err}")
+            raise
+        summary = result["summary"]
+        summaries.append(summary)
+        requested += int(summary.get("requested_parent_asins") or 0)
+        matched += int(summary.get("matched_parent_asins") or 0)
+        for row in result["metadata_rows"]:
+            parent_asin = row.get("parent_asin")
+            source_category = row.get("source_category") or category
+            if parent_asin:
+                rows_by_key[(str(parent_asin), str(source_category))] = row
+        print(f"{category}: completed {summary}")
+
+    rows = [
+        row
+        for _, row in sorted(
+            rows_by_key.items(),
+            key=lambda item: (item[0][1], item[0][0]),
+        )
+    ]
+    written = write_local_jsonl(output_path, iter(rows))
+    summary_path = output_path.with_suffix(output_path.suffix + ".summary.json")
+    write_json(
+        summary_path,
+        {
+            "artifact_source": f"huggingface:{repo_id}/{path_prefix}@{revision}",
             "user_histories": str(history_path),
             "output": str(output_path),
             "metadata_prefix": metadata_prefix,
