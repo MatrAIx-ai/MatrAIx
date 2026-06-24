@@ -86,7 +86,7 @@ Return compact JSON only."""
 
 RATING_BEHAVIOR_RE = re.compile(
     r"\b("
-    r"rating|ratings|rated|rates|rater|"
+    r"rating|ratings|rate|rated|rates|rater|"
     r"star|stars|five[- ]?star|four[- ]?star|three[- ]?star|two[- ]?star|one[- ]?star|"
     r"5[- ]?star|4[- ]?star|3[- ]?star|2[- ]?star|1[- ]?star|"
     r"harsh reviewer|critical reviewer|generous reviewer|positive reviewer|"
