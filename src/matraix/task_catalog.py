@@ -18,6 +18,10 @@ Harbor ``[task].name`` (exactly one ``/``):
 
 from __future__ import annotations
 
+from pathlib import Path
+
+import toml
+
 DOMAIN_SOFTWARE = "software"
 DOMAIN_FINANCE = "finance"
 DOMAIN_HEALTHCARE = "healthcare"
@@ -36,44 +40,6 @@ EXAMPLE_TASK_METADATA: dict[str, dict[str, object]] = {
             "tier selection",
             "spending posture",
         ],
-        "grounding": {
-            "probe_dimension": "dimensions.economic_motivation",
-            "confounders": {
-                "socioeconomic_band": {
-                    "value": "Middle",
-                    "rationale": (
-                        "Income band directly shifts price acceptability on billing and "
-                        "overall pricing items (q2, q3, q6); extremes pull toward premium "
-                        "or cost-sensitive MCQs independent of spending posture."
-                    ),
-                    "affects_questions": ["q2", "q3", "q6"],
-                },
-                "age_bracket": {
-                    "value": "25-34",
-                    "rationale": (
-                        "Teens vs adults differ on subscriptions and promos (q0, q3); "
-                        "mid-adult band reduces life-stage confounding with the probe."
-                    ),
-                    "affects_questions": ["q0", "q3"],
-                },
-                "risk_tolerance": {
-                    "value": "Balanced",
-                    "rationale": (
-                        "Extreme risk appetite skews annual prepay and promo uptake "
-                        "(q2, q3) without reflecting economic_motivation alone."
-                    ),
-                    "affects_questions": ["q2", "q3"],
-                },
-                "tech_savviness": {
-                    "value": "Comfortable",
-                    "rationale": (
-                        "Very low or avoidant tech comfort changes willingness to try "
-                        "paid tiers (q0, q1) separately from spending posture."
-                    ),
-                    "affects_questions": ["q0", "q1"],
-                },
-            },
-        },
     },
     "example-chat-api_support_chatbot": {
         "type": "chat",
@@ -286,8 +252,48 @@ def get_task_catalog_entry(task_path: str) -> dict[str, object] | None:
     return dict(spec) if spec is not None else None
 
 
-def get_task_grounding_spec(task_path: str) -> dict[str, object] | None:
-    """Return grounding config for a persona bench task, if defined in catalog."""
+def resolve_task_dir(task_path: str, *, repo_root: Path | None = None) -> Path:
+    """Resolve a Harbor task path to an on-disk task directory."""
+    path = Path(task_path)
+    if path.is_dir():
+        return path
+    root = repo_root if repo_root is not None else Path.cwd()
+    return root / task_path
+
+
+def grounding_toml_path(task_path: str, *, repo_root: Path | None = None) -> Path:
+    return resolve_task_dir(task_path, repo_root=repo_root) / "grounding.toml"
+
+
+def load_grounding_toml(task_path: str, *, repo_root: Path | None = None) -> dict[str, object] | None:
+    """Load ``grounding.toml`` from a persona bench task directory, if present."""
+    path = grounding_toml_path(task_path, repo_root=repo_root)
+    if not path.is_file():
+        return None
+    raw = toml.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, dict):
+        raise ValueError(f"{path}: expected a TOML table at root")
+    probe = raw.get("probe_dimension")
+    if not probe:
+        raise ValueError(f"{path}: missing probe_dimension")
+    confounders = raw.get("confounders")
+    if confounders is not None and not isinstance(confounders, dict):
+        raise ValueError(f"{path}: confounders must be a table")
+    return {
+        "probe_dimension": str(probe),
+        "confounders": dict(confounders) if isinstance(confounders, dict) else {},
+    }
+
+
+def get_task_grounding_spec(
+    task_path: str,
+    *,
+    repo_root: Path | None = None,
+) -> dict[str, object] | None:
+    """Return grounding config from ``<task>/grounding.toml``, else catalog fallback."""
+    from_task = load_grounding_toml(task_path, repo_root=repo_root)
+    if from_task is not None:
+        return from_task
     entry = get_task_catalog_entry(task_path)
     if entry is None:
         return None

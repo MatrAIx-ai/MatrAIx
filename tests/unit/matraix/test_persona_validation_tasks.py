@@ -7,7 +7,7 @@ import pytest
 import toml
 from harbor.models.task.config import TaskConfig
 
-from matraix.task_catalog import EXAMPLE_TASK_METADATA, build_persona_task_toml_dict
+from matraix.task_catalog import EXAMPLE_TASK_METADATA, build_persona_task_toml_dict, load_grounding_toml
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 PERSONA_TASKS = REPO_ROOT / "persona" / "tasks"
@@ -74,3 +74,12 @@ def test_persona_bench_dim_index_matches_dimensions_json() -> None:
         dim_id = spec.get("bench_dim_id")
         if dim_id is not None:
             assert id_by_index[int(index)] == dim_id, dirname
+        grounding = load_grounding_toml(
+            f"persona/tasks/{dirname}",
+            repo_root=REPO_ROOT,
+        )
+        assert grounding is not None, f"{dirname}: missing grounding.toml"
+        probe = str(grounding["probe_dimension"])
+        assert probe == f"dimensions.{dim_id}", (
+            f"{dirname}: grounding.toml probe_dimension must match catalog bench_dim_id"
+        )

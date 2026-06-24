@@ -17,7 +17,7 @@ Every persona carries **1,300+ dimensions** ([`persona/dimensions.json`](../../p
 | Zone | Role in this task | Generation / sampling |
 |------|-------------------|------------------------|
 | **Probe dimension** | The trait you are **testing**. Must **cover all values** in the cohort (e.g. four `economic_motivation` postures). | **Stratify:** N personas per probe value (`--sample-size-per-value-group`). |
-| **Confounders** | Dims that would **collide** with your MCQ axes if left free (income shifts price questions, age shifts subscription appetite, …). | **Restrict per task:** fixed values in `task_catalog.py` → **filter** the pool so only matching personas enter the job. They must **not** explain away probe effects. |
+| **Confounders** | Dims that would **collide** with your MCQ axes if left free (income shifts price questions, age shifts subscription appetite, …). | **Restrict per task:** fixed values in **`grounding.toml`** → **filter** the pool so only matching personas enter the job. They must **not** explain away probe effects. |
 | **Control variables** | All **other** dimensions — rich profile context, not manipulated for this experiment. | **Sampled naturally** from the pool; task design should not make them decisive. |
 
 ```text
@@ -61,7 +61,8 @@ Once the cohort enters the task, **questions / behavior checkpoints** must **ver
 
 | Layer | Artifact | Notes |
 |-------|----------|-------|
-| **Catalog** | `src/matraix/task_catalog.py` | `bench_dim_index`, `probe_dimension`, `confounders` (+ rationale, `affects_questions`) |
+| **Catalog** | `src/matraix/task_catalog.py` | `bench_dim_index`, `type`, `domain`, `tags` (Harbor naming + CI) |
+| **Grounding spec** | `persona/tasks/<task>/grounding.toml` | `probe_dimension`, `confounders` (+ rationale, `affects_questions`) |
 | **Stimulus** | `environment/*.md`, `instruction.md` | Neutral product/scenario copy; human tone; **no oracle** |
 | **Agent input** | `persona_path` YAML | Full profile; never pasted into `instruction.md` |
 | **Output** | `/app/output/` | Structured JSON with `choice_id` per question |
@@ -129,7 +130,7 @@ cat jobs/*/example-survey_product-feedback__*/verifier/grounding.json | head -40
 
 Before authoring, walk through:
 
-1. **Catalog** — `grounding.probe_dimension` + `grounding.confounders` in [`task_catalog.py`](../../src/matraix/task_catalog.py)
+1. **Catalog** — `grounding.toml` probe + confounders; `bench_dim_index` in [`task_catalog.py`](../../src/matraix/task_catalog.py) for naming
 2. **Stimulus** — neutral brief + MCQ in `environment/survey_questions.md`
 3. **Oracle** — value → `choice_id` matrix in `tests/test_grounding.py` (**never** in `instruction.md`)
 4. **Task README** — [`persona/tasks/example-survey_product-feedback/README.md`](../../persona/tasks/example-survey_product-feedback/README.md)
@@ -185,8 +186,8 @@ uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
 
 ## 5. Authoring checklist (new bench task)
 
-1. Pick **one** probe dimension from [`persona/dimensions.json`](../../persona/dimensions.json) → `bench_dim_index` in catalog.
-2. List **confounders** that would collide with your MCQ axes; set fixed values + `affects_questions` rationale in catalog.
+1. Pick **one** probe dimension from [`persona/dimensions.json`](../../persona/dimensions.json) → `bench_dim_index` + `bench_dim_id` in catalog; **`probe_dimension` in `grounding.toml`**.
+2. List **confounders** in `grounding.toml` with fixed values + `affects_questions` rationale.
 3. Design **neutral stimulus** + **4×N bijective forks** (see gold template q0–q6 table).
 4. Implement oracle in `test_grounding.py`; keep `test_state.py` as schema-only gate.
 5. Smoke single persona, then grounding job with `--sample-size-per-value-group 2`.

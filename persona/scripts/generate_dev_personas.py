@@ -30,9 +30,9 @@ def _default_out_dir(count: int) -> Path:
 
 
 def _stratum_top_up_from_task(task_path: str) -> tuple[list[dict[str, str]], dict[str, object]]:
-    grounding = get_task_grounding_spec(task_path)
+    grounding = get_task_grounding_spec(task_path, repo_root=REPO_ROOT)
     if not grounding:
-        raise SystemExit(f"No grounding block in task catalog for {task_path!r}")
+        raise SystemExit(f"No grounding.toml (or catalog grounding) for {task_path!r}")
     confounders = confounder_values_from_grounding(grounding)
     probe_dimension = probe_dimension_from_grounding(grounding)
     if not confounders or not probe_dimension:

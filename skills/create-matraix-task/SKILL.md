@@ -136,6 +136,7 @@ CI: `pytest tests/unit/matraix/test_persona_validation_tasks.py` — catalog and
 
 ### Persona-only extras
 
+- Add **`grounding.toml`** in the task folder — `probe_dimension` + `confounders` (value, rationale, `affects_questions`). Job generator reads this file; catalog keeps `bench_dim_index` for Harbor naming only.
 - Keep or add grounding verifiers under `tests/` (e.g. survey `test_grounding.py`). **`test.sh`**: schema tests are a hard gate; `reward.txt` follows grounding (declined/continued paths). Adhoc smoke without `MATRAIX_PROBE_*` skips grounding and rewards schema pass only.
 - **`instruction.md`**: human voice first (like a forwarded ask); minimal JSON/schema footer. Do not say "as your persona" — profile is injected separately. **Do not tell the agent the stimulus may not apply to them** — probe pressure must come from brief/questions/UI only.
 - README may note the parallel Application example path (independent code).
@@ -165,7 +166,8 @@ Then `harbor run` on the job YAML under `configs/jobs/persona-task-grounding-job
 
 ```
 - [ ] Track chosen (application/ vs persona/tasks/)
-- [ ] Catalog entry in task_catalog.py
+- [ ] Catalog entry in task_catalog.py (type, domain, tags, bench_dim_index)
+- [ ] Persona bench: grounding.toml (probe + confounders)
 - [ ] Copied from closest example-* sibling in the same tree
 - [ ] task.toml name prefix correct (`application-` vs `persona-bench-` / `persona-bench-dim-{NNN}-`)
 - [ ] metadata type / domain / tags match catalog

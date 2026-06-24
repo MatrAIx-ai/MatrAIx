@@ -57,7 +57,7 @@ Use `--controlled-probe` to clone one anchor persona and vary only the probe dim
 
 ## Task catalog confounders
 
-Fixed dimensions for this task live in `src/matraix/task_catalog.py` under `grounding.confounders` (each entry includes an English `rationale` and `affects_questions`). The job generator reads them automatically when you pass `--task persona/tasks/example-survey_product-feedback`.
+Probe + confounders live in **`grounding.toml`** in this task directory. `generate_persona_job.py` reads it automatically when you pass `--task persona/tasks/example-survey_product-feedback`.
 
 ## Copying this task
 

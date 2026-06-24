@@ -529,7 +529,7 @@ def build_job_config(spec: dict[str, Any], *, repo_root: Path) -> dict[str, Any]
 
     grounding = spec.get("grounding")
     if grounding is None:
-        grounding = get_task_grounding_spec(task_path)
+        grounding = get_task_grounding_spec(task_path, repo_root=repo_root)
     if grounding and not probe_dimension:
         probe_dimension = probe_dimension_from_grounding(grounding) or probe_dimension
 

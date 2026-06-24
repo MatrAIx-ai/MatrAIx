@@ -15,10 +15,12 @@ cp -R persona/tasks/example-survey_product-feedback persona/tasks/example-survey
 
 For chat, web, and computer-use scenarios, start from [`application/tasks/`](../../application/tasks/) instead.
 
-**2. Register metadata** in [`src/matraix/task_catalog.py`](../../src/matraix/task_catalog.py)
-(`type`, `domain`, `tags`; optional `bench_dim_index` for 1-dim-1-task names).
+**2. Edit `grounding.toml`** — `probe_dimension` + `confounders` for job sampling (see gold template).
 
-**3. Edit `task.toml`** in the new folder:
+**3. Register metadata** in [`src/matraix/task_catalog.py`](../../src/matraix/task_catalog.py)
+(`type`, `domain`, `tags`; `bench_dim_index` / `bench_dim_id` for Harbor naming).
+
+**4. Edit `task.toml`** in the new folder:
 
 - `[task].name` → from catalog helpers:
   - with `bench_dim_index`: `matraix/persona-bench-dim-{NNN}-{slug}`
@@ -26,12 +28,12 @@ For chat, web, and computer-use scenarios, start from [`application/tasks/`](../
   (slug = folder name minus `example-`, with `_` → `-`)
 - `[metadata]` → same `type`, `domain`, `tags` as the catalog entry
 
-**4. Replace** `instruction.md`, `environment/`, `tests/` for your scenario.
+**5. Replace** `instruction.md`, `environment/`, `tests/` for your scenario.
 
-CI (`test_persona_validation_tasks.py`) fails if catalog and `task.toml` disagree.
+CI (`test_persona_validation_tasks.py`) fails if catalog, `task.toml`, and `grounding.toml` disagree.
 No scripts to run.
 
-**5. Smoke**
+**6. Smoke**
 
 ```bash
 uv run harbor run \
@@ -61,7 +63,7 @@ Parallel examples may share folder names; they are independent copies, not synce
 
 Persona bench tasks focus on **survey-style grounding probes** today. What changes vs application tasks is the **scenario** and **instruction tone**:
 
-1. **One probe dimension per task** — `bench_dim_index` in [`task_catalog.py`](../../src/matraix/task_catalog.py) matches [`persona/dimensions.json`](../../dimensions.json). Grounding jobs use `dimensions.<id>` (e.g. `dimensions.age_bracket`).
+1. **One probe dimension per task** — declare in **`grounding.toml`**; set matching `bench_dim_index` in [`task_catalog.py`](../../src/matraix/task_catalog.py) for Harbor naming.
 2. **Probe pressure** — the stimulus should invite a generic "average user" answer. Grounded agents answer from their profile; ungrounded agents leak counterfactual cues.
 3. **Human instruction** — write like someone forwarding a real request. Persona lives in YAML; don't say "as your persona" or paste agent setup into `instruction.md`. **Never warn the agent about the probe trap** — traps belong in the stimulus only.
 4. **MCQ + checkpoints** — prefer `choice_id` options and verifier lookup tables over open-text regex. Support **multiple valid paths** (e.g. decline with low relevance vs full form).

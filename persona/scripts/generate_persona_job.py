@@ -188,7 +188,7 @@ def main() -> None:
     )
     job_name = args.job_name or job_slug
 
-    grounding = get_task_grounding_spec(args.task)
+    grounding = get_task_grounding_spec(args.task, repo_root=REPO_ROOT)
     catalog_confounders = confounder_values_from_grounding(grounding or {})
     if args.controlled_probe:
         use_controlled_probe = True
