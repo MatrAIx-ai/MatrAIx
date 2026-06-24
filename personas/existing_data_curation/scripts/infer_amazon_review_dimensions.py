@@ -18,7 +18,9 @@ import argparse
 import gzip
 import json
 import os
+import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -442,6 +444,41 @@ def review_corpus_stats(reviews: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def validate_temporal_split_user_row(user_row: dict[str, Any], args: argparse.Namespace) -> None:
+    if args.allow_unsplit_histories:
+        return
+    user_id = user_row.get("user_id")
+    temporal_split = user_row.get("temporal_split")
+    validation_reviews = user_row.get("validation_reviews")
+    if not isinstance(temporal_split, dict):
+        raise ValueError(
+            f"Input history for user {user_id} is missing temporal_split. "
+            "Persona inference expects reviews to contain only the construction "
+            "split and validation_reviews to contain the held-out split. Re-export "
+            "histories with modal_amazon_user_index.py::export_user_histories, or "
+            "pass --allow-unsplit-histories only for debugging/ablations."
+        )
+    if temporal_split.get("method") != "per_user_temporal":
+        raise ValueError(
+            f"Input history for user {user_id} has unsupported temporal split "
+            f"method: {temporal_split.get('method')!r}."
+        )
+    try:
+        train_fraction = float(temporal_split.get("train_fraction"))
+    except (TypeError, ValueError):
+        train_fraction = None
+    if train_fraction is None or not 0 < train_fraction < 1:
+        raise ValueError(
+            f"Input history for user {user_id} has invalid temporal train_fraction: "
+            f"{temporal_split.get('train_fraction')!r}."
+        )
+    if not isinstance(validation_reviews, list) or not validation_reviews:
+        raise ValueError(
+            f"Input history for user {user_id} is missing nonempty validation_reviews. "
+            "Refusing to infer personas from an unsplit or all-construction history."
+        )
+
+
 def product_context(review: dict[str, Any]) -> dict[str, Any]:
     metadata = review.get("product_metadata")
     if not isinstance(metadata, dict):
@@ -719,6 +756,20 @@ def openai_request(
     timeout: int = 180,
     retries: int = 6,
 ) -> dict[str, Any]:
+    if os.environ.get("OPENAI_FORCE_CURL") == "1":
+        for attempt in range(retries):
+            try:
+                return openai_request_with_curl(payload, api_key, timeout=timeout)
+            except RuntimeError as err:
+                if attempt < retries - 1:
+                    sleep_seconds = min(60, 2**attempt)
+                    log(
+                        f"OpenAI curl error: {err}; retry {attempt + 2}/{retries} "
+                        f"after {sleep_seconds}s"
+                    )
+                    time.sleep(sleep_seconds)
+                    continue
+                raise
     body = json.dumps(payload).encode("utf-8")
     request = urllib.request.Request(
         "https://api.openai.com/v1/chat/completions",
@@ -736,15 +787,74 @@ def openai_request(
         except urllib.error.HTTPError as err:
             error_body = err.read().decode("utf-8", errors="replace")
             if err.code in {429, 500, 502, 503, 504} and attempt < retries - 1:
-                time.sleep(min(60, 2**attempt))
+                sleep_seconds = min(60, 2**attempt)
+                log(
+                    f"OpenAI HTTP {err.code}; retry {attempt + 2}/{retries} "
+                    f"after {sleep_seconds}s"
+                )
+                time.sleep(sleep_seconds)
                 continue
             raise RuntimeError(f"OpenAI API error {err.code}: {error_body[:1000]}") from err
         except urllib.error.URLError as err:
             if attempt < retries - 1:
-                time.sleep(min(60, 2**attempt))
+                sleep_seconds = min(60, 2**attempt)
+                log(
+                    f"OpenAI network error: {err}; retry {attempt + 2}/{retries} "
+                    f"after {sleep_seconds}s"
+                )
+                time.sleep(sleep_seconds)
                 continue
+            log(f"OpenAI urllib failed after retries: {err}; trying curl fallback")
+            return openai_request_with_curl(payload, api_key, timeout=timeout)
             raise RuntimeError(f"OpenAI request failed after retries: {err}") from err
     raise RuntimeError("OpenAI request failed after retries")
+
+
+def openai_request_with_curl(payload: dict[str, Any], api_key: str, timeout: int = 180) -> dict[str, Any]:
+    body_path = None
+    header_path = None
+    try:
+        with tempfile.NamedTemporaryFile("wb", delete=False) as body_file:
+            body_file.write(json.dumps(payload).encode("utf-8"))
+            body_path = body_file.name
+        with tempfile.NamedTemporaryFile("w", encoding="utf-8", delete=False) as header_file:
+            header_path = header_file.name
+            header_file.write(f"Authorization: Bearer {api_key}\n")
+            header_file.write("Content-Type: application/json\n")
+        result = subprocess.run(
+            [
+                "curl",
+                "-sS",
+                "--fail-with-body",
+                "--connect-timeout",
+                str(min(timeout, 60)),
+                "--max-time",
+                str(timeout),
+                "-X",
+                "POST",
+                "-H",
+                f"@{header_path}",
+                "--data-binary",
+                f"@{body_path}",
+                "https://api.openai.com/v1/chat/completions",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"OpenAI curl request failed with exit {result.returncode}: "
+                f"{(result.stderr or result.stdout)[:1000]}"
+            )
+        return json.loads(result.stdout)
+    finally:
+        for path in (body_path, header_path):
+            if path:
+                try:
+                    os.unlink(path)
+                except FileNotFoundError:
+                    pass
 
 
 def parse_model_json(response: dict[str, Any]) -> dict[str, Any]:
@@ -909,11 +1019,7 @@ def build_or_load_evidence_profile(
         profile_row = existing_profiles[user_id]
         return profile_row.get("evidence_profile") or {}, profile_row.get("rejected_evidence_items") or [], 0
 
-    all_context_rows = context_rows_for_reviews(
-        reviews,
-        args.max_review_text_chars,
-        include_textless=False,
-    )
+    all_context_rows = review_context
     all_context_chars = serialized_context_chars(all_context_rows)
     should_window = (
         args.window_summary_threshold_chars > 0
@@ -932,6 +1038,10 @@ def build_or_load_evidence_profile(
         overview_parts = []
         unsupported_or_blocked = []
         for window_index, window_context in enumerate(windows, start=1):
+            log(
+                f"user={user_id} evidence_profile window {window_index}/{len(windows)} "
+                f"rows={len(window_context)} chars={serialized_context_chars(window_context):,}"
+            )
             payload = {
                 "model": args.model,
                 "temperature": args.temperature,
@@ -969,6 +1079,11 @@ def build_or_load_evidence_profile(
                     "window_index": window_index,
                 }
                 for item in window_rejected
+            )
+            log(
+                f"user={user_id} evidence_profile window {window_index}/{len(windows)} "
+                f"done evidence_items={len(window_profile.get('evidence_items') or [])} "
+                f"rejected={len(window_rejected)}"
             )
 
         profile = {
@@ -1020,6 +1135,10 @@ def build_or_load_evidence_profile(
             },
         ],
     }
+    log(
+        f"user={user_id} evidence_profile single_context "
+        f"rows={len(review_context)} chars={serialized_context_chars(review_context):,}"
+    )
     response = openai_request(payload, api_key)
     request_count += 1
     model_output = parse_model_json(response)
@@ -1044,6 +1163,10 @@ def build_or_load_evidence_profile(
     }
     write_jsonl(args.evidence_profiles_output, [profile_row], append=args.evidence_profiles_output.exists())
     existing_profiles[user_id] = profile_row
+    log(
+        f"user={user_id} evidence_profile single_context done "
+        f"evidence_items={len(profile.get('evidence_items') or [])} rejected={len(rejected)}"
+    )
     return profile, rejected, request_count
 
 
@@ -1053,6 +1176,7 @@ def infer_user(
     args: argparse.Namespace,
     api_key: str,
 ) -> dict[str, Any]:
+    validate_temporal_split_user_row(user_row, args)
     reviews = user_row.get("reviews") or []
     if not isinstance(reviews, list) or not reviews:
         return {
@@ -1072,8 +1196,13 @@ def infer_user(
     all_valid = []
     all_rejected = []
     request_count = 0
-    for dimension_batch in batched(dimensions, args.dimensions_per_call):
+    dimension_batches = list(batched(dimensions, args.dimensions_per_call))
+    for batch_index, dimension_batch in enumerate(dimension_batches, start=1):
         request_count += 1
+        log(
+            f"user={user_row.get('user_id')} raw_schema batch "
+            f"{batch_index}/{len(dimension_batches)} dimensions={len(dimension_batch)}"
+        )
         task = prompt_payload(user_row, dimension_batch, review_context, corpus_stats)
         payload = {
             "model": args.model,
@@ -1089,6 +1218,10 @@ def infer_user(
         valid, rejected = validate_inferences(model_output, dimension_batch, valid_review_ids)
         all_valid.extend(valid)
         all_rejected.extend(rejected)
+        log(
+            f"user={user_row.get('user_id')} raw_schema batch "
+            f"{batch_index}/{len(dimension_batches)} done valid={len(valid)} rejected={len(rejected)}"
+        )
     return {
         "source": "amazon_reviews_2023",
         "schema_path": str(args.schema_path),
@@ -1114,6 +1247,7 @@ def infer_user_from_evidence_profile(
     api_key: str,
     existing_profiles: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
+    validate_temporal_split_user_row(user_row, args)
     reviews = user_row.get("reviews") or []
     if not isinstance(reviews, list) or not reviews:
         return {
@@ -1151,8 +1285,14 @@ def infer_user_from_evidence_profile(
     all_valid = []
     all_rejected = []
     request_count = profile_request_count
-    for dimension_batch in batched(dimensions, args.dimensions_per_call):
+    dimension_batches = list(batched(dimensions, args.dimensions_per_call))
+    for batch_index, dimension_batch in enumerate(dimension_batches, start=1):
         request_count += 1
+        log(
+            f"user={user_row.get('user_id')} schema_mapping batch "
+            f"{batch_index}/{len(dimension_batches)} dimensions={len(dimension_batch)} "
+            f"evidence_items={len(evidence_profile.get('evidence_items') or [])}"
+        )
         task = schema_mapping_payload(user_row, dimension_batch, evidence_profile)
         payload = {
             "model": args.model,
@@ -1168,6 +1308,10 @@ def infer_user_from_evidence_profile(
         valid, rejected = validate_inferences(model_output, dimension_batch, valid_review_ids)
         all_valid.extend(valid)
         all_rejected.extend(rejected)
+        log(
+            f"user={user_row.get('user_id')} schema_mapping batch "
+            f"{batch_index}/{len(dimension_batches)} done valid={len(valid)} rejected={len(rejected)}"
+        )
     return {
         "source": "amazon_reviews_2023",
         "inference_mode": "evidence_profile",
@@ -1202,6 +1346,7 @@ def write_dry_run_prompts(
         user_row = attach_product_metadata_sidecar(user_row, product_metadata or {})
         if args.max_users and user_index > args.max_users:
             break
+        validate_temporal_split_user_row(user_row, args)
         reviews = user_row.get("reviews") or []
         corpus_stats = review_corpus_stats(reviews) if isinstance(reviews, list) else {}
         include_textless = args.inference_mode != "evidence_profile"
@@ -1394,6 +1539,14 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         "--overwrite",
         action="store_true",
         help="Overwrite output instead of appending/resuming.",
+    )
+    parser.add_argument(
+        "--allow-unsplit-histories",
+        action="store_true",
+        help=(
+            "Allow inference from legacy histories without temporal_split and "
+            "validation_reviews. Intended only for debugging or ablations."
+        ),
     )
     parser.add_argument(
         "--dry-run-prompts-path",

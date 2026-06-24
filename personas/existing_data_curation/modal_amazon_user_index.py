@@ -40,6 +40,14 @@ DEFAULT_ELIGIBLE_REVIEW_PREFIX = "amazon_reviews_2018_2023_user_buckets_min30_ve
 DEFAULT_DERIVED_ELIGIBLE_USERS_PREFIX = "amazon_reviews_2018_2023_eligible_users_min30_verified70_text3000"
 DEFAULT_DERIVED_REVIEW_PREFIX = "amazon_reviews_2018_2023_user_buckets_min30_verified70_text3000"
 DEFAULT_METADATA_PREFIX = "amazon_reviews_2023_metadata_by_parent_asin_bucket_v2"
+DEFAULT_HF_REPO_ID = "MatrAIx/MatrAIx"
+DEFAULT_HF_AMAZON_PREFIX = "amazon/modal_artifacts"
+CURRENT_MODAL_ARTIFACT_PREFIXES = [
+    DEFAULT_STATS_PREFIX,
+    DEFAULT_ELIGIBLE_USERS_PREFIX,
+    DEFAULT_ELIGIBLE_REVIEW_PREFIX,
+    DEFAULT_METADATA_PREFIX,
+]
 DEFAULT_LOCAL_HISTORY_OUTPUT = (
     Path("raw")
     / "amazon_reviews_2023"
@@ -2078,6 +2086,409 @@ def export_history_metadata(
         f"Requested pairs: {requested:,}; matched pairs: {matched:,}. "
         f"Summary: {summary_path}"
     )
+
+
+@app.function(
+    volumes={str(VOLUME_MOUNT): volume},
+    secrets=[modal.Secret.from_name("huggingface-secret")],
+    timeout=24 * 60 * 60,
+    cpu=4,
+    memory=16384,
+)
+def upload_modal_artifacts_to_huggingface(
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    artifact_prefixes: list[str] | None = None,
+    max_files_per_artifact: int = 0,
+    create_pr: bool = False,
+) -> dict[str, Any]:
+    """Upload selected Modal Volume artifact folders directly to Hugging Face."""
+    from huggingface_hub import HfApi
+
+    token = os.environ.get("HF_TOKEN")
+    if not token:
+        raise RuntimeError("HF_TOKEN is required. Add it to Modal secret huggingface-secret.")
+
+    artifact_prefixes = artifact_prefixes or CURRENT_MODAL_ARTIFACT_PREFIXES
+    api = HfApi(token=token)
+    uploaded = []
+    missing = []
+    root_readme_path = Path("/tmp") / "amazon_modal_artifacts_README.md"
+    root_readme_path.write_text(
+        "\n".join(
+            [
+                "# Amazon Reviews 2023 Modal Artifacts",
+                "",
+                "This folder mirrors selected artifacts from the Modal Volume "
+                f"`{VOLUME_NAME}` for the Amazon Reviews 2023 persona workflow.",
+                "",
+                "Artifacts are uploaded file-by-file from Modal to Hugging Face "
+                "so migration progress is observable and does not require local "
+                "laptop staging.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    api.upload_file(
+        repo_id=repo_id,
+        repo_type="dataset",
+        path_or_fileobj=str(root_readme_path),
+        path_in_repo=f"{path_prefix.rstrip('/')}/README.md",
+        commit_message="Create Amazon Modal artifact folder",
+        create_pr=create_pr,
+    )
+    print(
+        f"[modal_hf_upload] initialized {repo_id}/{path_prefix.rstrip('/')}/",
+        flush=True,
+    )
+
+    for artifact_prefix in artifact_prefixes:
+        local_path = VOLUME_MOUNT / artifact_prefix
+        if not local_path.exists():
+            missing.append(artifact_prefix)
+            print(f"[modal_hf_upload] missing: {artifact_prefix}", flush=True)
+            continue
+        artifact_path_in_repo = f"{path_prefix.rstrip('/')}/{artifact_prefix}"
+        artifact_files = sorted(path for path in local_path.rglob("*") if path.is_file())
+        if max_files_per_artifact > 0:
+            artifact_files = artifact_files[:max_files_per_artifact]
+        print(
+            f"[modal_hf_upload] uploading {len(artifact_files):,} files from "
+            f"{local_path} -> {repo_id}/{artifact_path_in_repo}",
+            flush=True,
+        )
+        uploaded_files = 0
+        uploaded_bytes = 0
+        for file_index, file_path in enumerate(artifact_files, start=1):
+            relative_path = file_path.relative_to(local_path)
+            repo_file_path = f"{artifact_path_in_repo}/{relative_path.as_posix()}"
+            file_size = file_path.stat().st_size
+            print(
+                f"[modal_hf_upload] {artifact_prefix} "
+                f"{file_index:,}/{len(artifact_files):,}: "
+                f"{relative_path.as_posix()} ({file_size:,} bytes)",
+                flush=True,
+            )
+            api.upload_file(
+                repo_id=repo_id,
+                repo_type="dataset",
+                path_or_fileobj=str(file_path),
+                path_in_repo=repo_file_path,
+                commit_message=f"Upload Amazon artifact file: {artifact_prefix}",
+                create_pr=create_pr,
+            )
+            uploaded_files += 1
+            uploaded_bytes += file_size
+        uploaded.append(
+            {
+                "artifact_prefix": artifact_prefix,
+                "path_in_repo": artifact_path_in_repo,
+                "files": uploaded_files,
+                "bytes": uploaded_bytes,
+            }
+        )
+        print(
+            f"[modal_hf_upload] completed: {artifact_prefix}; "
+            f"files={uploaded_files:,}; bytes={uploaded_bytes:,}",
+            flush=True,
+        )
+
+    manifest = {
+        "source": f"Modal volume {VOLUME_NAME}",
+        "repo_id": repo_id,
+        "path_prefix": path_prefix,
+        "dataset": DATASET_NAME,
+        "time_window": "2018-2023 for review/user artifacts; 2023 metadata index",
+        "uploaded": uploaded,
+        "missing": missing,
+        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "artifact_definitions": {
+            DEFAULT_STATS_PREFIX: "Per-category per-user summary stats.",
+            DEFAULT_ELIGIBLE_USERS_PREFIX: (
+                "Eligible users with review_count >= 30, verified_share >= 0.70, "
+                "and text_chars >= 2000."
+            ),
+            DEFAULT_ELIGIBLE_REVIEW_PREFIX: (
+                "User-indexed review/rating rows for eligible users, bucketed by "
+                "sha1(user_id)[:2]."
+            ),
+            DEFAULT_METADATA_PREFIX: (
+                "Product metadata indexed by sha1(parent_asin)[:2], with source "
+                "category partitions."
+            ),
+        },
+    }
+    manifest_path = Path("/tmp") / "amazon_modal_artifact_manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n")
+    api.upload_file(
+        repo_id=repo_id,
+        repo_type="dataset",
+        path_or_fileobj=str(manifest_path),
+        path_in_repo=f"{path_prefix.rstrip('/')}/manifest.json",
+        commit_message="Upload Amazon artifact manifest",
+        create_pr=create_pr,
+    )
+    print(
+        f"[modal_hf_upload] uploaded manifest to "
+        f"{repo_id}/{path_prefix.rstrip('/')}/manifest.json",
+        flush=True,
+    )
+    return manifest
+
+
+@app.local_entrypoint()
+def upload_current_artifacts_to_hf(
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    artifact_prefixes: str = ",".join(CURRENT_MODAL_ARTIFACT_PREFIXES),
+    max_files_per_artifact: int = 0,
+    create_pr: bool = False,
+    wait: bool = False,
+) -> None:
+    """Start direct Modal Volume -> Hugging Face upload for current artifacts."""
+    prefixes = [part.strip() for part in artifact_prefixes.split(",") if part.strip()]
+    call = upload_modal_artifacts_to_huggingface.spawn(
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+        artifact_prefixes=prefixes,
+        max_files_per_artifact=max_files_per_artifact,
+        create_pr=create_pr,
+    )
+    print(f"Started Hugging Face upload: {call.object_id}")
+    print(f"Repo: https://huggingface.co/datasets/{repo_id}/tree/main/{path_prefix}")
+    if not wait:
+        return
+    result = call.get()
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+
+@app.function(
+    volumes={str(VOLUME_MOUNT): volume},
+    secrets=[modal.Secret.from_name("huggingface-secret")],
+    timeout=24 * 60 * 60,
+    cpu=4,
+    memory=16384,
+)
+def upload_single_artifact_folder_to_hf_pr(
+    artifact_prefix: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+) -> dict[str, Any]:
+    """Upload one Modal artifact folder as one Hugging Face dataset PR."""
+    from huggingface_hub import HfApi
+
+    token = os.environ.get("HF_TOKEN")
+    if not token:
+        raise RuntimeError("HF_TOKEN is required. Add it to Modal secret huggingface-secret.")
+
+    local_path = VOLUME_MOUNT / artifact_prefix
+    if not local_path.exists():
+        raise FileNotFoundError(f"Modal artifact does not exist: {local_path}")
+
+    files = sorted(path for path in local_path.rglob("*") if path.is_file())
+    total_bytes = sum(path.stat().st_size for path in files)
+    path_in_repo = f"{path_prefix.rstrip('/')}/{artifact_prefix}"
+    print(
+        f"[modal_hf_artifact_pr] uploading {artifact_prefix}: "
+        f"{len(files):,} files, {total_bytes:,} bytes -> {repo_id}/{path_in_repo}",
+        flush=True,
+    )
+
+    api = HfApi(token=token)
+    commit_info = api.upload_folder(
+        repo_id=repo_id,
+        repo_type="dataset",
+        folder_path=str(local_path),
+        path_in_repo=path_in_repo,
+        commit_message=f"Upload Amazon artifact folder: {artifact_prefix}",
+        create_pr=True,
+    )
+    result = {
+        "repo_id": repo_id,
+        "artifact_prefix": artifact_prefix,
+        "path_in_repo": path_in_repo,
+        "files": len(files),
+        "bytes": total_bytes,
+        "commit_info": {
+            "commit_url": getattr(commit_info, "commit_url", None),
+            "commit_message": getattr(commit_info, "commit_message", None),
+            "pr_url": getattr(commit_info, "pr_url", None),
+        },
+    }
+    print(f"[modal_hf_artifact_pr] completed: {json.dumps(result)}", flush=True)
+    return result
+
+
+def hf_pr_revision_from_commit_info(commit_info: Any) -> str | None:
+    pr_revision = getattr(commit_info, "pr_revision", None)
+    if pr_revision:
+        return str(pr_revision)
+    pr_url = getattr(commit_info, "pr_url", None)
+    if not pr_url:
+        return None
+    match = re.search(r"/discussions/(\d+)", str(pr_url))
+    if not match:
+        return None
+    return f"refs/pr/{match.group(1)}"
+
+
+@app.function(
+    volumes={str(VOLUME_MOUNT): volume},
+    secrets=[modal.Secret.from_name("huggingface-secret")],
+    timeout=24 * 60 * 60,
+    cpu=4,
+    memory=16384,
+)
+def upload_single_artifact_folder_to_hf_pr_chunked(
+    artifact_prefix: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    batch_size: int = 200,
+    max_files: int = 0,
+) -> dict[str, Any]:
+    """Upload one artifact folder as one HF PR, committing files in batches."""
+    from huggingface_hub import CommitOperationAdd, HfApi
+
+    token = os.environ.get("HF_TOKEN")
+    if not token:
+        raise RuntimeError("HF_TOKEN is required. Add it to Modal secret huggingface-secret.")
+    if batch_size <= 0:
+        raise ValueError("batch_size must be positive")
+
+    local_path = VOLUME_MOUNT / artifact_prefix
+    if not local_path.exists():
+        raise FileNotFoundError(f"Modal artifact does not exist: {local_path}")
+
+    files = sorted(path for path in local_path.rglob("*") if path.is_file())
+    if max_files > 0:
+        files = files[:max_files]
+    total_bytes = sum(path.stat().st_size for path in files)
+    path_in_repo = f"{path_prefix.rstrip('/')}/{artifact_prefix}"
+    api = HfApi(token=token)
+
+    print(
+        f"[modal_hf_artifact_pr_chunked] uploading {artifact_prefix}: "
+        f"{len(files):,} files, {total_bytes:,} bytes, batch_size={batch_size:,} "
+        f"-> {repo_id}/{path_in_repo}",
+        flush=True,
+    )
+
+    pr_url = None
+    pr_revision = None
+    uploaded_files = 0
+    uploaded_bytes = 0
+    batches = 0
+    total_batches = (len(files) + batch_size - 1) // batch_size if files else 0
+
+    for batch_start in range(0, len(files), batch_size):
+        batch = files[batch_start : batch_start + batch_size]
+        batches += 1
+        batch_bytes = sum(path.stat().st_size for path in batch)
+        operations = [
+            CommitOperationAdd(
+                path_in_repo=(
+                    f"{path_in_repo}/{file_path.relative_to(local_path).as_posix()}"
+                ),
+                path_or_fileobj=str(file_path),
+            )
+            for file_path in batch
+        ]
+        commit_message = (
+            f"Upload Amazon artifact {artifact_prefix} "
+            f"batch {batches}/{total_batches}"
+        )
+        print(
+            f"[modal_hf_artifact_pr_chunked] {artifact_prefix} "
+            f"batch {batches:,}/{total_batches:,}: "
+            f"files={len(batch):,}; bytes={batch_bytes:,}; "
+            f"first={batch[0].relative_to(local_path).as_posix()}",
+            flush=True,
+        )
+        kwargs = {
+            "repo_id": repo_id,
+            "repo_type": "dataset",
+            "operations": operations,
+            "commit_message": commit_message,
+        }
+        if pr_revision:
+            kwargs["revision"] = pr_revision
+        else:
+            kwargs["create_pr"] = True
+        commit_info = api.create_commit(**kwargs)
+        if not pr_url:
+            pr_url = getattr(commit_info, "pr_url", None)
+        if not pr_revision:
+            pr_revision = hf_pr_revision_from_commit_info(commit_info)
+        uploaded_files += len(batch)
+        uploaded_bytes += batch_bytes
+        print(
+            f"[modal_hf_artifact_pr_chunked] completed batch {batches:,}; "
+            f"uploaded_files={uploaded_files:,}/{len(files):,}; "
+            f"pr_url={pr_url}; pr_revision={pr_revision}",
+            flush=True,
+        )
+
+    result = {
+        "repo_id": repo_id,
+        "artifact_prefix": artifact_prefix,
+        "path_in_repo": path_in_repo,
+        "files": uploaded_files,
+        "bytes": uploaded_bytes,
+        "batches": batches,
+        "pr_url": pr_url,
+        "pr_revision": pr_revision,
+    }
+    print(f"[modal_hf_artifact_pr_chunked] completed: {json.dumps(result)}", flush=True)
+    return result
+
+
+@app.local_entrypoint()
+def upload_artifact_folder_to_hf_pr(
+    artifact_prefix: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    wait: bool = True,
+) -> None:
+    """Start one Hugging Face PR for one Modal artifact folder."""
+    call = upload_single_artifact_folder_to_hf_pr.spawn(
+        artifact_prefix=artifact_prefix,
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+    )
+    print(f"Started Hugging Face artifact PR upload: {call.object_id}")
+    print(f"Artifact: {artifact_prefix}")
+    print(f"Target: https://huggingface.co/datasets/{repo_id}/tree/main/{path_prefix}")
+    if not wait:
+        return
+    result = call.get()
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+
+@app.local_entrypoint()
+def upload_artifact_folder_to_hf_pr_chunked(
+    artifact_prefix: str,
+    repo_id: str = DEFAULT_HF_REPO_ID,
+    path_prefix: str = DEFAULT_HF_AMAZON_PREFIX,
+    batch_size: int = 200,
+    max_files: int = 0,
+    wait: bool = True,
+) -> None:
+    """Start one chunked Hugging Face PR for one Modal artifact folder."""
+    call = upload_single_artifact_folder_to_hf_pr_chunked.spawn(
+        artifact_prefix=artifact_prefix,
+        repo_id=repo_id,
+        path_prefix=path_prefix,
+        batch_size=batch_size,
+        max_files=max_files,
+    )
+    print(f"Started chunked Hugging Face artifact PR upload: {call.object_id}")
+    print(f"Artifact: {artifact_prefix}")
+    print(f"Target: https://huggingface.co/datasets/{repo_id}/tree/main/{path_prefix}")
+    if not wait:
+        return
+    result = call.get()
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 
 
 @app.local_entrypoint()
