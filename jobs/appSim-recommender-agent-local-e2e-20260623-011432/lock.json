@@ -1,0 +1,76 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-06-23T05:14:33.374799Z",
+    "harbor": {
+        "version": "0.13.2",
+        "git_commit_hash": "4e18c883296ad57de861c1c380d2e6b1b40cb4a6",
+        "is_editable": true
+    },
+    "invocation": [
+        "/tmp/matraix-harbor-project-venv/bin/harbor",
+        "run",
+        "-c",
+        "configs/jobs/example-job-recipe/appSim-recommender-agent-local.yaml",
+        "--env-file",
+        ".env.local",
+        "--agent-env",
+        "CLAUDE_CODE_TMPDIR=/app/.claude-tmp",
+        "-y",
+        "--job-name",
+        "appSim-recommender-agent-local-e2e-20260623-011432"
+    ],
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileNotFoundError",
+            "RewardFileEmptyError",
+            "VerifierTimeoutError",
+            "AgentTimeoutError",
+            "VerifierOutputParseError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "recommender-agent_chat_api",
+                "type": "local",
+                "digest": "sha256:8c78eca90a7c840a472ddaafb58f4d44b403ca3882e38367e275de5af4c0a128",
+                "path": "application/tasks/recommender-agent_chat_api"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0042.yaml"
+                },
+                "env": {
+                    "CLAUDE_CODE_TMPDIR": "/app/.claude-tmp"
+                },
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "9f749db5-8a83-4925-b1d2-6da11e7141ad",
+    "started_at": "2026-06-23T01:17:52.464540",
+    "updated_at": "2026-06-23T01:22:58.488835",
+    "finished_at": "2026-06-23T01:22:58.488835",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-claude-code__claude-sonnet-4-6__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "recommender-agent_chat_api__dHZVdgY"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 453506,
+        "n_cache_tokens": 434610,
+        "n_output_tokens": 5128,
+        "cost_usd": 0.2781525
+    }
+}

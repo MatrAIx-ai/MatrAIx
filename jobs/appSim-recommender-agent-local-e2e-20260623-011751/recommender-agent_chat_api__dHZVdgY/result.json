@@ -1,0 +1,115 @@
+{
+    "id": "177b2c1d-535c-41b3-8534-be9c54854cf7",
+    "task_name": "matraix/application-recommender-agent-chat-api",
+    "trial_name": "recommender-agent_chat_api__dHZVdgY",
+    "trial_uri": "file:///Users/liuyifan/.config/superpowers/worktrees/MatrAIx/app-recommender-agent-harbor-validate/jobs/appSim-recommender-agent-local-e2e-20260623-011751/recommender-agent_chat_api__dHZVdgY",
+    "task_id": {
+        "path": "application/tasks/recommender-agent_chat_api"
+    },
+    "source": null,
+    "task_checksum": "03185e76ead617b768e3509e57a92c5e479ba5bc1bcdb4547b39a03d66348d7f",
+    "config": {
+        "task": {
+            "path": "application/tasks/recommender-agent_chat_api",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "recommender-agent_chat_api__dHZVdgY",
+        "trials_dir": "jobs/appSim-recommender-agent-local-e2e-20260623-011751",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-claude-code",
+            "import_path": null,
+            "model_name": "anthropic/claude-sonnet-4-6",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/bench-dev-2000/persona_0042.yaml"
+            },
+            "env": {
+                "CLAUDE_CODE_TMPDIR": "/logs/agent/claude-tmp"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "9f749db5-8a83-4925-b1d2-6da11e7141ad"
+    },
+    "agent_info": {
+        "name": "persona-claude-code",
+        "version": "2.1.186",
+        "model_info": {
+            "name": "claude-sonnet-4-6",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 453506,
+        "n_cache_tokens": 434610,
+        "n_output_tokens": 5128,
+        "cost_usd": 0.2781525,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-06-23T05:17:53.762684Z",
+    "finished_at": "2026-06-23T05:22:58.480017Z",
+    "environment_setup": {
+        "started_at": "2026-06-23T05:17:53.786208Z",
+        "finished_at": "2026-06-23T05:18:20.965388Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-06-23T05:18:20.965485Z",
+        "finished_at": "2026-06-23T05:18:21.497476Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-06-23T05:18:21.497779Z",
+        "finished_at": "2026-06-23T05:22:45.143070Z"
+    },
+    "verifier": {
+        "started_at": "2026-06-23T05:22:45.864456Z",
+        "finished_at": "2026-06-23T05:22:46.229625Z"
+    },
+    "step_results": null
+}

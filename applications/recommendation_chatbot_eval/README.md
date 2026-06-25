@@ -118,7 +118,7 @@ service layer behind a smaller synchronous REST contract for persona agents:
 | GET | `/v1/conversation?sessionId=...` | Fetch transcript and turns. |
 | GET | `/v1/recommendations?sessionId=...` | Fetch recommended item ids across turns. |
 
-The Harbor task is `application/tasks/recommender-agent_chat_api/`. It runs this
+The Harbor task is `applications/tasks/recommender-agent_chat_api/`. It runs this
 adapter as the `rec-agent-api` sidecar and asks the persona agent to save
 `/app/output/transcript.json` and `/app/output/recommendation_result.json`.
 
