@@ -521,6 +521,12 @@ combined review memory keeps up to `--max-evidence-items 120` evidence items.
 Power reviewers can use a larger selected text-review cap through the adaptive
 defaults: `--max-reviews-per-user 80`, `--power-user-min-reviews 1000`,
 `--power-user-min-text-chars 250000`, and `--power-user-max-reviews 200`.
+For power-reviewer experiments, `--context-selection-strategy
+informative_category_temporal` uses deterministic heuristics to favor
+persona-informative reviews: longer text, first-person statements,
+preference/value language, comparison/reasoning phrases, domain detail, rare
+categories, and sensitive-adjacent context, while still reserving temporal and
+category-diversity coverage. It does not require extra LLM calls.
 
 Run OpenAI inference with the optimized evidence-profile pipeline:
 

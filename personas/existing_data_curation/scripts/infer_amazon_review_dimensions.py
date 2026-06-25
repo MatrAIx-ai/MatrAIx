@@ -597,6 +597,164 @@ def serialized_context_chars(context: list[dict[str, Any]]) -> int:
     return sum(len(json.dumps(row, ensure_ascii=False)) for row in context)
 
 
+FIRST_PERSON_MARKERS = (
+    " i ",
+    " i'm ",
+    " ive ",
+    " i've ",
+    " me ",
+    " my ",
+    " mine ",
+    " we ",
+    " we're ",
+    " we've ",
+    " our ",
+    " for my ",
+    " my kid",
+    " my child",
+    " my son",
+    " my daughter",
+    " my wife",
+    " my husband",
+    " my mom",
+    " my dad",
+    " my dog",
+    " my cat",
+)
+
+PREFERENCE_VALUE_MARKERS = (
+    "i like",
+    "i love",
+    "i prefer",
+    "favorite",
+    "important",
+    "worth",
+    "value",
+    "quality",
+    "durable",
+    "comfortable",
+    "comfort",
+    "safe",
+    "safety",
+    "easy to use",
+    "convenient",
+    "reliable",
+    "sturdy",
+    "affordable",
+    "expensive",
+    "cheap",
+    "price",
+)
+
+COMPARISON_REASONING_MARKERS = (
+    "better than",
+    "worse than",
+    "compared to",
+    "because",
+    "after trying",
+    "i tried",
+    "i have tried",
+    "works better",
+    "doesn't work",
+    "didn't work",
+    "instead of",
+    "rather than",
+    "the reason",
+)
+
+DOMAIN_DETAIL_MARKERS = (
+    "install",
+    "installed",
+    "recipe",
+    "ingredient",
+    "measurement",
+    "voltage",
+    "battery",
+    "software",
+    "app",
+    "settings",
+    "material",
+    "fabric",
+    "size",
+    "fit",
+    "training",
+    "workout",
+    "repair",
+    "tool",
+    "manual",
+    "instructions",
+)
+
+SENSITIVE_ADJACENT_MARKERS = (
+    "pain",
+    "doctor",
+    "medical",
+    "health",
+    "therapy",
+    "anxiety",
+    "pregnant",
+    "baby",
+    "kid",
+    "child",
+    "parent",
+    "caregiver",
+    "church",
+    "bible",
+    "prayer",
+    "religion",
+    "politic",
+    "identity",
+    "disability",
+    "senior",
+)
+
+
+def marker_count(text: str, markers: Iterable[str]) -> int:
+    padded = f" {text} "
+    return sum(1 for marker in markers if marker in padded)
+
+
+def review_informativeness_score(
+    row: dict[str, Any],
+    category_counts: dict[str, int],
+) -> float:
+    text = str(row.get("text") or "")
+    title = str(row.get("title") or "")
+    combined = f"{title} {text}".lower()
+    text_len = len(text)
+    score = min(text_len / 500, 1.0) * 5.0
+    score += min(len(text.split()) / 120, 1.0) * 2.0
+    score += marker_count(combined, FIRST_PERSON_MARKERS) * 1.8
+    score += marker_count(combined, PREFERENCE_VALUE_MARKERS) * 1.6
+    score += marker_count(combined, COMPARISON_REASONING_MARKERS) * 1.8
+    score += marker_count(combined, DOMAIN_DETAIL_MARKERS) * 1.0
+    score += marker_count(combined, SENSITIVE_ADJACENT_MARKERS) * 1.4
+    if any(char.isdigit() for char in combined):
+        score += 0.8
+    try:
+        helpful_vote = int(row.get("helpful_vote") or 0)
+    except (TypeError, ValueError):
+        helpful_vote = 0
+    score += min(helpful_vote, 20) / 20
+    category = str(row.get("category") or "Unknown")
+    score += min(3.0, 8.0 / max(category_counts.get(category, 1), 1) ** 0.5)
+    has_persona_signal = any(
+        marker_count(combined, markers) > 0
+        for markers in (
+            FIRST_PERSON_MARKERS,
+            PREFERENCE_VALUE_MARKERS,
+            COMPARISON_REASONING_MARKERS,
+            DOMAIN_DETAIL_MARKERS,
+            SENSITIVE_ADJACENT_MARKERS,
+        )
+    )
+    if text_len < 30 and not has_persona_signal:
+        score -= 8.0
+    elif text_len < 50 and not has_persona_signal:
+        score -= 4.0
+    return score
+
+
 def select_temporal_context_rows(rows: list[dict[str, Any]], max_reviews: int) -> list[dict[str, Any]]:
     if max_reviews <= 0 or len(rows) <= max_reviews:
         return rows
@@ -652,11 +810,116 @@ def select_category_temporal_context_rows(
     return [rows[index] for index in sorted(selected_indices)[:max_reviews]]
 
 
+def add_evenly_spaced_indices(
+    candidate_indices: list[int],
+    selected_indices: set[int],
+    target_count: int,
+) -> None:
+    if target_count <= 0 or not candidate_indices:
+        return
+    if target_count == 1:
+        selected_indices.add(candidate_indices[-1])
+        return
+    last = len(candidate_indices) - 1
+    for i in range(target_count):
+        if len(selected_indices) >= target_count:
+            break
+        selected_indices.add(candidate_indices[round(i * last / (target_count - 1))])
+
+
+def select_informative_category_temporal_context_rows(
+    rows: list[dict[str, Any]],
+    max_reviews: int,
+    max_seed_categories: int = 32,
+) -> list[dict[str, Any]]:
+    if max_reviews <= 0 or len(rows) <= max_reviews:
+        return rows
+    if max_reviews == 1:
+        scored = [
+            (review_informativeness_score(row, {}), index)
+            for index, row in enumerate(rows)
+        ]
+        return [rows[max(scored)[1]]]
+
+    category_counts: dict[str, int] = {}
+    category_indices: dict[str, list[int]] = {}
+    for index, row in enumerate(rows):
+        category = str(row.get("category") or "Unknown")
+        category_counts[category] = category_counts.get(category, 0) + 1
+        category_indices.setdefault(category, []).append(index)
+    scores = [
+        review_informativeness_score(row, category_counts)
+        for row in rows
+    ]
+    selected_indices: set[int] = set()
+
+    temporal_target = max(1, round(max_reviews * 0.25))
+    category_target = max(1, round(max_reviews * 0.25))
+    top_target = max_reviews - temporal_target - category_target
+
+    non_generic_indices = [
+        index
+        for index, row in enumerate(rows)
+        if scores[index] >= 0 or len(str(row.get("text") or "")) >= 50
+    ]
+    add_evenly_spaced_indices(
+        non_generic_indices or list(range(len(rows))),
+        selected_indices,
+        temporal_target,
+    )
+
+    ranked_categories = sorted(
+        category_indices,
+        key=lambda category: (
+            len(category_indices[category]),
+            -max(scores[index] for index in category_indices[category]),
+            category,
+        ),
+    )
+    diverse_categories = (
+        ranked_categories[: max_seed_categories // 2]
+        + sorted(
+            ranked_categories[max_seed_categories // 2 :],
+            key=lambda category: (
+                -max(scores[index] for index in category_indices[category]),
+                category,
+            ),
+        )[: max_seed_categories // 2]
+    )
+    for category in diverse_categories:
+        if len(selected_indices) >= temporal_target + category_target:
+            break
+        best_index = max(category_indices[category], key=lambda index: (scores[index], -index))
+        selected_indices.add(best_index)
+
+    ranked_indices = sorted(
+        range(len(rows)),
+        key=lambda index: (scores[index], len(str(rows[index].get("text") or "")), -index),
+        reverse=True,
+    )
+    for index in ranked_indices:
+        if len(selected_indices) >= max_reviews:
+            break
+        if scores[index] < 0 and len(selected_indices) >= temporal_target + category_target + top_target:
+            continue
+        selected_indices.add(index)
+
+    if len(selected_indices) < max_reviews:
+        for index in range(len(rows)):
+            if len(selected_indices) >= max_reviews:
+                break
+            selected_indices.add(index)
+
+    return [rows[index] for index in sorted(selected_indices)[:max_reviews]]
+
+
 def select_context_rows(
     rows: list[dict[str, Any]],
     max_reviews: int,
     strategy: str = "temporal",
 ) -> list[dict[str, Any]]:
+    if strategy == "informative_category_temporal":
+        return select_informative_category_temporal_context_rows(rows, max_reviews)
     if strategy == "category_temporal":
         return select_category_temporal_context_rows(rows, max_reviews)
     return select_temporal_context_rows(rows, max_reviews)
@@ -1790,7 +2053,7 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     )
     parser.add_argument(
         "--context-selection-strategy",
-        choices=("temporal", "category_temporal"),
+        choices=("temporal", "category_temporal", "informative_category_temporal"),
         default="category_temporal",
         help="How to select a bounded review subset before evidence-profile compression.",
     )
