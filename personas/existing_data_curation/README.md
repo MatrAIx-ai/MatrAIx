@@ -494,6 +494,17 @@ saved review summaries and only redo schema mapping. Regenerate review memory
 only when the review histories, product metadata, broad evidence mapping, or
 summary prompt behavior changes.
 
+The default schema-mapping path sends the compact review memory to fixed
+batches of persona dimensions. An optional hierarchical path can be enabled
+with `--schema-routing-mode category`: it first asks the model to route the
+review memory to likely schema categories, then maps only dimensions in the
+routed categories plus configurable always-included category patterns. This can
+save schema-mapping tokens and focus extraction, but it adds one router call per
+user and may lose recall if the router misses a category. By default, the
+router always includes broad high-yield groups such as `Interests:*`,
+`Behavior:*`, `Values & Motivation`, `Risk & Decision`, `Linguistic:*`, and
+`Expertise:*`.
+
 Inference outputs include `review_corpus_stats` for the construction split:
 row count, text-review count, rating count, rating-only row count, total review
 text characters, date span, category counts, and rating-only product/category
@@ -526,6 +537,19 @@ python scripts/infer_amazon_review_dimensions.py \
   --max-users 100 \
   --output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.jsonl \
   --yaml-output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions.yaml
+```
+
+To test the optional hierarchical category-routing path without replacing the
+default path:
+
+```bash
+python scripts/infer_amazon_review_dimensions.py \
+  --user-histories raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl \
+  --schema-routing-mode category \
+  --review-memory-output raw/amazon_reviews_2023/persona_dimension_inference/evidence_profiles.jsonl \
+  --max-users 20 \
+  --output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions_routed.jsonl \
+  --yaml-output raw/amazon_reviews_2023/persona_dimension_inference/inferred_dimensions_routed.yaml
 ```
 
 The primary inference output remains JSONL for resumable runs, with one user row

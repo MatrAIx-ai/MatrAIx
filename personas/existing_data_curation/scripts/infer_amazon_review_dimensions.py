@@ -77,6 +77,13 @@ Evidence standards:
 Return compact JSON only."""
 
 
+SCHEMA_CATEGORY_ROUTER_SYSTEM_PROMPT = """You route compact Amazon-review evidence profiles to persona schema categories.
+
+Core rule: select schema categories that are likely to contain supported attributes for this user. Be recall-oriented: include weak but plausible non-sensitive category matches when the evidence profile provides some support. Do not select sensitive identity/status/condition categories from product stereotypes alone; select those only for explicit self-statements or when the category can be used as contextual topical engagement.
+
+Return compact JSON only."""
+
+
 SCHEMA_SIGNAL_CHECKLIST = [
     {
         "schema_area": "interests_and_topics",
@@ -866,6 +873,115 @@ def schema_mapping_payload(
     }
 
 
+def schema_category_summaries(dimensions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    by_category: dict[str, list[dict[str, Any]]] = {}
+    for dim in dimensions:
+        by_category.setdefault(str(dim["category"]), []).append(dim)
+    summaries = []
+    for category, category_dims in sorted(by_category.items()):
+        samples = []
+        for dim in category_dims[:8]:
+            samples.append(
+                {
+                    "id": dim["id"],
+                    "label": dim["label"],
+                    "description": compact_text(dim.get("description"), 160),
+                    "allowed_values": dim.get("values", [])[:8],
+                }
+            )
+        summaries.append(
+            {
+                "category": category,
+                "dimension_count": len(category_dims),
+                "sample_dimensions": samples,
+            }
+        )
+    return summaries
+
+
+def schema_category_routing_payload(
+    user_row: dict[str, Any],
+    dimensions: list[dict[str, Any]],
+    evidence_profile: dict[str, Any],
+    always_include_patterns: list[str],
+) -> dict[str, Any]:
+    return {
+        "task": "route_compact_amazon_review_evidence_profile_to_schema_categories",
+        "user_id": user_row.get("user_id"),
+        "instructions": [
+            "Select schema categories that are likely to contain at least one supported persona attribute for this user.",
+            "Be recall-oriented: include categories with weak/suggestive non-sensitive support and explain the limited support.",
+            "Use compact_evidence_profile evidence items and structured_memory; do not invent facts outside the profile.",
+            "Repeated sensitive-adjacent product/context evidence can support contextual interests, topical engagement, needs, values, or preferences, but not asserted health conditions, family status, religion, politics, identity, or other sensitive attributes unless explicitly self-stated.",
+            "Do not select categories that have no support in the evidence profile.",
+            "Return exact category strings from schema_categories only.",
+        ],
+        "always_include_patterns": always_include_patterns,
+        "output_json_schema": {
+            "selected_categories": [
+                {
+                    "category": "exact schema category string",
+                    "confidence": "number from 0 to 1",
+                    "evidence_item_ids": ["compact profile evidence item ids"],
+                    "reasoning": "brief grounded reason",
+                }
+            ]
+        },
+        "schema_categories": schema_category_summaries(dimensions),
+        "compact_evidence_profile": evidence_profile,
+    }
+
+
+def normalize_schema_category_routes(
+    model_output: dict[str, Any],
+    dimensions: list[dict[str, Any]],
+    min_confidence: float,
+    always_include_patterns: list[str],
+) -> tuple[list[str], list[dict[str, Any]], list[dict[str, Any]]]:
+    available_categories = sorted({str(dim["category"]) for dim in dimensions})
+    selected = {
+        category
+        for category in available_categories
+        if category_matches(category, always_include_patterns)
+    }
+    valid_routes = []
+    rejected_routes = []
+    available = set(available_categories)
+    for item in model_output.get("selected_categories", []):
+        if not isinstance(item, dict):
+            rejected_routes.append({"item": item, "reason": "not_object"})
+            continue
+        category = str(item.get("category") or "")
+        if category not in available:
+            rejected_routes.append({"item": item, "reason": "unknown_category"})
+            continue
+        try:
+            confidence = float(item.get("confidence", 0.5))
+        except (TypeError, ValueError):
+            rejected_routes.append({"item": item, "reason": "invalid_confidence"})
+            continue
+        if confidence < min_confidence:
+            rejected_routes.append({"item": item, "reason": "below_min_confidence"})
+            continue
+        selected.add(category)
+        valid_routes.append(
+            {
+                "category": category,
+                "confidence": round(max(0.0, min(1.0, confidence)), 3),
+                "evidence_item_ids": item.get("evidence_item_ids") or [],
+                "reasoning": item.get("reasoning", ""),
+            }
+        )
+    return sorted(selected), valid_routes, rejected_routes
+
+
+def filter_dimensions_by_categories(
+    dimensions: list[dict[str, Any]],
+    categories: set[str],
+) -> list[dict[str, Any]]:
+    return [dim for dim in dimensions if str(dim["category"]) in categories]
+
+
 def openai_request(
     payload: dict[str, Any],
     api_key: str,
@@ -1386,7 +1502,55 @@ def infer_user_from_evidence_profile(
     all_valid = []
     all_rejected = []
     request_count = profile_request_count
-    dimension_batches = list(batched(dimensions, args.dimensions_per_call))
+    routed_categories: list[str] = []
+    valid_routes: list[dict[str, Any]] = []
+    rejected_routes: list[dict[str, Any]] = []
+    routed_dimensions = dimensions
+    if args.schema_routing_mode == "category":
+        request_count += 1
+        always_include_patterns = sorted(parse_csv_filter(args.schema_router_always_include) or [])
+        log(
+            f"user={user_row.get('user_id')} schema_category_routing "
+            f"categories={len({dim['category'] for dim in dimensions})}"
+        )
+        task = schema_category_routing_payload(
+            user_row,
+            dimensions,
+            evidence_profile,
+            always_include_patterns,
+        )
+        payload = {
+            "model": args.model,
+            "temperature": args.temperature,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": SCHEMA_CATEGORY_ROUTER_SYSTEM_PROMPT},
+                {"role": "user", "content": json.dumps(task, ensure_ascii=False)},
+            ],
+        }
+        response = openai_request(payload, api_key)
+        model_output = parse_model_json(response)
+        routed_categories, valid_routes, rejected_routes = normalize_schema_category_routes(
+            model_output,
+            dimensions,
+            args.schema_router_min_confidence,
+            always_include_patterns,
+        )
+        routed_dimensions = filter_dimensions_by_categories(dimensions, set(routed_categories))
+        if not routed_dimensions:
+            routed_dimensions = dimensions
+            rejected_routes.append(
+                {
+                    "item": model_output,
+                    "reason": "empty_route_fell_back_to_all_dimensions",
+                }
+            )
+        log(
+            f"user={user_row.get('user_id')} schema_category_routing done "
+            f"categories={len(routed_categories)} dimensions={len(routed_dimensions)} "
+            f"rejected={len(rejected_routes)}"
+        )
+    dimension_batches = list(batched(routed_dimensions, args.dimensions_per_call))
     for batch_index, dimension_batch in enumerate(dimension_batches, start=1):
         request_count += 1
         log(
@@ -1416,8 +1580,14 @@ def infer_user_from_evidence_profile(
     return {
         "source": "amazon_reviews_2023",
         "inference_mode": "evidence_profile",
+        "schema_routing_mode": args.schema_routing_mode,
         "schema_path": str(args.schema_path),
         "schema_dimension_count": len(dimensions),
+        "schema_mapped_dimension_count": len(routed_dimensions),
+        "schema_routed_category_count": len(routed_categories),
+        "schema_routed_categories": routed_categories,
+        "schema_category_routes": valid_routes,
+        "rejected_schema_category_routes": rejected_routes,
         "evidence_mapping_path": str(args.evidence_mapping_path),
         "user_id": user_row.get("user_id"),
         "review_count": len(reviews),
@@ -1483,6 +1653,25 @@ def write_dry_run_prompts(
             "structured_memory": {},
             "evidence_items": [],
         }
+        if args.schema_routing_mode == "category":
+            always_include_patterns = sorted(parse_csv_filter(args.schema_router_always_include) or [])
+            rows.append(
+                {
+                    "user_id": user_row.get("user_id"),
+                    "stage": "schema_category_routing",
+                    "system_prompt": SCHEMA_CATEGORY_ROUTER_SYSTEM_PROMPT,
+                    "user_payload": schema_category_routing_payload(
+                        user_row,
+                        dimensions,
+                        placeholder_profile,
+                        always_include_patterns,
+                    ),
+                    "dry_run_note": (
+                        "Schema mapping prompts below use all selected dimensions because "
+                        "dry-run does not call the router to determine routed categories."
+                    ),
+                }
+            )
         for batch_index, dimension_batch in enumerate(
             batched(dimensions, args.dimensions_per_call), start=1
         ):
@@ -1640,6 +1829,32 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         type=int,
         default=100,
         help="Backward-compatible alias used when --max-evidence-items is 0.",
+    )
+    parser.add_argument(
+        "--schema-routing-mode",
+        choices=("none", "category"),
+        default="none",
+        help=(
+            "Optional hierarchical path. 'category' adds a schema-category router "
+            "before detailed dimension mapping; 'none' preserves the current path."
+        ),
+    )
+    parser.add_argument(
+        "--schema-router-min-confidence",
+        type=float,
+        default=0.25,
+        help="Minimum confidence for model-selected schema categories in category routing mode.",
+    )
+    parser.add_argument(
+        "--schema-router-always-include",
+        default=(
+            "Interests:*,Behavior:*,Values & Motivation,Risk & Decision,"
+            "Linguistic:*,Expertise:*"
+        ),
+        help=(
+            "Comma-separated schema category patterns always included in category "
+            "routing mode to reduce router recall loss."
+        ),
     )
     parser.add_argument("--dimensions-per-call", type=int, default=200)
     parser.add_argument(
