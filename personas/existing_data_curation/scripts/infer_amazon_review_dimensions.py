@@ -19,6 +19,7 @@ import argparse
 import gzip
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -598,120 +599,445 @@ def serialized_context_chars(context: list[dict[str, Any]]) -> int:
 
 
 FIRST_PERSON_MARKERS = (
-    " i ",
-    " i'm ",
-    " ive ",
-    " i've ",
-    " me ",
-    " my ",
-    " mine ",
-    " we ",
-    " we're ",
-    " we've ",
-    " our ",
-    " for my ",
-    " my kid",
-    " my child",
-    " my son",
-    " my daughter",
-    " my wife",
-    " my husband",
-    " my mom",
-    " my dad",
-    " my dog",
-    " my cat",
+    "i",
+    "i am",
+    "im",
+    "i'm",
+    "ive",
+    "i've",
+    "i use",
+    "i used",
+    "i bought",
+    "i needed",
+    "i wanted",
+    "i found",
+    "i think",
+    "i feel",
+    "i noticed",
+    "i wear",
+    "i read",
+    "i cook",
+    "i work",
+    "i travel",
+    "me",
+    "my",
+    "mine",
+    "myself",
+    "we",
+    "we are",
+    "we're",
+    "we have",
+    "we've",
+    "our",
+    "ours",
+    "for my",
+    "for our",
+    "my kid",
+    "my kids",
+    "my child",
+    "my children",
+    "my toddler",
+    "my baby",
+    "my son",
+    "my daughter",
+    "my wife",
+    "my husband",
+    "my spouse",
+    "my partner",
+    "my mom",
+    "my mother",
+    "my dad",
+    "my father",
+    "my parent",
+    "my parents",
+    "my family",
+    "my home",
+    "my house",
+    "my office",
+    "my classroom",
+    "my students",
+    "my dog",
+    "my puppy",
+    "my cat",
+    "my kitten",
+    "my pet",
 )
 
 PREFERENCE_VALUE_MARKERS = (
     "i like",
     "i love",
     "i prefer",
+    "i dislike",
+    "i hate",
+    "i wanted",
+    "i needed",
+    "i wish",
+    "i recommend",
+    "i would recommend",
+    "recommend",
+    "highly recommend",
+    "do not recommend",
     "favorite",
+    "must have",
+    "go to",
     "important",
     "worth",
+    "not worth",
+    "worth it",
+    "worth the money",
+    "waste of money",
     "value",
+    "good value",
+    "great value",
+    "budget",
     "quality",
+    "high quality",
+    "poor quality",
+    "well made",
+    "cheaply made",
     "durable",
+    "durability",
+    "lasts",
+    "long lasting",
     "comfortable",
+    "uncomfortable",
     "comfort",
     "safe",
     "safety",
+    "secure",
+    "security",
     "easy to use",
+    "easy to clean",
+    "easy to install",
+    "easy to assemble",
+    "easy setup",
+    "hard to use",
+    "hard to clean",
+    "hard to install",
     "convenient",
+    "convenience",
     "reliable",
+    "unreliable",
     "sturdy",
+    "flimsy",
     "affordable",
     "expensive",
     "cheap",
     "price",
+    "pricey",
+    "overpriced",
+    "inexpensive",
+    "saves time",
+    "time saver",
+    "space saving",
+    "compact",
+    "portable",
+    "lightweight",
+    "heavy duty",
+    "eco friendly",
+    "non toxic",
+    "organic",
+    "natural",
+    "fragrance free",
+    "scented",
+    "unscented",
 )
 
 COMPARISON_REASONING_MARKERS = (
     "better than",
     "worse than",
     "compared to",
+    "compare to",
+    "comparison",
+    "similar to",
+    "different from",
     "because",
+    "since",
+    "so that",
+    "therefore",
+    "as a result",
     "after trying",
     "i tried",
     "i have tried",
+    "we tried",
+    "tried several",
+    "tried many",
+    "after using",
+    "after wearing",
+    "after reading",
     "works better",
+    "works well",
+    "works great",
+    "worked great",
+    "worked well",
     "doesn't work",
     "didn't work",
+    "did not work",
+    "does not work",
     "instead of",
     "rather than",
     "the reason",
+    "pros",
+    "cons",
+    "pro",
+    "con",
+    "downside",
+    "upside",
+    "however",
+    "but",
+    "although",
+    "unless",
+    "except",
+    "versus",
+    "vs",
+    "best",
+    "worst",
+    "least",
+    "most",
 )
 
 DOMAIN_DETAIL_MARKERS = (
     "install",
     "installed",
+    "installation",
+    "assemble",
+    "assembled",
+    "assembly",
     "recipe",
+    "recipes",
     "ingredient",
+    "ingredients",
     "measurement",
+    "measurements",
+    "ounce",
+    "ounces",
+    "inch",
+    "inches",
+    "feet",
+    "pound",
+    "pounds",
+    "watt",
+    "watts",
     "voltage",
+    "volt",
+    "amps",
     "battery",
+    "charging",
+    "charger",
+    "bluetooth",
+    "wifi",
+    "usb",
+    "hdmi",
     "software",
-    "app",
+    "application",
+    "mobile app",
     "settings",
+    "setup",
+    "configuration",
+    "compatible",
+    "compatibility",
     "material",
     "fabric",
+    "cotton",
+    "leather",
+    "metal",
+    "plastic",
+    "wood",
+    "stainless steel",
     "size",
+    "sizing",
     "fit",
+    "fits",
+    "fitting",
     "training",
+    "exercise",
     "workout",
+    "reps",
+    "miles",
+    "calories",
     "repair",
+    "fixed",
+    "replacement",
+    "replace",
     "tool",
+    "tools",
+    "screw",
+    "screws",
+    "mount",
+    "mounted",
+    "bracket",
     "manual",
     "instructions",
+    "directions",
+    "tutorial",
+    "chapter",
+    "plot",
+    "character",
+    "author",
+    "narrator",
+    "edition",
+    "screen",
+    "resolution",
+    "camera",
+    "lens",
+    "audio",
+    "sound",
+    "bass",
+    "volume",
 )
 
 SENSITIVE_ADJACENT_MARKERS = (
     "pain",
+    "back pain",
+    "neck pain",
+    "joint pain",
+    "chronic",
     "doctor",
+    "nurse",
+    "hospital",
+    "clinic",
     "medical",
+    "medicine",
+    "medication",
     "health",
+    "healthy",
     "therapy",
+    "therapist",
+    "physical therapy",
     "anxiety",
+    "stress",
+    "sleep",
+    "insomnia",
+    "allergy",
+    "allergies",
+    "diabetic",
+    "diabetes",
+    "blood pressure",
+    "arthritis",
+    "injury",
+    "surgery",
+    "recovery",
+    "posture",
+    "brace",
+    "mobility",
+    "wheelchair",
+    "walker",
+    "cane",
     "pregnant",
+    "pregnancy",
+    "maternity",
+    "nursing",
+    "breastfeeding",
     "baby",
+    "babies",
     "kid",
+    "kids",
     "child",
+    "children",
+    "toddler",
+    "teen",
+    "teenager",
     "parent",
+    "parenting",
+    "grandparent",
+    "grandma",
+    "grandpa",
     "caregiver",
+    "elderly",
     "church",
     "bible",
     "prayer",
     "religion",
+    "religious",
+    "christian",
+    "catholic",
+    "jewish",
+    "muslim",
+    "islam",
+    "hindu",
+    "buddhist",
+    "spiritual",
+    "devotional",
+    "worship",
     "politic",
+    "political",
+    "election",
+    "vote",
+    "voting",
+    "democrat",
+    "republican",
+    "conservative",
+    "liberal",
+    "activism",
+    "activist",
     "identity",
+    "gender",
+    "lgbt",
+    "lgbtq",
+    "pride",
+    "race",
+    "racial",
+    "ethnic",
+    "culture",
+    "cultural",
     "disability",
+    "disabled",
+    "accessibility",
+    "accessible",
     "senior",
+    "veteran",
+    "military",
 )
 
 
-def marker_count(text: str, markers: Iterable[str]) -> int:
-    padded = f" {text} "
-    return sum(1 for marker in markers if marker in padded)
+def marker_pattern(marker: str) -> re.Pattern[str]:
+    return re.compile(rf"(?<![a-z0-9]){re.escape(marker.lower())}(?![a-z0-9])")
+
+
+FIRST_PERSON_PATTERNS = tuple(marker_pattern(marker) for marker in FIRST_PERSON_MARKERS)
+PREFERENCE_VALUE_PATTERNS = tuple(marker_pattern(marker) for marker in PREFERENCE_VALUE_MARKERS)
+COMPARISON_REASONING_PATTERNS = tuple(
+    marker_pattern(marker) for marker in COMPARISON_REASONING_MARKERS
+)
+DOMAIN_DETAIL_PATTERNS = tuple(marker_pattern(marker) for marker in DOMAIN_DETAIL_MARKERS)
+SENSITIVE_ADJACENT_PATTERNS = tuple(
+    marker_pattern(marker) for marker in SENSITIVE_ADJACENT_MARKERS
+)
+PERSONA_SIGNAL_PATTERN_GROUPS = (
+    FIRST_PERSON_PATTERNS,
+    PREFERENCE_VALUE_PATTERNS,
+    COMPARISON_REASONING_PATTERNS,
+    DOMAIN_DETAIL_PATTERNS,
+    SENSITIVE_ADJACENT_PATTERNS,
+)
+
+
+def normalize_marker_text(text: str) -> str:
+    return re.sub(r"[\u2018\u2019]", "'", text.lower())
+
+
+def marker_count(normalized_text: str, patterns: Iterable[re.Pattern[str]]) -> int:
+    return sum(1 for pattern in patterns if pattern.search(normalized_text))
+
+
+def has_marker(normalized_text: str, patterns: Iterable[re.Pattern[str]]) -> bool:
+    return any(pattern.search(normalized_text) for pattern in patterns)
+
+
+def has_any_marker(normalized_text: str, pattern_groups: Iterable[Iterable[re.Pattern[str]]]) -> bool:
+    return any(has_marker(normalized_text, patterns) for patterns in pattern_groups)
+
+
+def review_marker_features(text: str) -> dict[str, int | bool]:
+    normalized = re.sub(r"[\u2018\u2019]", "'", text.lower())
+    return {
+        "first_person": marker_count(normalized, FIRST_PERSON_PATTERNS),
+        "preference_value": marker_count(normalized, PREFERENCE_VALUE_PATTERNS),
+        "comparison_reasoning": marker_count(normalized, COMPARISON_REASONING_PATTERNS),
+        "domain_detail": marker_count(normalized, DOMAIN_DETAIL_PATTERNS),
+        "sensitive_adjacent": marker_count(normalized, SENSITIVE_ADJACENT_PATTERNS),
+        "has_persona_signal": has_any_marker(normalized, PERSONA_SIGNAL_PATTERN_GROUPS),
+    }
 
 
 def review_informativeness_score(
@@ -721,14 +1047,15 @@ def review_informativeness_score(
     text = str(row.get("text") or "")
     title = str(row.get("title") or "")
     combined = f"{title} {text}".lower()
+    features = review_marker_features(combined)
     text_len = len(text)
     score = min(text_len / 500, 1.0) * 5.0
     score += min(len(text.split()) / 120, 1.0) * 2.0
-    score += marker_count(combined, FIRST_PERSON_MARKERS) * 1.8
-    score += marker_count(combined, PREFERENCE_VALUE_MARKERS) * 1.6
-    score += marker_count(combined, COMPARISON_REASONING_MARKERS) * 1.8
-    score += marker_count(combined, DOMAIN_DETAIL_MARKERS) * 1.0
-    score += marker_count(combined, SENSITIVE_ADJACENT_MARKERS) * 1.4
+    score += int(features["first_person"]) * 1.8
+    score += int(features["preference_value"]) * 1.6
+    score += int(features["comparison_reasoning"]) * 1.8
+    score += int(features["domain_detail"]) * 1.0
+    score += int(features["sensitive_adjacent"]) * 1.4
     if any(char.isdigit() for char in combined):
         score += 0.8
     try:
@@ -738,16 +1065,7 @@ def review_informativeness_score(
     score += min(helpful_vote, 20) / 20
     category = str(row.get("category") or "Unknown")
     score += min(3.0, 8.0 / max(category_counts.get(category, 1), 1) ** 0.5)
-    has_persona_signal = any(
-        marker_count(combined, markers) > 0
-        for markers in (
-            FIRST_PERSON_MARKERS,
-            PREFERENCE_VALUE_MARKERS,
-            COMPARISON_REASONING_MARKERS,
-            DOMAIN_DETAIL_MARKERS,
-            SENSITIVE_ADJACENT_MARKERS,
-        )
-    )
+    has_persona_signal = bool(features["has_persona_signal"])
     if text_len < 30 and not has_persona_signal:
         score -= 8.0
     elif text_len < 50 and not has_persona_signal:
