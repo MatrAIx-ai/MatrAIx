@@ -2430,7 +2430,9 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         "--schema-router-always-include",
         default=(
             "Interests:*,Behavior:*,Values & Motivation,Risk & Decision,"
-            "Linguistic:*,Expertise:*"
+            "Linguistic:*,Expertise:*,Personality:*,Health:*,"
+            "Worldview: Beliefs,Demographic: Family,Demographic: Life Events,"
+            "Social Identity, Relationships & Community"
         ),
         help=(
             "Comma-separated schema category patterns always included in category "

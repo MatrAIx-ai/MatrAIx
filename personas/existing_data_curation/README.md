@@ -503,7 +503,11 @@ save schema-mapping tokens and focus extraction, but it adds one router call per
 user and may lose recall if the router misses a category. By default, the
 router always includes broad high-yield groups such as `Interests:*`,
 `Behavior:*`, `Values & Motivation`, `Risk & Decision`, `Linguistic:*`, and
-`Expertise:*`.
+`Expertise:*`, plus target groups for richer personas: `Personality:*`,
+`Health:*`, `Worldview: Beliefs`, `Demographic: Family`,
+`Demographic: Life Events`, and `Social Identity, Relationships & Community`.
+These categories are made available to the mapper, but returned attributes
+still need evidence citations and calibrated confidence.
 
 Inference outputs include `review_corpus_stats` for the construction split:
 row count, text-review count, rating count, rating-only row count, total review
