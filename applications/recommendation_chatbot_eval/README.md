@@ -130,12 +130,15 @@ PYTHONPATH=applications/recommendation_chatbot_eval \
   -m pytest applications/recommendation_chatbot_eval/harbor_api/tests/test_server.py -q
 ```
 
-Harbor smoke, once the Harbor runtime is present on the branch:
+Harbor smoke, once the Harbor runtime is installed:
 
 ```bash
 export OPENAI_API_KEY=...
 export ANTHROPIC_API_KEY=...
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-recommender-agent-local.yaml
+export MATRIX_HARBOR_COMMAND="harbor run"
+# Or point to a local Harbor checkout:
+# export MATRIX_HARBOR_COMMAND="uv --directory /path/to/harbor run --frozen harbor run"
+./run_demo.sh
 ```
 
 The sidecar uses the real RecAI / InteRecAgent path. The first Docker build is
