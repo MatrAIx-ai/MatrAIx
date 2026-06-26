@@ -94,7 +94,7 @@ Agent choice depends on the form — [choosing-an-agent.md](../environments/choo
 | Config path | Use |
 |-------------|-----|
 | [`configs/jobs/example-job-recipe/`](../../configs/jobs/example-job-recipe/) | Hand-written smoke jobs (`appSim-*`, 1 persona) |
-| [`configs/jobs/application-task-job-recipe/`](../../configs/jobs/application-task-job-recipe/) | Multi-persona application runs; checked-in `example-survey-product-feedback-random-n1` + other generated files gitignored — [getting-started §7](./getting-started.md#7-batch--sample-many-personas-job) |
+| [`configs/jobs/application-task-job-recipe/`](../../configs/jobs/application-task-job-recipe/) | Multi-persona application runs; checked-in `appSim-example-survey-product-feedback-random-n4` + other generated files gitignored — [getting-started §7](./getting-started.md#7-batch--sample-many-personas-job) |
 
 **Smoke** (no script — checked-in YAML):
 

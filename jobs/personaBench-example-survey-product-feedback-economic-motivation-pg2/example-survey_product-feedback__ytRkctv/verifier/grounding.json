@@ -1,0 +1,84 @@
+{
+  "probe_dimension": "dimensions.economic_motivation",
+  "probe_value": "Cost-sensitive",
+  "participation": "continued",
+  "probe_questions": [
+    "q0",
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6"
+  ],
+  "oracle_path": {
+    "q0": "q0_use_free_wont_pay",
+    "q1": "q1_reject_both_tiers",
+    "q2": "q2_monthly_cancel_anytime",
+    "q3": "q3_skip_even_one_dollar",
+    "q4": "q4_seek_free_alternative",
+    "q5": "q5_ads_not_worth_paying",
+    "q6": "q6_too_expensive_stay_free"
+  },
+  "per_question": {
+    "q0": {
+      "choice_id": "q0_pay_when_roi_clear",
+      "counterfactual": true,
+      "oracle_choice_id": "q0_use_free_wont_pay",
+      "oracle_match": false
+    },
+    "q1": {
+      "choice_id": "q1_plus_after_sustained_use",
+      "counterfactual": true,
+      "oracle_choice_id": "q1_reject_both_tiers",
+      "oracle_match": false
+    },
+    "q2": {
+      "choice_id": "q2_monthly_cancel_anytime",
+      "counterfactual": false,
+      "oracle_choice_id": "q2_monthly_cancel_anytime",
+      "oracle_match": true
+    },
+    "q3": {
+      "choice_id": "q3_one_dollar_try_cancel",
+      "counterfactual": true,
+      "oracle_choice_id": "q3_skip_even_one_dollar",
+      "oracle_match": false
+    },
+    "q4": {
+      "choice_id": "q4_seek_free_alternative",
+      "counterfactual": false,
+      "oracle_choice_id": "q4_seek_free_alternative",
+      "oracle_match": true
+    },
+    "q5": {
+      "choice_id": "q5_ads_not_worth_paying",
+      "counterfactual": false,
+      "oracle_choice_id": "q5_ads_not_worth_paying",
+      "oracle_match": true
+    },
+    "q6": {
+      "choice_id": "q6_fair_if_use_justifies",
+      "counterfactual": true,
+      "oracle_choice_id": "q6_too_expensive_stay_free",
+      "oracle_match": false
+    }
+  },
+  "probe_hits": 4,
+  "probe_questions_scored": 7,
+  "oracle_match_count": 3,
+  "min_oracle_matches": 6,
+  "pass_threshold": 0.8,
+  "alignment_rate": 0.42857142857142855,
+  "dim_grounding": 0.0,
+  "counterfactual": true,
+  "method": "mcq_oracle_threshold",
+  "matched_cues": [
+    "q0_pay_when_roi_clear",
+    "q1_plus_after_sustained_use",
+    "q3_one_dollar_try_cancel",
+    "q6_fair_if_use_justifies"
+  ],
+  "rationale": "Below 80% alignment for Cost-sensitive: 3/7 (43%); need 6.",
+  "persona_id": "0719"
+}

@@ -207,10 +207,14 @@ marimo/_lsp/
 __marimo__/
 
 
-# Local job outputs; example persona-*-local runs are checked in.
+# Local job outputs; checked-in example runs pair with configs/jobs/.
 /jobs/*
-!/jobs/persona-*-local/
-!/jobs/persona-*-local/**
+!/jobs/harbor-smoke-local/
+!/jobs/harbor-smoke-local/**
+!/jobs/appSim-example-*/
+!/jobs/appSim-example-*/**
+!/jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2/
+!/jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2/**
 trials/
 *.ipynb
 /datasets/
@@ -242,9 +246,10 @@ persona/datasets/_generated/
 persona/datasets/jun20-1k/
 
 # Generated / local job recipes (scripts write here; other files not checked in)
+# Generated / local job recipes (scripts write here; checked-in example only)
 configs/jobs/application-task-job-recipe/*
-!configs/jobs/application-task-job-recipe/example-survey-product-feedback-random-n1.yaml
-!configs/jobs/application-task-job-recipe/example-survey-product-feedback-random-n1.meta.json
+!configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml
+!configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.meta.json
 configs/jobs/persona-task-grounding-job-recipe/*
 !configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml
 !configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.meta.json

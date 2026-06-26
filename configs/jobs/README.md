@@ -30,10 +30,21 @@ Harbor Job YAML under `configs/jobs/`. Run with `harbor run -c configs/jobs/<sub
 
 | File | Purpose |
 |------|---------|
-| `application-task-job-recipe/example-survey-product-feedback-random-n1.yaml` | Application batch smoke (1 persona, random sample) |
+| `application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml` | Application survey batch (4 personas, random sample, seed 42) |
 | `persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml` | Persona grounding batch (4 probe values × 2 personas) |
 
 Other files under those directories are **gitignored** (local `generate_*_job.py` output).
+
+### Checked-in `jobs/` outputs (viewer demos)
+
+| `jobs/<job_name>/` | Recipe |
+|--------------------|--------|
+| `harbor-smoke-local/` | `example-job-recipe/harbor-smoke-local.yaml` |
+| `appSim-example-survey-local/`, `appSim-example-chat-local/`, … | matching `example-job-recipe/appSim-*-local.yaml` |
+| `appSim-example-survey-product-feedback-random-n4/` | `application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml` |
+| `personaBench-example-survey-product-feedback-economic-motivation-pg2/` | `persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml` |
+
+Browse: `uv run harbor view jobs/<job_name> --build`
 
 ## Persona grounding recipes
 

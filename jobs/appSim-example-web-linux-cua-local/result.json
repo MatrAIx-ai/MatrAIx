@@ -1,0 +1,39 @@
+{
+    "id": "d766ff95-71ef-495d-b0d1-7cdc403c5d9f",
+    "started_at": "2026-06-16T21:38:09.037562",
+    "updated_at": "2026-06-16T21:40:46.154928",
+    "finished_at": "2026-06-16T21:40:46.154928",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-computer-1__claude-sonnet-4-6__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "books-interest-linux-cua__LJi4BuP"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 218601,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 1809,
+        "cost_usd": null
+    }
+}

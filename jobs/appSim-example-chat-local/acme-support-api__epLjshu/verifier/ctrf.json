@@ -1,0 +1,56 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781672085.6110952,
+            "stop": 1781672085.6296537
+        },
+        "tests": [
+            {
+                "name": "test_state.py::test_transcript_exists",
+                "status": "passed",
+                "duration": 0.0020923750707879663,
+                "start": 1781672085.6232646,
+                "stop": 1781672085.6273088,
+                "retries": 0,
+                "file_path": "test_state.py"
+            },
+            {
+                "name": "test_state.py::test_transcript_schema",
+                "status": "passed",
+                "duration": 0.00046479201409965754,
+                "start": 1781672085.6274514,
+                "stop": 1781672085.6280363,
+                "retries": 0,
+                "file_path": "test_state.py"
+            },
+            {
+                "name": "test_state.py::test_transcript_multi_turn",
+                "status": "passed",
+                "duration": 0.0003839990240521729,
+                "start": 1781672085.6281292,
+                "stop": 1781672085.6286201,
+                "retries": 0,
+                "file_path": "test_state.py"
+            },
+            {
+                "name": "test_state.py::test_transcript_mentions_order",
+                "status": "passed",
+                "duration": 0.0005580010474659503,
+                "start": 1781672085.6287284,
+                "stop": 1781672085.6294465,
+                "retries": 0,
+                "file_path": "test_state.py"
+            }
+        ]
+    }
+}
