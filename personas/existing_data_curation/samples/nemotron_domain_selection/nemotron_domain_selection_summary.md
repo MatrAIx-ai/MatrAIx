@@ -18,6 +18,8 @@ Amazon review personas and Amazon-derived outputs are not used in this selection
 - `nemotron_overall_diversity_projection.svg`: SVG plot used by the diversity visualization.
 - `nemotron_within_domain_diversity_visualization.md`: within-domain diversity summary with one projection panel per application domain.
 - `nemotron_within_domain_diversity_projection.svg`: SVG plot used by the within-domain diversity visualization.
+- `nemotron_within_domain_cluster_visualization.md`: cluster-based within-domain visualization and cluster summaries.
+- `nemotron_within_domain_cluster_projection.svg`: SVG plot showing clusters within each application domain.
 
 ## Selection Goal
 
@@ -69,3 +71,5 @@ The linked YAML file is the source of truth for the full persona.
 Use the diversity visualization file as a quick QA view for whether each domain's selected users cover different overall persona profiles in text-feature space.
 
 Use the within-domain diversity visualization to inspect whether the 50 selected users inside each application domain cover multiple overall profile regions.
+
+Use the cluster visualization to inspect the main persona groups inside each domain and the representative users for each group.
