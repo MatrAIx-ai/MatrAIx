@@ -1,0 +1,336 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-06-22T02:25:48.906007Z",
+    "harbor": {
+        "version": "0.13.2",
+        "git_commit_hash": "6897d53dabfc128bacbd31415d5a7350b55d8816",
+        "is_editable": true
+    },
+    "invocation": [
+        "/Users/jianhenghou/HJH/GitHub_Repo/harbor/.venv/bin/harbor",
+        "run",
+        "-c",
+        "configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml",
+        "--force-build"
+    ],
+    "n_concurrent_trials": 4,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileNotFoundError",
+            "AgentTimeoutError",
+            "RewardFileEmptyError",
+            "VerifierOutputParseError",
+            "VerifierTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0712.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0773.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0666.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0727.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0855.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_2002.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_0719.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "example-survey_product-feedback",
+                "type": "local",
+                "digest": "sha256:03db16fdf0400c4421db64387b2001c19c7e6cfc3869c81f13528900257a0a52",
+                "path": "persona/tasks/example-survey_product-feedback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-claude-code",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/datasets/bench-dev-2000/persona_2001.yaml"
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": true,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {
+                    "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+                },
+                "disable": false
+            }
+        }
+    ]
+}

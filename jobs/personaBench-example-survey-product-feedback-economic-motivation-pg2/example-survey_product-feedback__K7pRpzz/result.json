@@ -1,0 +1,115 @@
+{
+    "id": "9b6f2668-94c6-4eb7-b8c5-482150d2cf34",
+    "task_name": "matraix/persona-bench-dim-047-survey-product-feedback",
+    "trial_name": "example-survey_product-feedback__K7pRpzz",
+    "trial_uri": "file:///Users/jianhenghou/HJH/GitHub_Repo/harbor/jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2/example-survey_product-feedback__K7pRpzz",
+    "task_id": {
+        "path": "persona/tasks/example-survey_product-feedback"
+    },
+    "source": null,
+    "task_checksum": "02701df25ba26267c3873b7d5e598705ea67bbbc2871f441a20e9ff9d74f7253",
+    "config": {
+        "task": {
+            "path": "persona/tasks/example-survey_product-feedback",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "example-survey_product-feedback__K7pRpzz",
+        "trials_dir": "jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "persona-claude-code",
+            "import_path": null,
+            "model_name": "anthropic/claude-sonnet-4-6",
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "persona_path": "persona/datasets/bench-dev-2000/persona_0712.yaml"
+            },
+            "env": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "env": {},
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {
+                "MATRAIX_PROBE_DIMENSION": "dimensions.economic_motivation"
+            },
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "6fcceb0f-940a-412a-8661-a9b9116ef12d"
+    },
+    "agent_info": {
+        "name": "persona-claude-code",
+        "version": "2.1.185",
+        "model_info": {
+            "name": "claude-sonnet-4-6",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 73894,
+        "n_cache_tokens": 63680,
+        "n_output_tokens": 1697,
+        "cost_usd": 0.0828585,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-06-22T02:25:50.972826Z",
+    "finished_at": "2026-06-22T02:26:39.681890Z",
+    "environment_setup": {
+        "started_at": "2026-06-22T02:25:51.249783Z",
+        "finished_at": "2026-06-22T02:25:55.108411Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-06-22T02:25:55.108615Z",
+        "finished_at": "2026-06-22T02:25:57.412713Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-06-22T02:25:57.413213Z",
+        "finished_at": "2026-06-22T02:26:33.137807Z"
+    },
+    "verifier": {
+        "started_at": "2026-06-22T02:26:33.988519Z",
+        "finished_at": "2026-06-22T02:26:37.549976Z"
+    },
+    "step_results": null
+}

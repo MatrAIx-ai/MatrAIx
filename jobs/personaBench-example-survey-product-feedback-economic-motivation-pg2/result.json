@@ -1,0 +1,53 @@
+{
+    "id": "6fcceb0f-940a-412a-8661-a9b9116ef12d",
+    "started_at": "2026-06-21T19:25:48.860811",
+    "updated_at": "2026-06-21T19:27:38.712543",
+    "finished_at": "2026-06-21T19:27:38.712543",
+    "n_total_trials": 8,
+    "stats": {
+        "n_completed_trials": 8,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-claude-code__claude-sonnet-4-6__adhoc": {
+                "n_trials": 8,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.875
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 1.0,
+                    "4": 1.0,
+                    "5": 1.0,
+                    "8": 1.0
+                },
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "example-survey_product-feedback__K7pRpzz",
+                            "example-survey_product-feedback__XXDxsDg",
+                            "example-survey_product-feedback__s9v2Kof",
+                            "example-survey_product-feedback__WGHhhUT",
+                            "example-survey_product-feedback__cxqGoJd",
+                            "example-survey_product-feedback__yFgj78X",
+                            "example-survey_product-feedback__zRCsZcD"
+                        ],
+                        "0.0": [
+                            "example-survey_product-feedback__ytRkctv"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 645277,
+        "n_cache_tokens": 561724,
+        "n_output_tokens": 14075,
+        "cost_usd": 0.6929404499999999
+    }
+}

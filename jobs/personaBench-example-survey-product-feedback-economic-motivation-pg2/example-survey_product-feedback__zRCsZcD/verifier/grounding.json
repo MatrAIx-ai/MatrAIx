@@ -1,0 +1,79 @@
+{
+  "probe_dimension": "dimensions.economic_motivation",
+  "probe_value": "Indifferent",
+  "participation": "continued",
+  "probe_questions": [
+    "q0",
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6"
+  ],
+  "oracle_path": {
+    "q0": "q0_free_never_decide_tier",
+    "q1": "q1_wont_compare_tiers",
+    "q2": "q2_billing_no_preference",
+    "q3": "q3_ignore_promo",
+    "q4": "q4_switch_only_effortless",
+    "q5": "q5_ads_irrelevant_to_tier",
+    "q6": "q6_pricing_unnoticed"
+  },
+  "per_question": {
+    "q0": {
+      "choice_id": "q0_free_never_decide_tier",
+      "counterfactual": false,
+      "oracle_choice_id": "q0_free_never_decide_tier",
+      "oracle_match": true
+    },
+    "q1": {
+      "choice_id": "q1_wont_compare_tiers",
+      "counterfactual": false,
+      "oracle_choice_id": "q1_wont_compare_tiers",
+      "oracle_match": true
+    },
+    "q2": {
+      "choice_id": "q2_billing_no_preference",
+      "counterfactual": false,
+      "oracle_choice_id": "q2_billing_no_preference",
+      "oracle_match": true
+    },
+    "q3": {
+      "choice_id": "q3_ignore_promo",
+      "counterfactual": false,
+      "oracle_choice_id": "q3_ignore_promo",
+      "oracle_match": true
+    },
+    "q4": {
+      "choice_id": "q4_switch_only_effortless",
+      "counterfactual": false,
+      "oracle_choice_id": "q4_switch_only_effortless",
+      "oracle_match": true
+    },
+    "q5": {
+      "choice_id": "q5_ads_irrelevant_to_tier",
+      "counterfactual": false,
+      "oracle_choice_id": "q5_ads_irrelevant_to_tier",
+      "oracle_match": true
+    },
+    "q6": {
+      "choice_id": "q6_pricing_unnoticed",
+      "counterfactual": false,
+      "oracle_choice_id": "q6_pricing_unnoticed",
+      "oracle_match": true
+    }
+  },
+  "probe_hits": 0,
+  "probe_questions_scored": 7,
+  "oracle_match_count": 7,
+  "min_oracle_matches": 6,
+  "pass_threshold": 0.8,
+  "alignment_rate": 1.0,
+  "dim_grounding": 1.0,
+  "counterfactual": false,
+  "method": "mcq_oracle_threshold",
+  "matched_cues": [],
+  "rationale": "Aligned 7/7 (100% \u2265 80%).",
+  "persona_id": "2001"
+}
