@@ -1,0 +1,71 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-06-17T03:40:42.134372Z",
+    "harbor": {
+        "version": "0.13.2",
+        "git_commit_hash": "dfadd9efdf53ada923bad3ffad98e77db1b83cf0",
+        "is_editable": true
+    },
+    "invocation": [
+        "/Users/jianhenghou/HJH/GitHub_Repo/harbor/.venv/bin/harbor",
+        "run",
+        "-c",
+        "configs/jobs/persona-ios-local.yaml"
+    ],
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileNotFoundError",
+            "AgentTimeoutError",
+            "VerifierTimeoutError",
+            "RewardFileEmptyError",
+            "VerifierOutputParseError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "ios-notification-preferences",
+                "type": "local",
+                "digest": "sha256:f8cf6ace375dc3e4b2fdbb184e1e0c0be6a98b2121a5953875b7a85dab3024c6",
+                "path": "tasks/computer-use/ios-notification-preferences"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "persona-computer-1",
+                "model_name": "anthropic/claude-sonnet-4-6",
+                "skills": [],
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "persona_path": "persona/examples/persona_0042.yaml",
+                    "max_steps": 35,
+                    "recording_enabled": false
+                },
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "use-computer",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {
+                    "platform": "ios"
+                },
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}

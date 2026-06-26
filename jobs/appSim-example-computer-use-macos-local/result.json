@@ -1,0 +1,39 @@
+{
+    "id": "8426908d-9b81-4188-acfd-d7abeb3522cd",
+    "started_at": "2026-06-16T20:06:46.300688",
+    "updated_at": "2026-06-16T20:26:39.374341",
+    "finished_at": "2026-06-16T20:26:39.374341",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-computer-1__claude-sonnet-4-6__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "macos-notification-preferences__kkygzz8"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 27,
+        "n_cache_tokens": 260200,
+        "n_output_tokens": 3463,
+        "cost_usd": null
+    }
+}

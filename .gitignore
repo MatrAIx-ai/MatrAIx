@@ -207,10 +207,14 @@ marimo/_lsp/
 __marimo__/
 
 
-# Local job outputs; example persona-*-local runs are checked in.
+# Local job outputs; checked-in example runs pair with configs/jobs/.
 /jobs/*
-!/jobs/persona-*-local/
-!/jobs/persona-*-local/**
+!/jobs/harbor-smoke-local/
+!/jobs/harbor-smoke-local/**
+!/jobs/appSim-example-*/
+!/jobs/appSim-example-*/**
+!/jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2/
+!/jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2/**
 trials/
 *.ipynb
 /datasets/

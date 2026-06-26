@@ -1,0 +1,3059 @@
+{
+  "success": true,
+  "applications": [
+    {
+      "info": {
+        "name": "loginwindow",
+        "bundle_id": "com.apple.loginwindow",
+        "pid": 154,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "universalaccessd",
+        "bundle_id": null,
+        "pid": 335,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "CoreServicesUIAgent",
+        "bundle_id": "com.apple.coreservices.uiagent",
+        "pid": 334,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "SystemUIServer",
+        "bundle_id": "com.apple.systemuiserver",
+        "pid": 351,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Dock",
+        "bundle_id": "com.apple.dock",
+        "pid": 349,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        8,
+        7
+      ]
+    },
+    {
+      "info": {
+        "name": "Control Center",
+        "bundle_id": "com.apple.controlcenter",
+        "pid": 350,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        10,
+        11
+      ]
+    },
+    {
+      "info": {
+        "name": "WindowManager",
+        "bundle_id": "com.apple.WindowManager",
+        "pid": 348,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Finder",
+        "bundle_id": "com.apple.finder",
+        "pid": 352,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        18
+      ]
+    },
+    {
+      "info": {
+        "name": "chronod",
+        "bundle_id": "com.apple.chronod",
+        "pid": 341,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Wallpaper",
+        "bundle_id": "com.apple.wallpaper.agent",
+        "pid": 364,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "ViewBridgeAuxiliary",
+        "bundle_id": "com.apple.ViewBridgeAuxiliary",
+        "pid": 400,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "QuickLookUIService (Finder)",
+        "bundle_id": "com.apple.quicklook.QuickLookUIService",
+        "pid": 360,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "CoreLocationAgent",
+        "bundle_id": "com.apple.CoreLocationAgent",
+        "pid": 370,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Single Sign-On",
+        "bundle_id": "com.apple.AppSSOAgent",
+        "pid": 407,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Dock Extra",
+        "bundle_id": "com.apple.dock.extra",
+        "pid": 439,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "talagentd",
+        "bundle_id": "com.apple.talagent",
+        "pid": 347,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "UIKitSystem",
+        "bundle_id": "com.apple.UIKitSystemApp",
+        "pid": 432,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Notification Center",
+        "bundle_id": "com.apple.notificationcenterui",
+        "pid": 444,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "AirPlay Screen Mirroring",
+        "bundle_id": "com.apple.AirPlayUIAgent",
+        "pid": 464,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "TextInputMenuAgent",
+        "bundle_id": "com.apple.TextInputMenuAgent",
+        "pid": 467,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Spotlight",
+        "bundle_id": "com.apple.Spotlight",
+        "pid": 471,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        22
+      ]
+    },
+    {
+      "info": {
+        "name": "TextInputSwitcher",
+        "bundle_id": "com.apple.TextInputSwitcher",
+        "pid": 472,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "CursorUIViewService",
+        "bundle_id": "com.apple.TextInputUI.xpc.CursorUIViewService",
+        "pid": 484,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "IOUIAgent",
+        "bundle_id": "com.apple.IOUIAgent",
+        "pid": 494,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "AppSSODaemon",
+        "bundle_id": null,
+        "pid": 410,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Wi-Fi",
+        "bundle_id": "com.apple.wifi.WiFiAgent",
+        "pid": 562,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "SoftwareUpdateNotificationManager",
+        "bundle_id": "com.apple.SoftwareUpdateNotificationManager",
+        "pid": 584,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "softwareupdated",
+        "bundle_id": null,
+        "pid": 253,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "AuthenticationServicesAgent",
+        "bundle_id": "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent",
+        "pid": 815,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "nbagent",
+        "bundle_id": "com.apple.nbagent",
+        "pid": 976,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "BackgroundTaskManagementAgent",
+        "bundle_id": "com.apple.backgroundtaskmanagement.agent",
+        "pid": 1054,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Keychain Circle Notification",
+        "bundle_id": "com.apple.security.Keychain-Circle-Notification",
+        "pid": 1095,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "nsattributedstringagent",
+        "bundle_id": "com.apple.textkit.nsattributedstringagent",
+        "pid": 3079,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "ffmpeg",
+        "bundle_id": null,
+        "pid": 4184,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "System Settings",
+        "bundle_id": "com.apple.systempreferences",
+        "pid": 4203,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        33
+      ]
+    },
+    {
+      "info": {
+        "name": "General (System Settings)",
+        "bundle_id": "com.apple.systempreferences.GeneralSettings",
+        "pid": 4205,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Apple Account (System Settings)",
+        "bundle_id": "com.apple.systempreferences.AppleIDSettings",
+        "pid": 4206,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Family (System Settings)",
+        "bundle_id": "com.apple.Family-Settings.extension",
+        "pid": 4207,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "HeadphoneSettingsExtension (System Settings)",
+        "bundle_id": "com.apple.HeadphoneSettings",
+        "pid": 4208,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "FollowUps (System Settings)",
+        "bundle_id": "com.apple.FollowUpSettings.FollowUpSettingsExtension",
+        "pid": 4209,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "VPN (System Settings)",
+        "bundle_id": "com.apple.NetworkExtensionSettingsUI.NESettingsUIExtension",
+        "pid": 4210,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Classroom (System Settings)",
+        "bundle_id": "com.apple.Classroom-Settings.extension",
+        "pid": 4211,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "studentd",
+        "bundle_id": "com.apple.studentd",
+        "pid": 4212,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Notifications (System Settings)",
+        "bundle_id": "com.apple.Notifications-Settings.extension",
+        "pid": 4356,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "ThemeWidgetControlViewService (System Settings)",
+        "bundle_id": "com.apple.appkit.xpc.ThemeWidgetControlViewService",
+        "pid": 4526,
+        "active": false,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": []
+    },
+    {
+      "info": {
+        "name": "Terminal",
+        "bundle_id": "com.apple.Terminal",
+        "pid": 4579,
+        "active": true,
+        "hidden": false,
+        "terminated": false
+      },
+      "windows": [
+        55
+      ]
+    }
+  ],
+  "windows": [
+    {
+      "id": 2,
+      "name": "Desktop",
+      "pid": 163,
+      "owner": "Window Server",
+      "role": "desktop",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 1080.0
+      },
+      "layer": -2147483626,
+      "z_index": 0,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 8,
+      "name": "Wallpaper-",
+      "pid": 349,
+      "owner": "Dock",
+      "role": "desktop",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 1080.0
+      },
+      "layer": -2147483624,
+      "z_index": 1,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 18,
+      "name": "Unnamed Window",
+      "pid": 352,
+      "owner": "Finder",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 1080.0
+      },
+      "layer": -2147483603,
+      "z_index": 2,
+      "opacity": 1.0,
+      "children": [
+        {
+          "id": "643d76235bad998a9fa9756e1b51330d",
+          "name": null,
+          "role": "AXGroup",
+          "description": "desktop",
+          "role_description": "group",
+          "value": null,
+          "absolute_position": "0.00;0.00",
+          "position": "0.00;0.00",
+          "size": "1920;1080",
+          "enabled": true,
+          "bbox": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "visible_bbox": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Mail",
+      "pid": 4203,
+      "owner": "System Settings",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 104.0,
+        "y": 25.0,
+        "width": 715.0,
+        "height": 970.0
+      },
+      "layer": 0,
+      "z_index": 3,
+      "opacity": 1.0,
+      "children": [
+        {
+          "id": "eee3936248c90338c42012c458a84e12",
+          "name": null,
+          "role": "AXGroup",
+          "description": null,
+          "role_description": "group",
+          "value": null,
+          "absolute_position": "104.00;25.00",
+          "position": "0.00;0.00",
+          "size": "715;970",
+          "enabled": false,
+          "bbox": [
+            104,
+            25,
+            819,
+            995
+          ],
+          "visible_bbox": [
+            104,
+            25,
+            819,
+            995
+          ],
+          "children": [
+            {
+              "id": "365494aeaa66bc1211f5f331b3b2b6d5",
+              "name": null,
+              "role": "AXSplitGroup",
+              "description": null,
+              "role_description": "split group",
+              "value": null,
+              "absolute_position": "104.00;25.00",
+              "position": "0.00;0.00",
+              "size": "715;970",
+              "enabled": false,
+              "bbox": [
+                104,
+                25,
+                819,
+                995
+              ],
+              "visible_bbox": [
+                104,
+                25,
+                819,
+                995
+              ],
+              "children": [
+                {
+                  "id": "9f693abb1df71b57583c3e0202f96e03",
+                  "name": null,
+                  "role": "AXGroup",
+                  "description": null,
+                  "role_description": "group",
+                  "value": null,
+                  "absolute_position": "104.00;25.00",
+                  "position": "0.00;0.00",
+                  "size": "215;970",
+                  "enabled": false,
+                  "bbox": [
+                    104,
+                    25,
+                    319,
+                    995
+                  ],
+                  "visible_bbox": [
+                    104,
+                    25,
+                    319,
+                    995
+                  ],
+                  "children": [
+                    {
+                      "id": "8baf667de84dee161c22aa83839c7262",
+                      "name": null,
+                      "role": "AXTextField",
+                      "description": null,
+                      "role_description": "search text field",
+                      "value": "Notifications",
+                      "absolute_position": "112.00;77.00",
+                      "position": "8.00;52.00",
+                      "size": "199;30",
+                      "enabled": true,
+                      "bbox": [
+                        112,
+                        77,
+                        311,
+                        107
+                      ],
+                      "visible_bbox": [
+                        112,
+                        77,
+                        311,
+                        107
+                      ],
+                      "children": [
+                        {
+                          "id": "0c6446fa7aa5ec6d9fd01e76f094fa7c",
+                          "name": "",
+                          "role": "AXButton",
+                          "description": "Search",
+                          "role_description": "button",
+                          "value": null,
+                          "absolute_position": "114.00;81.00",
+                          "position": "10.00;56.00",
+                          "size": "25;22",
+                          "enabled": true,
+                          "bbox": [
+                            114,
+                            81,
+                            139,
+                            103
+                          ],
+                          "visible_bbox": [
+                            114,
+                            81,
+                            139,
+                            103
+                          ],
+                          "children": []
+                        },
+                        {
+                          "id": "f492ddb98af5798be8aa118aaa02c757",
+                          "name": "",
+                          "role": "AXButton",
+                          "description": "cancel",
+                          "role_description": "button",
+                          "value": null,
+                          "absolute_position": "285.00;81.00",
+                          "position": "181.00;56.00",
+                          "size": "22;22",
+                          "enabled": true,
+                          "bbox": [
+                            285,
+                            81,
+                            307,
+                            103
+                          ],
+                          "visible_bbox": [
+                            285,
+                            81,
+                            307,
+                            103
+                          ],
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4117ccf32391e5869cacbc0c432a9982",
+                      "name": null,
+                      "role": "AXScrollArea",
+                      "description": null,
+                      "role_description": "scroll area",
+                      "value": null,
+                      "absolute_position": "104.00;115.00",
+                      "position": "0.00;90.00",
+                      "size": "215;880",
+                      "enabled": false,
+                      "bbox": [
+                        104,
+                        115,
+                        319,
+                        995
+                      ],
+                      "visible_bbox": [
+                        104,
+                        115,
+                        319,
+                        995
+                      ],
+                      "children": [
+                        {
+                          "id": "52db38595219548d7059ffe2265953ca",
+                          "name": null,
+                          "role": "AXOutline",
+                          "description": "Sidebar",
+                          "role_description": "list",
+                          "value": null,
+                          "absolute_position": "104.00;115.00",
+                          "position": "0.00;90.00",
+                          "size": "215;880",
+                          "enabled": true,
+                          "bbox": [
+                            104,
+                            115,
+                            319,
+                            995
+                          ],
+                          "visible_bbox": [
+                            104,
+                            115,
+                            319,
+                            995
+                          ],
+                          "children": [
+                            {
+                              "id": "c1d8eb5e452f296ba936bfc604bd0b7d",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;115.00",
+                              "position": "0.00;90.00",
+                              "size": "215;0",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                115,
+                                319,
+                                115
+                              ],
+                              "visible_bbox": [
+                                104,
+                                115,
+                                319,
+                                115
+                              ],
+                              "children": [
+                                {
+                                  "id": "a7e71b7d0ecdf57b74ca16196bd87786",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;115.00",
+                                  "position": "10.00;90.00",
+                                  "size": "195;0",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    115,
+                                    309,
+                                    115
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    115,
+                                    309,
+                                    115
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "49e5e31f58a724c5a300927b61c3c3b4",
+                                      "name": null,
+                                      "role": "AXGroup",
+                                      "description": null,
+                                      "role_description": "group",
+                                      "value": null,
+                                      "absolute_position": "118.00;115.00",
+                                      "position": "14.00;90.00",
+                                      "size": "199;0",
+                                      "enabled": false,
+                                      "bbox": [
+                                        118,
+                                        115,
+                                        317,
+                                        115
+                                      ],
+                                      "visible_bbox": [
+                                        118,
+                                        115,
+                                        309,
+                                        115
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0b373d1148a820d8f722be3377b46e8c",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;115.00",
+                              "position": "0.00;90.00",
+                              "size": "215;30",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                115,
+                                319,
+                                145
+                              ],
+                              "visible_bbox": [
+                                104,
+                                115,
+                                319,
+                                145
+                              ],
+                              "children": [
+                                {
+                                  "id": "57233e3bcfff8554a12f98be8b7bb30d",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;115.00",
+                                  "position": "10.00;90.00",
+                                  "size": "195;30",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    115,
+                                    309,
+                                    145
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    115,
+                                    309,
+                                    145
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "fb1d33d0673f2ddfd3c97c0dfe1e71c6",
+                                      "name": null,
+                                      "role": "AXStaticText",
+                                      "description": null,
+                                      "role_description": "text",
+                                      "value": "Notifications",
+                                      "absolute_position": "119.00;118.00",
+                                      "position": "15.00;93.00",
+                                      "size": "105;24",
+                                      "enabled": true,
+                                      "bbox": [
+                                        119,
+                                        118,
+                                        224,
+                                        142
+                                      ],
+                                      "visible_bbox": [
+                                        119,
+                                        118,
+                                        224,
+                                        142
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "92fed566ffbb74551ac143c6cddb6338",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;145.00",
+                              "position": "0.00;120.00",
+                              "size": "215;30",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                145,
+                                319,
+                                175
+                              ],
+                              "visible_bbox": [
+                                104,
+                                145,
+                                319,
+                                175
+                              ],
+                              "children": [
+                                {
+                                  "id": "ab8c244dcaa7ecf8e0ed2e3d52692f92",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;145.00",
+                                  "position": "10.00;120.00",
+                                  "size": "195;30",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    145,
+                                    309,
+                                    175
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    145,
+                                    309,
+                                    175
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "321cb23f3f49a36c3aee9da4615a510b",
+                                      "name": null,
+                                      "role": "AXStaticText",
+                                      "description": null,
+                                      "role_description": "text",
+                                      "value": "Notifications from iPhone",
+                                      "absolute_position": "147.00;152.00",
+                                      "position": "43.00;127.00",
+                                      "size": "154;16",
+                                      "enabled": true,
+                                      "bbox": [
+                                        147,
+                                        152,
+                                        301,
+                                        168
+                                      ],
+                                      "visible_bbox": [
+                                        147,
+                                        152,
+                                        301,
+                                        168
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "834d62f804b3db14fa74e845193ca276",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;175.00",
+                              "position": "0.00;150.00",
+                              "size": "215;30",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                175,
+                                319,
+                                205
+                              ],
+                              "visible_bbox": [
+                                104,
+                                175,
+                                319,
+                                205
+                              ],
+                              "children": [
+                                {
+                                  "id": "aef95b53463a919d06bfd69d15727e0d",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;175.00",
+                                  "position": "10.00;150.00",
+                                  "size": "195;30",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    175,
+                                    309,
+                                    205
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    175,
+                                    309,
+                                    205
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "b7bf4fffa28123d517b14870f26ed2bd",
+                                      "name": null,
+                                      "role": "AXStaticText",
+                                      "description": null,
+                                      "role_description": "text",
+                                      "value": "Notifications settings",
+                                      "absolute_position": "147.00;182.00",
+                                      "position": "43.00;157.00",
+                                      "size": "129;16",
+                                      "enabled": true,
+                                      "bbox": [
+                                        147,
+                                        182,
+                                        276,
+                                        198
+                                      ],
+                                      "visible_bbox": [
+                                        147,
+                                        182,
+                                        276,
+                                        198
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "43b5f266deb553a3576de1ab6c7f82dc",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;218.00",
+                              "position": "0.00;193.00",
+                              "size": "215;0",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                218,
+                                319,
+                                218
+                              ],
+                              "visible_bbox": [
+                                104,
+                                218,
+                                319,
+                                218
+                              ],
+                              "children": [
+                                {
+                                  "id": "4b78dde2660ac4a41ffd5b4d9fc354f0",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;218.00",
+                                  "position": "10.00;193.00",
+                                  "size": "195;0",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    218,
+                                    309,
+                                    218
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    218,
+                                    309,
+                                    218
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "26cc5f9d557589e2c0f1a2c40f56517e",
+                                      "name": null,
+                                      "role": "AXGroup",
+                                      "description": null,
+                                      "role_description": "group",
+                                      "value": null,
+                                      "absolute_position": "118.00;218.00",
+                                      "position": "14.00;193.00",
+                                      "size": "199;0",
+                                      "enabled": false,
+                                      "bbox": [
+                                        118,
+                                        218,
+                                        317,
+                                        218
+                                      ],
+                                      "visible_bbox": [
+                                        118,
+                                        218,
+                                        309,
+                                        218
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "7db7746f64d6f97a9e86c9224c85c6fc",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;218.00",
+                              "position": "0.00;193.00",
+                              "size": "215;30",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                218,
+                                319,
+                                248
+                              ],
+                              "visible_bbox": [
+                                104,
+                                218,
+                                319,
+                                248
+                              ],
+                              "children": [
+                                {
+                                  "id": "32301e5da85b15c8a99a376e33b37d33",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;218.00",
+                                  "position": "10.00;193.00",
+                                  "size": "195;30",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    218,
+                                    309,
+                                    248
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    218,
+                                    309,
+                                    248
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "69858024506e0deed868b88d60426e68",
+                                      "name": null,
+                                      "role": "AXStaticText",
+                                      "description": null,
+                                      "role_description": "text",
+                                      "value": "Screen Time",
+                                      "absolute_position": "119.00;221.00",
+                                      "position": "15.00;196.00",
+                                      "size": "104;24",
+                                      "enabled": true,
+                                      "bbox": [
+                                        119,
+                                        221,
+                                        223,
+                                        245
+                                      ],
+                                      "visible_bbox": [
+                                        119,
+                                        221,
+                                        223,
+                                        245
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "eb030b1772e764a41a44e7c30781c93c",
+                              "name": null,
+                              "role": "AXRow",
+                              "description": null,
+                              "role_description": "outline row",
+                              "value": null,
+                              "absolute_position": "104.00;248.00",
+                              "position": "0.00;223.00",
+                              "size": "215;40",
+                              "enabled": false,
+                              "bbox": [
+                                104,
+                                248,
+                                319,
+                                288
+                              ],
+                              "visible_bbox": [
+                                104,
+                                248,
+                                319,
+                                288
+                              ],
+                              "children": [
+                                {
+                                  "id": "87bb53735f3b5850f03713a0625dd8a2",
+                                  "name": null,
+                                  "role": "AXCell",
+                                  "description": null,
+                                  "role_description": "cell",
+                                  "value": null,
+                                  "absolute_position": "114.00;248.00",
+                                  "position": "10.00;223.00",
+                                  "size": "195;40",
+                                  "enabled": true,
+                                  "bbox": [
+                                    114,
+                                    248,
+                                    309,
+                                    288
+                                  ],
+                                  "visible_bbox": [
+                                    114,
+                                    248,
+                                    309,
+                                    288
+                                  ],
+                                  "children": [
+                                    {
+                                      "id": "ac9a43400d709b62a44528c6b695e468",
+                                      "name": null,
+                                      "role": "AXStaticText",
+                                      "description": null,
+                                      "role_description": "text",
+                                      "value": "Show notifications report in Screen Time",
+                                      "absolute_position": "147.00;252.00",
+                                      "position": "43.00;227.00",
+                                      "size": "156;32",
+                                      "enabled": true,
+                                      "bbox": [
+                                        147,
+                                        252,
+                                        303,
+                                        284
+                                      ],
+                                      "visible_bbox": [
+                                        147,
+                                        252,
+                                        303,
+                                        284
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "c74922b5b9239d3611264e84125beed3",
+                              "name": null,
+                              "role": "AXColumn",
+                              "description": null,
+                              "role_description": "column",
+                              "value": null,
+                              "absolute_position": "114.00;115.00",
+                              "position": "10.00;90.00",
+                              "size": "195;880",
+                              "enabled": false,
+                              "bbox": [
+                                114,
+                                115,
+                                309,
+                                995
+                              ],
+                              "visible_bbox": [
+                                114,
+                                115,
+                                309,
+                                995
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "cf67970c6c2a7b8a000080a97dd633f8",
+                  "name": null,
+                  "role": "AXSplitter",
+                  "description": null,
+                  "role_description": "splitter",
+                  "value": 215.0,
+                  "absolute_position": "319.00;77.00",
+                  "position": "215.00;52.00",
+                  "size": "1;918",
+                  "enabled": false,
+                  "bbox": [
+                    319,
+                    77,
+                    320,
+                    995
+                  ],
+                  "visible_bbox": [
+                    319,
+                    77,
+                    320,
+                    995
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "e0f59929207634460a12c358100a574b",
+                  "name": null,
+                  "role": "AXGroup",
+                  "description": null,
+                  "role_description": "group",
+                  "value": null,
+                  "absolute_position": "320.00;25.00",
+                  "position": "216.00;0.00",
+                  "size": "499;970",
+                  "enabled": false,
+                  "bbox": [
+                    320,
+                    25,
+                    819,
+                    995
+                  ],
+                  "visible_bbox": [
+                    320,
+                    25,
+                    819,
+                    995
+                  ],
+                  "children": [
+                    {
+                      "id": "e0f59929207634460a12c358100a574b",
+                      "name": null,
+                      "role": "AXGroup",
+                      "description": null,
+                      "role_description": "group",
+                      "value": null,
+                      "absolute_position": "320.00;25.00",
+                      "position": "216.00;0.00",
+                      "size": "499;970",
+                      "enabled": false,
+                      "bbox": [
+                        320,
+                        25,
+                        819,
+                        995
+                      ],
+                      "visible_bbox": [
+                        320,
+                        25,
+                        819,
+                        995
+                      ],
+                      "children": [
+                        {
+                          "id": "2d3f301a902007c0445d58ec92c05aa4",
+                          "name": null,
+                          "role": "AXScrollArea",
+                          "description": null,
+                          "role_description": "scroll area",
+                          "value": null,
+                          "absolute_position": "320.00;77.00",
+                          "position": "216.00;52.00",
+                          "size": "499;918",
+                          "enabled": false,
+                          "bbox": [
+                            320,
+                            77,
+                            819,
+                            995
+                          ],
+                          "visible_bbox": [
+                            320,
+                            77,
+                            819,
+                            995
+                          ],
+                          "children": [
+                            {
+                              "id": "d815f1b05c07f126339e30d920b0fde0",
+                              "name": null,
+                              "role": "AXGroup",
+                              "description": null,
+                              "role_description": "group",
+                              "value": null,
+                              "absolute_position": "337.00;75.00",
+                              "position": "233.00;50.00",
+                              "size": "465;58",
+                              "enabled": true,
+                              "bbox": [
+                                337,
+                                75,
+                                802,
+                                133
+                              ],
+                              "visible_bbox": [
+                                337,
+                                77,
+                                802,
+                                133
+                              ],
+                              "children": [
+                                {
+                                  "id": "5c349e0f61723b3000610163fcf9f55c",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Allow notifications",
+                                  "absolute_position": "390.00;86.84",
+                                  "position": "286.00;61.84",
+                                  "size": "111;16",
+                                  "enabled": true,
+                                  "bbox": [
+                                    390,
+                                    86,
+                                    501,
+                                    102
+                                  ],
+                                  "visible_bbox": [
+                                    390,
+                                    86,
+                                    501,
+                                    102
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "7dfae4b2f34c383b80d88d26e20fbfa4",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Mail",
+                                  "absolute_position": "390.00;104.84",
+                                  "position": "286.00;79.84",
+                                  "size": "22;14",
+                                  "enabled": true,
+                                  "bbox": [
+                                    390,
+                                    104,
+                                    412,
+                                    118
+                                  ],
+                                  "visible_bbox": [
+                                    390,
+                                    104,
+                                    412,
+                                    118
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "ac3392e66957a52466d68755a759f209",
+                                  "name": null,
+                                  "role": "AXCheckBox",
+                                  "description": null,
+                                  "role_description": "switch",
+                                  "value": 0,
+                                  "absolute_position": "751.00;86.00",
+                                  "position": "647.00;61.00",
+                                  "size": "38;22",
+                                  "enabled": true,
+                                  "bbox": [
+                                    751,
+                                    86,
+                                    789,
+                                    108
+                                  ],
+                                  "visible_bbox": [
+                                    751,
+                                    86,
+                                    789,
+                                    108
+                                  ],
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "09b104725f773aec710836fb5427a45f",
+                              "name": null,
+                              "role": "AXGroup",
+                              "description": null,
+                              "role_description": "group",
+                              "value": null,
+                              "absolute_position": "337.00;137.00",
+                              "position": "233.00;112.00",
+                              "size": "465;143",
+                              "enabled": true,
+                              "bbox": [
+                                337,
+                                137,
+                                802,
+                                280
+                              ],
+                              "visible_bbox": [
+                                337,
+                                137,
+                                802,
+                                280
+                              ],
+                              "children": [
+                                {
+                                  "id": "3c99e2715eb7d8bbf2c183e6ade16c72",
+                                  "name": null,
+                                  "role": "AXButton",
+                                  "description": "None",
+                                  "role_description": "button",
+                                  "value": null,
+                                  "absolute_position": "408.00;149.00",
+                                  "position": "304.00;124.00",
+                                  "size": "89;80",
+                                  "enabled": true,
+                                  "bbox": [
+                                    408,
+                                    149,
+                                    497,
+                                    228
+                                  ],
+                                  "visible_bbox": [
+                                    408,
+                                    149,
+                                    497,
+                                    228
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "ea6abcc10a9d7d1a333a9d1d0f930078",
+                                  "name": null,
+                                  "role": "AXButton",
+                                  "description": "Banners",
+                                  "role_description": "button",
+                                  "value": null,
+                                  "absolute_position": "521.50;145.50",
+                                  "position": "417.50;120.50",
+                                  "size": "96;83",
+                                  "enabled": true,
+                                  "bbox": [
+                                    521,
+                                    145,
+                                    617,
+                                    228
+                                  ],
+                                  "visible_bbox": [
+                                    521,
+                                    145,
+                                    617,
+                                    228
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "79d838c7f8487a91f05b0e3d9533afea",
+                                  "name": null,
+                                  "role": "AXButton",
+                                  "description": "Alerts",
+                                  "role_description": "button",
+                                  "value": null,
+                                  "absolute_position": "642.00;149.00",
+                                  "position": "538.00;124.00",
+                                  "size": "89;80",
+                                  "enabled": true,
+                                  "bbox": [
+                                    642,
+                                    149,
+                                    731,
+                                    228
+                                  ],
+                                  "visible_bbox": [
+                                    642,
+                                    149,
+                                    731,
+                                    228
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "7999ac8f9eb4978f4c097f456e1c0dd3",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Banners appear in the upper-right corner and go away automatically. Alerts stay on screen until dismissed.",
+                                  "absolute_position": "371.00;238.16",
+                                  "position": "267.00;213.16",
+                                  "size": "397;28",
+                                  "enabled": true,
+                                  "bbox": [
+                                    371,
+                                    238,
+                                    768,
+                                    266
+                                  ],
+                                  "visible_bbox": [
+                                    371,
+                                    238,
+                                    768,
+                                    266
+                                  ],
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "5a1a621f8b0a237f5febea7c55424eac",
+                              "name": null,
+                              "role": "AXGroup",
+                              "description": null,
+                              "role_description": "group",
+                              "value": null,
+                              "absolute_position": "337.00;284.00",
+                              "position": "233.00;259.00",
+                              "size": "465;119",
+                              "enabled": true,
+                              "bbox": [
+                                337,
+                                284,
+                                802,
+                                403
+                              ],
+                              "visible_bbox": [
+                                337,
+                                284,
+                                802,
+                                403
+                              ],
+                              "children": [
+                                {
+                                  "id": "24ac7b0a2af70eca3fbec96e03cc7046",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Show notifications on lock screen",
+                                  "absolute_position": "350.00;296.16",
+                                  "position": "246.00;271.16",
+                                  "size": "203;16",
+                                  "enabled": false,
+                                  "bbox": [
+                                    350,
+                                    296,
+                                    553,
+                                    312
+                                  ],
+                                  "visible_bbox": [
+                                    350,
+                                    296,
+                                    553,
+                                    312
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "bff13796bcce9f2a793d959ed6755719",
+                                  "name": null,
+                                  "role": "AXCheckBox",
+                                  "description": null,
+                                  "role_description": "switch",
+                                  "value": 1,
+                                  "absolute_position": "763.00;298.00",
+                                  "position": "659.00;273.00",
+                                  "size": "26;15",
+                                  "enabled": false,
+                                  "bbox": [
+                                    763,
+                                    298,
+                                    789,
+                                    313
+                                  ],
+                                  "visible_bbox": [
+                                    763,
+                                    298,
+                                    789,
+                                    313
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "188d7a9f0aec0ebdacadd9a1e2b7328c",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Show in Notification Center",
+                                  "absolute_position": "350.00;334.16",
+                                  "position": "246.00;309.16",
+                                  "size": "166;16",
+                                  "enabled": false,
+                                  "bbox": [
+                                    350,
+                                    334,
+                                    516,
+                                    350
+                                  ],
+                                  "visible_bbox": [
+                                    350,
+                                    334,
+                                    516,
+                                    350
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "5e9034c419a6978dd9d0cf6f52b39d9b",
+                                  "name": null,
+                                  "role": "AXCheckBox",
+                                  "description": null,
+                                  "role_description": "switch",
+                                  "value": 1,
+                                  "absolute_position": "763.00;336.00",
+                                  "position": "659.00;311.00",
+                                  "size": "26;15",
+                                  "enabled": false,
+                                  "bbox": [
+                                    763,
+                                    336,
+                                    789,
+                                    351
+                                  ],
+                                  "visible_bbox": [
+                                    763,
+                                    336,
+                                    789,
+                                    351
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "8a50616f14a4c8f882cde50f889dd0af",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Badge application icon",
+                                  "absolute_position": "350.00;372.16",
+                                  "position": "246.00;347.16",
+                                  "size": "138;16",
+                                  "enabled": false,
+                                  "bbox": [
+                                    350,
+                                    372,
+                                    488,
+                                    388
+                                  ],
+                                  "visible_bbox": [
+                                    350,
+                                    372,
+                                    488,
+                                    388
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "2d1e140438541df0376ec53d5863f6b5",
+                                  "name": null,
+                                  "role": "AXCheckBox",
+                                  "description": null,
+                                  "role_description": "switch",
+                                  "value": 1,
+                                  "absolute_position": "763.00;374.00",
+                                  "position": "659.00;349.00",
+                                  "size": "26;15",
+                                  "enabled": false,
+                                  "bbox": [
+                                    763,
+                                    374,
+                                    789,
+                                    389
+                                  ],
+                                  "visible_bbox": [
+                                    763,
+                                    374,
+                                    789,
+                                    389
+                                  ],
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00f424ecee37ac7c3d7767c054da4b13",
+                              "name": null,
+                              "role": "AXGroup",
+                              "description": null,
+                              "role_description": "group",
+                              "value": null,
+                              "absolute_position": "337.00;407.00",
+                              "position": "233.00;382.00",
+                              "size": "465;79",
+                              "enabled": true,
+                              "bbox": [
+                                337,
+                                407,
+                                802,
+                                486
+                              ],
+                              "visible_bbox": [
+                                337,
+                                407,
+                                802,
+                                486
+                              ],
+                              "children": [
+                                {
+                                  "id": "162fd1b0066ecfb8004a5e5dbf3f3cca",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Show previews",
+                                  "absolute_position": "350.00;419.16",
+                                  "position": "246.00;394.16",
+                                  "size": "91;16",
+                                  "enabled": false,
+                                  "bbox": [
+                                    350,
+                                    419,
+                                    441,
+                                    435
+                                  ],
+                                  "visible_bbox": [
+                                    350,
+                                    419,
+                                    441,
+                                    435
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "ae07756c79b59f6702893595192e415f",
+                                  "name": null,
+                                  "role": "AXPopUpButton",
+                                  "description": null,
+                                  "role_description": "pop up button",
+                                  "value": "Default",
+                                  "absolute_position": "713.00;418.00",
+                                  "position": "609.00;393.00",
+                                  "size": "76;20",
+                                  "enabled": false,
+                                  "bbox": [
+                                    713,
+                                    418,
+                                    789,
+                                    438
+                                  ],
+                                  "visible_bbox": [
+                                    713,
+                                    418,
+                                    789,
+                                    438
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "09efbaa444b1ebae45e005e3386323d9",
+                                  "name": null,
+                                  "role": "AXStaticText",
+                                  "description": null,
+                                  "role_description": "text",
+                                  "value": "Notification grouping",
+                                  "absolute_position": "350.00;456.16",
+                                  "position": "246.00;431.16",
+                                  "size": "128;16",
+                                  "enabled": false,
+                                  "bbox": [
+                                    350,
+                                    456,
+                                    478,
+                                    472
+                                  ],
+                                  "visible_bbox": [
+                                    350,
+                                    456,
+                                    478,
+                                    472
+                                  ],
+                                  "children": []
+                                },
+                                {
+                                  "id": "ef7f612468367d8cc98b34d76bb397fb",
+                                  "name": null,
+                                  "role": "AXPopUpButton",
+                                  "description": null,
+                                  "role_description": "pop up button",
+                                  "value": "Automatic",
+                                  "absolute_position": "695.00;455.00",
+                                  "position": "591.00;430.00",
+                                  "size": "94;20",
+                                  "enabled": false,
+                                  "bbox": [
+                                    695,
+                                    455,
+                                    789,
+                                    475
+                                  ],
+                                  "visible_bbox": [
+                                    695,
+                                    455,
+                                    789,
+                                    475
+                                  ],
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "fe3557916a93dc411889289c7eeb177c",
+                              "name": null,
+                              "role": "AXButton",
+                              "description": "Help",
+                              "role_description": "button",
+                              "value": null,
+                              "absolute_position": "779.00;502.00",
+                              "position": "675.00;477.00",
+                              "size": "20;20",
+                              "enabled": true,
+                              "bbox": [
+                                779,
+                                502,
+                                799,
+                                522
+                              ],
+                              "visible_bbox": [
+                                779,
+                                502,
+                                799,
+                                522
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6004cebe12ea83440828b851dec69e4f",
+          "name": null,
+          "role": "AXToolbar",
+          "description": null,
+          "role_description": "toolbar",
+          "value": null,
+          "absolute_position": "104.00;25.00",
+          "position": "0.00;0.00",
+          "size": "715;52",
+          "enabled": false,
+          "bbox": [
+            104,
+            25,
+            819,
+            77
+          ],
+          "visible_bbox": [
+            104,
+            25,
+            819,
+            77
+          ],
+          "children": [
+            {
+              "id": "03d9efd624a84dd83b8d0c73ca6de250",
+              "name": null,
+              "role": "AXGroup",
+              "description": null,
+              "role_description": "group",
+              "value": null,
+              "absolute_position": "328.00;25.00",
+              "position": "224.00;0.00",
+              "size": "76;52",
+              "enabled": false,
+              "bbox": [
+                328,
+                25,
+                404,
+                77
+              ],
+              "visible_bbox": [
+                328,
+                25,
+                404,
+                77
+              ],
+              "children": [
+                {
+                  "id": "91238000bfde530cae3837e5df59464d",
+                  "name": null,
+                  "role": "AXGroup",
+                  "description": null,
+                  "role_description": "group",
+                  "value": null,
+                  "absolute_position": "332.00;37.00",
+                  "position": "228.00;12.00",
+                  "size": "68;28",
+                  "enabled": true,
+                  "bbox": [
+                    332,
+                    37,
+                    400,
+                    65
+                  ],
+                  "visible_bbox": [
+                    332,
+                    37,
+                    400,
+                    65
+                  ],
+                  "children": [
+                    {
+                      "id": "91a12d87eb12d476509a21403bed2c9e",
+                      "name": null,
+                      "role": "AXButton",
+                      "description": "Back",
+                      "role_description": "button",
+                      "value": null,
+                      "absolute_position": "326.00;31.00",
+                      "position": "222.00;6.00",
+                      "size": "40;40",
+                      "enabled": true,
+                      "bbox": [
+                        326,
+                        31,
+                        366,
+                        71
+                      ],
+                      "visible_bbox": [
+                        332,
+                        37,
+                        366,
+                        65
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "8b486b9456e737e6079940a523f8c194",
+                      "name": null,
+                      "role": "AXMenuButton",
+                      "description": "Forward",
+                      "role_description": "menu button",
+                      "value": null,
+                      "absolute_position": "366.00;31.00",
+                      "position": "262.00;6.00",
+                      "size": "40;40",
+                      "enabled": false,
+                      "bbox": [
+                        366,
+                        31,
+                        406,
+                        71
+                      ],
+                      "visible_bbox": [
+                        366,
+                        37,
+                        400,
+                        65
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "65834e55daad499f73072019105e5597",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "close button",
+          "value": null,
+          "absolute_position": "122.00;43.00",
+          "position": "18.00;18.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            122,
+            43,
+            138,
+            59
+          ],
+          "visible_bbox": [
+            122,
+            43,
+            138,
+            59
+          ],
+          "children": []
+        },
+        {
+          "id": "1a55a5dec6f8fcc0e75355b61857a572",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "zoom button",
+          "value": null,
+          "absolute_position": "162.00;43.00",
+          "position": "58.00;18.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            162,
+            43,
+            178,
+            59
+          ],
+          "visible_bbox": [
+            162,
+            43,
+            178,
+            59
+          ],
+          "children": [
+            {
+              "id": "904a4a68e0004447721791c52a6a6b0c",
+              "name": null,
+              "role": "AXGroup",
+              "description": null,
+              "role_description": "group",
+              "value": null,
+              "absolute_position": "163.00;43.00",
+              "position": "59.00;18.00",
+              "size": "14;16",
+              "enabled": false,
+              "bbox": [
+                163,
+                43,
+                177,
+                59
+              ],
+              "visible_bbox": [
+                163,
+                43,
+                177,
+                59
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4ec333a8ffe753c836c0fcce934ef733",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "minimize button",
+          "value": null,
+          "absolute_position": "142.00;43.00",
+          "position": "38.00;18.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            142,
+            43,
+            158,
+            59
+          ],
+          "visible_bbox": [
+            142,
+            43,
+            158,
+            59
+          ],
+          "children": []
+        },
+        {
+          "id": "841465e558a4ed57c65f07d84214e97c",
+          "name": null,
+          "role": "AXStaticText",
+          "description": null,
+          "role_description": "text",
+          "value": "Mail",
+          "absolute_position": "404.00;25.00",
+          "position": "300.00;0.00",
+          "size": "398;52",
+          "enabled": true,
+          "bbox": [
+            404,
+            25,
+            802,
+            77
+          ],
+          "visible_bbox": [
+            404,
+            25,
+            802,
+            77
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "lume \u2014 -zsh \u2014 80\u00d724",
+      "pid": 4579,
+      "owner": "Terminal",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 231.0,
+        "y": 236.0,
+        "width": 585.0,
+        "height": 371.0
+      },
+      "layer": 0,
+      "z_index": 4,
+      "opacity": 1.0,
+      "children": [
+        {
+          "id": "2d0d557e5c373dd0cec2e734ffcb6b9c",
+          "name": null,
+          "role": "AXSplitGroup",
+          "description": null,
+          "role_description": "split group",
+          "value": null,
+          "absolute_position": "231.00;264.00",
+          "position": "0.00;28.00",
+          "size": "585;343",
+          "enabled": false,
+          "bbox": [
+            231,
+            264,
+            816,
+            607
+          ],
+          "visible_bbox": [
+            231,
+            264,
+            816,
+            607
+          ],
+          "children": [
+            {
+              "id": "f5fb4751033a8d31303a6dd2d62c874a",
+              "name": null,
+              "role": "AXScrollArea",
+              "description": null,
+              "role_description": "scroll area",
+              "value": null,
+              "absolute_position": "231.00;264.00",
+              "position": "0.00;28.00",
+              "size": "585;343",
+              "enabled": false,
+              "bbox": [
+                231,
+                264,
+                816,
+                607
+              ],
+              "visible_bbox": [
+                231,
+                264,
+                816,
+                607
+              ],
+              "children": [
+                {
+                  "id": "e068ace3a4c38016c0cbb18120b434e3",
+                  "name": null,
+                  "role": "AXTextArea",
+                  "description": "shell",
+                  "role_description": "text entry area",
+                  "value": "Last login: Wed May 20 23:44:42 on console\nlume@lumes-Virtual-Machine ~ % mkdir -p /tmp/matraix-macos-notification-preferences\nlume@lumes-Virtual-Machine ~ % cat > /tmp/matraix-macos-notification-preferences/decision.json << 'EOF'\nheredoc> {\nheredoc>   \"keep_notifications_on\": true,\nheredoc>   \"app_reviewed\": \"Mail\",\nheredoc>   \"reason\": \"Mail is essential for my work as a PM. I need to catch time-sensitive emails from stakeholders without constantly checking the inbox. Banner-style notifications are unobtrusive enough \u2014 they appear briefly and disappear on their own, so they don't break my focus too much. Keeping them on makes sense for a daily work machine.\"\nheredoc> }\nheredoc> EOF\nlume@lumes-Virtual-Machine ~ % cat /tmp/matraix-macos-notification-preferences/decision.json\n{\n  \"keep_notifications_on\": true,\n  \"app_reviewed\": \"Mail\",\n  \"reason\": \"Mail is essential for my work as a PM. I need to catch time-sensitive emails from stakeholders without constantly checking the inbox. Banner-style notifications are unobtrusive enough \u2014 they appear briefly and disappear on their own, so they don't break my focus too much. Keeping them on makes sense for a daily work machine.\"\n}\nlume@lumes-Virtual-Machine ~ % \n",
+                  "absolute_position": "231.00;221.65",
+                  "position": "0.00;-14.35",
+                  "size": "570;385",
+                  "enabled": false,
+                  "bbox": [
+                    231,
+                    221,
+                    801,
+                    607
+                  ],
+                  "visible_bbox": [
+                    231,
+                    264,
+                    801,
+                    607
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "ba63d5843599275d8cea46c68c342e32",
+                  "name": "",
+                  "role": "AXButton",
+                  "description": "Split pane",
+                  "role_description": "button",
+                  "value": null,
+                  "absolute_position": "800.00;262.00",
+                  "position": "569.00;26.00",
+                  "size": "18;18",
+                  "enabled": true,
+                  "bbox": [
+                    800,
+                    262,
+                    818,
+                    280
+                  ],
+                  "visible_bbox": [
+                    800,
+                    264,
+                    816,
+                    280
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "47edd94281b59fb62d1ee50f18263c18",
+                  "name": null,
+                  "role": "AXScrollBar",
+                  "description": null,
+                  "role_description": "scroll bar",
+                  "value": 1.0,
+                  "absolute_position": "800.00;278.00",
+                  "position": "569.00;42.00",
+                  "size": "17;330",
+                  "enabled": true,
+                  "bbox": [
+                    800,
+                    278,
+                    817,
+                    608
+                  ],
+                  "visible_bbox": [
+                    800,
+                    278,
+                    816,
+                    607
+                  ],
+                  "children": [
+                    {
+                      "id": "68612d770f332bf2d0f23a155fe357f3",
+                      "name": null,
+                      "role": "AXValueIndicator",
+                      "description": null,
+                      "role_description": "value indicator",
+                      "value": 1.0,
+                      "absolute_position": "801.00;317.00",
+                      "position": "570.00;81.00",
+                      "size": "15;288",
+                      "enabled": false,
+                      "bbox": [
+                        801,
+                        317,
+                        816,
+                        605
+                      ],
+                      "visible_bbox": [
+                        801,
+                        317,
+                        816,
+                        605
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "2d0cdf4f8169c69bc9301f636dd03861",
+                      "name": null,
+                      "role": "AXButton",
+                      "description": null,
+                      "role_description": "increment arrow button",
+                      "value": null,
+                      "absolute_position": "801.00;279.00",
+                      "position": "570.00;43.00",
+                      "size": "0;0",
+                      "enabled": false,
+                      "bbox": [
+                        801,
+                        279,
+                        801,
+                        279
+                      ],
+                      "visible_bbox": [
+                        801,
+                        279,
+                        801,
+                        279
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "2d0cdf4f8169c69bc9301f636dd03861",
+                      "name": null,
+                      "role": "AXButton",
+                      "description": null,
+                      "role_description": "decrement arrow button",
+                      "value": null,
+                      "absolute_position": "801.00;279.00",
+                      "position": "570.00;43.00",
+                      "size": "0;0",
+                      "enabled": false,
+                      "bbox": [
+                        801,
+                        279,
+                        801,
+                        279
+                      ],
+                      "visible_bbox": [
+                        801,
+                        279,
+                        801,
+                        279
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "e31679c60508b832b8f57322c9d5aeb5",
+                      "name": null,
+                      "role": "AXButton",
+                      "description": null,
+                      "role_description": "increment page button",
+                      "value": null,
+                      "absolute_position": "801.00;605.00",
+                      "position": "570.00;369.00",
+                      "size": "15;2",
+                      "enabled": false,
+                      "bbox": [
+                        801,
+                        605,
+                        816,
+                        607
+                      ],
+                      "visible_bbox": [
+                        801,
+                        605,
+                        816,
+                        607
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "2d9fec350950d1d68d3706c56eab3a18",
+                      "name": null,
+                      "role": "AXButton",
+                      "description": null,
+                      "role_description": "decrement page button",
+                      "value": null,
+                      "absolute_position": "801.00;279.00",
+                      "position": "570.00;43.00",
+                      "size": "15;38",
+                      "enabled": false,
+                      "bbox": [
+                        801,
+                        279,
+                        816,
+                        317
+                      ],
+                      "visible_bbox": [
+                        801,
+                        279,
+                        816,
+                        317
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3d4a8249b85cf0f224c9a355da028b2e",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "close button",
+          "value": null,
+          "absolute_position": "237.00;242.00",
+          "position": "6.00;6.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            237,
+            242,
+            253,
+            258
+          ],
+          "visible_bbox": [
+            237,
+            242,
+            253,
+            258
+          ],
+          "children": []
+        },
+        {
+          "id": "5bfc13a80679d9d0d01024085acafded",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "full screen button",
+          "value": null,
+          "absolute_position": "277.00;242.00",
+          "position": "46.00;6.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            277,
+            242,
+            293,
+            258
+          ],
+          "visible_bbox": [
+            277,
+            242,
+            293,
+            258
+          ],
+          "children": [
+            {
+              "id": "2f42ba546d2e878459fb4d558f869b8b",
+              "name": null,
+              "role": "AXGroup",
+              "description": null,
+              "role_description": "group",
+              "value": null,
+              "absolute_position": "278.00;242.00",
+              "position": "47.00;6.00",
+              "size": "14;16",
+              "enabled": false,
+              "bbox": [
+                278,
+                242,
+                292,
+                258
+              ],
+              "visible_bbox": [
+                278,
+                242,
+                292,
+                258
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "a8b50bad02a184899576650c72ef8fae",
+          "name": null,
+          "role": "AXButton",
+          "description": null,
+          "role_description": "minimize button",
+          "value": null,
+          "absolute_position": "257.00;242.00",
+          "position": "26.00;6.00",
+          "size": "16;16",
+          "enabled": true,
+          "bbox": [
+            257,
+            242,
+            273,
+            258
+          ],
+          "visible_bbox": [
+            257,
+            242,
+            273,
+            258
+          ],
+          "children": []
+        },
+        {
+          "id": "2b2124b04422ca3b39db12adc355f2ea",
+          "name": "lume",
+          "role": "AXImage",
+          "description": null,
+          "role_description": "image",
+          "value": null,
+          "absolute_position": "441.00;240.00",
+          "position": "210.00;4.00",
+          "size": "18;18",
+          "enabled": true,
+          "bbox": [
+            441,
+            240,
+            459,
+            258
+          ],
+          "visible_bbox": [
+            441,
+            240,
+            459,
+            258
+          ],
+          "children": []
+        },
+        {
+          "id": "a04adc42ece966a587909a246b8217f7",
+          "name": null,
+          "role": "AXStaticText",
+          "description": null,
+          "role_description": "text",
+          "value": "lume \u2014 -zsh \u2014 80\u00d724",
+          "absolute_position": "460.00;241.00",
+          "position": "229.00;5.00",
+          "size": "145;16",
+          "enabled": true,
+          "bbox": [
+            460,
+            241,
+            605,
+            257
+          ],
+          "visible_bbox": [
+            460,
+            241,
+            605,
+            257
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Dock",
+      "pid": 349,
+      "owner": "Dock",
+      "role": "dock",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 1080.0
+      },
+      "layer": 20,
+      "z_index": 5,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 19,
+      "name": "Menubar",
+      "pid": 163,
+      "owner": "Window Server",
+      "role": "menubar",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1920.0,
+        "height": 24.0
+      },
+      "layer": 24,
+      "z_index": 6,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 10,
+      "name": "Clock",
+      "pid": 350,
+      "owner": "Control Center",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 1770.0,
+        "y": 0.0,
+        "width": 150.0,
+        "height": 24.0
+      },
+      "layer": 25,
+      "z_index": 7,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 11,
+      "name": "BentoBox",
+      "pid": 350,
+      "owner": "Control Center",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 1736.0,
+        "y": 0.0,
+        "width": 34.0,
+        "height": 24.0
+      },
+      "layer": 25,
+      "z_index": 8,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 22,
+      "name": "Item-0",
+      "pid": 471,
+      "owner": "Spotlight",
+      "role": "app",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 1705.0,
+        "y": 0.0,
+        "width": 31.0,
+        "height": 24.0
+      },
+      "layer": 25,
+      "z_index": 9,
+      "opacity": 1.0,
+      "children": []
+    },
+    {
+      "id": 64,
+      "name": "StatusIndicator",
+      "pid": 163,
+      "owner": "Window Server",
+      "role": "desktop",
+      "is_on_screen": true,
+      "bounds": {
+        "x": 1757.0,
+        "y": 3.0,
+        "width": 10.0,
+        "height": 18.0
+      },
+      "layer": 2147483630,
+      "z_index": 10,
+      "opacity": 1.0,
+      "children": []
+    }
+  ],
+  "menubar_items": [
+    {
+      "title": "Apple",
+      "bounds": {
+        "x": 10.0,
+        "y": 0.0,
+        "width": 34.0,
+        "height": 24.0
+      },
+      "index": 0,
+      "app_pid": 4579
+    },
+    {
+      "title": "Terminal",
+      "bounds": {
+        "x": 44.0,
+        "y": 0.0,
+        "width": 76.0,
+        "height": 24.0
+      },
+      "index": 1,
+      "app_pid": 4579
+    },
+    {
+      "title": "Shell",
+      "bounds": {
+        "x": 120.0,
+        "y": 0.0,
+        "width": 50.0,
+        "height": 24.0
+      },
+      "index": 2,
+      "app_pid": 4579
+    },
+    {
+      "title": "Edit",
+      "bounds": {
+        "x": 170.0,
+        "y": 0.0,
+        "width": 44.0,
+        "height": 24.0
+      },
+      "index": 3,
+      "app_pid": 4579
+    },
+    {
+      "title": "View",
+      "bounds": {
+        "x": 214.0,
+        "y": 0.0,
+        "width": 50.0,
+        "height": 24.0
+      },
+      "index": 4,
+      "app_pid": 4579
+    },
+    {
+      "title": "Window",
+      "bounds": {
+        "x": 264.0,
+        "y": 0.0,
+        "width": 69.0,
+        "height": 24.0
+      },
+      "index": 5,
+      "app_pid": 4579
+    },
+    {
+      "title": "Help",
+      "bounds": {
+        "x": 333.0,
+        "y": 0.0,
+        "width": 48.0,
+        "height": 24.0
+      },
+      "index": 6,
+      "app_pid": 4579
+    }
+  ],
+  "dock_items": [
+    {
+      "title": "Finder",
+      "description": "",
+      "bounds": {
+        "x": 638.7000122070312,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 0,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "Launchpad",
+      "description": "",
+      "bounds": {
+        "x": 706.7000122070312,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 1,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "Safari",
+      "description": "",
+      "bounds": {
+        "x": 774.7000122070312,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 2,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "Notes",
+      "description": "",
+      "bounds": {
+        "x": 842.7000122070312,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 3,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "App Store",
+      "description": "",
+      "bounds": {
+        "x": 910.7000122070312,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 4,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "Terminal",
+      "description": "",
+      "bounds": {
+        "x": 978.7000122070312,
+        "y": 996.0000610351562,
+        "width": 67.99993896484375,
+        "height": 78.99993896484375
+      },
+      "index": 5,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "System Settings",
+      "description": "",
+      "bounds": {
+        "x": 1046.699951171875,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 6,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "TextEdit",
+      "description": "",
+      "bounds": {
+        "x": 1114.699951171875,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 7,
+      "type": "application",
+      "role": "AXDockItem",
+      "subrole": "AXApplicationDockItem"
+    },
+    {
+      "title": "Untitled",
+      "description": "",
+      "bounds": {
+        "x": 1182.699951171875,
+        "y": 996.0,
+        "width": 30.5999755859375,
+        "height": 79.0
+      },
+      "index": 8,
+      "type": "separator",
+      "role": "AXDockItem",
+      "subrole": "AXSeparatorDockItem"
+    },
+    {
+      "title": "Trash",
+      "description": "",
+      "bounds": {
+        "x": 1213.300048828125,
+        "y": 996.0,
+        "width": 68.0,
+        "height": 79.0
+      },
+      "index": 9,
+      "type": "trash",
+      "role": "AXDockItem",
+      "subrole": "AXTrashDockItem"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "e94717bc-3b5c-474a-a00a-3de5d098dab7",
+    "started_at": "2026-06-16T21:02:58.402217",
+    "updated_at": "2026-06-16T21:06:27.697181",
+    "finished_at": "2026-06-16T21:06:27.697181",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "persona-openhands-sdk__claude-sonnet-4-6__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "books-interest-playwright__2dhtvRy"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 157519,
+        "n_cache_tokens": 141583,
+        "n_output_tokens": 5053,
+        "cost_usd": 0.1779504
+    }
+}
