@@ -127,6 +127,28 @@ def create_app(db_path: str = ":memory:", recsys_type: str = "random", max_rec_p
     def get_traces(user_id: int | None = None, action: str | None = None, limit: int = 1000):
         return state.db.get_traces(user_id=user_id, action=action, limit=limit)
 
+    @app.get("/posts")
+    def get_posts(limit: int = 50):
+        """Recent posts (newest first) with author name, for the live feed."""
+        posts = state.db.get_all_posts(limit=limit)
+        users = {u["user_id"]: u for u in state.db.get_all_users()}
+        feed = []
+        for p in posts:
+            author = users.get(p.get("user_id"), {})
+            feed.append({
+                "post_id": p.get("post_id"),
+                "user_id": p.get("user_id"),
+                "author": author.get("name") or author.get("user_name") or f"user{p.get('user_id')}",
+                "content": p.get("content"),
+                "quote_content": p.get("quote_content"),
+                "is_repost": p.get("original_post_id") is not None,
+                "num_likes": p.get("num_likes", 0),
+                "num_comments": p.get("num_comments", 0),
+                "num_shares": p.get("num_shares", 0),
+                "created_at": p.get("created_at"),
+            })
+        return feed
+
     @app.get("/stats")
     def get_stats():
         db_stats = state.db.stats()

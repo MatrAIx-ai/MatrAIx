@@ -30,6 +30,7 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, JSONResponse
 
 PLATFORM_URL = os.environ.get("PLATFORM_URL", "http://127.0.0.1:8000")
+DB_PATH = os.environ.get("DB_PATH", os.path.expanduser("~/MatrAIx/environments/oasis/output/simulation.db"))
 START_TIME = time.time()
 
 
@@ -100,7 +101,49 @@ def platform_state() -> dict[str, Any]:
                   for t in (traces if isinstance(traces, list) else [])][:12]
     except requests.RequestException:
         recent = []
-    return {"stats": stats, "recent": recent}
+    posts = _posts_from_http() or _posts_from_db()
+    return {"stats": stats, "recent": recent, "posts": posts}
+
+
+def _posts_from_http() -> list[dict[str, Any]]:
+    """Preferred path: the platform's /posts endpoint (if it has it)."""
+    try:
+        r = requests.get(f"{PLATFORM_URL}/posts?limit=40", timeout=5)
+        if r.ok and isinstance(r.json(), list):
+            return r.json()
+    except requests.RequestException:
+        pass
+    return []
+
+
+def _posts_from_db() -> list[dict[str, Any]]:
+    """Fallback: read posts straight from the platform's SQLite file (read-only).
+
+    Lets the dashboard show post text against an ALREADY-RUNNING platform that
+    predates the /posts endpoint, without restarting it (which would wipe state).
+    """
+    if not DB_PATH or not os.path.exists(DB_PATH):
+        return []
+    import sqlite3
+    try:
+        con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True, timeout=3)
+        con.row_factory = sqlite3.Row
+        rows = con.execute(
+            "SELECT p.post_id, p.user_id, p.content, p.original_post_id, "
+            "p.num_likes, p.num_comments, p.num_shares, u.name, u.user_name "
+            "FROM post p LEFT JOIN user u ON u.user_id = p.user_id "
+            "ORDER BY p.created_at DESC LIMIT 40"
+        ).fetchall()
+        con.close()
+        return [{
+            "post_id": r["post_id"], "user_id": r["user_id"],
+            "author": r["name"] or r["user_name"] or f"user{r['user_id']}",
+            "content": r["content"], "is_repost": r["original_post_id"] is not None,
+            "num_likes": r["num_likes"] or 0, "num_comments": r["num_comments"] or 0,
+            "num_shares": r["num_shares"] or 0,
+        } for r in rows]
+    except Exception:
+        return []
 
 
 app = FastAPI(title="OASIS Sim Dashboard")
@@ -145,6 +188,12 @@ HTML_PAGE = """<!doctype html><html><head><meta charset=utf-8>
  .svc{font-size:12px;padding:3px 0}
  .recent div{font-size:11px;color:#9aa7bd;padding:1px 0}
  small{color:#5b6678}
+ .feed{max-height:78vh;overflow-y:auto}
+ .post{background:#0e1420;border:1px solid #1f2733;border-radius:8px;padding:8px 10px;margin-bottom:7px}
+ .post .who{font-size:12px;color:#8ab4ff;font-weight:600}
+ .post .txt{font-size:13px;color:#d7dce5;margin:3px 0;white-space:pre-wrap;word-break:break-word}
+ .post .meta{font-size:11px;color:#5b6678}
+ .rp{color:#e8c97a;font-size:10px;border:1px solid #3a2f12;border-radius:4px;padding:0 4px;margin-left:5px}
 </style></head><body>
 <header>
  <h1>🌐 OASIS Multi-Agent Social Simulation</h1>
@@ -171,6 +220,10 @@ HTML_PAGE = """<!doctype html><html><head><meta charset=utf-8>
   <div id=stats></div>
   <h2 style="margin-top:14px">Recent activity</h2>
   <div class=recent id=recent></div>
+ </div>
+ <div class=col style="flex:1.3">
+  <h2>📝 Live post feed</h2>
+  <div class=feed id=feed></div>
  </div>
 </div>
 <script>
@@ -203,6 +256,13 @@ async function tick(){
     .filter(k=>k in st).map(k=>`<div class=stat><span>${k}</span><b>${st[k]}</b></div>`).join('');
   document.getElementById('recent').innerHTML=(s.platform.recent||[])
     .map(r=>`<div>user ${r.user_id} → ${r.action}</div>`).join('')||'<small>no activity yet</small>';
+  // live post feed
+  const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  document.getElementById('feed').innerHTML=(s.platform.posts||[])
+    .map(p=>`<div class=post><div class=who>${esc(p.author)} <small>#${p.user_id}</small>${p.is_repost?'<span class=rp>repost</span>':''}</div>`
+      +`<div class=txt>${esc(p.content)}</div>`
+      +`<div class=meta>❤ ${p.num_likes}  💬 ${p.num_comments}  🔁 ${p.num_shares}</div></div>`).join('')
+    ||'<small>no posts yet…</small>';
  }catch(e){}
  setTimeout(tick,2000);
 }
@@ -214,6 +274,9 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=8500)
     ap.add_argument("--platform-url", default=PLATFORM_URL)
+    ap.add_argument("--db-path", default=DB_PATH,
+                    help="platform SQLite file (read-only fallback for the post feed)")
     args = ap.parse_args()
     PLATFORM_URL = args.platform_url
+    DB_PATH = args.db_path
     uvicorn.run(app, host="0.0.0.0", port=args.port)
