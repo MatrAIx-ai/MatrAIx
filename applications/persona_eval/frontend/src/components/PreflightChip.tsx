@@ -1,5 +1,5 @@
 /**
- * PreflightChip — the live readiness status in the top bar.
+ * PreflightChip: the live readiness status in the top bar.
  *
  * Polls `GET /api/preflight` and reports readiness in plain language. The chip
  * itself is calm; clicking it opens a popover that lists each readiness check by

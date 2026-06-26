@@ -3,14 +3,14 @@
  *
  * The cockpit ports `tools/recbot-mockups/cockpit-stitch-v2.html` into React.
  * The mockup shows rich, structured persona fields (a descriptive title,
- * demographic chips, preference/dislike/constraint tags) — but the real backend
+ * demographic chips, preference/dislike/constraint tags), but the real backend
  * only exposes, per curated persona, `{id, name, source, blurb}` over the list
  * endpoint and a humanized `context` *text block* (no structured fields) on a
  * persisted run. So the cockpit must derive what it shows from that text and
- * degrade gracefully when a field is genuinely absent — never invent data.
+ * degrade gracefully when a field is genuinely absent, never invent data.
  *
  * This module collects:
- *   - `Sym` — a thin Material Symbols Outlined glyph (the cockpit's icon set),
+ *   - `Sym`, a thin Material Symbols Outlined glyph (the cockpit's icon set),
  *     with the same `FILL`/size knobs the mockup uses, defaulting to
  *     `aria-hidden` so icon-only controls must supply their own `aria-label`.
  *   - persona-context parsing: a descriptive title (human framing for the bare
@@ -179,7 +179,7 @@ export function parseDemographicsFromBlurb(blurb: string | null | undefined): De
   const chips: DemographicChip[] = [];
 
   // Age may be a number (Nemotron) or a range like "40 to 49" (PRIMEX).
-  const age = blurb.match(/\bAge:\s*(\d{1,3}(?:\s*(?:to|-|–)\s*\d{1,3})?)/i);
+  const age = blurb.match(/\bAge:\s*(\d{1,3}(?:\s*(?:to|-|-)\s*\d{1,3})?)/i);
   if (age) {
     const value = age[1].replace(/\s+/g, " ").trim();
     chips.push({ key: "age", text: `Age ${value}`, full: `Age ${value}` });
@@ -203,7 +203,7 @@ export function parseDemographicsFromBlurb(blurb: string | null | undefined): De
 }
 
 /**
- * A descriptive, human title for a persona — the "human framing" the bare
+ * A descriptive, human title for a persona, the "human framing" the bare
  * codename heading needs. Derived from the persona's real text (context when
  * loaded, else the catalog blurb):
  *   1. a `Bio:` self-description (OASIS), else
@@ -228,7 +228,7 @@ export function personaDescriptiveTitle(
   // context text covers both shapes.
   const text = (context && context.trim() ? context : blurb) ?? "";
 
-  // 1. A "Persona Description:" sentence (PersonaHub) — the cleanest self-desc.
+  // 1. A "Persona Description:" sentence (PersonaHub), the cleanest self-desc.
   const desc = text.match(/\bPersona Description:\s*([^]+?)(?:\s+[A-Z][a-z]+:|$)/);
   if (desc?.[1]?.trim()) {
     const clause = desc[1].split(/[.\n]/)[0]?.trim();
@@ -266,7 +266,7 @@ export interface PersonaSection {
 /**
  * Split a rendered persona context into top-level `Label:` sections (e.g.
  * `Demographics`, `Personas`, `Background`). Nested indented lines are folded
- * into the parent section's body. This is presentation only — the raw context
+ * into the parent section's body. This is presentation only, the raw context
  * is always available verbatim for the "Raw" view.
  */
 export function parsePersonaSections(context: string | null | undefined): PersonaSection[] {
@@ -291,7 +291,7 @@ export function parsePersonaSections(context: string | null | undefined): Person
     } else if (current) {
       bodyLines.push(raw.replace(/^ {2}/, ""));
     } else {
-      // Leading content before any section header — start an untitled section.
+      // Leading content before any section header, start an untitled section.
       current = { label: "", body: "" };
       bodyLines.push(raw);
     }
@@ -301,7 +301,7 @@ export function parsePersonaSections(context: string | null | undefined): Person
 }
 
 // ---------------------------------------------------------------------------
-// Evaluation score scale (red → amber → green) — scores ONLY
+// Evaluation score scale (red → amber → green), scores ONLY
 // ---------------------------------------------------------------------------
 
 /** The colour band an evaluation score falls into. */
@@ -322,7 +322,7 @@ export function scoreBand(normalized: number | null | undefined): ScoreBand {
 /**
  * Tokenized text + bar + soft-background classes per score band, drawn from the
  * Executive Precision semantic ramp (emerald success / amber warning / rose
- * error — never the indigo accent). Score *text* uses the darker
+ * error, never the indigo accent). Score *text* uses the darker
  * `on-*-container` tokens so it clears 4.5:1 on a light surface; bars use the
  * base semantic colour; soft backgrounds use the `*-container` token.
  */

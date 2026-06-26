@@ -1,10 +1,10 @@
 /**
- * ChatConfigBar — the Chat workbench's config row (below the top nav).
+ * ChatConfigBar: the Chat workbench's config row (below the top nav).
  *
  * Mirrors the cockpit's RunConfigBar register: the editable config knobs on the
  * left (driven by the `/api/config/options` metadata, via `ConfigBar`) and the
  * read-only "Environment" facts popover on the right. Keeping the knobs in their
- * own bar — not the top nav — keeps the two-surface nav clean at every width.
+ * own bar (not the top nav) keeps the two-surface nav clean at every width.
  *
  * Rendered only in Chat (the cockpit owns its own config bar).
  */

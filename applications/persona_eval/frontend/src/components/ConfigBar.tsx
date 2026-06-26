@@ -1,5 +1,5 @@
 /**
- * ConfigBar — the Chat workbench's editable config knobs in the top bar.
+ * ConfigBar: the Chat workbench's editable config knobs in the top bar.
  *
  * Driven by the enriched config metadata from `GET /api/config/options`: each
  * editable knob carries a human `label`, per-value `{label, description}`, and a
@@ -16,7 +16,7 @@ import { Sym } from "./cockpit/cockpitShared";
 import type { ConfigKnob, SessionConfig } from "@/lib/types";
 
 /**
- * Allowed values per config key — the flat fallback map the bar can still
+ * Allowed values per config key: the flat fallback map the bar can still
  * consume when only values (no metadata) are available. App derives the richer
  * `knobs` list directly now, so this is the degraded path.
  */
@@ -39,7 +39,7 @@ export interface ConfigBarProps {
   config: SessionConfig | null;
   /**
    * The editable config knobs (with labels/descriptions/`rebuildsAgent`) from
-   * `/api/config/options`, OR — degraded — the flat value map. `null` until the
+   * `/api/config/options`, OR (degraded) the flat value map. `null` until the
    * options query resolves.
    */
   options: ConfigKnob[] | ConfigOptionsMap | null;
@@ -81,7 +81,7 @@ export function ConfigBar({ config, options, disabled, onChange }: ConfigBarProp
   }
 
   // Render every editable knob the backend provides, in its display order
-  // (engine, domain, …). The fixed ranker/resource modes are not knobs — they
+  // (engine, domain, …). The fixed ranker/resource modes are not knobs; they
   // live in the Environment facts popover instead.
   return (
     <div className="flex items-center gap-md">
@@ -89,7 +89,7 @@ export function ConfigBar({ config, options, disabled, onChange }: ConfigBarProp
         const key = knob.key as keyof SessionConfig;
         const value = config[key];
         if (value === undefined) return null;
-        // Domain is a RecAI-only concept — the other chatbot apps (OpenBB,
+        // Domain is a RecAI-only concept: the other chatbot apps (OpenBB,
         // Medical) have no domains, so don't show a Domain knob for them.
         if (knob.key === "domain" && config.applicationId !== "recai") return null;
         const knobOptions: KnobOption[] = knob.options.map((o) => ({
@@ -109,7 +109,7 @@ export function ConfigBar({ config, options, disabled, onChange }: ConfigBarProp
             {knob.rebuildsAgent && (
               <span
                 className="flex items-center text-warn"
-                title="Changing this re-warms the recommender — the next turn will be slower."
+                title="Changing this re-warms the recommender. The next turn will be slower."
                 aria-label="Changing this re-warms the recommender; the next turn will be slower"
               >
                 <Sym name="bolt" fill={1} size={14} />

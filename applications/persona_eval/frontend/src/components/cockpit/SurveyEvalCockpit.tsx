@@ -1,8 +1,8 @@
 /**
- * SurveyEvalCockpit — the Survey PersonaEval surface.
+ * SurveyEvalCockpit: the Survey PersonaEval surface.
  *
  * Reproduces the approved redesign mockup's `data-view="cockpit"` setup form
- * (the same centered shell as the canonical chatbot cockpit — header +
+ * (the same centered shell as the canonical chatbot cockpit: header +
  * application-type switch + pipeline strip + run-config card + target-persona
  * panel + Run-eval CTA), with the Survey-specific body (an instrument picker +
  * an "Instrument preview" panel and a driver/artifacts note instead of a Harbor
@@ -13,7 +13,7 @@
  *
  * The data layer is untouched: `useSurveyEval`, the `listSurveyInstruments`
  * query, the export logic, and every result/trajectory shape are wired exactly
- * as before — only the structure and presentation are rebuilt.
+ * as before. Only the structure and presentation are rebuilt.
  */
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -85,7 +85,7 @@ function surveyStatusLine(phase: SurveyEvalRunPhase, jobPhase: string | null | u
 function questionTypeMeta(type: string): { label: string; tone: string; tooltip: string } {
   switch (type) {
     case "likert":
-      return { label: "Likert", tone: "text-primary border-primary/30 bg-primary/10", tooltip: "Rate on a 1–5 scale" };
+      return { label: "Likert", tone: "text-primary border-primary/30 bg-primary/10", tooltip: "Rate on a 1 to 5 scale" };
     case "single_choice":
       return { label: "Single", tone: "text-secondary border-secondary/30 bg-secondary/10", tooltip: "Choose one option" };
     case "multi_choice":
@@ -234,14 +234,14 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
             <div className="hud mb-2 text-[10px] text-primary">PersonaEval · Cockpit</div>
             <h1 className="font-display text-[26px] font-bold tracking-tight text-text-main">Configure a simulation</h1>
             <p className="mt-1 text-[13px] text-text-variant">
-              Pick a persona and a questionnaire, then launch — a simulated user fills out the form and we score how it
+              Pick a persona and a questionnaire, then launch. A simulated user fills out the form and we score how it
               responds.
             </p>
           </div>
           <AppTypeSwitch value={taskType} onChange={onTaskTypeChange} disabled={isRunning} />
         </div>
 
-        {/* Pipeline strip — Persona → Survey → Artifact */}
+        {/* Pipeline strip: Persona → Survey → Artifact */}
         <SurveyPipeline
           phase={phase}
           jobPhase={job?.phase}
@@ -251,7 +251,7 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
         />
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
-          {/* LEFT — config + preview/results + target persona */}
+          {/* LEFT: config + preview/results + target persona */}
           <div className="space-y-5 lg:col-span-8">
             <RunConfigCard
               instrumentId={instrumentId}
@@ -304,7 +304,7 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
             />
           </div>
 
-          {/* RIGHT — driver/artifacts + Run eval */}
+          {/* RIGHT: driver/artifacts + Run eval */}
           <div className="space-y-5 lg:col-span-4">
             <DriverArtifactsNote />
 
@@ -493,7 +493,7 @@ function SurveyPipeline({
   );
 }
 
-/** "Run configuration" card — questionnaire + simulated-user model selects. */
+/** "Run configuration" card: questionnaire + simulated-user model selects. */
 function RunConfigCard({
   instrumentId,
   instrumentOptions,
@@ -572,7 +572,7 @@ function FieldSelect({
           }`}
         >
           {options.length === 0 ? (
-            <option value="">—</option>
+            <option value="">None available</option>
           ) : (
             options.map((option) => (
               <option key={option.value} value={option.value}>
@@ -591,7 +591,7 @@ function FieldSelect({
   );
 }
 
-/** "Instrument preview" — compact type-badged question list (mockup lines 198-207). */
+/** "Instrument preview": a compact type-badged question list (mockup lines 198-207). */
 function InstrumentPreview({ instrument }: { instrument: SurveyInstrument }) {
   return (
     <section className="panel rounded-md border border-outline bg-surface p-5">
@@ -721,10 +721,10 @@ function SurveyLive({
           <MetricTile value={`${answered}/${total}`} caption="Completion" lead />
           <ValidityTile valid={completion.valid} />
           <MetricTile
-            value={completion.meanLikert == null ? "—" : completion.meanLikert.toFixed(1)}
+            value={completion.meanLikert == null ? "n/a" : completion.meanLikert.toFixed(1)}
             unit={completion.meanLikert == null ? undefined : "/5"}
             caption="Mean Likert"
-            hint="Average of the 1–5 ratings the persona gave across Likert questions."
+            hint="Average of the 1 to 5 ratings the persona gave across Likert questions."
           />
           <MetricTile value={`${freeTextCount}`} caption="Free-text" />
         </div>
@@ -734,7 +734,7 @@ function SurveyLive({
       {failed && (
         <ErrorCard
           title="The questionnaire didn’t finish"
-          body={error ?? "Something interrupted the run. Your setup is still here — press Try again."}
+          body={error ?? "Something interrupted the run. Your setup is still here. Press Try again."}
           onRetry={onRetry}
           retryLabel="Try again"
         />
@@ -917,7 +917,7 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
   // Fallback for unknown types / missing question metadata.
   return (
     <div className="rounded border border-outline bg-field px-3 py-2.5">
-      <p className="font-mono text-[12px] text-text-main">{formatSurveyValue(answer.value) || "—"}</p>
+      <p className="font-mono text-[12px] text-text-main">{formatSurveyValue(answer.value) || "(no answer)"}</p>
     </div>
   );
 }
@@ -974,7 +974,7 @@ function DriverArtifactsNote() {
         <span className="hud rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim">Survey form</span>
       </div>
       <p className="mb-3 text-[12px] leading-relaxed text-text-variant">
-        No fixed application stack — the persona fills the questionnaire directly.
+        No fixed application stack. The persona fills the questionnaire directly.
       </p>
       <div className="hud mb-1.5 text-[8px] text-text-dim">Artifacts produced</div>
       <div className="flex flex-wrap gap-1.5">

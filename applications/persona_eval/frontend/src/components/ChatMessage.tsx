@@ -1,18 +1,18 @@
 /**
- * ChatMessage — a single conversational bubble in the Chat workbench thread.
+ * ChatMessage: a single conversational bubble in the Chat workbench thread.
  *
  * Ports the matrAIx chat bubble design (mockup `app-redesign-v3.html:309-321`):
  * the user ("You") sits on the RIGHT with a top-right-clipped bubble; RecAI sits
  * on the LEFT with a top-left-clipped, full-width bubble that holds the reply
- * text and — when the turn recommended items — a 2-up grid of recommendation
+ * text and (when the turn recommended items) a 2-up grid of recommendation
  * cards. A row of honest meta chips (tool-call OK / item count / latency) sits
  * just below the RecAI bubble.
  *
  * It is intentionally presentational: the parent `ChatThread` decides what to
  * render (persisted turns, the optimistic in-flight bubble) and passes the
  * pieces in. The RecAI bubble can be made clickable (to focus the turn in the
- * inspector) via `onClick`; it stays a focusable `role=button` wrapper — not a
- * `<button>` — so the inner RecommendationCard buttons remain valid HTML.
+ * inspector) via `onClick`; it stays a focusable `role=button` wrapper (not a
+ * `<button>`) so the inner RecommendationCard buttons remain valid HTML.
  */
 import type { ReactNode } from "react";
 

@@ -169,20 +169,23 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
             "detail": (
                 "Configured."
                 if openai_key
-                else "Not configured — required to run real turns."
+                else "Not configured. Required to run real turns."
             ),
         }
     )
 
-    # Browsable catalog — readiness is "has items", not a file path.
+    # Browsable catalog. Readiness is "has items", not a file path. The size is
+    # the default domain's corpus (movie), so name the domain in the detail so it
+    # doesn't read as the whole catalog.
     size = getattr(catalog, "size", 0)
+    cat_domain = getattr(catalog, "domain", None) or "movie"
     if getattr(catalog, "available", False) and size:
         checks.append(
             {
                 "group": "Core",
                 "name": "Catalog",
                 "ok": True,
-                "detail": "Loaded ({} items).".format(size),
+                "detail": "{:,} items loaded from the default ({}) catalog.".format(size, cat_domain),
             }
         )
     else:
@@ -224,7 +227,7 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
             "group": "Chatbot",
             "name": "OpenBB (finance)",
             "ok": True,
-            "detail": "Adapter available — OpenBB access is checked when a run starts.",
+            "detail": "Adapter available. OpenBB access is checked when a run starts.",
         }
     )
     checks.append(
@@ -232,7 +235,7 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
             "group": "Chatbot",
             "name": "Medical assistant",
             "ok": True,
-            "detail": "Adapter available — the assistant service is checked when a run starts.",
+            "detail": "Adapter available. The assistant service is checked when a run starts.",
         }
     )
 
@@ -242,7 +245,7 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
             "group": "Survey",
             "name": "Survey forms",
             "ok": True,
-            "detail": "Survey interface available — instruments load when you open it.",
+            "detail": "Survey interface available. Instruments load when you open it.",
         }
     )
     checks.append(
@@ -250,7 +253,7 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
             "group": "Web",
             "name": "Web tasks",
             "ok": True,
-            "detail": "Browser / computer-use interface available — checked when a run starts.",
+            "detail": "Browser and computer-use interface available. It runs when you start a web task.",
         }
     )
 

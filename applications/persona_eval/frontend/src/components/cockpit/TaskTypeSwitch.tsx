@@ -1,5 +1,5 @@
 /**
- * TaskTypeSwitch — the application-type segmented control.
+ * TaskTypeSwitch: the application-type segmented control.
  *
  * Ports the mockup's "Application type" switch (`app-redesign-v3.html:106-112`):
  * a `.hud` micro-label above a compact `inline-flex` segmented control

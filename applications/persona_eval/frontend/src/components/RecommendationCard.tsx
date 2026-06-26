@@ -1,5 +1,5 @@
 /**
- * RecommendationCard — one recommended catalog item, rendered as a card inside
+ * RecommendationCard: one recommended catalog item, rendered as a card inside
  * the RecAI reply bubble (matrAIx chat, mockup `app-redesign-v3.html:315`).
  *
  * A compact card: a mono cyan rank ("01"), the title, a one-line meta blurb,

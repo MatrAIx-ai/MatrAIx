@@ -1,11 +1,11 @@
 /**
- * EnvironmentPopover — the read-only "Fixed environment" facts.
+ * EnvironmentPopover: the read-only "Fixed environment" facts.
  *
  * The cockpit separates *editable knobs* (Model/Domain/Conversation style/Max
  * turns) from the *fixed* parts of the stack the operator cannot change. This
- * renders that read-only block — Runtime (Harbor), persona agent, application
+ * renders that read-only block: Runtime (Harbor), persona agent, application
  * API sidecar, application scorer, persona model default, cache policy, adapter
- * resources, adapter agent, and the Harbor/application prompt boundary — from the
+ * resources, adapter agent, and the Harbor/application prompt boundary, from the
  * backend `environment` block of `GET /api/config/options`, behind a button
  * that toggles a popover.
  *
@@ -23,7 +23,7 @@ export interface EnvironmentPopoverProps {
 }
 
 /**
- * Per-app Selection / Agent / Resources — fixed infrastructure facts that differ
+ * Per-app Selection / Agent / Resources: fixed infrastructure facts that differ
  * by adapter (the data layer exposes a single `ConfigEnvironment`, so these are
  * a presentational constant, in the same spirit as `DOMAIN_META`). Falls back to
  * the `environment` block when an app isn't mapped (never fabricated).
@@ -36,7 +36,7 @@ const APP_ENVIRONMENT: Record<ApplicationId, { selection: string; agent: string;
 
 /**
  * Friendly display labels for the few raw stack tokens the environment block can
- * carry (translate DISPLAY ONLY — the underlying token/value is never changed).
+ * carry (translate DISPLAY ONLY: the underlying token/value is never changed).
  * Unknown values pass through untouched, so already-friendly labels stay as-is.
  */
 const FRIENDLY_ENV: Record<string, string> = {
@@ -47,7 +47,7 @@ const friendlyEnv = (value: string): string => FRIENDLY_ENV[value] ?? value;
 
 export interface EnvironmentPanelProps {
   environment: ConfigEnvironment | null;
-  /** Selected adapter — picks the per-app Selection / Agent / Resources facts. */
+  /** Selected adapter: picks the per-app Selection / Agent / Resources facts. */
   applicationId: ApplicationId;
 }
 
@@ -62,7 +62,7 @@ function EnvRow({ label, value }: { label: string; value: string }) {
 }
 
 /**
- * EnvironmentPanel — the cockpit's read-only "Harbor environment" right-rail
+ * EnvironmentPanel: the cockpit's read-only "Harbor environment" right-rail
  * panel (mockup `app-redesign-v3.html:250-264`). A persistent facts surface
  * (not the popover): Runtime / Chatbot API / Selection / Agent / Resources /
  * Scorer, plus the prompt-boundary footer. Per-app Selection/Agent/Resources

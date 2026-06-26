@@ -1,15 +1,15 @@
 /**
- * RatingChip — the scannable signature of the Runs surface.
+ * RatingChip: the scannable signature of the Runs surface.
  *
- * A compact mono chip that bands an overall 1–10 rating by colour on the
+ * A compact mono chip that bands an overall 1-10 rating by colour on the
  * red→amber→green evaluation score scale (the same scale the cockpit scorecard
- * uses — never the indigo accent). The colour is ALWAYS paired with the number,
+ * uses, never the indigo accent). The colour is ALWAYS paired with the number,
  * and the rest of the Runs list stays deliberately calm so the eye lands here.
  *
  *   rating >= 7  → high (green)
  *   4 .. 6       → mid  (amber)
  *   rating <= 3  → low  (red)
- *   null         → "—"  (muted, quiet)
+ *   null         → "-"  (muted, quiet)
  *
  * The value is mono with a faint "/10" suffix; `tabular-nums` keeps a column of
  * chips aligned.
@@ -38,7 +38,7 @@ export function RatingChip({ rating, size = "sm", className = "" }: RatingChipPr
         title="Not scored"
         aria-label="No rating"
       >
-        —
+        -
       </span>
     );
   }

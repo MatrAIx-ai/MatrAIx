@@ -1,5 +1,5 @@
 /**
- * RunsView — the Runs history surface, folded inside PersonaEval.
+ * RunsView: the Runs history surface, folded inside PersonaEval.
  *
  * Rendered below the TopBar when the PersonaEval runs sub-view is active. The
  * sub-route is driven entirely by the URL (via App's handlers):
@@ -229,7 +229,7 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
         <span title="The simulated user's overall rating, out of 10. Green is great, amber is mixed, red means it fell short.">
           Score
         </span>
-        <span title="Which kind of app was tested — a chatbot, a survey, or a website.">Kind</span>
+        <span title="Which kind of app was tested: a chatbot, a survey, or a website.">Kind</span>
         <span>Simulated user</span>
         <span>Domain</span>
         <span>Conversation style</span>
@@ -269,12 +269,12 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
                   ) : null}
                 </span>
 
-                {/* Rating — the scannable signature */}
+                {/* Rating: the scannable signature */}
                 <span className="flex">
                   <RatingChip rating={run.overallRating ?? null} />
                 </span>
 
-                {/* Kind — app-type tag (chatbot today; forward-compatible) */}
+                {/* Kind: app-type tag (chatbot today; forward-compatible) */}
                 <span className="flex">
                   <AppTypeTag type={runSummaryAppType(run)} />
                 </span>
@@ -302,7 +302,7 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
 
                 {/* Turns */}
                 <span className="text-right font-mono text-[11px] tabular-nums text-text-variant">
-                  {run.numTurns ?? "—"}
+                  {run.numTurns ?? "-"}
                 </span>
 
                 {/* When */}

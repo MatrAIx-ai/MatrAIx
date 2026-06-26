@@ -1,5 +1,5 @@
 /**
- * ChatThread — the centre conversation pane of the Chat workbench.
+ * ChatThread: the centre conversation pane of the Chat workbench.
  *
  * Renders the persisted turns of a session as the matrAIx bubble thread (mockup
  * `app-redesign-v3.html:308-322`): the user ("You") on the right, RecAI on the
@@ -49,7 +49,7 @@ function EmptyThread() {
         <div>
           <h3 className="font-display text-[15px] font-semibold text-text-main">Start the conversation</h3>
           <p className="mx-auto mt-2 max-w-sm text-[13px] leading-relaxed text-text-variant">
-            You&apos;ll play the user here — type what they&apos;d want and RecAI will recommend. Heads up:
+            You&apos;ll play the user here. Type what they&apos;d want and RecAI will recommend. Heads up:
             the first message wakes the recommender (about a minute); after that, replies are quick.
           </p>
         </div>
@@ -83,7 +83,7 @@ function ThinkingSkeleton({ phase }: { phase: TurnPhase }) {
         </div>
         <p className="mt-3 text-[12px] leading-relaxed text-text-variant">
           {building
-            ? "First message — RecAI is loading its catalog and tools. This one turn can take a minute."
+            ? "First message: RecAI is loading its catalog and tools. This one turn can take a minute."
             : "Choosing the right tools and ranking items for you…"}
         </p>
       </div>

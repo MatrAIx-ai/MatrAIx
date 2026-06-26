@@ -1,5 +1,5 @@
 /**
- * PersonaCard — one selectable persona, used both as a row in the cockpit's
+ * PersonaCard: one selectable persona, used both as a row in the cockpit's
  * left catalog rail and as a cell in the ⌘K catalog grid.
  *
  * Ports the mockup's catalog card (`app-redesign-v3.html:1297`): a top row with
@@ -10,7 +10,7 @@
  * cyan and sets `aria-pressed` (color is never the only selection cue).
  *
  * Honest data: the heading/meta are derived from the persona's real text via the
- * `cockpitShared` parsers — never fabricated. A field that does not parse is
+ * `cockpitShared` parsers, never fabricated. A field that does not parse is
  * simply not shown.
  *
  * Purely presentational: the parent owns selection + the persona data.
@@ -28,7 +28,7 @@ import type { PersonaEvalPersona } from "@/lib/types";
 
 /**
  * Per-source provenance-chip tone (port of the mockup's `srcColor`,
- * `app-redesign-v3.html:1294`). Unknown sources fall to the neutral default — we
+ * `app-redesign-v3.html:1294`). Unknown sources fall to the neutral default. We
  * never invent a tone for a source we don't recognise.
  */
 const SOURCE_TONE: Record<string, string> = {
@@ -51,7 +51,7 @@ function PersonaCardInner({ persona, selected, onSelect }: PersonaCardProps) {
   const age = demographics.find((c) => c.key === "age");
   const sex = demographics.find((c) => c.key === "gender");
   const occupation = demographics.find((c) => c.key === "occupation");
-  // Age · Sex · id — render only the parts that genuinely parse (id is always present).
+  // Age · Sex · id: render only the parts that genuinely parse (id is always present).
   const metaLabel = [age?.text, sex?.text, codename].filter(Boolean).join(" · ");
   // Surface the parsed occupation as a one-line trait only when it adds something
   // the heading does not (avoid repeating the heading).

@@ -7,7 +7,7 @@
  * so a relative base path works in both modes.
  *
  * All functions throw `ApiError` on a non-2xx response, carrying the HTTP
- * status and the server's error detail when available — React Query surfaces
+ * status and the server's error detail when available, React Query surfaces
  * these via its `error` state.
  */
 import type {
@@ -84,7 +84,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     });
   } catch (cause) {
     // Network-level failure (server down, CORS, offline).
-    throw new ApiError(0, "Network request failed — is the API running on :8765?", cause);
+    throw new ApiError(0, "Network request failed. Is the API running on :8765?", cause);
   }
 
   if (!res.ok) {

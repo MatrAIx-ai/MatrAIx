@@ -1,15 +1,15 @@
 /**
- * TurnInspector — the Chat workbench right-hand analysis pane.
+ * TurnInspector: the Chat workbench right-hand analysis pane.
  *
  * Ports the matrAIx tabbed inspector (mockup `app-redesign-v3.html:325-336`):
  * a header with a jump-to-turn picker, a Trace / Output / Scores tab strip, and
  * a scrolling body that renders the selected turn's `TurnView`.
  *
- *   - Trace  — the tool-plan timeline (BufferStore → HardFilter → Rank → Map),
+ *   - Trace: the tool-plan timeline (BufferStore → HardFilter → Rank → Map),
  *              one status node per `PlanStep`.
- *   - Output — the resolved recommended items + a collapsible, copyable raw
+ *   - Output: the resolved recommended items + a collapsible, copyable raw
  *              native-action block.
- *   - Scores — an HONEST teaching panel: a manual chat turn isn't scored, so it
+ *   - Scores: an HONEST teaching panel. A manual chat turn isn't scored, so it
  *              surfaces the real per-turn signals we have (latency, item count,
  *              whether RecAI asked a question) and points to PersonaEval for the
  *              full Overall / Constraint / Preference scorecard.
@@ -198,7 +198,7 @@ function InspectorEmpty() {
           <Sym name="manage_search" size={24} className="text-text-variant" />
         </div>
         <p className="text-[12px] leading-relaxed text-text-variant">
-          Click any RecAI reply to see how it answered — the tools it ran, the items it picked, and
+          Click any RecAI reply to see how it answered: the tools it ran, the items it picked, and
           its raw output.
         </p>
       </div>
@@ -328,12 +328,12 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
             <NativeRaw raw={turn.nativeRaw ?? null} toolOutputs={turn.rawToolOutputs} />
           </div>
         ) : (
-          /* Scores — honest teaching panel */
+          /* Scores: honest teaching panel */
           <div key={`scores-${activeIndex}`} className="rise-in space-y-5">
             <div>
               <SectionHeader label="Per-turn signals" />
               <div className="grid grid-cols-3 gap-3">
-                <StatCard label="Latency" value={latency ?? "—"} />
+                <StatCard label="Latency" value={latency ?? "n/a"} />
                 <StatCard label="Items" value={String(recs.length)} />
                 <StatCard label="Asked Q" value={askedQuestion ? "Yes" : "No"} />
               </div>

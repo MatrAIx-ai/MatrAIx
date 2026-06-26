@@ -1,5 +1,5 @@
 /**
- * InspectorTabs — the live-run right inspector, as a real ARIA tablist.
+ * InspectorTabs: the live-run right inspector, as a real ARIA tablist.
  *
  * Ports the mockup's inspector aside (`app-redesign-v3.html:325-336`): a header
  * bar ("Inspector"), a row of underline tabs, then the scrollable panel body.

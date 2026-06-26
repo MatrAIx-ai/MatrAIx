@@ -1,10 +1,10 @@
 /**
- * PersonaEval — application shell.
+ * PersonaEval: the application shell.
  *
  * Wires the locked three-pane Workbench (top bar · session rail · chat · turn
  * inspector) to the typed API client and TanStack Query. App owns the small
- * amount of cross-pane UI state — the active session id, the focused turn, and
- * whether the catalog drawer is open — and delegates everything else to the
+ * amount of cross-pane UI state (the active session id, the focused turn, and
+ * whether the catalog drawer is open) and delegates everything else to the
  * data layer:
  *
  *   - `GET /api/config/options`   → config pill choices + defaults
@@ -243,7 +243,7 @@ export default function App() {
 
   // --- Auto-select a session on first load --------------------------------
   // Only when the URL carried no `session` (otherwise we'd clobber a shared link
-  // / restored mirror that points at a specific — possibly not-yet-loaded —
+  // / restored mirror that points at a specific, possibly not-yet-loaded,
   // session).
   useEffect(() => {
     if (activeId === null && sessions.length > 0) {
@@ -331,7 +331,7 @@ export default function App() {
   const chatFooterContext = `chatbot · ${appLabel(config?.applicationId)} · ${fmtDomain(config?.domain ?? "movie")}`;
   const pevalFooterContext = `chatbot · RecAI · ${fmtDomain(pevalDomain)}`;
   // The index the inspector/thread actually highlight: the pinned turn from the
-  // URL, or — when following latest (no pin) — the most recent turn.
+  // URL, or the most recent turn when following latest (no pin).
   const focusedTurnIndex =
     turns.length === 0
       ? null
@@ -351,7 +351,7 @@ export default function App() {
     return turns.length > 0 ? `${turns.length} turns` : "No messages yet";
   }, [turnJob.phase, focusedTurn, focusedTurnIndex, turns.length]);
 
-  // The shared TopBar — identical on both surfaces (it hides the Chat-only
+  // The shared TopBar, identical on both surfaces (it hides the Chat-only
   // session actions itself when `mode !== "normal"`). The Chat config knobs live
   // in a separate `ChatConfigBar` row below it (not in the nav).
   const topBar = (
@@ -403,7 +403,7 @@ export default function App() {
     );
   }
 
-  // Chat workbench: a flex column — TopBar, the config-knob bar, then the locked
+  // Chat workbench: a flex column with TopBar, the config-knob bar, then the locked
   // three-pane row (rail · conversation · inspector).
   return (
     <div className="flex h-screen flex-col">
@@ -435,7 +435,7 @@ export default function App() {
           }}
         />
 
-        {/* Centre — manual conversation. */}
+        {/* Centre: manual conversation. */}
         <main className="flex min-h-0 min-w-0 flex-1 flex-col bg-surface-dim">
           <div className="flex flex-shrink-0 items-center gap-2.5 border-b border-outline bg-surface-lowest px-5 py-3">
             <span className="min-w-0 truncate text-[14px] font-semibold text-text-main" title={headerTitle}>{headerTitle}</span>

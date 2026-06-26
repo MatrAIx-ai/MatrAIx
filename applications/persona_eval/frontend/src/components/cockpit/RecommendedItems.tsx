@@ -1,10 +1,10 @@
 /**
- * RecommendedItems — the recommended-item cards under an app reply.
+ * RecommendedItems: the recommended-item cards under an app reply.
  *
  * Ports the mockup's item grid (`app-redesign-v3.html:498-508`): a 1/2-col grid
  * of cards, each a `01`-style mono rank badge + title + a one-line blurb, with a
  * "Best match" corner tag on rank 1. Item titles fall back to the raw id when
- * the catalog couldn't resolve a name (honest — we show the real id rather than
+ * the catalog couldn't resolve a name (honest: we show the real id rather than
  * fabricate a title), and the real id is surfaced as a mono caption when a title
  * is present. Purely presentational.
  */

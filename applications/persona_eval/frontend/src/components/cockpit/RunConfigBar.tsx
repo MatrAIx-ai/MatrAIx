@@ -1,10 +1,10 @@
 /**
- * RunConfigBar — the cockpit's "Run configuration" panel.
+ * RunConfigBar: the cockpit's "Run configuration" panel.
  *
  * Ports the mockup's Run-configuration card (`app-redesign-v3.html:170-184`): a
  * titled panel (`tune` icon + "Run configuration") over a 2-col grid of
- * field-style knobs — Application model (`engine`), Persona model, Domain
- * (RecAI-only), Conversation style (the accent knob) — and a full-width Max-turns
+ * field-style knobs: Application model (`engine`), Persona model, Domain
+ * (RecAI-only), Conversation style (the accent knob), and a full-width Max-turns
  * slider.
  *
  * The application adapter itself is chosen by the card picker above (the
@@ -138,7 +138,7 @@ export function RunConfigBar({
           />
         )}
 
-        {/* Max-turns slider — full width, label linked to the input. */}
+        {/* Max-turns slider: full width, label linked to the input. */}
         <label htmlFor={sliderId} className="block sm:col-span-2">
           <span className="hud mb-1.5 block text-[9px] text-text-dim">
             Max turns

@@ -1,12 +1,12 @@
 /**
- * ComponentPipeline — the Persona → Chatbot → Scorer flow strip.
+ * ComponentPipeline: the Persona → Chatbot → Scorer flow strip.
  *
  * Two presentations off the same status state-machine:
  *   - `variant="setup"`: the cockpit's compact pipeline panel
- *     (`app-redesign-v3.html:116-141`) — each stage as icon + name + a muted
+ *     (`app-redesign-v3.html:116-141`), each stage as icon + name + a muted
  *     owner subtitle, chevrons between. Teaches the shape before a run.
- *   - `variant="live"`: the live-run strip row (`app-redesign-v3.html:457-480`)
- *     — each stage as a state marker (done check / pulsing dot / hollow dot /
+ *   - `variant="live"`: the live-run strip row (`app-redesign-v3.html:457-480`),
+ *     each stage as a state marker (done check / pulsing dot / hollow dot /
  *     error) + name + a status chip, driven by the run phase.
  *
  * The done/active/idle/error tone per stage comes from the unchanged status
@@ -136,7 +136,7 @@ export function ComponentPipeline({
     );
   }
 
-  // setup variant — the bordered "Pipeline" panel.
+  // setup variant: the bordered "Pipeline" panel.
   return (
     <div className="rounded-md border border-outline bg-surface-lowest px-4 py-3">
       <div className="hud mb-2.5 text-[9px] text-text-dim">Pipeline</div>

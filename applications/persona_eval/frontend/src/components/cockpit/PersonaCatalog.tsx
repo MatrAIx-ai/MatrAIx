@@ -1,5 +1,5 @@
 /**
- * PersonaCatalog — the cockpit's left navigator (persona catalog).
+ * PersonaCatalog: the cockpit's left navigator (persona catalog).
  *
  * Ports the mockup's left column: a header with the total persona count, a
  * search box, and source-filter chips ("All" + the curated datasets); then a
@@ -92,7 +92,7 @@ export function PersonaCatalog({ selectedId, onSelect }: PersonaCatalogProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder='Search by role, age, or trait — e.g. "manager" or "student"'
+            placeholder='Search by role, age, or trait (e.g. "manager" or "student")'
             aria-label="Search personas"
             className={`w-full rounded-md border border-outline bg-field h-8 pl-10 pr-3 text-[13px] text-text-main outline-none transition-colors placeholder:text-text-variant hover:border-primary/40 focus:border-primary ${FOCUS_RING}`}
           />
@@ -189,7 +189,7 @@ function CatalogSkeleton() {
   );
 }
 
-/** Empty state — no personas match the current search. */
+/** Empty state: no personas match the current search. */
 function CatalogEmpty({ query }: { query: string }) {
   return (
     <div className="rise-in flex flex-col items-center px-3 py-8 text-center">
@@ -211,7 +211,7 @@ function CatalogEmpty({ query }: { query: string }) {
   );
 }
 
-/** Error state — the catalog failed to load, with a retry. */
+/** Error state: the catalog failed to load, with a retry. */
 function CatalogError({ onRetry }: { onRetry: () => void }) {
   return (
     <div className="rise-in rounded-md border border-outline border-l-4 border-l-danger bg-surface px-4 py-6 text-center">

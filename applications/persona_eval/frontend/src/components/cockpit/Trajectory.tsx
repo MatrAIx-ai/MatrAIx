@@ -1,10 +1,10 @@
 /**
- * Trajectory — the live-run conversation thread.
+ * Trajectory: the live-run conversation thread.
  *
  * Ports the mockup's live-run thread (`app-redesign-v3.html:483-535`): a
- * centered `max-w-2xl` column of turns — each a persona bubble (right) and the
- * app reply (left) with its recommended-item cards + tool-plan fold — closed,
- * while a turn is mid-flight, by a shimmering "generating" app bubble with a
+ * centered `max-w-2xl` column of turns, each a persona bubble (right) and the
+ * app reply (left) with its recommended-item cards + tool-plan fold. While a
+ * turn is mid-flight, it shows a shimmering "generating" app bubble with a
  * blinking cursor.
  *
  * Each job turn carries both the persona message and the app reply, so one
@@ -77,7 +77,7 @@ export function Trajectory({
   return (
     <div ref={scrollRef} className="custom-scrollbar flex min-h-0 flex-1 flex-col overflow-y-auto bg-surface-dim px-5 py-7 md:px-8">
       <div className="mx-auto w-full max-w-2xl space-y-7">
-        {/* Scenario banner — the real SUT / goal-context context. */}
+        {/* Scenario banner: the real SUT / goal-context context. */}
         {(sutDescription || goalContext) && (
           <div className="rise-in flex items-start gap-2.5 rounded-md border border-outline bg-surface-lowest px-4 py-3">
             <Sym name="info" size={16} className="mt-0.5 shrink-0 text-primary" />
@@ -90,7 +90,7 @@ export function Trajectory({
           </div>
         )}
 
-        {/* Turns — persona ask + app reply. */}
+        {/* Turns: persona ask + app reply. */}
         {turns.map((turn, i) => {
           const focused = i === focusedTurnIndex;
           return (
@@ -111,15 +111,15 @@ export function Trajectory({
           );
         })}
 
-        {/* Warming (cold start, before any turn) — a skeleton turn. */}
+        {/* Warming (cold start, before any turn): a skeleton turn. */}
         {isRunning && (turns.length === 0 || phase === "building") && (
           <SkeletonTurn label={phase === "building" ? "Starting the app…" : liveStatus} />
         )}
 
-        {/* Streaming — a generating app bubble after the settled turns. */}
+        {/* Streaming: a generating app bubble after the settled turns. */}
         {phase === "running" && turns.length > 0 && <GeneratingBubble appName={appName} />}
 
-        {/* Failed — plain-language cause + Retry (preserves config). */}
+        {/* Failed: plain-language cause + Retry (preserves config). */}
         {failed && (
           <div className="rise-in rounded-md border border-danger/40 bg-danger/10 p-4">
             <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export function Trajectory({
               <div className="min-w-0 flex-1">
                 <h4 className="text-sm font-semibold text-text-main">The simulation didn&apos;t finish</h4>
                 <p className="mt-1 break-words text-[13px] leading-relaxed text-text-variant">
-                  {error ?? "It stopped before completing — your settings are untouched, so you can try again right away."}
+                  {error ?? "It stopped before completing. Your settings are untouched, so you can try again right away."}
                 </p>
                 <button
                   type="button"

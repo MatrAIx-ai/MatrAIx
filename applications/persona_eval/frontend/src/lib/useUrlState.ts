@@ -1,9 +1,9 @@
 /**
- * `useUrlState` — the single source of truth for the cross-pane view state that
+ * `useUrlState`, the single source of truth for the cross-pane view state that
  * should survive a refresh and be shareable by link.
  *
- * PersonaEval's coarse navigation — which `mode` is active, which `session` is
- * open, which `turn` is focused, and which persisted `run` is being inspected —
+ * PersonaEval's coarse navigation, which `mode` is active, which `session` is
+ * open, which `turn` is focused, and which persisted `run` is being inspected, 
  * lives in the URL's query string (via `history.replaceState`, so it never adds
  * history entries) with a `localStorage` mirror. On a cold load with an empty
  * query string the mirror is restored, so reopening the app lands you back where
@@ -109,7 +109,7 @@ function persist(state: UrlState): void {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     }
   } catch {
-    /* storage unavailable (private mode / quota) — URL still works */
+    /* storage unavailable (private mode / quota), URL still works */
   }
 }
 

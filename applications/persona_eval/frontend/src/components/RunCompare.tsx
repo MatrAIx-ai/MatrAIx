@@ -1,9 +1,9 @@
 /**
- * RunCompare — two persisted runs read side by side, baseline-anchored.
+ * RunCompare: two persisted runs read side by side, baseline-anchored.
  *
  * The left run (A) is the BASELINE; the right run (B) is read against it. Each
- * scored dimension shows the baseline value, the candidate value, and the delta
- * — tinted green for an improvement and red for a regression (for "turns to
+ * scored dimension shows the baseline value, the candidate value, and the delta,
+ * tinted green for an improvement and red for a regression (for "turns to
  * first rec" a lower value is better, so the tint inverts). A "Order by
  * regressions" toggle floats the biggest regressions to the top so a reviewer
  * sees what got worse first.
@@ -245,7 +245,7 @@ function CompareBody({
         <div className="mb-2 hud text-[10px] text-primary">What changed between the two</div>
         {diffs.length === 0 ? (
           <p className="text-[13px] text-text-variant">
-            Both runs used the same settings — domain, conversation style, and persona source all
+            Both runs used the same settings: domain, conversation style, and persona source all
             match.
           </p>
         ) : (
@@ -262,7 +262,7 @@ function CompareBody({
         )}
       </div>
 
-      {/* Score deltas — the analytical core (baseline-anchored). */}
+      {/* Score deltas: the analytical core (baseline-anchored). */}
       <div className="mt-4 rounded-md border border-outline bg-surface p-4">
         <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5">
           <div className="hud text-[10px] text-primary">How the candidate scored vs the baseline</div>
@@ -306,7 +306,7 @@ function CompareBody({
 
       {/* Aligned per-turn transcripts (the chatbot path; the only kind the runs
           list lets you pick two of today). TODO: when survey/web runs persist,
-          swap this for an aligned answers diff / step list per spec §5.4 — until
+          swap this for an aligned answers diff / step list per spec §5.4, until
           then a non-chatbot pair falls back to the empty-transcript note. */}
       {appType === "chatbot" && (
         <div className="mt-4">
@@ -390,17 +390,17 @@ function DeltaRow({ dim }: { dim: Dimension }) {
         </div>
       </div>
       <span className="text-right font-mono text-[11px] tabular-nums text-text-variant">
-        {dim.a === null ? "—" : dim.a}
+        {dim.a === null ? "-" : dim.a}
       </span>
       <span className="text-right font-mono text-[11px] tabular-nums text-text-main">
-        {dim.b === null ? "—" : dim.b}
+        {dim.b === null ? "-" : dim.b}
       </span>
       <span className="flex justify-end">
         <span
           className={`inline-flex items-center gap-0.5 rounded px-1.5 py-0.5 font-mono text-[11px] font-semibold tabular-nums ${toneClass}`}
         >
           <Sym name={arrow} size={13} />
-          {delta === null ? "—" : `${delta > 0 ? "+" : ""}${delta}`}
+          {delta === null ? "-" : `${delta > 0 ? "+" : ""}${delta}`}
         </span>
       </span>
     </li>

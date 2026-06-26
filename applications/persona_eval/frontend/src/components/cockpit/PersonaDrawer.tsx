@@ -1,5 +1,5 @@
 /**
- * PersonaDrawer — the persona detail slide-over (mockup `data-view="drawer"`).
+ * PersonaDrawer: the persona detail slide-over (mockup `data-view="drawer"`).
  *
  * A right-anchored, focus-trapped, Escape-dismissible dialog that restores focus
  * to its opener on close. It ports the mockup's sectioned layout: an avatar +
@@ -7,11 +7,11 @@
  * panel (with Copy), closed by a "Use this persona" footer CTA.
  *
  * Honest data: the personas API returns only `{id, name, source, blurb}` plus a
- * humanized `context` *text block* — there are no structured demographic/trait
+ * humanized `context` *text block*. There are no structured demographic/trait
  * fields. So Demographics is parsed best-effort (render-if-present), Goal context
  * is the parsed prose sections, and Raw record is the verbatim context text. A
  * Traits panel is intentionally omitted because curated personas carry no
- * discrete trait list — we never fabricate one.
+ * discrete trait list. We never fabricate one.
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -71,7 +71,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
 
   const fullContext = context && context.trim() ? context : detail.data?.context ?? null;
 
-  // Demographics — parse the full context, falling back to the collapsed blurb.
+  // Demographics: parse the full context, falling back to the collapsed blurb.
   const demographics = useMemo(() => {
     if (fullContext) {
       const fromContext = parseDemographics(fullContext);
@@ -80,7 +80,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
     return parseDemographicsFromBlurb(persona?.blurb);
   }, [fullContext, persona?.blurb]);
 
-  // Goal context — the parsed prose sections (excluding Demographics, already a
+  // Goal context: the parsed prose sections (excluding Demographics, already a
   // grid above). Only from the multi-line context, never the collapsed blurb.
   const sections = useMemo(() => {
     if (!fullContext) return [];
@@ -256,14 +256,14 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
                 </div>
               ) : (
                 <p className="text-[12px] italic leading-relaxed text-text-variant">
-                  This persona has no extra profile text — the summary above is all we have.
+                  This persona has no extra profile text. The summary above is all we have.
                 </p>
               )}
             </>
           )}
         </div>
 
-        {/* Footer — only when a target context can actually adopt this persona
+        {/* Footer: only when a target context can actually adopt this persona
             (i.e. the cockpit's "Change persona"); pure browse/view omits it. */}
         {onUse && (
           <div className="flex-shrink-0 border-t border-outline p-4">

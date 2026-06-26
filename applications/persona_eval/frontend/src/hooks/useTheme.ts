@@ -4,7 +4,7 @@
  * Dark is the default; light is opt-in via the `light` class on <html>. The
  * class is set BEFORE paint by the boot script in index.html (to avoid a flash),
  * so this hook reads the live DOM class as its source of truth and persists the
- * operator's choice to localStorage. UI-state only — touches nothing in the
+ * operator's choice to localStorage. UI-state only, touches nothing in the
  * data layer.
  */
 import { useCallback, useState } from "react";
@@ -24,7 +24,7 @@ export function useTheme() {
     try {
       localStorage.setItem(KEY, next);
     } catch {
-      /* private mode / storage disabled — fall back to in-memory only */
+      /* private mode / storage disabled, fall back to in-memory only */
     }
     setTheme(next);
   }, []);

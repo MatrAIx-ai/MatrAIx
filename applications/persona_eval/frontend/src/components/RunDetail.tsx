@@ -1,5 +1,5 @@
 /**
- * RunDetail — one persisted run, rebuilt as the mockup's "Run debrief".
+ * RunDetail: one persisted run, rebuilt as the mockup's "Run debrief".
  *
  * Shape mirrors `data-view="runs"` (app-redesign-v3.html:340-429): a back link +
  * "Run debrief" H1 with a run-type reflection on the right, a one-line run-meta
@@ -9,7 +9,7 @@
  * chatbot (`PersonaEvalResult`) runs today, so `runApplicationType` resolves to
  * "chatbot" and the chatbot debrief renders. The survey/web bodies render the
  * `SurveyResult` / `WebResult` / `WebTrace` shapes already declared in types.ts
- * and light up unchanged once those run kinds persist — see the TODO in
+ * and light up unchanged once those run kinds persist. See the TODO in
  * `runsShared.tsx`. No endpoint, query key, or type is changed here.
  */
 import { useMemo, useState, type ReactNode } from "react";
@@ -236,7 +236,7 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
                 overall == null ? "text-text-dim" : color.text
               }`}
             >
-              {overall == null ? "—" : overall}
+              {overall == null ? "-" : overall}
             </span>
             <span className="text-[13px] text-text-dim">/ 10</span>
           </div>
@@ -249,10 +249,10 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
         <div className="grid grid-cols-3 gap-5 lg:col-span-8">
           <StatTile
             caption="Turns before first suggestion"
-            value={metrics?.turnsToRecommendation ?? "—"}
+            value={metrics?.turnsToRecommendation ?? "-"}
           />
-          <StatTile caption="Total turns" value={metrics?.numTurns ?? "—"} />
-          <StatTile caption="Items suggested" value={metrics?.recommendedItemCount ?? "—"} />
+          <StatTile caption="Total turns" value={metrics?.numTurns ?? "-"} />
+          <StatTile caption="Items suggested" value={metrics?.recommendedItemCount ?? "-"} />
         </div>
       </div>
 
@@ -277,7 +277,7 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
             <DebriefScorecard q={q} />
           ) : (
             <DashedNote>
-              This run finished before a score was produced — there&apos;s no scorecard to show.
+              This run finished before a score was produced. There&apos;s no scorecard to show.
             </DashedNote>
           )}
         </div>
@@ -456,7 +456,7 @@ function CriterionBar({
 }
 
 // ===========================================================================
-// Survey debrief — reads `SurveyResult` (types.ts)
+// Survey debrief: reads `SurveyResult` (types.ts)
 // ===========================================================================
 
 function SurveyDebrief({ run }: { run: RunDetailView }) {
@@ -504,7 +504,7 @@ function SurveyDebrief({ run }: { run: RunDetailView }) {
         </div>
         <StatTile
           caption="Average agreement"
-          value={c.meanLikert == null ? "—" : c.meanLikert.toFixed(1)}
+          value={c.meanLikert == null ? "-" : c.meanLikert.toFixed(1)}
           unit="/5"
           band={meanBand}
         />
@@ -632,7 +632,7 @@ function trajectoryActor(actor: string): string {
 }
 
 // ===========================================================================
-// Web debrief — reads `WebResult` + `WebTrace` (types.ts)
+// Web debrief: reads `WebResult` + `WebTrace` (types.ts)
 // ===========================================================================
 
 function WebDebrief({ run }: { run: RunDetailView }) {
@@ -660,7 +660,7 @@ function WebDebrief({ run }: { run: RunDetailView }) {
         } · ${fmtRunDate(result.createdAt ?? run.createdAt)}`}
       </RunMetaLine>
       <DebriefIntro>
-        A simulated user browsed the site to finish a task — here are the UX ratings and a replay of
+        A simulated user browsed the site to finish a task; here are the UX ratings and a replay of
         every step they took.
       </DebriefIntro>
 
@@ -800,7 +800,7 @@ function webActionDetail(event: WebTraceEvent): string {
     return arg ? `${action.name}(${clip(arg)})` : `${action.name}()`;
   }
   const message = (event.message || "").trim();
-  return message ? clip40(message) : "—";
+  return message ? clip40(message) : "-";
 }
 
 function clip40(text: string): string {

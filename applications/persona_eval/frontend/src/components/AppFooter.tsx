@@ -1,8 +1,8 @@
 /**
- * AppFooter — the slim, honest status footer (mockup `app-redesign-v3.html:1279`).
+ * AppFooter: the slim, honest status footer (mockup `app-redesign-v3.html:1279`).
  *
  * Left: the product name + the active surface context (e.g. "chatbot · RecAI ·
- * movie") — only real values already in scope. Right: a dot + the live backend
+ * movie"). Only real values already in scope. Right: a dot + the live backend
  * connection status, read from the SHARED preflight query cache (same key as
  * `PreflightChip`); no new request and no extra polling here.
  *

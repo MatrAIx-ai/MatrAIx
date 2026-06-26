@@ -1,8 +1,8 @@
 /**
- * TopBar — the fixed application header (mockup `app-redesign-v3.html:62-91`).
+ * TopBar: the fixed application header (mockup `app-redesign-v3.html:62-91`).
  *
- * Left: the matrAIx wordmark (matr · cyan AI · x) + a 4-item nav — Chat ·
- * PersonaEval · Runs · Catalog — with the active surface primary-underlined.
+ * Left: the matrAIx wordmark (matr · cyan AI · x) + a 4-item nav (Chat ·
+ * PersonaEval · Runs · Catalog) with the active surface primary-underlined.
  * Right: the ⌘K "Search catalog" pill, the readiness chip, the light/dark theme
  * toggle, and a context primary button (New chat in Chat / New run in
  * PersonaEval). Export / Save appear only on the Chat surface.
@@ -23,7 +23,7 @@ export interface TopBarProps {
   onExport: () => void;
   /** Persist the active session to disk. Disabled when no session is active. */
   onSave: () => void;
-  /** Create a new session (Chat) — the context primary button. */
+  /** Create a new session (Chat): the context primary button. */
   onNew: () => void;
   /** True while a save request is in flight (Save button busy state). */
   saving?: boolean;
@@ -107,7 +107,7 @@ export function TopBar({
           <button
             type="button"
             onClick={onOpenSearch}
-            aria-label="Search the catalog of personas and items — press Command-K"
+            aria-label="Search the catalog of personas and items. Press Command-K"
             className={`hidden h-9 items-center gap-2 rounded-md border border-outline bg-surface-low pl-3 pr-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] lg:flex ${FOCUS_RING}`}
           >
             <Sym name="search" size={14} className="text-text-dim" />

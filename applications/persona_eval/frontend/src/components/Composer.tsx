@@ -1,5 +1,5 @@
 /**
- * Composer — the `>_` terminal-style message input at the bottom of the Chat
+ * Composer: the `>_` terminal-style message input at the bottom of the Chat
  * workbench (mockup `app-redesign-v3.html:323`).
  *
  * A mono `>_` prompt prefix, a `bg-field` frame, an auto-growing textarea, and a
@@ -8,7 +8,7 @@
  *
  * Sending is delegated to the parent (which owns `useTurnJob`); the composer is
  * disabled while a turn is in flight, clears itself once a message is sent, and
- * — honestly — blocks send with a helper when the backend is offline (read from
+ * honestly blocks send with a helper when the backend is offline (read from
  * the cached preflight query; no new request, no extra polling).
  */
 import { useLayoutEffect, useRef, useState } from "react";
@@ -22,7 +22,7 @@ import type { TurnPhase } from "@/lib/useTurnJob";
 export interface ComposerProps {
   /** Submit a user message. The parent runs it through `useTurnJob`. */
   onSend: (message: string) => void;
-  /** Live turn phase — disables input and swaps the send glyph while pending. */
+  /** Live turn phase: disables input and swaps the send glyph while pending. */
   phase: TurnPhase;
   /** Disable entirely (e.g. before a session exists). */
   disabled?: boolean;
@@ -36,7 +36,7 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
   const taRef = useRef<HTMLTextAreaElement>(null);
   const isPending = phase === "building" || phase === "running";
 
-  // Read the shared preflight cache (same key as PreflightChip) — read-only, no
+  // Read the shared preflight cache (same key as PreflightChip): read-only, no
   // refetchInterval here so it never adds a second poll.
   const preflight = useQuery<PreflightResponse>({
     queryKey: ["preflight"],
@@ -70,10 +70,10 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
   }
 
   const hint = offline
-    ? "The backend is offline — start it to send a message."
+    ? "The backend is offline. Start it to send a message."
     : isPending
       ? phase === "building"
-        ? "Waking the recommender — the first message takes about a minute"
+        ? "Waking the recommender. The first message takes about a minute"
         : "Sending your message…"
       : "The first message wakes the recommender (about a minute), then replies are quick";
 
@@ -91,7 +91,7 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
             disabled={blocked}
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={onKeyDown}
-            placeholder="Type a message as the user you're playing — press ⌘↵ to send"
+            placeholder="Type a message as the user you're playing. Press ⌘↵ to send"
             aria-label="Type a message to RecAI"
             className="block w-full resize-none bg-transparent px-3 py-3 font-mono text-[13px] leading-relaxed text-text-main outline-none placeholder:text-text-variant disabled:cursor-not-allowed disabled:opacity-60"
           />

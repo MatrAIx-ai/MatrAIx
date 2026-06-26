@@ -1,5 +1,5 @@
 /**
- * PersonaPanel — the cockpit's Persona inspector panel.
+ * PersonaPanel: the cockpit's Persona inspector panel.
  *
  * Ports the mockup's persona detail: an avatar + name + codename header, a
  * demographics grid, a context block, and trait sections, closed by a "Raw"
@@ -9,7 +9,7 @@
  * `{id, source, blurb}`); the full humanized `context` is available only after
  * a run persists. So the panel renders structured demographics where they can
  * be parsed (the catalog blurb / a loaded context), the context block when one
- * is available, and any genuinely-present trait sections — never the mockup's
+ * is available, and any genuinely-present trait sections, never the mockup's
  * fabricated preference/dislike tags when the data doesn't carry them. The
  * heading pairs a human descriptive title with the machine codename.
  */
@@ -39,7 +39,7 @@ export interface PersonaPanelProps {
 
 export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps) {
   // The full humanized profile for the selected persona (cached by id). This is
-  // what makes demographics / sections / context complete from the catalog —
+  // what makes demographics / sections / context complete from the catalog,
   // not just after a run. Prefer an explicitly-passed (run-loaded) context.
   const detail = usePersonaDetail(persona?.id ?? null);
   const fullContext = context && context.trim() ? context : detail.data?.context ?? null;
@@ -53,7 +53,7 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
   }, [fullContext, persona?.blurb]);
 
   // Context sections (Demographics/Personas/Background/…). Drop the leading
-  // "Demographics" section — it's already surfaced as the grid above.
+  // "Demographics" section (it's already surfaced as the grid above).
   const sections = useMemo(() => {
     if (!fullContext) return [];
     return parsePersonaSections(fullContext).filter((s) => !/^demographics$/i.test(s.label));
@@ -110,7 +110,7 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
         </Section>
       )}
 
-      {/* Context block — a readable preview of the full profile (the complete
+      {/* Context block: a readable preview of the full profile (the complete
           record is one tap away via "Full persona"). */}
       <Section label="Context">
         <p className="rounded-md border border-outline-dim bg-surface-low p-3 text-[13px] leading-relaxed text-text-variant">

@@ -102,12 +102,12 @@ export interface ConfigEnvironment {
 /**
  * `GET /api/config/options` payload (enriched shape). Mirrors the backend
  * `ConfigOptionsResponse`:
- *   - `knobs`       — the user-editable knobs, each with per-value labels and a
+ *   - `knobs`, the user-editable knobs, each with per-value labels and a
  *                     `rebuildsAgent` flag.
- *   - `defaults`    — the *full* canonical default config (every key, including
+ *   - `defaults`, the *full* canonical default config (every key, including
  *                     the fixed ranker/resource modes), keyed by the same
  *                     camelCase `SessionConfig` field names.
- *   - `environment` — the read-only fixed-stack facts.
+ *   - `environment`, the read-only fixed-stack facts.
  */
 export interface ConfigOptionsResponse {
   knobs: ConfigKnob[];
@@ -177,7 +177,7 @@ export interface RecommendedItem {
 }
 
 /**
- * The fully-built view of one conversational turn — what the inspector and
+ * The fully-built view of one conversational turn, what the inspector and
  * chat thread render. Produced by `TraceView.build`.
  */
 export interface TurnView {
@@ -303,7 +303,7 @@ export interface PersonaEvalPersona {
 }
 
 /**
- * `GET /api/persona-eval/personas/{id}` payload — one persona's full record.
+ * `GET /api/persona-eval/personas/{id}` payload, one persona's full record.
  * Mirrors the backend `PersonaEvalPersonaDetail`. `context` is the complete,
  * humanized, multi-line profile (far richer than the list `blurb`).
  */
@@ -435,7 +435,7 @@ export interface PersonaEvalJobView {
 // ---------------------------------------------------------------------------
 
 /**
- * One entry in `GET /api/persona-eval/runs` — a newest-first summary of a
+ * One entry in `GET /api/persona-eval/runs`, a newest-first summary of a
  * persisted run, built from the stored `<jobId>.json` artifact. Mirrors the
  * backend `PersonaEvalRunSummary`; fields beyond `id` may be absent on legacy
  * artifacts.

@@ -1,5 +1,5 @@
 /**
- * `usePersonaEval` — drive a persona-driven PersonaEval run from the UI.
+ * `usePersonaEval`, drive a persona-driven PersonaEval run from the UI.
  *
  * A PersonaEval run is an async job: the simulated user drives a live multi-turn
  * conversation against the selected chatbot application, and the job's state grows as
@@ -13,7 +13,7 @@
  *      error`), an `isRunning` flag, and any error message.
  *
  * Polling is implemented with React Query's `refetchInterval`, which stops
- * automatically once the job reaches a terminal state — mirroring `useTurnJob`.
+ * automatically once the job reaches a terminal state, mirroring `useTurnJob`.
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -35,7 +35,7 @@ const POLL_INTERVAL_MS = 1200;
 /**
  * Max wall-clock for a whole persona-eval run before we give up polling. A run
  * is a full multi-turn conversation plus an evaluation pass, so this is generous
- * — it only catches a wedged backend so the picker can offer a retry.
+ *, it only catches a wedged backend so the picker can offer a retry.
  */
 const MAX_POLL_DURATION_MS = 15 * 60_000;
 
@@ -79,7 +79,7 @@ export interface UsePersonaEvalResult {
 }
 
 /**
- * Fetch one persona's full humanized profile — the catalog's "full persona"
+ * Fetch one persona's full humanized profile, the catalog's "full persona"
  * view. Cached by id and long-lived (curated personas are immutable for the
  * session); only runs when an id is given.
  */
@@ -168,7 +168,7 @@ export function usePersonaEval(): UsePersonaEvalResult {
   const error =
     startError ??
     job?.error ??
-    (timedOut ? "The PersonaEval run is taking too long — the backend may be stuck." : null);
+    (timedOut ? "The PersonaEval run is taking too long. The backend may be stuck." : null);
 
   const run = useCallback(
     (input: RunPersonaEvalInput) => {

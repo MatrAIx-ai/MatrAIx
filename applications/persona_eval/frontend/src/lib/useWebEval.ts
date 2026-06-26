@@ -93,7 +93,7 @@ export function useWebEval(): UseWebEvalResult {
   const error =
     startError ??
     job?.error ??
-    (timedOut ? "The website test is taking too long — the backend may be stuck." : null);
+    (timedOut ? "The website test is taking too long. The backend may be stuck." : null);
 
   const run = useCallback(
     (input: RunWebEvalInput) => {

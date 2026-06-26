@@ -1,5 +1,5 @@
 /**
- * CatalogDrawer — the ⌘K persona catalog (mockup `data-view="catalog"`).
+ * CatalogDrawer: the ⌘K persona catalog (mockup `data-view="catalog"`).
  *
  * Opened from the top-bar "Search catalog" button or ⌘K, this is the full
  * "Browse personas" surface: a header (eyebrow + title + loaded count), a
@@ -10,7 +10,7 @@
  *
  * It debounces the search box and hits `GET /api/persona-eval/personas` under
  * the *same* query key the rail uses (shared cache), then filters client-side by
- * `source` for the chips. Honest data only — every field shown comes from the
+ * `source` for the chips. Honest data only: every field shown comes from the
  * real persona record via the `cockpitShared` parsers. Mounts only when `open`.
  */
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -218,7 +218,7 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
         </div>
       </div>
 
-      {/* Persona detail — opened by clicking a card. "Use this persona" selects
+      {/* Persona detail, opened by clicking a card. "Use this persona" selects
           it (when a target context provided one) and closes the catalog. */}
       <PersonaDrawer
         open={viewing !== null}
@@ -282,7 +282,7 @@ function CatalogSkeleton() {
   );
 }
 
-/** Empty state — no personas match the current search. */
+/** Empty state: no personas match the current search. */
 function CatalogEmpty({ query }: { query: string }) {
   return (
     <div className="rise-in flex flex-col items-center px-4 py-16 text-center">
@@ -304,7 +304,7 @@ function CatalogEmpty({ query }: { query: string }) {
   );
 }
 
-/** Error state — the catalog failed to load, with a retry. */
+/** Error state: the catalog failed to load, with a retry. */
 function CatalogError({ onRetry }: { onRetry: () => void }) {
   return (
     <div className="rise-in mx-auto max-w-md rounded-md border border-outline border-l-4 border-l-danger bg-surface px-4 py-6 text-center">

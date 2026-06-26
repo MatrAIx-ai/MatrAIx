@@ -1,13 +1,13 @@
 /**
- * PersonaEvalCockpit — the PersonaEval chatbot surface (ports the matrAIx
+ * PersonaEvalCockpit: the PersonaEval chatbot surface (ports the matrAIx
  * `app-redesign-v3.html` cockpit + liverun screens).
  *
  * Two flows off one shared state:
- *   - IDLE  (`data-view="cockpit"`) — a centered "Configure a simulation" setup
+ *   - IDLE  (`data-view="cockpit"`) shows a centered "Configure a simulation" setup
  *     form: header + app-type switch, a compact Pipeline strip, then a 12-col
  *     grid (LEFT 8: application cards · run-configuration knobs · target persona;
  *     RIGHT 4: the read-only Harbor panel · the glowing Run-eval CTA · a hint).
- *   - RUNNING/DONE (`data-view="liverun"`) — the live-run layout: the stateful
+ *   - RUNNING/DONE (`data-view="liverun"`) shows the live-run layout: the stateful
  *     Pipeline strip, the Trajectory thread (persona/app bubbles with items +
  *     tool-plan fold), the right Inspector tabs (Evaluation / Persona / Prompts),
  *     and a bottom status bar.
@@ -70,7 +70,7 @@ function liveStatusLine(
   phase: PersonaEvalRunPhase,
   isRunning: boolean,
 ): string | null {
-  if (phase === "building") return "Starting the app — the first reply can take up to a minute.";
+  if (phase === "building") return "Starting the app. The first reply can take up to a minute.";
   if (!isRunning) return null;
   const raw = (job?.phase ?? "").toLowerCase();
   if (raw.includes("persona") || raw.includes("user") || raw.includes("simulat")) return "The simulated user is typing…";
@@ -90,7 +90,7 @@ function isTypingTarget(el: EventTarget | null): boolean {
 
 /**
  * A frozen copy of the persona + run controls captured the moment a run reaches
- * `done`. The export is built from this — never the live controls — so changing
+ * `done`. The export is built from this (never the live controls), so changing
  * a knob after a run finishes cannot mislabel the completed transcript.
  */
 interface ExportSnapshot {
@@ -389,7 +389,7 @@ function ChatbotEvalCockpit({
     isRunning && runStartedAtRef.current ? Math.max(0, Math.floor((Date.now() - runStartedAtRef.current) / 1000)) : 0;
 
   // ---------------------------------------------------------------------------
-  // IDLE — the centered "Configure a simulation" setup form.
+  // IDLE: the centered "Configure a simulation" setup form.
   // ---------------------------------------------------------------------------
   const setupView = (
     <div className="flex min-h-0 flex-1 flex-col">
@@ -485,7 +485,7 @@ function ChatbotEvalCockpit({
   );
 
   // ---------------------------------------------------------------------------
-  // RUNNING / DONE — the live-run layout.
+  // RUNNING / DONE: the live-run layout.
   // ---------------------------------------------------------------------------
   const liveView = (
     <div className="flex min-h-0 flex-1 flex-col bg-surface-dim">
@@ -624,7 +624,7 @@ function ApplicationPicker({
   );
 }
 
-/** The "Target persona" panel — avatar + identity + Change, mockup `:233-244`. */
+/** The "Target persona" panel: avatar + identity + Change, mockup `:233-244`. */
 function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona | null; onChange: () => void }) {
   const title = persona ? personaDescriptiveTitle(null, persona.blurb, persona.source) : null;
   const codename = persona ? personaCodename(persona.name, persona.id) : null;
@@ -781,7 +781,7 @@ function LiveStatusBar({
         )}
 
         <span className="min-w-0 truncate text-[12px] text-text-variant">
-          {building && "Starting the app — the first reply can take up to a minute."}
+          {building && "Starting the app. The first reply can take up to a minute."}
           {running && (
             <>
               Running eval <span className="text-text-dim">·</span> turn {turnCount} of {maxTurns}{" "}

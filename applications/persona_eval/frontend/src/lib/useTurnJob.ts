@@ -1,5 +1,5 @@
 /**
- * `useTurnJob` — drive an async recommendation turn from the UI.
+ * `useTurnJob`, drive an async recommendation turn from the UI.
  *
  * A turn is an async job (the first turn is a multi-minute cold start). This
  * hook encapsulates the full lifecycle:
@@ -32,7 +32,7 @@ const POLL_INTERVAL_MS = 1200;
 
 /**
  * Max wall-clock we keep polling a single turn before giving up. A turn's cold
- * start is multi-minute, so this is generous — it only catches a wedged backend
+ * start is multi-minute, so this is generous, it only catches a wedged backend
  * (job stuck `building`/`running` forever) so the UI offers a retry instead of
  * spinning indefinitely.
  */
@@ -235,7 +235,7 @@ export function useTurnJob(
   const error =
     submitError ??
     (jobStatus === "error" ? job.data?.error ?? "The turn failed" : null) ??
-    (timedOut ? "The turn is taking too long — the backend may be stuck." : null);
+    (timedOut ? "The turn is taking too long. The backend may be stuck." : null);
 
   return {
     send,

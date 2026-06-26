@@ -1,11 +1,11 @@
 /**
- * ToolPlanFold — the expandable "How the app decided" disclosure on an app turn.
+ * ToolPlanFold: the expandable "How the app decided" disclosure on an app turn.
  *
  * Ports the mockup's fold: a header button that expands to reveal (when the
  * data is present) the parsed tool-plan steps, the ranked items with their
  * scores, and the raw native action text. Each section renders only when it has
  * content, so a turn that carried no tool plan / no raw action shows just the
- * sections it actually has — never empty scaffolding.
+ * sections it actually has, never empty scaffolding.
  *
  * Controlled disclosure: the parent owns `open` (so the "expand/collapse all"
  * keyboard shortcut can drive every fold at once) and gets `onToggle`. The

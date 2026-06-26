@@ -4,8 +4,8 @@
  * `src/lib/types.ts` declares the persisted-run shapes loosely (`transcript:
  * TurnView[]`, `recommendedItemIds: Record<string, unknown>`) to stay tolerant
  * of legacy artifacts. The live backend returns a richer, more specific shape
- * (verified against the running API), so the Runs views narrow it here — at the
- * read boundary — into the fields they actually render, rather than threading
+ * (verified against the running API), so the Runs views narrow it here, at the
+ * read boundary, into the fields they actually render, rather than threading
  * `unknown` through the components.
  */
 import type { ReactNode } from "react";
@@ -160,16 +160,16 @@ function shortAbsolute(d: Date): string {
 /**
  * A compact relative-or-short date for mono columns. Recent timestamps read as
  * `3m`, `5h`, `2d`; anything older falls back to the short absolute date. An
- * unparseable / missing value renders as an em dash.
+ * unparseable / missing value renders as a dash.
  */
 export function fmtRunDate(iso: string | null | undefined): string {
-  if (!iso) return "—";
+  if (!iso) return "-";
   const t = Date.parse(iso);
-  if (Number.isNaN(t)) return "—";
+  if (Number.isNaN(t)) return "-";
   const date = new Date(t);
   const diffMs = Date.now() - t;
   const sec = Math.round(diffMs / 1000);
-  if (sec < 0) return shortAbsolute(date); // clock skew — just show the date
+  if (sec < 0) return shortAbsolute(date); // clock skew: just show the date
   if (sec < 45) return "just now";
   const min = Math.round(sec / 60);
   if (min < 60) return `${min}m`;
@@ -182,12 +182,12 @@ export function fmtRunDate(iso: string | null | undefined): string {
 
 /** Title-case a snake/lower domain token for a pill (`beauty_product` → `Beauty product`). */
 export function fmtDomain(domain: string | null | undefined): string {
-  if (!domain) return "—";
+  if (!domain) return "-";
   const spaced = domain.replace(/_/g, " ");
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
 }
 
-/** Render a persona `source`, falling back to "curated" / em dash when absent. */
+/** Render a persona `source`, falling back to "curated" when absent. */
 export function fmtSource(source: string | null | undefined): string {
   if (source === null || source === undefined || source === "") return "curated";
   return source;
@@ -196,7 +196,7 @@ export function fmtSource(source: string | null | undefined): string {
 /**
  * Friendly label for a goal-context id (the conversation style), mirroring the
  * cockpit knob copy: `scenario_default` → "Realistic scenario", `gradual_reveal`
- * → "Gradual reveal". Unknown ids are humanized; a missing id reads as an em dash.
+ * → "Gradual reveal". Unknown ids are humanized; a missing id reads as a dash.
  */
 const GOAL_CONTEXT_LABELS: Record<string, string> = {
   scenario_default: "Realistic scenario",
@@ -204,7 +204,7 @@ const GOAL_CONTEXT_LABELS: Record<string, string> = {
 };
 
 export function fmtGoalContext(id: string | null | undefined): string {
-  if (!id) return "—";
+  if (!id) return "-";
   if (GOAL_CONTEXT_LABELS[id]) return GOAL_CONTEXT_LABELS[id];
   const spaced = id.replace(/_/g, " ").trim();
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
@@ -233,7 +233,7 @@ export function SourceTag({ source }: { source: string | null | undefined }) {
 }
 
 /**
- * Grounding indicator — did the recommender actually return real catalog items,
+ * Grounding indicator: did the recommender actually return real catalog items,
  * or did the agent answer from base knowledge? A run can read smoothly (and even
  * self-score highly) while recommending nothing real, so we surface this plainly:
  * `N from the real catalog` (mint) when the corpus was used, `Nothing from the
@@ -258,7 +258,7 @@ export function GroundingChip({
       title={
         grounded
           ? `${count} suggestion${count === 1 ? "" : "s"} came from the real product catalog.`
-          : "The app suggested items but none came from the real product catalog — they're from the model's own knowledge, so treat them with care."
+          : "The app suggested items but none came from the real product catalog. They're from the model's own knowledge, so treat them with care."
       }
     >
       <Sym name={grounded ? "inventory_2" : "warning"} size={13} />
@@ -314,7 +314,7 @@ export function AppTypeTag({ type }: { type?: string | null }) {
   return (
     <span
       className="inline-flex items-center gap-1 rounded border border-outline bg-surface-high px-1.5 py-0.5 text-[11px] text-text-variant"
-      title="Which kind of app was tested — a chatbot, a survey, or a website."
+      title="Which kind of app was tested: a chatbot, a survey, or a website."
     >
       <Sym name={meta.icon} size={13} />
       {meta.label}

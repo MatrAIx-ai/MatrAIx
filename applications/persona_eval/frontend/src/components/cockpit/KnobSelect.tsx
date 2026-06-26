@@ -1,16 +1,16 @@
 /**
- * KnobSelect — one editable config knob (a description-rich dropdown).
+ * KnobSelect: one editable config knob (a description-rich dropdown).
  *
  * Two presentations, same description-carrying listbox:
  *   - inline (default): a compact "label + value + chevron" used by the Chat
  *     workbench config bars (unchanged contract);
- *   - `block`: the mockup's full-width field — a `.hud` label above a
+ *   - `block`: the mockup's full-width field, a `.hud` label above a
  *     field-styled trigger (`bg-field border rounded`) with the value on the
- *     left and a chevron on the right — used inside the cockpit's "Run
+ *     left and a chevron on the right, used inside the cockpit's "Run
  *     configuration" grid (`app-redesign-v3.html:173-180`).
  *
  * Implemented as a button + a positioned listbox (not a native `<select>`) so
- * the per-option `description` from the config metadata can be shown — a feature
+ * the per-option `description` from the config metadata can be shown, a feature
  * a native select can't offer. The menu is keyboard-operable (Up/Down move,
  * Enter/Space select, Escape closes) via roving focus.
  */
@@ -112,7 +112,7 @@ export function KnobSelect({
     }
   }
 
-  // --- Block (full-width field) layout — the cockpit "Run options" grid. -----
+  // --- Block (full-width field) layout: the cockpit "Run options" grid. -----
   if (block) {
     return (
       <div ref={rootRef} className="block">
@@ -160,7 +160,7 @@ export function KnobSelect({
     );
   }
 
-  // --- Inline (compact) layout — Chat workbench config bars. ------------------
+  // --- Inline (compact) layout: Chat workbench config bars. ------------------
   return (
     <div ref={rootRef} className="flex flex-shrink-0 items-center gap-2">
       <span className="hud text-[10px] text-text-dim">{label}</span>

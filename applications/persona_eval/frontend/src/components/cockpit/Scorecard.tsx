@@ -1,5 +1,5 @@
 /**
- * Scorecard — the cockpit's Evaluation inspector panel.
+ * Scorecard: the cockpit's Evaluation inspector panel.
  *
  * Ports the mockup's evaluation card: a large overall rating beside the
  * persona's self-rating quote, per-criterion rows (constraint / preference
@@ -127,17 +127,17 @@ export function Scorecard({ questionnaire, metrics, phase }: ScorecardProps) {
             notes={questionnaire.clarifyingNotes}
           />
 
-          {/* Metrics strip — real counts only (no tokens / cost). */}
+          {/* Metrics strip: real counts only (no tokens / cost). */}
           <div className="mt-3 grid grid-cols-3 gap-2">
             <MetricTile
-              value={metrics.turnsToRecommendation === null ? "—" : String(metrics.turnsToRecommendation)}
+              value={metrics.turnsToRecommendation === null ? "N/A" : String(metrics.turnsToRecommendation)}
               caption="Turns to first suggestion"
             />
             <MetricTile value={String(metrics.numTurns)} caption="Total turns" />
             <MetricTile value={String(metrics.recommendedItemCount)} caption="Items suggested" />
           </div>
 
-          {/* Scale hint — what the colours mean. */}
+          {/* Scale hint: what the colours mean. */}
           <p className="mt-3 text-[10px] leading-relaxed text-text-dim">
             Scores read <span className="text-secondary">green</span> when the app did well,{" "}
             <span className="text-warn">amber</span> when so-so, <span className="text-danger">red</span> when it missed.
@@ -206,7 +206,7 @@ function ClarifyingLine({ asked, notes }: { asked: boolean; notes: string }) {
       />
       <span className="text-[12px] text-text-main">
         <span className="font-semibold">Follow-up questions</span>
-        {asked ? " — asked helpful ones" : " — didn't ask any"}
+        {asked ? ": asked helpful ones" : ": didn't ask any"}
         {notes ? `. ${notes}` : "."}
       </span>
     </div>

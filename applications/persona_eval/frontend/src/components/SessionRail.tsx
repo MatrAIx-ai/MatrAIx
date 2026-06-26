@@ -1,11 +1,11 @@
 /**
- * SessionRail — the Chat workbench left navigation rail.
+ * SessionRail: the Chat workbench left navigation rail.
  *
  * Ports the matrAIx session rail (mockup `app-redesign-v3.html:295-305`): a
  * full-width "New chat" button at the top, then the scrollable list of saved /
  * active chats from `GET /api/sessions`. The active chat carries a left primary
  * accent + a mint "live" dot; each row's sub-line condenses the honest facts an
- * operator scans — `{domain} · {n} turns · {age}`.
+ * operator scans: `{domain} · {n} turns · {age}`.
  *
  * Hidden below `lg` (the mockup is desktop-first); the catalog is reachable from
  * the top nav / ⌘K, so the rail stays focused on sessions.
@@ -120,7 +120,7 @@ export function SessionRail({
           </div>
         ) : sessions.length === 0 ? (
           <div className="px-1 py-2 text-[12px] leading-relaxed text-text-variant">
-            No chats yet. Start one to try the recommender — you&apos;ll play the user and RecAI replies.
+            No chats yet. Start one to try the recommender. You&apos;ll play the user and RecAI replies.
           </div>
         ) : (
           <div className="space-y-1">
@@ -147,7 +147,7 @@ export function SessionRail({
                   </div>
                   <div
                     className="hud mt-1 flex items-start gap-1.5 text-[9px] text-text-dim"
-                    title={`Ranker: ${s.config?.rankerMode ?? "—"} · Model: ${s.config?.engine ?? "—"} — change these in the bar above`}
+                    title={`Ranker: ${s.config?.rankerMode ?? "not set"} · Model: ${s.config?.engine ?? "not set"}. Change these in the bar above`}
                   >
                     {active && <span className="mt-px h-1.5 w-1.5 flex-none rounded-full bg-secondary" aria-hidden />}
                     <span className="min-w-0 break-words">{subLine(s)}</span>

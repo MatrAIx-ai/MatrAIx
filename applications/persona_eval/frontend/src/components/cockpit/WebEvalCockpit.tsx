@@ -1,8 +1,8 @@
 /**
- * WebEvalCockpit — the Website-task PersonaEval surface.
+ * WebEvalCockpit: the Website-task PersonaEval surface.
  *
  * Reproduces the approved redesign mockup's `data-view="cockpit"` setup shell
- * (the same centered form as the canonical chatbot cockpit — header +
+ * (the same centered form as the canonical chatbot cockpit: header +
  * application-type switch + pipeline strip + run-config card + target-persona
  * panel + Run-eval CTA) with the Web-specific body (a website-task picker + a
  * "Website task" card and a driver/artifacts note instead of a Harbor
@@ -12,7 +12,7 @@
  * screenshot tiles with per-step actions.
  *
  * The data layer is untouched: `useWebEval`, the `listWebEvalTasks` query, the
- * export logic, and every result/trace shape are wired exactly as before — only
+ * export logic, and every result/trace shape are wired exactly as before. Only
  * the structure and presentation are rebuilt.
  */
 import { Fragment, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
@@ -268,14 +268,14 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
             <div className="hud mb-2 text-[10px] text-primary">PersonaEval · Cockpit</div>
             <h1 className="font-display text-[26px] font-bold tracking-tight text-text-main">Configure a simulation</h1>
             <p className="mt-1 text-[13px] text-text-variant">
-              Pick a persona and a website task, then launch — a simulated visitor drives a real browser and rates the
+              Pick a persona and a website task, then launch. A simulated visitor drives a real browser and rates the
               experience.
             </p>
           </div>
           <AppTypeSwitch value={taskType} onChange={onTaskTypeChange} disabled={isRunning} />
         </div>
 
-        {/* Pipeline strip — Persona → Website → Trace → Evaluation */}
+        {/* Pipeline strip: Persona → Website → Trace → Evaluation */}
         <WebPipeline
           phase={phase}
           jobPhase={job?.phase}
@@ -286,7 +286,7 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
         />
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
-          {/* LEFT — config + task/results + target persona */}
+          {/* LEFT: config + task/results + target persona */}
           <div className="space-y-5 lg:col-span-8">
             <RunConfigCard
               taskId={taskId}
@@ -342,7 +342,7 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
             />
           </div>
 
-          {/* RIGHT — driver/artifacts + Run eval */}
+          {/* RIGHT: driver/artifacts + Run eval */}
           <div className="space-y-5 lg:col-span-4">
             <DriverArtifactsNote />
 
@@ -532,7 +532,7 @@ function WebPipeline({
   );
 }
 
-/** "Run configuration" card — website task + simulated-user model selects. */
+/** "Run configuration" card: website task + simulated-user model selects. */
 function RunConfigCard({
   taskId,
   taskOptions,
@@ -611,7 +611,7 @@ function FieldSelect({
           }`}
         >
           {options.length === 0 ? (
-            <option value="">—</option>
+            <option value="">None available</option>
           ) : (
             options.map((option) => (
               <option key={option.value} value={option.value}>
@@ -726,7 +726,7 @@ function WebResults({
       {failed && (
         <ErrorCard
           title="The website test didn’t finish"
-          body={error ?? "Something interrupted the test. Your setup is still here — press Try again."}
+          body={error ?? "Something interrupted the test. Your setup is still here. Press Try again."}
           onRetry={onRetry}
           retryLabel="Try again"
         />
@@ -737,11 +737,11 @@ function WebResults({
         <div className="rise-in grid grid-cols-1 gap-5 lg:grid-cols-12">
           <div className="grid grid-cols-3 gap-3 lg:col-span-5">
             <MetricTile value={`${webResult.needSatisfaction}`} unit="/10" caption="Need fit" lead
-              hint="How well the chosen item met the persona's need (0–10)." />
+              hint="How well the chosen item met the persona's need (0 to 10)." />
             <MetricTile value={`${webResult.easeOfUse}`} unit="/10" caption="Ease of use"
-              hint="How easy the site was to use (0–10)." />
+              hint="How easy the site was to use (0 to 10)." />
             <MetricTile value={`${webResult.overallExperienceRating}`} unit="/10" caption="Overall UX"
-              hint="The visitor's overall experience rating (0–10)." />
+              hint="The visitor's overall experience rating (0 to 10)." />
           </div>
           <div className="flex items-center gap-4 rounded-md border border-outline bg-surface p-5 lg:col-span-7">
             <div className="grid h-12 w-12 shrink-0 place-items-center rounded border border-outline bg-surface-high">

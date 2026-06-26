@@ -1,5 +1,5 @@
 /**
- * TurnBubble — one conversational turn in the live-run thread.
+ * TurnBubble: one conversational turn in the live-run thread.
  *
  * Ports the mockup's two bubble styles (`app-redesign-v3.html:488-511`):
  *   - persona (the simulated user): right-aligned, `.hud` "Persona" label over a
@@ -11,7 +11,7 @@
  *
  * An app turn with no reply text (a backend hiccup) is rendered honestly as an
  * italic danger line. Meta shows ONLY the real wall-clock latency
- * (`durationSeconds`) — tokens / cost are not tracked, so never shown.
+ * (`durationSeconds`): tokens / cost are not tracked, so never shown.
  * Presentational: the parent owns the fold's open state + the turn data.
  */
 import { type ReactNode } from "react";
@@ -35,7 +35,7 @@ export interface PersonaBubbleProps {
   message: string;
 }
 
-/** The persona's message — right-aligned, on a bordered surface. */
+/** The persona's message: right-aligned, on a bordered surface. */
 export function PersonaBubble({ message }: PersonaBubbleProps) {
   return (
     <div className="flex w-full flex-col items-end pl-10">
@@ -57,7 +57,7 @@ export interface RecBotBubbleProps {
   onToggleFold: () => void;
 }
 
-/** The app reply — left-aligned, with items + tool-plan fold + meta chips. */
+/** The app reply: left-aligned, with items + tool-plan fold + meta chips. */
 export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: RecBotBubbleProps) {
   const hiccup = isHiccup(turn.assistantMessage);
   const latency = fmtLatency(turn.durationSeconds);
@@ -90,7 +90,7 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
         </div>
       </div>
 
-      {/* Meta chip row — tool-call status + REAL latency only. */}
+      {/* Meta chip row: tool-call status + REAL latency only. */}
       {(hasPlan || latency) && (
         <div className="ml-1 mt-2.5 flex items-center gap-2">
           {hasPlan && (
@@ -116,7 +116,7 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
   );
 }
 
-/** A turn divider ("Turn N") — retained for callers that group turns. */
+/** A turn divider ("Turn N"): retained for callers that group turns. */
 export function TurnMarker({ label, children }: { label: string; children?: ReactNode }) {
   return (
     <div className="my-1 flex w-full items-center">
