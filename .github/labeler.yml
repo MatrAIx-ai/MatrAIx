@@ -1,0 +1,35 @@
+# Auto-label PRs by team area (see workflows/pr-labeler.yml)
+
+"team: persona":
+  - changed-files:
+      - any-glob-to-any-file:
+          - persona/**
+
+"team: application":
+  - changed-files:
+      - any-glob-to-any-file:
+          - application/**
+
+"documentation":
+  - changed-files:
+      - any-glob-to-any-file:
+          - docs/**
+          - CONTRIBUTING.md
+          - README.md
+          - AGENTS.md
+          - CHANGELOG.md
+
+"team: environment":
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/**
+          - configs/**
+          - apps/**
+          - packages/**
+          - adapters/**
+          - examples/**
+          - tests/**
+          - skills/**
+          - .github/**
+          - pyproject.toml
+          - uv.lock
