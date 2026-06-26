@@ -128,6 +128,8 @@ export interface PreflightCheck {
   name: string;
   ok: boolean;
   detail: string;
+  /** Coarse area for grouping the checklist ("Core" · "Chatbot" · "Survey" · "Web"). */
+  group?: string | null;
 }
 
 /** `GET /api/preflight` payload. */

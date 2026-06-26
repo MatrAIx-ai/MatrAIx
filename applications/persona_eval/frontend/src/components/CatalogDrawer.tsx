@@ -17,6 +17,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { PersonaCard } from "./cockpit/PersonaCard";
+import { PersonaDrawer } from "./cockpit/PersonaDrawer";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import { listPersonaEvalPersonas } from "@/lib/api";
 import type { Domain, PersonaEvalPersona, PersonaEvalPersonasResponse } from "@/lib/types";
@@ -58,6 +59,8 @@ export interface CatalogDrawerProps {
 export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDrawerProps) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<SourceFilter>("all");
+  // Clicking a card opens this persona's detail drawer (view), not select-and-close.
+  const [viewing, setViewing] = useState<PersonaEvalPersona | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const debouncedQuery = useDebounced(query.trim(), 220);
 
@@ -206,7 +209,7 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
                   <PersonaCard
                     persona={p}
                     selected={p.id === (selectedId ?? null)}
-                    onSelect={handleSelect}
+                    onSelect={setViewing}
                   />
                 </div>
               ))}
@@ -214,6 +217,16 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
           )}
         </div>
       </div>
+
+      {/* Persona detail — opened by clicking a card. "Use this persona" selects
+          it (when a target context provided one) and closes the catalog. */}
+      <PersonaDrawer
+        open={viewing !== null}
+        persona={viewing}
+        context={null}
+        onClose={() => setViewing(null)}
+        onUse={onSelect ? handleSelect : undefined}
+      />
     </div>
   );
 }

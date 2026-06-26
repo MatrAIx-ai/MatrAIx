@@ -59,8 +59,10 @@ def test_preflight_shape(client):
     # User-facing check names — readable, never raw env-var names.
     assert "OpenAI credentials" in names
     assert "Catalog" in names
+    # Overall, interface-aware coverage — not just the RecAI recommender.
+    assert {"OpenBB (finance)", "Medical assistant", "Survey forms", "Web tasks"} <= names
     for check in body["checks"]:
-        assert set(check.keys()) >= {"name", "ok", "detail"}
+        assert set(check.keys()) >= {"name", "ok", "detail", "group"}
 
 
 def test_preflight_does_not_leak_env_var_names(client):
@@ -82,18 +84,14 @@ def test_preflight_catalog_check_ok(client):
 
 
 def test_preflight_validates_real_resource_bundle(client):
-    """Resource checks target the real native bundle, one per supported domain."""
+    """The RecAI resources check validates the real native bundle across domains."""
     body = client.get("/api/preflight").json()
-    res_checks = [
-        c for c in body["checks"] if c["name"].startswith("Recommendation resources")
-    ]
-    # One per supported domain (movie / beauty_product / game).
-    names = {c["name"] for c in res_checks}
-    assert names == {
-        "Recommendation resources (movie)",
-        "Recommendation resources (beauty_product)",
-        "Recommendation resources (game)",
-    }
+    res = next(c for c in body["checks"] if c["name"] == "RecAI resources")
+    assert res["group"] == "Chatbot"
+    # Collapsed across every supported domain (movie / beauty_product / game),
+    # which are named in the plain-language detail.
+    for domain in ("movie", "beauty_product", "game"):
+        assert domain in res["detail"]
 
 
 def test_config_options(client):

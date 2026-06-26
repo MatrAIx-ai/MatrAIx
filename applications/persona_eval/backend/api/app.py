@@ -137,32 +137,29 @@ _BUNDLE_DOMAINS = ("movie", "beauty_product", "game")
 
 
 def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
-    """Compute the user-facing preflight readiness checks.
+    """Compute the user-facing, interface-aware readiness checklist.
 
-    Probes everything a real turn needs and reports each as
-    ``{"name", "ok", "detail"}`` regardless of pass/fail, so the UI can show
-    every probe and its reason in plain language. The checks are:
+    Reports each probe as ``{"group", "name", "ok", "detail"}`` regardless of
+    pass/fail, so the UI can group the overall readiness of the whole system —
+    not just the RecAI recommender — in plain language. Groups:
 
-    * **OpenAI credentials** — present or not (required for real turns).
-    * **Recommendation engine** — the in-repo RecAI checkout containing
-      ``llm4crs/``.
-    * **Catalog** — the normalized ``items.jsonl`` the Studio browses.
-    * **Recommendation resources (<domain>)** — the *real* native bundle under
-      ``recai/InteRecAgent/resources/<domain>/`` (its ``settings.json`` plus the
-      files it references), one check per supported domain. This is the
-      ``all_resources`` bundle installed by ``scripts.setup_recai_resources`` —
-      not any generated stub.
+    * **Core** — model credentials and the browsable catalog (any run needs these).
+    * **Chatbot** — the RecAI recommender (engine + its native resource bundles,
+      collapsed across domains), plus the OpenBB and Medical adapters, which are
+      selectable but whose external services are verified at run time.
+    * **Survey** / **Web** — the other application interfaces, available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
-    names; remediation details stay actionable without leaking config internals.
-    This function performs only filesystem inspection — it never imports RecAI.
+    names. This function performs only filesystem inspection — it never imports
+    RecAI or any application backend.
     """
     checks: List[Dict[str, Any]] = []
 
-    # 1) OpenAI credentials (env inspected, but not named on the wire).
+    # ---- Core — what any run, on any interface, needs ------------------- #
     openai_key = os.environ.get("OPENAI_API_KEY")
     checks.append(
         {
+            "group": "Core",
             "name": "OpenAI credentials",
             "ok": bool(openai_key),
             "detail": (
@@ -173,12 +170,34 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
         }
     )
 
-    # 2) RecAI engine checkout (the in-repo recai/InteRecAgent, llm4crs/ inside).
+    # Browsable catalog — readiness is "has items", not a file path.
+    size = getattr(catalog, "size", 0)
+    if getattr(catalog, "available", False) and size:
+        checks.append(
+            {
+                "group": "Core",
+                "name": "Catalog",
+                "ok": True,
+                "detail": "Loaded ({} items).".format(size),
+            }
+        )
+    else:
+        checks.append(
+            {
+                "group": "Core",
+                "name": "Catalog",
+                "ok": False,
+                "detail": "No catalog items available to browse.",
+            }
+        )
+
+    # ---- Chatbot — RecAI is deeply probed; other adapters are offered --- #
     root = _interecagent_root()
     llm4crs = os.path.join(root, "llm4crs")
     engine_ok = os.path.isdir(root) and os.path.isdir(llm4crs)
     checks.append(
         {
+            "group": "Chatbot",
             "name": "Recommendation engine",
             "ok": engine_ok,
             "detail": (
@@ -190,32 +209,77 @@ def preflight_checks(catalog: Any) -> List[Dict[str, Any]]:
         }
     )
 
-    # 3) Browsable catalog — the recommendable corpus the Studio searches. The
-    #    default-domain index is loaded from the real bundle (or an injected
-    #    JSONL in tests); either way, readiness is "has items", not a file path.
-    size = getattr(catalog, "size", 0)
-    if getattr(catalog, "available", False) and size:
-        checks.append(
-            {
-                "name": "Catalog",
-                "ok": True,
-                "detail": "Loaded ({} items).".format(size),
-            }
-        )
-    else:
-        checks.append(
-            {
-                "name": "Catalog",
-                "ok": False,
-                "detail": "No catalog items available to browse.",
-            }
-        )
+    # The RecAI native bundles, collapsed across every supported domain.
+    checks.append(_recai_resources_check(root))
 
-    # 4) Real native resource bundle per domain (all_resources, single source).
-    for domain in _BUNDLE_DOMAINS:
-        checks.append(_bundle_check(root, domain))
+    # Other chatbot adapters are selectable, but their external services are only
+    # exercised at run time — report availability honestly, never fake a probe we
+    # cannot perform here (this function is filesystem-only).
+    checks.append(
+        {
+            "group": "Chatbot",
+            "name": "OpenBB (finance)",
+            "ok": True,
+            "detail": "Adapter available — OpenBB access is checked when a run starts.",
+        }
+    )
+    checks.append(
+        {
+            "group": "Chatbot",
+            "name": "Medical assistant",
+            "ok": True,
+            "detail": "Adapter available — the assistant service is checked when a run starts.",
+        }
+    )
+
+    # ---- Survey + Web interfaces --------------------------------------- #
+    checks.append(
+        {
+            "group": "Survey",
+            "name": "Survey forms",
+            "ok": True,
+            "detail": "Survey interface available — instruments load when you open it.",
+        }
+    )
+    checks.append(
+        {
+            "group": "Web",
+            "name": "Web tasks",
+            "ok": True,
+            "detail": "Browser / computer-use interface available — checked when a run starts.",
+        }
+    )
 
     return checks
+
+
+def _recai_resources_check(interecagent_root: str) -> Dict[str, Any]:
+    """One collapsed readiness check across every RecAI resource domain.
+
+    Validates the real native bundle (``settings.json`` + the files it
+    references) for each supported domain via :func:`_bundle_check`, and reports
+    a single plain-language line — the per-domain status lives in ``detail`` —
+    instead of one row per domain.
+    """
+    installed: List[str] = []
+    missing: List[str] = []
+    for domain in _BUNDLE_DOMAINS:
+        if _bundle_check(interecagent_root, domain)["ok"]:
+            installed.append(domain)
+        else:
+            missing.append(domain)
+    if not missing:
+        ok = True
+        detail = "Native resource bundles installed ({}).".format(", ".join(_BUNDLE_DOMAINS))
+    elif installed:
+        ok = False
+        detail = "Installed: {}. Missing: {}.".format(
+            ", ".join(installed), ", ".join(missing)
+        )
+    else:
+        ok = False
+        detail = "Native resource bundles not installed ({}).".format(", ".join(missing))
+    return {"group": "Chatbot", "name": "RecAI resources", "ok": ok, "detail": detail}
 
 
 def _interecagent_root() -> str:

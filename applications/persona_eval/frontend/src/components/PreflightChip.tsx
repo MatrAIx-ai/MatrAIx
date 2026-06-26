@@ -87,6 +87,20 @@ export function PreflightChip() {
     sub = `${failing} thing${failing === 1 ? "" : "s"} left to finish`;
   }
 
+  // Group the checks by area (Core · Chatbot · Survey · Web) for the popover.
+  const grouped = data
+    ? data.checks.reduce<{ group: string; items: PreflightResponse["checks"] }[]>(
+        (acc, c) => {
+          const g = c.group ?? "Checks";
+          const bucket = acc.find((x) => x.group === g);
+          if (bucket) bucket.items.push(c);
+          else acc.push({ group: g, items: [c] });
+          return acc;
+        },
+        [],
+      )
+    : [];
+
   return (
     <div ref={rootRef} className="relative">
       <button
@@ -112,27 +126,32 @@ export function PreflightChip() {
           aria-label="Setup checklist"
           className="pop-in absolute right-0 top-full z-30 mt-2 w-80 max-w-[calc(100vw-1.5rem)] max-h-[70vh] overflow-y-auto custom-scrollbar rounded-md border border-outline bg-surface-lowest p-3 shadow-2xl"
         >
-          <p className="hud mb-2 text-[10px] text-text-dim">
-            Setup checklist
-          </p>
-          <ul className="space-y-2">
-            {data.checks.map((check) => (
-              <li key={check.name} className="flex items-start gap-2">
-                <Sym
-                  name={check.ok ? "check_circle" : "error"}
-                  fill={1}
-                  size={16}
-                  className={`mt-px flex-none ${check.ok ? "text-secondary" : "text-warn"}`}
-                />
-                <div className="min-w-0">
-                  <div className="text-[12px] font-medium text-text-main">{check.name}</div>
-                  <div className="text-[11px] leading-relaxed text-text-variant">
-                    {check.detail}
-                  </div>
-                </div>
-              </li>
+          <p className="hud mb-2.5 text-[10px] text-text-dim">System readiness</p>
+          <div className="space-y-3.5">
+            {grouped.map((g) => (
+              <div key={g.group}>
+                <div className="hud mb-1.5 text-[9px] text-primary">{g.group}</div>
+                <ul className="space-y-2">
+                  {g.items.map((check) => (
+                    <li key={check.name} className="flex items-start gap-2">
+                      <Sym
+                        name={check.ok ? "check_circle" : "error"}
+                        fill={1}
+                        size={16}
+                        className={`mt-px flex-none ${check.ok ? "text-secondary" : "text-warn"}`}
+                      />
+                      <div className="min-w-0">
+                        <div className="text-[12px] font-medium text-text-main">{check.name}</div>
+                        <div className="text-[11px] leading-relaxed text-text-variant">
+                          {check.detail}
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>

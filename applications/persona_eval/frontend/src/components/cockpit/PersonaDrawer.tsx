@@ -263,17 +263,20 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
           )}
         </div>
 
-        {/* Footer */}
-        <div className="flex-shrink-0 border-t border-outline p-4">
-          <button
-            type="button"
-            onClick={handleUse}
-            className={`glow flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-on-primary transition-[background-color,transform] duration-150 ease-out hover:bg-primary-dim active:scale-[0.99] ${FOCUS_RING}`}
-          >
-            <Sym name="check" size={16} />
-            Use this persona
-          </button>
-        </div>
+        {/* Footer — only when a target context can actually adopt this persona
+            (i.e. the cockpit's "Change persona"); pure browse/view omits it. */}
+        {onUse && (
+          <div className="flex-shrink-0 border-t border-outline p-4">
+            <button
+              type="button"
+              onClick={handleUse}
+              className={`glow flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-on-primary transition-[background-color,transform] duration-150 ease-out hover:bg-primary-dim active:scale-[0.99] ${FOCUS_RING}`}
+            >
+              <Sym name="check" size={16} />
+              Use this persona
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

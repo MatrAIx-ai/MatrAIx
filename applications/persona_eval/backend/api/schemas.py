@@ -105,6 +105,9 @@ class PreflightCheck(BaseModel):
     name: str
     ok: bool
     detail: str
+    #: Coarse area this check belongs to ("Core" / "Chatbot" / "Survey" / "Web")
+    #: so the UI can group the overall-readiness checklist. Optional for back-compat.
+    group: Optional[str] = None
 
 
 class PreflightResponse(BaseModel):
