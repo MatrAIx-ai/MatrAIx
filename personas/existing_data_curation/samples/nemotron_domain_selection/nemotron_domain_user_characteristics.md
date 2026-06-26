@@ -71,6 +71,18 @@ This summary describes the main characteristics of the selected Nemotron users i
 | 5 | 7 | nursing_assistant, physical_therapist, physician | Nemotron_607A5899.yaml |
 | 6 | 5 | medical_assistant, healthcare_support_worker, physician | Nemotron_65C77A44.yaml |
 
+## Ecommerce / retail
+
+- Covers retail and commerce operators such as retail supervisors, purchasing managers, sales workers, customer-service profiles, inventory/logistics users, and small-business or storefront-oriented personas.
+- Includes both seller/operator-side profiles and consumer/shopper-adjacent profiles, making it useful for marketplace, personalization, product discovery, return/support, and merchandising applications.
+- Clusters separate retail floor/service profiles, purchasing/procurement and inventory profiles, small-business/storefront profiles, and broader shopping or consumer-product interest profiles.
+
+| Cluster | Size | Common occupations | Representative user |
+|---:|---:|---|---|
+| 1 | 14 | stocker_or_order_filler, logistician, shipping_receiving_or_inventory_clerk | Nemotron_41C0794B.yaml |
+| 2 | 17 | first_line_supervisor_of_retail_sales_worker, retail_salesperson, cashier | Nemotron_D9DAC60A.yaml |
+| 3 | 19 | shipping_receiving_or_inventory_clerk, laborer_or_freight_stock_or_material_mover, purchasing_manager | Nemotron_9144CE28.yaml |
+
 ## Notes
 
 - These are qualitative summaries for presentation and application-test planning, not claims about demographic balance.

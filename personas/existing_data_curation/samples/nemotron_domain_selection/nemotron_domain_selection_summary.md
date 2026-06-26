@@ -1,12 +1,13 @@
 # Nemotron Domain Test User Selection Summary
 
-This folder contains a proposed Nemotron-only persona pool for testing five application domains:
+This folder contains a proposed Nemotron-only persona pool for testing six application domains:
 
 - Movie / film
 - Beauty
 - Game
 - Finance
 - Medical / healthcare
+- Ecommerce / retail
 
 Amazon review personas and Amazon-derived outputs are not used in this selection.
 
@@ -26,7 +27,7 @@ Amazon review personas and Amazon-derived outputs are not used in this selection
 
 ## Selection Goal
 
-The goal is to pick domain-relevant test users while preserving profile diversity inside each domain. Each domain has 50 selected users, so the full set contains 250 domain-persona assignments.
+The goal is to pick domain-relevant test users while preserving profile diversity inside each domain. Each domain has 50 selected users, so the full set contains 300 domain-persona assignments.
 
 ## Selection Method
 
@@ -59,6 +60,7 @@ The final selection then applied diversity pressure so that the 50 users in each
 | Game | 14,304 | 50 |
 | Finance | 23,028 | 50 |
 | Medical / healthcare | 9,697 | 50 |
+| Ecommerce / retail | 16,774 | 50 |
 
 ## How To Use
 

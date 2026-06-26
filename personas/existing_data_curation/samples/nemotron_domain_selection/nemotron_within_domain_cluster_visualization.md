@@ -44,6 +44,9 @@ The table below describes clusters by common occupations and representative user
 | Medical / healthcare | 4 | 6 | healthcare_practitioner_or_technical_occupation, registered_nurse, medical_assistant | Nemotron_EBCEBC8A.yaml | Nemotron_66251462.yaml; Nemotron_EBCEBC8A.yaml; Nemotron_73EE31BB.yaml; Nemotron_D55727C0.yaml; Nemotron_CD08DBB4.yaml |
 | Medical / healthcare | 5 | 7 | nursing_assistant, physical_therapist, physician | Nemotron_607A5899.yaml | Nemotron_24A37D16.yaml; Nemotron_1B0E39AD.yaml; Nemotron_5F23C5CF.yaml; Nemotron_19DA1B80.yaml; Nemotron_607A5899.yaml |
 | Medical / healthcare | 6 | 5 | medical_assistant, healthcare_support_worker, physician | Nemotron_65C77A44.yaml | Nemotron_4EF46E87.yaml; Nemotron_65C77A44.yaml; Nemotron_C7D14E7E.yaml; Nemotron_C1020903.yaml; Nemotron_3E76CCB7.yaml |
+| Ecommerce / retail | 1 | 14 | stocker_or_order_filler, logistician, shipping_receiving_or_inventory_clerk | Nemotron_41C0794B.yaml | Nemotron_980B30A8.yaml; Nemotron_4A9688C3.yaml; Nemotron_41C0794B.yaml; Nemotron_B2838B66.yaml; Nemotron_4B6E192B.yaml |
+| Ecommerce / retail | 2 | 17 | first_line_supervisor_of_retail_sales_worker, retail_salesperson, cashier | Nemotron_D9DAC60A.yaml | Nemotron_AE6F4178.yaml; Nemotron_07F77AEB.yaml; Nemotron_EBE5EB96.yaml; Nemotron_AEE75F81.yaml; Nemotron_1E641B5E.yaml |
+| Ecommerce / retail | 3 | 19 | shipping_receiving_or_inventory_clerk, laborer_or_freight_stock_or_material_mover, purchasing_manager | Nemotron_9144CE28.yaml | Nemotron_9E75DA21.yaml; Nemotron_13DC1DEC.yaml; Nemotron_AA9E3C3B.yaml; Nemotron_A3453DD0.yaml; Nemotron_9144CE28.yaml |
 
 ## Output Tables
 

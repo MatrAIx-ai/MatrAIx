@@ -1,6 +1,6 @@
 # Nemotron Overall Diversity Visualization
 
-This figure visualizes the 250 selected Nemotron personas from `nemotron_test_users_50_per_domain.md`: 50 users per application domain.
+This figure visualizes the 300 selected Nemotron personas from `nemotron_test_users_50_per_domain.md`: 50 users per application domain.
 
 ![Overall diversity projection](nemotron_overall_diversity_projection.svg)
 
@@ -19,11 +19,12 @@ Interpretation: wider spread within a color indicates broader overall profile co
 
 | Domain | Users | Mean pairwise cosine distance | Median pairwise cosine distance | Mean projected radius | P90 projected radius |
 |---|---:|---:|---:|---:|---:|
-| Movie / film | 50 | 0.822 | 0.843 | 0.057 | 0.112 |
-| Beauty | 50 | 0.828 | 0.874 | 0.092 | 0.163 |
-| Game | 50 | 0.778 | 0.832 | 0.093 | 0.184 |
-| Finance | 50 | 0.748 | 0.766 | 0.067 | 0.110 |
-| Medical / healthcare | 50 | 0.757 | 0.779 | 0.073 | 0.136 |
+| Movie / film | 50 | 0.808 | 0.831 | 0.057 | 0.095 |
+| Beauty | 50 | 0.820 | 0.867 | 0.104 | 0.196 |
+| Game | 50 | 0.768 | 0.827 | 0.061 | 0.119 |
+| Finance | 50 | 0.735 | 0.757 | 0.072 | 0.128 |
+| Medical / healthcare | 50 | 0.734 | 0.757 | 0.081 | 0.164 |
+| Ecommerce / retail | 50 | 0.754 | 0.786 | 0.053 | 0.099 |
 
 The pairwise cosine-distance metrics are computed in the reduced persona-text feature space. They are better suited for comparing within-domain spread than visual distances alone.
 

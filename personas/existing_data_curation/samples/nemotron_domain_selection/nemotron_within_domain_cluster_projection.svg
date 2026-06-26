@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1030" viewBox="0 0 1450 1030" role="img" aria-label="Clustered within-domain diversity projections of selected Nemotron users">
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1030" viewBox="0 0 1450 1030" role="img" aria-label="Within-domain persona clusters">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#17202a}.title{font-size:28px;font-weight:700}.subtitle{font-size:15px;fill:#52606d}.panel-title{font-size:17px;font-weight:700}.panel-sub{font-size:12px;fill:#52606d}.grid{stroke:#e8edf3;stroke-width:1}.frame{stroke:#9aaabd;stroke-width:1;fill:#fbfcfe}.point{stroke:#fff;stroke-width:1.1;fill-opacity:.90}.small{font-size:12px;fill:#52606d}.legend{font-size:11px;fill:#334155}</style>
 <text x="70" y="36" class="title">Within-domain persona clusters</text>
@@ -204,138 +204,202 @@
 <circle class="point" cx="1156.0" cy="242.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #49 Nemotron_F4C85CC2.yaml | gambling_services_worker | age 26 | Male | Cortland</title></circle>
 <circle class="point" cx="1174.4" cy="284.6" r="5.5" fill="#2563eb"><title>Cluster 1 | #50 Nemotron_6C70EFDF.yaml | not_in_workforce | age 16 | Male | Murfreesboro</title></circle>
 <text x="988" y="380" class="legend">C1: 13; C2: 11; C3: 14; C4: 12</text>
-<rect x="280" y="484" width="390" height="310" rx="10" class="frame"/>
-<text x="298" y="512" class="panel-title" fill="#E58B22">Finance</text>
-<text x="298" y="533" class="panel-sub">3 clusters; silhouette 0.092</text>
-<line x1="322.0" y1="550" x2="322.0" y2="758" class="grid"/>
-<line x1="322" y1="550.0" x2="640" y2="550.0" class="grid"/>
-<line x1="428.0" y1="550" x2="428.0" y2="758" class="grid"/>
-<line x1="322" y1="619.3" x2="640" y2="619.3" class="grid"/>
-<line x1="534.0" y1="550" x2="534.0" y2="758" class="grid"/>
-<line x1="322" y1="688.7" x2="640" y2="688.7" class="grid"/>
-<line x1="640.0" y1="550" x2="640.0" y2="758" class="grid"/>
-<line x1="322" y1="758.0" x2="640" y2="758.0" class="grid"/>
-<ellipse cx="520.9" cy="595.4" rx="88.6" ry="25.9" transform="rotate(170.61 520.9 595.4)" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="489.0" cy="686.7" rx="75.9" ry="35.0" transform="rotate(-169.69 489.0 686.7)" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="453.1" cy="705.7" rx="78.7" ry="33.4" transform="rotate(167.63 453.1 705.7)" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.32" stroke-width="1.5"/>
-<circle class="point" cx="497.4" cy="636.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #1 Nemotron_AAC5CD6D.yaml | financial_manager | age 42 | Female | Los Angeles</title></circle>
-<circle class="point" cx="439.1" cy="715.0" r="5.5" fill="#16a34a"><title>Cluster 3 | #2 Nemotron_47ED0374.yaml | financial_specialist | age 97 | Male | Far Rockaway</title></circle>
-<circle class="point" cx="505.0" cy="670.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #3 Nemotron_02C6ED08.yaml | bookkeeping_accounting_or_auditing_clerk | age 50 | Female | Corozal</title></circle>
-<circle class="point" cx="562.5" cy="706.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #4 Nemotron_E8E5E3B9.yaml | accountant_or_auditor | age 33 | Male | Divernon</title></circle>
-<circle class="point" cx="481.4" cy="651.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #5 Nemotron_5793C2B8.yaml | personal_financial_advisor | age 43 | Male | Suwanee</title></circle>
-<circle class="point" cx="488.4" cy="694.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #6 Nemotron_5DC69A5F.yaml | financial_or_investment_analyst | age 21 | Female | Kinston</title></circle>
-<circle class="point" cx="480.9" cy="632.4" r="5.5" fill="#2563eb"><title>Cluster 1 | #7 Nemotron_381C6F79.yaml | bookkeeping_accounting_or_auditing_clerk | age 23 | Female | North Las Vegas</title></circle>
-<circle class="point" cx="545.1" cy="700.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #8 Nemotron_B7F39A18.yaml | accountant_or_auditor | age 35 | Male | Philadelphia</title></circle>
-<circle class="point" cx="505.4" cy="584.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #9 Nemotron_64A61EDB.yaml | tax_preparer | age 52 | Female | Bronx</title></circle>
-<circle class="point" cx="493.0" cy="638.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #10 Nemotron_DAD23A86.yaml | financial_specialist | age 64 | Male | San Antonio</title></circle>
-<circle class="point" cx="453.3" cy="732.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #11 Nemotron_54EAE98D.yaml | financial_clerk | age 21 | Female | Charleston</title></circle>
-<circle class="point" cx="449.1" cy="660.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #12 Nemotron_425A8801.yaml | financial_manager | age 55 | Male | Lake Mary</title></circle>
-<circle class="point" cx="511.3" cy="676.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #13 Nemotron_557E8861.yaml | personal_financial_advisor | age 31 | Female | Wilmington</title></circle>
-<circle class="point" cx="550.0" cy="597.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #14 Nemotron_1BE6B639.yaml | budget_analyst | age 24 | Male | Susanville</title></circle>
-<circle class="point" cx="477.6" cy="590.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #15 Nemotron_8ABF798C.yaml | tax_preparer | age 25 | Female | Houston</title></circle>
-<circle class="point" cx="422.1" cy="734.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #16 Nemotron_FA019285.yaml | financial_clerk | age 61 | Male | Independence</title></circle>
-<circle class="point" cx="450.8" cy="633.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #17 Nemotron_A5B40A8D.yaml | tax_examiner_collector_or_revenue_agent | age 38 | Male | Riverside</title></circle>
-<circle class="point" cx="479.1" cy="645.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #18 Nemotron_CB8AE079.yaml | financial_or_investment_analyst | age 31 | Female | Hurst</title></circle>
-<circle class="point" cx="591.3" cy="574.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #19 Nemotron_2A2DC2F3.yaml | personal_financial_advisor | age 47 | Female | La Verne</title></circle>
-<circle class="point" cx="391.4" cy="696.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #20 Nemotron_77018235.yaml | financial_specialist | age 63 | Male | Northville</title></circle>
-<circle class="point" cx="385.9" cy="690.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #21 Nemotron_3816441A.yaml | not_in_workforce | age 19 | Female | Trenton</title></circle>
-<circle class="point" cx="561.2" cy="708.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #22 Nemotron_A5048C31.yaml | securities_commodities_or_financial_services_sales_agent | age 55 | Male | Cliffside Park</title></circle>
-<circle class="point" cx="440.5" cy="738.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #23 Nemotron_1D47C6CA.yaml | bookkeeping_accounting_or_auditing_clerk | age 62 | Male | Saint Petersburg</title></circle>
-<circle class="point" cx="498.4" cy="704.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #24 Nemotron_8B4B474B.yaml | accountant_or_auditor | age 32 | Female | Elkhart</title></circle>
-<circle class="point" cx="441.5" cy="675.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #25 Nemotron_35160244.yaml | credit_counselor_or_loan_officer | age 49 | Male | Las Vegas</title></circle>
-<circle class="point" cx="567.1" cy="723.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #26 Nemotron_737C1ADE.yaml | financial_manager | age 18 | Female | Savannah</title></circle>
-<circle class="point" cx="584.8" cy="696.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #27 Nemotron_774AEC1B.yaml | financial_or_investment_analyst | age 38 | Female | Highland Home</title></circle>
-<circle class="point" cx="502.6" cy="721.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #28 Nemotron_C4C837B8.yaml | bookkeeping_accounting_or_auditing_clerk | age 27 | Male | Mount Holly</title></circle>
-<circle class="point" cx="348.5" cy="714.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #29 Nemotron_155359D4.yaml | not_in_workforce | age 73 | Female | Westmont</title></circle>
-<circle class="point" cx="437.1" cy="660.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #30 Nemotron_1E5C7CAB.yaml | personal_financial_advisor | age 40 | Male | Portland</title></circle>
-<circle class="point" cx="430.1" cy="703.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #31 Nemotron_5475842E.yaml | accountant_or_auditor | age 21 | Male | Chestnut Hill</title></circle>
-<circle class="point" cx="407.0" cy="624.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #32 Nemotron_B8A88807.yaml | teller | age 46 | Female | Omaha</title></circle>
-<circle class="point" cx="496.8" cy="567.3" r="5.5" fill="#2563eb"><title>Cluster 1 | #33 Nemotron_6D97E519.yaml | tax_examiner_collector_or_revenue_agent | age 26 | Female | Squaw Valley</title></circle>
-<circle class="point" cx="478.0" cy="740.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #34 Nemotron_44C3DCA3.yaml | financial_clerk | age 73 | Male | Geneva</title></circle>
-<circle class="point" cx="613.5" cy="602.5" r="5.5" fill="#2563eb"><title>Cluster 1 | #35 Nemotron_AE1F4CE3.yaml | financial_manager | age 40 | Female | Roma</title></circle>
-<circle class="point" cx="497.1" cy="680.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #36 Nemotron_A95C2BC0.yaml | securities_commodities_or_financial_services_sales_agent | age 30 | Male | Danbury</title></circle>
-<circle class="point" cx="550.7" cy="689.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #37 Nemotron_9765E7A8.yaml | tax_preparer | age 20 | Female | Dwight</title></circle>
-<circle class="point" cx="419.4" cy="721.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #38 Nemotron_073FC8DE.yaml | billing_or_posting_clerk | age 50 | Male | Port Orange</title></circle>
-<circle class="point" cx="565.2" cy="582.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #39 Nemotron_B456CEFB.yaml | financial_or_investment_analyst | age 42 | Male | San Dimas</title></circle>
-<circle class="point" cx="477.9" cy="696.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #40 Nemotron_6CD18198.yaml | credit_counselor_or_loan_officer | age 53 | Female | Arnold</title></circle>
-<circle class="point" cx="551.9" cy="704.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #41 Nemotron_76FC07AC.yaml | financial_examiner | age 42 | Female | Pittsburgh</title></circle>
-<circle class="point" cx="385.3" cy="724.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #42 Nemotron_5DE1355B.yaml | bookkeeping_accounting_or_auditing_clerk | age 59 | Male | Oak Park</title></circle>
-<circle class="point" cx="428.9" cy="673.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #43 Nemotron_4B812D61.yaml | budget_analyst | age 64 | Male | Gilbert</title></circle>
-<circle class="point" cx="559.3" cy="715.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #44 Nemotron_3B09FED9.yaml | financial_specialist | age 60 | Male | Kings Mountain</title></circle>
-<circle class="point" cx="509.6" cy="683.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #45 Nemotron_9857D523.yaml | accountant_or_auditor | age 36 | Female | Sharon Hill</title></circle>
-<circle class="point" cx="505.2" cy="663.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #46 Nemotron_CDF9E4C3.yaml | personal_financial_advisor | age 34 | Male | Chico</title></circle>
-<circle class="point" cx="362.1" cy="691.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #47 Nemotron_D20B2F6C.yaml | teller | age 18 | Female | Rolla</title></circle>
-<circle class="point" cx="464.9" cy="705.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #48 Nemotron_719AAD82.yaml | financial_manager | age 27 | Female | Spotsylvania</title></circle>
-<circle class="point" cx="478.5" cy="698.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #49 Nemotron_668DE5F9.yaml | financial_clerk | age 49 | Female | Kew Gardens</title></circle>
-<circle class="point" cx="474.2" cy="717.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #50 Nemotron_F7A35167.yaml | not_in_workforce | age 80 | Male | Smyrna</title></circle>
-<text x="322" y="782" class="legend">C1: 9; C2: 26; C3: 15</text>
-<rect x="718" y="484" width="390" height="310" rx="10" class="frame"/>
-<text x="736" y="512" class="panel-title" fill="#9B6DB3">Medical / healthcare</text>
-<text x="736" y="533" class="panel-sub">6 clusters; silhouette 0.123</text>
-<line x1="760.0" y1="550" x2="760.0" y2="758" class="grid"/>
-<line x1="760" y1="550.0" x2="1078" y2="550.0" class="grid"/>
-<line x1="866.0" y1="550" x2="866.0" y2="758" class="grid"/>
-<line x1="760" y1="619.3" x2="1078" y2="619.3" class="grid"/>
-<line x1="972.0" y1="550" x2="972.0" y2="758" class="grid"/>
-<line x1="760" y1="688.7" x2="1078" y2="688.7" class="grid"/>
-<line x1="1078.0" y1="550" x2="1078.0" y2="758" class="grid"/>
-<line x1="760" y1="758.0" x2="1078" y2="758.0" class="grid"/>
-<ellipse cx="853.4" cy="661.7" rx="77.2" ry="34.2" transform="rotate(164.15 853.4 661.7)" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="880.1" cy="693.9" rx="96.5" ry="39.1" transform="rotate(179.85 880.1 693.9)" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="919.1" cy="597.8" rx="79.4" ry="37.9" transform="rotate(173.62 919.1 597.8)" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="873.4" cy="676.3" rx="43.6" ry="12.7" transform="rotate(157.32 873.4 676.3)" fill="#d97706" fill-opacity="0.08" stroke="#d97706" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="867.5" cy="659.8" rx="51.1" ry="17.7" transform="rotate(142.61 867.5 659.8)" fill="#9333ea" fill-opacity="0.08" stroke="#9333ea" stroke-opacity="0.32" stroke-width="1.5"/>
-<ellipse cx="909.8" cy="616.8" rx="79.5" ry="3.6" transform="rotate(170.42 909.8 616.8)" fill="#0891b2" fill-opacity="0.08" stroke="#0891b2" stroke-opacity="0.32" stroke-width="1.5"/>
-<circle class="point" cx="876.6" cy="681.5" r="5.5" fill="#d97706"><title>Cluster 4 | #1 Nemotron_66251462.yaml | registered_nurse | age 21 | Male | Leawood</title></circle>
-<circle class="point" cx="937.1" cy="614.9" r="5.5" fill="#0891b2"><title>Cluster 6 | #2 Nemotron_4EF46E87.yaml | medical_assistant | age 50 | Female | South El Monte</title></circle>
-<circle class="point" cx="911.5" cy="656.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #3 Nemotron_6BD259CE.yaml | healthcare_support_worker | age 38 | Male | Rohnert Park</title></circle>
-<circle class="point" cx="1015.4" cy="567.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #4 Nemotron_EB99965E.yaml | licensed_practical_or_licensed_vocational_nurse | age 60 | Female | Denver</title></circle>
-<circle class="point" cx="885.6" cy="667.8" r="5.5" fill="#d97706"><title>Cluster 4 | #5 Nemotron_EBCEBC8A.yaml | healthcare_practitioner_or_technical_occupation | age 25 | Male | Muncie</title></circle>
-<circle class="point" cx="846.2" cy="717.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #6 Nemotron_B6B2C32E.yaml | physician | age 23 | Female | Okemos</title></circle>
-<circle class="point" cx="946.5" cy="589.0" r="5.5" fill="#16a34a"><title>Cluster 3 | #7 Nemotron_11B619B6.yaml | miscellaneous_health_technologist_or_technician | age 32 | Male | Mission</title></circle>
-<circle class="point" cx="996.1" cy="602.0" r="5.5" fill="#0891b2"><title>Cluster 6 | #8 Nemotron_65C77A44.yaml | healthcare_support_worker | age 30 | Female | Granada Hills</title></circle>
-<circle class="point" cx="828.0" cy="709.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #9 Nemotron_E4E071B7.yaml | physician_assistant | age 36 | Male | Salt Lake City</title></circle>
-<circle class="point" cx="892.2" cy="669.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #10 Nemotron_62961B18.yaml | physical_therapist_assistant_or_aide | age 24 | Male | Reading</title></circle>
-<circle class="point" cx="854.3" cy="595.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #11 Nemotron_D83C1191.yaml | nursing_assistant | age 56 | Female | Hoffman Estates</title></circle>
-<circle class="point" cx="1006.6" cy="574.4" r="5.5" fill="#16a34a"><title>Cluster 3 | #12 Nemotron_D39CB893.yaml | home_health_aide | age 21 | Female | Caldwell</title></circle>
-<circle class="point" cx="1051.5" cy="678.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #13 Nemotron_CF62007F.yaml | registered_nurse | age 36 | Female | Orange Park</title></circle>
-<circle class="point" cx="861.2" cy="740.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #14 Nemotron_78EFE608.yaml | emergency_medical_technician | age 25 | Male | North Adams</title></circle>
-<circle class="point" cx="871.0" cy="623.2" r="5.5" fill="#0891b2"><title>Cluster 6 | #15 Nemotron_C7D14E7E.yaml | physician | age 62 | Male | Flushing</title></circle>
-<circle class="point" cx="914.4" cy="673.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #16 Nemotron_FB1F9E52.yaml | medical_or_health_services_manager | age 52 | Female | Payette</title></circle>
-<circle class="point" cx="886.5" cy="584.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #17 Nemotron_61A5555E.yaml | phlebotomist | age 29 | Female | Matador</title></circle>
-<circle class="point" cx="845.0" cy="678.8" r="5.5" fill="#d97706"><title>Cluster 4 | #18 Nemotron_73EE31BB.yaml | healthcare_practitioner_or_technical_occupation | age 19 | Male | Wills Point</title></circle>
-<circle class="point" cx="922.8" cy="618.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #19 Nemotron_973F341A.yaml | medical_secretary_or_administrative_assistant | age 40 | Female | Flushing</title></circle>
-<circle class="point" cx="939.3" cy="640.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #20 Nemotron_D2981E82.yaml | healthcare_support_worker | age 52 | Male | Houston</title></circle>
-<circle class="point" cx="910.9" cy="608.4" r="5.5" fill="#2563eb"><title>Cluster 1 | #21 Nemotron_6AF8DAA8.yaml | medical_records_specialist | age 54 | Female | Glendale</title></circle>
-<circle class="point" cx="913.5" cy="671.1" r="5.5" fill="#d97706"><title>Cluster 4 | #22 Nemotron_D55727C0.yaml | medical_assistant | age 20 | Male | Winter Garden</title></circle>
-<circle class="point" cx="893.7" cy="696.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #23 Nemotron_C925DCA3.yaml | surgical_technologist | age 30 | Female | South Jordan</title></circle>
-<circle class="point" cx="964.0" cy="672.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #24 Nemotron_E51D47A0.yaml | registered_nurse | age 36 | Male | Delavan</title></circle>
-<circle class="point" cx="934.4" cy="574.5" r="5.5" fill="#16a34a"><title>Cluster 3 | #25 Nemotron_25D3BC0D.yaml | physical_therapist_assistant_or_aide | age 63 | Male | Glen Ellyn</title></circle>
-<circle class="point" cx="842.0" cy="653.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #26 Nemotron_85B24790.yaml | personal_care_aide | age 59 | Male | Cleveland</title></circle>
-<circle class="point" cx="887.8" cy="657.1" r="5.5" fill="#d97706"><title>Cluster 4 | #27 Nemotron_CD08DBB4.yaml | nurse_practitioner | age 19 | Female | Texarkana</title></circle>
-<circle class="point" cx="794.2" cy="706.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #28 Nemotron_DF9827B2.yaml | healthcare_diagnosing_or_treating_practitioner | age 34 | Male | Seattle</title></circle>
-<circle class="point" cx="849.9" cy="628.8" r="5.5" fill="#0891b2"><title>Cluster 6 | #29 Nemotron_C1020903.yaml | speech_language_pathologist | age 48 | Female | Whittier</title></circle>
-<circle class="point" cx="900.0" cy="650.3" r="5.5" fill="#9333ea"><title>Cluster 5 | #30 Nemotron_24A37D16.yaml | nursing_assistant | age 20 | Female | Iowa City</title></circle>
-<circle class="point" cx="852.3" cy="589.5" r="5.5" fill="#16a34a"><title>Cluster 3 | #31 Nemotron_D54FDDAA.yaml | medical_transcriptionist | age 40 | Male | Houston</title></circle>
-<circle class="point" cx="884.1" cy="686.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #32 Nemotron_B583F06B.yaml | healthcare_support_worker | age 26 | Male | Hanover</title></circle>
-<circle class="point" cx="895.1" cy="615.0" r="5.5" fill="#0891b2"><title>Cluster 6 | #33 Nemotron_3E76CCB7.yaml | licensed_practical_or_licensed_vocational_nurse | age 43 | Female | Portland</title></circle>
-<circle class="point" cx="803.2" cy="701.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #34 Nemotron_6043B250.yaml | cardiovascular_technologist_or_technician | age 56 | Male | Huntsville</title></circle>
-<circle class="point" cx="790.8" cy="687.2" r="5.5" fill="#2563eb"><title>Cluster 1 | #35 Nemotron_5F9B316D.yaml | surgeon | age 70 | Male | Hickory</title></circle>
-<circle class="point" cx="854.4" cy="649.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #36 Nemotron_1B0E39AD.yaml | physical_therapist | age 45 | Female | Lynchburg</title></circle>
-<circle class="point" cx="900.5" cy="685.1" r="5.5" fill="#2563eb"><title>Cluster 1 | #37 Nemotron_DAD2FEF2.yaml | podiatrist | age 29 | Female | Lenoir City</title></circle>
-<circle class="point" cx="950.8" cy="722.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #38 Nemotron_9B05BA93.yaml | medical_or_health_services_manager | age 25 | Male | Atlanta</title></circle>
-<circle class="point" cx="810.2" cy="653.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #39 Nemotron_79D7BBC0.yaml | medical_records_specialist | age 59 | Female | Chambersburg</title></circle>
-<circle class="point" cx="804.9" cy="644.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #40 Nemotron_C5ADE850.yaml | pharmacist | age 40 | Female | Glen Allen</title></circle>
-<circle class="point" cx="829.0" cy="711.6" r="5.5" fill="#9333ea"><title>Cluster 5 | #41 Nemotron_5F23C5CF.yaml | physician | age 21 | Male | Boulder</title></circle>
-<circle class="point" cx="863.0" cy="656.0" r="5.5" fill="#9333ea"><title>Cluster 5 | #42 Nemotron_19DA1B80.yaml | mental_health_counselor | age 63 | Female | Hutchinson</title></circle>
-<circle class="point" cx="831.4" cy="669.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #43 Nemotron_607A5899.yaml | therapist | age 26 | Female | Kansas City</title></circle>
-<circle class="point" cx="897.9" cy="647.4" r="5.5" fill="#9333ea"><title>Cluster 5 | #44 Nemotron_BAB23954.yaml | medical_assistant | age 67 | Female | Middleburg</title></circle>
-<circle class="point" cx="896.6" cy="633.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #45 Nemotron_62449E8E.yaml | psychologist | age 59 | Male | Chatham</title></circle>
-<circle class="point" cx="889.9" cy="669.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #46 Nemotron_D757E929.yaml | phlebotomist | age 36 | Female | Wakefield</title></circle>
-<circle class="point" cx="832.1" cy="701.8" r="5.5" fill="#d97706"><title>Cluster 4 | #47 Nemotron_F9ED7323.yaml | surgeon | age 18 | Male | Gilbertsville</title></circle>
-<circle class="point" cx="786.5" cy="665.8" r="5.5" fill="#2563eb"><title>Cluster 1 | #48 Nemotron_F49AD518.yaml | physician_assistant | age 42 | Male | Durham</title></circle>
-<circle class="point" cx="902.2" cy="737.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #49 Nemotron_0D2E1D6E.yaml | paramedic | age 26 | Male | Providence</title></circle>
-<circle class="point" cx="840.5" cy="585.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #50 Nemotron_92C57538.yaml | nurse_anesthetist | age 64 | Male | Sacramento</title></circle>
-<text x="760" y="782" class="legend">C1: 6; C2: 15; C3: 11; C4: 6; C5: 7; C6: 5</text>
-<text x="70" y="970" class="small">Clusters are fitted separately within each domain; cluster numbers are local to each panel.</text>
-<text x="70" y="992" class="small">Projection and clustering use Nemotron persona text only. No Amazon personas/data used.</text></svg>
+<rect x="70" y="484" width="390" height="310" rx="10" class="frame"/>
+<text x="88" y="512" class="panel-title" fill="#E58B22">Finance</text>
+<text x="88" y="533" class="panel-sub">3 clusters; silhouette 0.092</text>
+<line x1="112.0" y1="550" x2="112.0" y2="758" class="grid"/>
+<line x1="112" y1="550.0" x2="430" y2="550.0" class="grid"/>
+<line x1="218.0" y1="550" x2="218.0" y2="758" class="grid"/>
+<line x1="112" y1="619.3" x2="430" y2="619.3" class="grid"/>
+<line x1="324.0" y1="550" x2="324.0" y2="758" class="grid"/>
+<line x1="112" y1="688.7" x2="430" y2="688.7" class="grid"/>
+<line x1="430.0" y1="550" x2="430.0" y2="758" class="grid"/>
+<line x1="112" y1="758.0" x2="430" y2="758.0" class="grid"/>
+<ellipse cx="310.9" cy="595.4" rx="88.6" ry="25.9" transform="rotate(170.61 310.9 595.4)" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="279.0" cy="686.7" rx="75.9" ry="35.0" transform="rotate(-169.69 279.0 686.7)" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="243.1" cy="705.7" rx="78.7" ry="33.4" transform="rotate(167.63 243.1 705.7)" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.32" stroke-width="1.5"/>
+<circle class="point" cx="287.4" cy="636.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #1 Nemotron_AAC5CD6D.yaml | financial_manager | age 42 | Female | Los Angeles</title></circle>
+<circle class="point" cx="229.1" cy="715.0" r="5.5" fill="#16a34a"><title>Cluster 3 | #2 Nemotron_47ED0374.yaml | financial_specialist | age 97 | Male | Far Rockaway</title></circle>
+<circle class="point" cx="295.0" cy="670.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #3 Nemotron_02C6ED08.yaml | bookkeeping_accounting_or_auditing_clerk | age 50 | Female | Corozal</title></circle>
+<circle class="point" cx="352.5" cy="706.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #4 Nemotron_E8E5E3B9.yaml | accountant_or_auditor | age 33 | Male | Divernon</title></circle>
+<circle class="point" cx="271.4" cy="651.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #5 Nemotron_5793C2B8.yaml | personal_financial_advisor | age 43 | Male | Suwanee</title></circle>
+<circle class="point" cx="278.4" cy="694.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #6 Nemotron_5DC69A5F.yaml | financial_or_investment_analyst | age 21 | Female | Kinston</title></circle>
+<circle class="point" cx="270.9" cy="632.4" r="5.5" fill="#2563eb"><title>Cluster 1 | #7 Nemotron_381C6F79.yaml | bookkeeping_accounting_or_auditing_clerk | age 23 | Female | North Las Vegas</title></circle>
+<circle class="point" cx="335.1" cy="700.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #8 Nemotron_B7F39A18.yaml | accountant_or_auditor | age 35 | Male | Philadelphia</title></circle>
+<circle class="point" cx="295.4" cy="584.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #9 Nemotron_64A61EDB.yaml | tax_preparer | age 52 | Female | Bronx</title></circle>
+<circle class="point" cx="283.0" cy="638.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #10 Nemotron_DAD23A86.yaml | financial_specialist | age 64 | Male | San Antonio</title></circle>
+<circle class="point" cx="243.3" cy="732.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #11 Nemotron_54EAE98D.yaml | financial_clerk | age 21 | Female | Charleston</title></circle>
+<circle class="point" cx="239.1" cy="660.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #12 Nemotron_425A8801.yaml | financial_manager | age 55 | Male | Lake Mary</title></circle>
+<circle class="point" cx="301.3" cy="676.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #13 Nemotron_557E8861.yaml | personal_financial_advisor | age 31 | Female | Wilmington</title></circle>
+<circle class="point" cx="340.0" cy="597.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #14 Nemotron_1BE6B639.yaml | budget_analyst | age 24 | Male | Susanville</title></circle>
+<circle class="point" cx="267.6" cy="590.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #15 Nemotron_8ABF798C.yaml | tax_preparer | age 25 | Female | Houston</title></circle>
+<circle class="point" cx="212.1" cy="734.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #16 Nemotron_FA019285.yaml | financial_clerk | age 61 | Male | Independence</title></circle>
+<circle class="point" cx="240.8" cy="633.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #17 Nemotron_A5B40A8D.yaml | tax_examiner_collector_or_revenue_agent | age 38 | Male | Riverside</title></circle>
+<circle class="point" cx="269.1" cy="645.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #18 Nemotron_CB8AE079.yaml | financial_or_investment_analyst | age 31 | Female | Hurst</title></circle>
+<circle class="point" cx="381.3" cy="574.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #19 Nemotron_2A2DC2F3.yaml | personal_financial_advisor | age 47 | Female | La Verne</title></circle>
+<circle class="point" cx="181.4" cy="696.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #20 Nemotron_77018235.yaml | financial_specialist | age 63 | Male | Northville</title></circle>
+<circle class="point" cx="175.9" cy="690.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #21 Nemotron_3816441A.yaml | not_in_workforce | age 19 | Female | Trenton</title></circle>
+<circle class="point" cx="351.2" cy="708.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #22 Nemotron_A5048C31.yaml | securities_commodities_or_financial_services_sales_agent | age 55 | Male | Cliffside Park</title></circle>
+<circle class="point" cx="230.5" cy="738.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #23 Nemotron_1D47C6CA.yaml | bookkeeping_accounting_or_auditing_clerk | age 62 | Male | Saint Petersburg</title></circle>
+<circle class="point" cx="288.4" cy="704.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #24 Nemotron_8B4B474B.yaml | accountant_or_auditor | age 32 | Female | Elkhart</title></circle>
+<circle class="point" cx="231.5" cy="675.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #25 Nemotron_35160244.yaml | credit_counselor_or_loan_officer | age 49 | Male | Las Vegas</title></circle>
+<circle class="point" cx="357.1" cy="723.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #26 Nemotron_737C1ADE.yaml | financial_manager | age 18 | Female | Savannah</title></circle>
+<circle class="point" cx="374.8" cy="696.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #27 Nemotron_774AEC1B.yaml | financial_or_investment_analyst | age 38 | Female | Highland Home</title></circle>
+<circle class="point" cx="292.6" cy="721.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #28 Nemotron_C4C837B8.yaml | bookkeeping_accounting_or_auditing_clerk | age 27 | Male | Mount Holly</title></circle>
+<circle class="point" cx="138.5" cy="714.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #29 Nemotron_155359D4.yaml | not_in_workforce | age 73 | Female | Westmont</title></circle>
+<circle class="point" cx="227.1" cy="660.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #30 Nemotron_1E5C7CAB.yaml | personal_financial_advisor | age 40 | Male | Portland</title></circle>
+<circle class="point" cx="220.1" cy="703.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #31 Nemotron_5475842E.yaml | accountant_or_auditor | age 21 | Male | Chestnut Hill</title></circle>
+<circle class="point" cx="197.0" cy="624.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #32 Nemotron_B8A88807.yaml | teller | age 46 | Female | Omaha</title></circle>
+<circle class="point" cx="286.8" cy="567.3" r="5.5" fill="#2563eb"><title>Cluster 1 | #33 Nemotron_6D97E519.yaml | tax_examiner_collector_or_revenue_agent | age 26 | Female | Squaw Valley</title></circle>
+<circle class="point" cx="268.0" cy="740.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #34 Nemotron_44C3DCA3.yaml | financial_clerk | age 73 | Male | Geneva</title></circle>
+<circle class="point" cx="403.5" cy="602.5" r="5.5" fill="#2563eb"><title>Cluster 1 | #35 Nemotron_AE1F4CE3.yaml | financial_manager | age 40 | Female | Roma</title></circle>
+<circle class="point" cx="287.1" cy="680.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #36 Nemotron_A95C2BC0.yaml | securities_commodities_or_financial_services_sales_agent | age 30 | Male | Danbury</title></circle>
+<circle class="point" cx="340.7" cy="689.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #37 Nemotron_9765E7A8.yaml | tax_preparer | age 20 | Female | Dwight</title></circle>
+<circle class="point" cx="209.4" cy="721.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #38 Nemotron_073FC8DE.yaml | billing_or_posting_clerk | age 50 | Male | Port Orange</title></circle>
+<circle class="point" cx="355.2" cy="582.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #39 Nemotron_B456CEFB.yaml | financial_or_investment_analyst | age 42 | Male | San Dimas</title></circle>
+<circle class="point" cx="267.9" cy="696.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #40 Nemotron_6CD18198.yaml | credit_counselor_or_loan_officer | age 53 | Female | Arnold</title></circle>
+<circle class="point" cx="341.9" cy="704.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #41 Nemotron_76FC07AC.yaml | financial_examiner | age 42 | Female | Pittsburgh</title></circle>
+<circle class="point" cx="175.3" cy="724.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #42 Nemotron_5DE1355B.yaml | bookkeeping_accounting_or_auditing_clerk | age 59 | Male | Oak Park</title></circle>
+<circle class="point" cx="218.9" cy="673.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #43 Nemotron_4B812D61.yaml | budget_analyst | age 64 | Male | Gilbert</title></circle>
+<circle class="point" cx="349.3" cy="715.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #44 Nemotron_3B09FED9.yaml | financial_specialist | age 60 | Male | Kings Mountain</title></circle>
+<circle class="point" cx="299.6" cy="683.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #45 Nemotron_9857D523.yaml | accountant_or_auditor | age 36 | Female | Sharon Hill</title></circle>
+<circle class="point" cx="295.2" cy="663.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #46 Nemotron_CDF9E4C3.yaml | personal_financial_advisor | age 34 | Male | Chico</title></circle>
+<circle class="point" cx="152.1" cy="691.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #47 Nemotron_D20B2F6C.yaml | teller | age 18 | Female | Rolla</title></circle>
+<circle class="point" cx="254.9" cy="705.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #48 Nemotron_719AAD82.yaml | financial_manager | age 27 | Female | Spotsylvania</title></circle>
+<circle class="point" cx="268.5" cy="698.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #49 Nemotron_668DE5F9.yaml | financial_clerk | age 49 | Female | Kew Gardens</title></circle>
+<circle class="point" cx="264.2" cy="717.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #50 Nemotron_F7A35167.yaml | not_in_workforce | age 80 | Male | Smyrna</title></circle>
+<text x="112" y="782" class="legend">C1: 9; C2: 26; C3: 15</text>
+<rect x="508" y="484" width="390" height="310" rx="10" class="frame"/>
+<text x="526" y="512" class="panel-title" fill="#9B6DB3">Medical / healthcare</text>
+<text x="526" y="533" class="panel-sub">6 clusters; silhouette 0.123</text>
+<line x1="550.0" y1="550" x2="550.0" y2="758" class="grid"/>
+<line x1="550" y1="550.0" x2="868" y2="550.0" class="grid"/>
+<line x1="656.0" y1="550" x2="656.0" y2="758" class="grid"/>
+<line x1="550" y1="619.3" x2="868" y2="619.3" class="grid"/>
+<line x1="762.0" y1="550" x2="762.0" y2="758" class="grid"/>
+<line x1="550" y1="688.7" x2="868" y2="688.7" class="grid"/>
+<line x1="868.0" y1="550" x2="868.0" y2="758" class="grid"/>
+<line x1="550" y1="758.0" x2="868" y2="758.0" class="grid"/>
+<ellipse cx="643.4" cy="661.7" rx="77.2" ry="34.2" transform="rotate(164.15 643.4 661.7)" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="670.1" cy="693.9" rx="96.5" ry="39.1" transform="rotate(179.85 670.1 693.9)" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="709.1" cy="597.8" rx="79.4" ry="37.9" transform="rotate(173.62 709.1 597.8)" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="663.4" cy="676.3" rx="43.6" ry="12.7" transform="rotate(157.32 663.4 676.3)" fill="#d97706" fill-opacity="0.08" stroke="#d97706" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="657.5" cy="659.8" rx="51.1" ry="17.7" transform="rotate(142.61 657.5 659.8)" fill="#9333ea" fill-opacity="0.08" stroke="#9333ea" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="699.8" cy="616.8" rx="79.5" ry="3.6" transform="rotate(170.42 699.8 616.8)" fill="#0891b2" fill-opacity="0.08" stroke="#0891b2" stroke-opacity="0.32" stroke-width="1.5"/>
+<circle class="point" cx="666.6" cy="681.5" r="5.5" fill="#d97706"><title>Cluster 4 | #1 Nemotron_66251462.yaml | registered_nurse | age 21 | Male | Leawood</title></circle>
+<circle class="point" cx="727.1" cy="614.9" r="5.5" fill="#0891b2"><title>Cluster 6 | #2 Nemotron_4EF46E87.yaml | medical_assistant | age 50 | Female | South El Monte</title></circle>
+<circle class="point" cx="701.5" cy="656.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #3 Nemotron_6BD259CE.yaml | healthcare_support_worker | age 38 | Male | Rohnert Park</title></circle>
+<circle class="point" cx="805.4" cy="567.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #4 Nemotron_EB99965E.yaml | licensed_practical_or_licensed_vocational_nurse | age 60 | Female | Denver</title></circle>
+<circle class="point" cx="675.6" cy="667.8" r="5.5" fill="#d97706"><title>Cluster 4 | #5 Nemotron_EBCEBC8A.yaml | healthcare_practitioner_or_technical_occupation | age 25 | Male | Muncie</title></circle>
+<circle class="point" cx="636.2" cy="717.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #6 Nemotron_B6B2C32E.yaml | physician | age 23 | Female | Okemos</title></circle>
+<circle class="point" cx="736.5" cy="589.0" r="5.5" fill="#16a34a"><title>Cluster 3 | #7 Nemotron_11B619B6.yaml | miscellaneous_health_technologist_or_technician | age 32 | Male | Mission</title></circle>
+<circle class="point" cx="786.1" cy="602.0" r="5.5" fill="#0891b2"><title>Cluster 6 | #8 Nemotron_65C77A44.yaml | healthcare_support_worker | age 30 | Female | Granada Hills</title></circle>
+<circle class="point" cx="618.0" cy="709.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #9 Nemotron_E4E071B7.yaml | physician_assistant | age 36 | Male | Salt Lake City</title></circle>
+<circle class="point" cx="682.2" cy="669.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #10 Nemotron_62961B18.yaml | physical_therapist_assistant_or_aide | age 24 | Male | Reading</title></circle>
+<circle class="point" cx="644.3" cy="595.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #11 Nemotron_D83C1191.yaml | nursing_assistant | age 56 | Female | Hoffman Estates</title></circle>
+<circle class="point" cx="796.6" cy="574.4" r="5.5" fill="#16a34a"><title>Cluster 3 | #12 Nemotron_D39CB893.yaml | home_health_aide | age 21 | Female | Caldwell</title></circle>
+<circle class="point" cx="841.5" cy="678.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #13 Nemotron_CF62007F.yaml | registered_nurse | age 36 | Female | Orange Park</title></circle>
+<circle class="point" cx="651.2" cy="740.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #14 Nemotron_78EFE608.yaml | emergency_medical_technician | age 25 | Male | North Adams</title></circle>
+<circle class="point" cx="661.0" cy="623.2" r="5.5" fill="#0891b2"><title>Cluster 6 | #15 Nemotron_C7D14E7E.yaml | physician | age 62 | Male | Flushing</title></circle>
+<circle class="point" cx="704.4" cy="673.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #16 Nemotron_FB1F9E52.yaml | medical_or_health_services_manager | age 52 | Female | Payette</title></circle>
+<circle class="point" cx="676.5" cy="584.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #17 Nemotron_61A5555E.yaml | phlebotomist | age 29 | Female | Matador</title></circle>
+<circle class="point" cx="635.0" cy="678.8" r="5.5" fill="#d97706"><title>Cluster 4 | #18 Nemotron_73EE31BB.yaml | healthcare_practitioner_or_technical_occupation | age 19 | Male | Wills Point</title></circle>
+<circle class="point" cx="712.8" cy="618.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #19 Nemotron_973F341A.yaml | medical_secretary_or_administrative_assistant | age 40 | Female | Flushing</title></circle>
+<circle class="point" cx="729.3" cy="640.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #20 Nemotron_D2981E82.yaml | healthcare_support_worker | age 52 | Male | Houston</title></circle>
+<circle class="point" cx="700.9" cy="608.4" r="5.5" fill="#2563eb"><title>Cluster 1 | #21 Nemotron_6AF8DAA8.yaml | medical_records_specialist | age 54 | Female | Glendale</title></circle>
+<circle class="point" cx="703.5" cy="671.1" r="5.5" fill="#d97706"><title>Cluster 4 | #22 Nemotron_D55727C0.yaml | medical_assistant | age 20 | Male | Winter Garden</title></circle>
+<circle class="point" cx="683.7" cy="696.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #23 Nemotron_C925DCA3.yaml | surgical_technologist | age 30 | Female | South Jordan</title></circle>
+<circle class="point" cx="754.0" cy="672.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #24 Nemotron_E51D47A0.yaml | registered_nurse | age 36 | Male | Delavan</title></circle>
+<circle class="point" cx="724.4" cy="574.5" r="5.5" fill="#16a34a"><title>Cluster 3 | #25 Nemotron_25D3BC0D.yaml | physical_therapist_assistant_or_aide | age 63 | Male | Glen Ellyn</title></circle>
+<circle class="point" cx="632.0" cy="653.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #26 Nemotron_85B24790.yaml | personal_care_aide | age 59 | Male | Cleveland</title></circle>
+<circle class="point" cx="677.8" cy="657.1" r="5.5" fill="#d97706"><title>Cluster 4 | #27 Nemotron_CD08DBB4.yaml | nurse_practitioner | age 19 | Female | Texarkana</title></circle>
+<circle class="point" cx="584.2" cy="706.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #28 Nemotron_DF9827B2.yaml | healthcare_diagnosing_or_treating_practitioner | age 34 | Male | Seattle</title></circle>
+<circle class="point" cx="639.9" cy="628.8" r="5.5" fill="#0891b2"><title>Cluster 6 | #29 Nemotron_C1020903.yaml | speech_language_pathologist | age 48 | Female | Whittier</title></circle>
+<circle class="point" cx="690.0" cy="650.3" r="5.5" fill="#9333ea"><title>Cluster 5 | #30 Nemotron_24A37D16.yaml | nursing_assistant | age 20 | Female | Iowa City</title></circle>
+<circle class="point" cx="642.3" cy="589.5" r="5.5" fill="#16a34a"><title>Cluster 3 | #31 Nemotron_D54FDDAA.yaml | medical_transcriptionist | age 40 | Male | Houston</title></circle>
+<circle class="point" cx="674.1" cy="686.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #32 Nemotron_B583F06B.yaml | healthcare_support_worker | age 26 | Male | Hanover</title></circle>
+<circle class="point" cx="685.1" cy="615.0" r="5.5" fill="#0891b2"><title>Cluster 6 | #33 Nemotron_3E76CCB7.yaml | licensed_practical_or_licensed_vocational_nurse | age 43 | Female | Portland</title></circle>
+<circle class="point" cx="593.2" cy="701.7" r="5.5" fill="#dc2626"><title>Cluster 2 | #34 Nemotron_6043B250.yaml | cardiovascular_technologist_or_technician | age 56 | Male | Huntsville</title></circle>
+<circle class="point" cx="580.8" cy="687.2" r="5.5" fill="#2563eb"><title>Cluster 1 | #35 Nemotron_5F9B316D.yaml | surgeon | age 70 | Male | Hickory</title></circle>
+<circle class="point" cx="644.4" cy="649.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #36 Nemotron_1B0E39AD.yaml | physical_therapist | age 45 | Female | Lynchburg</title></circle>
+<circle class="point" cx="690.5" cy="685.1" r="5.5" fill="#2563eb"><title>Cluster 1 | #37 Nemotron_DAD2FEF2.yaml | podiatrist | age 29 | Female | Lenoir City</title></circle>
+<circle class="point" cx="740.8" cy="722.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #38 Nemotron_9B05BA93.yaml | medical_or_health_services_manager | age 25 | Male | Atlanta</title></circle>
+<circle class="point" cx="600.2" cy="653.5" r="5.5" fill="#dc2626"><title>Cluster 2 | #39 Nemotron_79D7BBC0.yaml | medical_records_specialist | age 59 | Female | Chambersburg</title></circle>
+<circle class="point" cx="594.9" cy="644.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #40 Nemotron_C5ADE850.yaml | pharmacist | age 40 | Female | Glen Allen</title></circle>
+<circle class="point" cx="619.0" cy="711.6" r="5.5" fill="#9333ea"><title>Cluster 5 | #41 Nemotron_5F23C5CF.yaml | physician | age 21 | Male | Boulder</title></circle>
+<circle class="point" cx="653.0" cy="656.0" r="5.5" fill="#9333ea"><title>Cluster 5 | #42 Nemotron_19DA1B80.yaml | mental_health_counselor | age 63 | Female | Hutchinson</title></circle>
+<circle class="point" cx="621.4" cy="669.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #43 Nemotron_607A5899.yaml | therapist | age 26 | Female | Kansas City</title></circle>
+<circle class="point" cx="687.9" cy="647.4" r="5.5" fill="#9333ea"><title>Cluster 5 | #44 Nemotron_BAB23954.yaml | medical_assistant | age 67 | Female | Middleburg</title></circle>
+<circle class="point" cx="686.6" cy="633.8" r="5.5" fill="#9333ea"><title>Cluster 5 | #45 Nemotron_62449E8E.yaml | psychologist | age 59 | Male | Chatham</title></circle>
+<circle class="point" cx="679.9" cy="669.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #46 Nemotron_D757E929.yaml | phlebotomist | age 36 | Female | Wakefield</title></circle>
+<circle class="point" cx="622.1" cy="701.8" r="5.5" fill="#d97706"><title>Cluster 4 | #47 Nemotron_F9ED7323.yaml | surgeon | age 18 | Male | Gilbertsville</title></circle>
+<circle class="point" cx="576.5" cy="665.8" r="5.5" fill="#2563eb"><title>Cluster 1 | #48 Nemotron_F49AD518.yaml | physician_assistant | age 42 | Male | Durham</title></circle>
+<circle class="point" cx="692.2" cy="737.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #49 Nemotron_0D2E1D6E.yaml | paramedic | age 26 | Male | Providence</title></circle>
+<circle class="point" cx="630.5" cy="585.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #50 Nemotron_92C57538.yaml | nurse_anesthetist | age 64 | Male | Sacramento</title></circle>
+<text x="550" y="782" class="legend">C1: 6; C2: 15; C3: 11; C4: 6; C5: 7; C6: 5</text>
+<rect x="946" y="484" width="390" height="310" rx="10" class="frame"/>
+<text x="964" y="512" class="panel-title" fill="#0F9D8A">Ecommerce / retail</text>
+<text x="964" y="533" class="panel-sub">3 clusters; silhouette 0.090</text>
+<line x1="988.0" y1="550" x2="988.0" y2="758" class="grid"/>
+<line x1="988" y1="550.0" x2="1306" y2="550.0" class="grid"/>
+<line x1="1094.0" y1="550" x2="1094.0" y2="758" class="grid"/>
+<line x1="988" y1="619.3" x2="1306" y2="619.3" class="grid"/>
+<line x1="1200.0" y1="550" x2="1200.0" y2="758" class="grid"/>
+<line x1="988" y1="688.7" x2="1306" y2="688.7" class="grid"/>
+<line x1="1306.0" y1="550" x2="1306.0" y2="758" class="grid"/>
+<line x1="988" y1="758.0" x2="1306" y2="758.0" class="grid"/>
+<ellipse cx="1127.5" cy="700.3" rx="77.0" ry="27.7" transform="rotate(-167.44 1127.5 700.3)" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="1156.7" cy="617.6" rx="99.3" ry="42.1" transform="rotate(-164.45 1156.7 617.6)" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-opacity="0.32" stroke-width="1.5"/>
+<ellipse cx="1141.6" cy="697.5" rx="75.8" ry="30.0" transform="rotate(-146.93 1141.6 697.5)" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.32" stroke-width="1.5"/>
+<circle class="point" cx="1196.9" cy="615.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #1 Nemotron_AE6F4178.yaml | first_line_supervisor_of_retail_sales_worker | age 28 | Female | Garden City</title></circle>
+<circle class="point" cx="1216.2" cy="711.6" r="5.5" fill="#2563eb"><title>Cluster 1 | #2 Nemotron_980B30A8.yaml | shipping_receiving_or_inventory_clerk | age 41 | Male | Freeport</title></circle>
+<circle class="point" cx="1153.9" cy="638.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #3 Nemotron_07F77AEB.yaml | cashier | age 49 | Female | Wooster</title></circle>
+<circle class="point" cx="1145.3" cy="578.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #4 Nemotron_EBE5EB96.yaml | retail_salesperson | age 27 | Male | Daytona Beach</title></circle>
+<circle class="point" cx="1181.2" cy="734.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #5 Nemotron_9E75DA21.yaml | laborer_or_freight_stock_or_material_mover | age 24 | Male | Danville</title></circle>
+<circle class="point" cx="1115.0" cy="688.3" r="5.5" fill="#2563eb"><title>Cluster 1 | #6 Nemotron_4A9688C3.yaml | stocker_or_order_filler | age 54 | Male | Gardnerville</title></circle>
+<circle class="point" cx="1147.8" cy="610.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #7 Nemotron_AEE75F81.yaml | first_line_supervisor_of_retail_sales_worker | age 63 | Female | El Dorado</title></circle>
+<circle class="point" cx="1186.9" cy="691.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #8 Nemotron_13DC1DEC.yaml | shipping_receiving_or_inventory_clerk | age 20 | Male | Kaplan</title></circle>
+<circle class="point" cx="1213.3" cy="703.0" r="5.5" fill="#2563eb"><title>Cluster 1 | #9 Nemotron_41C0794B.yaml | logistician | age 34 | Female | El Paso</title></circle>
+<circle class="point" cx="1079.8" cy="601.2" r="5.5" fill="#dc2626"><title>Cluster 2 | #10 Nemotron_1E641B5E.yaml | retail_salesperson | age 43 | Female | Richmond</title></circle>
+<circle class="point" cx="1091.5" cy="694.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #11 Nemotron_AA9E3C3B.yaml | packer_or_packager | age 72 | Female | Cleveland</title></circle>
+<circle class="point" cx="1090.1" cy="611.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #12 Nemotron_6A7B9FA1.yaml | cashier | age 50 | Male | Dothan</title></circle>
+<circle class="point" cx="1161.9" cy="705.8" r="5.5" fill="#2563eb"><title>Cluster 1 | #13 Nemotron_B2838B66.yaml | stocker_or_order_filler | age 38 | Male | Boulder</title></circle>
+<circle class="point" cx="1279.5" cy="690.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #14 Nemotron_D0D60733.yaml | laborer_or_freight_stock_or_material_mover | age 60 | Female | Charlotte</title></circle>
+<circle class="point" cx="1038.6" cy="626.5" r="5.5" fill="#16a34a"><title>Cluster 3 | #15 Nemotron_A3453DD0.yaml | purchasing_manager | age 20 | Male | Douglasville</title></circle>
+<circle class="point" cx="1099.0" cy="598.8" r="5.5" fill="#dc2626"><title>Cluster 2 | #16 Nemotron_275D8CEF.yaml | first_line_supervisor_of_retail_sales_worker | age 33 | Female | Las Vegas</title></circle>
+<circle class="point" cx="1141.4" cy="723.9" r="5.5" fill="#16a34a"><title>Cluster 3 | #17 Nemotron_9144CE28.yaml | order_clerk | age 41 | Male | Machesney Park</title></circle>
+<circle class="point" cx="1260.8" cy="683.4" r="5.5" fill="#dc2626"><title>Cluster 2 | #18 Nemotron_CB999697.yaml | material_moving_worker | age 28 | Female | Rutledge</title></circle>
+<circle class="point" cx="1120.7" cy="713.4" r="5.5" fill="#16a34a"><title>Cluster 3 | #19 Nemotron_82EC8FDB.yaml | logistician | age 59 | Male | Hibbing</title></circle>
+<circle class="point" cx="1165.5" cy="595.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #20 Nemotron_DF8A57EE.yaml | sales_or_related_worker | age 18 | Female | Mississippi State</title></circle>
+<circle class="point" cx="1137.2" cy="697.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #21 Nemotron_4E975611.yaml | not_in_workforce | age 22 | Male | Costa Mesa</title></circle>
+<circle class="point" cx="1034.9" cy="608.0" r="5.5" fill="#dc2626"><title>Cluster 2 | #22 Nemotron_E44EA0BC.yaml | wholesale_or_retail_buyer | age 33 | Female | Baton Rouge</title></circle>
+<circle class="point" cx="1262.9" cy="664.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #23 Nemotron_C7EB77F2.yaml | shipping_receiving_or_inventory_clerk | age 52 | Male | Memphis</title></circle>
+<circle class="point" cx="1064.0" cy="637.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #24 Nemotron_3CBAD6AC.yaml | cashier | age 40 | Female | Louisville</title></circle>
+<circle class="point" cx="1144.1" cy="732.7" r="5.5" fill="#2563eb"><title>Cluster 1 | #25 Nemotron_4B6E192B.yaml | laborer_or_freight_stock_or_material_mover | age 35 | Male | San Antonio</title></circle>
+<circle class="point" cx="1107.1" cy="726.4" r="5.5" fill="#2563eb"><title>Cluster 1 | #26 Nemotron_35A84482.yaml | stocker_or_order_filler | age 23 | Male | Worcester</title></circle>
+<circle class="point" cx="1137.9" cy="720.8" r="5.5" fill="#2563eb"><title>Cluster 1 | #27 Nemotron_09D631DC.yaml | transportation_storage_or_distribution_manager | age 33 | Male | Framingham</title></circle>
+<circle class="point" cx="1198.7" cy="569.6" r="5.5" fill="#dc2626"><title>Cluster 2 | #28 Nemotron_D9DAC60A.yaml | first_line_supervisor_of_retail_sales_worker | age 57 | Female | Mcdonough</title></circle>
+<circle class="point" cx="1126.7" cy="706.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #29 Nemotron_241A1246.yaml | packer_or_packager | age 23 | Female | Quincy</title></circle>
+<circle class="point" cx="1123.1" cy="617.9" r="5.5" fill="#dc2626"><title>Cluster 2 | #30 Nemotron_0ADE09EA.yaml | retail_salesperson | age 60 | Male | Evergreen</title></circle>
+<circle class="point" cx="1182.6" cy="732.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #31 Nemotron_F32E2E06.yaml | stocker_or_order_filler | age 36 | Female | Brookpark</title></circle>
+<circle class="point" cx="1147.7" cy="714.6" r="5.5" fill="#16a34a"><title>Cluster 3 | #32 Nemotron_7AEA6728.yaml | cargo_or_freight_agent | age 31 | Male | Simi Valley</title></circle>
+<circle class="point" cx="1100.4" cy="657.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #33 Nemotron_731B22C7.yaml | purchasing_manager | age 59 | Female | Anna</title></circle>
+<circle class="point" cx="1146.1" cy="707.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #34 Nemotron_046DC20F.yaml | shipping_receiving_or_inventory_clerk | age 62 | Male | Germantown</title></circle>
+<circle class="point" cx="1135.0" cy="625.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #35 Nemotron_E8C2501B.yaml | sales_or_related_worker | age 22 | Female | Jacksonville</title></circle>
+<circle class="point" cx="1175.5" cy="728.1" r="5.5" fill="#16a34a"><title>Cluster 3 | #36 Nemotron_523F945A.yaml | industrial_truck_or_tractor_operator | age 31 | Male | Hillsborough</title></circle>
+<circle class="point" cx="1117.1" cy="668.6" r="5.5" fill="#2563eb"><title>Cluster 1 | #37 Nemotron_5A9AB410.yaml | purchasing_agent | age 67 | Female | Worcester</title></circle>
+<circle class="point" cx="1141.5" cy="685.3" r="5.5" fill="#16a34a"><title>Cluster 3 | #38 Nemotron_E9C30434.yaml | order_clerk | age 44 | Male | Bluffton</title></circle>
+<circle class="point" cx="1214.3" cy="740.7" r="5.5" fill="#16a34a"><title>Cluster 3 | #39 Nemotron_C3692D0E.yaml | laborer_or_freight_stock_or_material_mover | age 22 | Female | Amherst</title></circle>
+<circle class="point" cx="1014.5" cy="665.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #40 Nemotron_3257B646.yaml | procurement_clerk | age 34 | Female | Lancaster</title></circle>
+<circle class="point" cx="1169.5" cy="607.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #41 Nemotron_6B484C4B.yaml | cashier | age 51 | Female | Jacksonville</title></circle>
+<circle class="point" cx="1113.3" cy="713.8" r="5.5" fill="#16a34a"><title>Cluster 3 | #42 Nemotron_4DF10ADB.yaml | shipping_receiving_or_inventory_clerk | age 74 | Male | Latrobe</title></circle>
+<circle class="point" cx="1111.5" cy="655.5" r="5.5" fill="#2563eb"><title>Cluster 1 | #43 Nemotron_A5416359.yaml | manager | age 21 | Male | Wapato</title></circle>
+<circle class="point" cx="1175.6" cy="713.8" r="5.5" fill="#2563eb"><title>Cluster 1 | #44 Nemotron_59F89E31.yaml | logistician | age 31 | Female | Arlington</title></circle>
+<circle class="point" cx="1100.0" cy="714.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #45 Nemotron_07F3C378.yaml | courier_or_messenger | age 19 | Male | Monmouth</title></circle>
+<circle class="point" cx="1196.4" cy="567.3" r="5.5" fill="#dc2626"><title>Cluster 2 | #46 Nemotron_620B8509.yaml | retail_salesperson | age 36 | Male | Macon</title></circle>
+<circle class="point" cx="1060.5" cy="642.1" r="5.5" fill="#dc2626"><title>Cluster 2 | #47 Nemotron_FB932966.yaml | wholesale_or_retail_buyer | age 36 | Female | Charleston</title></circle>
+<circle class="point" cx="1234.3" cy="714.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #48 Nemotron_8BBF3531.yaml | material_moving_worker | age 45 | Male | Peru</title></circle>
+<circle class="point" cx="1043.7" cy="689.9" r="5.5" fill="#2563eb"><title>Cluster 1 | #49 Nemotron_C0FB6FC9.yaml | stocker_or_order_filler | age 30 | Female | Philadelphia</title></circle>
+<circle class="point" cx="1139.0" cy="713.2" r="5.5" fill="#16a34a"><title>Cluster 3 | #50 Nemotron_FC331048.yaml | supervisor_of_transportation_or_material_moving_worker | age 45 | Male | Akron</title></circle>
+<text x="988" y="782" class="legend">C1: 14; C2: 17; C3: 19</text>
+<text x="70" y="970" class="small">Clusters are fitted separately within each domain; cluster numbers are local to each panel.</text><text x="70" y="992" class="small">Source: Nemotron persona YAMLs only. No Amazon personas/data used.</text></svg>
