@@ -9,6 +9,7 @@
 | `tasks/` | Validation Harbor tasks |
 | `scripts/generate_dev_personas.py` | Generate dev YAML from `dimensions.json` |
 | `scripts/generate_persona_job.py` | Sample personas → Harbor grounding job YAML |
+| `tools/annotation_package/` | Build worker annotation packages from wiki profiles or Amazon reviews |
 | `reporting/` | Grounding report after multi-persona jobs |
 
 Persona cards for agents are rendered from `dimensions.json` as wiki-style biography paragraphs (`dimension_profile_narrative`).
