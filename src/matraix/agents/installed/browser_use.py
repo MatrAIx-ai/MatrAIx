@@ -111,7 +111,9 @@ class BrowserUseHarborAgent(BaseInstalledAgent):
             summary = data
             if isinstance(data, dict):
                 extra = data.get("extra")
-                if isinstance(extra, dict) and isinstance(extra.get("browser_use"), dict):
+                if isinstance(extra, dict) and isinstance(
+                    extra.get("browser_use"), dict
+                ):
                     summary = extra["browser_use"]
                 final_metrics = data.get("final_metrics") or {}
                 if isinstance(final_metrics, dict):
@@ -150,7 +152,11 @@ class BrowserUseHarborAgent(BaseInstalledAgent):
             )
 
         llm_api_key = self._get_env("LLM_API_KEY")
-        if llm_api_key and "ANTHROPIC_API_KEY" not in env and "OPENAI_API_KEY" not in env:
+        if (
+            llm_api_key
+            and "ANTHROPIC_API_KEY" not in env
+            and "OPENAI_API_KEY" not in env
+        ):
             if self.model_name.startswith("anthropic/"):
                 env["ANTHROPIC_API_KEY"] = llm_api_key
             else:

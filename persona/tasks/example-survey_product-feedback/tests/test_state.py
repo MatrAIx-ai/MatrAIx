@@ -62,13 +62,17 @@ def _load() -> dict:
 
 def _choice_map(data: dict) -> dict[str, str]:
     responses = data.get("responses")
-    assert isinstance(responses, list) and responses, "responses must be a non-empty list"
+    assert isinstance(responses, list) and responses, (
+        "responses must be a non-empty list"
+    )
     seen: dict[str, str] = {}
     for entry in responses:
         assert isinstance(entry, dict), "each response must be an object"
         qid = entry.get("question_id")
         choice_id = entry.get("choice_id")
-        assert isinstance(qid, str) and qid.strip(), "question_id must be a non-empty string"
+        assert isinstance(qid, str) and qid.strip(), (
+            "question_id must be a non-empty string"
+        )
         assert isinstance(choice_id, str) and choice_id.strip(), (
             "choice_id must be a non-empty string"
         )
@@ -112,4 +116,6 @@ def test_output_schema():
         "overall_interest must be an integer from 1 to 5"
     )
 
-    assert isinstance(data.get("would_try_beta"), bool), "would_try_beta must be boolean"
+    assert isinstance(data.get("would_try_beta"), bool), (
+        "would_try_beta must be boolean"
+    )

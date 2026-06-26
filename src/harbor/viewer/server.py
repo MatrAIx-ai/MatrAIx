@@ -578,9 +578,7 @@ def _register_task_endpoints(
             ".webp": "image/webp",
         }
         suffix = full_path.suffix.lower()
-        max_size = (
-            MAX_IMAGE_FILE_SIZE if suffix in image_extensions else MAX_FILE_SIZE
-        )
+        max_size = MAX_IMAGE_FILE_SIZE if suffix in image_extensions else MAX_FILE_SIZE
 
         file_size = full_path.stat().st_size
         if file_size > max_size:
@@ -1898,9 +1896,7 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
             ".svg": "image/svg+xml",
         }
         suffix = full_path.suffix.lower()
-        max_size = (
-            MAX_IMAGE_FILE_SIZE if suffix in image_extensions else MAX_FILE_SIZE
-        )
+        max_size = MAX_IMAGE_FILE_SIZE if suffix in image_extensions else MAX_FILE_SIZE
 
         file_size = full_path.stat().st_size
         if file_size > max_size:

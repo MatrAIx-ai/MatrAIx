@@ -65,11 +65,17 @@ def _load_catalog_rows(catalog_path: str) -> list[dict[str, Any]]:
     if not path.is_file():
         path = _repo_root() / catalog_path
     payload = json.loads(path.read_text(encoding="utf-8"))
-    rows = [r for r in payload.get("dimensions") or [] if isinstance(r, dict) and r.get("id")]
+    rows = [
+        r
+        for r in payload.get("dimensions") or []
+        if isinstance(r, dict) and r.get("id")
+    ]
     return sorted(rows, key=lambda r: (int(r.get("index") or 99999), str(r["id"])))
 
 
-def load_dev_dimension_ids(*, catalog_path: str = DEFAULT_CATALOG_PATH) -> tuple[str, ...]:
+def load_dev_dimension_ids(
+    *, catalog_path: str = DEFAULT_CATALOG_PATH
+) -> tuple[str, ...]:
     """Dev persona fields: core block (index ≤ 47) + all ``cog_*`` communication dims."""
     ids: list[str] = []
     for row in _load_catalog_rows(catalog_path):

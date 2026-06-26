@@ -343,14 +343,11 @@ def build_job_grounding_report(
     pass_rate = sum(1 for s in scores if s >= 0.5) / n if n else 0.0
 
     probe_label = (
-        f"{dimension}={fixed_value!r}"
-        if fixed_value is not None
-        else dimension
+        f"{dimension}={fixed_value!r}" if fixed_value is not None else dimension
     )
     if mean >= 0.8 and counterfactual_count == 0:
         conclusion = (
-            f"Agents appear grounded in {probe_label} "
-            f"(mean dim_grounding={mean:.2f})."
+            f"Agents appear grounded in {probe_label} (mean dim_grounding={mean:.2f})."
         )
     elif counterfactual_count > 0:
         conclusion = (

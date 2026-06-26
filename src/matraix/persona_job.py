@@ -362,7 +362,10 @@ def build_confounder_probe_cohort(
     cohort_dir = repo_root / GENERATED_COHORTS_DIR / job_slug
     if shortages:
         template = load_persona_yaml(
-            repo_root / _best_template_persona(pool, confounders=confounders, repo_root=repo_root)["path"]
+            repo_root
+            / _best_template_persona(
+                pool, confounders=confounders, repo_root=repo_root
+            )["path"]
         )
         synth_index = 0
         for value, missing in shortages.items():
@@ -392,9 +395,7 @@ def build_confounder_probe_cohort(
         "value_group_count": len(values),
         "sample_size_per_value_group": sample_size_per_value_group,
         "synthesized_trials": sum(shortages.values()),
-        "cohort_dir": str(cohort_dir.relative_to(repo_root))
-        if shortages
-        else None,
+        "cohort_dir": str(cohort_dir.relative_to(repo_root)) if shortages else None,
     }
     return chosen, meta
 
@@ -595,7 +596,9 @@ def build_job_config(spec: dict[str, Any], *, repo_root: Path) -> dict[str, Any]
             probe_value=str(probe_value),
             repo_root=repo_root,
         )
-        total = int(sample_size_total if sample_size_total is not None else per_value_group)
+        total = int(
+            sample_size_total if sample_size_total is not None else per_value_group
+        )
         chosen = sample_personas(matched, sample_size=total, seed=seed)
     elif stratify_fields:
         matched = pool
@@ -608,7 +611,9 @@ def build_job_config(spec: dict[str, Any], *, repo_root: Path) -> dict[str, Any]
         )
     else:
         matched = pool
-        total = int(sample_size_total if sample_size_total is not None else per_value_group)
+        total = int(
+            sample_size_total if sample_size_total is not None else per_value_group
+        )
         chosen = sample_personas(matched, sample_size=total, seed=seed)
 
     sample_size = len(chosen)

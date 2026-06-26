@@ -57,8 +57,7 @@ class CocoaHarborAgent(BaseInstalledAgent):
     async def install(self, environment: BaseEnvironment) -> None:
         check = await environment.exec(
             command=(
-                f"{_COCOA_PYTHON} -c 'from executor import TaskExecutor' "
-                "2>/dev/null"
+                f"{_COCOA_PYTHON} -c 'from executor import TaskExecutor' 2>/dev/null"
             ),
         )
         if check.return_code != 0:
@@ -134,12 +133,20 @@ class CocoaHarborAgent(BaseInstalledAgent):
             "COCOA_ROOT": _COCOA_ROOT,
             "COCOA_SKIP_DOCKER": "true" if self._skip_docker else "false",
         }
-        for key in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "LLM_API_KEY", "LLM_BASE_URL"):
+        for key in (
+            "ANTHROPIC_API_KEY",
+            "OPENAI_API_KEY",
+            "LLM_API_KEY",
+            "LLM_BASE_URL",
+        ):
             value = self._get_env(key)
             if value is not None:
                 env[key] = value
 
-        if not any(self._get_env(k) for k in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "LLM_API_KEY")):
+        if not any(
+            self._get_env(k)
+            for k in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "LLM_API_KEY")
+        ):
             raise ValueError(
                 "Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or LLM_API_KEY for cocoa"
             )

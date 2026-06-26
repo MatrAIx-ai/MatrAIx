@@ -79,7 +79,9 @@ def test_top_up_strata_adds_consistent_personas() -> None:
 
 
 def test_checked_in_manifest_is_consistent() -> None:
-    manifest_path = REPO_ROOT / "persona" / "datasets" / "bench-dev-2000" / "manifest.json"
+    manifest_path = (
+        REPO_ROOT / "persona" / "datasets" / "bench-dev-2000" / "manifest.json"
+    )
     if not manifest_path.is_file():
         manifest_path = MANIFEST
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))

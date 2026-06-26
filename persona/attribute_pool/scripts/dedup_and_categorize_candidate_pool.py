@@ -10,7 +10,12 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parent
-INPUT = ROOT / "candidate_pool_outputs" / "normalized" / "candidate_pool_high_quality_normalized.csv"
+INPUT = (
+    ROOT
+    / "candidate_pool_outputs"
+    / "normalized"
+    / "candidate_pool_high_quality_normalized.csv"
+)
 OUT = ROOT / "candidate_pool_outputs" / "step3_dedup_categorize"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -123,7 +128,7 @@ def slugify(value, max_len=100):
     value = clean_text(value).lower().replace("&", " and ")
     value = re.sub(r"[^a-z0-9]+", "_", value)
     value = re.sub(r"_+", "_", value).strip("_")
-    return (value[:max_len].strip("_") or "attribute")
+    return value[:max_len].strip("_") or "attribute"
 
 
 def label_text(row):
@@ -166,7 +171,14 @@ def is_generic_or_free_text(row):
     if any(re.search(pattern, text) for pattern in GENERIC_FREE_TEXT_PATTERNS):
         return True
     label = clean_text(row.get("canonical_label", "")).lower()
-    return label in {"other", "none", "not applicable", "unknown", "refused", "do not know"}
+    return label in {
+        "other",
+        "none",
+        "not applicable",
+        "unknown",
+        "refused",
+        "do not know",
+    }
 
 
 def non_attribute_artifact_reason(row):
@@ -174,13 +186,26 @@ def non_attribute_artifact_reason(row):
     label_norm = re.sub(r"[^a-z0-9]+", " ", label.lower()).strip()
     data_type = row.get("normalized_data_type", "")
 
-    if re.search(r"\bplease explain\b|\bexplain your answer\b|\bquestion above\b", label_norm):
+    if re.search(
+        r"\bplease explain\b|\bexplain your answer\b|\bquestion above\b", label_norm
+    ):
         return "explanation_prompt_not_attribute"
-    if re.search(r"\bother specify\b|\bother please specify\b|\bwrite in\b", label_norm):
+    if re.search(
+        r"\bother specify\b|\bother please specify\b|\bwrite in\b", label_norm
+    ):
         return "other_specify_field_not_attribute"
-    if label_norm in {"other", "none", "not applicable", "unknown", "refused", "do not know"}:
+    if label_norm in {
+        "other",
+        "none",
+        "not applicable",
+        "unknown",
+        "refused",
+        "do not know",
+    }:
         return "generic_response_option_not_attribute"
-    if data_type == "free_text" and any(re.search(pattern, label_norm) for pattern in GENERIC_FREE_TEXT_PATTERNS):
+    if data_type == "free_text" and any(
+        re.search(pattern, label_norm) for pattern in GENERIC_FREE_TEXT_PATTERNS
+    ):
         return "generic_free_text_prompt_not_attribute"
     return ""
 
@@ -191,7 +216,9 @@ def is_non_attribute_artifact(row):
 
 def relation_hint(a, b):
     if "/" in a.get("canonical_label", "") and "/" in b.get("canonical_label", ""):
-        if token_set(a.get("canonical_label", "")) == token_set(b.get("canonical_label", "")):
+        if token_set(a.get("canonical_label", "")) == token_set(
+            b.get("canonical_label", "")
+        ):
             return "", ""
 
     ca = slugify(a.get("canonical_label", ""), 200)
@@ -204,19 +231,41 @@ def relation_hint(a, b):
         return left in ca and right in cb or left in cb and right in ca
 
     if has("risk_aversion", "risk_tolerance"):
-        return "inverse_pole", "Risk aversion and risk tolerance are inverse but not identical constructs."
-    if ("risk_aversion" in joined or "risk_tolerance" in joined or "risk_taking" in joined) and (
-        "sensation_seeking" in joined or "thrill_seeking" in joined
-    ):
-        return "related_but_distinct", "Risk orientation and sensation/thrill seeking should be linked but not automatically merged."
+        return (
+            "inverse_pole",
+            "Risk aversion and risk tolerance are inverse but not identical constructs.",
+        )
+    if (
+        "risk_aversion" in joined
+        or "risk_tolerance" in joined
+        or "risk_taking" in joined
+    ) and ("sensation_seeking" in joined or "thrill_seeking" in joined):
+        return (
+            "related_but_distinct",
+            "Risk orientation and sensation/thrill seeking should be linked but not automatically merged.",
+        )
     if has("optimism", "pessimism"):
         return "inverse_pole", "Optimism and pessimism are opposite-valence constructs."
     if has("extraversion", "introversion"):
-        return "opposite_trait_pole", "Extraversion and introversion are opposite poles, not duplicate labels."
-    precise_liberal = ca in {"liberal", "liberalism", "political_liberalism"} or cb in {"liberal", "liberalism", "political_liberalism"}
-    precise_conservative = ca in {"conservative", "conservatism", "political_conservatism"} or cb in {"conservative", "conservatism", "political_conservatism"}
+        return (
+            "opposite_trait_pole",
+            "Extraversion and introversion are opposite poles, not duplicate labels.",
+        )
+    precise_liberal = ca in {"liberal", "liberalism", "political_liberalism"} or cb in {
+        "liberal",
+        "liberalism",
+        "political_liberalism",
+    }
+    precise_conservative = ca in {
+        "conservative",
+        "conservatism",
+        "political_conservatism",
+    } or cb in {"conservative", "conservatism", "political_conservatism"}
     if precise_liberal and precise_conservative:
-        return "opposite_attitude_pole", "Liberal and conservative orientations should remain distinct."
+        return (
+            "opposite_attitude_pole",
+            "Liberal and conservative orientations should remain distinct.",
+        )
     return "", ""
 
 
@@ -226,19 +275,54 @@ def refine_category(row):
     text = label_text(row)
     source_family = row.get("source_family", "")
 
-    if source_family != "psychometric" and "trust" in text and not any(k in text for k in ["trust fund", "trustee"]):
-        return "Worldview, Beliefs & Attitudes", "social and institutional trust", "trust keyword refinement"
+    if (
+        source_family != "psychometric"
+        and "trust" in text
+        and not any(k in text for k in ["trust fund", "trustee"])
+    ):
+        return (
+            "Worldview, Beliefs & Attitudes",
+            "social and institutional trust",
+            "trust keyword refinement",
+        )
 
-    if any(k in text for k in ["risk_aversion", "risk tolerance", "risk_tolerance", "sensation_seeking", "thrill_seeking"]):
-        return "Personality Traits", "risk orientation and sensation seeking", "risk/sensation construct refinement"
+    if any(
+        k in text
+        for k in [
+            "risk_aversion",
+            "risk tolerance",
+            "risk_tolerance",
+            "sensation_seeking",
+            "thrill_seeking",
+        ]
+    ):
+        return (
+            "Personality Traits",
+            "risk orientation and sensation seeking",
+            "risk/sensation construct refinement",
+        )
 
     if "risk_taking" in text or "risk-taking" in text:
         if "attitude" in text:
-            return "Worldview, Beliefs & Attitudes", "risk attitudes", "risk attitude refinement"
-        return "Personality Traits", "risk orientation and sensation seeking", "risk-taking construct refinement"
+            return (
+                "Worldview, Beliefs & Attitudes",
+                "risk attitudes",
+                "risk attitude refinement",
+            )
+        return (
+            "Personality Traits",
+            "risk orientation and sensation seeking",
+            "risk-taking construct refinement",
+        )
 
-    if source_family != "psychometric" and any(k in text for k in ["religion", "religious", "church", "faith in god"]):
-        return "Worldview, Beliefs & Attitudes", "religiosity and spiritual beliefs", "religion keyword refinement"
+    if source_family != "psychometric" and any(
+        k in text for k in ["religion", "religious", "church", "faith in god"]
+    ):
+        return (
+            "Worldview, Beliefs & Attitudes",
+            "religiosity and spiritual beliefs",
+            "religion keyword refinement",
+        )
 
     return category, subcategory, "kept_normalized_category"
 
@@ -270,8 +354,12 @@ def load_rows():
         row["final_primary_category"] = final_category
         row["final_subcategory"] = final_subcategory
         row["category_refinement_reason"] = reason
-        row["step3_dedup_key_strict"] = f"{slugify(final_category, 50)}::{slugify(row['canonical_label'], 110)}"
-        row["step3_dedup_key_loose"] = f"{slugify(final_category, 50)}::{'_'.join(sorted(token_set(row['canonical_label']))[:12])}"
+        row["step3_dedup_key_strict"] = (
+            f"{slugify(final_category, 50)}::{slugify(row['canonical_label'], 110)}"
+        )
+        row["step3_dedup_key_loose"] = (
+            f"{slugify(final_category, 50)}::{'_'.join(sorted(token_set(row['canonical_label']))[:12])}"
+        )
     return rows
 
 
@@ -285,7 +373,9 @@ def build_auto_merge_clusters(rows):
         for row in eligible[1:]:
             if can_auto_merge(eligible[0], row, "strict"):
                 uf.union(eligible[0]["candidate_id"], row["candidate_id"])
-                merge_reasons[eligible[0]["candidate_id"]].add("auto_merge_exact_strict_key")
+                merge_reasons[eligible[0]["candidate_id"]].add(
+                    "auto_merge_exact_strict_key"
+                )
                 merge_reasons[row["candidate_id"]].add("auto_merge_exact_strict_key")
 
     for key, group in group_by(rows, "step3_dedup_key_loose").items():
@@ -391,17 +481,31 @@ def build_deduped_attributes(clusters, merge_reasons):
                 "normalized_data_type": dtype_counts.most_common(1)[0][0],
                 "measurement_level": measurement_counts.most_common(1)[0][0],
                 "quality_tier": tier_counts.most_common(1)[0][0],
-                "max_normalized_quality_score": max(int(float(r.get("normalized_quality_score") or 0)) for r in cluster),
+                "max_normalized_quality_score": max(
+                    int(float(r.get("normalized_quality_score") or 0)) for r in cluster
+                ),
                 "license_risk": worst_license_risk(cluster),
                 "candidate_count": len(cluster),
                 "source_count": len(source_counts),
                 "merge_status": status,
                 "sources_json": json.dumps(dict(source_counts), ensure_ascii=False),
-                "source_families_json": json.dumps(dict(family_counts), ensure_ascii=False),
-                "aliases_json": json.dumps(merged_aliases(cluster, rep), ensure_ascii=False),
-                "candidate_ids_json": json.dumps([r["candidate_id"] for r in cluster], ensure_ascii=False),
-                "category_refinement_reasons_json": json.dumps(dict(Counter(r["category_refinement_reason"] for r in cluster)), ensure_ascii=False),
-                "needs_review": any(str(r.get("needs_review", "")).lower() == "true" for r in cluster) or status != "singleton",
+                "source_families_json": json.dumps(
+                    dict(family_counts), ensure_ascii=False
+                ),
+                "aliases_json": json.dumps(
+                    merged_aliases(cluster, rep), ensure_ascii=False
+                ),
+                "candidate_ids_json": json.dumps(
+                    [r["candidate_id"] for r in cluster], ensure_ascii=False
+                ),
+                "category_refinement_reasons_json": json.dumps(
+                    dict(Counter(r["category_refinement_reason"] for r in cluster)),
+                    ensure_ascii=False,
+                ),
+                "needs_review": any(
+                    str(r.get("needs_review", "")).lower() == "true" for r in cluster
+                )
+                or status != "singleton",
             }
         )
 
@@ -412,18 +516,29 @@ def build_deduped_attributes(clusters, merge_reasons):
                     "canonical_attribute_id": attr_id,
                     "dedup_cluster_size": len(cluster),
                     "dedup_status": status,
-                    "dedup_merge_reasons_json": json.dumps(sorted(merge_reasons.get(row["candidate_id"], set())), ensure_ascii=False),
+                    "dedup_merge_reasons_json": json.dumps(
+                        sorted(merge_reasons.get(row["candidate_id"], set())),
+                        ensure_ascii=False,
+                    ),
                 }
             )
             assignments.append(assignment)
 
-    attributes.sort(key=lambda r: (r["final_primary_category"], r["final_subcategory"], r["canonical_label"].lower()))
+    attributes.sort(
+        key=lambda r: (
+            r["final_primary_category"],
+            r["final_subcategory"],
+            r["canonical_label"].lower(),
+        )
+    )
     assignments.sort(key=lambda r: (r["canonical_attribute_id"], r["candidate_id"]))
     return attributes, assignments
 
 
 def build_review_clusters(rows, assignments):
-    attr_by_candidate = {r["candidate_id"]: r["canonical_attribute_id"] for r in assignments}
+    attr_by_candidate = {
+        r["candidate_id"]: r["canonical_attribute_id"] for r in assignments
+    }
     review_rows = []
     counter = 0
     for key, group in group_by(rows, "step3_dedup_key_loose").items():
@@ -442,13 +557,21 @@ def build_review_clusters(rows, assignments):
             {
                 "review_cluster_id": f"review_{counter:05d}",
                 "step3_dedup_key_loose": key,
-                "final_primary_category": Counter(r["final_primary_category"] for r in group).most_common(1)[0][0],
+                "final_primary_category": Counter(
+                    r["final_primary_category"] for r in group
+                ).most_common(1)[0][0],
                 "candidate_count": len(group),
                 "canonical_attribute_count": len(attr_ids),
                 "candidate_labels_json": json.dumps(labels[:40], ensure_ascii=False),
-                "canonical_attribute_ids_json": json.dumps(attr_ids, ensure_ascii=False),
-                "review_reason": "related_not_duplicate" if relation_types else "same_loose_key_needs_human_review",
-                "relation_hints_json": json.dumps(dict(relation_types), ensure_ascii=False),
+                "canonical_attribute_ids_json": json.dumps(
+                    attr_ids, ensure_ascii=False
+                ),
+                "review_reason": "related_not_duplicate"
+                if relation_types
+                else "same_loose_key_needs_human_review",
+                "relation_hints_json": json.dumps(
+                    dict(relation_types), ensure_ascii=False
+                ),
             }
         )
     return review_rows
@@ -497,7 +620,10 @@ def build_relation_edges(attributes):
             for b in right:
                 if a["canonical_attribute_id"] == b["canonical_attribute_id"]:
                     continue
-                key = tuple(sorted([a["canonical_attribute_id"], b["canonical_attribute_id"]]) + [relation_type])
+                key = tuple(
+                    sorted([a["canonical_attribute_id"], b["canonical_attribute_id"]])
+                    + [relation_type]
+                )
                 if key in seen:
                     continue
                 seen.add(key)
@@ -539,7 +665,9 @@ def group_by(rows, key):
     return grouped
 
 
-def write_summaries(attributes, assignments, review_clusters, edges, input_count, excluded_count):
+def write_summaries(
+    attributes, assignments, review_clusters, edges, input_count, excluded_count
+):
     category_rows = []
     for category, group in group_by(attributes, "final_primary_category").items():
         category_rows.append(
@@ -547,11 +675,17 @@ def write_summaries(attributes, assignments, review_clusters, edges, input_count
                 "final_primary_category": category,
                 "deduped_attribute_count": len(group),
                 "source_candidate_count": sum(int(g["candidate_count"]) for g in group),
-                "auto_merged_attribute_count": sum(1 for g in group if g["merge_status"] != "singleton"),
-                "needs_review_attribute_count": sum(str(g["needs_review"]).lower() == "true" for g in group),
+                "auto_merged_attribute_count": sum(
+                    1 for g in group if g["merge_status"] != "singleton"
+                ),
+                "needs_review_attribute_count": sum(
+                    str(g["needs_review"]).lower() == "true" for g in group
+                ),
             }
         )
-    category_rows.sort(key=lambda r: (-int(r["deduped_attribute_count"]), r["final_primary_category"]))
+    category_rows.sort(
+        key=lambda r: (-int(r["deduped_attribute_count"]), r["final_primary_category"])
+    )
     write_csv(OUT / "category_summary.csv", category_rows)
 
     subcategory_rows = []
@@ -562,10 +696,18 @@ def write_summaries(attributes, assignments, review_clusters, edges, input_count
                     "final_primary_category": key,
                     "final_subcategory": subcategory,
                     "deduped_attribute_count": len(sub_group),
-                    "source_candidate_count": sum(int(g["candidate_count"]) for g in sub_group),
+                    "source_candidate_count": sum(
+                        int(g["candidate_count"]) for g in sub_group
+                    ),
                 }
             )
-    subcategory_rows.sort(key=lambda r: (r["final_primary_category"], -int(r["deduped_attribute_count"]), r["final_subcategory"]))
+    subcategory_rows.sort(
+        key=lambda r: (
+            r["final_primary_category"],
+            -int(r["deduped_attribute_count"]),
+            r["final_subcategory"],
+        )
+    )
     write_csv(OUT / "subcategory_summary.csv", subcategory_rows)
 
     report = [
@@ -594,7 +736,9 @@ def write_summaries(attributes, assignments, review_clusters, edges, input_count
         "",
     ]
     for row in category_rows:
-        report.append(f"- {row['final_primary_category']}: {row['deduped_attribute_count']}")
+        report.append(
+            f"- {row['final_primary_category']}: {row['deduped_attribute_count']}"
+        )
     report += [
         "",
         "## Outputs",
@@ -607,7 +751,9 @@ def write_summaries(attributes, assignments, review_clusters, edges, input_count
         "- `category_summary.csv`",
         "- `subcategory_summary.csv`",
     ]
-    (OUT / "step3_dedup_categorize_report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    (OUT / "step3_dedup_categorize_report.md").write_text(
+        "\n".join(report) + "\n", encoding="utf-8"
+    )
 
 
 def main():
@@ -636,7 +782,9 @@ def main():
     write_csv(OUT / "excluded_non_attribute_artifacts.csv", excluded)
     write_csv(OUT / "dedup_review_clusters.csv", review_clusters)
     write_csv(OUT / "related_attribute_edges.csv", edges)
-    write_summaries(attributes, assignments, review_clusters, edges, len(rows), len(excluded))
+    write_summaries(
+        attributes, assignments, review_clusters, edges, len(rows), len(excluded)
+    )
 
     print(
         json.dumps(
@@ -645,7 +793,9 @@ def main():
                 "attribute_candidate_rows": len(attribute_rows),
                 "excluded_non_attribute_artifacts": len(excluded),
                 "deduped_attributes": len(attributes),
-                "auto_merged_attribute_clusters": sum(1 for r in attributes if r["merge_status"] != "singleton"),
+                "auto_merged_attribute_clusters": sum(
+                    1 for r in attributes if r["merge_status"] != "singleton"
+                ),
                 "review_clusters": len(review_clusters),
                 "relation_edges": len(edges),
                 "output_dir": str(OUT),

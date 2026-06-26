@@ -26,10 +26,14 @@ OUT.mkdir(parents=True, exist_ok=True)
 ATTRIBUTES_CSV = STEP3 / "deduped_attributes_high_quality.csv"
 STEP4_PAIR_CANDIDATES = STEP4 / "llm_pair_adjudication_candidates.csv"
 
-DEFAULT_EMBEDDING_MODEL = os.environ.get("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+DEFAULT_EMBEDDING_MODEL = os.environ.get(
+    "OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"
+)
 DEFAULT_LLM_MODEL = os.environ.get("OPENAI_LLM_MODEL", "gpt-4.1-mini")
 DEFAULT_OLLAMA_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
-DEFAULT_OLLAMA_EMBEDDING_MODEL = os.environ.get("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text")
+DEFAULT_OLLAMA_EMBEDDING_MODEL = os.environ.get(
+    "OLLAMA_EMBEDDING_MODEL", "nomic-embed-text"
+)
 DEFAULT_OLLAMA_LLM_MODEL = os.environ.get("OLLAMA_LLM_MODEL", "qwen3:8b")
 
 RELATION_BASE_WEIGHT = {
@@ -46,18 +50,61 @@ RELATION_BASE_WEIGHT = {
 }
 
 STOPWORDS = {
-    "a", "an", "and", "are", "as", "at", "be", "by", "can", "could", "do", "does",
-    "for", "from", "has", "have", "how", "i", "if", "in", "is", "it", "me", "my",
-    "of", "on", "or", "r", "respondent", "respondents", "s", "the", "their", "them",
-    "they", "this", "to", "what", "when", "where", "which", "who", "why", "with",
-    "you", "your",
+    "a",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "be",
+    "by",
+    "can",
+    "could",
+    "do",
+    "does",
+    "for",
+    "from",
+    "has",
+    "have",
+    "how",
+    "i",
+    "if",
+    "in",
+    "is",
+    "it",
+    "me",
+    "my",
+    "of",
+    "on",
+    "or",
+    "r",
+    "respondent",
+    "respondents",
+    "s",
+    "the",
+    "their",
+    "them",
+    "they",
+    "this",
+    "to",
+    "what",
+    "when",
+    "where",
+    "which",
+    "who",
+    "why",
+    "with",
+    "you",
+    "your",
 }
 
 
 def clean_text(value):
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return ""
-    return re.sub(r"\s+", " ", str(value).replace("\u00a0", " ").replace("\ufeff", "")).strip()
+    return re.sub(
+        r"\s+", " ", str(value).replace("\u00a0", " ").replace("\ufeff", "")
+    ).strip()
 
 
 def parse_json_list(value):
@@ -88,7 +135,7 @@ def slugify(value, max_len=80):
     value = clean_text(value).lower().replace("&", " and ")
     value = re.sub(r"[^a-z0-9]+", "_", value)
     value = re.sub(r"_+", "_", value).strip("_")
-    return (value[:max_len].strip("_") or "item")
+    return value[:max_len].strip("_") or "item"
 
 
 def stable_pair_id(a_id, b_id):
@@ -124,14 +171,18 @@ def evidence_support(row):
     except Exception:
         source_count = 1
         candidate_count = 1
-    support = min(1.0, 0.55 + 0.15 * math.log1p(source_count) + 0.08 * math.log1p(candidate_count))
+    support = min(
+        1.0, 0.55 + 0.15 * math.log1p(source_count) + 0.08 * math.log1p(candidate_count)
+    )
     return round(quality * support, 4)
 
 
 def lexical_similarity(a, b):
     label_a = clean_text(a.get("canonical_label", "")).lower()
     label_b = clean_text(b.get("canonical_label", "")).lower()
-    seq = SequenceMatcher(None, label_a, label_b).ratio() if label_a and label_b else 0.0
+    seq = (
+        SequenceMatcher(None, label_a, label_b).ratio() if label_a and label_b else 0.0
+    )
     ta = a.get("_tokens", set())
     tb = b.get("_tokens", set())
     if ta and tb:
@@ -166,7 +217,9 @@ def fallback_hash_tfidf_embeddings(rows, dim=2048):
 
 
 def rate_limit_sleep_seconds(body):
-    match = re.search(r"try again in (?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?", body, flags=re.I)
+    match = re.search(
+        r"try again in (?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?", body, flags=re.I
+    )
     if not match:
         return None
     hours = int(match.group(1) or 0)
@@ -176,7 +229,9 @@ def rate_limit_sleep_seconds(body):
     return total if total > 0 else None
 
 
-def openai_request(path, payload, api_key, timeout=120, retries=6, wait_on_rate_limit=False):
+def openai_request(
+    path, payload, api_key, timeout=120, retries=6, wait_on_rate_limit=False
+):
     data = json.dumps(payload).encode("utf-8")
     request = urllib.request.Request(
         f"https://api.openai.com/v1/{path}",
@@ -194,20 +249,30 @@ def openai_request(path, payload, api_key, timeout=120, retries=6, wait_on_rate_
         except urllib.error.HTTPError as exc:
             body = exc.read().decode("utf-8", errors="replace")
             if "insufficient_quota" in body:
-                raise RuntimeError("OpenAI insufficient_quota: add API credits or update billing before rerunning.") from exc
-            wait_seconds = rate_limit_sleep_seconds(body) if wait_on_rate_limit else None
+                raise RuntimeError(
+                    "OpenAI insufficient_quota: add API credits or update billing before rerunning."
+                ) from exc
+            wait_seconds = (
+                rate_limit_sleep_seconds(body) if wait_on_rate_limit else None
+            )
             if wait_seconds and wait_seconds <= 7200:
                 sleep_for = wait_seconds + 5
-                print(f"Rate limit reached; sleeping {sleep_for} seconds before retrying.", flush=True)
+                print(
+                    f"Rate limit reached; sleeping {sleep_for} seconds before retrying.",
+                    flush=True,
+                )
                 time.sleep(sleep_for)
                 continue
-            if exc.code in {408, 409, 429, 500, 502, 503, 504} and attempt < retries - 1:
-                time.sleep(min(60, 2 ** attempt))
+            if (
+                exc.code in {408, 409, 429, 500, 502, 503, 504}
+                and attempt < retries - 1
+            ):
+                time.sleep(min(60, 2**attempt))
                 continue
             raise RuntimeError(f"OpenAI API error {exc.code}: {body[:1000]}") from exc
         except (TimeoutError, urllib.error.URLError) as exc:
             if attempt < retries - 1:
-                time.sleep(min(60, 2 ** attempt))
+                time.sleep(min(60, 2**attempt))
                 continue
             raise RuntimeError(f"OpenAI request failed after retries: {exc}") from exc
     raise RuntimeError("OpenAI request failed after retries.")
@@ -230,7 +295,9 @@ def openai_embeddings(rows, api_key, model, batch_size=256):
     texts = [row["_text_for_embedding"][:8000] for row in rows]
     for start in range(0, len(texts), batch_size):
         batch = texts[start : start + batch_size]
-        response = openai_request("embeddings", {"model": model, "input": batch}, api_key)
+        response = openai_request(
+            "embeddings", {"model": model, "input": batch}, api_key
+        )
         vectors.extend(item["embedding"] for item in response["data"])
         time.sleep(0.05)
     matrix = np.array(vectors, dtype=np.float32)
@@ -245,7 +312,9 @@ def ollama_embeddings(rows, base_url, model, batch_size=64):
     texts = [row["_text_for_embedding"][:8000] for row in rows]
     for start in range(0, len(texts), batch_size):
         batch = texts[start : start + batch_size]
-        response = ollama_request("embed", {"model": model, "input": batch}, base_url=base_url, timeout=600)
+        response = ollama_request(
+            "embed", {"model": model, "input": batch}, base_url=base_url, timeout=600
+        )
         batch_vectors = response.get("embeddings")
         if not batch_vectors:
             raise RuntimeError(
@@ -259,7 +328,13 @@ def ollama_embeddings(rows, base_url, model, batch_size=64):
     return matrix, f"ollama::{model}"
 
 
-def compute_embeddings(rows, provider="auto", force_fallback=False, ollama_url=DEFAULT_OLLAMA_URL, ollama_model=DEFAULT_OLLAMA_EMBEDDING_MODEL):
+def compute_embeddings(
+    rows,
+    provider="auto",
+    force_fallback=False,
+    ollama_url=DEFAULT_OLLAMA_URL,
+    ollama_model=DEFAULT_OLLAMA_EMBEDDING_MODEL,
+):
     if provider == "fallback" or force_fallback:
         return fallback_hash_tfidf_embeddings(rows)
     if provider == "ollama":
@@ -267,7 +342,9 @@ def compute_embeddings(rows, provider="auto", force_fallback=False, ollama_url=D
     if provider == "openai":
         api_key = os.environ.get("OPENAI_API_KEY", "")
         if not api_key:
-            raise RuntimeError("OPENAI_API_KEY is required when --provider openai is used.")
+            raise RuntimeError(
+                "OPENAI_API_KEY is required when --provider openai is used."
+            )
         return openai_embeddings(rows, api_key, DEFAULT_EMBEDDING_MODEL)
 
     api_key = os.environ.get("OPENAI_API_KEY", "")
@@ -283,14 +360,21 @@ def relation_hint(a, b):
         return "inverse_pole"
     if {"risk", "tolerance"} <= ta and {"risk", "aversion"} <= tb:
         return "inverse_pole"
-    if "extraversion" in ta and "introversion" in tb or "introversion" in ta and "extraversion" in tb:
+    if (
+        "extraversion" in ta
+        and "introversion" in tb
+        or "introversion" in ta
+        and "extraversion" in tb
+    ):
         return "inverse_pole"
     if "optimism" in ta and "pessimism" in tb or "pessimism" in ta and "optimism" in tb:
         return "inverse_pole"
     return ""
 
 
-def generate_embedding_pairs(rows, embeddings, top_k=25, min_similarity=0.62, block_size=512):
+def generate_embedding_pairs(
+    rows, embeddings, top_k=25, min_similarity=0.62, block_size=512
+):
     by_id = {row["canonical_attribute_id"]: row for row in rows}
     pairs = {}
     n = len(rows)
@@ -310,7 +394,9 @@ def generate_embedding_pairs(rows, embeddings, top_k=25, min_similarity=0.62, bl
                     continue
                 a = rows[i]
                 b = rows[j]
-                key = tuple(sorted([a["canonical_attribute_id"], b["canonical_attribute_id"]]))
+                key = tuple(
+                    sorted([a["canonical_attribute_id"], b["canonical_attribute_id"]])
+                )
                 if key in pairs and pairs[key]["embedding_similarity"] >= score:
                     continue
                 relation = relation_hint(a, b)
@@ -334,7 +420,14 @@ def generate_embedding_pairs(rows, embeddings, top_k=25, min_similarity=0.62, bl
                     "retrieval_relation_hint": relation,
                     "retrieval_status": "needs_llm_adjudication",
                 }
-    return sorted(pairs.values(), key=lambda r: (float(r["embedding_similarity"]), float(r["lexical_similarity"])), reverse=True)
+    return sorted(
+        pairs.values(),
+        key=lambda r: (
+            float(r["embedding_similarity"]),
+            float(r["lexical_similarity"]),
+        ),
+        reverse=True,
+    )
 
 
 def merge_with_step4_pairs(embedding_pairs, rows, max_pairs=7000):
@@ -347,12 +440,18 @@ def merge_with_step4_pairs(embedding_pairs, rows, max_pairs=7000):
         combined[key] = row
 
     if STEP4_PAIR_CANDIDATES.exists():
-        step4 = pd.read_csv(STEP4_PAIR_CANDIDATES, dtype=str, keep_default_na=False).to_dict(orient="records")
+        step4 = pd.read_csv(
+            STEP4_PAIR_CANDIDATES, dtype=str, keep_default_na=False
+        ).to_dict(orient="records")
         for row in step4:
-            key = tuple(sorted([row["source_attribute_id"], row["target_attribute_id"]]))
+            key = tuple(
+                sorted([row["source_attribute_id"], row["target_attribute_id"]])
+            )
             if key in combined:
                 combined[key]["candidate_source"] += "+step4_heuristic"
-                combined[key]["step4_relation_hint"] = row.get("heuristic_relation_candidate", "")
+                combined[key]["step4_relation_hint"] = row.get(
+                    "heuristic_relation_candidate", ""
+                )
                 combined[key]["step4_score"] = row.get("heuristic_score", "")
                 continue
             a = by_id.get(key[0])
@@ -371,7 +470,9 @@ def merge_with_step4_pairs(embedding_pairs, rows, max_pairs=7000):
                 "target_subcategory": b["final_subcategory"],
                 "embedding_similarity": "",
                 "lexical_similarity": lexical_similarity(a, b),
-                "evidence_support": round((evidence_support(a) + evidence_support(b)) / 2, 4),
+                "evidence_support": round(
+                    (evidence_support(a) + evidence_support(b)) / 2, 4
+                ),
                 "retrieval_relation_hint": row.get("heuristic_relation_candidate", ""),
                 "retrieval_status": "needs_llm_adjudication",
                 "candidate_source": "step4_heuristic",
@@ -383,7 +484,12 @@ def merge_with_step4_pairs(embedding_pairs, rows, max_pairs=7000):
         emb = float(row["embedding_similarity"] or 0)
         lex = float(row["lexical_similarity"] or 0)
         ev = float(row["evidence_support"] or 0)
-        source_bonus = 0.05 if "embedding" in row.get("candidate_source", "") and "step4" in row.get("candidate_source", "") else 0
+        source_bonus = (
+            0.05
+            if "embedding" in row.get("candidate_source", "")
+            and "step4" in row.get("candidate_source", "")
+            else 0
+        )
         return emb * 0.55 + lex * 0.25 + ev * 0.15 + source_bonus
 
     rows_out = list(combined.values())
@@ -405,9 +511,16 @@ def prompt_for_pair(row, attr_by_id):
             "Return JSON only.",
         ],
         "allowed_relation_types": [
-            "duplicate_of", "alias_of", "broader_than", "narrower_than",
-            "positively_correlated", "negatively_correlated", "inverse_pole",
-            "conflicts_with", "related_but_distinct", "not_related",
+            "duplicate_of",
+            "alias_of",
+            "broader_than",
+            "narrower_than",
+            "positively_correlated",
+            "negatively_correlated",
+            "inverse_pole",
+            "conflicts_with",
+            "related_but_distinct",
+            "not_related",
         ],
         "pair": {
             "pair_id": row["pair_id"],
@@ -486,7 +599,16 @@ def openai_adjudicate_one(row, attr_by_id, api_key, model):
     return merged
 
 
-def openai_llm_adjudicate(pair_rows, attr_by_id, api_key, model, max_pairs, workers=8, resume=False, checkpoint_every=25):
+def openai_llm_adjudicate(
+    pair_rows,
+    attr_by_id,
+    api_key,
+    model,
+    max_pairs,
+    workers=8,
+    resume=False,
+    checkpoint_every=25,
+):
     selected = pair_rows[:max_pairs]
     checkpoint_path = OUT / "llm_adjudicated_pairs.csv"
     results = []
@@ -496,19 +618,27 @@ def openai_llm_adjudicate(pair_rows, attr_by_id, api_key, model, max_pairs, work
             existing = list(csv.DictReader(f))
         selected_ids = {row["pair_id"] for row in selected}
         for row in existing:
-            if row.get("pair_id") in selected_ids and row.get("pair_id") not in done_ids:
+            if (
+                row.get("pair_id") in selected_ids
+                and row.get("pair_id") not in done_ids
+            ):
                 results.append(row)
                 done_ids.add(row["pair_id"])
 
     to_run = [row for row in selected if row["pair_id"] not in done_ids]
-    print(f"OpenAI LLM adjudication: {len(done_ids)} already done, {len(to_run)} remaining, workers={workers}", flush=True)
+    print(
+        f"OpenAI LLM adjudication: {len(done_ids)} already done, {len(to_run)} remaining, workers={workers}",
+        flush=True,
+    )
     if not to_run:
         return results
 
     completed = len(results)
     with ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
         future_to_index = {
-            executor.submit(openai_adjudicate_one, row, attr_by_id, api_key, model): index
+            executor.submit(
+                openai_adjudicate_one, row, attr_by_id, api_key, model
+            ): index
             for index, row in enumerate(to_run)
         }
         for future in as_completed(future_to_index):
@@ -517,7 +647,10 @@ def openai_llm_adjudicate(pair_rows, attr_by_id, api_key, model, max_pairs, work
             completed += 1
             if completed % checkpoint_every == 0 or completed == len(selected):
                 write_csv(checkpoint_path, results)
-                print(f"Checkpoint: {completed}/{len(selected)} LLM pairs adjudicated", flush=True)
+                print(
+                    f"Checkpoint: {completed}/{len(selected)} LLM pairs adjudicated",
+                    flush=True,
+                )
 
     write_csv(checkpoint_path, results)
     return results
@@ -543,7 +676,8 @@ def compact_pair_for_batch(row, attr_by_id):
         "signals": {
             "embedding_similarity": row.get("embedding_similarity", ""),
             "lexical_similarity": row.get("lexical_similarity", ""),
-            "relation_hint": row.get("retrieval_relation_hint", "") or row.get("step4_relation_hint", ""),
+            "relation_hint": row.get("retrieval_relation_hint", "")
+            or row.get("step4_relation_hint", ""),
         },
     }
 
@@ -623,7 +757,14 @@ def openai_adjudicate_batch(batch_rows, attr_by_id, api_key, model):
         "temperature": 0,
         "max_tokens": max(1000, len(batch_rows) * 120),
     }
-    response = openai_request("chat/completions", payload, api_key, timeout=300, retries=12, wait_on_rate_limit=True)
+    response = openai_request(
+        "chat/completions",
+        payload,
+        api_key,
+        timeout=300,
+        retries=12,
+        wait_on_rate_limit=True,
+    )
     text = response["choices"][0]["message"]["content"].strip()
     try:
         parsed = json.loads(text)
@@ -631,11 +772,17 @@ def openai_adjudicate_batch(batch_rows, attr_by_id, api_key, model):
     except Exception:
         result_items = []
 
-    by_id = {item.get("pair_id"): item for item in result_items if isinstance(item, dict)}
-    return [normalize_batch_item(by_id.get(row["pair_id"], {}), row) for row in batch_rows]
+    by_id = {
+        item.get("pair_id"): item for item in result_items if isinstance(item, dict)
+    }
+    return [
+        normalize_batch_item(by_id.get(row["pair_id"], {}), row) for row in batch_rows
+    ]
 
 
-def openai_llm_adjudicate_batched(pair_rows, attr_by_id, api_key, model, max_pairs, batch_size=150, resume=False):
+def openai_llm_adjudicate_batched(
+    pair_rows, attr_by_id, api_key, model, max_pairs, batch_size=150, resume=False
+):
     selected = pair_rows[:max_pairs]
     checkpoint_path = OUT / "llm_adjudicated_pairs.csv"
     results = []
@@ -645,13 +792,19 @@ def openai_llm_adjudicate_batched(pair_rows, attr_by_id, api_key, model, max_pai
             existing = list(csv.DictReader(f))
         selected_ids = {row["pair_id"] for row in selected}
         for row in existing:
-            if row.get("pair_id") in selected_ids and row.get("pair_id") not in done_ids:
+            if (
+                row.get("pair_id") in selected_ids
+                and row.get("pair_id") not in done_ids
+            ):
                 results.append(row)
                 done_ids.add(row["pair_id"])
 
     to_run = [row for row in selected if row["pair_id"] not in done_ids]
     total = len(selected)
-    print(f"OpenAI batched adjudication: {len(done_ids)} already done, {len(to_run)} remaining, batch_size={batch_size}", flush=True)
+    print(
+        f"OpenAI batched adjudication: {len(done_ids)} already done, {len(to_run)} remaining, batch_size={batch_size}",
+        flush=True,
+    )
     for start in range(0, len(to_run), batch_size):
         batch = to_run[start : start + batch_size]
         batch_results = openai_adjudicate_batch(batch, attr_by_id, api_key, model)
@@ -706,12 +859,26 @@ def split_llm_results(results):
         relation = row.get("relation_type", "")
         decision = row.get("merge_decision", "")
         conf = float(row.get("final_merge_confidence", 0) or 0)
-        if relation in {"duplicate_of", "alias_of"} and decision == "merge" and conf >= 0.85:
+        if (
+            relation in {"duplicate_of", "alias_of"}
+            and decision == "merge"
+            and conf >= 0.85
+        ):
             confirmed.append(row)
-        elif relation in {"broader_than", "narrower_than", "positively_correlated", "negatively_correlated", "inverse_pole", "conflicts_with", "related_but_distinct"}:
+        elif relation in {
+            "broader_than",
+            "narrower_than",
+            "positively_correlated",
+            "negatively_correlated",
+            "inverse_pole",
+            "conflicts_with",
+            "related_but_distinct",
+        }:
             edge = dict(row)
             llm_conf = float(row.get("llm_confidence", 0) or 0)
-            edge["edge_weight"] = round(RELATION_BASE_WEIGHT.get(relation, 0.5) * max(llm_conf, 0.1), 4)
+            edge["edge_weight"] = round(
+                RELATION_BASE_WEIGHT.get(relation, 0.5) * max(llm_conf, 0.1), 4
+            )
             graph_edges.append(edge)
         elif decision == "unsure" or 0.6 <= conf < 0.85:
             review.append(row)
@@ -744,7 +911,9 @@ def write_jsonl(path, rows):
 
 
 def write_report(backend, pair_rows, llm_results, run_llm, provider, credential_status):
-    relation_counts = Counter(row.get("retrieval_relation_hint", "") for row in pair_rows)
+    relation_counts = Counter(
+        row.get("retrieval_relation_hint", "") for row in pair_rows
+    )
     lines = [
         "# Step 5 Embedding + LLM Dedup Report",
         "",
@@ -778,14 +947,20 @@ def write_report(backend, pair_rows, llm_results, run_llm, provider, credential_
             "This run did not complete external/local LLM adjudication.",
             "For Ollama, install Ollama, start the local server, and pull the embedding and judge models before running with `--provider ollama --run-llm`.",
         ]
-    (OUT / "step5_embedding_llm_dedup_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (OUT / "step5_embedding_llm_dedup_report.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--provider", choices=["auto", "openai", "ollama", "fallback"], default="auto")
+    parser.add_argument(
+        "--provider", choices=["auto", "openai", "ollama", "fallback"], default="auto"
+    )
     parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA_URL)
-    parser.add_argument("--ollama-embedding-model", default=DEFAULT_OLLAMA_EMBEDDING_MODEL)
+    parser.add_argument(
+        "--ollama-embedding-model", default=DEFAULT_OLLAMA_EMBEDDING_MODEL
+    )
     parser.add_argument("--ollama-llm-model", default=DEFAULT_OLLAMA_LLM_MODEL)
     parser.add_argument("--run-llm", action="store_true")
     parser.add_argument("--max-llm-pairs", type=int, default=200)
@@ -815,7 +990,9 @@ def main():
             ollama_url=args.ollama_url,
             ollama_model=args.ollama_embedding_model,
         )
-        embedding_pairs = generate_embedding_pairs(rows, embeddings, top_k=args.top_k, min_similarity=args.min_similarity)
+        embedding_pairs = generate_embedding_pairs(
+            rows, embeddings, top_k=args.top_k, min_similarity=args.min_similarity
+        )
         pair_rows = merge_with_step4_pairs(embedding_pairs, rows)
         prompts = [prompt_for_pair(row, attr_by_id) for row in pair_rows]
 
@@ -900,7 +1077,9 @@ def main():
         ]:
             (OUT / name).write_text("", encoding="utf-8")
 
-    write_report(backend, pair_rows, llm_results, args.run_llm, args.provider, credential_status)
+    write_report(
+        backend, pair_rows, llm_results, args.run_llm, args.provider, credential_status
+    )
     print(
         json.dumps(
             {

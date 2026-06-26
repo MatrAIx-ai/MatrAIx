@@ -89,7 +89,9 @@ DECLINE_GROUNDED_Q0: dict[str, frozenset[str]] = {
 }
 
 
-def _min_oracle_matches(n_scored: int, *, threshold: float = ALIGNMENT_PASS_THRESHOLD) -> int:
+def _min_oracle_matches(
+    n_scored: int, *, threshold: float = ALIGNMENT_PASS_THRESHOLD
+) -> int:
     if n_scored <= 0:
         return 0
     return math.ceil(n_scored * threshold)
@@ -251,8 +253,8 @@ def test_dim_grounding_heuristic() -> None:
     per_question: dict[str, dict[str, object]] = {}
 
     if probe_dimension == "dimensions.economic_motivation":
-        counterfactual, matched, rationale, per_question = _evaluate_economic_motivation(
-            probe_value, survey
+        counterfactual, matched, rationale, per_question = (
+            _evaluate_economic_motivation(probe_value, survey)
         )
     else:
         rationale = f"No checkpoint table for {probe_dimension!r}."
@@ -263,9 +265,7 @@ def test_dim_grounding_heuristic() -> None:
     )
     oracle_path = ORACLE_PATHS.get(probe_value, {})
     n_oracle_matches = sum(
-        1
-        for qid, entry in per_question.items()
-        if entry.get("oracle_match") is True
+        1 for qid, entry in per_question.items() if entry.get("oracle_match") is True
     )
     alignment_rate = _alignment_rate(n_oracle_matches, n_scored)
     grounding_pass = _passes_alignment(n_oracle_matches, n_scored)

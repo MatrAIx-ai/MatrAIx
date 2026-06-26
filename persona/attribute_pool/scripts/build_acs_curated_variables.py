@@ -48,13 +48,37 @@ VARIABLE_GROUPS = [
         "person",
         "Cognitive & Capability Profile",
         "education language and field of training",
-        ["LANX", "ENG", "SCH", "SCHL", "SCHG", "FOD1P", "FOD2P", "SCIENGP", "SCIENGRLP"],
+        [
+            "LANX",
+            "ENG",
+            "SCH",
+            "SCHL",
+            "SCHG",
+            "FOD1P",
+            "FOD2P",
+            "SCIENGP",
+            "SCIENGRLP",
+        ],
     ),
     (
         "person",
         "Life Context & Constraints",
         "employment work hours occupation industry and income",
-        ["ESR", "WRK", "WKL", "WKWN", "WKHP", "COW", "OCCP", "INDP", "SOCP", "WAGP", "SEMP", "PERNP", "PINCP"],
+        [
+            "ESR",
+            "WRK",
+            "WKL",
+            "WKWN",
+            "WKHP",
+            "COW",
+            "OCCP",
+            "INDP",
+            "SOCP",
+            "WAGP",
+            "SEMP",
+            "PERNP",
+            "PINCP",
+        ],
     ),
     (
         "person",
@@ -90,7 +114,18 @@ VARIABLE_GROUPS = [
         "person",
         "Social Identity, Relationships & Community",
         "family relationship marital status fertility and caregiving",
-        ["MAR", "MARHM", "MARHW", "MARHD", "MARHT", "RELSHIPP", "FER", "GCL", "GCM", "GCR"],
+        [
+            "MAR",
+            "MARHM",
+            "MARHW",
+            "MARHD",
+            "MARHT",
+            "RELSHIPP",
+            "FER",
+            "GCL",
+            "GCM",
+            "GCR",
+        ],
     ),
     (
         "person",
@@ -108,7 +143,19 @@ VARIABLE_GROUPS = [
         "housing",
         "Demographics & Population Grounding",
         "household composition and household language",
-        ["NP", "NOC", "R18", "R60", "R65", "HHT", "HHT2", "HHL", "LNGI", "WIF", "WORKSTAT"],
+        [
+            "NP",
+            "NOC",
+            "R18",
+            "R60",
+            "R65",
+            "HHT",
+            "HHT2",
+            "HHL",
+            "LNGI",
+            "WIF",
+            "WORKSTAT",
+        ],
     ),
     (
         "housing",
@@ -144,7 +191,16 @@ VARIABLE_GROUPS = [
         "housing",
         "Life Context & Constraints",
         "technology and communication access",
-        ["BROADBND", "COMPOTHX", "DIALUP", "LAPTOP", "SMARTPHONE", "TABLET", "TEL", "SATELLITE"],
+        [
+            "BROADBND",
+            "COMPOTHX",
+            "DIALUP",
+            "LAPTOP",
+            "SMARTPHONE",
+            "TABLET",
+            "TEL",
+            "SATELLITE",
+        ],
     ),
 ]
 
@@ -264,7 +320,9 @@ def main():
             continue
 
         values = values_by_var.get(variable, [])
-        data_type, measurement_level = infer_type(variable, official["official_type"], values)
+        data_type, measurement_level = infer_type(
+            variable, official["official_type"], values
+        )
         if len(values) <= 25:
             values_json = json.dumps(values, ensure_ascii=False)
         else:
@@ -291,7 +349,9 @@ def main():
         )
 
     if missing:
-        raise ValueError(f"Curated variables missing from ACS data dictionary: {missing}")
+        raise ValueError(
+            f"Curated variables missing from ACS data dictionary: {missing}"
+        )
 
     fieldnames = [
         "acs_variable",
@@ -315,7 +375,9 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
-    print(json.dumps({"curated_acs_variables": len(rows), "output": str(OUT)}, indent=2))
+    print(
+        json.dumps({"curated_acs_variables": len(rows), "output": str(OUT)}, indent=2)
+    )
 
 
 if __name__ == "__main__":

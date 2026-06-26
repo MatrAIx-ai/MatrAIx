@@ -212,7 +212,9 @@ def _narrative_education_career(dimensions: dict[str, Any]) -> str:
         edu,
         work,
         role_line,
-        f"My published or research footprint is {research.lower()}" if research else None,
+        f"My published or research footprint is {research.lower()}"
+        if research
+        else None,
         f"On professional networks I am {linkedin.lower()}" if linkedin else None,
         f"I am {tech.lower()} with technology" if tech else None,
         f"Relative to the task at hand, I am approaching it as {expertise.lower()}"
@@ -286,7 +288,9 @@ def _narrative_personality(dimensions: dict[str, Any]) -> str:
     if learning or media or accessibility or modality:
         chunks = []
         if learning:
-            chunks.append(f"I absorb information best through {learning.lower()} learning")
+            chunks.append(
+                f"I absorb information best through {learning.lower()} learning"
+            )
         if media:
             chunks.append(f"my media diet is {media.lower()}")
         if accessibility:
@@ -398,7 +402,9 @@ def _narrative_communication_style(
             if not text:
                 continue
             meta = by_id.get(dim_id)
-            label = str((meta or {}).get("label") or dim_id.removeprefix("cog_")).lower()
+            label = str(
+                (meta or {}).get("label") or dim_id.removeprefix("cog_")
+            ).lower()
             parts.append(f"{text.lower()} {label}")
         if not parts:
             return None

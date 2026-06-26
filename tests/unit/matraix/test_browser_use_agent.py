@@ -31,7 +31,9 @@ def test_populate_context_post_run_reads_final_metrics(tmp_path: Path) -> None:
     }
     (logs_dir / "trajectory.json").write_text(json.dumps(trajectory), encoding="utf-8")
 
-    agent = BrowserUseHarborAgent(logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6")
+    agent = BrowserUseHarborAgent(
+        logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6"
+    )
     context = AgentContext()
     agent.populate_context_post_run(context)
 
@@ -58,7 +60,9 @@ def test_populate_context_post_run_zero_cost(tmp_path: Path) -> None:
     }
     (logs_dir / "trajectory.json").write_text(json.dumps(trajectory), encoding="utf-8")
 
-    agent = BrowserUseHarborAgent(logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6")
+    agent = BrowserUseHarborAgent(
+        logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6"
+    )
     context = AgentContext()
     agent.populate_context_post_run(context)
 
@@ -73,7 +77,9 @@ def test_populate_context_post_run_missing_trajectory(tmp_path: Path) -> None:
     logs_dir = tmp_path / "logs"
     logs_dir.mkdir()
 
-    agent = BrowserUseHarborAgent(logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6")
+    agent = BrowserUseHarborAgent(
+        logs_dir=logs_dir, model_name="anthropic/claude-sonnet-4-6"
+    )
     context = AgentContext()
     agent.populate_context_post_run(context)
 

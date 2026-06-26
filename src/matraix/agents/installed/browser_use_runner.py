@@ -158,9 +158,7 @@ def history_to_atif(
             reasoning = model_output.thinking
 
             screenshot_path = getattr(state, "screenshot_path", None) if state else None
-            screenshot_rel = _copy_screenshot(
-                screenshot_path, images_dir, hist_idx + 1
-            )
+            screenshot_rel = _copy_screenshot(screenshot_path, images_dir, hist_idx + 1)
 
             for action_idx, action in enumerate(model_output.action):
                 func_name, arguments = _action_name_and_args(action)
@@ -197,9 +195,7 @@ def history_to_atif(
                         }
                     )
 
-            text_message = (
-                "\n".join(message_lines) if message_lines else "[agent step]"
-            )
+            text_message = "\n".join(message_lines) if message_lines else "[agent step]"
             if screenshot_rel:
                 message: str | list[dict[str, Any]] = [
                     {"type": "text", "text": text_message},

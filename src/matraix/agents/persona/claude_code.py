@@ -12,9 +12,7 @@ from harbor.models.agent.name import AgentName
 from matraix.agents.persona.mixin import PersonaMixin
 
 
-def _merge_append_system_prompt(
-    existing: str | None, persona_prompt: str
-) -> str:
+def _merge_append_system_prompt(existing: str | None, persona_prompt: str) -> str:
     persona_prompt = persona_prompt.strip()
     if not existing:
         return persona_prompt

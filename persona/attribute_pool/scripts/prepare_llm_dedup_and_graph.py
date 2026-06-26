@@ -137,7 +137,7 @@ def slugify(value, max_len=120):
     value = clean_text(value).lower().replace("&", " and ")
     value = re.sub(r"[^a-z0-9]+", "_", value)
     value = re.sub(r"_+", "_", value).strip("_")
-    return (value[:max_len].strip("_") or "node")
+    return value[:max_len].strip("_") or "node"
 
 
 def tokens(text):
@@ -166,18 +166,24 @@ def parse_json_list(value):
 
 def label_context(row):
     aliases = " ".join(parse_json_list(row.get("aliases_json", ""))[:8])
-    return " ".join([row.get("canonical_label", ""), row.get("canonical_name", ""), aliases])
+    return " ".join(
+        [row.get("canonical_label", ""), row.get("canonical_name", ""), aliases]
+    )
 
 
 def label_only_context(row):
     aliases = " ".join(parse_json_list(row.get("aliases_json", ""))[:8])
-    return " ".join([row.get("canonical_label", ""), row.get("canonical_name", ""), aliases])
+    return " ".join(
+        [row.get("canonical_label", ""), row.get("canonical_name", ""), aliases]
+    )
 
 
 def similarity(a, b):
     label_a = clean_text(a.get("canonical_label", "")).lower()
     label_b = clean_text(b.get("canonical_label", "")).lower()
-    seq = SequenceMatcher(None, label_a, label_b).ratio() if label_a and label_b else 0.0
+    seq = (
+        SequenceMatcher(None, label_a, label_b).ratio() if label_a and label_b else 0.0
+    )
     ta = tokens(label_only_context(a))
     tb = tokens(label_only_context(b))
     if not ta or not tb:
@@ -208,7 +214,9 @@ def evidence_weight(row):
         candidate_count = int(row.get("candidate_count", "1") or 1)
     except Exception:
         candidate_count = 1
-    support = min(1.0, 0.55 + 0.15 * math.log1p(source_count) + 0.08 * math.log1p(candidate_count))
+    support = min(
+        1.0, 0.55 + 0.15 * math.log1p(source_count) + 0.08 * math.log1p(candidate_count)
+    )
     return round(quality * support, 4)
 
 
@@ -233,9 +241,16 @@ def infer_pair_candidate(a, b):
     tb = tokens(label_only_context(b))
     context_a = tokens(label_context(a))
     context_b = tokens(label_context(b))
-    context_jaccard = len(context_a & context_b) / len(context_a | context_b) if context_a and context_b else 0.0
+    context_jaccard = (
+        len(context_a & context_b) / len(context_a | context_b)
+        if context_a and context_b
+        else 0.0
+    )
     context_containment = (
-        max(len(context_a & context_b) / len(context_a), len(context_a & context_b) / len(context_b))
+        max(
+            len(context_a & context_b) / len(context_a),
+            len(context_a & context_b) / len(context_b),
+        )
         if context_a and context_b
         else 0.0
     )
@@ -245,16 +260,32 @@ def infer_pair_candidate(a, b):
         return antonym, 0.92, "explicit_antonym_or_opposite_pole_rule"
 
     if same_category and (seq >= 0.92 or label_jaccard >= 0.82 or (ta == tb and ta)):
-        return "possible_duplicate", max(seq, label_jaccard, label_containment), "high_label_or_token_similarity"
+        return (
+            "possible_duplicate",
+            max(seq, label_jaccard, label_containment),
+            "high_label_or_token_similarity",
+        )
 
     if same_category and label_containment >= 0.9 and abs(len(ta) - len(tb)) >= 1:
-        return "possible_broader_narrower", label_containment, "one_label_tokens_contained_in_other"
+        return (
+            "possible_broader_narrower",
+            label_containment,
+            "one_label_tokens_contained_in_other",
+        )
 
     if same_subcategory and (context_jaccard >= 0.34 or context_containment >= 0.58):
-        return "possible_related_or_correlated", max(context_jaccard, context_containment), "same_subcategory_token_overlap"
+        return (
+            "possible_related_or_correlated",
+            max(context_jaccard, context_containment),
+            "same_subcategory_token_overlap",
+        )
 
     if same_category and context_jaccard >= 0.45:
-        return "possible_related_or_correlated", context_jaccard, "same_category_token_overlap"
+        return (
+            "possible_related_or_correlated",
+            context_jaccard,
+            "same_category_token_overlap",
+        )
 
     return "", 0.0, ""
 
@@ -277,7 +308,9 @@ def build_inverted_index(rows):
         token_df = Counter()
         for row in group:
             token_df.update(row["_tokens"])
-        useful_tokens = {t for t, c in token_df.items() if 2 <= c <= MAX_IDS_PER_BLOCKING_TOKEN}
+        useful_tokens = {
+            t for t, c in token_df.items() if 2 <= c <= MAX_IDS_PER_BLOCKING_TOKEN
+        }
         token_index = defaultdict(list)
         for row in group:
             for token in row["_tokens"] & useful_tokens:
@@ -299,7 +332,9 @@ def generate_pair_candidates(rows):
     pair_counts = build_inverted_index(rows)
     candidates = []
     seen = set()
-    for (left_id, right_id), shared_token_count in pair_counts.most_common(MAX_RAW_PAIR_BLOCKS_TO_SCORE):
+    for (left_id, right_id), shared_token_count in pair_counts.most_common(
+        MAX_RAW_PAIR_BLOCKS_TO_SCORE
+    ):
         a = by_id[left_id]
         b = by_id[right_id]
         relation, score, reason = infer_pair_candidate(a, b)
@@ -407,7 +442,9 @@ def generate_extended_mapping_candidates(attributes):
     for attr in attributes:
         attrs_by_category[attr["final_primary_category"]].append(attr)
         for token in attr["_tokens"]:
-            attr_token_index_by_category[attr["final_primary_category"]][token].append(attr)
+            attr_token_index_by_category[attr["final_primary_category"]][token].append(
+                attr
+            )
 
     raw_df = pd.read_csv(RAW_EXTENDED_NORMALIZED_CSV, dtype=str, keep_default_na=False)
     raw_rows = raw_df.to_dict(orient="records")
@@ -424,7 +461,15 @@ def generate_extended_mapping_candidates(attributes):
         if not label:
             continue
         category = row.get("normalized_primary_category", "")
-        row_tokens = tokens(" ".join([label, row.get("normalized_subcategory", ""), row.get("normalized_definition", "")]))
+        row_tokens = tokens(
+            " ".join(
+                [
+                    label,
+                    row.get("normalized_subcategory", ""),
+                    row.get("normalized_definition", ""),
+                ]
+            )
+        )
         if not row_tokens:
             continue
         token_index = attr_token_index_by_category.get(category, {})
@@ -441,12 +486,18 @@ def generate_extended_mapping_candidates(attributes):
             if not inter:
                 continue
             jaccard = len(inter) / len(row_tokens | attr["_tokens"])
-            containment = max(len(inter) / len(row_tokens), len(inter) / len(attr["_tokens"]))
-            seq = SequenceMatcher(None, label.lower(), attr["canonical_label"].lower()).ratio()
+            containment = max(
+                len(inter) / len(row_tokens), len(inter) / len(attr["_tokens"])
+            )
+            seq = SequenceMatcher(
+                None, label.lower(), attr["canonical_label"].lower()
+            ).ratio()
             score = max(jaccard, containment, seq)
             if score >= 0.58:
                 scored.append((score, len(inter), attr))
-        for score, shared, attr in sorted(scored, key=lambda x: (x[0], x[1]), reverse=True)[:3]:
+        for score, shared, attr in sorted(
+            scored, key=lambda x: (x[0], x[1]), reverse=True
+        )[:3]:
             candidates.append(
                 {
                     "mapping_candidate_id": f"map_{slugify(row['candidate_id'], 52)}__{slugify(attr['canonical_attribute_id'], 52)}",
@@ -457,15 +508,20 @@ def generate_extended_mapping_candidates(attributes):
                     "canonical_attribute_id": attr["canonical_attribute_id"],
                     "canonical_label": attr["canonical_label"],
                     "canonical_category": attr["final_primary_category"],
-                "heuristic_score": round(score, 4),
-                    "proposed_mapping_weight": proposed_edge_weight("possible_duplicate", score),
+                    "heuristic_score": round(score, 4),
+                    "proposed_mapping_weight": proposed_edge_weight(
+                        "possible_duplicate", score
+                    ),
                     "weight_basis": "candidate-to-canonical mapping similarity; replace with LLM confidence after adjudication",
                     "shared_token_count": shared,
                     "llm_status": "needs_llm_mapping_adjudication",
                 }
             )
 
-    candidates.sort(key=lambda r: (float(r["heuristic_score"]), int(r["shared_token_count"])), reverse=True)
+    candidates.sort(
+        key=lambda r: (float(r["heuristic_score"]), int(r["shared_token_count"])),
+        reverse=True,
+    )
     return candidates[:MAX_EXTENDED_MAPPING_CANDIDATES]
 
 
@@ -490,7 +546,9 @@ def build_graph_nodes(attributes):
             }
         )
 
-    subcats = Counter((a["final_primary_category"], a["final_subcategory"]) for a in attributes)
+    subcats = Counter(
+        (a["final_primary_category"], a["final_subcategory"]) for a in attributes
+    )
     for (category, subcategory), count in sorted(subcats.items()):
         nodes.append(
             {
@@ -531,7 +589,16 @@ def build_graph_edges(attributes):
     edges = []
     seen = set()
 
-    def add_edge(source, target, relation, status, confidence="", reason="", weight=None, weight_basis=""):
+    def add_edge(
+        source,
+        target,
+        relation,
+        status,
+        confidence="",
+        reason="",
+        weight=None,
+        weight_basis="",
+    ):
         key = (source, target, relation)
         if key in seen:
             return
@@ -552,7 +619,9 @@ def build_graph_edges(attributes):
             }
         )
 
-    subcat_counts = Counter((a["final_primary_category"], a["final_subcategory"]) for a in attributes)
+    subcat_counts = Counter(
+        (a["final_primary_category"], a["final_subcategory"]) for a in attributes
+    )
     for category, subcategory in sorted(subcat_counts):
         add_edge(
             f"cat::{slugify(category)}",
@@ -561,7 +630,10 @@ def build_graph_edges(attributes):
             "schema_edge",
             "1.0",
             "category hierarchy",
-            weight=round(min(2.5, 0.4 + math.log1p(subcat_counts[(category, subcategory)]) / 3), 4),
+            weight=round(
+                min(2.5, 0.4 + math.log1p(subcat_counts[(category, subcategory)]) / 3),
+                4,
+            ),
             weight_basis="category-subcategory structural edge, log scaled by subcategory size",
         )
     for attr in attributes:
@@ -626,7 +698,9 @@ def write_graphml(path, nodes, edges):
         node_id = html.escape(node["node_id"], quote=True)
         lines.append(f'    <node id="{node_id}">')
         for key in ["label", "node_type", "category", "node_weight"]:
-            lines.append(f'      <data key="{key}">{html.escape(str(node.get(key, "")))}</data>')
+            lines.append(
+                f'      <data key="{key}">{html.escape(str(node.get(key, "")))}</data>'
+            )
         lines.append("    </node>")
     for edge in edges:
         source = html.escape(edge["source_node_id"], quote=True)
@@ -634,7 +708,9 @@ def write_graphml(path, nodes, edges):
         edge_id = html.escape(edge["edge_id"], quote=True)
         lines.append(f'    <edge id="{edge_id}" source="{source}" target="{target}">')
         for key in ["relation_type", "edge_status", "edge_weight", "label"]:
-            value = edge.get("relation_type", "") if key == "label" else edge.get(key, "")
+            value = (
+                edge.get("relation_type", "") if key == "label" else edge.get(key, "")
+            )
             lines.append(f'      <data key="{key}">{html.escape(str(value))}</data>')
         lines.append("    </edge>")
     lines += ["  </graph>", "</graphml>"]
@@ -695,8 +771,12 @@ The seed graph contains category/subcategory membership edges and conservative r
     (OUT / "llm_adjudication_instructions.md").write_text(text, encoding="utf-8")
 
 
-def write_report(attributes, pair_candidates, mapping_candidates, graph_nodes, graph_edges):
-    relation_counts = Counter(p["heuristic_relation_candidate"] for p in pair_candidates)
+def write_report(
+    attributes, pair_candidates, mapping_candidates, graph_nodes, graph_edges
+):
+    relation_counts = Counter(
+        p["heuristic_relation_candidate"] for p in pair_candidates
+    )
     category_counts = Counter(a["final_primary_category"] for a in attributes)
     report = [
         "# Step 4 LLM Graph Preparation Report",
@@ -724,7 +804,9 @@ def write_report(attributes, pair_candidates, mapping_candidates, graph_nodes, g
         "No external LLM API key was available in the environment, so this step generated LLM-ready prompts and a graph seed instead of claiming completed LLM adjudication.",
         "Run the prompts through an LLM, then append confirmed relation outputs to the graph edge table.",
     ]
-    (OUT / "step4_llm_graph_report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    (OUT / "step4_llm_graph_report.md").write_text(
+        "\n".join(report) + "\n", encoding="utf-8"
+    )
 
 
 def main():
@@ -736,7 +818,10 @@ def main():
 
     write_csv(OUT / "llm_pair_adjudication_candidates.csv", pair_candidates)
     write_jsonl(OUT / "llm_pair_adjudication_candidates.jsonl", pair_candidates)
-    write_jsonl(OUT / "llm_pair_adjudication_prompts.jsonl", [llm_pair_prompt(row) for row in pair_candidates])
+    write_jsonl(
+        OUT / "llm_pair_adjudication_prompts.jsonl",
+        [llm_pair_prompt(row) for row in pair_candidates],
+    )
 
     write_csv(OUT / "extended_mapping_candidates_for_llm.csv", mapping_candidates)
     write_jsonl(OUT / "extended_mapping_candidates_for_llm.jsonl", mapping_candidates)
@@ -757,9 +842,13 @@ def main():
 
     write_csv(OUT / "graph_nodes.csv", graph_nodes)
     write_csv(OUT / "graph_edges_seed.csv", graph_edges)
-    write_graphml(OUT / "persona_attribute_graph_seed.graphml", graph_nodes, graph_edges)
+    write_graphml(
+        OUT / "persona_attribute_graph_seed.graphml", graph_nodes, graph_edges
+    )
     write_instructions(len(pair_candidates), len(mapping_candidates))
-    write_report(attributes, pair_candidates, mapping_candidates, graph_nodes, graph_edges)
+    write_report(
+        attributes, pair_candidates, mapping_candidates, graph_nodes, graph_edges
+    )
 
     print(
         json.dumps(

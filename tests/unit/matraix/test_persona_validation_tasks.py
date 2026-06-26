@@ -7,7 +7,11 @@ import pytest
 import toml
 from harbor.models.task.config import TaskConfig
 
-from matraix.task_catalog import EXAMPLE_TASK_METADATA, build_persona_task_toml_dict, load_grounding_toml
+from matraix.task_catalog import (
+    EXAMPLE_TASK_METADATA,
+    build_persona_task_toml_dict,
+    load_grounding_toml,
+)
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 PERSONA_TASKS = REPO_ROOT / "persona" / "tasks"
@@ -16,7 +20,9 @@ DIMENSIONS_JSON = REPO_ROOT / "persona" / "dimensions.json"
 
 def _persona_task_tomls() -> list[Path]:
     return sorted(
-        p for p in PERSONA_TASKS.glob("*/task.toml") if not p.parent.name.startswith("_")
+        p
+        for p in PERSONA_TASKS.glob("*/task.toml")
+        if not p.parent.name.startswith("_")
     )
 
 

@@ -34,12 +34,16 @@ def select_personas(
             repo_root=repo_root,
         )
     else:
-        total = int(sample_size if sample_size is not None else sample_size_per_value_group)
+        total = int(
+            sample_size if sample_size is not None else sample_size_per_value_group
+        )
         chosen = sample_personas(matched, sample_size=total, seed=seed)
     return matched, chosen
 
 
-def build_application_job_config(spec: dict[str, Any], *, repo_root: Path) -> dict[str, Any]:
+def build_application_job_config(
+    spec: dict[str, Any], *, repo_root: Path
+) -> dict[str, Any]:
     pool_dir = repo_root / spec["persona_pool"]
     per_value_group = int(spec.get("sample_size_per_value_group", 1))
     sample_size_total = spec.get("sample_size")

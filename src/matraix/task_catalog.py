@@ -186,7 +186,9 @@ def application_harbor_name(dirname: str) -> str:
     return f"matraix/application-{_example_slug(dirname)}"
 
 
-def persona_bench_harbor_name(dirname: str, *, bench_dim_index: int | None = None) -> str:
+def persona_bench_harbor_name(
+    dirname: str, *, bench_dim_index: int | None = None
+) -> str:
     """Harbor registry name for a persona/tasks/<dirname> folder."""
     slug = _example_slug(dirname)
     if bench_dim_index is not None:
@@ -231,9 +233,7 @@ def build_persona_task_toml_dict(dirname: str, *, difficulty: str = "easy") -> d
         "version": "1.0",
         "artifacts": ["/app/output"],
         "task": {
-            "name": persona_bench_harbor_name(
-                dirname, bench_dim_index=bench_dim_index
-            )
+            "name": persona_bench_harbor_name(dirname, bench_dim_index=bench_dim_index)
         },
         "metadata": {"difficulty": difficulty},
         "verifier": {"timeout_sec": 120.0},
@@ -306,7 +306,9 @@ def grounding_toml_path(task_path: str, *, repo_root: Path | None = None) -> Pat
     return resolve_task_dir(task_path, repo_root=repo_root) / "grounding.toml"
 
 
-def load_grounding_toml(task_path: str, *, repo_root: Path | None = None) -> dict[str, object] | None:
+def load_grounding_toml(
+    task_path: str, *, repo_root: Path | None = None
+) -> dict[str, object] | None:
     """Load ``grounding.toml`` from a persona bench task directory, if present."""
     path = grounding_toml_path(task_path, repo_root=repo_root)
     if not path.is_file():
@@ -367,4 +369,3 @@ def confounder_values_from_grounding(
 def probe_dimension_from_grounding(grounding: dict[str, object]) -> str | None:
     probe = grounding.get("probe_dimension")
     return str(probe) if probe else None
-

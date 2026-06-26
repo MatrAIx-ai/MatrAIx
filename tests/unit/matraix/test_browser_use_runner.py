@@ -18,7 +18,9 @@ def test_promote_browser_use_outputs_copies_sandbox_files(tmp_path, monkeypatch)
     )
     data_dir = tmp_path / "output" / "browseruse_agent_data"
     data_dir.mkdir(parents=True)
-    (data_dir / "book_interest.json").write_text('{"interested": true}\n', encoding="utf-8")
+    (data_dir / "book_interest.json").write_text(
+        '{"interested": true}\n', encoding="utf-8"
+    )
 
     agent = SimpleNamespace(file_system=SimpleNamespace(get_dir=lambda: data_dir))
     promoted = promote_browser_use_outputs(agent)
@@ -61,7 +63,9 @@ def _make_history_item(
             action=actions,
         ),
         result=results,
-        state=SimpleNamespace(screenshot_path=str(screenshot_path) if screenshot_path else None),
+        state=SimpleNamespace(
+            screenshot_path=str(screenshot_path) if screenshot_path else None
+        ),
         metadata=SimpleNamespace(step_start_time=1_700_000_000.0),
     )
 

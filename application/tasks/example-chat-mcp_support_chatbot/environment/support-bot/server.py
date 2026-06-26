@@ -22,7 +22,9 @@ def _bot_reply(customer_message: str) -> str:
     text = customer_message.lower()
 
     if re.search(r"\b4521\b", text):
-        if any(word in text for word in ("refund", "replace", "replacement", "money back")):
+        if any(
+            word in text for word in ("refund", "replace", "replacement", "money back")
+        ):
             return (
                 f"I understand your frustration about order #{_ORDER_ID}. "
                 f"{_ORDER_STATUS} I can't authorize a refund or replacement until "
@@ -41,7 +43,10 @@ def _bot_reply(customer_message: str) -> str:
             "status first. Could you share your order number so I can look it up?"
         )
 
-    if any(word in text for word in ("order", "package", "delivery", "arrive", "late", "shipped")):
+    if any(
+        word in text
+        for word in ("order", "package", "delivery", "arrive", "late", "shipped")
+    ):
         return (
             "I'm sorry your delivery is delayed. Could you share your order number "
             "so I can check the latest tracking status?"

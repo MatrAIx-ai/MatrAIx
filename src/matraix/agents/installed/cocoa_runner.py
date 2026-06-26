@@ -304,18 +304,12 @@ def cocoa_to_atif(
                 func = {}
 
             trace_entry = (
-                execution_trace[trace_idx]
-                if trace_idx < len(execution_trace)
-                else {}
+                execution_trace[trace_idx] if trace_idx < len(execution_trace) else {}
             )
             trace_action = trace_entry.get("action")
             trace_action = trace_action if isinstance(trace_action, dict) else {}
 
-            name = (
-                trace_action.get("action_type")
-                or func.get("name")
-                or "unknown"
-            )
+            name = trace_action.get("action_type") or func.get("name") or "unknown"
             arguments = _action_arguments(trace_action)
             if not arguments:
                 arguments = _parse_tool_arguments(func.get("arguments"))
@@ -422,9 +416,9 @@ def main() -> int:
     _prepare_cocoa()
 
     port = int(os.environ.get("COCOA_SANDBOX_PORT", "8080"))
-    base_url = os.environ.get(
-        "COCOA_SANDBOX_URL", f"http://localhost:{port}"
-    ).rstrip("/")
+    base_url = os.environ.get("COCOA_SANDBOX_URL", f"http://localhost:{port}").rstrip(
+        "/"
+    )
 
     bare_model = args.model.split("/", 1)[-1]
     config = {

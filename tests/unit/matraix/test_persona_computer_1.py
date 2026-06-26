@@ -38,11 +38,15 @@ def personas_0042(repo_root: Path) -> Path:
 
 
 def test_resolve_use_computer_macos() -> None:
-    assert resolve_cua_backend_kind(_use_computer_stub("macos")) == "use_computer_desktop"
+    assert (
+        resolve_cua_backend_kind(_use_computer_stub("macos")) == "use_computer_desktop"
+    )
 
 
 def test_resolve_use_computer_ubuntu() -> None:
-    assert resolve_cua_backend_kind(_use_computer_stub("ubuntu")) == "use_computer_desktop"
+    assert (
+        resolve_cua_backend_kind(_use_computer_stub("ubuntu")) == "use_computer_desktop"
+    )
 
 
 def test_resolve_use_computer_ios() -> None:
@@ -54,10 +58,7 @@ def test_resolve_docker_defaults_to_computer1() -> None:
 
 
 def test_resolve_override_ios() -> None:
-    assert (
-        resolve_cua_backend_kind(_FakeDockerEnvironment(), override="ios")
-        == "ios"
-    )
+    assert resolve_cua_backend_kind(_FakeDockerEnvironment(), override="ios") == "ios"
 
 
 def test_persona_computer_1_requires_persona_path(tmp_path: Path) -> None:
@@ -123,13 +124,16 @@ async def test_persona_computer_1_materializes_book_interest_submission(
     mock_delegate.run = AsyncMock()
     mock_delegate.version = MagicMock(return_value="1.0.0")
 
-    with patch(
-        "matraix.agents.persona.computer_1._build_cua_delegate",
-        return_value=mock_delegate,
-    ), patch(
-        "matraix.agents.persona.computer_1.materialize_cua_submission_profile",
-        new=AsyncMock(return_value=True),
-    ) as materialize:
+    with (
+        patch(
+            "matraix.agents.persona.computer_1._build_cua_delegate",
+            return_value=mock_delegate,
+        ),
+        patch(
+            "matraix.agents.persona.computer_1.materialize_cua_submission_profile",
+            new=AsyncMock(return_value=True),
+        ) as materialize,
+    ):
         await agent.run("Browse books.", environment, MagicMock())
 
     materialize.assert_awaited_once_with(

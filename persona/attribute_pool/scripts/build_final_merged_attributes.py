@@ -94,7 +94,9 @@ class UnionFind:
 def stable_cluster_id(member_ids):
     if len(member_ids) == 1:
         return member_ids[0]
-    digest = hashlib.sha1("\n".join(sorted(member_ids)).encode("utf-8")).hexdigest()[:12]
+    digest = hashlib.sha1("\n".join(sorted(member_ids)).encode("utf-8")).hexdigest()[
+        :12
+    ]
     return f"merged_attr_{digest}"
 
 
@@ -112,7 +114,11 @@ def merge_json_lists(rows, column):
     seen = set()
     for row in rows:
         for item in parse_json_list(row.get(column, "")):
-            key = json.dumps(item, ensure_ascii=False, sort_keys=True) if isinstance(item, (dict, list)) else str(item)
+            key = (
+                json.dumps(item, ensure_ascii=False, sort_keys=True)
+                if isinstance(item, (dict, list))
+                else str(item)
+            )
             if key not in seen:
                 values.append(item)
                 seen.add(key)
@@ -171,12 +177,18 @@ def build_final_attributes(attributes, merges):
                 aliases.append(label)
                 seen_aliases.add(key)
 
-        candidate_count = sum(as_int(row.get("candidate_count")) for row in member_attrs)
+        candidate_count = sum(
+            as_int(row.get("candidate_count")) for row in member_attrs
+        )
         source_map = merge_json_count_maps(member_attrs, "sources_json")
         source_family_map = merge_json_count_maps(member_attrs, "source_families_json")
         source_count = len(source_map)
-        quality_score = max(as_float(row.get("max_normalized_quality_score")) for row in member_attrs)
-        needs_review = any(str(row.get("needs_review", "")).lower() == "true" for row in member_attrs)
+        quality_score = max(
+            as_float(row.get("max_normalized_quality_score")) for row in member_attrs
+        )
+        needs_review = any(
+            str(row.get("needs_review", "")).lower() == "true" for row in member_attrs
+        )
         if len(member_ids) > 1:
             needs_review = False
 
@@ -184,17 +196,26 @@ def build_final_attributes(attributes, merges):
         final_row.update(
             {
                 "final_attribute_id": final_id,
-                "representative_canonical_attribute_id": representative["canonical_attribute_id"],
+                "representative_canonical_attribute_id": representative[
+                    "canonical_attribute_id"
+                ],
                 "merged_member_count": len(member_ids),
-                "merged_member_ids_json": json.dumps(sorted(member_ids), ensure_ascii=False),
+                "merged_member_ids_json": json.dumps(
+                    sorted(member_ids), ensure_ascii=False
+                ),
                 "candidate_count": candidate_count,
                 "source_count": source_count,
                 "max_normalized_quality_score": quality_score,
                 "merge_status": "llm_merged" if len(member_ids) > 1 else "singleton",
                 "sources_json": json.dumps(source_map, ensure_ascii=False),
-                "source_families_json": json.dumps(source_family_map, ensure_ascii=False),
+                "source_families_json": json.dumps(
+                    source_family_map, ensure_ascii=False
+                ),
                 "aliases_json": json.dumps(aliases, ensure_ascii=False),
-                "candidate_ids_json": json.dumps(merge_json_lists(member_attrs, "candidate_ids_json"), ensure_ascii=False),
+                "candidate_ids_json": json.dumps(
+                    merge_json_lists(member_attrs, "candidate_ids_json"),
+                    ensure_ascii=False,
+                ),
                 "needs_review": str(needs_review).lower(),
             }
         )
@@ -208,10 +229,14 @@ def build_final_attributes(attributes, merges):
                     "final_attribute_id": final_id,
                     "member_attribute_id": attr_id,
                     "member_label": member.get("canonical_label", ""),
-                    "is_representative": str(attr_id == representative["canonical_attribute_id"]).lower(),
+                    "is_representative": str(
+                        attr_id == representative["canonical_attribute_id"]
+                    ).lower(),
                     "member_rank": rank,
                     "member_source_count": member.get("source_count", ""),
-                    "member_quality_score": member.get("max_normalized_quality_score", ""),
+                    "member_quality_score": member.get(
+                        "max_normalized_quality_score", ""
+                    ),
                 }
             )
 
@@ -229,7 +254,9 @@ def build_final_graph_edges(graph_edges, attr_to_final, final_by_id):
         key = tuple(sorted([a, b]) + [relation])
         current = grouped.get(key)
         confidence = as_float(row.get("llm_confidence"))
-        weight = as_float(row.get("edge_weight")) or as_float(row.get("final_merge_confidence"))
+        weight = as_float(row.get("edge_weight")) or as_float(
+            row.get("final_merge_confidence")
+        )
         if current is None:
             grouped[key] = {
                 "source_final_attribute_id": a,
@@ -240,15 +267,25 @@ def build_final_graph_edges(graph_edges, attr_to_final, final_by_id):
                 "edge_weight": round(weight, 4),
                 "max_llm_confidence": confidence,
                 "supporting_pair_count": 1,
-                "supporting_pair_ids_json": json.dumps([row.get("pair_id", "")], ensure_ascii=False),
+                "supporting_pair_ids_json": json.dumps(
+                    [row.get("pair_id", "")], ensure_ascii=False
+                ),
             }
         else:
-            current["edge_weight"] = max(as_float(current.get("edge_weight")), round(weight, 4))
-            current["max_llm_confidence"] = max(as_float(current.get("max_llm_confidence")), confidence)
-            current["supporting_pair_count"] = as_int(current.get("supporting_pair_count")) + 1
+            current["edge_weight"] = max(
+                as_float(current.get("edge_weight")), round(weight, 4)
+            )
+            current["max_llm_confidence"] = max(
+                as_float(current.get("max_llm_confidence")), confidence
+            )
+            current["supporting_pair_count"] = (
+                as_int(current.get("supporting_pair_count")) + 1
+            )
             pair_ids = parse_json_list(current.get("supporting_pair_ids_json"))
             pair_ids.append(row.get("pair_id", ""))
-            current["supporting_pair_ids_json"] = json.dumps(pair_ids, ensure_ascii=False)
+            current["supporting_pair_ids_json"] = json.dumps(
+                pair_ids, ensure_ascii=False
+            )
     return list(grouped.values())
 
 
@@ -257,7 +294,9 @@ def main():
     merges = read_csv(MERGES_CSV)
     graph_edges = read_csv(GRAPH_EDGES_CSV)
 
-    final_rows, member_rows, merge_edges, attr_to_final = build_final_attributes(attributes, merges)
+    final_rows, member_rows, merge_edges, attr_to_final = build_final_attributes(
+        attributes, merges
+    )
     final_by_id = {row["final_attribute_id"]: row for row in final_rows}
     final_graph_edges = build_final_graph_edges(graph_edges, attr_to_final, final_by_id)
 
@@ -279,14 +318,20 @@ def main():
         "",
         "Only Step 5 pairs in `llm_confirmed_merges.csv` are collapsed. Correlated, inverse, broader/narrower, conflict, review, and rejected pairs remain separate attributes and are represented as graph edges or review rows.",
     ]
-    (OUT / "step6_final_merged_report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    (OUT / "step6_final_merged_report.md").write_text(
+        "\n".join(report) + "\n", encoding="utf-8"
+    )
     print(
         json.dumps(
             {
                 "input_attributes": len(attributes),
                 "llm_merge_edges": len(merges),
                 "final_merged_attributes": len(final_rows),
-                "merged_clusters": sum(1 for row in final_rows if as_int(row.get("merged_member_count")) > 1),
+                "merged_clusters": sum(
+                    1
+                    for row in final_rows
+                    if as_int(row.get("merged_member_count")) > 1
+                ),
                 "final_graph_edges": len(final_graph_edges),
                 "output_dir": str(OUT),
             },

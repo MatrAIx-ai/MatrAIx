@@ -37,11 +37,16 @@ def resolve_cua_backend_kind(
             "ubuntu",
         }:
             return "use_computer_desktop"
-        if normalized in {"docker", "docker_computer1", "computer1", "computer_1", "linux"}:
+        if normalized in {
+            "docker",
+            "docker_computer1",
+            "computer1",
+            "computer_1",
+            "linux",
+        }:
             return "docker_computer1"
         raise ValueError(
-            f"Unknown cua_backend {override!r}; "
-            "use ios, use-computer, or docker."
+            f"Unknown cua_backend {override!r}; use ios, use-computer, or docker."
         )
 
     from harbor.environments.use_computer import UseComputerEnvironment

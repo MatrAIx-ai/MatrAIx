@@ -114,14 +114,8 @@ def _stratum_match(dimensions: dict[str, str], stratum: dict[str, str]) -> bool:
     return all(dimensions.get(key) == value for key, value in stratum.items())
 
 
-def _count_stratum(
-    personas: list[dict[str, Any]], stratum: dict[str, str]
-) -> int:
-    return sum(
-        1
-        for entry in personas
-        if _stratum_match(entry["dimensions"], stratum)
-    )
+def _count_stratum(personas: list[dict[str, Any]], stratum: dict[str, str]) -> int:
+    return sum(1 for entry in personas if _stratum_match(entry["dimensions"], stratum))
 
 
 def top_up_strata(

@@ -14,7 +14,9 @@ _JSON_FENCE_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
 TERMINAL_COMPUTER_ACTION_TYPES = frozenset({"done", "answer", "terminate"})
 
 BOOK_INTEREST_REQUIRED_KEYS = frozenset({"title", "price_gbp", "interested", "reason"})
-IOS_DECISION_REQUIRED_KEYS = frozenset({"keep_notifications_on", "app_reviewed", "reason"})
+IOS_DECISION_REQUIRED_KEYS = frozenset(
+    {"keep_notifications_on", "app_reviewed", "reason"}
+)
 
 
 def parse_json_payload(raw: str) -> dict[str, Any] | None:
@@ -103,7 +105,9 @@ def _extract_payload_from_trajectory(
     return None
 
 
-def extract_ios_decision_from_trajectory(trajectory: dict[str, Any]) -> dict[str, Any] | None:
+def extract_ios_decision_from_trajectory(
+    trajectory: dict[str, Any],
+) -> dict[str, Any] | None:
     """Return the last valid iOS notification decision object from a trajectory."""
 
     def _validate(data: dict[str, Any]) -> bool:
@@ -116,7 +120,9 @@ def extract_ios_decision_from_trajectory(trajectory: dict[str, Any]) -> dict[str
     )
 
 
-def extract_book_interest_from_trajectory(trajectory: dict[str, Any]) -> dict[str, Any] | None:
+def extract_book_interest_from_trajectory(
+    trajectory: dict[str, Any],
+) -> dict[str, Any] | None:
     """Return the last valid book-interest payload from a Docker CUA trajectory."""
 
     def _validate(data: dict[str, Any]) -> bool:

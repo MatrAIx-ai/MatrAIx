@@ -60,9 +60,7 @@ class PersonaMixin:
             self._persona_template_path,
             PERSONA_INSTRUCTION_TEMPLATE,
         )
-        return render_persona_template(
-            template, self._persona, instruction=instruction
-        )
+        return render_persona_template(template, self._persona, instruction=instruction)
 
     def _write_persona_meta(self) -> None:
         logs_dir: Path = self.logs_dir  # type: ignore[attr-defined]

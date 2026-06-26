@@ -36,7 +36,9 @@ def test_all_probe_questions_scored() -> None:
 def test_oracle_matrix_is_bijective_per_question() -> None:
     for qid in _PROBE_QUESTION_IDS:
         choices = {path[qid] for path in _ORACLE_PATHS.values()}
-        assert len(choices) == len(_POSTURES), f"{qid} oracle choices collide: {choices}"
+        assert len(choices) == len(_POSTURES), (
+            f"{qid} oracle choices collide: {choices}"
+        )
         assert choices == set(_CONTINUED_CHOICES_BY_QUESTION[qid])
 
 
@@ -75,7 +77,9 @@ def test_premium_choice_counterfactual_for_cost_sensitive() -> None:
 def test_single_miss_passes_at_eighty_percent() -> None:
     path = dict(_ORACLE_PATHS["Value-driven"])
     path["q2"] = "q2_monthly_cancel_anytime"
-    counterfactual, matched, rationale, _ = _evaluate("Value-driven", _survey_from_path(path))
+    counterfactual, matched, rationale, _ = _evaluate(
+        "Value-driven", _survey_from_path(path)
+    )
     assert counterfactual is False
     assert matched == []
     assert "6/7" in rationale
@@ -119,6 +123,8 @@ def test_free_only_counterfactual_for_premium_seeking() -> None:
     path = dict(_ORACLE_PATHS["Premium-seeking"])
     path["q0"] = "q0_use_free_wont_pay"
     path["q1"] = "q1_reject_both_tiers"
-    counterfactual, matched, _, _ = _evaluate("Premium-seeking", _survey_from_path(path))
+    counterfactual, matched, _, _ = _evaluate(
+        "Premium-seeking", _survey_from_path(path)
+    )
     assert counterfactual is True
     assert "q0_use_free_wont_pay" in matched

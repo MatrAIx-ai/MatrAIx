@@ -22,9 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 
 def _task_dirs(root: Path) -> list[Path]:
     return sorted(
-        p
-        for p in root.iterdir()
-        if p.is_dir() and not p.name.startswith("_")
+        p for p in root.iterdir() if p.is_dir() and not p.name.startswith("_")
     )
 
 
