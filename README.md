@@ -106,10 +106,9 @@ jobs/                    # Run outputs (example runs checked in for harbor view)
 # —— Persona team ——
 persona/
 ├── dimensions.json
-├── datasets/            # Persona YAML pools (bench-dev-2000, …)
-├── tasks/               # Persona-adherence Harbor tasks
-├── scripts/
-└── reporting/
+├── datasets/            # [Under Develop] Persona YAML pools (bench-dev-2000, …)
+├── tasks/                 # [Under Develop] Persona-adherence Harbor tasks
+└── reporting/          # [Under Develop]
 
 # —— Application team ——
 application/
