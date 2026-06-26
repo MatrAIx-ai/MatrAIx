@@ -1,0 +1,38 @@
+# Dockerfile.agent — a social-media agent that carries its OWN LLM (vLLM) inside.
+#
+# Built FROM the vLLM OpenAI image so each container can serve its persona's
+# private model locally, then run the OASIS agent loop against it + the shared
+# platform on the pod host. Built once, run N times (one per persona) by the
+# orchestrator.
+#
+# Build context = repo root (so personas/ and environments/ are available):
+#   docker build --pid=host -f environments/oasis/greenland/Dockerfile.agent \
+#     -t oasis-agent:latest .
+FROM vllm/vllm-openai:latest
+
+WORKDIR /app
+
+# curl for the in-container vLLM health probe; requests/pyyaml for the agent loop.
+RUN pip install --no-cache-dir requests pyyaml \
+    && (command -v curl >/dev/null 2>&1 || (apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*))
+
+# OASIS agent code + personas.
+COPY environments/oasis/ /app/environments/oasis/
+COPY personas/ /app/personas/
+
+COPY environments/oasis/greenland/agent_entrypoint.sh /app/agent_entrypoint.sh
+RUN chmod +x /app/agent_entrypoint.sh
+
+ENV PYTHONPATH=/app
+ENV PLATFORM_URL=http://host.docker.internal:8000
+ENV LLM_MODEL=Qwen/Qwen3-4B
+ENV VLLM_PORT=8100
+ENV GPU_MEM_UTIL=0.40
+ENV VLLM_MAX_LEN=4096
+ENV NUM_STEPS=20
+ENV AGENT_ID=0
+
+# The base image sets its own ENTRYPOINT (the vLLM server); override it so our
+# script is what runs, and it starts vLLM itself.
+ENTRYPOINT []
+CMD ["/app/agent_entrypoint.sh"]

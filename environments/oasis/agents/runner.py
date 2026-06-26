@@ -34,6 +34,12 @@ class AgentConfig:
         "quote_post", "create_comment", "follow", "do_nothing",
     ])
     max_actions_per_step: int = 3
+    # When set (>=0), the agent is one of a pre-seeded cluster: the orchestrator
+    # already signed everyone up in index order, so this agent resolves its
+    # user_id by its agent_id instead of signing up again (which would mint a
+    # different user_id and break graph/edge alignment). Used by the Greenland
+    # multi-container run; ignored (left None) for the standalone/local path.
+    cluster_agent_id: int | None = None
 
 
 @dataclass
@@ -81,6 +87,14 @@ class AgentRunner:
 
         self._system_prompt = build_system_prompt(self._persona)
         self._tools = get_tools_for_actions(self._config.available_actions)
+
+        if self._config.cluster_agent_id is not None:
+            # Pre-seeded cluster mode: orchestrator already registered every user
+            # in index order (agent_id=i -> user_id=i+1). Resolve our user_id by
+            # agent_id so it matches the graph edges, instead of re-signing-up.
+            state = self._platform.get_state(self._config.cluster_agent_id)
+            self._user_id = state["user_id"]
+            return self._user_id
 
         result = self._platform.signup(
             agent_id=hash(self._persona.persona_id) % 1000000,

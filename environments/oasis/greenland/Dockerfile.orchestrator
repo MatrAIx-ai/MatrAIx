@@ -1,0 +1,27 @@
+# Dockerfile.orchestrator — the controller container that manages agent dockers.
+#
+# Lightweight (no GPU, no LLM). It holds the simulation logic + the docker CLI,
+# and talks to the rootless Docker daemon through the socket mounted in at run
+# time. It builds the social graph, seeds the shared platform, then `docker run`s
+# one agent container per persona.
+#
+# Build context = repo root:
+#   docker build --pid=host -f environments/oasis/greenland/Dockerfile.orchestrator \
+#     -t oasis-orchestrator:latest .
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# docker CLI (to launch sibling agent containers via the mounted socket) + curl.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends docker.io curl ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir requests pyyaml
+
+COPY environments/oasis/ /app/environments/oasis/
+COPY personas/ /app/personas/
+
+ENV PYTHONPATH=/app
+
+ENTRYPOINT ["python", "/app/environments/oasis/greenland/orchestrator_cluster.py"]

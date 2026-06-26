@@ -17,6 +17,13 @@ logger = logging.getLogger("agent")
 
 
 def main():
+    # CLUSTER_AGENT_ID set => pre-seeded cluster mode (orchestrator already
+    # registered users in index order; resolve user_id by agent_id). Only the
+    # Greenland cluster orchestrator sets this; the docker-compose path leaves it
+    # unset so those agents self-sign-up as before (AGENT_ID is only a log label).
+    _cluster_id_env = os.environ.get("CLUSTER_AGENT_ID", "")
+    cluster_agent_id = int(_cluster_id_env) if _cluster_id_env != "" else None
+
     config = AgentConfig(
         persona_path=os.environ.get("PERSONA_PATH", ""),
         platform_url=os.environ.get("PLATFORM_URL", "http://localhost:8000"),
@@ -26,6 +33,7 @@ def main():
         llm_temperature=float(os.environ.get("LLM_TEMPERATURE", "0.7")),
         llm_max_tokens=int(os.environ.get("LLM_MAX_TOKENS", "512")),
         available_actions=os.environ.get("AVAILABLE_ACTIONS", "create_post,like_post,repost,follow,do_nothing").split(","),
+        cluster_agent_id=cluster_agent_id,
     )
 
     num_steps = int(os.environ.get("NUM_STEPS", "5"))
