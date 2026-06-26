@@ -38,7 +38,7 @@ Questions: [Discord](https://discord.gg/vruP88PTZ).
 | | Dataset curation | Effort |
 | | Dimension and persona schema | Effort |
 | | Persona attributes counterfactual filter | Effort |
-| | Persona bench task design (persona grounding) | Task count & quality |
+| | Persona bench task design (persona grounding) | Effort |
 | | Persona bench task curation | Task count & quality |
 | **Environment** | Environment infrastructure | Effort |
 | | Persona task examples and pipeline | Task count & quality |
