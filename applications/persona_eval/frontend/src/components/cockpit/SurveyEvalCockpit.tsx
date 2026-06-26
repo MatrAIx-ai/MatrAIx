@@ -5,7 +5,8 @@
  * (the same centered shell as the canonical chatbot cockpit: header +
  * application-type switch + pipeline strip + run-config card + target-persona
  * panel + Run-eval CTA), with the Survey-specific body (an instrument picker +
- * an "Instrument preview" panel and a driver/artifacts note instead of a Harbor
+ * an "Instrument preview" panel and a driver/artifacts note instead of an
+ * environment panel.
  * environment). Once a run starts, the left column flips to the live answering /
  * results view modelled on `data-view="surveylive"` (completion progress +
  * mean-Likert summary + per-question answer cards with likert / single / multi /
@@ -77,7 +78,7 @@ function surveyStatusLine(phase: SurveyEvalRunPhase, jobPhase: string | null | u
   if (phase !== "running") return null;
   const raw = (jobPhase ?? "").toLowerCase();
   if (raw.includes("collect")) return "Saving the answers…";
-  if (raw.includes("harbor")) return "The simulated user is filling out the questionnaire…";
+  if (raw.includes("survey")) return "The simulated user is filling out the questionnaire…";
   return "Running the questionnaire…";
 }
 
@@ -443,7 +444,7 @@ function SurveyPipeline({
       ? "error"
       : phase === "done"
         ? "done"
-        : running && rawPhase.includes("harbor")
+        : running && rawPhase.includes("survey")
           ? "active"
           : running
             ? "active"
@@ -963,7 +964,7 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
   );
 }
 
-/** Right-column driver & artifacts contract note (Survey has no Harbor environment). */
+/** Right-column driver & artifacts contract note. */
 function DriverArtifactsNote() {
   return (
     <section className="rounded-md border border-outline bg-surface-lowest p-5">

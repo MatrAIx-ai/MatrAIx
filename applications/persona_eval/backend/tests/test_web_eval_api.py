@@ -17,6 +17,10 @@ class _FakeWebEvalService:
         self._screenshot_dir = screenshot_dir
         self._screenshot_dir.mkdir(parents=True, exist_ok=True)
         (self._screenshot_dir / "screenshot_ep0.webp").write_bytes(b"webp-image")
+        (self._screenshot_dir / "screenshot_001.svg").write_text(
+            "<svg xmlns='http://www.w3.org/2000/svg'></svg>",
+            encoding="utf-8",
+        )
         self._view: Dict[str, Any] = {
             "jobId": "web_fake123",
             "applicationType": "web",
@@ -112,7 +116,7 @@ class _FakeWebEvalService:
             raise KeyError(job_id)
         if "\\" in filename or "/" in filename:
             raise ValueError("invalid screenshot filename")
-        if filename != "screenshot_ep0.webp":
+        if filename not in {"screenshot_ep0.webp", "screenshot_001.svg"}:
             raise FileNotFoundError(filename)
         return self._screenshot_dir / filename
 
@@ -183,6 +187,15 @@ def test_get_web_eval_screenshot_returns_webp(client, fake_web_eval):
     assert resp.status_code == 200, resp.text
     assert resp.headers["content-type"] == "image/webp"
     assert resp.content == b"webp-image"
+
+
+def test_get_web_eval_screenshot_returns_svg(client, fake_web_eval):
+    resp = client.get(
+        "/api/web-eval/jobs/web_fake123/screenshots/screenshot_001.svg"
+    )
+    assert resp.status_code == 200, resp.text
+    assert resp.headers["content-type"] == "image/svg+xml"
+    assert resp.text.startswith("<svg")
 
 
 def test_get_web_eval_screenshot_rejects_path_traversal(client, fake_web_eval):

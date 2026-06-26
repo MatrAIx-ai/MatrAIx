@@ -1,4 +1,4 @@
-"""Async service for Harbor-backed PersonaEval survey runs."""
+"""Async service for local PersonaEval survey runs."""
 
 from __future__ import annotations
 
@@ -7,10 +7,10 @@ import uuid
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 
-from backend.service.config import harbor_persona_model
-from backend.service.harbor_survey_eval import (
-    HarborSurveyEvalConfig,
-    HarborSurveyEvalResult,
+from backend.service.config import persona_model as default_persona_model
+from backend.service.survey_types import (
+    SurveyEvalConfig,
+    SurveyEvalResult,
     SurveyInstrument,
 )
 
@@ -21,7 +21,7 @@ def _new_survey_eval_id() -> str:
     return "survey_" + uuid.uuid4().hex[:12]
 
 
-def _completion_for(result: HarborSurveyEvalResult) -> Dict[str, Any]:
+def _completion_for(result: SurveyEvalResult) -> Dict[str, Any]:
     answered_ids = {answer.question_id for answer in result.answers}
     missing = [
         question.id
@@ -38,7 +38,7 @@ def _completion_for(result: HarborSurveyEvalResult) -> Dict[str, Any]:
     }
 
 
-def survey_result_view(result: HarborSurveyEvalResult) -> Dict[str, Any]:
+def survey_result_view(result: SurveyEvalResult) -> Dict[str, Any]:
     """Return the UI/API survey artifact view.
 
     The survey artifact is the evaluation result. This view deliberately avoids
@@ -84,7 +84,7 @@ class SurveyEvalProgress:
 
 
 class SurveyEvalService:
-    """Start and poll Harbor survey runs for the PersonaEval UI."""
+    """Start and poll local survey runs for the PersonaEval UI."""
 
     def __init__(
         self,
@@ -92,7 +92,7 @@ class SurveyEvalService:
         get_persona: Callable[[str], Any],
         get_instrument: Callable[[str], SurveyInstrument],
         list_instruments: Callable[[], List[SurveyInstrument]],
-        runner: Callable[..., HarborSurveyEvalResult],
+        runner: Callable[..., SurveyEvalResult],
     ) -> None:
         self._get_persona = get_persona
         self._get_instrument = get_instrument
@@ -146,8 +146,8 @@ class SurveyEvalService:
     ) -> None:
         with _SURVEY_RUN_LOCK:
             try:
-                config = HarborSurveyEvalConfig(
-                    persona_model=persona_model or harbor_persona_model(),
+                config = SurveyEvalConfig(
+                    persona_model=persona_model or default_persona_model(),
                 )
                 with self._guard:
                     progress.status = "running"

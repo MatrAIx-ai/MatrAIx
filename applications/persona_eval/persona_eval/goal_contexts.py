@@ -3,20 +3,22 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, List
 
-_SCENARIO_DEFAULT = """You are a real user of a {domain} recommendation system.
+_SCENARIO_DEFAULT = """You are a real user of this interactive chatbot application.
+
+Application context: {domain}
 
 {sut_description}
 
 Your assigned persona (stay in character at all times):
 {persona_context}
 
-Based on your assigned persona, first decide what kind of products/items you \
-realistically want from this {domain} recommender and what constraints and \
-preferences matter most to you. Then behave like a genuine human user:
+Based on your assigned persona, first decide what realistic goal you want to \
+accomplish with this application and what constraints or preferences matter \
+most to you. Then behave like a genuine human user:
 - Do NOT reveal everything at once: share your needs gradually, as a real person \
 would, and answer the agent's follow-up questions naturally.
-- React to the agent's recommendations: if they fit your needs, say so; if not, \
-push back or refine.
+- React to the application's responses: if they fit your needs, say so; if not, \
+push back, refine, or ask for clarification.
 - Keep messages short and conversational (1-3 sentences)."""
 
 

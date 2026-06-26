@@ -1,7 +1,7 @@
 import type { PersonaEvalJobView, PersonaEvalResult, PersonaEvalPrompts } from "./types";
 
 const prompts: PersonaEvalPrompts = {
-  harborPrompt: "Harbor persona system prompt",
+  personaPrompt: "PersonaEval simulated-user system prompt",
   taskPrompt: "Application task prompt",
 };
 

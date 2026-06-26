@@ -5,7 +5,8 @@
  * (the same centered form as the canonical chatbot cockpit: header +
  * application-type switch + pipeline strip + run-config card + target-persona
  * panel + Run-eval CTA) with the Web-specific body (a website-task picker + a
- * "Website task" card and a driver/artifacts note instead of a Harbor
+ * "Website task" card and a driver/artifacts note instead of an environment
+ * panel.
  * environment). Once a run starts, the left column flips to the debrief view
  * modelled on the mockup's `data-view="runs"` web body: need-fit / ease /
  * overall-UX score tiles, the selected product, and a browser trace rendered as
@@ -75,7 +76,7 @@ function webStatusLine(phase: WebEvalRunPhase, jobPhase: string | null | undefin
   if (phase !== "running") return null;
   const raw = (jobPhase ?? "").toLowerCase();
   if (raw.includes("collect")) return "Saving the results and browser recording…";
-  if (raw.includes("harbor")) return "The simulated visitor is using the site…";
+  if (raw.includes("web")) return "The simulated visitor is using the site…";
   return "Running the website test…";
 }
 
@@ -483,7 +484,7 @@ function WebPipeline({
       ? "error"
       : phase === "done"
         ? "done"
-        : running && rawPhase.includes("harbor")
+        : running && rawPhase.includes("web")
           ? "active"
           : running
             ? "active"
@@ -937,7 +938,7 @@ function TraceDetail({ event, onClose }: { event: WebTraceEvent; onClose: () => 
   );
 }
 
-/** Right-column driver & artifacts contract note (Web has no Harbor environment). */
+/** Right-column driver & artifacts contract note. */
 function DriverArtifactsNote() {
   return (
     <section className="rounded-md border border-outline bg-surface-lowest p-5">

@@ -58,6 +58,8 @@ def test_options_knob_values_match_allowed(config_manager):
     assert [o["value"] for o in knobs["personaModel"]["options"]] == [
         "anthropic/claude-haiku-4-5",
         "anthropic/claude-sonnet-4-6",
+        "openai/gpt-4o-mini",
+        "openai/gpt-4o",
     ]
 
 
@@ -115,16 +117,16 @@ def test_options_environment_block(config_manager):
         "agent",
         "promptOwnership",
     }
-    assert env["runtime"] == "Harbor"
-    assert env["personaAgent"] == "PersonaEval task controller"
+    assert env["runtime"] == "Local direct runner"
+    assert env["personaAgent"] == "PersonaEval simulated user"
     assert env["personaModel"] == "anthropic/claude-haiku-4-5"
-    assert env["applicationApi"] == "chatbot-api sidecar"
+    assert env["applicationApi"] == "direct application adapter"
     assert env["scorer"] == "PersonaEval self-report scorer"
-    assert env["cache"] == "Docker image + model cache volumes"
+    assert env["cache"] == "local service and model caches"
     assert "application-specific" in env["ranker"]
     assert "adapter-specific" in env["resources"]
     assert "chatbot application adapter" in env["agent"]
     assert env["promptOwnership"] == {
-        "personaSystemPrompt": "Persona prompt from task runtime",
+        "personaSystemPrompt": "Persona prompt from PersonaEval",
         "taskPrompt": "Application-provided chatbot simulation prompt",
     }

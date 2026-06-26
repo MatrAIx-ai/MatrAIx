@@ -104,12 +104,18 @@ export function ComponentPipeline({
 }: ComponentPipelineProps) {
   const raw = normalizedPhase(jobPhase);
   const nodes: NodeState[] = [
-    { key: "persona", label: "Persona", icon: "face", owner: "task controller", ...personaStatus(phase, raw, hasPersona) },
+    {
+      key: "persona",
+      label: "Persona",
+      icon: "face",
+      owner: environment?.personaAgent ?? "PersonaEval simulated user",
+      ...personaStatus(phase, raw, hasPersona),
+    },
     {
       key: "chatbot",
       label: "Chatbot",
       icon: "forum",
-      owner: environment?.applicationApi ?? "chatbot-api sidecar",
+      owner: environment?.applicationApi ?? "direct application adapter",
       ...chatbotStatus(phase, raw, turnCount),
     },
     { key: "scorer", label: "Scorer", icon: "fact_check", owner: "Self-report scorer", ...scorerStatus(phase, raw, hasQuestionnaire) },

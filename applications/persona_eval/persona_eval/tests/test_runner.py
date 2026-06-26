@@ -20,6 +20,11 @@ class FakeSimulator:
         self.seen = (transcript, final_items); return self._q
 
 
+class FakeSimulatorWithPrompts(FakeSimulator):
+    def prompt_bundle(self, persona, sut):
+        return {"personaPrompt": "persona prompt", "taskPrompt": "task prompt"}
+
+
 def _persona():
     return Persona(id="p", name="Marco", summary="s", preferences=[],
                    dislikes=[], constraints=[], goal="g", communication_style="c")
@@ -70,3 +75,22 @@ def test_runner_emits_persona_feedback_phase():
                   sim, created_at="t", on_event=events.append)
     assert any(e.get("type") == "turn" for e in events)
     assert any(e.get("phase") == "persona_feedback" for e in events)
+
+
+def test_runner_emits_and_persists_prompts():
+    session = FakeSession([{"assistantMessage": "x", "recommendedItems": []}])
+    sim = FakeSimulatorWithPrompts("hi", [SimulatorTurn("done", "satisfied")], _q())
+    events = []
+    res = run_persona_eval(
+        session,
+        _persona(),
+        "desc",
+        PersonaEvalConfig(domain="game", max_turns=1),
+        sim,
+        created_at="t",
+        on_event=events.append,
+    )
+
+    assert res.prompts == {"personaPrompt": "persona prompt", "taskPrompt": "task prompt"}
+    assert res.to_dict()["prompts"] == res.prompts
+    assert events[0] == {"type": "prompts", "prompts": res.prompts}

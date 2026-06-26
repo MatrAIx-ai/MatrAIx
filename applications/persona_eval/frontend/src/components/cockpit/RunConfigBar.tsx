@@ -8,7 +8,7 @@
  * slider.
  *
  * The application adapter itself is chosen by the card picker above (the
- * cockpit), and the read-only Harbor facts live in their own right-rail panel,
+ * cockpit), and the read-only runtime facts live in their own right-rail panel,
  * so this panel is purely the editable run knobs. Knob options + their
  * descriptions come from the backend config metadata; the slider drives
  * `maxTurns`. Presentational: the parent owns the values + change callbacks.
@@ -35,7 +35,7 @@ export interface RunConfigBarProps {
   /** Selected model (engine) value. */
   engine: string;
   onEngine: (value: string) => void;
-  /** Selected Harbor persona-agent model. */
+  /** Selected simulated-user model. */
   personaModel: string;
   onPersonaModel: (value: string) => void;
   /** Selected domain. */

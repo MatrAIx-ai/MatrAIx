@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List
 
-from backend.service.harbor_web_eval import WebEvalTask
+from backend.service.web_types import WebEvalTask
 
 
 def _registry() -> Dict[str, WebEvalTask]:

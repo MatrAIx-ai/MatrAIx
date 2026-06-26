@@ -1,4 +1,4 @@
-"""Async service for Harbor-backed PersonaEval web runs."""
+"""Async service for local PersonaEval web runs."""
 
 from __future__ import annotations
 
@@ -9,12 +9,8 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 from urllib.parse import quote
 
-from backend.service.config import harbor_persona_model
-from backend.service.harbor_web_eval import (
-    HarborWebEvalConfig,
-    HarborWebEvalResult,
-    WebEvalTask,
-)
+from backend.service.config import persona_model as default_persona_model
+from backend.service.web_types import WebEvalConfig, WebEvalResult, WebEvalTask
 
 _WEB_RUN_LOCK = threading.Lock()
 
@@ -23,7 +19,7 @@ def _new_web_eval_id() -> str:
     return "web_" + uuid.uuid4().hex[:12]
 
 
-def web_result_view(result: HarborWebEvalResult) -> Dict[str, Any]:
+def web_result_view(result: WebEvalResult) -> Dict[str, Any]:
     payload = result.to_dict()
     return {
         "task": payload["task"],
@@ -95,7 +91,7 @@ class WebEvalProgress:
 
 
 class WebEvalService:
-    """Start and poll Harbor web runs for the PersonaEval UI."""
+    """Start and poll local web runs for the PersonaEval UI."""
 
     def __init__(
         self,
@@ -103,7 +99,7 @@ class WebEvalService:
         get_persona: Callable[[str], Any],
         get_task: Callable[[str], WebEvalTask],
         list_tasks: Callable[[], List[WebEvalTask]],
-        runner: Callable[..., HarborWebEvalResult],
+        runner: Callable[..., WebEvalResult],
     ) -> None:
         self._get_persona = get_persona
         self._get_task = get_task
@@ -151,7 +147,10 @@ class WebEvalService:
         safe_name = Path(filename).name
         if safe_name != filename or "/" in filename or "\\" in filename:
             raise ValueError("invalid screenshot filename")
-        if not safe_name.startswith("screenshot_") or not safe_name.endswith(".webp"):
+        if not safe_name.startswith("screenshot_") or Path(safe_name).suffix not in {
+            ".svg",
+            ".webp",
+        }:
             raise ValueError("invalid screenshot filename")
         with self._guard:
             progress = self._progress.get(job_id)
@@ -176,8 +175,8 @@ class WebEvalService:
     ) -> None:
         with _WEB_RUN_LOCK:
             try:
-                config = HarborWebEvalConfig(
-                    persona_model=persona_model or harbor_persona_model(),
+                config = WebEvalConfig(
+                    persona_model=persona_model or default_persona_model(),
                 )
                 with self._guard:
                     progress.status = "running"

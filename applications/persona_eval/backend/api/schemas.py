@@ -87,6 +87,8 @@ DEFAULT_APPLICATION_CONTEXTS = {
 SUPPORTED_PERSONA_MODELS = (
     "anthropic/claude-haiku-4-5",
     "anthropic/claude-sonnet-4-6",
+    "openai/gpt-4o-mini",
+    "openai/gpt-4o",
 )
 
 
@@ -151,11 +153,9 @@ class ConfigEnvironment(BaseModel):
     """Read-only facts about the fixed parts of the stack.
 
     ``runtime`` / ``personaAgent`` / ``personaModel`` / ``applicationApi`` /
-    ``scorer`` report the Harbor-backed execution boundary. The ranker (native
-    SASRec), the resource bundle (``all_resources``), and the agent (``InteRecAgent``) are not
-    user-configurable. ``promptOwnership`` reports the prompt boundary for
-    Harbor runs: Harbor owns persona system prompt injection, while this
-    application owns the task-specific simulation prompt.
+    ``scorer`` report the local PersonaEval execution boundary. The ranker,
+    resources, and agent are adapter-specific and not user-configurable.
+    ``promptOwnership`` reports the prompt boundary for local runs.
     """
 
     model_config = ConfigDict(extra="allow")
@@ -415,8 +415,8 @@ class StartPersonaEvalRequest(BaseModel):
     #: ``INTERECAGENT_ENGINE``). ``None`` falls back to the service default
     #: (``ConfigManager.DEFAULTS['engine']``).
     engine: Optional[str] = None
-    #: Harbor persona-agent base model. ``None`` falls back to the local Harbor
-    #: persona model default / env override.
+    #: Persona-agent base model. ``None`` falls back to the local persona model
+    #: default / env override.
     personaModel: Optional[str] = None
 
     @field_validator("applicationId")
@@ -665,7 +665,7 @@ class StartSurveyEvalRequest(BaseModel):
 
 
 class SurveyEvalJobView(BaseModel):
-    """Live view of a Harbor-backed survey run.
+    """Live view of a local survey run.
 
     ``surveyResult`` is the evaluation artifact. There is no additional
     chatbot-style scorecard layer for survey tasks.
@@ -730,7 +730,7 @@ class StartWebEvalRequest(BaseModel):
 
 
 class WebEvalJobView(BaseModel):
-    """Live view of a Harbor-backed website run."""
+    """Live view of a local website run."""
 
     model_config = ConfigDict(extra="allow")
 

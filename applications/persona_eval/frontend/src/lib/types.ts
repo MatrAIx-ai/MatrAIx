@@ -14,10 +14,14 @@
 /** Allowed value for the `engine` knob (the chat LLM). */
 export type Engine = "gpt-4o-mini" | "gpt-4o";
 
-/** Allowed value for the Harbor persona-agent base model. */
-export type PersonaModel = "anthropic/claude-haiku-4-5" | "anthropic/claude-sonnet-4-6";
+/** Allowed value for the simulated-user base model. */
+export type PersonaModel =
+  | "anthropic/claude-haiku-4-5"
+  | "anthropic/claude-sonnet-4-6"
+  | "openai/gpt-4o-mini"
+  | "openai/gpt-4o";
 
-/** Application adapter exposed through the Harbor chatbot sidecar. */
+/** Application adapter exposed through the PersonaEval chatbot interface. */
 export type ApplicationId = "recai" | "finance_openbb" | "medical_assistant";
 
 /** Candidate ranking strategy. */
@@ -81,10 +85,10 @@ export interface PromptOwnership {
 
 /**
  * Read-only facts about the fixed parts of the stack (the "Environment" facts
- * popover). Mirrors the backend `ConfigEnvironment`: Harbor owns the runtime
- * persona-agent loop, this app exposes the chatbot-api sidecar and scoring
- * function, and the ranker/resource/agent stack and prompt boundary are not
- * user-configurable.
+ * popover). Mirrors the backend `ConfigEnvironment`: PersonaEval owns the
+ * local simulation loop, this app exposes direct application adapters and a
+ * scoring function, and the ranker/resource/agent stack and prompt boundary are
+ * not user-configurable.
  */
 export interface ConfigEnvironment {
   runtime: string;
@@ -361,7 +365,7 @@ export interface StartPersonaEvalBody {
   engine?: Engine;
   /**
    * The PersonaEval persona model driving the simulated user.
-   * Omitted -> the backend falls back to its local Harbor default.
+   * Omitted -> the backend falls back to its local default.
    */
   personaModel?: PersonaModel;
 }
@@ -397,11 +401,13 @@ export interface PersonaEvalMetricScores {
   recommendedItemCount: number;
 }
 
-/** Prompt texts used by a Harbor-backed persona-eval run. */
+/** Prompt texts used by a PersonaEval run. */
 export interface PersonaEvalPrompts {
-  /** Harbor persona YAML `system_prompt` text. */
-  harborPrompt: string;
-  /** Application-owned task-specific prompt passed as Harbor extra instruction. */
+  /** PersonaEval simulated-user system prompt. */
+  personaPrompt?: string;
+  /** Backward-compatible alias for older persisted artifacts. */
+  harborPrompt?: string;
+  /** Application-owned task-specific prompt. */
   taskPrompt: string;
 }
 

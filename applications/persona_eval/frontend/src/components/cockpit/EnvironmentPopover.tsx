@@ -3,9 +3,9 @@
  *
  * The cockpit separates *editable knobs* (Model/Domain/Conversation style/Max
  * turns) from the *fixed* parts of the stack the operator cannot change. This
- * renders that read-only block: Runtime (Harbor), persona agent, application
- * API sidecar, application scorer, persona model default, cache policy, adapter
- * resources, adapter agent, and the Harbor/application prompt boundary, from the
+ * renders that read-only block: runtime, persona agent, application
+ * adapter, scorer, persona model default, cache policy, adapter
+ * resources, adapter agent, and the PersonaEval/application prompt boundary, from the
  * backend `environment` block of `GET /api/config/options`, behind a button
  * that toggles a popover.
  *
@@ -51,7 +51,7 @@ export interface EnvironmentPanelProps {
   applicationId: ApplicationId;
 }
 
-/** One label/value row of the read-only Harbor panel. */
+/** One label/value row of the read-only environment panel. */
 function EnvRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-start justify-between gap-2">
@@ -62,7 +62,7 @@ function EnvRow({ label, value }: { label: string; value: string }) {
 }
 
 /**
- * EnvironmentPanel: the cockpit's read-only "Harbor environment" right-rail
+ * EnvironmentPanel: the cockpit's read-only local runtime right-rail
  * panel (mockup `app-redesign-v3.html:250-264`). A persistent facts surface
  * (not the popover): Runtime / Chatbot API / Selection / Agent / Resources /
  * Scorer, plus the prompt-boundary footer. Per-app Selection/Agent/Resources
@@ -71,7 +71,7 @@ function EnvRow({ label, value }: { label: string; value: string }) {
 export function EnvironmentPanel({ environment, applicationId }: EnvironmentPanelProps) {
   const app = APP_ENVIRONMENT[applicationId];
   const promptOwnership = environment?.promptOwnership ?? {
-    personaSystemPrompt: "Persona prompt from task runtime",
+    personaSystemPrompt: "Persona prompt from PersonaEval",
     taskPrompt: "Application provides the chatbot simulation prompt",
   };
 
@@ -80,18 +80,18 @@ export function EnvironmentPanel({ environment, applicationId }: EnvironmentPane
       <div className="mb-3.5 flex items-center justify-between">
         <h3 className="hud flex items-center gap-1.5 text-[10px] text-text-dim">
           <Sym name="dns" size={14} />
-          Harbor environment
+          Local runtime
         </h3>
         <span
           className="hud rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim"
-          title="These are fixed by the Harbor test sandbox and can't be changed for this run."
+          title="These runtime facts are fixed for this run."
         >
           Read-only
         </span>
       </div>
       <div className="space-y-3 text-[12px]">
-        <EnvRow label="Runtime" value={environment?.runtime ?? "Harbor"} />
-        <EnvRow label="Chatbot API" value={environment?.applicationApi ?? "chatbot-api sidecar"} />
+        <EnvRow label="Runtime" value={environment?.runtime ?? "Local direct runner"} />
+        <EnvRow label="Application API" value={environment?.applicationApi ?? "direct application adapter"} />
         <EnvRow label="Selection" value={app?.selection ?? environment?.ranker ?? "application ranking"} />
         <EnvRow label="Agent" value={app?.agent ?? environment?.agent ?? "chatbot application adapter"} />
         <EnvRow label="Resources" value={app?.resources ?? environment?.resources ?? "adapter resources"} />
@@ -137,14 +137,14 @@ export function EnvironmentPopover({ environment }: EnvironmentPopoverProps) {
     };
   }, [open]);
 
-  const runtime = environment?.runtime ?? "Harbor";
+  const runtime = environment?.runtime ?? "Local direct runner";
   const runtimeRows: Array<{ label: string; value: string }> = [
     { label: "Runtime", value: runtime },
-    { label: "Persona", value: environment?.personaAgent ?? "PersonaEval task controller" },
+    { label: "Persona", value: environment?.personaAgent ?? "PersonaEval simulated user" },
     { label: "Persona default", value: environment?.personaModel ?? "anthropic/claude-haiku-4-5" },
-    { label: "Chatbot API", value: environment?.applicationApi ?? "chatbot-api sidecar" },
+    { label: "Application API", value: environment?.applicationApi ?? "direct application adapter" },
     { label: "Scorer", value: environment?.scorer ?? "PersonaEval self-report scorer" },
-    { label: "Cache", value: environment?.cache ?? "Docker image + model cache volumes" },
+    { label: "Cache", value: environment?.cache ?? "local service and model caches" },
   ];
   const stackRows: Array<{ label: string; value: string }> = [
     { label: "Selection", value: environment?.ranker ?? "application-specific ranking / tool selection" },
@@ -152,7 +152,7 @@ export function EnvironmentPopover({ environment }: EnvironmentPopoverProps) {
     { label: "Agent", value: environment?.agent ?? "chatbot application adapter" },
   ];
   const promptOwnership = environment?.promptOwnership ?? {
-    personaSystemPrompt: "Persona prompt from task runtime",
+    personaSystemPrompt: "Persona prompt from PersonaEval",
     taskPrompt: "Application-provided chatbot simulation prompt",
   };
   const promptRows: Array<{ label: string; value: string }> = [
@@ -184,11 +184,11 @@ export function EnvironmentPopover({ environment }: EnvironmentPopoverProps) {
           <div className="mb-2 flex items-center justify-between gap-2">
             <p className="flex items-center gap-1 hud text-[10px] text-text-dim">
               <Sym name="lock" size={13} />
-              Test environment (Harbor)
+              Test environment
             </p>
             <span
               className="hud rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim"
-              title="These are fixed by the Harbor test sandbox and can't be changed for this run."
+              title="These runtime facts are fixed for this run."
             >
               Read-only
             </span>

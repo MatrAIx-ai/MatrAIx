@@ -114,21 +114,17 @@ served at **`/docs`** when the app is running.
 
 The chatbot application adapter lives in
 `applications/tasks/chatbot_chat_api/environment/chatbot_api/harbor_api/`. It
-wraps each chatbot application behind a smaller synchronous REST contract for
-persona agents:
+contains the RecAI, finance, and medical chatbot adapters. PersonaEval now calls
+these adapters directly from the FastAPI backend, so the demo no longer starts a
+Harbor run to execute chatbot, survey, or web simulations.
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/health` | Sidecar liveness check. |
+| GET | `/health` | Adapter liveness check. |
 | POST | `/v1/session` | Create a recommender chat session. |
 | POST | `/v1/messages` | Send one user message and receive one recommender reply. |
 | GET | `/v1/conversation?sessionId=...` | Fetch transcript and turns. |
 | GET | `/v1/recommendations?sessionId=...` | Fetch recommended item ids across turns. |
-
-The Harbor task is `applications/tasks/chatbot_chat_api/`. It runs the chatbot
-application router sidecar, lets the task controller drive the selected
-application, and writes `/app/output/transcript.json`,
-`/app/output/application_result.json`, and the persona self-report artifacts.
 
 Contract tests:
 
@@ -138,20 +134,18 @@ PYTHONPATH=applications/persona_eval:applications/tasks/chatbot_chat_api/environ
   -m pytest applications/tasks/chatbot_chat_api/environment/chatbot_api/harbor_api/tests/test_server.py -q
 ```
 
-Harbor smoke, once the Harbor runtime is installed:
+Local PersonaEval runtime:
 
 ```bash
 export OPENAI_API_KEY=...
-export ANTHROPIC_API_KEY=...
-export MATRIX_HARBOR_COMMAND="harbor run"
-# Or point to a local Harbor checkout:
-# export MATRIX_HARBOR_COMMAND="uv --directory /path/to/harbor run --frozen harbor run"
+export ANTHROPIC_API_KEY=...   # or CLAUDE_API_KEY, when using Claude persona models
 ./run_demo.sh
 ```
 
-The sidecar uses the real RecAI / InteRecAgent path. The first Docker build is
-heavy because it installs RecAI dependencies and downloads the ready-to-run
-resource bundle.
+The RecAI adapter uses the real RecAI / InteRecAgent path and still needs the
+resource bundle described above. The finance adapter uses OpenAI Agents SDK and
+expects an OpenBB MCP endpoint when a finance run starts. The medical adapter
+expects `MEDICAL_ASSISTANT_URL` to point at the medical assistant service.
 
 ---
 
@@ -165,7 +159,7 @@ data/personas/  Shared persona catalog
 run_demo.sh     Start the app
 
 ../../applications/tasks/chatbot_chat_api/environment/chatbot_api/
-  harbor_api/     Chatbot sidecar router and app adapters
+  harbor_api/     Chatbot router and app adapters
   recbot/         Bridge to the in-process RecAI agent
   recai/          Microsoft RecAI submodule
   data/catalogs/  Committed chatbot item catalogs

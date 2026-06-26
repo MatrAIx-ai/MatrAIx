@@ -50,7 +50,7 @@ from fastapi.responses import FileResponse, JSONResponse
 import backend.api  # noqa: F401  (side effect: sys.path wiring)
 from backend.api import schemas
 from backend.api.deps import AppState, build_state, state_from_request
-from backend.service.config import ConfigError, ConfigManager, harbor_persona_model
+from backend.service.config import ConfigError, ConfigManager, persona_model as default_persona_model
 
 __all__ = ["create_app", "app", "preflight_checks", "catalog_item_view"]
 
@@ -676,11 +676,11 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         # `start` dispatches the persona-eval onto a daemon thread (serialized
         # process-globally) and returns a job id immediately; a bad
         # persona/domain pairing (or unknown persona) surfaces here as a 422.
-        # `engine` selects the RecBot base model. `personaModel` selects the
-        # Harbor persona-agent base model. Omitted values fall back to local
-        # defaults so existing callers keep working.
+        # `engine` selects the application chatbot base model. `personaModel`
+        # selects the simulated-user base model. Omitted values fall back to
+        # local defaults so existing callers keep working.
         engine = body.engine or ConfigManager.DEFAULTS["engine"]
-        persona_model = body.personaModel or harbor_persona_model()
+        persona_model = body.personaModel or default_persona_model()
         run_domain = body.domain or body.applicationContext or ConfigManager.DEFAULTS["domain"]
         try:
             job_id = services.persona_eval.start(
@@ -839,7 +839,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=404, detail="web-eval job not found")
         except FileNotFoundError:
             raise HTTPException(status_code=404, detail="screenshot not found")
-        return FileResponse(path, media_type="image/webp")
+        media_type = "image/svg+xml" if path.suffix == ".svg" else "image/webp"
+        return FileResponse(path, media_type=media_type)
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

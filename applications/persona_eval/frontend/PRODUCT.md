@@ -15,7 +15,7 @@ Researchers / engineers iterating on an application under test. They are in a fo
 - **Catalog** — browse/search 336 personas (sources: Nemotron / OASIS / PRIMEX / PersonaHub) + a persona detail drawer; reachable via ⌘K.
 
 ## Hard constraints
-- **Pure frontend** when redesigning: keep the data layer (api.ts, hooks, query keys, types) and backend contract. Per-option fidelity matters (Chatbot-only Harbor environment; RecAI-only Domain; 3/3/4-node pipelines; distinct scoring).
+- **Pure frontend** when redesigning: keep the data layer (api.ts, hooks, query keys, types) and backend contract. Per-option fidelity matters (chatbot-only runtime panel; RecAI-only Domain; 3/3/4-node pipelines; distinct scoring).
 - **Dark default + light** (persisted `<html>.light` toggle). **Friendly, tutorial-first copy** for first-time users; restrained/professional tone — no fake telemetry, no roleplay.
 
 ## Design system

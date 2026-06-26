@@ -107,6 +107,14 @@ class UserSimulator:
             persona_context=_persona_context(persona),
         )
 
+    def prompt_bundle(self, persona: Persona, sut_description: str) -> Dict[str, str]:
+        persona_prompt = self._system(persona, sut_description)
+        return {
+            "personaPrompt": persona_prompt,
+            "harborPrompt": persona_prompt,
+            "taskPrompt": self._goal_context.description,
+        }
+
     def kickoff(self, persona: Persona, sut_description: str) -> str:
         out = self._client.complete_json(self._system(persona, sut_description), _KICKOFF_USER)
         message = str(out.get("message", "")).strip()

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Dict, List
 
-from backend.service.harbor_survey_eval import SurveyInstrument, SurveyQuestion
+from backend.service.survey_types import SurveyInstrument, SurveyQuestion
 
 __all__ = [
     "DEFAULT_SURVEY_INSTRUMENT_ID",

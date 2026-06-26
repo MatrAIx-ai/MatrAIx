@@ -20,29 +20,44 @@ from __future__ import annotations
 import os
 from typing import Dict, List, Optional
 
+PERSONA_MODEL_ENV = "MATRIX_PERSONA_MODEL"
 HARBOR_PERSONA_MODEL_ENV = "MATRIX_HARBOR_PERSONA_MODEL"
-DEFAULT_HARBOR_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
-HARBOR_PERSONA_MODEL_OPTIONS = [
-    DEFAULT_HARBOR_PERSONA_MODEL,
+DEFAULT_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
+PERSONA_MODEL_OPTIONS = [
+    DEFAULT_PERSONA_MODEL,
     "anthropic/claude-sonnet-4-6",
+    "openai/gpt-4o-mini",
+    "openai/gpt-4o",
 ]
+DEFAULT_HARBOR_PERSONA_MODEL = DEFAULT_PERSONA_MODEL
+HARBOR_PERSONA_MODEL_OPTIONS = PERSONA_MODEL_OPTIONS
 
 __all__ = [
     "ConfigError",
     "ConfigManager",
+    "DEFAULT_PERSONA_MODEL",
     "DEFAULT_HARBOR_PERSONA_MODEL",
+    "PERSONA_MODEL_OPTIONS",
     "HARBOR_PERSONA_MODEL_OPTIONS",
+    "PERSONA_MODEL_ENV",
     "HARBOR_PERSONA_MODEL_ENV",
+    "persona_model",
     "harbor_persona_model",
 ]
 
 
-def harbor_persona_model() -> str:
-    """Return the Harbor persona-agent model currently configured."""
+def persona_model() -> str:
+    """Return the persona-agent model currently configured."""
     return (
-        os.environ.get(HARBOR_PERSONA_MODEL_ENV, "").strip()
-        or DEFAULT_HARBOR_PERSONA_MODEL
+        os.environ.get(PERSONA_MODEL_ENV, "").strip()
+        or os.environ.get(HARBOR_PERSONA_MODEL_ENV, "").strip()
+        or DEFAULT_PERSONA_MODEL
     )
+
+
+def harbor_persona_model() -> str:
+    """Backward-compatible alias for the old Harbor model env helper."""
+    return persona_model()
 
 
 class ConfigError(ValueError):
@@ -109,8 +124,7 @@ class ConfigManager:
     KNOB_META: Dict[str, Dict[str, object]] = {
         "applicationId": {
             "label": "Chatbot application",
-            "description": "The application-under-test adapter exposed through "
-            "the Harbor chatbot sidecar.",
+            "description": "The application-under-test adapter used by the local runner.",
             "values": {
                 "recai": {
                     "label": "RecAI / InteRecAgent",
@@ -143,16 +157,23 @@ class ConfigManager:
         },
         "personaModel": {
             "label": "Persona model",
-            "description": "The Harbor persona-agent base model used to simulate "
-            "the user side of persona-eval runs.",
+            "description": "The base model used to simulate the user side of PersonaEval runs.",
             "values": {
                 "anthropic/claude-haiku-4-5": {
                     "label": "Claude Haiku 4.5",
-                    "description": "Lower-cost Harbor persona simulation; the default.",
+                    "description": "Lower-cost persona simulation; the default.",
                 },
                 "anthropic/claude-sonnet-4-6": {
                     "label": "Claude Sonnet 4.6",
-                    "description": "Stronger Harbor persona simulation at higher cost.",
+                    "description": "Stronger persona simulation at higher cost.",
+                },
+                "openai/gpt-4o-mini": {
+                    "label": "GPT-4o mini",
+                    "description": "OpenAI persona simulation with lower cost.",
+                },
+                "openai/gpt-4o": {
+                    "label": "GPT-4o",
+                    "description": "OpenAI persona simulation with stronger reasoning.",
                 },
             },
         },
@@ -195,16 +216,16 @@ class ConfigManager:
     #: Read-only facts about the fixed parts of the stack, surfaced alongside the
     #: editable knobs so the UI can show what is *not* configurable and why.
     ENVIRONMENT: Dict[str, object] = {
-        "runtime": "Harbor",
-        "personaAgent": "PersonaEval task controller",
-        "applicationApi": "chatbot-api sidecar",
+        "runtime": "Local direct runner",
+        "personaAgent": "PersonaEval simulated user",
+        "applicationApi": "direct application adapter",
         "scorer": "PersonaEval self-report scorer",
-        "cache": "Docker image + model cache volumes",
+        "cache": "local service and model caches",
         "ranker": "application-specific ranking / tool selection",
         "resources": "adapter-specific resources",
         "agent": "chatbot application adapter",
         "promptOwnership": {
-            "personaSystemPrompt": "Persona prompt from task runtime",
+            "personaSystemPrompt": "Persona prompt from PersonaEval",
             "taskPrompt": "Application-provided chatbot simulation prompt",
         },
     }
@@ -247,7 +268,7 @@ class ConfigManager:
             value_meta = value_meta if isinstance(value_meta, dict) else {}
             option_views: List[Dict[str, str]] = []
             allowed_values = (
-                HARBOR_PERSONA_MODEL_OPTIONS
+                PERSONA_MODEL_OPTIONS
                 if key == "personaModel"
                 else self.ALLOWED.get(key, [])
             )
@@ -275,7 +296,7 @@ class ConfigManager:
             "defaults": dict(self.DEFAULTS),
             "environment": {
                 **self.ENVIRONMENT,
-                "personaModel": harbor_persona_model(),
+                "personaModel": persona_model(),
             },
         }
 

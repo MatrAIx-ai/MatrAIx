@@ -26,3 +26,7 @@ PyYAML>=5.4
 # The task-owned item catalogs and feather bundle fallback need an Arrow engine
 # for pandas to read them at startup.
 pyarrow>=7
+
+# Local direct runners call model/provider SDKs from this backend process.
+openai>=1.5
+openai-agents>=0.17.6

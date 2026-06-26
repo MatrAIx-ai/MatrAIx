@@ -1,17 +1,17 @@
 import type { ConfigEnvironment } from "./types";
 
 const configEnvironmentWithPromptOwnership: ConfigEnvironment = {
-  runtime: "Harbor",
-  personaAgent: "PersonaEval task controller",
+  runtime: "Local direct runner",
+  personaAgent: "PersonaEval simulated user",
   personaModel: "anthropic/claude-haiku-4-5",
-  applicationApi: "chatbot-api sidecar",
+  applicationApi: "direct application adapter",
   scorer: "PersonaEval self-report scorer",
-  cache: "Docker image + model cache volumes",
+  cache: "local service and model caches",
   ranker: "application-specific ranking / tool selection",
   resources: "adapter-specific resources",
   agent: "chatbot application adapter",
   promptOwnership: {
-    personaSystemPrompt: "Persona prompt from task runtime",
+    personaSystemPrompt: "Persona prompt from PersonaEval",
     taskPrompt: "Application-provided chatbot simulation prompt",
   },
 };

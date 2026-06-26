@@ -13,6 +13,7 @@ import tempfile
 import threading
 from dataclasses import dataclass, field
 from pathlib import Path
+import inspect
 from typing import Any, Callable, Dict, List, Optional
 
 from persona_eval.runner import run_persona_eval as _default_runner
@@ -52,7 +53,7 @@ def _normalize_prompts(value: Any) -> Optional[Dict[str, str]]:
     if not isinstance(value, dict):
         return None
     prompts: Dict[str, str] = {}
-    for key in ("harborPrompt", "taskPrompt"):
+    for key in ("personaPrompt", "harborPrompt", "taskPrompt"):
         if key in value and value[key] is not None:
             prompts[key] = str(value[key])
     return prompts or None
@@ -133,7 +134,7 @@ class PersonaEvalService:
     ) -> str:
         # Persona is domain-free: any persona may run against any domain.
         # ``engine`` drives the recommender side of the run; ``persona_model``
-        # drives Harbor's persona agent. ``None`` keeps defaults so existing
+        # drives the simulated user. ``None`` keeps defaults so existing
         # callers are unchanged.
         persona = self._get_persona(persona_id)
         run_engine = engine or self._engine
@@ -302,14 +303,18 @@ class PersonaEvalService:
                             if prompts is not None:
                                 progress.prompts = prompts
 
+                simulator = self._build_simulator(
+                    engine,
+                    progress.goal_context_id,
+                    progress.domain,
+                    persona_model,
+                )
                 result = self._runner(
                     session,
                     persona,
                     progress.sut_description,
                     config,
-                    self._simulator_factory(
-                        engine, progress.goal_context_id, progress.domain
-                    ),
+                    simulator,
                     created_at=now(),
                     on_event=on_event,
                 )
@@ -333,3 +338,24 @@ class PersonaEvalService:
                 with self._guard:
                     progress.error = "{}: {}".format(type(exc).__name__, exc)
                     progress.status = "error"
+
+    def _build_simulator(
+        self,
+        engine: str,
+        goal_context_id: str,
+        domain: str,
+        persona_model: str,
+    ) -> Any:
+        """Build a simulator, supporting legacy 3-argument factories."""
+        try:
+            params = inspect.signature(self._simulator_factory).parameters
+        except (TypeError, ValueError):
+            params = {}
+        if len(params) >= 4:
+            return self._simulator_factory(
+                engine,
+                goal_context_id,
+                domain,
+                persona_model,
+            )
+        return self._simulator_factory(engine, goal_context_id, domain)

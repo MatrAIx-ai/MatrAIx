@@ -124,6 +124,8 @@ def test_config_options(client):
     assert persona_model_values == {
         "anthropic/claude-haiku-4-5",
         "anthropic/claude-sonnet-4-6",
+        "openai/gpt-4o-mini",
+        "openai/gpt-4o",
     }
 
     # defaults remain the full canonical config.
@@ -137,7 +139,7 @@ def test_config_options(client):
     assert body["environment"]["scorer"] == "PersonaEval self-report scorer"
     assert "application-specific" in body["environment"]["ranker"]
     assert body["environment"]["promptOwnership"] == {
-        "personaSystemPrompt": "Persona prompt from task runtime",
+        "personaSystemPrompt": "Persona prompt from PersonaEval",
         "taskPrompt": "Application-provided chatbot simulation prompt",
     }
 

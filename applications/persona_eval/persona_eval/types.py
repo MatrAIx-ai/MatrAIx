@@ -161,6 +161,7 @@ class PersonaEvalResult:
     questionnaire: Questionnaire
     metric_scores: MetricScores
     created_at: str
+    prompts: Dict[str, str] = field(default_factory=dict)
 
     def _final_ids(self) -> List[str]:
         for turn in reversed(self.transcript):
@@ -183,4 +184,5 @@ class PersonaEvalResult:
             "questionnaire": self.questionnaire.to_dict(),
             "metricScores": self.metric_scores.to_dict(),
             "createdAt": self.created_at,
+            "prompts": dict(self.prompts),
         }

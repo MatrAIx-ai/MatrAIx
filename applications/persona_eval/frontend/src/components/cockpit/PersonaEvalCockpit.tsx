@@ -6,7 +6,7 @@
  *   - IDLE  (`data-view="cockpit"`) shows a centered "Configure a simulation" setup
  *     form: header + app-type switch, a compact Pipeline strip, then a 12-col
  *     grid (LEFT 8: application cards · run-configuration knobs · target persona;
- *     RIGHT 4: the read-only Harbor panel · the glowing Run-eval CTA · a hint).
+ *     RIGHT 4: the read-only runtime panel · the glowing Run-eval CTA · a hint).
  *   - RUNNING/DONE (`data-view="liverun"`) shows the live-run layout: the stateful
  *     Pipeline strip, the Trajectory thread (persona/app bubbles with items +
  *     tool-plan fold), the right Inspector tabs (Evaluation / Persona / Prompts),

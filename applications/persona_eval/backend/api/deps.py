@@ -122,44 +122,39 @@ def build_persona_eval_service(
 ) -> "PersonaEvalService":
     """Construct the process-wide :class:`PersonaEvalService`.
 
-    Persona-eval is Harbor-backed: Harbor's native ``persona-claude-code`` owns
-    persona system prompt injection, and the application appends the
-    chatbot-simulation task prompt through Harbor's extra-instruction
-    mechanism. The application chatbot runs inside Harbor as the ``chatbot-api``
-    sidecar, not as this FastAPI process's in-process session.
+    Persona-eval runs locally: PersonaEval drives the simulated user and calls
+    each application-under-test adapter directly. The service keeps the same
+    async job API that the frontend uses, through direct local runners.
     """
-    del catalog, config
-
-    class HarborSession:
-        def __init__(self) -> None:
-            self.turns = []
-
-    from backend.service.harbor_persona_eval import HarborPersonaEvalRunner
+    from backend.service.local_chatbot_eval import (
+        LocalChatbotEvalRunner,
+        build_local_chat_session,
+        build_local_user_simulator_for_model,
+    )
     from backend.service.persona_eval_service import PersonaEvalService
-    from persona_eval.goal_contexts import get_goal_context
     from persona_eval.persona import get_persona
     from persona_eval.sut_descriptions import sut_description_for
 
-    def goal_context_description(goal_context_id: str) -> str:
-        try:
-            return get_goal_context(goal_context_id).description
-        except KeyError:
-            return goal_context_id
-
     return PersonaEvalService(
-        session_builder=lambda _cfg: HarborSession(),
+        session_builder=lambda cfg: build_local_chat_session(
+            cfg,
+            catalog_provider=lambda domain: get_bundle_catalog(domain)
+            if resolve_catalog_path() is None
+            else catalog,
+            config_manager=config,
+        ),
         get_persona=get_persona,
         sut_for=sut_description_for,
-        simulator_factory=lambda _engine, _gid, _domain: None,
-        runner=HarborPersonaEvalRunner(
-            goal_context_description_for=goal_context_description,
+        simulator_factory=lambda _engine, gid, domain, persona_model: (
+            build_local_user_simulator_for_model(persona_model, gid, domain)
         ),
+        runner=LocalChatbotEvalRunner(),
     )
 
 
 def build_survey_eval_service() -> "SurveyEvalService":
-    """Construct the process-wide Harbor-backed survey eval service."""
-    from backend.service.harbor_survey_eval import HarborSurveyEvalRunner
+    """Construct the process-wide local survey eval service."""
+    from backend.service.local_survey_eval import LocalSurveyEvalRunner
     from backend.service.survey_eval_service import SurveyEvalService
     from backend.service.survey_instruments import (
         get_survey_instrument,
@@ -171,13 +166,13 @@ def build_survey_eval_service() -> "SurveyEvalService":
         get_persona=get_persona,
         get_instrument=get_survey_instrument,
         list_instruments=list_survey_instruments,
-        runner=HarborSurveyEvalRunner(),
+        runner=LocalSurveyEvalRunner(),
     )
 
 
 def build_web_eval_service() -> "WebEvalService":
-    """Construct the process-wide Harbor-backed web eval service."""
-    from backend.service.harbor_web_eval import HarborWebEvalRunner
+    """Construct the process-wide local web eval service."""
+    from backend.service.local_web_eval import LocalWebEvalRunner
     from backend.service.web_eval_service import WebEvalService
     from backend.service.web_tasks import get_web_eval_task, list_web_eval_tasks
     from persona_eval.persona import get_persona
@@ -186,7 +181,7 @@ def build_web_eval_service() -> "WebEvalService":
         get_persona=get_persona,
         get_task=get_web_eval_task,
         list_tasks=list_web_eval_tasks,
-        runner=HarborWebEvalRunner(),
+        runner=LocalWebEvalRunner(),
     )
 
 

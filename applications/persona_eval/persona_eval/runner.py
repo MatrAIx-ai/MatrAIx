@@ -30,6 +30,10 @@ def run_persona_eval(
 
     transcript: List[PersonaEvalTurn] = []
     pairs: List[Tuple[str, str]] = []
+    prompts = {}
+    if hasattr(simulator, "prompt_bundle"):
+        prompts = simulator.prompt_bundle(persona, sut_description)
+        emit({"type": "prompts", "prompts": prompts})
 
     emit({"type": "phase", "phase": "persona_kickoff"})
     message = simulator.kickoff(persona, sut_description)
@@ -70,6 +74,7 @@ def run_persona_eval(
             turns_to_recommendation=turns_to_rec, num_turns=len(transcript),
             recommended_item_count=len(final_items)),
         created_at=created_at,
+        prompts=prompts,
     )
     emit({"type": "done", "result": result.to_dict()})
     return result
