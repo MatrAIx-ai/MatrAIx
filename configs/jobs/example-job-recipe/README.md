@@ -1,13 +1,16 @@
 # Example job recipes
 
-Hand-written Harbor job YAMLs for **local smoke** and demos. One persona per job (`persona_0042`) unless noted.
+Hand-written Harbor job YAMLs for **local smoke** and demos. One persona per job (`persona_0042`) unless noted. `appSim-example-survey-product-feedback-random-n4` is a checked-in 4-persona batch (seed 42).
 
 ```bash
 # No API key
 uv run harbor run -c configs/jobs/example-job-recipe/harbor-smoke-local.yaml
 
-# Application survey (needs ANTHROPIC_API_KEY)
+# Application survey — 1 persona smoke (needs ANTHROPIC_API_KEY)
 uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-local.yaml
+
+# Application survey — 4 personas, random sample, seed 42 (needs ANTHROPIC_API_KEY)
+uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml
 
 # Persona bench survey — dim grounding (needs ANTHROPIC_API_KEY)
 uv run harbor run -c configs/jobs/example-job-recipe/personaBench-example-survey-local.yaml
