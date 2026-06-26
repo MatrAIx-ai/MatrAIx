@@ -656,7 +656,7 @@ function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona
           <button
             type="button"
             onClick={onChange}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Change
           </button>
@@ -671,7 +671,7 @@ function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona
             <Sym name="person_search" size={24} className="text-text-dim" />
           </div>
           <div>
-            <div className="font-display text-[15px] font-semibold text-text-main">Choose a persona</div>
+            <div className="font-display text-[16px] font-semibold text-text-main">Choose a persona</div>
             <p className="mt-0.5 text-[12px] leading-snug text-text-variant">
               PersonaEval needs a target persona before it can run.
             </p>

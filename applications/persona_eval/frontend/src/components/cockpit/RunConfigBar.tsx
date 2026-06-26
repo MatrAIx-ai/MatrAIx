@@ -138,7 +138,7 @@ export function RunConfigBar({
 
         {/* Max-turns slider — full width, label linked to the input. */}
         <label htmlFor={sliderId} className="block sm:col-span-2">
-          <span className="hud mb-2.5 block text-[9px] text-text-dim">
+          <span className="hud mb-1.5 block text-[9px] text-text-dim">
             Max turns
             <span className="ml-1 font-mono normal-case tracking-normal text-text-variant">{maxTurns}</span>
           </span>

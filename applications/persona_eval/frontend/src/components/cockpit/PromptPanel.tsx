@@ -48,7 +48,7 @@ function PromptBlock({
           <h3 className="font-semibold text-sm text-text-main">{label}</h3>
           <p className="truncate hud text-[9px] text-text-dim">{sublabel}</p>
         </div>
-        <Sym name="data_object" size={17} className="flex-shrink-0 text-text-dim" />
+        <Sym name="data_object" size={16} className="flex-shrink-0 text-text-dim" />
       </div>
       <pre className="custom-scrollbar max-h-72 overflow-auto whitespace-pre-wrap break-words bg-field p-3 font-mono text-[11px] leading-relaxed text-text-variant">
         {value || "(empty)"}

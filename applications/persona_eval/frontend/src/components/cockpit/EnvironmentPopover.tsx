@@ -66,7 +66,7 @@ export function EnvironmentPanel({ environment, applicationId }: EnvironmentPane
 
   return (
     <div className="rounded-md border border-outline bg-surface-lowest p-5">
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-3.5 flex items-center justify-between">
         <h3 className="hud flex items-center gap-1.5 text-[10px] text-text-dim">
           <Sym name="dns" size={14} />
           Harbor environment

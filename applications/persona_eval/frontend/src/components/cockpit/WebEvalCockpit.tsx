@@ -659,7 +659,7 @@ function WebsiteTaskCard({ task }: { task: WebEvalTask }) {
 function InfoTile({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0 rounded border border-outline bg-surface-low px-3 py-2.5">
-      <div className="hud mb-1 text-[8px] text-text-dim">{label}</div>
+      <div className="hud mb-1.5 text-[8px] text-text-dim">{label}</div>
       <div className="truncate font-mono text-[12px] text-text-main" title={value}>
         {value}
       </div>

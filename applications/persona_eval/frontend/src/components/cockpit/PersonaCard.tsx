@@ -103,7 +103,7 @@ function PersonaCardInner({ persona, selected, onSelect }: PersonaCardProps) {
 
       {/* Age · Sex · id micro-label. */}
       {metaLabel && (
-        <p title="Age · sex · persona id" className="hud mt-0.5 truncate text-[8px] text-text-dim">
+        <p title="Age · sex · persona id" className="hud mt-1 truncate text-[8px] text-text-dim">
           {metaLabel}
         </p>
       )}

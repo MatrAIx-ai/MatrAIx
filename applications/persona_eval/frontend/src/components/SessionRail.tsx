@@ -80,7 +80,7 @@ export function SessionRail({
           type="button"
           onClick={onNew}
           aria-label="Start a new chat"
-          className={`flex w-full items-center justify-center gap-2 rounded-md bg-primary py-2 text-[12px] font-semibold text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
+          className={`flex h-9 w-full items-center justify-center gap-2 rounded-md bg-primary text-[12px] font-semibold text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
         >
           <Sym name="add" size={16} />
           New chat

@@ -298,7 +298,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
               }
             />
             {plan.length > 0 ? (
-              <div className="flex flex-col rounded-md border border-outline bg-surface p-3.5">
+              <div className="flex flex-col rounded-md border border-outline bg-surface p-4">
                 {plan.map((step, i) => (
                   <PlanStepRow key={i} step={step} last={i === plan.length - 1} />
                 ))}

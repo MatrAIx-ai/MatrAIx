@@ -609,7 +609,7 @@ function InstrumentPreview({ instrument }: { instrument: SurveyInstrument }) {
             >
               <span
                 title={meta.tooltip}
-                className={`hud shrink-0 rounded border px-1.5 py-0.5 text-[8px] ${meta.tone}`}
+                className={`hud min-w-[3.5rem] shrink-0 rounded border px-1.5 py-0.5 text-center text-[8px] ${meta.tone}`}
               >
                 {meta.label}
               </span>
@@ -1132,7 +1132,7 @@ function ValidityTile({ valid }: { valid: boolean }) {
       className="rounded-md border border-outline bg-surface p-4"
     >
       <span className="hud text-[9px] text-text-dim">Validity</span>
-      <div className="mt-2">
+      <div className="mt-1.5">
         <span
           className={`hud rounded border px-2 py-1 text-[9px] ${
             valid ? "border-secondary/30 bg-secondary/10 text-secondary" : "border-danger/30 bg-danger/10 text-danger"

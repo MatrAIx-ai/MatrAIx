@@ -160,7 +160,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
               type="button"
               onClick={onClose}
               aria-label="Close persona detail"
-              className={`flex h-8 w-8 flex-none items-center justify-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:bg-surface-high hover:text-text-main active:bg-surface-low ${FOCUS_RING}`}
+              className={`flex h-9 w-9 flex-none items-center justify-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:bg-surface-high hover:text-text-main active:bg-surface-low ${FOCUS_RING}`}
             >
               <Sym name="close" size={18} />
             </button>
@@ -183,7 +183,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
             <>
               {/* Demographics */}
               <div className="panel rise-in rounded-md border border-outline bg-surface p-4">
-                <h3 className="hud mb-3.5 text-[10px] text-text-dim">Demographics</h3>
+                <h3 className="hud mb-3 text-[10px] text-text-dim">Demographics</h3>
                 {demographics.length > 0 ? (
                   <div className="space-y-2.5 text-[12px]">
                     {demographics.map((d) => (

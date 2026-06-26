@@ -227,10 +227,10 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
             overall == null ? "border-l-outline" : bandBorderL(band)
           }`}
         >
-          <span className={`hud text-[10px] ${overall == null ? "text-text-dim" : color.text}`}>
+          <span className={`hud text-[9px] ${overall == null ? "text-text-dim" : color.text}`}>
             Overall satisfaction
           </span>
-          <div className="mt-2 flex items-baseline gap-1.5">
+          <div className="mt-1.5 flex items-baseline gap-1.5">
             <span
               className={`font-display text-[44px] font-bold leading-none tabular-nums ${
                 overall == null ? "text-text-dim" : color.text
@@ -403,7 +403,7 @@ function DebriefScorecard({ q }: { q: PersonaEvalQuestionnaire }) {
         rationale={q.preferenceRationale}
       />
       <div className="border-t border-outline pt-3">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-2">
           <span className="text-[12px] font-medium text-text-main">Asked helpful follow-up questions</span>
           <span
             className={`inline-flex items-center rounded border px-2 py-1 hud text-[9px] ${
@@ -498,7 +498,7 @@ function SurveyDebrief({ run }: { run: RunDetailView }) {
         <StatTile lead caption="Questions answered" value={`${c.numAnswered}/${c.numQuestions}`} />
         <div className="flex flex-col justify-center rounded-md border border-outline bg-surface p-4">
           <span className="hud text-[9px] text-text-dim">Answers look valid</span>
-          <div className="mt-2">
+          <div className="mt-1.5">
             <ValidityBadge valid={c.valid} validLabel="Valid" invalidLabel="Needs review" />
           </div>
         </div>

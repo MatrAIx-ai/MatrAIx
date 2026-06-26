@@ -122,7 +122,7 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
       {/* Header: title + loaded count + close, then search + source chips. */}
       <div className="flex-shrink-0 border-b border-outline bg-surface-lowest px-6 py-5">
         <div className="mx-auto w-full max-w-[1320px]">
-          <div className="mb-4 flex items-end justify-between gap-4">
+          <div className="mb-4 flex items-center justify-between gap-4">
             <div>
               <div className="hud mb-1.5 text-[10px] text-primary">Persona catalog</div>
               <h1 className="font-display text-[24px] font-bold tracking-tight text-text-main">
@@ -146,7 +146,7 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <div className="flex min-w-0 flex-1 items-center rounded-md border border-outline bg-field transition-colors hover:border-primary/40 focus-within:border-primary">
+            <div className="flex h-9 min-w-0 flex-1 items-center rounded-md border border-outline bg-field transition-colors hover:border-primary/40 focus-within:border-primary">
               <Sym name="search" size={16} className="ml-3.5 flex-none text-text-dim" />
               <input
                 ref={inputRef}
@@ -154,7 +154,7 @@ export function CatalogDrawer({ open, onClose, selectedId, onSelect }: CatalogDr
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search occupation, traits, demographics…"
                 aria-label="Search personas"
-                className="w-full min-w-0 bg-transparent px-3 py-2.5 text-[13px] text-text-main outline-none placeholder:text-text-variant"
+                className="h-full w-full min-w-0 bg-transparent px-3 text-[13px] text-text-main outline-none placeholder:text-text-variant"
               />
               {query && (
                 <button
@@ -249,7 +249,7 @@ function FilterChip({
       onClick={onClick}
       title={title}
       aria-pressed={active}
-      className={`rounded-md border px-3.5 py-2.5 text-[12px] font-medium transition-colors ${FOCUS_RING} ${
+      className={`inline-flex h-9 items-center rounded-md border px-3.5 text-[12px] font-medium transition-colors ${FOCUS_RING} ${
         active
           ? "border-primary bg-primary text-on-primary active:bg-primary-dim"
           : "border-outline bg-surface text-text-variant hover:border-primary hover:bg-surface-low hover:text-text-main active:bg-surface-high"

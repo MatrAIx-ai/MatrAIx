@@ -77,7 +77,7 @@ export function PersonaCatalog({ selectedId, onSelect }: PersonaCatalogProps) {
       {/* Header: title, count, search, filter chips */}
       <div className="flex-shrink-0 border-b border-outline p-md pb-sm">
         <div className="mb-xs">
-          <div className="hud text-[10px] text-primary">Persona catalog</div>
+          <div className="hud mb-1.5 text-[10px] text-primary">Persona catalog</div>
           <h2 className="font-display text-[15px] font-bold text-text-main">Pick who to simulate</h2>
         </div>
         <p className="hud mb-sm text-[9px] text-text-dim">{totalLabel}</p>
@@ -94,7 +94,7 @@ export function PersonaCatalog({ selectedId, onSelect }: PersonaCatalogProps) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder='Search by role, age, or trait — e.g. "manager" or "student"'
             aria-label="Search personas"
-            className={`w-full rounded-md border border-outline bg-field py-1.5 pl-10 pr-3 text-[13px] text-text-main outline-none transition-colors placeholder:text-text-variant hover:border-primary/40 focus:border-primary ${FOCUS_RING}`}
+            className={`w-full rounded-md border border-outline bg-field h-8 pl-10 pr-3 text-[13px] text-text-main outline-none transition-colors placeholder:text-text-variant hover:border-primary/40 focus:border-primary ${FOCUS_RING}`}
           />
         </div>
 
@@ -160,7 +160,7 @@ function FilterChip({
       onClick={onClick}
       title={title}
       aria-pressed={active}
-      className={`rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors ${FOCUS_RING} ${
+      className={`inline-flex h-8 items-center rounded-full border px-2.5 text-[11px] font-medium transition-colors ${FOCUS_RING} ${
         active
           ? "border-primary bg-primary text-on-primary active:bg-primary-dim"
           : "border-outline bg-surface text-text-variant hover:border-primary hover:bg-surface-low hover:text-text-main active:bg-surface-high"

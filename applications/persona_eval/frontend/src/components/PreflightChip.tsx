@@ -108,7 +108,7 @@ export function PreflightChip() {
         onClick={() => data && setOpen((v) => !v)}
         aria-expanded={data ? open : undefined}
         aria-label={`Readiness: ${label}`}
-        className={`flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium transition ${TONE_CLASS[tone]} ${FOCUS_RING} ${
+        className={`flex h-9 items-center gap-2 rounded-md border px-2.5 text-xs font-medium transition ${TONE_CLASS[tone]} ${FOCUS_RING} ${
           data ? "cursor-pointer hover:opacity-90 active:scale-[0.98]" : "cursor-default"
         }`}
       >

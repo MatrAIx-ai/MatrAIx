@@ -114,7 +114,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
           <button
             type="button"
             onClick={onClose}
-            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
+            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low h-9 px-3 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
           >
             <Sym name="arrow_back" size={16} />
             Back to cockpit
@@ -135,7 +135,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
                 type="button"
                 onClick={toggleCompareMode}
                 aria-pressed={comparing}
-                className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
+                className={`flex items-center gap-1.5 rounded-md h-9 px-3 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
                   comparing
                     ? "bg-primary text-on-primary hover:bg-primary-dim"
                     : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:bg-surface hover:text-text-main"
@@ -149,7 +149,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
               type="button"
               onClick={() => query.refetch()}
               disabled={query.isFetching}
-              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low h-9 px-3 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
             >
               <Sym name="refresh" size={16} className={query.isFetching ? "animate-rb-spin" : ""} />
               {query.isFetching ? "Checking for new runs…" : "Refresh"}
@@ -173,7 +173,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
                 type="button"
                 onClick={launchCompare}
                 disabled={picks.length !== 2}
-                className={`ml-auto flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-primary px-3 py-1.5 text-[12px] text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+                className={`ml-auto flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-primary h-9 px-3 text-[12px] text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
               >
                 Compare these two
               </button>

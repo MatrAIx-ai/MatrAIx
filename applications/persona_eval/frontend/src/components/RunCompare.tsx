@@ -67,7 +67,7 @@ export function RunCompare({ runIdA, runIdB, onBack }: RunCompareProps) {
           <button
             type="button"
             onClick={onBack}
-            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
+            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low h-9 px-3 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
           >
             <Sym name="arrow_back" size={16} />
             All runs
@@ -254,7 +254,7 @@ function CompareBody({
               <li key={d.label} className="flex flex-wrap items-baseline gap-x-2 text-[13px]">
                 <span className="font-medium text-text-main">{d.label}</span>
                 <span className="font-mono text-[11px] text-text-variant">{d.a}</span>
-                <Sym name="arrow_forward" size={12} className="text-text-dim" />
+                <Sym name="arrow_forward" size={12} className="shrink-0 text-text-dim" />
                 <span className="font-mono text-[11px] text-text-variant">{d.b}</span>
               </li>
             ))}
@@ -273,7 +273,7 @@ function CompareBody({
             type="button"
             onClick={() => setOrderByRegressions((v) => !v)}
             aria-pressed={orderByRegressions}
-            className={`ml-auto flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
+            className={`ml-auto flex items-center gap-1.5 whitespace-nowrap rounded-md h-9 px-3 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
               orderByRegressions
                 ? "bg-primary text-on-primary hover:bg-primary-dim"
                 : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:bg-surface hover:text-text-main"
@@ -376,7 +376,7 @@ function DeltaRow({ dim }: { dim: Dimension }) {
   const pct = (v: number | null) => (v === null ? 0 : (Math.max(0, Math.min(dim.max, v)) / dim.max) * 100);
 
   return (
-    <li className="grid grid-cols-[minmax(0,1.4fr)_72px_72px_minmax(0,1fr)] items-center gap-x-3 py-2.5">
+    <li className="grid grid-cols-[minmax(0,1.4fr)_72px_72px_minmax(0,1fr)] items-start gap-x-3 py-2.5">
       <div className="min-w-0">
         <div className="truncate text-[13px] font-medium text-text-main">{dim.label}</div>
         {/* Mini paired bars: baseline (muted) over candidate (primary). */}
