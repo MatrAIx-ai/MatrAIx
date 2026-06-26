@@ -64,17 +64,19 @@ function PersonaCardInner({ persona, selected, onSelect }: PersonaCardProps) {
       onClick={() => onSelect(persona)}
       aria-pressed={selected}
       aria-label={persona.source ? `${heading}, ${persona.source}` : heading}
-      className={`panel group relative w-full rounded-md border bg-surface p-4 text-left transition-colors duration-200 ${FOCUS_RING} ${
-        selected ? "border-primary" : "border-outline hover:border-primary"
+      className={`panel group relative w-full rounded-md border p-4 text-left transition-[color,background-color,border-color,transform] duration-200 ease-out active:scale-[0.98] ${FOCUS_RING} ${
+        selected
+          ? "border-primary bg-primary/[0.06]"
+          : "border-outline bg-surface hover:border-primary hover:bg-surface-low"
       }`}
     >
       {/* Top row: avatar tile + source-tinted provenance chip. */}
       <div className="mb-3 flex items-start justify-between gap-2">
         <span
-          className={`flex h-10 w-10 flex-none items-center justify-center rounded border border-outline transition-colors ${
+          className={`flex h-10 w-10 flex-none items-center justify-center rounded border transition-colors ${
             selected
-              ? "bg-primary/10 text-primary"
-              : "bg-surface-high text-text-variant group-hover:text-primary"
+              ? "border-primary/30 bg-primary/10 text-primary"
+              : "border-outline bg-surface-high text-text-variant group-hover:border-primary/40 group-hover:text-primary"
           }`}
           aria-hidden
         >

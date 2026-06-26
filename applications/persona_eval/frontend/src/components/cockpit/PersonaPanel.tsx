@@ -62,9 +62,9 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
   if (!persona) {
     return (
       <div className="p-md">
-        <div className="rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
+        <div className="rise-in rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
           <Sym name="person_search" size={28} className="text-text-dim" />
-          <p className="mt-2 text-[13px] leading-relaxed text-text-dim">
+          <p className="mt-2 text-[13px] leading-relaxed text-text-variant">
             Choose a persona to see who you&apos;re simulating.
           </p>
         </div>
@@ -76,7 +76,7 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
   const title = personaDescriptiveTitle(fullContext, persona.blurb, persona.source);
 
   return (
-    <div className="p-md">
+    <div className="rise-in p-md">
       {/* Avatar & header */}
       <div className="mb-lg flex flex-col items-center">
         <div
@@ -86,11 +86,11 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
           <Sym name="face" fill={1} size={48} className="text-primary" />
         </div>
         {/* Human framing for the codename: descriptive title as the heading. */}
-        <h3 className="text-center font-display text-lg text-text-main">{title}</h3>
-        <p className="mt-1 text-center text-[13px] text-text-dim">{persona.source || "Persona"}</p>
-        <p className="mt-1 flex items-center gap-1 text-[13px] text-text-dim">
-          <Sym name="badge" size={14} />
-          <span className="font-mono text-[11px]">{codename}</span>
+        <h3 className="line-clamp-2 text-center font-display text-lg text-text-main">{title}</h3>
+        <p className="mt-1 text-center text-[13px] text-text-variant">{persona.source || "Persona"}</p>
+        <p className="mt-1 flex max-w-full items-center gap-1 text-[13px] text-text-variant">
+          <Sym name="badge" size={14} className="shrink-0" />
+          <span className="min-w-0 truncate font-mono text-[11px]">{codename}</span>
         </p>
       </div>
 
@@ -134,7 +134,7 @@ export function PersonaPanel({ persona, context, onOpenRaw }: PersonaPanelProps)
         <button
           type="button"
           onClick={onOpenRaw}
-          className={`flex items-center gap-1 rounded-md px-1 py-0.5 text-xs font-medium text-text-variant transition-colors hover:text-primary ${FOCUS_RING}`}
+          className={`flex items-center gap-1 rounded-md px-1 py-0.5 text-xs font-medium text-text-variant transition ease-out hover:text-primary active:scale-[0.98] ${FOCUS_RING}`}
         >
           <Sym name="data_object" size={16} />
           Full persona

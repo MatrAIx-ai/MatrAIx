@@ -318,11 +318,11 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
               <div className="space-y-2" aria-hidden>
                 <p className="hud text-[10px] text-text-dim">Loading website tasks…</p>
                 <div className="overflow-hidden rounded-md border border-outline bg-surface">
-                  <div className="h-14 animate-pulse border-b border-outline bg-surface-high" />
+                  <div className="h-14 animate-rb-pulse border-b border-outline bg-surface-high" />
                   <div className="grid grid-cols-1 gap-3 px-4 py-3 sm:grid-cols-3">
-                    <div className="h-12 animate-pulse rounded bg-surface-high" />
-                    <div className="h-12 animate-pulse rounded bg-surface-high" />
-                    <div className="h-12 animate-pulse rounded bg-surface-high" />
+                    <div className="h-12 animate-rb-pulse rounded bg-surface-high" />
+                    <div className="h-12 animate-rb-pulse rounded bg-surface-high" />
+                    <div className="h-12 animate-rb-pulse rounded bg-surface-high" />
                   </div>
                 </div>
               </div>
@@ -349,10 +349,10 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
               type="button"
               onClick={handleRun}
               disabled={!persona || !task || isRunning}
-              className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition-colors hover:bg-primary-dim disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+              className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition hover:bg-primary-dim active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
             >
               {isRunning ? (
-                <Sym name="autorenew" size={20} className="animate-spin" />
+                <Sym name="autorenew" size={20} className="animate-rb-spin" />
               ) : (
                 <Sym name="play_arrow" fill={1} size={20} />
               )}
@@ -365,14 +365,14 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
               <button
                 type="button"
                 onClick={handleExport}
-                className={`flex w-full items-center justify-center gap-2 rounded-md border border-outline bg-surface-low px-4 py-2.5 text-[12px] font-medium text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+                className={`flex w-full items-center justify-center gap-2 rounded-md border border-outline bg-surface-low px-4 py-2.5 text-[12px] font-medium text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
               >
                 <Sym name="download" size={16} />
                 Download results
               </button>
             )}
 
-            <p className="text-center text-[11px] leading-relaxed text-text-dim">
+            <p className="text-center text-[11px] leading-relaxed text-text-variant">
               A simulated visitor browses the site, then we show each step it took and how it rated the experience.
             </p>
           </div>
@@ -383,11 +383,11 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
       {catalogOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="fade-in absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setCatalogOpen(false)}
             aria-hidden
           />
-          <div className="relative z-10 flex h-full w-[88%] max-w-[320px] flex-col lg:w-[300px]">
+          <div className="fade-in relative z-10 flex h-full w-[88%] max-w-[320px] flex-col lg:w-[300px]">
             <PersonaCatalog
               selectedId={persona?.id ?? null}
               onSelect={(next) => {
@@ -399,7 +399,7 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
               type="button"
               onClick={() => setCatalogOpen(false)}
               aria-label="Close persona picker"
-              className={`absolute right-3 top-3 z-20 grid h-8 w-8 place-items-center rounded-md border border-outline bg-surface-lowest text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+              className={`absolute right-3 top-3 z-20 grid h-8 w-8 place-items-center rounded-md border border-outline bg-surface-lowest text-text-variant transition hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
             >
               <Sym name="close" size={18} />
             </button>
@@ -422,10 +422,10 @@ function AppTypeSwitch({
   onChange: (value: PersonaEvalTaskType) => void;
   disabled?: boolean;
 }) {
-  const items: ReadonlyArray<{ value: PersonaEvalTaskType; label: string; icon: string }> = [
-    { value: "chatbot", label: "Chatbot", icon: "forum" },
-    { value: "survey", label: "Survey", icon: "fact_check" },
-    { value: "web", label: "Web", icon: "language" },
+  const items: ReadonlyArray<{ value: PersonaEvalTaskType; label: string; icon: string; hint: string }> = [
+    { value: "chatbot", label: "Chatbot", icon: "forum", hint: "A back-and-forth conversation." },
+    { value: "survey", label: "Survey", icon: "fact_check", hint: "A fixed questionnaire the user fills out." },
+    { value: "web", label: "Web", icon: "language", hint: "A real browser task the user completes." },
   ];
   return (
     <div className="shrink-0">
@@ -438,9 +438,11 @@ function AppTypeSwitch({
               key={item.value}
               type="button"
               disabled={disabled}
+              title={item.hint}
+              aria-pressed={active}
               onClick={() => onChange(item.value)}
               className={`flex items-center gap-1.5 rounded px-3 py-1.5 text-[12px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${FOCUS_RING} ${
-                active ? "bg-primary text-on-primary" : "text-text-variant hover:text-text-main"
+                active ? "bg-primary text-on-primary" : "text-text-variant hover:bg-surface hover:text-text-main"
               }`}
             >
               <Sym name={item.icon} fill={active ? 1 : 0} size={14} />
@@ -512,7 +514,7 @@ function WebPipeline({
             <span className="flex shrink-0 items-center gap-1.5" title={node.title}>
               <Sym name={node.icon} size={14} className={iconToneText(node.tone, idle)} />
               <span className="text-text-main">{node.label}</span>
-              {node.sub && <span className="text-text-dim">· {node.sub}</span>}
+              {node.sub && <span className="text-text-variant">· {node.sub}</span>}
               {!idle && (
                 <span className={`hud ml-1 shrink-0 rounded border px-1.5 py-0.5 text-[8px] ${toneClass(node.tone)}`}>
                   {pillForTone(node.tone)}
@@ -603,7 +605,7 @@ function FieldSelect({
           onChange={(event) => onChange(event.target.value)}
           disabled={disabled || options.length === 0}
           title={title}
-          className={`w-full appearance-none rounded border bg-field px-3 py-2.5 pr-9 text-[13px] text-text-main outline-none transition-colors focus:border-primary disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
+          className={`w-full appearance-none rounded border bg-field px-3 py-2.5 pr-9 text-[13px] text-text-main outline-none transition-colors focus:border-primary enabled:hover:border-primary/70 disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
             accent ? "border-primary/60" : "border-outline"
           }`}
         >
@@ -634,7 +636,7 @@ function WebsiteTaskCard({ task }: { task: WebEvalTask }) {
       <div className="mb-3.5 flex items-start justify-between gap-3">
         <div>
           <h3 className="hud text-[10px] text-text-dim">Website task</h3>
-          <p className="mt-0.5 text-[11px] text-text-dim">This is the goal the simulated visitor will try to complete.</p>
+          <p className="mt-0.5 text-[11px] text-text-variant">This is the goal the simulated visitor will try to complete.</p>
         </div>
         <span
           title="Site"
@@ -699,20 +701,20 @@ function WebResults({
   return (
     <section className="space-y-5">
       {/* Run identity line */}
-      <div className="hud flex items-center gap-2 text-[9px] text-text-dim">
-        <Sym name="language" size={16} className="text-primary" />
-        <span className="truncate">Run · {headerBits.join(" · ")}</span>
+      <div className="hud flex items-center gap-2 text-[9px] text-text-variant">
+        <Sym name="language" size={16} className="shrink-0 text-primary" />
+        <span className="min-w-0 truncate">Run · {headerBits.join(" · ")}</span>
       </div>
 
       {/* Live "browsing" banner */}
       {running && !webResult && (
-        <div className="rounded-md border border-outline bg-surface-lowest px-4 py-4">
+        <div className="rise-in rounded-md border border-outline bg-surface-lowest px-4 py-4">
           <div className="flex items-center gap-2">
-            <Sym name="autorenew" size={16} className="animate-spin text-primary" />
+            <Sym name="autorenew" size={16} className="animate-rb-spin text-primary" />
             <span className="hud text-[10px] text-primary">Running</span>
           </div>
           <p className="mt-2 text-[13px] text-text-main">Simulated visitor is browsing…</p>
-          {status && <p className="mt-0.5 text-[12px] text-text-dim">{status}</p>}
+          {status && <p className="mt-0.5 text-[12px] text-text-variant">{status}</p>}
           {trace && trace.events.length > 0 && (
             <p className="mt-2 font-mono text-[11px] text-text-variant">Recorded {trace.events.length} steps so far</p>
           )}
@@ -731,7 +733,7 @@ function WebResults({
 
       {/* Score tiles + selected product */}
       {webResult && (
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
+        <div className="rise-in grid grid-cols-1 gap-5 lg:grid-cols-12">
           <div className="grid grid-cols-3 gap-3 lg:col-span-5">
             <MetricTile value={`${webResult.needSatisfaction}`} unit="/10" caption="Need fit" lead
               hint="How well the chosen item met the persona's need (0–10)." />
@@ -758,7 +760,9 @@ function WebResults({
                   {webResult.valid ? "Complete" : "Incomplete"}
                 </span>
               </div>
-              <div className="mt-0.5 font-mono text-[10px] text-text-dim">{webResult.selectedProductId}</div>
+              <div className="mt-0.5 truncate font-mono text-[10px] text-text-variant" title={webResult.selectedProductId}>
+                {webResult.selectedProductId}
+              </div>
               <p className="mt-1 text-[11px] leading-snug text-text-variant">{webResult.reason}</p>
             </div>
           </div>
@@ -780,7 +784,7 @@ function WebResults({
       {running && !webResult && !trace && (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" aria-hidden>
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="h-32 animate-pulse rounded-md bg-surface-high" />
+            <div key={i} className="h-32 animate-rb-pulse rounded-md bg-surface-high" />
           ))}
         </div>
       )}
@@ -795,7 +799,7 @@ function WebTraceGrid({ trace }: { trace: WebTrace }) {
 
   if (events.length === 0) {
     return (
-      <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-6 text-center text-[12px] text-text-dim">
+      <div className="rise-in rounded-md border border-dashed border-outline bg-surface-low px-4 py-6 text-center text-[12px] text-text-variant">
         This run finished without recording any browser steps.
       </div>
     );
@@ -806,21 +810,34 @@ function WebTraceGrid({ trace }: { trace: WebTrace }) {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {events.map((event) => (
+        {events.map((event, index) => (
           <TraceTile
             key={event.step}
+            index={index}
             event={event}
             active={event.step === selected}
             onClick={() => setSelected((prev) => (prev === event.step ? null : event.step))}
           />
         ))}
       </div>
-      {selectedEvent && <TraceDetail event={selectedEvent} onClose={() => setSelected(null)} />}
+      {selectedEvent && (
+        <TraceDetail key={selectedEvent.step} event={selectedEvent} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 }
 
-function TraceTile({ event, active, onClick }: { event: WebTraceEvent; active: boolean; onClick: () => void }) {
+function TraceTile({
+  index,
+  event,
+  active,
+  onClick,
+}: {
+  index: number;
+  event: WebTraceEvent;
+  active: boolean;
+  onClick: () => void;
+}) {
   const [imgError, setImgError] = useState(false);
   const hint = summarizeAction(event);
   const showImage = Boolean(event.screenshotUrl) && !imgError;
@@ -829,8 +846,9 @@ function TraceTile({ event, active, onClick }: { event: WebTraceEvent; active: b
     <button
       type="button"
       onClick={onClick}
-      className={`overflow-hidden rounded-md border bg-surface text-left transition-colors ${FOCUS_RING} ${
-        active ? "border-primary" : "border-outline hover:border-primary/60"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms` }}
+      className={`rise-in overflow-hidden rounded-md border bg-surface text-left transition active:scale-[0.98] ${FOCUS_RING} ${
+        active ? "border-primary" : "border-outline hover:border-primary/60 hover:bg-surface-low"
       }`}
     >
       <div className="grid aspect-video place-items-center border-b border-outline bg-surface-low text-text-dim">
@@ -860,7 +878,7 @@ function TraceDetail({ event, onClose }: { event: WebTraceEvent; onClose: () => 
   const [imgError, setImgError] = useState(false);
   const message = event.message.trim();
   return (
-    <div className="rounded-md border border-outline bg-surface p-4">
+    <div className="rise-in rounded-md border border-outline bg-surface p-4">
       <div className="mb-3 flex items-center justify-between gap-2">
         <span className="hud text-[10px] text-primary">
           Step {event.step} · {summarizeAction(event) ?? event.source ?? "visitor"}
@@ -869,7 +887,7 @@ function TraceDetail({ event, onClose }: { event: WebTraceEvent; onClose: () => 
           type="button"
           onClick={onClose}
           aria-label="Close step detail"
-          className={`grid h-7 w-7 place-items-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+          className={`grid h-7 w-7 place-items-center rounded-md border border-outline text-text-variant transition hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
         >
           <Sym name="close" size={16} />
         </button>
@@ -894,7 +912,7 @@ function TraceDetail({ event, onClose }: { event: WebTraceEvent; onClose: () => 
           <div className="grid aspect-video max-h-80 w-full place-items-center rounded-md border border-outline bg-surface-low text-text-dim">
             <div className="text-center">
               <Sym name="image" size={24} className="text-text-dim" />
-              <p className="mt-1 text-[12px] text-text-dim">Screenshot unavailable for this step.</p>
+              <p className="mt-1 text-[12px] text-text-variant">Screenshot unavailable for this step.</p>
             </div>
           </div>
         ) : null}
@@ -910,7 +928,7 @@ function TraceDetail({ event, onClose }: { event: WebTraceEvent; onClose: () => 
             </pre>
           )}
           {!message && event.actions.length === 0 && (
-            <p className="text-[12px] text-text-dim">No extra detail recorded for this step.</p>
+            <p className="text-[12px] text-text-variant">No extra detail recorded for this step.</p>
           )}
         </div>
       </div>
@@ -967,7 +985,7 @@ function TargetPersonaPanel({
         <button
           type="button"
           onClick={onBrowse}
-          className={`hud rounded text-[9px] text-primary hover:underline ${FOCUS_RING}`}
+          className={`hud rounded text-[9px] text-primary transition-colors hover:underline active:text-primary-dim ${FOCUS_RING}`}
         >
           Browse catalog →
         </button>
@@ -1000,7 +1018,7 @@ function TargetPersonaPanel({
             <button
               type="button"
               onClick={onViewRecord}
-              className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-text-variant transition-colors hover:text-primary ${FOCUS_RING}`}
+              className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-text-variant transition-colors hover:text-primary active:text-primary-dim ${FOCUS_RING}`}
             >
               <Sym name="data_object" size={14} /> View full record
             </button>
@@ -1008,7 +1026,7 @@ function TargetPersonaPanel({
           <button
             type="button"
             onClick={onBrowse}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Change
           </button>
@@ -1027,7 +1045,7 @@ function TargetPersonaPanel({
           <button
             type="button"
             onClick={onBrowse}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Browse
           </button>
@@ -1046,14 +1064,14 @@ function PromptsFold({ prompts }: { prompts: ReactNode }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className={`flex w-full items-center justify-between gap-2 px-4 py-3 text-left ${FOCUS_RING}`}
+        className={`flex w-full items-center justify-between gap-2 px-4 py-3 text-left transition-colors hover:bg-surface-low active:bg-surface-high ${FOCUS_RING}`}
       >
         <span className="hud flex items-center gap-1.5 text-[10px] text-text-dim">
           <Sym name="terminal" size={14} /> Prompts used
         </span>
         <Sym name={open ? "expand_more" : "chevron_right"} size={18} className="text-text-dim" />
       </button>
-      {open && <div className="border-t border-outline">{prompts}</div>}
+      {open && <div className="rise-in border-t border-outline">{prompts}</div>}
     </section>
   );
 }
@@ -1097,7 +1115,7 @@ function ErrorCard({
   retryLabel?: string;
 }) {
   return (
-    <div className="rounded-md border border-danger/30 bg-danger/10 p-4">
+    <div className="rise-in rounded-md border border-danger/30 bg-danger/10 p-4">
       <div className="flex items-start gap-3">
         <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
         <div className="min-w-0 flex-1">

@@ -74,7 +74,7 @@ const COMPONENTS: Components = {
   // Links — primary, underlined, open safely in a new tab.
   a: ({ node: _node, ...props }) => (
     <a
-      className="font-medium text-primary underline underline-offset-2 hover:text-primary-dim"
+      className="break-words font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary-dim"
       target="_blank"
       rel="noreferrer noopener"
       {...props}
@@ -103,7 +103,7 @@ export interface MarkdownProps {
  */
 export function Markdown({ children, className = "" }: MarkdownProps) {
   return (
-    <div className={`[&>*:first-child]:mt-0 [&>*:last-child]:mb-0 ${className}`}>
+    <div className={`break-words [&>*:first-child]:mt-0 [&>*:last-child]:mb-0 ${className}`}>
       <ReactMarkdown components={COMPONENTS}>{children}</ReactMarkdown>
     </div>
   );

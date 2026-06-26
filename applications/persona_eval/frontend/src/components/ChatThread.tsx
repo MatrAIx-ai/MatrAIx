@@ -42,7 +42,7 @@ function assistantMeta(turn: TurnView): MetaChip[] {
 function EmptyThread() {
   return (
     <div className="flex h-full items-center justify-center px-6">
-      <div className="flex max-w-md flex-col items-center gap-3 text-center">
+      <div className="rise-in flex max-w-md flex-col items-center gap-3 text-center">
         <div className="grid h-14 w-14 place-items-center rounded-md border border-dashed border-outline bg-surface-high">
           <Sym name="forum" fill={1} size={26} className="text-text-dim" />
         </div>
@@ -66,7 +66,7 @@ function EmptyThread() {
 function ThinkingSkeleton({ phase }: { phase: TurnPhase }) {
   const building = phase === "building";
   return (
-    <div className="flex flex-col items-start pr-10">
+    <div className="rise-in flex flex-col items-start pr-10">
       <div className="hud mb-1.5 ml-1 flex items-center gap-2 text-[9px] text-primary">
         <Sym name="smart_toy" fill={1} size={14} className="text-primary" />
         <span>RecAI · {building ? "waking" : "thinking"}</span>
@@ -136,7 +136,11 @@ export function ChatThread({
       ) : (
         <div className="mx-auto max-w-2xl space-y-7">
           {turns.map((turn, i) => (
-            <div key={i} className="space-y-7">
+            <div
+              key={i}
+              className="rise-in space-y-7"
+              style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
+            >
               {turn.userMessage != null && turn.userMessage !== "" && (
                 <ChatMessage role="user" name="You">
                   {turn.userMessage}
@@ -169,7 +173,7 @@ export function ChatThread({
 
           {/* Plain-language error card + Retry */}
           {error && !isPending && (
-            <div className="panel flex items-start gap-3 rounded-md border border-l-4 border-danger/40 border-l-danger bg-danger/10 px-3.5 py-3">
+            <div className="panel rise-in flex items-start gap-3 rounded-md border border-l-4 border-danger/40 border-l-danger bg-danger/10 px-3.5 py-3">
               <Sym name="error" fill={1} size={20} className="mt-0.5 flex-none text-danger" />
               <div className="min-w-0 flex-1">
                 <div className="text-[13px] font-semibold text-text-main">That message didn&apos;t go through</div>
@@ -178,7 +182,7 @@ export function ChatThread({
                   <button
                     type="button"
                     onClick={onRetry}
-                    className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-xs font-medium text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+                    className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-xs font-medium text-danger transition hover:bg-danger/20 active:scale-[0.98] ${FOCUS_RING}`}
                   >
                     <Sym name="refresh" size={16} />
                     Retry

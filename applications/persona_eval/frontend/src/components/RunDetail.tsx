@@ -97,7 +97,7 @@ function BackButton({ onBack }: { onBack: () => void }) {
     <button
       type="button"
       onClick={onBack}
-      className={`mb-2 flex items-center gap-1 hud text-[9px] text-primary hover:underline ${FOCUS_RING}`}
+      className={`mb-2 flex items-center gap-1 hud text-[9px] text-primary transition-opacity hover:underline active:opacity-70 ${FOCUS_RING}`}
     >
       <Sym name="arrow_back" size={14} />
       All runs
@@ -143,7 +143,7 @@ function RunTypeReflection({ active }: { active: RunApplicationType }) {
 /** The one-line telemetry breadcrumb that opens each debrief body. */
 function RunMetaLine({ icon, children }: { icon: string; children: ReactNode }) {
   return (
-    <div className="flex items-start gap-2 hud text-[9px] leading-relaxed text-text-dim">
+    <div className="flex items-start gap-2 hud text-[9px] leading-relaxed text-text-variant">
       <Sym name={icon} size={16} className="mt-px shrink-0 text-primary" />
       <span>{children}</span>
     </div>
@@ -152,13 +152,13 @@ function RunMetaLine({ icon, children }: { icon: string; children: ReactNode }) 
 
 /** A short, friendly intro under the meta line (per option). */
 function DebriefIntro({ children }: { children: ReactNode }) {
-  return <p className="max-w-2xl text-[13px] leading-relaxed text-text-dim">{children}</p>;
+  return <p className="max-w-2xl text-[13px] leading-relaxed text-text-variant">{children}</p>;
 }
 
 /** A quiet dashed "nothing here" note, reused by empty bodies. */
 function DashedNote({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-8 text-center text-[13px] text-text-dim">
+    <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-8 text-center text-[13px] text-text-variant">
       {children}
     </div>
   );
@@ -309,7 +309,10 @@ function TranscriptTurn({
   const hiccup = isAgentHiccup(turn.assistantMessage);
   const recs = turn.recommendedItems ?? [];
   return (
-    <div className="space-y-3">
+    <div
+      className="space-y-3 rise-in"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms`, animationFillMode: "backwards" }}
+    >
       {/* Persona (left) */}
       <div className="flex gap-3">
         <div
@@ -325,7 +328,7 @@ function TranscriptTurn({
               <span className="hud text-[9px] text-text-dim">turn {index + 1}</span>
             </div>
             <p className="whitespace-pre-wrap text-[13px] leading-relaxed text-text-main">
-              {turn.userMessage || <span className="italic text-text-dim">(no message)</span>}
+              {turn.userMessage || <span className="italic text-text-variant">(no message)</span>}
             </p>
             {turn.decision && turn.decision !== "continue" && (
               <div className="mt-2">
@@ -406,14 +409,14 @@ function DebriefScorecard({ q }: { q: PersonaEvalQuestionnaire }) {
             className={`inline-flex items-center rounded border px-2 py-1 hud text-[9px] ${
               q.askedUsefulClarifyingQuestions
                 ? "border-secondary/30 bg-secondary/10 text-secondary"
-                : "border-outline bg-surface-high text-text-dim"
+                : "border-outline bg-surface-high text-text-variant"
             }`}
           >
             {q.askedUsefulClarifyingQuestions ? "Yes" : "Not this time"}
           </span>
         </div>
         {q.clarifyingNotes && (
-          <p className="mt-1.5 text-[11px] leading-snug text-text-dim">{q.clarifyingNotes}</p>
+          <p className="mt-1.5 text-[11px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
         )}
       </div>
     </div>
@@ -447,7 +450,7 @@ function CriterionBar({
       <div className="h-1.5 overflow-hidden rounded-full bg-field">
         <div className={`h-full ${color.bar}`} style={{ width: `${pct}%` }} />
       </div>
-      {rationale && <p className="mt-1.5 text-[11px] leading-snug text-text-dim">{rationale}</p>}
+      {rationale && <p className="mt-1.5 text-[11px] leading-snug text-text-variant">{rationale}</p>}
     </div>
   );
 }
@@ -567,7 +570,10 @@ function SurveyAnswerRow({
   const color = SCORE_BAND_CLASS[band];
 
   return (
-    <div className="p-4">
+    <div
+      className="p-4 rise-in"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms`, animationFillMode: "backwards" }}
+    >
       <div className="mb-1 flex items-start justify-between gap-3">
         <span className="text-[12px] font-medium text-text-main">
           Q{index + 1} · {prompt}
@@ -585,7 +591,7 @@ function SurveyAnswerRow({
       {freeText ? (
         <p className="text-[11px] leading-snug text-text-variant">&ldquo;{valueText}&rdquo;</p>
       ) : answer.rationale ? (
-        <p className="text-[11px] leading-snug text-text-dim">
+        <p className="text-[11px] leading-snug text-text-variant">
           Why: {answer.rationale}
           {conf != null && (
             <span className="text-text-variant"> · How sure: {(conf * 100).toFixed(0)}%</span>
@@ -718,8 +724,8 @@ function WebDebrief({ run }: { run: RunDetailView }) {
           <DashedNote>No browser steps were captured for this run.</DashedNote>
         ) : (
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {events.map((event) => (
-              <WebStepCard key={event.step} event={event} />
+            {events.map((event, i) => (
+              <WebStepCard key={event.step} event={event} index={i} />
             ))}
           </div>
         )}
@@ -729,11 +735,14 @@ function WebDebrief({ run }: { run: RunDetailView }) {
 }
 
 /** One browser-trace step: a screenshot (or fallback) + a step caption. */
-function WebStepCard({ event }: { event: WebTraceEvent }) {
+function WebStepCard({ event, index }: { event: WebTraceEvent; index: number }) {
   const [imgError, setImgError] = useState(false);
   const showImg = Boolean(event.screenshotUrl) && !imgError;
   return (
-    <div className="overflow-hidden rounded-md border border-outline bg-surface">
+    <div
+      className="overflow-hidden rounded-md border border-outline bg-surface rise-in"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms`, animationFillMode: "backwards" }}
+    >
       <div className="aspect-video border-b border-outline bg-surface-low">
         {showImg ? (
           <img
@@ -805,18 +814,18 @@ function clip40(text: string): string {
 function DetailLoading() {
   return (
     <div className="space-y-5" aria-hidden>
-      <div className="h-4 w-72 animate-pulse rounded bg-surface-high" />
+      <div className="h-4 w-72 animate-rb-pulse rounded bg-surface-high" />
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
-        <div className="h-36 animate-pulse rounded-md bg-surface-high lg:col-span-4" />
+        <div className="h-36 animate-rb-pulse rounded-md bg-surface-high lg:col-span-4" />
         <div className="grid grid-cols-3 gap-5 lg:col-span-8">
-          <div className="h-36 animate-pulse rounded-md bg-surface-high" />
-          <div className="h-36 animate-pulse rounded-md bg-surface-high" />
-          <div className="h-36 animate-pulse rounded-md bg-surface-high" />
+          <div className="h-36 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="h-36 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="h-36 animate-rb-pulse rounded-md bg-surface-high" />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
-        <div className="h-72 animate-pulse rounded-md bg-surface-high lg:col-span-7" />
-        <div className="h-72 animate-pulse rounded-md bg-surface-high lg:col-span-5" />
+        <div className="h-72 animate-rb-pulse rounded-md bg-surface-high lg:col-span-7" />
+        <div className="h-72 animate-rb-pulse rounded-md bg-surface-high lg:col-span-5" />
       </div>
     </div>
   );
@@ -824,7 +833,7 @@ function DetailLoading() {
 
 function DetailNotFound() {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface px-6 py-14 text-center">
+    <div className="rounded-md border border-dashed border-outline bg-surface px-6 py-14 text-center rise-in">
       <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
         <Sym name="search_off" size={26} className="text-text-dim" />
       </div>
@@ -846,7 +855,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
       ? error.message
       : "Something went wrong loading the details. Try again in a moment.";
   return (
-    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center">
+    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center rise-in">
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md border border-danger/30 bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
@@ -859,7 +868,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition ease-out hover:border-danger/60 hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again

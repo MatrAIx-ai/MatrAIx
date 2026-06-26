@@ -45,14 +45,20 @@ export function AppFooter({ context }: AppFooterProps) {
 
   return (
     <footer className="flex-shrink-0 border-t border-outline bg-surface-lowest">
-      <div className="flex items-center justify-between px-5 py-2 text-text-dim">
-        <div className="hud flex items-center gap-3 text-[9px]">
-          <span className="text-text-variant">PersonaEval</span>
-          <span className="text-outline">·</span>
-          <span className="truncate">{context}</span>
+      <div className="flex items-center justify-between gap-4 px-5 py-2 text-text-dim">
+        <div className="hud flex min-w-0 items-center gap-3 text-[9px]">
+          <span className="flex-none text-text-variant">PersonaEval</span>
+          <span className="flex-none text-outline">·</span>
+          <span className="min-w-0 truncate">{context}</span>
         </div>
-        <div className="hud flex items-center gap-2 text-[9px]" aria-label="Backend connection status">
-          <span className={`h-1.5 w-1.5 rounded-full ${dot} ${pulse ? "animate-rb-pulse" : ""}`} aria-hidden />
+        <div
+          className="hud flex flex-shrink-0 items-center gap-2 text-[9px] text-text-variant"
+          aria-label="Backend connection status"
+        >
+          <span
+            className={`h-1.5 w-1.5 rounded-full transition-colors ${dot} ${pulse ? "animate-rb-pulse" : ""}`}
+            aria-hidden
+          />
           {label}
         </div>
       </div>

@@ -129,14 +129,18 @@ export function KnobSelect({
             aria-haspopup="listbox"
             aria-expanded={open}
             aria-label={`${label}: ${currentLabel}`}
-            className={`flex w-full items-center justify-between gap-2 rounded border px-3 py-2.5 text-left text-[13px] transition-colors disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
+            className={`flex w-full items-center justify-between gap-2 rounded border px-3 py-2.5 text-left text-[13px] transition ease-out active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING} ${
               accent
                 ? "border-primary bg-primary/10 text-primary hover:bg-primary/15"
                 : "border-outline bg-field text-text-main hover:border-primary"
             }`}
           >
-            <span className="truncate">{currentLabel}</span>
-            <Sym name="expand_more" size={16} className={accent ? "" : "text-text-dim"} />
+            <span className="min-w-0 truncate">{currentLabel}</span>
+            <Sym
+              name="expand_more"
+              size={16}
+              className={`shrink-0 transition-transform duration-150 ease-out ${open ? "rotate-180" : ""} ${accent ? "" : "text-text-dim"}`}
+            />
           </button>
           {open && (
             <Listbox
@@ -169,14 +173,18 @@ export function KnobSelect({
           aria-haspopup="listbox"
           aria-expanded={open}
           aria-label={`${label}: ${currentLabel}`}
-          className={`flex items-center gap-2 rounded border px-3 py-1.5 text-[13px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
+          className={`flex items-center gap-2 rounded border px-3 py-1.5 text-[13px] font-medium transition ease-out active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING} ${
             accent
               ? "border-primary bg-primary/10 text-primary hover:bg-primary/15"
               : "border-outline bg-field text-text-main hover:border-primary"
           }`}
         >
           {currentLabel}
-          <Sym name="expand_more" size={16} className={accent ? "" : "text-text-dim"} />
+          <Sym
+            name="expand_more"
+            size={16}
+            className={`shrink-0 transition-transform duration-150 ease-out ${open ? "rotate-180" : ""} ${accent ? "" : "text-text-dim"}`}
+          />
         </button>
         {open && (
           <Listbox
@@ -226,7 +234,7 @@ function Listbox({
       tabIndex={-1}
       onKeyDown={onMenuKey}
       ref={(el) => el?.focus()}
-      className={`pop-in custom-scrollbar absolute left-0 top-full z-30 mt-1 max-h-72 overflow-auto rounded-md border border-outline bg-surface-lowest p-1 shadow-2xl outline-none ${widthClass}`}
+      className={`pop-in custom-scrollbar absolute left-0 top-full z-30 mt-1 max-h-72 max-w-[calc(100vw-2rem)] overflow-auto rounded-md border border-outline bg-surface-lowest p-1 shadow-2xl outline-none ${widthClass}`}
     >
       {options.map((opt, idx) => {
         const isSelected = opt.value === value;
@@ -241,13 +249,13 @@ function Listbox({
             className={`cursor-pointer rounded-md px-2.5 py-2 transition-colors ${isActive ? "bg-surface-high" : ""}`}
           >
             <div className="flex items-center justify-between gap-2">
-              <span className={`text-[13px] font-medium ${isSelected ? "text-primary" : "text-text-main"}`}>
+              <span className={`min-w-0 truncate text-[13px] font-medium ${isSelected ? "text-primary" : "text-text-main"}`}>
                 {opt.label}
               </span>
-              {isSelected && <Sym name="check" size={16} className="text-primary" />}
+              {isSelected && <Sym name="check" size={16} className="shrink-0 text-primary" />}
             </div>
             {opt.description && (
-              <p className="mt-0.5 text-[11px] leading-relaxed text-text-dim">{opt.description}</p>
+              <p className="mt-0.5 text-[11px] leading-relaxed text-text-variant">{opt.description}</p>
             )}
           </li>
         );

@@ -226,7 +226,7 @@ export function DomainPill({ domain }: { domain: string | null | undefined }) {
 /** A small muted source tag next to a persona name. */
 export function SourceTag({ source }: { source: string | null | undefined }) {
   return (
-    <span className="inline-flex items-center rounded bg-surface-high px-1.5 py-px font-mono text-[10px] text-text-dim">
+    <span className="inline-flex shrink-0 items-center rounded bg-surface-high px-1.5 py-px font-mono text-[10px] text-text-variant">
       {fmtSource(source)}
     </span>
   );

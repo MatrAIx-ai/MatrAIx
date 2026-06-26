@@ -443,7 +443,7 @@ function ChatbotEvalCockpit({
               <EnvironmentPanel environment={environment} applicationId={applicationId} />
 
               {error && (
-                <div className="rounded-md border border-danger/40 bg-danger/10 p-3">
+                <div className="rise-in rounded-md border border-danger/40 bg-danger/10 p-3">
                   <div className="flex items-start gap-2">
                     <Sym name="error" fill={1} size={18} className="mt-0.5 text-danger" />
                     <div className="min-w-0">
@@ -459,19 +459,19 @@ function ChatbotEvalCockpit({
                 onClick={handleRun}
                 disabled={!persona || isRunning}
                 title={!persona ? "Choose a persona first." : undefined}
-                className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition-colors hover:bg-primary-dim disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+                className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING}`}
               >
                 <Sym name="play_arrow" fill={1} size={20} />
                 <span className="font-display text-[18px] font-bold tracking-tight">Run eval</span>
               </button>
-              <p className="text-center text-[11px] leading-relaxed text-text-dim">
+              <p className="text-center text-[11px] leading-relaxed text-text-variant">
                 A simulated user chats with the app for a few turns, then rates how well it understood and met their needs.
               </p>
               <div className="flex items-center justify-center pt-1">
                 <button
                   type="button"
                   onClick={onOpenRuns}
-                  className={`hud text-[9px] text-primary hover:underline ${FOCUS_RING}`}
+                  className={`hud text-[9px] text-primary underline-offset-2 transition-opacity hover:underline active:opacity-70 ${FOCUS_RING}`}
                 >
                   Past runs →
                 </button>
@@ -507,7 +507,7 @@ function ChatbotEvalCockpit({
             <button
               type="button"
               onClick={handleNewRun}
-              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
             >
               <Sym name="tune" size={14} />
               New run
@@ -605,8 +605,8 @@ function ApplicationPicker({
               disabled={disabled}
               aria-pressed={active}
               onClick={() => onChange(opt.value)}
-              className={`relative rounded-md border p-3.5 text-left transition-all hover:border-primary disabled:cursor-not-allowed disabled:opacity-60 ${FOCUS_RING} ${
-                active ? "border-primary bg-primary/[0.07]" : "border-outline bg-surface-low"
+              className={`relative rounded-md border p-3.5 text-left transition-all ease-out hover:border-primary active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100 ${FOCUS_RING} ${
+                active ? "border-primary bg-primary/[0.07]" : "border-outline bg-surface-low hover:bg-surface"
               }`}
             >
               {active && <Sym name="check" size={14} className="absolute right-3 top-3 text-primary" />}
@@ -614,7 +614,7 @@ function ApplicationPicker({
                 <Sym name={APP_ICON[opt.value] ?? "apps"} size={20} className={active ? "text-primary" : "text-text-variant"} />
               </div>
               <div className="text-[13px] font-semibold text-text-main">{opt.label}</div>
-              <div className="mt-0.5 text-[11px] leading-snug text-text-dim">{opt.description}</div>
+              <div className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-text-variant">{opt.description}</div>
             </button>
           );
         })}
@@ -632,18 +632,18 @@ function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona
     <div className="panel rounded-md border border-outline bg-surface p-5">
       <div className="mb-3.5 flex items-center justify-between">
         <h3 className="hud text-[10px] text-text-dim">Target persona</h3>
-        <button type="button" onClick={onChange} className={`hud text-[9px] text-primary hover:underline ${FOCUS_RING}`}>
+        <button type="button" onClick={onChange} className={`hud text-[9px] text-primary underline-offset-2 transition-opacity hover:underline active:opacity-70 ${FOCUS_RING}`}>
           Browse catalog →
         </button>
       </div>
       {persona ? (
-        <div className="flex items-center gap-4">
+        <div className="rise-in flex items-center gap-4">
           <div className="grid h-14 w-14 shrink-0 place-items-center rounded-md border border-outline bg-surface-high">
             <Sym name="face" fill={1} size={24} className="text-primary" />
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="truncate font-display text-[16px] font-semibold text-text-main">{title}</span>
+              <span className="min-w-0 max-w-full truncate font-display text-[16px] font-semibold text-text-main">{title}</span>
               {persona.source && (
                 <span className="hud rounded border border-secondary/30 bg-secondary/10 px-1.5 py-0.5 text-[8px] text-secondary">
                   {persona.source}
@@ -656,7 +656,7 @@ function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona
           <button
             type="button"
             onClick={onChange}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Change
           </button>
@@ -665,7 +665,7 @@ function TargetPersonaPanel({ persona, onChange }: { persona: PersonaEvalPersona
         <button
           type="button"
           onClick={onChange}
-          className={`flex w-full items-center gap-4 rounded-md border border-dashed border-outline bg-surface-low p-3 text-left transition-colors hover:border-primary ${FOCUS_RING}`}
+          className={`flex w-full items-center gap-4 rounded-md border border-dashed border-outline bg-surface-low p-3 text-left transition ease-out hover:border-primary hover:bg-surface active:scale-[0.99] ${FOCUS_RING}`}
         >
           <div className="grid h-14 w-14 shrink-0 place-items-center rounded-md border border-dashed border-outline bg-surface-high">
             <Sym name="person_search" size={24} className="text-text-dim" />
@@ -719,7 +719,7 @@ function PersonaPickerModal({
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className={`grid h-8 w-8 place-items-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`grid h-8 w-8 place-items-center rounded-md border border-outline text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
           >
             <Sym name="close" size={18} />
           </button>
@@ -800,7 +800,7 @@ function LiveStatusBar({
             <button
               type="button"
               onClick={onRetry}
-              className={`flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-[12px] font-medium text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+              className={`flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-[12px] font-medium text-danger transition ease-out hover:bg-danger/20 active:scale-[0.98] ${FOCUS_RING}`}
             >
               <Sym name="refresh" size={14} />
               Retry
@@ -812,7 +812,7 @@ function LiveStatusBar({
               onClick={onExport}
               disabled={!canExport}
               title="Save this conversation and its scores as a JSON file."
-              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING}`}
             >
               <Sym name="download" size={14} />
               Download
@@ -821,7 +821,7 @@ function LiveStatusBar({
           <button
             type="button"
             onClick={onOpenRuns}
-            className={`hidden items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] text-text-variant transition-colors hover:text-primary sm:flex ${FOCUS_RING}`}
+            className={`hidden items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] text-text-variant transition ease-out hover:text-primary active:scale-[0.98] sm:flex ${FOCUS_RING}`}
           >
             <Sym name="history" size={14} />
             Past runs

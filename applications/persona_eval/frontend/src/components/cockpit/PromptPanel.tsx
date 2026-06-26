@@ -9,9 +9,9 @@ export function PromptPanel({ prompts }: PromptPanelProps) {
   if (!prompts) {
     return (
       <div className="p-md">
-        <div className="rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
+        <div className="rise-in rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
           <Sym name="terminal" size={28} className="text-text-dim" />
-          <p className="mt-2 text-[13px] leading-relaxed text-text-dim">
+          <p className="mt-2 text-[13px] leading-relaxed text-text-variant">
             Run a simulation to see the exact prompts used.
           </p>
         </div>
@@ -21,15 +21,28 @@ export function PromptPanel({ prompts }: PromptPanelProps) {
 
   return (
     <div className="space-y-3 p-md">
-      <PromptBlock label="Harbor prompt" sublabel="persona system prompt" value={prompts.harborPrompt} />
-      <PromptBlock label="Task prompt" sublabel="application extra instruction" value={prompts.taskPrompt} />
+      <PromptBlock label="Harbor prompt" sublabel="persona system prompt" value={prompts.harborPrompt} index={0} />
+      <PromptBlock label="Task prompt" sublabel="application extra instruction" value={prompts.taskPrompt} index={1} />
     </div>
   );
 }
 
-function PromptBlock({ label, sublabel, value }: { label: string; sublabel: string; value: string }) {
+function PromptBlock({
+  label,
+  sublabel,
+  value,
+  index = 0,
+}: {
+  label: string;
+  sublabel: string;
+  value: string;
+  index?: number;
+}) {
   return (
-    <section className="overflow-hidden rounded-md border border-outline bg-surface-lowest">
+    <section
+      className="rise-in overflow-hidden rounded-md border border-outline bg-surface-lowest"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms` }}
+    >
       <div className="flex items-center justify-between gap-3 border-b border-outline bg-surface-low px-3 py-2">
         <div className="min-w-0">
           <h3 className="font-semibold text-sm text-text-main">{label}</h3>

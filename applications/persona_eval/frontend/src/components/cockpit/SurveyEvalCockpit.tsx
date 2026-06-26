@@ -89,9 +89,9 @@ function questionTypeMeta(type: string): { label: string; tone: string; tooltip:
     case "multi_choice":
       return { label: "Multi", tone: "text-warn border-warn/30 bg-warn/10", tooltip: "Choose all that apply" };
     case "free_text":
-      return { label: "Free", tone: "text-text-dim border-outline bg-surface-high", tooltip: "Answer in their own words" };
+      return { label: "Free", tone: "text-text-variant border-outline bg-surface-high", tooltip: "Answer in their own words" };
     default:
-      return { label: type, tone: "text-text-dim border-outline bg-surface-high", tooltip: type };
+      return { label: type, tone: "text-text-variant border-outline bg-surface-high", tooltip: type };
   }
 }
 
@@ -280,9 +280,9 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
             ) : instrumentsQuery.isLoading ? (
               <div className="space-y-2" aria-hidden>
                 <p className="hud text-[10px] text-text-dim">Loading questionnaires…</p>
-                <div className="h-12 animate-pulse rounded-md bg-surface-high" />
-                <div className="h-12 animate-pulse rounded-md bg-surface-high" />
-                <div className="h-12 animate-pulse rounded-md bg-surface-high" />
+                <div className="h-12 animate-rb-pulse rounded-md bg-surface-high" />
+                <div className="h-12 animate-rb-pulse rounded-md bg-surface-high" />
+                <div className="h-12 animate-rb-pulse rounded-md bg-surface-high" />
               </div>
             ) : instrument ? (
               <InstrumentPreview instrument={instrument} />
@@ -310,10 +310,10 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
               type="button"
               onClick={handleRun}
               disabled={!persona || !instrument || isRunning}
-              className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition-colors hover:bg-primary-dim disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+              className={`glow flex w-full items-center justify-center gap-2.5 rounded-md bg-primary py-4 text-on-primary transition hover:bg-primary-dim active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
             >
               {isRunning ? (
-                <Sym name="autorenew" size={20} className="animate-spin" />
+                <Sym name="autorenew" size={20} className="animate-rb-spin" />
               ) : (
                 <Sym name="play_arrow" fill={1} size={20} />
               )}
@@ -326,14 +326,14 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
               <button
                 type="button"
                 onClick={handleExport}
-                className={`flex w-full items-center justify-center gap-2 rounded-md border border-outline bg-surface-low px-4 py-2.5 text-[12px] font-medium text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+                className={`flex w-full items-center justify-center gap-2 rounded-md border border-outline bg-surface-low px-4 py-2.5 text-[12px] font-medium text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
               >
                 <Sym name="download" size={16} />
                 Download results
               </button>
             )}
 
-            <p className="text-center text-[11px] leading-relaxed text-text-dim">
+            <p className="text-center text-[11px] leading-relaxed text-text-variant">
               A simulated user fills out the questionnaire, then we show its answers and an average rating.
             </p>
           </div>
@@ -344,11 +344,11 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
       {catalogOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="fade-in absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setCatalogOpen(false)}
             aria-hidden
           />
-          <div className="relative z-10 flex h-full w-[88%] max-w-[320px] flex-col lg:w-[300px]">
+          <div className="fade-in relative z-10 flex h-full w-[88%] max-w-[320px] flex-col lg:w-[300px]">
             <PersonaCatalog
               selectedId={persona?.id ?? null}
               onSelect={(next) => {
@@ -360,7 +360,7 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
               type="button"
               onClick={() => setCatalogOpen(false)}
               aria-label="Close persona picker"
-              className={`absolute right-3 top-3 z-20 grid h-8 w-8 place-items-center rounded-md border border-outline bg-surface-lowest text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+              className={`absolute right-3 top-3 z-20 grid h-8 w-8 place-items-center rounded-md border border-outline bg-surface-lowest text-text-variant transition hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
             >
               <Sym name="close" size={18} />
             </button>
@@ -383,10 +383,10 @@ function AppTypeSwitch({
   onChange: (value: PersonaEvalTaskType) => void;
   disabled?: boolean;
 }) {
-  const items: ReadonlyArray<{ value: PersonaEvalTaskType; label: string; icon: string }> = [
-    { value: "chatbot", label: "Chatbot", icon: "forum" },
-    { value: "survey", label: "Survey", icon: "fact_check" },
-    { value: "web", label: "Web", icon: "language" },
+  const items: ReadonlyArray<{ value: PersonaEvalTaskType; label: string; icon: string; hint: string }> = [
+    { value: "chatbot", label: "Chatbot", icon: "forum", hint: "A back-and-forth conversation." },
+    { value: "survey", label: "Survey", icon: "fact_check", hint: "A fixed questionnaire the user fills out." },
+    { value: "web", label: "Web", icon: "language", hint: "A real browser task the user completes." },
   ];
   return (
     <div className="shrink-0">
@@ -399,9 +399,11 @@ function AppTypeSwitch({
               key={item.value}
               type="button"
               disabled={disabled}
+              title={item.hint}
+              aria-pressed={active}
               onClick={() => onChange(item.value)}
               className={`flex items-center gap-1.5 rounded px-3 py-1.5 text-[12px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${FOCUS_RING} ${
-                active ? "bg-primary text-on-primary" : "text-text-variant hover:text-text-main"
+                active ? "bg-primary text-on-primary" : "text-text-variant hover:bg-surface hover:text-text-main"
               }`}
             >
               <Sym name={item.icon} fill={active ? 1 : 0} size={14} />
@@ -472,7 +474,7 @@ function SurveyPipeline({
             <span className="flex shrink-0 items-center gap-1.5" title={node.title}>
               <Sym name={node.icon} size={14} className={iconToneText(node.tone, idle)} />
               <span className="text-text-main">{node.label}</span>
-              {node.sub && <span className="text-text-dim">· {node.sub}</span>}
+              {node.sub && <span className="text-text-variant">· {node.sub}</span>}
               {!idle && (
                 <span className={`hud ml-1 shrink-0 rounded border px-1.5 py-0.5 text-[8px] ${toneClass(node.tone)}`}>
                   {pillForTone(node.tone)}
@@ -563,7 +565,7 @@ function FieldSelect({
           onChange={(event) => onChange(event.target.value)}
           disabled={disabled || options.length === 0}
           title={title}
-          className={`w-full appearance-none rounded border bg-field px-3 py-2.5 pr-9 text-[13px] text-text-main outline-none transition-colors focus:border-primary disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
+          className={`w-full appearance-none rounded border bg-field px-3 py-2.5 pr-9 text-[13px] text-text-main outline-none transition-colors focus:border-primary enabled:hover:border-primary/70 disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING} ${
             accent ? "border-primary/60" : "border-outline"
           }`}
         >
@@ -611,7 +613,7 @@ function InstrumentPreview({ instrument }: { instrument: SurveyInstrument }) {
               >
                 {meta.label}
               </span>
-              <span className="truncate text-[12px] text-text-variant">{question.prompt}</span>
+              <span className="min-w-0 flex-1 truncate text-[12px] text-text-variant">{question.prompt}</span>
             </div>
           );
         })}
@@ -672,7 +674,7 @@ function SurveyLive({
           </h2>
           {running && (
             <div className="mt-2 flex items-center gap-2 text-[12px] text-text-variant">
-              <Sym name="autorenew" size={14} className="animate-spin text-primary" />
+              <Sym name="autorenew" size={14} className="animate-rb-spin text-primary" />
               <span>{result ? `Answering Q${Math.min(answered + 1, total)} of ${total}` : status ?? "Simulated user is answering…"}</span>
             </div>
           )}
@@ -703,7 +705,7 @@ function SurveyLive({
           </div>
           <div className="h-1.5 overflow-hidden rounded-full bg-field">
             {result ? (
-              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+              <div className="h-full rounded-full bg-primary transition-[width] duration-500 ease-out" style={{ width: `${pct}%` }} />
             ) : (
               <div className="h-full w-1/3 animate-pulse rounded-full bg-primary/60" />
             )}
@@ -713,7 +715,7 @@ function SurveyLive({
 
       {/* Summary tiles (done) */}
       {result && completion && (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="rise-in grid grid-cols-2 gap-3 sm:grid-cols-4">
           <MetricTile value={`${answered}/${total}`} caption="Completion" lead />
           <ValidityTile valid={completion.valid} />
           <MetricTile
@@ -750,8 +752,8 @@ function SurveyLive({
         </div>
       ) : running ? (
         <div className="space-y-4" aria-hidden>
-          <div className="h-36 animate-pulse rounded-md bg-surface-high" />
-          <div className="h-36 animate-pulse rounded-md bg-surface-high" />
+          <div className="h-36 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="h-36 animate-rb-pulse rounded-md bg-surface-high" />
         </div>
       ) : null}
 
@@ -787,7 +789,10 @@ function SurveyAnswerCard({
   const meta = questionTypeMeta(question?.type ?? "");
   const confidence = answer.confidence;
   return (
-    <div className="rounded-md border border-outline bg-surface p-5">
+    <div
+      className="rise-in rounded-md border border-outline bg-surface p-5"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms` }}
+    >
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <span className="hud text-[10px] text-text-dim">Q{index + 1}</span>
@@ -803,7 +808,7 @@ function SurveyAnswerCard({
 
       {(answer.rationale || confidence != null) && (
         <div className="mt-5 border-t border-outline pt-3.5">
-          <p className="font-mono text-[11px] leading-relaxed text-text-dim">
+          <p className="font-mono text-[11px] leading-relaxed text-text-variant">
             {answer.rationale ? `persona rationale: ${answer.rationale}` : "persona answered"}{" "}
             {confidence != null && <span className="text-text-variant">(conf {confidence.toFixed(2)})</span>}
           </p>
@@ -924,7 +929,7 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className={`flex w-full items-center justify-between gap-2 border-b border-outline px-4 py-3 text-left ${FOCUS_RING}`}
+        className={`flex w-full items-center justify-between gap-2 border-b border-outline px-4 py-3 text-left transition-colors hover:bg-surface-low active:bg-surface-high ${FOCUS_RING}`}
       >
         <span className="hud text-[10px] text-text-dim">Step-by-step log</span>
         <span className="flex items-center gap-2">
@@ -933,7 +938,7 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
         </span>
       </button>
       {open && (
-        <div className="max-h-80 divide-y divide-outline-dim overflow-auto">
+        <div className="rise-in custom-scrollbar max-h-80 divide-y divide-outline-dim overflow-auto">
           {events.map((event, index) => (
             <div key={`${event.timestamp}-${index}`} className="px-4 py-2.5">
               <div className="flex items-center justify-between gap-2">
@@ -1002,7 +1007,7 @@ function TargetPersonaPanel({
         <button
           type="button"
           onClick={onBrowse}
-          className={`hud rounded text-[9px] text-primary hover:underline ${FOCUS_RING}`}
+          className={`hud rounded text-[9px] text-primary transition-colors hover:underline active:text-primary-dim ${FOCUS_RING}`}
         >
           Browse catalog →
         </button>
@@ -1035,7 +1040,7 @@ function TargetPersonaPanel({
             <button
               type="button"
               onClick={onViewRecord}
-              className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-text-variant transition-colors hover:text-primary ${FOCUS_RING}`}
+              className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-text-variant transition-colors hover:text-primary active:text-primary-dim ${FOCUS_RING}`}
             >
               <Sym name="data_object" size={14} /> View full record
             </button>
@@ -1043,7 +1048,7 @@ function TargetPersonaPanel({
           <button
             type="button"
             onClick={onBrowse}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Change
           </button>
@@ -1062,7 +1067,7 @@ function TargetPersonaPanel({
           <button
             type="button"
             onClick={onBrowse}
-            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`shrink-0 rounded-md border border-outline bg-surface-low px-3.5 py-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
           >
             Browse
           </button>
@@ -1081,14 +1086,14 @@ function PromptsFold({ prompts }: { prompts: ReactNode }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className={`flex w-full items-center justify-between gap-2 px-4 py-3 text-left ${FOCUS_RING}`}
+        className={`flex w-full items-center justify-between gap-2 px-4 py-3 text-left transition-colors hover:bg-surface-low active:bg-surface-high ${FOCUS_RING}`}
       >
         <span className="hud flex items-center gap-1.5 text-[10px] text-text-dim">
           <Sym name="terminal" size={14} /> Prompts used
         </span>
         <Sym name={open ? "expand_more" : "chevron_right"} size={18} className="text-text-dim" />
       </button>
-      {open && <div className="border-t border-outline">{prompts}</div>}
+      {open && <div className="rise-in border-t border-outline">{prompts}</div>}
     </section>
   );
 }
@@ -1152,7 +1157,7 @@ function ErrorCard({
   retryLabel?: string;
 }) {
   return (
-    <div className="rounded-md border border-danger/30 bg-danger/10 p-4">
+    <div className="rise-in rounded-md border border-danger/30 bg-danger/10 p-4">
       <div className="flex items-start gap-3">
         <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
         <div className="min-w-0 flex-1">

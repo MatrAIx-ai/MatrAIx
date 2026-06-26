@@ -88,7 +88,7 @@ export function EnvironmentPanel({ environment, applicationId }: EnvironmentPane
       </div>
       <div className="mt-4 border-t border-outline pt-3">
         <div className="hud mb-1.5 text-[8px] text-text-dim">Prompt boundary</div>
-        <p className="text-[11px] leading-relaxed text-text-dim">
+        <p className="text-[11px] leading-relaxed text-text-variant">
           {promptOwnership.personaSystemPrompt} · {promptOwnership.taskPrompt}
         </p>
       </div>
@@ -156,11 +156,11 @@ export function EnvironmentPopover({ environment }: EnvironmentPopoverProps) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={panelId}
-        className={`flex items-center gap-1.5 rounded border border-outline bg-surface-low px-3 py-1.5 text-[13px] font-medium text-text-variant transition-colors hover:border-primary ${FOCUS_RING}`}
+        className={`flex items-center gap-1.5 rounded border border-outline bg-surface-low px-3 py-1.5 text-[13px] font-medium text-text-variant transition ease-out hover:border-primary hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
       >
-        <Sym name="hub" size={16} className="text-text-dim" />
-        {runtime}
-        <Sym name={open ? "expand_less" : "expand_more"} size={16} className="text-text-dim" />
+        <Sym name="hub" size={16} className="shrink-0 text-text-dim" />
+        <span className="min-w-0 truncate">{runtime}</span>
+        <Sym name={open ? "expand_less" : "expand_more"} size={16} className="shrink-0 text-text-dim" />
       </button>
 
       {open && (
@@ -221,7 +221,7 @@ export function EnvironmentPopover({ environment }: EnvironmentPopoverProps) {
               {promptRows.map((r) => (
                 <div key={r.label} className="flex items-start justify-between gap-3">
                   <span className="shrink-0 hud text-[9px] text-text-dim">{r.label}</span>
-                  <span className="max-w-[12.5rem] text-right text-[11px] leading-relaxed text-text-dim">
+                  <span className="max-w-[12.5rem] text-right text-[11px] leading-relaxed text-text-variant">
                     {r.value}
                   </span>
                 </div>

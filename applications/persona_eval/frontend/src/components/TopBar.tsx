@@ -79,7 +79,7 @@ export function TopBar({
             type="button"
             onClick={() => onModeChange("normal")}
             aria-label="matrAIx home"
-            className={`whitespace-nowrap font-display text-[19px] font-bold tracking-tight text-text-main ${FOCUS_RING}`}
+            className={`whitespace-nowrap font-display text-[19px] font-bold tracking-tight text-text-main transition hover:opacity-90 active:scale-[0.97] ${FOCUS_RING}`}
           >
             matr<span className="text-primary">AI</span>x
           </button>
@@ -108,7 +108,7 @@ export function TopBar({
             type="button"
             onClick={onOpenSearch}
             aria-label="Search the catalog of personas and items — press Command-K"
-            className={`hidden items-center gap-2 rounded-md border border-outline bg-surface-low py-1.5 pl-3 pr-2 text-[12px] text-text-dim transition-colors hover:border-primary hover:text-text-variant lg:flex ${FOCUS_RING}`}
+            className={`hidden items-center gap-2 rounded-md border border-outline bg-surface-low py-1.5 pl-3 pr-2 text-[12px] text-text-variant transition hover:border-primary hover:text-text-main active:scale-[0.98] lg:flex ${FOCUS_RING}`}
           >
             <Sym name="search" size={14} className="text-text-dim" />
             <span className="whitespace-nowrap">Search catalog</span>
@@ -124,7 +124,7 @@ export function TopBar({
             onClick={toggle}
             aria-label={nextIsLight ? "Switch to light theme" : "Switch to dark theme"}
             title="Toggle light / dark"
-            className={`grid h-9 w-9 flex-none place-items-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`grid h-9 w-9 flex-none place-items-center rounded-md border border-outline text-text-variant transition hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
           >
             <Sym name={nextIsLight ? "light_mode" : "dark_mode"} size={18} />
           </button>
@@ -136,7 +136,7 @@ export function TopBar({
                 onClick={onExport}
                 disabled={!hasSession}
                 title="Download this chat as a file"
-                className={`hidden items-center gap-1.5 rounded-md border border-outline px-3 py-1.5 text-xs font-medium text-text-variant transition-colors hover:bg-surface-low hover:text-text-main disabled:cursor-not-allowed disabled:opacity-55 sm:flex ${FOCUS_RING}`}
+                className={`hidden items-center gap-1.5 rounded-md border border-outline px-3 py-1.5 text-xs font-medium text-text-variant transition hover:bg-surface-low hover:text-text-main active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-55 sm:flex ${FOCUS_RING}`}
               >
                 <Sym name="download" size={16} />
                 Export
@@ -146,7 +146,7 @@ export function TopBar({
                 onClick={onSave}
                 disabled={!hasSession || saving}
                 title="Save this chat to the server"
-                className={`hidden rounded-md border border-outline px-3 py-1.5 text-xs font-medium text-text-variant transition-colors hover:bg-surface-low hover:text-text-main disabled:cursor-not-allowed disabled:opacity-55 sm:flex ${FOCUS_RING}`}
+                className={`hidden rounded-md border border-outline px-3 py-1.5 text-xs font-medium text-text-variant transition hover:bg-surface-low hover:text-text-main active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-55 sm:flex ${FOCUS_RING}`}
               >
                 {saving ? "Saving…" : "Save"}
               </button>
@@ -158,7 +158,7 @@ export function TopBar({
             <button
               type="button"
               onClick={onNew}
-              className={`flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-[12px] font-semibold text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+              className={`flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-[12px] font-semibold text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
             >
               <Sym name="add" size={16} />
               <span className="hidden sm:inline">New chat</span>
@@ -168,7 +168,7 @@ export function TopBar({
               type="button"
               onClick={() => onModeChange("persona-eval")}
               title="Configure and launch a new evaluation run"
-              className={`flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-[12px] font-semibold text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+              className={`flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-[12px] font-semibold text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
             >
               <Sym name="play_arrow" fill={1} size={16} />
               <span className="hidden sm:inline">New run</span>

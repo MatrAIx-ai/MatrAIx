@@ -50,7 +50,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
     return (
       <div className="grid min-h-screen place-items-center bg-surface-dim p-6 text-text-main">
-        <div className="panel w-full max-w-md rounded-md border border-outline bg-surface p-6 shadow-2xl">
+        <div className="panel rise-in w-full max-w-md rounded-md border border-outline bg-surface p-6 shadow-2xl">
           <div className="flex items-center gap-2.5">
             <Sym name="error" fill={1} size={22} className="flex-none text-danger" />
             <h1 className="font-display text-lg font-bold tracking-tight text-text-main">Something went wrong</h1>
@@ -60,7 +60,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             recover the view or reload the app.
           </p>
           {error.message && (
-            <pre className="mt-3 max-h-32 overflow-auto rounded-md border border-outline bg-field px-3 py-2 font-mono text-[11px] leading-relaxed text-text-variant">
+            <pre className="mt-3 max-h-32 overflow-auto whitespace-pre-wrap break-words rounded-md border border-outline bg-field px-3 py-2 font-mono text-[11px] leading-relaxed text-text-variant">
               {error.message}
             </pre>
           )}
@@ -68,7 +68,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             <button
               type="button"
               onClick={this.handleReset}
-              className={`inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-xs font-medium text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+              className={`inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-xs font-medium text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
             >
               <Sym name="refresh" size={16} />
               Try again
@@ -76,7 +76,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             <button
               type="button"
               onClick={this.handleReload}
-              className={`inline-flex items-center gap-1.5 rounded-md border border-outline px-4 py-2 text-xs font-medium text-text-variant transition-colors hover:bg-surface-low hover:text-text-main ${FOCUS_RING}`}
+              className={`inline-flex items-center gap-1.5 rounded-md border border-outline px-4 py-2 text-xs font-medium text-text-variant transition hover:bg-surface-low hover:text-text-main active:scale-[0.98] ${FOCUS_RING}`}
             >
               Reload
             </button>

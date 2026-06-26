@@ -17,7 +17,7 @@
 import type { ReactNode } from "react";
 
 import { RecommendationCard } from "./RecommendationCard";
-import { Sym } from "./cockpit/cockpitShared";
+import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import type { RecommendedItem } from "@/lib/types";
 
 /** One small fact chip shown under a RecAI bubble. */
@@ -50,7 +50,7 @@ export interface ChatMessageProps {
 
 const CHIP_TONE: Record<NonNullable<MetaChip["tone"]>, string> = {
   positive: "border-secondary/25 bg-secondary/10 text-secondary",
-  default: "border-outline text-text-dim",
+  default: "border-outline text-text-variant",
 };
 
 export function ChatMessage({
@@ -69,7 +69,7 @@ export function ChatMessage({
     return (
       <div className="flex flex-col items-end pl-10">
         <div className="hud mb-1.5 mr-1 text-[9px] text-text-dim">{name}</div>
-        <div className="whitespace-pre-wrap rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-text-main">
+        <div className="whitespace-pre-wrap break-words rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-text-main">
           {children}
         </div>
       </div>
@@ -121,7 +121,7 @@ export function ChatMessage({
             }
           }}
           title={title ?? "Inspect this turn"}
-          className="w-full text-left focus-visible:outline-none"
+          className={`w-full cursor-pointer text-left ${FOCUS_RING}`}
         >
           {bubble}
         </div>

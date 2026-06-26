@@ -67,7 +67,7 @@ export function RunCompare({ runIdA, runIdB, onBack }: RunCompareProps) {
           <button
             type="button"
             onClick={onBack}
-            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
           >
             <Sym name="arrow_back" size={16} />
             All runs
@@ -233,7 +233,7 @@ function CompareBody({
   const regressionCount = dimensions.filter((d) => (improvement(d) ?? 0) < 0).length;
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 rise-in">
       {/* Two headers, side by side: A = baseline, B = candidate. */}
       <div className="grid gap-4 sm:grid-cols-2">
         <SideHeader run={runA} runId={idA} role="Baseline" />
@@ -273,10 +273,10 @@ function CompareBody({
             type="button"
             onClick={() => setOrderByRegressions((v) => !v)}
             aria-pressed={orderByRegressions}
-            className={`ml-auto flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[12px] transition-colors ${FOCUS_RING} ${
+            className={`ml-auto flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
               orderByRegressions
-                ? "bg-primary text-on-primary"
-                : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:text-text-main"
+                ? "bg-primary text-on-primary hover:bg-primary-dim"
+                : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:bg-surface hover:text-text-main"
             }`}
           >
             <Sym name="sort" size={15} />
@@ -298,7 +298,7 @@ function CompareBody({
           ))}
         </ul>
 
-        <p className="mt-2.5 text-[11px] leading-relaxed text-text-dim">
+        <p className="mt-2.5 text-[11px] leading-relaxed text-text-variant">
           Green = the candidate did better · red = it did worse · grey = no change. For turns before
           first suggestion, fewer turns is better.
         </p>
@@ -351,7 +351,7 @@ function SideHeader({ run, runId, role }: { run: RunDetailView; runId: string; r
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-variant">
         <span>{fmtGoalContext(config.goalContextId)}</span>
         <span className="font-mono text-[11px]">{fmtRunDate(run.createdAt)}</span>
-        <span className="truncate font-mono text-[11px]" title="Run id">
+        <span className="max-w-[180px] truncate font-mono text-[11px]" title="Run id">
           {runId}
         </span>
       </div>
@@ -418,7 +418,7 @@ function AlignedTrajectories({ runA, runB }: { runA: RunDetailView; runB: RunDet
 
   if (rows === 0) {
     return (
-      <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-6 text-center text-[13px] text-text-dim">
+      <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-6 text-center text-[13px] text-text-variant">
         Neither run recorded a conversation.
       </div>
     );
@@ -450,7 +450,7 @@ function AlignedTrajectories({ runA, runB }: { runA: RunDetailView; runB: RunDet
 /** One aligned turn cell (persona + assistant lines), or a quiet placeholder. */
 function TurnCell({ turn, index }: { turn: RunTranscriptTurn | undefined; index: number }) {
   if (!turn) {
-    return <div className="bg-surface px-3 py-2.5 text-[13px] italic text-text-dim">turn {index + 1} didn&apos;t happen</div>;
+    return <div className="bg-surface px-3 py-2.5 text-[13px] italic text-text-variant">turn {index + 1} didn&apos;t happen</div>;
   }
   const hiccup = isAgentHiccup(turn.assistantMessage);
   return (
@@ -504,10 +504,10 @@ function CompareLoading() {
   return (
     <div className="mt-4 space-y-4" aria-hidden>
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="h-28 animate-pulse rounded-md bg-surface-high" />
-        <div className="h-28 animate-pulse rounded-md bg-surface-high" />
+        <div className="h-28 animate-rb-pulse rounded-md bg-surface-high" />
+        <div className="h-28 animate-rb-pulse rounded-md bg-surface-high" />
       </div>
-      <div className="h-48 animate-pulse rounded-md bg-surface-high" />
+      <div className="h-48 animate-rb-pulse rounded-md bg-surface-high" />
     </div>
   );
 }
@@ -518,7 +518,7 @@ function CompareError({ error, onRetry }: { error: unknown; onRetry: () => void 
       ? error.message
       : "One of the two runs wouldn't load. Try again in a moment.";
   return (
-    <div className="mt-5 rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center">
+    <div className="mt-5 rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center rise-in">
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md border border-danger/30 bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
@@ -529,7 +529,7 @@ function CompareError({ error, onRetry }: { error: unknown; onRetry: () => void 
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition ease-out hover:border-danger/60 hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again

@@ -79,7 +79,7 @@ export function Trajectory({
       <div className="mx-auto w-full max-w-2xl space-y-7">
         {/* Scenario banner — the real SUT / goal-context context. */}
         {(sutDescription || goalContext) && (
-          <div className="flex items-start gap-2.5 rounded-md border border-outline bg-surface-lowest px-4 py-3">
+          <div className="rise-in flex items-start gap-2.5 rounded-md border border-outline bg-surface-lowest px-4 py-3">
             <Sym name="info" size={16} className="mt-0.5 shrink-0 text-primary" />
             <div className="min-w-0">
               <div className="hud mb-1 text-[9px] text-primary">Scenario · {goalContext?.label ?? "Realistic"}</div>
@@ -97,7 +97,7 @@ export function Trajectory({
             <div
               key={turn.turnId ?? i}
               ref={(el) => registerTurnRef(i, el)}
-              className={`space-y-7 rounded-md transition-colors ${focused ? "bg-primary/5 p-3 ring-1 ring-primary/30" : ""}`}
+              className={`rise-in space-y-7 rounded-md transition-colors ${focused ? "bg-primary/5 p-3 ring-1 ring-primary/30" : ""}`}
             >
               <PersonaBubble message={turn.userMessage} />
               <RecBotBubble
@@ -121,7 +121,7 @@ export function Trajectory({
 
         {/* Failed — plain-language cause + Retry (preserves config). */}
         {failed && (
-          <div className="rounded-md border border-danger/40 bg-danger/10 p-4">
+          <div className="rise-in rounded-md border border-danger/40 bg-danger/10 p-4">
             <div className="flex items-start gap-3">
               <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
               <div className="min-w-0 flex-1">
@@ -132,7 +132,7 @@ export function Trajectory({
                 <button
                   type="button"
                   onClick={onRetry}
-                  className={`mt-3 inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+                  className={`mt-3 inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
                 >
                   <Sym name="refresh" size={16} />
                   Retry
@@ -149,7 +149,7 @@ export function Trajectory({
 /** A shimmering "generating" app bubble (mockup `:519-532`). */
 function GeneratingBubble({ appName }: { appName: string }) {
   return (
-    <div className="flex w-full flex-col items-start pr-10" aria-live="polite">
+    <div className="rise-in flex w-full flex-col items-start pr-10" aria-live="polite">
       <div className="hud mb-1.5 ml-1 flex items-center gap-2 text-[9px] text-primary">
         <Sym name="smart_toy" fill={1} size={14} />
         <span>{appName} · generating</span>
@@ -172,7 +172,7 @@ function GeneratingBubble({ appName }: { appName: string }) {
 /** A skeleton turn shown while a run warms / before turns land. */
 function SkeletonTurn({ label }: { label: string | null }) {
   return (
-    <div className="space-y-7" aria-hidden>
+    <div className="rise-in space-y-7" aria-hidden>
       {/* Persona side (right) */}
       <div className="flex w-full flex-col items-end gap-1 pl-10">
         <div className="h-3 w-20 animate-rb-pulse rounded bg-surface-high" />
@@ -186,7 +186,7 @@ function SkeletonTurn({ label }: { label: string | null }) {
       {label && (
         <div className="flex items-center justify-center gap-2 py-1">
           <Sym name="autorenew" size={16} className="animate-rb-spin text-primary" />
-          <span className="text-[13px] text-text-dim">{label}</span>
+          <span className="text-[13px] text-text-variant">{label}</span>
         </div>
       )}
     </div>

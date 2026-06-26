@@ -63,7 +63,7 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
         onClick={onToggle}
         aria-expanded={open}
         aria-controls={hasBody ? panelId : undefined}
-        className={`flex w-full items-center justify-between p-2 hud text-[10px] text-text-dim transition-colors ${
+        className={`flex w-full items-center justify-between p-2 hud text-[10px] text-text-dim transition-colors hover:text-text-variant active:bg-surface-high ${
           open ? "border-b border-outline bg-surface-low" : "hover:bg-surface-high"
         } ${FOCUS_RING}`}
       >
@@ -75,9 +75,9 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
       </button>
 
       {open && (
-        <div id={panelId}>
+        <div id={panelId} className="rise-in">
           {!hasBody && (
-            <p className="p-3 text-[13px] text-text-dim">
+            <p className="p-3 text-[13px] text-text-variant">
               The app didn&apos;t expose any internal steps for this turn.
             </p>
           )}
@@ -90,8 +90,8 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
                   <li key={i} className="flex items-center gap-2 font-mono text-[11px] text-text-variant">
                     <span className="w-4 font-mono text-[11px] text-text-dim">{i + 1}</span>
                     <Sym name={iconForTool(step.tool)} size={15} className="text-primary" />
-                    <span className="font-medium">{step.tool}</span>
-                    {step.detail && <span className="truncate text-text-dim">{step.detail}</span>}
+                    <span className="shrink-0 font-medium">{step.tool}</span>
+                    {step.detail && <span className="min-w-0 truncate text-text-variant">{step.detail}</span>}
                   </li>
                 ))}
               </ol>
@@ -103,14 +103,14 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
               <p className="mb-2 hud text-[10px] text-text-dim">
                 Candidates it ranked, with scores
               </p>
-              <div className="space-y-1 font-mono text-[11px] text-text-dim">
+              <div className="space-y-1 font-mono text-[11px] text-text-variant">
                 {scored.map((item) => (
                   <div key={`${item.itemId}-${item.rank}`} className="flex items-center justify-between gap-3">
-                    <span className="truncate">
+                    <span className="min-w-0 truncate">
                       {item.itemId}
                       {item.title ? ` · ${item.title}` : ""}
                     </span>
-                    <span className="flex-shrink-0 text-text-variant">{item.score?.toFixed(3)}</span>
+                    <span className="flex-shrink-0 text-text-main">{item.score?.toFixed(3)}</span>
                   </div>
                 ))}
               </div>

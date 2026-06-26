@@ -80,7 +80,7 @@ export function SessionRail({
           type="button"
           onClick={onNew}
           aria-label="Start a new chat"
-          className={`flex w-full items-center justify-center gap-2 rounded-md bg-primary py-2 text-[12px] font-semibold text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+          className={`flex w-full items-center justify-center gap-2 rounded-md bg-primary py-2 text-[12px] font-semibold text-on-primary transition hover:bg-primary-dim active:scale-[0.98] ${FOCUS_RING}`}
         >
           <Sym name="add" size={16} />
           New chat
@@ -104,7 +104,7 @@ export function SessionRail({
               <button
                 type="button"
                 onClick={onRetry}
-                className={`mt-2.5 inline-flex items-center gap-1.5 rounded-md border border-warn/40 bg-warn/10 px-3 py-1.5 text-[11px] font-medium text-warn transition-colors hover:bg-warn/20 ${FOCUS_RING}`}
+                className={`mt-2.5 inline-flex items-center gap-1.5 rounded-md border border-warn/40 bg-warn/10 px-3 py-1.5 text-[11px] font-medium text-warn transition hover:bg-warn/20 active:scale-[0.98] ${FOCUS_RING}`}
               >
                 <Sym name="refresh" size={14} />
                 Recheck
@@ -123,7 +123,7 @@ export function SessionRail({
           </div>
         ) : (
           <div className="space-y-1">
-            {sessions.map((s) => {
+            {sessions.map((s, i) => {
               const active = s.id === activeId;
               return (
                 <button
@@ -131,10 +131,11 @@ export function SessionRail({
                   type="button"
                   onClick={() => onSelect(s.id)}
                   aria-current={active ? "true" : undefined}
-                  className={`block w-full rounded-md border-l-2 px-3 py-2.5 text-left transition-colors ${FOCUS_RING} ${
+                  style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
+                  className={`rise-in block w-full rounded-md border-l-2 px-3 py-2.5 text-left transition-colors ${FOCUS_RING} ${
                     active
                       ? "border-primary bg-primary/5"
-                      : "border-transparent hover:bg-surface"
+                      : "border-transparent hover:bg-surface active:bg-surface-low"
                   }`}
                 >
                   <div
@@ -147,7 +148,7 @@ export function SessionRail({
                     title={`Ranker: ${s.config?.rankerMode ?? "—"} · Model: ${s.config?.engine ?? "—"} — change these in the bar above`}
                   >
                     {active && <span className="h-1.5 w-1.5 flex-none rounded-full bg-secondary" aria-hidden />}
-                    <span className="truncate">{subLine(s)}</span>
+                    <span className="min-w-0 truncate">{subLine(s)}</span>
                   </div>
                 </button>
               );

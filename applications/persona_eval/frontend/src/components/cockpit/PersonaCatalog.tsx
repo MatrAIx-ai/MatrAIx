@@ -94,7 +94,7 @@ export function PersonaCatalog({ selectedId, onSelect }: PersonaCatalogProps) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder='Search by role, age, or trait — e.g. "manager" or "student"'
             aria-label="Search personas"
-            className={`w-full rounded-md border border-outline bg-field py-1.5 pl-10 pr-3 text-[13px] text-text-main outline-none transition-all placeholder:text-text-dim focus:border-primary ${FOCUS_RING}`}
+            className={`w-full rounded-md border border-outline bg-field py-1.5 pl-10 pr-3 text-[13px] text-text-main outline-none transition-colors placeholder:text-text-variant hover:border-primary/40 focus:border-primary ${FOCUS_RING}`}
           />
         </div>
 
@@ -127,8 +127,14 @@ export function PersonaCatalog({ selectedId, onSelect }: PersonaCatalogProps) {
         ) : personas.length === 0 ? (
           <CatalogEmpty query={debouncedQuery} />
         ) : (
-          personas.map((p) => (
-            <PersonaCard key={p.id} persona={p} selected={p.id === selectedId} onSelect={onSelect} />
+          personas.map((p, i) => (
+            <div
+              key={p.id}
+              className="rise-in"
+              style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
+            >
+              <PersonaCard persona={p} selected={p.id === selectedId} onSelect={onSelect} />
+            </div>
           ))
         )}
       </div>
@@ -156,8 +162,8 @@ function FilterChip({
       aria-pressed={active}
       className={`rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors ${FOCUS_RING} ${
         active
-          ? "border-primary bg-primary text-on-primary"
-          : "border-outline bg-surface text-text-variant hover:border-primary hover:text-text-main"
+          ? "border-primary bg-primary text-on-primary active:bg-primary-dim"
+          : "border-outline bg-surface text-text-variant hover:border-primary hover:bg-surface-low hover:text-text-main active:bg-surface-high"
       }`}
     >
       {label}
@@ -172,11 +178,11 @@ function CatalogSkeleton() {
       {Array.from({ length: 6 }).map((_, i) => (
         <div key={i} className="rounded-md border border-outline bg-surface p-4">
           <div className="mb-3 flex items-start justify-between">
-            <div className="h-10 w-10 animate-pulse rounded bg-surface-high" />
-            <div className="h-3.5 w-14 animate-pulse rounded bg-surface-low" />
+            <div className="h-10 w-10 animate-rb-pulse rounded bg-surface-high" />
+            <div className="h-3.5 w-14 animate-rb-pulse rounded bg-surface-high" />
           </div>
-          <div className="h-3.5 w-2/3 animate-pulse rounded bg-surface-high" />
-          <div className="mt-2 h-2.5 w-1/2 animate-pulse rounded bg-surface-low" />
+          <div className="h-3.5 w-2/3 animate-rb-pulse rounded bg-surface-high" />
+          <div className="mt-2 h-2.5 w-1/2 animate-rb-pulse rounded bg-surface-high" />
         </div>
       ))}
     </div>
@@ -186,7 +192,7 @@ function CatalogSkeleton() {
 /** Empty state — no personas match the current search. */
 function CatalogEmpty({ query }: { query: string }) {
   return (
-    <div className="flex flex-col items-center px-3 py-8 text-center">
+    <div className="rise-in flex flex-col items-center px-3 py-8 text-center">
       <div
         className="mb-3 flex h-12 w-12 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high"
         aria-hidden
@@ -208,7 +214,7 @@ function CatalogEmpty({ query }: { query: string }) {
 /** Error state — the catalog failed to load, with a retry. */
 function CatalogError({ onRetry }: { onRetry: () => void }) {
   return (
-    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-4 py-6 text-center">
+    <div className="rise-in rounded-md border border-outline border-l-4 border-l-danger bg-surface px-4 py-6 text-center">
       <div
         className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-md border border-danger/30 bg-danger/10"
         aria-hidden
@@ -222,8 +228,9 @@ function CatalogError({ onRetry }: { onRetry: () => void }) {
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-3 inline-flex items-center rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-[11px] font-medium text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+        className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-[11px] font-medium text-danger transition-colors hover:bg-danger/20 active:bg-danger/30 ${FOCUS_RING}`}
       >
+        <Sym name="refresh" size={15} />
         Try again
       </button>
     </div>

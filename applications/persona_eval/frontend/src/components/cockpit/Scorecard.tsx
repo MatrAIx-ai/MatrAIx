@@ -40,9 +40,9 @@ export function Scorecard({ questionnaire, metrics, phase }: ScorecardProps) {
   if (!questionnaire || !metrics) {
     return (
       <div className="p-md">
-        <div className="rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
+        <div className="rise-in rounded-md border border-dashed border-outline-dim bg-surface-low px-4 py-10 text-center">
           <Sym name="fact_check" size={28} className="text-text-dim" />
-          <p className="mt-2 text-[13px] leading-relaxed text-text-dim">
+          <p className="mt-2 text-[13px] leading-relaxed text-text-variant">
             {phase === "error" || phase === "timeout"
               ? "This run stopped before it could be scored."
               : "Run a simulation and the scores will appear here."}
@@ -66,7 +66,7 @@ export function Scorecard({ questionnaire, metrics, phase }: ScorecardProps) {
 
   return (
     <div className="p-md">
-      <div className="panel overflow-hidden rounded-md border border-outline bg-surface-lowest">
+      <div className="panel rise-in overflow-hidden rounded-md border border-outline bg-surface-lowest">
         {/* Card header */}
         <div className="flex items-center justify-between border-b border-outline bg-surface-low px-3 py-2.5">
           <div className="flex items-center gap-2">
@@ -185,7 +185,7 @@ function CriterionRow({
       <div className="h-1.5 w-full overflow-hidden rounded-full bg-field">
         <div className={`h-full rounded-full transition-[width] duration-200 ${color.bar}`} style={{ width: `${pct}%` }} />
       </div>
-      {rationale && <p className="mt-1 text-[11px] leading-snug text-text-dim">{rationale}</p>}
+      {rationale && <p className="mt-1 text-[11px] leading-snug text-text-variant">{rationale}</p>}
     </div>
   );
 }
@@ -229,7 +229,7 @@ function MetricTile({ value, caption }: { value: string; caption: string }) {
 function ScorecardSkeleton() {
   return (
     <div className="p-md" aria-hidden>
-      <div className="overflow-hidden rounded-md border border-outline bg-surface-lowest">
+      <div className="rise-in overflow-hidden rounded-md border border-outline bg-surface-lowest">
         <div className="border-b border-outline bg-surface-low px-3 py-2.5">
           <div className="h-4 w-28 animate-rb-pulse rounded bg-surface-high" />
         </div>

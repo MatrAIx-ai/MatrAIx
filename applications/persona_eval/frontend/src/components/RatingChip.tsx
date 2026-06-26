@@ -34,7 +34,7 @@ export function RatingChip({ rating, size = "sm", className = "" }: RatingChipPr
   if (band === "none") {
     return (
       <span
-        className={`inline-flex items-center rounded-md border border-outline bg-surface-high font-mono tabular-nums text-text-dim ${pad} ${className}`}
+        className={`inline-flex items-center whitespace-nowrap rounded-md border border-outline bg-surface-high font-mono tabular-nums text-text-dim ${pad} ${className}`}
         title="Not scored"
         aria-label="No rating"
       >
@@ -45,7 +45,7 @@ export function RatingChip({ rating, size = "sm", className = "" }: RatingChipPr
 
   return (
     <span
-      className={`inline-flex items-baseline rounded-md font-mono font-semibold tabular-nums ${color.text} ${color.soft} ${pad} ${className}`}
+      className={`inline-flex items-baseline whitespace-nowrap rounded-md font-mono font-semibold tabular-nums ${color.text} ${color.soft} ${pad} ${className}`}
       aria-label={`Rating ${rating} out of 10`}
     >
       {rating}

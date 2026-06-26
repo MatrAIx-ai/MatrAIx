@@ -87,8 +87,8 @@ export function InspectorTabs({ active, onChange, evaluation, persona, prompts }
               tabIndex={selected ? 0 : -1}
               onClick={() => onChange(tab.id)}
               onKeyDown={(e) => onKeyDown(e, i)}
-              className={`-mb-px flex select-none items-center gap-1.5 border-b-2 py-2.5 text-[12px] font-medium transition-colors ${FOCUS_RING} ${
-                selected ? "border-primary text-primary" : "border-transparent text-text-dim hover:text-text-variant"
+              className={`-mb-px flex select-none items-center gap-1.5 border-b-2 py-2.5 text-[12px] font-medium transition ease-out active:opacity-70 ${FOCUS_RING} ${
+                selected ? "border-primary text-primary" : "border-transparent text-text-variant hover:text-text-main"
               }`}
             >
               <Sym name={tab.icon} fill={selected ? 1 : 0} size={16} />

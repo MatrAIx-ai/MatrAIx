@@ -155,7 +155,7 @@ function NativeRaw({ raw, toolOutputs }: { raw: string | null; toolOutputs: unkn
             onClick={copy}
             title="Copy raw output"
             aria-label="Copy raw output"
-            className={`flex-none border-l border-outline p-2 text-text-dim transition-colors hover:text-text-main ${FOCUS_RING}`}
+            className={`flex-none border-l border-outline p-2 text-text-variant transition hover:text-text-main active:scale-95 ${FOCUS_RING}`}
           >
             <Sym name={copied ? "check" : "content_copy"} size={14} />
           </button>
@@ -238,7 +238,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
       <div className="flex flex-shrink-0 items-center justify-between gap-2.5 border-b border-outline bg-surface px-4 py-3">
         <span className="hud text-[10px] text-primary">Turn inspector</span>
         {turns.length > 0 && activeIndex !== null ? (
-          <div className="inline-flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-2 py-1 font-mono text-[11px] text-text-dim">
+          <div className="inline-flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-2 py-1 font-mono text-[11px] text-text-dim transition-colors hover:border-primary/60">
             <span>turn</span>
             <div className="relative inline-flex items-center">
               <select
@@ -274,7 +274,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
               className={`-mb-px border-b-2 py-2.5 transition-colors ${FOCUS_RING} ${
                 active
                   ? "border-primary text-primary"
-                  : "border-transparent text-text-dim hover:text-text-variant"
+                  : "border-transparent text-text-variant hover:text-text-main"
               }`}
             >
               {label}
@@ -288,7 +288,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
         {!turn ? (
           <InspectorEmpty />
         ) : tab === "trace" ? (
-          <div>
+          <div key={`trace-${activeIndex}`} className="rise-in">
             <SectionHeader
               label="Execution trace"
               count={
@@ -310,7 +310,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
             )}
           </div>
         ) : tab === "output" ? (
-          <>
+          <div key={`output-${activeIndex}`} className="rise-in space-y-5">
             <div>
               <SectionHeader label="Items it recommended" count={recs.length > 0 ? `${recs.length} items` : undefined} />
               {recs.length > 0 ? (
@@ -326,10 +326,10 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
               )}
             </div>
             <NativeRaw raw={turn.nativeRaw ?? null} toolOutputs={turn.rawToolOutputs} />
-          </>
+          </div>
         ) : (
           /* Scores — honest teaching panel */
-          <div className="space-y-5">
+          <div key={`scores-${activeIndex}`} className="rise-in space-y-5">
             <div>
               <SectionHeader label="Per-turn signals" />
               <div className="grid grid-cols-3 gap-3">
@@ -348,10 +348,10 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
               <button
                 type="button"
                 onClick={onScoreInPersonaEval}
-                className={`inline-flex items-center gap-1.5 text-[12px] font-medium text-primary transition-colors hover:text-primary-dim ${FOCUS_RING}`}
+                className={`group inline-flex items-center gap-1.5 text-[12px] font-medium text-primary transition-colors hover:text-primary-dim ${FOCUS_RING}`}
               >
                 Score this persona in PersonaEval
-                <Sym name="arrow_forward" size={14} />
+                <Sym name="arrow_forward" size={14} className="transition-transform group-hover:translate-x-0.5" />
               </button>
             )}
           </div>

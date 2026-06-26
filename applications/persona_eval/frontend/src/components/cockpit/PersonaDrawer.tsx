@@ -143,13 +143,15 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
                 <h2 className="truncate font-display text-[18px] font-bold leading-none tracking-tight text-text-main">
                   {title}
                 </h2>
-                <div className="mt-2 flex items-center gap-2">
+                <div className="mt-2 flex min-w-0 items-center gap-2">
                   {persona.source && (
-                    <span className={`hud rounded border px-1.5 py-0.5 text-[8px] ${tone}`}>
+                    <span className={`hud flex-none rounded border px-1.5 py-0.5 text-[8px] ${tone}`}>
                       {persona.source}
                     </span>
                   )}
-                  <span className="font-mono text-[10px] text-text-dim">{codename}</span>
+                  <span className="truncate font-mono text-[10px] text-text-variant" title={codename}>
+                    {codename}
+                  </span>
                 </div>
               </div>
             </div>
@@ -158,7 +160,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
               type="button"
               onClick={onClose}
               aria-label="Close persona detail"
-              className={`flex h-8 w-8 flex-none items-center justify-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+              className={`flex h-8 w-8 flex-none items-center justify-center rounded-md border border-outline text-text-variant transition-colors hover:border-primary hover:bg-surface-high hover:text-text-main active:bg-surface-low ${FOCUS_RING}`}
             >
               <Sym name="close" size={18} />
             </button>
@@ -172,7 +174,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
               {[5, 7, 6, 4, 7, 5].map((w, i) => (
                 <div
                   key={i}
-                  className="h-3 animate-pulse rounded bg-surface-high"
+                  className="h-3 animate-rb-pulse rounded bg-surface-high"
                   style={{ width: `${w * 10}%` }}
                 />
               ))}
@@ -180,7 +182,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
           ) : (
             <>
               {/* Demographics */}
-              <div className="panel rounded-md border border-outline bg-surface p-4">
+              <div className="panel rise-in rounded-md border border-outline bg-surface p-4">
                 <h3 className="hud mb-3.5 text-[10px] text-text-dim">Demographics</h3>
                 {demographics.length > 0 ? (
                   <div className="space-y-2.5 text-[12px]">
@@ -189,14 +191,14 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
                         <span className="hud flex-none text-[9px] text-text-dim">
                           {humanizeToken(d.key)}
                         </span>
-                        <span className="text-right font-mono text-text-variant" title={d.full}>
+                        <span className="min-w-0 truncate text-right font-mono text-text-variant" title={d.full}>
                           {d.full}
                         </span>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <p className="text-[12px] italic leading-snug text-text-dim">
+                  <p className="text-[12px] italic leading-snug text-text-variant">
                     No demographics on file for this persona.
                   </p>
                 )}
@@ -204,7 +206,10 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
 
               {/* Goal context */}
               {sections.length > 0 && (
-                <div className="rounded-md border border-outline bg-surface p-4">
+                <div
+                  className="rise-in rounded-md border border-outline bg-surface p-4"
+                  style={{ animationDelay: "60ms" }}
+                >
                   <h3 className="hud mb-3 text-[10px] text-text-dim">Goal context</h3>
                   <div className="space-y-3">
                     {sections.map((s) => (
@@ -223,15 +228,23 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
 
               {/* Raw record */}
               {rawText ? (
-                <div className="rounded-md border border-outline bg-surface p-4">
-                  <div className="mb-3 flex items-center justify-between">
+                <div
+                  className="rise-in rounded-md border border-outline bg-surface p-4"
+                  style={{ animationDelay: "120ms" }}
+                >
+                  <div className="mb-3 flex items-center justify-between gap-3">
                     <h3 className="hud text-[10px] text-text-dim">Raw record</h3>
                     <button
                       type="button"
                       onClick={handleCopy}
-                      className={`flex items-center gap-1.5 rounded border border-outline px-2 py-1 text-text-dim transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+                      aria-label={copied ? "Copied to clipboard" : "Copy raw record"}
+                      className={`flex flex-none items-center gap-1.5 rounded border px-2 py-1 transition-colors ${FOCUS_RING} ${
+                        copied
+                          ? "border-secondary/40 text-secondary"
+                          : "border-outline text-text-variant hover:border-primary hover:bg-surface-high hover:text-text-main active:bg-surface-low"
+                      }`}
                     >
-                      <Sym name="content_copy" size={12} />
+                      <Sym name={copied ? "check" : "content_copy"} size={12} />
                       <span className="hud text-[8px]">{copied ? "Copied" : "Copy"}</span>
                     </button>
                   </div>
@@ -242,7 +255,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
                   </div>
                 </div>
               ) : (
-                <p className="text-[12px] italic leading-relaxed text-text-dim">
+                <p className="text-[12px] italic leading-relaxed text-text-variant">
                   This persona has no extra profile text — the summary above is all we have.
                 </p>
               )}
@@ -255,7 +268,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
           <button
             type="button"
             onClick={handleUse}
-            className={`glow flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-on-primary transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+            className={`glow flex w-full items-center justify-center gap-2 rounded-md bg-primary py-3.5 text-[13px] font-semibold text-on-primary transition-[background-color,transform] duration-150 ease-out hover:bg-primary-dim active:scale-[0.99] ${FOCUS_RING}`}
           >
             <Sym name="check" size={16} />
             Use this persona

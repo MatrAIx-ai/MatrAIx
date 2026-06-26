@@ -40,7 +40,7 @@ export function PersonaBubble({ message }: PersonaBubbleProps) {
   return (
     <div className="flex w-full flex-col items-end pl-10">
       <div className="hud mb-1.5 mr-1 text-[9px] text-text-dim">Persona</div>
-      <div className="rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-text-main">
+      <div className="max-w-full break-words rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-text-main">
         {message?.trim() ? message : <span className="italic text-text-dim">(the user said nothing)</span>}
       </div>
     </div>

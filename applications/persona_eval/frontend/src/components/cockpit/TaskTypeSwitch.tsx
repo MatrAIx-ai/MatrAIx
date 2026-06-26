@@ -45,7 +45,7 @@ export function TaskTypeSwitch({ value, onChange, disabled, showLabel = true, cl
               title={option.hint}
               aria-pressed={selected}
               onClick={() => onChange(option.value)}
-              className={`flex items-center gap-1.5 rounded px-3 py-1.5 text-[12px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${FOCUS_RING} ${
+              className={`flex items-center gap-1.5 rounded px-3 py-1.5 text-[12px] font-medium transition ease-out active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:scale-100 ${FOCUS_RING} ${
                 selected
                   ? "bg-primary text-on-primary"
                   : "text-text-variant hover:bg-surface hover:text-text-main"

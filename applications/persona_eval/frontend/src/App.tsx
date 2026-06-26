@@ -437,9 +437,9 @@ export default function App() {
         {/* Centre — manual conversation. */}
         <main className="flex min-h-0 min-w-0 flex-1 flex-col bg-surface-dim">
           <div className="flex flex-shrink-0 items-center gap-2.5 border-b border-outline bg-surface-lowest px-5 py-3">
-            <span className="truncate text-[14px] font-semibold text-text-main">{headerTitle}</span>
+            <span className="min-w-0 truncate text-[14px] font-semibold text-text-main">{headerTitle}</span>
             <span
-              className="flex-none text-[12px] text-text-dim"
+              className="flex-none text-[12px] text-text-variant"
               title="You type as the user; RecAI replies. No persona is simulated here."
             >
               · manual chat
@@ -451,7 +451,7 @@ export default function App() {
 
           {activeId && sessionQuery.isError ? (
             <div className="flex min-h-0 flex-1 items-center justify-center p-6">
-              <div className="panel w-full max-w-md rounded-md border border-l-4 border-danger/40 border-l-danger bg-danger/10 p-5">
+              <div className="panel rise-in w-full max-w-md rounded-md border border-l-4 border-danger/40 border-l-danger bg-danger/10 p-5">
                 <div className="flex items-start gap-3">
                   <Sym name="error" fill={1} size={20} className="mt-0.5 flex-none text-danger" />
                   <div className="min-w-0">
@@ -464,7 +464,7 @@ export default function App() {
                       onClick={() => {
                         void sessionQuery.refetch();
                       }}
-                      className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-xs font-medium text-danger transition-colors hover:bg-danger/20"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-3 py-1.5 text-xs font-medium text-danger transition hover:bg-danger/20 active:scale-[0.98]"
                     >
                       <Sym name="refresh" size={16} />
                       Retry

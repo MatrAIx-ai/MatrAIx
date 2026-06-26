@@ -114,7 +114,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
           <button
             type="button"
             onClick={onClose}
-            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main ${FOCUS_RING}`}
+            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
           >
             <Sym name="arrow_back" size={16} />
             Back to cockpit
@@ -124,7 +124,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
             <h1 className="font-display text-[22px] font-bold tracking-tight text-text-main">Runs</h1>
           </div>
           {!query.isLoading && !query.isError && (
-            <span className="font-mono text-[11px] text-text-dim">
+            <span className="font-mono text-[11px] text-text-variant">
               {runs.length} {runs.length === 1 ? "saved run" : "saved runs"}
             </span>
           )}
@@ -135,10 +135,10 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
                 type="button"
                 onClick={toggleCompareMode}
                 aria-pressed={comparing}
-                className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[12px] transition-colors ${FOCUS_RING} ${
+                className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
                   comparing
                     ? "bg-primary text-on-primary hover:bg-primary-dim"
-                    : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:text-text-main"
+                    : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:bg-surface hover:text-text-main"
                 }`}
               >
                 <Sym name="compare_arrows" size={16} />
@@ -149,31 +149,31 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
               type="button"
               onClick={() => query.refetch()}
               disabled={query.isFetching}
-              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition-colors hover:border-primary hover:text-text-main disabled:opacity-55 ${FOCUS_RING}`}
+              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low px-3 py-1.5 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
             >
-              <Sym name="refresh" size={16} className={query.isFetching ? "animate-spin" : ""} />
+              <Sym name="refresh" size={16} className={query.isFetching ? "animate-rb-spin" : ""} />
               {query.isFetching ? "Checking for new runs…" : "Refresh"}
             </button>
           </div>
 
-          <p className="w-full max-w-2xl text-[13px] leading-relaxed text-text-dim">
+          <p className="w-full max-w-2xl text-[13px] leading-relaxed text-text-variant">
             Each row is one simulation. Click it to read the full transcript and scores, or turn on
             Compare to put two side by side.
           </p>
 
           {comparing && (
-            <div className="flex w-full items-center gap-3 rounded-md border border-primary/30 bg-primary/10 px-3 py-2">
-              <Sym name="compare_arrows" size={18} className="text-primary" />
-              <span className="text-[13px] text-text-variant">
+            <div className="flex w-full items-center gap-3 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 rise-in">
+              <Sym name="compare_arrows" size={18} className="shrink-0 text-primary" />
+              <span className="min-w-0 text-[13px] text-text-variant">
                 Pick two runs to compare. The first one you choose is the baseline; the second is
                 measured against it.{" "}
-                <span className="font-mono text-[11px] text-text-dim">({picks.length} of 2 chosen)</span>
+                <span className="font-mono text-[11px] text-text-variant">({picks.length} of 2 chosen)</span>
               </span>
               <button
                 type="button"
                 onClick={launchCompare}
                 disabled={picks.length !== 2}
-                className={`ml-auto flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-[12px] text-on-primary transition-colors hover:bg-primary-dim disabled:opacity-55 ${FOCUS_RING}`}
+                className={`ml-auto flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-primary px-3 py-1.5 text-[12px] text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
               >
                 Compare these two
               </button>
@@ -220,7 +220,7 @@ const ROW_GRID =
 
 function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTableProps) {
   return (
-    <div className="panel overflow-hidden rounded-md border border-outline bg-surface">
+    <div className="panel overflow-hidden rounded-md border border-outline bg-surface rise-in">
       {/* Column header */}
       <div
         className={`${ROW_GRID} border-b border-outline bg-surface-low px-3.5 py-2 hud text-[9px] text-text-dim`}
@@ -249,7 +249,9 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
                 disabled={pickDisabled}
                 aria-pressed={comparing ? picked : undefined}
                 className={`${ROW_GRID} w-full px-3.5 py-2.5 text-left transition-colors ${FOCUS_RING} ${
-                  picked ? "bg-primary/10" : "hover:bg-surface-low"
+                  picked
+                    ? "bg-primary/10 active:bg-primary/20"
+                    : "hover:bg-surface-low active:bg-surface-high"
                 } ${pickDisabled ? "cursor-not-allowed opacity-45" : ""}`}
               >
                 {/* Selection affordance (compare mode only) */}
@@ -325,10 +327,10 @@ function ListLoading() {
           key={i}
           className="flex items-center gap-3 border-b border-outline-dim px-3.5 py-3.5 last:border-b-0"
         >
-          <div className="h-5 w-12 animate-pulse rounded-md bg-surface-high" />
-          <div className="h-3.5 w-48 animate-pulse rounded bg-surface-high" />
-          <div className="h-5 w-16 animate-pulse rounded-md bg-surface-high" />
-          <div className="ml-auto h-3.5 w-16 animate-pulse rounded bg-surface-high" />
+          <div className="h-5 w-12 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="h-3.5 w-48 animate-rb-pulse rounded bg-surface-high" />
+          <div className="h-5 w-16 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="ml-auto h-3.5 w-16 animate-rb-pulse rounded bg-surface-high" />
         </div>
       ))}
     </div>
@@ -337,7 +339,7 @@ function ListLoading() {
 
 function ListEmpty({ onClose }: { onClose: () => void }) {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface px-6 py-14 text-center">
+    <div className="rounded-md border border-dashed border-outline bg-surface px-6 py-14 text-center rise-in">
       <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
         <Sym name="history" size={26} className="text-text-dim" />
       </div>
@@ -349,7 +351,7 @@ function ListEmpty({ onClose }: { onClose: () => void }) {
       <button
         type="button"
         onClick={onClose}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-[12px] text-on-primary glow transition-colors hover:bg-primary-dim ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-[12px] text-on-primary glow transition ease-out hover:bg-primary-dim active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="play_arrow" fill={1} size={16} />
         Start your first run
@@ -364,7 +366,7 @@ function ListError({ error, onRetry }: { error: unknown; onRetry: () => void }) 
       ? error.message
       : "Something went wrong fetching your saved runs. This is usually a brief connection hiccup.";
   return (
-    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center">
+    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center rise-in">
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md border border-danger/30 bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
@@ -375,7 +377,7 @@ function ListError({ error, onRetry }: { error: unknown; onRetry: () => void }) 
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition-colors hover:bg-danger/20 ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition ease-out hover:border-danger/60 hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again

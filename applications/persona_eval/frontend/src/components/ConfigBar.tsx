@@ -73,7 +73,7 @@ export function ConfigBar({ config, options, disabled, onChange }: ConfigBarProp
         {Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
           <div key={i} className="flex items-center gap-2 opacity-50">
             <span className="h-3 w-12 animate-rb-pulse rounded bg-surface-high" />
-            <span className="h-7 w-24 animate-rb-pulse rounded bg-surface" />
+            <span className="h-7 w-24 animate-rb-pulse rounded bg-surface-high" />
           </div>
         ))}
       </div>

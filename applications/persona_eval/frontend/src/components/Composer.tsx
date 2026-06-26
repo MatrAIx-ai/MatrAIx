@@ -80,7 +80,7 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
   return (
     <div className="flex-shrink-0 border-t border-outline bg-surface-lowest px-5 py-4 md:px-8">
       <div className="mx-auto max-w-2xl">
-        <div className="flex items-stretch rounded-md border border-outline bg-field transition-colors focus-within:border-primary">
+        <div className="flex items-stretch rounded-md border border-outline bg-field transition-colors hover:border-primary/40 focus-within:border-primary">
           <span className="self-start pl-3.5 pt-3 font-mono font-bold text-primary" aria-hidden>
             &gt;_
           </span>
@@ -93,14 +93,14 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
             onKeyDown={onKeyDown}
             placeholder="Type a message as the user you're playing — press ⌘↵ to send"
             aria-label="Type a message to RecAI"
-            className="block w-full resize-none bg-transparent px-3 py-3 font-mono text-[13px] leading-relaxed text-text-main outline-none placeholder:text-text-dim disabled:cursor-not-allowed"
+            className="block w-full resize-none bg-transparent px-3 py-3 font-mono text-[13px] leading-relaxed text-text-main outline-none placeholder:text-text-variant disabled:cursor-not-allowed disabled:opacity-60"
           />
           <button
             type="button"
             onClick={submit}
             disabled={blocked || value.trim().length === 0}
             aria-label="Send message"
-            className={`grid flex-none place-items-center self-stretch rounded-r-md bg-primary px-5 text-on-primary transition-colors hover:bg-primary-dim disabled:opacity-45 ${FOCUS_RING}`}
+            className={`grid flex-none place-items-center self-stretch rounded-r-md bg-primary px-5 text-on-primary transition-colors hover:bg-primary-dim disabled:cursor-not-allowed disabled:opacity-45 ${FOCUS_RING}`}
           >
             {isPending ? (
               <Sym name="autorenew" size={16} className="animate-rb-spin" />
@@ -109,7 +109,13 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
             )}
           </button>
         </div>
-        <p className="hud mt-2 text-[8px] leading-relaxed text-text-dim">{hint}</p>
+        <p
+          className={`hud mt-2 text-[8px] leading-relaxed ${
+            offline ? "text-warn" : isPending ? "text-text-variant" : "text-text-dim"
+          }`}
+        >
+          {hint}
+        </p>
       </div>
     </div>
   );
