@@ -43,14 +43,25 @@ uv run harbor run \
 
 ## Grounding job
 
+**Checked-in batch** (`personaBench-*-pg2`, seed 42):
+
+```bash
+uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml
+
+uv run python persona/reporting/eval_grounding_job.py jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2 \
+  --meta configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.meta.json
+```
+
+**Generate your own** (`--sample-size-per-value-group 2`):
+
 ```bash
 uv run python persona/scripts/generate_persona_job.py \
   --task persona/tasks/example-survey_product-feedback \
   --sample-size-per-value-group 2
 
-uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/<name>.yaml
-uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
-  --meta configs/jobs/persona-task-grounding-job-recipe/<name>.meta.json
+# uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/<your-job-slug>.yaml
+# uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
+#   --meta configs/jobs/persona-task-grounding-job-recipe/<your-job-slug>.meta.json
 ```
 
 Use `--controlled-probe` to clone one anchor persona and vary only the probe dimension (legacy). To stratify across the full pool without catalog confounders, pass a task with no `grounding.confounders` entry or set `"confounders": {}` in the job spec.

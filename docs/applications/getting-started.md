@@ -158,7 +158,23 @@ Change `persona_0042` to simulate someone else. Other agents/models: [choosing-a
 
 ## 7. Batch — sample many personas (job)
 
-Running step 6 ten times by hand does not scale. **`generate_application_job.py`** samples personas, pins **agent**, **model**, and **seed**, and writes a **job YAML** Harbor runs in one go.
+Running step 6 ten times by hand does not scale. **`generate_application_job.py`** samples personas, pins **agent**, **model**, and **seed**, and writes a **job YAML** under `configs/jobs/application-task-job-recipe/` (gitignored except the checked-in example below).
+
+### Checked-in example (skip generate)
+
+4 personas, random sample, `seed 42`, `n_concurrent_trials: 2` — pre-run output is in `jobs/` for the viewer:
+
+```bash
+uv run harbor run -c configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml
+```
+
+```bash
+uv run harbor view jobs/appSim-example-survey-product-feedback-random-n4 --build
+```
+
+Recipe: [`configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml`](../../configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml)
+
+### Generate your own batch
 
 ```bash
 uv run python application/scripts/generate_application_job.py \
@@ -186,21 +202,22 @@ uv run python application/scripts/generate_application_job.py \
 | `--agent-name` | `persona-claude-code` | Agent for every trial |
 | `--model-name` | `anthropic/claude-sonnet-4-6` | Model for every trial |
 | `--stratify` | (none) | Optional — balance across a field, e.g. `--stratify dimensions.age_bracket` |
+| `--name` | (derived) | Job basename; use `appSim-…` prefix for curated examples |
 
-Outputs:
+Generator output (e.g. `--sample-size 10`, no `--name`):
 
-- `configs/jobs/application-task-job-recipe/example-survey-product-feedback-n10.yaml` — the **job** (task + list of agents, each with a different `persona_path`)
-- `...n10.meta.json` — who was sampled, seed, pool size (for reports and reproducibility)
+- `configs/jobs/application-task-job-recipe/example-survey-product-feedback-n10.yaml`
+- `...n10.meta.json` — sampled persona IDs, seed, pool size
 
-Run the job:
+Run a generated job (paths are also in the YAML header):
 
 ```bash
 uv run harbor run -c configs/jobs/application-task-job-recipe/example-survey-product-feedback-n10.yaml
 ```
 
-**What a job means here:** one survey **task**, **10 trials** — trial 1 uses `persona_0049`, trial 2 uses `persona_0028`, … (exact IDs are in the YAML header and `.meta.json`). All trials share the same agent and model you passed to the generator.
+**What a job means here:** one survey **task**, **N trials** — each trial uses a different `persona_path` from the YAML. All trials share the same agent and model.
 
-Each trial is one Docker run. Default `n_concurrent_trials: 1` runs them sequentially; edit the YAML to run more in parallel.
+Each trial is one Docker run. Edit `n_concurrent_trials` in the YAML to run trials in parallel (the checked-in `random-n4` example uses `2`).
 
 **Cost note:** 10 trials ≈ 10 LLM calls. Use `--sample-size 3` while testing.
 
@@ -235,7 +252,15 @@ uv run harbor view jobs --build
 
 Opens a local web UI listing jobs and trials — transcripts, artifacts, verifier logs. Use this to compare personas side by side.
 
-To explore without spending API credits, point the viewer at the checked-in `jobs/` folder (already in the repo).
+To explore without spending API credits, browse checked-in examples:
+
+```bash
+uv run harbor view jobs/appSim-example-survey-product-feedback-random-n4 --build
+uv run harbor view jobs/appSim-example-survey-local --build
+uv run harbor view jobs/harbor-smoke-local --build
+```
+
+See [`configs/jobs/README.md`](../../configs/jobs/README.md) for the full recipe ↔ `jobs/<job_name>/` mapping.
 
 ---
 
@@ -306,26 +331,32 @@ Use the agent from [choosing-an-agent.md](../environments/choosing-an-agent.md) 
 
 ### 6. Try a batch of personas
 
-Same as step 7 — generate a job YAML, then run it:
+Same as [step 7](#7-batch--sample-many-personas-job). Checked-in survey batch (4 personas):
 
 ```bash
-uv run python application/scripts/generate_application_job.py \
-  --task application/tasks/<your-task-name> \
-  --sample-size 10 \
-  --seed 42 \
-  --agent-name persona-claude-code \
-  --model-name anthropic/claude-sonnet-4-6
+uv run harbor run -c configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml
+```
 
-uv run harbor run -c configs/jobs/application-task-job-recipe/<generated>.yaml
+For your own task, generate then run (paths in the YAML header):
+
+```bash
+# uv run python application/scripts/generate_application_job.py \
+#   --task application/tasks/<your-task-name> \
+#   --sample-size 10 \
+#   --seed 42 \
+#   --agent-name persona-claude-code \
+#   --model-name anthropic/claude-sonnet-4-6
+#
+# uv run harbor run -c configs/jobs/application-task-job-recipe/<your-job-slug>.yaml
 ```
 
 ### 7. View outputs
 
 ```bash
-uv run harbor view jobs --build
+uv run harbor view jobs/appSim-example-survey-product-feedback-random-n4 --build
 ```
 
-Check per-trial artifacts under `jobs/<job_name>/<trial>/artifacts/`.
+For any job: `uv run harbor view jobs/<job_name> --build` (`job_name` matches the YAML `job_name:` field).
 
 ### 8. Batch reporting (optional)
 

@@ -143,7 +143,7 @@ Ask for each question: *If I swap only the probe value, does the expected answer
 
 ## 3. Generate a grounding job
 
-The job generator reads catalog confounders, **filters** the persona pool, **stratifies** on the probe dimension, and writes YAML under `configs/jobs/persona-task-grounding-job-recipe/` (other generated files gitignored — see checked-in `personaBench-*-pg2` example).
+The job generator reads catalog confounders, **filters** the persona pool, **stratifies** on the probe dimension, and writes YAML under `configs/jobs/persona-task-grounding-job-recipe/` (gitignored except the checked-in `personaBench-*-pg2` example).
 
 ```bash
 uv run python persona/scripts/generate_persona_job.py \
@@ -152,7 +152,14 @@ uv run python persona/scripts/generate_persona_job.py \
   --seed 42
 ```
 
-This creates e.g. `example-survey-product-feedback-economic-motivation-pg2.yaml` plus a `.meta.json` sidecar.
+Generator output (default slug, no `personaBench-` prefix):
+
+| File | Purpose |
+|------|---------|
+| `configs/jobs/persona-task-grounding-job-recipe/example-survey-product-feedback-economic-motivation-pg2.yaml` | 8 trials (2 personas × 4 probe values) |
+| `...economic-motivation-pg2.meta.json` | Cohort spec for `eval_grounding_job.py` |
+
+The YAML header lists persona IDs and run commands. **Shortcut:** checked-in recipe `personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml` (same task / pg2 design).
 
 | Flag | Effect |
 |------|--------|
@@ -173,16 +180,27 @@ uv run python persona/scripts/generate_dev_personas.py \
 
 ## 4. Run the job and evaluate
 
-```bash
-uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/<generated>.yaml
+**Checked-in recipe** (`seed 42`, `--sample-size-per-value-group 2`):
 
-uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
-  --meta configs/jobs/persona-task-grounding-job-recipe/<generated>.meta.json
+```bash
+uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml
+
+uv run python persona/reporting/eval_grounding_job.py jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2 \
+  --meta configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.meta.json
+```
+
+**After §3 generate** — use paths from your YAML header (`job_name` usually matches the slug):
+
+```bash
+# uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/example-survey-product-feedback-economic-motivation-pg2.yaml
+#
+# uv run python persona/reporting/eval_grounding_job.py jobs/example-survey-product-feedback-economic-motivation-pg2 \
+#   --meta configs/jobs/persona-task-grounding-job-recipe/example-survey-product-feedback-economic-motivation-pg2.meta.json
 ```
 
 **Success:** per-value-group alignment rates; failures point to weak forks, agent drift, or persona YAML inconsistency.
 
-**View trajectories:** `uv run harbor view jobs/<job_name> --build`
+**View trajectories:** `uv run harbor view jobs/personaBench-example-survey-product-feedback-economic-motivation-pg2 --build`
 
 ---
 

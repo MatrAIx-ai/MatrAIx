@@ -53,7 +53,8 @@ uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-local
 **View** — inspect runs (`jobs/` includes examples you can browse without re-running):
 
 ```bash
-uv run harbor view jobs --build
+uv run harbor view jobs/appSim-example-survey-product-feedback-random-n4 --build
+# or: uv run harbor view jobs --build
 ```
 
 > Use **`uv run harbor`** — a globally installed `harbor` may be an older build without `persona-*` agents.

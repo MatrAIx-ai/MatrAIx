@@ -35,7 +35,16 @@ Harbor Job YAML under `configs/jobs/`. Run with `harbor run -c configs/jobs/<sub
 
 Other files under those directories are **gitignored** (local `generate_*_job.py` output).
 
-Pre-run results for the recipes above are checked in under [`jobs/`](../../jobs/) (`job_name` matches the YAML). Browse with `harbor view jobs/<job_name> --build`.
+### Checked-in `jobs/` outputs (viewer demos)
+
+| `jobs/<job_name>/` | Recipe |
+|--------------------|--------|
+| `harbor-smoke-local/` | `example-job-recipe/harbor-smoke-local.yaml` |
+| `appSim-example-survey-local/`, `appSim-example-chat-local/`, … | matching `example-job-recipe/appSim-*-local.yaml` |
+| `appSim-example-survey-product-feedback-random-n4/` | `application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml` |
+| `personaBench-example-survey-product-feedback-economic-motivation-pg2/` | `persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml` |
+
+Browse: `uv run harbor view jobs/<job_name> --build`
 
 ## Persona grounding recipes
 
