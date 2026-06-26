@@ -22,20 +22,27 @@
 set -uo pipefail
 
 VLLM_PORT="${VLLM_PORT:-8100}"
-LLM_MODEL="${LLM_MODEL:-Qwen/Qwen3-4B}"
+LLM_MODEL="${LLM_MODEL:-Qwen/Qwen3-8B}"
 GPU_MEM_UTIL="${GPU_MEM_UTIL:-0.40}"
 VLLM_MAX_LEN="${VLLM_MAX_LEN:-4096}"
 AGENT_ID="${AGENT_ID:-0}"
 
+# CDI injects the real driver libcuda.so.1 into /usr/lib64, but this image's
+# LD_LIBRARY_PATH doesn't include it, so torch/vLLM can't find the driver
+# ("Failed to infer device type"). We removed the CDI update-ldcache hook (it
+# mounts /proc, which the pod forbids), so prepend /usr/lib64 here instead.
+export LD_LIBRARY_PATH="/usr/lib64:${LD_LIBRARY_PATH:-}"
+
 echo "[agent ${AGENT_ID}] booting private vLLM: model=${LLM_MODEL} port=${VLLM_PORT} gpu_mem=${GPU_MEM_UTIL}"
 
 # 1. Launch this agent's private vLLM in the background.
-python -m vllm.entrypoints.openai.api_server \
+#    (base image ships python3, not python)
+python3 -m vllm.entrypoints.openai.api_server \
     --model "${LLM_MODEL}" \
     --port "${VLLM_PORT}" \
     --gpu-memory-utilization "${GPU_MEM_UTIL}" \
     --max-model-len "${VLLM_MAX_LEN}" \
-    --disable-log-requests \
+    --no-enable-log-requests \
     > "/tmp/vllm_agent_${AGENT_ID}.log" 2>&1 &
 VLLM_PID=$!
 
@@ -67,7 +74,7 @@ export LLM_MODEL
 export OUTPUT_PATH="${OUTPUT_PATH:-/app/output/trajectory_${AGENT_ID}.json}"
 
 echo "[agent ${AGENT_ID}] starting OASIS agent loop -> platform=${PLATFORM_URL:-unset}"
-python -m environments.oasis.agents.entrypoint
+python3 -m environments.oasis.agents.entrypoint
 STATUS=$?
 
 echo "[agent ${AGENT_ID}] agent loop exited (status ${STATUS}); stopping private vLLM"

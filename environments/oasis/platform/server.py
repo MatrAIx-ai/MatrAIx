@@ -6,16 +6,41 @@ from __future__ import annotations
 
 import threading
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 from environments.oasis.platform.actions import ActionProcessor, ActionResult
 from environments.oasis.platform.database import Database
 from environments.oasis.platform.recsys import RecSys, RecSysType
 
 try:
-    from fastapi import FastAPI, HTTPException
+    from fastapi import FastAPI, HTTPException, Body
     from pydantic import BaseModel
     HAS_FASTAPI = True
+
+    # NOTE: these request models MUST be module-level. Defining them inside
+    # create_app() makes them function-local forward refs that FastAPI 0.136 +
+    # Pydantic 2.13 cannot resolve ("... is not fully defined"), causing 500s on
+    # every POST. Module scope keeps them fully defined.
+    class SignupRequest(BaseModel):
+        agent_id: int
+        user_name: str
+        name: str
+        bio: str = ""
+
+    class SignupBulkRequest(BaseModel):
+        users: list[dict[str, Any]]
+
+    class ActionRequest(BaseModel):
+        user_id: int
+        action_type: str
+        params: Optional[dict[str, Any]] = None
+
+    class FollowBulkRequest(BaseModel):
+        edges: list[list[int]]
+
+    class SeedPostRequest(BaseModel):
+        user_id: int
+        content: str
 except ImportError:
     HAS_FASTAPI = False
 
@@ -52,52 +77,31 @@ def create_app(db_path: str = ":memory:", recsys_type: str = "random", max_rec_p
     app = FastAPI(title="MatrAIx OASIS Platform", version="0.1.0")
     state = PlatformState(db_path=db_path, recsys_type=recsys_type, max_rec_posts=max_rec_posts)
 
-    class SignupRequest(BaseModel):
-        agent_id: int
-        user_name: str
-        name: str
-        bio: str = ""
-
-    class SignupBulkRequest(BaseModel):
-        users: list[dict[str, Any]]
-
-    class ActionRequest(BaseModel):
-        user_id: int
-        action_type: str
-        params: dict[str, Any] | None = None
-
-    class FollowBulkRequest(BaseModel):
-        edges: list[list[int]]
-
-    class SeedPostRequest(BaseModel):
-        user_id: int
-        content: str
-
     @app.post("/signup")
-    def signup(req: SignupRequest):
+    def signup(req: SignupRequest = Body(...)):
         user_id = state.db.signup_user(req.agent_id, req.user_name, req.name, req.bio)
         return {"user_id": user_id, "agent_id": req.agent_id}
 
     @app.post("/signup/bulk")
-    def signup_bulk(req: SignupBulkRequest):
+    def signup_bulk(req: SignupBulkRequest = Body(...)):
         state.db.signup_users_bulk(req.users)
         return {"registered": len(req.users)}
 
     @app.post("/action")
-    def action(req: ActionRequest):
+    def action(req: ActionRequest = Body(...)):
         result = state.process_action(req.user_id, req.action_type, req.params)
         if not result.success and result.error:
             return {"success": False, "error": result.error}
         return result.to_dict()
 
     @app.post("/follow/bulk")
-    def follow_bulk(req: FollowBulkRequest):
+    def follow_bulk(req: FollowBulkRequest = Body(...)):
         edges = [(e[0], e[1]) for e in req.edges if len(e) == 2]
         state.db.add_follows_bulk(edges)
         return {"added": len(edges)}
 
     @app.post("/seed_post")
-    def seed_post(req: SeedPostRequest):
+    def seed_post(req: SeedPostRequest = Body(...)):
         post_id = state.db.create_post(req.user_id, req.content)
         return {"post_id": post_id}
 

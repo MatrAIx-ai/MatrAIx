@@ -123,6 +123,7 @@ def docker_run_agent(
     cmd = [
         "docker", "run", "-d",
         "--name", name,
+        "--init",                                      # PID-1 that forwards SIGTERM (else stop/rm hangs)
         "--pid=host",                                  # MANDATORY on the SDB pod
         "--device", f"nvidia.com/gpu={gpu_index}",    # CDI GPU (rootless-safe; NOT --gpus)
         "--network", network,                          # "host" on the pod (hostNetwork)

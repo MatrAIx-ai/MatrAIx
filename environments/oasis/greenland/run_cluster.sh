@@ -65,7 +65,7 @@ platform() {
     # would keep incrementing ids and misalign the social graph.
     rm -f "$OUTPUT_DIR/simulation.db" 2>/dev/null || true
     echo ">> Starting shared platform on host :8000 (fresh db) ..."
-    docker run -d --name oasis-platform --pid=host --network host \
+    docker run -d --name oasis-platform --init --pid=host --network host \
         -e DB_PATH=/app/output/simulation.db \
         -e RECSYS_TYPE=random -e MAX_REC_POSTS=50 -e PORT=8000 \
         -v "$OUTPUT_DIR:/app/output" \
