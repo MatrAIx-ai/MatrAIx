@@ -21,6 +21,8 @@ Available in this wave:
 - plain `results.jsonl` validation, merge, and audit helpers
 - Amazon Reviews 2023 history normalization, persona inference, package
   creation, validation, holdout evaluation, and small test fixtures
+- Nemotron domain and survey selection fixtures with reproducible selection and
+  plot-rendering helpers
 - small JSONL fixtures under `examples/`
 
 Deferred to follow-up PRs:
@@ -189,6 +191,37 @@ need extra cloud/data dependencies:
 ```bash
 pip install -e ".[amazon-modal]"
 ```
+
+## Nemotron Selection Fixtures
+
+Small Nemotron selection fixtures live under `samples/`:
+
+- `samples/nemotron_domain_selection/`: domain-specific selected-user
+  summaries and CSV metrics.
+- `samples/nemotron_survey_selection/`: a deterministic 50-person general
+  survey sample.
+
+The full Nemotron curated persona YAML pool is external. If you have it
+locally, keep it under the ignored path
+`persona/curation/existing_data/raw/nemotron_personas_usa/curated_personas/`.
+
+Regenerate a survey sample from a local curated-persona pool:
+
+```bash
+python persona/curation/existing_data/scripts/select_nemotron_survey_users.py \
+  --curated-dir persona/curation/existing_data/raw/nemotron_personas_usa/curated_personas \
+  --output-dir persona/curation/existing_data/outputs/nemotron_survey_selection
+```
+
+Render domain-selection SVG plots from the committed CSV fixtures:
+
+```bash
+python persona/curation/existing_data/scripts/render_nemotron_domain_selection_plots.py
+```
+
+Generated plots and regenerated selections default to ignored `outputs/`
+directories. Commit only small curated fixtures that are needed for tests or
+documentation.
 
 ## Validate And Merge Results
 

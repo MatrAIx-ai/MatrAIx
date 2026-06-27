@@ -672,3 +672,29 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - `MatrAIx_PR_024/`
   - old `applications/PLAN.md`, `environments/PLAN.md`, and
     `personas/PLAN.md` planning files from the snapshot.
+
+### Step 27: Import Nemotron selection fixtures and tools
+
+- Branch: `codex/persona-nemotron-selection`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PRs:
+  - `#90`, `Add Nemotron domain test user selections`
+  - `#92`, `Add Nemotron domain plot renderer`
+- PersonaBench snapshot PRs:
+  - `#67`
+  - `#65`
+- Purpose: preserve small Nemotron domain and survey selection fixtures plus
+  the reproducible selector/renderer tools without importing generated plots,
+  full persona YAML pools, or old application snapshots.
+- Imported into:
+  - `persona/curation/existing_data/samples/nemotron_domain_selection/`
+  - `persona/curation/existing_data/samples/nemotron_survey_selection/`
+  - `persona/curation/existing_data/scripts/select_nemotron_survey_users.py`
+  - `persona/curation/existing_data/scripts/render_nemotron_domain_selection_plots.py`
+- Updated:
+  - `persona/curation/existing_data/README.md`
+- Excluded:
+  - generated Nemotron SVG/PNG/PDF plot outputs
+  - full Nemotron curated persona YAML pools
+  - `applications/recommendation_chatbot_eval/data/personas/`
+  - snapshot wrapper directories.
