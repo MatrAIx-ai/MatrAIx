@@ -764,3 +764,28 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - The source PR also deleted `.vscode/settings.json`.
   - PersonaBench did not have a tracked `.vscode/settings.json`, so the clean
     migration only enables the `.vscode/` ignore rule.
+
+### Step 31: Import additional persona benchmark related-work notes
+
+- Branch: `codex/persona-related-work-benchmark-notes`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PRs:
+  - `#77`, `Add personalization and social-interaction benchmarks`
+  - `#84`, `Add behavior and private-user-data benchmarks`
+- PersonaBench snapshot PRs:
+  - `#111`
+  - `#113`
+- Purpose: preserve useful persona benchmark references from the old
+  `personas/PLAN.md` without restoring the old plan file, owner roster, or
+  task-assignment format.
+- Updated:
+  - `docs/research/persona-related-work.md`
+- Imported references:
+  - LaMP
+  - PersonalLLM
+  - BehaviorChain / Digital Twins
+  - PersonaBench private-user-data benchmark
+- Source handling:
+  - SOTOPIA was also present in source PR `#77`, but it is already covered in
+    `docs/research/environment-related-work.md`, so it is not duplicated here.
+  - Owner-line edits from source PR `#77` are intentionally excluded.

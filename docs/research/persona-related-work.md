@@ -149,6 +149,41 @@ coverage from the source MatrAIx planning docs.
 - Relevance: closely parallels PersonaBench's persona-adherence scoring and
   dynamic task generation goals.
 
+### [LaMP: When Large Language Models Meet Personalization](https://aclanthology.org/2024.acl-long.399/) (source note: @heming03)
+
+- Benchmark suite for personalized classification and generation conditioned
+  on user profiles or historical user data.
+- Contains seven personalized tasks, each with multiple records per user.
+- Relevance: connects persona conditioning to measurable downstream behavior,
+  which is useful for separating profile adherence from generic task skill.
+
+### [PersonalLLM: Tailoring LLMs to Individual Preferences](https://openreview.net/forum?id=2R7498e2Tx) (source note: @heming03)
+
+- Studies adaptation to heterogeneous individual preferences rather than broad
+  demographic or role-level personas.
+- Provides open-ended prompts, multiple high-quality responses, and preference
+  signals from simulated users with diverse latent preferences.
+- Relevance: informs preference-oriented dimensions and tests for whether
+  persona-conditioned behavior is genuinely individualized.
+
+### [How Far are LLMs from Being Our Digital Twins? A Benchmark for Persona-Based Behavior Chain Simulation](https://aclanthology.org/2025.findings-acl.813/)
+
+- Introduces BehaviorChain, a benchmark for continuous human behavior
+  simulation rather than single survey responses or isolated dialogue turns.
+- Contains personas and behavior chains with profile and history metadata, so
+  models infer contextually appropriate next behaviors over time.
+- Relevance: suggests action-sequence evaluation tasks where a persona,
+  history, and dynamic context determine plausible future behavior.
+
+### [PersonaBench: Evaluating AI Models on Understanding Personal Information through Accessing Synthetic Private User Data](https://aclanthology.org/2025.findings-acl.49/)
+
+- Builds synthetic user profiles and private documents to evaluate whether
+  models can understand personal information from simulated private data.
+- Uses records such as conversation history, user-AI interactions, and app
+  usage data to evaluate personal facts, preferences, and social connections.
+- Relevance: motivates document-grounded persona histories and privacy-aware
+  evaluation settings beyond explicit profile fields.
+
 ### [RoleLLM: Benchmarking, Eliciting, and Enhancing Role-Playing Abilities of LLMs](https://arxiv.org/abs/2310.00746)
 
 - Builds RoleBench and role-conditioned training pipelines for character-level
