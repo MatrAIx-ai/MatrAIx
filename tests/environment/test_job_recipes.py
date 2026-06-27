@@ -8,6 +8,11 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RECIPES_DIR = ROOT / "configs/jobs"
+EXPECTED_CURATED_RECIPES = {
+    "configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml",
+    "configs/jobs/example-job-recipe/personaBench-example-survey-local.yaml",
+    "configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml",
+}
 
 
 def _recipe_paths() -> list[pathlib.Path]:
@@ -35,8 +40,13 @@ def _task_paths(recipe: dict[str, Any]) -> list[str]:
 
 def test_job_recipes_are_curated_and_resolvable() -> None:
     recipe_paths = _recipe_paths()
+    relative_recipe_paths = {
+        str(recipe_path.relative_to(ROOT)) for recipe_path in recipe_paths
+    }
 
     assert recipe_paths
+    assert EXPECTED_CURATED_RECIPES <= relative_recipe_paths
+
     for recipe_path in recipe_paths:
         recipe_text = recipe_path.read_text(encoding="utf-8")
         assert "bench-dev-2000" not in recipe_text

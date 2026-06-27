@@ -17,12 +17,13 @@ Current curated set:
 - `example-job-recipe/`: local application task examples backed by
   `application/tasks/` and `persona/datasets/bench-dev-sample/`, plus
   `harbor-smoke-local.yaml` for a no-API-key runtime smoke check.
+- `application-task-job-recipe/`: curated generated application recipe fixtures
+  whose personas are copied into `persona/datasets/bench-dev-sample/`.
+- `persona-task-grounding-job-recipe/`: curated generated persona grounding
+  recipe fixtures backed by the same sample dataset.
 
 Deferred from the MatrAIx source recipes:
 
-- `personaBench-example-survey-local.yaml` and persona grounding recipes,
-  because they should be regenerated against curated sample or external
-  PersonaBench datasets instead of copied from the source tree.
 - Generated random-sample recipes that reference
-  `persona/datasets/bench-dev-2000/`, because that full dataset is intentionally
-  external to git.
+  `persona/datasets/bench-dev-2000/` beyond the checked-in sample fixture set,
+  because that full dataset is intentionally external to git.

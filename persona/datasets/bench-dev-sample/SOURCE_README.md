@@ -1,10 +1,13 @@
-# bench-dev-2000
+# bench-dev-sample source
 
-Synthetic dev persona pool generated from [`persona/dimensions.json`](../../dimensions.json).
+This fixture set is copied from the generated MatrAIx `bench-dev-2000` pool.
+It keeps only a small number of personas needed for docs, smoke tests, and
+curated recipe parity.
 
 | Field | Value |
 |-------|-------|
-| Count | 2002 (2000 base + stratum top-up) |
+| Source count | 2002 (2000 base + stratum top-up) |
+| Checked-in fixture count | 14 |
 | Schema | v2 (`persona_id`, `version`, `dimensions`) |
 | Smoke | `persona_0042.yaml` |
 | Dimensions | **82** — catalog index 1–47 (core) + all `cog_*` communication dims |
@@ -29,4 +32,4 @@ Base pool only (no top-up):
 uv run python persona/scripts/generate_dev_personas.py --count 2000 --seed 42
 ```
 
-Optional: `--out persona/datasets/bench-dev-2000 --smoke-id 0042`
+Optional full-pool output: `--out persona/datasets/bench-dev-2000 --smoke-id 0042`
