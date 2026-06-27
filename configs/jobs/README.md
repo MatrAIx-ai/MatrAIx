@@ -15,12 +15,11 @@ Rules for adding recipes:
 Current curated set:
 
 - `example-job-recipe/`: local application task examples backed by
-  `application/tasks/` and `persona/datasets/bench-dev-sample/`.
+  `application/tasks/` and `persona/datasets/bench-dev-sample/`, plus
+  `harbor-smoke-local.yaml` for a no-API-key runtime smoke check.
 
 Deferred from the MatrAIx source recipes:
 
-- `harbor-smoke-local.yaml`, because it points at `examples/tasks/hello-world`,
-  which is not part of the curated PersonaBench main tree.
 - `personaBench-example-survey-local.yaml` and persona grounding recipes,
   because they should be regenerated against curated sample or external
   PersonaBench datasets instead of copied from the source tree.
