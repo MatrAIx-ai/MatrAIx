@@ -749,3 +749,18 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - `applications/persona_eval/backend/service/harbor_survey_eval.py`
   - `applications/persona_eval/frontend/`
   - experiment configs, traces, caches, and generated outputs.
+
+### Step 30: Ignore editor-local VS Code workspace settings
+
+- Branch: `codex/ignore-vscode-workspace`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PR: `#129`, `Ignore VS Code workspace settings`
+- PersonaBench snapshot PR: `#82`
+- Purpose: keep contributor-local VS Code workspace settings out of clean
+  `main`.
+- Updated:
+  - `.gitignore`
+- Source handling:
+  - The source PR also deleted `.vscode/settings.json`.
+  - PersonaBench did not have a tracked `.vscode/settings.json`, so the clean
+    migration only enables the `.vscode/` ignore rule.
