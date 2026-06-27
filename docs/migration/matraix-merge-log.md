@@ -925,3 +925,26 @@ This log records the curated migration from MatrAIx into PersonaBench.
     the external artifact checklist for HuggingFace upload.
   - Existing Amazon HF export, inference, packaging, and validation tools remain
     the downstream path for producing worker packages.
+
+### Step 38: Import persona source fetcher and repair provenance paths
+
+- Branch: `codex/persona-source-fetcher`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PR: `#53`, `[codex] Add Wikipedia persona seed pipeline`
+- PersonaBench snapshot PR: `#79`
+- Purpose: preserve the reusable source-fetch registry that backs the persona
+  schema provenance while keeping raw downloads and old direct-LLM wiki
+  assignment scripts out of clean `main`.
+- Imported into:
+  - `persona/curation/existing_data/scripts/fetch_sources.py`
+- Updated:
+  - `persona/schema/dimensions.json`
+  - `persona/curation/existing_data/README.md`
+- Source handling:
+  - `fetch_sources.py` is adapted for the clean PersonaBench path and writes to
+    ignored `raw/` by default.
+  - Schema `fetch_script` provenance entries now point to the clean
+    `persona/curation/existing_data/scripts/fetch_sources.py` path.
+  - The old `assign_wikipedia_persona_fields.py` Claude CLI flow and prompt are
+    excluded because the current wiki/Amazon collaboration package uses the
+    tested `wiki_collab/collab_kit` contract instead.

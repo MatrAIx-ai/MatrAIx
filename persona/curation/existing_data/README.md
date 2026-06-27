@@ -15,6 +15,8 @@ run that path.
 Available in this wave:
 
 - external source manifests under `manifests/`
+- sample-first source fetcher for manifest-backed datasets and literature
+  reference registries
 - Wikipedia person page extraction and cleanup scripts under `scripts/`
 - local SQLite profile database builder
 - worker-facing collaboration package creation
@@ -46,6 +48,25 @@ persona/curation/existing_data/
 
 Generated data should go under ignored local directories such as `raw/`,
 `outputs/`, or `logs/`; it should not be committed.
+
+## Source Fetching
+
+Fetch small samples or source-reference registries into the ignored `raw/`
+tree:
+
+```bash
+python persona/curation/existing_data/scripts/fetch_sources.py \
+  --source literature_references \
+  --target-dir persona/curation/existing_data/raw
+
+python persona/curation/existing_data/scripts/fetch_sources.py \
+  --source google_synthetic_persona_chat \
+  --mode sample \
+  --sample-rows 1000
+```
+
+Use `--mode full` only for intentional full source downloads; large source
+artifacts should be uploaded externally and listed in `migration/matraix/README.md`.
 
 ## Wikipedia Profile Database
 
