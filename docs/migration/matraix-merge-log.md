@@ -181,3 +181,26 @@ This log records the curated migration from MatrAIx into PersonaBench.
     importing the lightweight persona loader does not require Harbor runtime
     dependencies.
   - Persona prompt templates are included as package data.
+
+### Step 9: Import curated application job recipes
+
+- Branch: `codex/configs-job-recipes`
+- PersonaBench PR: `#133`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source reference: `origin/main` at `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
+- Purpose: add small Harbor job recipes that exercise curated application
+  tasks and sample personas, without importing generated historical outputs or
+  recipes that depend on absent full datasets.
+- Imported into:
+  - `configs/jobs/`
+  - `tests/environment/test_job_recipes.py`
+- Excluded:
+  - `configs/jobs/example-job-recipe/harbor-smoke-local.yaml`
+  - `configs/jobs/example-job-recipe/personaBench-example-survey-local.yaml`
+  - `configs/jobs/application-task-job-recipe/`
+  - `configs/jobs/persona-task-grounding-job-recipe/`
+  - `jobs/`
+- Compatibility adjustments:
+  - Recipe persona paths point at
+    `persona/datasets/bench-dev-sample/persona_0042.yaml`.
+  - Recipe documentation records what remains deferred and why.

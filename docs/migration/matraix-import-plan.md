@@ -174,6 +174,23 @@ Still deferred:
 Import only job recipes that can run against the curated runtime and sample
 datasets. Keep generated jobs and historical outputs outside git.
 
+Status: scoped in branch `codex/configs-job-recipes`.
+
+Imported in this wave:
+
+- Curated `configs/jobs/example-job-recipe/appSim-*.yaml` recipes that point at
+  `application/tasks/` and `persona/datasets/bench-dev-sample/`.
+
+Still deferred:
+
+- `harbor-smoke-local.yaml`, because it points at unimported
+  `examples/tasks/hello-world`.
+- `personaBench-*` and persona grounding recipes, because `persona/tasks/`
+  has not been imported yet.
+- Generated random-sample recipes that reference the external
+  `persona/datasets/bench-dev-2000/` dataset.
+- All historical `jobs/` outputs.
+
 ### Wave 7: PersonaBench tasks and annotation tooling
 
 Import persona adherence tasks, grounding specs, and annotation tools.
