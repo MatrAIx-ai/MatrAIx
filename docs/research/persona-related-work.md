@@ -5,6 +5,10 @@ from `MatrAIx-ai/MatrAIx@e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`,
 `docs/personas/PLAN.md`. It preserves the research map without importing the
 old task-assignment plan.
 
+The source note listed @Shirley-Huang, @Eliza_Fan, @Yixuan-He, and @Xiaoyi-Liu
+as related-work owners. Individual entries that named a contributor in the
+source are marked below.
+
 The notes are grouped by how each work informs PersonaBench: persona data,
 generation methods, and evaluation or simulation methodology.
 
@@ -198,13 +202,13 @@ generation methods, and evaluation or simulation methodology.
 - Relevance: frames fairness, identity diversity, and stereotype risk for
   persona-agent evaluation.
 
-### [TinyTroupe](https://microsoft.github.io/TinyTroupe/)
+### [TinyTroupe](https://microsoft.github.io/TinyTroupe/) (source note: Eliza_Fan)
 
 - Toolkit for LLM-powered persona simulation with modular environments and
   bias-correction mechanisms.
 - Relevance: a practical reference for multi-agent persona simulation tooling.
 
-### [AI Town](https://github.com/a16z-infra/ai-town)
+### [AI Town](https://github.com/a16z-infra/ai-town) (source note: Eliza_Fan)
 
 - Open-source persistent multi-agent town where characters interact, maintain
   memories, and form relationships.

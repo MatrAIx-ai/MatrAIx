@@ -30,6 +30,7 @@ merged into `main`.
 Start here:
 
 - [Architecture](docs/architecture.md)
+- [Running PersonaBench](docs/running.md)
 - [Research notes](docs/research/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [MatrAIx migration plan](docs/migration/matraix-import-plan.md)

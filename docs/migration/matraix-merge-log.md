@@ -440,6 +440,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - `docs/assets/persona-grounding-flow.png`
   - `docs/research/README.md`
   - `docs/research/persona-related-work.md`
+  - `docs/running.md`
   - `docs/architecture.md`
   - `README.md`
 - Excluded:
@@ -452,3 +453,5 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - The architecture page references the imported images from `docs/assets/`.
   - The related-work section is recast as a research note rather than a team
     planning document.
+  - Clean-main run commands are documented against curated recipes and
+    adapter-local generated paths.
