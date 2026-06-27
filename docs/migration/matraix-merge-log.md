@@ -807,3 +807,24 @@ This log records the curated migration from MatrAIx into PersonaBench.
 - Compatibility adjustments:
   - The old filename with spaces is replaced by a stable snake_case doc name.
   - The source table is reformatted into maintainable per-domain sections.
+
+### Step 33: Import behavior-grounded persona research plan
+
+- Branch: `codex/behavior-grounded-persona-plan`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PRs:
+  - `#43`, `Add behavior-grounded persona research plan`
+  - `#47`, `Rename behavior grounded persona plan file`
+- PersonaBench snapshot PRs:
+  - `#101`
+  - `#102`
+- Purpose: preserve the research direction for behavior-grounded personas
+  without restoring the old `personas/` planning folder.
+- Imported into:
+  - `docs/research/behavior-grounded-personas.md`
+- Updated:
+  - `docs/research/README.md`
+- Compatibility adjustments:
+  - The old plan file is converted into a research note.
+  - The source rename PR is absorbed by using a stable docs path from the
+    start.

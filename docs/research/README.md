@@ -5,6 +5,7 @@ documentation. These notes are working references for PersonaBench design; they
 are not a claim that the bibliography is complete or freshly revalidated.
 
 - [Persona related work](persona-related-work.md)
+- [Behavior-grounded personas](behavior-grounded-personas.md)
 - [Application related work](application-related-work.md)
 - [Application areas taxonomy](application-areas-taxonomy.md)
 - [Environment related work](environment-related-work.md)
