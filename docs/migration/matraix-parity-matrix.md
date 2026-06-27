@@ -35,9 +35,9 @@ linked from documentation after upload to external artifact storage.
 | `adapters/` | 1,483 | 16.4 MiB | `environment/adapters/` | `needs-curated-import` | Do not dump the adapter zoo at repo root. Import adapters in small batches with manifests, dependencies, smoke commands, and external-data notes. |
 | `application/` | 88 | 81.1 KiB | `application/` | `merged-clean` | Curated tasks, reporting, and job-generation utilities are already present. Future changes should stay under `application/`. |
 | `apps/viewer/` | 64 | 750.0 KiB | `apps/viewer/` | `merged-clean` | Viewer source was imported as repo-local tooling. Generated build output and `node_modules` stay out of git. |
-| `configs/jobs/` | 18 | 18.4 KiB | `configs/jobs/` | `partial` | Curated runnable application recipes are present. Import only additional recipes whose referenced tasks, agents, and sample datasets exist. |
+| `configs/jobs/` | 18 | 18.4 KiB | `configs/jobs/` | `partial` | Curated runnable application recipes and the `harbor-smoke-local.yaml` runtime smoke recipe are present. Import only additional recipes whose referenced tasks, agents, and sample datasets exist. |
 | `docs/` | 15 | 2.8 MiB | `docs/` | `partial` | Keep architecture and migration docs curated. Large images and legacy planning docs need review before import. |
-| `examples/` | 367 | 394.7 KiB | `examples/` or module-local examples | `needs-curated-import` | Import only minimal smoke examples first, especially runtime examples needed by deferred job recipes. |
+| `examples/` | 367 | 394.7 KiB | `examples/` or module-local examples | `partial` | The `hello-world` runtime smoke task is imported. Remaining examples need focused review before import. |
 | `jobs/` | 509 | 64.3 MiB | external storage | `external-artifact` | Historical run outputs, screenshots, videos, and trajectories do not belong in `main`. Upload selected artifacts and link them from docs. |
 | `packages/` | 66 | 303.6 KiB | `packages/` | `needs-curated-import` | Import `rewardkit` and `harbor-langsmith` as optional packages only when their dependencies and tests are explicit. |
 | `persona/` | 2,098 | 451.2 MiB | `persona/` plus external storage | `partial` | Schema, curation, sample data, tasks, reporting, scripts, and validators are curated. Full generated datasets and attribute-pool outputs stay external. |

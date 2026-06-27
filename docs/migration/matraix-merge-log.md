@@ -302,3 +302,27 @@ This log records the curated migration from MatrAIx into PersonaBench.
 - Compatibility adjustments:
   - Lazy persona-agent package exports use literal `__all__` declarations so
     the restored Ruff workflow passes without changing import behavior.
+
+### Step 14: Import minimal examples smoke path
+
+- Branch: `codex/examples-smoke`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source reference: `origin/main` at `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
+- Purpose: restore the smallest no-API-key runtime smoke path without importing
+  the full examples tree or generated job outputs.
+- Imported into:
+  - `examples/tasks/hello-world/`
+  - `configs/jobs/example-job-recipe/harbor-smoke-local.yaml`
+  - `examples/README.md`
+  - `examples/tasks/README.md`
+  - `tests/environment/test_examples_smoke.py`
+- Excluded:
+  - `examples/jobs/`
+  - `examples/configs/`
+  - `examples/agents/`
+  - `examples/metrics/`
+  - `examples/prompts/`
+  - all historical `jobs/` outputs
+- Compatibility adjustments:
+  - Job recipe docs now list `harbor-smoke-local.yaml` as the preferred
+    no-API-key runtime smoke recipe.
