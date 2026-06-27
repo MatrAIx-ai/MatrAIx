@@ -698,3 +698,26 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - full Nemotron curated persona YAML pools
   - `applications/recommendation_chatbot_eval/data/personas/`
   - snapshot wrapper directories.
+
+### Step 28: Import standalone persona survey application task
+
+- Branch: `codex/application-persona-eval-tasks`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source PR: `#83`, `Add standalone Harbor-backed survey eval`
+- PersonaBench snapshot PR: `#71`
+- Purpose: import the standalone Harbor persona-survey task definition without
+  pulling in the full `applications/recommendation_chatbot_eval` backend or
+  generated data.
+- Imported into:
+  - `application/tasks/persona-survey/`
+- Updated:
+  - `tests/environment/test_application_tasks.py`
+- Compatibility adjustments:
+  - Task registry name uses `personabench/application-persona-survey`.
+  - README smoke example points at
+    `persona/datasets/bench-dev-sample/persona_0042.yaml`.
+- Deferred:
+  - `applications/recommendation_chatbot_eval/backend/service/harbor_survey_eval.py`
+  - PersonaEval backend tests and runner integration
+  - recommender-agent task and sidecar, which depend on the deferred
+    recommendation chatbot backend.
