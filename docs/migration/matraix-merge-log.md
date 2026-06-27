@@ -1023,3 +1023,57 @@ This log records the curated migration from MatrAIx into PersonaBench.
     `example-web-playwright_books-interest`.
   - The full `applications/persona_eval` app stack from this source PR remains
     deferred for separate curated application tooling work.
+
+### Step 42: Import parity items 1, 2, 3, and 5 from MatrAIx main
+
+- Branch: `codex/matraix-parity-1235`
+- Source repository: local `/data2/zonglin/MatrAIx`
+- Source base: `MatrAIx-ai/MatrAIx@main`
+- Source commit: `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
+- Purpose: close the functional gaps identified in the main-vs-PersonaBench
+  audit for viewer helpers, curated job recipes, Harbor runtime examples, and
+  selective Harbor runtime tests.
+- Imported into:
+  - `apps/viewer/app/lib/`
+  - `configs/jobs/application-task-job-recipe/`
+  - `configs/jobs/example-job-recipe/personaBench-example-survey-local.yaml`
+  - `configs/jobs/persona-task-grounding-job-recipe/`
+  - `examples/tasks/`
+  - `tests/unit/models/`
+  - `tests/unit/agents/computer_1/`
+  - `tests/unit/agents/test_base_agent_model_info.py`
+  - `tests/unit/agents/test_factory.py`
+  - `tests/unit/agents/test_oracle.py`
+- Updated:
+  - `.gitignore`
+  - `configs/jobs/README.md`
+  - `docs/migration/matraix-parity-matrix.md`
+  - `persona/datasets/README.md`
+  - `persona/datasets/bench-dev-sample/`
+  - `tests/environment/test_examples_smoke.py`
+  - `tests/environment/test_job_recipes.py`
+  - `tests/unit/viewer/test_frontend_source_parity.py`
+- Source handling:
+  - Viewer `app/lib/` was restored because current frontend source imports
+    `~/lib/*`; without those files the viewer cannot typecheck or build.
+  - Generated application and persona grounding recipes are checked in as
+    curated fixtures, not broad generated-output directories.
+  - Recipe persona paths are adapted from `persona/datasets/bench-dev-2000/`
+    to `persona/datasets/bench-dev-sample/`.
+  - `bench-dev-sample/` is expanded from 2 to 14 checked-in personas, only to
+    cover smoke tests and the curated recipe fixtures. The full
+    `bench-dev-2000` cohort remains external.
+  - All source `examples/tasks/` runtime examples are imported. Source
+    `examples/jobs/`, `examples/configs/`, `examples/agents/`,
+    `examples/metrics/`, and `examples/prompts/` remain excluded.
+  - Selected Harbor model/task/agent tests are imported. Legacy
+    `registry.json` tests are excluded because clean main does not restore the
+    old root registry file.
+  - Computer-1 provider tests now skip cleanly unless optional vendor SDKs from
+    the `computer-1` extra are installed.
+- Verification:
+  - `.venv/bin/python -m pytest tests/` passed with 654 passed, 2 skipped.
+  - `.venv/bin/ruff check .` passed.
+  - `npm ci` in `apps/viewer/` completed, but `npm run typecheck` could not run
+    on this machine because Node v18.19.1 is below the Node 20+ requirement and
+    Rollup's optional native dependency was unavailable under that install.

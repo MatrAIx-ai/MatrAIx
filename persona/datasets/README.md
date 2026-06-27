@@ -9,8 +9,9 @@ and link it from the README for the pipeline that produced it.
 
 ## Current Datasets
 
-- `bench-dev-sample/`: two sample personas copied from the MatrAIx
-  `bench-dev-2000` pool for schema examples and smoke tests.
+- `bench-dev-sample/`: small curated fixture set copied from the MatrAIx
+  `bench-dev-2000` pool for schema examples, smoke tests, and curated job
+  recipes. It is not a replacement for the full external cohort.
 
 ## External Dataset Slots
 

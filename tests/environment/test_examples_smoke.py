@@ -9,6 +9,30 @@ import yaml
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 HELLO_WORLD = ROOT / "examples/tasks/hello-world"
 SMOKE_RECIPE = ROOT / "configs/jobs/example-job-recipe/harbor-smoke-local.yaml"
+EXPECTED_HARBOR_EXAMPLES = {
+    "computer-1-click-calibration",
+    "describe-image",
+    "hello-alpine",
+    "hello-computer-use",
+    "hello-cuda",
+    "hello-healthcheck",
+    "hello-mcp",
+    "hello-multi-step-advanced",
+    "hello-multi-step-bat",
+    "hello-multi-step-simple",
+    "hello-skills",
+    "hello-user",
+    "hello-workdir",
+    "hello-world",
+    "hello-world-bat",
+    "llm-judge-example",
+    "network-policy-matrix",
+    "reward-kit-example",
+    "separate-verifier-environment",
+    "separate-verifier-multi-step",
+    "sidecar-artifacts",
+    "verifier-mode-matrix",
+}
 
 
 def test_hello_world_example_is_minimal_and_resolvable() -> None:
@@ -63,3 +87,13 @@ def test_examples_import_excludes_generated_outputs() -> None:
         if path.is_file() and path.stat().st_size > 1_000_000
     ]
     assert large_files == []
+
+
+def test_curated_harbor_examples_are_available() -> None:
+    example_dirs = {
+        path.name
+        for path in (ROOT / "examples/tasks").iterdir()
+        if path.is_dir()
+    }
+
+    assert EXPECTED_HARBOR_EXAMPLES <= example_dirs
