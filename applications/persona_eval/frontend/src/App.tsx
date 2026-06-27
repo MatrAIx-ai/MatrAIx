@@ -458,7 +458,7 @@ export default function App() {
       {topBar}
 
       <ChatConfigBar
-        config={config}
+        config={config ?? optionsQuery.data?.defaults ?? null}
         options={knobs}
         environment={optionsQuery.data?.environment ?? null}
         disabled={
