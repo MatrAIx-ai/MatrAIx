@@ -78,14 +78,19 @@ python persona/curation/existing_data/scripts/make_wiki_assignments.py \
 
 This helper supports the archived result flow in `validate_wiki_results.py` and
 expects a protocol manifest you supply locally. The plain worker-package flow
-below uses `make_collab_package.py` instead.
+below uses the unified `make_package.py` entrypoint instead.
 
 ## Collaboration Packages
 
-Create a worker-facing package from a local profile SQLite database:
+Create a worker-facing package from a supported source. The unified
+`make_package.py` entrypoint currently supports `--source wiki` and
+`--source amazon`.
+
+For a local Wikipedia profile SQLite database:
 
 ```bash
-python persona/curation/existing_data/scripts/make_collab_package.py \
+python persona/curation/existing_data/scripts/make_package.py \
+  --source wiki \
   --db /tmp/personabench-wiki-profiles.sqlite \
   --dimensions persona/schema/dimensions.json \
   --range 0:100 \
@@ -102,9 +107,15 @@ The package contains `tasks.jsonl`, `dimensions.json`, `assignment.json`,
 returns `results.jsonl`; generated `.tar.gz` packages and returned files should
 stay outside git.
 
+The source-specific scripts `make_collab_package.py` and
+`make_amazon_collab_package.py` remain available as lower-level builders, but
+new packaging runs should prefer `make_package.py` so wiki and Amazon packages
+share one owner-facing interface.
+
 The convenience wrapper `scripts/make_package.sh` is an owner-side template for
-the same flow. Edit the local `CLEAN_DIR` if your cleaned Wikipedia text lives
-somewhere else.
+the same flow. It defaults to wiki packages; set `SOURCE=amazon` and
+`USER_HISTORIES=/path/to/user_histories.jsonl` to package Amazon histories.
+Edit the local `CLEAN_DIR` if your cleaned Wikipedia text lives somewhere else.
 
 ## Amazon Reviews 2023
 
@@ -112,7 +123,8 @@ Use `samples/amazon_reviews_2023/user_histories_sample.jsonl` for a local smoke
 test that does not require the full dataset:
 
 ```bash
-python persona/curation/existing_data/scripts/make_amazon_collab_package.py \
+python persona/curation/existing_data/scripts/make_package.py \
+  --source amazon \
   --user-histories persona/curation/existing_data/samples/amazon_reviews_2023/user_histories_sample.jsonl \
   --dimensions persona/schema/dimensions.json \
   --range 0:2 \
