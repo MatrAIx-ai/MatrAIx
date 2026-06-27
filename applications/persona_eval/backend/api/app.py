@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import datetime as _dt
 import os
+import urllib.request
 from contextlib import asynccontextmanager
 from typing import Any, AsyncIterator, Dict, List, Optional
 
@@ -140,6 +141,22 @@ _BUNDLE_DOMAINS = ("movie", "beauty_product", "game")
 _DOMAIN_LABELS = {"movie": "Movies", "beauty_product": "Beauty products", "game": "Games"}
 
 
+def _sidecar_reachable(base_url: str, timeout: float = 1.5) -> bool:
+    """True if a chatbot sidecar answers ``GET /health`` with a 2xx.
+
+    A short timeout keeps the (frequently polled) readiness check snappy; a
+    refused connection (the common "not running" case) fails instantly.
+    """
+    url = "{}/health".format(base_url.rstrip("/"))
+    try:
+        request = urllib.request.Request(url, method="GET")
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            status = getattr(response, "status", None) or response.getcode()
+            return 200 <= int(status) < 300
+    except Exception:  # noqa: BLE001 - any failure means "not reachable"
+        return False
+
+
 def preflight_checks(
     catalog: Any, domain_sizes: Optional[Dict[str, int]] = None
 ) -> List[Dict[str, Any]]:
@@ -156,8 +173,9 @@ def preflight_checks(
     * **Survey** / **Web** — the other application interfaces, available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
-    names. This function performs only filesystem inspection — it never imports
-    RecAI or any application backend.
+    names. Inspection is filesystem-only except for a short ``/health`` probe of
+    the optional finance/medical sidecars; it never imports RecAI or any
+    application backend.
     """
     checks: List[Dict[str, Any]] = []
 
@@ -221,23 +239,48 @@ def preflight_checks(
     # The RecAI native bundles, collapsed across every supported domain.
     checks.append(_recai_resources_check(root))
 
-    # Other chatbot adapters are selectable, but their external services are only
-    # exercised at run time — report availability honestly, never fake a probe we
-    # cannot perform here (this function is filesystem-only).
+    # The finance/medical adapters route to HTTP sidecars. Probe each one's
+    # /health so readiness reflects whether it is actually running. They are
+    # marked optional: a down sidecar shows here but does not gate overall
+    # readiness (RecAI / Survey / Web still run without them).
+    from backend.service.local_chatbot_eval import _sidecar_base_url
+
+    finance_url = _sidecar_base_url(
+        "CHATBOT_UPSTREAM_FINANCE", "FINANCE_CHATBOT_URL", "http://127.0.0.1:8901"
+    )
+    finance_ok = _sidecar_reachable(finance_url)
     checks.append(
         {
             "group": "Chatbot",
             "name": "OpenBB (finance)",
-            "ok": True,
-            "detail": "Adapter available. OpenBB access is checked when a run starts.",
+            "ok": finance_ok,
+            "optional": True,
+            "detail": (
+                "Finance sidecar reachable at {}.".format(finance_url)
+                if finance_ok
+                else "Finance sidecar not running at {}. Start it to run a finance chat.".format(
+                    finance_url
+                )
+            ),
         }
     )
+    medical_url = _sidecar_base_url(
+        "CHATBOT_UPSTREAM_MEDICAL", "MEDICAL_CHATBOT_URL", "http://127.0.0.1:8902"
+    )
+    medical_ok = _sidecar_reachable(medical_url)
     checks.append(
         {
             "group": "Chatbot",
             "name": "Medical assistant",
-            "ok": True,
-            "detail": "Adapter available. The assistant service is checked when a run starts.",
+            "ok": medical_ok,
+            "optional": True,
+            "detail": (
+                "Medical sidecar reachable at {}.".format(medical_url)
+                if medical_ok
+                else "Medical sidecar not running at {}. Start it to run a medical chat.".format(
+                    medical_url
+                )
+            ),
         }
     )
 
@@ -435,7 +478,9 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             if getattr(idx, "available", False) and getattr(idx, "size", 0):
                 domain_sizes[domain] = idx.size
         checks = preflight_checks(services.catalog, domain_sizes)
-        ready = all(c["ok"] for c in checks)
+        # Optional adapters (finance/medical sidecars) report their status but
+        # do not gate overall readiness — the core surfaces run without them.
+        ready = all(c["ok"] for c in checks if not c.get("optional"))
         return {"ready": ready, "checks": checks}
 
     # ------------------------- config options ------------------------- #
@@ -502,6 +547,23 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             "session": result["session"].to_dict(),
             "cacheInvalidated": bool(result["cacheInvalidated"]),
         }
+
+    @app.delete("/api/sessions", tags=["sessions"])
+    def clear_sessions(
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        """Delete every saved chat session (memory + disk)."""
+        return {"deleted": services.manager.clear()}
+
+    @app.delete("/api/sessions/{session_id}", tags=["sessions"])
+    def delete_session(
+        session_id: str,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        """Delete one chat session (memory + disk)."""
+        if not services.manager.delete(session_id):
+            raise HTTPException(status_code=404, detail="session not found")
+        return {"deleted": session_id}
 
     @app.get("/api/sessions/{session_id}/export", tags=["sessions"])
     def export_session(

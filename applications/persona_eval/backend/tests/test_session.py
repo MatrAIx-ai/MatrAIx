@@ -444,3 +444,113 @@ def test_submit_turn_empty_message_raises(manager):
 
 def test_get_job_unknown_returns_none(manager):
     assert manager.get_job("job_missing") is None
+
+
+# --------------------------------------------------------------------------- #
+# SessionManager: delete + clear
+# --------------------------------------------------------------------------- #
+def test_delete_session_removes_from_memory_and_disk(manager):
+    session = manager.create()
+    assert manager.get(session.id) is not None
+    assert manager.delete(session.id) is True
+    assert manager.get(session.id) is None
+    assert all(row["id"] != session.id for row in manager.list())
+
+
+def test_delete_unknown_session_returns_false(manager):
+    assert manager.delete("ses_does_not_exist") is False
+
+
+def test_clear_removes_all_sessions(manager):
+    a = manager.create()
+    b = manager.create()
+    assert manager.clear() == 2
+    assert manager.get(a.id) is None
+    assert manager.get(b.id) is None
+    assert manager.list() == []
+
+
+# --------------------------------------------------------------------------- #
+# RecBotSession: finance / medical sidecar routing
+# --------------------------------------------------------------------------- #
+class _FakeHTTPResponse:
+    """Minimal urlopen() stand-in for the chatbot sidecar HTTP client."""
+
+    def __init__(self, payload):
+        self._payload = payload
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def read(self):
+        import json
+
+        return json.dumps(self._payload).encode("utf-8")
+
+
+def test_run_turn_sync_routes_finance_to_sidecar(catalog, config_manager, set_run_turn, monkeypatch):
+    """A finance chat turn hits the HTTP sidecar, never the RecAI engine."""
+    import json
+    import urllib.request
+
+    calls = []
+
+    def fake_urlopen(request, timeout):
+        calls.append(json.loads(request.data.decode("utf-8")))
+        return _FakeHTTPResponse(
+            {
+                "sessionId": "fin_ses_1",
+                "turn": {
+                    "turnId": "fin_turn_1",
+                    "assistantMessage": "Here are some low-cost broad-market ETFs.",
+                    "groundedItems": [],
+                },
+            }
+        )
+
+    monkeypatch.setenv("CHATBOT_UPSTREAM_FINANCE", "http://finance.local")
+    monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
+    set_run_turn(lambda request: pytest.fail("RecAI bridge must not run for a finance chat"))
+
+    session = RecBotSession(
+        id="ses_fin",
+        title="Finance chat",
+        config=config_manager.normalize({"applicationId": "finance_openbb"}),
+        catalog=catalog,
+        config_manager=config_manager,
+    )
+    view = session.run_turn_sync("Compare low-cost broad market ETFs")
+
+    assert view["assistantMessage"] == "Here are some low-cost broad-market ETFs."
+    assert calls and calls[0]["applicationId"] == "finance_openbb"
+    assert calls[0]["applicationContext"] == "financial_research"
+    assert len(session.turns) == 1
+    assert session.messages[-1] == {"role": "assistant", "content": view["assistantMessage"]}
+
+
+def test_run_turn_sync_sidecar_offline_raises_clear_error(catalog, config_manager, set_run_turn, monkeypatch):
+    """An offline sidecar surfaces a clear error instead of silently using RecAI."""
+    import urllib.error
+    import urllib.request
+
+    def fake_urlopen(request, timeout):
+        raise urllib.error.URLError("connection refused")
+
+    monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
+    set_run_turn(lambda request: pytest.fail("RecAI bridge must not run for a finance chat"))
+
+    session = RecBotSession(
+        id="ses_fin",
+        title="Finance chat",
+        config=config_manager.normalize({"applicationId": "finance_openbb"}),
+        catalog=catalog,
+        config_manager=config_manager,
+    )
+    with pytest.raises(Exception) as excinfo:
+        session.run_turn_sync("hello")
+
+    assert "sidecar unavailable" in str(excinfo.value)
+    assert session.turns == []  # no turn recorded on failure

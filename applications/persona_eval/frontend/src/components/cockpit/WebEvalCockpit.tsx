@@ -50,6 +50,8 @@ export interface WebEvalCockpitProps {
   options: ConfigOptionsResponse | null;
   taskType: PersonaEvalTaskType;
   onTaskTypeChange: (value: PersonaEvalTaskType) => void;
+  /** Report the honest footer context up (the active website). */
+  onFooterContextChange?: (context: string) => void;
 }
 
 interface SelectOption {
@@ -75,7 +77,7 @@ function webStatusLine(phase: WebEvalRunPhase, jobPhase: string | null | undefin
   if (phase === "building") return "Setting up the website test…";
   if (phase !== "running") return null;
   const raw = (jobPhase ?? "").toLowerCase();
-  if (raw.includes("collect")) return "Saving the results and browser recording…";
+  if (raw.includes("collect")) return "Saving the results and step screenshots…";
   if (raw.includes("web")) return "The simulated visitor is using the site…";
   return "Running the website test…";
 }
@@ -167,7 +169,7 @@ function pillForTone(tone: PipelineTone): string {
   return "waiting";
 }
 
-export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalCockpitProps) {
+export function WebEvalCockpit({ options, taskType, onTaskTypeChange, onFooterContextChange }: WebEvalCockpitProps) {
   const { run, job, phase, isRunning, error, timedOut, retry } = useWebEval();
   const [persona, setPersona] = useState<PersonaEvalPersona | null>(null);
   const [personaModel, setPersonaModel] = useState<string>(
@@ -201,6 +203,11 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
   useEffect(() => {
     if (!task && tasks.length > 0) setTaskId(tasks[0].id);
   }, [task, tasks]);
+
+  // Report the honest footer context up (the active website).
+  useEffect(() => {
+    onFooterContextChange?.(`web · ${task?.siteName ?? "Website"}`);
+  }, [task, onFooterContextChange]);
 
   const webResult = job?.webResult ?? null;
   const trace = job?.trace ?? null;
@@ -269,7 +276,7 @@ export function WebEvalCockpit({ options, taskType, onTaskTypeChange }: WebEvalC
             <div className="hud mb-2 text-[10px] text-primary">PersonaEval · Cockpit</div>
             <h1 className="font-display text-[26px] font-bold tracking-tight text-text-main">Configure a simulation</h1>
             <p className="mt-1 text-[13px] text-text-variant">
-              Pick a persona and a website task, then launch. A simulated visitor drives a real browser and rates the
+              Pick a persona and a website task, then launch. A simulated visitor walks through the site and rates the
               experience.
             </p>
           </div>
@@ -427,7 +434,7 @@ function AppTypeSwitch({
   const items: ReadonlyArray<{ value: PersonaEvalTaskType; label: string; icon: string; hint: string }> = [
     { value: "chatbot", label: "Chatbot", icon: "forum", hint: "A back-and-forth conversation." },
     { value: "survey", label: "Survey", icon: "fact_check", hint: "A fixed questionnaire the user fills out." },
-    { value: "web", label: "Web", icon: "language", hint: "A real browser task the user completes." },
+    { value: "web", label: "Web", icon: "language", hint: "A website task the user completes." },
   ];
   return (
     <div className="shrink-0">
@@ -498,7 +505,7 @@ function WebPipeline({
     {
       key: "website",
       label: "Website",
-      sub: "browser / computer-use",
+      sub: "simulated walkthrough",
       icon: "language",
       tone: websiteTone,
       title: task ? `${task.title} · ${task.siteUrl}` : "Website host",
@@ -652,7 +659,7 @@ function WebsiteTaskCard({ task }: { task: WebEvalTask }) {
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <InfoTile label="Website URL" value={task.siteUrl} />
         <InfoTile label="Results file" value={task.outputArtifact} />
-        <InfoTile label="Recording" value="Browser recording" />
+        <InfoTile label="Recording" value="Step screenshots" />
       </div>
     </section>
   );
@@ -802,7 +809,7 @@ function WebTraceGrid({ trace }: { trace: WebTrace }) {
   if (events.length === 0) {
     return (
       <div className="rise-in rounded-md border border-dashed border-outline bg-surface-low px-4 py-6 text-center text-[12px] text-text-variant">
-        This run finished without recording any browser steps.
+        This run finished without recording any steps.
       </div>
     );
   }
@@ -946,10 +953,10 @@ function DriverArtifactsNote() {
         <h3 className="hud flex items-center gap-1.5 text-[10px] text-text-dim">
           <Sym name="monitor" size={14} /> Driver &amp; artifacts
         </h3>
-        <span className="hud rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim">computer-use</span>
+        <span className="hud rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim">simulated</span>
       </div>
       <p className="mb-3 text-[12px] leading-relaxed text-text-variant">
-        The persona drives a real browser; steps and screenshots are captured as a trace.
+        The persona reasons through the site step by step; the walkthrough and screenshots are captured as a trace.
       </p>
       <div className="hud mb-1.5 text-[8px] text-text-dim">Artifacts produced</div>
       <div className="flex flex-wrap gap-1.5">

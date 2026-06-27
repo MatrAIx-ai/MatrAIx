@@ -40,6 +40,13 @@ __all__ = ["ChatTurn", "RecBotSession", "SessionManager"]
 
 _AGENT_ERROR_PREFIX = "Something went wrong, please retry."
 _TURN_ATTEMPTS = 2
+# Chat applications that route to an HTTP sidecar (the same finance/medical
+# adapters the PersonaEval cockpit uses) instead of the in-process RecAI engine.
+_SIDECAR_APPLICATION_IDS = ("finance_openbb", "medical_assistant")
+_SIDECAR_APPLICATION_CONTEXT = {
+    "finance_openbb": "financial_research",
+    "medical_assistant": "medical_consultation",
+}
 _TRUNCATION_TAIL_WORDS = {
     "a",
     "an",
@@ -165,6 +172,10 @@ class RecBotSession:
         self.createdAt: str = createdAt or _now_iso()
         self._catalog = catalog if catalog is not None else CatalogIndex(None)
         self._config_manager = config_manager or ConfigManager()
+        # Lazily created HTTP-sidecar session for finance/medical chats; RecAI
+        # chats never touch it. Held per session so the sidecar conversation id
+        # carries across turns within this process.
+        self._direct_session: Any = None
 
     # ------------------------------------------------------------------ #
     # Serialization
@@ -304,6 +315,12 @@ class RecBotSession:
         start). The caller is responsible for running it off the event loop and
         for serializing turns per session.
         """
+        # 0) Route finance/medical chats to their HTTP sidecar. Only RecAI runs
+        #    the in-process engine; other applications never reach the bridge.
+        application_id = str(self.config.get("applicationId") or "recai")
+        if application_id in _SIDECAR_APPLICATION_IDS:
+            return self._run_sidecar_turn(application_id, user_message)
+
         # 1) Environment: backend config + catalog path.
         self._config_manager.apply(self.config)
         catalog_path = os.environ.get("INTERECAGENT_CATALOG_PATH")
@@ -342,6 +359,50 @@ class RecBotSession:
         assistant_text = turn_view.get("assistantMessage")
         self.messages.append({"role": "user", "content": user_message})
         if isinstance(assistant_text, str):
+            self.messages.append({"role": "assistant", "content": assistant_text})
+        self.turns.append(turn_view)
+        return turn_view
+
+    def _run_sidecar_turn(self, application_id: str, user_message: str) -> Dict[str, Any]:
+        """Run one turn against a finance/medical HTTP chatbot sidecar.
+
+        Routes to the same adapter the PersonaEval cockpit uses. A sidecar that
+        is offline raises a clear 503 (surfaced as the turn error) rather than
+        silently falling back to RecAI. The sidecar response is adapted into the
+        same ``TurnView`` shape the chat UI and persistence expect.
+        """
+        from backend.service.local_chatbot_eval import DirectApplicationSession
+        from persona_eval.types import PersonaEvalConfig
+
+        if self._direct_session is None:
+            self._direct_session = DirectApplicationSession(
+                PersonaEvalConfig(
+                    domain=str(self.config.get("domain") or ""),
+                    application_id=application_id,
+                    application_context=_SIDECAR_APPLICATION_CONTEXT.get(application_id, ""),
+                    engine=str(self.config.get("engine") or "gpt-4o-mini"),
+                )
+            )
+
+        started = time.monotonic()
+        turn = self._direct_session.run_turn_sync(user_message)
+        duration_seconds = round(time.monotonic() - started, 3)
+
+        turn_view = normalize_turn_view(
+            {
+                "turnId": turn.get("turnId") or _new_id("turn"),
+                "userMessage": user_message,
+                "assistantMessage": turn.get("assistantMessage") or "",
+                "plan": [],
+                "recommendedItems": turn.get("recommendedItems") or [],
+                "durationSeconds": duration_seconds,
+                "raw": turn,
+            }
+        )
+
+        assistant_text = turn_view.get("assistantMessage")
+        self.messages.append({"role": "user", "content": user_message})
+        if isinstance(assistant_text, str) and assistant_text:
             self.messages.append({"role": "assistant", "content": assistant_text})
         self.turns.append(turn_view)
         return turn_view
@@ -455,6 +516,26 @@ class SessionManager:
             reverse=True,
         )
         return ordered
+
+    def delete(self, session_id: str) -> bool:
+        """Remove a session from memory and disk; True if it existed anywhere."""
+        with self._guard:
+            in_memory = self._sessions.pop(session_id, None) is not None
+        on_disk = self.store.delete(session_id)
+        return in_memory or on_disk
+
+    def clear(self) -> int:
+        """Remove every session (memory + disk); return the number removed."""
+        with self._guard:
+            ids = set(self._sessions.keys())
+            self._sessions.clear()
+        for disk_summary in self.store.list():
+            sid = disk_summary.get("id")
+            if isinstance(sid, str):
+                ids.add(sid)
+        for sid in ids:
+            self.store.delete(sid)
+        return len(ids)
 
     def patch_config(
         self, session_id: str, cfg: Dict[str, Any]

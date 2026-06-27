@@ -39,7 +39,7 @@ function assistantMeta(turn: TurnView): MetaChip[] {
 }
 
 /** Teaching empty-state shown when a fresh session has no turns yet. */
-function EmptyThread() {
+function EmptyThread({ appName, warmsUp }: { appName: string; warmsUp: boolean }) {
   return (
     <div className="flex h-full items-center justify-center px-6">
       <div className="rise-in flex max-w-md flex-col items-center gap-3 text-center">
@@ -49,8 +49,10 @@ function EmptyThread() {
         <div>
           <h3 className="font-display text-[15px] font-semibold text-text-main">Start the conversation</h3>
           <p className="mx-auto mt-2 max-w-sm text-[13px] leading-relaxed text-text-variant">
-            You&apos;ll play the user here. Type what they&apos;d want and RecAI will recommend. Heads up:
-            the first message wakes the recommender (about a minute); after that, replies are quick.
+            You&apos;ll play the user here. Type what they&apos;d want and {appName} will reply.
+            {warmsUp
+              ? " Heads up: the first message wakes the recommender (about a minute); after that, replies are quick."
+              : ""}
           </p>
         </div>
         <p className="hud mt-1 max-w-xs text-[9px] leading-relaxed text-text-dim">
@@ -62,14 +64,23 @@ function EmptyThread() {
   );
 }
 
-/** A shimmering RecAI bubble shown while the agent wakes / thinks. */
-function ThinkingSkeleton({ phase }: { phase: TurnPhase }) {
+/** A shimmering assistant bubble shown while the agent wakes / thinks. */
+function ThinkingSkeleton({
+  phase,
+  appName,
+  warmsUp,
+}: {
+  phase: TurnPhase;
+  appName: string;
+  warmsUp: boolean;
+}) {
   const building = phase === "building";
+  const waking = building && warmsUp;
   return (
     <div className="rise-in flex flex-col items-start pr-10">
       <div className="hud mb-1.5 ml-1 flex items-center gap-2 text-[9px] text-primary">
         <Sym name="smart_toy" fill={1} size={14} className="text-primary" />
-        <span>RecAI · {building ? "waking" : "thinking"}</span>
+        <span>{appName} · {waking ? "waking" : "thinking"}</span>
         <span className="h-1.5 w-1.5 animate-rb-pulse rounded-full bg-primary" aria-hidden />
       </div>
       <div className="w-full rounded-md rounded-tl-sm border border-outline bg-surface px-4 py-4">
@@ -82,9 +93,9 @@ function ThinkingSkeleton({ phase }: { phase: TurnPhase }) {
           </div>
         </div>
         <p className="mt-3 text-[12px] leading-relaxed text-text-variant">
-          {building
-            ? "First message: RecAI is loading its catalog and tools. This one turn can take a minute."
-            : "Choosing the right tools and ranking items for you…"}
+          {waking
+            ? `First message: ${appName} is loading its catalog and tools. This one turn can take a minute.`
+            : `${appName} is working on a reply…`}
         </p>
       </div>
     </div>
@@ -102,6 +113,10 @@ export interface ChatThreadProps {
   error: string | null;
   /** Identity used for the user label (e.g. the operator's email). */
   userId?: string;
+  /** Display name of the selected chatbot (RecAI / OpenBB / Medical assistant). */
+  appName?: string;
+  /** Whether the app has a cold-start warmup (RecAI only) for honest copy. */
+  warmsUp?: boolean;
   onSelectTurn: (index: number) => void;
   onSelectItem: (itemId: string) => void;
   /** Re-send the failed turn (preserves the message). */
@@ -114,6 +129,8 @@ export function ChatThread({
   pendingMessage,
   phase,
   error,
+  appName = "the app",
+  warmsUp = true,
   onSelectTurn,
   onSelectItem,
   onRetry,
@@ -132,7 +149,7 @@ export function ChatThread({
   return (
     <div ref={scrollRef} className="custom-scrollbar min-h-0 flex-1 overflow-auto px-5 py-7 md:px-8">
       {empty ? (
-        <EmptyThread />
+        <EmptyThread appName={appName} warmsUp={warmsUp} />
       ) : (
         <div className="mx-auto max-w-2xl space-y-7">
           {turns.map((turn, i) => (
@@ -148,7 +165,7 @@ export function ChatThread({
               )}
               <ChatMessage
                 role="assistant"
-                name="RecAI"
+                name={appName}
                 recommendations={turn.recommendedItems ?? []}
                 meta={assistantMeta(turn)}
                 onSelectItem={onSelectItem}
@@ -168,8 +185,8 @@ export function ChatThread({
             </ChatMessage>
           )}
 
-          {/* Shimmering RecAI placeholder while the job runs */}
-          {isPending && <ThinkingSkeleton phase={phase} />}
+          {/* Shimmering assistant placeholder while the job runs */}
+          {isPending && <ThinkingSkeleton phase={phase} appName={appName} warmsUp={warmsUp} />}
 
           {/* Plain-language error card + Retry */}
           {error && !isPending && (

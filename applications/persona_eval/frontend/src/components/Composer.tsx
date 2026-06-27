@@ -26,12 +26,16 @@ export interface ComposerProps {
   phase: TurnPhase;
   /** Disable entirely (e.g. before a session exists). */
   disabled?: boolean;
+  /** Display name of the selected chatbot (RecAI / OpenBB / Medical assistant). */
+  appName?: string;
+  /** Whether the app has a cold-start warmup (RecAI only) for honest hints. */
+  warmsUp?: boolean;
 }
 
 /** Max textarea height before it scrolls instead of growing (px). */
 const MAX_TEXTAREA_HEIGHT = 168;
 
-export function Composer({ onSend, phase, disabled }: ComposerProps) {
+export function Composer({ onSend, phase, disabled, appName = "the app", warmsUp = true }: ComposerProps) {
   const [value, setValue] = useState("");
   const taRef = useRef<HTMLTextAreaElement>(null);
   const isPending = phase === "building" || phase === "running";
@@ -73,9 +77,13 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
     ? "The backend is offline. Start it to send a message."
     : isPending
       ? phase === "building"
-        ? "Waking the recommender. The first message takes about a minute"
+        ? warmsUp
+          ? "Waking the recommender. The first message takes about a minute"
+          : `Sending your message to ${appName}…`
         : "Sending your message…"
-      : "The first message wakes the recommender (about a minute), then replies are quick";
+      : warmsUp
+        ? "The first message wakes the recommender (about a minute), then replies are quick"
+        : `You play the user; ${appName} replies.`;
 
   return (
     <div className="flex-shrink-0 border-t border-outline bg-surface-lowest px-5 py-4 md:px-8">
@@ -92,7 +100,7 @@ export function Composer({ onSend, phase, disabled }: ComposerProps) {
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={onKeyDown}
             placeholder="Type a message as the user you're playing. Press ⌘↵ to send"
-            aria-label="Type a message to RecAI"
+            aria-label={`Type a message to ${appName}`}
             className="block w-full resize-none bg-transparent px-3 py-3 font-mono text-[13px] leading-relaxed text-text-main outline-none placeholder:text-text-variant disabled:cursor-not-allowed disabled:opacity-60"
           />
           <button

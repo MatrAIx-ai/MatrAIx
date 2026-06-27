@@ -18,19 +18,52 @@ from persona_eval.model_client import build_json_client
 from persona_eval.types import Persona
 
 
-def build_web_task_prompt(task: WebEvalTask) -> str:
-    return "\n".join(
+def build_web_task_prompt(
+    task: WebEvalTask, products: Optional[List[Dict[str, Any]]] = None
+) -> str:
+    lines = [
+        "You are evaluating a website as a realistic user.",
+        "Website: {}".format(task.site_name),
+        "Website URL: {}".format(task.site_url),
+        "Task context: {}".format(task.description),
+    ]
+    if products:
+        lines.append("")
+        lines.append(
+            "Product catalog (pick selected_product_id from these exact ids):"
+        )
+        for product in products:
+            product_id = str(product.get("id") or "").strip()
+            if not product_id:
+                continue
+            name = str(product.get("name") or product_id)
+            category = str(product.get("category") or "")
+            price = product.get("price_usd")
+            price_str = " | ${}".format(price) if price not in (None, "") else ""
+            lines.append(
+                "- {} | {} | {}{}".format(product_id, name, category, price_str)
+            )
+    lines.extend(
         [
-            "You are evaluating a website as a realistic user.",
-            "Website: {}".format(task.site_name),
-            "Website URL: {}".format(task.site_url),
-            "Task context: {}".format(task.description),
             "",
             "Based on your assigned persona, decide a realistic closed-loop goal for this website.",
             "For an ecommerce site, this should usually mean finding and choosing a product that fits your needs.",
             "Describe the steps you would take on the site and then complete the post-interaction form.",
+        ]
+    )
+    if products:
+        lines.append(
+            "selected_product_id and selected_product_name MUST be one of the catalog products listed above."
+        )
+    lines.extend(
+        [
             "",
             "Return strict JSON with this shape:",
+        ]
+    )
+    return "\n".join(
+        lines
+        + [
             json.dumps(
                 {
                     "goal": "<the website task you decided to perform>",
@@ -76,7 +109,8 @@ class LocalWebEvalRunner:
                 on_event(event)
 
         persona_prompt = persona_system_prompt(persona)
-        task_prompt = build_web_task_prompt(task)
+        products = _load_task_products(task)
+        task_prompt = build_web_task_prompt(task, products)
         prompts = {
             "personaPrompt": persona_prompt,
             "harborPrompt": persona_prompt,
@@ -87,7 +121,7 @@ class LocalWebEvalRunner:
 
         client = build_json_client(config.persona_model)
         raw = client.complete_json(persona_prompt, task_prompt)
-        trace = _trace_from_model(raw, task=task)
+        trace = _trace_from_model(raw, task=task, products=products)
         result = WebEvalResult(
             config=config,
             persona=persona,
@@ -101,14 +135,15 @@ class LocalWebEvalRunner:
         return result
 
 
-def _trace_from_model(raw: Dict[str, Any], *, task: WebEvalTask) -> WebTrace:
+def _trace_from_model(
+    raw: Dict[str, Any], *, task: WebEvalTask, products: List[Dict[str, Any]]
+) -> WebTrace:
     events = []
     goal = str(raw.get("goal") or "Use the website to complete a realistic task.")
     steps = raw.get("steps")
     if not isinstance(steps, list) or not steps:
         steps = [{"message": goal, "actions": [{"name": "observe", "arguments": {}}]}]
     screenshots_dir = Path(tempfile.mkdtemp(prefix="personaeval_web_trace_"))
-    products = _load_task_products(task)
     selected_product_id = str(
         raw.get("selected_product_id") or raw.get("selectedProductId") or ""
     ).strip()

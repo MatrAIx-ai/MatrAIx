@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import shutil
 import threading
 import uuid
 from dataclasses import dataclass
@@ -9,6 +10,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 from urllib.parse import quote
 
+from backend.service import run_store
 from backend.service.config import persona_model as default_persona_model
 from backend.service.web_types import WebEvalConfig, WebEvalResult, WebEvalTask
 
@@ -57,6 +59,18 @@ def _trace_with_screenshot_urls(
     return view
 
 
+def _copy_screenshots(src_dir: Optional[Path], dst_dir: Path) -> None:
+    """Copy a run's trace SVGs into a durable per-run dir (best-effort)."""
+    if src_dir is None or not Path(src_dir).is_dir():
+        return
+    try:
+        dst_dir.mkdir(parents=True, exist_ok=True)
+        for svg in Path(src_dir).glob("screenshot_*.svg"):
+            shutil.copy2(svg, dst_dir / svg.name)
+    except Exception:  # noqa: BLE001 - best-effort
+        return
+
+
 @dataclass
 class WebEvalProgress:
     job_id: str
@@ -100,11 +114,13 @@ class WebEvalService:
         get_task: Callable[[str], WebEvalTask],
         list_tasks: Callable[[], List[WebEvalTask]],
         runner: Callable[..., WebEvalResult],
+        runs_dir: Optional[Path] = None,
     ) -> None:
         self._get_persona = get_persona
         self._get_task = get_task
         self._list_tasks = list_tasks
         self._runner = runner
+        self._runs_dir = runs_dir or run_store.default_runs_dir()
         self._guard = threading.Lock()
         self._progress: Dict[str, WebEvalProgress] = {}
 
@@ -154,11 +170,11 @@ class WebEvalService:
             raise ValueError("invalid screenshot filename")
         with self._guard:
             progress = self._progress.get(job_id)
-            if progress is None:
-                raise KeyError(job_id)
-            screenshots_dir = progress.screenshots_dir
+            screenshots_dir = progress.screenshots_dir if progress is not None else None
         if screenshots_dir is None:
-            raise FileNotFoundError(filename)
+            # Fall back to the durable per-run screenshots so a persisted web run
+            # keeps its trace images after a restart (the in-memory job is gone).
+            screenshots_dir = run_store.web_screenshots_dir(self._runs_dir, job_id)
         base = screenshots_dir.resolve()
         path = (screenshots_dir / safe_name).resolve()
         if path.parent != base or not path.is_file():
@@ -213,12 +229,33 @@ class WebEvalService:
                     on_event=on_event,
                 )
                 result_view = web_result_view(result)
+                web_result = result_view.get("webResult")
+                trace = _trace_with_screenshot_urls(
+                    progress.job_id, result_view.get("trace")
+                )
+                # Copy the trace screenshots to a durable per-run dir and persist
+                # the run BEFORE marking done, so a "done" run is always already
+                # saved and survives a restart. Both are best-effort.
+                _copy_screenshots(
+                    result.trace.screenshots_dir,
+                    run_store.web_screenshots_dir(self._runs_dir, progress.job_id),
+                )
+                run_store.persist_run(
+                    self._runs_dir,
+                    {
+                        "id": progress.job_id,
+                        "applicationType": "web",
+                        "createdAt": result_view.get("createdAt"),
+                        "persona": run_store.persona_summary(persona),
+                        "siteName": task.site_name,
+                        "taskTitle": task.title,
+                        "webResult": web_result,
+                        "webTrace": trace,
+                    },
+                )
                 with self._guard:
-                    progress.web_result = result_view.get("webResult")
-                    progress.trace = _trace_with_screenshot_urls(
-                        progress.job_id,
-                        result_view.get("trace"),
-                    )
+                    progress.web_result = web_result
+                    progress.trace = trace
                     progress.screenshots_dir = result.trace.screenshots_dir
                     progress.prompts = result_view.get("prompts")
                     progress.phase = None

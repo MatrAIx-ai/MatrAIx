@@ -16,6 +16,7 @@ from pathlib import Path
 import inspect
 from typing import Any, Callable, Dict, List, Optional
 
+from backend.service import run_store
 from persona_eval.runner import run_persona_eval as _default_runner
 from persona_eval.types import DEFAULT_PERSONA_MODEL, PersonaEvalConfig
 
@@ -31,22 +32,10 @@ def _new_persona_eval_id() -> str:
 def _default_runs_dir() -> Path:
     """Canonical cache dir for persona-eval run artifacts (gitignored).
 
-    ``data/cache/persona_eval/persona_eval_runs`` relative to the repo
-    root (mirrors :func:`backend.service.session_store._default_base_dir`).
+    Delegates to the shared :mod:`run_store` so chatbot, survey, and web runs all
+    persist to (and are listed from) the same directory.
     """
-    here = os.path.abspath(__file__)
-    # persona_eval_service.py -> service -> backend -> persona_eval ->
-    # applications -> <repo root>
-    repo_root = here
-    for _ in range(5):
-        repo_root = os.path.dirname(repo_root)
-    return (
-        Path(repo_root)
-        / "data"
-        / "cache"
-        / "persona_eval"
-        / "persona_eval_runs"
-    )
+    return run_store.default_runs_dir()
 
 
 def _normalize_prompts(value: Any) -> Optional[Dict[str, str]]:
@@ -204,35 +193,16 @@ class PersonaEvalService:
             return None
 
     def list_runs(self) -> List[Dict[str, Any]]:
-        """Newest-first run summaries read from disk.
+        """Newest-first run summaries read from disk (chatbot, survey, and web).
 
-        Each summary is
-        ``{id, createdAt, domain, personaName, source, goalContextId,
-        overallRating, numTurns}``; corrupt/unreadable artifacts are skipped.
+        Each summary carries an ``applicationType`` plus the chatbot fields
+        (``domain``/``goalContextId``/``numTurns`` — ``None`` for survey/web) and
+        a per-type ``overallRating``; corrupt/unreadable artifacts are skipped.
         """
-        if not self._runs_dir.is_dir():
-            return []
-        summaries: List[Dict[str, Any]] = []
-        for path in self._runs_dir.glob("*.json"):
-            data = self._load_run(path)
-            if data is None:
-                continue
-            config = data.get("config") or {}
-            persona = data.get("persona") or {}
-            questionnaire = data.get("questionnaire") or {}
-            metric_scores = data.get("metricScores") or {}
-            summaries.append(
-                {
-                    "id": data.get("id") or path.stem,
-                    "createdAt": data.get("createdAt"),
-                    "domain": config.get("domain"),
-                    "personaName": persona.get("name"),
-                    "source": persona.get("source"),
-                    "goalContextId": config.get("goalContextId"),
-                    "overallRating": questionnaire.get("overallRating"),
-                    "numTurns": metric_scores.get("numTurns"),
-                }
-            )
+        summaries = [
+            run_store.summarize_record(record)
+            for record in run_store.iter_run_records(self._runs_dir)
+        ]
         summaries.sort(key=lambda s: s.get("createdAt") or "", reverse=True)
         return summaries
 

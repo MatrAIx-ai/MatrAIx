@@ -164,6 +164,16 @@ export function patchSessionConfig(
   });
 }
 
+export function deleteSession(id: string): Promise<{ deleted: string }> {
+  return request<{ deleted: string }>(`/sessions/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+  });
+}
+
+export function clearSessions(): Promise<{ deleted: number }> {
+  return request<{ deleted: number }>("/sessions", { method: "DELETE" });
+}
+
 /**
  * URL for the export endpoint (served with a `Content-Disposition: attachment`
  * header). Use as an `<a href>` or `window.location` target so the browser
@@ -308,6 +318,8 @@ export const api = {
   getSession,
   createSession,
   patchSessionConfig,
+  deleteSession,
+  clearSessions,
   sessionExportUrl,
   submitTurn,
   getJob,

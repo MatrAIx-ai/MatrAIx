@@ -76,12 +76,19 @@ export function RunDetail({ runId, onBack }: RunDetailProps) {
           <DetailError error={query.error} onRetry={() => query.refetch()} />
         ) : !run ? (
           <DetailNotFound />
-        ) : appType === "survey" ? (
-          <SurveyDebrief run={run} />
-        ) : appType === "web" ? (
-          <WebDebrief run={run} />
         ) : (
-          <ChatbotDebrief run={run} />
+          <>
+            <div className="mb-5">
+              <PersonaPanel persona={run.persona ?? {}} />
+            </div>
+            {appType === "survey" ? (
+              <SurveyDebrief run={run} />
+            ) : appType === "web" ? (
+              <WebDebrief run={run} />
+            ) : (
+              <ChatbotDebrief run={run} />
+            )}
+          </>
         )}
       </div>
     </div>
@@ -153,6 +160,52 @@ function RunMetaLine({ icon, children }: { icon: string; children: ReactNode }) 
 /** A short, friendly intro under the meta line (per option). */
 function DebriefIntro({ children }: { children: ReactNode }) {
   return <p className="max-w-2xl text-[13px] leading-relaxed text-text-variant">{children}</p>;
+}
+
+/** Collapsible profile of the simulated persona behind a run (shared by every
+ *  debrief). The full saved context is shown on demand so a reviewer can see
+ *  exactly who the simulated user was. */
+function PersonaPanel({
+  persona,
+}: {
+  persona: { id?: string | null; name?: string | null; source?: string | null; context?: string | null };
+}) {
+  const [open, setOpen] = useState(false);
+  const context = (persona.context ?? "").trim();
+  const name = persona.name || "Persona";
+  if (!persona.name && !context) return null;
+  return (
+    <section className="overflow-hidden rounded-md border border-outline bg-surface-lowest">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between gap-2 px-4 py-3 text-left transition-colors hover:bg-surface-low ${FOCUS_RING}`}
+      >
+        <span className="flex min-w-0 items-center gap-2">
+          <Sym name="person" fill={1} size={16} className="flex-none text-text-dim" />
+          <span className="hud text-[9px] text-text-dim">Persona</span>
+          <span className="truncate text-[13px] font-medium text-text-main">{name}</span>
+          {persona.source && (
+            <span className="hud flex-none rounded border border-outline px-1.5 py-0.5 text-[8px] text-text-dim">
+              {persona.source}
+            </span>
+          )}
+        </span>
+        <span className="flex flex-none items-center gap-2">
+          {context && <span className="hud text-[9px] text-text-dim">{open ? "Hide profile" : "View profile"}</span>}
+          <Sym name={open ? "expand_more" : "chevron_right"} size={18} className="text-text-dim" />
+        </span>
+      </button>
+      {open && context && (
+        <div className="border-t border-outline px-4 py-3">
+          <pre className="custom-scrollbar max-h-96 overflow-auto whitespace-pre-wrap break-words font-sans text-[12px] leading-relaxed text-text-variant">
+            {context}
+          </pre>
+        </div>
+      )}
+    </section>
+  );
 }
 
 /** A quiet dashed "nothing here" note, reused by empty bodies. */

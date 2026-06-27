@@ -32,7 +32,7 @@ import { RunsView } from "@/components/RunsView";
 import { AppFooter } from "@/components/AppFooter";
 import { fmtDomain } from "@/components/runsShared";
 
-import { api, sessionExportUrl } from "@/lib/api";
+import { ApiError, api, sessionExportUrl } from "@/lib/api";
 import { sessionKeys, useTurnJob } from "@/lib/useTurnJob";
 import { useUrlState } from "@/lib/useUrlState";
 import type {
@@ -112,6 +112,9 @@ export default function App() {
   // The persona-eval cockpit's active domain, mirrored up so the shared (⌘K)
   // catalog drawer browses the same domain in that surface.
   const [pevalDomain, setPevalDomain] = useState<Domain>("movie");
+  // The cockpit reports its own honest footer context (task type + the active
+  // app/instrument/site), so the footer is never stale on either dimension.
+  const [pevalFooter, setPevalFooter] = useState<string>("chatbot");
 
   // --- Runs navigation handlers (PersonaEval -> Runs sub-view) ------------
   const openRunsList = useCallback(() => {
@@ -197,6 +200,16 @@ export default function App() {
   const session = sessionQuery.data ?? null;
   const turns = useMemo(() => session?.turns ?? [], [session]);
 
+  // If the active session can't be loaded (deleted, cleared, or a stale link),
+  // drop it from the URL so the chat falls back to its empty state instead of a
+  // "couldn't open this chat" error.
+  useEffect(() => {
+    const err = sessionQuery.error;
+    if (activeId && err instanceof ApiError && err.status === 404) {
+      setUrlState({ session: null, turn: null });
+    }
+  }, [activeId, sessionQuery.error, setUrlState]);
+
   // --- Create session -----------------------------------------------------
   const createMutation = useMutation({
     mutationFn: (input?: { title?: string; config?: Partial<SessionConfig> }) =>
@@ -217,6 +230,23 @@ export default function App() {
     onSuccess: (res) => {
       queryClient.setQueryData(sessionKeys.detail(res.session.id), res.session);
       void queryClient.invalidateQueries({ queryKey: sessionKeys.list() });
+    },
+  });
+
+  // --- Delete / clear sessions -------------------------------------------
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => api.deleteSession(id),
+    onSuccess: (_res, id) => {
+      queryClient.removeQueries({ queryKey: sessionKeys.detail(id) });
+      void queryClient.invalidateQueries({ queryKey: sessionKeys.list() });
+      if (id === activeId) setUrlState({ session: null, turn: null });
+    },
+  });
+  const clearMutation = useMutation({
+    mutationFn: () => api.clearSessions(),
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: sessionKeys.list() });
+      setUrlState({ session: null, turn: null });
     },
   });
 
@@ -288,6 +318,19 @@ export default function App() {
     [setUrlState, turnJob],
   );
 
+  const handleDeleteSession = useCallback(
+    (id: string) => {
+      deleteMutation.mutate(id);
+    },
+    [deleteMutation],
+  );
+
+  const handleClearSessions = useCallback(() => {
+    if (window.confirm("Delete all saved chats? This cannot be undone.")) {
+      clearMutation.mutate();
+    }
+  }, [clearMutation]);
+
   const handleConfigChange = useCallback(
     (patch: Partial<SessionConfig>) => {
       if (!activeId) return;
@@ -327,9 +370,13 @@ export default function App() {
     ? (session.config as unknown as SessionConfig)
     : null;
   const headerTitle = session?.title ?? "New session";
+  // The chat surface follows the selected application, not a hardcoded "RecAI".
+  // Only RecAI has a cold-start warmup (the local InteRecAgent engine); the
+  // finance/medical sidecars reply without that first-turn wait.
+  const chatAppName = appLabel(config?.applicationId);
+  const chatWarmsUp = (config?.applicationId ?? "recai") === "recai";
   // Honest footer context per surface (real config values, no fabrication).
-  const chatFooterContext = `chatbot · ${appLabel(config?.applicationId)} · ${fmtDomain(config?.domain ?? "movie")}`;
-  const pevalFooterContext = `chatbot · RecAI · ${fmtDomain(pevalDomain)}`;
+  const chatFooterContext = `chatbot · ${chatAppName} · ${fmtDomain(config?.domain ?? "movie")}`;
   // The index the inspector/thread actually highlight: the pinned turn from the
   // URL, or the most recent turn when following latest (no pin).
   const focusedTurnIndex =
@@ -391,9 +438,10 @@ export default function App() {
             options={optionsQuery.data ?? null}
             onOpenRuns={openRunsList}
             onDomainChange={setPevalDomain}
+            onFooterContextChange={setPevalFooter}
           />
         )}
-        <AppFooter context={pevalFooterContext} />
+        <AppFooter context={pevalFooter} />
         <CatalogDrawer
           open={catalogOpen}
           onClose={() => setCatalogOpen(false)}
@@ -430,6 +478,8 @@ export default function App() {
           error={sessionsQuery.isError}
           onSelect={handleSelectSession}
           onNew={handleNew}
+          onDelete={handleDeleteSession}
+          onClearAll={handleClearSessions}
           onRetry={() => {
             void sessionsQuery.refetch();
           }}
@@ -441,7 +491,7 @@ export default function App() {
             <span className="min-w-0 truncate text-[14px] font-semibold text-text-main" title={headerTitle}>{headerTitle}</span>
             <span
               className="flex-none text-[12px] text-text-variant"
-              title="You type as the user; RecAI replies. No persona is simulated here."
+              title={`You type as the user; ${chatAppName} replies. No persona is simulated here.`}
             >
               · manual chat
             </span>
@@ -482,13 +532,21 @@ export default function App() {
               phase={turnJob.phase}
               error={turnJob.error}
               userId={OPERATOR_ID}
+              appName={chatAppName}
+              warmsUp={chatWarmsUp}
               onSelectTurn={handleSelectTurn}
               onSelectItem={() => setCatalogOpen(true)}
               onRetry={turnJob.retry}
             />
           )}
 
-          <Composer onSend={handleSend} phase={turnJob.phase} disabled={false} />
+          <Composer
+            onSend={handleSend}
+            phase={turnJob.phase}
+            disabled={false}
+            appName={chatAppName}
+            warmsUp={chatWarmsUp}
+          />
         </main>
 
         <TurnInspector

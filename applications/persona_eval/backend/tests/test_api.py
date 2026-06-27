@@ -95,6 +95,60 @@ def test_preflight_catalog_check_ok(client):
     assert "items" in catalog_check["detail"]
 
 
+class _FakeOkResponse:
+    status = 200
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def getcode(self):
+        return 200
+
+
+def test_sidecar_reachable_true_on_2xx(monkeypatch):
+    from backend.api import app as appmod
+
+    monkeypatch.setattr(appmod.urllib.request, "urlopen", lambda req, timeout=0: _FakeOkResponse())
+    assert appmod._sidecar_reachable("http://sidecar.test:8902") is True
+
+
+def test_sidecar_reachable_false_when_unreachable(monkeypatch):
+    from backend.api import app as appmod
+
+    def _boom(req, timeout=0):
+        raise OSError("connection refused")
+
+    monkeypatch.setattr(appmod.urllib.request, "urlopen", _boom)
+    assert appmod._sidecar_reachable("http://sidecar.test:8902") is False
+
+
+def test_preflight_marks_down_sidecars_optional(client, monkeypatch):
+    from backend.api import app as appmod
+
+    monkeypatch.setattr(appmod, "_sidecar_reachable", lambda url, timeout=1.5: False)
+    body = client.get("/api/preflight").json()
+    by_name = {c["name"]: c for c in body["checks"]}
+    for name in ("OpenBB (finance)", "Medical assistant"):
+        assert by_name[name]["ok"] is False
+        assert by_name[name]["optional"] is True
+        assert "not running" in by_name[name]["detail"]
+    # Optional sidecars never gate overall readiness.
+    assert body["ready"] == all(c["ok"] for c in body["checks"] if not c.get("optional"))
+
+
+def test_preflight_reachable_sidecar_shows_ok(client, monkeypatch):
+    from backend.api import app as appmod
+
+    monkeypatch.setattr(appmod, "_sidecar_reachable", lambda url, timeout=1.5: True)
+    body = client.get("/api/preflight").json()
+    medical = next(c for c in body["checks"] if c["name"] == "Medical assistant")
+    assert medical["ok"] is True
+    assert "reachable" in medical["detail"]
+
+
 def test_preflight_validates_real_resource_bundle(client):
     """The RecAI resources check validates the real native bundle across domains."""
     body = client.get("/api/preflight").json()

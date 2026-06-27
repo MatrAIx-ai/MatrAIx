@@ -121,7 +121,7 @@ function NativeRaw({ raw, toolOutputs }: { raw: string | null; toolOutputs: unkn
   const hasOutputs =
     toolOutputs !== null && toolOutputs !== undefined && !(Array.isArray(toolOutputs) && toolOutputs.length === 0);
 
-  const body = raw && raw.trim().length > 0 ? raw : "RecAI didn't emit a raw action for this turn.";
+  const body = raw && raw.trim().length > 0 ? raw : "No raw action was emitted for this turn.";
 
   const copy = () => {
     const text = hasOutputs ? `${body}\n\n# tool outputs\n${safeJson(toolOutputs)}` : body;
@@ -133,7 +133,7 @@ function NativeRaw({ raw, toolOutputs }: { raw: string | null; toolOutputs: unkn
 
   return (
     <div>
-      <SectionHeader label="RecAI's raw output" />
+      <SectionHeader label="Raw output" />
       <div className="overflow-hidden rounded-md border border-outline">
         <div
           className={`flex w-full items-center justify-between text-xs font-medium text-text-variant ${
@@ -198,7 +198,7 @@ function InspectorEmpty() {
           <Sym name="manage_search" size={24} className="text-text-variant" />
         </div>
         <p className="text-[12px] leading-relaxed text-text-variant">
-          Click any RecAI reply to see how it answered: the tools it ran, the items it picked, and
+          Click any reply to see how it answered: the tools it ran, the items it picked, and
           its raw output.
         </p>
       </div>
@@ -321,7 +321,7 @@ export function TurnInspector({ turns, activeIndex, onSelectIndex, onScoreInPers
                 </div>
               ) : (
                 <p className="text-[12px] leading-relaxed text-text-variant">
-                  RecAI asked you a question this turn instead of recommending.
+                  The assistant asked you a question this turn instead of answering.
                 </p>
               )}
             </div>

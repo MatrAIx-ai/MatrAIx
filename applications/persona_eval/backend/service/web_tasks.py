@@ -7,6 +7,12 @@ from typing import Dict, List
 
 from backend.service.web_types import WebEvalTask
 
+# Repo root, so task_path resolves regardless of the process CWD. The demo runs
+# uvicorn from the persona_eval dir, so a path relative to CWD silently misses
+# the task's catalog and the trace falls back to placeholder products.
+# web_tasks.py -> service -> backend -> persona_eval -> applications -> repo root
+_REPO_ROOT = Path(__file__).resolve().parents[4]
+
 
 def _registry() -> Dict[str, WebEvalTask]:
     task = WebEvalTask(
@@ -14,7 +20,7 @@ def _registry() -> Dict[str, WebEvalTask]:
         title="Ecommerce product discovery",
         site_name="Northstar Home Goods",
         site_url="http://ecommerce-web:8000/",
-        task_path=Path("applications/tasks/web-ecommerce-platform_product-discovery"),
+        task_path=_REPO_ROOT / "applications" / "tasks" / "web-ecommerce-platform_product-discovery",
         description=(
             "Browse a task-hosted ecommerce site, state a realistic website task, "
             "compare products, choose one item, and report the shopping experience."

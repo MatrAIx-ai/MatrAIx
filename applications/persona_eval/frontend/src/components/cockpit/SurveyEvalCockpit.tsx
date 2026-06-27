@@ -52,6 +52,8 @@ export interface SurveyEvalCockpitProps {
   options: ConfigOptionsResponse | null;
   taskType: PersonaEvalTaskType;
   onTaskTypeChange: (value: PersonaEvalTaskType) => void;
+  /** Report the honest footer context up (the active questionnaire). */
+  onFooterContextChange?: (context: string) => void;
 }
 
 interface SelectOption {
@@ -136,7 +138,7 @@ function formatSurveyValue(value: unknown): string {
   return String(value);
 }
 
-export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: SurveyEvalCockpitProps) {
+export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange, onFooterContextChange }: SurveyEvalCockpitProps) {
   const { run, job, phase, isRunning, error, timedOut, retry } = useSurveyEval();
   const [persona, setPersona] = useState<PersonaEvalPersona | null>(null);
   const [personaModel, setPersonaModel] = useState<string>(
@@ -170,6 +172,11 @@ export function SurveyEvalCockpit({ options, taskType, onTaskTypeChange }: Surve
   useEffect(() => {
     if (!instrument && instruments.length > 0) setInstrumentId(instruments[0].id);
   }, [instrument, instruments]);
+
+  // Report the honest footer context up (the active questionnaire).
+  useEffect(() => {
+    onFooterContextChange?.(`survey · ${instrument?.title ?? "Questionnaire"}`);
+  }, [instrument, onFooterContextChange]);
 
   const surveyResult = job?.surveyResult ?? null;
   const prompts = job?.prompts ?? surveyResult?.prompts ?? null;

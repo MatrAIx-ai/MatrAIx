@@ -132,22 +132,37 @@ export function PreflightChip() {
               <div key={g.group}>
                 <div className="hud mb-1.5 text-[9px] text-primary">{g.group}</div>
                 <ul className="space-y-2">
-                  {g.items.map((check) => (
-                    <li key={check.name} className="flex items-start gap-2">
-                      <Sym
-                        name={check.ok ? "check_circle" : "error"}
-                        fill={1}
-                        size={16}
-                        className={`mt-px flex-none ${check.ok ? "text-secondary" : "text-warn"}`}
-                      />
-                      <div className="min-w-0">
-                        <div className="text-[12px] font-medium text-text-main">{check.name}</div>
-                        <div className="text-[11px] leading-relaxed text-text-variant">
-                          {check.detail}
+                  {g.items.map((check) => {
+                    // An optional adapter that's down isn't an error — render it
+                    // muted ("optional, not running") rather than as a warning.
+                    const optionalDown = Boolean(check.optional) && !check.ok;
+                    const iconName = check.ok
+                      ? "check_circle"
+                      : optionalDown
+                        ? "radio_button_unchecked"
+                        : "error";
+                    const iconClass = check.ok
+                      ? "text-secondary"
+                      : optionalDown
+                        ? "text-text-dim"
+                        : "text-warn";
+                    return (
+                      <li key={check.name} className="flex items-start gap-2">
+                        <Sym name={iconName} fill={1} size={16} className={`mt-px flex-none ${iconClass}`} />
+                        <div className="min-w-0">
+                          <div className="text-[12px] font-medium text-text-main">
+                            {check.name}
+                            {check.optional && (
+                              <span className="hud ml-1.5 text-[8px] text-text-dim">optional</span>
+                            )}
+                          </div>
+                          <div className="text-[11px] leading-relaxed text-text-variant">
+                            {check.detail}
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

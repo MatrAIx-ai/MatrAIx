@@ -113,21 +113,43 @@ export interface PersonaEvalCockpitProps {
   onOpenRuns: () => void;
   /** Report the active run domain up (so the shared catalog drawer can match it). */
   onDomainChange?: (domain: Domain) => void;
+  /** Report the honest footer context up (task type + active app/instrument/site). */
+  onFooterContextChange?: (context: string) => void;
 }
 
-export function PersonaEvalCockpit({ options, onOpenRuns, onDomainChange }: PersonaEvalCockpitProps) {
+export function PersonaEvalCockpit({
+  options,
+  onOpenRuns,
+  onDomainChange,
+  onFooterContextChange,
+}: PersonaEvalCockpitProps) {
   const [taskType, setTaskType] = useState<PersonaEvalTaskType>("chatbot");
   if (taskType === "survey") {
-    return <SurveyEvalCockpit options={options} taskType={taskType} onTaskTypeChange={setTaskType} />;
+    return (
+      <SurveyEvalCockpit
+        options={options}
+        taskType={taskType}
+        onTaskTypeChange={setTaskType}
+        onFooterContextChange={onFooterContextChange}
+      />
+    );
   }
   if (taskType === "web") {
-    return <WebEvalCockpit options={options} taskType={taskType} onTaskTypeChange={setTaskType} />;
+    return (
+      <WebEvalCockpit
+        options={options}
+        taskType={taskType}
+        onTaskTypeChange={setTaskType}
+        onFooterContextChange={onFooterContextChange}
+      />
+    );
   }
   return (
     <ChatbotEvalCockpit
       options={options}
       onOpenRuns={onOpenRuns}
       onDomainChange={onDomainChange}
+      onFooterContextChange={onFooterContextChange}
       taskType={taskType}
       onTaskTypeChange={setTaskType}
     />
@@ -143,6 +165,7 @@ function ChatbotEvalCockpit({
   options,
   onOpenRuns,
   onDomainChange,
+  onFooterContextChange,
   taskType,
   onTaskTypeChange,
 }: ChatbotEvalCockpitProps) {
@@ -251,6 +274,11 @@ function ChatbotEvalCockpit({
   }, [options]);
   const appName = APP_NAME[applicationId] ?? applicationOptions.find((o) => o.value === applicationId)?.label ?? "The app";
   const runContext = `${appName}${applicationId === "recai" ? ` · ${fmtDomain(domain)}` : ""}`;
+
+  // Report the honest footer context up (task type + app + domain for RecAI).
+  useEffect(() => {
+    onFooterContextChange?.(`chatbot · ${runContext}`);
+  }, [runContext, onFooterContextChange]);
 
   // --- Actions ------------------------------------------------------------
   const handleRun = useCallback(() => {

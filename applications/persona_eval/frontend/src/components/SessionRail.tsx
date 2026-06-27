@@ -50,6 +50,10 @@ export interface SessionRailProps {
   error?: boolean;
   onSelect: (id: string) => void;
   onNew: () => void;
+  /** Delete a single chat session. */
+  onDelete: (id: string) => void;
+  /** Delete every saved chat session. */
+  onClearAll: () => void;
   /** Re-fetch the sessions list after a load error. */
   onRetry?: () => void;
 }
@@ -71,6 +75,8 @@ export function SessionRail({
   error,
   onSelect,
   onNew,
+  onDelete,
+  onClearAll,
   onRetry,
 }: SessionRailProps) {
   return (
@@ -90,7 +96,19 @@ export function SessionRail({
 
       {/* Session list */}
       <div className="custom-scrollbar min-h-0 flex-1 overflow-auto p-3">
-        <div className="hud px-1 pb-2 text-[9px] text-text-dim">Your chats</div>
+        <div className="flex items-center justify-between px-1 pb-2">
+          <span className="hud text-[9px] text-text-dim">Your chats</span>
+          {sessions.length > 0 && (
+            <button
+              type="button"
+              onClick={onClearAll}
+              title="Delete every saved chat"
+              className={`hud rounded text-[9px] text-text-dim transition hover:text-danger ${FOCUS_RING}`}
+            >
+              Clear all
+            </button>
+          )}
+        </div>
 
         {error ? (
           <div className="rounded-md border border-warn/30 bg-warn/10 p-3">
@@ -127,32 +145,45 @@ export function SessionRail({
             {sessions.map((s, i) => {
               const active = s.id === activeId;
               return (
-                <button
+                <div
                   key={s.id}
-                  type="button"
-                  onClick={() => onSelect(s.id)}
-                  aria-current={active ? "true" : undefined}
+                  className="rise-in group relative"
                   style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
-                  className={`rise-in block w-full rounded-md border-l-2 px-3 py-2.5 text-left transition-colors ${FOCUS_RING} ${
-                    active
-                      ? "border-primary bg-primary/5"
-                      : "border-transparent hover:bg-surface active:bg-surface-low"
-                  }`}
                 >
-                  <div
-                    className={`truncate text-[13px] ${active ? "font-medium text-text-main" : "text-text-variant"}`}
-                    title={s.title || "Untitled chat"}
+                  <button
+                    type="button"
+                    onClick={() => onSelect(s.id)}
+                    aria-current={active ? "true" : undefined}
+                    className={`block w-full rounded-md border-l-2 px-3 py-2.5 pr-9 text-left transition-colors ${FOCUS_RING} ${
+                      active
+                        ? "border-primary bg-primary/5"
+                        : "border-transparent hover:bg-surface active:bg-surface-low"
+                    }`}
                   >
-                    {s.title || "Untitled chat"}
-                  </div>
-                  <div
-                    className="hud mt-1 flex items-start gap-1.5 text-[9px] text-text-dim"
-                    title={`Ranker: ${s.config?.rankerMode ?? "not set"} · Model: ${s.config?.engine ?? "not set"}. Change these in the bar above`}
+                    <div
+                      className={`truncate text-[13px] ${active ? "font-medium text-text-main" : "text-text-variant"}`}
+                      title={s.title || "Untitled chat"}
+                    >
+                      {s.title || "Untitled chat"}
+                    </div>
+                    <div
+                      className="hud mt-1 flex items-start gap-1.5 text-[9px] text-text-dim"
+                      title={`Ranker: ${s.config?.rankerMode ?? "not set"} · Model: ${s.config?.engine ?? "not set"}. Change these in the bar above`}
+                    >
+                      {active && <span className="mt-px h-1.5 w-1.5 flex-none rounded-full bg-secondary" aria-hidden />}
+                      <span className="min-w-0 break-words">{subLine(s)}</span>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onDelete(s.id)}
+                    aria-label={`Delete chat: ${s.title || "Untitled chat"}`}
+                    title="Delete chat"
+                    className={`absolute right-1.5 top-1.5 grid h-6 w-6 place-items-center rounded text-text-dim opacity-0 transition hover:bg-danger/10 hover:text-danger focus:opacity-100 group-hover:opacity-100 ${FOCUS_RING}`}
                   >
-                    {active && <span className="mt-px h-1.5 w-1.5 flex-none rounded-full bg-secondary" aria-hidden />}
-                    <span className="min-w-0 break-words">{subLine(s)}</span>
-                  </div>
-                </button>
+                    <Sym name="delete" size={14} />
+                  </button>
+                </div>
               );
             })}
           </div>

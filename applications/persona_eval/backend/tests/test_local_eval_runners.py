@@ -152,6 +152,68 @@ def test_local_web_runner_returns_result_trace_and_prompts(monkeypatch, tmp_path
     assert client.calls
 
 
+def test_local_web_runner_grounds_prompt_in_catalog(monkeypatch, tmp_path):
+    """The persona must choose from the real catalog, not invent a product.
+
+    The task prompt must surface the catalog's product ids/names so the model
+    selects a real item (otherwise selected_product_id is a hallucination and
+    never matches a product in the rendered trace).
+    """
+    client = FakeJSONClient(
+        {
+            "goal": "Buy a mortar and pestle.",
+            "steps": [{"message": "Looked at kitchen tools.", "actions": []}],
+            "selected_product_id": "granite-mortar-pestle-lg",
+            "selected_product_name": "Granite Mortar and Pestle",
+            "need_satisfaction": 8,
+            "ease_of_use": 8,
+            "information_quality": 8,
+            "overall_quality": 8,
+            "reason": "Found a good kitchen tool.",
+        }
+    )
+    monkeypatch.setattr(
+        "backend.service.local_web_eval.build_json_client",
+        lambda model: client,
+    )
+    site_dir = tmp_path / "environment" / "ecommerce-web" / "site"
+    site_dir.mkdir(parents=True)
+    (site_dir / "catalog.json").write_text(
+        json.dumps(
+            {
+                "products": [
+                    {
+                        "id": "granite-mortar-pestle-lg",
+                        "name": "Granite Mortar and Pestle",
+                        "category": "Kitchen",
+                        "price_usd": 39,
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    task = WebEvalTask(
+        id="web1",
+        title="Web task",
+        site_name="Shop",
+        site_url="http://local.test/",
+        task_path=tmp_path,
+        description="Find and choose a product.",
+    )
+
+    result = LocalWebEvalRunner()(
+        _persona(),
+        task,
+        WebEvalConfig(persona_model="openai/gpt-4o-mini"),
+        created_at="2026-06-26T00:00:00Z",
+    )
+
+    task_prompt = result.prompts["taskPrompt"]
+    assert "granite-mortar-pestle-lg" in task_prompt
+    assert "Granite Mortar and Pestle" in task_prompt
+
+
 class FakeHTTPResponse:
     def __init__(self, payload):
         self.payload = payload
