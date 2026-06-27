@@ -159,6 +159,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 8: Import PersonaBench-owned persona agents
 
 - Branch: `codex/environment-persona-agents`
+- PersonaBench PR: `#132`
 - Source repository: `MatrAIx-ai/MatrAIx`
 - Source reference: `origin/main` at `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
 - Purpose: bring over persona-conditioned Harbor agents after the runtime
