@@ -3,7 +3,7 @@
 This module owns scenarios where personas are used to evaluate products,
 workflows, assistants, and research questions.
 
-Planned layout:
+Current layout:
 
 ```text
 application/
@@ -15,3 +15,15 @@ application/
 
 Applications should depend on persona inputs by reference. They should not copy
 large persona datasets into application folders.
+
+## Imported from MatrAIx
+
+The first application import brings in example task definitions and reporting
+stubs only:
+
+- `tasks/`: survey, chat, web, and computer-use example tasks
+- `reporting/`: placeholder aggregation surface for application batch reports
+
+The shared Python package, agents, job recipes, and runtime wiring are imported
+in later PRs. Until then, keep new contributions scoped to task folders and
+avoid adding repo-root scripts or generated job outputs.

@@ -37,6 +37,9 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 3: Import curated Persona core assets
 
 - Branch: `codex/persona-core-curated-import`
+- PersonaBench PR: `#127`
+- Result: merged
+- Merge commit: `58c97d4ba29dfaddf6b2fd710982781eb79e86b2`
 - Source repository: `MatrAIx-ai/MatrAIx`
 - Source reference: `origin/main` at `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
 - Purpose: bring over Persona-owned schema, curation scripts, and tiny sample
@@ -55,3 +58,24 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - Raw/reference inputs live under `sources/`.
   - Generated outputs live under ignored `outputs/`.
   - The schema validator defaults to `persona/schema/dimensions.json`.
+
+### Step 4: Import application task definitions
+
+- Branch: `codex/application-tasks-curated-import`
+- Source repository: `MatrAIx-ai/MatrAIx`
+- Source reference: `origin/main` at `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
+- Purpose: bring over application-owned task definitions and the reporting
+  placeholder without importing shared runtime code prematurely.
+- Imported into:
+  - `application/tasks/`
+  - `application/reporting/`
+- Deferred:
+  - `application/scripts/generate_application_job.py`, because it depends on
+    the shared `matraix` Python package that has not been curated into
+    PersonaBench yet.
+  - `configs/jobs/`, agents, `src/matraix/`, and Harbor/runtime wiring.
+- Compatibility adjustments:
+  - Task registry names use `personabench/application-*`.
+  - Local temporary output directories use `/tmp/personabench-*`.
+  - Example README persona paths point at
+    `persona/datasets/bench-dev-sample/`.
