@@ -1171,9 +1171,28 @@ This log records the curated migration from MatrAIx into PersonaBench.
   - Mapped Python imports from `environments.oasis` to `environment.oasis`.
   - Updated default persona paths to use
     `persona/datasets/bench-dev-sample/`.
-  - Updated OASIS Docker defaults and dynamic compose generation to point at
-    existing `bench-dev-sample` persona YAML files.
   - Excluded generated runtime output under `environment/oasis/output/`.
 - Follow-up:
   - MatrAIx PR #126 live dashboard changes remain split into the dependent
     `codex/oasis-live-dashboard` PR.
+
+### Step 46: Add OASIS live dashboard post feed
+
+- Branch: `codex/oasis-live-dashboard`
+- Purpose: migrate the functional delta from MatrAIx PR #126 after the OASIS
+  runtime base exists in `environment/oasis/`.
+- Source:
+  - MatrAIx PR #126 head commit:
+    `9b35bfbde9d5304f425e79fb823f7a7b2fea4e71`
+  - PersonaBench raw provenance PR: #63
+- Updated:
+  - `environment/oasis/platform/server.py`
+  - `environment/oasis/greenland/dashboard.py`
+  - `environment/oasis/greenland/vllm_pool.sh`
+- Behavior:
+  - Adds `GET /posts` to expose recent posts with author names and engagement
+    counts for the dashboard feed.
+  - Adds a dashboard post-feed panel, preferring the platform `/posts`
+    endpoint and falling back to read-only SQLite access.
+  - Assigns each host-networked vLLM container a unique internal
+    `VLLM_PORT` to avoid distributed-init port collisions.

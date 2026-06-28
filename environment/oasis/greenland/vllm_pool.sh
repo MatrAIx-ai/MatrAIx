@@ -33,9 +33,14 @@ up() {
         name="oasis-vllm-${g}"
         docker rm -f "$name" >/dev/null 2>&1 || true
         echo "   - $name on GPU $g, port $port"
+        # All servers share the host network, so vLLM's internal distributed-init
+        # port (env VLLM_PORT, default 8100) collides across servers -> EADDRINUSE.
+        # Give each its own internal port, well clear of the API ports.
+        internal_port=$((9100 + g))
         docker run -d --name "$name" --init --pid=host \
             --device "nvidia.com/gpu=${g}" --network host \
             -e LD_LIBRARY_PATH=/usr/lib64 \
+            -e VLLM_PORT="$internal_port" \
             -v "$HOME/.cache/huggingface:/root/.cache/huggingface" \
             --entrypoint python3 \
             "$AGENT_IMAGE" \
