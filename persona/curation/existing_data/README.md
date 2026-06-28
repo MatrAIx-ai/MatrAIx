@@ -1,7 +1,7 @@
 # Existing Data Curation
 
 This directory contains repo-local tools for building persona records from
-external datasets. It is the clean PersonaBench home for the useful parts of
+external datasets. It is the clean MatrAIx home for the useful parts of
 the old MatrAIx `personas/existing_data_curation/` pipeline.
 
 The current import establishes the source manifests, Wikipedia-derived persona

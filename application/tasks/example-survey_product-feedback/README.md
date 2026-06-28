@@ -1,6 +1,6 @@
 # Product concept survey (FocusLoop)
 
-PersonaBench **survey** reference task: read a product brief and structured questions, then submit persona-aligned answers as JSON.
+MatrAIx **survey** reference task: read a product brief and structured questions, then submit persona-aligned answers as JSON.
 
 - Inputs: `/app/input/product_brief.md`, `/app/input/survey_questions.md`
 - Output: `/app/output/survey_responses.json`

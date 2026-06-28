@@ -1,8 +1,7 @@
-# PersonaBench
+# MatrAIx
 
-PersonaBench is the focused home for persona data, persona schemas, persona
-evaluation tasks, and persona-conditioned simulation examples curated from
-MatrAIx.
+MatrAIx is the focused home for persona data, persona schemas, persona
+evaluation tasks, and persona-conditioned simulation examples.
 
 The repository is organized around three contribution modules:
 
@@ -76,7 +75,7 @@ uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-local
 ```
 
 More setup, optional package, adapter, viewer, and artifact details are in
-[Running PersonaBench](docs/running.md).
+[Running MatrAIx](docs/running.md).
 
 ## Persona Data
 
@@ -117,7 +116,7 @@ written in the application review.
 Start here:
 
 - [Architecture](docs/architecture.md)
-- [Running PersonaBench](docs/running.md)
+- [Running MatrAIx](docs/running.md)
 - [Research notes](docs/research/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [MatrAIx migration plan](docs/migration/matraix-import-plan.md)

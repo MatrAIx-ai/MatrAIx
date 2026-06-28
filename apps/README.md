@@ -1,6 +1,6 @@
 # Apps
 
-`apps/` contains repository-local developer tools that support PersonaBench but
+`apps/` contains repository-local developer tools that support MatrAIx but
 are not one of the three contribution modules.
 
 Current apps:

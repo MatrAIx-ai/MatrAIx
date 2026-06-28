@@ -1,11 +1,12 @@
 # MatrAIx Migration Provenance
 
-This directory records provenance for the MatrAIx-to-PersonaBench migration. It is metadata-only and does not import code into `main`.
+This directory records provenance for the MatrAIx clean-main migration. It is
+metadata-only and does not import code into `main`.
 
 Files:
 
-- `main_commits.tsv`: first-parent MatrAIx `main` commits, including source author/committer metadata and the PersonaBench migration PR/branch/commit mapping. Skipped commits are included with `migration_status=skipped`.
-- `source_prs.tsv`: every MatrAIx GitHub PR and the PersonaBench PR that imported it as a snapshot or diff.
+- `main_commits.tsv`: first-parent MatrAIx `main` commits, including source author/committer metadata and the migration PR/branch/commit mapping. Skipped commits are included with `migration_status=skipped`.
+- `source_prs.tsv`: every MatrAIx GitHub PR and the clean migration PR that imported it as a snapshot or diff.
 - `source_pr_commits.tsv`: commits inside every MatrAIx GitHub PR, including commit authors, emails, dates, subjects, and bodies where available from GitHub.
 
 Important exclusions:
@@ -19,7 +20,7 @@ Generated from local migration reports and live GitHub PR metadata for
 ## External Artifact Upload Checklist
 
 Large generated datasets, raw source dumps, and job outputs should not be
-committed to PersonaBench `main`. Upload these artifacts to HuggingFace or
+committed to MatrAIx `main`. Upload these artifacts to HuggingFace or
 another approved external storage location, then update module READMEs with the
 published URLs.
 
@@ -57,7 +58,7 @@ Sizes below come from `MatrAIx-ai/MatrAIx@origin/main`
 |---|---|---:|---|---|---|
 | Required | `persona/attribute_pool/outputs/` | 402 MiB, 49 files | `matraix/persona/attribute_pool/outputs/` | TODO | Generated CSV/JSONL/GraphML outputs. Do not put these back into `main`. |
 | Required | `persona/attribute_pool/dataset/scope_structured.jsonl` | 35 MiB | `matraix/persona/attribute_pool/sources/scope_structured.jsonl` | TODO | SCOPE structured input used by attribute-pool curation. |
-| Required | `persona/datasets/bench-dev-2000/` | 12 MiB, 2,004 files | `matraix/persona/datasets/bench-dev-2000/` | TODO | Full generated persona benchmark cohort. PersonaBench `main` keeps only the tiny sample. |
+| Required | `persona/datasets/bench-dev-2000/` | 12 MiB, 2,004 files | `matraix/persona/datasets/bench-dev-2000/` | TODO | Full generated persona benchmark cohort. Clean `main` keeps only the tiny sample. |
 | Required | Wiki cleaned person-page shards | TODO | `matraix/persona/existing_data/wiki/person_pages_clean/` | TODO | External source for building the wiki profile DB. Do not hardcode a local dump path. |
 | Required | Wiki profile SQLite DB and manifest | TODO | `matraix/persona/existing_data/wiki/profile_db/` | TODO | External dependency for wiki package generation, validation, assignment, and merge workflows. |
 | Required | `jobs/` | 64 MiB, 509 files | `matraix/jobs/historical/` | TODO | Historical run outputs, including trajectories, screenshots, recordings, and result JSON. |
@@ -100,7 +101,7 @@ checkout or artifact root used during handoff.
 | Required | `<local-matraix>/raw/amazon_reviews_2023/` | 31 MiB | `matraix/local/raw/amazon_reviews_2023/` | TODO | Amazon review curation artifacts. |
 | Required | `<local-matraix>/raw/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl` | 16 MiB | `matraix/local/amazon_reviews_2023/persona_dimension_inference/user_histories.jsonl` | TODO | Full Amazon user histories consumed by `make_amazon_collab_package.py` and inference scripts. |
 | Required | `<local-matraix>/raw/amazon_reviews_2023/amazon_profiles.sqlite` | 15 MiB | `matraix/local/amazon_reviews_2023/amazon_profiles.sqlite` | TODO | Local Amazon profile database for worker-range validation. |
-| Required | `MatrAIx PR #125: personas/existing_data_curation/samples/amazon_reviews_2023/top_reviewers/` | 15 MiB, 5 files | `matraix/local/amazon_reviews_2023/top_reviewers/` | TODO | Top-10K rich-persona reviewer queue. PersonaBench `main` keeps the selector script and README instructions, not the generated CSV/JSONL/ID list. |
+| Required | `MatrAIx PR #125: personas/existing_data_curation/samples/amazon_reviews_2023/top_reviewers/` | 15 MiB, 5 files | `matraix/local/amazon_reviews_2023/top_reviewers/` | TODO | Top-10K rich-persona reviewer queue. Clean `main` keeps the selector script and README instructions, not the generated CSV/JSONL/ID list. |
 | Optional | `MatrAIx PR #72: applications/recommendation_chatbot_eval/data/` | 9.4 MiB, 339 files | `matraix/local/application/recommendation_chatbot_eval/data/` | TODO | Catalog parquet files and generated persona fixtures for the full recommender evaluation app. The clean main task uses a tiny task-local sidecar instead. |
 | Optional | `<local-matraix>/applications/recommendation_chatbot_eval/data/catalogs/game.parquet` | 5 MiB | `matraix/local/application/recommendation_chatbot_eval/data/catalogs/game.parquet` | TODO | Application-specific recommender catalog fixture. |
 
