@@ -67,16 +67,42 @@ python persona/curation/existing_data/scripts/fetch_sources.py \
 Use `--mode full` only for intentional full source downloads; large source
 artifacts should be uploaded externally and listed in `migration/matraix/README.md`.
 
+## External Data Dependency TODOs
+
+The repository tracks curation code, schemas, and small samples only. Full
+source data, local SQLite databases, generated manifests, and worker archives
+must be provided as external artifacts. Keep their published URLs in
+`migration/matraix/README.md` until a dedicated dataset README replaces the
+TODOs.
+
+Required external inputs for the real pipeline:
+
+| Dependency | Used by | Location in git | External artifact URL |
+|---|---|---|---|
+| Cleaned Wikipedia person-page JSONL/JSONL.GZ shards | Build the wiki profile DB | Not committed | TODO |
+| Wiki profile SQLite DB | Wiki package generation, validation, merge | Not committed | TODO |
+| Wiki profile DB manifest | Assignment generation and package provenance | Not committed | TODO |
+| Amazon Reviews 2023 user histories JSONL | Amazon inference, package generation, holdout eval | Not committed; sample only | TODO |
+| Amazon profile SQLite DB | Amazon worker-range validation and audit workflows | Not committed | TODO |
+| Amazon reviewer queues and inference outputs | Full Amazon persona production run | Not committed; sample only | TODO |
+| Full Nemotron curated persona YAML pool | Regenerating selection fixtures | Not committed; sample only | TODO |
+
 ## Wikipedia Profile Database
 
-Build a local SQLite profile database from cleaned Wikipedia person-page JSONL
-or JSONL.GZ files:
+The real wiki profile DB is an external dependency and is not committed to git.
+Either download it from the artifact URL once the TODO above is filled, or build
+it locally from externally supplied cleaned Wikipedia person-page JSONL/JSONL.GZ
+files:
 
 ```bash
+export WIKI_CLEAN_DIR=/path/to/person_pages_clean
+export WIKI_PROFILE_DB=/path/to/personabench-wiki-profiles.sqlite
+export WIKI_PROFILE_MANIFEST=/path/to/personabench-wiki-profiles.manifest.json
+
 python persona/curation/existing_data/scripts/build_wiki_profile_db.py \
-  --clean-dir /path/to/person_pages_clean \
-  --out-db /tmp/personabench-wiki-profiles.sqlite \
-  --manifest /tmp/personabench-wiki-profiles.manifest.json \
+  --clean-dir "$WIKI_CLEAN_DIR" \
+  --out-db "$WIKI_PROFILE_DB" \
+  --manifest "$WIKI_PROFILE_MANIFEST" \
   --dataset-id personabench_wiki_profiles_v1
 ```
 
@@ -91,11 +117,11 @@ protocol manifest:
 
 ```bash
 python persona/curation/existing_data/scripts/make_wiki_assignments.py \
-  --dataset-manifest /tmp/personabench-wiki-profiles.manifest.json \
+  --dataset-manifest "$WIKI_PROFILE_MANIFEST" \
   --protocol-dir persona/curation/existing_data/protocols/persona_attribution_v1 \
   --workers alice,bob,carol \
   --chunk-size 50000 \
-  --out /tmp/personabench-wiki-assignments.jsonl
+  --out /path/to/personabench-wiki-assignments.jsonl
 ```
 
 This helper supports the archived result flow in `validate_wiki_results.py` and
@@ -108,19 +134,22 @@ Create a worker-facing package from a supported source. The unified
 `make_package.py` entrypoint currently supports `--source wiki` and
 `--source amazon`.
 
-For a local Wikipedia profile SQLite database:
+For a local copy of the externally supplied Wikipedia profile SQLite database:
 
 ```bash
+export WIKI_PROFILE_DB=/path/to/personabench-wiki-profiles.sqlite
+export WIKI_DATASET_SHA256=TODO
+
 python persona/curation/existing_data/scripts/make_package.py \
   --source wiki \
-  --db /tmp/personabench-wiki-profiles.sqlite \
+  --db "$WIKI_PROFILE_DB" \
   --dimensions persona/schema/dimensions.json \
   --range 0:100 \
-  --out-dir /tmp/personabench_packages/A_0_100_alice \
+  --out-dir /path/to/personabench_packages/A_0_100_alice \
   --assignment-id A_0_100 \
   --worker-id alice \
   --dataset-id personabench_wiki_profiles_v1 \
-  --dataset-sha256 DATASET_SHA256 \
+  --dataset-sha256 "$WIKI_DATASET_SHA256" \
   --force
 ```
 
@@ -137,7 +166,10 @@ share one owner-facing interface.
 The convenience wrapper `scripts/make_package.sh` is an owner-side template for
 the same flow. It defaults to wiki packages; set `SOURCE=amazon` and
 `USER_HISTORIES=/path/to/user_histories.jsonl` to package Amazon histories.
-Edit the local `CLEAN_DIR` if your cleaned Wikipedia text lives somewhere else.
+For wiki packages, provide `DB`, `MANIFEST`, and `DATASET_SHA256` from the
+external artifact handoff. If the DB has not been built yet, set
+`CLEAN_DIR=/path/to/person_pages_clean` so the wrapper can build the owner-side
+profile database from the external cleaned text.
 
 ## Amazon Reviews 2023
 
@@ -158,8 +190,10 @@ python persona/curation/existing_data/scripts/make_package.py \
   --force
 ```
 
-For real data, build or retrieve user histories externally, keep them under an
-ignored local path such as `raw/amazon_reviews_2023/`, then run:
+For real data, retrieve user histories, reviewer queues, and profile databases
+from external artifacts once their TODO URLs are filled. If you are producing
+those artifacts yourself, keep them under an ignored local path such as
+`raw/amazon_reviews_2023/`, then run:
 
 ```bash
 python persona/curation/existing_data/scripts/select_amazon_top_reviewers.py \
@@ -261,12 +295,14 @@ Validate a returned archive against the owner-side SQLite database and
 assignment identity:
 
 ```bash
+export WIKI_PROFILE_DB=/path/to/personabench-wiki-profiles.sqlite
+
 python persona/curation/existing_data/scripts/validate_wiki_results.py \
   --archive /path/to/results_alice_persona_attribution_v1_0000000000_0000050000.tar.gz \
-  --db /tmp/personabench-wiki-profiles.sqlite \
+  --db "$WIKI_PROFILE_DB" \
   --assignment-json /path/to/assignment.json \
   --prompt-sha256 PROMPT_SHA256 \
-  --report /tmp/personabench-wiki-validation-report.json
+  --report /path/to/personabench-wiki-validation-report.json
 ```
 
 Merge accepted archives into a deduplicated JSONL.GZ:
@@ -274,7 +310,7 @@ Merge accepted archives into a deduplicated JSONL.GZ:
 ```bash
 python persona/curation/existing_data/scripts/merge_wiki_results.py \
   --archive /path/to/results_alice.tar.gz \
-  --out /tmp/personabench-wiki-merged.jsonl.gz
+  --out /path/to/personabench-wiki-merged.jsonl.gz
 ```
 
 For plain worker-package returns, merge one or more `results.jsonl` files:
@@ -284,9 +320,9 @@ python persona/curation/existing_data/scripts/merge_collab_results.py \
   --results /path/to/alice/results.jsonl \
   --package-manifest /path/to/alice/package_manifest.json \
   --dimensions persona/schema/dimensions.json \
-  --db /tmp/personabench-wiki-profiles.sqlite \
-  --out /tmp/personabench-wiki-merged.jsonl.gz \
-  --report /tmp/personabench-wiki-merge-report.json
+  --db "$WIKI_PROFILE_DB" \
+  --out /path/to/personabench-wiki-merged.jsonl.gz \
+  --report /path/to/personabench-wiki-merge-report.json
 ```
 
 ## External Artifacts
