@@ -208,6 +208,9 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# OASIS runtime output
+environment/oasis/output/
+
 # PyPI configuration file
 .pypirc
 
