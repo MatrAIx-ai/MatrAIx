@@ -14,7 +14,8 @@ environment/
   adapters/           Curated external benchmark adapters.
   agents/
     personabench/
-      agents/         MatrAIx-owned installed and persona agents.
+      agents/         PersonaBench-owned installed and persona agents.
+  oasis/              OASIS multi-agent social simulation runtime.
   runtime/
     harbor/
       agents/         Base and installed agent wrappers.
@@ -41,6 +42,12 @@ and top-level `personabench` utilities continue resolving from `src/personabench
 
 Persona agent implementations live here because they are runtime mechanisms.
 Persona schemas and datasets live in `persona/`.
+
+OASIS lives under `environment/oasis/` because it is an environment runtime:
+it owns the shared social platform, agent orchestration, Docker recipes,
+sample seed data, and visualization helpers for multi-agent social simulation.
+Runtime outputs are written to `environment/oasis/output/` and intentionally
+ignored.
 
 Do not add raw generated job outputs, full application snapshots, or benchmark
 adapter dumps here. Import those as curated PRs with a README explaining the
