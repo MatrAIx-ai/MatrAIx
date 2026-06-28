@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
 from environment.oasis.platform.database import Database
 from environment.oasis.platform.actions import ActionProcessor
 from environment.oasis.platform.recsys import RecSys, RecSysType
-from environment.oasis.platform.server import PlatformState
+from environment.oasis.platform.server import PlatformState, create_app
 
 
 @pytest.fixture
@@ -304,6 +304,39 @@ class TestPlatformState:
         result = state.process_action(1, "create_post", {"content": "Hello"})
         assert result.success is True
         state.close()
+
+
+class TestPlatformApi:
+    def test_posts_endpoint_returns_author_and_engagement(self):
+        testclient = pytest.importorskip("fastapi.testclient")
+        TestClient = testclient.TestClient
+        client = TestClient(create_app(db_path=":memory:", recsys_type="random"))
+
+        user = {
+            "agent_id": 0,
+            "user_name": "alice_01",
+            "name": "Alice",
+            "bio": "Tech enthusiast",
+        }
+        assert client.post("/signup", json=user).json()["user_id"] == 1
+        assert client.post("/seed_post", json={"user_id": 1, "content": "Hello OASIS"}).json()["post_id"] == 1
+        client.post("/action", json={"user_id": 1, "action_type": "like_post", "params": {"post_id": 1}})
+
+        response = client.get("/posts?limit=5")
+        assert response.status_code == 200
+        posts = response.json()
+        assert posts == [{
+            "post_id": 1,
+            "user_id": 1,
+            "author": "Alice",
+            "content": "Hello OASIS",
+            "quote_content": None,
+            "is_repost": False,
+            "num_likes": 1,
+            "num_comments": 0,
+            "num_shares": 0,
+            "created_at": posts[0]["created_at"],
+        }]
 
     def test_advance_step(self):
         state = PlatformState(db_path=":memory:", recsys_type="random")

@@ -7,25 +7,7 @@ import argparse
 from pathlib import Path
 
 
-DEFAULT_PERSONA_DIR = "persona/datasets/bench-dev-sample"
-
-
-def _discover_persona_paths(persona_dir: str = DEFAULT_PERSONA_DIR) -> list[str]:
-    root = Path(persona_dir)
-    persona_paths = sorted(root.glob("*.yaml"))
-    if not persona_paths:
-        raise FileNotFoundError(f"No persona YAML files found in {persona_dir}")
-    return [path.as_posix() for path in persona_paths]
-
-
-def generate(
-    num_agents: int = 20,
-    num_steps: int = 50,
-    llm_model: str = "Qwen/Qwen3-8B",
-    output_path: str = "environment/oasis/docker-compose.generated.yaml",
-    persona_dir: str = DEFAULT_PERSONA_DIR,
-):
-    persona_paths = _discover_persona_paths(persona_dir)
+def generate(num_agents: int = 20, num_steps: int = 50, llm_model: str = "Qwen/Qwen3-8B", output_path: str = "environment/oasis/docker-compose.generated.yaml"):
     services = []
 
     services.append("""  platform:
@@ -48,14 +30,13 @@ def generate(
       retries: 10""")
 
     for i in range(1, num_agents + 1):
-        persona_path = persona_paths[(i - 1) % len(persona_paths)]
         services.append(f"""  agent-{i:02d}:
     build:
       context: ../..
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH={persona_path}
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID{i:04d}.yaml
       - LLM_BASE_URL=${{LLM_BASE_URL:-http://host.docker.internal:8002/v1}}
       - LLM_MODEL=${{LLM_MODEL:-{llm_model}}}
       - LLM_API_KEY=${{LLM_API_KEY:-no-key}}
@@ -98,6 +79,5 @@ if __name__ == "__main__":
     parser.add_argument("--steps", type=int, default=50)
     parser.add_argument("--model", default="Qwen/Qwen3-8B")
     parser.add_argument("--output", default="environment/oasis/docker-compose.generated.yaml")
-    parser.add_argument("--persona-dir", default=DEFAULT_PERSONA_DIR)
     args = parser.parse_args()
-    generate(args.agents, args.steps, args.model, args.output, args.persona_dir)
+    generate(args.agents, args.steps, args.model, args.output)

@@ -25,7 +25,7 @@ services:
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH=persona/datasets/bench-dev-sample/persona_0001.yaml
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID0001.yaml
       - LLM_BASE_URL=${LLM_BASE_URL:-http://host.docker.internal:8002/v1}
       - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-8B}
       - LLM_API_KEY=${LLM_API_KEY:-no-key}
@@ -41,7 +41,7 @@ services:
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH=persona/datasets/bench-dev-sample/persona_0042.yaml
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID0002.yaml
       - LLM_BASE_URL=${LLM_BASE_URL:-http://host.docker.internal:8002/v1}
       - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-8B}
       - LLM_API_KEY=${LLM_API_KEY:-no-key}
@@ -57,7 +57,7 @@ services:
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH=persona/datasets/bench-dev-sample/persona_0052.yaml
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID0003.yaml
       - LLM_BASE_URL=${LLM_BASE_URL:-http://host.docker.internal:8002/v1}
       - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-8B}
       - LLM_API_KEY=${LLM_API_KEY:-no-key}
@@ -73,7 +73,7 @@ services:
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH=persona/datasets/bench-dev-sample/persona_0229.yaml
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID0004.yaml
       - LLM_BASE_URL=${LLM_BASE_URL:-http://host.docker.internal:8002/v1}
       - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-8B}
       - LLM_API_KEY=${LLM_API_KEY:-no-key}
@@ -89,7 +89,7 @@ services:
       dockerfile: environment/oasis/agents/Dockerfile
     environment:
       - PLATFORM_URL=http://platform:8000
-      - PERSONA_PATH=persona/datasets/bench-dev-sample/persona_0666.yaml
+      - PERSONA_PATH=persona/datasets/bench-dev-sample/ID0005.yaml
       - LLM_BASE_URL=${LLM_BASE_URL:-http://host.docker.internal:8002/v1}
       - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-8B}
       - LLM_API_KEY=${LLM_API_KEY:-no-key}
