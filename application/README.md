@@ -7,7 +7,7 @@ Current layout:
 
 ```text
 application/
-  persona_eval/ PersonaEval app, API, simulator, and frontend workbench.
+  persona_eval/ Reusable PersonaEval survey/backend helpers.
   reporting/   Application result summaries.
   scripts/     Application job generation helpers.
   tasks/       Runnable survey, chat, web, and product tasks.
@@ -71,8 +71,8 @@ The clean import currently includes:
 - `tasks/`: survey, chat, web, and computer-use example tasks
 - `scripts/`: application job generation helpers
 - `reporting/`: placeholder aggregation surface for application batch reports
-- `persona_eval/`: PersonaEval app/API/frontend plus survey, chatbot, and web
-  evaluation helpers
+- `persona_eval/`: PersonaEval survey types and curated built-in survey
+  instruments
 
 Keep new application contributions scoped to application-owned task, script,
 reporting, or PersonaEval folders. Do not add repo-root scripts, copy persona
