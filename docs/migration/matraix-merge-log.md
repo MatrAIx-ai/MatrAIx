@@ -489,7 +489,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 21: Import persona existing-data wiki foundation
 
 - Branch: `codex/persona-wiki-amazon-migration`
-- Source repository: local `/data2/zonglin/persona_ai/MatrAIx`
+- Source repository: local MatrAIx checkout
 - Source branch: `codex/amazon-review-collab-integration`
 - Source reference: `87fe1dafb fix: preserve amazon min support fold texts`
 - Source base: `MatrAIx-ai/MatrAIx@origin/main`
@@ -523,7 +523,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 22: Import persona collaboration packaging tools
 
 - Branch: `codex/persona-collab-packaging-tools`
-- Source repository: local `/data2/zonglin/persona_ai/MatrAIx`
+- Source repository: local MatrAIx checkout
 - Source branch: `codex/amazon-review-collab-integration`
 - Source reference: `87fe1dafb fix: preserve amazon min support fold texts`
 - Source base: `MatrAIx-ai/MatrAIx@origin/main`
@@ -564,7 +564,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 23: Import Amazon Reviews 2023 persona pipeline
 
 - Branch: `codex/persona-amazon-reviews-pipeline`
-- Source repository: local `/data2/zonglin/persona_ai/MatrAIx`
+- Source repository: local MatrAIx checkout
 - Source branch: `codex/amazon-review-collab-integration`
 - Source reference: `87fe1dafb fix: preserve amazon min support fold texts`
 - Source base: `MatrAIx-ai/MatrAIx@origin/main`
@@ -613,7 +613,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 24: Add optional Amazon Modal/HuggingFace dependency extra
 
 - Branch: `codex/persona-amazon-modal-extra`
-- Source repository: local `/data2/zonglin/persona_ai/MatrAIx`
+- Source repository: local MatrAIx checkout
 - Source branch: `codex/amazon-review-collab-integration`
 - Source reference: `87fe1dafb fix: preserve amazon min support fold texts`
 - Purpose: make the optional Amazon Reviews 2023 Modal/HuggingFace helper path
@@ -1027,7 +1027,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 ### Step 42: Import parity items 1, 2, 3, and 5 from MatrAIx main
 
 - Branch: `codex/matraix-parity-1235`
-- Source repository: local `/data2/zonglin/MatrAIx`
+- Source repository: local MatrAIx checkout
 - Source base: `MatrAIx-ai/MatrAIx@main`
 - Source commit: `e50592a4cbfca86b3207e1f9d5247ca9f93ee4d0`
 - Purpose: close the functional gaps identified in the main-vs-PersonaBench

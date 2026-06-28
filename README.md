@@ -92,6 +92,9 @@ Useful entry points:
   `--source amazon`.
 - [Artifact handoff](migration/matraix/README.md) lists large generated data
   that stays outside `main` until uploaded externally.
+- Real wiki/Amazon DBs, manifests, raw histories, and other large data
+  dependencies are external artifacts with `TODO` URL slots; do not hardcode
+  local machine paths in code or docs.
 
 ## Research Notes
 
