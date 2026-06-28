@@ -5,104 +5,36 @@ on:
     branches: ["main"]
   push:
     branches: ["main"]
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     timeout-minutes: 30
-    strategy:
-      fail-fast: false
-      matrix:
-        # NOTE: windows-2022 (not windows-latest) is required so Docker on the
-        # hosted runner defaults to Windows-container mode. GitHub's
-        # windows-latest image has migrated to Windows Server 2025 where Docker
-        # defaults to the Linux/WSL engine, which causes the
-        # `windows_containers`-marked integration tests to be skipped (and
-        # DockerCli.exe is not installed on hosted runners, so we can't flip
-        # the engine at runtime).
-        os: [ubuntu-latest, windows-2022]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Install the latest version of uv
+      - name: Install uv
         uses: astral-sh/setup-uv@v8.1.0
         with:
           version: "latest"
 
-      - name: Set up Docker
-        uses: docker/setup-docker-action@v5
-        with:
-          version: "latest"
+      - name: Set up Python 3.12
+        run: uv python install 3.12
 
-      - name: Set up Docker Compose
-        uses: docker/setup-compose-action@v2
-        with:
-          version: "latest"
-
-      - name: Set up Python 3.13
-        run: uv python pin 3.13
-
-      - name: Install dependencies
-        run: uv sync --all-packages --all-extras --locked
-
-      - name: Run non-runtime tests with coverage (Linux)
-        if: runner.os == 'Linux'
+      - name: Install package and test dependencies
         run: |
-          uv run pytest tests/ \
-            -m "not runtime and not matraix_smoke" \
-            --ignore=tests/unit/models/test_registry.py \
-            --ignore=tests/unit/test_sync_registry_to_supabase.py \
-            --ignore=tests/unit/test_leaderboard_submitter.py \
-            --ignore=tests/unit/test_leaderboard_metadata.py \
-            --ignore=tests/unit/test_leaderboard_db.py \
-            --ignore=tests/unit/test_leaderboard_static_validation.py \
-            --ignore=tests/unit/test_leaderboard_static_validation_report.py \
-            --ignore=tests/unit/test_leaderboard_submit.py \
-            --ignore=tests/unit/test_leaderboard_report_display.py \
-            --ignore=tests/unit/test_leaderboard_dynamic_validation.py \
-            --ignore=tests/unit/test_upload_storage.py \
-            --ignore=tests/unit/test_upload_auth.py \
-            --ignore=tests/unit/test_cli_upload.py \
-            --ignore=tests/unit/test_cli_run_upload.py \
-            --ignore=tests/unit/viewer/test_upload_status.py \
-            --ignore=tests/unit/test_download_db_client.py \
-            -n auto --dist load \
-            --cov=src/harbor \
-            --cov-report=term-missing
+          uv venv --python 3.12
+          uv pip install -e .
+          uv pip install -e packages/harbor-langsmith
+          uv pip install -e packages/rewardkit
+          uv pip install -e environment/adapters/simpleqa
+          uv pip install pytest pytest-asyncio
 
-      - name: Run MatrAIx harbor-smoke (Linux)
-        if: runner.os == 'Linux'
-        run: |
-          uv run pytest tests/integration/test_matraix_harbor_smoke.py \
-            -m matraix_smoke \
-            --ignore=tests/unit/models/test_registry.py \
-            --ignore=tests/unit/test_sync_registry_to_supabase.py
-
-      - name: Run all tests with coverage (Windows)
-        if: runner.os == 'Windows'
-        run: uv run pytest tests/ --cov=src/harbor --cov-report=xml --cov-report=term-missing --ignore=tests/unit/agents/installed/test_agent_install_execution.py --ignore=tests/unit/models/test_registry.py --ignore=tests/unit/test_sync_registry_to_supabase.py --ignore=tests/unit/test_leaderboard_submitter.py --ignore=tests/unit/test_leaderboard_metadata.py --ignore=tests/unit/test_leaderboard_db.py --ignore=tests/unit/test_leaderboard_static_validation.py --ignore=tests/unit/test_leaderboard_static_validation_report.py --ignore=tests/unit/test_leaderboard_submit.py --ignore=tests/unit/test_leaderboard_report_display.py --ignore=tests/unit/test_leaderboard_dynamic_validation.py --ignore=tests/unit/test_upload_storage.py --ignore=tests/unit/test_upload_auth.py --ignore=tests/unit/test_cli_upload.py --ignore=tests/unit/test_cli_run_upload.py --ignore=tests/unit/viewer/test_upload_status.py --ignore=tests/unit/test_download_db_client.py -m "not runtime and not matraix_smoke and not windows_containers" -k "not test_full_task_mapping"
-
-      - name: Run Windows container integration tests
-        if: runner.os == 'Windows'
-        run: uv run pytest tests/ -m "windows_containers" --ignore=tests/unit/models/test_registry.py --ignore=tests/unit/test_sync_registry_to_supabase.py -v
-        env:
-          # The windows-2022 runner lacks docker-buildx, which newer Compose
-          # versions require for Bake-based builds. docker/setup-buildx-action
-          # doesn't support Windows runners, so we disable Bake instead.
-          COMPOSE_BAKE: false
-
-      - name: Upload coverage to Codecov
-        if: github.event_name == 'push' || github.event_name == 'pull_request'
-        uses: codecov/codecov-action@v6
-        with:
-          files: ./coverage.xml
-          fail_ci_if_error: false
-          verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run curated test suite
+        run: uv run pytest tests/ packages/harbor-langsmith/tests/ packages/rewardkit/tests/

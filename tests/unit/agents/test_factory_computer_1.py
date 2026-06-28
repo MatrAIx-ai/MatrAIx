@@ -3,6 +3,11 @@
 from __future__ import annotations
 
 import pytest
+
+pytest.importorskip("anthropic")
+pytest.importorskip("google.genai")
+pytest.importorskip("openai")
+
 from anthropic import AnthropicBedrock
 
 from harbor.agents.computer_1 import Computer1

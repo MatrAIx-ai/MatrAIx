@@ -211,12 +211,15 @@ def _evaluate_economic_motivation(
 
 
 def test_dim_grounding_heuristic() -> None:
-    probe_dimension = os.environ.get("MATRAIX_PROBE_DIMENSION", "").strip()
+    probe_dimension = (
+        os.environ.get("PERSONABENCH_PROBE_DIMENSION")
+        or os.environ.get("MATRAIX_PROBE_DIMENSION", "")
+    ).strip()
     if not probe_dimension:
         _write_grounding(
             {
                 "skipped": True,
-                "reason": "MATRAIX_PROBE_DIMENSION env not set",
+                "reason": "PERSONABENCH_PROBE_DIMENSION env not set",
             }
         )
         return
@@ -226,7 +229,10 @@ def test_dim_grounding_heuristic() -> None:
     persona = yaml.safe_load(PERSONA.read_text(encoding="utf-8"))
     assert isinstance(persona, dict)
 
-    probe_value = os.environ.get("MATRAIX_PROBE_VALUE", "").strip()
+    probe_value = (
+        os.environ.get("PERSONABENCH_PROBE_VALUE")
+        or os.environ.get("MATRAIX_PROBE_VALUE", "")
+    ).strip()
     if not probe_value:
         parts = probe_dimension.split(".")
         current: object = persona

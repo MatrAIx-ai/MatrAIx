@@ -1,8 +1,8 @@
 schema_version = "1.1"
-artifacts = [ "/tmp/matraix-macos-notification-preferences",]
+artifacts = [ "/tmp/personabench-macos-notification-preferences",]
 
 [task]
-name = "matraix/application-computer-use-macos-notification-preferences"
+name = "personabench/application-computer-use-macos-notification-preferences"
 
 [metadata]
 difficulty = "easy"

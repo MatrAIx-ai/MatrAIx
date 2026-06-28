@@ -21,4 +21,4 @@ Write your choice to `/app/output/book_interest.json`:
 
 No login or purchase is required.
 
-**Suggested agent:** `persona-browser-use`. See `docs/applications/web-interaction.md`.
+**Suggested agent:** `persona-browser-use`.

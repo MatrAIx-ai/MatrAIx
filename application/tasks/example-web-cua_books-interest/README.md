@@ -8,10 +8,18 @@ Docker **web** CUA task — screenshot-based browsing in a local Linux Xvfb cont
 ```bash
 uv sync --extra computer-1
 export ANTHROPIC_API_KEY=...
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-web-linux-cua-local.yaml
+uv run harbor run \
+  -a persona-computer-1 \
+  -m anthropic/claude-sonnet-4-6 \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
+  --ak cua_submission_profile=book_interest \
+  -p application/tasks/example-web-cua_books-interest
 ```
 
-The job sets `cua_submission_profile: book_interest` so Harbor writes `/app/output/book_interest.json` from the agent's final **done** action. The Docker image includes **xfce4-terminal** (`Ctrl+Alt+T`) for optional shell use, but agents should not rely on manual file saving.
+`cua_submission_profile=book_interest` tells the runtime to write
+`/app/output/book_interest.json` from the agent's final **done** action. The
+Docker image includes **xfce4-terminal** (`Ctrl+Alt+T`) for optional shell use,
+but agents should not rely on manual file saving.
 
 ## vs other book tasks
 

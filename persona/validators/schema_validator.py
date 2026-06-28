@@ -66,7 +66,7 @@ def validate_dimension(dim, idx):
 
 
 def main():
-    dimensions_file = Path(__file__).parent.parent / "dimensions.json"
+    dimensions_file = Path(__file__).resolve().parents[1] / "schema" / "dimensions.json"
 
     if not dimensions_file.exists():
         print(f"❌ Error: {dimensions_file} not found")

@@ -1,6 +1,6 @@
 # FocusLoop — product concept brief
 
-**Category:** Family productivity / household coordination  
+**Category:** Family productivity / household coordination
 **Stage:** Concept test (not yet launched)
 
 ## One-liner

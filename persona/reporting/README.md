@@ -3,7 +3,7 @@
 After a multi-persona Harbor job completes, **aggregate** per-trial `verifier/grounding.json`
 files (written by each persona bench task's verifier). This script does not re-score trials.
 
-Harbor `reward.txt` = schema gate + probe grounding (same pass/fail as `grounding.json` when `MATRAIX_PROBE_DIMENSION` is set). Adhoc runs without probe env skip grounding and reward on schema only.
+Harbor `reward.txt` = schema gate + probe grounding (same pass/fail as `grounding.json` when `PERSONABENCH_PROBE_DIMENSION` is set). Adhoc runs without probe env skip grounding and reward on schema only.
 
 ```bash
 uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \

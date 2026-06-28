@@ -1,3 +1,16 @@
-[`generate_application_job.py`](generate_application_job.py) — sample personas and write Harbor job YAML under `configs/jobs/application-task-job-recipe/` (gitignored except [`appSim-example-survey-product-feedback-random-n4.yaml`](../configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml)).
+# Application Scripts
 
-Supports `--sample-size`, optional `--stratify`, and `--name` (e.g. `appSim-…` for curated examples).
+[`generate_application_job.py`](generate_application_job.py) samples personas and
+writes a multi-trial job YAML plus a `.meta.json` sidecar under
+`configs/jobs/application-task-job-recipe/` by default.
+
+Generated job recipes are ignored by git unless a maintainer explicitly curates
+one into the repository. Use `--out` to write to a temporary path while testing.
+
+The script supports:
+
+- `--sample-size`
+- repeated or comma-separated `--stratify`
+- `--name`
+- `--job-name`
+- `--dataset`

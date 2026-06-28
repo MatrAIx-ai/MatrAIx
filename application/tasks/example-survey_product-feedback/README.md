@@ -5,7 +5,7 @@ MatrAIx **survey** reference task: read a product brief and structured questions
 - Inputs: `/app/input/product_brief.md`, `/app/input/survey_questions.md`
 - Output: `/app/output/survey_responses.json`
 
-See [task-guide.md](../../docs/applications/task-guide.md).
+See [Application Tasks](../README.md).
 
 ## Suggested setup (non-binding)
 
@@ -13,13 +13,13 @@ See [task-guide.md](../../docs/applications/task-guide.md).
 |-------|-------|
 | Agent | `persona-claude-code` |
 | Environment | `docker` (default) |
-| Persona | `persona/datasets/bench-dev-2000/persona_0042.yaml` |
+| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
 
 ```bash
 uv run harbor run \
   -a persona-claude-code \
   -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-2000/persona_0042.yaml \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
   -p application/tasks/example-survey_product-feedback
 ```
 

@@ -1,36 +1,59 @@
-# Persona assets
+# Persona Module
 
-| Path | Purpose |
-|------|---------|
-| `dimensions.json` | Dimension catalog (`index` = `bench_dim_index` for persona bench tasks) |
-| `attribute_pool/` | Candidate attribute pool + normalization outputs |
-| `validators/` | Schema checks for `dimensions.json` |
-| `datasets/bench-dev-2000/` | Primary dev persona pool (2000 synthetic profiles) |
-| `tasks/` | Validation Harbor tasks |
-| `scripts/generate_dev_personas.py` | Generate dev YAML from `dimensions.json` |
-| `scripts/generate_persona_job.py` | Sample personas → Harbor grounding job YAML |
-| `reporting/` | Grounding report after multi-persona jobs |
+This module owns persona data, schema, curation, and persona adherence
+evaluation.
 
-Persona cards for agents are rendered from `dimensions.json` as wiki-style biography paragraphs (`dimension_profile_narrative`).
+Current layout:
 
-## Generate dev personas
-
-```bash
-uv run python persona/scripts/generate_dev_personas.py \
-  --count 2000 \
-  --seed 42 \
-  --task persona/tasks/example-survey_product-feedback \
-  --stratum-min 2
+```text
+persona/
+  schema/       Dimensions, attributes, validators, and schema docs.
+  datasets/     Small curated persona sets and sample fixtures.
+  curation/     Scripts and manifests for building persona data.
+  tasks/        Persona grounding tasks and task-local verifiers.
+  scripts/      Persona pool and grounding job generation.
+  validators/   Schema validation utilities.
+  reporting/    Persona grounding job rollups.
 ```
 
-## Dev grounding
+Do not place runtime engines, product scenarios, or raw generated job outputs
+here. Those belong in `environment/`, `application/`, or external storage.
 
-Default dataset: `bench-dev-2000`. Jobs read `grounding.toml` on each bench task (filter confounders → stratify on probe). Use `--controlled-probe` for anchor-based cohorts.
+## Data Pipeline
 
-```bash
-uv run python persona/scripts/generate_persona_job.py \
-  --task persona/tasks/example-survey_product-feedback \
-  --sample-size-per-value-group 1
+MatrAIx keeps runnable persona curation code in git and keeps
+large/generated data outside `main`.
+
+Canonical flow:
+
+```text
+fetch or index source data
+  -> normalize and clean records
+  -> build local profile DB or JSONL histories
+  -> infer or assign persona dimensions
+  -> validate outputs
+  -> create collaborator package
+  -> merge returned results
+  -> upload generated artifacts externally
 ```
 
-See [`scripts/README.md`](scripts/README.md) for flags.
+Start with [persona curation](curation/README.md) and the
+[existing-data pipeline](curation/existing_data/README.md). Large artifact
+upload slots are tracked in
+[migration/matraix/README.md](../migration/matraix/README.md).
+Real profile databases, manifests, raw histories, and full generated datasets
+are external dependencies with `TODO` URL slots; keep local paths out of code
+and documentation.
+
+## Imported from MatrAIx
+
+The first curated import brought in:
+
+- `schema/dimensions.json`
+- `schema/validators/schema_validator.py`
+- two sample personas under `datasets/bench-dev-sample/`
+- `tasks/`, `scripts/`, `validators/`, and `reporting/` for the curated
+  persona grounding task layer
+
+Large MatrAIx generated outputs were intentionally excluded. See
+`docs/migration/matraix-merge-log.md`.

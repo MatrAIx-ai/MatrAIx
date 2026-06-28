@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "matraix/application-chat-mcp-support-chatbot"
+name = "personabench/application-chat-mcp-support-chatbot"
 
 [metadata]
 difficulty = "easy"
@@ -27,4 +27,3 @@ name = "acme-support"
 transport = "streamable-http"
 url = "http://support-bot:8000/mcp"
 args = []
-

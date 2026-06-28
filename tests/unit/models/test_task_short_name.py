@@ -5,8 +5,8 @@ from pathlib import Path
 from harbor.models.task.task import Task
 
 
-def test_short_name_with_registry_task_section(temp_dir: Path) -> None:
-    task_dir = temp_dir / "cancel-async-tasks"
+def test_short_name_with_registry_task_section(tmp_path: Path) -> None:
+    task_dir = tmp_path / "cancel-async-tasks"
     task_dir.mkdir()
     (task_dir / "environment").mkdir()
     (task_dir / "environment" / "Dockerfile").write_text("FROM ubuntu:22.04\n")
@@ -38,8 +38,8 @@ timeout_sec = 60.0
     assert task.short_name == "cancel-async-tasks"
 
 
-def test_short_name_without_task_section(temp_dir: Path) -> None:
-    task_dir = temp_dir / "local-task"
+def test_short_name_without_task_section(tmp_path: Path) -> None:
+    task_dir = tmp_path / "local-task"
     task_dir.mkdir()
     (task_dir / "environment").mkdir()
     (task_dir / "environment" / "Dockerfile").write_text("FROM ubuntu:22.04\n")

@@ -16,7 +16,7 @@ if ! "${UVX_BASE[@]}" --with pytest-json-ctrf==0.3.5 \
 fi
 
 # Valid behavioral output → reward follows probe grounding (declined/continued paths).
-# When MATRAIX_PROBE_DIMENSION is unset, grounding is skipped and reward = 1 (adhoc smoke).
+# When PERSONABENCH_PROBE_DIMENSION is unset, grounding is skipped and reward = 1 (adhoc smoke).
 if "${UVX_BASE[@]}" pytest /tests/test_grounding.py -rA; then
   echo 1 > /logs/verifier/reward.txt
 else

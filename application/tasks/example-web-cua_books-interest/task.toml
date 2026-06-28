@@ -2,7 +2,7 @@ schema_version = "1.1"
 artifacts = [ "/app/output",]
 
 [task]
-name = "matraix/application-web-cua-books-interest"
+name = "personabench/application-web-cua-books-interest"
 
 [metadata]
 difficulty = "easy"
