@@ -14,8 +14,7 @@ import yaml
 DEFAULT_CATALOG_PATH = "persona/schema/dimensions.json"
 DEFAULT_CONSTRAINTS_PATH = "persona/schema/dimension_constraints_readable.txt"
 SYNTHESIS_MODE = "schema_grounded_random_sample_with_pairwise_constraints"
-DIMENSION_SET = "core-plus-cog"
-CORE_DIMENSION_MAX_INDEX = 47
+DIMENSION_SET = "all-catalog-dimensions"
 
 _CONSTRAINT_RE = re.compile(
     r"(?P<dim1>[A-Za-z0-9_]+)='(?P<val1>.*?)'\s+\+\s+"
@@ -94,17 +93,13 @@ def load_synthesis_dimension_ids(
     *,
     root: Path | None = None,
 ) -> tuple[str, ...]:
-    """Use the existing dev surface: core catalog dimensions plus cog_* fields."""
+    """Emit every catalog dimension, ordered by the catalog index."""
     payload = load_dimension_catalog(catalog_path, root=root)
     rows = []
     for position, row in enumerate(payload.get("dimensions") or []):
         if isinstance(row, dict) and row.get("id"):
-            rows.append((int(row.get("index") or position + 1), str(row["id"])))
-    return tuple(
-        dim_id
-        for index, dim_id in sorted(rows)
-        if index <= CORE_DIMENSION_MAX_INDEX or dim_id.startswith("cog_")
-    )
+            rows.append((int(row.get("index") or position + 1), position, str(row["id"])))
+    return tuple(dim_id for _, _, dim_id in sorted(rows))
 
 
 def parse_readable_constraints(text: str) -> list[IncompatibilityRule]:
@@ -388,7 +383,7 @@ def synthesize_persona_dataset(
             "validation": validation["constraints"],
         },
         "sampling": {
-            "method": "seeded uniform random sampling over selected catalog values",
+            "method": "seeded uniform random sampling over all catalog dimensions",
             "attempts": validation["attempts"],
         },
     }
