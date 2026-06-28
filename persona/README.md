@@ -21,7 +21,7 @@ here. Those belong in `environment/`, `application/`, or external storage.
 
 ## Data Pipeline
 
-PersonaBench keeps runnable persona curation code in git and keeps
+MatrAIx keeps runnable persona curation code in git and keeps
 large/generated data outside `main`.
 
 Canonical flow:

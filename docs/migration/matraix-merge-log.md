@@ -1,6 +1,7 @@
 # MatrAIx Merge Log
 
-This log records the curated migration from MatrAIx into PersonaBench.
+This log records the curated migration work used to rebuild a clean MatrAIx
+`main`.
 
 ## 2026-06-27
 
@@ -205,7 +206,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
     `persona/datasets/bench-dev-sample/persona_0042.yaml`.
   - Recipe documentation records what remains deferred and why.
 
-### Step 10: Import PersonaBench task layer
+### Step 10: Import persona task layer
 
 - Branch: `codex/persona-bench-tasks`
 - PersonaBench PR: `#134`
@@ -268,7 +269,7 @@ This log records the curated migration from MatrAIx into PersonaBench.
 - Documentation added:
   - `docs/migration/matraix-parity-matrix.md`
 - Policy:
-  - PersonaBench `main` targets clean functional parity, not byte-for-byte
+  - Clean `main` targets functional parity, not byte-for-byte
     source-tree parity.
   - Large generated artifacts and historical run outputs stay external to git.
   - Remaining imports should land as focused curated PRs with source mapping,

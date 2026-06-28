@@ -30,7 +30,7 @@ external storage and link them from documentation.
 Every adapter must include `manifest.toml` with:
 
 - source repository, path, and commit
-- target path in PersonaBench
+- target path in MatrAIx
 - package name and Python package import name
 - owner or original author
 - external data and credential requirements

@@ -14,7 +14,7 @@ environment/
   adapters/           Curated external benchmark adapters.
   agents/
     personabench/
-      agents/         PersonaBench-owned installed and persona agents.
+      agents/         MatrAIx-owned installed and persona agents.
   runtime/
     harbor/
       agents/         Base and installed agent wrappers.

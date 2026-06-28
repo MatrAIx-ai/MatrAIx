@@ -1,7 +1,7 @@
 # Job Recipes
 
 This directory contains curated Harbor job recipes that run against files kept
-in PersonaBench `main`.
+in MatrAIx `main`.
 
 Rules for adding recipes:
 

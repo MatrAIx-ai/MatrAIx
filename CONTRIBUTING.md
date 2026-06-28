@@ -1,6 +1,6 @@
-# Contributing to PersonaBench
+# Contributing to MatrAIx
 
-PersonaBench accepts focused PRs. A PR can touch more than one module, but it
+MatrAIx accepts focused PRs. A PR can touch more than one module, but it
 must explain the boundary crossing in the PR body.
 
 ## Modules

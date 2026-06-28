@@ -1,10 +1,12 @@
-# PersonaBench
+# MatrAIx
 
-PersonaBench is the focused home for persona data, persona schemas, persona
-evaluation tasks, and persona-conditioned simulation examples curated from
-MatrAIx.
+MatrAIx is a modular benchmark and runtime stack for persona-conditioned
+simulation. It keeps persona data, application scenarios, and execution
+infrastructure separated so each piece can be reviewed, tested, and extended
+without turning `main` into a raw migration snapshot.
 
-The repository is organized around three contribution modules:
+The repository is organized around three contribution modules plus repo-local
+tooling:
 
 ```text
 persona/       Persona schemas, datasets, curation pipelines, and persona bench tasks.
@@ -24,14 +26,13 @@ The rule of thumb is simple:
   `harbor view`.
 
 Shared libraries may live under `packages/` when they are genuinely reusable.
-Large generated outputs, raw dumps, and migration snapshots should not be
-merged into `main`.
+The root Python distribution and compatibility namespace are currently named
+`personabench`; do not rename imports as part of documentation-only cleanup.
 
-## Current Clean-Main State
+## Repository State
 
-This branch is intentionally not a byte-for-byte copy of the old MatrAIx
-`main`. It keeps the runnable and reviewable parts of MatrAIx under stable
-module boundaries:
+This clean `main` keeps the runnable and reviewable parts of MatrAIx under
+stable module boundaries:
 
 - `persona/`: persona schema, curation utilities, sample datasets, persona
   grounding tasks, bench tasks, reporting, and validators.
@@ -44,8 +45,8 @@ module boundaries:
   `rewardkit`.
 
 Historical run outputs, generated datasets, large fixtures, screenshots,
-recordings, and raw migration snapshots are tracked as external artifacts
-instead of being committed to `main`; see
+recordings, raw dumps, and migration snapshots stay outside git. External data
+dependencies and upload TODOs are tracked in
 [the artifact handoff checklist](migration/matraix/README.md).
 
 ## Quick Start
@@ -76,7 +77,7 @@ uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-local
 ```
 
 More setup, optional package, adapter, viewer, and artifact details are in
-[Running PersonaBench](docs/running.md).
+[Running MatrAIx](docs/running.md).
 
 ## Persona Data
 
@@ -98,8 +99,7 @@ Useful entry points:
 
 ## Research Notes
 
-The old MatrAIx literature review lived inside team planning files. Clean main
-keeps the useful references as module-specific research notes:
+MatrAIx research notes are kept as module-specific working references:
 
 - [Persona related work](docs/research/persona-related-work.md)
 - [Behavior-grounded personas](docs/research/behavior-grounded-personas.md)
@@ -109,16 +109,15 @@ keeps the useful references as module-specific research notes:
 - [Application domain benchmark catalog](docs/research/application-domain-benchmark-catalog.md)
 - [Environment related work](docs/research/environment-related-work.md)
 
-The source environment review was much thinner than the application and
-persona reviews. The environment note records the original environment entries
-and cross-links environment-relevant benchmark references that were originally
-written in the application review.
+The environment note is intentionally thinner than the persona and application
+notes because the source material had fewer complete environment entries.
 
 Start here:
 
 - [Architecture](docs/architecture.md)
-- [Running PersonaBench](docs/running.md)
+- [Running MatrAIx](docs/running.md)
 - [Research notes](docs/research/README.md)
 - [Contributing](CONTRIBUTING.md)
-- [MatrAIx migration plan](docs/migration/matraix-import-plan.md)
-- [MatrAIx merge log](docs/migration/matraix-merge-log.md)
+
+Migration provenance is available under [migration/matraix/](migration/matraix/)
+and [docs/migration/](docs/migration/) for reviewers who need source history.

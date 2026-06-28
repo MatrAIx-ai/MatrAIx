@@ -1,6 +1,6 @@
 # Recommender Agent Chat API
 
-PersonaBench application task for a recommender agent exposed through a REST
+MatrAIx application task for a recommender agent exposed through a REST
 chat API. The persona agent acts as a simulated user, has a multi-turn
 conversation with the sidecar, and saves the resulting transcript and
 recommendation artifacts.
