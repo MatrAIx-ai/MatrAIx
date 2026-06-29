@@ -86,7 +86,7 @@ The normal data entrypoint is the reindexed Hugging Face artifact documented in
 `configs/amazon_reviews_2023.json`:
 
 ```text
-repo_id: MatrAIx/MatrAIx
+repo_id: MatrAIx2026/MatrAIx2026
 artifact: amazon/modal_artifacts/amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000
 ```
 
@@ -120,6 +120,43 @@ persona/existing_data_curation/scripts/make_amazon_package.sh \
   "${MATRIX_DATA_ROOT}/amazon_reviews_2023/user_histories.jsonl.gz" \
   0:100 alice all
 ```
+
+### Amazon Downstream Workflows
+
+The imported Amazon extraction and holdout-prediction workflows are
+subscription-based. They do not require an API key. Authenticate your local
+`codex` or `claude` CLI subscription, then choose the backend with
+`--llm-backend`.
+
+Prepare persona-dimension inferences:
+
+```bash
+python3 persona/existing_data_curation/amazon/extraction/infer_amazon_review_dimensions.py \
+  --user-histories "${MATRIX_DATA_ROOT}/amazon_reviews_2023/user_histories.jsonl.gz" \
+  --llm-backend codex \
+  --output "${MATRIX_DATA_ROOT}/amazon_reviews_2023/inferred_dimensions.jsonl"
+```
+
+Prepare blind rating-holdout targets and score baselines:
+
+```bash
+python3 persona/existing_data_curation/amazon/evaluation/evaluate_amazon_persona_rating_holdout.py \
+  --user-histories "${MATRIX_DATA_ROOT}/amazon_reviews_2023/user_histories.jsonl.gz" \
+  --output-dir "${MATRIX_DATA_ROOT}/amazon_reviews_2023/rating_holdout"
+```
+
+Predict held-out ratings with the constructed personas:
+
+```bash
+python3 persona/existing_data_curation/amazon/evaluation/predict_amazon_persona_holdout_ratings.py \
+  --prediction-targets "${MATRIX_DATA_ROOT}/amazon_reviews_2023/rating_holdout/prediction_targets.jsonl" \
+  --inference-output "${MATRIX_DATA_ROOT}/amazon_reviews_2023/inferred_dimensions.jsonl" \
+  --llm-backend codex \
+  --output "${MATRIX_DATA_ROOT}/amazon_reviews_2023/rating_holdout/persona_predictions.jsonl"
+```
+
+Use `--llm-backend claude --model opus` for Claude Code subscriptions. Use
+`--dry-run` on either LLM script to write prompts without invoking a backend.
 
 ## Collaborator Contract
 

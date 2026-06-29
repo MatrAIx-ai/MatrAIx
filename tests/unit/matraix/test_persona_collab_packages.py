@@ -331,6 +331,45 @@ def test_package_owner_scripts_document_portable_data_inputs() -> None:
     assert ': "${WIKI_CLEAN_DIR:?Set WIKI_CLEAN_DIR' in wiki_wrapper
     assert '"MatrAIx/MatrAIx"' not in amazon_exporter
     assert "load_default_source_config" in amazon_exporter
-    assert amazon_manifest["source"]["repo_id"] == "MatrAIx/MatrAIx"
+    assert amazon_manifest["source"]["repo_id"] == "MatrAIx2026/MatrAIx2026"
     assert amazon_manifest["format"] == "partitioned parquet"
+
+
+def test_amazon_downstream_workflows_are_subscription_based() -> None:
+    repo_root = Path(__file__).resolve().parents[3]
+    extraction = (
+        repo_root
+        / "persona/existing_data_curation/amazon/extraction/infer_amazon_review_dimensions.py"
+    )
+    prediction = (
+        repo_root
+        / "persona/existing_data_curation/amazon/evaluation/predict_amazon_persona_holdout_ratings.py"
+    )
+    evaluation = (
+        repo_root
+        / "persona/existing_data_curation/amazon/evaluation/evaluate_amazon_persona_rating_holdout.py"
+    )
+    backend = (
+        repo_root
+        / "persona/existing_data_curation/amazon/subscription_json_backend.py"
+    )
+
+    workflow_files = [extraction, prediction, evaluation, backend]
+    for path in workflow_files:
+        assert path.exists(), f"missing downstream workflow file: {path}"
+
+    api_needles = ("OPENAI_API_KEY", "api.openai.com", "/v1/chat/completions")
+    for path in workflow_files:
+        text = path.read_text(encoding="utf-8")
+        for needle in api_needles:
+            assert needle not in text
+
+    extraction_text = extraction.read_text(encoding="utf-8")
+    prediction_text = prediction.read_text(encoding="utf-8")
+    backend_text = backend.read_text(encoding="utf-8")
+
+    assert "--llm-backend" in extraction_text
+    assert "--llm-backend" in prediction_text
+    assert "codex" in backend_text
+    assert "claude" in backend_text
 
