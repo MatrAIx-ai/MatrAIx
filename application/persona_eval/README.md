@@ -90,6 +90,43 @@ All app endpoints are mounted under `/api`.
 
 Interactive OpenAPI docs are available at `/docs` when the backend is running.
 
+## Execution Runtime
+
+PersonaEval defaults to the local direct runtime. To send survey, chatbot, and
+web runs to BenchFlow-hosted agents instead, start the backend with:
+
+```bash
+export MATRIX_PERSONA_EVAL_RUNTIME=benchflow
+export BENCHFLOW_API_URL=http://127.0.0.1:9000
+# Optional. Leave unset for local/no-auth BenchFlow services.
+export BENCHFLOW_API_KEY=...
+```
+
+The backend keeps the same API contract (`jobId` + polling endpoints). BenchFlow
+is used only behind the runner boundary, and the returned artifacts are
+normalized into the existing `surveyResult`, chatbot transcript, and `webResult`
+/ `trace` shapes.
+
+For web traces, BenchFlow can either return a local `screenshots_dir` artifact
+when the backend shares the runner filesystem, or include per-event
+`screenshotUrl` values in `trace.json` for remotely hosted screenshots.
+
+For local development without a deployed BenchFlow service, start the dev-only
+compatibility server in a second terminal:
+
+```bash
+PYTHONPATH=application/persona_eval \
+  python -m uvicorn backend.service.benchflow_compat_server:app \
+  --host 127.0.0.1 --port 9000
+```
+
+By default this serves deterministic mock web artifacts so the MatrAIx
+BenchFlow path can be tested end-to-end. To bridge to a real BenchFlow CLI run,
+set `BENCHFLOW_COMPAT_WEB_COMMAND`; the command receives
+`BENCHFLOW_PAYLOAD_JSON` and `BENCHFLOW_OUTPUT_DIR`, then must write
+`trace.json` plus `ecommerce_interaction.json` (or `web_result.json`) into that
+output directory.
+
 ## Validation
 
 Useful local checks:

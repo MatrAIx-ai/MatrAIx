@@ -40,6 +40,7 @@ from backend.service import ensure_recbot_importable
 from backend.service.bundle_catalog import get_bundle_catalog
 from backend.service.catalog_index import CatalogIndex
 from backend.service.config import ConfigManager
+from backend.service.config import persona_eval_runtime
 from backend.service.jobs import JobRegistry
 from backend.service.session import SessionManager
 from backend.service.session_store import SessionStore
@@ -126,14 +127,37 @@ def build_persona_eval_service(
     each application-under-test adapter directly. The service keeps the same
     async job API that the frontend uses, through direct local runners.
     """
+    from backend.service.persona_eval_service import PersonaEvalService
+    from persona_eval.persona import get_persona
+    from persona_eval.sut_descriptions import sut_description_for
+
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from backend.service.benchflow_persona_eval import BenchFlowPersonaEvalRunner
+
+        return PersonaEvalService(
+            session_builder=lambda _cfg: type("BenchFlowSession", (), {"turns": []})(),
+            get_persona=get_persona,
+            sut_for=sut_description_for,
+            simulator_factory=lambda *_args: None,
+            runner=BenchFlowPersonaEvalRunner(),
+        )
+    if runtime == "harbor":
+        from backend.service.harbor_persona_eval import HarborPersonaEvalRunner
+
+        return PersonaEvalService(
+            session_builder=lambda _cfg: type("HarborSession", (), {"turns": []})(),
+            get_persona=get_persona,
+            sut_for=sut_description_for,
+            simulator_factory=lambda *_args: None,
+            runner=HarborPersonaEvalRunner(),
+        )
+
     from backend.service.local_chatbot_eval import (
         LocalChatbotEvalRunner,
         build_local_chat_session,
         build_local_user_simulator_for_model,
     )
-    from backend.service.persona_eval_service import PersonaEvalService
-    from persona_eval.persona import get_persona
-    from persona_eval.sut_descriptions import sut_description_for
 
     return PersonaEvalService(
         session_builder=lambda cfg: build_local_chat_session(
@@ -154,7 +178,6 @@ def build_persona_eval_service(
 
 def build_survey_eval_service() -> "SurveyEvalService":
     """Construct the process-wide local survey eval service."""
-    from backend.service.local_survey_eval import LocalSurveyEvalRunner
     from backend.service.survey_eval_service import SurveyEvalService
     from backend.service.survey_instruments import (
         get_survey_instrument,
@@ -162,26 +185,53 @@ def build_survey_eval_service() -> "SurveyEvalService":
     )
     from persona_eval.persona import get_persona
 
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from backend.service.benchflow_survey_eval import BenchFlowSurveyEvalRunner
+
+        runner = BenchFlowSurveyEvalRunner()
+    elif runtime == "harbor":
+        from backend.service.harbor_survey_eval import HarborSurveyEvalRunner
+
+        runner = HarborSurveyEvalRunner()
+    else:
+        from backend.service.local_survey_eval import LocalSurveyEvalRunner
+
+        runner = LocalSurveyEvalRunner()
+
     return SurveyEvalService(
         get_persona=get_persona,
         get_instrument=get_survey_instrument,
         list_instruments=list_survey_instruments,
-        runner=LocalSurveyEvalRunner(),
+        runner=runner,
     )
 
 
 def build_web_eval_service() -> "WebEvalService":
     """Construct the process-wide local web eval service."""
-    from backend.service.local_web_eval import LocalWebEvalRunner
     from backend.service.web_eval_service import WebEvalService
     from backend.service.web_tasks import get_web_eval_task, list_web_eval_tasks
     from persona_eval.persona import get_persona
+
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from backend.service.benchflow_web_eval import BenchFlowWebEvalRunner
+
+        runner = BenchFlowWebEvalRunner()
+    elif runtime == "harbor":
+        from backend.service.harbor_web_eval import HarborWebEvalRunner
+
+        runner = HarborWebEvalRunner()
+    else:
+        from backend.service.local_web_eval import LocalWebEvalRunner
+
+        runner = LocalWebEvalRunner()
 
     return WebEvalService(
         get_persona=get_persona,
         get_task=get_web_eval_task,
         list_tasks=list_web_eval_tasks,
-        runner=LocalWebEvalRunner(),
+        runner=runner,
     )
 
 

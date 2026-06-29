@@ -35,6 +35,8 @@ def web_result_view(result: WebEvalResult) -> Dict[str, Any]:
 def _trace_with_screenshot_urls(
     job_id: str,
     trace: Optional[Dict[str, Any]],
+    *,
+    local_screenshots: bool = False,
 ) -> Optional[Dict[str, Any]]:
     if trace is None:
         return None
@@ -47,7 +49,10 @@ def _trace_with_screenshot_urls(
                 continue
             event_view = dict(event)
             screenshot_file = event_view.get("screenshotFile")
-            if isinstance(screenshot_file, str) and screenshot_file:
+            if event_view.get("screenshotUrl"):
+                events.append(event_view)
+                continue
+            if local_screenshots and isinstance(screenshot_file, str) and screenshot_file:
                 event_view["screenshotUrl"] = (
                     "/api/web-eval/jobs/{}/screenshots/{}".format(
                         job_id,
@@ -60,13 +65,15 @@ def _trace_with_screenshot_urls(
 
 
 def _copy_screenshots(src_dir: Optional[Path], dst_dir: Path) -> None:
-    """Copy a run's trace SVGs into a durable per-run dir (best-effort)."""
+    """Copy a run's trace screenshots into a durable per-run dir (best-effort)."""
     if src_dir is None or not Path(src_dir).is_dir():
         return
     try:
         dst_dir.mkdir(parents=True, exist_ok=True)
-        for svg in Path(src_dir).glob("screenshot_*.svg"):
-            shutil.copy2(svg, dst_dir / svg.name)
+        for screenshot in Path(src_dir).glob("screenshot_*"):
+            if screenshot.suffix not in {".svg", ".webp"}:
+                continue
+            shutil.copy2(screenshot, dst_dir / screenshot.name)
     except Exception:  # noqa: BLE001 - best-effort
         return
 
@@ -230,8 +237,14 @@ class WebEvalService:
                 )
                 result_view = web_result_view(result)
                 web_result = result_view.get("webResult")
+                has_local_screenshots = (
+                    result.trace.screenshots_dir is not None
+                    and result.trace.screenshots_dir.is_dir()
+                )
                 trace = _trace_with_screenshot_urls(
-                    progress.job_id, result_view.get("trace")
+                    progress.job_id,
+                    result_view.get("trace"),
+                    local_screenshots=has_local_screenshots,
                 )
                 # Copy the trace screenshots to a durable per-run dir and persist
                 # the run BEFORE marking done, so a "done" run is always already
@@ -256,7 +269,9 @@ class WebEvalService:
                 with self._guard:
                     progress.web_result = web_result
                     progress.trace = trace
-                    progress.screenshots_dir = result.trace.screenshots_dir
+                    progress.screenshots_dir = (
+                        result.trace.screenshots_dir if has_local_screenshots else None
+                    )
                     progress.prompts = result_view.get("prompts")
                     progress.phase = None
                     progress.status = "done"
