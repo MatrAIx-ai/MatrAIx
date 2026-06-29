@@ -27,6 +27,7 @@ import {
   fmtGoalContext,
   fmtRunDate,
   runSummaryAppType,
+  type RunApplicationType,
 } from "./runsShared";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import { api, ApiError } from "@/lib/api";
@@ -88,6 +89,12 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
   const [picks, setPicks] = useState<string[]>([]);
 
   const runs = useMemo(() => query.data?.runs ?? [], [query.data]);
+  const runTypeById = useMemo(() => {
+    return new Map<string, RunApplicationType>(
+      runs.map((run) => [run.id, runSummaryAppType(run)]),
+    );
+  }, [runs]);
+  const firstPickType = picks[0] ? runTypeById.get(picks[0]) ?? null : null;
 
   function toggleCompareMode() {
     setComparing((on) => !on);
@@ -98,6 +105,9 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
     setPicks((prev) => {
       if (prev.includes(id)) return prev.filter((p) => p !== id);
       if (prev.length >= 2) return prev; // cap at two
+      const firstType = prev[0] ? runTypeById.get(prev[0]) : null;
+      const nextType = runTypeById.get(id);
+      if (firstType && nextType && firstType !== nextType) return prev;
       return [...prev, id];
     });
   }
@@ -165,7 +175,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
             <div className="flex w-full items-center gap-3 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 rise-in">
               <Sym name="compare_arrows" size={18} className="shrink-0 text-primary" />
               <span className="min-w-0 text-[13px] text-text-variant">
-                Pick two runs to compare. The first one you choose is the baseline; the second is
+                Pick two runs of the same application type. The first one you choose is the baseline; the second is
                 measured against it.{" "}
                 <span className="font-mono text-[11px] text-text-variant">({picks.length} of 2 chosen)</span>
               </span>
@@ -193,6 +203,7 @@ function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
             runs={runs}
             comparing={comparing}
             picks={picks}
+            firstPickType={firstPickType}
             onOpen={openRun}
             onTogglePick={togglePick}
           />
@@ -210,6 +221,7 @@ interface RunsTableProps {
   runs: PersonaEvalRunSummary[];
   comparing: boolean;
   picks: string[];
+  firstPickType: RunApplicationType | null;
   onOpen: (id: string) => void;
   onTogglePick: (id: string) => void;
 }
@@ -218,7 +230,7 @@ interface RunsTableProps {
 const ROW_GRID =
   "grid grid-cols-[28px_64px_72px_minmax(0,1.6fr)_minmax(0,0.9fr)_minmax(0,1.1fr)_64px_80px] items-center gap-3";
 
-function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTableProps) {
+function RunsTable({ runs, comparing, picks, firstPickType, onOpen, onTogglePick }: RunsTableProps) {
   return (
     <div className="panel overflow-hidden rounded-md border border-outline bg-surface rise-in">
       {/* Column header */}
@@ -229,7 +241,7 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
         <span title="The simulated user's overall rating, out of 10. Green is great, amber is mixed, red means it fell short.">
           Score
         </span>
-        <span title="Which kind of app was tested: a chatbot, a survey, or a website.">Kind</span>
+        <span title="Which kind of app was tested: a chatbot, a survey, a website, or AppWorld.">Kind</span>
         <span>Simulated user</span>
         <span>Domain</span>
         <span>Conversation style</span>
@@ -240,7 +252,11 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
       <ul className="divide-y divide-outline-dim">
         {runs.map((run) => {
           const picked = picks.includes(run.id);
-          const pickDisabled = comparing && !picked && picks.length >= 2;
+          const runType = runSummaryAppType(run);
+          const wrongCompareType = Boolean(
+            comparing && !picked && firstPickType && runType !== firstPickType,
+          );
+          const pickDisabled = comparing && !picked && (picks.length >= 2 || wrongCompareType);
           return (
             <li key={run.id}>
               <button
@@ -248,6 +264,7 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
                 onClick={() => (comparing ? onTogglePick(run.id) : onOpen(run.id))}
                 disabled={pickDisabled}
                 aria-pressed={comparing ? picked : undefined}
+                title={wrongCompareType ? "Choose another run with the same application type." : undefined}
                 className={`${ROW_GRID} w-full px-3.5 py-2.5 text-left transition-colors ${FOCUS_RING} ${
                   picked
                     ? "bg-primary/10 active:bg-primary/20"
@@ -276,7 +293,7 @@ function RunsTable({ runs, comparing, picks, onOpen, onTogglePick }: RunsTablePr
 
                 {/* Kind: app-type tag (chatbot today; forward-compatible) */}
                 <span className="flex">
-                  <AppTypeTag type={runSummaryAppType(run)} />
+                  <AppTypeTag type={runType} />
                 </span>
 
                 {/* Persona + source */}

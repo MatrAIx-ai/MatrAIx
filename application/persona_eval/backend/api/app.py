@@ -170,7 +170,8 @@ def preflight_checks(
     * **Chatbot** — the RecAI recommender (engine + its native resource bundles,
       collapsed across domains), plus the OpenBB and Medical adapters, which are
       selectable but whose external services are verified at run time.
-    * **Survey** / **Web** — the other application interfaces, available to run.
+    * **Survey** / **Web** / **AppWorld** — the other application interfaces,
+      available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
     names. Inspection is filesystem-only except for a short ``/health`` probe of
@@ -299,6 +300,14 @@ def preflight_checks(
             "name": "Web tasks",
             "ok": True,
             "detail": "Browser and computer-use interface available. It runs when you start a web task.",
+        }
+    )
+    checks.append(
+        {
+            "group": "AppWorld",
+            "name": "AppWorld tasks",
+            "ok": True,
+            "detail": "API-driven AppWorld interface available. It runs when you start an AppWorld task.",
         }
     )
 
@@ -903,6 +912,50 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=404, detail="screenshot not found")
         media_type = "image/svg+xml" if path.suffix == ".svg" else "image/webp"
         return FileResponse(path, media_type=media_type)
+
+    # ---------------------------- AppWorldEval ---------------------------- #
+    @app.get(
+        "/api/appworld-eval/tasks",
+        response_model=schemas.AppWorldEvalTasksResponse,
+        tags=["appworld-eval"],
+    )
+    def appworld_eval_tasks(
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        return {"tasks": services.appworld_eval.list_tasks()}
+
+    @app.post(
+        "/api/appworld-eval",
+        response_model=schemas.SubmitPersonaEvalResponse,
+        tags=["appworld-eval"],
+    )
+    def start_appworld_eval(
+        body: schemas.StartAppWorldEvalRequest,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            job_id = services.appworld_eval.start(
+                persona_id=body.personaId,
+                task_id=body.taskId,
+                persona_model=body.personaModel,
+                now=_utc_now,
+            )
+        except (ValueError, KeyError) as exc:
+            raise HTTPException(status_code=422, detail=str(exc))
+        return {"jobId": job_id}
+
+    @app.get(
+        "/api/appworld-eval/jobs/{job_id}",
+        response_model=schemas.AppWorldEvalJobView,
+        tags=["appworld-eval"],
+    )
+    def get_appworld_eval_job(
+        job_id: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        view = services.appworld_eval.view(job_id)
+        if view is None:
+            raise HTTPException(status_code=404, detail="appworld-eval job not found")
+        return view
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

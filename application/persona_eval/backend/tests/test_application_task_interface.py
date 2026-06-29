@@ -14,7 +14,12 @@ def test_application_interface_manifest_groups_core_protocols() -> None:
     manifest = json.loads((INTERFACE_ROOT / "manifest.json").read_text(encoding="utf-8"))
 
     assert manifest["schemaVersion"] == "application-task-interface-v1"
-    assert set(manifest["applicationTypes"]) == {"survey", "chatbot", "web"}
+    assert set(manifest["applicationTypes"]) == {
+        "survey",
+        "chatbot",
+        "web",
+        "appworld",
+    }
     assert manifest["applicationTypes"]["survey"]["canonicalTask"] == (
         "application/tasks/persona-survey"
     )
@@ -24,10 +29,13 @@ def test_application_interface_manifest_groups_core_protocols() -> None:
     assert manifest["applicationTypes"]["web"]["canonicalTask"] == (
         "application/tasks/example-web-playwright_books-interest"
     )
+    assert manifest["applicationTypes"]["appworld"]["canonicalTask"] == (
+        "external:appworld"
+    )
 
 
 def test_application_interface_docs_exist_for_each_protocol() -> None:
-    for dirname in ("survey", "chatbot", "web"):
+    for dirname in ("survey", "chatbot", "web", "appworld"):
         doc = INTERFACE_ROOT / dirname / "README.md"
         assert doc.is_file(), doc
         text = doc.read_text(encoding="utf-8")
