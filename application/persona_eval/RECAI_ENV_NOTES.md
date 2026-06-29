@@ -13,8 +13,8 @@ for smoke runs, but it is not the full native RecAI runtime.
 Restore it as a focused runtime PR rather than mixing it into a UI import. That
 PR should:
 
-- Place task-owned code under
-  `application/tasks/recommender-agent_chat_api/environment/recommender-api/`.
+- Place task-owned runtime code under
+  `environment/task-environments/application/recommender-agent_chat_api/recommender-api/`.
 - Keep large resources out of git and document their Hugging Face or external
   artifact locations.
 - Provide a setup script in the task directory if resources must be materialized

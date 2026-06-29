@@ -32,7 +32,7 @@ Not included as a raw dump:
 The current clean recommender task sidecar lives at:
 
 ```text
-application/tasks/recommender-agent_chat_api/environment/recommender-api/
+environment/task-environments/application/recommender-agent_chat_api/recommender-api/
 ```
 
 It is suitable for smoke runs and API-contract compatibility. Full native RecAI
@@ -49,7 +49,7 @@ npm ci
 npm run build
 cd ../../..
 
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m uvicorn backend.api.app:app \
   --host 127.0.0.1 --port 8765 --workers 1
 ```
@@ -79,9 +79,9 @@ See [REST_API.md](REST_API.md) for the full endpoint-by-endpoint contract,
 including request bodies, polling responses, persisted run shapes, and the
 dev-only BenchFlow-compatible runner API.
 
-See [UNIFIED_RUNTIME.md](UNIFIED_RUNTIME.md) for the local and BenchFlow-backed
-startup commands that run the chatbot, survey, web, and AppWorld surfaces
-through one backend.
+See [UNIFIED_RUNTIME.md](UNIFIED_RUNTIME.md) for the local, Harbor, and
+BenchFlow-backed startup commands. AppWorld is available through local and
+BenchFlow modes; Harbor mode reports AppWorld as unsupported.
 
 | Method | Path | Purpose |
 |---|---|---|
@@ -123,8 +123,8 @@ For local development without a deployed BenchFlow service, start the dev-only
 compatibility server in a second terminal:
 
 ```bash
-PYTHONPATH=application/persona_eval \
-  python -m uvicorn backend.service.benchflow_compat_server:app \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
+  python -m uvicorn environment.integrations.persona_eval.benchflow.compat_server:app \
   --host 127.0.0.1 --port 9000
 ```
 
@@ -140,13 +140,13 @@ output directory.
 Useful local checks:
 
 ```bash
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m pytest application/persona_eval/persona_eval/tests -q
 
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m pytest application/persona_eval/backend/tests -q
 
-PYTHONPATH=. \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m pytest tests/application/persona_eval -q
 
 .venv/bin/ruff check application/persona_eval tests/application/persona_eval

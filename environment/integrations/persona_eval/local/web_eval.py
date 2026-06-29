@@ -6,7 +6,6 @@ from html import escape
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional
 
-from backend.service.local_survey_eval import persona_system_prompt
 from backend.service.web_types import (
     WebEvalConfig,
     WebEvalResult,
@@ -14,6 +13,8 @@ from backend.service.web_types import (
     WebEvalTask,
     WebTrace,
 )
+from environment.integrations.persona_eval.local.survey_eval import persona_system_prompt
+from backend.service.task_environment import resolve_task_environment_dir
 from persona_eval.model_client import build_json_client
 from persona_eval.types import Persona
 
@@ -181,7 +182,8 @@ def _trace_from_model(
 
 
 def _load_task_products(task: WebEvalTask) -> list[Dict[str, Any]]:
-    catalog_path = task.task_path / "environment" / "ecommerce-web" / "site" / "catalog.json"
+    environment_dir = resolve_task_environment_dir(task.task_path)
+    catalog_path = environment_dir / "ecommerce-web" / "site" / "catalog.json"
     try:
         payload = json.loads(catalog_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):

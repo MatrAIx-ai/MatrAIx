@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any, Callable
 
-from backend.service.benchflow_client import BenchFlowClient
-from backend.service.local_survey_eval import (
+from environment.integrations.persona_eval.benchflow.client import BenchFlowClient
+from environment.integrations.persona_eval.local.survey_eval import (
     build_survey_task_prompt,
     persona_system_prompt,
 )

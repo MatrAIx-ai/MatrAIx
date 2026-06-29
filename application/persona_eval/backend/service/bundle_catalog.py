@@ -55,14 +55,10 @@ def _repo_root() -> str:
 
 def _chatbot_api_root() -> str:
     """Absolute path to the chatbot task API source root."""
-    return os.path.join(
-        _repo_root(),
-        "application",
-        "tasks",
-        "recommender-agent_chat_api",
-        "environment",
-        "recommender-api",
-    )
+    from backend.service.task_environment import resolve_task_environment_dir
+
+    task_dir = Path(_repo_root()) / "application" / "tasks" / "recommender-agent_chat_api"
+    return str(resolve_task_environment_dir(task_dir) / "recommender-api")
 
 
 def _catalogs_dir() -> str:

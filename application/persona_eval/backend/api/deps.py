@@ -136,7 +136,7 @@ def build_persona_eval_service(
 
     runtime = persona_eval_runtime()
     if runtime == "benchflow":
-        from backend.service.benchflow_persona_eval import BenchFlowPersonaEvalRunner
+        from environment.integrations.persona_eval.benchflow.persona_eval import BenchFlowPersonaEvalRunner
 
         return PersonaEvalService(
             session_builder=lambda _cfg: type("BenchFlowSession", (), {"turns": []})(),
@@ -146,7 +146,7 @@ def build_persona_eval_service(
             runner=BenchFlowPersonaEvalRunner(),
         )
     if runtime == "harbor":
-        from backend.service.harbor_persona_eval import HarborPersonaEvalRunner
+        from environment.integrations.persona_eval.harbor.persona_eval import HarborPersonaEvalRunner
 
         return PersonaEvalService(
             session_builder=lambda _cfg: type("HarborSession", (), {"turns": []})(),
@@ -156,7 +156,7 @@ def build_persona_eval_service(
             runner=HarborPersonaEvalRunner(),
         )
 
-    from backend.service.local_chatbot_eval import (
+    from environment.integrations.persona_eval.local.chatbot_eval import (
         LocalChatbotEvalRunner,
         build_local_chat_session,
         build_local_user_simulator_for_model,
@@ -190,15 +190,15 @@ def build_survey_eval_service() -> "SurveyEvalService":
 
     runtime = persona_eval_runtime()
     if runtime == "benchflow":
-        from backend.service.benchflow_survey_eval import BenchFlowSurveyEvalRunner
+        from environment.integrations.persona_eval.benchflow.survey_eval import BenchFlowSurveyEvalRunner
 
         runner = BenchFlowSurveyEvalRunner()
     elif runtime == "harbor":
-        from backend.service.harbor_survey_eval import HarborSurveyEvalRunner
+        from environment.integrations.persona_eval.harbor.survey_eval import HarborSurveyEvalRunner
 
         runner = HarborSurveyEvalRunner()
     else:
-        from backend.service.local_survey_eval import LocalSurveyEvalRunner
+        from environment.integrations.persona_eval.local.survey_eval import LocalSurveyEvalRunner
 
         runner = LocalSurveyEvalRunner()
 
@@ -218,15 +218,15 @@ def build_web_eval_service() -> "WebEvalService":
 
     runtime = persona_eval_runtime()
     if runtime == "benchflow":
-        from backend.service.benchflow_web_eval import BenchFlowWebEvalRunner
+        from environment.integrations.persona_eval.benchflow.web_eval import BenchFlowWebEvalRunner
 
         runner = BenchFlowWebEvalRunner()
     elif runtime == "harbor":
-        from backend.service.harbor_web_eval import HarborWebEvalRunner
+        from environment.integrations.persona_eval.harbor.web_eval import HarborWebEvalRunner
 
         runner = HarborWebEvalRunner()
     else:
-        from backend.service.local_web_eval import LocalWebEvalRunner
+        from environment.integrations.persona_eval.local.web_eval import LocalWebEvalRunner
 
         runner = LocalWebEvalRunner()
 
@@ -240,7 +240,10 @@ def build_web_eval_service() -> "WebEvalService":
 
 def build_appworld_eval_service() -> "AppWorldEvalService":
     """Construct the process-wide AppWorld eval service."""
-    from backend.service.appworld_eval_service import AppWorldEvalService
+    from backend.service.appworld_eval_service import (
+        AppWorldEvalService,
+        UnsupportedAppWorldEvalRunner,
+    )
     from backend.service.appworld_tasks import (
         get_appworld_eval_task,
         list_appworld_eval_tasks,
@@ -249,11 +252,13 @@ def build_appworld_eval_service() -> "AppWorldEvalService":
 
     runtime = persona_eval_runtime()
     if runtime == "benchflow":
-        from backend.service.benchflow_appworld_eval import BenchFlowAppWorldEvalRunner
+        from environment.integrations.persona_eval.benchflow.appworld_eval import BenchFlowAppWorldEvalRunner
 
         runner = BenchFlowAppWorldEvalRunner()
+    elif runtime == "harbor":
+        runner = UnsupportedAppWorldEvalRunner(runtime)
     else:
-        from backend.service.local_appworld_eval import LocalAppWorldEvalRunner
+        from environment.integrations.persona_eval.local.appworld_eval import LocalAppWorldEvalRunner
 
         runner = LocalAppWorldEvalRunner()
 

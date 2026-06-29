@@ -21,6 +21,14 @@ def test_default_eval_services_use_local_runners():
     assert appworld._runner.__class__.__name__ == "LocalAppWorldEvalRunner"
 
 
+def test_harbor_runtime_does_not_silently_use_local_appworld_runner(monkeypatch):
+    monkeypatch.setenv("MATRIX_PERSONA_EVAL_RUNTIME", "harbor")
+
+    appworld = build_appworld_eval_service()
+
+    assert appworld._runner.__class__.__name__ == "UnsupportedAppWorldEvalRunner"
+
+
 def test_config_environment_describes_direct_local_runtime(config_manager):
     env = config_manager.options()["environment"]
     serialized = repr(env).lower()

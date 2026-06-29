@@ -7,7 +7,7 @@ from backend.service.appworld_tasks import (
     get_appworld_eval_task,
     list_appworld_eval_tasks,
 )
-from backend.service.local_appworld_eval import LocalAppWorldEvalRunner
+from environment.integrations.persona_eval.local.appworld_eval import LocalAppWorldEvalRunner
 from persona_eval.types import Persona
 
 

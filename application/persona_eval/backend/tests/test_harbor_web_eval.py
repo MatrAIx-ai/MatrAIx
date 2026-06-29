@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from backend.service.harbor_web_eval import (
+from environment.integrations.persona_eval.harbor.web_eval import (
     HarborWebEvalConfig,
     HarborWebEvalRunner,
     WebEvalTask,

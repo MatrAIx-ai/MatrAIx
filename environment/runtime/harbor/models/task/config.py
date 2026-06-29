@@ -326,6 +326,14 @@ class TpuSpec(BaseModel):
 
 
 class EnvironmentConfig(BaselineNetworkPolicyConfig):
+    definition: str | None = Field(
+        default=None,
+        description=(
+            "Repo-level environment definition under "
+            "environment/task-environments. When set, runtime build contexts "
+            "are resolved outside the application task directory."
+        ),
+    )
     build_timeout_sec: float = 600.0  # 10 minutes default
     docker_image: str | None = Field(
         default=None,
@@ -389,6 +397,26 @@ class EnvironmentConfig(BaselineNetworkPolicyConfig):
         if isinstance(v, str):
             return v.lower()
         return v
+
+    @field_validator("definition")
+    @classmethod
+    def validate_definition(cls, v: str | None) -> str | None:
+        """Keep repo-level environment references portable and bounded."""
+        if v is None:
+            return None
+        clean = v.strip()
+        posix_path = PurePosixPath(clean)
+        if (
+            not clean
+            or "\\" in clean
+            or posix_path.is_absolute()
+            or any(part in {"", ".", ".."} for part in posix_path.parts)
+        ):
+            raise ValueError(
+                "[environment].definition must be a relative POSIX path under "
+                "environment/task-environments."
+            )
+        return posix_path.as_posix()
 
     @staticmethod
     def _parse_size_to_mb(size_str: str) -> int:

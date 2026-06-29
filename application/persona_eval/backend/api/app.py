@@ -40,6 +40,7 @@ import datetime as _dt
 import os
 import urllib.request
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Any, AsyncIterator, Dict, List, Optional
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
@@ -244,7 +245,7 @@ def preflight_checks(
     # /health so readiness reflects whether it is actually running. They are
     # marked optional: a down sidecar shows here but does not gate overall
     # readiness (RecAI / Survey / Web still run without them).
-    from backend.service.local_chatbot_eval import _sidecar_base_url
+    from environment.integrations.persona_eval.local.chatbot_eval import _sidecar_base_url
 
     finance_url = _sidecar_base_url(
         "CHATBOT_UPSTREAM_FINANCE", "FINANCE_CHATBOT_URL", "http://127.0.0.1:8901"
@@ -355,17 +356,15 @@ def _interecagent_root() -> str:
     override = os.environ.get("INTERECAGENT_ROOT")
     if override:
         return os.path.abspath(override)
-    here = os.path.abspath(__file__)
-    repo_root = os.path.abspath(os.path.join(os.path.dirname(here), "..", "..", "..", ".."))
-    return os.path.join(
-        repo_root,
-        "application",
-        "tasks",
-        "recommender-agent_chat_api",
-        "environment",
-        "recommender-api",
-        "recai",
-        "InteRecAgent",
+    from backend.service.task_environment import resolve_task_environment_dir
+
+    repo_root = Path(__file__).resolve().parents[4]
+    task_dir = repo_root / "application" / "tasks" / "recommender-agent_chat_api"
+    return str(
+        resolve_task_environment_dir(task_dir)
+        / "recommender-api"
+        / "recai"
+        / "InteRecAgent"
     )
 
 

@@ -7,6 +7,9 @@ The public API is always the PersonaEval FastAPI app. Runtime selection is an
 environment setting behind that API:
 
 - `local`: use the in-process/local runners.
+- `harbor`: run chatbot, survey, and web evals through Harbor-backed runners.
+  AppWorld is not implemented for Harbor and returns an explicit unsupported
+  runtime error.
 - `benchflow`: send supported eval jobs to a BenchFlow-compatible runner API and
   normalize returned artifacts back into the same job views.
 
@@ -38,7 +41,7 @@ Use this when you only need the PersonaEval backend and local deterministic
 surface runners.
 
 ```bash
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m uvicorn backend.api.app:app \
   --host 127.0.0.1 --port 8765 --workers 1
 ```
@@ -67,8 +70,8 @@ server returns deterministic web/AppWorld artifacts by default.
 Terminal 1: start the BenchFlow-compatible runner API.
 
 ```bash
-PYTHONPATH=application/persona_eval \
-  .venv/bin/python -m uvicorn backend.service.benchflow_compat_server:app \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
+  .venv/bin/python -m uvicorn environment.integrations.persona_eval.benchflow.compat_server:app \
   --host 127.0.0.1 --port 9000
 ```
 
@@ -79,7 +82,7 @@ export MATRIX_PERSONA_EVAL_RUNTIME=benchflow
 export BENCHFLOW_API_URL=http://127.0.0.1:9000
 unset BENCHFLOW_API_KEY
 
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m uvicorn backend.api.app:app \
   --host 127.0.0.1 --port 8765 --workers 1
 ```
@@ -117,7 +120,7 @@ export MATRIX_PERSONA_EVAL_RUNTIME=benchflow
 export BENCHFLOW_API_URL=http://127.0.0.1:9000
 unset BENCHFLOW_API_KEY
 
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m uvicorn backend.api.app:app \
   --host 127.0.0.1 --port 8765 --workers 1
 ```
@@ -138,7 +141,7 @@ export MATRIX_PERSONA_EVAL_RUNTIME=benchflow
 export BENCHFLOW_API_URL=https://benchflow.example.com
 export BENCHFLOW_API_KEY=...
 
-PYTHONPATH=application/persona_eval \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
   .venv/bin/python -m uvicorn backend.api.app:app \
   --host 127.0.0.1 --port 8765 --workers 1
 ```
@@ -163,8 +166,8 @@ export BENCHFLOW_COMPAT_WEB_COMMAND="/path/to/web_runner"
 export BENCHFLOW_COMPAT_APPWORLD_COMMAND="/path/to/appworld_runner"
 export BENCHFLOW_COMPAT_COMMAND_TIMEOUT=1800
 
-PYTHONPATH=application/persona_eval \
-  .venv/bin/python -m uvicorn backend.service.benchflow_compat_server:app \
+PYTHONPATH=.:application/persona_eval:environment/runtime \
+  .venv/bin/python -m uvicorn environment.integrations.persona_eval.benchflow.compat_server:app \
   --host 127.0.0.1 --port 9000
 ```
 

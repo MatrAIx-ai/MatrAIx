@@ -2,14 +2,13 @@ from __future__ import annotations
 
 import json
 import time
-from pathlib import Path
 
 from backend.api.deps import build_state
 from backend.service import run_store
-from backend.service.benchflow_client import BenchFlowClient, BenchFlowRun
-from backend.service.benchflow_persona_eval import BenchFlowPersonaEvalRunner
-from backend.service.benchflow_survey_eval import BenchFlowSurveyEvalRunner
-from backend.service.benchflow_web_eval import BenchFlowWebEvalRunner
+from environment.integrations.persona_eval.benchflow.client import BenchFlowClient, BenchFlowRun
+from environment.integrations.persona_eval.benchflow.persona_eval import BenchFlowPersonaEvalRunner
+from environment.integrations.persona_eval.benchflow.survey_eval import BenchFlowSurveyEvalRunner
+from environment.integrations.persona_eval.benchflow.web_eval import BenchFlowWebEvalRunner
 from backend.service.config import persona_eval_runtime
 from backend.service.survey_types import SurveyEvalConfig, SurveyInstrument, SurveyQuestion
 from backend.service.web_eval_service import WebEvalService
@@ -219,7 +218,7 @@ def test_benchflow_web_runner_maps_artifact_and_trace(tmp_path):
 
 def test_benchflow_appworld_runner_maps_artifact_and_trace():
     from backend.service.appworld_types import AppWorldEvalConfig
-    from backend.service.benchflow_appworld_eval import BenchFlowAppWorldEvalRunner
+    from environment.integrations.persona_eval.benchflow.appworld_eval import BenchFlowAppWorldEvalRunner
 
     client = FakeBenchFlowClient(
         {

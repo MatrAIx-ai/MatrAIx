@@ -11,9 +11,9 @@ from backend.service.appworld_types import (
     AppWorldResultArtifact,
     AppWorldTrace,
 )
-from backend.service.benchflow_client import BenchFlowClient
-from backend.service.local_appworld_eval import build_appworld_task_prompt
-from backend.service.local_survey_eval import persona_system_prompt
+from environment.integrations.persona_eval.benchflow.client import BenchFlowClient
+from environment.integrations.persona_eval.local.appworld_eval import build_appworld_task_prompt
+from environment.integrations.persona_eval.local.survey_eval import persona_system_prompt
 from persona_eval.types import Persona
 
 

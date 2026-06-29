@@ -17,7 +17,7 @@ from typing import Any, Callable, Dict, List, Optional, Sequence
 import yaml
 
 from backend.service.config import harbor_persona_model
-from backend.service.harbor_persona_eval import (
+from environment.integrations.persona_eval.harbor.persona_eval import (
     _default_harbor_command,
     _env_bool,
     _harbor_failure_summary,

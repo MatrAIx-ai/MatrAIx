@@ -4,13 +4,13 @@ from __future__ import annotations
 
 from typing import Any, Callable
 
-from backend.service.benchflow_client import BenchFlowClient
-from backend.service.harbor_persona_eval import (
+from environment.integrations.persona_eval.benchflow.client import BenchFlowClient
+from environment.integrations.persona_eval.harbor.persona_eval import (
     HarborPersonaEvalResult,
     _coerce_overall,
     _coerce_score,
 )
-from backend.service.local_survey_eval import persona_system_prompt
+from environment.integrations.persona_eval.local.survey_eval import persona_system_prompt
 from persona_eval.types import Persona, PersonaEvalConfig
 
 

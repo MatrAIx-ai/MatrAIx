@@ -119,9 +119,10 @@ class Publisher:
 
     @staticmethod
     def _create_archive(task_dir: Path, files: list[Path], dest: Path) -> None:
+        paths = TaskPaths.from_task_dir(task_dir)
         with tarfile.open(dest, "w:gz") as tar:
             for f in files:
-                rel = f.relative_to(task_dir).as_posix()
+                rel = Packager.package_rel_path(task_dir, f, paths).as_posix()
                 info = tarfile.TarInfo(name=rel)
                 info.size = f.stat().st_size
                 info.uid = 0
@@ -180,6 +181,10 @@ class Publisher:
             raise FileNotFoundError(f"task.toml not found in {task_dir}")
 
         config = TaskConfig.model_validate_toml(paths.config_path.read_text())
+        paths = TaskPaths(
+            task_dir,
+            environment_definition=config.environment.definition,
+        )
         if config.task is None:
             raise ValueError("task.toml must contain a [task] section with a name")
 
@@ -262,7 +267,7 @@ class Publisher:
 
         file_rows = []
         for f in files:
-            rel = f.relative_to(task_dir).as_posix()
+            rel = Packager.package_rel_path(task_dir, f, paths).as_posix()
             file_data = f.read_bytes()
             fhash = f"{hashlib.sha256(file_data).hexdigest()}"
             file_rows.append(

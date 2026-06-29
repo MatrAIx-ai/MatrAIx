@@ -47,6 +47,7 @@ uv run harbor run \
   -p application/tasks/recommender-agent_chat_api
 ```
 
-The task-local sidecar is intentionally lightweight. A production RecAI or
-catalog-backed recommender can replace `environment/recommender-api/` later as a
-separate application tooling PR.
+The environment-side sidecar is intentionally lightweight. A production RecAI or
+catalog-backed recommender can replace
+`environment/task-environments/application/recommender-agent_chat_api/recommender-api/`
+later as a separate application tooling PR.

@@ -5,9 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Callable
 
-from backend.service.benchflow_client import BenchFlowClient
-from backend.service.local_survey_eval import persona_system_prompt
-from backend.service.local_web_eval import build_web_task_prompt
+from environment.integrations.persona_eval.benchflow.client import BenchFlowClient
+from environment.integrations.persona_eval.local.survey_eval import persona_system_prompt
+from environment.integrations.persona_eval.local.web_eval import build_web_task_prompt
 from backend.service.web_types import (
     WebEvalConfig,
     WebEvalResult,

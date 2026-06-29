@@ -5,8 +5,8 @@ from __future__ import annotations
 import time
 
 from backend.service import run_store
-from backend.service.local_survey_eval import LocalSurveyEvalRunner
-from backend.service.local_web_eval import LocalWebEvalRunner
+from environment.integrations.persona_eval.local.survey_eval import LocalSurveyEvalRunner
+from environment.integrations.persona_eval.local.web_eval import LocalWebEvalRunner
 from backend.service.survey_eval_service import SurveyEvalService
 from backend.service.survey_types import SurveyInstrument, SurveyQuestion
 from backend.service.web_eval_service import WebEvalService
@@ -49,7 +49,7 @@ def test_survey_eval_persists_a_run(tmp_path, monkeypatch):
     client = _FakeJSONClient(
         {"answers": [{"questionId": "fit", "value": 5, "rationale": "Fits.", "confidence": 0.9}]}
     )
-    monkeypatch.setattr("backend.service.local_survey_eval.build_json_client", lambda model: client)
+    monkeypatch.setattr("environment.integrations.persona_eval.local.survey_eval.build_json_client", lambda model: client)
     instrument = _instrument()
     service = SurveyEvalService(
         get_persona=lambda pid: _persona(),
@@ -91,7 +91,7 @@ def test_web_eval_persists_a_run_and_durable_screenshots(tmp_path, monkeypatch):
             "reason": "Good lamp.",
         }
     )
-    monkeypatch.setattr("backend.service.local_web_eval.build_json_client", lambda model: client)
+    monkeypatch.setattr("environment.integrations.persona_eval.local.web_eval.build_json_client", lambda model: client)
     task = WebEvalTask(
         id="web1",
         title="Shop task",

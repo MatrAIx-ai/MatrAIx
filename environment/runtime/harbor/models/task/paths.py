@@ -1,5 +1,6 @@
 import tomllib
 from pathlib import Path
+from pathlib import PurePosixPath
 from typing import TYPE_CHECKING
 
 from harbor.utils.scripts import discover_script
@@ -29,14 +30,67 @@ class TaskPaths:
 
     CONFIG_FILENAME = "task.toml"
 
-    def __init__(self, task_dir: Path | str):
+    TASK_ENVIRONMENTS_ROOT = Path("environment") / "task-environments"
+
+    def __init__(
+        self,
+        task_dir: Path | str,
+        environment_definition: str | None = None,
+    ):
         """
         Initialize TaskPaths from a directory path.
 
         Args:
             task_dir: Path to the task directory
+            environment_definition: Optional repo-level environment definition
+                identifier under environment/task-environments.
         """
         self.task_dir = Path(task_dir).resolve()
+        self.environment_definition = (
+            self._normalize_environment_definition(environment_definition)
+            if environment_definition
+            else None
+        )
+
+    @classmethod
+    def from_task_dir(cls, task_dir: Path | str) -> "TaskPaths":
+        """Create config-aware paths for a task directory when task.toml exists."""
+        paths = cls(task_dir)
+        try:
+            raw_config = tomllib.loads(paths.config_path.read_text())
+        except (OSError, tomllib.TOMLDecodeError):
+            return paths
+        raw_environment = raw_config.get("environment")
+        if not isinstance(raw_environment, dict):
+            return paths
+        definition = raw_environment.get("definition")
+        if not isinstance(definition, str):
+            return paths
+        return cls(task_dir, environment_definition=definition)
+
+    @staticmethod
+    def _normalize_environment_definition(definition: str) -> str:
+        clean = definition.strip()
+        posix_path = PurePosixPath(clean)
+        if (
+            not clean
+            or "\\" in clean
+            or posix_path.is_absolute()
+            or any(part in {"", ".", ".."} for part in posix_path.parts)
+        ):
+            raise ValueError(
+                "[environment].definition must be a relative POSIX path under "
+                "environment/task-environments."
+            )
+        return posix_path.as_posix()
+
+    def _find_repository_root(self) -> Path | None:
+        for candidate in (self.task_dir, *self.task_dir.parents):
+            if (candidate / self.TASK_ENVIRONMENTS_ROOT).exists():
+                return candidate
+            if (candidate / "pyproject.toml").exists():
+                return candidate
+        return None
 
     @property
     def instruction_path(self) -> Path:
@@ -60,8 +114,20 @@ class TaskPaths:
 
     @property
     def environment_dir(self) -> Path:
-        """Path to the environment/ directory."""
-        return self.task_dir / "environment"
+        """Path to the task environment definition directory."""
+        local_environment_dir = self.task_dir / "environment"
+        if self.environment_definition is None or local_environment_dir.exists():
+            return local_environment_dir
+
+        repo_root = self._find_repository_root()
+        if repo_root is not None:
+            return (
+                repo_root
+                / self.TASK_ENVIRONMENTS_ROOT
+                / self.environment_definition
+            ).resolve()
+
+        return local_environment_dir
 
     @property
     def solution_dir(self) -> Path:

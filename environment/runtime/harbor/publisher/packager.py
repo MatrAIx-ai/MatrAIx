@@ -27,7 +27,7 @@ class Packager:
     def collect_files(task_dir: Path) -> list[Path]:
         """Collect publishable files from a task directory."""
         task_dir = task_dir.resolve()
-        paths = TaskPaths(task_dir)
+        paths = TaskPaths.from_task_dir(task_dir)
 
         files: list[Path] = []
 
@@ -59,11 +59,35 @@ class Packager:
             spec = pathspec.PathSpec.from_lines("gitignore", DEFAULT_IGNORES)
 
         files = [
-            f for f in files if not spec.match_file(f.relative_to(task_dir).as_posix())
+            f
+            for f in files
+            if not spec.match_file(
+                Packager.package_rel_path(task_dir, f, paths).as_posix()
+            )
         ]
 
-        files.sort(key=lambda p: p.relative_to(task_dir).as_posix())
+        files.sort(key=lambda p: Packager.package_rel_path(task_dir, p, paths).as_posix())
         return files
+
+    @staticmethod
+    def package_rel_path(
+        task_dir: Path,
+        file_path: Path,
+        paths: TaskPaths | None = None,
+    ) -> Path:
+        """Return the file's path inside a task archive/package."""
+        task_dir = task_dir.resolve()
+        file_path = file_path.resolve()
+        paths = paths or TaskPaths.from_task_dir(task_dir)
+
+        if file_path.is_relative_to(task_dir):
+            return file_path.relative_to(task_dir)
+
+        environment_dir = paths.environment_dir.resolve()
+        if file_path.is_relative_to(environment_dir):
+            return Path("environment") / file_path.relative_to(environment_dir)
+
+        raise ValueError(f"File {file_path} is outside task package roots.")
 
     @staticmethod
     def compute_file_hash(file_path: Path) -> str:
@@ -81,10 +105,11 @@ class Packager:
         Returns (content_hash, files).
         """
         task_dir = task_dir.resolve()
+        paths = TaskPaths.from_task_dir(task_dir)
         files = Packager.collect_files(task_dir)
         outer = hashlib.sha256()
         for f in files:
-            rel = f.relative_to(task_dir).as_posix()
+            rel = Packager.package_rel_path(task_dir, f, paths).as_posix()
             file_hash = Packager.compute_file_hash(f)
             outer.update(f"{rel}\0{file_hash}\n".encode())
         return outer.hexdigest(), files

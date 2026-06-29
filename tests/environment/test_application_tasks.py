@@ -3,6 +3,8 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+
+from harbor.models.task.paths import TaskPaths
 import tomllib
 
 
@@ -146,7 +148,11 @@ def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) 
 
 
 def test_recommender_chat_sidecar_contract() -> None:
-    server_path = RECOMMENDER_CHAT / "environment/recommender-api/server.py"
+    server_path = (
+        TaskPaths.from_task_dir(RECOMMENDER_CHAT).environment_dir
+        / "recommender-api"
+        / "server.py"
+    )
     spec = importlib.util.spec_from_file_location("recommender_api_server", server_path)
     assert spec is not None
     module = importlib.util.module_from_spec(spec)
@@ -178,7 +184,12 @@ def test_application_task_interface_manifest_uses_clean_task_paths() -> None:
     manifest = json.loads((INTERFACE_ROOT / "manifest.json").read_text(encoding="utf-8"))
 
     assert manifest["schemaVersion"] == "application-task-interface-v1"
-    assert set(manifest["applicationTypes"]) == {"survey", "chatbot", "web"}
+    assert set(manifest["applicationTypes"]) == {
+        "survey",
+        "chatbot",
+        "web",
+        "appworld",
+    }
     assert manifest["applicationTypes"]["survey"]["canonicalTask"] == (
         "application/tasks/persona-survey"
     )
@@ -188,10 +199,13 @@ def test_application_task_interface_manifest_uses_clean_task_paths() -> None:
     assert manifest["applicationTypes"]["web"]["canonicalTask"] == (
         "application/tasks/example-web-playwright_books-interest"
     )
+    assert manifest["applicationTypes"]["appworld"]["canonicalTask"] == (
+        "external:appworld"
+    )
 
 
 def test_application_task_interface_docs_cover_each_protocol() -> None:
-    for dirname in ("survey", "chatbot", "web"):
+    for dirname in ("survey", "chatbot", "web", "appworld"):
         doc = INTERFACE_ROOT / dirname / "README.md"
         assert doc.is_file(), doc
         text = doc.read_text(encoding="utf-8")
