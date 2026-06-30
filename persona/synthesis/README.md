@@ -29,15 +29,21 @@ Current graph counts:
 
 | Item | Count |
 | --- | ---: |
-| Nodes | 1,357 |
-| Default emitted nodes | 1,230 |
+| Schema attributes | 1,339 |
+| Default emitted attributes | 1,230 |
+| Hidden schema attributes | 109 |
+| Latent/helper graph nodes | 18 |
+| Total graph nodes | 1,357 |
 | Directed proposal edges | 6,937 |
 | Full CPT overlays | 53 |
 | Full CPT rows | 13,491 |
 | Conditional masks | 95 |
 
-Some source-proxy and audit-only nodes are marked with `emit:false`. The default
-sampler uses those nodes internally but hides them from emitted persona JSON.
+Total graph nodes are the 1,339 canonical persona schema attributes plus 18
+latent/helper nodes used by the proposal model. Some source-proxy and audit-only
+schema attributes are marked with `emit:false`; the default sampler uses those
+nodes internally but hides them from emitted persona JSON, so default samples
+emit 1,230 attributes.
 
 ## Sampling Semantics
 
@@ -138,11 +144,11 @@ samples = sampler.sample(10)
   static graph validation, sampling time, end-to-end report time, consistency
   audit results, and focus-node marginal drift.
 - [Graph visualization](visualization/full_dag_overview.html) is an
-  interactive static HTML view of the full graph: 1,357 nodes and 6,937
-  directed proposal edges. X position follows topological order; Y position
-  groups nodes into category lanes. It supports search, category filtering,
-  degree filtering, hidden-node toggling, edge toggling, pan/zoom, and
-  hover/click node inspection.
+  interactive static HTML view of the full graph: 1,339 schema attributes, 18
+  latent/helper nodes, and 6,937 directed proposal edges. X position follows
+  topological order; Y position groups nodes into category lanes. It supports
+  search, category filtering, degree filtering, hidden/helper toggling, edge
+  toggling, pan/zoom, and hover/click node inspection.
 - [Visualization instructions](visualization/README.md) document how to
   regenerate, open, and verify the graph view.
 

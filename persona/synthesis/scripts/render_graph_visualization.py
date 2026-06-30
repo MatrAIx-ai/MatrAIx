@@ -17,6 +17,8 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from persona.synthesis.sampler import DEFAULT_GRAPH_PATH, graph_summary, load_graph  # noqa: E402
 
+DEFAULT_SCHEMA_PATH = REPO_ROOT / "persona" / "schema" / "dimensions.json"
+
 PALETTE = [
     "#2563eb",
     "#16a34a",
@@ -52,12 +54,48 @@ def _category(node: dict[str, Any]) -> str:
     return node.get("category") or "Uncategorized"
 
 
+def _load_schema_attribute_ids(path: Path | None) -> set[str]:
+    if path is None or not path.exists():
+        return set()
+    schema = json.loads(path.read_text(encoding="utf-8"))
+    return {dimension["id"] for dimension in schema.get("dimensions", [])}
+
+
+def _is_attribute(node_id: str, schema_attribute_ids: set[str]) -> bool:
+    return not schema_attribute_ids or node_id in schema_attribute_ids
+
+
+def _count_nodes(graph: dict[str, Any], schema_attribute_ids: set[str]) -> dict[str, int]:
+    nodes = graph.get("nodes", [])
+    node_ids = {node["id"] for node in nodes}
+    emitted_ids = {
+        node["id"] for node in nodes if node.get("emit", True) is not False
+    }
+    schema_ids = (
+        schema_attribute_ids & node_ids if schema_attribute_ids else set(node_ids)
+    )
+    hidden_graph_ids = node_ids - emitted_ids
+    hidden_schema_ids = schema_ids & hidden_graph_ids
+    helper_ids = node_ids - schema_ids
+
+    return {
+        "schema_attributes": len(schema_ids),
+        "emitted_attributes": len(schema_ids & emitted_ids),
+        "hidden_schema_attributes": len(hidden_schema_ids),
+        "latent_helper_nodes": len(helper_ids),
+        "graph_nodes": len(node_ids),
+        "hidden_graph_nodes": len(hidden_graph_ids),
+    }
+
+
 def _stable_jitter(node_id: str) -> float:
     digest = hashlib.sha1(node_id.encode("utf-8")).hexdigest()
     return (int(digest[:8], 16) % 1000) / 999 - 0.5
 
 
-def _layout_payload(graph: dict[str, Any]) -> dict[str, Any]:
+def _layout_payload(
+    graph: dict[str, Any], schema_attribute_ids: set[str]
+) -> dict[str, Any]:
     nodes = graph.get("nodes", [])
     edges = graph.get("directed_proposal_edges", [])
     order = graph.get("proposal_view", {}).get("topological_order", [])
@@ -97,12 +135,15 @@ def _layout_payload(graph: dict[str, Any]) -> dict[str, Any]:
         y = top_pad + lane * lane_height + lane_height / 2 + _stable_jitter(node_id) * 34
         incoming = in_degree[node_id]
         outgoing = out_degree[node_id]
+        is_attribute = _is_attribute(node_id, schema_attribute_ids)
         node_payload.append(
             {
                 "id": node_id,
                 "label": node.get("label", node_id),
                 "category": category,
                 "categoryIndex": lane,
+                "type": "attribute" if is_attribute else "latent/helper",
+                "isAttribute": is_attribute,
                 "x": round(x, 2),
                 "y": round(y, 2),
                 "degree": incoming + outgoing,
@@ -127,10 +168,18 @@ def _layout_payload(graph: dict[str, Any]) -> dict[str, Any]:
                 ]
             )
 
+    attribute_categories = Counter(
+        node["category"] for node in node_payload if node["isAttribute"]
+    )
+    helper_categories = Counter(
+        node["category"] for node in node_payload if not node["isAttribute"]
+    )
     category_payload = [
         {
             "name": category,
             "count": categories[category],
+            "attributeCount": attribute_categories[category],
+            "helperCount": helper_categories[category],
             "color": PALETTE[i % len(PALETTE)],
             "y": round(top_pad + i * lane_height + lane_height / 2, 2),
         }
@@ -143,6 +192,7 @@ def _layout_payload(graph: dict[str, Any]) -> dict[str, Any]:
         "nodes": node_payload,
         "edges": edge_payload,
         "categories": category_payload,
+        "counts": _count_nodes(graph, schema_attribute_ids),
         "maxDegree": max((node["degree"] for node in node_payload), default=1),
     }
 
@@ -154,7 +204,9 @@ def _top_nodes(payload: dict[str, Any], limit: int) -> list[dict[str, Any]]:
     )[:limit]
 
 
-def _category_table(graph: dict[str, Any]) -> list[dict[str, Any]]:
+def _category_table(
+    graph: dict[str, Any], schema_attribute_ids: set[str]
+) -> list[dict[str, Any]]:
     nodes = graph.get("nodes", [])
     edges = graph.get("directed_proposal_edges", [])
     by_id = {node["id"]: node for node in nodes}
@@ -163,11 +215,27 @@ def _category_table(graph: dict[str, Any]) -> list[dict[str, Any]]:
         category = _category(node)
         row = rows.setdefault(
             category,
-            {"category": category, "nodes": 0, "emitted": 0, "incoming": 0, "outgoing": 0},
+            {
+                "category": category,
+                "nodes": 0,
+                "attributes": 0,
+                "emitted": 0,
+                "hidden_attributes": 0,
+                "helpers": 0,
+                "incoming": 0,
+                "outgoing": 0,
+            },
         )
+        is_attribute = _is_attribute(node["id"], schema_attribute_ids)
         row["nodes"] += 1
-        if node.get("emit", True) is not False:
+        if is_attribute:
+            row["attributes"] += 1
+        else:
+            row["helpers"] += 1
+        if is_attribute and node.get("emit", True) is not False:
             row["emitted"] += 1
+        if is_attribute and node.get("emit", True) is False:
+            row["hidden_attributes"] += 1
     for edge in edges:
         source = by_id.get(edge.get("source"))
         target = by_id.get(edge.get("target"))
@@ -194,23 +262,34 @@ def _json_script(payload: dict[str, Any]) -> str:
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
-def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> str:
+def render_html(
+    graph: dict[str, Any],
+    *,
+    graph_path: Path,
+    schema_path: Path | None,
+    top_nodes: int,
+) -> str:
     summary = graph_summary(graph)
-    payload = _layout_payload(graph)
-    categories = _category_table(graph)
+    schema_attribute_ids = _load_schema_attribute_ids(schema_path)
+    payload = _layout_payload(graph, schema_attribute_ids)
+    counts = payload["counts"]
+    categories = _category_table(graph, schema_attribute_ids)
     top = _top_nodes(payload, top_nodes)
-    metadata = graph.get("metadata", {})
     graph_label = _display_path(graph_path)
 
     category_options = "\n".join(
-        f'<option value="{html.escape(row["name"])}">{html.escape(row["name"])} ({row["count"]})</option>'
+        f'<option value="{html.escape(row["name"])}">{html.escape(row["name"])} '
+        f'({row["attributeCount"]} attrs, {row["helperCount"]} helper)</option>'
         for row in payload["categories"]
     )
     category_rows = [
         [
             row["category"],
             f"{row['nodes']:,}",
+            f"{row['attributes']:,}",
             f"{row['emitted']:,}",
+            f"{row['hidden_attributes']:,}",
+            f"{row['helpers']:,}",
             f"{row['incoming']:,}",
             f"{row['outgoing']:,}",
         ]
@@ -221,24 +300,25 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
             row["id"],
             row["label"],
             row["category"],
+            row["type"],
             row["degree"],
             row["in"],
             row["out"],
             row["values"],
-            "yes" if row["emit"] else "no",
+            "yes" if row["isAttribute"] and row["emit"] else "no",
         ]
         for row in top
     ]
 
     summary_cards = [
-        ("Nodes", f"{summary['nodes']:,}"),
-        ("Emitted nodes", f"{summary['emitted_nodes']:,}"),
+        ("Schema attributes", f"{counts['schema_attributes']:,}"),
+        ("Emitted attributes", f"{counts['emitted_attributes']:,}"),
+        ("Hidden attributes", f"{counts['hidden_schema_attributes']:,}"),
+        ("Latent/helper nodes", f"{counts['latent_helper_nodes']:,}"),
+        ("Graph nodes", f"{summary['nodes']:,}"),
         ("Directed edges", f"{summary['directed_edges']:,}"),
         ("Full CPTs", f"{summary['full_cpts']:,}"),
-        ("CPT rows", f"{summary['full_cpt_rows']:,}"),
         ("Masks", f"{summary['conditional_masks']:,}"),
-        ("Target", metadata.get("target_population", "unknown")),
-        ("Graph", Path(graph_label).name),
     ]
     cards = "".join(
         f'<section class="card"><div class="metric">{html.escape(value)}</div>'
@@ -455,8 +535,13 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
   <h1>Persona Full DAG Graph Visualization</h1>
   <p>
     Generated from <code>{html.escape(graph_label)}</code>. The main canvas
-    draws all {summary['nodes']:,} nodes and {summary['directed_edges']:,}
-    directed proposal edges. X position follows
+    draws all {counts['graph_nodes']:,} graph nodes and
+    {summary['directed_edges']:,} directed proposal edges. The graph contains
+    {counts['schema_attributes']:,} persona schema attributes plus
+    {counts['latent_helper_nodes']:,} latent/helper nodes; default samples emit
+    {counts['emitted_attributes']:,} attributes and hide
+    {counts['hidden_schema_attributes']:,} schema attributes marked
+    <code>emit:false</code>. X position follows
     <code>proposal_view.topological_order</code>; Y position groups nodes into
     category lanes.
   </p>
@@ -471,7 +556,7 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
           {category_options}
         </select>
         <label>Min degree <input id="degree" type="range" min="0" max="{payload['maxDegree']}" value="0"><span id="degreeValue">0</span></label>
-        <label><input id="hidden" type="checkbox" checked> hidden</label>
+        <label><input id="hidden" type="checkbox" checked> hidden/helper</label>
         <label><input id="edges" type="checkbox" checked> edges</label>
         <button id="reset" type="button">Reset</button>
       </div>
@@ -487,9 +572,9 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
   </section>
 
   <h2>Highest-Degree Nodes</h2>
-  {_table(["Node", "Label", "Category", "Degree", "In", "Out", "Values", "Emit"], top_rows)}
+  {_table(["Node", "Label", "Category", "Type", "Degree", "In", "Out", "Values", "Emitted attribute"], top_rows)}
   <h2>Category Inventory</h2>
-  {_table(["Category", "Nodes", "Emitted", "Incoming edges", "Outgoing edges"], category_rows)}
+  {_table(["Category", "Graph nodes", "Attributes", "Emitted attributes", "Hidden attributes", "Helper nodes", "Incoming edges", "Outgoing edges"], category_rows)}
 </main>
 
 <script id="graph-data" type="application/json">{_json_script(payload)}</script>
@@ -568,7 +653,7 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
     if (f.category && node.category !== f.category) return false;
     if (node.degree < f.minDegree) return false;
     if (f.query) {{
-      const haystack = `${{node.id}} ${{node.label}} ${{node.category}}`.toLowerCase();
+      const haystack = `${{node.id}} ${{node.label}} ${{node.category}} ${{node.type}}`.toLowerCase();
       if (!haystack.includes(f.query)) return false;
     }}
     return true;
@@ -660,7 +745,14 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
     drawLanes();
     drawEdges();
     drawNodes();
-    status.textContent = `${{visibleNodes.size.toLocaleString()}} / ${{data.nodes.length.toLocaleString()}} nodes, ${{data.edges.length.toLocaleString()}} edges`;
+    let visibleAttributes = 0;
+    for (const index of visibleNodes) {{
+      if (data.nodes[index].isAttribute) visibleAttributes += 1;
+    }}
+    status.textContent =
+      `${{visibleNodes.size.toLocaleString()}} / ${{data.nodes.length.toLocaleString()}} graph nodes, ` +
+      `${{visibleAttributes.toLocaleString()}} / ${{data.counts.schema_attributes.toLocaleString()}} attributes, ` +
+      `${{data.edges.length.toLocaleString()}} edges`;
   }}
 
   function inspect(index) {{
@@ -675,11 +767,13 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
     nodeHint.textContent = node.label;
     nodeDetails.innerHTML = [
       ["Category", node.category],
+      ["Type", node.type],
       ["Degree", node.degree],
       ["Incoming", node.in],
       ["Outgoing", node.out],
       ["Values", node.values],
-      ["Emit", node.emit ? "yes" : "no"],
+      ["Schema attr", node.isAttribute ? "yes" : "no"],
+      ["Emitted", node.isAttribute && node.emit ? "yes" : "no"],
       ["Position", `${{Math.round(node.x)}}, ${{Math.round(node.y)}}`],
     ].map(([key, value]) => `<dt>${{key}}</dt><dd>${{value}}</dd>`).join("");
   }}
@@ -708,7 +802,7 @@ def render_html(graph: dict[str, Any], *, graph_path: Path, top_nodes: int) -> s
   function renderLegend() {{
     legend.innerHTML = categories.map((cat) => (
       `<div class="legend-item"><span class="swatch" style="background:${{cat.color}}"></span>` +
-      `<span>${{cat.name}}</span><span>${{cat.count}}</span></div>`
+      `<span>${{cat.name}}</span><span>${{cat.attributeCount}}/${{cat.count}}</span></div>`
     )).join("");
   }}
 
@@ -808,13 +902,24 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT / "persona" / "synthesis" / "visualization" / "full_dag_overview.html",
     )
+    parser.add_argument(
+        "--schema",
+        type=Path,
+        default=DEFAULT_SCHEMA_PATH,
+        help="Schema dimensions file used to distinguish attributes from helper nodes.",
+    )
     parser.add_argument("--top-nodes", type=int, default=80)
     args = parser.parse_args()
 
     graph = load_graph(args.graph)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(
-        render_html(graph, graph_path=args.graph, top_nodes=args.top_nodes),
+        render_html(
+            graph,
+            graph_path=args.graph,
+            schema_path=args.schema,
+            top_nodes=args.top_nodes,
+        ),
         encoding="utf-8",
     )
     print(json.dumps({"visualization": str(args.out), "top_nodes": args.top_nodes}, indent=2))
