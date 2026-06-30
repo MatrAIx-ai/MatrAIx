@@ -160,6 +160,14 @@ function dimensionsFor(
       },
     ];
   }
+  if (appType === "appworld") {
+    const a = runA.appworldResult;
+    const b = runB.appworldResult;
+    return [
+      { label: "Objective score", max: 1, a: a?.score ?? null, b: b?.score ?? null },
+      { label: "Task success", max: 1, a: a ? (a.success ? 1 : 0) : null, b: b ? (b.success ? 1 : 0) : null },
+    ];
+  }
   // chatbot (the live path)
   return [
     {

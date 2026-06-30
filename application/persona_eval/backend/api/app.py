@@ -40,6 +40,7 @@ import datetime as _dt
 import os
 import urllib.request
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Any, AsyncIterator, Dict, List, Optional
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
@@ -170,7 +171,8 @@ def preflight_checks(
     * **Chatbot** — the RecAI recommender (engine + its native resource bundles,
       collapsed across domains), plus the OpenBB and Medical adapters, which are
       selectable but whose external services are verified at run time.
-    * **Survey** / **Web** — the other application interfaces, available to run.
+    * **Survey** / **Web** / **AppWorld** — the other application interfaces,
+      available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
     names. Inspection is filesystem-only except for a short ``/health`` probe of
@@ -243,7 +245,7 @@ def preflight_checks(
     # /health so readiness reflects whether it is actually running. They are
     # marked optional: a down sidecar shows here but does not gate overall
     # readiness (RecAI / Survey / Web still run without them).
-    from backend.service.local_chatbot_eval import _sidecar_base_url
+    from environment.integrations.persona_eval.local.chatbot_eval import _sidecar_base_url
 
     finance_url = _sidecar_base_url(
         "CHATBOT_UPSTREAM_FINANCE", "FINANCE_CHATBOT_URL", "http://127.0.0.1:8901"
@@ -301,6 +303,14 @@ def preflight_checks(
             "detail": "Browser and computer-use interface available. It runs when you start a web task.",
         }
     )
+    checks.append(
+        {
+            "group": "AppWorld",
+            "name": "AppWorld tasks",
+            "ok": True,
+            "detail": "API-driven AppWorld interface available. It runs when you start an AppWorld task.",
+        }
+    )
 
     return checks
 
@@ -346,17 +356,15 @@ def _interecagent_root() -> str:
     override = os.environ.get("INTERECAGENT_ROOT")
     if override:
         return os.path.abspath(override)
-    here = os.path.abspath(__file__)
-    repo_root = os.path.abspath(os.path.join(os.path.dirname(here), "..", "..", "..", ".."))
-    return os.path.join(
-        repo_root,
-        "application",
-        "tasks",
-        "recommender-agent_chat_api",
-        "environment",
-        "recommender-api",
-        "recai",
-        "InteRecAgent",
+    from backend.service.task_environment import resolve_task_environment_dir
+
+    repo_root = Path(__file__).resolve().parents[4]
+    task_dir = repo_root / "application" / "tasks" / "recommender-agent_chat_api"
+    return str(
+        resolve_task_environment_dir(task_dir)
+        / "recommender-api"
+        / "recai"
+        / "InteRecAgent"
     )
 
 
@@ -903,6 +911,50 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=404, detail="screenshot not found")
         media_type = "image/svg+xml" if path.suffix == ".svg" else "image/webp"
         return FileResponse(path, media_type=media_type)
+
+    # ---------------------------- AppWorldEval ---------------------------- #
+    @app.get(
+        "/api/appworld-eval/tasks",
+        response_model=schemas.AppWorldEvalTasksResponse,
+        tags=["appworld-eval"],
+    )
+    def appworld_eval_tasks(
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        return {"tasks": services.appworld_eval.list_tasks()}
+
+    @app.post(
+        "/api/appworld-eval",
+        response_model=schemas.SubmitPersonaEvalResponse,
+        tags=["appworld-eval"],
+    )
+    def start_appworld_eval(
+        body: schemas.StartAppWorldEvalRequest,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            job_id = services.appworld_eval.start(
+                persona_id=body.personaId,
+                task_id=body.taskId,
+                persona_model=body.personaModel,
+                now=_utc_now,
+            )
+        except (ValueError, KeyError) as exc:
+            raise HTTPException(status_code=422, detail=str(exc))
+        return {"jobId": job_id}
+
+    @app.get(
+        "/api/appworld-eval/jobs/{job_id}",
+        response_model=schemas.AppWorldEvalJobView,
+        tags=["appworld-eval"],
+    )
+    def get_appworld_eval_job(
+        job_id: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        view = services.appworld_eval.view(job_id)
+        if view is None:
+            raise HTTPException(status_code=404, detail="appworld-eval job not found")
+        return view
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

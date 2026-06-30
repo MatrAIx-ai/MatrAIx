@@ -46,6 +46,7 @@ from backend.service.session import SessionManager
 from backend.service.session_store import SessionStore
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
+    from backend.service.appworld_eval_service import AppWorldEvalService
     from backend.service.persona_eval_service import PersonaEvalService
     from backend.service.survey_eval_service import SurveyEvalService
     from backend.service.web_eval_service import WebEvalService
@@ -56,6 +57,7 @@ __all__ = [
     "AppState",
     "resolve_catalog_path",
     "build_persona_eval_service",
+    "build_appworld_eval_service",
     "build_web_eval_service",
     "build_state",
     "get_state",
@@ -99,6 +101,7 @@ class AppState:
     persona_eval: "PersonaEvalService"
     survey_eval: "SurveyEvalService"
     web_eval: "WebEvalService"
+    appworld_eval: "AppWorldEvalService"
     #: Resolves a domain to its catalog index. In production this serves the
     #: real per-domain bundle; with an injected catalog (tests / explicit JSONL)
     #: it serves that one index for every domain.
@@ -271,6 +274,7 @@ def build_state(catalog_path: Optional[str] = None) -> AppState:
     persona_eval = build_persona_eval_service(default_catalog, config)
     survey_eval = build_survey_eval_service()
     web_eval = build_web_eval_service()
+    appworld_eval = build_appworld_eval_service()
     return AppState(
         config=config,
         catalog=default_catalog,
@@ -279,6 +283,7 @@ def build_state(catalog_path: Optional[str] = None) -> AppState:
         persona_eval=persona_eval,
         survey_eval=survey_eval,
         web_eval=web_eval,
+        appworld_eval=appworld_eval,
         catalog_provider=catalog_provider,
     )
 

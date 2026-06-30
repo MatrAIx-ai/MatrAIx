@@ -27,7 +27,7 @@ export function PromptPanel({ prompts }: PromptPanelProps) {
         value={prompts.personaPrompt ?? prompts.harborPrompt ?? ""}
         index={0}
       />
-      <PromptBlock label="Task prompt" sublabel="application instruction" value={prompts.taskPrompt} index={1} />
+      <PromptBlock label="Task prompt" sublabel="application instruction" value={prompts.taskPrompt ?? ""} index={1} />
     </div>
   );
 }

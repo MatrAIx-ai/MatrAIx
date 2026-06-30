@@ -33,6 +33,17 @@
         "objective_result",
         "persona_self_report"
       ]
+    },
+    "appworld": {
+      "status": "active",
+      "driver": "benchflow_appworld_agent",
+      "canonicalTask": "external:appworld",
+      "artifactContract": [
+        "appworld_result",
+        "trace",
+        "score",
+        "persona_self_report"
+      ]
     }
   }
 }

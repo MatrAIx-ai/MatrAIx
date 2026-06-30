@@ -23,6 +23,7 @@ timeout_sec = 300.0
 timeout_sec = 900.0
 
 [environment]
+definition = "application/recommender-agent_chat_api"
 build_timeout_sec = 900.0
 cpus = 1
 memory_mb = 2048

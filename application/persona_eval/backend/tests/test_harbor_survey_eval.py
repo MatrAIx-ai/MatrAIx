@@ -3,7 +3,7 @@ import json
 import pytest
 import yaml
 
-from backend.service.harbor_survey_eval import (
+from environment.integrations.persona_eval.harbor.survey_eval import (
     HarborSurveyEvalConfig,
     HarborSurveyEvalRunner,
     SurveyInstrument,

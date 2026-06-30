@@ -72,6 +72,10 @@ __all__ = [
     "WebEvalTasksResponse",
     "StartWebEvalRequest",
     "WebEvalJobView",
+    "AppWorldEvalTask",
+    "AppWorldEvalTasksResponse",
+    "StartAppWorldEvalRequest",
+    "AppWorldEvalJobView",
 ]
 
 #: Domains the persona-eval (and the rest of the Studio) supports. Mirrors the
@@ -748,6 +752,67 @@ class WebEvalJobView(BaseModel):
     status: str
     phase: Optional[str] = None
     webResult: Optional[Dict[str, Any]] = None
+    trace: Optional[Dict[str, Any]] = None
+    prompts: Optional[Dict[str, str]] = None
+    error: Optional[str] = None
+
+
+# --------------------------------------------------------------------------- #
+# AppWorld eval
+# --------------------------------------------------------------------------- #
+class AppWorldEvalTask(BaseModel):
+    """An AppWorld API task available for persona-agent testing."""
+
+    model_config = ConfigDict(extra="allow")
+
+    id: str
+    title: str
+    appName: str
+    description: str = ""
+    outputArtifact: str = "appworld_result.json"
+    submissionProfile: str = "appworld_result"
+
+
+class AppWorldEvalTasksResponse(BaseModel):
+    """``GET /api/appworld-eval/tasks`` payload."""
+
+    tasks: List[AppWorldEvalTask]
+
+
+class StartAppWorldEvalRequest(BaseModel):
+    """Body for ``POST /api/appworld-eval``."""
+
+    personaId: str
+    taskId: str = "appworld-demo-personal-admin"
+    personaModel: Optional[str] = None
+
+    @field_validator("personaModel")
+    @classmethod
+    def _validate_persona_model(cls, value: Optional[str]) -> Optional[str]:
+        if value is None:
+            return value
+        if value not in SUPPORTED_PERSONA_MODELS:
+            raise ValueError(
+                "personaModel must be one of {}".format(list(SUPPORTED_PERSONA_MODELS))
+            )
+        return value
+
+
+class AppWorldEvalJobView(BaseModel):
+    """Live view of an AppWorld run."""
+
+    model_config = ConfigDict(extra="allow")
+
+    jobId: str
+    applicationType: str = "appworld"
+    taskId: str
+    taskTitle: str
+    appName: str
+    personaId: str
+    personaName: str
+    status: str
+    phase: Optional[str] = None
+    appworldResult: Optional[Dict[str, Any]] = None
     trace: Optional[Dict[str, Any]] = None
     prompts: Optional[Dict[str, str]] = None
     error: Optional[str] = None

@@ -11,7 +11,7 @@ set -uo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 REPO_ROOT="$(cd "${HERE}/../.." && pwd)"
-CHATBOT_API_DIR="${REPO_ROOT}/application/tasks/recommender-agent_chat_api/environment/recommender-api"
+CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/recommender-agent_chat_api/recommender-api"
 
 # Optional: load local secrets (e.g. OPENAI_API_KEY) from .env.local if present.
 if [[ -f .env.local ]]; then set -a; . ./.env.local; set +a; fi
@@ -21,7 +21,7 @@ if [[ -f .env.local ]]; then set -a; . ./.env.local; set +a; fi
 PY="${VENV:+$VENV/bin/}python"
 HOST="${HOST:-127.0.0.1}"
 PORT="${PORT:-8765}"
-export PYTHONPATH="${HERE}:${CHATBOT_API_DIR}${PYTHONPATH:+:${PYTHONPATH}}"
+export PYTHONPATH="${REPO_ROOT}:${REPO_ROOT}/environment/runtime:${HERE}:${CHATBOT_API_DIR}${PYTHONPATH:+:${PYTHONPATH}}"
 export TOKENIZERS_PARALLELISM="${TOKENIZERS_PARALLELISM:-false}"
 
 if [[ ! -d frontend/dist ]]; then

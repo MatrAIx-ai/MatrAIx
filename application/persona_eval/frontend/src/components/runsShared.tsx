@@ -15,6 +15,8 @@ import type {
   Domain,
   PersonaEvalMetricScores,
   PersonaEvalResult,
+  AppWorldResult,
+  AppWorldTrace,
   SurveyResult,
   WebResult,
   WebTrace,
@@ -57,11 +59,11 @@ export interface RunConfig {
 
 /**
  * Which kind of app a run exercised. The debrief picks its shape from this.
- * Today the runs endpoints only persist chatbot (`PersonaEvalResult`) runs, so
- * `runApplicationType` resolves to `"chatbot"`; the survey/web branches activate
+ * Today the runs endpoints persist mixed application artifacts, so
+ * `runApplicationType` resolves from the stored discriminator and the survey/web/AppWorld branches activate
  * only if the loaded artifact carries the matching result object (see below).
  */
-export type RunApplicationType = "chatbot" | "survey" | "web";
+export type RunApplicationType = "chatbot" | "survey" | "web" | "appworld";
 
 /** The persona block we surface in headers. */
 export interface RunPersona {
@@ -78,18 +80,22 @@ export interface RunPersona {
  */
 export type RunDetailView = Omit<
   PersonaEvalResult,
-  "config" | "persona" | "transcript" | "recommendedItemIds"
+  "config" | "persona" | "transcript" | "recommendedItemIds" | "questionnaire" | "metricScores" | "prompts"
 > & {
+  createdAt?: string | null;
   config: RunConfig;
   persona: RunPersona;
   transcript: RunTranscriptTurn[];
   recommendedItemIds: { perTurn?: unknown; final?: string[] | null } & Record<string, unknown>;
+  questionnaire?: PersonaEvalResult["questionnaire"];
+  metricScores?: PersonaEvalResult["metricScores"];
+  prompts?: PersonaEvalResult["prompts"];
   // ---------------------------------------------------------------------------
   // Option-aware fields the data layer MAY hand over (render-what-we-get).
   // TODO: the runs list/detail endpoints (`api.listPersonaEvalRuns` /
   // `api.getPersonaEvalRun`) currently only persist chatbot runs, so these are
-  // absent today and the debrief renders the chatbot shape. The survey/web
-  // bodies read the `SurveyResult` / `WebResult` / `WebTrace` shapes already
+  // absent today and the debrief renders the chatbot shape. The survey/web/AppWorld
+  // bodies read the result/trace shapes already
   // declared in `types.ts`; they light up unchanged once those run kinds persist.
   // ---------------------------------------------------------------------------
   /** Discriminator the artifact may carry; absent → resolved from the payload. */
@@ -100,10 +106,14 @@ export type RunDetailView = Omit<
   webResult?: WebResult | null;
   webTrace?: WebTrace | null;
   trace?: WebTrace | null;
+  /** AppWorld result + API trace, present only on an AppWorld run. */
+  appworldResult?: AppWorldResult | null;
+  appworldTrace?: AppWorldTrace | null;
   /** Human labels a survey/web artifact may carry for the run-meta line. */
   instrumentTitle?: string | null;
   taskTitle?: string | null;
   siteName?: string | null;
+  appName?: string | null;
 };
 
 /** Narrow a raw `PersonaEvalResult` into the richer `RunDetailView` shape. */
@@ -114,14 +124,19 @@ export function asRunDetail(raw: PersonaEvalResult): RunDetailView {
 /**
  * Resolve which debrief shape a loaded run should render. Prefers an explicit
  * `applicationType` discriminator, then falls back to sniffing which result
- * object the artifact carries. Defaults to `"chatbot"` (the only kind the runs
- * data layer persists today).
+ * object the artifact carries. Defaults to `"chatbot"`.
  */
 export function runApplicationType(run: RunDetailView): RunApplicationType {
   const explicit = (run.applicationType ?? "").toString().toLowerCase();
-  if (explicit === "survey" || explicit === "web" || explicit === "chatbot") {
+  if (
+    explicit === "survey"
+    || explicit === "web"
+    || explicit === "appworld"
+    || explicit === "chatbot"
+  ) {
     return explicit;
   }
+  if (run.appworldResult || run.appworldTrace) return "appworld";
   if (run.webResult || run.webTrace || run.trace) return "web";
   if (run.surveyResult) return "survey";
   return "chatbot";
@@ -282,7 +297,7 @@ export function RecChip({ item }: { item: RunRecItem }) {
 }
 
 // ---------------------------------------------------------------------------
-// Option-aware helpers + tiles (chatbot / survey / web debrief shapes)
+// Option-aware helpers + tiles (chatbot / survey / web / AppWorld debrief shapes)
 // ---------------------------------------------------------------------------
 
 /** Friendly display name for the chatbot adapter that was under test. */
@@ -303,6 +318,7 @@ const APP_TYPE_META: Record<RunApplicationType, { icon: string; label: string }>
   chatbot: { icon: "forum", label: "Chatbot" },
   survey: { icon: "fact_check", label: "Survey" },
   web: { icon: "language", label: "Web" },
+  appworld: { icon: "apps", label: "AppWorld" },
 };
 
 /**
@@ -310,12 +326,13 @@ const APP_TYPE_META: Record<RunApplicationType, { icon: string; label: string }>
  * glance. Renders from whatever type the summary carries; absent → chatbot.
  */
 export function AppTypeTag({ type }: { type?: string | null }) {
-  const key: RunApplicationType = type === "survey" || type === "web" ? type : "chatbot";
+  const key: RunApplicationType =
+    type === "survey" || type === "web" || type === "appworld" ? type : "chatbot";
   const meta = APP_TYPE_META[key];
   return (
     <span
       className="inline-flex items-center gap-1 rounded border border-outline bg-surface-high px-1.5 py-0.5 text-[11px] text-text-variant"
-      title="Which kind of app was tested: a chatbot, a survey, or a website."
+      title="Which kind of app was tested: a chatbot, a survey, a website, or AppWorld."
     >
       <Sym name={meta.icon} size={13} />
       {meta.label}
@@ -326,7 +343,7 @@ export function AppTypeTag({ type }: { type?: string | null }) {
 /** Read a run summary's app type defensively (the summary may not carry one). */
 export function runSummaryAppType(summary: unknown): RunApplicationType {
   const t = ((summary as { applicationType?: string | null } | null)?.applicationType ?? "").toString().toLowerCase();
-  if (t === "survey" || t === "web") return t;
+  if (t === "survey" || t === "web" || t === "appworld") return t;
   return "chatbot";
 }
 
