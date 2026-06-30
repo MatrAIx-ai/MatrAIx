@@ -1,4 +1,5 @@
 from backend.service.web_tasks import get_web_eval_task, list_web_eval_tasks
+from harbor.models.task.paths import TaskPaths
 
 
 def test_web_task_path_is_absolute_and_catalog_resolves():
@@ -9,7 +10,12 @@ def test_web_task_path_is_absolute_and_catalog_resolves():
     """
     task = get_web_eval_task("web-ecommerce-platform_product-discovery")
     assert task.task_path.is_absolute()
-    catalog = task.task_path / "environment" / "ecommerce-web" / "site" / "catalog.json"
+    catalog = (
+        TaskPaths.from_task_dir(task.task_path).environment_dir
+        / "ecommerce-web"
+        / "site"
+        / "catalog.json"
+    )
     assert catalog.is_file(), "real catalog.json not found at {}".format(catalog)
 
 

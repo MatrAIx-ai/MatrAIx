@@ -40,11 +40,13 @@ from backend.service import ensure_recbot_importable
 from backend.service.bundle_catalog import get_bundle_catalog
 from backend.service.catalog_index import CatalogIndex
 from backend.service.config import ConfigManager
+from backend.service.config import persona_eval_runtime
 from backend.service.jobs import JobRegistry
 from backend.service.session import SessionManager
 from backend.service.session_store import SessionStore
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
+    from backend.service.appworld_eval_service import AppWorldEvalService
     from backend.service.persona_eval_service import PersonaEvalService
     from backend.service.survey_eval_service import SurveyEvalService
     from backend.service.web_eval_service import WebEvalService
@@ -55,6 +57,7 @@ __all__ = [
     "AppState",
     "resolve_catalog_path",
     "build_persona_eval_service",
+    "build_appworld_eval_service",
     "build_web_eval_service",
     "build_state",
     "get_state",
@@ -98,6 +101,7 @@ class AppState:
     persona_eval: "PersonaEvalService"
     survey_eval: "SurveyEvalService"
     web_eval: "WebEvalService"
+    appworld_eval: "AppWorldEvalService"
     #: Resolves a domain to its catalog index. In production this serves the
     #: real per-domain bundle; with an injected catalog (tests / explicit JSONL)
     #: it serves that one index for every domain.
@@ -126,14 +130,37 @@ def build_persona_eval_service(
     each application-under-test adapter directly. The service keeps the same
     async job API that the frontend uses, through direct local runners.
     """
-    from backend.service.local_chatbot_eval import (
+    from backend.service.persona_eval_service import PersonaEvalService
+    from persona_eval.persona import get_persona
+    from persona_eval.sut_descriptions import sut_description_for
+
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from environment.integrations.persona_eval.benchflow.persona_eval import BenchFlowPersonaEvalRunner
+
+        return PersonaEvalService(
+            session_builder=lambda _cfg: type("BenchFlowSession", (), {"turns": []})(),
+            get_persona=get_persona,
+            sut_for=sut_description_for,
+            simulator_factory=lambda *_args: None,
+            runner=BenchFlowPersonaEvalRunner(),
+        )
+    if runtime == "harbor":
+        from environment.integrations.persona_eval.harbor.persona_eval import HarborPersonaEvalRunner
+
+        return PersonaEvalService(
+            session_builder=lambda _cfg: type("HarborSession", (), {"turns": []})(),
+            get_persona=get_persona,
+            sut_for=sut_description_for,
+            simulator_factory=lambda *_args: None,
+            runner=HarborPersonaEvalRunner(),
+        )
+
+    from environment.integrations.persona_eval.local.chatbot_eval import (
         LocalChatbotEvalRunner,
         build_local_chat_session,
         build_local_user_simulator_for_model,
     )
-    from backend.service.persona_eval_service import PersonaEvalService
-    from persona_eval.persona import get_persona
-    from persona_eval.sut_descriptions import sut_description_for
 
     return PersonaEvalService(
         session_builder=lambda cfg: build_local_chat_session(
@@ -154,7 +181,6 @@ def build_persona_eval_service(
 
 def build_survey_eval_service() -> "SurveyEvalService":
     """Construct the process-wide local survey eval service."""
-    from backend.service.local_survey_eval import LocalSurveyEvalRunner
     from backend.service.survey_eval_service import SurveyEvalService
     from backend.service.survey_instruments import (
         get_survey_instrument,
@@ -162,26 +188,85 @@ def build_survey_eval_service() -> "SurveyEvalService":
     )
     from persona_eval.persona import get_persona
 
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from environment.integrations.persona_eval.benchflow.survey_eval import BenchFlowSurveyEvalRunner
+
+        runner = BenchFlowSurveyEvalRunner()
+    elif runtime == "harbor":
+        from environment.integrations.persona_eval.harbor.survey_eval import HarborSurveyEvalRunner
+
+        runner = HarborSurveyEvalRunner()
+    else:
+        from environment.integrations.persona_eval.local.survey_eval import LocalSurveyEvalRunner
+
+        runner = LocalSurveyEvalRunner()
+
     return SurveyEvalService(
         get_persona=get_persona,
         get_instrument=get_survey_instrument,
         list_instruments=list_survey_instruments,
-        runner=LocalSurveyEvalRunner(),
+        runner=runner,
     )
 
 
 def build_web_eval_service() -> "WebEvalService":
     """Construct the process-wide local web eval service."""
-    from backend.service.local_web_eval import LocalWebEvalRunner
     from backend.service.web_eval_service import WebEvalService
     from backend.service.web_tasks import get_web_eval_task, list_web_eval_tasks
     from persona_eval.persona import get_persona
+
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from environment.integrations.persona_eval.benchflow.web_eval import BenchFlowWebEvalRunner
+
+        runner = BenchFlowWebEvalRunner()
+    elif runtime == "harbor":
+        from environment.integrations.persona_eval.harbor.web_eval import HarborWebEvalRunner
+
+        runner = HarborWebEvalRunner()
+    else:
+        from environment.integrations.persona_eval.local.web_eval import LocalWebEvalRunner
+
+        runner = LocalWebEvalRunner()
 
     return WebEvalService(
         get_persona=get_persona,
         get_task=get_web_eval_task,
         list_tasks=list_web_eval_tasks,
-        runner=LocalWebEvalRunner(),
+        runner=runner,
+    )
+
+
+def build_appworld_eval_service() -> "AppWorldEvalService":
+    """Construct the process-wide AppWorld eval service."""
+    from backend.service.appworld_eval_service import (
+        AppWorldEvalService,
+        UnsupportedAppWorldEvalRunner,
+    )
+    from backend.service.appworld_tasks import (
+        get_appworld_eval_task,
+        list_appworld_eval_tasks,
+    )
+    from persona_eval.persona import get_persona
+
+    runtime = persona_eval_runtime()
+    if runtime == "benchflow":
+        from environment.integrations.persona_eval.benchflow.appworld_eval import BenchFlowAppWorldEvalRunner
+
+        runner = BenchFlowAppWorldEvalRunner()
+    elif runtime == "harbor":
+        runner = UnsupportedAppWorldEvalRunner(runtime)
+    else:
+        from environment.integrations.persona_eval.local.appworld_eval import LocalAppWorldEvalRunner
+
+        runner = LocalAppWorldEvalRunner()
+
+    return AppWorldEvalService(
+        get_persona=get_persona,
+        get_task=get_appworld_eval_task,
+        list_tasks=list_appworld_eval_tasks,
+        runner=runner,
     )
 
 
@@ -221,6 +306,7 @@ def build_state(catalog_path: Optional[str] = None) -> AppState:
     persona_eval = build_persona_eval_service(default_catalog, config)
     survey_eval = build_survey_eval_service()
     web_eval = build_web_eval_service()
+    appworld_eval = build_appworld_eval_service()
     return AppState(
         config=config,
         catalog=default_catalog,
@@ -229,6 +315,7 @@ def build_state(catalog_path: Optional[str] = None) -> AppState:
         persona_eval=persona_eval,
         survey_eval=survey_eval,
         web_eval=web_eval,
+        appworld_eval=appworld_eval,
         catalog_provider=catalog_provider,
     )
 

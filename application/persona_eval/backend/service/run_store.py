@@ -1,6 +1,6 @@
 """Shared persistence for PersonaEval run artifacts.
 
-All three eval surfaces (chatbot, survey, web) persist their finished runs as
+All eval surfaces (chatbot, survey, web, appworld) persist their finished runs as
 ``{id}.json`` files under one cache dir so the Runs list and detail surfaces can
 show every kind of run and they survive a backend restart. Writes are atomic and
 best-effort: a persistence failure must never fail the run itself.
@@ -119,8 +119,10 @@ def iter_run_records(runs_dir: Path) -> List[Dict[str, Any]]:
 def _application_type(record: Dict[str, Any]) -> str:
     """Discriminate a run record's kind: explicit field, else sniff its artifact."""
     explicit = str(record.get("applicationType") or "").lower()
-    if explicit in ("survey", "web", "chatbot"):
+    if explicit in ("survey", "web", "appworld", "chatbot"):
         return explicit
+    if record.get("appworldResult") is not None or record.get("appworldTrace") is not None:
+        return "appworld"
     if (
         record.get("webResult") is not None
         or record.get("webTrace") is not None
@@ -137,8 +139,9 @@ def summarize_record(record: Dict[str, Any]) -> Dict[str, Any]:
 
     Keeps the chatbot summary contract (``domain``/``goalContextId``/``numTurns``)
     and adds ``applicationType`` plus a per-type ``overallRating`` (out of 10):
-    chatbot uses the self-report rating, web the experience rating, and survey
-    maps its 1-5 mean Likert onto the shared 1-10 chip scale.
+    chatbot uses the self-report rating, web the experience rating, survey maps
+    its 1-5 mean Likert onto the shared 1-10 chip scale, and AppWorld maps its
+    0-1 score onto that same 1-10 scale.
     """
     app_type = _application_type(record)
     persona = record.get("persona") or {}
@@ -162,6 +165,10 @@ def summarize_record(record: Dict[str, Any]) -> Dict[str, Any]:
         rating = (record.get("webResult") or {}).get("overallExperienceRating")
         if isinstance(rating, (int, float)):
             summary["overallRating"] = rating
+    elif app_type == "appworld":
+        score = (record.get("appworldResult") or {}).get("score")
+        if isinstance(score, (int, float)):
+            summary["overallRating"] = round(max(0, min(1, float(score))) * 10)
     else:  # chatbot
         config = record.get("config") or {}
         questionnaire = record.get("questionnaire") or {}

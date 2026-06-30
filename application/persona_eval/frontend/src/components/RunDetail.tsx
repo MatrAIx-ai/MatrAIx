@@ -5,12 +5,8 @@
  * "Run debrief" H1 with a run-type reflection on the right, a one-line run-meta
  * breadcrumb, a headline score band + metric tiles, then the body.
  *
- * Option-aware, honestly scoped (spec §05): the runs data layer only persists
- * chatbot (`PersonaEvalResult`) runs today, so `runApplicationType` resolves to
- * "chatbot" and the chatbot debrief renders. The survey/web bodies render the
- * `SurveyResult` / `WebResult` / `WebTrace` shapes already declared in types.ts
- * and light up unchanged once those run kinds persist. See the TODO in
- * `runsShared.tsx`. No endpoint, query key, or type is changed here.
+ * Option-aware, honestly scoped (spec §05): the debrief renders the stored
+ * application artifact shape: chatbot, survey, web, or AppWorld.
  */
 import { useMemo, useState, type ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -38,6 +34,7 @@ import { api, ApiError } from "@/lib/api";
 import type {
   PersonaEvalQuestionnaire,
   PersonaEvalResult,
+  AppWorldTraceEvent,
   SurveyAnswer,
   SurveyQuestion,
   SurveyTrajectoryEvent,
@@ -85,6 +82,8 @@ export function RunDetail({ runId, onBack }: RunDetailProps) {
               <SurveyDebrief run={run} />
             ) : appType === "web" ? (
               <WebDebrief run={run} />
+            ) : appType === "appworld" ? (
+              <AppWorldDebrief run={run} />
             ) : (
               <ChatbotDebrief run={run} />
             )}
@@ -121,6 +120,7 @@ function RunTypeReflection({ active }: { active: RunApplicationType }) {
     { key: "chatbot", label: "Chatbot" },
     { key: "survey", label: "Survey" },
     { key: "web", label: "Web" },
+    { key: "appworld", label: "AppWorld" },
   ];
   return (
     <div
@@ -854,6 +854,126 @@ function webActionDetail(event: WebTraceEvent): string {
   }
   const message = (event.message || "").trim();
   return message ? clip40(message) : "-";
+}
+
+// ===========================================================================
+// AppWorld debrief: reads `AppWorldResult` + `AppWorldTrace` (types.ts)
+// ===========================================================================
+
+function AppWorldDebrief({ run }: { run: RunDetailView }) {
+  const result = run.appworldResult;
+  const persona = run.persona ?? {};
+  const trace = run.appworldTrace;
+  const events = trace?.events ?? [];
+
+  if (!result) {
+    return (
+      <div className="space-y-5">
+        <RunMetaLine icon="apps">AppWorld run</RunMetaLine>
+        <DashedNote>No AppWorld result was recorded for this run.</DashedNote>
+      </div>
+    );
+  }
+
+  const score = Math.round(clamp(result.score, 1) * 100);
+  return (
+    <div className="space-y-5">
+      <RunMetaLine icon="apps">
+        {`AppWorld run · ${run.taskTitle || run.appName || result.taskId}${
+          persona.name ? ` · persona “${persona.name}”` : ""
+        } · ${fmtRunDate(result.createdAt ?? run.createdAt)}`}
+      </RunMetaLine>
+      <DebriefIntro>
+        A BenchFlow-hosted agent completed the AppWorld task through API calls; here are the final state and
+        recorded trajectory.
+      </DebriefIntro>
+
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
+        <div className="grid grid-cols-3 gap-3 lg:col-span-5">
+          <StatTile
+            lead
+            caption="Task success"
+            value={result.success ? "Yes" : "No"}
+            band={result.success ? "high" : "low"}
+          />
+          <StatTile caption="Objective score" value={score} unit="%" band={scoreBand(result.score)} />
+          <StatTile caption="API steps" value={events.length} />
+        </div>
+
+        <div className="rounded-md border border-outline bg-surface p-5 lg:col-span-7">
+          <div className="flex flex-wrap items-center gap-2">
+            <ValidityBadge valid={result.success} validLabel="Succeeded" invalidLabel="Incomplete" />
+            <span className="font-mono text-[10px] text-text-dim">{result.taskId}</span>
+          </div>
+          <p className="mt-3 text-[13px] leading-relaxed text-text-main">{result.outcome}</p>
+          <p className="mt-2 text-[12px] leading-relaxed text-text-variant">{result.reason}</p>
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="flex items-center gap-2 hud text-[10px] text-primary">
+          <Sym name="route" size={14} />
+          AppWorld trajectory · {events.length} step{events.length === 1 ? "" : "s"}
+        </h2>
+        {events.length === 0 ? (
+          <DashedNote>No AppWorld API steps were captured for this run.</DashedNote>
+        ) : (
+          <div className="grid gap-3 md:grid-cols-2">
+            {events.map((event, i) => (
+              <AppWorldStepCard key={`${event.step}-${i}`} event={event} index={i} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {run.prompts && (
+        <div className="space-y-3">
+          <h2 className="hud text-[10px] text-primary">Prompts</h2>
+          <div className="overflow-hidden rounded-md border border-outline bg-surface">
+            <PromptPanel prompts={run.prompts} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function AppWorldStepCard({ event, index }: { event: AppWorldTraceEvent; index: number }) {
+  return (
+    <div
+      className="rounded-md border border-outline bg-surface p-4 rise-in"
+      style={{ animationDelay: `${Math.min(index, 6) * 30}ms`, animationFillMode: "backwards" }}
+    >
+      <div className="mb-2 flex items-center justify-between gap-3">
+        <span className="hud text-[8px] text-text-dim">Step {event.step}</span>
+        <span className="rounded bg-surface-high px-2 py-0.5 font-mono text-[10px] text-primary">
+          {appWorldActionLabel(event)}
+        </span>
+      </div>
+      <p className="text-[13px] leading-relaxed text-text-main">{event.message ?? "AppWorld API step"}</p>
+      {event.actions.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {event.actions.map((action, actionIndex) => (
+            <span
+              key={`${action.name}-${actionIndex}`}
+              className="rounded border border-outline bg-field px-2 py-1 font-mono text-[10px] text-text-variant"
+            >
+              {action.name}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function appWorldActionLabel(event: AppWorldTraceEvent): string {
+  const action = event.actions[0];
+  if (!action) return "step";
+  const args = action.arguments ?? {};
+  const app = typeof args.app === "string" ? args.app : null;
+  const method = typeof args.method === "string" ? args.method : null;
+  return app && method ? `${app}.${method}` : action.name.replace(/_/g, " ");
 }
 
 function clip40(text: string): string {

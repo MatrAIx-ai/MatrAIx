@@ -22,6 +22,7 @@ from typing import Dict, List, Optional
 
 PERSONA_MODEL_ENV = "MATRIX_PERSONA_MODEL"
 HARBOR_PERSONA_MODEL_ENV = "MATRIX_HARBOR_PERSONA_MODEL"
+PERSONA_EVAL_RUNTIME_ENV = "MATRIX_PERSONA_EVAL_RUNTIME"
 DEFAULT_PERSONA_MODEL = "anthropic/claude-haiku-4-5"
 PERSONA_MODEL_OPTIONS = [
     DEFAULT_PERSONA_MODEL,
@@ -31,6 +32,7 @@ PERSONA_MODEL_OPTIONS = [
 ]
 DEFAULT_HARBOR_PERSONA_MODEL = DEFAULT_PERSONA_MODEL
 HARBOR_PERSONA_MODEL_OPTIONS = PERSONA_MODEL_OPTIONS
+RUNTIME_OPTIONS = ("local", "harbor", "benchflow")
 
 __all__ = [
     "ConfigError",
@@ -41,8 +43,11 @@ __all__ = [
     "HARBOR_PERSONA_MODEL_OPTIONS",
     "PERSONA_MODEL_ENV",
     "HARBOR_PERSONA_MODEL_ENV",
+    "PERSONA_EVAL_RUNTIME_ENV",
+    "RUNTIME_OPTIONS",
     "persona_model",
     "harbor_persona_model",
+    "persona_eval_runtime",
 ]
 
 
@@ -58,6 +63,19 @@ def persona_model() -> str:
 def harbor_persona_model() -> str:
     """Backward-compatible alias for the old Harbor model env helper."""
     return persona_model()
+
+
+def persona_eval_runtime() -> str:
+    """Return the selected PersonaEval execution runtime."""
+    value = os.environ.get(PERSONA_EVAL_RUNTIME_ENV, "local").strip().lower()
+    if value not in RUNTIME_OPTIONS:
+        raise ConfigError(
+            "{} must be one of {}".format(
+                PERSONA_EVAL_RUNTIME_ENV,
+                ", ".join(RUNTIME_OPTIONS),
+            )
+        )
+    return value
 
 
 class ConfigError(ValueError):
@@ -296,6 +314,7 @@ class ConfigManager:
             "defaults": dict(self.DEFAULTS),
             "environment": {
                 **self.ENVIRONMENT,
+                "runtime": _runtime_label(persona_eval_runtime()),
                 "personaModel": persona_model(),
             },
         }
@@ -390,3 +409,11 @@ class ConfigManager:
             if old_full.get(key) != new_full.get(key):
                 return True
         return False
+
+
+def _runtime_label(runtime: str) -> str:
+    if runtime == "benchflow":
+        return "BenchFlow hosted runner"
+    if runtime == "harbor":
+        return "Harbor persona runner"
+    return "Local direct runner"

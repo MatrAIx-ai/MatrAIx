@@ -18,14 +18,12 @@ def ensure_recbot_importable() -> str:
     importable RecAI bridge, and keeps the full app's lazy import path setup
     compatible with both the old and clean layouts.
     """
+    from backend.service.task_environment import resolve_task_environment_dir
+
     repo_root = Path(__file__).resolve().parents[4]
+    task_dir = repo_root / "application" / "tasks" / "recommender-agent_chat_api"
     task_api_dir = (
-        repo_root
-        / "application"
-        / "tasks"
-        / "recommender-agent_chat_api"
-        / "environment"
-        / "recommender-api"
+        resolve_task_environment_dir(task_dir) / "recommender-api"
     )
     path = str(task_api_dir)
     if path not in sys.path:

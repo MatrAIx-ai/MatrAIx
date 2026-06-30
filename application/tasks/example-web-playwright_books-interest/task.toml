@@ -18,6 +18,7 @@ timeout_sec = 600.0
 network_mode = "public"
 
 [environment]
+definition = "application/example-web-playwright_books-interest"
 build_timeout_sec = 900.0
 cpus = 1
 memory_mb = 2048

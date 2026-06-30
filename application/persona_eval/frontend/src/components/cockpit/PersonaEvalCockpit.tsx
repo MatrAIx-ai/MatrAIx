@@ -34,6 +34,7 @@ import { PersonaDrawer } from "./PersonaDrawer";
 import { PromptPanel } from "./PromptPanel";
 import { SurveyEvalCockpit } from "./SurveyEvalCockpit";
 import { WebEvalCockpit } from "./WebEvalCockpit";
+import { AppWorldEvalCockpit } from "./AppWorldEvalCockpit";
 import { type PersonaEvalTaskType } from "./TaskTypeSwitch";
 import { FOCUS_RING, Sym, personaCodename, personaDescriptiveTitle } from "./cockpitShared";
 import { fmtDomain } from "../runsShared";
@@ -137,6 +138,16 @@ export function PersonaEvalCockpit({
   if (taskType === "web") {
     return (
       <WebEvalCockpit
+        options={options}
+        taskType={taskType}
+        onTaskTypeChange={setTaskType}
+        onFooterContextChange={onFooterContextChange}
+      />
+    );
+  }
+  if (taskType === "appworld") {
+    return (
+      <AppWorldEvalCockpit
         options={options}
         taskType={taskType}
         onTaskTypeChange={setTaskType}

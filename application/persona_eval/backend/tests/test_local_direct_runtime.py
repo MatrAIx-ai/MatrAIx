@@ -1,5 +1,6 @@
 from backend.api.deps import (
     build_persona_eval_service,
+    build_appworld_eval_service,
     build_survey_eval_service,
     build_web_eval_service,
 )
@@ -12,10 +13,20 @@ def test_default_eval_services_use_local_runners():
     chatbot = build_persona_eval_service(CatalogIndex(None), ConfigManager())
     survey = build_survey_eval_service()
     web = build_web_eval_service()
+    appworld = build_appworld_eval_service()
 
     assert chatbot._runner.__class__.__name__ == "LocalChatbotEvalRunner"
     assert survey._runner.__class__.__name__ == "LocalSurveyEvalRunner"
     assert web._runner.__class__.__name__ == "LocalWebEvalRunner"
+    assert appworld._runner.__class__.__name__ == "LocalAppWorldEvalRunner"
+
+
+def test_harbor_runtime_does_not_silently_use_local_appworld_runner(monkeypatch):
+    monkeypatch.setenv("MATRIX_PERSONA_EVAL_RUNTIME", "harbor")
+
+    appworld = build_appworld_eval_service()
+
+    assert appworld._runner.__class__.__name__ == "UnsupportedAppWorldEvalRunner"
 
 
 def test_config_environment_describes_direct_local_runtime(config_manager):

@@ -41,6 +41,13 @@ def resolve_repo_root(file_path: Path) -> Path:
             return _path_prefix(parts, index)
         if parts[index] == "applications" and parts[index + 1] == "persona_eval":
             return _path_prefix(parts, index)
+    for index in range(len(parts) - 2):
+        if (
+            parts[index] == "environment"
+            and parts[index + 1] == "integrations"
+            and parts[index + 2] == "persona_eval"
+        ):
+            return _path_prefix(parts, index)
     for index in range(len(parts) - 1):
         if parts[index] == "backend" and parts[index + 1] == "service":
             return _path_prefix(parts, index)
