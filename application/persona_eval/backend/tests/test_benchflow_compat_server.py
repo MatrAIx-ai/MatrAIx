@@ -5,9 +5,9 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from environment.integrations.persona_eval.benchflow.client import BenchFlowClient
-from environment.integrations.persona_eval.benchflow.compat_server import create_app
-from environment.integrations.persona_eval.benchflow.web_eval import BenchFlowWebEvalRunner
+from backend.service.benchflow_client import BenchFlowClient
+from backend.service.benchflow_compat_server import create_app
+from backend.service.benchflow_web_eval import BenchFlowWebEvalRunner
 from backend.service.web_types import WebEvalConfig, WebEvalTask
 from persona_eval.types import Persona
 

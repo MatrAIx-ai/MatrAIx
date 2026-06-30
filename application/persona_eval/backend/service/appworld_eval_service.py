@@ -208,16 +208,3 @@ class AppWorldEvalService:
             with self._guard:
                 progress.error = "{}: {}".format(type(exc).__name__, exc)
                 progress.status = "error"
-
-
-class UnsupportedAppWorldEvalRunner:
-    """Runner placeholder for runtimes that do not implement AppWorld."""
-
-    def __init__(self, runtime: str) -> None:
-        self.runtime = runtime
-
-    def __call__(self, *args: Any, **kwargs: Any) -> AppWorldEvalResult:
-        raise RuntimeError(
-            "AppWorld evaluation is not supported by the {} PersonaEval runtime. "
-            "Use MATRIX_PERSONA_EVAL_RUNTIME=benchflow or local.".format(self.runtime)
-        )

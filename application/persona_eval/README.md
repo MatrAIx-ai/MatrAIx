@@ -123,8 +123,8 @@ For local development without a deployed BenchFlow service, start the dev-only
 compatibility server in a second terminal:
 
 ```bash
-PYTHONPATH=.:application/persona_eval:environment/runtime \
-  python -m uvicorn environment.integrations.persona_eval.benchflow.compat_server:app \
+PYTHONPATH=application/persona_eval \
+  python -m uvicorn backend.service.benchflow_compat_server:app \
   --host 127.0.0.1 --port 9000
 ```
 
