@@ -7,6 +7,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
 TASKS_ROOT = REPO_ROOT / "application" / "tasks"
+ENVIRONMENTS_ROOT = REPO_ROOT / "environment" / "task-environments" / "application"
 INTERFACE_ROOT = TASKS_ROOT / "interface"
 
 
@@ -44,6 +45,11 @@ def test_application_interface_docs_exist_for_each_protocol() -> None:
         assert "Evaluation contract" in text
 
 
+def test_application_tasks_do_not_embed_runtime_environments() -> None:
+    embedded = sorted(path.relative_to(TASKS_ROOT) for path in TASKS_ROOT.glob("*/environment"))
+    assert embedded == []
+
+
 def test_canonical_survey_task_shape() -> None:
     task = TASKS_ROOT / "persona-survey"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
@@ -59,17 +65,20 @@ def test_canonical_survey_task_shape() -> None:
 
 def test_canonical_chatbot_task_shape() -> None:
     task = TASKS_ROOT / "recommender-agent_chat_api"
+    env = ENVIRONMENTS_ROOT / "recommender-agent_chat_api"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
     assert raw["task"]["name"] == "personabench/application-recommender-agent-chat-api"
     assert raw["metadata"]["type"] == "chat"
     assert raw["metadata"]["domain"] == "commerce-retail"
+    assert raw["environment"]["definition"] == "application/recommender-agent_chat_api"
     assert "/app/output" in raw["artifacts"]
-    assert (task / "environment" / "recommender-api" / "server.py").is_file()
+    assert (env / "recommender-api" / "server.py").is_file()
 
 
 def test_canonical_web_task_shape() -> None:
     task = TASKS_ROOT / "web-ecommerce-platform_product-discovery"
+    env = ENVIRONMENTS_ROOT / "web-ecommerce-platform_product-discovery"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
     assert raw["task"]["name"] == (
@@ -77,12 +86,16 @@ def test_canonical_web_task_shape() -> None:
     )
     assert raw["metadata"]["type"] == "web"
     assert raw["metadata"]["domain"] == "commerce-retail"
+    assert (
+        raw["environment"]["definition"]
+        == "application/web-ecommerce-platform_product-discovery"
+    )
     assert "/app/output" in raw["artifacts"]
-    dockerfile = (task / "environment" / "Dockerfile").read_text(encoding="utf-8")
+    dockerfile = (env / "Dockerfile").read_text(encoding="utf-8")
     assert "/app/input" in dockerfile
     assert "/app/output" in dockerfile
 
-    site = task / "environment" / "ecommerce-web" / "site"
+    site = env / "ecommerce-web" / "site"
     catalog = json.loads((site / "catalog.json").read_text(encoding="utf-8"))
     assert catalog["products"]
     assert '<img class="product-media"' in (site / "index.html").read_text(

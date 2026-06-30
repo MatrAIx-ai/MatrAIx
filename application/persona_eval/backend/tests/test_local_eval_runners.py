@@ -1,9 +1,9 @@
 import json
 import urllib.request
 
-from backend.service.local_chatbot_eval import DirectApplicationSession
-from backend.service.local_survey_eval import LocalSurveyEvalRunner
-from backend.service.local_web_eval import LocalWebEvalRunner
+from environment.integrations.persona_eval.local.chatbot_eval import DirectApplicationSession
+from environment.integrations.persona_eval.local.survey_eval import LocalSurveyEvalRunner
+from environment.integrations.persona_eval.local.web_eval import LocalWebEvalRunner
 from backend.service.survey_types import SurveyEvalConfig, SurveyInstrument, SurveyQuestion
 from backend.service.web_types import WebEvalConfig, WebEvalTask
 from persona_eval.types import Persona, PersonaEvalConfig
@@ -41,7 +41,7 @@ def test_local_survey_runner_returns_result_and_prompts(monkeypatch):
         }
     )
     monkeypatch.setattr(
-        "backend.service.local_survey_eval.build_json_client",
+        "environment.integrations.persona_eval.local.survey_eval.build_json_client",
         lambda model: client,
     )
     instrument = SurveyInstrument(
@@ -118,7 +118,7 @@ def test_local_web_runner_returns_result_trace_and_prompts(monkeypatch, tmp_path
         }
     )
     monkeypatch.setattr(
-        "backend.service.local_web_eval.build_json_client",
+        "environment.integrations.persona_eval.local.web_eval.build_json_client",
         lambda model: client,
     )
     task = WebEvalTask(
@@ -173,7 +173,7 @@ def test_local_web_runner_grounds_prompt_in_catalog(monkeypatch, tmp_path):
         }
     )
     monkeypatch.setattr(
-        "backend.service.local_web_eval.build_json_client",
+        "environment.integrations.persona_eval.local.web_eval.build_json_client",
         lambda model: client,
     )
     site_dir = tmp_path / "environment" / "ecommerce-web" / "site"

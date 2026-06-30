@@ -71,7 +71,10 @@ class TaskDefinitionScanner:
 
     def get_task_paths_info(self, name: str) -> dict[str, bool]:
         """Check which standard files/dirs exist for a task."""
-        paths = TaskPaths(self.tasks_dir / name)
+        try:
+            paths = TaskPaths.from_task_dir(self.tasks_dir / name)
+        except ValueError:
+            paths = TaskPaths(self.tasks_dir / name)
         return {
             "has_instruction": paths.instruction_path.exists()
             or paths.has_configured_steps(),
@@ -88,13 +91,21 @@ class TaskDefinitionScanner:
             return None
 
         try:
-            full_path = (task_dir / rel_path).resolve()
-            resolved_task_dir = task_dir.resolve()
-            if (
-                resolved_task_dir not in full_path.parents
-                and full_path != resolved_task_dir
-            ):
-                return None
+            paths = TaskPaths.from_task_dir(task_dir)
+            if rel_path == "environment" or rel_path.startswith("environment/"):
+                environment_rel_path = rel_path.removeprefix("environment").lstrip("/")
+                root = paths.environment_dir.resolve()
+                full_path = (root / environment_rel_path).resolve()
+                if root not in full_path.parents and full_path != root:
+                    return None
+            else:
+                full_path = (task_dir / rel_path).resolve()
+                resolved_task_dir = task_dir.resolve()
+                if (
+                    resolved_task_dir not in full_path.parents
+                    and full_path != resolved_task_dir
+                ):
+                    return None
         except Exception:
             return None
 
@@ -143,4 +154,24 @@ class TaskDefinitionScanner:
                 pass
 
         scan_dir(task_dir)
+
+        try:
+            paths = TaskPaths.from_task_dir(task_dir)
+            environment_dir = paths.environment_dir.resolve()
+        except ValueError:
+            return files
+        if (
+            paths.environment_definition is not None
+            and environment_dir.exists()
+            and not environment_dir.is_relative_to(task_dir.resolve())
+        ):
+            files.append(
+                {
+                    "path": "environment",
+                    "name": "environment",
+                    "is_dir": True,
+                    "size": None,
+                }
+            )
+            scan_dir(environment_dir, "environment")
         return files

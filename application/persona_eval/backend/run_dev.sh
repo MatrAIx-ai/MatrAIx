@@ -8,8 +8,10 @@
 # What it does:
 #   - Resolves the backend root and the eval package root regardless of the
 #     directory you call it from.
-#   - Puts `application/persona_eval` and the chatbot task API source on
-#     PYTHONPATH so that `import backend...` and `import recbot...` resolve
+#   - Puts the repo root, `environment/runtime`, `application/persona_eval`,
+#     and the chatbot task API source on PYTHONPATH so that `import
+#     environment...`, `import harbor...`, `import backend...`, and
+#     `import recbot...` resolve
 #     in-process. The service layer also injects the chatbot API path at startup,
 #     but exporting it here keeps the env explicit.
 #   - Runs a SINGLE uvicorn worker (the cached RecAI agent and the in-memory job
@@ -33,7 +35,7 @@ set -euo pipefail
 BACKEND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EVAL_DIR="$(cd "${BACKEND_DIR}/.." && pwd)"  # application/persona_eval
 REPO_ROOT="$(cd "${EVAL_DIR}/../.." && pwd)"
-CHATBOT_API_DIR="${REPO_ROOT}/application/tasks/recommender-agent_chat_api/environment/recommender-api"
+CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/recommender-agent_chat_api/recommender-api"
 
 # --- interpreter: $VENV/bin/python if VENV is set, else `python` on PATH -------
 # (Python 3.9 + RecAI native — see RECAI_ENV_NOTES.md. Activate your venv, or
@@ -61,7 +63,7 @@ HOST="${HOST:-127.0.0.1}"
 APP="backend.api.app:app"
 
 # Make `backend`, `persona_eval`, and task-owned `recbot` importable.
-export PYTHONPATH="${EVAL_DIR}:${CHATBOT_API_DIR}${PYTHONPATH:+:${PYTHONPATH}}"
+export PYTHONPATH="${REPO_ROOT}:${REPO_ROOT}/environment/runtime:${EVAL_DIR}:${CHATBOT_API_DIR}${PYTHONPATH:+:${PYTHONPATH}}"
 
 # The catalog is served from the real per-domain bundle under
 # recai/InteRecAgent/resources/<domain>/ (see backend.service.bundle_catalog).
@@ -76,7 +78,7 @@ fi
 
 echo "[run_dev] python      : ${VENV_PY}"
 echo "[run_dev] backend dir : ${BACKEND_DIR}"
-echo "[run_dev] PYTHONPATH  : ${EVAL_DIR}:${CHATBOT_API_DIR}"
+echo "[run_dev] PYTHONPATH  : ${REPO_ROOT}:${REPO_ROOT}/environment/runtime:${EVAL_DIR}:${CHATBOT_API_DIR}"
 echo "[run_dev] catalog     : ${INTERECAGENT_CATALOG_PATH:-(bundle default)}"
 echo "[run_dev] serving     : http://${HOST}:${PORT}  (app ${APP})"
 echo "[run_dev] frontend    : in another terminal, run:"

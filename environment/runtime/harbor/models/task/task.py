@@ -64,6 +64,10 @@ class Task:
         self._extra_instructions = self._read_extra_instructions()
         self.paths = TaskPaths(self._task_dir)
         self.config = TaskConfig.model_validate_toml(self.paths.config_path.read_text())
+        self.paths = TaskPaths(
+            self._task_dir,
+            environment_definition=self.config.environment.definition,
+        )
         if self.config.task is not None:
             self.name = self.config.task.name
         else:
@@ -96,12 +100,19 @@ class Task:
         the parsed task config, such as effective verifier OS selection.
         """
         paths = TaskPaths(task_dir)
-        if not paths.config_path.exists() or not paths.environment_dir.exists():
+        if not paths.config_path.exists():
             return False
 
         try:
             config = TaskConfig.model_validate_toml(paths.config_path.read_text())
         except (OSError, tomllib.TOMLDecodeError, ValidationError):
+            return False
+
+        paths = TaskPaths(
+            task_dir,
+            environment_definition=config.environment.definition,
+        )
+        if not paths.environment_dir.exists():
             return False
 
         if disable_verification:
@@ -193,10 +204,11 @@ class Task:
 
     @property
     def checksum(self) -> str:
-        """Generate a deterministic hash for the task based on its entire directory content."""
-        from dirhash import dirhash
+        """Generate a deterministic hash for the full task package content."""
+        from harbor.publisher.packager import Packager
 
-        return dirhash(self._task_dir, "sha256")
+        content_hash, _ = Packager.compute_content_hash(self._task_dir)
+        return content_hash
 
     @property
     def task_dir(self) -> Path:
