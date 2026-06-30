@@ -14,10 +14,13 @@ persona/
   scripts/      Persona pool and grounding job generation.
   validators/   Schema validation utilities.
   reporting/    Persona grounding job rollups.
+  synthesis/    Persona Full DAG, forward sampler, and QC tooling.
 ```
 
-Do not place runtime engines, product scenarios, or raw generated job outputs
-here. Those belong in `environment/`, `application/`, or external storage.
+Runtime code in this module should stay persona-owned: schema, curation,
+grounding tasks, synthesis, validation, and reporting. Product scenarios and
+raw generated job outputs belong in `environment/`, `application/`, or external
+storage.
 
 ## Data Pipeline
 
@@ -48,7 +51,6 @@ The first curated import brought in:
 
 - `schema/dimensions.json`
 - `schema/validators/schema_validator.py`
-- `curation/attribute_pool/` docs and pipeline scripts
 - two sample personas under `datasets/bench-dev-sample/`
 - `tasks/`, `scripts/`, `validators/`, and `reporting/` for the curated
   persona grounding task layer

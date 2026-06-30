@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+"""Sample personas from the Persona Full DAG."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT))
+
+from persona.synthesis.sampler import DEFAULT_GRAPH_PATH  # noqa: E402
+from persona.synthesis.sampler import PersonaForwardSampler, SamplingConfig  # noqa: E402
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--graph", type=Path, default=DEFAULT_GRAPH_PATH)
+    parser.add_argument("--n", type=int, default=1000)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--format", choices=["jsonl", "csv"], default="jsonl")
+    parser.add_argument(
+        "--include-hidden",
+        action="store_true",
+        help="Emit source-proxy and audit-only nodes marked emit:false.",
+    )
+    args = parser.parse_args()
+
+    sampler = PersonaForwardSampler(
+        args.graph,
+        SamplingConfig(seed=args.seed, emit_only=not args.include_hidden),
+    )
+    meta = sampler.sample_to_file(args.n, args.out, args.format)
+    print(json.dumps(meta, indent=2))
+
+
+if __name__ == "__main__":
+    main()
