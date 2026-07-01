@@ -106,23 +106,24 @@ if [[ "${REUSE_RAW_HISTORIES:-0}" == "1" && -s "${RAW_USER_HISTORIES}" ]]; then
   echo ">> reusing existing raw histories: ${RAW_USER_HISTORIES}"
 else
   echo ">> exporting Amazon review histories from Hugging Face"
-  TOKEN_ARGS=()
-  [[ -n "${HF_TOKEN:-}" ]] && TOKEN_ARGS=(--token "${HF_TOKEN}")
-  PRODUCT_INFO_ARGS=()
+  EXPORT_CMD=(
+    python3 persona/curation/existing_data/scripts/export_hf_amazon_user_histories.py
+    --user-ids "${SELECTED_IDS}"
+    --repo-id "${HF_REPO_ID}"
+    --artifact-prefix "${HF_ARTIFACT_PREFIX}"
+    --categories "${HF_CATEGORIES}"
+    --output "${RAW_USER_HISTORIES}"
+  )
   if [[ "${INCLUDE_PRODUCT_INFO}" == "1" ]]; then
-    PRODUCT_INFO_ARGS=(
+    EXPORT_CMD+=(
       --include-product-info
       --metadata-artifact-prefix "${HF_METADATA_ARTIFACT_PREFIX}"
     )
   fi
-  python3 persona/curation/existing_data/scripts/export_hf_amazon_user_histories.py \
-    --user-ids "${SELECTED_IDS}" \
-    --repo-id "${HF_REPO_ID}" \
-    --artifact-prefix "${HF_ARTIFACT_PREFIX}" \
-    --categories "${HF_CATEGORIES}" \
-    --output "${RAW_USER_HISTORIES}" \
-    "${PRODUCT_INFO_ARGS[@]}" \
-    "${TOKEN_ARGS[@]}"
+  if [[ -n "${HF_TOKEN:-}" ]]; then
+    EXPORT_CMD+=(--token "${HF_TOKEN}")
+  fi
+  "${EXPORT_CMD[@]}"
 fi
 
 if [[ "${REUSE_PREPARED_HISTORIES:-0}" == "1" && -s "${USER_HISTORIES}" ]]; then
@@ -147,22 +148,24 @@ fi
 
 DATASET_SHA256="$(python3 -c 'import hashlib,sys; h=hashlib.sha256(); f=open(sys.argv[1],"rb"); [h.update(c) for c in iter(lambda: f.read(1024*1024), b"")]; print(h.hexdigest())' "${USER_HISTORIES}")"
 
-SCOPE_ARGS=()
-[[ "${DIMENSION_SCOPE}" == "all" ]] && SCOPE_ARGS=(--all-dimensions)
-
 echo ">> building worker package ${ASSIGNMENT_ID} for ${WORKER_ID}"
-python3 persona/curation/existing_data/scripts/make_package.py \
-  --source amazon \
-  --user-histories "${USER_HISTORIES}" \
-  --dimensions "${DIMENSIONS}" \
-  --range "0:${PREPARED_COUNT}" \
-  --out-dir "${OUT_DIR}" \
-  --assignment-id "${ASSIGNMENT_ID}" \
-  --worker-id "${WORKER_ID}" \
-  --dataset-id "${DATASET_ID}" \
-  --dataset-sha256 "${DATASET_SHA256}" \
-  --force \
-  "${SCOPE_ARGS[@]}"
+PACKAGE_CMD=(
+  python3 persona/curation/existing_data/scripts/make_package.py
+  --source amazon
+  --user-histories "${USER_HISTORIES}"
+  --dimensions "${DIMENSIONS}"
+  --range "0:${PREPARED_COUNT}"
+  --out-dir "${OUT_DIR}"
+  --assignment-id "${ASSIGNMENT_ID}"
+  --worker-id "${WORKER_ID}"
+  --dataset-id "${DATASET_ID}"
+  --dataset-sha256 "${DATASET_SHA256}"
+  --force
+)
+if [[ "${DIMENSION_SCOPE}" == "all" ]]; then
+  PACKAGE_CMD+=(--all-dimensions)
+fi
+"${PACKAGE_CMD[@]}"
 
 echo ""
 echo "done. package directory:"
