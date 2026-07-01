@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import asyncio
+import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -120,11 +122,12 @@ def _make_env(
     environment_dir.mkdir(exist_ok=True)
     trial_paths = TrialPaths(tmp_path / "trial")
     trial_paths.mkdir()
+    session_id = kwargs.pop("session_id", "session")
 
     env = uc.UseComputerEnvironment(
         environment_dir=environment_dir,
         environment_name="test-env",
-        session_id="session",
+        session_id=session_id,
         trial_paths=trial_paths,
         task_env_config=task_env_config
         or EnvironmentConfig(cpus=4, memory_mb=4096, storage_mb=40960),
@@ -546,6 +549,78 @@ def test_windows_support_is_ready_but_requires_windows_task_os(
 
 
 @pytest.mark.asyncio
+async def test_macos_start_writes_system_telemetry(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    (tmp_path / "task.toml").write_text(
+        '[task]\nname = "matraix/application-computer-use-macos-notification-preferences"\n'
+    )
+    sandbox = FakeSandbox()
+    env, _, _ = _make_env(
+        tmp_path,
+        monkeypatch,
+        sandbox=sandbox,
+        platform="macos",
+        session_id="trial-telemetry",
+    )
+
+    await env.start(force_build=False)
+    await env.stop(delete=True)
+
+    telemetry_commands = [
+        call["command"]
+        for call in sandbox.exec_ssh_calls
+        if "/tmp/matraix-telemetry/system_trace.json" in call["command"]
+    ]
+    assert len(telemetry_commands) == 1
+    match = re.search(r"\{.*\}", telemetry_commands[0], re.DOTALL)
+    assert match is not None
+    payload = json.loads(match.group())
+    assert payload["platform"] == "macos"
+    assert payload["session"]["trial_id"] == "trial-telemetry"
+    assert payload["session"]["task"] == (
+        "matraix/application-computer-use-macos-notification-preferences"
+    )
+    phases = [snap["phase"] for snap in payload["snapshots"]]
+    assert phases == ["baseline", "final"]
+
+
+@pytest.mark.asyncio
+async def test_macos_prepare_artifact_collection_flushes_telemetry_once(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    sandbox = FakeSandbox()
+    env, _, _ = _make_env(tmp_path, monkeypatch, sandbox=sandbox, platform="macos")
+    env._sandbox = sandbox
+
+    await env.start(force_build=False)
+    await env.prepare_artifact_collection()
+    await env.stop(delete=True)
+
+    telemetry_commands = [
+        call["command"]
+        for call in sandbox.exec_ssh_calls
+        if "/tmp/matraix-telemetry/system_trace.json" in call["command"]
+    ]
+    assert len(telemetry_commands) == 1
+
+
+def test_reservation_id_resolves_env_template(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("USE_COMPUTER_RESERVATION_ID", "from-env")
+    env = uc._resolve_reservation_id("${USE_COMPUTER_RESERVATION_ID}")
+    assert env == "from-env"
+
+
+def test_reservation_id_falls_back_to_env_when_kwarg_empty(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("USE_COMPUTER_RESERVATION_ID", "env-only")
+    assert uc._resolve_reservation_id("") == "env-only"
+
+
+@pytest.mark.asyncio
 async def test_macos_remaps_harbor_paths_for_exec_and_upload(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
@@ -580,6 +655,44 @@ async def test_macos_remaps_harbor_paths_for_exec_and_upload(
         str(local_file),
         "/tmp/harbor/tests/answer.txt",
     )
+
+
+@pytest.mark.asyncio
+async def test_macos_upload_remaps_app_input_path(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    sandbox = FakeSandbox()
+    env, _, _ = _make_env(tmp_path, monkeypatch, sandbox=sandbox, platform="macos")
+    env._sandbox = sandbox
+
+    local_file = tmp_path / "persona.yaml"
+    local_file.write_text("persona_id: '0042'\n")
+    await env.upload_file(local_file, "/app/input/persona.yaml")
+
+    assert sandbox.uploads[-1] == (
+        str(local_file),
+        "/Users/lume/input/persona.yaml",
+    )
+    mkdir_commands = [
+        call["command"]
+        for call in sandbox.exec_ssh_calls
+        if "mkdir -p" in call["command"]
+    ]
+    assert any("/Users/lume/input" in command for command in mkdir_commands)
+
+
+@pytest.mark.asyncio
+async def test_ios_upload_remaps_app_input_to_tmp_harbor(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    env, _, _ = _make_env(tmp_path, monkeypatch, platform="ios")
+    assert (
+        env._remote_path("/app/input/persona.yaml")
+        == "/tmp/harbor/app/input/persona.yaml"
+    )
+    assert env._remote_path("/workspace/out.txt") == "/tmp/harbor/app/out.txt"
 
 
 @pytest.mark.asyncio

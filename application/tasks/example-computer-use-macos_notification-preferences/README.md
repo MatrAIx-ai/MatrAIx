@@ -9,6 +9,7 @@ Uses **`persona-computer-1`** → use.computer **`AnthropicCUAAgent`** (native s
 ```bash
 uv sync --extra use-computer --extra computer-1
 export USE_COMPUTER_API_KEY=...
+export USE_COMPUTER_RESERVATION_ID=...  # Mac Mini reservation (local .env; do not commit)
 export ANTHROPIC_API_KEY=...
 ```
 
@@ -40,6 +41,8 @@ Oracle check (no LLM; writes the decision file directly):
 ```bash
 uv run harbor run -p application/tasks/example-computer-use-macos_notification-preferences -a oracle -e use-computer
 ```
+
+With a job config, set `USE_COMPUTER_RESERVATION_ID` in your environment; the checked-in recipe uses `reservation_id: ${USE_COMPUTER_RESERVATION_ID}`.
 
 ## Output path
 

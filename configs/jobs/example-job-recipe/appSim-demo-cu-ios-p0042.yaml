@@ -1,12 +1,7 @@
-# iOS mobile computer-use task. Requires USE_COMPUTER_API_KEY + ANTHROPIC_API_KEY.
-# iOS also needs a use.computer Mac Mini reservation — set USE_COMPUTER_RESERVATION_ID
-# in your shell or .env (do not commit reservation UUIDs to git).
-#
-#   uv sync --extra use-computer --extra computer-1
-#   export USE_COMPUTER_RESERVATION_ID=your-reservation-uuid
-#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-ios-local.yaml
+# iOS notification-preferences demo — persona 0042.
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-demo-cu-ios-p0042.yaml
 
-job_name: appSim-example-computer-use-ios-local
+job_name: appSim-demo-cu-ios-p0042
 jobs_dir: jobs
 n_attempts: 1
 timeout_multiplier: 1.0

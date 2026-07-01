@@ -55,6 +55,8 @@ export interface JobResult {
   n_total_trials: number;
   stats: JobStats;
   job_uri: string;
+  canonical_job_name?: string;
+  requested_job_name?: string;
 }
 
 export interface TaskSummary {

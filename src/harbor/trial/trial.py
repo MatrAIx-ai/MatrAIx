@@ -423,11 +423,32 @@ class Trial(ABC):
         if self.agent_environment.capabilities.mounted:
             return
 
+        exclude = self.config.agent.exclude_logs or []
+        source_dir = self.paths.agent_dir
+        target_dir = self.agent_env_paths.agent_dir.as_posix()
+
         try:
-            await self.agent_environment.upload_dir(
-                source_dir=self.paths.agent_dir,
-                target_dir=self.agent_env_paths.agent_dir.as_posix(),
-            )
+            if exclude:
+                from harbor.utils.path_filter import filter_paths_by_patterns
+
+                rel_paths = [
+                    path.relative_to(source_dir).as_posix()
+                    for path in source_dir.rglob("*")
+                    if path.is_file()
+                ]
+                selected = filter_paths_by_patterns(rel_paths, exclude=exclude)
+                if not selected:
+                    return
+                for rel_path in selected:
+                    await self.agent_environment.upload_file(
+                        source_dir / rel_path,
+                        f"{target_dir.rstrip('/')}/{rel_path}",
+                    )
+            else:
+                await self.agent_environment.upload_dir(
+                    source_dir=source_dir,
+                    target_dir=target_dir,
+                )
         except Exception:
             self.logger.error("Failed to upload agent logs back to environment")
 
@@ -838,6 +859,13 @@ class Trial(ABC):
 
         self.logger.debug("Collecting main service artifacts")
         await self._run_collect_hooks(main_hooks)
+        try:
+            await self.agent_environment.prepare_artifact_collection()
+        except Exception as exc:
+            self.logger.warning(
+                "prepare_artifact_collection failed before main artifact download: %s",
+                exc,
+            )
         await self._artifact_handler.download_artifacts(
             self.agent_environment,
             artifacts_dir,

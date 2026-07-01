@@ -1,0 +1,29 @@
+# iOS notification-preferences demo — persona 1206.
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-demo-cu-ios-p1206.yaml
+
+job_name: appSim-demo-cu-ios-p1206
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+n_concurrent_trials: 1
+quiet: false
+
+environment:
+  type: use-computer
+  delete: true
+  kwargs:
+    platform: ios
+    reservation_id: ${USE_COMPUTER_RESERVATION_ID}
+
+agents:
+  - name: persona-computer-1
+    model_name: anthropic/claude-sonnet-4-6
+    exclude_logs:
+      - recording.mp4
+    kwargs:
+      persona_path: persona/datasets/bench-dev-2000/persona_1206.yaml
+      max_steps: 40
+      recording_enabled: false
+
+tasks:
+  - path: application/tasks/example-computer-use-ios_notification-preferences

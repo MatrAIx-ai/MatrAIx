@@ -24,7 +24,7 @@ Harbor Job YAML under `configs/jobs/`. Run with `harbor run -c configs/jobs/<sub
 | `example-job-recipe/appSim-example-web-linux-cua-local.yaml` | Docker Linux web CUA |
 | `example-job-recipe/appSim-example-computer-use-linux-local.yaml` | Linux desktop notifications |
 | `example-job-recipe/appSim-example-computer-use-macos-local.yaml` | macOS desktop |
-| `example-job-recipe/appSim-example-computer-use-ios-local.yaml` | iOS Simulator |
+| `example-job-recipe/appSim-example-computer-use-ios-local.yaml` | iOS Simulator (system telemetry + recording) |
 
 ## Checked-in batch examples
 
@@ -55,6 +55,7 @@ Regenerate locally via `persona/scripts/generate_persona_job.py` → `configs/jo
 - `ANTHROPIC_API_KEY` — Claude-family persona agents
 - `LLM_API_KEY` — `persona-openhands-sdk` (Playwright web)
 - `USE_COMPUTER_API_KEY` — `persona-computer-1` with `-e use-computer` (macOS / iOS)
+- `USE_COMPUTER_RESERVATION_ID` — Mac Mini reservation for macOS / iOS (`reservation_id: ${USE_COMPUTER_RESERVATION_ID}` in job YAML; keep UUID in `.env`, not git)
 - Docker Linux CUA needs `ANTHROPIC_API_KEY` + `uv sync --extra computer-1`
 - `DAYTONA_API_KEY` — when `environment.type: daytona`
 
@@ -66,4 +67,4 @@ See [`.env.example`](../../.env.example) and [choosing-an-agent.md](../../docs/e
 uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-debug-local.yaml
 ```
 
-Computer-use: `persona-computer-1` auto-routes — see `example-job-recipe/appSim-example-computer-use-*` and `example-job-recipe/appSim-example-web-linux-cua-local.yaml`.
+Computer-use: `persona-computer-1` auto-routes — see `example-job-recipe/appSim-example-computer-use-*` and `example-job-recipe/appSim-example-web-linux-cua-local.yaml`. System telemetry: [computer-use-telemetry.md](../../docs/environments/computer-use-telemetry.md).

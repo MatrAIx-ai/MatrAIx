@@ -12,6 +12,9 @@
 | Persona agents | `src/matraix/` |
 | Trial inspection | `apps/viewer/`, `harbor view` |
 | Agent & model selection | [choosing-an-agent.md](./choosing-an-agent.md) |
+| Computer-use system telemetry | [computer-use-telemetry.md](./computer-use-telemetry.md) |
+| CU telemetry — demo walkthrough | [computer-use-telemetry-demo.md](./computer-use-telemetry-demo.md) |
+| CU telemetry — design & implementation | [computer-use-telemetry-design.md](./computer-use-telemetry-design.md) |
 | Team PLAN | [PLAN.md](./PLAN.md) |
 
 > **No** root-level `environments/` directory — that would collide with `src/harbor/environments/`.

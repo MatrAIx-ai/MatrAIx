@@ -34,6 +34,17 @@ def _has_bun() -> bool:
     return shutil.which("bun") is not None
 
 
+def _viewer_package_manager() -> tuple[str, list[str], list[str]] | None:
+    """Return (name, install_cmd, build_cmd) for an available JS package manager."""
+    import shutil
+
+    if shutil.which("bun"):
+        return ("bun", ["bun", "install"], ["bun", "run", "build"])
+    if shutil.which("npm"):
+        return ("npm", ["npm", "install"], ["npm", "run", "build"])
+    return None
+
+
 def _build_viewer() -> bool:
     """Build the viewer frontend and copy to static directory.
 
@@ -43,19 +54,22 @@ def _build_viewer() -> bool:
         console.print(f"[red]Error:[/red] Viewer source not found at {VIEWER_DIR}")
         return False
 
-    if not _has_bun():
+    pm = _viewer_package_manager()
+    if pm is None:
         console.print(
-            "[red]Error:[/red] bun is required to build the viewer. "
-            "Install it from https://bun.com"
+            "[red]Error:[/red] bun or npm is required to build the viewer.\n"
+            "  Install bun: https://bun.com\n"
+            "  Or use Node.js (npm): https://nodejs.org"
         )
         return False
 
-    console.print("[blue]Building viewer...[/blue]")
+    pm_name, install_cmd, build_cmd = pm
+    console.print(f"[blue]Building viewer with {pm_name}...[/blue]")
 
     # Install dependencies
     console.print("  Installing dependencies...")
     result = subprocess.run(
-        ["bun", "install"],
+        install_cmd,
         cwd=VIEWER_DIR,
         capture_output=True,
         text=True,
@@ -68,7 +82,7 @@ def _build_viewer() -> bool:
     # Build
     console.print("  Building frontend...")
     result = subprocess.run(
-        ["bun", "run", "build"],
+        build_cmd,
         cwd=VIEWER_DIR,
         capture_output=True,
         text=True,
@@ -327,12 +341,16 @@ def _run_dev_mode(
         console.print("  Dev mode requires the viewer source code.")
         raise SystemExit(1)
 
-    if not _has_bun():
+    pm = _viewer_package_manager()
+    if pm is None:
         console.print(
-            "[red]Error:[/red] bun is required for dev mode. "
-            "Install it from https://bun.com"
+            "[red]Error:[/red] bun or npm is required for dev mode.\n"
+            "  Install bun: https://bun.com\n"
+            "  Or use Node.js (npm): https://nodejs.org"
         )
         raise SystemExit(1)
+
+    pm_name, install_cmd, _build_cmd = pm
 
     folder_label = "Tasks folder" if mode == "tasks" else "Jobs folder"
     console.print("[green]Starting MatrAIx Viewer (dev mode)[/green]")
@@ -343,23 +361,26 @@ def _run_dev_mode(
     console.print()
 
     # Install frontend dependencies
-    console.print("  Installing frontend dependencies...")
+    console.print(f"  Installing frontend dependencies ({pm_name})...")
     result = subprocess.run(
-        ["bun", "install"],
+        install_cmd,
         cwd=VIEWER_DIR,
         capture_output=True,
         text=True,
     )
     if result.returncode != 0:
-        console.print(f"[red]Error:[/red] bun install failed:\n{result.stderr}")
+        console.print(
+            f"[red]Error:[/red] {pm_name} install failed:\n{result.stderr}"
+        )
         raise SystemExit(1)
 
     # Start frontend dev server in subprocess
     frontend_env = os.environ.copy()
     frontend_env["VITE_API_URL"] = f"http://{host}:{backend_port}"
 
+    dev_cmd = ["bun", "run", "dev"] if pm_name == "bun" else ["npm", "run", "dev"]
     frontend_proc = subprocess.Popen(
-        ["bun", "run", "dev"],
+        dev_cmd,
         cwd=VIEWER_DIR,
         env=frontend_env,
     )

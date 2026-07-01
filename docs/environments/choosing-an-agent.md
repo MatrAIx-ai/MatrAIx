@@ -46,7 +46,7 @@ Persona agents read API keys from the **host** shell (or job `agents[].env`). Na
 | `persona-openhands-sdk` | **`LLM_API_KEY`** | Not the provider-native name. Map before run, e.g. `export LLM_API_KEY="$ANTHROPIC_API_KEY"` or `"$GEMINI_API_KEY"` or `"$OPENAI_API_KEY"` (match `-m`). |
 | `persona-browser-use` | `ANTHROPIC_API_KEY` or `LLM_API_KEY` | OpenAI models: `OPENAI_API_KEY`. |
 | `persona-cocoa` | `ANTHROPIC_API_KEY` or `LLM_API_KEY` | Task image must be AIO Sandbox-based. |
-| `persona-computer-1` | `USE_COMPUTER_API_KEY` + `ANTHROPIC_API_KEY` | use.computer (macOS/iOS). Docker Linux CUA needs only `ANTHROPIC_API_KEY`. Install: `uv sync --extra use-computer --extra computer-1`. |
+| `persona-computer-1` | `USE_COMPUTER_API_KEY` + model API key | **macOS / iOS (use.computer):** `ANTHROPIC_API_KEY` — routes to Anthropic native computer-use (`AnthropicCUAAgent` / `IOSAgent`). Groq and other providers are **not** supported on this path today. **Docker Linux CUA** uses Harbor `Computer1` + `ANTHROPIC_API_KEY` (or other providers via `-m` if configured). Install: `uv sync --extra use-computer --extra computer-1`. |
 
 Job YAML can pass keys per agent, e.g. `agents[].env.LLM_API_KEY: ${ANTHROPIC_API_KEY}`.
 
@@ -64,7 +64,9 @@ export LLM_API_KEY="$ANTHROPIC_API_KEY"
 # export LLM_API_KEY="$GEMINI_API_KEY"
 # export LLM_API_KEY="$OPENAI_API_KEY"
 
-export USE_COMPUTER_API_KEY=...  # persona-computer-1
+export USE_COMPUTER_API_KEY=...  # persona-computer-1 (macOS/iOS)
+export USE_COMPUTER_RESERVATION_ID=...  # Mac Mini reservation (macOS/iOS only)
+export ANTHROPIC_API_KEY=...  # required for persona-computer-1 on use.computer
 ```
 
 Variable names per agent: see [`.env.example`](../../.env.example). Optional: [direnv](https://direnv.net/) with a gitignored `.envrc`.
@@ -98,3 +100,4 @@ Add **Suggested setup (non-binding)** in `application/.../README.md` (or `person
 - [applications/README.md](../applications/README.md)
 - [configs/jobs/README.md](../../configs/jobs/README.md)
 - [web-interaction.md](../applications/web-interaction.md)
+- [computer-use-telemetry.md](computer-use-telemetry.md) — system-side traces for macOS / iOS `use-computer` trials

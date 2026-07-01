@@ -11,7 +11,10 @@ from harbor.models.agent.context import AgentContext
 from harbor.models.agent.name import AgentName
 
 from matraix.agents.persona.cua_submission import materialize_cua_submission_profile
-from matraix.agents.persona.ios_submission import materialize_ios_decision_file
+from matraix.agents.persona.ios_submission import (
+    IOS_SUBMISSION_INSTRUCTION_FOOTER,
+    materialize_ios_decision_file,
+)
 from matraix.agents.persona.mixin import PersonaMixin
 
 CuaBackendKind = Literal["use_computer_desktop", "ios", "docker_computer1"]
@@ -146,6 +149,20 @@ class PersonaComputer1(PersonaMixin, BaseAgent):
         self._delegate: BaseAgent | None = None
         self._delegate_kind: CuaBackendKind | None = None
 
+    @staticmethod
+    def _coerce_bool(value: object, *, default: bool = True) -> bool:
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, str):
+            return value.strip().lower() in {"1", "true", "yes", "on"}
+        return default if value is None else bool(value)
+
+    def _recording_enabled(self) -> bool:
+        return self._coerce_bool(
+            self._delegate_kwargs.get("recording_enabled"),
+            default=True,
+        )
+
     def version(self) -> str | None:
         if self._delegate is not None:
             return self._delegate.version()
@@ -184,9 +201,18 @@ class PersonaComputer1(PersonaMixin, BaseAgent):
         context: AgentContext,
     ) -> None:
         await self._prepare_persona_trial(environment)
-        rendered = self._render_persona_instruction(instruction)
         delegate = self._get_delegate(environment)
+        rendered = self._render_persona_instruction(instruction)
+        if self._delegate_kind == "ios":
+            rendered = f"{rendered.rstrip()}\n{IOS_SUBMISSION_INSTRUCTION_FOOTER}"
         await delegate.run(rendered, environment, context)
+        if self._delegate_kind == "ios" and not self._recording_enabled():
+            recording_path = self.logs_dir / "recording.mp4"
+            if recording_path.is_file():
+                recording_path.unlink()
+                self.logger.info(
+                    "removed %s (recording_enabled=false)", recording_path.name
+                )
         if self._delegate_kind == "ios":
             await materialize_ios_decision_file(
                 environment,

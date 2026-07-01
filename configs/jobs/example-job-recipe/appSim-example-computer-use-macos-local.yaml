@@ -1,6 +1,9 @@
 # macOS desktop computer-use task. Requires USE_COMPUTER_API_KEY + ANTHROPIC_API_KEY.
+# macOS also needs a use.computer Mac Mini reservation — set USE_COMPUTER_RESERVATION_ID
+# in your shell or .env (do not commit reservation UUIDs to git).
 #
 #   uv sync --extra use-computer --extra computer-1
+#   export USE_COMPUTER_RESERVATION_ID=your-reservation-uuid
 #   uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-macos-local.yaml
 
 job_name: appSim-example-computer-use-macos-local
@@ -13,12 +16,15 @@ quiet: false
 environment:
   type: use-computer
   delete: true
+  kwargs:
+    reservation_id: ${USE_COMPUTER_RESERVATION_ID}
 
 agents:
   - name: persona-computer-1
     model_name: anthropic/claude-sonnet-4-6
     kwargs:
       persona_path: persona/datasets/bench-dev-2000/persona_0042.yaml
+      max_steps: 25
 
 tasks:
   - path: application/tasks/example-computer-use-macos_notification-preferences

@@ -568,6 +568,14 @@ export default function Job() {
     },
   });
 
+  useEffect(() => {
+    const canonical = job?.canonical_job_name;
+    if (!canonical || canonical === jobName) {
+      return;
+    }
+    navigate(`/jobs/${encodeURIComponent(canonical)}`, { replace: true });
+  }, [job?.canonical_job_name, jobName, navigate]);
+
   // Fetch filter options
   const { data: filtersData } = useQuery({
     queryKey: ["task-filters", jobName],

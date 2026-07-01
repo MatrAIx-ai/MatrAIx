@@ -1,5 +1,8 @@
 schema_version = "1.1"
-artifacts = [ "/tmp/matraix-ios-notification-preferences",]
+artifacts = [
+  "/tmp/matraix-ios-notification-preferences",
+  "/tmp/matraix-telemetry",
+]
 
 [task]
 name = "matraix/application-computer-use-ios-notification-preferences"

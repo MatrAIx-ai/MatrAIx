@@ -643,10 +643,16 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
     scanner = JobScanner(jobs_dir)
     resolved_jobs_dir = jobs_dir.resolve()
 
+    def _canonical_job_name(job_name: str) -> str:
+        return scanner.resolve_job_name(job_name)
+
+    def _job_is_known(job_name: str) -> bool:
+        return _canonical_job_name(job_name) in scanner.list_jobs()
+
     def _validate_job_path(job_name: str) -> Path:
         """Validate job name and return the resolved job directory."""
-        job_dir = (jobs_dir / job_name).resolve()
-        if resolved_jobs_dir not in job_dir.parents:
+        job_dir = scanner._resolve_job_dir(job_name).resolve()
+        if job_dir != resolved_jobs_dir and resolved_jobs_dir not in job_dir.parents:
             raise HTTPException(status_code=400, detail="Invalid job name")
         return job_dir
 
@@ -886,6 +892,8 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
     @app.get("/api/jobs/{job_name}")
     def get_job(job_name: str) -> dict[str, Any]:
         """Get full job result details."""
+        requested_job_name = job_name
+        job_name = _canonical_job_name(job_name)
         job_dir = _validate_job_path(job_name)
         if not job_dir.exists():
             raise HTTPException(status_code=404, detail=f"Job '{job_name}' not found")
@@ -893,8 +901,7 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
         result = scanner.get_job_result(job_name)
         if result is None:
             # Return minimal info for jobs without result.json (incomplete jobs)
-            # Count trials from subdirectories
-            n_trials = sum(1 for d in job_dir.iterdir() if d.is_dir())
+            n_trials = len(scanner.list_trials(job_name))
             stats = JobStats.from_counts(
                 n_total_trials=n_trials,
             )
@@ -906,11 +913,16 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
                 "n_total_trials": n_trials,
                 "stats": stats.model_dump(mode="json"),
                 "job_uri": job_dir.resolve().as_uri(),
+                "canonical_job_name": job_name,
+                "requested_job_name": requested_job_name,
             }
 
         # Convert to dict and add job_uri
         result_dict = result.model_dump(mode="json")
         result_dict["job_uri"] = job_dir.resolve().as_uri()
+        result_dict["canonical_job_name"] = job_name
+        if requested_job_name != job_name:
+            result_dict["requested_job_name"] = requested_job_name
         return result_dict
 
     @app.get("/api/jobs/{job_name}/summary")
@@ -1414,7 +1426,8 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
         """Get available filter options for tasks list within a job."""
         from collections import Counter
 
-        if job_name not in scanner.list_jobs():
+        job_name = _canonical_job_name(job_name)
+        if not _job_is_known(job_name):
             raise HTTPException(status_code=404, detail=f"Job '{job_name}' not found")
 
         summaries = _get_all_task_summaries(job_name)
@@ -1472,7 +1485,8 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
         sort_order: str = Query(default="asc", description="Sort order (asc or desc)"),
     ) -> PaginatedResponse[TaskSummary]:
         """List tasks in a job, grouped by agent + model + source + task_name."""
-        if job_name not in scanner.list_jobs():
+        job_name = _canonical_job_name(job_name)
+        if not _job_is_known(job_name):
             raise HTTPException(status_code=404, detail=f"Job '{job_name}' not found")
 
         summaries = _get_all_task_summaries(job_name)
@@ -1603,9 +1617,10 @@ def _register_job_endpoints(app: FastAPI, jobs_dir: Path) -> None:
         ),
     ) -> PaginatedResponse[TrialSummary]:
         """List trials in a job with pagination and optional filtering."""
+        job_name = _canonical_job_name(job_name)
         trial_names = scanner.list_trials(job_name)
         if not trial_names:
-            if job_name not in scanner.list_jobs():
+            if not _job_is_known(job_name):
                 raise HTTPException(
                     status_code=404, detail=f"Job '{job_name}' not found"
                 )
