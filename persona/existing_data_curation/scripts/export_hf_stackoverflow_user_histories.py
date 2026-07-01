@@ -390,19 +390,38 @@ def main(argv: Iterable[str]) -> int:
             histories[user_id].extend(posts)
 
     if requested_user_ids is None:
-        ordered_user_ids = _ordered_all_users(histories)
+        min_posts_floor = max(1, args.min_posts)
+        filtered_histories = {
+            uid: posts
+            for uid, posts in histories.items()
+            if len(posts) >= min_posts_floor
+        }
+        ordered_user_ids = _ordered_all_users(filtered_histories)
         if args.max_users:
             ordered_user_ids = ordered_user_ids[: args.max_users]
+        below_min = len(histories) - len(filtered_histories)
+        written = write_histories(
+            args.output, filtered_histories, ordered_user_ids, min_posts=args.min_posts
+        )
+        missing = len(ordered_user_ids) - written
+        log(f"Wrote {written:,} user histories to {args.output}")
+        if below_min:
+            log(f"{below_min:,} users skipped: fewer than --min-posts ({min_posts_floor}) posts")
+        if missing:
+            log(f"{missing:,} users had no matching posts in selected shards")
     else:
         ordered_user_ids = requested_user_ids
-
-    written = write_histories(
-        args.output, histories, ordered_user_ids, min_posts=args.min_posts
-    )
-    missing = len(ordered_user_ids) - written
-    log(f"Wrote {written:,} user histories to {args.output}")
-    if missing:
-        log(f"{missing:,} requested users had no matching posts in selected shards")
+        written = write_histories(
+            args.output, histories, ordered_user_ids, min_posts=args.min_posts
+        )
+        missing = len(ordered_user_ids) - written
+        no_posts = sum(1 for uid in ordered_user_ids if not histories.get(uid))
+        below_min = missing - no_posts
+        log(f"Wrote {written:,} user histories to {args.output}")
+        if no_posts:
+            log(f"{no_posts:,} requested users had no matching posts in selected shards")
+        if below_min:
+            log(f"{below_min:,} requested users filtered by --min-posts ({max(1, args.min_posts)})")
     return 0
 
 
