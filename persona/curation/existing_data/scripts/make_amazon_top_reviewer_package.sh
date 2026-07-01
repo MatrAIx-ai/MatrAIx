@@ -20,6 +20,7 @@
 #   REUSE_RAW_HISTORIES=1
 #   REUSE_PREPARED_HISTORIES=1
 #   TEMPORAL_TRAIN_FRACTION=0.8
+#   MAX_TEXT_REVIEWS_PER_USER=200
 #
 set -euo pipefail
 
@@ -160,6 +161,7 @@ PACKAGE_CMD=(
   --worker-id "${WORKER_ID}"
   --dataset-id "${DATASET_ID}"
   --dataset-sha256 "${DATASET_SHA256}"
+  --max-reviews-per-user "${MAX_TEXT_REVIEWS_PER_USER:-200}"
   --force
 )
 if [[ "${DIMENSION_SCOPE}" == "all" ]]; then

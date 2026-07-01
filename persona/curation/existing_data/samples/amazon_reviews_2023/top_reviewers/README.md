@@ -68,6 +68,13 @@ The prepared history JSONL contains:
 Rows without review title/text are kept only when they have a valid rating and
 compact product context. Their product/category signals are summarized in the
 category stats and rendered into the package `profile_text` summary section.
+They are not rendered as individual review blocks.
+
+For individual review evidence, the package renders at most 200 high-signal
+text reviews per reviewer from the temporal construction split. Text reviews
+are ranked by signal features such as text length, helpful votes, verified
+purchase, review title, product context, and rating specificity, then rendered
+chronologically. Override this with `MAX_TEXT_REVIEWS_PER_USER`.
 
 ## Temporal Split vs Package Evidence Folds
 
@@ -96,6 +103,7 @@ Other useful overrides:
 - `AMAZON_REVIEWS_ARTIFACT_PREFIX`: HF user-bucket artifact prefix
 - `AMAZON_METADATA_ARTIFACT_PREFIX`: HF metadata artifact prefix
 - `AMAZON_CATEGORIES`: comma-separated category subset, or `all`
+- `MAX_TEXT_REVIEWS_PER_USER`: max rendered text reviews per user, default `200`
 - `REUSE_RAW_HISTORIES=1`: skip HF review retrieval when raw histories exist
 - `REUSE_PREPARED_HISTORIES=1`: skip preparation when prepared histories exist
 

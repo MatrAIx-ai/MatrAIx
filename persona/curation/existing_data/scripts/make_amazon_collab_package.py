@@ -104,6 +104,56 @@ def _spread_across_time(
     return [reviews[idx] for idx in chosen_indexes]
 
 
+def _helpful_vote_number(review: dict[str, Any]) -> int:
+    try:
+        return int(_review_helpful_vote(review) or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _rating_number(review: dict[str, Any]) -> float | None:
+    try:
+        return float(review.get("rating"))
+    except (TypeError, ValueError):
+        return None
+
+
+def _has_text_review(review: dict[str, Any]) -> bool:
+    return bool(_review_text(review).strip())
+
+
+def _text_review_signal_score(review: dict[str, Any]) -> tuple[float, int]:
+    text = _review_text(review)
+    rating = _rating_number(review)
+    score = min(len(text), 4000) / 4000
+    score += min(_helpful_vote_number(review), 25) / 25
+    if _review_verified(review) is True:
+        score += 0.25
+    if _review_title_evidence(review):
+        score += 0.20
+    if _product_title(review) or _product_main_category(review) or _product_category_path(review):
+        score += 0.10
+    if rating is not None and rating != 3:
+        score += 0.10
+    return (score, len(text))
+
+
+def _select_high_signal_text_reviews(
+    reviews: list[dict[str, Any]],
+    max_reviews_per_user: int,
+) -> list[dict[str, Any]]:
+    text_reviews = [review for review in reviews if _has_text_review(review)]
+    if len(text_reviews) <= max_reviews_per_user:
+        return _sorted_reviews(text_reviews)
+    ranked = sorted(
+        enumerate(text_reviews),
+        key=lambda item: (_text_review_signal_score(item[1]), -item[0]),
+        reverse=True,
+    )
+    selected = [review for _idx, review in ranked[:max_reviews_per_user]]
+    return _sorted_reviews(selected)
+
+
 def _review_category(review: dict[str, Any]) -> str:
     return str(review.get("category") or review.get("source_category") or "Unknown")
 
@@ -447,17 +497,22 @@ def build_task(
         raise ValueError(f"user {user_id}: expected reviews list")
 
     review_objects = _review_objects(raw_reviews, user_id=user_id)
-    usable_reviews = [review for review in review_objects if _has_review_evidence(review)]
-    if len(usable_reviews) < 2:
+    construction_reviews = [
+        review for review in review_objects if _has_review_evidence(review)
+    ]
+    selected_reviews = _select_high_signal_text_reviews(
+        construction_reviews,
+        max_reviews_per_user,
+    )
+    if len(selected_reviews) < 2:
         raise ValueError(
-            f"user {user_id}: fewer than 2 usable reviews with text or product context "
-            f"({len(usable_reviews)} usable of {len(raw_reviews)} raw reviews)"
+            f"user {user_id}: fewer than 2 text reviews after filtering "
+            f"({len(selected_reviews)} selected text reviews of {len(raw_reviews)} "
+            "construction rows)"
         )
 
-    sorted_reviews = _sorted_reviews(usable_reviews)
-    selected_reviews = _spread_across_time(sorted_reviews, max_reviews_per_user)
-    usable_review_count = len(selected_reviews)
-    effective_cv_folds = min(cv_folds, usable_review_count)
+    selected_review_count = len(selected_reviews)
+    effective_cv_folds = min(cv_folds, selected_review_count)
     if effective_cv_folds < 2:
         raise ValueError(
             f"user {user_id}: effective_cv_folds must be at least 2, got {effective_cv_folds}"
@@ -510,6 +565,8 @@ def build_task(
     )
 
     categories = sorted({_review_category(review) for review in selected_reviews})
+    construction_text_review_count = sum(1 for review in construction_reviews if _has_text_review(review))
+    construction_non_text_row_count = len(construction_reviews) - construction_text_review_count
     task = {
         "global_idx": global_idx,
         "task_id": f"{SOURCE}:{user_id}",
@@ -520,7 +577,13 @@ def build_task(
         "source": SOURCE,
         "user_id": user_id,
         "review_count": len(raw_reviews),
-        "selected_review_count": usable_review_count,
+        "construction_row_count": len(construction_reviews),
+        "construction_text_review_count": construction_text_review_count,
+        "construction_non_text_row_count": construction_non_text_row_count,
+        "selected_review_count": selected_review_count,
+        "selected_text_review_count": selected_review_count,
+        "max_text_reviews_per_user": max_reviews_per_user,
+        "text_review_selection_policy": "top_high_signal_text_reviews_from_temporal_construction_split",
         "categories": categories,
         "summary_stats": row.get("category_review_stats") or {},
         "cv_folds": cv_folds,
@@ -621,7 +684,7 @@ def build_amazon_collab_package(
     range_end: int,
     cv_folds: int = 3,
     min_support_folds: int = 2,
-    max_reviews_per_user: int = 90,
+    max_reviews_per_user: int = 200,
     max_review_text_chars: int = 900,
     max_profile_text_chars: int = 70000,
     all_dimensions: bool = False,
@@ -729,7 +792,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--dataset-sha256", required=True)
     parser.add_argument("--cv-folds", type=int, default=3)
     parser.add_argument("--min-support-folds", type=int, default=2)
-    parser.add_argument("--max-reviews-per-user", type=int, default=90)
+    parser.add_argument("--max-reviews-per-user", type=int, default=200)
     parser.add_argument("--max-review-text-chars", type=int, default=900)
     parser.add_argument("--max-profile-text-chars", type=int, default=70000)
     parser.add_argument("--all-dimensions", action="store_true")
