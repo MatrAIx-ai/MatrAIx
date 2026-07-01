@@ -395,3 +395,33 @@ def test_build_cv_fold_texts_uses_custom_id_field() -> None:
     assert fold_texts[0]["profile_text"].startswith("=== Fold 1/2 ===")
     assert "[p0003]" in fold_texts[0]["profile_text"]
 
+
+def test_stackoverflow_evidence_mapping_filters_catalog_categories() -> None:
+    from persona.existing_data_curation.scripts.history_package_common import (
+        filter_supported_dimensions,
+        load_evidence_mapping,
+    )
+
+    repo_root = Path(__file__).resolve().parents[3]
+    mapping = load_evidence_mapping(
+        repo_root
+        / "persona/existing_data_curation/configs/stackoverflow_evidence_mapping.json"
+    )
+    dimensions = [
+        {"id": "d1", "category": "Skills: Programming"},
+        {"id": "d2", "category": "Linguistic: Communication"},
+        {"id": "d3", "category": "External: Datasets"},
+        {"id": "d4", "category": "Interests: Food"},
+    ]
+    filtered = filter_supported_dimensions(dimensions, mapping)
+    assert [dim["id"] for dim in filtered] == ["d1", "d2"]
+
+    config = json.loads(
+        (
+            repo_root
+            / "persona/existing_data_curation/configs/stackexchange_persona.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert config["source"]["repo_id"] == "MatrAIx2026/MatrAIx2026"
+    assert config["source"]["artifact_prefix"] == "StackExchange_Persona"
+
