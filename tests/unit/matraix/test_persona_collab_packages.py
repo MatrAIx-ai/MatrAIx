@@ -426,6 +426,130 @@ def test_stackoverflow_evidence_mapping_filters_catalog_categories() -> None:
     assert config["source"]["artifact_prefix"] == "StackExchange_Persona"
 
 
+def test_hf_stackoverflow_exporter_writes_normalized_user_histories(
+    tmp_path: Path, monkeypatch
+) -> None:
+    from persona.existing_data_curation.scripts import (
+        export_hf_stackoverflow_user_histories as exporter,
+    )
+
+    user_ids = tmp_path / "so_user_ids.md"
+    user_ids.write_text("# Users\n\n- 42\n- 777\n", encoding="utf-8")
+
+    def fake_list_relevant_shards(*, repo_id, artifact_prefix, years, token):
+        assert repo_id == "MatrAIx2026/MatrAIx2026"
+        assert artifact_prefix == "StackExchange_Persona"
+        assert years == {"2025"}
+        return ["StackExchange_Persona/2025/stackoverflow_persona_batch_00001.parquet"]
+
+    def fake_read_shard_rows(_repo_id, _filename, _token):
+        return [
+            {
+                "OwnerUserId": 42,
+                "Id": 102,
+                "PostTypeId": 2,
+                "CreationDate": "2024-02-04T00:00:00Z",
+                "Tags": "<python>",
+                "Title": None,
+                "Body": "<p>Use explicit validation.</p>",
+                "Score": 30,
+            },
+            {
+                "OwnerUserId": 42,
+                "Id": 101,
+                "PostTypeId": 1,
+                "CreationDate": "2024-01-01T00:00:00Z",
+                "Tags": "<python><pandas>",
+                "Title": "How do I merge dataframes safely?",
+                "Body": "<p>I compared several approaches.</p>",
+                "Score": 12,
+            },
+            {
+                "OwnerUserId": 999,
+                "Id": 300,
+                "PostTypeId": 1,
+                "CreationDate": "2024-03-01T00:00:00Z",
+                "Tags": "",
+                "Title": "Unrelated user",
+                "Body": "skip me",
+                "Score": 1,
+            },
+        ]
+
+    monkeypatch.setattr(exporter, "list_relevant_shards", fake_list_relevant_shards)
+    monkeypatch.setattr(exporter, "read_shard_rows", fake_read_shard_rows)
+
+    output = tmp_path / "user_histories.jsonl"
+    exit_code = exporter.main(
+        [
+            "--user-ids",
+            str(user_ids),
+            "--years",
+            "2025",
+            "--output",
+            str(output),
+        ]
+    )
+
+    histories = _read_jsonl(output)
+    assert exit_code == 0
+    assert len(histories) == 1
+    record = histories[0]
+    assert record["user_id"] == "42"
+    assert record["post_count"] == 2
+    first, second = record["posts"]
+    assert first["post_id"] == "101"
+    assert first["post_type"] == "question"
+    assert first["tags"] == ["python", "pandas"]
+    assert first["text"] == "I compared several approaches."
+    assert first["date"] == "2024-01-01"
+    assert second["post_type"] == "answer"
+    assert second["title"] == ""
+    assert second["site"] == "stackoverflow"
+
+
+def test_hf_stackoverflow_exporter_accepts_user_grouped_rows(
+    tmp_path: Path, monkeypatch
+) -> None:
+    from persona.existing_data_curation.scripts import (
+        export_hf_stackoverflow_user_histories as exporter,
+    )
+
+    monkeypatch.setattr(
+        exporter,
+        "list_relevant_shards",
+        lambda **_kwargs: ["StackExchange_Persona/2011/batch.parquet"],
+    )
+    monkeypatch.setattr(
+        exporter,
+        "read_shard_rows",
+        lambda *_args: [
+            {
+                "user_id": "7",
+                "posts": [
+                    {
+                        "post_id": "1",
+                        "post_type": "question",
+                        "timestamp": 1_300_000_000,
+                        "tags": ["java"],
+                        "title": "T",
+                        "text": "B",
+                        "score": 3,
+                    }
+                ],
+            }
+        ],
+    )
+
+    output = tmp_path / "grouped.jsonl"
+    exit_code = exporter.main(["--all-users", "--output", str(output)])
+
+    histories = _read_jsonl(output)
+    assert exit_code == 0
+    assert histories[0]["user_id"] == "7"
+    assert histories[0]["posts"][0]["tags"] == ["java"]
+
+
 def test_stackoverflow_collab_package_builds_extractable_archive(tmp_path: Path) -> None:
     from persona.existing_data_curation.scripts.make_stackoverflow_collab_package import (
         build_stackoverflow_collab_package,
