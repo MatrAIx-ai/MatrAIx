@@ -88,7 +88,7 @@ Validate the graph:
 uv run python persona/synthesis/scripts/validate_graph.py
 ```
 
-Sample personas:
+Sample personas and save them to JSONL/CSV by passing `--out`:
 
 ```bash
 uv run python persona/synthesis/scripts/sample_personas.py \
@@ -97,7 +97,7 @@ uv run python persona/synthesis/scripts/sample_personas.py \
   --out /tmp/personas_1000.jsonl
 ```
 
-Generate larger batches with process-level shard concurrency:
+For larger saved batches, use process-level shard concurrency:
 
 ```bash
 uv run python persona/synthesis/scripts/sample_personas.py \
@@ -108,10 +108,52 @@ uv run python persona/synthesis/scripts/sample_personas.py \
   --out /tmp/personas_100000.jsonl
 ```
 
+Benchmark generation throughput without saving samples by omitting `--out`:
+
+```bash
+uv run python persona/synthesis/scripts/sample_personas.py \
+  --n 1000000 \
+  --seed 42 \
+  --workers 8 \
+  --batch-size 25000
+```
+
 Parallel generation splits the requested count into deterministic seed shards,
-writes temporary shard files, merges them in batch order, and deletes the
-temporary files before returning. The underlying forward-sampling semantics are
-unchanged.
+writes temporary shard files only when `--out` is provided, merges saved shards
+in batch order, and deletes temporary files before returning. The underlying
+forward-sampling semantics are unchanged.
+
+Use the saved form when the generated personas are the artifact. Use the no-save
+form when measuring sampler throughput or stress-testing generation. Saved JSONL
+runs include JSON serialization, shard writes, and final shard merge time, and
+they temporarily need enough disk for both shard files and the merged output.
+
+Sampler concurrency notes:
+
+- `--workers` controls process-level shard concurrency. Each shard uses an
+  independent RNG stream. On POSIX systems, parallel runs compile the sampler
+  once in the parent process and inherit it in forked workers to avoid repeated
+  graph compilation during worker startup.
+- `--batch-size` controls rows per shard. On the current Full DAG, `25,000` is
+  a good default for large runs; `10,000` to `50,000` keeps peak memory bounded
+  without materially changing throughput.
+- Avoid one giant `sample_indices(N)` call for very large `N`. The sampler is
+  vectorized within each node, so a single huge batch repeatedly allocates large
+  `(N x values)` arrays. Large jobs should use shards.
+- Shard seeds are derived deterministically from `--seed`, and shards are
+  merged in batch order, so repeated runs with the same arguments produce the
+  same output order.
+- JSONL/CSV materialization is still more expensive than integer-coded sampling.
+  For multi-million or larger persistent stores, a future columnar integer
+  format will be materially faster and smaller than JSONL.
+
+Recent benchmark on this graph:
+
+| Mode | Count | Output | Time | Throughput |
+| --- | ---: | ---: | ---: | ---: |
+| No-save, 4 actual workers, 2.5k-row shards | 10,000 | none | 0.95s | 10.6k/s |
+| Saved JSONL, 4 actual workers, 2.5k-row shards | 10,000 | 372MB | 2.02s | 5.0k/s |
+| No-save, 8 workers, 25k-row shards | 1,000,000 | none | 23.51s | 42.5k/s |
 
 Generate the committed 10,000-sample quality report:
 
@@ -170,14 +212,3 @@ samples = sampler.sample(10)
 
 The quality report intentionally does not commit the 10,000 sampled personas.
 It commits only aggregate audit results and timing.
-
-## Caveats
-
-- The graph currently has no 0-12 age brackets, so it is a global 13+ scaffold.
-- `domain` and `role_function` should be read as background or field context,
-  not necessarily current employment for every persona.
-- Marginal drift from priors is expected for non-root nodes because pairwise
-  edges, full CPTs, and masks intentionally condition later fields on earlier
-  fields.
-- Hard consistency issues in the report should be treated as blockers. Strong
-  and soft issues are triage signals for future graph refinement.

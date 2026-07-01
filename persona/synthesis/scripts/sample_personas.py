@@ -19,7 +19,12 @@ def main() -> None:
     parser.add_argument("--graph", type=Path, default=DEFAULT_GRAPH_PATH)
     parser.add_argument("--n", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Output path. Omit to benchmark generation without saving samples.",
+    )
     parser.add_argument("--format", choices=["jsonl", "csv"], default="jsonl")
     parser.add_argument(
         "--workers",

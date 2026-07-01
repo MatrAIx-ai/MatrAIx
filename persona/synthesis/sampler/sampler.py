@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import math
+import multiprocessing as mp
 import shutil
 import tempfile
 import time
@@ -10,7 +11,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Mapping, Optional
+from typing import Any, Callable, Dict, List, Mapping, Optional
 
 import numpy as np
 
@@ -353,6 +354,17 @@ def _write_shard(
         raise ValueError(f"Unsupported format: {fmt}")
 
 
+def _sample_without_saving(
+    sampler: PersonaForwardSampler,
+    *,
+    n: int,
+    seed: int,
+) -> int:
+    sampler.rng = np.random.default_rng(seed)
+    idx = sampler.sample_indices(n)
+    return len(next(iter(idx.values())))
+
+
 def _worker_sample(task: tuple[int, int, int, str, str]) -> tuple[int, int, str]:
     batch_index, n, seed, fmt, shard_path = task
     if _WORKER_SAMPLER is None:
@@ -365,6 +377,50 @@ def _worker_sample(task: tuple[int, int, int, str, str]) -> tuple[int, int, str]
         fmt=fmt,
     )
     return batch_index, n, shard_path
+
+
+def _worker_sample_without_saving(task: tuple[int, int, int]) -> tuple[int, int]:
+    batch_index, n, seed = task
+    if _WORKER_SAMPLER is None:
+        raise RuntimeError("Parallel sampler worker was not initialized")
+    rows = _sample_without_saving(_WORKER_SAMPLER, n=n, seed=seed)
+    return batch_index, rows
+
+
+def _fork_context() -> mp.context.BaseContext | None:
+    if "fork" not in mp.get_all_start_methods():
+        return None
+    return mp.get_context("fork")
+
+
+def _run_tasks_with_forked_sampler(
+    graph_path: str | Path,
+    *,
+    emit_only: bool,
+    eps: float,
+    workers: int,
+    tasks: List[Any],
+    worker_fn: Callable[[Any], Any],
+) -> List[Any] | None:
+    fork_context = _fork_context()
+    if fork_context is None:
+        return None
+
+    global _WORKER_SAMPLER
+    previous_sampler = _WORKER_SAMPLER
+    _WORKER_SAMPLER = PersonaForwardSampler(
+        graph_path,
+        SamplingConfig(seed=0, emit_only=emit_only, eps=eps),
+    )
+    try:
+        with ProcessPoolExecutor(
+            max_workers=workers,
+            mp_context=fork_context,
+        ) as pool:
+            futures = [pool.submit(worker_fn, task) for task in tasks]
+            return [future.result() for future in as_completed(futures)]
+    finally:
+        _WORKER_SAMPLER = previous_sampler
 
 
 def _merge_shards(shards: List[Path], out: Path, fmt: str) -> None:
@@ -381,7 +437,7 @@ def sample_to_file_parallel(
     graph_path: str | Path,
     *,
     n: int,
-    out: str | Path,
+    out: str | Path | None,
     fmt: str = "jsonl",
     seed: int = 42,
     emit_only: bool = True,
@@ -393,22 +449,84 @@ def sample_to_file_parallel(
 
     The sampling semantics are identical to ``PersonaForwardSampler``. Parallel
     mode only shards the requested row count into independent batches with
-    deterministic child seeds, then merges shard files in batch order.
+    deterministic child seeds. When ``out`` is provided, shard files are merged
+    in batch order; when ``out`` is ``None``, samples are generated and discarded
+    after timing.
     """
     if fmt not in {"jsonl", "csv"}:
         raise ValueError(f"Unsupported format: {fmt}")
 
     graph_path = Path(graph_path)
-    out = Path(out)
+    out_path = Path(out) if out is not None else None
     workers = int(workers)
     batches, effective_batch_size = _planned_batches(n, workers, batch_size)
+    actual_workers = min(workers, len(batches))
+
+    if out_path is None:
+        start = time.time()
+        seeds = _batch_seeds(seed, len(batches))
+        rows_sampled = 0
+        if actual_workers == 1:
+            sampler = PersonaForwardSampler(
+                graph_path,
+                SamplingConfig(seed=0, emit_only=emit_only, eps=eps),
+            )
+            for size, batch_seed in zip(batches, seeds):
+                rows_sampled += _sample_without_saving(
+                    sampler,
+                    n=size,
+                    seed=batch_seed,
+                )
+        else:
+            tasks = [(i, size, seeds[i]) for i, size in enumerate(batches)]
+            results = _run_tasks_with_forked_sampler(
+                graph_path,
+                emit_only=emit_only,
+                eps=eps,
+                workers=actual_workers,
+                tasks=tasks,
+                worker_fn=_worker_sample_without_saving,
+            )
+            if results is None:
+                with ProcessPoolExecutor(
+                    max_workers=actual_workers,
+                    initializer=_worker_init,
+                    initargs=(str(graph_path), emit_only, eps),
+                ) as pool:
+                    futures = [
+                        pool.submit(_worker_sample_without_saving, task)
+                        for task in tasks
+                    ]
+                    for future in as_completed(futures):
+                        rows_sampled += future.result()[1]
+            else:
+                for _, rows in results:
+                    rows_sampled += rows
+
+        elapsed = time.time() - start
+        return {
+            "samples": rows_sampled,
+            "out": None,
+            "format": fmt,
+            "saved": False,
+            "elapsed_seconds": elapsed,
+            "sampling_throughput_per_second": rows_sampled / elapsed if elapsed > 0 else 0.0,
+            "emitted_nodes": _emitted_node_count(graph_path, emit_only),
+            "graph": str(graph_path),
+            "seed": seed,
+            "workers": actual_workers,
+            "requested_workers": workers,
+            "batch_size": effective_batch_size,
+            "batches": len(batches),
+            "parallel": actual_workers > 1,
+        }
 
     if workers == 1 and len(batches) == 1:
         sampler = PersonaForwardSampler(
             graph_path,
             SamplingConfig(seed=seed, emit_only=emit_only, eps=eps),
         )
-        meta = sampler.sample_to_file(n, out, fmt)
+        meta = sampler.sample_to_file(n, out_path, fmt)
         meta.update(
             {
                 "workers": 1,
@@ -416,19 +534,19 @@ def sample_to_file_parallel(
                 "batch_size": effective_batch_size,
                 "batches": 1,
                 "parallel": False,
+                "saved": True,
             }
         )
         return meta
 
     start = time.time()
     seeds = _batch_seeds(seed, len(batches))
-    out.parent.mkdir(parents=True, exist_ok=True)
-    actual_workers = min(workers, len(batches))
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     shard_results: List[tuple[int, int, str]] = []
 
     with tempfile.TemporaryDirectory(
-        prefix=f"{out.name}.shards.",
-        dir=str(out.parent),
+        prefix=f"{out_path.name}.shards.",
+        dir=str(out_path.parent),
     ) as tmp:
         tmp_dir = Path(tmp)
         tasks = [
@@ -451,22 +569,34 @@ def sample_to_file_parallel(
                 )
                 shard_results.append((batch_index, size, shard_path))
         else:
-            with ProcessPoolExecutor(
-                max_workers=actual_workers,
-                initializer=_worker_init,
-                initargs=(str(graph_path), emit_only, eps),
-            ) as pool:
-                futures = [pool.submit(_worker_sample, task) for task in tasks]
-                for future in as_completed(futures):
-                    shard_results.append(future.result())
+            results = _run_tasks_with_forked_sampler(
+                graph_path,
+                emit_only=emit_only,
+                eps=eps,
+                workers=actual_workers,
+                tasks=tasks,
+                worker_fn=_worker_sample,
+            )
+            if results is None:
+                with ProcessPoolExecutor(
+                    max_workers=actual_workers,
+                    initializer=_worker_init,
+                    initargs=(str(graph_path), emit_only, eps),
+                ) as pool:
+                    futures = [pool.submit(_worker_sample, task) for task in tasks]
+                    for future in as_completed(futures):
+                        shard_results.append(future.result())
+            else:
+                shard_results.extend(results)
 
         shard_results.sort(key=lambda row: row[0])
-        _merge_shards([Path(row[2]) for row in shard_results], out, fmt)
+        _merge_shards([Path(row[2]) for row in shard_results], out_path, fmt)
 
     return {
         "samples": n,
-        "out": str(out),
+        "out": str(out_path),
         "format": fmt,
+        "saved": True,
         "elapsed_seconds": time.time() - start,
         "emitted_nodes": _emitted_node_count(graph_path, emit_only),
         "graph": str(graph_path),
