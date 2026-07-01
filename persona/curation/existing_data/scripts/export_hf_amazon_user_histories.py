@@ -17,6 +17,7 @@ import gzip
 import hashlib
 import json
 import re
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable, Iterator
@@ -154,10 +155,13 @@ def read_shard_rows(
     filename: str,
     token: str | bool | None,
     columns: list[str] | None = None,
+    download_delay_seconds: float = 0.0,
 ) -> list[dict[str, Any]]:
     from huggingface_hub import hf_hub_download
     import pyarrow.parquet as pq
 
+    if download_delay_seconds > 0:
+        time.sleep(download_delay_seconds)
     local_path = hf_hub_download(
         repo_id=repo_id,
         repo_type="dataset",
@@ -278,6 +282,7 @@ def attach_compact_product_info(
     repo_id: str,
     metadata_prefix: str,
     token: str | bool | None,
+    download_delay_seconds: float,
 ) -> dict[str, Any]:
     requested = parent_asins_by_category(histories)
     requested_pairs = sum(len(parent_asins) for parent_asins in requested.values())
@@ -294,7 +299,13 @@ def attach_compact_product_info(
             f"source_category={category} ({len(filenames)} shards)"
         )
         for filename in filenames:
-            for row in read_shard_rows(repo_id, filename, token=token, columns=columns):
+            for row in read_shard_rows(
+                repo_id,
+                filename,
+                token=token,
+                columns=columns,
+                download_delay_seconds=download_delay_seconds,
+            ):
                 parent_asin = row.get("parent_asin")
                 if parent_asin in wanted_parent_asins:
                     metadata[(str(parent_asin), category)] = compact_product_info(row)
@@ -373,6 +384,15 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         help="Join compact product_title/product_main_category/product_category_path from HF metadata.",
     )
     parser.add_argument("--max-users", type=int, default=0, help="0 means all user IDs.")
+    parser.add_argument(
+        "--download-delay-seconds",
+        type=float,
+        default=0.0,
+        help=(
+            "Optional sleep before each hf_hub_download call. Useful for avoiding "
+            "Hugging Face Xet/API rate limits when many shards are touched."
+        ),
+    )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
     parser.add_argument(
         "--token",
@@ -410,7 +430,12 @@ def main(argv: Iterable[str]) -> int:
     histories: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for index, filename in enumerate(shards, start=1):
         log(f"[{index:,}/{len(shards):,}] {filename}")
-        for row in read_shard_rows(args.repo_id, filename, token=token):
+        for row in read_shard_rows(
+            args.repo_id,
+            filename,
+            token=token,
+            download_delay_seconds=args.download_delay_seconds,
+        ):
             user_id = row.get("user_id")
             if user_id in selected_user_ids:
                 histories[user_id].append(normalize_review(row))
@@ -423,6 +448,7 @@ def main(argv: Iterable[str]) -> int:
             repo_id=args.repo_id,
             metadata_prefix=args.metadata_artifact_prefix,
             token=token,
+            download_delay_seconds=args.download_delay_seconds,
         )
         log(f"Product info join summary: {json.dumps(summary, sort_keys=True)}")
 

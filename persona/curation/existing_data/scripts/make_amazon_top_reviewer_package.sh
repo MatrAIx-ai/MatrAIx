@@ -21,6 +21,7 @@
 #   REUSE_PREPARED_HISTORIES=1
 #   TEMPORAL_TRAIN_FRACTION=0.8
 #   MAX_TEXT_REVIEWS_PER_USER=200
+#   HF_DOWNLOAD_DELAY_SECONDS=0.4
 #
 set -euo pipefail
 
@@ -114,6 +115,7 @@ else
     --artifact-prefix "${HF_ARTIFACT_PREFIX}"
     --categories "${HF_CATEGORIES}"
     --output "${RAW_USER_HISTORIES}"
+    --download-delay-seconds "${HF_DOWNLOAD_DELAY_SECONDS:-0.4}"
   )
   if [[ "${INCLUDE_PRODUCT_INFO}" == "1" ]]; then
     EXPORT_CMD+=(

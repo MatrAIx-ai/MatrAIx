@@ -104,6 +104,7 @@ Other useful overrides:
 - `AMAZON_METADATA_ARTIFACT_PREFIX`: HF metadata artifact prefix
 - `AMAZON_CATEGORIES`: comma-separated category subset, or `all`
 - `MAX_TEXT_REVIEWS_PER_USER`: max rendered text reviews per user, default `200`
+- `HF_DOWNLOAD_DELAY_SECONDS`: throttle between HF shard downloads, default `0.4`
 - `REUSE_RAW_HISTORIES=1`: skip HF review retrieval when raw histories exist
 - `REUSE_PREPARED_HISTORIES=1`: skip preparation when prepared histories exist
 
