@@ -120,19 +120,54 @@ def _first_nonblank(review: dict[str, Any], keys: tuple[str, ...], default: str 
 
 
 def _review_title(review: dict[str, Any]) -> str:
-    return _first_nonblank(review, ("title", "product_title"), "(untitled)")
+    return _first_nonblank(review, ("title", "review_title"), "(untitled)")
 
 
 def _review_title_evidence(review: dict[str, Any]) -> str:
-    return _first_nonblank(review, ("title", "product_title"))
+    return _first_nonblank(review, ("title", "review_title"))
 
 
 def _review_text(review: dict[str, Any]) -> str:
     return _first_nonblank(review, ("text", "review_text"))
 
 
+def _product_title(review: dict[str, Any]) -> str:
+    return _first_nonblank(review, ("product_title",))
+
+
+def _product_main_category(review: dict[str, Any]) -> str:
+    return _first_nonblank(review, ("product_main_category",))
+
+
+def _product_category_path(review: dict[str, Any]) -> list[str]:
+    value = review.get("product_category_path")
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except ValueError:
+            value = [value]
+    if not isinstance(value, list):
+        return []
+    path = []
+    seen = set()
+    for item in value:
+        text = str(item).strip()
+        if text and text not in seen:
+            seen.add(text)
+            path.append(text)
+        if len(path) >= 6:
+            break
+    return path
+
+
 def _has_review_evidence(review: dict[str, Any]) -> bool:
-    return bool(_review_title_evidence(review).strip() or _review_text(review).strip())
+    return bool(
+        _review_title_evidence(review).strip()
+        or _review_text(review).strip()
+        or _product_title(review).strip()
+        or _product_main_category(review).strip()
+        or _product_category_path(review)
+    )
 
 
 def _review_objects(raw_reviews: list[Any], *, user_id: str) -> list[dict[str, Any]]:
@@ -174,11 +209,27 @@ def _render_review(
         f"date: {_review_date(review)}",
         f"category: {_review_category(review)}",
         f"rating: {review.get('rating', 'unknown')}",
-        f"title: {_review_title(review)}",
-        f"verified: {_review_verified(review)}",
-        f"helpful_vote: {_review_helpful_vote(review)}",
-        f"text: {_compact_text(_review_text(review), max_review_text_chars)}",
+        f"review_title: {_review_title(review)}",
     ]
+    product_title = _product_title(review)
+    if product_title:
+        lines.append(f"product_title: {_compact_text(product_title, 220)}")
+    product_main_category = _product_main_category(review)
+    if product_main_category:
+        lines.append(f"product_main_category: {_compact_text(product_main_category, 120)}")
+    product_category_path = _product_category_path(review)
+    if product_category_path:
+        lines.append(
+            "product_category_path: "
+            + " > ".join(_compact_text(item, 80) for item in product_category_path)
+        )
+    lines.extend(
+        [
+            f"verified: {_review_verified(review)}",
+            f"helpful_vote: {_review_helpful_vote(review)}",
+            f"text: {_compact_text(_review_text(review), max_review_text_chars)}",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -205,6 +256,68 @@ def _profile_text(fold_texts: list[dict[str, Any]]) -> str:
     return FOLD_TEXT_SEPARATOR.join(
         str(fold["profile_text"]) for fold in fold_texts if fold["profile_text"]
     )
+
+
+def _format_counts(counts: Any, *, limit: int = 6) -> str:
+    if not isinstance(counts, dict) or not counts:
+        return ""
+    items = sorted(
+        counts.items(),
+        key=lambda item: (-int(item[1] or 0), str(item[0])),
+    )[:limit]
+    return ", ".join(f"{key}={value}" for key, value in items)
+
+
+def _render_summary_stats(row: dict[str, Any], *, max_chars: int = 4000) -> str:
+    stats = row.get("category_review_stats")
+    if not isinstance(stats, dict) or not stats:
+        return ""
+    split = row.get("temporal_split")
+    split = split if isinstance(split, dict) else {}
+    lines = ["=== Summary Stats ==="]
+    lines.append(
+        "construction_rows: "
+        f"{split.get('construction_row_count', row.get('review_count', 'unknown'))}; "
+        "validation_rows: "
+        f"{split.get('validation_row_count', row.get('validation_review_count', 'unknown'))}; "
+        "construction_text_reviews: "
+        f"{split.get('construction_text_review_count', 'unknown')}; "
+        "construction_ratings: "
+        f"{split.get('construction_rating_count', 'unknown')}"
+    )
+    sorted_stats = sorted(
+        stats.items(),
+        key=lambda pair: (-(pair[1].get("review_count", 0) or 0), str(pair[0])),
+    )
+    for category, item in sorted_stats[:12]:
+        if not isinstance(item, dict):
+            continue
+        mean_rating = item.get("mean_rating")
+        if isinstance(mean_rating, int | float):
+            mean_rating_text = f"{mean_rating:.2f}"
+        else:
+            mean_rating_text = "unknown"
+        parts = [
+            f"category={category}",
+            f"rows={item.get('review_count', 0)}",
+            f"text_reviews={item.get('text_review_count', 0)}",
+            f"rating_only={item.get('rating_only_count', 0)}",
+            f"mean_rating={mean_rating_text}",
+        ]
+        rating_counts = _format_counts(item.get("rating_counts"), limit=5)
+        if rating_counts:
+            parts.append(f"ratings={rating_counts}")
+        product_categories = _format_counts(item.get("product_category_counts"), limit=4)
+        if product_categories:
+            parts.append(f"product_categories={product_categories}")
+        rating_only_products = _format_counts(
+            item.get("rating_only_product_title_counts"),
+            limit=3,
+        )
+        if rating_only_products:
+            parts.append(f"rating_only_products={rating_only_products}")
+        lines.append("; ".join(parts))
+    return _compact_text("\n".join(lines), max_chars)
 
 
 def _fold_heading(fold: dict[str, Any], effective_cv_folds: int) -> str:
@@ -337,7 +450,7 @@ def build_task(
     usable_reviews = [review for review in review_objects if _has_review_evidence(review)]
     if len(usable_reviews) < 2:
         raise ValueError(
-            f"user {user_id}: fewer than 2 usable reviews with non-empty title or text "
+            f"user {user_id}: fewer than 2 usable reviews with text or product context "
             f"({len(usable_reviews)} usable of {len(raw_reviews)} raw reviews)"
         )
 
@@ -379,10 +492,21 @@ def build_task(
                 ),
             }
         )
+    summary_text = _render_summary_stats(
+        row,
+        max_chars=max(0, min(4000, max_profile_text_chars // 4)),
+    )
+    fold_text_budget = max_profile_text_chars
+    if summary_text:
+        fold_text_budget -= len(summary_text) + len(FOLD_TEXT_SEPARATOR)
     cv_fold_texts = _limit_fold_texts_for_profile(
         cv_fold_texts,
-        max_profile_text_chars,
+        fold_text_budget,
         effective_min_support=effective_min_support,
+    )
+    fold_profile_text = _profile_text(cv_fold_texts)
+    profile_text = (
+        FOLD_TEXT_SEPARATOR.join(part for part in (summary_text, fold_profile_text) if part)
     )
 
     categories = sorted({_review_category(review) for review in selected_reviews})
@@ -392,12 +516,13 @@ def build_task(
         "qid": f"amazon_user:{user_id}",
         "title": f"Amazon reviewer {user_id}",
         "source_url": f"amazon-reviews-2023://user/{user_id}",
-        "profile_text": _profile_text(cv_fold_texts),
+        "profile_text": profile_text,
         "source": SOURCE,
         "user_id": user_id,
         "review_count": len(raw_reviews),
         "selected_review_count": usable_review_count,
         "categories": categories,
+        "summary_stats": row.get("category_review_stats") or {},
         "cv_folds": cv_folds,
         "effective_cv_folds": effective_cv_folds,
         "min_support_folds": effective_min_support,

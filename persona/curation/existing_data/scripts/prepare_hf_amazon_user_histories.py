@@ -94,7 +94,48 @@ def review_text(review: dict[str, Any]) -> str:
 
 
 def review_title(review: dict[str, Any]) -> str:
-    return compact_text(review.get("title") or review.get("review_title") or review.get("product_title"))
+    return compact_text(review.get("title") or review.get("review_title"))
+
+
+def product_title(review: dict[str, Any]) -> str:
+    return compact_text(review.get("product_title"))
+
+
+def product_main_category(review: dict[str, Any]) -> str:
+    return compact_text(review.get("product_main_category"))
+
+
+def product_category_path(review: dict[str, Any]) -> list[str]:
+    value = review.get("product_category_path")
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except ValueError:
+            value = [value]
+    if not isinstance(value, list):
+        return []
+    path = []
+    seen = set()
+    for item in value:
+        text = compact_text(item)
+        if text and text not in seen:
+            seen.add(text)
+            path.append(text)
+        if len(path) >= 6:
+            break
+    return path
+
+
+def has_product_info(review: dict[str, Any]) -> bool:
+    return bool(
+        product_title(review)
+        or product_main_category(review)
+        or product_category_path(review)
+    )
+
+
+def has_textual_review(review: dict[str, Any]) -> bool:
+    return bool(review_title(review) or review_text(review))
 
 
 def fulfillment_or_template_review_match(review: dict[str, Any]) -> str | None:
@@ -117,6 +158,7 @@ def review_key(review: dict[str, Any]) -> tuple[str, ...]:
         str(normalize_timestamp(review.get("timestamp")) or ""),
         review_title(review).lower(),
         review_text(review).lower(),
+        product_title(review).lower(),
     )
 
 
@@ -127,6 +169,12 @@ def normalize_review(review: dict[str, Any]) -> dict[str, Any]:
     row["date"] = row.get("date") or timestamp_to_date(timestamp)
     row["title"] = review_title(row)
     row["text"] = review_text(row)
+    if product_category_path(row):
+        row["product_category_path"] = product_category_path(row)
+    if product_title(row):
+        row["product_title"] = product_title(row)
+    if product_main_category(row):
+        row["product_main_category"] = product_main_category(row)
     return row
 
 
@@ -148,7 +196,6 @@ def filter_reviews(
         review = normalize_review(raw_review)
         category = str(review.get("category") or "Unknown")
         timestamp = normalize_timestamp(review.get("timestamp"))
-        title = review_title(review)
         text = review_text(review)
 
         reason = None
@@ -156,7 +203,11 @@ def filter_reviews(
             reason = "missing_or_invalid_timestamp"
         elif not valid_rating(review.get("rating")):
             reason = "missing_or_invalid_rating"
-        elif not title and len(text) < min_review_text_chars:
+        elif (
+            not has_product_info(review)
+            and not review_title(review)
+            and len(text) < min_review_text_chars
+        ):
             reason = "insufficient_text_evidence"
         elif review_key(review) in seen:
             reason = "duplicate_review"
@@ -238,13 +289,38 @@ def category_review_stats(reviews: list[dict[str, Any]]) -> dict[str, dict[str, 
                 "rating_count": 0,
                 "rating_sum": 0.0,
                 "rating_counts": {},
+                "rating_only_count": 0,
+                "rating_only_rating_counts": {},
+                "product_title_counts": {},
+                "product_main_category_counts": {},
+                "product_category_counts": {},
+                "rating_only_product_title_counts": {},
+                "rating_only_product_main_category_counts": {},
+                "rating_only_product_category_counts": {},
             },
         )
         item["review_count"] += 1
         text = review_text(review)
+        is_rating_only = not has_textual_review(review)
         if text:
             item["text_review_count"] += 1
             item["text_chars"] += len(text)
+        if is_rating_only:
+            item["rating_only_count"] += 1
+        title = product_title(review)
+        if title:
+            item["product_title_counts"][title] = item["product_title_counts"].get(title, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_title_counts"][title] = item["rating_only_product_title_counts"].get(title, 0) + 1
+        main_category = product_main_category(review)
+        if main_category:
+            item["product_main_category_counts"][main_category] = item["product_main_category_counts"].get(main_category, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_main_category_counts"][main_category] = item["rating_only_product_main_category_counts"].get(main_category, 0) + 1
+        for product_category in product_category_path(review):
+            item["product_category_counts"][product_category] = item["product_category_counts"].get(product_category, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_category_counts"][product_category] = item["rating_only_product_category_counts"].get(product_category, 0) + 1
         if review.get("verified_purchase") is True:
             item["verified_count"] += 1
         try:
@@ -257,6 +333,11 @@ def category_review_stats(reviews: list[dict[str, Any]]) -> dict[str, dict[str, 
             item["rating_count"] += 1
             item["rating_sum"] += rating
             item["rating_counts"][key] = item["rating_counts"].get(key, 0) + 1
+            if is_rating_only:
+                item["rating_only_rating_counts"][key] = item["rating_only_rating_counts"].get(key, 0) + 1
+
+    def top_counts(counts: dict[str, int], limit: int = 25) -> dict[str, int]:
+        return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit])
 
     for item in stats.values():
         count = item["review_count"]
@@ -264,6 +345,16 @@ def category_review_stats(reviews: list[dict[str, Any]]) -> dict[str, dict[str, 
         item["verified_share"] = item["verified_count"] / count if count else 0.0
         item["mean_rating"] = item["rating_sum"] / rating_count if rating_count else None
         item["rating_counts"] = dict(sorted(item["rating_counts"].items()))
+        item["rating_only_rating_counts"] = dict(sorted(item["rating_only_rating_counts"].items()))
+        for key in (
+            "product_title_counts",
+            "product_main_category_counts",
+            "product_category_counts",
+            "rating_only_product_title_counts",
+            "rating_only_product_main_category_counts",
+            "rating_only_product_category_counts",
+        ):
+            item[key] = top_counts(item[key])
     return dict(sorted(stats.items()))
 
 
@@ -280,17 +371,41 @@ def merge_category_stats(target: dict[str, dict[str, Any]], source: dict[str, di
                 "rating_count": 0,
                 "rating_sum": 0.0,
                 "rating_counts": {},
+                "rating_only_count": 0,
+                "rating_only_rating_counts": {},
+                "product_title_counts": {},
+                "product_main_category_counts": {},
+                "product_category_counts": {},
+                "rating_only_product_title_counts": {},
+                "rating_only_product_main_category_counts": {},
+                "rating_only_product_category_counts": {},
             },
         )
-        for key in ("review_count", "text_review_count", "text_chars", "verified_count", "helpful_vote_sum", "rating_count"):
+        for key in ("review_count", "text_review_count", "text_chars", "verified_count", "helpful_vote_sum", "rating_count", "rating_only_count"):
             out[key] += stats.get(key, 0) or 0
         out["rating_sum"] += stats.get("rating_sum", 0.0) or 0.0
         for rating, count in (stats.get("rating_counts") or {}).items():
             out["rating_counts"][rating] = out["rating_counts"].get(rating, 0) + count
+        for rating, count in (stats.get("rating_only_rating_counts") or {}).items():
+            out["rating_only_rating_counts"][rating] = out["rating_only_rating_counts"].get(rating, 0) + count
+        for key in (
+            "product_title_counts",
+            "product_main_category_counts",
+            "product_category_counts",
+            "rating_only_product_title_counts",
+            "rating_only_product_main_category_counts",
+            "rating_only_product_category_counts",
+        ):
+            for value, count in (stats.get(key) or {}).items():
+                out[key][value] = out[key].get(value, 0) + count
 
 
 def finalize_aggregate_stats(stats: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
     finalized = {}
+
+    def top_counts(counts: dict[str, int], limit: int = 25) -> dict[str, int]:
+        return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit])
+
     for category, item in sorted(stats.items()):
         count = item["review_count"]
         rating_count = item["rating_count"]
@@ -298,6 +413,16 @@ def finalize_aggregate_stats(stats: dict[str, dict[str, Any]]) -> dict[str, dict
         out["verified_share"] = item["verified_count"] / count if count else 0.0
         out["mean_rating"] = item["rating_sum"] / rating_count if rating_count else None
         out["rating_counts"] = dict(sorted(item["rating_counts"].items()))
+        out["rating_only_rating_counts"] = dict(sorted(item["rating_only_rating_counts"].items()))
+        for key in (
+            "product_title_counts",
+            "product_main_category_counts",
+            "product_category_counts",
+            "rating_only_product_title_counts",
+            "rating_only_product_main_category_counts",
+            "rating_only_product_category_counts",
+        ):
+            out[key] = top_counts(item[key])
         finalized[category] = out
     return finalized
 

@@ -13,6 +13,8 @@
 #   MATRIX_DIMENSIONS=/path/to/persona/schema/dimensions.json
 #   AMAZON_REVIEWS_REPO_ID=MatrAIx/MatrAIx
 #   AMAZON_REVIEWS_ARTIFACT_PREFIX=amazon/modal_artifacts/amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000
+#   AMAZON_METADATA_ARTIFACT_PREFIX=amazon/modal_artifacts/amazon_reviews_2023_metadata_by_parent_asin_bucket_v2
+#   INCLUDE_PRODUCT_INFO=1
 #   AMAZON_CATEGORIES=all
 #   HF_TOKEN=...
 #   REUSE_RAW_HISTORIES=1
@@ -52,7 +54,9 @@ DATA_ROOT="${MATRIX_DATA_ROOT:-${TMPDIR:-/tmp}/matraix_existing_data}"
 PACKAGE_OUT_ROOT="${MATRIX_PACKAGE_OUT_ROOT:-${TMPDIR:-/tmp}/matraix_packages}"
 HF_REPO_ID="${AMAZON_REVIEWS_REPO_ID:-MatrAIx/MatrAIx}"
 HF_ARTIFACT_PREFIX="${AMAZON_REVIEWS_ARTIFACT_PREFIX:-amazon/modal_artifacts/amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000}"
+HF_METADATA_ARTIFACT_PREFIX="${AMAZON_METADATA_ARTIFACT_PREFIX:-amazon/modal_artifacts/amazon_reviews_2023_metadata_by_parent_asin_bucket_v2}"
 HF_CATEGORIES="${AMAZON_CATEGORIES:-all}"
+INCLUDE_PRODUCT_INFO="${INCLUDE_PRODUCT_INFO:-1}"
 
 ASSIGNMENT_ID="AMZ_TOP10K_${START}_${END}"
 DATASET_ID="matraix_amazon_reviews_2023_top10k_${START}_${END}"
@@ -104,12 +108,20 @@ else
   echo ">> exporting Amazon review histories from Hugging Face"
   TOKEN_ARGS=()
   [[ -n "${HF_TOKEN:-}" ]] && TOKEN_ARGS=(--token "${HF_TOKEN}")
+  PRODUCT_INFO_ARGS=()
+  if [[ "${INCLUDE_PRODUCT_INFO}" == "1" ]]; then
+    PRODUCT_INFO_ARGS=(
+      --include-product-info
+      --metadata-artifact-prefix "${HF_METADATA_ARTIFACT_PREFIX}"
+    )
+  fi
   python3 persona/curation/existing_data/scripts/export_hf_amazon_user_histories.py \
     --user-ids "${SELECTED_IDS}" \
     --repo-id "${HF_REPO_ID}" \
     --artifact-prefix "${HF_ARTIFACT_PREFIX}" \
     --categories "${HF_CATEGORIES}" \
     --output "${RAW_USER_HISTORIES}" \
+    "${PRODUCT_INFO_ARGS[@]}" \
     "${TOKEN_ARGS[@]}"
 fi
 
