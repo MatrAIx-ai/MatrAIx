@@ -1,29 +1,28 @@
-# MatrAIx CODEOWNERS — default reviewers on PRs
+# PersonaBench CODEOWNERS
 #
-# Team reviewers: Persona @YuexingHao · Environment @JianhengHou · Application @ShirleyHuang11 · Docs @XiaominLi1998 (+ all leads on docs paths)
-# --- Persona team ---
-/persona/                    @YuexingHao
+# Keep ownership aligned with the clean MatrAIx module layout. This file avoids
+# MatrAIx organization team references because PersonaBench currently lives
+# under a user-owned repository.
 
-# --- Application team ---
-/application/                @ShirleyHuang11
+# Default fallback
+* @ElegantLin
 
-# --- Documentation (all team leads + docs lead) ---
-/docs/                       @XiaominLi1998 @YuexingHao @JianhengHou @ShirleyHuang11
-/CONTRIBUTING.md             @XiaominLi1998 @YuexingHao @JianhengHou @ShirleyHuang11
-/README.md                   @XiaominLi1998 @YuexingHao @JianhengHou @ShirleyHuang11
+# Core modules
+/persona/                 @ElegantLin
+/application/             @ElegantLin
+/environment/             @ElegantLin
 
-# --- Environment team (Harbor runtime, agents, jobs, viewer, packages, CI) ---
-/src/                        @JianhengHou
-/configs/                    @JianhengHou
-/apps/                       @JianhengHou
-/packages/                   @JianhengHou
-/adapters/                   @JianhengHou
-/examples/                   @JianhengHou
-/tests/                      @JianhengHou
-/skills/                     @JianhengHou
-/.github/                    @JianhengHou @YuexingHao
-/pyproject.toml              @JianhengHou
-/uv.lock                     @JianhengHou
+# Shared utilities and tooling
+/src/                     @ElegantLin
+/configs/                 @ElegantLin
+/apps/                    @ElegantLin
+/packages/                @ElegantLin
+/tests/                   @ElegantLin
 
-# Admin fallback (unmatched paths)
-*                            @YuexingHao
+# Documentation, migration records, and repository metadata
+/docs/                    @ElegantLin
+/migration/               @ElegantLin
+/.github/                 @ElegantLin
+/CONTRIBUTING.md          @ElegantLin
+/README.md                @ElegantLin
+/pyproject.toml           @ElegantLin

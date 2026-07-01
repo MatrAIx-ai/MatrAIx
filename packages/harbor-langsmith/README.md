@@ -3,7 +3,7 @@
 LangSmith plugin for Harbor jobs.
 
 ```bash
-pip install "harbor[langsmith]"
+python -m pip install -e . -e packages/harbor-langsmith
 export LANGSMITH_API_KEY=...
 harbor run ... --plugin langsmith
 ```
@@ -26,3 +26,7 @@ Optional environment variables:
 Plugin kwargs (CLI `--pk` or job config `kwargs:`) mirror the constructor options:
 `dataset_name`, `experiment_name`, `endpoint`, `api_key`, `workspace_id`,
 `sync_dataset`, and `fail_fast`.
+
+This package depends on the PersonaBench distribution because this repository
+ships the Harbor runtime under the `harbor` Python namespace while publishing
+the root distribution as `personabench`.

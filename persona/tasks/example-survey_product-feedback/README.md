@@ -1,12 +1,12 @@
 # Product concept survey (ClearQueue) — persona bench
 
-> **Persona bench** — validates **dimension grounding** via MCQ checkpoints.  
-> Parallel **application** example (open-text, no grounding):  
+> **Persona bench** — validates **dimension grounding** via MCQ checkpoints.
+> Parallel **application** example (open-text, no grounding):
 > [`application/tasks/example-survey_product-feedback`](../../../application/tasks/example-survey_product-feedback)
 
 | Field | Value |
 |-------|-------|
-| Harbor name | `matraix/persona-bench-dim-047-survey-product-feedback` |
+| Harbor name | `personabench/persona-bench-dim-047-survey-product-feedback` |
 | Probe dimension | **`economic_motivation`** (index **47**) → `dimensions.economic_motivation` |
 | Output | `/app/output/survey_responses.json` |
 | Metrics | `reward.txt` = schema gate + probe grounding · `grounding.json` = detail |
@@ -37,21 +37,30 @@ Decline path: `q0_not_interested` on q0 only (`participation: declined`).
 uv run harbor run \
   -a persona-claude-code \
   -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-2000/persona_0042.yaml \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
   -p persona/tasks/example-survey_product-feedback
 ```
 
 ## Grounding job
 
+Generate a local recipe first (`--sample-size-per-value-group 2`, seed 42):
+
 ```bash
 uv run python persona/scripts/generate_persona_job.py \
   --task persona/tasks/example-survey_product-feedback \
   --sample-size-per-value-group 2
-
-uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/<name>.yaml
-uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
-  --meta configs/jobs/persona-task-grounding-job-recipe/<name>.meta.json
 ```
+
+Then run the generated job and aggregate verifier output:
+
+```bash
+uv run harbor run -c configs/jobs/persona-task-grounding-job-recipe/<job-slug>.yaml
+uv run python persona/reporting/eval_grounding_job.py jobs/<job_name> \
+  --meta configs/jobs/persona-task-grounding-job-recipe/<job-slug>.meta.json
+```
+
+The generated YAML and sidecar metadata are ignored by git until a maintainer
+promotes a specific recipe to `configs/jobs/`.
 
 Use `--controlled-probe` to clone one anchor persona and vary only the probe dimension (legacy). To stratify across the full pool without catalog confounders, pass a task with no `grounding.confounders` entry or set `"confounders": {}` in the job spec.
 

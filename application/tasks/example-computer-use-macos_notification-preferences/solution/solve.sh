@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p /tmp/matraix-macos-notification-preferences
+mkdir -p /tmp/personabench-macos-notification-preferences
 
-cat > /tmp/matraix-macos-notification-preferences/decision.json <<'EOF'
+cat > /tmp/personabench-macos-notification-preferences/decision.json <<'EOF'
 {
   "keep_notifications_on": true,
   "app_reviewed": "Mail",

@@ -10,11 +10,18 @@ from pathlib import Path
 
 import yaml
 
-from matraix.application_job import build_application_job_config
-from matraix.persona_job import DEFAULT_DATASET, parse_stratify_field_args
+from personabench.application_job import build_application_job_config
+from personabench.persona_job import DEFAULT_DATASET, parse_stratify_field_args
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_JOBS_DIR = REPO_ROOT / "configs" / "jobs" / "application-task-job-recipe"
+
+
+def _display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
 
 
 def _slug(value: str) -> str:
@@ -146,7 +153,7 @@ def main() -> None:
         f"seed={meta['seed']}\n"
         f"# Personas: {', '.join(meta['selected_persona_ids'])}\n"
         f"#\n"
-        f"#   uv run harbor run -c {out_path.relative_to(REPO_ROOT)}\n\n"
+        f"#   uv run harbor run -c {_display_path(out_path)}\n\n"
     )
     out_path.write_text(
         header + yaml.safe_dump(job_config, sort_keys=False),
@@ -156,10 +163,12 @@ def main() -> None:
     sidecar = out_path.with_suffix(".meta.json")
     sidecar.write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
 
-    print(f"Matched {meta['matched_pool_size']} personas; selected {meta['sample_size']}")
+    print(
+        f"Matched {meta['matched_pool_size']} personas; selected {meta['sample_size']}"
+    )
     print(f"Job: {out_path}")
     print(f"Meta: {sidecar}")
-    print(f"Run: uv run harbor run -c {out_path.relative_to(REPO_ROOT)}")
+    print(f"Run: uv run harbor run -c {_display_path(out_path)}")
 
 
 if __name__ == "__main__":

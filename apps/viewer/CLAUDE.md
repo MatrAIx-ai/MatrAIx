@@ -4,31 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-MatrAIx Viewer is a React SPA for browsing and inspecting MatrAIx simulation jobs, trials, and agent trajectories. It operates in two modes: "jobs" mode (browse evaluation results) and "tasks" mode (browse task definitions). The mode is determined by the backend API config.
+PersonaBench Viewer is a React SPA for browsing and inspecting PersonaBench simulation jobs, trials, and agent trajectories. It operates in two modes: "jobs" mode (browse evaluation results) and "tasks" mode (browse task definitions). The mode is determined by the backend API config.
 
 ## Commands
 
 ```bash
 # Install dependencies
-bun install
+npm ci
 
 # Dev server with hot reload (frontend only, http://localhost:5173)
-bun dev
+npm run dev
 
 # Full dev with backend API (from repo root)
 harbor view ./jobs --dev
 
 # Production build (output: build/client/)
-bun run build
+npm run build
 
 # Type checking
-bun run typecheck
+npm run typecheck
 
-# Deploy to harbor view (copies build to src/harbor/viewer/static/)
+# Deploy to harbor view (copies build to environment/runtime/harbor/viewer/static/)
 harbor view ./jobs --build
 ```
 
-There are no tests or linting configured in this package. The parent monorepo uses Ruff for Python; this frontend has no equivalent setup.
+Use Node.js 20.19.0 or newer. The checked-in `.node-version` and `.nvmrc`
+files pin the tested local runtime, and `.github/workflows/viewer.yml`
+typechecks this package in CI.
 
 ## Architecture
 

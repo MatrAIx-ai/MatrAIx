@@ -1,3 +1,16 @@
-[`generate_application_job.py`](generate_application_job.py) — sample personas and write Harbor job YAML under `configs/jobs/application-task-job-recipe/`.
+# Application Scripts
 
-Supports `--sample-size` and optional `--stratify` on one or more persona fields.
+[`generate_application_job.py`](generate_application_job.py) samples personas and
+writes a multi-trial job YAML plus a `.meta.json` sidecar under
+`configs/jobs/application-task-job-recipe/` by default.
+
+Generated job recipes are ignored by git unless a maintainer explicitly curates
+one into the repository. Use `--out` to write to a temporary path while testing.
+
+The script supports:
+
+- `--sample-size`
+- repeated or comma-separated `--stratify`
+- `--name`
+- `--job-name`
+- `--dataset`

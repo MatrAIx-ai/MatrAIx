@@ -2,8 +2,8 @@ The ClearQueue team is running a quick pricing check before they ship.
 
 Materials in `/app/input/`:
 
-- `product_brief.md` — tiers and features  
-- `survey_questions.md` — the form and answer codes  
+- `product_brief.md` — tiers and features
+- `survey_questions.md` — the form and answer codes
 
 Read both and submit responses that match how you actually see it.
 

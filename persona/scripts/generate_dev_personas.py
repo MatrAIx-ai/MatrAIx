@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a local dev persona pool from dimensions.json (no counterfactual combos)."""
+"""Generate a local dev persona pool from the PersonaBench dimension schema."""
 
 from __future__ import annotations
 
@@ -7,14 +7,14 @@ import argparse
 import json
 from pathlib import Path
 
-from matraix.persona_consistency import validate_dimensions
-from matraix.persona_dimension_catalog import values_for_dimension
-from matraix.persona_generator import (
+from personabench.persona_consistency import validate_dimensions
+from personabench.persona_dimension_catalog import values_for_dimension
+from personabench.persona_generator import (
     build_probe_strata,
     generate_persona_pool,
     write_persona_dataset,
 )
-from matraix.task_catalog import (
+from personabench.task_catalog import (
     confounder_values_from_grounding,
     get_task_grounding_spec,
     probe_dimension_from_grounding,
@@ -22,14 +22,16 @@ from matraix.task_catalog import (
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_COUNT = 2000
-DEFAULT_OUT = REPO_ROOT / "persona" / "datasets" / f"bench-dev-{DEFAULT_COUNT}"
+DEFAULT_GENERATED_DATASETS_DIR = REPO_ROOT / "persona" / "datasets" / "_generated"
 
 
 def _default_out_dir(count: int) -> Path:
-    return REPO_ROOT / "persona" / "datasets" / f"bench-dev-{count}"
+    return DEFAULT_GENERATED_DATASETS_DIR / f"bench-dev-{count}"
 
 
-def _stratum_top_up_from_task(task_path: str) -> tuple[list[dict[str, str]], dict[str, object]]:
+def _stratum_top_up_from_task(
+    task_path: str,
+) -> tuple[list[dict[str, str]], dict[str, object]]:
     grounding = get_task_grounding_spec(task_path, repo_root=REPO_ROOT)
     if not grounding:
         raise SystemExit(f"No grounding.toml (or catalog grounding) for {task_path!r}")
@@ -58,7 +60,7 @@ def main() -> None:
         "--out",
         type=Path,
         default=None,
-        help=f"Output directory (default: persona/datasets/bench-dev-<count>)",
+        help="Output directory (default: persona/datasets/_generated/bench-dev-<count>)",
     )
     parser.add_argument("--smoke-id", default="0042")
     parser.add_argument(
@@ -127,7 +129,9 @@ def main() -> None:
 
     print(f"Wrote {manifest['count']} personas to {out}")
     print(f"Smoke: persona_{manifest['smoke_persona_id']}.yaml")
-    print(f"Dimensions: {manifest.get('dimension_count', len(manifest['dimension_ids']))} fields")
+    print(
+        f"Dimensions: {manifest.get('dimension_count', len(manifest['dimension_ids']))} fields"
+    )
     if stratum_top_up:
         print(
             f"Stratum top-up: {len(stratum_top_up)} cells × min {args.stratum_min} "

@@ -1,13 +1,17 @@
 # Notification preferences (Linux)
 
-MatrAIx **Linux desktop** computer-use task: the persona opens **XFCE Settings → Notifications** (Notify OSD) in a Docker Xvfb desktop and writes a JSON preference to disk.
+PersonaBench **Linux desktop** computer-use task: the persona opens **XFCE Settings → Notifications** (Notify OSD) in a Docker Xvfb desktop and writes a JSON preference to disk.
 
 Requires **`persona-computer-1`** with default **Docker** environment (Harbor `Computer1`). No `USE_COMPUTER_API_KEY`.
 
 ```bash
 uv sync --extra computer-1
 export ANTHROPIC_API_KEY=...
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-linux-local.yaml
+uv run harbor run \
+  -a persona-computer-1 \
+  -m anthropic/claude-sonnet-4-6 \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
+  -p application/tasks/example-computer-use-linux_notification-preferences
 ```
 
 Oracle:
@@ -18,7 +22,7 @@ uv run harbor run -p application/tasks/example-computer-use-linux_notification-p
 
 ## Output
 
-`/tmp/matraix-linux-notification-preferences/decision.json`
+`/tmp/personabench-linux-notification-preferences/decision.json`
 
 ## vs macOS / iOS
 

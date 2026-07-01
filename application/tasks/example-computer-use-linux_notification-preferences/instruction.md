@@ -6,7 +6,7 @@ You just set up a new Linux desktop. Before you finish, take a minute to see how
 2. Look at how alerts show up — position, duration, or whether they appear at all.
 3. Decide whether you'd **keep notifications on** the way this system is set up for everyday use.
 
-Save your decision to `/tmp/matraix-linux-notification-preferences/decision.json`:
+Save your decision to `/tmp/personabench-linux-notification-preferences/decision.json`:
 
 ```json
 {

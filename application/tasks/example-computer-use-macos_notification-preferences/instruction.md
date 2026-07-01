@@ -6,7 +6,7 @@ You just set up a new Mac. Before you finish, take a minute to see how **notific
 2. Pick **one app** you actually use (Mail, Messages, Safari, whatever) and look at how its notifications are set up.
 3. Decide whether you'd **keep notifications on** for that app on a Mac you use every day.
 
-Save your decision to `/tmp/matraix-macos-notification-preferences/decision.json`:
+Save your decision to `/tmp/personabench-macos-notification-preferences/decision.json`:
 
 ```json
 {

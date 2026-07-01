@@ -1,10 +1,10 @@
 # Notification preferences (iOS)
 
-MatrAIx **mobile** computer-use task: open **Settings → Notifications** on an iPhone 17 simulator (use.computer, iOS 26.4), review one app, and submit a JSON decision.
+PersonaBench **mobile** computer-use task: open **Settings → Notifications** on an iPhone 17 simulator (use.computer, iOS 26.4), review one app, and submit a JSON decision.
 
 Requires **`use-computer`** with **`platform: ios`**, not Docker.
 
-Uses **`persona-computer-1`** → use.computer **`IOSAgent`**. The instruction is written for the persona; MatrAIx materializes the submitted JSON to `decision.json` on the simulator host for scoring.
+Uses **`persona-computer-1`** → use.computer **`IOSAgent`**. The instruction is written for the persona; PersonaBench materializes the submitted JSON to `decision.json` on the simulator host for scoring.
 
 ```bash
 uv sync --extra use-computer --extra computer-1
@@ -27,11 +27,17 @@ Change `[ios]` in `task.toml` if your reserved mini uses different simulator run
 |-------|-------|
 | Agent | `persona-computer-1` |
 | Environment | `use-computer` + `platform: ios` |
-| Persona | `persona/datasets/bench-dev-2000/persona_0042.yaml` |
+| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
 | Agent kwargs | `max_steps: 35`, `recording_enabled: false` (job config) |
 
 ```bash
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-ios-local.yaml
+uv run harbor run \
+  -a persona-computer-1 \
+  -m anthropic/claude-sonnet-4-6 \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
+  -p application/tasks/example-computer-use-ios_notification-preferences \
+  -e use-computer \
+  --ek platform=ios
 ```
 
 Oracle check (writes `decision.json` on the host via shell; no LLM):
@@ -46,13 +52,13 @@ uv run harbor run \
 
 ## Submission (persona CUA)
 
-The agent hands in JSON as described in `instruction.md`. `persona-computer-1` writes that to `/tmp/matraix-ios-notification-preferences/decision.json` on the Mac host before the verifier runs.
+The agent hands in JSON as described in `instruction.md`. `persona-computer-1` writes that to `/tmp/personabench-ios-notification-preferences/decision.json` on the Mac host before the verifier runs.
 
 ## Output path
 
 Host path after trial:
 
-`jobs/<job>/<trial>/artifacts/tmp/matraix-ios-notification-preferences/decision.json`
+`jobs/<job>/<trial>/artifacts/tmp/personabench-ios-notification-preferences/decision.json`
 
 ## vs macOS `macos-notification-preferences`
 

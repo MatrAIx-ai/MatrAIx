@@ -1,6 +1,6 @@
 # Notification preferences (macOS)
 
-MatrAIx **macOS** computer-use task: the persona opens real **System Settings → Notifications**, reviews an app, and writes a structured JSON preference to disk.
+PersonaBench **macOS** computer-use task: the persona opens real **System Settings → Notifications**, reviews an app, and writes a structured JSON preference to disk.
 
 Requires the **use-computer** environment (remote macOS desktop sandbox), not Docker.
 
@@ -18,22 +18,19 @@ export ANTHROPIC_API_KEY=...
 |-------|-------|
 | Agent | `persona-computer-1` |
 | Environment | `use-computer` (default `platform: macos`) |
-| Persona | `persona/datasets/bench-dev-2000/persona_0042.yaml` |
+| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
 
 ```bash
 uv run harbor run \
   -a persona-computer-1 \
   -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-2000/persona_0042.yaml \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
   -p application/tasks/example-computer-use-macos_notification-preferences \
   -e use-computer
 ```
 
-Or use the job config:
-
-```bash
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-macos-local.yaml
-```
+The curated local job recipe is
+`configs/jobs/example-job-recipe/appSim-example-computer-use-macos-local.yaml`.
 
 Oracle check (no LLM; writes the decision file directly):
 
@@ -45,11 +42,11 @@ uv run harbor run -p application/tasks/example-computer-use-macos_notification-p
 
 Submissions are written inside the sandbox to:
 
-`/tmp/matraix-macos-notification-preferences/decision.json`
+`/tmp/personabench-macos-notification-preferences/decision.json`
 
 Harbor downloads that directory after the trial (`artifacts` in `task.toml`). On the host:
 
-`jobs/<job>/<trial>/artifacts/tmp/matraix-macos-notification-preferences/decision.json`
+`jobs/<job>/<trial>/artifacts/tmp/personabench-macos-notification-preferences/decision.json`
 
 Check `artifacts/manifest.json` in the trial directory if a file is missing (`status: ok` vs `failed`).
 
@@ -59,4 +56,4 @@ Check `artifacts/manifest.json` in the trial directory if a file is missing (`st
 |--|-----------|-----|
 | Platform | macOS (`use-computer`, default) | iOS Simulator (`platform: ios`) |
 | Settings UI | System Settings → Notifications | Settings app → Notifications |
-| Output dir | `/tmp/matraix-macos-notification-preferences/` | `/tmp/matraix-ios-notification-preferences/` |
+| Output dir | `/tmp/personabench-macos-notification-preferences/` | `/tmp/personabench-ios-notification-preferences/` |

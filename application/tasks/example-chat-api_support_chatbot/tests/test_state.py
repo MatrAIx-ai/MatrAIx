@@ -23,7 +23,9 @@ def test_transcript_schema():
     for entry in messages:
         assert entry.get("role") in {"customer", "support"}, "invalid message role"
         content = entry.get("content")
-        assert isinstance(content, str) and content.strip(), "message content must be non-empty"
+        assert isinstance(content, str) and content.strip(), (
+            "message content must be non-empty"
+        )
 
 
 def test_transcript_multi_turn():

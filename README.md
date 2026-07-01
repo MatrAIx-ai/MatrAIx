@@ -1,168 +1,121 @@
-# MatrAIx
+# PersonaBench
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
-[![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
+PersonaBench is the focused home for persona data, persona schemas, persona
+evaluation tasks, and persona-conditioned simulation examples curated from
+MatrAIx.
 
-> **Simulate before reality.**  
-> Large-scale, persona-driven agent simulation — test products, conversations, and workflows *before* they hit real users.
+The repository is organized around three contribution modules:
 
-MatrAIx pairs **synthetic personas** with **LLM agents** in reproducible Harbor tasks: surveys, chat, live web, and desktop computer-use. The name nods to *The Matrix* — a simulated world useful for exploration, not a replacement for real people.
-
-**North star:** toward **8.3B** persona-scale simulation (one synthetic profile per person on Earth). Today the repo ships a working minimal stack you can run locally with Docker.
-
----
-
-## 🏗️ Architecture
-
-![MatrAIx architecture](docs/assets/matraix-architecture.png)
-
-| Team | Delivers | Docs |
-|------|----------|------|
-| 🧬 **Persona** | Persona cards, datasets, adherence benchmarks | [docs/personas/](docs/personas/README.md) |
-| 🌐 **Environment** | Harbor runtime, agents, jobs, viewer | [docs/environments/](docs/environments/README.md) |
-| 📋 **Application** | Simulation scenarios (survey, chat, web, computer-use) | [docs/applications/](docs/applications/README.md) |
-
-**Agents & API keys (Application + Environment):** [choosing-an-agent.md](docs/environments/choosing-an-agent.md)
-
----
-
-## 🚀 Quick start
-
-**Prerequisites:** [Docker](https://docs.docker.com/get-docker/) and [uv](https://docs.astral.sh/uv/). An API key is only needed for the examples below — see [`.env.example`](.env.example) and [choosing-an-agent.md](docs/environments/choosing-an-agent.md).
-
-```bash
-git clone https://github.com/matraix-ai/matraix.git && cd matraix
-uv sync
+```text
+persona/       Persona schemas, datasets, curation pipelines, and persona bench tasks.
+application/   Product and research scenarios that consume personas.
+environment/   Runtime, agents, job recipes, viewer, and execution infrastructure.
+apps/          Repo-local tool frontends paired with runtime APIs.
 ```
 
-**Smoke** (no API key) — Harbor `hello-world` task; checks Docker and the runtime (first run builds the image; may take a few minutes):
+The rule of thumb is simple:
+
+- `persona/` defines who the simulated user is and how persona adherence is
+  evaluated.
+- `application/` defines what scenario, product, or workflow the simulated user
+  interacts with.
+- `environment/` defines how the simulation runs, logs, and verifies work.
+- `apps/` contains developer-facing tool frontends, currently the viewer UI for
+  `harbor view`.
+
+Shared libraries may live under `packages/` when they are genuinely reusable.
+Large generated outputs, raw dumps, and migration snapshots should not be
+merged into `main`.
+
+## Current Clean-Main State
+
+This branch is intentionally not a byte-for-byte copy of the old MatrAIx
+`main`. It keeps the runnable and reviewable parts of MatrAIx under stable
+module boundaries:
+
+- `persona/`: persona schema, curation utilities, sample datasets, persona
+  grounding tasks, bench tasks, reporting, and validators.
+- `application/`: application task definitions, reporting code, and curated
+  recipe generation helpers.
+- `environment/`: Harbor runtime, persona agents, adapter foundation, SimpleQA
+  adapter, curated job recipes, and environment docs.
+- `apps/viewer/`: the repo-local viewer frontend for inspecting Harbor jobs.
+- `packages/`: optional reusable packages such as `harbor-langsmith` and
+  `rewardkit`.
+
+Historical run outputs, generated datasets, large fixtures, screenshots,
+recordings, and raw migration snapshots are tracked as external artifacts
+instead of being committed to `main`; see
+[the artifact handoff checklist](migration/matraix/README.md).
+
+## Quick Start
+
+```bash
+uv venv --python 3.12
+uv pip install -e .
+uv pip install pytest pytest-asyncio
+uv pip install -e packages/harbor-langsmith
+uv pip install -e packages/rewardkit
+uv pip install -e environment/adapters/simpleqa
+uv run pytest tests/ packages/harbor-langsmith/tests/ packages/rewardkit/tests/
+uv run ruff check .
+```
+
+Run a local smoke job that does not need model credentials:
 
 ```bash
 uv run harbor run -c configs/jobs/example-job-recipe/harbor-smoke-local.yaml
 ```
 
-**Example (Application)** — one persona, open-text product survey (product metrics, no grounding oracle):
+Run the curated persona application example after setting the required model
+API key:
 
 ```bash
-export ANTHROPIC_API_KEY="sk-ant-..."   # if not already in your shell
-
+export ANTHROPIC_API_KEY="sk-ant-..."
 uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-survey-local.yaml
 ```
 
-**View** — inspect runs (`jobs/` includes examples you can browse without re-running):
+More setup, optional package, adapter, viewer, and artifact details are in
+[Running PersonaBench](docs/running.md).
 
-```bash
-uv run harbor view jobs --build
-```
+## Persona Data
 
-> Use **`uv run harbor`** — a globally installed `harbor` may be an older build without `persona-*` agents.
+Persona schema, datasets, curation pipelines, collaborator packages, and
+artifact handoff guidance live under [persona/](persona/README.md).
 
-Step-by-step guide: [Application getting started](docs/applications/getting-started.md)
+Useful entry points:
 
----
+- [Existing-data curation](persona/curation/existing_data/README.md) documents
+  the Wikipedia and Amazon package-generation flow.
+- `persona/curation/existing_data/scripts/make_package.py` is the preferred
+  owner-facing package generator for both `--source wiki` and
+  `--source amazon`.
+- [Artifact handoff](migration/matraix/README.md) lists large generated data
+  that stays outside `main` until uploaded externally.
 
-## 💬 Join the project
+## Research Notes
 
-We welcome collaborators across research, product, data, and engineering.
+The old MatrAIx literature review lived inside team planning files. Clean main
+keeps the useful references as module-specific research notes:
 
-### 1. Say hello
+- [Persona related work](docs/research/persona-related-work.md)
+- [Behavior-grounded personas](docs/research/behavior-grounded-personas.md)
+- [AutoPersona causal schema-learning proposal](docs/research/autopersona.md)
+- [Application related work](docs/research/application-related-work.md)
+- [Application areas taxonomy](docs/research/application-areas-taxonomy.md)
+- [Application domain benchmark catalog](docs/research/application-domain-benchmark-catalog.md)
+- [Environment related work](docs/research/environment-related-work.md)
 
-[![Discord](https://img.shields.io/badge/Discord-join%20MatrAIx-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
+The source environment review was much thinner than the application and
+persona reviews. The environment note records the original environment entries
+and cross-links environment-relevant benchmark references that were originally
+written in the application review.
 
-When you join Discord, set your **server nickname** to **`Full Name - Affiliation`** (e.g. `Alex Chen - Stanford`). Members who do not use this format may be removed.
+Start here:
 
-[![Google Form](https://img.shields.io/badge/Google%20Form-join%20MatrAIx-4285F4?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/hwEHng5HGWRqcJue9)
-
-The form collects basic background (affiliation, interests, experience) so organizers can reach you, place you in the right team discussions, and gather information for future paper authorship and acknowledgements.
-
-### 2. Read docs and pick a team (or teams)
-
-| Team | If you care about… | Start here |
-|------|-------------------|------------|
-| 🧬 **Persona** | Persona schema and data, persona generator, persona grounding | [docs/personas/](docs/personas/README.md) |
-| 📋 **Application** | Product scenarios, task design, product user metrics design | [docs/applications/](docs/applications/README.md)<br>[getting started](docs/applications/getting-started.md) |
-| 🌐 **Environment** | Environment infra, engineering, runtime, back and front end | [docs/environments/](docs/environments/README.md) |
-
-All teams that run simulations should skim [choosing-an-agent.md](docs/environments/choosing-an-agent.md).
-
-### 3. Do one hands-on pass
-
-Complete the [Application getting-started guide](docs/applications/getting-started.md) (or the smoke run above), then browse results with `harbor view`.
-
-### 4. Contribute
-
-See **[CONTRIBUTING.md](CONTRIBUTING.md)** for workflow (Issues, Discussions, PRs), contribution areas, and how work is recognized. In short: open a **GitHub Issue** for task work (tag your team), log progress in **Discussions**, and link every PR to its Issue.
-
----
-
-## 📁 Repository layout
-
-```text
-# —— All teams ——
-docs/                    # Team documentation (personas/, environments/, applications/)
-jobs/                    # Run outputs (example runs checked in for harbor view)
-
-# —— Persona team ——
-persona/
-├── dimensions.json
-├── datasets/            # Persona YAML pools (bench-dev-2000, …)
-├── tasks/               # Persona-adherence Harbor tasks
-├── scripts/
-└── reporting/
-
-# —— Application team ——
-application/
-├── tasks/               # Executable scenarios (survey, chat, web, computer-use)
-├── scripts/
-└── reporting/
-
-# —— Environment team ——
-src/harbor/              # CLI, trial/job runtime, Docker/Modal/Daytona/… backends
-src/matraix/             # Persona agents (persona-claude-code, …)
-configs/jobs/            # Job YAML recipes (smoke, persona bench, application)
-packages/rewardkit/      # Verifier / LLM-judge toolkit
-apps/viewer/             # Web UI for harbor view
-examples/tasks/          # Upstream Harbor hello-world (reference)
-```
-
----
-
-## 🗺️ Roadmap
-
-- **Stage 1 — Minimal stack.** Persona schema, initial persona set, basic survey + chatbot environments, first persona-adherence benchmark, simple telemetry.
-- **Stage 2 — Core dataset & benchmark.** Release MatrAIxPersona-8B, MatrAIxPersonaTrain, MatrAIxPersonaBench; add domain subsets and automatic evaluation.
-- **Stage 3 — Environment expansion.** Web environment, long-horizon and multi-turn tasks, memory-enabled agents, multi-agent interaction, cost/friction simulation.
-- **Stage 4 — Simulated society.** Scale toward a planet-scale population with social graphs, group interaction, information diffusion, and synthetic communities.
-
----
-
-## 🔬 Research questions
-
-- How should synthetic personas be represented, and how do we measure persona adherence?
-- How consistent are LLM agents across long interactions?
-- Can simulated users predict real user preferences?
-- How do multi-agent simulations differ from single-agent feedback?
-- Can lightweight self-evolving memory make agents better human stand-ins?
-- What are the limitations and failure modes of persona-based simulation?
-
----
-
-## 📄 Publications
-
-MatrAIx is intended to produce two initial papers, with more to follow as the project grows.
-
-- **Paper 1 — Persona data & benchmark.** Construction of the large-scale MatrAIxPersona dataset and the MatrAIxPersonaBench persona-adherence benchmark, covering schema design, data generation, quality filtering, and evaluation.
-- **Paper 2 — User simulation.** Downstream applications of persona-conditioned agents as simulated users, with task scenarios, evaluation, and analysis of how well simulated feedback stands in for real users.
-
-**Timeline.** Both papers target completion over the summer of 2026.
-
----
-
-## ⚠️ Limitations
-
-MatrAIx is **experimental**. Synthetic users are not real users — use outputs for exploration, hypothesis generation, and early signal only. Validate important decisions with real-world data. Agents can be inconsistent, biased, or prompt-sensitive.
-
----
-
-<p align="center"><strong>Simulate before reality.</strong></p>
+- [Architecture](docs/architecture.md)
+- [Running PersonaBench](docs/running.md)
+- [Research notes](docs/research/README.md)
+- [Contributing](CONTRIBUTING.md)
+- [MatrAIx migration plan](docs/migration/matraix-import-plan.md)
+- [MatrAIx merge log](docs/migration/matraix-merge-log.md)
