@@ -21,7 +21,7 @@ agents:
     exclude_logs:
       - recording.mp4
     kwargs:
-      persona_path: persona/datasets/bench-dev-2000/persona_1206.yaml
+      persona_path: persona/datasets/bench-dev-sample/persona_0052.yaml
       max_steps: 40
       recording_enabled: false
 

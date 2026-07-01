@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from matraix.telemetry.ios_probe import (
+from harbor.telemetry.ios_probe import (
     device_name_matches,
     device_record_matches,
     merge_watched_app_records,

@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from matraix.telemetry.nskeyedarchiver import (
+from harbor.telemetry.nskeyedarchiver import (
     extract_bb_section_from_nska,
     notifications_enabled_from_settings,
     parse_bulletin_notifications_from_path,

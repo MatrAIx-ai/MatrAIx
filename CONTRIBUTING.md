@@ -1,58 +1,50 @@
-# Contributing to MatrAIx
+# Contributing to PersonaBench
 
-MatrAIx is built by three teams — **Persona**, **Environment**, and **Application**. This guide covers how to contribute: workflow (Issues, Discussions, PRs), where each team works in the repo, and the main contribution areas.
+PersonaBench accepts focused PRs. A PR can touch more than one module, but it
+must explain the boundary crossing in the PR body.
 
-## Contribution flow
+## Modules
 
-1. **Choose your team(s)** — read the three team docs below. One PR can touch multiple teams; tag every team involved.
-2. **Open or pick an Issue** — Issues are for todos, task proposals, and bugs. The **creator** tags `team: persona|environment|application`. Either **assign yourself** and start work, or leave it open for someone else to claim in a comment.
-3. **Log progress in Discussions** — Discussions are for your contribution history (design notes, experiments, weekly updates). Keep one long-lived thread; append dated posts so maintainers can review what you did over time. Do not use Issues for this.
-4. **One Issue per PR** — every PR must link the Issue it implements (`Fixes #123`). Drive-by PRs without a linked Issue are closed. You may also link your Discussion thread in the PR body.
-5. **Write the PR clearly** — what changed, why, how you tested. Link the Issue; use `git commit -s`.
-6. **Merge** — CI must pass. GitHub auto-labels the PR and requests reviewers ([CODEOWNERS](.github/CODEOWNERS)). At least **one** approval from an admin or the relevant team reviewer is required before merge.
+| Module | Owns | Does not own |
+| --- | --- | --- |
+| `persona/` | Persona schema, attributes, curated datasets, persona curation scripts, persona adherence tasks | Runtime drivers, product scenarios, checked-in job outputs |
+| `application/` | Survey/chat/web/product scenarios, application metrics, application task fixtures | Persona source datasets, runtime engines |
+| `environment/` | Harbor/runtime code, persona agent adapters, job recipes, viewer backend, execution backends | Persona schema decisions, application-specific research claims |
+| `apps/` | Repo-local tool frontends such as the `harbor view` UI | Generated builds, datasets, task definitions |
+| `packages/` | Reusable libraries used by multiple modules | One-off scripts or generated outputs |
 
-Org members: branch on this repo. Everyone else: **fork** and PR from your fork.
+## PR Expectations
 
-Questions: [Discord](https://discord.gg/vruP88PTZ).
+Every PR should include:
 
-### Teams — paths, plan, where to start
+- The module or modules it touches.
+- The source issue or migration source, when applicable.
+- A short explanation of why the change belongs in that module.
+- Test or validation commands that were run.
+- Any generated data policy decision, especially for large files.
 
-| Team | Main paths | Plan | Start here |
-|------|------------|------|------------|
-| **Persona** | `persona/` | [docs/personas/PLAN.md](docs/personas/PLAN.md) | [docs/personas/getting-started.md](docs/personas/getting-started.md) |
-| **Environment** | everything else (Harbor runtime, agents, jobs, viewer, infra, …) | [docs/environments/PLAN.md](docs/environments/PLAN.md) | [docs/environments/README.md](docs/environments/README.md) |
-| **Application** | `application/` | [docs/applications/PLAN.md](docs/applications/PLAN.md) | [docs/applications/getting-started.md](docs/applications/getting-started.md) |
+## What Not To Merge
 
----
+Do not merge raw migration snapshot directories such as:
 
-## Contributing points
+- `MatrAIx/`
+- `MatrAIx_PR_*`
+- `MatrAIx_CLOSED_PR_*`
+- `MatrAIx_MERGED_PR_*`
 
-**How contribution is recognized**
+Those are screening artifacts. Curate the useful code into the module layout
+instead.
 
-- **Task work** — Persona bench tasks, Application tasks, and runnable task examples/pipelines: **count and quality** of merged work in the repo. **Only merged task PRs count**; detailed quality standards are still being finalized (verifiers, metrics, reproducibility, and review expectations will follow).
-- **Everything else** — research, schema, datasets, infra, dashboards, agents, etc.: **effort** as reviewed by the **team reviewer** and **maintainers**, primarily from your **Discussion** thread and linked PRs.
+Do not check in large generated job output by default. Prefer small fixtures
+under the owning module, or external storage for large datasets and run logs.
 
-| Team | Contribution area | Recognized by |
-|------|-------------------|---------------|
-| **Persona** | Persona survey and related-work research | Effort |
-| | Dataset curation | Effort |
-| | Dimension and persona schema | Effort |
-| | Persona attributes counterfactual filter | Effort |
-| | Persona bench task design (persona grounding) | Effort |
-| | Persona bench task curation | Task count & quality |
-| **Environment** | Environment infrastructure | Effort |
-| | Persona task examples and pipeline | Task count & quality |
-| | Application task examples and pipeline | Task count & quality |
-| | Viz / dashboard for persona runs | Effort |
-| | All-in-one viz / dashboard for application tasks | Effort |
-| | Social-oriented environment sandbox and middleware for Harbor | Effort |
-| | Contributing agent that scans task quality | Effort |
-| **Application** | Research or demo development | Effort |
-| | Application task development — environment dependencies, persona cohort, isolated app servers, persona- and application-side metrics **(key)**, metrics on dashboard ([task-guide](docs/applications/task-guide.md)) | Task count & quality |
+## Migration Workflow
 
----
+When importing from MatrAIx:
 
-## Basics
-
-- **License:** Apache 2.0. No confidential data, PII, or secrets in the repo.
-- **Setup:** `uv sync` — see [docs/applications/getting-started.md §2](docs/applications/getting-started.md#2-install-uv-clone-and-sync).
+1. Find the source PR or commit in `migration/matraix/`.
+2. Decide which module owns the useful content.
+3. Move only the curated files into that module.
+4. Add or update module docs.
+5. Run the narrowest useful validation.
+6. Record the import in `docs/migration/matraix-merge-log.md`.

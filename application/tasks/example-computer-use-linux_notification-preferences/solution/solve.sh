@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p /tmp/matraix-linux-notification-preferences
+mkdir -p /tmp/personabench-linux-notification-preferences
 
-cat > /tmp/matraix-linux-notification-preferences/decision.json <<'EOF'
+cat > /tmp/personabench-linux-notification-preferences/decision.json <<'EOF'
 {
   "keep_notifications_on": false,
   "app_reviewed": "Notify OSD",

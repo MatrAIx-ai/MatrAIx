@@ -1,8 +1,8 @@
 schema_version = "1.1"
-artifacts = [ "/tmp/matraix-linux-notification-preferences",]
+artifacts = [ "/tmp/personabench-linux-notification-preferences",]
 
 [task]
-name = "matraix/application-computer-use-linux-notification-preferences"
+name = "personabench/application-computer-use-linux-notification-preferences"
 
 [metadata]
 difficulty = "easy"
@@ -17,6 +17,7 @@ timeout_sec = 300.0
 timeout_sec = 1800.0
 
 [environment]
+definition = "application/example-computer-use-linux_notification-preferences"
 build_timeout_sec = 1200.0
 cpus = 2
 memory_mb = 4096

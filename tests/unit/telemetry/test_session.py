@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from matraix.telemetry.paths import SYSTEM_TRACE_PATH
-from matraix.telemetry.schema import TelemetryTrace, SessionInfo, Snapshot
-from matraix.telemetry.session import TelemetrySession, read_task_name, _write_remote_json
+from harbor.telemetry.paths import SYSTEM_TRACE_PATH
+from harbor.telemetry.schema import TelemetryTrace, SessionInfo, Snapshot
+from harbor.telemetry.session import TelemetrySession, read_task_name, _write_remote_json
 
 
 def test_read_task_name_from_toml(tmp_path: Path) -> None:

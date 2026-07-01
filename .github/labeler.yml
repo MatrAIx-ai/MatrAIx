@@ -1,4 +1,4 @@
-# Auto-label PRs by team area (see workflows/pr-labeler.yml)
+# Auto-label PRs by clean-main module area.
 
 "team: persona":
   - changed-files:
@@ -10,26 +10,31 @@
       - any-glob-to-any-file:
           - application/**
 
+"team: environment":
+  - changed-files:
+      - any-glob-to-any-file:
+          - environment/**
+          - configs/**
+
+"tooling":
+  - changed-files:
+      - any-glob-to-any-file:
+          - apps/**
+          - packages/**
+          - tests/**
+          - .github/**
+          - pyproject.toml
+
 "documentation":
   - changed-files:
       - any-glob-to-any-file:
           - docs/**
+          - migration/**
           - CONTRIBUTING.md
           - README.md
-          - AGENTS.md
-          - CHANGELOG.md
 
-"team: environment":
+"migration":
   - changed-files:
       - any-glob-to-any-file:
-          - src/**
-          - configs/**
-          - apps/**
-          - packages/**
-          - adapters/**
-          - examples/**
-          - tests/**
-          - skills/**
-          - .github/**
-          - pyproject.toml
-          - uv.lock
+          - docs/migration/**
+          - migration/matraix/**

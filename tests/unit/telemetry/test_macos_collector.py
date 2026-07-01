@@ -4,8 +4,8 @@ import json
 
 import pytest
 
-from matraix.telemetry.macos_collector import MacOSTelemetryCollector
-from matraix.telemetry.macos_probe import run_macos_notification_probe
+from harbor.telemetry.macos_collector import MacOSTelemetryCollector
+from harbor.telemetry.macos_probe import run_macos_notification_probe
 
 
 @pytest.mark.asyncio

@@ -4,8 +4,8 @@ import json
 
 import pytest
 
-from matraix.telemetry.ios_collector import IOSTelemetryCollector
-from matraix.telemetry.ios_probe import run_ios_notification_probe
+from harbor.telemetry.ios_collector import IOSTelemetryCollector
+from harbor.telemetry.ios_probe import run_ios_notification_probe
 
 
 @pytest.mark.asyncio
