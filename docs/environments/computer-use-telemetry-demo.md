@@ -78,7 +78,7 @@ Open a trial to access the **Trajectory**, **Artifacts**, and other tabs.
 
 ### Job list
 
-![Harbor viewer — job list](images/demo/01-harbor-job-list.png)
+![Harbor viewer — job list](../assets/computer-use-telemetry/01-harbor-job-list.png)
 
 ---
 
@@ -92,7 +92,7 @@ The agent navigates **System Settings → Notifications**, reviews **Mail**, and
 
 In the **Trajectory** tab, expand an agent step. Each step includes the agent message, tool calls, and an observation screenshot. For `persona-computer-1`, narrative text is in `step.message` (not a separate reasoning panel).
 
-![Harbor viewer — macOS trajectory](images/demo/02-harbor-macos-trial.png)
+![Harbor viewer — macOS trajectory](../assets/computer-use-telemetry/02-harbor-macos-trial.png)
 
 ### Structured decision
 
@@ -149,7 +149,7 @@ The agent reviews **Messages** notification settings in the Simulator and writes
 
 ### Trajectory
 
-![Harbor viewer — iOS trajectory](images/demo/03-harbor-ios-trial.png)
+![Harbor viewer — iOS trajectory](../assets/computer-use-telemetry/03-harbor-ios-trial.png)
 
 ### Structured decision
 
