@@ -1,12 +1,11 @@
-# Demo screenshots
+# Walkthrough figures
 
-**Final set: 3 images + 3 text proofs** (see [computer-use-telemetry-demo.md](../computer-use-telemetry-demo.md)).
+Screenshots for [computer-use-telemetry-demo.md](../../computer-use-telemetry-demo.md).
 
-| File | Status |
-|------|--------|
-| `01-harbor-job-list.png` | ✓ uploaded |
-| `02-harbor-macos-trial.png` | ✓ uploaded |
-| `03-harbor-ios-trial.png` | ✓ uploaded |
-| macOS `decision.json` (text) | in demo doc §2b |
-| iOS `decision.json` (text) | in demo doc §3b |
-| Terminal `jq` compare (text) | in demo doc §2c |
+| File | Description |
+|------|-------------|
+| `01-harbor-job-list.png` | Harbor viewer job list |
+| `02-harbor-macos-trial.png` | macOS trial — Trajectory tab |
+| `03-harbor-ios-trial.png` | iOS trial — Trajectory tab |
+
+Referenced from the demo doc as `images/demo/<file>` (relative to `docs/environments/`).
