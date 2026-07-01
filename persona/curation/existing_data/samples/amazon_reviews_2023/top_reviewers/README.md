@@ -15,11 +15,22 @@ persona/curation/existing_data/scripts/make_amazon_top_reviewer_package.sh \
   alice
 ```
 
-The wrapper writes a temporary rank-slice ID file, exports the matching user
-histories from the Hugging Face user-bucket artifact, and then builds an Amazon
-collaborator package with `make_package.py`. Set `MATRIX_DATA_ROOT` and
-`MATRIX_PACKAGE_OUT_ROOT` to control where local histories and package archives
-are written.
+The wrapper writes a temporary rank-slice ID file, exports the matching raw user
+histories from the Hugging Face user-bucket artifact, prepares those histories
+into the Amazon inference/evaluation contract, and then builds an Amazon
+collaborator package with `make_package.py`.
+
+The prepared history JSONL contains:
+
+- `reviews`: chronological construction split used for persona extraction
+- `validation_reviews`: held-out temporal tail for downstream rating holdout
+- `temporal_split`: per-user split metadata
+- `category_review_stats` and `validation_category_review_stats`
+- `review_filter_summary`: low-signal/template/duplicate review removals
+
+Set `MATRIX_DATA_ROOT` and `MATRIX_PACKAGE_OUT_ROOT` to control where local
+histories and package archives are written. Set `TEMPORAL_TRAIN_FRACTION`
+to change the default `0.8` construction/validation split.
 
 To retrieve only the corresponding review histories, pass this file to:
 

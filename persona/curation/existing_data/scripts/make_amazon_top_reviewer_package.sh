@@ -15,7 +15,9 @@
 #   AMAZON_REVIEWS_ARTIFACT_PREFIX=amazon/modal_artifacts/amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000
 #   AMAZON_CATEGORIES=all
 #   HF_TOKEN=...
-#   REUSE_HISTORIES=1
+#   REUSE_RAW_HISTORIES=1
+#   REUSE_PREPARED_HISTORIES=1
+#   TEMPORAL_TRAIN_FRACTION=0.8
 #
 set -euo pipefail
 
@@ -56,7 +58,9 @@ ASSIGNMENT_ID="AMZ_TOP10K_${START}_${END}"
 DATASET_ID="matraix_amazon_reviews_2023_top10k_${START}_${END}"
 RUN_DIR="${DATA_ROOT}/amazon_reviews_2023/top_reviewers/${ASSIGNMENT_ID}"
 SELECTED_IDS="${RUN_DIR}/reviewer_ids_${START}_${END}.txt"
-USER_HISTORIES="${RUN_DIR}/user_histories_${START}_${END}.jsonl"
+RAW_USER_HISTORIES="${RUN_DIR}/user_histories_raw_${START}_${END}.jsonl"
+USER_HISTORIES="${RUN_DIR}/user_histories_prepared_${START}_${END}.jsonl"
+FILTER_SUMMARY="${RUN_DIR}/user_histories_prepared_${START}_${END}.filter_summary.json"
 OUT_DIR="${PACKAGE_OUT_ROOT}/${ASSIGNMENT_ID}_${WORKER_ID}"
 
 if [[ ! -f "${TOP_REVIEWER_QUEUE}" ]]; then
@@ -94,8 +98,8 @@ out_path.write_text("\n".join(selected) + "\n", encoding="utf-8")
 print(f"wrote {len(selected)} reviewer ids to {out_path}")
 PY
 
-if [[ "${REUSE_HISTORIES:-0}" == "1" && -s "${USER_HISTORIES}" ]]; then
-  echo ">> reusing existing histories: ${USER_HISTORIES}"
+if [[ "${REUSE_RAW_HISTORIES:-0}" == "1" && -s "${RAW_USER_HISTORIES}" ]]; then
+  echo ">> reusing existing raw histories: ${RAW_USER_HISTORIES}"
 else
   echo ">> exporting Amazon review histories from Hugging Face"
   TOKEN_ARGS=()
@@ -105,8 +109,28 @@ else
     --repo-id "${HF_REPO_ID}" \
     --artifact-prefix "${HF_ARTIFACT_PREFIX}" \
     --categories "${HF_CATEGORIES}" \
-    --output "${USER_HISTORIES}" \
+    --output "${RAW_USER_HISTORIES}" \
     "${TOKEN_ARGS[@]}"
+fi
+
+if [[ "${REUSE_PREPARED_HISTORIES:-0}" == "1" && -s "${USER_HISTORIES}" ]]; then
+  echo ">> reusing existing prepared histories: ${USER_HISTORIES}"
+else
+  echo ">> preparing histories with temporal split, stats, and review filtering"
+  python3 persona/curation/existing_data/scripts/prepare_hf_amazon_user_histories.py \
+    --input "${RAW_USER_HISTORIES}" \
+    --output "${USER_HISTORIES}" \
+    --summary-output "${FILTER_SUMMARY}" \
+    --train-fraction "${TEMPORAL_TRAIN_FRACTION:-0.8}"
+fi
+
+PREPARED_COUNT="$(python3 -c 'import sys; print(sum(1 for line in open(sys.argv[1], encoding="utf-8") if line.strip()))' "${USER_HISTORIES}")"
+if (( PREPARED_COUNT <= 0 )); then
+  echo "no prepared user histories were written: ${USER_HISTORIES}" >&2
+  exit 1
+fi
+if (( PREPARED_COUNT < COUNT )); then
+  echo "warning: prepared ${PREPARED_COUNT}/${COUNT} requested users after filtering; packaging prepared users only" >&2
 fi
 
 DATASET_SHA256="$(python3 -c 'import hashlib,sys; h=hashlib.sha256(); f=open(sys.argv[1],"rb"); [h.update(c) for c in iter(lambda: f.read(1024*1024), b"")]; print(h.hexdigest())' "${USER_HISTORIES}")"
@@ -119,7 +143,7 @@ python3 persona/curation/existing_data/scripts/make_package.py \
   --source amazon \
   --user-histories "${USER_HISTORIES}" \
   --dimensions "${DIMENSIONS}" \
-  --range "0:${COUNT}" \
+  --range "0:${PREPARED_COUNT}" \
   --out-dir "${OUT_DIR}" \
   --assignment-id "${ASSIGNMENT_ID}" \
   --worker-id "${WORKER_ID}" \
