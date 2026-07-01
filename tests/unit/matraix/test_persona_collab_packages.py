@@ -640,3 +640,79 @@ def test_stackoverflow_collab_package_builds_extractable_archive(tmp_path: Path)
     assert "SO_0_1_carol/README.md" in names
     assert "SO_0_1_carol/collab_kit/conformance.py" in names
 
+
+def _load_solver_module():
+    import importlib.util
+
+    repo_root = Path(__file__).resolve().parents[3]
+    solver_path = (
+        repo_root / "persona/existing_data_curation/wiki_collab/collab_kit/solver.py"
+    )
+    spec = importlib.util.spec_from_file_location(
+        "collab_kit_solver_under_test", solver_path
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_solver_routes_fold_tasks_through_fold_voting(monkeypatch) -> None:
+    solver = _load_solver_module()
+    dimensions = [
+        {
+            "id": "att_online_reviews",
+            "label": "Attitude: Online reviews",
+            "category": "Behavior: Preferences",
+            "description": "Stance toward online reviews.",
+            "values": ["trusts reviews", "skeptical of reviews"],
+        }
+    ]
+    so_profile = {
+        "source": "stackoverflow_persona",
+        "min_support_folds": 2,
+        "profile_text": "combined",
+        "cv_fold_texts": [
+            {
+                "fold_id": 1,
+                "post_ids": ["p0001"],
+                "profile_text": "=== Fold 1/2 ===\n[p0001]\ntext: I always trust reviews.",
+            },
+            {
+                "fold_id": 2,
+                "post_ids": ["p0002"],
+                "profile_text": "=== Fold 2/2 ===\n[p0002]\ntext: Reviews guide me.",
+            },
+        ],
+    }
+
+    calls: list = []
+
+    def fake_single_pass(profile, dims, backend, model, effort):
+        calls.append(profile.get("cv_fold_id"))
+        return [
+            {
+                "field_id": "att_online_reviews",
+                "value": "trusts reviews",
+                "confidence": 0.8,
+                "evidence": "trust",
+                "assignment_type": "direct",
+            }
+        ]
+
+    monkeypatch.setattr(solver, "_attribute_single_pass", fake_single_pass)
+
+    fields = solver.attribute(so_profile, dimensions, backend="claude-code-acp")
+    assert calls == [1, 2]
+    merged = {field["field_id"]: field for field in fields}
+    assert merged["att_online_reviews"]["value"] == "trusts reviews"
+
+    calls.clear()
+    wiki_profile = {"qid": "Q1", "profile_text": "plain wiki text"}
+    fields = solver.attribute(wiki_profile, dimensions, backend="claude-code-acp")
+    assert calls == [None]
+    assert fields[0]["value"] == "trusts reviews"
+
+    prompt = solver.build_prompt(so_profile, dimensions)
+    assert "Stack Overflow" in prompt
+    assert solver.merge_fold_fields is solver.merge_amazon_fold_fields
+

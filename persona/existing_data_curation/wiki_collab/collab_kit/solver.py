@@ -46,11 +46,18 @@ ASSIGNMENT_TYPE_PRIORITY = ("direct", "structured_claim", "summary_inference")
 
 def build_prompt(profile: Profile, dimensions: list[Dimension]) -> str:
     """The default extraction method. EDIT ME to improve attribution quality."""
-    is_amazon = profile.get("source") == "amazon_reviews_2023"
+    source = str(profile.get("source") or "")
+    is_amazon = source == "amazon_reviews_2023"
+    is_stackoverflow = source == "stackoverflow_persona"
     if is_amazon:
         opening = (
             "You are extracting persona-attribution fields from Amazon review "
             "evidence for one reviewer."
+        )
+    elif is_stackoverflow:
+        opening = (
+            "You are extracting persona-attribution fields from a Stack Overflow "
+            "user's public posting history."
         )
     else:
         opening = (
@@ -89,6 +96,16 @@ def build_prompt(profile: Profile, dimensions: list[Dimension]) -> str:
             "attributes require direct statements in the supplied review title/text; "
             "when unsure, prefer null/unsupported.",
         ]
+    elif is_stackoverflow:
+        lines += [
+            "- Evidence for non-null values must come from the supplied post "
+            "titles/bodies/tags in profile_text, not outside knowledge.",
+            "- Skills, expertise, tools, and interests may be inferred from "
+            "demonstrated posting behavior.",
+            "- Private, sensitive, demographic, medical, financial, or psychological "
+            "attributes require direct statements in the supplied posts; "
+            "when unsure, prefer null/unsupported.",
+        ]
     else:
         lines += [
             "- Do not infer private, sensitive, or psychological traits unless directly "
@@ -118,7 +135,7 @@ def _unsupported(dim: Dimension) -> Field:
 
 
 def _fold_profiles(profile: Profile) -> list[Profile]:
-    """Return one profile per non-empty Amazon CV fold."""
+    """Return one profile per non-empty CV fold."""
     folds = profile.get("cv_fold_texts")
     if not isinstance(folds, list):
         return [profile]
@@ -161,13 +178,13 @@ def _merged_assignment_type(assignment_types: list[str]) -> str:
     return "summary_inference"
 
 
-def merge_amazon_fold_fields(
+def merge_fold_fields(
     fold_outputs: list[list[Field]],
     dimensions: list[Dimension],
     min_support_folds: int,
     fold_count: int,
 ) -> list[Field]:
-    """Merge per-fold Amazon attribution outputs by exact field/value votes."""
+    """Merge per-fold attribution outputs by exact field/value votes."""
     safe_fold_count = max(1, int(fold_count or 0))
     required_support = max(1, int(min_support_folds))
     dimension_ids = {str(dim["id"]) for dim in dimensions}
@@ -247,6 +264,10 @@ def merge_amazon_fold_fields(
     return merged
 
 
+# Backwards-compatible alias for kits already in the wild.
+merge_amazon_fold_fields = merge_fold_fields
+
+
 def _ensure_default_command(backend: str) -> None:
     """Wire the bundled CLI adapter so a collaborator's own auth just works.
 
@@ -296,7 +317,7 @@ def attribute(
     if backend == "mock":
         return [_unsupported(d) for d in dimensions]
 
-    if profile.get("source") == "amazon_reviews_2023":
+    if profile.get("cv_fold_texts"):
         fold_profiles = _fold_profiles(profile)
         fold_count = len(fold_profiles)
         default_support = min(2, fold_count)
@@ -309,7 +330,7 @@ def attribute(
             _attribute_single_pass(fold_profile, dimensions, backend, model, effort)
             for fold_profile in fold_profiles
         ]
-        return merge_amazon_fold_fields(
+        return merge_fold_fields(
             fold_outputs,
             dimensions,
             min_support_folds=min_support,
