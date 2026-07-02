@@ -1,6 +1,10 @@
 import json
+import os
+import subprocess
 import tarfile
 from pathlib import Path
+
+import pytest
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -106,6 +110,30 @@ def test_wiki_collab_package_builds_extractable_archive(tmp_path: Path) -> None:
     assert "A_0_2_alice/dimensions.json" in names
     assert "A_0_2_alice/package_manifest.json" in names
     assert "A_0_2_alice/collab_kit/conformance.py" in names
+
+
+def test_failed_rebuild_preserves_existing_profile_db(tmp_path: Path) -> None:
+    from persona.existing_data_curation.scripts.build_wiki_profile_db import (
+        build_profile_database,
+    )
+
+    out_db = tmp_path / "profiles.sqlite"
+    original_bytes = b"existing profile database"
+    out_db.write_bytes(original_bytes)
+    manifest_path = tmp_path / "profiles.manifest.json"
+
+    with pytest.raises(FileNotFoundError):
+        build_profile_database(
+            clean_dir=tmp_path / "missing_clean_dir",
+            out_db=out_db,
+            manifest_path=manifest_path,
+            dataset_id="wiki_test",
+        )
+
+    assert out_db.exists()
+    assert out_db.read_bytes() == original_bytes
+    assert not manifest_path.exists()
+    assert [p.name for p in tmp_path.iterdir() if p.name != "profiles.sqlite"] == []
 
 
 def test_amazon_collab_package_builds_extractable_archive(tmp_path: Path) -> None:
@@ -300,6 +328,41 @@ def test_hf_amazon_exporter_writes_normalized_user_histories(
             ],
         }
     ]
+
+
+def test_make_package_aborts_when_manifest_missing_but_db_exists(
+    tmp_path: Path,
+) -> None:
+    repo_root = Path(__file__).resolve().parents[3]
+    script = repo_root / "persona/existing_data_curation/scripts/make_package.sh"
+
+    db_path = tmp_path / "cache" / "wiki.sqlite"
+    db_path.parent.mkdir(parents=True)
+    db_bytes = b"existing profile database"
+    db_path.write_bytes(db_bytes)
+
+    env = os.environ.copy()
+    env.update(
+        {
+            "WIKI_CLEAN_DIR": str(tmp_path / "missing_clean_dir"),
+            "WIKI_PROFILE_DB": str(db_path),
+            "WIKI_PROFILE_MANIFEST": str(tmp_path / "cache" / "wiki.manifest.json"),
+            "MATRIX_PACKAGE_CACHE_ROOT": str(tmp_path / "cache"),
+            "MATRIX_PACKAGE_OUT_ROOT": str(tmp_path / "out"),
+        }
+    )
+    proc = subprocess.run(
+        ["bash", str(script), "0:1", "tester"],
+        env=env,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert proc.returncode == 2
+    assert "manifest is missing" in proc.stderr
+    assert "building profile DB" not in proc.stdout + proc.stderr
+    assert db_path.read_bytes() == db_bytes
 
 
 def test_package_owner_scripts_document_portable_data_inputs() -> None:

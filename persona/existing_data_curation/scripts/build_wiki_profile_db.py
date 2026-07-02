@@ -86,62 +86,70 @@ def build_profile_database(
 ) -> dict[str, Any]:
     out_db.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    if out_db.exists():
-        out_db.unlink()
-    conn = sqlite3.connect(out_db)
-    create_schema(conn)
-    global_idx = 0
-    for source_file in clean_page_files(clean_dir):
-        shard_rows: list[tuple[int, dict[str, Any]]] = []
-        for source_row, row in enumerate(iter_jsonl(source_file), 1):
-            shard_rows.append((source_row, row))
-        shard_rows.sort(key=lambda item: int(item[1].get("page_id") or 0))
-        for source_row, row in shard_rows:
+    # Build into a temp file and swap in only after success, so a failed or
+    # interrupted rebuild never destroys an existing DB at out_db.
+    tmp_db = out_db.with_name(out_db.name + ".tmp")
+    tmp_db.unlink(missing_ok=True)
+    conn = sqlite3.connect(tmp_db)
+    try:
+        create_schema(conn)
+        global_idx = 0
+        for source_file in clean_page_files(clean_dir):
+            shard_rows: list[tuple[int, dict[str, Any]]] = []
+            for source_row, row in enumerate(iter_jsonl(source_file), 1):
+                shard_rows.append((source_row, row))
+            shard_rows.sort(key=lambda item: int(item[1].get("page_id") or 0))
+            for source_row, row in shard_rows:
+                if limit is not None and global_idx >= limit:
+                    break
+                page_id = int(row["page_id"])
+                qid = str(row.get("qid") or "")
+                title = str(row.get("title") or "")
+                source_url = str(row.get("source_url") or "")
+                profile_text = profile_text_from_row(row, max_chars=max_chars)
+                task_id = f"wiki_profile:{global_idx:010d}"
+                payload = profile_input_payload(
+                    {
+                        "global_idx": global_idx,
+                        "task_id": task_id,
+                        "qid": qid,
+                        "title": title,
+                        "source_url": source_url,
+                        "profile_text": profile_text,
+                    }
+                )
+                input_sha256 = compute_input_sha256(payload)
+                conn.execute(
+                    """
+                    insert into profiles (
+                      global_idx, task_id, page_id, qid, title, source_url,
+                      profile_text, input_sha256, source_file, source_row
+                    ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        global_idx,
+                        task_id,
+                        page_id,
+                        qid,
+                        title,
+                        source_url,
+                        profile_text,
+                        input_sha256,
+                        source_file.name,
+                        source_row,
+                    ),
+                )
+                global_idx += 1
             if limit is not None and global_idx >= limit:
                 break
-            page_id = int(row["page_id"])
-            qid = str(row.get("qid") or "")
-            title = str(row.get("title") or "")
-            source_url = str(row.get("source_url") or "")
-            profile_text = profile_text_from_row(row, max_chars=max_chars)
-            task_id = f"wiki_profile:{global_idx:010d}"
-            payload = profile_input_payload(
-                {
-                    "global_idx": global_idx,
-                    "task_id": task_id,
-                    "qid": qid,
-                    "title": title,
-                    "source_url": source_url,
-                    "profile_text": profile_text,
-                }
-            )
-            input_sha256 = compute_input_sha256(payload)
-            conn.execute(
-                """
-                insert into profiles (
-                  global_idx, task_id, page_id, qid, title, source_url,
-                  profile_text, input_sha256, source_file, source_row
-                ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    global_idx,
-                    task_id,
-                    page_id,
-                    qid,
-                    title,
-                    source_url,
-                    profile_text,
-                    input_sha256,
-                    source_file.name,
-                    source_row,
-                ),
-            )
-            global_idx += 1
-        if limit is not None and global_idx >= limit:
-            break
-    conn.commit()
+        conn.commit()
+    except BaseException:
+        conn.close()
+        tmp_db.unlink(missing_ok=True)
+        raise
     conn.close()
-    db_sha256 = sha256_file(out_db)
+    db_sha256 = sha256_file(tmp_db)
+    tmp_db.replace(out_db)
     manifest = {
         "dataset_id": dataset_id,
         "row_count": global_idx,

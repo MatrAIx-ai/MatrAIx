@@ -44,6 +44,19 @@ END="${RANGE##*:}"
 cd "${REPO_ROOT}"
 export PYTHONPATH="${REPO_ROOT}"
 
+# The DB and its manifest are only valid as a pair: the manifest carries the
+# db_sha256 stamped into every package. Refuse to rebuild over an existing DB
+# when just the manifest is gone -- that usually means an incomplete copy, not
+# a stale cache.
+if [[ -f "${DB}" && ! -f "${MANIFEST}" ]]; then
+  echo "error: profile DB exists but its manifest is missing:" >&2
+  echo "  db:       ${DB}" >&2
+  echo "  manifest: ${MANIFEST}" >&2
+  echo "Restore the manifest next to the DB (they must be copied as a pair)," >&2
+  echo "or move the DB away to force a full rebuild from WIKI_CLEAN_DIR." >&2
+  exit 2
+fi
+
 # 1) Build the profile DB once (owner only). Reused on later runs.
 if [[ ! -f "${DB}" || ! -f "${MANIFEST}" ]]; then
   echo ">> building profile DB (one-time): ${DB}"
