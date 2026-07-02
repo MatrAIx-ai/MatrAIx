@@ -5,6 +5,10 @@ packages from existing datasets. These packages are plain `.tar.gz` archives
 that a collaborator can unpack and run locally; they are not Harbor registry
 packages.
 
+**New package owner?** Start with [SETUP.md](SETUP.md) — an end-to-end
+walkthrough from a bare repo checkout to making, distributing, and merging
+packages. This README is the per-tool reference.
+
 ## Package Owner Data Setup
 
 The code in this folder does not vendor the full source datasets. A package

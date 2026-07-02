@@ -383,19 +383,32 @@ def test_package_owner_scripts_document_portable_data_inputs() -> None:
     owner_readme = (
         repo_root / "persona/existing_data_curation/README.md"
     ).read_text(encoding="utf-8")
+    owner_setup = (
+        repo_root / "persona/existing_data_curation/SETUP.md"
+    ).read_text(encoding="utf-8")
     amazon_manifest = json.loads(
         (
             repo_root / "persona/existing_data_curation/configs/amazon_reviews_2023.json"
         ).read_text(encoding="utf-8")
     )
 
-    checked_text = "\n".join([wiki_wrapper, amazon_wrapper, amazon_exporter, owner_readme])
+    checked_text = "\n".join(
+        [wiki_wrapper, amazon_wrapper, amazon_exporter, owner_readme, owner_setup]
+    )
     assert "/data2/" not in checked_text
     assert "zonglin" not in checked_text
     assert 'SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"' in wiki_wrapper
     assert 'SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"' in amazon_wrapper
     assert ': "${WIKI_CLEAN_DIR:?Set WIKI_CLEAN_DIR' in wiki_wrapper
     assert "copied as a pair" in owner_readme
+    # SETUP.md walks a brand-new owner through acquiring data, making
+    # packages, distributing them, and merging results.
+    assert "MatrAIx2026/MatrAIx2026" in owner_setup
+    assert "make_package.sh" in owner_setup
+    assert "make_amazon_package.sh" in owner_setup
+    assert "merge_collab_results.py" in owner_setup
+    assert "sha256" in owner_setup
+    assert "SETUP.md" in owner_readme
     assert '"MatrAIx/MatrAIx"' not in amazon_exporter
     assert "load_default_source_config" in amazon_exporter
     assert amazon_manifest["source"]["repo_id"] == "MatrAIx2026/MatrAIx2026"
