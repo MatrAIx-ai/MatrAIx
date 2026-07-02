@@ -21,7 +21,6 @@ import json
 import os
 import re
 import sys
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
@@ -32,7 +31,7 @@ BASE_DIR = SCRIPT_DIR.parent
 REPO_ROOT = SCRIPT_DIR.parents[3]
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
-from subscription_json_backend import default_model_for_backend, subscription_chat_completion
+from subscription_json_backend import default_model_for_backend, subscription_chat_completion  # noqa: E402
 CONFIG_DIR = BASE_DIR / "configs"
 DEFAULT_OUTPUT_PATH = (
     BASE_DIR
