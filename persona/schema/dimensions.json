@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
-  "targetDimensions": 1339,
+  "targetDimensions": 1279,
   "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only \u2014 it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
@@ -15686,846 +15686,6 @@
       "index": 1129
     },
     {
-      "id": "personahub_dimension_1",
-      "label": "PersonaHub_Dimension1",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 1 from PersonaHub.",
-      "values": [
-        "Absent",
-        "Minimal",
-        "Moderate",
-        "Significant",
-        "Dominant"
-      ],
-      "index": 1130
-    },
-    {
-      "id": "personahub_dimension_2",
-      "label": "PersonaHub_Dimension2",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 2 from PersonaHub.",
-      "values": [
-        "Absent",
-        "Minimal",
-        "Moderate",
-        "Significant",
-        "Dominant"
-      ],
-      "index": 1131
-    },
-    {
-      "id": "oasis_dimension_1",
-      "label": "OASIS_Dimension1",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 1 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1132
-    },
-    {
-      "id": "oasis_dimension_2",
-      "label": "OASIS_Dimension2",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 2 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1133
-    },
-    {
-      "id": "oasis_dimension_3",
-      "label": "OASIS_Dimension3",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 3 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1134
-    },
-    {
-      "id": "oasis_dimension_4",
-      "label": "OASIS_Dimension4",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 4 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1135
-    },
-    {
-      "id": "oasis_dimension_5",
-      "label": "OASIS_Dimension5",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 5 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1136
-    },
-    {
-      "id": "oasis_dimension_6",
-      "label": "OASIS_Dimension6",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 6 from OASIS.",
-      "values": [
-        "Never",
-        "Rarely",
-        "Sometimes",
-        "Often",
-        "Always"
-      ],
-      "index": 1137
-    },
-    {
-      "id": "apple_primex_dimension_1",
-      "label": "ApplePRIMEX_Dimension1",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 1 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1138
-    },
-    {
-      "id": "apple_primex_dimension_2",
-      "label": "ApplePRIMEX_Dimension2",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 2 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1139
-    },
-    {
-      "id": "apple_primex_dimension_3",
-      "label": "ApplePRIMEX_Dimension3",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 3 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1140
-    },
-    {
-      "id": "apple_primex_dimension_4",
-      "label": "ApplePRIMEX_Dimension4",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 4 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1141
-    },
-    {
-      "id": "apple_primex_dimension_5",
-      "label": "ApplePRIMEX_Dimension5",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 5 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1142
-    },
-    {
-      "id": "apple_primex_dimension_6",
-      "label": "ApplePRIMEX_Dimension6",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 6 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1143
-    },
-    {
-      "id": "apple_primex_dimension_7",
-      "label": "ApplePRIMEX_Dimension7",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 7 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1144
-    },
-    {
-      "id": "apple_primex_dimension_8",
-      "label": "ApplePRIMEX_Dimension8",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 8 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1145
-    },
-    {
-      "id": "apple_primex_dimension_9",
-      "label": "ApplePRIMEX_Dimension9",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 9 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1146
-    },
-    {
-      "id": "apple_primex_dimension_10",
-      "label": "ApplePRIMEX_Dimension10",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 10 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1147
-    },
-    {
-      "id": "apple_primex_dimension_11",
-      "label": "ApplePRIMEX_Dimension11",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 11 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1148
-    },
-    {
-      "id": "apple_primex_dimension_12",
-      "label": "ApplePRIMEX_Dimension12",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 12 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1149
-    },
-    {
-      "id": "apple_primex_dimension_13",
-      "label": "ApplePRIMEX_Dimension13",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 13 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1150
-    },
-    {
-      "id": "apple_primex_dimension_14",
-      "label": "ApplePRIMEX_Dimension14",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 14 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1151
-    },
-    {
-      "id": "apple_primex_dimension_15",
-      "label": "ApplePRIMEX_Dimension15",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 15 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1152
-    },
-    {
-      "id": "apple_primex_dimension_16",
-      "label": "ApplePRIMEX_Dimension16",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 16 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1153
-    },
-    {
-      "id": "apple_primex_dimension_17",
-      "label": "ApplePRIMEX_Dimension17",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 17 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1154
-    },
-    {
-      "id": "apple_primex_dimension_18",
-      "label": "ApplePRIMEX_Dimension18",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 18 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1155
-    },
-    {
-      "id": "apple_primex_dimension_19",
-      "label": "ApplePRIMEX_Dimension19",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 19 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1156
-    },
-    {
-      "id": "apple_primex_dimension_20",
-      "label": "ApplePRIMEX_Dimension20",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 20 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1157
-    },
-    {
-      "id": "apple_primex_dimension_21",
-      "label": "ApplePRIMEX_Dimension21",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 21 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1158
-    },
-    {
-      "id": "apple_primex_dimension_22",
-      "label": "ApplePRIMEX_Dimension22",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 22 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1159
-    },
-    {
-      "id": "apple_primex_dimension_23",
-      "label": "ApplePRIMEX_Dimension23",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 23 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1160
-    },
-    {
-      "id": "apple_primex_dimension_24",
-      "label": "ApplePRIMEX_Dimension24",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 24 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1161
-    },
-    {
-      "id": "apple_primex_dimension_25",
-      "label": "ApplePRIMEX_Dimension25",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 25 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1162
-    },
-    {
-      "id": "apple_primex_dimension_26",
-      "label": "ApplePRIMEX_Dimension26",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 26 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1163
-    },
-    {
-      "id": "apple_primex_dimension_27",
-      "label": "ApplePRIMEX_Dimension27",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 27 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1164
-    },
-    {
-      "id": "apple_primex_dimension_28",
-      "label": "ApplePRIMEX_Dimension28",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 28 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1165
-    },
-    {
-      "id": "apple_primex_dimension_29",
-      "label": "ApplePRIMEX_Dimension29",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 29 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1166
-    },
-    {
-      "id": "apple_primex_dimension_30",
-      "label": "ApplePRIMEX_Dimension30",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 30 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1167
-    },
-    {
-      "id": "apple_primex_dimension_31",
-      "label": "ApplePRIMEX_Dimension31",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 31 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1168
-    },
-    {
-      "id": "apple_primex_dimension_32",
-      "label": "ApplePRIMEX_Dimension32",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 32 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1169
-    },
-    {
-      "id": "apple_primex_dimension_33",
-      "label": "ApplePRIMEX_Dimension33",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 33 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1170
-    },
-    {
-      "id": "apple_primex_dimension_34",
-      "label": "ApplePRIMEX_Dimension34",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 34 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1171
-    },
-    {
-      "id": "apple_primex_dimension_35",
-      "label": "ApplePRIMEX_Dimension35",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 35 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1172
-    },
-    {
-      "id": "apple_primex_dimension_36",
-      "label": "ApplePRIMEX_Dimension36",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 36 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1173
-    },
-    {
-      "id": "apple_primex_dimension_37",
-      "label": "ApplePRIMEX_Dimension37",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 37 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1174
-    },
-    {
-      "id": "apple_primex_dimension_38",
-      "label": "ApplePRIMEX_Dimension38",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 38 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1175
-    },
-    {
-      "id": "apple_primex_dimension_39",
-      "label": "ApplePRIMEX_Dimension39",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 39 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1176
-    },
-    {
-      "id": "apple_primex_dimension_40",
-      "label": "ApplePRIMEX_Dimension40",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 40 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1177
-    },
-    {
-      "id": "apple_primex_dimension_41",
-      "label": "ApplePRIMEX_Dimension41",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 41 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1178
-    },
-    {
-      "id": "apple_primex_dimension_42",
-      "label": "ApplePRIMEX_Dimension42",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 42 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1179
-    },
-    {
-      "id": "apple_primex_dimension_43",
-      "label": "ApplePRIMEX_Dimension43",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 43 from ApplePRIMEX.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Medium",
-        "High",
-        "Very High"
-      ],
-      "index": 1180
-    },
-    {
-      "id": "pandora_dimension_1",
-      "label": "PANDORA_Dimension1",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 1 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1181
-    },
-    {
-      "id": "pandora_dimension_2",
-      "label": "PANDORA_Dimension2",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 2 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1182
-    },
-    {
-      "id": "pandora_dimension_3",
-      "label": "PANDORA_Dimension3",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 3 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1183
-    },
-    {
-      "id": "pandora_dimension_4",
-      "label": "PANDORA_Dimension4",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 4 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1184
-    },
-    {
-      "id": "pandora_dimension_5",
-      "label": "PANDORA_Dimension5",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 5 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1185
-    },
-    {
-      "id": "pandora_dimension_6",
-      "label": "PANDORA_Dimension6",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 6 from PANDORA.",
-      "values": [
-        "Very Low",
-        "Low",
-        "Average",
-        "High",
-        "Very High"
-      ],
-      "index": 1186
-    },
-    {
-      "id": "synthetic_persona_chat_dimension_1",
-      "label": "SyntheticPersonaChat_Dimension1",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 1 from SyntheticPersonaChat.",
-      "values": [
-        "Not Applicable",
-        "Minor",
-        "Moderate",
-        "Notable",
-        "Central"
-      ],
-      "index": 1187
-    },
-    {
-      "id": "synthetic_persona_chat_dimension_2",
-      "label": "SyntheticPersonaChat_Dimension2",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 2 from SyntheticPersonaChat.",
-      "values": [
-        "Not Applicable",
-        "Minor",
-        "Moderate",
-        "Notable",
-        "Central"
-      ],
-      "index": 1188
-    },
-    {
-      "id": "synthetic_persona_chat_dimension_3",
-      "label": "SyntheticPersonaChat_Dimension3",
-      "category": "External: Datasets",
-      "description": "Placeholder imported dimension 3 from SyntheticPersonaChat.",
-      "values": [
-        "Not Applicable",
-        "Minor",
-        "Moderate",
-        "Notable",
-        "Central"
-      ],
-      "index": 1189
-    },
-    {
       "id": "pandora_big5_dimension_1",
       "label": "PANDORA_Openness",
       "category": "Personality: Big Five",
@@ -16551,7 +15711,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1190
+      "index": 1130
     },
     {
       "id": "pandora_big5_dimension_2",
@@ -16579,7 +15739,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1191
+      "index": 1131
     },
     {
       "id": "pandora_big5_dimension_3",
@@ -16607,7 +15767,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1192
+      "index": 1132
     },
     {
       "id": "pandora_big5_dimension_4",
@@ -16635,7 +15795,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1193
+      "index": 1133
     },
     {
       "id": "pandora_big5_dimension_5",
@@ -16663,7 +15823,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1194
+      "index": 1134
     },
     {
       "id": "pandora_big5_dimension_6",
@@ -16691,7 +15851,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1195
+      "index": 1135
     },
     {
       "id": "personachat_persona",
@@ -16719,7 +15879,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1196
+      "index": 1136
     },
     {
       "id": "horizonbench_dimension_1",
@@ -16748,7 +15908,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1197
+      "index": 1137
     },
     {
       "id": "horizonbench_dimension_2",
@@ -16777,7 +15937,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1198
+      "index": 1138
     },
     {
       "id": "horizonbench_dimension_3",
@@ -16806,7 +15966,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1199
+      "index": 1139
     },
     {
       "id": "horizonbench_dimension_4",
@@ -16835,7 +15995,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1200
+      "index": 1140
     },
     {
       "id": "horizonbench_dimension_5",
@@ -16864,7 +16024,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1201
+      "index": 1141
     },
     {
       "id": "horizonbench_dimension_6",
@@ -16893,7 +16053,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1202
+      "index": 1142
     },
     {
       "id": "horizonbench_dimension_7",
@@ -16922,7 +16082,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1203
+      "index": 1143
     },
     {
       "id": "horizonbench_dimension_8",
@@ -16951,7 +16111,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1204
+      "index": 1144
     },
     {
       "id": "horizonbench_dimension_9",
@@ -16980,7 +16140,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1205
+      "index": 1145
     },
     {
       "id": "horizonbench_dimension_10",
@@ -17009,7 +16169,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1206
+      "index": 1146
     },
     {
       "id": "horizonbench_dimension_11",
@@ -17038,7 +16198,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1207
+      "index": 1147
     },
     {
       "id": "horizonbench_dimension_12",
@@ -17067,7 +16227,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1208
+      "index": 1148
     },
     {
       "id": "horizonbench_dimension_13",
@@ -17096,7 +16256,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1209
+      "index": 1149
     },
     {
       "id": "horizonbench_dimension_14",
@@ -17125,7 +16285,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1210
+      "index": 1150
     },
     {
       "id": "horizonbench_dimension_15",
@@ -17154,7 +16314,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1211
+      "index": 1151
     },
     {
       "id": "horizonbench_dimension_16",
@@ -17183,7 +16343,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1212
+      "index": 1152
     },
     {
       "id": "horizonbench_dimension_17",
@@ -17212,7 +16372,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1213
+      "index": 1153
     },
     {
       "id": "horizonbench_dimension_18",
@@ -17241,7 +16401,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1214
+      "index": 1154
     },
     {
       "id": "horizonbench_dimension_19",
@@ -17270,7 +16430,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1215
+      "index": 1155
     },
     {
       "id": "horizonbench_dimension_20",
@@ -17299,7 +16459,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1216
+      "index": 1156
     },
     {
       "id": "horizonbench_dimension_21",
@@ -17328,7 +16488,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1217
+      "index": 1157
     },
     {
       "id": "horizonbench_dimension_22",
@@ -17357,7 +16517,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1218
+      "index": 1158
     },
     {
       "id": "horizonbench_dimension_23",
@@ -17386,7 +16546,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1219
+      "index": 1159
     },
     {
       "id": "horizonbench_dimension_24",
@@ -17415,7 +16575,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1220
+      "index": 1160
     },
     {
       "id": "horizonbench_dimension_25",
@@ -17444,7 +16604,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1221
+      "index": 1161
     },
     {
       "id": "horizonbench_dimension_26",
@@ -17473,7 +16633,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1222
+      "index": 1162
     },
     {
       "id": "horizonbench_dimension_27",
@@ -17502,7 +16662,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1223
+      "index": 1163
     },
     {
       "id": "horizonbench_dimension_28",
@@ -17531,7 +16691,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1224
+      "index": 1164
     },
     {
       "id": "horizonbench_dimension_29",
@@ -17560,7 +16720,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1225
+      "index": 1165
     },
     {
       "id": "horizonbench_dimension_30",
@@ -17589,7 +16749,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1226
+      "index": 1166
     },
     {
       "id": "wildchat_state",
@@ -17618,7 +16778,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1227
+      "index": 1167
     },
     {
       "id": "wildchat_country",
@@ -17647,7 +16807,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1228
+      "index": 1168
     },
     {
       "id": "wildchat_hashed_ip",
@@ -17676,7 +16836,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "yuexing"
       },
-      "index": 1229
+      "index": 1169
     },
     {
       "id": "code_comment_style",
@@ -17691,7 +16851,7 @@
         "Docstring/documentation blocks only",
         "No comments"
       ],
-      "index": 1230
+      "index": 1170
     },
     {
       "id": "code_summary_documentation",
@@ -17705,7 +16865,7 @@
         "Rarely includes TLDR",
         "Never includes TLDR"
       ],
-      "index": 1231
+      "index": 1171
     },
     {
       "id": "code_naming_verbosity",
@@ -17719,7 +16879,7 @@
         "Terse abbreviated names",
         "Single-letter names"
       ],
-      "index": 1232
+      "index": 1172
     },
     {
       "id": "code_indentation_style",
@@ -17733,7 +16893,7 @@
         "8 spaces",
         "Inconsistent/mixed"
       ],
-      "index": 1233
+      "index": 1173
     },
     {
       "id": "code_structure_preference",
@@ -17747,7 +16907,7 @@
         "Mixed paradigm",
         "Data-driven"
       ],
-      "index": 1234
+      "index": 1174
     },
     {
       "id": "code_function_length",
@@ -17761,7 +16921,7 @@
         "Large functions (100+ lines)",
         "Varies by context"
       ],
-      "index": 1235
+      "index": 1175
     },
     {
       "id": "code_error_handling",
@@ -17775,7 +16935,7 @@
         "Minimal error handling",
         "Silent failure tolerance"
       ],
-      "index": 1236
+      "index": 1176
     },
     {
       "id": "code_abstraction_level",
@@ -17789,7 +16949,7 @@
         "Mixed approach",
         "No premature abstraction"
       ],
-      "index": 1237
+      "index": 1177
     },
     {
       "id": "code_dependencies_approach",
@@ -17803,7 +16963,7 @@
         "Use framework defaults",
         "Dependency minimalist"
       ],
-      "index": 1238
+      "index": 1178
     },
     {
       "id": "code_performance_priority",
@@ -17817,7 +16977,7 @@
         "Maintainability-first",
         "Premature optimization tendency"
       ],
-      "index": 1239
+      "index": 1179
     },
     {
       "id": "code_testing_approach",
@@ -17831,7 +16991,7 @@
         "Minimal testing",
         "No tests"
       ],
-      "index": 1240
+      "index": 1180
     },
     {
       "id": "code_refactoring_frequency",
@@ -17845,7 +17005,7 @@
         "Rarely refactors",
         "Never refactors"
       ],
-      "index": 1241
+      "index": 1181
     },
     {
       "id": "prog_python",
@@ -17858,7 +17018,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1242
+      "index": 1182
     },
     {
       "id": "prog_javascript",
@@ -17871,7 +17031,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1243
+      "index": 1183
     },
     {
       "id": "prog_typescript",
@@ -17884,7 +17044,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1244
+      "index": 1184
     },
     {
       "id": "prog_java",
@@ -17897,7 +17057,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1245
+      "index": 1185
     },
     {
       "id": "prog_c",
@@ -17910,7 +17070,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1246
+      "index": 1186
     },
     {
       "id": "prog_go",
@@ -17923,7 +17083,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1247
+      "index": 1187
     },
     {
       "id": "prog_rust",
@@ -17936,7 +17096,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1248
+      "index": 1188
     },
     {
       "id": "prog_ruby",
@@ -17949,7 +17109,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1249
+      "index": 1189
     },
     {
       "id": "prog_php",
@@ -17962,7 +17122,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1250
+      "index": 1190
     },
     {
       "id": "prog_swift",
@@ -17975,7 +17135,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1251
+      "index": 1191
     },
     {
       "id": "prog_kotlin",
@@ -17988,7 +17148,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1252
+      "index": 1192
     },
     {
       "id": "prog_objective_c",
@@ -18001,7 +17161,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1253
+      "index": 1193
     },
     {
       "id": "prog_scala",
@@ -18014,7 +17174,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1254
+      "index": 1194
     },
     {
       "id": "prog_haskell",
@@ -18027,7 +17187,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1255
+      "index": 1195
     },
     {
       "id": "prog_elixir",
@@ -18040,7 +17200,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1256
+      "index": 1196
     },
     {
       "id": "prog_erlang",
@@ -18053,7 +17213,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1257
+      "index": 1197
     },
     {
       "id": "prog_clojure",
@@ -18066,7 +17226,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1258
+      "index": 1198
     },
     {
       "id": "prog_lua",
@@ -18079,7 +17239,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1259
+      "index": 1199
     },
     {
       "id": "prog_perl",
@@ -18092,7 +17252,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1260
+      "index": 1200
     },
     {
       "id": "prog_r",
@@ -18105,7 +17265,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1261
+      "index": 1201
     },
     {
       "id": "prog_julia",
@@ -18118,7 +17278,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1262
+      "index": 1202
     },
     {
       "id": "prog_matlab",
@@ -18131,7 +17291,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1263
+      "index": 1203
     },
     {
       "id": "prog_sql",
@@ -18144,7 +17304,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1264
+      "index": 1204
     },
     {
       "id": "prog_bash",
@@ -18157,7 +17317,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1265
+      "index": 1205
     },
     {
       "id": "prog_powershell",
@@ -18170,7 +17330,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1266
+      "index": 1206
     },
     {
       "id": "prog_dart",
@@ -18183,7 +17343,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1267
+      "index": 1207
     },
     {
       "id": "prog_f",
@@ -18196,7 +17356,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1268
+      "index": 1208
     },
     {
       "id": "prog_ocaml",
@@ -18209,7 +17369,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1269
+      "index": 1209
     },
     {
       "id": "prog_assembly",
@@ -18222,7 +17382,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1270
+      "index": 1210
     },
     {
       "id": "prog_cobol",
@@ -18235,7 +17395,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1271
+      "index": 1211
     },
     {
       "id": "prog_fortran",
@@ -18248,7 +17408,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1272
+      "index": 1212
     },
     {
       "id": "prog_solidity",
@@ -18261,7 +17421,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1273
+      "index": 1213
     },
     {
       "id": "prog_graphql",
@@ -18274,7 +17434,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1274
+      "index": 1214
     },
     {
       "id": "bfi2_domain_extraversion",
@@ -18305,7 +17465,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1275
+      "index": 1215
     },
     {
       "id": "bfi2_domain_agreeableness",
@@ -18336,7 +17496,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1276
+      "index": 1216
     },
     {
       "id": "bfi2_domain_conscientiousness",
@@ -18367,7 +17527,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1277
+      "index": 1217
     },
     {
       "id": "bfi2_domain_negative_emotionality",
@@ -18398,7 +17558,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1278
+      "index": 1218
     },
     {
       "id": "bfi2_domain_open_mindedness",
@@ -18429,7 +17589,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1279
+      "index": 1219
     },
     {
       "id": "bfi2_facet_sociability",
@@ -18461,7 +17621,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1280
+      "index": 1220
     },
     {
       "id": "bfi2_facet_assertiveness",
@@ -18493,7 +17653,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1281
+      "index": 1221
     },
     {
       "id": "bfi2_facet_energy_level",
@@ -18525,7 +17685,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1282
+      "index": 1222
     },
     {
       "id": "bfi2_facet_compassion",
@@ -18557,7 +17717,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1283
+      "index": 1223
     },
     {
       "id": "bfi2_facet_respectfulness",
@@ -18589,7 +17749,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1284
+      "index": 1224
     },
     {
       "id": "bfi2_facet_trust",
@@ -18621,7 +17781,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1285
+      "index": 1225
     },
     {
       "id": "bfi2_facet_organization",
@@ -18653,7 +17813,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1286
+      "index": 1226
     },
     {
       "id": "bfi2_facet_productiveness",
@@ -18685,7 +17845,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1287
+      "index": 1227
     },
     {
       "id": "bfi2_facet_responsibility",
@@ -18717,7 +17877,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1288
+      "index": 1228
     },
     {
       "id": "bfi2_facet_anxiety",
@@ -18749,7 +17909,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1289
+      "index": 1229
     },
     {
       "id": "bfi2_facet_depression",
@@ -18781,7 +17941,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1290
+      "index": 1230
     },
     {
       "id": "bfi2_facet_emotional_volatility",
@@ -18813,7 +17973,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1291
+      "index": 1231
     },
     {
       "id": "bfi2_facet_intellectual_curiosity",
@@ -18845,7 +18005,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1292
+      "index": 1232
     },
     {
       "id": "bfi2_facet_aesthetic_sensitivity",
@@ -18877,7 +18037,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1293
+      "index": 1233
     },
     {
       "id": "bfi2_facet_creative_imagination",
@@ -18909,7 +18069,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1294
+      "index": 1234
     },
     {
       "id": "schwartz_value_self_direction",
@@ -18940,7 +18100,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1295
+      "index": 1235
     },
     {
       "id": "schwartz_value_stimulation",
@@ -18971,7 +18131,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1296
+      "index": 1236
     },
     {
       "id": "schwartz_value_hedonism",
@@ -19002,7 +18162,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1297
+      "index": 1237
     },
     {
       "id": "schwartz_value_achievement",
@@ -19033,7 +18193,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1298
+      "index": 1238
     },
     {
       "id": "schwartz_value_power",
@@ -19064,7 +18224,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1299
+      "index": 1239
     },
     {
       "id": "schwartz_value_security",
@@ -19095,7 +18255,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1300
+      "index": 1240
     },
     {
       "id": "schwartz_value_conformity",
@@ -19126,7 +18286,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1301
+      "index": 1241
     },
     {
       "id": "schwartz_value_tradition",
@@ -19157,7 +18317,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1302
+      "index": 1242
     },
     {
       "id": "schwartz_value_benevolence",
@@ -19188,7 +18348,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1303
+      "index": 1243
     },
     {
       "id": "schwartz_value_universalism",
@@ -19219,7 +18379,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1304
+      "index": 1244
     },
     {
       "id": "sdt_need_autonomy",
@@ -19249,7 +18409,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1305
+      "index": 1245
     },
     {
       "id": "sdt_need_competence",
@@ -19279,7 +18439,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1306
+      "index": 1246
     },
     {
       "id": "sdt_need_relatedness",
@@ -19309,7 +18469,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1307
+      "index": 1247
     },
     {
       "id": "mft_care_harm",
@@ -19339,7 +18499,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1308
+      "index": 1248
     },
     {
       "id": "mft_fairness_cheating",
@@ -19369,7 +18529,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1309
+      "index": 1249
     },
     {
       "id": "mft_loyalty_betrayal",
@@ -19399,7 +18559,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1310
+      "index": 1250
     },
     {
       "id": "mft_authority_subversion",
@@ -19429,7 +18589,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1311
+      "index": 1251
     },
     {
       "id": "mft_sanctity_degradation",
@@ -19459,7 +18619,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1312
+      "index": 1252
     },
     {
       "id": "mft_liberty_oppression",
@@ -19489,7 +18649,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1313
+      "index": 1253
     },
     {
       "id": "need_for_cognition",
@@ -19519,7 +18679,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1314
+      "index": 1254
     },
     {
       "id": "need_for_closure",
@@ -19549,7 +18709,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1315
+      "index": 1255
     },
     {
       "id": "dospert_ethical_risk_tolerance",
@@ -19580,7 +18740,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1316
+      "index": 1256
     },
     {
       "id": "dospert_financial_risk_tolerance",
@@ -19611,7 +18771,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1317
+      "index": 1257
     },
     {
       "id": "dospert_health_safety_risk_tolerance",
@@ -19642,7 +18802,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1318
+      "index": 1258
     },
     {
       "id": "dospert_recreational_risk_tolerance",
@@ -19673,7 +18833,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1319
+      "index": 1259
     },
     {
       "id": "dospert_social_risk_tolerance",
@@ -19704,7 +18864,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1320
+      "index": 1260
     },
     {
       "id": "attachment_anxiety",
@@ -19734,7 +18894,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1321
+      "index": 1261
     },
     {
       "id": "attachment_avoidance",
@@ -19764,7 +18924,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1322
+      "index": 1262
     },
     {
       "id": "interpersonal_agency_dominance",
@@ -19795,7 +18955,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1323
+      "index": 1263
     },
     {
       "id": "interpersonal_communion_warmth",
@@ -19826,7 +18986,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1324
+      "index": 1264
     },
     {
       "id": "wiki_birth_date",
@@ -19856,7 +19016,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1325
+      "index": 1265
     },
     {
       "id": "wiki_birth_place",
@@ -19884,7 +19044,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1326
+      "index": 1266
     },
     {
       "id": "wiki_nationality",
@@ -19912,7 +19072,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1327
+      "index": 1267
     },
     {
       "id": "wiki_occupation",
@@ -19940,7 +19100,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1328
+      "index": 1268
     },
     {
       "id": "wiki_field_of_work",
@@ -19968,7 +19128,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1329
+      "index": 1269
     },
     {
       "id": "wiki_position_held",
@@ -19996,7 +19156,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1330
+      "index": 1270
     },
     {
       "id": "wiki_education_level",
@@ -20021,7 +19181,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1331
+      "index": 1271
     },
     {
       "id": "wiki_awards_recognition",
@@ -20047,7 +19207,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1332
+      "index": 1272
     },
     {
       "id": "wiki_political_affiliation",
@@ -20075,7 +19235,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1333
+      "index": 1273
     },
     {
       "id": "nemotron_sex",
@@ -20091,7 +19251,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1334
+      "index": 1274
     },
     {
       "id": "nemotron_marital_status",
@@ -20109,7 +19269,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1335
+      "index": 1275
     },
     {
       "id": "nemotron_education_level",
@@ -20130,7 +19290,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1336
+      "index": 1276
     },
     {
       "id": "nemotron_bachelors_field",
@@ -20149,7 +19309,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1337
+      "index": 1277
     },
     {
       "id": "nemotron_occupation",
@@ -20211,7 +19371,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1338
+      "index": 1278
     },
     {
       "id": "nemotron_state",
@@ -20259,7 +19419,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1339
+      "index": 1279
     }
   ],
   "reference_sources": [
