@@ -4,6 +4,7 @@ from pathlib import Path
 
 from harbor.models.task.config import TaskOS
 from harbor.models.task.paths import TaskPaths
+from harbor.models.task.task import Task
 
 
 def _create_task_dir(tmp_path: Path, test_ext: str = ".sh", solve_ext: str = ".sh"):
@@ -40,6 +41,70 @@ class TestTestPath:
         _create_task_dir(tmp_path)
         paths = TaskPaths(tmp_path)
         assert paths.test_path_for(TaskOS.WINDOWS) == tmp_path / "tests" / "test.bat"
+
+
+class TestEnvironmentDefinitionPath:
+    def test_task_local_environment_takes_precedence_over_definition(self, tmp_path):
+        repo = tmp_path / "repo"
+        task_dir = repo / "application" / "tasks" / "demo-task"
+        external_env_dir = (
+            repo / "environment" / "task-environments" / "application" / "demo-task"
+        )
+        local_env_dir = task_dir / "environment"
+        task_dir.mkdir(parents=True)
+        external_env_dir.mkdir(parents=True)
+        local_env_dir.mkdir(parents=True)
+        (task_dir / "task.toml").write_text(
+            "[environment]\n"
+            'definition = "application/demo-task"\n'
+        )
+        (external_env_dir / "Dockerfile").write_text("FROM external\n")
+        (local_env_dir / "Dockerfile").write_text("FROM local\n")
+
+        paths = TaskPaths.from_task_dir(task_dir)
+
+        assert paths.environment_dir == local_env_dir.resolve()
+
+    def test_task_resolves_environment_definition_outside_application_tree(self, tmp_path):
+        repo = tmp_path / "repo"
+        task_dir = repo / "application" / "tasks" / "demo-task"
+        env_dir = repo / "environment" / "task-environments" / "application" / "demo-task"
+        task_dir.mkdir(parents=True)
+        env_dir.mkdir(parents=True)
+        (task_dir / "instruction.md").write_text("Do something")
+        (task_dir / "task.toml").write_text(
+            "[environment]\n"
+            'definition = "application/demo-task"\n'
+        )
+        (task_dir / "tests").mkdir()
+        (task_dir / "tests" / "test.sh").write_text("#!/bin/sh\nexit 0\n")
+        (env_dir / "Dockerfile").write_text("FROM alpine\n")
+
+        task = Task(task_dir)
+
+        assert task.paths.environment_dir == env_dir
+        assert Task.is_valid_dir(task_dir)
+
+    def test_task_checksum_includes_external_environment_definition(self, tmp_path):
+        repo = tmp_path / "repo"
+        task_dir = repo / "application" / "tasks" / "demo-task"
+        env_dir = repo / "environment" / "task-environments" / "application" / "demo-task"
+        task_dir.mkdir(parents=True)
+        env_dir.mkdir(parents=True)
+        (task_dir / "instruction.md").write_text("Do something")
+        (task_dir / "task.toml").write_text(
+            "[environment]\n"
+            'definition = "application/demo-task"\n'
+        )
+        (task_dir / "tests").mkdir()
+        (task_dir / "tests" / "test.sh").write_text("#!/bin/sh\nexit 0\n")
+        (env_dir / "Dockerfile").write_text("FROM alpine\n")
+
+        before = Task(task_dir).checksum
+        (env_dir / "Dockerfile").write_text("FROM ubuntu:24.04\n")
+        after = Task(task_dir).checksum
+
+        assert before != after
 
 
 class TestDiscoveredTestPath:

@@ -5,6 +5,7 @@ import subprocess
 import tarfile
 import tempfile
 import time
+import tomllib
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,7 @@ from pydantic import BaseModel
 
 from harbor.constants import ARCHIVE_FILENAME, TASK_CACHE_DIR
 from harbor.models.task.id import GitTaskId, LocalTaskId, PackageTaskId
+from harbor.models.task.paths import TaskPaths
 from harbor.utils.logger import logger
 
 TaskIdType = GitTaskId | LocalTaskId | PackageTaskId
@@ -119,8 +121,13 @@ class TaskClient:
             return
 
         lfs_include = ",".join(
-            f"{task_download_config.source_path}/**"
-            for task_download_config in task_download_configs
+            [
+                *(
+                    f"{task_download_config.source_path.as_posix()}/**"
+                    for task_download_config in task_download_configs
+                ),
+                f"{TaskPaths.TASK_ENVIRONMENTS_ROOT.as_posix()}/**",
+            ]
         )
 
         process = await asyncio.create_subprocess_exec(
@@ -134,11 +141,48 @@ class TaskClient:
         )
         await process.communicate()
 
-    def _copy_task_source_to_target(self, source_path: Path, target_path: Path) -> None:
+    def _copy_task_source_to_target(
+        self, repo_dir: Path, source_path: Path, target_path: Path
+    ) -> None:
         if target_path.exists():
             shutil.rmtree(target_path)
 
         shutil.copytree(source_path, target_path)
+        self._copy_environment_definition_to_target(
+            repo_dir=repo_dir,
+            source_path=source_path,
+            target_path=target_path,
+        )
+
+    def _copy_environment_definition_to_target(
+        self, *, repo_dir: Path, source_path: Path, target_path: Path
+    ) -> None:
+        target_environment_dir = target_path / "environment"
+        if target_environment_dir.exists():
+            return
+
+        config_path = source_path / TaskPaths.CONFIG_FILENAME
+        try:
+            raw_config = tomllib.loads(config_path.read_text())
+        except (OSError, tomllib.TOMLDecodeError):
+            return
+
+        raw_environment = raw_config.get("environment")
+        if not isinstance(raw_environment, dict):
+            return
+        definition = raw_environment.get("definition")
+        if not isinstance(definition, str):
+            return
+        try:
+            definition = TaskPaths._normalize_environment_definition(definition)
+        except ValueError:
+            return
+
+        source_environment_dir = (
+            repo_dir / TaskPaths.TASK_ENVIRONMENTS_ROOT / definition
+        )
+        if source_environment_dir.exists():
+            shutil.copytree(source_environment_dir, target_environment_dir)
 
     async def _download_tasks_from_git_url(
         self, git_url: str, task_download_configs: list[TaskDownloadConfig]
@@ -166,6 +210,7 @@ class TaskClient:
                 task_download_config.source_path.as_posix()
                 for task_download_config in task_download_configs
             }
+            sparse_paths.add(f"{TaskPaths.TASK_ENVIRONMENTS_ROOT.as_posix()}/**")
 
             await self._run_git(
                 "git",
@@ -201,6 +246,7 @@ class TaskClient:
 
                 for task_download_config in head_task_download_configs:
                     self._copy_task_source_to_target(
+                        temp_dir,
                         temp_dir / task_download_config.source_path,
                         task_download_config.target_path,
                     )
@@ -236,6 +282,7 @@ class TaskClient:
 
                 for task_download_config in task_download_configs_for_commit:
                     self._copy_task_source_to_target(
+                        temp_dir,
                         temp_dir / task_download_config.source_path,
                         task_download_config.target_path,
                     )
