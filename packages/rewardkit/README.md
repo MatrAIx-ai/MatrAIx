@@ -8,7 +8,7 @@ The Harbor Rewardkit is a lightweight package to define and run verifiers. Rewar
 ## Installation
 
 ```bash
-uv tool install harbor-rewardkit
+python -m pip install -e packages/rewardkit
 ```
 
 ## Example: Programmatic criteria

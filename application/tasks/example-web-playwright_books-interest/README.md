@@ -1,11 +1,11 @@
 # Bookshop browsing (Playwright)
 
-MatrAIx **Playwright** web task on a live public site. Chromium is driven through the **Playwright Python API** (DOM automation), not screenshot-based CUA.
+PersonaBench **Playwright** web task on a live public site. Chromium is driven through the **Playwright Python API** (DOM automation), not screenshot-based CUA.
 
 - URL: https://books.toscrape.com/
 - Output: `/app/output/book_interest.json`
 
-See [web-interaction.md](../../docs/applications/web-interaction.md) for Playwright vs CUA.
+See [Application Tasks](../README.md) for contribution guidance.
 
 ## Suggested setup (non-binding)
 
@@ -13,13 +13,13 @@ See [web-interaction.md](../../docs/applications/web-interaction.md) for Playwri
 |-------|-------|
 | Agent | `persona-openhands-sdk` |
 | Environment | `docker` (Playwright image, `network_mode = "public"`) |
-| Persona | `persona/datasets/bench-dev-2000/persona_0042.yaml` |
+| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
 
 ```bash
 uv run harbor run \
   -a persona-openhands-sdk \
   -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-2000/persona_0042.yaml \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
   -p application/tasks/example-web-playwright_books-interest
 ```
 

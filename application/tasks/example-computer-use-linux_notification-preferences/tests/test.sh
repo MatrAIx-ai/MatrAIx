@@ -9,7 +9,7 @@ import json
 import sys
 from pathlib import Path
 
-path = Path("/tmp/matraix-linux-notification-preferences/decision.json")
+path = Path("/tmp/personabench-linux-notification-preferences/decision.json")
 if not path.is_file():
     sys.exit(f"missing {path}")
 

@@ -4,6 +4,10 @@ import math
 
 import pytest
 
+pytest.importorskip("anthropic")
+pytest.importorskip("google.genai")
+pytest.importorskip("openai")
+
 from harbor.agents.computer_1.providers.anthropic import (
     cua_protocol_for_model,
     translate_anthropic_action,
