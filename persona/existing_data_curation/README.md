@@ -54,6 +54,25 @@ persona/existing_data_curation/scripts/make_package.sh 0:100 alice
 
 The wrapper builds a reusable owner-only SQLite profile database under `TMPDIR` or the optional `MATRIX_PACKAGE_CACHE_ROOT`, slices the requested half-open range, and writes packages under `MATRIX_PACKAGE_OUT_ROOT` or the same cache root.
 
+### Sharing The Profile DB Cache
+
+The cache is two files that are only valid together: `<dataset_id>.sqlite`
+and `<dataset_id>.manifest.json`. The manifest records the `db_sha256` that
+is stamped into every package as `dataset_sha256`, so a DB without its
+manifest cannot produce provenance-consistent packages. `make_package.sh`
+refuses to run when the DB is present but the manifest is missing, and
+rebuilds write to a temporary sibling file that only replaces an existing DB
+after the build succeeds.
+
+To hand the cache to another package owner, both files must be
+copied as a pair; verify the transfer against `db_sha256` from the manifest. The receiver
+places them under `MATRIX_PACKAGE_CACHE_ROOT` or points `WIKI_PROFILE_DB` and
+`WIKI_PROFILE_MANIFEST` at them. `WIKI_CLEAN_DIR` must still be set, but it
+is not read while both cache files exist, so the receiver does not need the
+clean profile layer for packaging (only for rebuilding the cache). Keep the
+cache on persistent storage: the default `TMPDIR` location does not survive
+reboots or temp cleanup.
+
 ## Amazon Review Packages
 
 Amazon package generation consumes normalized Amazon Reviews 2023 user-history

@@ -392,6 +392,7 @@ def test_package_owner_scripts_document_portable_data_inputs() -> None:
     assert 'SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"' in wiki_wrapper
     assert 'SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"' in amazon_wrapper
     assert ': "${WIKI_CLEAN_DIR:?Set WIKI_CLEAN_DIR' in wiki_wrapper
+    assert "copied as a pair" in owner_readme
     assert '"MatrAIx/MatrAIx"' not in amazon_exporter
     assert "load_default_source_config" in amazon_exporter
     assert amazon_manifest["source"]["repo_id"] == "MatrAIx2026/MatrAIx2026"
