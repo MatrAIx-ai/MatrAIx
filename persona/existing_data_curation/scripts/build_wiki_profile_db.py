@@ -155,7 +155,9 @@ def build_profile_database(
         "row_count": global_idx,
         "db_file": out_db.name,
         "db_sha256": db_sha256,
-        "source_dir": str(clean_dir),
+        # Leaf name only: the manifest travels with the DB on handover and
+        # must not leak the owner's local directory layout.
+        "source_dir": clean_dir.name,
         "index_rule": "files sorted by path; rows sorted by page_id within each source file",
         "profile_text_max_chars": max_chars,
         "format": "sqlite",

@@ -82,6 +82,9 @@ def test_wiki_collab_package_builds_extractable_archive(tmp_path: Path) -> None:
         dataset_id="wiki_test",
     )
     assert manifest["row_count"] == 2
+    # The manifest travels with the DB on handover; it must not leak the
+    # owner's local directory layout.
+    assert manifest["source_dir"] == "clean"
 
     out_dir = tmp_path / "A_0_2_alice"
     summary = build_collab_package(
