@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
-  "targetDimensions": 1279,
+  "targetDimensions": 1245,
   "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only \u2014 it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
@@ -15854,991 +15854,6 @@
       "index": 1135
     },
     {
-      "id": "personachat_persona",
-      "label": "PersonaChat_PersonaDescription",
-      "category": "External: Datasets",
-      "description": "Free-text persona profile sentences describing interests, habits, and traits from PersonaChat dataset.",
-      "values": [
-        "Not Described",
-        "Mentioned Once",
-        "Occasionally Mentioned",
-        "Frequently Mentioned",
-        "Central to Profile"
-      ],
-      "source_origin": {
-        "source_id": "personachat_facebook",
-        "source_name": "Facebook PersonaChat",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "facebook/persona-chat",
-        "huggingface_url": "https://huggingface.co/datasets/facebook/persona-chat",
-        "paper_url": "https://arxiv.org/abs/1801.07243",
-        "manifest_file": "personas/existing_data_curation/manifests/personachat_facebook.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "column_name": "persona",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1136
-    },
-    {
-      "id": "horizonbench_dimension_1",
-      "label": "HorizonBench_Advice_Delivery_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'advice_delivery_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "advice_delivery_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1137
-    },
-    {
-      "id": "horizonbench_dimension_2",
-      "label": "HorizonBench_Analytical_Approach",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'analytical_approach' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "analytical_approach",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1138
-    },
-    {
-      "id": "horizonbench_dimension_3",
-      "label": "HorizonBench_Apology_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'apology_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "apology_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1139
-    },
-    {
-      "id": "horizonbench_dimension_4",
-      "label": "HorizonBench_Communication_Intimacy",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'communication_intimacy' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "communication_intimacy",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1140
-    },
-    {
-      "id": "horizonbench_dimension_5",
-      "label": "HorizonBench_Communication_Medium_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'communication_medium_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "communication_medium_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1141
-    },
-    {
-      "id": "horizonbench_dimension_6",
-      "label": "HorizonBench_Conflict_Resolution_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'conflict_resolution_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "conflict_resolution_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1142
-    },
-    {
-      "id": "horizonbench_dimension_7",
-      "label": "HorizonBench_Content_Length_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'content_length_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "content_length_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1143
-    },
-    {
-      "id": "horizonbench_dimension_8",
-      "label": "HorizonBench_Creative_Collaboration",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'creative_collaboration' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "creative_collaboration",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1144
-    },
-    {
-      "id": "horizonbench_dimension_9",
-      "label": "HorizonBench_Emotional_Support_Style",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'emotional_support_style' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "emotional_support_style",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1145
-    },
-    {
-      "id": "horizonbench_dimension_10",
-      "label": "HorizonBench_Empirical_Evidence_Integration_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'empirical_evidence_integration_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "empirical_evidence_integration_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1146
-    },
-    {
-      "id": "horizonbench_dimension_11",
-      "label": "HorizonBench_Entertainment_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'entertainment_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "entertainment_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1147
-    },
-    {
-      "id": "horizonbench_dimension_12",
-      "label": "HorizonBench_Ethical_Review_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'ethical_review_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "ethical_review_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1148
-    },
-    {
-      "id": "horizonbench_dimension_13",
-      "label": "HorizonBench_Event_Planning_Detail_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'event_planning_detail_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "event_planning_detail_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1149
-    },
-    {
-      "id": "horizonbench_dimension_14",
-      "label": "HorizonBench_Facilitation_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'facilitation_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "facilitation_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1150
-    },
-    {
-      "id": "horizonbench_dimension_15",
-      "label": "HorizonBench_Follow_Up_Strategy_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'follow_up_strategy_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "follow_up_strategy_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1151
-    },
-    {
-      "id": "horizonbench_dimension_16",
-      "label": "HorizonBench_Interfaith_Engagement_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'interfaith_engagement_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "interfaith_engagement_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1152
-    },
-    {
-      "id": "horizonbench_dimension_17",
-      "label": "HorizonBench_Intergenerational_Engagement_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'intergenerational_engagement_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "intergenerational_engagement_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1153
-    },
-    {
-      "id": "horizonbench_dimension_18",
-      "label": "HorizonBench_Language_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'language_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "language_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1154
-    },
-    {
-      "id": "horizonbench_dimension_19",
-      "label": "HorizonBench_Motivation_Strategy_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'motivation_strategy_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "motivation_strategy_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1155
-    },
-    {
-      "id": "horizonbench_dimension_20",
-      "label": "HorizonBench_Philosophical_Engagement",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'philosophical_engagement' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "philosophical_engagement",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1156
-    },
-    {
-      "id": "horizonbench_dimension_21",
-      "label": "HorizonBench_Productivity_Style",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'productivity_style' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "productivity_style",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1157
-    },
-    {
-      "id": "horizonbench_dimension_22",
-      "label": "HorizonBench_Public_Speaking_Coaching_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'public_speaking_coaching_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "public_speaking_coaching_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1158
-    },
-    {
-      "id": "horizonbench_dimension_23",
-      "label": "HorizonBench_Self_Esteem_Rebuilding_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'self_esteem_rebuilding_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "self_esteem_rebuilding_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1159
-    },
-    {
-      "id": "horizonbench_dimension_24",
-      "label": "HorizonBench_Social_Engagement_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'social_engagement_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "social_engagement_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1160
-    },
-    {
-      "id": "horizonbench_dimension_25",
-      "label": "HorizonBench_Stakeholder_Consultation_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'stakeholder_consultation_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "stakeholder_consultation_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1161
-    },
-    {
-      "id": "horizonbench_dimension_26",
-      "label": "HorizonBench_Support_Technique_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'support_technique_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "support_technique_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1162
-    },
-    {
-      "id": "horizonbench_dimension_27",
-      "label": "HorizonBench_Technology_Assistance_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'technology_assistance_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "technology_assistance_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1163
-    },
-    {
-      "id": "horizonbench_dimension_28",
-      "label": "HorizonBench_Therapy_Discussion_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'therapy_discussion_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "therapy_discussion_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1164
-    },
-    {
-      "id": "horizonbench_dimension_29",
-      "label": "HorizonBench_Tone_Guideline_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'tone_guideline_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "tone_guideline_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1165
-    },
-    {
-      "id": "horizonbench_dimension_30",
-      "label": "HorizonBench_Writing_Style_Preferences",
-      "category": "External: Datasets",
-      "description": "Preference evolution domain 'writing_style_preferences' from HorizonBench long-horizon personalization dataset.",
-      "values": [
-        "Not Active",
-        "Minimally Active",
-        "Moderately Active",
-        "Highly Active",
-        "Dominant"
-      ],
-      "source_origin": {
-        "source_id": "horizonbench_mental_state_graphs",
-        "source_name": "HorizonBench (mental_state_graphs)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "stellalisy/HorizonBench",
-        "huggingface_url": "https://huggingface.co/datasets/stellalisy/HorizonBench",
-        "paper_url": "https://arxiv.org/abs/2604.17283",
-        "manifest_file": "personas/existing_data_curation/manifests/horizonbench_mental_state_graphs.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "config": "mental_state_graphs",
-        "column_name": "writing_style_preferences",
-        "license": "cc-by-4.0",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1166
-    },
-    {
-      "id": "wildchat_state",
-      "label": "WildChat_State",
-      "category": "External: Datasets",
-      "description": "U.S. state where user accessed WildChat (geographic dimension from IP geolocation).",
-      "values": [
-        "Unknown",
-        "Unlikely",
-        "Possible",
-        "Likely",
-        "Confirmed"
-      ],
-      "source_origin": {
-        "source_id": "wildchat_allenai",
-        "source_name": "AllenAI WildChat (1M)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "allenai/WildChat-1M",
-        "huggingface_url": "https://huggingface.co/datasets/allenai/WildChat-1M",
-        "paper_url": "https://arxiv.org/abs/2405.01470",
-        "manifest_file": "personas/existing_data_curation/manifests/wildchat_allenai.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "column_name": "state",
-        "license": "odc-by",
-        "note": "Privacy-first design: WildChat intentionally excludes traditional demographics (age, gender, education, occupation). Only geographic dimensions available.",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1167
-    },
-    {
-      "id": "wildchat_country",
-      "label": "WildChat_Country",
-      "category": "External: Datasets",
-      "description": "Country where user accessed WildChat (geographic dimension from IP geolocation).",
-      "values": [
-        "Unknown",
-        "Unlikely",
-        "Possible",
-        "Likely",
-        "Confirmed"
-      ],
-      "source_origin": {
-        "source_id": "wildchat_allenai",
-        "source_name": "AllenAI WildChat (1M)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "allenai/WildChat-1M",
-        "huggingface_url": "https://huggingface.co/datasets/allenai/WildChat-1M",
-        "paper_url": "https://arxiv.org/abs/2405.01470",
-        "manifest_file": "personas/existing_data_curation/manifests/wildchat_allenai.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "column_name": "country",
-        "license": "odc-by",
-        "note": "Privacy-first design: WildChat intentionally excludes traditional demographics (age, gender, education, occupation). Only geographic dimensions available.",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1168
-    },
-    {
-      "id": "wildchat_hashed_ip",
-      "label": "WildChat_HashedIP",
-      "category": "External: Datasets",
-      "description": "Privacy-preserving hashed IP address from WildChat (technical/geographic dimension).",
-      "values": [
-        "Unknown",
-        "Unlikely",
-        "Possible",
-        "Likely",
-        "Confirmed"
-      ],
-      "source_origin": {
-        "source_id": "wildchat_allenai",
-        "source_name": "AllenAI WildChat (1M)",
-        "source_type": "huggingface_dataset",
-        "huggingface_repo": "allenai/WildChat-1M",
-        "huggingface_url": "https://huggingface.co/datasets/allenai/WildChat-1M",
-        "paper_url": "https://arxiv.org/abs/2405.01470",
-        "manifest_file": "personas/existing_data_curation/manifests/wildchat_allenai.json",
-        "fetch_script": "persona/curation/existing_data/scripts/fetch_sources.py",
-        "column_name": "hashed_ip",
-        "license": "odc-by",
-        "note": "Privacy-first design: WildChat intentionally excludes traditional demographics (age, gender, education, occupation). Only geographic dimensions available.",
-        "added_date": "2026-06-20",
-        "contributor_github": "yuexing"
-      },
-      "index": 1169
-    },
-    {
       "id": "code_comment_style",
       "label": "Code Comment Style",
       "category": "Skills: Programming",
@@ -16851,7 +15866,7 @@
         "Docstring/documentation blocks only",
         "No comments"
       ],
-      "index": 1170
+      "index": 1136
     },
     {
       "id": "code_summary_documentation",
@@ -16865,7 +15880,7 @@
         "Rarely includes TLDR",
         "Never includes TLDR"
       ],
-      "index": 1171
+      "index": 1137
     },
     {
       "id": "code_naming_verbosity",
@@ -16879,7 +15894,7 @@
         "Terse abbreviated names",
         "Single-letter names"
       ],
-      "index": 1172
+      "index": 1138
     },
     {
       "id": "code_indentation_style",
@@ -16893,7 +15908,7 @@
         "8 spaces",
         "Inconsistent/mixed"
       ],
-      "index": 1173
+      "index": 1139
     },
     {
       "id": "code_structure_preference",
@@ -16907,7 +15922,7 @@
         "Mixed paradigm",
         "Data-driven"
       ],
-      "index": 1174
+      "index": 1140
     },
     {
       "id": "code_function_length",
@@ -16921,7 +15936,7 @@
         "Large functions (100+ lines)",
         "Varies by context"
       ],
-      "index": 1175
+      "index": 1141
     },
     {
       "id": "code_error_handling",
@@ -16935,7 +15950,7 @@
         "Minimal error handling",
         "Silent failure tolerance"
       ],
-      "index": 1176
+      "index": 1142
     },
     {
       "id": "code_abstraction_level",
@@ -16949,7 +15964,7 @@
         "Mixed approach",
         "No premature abstraction"
       ],
-      "index": 1177
+      "index": 1143
     },
     {
       "id": "code_dependencies_approach",
@@ -16963,7 +15978,7 @@
         "Use framework defaults",
         "Dependency minimalist"
       ],
-      "index": 1178
+      "index": 1144
     },
     {
       "id": "code_performance_priority",
@@ -16977,7 +15992,7 @@
         "Maintainability-first",
         "Premature optimization tendency"
       ],
-      "index": 1179
+      "index": 1145
     },
     {
       "id": "code_testing_approach",
@@ -16991,7 +16006,7 @@
         "Minimal testing",
         "No tests"
       ],
-      "index": 1180
+      "index": 1146
     },
     {
       "id": "code_refactoring_frequency",
@@ -17005,7 +16020,7 @@
         "Rarely refactors",
         "Never refactors"
       ],
-      "index": 1181
+      "index": 1147
     },
     {
       "id": "prog_python",
@@ -17018,7 +16033,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1182
+      "index": 1148
     },
     {
       "id": "prog_javascript",
@@ -17031,7 +16046,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1183
+      "index": 1149
     },
     {
       "id": "prog_typescript",
@@ -17044,7 +16059,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1184
+      "index": 1150
     },
     {
       "id": "prog_java",
@@ -17057,7 +16072,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1185
+      "index": 1151
     },
     {
       "id": "prog_c",
@@ -17070,7 +16085,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1186
+      "index": 1152
     },
     {
       "id": "prog_go",
@@ -17083,7 +16098,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1187
+      "index": 1153
     },
     {
       "id": "prog_rust",
@@ -17096,7 +16111,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1188
+      "index": 1154
     },
     {
       "id": "prog_ruby",
@@ -17109,7 +16124,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1189
+      "index": 1155
     },
     {
       "id": "prog_php",
@@ -17122,7 +16137,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1190
+      "index": 1156
     },
     {
       "id": "prog_swift",
@@ -17135,7 +16150,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1191
+      "index": 1157
     },
     {
       "id": "prog_kotlin",
@@ -17148,7 +16163,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1192
+      "index": 1158
     },
     {
       "id": "prog_objective_c",
@@ -17161,7 +16176,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1193
+      "index": 1159
     },
     {
       "id": "prog_scala",
@@ -17174,7 +16189,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1194
+      "index": 1160
     },
     {
       "id": "prog_haskell",
@@ -17187,7 +16202,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1195
+      "index": 1161
     },
     {
       "id": "prog_elixir",
@@ -17200,7 +16215,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1196
+      "index": 1162
     },
     {
       "id": "prog_erlang",
@@ -17213,7 +16228,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1197
+      "index": 1163
     },
     {
       "id": "prog_clojure",
@@ -17226,7 +16241,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1198
+      "index": 1164
     },
     {
       "id": "prog_lua",
@@ -17239,7 +16254,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1199
+      "index": 1165
     },
     {
       "id": "prog_perl",
@@ -17252,7 +16267,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1200
+      "index": 1166
     },
     {
       "id": "prog_r",
@@ -17265,7 +16280,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1201
+      "index": 1167
     },
     {
       "id": "prog_julia",
@@ -17278,7 +16293,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1202
+      "index": 1168
     },
     {
       "id": "prog_matlab",
@@ -17291,7 +16306,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1203
+      "index": 1169
     },
     {
       "id": "prog_sql",
@@ -17304,7 +16319,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1204
+      "index": 1170
     },
     {
       "id": "prog_bash",
@@ -17317,7 +16332,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1205
+      "index": 1171
     },
     {
       "id": "prog_powershell",
@@ -17330,7 +16345,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1206
+      "index": 1172
     },
     {
       "id": "prog_dart",
@@ -17343,7 +16358,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1207
+      "index": 1173
     },
     {
       "id": "prog_f",
@@ -17356,7 +16371,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1208
+      "index": 1174
     },
     {
       "id": "prog_ocaml",
@@ -17369,7 +16384,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1209
+      "index": 1175
     },
     {
       "id": "prog_assembly",
@@ -17382,7 +16397,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1210
+      "index": 1176
     },
     {
       "id": "prog_cobol",
@@ -17395,7 +16410,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1211
+      "index": 1177
     },
     {
       "id": "prog_fortran",
@@ -17408,7 +16423,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1212
+      "index": 1178
     },
     {
       "id": "prog_solidity",
@@ -17421,7 +16436,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1213
+      "index": 1179
     },
     {
       "id": "prog_graphql",
@@ -17434,7 +16449,7 @@
         "Familiar",
         "None"
       ],
-      "index": 1214
+      "index": 1180
     },
     {
       "id": "bfi2_domain_extraversion",
@@ -17465,7 +16480,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1215
+      "index": 1181
     },
     {
       "id": "bfi2_domain_agreeableness",
@@ -17496,7 +16511,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1216
+      "index": 1182
     },
     {
       "id": "bfi2_domain_conscientiousness",
@@ -17527,7 +16542,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1217
+      "index": 1183
     },
     {
       "id": "bfi2_domain_negative_emotionality",
@@ -17558,7 +16573,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1218
+      "index": 1184
     },
     {
       "id": "bfi2_domain_open_mindedness",
@@ -17589,7 +16604,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1219
+      "index": 1185
     },
     {
       "id": "bfi2_facet_sociability",
@@ -17621,7 +16636,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1220
+      "index": 1186
     },
     {
       "id": "bfi2_facet_assertiveness",
@@ -17653,7 +16668,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1221
+      "index": 1187
     },
     {
       "id": "bfi2_facet_energy_level",
@@ -17685,7 +16700,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1222
+      "index": 1188
     },
     {
       "id": "bfi2_facet_compassion",
@@ -17717,7 +16732,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1223
+      "index": 1189
     },
     {
       "id": "bfi2_facet_respectfulness",
@@ -17749,7 +16764,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1224
+      "index": 1190
     },
     {
       "id": "bfi2_facet_trust",
@@ -17781,7 +16796,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1225
+      "index": 1191
     },
     {
       "id": "bfi2_facet_organization",
@@ -17813,7 +16828,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1226
+      "index": 1192
     },
     {
       "id": "bfi2_facet_productiveness",
@@ -17845,7 +16860,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1227
+      "index": 1193
     },
     {
       "id": "bfi2_facet_responsibility",
@@ -17877,7 +16892,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1228
+      "index": 1194
     },
     {
       "id": "bfi2_facet_anxiety",
@@ -17909,7 +16924,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1229
+      "index": 1195
     },
     {
       "id": "bfi2_facet_depression",
@@ -17941,7 +16956,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1230
+      "index": 1196
     },
     {
       "id": "bfi2_facet_emotional_volatility",
@@ -17973,7 +16988,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1231
+      "index": 1197
     },
     {
       "id": "bfi2_facet_intellectual_curiosity",
@@ -18005,7 +17020,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1232
+      "index": 1198
     },
     {
       "id": "bfi2_facet_aesthetic_sensitivity",
@@ -18037,7 +17052,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1233
+      "index": 1199
     },
     {
       "id": "bfi2_facet_creative_imagination",
@@ -18069,7 +17084,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1234
+      "index": 1200
     },
     {
       "id": "schwartz_value_self_direction",
@@ -18100,7 +17115,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1235
+      "index": 1201
     },
     {
       "id": "schwartz_value_stimulation",
@@ -18131,7 +17146,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1236
+      "index": 1202
     },
     {
       "id": "schwartz_value_hedonism",
@@ -18162,7 +17177,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1237
+      "index": 1203
     },
     {
       "id": "schwartz_value_achievement",
@@ -18193,7 +17208,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1238
+      "index": 1204
     },
     {
       "id": "schwartz_value_power",
@@ -18224,7 +17239,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1239
+      "index": 1205
     },
     {
       "id": "schwartz_value_security",
@@ -18255,7 +17270,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1240
+      "index": 1206
     },
     {
       "id": "schwartz_value_conformity",
@@ -18286,7 +17301,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1241
+      "index": 1207
     },
     {
       "id": "schwartz_value_tradition",
@@ -18317,7 +17332,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1242
+      "index": 1208
     },
     {
       "id": "schwartz_value_benevolence",
@@ -18348,7 +17363,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1243
+      "index": 1209
     },
     {
       "id": "schwartz_value_universalism",
@@ -18379,7 +17394,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1244
+      "index": 1210
     },
     {
       "id": "sdt_need_autonomy",
@@ -18409,7 +17424,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1245
+      "index": 1211
     },
     {
       "id": "sdt_need_competence",
@@ -18439,7 +17454,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1246
+      "index": 1212
     },
     {
       "id": "sdt_need_relatedness",
@@ -18469,7 +17484,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1247
+      "index": 1213
     },
     {
       "id": "mft_care_harm",
@@ -18499,7 +17514,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1248
+      "index": 1214
     },
     {
       "id": "mft_fairness_cheating",
@@ -18529,7 +17544,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1249
+      "index": 1215
     },
     {
       "id": "mft_loyalty_betrayal",
@@ -18559,7 +17574,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1250
+      "index": 1216
     },
     {
       "id": "mft_authority_subversion",
@@ -18589,7 +17604,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1251
+      "index": 1217
     },
     {
       "id": "mft_sanctity_degradation",
@@ -18619,7 +17634,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1252
+      "index": 1218
     },
     {
       "id": "mft_liberty_oppression",
@@ -18649,7 +17664,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1253
+      "index": 1219
     },
     {
       "id": "need_for_cognition",
@@ -18679,7 +17694,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1254
+      "index": 1220
     },
     {
       "id": "need_for_closure",
@@ -18709,7 +17724,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1255
+      "index": 1221
     },
     {
       "id": "dospert_ethical_risk_tolerance",
@@ -18740,7 +17755,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1256
+      "index": 1222
     },
     {
       "id": "dospert_financial_risk_tolerance",
@@ -18771,7 +17786,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1257
+      "index": 1223
     },
     {
       "id": "dospert_health_safety_risk_tolerance",
@@ -18802,7 +17817,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1258
+      "index": 1224
     },
     {
       "id": "dospert_recreational_risk_tolerance",
@@ -18833,7 +17848,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1259
+      "index": 1225
     },
     {
       "id": "dospert_social_risk_tolerance",
@@ -18864,7 +17879,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1260
+      "index": 1226
     },
     {
       "id": "attachment_anxiety",
@@ -18894,7 +17909,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1261
+      "index": 1227
     },
     {
       "id": "attachment_avoidance",
@@ -18924,7 +17939,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1262
+      "index": 1228
     },
     {
       "id": "interpersonal_agency_dominance",
@@ -18955,7 +17970,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1263
+      "index": 1229
     },
     {
       "id": "interpersonal_communion_warmth",
@@ -18986,7 +18001,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "elizabeth-fan"
       },
-      "index": 1264
+      "index": 1230
     },
     {
       "id": "wiki_birth_date",
@@ -19016,7 +18031,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1265
+      "index": 1231
     },
     {
       "id": "wiki_birth_place",
@@ -19044,7 +18059,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1266
+      "index": 1232
     },
     {
       "id": "wiki_nationality",
@@ -19072,7 +18087,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1267
+      "index": 1233
     },
     {
       "id": "wiki_occupation",
@@ -19100,7 +18115,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1268
+      "index": 1234
     },
     {
       "id": "wiki_field_of_work",
@@ -19128,7 +18143,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1269
+      "index": 1235
     },
     {
       "id": "wiki_position_held",
@@ -19156,7 +18171,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1270
+      "index": 1236
     },
     {
       "id": "wiki_education_level",
@@ -19181,7 +18196,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1271
+      "index": 1237
     },
     {
       "id": "wiki_awards_recognition",
@@ -19207,7 +18222,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1272
+      "index": 1238
     },
     {
       "id": "wiki_political_affiliation",
@@ -19235,7 +18250,7 @@
         "added_date": "2026-06-20",
         "contributor_github": "claude-assistant"
       },
-      "index": 1273
+      "index": 1239
     },
     {
       "id": "nemotron_sex",
@@ -19251,7 +18266,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1274
+      "index": 1240
     },
     {
       "id": "nemotron_marital_status",
@@ -19269,7 +18284,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1275
+      "index": 1241
     },
     {
       "id": "nemotron_education_level",
@@ -19290,7 +18305,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1276
+      "index": 1242
     },
     {
       "id": "nemotron_bachelors_field",
@@ -19309,7 +18324,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1277
+      "index": 1243
     },
     {
       "id": "nemotron_occupation",
@@ -19371,7 +18386,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1278
+      "index": 1244
     },
     {
       "id": "nemotron_state",
@@ -19419,7 +18434,7 @@
         "dataset_name": "Nemotron Personas USA",
         "url": "https://huggingface.co/datasets/nvidia/Nemotron-4-340B-Instruct"
       },
-      "index": 1279
+      "index": 1245
     }
   ],
   "reference_sources": [
