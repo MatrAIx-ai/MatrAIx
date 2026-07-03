@@ -31,21 +31,23 @@ Current graph counts:
 
 | Item | Count |
 | --- | ---: |
-| Emitted persona attributes | 1,224 |
+| Emitted persona attributes | 1,290 |
 | Internal latent/helper nodes | 18 |
-| Total graph nodes | 1,242 |
-| Directed proposal edges | 6,830 |
+| Total graph nodes | 1,308 |
+| Directed proposal edges | 6,999 |
 | Full CPT overlays | 54 |
 | Full CPT rows | 17,645 |
-| Conditional masks | 172 |
-| Hard-zero masked values | 391 |
+| Conditional masks | 250 |
+| Hard-zero masked values | 569 |
 | External/proxy nodes | 0 |
 
-The current graph is the v4.3 cleaned Full DAG. Placeholder external dataset
-dimensions, benchmark-adapter dimensions, provenance/source fields, and duplicate
-source-proxy fields were removed from the committed graph. Default samples emit
-1,224 actual persona attributes. The remaining `emit:false` nodes are internal
-latent/helper nodes used by the proposal model, not output persona attributes.
+The current graph is the v4.4 developer-extension Full DAG. Placeholder external
+dataset dimensions, benchmark-adapter dimensions, provenance/source fields, and
+duplicate source-proxy fields are removed from the committed graph. Developer
+and coding-agent attributes are included as emitted persona attributes. Default
+samples emit 1,290 actual persona attributes. The remaining `emit:false` nodes
+are internal latent/helper nodes used by the proposal model, not output persona
+attributes.
 
 ## Sampling Semantics
 
@@ -260,15 +262,15 @@ samples = sampler.sample(10)
   audit results, and focus-node marginal drift.
 - [Sampler comparison report](reports/sampler_comparison_1000_20260702/sampler_generation_quality_comparison.md)
   is a GPT Pro-authored qualitative review of 1,000 seed-42 samples from the old
-  constraint-based generator and the current Full DAG forward sampler. The same
-  directory keeps the source comparison samples only in compact code format:
+  constraint-based generator and an earlier Full DAG forward-sampler snapshot.
+  The same directory keeps the source comparison samples only in compact code format:
   `constraint_based_1000.codes`, `constraint_based_1000.codes.schema.json`,
   `full_dag_forward_1000.codes`, `full_dag_forward_1000.codes.schema.json`, and
   `summary.json`. The JSONL renderings used during analysis are intentionally
   not committed.
 - [Graph visualization](visualization/full_dag_overview.html) is an
-  interactive static HTML view of the full graph: 1,224 emitted persona
-  attributes, 18 latent/helper nodes, and 6,830 directed proposal edges. X
+  interactive static HTML view of the full graph: 1,290 emitted persona
+  attributes, 18 latent/helper nodes, and 6,999 directed proposal edges. X
   position follows
   topological order; Y position groups nodes into category lanes. It supports
   search, category filtering, degree filtering, hidden/helper toggling, edge

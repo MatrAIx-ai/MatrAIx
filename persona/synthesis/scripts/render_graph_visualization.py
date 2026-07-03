@@ -61,8 +61,10 @@ def _load_schema_attribute_ids(path: Path | None) -> set[str]:
     return {dimension["id"] for dimension in schema.get("dimensions", [])}
 
 
-def _is_attribute(node_id: str, schema_attribute_ids: set[str]) -> bool:
-    return not schema_attribute_ids or node_id in schema_attribute_ids
+def _is_attribute(node: dict[str, Any], schema_attribute_ids: set[str]) -> bool:
+    if node.get("emit", True) is not False:
+        return True
+    return node["id"] in schema_attribute_ids
 
 
 def _count_nodes(graph: dict[str, Any], schema_attribute_ids: set[str]) -> dict[str, int]:
@@ -71,17 +73,16 @@ def _count_nodes(graph: dict[str, Any], schema_attribute_ids: set[str]) -> dict[
     emitted_ids = {
         node["id"] for node in nodes if node.get("emit", True) is not False
     }
-    schema_ids = (
-        schema_attribute_ids & node_ids if schema_attribute_ids else set(node_ids)
-    )
+    schema_ids = schema_attribute_ids & node_ids
+    attribute_ids = emitted_ids | schema_ids
     hidden_graph_ids = node_ids - emitted_ids
-    hidden_schema_ids = schema_ids & hidden_graph_ids
-    helper_ids = node_ids - schema_ids
+    hidden_attribute_ids = attribute_ids & hidden_graph_ids
+    helper_ids = node_ids - attribute_ids
 
     return {
-        "schema_attributes": len(schema_ids),
-        "emitted_attributes": len(schema_ids & emitted_ids),
-        "hidden_schema_attributes": len(hidden_schema_ids),
+        "schema_attributes": len(attribute_ids),
+        "emitted_attributes": len(attribute_ids & emitted_ids),
+        "hidden_schema_attributes": len(hidden_attribute_ids),
         "latent_helper_nodes": len(helper_ids),
         "graph_nodes": len(node_ids),
         "hidden_graph_nodes": len(hidden_graph_ids),
@@ -135,7 +136,7 @@ def _layout_payload(
         y = top_pad + lane * lane_height + lane_height / 2 + _stable_jitter(node_id) * 34
         incoming = in_degree[node_id]
         outgoing = out_degree[node_id]
-        is_attribute = _is_attribute(node_id, schema_attribute_ids)
+        is_attribute = _is_attribute(node, schema_attribute_ids)
         node_payload.append(
             {
                 "id": node_id,
@@ -226,7 +227,7 @@ def _category_table(
                 "outgoing": 0,
             },
         )
-        is_attribute = _is_attribute(node["id"], schema_attribute_ids)
+        is_attribute = _is_attribute(node, schema_attribute_ids)
         row["nodes"] += 1
         if is_attribute:
             row["attributes"] += 1
@@ -311,7 +312,7 @@ def render_html(
     ]
 
     summary_cards = [
-        ("Schema attributes", f"{counts['schema_attributes']:,}"),
+        ("Persona attributes", f"{counts['schema_attributes']:,}"),
         ("Emitted attributes", f"{counts['emitted_attributes']:,}"),
         ("Hidden attributes", f"{counts['hidden_schema_attributes']:,}"),
         ("Latent/helper nodes", f"{counts['latent_helper_nodes']:,}"),
@@ -537,10 +538,10 @@ def render_html(
     Generated from <code>{html.escape(graph_label)}</code>. The main canvas
     draws all {counts['graph_nodes']:,} graph nodes and
     {summary['directed_edges']:,} directed proposal edges. The graph contains
-    {counts['schema_attributes']:,} persona schema attributes plus
+    {counts['schema_attributes']:,} persona attributes plus
     {counts['latent_helper_nodes']:,} latent/helper nodes; default samples emit
     {counts['emitted_attributes']:,} attributes and hide
-    {counts['hidden_schema_attributes']:,} schema attributes marked
+    {counts['hidden_schema_attributes']:,} persona attributes marked
     <code>emit:false</code>. X position follows
     <code>proposal_view.topological_order</code>; Y position groups nodes into
     category lanes.
@@ -772,7 +773,7 @@ def render_html(
       ["Incoming", node.in],
       ["Outgoing", node.out],
       ["Values", node.values],
-      ["Schema attr", node.isAttribute ? "yes" : "no"],
+      ["Persona attr", node.isAttribute ? "yes" : "no"],
       ["Emitted", node.isAttribute && node.emit ? "yes" : "no"],
       ["Position", `${{Math.round(node.x)}}, ${{Math.round(node.y)}}`],
     ].map(([key, value]) => `<dt>${{key}}</dt><dd>${{value}}</dd>`).join("");

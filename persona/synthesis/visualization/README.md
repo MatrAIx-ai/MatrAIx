@@ -55,12 +55,12 @@ Stop the temporary server with `Ctrl-C`.
 
 The page embeds the full graph payload:
 
-- 1,224 schema/emitted persona attributes
-- 0 hidden schema attributes
+- 1,290 schema/emitted persona attributes
+- 0 hidden persona attributes
 - 18 latent/helper graph nodes
-- 1,242 total graph nodes
-- 6,830 directed proposal edges
-- 36 category lanes
+- 1,308 total graph nodes
+- 6,999 directed proposal edges
+- 44 category lanes
 
 Layout semantics:
 
