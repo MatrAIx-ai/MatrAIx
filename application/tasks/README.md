@@ -185,6 +185,15 @@ in this module.
 survey, chatbot, and web/computer-use tasks. Use it to decide where a new task
 belongs and which artifacts its verifier should expect.
 
+## Real Chatbot And Website Bank
+
+[`real_chatbot_website_task_bank.md`](real_chatbot_website_task_bank.md)
+collects source-grounded P1 Application scenarios for real chatbots, real
+websites, and two small runnable public-website examples:
+
+- `web-github-pricing_plan-fit`
+- `web-python-docs_error-lookup`
+
 ## Task environment
 
 Harbor resolves `[environment].definition` to a folder under

@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[2]
 EXAMPLE_SURVEY = ROOT / "application/tasks/example-survey_product-feedback"
 RECOMMENDER_CHAT = ROOT / "application/tasks/recommender-agent_chat_api"
 TASK_SPEC_ROOT = ROOT / "application/task-spec"
+REAL_TASK_BANK = ROOT / "application/tasks/real_chatbot_website_task_bank.md"
+GITHUB_PRICING = ROOT / "application/tasks/web-github-pricing_plan-fit"
+PYTHON_DOCS = ROOT / "application/tasks/web-python-docs_error-lookup"
 
 
 def test_example_survey_task_metadata_is_clean() -> None:
@@ -164,6 +167,137 @@ def test_recommender_chat_sidecar_contract() -> None:
     assert len(conversation["messages"]) == 6
     assert recommendations["total"] >= 1
     assert recommendations["recommendedItems"][0]["itemId"].startswith("movie-")
+
+
+def test_real_chatbot_website_task_bank_covers_required_fields() -> None:
+    text = REAL_TASK_BANK.read_text(encoding="utf-8")
+
+    required_fields = [
+        "Scenario name:",
+        "Task type:",
+        "Domain / vertical:",
+        "Product or system under test:",
+        "Source site or API:",
+        "Task description:",
+        "Instruction for each persona:",
+        "Environment needs:",
+        "Persona attributes that should affect behavior:",
+        "Output telemetry:",
+        "Aggregate metrics:",
+        "Why personas should differ:",
+    ]
+    for field in required_fields:
+        assert field in text
+
+    assert text.count("### ") >= 10
+    for source in (
+        "https://github.com/pricing",
+        "https://docs.python.org/",
+        "https://openlibrary.org/developers/api",
+        "https://github.com/chatwoot/chatwoot",
+        "https://github.com/OpenBB-finance/OpenBB",
+    ):
+        assert source in text
+
+    assert "application/tasks/web-github-pricing_plan-fit" in text
+    assert "application/tasks/web-python-docs_error-lookup" in text
+
+
+def test_github_pricing_task_metadata_is_clean() -> None:
+    task_text = (GITHUB_PRICING / "task.toml").read_text(encoding="utf-8")
+    task = tomllib.loads(task_text)
+
+    assert task["task"]["name"] == "personabench/application-web-github-pricing-plan-fit"
+    assert task["metadata"]["type"] == "web"
+    assert task["metadata"]["domain"] == "software"
+    assert task["agent"]["network_mode"] == "public"
+    assert task["environment"]["definition"] == "application/web-github-pricing_plan-fit"
+    assert TaskPaths.from_task_dir(GITHUB_PRICING).environment_dir.is_dir()
+    assert "matraix/" not in task_text.lower()
+    assert "https://github.com/pricing" in (
+        GITHUB_PRICING / "instruction.md"
+    ).read_text(encoding="utf-8")
+
+
+def test_github_pricing_verifier_accepts_minimal_valid_result(tmp_path: Path) -> None:
+    output_dir = tmp_path / "output"
+    output_dir.mkdir()
+    (output_dir / "pricing_plan_evaluation.json").write_text(
+        json.dumps(
+            {
+                "source_url": "https://github.com/pricing",
+                "selected_plan": "Team",
+                "fit_rating": 8,
+                "trust_rating": 7,
+                "budget_fit": "acceptable",
+                "conversion_intent": "consider",
+                "reason": (
+                    "The selected plan fits the persona's small team "
+                    "collaboration needs."
+                ),
+                "friction_points": ["Add-on pricing needs a second pass."],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    verifier_path = GITHUB_PRICING / "tests/test_state.py"
+    spec = importlib.util.spec_from_file_location("github_pricing_test_state", verifier_path)
+    assert spec is not None
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+
+    module.OUTPUT = output_dir / "pricing_plan_evaluation.json"
+    assert module.main() == 0
+
+
+def test_python_docs_task_metadata_is_clean() -> None:
+    task_text = (PYTHON_DOCS / "task.toml").read_text(encoding="utf-8")
+    task = tomllib.loads(task_text)
+
+    assert task["task"]["name"] == "personabench/application-web-python-docs-error-lookup"
+    assert task["metadata"]["type"] == "web"
+    assert task["metadata"]["domain"] == "software"
+    assert task["agent"]["network_mode"] == "public"
+    assert task["environment"]["definition"] == "application/web-python-docs_error-lookup"
+    assert TaskPaths.from_task_dir(PYTHON_DOCS).environment_dir.is_dir()
+    assert "matraix/" not in task_text.lower()
+    assert "https://docs.python.org/" in (PYTHON_DOCS / "instruction.md").read_text(
+        encoding="utf-8"
+    )
+
+
+def test_python_docs_verifier_accepts_minimal_valid_result(tmp_path: Path) -> None:
+    output_dir = tmp_path / "output"
+    output_dir.mkdir()
+    (output_dir / "python_docs_lookup.json").write_text(
+        json.dumps(
+            {
+                "source_url": "https://docs.python.org/3/library/pathlib.html",
+                "topic": "pathlib.Path.read_text",
+                "answer_summary": (
+                    "Path.read_text reads a file into a string, and the encoding "
+                    "argument should be set when text encoding matters."
+                ),
+                "documentation_confidence": 8,
+                "ease_of_lookup": 7,
+                "would_reuse_docs": True,
+                "friction_points": ["The page is dense for beginners."],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    verifier_path = PYTHON_DOCS / "tests/test_state.py"
+    spec = importlib.util.spec_from_file_location("python_docs_test_state", verifier_path)
+    assert spec is not None
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+
+    module.OUTPUT = output_dir / "python_docs_lookup.json"
+    assert module.main() == 0
 
 
 def test_application_task_spec_manifest_uses_clean_task_paths() -> None:
