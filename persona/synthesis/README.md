@@ -9,17 +9,25 @@ validate, audit, and inspect synthetic persona assignments.
 persona/synthesis/
   graph/full_dag.json                  Canonical full graph artifact.
   sampler/                             Importable graph IO, sampler, validation, and audit code.
-  scripts/                             Reproducible CLI entry points.
+  scripts/                             Reproducible sampling, decoding, rendering, and QC entry points.
+  jobs/                                SLURM job templates for large-scale graph generation.
   docs/                                Method and QC notes.
   reports/full_dag_quality_10000.md    Committed 10,000-sample quality report.
   reports/sampler_comparison_1000_20260702/
                                       Constraint baseline vs Full DAG comparison artifacts.
+  reports/combinatorial_vs_graph_100_20260703/
+                                      Legacy combinatorial baseline vs Full DAG quality review.
   visualization/full_dag_overview.html Static graph visualization.
 ```
 
 Only one graph JSON is committed. The upstream desktop release contained two
 JSON serializations with the same parsed graph content; this repo keeps the
 compact one and gives it the stable domain name `full_dag.json`.
+
+The graph-based Full DAG sampler is the primary generation path. The earlier
+standalone combinatorial Persona8B sampler directory was removed to avoid two
+competing generation surfaces. Its 100-sample comparison artifact is retained
+only as historical baseline evidence under `reports/`.
 
 ## Graph Shape
 
@@ -90,6 +98,21 @@ Conditional masks are applied after the proposal distribution is normalized:
 
 The graph should be read as a sampled-proposal model, not learned causal ground
 truth.
+
+## Rendering Semantics
+
+`persona/schema/dimensions.json` is the canonical emitted-attribute schema for
+the graph sampler and includes deterministic rendering metadata for every
+emitted attribute:
+
+- `phrase` maps an attribute value to a short natural-language clause.
+- `defaultValue` marks low-salience values that the renderer can omit.
+- `renderConvention` records the schema-level rendering convention.
+
+The graph sampler itself emits structured attributes or compact integer codes.
+Natural-language persona descriptions are produced as a separate rendering pass
+with `scripts/render_personas.py`. This keeps the generated artifact compact and
+lets downstream users choose attributes, text, or both on demand.
 
 ## Usage
 
@@ -177,6 +200,33 @@ uv run python persona/synthesis/scripts/decode_persona_codes.py \
   --out /tmp/personas_1000000.jsonl \
   --format jsonl
 ```
+
+Render graph-generated attributes or compact codes into deterministic
+natural-language persona descriptions when human inspection or prompt material is
+needed:
+
+```bash
+uv run python persona/synthesis/scripts/render_personas.py \
+  --jsonl /tmp/personas_100.jsonl \
+  --mode text \
+  --count 5
+```
+
+For saved compact codes, render directly from the codes file and schema sidecar:
+
+```bash
+uv run python persona/synthesis/scripts/render_personas.py \
+  --codes /tmp/personas_1000000.codes.gz \
+  --sample 100 \
+  --mode both \
+  --out /tmp/personas_100.rendered.jsonl
+```
+
+`--mode attrs` writes raw `{id: value}` dictionaries, `--mode text` writes only
+the rendered description, and `--mode both` writes JSONL records containing
+`index`, `text`, and `attrs`. The renderer caps each thematic bucket by default
+to keep descriptions readable; pass `--max-clauses-per-bucket 0` to render all
+non-default clauses.
 
 Direct JSONL/CSV sampling is still supported for small inspection runs, but it
 should not be the default persistent artifact:
@@ -267,6 +317,27 @@ tooling limits, and invocations can run on different machines concurrently.
 Peak RAM stays bounded by `--batch-size` per worker (a few hundred MB each), so
 `--workers` can be set to the core count.
 
+For SLURM/cluster runs, use the CPU-only job templates in
+`jobs/graph_10b_generation/`. The recommended production shape is compressed
+`codes.gz` shards under the ignored `persona/synthesis/generated/` directory,
+for example `100 x 100M` rows for a 10B run. Start with a small dry run and a
+single 100M-shard benchmark before submitting the full array:
+
+```bash
+cd persona/synthesis/jobs/graph_10b_generation
+TOTAL_SHARDS=1 \
+ROWS_PER_SHARD=100000000 \
+ARRAY_CONCURRENCY=1 \
+CPUS_PER_TASK=24 \
+WORKERS=24 \
+TIME=0-06:00 \
+RUN_TAG=full_dag_test_100m \
+./submit_graph_10b.sh
+```
+
+See [10B cluster generation plan](jobs/graph_10b_generation/README.md) for the
+full shard layout, storage estimate, and monitoring commands.
+
 Generate the committed 10,000-sample quality report:
 
 ```bash
@@ -321,6 +392,12 @@ samples = sampler.sample(10)
   `full_dag_forward_1000.codes`, `full_dag_forward_1000.codes.schema.json`, and
   `summary.json`. The JSONL renderings used during analysis are intentionally
   not committed.
+- [100-sample combinatorial vs graph quality report](reports/combinatorial_vs_graph_100_20260703/quality_report.md)
+  records a small local comparison between a legacy combinatorial baseline
+  sample and the current Full DAG graph sample. Its conclusion is that the graph
+  sampler is the better realistic persona-generation direction because it
+  produces sparse, human-scaled expertise/skill/tool/language profiles, while
+  the combinatorial baseline is mostly useful for coverage and stress testing.
 - [Graph visualization](visualization/full_dag_overview.html) is an
   interactive static HTML view of the full graph: 1,290 emitted persona
   attributes, 18 latent/helper nodes, and 6,999 directed proposal edges. X
