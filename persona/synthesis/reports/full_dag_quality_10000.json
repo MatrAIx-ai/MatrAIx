@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-03T04:11:08+00:00",
+  "generated_at": "2026-07-03T06:06:46+00:00",
   "graph": "persona/synthesis/graph/full_dag.json",
   "sample_count": 10000,
   "seed": 42,
   "runtime": {
-    "python": "3.13.14",
-    "platform": "macOS-15.6-arm64-arm-64bit-Mach-O"
+    "python": "3.12.7",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35"
   },
   "graph_summary": {
     "graph_version": "v4.4_developer_extension",
@@ -15,7 +15,7 @@
     "directed_edges": 6999,
     "full_cpts": 54,
     "full_cpt_rows": 17645,
-    "conditional_masks": 250,
+    "conditional_masks": 267,
     "external_or_proxy_nodes": 0,
     "external_or_proxy_emit_false": 0
   },
@@ -24,7 +24,7 @@
     "directed_edge_count": 6999,
     "full_cpt_count": 54,
     "full_cpt_row_count": 17645,
-    "conditional_mask_count": 250,
+    "conditional_mask_count": 267,
     "duplicate_node_ids": 0,
     "duplicate_directed_pairs": 0,
     "missing_refs": [],
@@ -47,14 +47,14 @@
     "validation_passed": true
   },
   "timings": {
-    "load_and_compile_seconds": 0.427137834019959,
-    "static_validation_seconds": 0.29694212501635775,
-    "sample_indices_seconds": 1.6241319159744307,
-    "marginal_audit_seconds": 0.00740724999923259,
-    "consistency_audit_seconds": 1.3479008750291541,
-    "total_seconds": 3.7035246660234407,
-    "sampling_throughput_per_second": 6157.135329737239,
-    "end_to_end_throughput_per_second": 2700.130524778502
+    "load_and_compile_seconds": 0.5231168419995811,
+    "static_validation_seconds": 0.3552520759985782,
+    "sample_indices_seconds": 0.3386069280022639,
+    "marginal_audit_seconds": 0.011069383996073157,
+    "consistency_audit_seconds": 1.595265008007118,
+    "total_seconds": 2.8233159669980523,
+    "sampling_throughput_per_second": 29532.76844924195,
+    "end_to_end_throughput_per_second": 3541.934419275325
   },
   "focus_node_marginals": [
     {
@@ -69,8 +69,8 @@
     },
     {
       "node": "life_stage",
-      "tvd_vs_prior": 0.1007,
-      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 20.53%, prior 19.00%; Early career: sample 13.25%, prior 13.00%; Retirement: sample 10.46%, prior 10.00%"
+      "tvd_vs_prior": 0.09899999999999999,
+      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.36%, prior 19.00%; Early career: sample 13.16%, prior 13.00%; Retirement: sample 12.18%, prior 10.00%"
     },
     {
       "node": "english_proficiency",
@@ -161,8 +161,8 @@
     },
     {
       "node": "life_stage",
-      "tvd_vs_prior": 0.1007,
-      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 20.53%, prior 19.00%; Early career: sample 13.25%, prior 13.00%; Retirement: sample 10.46%, prior 10.00%"
+      "tvd_vs_prior": 0.09899999999999999,
+      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.36%, prior 19.00%; Early career: sample 13.16%, prior 13.00%; Retirement: sample 12.18%, prior 10.00%"
     },
     {
       "node": "english_proficiency",

@@ -5,23 +5,23 @@
 - Graph: `persona/synthesis/graph/full_dag.json`
 - Samples: 10,000
 - Seed: 42
-- Generated at: 2026-07-03T04:11:08+00:00
-- Python: 3.13.14
-- Platform: macOS-15.6-arm64-arm-64bit-Mach-O
+- Generated at: 2026-07-03T06:06:46+00:00
+- Python: 3.12.7
+- Platform: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35
 
 ## Timing
 
 | Step | Time |
 | --- | ---: |
-| Load and compile sampler | 0.4271s |
-| Static validation | 0.2969s |
-| Sample integer-coded DAG rows | 1.6241s |
-| Marginal audit | 0.0074s |
-| Consistency audit | 1.3479s |
-| End-to-end report runtime | 3.7035s |
+| Load and compile sampler | 0.5231s |
+| Static validation | 0.3553s |
+| Sample integer-coded DAG rows | 0.3386s |
+| Marginal audit | 0.0111s |
+| Consistency audit | 1.5953s |
+| End-to-end report runtime | 2.8233s |
 
-Sampling throughput: 6157.1 samples/sec.
-End-to-end throughput: 2700.1 samples/sec.
+Sampling throughput: 29532.8 samples/sec.
+End-to-end throughput: 3541.9 samples/sec.
 
 ## Static Graph Validation
 
@@ -31,7 +31,7 @@ End-to-end throughput: 2700.1 samples/sec.
 - Directed proposal edges: 6,999
 - Full CPT overlays: 54
 - Full CPT rows: 17,645
-- Conditional masks: 250
+- Conditional masks: 267
 - Missing refs: 0
 - Duplicate node ids: 0
 - Duplicate directed pairs: 0
@@ -60,7 +60,7 @@ TVD is total variation distance between the sample marginal and the node prior.
 | --- | ---: | --- |
 | `seniority` | 0.1369 | Student / intern: sample 38.98%, prior 34.00%; Entry: sample 18.60%, prior 10.00%; Mid: sample 14.11%, prior 17.00%; Retired: sample 9.80%, prior 18.30% |
 | `role_function` | 0.1225 | Operations: sample 31.46%, prior 28.75%; Engineering: sample 10.59%, prior 11.25%; Sales / GTM: sample 9.97%, prior 10.00%; Research: sample 7.68%, prior 2.50% |
-| `life_stage` | 0.1007 | Student: sample 35.39%, prior 30.00%; Mid-life: sample 20.53%, prior 19.00%; Early career: sample 13.25%, prior 13.00%; Retirement: sample 10.46%, prior 10.00% |
+| `life_stage` | 0.0990 | Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.36%, prior 19.00%; Early career: sample 13.16%, prior 13.00%; Retirement: sample 12.18%, prior 10.00% |
 | `english_proficiency` | 0.0983 | None: sample 38.03%, prior 29.00%; Basic (A1-A2): sample 17.91%, prior 18.00%; Intermediate (B1-B2): sample 15.33%, prior 17.00%; Fluent (C1-C2): sample 15.30%, prior 14.50% |
 | `demo_children_count` | 0.0625 | None: sample 55.14%, prior 60.00%; 3+ children: sample 12.56%, prior 11.00%; 2 children: sample 12.07%, prior 12.00%; Adult children: sample 11.12%, prior 6.50% |
 | `highest_education` | 0.0494 | Secondary: sample 36.23%, prior 36.00%; No formal: sample 20.76%, prior 16.50%; Primary: sample 20.69%, prior 24.50%; Bachelor's: sample 8.08%, prior 8.00% |

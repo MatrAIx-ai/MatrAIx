@@ -37,7 +37,7 @@ Current graph counts:
 | Directed proposal edges | 6,999 |
 | Full CPT overlays | 54 |
 | Full CPT rows | 17,645 |
-| Conditional masks | 250 |
+| Conditional masks | 267 |
 | Hard-zero masked values | 569 |
 | External/proxy nodes | 0 |
 

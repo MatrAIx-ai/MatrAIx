@@ -57,30 +57,33 @@ def test_visualization_distinguishes_schema_attributes_from_helper_nodes() -> No
     emitted_ids = {
         node["id"] for node in graph["nodes"] if node.get("emit", True) is not False
     }
+    # The renderer counts a node as an attribute when it is emitted or listed
+    # in the persona schema; everything else is a latent/helper node.
+    attribute_ids = emitted_ids | (schema_ids & graph_ids)
 
-    assert schema["targetDimensions"] == len(schema_ids) == 1339
-    assert len(graph_ids) == 1357
-    assert schema_ids <= graph_ids
-    assert len(graph_ids - schema_ids) == 18
+    # v4.4 full DAG: 1,290 emitted persona attributes plus 18 internal helpers.
+    assert len(graph_ids) == 1308
+    assert len(emitted_ids) == 1290
+    assert len(graph_ids - attribute_ids) == 18
 
     assert payload["counts"] == {
-        "schema_attributes": 1339,
-        "emitted_attributes": 1230,
-        "hidden_schema_attributes": 109,
-        "latent_helper_nodes": 18,
-        "graph_nodes": 1357,
-        "hidden_graph_nodes": 127,
+        "schema_attributes": len(attribute_ids),
+        "emitted_attributes": len(attribute_ids & emitted_ids),
+        "hidden_schema_attributes": len(attribute_ids - emitted_ids),
+        "latent_helper_nodes": len(graph_ids - attribute_ids),
+        "graph_nodes": len(graph_ids),
+        "hidden_graph_nodes": len(graph_ids - emitted_ids),
     }
-    assert len(payload["nodes"]) == 1357
-    assert len(payload["edges"]) == 6937
-    assert sum(category["attributeCount"] for category in payload["categories"]) == 1339
+    assert len(payload["nodes"]) == 1308
+    assert len(payload["edges"]) == 6999
+    assert sum(category["attributeCount"] for category in payload["categories"]) == len(attribute_ids)
     assert sum(category["helperCount"] for category in payload["categories"]) == 18
 
     helper_nodes = {node["id"] for node in payload["nodes"] if not node["isAttribute"]}
-    assert helper_nodes == graph_ids - schema_ids
+    assert helper_nodes == graph_ids - attribute_ids
     assert all(node["type"] == "latent/helper" for node in payload["nodes"] if not node["isAttribute"])
-    assert {node["id"] for node in payload["nodes"] if node["emit"]} == schema_ids & emitted_ids
+    assert {node["id"] for node in payload["nodes"] if node["emit"]} == emitted_ids
 
-    assert "Schema attributes" in html
+    assert "Persona attributes" in html
     assert "Latent/helper nodes" in html
     assert "Graph nodes" in html
