@@ -3,7 +3,7 @@
   "name": "matrAIx Persona Dimension Space",
   "headlineBehaviors": 8300000000,
   "targetDimensions": 1290,
-  "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only — it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
+  "note": "Flat unified dimension set. Every sampled persona is assigned exactly one value per dimension. The 'category' tag is for UI grouping/filtering only \u2014 it does not nest the schema. The full reachable persona space is the product of all value counts; the 8.3B headline is the corpus of behaviors already simulated within it.",
   "dimensions": [
     {
       "id": "age_bracket",
@@ -11,17 +11,13 @@
       "category": "Demographic: Core",
       "description": "Life-age band of the persona.",
       "values": [
-        "Under 5",
-        "5-12",
         "13-17",
         "18-24",
         "25-34",
         "35-44",
         "45-54",
         "55-64",
-        "65-74",
-        "75-84",
-        "85+"
+        "65+"
       ],
       "index": 1,
       "phrase": "aged {value}",
@@ -247,8 +243,6 @@
         "Primary",
         "Secondary",
         "Vocational / cert",
-        "Some college",
-        "Associate's",
         "Bachelor's",
         "Master's",
         "Doctorate",
@@ -12192,22 +12186,22 @@
       "category": "Personality: MBTI",
       "description": "The persona's 16-type MBTI profile.",
       "values": [
-        "INTJ — Architect",
-        "INTP — Logician",
-        "ENTJ — Commander",
-        "ENTP — Debater",
-        "INFJ — Advocate",
-        "INFP — Mediator",
-        "ENFJ — Protagonist",
-        "ENFP — Campaigner",
-        "ISTJ — Logistician",
-        "ISFJ — Defender",
-        "ESTJ — Executive",
-        "ESFJ — Consul",
-        "ISTP — Virtuoso",
-        "ISFP — Adventurer",
-        "ESTP — Entrepreneur",
-        "ESFP — Entertainer"
+        "INTJ \u2014 Architect",
+        "INTP \u2014 Logician",
+        "ENTJ \u2014 Commander",
+        "ENTP \u2014 Debater",
+        "INFJ \u2014 Advocate",
+        "INFP \u2014 Mediator",
+        "ENFJ \u2014 Protagonist",
+        "ENFP \u2014 Campaigner",
+        "ISTJ \u2014 Logistician",
+        "ISFJ \u2014 Defender",
+        "ESTJ \u2014 Executive",
+        "ESFJ \u2014 Consul",
+        "ISTP \u2014 Virtuoso",
+        "ISFP \u2014 Adventurer",
+        "ESTP \u2014 Entrepreneur",
+        "ESFP \u2014 Entertainer"
       ],
       "index": 755,
       "phrase": "an {value} personality type",
@@ -12217,7 +12211,7 @@
       "id": "big5_imagination",
       "label": "Imagination",
       "category": "Personality: Big Five",
-      "description": "Openness facet — imagination.",
+      "description": "Openness facet \u2014 imagination.",
       "values": [
         "Very high",
         "High",
@@ -12233,7 +12227,7 @@
       "id": "big5_artistic_interest",
       "label": "Artistic interest",
       "category": "Personality: Big Five",
-      "description": "Openness facet — artistic interest.",
+      "description": "Openness facet \u2014 artistic interest.",
       "values": [
         "Very high",
         "High",
@@ -12249,7 +12243,7 @@
       "id": "big5_emotionality",
       "label": "Emotionality",
       "category": "Personality: Big Five",
-      "description": "Openness facet — emotionality.",
+      "description": "Openness facet \u2014 emotionality.",
       "values": [
         "Very high",
         "High",
@@ -12265,7 +12259,7 @@
       "id": "big5_adventurousness",
       "label": "Adventurousness",
       "category": "Personality: Big Five",
-      "description": "Openness facet — adventurousness.",
+      "description": "Openness facet \u2014 adventurousness.",
       "values": [
         "Very high",
         "High",
@@ -12281,7 +12275,7 @@
       "id": "big5_intellect",
       "label": "Intellect",
       "category": "Personality: Big Five",
-      "description": "Openness facet — intellect.",
+      "description": "Openness facet \u2014 intellect.",
       "values": [
         "Very high",
         "High",
@@ -12297,7 +12291,7 @@
       "id": "big5_liberalism",
       "label": "Liberalism",
       "category": "Personality: Big Five",
-      "description": "Openness facet — liberalism.",
+      "description": "Openness facet \u2014 liberalism.",
       "values": [
         "Very high",
         "High",
@@ -12313,7 +12307,7 @@
       "id": "big5_self_efficacy",
       "label": "Self-efficacy",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — self-efficacy.",
+      "description": "Conscientiousness facet \u2014 self-efficacy.",
       "values": [
         "Very high",
         "High",
@@ -12329,7 +12323,7 @@
       "id": "big5_orderliness",
       "label": "Orderliness",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — orderliness.",
+      "description": "Conscientiousness facet \u2014 orderliness.",
       "values": [
         "Very high",
         "High",
@@ -12345,7 +12339,7 @@
       "id": "big5_dutifulness",
       "label": "Dutifulness",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — dutifulness.",
+      "description": "Conscientiousness facet \u2014 dutifulness.",
       "values": [
         "Very high",
         "High",
@@ -12361,7 +12355,7 @@
       "id": "big5_achievement_striving",
       "label": "Achievement-striving",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — achievement-striving.",
+      "description": "Conscientiousness facet \u2014 achievement-striving.",
       "values": [
         "Very high",
         "High",
@@ -12377,7 +12371,7 @@
       "id": "big5_self_discipline",
       "label": "Self-discipline",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — self-discipline.",
+      "description": "Conscientiousness facet \u2014 self-discipline.",
       "values": [
         "Very high",
         "High",
@@ -12393,7 +12387,7 @@
       "id": "big5_cautiousness",
       "label": "Cautiousness",
       "category": "Personality: Big Five",
-      "description": "Conscientiousness facet — cautiousness.",
+      "description": "Conscientiousness facet \u2014 cautiousness.",
       "values": [
         "Very high",
         "High",
@@ -12409,7 +12403,7 @@
       "id": "big5_friendliness",
       "label": "Friendliness",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — friendliness.",
+      "description": "Extraversion facet \u2014 friendliness.",
       "values": [
         "Very high",
         "High",
@@ -12425,7 +12419,7 @@
       "id": "big5_gregariousness",
       "label": "Gregariousness",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — gregariousness.",
+      "description": "Extraversion facet \u2014 gregariousness.",
       "values": [
         "Very high",
         "High",
@@ -12441,7 +12435,7 @@
       "id": "big5_assertiveness",
       "label": "Assertiveness",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — assertiveness.",
+      "description": "Extraversion facet \u2014 assertiveness.",
       "values": [
         "Very high",
         "High",
@@ -12457,7 +12451,7 @@
       "id": "big5_activity_level",
       "label": "Activity level",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — activity level.",
+      "description": "Extraversion facet \u2014 activity level.",
       "values": [
         "Very high",
         "High",
@@ -12473,7 +12467,7 @@
       "id": "big5_excitement_seeking",
       "label": "Excitement-seeking",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — excitement-seeking.",
+      "description": "Extraversion facet \u2014 excitement-seeking.",
       "values": [
         "Very high",
         "High",
@@ -12489,7 +12483,7 @@
       "id": "big5_cheerfulness",
       "label": "Cheerfulness",
       "category": "Personality: Big Five",
-      "description": "Extraversion facet — cheerfulness.",
+      "description": "Extraversion facet \u2014 cheerfulness.",
       "values": [
         "Very high",
         "High",
@@ -12505,7 +12499,7 @@
       "id": "big5_trust",
       "label": "Trust",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — trust.",
+      "description": "Agreeableness facet \u2014 trust.",
       "values": [
         "Very high",
         "High",
@@ -12521,7 +12515,7 @@
       "id": "big5_morality",
       "label": "Morality",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — morality.",
+      "description": "Agreeableness facet \u2014 morality.",
       "values": [
         "Very high",
         "High",
@@ -12537,7 +12531,7 @@
       "id": "big5_altruism",
       "label": "Altruism",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — altruism.",
+      "description": "Agreeableness facet \u2014 altruism.",
       "values": [
         "Very high",
         "High",
@@ -12553,7 +12547,7 @@
       "id": "big5_cooperation",
       "label": "Cooperation",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — cooperation.",
+      "description": "Agreeableness facet \u2014 cooperation.",
       "values": [
         "Very high",
         "High",
@@ -12569,7 +12563,7 @@
       "id": "big5_modesty",
       "label": "Modesty",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — modesty.",
+      "description": "Agreeableness facet \u2014 modesty.",
       "values": [
         "Very high",
         "High",
@@ -12585,7 +12579,7 @@
       "id": "big5_sympathy",
       "label": "Sympathy",
       "category": "Personality: Big Five",
-      "description": "Agreeableness facet — sympathy.",
+      "description": "Agreeableness facet \u2014 sympathy.",
       "values": [
         "Very high",
         "High",
@@ -12601,7 +12595,7 @@
       "id": "big5_anxiety",
       "label": "Anxiety",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — anxiety.",
+      "description": "Neuroticism facet \u2014 anxiety.",
       "values": [
         "Very high",
         "High",
@@ -12617,7 +12611,7 @@
       "id": "big5_anger",
       "label": "Anger",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — anger.",
+      "description": "Neuroticism facet \u2014 anger.",
       "values": [
         "Very high",
         "High",
@@ -12633,7 +12627,7 @@
       "id": "big5_depression",
       "label": "Depression",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — depression.",
+      "description": "Neuroticism facet \u2014 depression.",
       "values": [
         "Very high",
         "High",
@@ -12649,7 +12643,7 @@
       "id": "big5_self_consciousness",
       "label": "Self-consciousness",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — self-consciousness.",
+      "description": "Neuroticism facet \u2014 self-consciousness.",
       "values": [
         "Very high",
         "High",
@@ -12665,7 +12659,7 @@
       "id": "big5_immoderation",
       "label": "Immoderation",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — immoderation.",
+      "description": "Neuroticism facet \u2014 immoderation.",
       "values": [
         "Very high",
         "High",
@@ -12681,7 +12675,7 @@
       "id": "big5_vulnerability",
       "label": "Vulnerability",
       "category": "Personality: Big Five",
-      "description": "Neuroticism facet — vulnerability.",
+      "description": "Neuroticism facet \u2014 vulnerability.",
       "values": [
         "Very high",
         "High",
@@ -13246,7 +13240,7 @@
       "description": "Coffee ritual.",
       "values": [
         "Home brew",
-        "Café regular",
+        "Caf\u00e9 regular",
         "Office coffee",
         "Tea instead",
         "None"
@@ -17992,7 +17986,6 @@
       "values": [
         "Single",
         "In a relationship",
-        "Engaged",
         "Married",
         "Domestic partnership",
         "Separated",
@@ -22318,6 +22311,5 @@
       "dimensionId": "cog_skepticism",
       "index": 835
     }
-  },
-  "renderConvention": "Each dimension carries `phrase` (a natural-language template with a single {value} slot; subject pre-resolved) and `defaultValue` (the neutral/zero value, string or list, that a renderer omits). Build a persona description by formatting each non-default dimension's phrase with its sampled value. See render_persona.py."
+  }
 }
