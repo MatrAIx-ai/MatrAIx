@@ -65,8 +65,11 @@ DATASET_ID="matraix_amazon_reviews_2023_top10k_${START}_${END}"
 RUN_DIR="${DATA_ROOT}/amazon_reviews_2023/top_reviewers/${ASSIGNMENT_ID}"
 SELECTED_IDS="${RUN_DIR}/reviewer_ids_${START}_${END}.txt"
 RAW_USER_HISTORIES="${RUN_DIR}/user_histories_raw_${START}_${END}.jsonl"
-USER_HISTORIES="${RUN_DIR}/user_histories_prepared_${START}_${END}.jsonl"
+PREPARED_USER_HISTORIES="${RUN_DIR}/user_histories_prepared_${START}_${END}.jsonl"
+ENRICHED_USER_HISTORIES="${RUN_DIR}/user_histories_prepared_${START}_${END}.product_info.jsonl"
 FILTER_SUMMARY="${RUN_DIR}/user_histories_prepared_${START}_${END}.filter_summary.json"
+ENRICH_SUMMARY="${RUN_DIR}/user_histories_prepared_${START}_${END}.product_enrich_summary.json"
+ENRICH_CACHE="${RUN_DIR}/product_metadata_cache.json"
 OUT_DIR="${PACKAGE_OUT_ROOT}/${ASSIGNMENT_ID}_${WORKER_ID}"
 
 if [[ ! -f "${TOP_REVIEWER_QUEUE}" ]]; then
@@ -117,27 +120,47 @@ else
     --output "${RAW_USER_HISTORIES}"
     --download-delay-seconds "${HF_DOWNLOAD_DELAY_SECONDS:-0.4}"
   )
-  if [[ "${INCLUDE_PRODUCT_INFO}" == "1" ]]; then
-    EXPORT_CMD+=(
-      --include-product-info
-      --metadata-artifact-prefix "${HF_METADATA_ARTIFACT_PREFIX}"
-    )
-  fi
   if [[ -n "${HF_TOKEN:-}" ]]; then
     EXPORT_CMD+=(--token "${HF_TOKEN}")
   fi
   "${EXPORT_CMD[@]}"
 fi
 
-if [[ "${REUSE_PREPARED_HISTORIES:-0}" == "1" && -s "${USER_HISTORIES}" ]]; then
-  echo ">> reusing existing prepared histories: ${USER_HISTORIES}"
+if [[ "${REUSE_PREPARED_HISTORIES:-0}" == "1" && -s "${PREPARED_USER_HISTORIES}" ]]; then
+  echo ">> reusing existing prepared histories: ${PREPARED_USER_HISTORIES}"
 else
   echo ">> preparing histories with temporal split, stats, and review filtering"
   python3 persona/curation/existing_data/scripts/prepare_hf_amazon_user_histories.py \
     --input "${RAW_USER_HISTORIES}" \
-    --output "${USER_HISTORIES}" \
+    --output "${PREPARED_USER_HISTORIES}" \
     --summary-output "${FILTER_SUMMARY}" \
     --train-fraction "${TEMPORAL_TRAIN_FRACTION:-0.8}"
+fi
+
+if [[ "${INCLUDE_PRODUCT_INFO}" == "1" ]]; then
+  if [[ "${REUSE_ENRICHED_HISTORIES:-0}" == "1" && -s "${ENRICHED_USER_HISTORIES}" ]]; then
+    echo ">> reusing targeted product histories: ${ENRICHED_USER_HISTORIES}"
+  else
+    echo ">> enriching selected text reviews and non-text construction rows with product context"
+    ENRICH_CMD=(
+      python3 persona/curation/existing_data/scripts/enrich_prepared_amazon_product_info.py
+      --input "${PREPARED_USER_HISTORIES}"
+      --output "${ENRICHED_USER_HISTORIES}"
+      --summary-output "${ENRICH_SUMMARY}"
+      --repo-id "${HF_REPO_ID}"
+      --metadata-artifact-prefix "${HF_METADATA_ARTIFACT_PREFIX}"
+      --max-text-reviews-per-user "${MAX_TEXT_REVIEWS_PER_USER:-200}"
+      --download-delay-seconds "${HF_METADATA_DOWNLOAD_DELAY_SECONDS:-${HF_DOWNLOAD_DELAY_SECONDS:-0.4}}"
+      --cache "${ENRICH_CACHE}"
+    )
+    if [[ -n "${HF_TOKEN:-}" ]]; then
+      ENRICH_CMD+=(--token "${HF_TOKEN}")
+    fi
+    "${ENRICH_CMD[@]}"
+  fi
+  USER_HISTORIES="${ENRICHED_USER_HISTORIES}"
+else
+  USER_HISTORIES="${PREPARED_USER_HISTORIES}"
 fi
 
 PREPARED_COUNT="$(python3 -c 'import sys; print(sum(1 for line in open(sys.argv[1], encoding="utf-8") if line.strip()))' "${USER_HISTORIES}")"

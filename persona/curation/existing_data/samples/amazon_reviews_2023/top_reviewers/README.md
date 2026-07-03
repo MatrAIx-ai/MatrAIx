@@ -20,39 +20,45 @@ persona/curation/existing_data/scripts/make_amazon_top_reviewer_package.sh \
 
 This creates one package for ranks `[0, 100)`.
 
-## Build 100 Packages From the 10K Queue
+## Build Packages From a Queue
 
-To split all 10,000 queued reviewers into 100 packages with 100 reviewers each:
+For production package generation, retrieve and prepare the queue once, enrich
+that prepared JSONL once, then split it locally into 100-reviewer packages:
 
 ```bash
 export MATRIX_DATA_ROOT=/path/to/local/amazon_cache
 export MATRIX_PACKAGE_OUT_ROOT=/path/to/package_output
 export HF_TOKEN=...  # optional, only needed for private HF dataset access
 
-for i in $(seq 0 99); do
-  start=$((i * 100))
-  end=$((start + 100))
-  worker=$(printf "worker_%03d" "$i")
-
-  persona/curation/existing_data/scripts/make_amazon_top_reviewer_package.sh \
-    "${start}:${end}" \
-    "${worker}"
-done
+persona/curation/existing_data/scripts/make_amazon_top_reviewer_batch_packages.sh
 ```
 
-Each package is written under `MATRIX_PACKAGE_OUT_ROOT` and contains only the
-worker-facing assignment files for its rank slice. Raw retrieved histories stay
-under `MATRIX_DATA_ROOT`.
+Each package is written under `MATRIX_PACKAGE_OUT_ROOT` and contains only
+worker-facing assignment files. Raw, prepared, enriched, and cached metadata
+files stay under `MATRIX_DATA_ROOT`.
+
+Useful overrides:
+
+- `QUEUE`: reviewer queue path; defaults to the checked-in 10K queue
+- `RUN_NAME`: output file prefix; default `amazon_top_reviewers_batch`
+- `PACKAGE_SIZE`: reviewers per package; default `100`
+- `MAX_USERS`: cap the prepared rows used for this run; `0` means all rows
+- `MAX_PACKAGES`: cap package count; `0` means no explicit package cap
+- `REUSE_RAW_HISTORIES=1`: reuse existing HF review retrieval cache
+- `REUSE_PREPARED_HISTORIES=1`: reuse the prepared temporal-split JSONL
+- `REUSE_ENRICHED_HISTORIES=1`: reuse the product-enriched JSONL
+- `REUSE_PACKAGES=1`: skip package rebuilds when package archives already exist
+- `INCLUDE_PRODUCT_INFO=0`: skip targeted product enrichment
 
 ## Retrieval and Preparation Flow
 
-The wrapper writes a temporary rank-slice ID file, exports the matching raw user
-histories from the Hugging Face user-bucket artifact, joins compact product
-context from the Hugging Face metadata artifact, prepares those histories into
-the Amazon inference/evaluation contract, and then builds an Amazon
-collaborator package with `make_package.py`. Product context is limited to
-`product_title`, `product_main_category`, and `product_category_path`; full item
-metadata is not copied into the package input.
+The wrappers export raw user histories from the Hugging Face user-bucket
+artifact, prepare those histories into the Amazon inference/evaluation contract,
+optionally enrich the prepared construction split with compact product context
+from the Hugging Face metadata artifact, and build Amazon collaborator packages
+with `make_package.py`. Product context is limited to `product_title`,
+`product_main_category`, and `product_category_path`; full item metadata is not
+copied into the package input.
 
 The flow is Hugging Face only; it does not require Modal.
 
@@ -65,10 +71,13 @@ The prepared history JSONL contains:
 - `review_filter_summary`: low-signal/template/duplicate review removals
 - compact product fields on each review when available
 
-Rows without review title/text are kept only when they have a valid rating and
-compact product context. Their product/category signals are summarized in the
-category stats and rendered into the package `profile_text` summary section.
-They are not rendered as individual review blocks.
+Product enrichment happens after the temporal split. It requests metadata only
+for selected high-signal text reviews and non-text construction rows, then
+recomputes construction and validation category stats. Rows without review
+title/text are kept when they have a valid rating and compact product context.
+Their product/category signals are summarized in the category stats and rendered
+into the package `profile_text` summary section. They are not rendered as
+individual review blocks.
 
 For individual review evidence, the package renders at most 200 high-signal
 text reviews per reviewer from the temporal construction split. Text reviews
@@ -104,9 +113,27 @@ Other useful overrides:
 - `AMAZON_METADATA_ARTIFACT_PREFIX`: HF metadata artifact prefix
 - `AMAZON_CATEGORIES`: comma-separated category subset, or `all`
 - `MAX_TEXT_REVIEWS_PER_USER`: max rendered text reviews per user, default `200`
-- `HF_DOWNLOAD_DELAY_SECONDS`: throttle between HF shard downloads, default `0.4`
+- `HF_DOWNLOAD_DELAY_SECONDS`: throttle between HF review shard downloads, default `0.4`
+- `HF_METADATA_DOWNLOAD_DELAY_SECONDS`: throttle between HF metadata shard downloads
 - `REUSE_RAW_HISTORIES=1`: skip HF review retrieval when raw histories exist
 - `REUSE_PREPARED_HISTORIES=1`: skip preparation when prepared histories exist
+- `REUSE_ENRICHED_HISTORIES=1`: skip product enrichment when enriched histories exist
+
+## Track Packaged vs Unpackaged Reviewers
+
+After generating package manifests, compare them against the 10K reviewer queue:
+
+```bash
+python3 persona/curation/existing_data/scripts/track_amazon_top_reviewer_packages.py \
+  --queue persona/curation/existing_data/samples/amazon_reviews_2023/top_reviewers/amazon_top_10000_rich_persona_reviewer_ids_2018_2023.md \
+  --package-root /path/to/package_output \
+  --output-json /path/to/package_tracker.json \
+  --output-md /path/to/package_tracker.md
+```
+
+The tracker writes packaged reviewer IDs, not-yet-packaged reviewer IDs,
+package-level provenance, duplicate package assignments, and any packaged IDs
+that are not present in the source queue.
 
 ## Retrieve Histories Only
 
@@ -115,6 +142,5 @@ To retrieve only the corresponding review histories, pass this file to:
 ```bash
 python3 persona/curation/existing_data/scripts/export_hf_amazon_user_histories.py \
   --user-ids persona/curation/existing_data/samples/amazon_reviews_2023/top_reviewers/amazon_top_10000_rich_persona_reviewer_ids_2018_2023.md \
-  --include-product-info \
   --output /path/to/user_histories.jsonl.gz
 ```
