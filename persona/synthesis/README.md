@@ -37,13 +37,20 @@ Current graph counts:
 | Directed proposal edges | 6,999 |
 | Full CPT overlays | 54 |
 | Full CPT rows | 17,645 |
-| Conditional masks | 267 |
+| Conditional masks | 524 |
 | Hard-zero masked values | 569 |
 | External/proxy nodes | 0 |
 
 The current graph is the v4.4 developer-extension Full DAG. Placeholder external
 dataset dimensions, benchmark-adapter dimensions, provenance/source fields, and
-duplicate source-proxy fields are removed from the committed graph. Developer
+duplicate source-proxy fields are removed from the committed graph. The
+conditional-mask set includes soft cross-module consistency packs: language
+budgets (`lang_*` proficiency vs `multilingualism`), cultural nativeness
+budgets (`cult_*` vs `region`), duplicated-variable couplings
+(`neurotype`/`health_neurodivergence`, `demo_disability_status` vs
+sensory/mobility health), and pairwise guards for relationship
+status/length/history, LinkedIn activity, academic institution/field, veteran
+status vs military history, accessibility, and driving skill/status. Developer
 and coding-agent attributes are included as emitted persona attributes. Default
 samples emit 1,290 actual persona attributes. The remaining `emit:false` nodes
 are internal latent/helper nodes used by the proposal model, not output persona

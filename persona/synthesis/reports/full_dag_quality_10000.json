@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T06:06:46+00:00",
+  "generated_at": "2026-07-03T13:35:06+00:00",
   "graph": "persona/synthesis/graph/full_dag.json",
   "sample_count": 10000,
   "seed": 42,
@@ -15,7 +15,7 @@
     "directed_edges": 6999,
     "full_cpts": 54,
     "full_cpt_rows": 17645,
-    "conditional_masks": 267,
+    "conditional_masks": 524,
     "external_or_proxy_nodes": 0,
     "external_or_proxy_emit_false": 0
   },
@@ -24,7 +24,7 @@
     "directed_edge_count": 6999,
     "full_cpt_count": 54,
     "full_cpt_row_count": 17645,
-    "conditional_mask_count": 267,
+    "conditional_mask_count": 524,
     "duplicate_node_ids": 0,
     "duplicate_directed_pairs": 0,
     "missing_refs": [],
@@ -47,14 +47,14 @@
     "validation_passed": true
   },
   "timings": {
-    "load_and_compile_seconds": 0.5231168419995811,
-    "static_validation_seconds": 0.3552520759985782,
-    "sample_indices_seconds": 0.3386069280022639,
-    "marginal_audit_seconds": 0.011069383996073157,
-    "consistency_audit_seconds": 1.595265008007118,
-    "total_seconds": 2.8233159669980523,
-    "sampling_throughput_per_second": 29532.76844924195,
-    "end_to_end_throughput_per_second": 3541.934419275325
+    "load_and_compile_seconds": 0.5666932059975807,
+    "static_validation_seconds": 0.374592402993585,
+    "sample_indices_seconds": 0.3937836800032528,
+    "marginal_audit_seconds": 0.011693828011630103,
+    "consistency_audit_seconds": 1.6036853280093055,
+    "total_seconds": 2.9504554070008453,
+    "sampling_throughput_per_second": 25394.65322665834,
+    "end_to_end_throughput_per_second": 3389.3072833000574
   },
   "focus_node_marginals": [
     {
@@ -69,8 +69,8 @@
     },
     {
       "node": "life_stage",
-      "tvd_vs_prior": 0.09899999999999999,
-      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.36%, prior 19.00%; Early career: sample 13.16%, prior 13.00%; Retirement: sample 12.18%, prior 10.00%"
+      "tvd_vs_prior": 0.1006,
+      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.43%, prior 19.00%; Early career: sample 13.19%, prior 13.00%; Retirement: sample 12.21%, prior 10.00%"
     },
     {
       "node": "english_proficiency",
@@ -79,8 +79,8 @@
     },
     {
       "node": "demo_children_count",
-      "tvd_vs_prior": 0.06249999999999998,
-      "top_sample_values": "None: sample 55.14%, prior 60.00%; 3+ children: sample 12.56%, prior 11.00%; 2 children: sample 12.07%, prior 12.00%; Adult children: sample 11.12%, prior 6.50%"
+      "tvd_vs_prior": 0.05959999999999997,
+      "top_sample_values": "None: sample 55.72%, prior 60.00%; 3+ children: sample 12.40%, prior 11.00%; 2 children: sample 11.86%, prior 12.00%; Adult children: sample 11.06%, prior 6.50%"
     },
     {
       "node": "highest_education",
@@ -161,8 +161,8 @@
     },
     {
       "node": "life_stage",
-      "tvd_vs_prior": 0.09899999999999999,
-      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.36%, prior 19.00%; Early career: sample 13.16%, prior 13.00%; Retirement: sample 12.18%, prior 10.00%"
+      "tvd_vs_prior": 0.1006,
+      "top_sample_values": "Student: sample 35.39%, prior 30.00%; Mid-life: sample 19.43%, prior 19.00%; Early career: sample 13.19%, prior 13.00%; Retirement: sample 12.21%, prior 10.00%"
     },
     {
       "node": "english_proficiency",
@@ -171,8 +171,8 @@
     },
     {
       "node": "demo_children_count",
-      "tvd_vs_prior": 0.06249999999999998,
-      "top_sample_values": "None: sample 55.14%, prior 60.00%; 3+ children: sample 12.56%, prior 11.00%; 2 children: sample 12.07%, prior 12.00%; Adult children: sample 11.12%, prior 6.50%"
+      "tvd_vs_prior": 0.05959999999999997,
+      "top_sample_values": "None: sample 55.72%, prior 60.00%; 3+ children: sample 12.40%, prior 11.00%; 2 children: sample 11.86%, prior 12.00%; Adult children: sample 11.06%, prior 6.50%"
     },
     {
       "node": "highest_education",
