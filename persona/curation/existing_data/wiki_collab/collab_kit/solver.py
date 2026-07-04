@@ -158,7 +158,7 @@ def build_prompt(
             field_id = str(d["id"])
             label = str(d.get("label", field_id))
             lines.append(
-                f"- {field_id.upper()}: {label}; values=[{allowed}]; "
+                f"- field_id={field_id}: {label}; values=[{allowed}]; "
                 f"description={_shorten(desc, 42)}"
             )
         else:

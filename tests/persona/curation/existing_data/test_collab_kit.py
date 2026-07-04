@@ -493,6 +493,24 @@ def test_build_prompt_uses_amazon_review_wording_for_amazon_source():
     assert "Wikipedia-derived profile" not in prompt
 
 
+def test_compact_prompt_keeps_exact_field_ids():
+    prompt = solver.build_prompt(
+        {"profile_text": "born in 1809"},
+        [
+            {
+                "id": "age_bracket",
+                "label": "Age bracket",
+                "description": "Life-age band of the persona.",
+                "values": ["65+"],
+            }
+        ],
+        compact=True,
+    )
+
+    assert "field_id=age_bracket" in prompt
+    assert "AGE_BRACKET" not in prompt
+
+
 def test_harness_resumes_after_failure(tmp_path, monkeypatch):
     """A failed unit (e.g. quota exhausted) stays pending; re-running finishes it."""
     out = tmp_path / "results.jsonl"
@@ -779,7 +797,7 @@ def test_qwen_backend_uses_compact_prompt_and_profile_limit(monkeypatch):
 
     prompt = captured["prompt"]
     assert "Do not include chain-of-thought" in prompt
-    assert "DOMAIN: Domain" in prompt
+    assert "field_id=domain: Domain" in prompt
     assert "Long detail. Long detail. Long detail." not in prompt
     assert "[profile_text truncated" in prompt
     assert "A" * 80 not in prompt
