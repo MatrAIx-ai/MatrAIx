@@ -209,8 +209,49 @@ smoke test; environment/backend health check; real run; and validation. Codex
 uses `gpt-5.5`; Claude Code uses `claude-opus-4-8`; local Qwen uses
 `Qwen/Qwen3.6-35B-A3B` through an OpenAI-compatible server.
 
-For local Qwen, start the bundled Transformers host first so the model stays
-loaded on your GPU across calls:
+For local Qwen, point `qwen-local` at an OpenAI-compatible server. vLLM is the
+recommended path when you want to saturate multiple GPUs:
+
+```bash
+python3 -m venv /tmp/qwen_vllm_venv
+/tmp/qwen_vllm_venv/bin/python -m pip install --upgrade pip
+/tmp/qwen_vllm_venv/bin/python -m pip install -U vllm
+```
+
+```bash
+PATH=/tmp/qwen_vllm_venv/bin:$PATH \
+HF_HOME=/path/to/hf_cache \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+/tmp/qwen_vllm_venv/bin/vllm serve Qwen/Qwen3.6-35B-A3B \
+  --host 127.0.0.1 \
+  --port 8001 \
+  --tensor-parallel-size 8 \
+  --served-model-name Qwen/Qwen3.6-35B-A3B \
+  --max-model-len 32768 \
+  --gpu-memory-utilization 0.95 \
+  --trust-remote-code \
+  --reasoning-parser qwen3 \
+  --default-chat-template-kwargs '{"enable_thinking": false}'
+```
+
+Then run inference from the package directory:
+
+```bash
+export QWEN_BASE_URL=http://127.0.0.1:8001/v1
+export QWEN_API_KEY=EMPTY
+export WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1
+export WIKI_COLLAB_QWEN_MAX_TOKENS=2048
+./run_assignment.sh --backend qwen-local --model Qwen/Qwen3.6-35B-A3B --jobs 24 --yes --run
+./run_assignment.sh --validate
+```
+
+Start with `--jobs 8`, watch `nvidia-smi`, then increase to 16 or 24 if GPU
+utilization is low and the server has no OOM/HTTP errors. The runner is
+resumable, so stopping with Ctrl-C and rerunning with a different `--jobs`
+value is safe.
+
+The bundled Transformers host is the simple fallback when you do not want to
+run vLLM:
 
 ```bash
 python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B

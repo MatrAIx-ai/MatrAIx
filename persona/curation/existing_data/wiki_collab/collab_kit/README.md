@@ -75,9 +75,48 @@ Claude Code effort choices are `high`, `medium`, `xhigh`, and `max`.
 Local Qwen uses `high`; effort is recorded for provenance but does not change
 the OpenAI-compatible API request.
 
-For local Qwen, start the bundled Transformers host first. It loads the model
-once, keeps it resident on your GPU, and exposes the small OpenAI-compatible
-surface the runner needs:
+For local Qwen, point `qwen-local` at any OpenAI-compatible server. vLLM is the
+recommended path when you want high throughput across multiple GPUs:
+
+```bash
+python3 -m venv /tmp/qwen_vllm_venv
+/tmp/qwen_vllm_venv/bin/python -m pip install --upgrade pip
+/tmp/qwen_vllm_venv/bin/python -m pip install -U vllm
+```
+
+```bash
+PATH=/tmp/qwen_vllm_venv/bin:$PATH \
+HF_HOME=/path/to/hf_cache \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+/tmp/qwen_vllm_venv/bin/vllm serve Qwen/Qwen3.6-35B-A3B \
+  --host 127.0.0.1 \
+  --port 8001 \
+  --tensor-parallel-size 8 \
+  --served-model-name Qwen/Qwen3.6-35B-A3B \
+  --max-model-len 32768 \
+  --gpu-memory-utilization 0.95 \
+  --trust-remote-code \
+  --reasoning-parser qwen3 \
+  --default-chat-template-kwargs '{"enable_thinking": false}'
+```
+
+Then run from the package directory:
+
+```bash
+export QWEN_BASE_URL=http://127.0.0.1:8001/v1
+export QWEN_API_KEY=EMPTY
+export WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1
+export WIKI_COLLAB_QWEN_MAX_TOKENS=2048
+./run_assignment.sh --backend qwen-local --model Qwen/Qwen3.6-35B-A3B --jobs 24 --yes --run
+./run_assignment.sh --validate
+```
+
+Tune `--jobs` upward until GPU utilization is saturated without OOM or HTTP
+errors. On an 8x A5000 box, `--jobs 24` was a good high-throughput setting.
+
+The bundled Transformers host is the zero-extra-server fallback. It loads the
+model once, keeps it resident on your GPU, and exposes the small
+OpenAI-compatible surface the runner needs:
 
 ```bash
 python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B

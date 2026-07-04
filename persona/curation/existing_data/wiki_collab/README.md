@@ -62,7 +62,7 @@ The package runner supports three real backends:
 |---|---|---|
 | `codex-acp` | `gpt-5.5` | logged-in Codex CLI |
 | `claude-code-acp` | `claude-opus-4-8` | logged-in Claude Code CLI |
-| `qwen-local` | `Qwen/Qwen3.6-35B-A3B` | local GPU with Transformers + torch |
+| `qwen-local` | `Qwen/Qwen3.6-35B-A3B` | local OpenAI-compatible Qwen server |
 
 The interactive TUI is:
 
@@ -94,6 +94,56 @@ or:
 ./run_assignment.sh --backend claude-code-acp --effort high --jobs 4 --yes --run
 ./run_assignment.sh --validate
 ```
+
+### Local Qwen With vLLM
+
+Use vLLM when you want to keep one or more GPUs saturated. Install it in a
+separate environment on the worker machine:
+
+```bash
+python3 -m venv /tmp/qwen_vllm_venv
+/tmp/qwen_vllm_venv/bin/python -m pip install --upgrade pip
+/tmp/qwen_vllm_venv/bin/python -m pip install -U vllm
+```
+
+Start the OpenAI-compatible server. Set `--tensor-parallel-size` to the number
+of GPUs you want this model to use:
+
+```bash
+PATH=/tmp/qwen_vllm_venv/bin:$PATH \
+HF_HOME=/path/to/hf_cache \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+/tmp/qwen_vllm_venv/bin/vllm serve Qwen/Qwen3.6-35B-A3B \
+  --host 127.0.0.1 \
+  --port 8001 \
+  --tensor-parallel-size 8 \
+  --served-model-name Qwen/Qwen3.6-35B-A3B \
+  --max-model-len 32768 \
+  --gpu-memory-utilization 0.95 \
+  --trust-remote-code \
+  --reasoning-parser qwen3 \
+  --default-chat-template-kwargs '{"enable_thinking": false}'
+```
+
+Run inference from a second terminal in the package directory:
+
+```bash
+export QWEN_BASE_URL=http://127.0.0.1:8001/v1
+export QWEN_API_KEY=EMPTY
+export WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1
+export WIKI_COLLAB_QWEN_MAX_TOKENS=2048
+
+./run_assignment.sh --backend qwen-local \
+  --model Qwen/Qwen3.6-35B-A3B \
+  --jobs 24 \
+  --yes --run
+./run_assignment.sh --validate
+```
+
+Tune `--jobs` for the machine. A practical pattern is to start at 8, watch
+`nvidia-smi`, and increase to 16 or 24 if GPU utilization is below target and
+the server has no OOM/HTTP errors. The runner is resumable, so stopping with
+Ctrl-C and rerunning with a different `--jobs` value is safe.
 
 ### Local Qwen With Transformers Host
 
@@ -151,4 +201,3 @@ Always run:
 Return `results.jsonl` only unless the owner asks for logs. If inference failed
 and cannot be resumed locally, also send `results.jsonl.failures.jsonl`; it
 contains per-unit backend errors.
-

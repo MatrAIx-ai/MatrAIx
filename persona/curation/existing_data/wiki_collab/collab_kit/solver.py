@@ -43,6 +43,8 @@ Profile = dict[str, Any]
 Dimension = dict[str, Any]
 Field = dict[str, Any]
 ASSIGNMENT_TYPE_PRIORITY = ("direct", "structured_claim", "summary_inference")
+ASSIGNMENT_TYPES = {*ASSIGNMENT_TYPE_PRIORITY, "unsupported"}
+NULLISH_VALUES = {"", "none", "null", "n/a", "na", "unknown", "unspecified"}
 
 
 def _bool_env(name: str, default: bool) -> bool:
@@ -119,19 +121,32 @@ def build_prompt(
         "- unsupported: not supported by the input.",
         "",
         "Rules:",
-        "- Emit exactly one object per dimension listed below.",
+    ]
+    if compact:
+        lines += [
+            "- Emit only dimensions with a supported non-null value.",
+            "- Emit at most 12 fields total for this category; choose the highest "
+            "confidence, best-supported dimensions.",
+            "- Omit unsupported dimensions entirely; do not emit null/unsupported "
+            "fields in compact mode.",
+        ]
+    else:
+        lines += [
+            "- Emit exactly one object per dimension listed below.",
+            "- If the profile does not support a dimension, set value to null and "
+            'assignment_type to "unsupported".',
+        ]
+    lines += [
         "- value MUST be exactly one of that dimension's allowed values (copy it "
         "verbatim), OR null.",
-        "- If the profile does not support a dimension, set value to null and "
-        'assignment_type to "unsupported".',
         "- Every non-null value MUST include a short evidence quote copied from "
-        "profile_text.",
+        "profile_text, ideally under 140 characters.",
     ]
     if compact:
         lines += [
             "- Do not include chain-of-thought or <think> blocks; output JSON only.",
             "- Use only visible PROFILE text. If profile_text was truncated and the "
-            "visible text does not support a dimension, return unsupported.",
+            "visible text does not support a dimension, omit that dimension.",
         ]
     if is_amazon:
         lines += [
@@ -208,6 +223,78 @@ def _confidence(value: Any) -> float:
     except (TypeError, ValueError):
         return 0.0
     return max(0.0, min(1.0, confidence))
+
+
+def _normalized_allowed_key(value: str) -> str:
+    return " ".join(value.replace("-", "–").split()).casefold()
+
+
+def _coerce_value(value: Any, dim: Dimension) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if text.casefold() in NULLISH_VALUES:
+        return None
+    allowed = [str(v) for v in dim.get("values", [])]
+    if not allowed:
+        return text
+    if text in allowed:
+        return text
+    allowed_by_key = {_normalized_allowed_key(item): item for item in allowed}
+    return allowed_by_key.get(_normalized_allowed_key(text))
+
+
+def sanitize_fields(fields: list[Field], dimensions: list[Dimension]) -> list[Field]:
+    """Clamp backend output to the public result contract.
+
+    Models can still hallucinate field ids, enum spellings, or contradictory
+    unsupported records even with a strict prompt. The harness calls this before
+    checkpointing so a completed run can always pass final conformance.
+    """
+    dim_by_id = {str(dim["id"]): dim for dim in dimensions}
+    best_by_id: dict[str, Field] = {}
+
+    for raw in fields:
+        if not isinstance(raw, dict):
+            continue
+        field_id = str(raw.get("field_id") or "").strip()
+        dim = dim_by_id.get(field_id)
+        if dim is None:
+            continue
+
+        value = _coerce_value(raw.get("value"), dim)
+        confidence = _confidence(raw.get("confidence"))
+        evidence = str(raw.get("evidence") or "").strip()
+        assignment_type = str(raw.get("assignment_type") or "").strip()
+        if assignment_type not in ASSIGNMENT_TYPES:
+            assignment_type = "summary_inference" if value is not None else "unsupported"
+        if value is None or (value is not None and not evidence):
+            value = None
+            confidence = 0.0
+            evidence = ""
+            assignment_type = "unsupported"
+        elif assignment_type == "unsupported":
+            assignment_type = "summary_inference"
+
+        clean = {
+            "field_id": field_id,
+            "value": value,
+            "confidence": confidence,
+            "evidence": evidence,
+            "assignment_type": assignment_type,
+        }
+        prior = best_by_id.get(field_id)
+        if prior is None:
+            best_by_id[field_id] = clean
+            continue
+        prior_supported = prior.get("value") is not None
+        clean_supported = value is not None
+        if clean_supported and not prior_supported:
+            best_by_id[field_id] = clean
+        elif clean_supported == prior_supported and confidence > _confidence(prior.get("confidence")):
+            best_by_id[field_id] = clean
+
+    return list(best_by_id.values())
 
 
 def _truncate_evidence(evidence_parts: list[str], limit: int = 1200) -> str:
@@ -353,7 +440,7 @@ def _attribute_single_pass(
         profile_text_char_limit=_profile_text_char_limit_for_backend(backend),
     )
     out = create_backend(backend, model, effort).run(prompt, profile)
-    return list(out.fields)
+    return sanitize_fields(list(out.fields), dimensions)
 
 
 def attribute(

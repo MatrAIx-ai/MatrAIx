@@ -509,6 +509,8 @@ def test_compact_prompt_keeps_exact_field_ids():
 
     assert "field_id=age_bracket" in prompt
     assert "AGE_BRACKET" not in prompt
+    assert "Emit at most 12 fields total" in prompt
+    assert "Omit unsupported dimensions entirely" in prompt
 
 
 def test_harness_resumes_after_failure(tmp_path, monkeypatch):
@@ -801,6 +803,93 @@ def test_qwen_backend_uses_compact_prompt_and_profile_limit(monkeypatch):
     assert "Long detail. Long detail. Long detail." not in prompt
     assert "[profile_text truncated" in prompt
     assert "A" * 80 not in prompt
+
+
+def test_solver_sanitizes_backend_fields_before_checkpoint(monkeypatch):
+    class FakeBackend:
+        def run(self, prompt, input_record):
+            return backends.BackendOutput(
+                fields=[
+                    {
+                        "field_id": "age_bracket",
+                        "value": "55-64",
+                        "confidence": 2,
+                        "evidence": "Age 60",
+                        "assignment_type": "unsupported",
+                    },
+                    {
+                        "field_id": "age_bracket",
+                        "value": "75+",
+                        "confidence": 0.9,
+                        "evidence": "invalid enum",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "missing_field",
+                        "value": "x",
+                        "confidence": 0.5,
+                        "evidence": "x",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "region",
+                        "value": "None",
+                        "confidence": 0.7,
+                        "evidence": "none",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "free_text",
+                        "value": "supported",
+                        "confidence": 0.8,
+                        "evidence": "",
+                        "assignment_type": "direct",
+                    },
+                ],
+                raw_response="{}",
+                reported_model="Qwen/Qwen3.6-35B-A3B",
+                model_source="test",
+                model_confidence="exact",
+            )
+
+    dimensions = [
+        {"id": "age_bracket", "values": ["55–64", "65+"]},
+        {"id": "region", "values": ["North America", "Western Europe"]},
+        {"id": "free_text", "values": []},
+    ]
+    monkeypatch.setattr(backends, "create_backend", lambda *args, **kwargs: FakeBackend())
+
+    fields = solver._attribute_single_pass(
+        {"profile_text": "Age 60"},
+        dimensions,
+        "qwen-local",
+        "Qwen/Qwen3.6-35B-A3B",
+        "high",
+    )
+
+    assert fields == [
+        {
+            "field_id": "age_bracket",
+            "value": "55–64",
+            "confidence": 1.0,
+            "evidence": "Age 60",
+            "assignment_type": "summary_inference",
+        },
+        {
+            "field_id": "region",
+            "value": None,
+            "confidence": 0.0,
+            "evidence": "",
+            "assignment_type": "unsupported",
+        },
+        {
+            "field_id": "free_text",
+            "value": None,
+            "confidence": 0.0,
+            "evidence": "",
+            "assignment_type": "unsupported",
+        },
+    ]
 
 
 def test_codex_json_backend_passes_reasoning_effort(monkeypatch):
