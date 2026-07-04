@@ -48,11 +48,12 @@ import conformance  # noqa: E402
 import solver  # noqa: E402
 
 HARNESS_VERSION = "1.0.0"
-BACKEND_CHOICES = ("mock", "claude-code-acp", "codex-acp")
+BACKEND_CHOICES = ("mock", "claude-code-acp", "codex-acp", "qwen-local")
 EFFORT_CHOICES_BY_BACKEND = {
     "mock": ("high",),
     "codex-acp": ("high", "medium", "xhigh"),
     "claude-code-acp": ("high", "medium", "xhigh", "max"),
+    "qwen-local": ("high",),
 }
 DEFAULT_MAX_FAILURES = 8
 
@@ -482,7 +483,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap.add_argument("--dimensions", type=Path, required=True)
     ap.add_argument("--out", type=Path, default=Path("results.jsonl"))
     ap.add_argument("--backend", default="mock", choices=BACKEND_CHOICES,
-                    help="mock | claude-code-acp | codex-acp")
+                    help="mock | claude-code-acp | codex-acp | qwen-local")
     ap.add_argument("--model", default=None, help="model id (defaults per backend)")
     ap.add_argument(
         "--effort",

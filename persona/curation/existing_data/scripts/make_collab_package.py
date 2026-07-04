@@ -146,6 +146,8 @@ def write_package_manifest(out_dir: Path, assignment: dict[str, Any]) -> None:
         out_dir / "collab_kit" / "assignment_runner.py",
         out_dir / "collab_kit" / "claude_json_backend.py",
         out_dir / "collab_kit" / "codex_json_backend.py",
+        out_dir / "collab_kit" / "qwen_json_backend.py",
+        out_dir / "collab_kit" / "qwen_transformers_host.py",
     ]
     immutable.extend(sorted((out_dir / "collab_kit" / "schemas").glob("*.json")))
 
@@ -202,9 +204,25 @@ Quickstart:
 ./run_assignment.sh --validate
 ```
 
-Use the menu to choose Codex or Claude Code, effort, parallelism, smoke test,
-environment/CLI health check, real run, and validation. Codex uses `gpt-5.5`;
-Claude Code uses `claude-opus-4-8`.
+Use the menu to choose Codex, Claude Code, or local Qwen; effort; parallelism;
+smoke test; environment/backend health check; real run; and validation. Codex
+uses `gpt-5.5`; Claude Code uses `claude-opus-4-8`; local Qwen uses
+`Qwen/Qwen3.6-35B-A3B` through an OpenAI-compatible server.
+
+For local Qwen, start the bundled Transformers host first so the model stays
+loaded on your GPU across calls:
+
+```bash
+python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B
+export QWEN_BASE_URL=http://127.0.0.1:8000/v1
+export QWEN_API_KEY=EMPTY
+./run_assignment.sh --backend qwen-local --jobs 1 --yes --run
+./run_assignment.sh --validate
+```
+
+The Qwen path uses a compact prompt and truncates very long profile text by
+default. Set `WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=0` to disable truncation, or
+set it to another visible-character budget for your GPU/context window.
 
 The runner verifies checksums before every action, saves settings in
 `.wiki_collab_settings.yaml`, and resumes from `results.jsonl.progress.jsonl` if

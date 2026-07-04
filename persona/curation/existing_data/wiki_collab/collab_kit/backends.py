@@ -16,6 +16,7 @@ DEFAULT_MODELS = {
     "mock": "mock-model",
     "claude-code-acp": "claude-opus-4-8",
     "codex-acp": "gpt-5.5",
+    "qwen-local": "Qwen/Qwen3.6-35B-A3B",
 }
 
 
@@ -127,10 +128,18 @@ class CodexAcpBackend(ExternalCommandBackend):
     env_var = "WIKI_COLLAB_CODEX_CMD"
 
 
+class QwenLocalBackend(ExternalCommandBackend):
+    name = "qwen-local"
+    provider = "qwen"
+    auth_mode = "local_openai_compatible"
+    env_var = "WIKI_COLLAB_QWEN_CMD"
+
+
 BACKENDS = {
     "mock": MockBackend,
     "claude-code-acp": ClaudeCodeAcpBackend,
     "codex-acp": CodexAcpBackend,
+    "qwen-local": QwenLocalBackend,
 }
 
 

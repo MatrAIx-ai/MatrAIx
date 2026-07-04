@@ -17,6 +17,7 @@ Same code for everyone — only your credentials differ:
   --backend claude-code-acp run the real method on YOUR Claude subscription
                             (just `claude` logged in; nothing to edit)
   --backend codex-acp       run on YOUR Codex subscription
+  --backend qwen-local      run on YOUR local OpenAI-compatible Qwen server
 
 The contract for one field:
     {"field_id": <one id from `dimensions`>,
@@ -44,7 +45,52 @@ Field = dict[str, Any]
 ASSIGNMENT_TYPE_PRIORITY = ("direct", "structured_claim", "summary_inference")
 
 
-def build_prompt(profile: Profile, dimensions: list[Dimension]) -> str:
+def _bool_env(name: str, default: bool) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _int_env(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, "") or default)
+    except ValueError:
+        return default
+
+
+def _compact_prompt_for_backend(backend: str) -> bool:
+    return _bool_env("WIKI_COLLAB_COMPACT_PROMPT", backend == "qwen-local")
+
+
+def _profile_text_char_limit_for_backend(backend: str) -> int:
+    default = 24_000 if backend == "qwen-local" else 0
+    return max(0, _int_env("WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT", default))
+
+
+def _limit_profile_text(text: str, visible_char_limit: int) -> str:
+    if visible_char_limit <= 0 or len(text) <= visible_char_limit:
+        return text
+    return (
+        text[:visible_char_limit].rstrip()
+        + "\n\n[profile_text truncated; use only visible evidence above.]"
+    )
+
+
+def _shorten(text: str, limit: int) -> str:
+    text = " ".join(str(text).split())
+    if len(text) <= limit:
+        return text
+    return text[: max(0, limit - 3)].rstrip() + "..."
+
+
+def build_prompt(
+    profile: Profile,
+    dimensions: list[Dimension],
+    *,
+    compact: bool = False,
+    profile_text_char_limit: int = 0,
+) -> str:
     """The default extraction method. EDIT ME to improve attribution quality."""
     is_amazon = profile.get("source") == "amazon_reviews_2023"
     if is_amazon:
@@ -81,6 +127,12 @@ def build_prompt(profile: Profile, dimensions: list[Dimension]) -> str:
         "- Every non-null value MUST include a short evidence quote copied from "
         "profile_text.",
     ]
+    if compact:
+        lines += [
+            "- Do not include chain-of-thought or <think> blocks; output JSON only.",
+            "- Use only visible PROFILE text. If profile_text was truncated and the "
+            "visible text does not support a dimension, return unsupported.",
+        ]
     if is_amazon:
         lines += [
             "- Evidence for non-null values must come from the supplied review "
@@ -102,8 +154,20 @@ def build_prompt(profile: Profile, dimensions: list[Dimension]) -> str:
     for d in dimensions:
         allowed = " | ".join(str(v) for v in d.get("values", [])) or "(free value)"
         desc = str(d.get("description", "")).strip()
-        lines.append(f"- {d['id']} — {d.get('label', d['id'])} — {desc} — [{allowed}]")
-    lines += ["", "PROFILE:", profile.get("profile_text", "")]
+        if compact:
+            field_id = str(d["id"])
+            label = str(d.get("label", field_id))
+            lines.append(
+                f"- {field_id.upper()}: {label}; values=[{allowed}]; "
+                f"description={_shorten(desc, 42)}"
+            )
+        else:
+            lines.append(f"- {d['id']} — {d.get('label', d['id'])} — {desc} — [{allowed}]")
+    profile_text = _limit_profile_text(
+        str(profile.get("profile_text", "")),
+        profile_text_char_limit,
+    )
+    lines += ["", "PROFILE:", profile_text]
     return "\n".join(lines)
 
 
@@ -264,6 +328,11 @@ def _ensure_default_command(backend: str) -> None:
         os.environ["WIKI_COLLAB_CODEX_CMD"] = " ".join(
             shlex.quote(part) for part in (sys.executable, str(adapter))
         )
+    if backend == "qwen-local" and not os.environ.get("WIKI_COLLAB_QWEN_CMD"):
+        adapter = KIT_DIR / "qwen_json_backend.py"
+        os.environ["WIKI_COLLAB_QWEN_CMD"] = " ".join(
+            shlex.quote(part) for part in (sys.executable, str(adapter))
+        )
 
 
 def _attribute_single_pass(
@@ -277,7 +346,12 @@ def _attribute_single_pass(
     _ensure_default_command(backend)
     from backends import create_backend  # bundled in this kit; pure stdlib
 
-    prompt = build_prompt(profile, dimensions)
+    prompt = build_prompt(
+        profile,
+        dimensions,
+        compact=_compact_prompt_for_backend(backend),
+        profile_text_char_limit=_profile_text_char_limit_for_backend(backend),
+    )
     out = create_backend(backend, model, effort).run(prompt, profile)
     return list(out.fields)
 

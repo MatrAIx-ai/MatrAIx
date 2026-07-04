@@ -65,12 +65,38 @@ backend that matches what you have; nothing to edit:
 |---|---|---|
 | a **Codex subscription** | `codex-acp` | `gpt-5.5` |
 | a **Claude subscription** | `claude-code-acp` | `claude-opus-4-8` |
+| your own **GPU Qwen server** | `qwen-local` | `Qwen/Qwen3.6-35B-A3B` |
 
 Log in once with the matching CLI (`codex` or `claude`) before running. The
 bundled Claude and Codex adapters are pure stdlib.
 
 Codex effort choices are `high`, `medium`, and `xhigh`.
 Claude Code effort choices are `high`, `medium`, `xhigh`, and `max`.
+Local Qwen uses `high`; effort is recorded for provenance but does not change
+the OpenAI-compatible API request.
+
+For local Qwen, start the bundled Transformers host first. It loads the model
+once, keeps it resident on your GPU, and exposes the small OpenAI-compatible
+surface the runner needs:
+
+```bash
+python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B
+export QWEN_BASE_URL=http://127.0.0.1:8000/v1
+export QWEN_API_KEY=EMPTY
+./run_assignment.sh --backend qwen-local --jobs 1 --yes --run
+./run_assignment.sh --validate
+```
+
+The Qwen adapter calls `/chat/completions`, asks for JSON-only output, and the
+runner performs the same final conformance check before `results.jsonl` is
+ready to send. If your server supports JSON response format, you can opt in with
+`WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1`.
+
+Qwen may run with a shorter usable context window than the subscription-backed
+models. The Qwen path therefore uses the compact prompt by default and only
+sends the first 24000 visible characters of `profile_text`. Override this with
+`WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=<chars>` or disable it with
+`WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=0`.
 
 ## Pause, resume, and progress
 
@@ -123,6 +149,8 @@ collab_kit/
   backends.py           backend adapters (mock / claude / codex / api) — bundled, stdlib only
   claude_json_backend.py  CLI adapter: uses YOUR Claude subscription
   codex_json_backend.py   CLI adapter: uses YOUR Codex subscription
+  qwen_json_backend.py    local OpenAI-compatible Qwen adapter
+  qwen_transformers_host.py local Hugging Face Transformers host for Qwen
   run.sh                convenience wrapper for harness.py
   sample/               tasks.jsonl, dimensions.json, results.jsonl (a conformant example)
 ```
