@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 import yaml
@@ -59,7 +58,7 @@ def _format_run_env_comment(exports: list[tuple[str, str]]) -> str:
         lines.append("#   export OPENAI_API_KEY=...   # user-sim engine default")
     for name, value in exports:
         lines.append(f"#   export {name}={value}")
-    lines.append(f"#   uv run harbor run -c <this-file>")
+    lines.append("#   uv run harbor run -c <this-file>")
     lines.append("#")
     return "\n".join(lines) + "\n"
 

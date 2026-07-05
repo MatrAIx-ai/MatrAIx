@@ -138,7 +138,7 @@ def main() -> int:
     transcript = load_json(TRANSCRIPT_PATH)
 
     require_string(transcript.get("sessionId"), "transcript.sessionId")
-    domain = require_string(transcript.get("domain"), "transcript.domain")
+    require_string(transcript.get("domain"), "transcript.domain")
 
     messages = transcript.get("messages")
     validate_messages(messages)
