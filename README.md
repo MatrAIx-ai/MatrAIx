@@ -9,13 +9,14 @@
 Large-scale, persona-driven agent simulation — test products, conversations, and
 workflows before they hit real users.
 
-PersonaBench pairs synthetic personas with LLM agents in reproducible Harbor
-tasks: survey, chat, live web, and desktop computer-use. **Application tasks**
-are designed to be configured and inspected in the **PersonaEval Cockpit**;
-`harbor view` remains available for raw trajectory and log debugging.
+MatrAIx pairs synthetic personas with LLM agents in reproducible Harbor
+tasks: surveys, chat, live web, and desktop computer-use. The name nods to
+*The Matrix* — a simulated world useful for exploration, not a replacement for
+real people.
 
-**North star:** toward 8.3B persona-scale simulation. Today the repo ships a
-working minimal stack you can run locally with Docker.
+**North star:** toward **8.3B** persona-scale simulation (one synthetic profile
+per person on Earth). Today the repo ships a working minimal stack you can run
+locally with Docker.
 
 ---
 
