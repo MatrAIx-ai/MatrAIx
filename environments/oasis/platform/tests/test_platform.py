@@ -152,9 +152,12 @@ class TestDatabase:
         populated_db.set_recommendations([(1, 2), (1, 3)])
         recs = populated_db.get_recommended_posts(1)
         assert len(recs) == 2
+        # With an empty rec table, the feed now falls back to recent posts from
+        # OTHER users (keeps agent feeds live when recsys never runs), so it is
+        # no longer empty; it must simply exclude the requesting user's own posts.
         populated_db.clear_rec_table()
         recs = populated_db.get_recommended_posts(1)
-        assert len(recs) == 0
+        assert all(p["user_id"] != 1 for p in recs)
 
     def test_stats(self, populated_db):
         stats = populated_db.stats()

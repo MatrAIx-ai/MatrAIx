@@ -362,13 +362,28 @@ class Database:
             (user_id, limit),
         )
 
-    def get_recommended_posts(self, user_id: int) -> list[dict[str, Any]]:
-        return self._query(
+    def get_recommended_posts(self, user_id: int, limit: int = 50) -> list[dict[str, Any]]:
+        # Prefer the recsys rec table when it has entries for this user.
+        recs = self._query(
             """SELECT p.* FROM post p
                JOIN rec r ON p.post_id = r.post_id
                WHERE r.user_id = ?
-               ORDER BY p.created_at DESC""",
-            (user_id,),
+               ORDER BY p.created_at DESC
+               LIMIT ?""",
+            (user_id, limit),
+        )
+        if recs:
+            return recs
+        # Fallback: recent posts authored by OTHER users. This keeps every
+        # agent's feed live even when the rec table is empty/stale (the cluster
+        # topology never calls /step, so recs are never recomputed). Without
+        # this, agents see a frozen tiny feed and rarely interact.
+        return self._query(
+            """SELECT * FROM post
+               WHERE user_id != ?
+               ORDER BY created_at DESC
+               LIMIT ?""",
+            (user_id, limit),
         )
 
     def get_followees(self, user_id: int) -> list[int]:
@@ -410,6 +425,14 @@ class Database:
 
     def get_comments_for_post(self, post_id: int) -> list[dict[str, Any]]:
         return self._query("SELECT * FROM comment WHERE post_id = ? ORDER BY created_at", (post_id,))
+
+    def get_recent_comments(self, limit: int = 2000) -> list[dict[str, Any]]:
+        """Most recent comments across all posts (for the live threaded feed)."""
+        return self._query(
+            "SELECT comment_id, post_id, user_id, content, num_likes, created_at "
+            "FROM comment ORDER BY comment_id DESC LIMIT ?",
+            (limit,),
+        )
 
     def clear_rec_table(self) -> None:
         self._execute("DELETE FROM rec")

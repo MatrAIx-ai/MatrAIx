@@ -32,7 +32,10 @@ def main():
         llm_model=os.environ.get("LLM_MODEL", "Qwen/Qwen3-4B"),
         llm_temperature=float(os.environ.get("LLM_TEMPERATURE", "0.7")),
         llm_max_tokens=int(os.environ.get("LLM_MAX_TOKENS", "512")),
-        available_actions=os.environ.get("AVAILABLE_ACTIONS", "create_post,like_post,repost,follow,do_nothing").split(","),
+        # create_comment + quote_post included so agents actually THREAD with
+        # each other (reply/quote), not just post-and-like. Omitting create_comment
+        # was why the sim showed 0 comments despite the prompt requiring them.
+        available_actions=os.environ.get("AVAILABLE_ACTIONS", "create_post,like_post,create_comment,repost,quote_post,follow,do_nothing").split(","),
         cluster_agent_id=cluster_agent_id,
     )
 

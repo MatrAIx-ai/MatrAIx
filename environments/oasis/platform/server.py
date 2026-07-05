@@ -149,6 +149,42 @@ def create_app(db_path: str = ":memory:", recsys_type: str = "random", max_rec_p
             })
         return feed
 
+    @app.get("/threads")
+    def get_threads(limit: int = 40):
+        """Recent posts as threaded conversations: each post with its author and
+        nested comments (each with the commenter's name). This is the live
+        social-media feed the dashboard renders over HTTP (no DB-file access)."""
+        users = {u["user_id"]: (u.get("name") or u.get("user_name") or f"user{u['user_id']}")
+                 for u in state.db.get_all_users()}
+        posts = state.db.get_all_posts(limit=limit)
+        pids = {p["post_id"] for p in posts}
+        by_post: dict[int, list] = {}
+        for c in state.db.get_recent_comments(limit=4000):
+            if c["post_id"] in pids:
+                by_post.setdefault(c["post_id"], []).append({
+                    "comment_id": c["comment_id"],
+                    "user_id": c["user_id"],
+                    "author": users.get(c["user_id"], f"user{c['user_id']}"),
+                    "content": c["content"],
+                    "num_likes": c.get("num_likes", 0),
+                })
+        threads = []
+        for p in posts:
+            cs = sorted(by_post.get(p["post_id"], []), key=lambda x: x["comment_id"])
+            threads.append({
+                "post_id": p["post_id"],
+                "user_id": p["user_id"],
+                "author": users.get(p["user_id"], f"user{p['user_id']}"),
+                "content": p.get("content"),
+                "is_repost": p.get("original_post_id") is not None,
+                "quote": p.get("quote_content"),
+                "num_likes": p.get("num_likes", 0),
+                "num_comments": p.get("num_comments", 0),
+                "num_shares": p.get("num_shares", 0),
+                "comments": cs,
+            })
+        return {"threads": threads}
+
     @app.get("/stats")
     def get_stats():
         db_stats = state.db.stats()

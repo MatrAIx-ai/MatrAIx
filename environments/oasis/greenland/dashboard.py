@@ -146,128 +146,356 @@ def _posts_from_db() -> list[dict[str, Any]]:
         return []
 
 
-app = FastAPI(title="OASIS Sim Dashboard")
+def _graph_from_http() -> dict[str, Any] | None:
+    """Build the agent graph from the platform's live /threads HTTP endpoint.
+
+    HTTP-first (same reason as threads_state): the running platform is the
+    source of truth. A restarted platform can hold its DB on a deleted inode,
+    leaving the on-disk file stale — so reading the file shows the wrong graph.
+    Nodes = post authors + commenters; edges = commenter -> post-author (the
+    real agent-to-agent interaction the 3D viewer animates).
+    """
+    try:
+        r = requests.get(f"{PLATFORM_URL}/threads?limit=200", timeout=6)
+        if not r.ok:
+            return None
+        threads = r.json().get("threads", [])
+    except (requests.RequestException, ValueError):
+        return None
+    names: dict[int, str] = {}
+    posts_per_user: dict[int, int] = {}
+    edge_w: dict[tuple, dict] = {}
+    for t in threads:
+        au = t.get("user_id")
+        if au is None:
+            continue
+        names[au] = t.get("author", f"user{au}")
+        posts_per_user[au] = posts_per_user.get(au, 0) + 1
+        for c in t.get("comments", []):
+            cu = c.get("user_id")
+            if cu is None:
+                continue
+            names[cu] = c.get("author", f"user{cu}")
+            if cu != au:
+                k = (cu, au, "create_comment")
+                e = edge_w.setdefault(k, {"source": cu, "target": au,
+                                          "action": "create_comment", "weight": 0})
+                e["weight"] += 1
+    if not names:
+        return None
+    nodes = [{"user_id": uid, "name": nm, "posts": posts_per_user.get(uid, 0),
+              "followers": 0} for uid, nm in names.items()]
+    return {"nodes": nodes, "edges": list(edge_w.values()), "recent_edges": [], "source": "http"}
+
+
+def graph_state() -> dict[str, Any]:
+    """Agent-interaction graph. HTTP-first (live platform), SQLite fallback.
+
+    Nodes = agents (persona name + post count); edges = actor -> target-author
+    interactions. This is what the 3D viewer animates.
+    """
+    http = _graph_from_http()
+    if http is not None:
+        return http
+    if not DB_PATH or not os.path.exists(DB_PATH):
+        return {"nodes": [], "edges": [], "container_by_user": {}}
+    import sqlite3
+    try:
+        con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True, timeout=3)
+        con.row_factory = sqlite3.Row
+
+        users = con.execute(
+            "SELECT user_id, name, user_name, num_followers, num_followings FROM user"
+        ).fetchall()
+        post_author = {r["post_id"]: r["user_id"]
+                       for r in con.execute("SELECT post_id, user_id FROM post").fetchall()}
+        posts_per_user: dict[int, int] = {}
+        for r in con.execute("SELECT user_id, COUNT(*) c FROM post GROUP BY user_id").fetchall():
+            posts_per_user[r["user_id"]] = r["c"]
+
+        # Aggregate interaction edges from traces (most recent first, capped).
+        edge_w: dict[tuple, dict] = {}
+        recent_edges: list[dict] = []
+        traces = con.execute(
+            "SELECT user_id, action, info, created_at FROM trace "
+            "WHERE action IN ('like_post','create_comment','repost','quote_post','follow') "
+            "ORDER BY trace_id DESC LIMIT 4000"
+        ).fetchall()
+        for t in traces:
+            actor = t["user_id"]
+            try:
+                info = json.loads(t["info"] or "{}")
+            except Exception:
+                info = {}
+            params = info.get("params", {}) if isinstance(info, dict) else {}
+            target = None
+            if t["action"] == "follow":
+                target = params.get("target_id") or params.get("user_id")
+            else:
+                pid = params.get("post_id")
+                if pid is not None:
+                    target = post_author.get(pid)
+            if target is None or target == actor:
+                continue
+            key = (actor, target, t["action"])
+            e = edge_w.setdefault(key, {"source": actor, "target": target,
+                                        "action": t["action"], "weight": 0})
+            e["weight"] += 1
+            if len(recent_edges) < 60:
+                recent_edges.append({"source": actor, "target": target,
+                                     "action": t["action"], "at": t["created_at"]})
+        con.close()
+
+        nodes = [{
+            "user_id": u["user_id"],
+            "name": u["name"] or u["user_name"] or f"user{u['user_id']}",
+            "posts": posts_per_user.get(u["user_id"], 0),
+            "followers": u["num_followers"] or 0,
+        } for u in users]
+        return {
+            "nodes": nodes,
+            "edges": list(edge_w.values()),
+            "recent_edges": recent_edges,
+        }
+    except Exception as exc:  # noqa: BLE001
+        return {"nodes": [], "edges": [], "error": str(exc)}
+
+
+def threads_state(limit: int = 40) -> dict[str, Any]:
+    """Return the social feed as threaded conversations: each recent post with
+    its author, engagement, quote/repost link, and its comments (each with the
+    commenter's persona name). This is the 'social media platform' view.
+
+    Prefer the platform's /threads HTTP endpoint (ALWAYS the live in-process
+    state) over reading the SQLite file. Reading the file is fragile: the
+    platform can hold the DB open on a deleted inode after a restart, so the
+    on-disk file goes stale while the API stays correct. HTTP-first avoids that
+    whole class of bug; the DB read is only a last-resort fallback.
+    """
+    try:
+        r = requests.get(f"{PLATFORM_URL}/threads?limit={limit}", timeout=5)
+        if r.ok and isinstance(r.json(), dict) and "threads" in r.json():
+            return r.json()
+    except requests.RequestException:
+        pass
+    if not DB_PATH or not os.path.exists(DB_PATH):
+        return {"threads": []}
+    import sqlite3
+    try:
+        con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True, timeout=3)
+        con.row_factory = sqlite3.Row
+        names = {r["user_id"]: (r["name"] or r["user_name"] or f"user{r['user_id']}")
+                 for r in con.execute("SELECT user_id, name, user_name FROM user").fetchall()}
+        posts = con.execute(
+            "SELECT post_id, user_id, content, original_post_id, quote_content, "
+            "num_likes, num_comments, num_shares, created_at "
+            "FROM post ORDER BY post_id DESC LIMIT ?", (limit,)
+        ).fetchall()
+        # comments for just these posts
+        pids = [p["post_id"] for p in posts]
+        comments_by_post: dict[int, list] = {}
+        if pids:
+            q = ("SELECT comment_id, post_id, user_id, content, num_likes, created_at "
+                 f"FROM comment WHERE post_id IN ({','.join('?'*len(pids))}) ORDER BY comment_id ASC")
+            for c in con.execute(q, pids).fetchall():
+                comments_by_post.setdefault(c["post_id"], []).append({
+                    "comment_id": c["comment_id"],
+                    "user_id": c["user_id"],
+                    "author": names.get(c["user_id"], f"user{c['user_id']}"),
+                    "content": c["content"],
+                    "num_likes": c["num_likes"] or 0,
+                })
+        con.close()
+        threads = []
+        for p in posts:
+            threads.append({
+                "post_id": p["post_id"],
+                "user_id": p["user_id"],
+                "author": names.get(p["user_id"], f"user{p['user_id']}"),
+                "content": p["content"],
+                "is_repost": p["original_post_id"] is not None,
+                "quote": p["quote_content"],
+                "num_likes": p["num_likes"] or 0,
+                "num_comments": p["num_comments"] or 0,
+                "num_shares": p["num_shares"] or 0,
+                "comments": comments_by_post.get(p["post_id"], []),
+            })
+        return {"threads": threads}
+    except Exception as exc:  # noqa: BLE001
+        return {"threads": [], "error": str(exc)}
+
+
+app = FastAPI(title="MatrAIx Agent Simulation")
 
 
 @app.get("/api/state")
 def api_state() -> JSONResponse:
-    cs = container_state()
     return JSONResponse({
         "elapsed_s": int(time.time() - START_TIME),
-        "containers": cs,
+        "containers": container_state(),
         "gpus": gpu_state(),
         "platform": platform_state(),
     })
 
 
+@app.get("/api/graph")
+def api_graph() -> JSONResponse:
+    return JSONResponse(graph_state())
+
+
+@app.get("/api/threads")
+def api_threads() -> JSONResponse:
+    return JSONResponse(threads_state())
+
+
 @app.get("/", response_class=HTMLResponse)
 def index() -> str:
-    return HTML_PAGE
+    return GRAPH_PAGE
 
 
-HTML_PAGE = """<!doctype html><html><head><meta charset=utf-8>
-<title>OASIS Multi-Agent Sim</title>
+@app.get("/feed", response_class=HTMLResponse)
+def feed() -> str:
+    return FEED_PAGE
+
+
+# =====================================================================
+#  /  — 3D knowledge graph (MatrAIx agent interaction network)
+# =====================================================================
+GRAPH_PAGE = """<!doctype html><html><head><meta charset=utf-8>
+<title>MatrAIx — Agent Network</title>
+<!-- 3d-force-graph bundles its own three.js; do NOT load three separately. -->
+<script src="https://unpkg.com/3d-force-graph"></script>
 <style>
- body{font-family:-apple-system,Segoe UI,Roboto,monospace;margin:0;background:#0b0e14;color:#d7dce5}
- header{padding:12px 18px;background:#11161f;border-bottom:1px solid #1f2733;display:flex;gap:24px;align-items:center}
- header h1{font-size:16px;margin:0;color:#8ab4ff}
- .pill{background:#1a2230;border-radius:12px;padding:3px 10px;font-size:12px}
- .wrap{display:flex;gap:14px;padding:14px}
- .col{flex:1;background:#11161f;border:1px solid #1f2733;border-radius:10px;padding:12px}
- h2{font-size:13px;color:#9aa7bd;margin:0 0 8px;text-transform:uppercase;letter-spacing:.5px}
- .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:5px}
- .cell{border-radius:6px;padding:6px 4px;font-size:10px;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
- .created{background:#3a2f12;color:#e8c97a}
- .running{background:#123a1d;color:#7ee29b}
- .exited{background:#2a2f3a;color:#8b97ab}
- .bar{height:14px;background:#1a2230;border-radius:7px;overflow:hidden;margin:3px 0}
- .bar>div{height:100%;background:linear-gradient(90deg,#3b82f6,#22c55e)}
- .stat{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a2230;font-size:13px}
- .stat b{color:#7ee29b;font-size:15px}
- .big{font-size:26px;color:#8ab4ff}
- .svc{font-size:12px;padding:3px 0}
- .recent div{font-size:11px;color:#9aa7bd;padding:1px 0}
- small{color:#5b6678}
- .feed{max-height:78vh;overflow-y:auto}
- .post{background:#0e1420;border:1px solid #1f2733;border-radius:8px;padding:8px 10px;margin-bottom:7px}
- .post .who{font-size:12px;color:#8ab4ff;font-weight:600}
- .post .txt{font-size:13px;color:#d7dce5;margin:3px 0;white-space:pre-wrap;word-break:break-word}
- .post .meta{font-size:11px;color:#5b6678}
- .rp{color:#e8c97a;font-size:10px;border:1px solid #3a2f12;border-radius:4px;padding:0 4px;margin-left:5px}
+ html,body{margin:0;height:100%;background:#04060c;color:#e6ebf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+ #bar{position:fixed;top:0;left:0;right:0;height:46px;background:linear-gradient(90deg,#0a1424,#0a0f1c);border-bottom:1px solid #1b2740;display:flex;gap:14px;align-items:center;padding:0 18px;z-index:20}
+ #bar h1{font-size:15px;margin:0;font-weight:700;letter-spacing:.3px;background:linear-gradient(90deg,#8ab4ff,#a6f0d0);-webkit-background-clip:text;background-clip:text;color:transparent}
+ .pill{background:#12203a;border:1px solid #1b2740;border-radius:20px;padding:4px 11px;font-size:12px;color:#c3cee2}
+ a.pill{text-decoration:none;color:#8ab4ff}
+ #graph{position:fixed;top:46px;left:0;right:0;bottom:0}
+ #panel{position:fixed;top:58px;right:14px;width:320px;max-height:calc(100vh-76px);overflow:auto;background:#0a1220ee;border:1px solid #1b2740;border-radius:12px;padding:14px;font-size:12px;z-index:15;display:none;backdrop-filter:blur(6px)}
+ #panel h3{margin:0 0 4px;font-size:15px;color:#a6f0d0}
+ #panel .sub{color:#5f6f8c;font-size:11px;margin-bottom:8px}
+ #panel .post{background:#0e1830;border:1px solid #1c2c4a;border-radius:9px;padding:8px 10px;margin:7px 0}
+ #panel .cm{margin:5px 0 0 10px;padding:4px 8px;border-left:2px solid #22c55e66;color:#a7c8b6;font-size:11.5px}
+ #close{float:right;color:#5f6f8c;cursor:pointer;font-size:14px}
+ #tip{position:fixed;bottom:12px;left:14px;font-size:11px;color:#5f6f8c;background:#0a1220cc;padding:6px 10px;border-radius:8px;z-index:15}
+ #lg{position:fixed;bottom:12px;right:14px;font-size:11px;color:#93a1bd;background:#0a1220cc;padding:7px 11px;border-radius:8px;z-index:15}
+ .sw{display:inline-block;width:13px;height:3px;border-radius:2px;margin:0 4px 0 10px;vertical-align:middle}
 </style></head><body>
-<header>
- <h1>🌐 OASIS Multi-Agent Social Simulation</h1>
- <span class=pill id=elapsed>elapsed 0s</span>
- <span class=pill id=agentsum>agents –</span>
- <span class=pill id=model>shared vLLM pool</span>
-</header>
-<div class=wrap>
- <div class=col>
-  <h2>Docker · agents spinning up → active</h2>
-  <div id=svcs></div>
-  <div class=grid id=agents></div>
-  <h2 style="margin-top:14px">GPU memory (8× A100-40GB)</h2>
-  <div id=gpus></div>
- </div>
- <div class=col>
-  <h2>Social world (live)</h2>
-  <div style="display:flex;gap:18px;margin-bottom:8px">
-   <div><div class=big id=posts>0</div><small>posts</small></div>
-   <div><div class=big id=follows>0</div><small>follows</small></div>
-   <div><div class=big id=likes>0</div><small>likes</small></div>
-   <div><div class=big id=traces>0</div><small>actions</small></div>
-  </div>
-  <div id=stats></div>
-  <h2 style="margin-top:14px">Recent activity</h2>
-  <div class=recent id=recent></div>
- </div>
- <div class=col style="flex:1.3">
-  <h2>📝 Live post feed</h2>
-  <div class=feed id=feed></div>
- </div>
+<div id=bar>
+ <h1>&#9673; MatrAIx &nbsp;·&nbsp; Agent Interaction Network</h1>
+ <span class=pill id=agents>agents &mdash;</span>
+ <span class=pill id=acts>&mdash; posts &middot; &mdash; comments</span>
+ <a class=pill href="/feed">&#128241; social feed &rarr;</a>
 </div>
+<div id=graph></div>
+<div id=tip>drag to rotate &middot; scroll to zoom &middot; click an agent to inspect</div>
+<div id=lg>interactions:<span class=sw style="background:#22c55e"></span>comment<span class=sw style="background:#f472b6"></span>like<span class=sw style="background:#60a5fa"></span>follow<span class=sw style="background:#eab308"></span>repost</div>
+<div id=panel><span id=close onclick="document.getElementById('panel').style.display='none'">&#10005;</span><div id=pbody></div></div>
 <script>
+const COLOR={like_post:'#f472b6',create_comment:'#22c55e',repost:'#eab308',quote_post:'#eab308',follow:'#60a5fa',orch:'#16233d'};
+function hue(id){return `hsl(${(id*47)%360} 72% 62%)`;}
+const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+let threads=[];
+
+const Graph=ForceGraph3D()(document.getElementById('graph'))
+  .backgroundColor('#04060c')
+  .nodeId('user_id')                 // CRITICAL: links reference user_id, not id
+  .nodeLabel(n=>n.orch?'MatrAIx Orchestrator':`${n.name} — ${n.posts} posts`)
+  .nodeVal(n=>n.orch?70:Math.max(4,(n.posts||1)*1.4))
+  .nodeColor(n=>n.orch?'#8ab4ff':hue(n.user_id))
+  .nodeOpacity(0.92)
+  .nodeResolution(10)
+  .linkColor(l=>l.action==='orch'?'#16233d':(COLOR[l.action]||'#666'))
+  .linkWidth(l=>l.action==='orch'?0.25:Math.min(2.6,0.6+l.weight))
+  .linkOpacity(0.45)
+  .linkDirectionalParticles(l=>l.action==='orch'?0:2)
+  .linkDirectionalParticleWidth(1.8)
+  .linkDirectionalParticleSpeed(0.006)
+  .warmupTicks(80).cooldownTime(9000)
+  .onNodeClick(n=>{ if(n.orch){document.getElementById('panel').style.display='none';return;}
+     showPanel(n); Graph.cameraPosition({x:n.x*1.35,y:n.y*1.35,z:n.z*1.35+50}, n, 800); });
+
+async function loadGraph(){
+ let gd; try{ gd=await (await fetch('/api/graph')).json(); }catch(e){ setTimeout(loadGraph,5000); return; }
+ const ORCH={user_id:'orchestrator',name:'ORCHESTRATOR',orch:true};
+ const nodes=[ORCH,...(gd.nodes||[])];
+ const ids=new Set(nodes.map(n=>n.user_id));
+ const orchE=(gd.nodes||[]).map(n=>({source:'orchestrator',target:n.user_id,action:'orch',weight:1}));
+ const inter=(gd.edges||[]).filter(e=>ids.has(e.source)&&ids.has(e.target));
+ document.getElementById('agents').textContent=`${(gd.nodes||[]).length} agents · ${inter.length} edges`;
+ Graph.graphData({nodes,links:[...orchE,...inter]});
+ setTimeout(loadGraph,8000);
+}
+async function loadMeta(){
+ try{ const s=await (await fetch('/api/state')).json(); const st=s.platform.stats||{};
+   document.getElementById('acts').textContent=`${st.post||0} posts · ${st.comment||0} comments`; }catch(e){}
+ try{ threads=(await (await fetch('/api/threads')).json()).threads||[]; }catch(e){}
+ setTimeout(loadMeta,4000);
+}
+function showPanel(n){
+ const mine=threads.filter(t=>t.user_id===n.user_id).slice(0,6);
+ let h=`<h3>${esc(n.name)}</h3><div class=sub>agent docker #${n.user_id} · ${n.posts} posts · ${n.followers||0} followers</div>`;
+ h+= mine.length? mine.map(t=>`<div class=post>${esc(t.content).slice(0,220)}<div style="color:#5f6f8c;margin-top:4px">&#10084; ${t.num_likes} &nbsp; &#128172; ${t.num_comments}</div>`
+      + (t.comments||[]).slice(0,3).map(c=>`<div class=cm><b>${esc(c.author)}:</b> ${esc(c.content).slice(0,90)}</div>`).join('')+`</div>`).join('')
+   : '<div style="margin-top:8px;color:#5f6f8c">no posts in recent window</div>';
+ document.getElementById('pbody').innerHTML=h;
+ document.getElementById('panel').style.display='block';
+}
+loadGraph(); loadMeta();
+</script></body></html>"""
+
+
+# =====================================================================
+#  /feed — social-media platform view (agent trajectories)
+# =====================================================================
+FEED_PAGE = """<!doctype html><html><head><meta charset=utf-8>
+<title>MatrAIx — Social Feed</title>
+<style>
+ html,body{margin:0;min-height:100%;background:#0a0e17;color:#e6ebf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+ #bar{position:sticky;top:0;height:46px;background:linear-gradient(90deg,#0a1424,#0a0f1c);border-bottom:1px solid #1b2740;display:flex;gap:14px;align-items:center;padding:0 18px;z-index:20}
+ #bar h1{font-size:15px;margin:0;font-weight:700;background:linear-gradient(90deg,#8ab4ff,#a6f0d0);-webkit-background-clip:text;background-clip:text;color:transparent}
+ .pill{background:#12203a;border:1px solid #1b2740;border-radius:20px;padding:4px 11px;font-size:12px;color:#c3cee2}
+ a.pill{text-decoration:none;color:#8ab4ff}
+ #wrap{max-width:680px;margin:16px auto;padding:0 14px}
+ .card{background:#0e1830;border:1px solid #1c2c4a;border-radius:14px;padding:14px 16px;margin-bottom:14px}
+ .rowh{display:flex;align-items:center;gap:9px}
+ .av{width:34px;height:34px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:700;color:#04060c;font-size:14px}
+ .who{font-weight:600;font-size:14px;color:#e6ebf5}
+ .hd{font-size:11px;color:#5f6f8c}
+ .rp{color:#eab308;font-size:10px;border:1px solid #4a3d12;border-radius:5px;padding:1px 5px;margin-left:auto}
+ .txt{font-size:14px;margin:9px 0;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+ .eng{font-size:12px;color:#6b7a96;display:flex;gap:16px;border-top:1px solid #16233d;padding-top:8px}
+ .cm{margin:9px 0 0 20px;padding:8px 11px;background:#0b1526;border-left:2px solid #22c55e55;border-radius:0 10px 10px 0}
+ .cm .rowh{gap:7px}.cm .av{width:24px;height:24px;font-size:11px}.cm .who{font-size:12.5px;color:#a6f0d0}.cm .txt{font-size:12.5px;margin:4px 0 0}
+</style></head><body>
+<div id=bar>
+ <h1>&#128241; MatrAIx &nbsp;·&nbsp; Social Feed</h1>
+ <span class=pill id=stat>&mdash;</span>
+ <a class=pill href="/">&#9673; 3D network &rarr;</a>
+</div>
+<div id=wrap id=feed></div>
+<script>
+function hue(id){return `hsl(${(id*47)%360} 72% 62%)`;}
+const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const ini=n=>(n||'?').trim().charAt(0).toUpperCase();
 async function tick(){
+ try{ const s=await (await fetch('/api/state')).json(); const st=s.platform.stats||{};
+   document.getElementById('stat').textContent=`${st.user||0} agents · ${st.post||0} posts · ${st.comment||0} comments · ${st.like||0} likes`; }catch(e){}
  try{
-  const s=await (await fetch('/api/state')).json();
-  document.getElementById('elapsed').textContent='elapsed '+Math.floor(s.elapsed_s/60)+'m '+(s.elapsed_s%60)+'s';
-  const c=s.containers.agent_counts||{};
-  document.getElementById('agentsum').textContent=
-    `agents: ${c.running||0} active · ${c.created||0} starting · ${c.exited||0} done`;
-  // services
-  const svc=[...(s.containers.platform||[]),...(s.containers.vllm||[])]
-    .map(r=>`<div class=svc>${r.state==='running'?'🟢':'⚪'} ${r.name} <small>${r.status}</small></div>`).join('');
-  document.getElementById('svcs').innerHTML=svc||'<small>no services yet</small>';
-  // agents grid
-  document.getElementById('agents').innerHTML=(s.containers.agents||[])
-    .map(a=>`<div class="cell ${a.state}" title="${a.name} ${a.status}">${a.name.replace('oasis-agent-','#')}</div>`).join('')
-    || '<small>waiting for agents…</small>';
-  // gpus
-  document.getElementById('gpus').innerHTML=(s.gpus||[])
-    .map(g=>`<div>GPU ${g.index} <small>${g.used_mib}/${g.total_mib} MiB</small><div class=bar><div style="width:${g.pct}%"></div></div></div>`).join('');
-  // platform
-  const st=s.platform.stats||{};
-  document.getElementById('posts').textContent=st.post||0;
-  document.getElementById('follows').textContent=st.follow||0;
-  document.getElementById('likes').textContent=st.like||0;
-  document.getElementById('traces').textContent=st.trace||0;
-  document.getElementById('stats').innerHTML=
-    ['user','post','comment','repost','like','follow','rec']
-    .filter(k=>k in st).map(k=>`<div class=stat><span>${k}</span><b>${st[k]}</b></div>`).join('');
-  document.getElementById('recent').innerHTML=(s.platform.recent||[])
-    .map(r=>`<div>user ${r.user_id} → ${r.action}</div>`).join('')||'<small>no activity yet</small>';
-  // live post feed
-  const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  document.getElementById('feed').innerHTML=(s.platform.posts||[])
-    .map(p=>`<div class=post><div class=who>${esc(p.author)} <small>#${p.user_id}</small>${p.is_repost?'<span class=rp>repost</span>':''}</div>`
-      +`<div class=txt>${esc(p.content)}</div>`
-      +`<div class=meta>❤ ${p.num_likes}  💬 ${p.num_comments}  🔁 ${p.num_shares}</div></div>`).join('')
-    ||'<small>no posts yet…</small>';
+   const d=await (await fetch('/api/threads')).json();
+   document.getElementById('wrap').innerHTML=(d.threads||[]).map(t=>{
+     const cms=(t.comments||[]).map(c=>`<div class=cm><div class=rowh><span class=av style="background:${hue(c.user_id)}">${ini(c.author)}</span><span class=who>${esc(c.author)}</span></div><div class=txt>${esc(c.content)}</div></div>`).join('');
+     return `<div class=card><div class=rowh><span class=av style="background:${hue(t.user_id)}">${ini(t.author)}</span><div><div class=who>${esc(t.author)}</div><div class=hd>agent #${t.user_id}</div></div>${t.is_repost?'<span class=rp>repost</span>':''}</div>`
+       +`<div class=txt>${esc(t.content)}</div>`
+       +`<div class=eng><span>&#10084; ${t.num_likes}</span><span>&#128172; ${t.num_comments}</span><span>&#128257; ${t.num_shares}</span></div>${cms}</div>`;
+   }).join('')||'<div style="color:#5f6f8c;text-align:center;margin-top:40px">waiting for posts…</div>';
  }catch(e){}
- setTimeout(tick,2000);
+ setTimeout(tick,3000);
 }
 tick();
 </script></body></html>"""
+
 
 
 if __name__ == "__main__":

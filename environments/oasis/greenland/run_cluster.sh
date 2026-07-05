@@ -53,11 +53,20 @@ build() {
 platform() {
     require_docker
     mkdir -p "$OUTPUT_DIR"
-    # kill any stale platform process (rm -f can hang) then remove
+    # Kill any stale platform process FIRST and wait for it to release the DB
+    # file. Order matters: if we rm the db while an old process still has it
+    # open, that process keeps writing to a deleted inode (live data invisible
+    # on disk) while a new/stale file appears at the path -> the dashboard then
+    # reads stale data. Kill -> confirm gone -> then rm the file.
     for P in $(ps -eo pid,cmd | grep "platform.server" | grep -v grep | awk '{print $1}'); do kill -9 "$P" 2>/dev/null; done
     docker rm -f oasis-platform >/dev/null 2>&1 || true
-    # Fresh DB: agent_id=i -> user_id=i+1 (graph alignment) only holds on a clean table.
-    rm -f "$OUTPUT_DIR/simulation.db" 2>/dev/null || true
+    for i in $(seq 1 10); do
+        pgrep -f "platform.server" >/dev/null 2>&1 || break
+        sleep 1
+    done
+    # Fresh DB (+WAL/SHM): agent_id=i -> user_id=i+1 (graph alignment) only holds
+    # on a clean table, and stale -wal/-shm would corrupt a fresh open.
+    rm -f "$OUTPUT_DIR/simulation.db" "$OUTPUT_DIR/simulation.db-wal" "$OUTPUT_DIR/simulation.db-shm" 2>/dev/null || true
     echo ">> Starting platform on :8000 (fresh db)..."
     docker run -d --name oasis-platform --init --pid=host --network host \
         -e DB_PATH=/app/output/simulation.db -e RECSYS_TYPE=random -e MAX_REC_POSTS=50 -e PORT=8000 \
