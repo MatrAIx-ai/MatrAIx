@@ -6,15 +6,16 @@ from pathlib import Path
 import pytest
 import yaml
 
-from persona_eval.harbor.persona_eval import (
-    build_chatbot_simulation_prompt,
-    build_result_from_harbor_artifacts,
+from application.persona_eval.backend.service.recommender_eval import (
+    RecommenderEvalConfig,
+    RecommenderPersona,
+    build_recommender_simulation_prompt,
+    build_result_from_task_artifacts,
     write_harbor_persona_yaml,
 )
-from persona_eval.types import Persona, PersonaEvalConfig
 
 
-def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedback(
+def test_build_result_from_task_artifacts_maps_grounded_transcript_and_feedback(
     tmp_path: Path,
 ) -> None:
     output_dir = tmp_path / "output"
@@ -50,7 +51,7 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
         ),
         encoding="utf-8",
     )
-    (output_dir / "application_result.json").write_text(
+    (output_dir / "recommendation_result.json").write_text(
         json.dumps(
             {
                 "sessionId": "session-123",
@@ -58,7 +59,7 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
                 "recommendedItems": [
                     {"itemId": "movie-past-lives", "title": "Past Lives"}
                 ],
-                "turnsToResult": 2,
+                "turnsToRecommendation": 2,
             }
         ),
         encoding="utf-8",
@@ -66,7 +67,7 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
     (output_dir / "user_feedback.json").write_text(
         json.dumps(
             {
-                "needConstraintSatisfaction": "partially",
+                "productNeedConstraintSatisfaction": "partially",
                 "personalPreferenceSatisfaction": "yes",
                 "overallExperienceRating": 8,
                 "reason": "The recommendation fit, but the first turn was broad.",
@@ -76,10 +77,10 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
         encoding="utf-8",
     )
 
-    result = build_result_from_harbor_artifacts(
+    result = build_result_from_task_artifacts(
         output_dir=output_dir,
-        config=PersonaEvalConfig(domain="movie", engine="gpt-4o-mini"),
-        persona=Persona(
+        config=RecommenderEvalConfig(domain="movie", engine="gpt-4o-mini"),
+        persona=RecommenderPersona(
             id="persona-1",
             name="Persona One",
             context="A careful viewer who likes warm dramas.",
@@ -92,7 +93,10 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
     payload = result.to_dict()
     assert payload["config"]["domain"] == "movie"
     assert payload["persona"]["name"] == "Persona One"
-    assert payload["transcript"][1]["assistantMessage"] == "Try Past Lives."
+    assert payload["recommendedItemIds"] == {
+        "perTurn": [[], ["movie-past-lives"]],
+        "final": ["movie-past-lives"],
+    }
     assert payload["questionnaire"] == {
         "constraintSatisfaction": 3,
         "constraintRationale": "The recommendation fit, but the first turn was broad.",
@@ -103,14 +107,18 @@ def test_build_result_from_harbor_artifacts_maps_grounded_transcript_and_feedbac
         "askedUsefulClarifyingQuestions": True,
         "clarifyingNotes": "The recommendation fit, but the first turn was broad.",
     }
-    assert payload["metricScores"] == {"numTurns": 2}
+    assert payload["metricScores"] == {
+        "turnsToRecommendation": 2,
+        "numTurns": 2,
+        "recommendedItemCount": 1,
+    }
     assert payload["prompts"] == {
         "harborPrompt": "Persona prompt.",
         "taskPrompt": "Task prompt.",
     }
 
 
-def test_build_result_from_harbor_artifacts_ignores_legacy_application_result_fields(
+def test_build_result_from_task_artifacts_rejects_ungrounded_recommendations(
     tmp_path: Path,
 ) -> None:
     output_dir = tmp_path / "output"
@@ -119,6 +127,7 @@ def test_build_result_from_harbor_artifacts_ignores_legacy_application_result_fi
         json.dumps(
             {
                 "sessionId": "session-123",
+                "domain": "movie",
                 "messages": [
                     {"role": "user", "content": "I want a movie."},
                     {"role": "assistant", "content": "Try something."},
@@ -128,46 +137,50 @@ def test_build_result_from_harbor_artifacts_ignores_legacy_application_result_fi
         ),
         encoding="utf-8",
     )
-    (output_dir / "application_result.json").write_text(
+    (output_dir / "recommendation_result.json").write_text(
         json.dumps(
             {
                 "sessionId": "session-123",
+                "domain": "movie",
                 "recommendedItems": [
                     {"itemId": "invented-id", "title": "Invented Movie"}
                 ],
-                "turnsToResult": 1,
+                "turnsToRecommendation": 1,
             }
         ),
         encoding="utf-8",
     )
 
-    result = build_result_from_harbor_artifacts(
-        output_dir=output_dir,
-        config=PersonaEvalConfig(domain="movie"),
-        persona=Persona(id="persona-1", name="Persona One"),
-        sut_description="Movie recommender.",
-        created_at="2026-06-27T00:00:00Z",
-    )
+    with pytest.raises(ValueError, match="grounded"):
+        build_result_from_task_artifacts(
+            output_dir=output_dir,
+            config=RecommenderEvalConfig(domain="movie"),
+            persona=RecommenderPersona(id="persona-1", name="Persona One"),
+            sut_description="Movie recommender.",
+            created_at="2026-06-27T00:00:00Z",
+        )
 
-    assert result.to_dict()["metricScores"]["numTurns"] == 1
 
-
-def test_build_chatbot_simulation_prompt_mentions_turn_limit_when_configured() -> None:
-    prompt = build_chatbot_simulation_prompt(
-        application_id="recai",
-        application_context="game",
+def test_build_recommender_simulation_prompt_is_task_specific() -> None:
+    prompt = build_recommender_simulation_prompt(
+        domain="game",
         max_turns=7,
         sut_description="A game recommender exposed through a chat API.",
+        goal_context_description="Reveal preferences gradually.",
     )
 
-    assert prompt.startswith("You are a user of a game recommendation system")
-    assert "Do not reveal everything at once" in prompt
-    assert "Keep messages short and conversational (1-3 sentences)" in prompt
-    assert "Finish within 7 user turns." in prompt
+    assert "Harbor supplies the persona system prompt" in prompt
+    assert "You are testing a game recommendation system" in prompt
+    assert '"domain": "game"' in prompt
+    assert "at least three user turns and three assistant turns" in prompt
+    assert "Finish within 7 user turns" in prompt
+    assert "Do not simulate the recommender" in prompt
+    assert "MATRIX_" not in prompt
+    assert "applications/recommendation_chatbot_eval" not in prompt
 
 
 def test_write_harbor_persona_yaml_uses_context_as_system_prompt(tmp_path: Path) -> None:
-    persona = Persona(
+    persona = RecommenderPersona(
         id="persona-1",
         name="Persona One",
         summary="A careful viewer.",
