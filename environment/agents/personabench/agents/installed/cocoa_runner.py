@@ -254,6 +254,31 @@ def _cocoa_summary(result: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _flush_partial_trajectory(
+    trajectory_path: Path,
+    *,
+    steps: list[dict[str, Any]],
+    model_name: str,
+    agent_version: str,
+    session_id: str,
+) -> None:
+    """Best-effort checkpoint so the host can poll growing browser traces."""
+    payload = {
+        "schema_version": "ATIF-v1.6",
+        "session_id": session_id,
+        "agent": {
+            "name": "cocoa",
+            "version": agent_version,
+            "model_name": model_name,
+        },
+        "steps": steps,
+    }
+    trajectory_path.write_text(
+        json.dumps(payload, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def cocoa_to_atif(
     result: dict[str, Any],
     *,
@@ -277,6 +302,7 @@ def cocoa_to_atif(
             "message": instruction,
         }
     ]
+    session = session_id or str(uuid4())
     step_id = 2
     trace_idx = 0
     agent_step_number = 0
@@ -381,6 +407,13 @@ def cocoa_to_atif(
             agent_step["observation"] = {"results": observation_results}
         steps.append(agent_step)
         step_id += 1
+        _flush_partial_trajectory(
+            trajectory_path,
+            steps=steps,
+            model_name=model_name,
+            agent_version=agent_version,
+            session_id=session,
+        )
 
     cost = result.get("api_cost_stats")
     cost = cost if isinstance(cost, dict) else {}
@@ -394,7 +427,7 @@ def cocoa_to_atif(
 
     return {
         "schema_version": "ATIF-v1.6",
-        "session_id": session_id or str(uuid4()),
+        "session_id": session,
         "agent": {
             "name": "cocoa",
             "version": agent_version,
