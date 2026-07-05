@@ -6,6 +6,7 @@ Computes automated validity metrics + prints readable per-persona digests
 the extraction quality can be manually scored against the source profile.
 """
 import json
+import textwrap
 from pathlib import Path
 from collections import Counter
 
@@ -15,7 +16,7 @@ ALLOWED = {d["id"]: set(str(v) for v in d.get("values", [])) for d in DIMS}
 N_DIMS = len(DIMS)
 JSONL = REPO / "persona/human_extraction/data/bench_cat50_random_pc1.jsonl"
 
-rows = [json.loads(l) for l in open(JSONL)]
+rows = [json.loads(line) for line in open(JSONL)]
 print(f"file: {JSONL.name}   personas: {len(rows)}   schema dims: {N_DIMS}\n")
 
 # ---------- aggregate validity metrics ----------
@@ -46,8 +47,11 @@ for r in rows:
         "nonnull": nn, "valid": valid, "eviq": eviq, "descq": descq,
         "coverage": len(seen) / N_DIMS,
     })
-    tot_fields += len(fields); tot_nonnull += nn
-    tot_valid += valid; tot_eviq += eviq; tot_descq += descq
+    tot_fields += len(fields)
+    tot_nonnull += nn
+    tot_valid += valid
+    tot_eviq += eviq
+    tot_descq += descq
 
 print("=" * 78)
 print("AUTOMATED VALIDITY METRICS (all 20 personas)")
@@ -66,7 +70,6 @@ for p in per_persona:
           f"cov={100*p['coverage']:3.0f}%{flag}")
 
 # ---------- readable digests for manual scoring ----------
-import textwrap
 def digest(r, k=10):
     print("\n" + "#" * 78)
     print(f"# {r['title']}   (global_idx={r['global_idx']})")
