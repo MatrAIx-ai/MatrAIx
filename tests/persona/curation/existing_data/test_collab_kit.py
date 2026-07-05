@@ -913,6 +913,20 @@ def test_codex_json_backend_passes_reasoning_effort(monkeypatch):
     assert "model_reasoning_effort=xhigh" in captured["cmd"]
 
 
+def test_codex_json_backend_schema_is_strict():
+    schema = codex_json_backend.OUTPUT_SCHEMA
+
+    assert schema["additionalProperties"] is False
+    assert set(schema["required"]) == {
+        "fields",
+        "reported_model",
+        "model_source",
+        "model_confidence",
+    }
+    field_schema = schema["properties"]["fields"]["items"]
+    assert field_schema["additionalProperties"] is False
+
+
 def test_qwen_json_backend_calls_openai_compatible_chat_api(monkeypatch):
     captured: dict[str, object] = {}
 
