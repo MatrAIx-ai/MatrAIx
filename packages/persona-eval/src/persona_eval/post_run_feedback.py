@@ -28,7 +28,6 @@ from persona_eval.self_report_runtime import (
 from persona_eval.types import DEFAULT_PERSONA_MODEL
 from persona_eval.user_sim.prompt import assemble_report_system_prompt
 from persona_eval.user_sim.self_report_contract import (
-    SelfReportSchema,
     schema_prompt_block,
 )
 

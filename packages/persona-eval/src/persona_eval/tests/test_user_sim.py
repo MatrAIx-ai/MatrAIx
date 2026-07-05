@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import pytest
 
 from persona_eval.task_content_bundle import TaskContentBundle
 from persona_eval.types import Persona, PersonaEvalConfig, Questionnaire

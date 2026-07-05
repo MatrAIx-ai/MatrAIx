@@ -85,23 +85,23 @@ def schema_prompt_block(schema: SelfReportSchema) -> str:
     lines = [
         "Return one JSON object with these fields:",
     ]
-    for field in schema.fields:
+    for schema_field in schema.fields:
         details = []
-        if field.kind == "integer":
+        if schema_field.kind == "integer":
             bounds = []
-            if field.minimum is not None:
-                bounds.append("min {}".format(field.minimum))
-            if field.maximum is not None:
-                bounds.append("max {}".format(field.maximum))
+            if schema_field.minimum is not None:
+                bounds.append("min {}".format(schema_field.minimum))
+            if schema_field.maximum is not None:
+                bounds.append("max {}".format(schema_field.maximum))
             if bounds:
                 details.append(", ".join(bounds))
-        elif field.kind == "enum" and field.choices:
-            details.append("choices: {}".format(", ".join(field.choices)))
-        details.append("required" if field.required else "optional")
+        elif schema_field.kind == "enum" and schema_field.choices:
+            details.append("choices: {}".format(", ".join(schema_field.choices)))
+        details.append("required" if schema_field.required else "optional")
         lines.append(
             '- `{}`: {} ({})'.format(
-                field.key,
-                field.prompt,
+                schema_field.key,
+                schema_field.prompt,
                 "; ".join(details),
             )
         )
@@ -143,40 +143,42 @@ def coerce_self_report_payload(
     schema: SelfReportSchema,
 ) -> Dict[str, Any]:
     payload: Dict[str, Any] = {}
-    for field in schema.fields:
-        value = raw.get(field.key)
-        if field.kind == "integer":
-            coerced = _coerce_int(value, minimum=field.minimum, maximum=field.maximum)
-            if coerced is not None or field.required:
-                payload[field.key] = coerced if coerced is not None else (
-                    field.minimum if field.minimum is not None else 0
+    for schema_field in schema.fields:
+        value = raw.get(schema_field.key)
+        if schema_field.kind == "integer":
+            coerced = _coerce_int(
+                value, minimum=schema_field.minimum, maximum=schema_field.maximum
+            )
+            if coerced is not None or schema_field.required:
+                payload[schema_field.key] = coerced if coerced is not None else (
+                    schema_field.minimum if schema_field.minimum is not None else 0
                 )
-        elif field.kind == "boolean":
-            payload[field.key] = _coerce_bool(value, default=False)
-        elif field.kind == "enum":
+        elif schema_field.kind == "boolean":
+            payload[schema_field.key] = _coerce_bool(value, default=False)
+        elif schema_field.kind == "enum":
             text = str(value or "").strip().lower()
-            choices = tuple(choice.lower() for choice in field.choices)
+            choices = tuple(choice.lower() for choice in schema_field.choices)
             if text in choices:
-                payload[field.key] = text
+                payload[schema_field.key] = text
             elif (
                 text in {"true", "false", "yes", "no", "1", "0"}
                 and "yes" in choices
                 and "no" in choices
             ):
-                payload[field.key] = "yes" if _coerce_bool(text, default=False) else "no"
-            elif field.required and field.choices:
-                payload[field.key] = field.choices[0]
+                payload[schema_field.key] = "yes" if _coerce_bool(text, default=False) else "no"
+            elif schema_field.required and schema_field.choices:
+                payload[schema_field.key] = schema_field.choices[0]
             elif text:
-                payload[field.key] = text
+                payload[schema_field.key] = text
         else:
             text = str(value or "").strip()
-            if text or field.required:
-                payload[field.key] = text
+            if text or schema_field.required:
+                payload[schema_field.key] = text
     return payload
 
 
 def field_keys(schema: SelfReportSchema) -> Tuple[str, ...]:
-    return tuple(field.key for field in schema.fields)
+    return tuple(schema_field.key for schema_field in schema.fields)
 
 
 def schema_has_field(schema: SelfReportSchema, key: str) -> bool:

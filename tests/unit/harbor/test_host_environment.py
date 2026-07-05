@@ -11,6 +11,32 @@ from harbor.models.task.config import EnvironmentConfig
 from harbor.models.trial.paths import TrialPaths
 
 
+_HOST_VERIFIER_ENV = """\
+# Shared host/docker verifier path resolution (sourced from test.sh).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TRIAL_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+IS_HOST_SNAPSHOT=0
+case "${SCRIPT_DIR}" in
+  */host_tests) IS_HOST_SNAPSHOT=1 ;;
+esac
+
+if [ "${IS_HOST_SNAPSHOT}" -eq 1 ]; then
+  TESTS_DIR="${SCRIPT_DIR}"
+  VERIFIER_DIR="${TRIAL_ROOT}/verifier"
+else
+  TESTS_DIR="${HARBOR_TESTS_DIR:-/tests}"
+  if [ ! -f "${TESTS_DIR}/test_state.py" ] && [ -f "${SCRIPT_DIR}/test_state.py" ]; then
+    TESTS_DIR="${SCRIPT_DIR}"
+  fi
+  VERIFIER_DIR="${HARBOR_VERIFIER_DIR:-${PERSONABENCH_VERIFIER_DIR:-/logs/verifier}}"
+  if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null; then
+    VERIFIER_DIR="${TRIAL_ROOT}/verifier"
+  fi
+fi
+mkdir -p "${VERIFIER_DIR}"
+"""
+
+
 def test_host_environment_resolves_container_paths(tmp_path: Path) -> None:
     trial_dir = tmp_path / "trial"
     trial_paths = TrialPaths(trial_dir=trial_dir)
@@ -98,11 +124,7 @@ async def test_host_exec_with_relative_trial_dir(tmp_path: Path, monkeypatch: py
         'echo 1 > "${VERIFIER_DIR}/reward.txt"\n',
         encoding="utf-8",
     )
-    (tests_root / "verifier_env.sh").write_text(
-        (Path(__file__).resolve().parents[3]
-         / "application/tasks/persona-survey/tests/verifier_env.sh").read_text(encoding="utf-8"),
-        encoding="utf-8",
-    )
+    (tests_root / "verifier_env.sh").write_text(_HOST_VERIFIER_ENV, encoding="utf-8")
     monkeypatch.chdir(repo)
     env = HostEnvironment(
         environment_dir=repo / "environment",
@@ -149,11 +171,7 @@ async def test_host_exec_runs_verifier_style_command(tmp_path: Path) -> None:
         'echo 1 > "${VERIFIER_DIR}/reward.txt"\n',
         encoding="utf-8",
     )
-    (tests_root / "verifier_env.sh").write_text(
-        (Path(__file__).resolve().parents[3]
-         / "application/tasks/persona-survey/tests/verifier_env.sh").read_text(encoding="utf-8"),
-        encoding="utf-8",
-    )
+    (tests_root / "verifier_env.sh").write_text(_HOST_VERIFIER_ENV, encoding="utf-8")
     env = HostEnvironment(
         environment_dir=tmp_path / "environment",
         environment_name="persona-survey",

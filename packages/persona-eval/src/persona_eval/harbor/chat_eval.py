@@ -25,7 +25,6 @@ from persona_eval.harbor.chat_sidecar_io import parse_json_stdout
 from persona_eval.inprocess.chatbot_eval import config_context
 from persona_eval.persona_exposure import (
     build_persona_exposure,
-    coerce_turn_view,
     normalize_transcript_payload,
 )
 from persona_eval.task_content_bundle import (

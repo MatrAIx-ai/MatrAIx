@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Dict, List
+from typing import Any, List
 
 from persona_eval.self_report_runtime import (
     SelfReportClient,
