@@ -1,4 +1,4 @@
-# PersonaBench
+# MatrAIx
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
@@ -32,7 +32,7 @@ locally with Docker.
 ## Installation
 
 ```bash
-git clone <your-fork-url> && cd PersonaBench
+git clone <your-fork-url> && cd MatrAIx
 uv venv --python 3.12
 uv pip install -e .
 uv pip install pytest pytest-asyncio httpx
@@ -77,7 +77,7 @@ More: [docs/running.md](docs/running.md) · [Architecture](docs/architecture.md)
 Three teams own the repo. Pick **one row** to onboard; details live in each
 team's docs — not duplicated here.
 
-![PersonaBench architecture](docs/assets/matraix-architecture.png)
+![MatrAIx architecture](docs/assets/matraix-architecture.png)
 
 | Team | Path | Scope | Start here |
 |------|------|-------|------------|
@@ -90,7 +90,7 @@ team's docs — not duplicated here.
 ## Repository layout
 
 ```text
-PersonaBench/
+MatrAIx/
 ├── persona/           curation · schema · datasets · bench tasks · reporting
 ├── application/       tasks · task-spec · persona_eval (Cockpit) · QUICKSTART
 ├── environment/       runtime/harbor · agents · task-environments · harbor view · adapters
@@ -112,8 +112,8 @@ Large generated datasets stay outside git — [artifact handoff](migration/matra
 Community onboarding only — **which team and which doc** are in the [Teams](#teams)
 table above.
 
-[![Discord](https://img.shields.io/badge/Discord-join%20PersonaBench-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
-[![Google Form](https://img.shields.io/badge/Google%20Form-join%20PersonaBench-4285F4?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/hwEHng5HGWRqcJue9)
+[![Discord](https://img.shields.io/badge/Discord-join%20MatrAIx-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
+[![Google Form](https://img.shields.io/badge/Google%20Form-join%20MatrAIx-4285F4?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/hwEHng5HGWRqcJue9)
 
 1. Join Discord — nickname **`Full Name - Affiliation`**. Fill the Google Form
    (background, team placement, paper authorship / acknowledgements).
