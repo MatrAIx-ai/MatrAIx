@@ -1,0 +1,73 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey support
+      - good morning
+      - can you help me
+
+  - intent: account_recovery
+    examples: |
+      - I need to recover my account
+      - I cannot access my account
+      - My password reset email is not arriving
+      - I am locked out of my account
+      - Help me get back into my account
+      - The reset link did not arrive
+      - I need account recovery steps
+      - I forgot my password and cannot sign in
+      - I want to restore access to my account
+      - The account email is casey.test@example.invalid
+
+  - intent: identity_concern
+    examples: |
+      - I do not want to share private information
+      - Do you need my password
+      - I am worried about sharing personal data
+      - Can I recover without giving my card number
+      - Please do not ask for my government ID
+      - What information is safe to share
+      - I only want to share the account email alias
+
+  - intent: frustrated
+    examples: |
+      - this is really frustrating
+      - I have been locked out all day
+      - I am annoyed that this is taking so long
+      - I need a faster answer
+      - this process is confusing
+      - I am losing patience
+
+  - intent: ask_human
+    examples: |
+      - I want to talk to a human
+      - can you escalate this
+      - please hand me off to support
+      - I need a support specialist
+      - can a real person review this
+
+  - intent: acknowledge
+    examples: |
+      - okay
+      - got it
+      - that makes sense
+      - I understand
+      - I can try that
+      - yes I will do that
+
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - appreciate it
+      - thanks for the help
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - that is all
+      - I am done

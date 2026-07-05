@@ -1,0 +1,22 @@
+version: "3.1"
+
+stories:
+  - story: privacy sensitive account recovery
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: account_recovery
+      - action: utter_recovery_options
+      - intent: identity_concern
+      - action: utter_privacy_boundary
+      - intent: ask_human
+      - action: utter_handoff
+
+  - story: frustrated account recovery
+    steps:
+      - intent: account_recovery
+      - action: utter_recovery_options
+      - intent: frustrated
+      - action: utter_deescalate
+      - intent: acknowledge
+      - action: utter_acknowledge

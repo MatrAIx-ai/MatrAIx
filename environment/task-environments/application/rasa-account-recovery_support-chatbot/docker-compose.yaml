@@ -1,0 +1,23 @@
+services:
+  main:
+    depends_on:
+      rasa-account-recovery:
+        condition: service_healthy
+
+  rasa-account-recovery:
+    build:
+      context: ./rasa-bot
+    expose:
+      - "5005"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; s=socket.create_connection(('localhost',5005),timeout=2); s.close()",
+        ]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 20s

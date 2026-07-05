@@ -17,6 +17,10 @@ Generated job recipes land under `configs/jobs/` (see [QUICKSTART.md](../QUICKST
   chat task with an environment-side HTTP sidecar for smoke runs.
 - **`example-web-*`** — reference web tasks for Playwright, browser-use, Cocoa,
   and CUA style browsing flows.
+- **`rasa-account-recovery_support-chatbot`** — Rasa-backed support chatbot
+  task with a real open-source chatbot runtime as the sidecar.
+- **`web-ecommerce-platform_product-discovery`** — deterministic ecommerce web
+  task used by the PersonaEval web cockpit.
 - **Your task** — `application/tasks/<your-task-name>/` (any folder name you choose).
 
 ## New Task
@@ -189,10 +193,12 @@ belongs and which artifacts its verifier should expect.
 
 [`real_chatbot_website_task_bank.md`](real_chatbot_website_task_bank.md)
 collects source-grounded P1 Application scenarios for real chatbots, real
-websites, and two small runnable public-website examples:
+websites, two small runnable public-website examples, and one runnable
+real-chatbot sidecar example:
 
 - `web-github-pricing_plan-fit`
 - `web-python-docs_error-lookup`
+- `rasa-account-recovery_support-chatbot`
 
 ## Task environment
 

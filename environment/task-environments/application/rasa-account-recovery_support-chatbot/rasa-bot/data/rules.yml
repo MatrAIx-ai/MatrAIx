@@ -1,0 +1,47 @@
+version: "3.1"
+
+rules:
+  - rule: Greet account recovery users
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Explain account recovery options
+    steps:
+      - intent: account_recovery
+      - action: utter_recovery_options
+
+  - rule: Respect privacy boundaries
+    steps:
+      - intent: identity_concern
+      - action: utter_privacy_boundary
+
+  - rule: Deescalate frustrated users
+    steps:
+      - intent: frustrated
+      - action: utter_deescalate
+
+  - rule: Offer human support handoff
+    steps:
+      - intent: ask_human
+      - action: utter_handoff
+
+  - rule: Acknowledge next step
+    steps:
+      - intent: acknowledge
+      - action: utter_acknowledge
+
+  - rule: Thank the user
+    steps:
+      - intent: thank
+      - action: utter_thank
+
+  - rule: End the conversation
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback

@@ -1,0 +1,32 @@
+version = "1.0"
+artifacts = ["/app/output"]
+
+[task]
+name = "personabench/application-rasa-account-recovery-support-chatbot"
+
+[metadata]
+difficulty = "medium"
+type = "chat"
+domain = "commerce-retail"
+tags = [
+  "rasa",
+  "real chatbot sidecar",
+  "account recovery",
+  "customer support",
+  "privacy sensitive",
+  "multi turn chat",
+]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+definition = "application/rasa-account-recovery_support-chatbot"
+build_timeout_sec = 1200.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

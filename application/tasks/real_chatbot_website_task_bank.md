@@ -8,7 +8,8 @@ that can be handed to Environment without guessing at the target product,
 persona-sensitive axes, outputs, or metrics. The near-term goal is a small set
 of real chatbot and website tasks, with deterministic wrappers where live
 services require login, change frequently, or should not be stress-tested
-directly.
+directly. The first real-chatbot sidecar example uses Rasa so reviewers can run
+a local open-source chatbot without credentials.
 
 ## Guardrails
 
@@ -232,6 +233,40 @@ price-sensitive users should prefer lower-priced items, and genre-specific
 personas should reject off-preference titles.
 Runnable reference: `application/tasks/example-web-playwright_books-interest`.
 
+### 9. Rasa account recovery support bot
+
+Scenario name: Rasa account recovery support bot.
+Task type: chatbot.
+Domain / vertical: customer support / commerce-retail.
+Product or system under test: local account-recovery bot implemented with the
+Rasa open-source chatbot framework.
+Source site or API: https://github.com/RasaHQ/rasa and the Rasa REST webhook
+running at `http://rasa-account-recovery:5005/webhooks/rest/webhook`.
+Task description: a user who cannot access a fictional ShopSure account asks a
+Rasa support bot for recovery steps while deciding whether the bot protects
+privacy and gives a clear next action.
+Instruction for each persona: recover access using only the fictional account
+alias, push back on unnecessary sensitive-data requests, and report whether the
+recovery path is trustworthy enough to continue.
+Environment needs: Rasa sidecar built from
+`environment/task-environments/application/rasa-account-recovery_support-chatbot/rasa-bot`,
+seeded fictional account context, and the standard Rasa REST channel.
+Persona attributes that should affect behavior: privacy sensitivity, digital
+literacy, frustration tolerance, fraud concern, support-channel trust,
+language confidence.
+Output telemetry: Rasa REST turns, transcript, outcome class, requested personal
+data categories, privacy comfort, trust and frustration ratings, textual
+rationale.
+Aggregate metrics: turns to resolution, escalation rate, blocked/unclear
+outcome rate, unnecessary sensitive-data request rate, trust rating,
+frustration rating.
+Why personas should differ: privacy-sensitive users should challenge data
+requests, low-literacy users should need simpler instructions, frustrated users
+should seek human handoff earlier, and fraud-concerned users should be less
+willing to continue after vague identity checks.
+Runnable first-pass example:
+`application/tasks/rasa-account-recovery_support-chatbot`.
+
 ## Runnable First-Pass Examples
 
 The first runnable examples should stay small and read-only so they can pass
@@ -265,6 +300,20 @@ Primary metrics:
 - `ease_of_lookup` numeric 1-10.
 - `would_reuse_docs` categorical boolean.
 - `answer_summary` and `friction_points` textual.
+
+### Example C: Rasa account recovery support bot
+
+Task directory: `application/tasks/rasa-account-recovery_support-chatbot`.
+Environment definition:
+`environment/task-environments/application/rasa-account-recovery_support-chatbot`.
+Start from: `application/tasks/example-chat-api_support_chatbot`.
+Expected artifacts: `/app/output/transcript.json` and
+`/app/output/account_recovery_result.json`.
+Primary metrics:
+
+- `turns_to_resolution`, `trust_rating`, and `frustration_rating` numeric.
+- `outcome_class` and `privacy_comfort` categorical.
+- `main_friction` and `persona_rationale` textual.
 
 ## Reporting Notes
 
