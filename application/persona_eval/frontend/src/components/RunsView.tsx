@@ -1,372 +1,606 @@
 /**
- * RunsView: the Runs history surface, folded inside PersonaEval.
- *
- * Rendered below the TopBar when the PersonaEval runs sub-view is active. The
- * sub-route is driven entirely by the URL (via App's handlers):
- *
- *   view=runs (no `run`)           → the LIST (this file)
- *   `run` set, no `compareWith`    → <RunDetail/>
- *   `run` + `compareWith`          → <RunCompare/>
- *
- * The list is a calm, scannable table of persisted persona-eval runs styled to
- * the PersonaEval tokens. Each row is a keyboard-focusable button that opens the
- * run; the only loud element is the `RatingChip`, the surface's signature. A
- * "Compare" toggle turns rows into a two-pick selection that launches the
- * baseline-anchored side-by-side compare.
+ * RunsView: Harbor job history inside PersonaEval.
  */
 import { useMemo, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-import { RatingChip } from "./RatingChip";
 import { RunDetail } from "./RunDetail";
-import { RunCompare } from "./RunCompare";
-import {
-  AppTypeTag,
-  DomainPill,
-  SourceTag,
-  fmtGoalContext,
-  fmtRunDate,
-  runSummaryAppType,
-  type RunApplicationType,
-} from "./runsShared";
+import { HarborJobDetail } from "./HarborJobDetail";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
+import { AppTypeTag } from "./runsShared";
+import {
+  StudioGlassPanel,
+  StudioMeshShell,
+  StudioPageFrame,
+  StudioPageHeader,
+  StudioToolbarButton,
+} from "./studio/StudioShell";
 import { api, ApiError } from "@/lib/api";
-import type { PersonaEvalRunSummary, PersonaEvalRunsResponse } from "@/lib/types";
+import {
+  deriveHarborJobListStatus,
+  harborJobListStatusLabel,
+} from "@/lib/trialStatus";
+import type { HarborJobListStatus, HarborJobSummary } from "@/lib/types";
 
 export interface RunsViewProps {
-  /** The run currently open (from the URL); `null` = show the list. */
-  runId: string | null;
-  /** The second run to compare against; `null` = no compare. */
-  compareWith: string | null;
-  /** Open a single run's detail view. */
-  openRun: (id: string) => void;
-  /** Open the side-by-side compare for two runs. */
-  compareRuns: (a: string, b: string) => void;
-  /** Return to the list (clears `run` + `compareWith`). */
+  harborJobId: string | null;
+  harborTrialId: string | null;
+  openHarborJob: (jobName: string) => void;
+  openHarborTrial: (jobName: string, trialName: string) => void;
   backToList: () => void;
-  /** Leave the Runs sub-view entirely, back to the cockpit. */
+  backToHarborJob: () => void;
   onClose: () => void;
+  backLabel?: string;
 }
 
 export function RunsView({
-  runId,
-  compareWith,
-  openRun,
-  compareRuns,
+  harborJobId,
+  harborTrialId,
+  openHarborJob,
+  openHarborTrial,
   backToList,
+  backToHarborJob,
   onClose,
+  backLabel = "Back",
 }: RunsViewProps) {
-  // Sub-route: compare wins, then detail, else the list below.
-  if (runId && compareWith) {
-    return <RunCompare runIdA={runId} runIdB={compareWith} onBack={backToList} />;
-  }
-  if (runId) {
-    return <RunDetail runId={runId} onBack={backToList} />;
-  }
-  return <RunsList openRun={openRun} compareRuns={compareRuns} onClose={onClose} />;
-}
-
-// ---------------------------------------------------------------------------
-// The list
-// ---------------------------------------------------------------------------
-
-interface RunsListProps {
-  openRun: (id: string) => void;
-  compareRuns: (a: string, b: string) => void;
-  onClose: () => void;
-}
-
-function RunsList({ openRun, compareRuns, onClose }: RunsListProps) {
-  const query = useQuery<PersonaEvalRunsResponse>({
-    queryKey: ["persona-eval-runs"],
-    queryFn: api.listPersonaEvalRuns,
-  });
-
-  // Compare mode: rows become a two-pick selection. We keep the picks in
-  // insertion order so the first-picked run lands on the left of the compare
-  // (the baseline that the second is read against).
-  const [comparing, setComparing] = useState(false);
-  const [picks, setPicks] = useState<string[]>([]);
-
-  const runs = useMemo(() => query.data?.runs ?? [], [query.data]);
-  const runTypeById = useMemo(() => {
-    return new Map<string, RunApplicationType>(
-      runs.map((run) => [run.id, runSummaryAppType(run)]),
+  if (harborJobId && harborTrialId) {
+    return (
+      <StudioMeshShell>
+        <RunDetail
+          harborTrial={{ jobName: harborJobId, trialName: harborTrialId }}
+          onBack={backToHarborJob}
+        />
+      </StudioMeshShell>
     );
-  }, [runs]);
-  const firstPickType = picks[0] ? runTypeById.get(picks[0]) ?? null : null;
-
-  function toggleCompareMode() {
-    setComparing((on) => !on);
-    setPicks([]);
   }
-
-  function togglePick(id: string) {
-    setPicks((prev) => {
-      if (prev.includes(id)) return prev.filter((p) => p !== id);
-      if (prev.length >= 2) return prev; // cap at two
-      const firstType = prev[0] ? runTypeById.get(prev[0]) : null;
-      const nextType = runTypeById.get(id);
-      if (firstType && nextType && firstType !== nextType) return prev;
-      return [...prev, id];
-    });
+  if (harborJobId) {
+    return (
+      <StudioMeshShell>
+        <HarborJobDetail
+          jobName={harborJobId}
+          onBack={backToList}
+          onOpenTrial={(trialName) => openHarborTrial(harborJobId, trialName)}
+        />
+      </StudioMeshShell>
+    );
   }
+  return <HarborJobsList openHarborJob={openHarborJob} onClose={onClose} backLabel={backLabel} />;
+}
 
-  function launchCompare() {
-    if (picks.length === 2) compareRuns(picks[0], picks[1]);
-  }
+interface HarborJobsListProps {
+  openHarborJob: (jobName: string) => void;
+  onClose: () => void;
+  backLabel: string;
+}
+
+function sortHarborJobs(jobs: HarborJobSummary[]): HarborJobSummary[] {
+  return [...jobs].sort((a, b) => {
+    const ta = Date.parse(a.startedAt ?? a.updatedAt ?? "") || 0;
+    const tb = Date.parse(b.startedAt ?? b.updatedAt ?? "") || 0;
+    return tb - ta;
+  });
+}
+
+function formatJobTimeFull(iso: string | null | undefined): string {
+  if (!iso) return "—";
+  const t = Date.parse(iso);
+  if (Number.isNaN(t)) return iso;
+  const date = new Date(t);
+  const y = date.getFullYear();
+  const mo = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  const h = String(date.getHours()).padStart(2, "0");
+  const mi = String(date.getMinutes()).padStart(2, "0");
+  const s = String(date.getSeconds()).padStart(2, "0");
+  return `${y}-${mo}-${d} ${h}:${mi}:${s}`;
+}
+
+function harborJobAppType(job: HarborJobSummary): string {
+  const explicit = (job.applicationType ?? "").toString().toLowerCase();
+  if (explicit && explicit !== "unknown") return explicit;
+  const name = job.jobName.toLowerCase();
+  if (name.includes("survey")) return "survey";
+  if (name.includes("web") || name.includes("playwright") || name.includes("cocoa")) return "web";
+  if (name.includes("computer-use") || name.includes("os-app") || name.includes("cua")) return "os-app";
+  if (name.includes("appworld")) return "os-app";
+  return "chatbot";
+}
+
+/** Shared column template for the Harbor jobs table (header + rows + skeleton). */
+const HARBOR_JOBS_GRID =
+  "grid grid-cols-[minmax(0,1fr)_5.75rem_9.75rem_3.75rem_minmax(5.5rem,6.25rem)_2.25rem] items-center gap-x-5";
+
+type AppTypeFilter = "all" | "chatbot" | "survey" | "web" | "os-app";
+type StatusFilter = "all" | HarborJobListStatus;
+
+const APP_TYPE_FILTER_OPTIONS: { value: Exclude<AppTypeFilter, "all">; label: string }[] = [
+  { value: "chatbot", label: "Chatbot" },
+  { value: "survey", label: "Survey" },
+  { value: "web", label: "Web" },
+  { value: "os-app", label: "OS app" },
+];
+
+const STATUS_FILTER_OPTIONS: { value: Exclude<StatusFilter, "all">; label: string }[] = [
+  { value: "running", label: "Running" },
+  { value: "success", label: "Success" },
+  { value: "failed", label: "Failed" },
+];
+
+function harborJobSearchHaystack(job: HarborJobSummary): string {
+  const status = deriveHarborJobListStatus(job);
+  const timeIso = job.startedAt ?? job.updatedAt;
+  return [
+    job.jobName,
+    harborJobAppType(job),
+    harborJobListStatusLabel(status),
+    formatJobTimeFull(timeIso),
+    `${job.completedTrials ?? job.trialCount}/${job.trialCount}`,
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+function filterHarborJobs(
+  jobs: HarborJobSummary[],
+  {
+    searchQuery,
+    appTypeFilter,
+    statusFilter,
+  }: {
+    searchQuery: string;
+    appTypeFilter: AppTypeFilter;
+    statusFilter: StatusFilter;
+  },
+): HarborJobSummary[] {
+  const q = searchQuery.trim().toLowerCase();
+  return jobs.filter((job) => {
+    if (appTypeFilter !== "all" && harborJobAppType(job) !== appTypeFilter) return false;
+    if (statusFilter !== "all" && deriveHarborJobListStatus(job) !== statusFilter) return false;
+    if (!q) return true;
+    return harborJobSearchHaystack(job).includes(q);
+  });
+}
+
+function runsFiltersActive(
+  searchQuery: string,
+  appTypeFilter: AppTypeFilter,
+  statusFilter: StatusFilter,
+): boolean {
+  return searchQuery.trim() !== "" || appTypeFilter !== "all" || statusFilter !== "all";
+}
+
+const JOB_STATUS_STYLES: Record<
+  HarborJobListStatus,
+  { className: string; icon: string; fill?: 0 | 1 }
+> = {
+  running: {
+    className: "border-warn/40 bg-warn/10 text-warn",
+    icon: "autorenew",
+  },
+  success: {
+    className: "border-secondary/40 bg-secondary/10 text-secondary",
+    icon: "check_circle",
+    fill: 1,
+  },
+  failed: {
+    className: "border-danger/40 bg-danger/10 text-danger",
+    icon: "error",
+    fill: 1,
+  },
+};
+
+function HarborJobStatusBadge({ job }: { job: HarborJobSummary }) {
+  const status = deriveHarborJobListStatus(job);
+  const style = JOB_STATUS_STYLES[status];
+  const label = harborJobListStatusLabel(status);
+  const detail =
+    status === "failed" && (job.failedTrials ?? 0) > 0
+      ? `${label} · ${job.failedTrials} trial${job.failedTrials === 1 ? "" : "s"} failed`
+      : label;
 
   return (
-    <div className="min-h-0 flex-1 overflow-auto bg-surface-dim custom-scrollbar">
-      <div className="mx-auto w-full max-w-[1180px] px-6 py-7">
-        {/* Header */}
-        <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <button
-            type="button"
-            onClick={onClose}
-            className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low h-9 px-3 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] ${FOCUS_RING}`}
-          >
-            <Sym name="arrow_back" size={16} />
-            Back to cockpit
-          </button>
-          <div className="flex flex-col">
-            <span className="hud text-[10px] text-primary">PersonaEval · Runs</span>
-            <h1 className="font-display text-[22px] font-bold tracking-tight text-text-main">Runs</h1>
-          </div>
-          {!query.isLoading && !query.isError && (
-            <span className="font-mono text-[11px] text-text-variant">
-              {runs.length} {runs.length === 1 ? "saved run" : "saved runs"}
-            </span>
-          )}
-
-          <div className="ml-auto flex items-center gap-2">
-            {runs.length >= 2 && (
-              <button
-                type="button"
-                onClick={toggleCompareMode}
-                aria-pressed={comparing}
-                className={`flex items-center gap-1.5 rounded-md h-9 px-3 text-[12px] transition ease-out active:scale-[0.97] ${FOCUS_RING} ${
-                  comparing
-                    ? "bg-primary text-on-primary hover:bg-primary-dim"
-                    : "border border-outline bg-surface-low text-text-variant hover:border-primary hover:bg-surface hover:text-text-main"
-                }`}
-              >
-                <Sym name="compare_arrows" size={16} />
-                {comparing ? "Cancel" : "Compare two runs"}
-              </button>
-            )}
-            <button
-              type="button"
-              onClick={() => query.refetch()}
-              disabled={query.isFetching}
-              className={`flex items-center gap-1.5 rounded-md border border-outline bg-surface-low h-9 px-3 text-[12px] text-text-variant transition ease-out hover:border-primary hover:bg-surface hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
-            >
-              <Sym name="refresh" size={16} className={query.isFetching ? "animate-rb-spin" : ""} />
-              {query.isFetching ? "Checking for new runs…" : "Refresh"}
-            </button>
-          </div>
-
-          <p className="w-full max-w-2xl text-[13px] leading-relaxed text-text-variant">
-            Each row is one simulation. Click it to read the full transcript and scores, or turn on
-            Compare to put two side by side.
-          </p>
-
-          {comparing && (
-            <div className="flex w-full items-center gap-3 rounded-md border border-primary/30 bg-primary/10 px-3 py-2 rise-in">
-              <Sym name="compare_arrows" size={18} className="shrink-0 text-primary" />
-              <span className="min-w-0 text-[13px] text-text-variant">
-                Pick two runs of the same application type. The first one you choose is the baseline; the second is
-                measured against it.{" "}
-                <span className="font-mono text-[11px] text-text-variant">({picks.length} of 2 chosen)</span>
-              </span>
-              <button
-                type="button"
-                onClick={launchCompare}
-                disabled={picks.length !== 2}
-                className={`ml-auto flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-primary h-9 px-3 text-[12px] text-on-primary transition ease-out hover:bg-primary-dim active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
-              >
-                Compare these two
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Body: loading / error / empty / table */}
-        {query.isLoading ? (
-          <ListLoading />
-        ) : query.isError ? (
-          <ListError error={query.error} onRetry={() => query.refetch()} />
-        ) : runs.length === 0 ? (
-          <ListEmpty onClose={onClose} />
-        ) : (
-          <RunsTable
-            runs={runs}
-            comparing={comparing}
-            picks={picks}
-            firstPickType={firstPickType}
-            onOpen={openRun}
-            onTogglePick={togglePick}
-          />
-        )}
-      </div>
-    </div>
+    <span
+      className={`inline-flex max-w-full items-center gap-1 truncate rounded-md border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide ${style.className}`}
+      title={detail}
+    >
+      <Sym
+        name={style.icon}
+        size={12}
+        fill={style.fill}
+        className={status === "running" ? "shrink-0 animate-rb-spin" : "shrink-0"}
+      />
+      <span className="truncate">{label}</span>
+    </span>
   );
 }
 
-// ---------------------------------------------------------------------------
-// Table
-// ---------------------------------------------------------------------------
+function HarborJobsList({ openHarborJob, onClose, backLabel }: HarborJobsListProps) {
+  const queryClient = useQueryClient();
+  const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [appTypeFilter, setAppTypeFilter] = useState<AppTypeFilter>("all");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const harborQuery = useQuery({
+    queryKey: ["harbor-jobs"],
+    queryFn: api.listHarborJobs,
+    refetchInterval: 5000,
+  });
+  const harborJobs = useMemo(
+    () => sortHarborJobs(harborQuery.data?.jobs ?? []),
+    [harborQuery.data],
+  );
+  const filteredJobs = useMemo(
+    () =>
+      filterHarborJobs(harborJobs, {
+        searchQuery,
+        appTypeFilter,
+        statusFilter,
+      }),
+    [harborJobs, searchQuery, appTypeFilter, statusFilter],
+  );
+  const filtersActive = runsFiltersActive(searchQuery, appTypeFilter, statusFilter);
 
-interface RunsTableProps {
-  runs: PersonaEvalRunSummary[];
-  comparing: boolean;
-  picks: string[];
-  firstPickType: RunApplicationType | null;
-  onOpen: (id: string) => void;
-  onTogglePick: (id: string) => void;
+  const clearFilters = () => {
+    setSearchQuery("");
+    setAppTypeFilter("all");
+    setStatusFilter("all");
+  };
+
+  const deleteMutation = useMutation({
+    mutationFn: (jobName: string) => api.deleteHarborJob(jobName),
+    onSuccess: () => {
+      setDeleteError(null);
+      void queryClient.invalidateQueries({ queryKey: ["harbor-jobs"] });
+    },
+    onError: (error) => {
+      setDeleteError(error instanceof ApiError ? error.message : "Could not delete job.");
+    },
+  });
+
+  const handleDelete = (job: HarborJobSummary) => {
+    const ok = window.confirm(
+      `Delete "${job.jobName}"?\n\nThis removes the job folder under jobs/ and cannot be undone.`,
+    );
+    if (!ok) return;
+    deleteMutation.mutate(job.jobName);
+  };
+
+  return (
+    <StudioMeshShell>
+      <StudioPageFrame>
+        <StudioPageHeader
+          compact
+          eyebrow="MatrAIx · Runs"
+          title="Runs"
+          subtitle={
+            <>
+              Harbor jobs in <span className="font-mono">jobs/</span> — launch from PersonaEval, debrief
+              trials here.
+            </>
+          }
+          meta={
+            !harborQuery.isLoading && !harborQuery.isError ? (
+              <span className="font-mono text-[11px] text-text-variant">
+                {filtersActive
+                  ? `${filteredJobs.length} of ${harborJobs.length}`
+                  : harborJobs.length}{" "}
+                job{harborJobs.length === 1 ? "" : "s"}
+              </span>
+            ) : null
+          }
+          actions={
+            <>
+              <StudioToolbarButton icon="arrow_back" onClick={onClose}>
+                {backLabel}
+              </StudioToolbarButton>
+              <StudioToolbarButton
+                icon="refresh"
+                onClick={() => harborQuery.refetch()}
+                disabled={harborQuery.isFetching}
+              >
+                {harborQuery.isFetching ? "Refreshing…" : "Refresh"}
+              </StudioToolbarButton>
+            </>
+          }
+        />
+        {deleteError && (
+          <p className="mb-4 text-[12px] text-danger" role="alert">
+            {deleteError}
+          </p>
+        )}
+
+        {harborQuery.isLoading ? (
+          <ListLoading />
+        ) : harborQuery.isError ? (
+          <ListError error={harborQuery.error} onRetry={() => harborQuery.refetch()} />
+        ) : harborJobs.length === 0 ? (
+          <ListEmpty onClose={onClose} />
+        ) : (
+          <>
+            <HarborJobsFilterBar
+              searchQuery={searchQuery}
+              onSearchQueryChange={setSearchQuery}
+              appTypeFilter={appTypeFilter}
+              onAppTypeFilterChange={setAppTypeFilter}
+              statusFilter={statusFilter}
+              onStatusFilterChange={setStatusFilter}
+              onClearFilters={clearFilters}
+              filtersActive={filtersActive}
+            />
+            {filteredJobs.length === 0 ? (
+              <ListFilterEmpty onClearFilters={clearFilters} />
+            ) : (
+              <HarborJobsTable
+                jobs={filteredJobs}
+                onOpen={openHarborJob}
+                onDelete={handleDelete}
+                deletingJobName={deleteMutation.isPending ? deleteMutation.variables : null}
+              />
+            )}
+          </>
+        )}
+      </StudioPageFrame>
+    </StudioMeshShell>
+  );
 }
 
-/** Shared grid template so the header and every row align exactly. */
-const ROW_GRID =
-  "grid grid-cols-[28px_64px_72px_minmax(0,1.6fr)_minmax(0,0.9fr)_minmax(0,1.1fr)_64px_80px] items-center gap-3";
-
-function RunsTable({ runs, comparing, picks, firstPickType, onOpen, onTogglePick }: RunsTableProps) {
+function HarborJobsFilterBar({
+  searchQuery,
+  onSearchQueryChange,
+  appTypeFilter,
+  onAppTypeFilterChange,
+  statusFilter,
+  onStatusFilterChange,
+  onClearFilters,
+  filtersActive,
+}: {
+  searchQuery: string;
+  onSearchQueryChange: (value: string) => void;
+  appTypeFilter: AppTypeFilter;
+  onAppTypeFilterChange: (value: AppTypeFilter) => void;
+  statusFilter: StatusFilter;
+  onStatusFilterChange: (value: StatusFilter) => void;
+  onClearFilters: () => void;
+  filtersActive: boolean;
+}) {
   return (
-    <div className="panel overflow-hidden rounded-md border border-outline bg-surface rise-in">
-      {/* Column header */}
-      <div
-        className={`${ROW_GRID} border-b border-outline bg-surface-low px-3.5 py-2 hud text-[9px] text-text-dim`}
-      >
-        <span aria-hidden />
-        <span title="The simulated user's overall rating, out of 10. Green is great, amber is mixed, red means it fell short.">
-          Score
-        </span>
-        <span title="Which kind of app was tested: a chatbot, a survey, a website, or AppWorld.">Kind</span>
-        <span>Simulated user</span>
-        <span>Domain</span>
-        <span>Conversation style</span>
-        <span className="text-right">Turns</span>
-        <span className="text-right">When</span>
+    <StudioGlassPanel className="mb-3 p-3">
+      <div className="flex h-8 min-w-0 items-center rounded-lg border border-outline/50 bg-surface/60 backdrop-blur transition-colors focus-within:border-primary/50">
+        <Sym name="search" size={16} className="ml-3 flex-none text-text-dim" />
+        <input
+          type="search"
+          value={searchQuery}
+          onChange={(e) => onSearchQueryChange(e.target.value)}
+          placeholder="Search by job name, app type, or status…"
+          aria-label="Search runs"
+          className="h-full w-full min-w-0 bg-transparent px-3 text-[13px] text-text-main outline-none placeholder:text-text-variant"
+        />
+        {searchQuery && (
+          <button
+            type="button"
+            onClick={() => onSearchQueryChange("")}
+            aria-label="Clear search"
+            className={`mr-2 flex-none rounded p-1 text-text-dim transition-colors hover:bg-surface-high hover:text-text-main ${FOCUS_RING}`}
+          >
+            <Sym name="close" size={16} />
+          </button>
+        )}
       </div>
 
+      <div className="mt-2.5 flex flex-col gap-2 border-t border-outline/20 pt-2.5 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex min-w-0 flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3">
+          <span className="cockpit-field-label shrink-0 text-[10px] text-text-dim">App type</span>
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by app type">
+            <RunsFilterChip
+              label="All"
+              active={appTypeFilter === "all"}
+              onClick={() => onAppTypeFilterChange("all")}
+            />
+            {APP_TYPE_FILTER_OPTIONS.map((option) => (
+              <RunsFilterChip
+                key={option.value}
+                label={option.label}
+                active={appTypeFilter === option.value}
+                onClick={() => onAppTypeFilterChange(option.value)}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="flex min-w-0 flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3 lg:pl-4">
+          <span className="hidden h-6 w-px bg-outline/30 sm:block" aria-hidden />
+          <span className="cockpit-field-label shrink-0 text-[10px] text-text-dim">Status</span>
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by status">
+            <RunsFilterChip
+              label="All"
+              active={statusFilter === "all"}
+              onClick={() => onStatusFilterChange("all")}
+            />
+            {STATUS_FILTER_OPTIONS.map((option) => (
+              <RunsFilterChip
+                key={option.value}
+                label={option.label}
+                active={statusFilter === option.value}
+                onClick={() => onStatusFilterChange(option.value)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {filtersActive && (
+        <div className="mt-3 flex justify-end border-t border-outline/20 pt-3">
+          <button
+            type="button"
+            onClick={onClearFilters}
+            className={`inline-flex h-8 items-center gap-1.5 rounded-md border border-outline/50 bg-surface/50 px-3 text-[11px] font-medium text-text-variant transition-colors hover:border-primary/40 hover:text-text-main ${FOCUS_RING}`}
+          >
+            <Sym name="filter_alt_off" size={15} />
+            Clear filters
+          </button>
+        </div>
+      )}
+    </StudioGlassPanel>
+  );
+}
+
+function RunsFilterChip({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`inline-flex h-8 items-center rounded-full border px-2.5 text-[11px] font-medium transition-colors ${FOCUS_RING} ${
+        active
+          ? "border-primary bg-primary text-on-primary active:bg-primary-dim"
+          : "border-outline bg-surface text-text-variant hover:border-primary hover:bg-surface-low hover:text-text-main active:bg-surface-high"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function HarborJobsTable({
+  jobs,
+  onOpen,
+  onDelete,
+  deletingJobName,
+}: {
+  jobs: HarborJobSummary[];
+  onOpen: (jobName: string) => void;
+  onDelete: (job: HarborJobSummary) => void;
+  deletingJobName: string | null | undefined;
+}) {
+  return (
+    <StudioGlassPanel className="rounded-xl">
+      <div
+        className={`${HARBOR_JOBS_GRID} border-b border-outline/40 px-4 py-2.5 text-[10px] uppercase tracking-wide text-text-dim`}
+      >
+        <span>Job</span>
+        <span>App type</span>
+        <span>Started</span>
+        <span className="text-right">Trials</span>
+        <span className="justify-self-end">Status</span>
+        <span className="sr-only">Actions</span>
+      </div>
       <ul className="divide-y divide-outline-dim">
-        {runs.map((run) => {
-          const picked = picks.includes(run.id);
-          const runType = runSummaryAppType(run);
-          const wrongCompareType = Boolean(
-            comparing && !picked && firstPickType && runType !== firstPickType,
-          );
-          const pickDisabled = comparing && !picked && (picks.length >= 2 || wrongCompareType);
+        {jobs.map((job) => {
+          const timeIso = job.startedAt ?? job.updatedAt;
+          const deleting = deletingJobName === job.jobName;
           return (
-            <li key={run.id}>
-              <button
-                type="button"
-                onClick={() => (comparing ? onTogglePick(run.id) : onOpen(run.id))}
-                disabled={pickDisabled}
-                aria-pressed={comparing ? picked : undefined}
-                title={wrongCompareType ? "Choose another run with the same application type." : undefined}
-                className={`${ROW_GRID} w-full px-3.5 py-2.5 text-left transition-colors ${FOCUS_RING} ${
-                  picked
-                    ? "bg-primary/10 active:bg-primary/20"
-                    : "hover:bg-surface-low active:bg-surface-high"
-                } ${pickDisabled ? "cursor-not-allowed opacity-45" : ""}`}
-              >
-                {/* Selection affordance (compare mode only) */}
-                <span className="flex justify-center" aria-hidden>
-                  {comparing ? (
-                    <span
-                      className={`flex h-4 w-4 items-center justify-center rounded border ${
-                        picked
-                          ? "border-primary bg-primary text-on-primary"
-                          : "border-outline bg-surface-lowest"
-                      }`}
-                    >
-                      {picked ? <Sym name="check" size={12} /> : null}
-                    </span>
-                  ) : null}
-                </span>
-
-                {/* Rating: the scannable signature */}
-                <span className="flex">
-                  <RatingChip rating={run.overallRating ?? null} />
-                </span>
-
-                {/* Kind: app-type tag (chatbot today; forward-compatible) */}
-                <span className="flex">
-                  <AppTypeTag type={runType} />
-                </span>
-
-                {/* Persona + source */}
-                <span className="flex min-w-0 items-center gap-2">
-                  <span
-                    className="truncate text-[13px] font-medium text-text-main"
-                    title={run.personaName ?? "Unnamed persona"}
-                  >
-                    {run.personaName ?? "Unnamed persona"}
-                  </span>
-                  <SourceTag source={run.source} />
-                </span>
-
-                {/* Domain */}
-                <span className="flex">
-                  <DomainPill domain={run.domain} />
-                </span>
-
-                {/* Goal context */}
-                <span className="truncate text-[13px] text-text-variant">
-                  {fmtGoalContext(run.goalContextId)}
-                </span>
-
-                {/* Turns */}
-                <span className="text-right font-mono text-[11px] tabular-nums text-text-variant">
-                  {run.numTurns ?? "-"}
-                </span>
-
-                {/* When */}
-                <span className="text-right font-mono text-[11px] tabular-nums text-text-variant">
-                  {fmtRunDate(run.createdAt)}
-                </span>
-              </button>
+            <li key={job.jobName} className="group">
+              <div className={`${HARBOR_JOBS_GRID} px-4 py-3`}>
+                <button
+                  type="button"
+                  onClick={() => onOpen(job.jobName)}
+                  className={`min-w-0 truncate text-left font-mono text-[13px] text-text-main hover:text-primary ${FOCUS_RING}`}
+                  title={job.jobName}
+                >
+                  {job.jobName}
+                </button>
+                <div className="min-w-0">
+                  <AppTypeTag type={harborJobAppType(job)} />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => onOpen(job.jobName)}
+                  title={timeIso ?? undefined}
+                  className={`whitespace-nowrap text-left font-mono text-[11px] tabular-nums text-text-variant hover:text-text-main ${FOCUS_RING}`}
+                >
+                  {formatJobTimeFull(timeIso)}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onOpen(job.jobName)}
+                  className={`text-right font-mono text-[11px] tabular-nums text-text-variant hover:text-text-main ${FOCUS_RING}`}
+                >
+                  {job.completedTrials ?? job.trialCount}/{job.trialCount}
+                </button>
+                <div className="min-w-0 justify-self-end">
+                  <HarborJobStatusBadge job={job} />
+                </div>
+                <button
+                  type="button"
+                  aria-label={`Delete ${job.jobName}`}
+                  disabled={deleting}
+                  onClick={() => onDelete(job)}
+                  className={`grid h-8 w-8 place-items-center rounded-md text-text-dim opacity-0 transition hover:bg-danger/10 hover:text-danger group-hover:opacity-100 disabled:opacity-40 ${FOCUS_RING}`}
+                >
+                  <Sym
+                    name={deleting ? "autorenew" : "delete"}
+                    size={16}
+                    className={deleting ? "animate-rb-spin" : ""}
+                  />
+                </button>
+              </div>
             </li>
           );
         })}
       </ul>
-    </div>
+    </StudioGlassPanel>
   );
 }
 
-// ---------------------------------------------------------------------------
-// List states (loading / error / empty)
-// ---------------------------------------------------------------------------
-
 function ListLoading() {
   return (
-    <div className="overflow-hidden rounded-md border border-outline bg-surface" aria-hidden>
-      {Array.from({ length: 6 }).map((_, i) => (
+    <StudioGlassPanel className="rounded-xl" aria-hidden>
+      {Array.from({ length: 4 }).map((_, i) => (
         <div
           key={i}
-          className="flex items-center gap-3 border-b border-outline-dim px-3.5 py-3.5 last:border-b-0"
+          className={`${HARBOR_JOBS_GRID} border-b border-outline-dim px-4 py-3.5 last:border-b-0`}
         >
-          <div className="h-5 w-12 animate-rb-pulse rounded-md bg-surface-high" />
-          <div className="h-3.5 w-48 animate-rb-pulse rounded bg-surface-high" />
-          <div className="h-5 w-16 animate-rb-pulse rounded-md bg-surface-high" />
+          <div className="h-3.5 animate-rb-pulse rounded bg-surface-high" />
+          <div className="h-3.5 w-14 animate-rb-pulse rounded bg-surface-high" />
+          <div className="h-3.5 animate-rb-pulse rounded bg-surface-high" />
+          <div className="ml-auto h-3.5 w-8 animate-rb-pulse rounded bg-surface-high" />
           <div className="ml-auto h-3.5 w-16 animate-rb-pulse rounded bg-surface-high" />
         </div>
       ))}
-    </div>
+    </StudioGlassPanel>
+  );
+}
+
+function ListFilterEmpty({ onClearFilters }: { onClearFilters: () => void }) {
+  return (
+    <StudioGlassPanel className="px-6 py-12 text-center rise-in">
+      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
+        <Sym name="search_off" size={24} className="text-text-dim" />
+      </div>
+      <h2 className="font-display text-[15px] font-semibold text-text-main">No matching runs</h2>
+      <p className="mx-auto mt-2 max-w-md text-[13px] leading-relaxed text-text-variant">
+        Try a different search term or clear the app type and status filters.
+      </p>
+      <button
+        type="button"
+        onClick={onClearFilters}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-outline/50 bg-surface/60 px-4 py-2 text-[12px] text-text-variant transition hover:border-primary/40 hover:text-text-main ${FOCUS_RING}`}
+      >
+        <Sym name="filter_alt_off" size={16} />
+        Clear filters
+      </button>
+    </StudioGlassPanel>
   );
 }
 
 function ListEmpty({ onClose }: { onClose: () => void }) {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface px-6 py-14 text-center rise-in">
+    <StudioGlassPanel className="px-6 py-14 text-center rise-in">
       <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
         <Sym name="history" size={26} className="text-text-dim" />
       </div>
-      <h2 className="font-display text-[15px] font-semibold text-text-main">No saved runs yet</h2>
+      <h2 className="font-display text-[15px] font-semibold text-text-main">No runs yet</h2>
       <p className="mx-auto mt-2 max-w-md text-[13px] leading-relaxed text-text-variant">
-        Once you run a simulation, it&apos;s saved here so you can reopen it, read the full transcript
-        and scores, or compare two runs side by side. Head to the cockpit to start your first one.
+        Launch a batch from PersonaEval to run personas at scale. Results appear here under{" "}
+        <span className="font-mono">jobs/</span>.
       </p>
       <button
         type="button"
@@ -374,9 +608,9 @@ function ListEmpty({ onClose }: { onClose: () => void }) {
         className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-[12px] text-on-primary glow transition ease-out hover:bg-primary-dim active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="play_arrow" fill={1} size={16} />
-        Start your first run
+        Back to home
       </button>
-    </div>
+    </StudioGlassPanel>
   );
 }
 
@@ -384,25 +618,22 @@ function ListError({ error, onRetry }: { error: unknown; onRetry: () => void }) 
   const message =
     error instanceof ApiError
       ? error.message
-      : "Something went wrong fetching your saved runs. This is usually a brief connection hiccup.";
+      : "Something went wrong loading runs.";
   return (
-    <div className="rounded-md border border-outline border-l-4 border-l-danger bg-surface px-5 py-8 text-center rise-in">
-      <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md border border-danger/30 bg-danger/10">
-        <Sym name="error" fill={1} size={22} className="text-danger" />
-      </div>
-      <h2 className="font-display text-[15px] font-semibold text-text-main">We couldn&apos;t load your runs</h2>
+    <StudioGlassPanel className="border-l-4 border-l-danger px-5 py-8 text-center rise-in">
+      <h2 className="font-display text-[15px] font-semibold text-text-main">Couldn&apos;t load jobs</h2>
       <p className="mx-auto mt-1.5 max-w-md break-words text-[13px] leading-relaxed text-text-variant">
         {message}
       </p>
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger transition ease-out hover:border-danger/60 hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[12px] text-danger ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again
       </button>
-    </div>
+    </StudioGlassPanel>
   );
 }
 

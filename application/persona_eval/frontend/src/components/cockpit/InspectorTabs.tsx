@@ -1,44 +1,55 @@
 /**
  * InspectorTabs: the live-run right inspector, as a real ARIA tablist.
  *
- * Ports the mockup's inspector aside (`app-redesign-v3.html:325-336`): a header
- * bar ("Inspector"), a row of underline tabs, then the scrollable panel body.
- * The three panels are Evaluation (`Scorecard`) · Persona (`PersonaPanel`) ·
- * Prompts (`PromptPanel`).
- *
- * A proper, fully keyboard-operable tablist: `role="tablist"` over `role="tab"`
- * buttons (`aria-selected` + `aria-controls`), roving `tabIndex`, and
- * ArrowLeft/Right (+ Home/End) to move + focus. The active tab is controlled by
- * the parent so the global `1`/`2`/`3` shortcuts switch tabs too.
+ * InspectorTabs: evaluation plus optional task-doc panels.
  */
 import { useRef } from "react";
 
 import { FOCUS_RING, Sym } from "./cockpitShared";
 
-export type InspectorTab = "evaluation" | "persona" | "prompts";
-
-const TABS: ReadonlyArray<{ id: InspectorTab; label: string; icon: string }> = [
-  { id: "evaluation", label: "Evaluation", icon: "verified" },
-  { id: "persona", label: "Persona", icon: "person" },
-  { id: "prompts", label: "Prompts", icon: "terminal" },
-];
+export type InspectorTab =
+  | "evaluation"
+  | "instruction"
+  | "context"
+  | "questionnaire"
+  | "output-schema"
+  | "self-report";
 
 export interface InspectorTabsProps {
   active: InspectorTab;
   onChange: (tab: InspectorTab) => void;
-  /** Panel content keyed by tab id. */
   evaluation: React.ReactNode;
-  persona: React.ReactNode;
-  prompts: React.ReactNode;
+  instruction: React.ReactNode;
+  context?: React.ReactNode;
+  questionnaire?: React.ReactNode;
+  outputSchema?: React.ReactNode;
+  selfReport?: React.ReactNode;
 }
 
-export function InspectorTabs({ active, onChange, evaluation, persona, prompts }: InspectorTabsProps) {
+export function InspectorTabs({
+  active,
+  onChange,
+  evaluation,
+  instruction,
+  context,
+  questionnaire,
+  outputSchema,
+  selfReport,
+}: InspectorTabsProps) {
+  const tabs: Array<{ id: InspectorTab; label: string; icon: string }> = [
+    { id: "evaluation", label: "Evaluation", icon: "verified" },
+    { id: "instruction", label: "Instruction", icon: "description" },
+  ];
+  if (context) tabs.push({ id: "context", label: "Context", icon: "menu_book" });
+  if (questionnaire) tabs.push({ id: "questionnaire", label: "Questionnaire", icon: "list_alt" });
+  if (outputSchema) tabs.push({ id: "output-schema", label: "Output schema", icon: "schema" });
+  if (selfReport) tabs.push({ id: "self-report", label: "Self-report", icon: "rate_review" });
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const activeLabel = TABS.find((t) => t.id === active)?.label ?? "";
+  const activeLabel = tabs.find((t) => t.id === active)?.label ?? "";
 
   function focusTab(index: number) {
-    const clamped = (index + TABS.length) % TABS.length;
-    const tab = TABS[clamped];
+    const clamped = (index + tabs.length) % tabs.length;
+    const tab = tabs[clamped];
     onChange(tab.id);
     tabRefs.current[clamped]?.focus();
   }
@@ -55,26 +66,24 @@ export function InspectorTabs({ active, onChange, evaluation, persona, prompts }
       focusTab(0);
     } else if (e.key === "End") {
       e.preventDefault();
-      focusTab(TABS.length - 1);
+      focusTab(tabs.length - 1);
     }
   }
 
   return (
     <aside className="z-0 flex h-[340px] w-full flex-shrink-0 flex-col border-t border-outline bg-surface-lowest lg:h-full lg:w-[360px] lg:border-l lg:border-t-0">
-      {/* Header bar */}
       <div className="flex shrink-0 items-center justify-between border-b border-outline bg-surface px-4 py-3">
         <span className="hud text-[10px] text-primary">Inspector</span>
         <span className="hud text-[9px] text-text-dim">{activeLabel}</span>
       </div>
 
-      {/* Underline tabs */}
       <div
         role="tablist"
         aria-label="Inspector"
         aria-orientation="horizontal"
-        className="flex shrink-0 items-center gap-5 border-b border-outline px-4"
+        className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-0 border-b border-outline px-3"
       >
-        {TABS.map((tab, i) => {
+        {tabs.map((tab, i) => {
           const selected = tab.id === active;
           return (
             <button
@@ -85,29 +94,54 @@ export function InspectorTabs({ active, onChange, evaluation, persona, prompts }
               aria-selected={selected}
               aria-controls={`inspector-panel-${tab.id}`}
               tabIndex={selected ? 0 : -1}
-              onClick={() => onChange(tab.id)}
+              onClick={() => {
+                onChange(tab.id);
+              }}
               onKeyDown={(e) => onKeyDown(e, i)}
-              className={`-mb-px flex select-none items-center gap-1.5 border-b-2 py-2.5 text-[12px] font-medium transition ease-out active:opacity-70 ${FOCUS_RING} ${
+              className={`-mb-px flex min-w-0 select-none items-center gap-1.5 border-b-2 py-2.5 text-[11px] font-medium transition ease-out active:opacity-70 lg:text-[12px] ${FOCUS_RING} ${
                 selected ? "border-primary text-primary" : "border-transparent text-text-variant hover:text-text-main"
               }`}
             >
               <Sym name={tab.icon} fill={selected ? 1 : 0} size={16} />
-              {tab.label}
+              <span className="whitespace-nowrap">{tab.label}</span>
             </button>
           );
         })}
       </div>
 
-      {/* Panels */}
       <div className="custom-scrollbar flex-1 overflow-y-auto">
         <div role="tabpanel" id="inspector-panel-evaluation" aria-labelledby="inspector-tab-evaluation" hidden={active !== "evaluation"}>
           {active === "evaluation" && evaluation}
         </div>
-        <div role="tabpanel" id="inspector-panel-persona" aria-labelledby="inspector-tab-persona" hidden={active !== "persona"}>
-          {active === "persona" && persona}
+        <div role="tabpanel" id="inspector-panel-instruction" aria-labelledby="inspector-tab-instruction" hidden={active !== "instruction"}>
+          {active === "instruction" && instruction}
         </div>
-        <div role="tabpanel" id="inspector-panel-prompts" aria-labelledby="inspector-tab-prompts" hidden={active !== "prompts"}>
-          {active === "prompts" && prompts}
+        <div role="tabpanel" id="inspector-panel-context" aria-labelledby="inspector-tab-context" hidden={active !== "context"}>
+          {active === "context" && context}
+        </div>
+        <div
+          role="tabpanel"
+          id="inspector-panel-questionnaire"
+          aria-labelledby="inspector-tab-questionnaire"
+          hidden={active !== "questionnaire"}
+        >
+          {active === "questionnaire" && questionnaire}
+        </div>
+        <div
+          role="tabpanel"
+          id="inspector-panel-output-schema"
+          aria-labelledby="inspector-tab-output-schema"
+          hidden={active !== "output-schema"}
+        >
+          {active === "output-schema" && outputSchema}
+        </div>
+        <div
+          role="tabpanel"
+          id="inspector-panel-self-report"
+          aria-labelledby="inspector-tab-self-report"
+          hidden={active !== "self-report"}
+        >
+          {active === "self-report" && selfReport}
         </div>
       </div>
     </aside>

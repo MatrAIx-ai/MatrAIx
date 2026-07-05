@@ -2,33 +2,33 @@
 
 from __future__ import annotations
 
-from pathlib import Path
 from typing import Dict, List
 
+from backend.service.example_task_catalog import discover_application_tasks, task_id_from_folder
 from backend.service.web_types import WebEvalTask
-
-# Repo root, so task_path resolves regardless of the process CWD. The demo runs
-# uvicorn from the persona_eval dir, so a path relative to CWD silently misses
-# the task's catalog and the trace falls back to placeholder products.
-# web_tasks.py -> service -> backend -> persona_eval -> application -> repo root
-_REPO_ROOT = Path(__file__).resolve().parents[4]
 
 
 def _registry() -> Dict[str, WebEvalTask]:
-    task = WebEvalTask(
-        id="web-ecommerce-platform_product-discovery",
-        title="Ecommerce product discovery",
-        site_name="Northstar Home Goods",
-        site_url="http://ecommerce-web:8000/",
-        task_path=_REPO_ROOT / "application" / "tasks" / "web-ecommerce-platform_product-discovery",
-        description=(
-            "Browse a task-hosted ecommerce site, state a realistic website task, "
-            "compare products, choose one item, and report the shopping experience."
-        ),
-        output_artifact="ecommerce_interaction.json",
-        submission_profile="persona_eval_final_json",
-    )
-    return {task.id: task}
+    tasks: Dict[str, WebEvalTask] = {}
+    for record in discover_application_tasks(application_type="web"):
+        assert record.persona_eval is not None
+        pe = record.persona_eval
+        task_id = task_id_from_folder(record.folder_name)
+        tasks[task_id] = WebEvalTask(
+            id=task_id,
+            title=record.title,
+            site_name=pe.site_name or "Website",
+            site_url=pe.site_url or "https://example.com/",
+            task_path=record.task_path,
+            description=record.description,
+            meta_type=record.meta_type,
+            domain=record.domain,
+            difficulty=record.difficulty,
+            task_kind=record.task_kind,
+            output_artifact=pe.output_artifact or "web_result.json",
+            submission_profile=pe.submission_profile or "web_result",
+        )
+    return tasks
 
 
 def list_web_eval_tasks() -> List[WebEvalTask]:

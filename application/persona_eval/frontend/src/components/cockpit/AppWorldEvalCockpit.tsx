@@ -182,7 +182,7 @@ export function AppWorldEvalCockpit({
                   Configure a simulation
                 </h1>
                 <p className="mt-1 text-[13px] text-text-variant">
-                  Pick a persona and an AppWorld task. BenchFlow hosts the agent and returns the API trajectory.
+                  Pick a persona and an AppWorld task. PersonaEval runs the agent via Harbor and returns the API trajectory.
                 </p>
               </div>
               <TaskTypeSwitch value={taskType} onChange={onTaskTypeChange} disabled={isRunning} />

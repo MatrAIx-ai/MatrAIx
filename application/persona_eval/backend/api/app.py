@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import datetime as _dt
 import os
+import subprocess
 import urllib.request
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -46,6 +47,9 @@ from typing import Any, AsyncIterator, Dict, List, Optional
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request as StarletteRequest
+from starlette.responses import Response as StarletteResponse
 
 # Importing backend.api wires the eval package dir onto sys.path so the lazy
 # `import recbot...` resolves later (and so `import backend...` works at all).
@@ -61,6 +65,17 @@ DEV_ORIGINS: List[str] = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
+
+class _NoCacheIndexMiddleware(BaseHTTPMiddleware):
+    """Prevent browsers from serving a stale SPA shell after frontend rebuilds."""
+
+    async def dispatch(self, request: StarletteRequest, call_next):
+        response: StarletteResponse = await call_next(request)
+        if request.url.path in {"", "/", "/index.html"}:
+            response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+            response.headers["Pragma"] = "no-cache"
+        return response
 
 
 def _utc_now() -> str:
@@ -158,20 +173,32 @@ def _sidecar_reachable(base_url: str, timeout: float = 1.5) -> bool:
         return False
 
 
-def preflight_checks(
-    catalog: Any, domain_sizes: Optional[Dict[str, int]] = None
-) -> List[Dict[str, Any]]:
+def _docker_daemon_ok(timeout: float = 2.0) -> bool:
+    """True if the local Docker CLI can talk to a running daemon."""
+    try:
+        proc = subprocess.run(
+            ["docker", "info"],
+            capture_output=True,
+            timeout=timeout,
+            check=False,
+        )
+        return proc.returncode == 0
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+
+
+def preflight_checks() -> List[Dict[str, Any]]:
     """Compute the user-facing, interface-aware readiness checklist.
 
     Reports each probe as ``{"group", "name", "ok", "detail"}`` regardless of
     pass/fail, so the UI can group the overall readiness of the whole system —
     not just the RecAI recommender — in plain language. Groups:
 
-    * **Core** — model credentials and the browsable catalog (any run needs these).
+    * **Core** — model credentials (any run needs these).
     * **Chatbot** — the RecAI recommender (engine + its native resource bundles,
       collapsed across domains), plus the OpenBB and Medical adapters, which are
       selectable but whose external services are verified at run time.
-    * **Survey** / **Web** / **AppWorld** — the other application interfaces,
+    * **Survey** / **Web** / **OS app** — the other application interfaces,
       available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
@@ -196,29 +223,19 @@ def preflight_checks(
         }
     )
 
-    # Browsable catalog. Readiness is "has items", not a file path. Report every
-    # domain's size (movie / beauty / game), so the count never reads as the whole
-    # catalog when it is really one domain's corpus.
-    size = getattr(catalog, "size", 0)
-    if getattr(catalog, "available", False) and size:
-        if domain_sizes:
-            per = ", ".join(
-                "{} {:,}".format(_DOMAIN_LABELS.get(d, d.replace("_", " ").capitalize()), n)
-                for d, n in domain_sizes.items()
-            )
-            detail = "Browsable items by domain: {}.".format(per)
-        else:
-            detail = "{:,} items loaded.".format(size)
-        checks.append({"group": "Core", "name": "Catalog", "ok": True, "detail": detail})
-    else:
-        checks.append(
-            {
-                "group": "Core",
-                "name": "Catalog",
-                "ok": False,
-                "detail": "No catalog items available to browse.",
-            }
-        )
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
+    checks.append(
+        {
+            "group": "Core",
+            "name": "Anthropic credentials",
+            "ok": bool(anthropic_key),
+            "detail": (
+                "Configured."
+                if anthropic_key
+                else "Not configured. Required for Anthropic persona models."
+            ),
+        }
+    )
 
     # ---- Chatbot — RecAI is deeply probed; other adapters are offered --- #
     root = _interecagent_root()
@@ -241,11 +258,36 @@ def preflight_checks(
     # The RecAI native bundles, collapsed across every supported domain.
     checks.append(_recai_resources_check(root))
 
+    from backend.service.chatbot_sidecar_service import (
+        resolve_health_url,
+        sidecar_port_reachable,
+        sidecar_reachable,
+    )
+
+    recai_url = resolve_health_url("recai")
+    recai_api_ok = sidecar_reachable(recai_url)
+    checks.append(
+        {
+            "group": "Chatbot",
+            "name": "RecAI chat API",
+            "ok": recai_api_ok,
+            "optional": True,
+            "applicationId": "recai",
+            "detail": (
+                "RecAI chat API reachable at {}.".format(recai_url)
+                if recai_api_ok
+                else "RecAI chat API not running at {}. Start it before a Harbor chat run.".format(
+                    recai_url
+                )
+            ),
+        }
+    )
+
     # The finance/medical adapters route to HTTP sidecars. Probe each one's
     # /health so readiness reflects whether it is actually running. They are
     # marked optional: a down sidecar shows here but does not gate overall
     # readiness (RecAI / Survey / Web still run without them).
-    from environment.integrations.persona_eval.local.chatbot_eval import _sidecar_base_url
+    from persona_eval.inprocess.chatbot_eval import _sidecar_base_url
 
     finance_url = _sidecar_base_url(
         "CHATBOT_UPSTREAM_FINANCE", "FINANCE_CHATBOT_URL", "http://127.0.0.1:8901"
@@ -257,6 +299,7 @@ def preflight_checks(
             "name": "OpenBB (finance)",
             "ok": finance_ok,
             "optional": True,
+            "applicationId": "finance_openbb",
             "detail": (
                 "Finance sidecar reachable at {}.".format(finance_url)
                 if finance_ok
@@ -276,11 +319,31 @@ def preflight_checks(
             "name": "Medical assistant",
             "ok": medical_ok,
             "optional": True,
+            "applicationId": "medical_assistant",
             "detail": (
                 "Medical sidecar reachable at {}.".format(medical_url)
                 if medical_ok
                 else "Medical sidecar not running at {}. Start it to run a medical chat.".format(
                     medical_url
+                )
+            ),
+        }
+    )
+
+    mcp_url = resolve_health_url("acme_support_mcp")
+    mcp_ok = sidecar_port_reachable("127.0.0.1", 8903)
+    checks.append(
+        {
+            "group": "Chatbot",
+            "name": "Acme MCP support",
+            "ok": mcp_ok,
+            "optional": True,
+            "applicationId": "acme_support_mcp",
+            "detail": (
+                "MCP server reachable at {}.".format(mcp_url)
+                if mcp_ok
+                else "MCP server not running at {}. Start it to run the MCP chat task.".format(
+                    mcp_url
                 )
             ),
         }
@@ -300,15 +363,36 @@ def preflight_checks(
             "group": "Web",
             "name": "Web tasks",
             "ok": True,
-            "detail": "Browser and computer-use interface available. It runs when you start a web task.",
+            "detail": "Browser interface available. It runs when you start a web task.",
         }
     )
+
+    docker_ok = _docker_daemon_ok()
     checks.append(
         {
-            "group": "AppWorld",
-            "name": "AppWorld tasks",
-            "ok": True,
-            "detail": "API-driven AppWorld interface available. It runs when you start an AppWorld task.",
+            "group": "OS app",
+            "name": "Docker",
+            "ok": docker_ok,
+            "optional": True,
+            "detail": (
+                "Docker daemon reachable."
+                if docker_ok
+                else "Docker not running. Required for Linux and web OS-app tasks."
+            ),
+        }
+    )
+    use_computer_key = (os.environ.get("USE_COMPUTER_API_KEY") or "").strip()
+    checks.append(
+        {
+            "group": "OS app",
+            "name": "use.computer API",
+            "ok": bool(use_computer_key),
+            "optional": True,
+            "detail": (
+                "Configured."
+                if use_computer_key
+                else "Not configured. Required for macOS and iOS OS-app tasks."
+            ),
         }
     )
 
@@ -342,14 +426,21 @@ def _recai_resources_check(interecagent_root: str) -> Dict[str, Any]:
     else:
         ok = False
         detail = "Resource bundles not installed for {}.".format(", ".join(missing))
-    return {"group": "Chatbot", "name": "RecAI resources", "ok": ok, "detail": detail}
+    return {
+        "group": "Chatbot",
+        "name": "RecAI resources",
+        "ok": ok,
+        "optional": True,
+        "detail": detail,
+    }
 
 
 def _interecagent_root() -> str:
     """Absolute path to the RecAI engine root used for resource validation.
 
     Honors an ``INTERECAGENT_ROOT`` override (the bridge reads the same var) and
-    otherwise falls back to the task-owned ``recai/InteRecAgent`` checkout. The
+    otherwise falls back to the task-environment ``recai/InteRecAgent`` checkout
+    (sparse-cloned on demand via ``scripts/setup_recai_resources.py``). The
     fallback is computed straight from this module's location so it is unaffected
     by a faked ``recbot`` package in tests.
     """
@@ -467,6 +558,7 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+    app.add_middleware(_NoCacheIndexMiddleware)
 
     # ----------------------------- health ----------------------------- #
     @app.get("/api/health", response_model=schemas.HealthResponse, tags=["health"])
@@ -477,19 +569,42 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     @app.get(
         "/api/preflight", response_model=schemas.PreflightResponse, tags=["health"]
     )
-    def preflight(services: AppState = Depends(get_services)) -> Dict[str, Any]:
-        # Per-domain browsable catalog sizes (each cached by get_bundle_catalog),
-        # so the Catalog check shows every domain, not just the default (movie).
-        domain_sizes: Dict[str, int] = {}
-        for domain in _BUNDLE_DOMAINS:
-            idx = services.catalog_for(domain)
-            if getattr(idx, "available", False) and getattr(idx, "size", 0):
-                domain_sizes[domain] = idx.size
-        checks = preflight_checks(services.catalog, domain_sizes)
+    def preflight() -> Dict[str, Any]:
+        checks = preflight_checks()
         # Optional adapters (finance/medical sidecars) report their status but
         # do not gate overall readiness — the core surfaces run without them.
         ready = all(c["ok"] for c in checks if not c.get("optional"))
         return {"ready": ready, "checks": checks}
+
+    @app.get(
+        "/api/chatbot-sidecars",
+        response_model=schemas.ChatbotSidecarsResponse,
+        tags=["health"],
+    )
+    def chatbot_sidecars() -> Dict[str, Any]:
+        from backend.service.chatbot_sidecar_service import list_sidecar_statuses
+
+        return {"sidecars": list_sidecar_statuses()}
+
+    @app.post(
+        "/api/chatbot-sidecars/{application_id}/start",
+        response_model=schemas.StartChatbotSidecarResponse,
+        tags=["health"],
+    )
+    def start_chatbot_sidecar(application_id: str) -> Dict[str, Any]:
+        from backend.service.chatbot_sidecar_service import start_sidecar
+
+        if application_id not in schemas.SUPPORTED_APPLICATION_IDS:
+            raise HTTPException(status_code=404, detail="unknown chatbot application")
+        try:
+            sidecar = start_sidecar(application_id)
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        except RuntimeError as exc:
+            raise HTTPException(status_code=500, detail=str(exc)) from exc
+        return {"sidecar": sidecar, "started": bool(sidecar.get("started"))}
 
     # ------------------------- config options ------------------------- #
     @app.get(
@@ -499,162 +614,6 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def config_options(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         return services.config.options()
-
-    # ----------------------------- sessions --------------------------- #
-    @app.post("/api/sessions", response_model=schemas.Session, tags=["sessions"])
-    def create_session(
-        body: schemas.CreateSessionRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        try:
-            session = services.manager.create(title=body.title, config=body.config)
-        except ConfigError as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return session.to_dict()
-
-    @app.get(
-        "/api/sessions",
-        response_model=List[schemas.SessionSummary],
-        tags=["sessions"],
-    )
-    def list_sessions(
-        services: AppState = Depends(get_services),
-    ) -> List[Dict[str, Any]]:
-        return services.manager.list()
-
-    @app.get(
-        "/api/sessions/{session_id}",
-        response_model=schemas.Session,
-        tags=["sessions"],
-    )
-    def get_session(
-        session_id: str, services: AppState = Depends(get_services)
-    ) -> Dict[str, Any]:
-        session = services.manager.get(session_id)
-        if session is None:
-            raise HTTPException(status_code=404, detail="session not found")
-        return session.to_dict()
-
-    @app.patch(
-        "/api/sessions/{session_id}/config",
-        response_model=schemas.PatchConfigResponse,
-        tags=["sessions"],
-    )
-    def patch_config(
-        session_id: str,
-        body: schemas.PatchConfigRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        try:
-            result = services.manager.patch_config(session_id, body.config)
-        except ConfigError as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        if result is None:
-            raise HTTPException(status_code=404, detail="session not found")
-        return {
-            "session": result["session"].to_dict(),
-            "cacheInvalidated": bool(result["cacheInvalidated"]),
-        }
-
-    @app.delete("/api/sessions", tags=["sessions"])
-    def clear_sessions(
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        """Delete every saved chat session (memory + disk)."""
-        return {"deleted": services.manager.clear()}
-
-    @app.delete("/api/sessions/{session_id}", tags=["sessions"])
-    def delete_session(
-        session_id: str,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        """Delete one chat session (memory + disk)."""
-        if not services.manager.delete(session_id):
-            raise HTTPException(status_code=404, detail="session not found")
-        return {"deleted": session_id}
-
-    @app.get("/api/sessions/{session_id}/export", tags=["sessions"])
-    def export_session(
-        session_id: str, services: AppState = Depends(get_services)
-    ) -> JSONResponse:
-        session = services.manager.get(session_id)
-        if session is None:
-            raise HTTPException(status_code=404, detail="session not found")
-        filename = "personaeval-{}.json".format(session.id)
-        return JSONResponse(
-            content=session.to_dict(),
-            headers={
-                "Content-Disposition": 'attachment; filename="{}"'.format(filename)
-            },
-        )
-
-    # ------------------------- turns & jobs --------------------------- #
-    @app.post(
-        "/api/sessions/{session_id}/turns",
-        response_model=schemas.SubmitTurnResponse,
-        tags=["turns"],
-    )
-    def submit_turn(
-        session_id: str,
-        body: schemas.SubmitTurnRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        # `submit_turn` dispatches the blocking turn to the manager's threadpool
-        # and returns immediately with a job id; backend failures surface later
-        # as a job ``error``, not as a 500 here. The session/message are
-        # validated up front so the client gets a clean 404 / 422.
-        try:
-            job_id = services.manager.submit_turn(session_id, body.message)
-        except KeyError:
-            raise HTTPException(status_code=404, detail="session not found")
-        except ValueError as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return {"jobId": job_id}
-
-    @app.get("/api/jobs/{job_id}", response_model=schemas.JobView, tags=["turns"])
-    def get_job(
-        job_id: str, services: AppState = Depends(get_services)
-    ) -> Dict[str, Any]:
-        view = services.manager.get_job(job_id)
-        if view is None:
-            raise HTTPException(status_code=404, detail="job not found")
-        return view
-
-    # ----------------------------- catalog ---------------------------- #
-    @app.get(
-        "/api/catalog/search",
-        response_model=schemas.CatalogSearchResponse,
-        tags=["catalog"],
-    )
-    def catalog_search(
-        services: AppState = Depends(get_services),
-        q: str = Query(default=""),
-        genre: Optional[str] = Query(default=None),
-        limit: int = Query(default=50, ge=0, le=500),
-        domain: Optional[str] = Query(default=None),
-    ) -> Dict[str, Any]:
-        catalog = services.catalog_for(domain)
-        items = catalog.search(q=q, genre=genre, limit=limit)
-        total = catalog.count(q=q, genre=genre)
-        return {
-            "items": [catalog_item_view(it) for it in items],
-            "total": total,
-        }
-
-    @app.get(
-        "/api/catalog/items/{item_id}",
-        response_model=schemas.CatalogItem,
-        tags=["catalog"],
-    )
-    def catalog_item(
-        item_id: str,
-        services: AppState = Depends(get_services),
-        domain: Optional[str] = Query(default=None),
-    ) -> Dict[str, Any]:
-        item = services.catalog_for(domain).get(item_id)
-        if item is None:
-            raise HTTPException(status_code=404, detail="item not found")
-        return catalog_item_view(item)
 
     # ---------------------------- PersonaEval ---------------------------- #
     @app.get(
@@ -667,10 +626,9 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         limit: Optional[int] = Query(default=None, ge=1),
         domain: Optional[str] = Query(default=None),
     ) -> Dict[str, Any]:
-        # Lazy-import the (stdlib-light) persona/SUT helpers so importing the app
-        # stays cheap, mirroring the lazy backend import on the turn path.
-        from persona_eval.persona import load_personas
-        from persona_eval.sut_descriptions import sut_description_for
+        # Lazy-import the stdlib-light persona helpers so importing the app stays
+        # cheap, mirroring the lazy backend import on the turn path.
+        from persona_eval.persona_catalog import load_personas
 
         # Persona is domain-free: the catalog is un-filtered, honoring an
         # optional substring search (``q``) and a result cap (``limit``).
@@ -684,13 +642,12 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             for p in load_personas(query=q, limit=limit)
         ]
         result: Dict[str, Any] = {"personas": personas}
-        # ``sutDescription`` is returned only for an explicitly-passed domain
-        # (the per-domain start flow still surfaces the SUT blurb).
+        # ``domain`` is accepted for backwards compatibility with older clients
+        # that still scope persona search by chat domain. Task-backed chatbot
+        # flows now source SUT context from task content instead of a global
+        # domain registry, so no domain-specific blurb is returned here.
         if domain is not None:
-            try:
-                result["sutDescription"] = sut_description_for(domain)
-            except KeyError as exc:
-                raise HTTPException(status_code=422, detail=str(exc))
+            result["sutDescription"] = None
         return result
 
     @app.get(
@@ -702,7 +659,7 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         # The full, humanized persona context — what the catalog's "full
         # persona" view shows. The list ships only a short blurb; this is the
         # complete record. Lazy-import keeps app import cheap (see the list route).
-        from persona_eval.persona import get_persona
+        from persona_eval.persona_catalog import get_persona
 
         try:
             persona = get_persona(persona_id)
@@ -715,94 +672,394 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             "context": persona.context,
         }
 
+    # ----------------------------- Harbor batch jobs ---------------------- #
     @app.get(
-        "/api/persona-eval/goal-contexts",
-        response_model=schemas.GoalContextsResponse,
-        tags=["persona-eval"],
+        "/api/harbor/jobs",
+        response_model=schemas.HarborJobsListResponse,
+        tags=["harbor-jobs"],
     )
-    def persona_eval_goal_contexts() -> Dict[str, Any]:
-        from persona_eval.goal_contexts import load_goal_contexts
+    def list_harbor_jobs(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        return {"jobs": services.harbor_jobs.list_jobs()}
 
-        return {
-            "goalContexts": [
-                {
-                    "id": gc.id,
-                    "label": gc.label,
-                    "description": gc.description,
-                }
-                for gc in load_goal_contexts()
-            ]
-        }
+    @app.get(
+        "/api/harbor/jobs/{job_name}",
+        response_model=schemas.HarborJobDetailView,
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_job(
+        job_name: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        job = services.harbor_jobs.get_job(job_name)
+        if job is None:
+            raise HTTPException(status_code=404, detail="harbor job not found")
+        return job
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/aggregation",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_job_aggregation(
+        job_name: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.get_job_aggregation(job_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.delete(
+        "/api/harbor/jobs/{job_name}",
+        tags=["harbor-jobs"],
+    )
+    def delete_harbor_job(
+        job_name: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        try:
+            services.harbor_jobs.delete_job(job_name)
+        except ValueError as exc:
+            message = str(exc)
+            status = 404 if "not found" in message.lower() else 400
+            raise HTTPException(status_code=status, detail=message) from exc
+        return {"deleted": True, "jobName": job_name}
 
     @app.post(
-        "/api/persona-eval",
-        response_model=schemas.SubmitPersonaEvalResponse,
-        tags=["persona-eval"],
+        "/api/harbor/jobs",
+        response_model=schemas.HarborJobLaunchResponse,
+        tags=["harbor-jobs"],
     )
-    def start_persona_eval(
-        body: schemas.StartPersonaEvalRequest,
+    def launch_harbor_job(
+        body: schemas.HarborJobLaunchRequest,
         services: AppState = Depends(get_services),
     ) -> Dict[str, Any]:
-        # `start` dispatches the persona-eval onto a daemon thread (serialized
-        # process-globally) and returns a job id immediately; a bad
-        # persona/domain pairing (or unknown persona) surfaces here as a 422.
-        # `engine` selects the application chatbot base model. `personaModel`
-        # selects the simulated-user base model. Omitted values fall back to
-        # local defaults so existing callers keep working.
-        engine = body.engine or ConfigManager.DEFAULTS["engine"]
-        persona_model = body.personaModel or default_persona_model()
-        run_domain = body.domain or body.applicationContext or ConfigManager.DEFAULTS["domain"]
+        from backend.service.harbor_job_service import (
+            _read_task_metadata_type,
+            resolve_agent_name,
+            resolve_trial_profile,
+        )
+
+        from backend.service.execution_plane import normalize_execution_plane
+        from backend.service.config import default_execution_plane
+
         try:
-            job_id = services.persona_eval.start(
-                run_domain,
-                body.personaId,
-                body.maxTurns,
-                body.goalContextId or "scenario_default",
-                now=_utc_now,
-                engine=engine,
-                persona_model=persona_model,
-                application_id=body.applicationId,
-                application_context=body.applicationContext,
+            trial_profile = resolve_trial_profile(
+                body.taskPath,
+                mode=body.mode,
+                repo_root=services.harbor_jobs.repo_root,
             )
-        except (ValueError, KeyError) as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return {"jobId": job_id}
+            agent_name = resolve_agent_name(
+                body.taskPath,
+                repo_root=services.harbor_jobs.repo_root,
+                explicit=body.agentName,
+                mode=body.mode,
+                trial_profile=trial_profile,
+            )
+            resolved_plane = normalize_execution_plane(
+                body.plane or default_execution_plane()
+            )
+            job_name = services.harbor_jobs.launch(
+                task_path=body.taskPath,
+                sample_size=body.sampleSize,
+                seed=body.seed,
+                persona_pool=body.personaPool,
+                persona_ids=body.personaIds,
+                agent_name=agent_name,
+                persona_model=body.personaModel,
+                n_concurrent_trials=body.nConcurrentTrials,
+                execution_mode=body.mode,
+                execution_plane=resolved_plane,
+                job_name=body.jobName,
+                os_app_submission_profile=body.osAppSubmissionProfile,
+                os_app_backend=body.osAppBackend,
+                chat_domain=body.chatDomain,
+                chat_application_id=body.chatApplicationId,
+                chat_application_context=body.chatApplicationContext,
+                chat_max_turns=body.chatMaxTurns,
+                persona_sources=body.personaSources,
+                persona_filters=body.personaFilters,
+                cohort_id=body.cohortId,
+            )
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        job_detail = services.harbor_jobs.get_job(job_name)
+        launch = job_detail.get("launch") if isinstance(job_detail, dict) else None
+        config_path = launch.get("configPath") if isinstance(launch, dict) else None
+        return {
+            "jobName": job_name,
+            "configPath": config_path,
+            "jobsDir": job_detail.get("jobsDir") if isinstance(job_detail, dict) else None,
+            "agentName": agent_name,
+            "taskType": _read_task_metadata_type(body.taskPath, repo_root=services.harbor_jobs.repo_root),
+            "trialProfile": trial_profile,
+            "mode": body.mode,
+            "plane": resolved_plane,
+        }
 
     @app.get(
-        "/api/persona-eval/runs",
-        response_model=schemas.PersonaEvalRunsResponse,
-        tags=["persona-eval"],
+        "/api/harbor/jobs/{job_name}/live",
+        tags=["harbor-jobs"],
     )
-    def list_persona_eval_runs(
+    def get_harbor_job_live(
+        job_name: str,
         services: AppState = Depends(get_services),
     ) -> Dict[str, Any]:
-        return {"runs": services.persona_eval.list_runs()}
+        try:
+            return services.harbor_jobs.get_job_live(job_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     @app.get(
-        "/api/persona-eval/runs/{run_id}",
-        response_model=schemas.PersonaEvalResultView,
-        tags=["persona-eval"],
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/events",
+        tags=["harbor-jobs"],
     )
-    def get_persona_eval_run(
-        run_id: str, services: AppState = Depends(get_services)
+    def get_harbor_trial_events(
+        job_name: str,
+        trial_name: str,
+        after: int = Query(default=0, ge=0),
+        services: AppState = Depends(get_services),
     ) -> Dict[str, Any]:
-        run = services.persona_eval.get_run(run_id)
-        if run is None:
-            raise HTTPException(status_code=404, detail="persona-eval run not found")
-        return run
+        try:
+            return services.harbor_jobs.get_trial_events(
+                job_name,
+                trial_name,
+                after=after,
+            )
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     @app.get(
-        "/api/persona-eval/jobs/{job_id}",
-        response_model=schemas.PersonaEvalJobView,
-        tags=["persona-eval"],
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/debrief",
+        tags=["harbor-jobs"],
     )
-    def get_persona_eval_job(
-        job_id: str, services: AppState = Depends(get_services)
+    def get_harbor_trial_debrief(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
     ) -> Dict[str, Any]:
-        view = services.persona_eval.view(job_id)
-        if view is None:
-            raise HTTPException(status_code=404, detail="persona-eval job not found")
-        return view
+        try:
+            return services.harbor_jobs.get_trial_debrief(job_name, trial_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/instruction",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_trial_instruction(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.get_trial_instruction(job_name, trial_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/trace",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_trial_trace(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.get_trial_web_trace(job_name, trial_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/screenshots/{filename:path}",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_trial_screenshot(
+        job_name: str,
+        trial_name: str,
+        filename: str,
+        services: AppState = Depends(get_services),
+    ) -> FileResponse:
+        try:
+            path = services.harbor_jobs.trial_screenshot_path(job_name, trial_name, filename)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail="screenshot not found") from exc
+        media = "image/png"
+        lower = filename.lower()
+        if lower.endswith(".webp"):
+            media = "image/webp"
+        elif lower.endswith(".svg"):
+            media = "image/svg+xml"
+        elif lower.endswith(".jpg") or lower.endswith(".jpeg"):
+            media = "image/jpeg"
+        return FileResponse(path, media_type=media)
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/recording",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_trial_recording(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
+    ) -> FileResponse:
+        try:
+            path = services.harbor_jobs.trial_recording_path(job_name, trial_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail="recording not found") from exc
+        return FileResponse(path, media_type="video/mp4", filename="recording.mp4")
+
+    @app.get(
+        "/api/persona-pool/catalog",
+        response_model=schemas.PersonaPoolCatalogResponse,
+        tags=["persona-pool"],
+    )
+    def get_persona_pool_catalog(
+        pool: str = Query(default="persona/datasets/bench-dev-sample"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.persona_pool.get_catalog(pool)
+        except (ValueError, FileNotFoundError, OSError) as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.post(
+        "/api/persona-pool/sample",
+        response_model=schemas.PersonaPoolSampleResponse,
+        tags=["persona-pool"],
+    )
+    def sample_persona_pool(
+        body: schemas.PersonaPoolSampleRequest,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.persona_pool.sample_pool(
+                persona_pool=body.pool,
+                sample_size=body.sampleSize,
+                seed=body.seed,
+                sources=body.sources,
+                dimension_filters=body.dimensionFilters,
+                stratify_fields=body.stratifyFields,
+                sample_size_per_value_group=body.sampleSizePerValueGroup,
+            )
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/persona-pool/personas",
+        tags=["persona-pool"],
+    )
+    def list_persona_pool_cards(
+        pool: str = Query(default="persona/datasets/bench-dev-sample"),
+        limit: int = Query(default=10, ge=1, le=500),
+        offset: int = Query(default=0, ge=0),
+        seed: int = Query(default=42),
+        persona_ids: Optional[str] = Query(default=None, alias="personaIds"),
+        detail: bool = Query(default=False),
+        all: bool = Query(default=False, alias="all"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        ids = [part.strip() for part in (persona_ids or "").split(",") if part.strip()]
+        try:
+            if detail and len(ids) == 1:
+                return services.persona_pool.get_persona_detail(ids[0], persona_pool=pool)
+            return services.persona_pool.list_persona_cards(
+                persona_pool=pool,
+                limit=limit,
+                offset=offset,
+                persona_ids=ids or None,
+                seed=seed,
+                all_personas=all,
+            )
+        except (ValueError, FileNotFoundError, OSError) as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/persona-pool/personas/{persona_id}",
+        response_model=schemas.PersonaPoolPersonaDetailResponse,
+        tags=["persona-pool"],
+    )
+    def get_persona_pool_persona(
+        persona_id: str,
+        pool: str = Query(default="persona/datasets/bench-dev-sample"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.persona_pool.get_persona_detail(persona_id, persona_pool=pool)
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except (ValueError, OSError) as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/tasks/detail",
+        response_model=schemas.TaskDetailResponse,
+        tags=["tasks"],
+    )
+    def get_task_detail(
+        task_path: str = Query(..., alias="taskPath"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        from backend.service.task_detail_service import get_task_detail as load_task_detail
+
+        try:
+            return load_task_detail(task_path, repo_root=services.harbor_jobs.repo_root)
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.get(
+        "/api/persona-pool/cohorts",
+        response_model=schemas.PersonaCohortListResponse,
+        tags=["persona-pool"],
+    )
+    def list_persona_cohorts(
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        return {"cohorts": services.persona_pool.list_cohorts()}
+
+    @app.get(
+        "/api/persona-pool/cohorts/{cohort_id}",
+        response_model=schemas.PersonaCohortDetailResponse,
+        tags=["persona-pool"],
+    )
+    def get_persona_cohort(
+        cohort_id: str,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.persona_pool.get_cohort(cohort_id)
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+    @app.post(
+        "/api/persona-pool/cohorts",
+        response_model=schemas.PersonaCohortDetailResponse,
+        tags=["persona-pool"],
+    )
+    def save_persona_cohort(
+        body: schemas.PersonaCohortSaveRequest,
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.persona_pool.save_cohort(
+                cohort_id=body.cohortId,
+                name=body.name,
+                description=body.description,
+                pool=body.pool,
+                kind=body.kind,  # type: ignore[arg-type]
+                seed=body.seed,
+                sample_size=body.sampleSize,
+                sources=body.sources,
+                dimension_filters=body.dimensionFilters,
+                persona_ids=body.personaIds,
+            )
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     # ----------------------------- SurveyEval ----------------------------- #
     @app.get(
@@ -810,43 +1067,45 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         response_model=schemas.SurveyInstrumentsResponse,
         tags=["survey-eval"],
     )
-    def survey_eval_instruments(
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        return {"instruments": services.survey_eval.list_instruments()}
+    def survey_eval_instruments(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        from backend.service.survey_questionnaire_catalog import list_survey_questionnaires
 
-    @app.post(
-        "/api/survey-eval",
-        response_model=schemas.SubmitPersonaEvalResponse,
-        tags=["survey-eval"],
-    )
-    def start_survey_eval(
-        body: schemas.StartSurveyEvalRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        try:
-            job_id = services.survey_eval.start(
-                persona_id=body.personaId,
-                instrument_id=body.instrumentId,
-                persona_model=body.personaModel,
-                now=_utc_now,
-            )
-        except (ValueError, KeyError) as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return {"jobId": job_id}
+        return {"instruments": list_survey_questionnaires(repo_root=services.harbor_jobs.repo_root)}
 
     @app.get(
-        "/api/survey-eval/jobs/{job_id}",
-        response_model=schemas.SurveyEvalJobView,
+        "/api/survey-eval/harbor-tasks",
+        response_model=schemas.SurveyHarborTasksResponse,
         tags=["survey-eval"],
     )
-    def get_survey_eval_job(
-        job_id: str, services: AppState = Depends(get_services)
-    ) -> Dict[str, Any]:
-        view = services.survey_eval.view(job_id)
-        if view is None:
-            raise HTTPException(status_code=404, detail="survey-eval job not found")
-        return view
+    def survey_eval_harbor_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        from backend.service.survey_harbor_tasks import list_survey_harbor_tasks
+        from backend.service.task_detail_service import attach_task_profile_markdown
+
+        root = services.harbor_jobs.repo_root
+        return {
+            "tasks": [
+                attach_task_profile_markdown(task.to_dict(), repo_root=root)
+                for task in list_survey_harbor_tasks()
+            ]
+        }
+
+    # ----------------------------- Chatbot eval --------------------------- #
+    @app.get(
+        "/api/chatbot-eval/tasks",
+        response_model=schemas.ChatbotEvalTasksResponse,
+        tags=["chatbot-eval"],
+    )
+    def chatbot_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        from backend.service.chatbot_tasks import list_chatbot_eval_tasks
+        from backend.service.task_detail_service import attach_task_profile_markdown
+
+        root = services.harbor_jobs.repo_root
+        return {
+            "tasks": [
+                attach_task_profile_markdown(task.to_dict(), repo_root=root)
+                for task in list_chatbot_eval_tasks()
+            ]
+        }
 
     # ------------------------------- WebEval ------------------------------ #
     @app.get(
@@ -854,107 +1113,35 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         response_model=schemas.WebEvalTasksResponse,
         tags=["web-eval"],
     )
-    def web_eval_tasks(
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        return {"tasks": services.web_eval.list_tasks()}
+    def web_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        from backend.service.task_detail_service import attach_task_profile_markdown
+        from backend.service.web_tasks import list_web_eval_tasks
 
-    @app.post(
-        "/api/web-eval",
-        response_model=schemas.SubmitPersonaEvalResponse,
-        tags=["web-eval"],
-    )
-    def start_web_eval(
-        body: schemas.StartWebEvalRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        try:
-            job_id = services.web_eval.start(
-                persona_id=body.personaId,
-                task_id=body.taskId,
-                persona_model=body.personaModel,
-                now=_utc_now,
-            )
-        except (ValueError, KeyError) as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return {"jobId": job_id}
+        root = services.harbor_jobs.repo_root
+        return {
+            "tasks": [
+                attach_task_profile_markdown(task.to_dict(), repo_root=root)
+                for task in list_web_eval_tasks()
+            ]
+        }
 
+    # ----------------------------- OS app eval ---------------------------- #
     @app.get(
-        "/api/web-eval/jobs/{job_id}",
-        response_model=schemas.WebEvalJobView,
-        tags=["web-eval"],
+        "/api/os-app-eval/tasks",
+        response_model=schemas.OsAppEvalTasksResponse,
+        tags=["os-app-eval"],
     )
-    def get_web_eval_job(
-        job_id: str, services: AppState = Depends(get_services)
-    ) -> Dict[str, Any]:
-        view = services.web_eval.view(job_id)
-        if view is None:
-            raise HTTPException(status_code=404, detail="web-eval job not found")
-        return view
+    def os_app_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
+        from backend.service.os_app_tasks import list_os_app_eval_tasks
+        from backend.service.task_detail_service import attach_task_profile_markdown
 
-    @app.get(
-        "/api/web-eval/jobs/{job_id}/screenshots/{filename:path}",
-        tags=["web-eval"],
-    )
-    def get_web_eval_screenshot(
-        job_id: str,
-        filename: str,
-        services: AppState = Depends(get_services),
-    ) -> FileResponse:
-        try:
-            path = services.web_eval.screenshot_path(job_id, filename)
-        except ValueError as exc:
-            raise HTTPException(status_code=400, detail=str(exc))
-        except KeyError:
-            raise HTTPException(status_code=404, detail="web-eval job not found")
-        except FileNotFoundError:
-            raise HTTPException(status_code=404, detail="screenshot not found")
-        media_type = "image/svg+xml" if path.suffix == ".svg" else "image/webp"
-        return FileResponse(path, media_type=media_type)
-
-    # ---------------------------- AppWorldEval ---------------------------- #
-    @app.get(
-        "/api/appworld-eval/tasks",
-        response_model=schemas.AppWorldEvalTasksResponse,
-        tags=["appworld-eval"],
-    )
-    def appworld_eval_tasks(
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        return {"tasks": services.appworld_eval.list_tasks()}
-
-    @app.post(
-        "/api/appworld-eval",
-        response_model=schemas.SubmitPersonaEvalResponse,
-        tags=["appworld-eval"],
-    )
-    def start_appworld_eval(
-        body: schemas.StartAppWorldEvalRequest,
-        services: AppState = Depends(get_services),
-    ) -> Dict[str, Any]:
-        try:
-            job_id = services.appworld_eval.start(
-                persona_id=body.personaId,
-                task_id=body.taskId,
-                persona_model=body.personaModel,
-                now=_utc_now,
-            )
-        except (ValueError, KeyError) as exc:
-            raise HTTPException(status_code=422, detail=str(exc))
-        return {"jobId": job_id}
-
-    @app.get(
-        "/api/appworld-eval/jobs/{job_id}",
-        response_model=schemas.AppWorldEvalJobView,
-        tags=["appworld-eval"],
-    )
-    def get_appworld_eval_job(
-        job_id: str, services: AppState = Depends(get_services)
-    ) -> Dict[str, Any]:
-        view = services.appworld_eval.view(job_id)
-        if view is None:
-            raise HTTPException(status_code=404, detail="appworld-eval job not found")
-        return view
+        root = services.harbor_jobs.repo_root
+        return {
+            "tasks": [
+                attach_task_profile_markdown(task.to_dict(), repo_root=root)
+                for task in list_os_app_eval_tasks()
+            ]
+        }
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

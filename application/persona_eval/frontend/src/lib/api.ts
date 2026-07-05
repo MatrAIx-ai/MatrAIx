@@ -1,21 +1,30 @@
 import type {
-  AppWorldEvalJobView,
-  AppWorldEvalTasksResponse,
   ConfigOptionsResponse,
-  GoalContextsResponse,
-  PersonaEvalJobView,
   PersonaEvalPersonasResponse,
   PersonaEvalResult,
-  PersonaEvalRunsResponse,
+  HarborJobDetail,
+  HarborJobLaunchResponse,
+  HarborJobsListResponse,
+  HarborJobLiveResponse,
+  HarborTrialEventsResponse,
+  PersonaPoolCatalog,
+  PersonaPoolCardsResponse,
+  PersonaPoolPersonaDetail,
+  PersonaPoolSampleResult,
+  TaskDetail,
+  PersonaCohortDetail,
+  PersonaCohortSummary,
   PreflightResponse,
-  Session,
-  SessionConfig,
-  SessionSummary,
-  SurveyEvalJobView,
+  ChatbotSidecarsResponse,
+  StartChatbotSidecarResponse,
   SurveyInstrumentsResponse,
-  WebEvalJobView,
+  SurveyHarborTasksResponse,
+  ChatbotEvalTasksResponse,
   WebEvalTasksResponse,
+  WebTrace,
+  OsAppEvalTasksResponse,
 } from "./types";
+import { PERSONA_BENCH_POOL } from "./types";
 
 export class ApiError extends Error {
   readonly status: number;
@@ -60,98 +69,183 @@ function qs(params: Record<string, string | number | null | undefined>): string 
 
 export const api = {
   getPreflight: () => request<PreflightResponse>("/api/preflight"),
+  getChatbotSidecars: () => request<ChatbotSidecarsResponse>("/api/chatbot-sidecars"),
+  startChatbotSidecar: (applicationId: string) =>
+    request<StartChatbotSidecarResponse>(
+      `/api/chatbot-sidecars/${encodeURIComponent(applicationId)}/start`,
+      { method: "POST" },
+    ),
   getConfigOptions: () => request<ConfigOptionsResponse>("/api/config/options"),
+  listChatbotEvalTasks: () => request<ChatbotEvalTasksResponse>("/api/chatbot-eval/tasks"),
 
-  listSessions: () => request<SessionSummary[]>("/api/sessions"),
-  getSession: (id: string) => request<Session>(`/api/sessions/${encodeURIComponent(id)}`),
-  createSession: (body?: { title?: string; config?: Partial<SessionConfig> }) =>
-    request<Session>("/api/sessions", {
-      method: "POST",
-      body: JSON.stringify(body ?? {}),
-    }),
-  patchSessionConfig: (id: string, config: Partial<SessionConfig>) =>
-    request<{ session: Session; cacheInvalidated: boolean }>(
-      `/api/sessions/${encodeURIComponent(id)}/config`,
-      {
-        method: "PATCH",
-        body: JSON.stringify({ config }),
-      },
+  listHarborJobs: () => request<HarborJobsListResponse>("/api/harbor/jobs"),
+  deleteHarborJob: (jobName: string) =>
+    request<{ deleted: boolean; jobName: string }>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}`,
+      { method: "DELETE" },
     ),
-  deleteSession: (id: string) =>
-    request<{ deleted: string }>(`/api/sessions/${encodeURIComponent(id)}`, {
-      method: "DELETE",
-    }),
-  clearSessions: () => request<{ deleted: number }>("/api/sessions", { method: "DELETE" }),
-  submitTurn: (id: string, message: string) =>
-    request<{ jobId: string }>(`/api/sessions/${encodeURIComponent(id)}/turns`, {
-      method: "POST",
-      body: JSON.stringify({ message }),
-    }),
-  getTurnJob: (id: string) =>
-    request<{ jobId: string; status: string; turn?: unknown; error?: string | null }>(
-      `/api/jobs/${encodeURIComponent(id)}`,
+  getHarborJob: (jobName: string) =>
+    request<HarborJobDetail>(`/api/harbor/jobs/${encodeURIComponent(jobName)}`),
+  getHarborJobAggregation: (jobName: string) =>
+    request<HarborJobDetail["aggregation"]>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/aggregation`,
     ),
-
-  startPersonaEval: (body: {
-    domain?: string;
-    applicationId?: string;
-    applicationContext?: string;
-    personaId: string;
-    maxTurns: number;
-    goalContextId?: string | null;
-    engine?: string | null;
+  getHarborJobLive: (jobName: string) =>
+    request<HarborJobLiveResponse>(`/api/harbor/jobs/${encodeURIComponent(jobName)}/live`),
+  getHarborTrialDebrief: (jobName: string, trialName: string) =>
+    request<PersonaEvalResult>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/debrief`,
+    ),
+  getHarborTrialTrace: (jobName: string, trialName: string) =>
+    request<{ trace: WebTrace }>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/trace`,
+    ),
+  getHarborTrialEvents: (jobName: string, trialName: string, after = 0) =>
+    request<HarborTrialEventsResponse>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/events${qs({ after })}`,
+    ),
+  getHarborTrialInstruction: (jobName: string, trialName: string) =>
+    request<{
+      title?: string | null;
+      markdown: string;
+      instructionMarkdown?: string | null;
+      contextMarkdown?: string | null;
+      questionnaireMarkdown?: string | null;
+      outputSchemaMarkdown?: string | null;
+      selfReportMarkdown?: string | null;
+    }>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/instruction`,
+    ),
+  launchHarborJob: (body: {
+    taskPath: string;
+    sampleSize?: number;
+    seed?: number;
+    personaPool?: string;
+    personaIds?: string[];
+    agentName?: string | null;
     personaModel?: string | null;
+    nConcurrentTrials?: number;
+    mode?: "auto" | "force_docker" | "smoke";
+    plane?: "harbor" | "remote";
+    jobName?: string | null;
+    chatDomain?: string | null;
+    chatApplicationId?: string | null;
+    chatApplicationContext?: string | null;
+    chatMaxTurns?: number | null;
+    personaSources?: string[] | null;
+    personaFilters?: Record<string, string> | null;
+    cohortId?: string | null;
+    osAppSubmissionProfile?: string | null;
+    osAppBackend?: string | null;
   }) =>
-    request<{ jobId: string }>("/api/persona-eval", {
+    request<HarborJobLaunchResponse>("/api/harbor/jobs", {
       method: "POST",
       body: JSON.stringify(body),
     }),
-  getPersonaEvalJob: (id: string) =>
-    request<PersonaEvalJobView>(`/api/persona-eval/jobs/${encodeURIComponent(id)}`),
-  listPersonaEvalRuns: () => request<PersonaEvalRunsResponse>("/api/persona-eval/runs"),
-  getPersonaEvalRun: (id: string) =>
-    request<PersonaEvalResult>(`/api/persona-eval/runs/${encodeURIComponent(id)}`),
 
-  startSurveyEval: (body: {
-    personaId: string;
-    instrumentId: string;
-    personaModel?: string | null;
+  getPersonaPoolCatalog: (pool = PERSONA_BENCH_POOL) =>
+    request<PersonaPoolCatalog>(
+      `/api/persona-pool/catalog?${new URLSearchParams({ pool }).toString()}`,
+    ),
+  getPersonaPoolCards: (input?: {
+    limit?: number;
+    offset?: number;
+    seed?: number;
+    personaIds?: string[];
+    all?: boolean;
   }) =>
-    request<{ jobId: string }>("/api/survey-eval", {
+    request<PersonaPoolCardsResponse>(
+      `/api/persona-pool/personas${qs({
+        pool: PERSONA_BENCH_POOL,
+        limit: input?.limit,
+        offset: input?.offset,
+        seed: input?.seed,
+        personaIds: input?.personaIds?.join(","),
+        all: input?.all ? "true" : undefined,
+      })}`,
+    ),
+  listAllPersonaPoolCards: async (pageSize = 50) => {
+    const personas: PersonaPoolCardsResponse["personas"] = [];
+    let pool = PERSONA_BENCH_POOL;
+    let offset = 0;
+    for (;;) {
+      const page = await request<PersonaPoolCardsResponse>(
+        `/api/persona-pool/personas${qs({
+          pool: PERSONA_BENCH_POOL,
+          all: "true",
+          limit: pageSize,
+          offset,
+        })}`,
+      );
+      pool = page.pool;
+      if (
+        offset > 0 &&
+        page.personas.length > 0 &&
+        personas.some((item) => item.personaId === page.personas[0]?.personaId)
+      ) {
+        break;
+      }
+      personas.push(...page.personas);
+      if (page.personas.length < pageSize) break;
+      offset += pageSize;
+      if (offset > 10_000) break;
+    }
+    return { pool, personas };
+  },
+  getPersonaPoolPersona: async (personaId: string, pool = PERSONA_BENCH_POOL) => {
+    try {
+      const byQuery = await request<PersonaPoolPersonaDetail>(
+        `/api/persona-pool/personas${qs({
+          pool,
+          personaIds: personaId,
+          detail: "true",
+        })}`,
+      );
+      if (byQuery.profileMarkdown?.trim()) return byQuery;
+    } catch {
+      // Fall through to path-style endpoint on older backends.
+    }
+    return request<PersonaPoolPersonaDetail>(
+      `/api/persona-pool/personas/${encodeURIComponent(personaId)}?${new URLSearchParams({ pool }).toString()}`,
+    );
+  },
+  getTaskDetail: (taskPath: string) =>
+    request<TaskDetail>(`/api/tasks/detail${qs({ taskPath })}`),
+  samplePersonaPool: (body: {
+    pool?: string;
+    sampleSize?: number;
+    seed?: number;
+    sources?: string[];
+    dimensionFilters?: Record<string, string | string[]>;
+    stratifyFields?: string[];
+    sampleSizePerValueGroup?: number;
+  }) =>
+    request<PersonaPoolSampleResult>("/api/persona-pool/sample", {
+      method: "POST",
+      body: JSON.stringify({ pool: PERSONA_BENCH_POOL, ...body }),
+    }),
+
+  listPersonaCohorts: () =>
+    request<{ cohorts: PersonaCohortSummary[] }>("/api/persona-pool/cohorts"),
+  getPersonaCohort: (cohortId: string) =>
+    request<PersonaCohortDetail>(`/api/persona-pool/cohorts/${encodeURIComponent(cohortId)}`),
+  savePersonaCohort: (body: {
+    cohortId: string;
+    name?: string;
+    description?: string;
+    pool?: string;
+    kind?: "recipe" | "frozen";
+    seed?: number;
+    sampleSize?: number;
+    sources?: string[];
+    dimensionFilters?: Record<string, string>;
+    personaIds?: string[];
+  }) =>
+    request<PersonaCohortDetail>("/api/persona-pool/cohorts", {
       method: "POST",
       body: JSON.stringify(body),
     }),
-  getSurveyEvalJob: (id: string) =>
-    request<SurveyEvalJobView>(`/api/survey-eval/jobs/${encodeURIComponent(id)}`),
-
-  startWebEval: (body: {
-    personaId: string;
-    taskId: string;
-    personaModel?: string | null;
-  }) =>
-    request<{ jobId: string }>("/api/web-eval", {
-      method: "POST",
-      body: JSON.stringify(body),
-    }),
-  getWebEvalJob: (id: string) =>
-    request<WebEvalJobView>(`/api/web-eval/jobs/${encodeURIComponent(id)}`),
-
-  startAppWorldEval: (body: {
-    personaId: string;
-    taskId: string;
-    personaModel?: string | null;
-  }) =>
-    request<{ jobId: string }>("/api/appworld-eval", {
-      method: "POST",
-      body: JSON.stringify(body),
-    }),
-  getAppWorldEvalJob: (id: string) =>
-    request<AppWorldEvalJobView>(`/api/appworld-eval/jobs/${encodeURIComponent(id)}`),
 };
-
-export function sessionExportUrl(id: string): string {
-  return `/api/sessions/${encodeURIComponent(id)}/export`;
-}
 
 export function listPersonaEvalPersonas(input?: {
   q?: string;
@@ -173,18 +267,22 @@ export function getPersonaEvalPersona(id: string): Promise<PersonaEvalPersonasRe
   );
 }
 
-export function listGoalContexts(): Promise<GoalContextsResponse> {
-  return request<GoalContextsResponse>("/api/persona-eval/goal-contexts");
-}
-
 export function listSurveyInstruments(): Promise<SurveyInstrumentsResponse> {
   return request<SurveyInstrumentsResponse>("/api/survey-eval/instruments");
+}
+
+export function listSurveyHarborTasks(): Promise<SurveyHarborTasksResponse> {
+  return request<SurveyHarborTasksResponse>("/api/survey-eval/harbor-tasks");
+}
+
+export function listChatbotEvalTasks(): Promise<ChatbotEvalTasksResponse> {
+  return request<ChatbotEvalTasksResponse>("/api/chatbot-eval/tasks");
 }
 
 export function listWebEvalTasks(): Promise<WebEvalTasksResponse> {
   return request<WebEvalTasksResponse>("/api/web-eval/tasks");
 }
 
-export function listAppWorldEvalTasks(): Promise<AppWorldEvalTasksResponse> {
-  return request<AppWorldEvalTasksResponse>("/api/appworld-eval/tasks");
+export function listOsAppEvalTasks(): Promise<OsAppEvalTasksResponse> {
+  return request<OsAppEvalTasksResponse>("/api/os-app-eval/tasks");
 }
