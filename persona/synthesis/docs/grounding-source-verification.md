@@ -73,8 +73,6 @@ source-level evidence.
 
 | Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| Unicode CLDR | Locale, territory, script, language metadata; internationalization data | Unicode CLDR provides locale, language, script, territory, and formatting metadata for normalization and language/locale mapping. It is a metadata source rather than a population-distribution source. | Verified, metadata source |
-| CLDR project repository | Source repository for CLDR data and project artifacts | The CLDR project repository provides source data and project artifacts for Unicode CLDR, supporting direct access to locale, language, script, and territory metadata files. | Verified, metadata source |
 | Glottolog | Language taxonomy; language reference; language family and classification data | Glottolog provides language taxonomy and reference metadata for language classification. It supports language normalization and taxonomy rather than speaker-distribution calibration. | Verified, metadata source |
 | Glottolog downloads | Downloadable language taxonomy and metadata files | The local raw manifest points to Glottolog downloads for language taxonomy and geolocation files, matching this source's data-download role for metadata. | Verified, metadata source |
 | World Atlas of Language Structures | Cross-linguistic language features; language metadata | WALS provides structured cross-linguistic features and language metadata, supporting language and culture-adjacent metadata rather than population distributions. | Verified, metadata source |
