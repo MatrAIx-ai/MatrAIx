@@ -16,7 +16,7 @@ documentation, and follow-up validation.
 | Employment / occupation / work | Employment status, occupation, wages, skills, work context | ILOSTAT; BLS OEWS; O*NET; OECD employment data; ACS PUMS; IPUMS USA; IPUMS CPS |
 | Income / socioeconomic status | Income, poverty, inequality, and socioeconomic priors | World Bank Poverty and Inequality Platform; World Bank WDI; World Inequality Database; Luxembourg Income Study; OECD Income Distribution Database; ACS PUMS; IPUMS USA; IPUMS CPS |
 | Household / family / marital status | Household size, family structure, marital and parental status | ACS PUMS; IPUMS International; IPUMS USA; UN Population Division; OECD Family Database; DHS Program; UNICEF MICS |
-| Language / locale / culture | Language, locale, territory, script, and language/culture metadata | Glottolog; World Atlas of Language Structures; Ethnologue |
+| Language / locale / culture | Language use, home language, language taxonomy, and speaker/community context | ACS PUMS; IPUMS International; IPUMS USA; Glottolog; Ethnologue |
 | Religion / religiosity | Religious affiliation, denomination, belief, and religiosity | Pew Research Center Religion; World Values Survey; General Social Survey; ARDA |
 | Values / politics / trust / social attitudes | Political lean, trust, social values, public opinion | World Values Survey; General Social Survey; Pew Research Center; European Social Survey; International Social Survey Programme; Gallup World Poll; Afrobarometer; Arab Barometer; Asian Barometer; Latinobarometro; Eurobarometer |
 | Personality / psychometrics | Personality traits, psychological scales, and self-report constructs | IPIP; SAPA Project; MIDUS |
@@ -75,9 +75,10 @@ documentation, and follow-up validation.
 
 ### Language, Culture, And Locale Metadata
 
+- U.S. Census ACS PUMS: https://www.census.gov/programs-surveys/acs/microdata.html
+- IPUMS International: https://international.ipums.org/international/
+- IPUMS USA: https://usa.ipums.org/usa/
 - Glottolog: https://glottolog.org/
-- Glottolog downloads: https://glottolog.org/meta/downloads
-- World Atlas of Language Structures: https://wals.info/
 - Ethnologue: https://www.ethnologue.com/
 
 ### Religion, Values, Politics, And Social Attitudes
@@ -189,7 +190,6 @@ These shorthand keys identify the grounding sources referenced above.
 - `unesco_uis`: UNESCO Institute for Statistics
 - `unicef_mics`: UNICEF Multiple Indicator Cluster Surveys
 - `who_gho`: WHO Global Health Observatory
-- `world_atlas_of_language_structures`: World Atlas of Language Structures
 - `world_bank_databank`: World Bank DataBank
 - `world_bank_education_statistics`: World Bank Education Statistics
 - `world_bank_migration_labor_mobility`: World Bank Migration & Labor Mobility

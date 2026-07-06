@@ -73,9 +73,10 @@ source-level evidence.
 
 | Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
+| U.S. Census ACS PUMS | Home language and English proficiency variables; U.S. person/household microdata | ACS PUMS includes U.S. public-use person and household microdata with language-related variables such as language spoken at home and English proficiency, supporting U.S.-specific language distribution grounding. | Verified, U.S.-focused |
+| IPUMS International | Census language variables where available; cross-national census microdata | IPUMS International harmonizes census microdata across countries and can support cross-national language-use grounding where language variables are available in source censuses. | Verified, account/license may be required |
+| IPUMS USA | U.S. language, home language, and English proficiency variables | IPUMS USA harmonizes U.S. census and ACS microdata, including language-related variables useful for U.S. home-language and English-proficiency grounding. | Verified, U.S.-focused |
 | Glottolog | Language taxonomy; language reference; language family and classification data | Glottolog provides language taxonomy and reference metadata for language classification. It supports language normalization and taxonomy rather than speaker-distribution calibration. | Verified, metadata source |
-| Glottolog downloads | Downloadable language taxonomy and metadata files | The local raw manifest points to Glottolog downloads for language taxonomy and geolocation files, matching this source's data-download role for metadata. | Verified, metadata source |
-| World Atlas of Language Structures | Cross-linguistic language features; language metadata | WALS provides structured cross-linguistic features and language metadata, supporting language and culture-adjacent metadata rather than population distributions. | Verified, metadata source |
 | Ethnologue | Language reference; speaker communities; language status | Ethnologue is a language reference source covering languages, speaker communities, and language status. It can inform language metadata and speaker-community context, but access may be limited. | Verified, access may be limited |
 
 ## Religion, Values, Politics, And Social Attitudes
