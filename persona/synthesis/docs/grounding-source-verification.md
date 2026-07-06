@@ -34,6 +34,7 @@ source-level evidence.
 | IPUMS | Harmonized census/survey microdata platform; demographic, household, work, income, and migration variables | IPUMS is a University of Minnesota data platform for harmonized census and survey microdata, supporting demographic and socioeconomic grounding across multiple IPUMS collections. | Verified |
 | IPUMS International | Cross-national census microdata; age, sex, education, household, birthplace/migration variables | IPUMS International provides harmonized census microdata across countries, supporting cross-national age, sex, education, household, and migration grounding. | Verified, account/license may be required |
 | IPUMS USA | U.S. census/ACS microdata; age, sex, education, work, income, household, migration variables | IPUMS USA provides harmonized U.S. census and ACS microdata, supporting U.S.-specific demographic, socioeconomic, household, and migration grounding. | Verified, U.S.-focused |
+| Ethnologue | Language speaker/community reference; language status and country context | Ethnologue can support language as a demographic/background attribute through language speaker and community context, but access may be limited and it should not be treated as a general population distribution source. | Verified, access may be limited |
 
 ## Education, Work, And Socioeconomics
 

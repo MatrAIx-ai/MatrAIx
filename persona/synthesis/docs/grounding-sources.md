@@ -41,6 +41,7 @@ documentation, and follow-up validation.
 - IPUMS: https://www.ipums.org/
 - IPUMS International: https://international.ipums.org/international/
 - IPUMS USA: https://usa.ipums.org/usa/
+- Ethnologue: https://www.ethnologue.com/
 
 ### Education, Work, And Socioeconomics
 
@@ -138,6 +139,7 @@ These shorthand keys identify the grounding sources referenced above.
 - `consumer_expenditure_surveys`: Consumer Expenditure Surveys
 - `datareportal`: DataReportal global digital reports
 - `dhs_program`: DHS Program
+- `ethnologue`: Ethnologue
 - `eurobarometer`: Eurobarometer
 - `european_social_survey`: European Social Survey
 - `eurostat`: Eurostat
