@@ -4,13 +4,9 @@ This document tracks verification notes for the grounding sources listed in
 `grounding-sources.md`. It mirrors the `Source Catalog` sections in that file so
 the source list and verification notes stay aligned.
 
-Each row combines:
-
-- source-level verification: who provides the source, what scope it covers, and
-  what type of data it provides;
-- dimension-level verification: which MatrAIx dimension areas the source
-  supports;
-- status: whether the source is currently usable for grounding.
+Each section keeps the same source grouping as `grounding-sources.md`. Each row
+focuses on dimension-level support while also recording a small amount of
+source-level evidence.
 
 ## Status Labels
 
@@ -24,125 +20,125 @@ Each row combines:
 
 ## Population And Demographics
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| UN World Population Prospects | Official UN Population Division population estimates and projections; global coverage across countries, regions, subregions, age, and sex. | Region / population distribution; Age; Sex / gender; Migration / citizenship context | Verified |
-| UN Population Division Data Portal | Official UN Population Division data portal with interactive demographic indicators by indicator and location. | Region / population distribution; Age; Household / family / marital status; Migration / citizenship context | Verified |
-| UN World Urbanization Prospects | Official UN Population Division urbanization estimates and projections. | Urbanicity; Region / population distribution | Verified |
-| World Bank World Development Indicators | Official World Bank country-year and regional aggregate indicator database. | Region / population distribution; Age; Sex / gender; Urbanicity; Income / socioeconomic status; Technology / internet access | Verified |
-| World Bank DataBank | Official World Bank platform for accessing World Bank datasets including WDI and related indicators. | Region / population distribution; Education; Income / socioeconomic status; Technology / internet access | Verified |
-| WorldPop | Open spatial demographic datasets from WorldPop / University of Southampton, focused on high-resolution population distributions and spatial demographics. | Region / population distribution; Urbanicity | Verified |
-| Eurostat | Official European Union statistics portal, with population and demographic indicators for Europe. | Region / population distribution; Age; Sex / gender; Urbanicity | Verified, Europe-focused |
-| U.S. Census ACS PUMS | Official U.S. Census public-use person and household microdata. | Age; Sex / gender; Education; Employment / occupation / work; Income / socioeconomic status; Household / family / marital status; Health / disability; Migration / citizenship | Verified, U.S.-focused |
-| ACS data portal | Official U.S. Census ACS data access portal. | Urbanicity; Population and demographic context; U.S. geography-linked demographic validation | Verified, U.S.-focused |
-| IPUMS | University of Minnesota IPUMS data platform for harmonized census and survey microdata. | Age; Sex / gender; Education; Employment / occupation / work; Income / socioeconomic status; Household / family / marital status; Migration / citizenship | Verified |
-| IPUMS International | Harmonized cross-national census microdata. | Age; Sex / gender; Education; Household / family / marital status; Migration / citizenship | Verified, account/license may be required |
-| IPUMS USA | Harmonized U.S. census and ACS microdata. | Age; Sex / gender; Education; Employment / occupation / work; Income / socioeconomic status; Household / family / marital status; Migration / citizenship | Verified, U.S.-focused |
+| UN World Population Prospects | Official population estimates/projections; country or area coverage; age/sex tables; regional/global/national levels | The WPP page describes the dataset as official United Nations population estimates and projections, covering 237 countries or areas, with results at global, regional, national, subregional, and country/area levels. It also provides age-disaggregated datasets and sex-disaggregated population tables. | Verified |
+| UN Population Division Data Portal | Demographic indicators; indicator and location search; population, urbanization, migration themes | The Data Portal provides interactive access to global demographic indicators by indicator and location, including Population, Urbanization, Marital Status, Fertility, and International Migration themes. | Verified |
+| UN World Urbanization Prospects | Urbanization estimates/projections; urban/rural population; city and settlement context | UN World Urbanization Prospects is the UN Population Division source for urbanization estimates and projections, supporting urban/rural and settlement-context grounding. | Verified |
+| World Bank World Development Indicators | Country-level indicators; regional aggregates; population/demographic/economic/technology series | The WDI DataBank includes countries and regional aggregates such as World, South Asia, North America, Sub-Saharan Africa, and Europe & Central Asia. It provides indicator series by country and time, including demographic, socioeconomic, education, and technology indicators. | Verified |
+| World Bank DataBank | Official World Bank data platform; access to WDI and related databases; country/year indicator lookup | World Bank DataBank is the official platform for accessing World Bank datasets, including WDI and related country-level indicators. | Verified |
+| WorldPop | Population distribution; spatial/geospatial demographic data; high-resolution population data; subnational age/sex structures | WorldPop describes itself as open spatial demographic data and research, with high-resolution population distribution datasets, spatial demographics, and subnational age/sex structures. | Verified |
+| Eurostat | European population statistics; demographic indicators; official EU statistics portal | Eurostat is the official EU statistics portal. Its key indicators include Population, and it provides databases and statistical themes for European demographic data. | Verified, Europe-focused |
+| U.S. Census ACS PUMS | Public-use person/household microdata; age, sex, education, work, income, household, migration variables | ACS PUMS is U.S. Census public-use microdata with person and household records, supporting U.S.-specific demographics, education, employment, income, disability, household, and migration grounding. | Verified, U.S.-focused |
+| ACS data portal | ACS official data access; U.S. demographic/geographic statistics | The ACS data portal is an official U.S. Census access point for ACS tables, profiles, and demographic/geographic statistics. | Verified, U.S.-focused |
+| IPUMS | Harmonized census/survey microdata platform; demographic, household, work, income, and migration variables | IPUMS is a University of Minnesota data platform for harmonized census and survey microdata, supporting demographic and socioeconomic grounding across multiple IPUMS collections. | Verified |
+| IPUMS International | Cross-national census microdata; age, sex, education, household, birthplace/migration variables | IPUMS International provides harmonized census microdata across countries, supporting cross-national age, sex, education, household, and migration grounding. | Verified, account/license may be required |
+| IPUMS USA | U.S. census/ACS microdata; age, sex, education, work, income, household, migration variables | IPUMS USA provides harmonized U.S. census and ACS microdata, supporting U.S.-specific demographic, socioeconomic, household, and migration grounding. | Verified, U.S.-focused |
 
 ## Education, Work, And Socioeconomics
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| UNESCO Institute for Statistics | Official UNESCO statistics source for education indicators. | Education | Verified |
-| World Bank Education Statistics | World Bank education indicator database. | Education | Verified |
-| ILOSTAT data | Official International Labour Organization labor statistics data portal. | Employment / occupation / work; Education; Age; Sex / gender | Verified |
-| ILOSTAT explorer | ILOSTAT interactive data explorer for labor-market and population indicators. | Employment / occupation / work; Education; Age; Sex / gender | Verified |
-| BLS Occupational Employment and Wage Statistics | Official U.S. Bureau of Labor Statistics occupation employment and wage data. | Employment / occupation / work; Income / socioeconomic status | Verified, U.S.-focused |
-| OEWS data overview | BLS overview page for OEWS tables and data products. | Employment / occupation / work; Income / socioeconomic status | Verified, U.S.-focused |
-| O*NET Resource Center | U.S. Department of Labor O*NET resource site for occupation taxonomy and ratings. | Employment / occupation / work; Developer / coding / technical tools; Skills and work context | Verified, U.S.-focused |
-| O*NET database releases | O*NET database release page for occupation, skills, knowledge, abilities, education, tools, and work-context data. | Employment / occupation / work; Skills and work context | Verified, U.S.-focused |
-| OECD employment data | OECD employment and labor-market data resources. | Employment / occupation / work | Verified, OECD-focused |
-| OECD Education at a Glance | OECD education indicators report and data resources. | Education | Verified, OECD-focused |
-| OECD PISA | OECD student assessment and background data program. | Education | Verified, student-focused |
-| OECD Income Distribution Database | OECD income distribution and inequality indicator database. | Income / socioeconomic status | Verified, OECD-focused |
-| World Bank Poverty and Inequality Platform | World Bank poverty and inequality data platform. | Income / socioeconomic status | Verified |
-| World Inequality Database | Income and wealth inequality data source. | Income / socioeconomic status | Verified |
-| Luxembourg Income Study | Harmonized income microdata and inequality research data center. | Income / socioeconomic status | Verified, access may require registration |
-| IPUMS CPS | Harmonized U.S. Current Population Survey microdata. | Employment / occupation / work; Income / socioeconomic status | Verified, U.S.-focused |
+| UNESCO Institute for Statistics | Official education indicators; literacy, enrollment, attainment, education-system statistics | UNESCO UIS is an official international statistics source for education indicators, supporting education-system, literacy, enrollment, and attainment grounding. | Verified |
+| World Bank Education Statistics | Country-level education indicators; enrollment, attainment, literacy, school system indicators | World Bank Education Statistics provides country-level education series, supporting enrollment, attainment, literacy, and education-system grounding. | Verified |
+| ILOSTAT data | Labor force, employment, unemployment, occupation, education breakdowns | ILOSTAT provides international labor statistics, including labor force, employment, unemployment, occupation, and education-related breakdowns by country and demographic group. | Verified |
+| ILOSTAT explorer | Interactive ILOSTAT access; labor-market and population indicators | The ILOSTAT explorer provides interactive access to labor-market and population indicators, supporting employment, occupation, education, age, and sex dimensions. | Verified |
+| BLS Occupational Employment and Wage Statistics | Occupation employment; wage statistics; U.S. occupational labor market | BLS OEWS provides U.S. occupational employment and wage statistics, supporting occupation and compensation grounding. | Verified, U.S.-focused |
+| OEWS data overview | OEWS tables and data products; occupation and wage data access | The OEWS data overview provides official BLS access to occupation employment and wage tables. | Verified, U.S.-focused |
+| O*NET Resource Center | Occupation taxonomy; skills, knowledge, abilities, education, tools, work context | O*NET provides official U.S. occupation taxonomy and ratings for skills, knowledge, abilities, education, tools, and work context. | Verified, U.S.-focused |
+| O*NET database releases | Downloadable O*NET database; occupation, skill, knowledge, ability, and work-context tables | O*NET database releases provide structured occupation, skill, knowledge, education, tool, and work-context data. | Verified, U.S.-focused |
+| OECD employment data | Employment and labor-market indicators; OECD and partner country coverage | OECD employment data supports labor-market validation for OECD and partner economies. | Verified, OECD-focused |
+| OECD Education at a Glance | Education indicators; OECD and partner country comparisons | OECD Education at a Glance provides official education indicators for OECD and partner countries, supporting education-system and attainment grounding. | Verified, OECD-focused |
+| OECD PISA | Student assessment; education-system indicators; student background data | OECD PISA supports education-system grounding through internationally comparable student assessment and background data. | Verified, student-focused |
+| OECD Income Distribution Database | Income distribution; inequality indicators; OECD and partner coverage | OECD Income Distribution Database provides income distribution and inequality indicators for OECD and partner countries. | Verified, OECD-focused |
+| World Bank Poverty and Inequality Platform | Poverty, inequality, welfare distribution; country-level socioeconomic indicators | The World Bank Poverty and Inequality Platform supports country-level poverty and inequality grounding. | Verified |
+| World Inequality Database | Income inequality; wealth inequality; distributional indicators | The World Inequality Database provides inequality and distributional indicators for income and wealth grounding. | Verified |
+| Luxembourg Income Study | Harmonized income microdata; income distribution; inequality research | LIS provides harmonized income microdata and distributional resources, supporting socioeconomic and income grounding. | Verified, access may require registration |
+| IPUMS CPS | U.S. labor-force survey microdata; employment, occupation, income variables | IPUMS CPS harmonizes Current Population Survey microdata, supporting U.S. employment, labor force, occupation, and income grounding. | Verified, U.S.-focused |
 
 ## Household, Family, And Migration
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| OECD Family Database | OECD indicators on family structure, fertility, children, household, and family policy. | Household / family / marital status | Verified, OECD-focused |
-| DHS Program | Demographic and Health Surveys household and individual survey data across many countries. | Household / family / marital status; Health / disability / accessibility; Migration and demographic context | Verified, survey-focused |
-| UNICEF Multiple Indicator Cluster Surveys | UNICEF household survey program covering children, households, health, education, and living conditions. | Household / family / marital status; Health / disability / accessibility; Education | Verified, survey-focused |
-| UN International Migrant Stock | UN source for international migrant stock by origin and destination. | Migration / citizenship / country of birth | Verified |
-| OECD migration data | OECD migration and immigrant integration data resources. | Migration / citizenship / country of birth; Employment / occupation / work | Verified, OECD-focused |
-| World Bank Migration and Remittances | World Bank resources on migration, remittances, and diaspora issues. | Migration / citizenship / country of birth; Income / socioeconomic context | Verified |
-| IPUMS International | Harmonized cross-national census microdata with household, family, birthplace, and migration variables. | Household / family / marital status; Migration / citizenship / country of birth | Verified, account/license may be required |
+| OECD Family Database | Family structure; household, fertility, child, and family-policy indicators | OECD Family Database supports family, household, fertility, child, and family-policy indicators. | Verified, OECD-focused |
+| DHS Program | Household surveys; fertility, family, maternal/child health, household variables | DHS surveys provide household, fertility, family, and health variables across many countries. | Verified, survey-focused |
+| UNICEF Multiple Indicator Cluster Surveys | Household survey indicators; children, households, education, health, living conditions | UNICEF MICS provides household survey data on children, households, education, health, family, and living conditions. | Verified, survey-focused |
+| UN International Migrant Stock | International migrant stock; origin/destination country data | UN International Migrant Stock supports country-level migration stock and origin/destination grounding. | Verified |
+| OECD migration data | Migration indicators; immigrant population; OECD and partner country coverage | OECD migration data supports migration, immigrant population, labor migration, and integration indicators. | Verified, OECD-focused |
+| World Bank Migration and Remittances | Migration and remittance indicators; country and regional context | World Bank Migration and Remittances supports migration and remittance context at country and regional levels. | Verified |
+| IPUMS International | Household and family variables; birthplace, migration, citizenship-adjacent census variables | IPUMS International supports cross-national household composition, relationship, marital status, birthplace, migration, and demographic variables in census microdata. | Verified, account/license may be required |
 
 ## Language, Culture, And Locale
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| Unicode CLDR | Unicode Common Locale Data Repository for locale, language, script, territory, and formatting metadata. | Language / locale / culture | Verified |
-| CLDR project repository | Official CLDR GitHub repository for source data and project artifacts. | Language / locale / culture | Verified |
-| Glottolog | Language taxonomy and language reference source. | Language / locale / culture | Verified |
-| Glottolog downloads | Glottolog data download page for language taxonomy and metadata files. | Language / locale / culture | Verified |
-| World Atlas of Language Structures | Structured cross-linguistic feature database. | Language / locale / culture | Verified |
-| Ethnologue | Language reference source covering languages, speaker communities, and language status. | Language / locale / culture | Verified, access may be limited |
+| Unicode CLDR | Locale, territory, script, language metadata; internationalization data | Unicode CLDR provides locale, language, script, territory, and formatting metadata used for language and locale grounding. | Verified |
+| CLDR project repository | Source repository for CLDR data and project artifacts | The CLDR project repository provides source data and project artifacts for Unicode CLDR. | Verified |
+| Glottolog | Language taxonomy; language reference; language family and classification data | Glottolog provides language taxonomy and reference metadata for language classification. | Verified |
+| Glottolog downloads | Downloadable language taxonomy and metadata files | The local raw manifest points to Glottolog downloads for language taxonomy and geolocation files, matching this source's data-download role. | Verified |
+| World Atlas of Language Structures | Cross-linguistic language features; language metadata | WALS provides structured cross-linguistic features and language metadata, supporting language and culture-adjacent grounding. | Verified |
+| Ethnologue | Language reference; speaker communities; language status | Ethnologue is a language reference source covering languages, speaker communities, and language status. | Verified, access may be limited |
 
 ## Religion, Values, Politics, And Social Attitudes
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| Pew Research Center datasets | Public opinion survey datasets and reports from Pew Research Center. | Religion / religiosity; Values / politics / trust / social attitudes; Sex / gender survey demographics | Verified |
-| Pew Research Center Religion | Pew religion reports and datasets on affiliation, belief, practice, and demographics. | Religion / religiosity | Verified |
-| 2025 National Public Opinion Reference Survey | Pew NPORS dataset page for U.S. public opinion and demographics. | Values / politics / trust / social attitudes; Religion / religiosity; Survey demographics | Verified, U.S.-focused |
-| 2023-24 Religious Landscape Study | Pew Religious Landscape Study dataset page. | Religion / religiosity; Household/family and demographic context | Verified, U.S.-focused |
-| World Values Survey | Cross-national survey data on values, religion, trust, politics, and social attitudes. | Religion / religiosity; Values / politics / trust / social attitudes | Verified |
-| World Values Survey Wave 7 documentation | WVS Wave 7 documentation and data access page. | Religion / religiosity; Values / politics / trust / social attitudes | Verified |
-| General Social Survey | U.S. survey data on social attitudes, religion, politics, trust, and demographics. | Religion / religiosity; Values / politics / trust / social attitudes | Verified, U.S.-focused |
-| GSS data access | GSS official data access page. | Religion / religiosity; Values / politics / trust / social attitudes | Verified, U.S.-focused |
-| Association of Religion Data Archives | Religion data archive and metadata source. | Religion / religiosity | Verified |
-| European Social Survey | Cross-national European survey data on attitudes, values, politics, trust, and demographics. | Values / politics / trust / social attitudes | Verified, Europe-focused |
-| International Social Survey Programme | Cross-national social survey modules on work, family, religion, identity, politics, and social attitudes. | Values / politics / trust / social attitudes; Religion / religiosity; Household / family / marital status | Verified |
-| Gallup World Poll | Global survey source for public opinion, wellbeing, and social indicators. | Values / politics / trust / social attitudes | Verified, restricted access |
-| Afrobarometer | African public opinion survey source. | Values / politics / trust / social attitudes | Verified, region-focused |
-| Arab Barometer | MENA public opinion survey source. | Values / politics / trust / social attitudes; Religion / religiosity | Verified, region-focused |
-| Asian Barometer | Asian public opinion survey source. | Values / politics / trust / social attitudes | Verified, region-focused |
-| Latinobarometro | Latin American public opinion survey source. | Values / politics / trust / social attitudes | Verified, region-focused |
-| Eurobarometer | European Union public opinion survey source. | Values / politics / trust / social attitudes | Verified, Europe-focused |
+| Pew Research Center datasets | Public opinion datasets; respondent demographics; politics, religion, social issues | Pew Research Center provides public opinion datasets and reports with respondent demographics, politics, religion, and social-issue coverage. | Verified |
+| Pew Research Center Religion | Religious affiliation, belief, practice, denomination, demographics | Pew Research Center Religion provides public reports and datasets on religious affiliation, belief, practice, denomination, and demographics. | Verified |
+| 2025 National Public Opinion Reference Survey | U.S. public opinion; demographics; politics and religion variables | Pew NPORS provides U.S. public opinion and demographic survey grounding. | Verified, U.S.-focused |
+| 2023-24 Religious Landscape Study | U.S. religion, denomination, religiosity, demographic context | Pew Religious Landscape Study supports U.S. religion, denomination, religiosity, and demographic grounding. | Verified, U.S.-focused |
+| World Values Survey | Cross-national values, religion, trust, politics, social attitudes | WVS provides cross-national survey data on values, trust, religion, politics, social attitudes, and demographics. | Verified |
+| World Values Survey Wave 7 documentation | WVS Wave 7 survey documentation and data access | WVS Wave 7 documentation supports cross-national values, religion, trust, politics, and social-attitude grounding. | Verified |
+| General Social Survey | U.S. social attitudes, religion, politics, trust, values | GSS provides U.S. public-use survey data on social attitudes, trust, politics, religion, and values. | Verified, U.S.-focused |
+| GSS data access | Official GSS data access for public-use survey files | GSS data access supports U.S. religion, values, politics, trust, and social-attitude grounding. | Verified, U.S.-focused |
+| Association of Religion Data Archives | Religion datasets and documentation | ARDA aggregates religion datasets and documentation, supporting religious affiliation and religiosity grounding. | Verified |
+| European Social Survey | European attitudes, values, politics, trust, demographics | ESS provides academically governed European survey data on attitudes, values, politics, trust, and demographics. | Verified, Europe-focused |
+| International Social Survey Programme | Cross-national modules on politics, work, family, religion, identity, attitudes | ISSP provides repeated cross-national modules on social attitudes, politics, identity, work, family, religion, and related topics. | Verified |
+| Gallup World Poll | Global public opinion, wellbeing, social indicators | Gallup World Poll supports global public opinion, wellbeing, and social indicator grounding, though access may be restricted. | Verified, restricted access |
+| Afrobarometer | African public opinion surveys; democracy, governance, trust, values | Afrobarometer provides public opinion survey data across African countries on democracy, governance, trust, values, and social issues. | Verified, region-focused |
+| Arab Barometer | MENA public opinion surveys; politics, society, religion, trust | Arab Barometer provides public opinion survey data across Arab countries on politics, society, religion, trust, and values. | Verified, region-focused |
+| Asian Barometer | Asian public opinion and democracy survey data | Asian Barometer provides public opinion and democracy-related survey data across Asian societies. | Verified, region-focused |
+| Latinobarometro | Latin American public opinion and social-attitude surveys | Latinobarometro provides public opinion and social-attitude survey data across Latin America. | Verified, region-focused |
+| Eurobarometer | EU public opinion surveys; politics, trust, society, policy attitudes | Eurobarometer provides EU-focused public opinion survey data on politics, society, trust, and policy attitudes. | Verified, Europe-focused |
 
 ## Personality And Psychometrics
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| International Personality Item Pool | Public-domain personality item and scale source. | Personality / psychometrics | Verified |
-| SAPA Project | Online personality and ability assessment research project. | Personality / psychometrics | Verified |
-| Midlife in the United States | Longitudinal U.S. study with psychosocial, personality, wellbeing, and health measures. | Personality / psychometrics; Health / disability / accessibility | Verified, U.S.-focused |
+| International Personality Item Pool | Public-domain personality items and scales; Big Five and related constructs | IPIP provides public-domain personality item pools and scales, supporting Big Five and related psychometric constructs. | Verified |
+| SAPA Project | Personality and ability assessment; psychometric research data | SAPA Project supports personality and psychometric grounding through online assessment and public research resources. | Verified |
+| Midlife in the United States | Longitudinal survey; psychosocial, personality, wellbeing, health measures | MIDUS provides longitudinal survey resources covering health, personality, wellbeing, and psychosocial constructs. | Verified, U.S.-focused |
 
 ## Health, Disability, And Accessibility
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| WHO Global Health Observatory | Official WHO global health indicator portal. | Health / disability / accessibility | Verified |
-| IHME Global Burden of Disease | Global, regional, and national disease burden and health metric source. | Health / disability / accessibility | Verified |
-| CDC National Health Interview Survey | U.S. health interview survey source. | Health / disability / accessibility | Verified, U.S.-focused |
-| CDC Behavioral Risk Factor Surveillance System | U.S. behavioral health and risk-factor survey source. | Health / disability / accessibility; Lifestyle / time use / consumption | Verified, U.S.-focused |
+| WHO Global Health Observatory | Global health indicators; official WHO data portal | WHO GHO provides official global health indicators and metadata, supporting health grounding. | Verified |
+| IHME Global Burden of Disease | Disease burden, disability, health metrics; global/regional/national coverage | IHME GBD provides global, regional, and national health burden metrics, supporting health and disability grounding. | Verified |
+| CDC National Health Interview Survey | U.S. health status, conditions, disability, healthcare access | CDC NHIS provides U.S. health survey data on health status, conditions, disability, and healthcare access. | Verified, U.S.-focused |
+| CDC Behavioral Risk Factor Surveillance System | U.S. behavioral health and risk-factor survey; state-level coverage | CDC BRFSS provides U.S. state-level behavioral health and risk-factor survey data. | Verified, U.S.-focused |
 
 ## Lifestyle, Time Use, And Consumption
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| American Time Use Survey | U.S. time-use survey from BLS. | Lifestyle / time use / consumption | Verified, U.S.-focused |
-| Consumer Expenditure Surveys | U.S. household spending and consumption surveys from BLS. | Lifestyle / time use / consumption; Income / socioeconomic status | Verified, U.S.-focused |
-| OECD Time Use Database | Cross-national time-use data from OECD. | Lifestyle / time use / consumption | Verified, OECD-focused |
+| American Time Use Survey | Time-use activity categories; work, leisure, caregiving, household activities | ATUS provides U.S. time-use survey data covering daily activities, work, leisure, caregiving, and household activities. | Verified, U.S.-focused |
+| Consumer Expenditure Surveys | Household spending, income, consumption categories | BLS Consumer Expenditure Surveys provide U.S. household spending, income, and consumption data. | Verified, U.S.-focused |
+| OECD Time Use Database | Cross-national time-use comparison; activity patterns | OECD Time Use Database supports time-use and activity-pattern grounding across OECD and partner countries. | Verified, OECD-focused |
 
 ## Technology And Developer Behavior
 
-| Source | Source-level verification | Dimension-level support | Status |
+| Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
-| International Telecommunication Union statistics | Official ITU statistics on ICT access, mobile, broadband, and digital adoption. | Technology / internet access / digital behavior | Verified |
-| DataReportal global digital reports | Public reports on global internet, social media, mobile, and digital adoption. | Technology / internet access / digital behavior | Verified, report-focused |
-| Pew Internet & Technology | Pew survey reports on internet access, device use, and technology behavior. | Technology / internet access / digital behavior | Verified, U.S.-focused |
-| Stack Overflow Survey | Developer survey source on languages, tools, AI, platforms, work, and demographics. | Technology / internet access / digital behavior; Developer / coding / technical tools | Verified, developer-focused |
-| Stack Overflow Survey 2025 | 2025 Stack Overflow Survey report page. | Technology / internet access / digital behavior; Developer / coding / technical tools | Verified, developer-focused |
-| GitHub Octoverse | GitHub report on developer ecosystem and platform trends. | Developer / coding / technical tools | Verified, platform/report-focused |
-| JetBrains State of Developer Ecosystem Report 2025 | JetBrains developer ecosystem report covering developer tools, languages, AI, work, productivity, salary, and demographics. | Developer / coding / technical tools | Verified, developer-focused |
-| JetBrains State of Developer Ecosystem Report 2024 | JetBrains 2024 developer ecosystem report and raw-data page. | Developer / coding / technical tools | Verified, developer-focused |
-| CNCF Annual Survey | Cloud Native Computing Foundation survey/report source on cloud-native tools and practices. | Developer / coding / technical tools | Verified, developer/cloud-focused |
+| International Telecommunication Union statistics | ICT indicators; internet, mobile, broadband, digital access | ITU statistics provide official ICT indicators on internet, mobile, broadband, and digital access. | Verified |
+| DataReportal global digital reports | Internet use, social media, mobile adoption, digital behavior reports | DataReportal provides global digital reports covering internet use, social media, mobile adoption, and digital behavior. | Verified, report-focused |
+| Pew Internet & Technology | Internet access, device use, technology behavior surveys | Pew Internet & Technology provides survey reports on internet access, technology adoption, devices, and digital behavior. | Verified, U.S.-focused |
+| Stack Overflow Survey | Developer languages, tools, AI, platforms, work, demographics | Stack Overflow Survey provides annual developer survey data covering languages, tools, platforms, work, AI-tool adoption, and demographics. | Verified, developer-focused |
+| Stack Overflow Survey 2025 | 2025 developer survey report; tools, languages, AI, work preferences | Stack Overflow Survey 2025 supports developer tools, programming languages, AI-tool usage, and developer demographic grounding. | Verified, developer-focused |
+| GitHub Octoverse | Developer ecosystem and platform trends; repository/language/AI trends | GitHub Octoverse reports on developer activity, repositories, languages, AI, and platform ecosystem trends. | Verified, platform/report-focused |
+| JetBrains State of Developer Ecosystem Report 2025 | Developer tools, languages, AI, productivity, work, salary, demographics | JetBrains State of Developer Ecosystem Report provides survey-based developer ecosystem metrics, including languages, tools, AI, productivity, work, salary, and demographics. | Verified, developer-focused |
+| JetBrains State of Developer Ecosystem Report 2024 | Developer ecosystem report and raw data page; tools, languages, AI, work, salary, demographics | The 2024 JetBrains report provides developer ecosystem data, methodology, and raw-data access, supporting developer tools and behavior grounding. | Verified, developer-focused |
+| CNCF Annual Survey | Cloud-native tools, containers, Kubernetes, platform practices | CNCF survey reports support cloud-native tooling, containers, Kubernetes, platform, and developer infrastructure dimensions. | Verified, developer/cloud-focused |
 
 ## Verification Templates
 
@@ -164,7 +160,7 @@ Status:
 
 ```text
 Source:
-Source-level verification:
-Dimension-level support:
+Evidence to look for:
+Observed evidence:
 Status:
 ```
