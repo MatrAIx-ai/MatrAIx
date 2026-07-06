@@ -24,7 +24,7 @@ documentation, and follow-up validation.
 | Lifestyle / time use / consumption | Time use, household spending, daily activity, and lifestyle priors | American Time Use Survey; Consumer Expenditure Surveys; OECD Time Use Database |
 | Technology / internet access / digital behavior | Internet access, digital adoption, technical familiarity | ITU statistics; World Bank WDI; DataReportal; Pew Internet & Technology; Stack Overflow Survey |
 | Developer / coding / technical tools | Developer skills, programming languages, tools, AI-tool usage | Stack Overflow Survey; GitHub Octoverse; JetBrains State of Developer Ecosystem Report; CNCF Annual Survey |
-| Migration / citizenship / country of birth | Citizenship, migration, country of birth, remittance context | UN International Migrant Stock; OECD migration data; ACS PUMS; IPUMS International; IPUMS USA; World Bank Migration and Remittances |
+| Migration / citizenship / country of birth | Citizenship, migration, country of birth, remittance context | UN International Migrant Stock; OECD migration data; ACS PUMS; IPUMS International; IPUMS USA; World Bank Migration & Labor Mobility; World Bank Remittances / KNOMAD |
 
 ## Source Catalog
 
@@ -69,7 +69,8 @@ documentation, and follow-up validation.
 - UNICEF Multiple Indicator Cluster Surveys: https://mics.unicef.org/
 - UN International Migrant Stock: https://www.un.org/development/desa/pd/content/international-migrant-stock
 - OECD migration data: https://www.oecd.org/migration/
-- World Bank Migration and Remittances: https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues
+- World Bank Migration & Labor Mobility: https://www.worldbank.org/ext/en/topic/social-protection/migration
+- World Bank Remittances / KNOMAD: https://www.worldbank.org/en/topic/migration/brief/remittances-knomad
 - IPUMS International: https://international.ipums.org/international/
 
 ### Language, Culture, And Locale
@@ -194,7 +195,8 @@ These shorthand keys identify the grounding sources referenced above.
 - `world_atlas_of_language_structures`: World Atlas of Language Structures
 - `world_bank_databank`: World Bank DataBank
 - `world_bank_education_statistics`: World Bank Education Statistics
-- `world_bank_migration_remittances`: World Bank Migration and Remittances
+- `world_bank_migration_labor_mobility`: World Bank Migration & Labor Mobility
+- `world_bank_remittances_knomad`: World Bank Remittances / KNOMAD
 - `world_bank_pip`: World Bank Poverty and Inequality Platform
 - `world_bank_wdi`: World Bank World Development Indicators
 - `world_inequality_database`: World Inequality Database

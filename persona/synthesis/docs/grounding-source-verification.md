@@ -65,7 +65,8 @@ source-level evidence.
 | UNICEF Multiple Indicator Cluster Surveys | Household survey indicators; children, households, education, health, living conditions | UNICEF MICS provides household survey data on children, households, education, health, family, and living conditions. | Verified, survey-focused |
 | UN International Migrant Stock | International migrant stock; origin/destination country data | UN International Migrant Stock supports country-level migration stock and origin/destination grounding. | Verified |
 | OECD migration data | Migration indicators; immigrant population; OECD and partner country coverage | OECD migration data supports migration, immigrant population, labor migration, and integration indicators. | Verified, OECD-focused |
-| World Bank Migration and Remittances | Migration and remittance indicators; country and regional context | World Bank Migration and Remittances supports migration and remittance context at country and regional levels. | Verified |
+| World Bank Migration & Labor Mobility | Migration and labor mobility context; migrant population and migration drivers | The World Bank Migration & Labor Mobility page describes global migration pressures, origin/transit/destination context, labor mobility, and migration-related research and results. | Verified |
+| World Bank Remittances / KNOMAD | Remittance context; remittance flows; remittance-related data indicators | The World Bank Remittances / KNOMAD page describes remittance flows and links to remittance-related data indicators such as personal remittances received and paid. | Verified |
 | IPUMS International | Household and family variables; birthplace, migration, citizenship-adjacent census variables | IPUMS International supports cross-national household composition, relationship, marital status, birthplace, migration, and demographic variables in census microdata. | Verified, account/license may be required |
 
 ## Language, Culture, And Locale
