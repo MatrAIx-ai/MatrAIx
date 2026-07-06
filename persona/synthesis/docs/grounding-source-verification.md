@@ -97,7 +97,6 @@ source-level evidence.
 | Source | Evidence to look for | Observed evidence | Status |
 | --- | --- | --- | --- |
 | International Personality Item Pool | Public-domain personality items and scales; Big Five and related constructs | IPIP provides public-domain personality item pools and scales, supporting Big Five and related psychometric constructs. | Verified |
-| SAPA Project | Personality and ability assessment; psychometric research data | SAPA Project supports personality and psychometric grounding through online assessment and public research resources. | Verified |
 | Midlife in the United States | Longitudinal survey; psychosocial, personality, wellbeing, health measures | MIDUS provides longitudinal survey resources covering health, personality, wellbeing, and psychosocial constructs. | Verified, U.S.-focused |
 
 ## Health, Disability, And Accessibility

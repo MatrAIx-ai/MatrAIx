@@ -18,7 +18,7 @@ documentation, and follow-up validation.
 | Household / family / marital status | Household size, family structure, marital and parental status | ACS PUMS; IPUMS International; IPUMS USA; UN Population Division; OECD Family Database; DHS Program; UNICEF MICS |
 | Religion / religiosity | Religious affiliation, denomination, belief, and religiosity | Pew Research Center Religion; World Values Survey; General Social Survey; ARDA |
 | Values / politics / trust / social attitudes | Political lean, trust, social values, public opinion | World Values Survey; General Social Survey; Pew Research Center; European Social Survey; International Social Survey Programme; Gallup World Poll; Afrobarometer; Arab Barometer; Asian Barometer; Latinobarometro; Eurobarometer |
-| Personality / psychometrics | Personality traits, psychological scales, and self-report constructs | IPIP; SAPA Project; MIDUS |
+| Personality / psychometrics | Personality traits, psychological scales, and self-report constructs | IPIP; MIDUS |
 | Health / disability / accessibility | Disability, health status, accessibility needs, assistive technology | WHO Global Health Observatory; IHME Global Burden of Disease; ACS PUMS; CDC NHIS; CDC BRFSS; DHS Program; UNICEF MICS |
 | Lifestyle / time use / consumption | Time use, household spending, daily activity, and lifestyle priors | American Time Use Survey; Consumer Expenditure Surveys; OECD Time Use Database |
 | Technology / internet access / digital behavior | Internet access, digital adoption, technical familiarity | ITU statistics; World Bank WDI; DataReportal; Pew Internet & Technology; Stack Overflow Survey |
@@ -96,7 +96,6 @@ documentation, and follow-up validation.
 ### Personality And Psychometrics
 
 - International Personality Item Pool: https://ipip.ori.org/
-- SAPA Project: https://www.sapa-project.org/
 - Midlife in the United States: https://midus.wisc.edu/
 
 ### Health, Disability, And Accessibility
@@ -172,7 +171,6 @@ These shorthand keys identify the grounding sources referenced above.
 - `pew_religion`: Pew Research Center Religion
 - `pew_technology`: Pew Internet & Technology
 - `pew_rls_2023_2024`: Pew 2023-24 Religious Landscape Study
-- `sapa_project`: SAPA Project
 - `un_wpp_2024`: UN World Population Prospects 2024
 - `un_world_urbanization_prospects`: UN World Urbanization Prospects
 - `un_international_migrant_stock`: UN International Migrant Stock
