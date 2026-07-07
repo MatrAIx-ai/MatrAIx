@@ -3,6 +3,8 @@
 This module owns persona data, schema, curation, and persona adherence
 evaluation.
 
+**Persona team guides:** [docs/personas/README.md](../docs/personas/README.md) (data → schema → grounding)
+
 Current layout:
 
 ```text
@@ -49,7 +51,7 @@ The first curated import brought in:
 - `schema/dimensions.json`
 - `schema/validators/schema_validator.py`
 - `curation/attribute_pool/` docs and pipeline scripts
-- two sample personas under `datasets/bench-dev-sample/`
+- 200 dev personas under `datasets/bench-dev-sample/` (82 dimensions, version 1.0)
 - `tasks/`, `scripts/`, `validators/`, and `reporting/` for the curated
   persona grounding task layer
 
