@@ -96,13 +96,17 @@ tail -f persona/human_extraction/jobs/sbatch_logs/extract_shard_amazon.job_<JOBI
 ```
 
 ## Running as a different user (colleague)
-The defaults are pinned to xiaomin's paths. To run under another account, set
-these overrides (env or edit the job) so nothing lands in the wrong home/scratch:
+The Slurm job keeps xiaomin's paths as defaults, but both the job and Python
+runner can be driven by environment variables. To run under another account, set
+these overrides so nothing lands in the wrong home/scratch:
+- `REPO_ROOT` -> the colleague's checkout of this repository.
+- `PYTHON_BIN` or `PY` -> the Python executable for the vLLM environment.
 - `HF_HOME`, `HF_HUB_CACHE`, `HF_XET_CACHE`, `VLLM_CACHE_ROOT` → the colleague's
   netscratch (e.g. `/n/netscratch/lu_lab/Lab/<user>/mycache/...`).
 - `OUT_DIR` → a writable output dir (can stay in the repo `data/amazon/extraction_v1`
   if the repo is on shared lab storage and group-writable; otherwise point it
   elsewhere and copy back).
+- Optional data/schema overrides: `DATA_DIR`, `SELECTION_PATH`, `DIMENSIONS_JSON`.
 - HF token: export `HF_TOKEN=<token-with-gated-access>` in their shell.
 - Conda env: either get read access to `env05`, or recreate an equivalent env
   (vLLM ≥ 0.24.0 + torch 2.11 cu129). Setup details are in
@@ -110,6 +114,14 @@ these overrides (env or edit the job) so nothing lands in the wrong home/scratch
   in `application/persona_eval/RECAI_ENV_NOTES.md` and `UNIFIED_RUNTIME.md`.
 - `selected_users_100k.parquet` is git-ignored: copy it over, or regenerate via
   `explore_amazon_data.ipynb` (deterministic, `SEED=20260705`).
+
+Example override pattern:
+```bash
+cd persona/human_extraction/jobs
+sbatch --array=0%1 \
+  --export=ALL,REPO_ROOT=/path/to/MatrAIx,PYTHON_BIN=/path/to/python,HF_HOME=/path/to/hf_home,VLLM_CACHE_ROOT=/path/to/vllm,LIMIT=6,TP=1,QUANT=fp8 \
+  extract_shard_amazon.job
+```
 
 ## Sanity check after some shards finish
 ```bash
