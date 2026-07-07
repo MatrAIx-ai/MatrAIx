@@ -29,19 +29,28 @@ import re
 import time
 from pathlib import Path
 
-CACHE = "/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
-os.environ.setdefault("HF_HOME", CACHE)
-os.environ.setdefault("HF_HUB_CACHE", f"{CACHE}/hub")
-os.environ.setdefault("HF_XET_CACHE", f"{CACHE}/xet")
+DEFAULT_REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(os.environ.get("REPO_ROOT", DEFAULT_REPO_ROOT)).expanduser().resolve()
+DEFAULT_CACHE = REPO_ROOT / ".cache/hf_home"
+CACHE = Path(os.environ.get("HF_HOME", DEFAULT_CACHE)).expanduser().resolve()
+os.environ.setdefault("HF_HOME", str(CACHE))
+os.environ.setdefault("HF_HUB_CACHE", str(CACHE / "hub"))
+os.environ.setdefault("HF_XET_CACHE", str(CACHE / "xet"))
+os.environ.setdefault("VLLM_CACHE_ROOT", str(REPO_ROOT / ".cache/vllm"))
 os.environ.setdefault("VLLM_WORKER_MULTIPROC_METHOD", "spawn")
 
 import pandas as pd  # noqa: E402
 from vllm import LLM, SamplingParams  # noqa: E402
 
-REPO_ROOT = Path("/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx")
-DATA_DIR = REPO_ROOT / "persona/human_extraction/data"
-SELECTION = DATA_DIR / "amazon/selected_users_100k.parquet"
-DIMENSIONS_JSON = REPO_ROOT / "persona/schema/dimensions.json"
+DATA_DIR = Path(os.environ.get(
+    "DATA_DIR", REPO_ROOT / "persona/human_extraction/data"
+)).expanduser().resolve()
+SELECTION = Path(os.environ.get(
+    "SELECTION_PATH", DATA_DIR / "amazon/selected_users_100k.parquet"
+)).expanduser().resolve()
+DIMENSIONS_JSON = Path(os.environ.get(
+    "DIMENSIONS_JSON", REPO_ROOT / "persona/schema/dimensions.json"
+)).expanduser().resolve()
 MODEL_ID = "Qwen/Qwen3.6-35B-A3B"
 
 DATASET_REPO = "MatrAIx2026/MatrAIx2026"
@@ -253,7 +262,7 @@ def main() -> None:
         max_num_seqs=args.max_num_seqs,
         enable_prefix_caching=True,
         trust_remote_code=True,
-        download_dir=f"{CACHE}/hub",
+        download_dir=os.environ["HF_HUB_CACHE"],
     )
     if args.quantization and args.quantization.lower() != "none":
         llm_kwargs["quantization"] = args.quantization

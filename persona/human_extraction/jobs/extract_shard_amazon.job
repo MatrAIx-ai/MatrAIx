@@ -32,14 +32,14 @@ module load python/3.10.13-fasrc01
 module load cuda/12.4.1-fasrc01
 conda activate env05
 
-REPO_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx"
-PY="/n/home08/xiaominli/.conda/envs/env05/bin/python"
+REPO_ROOT="${REPO_ROOT:-/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx}"
+PY="${PYTHON_BIN:-${PY:-/n/home08/xiaominli/.conda/envs/env05/bin/python}}"
 
 # --- caches on netscratch (never home) ---
-export HF_HOME="/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
-export HF_HUB_CACHE="$HF_HOME/hub"
-export HF_XET_CACHE="$HF_HOME/xet"
-export VLLM_CACHE_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/mycache/vllm"
+export HF_HOME="${HF_HOME:-/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home}"
+export HF_HUB_CACHE="${HF_HUB_CACHE:-$HF_HOME/hub}"
+export HF_XET_CACHE="${HF_XET_CACHE:-$HF_HOME/xet}"
+export VLLM_CACHE_ROOT="${VLLM_CACHE_ROOT:-/n/netscratch/lu_lab/Lab/xiaominli/mycache/vllm}"
 export VLLM_WORKER_MULTIPROC_METHOD=spawn
 mkdir -p "$VLLM_CACHE_ROOT" sbatch_logs
 
