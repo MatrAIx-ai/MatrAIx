@@ -31,9 +31,16 @@ ollama pull llama3.1
   future work, not deleted.
 - `fixtures/products.json` — 5 real, curated products with verified
   Amazon links (`amazon_url`/`asin`), attributes, and provenance notes.
-- `scripts/add_product.py` — validate-and-append tool for adding more
-  products to the fixture (Amazon scraping isn't viable — see the
-  docstring in `pipeline/product_source.py`).
+- `scripts/scrape_amazon.py` — fetches real product data (title, price,
+  rating, review count) from an Amazon product page via a plain HTTP GET
+  with browser-like headers. Rating/review count parse reliably for most
+  pages; price is unreliable on pages with size/color variant grids or
+  bundled add-on offers — always spot-check price and confirm the
+  scraped title matches the product you expected (ASINs occasionally
+  get reassigned to a different listing over time).
+- `scripts/add_product.py` — validate-and-append tool for adding
+  scraped/researched products to the fixture (required fields, ASIN
+  format, rating bounds, duplicate detection).
 - `pipeline/` — the survey pipeline: product loading, prompt rendering,
   response parsing/validation, and retention-rate metrics.
 - `tests/` — pytest unit tests (mocked model, no network/Ollama needed).
@@ -69,9 +76,19 @@ launches the run detached in the background. Results land in
 ## Adding products
 
 ```bash
+# 1. Find the product's real amazon.com/.../dp/<ASIN> URL (web search).
+# 2. Scrape title/price/rating/review_count:
+python3 scripts/scrape_amazon.py <amazon_url> [<amazon_url> ...]
+
+# 3. Build a JSON array of product objects (see PRODUCT_SCHEMA in
+#    scripts/add_product.py) and validate + append:
 python3 scripts/add_product.py new_products.json
 ```
 
-`new_products.json` must be a JSON array of product objects. The script
-validates required fields, ASIN format, URL/ASIN consistency, rating
-bounds, and duplicate ASINs before appending to `fixtures/products.json`.
+Always confirm the scraped `product_name` matches the product you
+searched for, and double-check `original_price` manually on pages with
+size/color variants or bundled add-ons — see the caveats in
+`scripts/scrape_amazon.py` and `pipeline/product_source.py`.
+`scripts/add_product.py` validates required fields, ASIN format,
+URL/ASIN consistency, rating bounds, and duplicate ASINs before
+appending to `fixtures/products.json`.

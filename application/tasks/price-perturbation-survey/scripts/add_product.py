@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """Validate and append real, Amazon-linked products to fixtures/products.json.
 
-Amazon's product pages are JS-rendered: a plain HTTP fetch returns only an
-empty ``<head>`` with no price/rating/attribute data, and Amazon actively
-blocks automated scraping traffic. So this is *not* a fully unattended
-scraper — it's the validate/append half of a two-step, human-or-agent-
-assisted workflow for growing the product list with real data:
+This is the validate/append half of a two-step workflow for growing the
+product list with real data:
 
-  1. Research (web search, done by a person or an LLM agent with web
-     access): for each product, find its real ``amazon.com/.../dp/<ASIN>``
-     listing (Amazon's search index is not JS-gated the way product pages
-     are, so a plain web search for the product name reliably surfaces a
-     real URL), then gather price, star rating, review count, and specs
-     from the manufacturer's site and/or other retailers/review sites
-     (since Amazon's own page won't yield this to an automated fetch).
+  1. Research + scrape: find a product's real ``amazon.com/.../dp/<ASIN>``
+     listing (a plain web search for the product name reliably surfaces
+     one — Amazon's search index isn't gated the way one might assume),
+     then fetch price/rating/review-count/title with
+     ``scripts/scrape_amazon.py`` (a plain HTTP GET with browser headers
+     returns the full server-rendered page — no headless browser needed).
+     Always double check the scraped ``product_name`` actually matches
+     the product you searched for: ASINs occasionally get reassigned to
+     an entirely different listing over time. Price extraction is
+     unreliable on pages with size/color variant grids or bundled add-on
+     offers — cross-check those manually rather than trusting the scrape.
   2. Validation (this script): build a dict matching ``PRODUCT_SCHEMA``
      below for each product and pass it to ``add_products`` (or run this
      file as a CLI against a JSON file of new entries). It checks required

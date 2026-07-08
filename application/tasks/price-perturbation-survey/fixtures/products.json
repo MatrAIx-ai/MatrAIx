@@ -8,8 +8,8 @@
     "image_url": null,
     "amazon_url": "https://www.amazon.com/Cuisinart-DFP-14BCNY-Processor-Brushed-Stainless/dp/B01AXM4WV2",
     "asin": "B01AXM4WV2",
-    "rating": 4.7,
-    "review_count": 10000,
+    "rating": 4.6,
+    "review_count": 22229,
     "attributes": {
       "color": "Brushed Stainless Steel",
       "material": "stainless steel / BPA-free plastic",
@@ -24,7 +24,7 @@
       "Dishwasher-safe parts",
       "3-year limited warranty on unit, 5-year on motor"
     ],
-    "notes": "Rating/review_count aggregated from public retailer listings (Cuisinart.com, Best Buy, P.C. Richard & Son); Amazon's own page is JS-rendered and blocks automated scraping, so its live figures could not be confirmed directly. amazon_url/asin verified via Amazon search index."
+    "notes": "rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08); all matched exactly what a manual page view shows. amazon_url/asin verified via Amazon search index."
   },
   {
     "product_name": "Brooks Ghost 15 Running Shoes, Men's (Koy/Truffle/Whisper, Size 9)",
@@ -35,8 +35,8 @@
     "image_url": null,
     "amazon_url": "https://www.amazon.com/Brooks-Mens-Ghost-Neutral-Running/dp/B09RRZXQHS",
     "asin": "B09RRZXQHS",
-    "rating": 4.5,
-    "review_count": null,
+    "rating": 4.7,
+    "review_count": 9305,
     "attributes": {
       "color": "Koy/Truffle/Whisper",
       "material": "engineered mesh upper",
@@ -52,14 +52,14 @@
       "13.2mm heel-to-toe drop",
       "Neutral support, suited to daily training"
     ],
-    "notes": "Exact Amazon aggregate rating/review_count could not be confirmed (page is JS-rendered and blocks scraping); rating is an approximate midpoint based on visible individual review scores and third-party review coverage. amazon_url/asin verified via Amazon search index."
+    "notes": "rating/review_count live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). original_price ($139.95) is manually verified, not scraped \u2014 this listing has a size/color variant grid, and the scraper's price extraction picks up a swatch-specific price rather than the selected variant's buybox price on pages like this one; treat scraped prices on apparel pages as unreliable until that's fixed. amazon_url/asin verified via Amazon search index."
   },
   {
     "product_name": "Osprey Daylite Plus Daypack",
     "brand": "Osprey",
     "category": "Outdoor & Sports",
     "description": "A 20-liter everyday daypack with a padded laptop/tablet sleeve, mesh-covered foam backpanel for ventilation, and front/side stretch mesh pockets for quick-access items. Made from 100% recycled, bluesign-approved polyester.",
-    "original_price": 70.00,
+    "original_price": 70.0,
     "image_url": null,
     "amazon_url": "https://www.amazon.com/Osprey-10003236-Daylite-Plus-Daypack/dp/B0BVGPLF7C",
     "asin": "B0BVGPLF7C",
@@ -80,19 +80,19 @@
       "Made from 100% recycled, bluesign-approved fabric",
       "Covered by Osprey's All Mighty Guarantee"
     ],
-    "notes": "review_count reflects reporting of 'over 2,000 five-star ratings on Amazon', not a confirmed total review count; Amazon's own page is JS-rendered and blocks automated scraping. amazon_url/asin verified via Amazon search index."
+    "notes": "scripts/scrape_amazon.py could not find this product's own rating/review widget (2026-07-08 attempt) \u2014 this listing's page uses a different template than the other 4 fixture products, without the usual acrCustomerReviewText markup. rating/review_count below are unverified estimates (see prior note: 'over 2,000 five-star ratings on Amazon' reporting) and need manual confirmation. amazon_url/asin verified via Amazon search index."
   },
   {
     "product_name": "CATAN Board Game (6th Edition)",
     "brand": "CATAN Studio",
     "category": "Toys & Games",
     "description": "Award-winning strategy board game for 3 to 4 players. Trade and build settlements, cities, and roads on the island of Catan. The 6th Edition features a streamlined rulebook, refreshed artwork, and updated component storage.",
-    "original_price": 54.99,
+    "original_price": 39.99,
     "image_url": null,
     "amazon_url": "https://www.amazon.com/CATAN-Classic-Strategy-Players-Playtime/dp/B0DYK1ZH2D",
     "asin": "B0DYK1ZH2D",
     "rating": 4.8,
-    "review_count": 14000,
+    "review_count": 39673,
     "attributes": {
       "edition": "6th Edition",
       "players": "3-4",
@@ -107,7 +107,7 @@
       "High replay value and strong social/negotiation gameplay",
       "Ages 10+, 3-4 players, 60-90 minute playtime"
     ],
-    "notes": "Rating/review_count reflect the broader CATAN base-game listing history (~4.8 stars, 14,000+ reviews) rather than a live-confirmed count for the 6th Edition ASIN specifically, since Amazon's page is JS-rendered and blocks scraping. amazon_url/asin verified via Amazon search index."
+    "notes": "rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08); price dropped from the previously-recorded $54.99 to $39.99, reflecting an actual Amazon price change, not a scraping error. amazon_url/asin verified via Amazon search index."
   },
   {
     "product_name": "Logitech MX Master 3S Wireless Mouse (Graphite, Standard Edition)",
@@ -118,8 +118,8 @@
     "image_url": null,
     "amazon_url": "https://www.amazon.com/Logitech-Wireless-Ultra-fast-Scrolling-Bluetooth/dp/B09HM94VDS",
     "asin": "B09HM94VDS",
-    "rating": 4.7,
-    "review_count": 18562,
+    "rating": 4.5,
+    "review_count": 8651,
     "attributes": {
       "color": "Graphite",
       "connectivity": "Bluetooth or Logi Bolt USB receiver",
@@ -135,6 +135,31 @@
       "USB-C rechargeable, up to 70 days per charge",
       "Multi-device Bluetooth or Logi Bolt connectivity"
     ],
-    "notes": "amazon_url/asin and rating/review_count verified via Amazon search index and cross-referenced tech reviews (page itself is JS-rendered and blocks automated scraping of live figures)."
+    "notes": "rating/review_count live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). original_price ($99.99) is manually verified, not scraped \u2014 this page has add-on/bundle offers that the scraper's price extraction can mistake for the buybox price. amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker (6 Quart)",
+    "brand": "Instant Pot",
+    "category": "Kitchen",
+    "description": "A 7-in-1 electric pressure cooker that replaces a pressure cooker, slow cooker, rice cooker, steamer, saute pan, yogurt maker, and warmer. Stainless steel inner pot, 14 one-touch smart programs, and companion app with 800+ recipes.",
+    "original_price": 109.99,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Instant-Pot-Multi-Use-Programmable-Pressure/dp/B00FLYWNYQ",
+    "asin": "B00FLYWNYQ",
+    "rating": 4.7,
+    "review_count": 185167,
+    "attributes": {
+      "color": "Stainless Steel",
+      "capacity": "6 quarts",
+      "programs": "14 one-touch smart programs"
+    },
+    "features": [
+      "7-in-1 functionality: pressure cook, slow cook, rice cooker, steamer, saute, yogurt maker, warmer",
+      "14 one-touch smart programs",
+      "Stainless steel inner pot",
+      "Companion app with 800+ recipes",
+      "UL/ULC certified, 10+ safety mechanisms"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
   }
 ]

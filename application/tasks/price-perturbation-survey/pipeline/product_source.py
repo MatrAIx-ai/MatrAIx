@@ -70,19 +70,29 @@ class FixtureProductSource(ProductSource):
 class AmazonProductSource(ProductSource):
     """Stub for a live Amazon product scraper.
 
-    This exists to demonstrate the pluggable interface. Amazon product
-    pages are JS-rendered and return no usable data to a plain HTTP
-    fetch (confirmed empirically — only an empty ``<head>`` comes
-    back), plus scraping would run into anti-bot measures, rate
-    limiting, and Amazon's Terms of Service. Real product data (with
-    verified Amazon links) is instead curated via web search — see
-    ``scripts/add_product.py`` — and stored in the fixture files.
-    Using ``FixtureProductSource`` is strongly recommended for all
-    automated/test runs.
+    This exists to demonstrate the pluggable interface. A plain HTTP GET
+    with a realistic browser User-Agent (letting the client negotiate
+    gzip) does return the full server-rendered product page — see
+    ``scripts/scrape_amazon.py``, which extracts title/price/rating/
+    review count via regex. Rating and review count parse reliably for
+    most product pages; price is unreliable on pages with size/color
+    variant grids (the buybox price isn't always the first candidate
+    match), and rating/review markup occasionally uses a different
+    template Amazon serves for some listings. Treat scraped output as a
+    starting point to spot-check, not ground truth to trust blindly.
+
+    Scraping should still be paced between requests (~15-20s+) rather
+    than fired in a tight loop, and stays subject to Amazon's Terms of
+    Service. This class itself remains unimplemented; real product data
+    is curated via ``scripts/scrape_amazon.py`` + ``scripts/add_product.py``
+    and stored in the fixture files. Using ``FixtureProductSource`` is
+    strongly recommended for all automated/test runs.
     """
 
     def get_products(self) -> list[Product]:
         raise NotImplementedError(
-            "Live Amazon scraping is not implemented. "
-            "Use FixtureProductSource for offline/deterministic runs."
+            "Live Amazon scraping is not implemented as a ProductSource. "
+            "Use scripts/scrape_amazon.py to fetch data, then "
+            "scripts/add_product.py to add it to the fixture. Use "
+            "FixtureProductSource for offline/deterministic runs."
         )
