@@ -97,12 +97,19 @@ def parse_product_page(html: str, url: str) -> ScrapedProduct:
     title_match = _TITLE_RE.search(html)
     product_name = _clean_title(title_match.group(1)) if title_match else ""
 
+    # Pages can have several "price to pay" anchors (buybox, renewed
+    # offers, bundles, "compare with similar items" tables). Only accept
+    # a price found within a short window of an anchor — searching
+    # unbounded to the end of the document risks picking up an unrelated
+    # price far away. Even so, treat scraped price as best-effort: see
+    # module docstring and the caller-side spot-check requirement.
     original_price = None
-    anchor_match = _PRICE_ANCHOR_RE.search(html)
-    if anchor_match:
-        price_match = _OFFSCREEN_PRICE_RE.search(html, anchor_match.end())
+    for anchor_match in _PRICE_ANCHOR_RE.finditer(html):
+        window = html[anchor_match.end(): anchor_match.end() + 300]
+        price_match = _OFFSCREEN_PRICE_RE.search(window)
         if price_match:
             original_price = float(price_match.group(1).replace(",", ""))
+            break
     if original_price is None:
         # Fallback for page layouts without the price-to-pay marker.
         price_match = _OFFSCREEN_PRICE_RE.search(html)

@@ -161,5 +161,224 @@
       "UL/ULC certified, 10+ safety mechanisms"
     ],
     "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Amazon Kindle Paperwhite 16GB (Black)",
+    "brand": "Amazon",
+    "category": "Electronics",
+    "description": "A 7-inch glare-free e-reader display with 16GB storage, 20% faster page turns than the previous generation, and weeks of battery life. Waterproof, with adjustable warm light for reading day or night.",
+    "original_price": 159.99,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P",
+    "asin": "B0CFPJYX7P",
+    "rating": 4.6,
+    "review_count": 19603,
+    "attributes": {
+      "color": "Black",
+      "storage": "16GB",
+      "display": "7-inch glare-free, 300 ppi"
+    },
+    "features": [
+      "7-inch glare-free display, 300 ppi",
+      "20% faster page turns than previous generation",
+      "Adjustable warm light",
+      "Waterproof (IPX8)",
+      "Weeks of battery life on a single charge"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Ninja Professional Blender (BL610)",
+    "brand": "Ninja",
+    "category": "Kitchen",
+    "description": "A 1000-watt countertop blender with Total Crushing Technology blades and an XL 72-oz pitcher, built for smoothies, drink mixing, ice crushing, and frozen fruit blending.",
+    "original_price": 99.0,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Ninja-Professional-Countertop-Technology-BL610/dp/B00NGV4506",
+    "asin": "B00NGV4506",
+    "rating": 4.6,
+    "review_count": 59233,
+    "attributes": {
+      "color": "Black & Grey",
+      "wattage": "1000W",
+      "capacity": "72 oz"
+    },
+    "features": [
+      "1000-watt motor",
+      "Total Crushing Technology blades",
+      "XL 72-oz pitcher",
+      "Crushes ice into snow in seconds",
+      "Dishwasher-safe parts"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Keurig K-Mini Single Serve Coffee Maker (Black)",
+    "brand": "Keurig",
+    "category": "Kitchen",
+    "description": "A compact single-serve K-Cup pod coffee maker, under 5 inches wide, that brews 6 to 12 oz cup sizes. Includes cord storage and an auto-off feature 90 seconds after the last brew.",
+    "original_price": 72.49,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Keurig-K-Mini-Single-Serve-Coffee/dp/B07GV2S1GS",
+    "asin": "B07GV2S1GS",
+    "rating": 4.3,
+    "review_count": 108407,
+    "attributes": {
+      "color": "Black",
+      "brew_size": "6 to 12 oz",
+      "width": "under 5 inches"
+    },
+    "features": [
+      "Compact design, under 5 inches wide",
+      "Brews 6 to 12 oz cup sizes",
+      "Cord storage for small spaces",
+      "Auto-off 90 seconds after last brew",
+      "Compatible with any K-Cup pod"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "LEGO Classic Creative Bricks 10692 (221 Pieces)",
+    "brand": "LEGO",
+    "category": "Toys & Games",
+    "description": "A 221-piece building set with bricks in 29 different colors, designed as an open-ended learning toy for imaginative building and creative play.",
+    "original_price": 24.29,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/LEGO-Classic-Creative-Building-Learning/dp/B00NHQFA5E",
+    "asin": "B00NHQFA5E",
+    "rating": 4.7,
+    "review_count": 11894,
+    "attributes": {
+      "pieces": "221",
+      "colors": "29"
+    },
+    "features": [
+      "221 LEGO bricks in 29 colors",
+      "Open-ended creative building, no single fixed model",
+      "Compatible with all LEGO building sets",
+      "Ages 4+"
+    ],
+    "notes": "rating/review_count live-scraped via scripts/scrape_amazon.py (2026-07-08). original_price is manually cross-checked, not the scraper's first match: this page has multiple 'price to pay'-style anchors (likely a smaller add-on/companion item and a bundle), and the first one scraped ($9.09) was implausibly low for a 221-piece set; $24.29 came from a later anchor on the same page and matches typical retail pricing for this set. amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Bose QuietComfort 45 Wireless Noise Cancelling Headphones (Triple Black)",
+    "brand": "Bose",
+    "category": "Electronics",
+    "description": "Over-ear wireless Bluetooth headphones with active noise cancellation, Aware Mode for ambient awareness, and up to 24 hours of battery life per charge.",
+    "original_price": 359.0,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Bose-QuietComfort-45-Bluetooth-Canceling-Headphones/dp/B098FKXT8L",
+    "asin": "B098FKXT8L",
+    "rating": 4.6,
+    "review_count": 17205,
+    "attributes": {
+      "color": "Triple Black",
+      "connectivity": "Bluetooth",
+      "battery": "up to 24 hours"
+    },
+    "features": [
+      "Active noise cancellation",
+      "Aware Mode for ambient sound",
+      "Up to 24 hours battery life",
+      "Adjustable EQ (bass/mid/treble)",
+      "Built-in microphone for calls"
+    ],
+    "notes": "product_name/rating/review_count live-scraped via scripts/scrape_amazon.py (2026-07-08). original_price came from a secondary anchor match on a page with multiple 'price to pay'-style elements (renewed/bundle offers); worth a manual spot-check before treating as ground truth. amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "YETI Rambler 20 oz Tumbler (Black)",
+    "brand": "YETI",
+    "category": "Kitchen",
+    "description": "A stainless steel, vacuum-insulated tumbler with a MagSlider lid that keeps drinks cold or hot for hours. Dishwasher safe and built for daily, everyday use.",
+    "original_price": 35.0,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/YETI-Rambler-Stainless-Insulated-MagSlider/dp/B073WJMKHN",
+    "asin": "B073WJMKHN",
+    "rating": 4.8,
+    "review_count": 146623,
+    "attributes": {
+      "color": "Black",
+      "capacity": "20 oz",
+      "material": "stainless steel"
+    },
+    "features": [
+      "Double-wall vacuum insulation",
+      "MagSlider lid",
+      "Dishwasher safe",
+      "Stainless steel, no sweat exterior"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Fitbit Charge 6 Fitness Tracker (Obsidian/Black)",
+    "brand": "Fitbit",
+    "category": "Electronics",
+    "description": "A fitness and health tracker with heart rate monitoring on exercise equipment, built-in Google apps (Maps, Wallet), and a 3-month Google Health Premium membership included. Small and large bands included.",
+    "original_price": 94.0,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Fitbit-Charge-Fitness-Tracker-Google/dp/B0CC62ZG1M",
+    "asin": "B0CC62ZG1M",
+    "rating": 4.1,
+    "review_count": 21075,
+    "attributes": {
+      "color": "Obsidian/Black",
+      "bands_included": "Small & Large"
+    },
+    "features": [
+      "Heart rate monitoring, including on exercise equipment",
+      "Built-in Google Maps and Google Wallet",
+      "3-month Google Health Premium membership included",
+      "Sleep and activity tracking",
+      "Small and large bands included"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08); price may reflect a temporary discount from the $159.95 MSRP rather than a stable everyday price. amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "iRobot Roomba 694 Robot Vacuum",
+    "brand": "iRobot",
+    "category": "Home",
+    "description": "A Wi-Fi connected robot vacuum with personalized cleaning recommendations, self-charging, and compatibility with Alexa. Good for pet hair, carpets, and hard floors, with a 3-stage cleaning system.",
+    "original_price": 299.99,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/iRobot-Vacuum-Wi-Fi-Connectivity-Carpets-Self-Charging/dp/B08SP5GYJP",
+    "asin": "B08SP5GYJP",
+    "rating": 4.2,
+    "review_count": 25591,
+    "attributes": {
+      "connectivity": "Wi-Fi",
+      "runtime": "up to 90 minutes"
+    },
+    "features": [
+      "3-stage cleaning system",
+      "Wi-Fi connectivity, works with Alexa and Google Assistant",
+      "Self-charging and resumes cleaning",
+      "Personalized cleaning recommendations via app",
+      "Good for pet hair, carpets, and hard floors"
+    ],
+    "notes": "product_name/rating/review_count live-scraped via scripts/scrape_amazon.py (2026-07-08). This page had 3 different 'price to pay'-style anchors ($419.99, $499.99, $299.99), likely base unit vs. bundle offers; $299.99 was chosen as the most plausible base-unit price and matches typical retail pricing for this model, but treat it as a manual best estimate, not a confirmed scrape. amazon_url/asin verified via Amazon search index."
+  },
+  {
+    "product_name": "Nintendo Switch Pro Controller",
+    "brand": "Nintendo",
+    "category": "Electronics",
+    "description": "The official wireless Pro Controller for Nintendo Switch, with motion controls, HD rumble, and built-in amiibo functionality (NFC touchpoint).",
+    "original_price": 54.99,
+    "image_url": null,
+    "amazon_url": "https://www.amazon.com/Nintendo-Switch-Pro-Controller/dp/B01NAWKYZ0",
+    "asin": "B01NAWKYZ0",
+    "rating": 4.8,
+    "review_count": 74021,
+    "attributes": {
+      "connectivity": "wireless",
+      "compatibility": "Nintendo Switch, Switch Lite (docked play only)"
+    },
+    "features": [
+      "Motion controls",
+      "HD rumble",
+      "Built-in amiibo functionality (NFC touchpoint)",
+      "Standard button layout with plus/minus buttons",
+      "Rechargeable via USB-C"
+    ],
+    "notes": "product_name/rating/review_count/original_price live-scraped from the Amazon product page via scripts/scrape_amazon.py (2026-07-08). amazon_url/asin verified via Amazon search index."
   }
 ]

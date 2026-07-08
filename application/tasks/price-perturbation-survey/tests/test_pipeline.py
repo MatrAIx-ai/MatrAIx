@@ -93,7 +93,7 @@ class TestProduct:
     def test_fixture_source_loads_products(self) -> None:
         source = FixtureProductSource()
         products = source.get_products()
-        assert len(products) == 6
+        assert len(products) == 15
         for p in products:
             assert isinstance(p, Product)
             assert p.product_name
@@ -253,8 +253,8 @@ class TestPipelineEndToEnd:
             model_fn=_mock_model_always_yes,
         )
         assert isinstance(result, PipelineResult)
-        assert result.prompts_rendered == 6  # 6 fixture products
-        assert len(result.decisions) == 6
+        assert result.prompts_rendered == 15  # 15 fixture products
+        assert len(result.decisions) == 15
         assert result.prompts_failed == 0
         assert result.retention_rate == 1.0
         for d in result.decisions:
@@ -262,7 +262,7 @@ class TestPipelineEndToEnd:
             assert d.reasoning
 
     def test_pipeline_with_personas(self) -> None:
-        """Pipeline runs with 2 personas × 6 products = 12 prompts."""
+        """Pipeline runs with 2 personas × 15 products = 30 prompts."""
         personas = {
             "budget_buyer": "You are a budget-conscious shopper.",
             "enthusiast": "You are a tech enthusiast who values quality.",
@@ -273,8 +273,8 @@ class TestPipelineEndToEnd:
             persona_prompts=personas,
         )
         assert isinstance(result, PipelineResult)
-        assert result.prompts_rendered == 12  # 6 products × 2 personas
-        assert len(result.decisions) == 12
+        assert result.prompts_rendered == 30  # 15 products × 2 personas
+        assert len(result.decisions) == 30
         assert result.prompts_failed == 0
         assert 0.0 <= result.retention_rate <= 1.0
 
