@@ -53,6 +53,15 @@ class FixtureProductSource(ProductSource):
                 description=item["description"],
                 original_price=float(item["original_price"]),
                 image_url=item.get("image_url"),
+                attributes=item.get("attributes"),
+                brand=item.get("brand"),
+                category=item.get("category"),
+                amazon_url=item.get("amazon_url"),
+                asin=item.get("asin"),
+                rating=item.get("rating"),
+                review_count=item.get("review_count"),
+                features=item.get("features"),
+                notes=item.get("notes"),
             )
             for item in raw
         ]
@@ -61,11 +70,15 @@ class FixtureProductSource(ProductSource):
 class AmazonProductSource(ProductSource):
     """Stub for a live Amazon product scraper.
 
-    This exists to demonstrate the pluggable interface.  A real
-    implementation would need to handle anti-bot measures, rate
-    limiting, and Amazon's Terms of Service — none of which are
-    addressed here.  Using ``FixtureProductSource`` is strongly
-    recommended for all automated/test runs.
+    This exists to demonstrate the pluggable interface. Amazon product
+    pages are JS-rendered and return no usable data to a plain HTTP
+    fetch (confirmed empirically — only an empty ``<head>`` comes
+    back), plus scraping would run into anti-bot measures, rate
+    limiting, and Amazon's Terms of Service. Real product data (with
+    verified Amazon links) is instead curated via web search — see
+    ``scripts/add_product.py`` — and stored in the fixture files.
+    Using ``FixtureProductSource`` is strongly recommended for all
+    automated/test runs.
     """
 
     def get_products(self) -> list[Product]:

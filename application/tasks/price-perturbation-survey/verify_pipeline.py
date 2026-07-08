@@ -83,21 +83,33 @@ def _mock_model(system_prompt: str | None, user_prompt: str) -> str:
     seed = hash((system_prompt or "", user_prompt)) % 100
 
     if seed < 55:
-        would_buy = "yes"
-        reasoning = (
-            "After thinking about it, the price increase isn't too steep "
-            "and I genuinely need this product. The quality justifies "
-            "the higher cost for me."
-        )
+        survey = {
+            "purchase_intent": "probably_would_buy",
+            "price_fairness": "about_right",
+            "alternative_seeking": "no",
+            "purchase_timing": "buy_now",
+            "necessity_level": "important_but_not_urgent",
+            "reasoning": (
+                "After thinking about it, the price increase isn't too steep "
+                "and I genuinely need this product. The quality justifies "
+                "the higher cost for me."
+            ),
+        }
     else:
-        would_buy = "no"
-        reasoning = (
-            "The 25% price hike pushes this out of my comfort zone. "
-            "I'd rather wait for a sale or look for an alternative "
-            "at the original price point."
-        )
+        survey = {
+            "purchase_intent": "probably_would_not",
+            "price_fairness": "somewhat_high",
+            "alternative_seeking": "yes",
+            "purchase_timing": "wait_for_sale",
+            "necessity_level": "nice_to_have",
+            "reasoning": (
+                "The 25% price hike pushes this out of my comfort zone. "
+                "I'd rather wait for a sale or look for an alternative "
+                "at the original price point."
+            ),
+        }
 
-    return json.dumps({"would_buy": would_buy, "reasoning": reasoning})
+    return json.dumps(survey)
 
 
 def main() -> None:
@@ -185,6 +197,11 @@ def main() -> None:
                 "product_name": d.product_name,
                 "persona_id": d.persona_id,
                 "would_buy": d.would_buy,
+                "purchase_intent": d.purchase_intent,
+                "price_fairness": d.price_fairness,
+                "alternative_seeking": d.alternative_seeking,
+                "purchase_timing": d.purchase_timing,
+                "necessity_level": d.necessity_level,
                 "reasoning": d.reasoning,
             }
             for d in result.decisions

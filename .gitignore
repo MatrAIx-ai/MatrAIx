@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# OS junk
+.DS_Store
+
 # C extensions
 *.so
 
@@ -269,3 +272,6 @@ user-simulator-chat-design.md
 
 # Generated at runtime by PersonaEval sidecar compose helpers
 **/.persona_eval_sidecar/
+
+# Local ad-hoc run outputs for the price-perturbation-survey task
+application/tasks/price-perturbation-survey/output/

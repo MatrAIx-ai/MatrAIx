@@ -1,7 +1,7 @@
-# Price-perturbation purchase-intent survey
+# Product attribute change — purchase-intent survey
 
-A retailer has raised the price of a product you were considering. Read the
-details below and answer as yourself — not as a generic shopper.
+A retailer has modified a product you were considering. Read the details
+below and answer as yourself — not as a generic shopper.
 
 ## Product under consideration
 
@@ -9,24 +9,29 @@ details below and answer as yourself — not as a generic shopper.
 - **Brand:** {{brand}}
 - **Description:** {{product_description}}
 - **Customer rating:** {{rating_line}}
-- **Original price:** ${{original_price}}
-- **New price:** ${{new_price}}
+- **Price:** ${{original_price}}
+
+## What changed
+
+The **{{attribute_name}}** of this product has changed:
+
+- **Before:** {{original_value}}
+- **After:** {{new_value}}
 
 Everything else about the product is unchanged — same features, same
-quality, same retailer. Only the price shown above has changed.
+quality, same retailer, same price. Only the {{attribute_name}} is different.
 
 ## Your task
 
 Before answering, briefly ground yourself in who you are: given your
-background, what does your financial situation and spending priorities
-probably look like, and how much would a price change of this size actually
-matter to you? You don't need an explicit budget or income stated in your
-background to have a clear, grounded opinion — reason from the life you
-actually lead.
+background and preferences, how much would this specific change to the
+{{attribute_name}} actually matter to you? You don't need an explicit
+preference stated in your background to have a clear, grounded opinion —
+reason from the life you actually lead.
 
-Then answer the six questions below honestly, weighing the actual dollar
-prices shown above against your own priorities — not a generic reaction to
-"a price increase" in the abstract.
+Then answer the six questions below honestly, based on what the
+{{attribute_name}} change actually means for you — not a generic reaction to
+"a product changed" in the abstract.
 
 ## Output format
 
@@ -50,29 +55,29 @@ persona's own judgment about this specific product:
 
 ### Field requirements
 
-- **`purchase_intent`** — How likely you are to buy at the new price. Allowed values are exactly:
+- **`purchase_intent`** — How likely you are to buy with the changed {{attribute_name}}. Allowed values are exactly:
   - `"definitely_would_buy"`
   - `"probably_would_buy"`
   - `"might_or_might_not"`
   - `"probably_would_not"`
   - `"definitely_would_not"`
 
-- **`price_fairness`** — How you perceive the new price relative to the product's value. Allowed values are exactly:
+- **`price_fairness`** — How you perceive the price relative to the product's value now that the {{attribute_name}} has changed. Allowed values are exactly:
   - `"much_too_high"`
   - `"somewhat_high"`
   - `"about_right"`
   - `"good_value"`
   - `"great_value"`
 
-- **`alternative_seeking`** — Whether you would look for a competing product or brand instead of paying the new price. Allowed values are exactly `"yes"` or `"no"`.
+- **`alternative_seeking`** — Whether you would look for a competing product or brand instead, because of this change. Allowed values are exactly `"yes"` or `"no"`.
 
-- **`purchase_timing`** — When, if ever, you would make this purchase at the new price. Allowed values are exactly:
+- **`purchase_timing`** — When, if ever, you would make this purchase given the change. Allowed values are exactly:
   - `"buy_now"` — You would go ahead and buy it now.
   - `"wait_for_sale"` — You would hold off and buy only if the price drops or it goes on sale.
-  - `"not_planning_to_buy"` — You would not buy it at this price, now or later.
+  - `"not_planning_to_buy"` — You would not buy it, now or later.
 
 - **`necessity_level`** — How essential this purchase is to you right now. Allowed values are exactly:
-  - `"essential"` — You need this and must buy it regardless of price.
+  - `"essential"` — You need this and must buy it regardless of the change.
   - `"important_but_not_urgent"` — You want this and it matters, but you could delay.
   - `"nice_to_have"` — This is a discretionary purchase you could easily skip.
 

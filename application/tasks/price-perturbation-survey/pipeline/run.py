@@ -25,8 +25,9 @@ from typing import Mapping
 
 from .collector import Decision, ModelCallable, collect_decisions
 from .metrics import compute_retention_rate
+from .perturbation import Perturbation, choose_perturbation
 from .product_source import ProductSource
-from .renderer import RenderedPrompt, render_prompt
+from .renderer import RenderedPrompt, render_prompt, render_prompt_with_perturbation
 
 
 @dataclass(frozen=True)
@@ -109,6 +110,60 @@ def run_pipeline(
                         persona_id=persona_id,
                         factor=factor,
                         template_path=template_path,
+                    )
+                )
+
+    decisions = collect_decisions(rendered, model_fn)
+
+    return PipelineResult(
+        decisions=decisions,
+        retention_rate=compute_retention_rate(decisions),
+        prompts_rendered=len(rendered),
+        prompts_failed=len(rendered) - len(decisions),
+    )
+
+
+def run_pipeline_extended(
+    source: ProductSource,
+    model_fn: ModelCallable,
+    *,
+    persona_prompts: Mapping[str, str | None] | None = None,
+    factor: float = 1.25,
+) -> PipelineResult:
+    """Execute the pipeline with per-product perturbation selection.
+
+    Unlike ``run_pipeline`` which always perturbs price, this variant
+    uses ``choose_perturbation`` to pick the most appropriate attribute
+    to change for each product (color, shape, material, or price as
+    fallback).  The chosen perturbation is recorded on each
+    ``RenderedPrompt`` so results can report what was changed.
+    """
+    products = source.get_products()
+
+    rendered: list[RenderedPrompt] = []
+
+    for product in products:
+        perturbation = choose_perturbation(product, factor)
+
+        if not persona_prompts:
+            rendered.append(
+                render_prompt_with_perturbation(
+                    product,
+                    perturbation,
+                    persona_system_prompt=None,
+                    persona_id=None,
+                    factor=factor,
+                )
+            )
+        else:
+            for persona_id, system_prompt in persona_prompts.items():
+                rendered.append(
+                    render_prompt_with_perturbation(
+                        product,
+                        perturbation,
+                        persona_system_prompt=system_prompt,
+                        persona_id=persona_id,
+                        factor=factor,
                     )
                 )
 

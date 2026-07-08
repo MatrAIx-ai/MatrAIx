@@ -32,32 +32,57 @@ from pipeline.run import PipelineResult, run_pipeline
 # Helpers
 # ---------------------------------------------------------------------------
 
+def _survey_response(**overrides: str) -> str:
+    """Build a valid six-field survey JSON response, with overrides."""
+    data = {
+        "purchase_intent": "probably_would_buy",
+        "price_fairness": "about_right",
+        "alternative_seeking": "no",
+        "purchase_timing": "buy_now",
+        "necessity_level": "important_but_not_urgent",
+        "reasoning": "Good value.",
+    }
+    data.update(overrides)
+    return json.dumps(data)
+
+
 def _mock_model_alternating(system_prompt: str | None, user_prompt: str) -> str:
     """Return alternating yes/no decisions based on prompt content.
 
     Uses a simple hash of the user_prompt to decide deterministically.
     """
     if hash(user_prompt) % 2 == 0:
-        decision = "yes"
-        reasoning = "The price increase is manageable given the product quality."
-    else:
-        decision = "no"
-        reasoning = "The new price exceeds what I am comfortable paying."
-    return json.dumps({"would_buy": decision, "reasoning": reasoning})
+        return _survey_response(
+            purchase_intent="probably_would_buy",
+            reasoning="The price increase is manageable given the product quality.",
+        )
+    return _survey_response(
+        purchase_intent="probably_would_not",
+        price_fairness="somewhat_high",
+        alternative_seeking="yes",
+        purchase_timing="wait_for_sale",
+        reasoning="The new price exceeds what I am comfortable paying.",
+    )
 
 
 def _mock_model_always_yes(system_prompt: str | None, user_prompt: str) -> str:
-    return json.dumps({
-        "would_buy": "yes",
-        "reasoning": "I still want this product regardless of the price bump.",
-    })
+    return _survey_response(
+        purchase_intent="definitely_would_buy",
+        price_fairness="good_value",
+        necessity_level="essential",
+        reasoning="I still want this product regardless of the price bump.",
+    )
 
 
 def _mock_model_always_no(system_prompt: str | None, user_prompt: str) -> str:
-    return json.dumps({
-        "would_buy": "no",
-        "reasoning": "This is simply too expensive for my budget now.",
-    })
+    return _survey_response(
+        purchase_intent="definitely_would_not",
+        price_fairness="much_too_high",
+        alternative_seeking="yes",
+        purchase_timing="not_planning_to_buy",
+        necessity_level="nice_to_have",
+        reasoning="This is simply too expensive for my budget now.",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -130,24 +155,59 @@ class TestRenderer:
 
 class TestCollector:
     def test_parse_decision_bare_json(self) -> None:
-        raw = '{"would_buy": "yes", "reasoning": "Good value."}'
-        wb, reasoning = parse_decision(raw)
-        assert wb == "yes"
-        assert reasoning == "Good value."
+        raw = _survey_response(purchase_intent="definitely_would_buy")
+        parsed = parse_decision(raw)
+        assert parsed.would_buy == "yes"
+        assert parsed.purchase_intent == "definitely_would_buy"
+        assert parsed.reasoning == "Good value."
 
     def test_parse_decision_fenced_json(self) -> None:
-        raw = '```json\n{"would_buy": "no", "reasoning": "Too pricey."}\n```'
-        wb, reasoning = parse_decision(raw)
-        assert wb == "no"
-        assert reasoning == "Too pricey."
+        raw = "```json\n" + _survey_response(
+            purchase_intent="definitely_would_not", reasoning="Too pricey."
+        ) + "\n```"
+        parsed = parse_decision(raw)
+        assert parsed.would_buy == "no"
+        assert parsed.reasoning == "Too pricey."
 
-    def test_parse_decision_invalid_would_buy(self) -> None:
-        raw = '{"would_buy": "maybe", "reasoning": "Not sure."}'
-        with pytest.raises(ValueError, match="would_buy"):
+    def test_parse_decision_top_2_box_mapping(self) -> None:
+        expected = {
+            "definitely_would_buy": "yes",
+            "probably_would_buy": "yes",
+            "might_or_might_not": "no",
+            "probably_would_not": "no",
+            "definitely_would_not": "no",
+        }
+        for intent, want in expected.items():
+            parsed = parse_decision(_survey_response(purchase_intent=intent))
+            assert parsed.would_buy == want
+
+    def test_parse_decision_invalid_purchase_intent(self) -> None:
+        raw = _survey_response(purchase_intent="maybe")
+        with pytest.raises(ValueError, match="purchase_intent"):
+            parse_decision(raw)
+
+    def test_parse_decision_invalid_price_fairness(self) -> None:
+        raw = _survey_response(price_fairness="not_a_value")
+        with pytest.raises(ValueError, match="price_fairness"):
+            parse_decision(raw)
+
+    def test_parse_decision_invalid_alternative_seeking(self) -> None:
+        raw = _survey_response(alternative_seeking="maybe")
+        with pytest.raises(ValueError, match="alternative_seeking"):
+            parse_decision(raw)
+
+    def test_parse_decision_invalid_purchase_timing(self) -> None:
+        raw = _survey_response(purchase_timing="someday")
+        with pytest.raises(ValueError, match="purchase_timing"):
+            parse_decision(raw)
+
+    def test_parse_decision_invalid_necessity_level(self) -> None:
+        raw = _survey_response(necessity_level="kind_of_need_it")
+        with pytest.raises(ValueError, match="necessity_level"):
             parse_decision(raw)
 
     def test_parse_decision_empty_reasoning(self) -> None:
-        raw = '{"would_buy": "yes", "reasoning": ""}'
+        raw = _survey_response(reasoning="")
         with pytest.raises(ValueError, match="reasoning"):
             parse_decision(raw)
 
