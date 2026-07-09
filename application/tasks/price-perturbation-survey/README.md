@@ -29,7 +29,7 @@ ollama pull llama3.1
   practice — see note in `pipeline/perturbation.py` about why the swap
   tables don't match our real product attribute strings yet. Kept for
   future work, not deleted.
-- `fixtures/products.json` — 5 real, curated products with verified
+- `fixtures/products.json` — 15 real, curated products with verified
   Amazon links (`amazon_url`/`asin`), attributes, and provenance notes.
 - `scripts/scrape_amazon.py` — fetches real product data (title, price,
   rating, review count) from an Amazon product page via a plain HTTP GET
@@ -41,6 +41,21 @@ ollama pull llama3.1
 - `scripts/add_product.py` — validate-and-append tool for adding
   scraped/researched products to the fixture (required fields, ASIN
   format, rating bounds, duplicate detection).
+- `scripts/discover_products.py` — harvests candidate product URLs from
+  Amazon best-seller pages across ~35 physical-goods categories
+  (checkpointed; rerunning resumes).
+- `scripts/harvest.py` — unattended bulk scraper: candidates → validated
+  JSONL records (title, price, rating, reviews, 5+ attributes, feature
+  bullets). Checkpoints every record, detects Amazon's CAPTCHA block
+  pages, backs off in escalating quiet periods (blocks clear after
+  ~2-5 min of silence), and resumes exactly where it left off on rerun.
+- `scripts/assemble_dataset.py` — dedupes/validates harvest output into
+  the final dataset (`fixtures/products_1k.json`) with a summary report
+  and outlier flags for manual spot-checks.
+- `scripts/run_full_harvest.sh` — one-shot orchestrator for the above
+  three stages; safe to rerun after interruption.
+- `fixtures/products_1k.json` — the large scraped dataset (1000+
+  products, ≥5 seller-authored attributes each, working Amazon links).
 - `pipeline/` — the survey pipeline: product loading, prompt rendering,
   response parsing/validation, and retention-rate metrics.
 - `tests/` — pytest unit tests (mocked model, no network/Ollama needed).
@@ -92,3 +107,24 @@ size/color variants or bundled add-ons — see the caveats in
 `scripts/add_product.py` validates required fields, ASIN format,
 URL/ASIN consistency, rating bounds, and duplicate ASINs before
 appending to `fixtures/products.json`.
+
+## Bulk harvesting (1000+ products)
+
+```bash
+nohup bash scripts/run_full_harvest.sh > output/harvest_run.log 2>&1 &
+tail -f output/harvest_run.log
+```
+
+Runs discovery → harvest → assemble unattended (several hours: requests
+are paced ~25-37s apart to stay under Amazon's anti-bot threshold, and
+the runner sleeps through block episodes). All stages checkpoint to
+`output/`, so rerunning the same command resumes rather than restarts.
+Only records with a title, plausible price, and ≥5 attributes are
+accepted; rejects land in `output/harvest.rejects.jsonl` with reasons.
+The assembled dataset is written to `fixtures/products_1k.json`.
+
+Anti-bot notes (empirical, 2026-07-08): Amazon soft-blocks with an
+HTTP-200 CAPTCHA page; blocks clear after ~2-5 minutes of sending
+nothing. Right after recovery it may serve a degraded page template
+with an empty buybox (no price) — the harvester retries those once at
+the end of the run instead of rejecting them.
