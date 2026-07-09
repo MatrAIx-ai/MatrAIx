@@ -27,6 +27,8 @@ import json
 import os
 import re
 import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 CACHE = "/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
@@ -36,13 +38,14 @@ os.environ.setdefault("HF_XET_CACHE", f"{CACHE}/xet")
 os.environ.setdefault("VLLM_WORKER_MULTIPROC_METHOD", "spawn")
 
 import pandas as pd  # noqa: E402
-from vllm import LLM, SamplingParams  # noqa: E402
 
 REPO_ROOT = Path("/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx")
 DATA_DIR = REPO_ROOT / "persona/human_extraction/data"
 SELECTION = DATA_DIR / "amazon/selected_users_100k.parquet"
 DIMENSIONS_JSON = REPO_ROOT / "persona/schema/dimensions.json"
 MODEL_ID = "Qwen/Qwen3.6-35B-A3B"
+OPENROUTER_MODEL_ID = "qwen/qwen3.6-35b-a3b"
+OPENROUTER_CHAT_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 DATASET_REPO = "MatrAIx2026/MatrAIx2026"
 UBUK = ("amazon/modal_artifacts/"
@@ -81,53 +84,54 @@ def assemble_profile(g: pd.DataFrame, max_chars: int) -> str:
 def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
     """Amazon-reviewer persona-extraction prompt (see extract_personas_amazon.ipynb)."""
     lines = [
-        "You are building a persona for a single Amazon shopper from their "
-        "complete product-review history.",
+        "You are auditing persona-schema dimensions for evidence in one Amazon "
+        "reviewer's history. Your goal is high recall for truly supported "
+        "attributes and zero unsupported claims.",
         "",
-        "The input is a chronological list of that ONE person's reviews. Each "
-        "review has a date, product category, product id (ASIN), star rating, a "
-        "verified-purchase flag, a title, and body text. Infer who this shopper "
-        "is from the WHOLE history together:",
-        "- WHAT they buy: product categories and specific items reveal interests, "
-        "hobbies, life stage, household, budget, and needs.",
-        "- HOW they write: tone, length, detail, sentiment, and vocabulary reveal "
-        "personality, values, and writing style.",
-        "- WHAT they say: facts a reviewer states about themselves (\"as a "
-        "nurse\", \"for my kids\", \"at 65 I...\") are the strongest signal.",
+        "Important: emitting one field object is bookkeeping, not permission to "
+        "fill the attribute. For every dimension, start from value=null and "
+        'assignment_type="unsupported". Change value only when the evidence '
+        "passes the rules below.",
         "",
         "Return ONLY JSON with this shape (no markdown, no commentary):",
         '{"fields": [{"field_id": "<one id from DIMENSIONS below>", '
         '"value": "<one allowed value, copied verbatim, or null>", '
         '"confidence": 0.0, '
-        '"evidence": "<short quote copied verbatim from one review>", '
-        '"description": "<1-2 sentence description of this shopper for this attribute>", '
-        '"assignment_type": "direct"}]}',
+        '"evidence": "<verbatim quote(s) plus support count, or empty string>", '
+        '"description": "<1-2 concrete sentences, or empty string>", '
+        '"assignment_type": "direct|structured_claim|summary_inference|unsupported"}]}',
         "",
-        "assignment_type values (Amazon context):",
-        "- direct: the reviewer explicitly states it about themselves in a review.",
-        "- structured_claim: strongly implied by concrete purchase facts (e.g. "
-        "repeatedly buying baby products -> has a young child).",
-        "- summary_inference: a softer inference from the overall pattern, tone, "
-        "or writing style across many reviews.",
-        "- unsupported: not supported by the reviews.",
+        "Evidence rules:",
+        "- direct: requires an explicit self-statement by the reviewer. Use for "
+        "sensitive or identity/life-status claims.",
+        "- structured_claim: requires concrete purchase/review facts from at "
+        "least 2 distinct reviews, unless the reviewer states the claim directly.",
+        "- summary_inference: requires a repeated pattern across at least 3 "
+        "distinct reviews. Use only for non-sensitive interests, shopping "
+        "preferences, review style, product-use patterns, or expertise signals.",
+        "- unsupported: use when evidence is absent, one-off, ambiguous, "
+        "gift-related, generic, or could describe someone other than the reviewer.",
         "",
-        "Rules:",
+        "Hard limits:",
+        "- For age, gender, health, disability, ethnicity, religion, politics, "
+        "income, family/household status, occupation, location, employment, and "
+        "parenthood: assign a non-null value only from an explicit self-statement. "
+        "Do not use product category alone.",
+        "- Do not attribute traits of gift recipients or other product users to "
+        "the reviewer. A gift may support shopping behavior, not the reviewer's "
+        "own identity, household, or hobbies.",
+        "- Generic praise like \"great product\" or product titles alone is not "
+        "diagnostic evidence for persona attributes.",
+        "",
+        "Output rules:",
         "- Emit exactly one object per dimension listed below.",
-        "- value MUST be exactly one of that dimension's allowed values (copied "
-        "verbatim), OR null.",
-        "- Judge the history as a whole; prefer attributes backed by MULTIPLE "
-        "reviews over a single purchase (one-off items may be gifts for others).",
-        "- If the reviews do not support a dimension, set value to null, "
-        'assignment_type to "unsupported", and description to "".',
-        "- Every non-null value MUST include a short evidence quote copied "
-        "verbatim from one of the reviews.",
-        "- description: 1-2 concrete sentences describing THIS shopper for this "
-        "attribute using details from their reviews (categories, products, "
-        "statements). Describe the person; do not justify the label.",
-        "- Be conservative with sensitive attributes (age, gender, health, "
-        "ethnicity, religion, income): assign only when clearly stated or very "
-        "strongly implied; otherwise null/unsupported.",
-        "- Return valid JSON only, with no markdown.",
+        "- value MUST be exactly one of that dimension's allowed values, copied "
+        "verbatim, OR null.",
+        "- If value is null: assignment_type must be unsupported, confidence 0.0, "
+        'evidence "", and description "".',
+        "- Every non-null value must include quote(s) that directly support that "
+        "specific allowed value and must mention the number of supporting reviews.",
+        "- Most dimensions can be unsupported. Do not make the persona complete.",
         "",
         "DIMENSIONS (field_id — label — description — allowed values):",
     ]
@@ -173,6 +177,61 @@ def load_bucket_reviews(bucket: str, token: str | None) -> pd.DataFrame:
     return pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
 
 
+def openrouter_chat(
+    conversations: list[list[dict]],
+    *,
+    model: str,
+    api_key: str,
+    base_url: str,
+    max_tokens: int,
+    temperature: float = 0.0,
+    retries: int = 6,
+) -> list[str]:
+    """Run prompts through OpenRouter's OpenAI-compatible chat endpoint."""
+    texts: list[str] = []
+    for conv in conversations:
+        payload = {
+            "model": model,
+            "messages": conv,
+            "temperature": temperature,
+            "top_p": 1.0,
+            "max_tokens": max_tokens,
+            "response_format": {"type": "json_object"},
+        }
+        body = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            base_url,
+            data=body,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+                "X-Title": "MatrAIx Amazon persona extraction",
+            },
+            method="POST",
+        )
+        for attempt in range(retries):
+            try:
+                with urllib.request.urlopen(req, timeout=300) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                texts.append(data["choices"][0]["message"]["content"])
+                break
+            except urllib.error.HTTPError as err:
+                err_body = err.read().decode("utf-8", errors="replace")
+                retryable = err.code in {408, 429, 500, 502, 503, 504}
+                if retryable and attempt < retries - 1:
+                    time.sleep(min(60, 2 ** attempt))
+                    continue
+                raise RuntimeError(
+                    f"OpenRouter API error {err.code}: {err_body[:1000]}"
+                ) from err
+            except (urllib.error.URLError, KeyError, IndexError, TypeError) as err:
+                if attempt < retries - 1:
+                    time.sleep(min(60, 2 ** attempt))
+                    continue
+                raise RuntimeError(f"OpenRouter request failed: {err}") from err
+    return texts
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--shard-id", type=int, required=True,
@@ -191,6 +250,10 @@ def main() -> None:
     ap.add_argument("--quantization", default="fp8",
                     help="fp8 (fits single A100 80GB) | none (bf16, needs 2x A100)")
     ap.add_argument("--limit", type=int, default=0, help="debug: cap users this shard")
+    ap.add_argument("--backend", choices=("vllm", "openrouter"), default="vllm")
+    ap.add_argument("--openrouter-model", default=OPENROUTER_MODEL_ID)
+    ap.add_argument("--openrouter-api-key-env", default="OPENROUTER_API_KEY")
+    ap.add_argument("--openrouter-base-url", default=OPENROUTER_CHAT_URL)
     args = ap.parse_args()
 
     bucket = f"{args.shard_id:02x}"
@@ -242,32 +305,53 @@ def main() -> None:
     print(f"[shard] loaded {len(rev):,} reviews, assembled {len(profiles):,} "
           f"profiles in {time.time()-t0:.0f}s", flush=True)
 
-    # --- load model once ---
+    # --- load model/client once ---
     t0 = time.time()
-    llm_kwargs = dict(
-        model=MODEL_ID,
-        dtype="bfloat16",
-        tensor_parallel_size=args.tensor_parallel,
-        gpu_memory_utilization=args.gpu_mem,
-        max_model_len=args.max_model_len,
-        max_num_seqs=args.max_num_seqs,
-        enable_prefix_caching=True,
-        trust_remote_code=True,
-        download_dir=f"{CACHE}/hub",
-    )
-    if args.quantization and args.quantization.lower() != "none":
-        llm_kwargs["quantization"] = args.quantization
-    llm = LLM(**llm_kwargs)
-    sampling = SamplingParams(temperature=0.0, top_p=1.0, max_tokens=args.max_tokens)
-    print(f"[shard] model loaded in {time.time()-t0:.0f}s "
-          f"(tp={args.tensor_parallel}, quant={args.quantization})", flush=True)
+    if args.backend == "vllm":
+        from vllm import LLM, SamplingParams  # noqa: PLC0415
 
-    def chat(convs):
-        try:
-            return llm.chat(convs, sampling,
-                            chat_template_kwargs={"enable_thinking": False}, use_tqdm=False)
-        except TypeError:
-            return llm.chat(convs, sampling, use_tqdm=False)
+        llm_kwargs = dict(
+            model=MODEL_ID,
+            dtype="bfloat16",
+            tensor_parallel_size=args.tensor_parallel,
+            gpu_memory_utilization=args.gpu_mem,
+            max_model_len=args.max_model_len,
+            max_num_seqs=args.max_num_seqs,
+            enable_prefix_caching=True,
+            trust_remote_code=True,
+            download_dir=f"{CACHE}/hub",
+        )
+        if args.quantization and args.quantization.lower() != "none":
+            llm_kwargs["quantization"] = args.quantization
+        llm = LLM(**llm_kwargs)
+        sampling = SamplingParams(temperature=0.0, top_p=1.0, max_tokens=args.max_tokens)
+        print(f"[shard] model loaded in {time.time()-t0:.0f}s "
+              f"(tp={args.tensor_parallel}, quant={args.quantization})", flush=True)
+
+        def chat(convs: list[list[dict]]) -> list[str]:
+            try:
+                outs = llm.chat(convs, sampling,
+                                chat_template_kwargs={"enable_thinking": False},
+                                use_tqdm=False)
+            except TypeError:
+                outs = llm.chat(convs, sampling, use_tqdm=False)
+            return [o.outputs[0].text for o in outs]
+    else:
+        api_key = os.environ.get(args.openrouter_api_key_env, "")
+        if not api_key:
+            raise RuntimeError(
+                f"{args.openrouter_api_key_env} is required for --backend openrouter"
+            )
+        print(f"[shard] using OpenRouter model={args.openrouter_model}", flush=True)
+
+        def chat(convs: list[list[dict]]) -> list[str]:
+            return openrouter_chat(
+                convs,
+                model=args.openrouter_model,
+                api_key=api_key,
+                base_url=args.openrouter_base_url,
+                max_tokens=args.max_tokens,
+            )
 
     # --- stream in batches; checkpoint after each ---
     n_done = 0
@@ -283,8 +367,8 @@ def main() -> None:
                     idx.append(uid)
             outs = chat(convs)
             merged: dict[str, list] = {uid: [] for uid in batch}
-            for uid, o in zip(idx, outs):
-                merged[uid].extend(parse_fields(o.outputs[0].text))
+            for uid, text in zip(idx, outs):
+                merged[uid].extend(parse_fields(text))
             for uid in batch:
                 out_fh.write(json.dumps(
                     {"user_id": uid, "user_bucket": bucket,
