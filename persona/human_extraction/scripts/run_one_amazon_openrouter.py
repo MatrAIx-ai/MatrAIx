@@ -73,9 +73,9 @@ def dimension_lines(dimensions: list[dict[str, Any]]) -> list[str]:
 def build_amazon_prompt(profile_text: str, dimensions: list[dict[str, Any]]) -> str:
     """Current Amazon-reviewer persona-extraction prompt."""
     lines = [
-        "You are auditing persona-schema dimensions for evidence in one Amazon "
-        "reviewer's history. Your goal is high recall for truly supported "
-        "attributes and zero unsupported claims.",
+        "You are mapping observable Amazon review evidence to schema-constrained "
+        "persona fields for one reviewer. Fill attributes that are well supported "
+        "by the review history, and leave unsupported or identity-like claims null.",
         "",
         "Important: emitting one field object is bookkeeping, not permission to "
         "fill the attribute. For every dimension, start from value=null and "
@@ -86,20 +86,23 @@ def build_amazon_prompt(profile_text: str, dimensions: list[dict[str, Any]]) -> 
         '{"fields": [{"field_id": "<one id from DIMENSIONS below>", '
         '"value": "<one allowed value, copied verbatim, or null>", '
         '"confidence": 0.0, '
-        '"evidence": "<verbatim quote(s) plus support count, or empty string>", '
+        '"evidence": "<one short exact quote copied from REVIEWER HISTORY, or empty string>", '
         '"description": "<1-2 concrete sentences, or empty string>", '
         '"assignment_type": "direct|structured_claim|summary_inference|unsupported"}]}',
         "",
-        "Evidence rules:",
-        "- direct: requires an explicit self-statement by the reviewer. Use for "
-        "sensitive or identity/life-status claims.",
-        "- structured_claim: requires concrete purchase/review facts from at "
-        "least 2 distinct reviews, unless the reviewer states the claim directly.",
-        "- summary_inference: requires a repeated pattern across at least 3 "
-        "distinct reviews. Use only for non-sensitive interests, shopping "
-        "preferences, review style, product-use patterns, or expertise signals.",
-        "- unsupported: use when evidence is absent, one-off, ambiguous, "
-        "gift-related, generic, or could describe someone other than the reviewer.",
+        "Allowed support:",
+        "- direct: use when the reviewer explicitly states the fact about "
+        "themselves in review text.",
+        "- structured_claim: use for repeated owned/use-context statements or "
+        "concrete non-sensitive purchase/review facts supported by at least 2 "
+        "distinct reviews, products, or category clusters.",
+        "- summary_inference: use for non-sensitive interests, shopping behavior, "
+        "preferences, review style, communication style, or expertise when a "
+        "repeated pattern is visible across the review history.",
+        "- Overall writing style may support communication/cognitive-style "
+        "dimensions only when the pattern is visible across at least 5 reviews.",
+        "- unsupported: use when evidence is absent, one-off, ambiguous, generic, "
+        "gift-related, or mainly about someone other than the reviewer.",
         "",
         "Hard limits:",
         "- For age, gender, health, disability, ethnicity, religion, politics, "
@@ -111,15 +114,32 @@ def build_amazon_prompt(profile_text: str, dimensions: list[dict[str, Any]]) -> 
         "own identity, household, or hobbies.",
         "- Generic praise like \"great product\" or product titles alone is not "
         "diagnostic evidence for persona attributes.",
+        "- Do not infer personality inventories, values, worldview, MBTI, Big "
+        "Five, HEXACO, clinical attributes, or mental-state attributes from "
+        "ordinary shopping reviews unless the reviewer explicitly states the "
+        "trait or belief.",
         "",
         "Output rules:",
         "- Emit exactly one object per dimension listed below.",
+        "- Do not output any field_id that is not listed in DIMENSIONS.",
+        "- Do not duplicate field_id. Each listed field_id appears exactly once.",
+        "- Do not omit assignment_type. Every object must include one of the four "
+        "assignment_type strings above.",
         "- value MUST be exactly one of that dimension's allowed values, copied "
         "verbatim, OR null.",
+        '- Never use "Unsupported", "unsupported", "Not applicable", "N/A", '
+        '"unknown", or "" as value unless that exact string appears in that '
+        "field's allowed values.",
         "- If value is null: assignment_type must be unsupported, confidence 0.0, "
         'evidence "", and description "".',
-        "- Every non-null value must include quote(s) that directly support that "
-        "specific allowed value and must mention the number of supporting reviews.",
+        "- Every non-null value MUST include a short evidence quote copied "
+        "verbatim from one of the reviews.",
+        "- Evidence must be an exact quote from REVIEWER HISTORY, not your reasoning, "
+        "a paraphrase, or a summary. If you cannot copy an exact quote, return "
+        "unsupported.",
+        "- If you cannot copy an exact quote, return unsupported.",
+        "- Do not append support counts, explanations, or labels to evidence. "
+        "Evidence must be only text that appears in REVIEWER HISTORY.",
         "- Most dimensions can be unsupported. Do not make the persona complete.",
         "",
         "DIMENSIONS (field_id - label - description - allowed values):",

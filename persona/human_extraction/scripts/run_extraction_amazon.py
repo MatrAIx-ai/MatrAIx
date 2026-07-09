@@ -46,6 +46,22 @@ DIMENSIONS_JSON = REPO_ROOT / "persona/schema/dimensions.json"
 MODEL_ID = "Qwen/Qwen3.6-35B-A3B"
 OPENROUTER_MODEL_ID = "qwen/qwen3.6-35b-a3b"
 OPENROUTER_CHAT_URL = "https://openrouter.ai/api/v1/chat/completions"
+ASSIGNMENT_TYPES = {
+    "direct",
+    "structured_claim",
+    "summary_inference",
+    "unsupported",
+}
+NULLISH_VALUES = {
+    "",
+    "none",
+    "null",
+    "n/a",
+    "na",
+    "unknown",
+    "unsupported",
+    "not applicable",
+}
 
 DATASET_REPO = "MatrAIx2026/MatrAIx2026"
 UBUK = ("amazon/modal_artifacts/"
@@ -84,9 +100,9 @@ def assemble_profile(g: pd.DataFrame, max_chars: int) -> str:
 def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
     """Amazon-reviewer persona-extraction prompt (see extract_personas_amazon.ipynb)."""
     lines = [
-        "You are auditing persona-schema dimensions for evidence in one Amazon "
-        "reviewer's history. Your goal is high recall for truly supported "
-        "attributes and zero unsupported claims.",
+        "You are mapping observable Amazon review evidence to schema-constrained "
+        "persona fields for one reviewer. Fill attributes that are well supported "
+        "by the review history, and leave unsupported or identity-like claims null.",
         "",
         "Important: emitting one field object is bookkeeping, not permission to "
         "fill the attribute. For every dimension, start from value=null and "
@@ -97,20 +113,23 @@ def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
         '{"fields": [{"field_id": "<one id from DIMENSIONS below>", '
         '"value": "<one allowed value, copied verbatim, or null>", '
         '"confidence": 0.0, '
-        '"evidence": "<verbatim quote(s) plus support count, or empty string>", '
+        '"evidence": "<one short exact quote copied from REVIEWER HISTORY, or empty string>", '
         '"description": "<1-2 concrete sentences, or empty string>", '
         '"assignment_type": "direct|structured_claim|summary_inference|unsupported"}]}',
         "",
-        "Evidence rules:",
-        "- direct: requires an explicit self-statement by the reviewer. Use for "
-        "sensitive or identity/life-status claims.",
-        "- structured_claim: requires concrete purchase/review facts from at "
-        "least 2 distinct reviews, unless the reviewer states the claim directly.",
-        "- summary_inference: requires a repeated pattern across at least 3 "
-        "distinct reviews. Use only for non-sensitive interests, shopping "
-        "preferences, review style, product-use patterns, or expertise signals.",
-        "- unsupported: use when evidence is absent, one-off, ambiguous, "
-        "gift-related, generic, or could describe someone other than the reviewer.",
+        "Allowed support:",
+        "- direct: use when the reviewer explicitly states the fact about "
+        "themselves in review text.",
+        "- structured_claim: use for repeated owned/use-context statements or "
+        "concrete non-sensitive purchase/review facts supported by at least 2 "
+        "distinct reviews, products, or category clusters.",
+        "- summary_inference: use for non-sensitive interests, shopping behavior, "
+        "preferences, review style, communication style, or expertise when a "
+        "repeated pattern is visible across the review history.",
+        "- Overall writing style may support communication/cognitive-style "
+        "dimensions only when the pattern is visible across at least 5 reviews.",
+        "- unsupported: use when evidence is absent, one-off, ambiguous, generic, "
+        "gift-related, or mainly about someone other than the reviewer.",
         "",
         "Hard limits:",
         "- For age, gender, health, disability, ethnicity, religion, politics, "
@@ -122,15 +141,46 @@ def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
         "own identity, household, or hobbies.",
         "- Generic praise like \"great product\" or product titles alone is not "
         "diagnostic evidence for persona attributes.",
+        "- Do not infer personality inventories, values, worldview, MBTI, Big "
+        "Five, HEXACO, clinical attributes, or mental-state attributes from "
+        "ordinary shopping reviews unless the reviewer explicitly states the "
+        "trait or belief.",
         "",
         "Output rules:",
         "- Emit exactly one object per dimension listed below.",
-        "- value MUST be exactly one of that dimension's allowed values, copied "
-        "verbatim, OR null.",
-        "- If value is null: assignment_type must be unsupported, confidence 0.0, "
-        'evidence "", and description "".',
-        "- Every non-null value must include quote(s) that directly support that "
-        "specific allowed value and must mention the number of supporting reviews.",
+        "- Do not output any field_id that is not listed in DIMENSIONS.",
+        "- Do not duplicate field_id. Each listed field_id appears exactly once.",
+        "- Do not omit assignment_type. Every object must include one of the four "
+        "assignment_type strings above.",
+        "- value MUST be exactly one of that dimension's allowed values (copied "
+        "verbatim), OR null.",
+        '- Never use "Unsupported", "unsupported", "Not applicable", "N/A", '
+        '"unknown", or "" as value unless that exact string appears in that '
+        "field's allowed values.",
+        "- Judge the history as a whole; prefer attributes backed by MULTIPLE "
+        "reviews over a single purchase (one-off items may be gifts for others).",
+        "- If the reviews do not support a dimension, set value to null, "
+        'confidence to 0.0, evidence to "", assignment_type to "unsupported", '
+        'and description to "".',
+        "- Every non-null value MUST include a short evidence quote copied "
+        "verbatim from one of the reviews.",
+        "- Evidence must be an exact quote from REVIEWER HISTORY, not your reasoning, "
+        "a paraphrase, or a summary. If you cannot copy an exact quote, return "
+        "unsupported.",
+        "- If you cannot copy an exact quote, return unsupported.",
+        "- Do not append support counts, explanations, or labels to evidence. "
+        "Evidence must be only text that appears in REVIEWER HISTORY.",
+        "- description: 1-2 concrete sentences describing THIS shopper for this "
+        "attribute using details from their reviews (categories, products, "
+        "statements). Describe the person; do not justify the label.",
+        "- Sensitive / high-risk fields require explicit self-statements: age, "
+        "gender, income, marital status, children count, religion, politics, "
+        "ethnicity, health, disability, mental health, neurotype, MBTI, Big Five, "
+        "personality traits, attachment style, and relationship style.",
+        "- Do not infer these fields from product category, product size, possible "
+        "gift purchases, cooking tools, romance books, writing style, tone, "
+        "vocabulary, price level, or household items.",
+        "- Return valid JSON only, with no markdown.",
         "- Most dimensions can be unsupported. Do not make the persona complete.",
         "",
         "DIMENSIONS (field_id — label — description — allowed values):",
@@ -156,6 +206,109 @@ def parse_fields(text: str) -> list[dict]:
         return []
     fields = obj.get("fields")
     return fields if isinstance(fields, list) else []
+
+
+def _unsupported(dim: dict) -> dict:
+    return {
+        "field_id": str(dim["id"]),
+        "value": None,
+        "confidence": 0.0,
+        "evidence": "",
+        "description": "",
+        "assignment_type": "unsupported",
+    }
+
+
+def _confidence(value) -> float:
+    try:
+        confidence = float(value)
+    except (TypeError, ValueError):
+        return 0.0
+    return max(0.0, min(1.0, confidence))
+
+
+def _normalized_key(value: str) -> str:
+    return " ".join(value.replace("-", "–").split()).casefold()
+
+
+def _coerce_value(value, dim: dict) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if text.casefold() in NULLISH_VALUES:
+        return None
+    allowed = [str(item) for item in dim.get("values", [])]
+    if not allowed:
+        return text
+    if text in allowed:
+        return text
+    allowed_by_key = {_normalized_key(item): item for item in allowed}
+    return allowed_by_key.get(_normalized_key(text))
+
+
+def _quote_is_in_profile(evidence: str, profile_text: str) -> bool:
+    if not evidence:
+        return False
+    if evidence in profile_text:
+        return True
+    return " ".join(evidence.split()) in " ".join(profile_text.split())
+
+
+def sanitize_fields(
+    fields: list[dict],
+    dimensions: list[dict],
+    profile_text: str = "",
+) -> list[dict]:
+    """Clamp Amazon model output to one schema-conformant field per dimension."""
+    dim_by_id = {str(dim["id"]): dim for dim in dimensions}
+    best_by_id: dict[str, dict] = {}
+
+    for raw in fields:
+        if not isinstance(raw, dict):
+            continue
+        field_id = str(raw.get("field_id") or "").strip()
+        dim = dim_by_id.get(field_id)
+        if dim is None:
+            continue
+
+        assignment_type = str(raw.get("assignment_type") or "").strip()
+        value = _coerce_value(raw.get("value"), dim)
+        confidence = _confidence(raw.get("confidence"))
+        evidence = str(raw.get("evidence") or "").strip()
+        description = str(raw.get("description") or "").strip()
+        supported = (
+            value is not None
+            and assignment_type in ASSIGNMENT_TYPES
+            and assignment_type != "unsupported"
+            and _quote_is_in_profile(evidence, profile_text)
+        )
+
+        if supported:
+            clean = {
+                "field_id": field_id,
+                "value": value,
+                "confidence": confidence,
+                "evidence": evidence,
+                "description": description,
+                "assignment_type": assignment_type,
+            }
+        else:
+            clean = _unsupported(dim)
+
+        prior = best_by_id.get(field_id)
+        if prior is None:
+            best_by_id[field_id] = clean
+            continue
+        prior_supported = prior.get("value") is not None
+        clean_supported = clean.get("value") is not None
+        if clean_supported and not prior_supported:
+            best_by_id[field_id] = clean
+        elif clean_supported == prior_supported and _confidence(
+            clean.get("confidence")
+        ) > _confidence(prior.get("confidence")):
+            best_by_id[field_id] = clean
+
+    return [best_by_id.get(str(dim["id"])) or _unsupported(dim) for dim in dimensions]
 
 
 def cat_chunks(by_category: dict, per_chunk: int):
@@ -364,11 +517,13 @@ def main() -> None:
                 prof = profiles[uid]
                 for chunk in chunk_list:
                     convs.append([{"role": "user", "content": build_amazon_prompt(prof, chunk)}])
-                    idx.append(uid)
+                    idx.append((uid, chunk))
             outs = chat(convs)
             merged: dict[str, list] = {uid: [] for uid in batch}
-            for uid, text in zip(idx, outs):
-                merged[uid].extend(parse_fields(text))
+            for (uid, chunk), text in zip(idx, outs):
+                merged[uid].extend(
+                    sanitize_fields(parse_fields(text), chunk, profiles[uid])
+                )
             for uid in batch:
                 out_fh.write(json.dumps(
                     {"user_id": uid, "user_bucket": bucket,

@@ -24,9 +24,14 @@ def test_amazon_openrouter_prompt_defaults_to_unsupported_and_blocks_sensitive_g
     assert 'start from value=null and assignment_type="unsupported"' in prompt
     assert "non-null value only from an explicit self-statement" in prompt
     assert "Do not use product category alone" in prompt
-    assert "requires a repeated pattern across at least 3 distinct reviews" in prompt
+    assert "at least 2 distinct reviews" in prompt
+    assert "at least 5 reviews" in prompt
+    assert "Do not output any field_id that is not listed" in prompt
+    assert "If you cannot copy an exact quote, return unsupported" in prompt
+    assert "Do not append support counts" in prompt
     assert "Most dimensions can be unsupported. Do not make the persona complete." in prompt
     assert "a softer inference from the overall pattern" not in prompt
+    assert "plus support count" not in prompt
 
 
 def test_medium_amazon_prompt_variants_keep_sensitive_and_personality_guards():
