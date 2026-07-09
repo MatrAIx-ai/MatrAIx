@@ -6,24 +6,17 @@ documentation, and follow-up validation.
 
 ## Dimension Reference Map
 
-| MatrAIx dimension area | Real-world grounding target | Reference sources |
-| --- | --- | --- |
-| Region / population distribution | Global and regional population shares | UN World Population Prospects; UN Population Division Data Portal; World Bank World Development Indicators; WorldPop; Eurostat |
-| Age | Age distributions by country, region, and population segment | UN World Population Prospects; UN Population Division Data Portal; World Bank World Development Indicators; ACS PUMS; IPUMS International; IPUMS USA |
-| Sex / gender | Population shares and survey demographics | UN World Population Prospects; World Bank World Development Indicators; ACS PUMS; IPUMS International; IPUMS USA; Pew Research Center datasets |
-| Urbanicity | Urban/rural population distribution | World Bank World Development Indicators; UN World Urbanization Prospects; ACS data; WorldPop |
-| Education | Educational attainment and education-system indicators | UNESCO Institute for Statistics; World Bank Education Statistics; ILOSTAT; OECD Education at a Glance; OECD PISA; ACS PUMS; IPUMS International; IPUMS USA |
-| Employment / occupation / work | Employment status, occupation, wages, skills, work context | ILOSTAT; BLS OEWS; O*NET; OECD employment data; ACS PUMS; IPUMS USA; IPUMS CPS |
-| Income / socioeconomic status | Income, poverty, inequality, and socioeconomic priors | World Bank Poverty and Inequality Platform; World Bank WDI; World Inequality Database; Luxembourg Income Study; OECD Income and Wealth Distribution Database; ACS PUMS; IPUMS USA; IPUMS CPS |
-| Household / family / marital status | Household size, family structure, marital and parental status | ACS PUMS; IPUMS International; IPUMS USA; UN Population Division; OECD Family Database; DHS Program; UNICEF MICS |
-| Religion / religiosity | Religious affiliation, denomination, belief, and religiosity | Pew Research Center Religion; World Values Survey; General Social Survey; ARDA |
-| Values / politics / trust / social attitudes | Political lean, trust, social values, public opinion | World Values Survey; General Social Survey; Pew Research Center; European Social Survey; International Social Survey Programme; Gallup World Poll; Afrobarometer; Arab Barometer; Asian Barometer; Latinobarometro; Eurobarometer |
-| Personality / psychometrics | Personality traits, psychological scales, and self-report constructs | IPIP; MIDUS |
-| Health / disability / accessibility | Disability, health status, accessibility needs, assistive technology | WHO Global Health Observatory; IHME Global Burden of Disease; ACS PUMS; CDC NHIS; CDC BRFSS; DHS Program; UNICEF MICS |
-| Lifestyle / time use / consumption | Time use, household spending, daily activity, and lifestyle priors | American Time Use Survey; Consumer Expenditure Surveys; OECD Time Use Database |
-| Technology / internet access / digital behavior | Internet access, digital adoption, technical familiarity | ITU statistics; World Bank WDI; DataReportal; Pew Internet & Technology; Stack Overflow Survey |
-| Developer / coding / technical tools | Developer skills, programming languages, tools, AI-tool usage | Stack Overflow Survey; GitHub Octoverse; JetBrains State of Developer Ecosystem |
-| Migration / citizenship / country of birth | Citizenship, migration, country of birth, remittance context | UN International Migrant Stock; OECD migration data; ACS PUMS; IPUMS International; IPUMS USA; World Bank Migration & Labor Mobility; World Bank Remittances / KNOMAD |
+| Group | #Dim. | Subgroups | Reference sources |
+| --- | ---: | --- | --- |
+| Demographic information | 52 | Basic (25), Life Events (24), Cultural (2), Family (1) | UN World Population Prospects; UN Population Division; World Bank WDI; WorldPop; Eurostat; ACS PUMS; IPUMS; DHS; UNICEF MICS; OECD Family Database |
+| Language and communication | 90 | Language (53), Communication (37) | ACS PUMS; IPUMS International; IPUMS USA; Pew Research Center; World Values Survey |
+| Education and professional background | 90 | Academic (34), Learning Style (1), Career (4), Industry/Role (51) | UNESCO Institute for Statistics; World Bank Education Statistics; ILOSTAT; OECD Education at a Glance; OECD PISA; BLS OEWS; O*NET; ACS PUMS; IPUMS; IPUMS CPS |
+| Expertise and skills | 387 | Domains (144), Skills (64), Tools (69), Programming (44), Developer/Coding (66) | ITU statistics; World Bank WDI; DataReportal; Pew Internet & Technology; Stack Overflow Survey; GitHub Octoverse; JetBrains State of Developer Ecosystem; O*NET |
+| Personality | 90 | Character (34), Big Five (50), MBTI (2), Relationships (4) | IPIP; MIDUS |
+| Values and worldview | 120 | Risk & Decision (7), Values & Motivation (46), Beliefs (67) | Pew Research Center Religion; World Values Survey; General Social Survey; European Social Survey; ISSP; Gallup World Poll; Afrobarometer; Arab Barometer; Asian Barometer; Latinobarometro; Eurobarometer; ARDA |
+| Health and accessibility | 29 | Physical Health (25), Fitness (2), Health Lifestyle (2) | WHO Global Health Observatory; IHME Global Burden of Disease; ACS PUMS; CDC NHIS; CDC BRFSS; DHS Program; UNICEF MICS |
+| Behavior and interaction state | 74 | Emotional State (5), Time (3), Preferences (34), Work (2), Habits (30) | American Time Use Survey; Consumer Expenditure Surveys; OECD Time Use Database; ITU statistics; DataReportal; Pew Internet & Technology |
+| Interests and culture | 358 | Topics (78), Culture (74), Media (81), Food (35), Sports (40), Hobbies (50) | American Time Use Survey; Consumer Expenditure Surveys; OECD Time Use Database; Pew Research Center; World Values Survey; Gallup World Poll |
 
 ## Source Catalog
 
