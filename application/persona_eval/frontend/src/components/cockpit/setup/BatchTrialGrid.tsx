@@ -1,12 +1,9 @@
 import { formatBatchCellStatusLabel } from "@/lib/trialStatus";
+import { personaDisplayId, personaPrimaryName } from "@/lib/personaDisplay";
 import type { PersonaPoolPersonaCard } from "@/lib/types";
 
-import { SimulatedPersonaBust } from "./SimulatedPersonaBust";
-import {
-  personaRosterLines,
-  personaSeedFromCell,
-  simulatedPersonaVisual,
-} from "./simulatedPersonaVisual";
+import { PersonaAvatar } from "./PersonaAvatar";
+import { personaRosterLines } from "./simulatedPersonaVisual";
 import { useBatchGridLayout } from "./useBatchGridLayout";
 
 export type BatchTrialStatus = "pending" | "running" | "done" | "error";
@@ -60,12 +57,6 @@ export interface BatchTrialGridProps {
   className?: string;
 }
 
-function personaDisplayId(trial: BatchTrialCell): string {
-  const raw = (trial.persona?.personaId ?? trial.label.replace(/^persona[-_]?/i, "")).trim();
-  if (!raw) return trial.label;
-  return raw.startsWith("persona-") ? raw : `persona-${raw}`;
-}
-
 function statusBadgeLabel(trial: BatchTrialCell): string {
   return (
     trial.statusLabel ??
@@ -89,12 +80,12 @@ function BatchTrialCellView({
 }) {
   const style = STATUS_STYLES[trial.status];
   const dimensions = trial.persona?.dimensions ?? {};
-  const seed = personaSeedFromCell(trial.persona?.personaId, trial.label);
-  const visual = simulatedPersonaVisual(seed, dimensions);
   const roster = personaRosterLines(dimensions);
-  const personaId = personaDisplayId(trial);
+  const rawPersonaId = (trial.persona?.personaId ?? trial.label.replace(/^persona[-_]?/i, "")).trim();
+  const personaId = personaDisplayId(rawPersonaId || null);
   const statusLabel = statusBadgeLabel(trial);
-  const displayName = trial.persona?.name?.trim() || trial.label || personaId;
+  const displayName = personaPrimaryName(trial.persona?.name, rawPersonaId, dimensions) || trial.label || personaId;
+  const trialId = trial.id.trim();
   const detailHint = roster
     ? roster.secondary
       ? `${roster.primary} · ${roster.secondary}`
@@ -104,18 +95,13 @@ function BatchTrialCellView({
   const portrait = rowHeight >= 96;
 
   const avatarFrame = (
-    <div
-      className={`flex shrink-0 items-end justify-center overflow-hidden rounded-2xl bg-surface/60 ring-1 ring-inset ring-outline/15 ${
-        portrait ? "h-[3.4rem] w-[2.85rem] px-1 pt-1" : "h-10 w-9 px-0.5 pt-0.5"
-      } ${trial.status === "running" ? "animate-[pulse_2.8s_ease-in-out_infinite]" : ""}`}
-      style={{ backgroundColor: visual.backdrop }}
-    >
-      <SimulatedPersonaBust
-        visual={visual}
-        muted={avatarMuted}
-        className="h-full w-full"
-      />
-    </div>
+    <PersonaAvatar
+      personaId={rawPersonaId || trial.id}
+      dimensions={dimensions}
+      size={portrait ? "lg" : "sm"}
+      muted={avatarMuted}
+      className={trial.status === "running" ? "animate-[pulse_2.8s_ease-in-out_infinite]" : ""}
+    />
   );
 
   return (
@@ -127,8 +113,8 @@ function BatchTrialCellView({
       }`}
       title={
         detailHint
-          ? `${personaId} · ${statusLabel} · ${detailHint}`
-          : `${personaId} · ${statusLabel}`
+          ? `${displayName} · ${personaId} · ${trialId} · ${statusLabel} · ${detailHint}`
+          : `${displayName} · ${personaId} · ${trialId} · ${statusLabel}`
       }
     >
       <span
@@ -141,9 +127,6 @@ function BatchTrialCellView({
       <div
         className={`min-w-0 ${portrait ? "w-full space-y-1 text-center" : "flex-1 space-y-0.5 pr-4"}`}
       >
-        <p className="truncate font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-primary/70">
-          {personaId}
-        </p>
         <p
           className={`truncate font-display font-semibold leading-snug text-text-main ${
             portrait ? "text-[12px] px-1" : "text-[11px]"
@@ -151,12 +134,18 @@ function BatchTrialCellView({
         >
           {displayName}
         </p>
+        <p className="truncate font-mono text-[9px] tracking-wide text-text-dim">
+          {personaId}
+        </p>
+        {trialId && trialId !== personaId ? (
+          <p className="truncate font-mono text-[9px] text-primary/75">{trialId}</p>
+        ) : null}
         <p
           className={`truncate font-medium ${statusLineClass(trial.status)} ${
             portrait ? "text-[11px] px-1" : "text-[10px]"
           }`}
         >
-          {statusLabel}
+          {detailHint ?? statusLabel}
         </p>
       </div>
     </article>

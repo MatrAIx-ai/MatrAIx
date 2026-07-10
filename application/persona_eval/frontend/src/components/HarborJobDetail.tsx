@@ -5,7 +5,9 @@ import { type ReactNode, useId, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { api, ApiError } from "@/lib/api";
+import { personaDisplayId, personaPrimaryName } from "@/lib/personaDisplay";
 import type { HarborJobAggregation, HarborJobDetail, JobAggregationCrossFacetView } from "@/lib/types";
+import { PersonaAvatar } from "./cockpit/setup/PersonaAvatar";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import {
   StudioGlassPanel,
@@ -285,10 +287,20 @@ function TrialStatusBadge({ trial }: { trial: HarborTrialRow }) {
   );
 }
 
-function trialPersonaLabel(trial: HarborTrialRow): string {
-  if (trial.personaName) return trial.personaName;
-  if (trial.personaId) return `persona-${trial.personaId}`;
-  return trial.trialName;
+function TrialPersonaIdentity({ trial }: { trial: HarborTrialRow }) {
+  const displayName = personaPrimaryName(trial.personaName, trial.personaId);
+  const codename = trial.personaId ? personaDisplayId(trial.personaId) : trial.trialName;
+  const personaKey = trial.personaId ?? trial.trialName;
+
+  return (
+    <div className="flex min-w-0 items-center gap-2.5">
+      <PersonaAvatar personaId={personaKey} size="sm" />
+      <div className="min-w-0">
+        <p className="truncate font-medium text-text-main">{displayName}</p>
+        <p className="truncate font-mono text-[10px] text-text-dim">{codename}</p>
+      </div>
+    </div>
+  );
 }
 
 function metricValue(value: number | null | undefined): string {
@@ -2090,7 +2102,7 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
           )}
 
           <StudioGlassPanel className="overflow-hidden rounded-xl">
-            <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_5.5rem_2rem] gap-3 border-b border-outline/40 px-4 py-2.5 text-[10px] uppercase tracking-wide text-text-dim">
+            <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)_5.5rem_2rem] gap-3 border-b border-outline/40 px-4 py-2.5 text-[10px] uppercase tracking-wide text-text-dim">
               <span>Persona</span>
               <span>Trial</span>
               <span>Status</span>
@@ -2112,13 +2124,11 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
                         type="button"
                         disabled={!clickable}
                         onClick={() => onOpenTrial?.(trial.trialName)}
-                        className={`grid w-full grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_5.5rem_2rem] items-center gap-3 px-4 py-3 text-left text-[13px] ${
+                        className={`grid w-full grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)_5.5rem_2rem] items-center gap-3 px-4 py-3 text-left text-[13px] ${
                           clickable ? "hover:bg-surface/40" : ""
                         } ${FOCUS_RING}`}
                       >
-                        <span className="truncate font-medium text-text-main">
-                          {trialPersonaLabel(trial)}
-                        </span>
+                        <TrialPersonaIdentity trial={trial} />
                         <span className="truncate font-mono text-[11px] text-text-variant">
                           {trial.trialName}
                         </span>

@@ -25,6 +25,7 @@ import type {
   OsAppEvalTasksResponse,
 } from "./types";
 import { PERSONA_BENCH_POOL } from "./types";
+import { normalizePersonaPoolName } from "./personaDisplay";
 
 export class ApiError extends Error {
   readonly status: number;
@@ -65,6 +66,21 @@ function qs(params: Record<string, string | number | null | undefined>): string 
   }
   const query = search.toString();
   return query ? `?${query}` : "";
+}
+
+function normalizePersonaPoolCardsResponse(
+  response: PersonaPoolCardsResponse,
+): PersonaPoolCardsResponse {
+  return {
+    ...response,
+    personas: response.personas.map((persona) => normalizePersonaPoolName(persona)),
+  };
+}
+
+function normalizePersonaPoolDetail(
+  response: PersonaPoolPersonaDetail,
+): PersonaPoolPersonaDetail {
+  return normalizePersonaPoolName(response);
 }
 
 export const api = {
@@ -147,22 +163,24 @@ export const api = {
     request<PersonaPoolCatalog>(
       `/api/persona-pool/catalog?${new URLSearchParams({ pool }).toString()}`,
     ),
-  getPersonaPoolCards: (input?: {
+  getPersonaPoolCards: async (input?: {
     limit?: number;
     offset?: number;
     seed?: number;
     personaIds?: string[];
     all?: boolean;
   }) =>
-    request<PersonaPoolCardsResponse>(
-      `/api/persona-pool/personas${qs({
-        pool: PERSONA_BENCH_POOL,
-        limit: input?.limit,
-        offset: input?.offset,
-        seed: input?.seed,
-        personaIds: input?.personaIds?.join(","),
-        all: input?.all ? "true" : undefined,
-      })}`,
+    normalizePersonaPoolCardsResponse(
+      await request<PersonaPoolCardsResponse>(
+        `/api/persona-pool/personas${qs({
+          pool: PERSONA_BENCH_POOL,
+          limit: input?.limit,
+          offset: input?.offset,
+          seed: input?.seed,
+          personaIds: input?.personaIds?.join(","),
+          all: input?.all ? "true" : undefined,
+        })}`,
+      ),
     ),
   listAllPersonaPoolCards: async (pageSize = 50) => {
     const personas: PersonaPoolCardsResponse["personas"] = [];
@@ -190,23 +208,27 @@ export const api = {
       offset += pageSize;
       if (offset > 10_000) break;
     }
-    return { pool, personas };
+    return normalizePersonaPoolCardsResponse({ pool, personas });
   },
   getPersonaPoolPersona: async (personaId: string, pool = PERSONA_BENCH_POOL) => {
     try {
-      const byQuery = await request<PersonaPoolPersonaDetail>(
-        `/api/persona-pool/personas${qs({
-          pool,
-          personaIds: personaId,
-          detail: "true",
-        })}`,
+      const byQuery = normalizePersonaPoolDetail(
+        await request<PersonaPoolPersonaDetail>(
+          `/api/persona-pool/personas${qs({
+            pool,
+            personaIds: personaId,
+            detail: "true",
+          })}`,
+        ),
       );
       if (byQuery.profileMarkdown?.trim()) return byQuery;
     } catch {
       // Fall through to path-style endpoint on older backends.
     }
-    return request<PersonaPoolPersonaDetail>(
-      `/api/persona-pool/personas/${encodeURIComponent(personaId)}?${new URLSearchParams({ pool }).toString()}`,
+    return normalizePersonaPoolDetail(
+      await request<PersonaPoolPersonaDetail>(
+        `/api/persona-pool/personas/${encodeURIComponent(personaId)}?${new URLSearchParams({ pool }).toString()}`,
+      ),
     );
   },
   getTaskDetail: (taskPath: string) =>
