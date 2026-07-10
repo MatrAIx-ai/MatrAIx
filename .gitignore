@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 !apps/viewer/app/lib/
 !apps/viewer/app/lib/**
 lib64/
@@ -219,6 +219,25 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# Persona synthesis generated artifacts
+# Keep graph/schema/source files and markdown reports in git, but do not commit
+# large generated persona matrices, code shards, rendered samples, or analytics
+# exports. Regenerate these from persona/synthesis/scripts instead.
+persona/synthesis/reports/**/*.codes
+persona/synthesis/reports/**/*.codes.gz
+persona/synthesis/reports/**/*.codes.schema.json
+persona/synthesis/reports/**/*.codes.gz.schema.json
+persona/synthesis/reports/**/*.npy
+persona/synthesis/reports/**/*.npz
+persona/synthesis/reports/**/*.parquet
+persona/synthesis/reports/**/*.jsonl
+persona/synthesis/reports/**/*.csv
+persona/synthesis/reports/**/tmp/
+persona/synthesis/reports/**/rendered_*.jsonl
+persona/synthesis/reports/**/shard_*
+persona/synthesis/generated/
+persona/synthesis/jobs/**/sbatch_logs/
+
 # PersonaBench migration outputs and large generated Persona artifacts.
 persona/curation/attribute_pool/outputs/
 persona/curation/attribute_pool/sources/acs_pums/*.csv
@@ -235,3 +254,18 @@ configs/jobs/persona-task-grounding-job-recipe/*.yaml
 configs/jobs/persona-task-grounding-job-recipe/*.meta.json
 !configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml
 !configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.meta.json
+
+# Local Harbor job outputs (recipes live under configs/jobs/)
+/jobs/*
+
+# PersonaEval local runtime cache (Cockpit / harness sessions)
+/data/cache/
+
+configs/jobs/_generated/
+
+# Local planning notes (not for git)
+plan.md
+user-simulator-chat-design.md
+
+# Generated at runtime by PersonaEval sidecar compose helpers
+**/.persona_eval_sidecar/
