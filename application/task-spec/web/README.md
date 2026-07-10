@@ -4,8 +4,52 @@ This folder defines the shared contract for browser-mediated application tasks.
 These tasks may run in a traditional browser runtime or a computer-use runtime,
 but the benchmark target is still a web experience.
 
-**Blueprint:** [task-spec/task-blueprints.md § Web](../task-blueprints.md#web-blueprint)
-— shared core + web-specific layers, required vs optional.
+**Canonical copy-from:** `application/tasks/example-web-playwright_quote-choice`
+
+### What you author (required vs optional)
+
+```mermaid
+flowchart TB
+  subgraph folder ["YOUR task folder"]
+    direction TB
+    subgraph W_REQ ["REQUIRED"]
+      direction LR
+      w_inst["instruction.md<br/>(includes result JSON schema)"]
+      w_toml["task.toml"]
+      w_test["tests/"]
+      w_rep["reporting.json"]
+    end
+    subgraph W_OPT ["OPTIONAL"]
+      direction LR
+      w_self["input/self_report_schema.yaml"]
+      w_rep2["reporting.json rules"]
+      w_dec["decision contexts in verifier"]
+    end
+  end
+  subgraph W_PLAT ["PLATFORM"]
+    direction LR
+    w_br["browser / computer-use runtime"]
+    w_trace["browser trace"]
+  end
+  subgraph W_REF ["REFERENCE"]
+    direction LR
+    w_core["shared_core_metric_contract"]
+    w_ex["web/*.example.json"]
+  end
+  W_REQ --> W_PLAT
+  W_REF -.-> folder
+```
+
+Web verifiers use **two layers**: shared core ([shared-core-metrics.md](../shared-core-metrics.md))
+plus web-specific contexts (`decision`, `decision_process`, `web_interaction`, …).
+**No** `input/output_schema.md` — put the submission JSON schema in `instruction.md`.
+
+| Context | Priority |
+|---|---|
+| `task_outcome` | **Required** |
+| `decision` + `decision_process` | **Required** for browse/choose tasks |
+| `goal_component`, `side_effects`, `user_feedback` | Strongly recommended |
+| `web_interaction`, `experience` | Optional depth |
 
 ## Contract
 

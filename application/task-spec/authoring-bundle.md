@@ -1,10 +1,9 @@
 # Authoring bundle
 
 Per-type file layouts for tasks under `application/tasks/<task-name>/`.
-Part of [README.md](README.md) **Step 2**.
-
-**Visual maps:** [task-blueprints.md](task-blueprints.md) — see the diagram for
-your interaction type before reading the file trees below.
+Part of [README.md](README.md) **Step 2**. Per-type **diagrams** are in each
+type README ([survey](survey/README.md), [chatbot](chatbot/README.md),
+[web](web/README.md), [os-app](os-app/README.md)).
 
 Each runnable task lives under `application/tasks/<task-name>/` and always
 includes `instruction.md`, `task.toml`, `tests/`, and `reporting.json`.

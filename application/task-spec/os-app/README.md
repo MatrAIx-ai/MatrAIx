@@ -3,8 +3,51 @@
 This folder defines the shared evaluation and reporting contract for native
 desktop/mobile app tasks and cross-app operating workflows.
 
-**Blueprint:** [task-spec/task-blueprints.md § OS/app](../task-blueprints.md#os--app-blueprint)
-— outcome-based verification, shared core, required vs optional.
+**Canonical copy-from:** `application/tasks/example-computer-use-ios_photo-access-review`
+
+### What you author (required vs optional)
+
+```mermaid
+flowchart TB
+  subgraph folder ["YOUR task folder"]
+    direction TB
+    subgraph O_REQ ["REQUIRED"]
+      direction LR
+      o_inst["instruction.md<br/>(includes result JSON schema)"]
+      o_toml["task.toml"]
+      o_test["tests/"]
+      o_rep["reporting.json"]
+    end
+    subgraph O_OPT ["OPTIONAL"]
+      direction LR
+      o_self["input/self_report_schema.yaml"]
+      o_rep2["reporting.json rules"]
+      o_pers["persona_alignment contexts"]
+    end
+  end
+  subgraph O_PLAT ["PLATFORM"]
+    direction LR
+    o_cu["computer-use / native app runtime"]
+    o_local["local artifacts on disk"]
+  end
+  subgraph O_REF ["REFERENCE"]
+    direction LR
+    o_core["shared_core_metric_contract"]
+    o_ex["os-app/*.example.json"]
+  end
+  O_REQ --> O_PLAT
+  O_REF -.-> folder
+```
+
+Outcome-based verification (final state, not action sequence). Reuse the **same shared core**
+as web ([shared-core-metrics.md](../shared-core-metrics.md)); add scenario-specific contexts on top.
+
+| Context | Priority |
+|---|---|
+| `task_outcome` | **Required** |
+| `goal_component`, `side_effects` | Strongly recommended |
+| `user_feedback`, `persona_alignment` | When the study needs them |
+| `infeasibility` | When tasks can be intentionally blocked |
 
 Use this folder when the benchmark question is fundamentally:
 
