@@ -2,9 +2,10 @@
 # Task: application/tasks/example-survey_product-feedback
 # Execution mode: force_docker | trial profile: docker_agent
 # Agent: persona-claude-code | harbor task: application/tasks/example-survey_product-feedback
+
 # Stratify: none (random sample) | sample=4 from pool=200 | seed=42
 # Personas: 0164, 0029, 0007, 0190
-#
+
 job_name: appSim-example-survey-product-feedback-random-n4
 jobs_dir: jobs
 n_attempts: 1
@@ -18,6 +19,7 @@ agents:
 - name: persona-claude-code
   model_name: anthropic/claude-sonnet-4-6
   kwargs:
+
     persona_path: persona/datasets/bench-dev-sample/persona_0164.yaml
 - name: persona-claude-code
   model_name: anthropic/claude-sonnet-4-6

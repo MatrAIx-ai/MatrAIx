@@ -25,29 +25,52 @@ the same HTTP contract for smoke runs.
 The persona agent writes:
 
 - `/app/output/transcript.json`
-- `/app/output/recommendation_result.json`
 - optionally `/app/output/user_feedback.json`
 
 The verifier checks artifact shape, multi-turn coverage, session consistency,
-and recommendation grounding.
+and conversation quality signals.
 
-## Suggested Setup
+Canonical contributor-facing docs:
 
-| Field | Value |
-|---|---|
-| Agent | `persona-claude-code` |
-| Environment | `docker` |
-| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
+- `application/tasks/recommender-agent_chat_api/instruction.md`
+- `application/tasks/recommender-agent_chat_api/input/context.md`
+- `application/tasks/recommender-agent_chat_api/input/protocol.md`
+- `application/tasks/recommender-agent_chat_api/input/chatbot.yaml`
+- `application/tasks/recommender-agent_chat_api/input/self_report_schema.yaml`
+
+## Smoke run
 
 ```bash
-uv run harbor run \
-  -a persona-claude-code \
-  -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
-  -p application/tasks/recommender-agent_chat_api
+uv run python application/scripts/generate_application_job.py \
+  --task application/tasks/recommender-agent_chat_api \
+  --execution-mode auto \
+  --persona-ids 0042
+
+export ANTHROPIC_API_KEY="sk-ant-..."
+export OPENAI_API_KEY="sk-..."
+export MATRIX_CHATBOT_TASK_PATH="application/tasks/recommender-agent_chat_api"
+uv run harbor run -c configs/jobs/application-task-job-recipe/recommender-agent-chat-api-auto-n1.yaml
 ```
 
-The environment-side sidecar is intentionally lightweight. A production RecAI or
-catalog-backed recommender can replace
-`environment/task-environments/application/recommender-agent_chat_api/recommender-api/`
-later as a separate application tooling PR.
+See [Application Quickstart](../../QUICKSTART.md) for the UI path.
+
+## Native RecAI stack (full PersonaEval preflight)
+
+The lightweight `server.py` sidecar is enough for Harbor smoke runs. PersonaEval's
+**Catalog**, **Recommendation engine**, and **RecAI resources** checks need the
+real Microsoft InteRecAgent checkout plus the `all_resources` bundles.
+
+From the recommender API root:
+
+```bash
+cd environment/task-environments/application/shared-chat-api-recommender/recommender-api
+pip install gdown pandas pyarrow   # one-time
+./scripts/setup_recai_native.sh
+```
+
+This sparse-clones [microsoft/RecAI](https://github.com/microsoft/RecAI) into
+`recai/InteRecAgent/`, downloads `all_resources.zip` (~1–2 GB), and writes
+`data/catalogs/*.parquet`. Restart the PersonaEval backend afterward.
+
+Flags: `--engine-only`, `--skip-download`, `--skip-parquets` (see
+`scripts/setup_recai_resources.py --help`).
