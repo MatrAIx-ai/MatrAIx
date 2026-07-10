@@ -9,6 +9,7 @@
 Large-scale, persona-driven agent simulation — test products, conversations, and
 workflows before they hit real users.
 
+
 MatrAIx pairs synthetic personas with LLM agents in reproducible Harbor
 tasks: surveys, chat, live web, and desktop computer-use. The name nods to
 *The Matrix* — a simulated world useful for exploration, not a replacement for
