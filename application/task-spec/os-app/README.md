@@ -12,7 +12,7 @@ Use this folder when the benchmark question is fundamentally:
 Use `../web/README.md` for browser-mediated web tasks. Use this folder for
 native app, settings, file, and cross-app operating benchmarks.
 
-Use `../README.md` as the source of truth for the shared core context names,
+Use [`../shared-core-metrics.md`](../shared-core-metrics.md) as the source of truth for the shared core context names,
 facet keys, and reuse rules that `os-app/` shares with `web/`. See
 `../shared_core_metric_contract.example.json` for the machine-readable
 companion.

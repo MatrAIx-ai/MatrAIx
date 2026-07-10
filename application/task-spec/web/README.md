@@ -42,7 +42,7 @@ Web tasks should still reuse the same core benchmark contexts as `os-app/`:
 
 So the two folders are aligned, not identical.
 
-Use `../README.md` as the source of truth for the shared core context names,
+Use [`../shared-core-metrics.md`](../shared-core-metrics.md) as the source of truth for the shared core context names,
 facet keys, and reuse rules. See
 `../shared_core_metric_contract.example.json` for the machine-readable
 companion.
