@@ -246,6 +246,15 @@ def build_stackoverflow_prompt(profile_text: str, dimensions: list[dict[str, Any
         '- Treat "None of the above" and "None of these" as valid answers, not missing values.',
         "- When unsure, omit the dimension.",
         "- Return valid JSON only, with no markdown.",
+    ]
+    # Keep the respondent profile before the varying dimension chunk. With the
+    # existing respondent-outer/chunk-inner loop, all chunk requests for one
+    # respondent then share the long instructions + profile token prefix. This
+    # layout is intentionally optimized for vLLM automatic prefix caching.
+    lines += [
+        "",
+        "RESPONDENT PROFILE:",
+        profile_text,
         "",
         "DIMENSIONS (field_id — label — description — allowed values):",
     ]
@@ -253,7 +262,6 @@ def build_stackoverflow_prompt(profile_text: str, dimensions: list[dict[str, Any
         allowed = " | ".join(str(value) for value in dim.get("values", [])) or "(free value)"
         desc = str(dim.get("description", "")).strip()
         lines.append(f"- {dim['id']} — {dim.get('label', dim['id'])} — {desc} — [{allowed}]")
-    lines += ["", "RESPONDENT PROFILE:", profile_text]
     return "\n".join(lines)
 
 
@@ -467,7 +475,16 @@ def main() -> int:
             f"total_prompts={len(rows) * len(chunks)}"
         )
         print(f"first_chunk={chunks[0][0]} dims={len(chunks[0][1])}")
-        print(build_stackoverflow_prompt(profiles[0], chunks[0][1])[:4000])
+        preview_prompt = build_stackoverflow_prompt(profiles[0], chunks[0][1])
+        dimensions_index = preview_prompt.index(
+            "DIMENSIONS (field_id — label — description — allowed values):"
+        )
+        print("prompt_layout=instructions_profile_dimensions")
+        print(
+            f"shared_prefix_chars={dimensions_index} "
+            f"rough_shared_prefix_tokens={round(dimensions_index / 4)}"
+        )
+        print(preview_prompt[:4000])
         return 0
 
     if output_path.exists() and not args.overwrite:
@@ -536,6 +553,7 @@ def main() -> int:
                     "min_confidence": args.min_confidence,
                     "keep_summary_inference": args.keep_summary_inference,
                     "output_policy": "sparse_supported_fields_only",
+                    "prompt_layout": "instructions_profile_dimensions",
                 },
                 "deduped_field_count": deduped_count,
                 "chunks": chunk_records,
