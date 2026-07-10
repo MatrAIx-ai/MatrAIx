@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import os
 import sqlite3
 import subprocess
@@ -171,7 +170,6 @@ def flat_chunks(dims: list[dict], per_chunk: int, by_category: dict, pack: bool)
 def run_once(llm, sampling, rows, dims_all, by_category, dims_per_chunk, pack,
              mon: GpuMonitor, args, tag: str):
     """One benchmark pass over all profiles for a given chunking; returns metrics."""
-    from tqdm import tqdm
 
     chunk_list = list(flat_chunks(dims_all, dims_per_chunk, by_category, pack))
     conversations, index = [], []
