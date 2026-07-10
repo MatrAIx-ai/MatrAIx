@@ -7,8 +7,8 @@ the extraction quality can be manually scored against the source profile.
 """
 import json
 import textwrap
-from pathlib import Path
 from collections import Counter
+from pathlib import Path
 
 REPO = Path("/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx")
 DIMS = json.load(open(REPO / "persona/schema/dimensions.json"))["dimensions"]
@@ -16,7 +16,8 @@ ALLOWED = {d["id"]: set(str(v) for v in d.get("values", [])) for d in DIMS}
 N_DIMS = len(DIMS)
 JSONL = REPO / "persona/human_extraction/data/bench_cat50_random_pc1.jsonl"
 
-rows = [json.loads(line) for line in open(JSONL)]
+with open(JSONL) as fh:
+    rows = [json.loads(line) for line in fh]
 print(f"file: {JSONL.name}   personas: {len(rows)}   schema dims: {N_DIMS}\n")
 
 # ---------- aggregate validity metrics ----------

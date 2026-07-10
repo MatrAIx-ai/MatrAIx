@@ -1,4 +1,4 @@
-# PersonaBench
+# MatrAIx
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
@@ -9,13 +9,15 @@
 Large-scale, persona-driven agent simulation — test products, conversations, and
 workflows before they hit real users.
 
-PersonaBench pairs synthetic personas with LLM agents in reproducible Harbor
-tasks: survey, chat, live web, and desktop computer-use. **Application tasks**
-are designed to be configured and inspected in the **PersonaEval Cockpit**;
-`harbor view` remains available for raw trajectory and log debugging.
 
-**North star:** toward 8.3B persona-scale simulation. Today the repo ships a
-working minimal stack you can run locally with Docker.
+MatrAIx pairs synthetic personas with LLM agents in reproducible Harbor
+tasks: surveys, chat, live web, and desktop computer-use. The name nods to
+*The Matrix* — a simulated world useful for exploration, not a replacement for
+real people.
+
+**North star:** toward **8.3B** persona-scale simulation (one synthetic profile
+per person on Earth). Today the repo ships a working minimal stack you can run
+locally with Docker.
 
 ---
 
@@ -31,7 +33,7 @@ working minimal stack you can run locally with Docker.
 ## Installation
 
 ```bash
-git clone <your-fork-url> && cd PersonaBench
+git clone <your-fork-url> && cd MatrAIx
 uv venv --python 3.12
 uv pip install -e .
 uv pip install pytest pytest-asyncio httpx
@@ -76,7 +78,7 @@ More: [docs/running.md](docs/running.md) · [Architecture](docs/architecture.md)
 Three teams own the repo. Pick **one row** to onboard; details live in each
 team's docs — not duplicated here.
 
-![PersonaBench architecture](docs/assets/matraix-architecture.png)
+![MatrAIx architecture](docs/assets/matraix-architecture.png)
 
 | Team | Path | Scope | Start here |
 |------|------|-------|------------|
@@ -89,16 +91,18 @@ team's docs — not duplicated here.
 ## Repository layout
 
 ```text
-PersonaBench/
+MatrAIx/
 ├── persona/           curation · schema · datasets · bench tasks · reporting
 ├── application/       tasks · task-spec · persona_eval (Cockpit) · QUICKSTART
 ├── environment/       runtime/harbor · agents · task-environments · harbor view · adapters
 ├── docs/personas/     Persona team guides (data → schema → grounding)
 ├── configs/jobs/      curated Harbor recipes
 ├── packages/          persona-eval · rewardkit · harbor-langsmith
-├── jobs/              run outputs (local; small demos may be checked in)
+├── jobs/              local Harbor run outputs (gitignored)
 └── docs/              architecture · running · research
 ```
+
+Harbor writes artifacts to `jobs/` when you run recipes from `configs/jobs/`; those outputs stay local and are not committed to `main`.
 
 Large generated datasets stay outside git — [artifact handoff](migration/matraix/README.md).
 
@@ -109,8 +113,8 @@ Large generated datasets stay outside git — [artifact handoff](migration/matra
 Community onboarding only — **which team and which doc** are in the [Teams](#teams)
 table above.
 
-[![Discord](https://img.shields.io/badge/Discord-join%20PersonaBench-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
-[![Google Form](https://img.shields.io/badge/Google%20Form-join%20PersonaBench-4285F4?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/hwEHng5HGWRqcJue9)
+[![Discord](https://img.shields.io/badge/Discord-join%20MatrAIx-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/vruP88PTZ)
+[![Google Form](https://img.shields.io/badge/Google%20Form-join%20MatrAIx-4285F4?style=for-the-badge&logo=googleforms&logoColor=white)](https://forms.gle/hwEHng5HGWRqcJue9)
 
 1. Join Discord — nickname **`Full Name - Affiliation`**. Fill the Google Form
    (background, team placement, paper authorship / acknowledgements).
