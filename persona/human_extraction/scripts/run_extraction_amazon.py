@@ -182,6 +182,79 @@ def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def dimension_lines(dimensions: list[dict]) -> list[str]:
+    lines = []
+    for dim in dimensions:
+        allowed = " | ".join(str(v) for v in dim.get("values", [])) or "(free value)"
+        desc = str(dim.get("description", "")).strip()
+        lines.append(
+            f"- {dim['id']} - {dim.get('label', dim['id'])} - {desc} - [{allowed}]"
+        )
+    return lines
+
+
+def build_medium_b_prompt(profile_text: str, dimensions: list[dict]) -> str:
+    """Medium-conservative prompt selected by the Amazon prompt comparison."""
+    lines = [
+        "You are mapping observable Amazon review evidence to persona-schema "
+        "dimensions. Fill attributes that are well supported by the review "
+        "history, and leave unsupported or identity-like claims null.",
+        "",
+        "Return ONLY JSON with this shape (no markdown, no commentary):",
+        '{"fields": [{"field_id": "<one id from DIMENSIONS below>", '
+        '"value": "<one allowed value, copied verbatim, or null>", '
+        '"confidence": 0.0, '
+        '"evidence": "<short verbatim quote(s), or empty string>", '
+        '"description": "<1-2 concrete sentences, or empty string>", '
+        '"assignment_type": "direct|structured_claim|summary_inference|unsupported"}]}',
+        "",
+        "Allowed support:",
+        "- Explicit self-statements may support any dimension when the stated "
+        "fact directly matches the allowed value.",
+        "- Repeated owned/use-context statements may support non-sensitive "
+        "lifestyle and interest dimensions (for example, repeated 'my dog' "
+        "reviews can support dog ownership).",
+        "- Repeated product-review behavior may support non-sensitive shopping "
+        "preferences, topic interests, communication style, and domain expertise.",
+        "- Overall writing style may support communication/cognitive-style "
+        "dimensions only when the pattern is visible across at least 5 reviews.",
+        "",
+        "Not allowed:",
+        "- Do not infer demographic, protected, health, political, religious, "
+        "family, occupation, location, income, or employment dimensions unless "
+        "the reviewer explicitly says them.",
+        "- Do not infer personality inventories, values, worldview, MBTI, Big "
+        "Five, HEXACO, or clinical/mental-state attributes from ordinary shopping "
+        "reviews unless the reviewer explicitly describes the trait or belief.",
+        "- Do not use a single purchase, generic praise, star rating, or product "
+        "title alone as enough evidence.",
+        "- Do not attribute a gift recipient's traits to the reviewer.",
+        "",
+        "Output rules:",
+        "- Emit exactly one object per dimension listed below.",
+        "- value MUST be exactly one of that dimension's allowed values, copied "
+        "verbatim, OR null.",
+        "- If value is null: assignment_type must be unsupported, confidence 0.0, "
+        'evidence "", and description "".',
+        "- Every non-null value must cite quote(s) or concrete repeated review "
+        "facts that support the selected allowed value.",
+        "- Prefer unsupported over a plausible but weak persona guess.",
+        "",
+        "DIMENSIONS (field_id - label - description - allowed values):",
+        *dimension_lines(dimensions),
+        "",
+        "REVIEWER HISTORY:",
+        profile_text,
+    ]
+    return "\n".join(lines)
+
+
+PROMPT_BUILDERS = {
+    "current": build_amazon_prompt,
+    "medium_b": build_medium_b_prompt,
+}
+
+
 def parse_fields(text: str) -> list[dict]:
     start = text.find("{")
     end = text.rfind("}")
@@ -394,6 +467,9 @@ def main() -> None:
     ap.add_argument("--quantization", default="fp8",
                     help="fp8 (fits single A100 80GB) | none (bf16, needs 2x A100)")
     ap.add_argument("--limit", type=int, default=0, help="debug: cap users this shard")
+    ap.add_argument("--prompt-variant", choices=sorted(PROMPT_BUILDERS),
+                    default=os.environ.get("PROMPT_VARIANT", "medium_b"),
+                    help="Amazon extraction prompt variant to use")
     args = ap.parse_args()
 
     bucket = f"{args.shard_id:02x}"
@@ -438,7 +514,8 @@ def main() -> None:
 
     print(f"[shard {args.shard_id} bucket={bucket}] selected={len(sel_b):,} "
           f"want={len(want):,} done={len(done):,} todo={len(todo_ids):,} "
-          f"chunks/user={len(chunk_list)}", flush=True)
+          f"chunks/user={len(chunk_list)} prompt_variant={args.prompt_variant}",
+          flush=True)
     if not todo_ids:
         print("[shard] nothing to do — complete.", flush=True)
         return
@@ -484,13 +561,14 @@ def main() -> None:
     n_done = 0
     t_gen = time.time()
     with open(out_path, "a") as out_fh:
+        prompt_builder = PROMPT_BUILDERS[args.prompt_variant]
         for bstart in range(0, len(todo), args.batch_profiles):
             batch = todo[bstart : bstart + args.batch_profiles]
             convs, idx, dim_chunks = [], [], []
             for uid in batch:
                 prof = profiles[uid]
                 for chunk in chunk_list:
-                    convs.append([{"role": "user", "content": build_amazon_prompt(prof, chunk)}])
+                    convs.append([{"role": "user", "content": prompt_builder(prof, chunk)}])
                     idx.append(uid)
                     dim_chunks.append(chunk)
             outs = chat(convs)
@@ -502,6 +580,7 @@ def main() -> None:
                 out_fh.write(json.dumps(
                     {"user_id": uid, "user_bucket": bucket,
                      "review_count": int(review_count.get(uid, 0)),
+                     "prompt_variant": args.prompt_variant,
                      "fields": merged[uid]}, ensure_ascii=False) + "\n")
             out_fh.flush()
             os.fsync(out_fh.fileno())
