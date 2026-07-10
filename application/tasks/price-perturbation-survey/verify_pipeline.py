@@ -145,7 +145,7 @@ def main() -> None:
     )
 
     # 3. Print results.
-    print(f"Results:")
+    print("Results:")
     print(f"  Prompts rendered:  {result.prompts_rendered}")
     print(f"  Decisions parsed:  {len(result.decisions)}")
     print(f"  Parse failures:    {result.prompts_failed}")

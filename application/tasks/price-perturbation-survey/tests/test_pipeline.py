@@ -19,13 +19,17 @@ _PIPELINE_DIR = _TASK_DIR / "pipeline"
 if str(_TASK_DIR) not in sys.path:
     sys.path.insert(0, str(_TASK_DIR))
 
-from pipeline.collector import Decision, parse_decision
-from pipeline.metrics import compute_retention_rate
-from pipeline.models import Product
-from pipeline.perturbation import perturb_price
-from pipeline.product_source import FixtureProductSource
-from pipeline.renderer import RenderedPrompt, render_instruction, render_prompt
-from pipeline.run import PipelineResult, run_pipeline
+from pipeline.collector import Decision, parse_decision  # noqa: E402
+from pipeline.metrics import compute_retention_rate  # noqa: E402
+from pipeline.models import Product  # noqa: E402
+from pipeline.perturbation import perturb_price  # noqa: E402
+from pipeline.product_source import FixtureProductSource  # noqa: E402
+from pipeline.renderer import (  # noqa: E402
+    RenderedPrompt,
+    render_instruction,
+    render_prompt,
+)
+from pipeline.run import PipelineResult, run_pipeline  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
