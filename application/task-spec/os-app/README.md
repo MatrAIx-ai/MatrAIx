@@ -3,6 +3,9 @@
 This folder defines the shared evaluation and reporting contract for native
 desktop/mobile app tasks and cross-app operating workflows.
 
+**Blueprint:** [task-spec/task-blueprints.md § OS/app](../task-blueprints.md#os--app-blueprint)
+— outcome-based verification, shared core, required vs optional.
+
 Use this folder when the benchmark question is fundamentally:
 
 - did the agent complete the requested app task

@@ -4,6 +4,9 @@ This folder defines the shared contract for browser-mediated application tasks.
 These tasks may run in a traditional browser runtime or a computer-use runtime,
 but the benchmark target is still a web experience.
 
+**Blueprint:** [task-spec/task-blueprints.md § Web](../task-blueprints.md#web-blueprint)
+— shared core + web-specific layers, required vs optional.
+
 ## Contract
 
 - Task instruction: define the website, realistic user goal, and submission schema.

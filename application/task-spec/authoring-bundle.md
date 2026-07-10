@@ -3,6 +3,9 @@
 Per-type file layouts for tasks under `application/tasks/<task-name>/`.
 Part of [README.md](README.md) **Step 2**.
 
+**Visual maps:** [task-blueprints.md](task-blueprints.md) — see the diagram for
+your interaction type before reading the file trees below.
+
 Each runnable task lives under `application/tasks/<task-name>/` and always
 includes `instruction.md`, `task.toml`, `tests/`, and `reporting.json`.
 Supplementary files differ by application type:

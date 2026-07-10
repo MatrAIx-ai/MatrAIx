@@ -10,6 +10,24 @@ Operational copy-paste steps also live in
 [`../tasks/README.md`](../tasks/README.md) and [`../task-guide.md`](../task-guide.md);
 this document explains *why* the files exist and *how* they connect.
 
+> **Visual maps first?** Open [**task-blueprints.md**](task-blueprints.md) for
+> diagrams of the whole spec and **per-type** required vs optional vs
+> platform-owned vs reference-only. Use this README for the step-by-step path;
+> use blueprints when you need to see what *you* actually ship in a task folder.
+
+---
+
+## How to read this folder
+
+| Kind of doc | Examples | You read it to… |
+|---|---|---|
+| **Onboarding** | this README | Follow the contributor path end-to-end |
+| **Blueprints** | [task-blueprints.md](task-blueprints.md) | See required / optional / platform / reference at a glance |
+| **File layouts** | [authoring-bundle.md](authoring-bundle.md) | Know which files go in your task folder |
+| **Cheat sheets** | [structured-output-quick-reference.md](structured-output-quick-reference.md) | Pick context + facet keys while writing the verifier |
+| **Deep reference** | [reporting-and-evaluation.md](reporting-and-evaluation.md), type READMEs | Understand aggregation, metrics, edge cases |
+| **Copy-from** | `example-*` tasks, `*.example.json` | Start from a working task, not a blank folder |
+
 ---
 
 ## Big picture
@@ -55,6 +73,9 @@ flowchart LR
 **Takeaway:** write the scenario once, emit normalized facts from the verifier,
 and let the platform roll up hundreds of personas into one debrief.
 
+Full ecosystem + per-type diagrams:
+[**task-blueprints.md**](task-blueprints.md).
+
 ---
 
 ## Contributor onboarding
@@ -64,12 +85,12 @@ need it.
 
 ### Step 1 — Pick an interaction type
 
-| Type | Benchmark question | Canonical example to copy | Type contract |
-|---|---|---|---|
-| **Survey** | How do personas answer this questionnaire? | `application/tasks/example-survey_product-feedback` | [survey/README.md](survey/README.md) |
-| **Chatbot** | Can the chat experience resolve the user's goal? | `application/tasks/recommender-agent_chat_api` | [chatbot/README.md](chatbot/README.md) |
-| **Web** | Can the agent use a website or browser surface correctly? | `application/tasks/example-web-playwright_quote-choice` | [web/README.md](web/README.md) |
-| **OS / app** | Can the agent complete native or cross-app workflows safely? | `application/tasks/example-computer-use-ios_photo-access-review` | [os-app/README.md](os-app/README.md) |
+| Type | Benchmark question | Canonical example to copy | Blueprint | Type contract |
+|---|---|---|---|---|
+| **Survey** | How do personas answer this questionnaire? | `application/tasks/example-survey_product-feedback` | [§ Survey](task-blueprints.md#survey-blueprint) | [survey/README.md](survey/README.md) |
+| **Chatbot** | Can the chat experience resolve the user's goal? | `application/tasks/recommender-agent_chat_api` | [§ Chatbot](task-blueprints.md#chatbot-blueprint) | [chatbot/README.md](chatbot/README.md) |
+| **Web** | Can the agent use a website or browser surface correctly? | `application/tasks/example-web-playwright_quote-choice` | [§ Web](task-blueprints.md#web-blueprint) | [web/README.md](web/README.md) |
+| **OS / app** | Can the agent complete native or cross-app workflows safely? | `application/tasks/example-computer-use-ios_photo-access-review` | [§ OS/app](task-blueprints.md#os--app-blueprint) | [os-app/README.md](os-app/README.md) |
 
 **Unsure between web and OS/app?** If the **website is the product under test**,
 choose **web**. If the benchmark is **settings, files, mail, calendar, or
@@ -233,6 +254,7 @@ Use this when a step above is not enough — not as a flat reading list.
 
 **Authoring & folder layout**
 
+- [task-blueprints.md](task-blueprints.md) — visual required / optional / reference maps
 - [authoring-bundle.md](authoring-bundle.md) — per-type file trees
 - [survey/README.md](survey/README.md) — `questionnaire.yaml` contract
 - [chatbot/README.md](chatbot/README.md) — chat loop + reporting contexts
@@ -276,6 +298,7 @@ Use this when a step above is not enough — not as a flat reading list.
 ```text
 task-spec/
 ├── README.md                          ← you are here (onboarding + big picture)
+├── task-blueprints.md                 ← visual maps (required vs optional vs reference)
 ├── manifest.json                      ← machine-readable type registry
 ├── authoring-bundle.md                ← per-type file layouts
 ├── reporting-and-evaluation.md        ← batch aggregation deep dive

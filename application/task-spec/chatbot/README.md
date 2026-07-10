@@ -3,6 +3,9 @@
 Chatbot tasks let the simulated user interact with an application exposed
 through a chat API.
 
+**Blueprint:** [task-spec/task-blueprints.md § Chatbot](../task-blueprints.md#chatbot-blueprint)
+— required files, platform harness artifacts, and verifier contexts at a glance.
+
 ## Contract
 
 - Task instruction: describe the chatbot application and the user's goal context.

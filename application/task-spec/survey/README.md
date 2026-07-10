@@ -5,6 +5,9 @@ The active survey protocol uses a generic survey-form task. The application
 runner supplies the survey instrument as task context, then maps the resulting
 artifact into answers, metrics, and a telemetry-style trajectory.
 
+**Blueprint:** [task-spec/task-blueprints.md § Survey](../task-blueprints.md#survey-blueprint)
+— required files, platform-owned artifacts, and verifier contexts at a glance.
+
 ## Contract
 
 - Task instruction: define the task steps, constraints, and submission requirements.
