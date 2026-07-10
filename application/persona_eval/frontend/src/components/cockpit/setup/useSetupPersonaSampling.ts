@@ -73,7 +73,6 @@ export function useSetupPersonaSampling(
     personaModelKnob?.options.map((o) => ({
       value: o.value,
       label: o.label,
-      summary: o.description?.trim() || undefined,
     })) ?? [{ value: personaModel, label: personaModel }];
 
   const togglePersona = useCallback(

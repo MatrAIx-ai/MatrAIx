@@ -134,8 +134,8 @@ def test_get_persona_detail(tmp_path, monkeypatch):
     assert detail["personaId"] == "0001"
     assert detail["dimensions"]["economic_motivation"] == "Price-sensitive"
     assert "persona_id: '0001'" in detail["yaml"]
-    assert "persona-0001" in detail["profileMarkdown"]
-    assert "persona_id: '0001'" in detail["profileMarkdown"]
+    assert detail["name"] and "persona-" not in detail["name"]
+    assert not detail["profileMarkdown"].startswith("#")
     assert "## Dimensions" not in detail["profileMarkdown"]
 
 

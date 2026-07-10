@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import yaml
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -73,13 +74,11 @@ def _resolve_persona_yaml_path(
 def _persona_profile_markdown(
     *,
     persona_id: str,
-    name: str,
     source: str,
     path: str,
     yaml_text: str,
 ) -> str:
-    lines = ["# {}".format(name or "persona-{}".format(persona_id)), ""]
-    lines.append("**Persona ID:** `{}`".format(persona_id))
+    lines = ["**Persona ID:** `{}`".format(persona_id)]
     if source:
         lines.append("**Source:** {}".format(source))
     if path:
@@ -138,6 +137,12 @@ class PersonaPoolService:
         categories_path = Path(rel)
         if not categories_path.is_absolute():
             categories_path = self.repo_root / rel
+        if not categories_path.is_file():
+            return {
+                "schemaVersion": "1.0",
+                "personaSources": [],
+                "devProfile": {"dimensionCount": None, "groups": []},
+            }
         payload = self._read_json(categories_path)
         dev_profile = payload.get("devProfile")
         groups: list[dict[str, Any]] = []
@@ -263,9 +268,25 @@ class PersonaPoolService:
             if isinstance(dims, dict) and dims.get(key)
         }
         persona_id = str(entry.get("persona_id") or "")
+        display_name = str(entry.get("display_name") or "").strip()
+        if not display_name:
+            rel_path = str(entry.get("path") or "").strip()
+            if rel_path:
+                yaml_path = self.repo_root / rel_path
+                if yaml_path.is_file():
+                    raw = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+                    if isinstance(raw, dict):
+                        display_name = str(raw.get("display_name") or "").strip()
+        if not display_name:
+            from personabench.persona_display_name import synthetic_display_name
+
+            display_name = synthetic_display_name(
+                persona_id,
+                dims if isinstance(dims, dict) else {},
+            )
         return {
             "personaId": persona_id,
-            "name": "persona-{}".format(persona_id),
+            "name": display_name,
             "source": str(entry.get("source") or ""),
             "path": str(entry.get("path") or ""),
             "dimensions": display,
@@ -364,7 +385,6 @@ class PersonaPoolService:
                 rel_path = str(yaml_path)
         profile_markdown = _persona_profile_markdown(
             persona_id=str(card.get("personaId") or persona_id),
-            name=str(card.get("name") or ""),
             source=str(card.get("source") or ""),
             path=rel_path,
             yaml_text=yaml_text,

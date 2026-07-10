@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { BenchPersonaCard } from "./cockpit/setup/BenchPersonaCard";
-import { BenchPersonaDetailModal } from "./cockpit/setup/BenchPersonaDetailModal";
+import { BenchPersonaDetailPanel } from "./cockpit/setup/BenchPersonaDetailPanel";
 import { PersonaFilterModal } from "./cockpit/setup/PersonaFilterModal";
 import {
   activeFilterCount,
@@ -15,6 +15,7 @@ import {
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import { StudioGlassPanel } from "./studio/StudioShell";
 import { api } from "@/lib/api";
+import { personaPoolEmptyMessage } from "@/lib/personaPoolCopy";
 import type { PersonaPoolCatalog, PersonaPoolPersonaCard } from "@/lib/types";
 
 /** Page size when loading the full bench-dev-sample pool (API max per request). */
@@ -98,7 +99,11 @@ export function PersonaStoreContent({
   });
 
   const all = useMemo(() => personasQuery.data?.personas ?? [], [personasQuery.data]);
-  const personaSources = catalogQuery.data?.dimensionCategories?.personaSources ?? [];
+  const personaSources = useMemo(() => {
+    const fromCatalog = catalogQuery.data?.dimensionCategories?.personaSources ?? [];
+    if (fromCatalog.length > 0) return fromCatalog;
+    return [...new Set(all.map((persona) => persona.source).filter((s): s is string => Boolean(s)))];
+  }, [all, catalogQuery.data]);
   const poolCount = catalogQuery.data?.count ?? all.length;
   const filterCount = activeFilterCount(filters);
 
@@ -215,28 +220,63 @@ export function PersonaStoreContent({
 
       {personasQuery.isLoading && all.length === 0 ? (
         <CatalogSkeleton />
-      ) : personasQuery.isError || catalogQuery.isError ? (
-        <CatalogError onRetry={() => void personasQuery.refetch()} />
+      ) : personasQuery.isError ? (
+        <CatalogError
+          onRetry={() => {
+            void personasQuery.refetch();
+            void catalogQuery.refetch();
+          }}
+        />
       ) : personas.length === 0 ? (
-        <CatalogEmpty query={debouncedQuery} hasFilters={filterCount > 0} />
+        <CatalogEmpty
+          query={debouncedQuery}
+          hasFilters={filterCount > 0}
+          emptyPoolMessage={personaPoolEmptyMessage(catalogQuery.data)}
+        />
       ) : (
-        <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {personas.map((persona, i) => (
-            <div
-              key={persona.personaId}
-              className="rise-in h-full"
-              style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
-            >
-              <BenchPersonaCard
-                persona={persona}
-                selected={persona.personaId === (selectedId ?? null)}
-                onToggle={() => setViewing(persona)}
-                onOpenDetail={() => setViewing(persona)}
-              />
+        <div className={`flex min-h-0 gap-4 ${viewing ? "items-stretch" : ""}`}>
+          <div className="min-w-0 flex-1">
+            <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {personas.map((persona, i) => (
+                <div
+                  key={persona.personaId}
+                  className="rise-in h-full"
+                  style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
+                >
+                  <BenchPersonaCard
+                    persona={persona}
+                    selected={persona.personaId === (selectedId ?? null) || persona.personaId === viewing?.personaId}
+                    onToggle={() => {
+                      setViewing((current) =>
+                        current?.personaId === persona.personaId ? null : persona,
+                      );
+                    }}
+                    onOpenDetail={() => setViewing(persona)}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {viewing ? (
+            <BenchPersonaDetailPanel
+              persona={viewing}
+              onClose={() => setViewing(null)}
+              onUse={onSelect ? handleSelect : undefined}
+              className="hidden w-[min(100%,22rem)] shrink-0 lg:flex"
+            />
+          ) : null}
         </div>
       )}
+
+      {viewing ? (
+        <BenchPersonaDetailPanel
+          persona={viewing}
+          onClose={() => setViewing(null)}
+          onUse={onSelect ? handleSelect : undefined}
+          className="mt-4 lg:hidden"
+        />
+      ) : null}
 
       <PersonaFilterModal
         open={filterModalOpen}
@@ -249,12 +289,6 @@ export function PersonaStoreContent({
         }}
       />
 
-      <BenchPersonaDetailModal
-        open={viewing !== null}
-        persona={viewing}
-        onClose={() => setViewing(null)}
-        onUse={onSelect ? handleSelect : undefined}
-      />
     </>
   );
 }
@@ -304,7 +338,15 @@ function CatalogSkeleton() {
   );
 }
 
-function CatalogEmpty({ query, hasFilters }: { query: string; hasFilters: boolean }) {
+function CatalogEmpty({
+  query,
+  hasFilters,
+  emptyPoolMessage,
+}: {
+  query: string;
+  hasFilters: boolean;
+  emptyPoolMessage: string;
+}) {
   return (
     <div className="glass-panel rise-in flex flex-col items-center rounded-xl px-4 py-16 text-center">
       <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-outline/50 bg-surface/50">
@@ -318,7 +360,7 @@ function CatalogEmpty({ query, hasFilters }: { query: string; hasFilters: boolea
           ? `Nothing matches "${query}". Try a dimension value or persona id.`
           : hasFilters
             ? "No personas match the current dimension filters. Try clearing filters."
-            : "bench-dev-sample pool is empty or could not be loaded."}
+            : emptyPoolMessage}
       </p>
     </div>
   );

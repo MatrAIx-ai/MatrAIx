@@ -3,10 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 
 import { api, ApiError } from "@/lib/api";
 import { PERSONA_BENCH_POOL, type PersonaPoolPersonaCard } from "@/lib/types";
+import { syntheticDisplayName } from "@/lib/personaDisplay";
 import { FOCUS_RING, Sym } from "../cockpitShared";
 import { CockpitSelect, type CockpitSelectOption } from "./CockpitSelect";
 import { BenchPersonaCard } from "./BenchPersonaCard";
-import { BenchPersonaDetailModal } from "./BenchPersonaDetailModal";
+import { BenchPersonaDetailPanel } from "./BenchPersonaDetailPanel";
 import { CockpitRailHeader } from "./CockpitRailHeader";
 import { PersonaFilterModal } from "./PersonaFilterModal";
 import {
@@ -36,7 +37,7 @@ function clampSampleSize(value: number): number {
 function fallbackQuickPickCards(): PersonaPoolPersonaCard[] {
   return QUICK_PICK_PERSONA_IDS.map((personaId) => ({
     personaId,
-    name: `persona-${personaId}`,
+    name: syntheticDisplayName(personaId),
     source: "bench-dev-sample",
     dimensions: {},
   }));
@@ -131,7 +132,7 @@ export function PersonaSamplingRail({
       if (locked.length > 0) return locked;
       return selectedPersonaIds.map((personaId) => ({
         personaId,
-        name: `persona-${personaId}`,
+        name: syntheticDisplayName(personaId),
         source: "bench-dev-sample",
         dimensions: {},
       }));
@@ -198,19 +199,8 @@ export function PersonaSamplingRail({
 
   const filterCount = activeFilterCount(filters);
   const poolCount = catalogQuery.data?.count;
-  const modelLabel =
-    taskType === "survey" || taskType === "chatbot" || taskType === "web" || taskType === "os-app"
-      ? "Persona model"
-      : null;
-  const modelHint =
-    taskType === "survey" || taskType === "chatbot"
-      ? "llm that plays the simulated user in this evaluation."
-      : taskType === "web"
-        ? "llm that powers the web agent — shared across all capability levels."
-        : taskType === "os-app"
-          ? "base llm for the computer-use agent — passed through to Harbor."
-          : null;
-  const showModelSelector = modelLabel !== null;
+  const showModelSelector =
+    taskType === "survey" || taskType === "chatbot" || taskType === "web" || taskType === "os-app";
 
   return (
     <aside className="glass-panel glass-panel-rail relative flex h-full min-h-0 flex-col rounded-xl p-4">
@@ -224,7 +214,6 @@ export function PersonaSamplingRail({
             options={personaModelOptions}
             disabled={disabled}
             onChange={onPersonaModelChange}
-            hint={modelHint ?? undefined}
           />
         )}
       </div>
@@ -305,7 +294,16 @@ export function PersonaSamplingRail({
         </div>
       )}
 
-      <div className="custom-scrollbar min-h-0 flex-1 space-y-2 overflow-y-auto pr-0.5">
+      <div className="custom-scrollbar min-h-0 flex-1 overflow-y-auto pr-0.5">
+        {detailPersona ? (
+          <BenchPersonaDetailPanel
+            embedded
+            persona={detailPersona}
+            onClose={() => setDetailPersona(null)}
+            className="min-h-0"
+          />
+        ) : (
+          <div className="space-y-2">
         {mode === "single" && defaultCardsQuery.isLoading && quickPickCards.length === 0 && (
           <p className="text-[11px] text-text-variant">Loading bench-dev-sample…</p>
         )}
@@ -335,6 +333,8 @@ export function PersonaSamplingRail({
         {mode !== "single" && displayCards.length === 0 && disabled && lockedCohortQuery.isLoading && (
           <p className="text-[11px] text-text-variant">Loading cohort personas…</p>
         )}
+          </div>
+        )}
       </div>
 
       <p className="mt-3 text-center font-mono text-[10px] tracking-wide text-text-dim">
@@ -352,11 +352,6 @@ export function PersonaSamplingRail({
         onConfirm={onFiltersChange}
       />
 
-      <BenchPersonaDetailModal
-        open={detailPersona !== null}
-        persona={detailPersona}
-        onClose={() => setDetailPersona(null)}
-      />
     </aside>
   );
 }

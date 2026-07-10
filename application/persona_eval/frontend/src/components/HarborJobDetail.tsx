@@ -5,7 +5,9 @@ import { type ReactNode, useId, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { api, ApiError } from "@/lib/api";
-import type { HarborJobAggregation, HarborJobDetail } from "@/lib/types";
+import { personaDisplayId, personaPrimaryName } from "@/lib/personaDisplay";
+import type { HarborJobAggregation, HarborJobDetail, JobAggregationCrossFacetView } from "@/lib/types";
+import { PersonaAvatar } from "./cockpit/setup/PersonaAvatar";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import {
   StudioGlassPanel,
@@ -25,7 +27,7 @@ type AggregationField = HarborJobAggregation["fields"][number];
 type AggregationContext = NonNullable<HarborJobAggregation["contexts"]>[number];
 type AggregationSummary = NonNullable<AggregationContext["summaries"]>[number];
 type AggregationJudge = NonNullable<AggregationContext["judges"]>[number];
-type AggregationRelationship = NonNullable<AggregationContext["relationships"]>[number];
+type AggregationCrossFacetView = JobAggregationCrossFacetView;
 type AggregationContextType =
   | "question_response"
   | "decision"
@@ -285,10 +287,20 @@ function TrialStatusBadge({ trial }: { trial: HarborTrialRow }) {
   );
 }
 
-function trialPersonaLabel(trial: HarborTrialRow): string {
-  if (trial.personaName) return trial.personaName;
-  if (trial.personaId) return `persona-${trial.personaId}`;
-  return trial.trialName;
+function TrialPersonaIdentity({ trial }: { trial: HarborTrialRow }) {
+  const displayName = personaPrimaryName(trial.personaName, trial.personaId);
+  const codename = trial.personaId ? personaDisplayId(trial.personaId) : trial.trialName;
+  const personaKey = trial.personaId ?? trial.trialName;
+
+  return (
+    <div className="flex min-w-0 items-center gap-2.5">
+      <PersonaAvatar personaId={personaKey} size="sm" />
+      <div className="min-w-0">
+        <p className="truncate font-medium text-text-main">{displayName}</p>
+        <p className="truncate font-mono text-[10px] text-text-dim">{codename}</p>
+      </div>
+    </div>
+  );
 }
 
 function metricValue(value: number | null | undefined): string {
@@ -766,6 +778,10 @@ function orderedContextsForBreakdown(
   })
 }
 
+function crossFacetViewsForContext(context: AggregationContext): AggregationCrossFacetView[] {
+  return context.crossFacetViews ?? context.relationships ?? []
+}
+
 function summaryBucketsForContext(context: AggregationContext): CountBarItem[] {
   const summary = context.summaries?.find((item) => item.buckets.length > 0)
   if (summary) {
@@ -782,8 +798,10 @@ function summaryBucketsForContext(context: AggregationContext): CountBarItem[] {
       count: entry.count,
     }))
   }
-  const relationship = context.relationships?.find((item) => (item.buckets?.length ?? 0) > 0)
-  return (relationship?.buckets ?? []).map((bucket) => ({
+  const crossFacetView = crossFacetViewsForContext(context).find(
+    (item) => (item.buckets?.length ?? 0) > 0,
+  )
+  return (crossFacetView?.buckets ?? []).map((bucket) => ({
     label: bucket.category,
     count: bucket.count,
   }))
@@ -1310,12 +1328,12 @@ function ContextCard({ context }: { context: AggregationContext }) {
   const typeDescription = contextTypeDescription(context)
   const summaryCount = context.summaries?.length ?? 0
   const judgeCount = context.judges?.length ?? 0
-  const relationshipCount = context.relationships?.length ?? 0
+  const crossFacetViewCount = crossFacetViewsForContext(context).length
   const unanimousPrimary =
     primaryFacet?.kind === "categorical" && primaryFacet != null && isUnanimousField(primaryFacet)
   const showDistribution =
     !unanimousPrimary && primaryFacet?.kind !== "categorical" && distributionItems.length > 0
-  const analysisCount = summaryCount + judgeCount + relationshipCount
+  const analysisCount = summaryCount + judgeCount + crossFacetViewCount
   const showPrimaryPreview = primaryFacet?.kind === "numerical" || (!showDistribution && !unanimousPrimary)
   const primaryValue = primaryFacet?.categorical?.counts?.[0]?.value ?? null
 
@@ -1432,16 +1450,16 @@ function ContextCard({ context }: { context: AggregationContext }) {
             </div>
           ) : null}
 
-          {(context.relationships?.length ?? 0) > 0 ? (
+          {crossFacetViewsForContext(context).length > 0 ? (
             <div className="space-y-3">
               <SubsectionTitle
-                title="Relationships"
-                subtitle="How explanations vary across response groups."
+                title="Cross-facet views"
+                subtitle="How one facet varies across another facet's groups."
               />
-              {context.relationships?.map((relationship, index) => (
-                <RelationshipDisclosure
-                  key={`${context.key}-${relationship.type}-${index}`}
-                  relationship={relationship}
+              {crossFacetViewsForContext(context).map((crossFacetView, index) => (
+                <CrossFacetViewDisclosure
+                  key={`${context.key}-${crossFacetView.type}-${index}`}
+                  crossFacetView={crossFacetView}
                 />
               ))}
             </div>
@@ -1616,20 +1634,24 @@ function JudgeDisclosure({ judge }: { judge: AggregationJudge }) {
   )
 }
 
-function RelationshipDisclosure({ relationship }: { relationship: AggregationRelationship }) {
-  const buckets = relationship.buckets ?? []
+function CrossFacetViewDisclosure({
+  crossFacetView,
+}: {
+  crossFacetView: AggregationCrossFacetView
+}) {
+  const buckets = crossFacetView.buckets ?? []
   const total = buckets.reduce((sum, bucket) => sum + bucket.count, 0)
   const title =
-    relationship.type === "text_by_primary_category"
+    crossFacetView.type === "text_by_primary_category"
       ? "Reasons by response group"
-      : relationship.type.replace(/_/g, " ")
+      : crossFacetView.type.replace(/_/g, " ")
 
   return (
     <DisclosurePanel
       title={title}
       subtitle={
-        relationship.primaryFacetKey && relationship.textFacetKey
-          ? `${relationship.primaryFacetKey} × ${relationship.textFacetKey}`
+        crossFacetView.primaryFacetKey && crossFacetView.textFacetKey
+          ? `${crossFacetView.primaryFacetKey} × ${crossFacetView.textFacetKey}`
           : undefined
       }
       badge={`${buckets.length} buckets`}
@@ -1643,7 +1665,7 @@ function RelationshipDisclosure({ relationship }: { relationship: AggregationRel
       />
       <div className="mt-3 space-y-2">
         {buckets.map((bucket) => (
-          <div key={`${relationship.type}-${bucket.category}`} className="rounded-lg border border-outline/40 bg-surface/70 p-3">
+          <div key={`${crossFacetView.type}-${bucket.category}`} className="rounded-lg border border-outline/40 bg-surface/70 p-3">
             <div className="flex items-center justify-between gap-3 text-[12px]">
               <span className="font-medium text-text-main">{bucket.category}</span>
               <span className="font-mono text-text-variant">{bucket.count}</span>
@@ -2080,7 +2102,7 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
           )}
 
           <StudioGlassPanel className="overflow-hidden rounded-xl">
-            <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_5.5rem_2rem] gap-3 border-b border-outline/40 px-4 py-2.5 text-[10px] uppercase tracking-wide text-text-dim">
+            <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)_5.5rem_2rem] gap-3 border-b border-outline/40 px-4 py-2.5 text-[10px] uppercase tracking-wide text-text-dim">
               <span>Persona</span>
               <span>Trial</span>
               <span>Status</span>
@@ -2102,13 +2124,11 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
                         type="button"
                         disabled={!clickable}
                         onClick={() => onOpenTrial?.(trial.trialName)}
-                        className={`grid w-full grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_5.5rem_2rem] items-center gap-3 px-4 py-3 text-left text-[13px] ${
+                        className={`grid w-full grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)_5.5rem_2rem] items-center gap-3 px-4 py-3 text-left text-[13px] ${
                           clickable ? "hover:bg-surface/40" : ""
                         } ${FOCUS_RING}`}
                       >
-                        <span className="truncate font-medium text-text-main">
-                          {trialPersonaLabel(trial)}
-                        </span>
+                        <TrialPersonaIdentity trial={trial} />
                         <span className="truncate font-mono text-[11px] text-text-variant">
                           {trial.trialName}
                         </span>
