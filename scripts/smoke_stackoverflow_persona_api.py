@@ -440,6 +440,14 @@ def chat_completion(prompt: str, *, max_tokens: int, timeout: int) -> str:
     return str(body["choices"][0]["message"]["content"])
 
 
+def missing_api_environment_variables() -> list[str]:
+    return [
+        name
+        for name in ("OPENAI_BASE_URL", "OPENAI_API_KEY", "OPENAI_LLM_MODEL")
+        if not os.environ.get(name)
+    ]
+
+
 def main() -> int:
     args = parse_args()
     if not 0 <= args.min_confidence <= 1:
@@ -486,6 +494,18 @@ def main() -> int:
         )
         print(preview_prompt[:4000])
         return 0
+
+    missing_api_vars = missing_api_environment_variables()
+    if missing_api_vars:
+        print(
+            "Missing environment variables: " + ", ".join(missing_api_vars),
+            file=sys.stderr,
+        )
+        print(
+            "Set them in this same terminal before running API inference.",
+            file=sys.stderr,
+        )
+        return 2
 
     if output_path.exists() and not args.overwrite:
         print(f"Output already exists: {output_path}. Use --overwrite.", file=sys.stderr)
