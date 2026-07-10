@@ -54,8 +54,13 @@ ollama pull llama3.1
   and outlier flags for manual spot-checks.
 - `scripts/run_full_harvest.sh` — one-shot orchestrator for the above
   three stages; safe to rerun after interruption.
-- `fixtures/products_1k.json` — the large scraped dataset (1000+
-  products, ≥5 seller-authored attributes each, working Amazon links).
+- `fixtures/products_bulk.json` — the large scraped dataset (494
+  products across 22 best-seller categories, ≥5 seller-authored
+  attributes each, working Amazon links). Collected 2026-07-09; the
+  run was stopped at 494 when the scraping IP entered an extended
+  Amazon cooldown — rerun `scripts/run_full_harvest.sh` (ideally from
+  a different network) to grow it toward the 1000 target; all stages
+  resume from checkpoints.
 - `pipeline/` — the survey pipeline: product loading, prompt rendering,
   response parsing/validation, and retention-rate metrics.
 - `tests/` — pytest unit tests (mocked model, no network/Ollama needed).
@@ -121,7 +126,7 @@ the runner sleeps through block episodes). All stages checkpoint to
 `output/`, so rerunning the same command resumes rather than restarts.
 Only records with a title, plausible price, and ≥5 attributes are
 accepted; rejects land in `output/harvest.rejects.jsonl` with reasons.
-The assembled dataset is written to `fixtures/products_1k.json`.
+The assembled dataset is written to `fixtures/products_bulk.json`.
 
 Anti-bot notes (empirical, 2026-07-08): Amazon soft-blocks with an
 HTTP-200 CAPTCHA page; blocks clear after ~2-5 minutes of sending

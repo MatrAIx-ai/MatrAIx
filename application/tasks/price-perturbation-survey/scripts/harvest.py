@@ -128,6 +128,7 @@ def harvest(
     delay = base_delay
     backoff = block_backoff_start
     consecutive_blocks = 0
+    consecutive_successes = 0
     fetched = 0
     # Candidates that fetched fine but came back on Amazon's degraded
     # page template (no server-rendered buybox price — seen right after
@@ -164,6 +165,7 @@ def harvest(
             fetched += 1
         except BlockedError:
             consecutive_blocks += 1
+            consecutive_successes = 0
             if consecutive_blocks > max_blocks:
                 print(
                     f"{_now()} giving up after {max_blocks} consecutive "
@@ -203,6 +205,15 @@ def harvest(
 
         consecutive_blocks = 0
         backoff = block_backoff_start  # a success ends the block episode
+        consecutive_successes += 1
+        if consecutive_successes % 25 == 0 and delay > base_delay:
+            # Blocks raise the pacing 1.5x each episode; without a
+            # counterpart, one bad patch would pin the whole run at
+            # maximum politeness. Ease back toward base after each
+            # sustained clean stretch to find the tolerated rate.
+            delay = max(base_delay, delay * 0.8)
+            print(f"{_now()} clean stretch — easing delay to {delay:.0f}s",
+                  flush=True)
         product = parse_product_page(html, url)
         reason = validate(product, min_attributes)
         if reason == "missing_price" and product.product_name and not retrying:
