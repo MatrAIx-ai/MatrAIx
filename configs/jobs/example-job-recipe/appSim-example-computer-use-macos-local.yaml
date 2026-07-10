@@ -1,4 +1,5 @@
-# macOS desktop computer-use task. Requires USE_COMPUTER_API_KEY + ANTHROPIC_API_KEY.
+# macOS desktop computer-use example (calendar + reminder handoff).
+# Requires USE_COMPUTER_API_KEY + ANTHROPIC_API_KEY.
 #
 #   uv sync --extra use-computer --extra computer-1
 #   uv run harbor run -c configs/jobs/example-job-recipe/appSim-example-computer-use-macos-local.yaml
@@ -21,4 +22,4 @@ agents:
       persona_path: persona/datasets/bench-dev-sample/persona_0042.yaml
 
 tasks:
-  - path: application/tasks/example-computer-use-macos_notification-preferences
+  - path: application/tasks/example-computer-use-macos_calendar-reminder-handoff
