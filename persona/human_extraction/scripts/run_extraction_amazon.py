@@ -4,9 +4,13 @@
 One array task = one user_bucket (hex 00..ff) = one GPU. For its bucket it:
   1. loads the selection index (data/amazon/selected_users_100k.parquet),
   2. downloads that bucket's raw reviews from the gated HF dataset,
-  3. assembles each selected user's reviews into a single profile_text,
-  4. runs the Amazon persona prompt over all category dimension-chunks, and
-  5. appends one JSON object per user to data/amazon/extraction_v1/shard_<bkt>.jsonl.
+  3. filters low-signal reviews and makes a per-user temporal construction /
+     validation split,
+  4. enriches retained rows with compact product metadata and category summary
+     stats,
+  5. assembles each selected user's construction reviews into profile_text,
+  6. runs the Amazon persona prompt over all category dimension-chunks, and
+  7. appends one JSON object per user to data/amazon/extraction_v1/shard_<bkt>.jsonl.
 
 Persona = one user. Resumable: skips user_id already written, so a preempted /
 re-queued task continues where it left off. Output schema matches the wiki
@@ -23,13 +27,16 @@ Example (single card):
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import time
 import urllib.error
 import urllib.request
+from collections import defaultdict
 from pathlib import Path
+from typing import Any
 
 CACHE = "/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
 os.environ.setdefault("HF_HOME", CACHE)
@@ -66,9 +73,24 @@ NULLISH_VALUES = {
 DATASET_REPO = "MatrAIx2026/MatrAIx2026"
 UBUK = ("amazon/modal_artifacts/"
         "amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000")
+METADATA_PREFIX = (
+    "amazon/modal_artifacts/"
+    "amazon_reviews_2023_metadata_by_parent_asin_bucket_v2"
+)
 
 REVIEW_TMPL = ("[{date}] {category} | {parent_asin} | rating={rating:.0f}/5 | "
                "verified={verified}\nTitle: {title}\n{text}")
+FULFILLMENT_PATTERNS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\b(as expected|works as expected|just as described)\b",
+        r"\b(fast shipping|quick shipping|arrived (on time|quickly|early))\b",
+        r"\b(great product|good product|nice product|excellent product)\b",
+        r"\b(would buy again|will buy again|recommend this product)\b",
+        r"\b(five stars|four stars|three stars|two stars|one star)\b",
+        r"^\s*(good|great|excellent|perfect|nice|ok|okay|love it|liked it)[.!]?\s*$",
+    )
+]
 
 
 def hf_token() -> str | None:
@@ -84,17 +106,380 @@ def hf_token() -> str | None:
     return None
 
 
-def assemble_profile(g: pd.DataFrame, max_chars: int) -> str:
-    """Concatenate one user's reviews (chronological) into a profile_text."""
-    g = g.sort_values("timestamp")
-    parts = [REVIEW_TMPL.format(
-                date=r.date, category=r.category, parent_asin=r.parent_asin,
-                rating=float(r.rating), verified=bool(r.verified_purchase),
-                title=(r.title or ""), text=(r.text or ""))
-             for r in g.itertuples()]
-    header = (f"Amazon reviewer profile — {len(g)} reviews across "
-              f"{g.category.nunique()} categories.\n\n")
-    return (header + "\n\n".join(parts))[:max_chars]
+def compact_text(value: Any, max_chars: int | None = None) -> str:
+    text = " ".join(str(value or "").split())
+    if max_chars is not None and len(text) > max_chars:
+        return text[: max_chars - 15].rstrip() + " ... [truncated]"
+    return text
+
+
+def float_or_none(value: Any) -> float | None:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def normalize_timestamp(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        timestamp = int(value)
+    except (TypeError, ValueError):
+        return None
+    if timestamp < 0:
+        return None
+    if timestamp < 10_000_000_000:
+        timestamp *= 1000
+    return timestamp
+
+
+def valid_rating(value: Any) -> bool:
+    rating = float_or_none(value)
+    return rating is not None and 1 <= rating <= 5
+
+
+def review_text(review: dict[str, Any]) -> str:
+    return compact_text(review.get("text") or review.get("review_text"))
+
+
+def review_title(review: dict[str, Any]) -> str:
+    return compact_text(review.get("title") or review.get("review_title"))
+
+
+def product_title(review: dict[str, Any]) -> str:
+    return compact_text(review.get("product_title"))
+
+
+def product_main_category(review: dict[str, Any]) -> str:
+    return compact_text(review.get("product_main_category"))
+
+
+def product_category_path(review: dict[str, Any]) -> list[str]:
+    value = review.get("product_category_path")
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except ValueError:
+            value = [value]
+    if not isinstance(value, list):
+        return []
+    path = []
+    seen = set()
+    for item in value:
+        text = compact_text(item)
+        if text and text not in seen:
+            seen.add(text)
+            path.append(text)
+        if len(path) >= 6:
+            break
+    return path
+
+
+def has_textual_review(review: dict[str, Any]) -> bool:
+    return bool(review_title(review) or review_text(review))
+
+
+def has_product_info(review: dict[str, Any]) -> bool:
+    return bool(product_title(review) or product_main_category(review) or product_category_path(review))
+
+
+def fulfillment_or_template_review_match(review: dict[str, Any]) -> str | None:
+    text = " ".join(part for part in (review_title(review), review_text(review)) if part)
+    if not text or len(text) > 220:
+        return None
+    for pattern in FULFILLMENT_PATTERNS:
+        if pattern.search(text):
+            return pattern.pattern
+    return None
+
+
+def review_key(review: dict[str, Any]) -> tuple[str, ...]:
+    return (
+        str(review.get("category") or ""),
+        str(review.get("parent_asin") or ""),
+        str(review.get("asin") or ""),
+        str(normalize_timestamp(review.get("timestamp")) or ""),
+        review_title(review).lower(),
+        review_text(review).lower(),
+        product_title(review).lower(),
+    )
+
+
+def jsonable(value: Any) -> Any:
+    if value is None:
+        return None
+    try:
+        if pd.isna(value):
+            return None
+    except (TypeError, ValueError):
+        pass
+    if hasattr(value, "item"):
+        return value.item()
+    return value
+
+
+def normalize_review_record(review: dict[str, Any]) -> dict[str, Any]:
+    row = {key: jsonable(value) for key, value in dict(review).items()}
+    timestamp = normalize_timestamp(row.get("timestamp"))
+    row["timestamp"] = timestamp
+    row["title"] = review_title(row)
+    row["text"] = review_text(row)
+    if product_category_path(row):
+        row["product_category_path"] = product_category_path(row)
+    if product_title(row):
+        row["product_title"] = product_title(row)
+    if product_main_category(row):
+        row["product_main_category"] = product_main_category(row)
+    return row
+
+
+def filter_reviews(
+    reviews: list[dict[str, Any]],
+    *,
+    min_review_text_chars: int,
+    filter_fulfillment_reviews: bool,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    kept = []
+    seen = set()
+    removed_by_reason: dict[str, int] = defaultdict(int)
+    removed_by_category: dict[str, int] = defaultdict(int)
+    for raw_review in reviews:
+        review = normalize_review_record(raw_review)
+        category = str(review.get("category") or "Unknown")
+        text = review_text(review)
+        reason = None
+        if normalize_timestamp(review.get("timestamp")) is None:
+            reason = "missing_or_invalid_timestamp"
+        elif not valid_rating(review.get("rating")):
+            reason = "missing_or_invalid_rating"
+        elif (
+            not has_product_info(review)
+            and not review_title(review)
+            and len(text) < min_review_text_chars
+        ):
+            reason = "insufficient_text_evidence"
+        elif review_key(review) in seen:
+            reason = "duplicate_review"
+        elif filter_fulfillment_reviews and (
+            pattern := fulfillment_or_template_review_match(review)
+        ):
+            reason = f"fulfillment_or_template:{pattern}"
+        if reason:
+            removed_by_reason[reason] += 1
+            removed_by_category[category] += 1
+            continue
+        seen.add(review_key(review))
+        kept.append(review)
+    kept.sort(key=lambda row: (normalize_timestamp(row.get("timestamp")) or 0, str(row.get("asin") or "")))
+    return kept, {
+        "input_reviews": len(reviews),
+        "kept_reviews": len(kept),
+        "removed_reviews": len(reviews) - len(kept),
+        "removed_by_reason": dict(sorted(removed_by_reason.items())),
+        "removed_by_category": dict(sorted(removed_by_category.items())),
+    }
+
+
+def temporal_train_validation_split(
+    reviews: list[dict[str, Any]],
+    train_fraction: float,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    if not 0 < train_fraction < 1:
+        raise ValueError("--train-fraction must be in (0, 1)")
+    split_index = int(len(reviews) * train_fraction)
+    split_index = max(1, min(split_index, len(reviews) - 1))
+    construction = reviews[:split_index]
+    validation = reviews[split_index:]
+    return construction, validation, {
+        "method": "per_user_temporal",
+        "unit": "review_or_rating_row",
+        "train_fraction": train_fraction,
+        "construction_row_count": len(construction),
+        "validation_row_count": len(validation),
+        "construction_text_review_count": sum(1 for row in construction if review_text(row)),
+        "validation_text_review_count": sum(1 for row in validation if review_text(row)),
+        "construction_rating_count": sum(1 for row in construction if valid_rating(row.get("rating"))),
+        "validation_rating_count": sum(1 for row in validation if valid_rating(row.get("rating"))),
+        "construction_last_timestamp": construction[-1].get("timestamp") if construction else None,
+        "validation_first_timestamp": validation[0].get("timestamp") if validation else None,
+    }
+
+
+def category_review_stats(reviews: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    stats: dict[str, dict[str, Any]] = {}
+    for review in reviews:
+        category = str(review.get("category") or "Unknown")
+        item = stats.setdefault(
+            category,
+            {
+                "review_count": 0,
+                "text_review_count": 0,
+                "text_chars": 0,
+                "verified_count": 0,
+                "helpful_vote_sum": 0,
+                "rating_count": 0,
+                "rating_sum": 0.0,
+                "rating_counts": {},
+                "rating_only_count": 0,
+                "rating_only_rating_counts": {},
+                "product_title_counts": {},
+                "product_main_category_counts": {},
+                "product_category_counts": {},
+                "rating_only_product_title_counts": {},
+                "rating_only_product_main_category_counts": {},
+                "rating_only_product_category_counts": {},
+            },
+        )
+        item["review_count"] += 1
+        text = review_text(review)
+        is_rating_only = not has_textual_review(review)
+        if text:
+            item["text_review_count"] += 1
+            item["text_chars"] += len(text)
+        if is_rating_only:
+            item["rating_only_count"] += 1
+        title = product_title(review)
+        if title:
+            item["product_title_counts"][title] = item["product_title_counts"].get(title, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_title_counts"][title] = item["rating_only_product_title_counts"].get(title, 0) + 1
+        main_category = product_main_category(review)
+        if main_category:
+            item["product_main_category_counts"][main_category] = item["product_main_category_counts"].get(main_category, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_main_category_counts"][main_category] = item["rating_only_product_main_category_counts"].get(main_category, 0) + 1
+        for product_category in product_category_path(review):
+            item["product_category_counts"][product_category] = item["product_category_counts"].get(product_category, 0) + 1
+            if is_rating_only:
+                item["rating_only_product_category_counts"][product_category] = item["rating_only_product_category_counts"].get(product_category, 0) + 1
+        if review.get("verified_purchase") is True:
+            item["verified_count"] += 1
+        try:
+            item["helpful_vote_sum"] += int(review.get("helpful_vote") or 0)
+        except (TypeError, ValueError):
+            pass
+        rating = float_or_none(review.get("rating"))
+        if rating is not None:
+            key = str(int(rating)) if rating.is_integer() else str(rating)
+            item["rating_count"] += 1
+            item["rating_sum"] += rating
+            item["rating_counts"][key] = item["rating_counts"].get(key, 0) + 1
+            if is_rating_only:
+                item["rating_only_rating_counts"][key] = item["rating_only_rating_counts"].get(key, 0) + 1
+
+    def top_counts(counts: dict[str, int], limit: int = 25) -> dict[str, int]:
+        return dict(sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit])
+
+    for item in stats.values():
+        count = item["review_count"]
+        rating_count = item["rating_count"]
+        item["verified_share"] = item["verified_count"] / count if count else 0.0
+        item["mean_rating"] = item["rating_sum"] / rating_count if rating_count else None
+        item["rating_counts"] = dict(sorted(item["rating_counts"].items()))
+        item["rating_only_rating_counts"] = dict(sorted(item["rating_only_rating_counts"].items()))
+        for key in (
+            "product_title_counts",
+            "product_main_category_counts",
+            "product_category_counts",
+            "rating_only_product_title_counts",
+            "rating_only_product_main_category_counts",
+            "rating_only_product_category_counts",
+        ):
+            item[key] = top_counts(item[key])
+    return dict(sorted(stats.items()))
+
+
+def format_counts(counts: Any, *, limit: int = 6) -> str:
+    if not isinstance(counts, dict) or not counts:
+        return ""
+    items = sorted(counts.items(), key=lambda item: (-int(item[1] or 0), str(item[0])))[:limit]
+    return ", ".join(f"{key}={value}" for key, value in items)
+
+
+def render_summary_stats(row: dict[str, Any], *, max_chars: int = 4000) -> str:
+    stats = row.get("category_review_stats")
+    if not isinstance(stats, dict) or not stats:
+        return ""
+    split = row.get("temporal_split") if isinstance(row.get("temporal_split"), dict) else {}
+    lines = ["=== Summary Stats ==="]
+    lines.append(
+        "construction_rows: "
+        f"{split.get('construction_row_count', row.get('review_count', 'unknown'))}; "
+        "validation_rows: "
+        f"{split.get('validation_row_count', row.get('validation_review_count', 'unknown'))}; "
+        "construction_text_reviews: "
+        f"{split.get('construction_text_review_count', 'unknown')}; "
+        "construction_ratings: "
+        f"{split.get('construction_rating_count', 'unknown')}"
+    )
+    sorted_stats = sorted(
+        stats.items(),
+        key=lambda pair: (-(pair[1].get("review_count", 0) or 0), str(pair[0])),
+    )
+    for category, item in sorted_stats[:12]:
+        mean_rating = item.get("mean_rating")
+        mean_rating_text = f"{mean_rating:.2f}" if isinstance(mean_rating, int | float) else "unknown"
+        parts = [
+            f"category={category}",
+            f"rows={item.get('review_count', 0)}",
+            f"text_reviews={item.get('text_review_count', 0)}",
+            f"rating_only={item.get('rating_only_count', 0)}",
+            f"mean_rating={mean_rating_text}",
+        ]
+        for label, key, limit in (
+            ("ratings", "rating_counts", 5),
+            ("product_categories", "product_category_counts", 4),
+            ("rating_only_products", "rating_only_product_title_counts", 3),
+        ):
+            rendered = format_counts(item.get(key), limit=limit)
+            if rendered:
+                parts.append(f"{label}={rendered}")
+        lines.append("; ".join(parts))
+    return compact_text("\n".join(lines), max_chars)
+
+
+def render_review(review: dict[str, Any], *, index: int, max_review_text_chars: int) -> str:
+    lines = [
+        f"[review {index}]",
+        f"date: {review.get('date') or review.get('timestamp') or 'unknown'}",
+        f"category: {review.get('category') or 'Unknown'}",
+        f"parent_asin: {review.get('parent_asin') or review.get('asin') or ''}",
+        f"rating: {review.get('rating', 'unknown')}",
+        f"review_title: {review_title(review) or '(untitled)'}",
+    ]
+    if product_title(review):
+        lines.append(f"product_title: {compact_text(product_title(review), 220)}")
+    if product_main_category(review):
+        lines.append(f"product_main_category: {compact_text(product_main_category(review), 120)}")
+    if product_category_path(review):
+        lines.append("product_category_path: " + " > ".join(compact_text(item, 80) for item in product_category_path(review)))
+    lines.extend(
+        [
+            f"verified: {review.get('verified_purchase', 'unknown')}",
+            f"helpful_vote: {review.get('helpful_vote', 0)}",
+            f"text: {compact_text(review_text(review), max_review_text_chars)}",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def assemble_profile(row: dict[str, Any], max_chars: int, max_review_text_chars: int) -> str:
+    reviews = row.get("reviews") or []
+    categories = {review.get("category") or "Unknown" for review in reviews}
+    header = (
+        f"Amazon reviewer profile - construction split: {len(reviews)} reviews "
+        f"across {len(categories)} categories."
+    )
+    parts = [header]
+    summary = render_summary_stats(row)
+    if summary:
+        parts.append(summary)
+    for index, review in enumerate(reviews, start=1):
+        parts.append(render_review(review, index=index, max_review_text_chars=max_review_text_chars))
+    return "\n\n".join(parts)[:max_chars]
 
 
 def build_amazon_prompt(profile_text: str, dimensions: list[dict]) -> str:
@@ -319,15 +704,165 @@ def cat_chunks(by_category: dict, per_chunk: int):
     return out
 
 
-def load_bucket_reviews(bucket: str, token: str | None) -> pd.DataFrame:
+def parent_asin_bucket(parent_asin: str) -> str:
+    return hashlib.sha1(parent_asin.encode("utf-8")).hexdigest()[:2]
+
+
+def parse_category_path(value: Any) -> list[str]:
+    if value is None:
+        return []
+    parsed = value
+    if isinstance(value, str):
+        try:
+            parsed = json.loads(value)
+        except ValueError:
+            parsed = value
+    values: list[str] = []
+    if isinstance(parsed, list):
+        for item in parsed:
+            if isinstance(item, list):
+                values.extend(str(part) for part in item if part)
+            elif item:
+                values.append(str(item))
+    elif parsed:
+        values.append(str(parsed))
+    deduped = []
+    seen = set()
+    for item in values:
+        text = compact_text(item)
+        if text and text not in seen:
+            seen.add(text)
+            deduped.append(text)
+        if len(deduped) >= 6:
+            break
+    return deduped
+
+
+def compact_product_info(row: dict[str, Any]) -> dict[str, Any]:
+    info: dict[str, Any] = {}
+    title = compact_text(row.get("title"))
+    if title:
+        info["product_title"] = title
+    main_category = compact_text(row.get("main_category"))
+    if main_category:
+        info["product_main_category"] = main_category
+    category_path = parse_category_path(row.get("categories_json"))
+    if category_path:
+        info["product_category_path"] = category_path
+    return info
+
+
+def parent_asins_by_category(rows: list[dict[str, Any]]) -> dict[str, set[str]]:
+    requested: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        for field in ("reviews", "validation_reviews"):
+            for review in row.get(field) or []:
+                parent_asin = review.get("parent_asin")
+                category = review.get("category")
+                if parent_asin and category:
+                    requested[str(category)].add(str(parent_asin))
+    return requested
+
+
+def list_relevant_metadata_shards(
+    repo_files: list[str],
+    metadata_prefix: str,
+    requested: dict[str, set[str]],
+) -> dict[tuple[str, str], list[str]]:
+    prefix = metadata_prefix.rstrip("/") + "/"
+    wanted_keys = {
+        (parent_asin_bucket(parent_asin), category)
+        for category, parent_asins in requested.items()
+        for parent_asin in parent_asins
+    }
+    shards: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for filename in repo_files:
+        if not filename.startswith(prefix) or not filename.endswith(".parquet"):
+            continue
+        parts = filename[len(prefix) :].split("/")
+        if len(parts) != 3:
+            continue
+        bucket_part, category_part, _name = parts
+        if not bucket_part.startswith("bucket=") or not category_part.startswith("source_category="):
+            continue
+        bucket = bucket_part.split("=", 1)[1]
+        category = category_part.split("=", 1)[1]
+        key = (bucket, category)
+        if key in wanted_keys:
+            shards[key].append(filename)
+    return {key: sorted(value) for key, value in shards.items()}
+
+
+def attach_product_metadata(
+    rows: list[dict[str, Any]],
+    *,
+    repo_files: list[str],
+    repo_id: str,
+    metadata_prefix: str,
+    token: str | bool | None,
+    download_delay_seconds: float,
+) -> dict[str, int]:
+    from huggingface_hub import hf_hub_download
+
+    requested = parent_asins_by_category(rows)
+    requested_pairs = sum(len(parent_asins) for parent_asins in requested.values())
+    if not requested_pairs:
+        return {
+            "requested_category_parent_asin_pairs": 0,
+            "matched_category_parent_asin_pairs": 0,
+            "matched_review_rows": 0,
+        }
+
+    metadata_shards = list_relevant_metadata_shards(repo_files, metadata_prefix, requested)
+    metadata: dict[tuple[str, str], dict[str, Any]] = {}
+    columns = ["parent_asin", "source_category", "main_category", "title", "categories_json"]
+    for (bucket, category), filenames in sorted(metadata_shards.items()):
+        wanted_parent_asins = requested.get(category, set())
+        for filename in filenames:
+            if download_delay_seconds > 0:
+                time.sleep(download_delay_seconds)
+            local_path = hf_hub_download(
+                repo_id=repo_id,
+                repo_type="dataset",
+                filename=filename,
+                token=token,
+            )
+            for row in pd.read_parquet(local_path, columns=columns).to_dict(orient="records"):
+                parent_asin = str(row.get("parent_asin") or "")
+                if parent_asin in wanted_parent_asins:
+                    metadata[(parent_asin, category)] = compact_product_info(row)
+
+    matched_reviews = 0
+    for row in rows:
+        for field in ("reviews", "validation_reviews"):
+            for review in row.get(field) or []:
+                parent_asin = str(review.get("parent_asin") or "")
+                category = str(review.get("category") or "")
+                info = metadata.get((parent_asin, category))
+                if info:
+                    review.update(info)
+                    matched_reviews += 1
+        row["category_review_stats"] = category_review_stats(row.get("reviews") or [])
+        row["validation_category_review_stats"] = category_review_stats(
+            row.get("validation_reviews") or []
+        )
+
+    return {
+        "requested_category_parent_asin_pairs": requested_pairs,
+        "matched_category_parent_asin_pairs": len(metadata),
+        "matched_review_rows": matched_reviews,
+    }
+
+
+def load_bucket_reviews(bucket: str, token: str | None) -> tuple[pd.DataFrame, list[str]]:
     """All reviews in one user_bucket (across every category file)."""
     from huggingface_hub import HfApi, hf_hub_download
     api = HfApi(token=token)
-    files = [f for f in api.list_repo_files(DATASET_REPO, repo_type="dataset")
-             if f.startswith(f"{UBUK}/bucket={bucket}/") and f.endswith(".parquet")]
+    repo_files = list(api.list_repo_files(DATASET_REPO, repo_type="dataset"))
+    files = [f for f in repo_files if f.startswith(f"{UBUK}/bucket={bucket}/") and f.endswith(".parquet")]
     dfs = [pd.read_parquet(hf_hub_download(DATASET_REPO, f, repo_type="dataset",
                                            token=token)) for f in files]
-    return pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
+    return (pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()), repo_files
 
 
 def openrouter_chat(
@@ -396,6 +931,17 @@ def main() -> None:
     ap.add_argument("--max-tokens", type=int, default=8192)
     ap.add_argument("--max-model-len", type=int, default=32768)
     ap.add_argument("--max-profile-chars", type=int, default=48000)
+    ap.add_argument("--max-review-text-chars", type=int, default=2000)
+    ap.add_argument("--train-fraction", type=float, default=0.8)
+    ap.add_argument("--min-total-reviews", type=int, default=2)
+    ap.add_argument("--min-construction-reviews", type=int, default=1)
+    ap.add_argument("--min-validation-reviews", type=int, default=1)
+    ap.add_argument("--min-review-text-chars", type=int, default=20)
+    ap.add_argument("--keep-fulfillment-reviews", action="store_true")
+    ap.add_argument("--no-product-info", dest="include_product_info", action="store_false")
+    ap.set_defaults(include_product_info=True)
+    ap.add_argument("--metadata-artifact-prefix", default=METADATA_PREFIX)
+    ap.add_argument("--metadata-download-delay-seconds", type=float, default=0.05)
     ap.add_argument("--gpu-mem", type=float, default=0.90)
     ap.add_argument("--max-num-seqs", type=int, default=64)
     ap.add_argument("--tensor-parallel", type=int, default=1,
@@ -448,15 +994,67 @@ def main() -> None:
         print("[shard] nothing to do — complete.", flush=True)
         return
 
-    # --- load this bucket's reviews and assemble profiles ---
+    # --- load this bucket's reviews, prepare construction split, and assemble profiles ---
     t0 = time.time()
-    rev = load_bucket_reviews(bucket, token)
+    rev, repo_files = load_bucket_reviews(bucket, token)
     rev = rev[rev.user_id.isin(set(todo_ids))]
-    profiles = {uid: assemble_profile(g, args.max_profile_chars)
-                for uid, g in rev.groupby("user_id", sort=False)}
+    prepared_rows: dict[str, dict[str, Any]] = {}
+    skipped: dict[str, str] = {}
+    for uid, group in rev.groupby("user_id", sort=False):
+        raw_reviews = group.to_dict(orient="records")
+        reviews, filter_summary = filter_reviews(
+            raw_reviews,
+            min_review_text_chars=args.min_review_text_chars,
+            filter_fulfillment_reviews=not args.keep_fulfillment_reviews,
+        )
+        if len(reviews) < args.min_total_reviews:
+            skipped[str(uid)] = "too_few_reviews_after_filter"
+            continue
+        construction, validation, split_summary = temporal_train_validation_split(
+            reviews, args.train_fraction
+        )
+        if len(construction) < args.min_construction_reviews:
+            skipped[str(uid)] = "too_few_construction_reviews"
+            continue
+        if len(validation) < args.min_validation_reviews:
+            skipped[str(uid)] = "too_few_validation_reviews"
+            continue
+        prepared_rows[str(uid)] = {
+            "user_id": str(uid),
+            "review_count": len(reviews),
+            "validation_review_count": len(validation),
+            "temporal_split": split_summary,
+            "review_filter_summary": filter_summary,
+            "reviews": construction,
+            "validation_reviews": validation,
+        }
+
+    if args.include_product_info and prepared_rows:
+        product_summary = attach_product_metadata(
+            list(prepared_rows.values()),
+            repo_files=repo_files,
+            repo_id=DATASET_REPO,
+            metadata_prefix=args.metadata_artifact_prefix,
+            token=token,
+            download_delay_seconds=args.metadata_download_delay_seconds,
+        )
+        print(f"[shard] product metadata summary: {product_summary}", flush=True)
+    else:
+        for row in prepared_rows.values():
+            row["category_review_stats"] = category_review_stats(row.get("reviews") or [])
+            row["validation_category_review_stats"] = category_review_stats(
+                row.get("validation_reviews") or []
+            )
+
+    profiles = {
+        uid: assemble_profile(row, args.max_profile_chars, args.max_review_text_chars)
+        for uid, row in prepared_rows.items()
+    }
     todo = [u for u in todo_ids if u in profiles]
     print(f"[shard] loaded {len(rev):,} reviews, assembled {len(profiles):,} "
-          f"profiles in {time.time()-t0:.0f}s", flush=True)
+          f"profiles, skipped={len(skipped):,} in {time.time()-t0:.0f}s", flush=True)
+    if skipped:
+        print(f"[shard] skipped reasons: {dict(sorted((reason, list(skipped.values()).count(reason)) for reason in set(skipped.values())))}", flush=True)
 
     # --- load model/client once ---
     t0 = time.time()
@@ -528,6 +1126,10 @@ def main() -> None:
                 out_fh.write(json.dumps(
                     {"user_id": uid, "user_bucket": bucket,
                      "review_count": int(review_count.get(uid, 0)),
+                     "prepared_review_count": int(prepared_rows[uid].get("review_count", 0)),
+                     "validation_review_count": int(prepared_rows[uid].get("validation_review_count", 0)),
+                     "temporal_split": prepared_rows[uid].get("temporal_split"),
+                     "review_filter_summary": prepared_rows[uid].get("review_filter_summary"),
                      "fields": merged[uid]}, ensure_ascii=False) + "\n")
             out_fh.flush()
             os.fsync(out_fh.fileno())
