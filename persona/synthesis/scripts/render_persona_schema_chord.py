@@ -189,7 +189,7 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
 
     # Give every sector a minimum arc so all labels fit without overlap.
     flow = matrix.sum(axis=1) + matrix.sum(axis=0)
-    min_arc = max(180.0, flow.max() * 0.05)
+    min_arc = max(230.0, flow.max() * 0.05)
     size = {
         subgroups_ordered[i]: float(max(flow[i], min_arc)) for i in range(n_sub)
     }
@@ -204,8 +204,8 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         track.axis(fc=group_color[group_name], ec="white", lw=0.6)
         label = _wrap_label(sector.name)
         longest = max(len(line) for line in label.split("\n"))
-        label_size = 12.5 if longest <= 11 else 11.0
-        sector.text(label, r=106, size=label_size, adjust_rotation=True,
+        label_size = 15.5 if longest <= 11 else 13.5
+        sector.text(label, r=107, size=label_size, adjust_rotation=True,
                     orientation="vertical", color="#222")
 
     # Draw chord ribbons, heaviest first, so thin links stay visible on top.
@@ -233,14 +233,14 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
             lo, hi = sector_by_name[disp].deg_lim
             degrees += [lo, hi]
         lo, hi = min(degrees), max(degrees)
-        circos.rect(r_lim=(124, 130), deg_lim=(lo, hi), fc=group_col,
+        circos.rect(r_lim=(126, 132), deg_lim=(lo, hi), fc=group_col,
                     ec="white", lw=1.2)
-        circos.text(group_name, r=143, deg=(lo + hi) / 2, size=17,
+        circos.text(group_name, r=147, deg=(lo + hi) / 2, size=20,
                     adjust_rotation=True, orientation="horizontal",
                     color=group_col, fontweight="bold", va="center", ha="center")
 
-    fig = circos.plotfig(figsize=(16, 16))
-    fig.suptitle("Persona schema", y=1.01, fontsize=16)
+    fig = circos.plotfig(figsize=(18, 18))
+    fig.suptitle("Persona schema", y=1.01, fontsize=19)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "persona_schema_chord.png"
