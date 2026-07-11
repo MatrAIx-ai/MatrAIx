@@ -158,20 +158,37 @@ def render(graph_path: Path, out_dir: Path) -> None:
         "ps.fonttype": 42,
     })
 
-    # Vertical layout: leaves top-to-bottom, uniform spacing.
+    # Vertical layout: leaves top-to-bottom, uniform spacing within a group and
+    # a small gap between groups so the (taller) group boxes have room.
     step = 1.0
-    y_leaf = {i: (n_leaf - i) * step for i in range(n_leaf)}
+    group_gap = 0.7
+    group_leaf_idx: list[list[int]] = []
+    positions: list[float] = []
+    cursor = 0.0
+    leaf_i = 0
+    for _name, _color, subs in GROUPS:
+        idxs = []
+        for _ in subs:
+            positions.append(cursor)
+            idxs.append(leaf_i)
+            leaf_i += 1
+            cursor -= step
+        group_leaf_idx.append(idxs)
+        cursor -= group_gap
+    shift = min(positions)
+    y_leaf = {i: positions[i] - shift for i in range(n_leaf)}
+    span = max(y_leaf.values())
 
-    fig, ax = plt.subplots(figsize=(11, 0.42 * n_leaf + 1.4))
+    fig, ax = plt.subplots(figsize=(11, 0.40 * (span + 2) + 1.0))
     ax.axis("off")
 
-    x_group, w_group = 0.0, 3.4
-    x_sub, w_sub = 5.2, 4.2
-    box_h = 0.78
+    x_group, w_group = 0.0, 4.6
+    x_sub, w_sub = 6.6, 4.2
+    leaf_h = 0.78
 
-    def draw_box(x, y, w, text, face, edge, size):
+    def draw_box(x, y, w, h, text, face, edge, size):
         ax.add_patch(FancyBboxPatch(
-            (x, y - box_h / 2), w, box_h,
+            (x, y - h / 2), w, h,
             boxstyle="round,pad=0.02,rounding_size=0.14",
             linewidth=1.0, edgecolor=edge, facecolor=face, zorder=3))
         ax.text(x + w / 2, y, text, ha="center", va="center", fontsize=size,
@@ -186,33 +203,30 @@ def render(graph_path: Path, out_dir: Path) -> None:
 
     # Sub-category boxes (leaves).
     for i, (_group, color, disp, count) in enumerate(leaves):
-        draw_box(x_sub, y_leaf[i], w_sub, f"{disp}  ({count})",
+        draw_box(x_sub, y_leaf[i], w_sub, leaf_h, f"{disp}  ({count})",
                  _lighten(color, 0.80), color, size=9.5)
 
     # Group boxes at the mean y of their sub-categories, with brackets.
-    leaf_index = 0
-    for group_name, color, subs in GROUPS:
-        idxs = list(range(leaf_index, leaf_index + len(subs)))
-        leaf_index += len(subs)
+    # Box height adapts to the wrapped label so the text always fits inside.
+    for (group_name, color, subs), idxs in zip(GROUPS, group_leaf_idx):
         y_mid = float(np.mean([y_leaf[i] for i in idxs]))
-        label = f"{_wrap(group_name, 22)}\n({group_total[group_name]})"
-        draw_box(x_group, y_mid, w_group, label,
-                 _lighten(color, 0.42), color, size=10.5)
+        label = f"{_wrap(group_name, 26)}\n({group_total[group_name]})"
+        n_lines = label.count("\n") + 1
+        group_h = n_lines * 0.52 + 0.30
+        draw_box(x_group, y_mid, w_group, group_h, label,
+                 _lighten(color, 0.42), color, size=10.0)
         for i in idxs:
             connect(x_group + w_group, y_mid, x_sub, y_leaf[i], color)
 
     # Column headers.
-    top = n_leaf * step + 1.1
+    top = span + 1.2
     ax.text(x_group + w_group / 2, top, "Group  (# attributes)",
             ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
     ax.text(x_sub + w_sub / 2, top, "Sub-category  (# attributes)",
             ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
 
     ax.set_xlim(-0.4, x_sub + w_sub + 0.4)
-    ax.set_ylim(0.0, top + 1.2)
-    ax.set_title(
-        f"Taxonomy of the MatrAIx persona schema ({grand_total:,} attributes)",
-        fontsize=13, color=TEXT_COLOR, pad=10)
+    ax.set_ylim(-1.0, top + 1.0)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "persona_schema_taxonomy.png"
