@@ -863,6 +863,23 @@ class PersonaPoolPersonaDetailResponse(PersonaPoolPersonaCard):
     profileMarkdown: str = ""
 
 
+class TaskPersonaStrategy(BaseModel):
+    """Optional per-task Playground sampling defaults (``persona_strategy.json``)."""
+
+    model_config = ConfigDict(extra="allow")
+
+    schemaVersion: str = "1.0"
+    pool: Optional[str] = None
+    defaultMode: Optional[str] = None
+    sources: List[str] = Field(default_factory=list)
+    dimensionFilters: Dict[str, List[str]] = Field(default_factory=dict)
+    stratifyFields: Optional[List[str]] = None
+    sampleSize: Optional[int] = None
+    seed: Optional[int] = None
+    cohortId: Optional[str] = None
+    sampleSizePerValueGroup: Optional[int] = None
+
+
 class TaskDetailResponse(BaseModel):
     model_config = ConfigDict(extra="allow")
 
@@ -877,6 +894,7 @@ class TaskDetailResponse(BaseModel):
     outputSchemaMarkdown: str = ""
     selfReportMarkdown: str = ""
     questionnaire: Optional[SurveyInstrument] = None
+    personaStrategy: Optional[TaskPersonaStrategy] = None
     profileMarkdown: str = ""
 
 

@@ -92,6 +92,29 @@ export function OsAppEvalCockpit({
 }: OsAppEvalCockpitProps) {
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<OsAppEvalJobView>({ taskKind: "os-app" });
+  const [taskId, setTaskId] = useState("");
+  const [cuaRuntimeByTaskId, setCuaRuntimeByTaskId] = useState<Record<string, string>>({});
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [tab, setTab] = useState<InspectorTab>("evaluation");
+  const [launchError, setLaunchError] = useState<string | null>(null);
+  const [exportSnapshot, setExportSnapshot] = useState<{
+    persona: { id: string; name: string; source: string } | null;
+    taskId: string;
+    personaModel: string;
+  } | null>(null);
+
+  const tasksQuery = useQuery<OsAppEvalTasksResponse>({
+    queryKey: ["os-app-eval-tasks"],
+    queryFn: listOsAppEvalTasks,
+    staleTime: 10 * 60_000,
+    retry: 1,
+  });
+  const tasks = useMemo(
+    () => mergeOsAppTasks(tasksQuery.data?.tasks),
+    [tasksQuery.data?.tasks],
+  );
+  const setupTaskPath =
+    tasks.find((item) => item.id === taskId)?.taskPath ?? tasks[0]?.taskPath ?? null;
   const {
     persona,
     personaModel,
@@ -111,12 +134,10 @@ export function OsAppEvalCockpit({
     parallelTrials,
     setParallelTrials,
     isBatchRun,
-  } = useSetupPersonaSampling(options, "os-app");
-  const [taskId, setTaskId] = useState("");
-  const [cuaRuntimeByTaskId, setCuaRuntimeByTaskId] = useState<Record<string, string>>({});
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [tab, setTab] = useState<InspectorTab>("evaluation");
-  const [launchError, setLaunchError] = useState<string | null>(null);
+    hasTaskStrategy,
+    strategySampleSize,
+    resetToTaskStrategy,
+  } = useSetupPersonaSampling(options, "os-app", setupTaskPath);
   const {
     batchJobName,
     batchTaskId,
@@ -131,11 +152,6 @@ export function OsAppEvalCockpit({
     batchGridCells,
     expectedTrialCount,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "os-app");
-  const [exportSnapshot, setExportSnapshot] = useState<{
-    persona: { id: string; name: string; source: string } | null;
-    taskId: string;
-    personaModel: string;
-  } | null>(null);
 
   useEffect(() => {
     setPersonaModel((current) =>
@@ -143,16 +159,6 @@ export function OsAppEvalCockpit({
     );
   }, [setPersonaModel]);
 
-  const tasksQuery = useQuery<OsAppEvalTasksResponse>({
-    queryKey: ["os-app-eval-tasks"],
-    queryFn: listOsAppEvalTasks,
-    staleTime: 10 * 60_000,
-    retry: 1,
-  });
-  const tasks = useMemo(
-    () => mergeOsAppTasks(tasksQuery.data?.tasks),
-    [tasksQuery.data?.tasks],
-  );
   const { setupLocked, visiblePersonaIds } = useCockpitSetupLock(
     phase,
     batchJobName,
@@ -420,6 +426,9 @@ export function OsAppEvalCockpit({
           onFiltersChange={setGroupFilters}
           stratifyFields={stratifyFields}
           onStratifyFieldsChange={setStratifyFields}
+          hasTaskStrategy={hasTaskStrategy}
+          strategySampleSize={strategySampleSize}
+          onResetToTaskStrategy={resetToTaskStrategy}
           disabled={setupLocked}
         />
       }

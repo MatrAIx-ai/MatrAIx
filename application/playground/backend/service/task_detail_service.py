@@ -79,9 +79,11 @@ def get_task_detail(task_path: str, *, repo_root: Path) -> dict[str, Any]:
         task_name = str(task_block.get("name") or task_name)
 
     from backend.service.application_task_metadata import title_from_harbor_task_name
+    from backend.service.persona_strategy import load_persona_strategy
 
     title = title_from_harbor_task_name(task_name) or _humanize_key(task_dir.name.replace("-", " "))
     description = instruction_blurb
+    persona_strategy = load_persona_strategy(task_dir)
     bundle = load_task_content_bundle_for_task_path(normalized, repo_root=repo_root)
     if bundle.instruction_markdown.strip():
         instruction_md = bundle.instruction_markdown.strip()
@@ -190,6 +192,7 @@ def get_task_detail(task_path: str, *, repo_root: Path) -> dict[str, Any]:
         "outputSchemaMarkdown": output_schema_markdown,
         "selfReportMarkdown": self_report_markdown,
         "questionnaire": questionnaire,
+        "personaStrategy": persona_strategy,
         "profileMarkdown": "\n".join(markdown_parts).strip(),
         "extraDocs": extra_docs,
     }

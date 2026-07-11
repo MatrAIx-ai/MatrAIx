@@ -1,10 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+import { api } from "@/lib/api";
 import type { HarborCockpitTaskKind } from "@/lib/harborCockpitMappers";
-import type { ConfigOptionsResponse, PlaygroundPersona } from "@/lib/types";
+import type { ConfigOptionsResponse, PlaygroundPersona, TaskPersonaStrategy } from "@/lib/types";
 
 import {
+  defaultPersonaSetup,
+  hasStoredPersonaSetup,
   readCockpitPersonaSetup,
+  setupFromPersonaStrategy,
   writeCockpitPersonaSetup,
 } from "./cockpitPersonaSetupStorage";
 import {
@@ -15,12 +20,16 @@ import {
 export function useSetupPersonaSampling(
   options: ConfigOptionsResponse | null,
   taskKind: HarborCockpitTaskKind,
+  taskPath: string | null = null,
 ) {
   const fallbackPersonaModel =
     taskKind === "os-app"
       ? "anthropic/claude-sonnet-4-6"
       : options?.environment.personaModel ?? "anthropic/claude-haiku-4-5";
-  const [initial] = useState(() => readCockpitPersonaSetup(taskKind, fallbackPersonaModel));
+  const normalizedPath = taskPath?.trim() || null;
+  const [initial] = useState(() =>
+    readCockpitPersonaSetup(taskKind, fallbackPersonaModel, normalizedPath),
+  );
 
   const [personaModel, setPersonaModel] = useState<string>(initial.personaModel);
   const [samplingMode, setSamplingMode] = useState<PersonaSamplingMode>(initial.samplingMode);
@@ -31,19 +40,110 @@ export function useSetupPersonaSampling(
   const [seed] = useState(42);
   const [parallelTrials, setParallelTrials] = useState(initial.parallelTrials);
   const [persona, setPersona] = useState<PlaygroundPersona | null>(null);
+  const [taskPersonaStrategy, setTaskPersonaStrategy] = useState<TaskPersonaStrategy | null>(null);
+  const hydratedPathRef = useRef<string | null>(null);
+  const skipNextPersistRef = useRef(false);
+
+  const strategyQuery = useQuery({
+    queryKey: ["task-persona-strategy", normalizedPath],
+    queryFn: async () => {
+      if (!normalizedPath) return null;
+      const detail = await api.getTaskDetail(normalizedPath);
+      return detail.personaStrategy ?? null;
+    },
+    enabled: Boolean(normalizedPath),
+    staleTime: 60_000,
+  });
+
+  const applySetupRecord = useCallback((record: ReturnType<typeof defaultPersonaSetup>) => {
+    skipNextPersistRef.current = true;
+    setSamplingMode(record.samplingMode);
+    setSelectedPersonaIds(record.selectedPersonaIds);
+    setGroupFilters(record.groupFilters);
+    setStratifyFields(record.stratifyFields);
+    setSampleSize(record.sampleSize);
+    setPersonaModel(record.personaModel);
+    setParallelTrials(record.parallelTrials);
+  }, []);
+
+  const resetToTaskStrategy = useCallback(() => {
+    const strategy = strategyQuery.data ?? taskPersonaStrategy;
+    const applied = setupFromPersonaStrategy(strategy, fallbackPersonaModel, {
+      ...defaultPersonaSetup(fallbackPersonaModel),
+      personaModel,
+      parallelTrials,
+    });
+    applySetupRecord(applied);
+    setTaskPersonaStrategy(strategy);
+  }, [
+    applySetupRecord,
+    fallbackPersonaModel,
+    parallelTrials,
+    personaModel,
+    strategyQuery.data,
+    taskPersonaStrategy,
+  ]);
 
   useEffect(() => {
-    writeCockpitPersonaSetup(taskKind, {
-      selectedPersonaIds,
-      samplingMode,
-      groupFilters,
-      stratifyFields,
-      sampleSize,
-      parallelTrials,
-      personaModel,
+    setTaskPersonaStrategy(strategyQuery.data ?? null);
+  }, [strategyQuery.data]);
+
+  useEffect(() => {
+    const path = normalizedPath;
+    if (!path) {
+      hydratedPathRef.current = null;
+      return;
+    }
+    if (hydratedPathRef.current === path) return;
+
+    const stored = readCockpitPersonaSetup(taskKind, fallbackPersonaModel, path);
+    if (hasStoredPersonaSetup(path)) {
+      applySetupRecord(stored);
+      hydratedPathRef.current = path;
+      return;
+    }
+
+    // Wait for strategy fetch when we have a path and no path-specific storage.
+    if (strategyQuery.isFetching || strategyQuery.isLoading) return;
+
+    const applied = setupFromPersonaStrategy(strategyQuery.data, fallbackPersonaModel, {
+      ...defaultPersonaSetup(fallbackPersonaModel),
+      personaModel: stored.personaModel,
+      parallelTrials: stored.parallelTrials,
     });
+    applySetupRecord(applied);
+    hydratedPathRef.current = path;
+  }, [
+    applySetupRecord,
+    fallbackPersonaModel,
+    normalizedPath,
+    strategyQuery.data,
+    strategyQuery.isFetching,
+    strategyQuery.isLoading,
+    taskKind,
+  ]);
+
+  useEffect(() => {
+    if (skipNextPersistRef.current) {
+      skipNextPersistRef.current = false;
+      return;
+    }
+    writeCockpitPersonaSetup(
+      taskKind,
+      {
+        selectedPersonaIds,
+        samplingMode,
+        groupFilters,
+        stratifyFields,
+        sampleSize,
+        parallelTrials,
+        personaModel,
+      },
+      normalizedPath,
+    );
   }, [
     taskKind,
+    normalizedPath,
     selectedPersonaIds,
     samplingMode,
     groupFilters,
@@ -88,6 +188,12 @@ export function useSetupPersonaSampling(
     [samplingMode],
   );
 
+  const hasTaskStrategy = Boolean(taskPersonaStrategy);
+  const strategySampleSize =
+    typeof taskPersonaStrategy?.sampleSize === "number" && taskPersonaStrategy.sampleSize > 0
+      ? taskPersonaStrategy.sampleSize
+      : null;
+
   return {
     persona,
     personaModel,
@@ -108,5 +214,8 @@ export function useSetupPersonaSampling(
     parallelTrials,
     setParallelTrials,
     isBatchRun,
+    hasTaskStrategy,
+    strategySampleSize,
+    resetToTaskStrategy,
   };
 }

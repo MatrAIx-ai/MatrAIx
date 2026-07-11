@@ -59,6 +59,9 @@ export interface PersonaSamplingRailProps {
   stratifyFields: string[];
   onStratifyFieldsChange: (fields: string[]) => void;
   taskType?: PlaygroundTaskType;
+  hasTaskStrategy?: boolean;
+  strategySampleSize?: number | null;
+  onResetToTaskStrategy?: () => void;
   disabled?: boolean;
 }
 
@@ -78,6 +81,9 @@ export function PersonaSamplingRail({
   stratifyFields,
   onStratifyFieldsChange,
   taskType,
+  hasTaskStrategy = false,
+  strategySampleSize = null,
+  onResetToTaskStrategy,
   disabled,
 }: PersonaSamplingRailProps) {
   const [filterOpen, setFilterOpen] = useState(false);
@@ -244,6 +250,26 @@ export function PersonaSamplingRail({
 
       {mode !== "single" && (
         <div className="mb-2 space-y-2">
+          {hasTaskStrategy ? (
+            <div className="flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/5 px-2.5 py-1.5">
+              <Sym name="bookmark" size={14} className="shrink-0 text-primary" />
+              <span className="min-w-0 flex-1 text-[10px] leading-snug text-text-variant">
+                Task default persona strategy
+                {typeof strategySampleSize === "number" ? ` · sample ${strategySampleSize}` : ""}
+              </span>
+              {onResetToTaskStrategy ? (
+                <button
+                  type="button"
+                  disabled={disabled}
+                  onClick={onResetToTaskStrategy}
+                  className={`shrink-0 text-[10px] font-medium text-primary hover:underline disabled:opacity-50 ${FOCUS_RING}`}
+                >
+                  Reset
+                </button>
+              ) : null}
+            </div>
+          ) : null}
+
           <button
             type="button"
             disabled={disabled}

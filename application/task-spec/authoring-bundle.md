@@ -14,6 +14,7 @@ Supplementary files differ by application type:
 ```text
 instruction.md                 # short scenario / requirements
 reporting.json                 # batch aggregation policy (contextRules)
+persona_strategy.json          # optional Playground sampling defaults
 input/
   context.md                   # product concept (optional)
   questionnaire.yaml           # questions + askRationale / askConfidence
@@ -27,6 +28,7 @@ envelope from `questionnaire.yaml` and writes `survey_result.json`.
 ```text
 instruction.md                 # conversation goal
 reporting.json                 # batch aggregation policy (contextRules)
+persona_strategy.json          # optional Playground sampling defaults
 input/
   context.md                   # application background (optional)
   protocol.md                  # chat API / MCP contract (optional)
@@ -43,6 +45,7 @@ Platform-managed harness artifacts (`transcript.json`,
 ```text
 instruction.md                 # task goal, steps, optional submission JSON schema
 reporting.json                 # batch aggregation policy (contextRules)
+persona_strategy.json          # optional Playground sampling defaults
 input/
   context.md                   # scenario / product background (optional)
   self_report_schema.yaml      # user_feedback.json (optional)
@@ -63,3 +66,38 @@ chatbot tasks.
 | Objective evidence | platform `survey_result.json` | platform harness artifacts | trace/state (optional agent submission) |
 | Persona self-report | — | `input/self_report_schema.yaml` | `input/self_report_schema.yaml` |
 | Batch reporting policy | `reporting.json` | `reporting.json` | `reporting.json` |
+| Persona sampling defaults (optional) | `persona_strategy.json` | `persona_strategy.json` | `persona_strategy.json` |
+
+### Optional `persona_strategy.json`
+
+Playground sampling defaults for Random / Stratified (and optional Quick pick
+mode). Lives at the **task root** next to `reporting.json` — not under
+`input/`, because it is launch policy, not persona-facing content.
+
+```json
+{
+  "schemaVersion": "1.0",
+  "defaultMode": "random",
+  "pool": "persona/datasets/bench-dev-sample",
+  "sources": ["Nemotron"],
+  "dimensionFilters": {
+    "age_bracket": ["25-34", "35-44"],
+    "region": ["North America"]
+  },
+  "stratifyFields": ["age_bracket", "region"],
+  "sampleSize": 8,
+  "cohortId": null
+}
+```
+
+| Field | Required | Notes |
+|---|---|---|
+| `defaultMode` | no | `single` \| `random` \| `stratified` |
+| `sources` / `dimensionFilters` | no | Applied as the task-default persona filter |
+| `stratifyFields` | no | Used when mode is `stratified` |
+| `sampleSize` | no | When set, overrides the Playground sample-size control on apply/reset; omit to leave size UI-owned |
+| `cohortId` | no | Optional saved cohort under `persona/datasets/cohorts/` |
+| `pool` | no | Defaults to bench-dev-sample |
+
+When the file is absent, Playground keeps its previous UI defaults. Operators can
+still change filters after the task default is applied.
