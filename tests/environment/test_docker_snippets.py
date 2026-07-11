@@ -78,6 +78,8 @@ def test_uv_installer_scripts_do_not_source_missing_env_file() -> None:
     shell_scripts = [
         *sorted((ROOT / "application" / "tasks").glob("*/tests/test.sh")),
         *sorted((ROOT / "application" / "tasks").glob("*/solution/solve.sh")),
+        *sorted((ROOT / "examples" / "tasks").glob("*/tests/test.sh")),
+        *sorted((ROOT / "examples" / "tasks").glob("*/solution/solve.sh")),
         ROOT / "environment" / "runtime" / "harbor" / "cli" / "template-task" / "pytest-tests" / "test.sh",
     ]
 
