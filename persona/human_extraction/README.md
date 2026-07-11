@@ -213,6 +213,25 @@ The persona dimension schema (`../schema/dimensions.json`) has **1,290**
 attributes across **43** categories; prompts are chunked by `category`
 (≤ 50 dims/chunk) so the whole schema isn't fed at once.
 
+### Stable Stack Overflow dimension chunks
+
+The schema-first Stack Overflow redesign stores its reviewed, deterministic
+chunk manifest at `schema/dimension_chunks.jsonl`, with one nested chunk JSON
+object per line. The manifest is generated from the authoritative
+`../schema/dimensions.json` by `schema/prepare_dimension_chunks.py`; each chunk
+includes ordered IDs, full dimension metadata and allowed values, source
+categories, semantic descriptions, source-manifest context, and auditable size
+exceptions. See `schema/chunks_readme.md` for the complete chunk summary. The
+current extractor does not consume it yet.
+
+Regenerate or verify it from the repository root:
+
+```bash
+python persona/human_extraction/schema/prepare_dimension_chunks.py
+python persona/human_extraction/schema/prepare_dimension_chunks.py --check
+python persona/human_extraction/schema/prepare_dimension_chunks.py --dry-run
+```
+
 ## Change log
 
 - Created `human_extraction/` folder + notebook + extraction scripts.

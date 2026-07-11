@@ -855,7 +855,12 @@ def build_stackoverflow_prompt(profile_text: str, chunk: DimensionChunk) -> str:
         "",
         "Rules:",
         "- value MUST be exactly one of that dimension's allowed values, copied verbatim.",
+        "- Use each field_id at most once.",
+        "- If multiple allowed values for one field_id are directly supported, emit exactly one.",
+        "- Choose the value with the strongest and most specific evidence. If still tied, choose the first supported value in that dimension's listed allowed-values order.",
+        "- A value chosen by catalog-order tie-breaking MUST use assignment_type summary_inference and confidence no greater than 0.6.",
         "- Every emitted field MUST include a short evidence quote copied verbatim from the respondent profile.",
+        "- Evidence for a tie-broken field MUST include only the survey evidence supporting the selected value.",
         "- Evidence MUST include the original column name plus the readable question/sub-item context and the answer value.",
         '- Bad evidence examples: "10", "8", "Yes", "No", "Employed". These are bare values without the survey question context.',
         '- Good evidence example: "TechEndorse_1 - What attracts you to a technology or causes you to endorse it (most to least important)? | Sub-item: AI integration or AI Agent capabilities: 10".',
@@ -1136,7 +1141,11 @@ def retry_conversation(conversation: list[dict[str, str]]) -> list[dict[str, str
     retry[-1]["content"] += (
         "\n\nRETRY: The previous response failed strict validation. Return one complete "
         "JSON object matching this chunk's supplied schema. Keep fields sparse, use "
-        "each field ID at most once, and omit unsupported dimensions."
+        "each field ID at most once, and omit unsupported dimensions. If multiple "
+        "allowed values for one field ID are supported, choose the strongest and "
+        "most specific one; if still tied, choose the first supported value in the "
+        "listed allowed-values order, use assignment_type summary_inference with "
+        "confidence no greater than 0.6, and cite only evidence for that value."
     )
     return retry
 
