@@ -284,6 +284,10 @@ function ChatbotEvalCockpit({
     () => sortByAvailability(tasksQuery.data?.tasks ?? []),
     [tasksQuery.data?.tasks],
   );
+  const setupTaskPath =
+    chatbotTasks.find((task) => task.id === selectedTaskId)?.taskPath ??
+    chatbotTasks[0]?.taskPath ??
+    null;
   const {
     persona,
     personaModel,
@@ -303,7 +307,11 @@ function ChatbotEvalCockpit({
     parallelTrials,
     setParallelTrials,
     isBatchRun,
-  } = useSetupPersonaSampling(options, "chatbot");
+    hasTaskStrategy,
+    taskPersonaStrategy,
+    useTaskDefaultStrategy,
+    setUseTaskDefaultStrategy,
+  } = useSetupPersonaSampling(options, "chatbot", setupTaskPath);
   const pipelinePersonaModelLabel = useMemo(
     () => personaModelPipelineLabel(personaModel, personaModelOptions),
     [personaModel, personaModelOptions],
@@ -820,6 +828,10 @@ function ChatbotEvalCockpit({
           onFiltersChange={setGroupFilters}
           stratifyFields={stratifyFields}
           onStratifyFieldsChange={setStratifyFields}
+          hasTaskStrategy={hasTaskStrategy}
+          taskPersonaStrategy={taskPersonaStrategy}
+          useTaskDefaultStrategy={useTaskDefaultStrategy}
+          onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
           disabled={setupLocked}
         />
       }

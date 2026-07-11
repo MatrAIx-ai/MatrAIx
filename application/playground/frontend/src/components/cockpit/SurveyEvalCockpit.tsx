@@ -164,44 +164,10 @@ export function SurveyEvalCockpit({
 }: SurveyEvalCockpitProps) {
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<SurveyEvalJobView>({ taskKind: "survey" });
-  const {
-    persona,
-    personaModel,
-    setPersonaModel,
-    personaModelOptions,
-    samplingMode,
-    setSamplingMode,
-    selectedPersonaIds,
-    setSelectedPersonaIds,
-    groupFilters,
-    setGroupFilters,
-    stratifyFields,
-    setStratifyFields,
-    sampleSize,
-    setSampleSize,
-    seed,
-    parallelTrials,
-    setParallelTrials,
-    isBatchRun,
-  } = useSetupPersonaSampling(options, "survey");
   const [selectedTaskId, setSelectedTaskId] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [tab, setTab] = useState<InspectorTab>("evaluation");
   const [launchError, setLaunchError] = useState<string | null>(null);
-  const {
-    batchJobName,
-    batchTaskId,
-    batchPersonaIds,
-    setBatchJobName,
-    batchLive,
-    clearBatch,
-    cancelBatch,
-    cancelBusy,
-    isBatchActive,
-    batchComplete,
-    batchGridCells,
-    expectedTrialCount,
-  } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "survey");
   const [exportSnapshot, setExportSnapshot] = useState<{
     persona: { id: string; name: string; source: string } | null;
     taskId: string;
@@ -229,6 +195,48 @@ export function SurveyEvalCockpit({
   }, [harborTasksQuery.data?.tasks, harborTasksQuery.isError]);
 
   const taskCards = useMemo(() => surveyHarborTaskCards(harborTasks), [harborTasks]);
+  const setupTaskPath =
+    taskCards.find((item) => item.id === selectedTaskId)?.taskPath ??
+    taskCards[0]?.taskPath ??
+    null;
+  const {
+    persona,
+    personaModel,
+    setPersonaModel,
+    personaModelOptions,
+    samplingMode,
+    setSamplingMode,
+    selectedPersonaIds,
+    setSelectedPersonaIds,
+    groupFilters,
+    setGroupFilters,
+    stratifyFields,
+    setStratifyFields,
+    sampleSize,
+    setSampleSize,
+    seed,
+    parallelTrials,
+    setParallelTrials,
+    isBatchRun,
+    hasTaskStrategy,
+    taskPersonaStrategy,
+    useTaskDefaultStrategy,
+    setUseTaskDefaultStrategy,
+  } = useSetupPersonaSampling(options, "survey", setupTaskPath);
+  const {
+    batchJobName,
+    batchTaskId,
+    batchPersonaIds,
+    setBatchJobName,
+    batchLive,
+    clearBatch,
+    cancelBatch,
+    cancelBusy,
+    isBatchActive,
+    batchComplete,
+    batchGridCells,
+    expectedTrialCount,
+  } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "survey");
   const setupLocked = phase !== "idle" || Boolean(batchJobName);
   const visiblePersonaIds = setupLocked && batchPersonaIds.length > 0 ? batchPersonaIds : selectedPersonaIds;
   const activeTaskId = batchJobName && batchTaskId ? batchTaskId : selectedTaskId;
@@ -536,6 +544,10 @@ export function SurveyEvalCockpit({
           onFiltersChange={setGroupFilters}
           stratifyFields={stratifyFields}
           onStratifyFieldsChange={setStratifyFields}
+          hasTaskStrategy={hasTaskStrategy}
+          taskPersonaStrategy={taskPersonaStrategy}
+          useTaskDefaultStrategy={useTaskDefaultStrategy}
+          onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
           disabled={setupLocked}
         />
       }

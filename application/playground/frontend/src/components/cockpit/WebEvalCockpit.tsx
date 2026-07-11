@@ -131,6 +131,30 @@ export function WebEvalCockpit({
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<WebEvalJobView>({ taskKind: "web" });
   const [liveTrace, setLiveTrace] = useState<WebTrace | null>(null);
+  const [taskId, setTaskId] = useState<string>("");
+  const [webAgentByTaskId, setWebAgentByTaskId] = useState<Record<string, string>>({});
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [tab, setTab] = useState<InspectorTab>("evaluation");
+  const [launchError, setLaunchError] = useState<string | null>(null);
+  const [exportSnapshot, setExportSnapshot] = useState<{
+    persona: { id: string; name: string; source: string } | null;
+    taskId: string;
+    personaModel: string;
+  } | null>(null);
+
+  const tasksQuery = useQuery<WebEvalTasksResponse>({
+    queryKey: ["web-eval-tasks"],
+    queryFn: listWebEvalTasks,
+    staleTime: 10 * 60_000,
+    refetchOnWindowFocus: false,
+    retry: 1,
+  });
+  const tasks = useMemo(
+    () => mergeWebTasks(tasksQuery.data?.tasks),
+    [tasksQuery.data?.tasks],
+  );
+  const setupTaskPath =
+    tasks.find((item) => item.id === taskId)?.taskPath ?? tasks[0]?.taskPath ?? null;
   const {
     persona,
     personaModel,
@@ -150,12 +174,11 @@ export function WebEvalCockpit({
     parallelTrials,
     setParallelTrials,
     isBatchRun,
-  } = useSetupPersonaSampling(options, "web");
-  const [taskId, setTaskId] = useState<string>("");
-  const [webAgentByTaskId, setWebAgentByTaskId] = useState<Record<string, string>>({});
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [tab, setTab] = useState<InspectorTab>("evaluation");
-  const [launchError, setLaunchError] = useState<string | null>(null);
+    hasTaskStrategy,
+    taskPersonaStrategy,
+    useTaskDefaultStrategy,
+    setUseTaskDefaultStrategy,
+  } = useSetupPersonaSampling(options, "web", setupTaskPath);
   const {
     batchJobName,
     batchTaskId,
@@ -170,11 +193,6 @@ export function WebEvalCockpit({
     batchGridCells,
     expectedTrialCount,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "web");
-  const [exportSnapshot, setExportSnapshot] = useState<{
-    persona: { id: string; name: string; source: string } | null;
-    taskId: string;
-    personaModel: string;
-  } | null>(null);
 
   useEffect(() => {
     setPersonaModel((current) =>
@@ -182,17 +200,6 @@ export function WebEvalCockpit({
     );
   }, [setPersonaModel]);
 
-  const tasksQuery = useQuery<WebEvalTasksResponse>({
-    queryKey: ["web-eval-tasks"],
-    queryFn: listWebEvalTasks,
-    staleTime: 10 * 60_000,
-    refetchOnWindowFocus: false,
-    retry: 1,
-  });
-  const tasks = useMemo(
-    () => mergeWebTasks(tasksQuery.data?.tasks),
-    [tasksQuery.data?.tasks],
-  );
   const { setupLocked, visiblePersonaIds } = useCockpitSetupLock(
     phase,
     batchJobName,
@@ -472,6 +479,10 @@ export function WebEvalCockpit({
           onFiltersChange={setGroupFilters}
           stratifyFields={stratifyFields}
           onStratifyFieldsChange={setStratifyFields}
+          hasTaskStrategy={hasTaskStrategy}
+          taskPersonaStrategy={taskPersonaStrategy}
+          useTaskDefaultStrategy={useTaskDefaultStrategy}
+          onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
           disabled={setupLocked}
         />
       }

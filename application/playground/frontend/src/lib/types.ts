@@ -867,6 +867,19 @@ export interface PersonaPoolPersonaDetail extends PersonaPoolPersonaCard {
   dimensions: Record<string, string>;
 }
 
+export interface TaskPersonaStrategy {
+  schemaVersion?: string;
+  pool?: string | null;
+  defaultMode?: "single" | "random" | "stratified" | string | null;
+  sources?: string[];
+  dimensionFilters?: Record<string, string[]>;
+  stratifyFields?: string[] | null;
+  sampleSize?: number | null;
+  seed?: number | null;
+  cohortId?: string | null;
+  sampleSizePerValueGroup?: number | null;
+}
+
 export interface TaskDetail {
   taskPath: string;
   title?: string;
@@ -879,6 +892,7 @@ export interface TaskDetail {
   outputSchemaMarkdown?: string;
   selfReportMarkdown?: string;
   questionnaire?: SurveyInstrument | null;
+  personaStrategy?: TaskPersonaStrategy | null;
   profileMarkdown?: string;
 }
 
