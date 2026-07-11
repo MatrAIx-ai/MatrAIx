@@ -4,7 +4,8 @@ This directory contains generated static visualizations for the Persona Full DAG
 
 - `full_dag_overview.html` — interactive node-link view of the full graph.
 - `persona_schema_taxonomy.png` / `.pdf` — clean taxonomy tree of the schema
-  (9 groups / 36 sub-categories / 1290 attributes) for the paper appendix.
+  (9 groups / 15 aspects / 43 categories / 1290 attributes) for the paper
+  appendix.
 
 ## Generate
 
@@ -56,12 +57,14 @@ Stop the temporary server with `Ctrl-C`.
 
 ## Persona Schema Taxonomy Tree
 
-`persona_schema_taxonomy.png` / `.pdf` is a clean horizontal bracket tree of the
-schema for the paper appendix, mirroring the official taxonomy table
-(9 groups / 36 sub-categories / 1290 attributes):
+`persona_schema_taxonomy.png` / `.pdf` is a clean three-level horizontal bracket
+tree of the schema for the paper appendix, aligned to the official taxonomy
+table (9 groups / 1290 attributes):
 
 - Left column: the 9 top-level groups, with attribute totals.
-- Right column: the 36 sub-categories, with attribute counts.
+- Middle column: the aspects (schema-prefix mid level, e.g. `Demographic`,
+  `Developer`).
+- Right column: the 43 fine-grained categories, with attribute counts.
 
 Regenerate it from the repository root:
 
@@ -74,8 +77,9 @@ Aggregation notes:
 - Latent/helper graph nodes (18 nodes with no `category`, e.g. `latent_*` /
   `phase*_*`) are excluded, since they are internal modeling variables rather
   than persona attributes; the figure covers exactly the 1,290 real attributes.
-- The 8 `Developer: *` categories are merged into one `Developer/Coding`
-  sub-category, matching the table.
+- The individual `Developer: *` categories are shown separately (unlike the
+  compact table, which merges them into one `Developer/Coding` sub-category), so
+  the appendix figure is a more detailed view of the schema.
 
 ## What It Shows
 

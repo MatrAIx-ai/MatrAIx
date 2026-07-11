@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """Render a clean taxonomy tree of the Persona schema for the paper appendix.
 
-This is a horizontal bracket tree that mirrors the official taxonomy table
-(9 groups / 36 sub-categories / 1290 attributes):
+This is a three-level horizontal bracket tree:
 
-- Left column: the 9 top-level groups (with attribute totals).
-- Right column: the 36 sub-categories (with attribute counts).
-- Brackets connect each group to its sub-categories.
+- **Group** (9 top-level groups, aligned to the official taxonomy table).
+- **Aspect** (the schema-prefix mid level, e.g. ``Demographic``, ``Linguistic``,
+  ``Developer``).
+- **Category** (the fine-grained leaf categories, with attribute counts).
 
-Unlike the chord diagram, this figure is not derived from the DAG edges; it is a
-conceptual taxonomy that reflects the schema structure exactly as listed in the
-table. All 36 sub-categories are shown (including small ones such as ``Family``),
-and the 8 ``Developer: *`` schema categories are merged into a single
-``Developer/Coding`` sub-category to match the table.
+The grouping is aligned to the official taxonomy table (9 groups, 1290
+attributes). Unlike the chord diagram, this figure is not derived from the DAG
+edges; it is a conceptual taxonomy that reflects the schema structure. It shows
+all fine-grained categories (43 leaves), including the individual ``Developer``
+categories, so it is a more detailed companion to the compact table.
 
 Run from the repository root:
 
@@ -42,68 +42,100 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_GRAPH_PATH = REPO_ROOT / "persona" / "synthesis" / "graph" / "full_dag.json"
 DEFAULT_OUT_DIR = REPO_ROOT / "persona" / "synthesis" / "visualization"
 
-# OFFICIAL taxonomy: 9 groups -> sub-categories, in table order.
-# Each entry is (group display name, group colour, [(sub-category display name,
-# [schema category keys it aggregates]), ...]).
+# OFFICIAL taxonomy: 9 groups -> aspects -> categories, in table order.
+# Each group is (group display name, group colour, [aspect, ...]);
+# each aspect is (aspect display name, [(category display name, schema key), ...]).
 GROUPS = [
     ("Demographic information", "#4C72B0", [
-        ("Basic", ["Demographic: Core"]),
-        ("Life Events", ["Demographic: Life Events"]),
-        ("Cultural", ["Demographic: Cultural"]),
-        ("Family", ["Demographic: Family"]),
+        ("Demographic", [
+            ("Basic", "Demographic: Core"),
+            ("Life Events", "Demographic: Life Events"),
+            ("Cultural", "Demographic: Cultural"),
+            ("Family", "Demographic: Family"),
+        ]),
     ]),
     ("Language and communication", "#8172B3", [
-        ("Language", ["Linguistic: Language"]),
-        ("Communication", ["Linguistic: Communication"]),
+        ("Linguistic", [
+            ("Language", "Linguistic: Language"),
+            ("Communication", "Linguistic: Communication"),
+        ]),
     ]),
     ("Education and professional background", "#B07AA1", [
-        ("Academic", ["Learning: Academic"]),
-        ("Learning Style", ["Learning: Style"]),
-        ("Career", ["Professional: Career"]),
-        ("Industry/Role", ["Professional: Industry"]),
+        ("Learning", [
+            ("Academic", "Learning: Academic"),
+            ("Learning Style", "Learning: Style"),
+        ]),
+        ("Professional", [
+            ("Career", "Professional: Career"),
+            ("Industry/Role", "Professional: Industry"),
+        ]),
     ]),
     ("Expertise and skills", "#DD8452", [
-        ("Domains", ["Expertise: Domains"]),
-        ("Skills", ["Expertise: Skills"]),
-        ("Tools", ["Skills: Tools"]),
-        ("Programming", ["Skills: Programming"]),
-        ("Developer/Coding", [
-            "Developer: AI Workflow Tasks", "Developer: Agent Adoption",
-            "Developer: Code Maintenance", "Developer: AI Adoption",
-            "Developer: Technology Evaluation", "Developer: Open Source Behavior",
-            "Developer: Professional Context", "Developer: Community Behavior",
+        ("Expertise", [
+            ("Domains", "Expertise: Domains"),
+            ("Skills", "Expertise: Skills"),
+        ]),
+        ("Skills", [
+            ("Tools", "Skills: Tools"),
+            ("Programming", "Skills: Programming"),
+        ]),
+        ("Developer", [
+            ("AI Workflow Tasks", "Developer: AI Workflow Tasks"),
+            ("Agent Adoption", "Developer: Agent Adoption"),
+            ("Code Maintenance", "Developer: Code Maintenance"),
+            ("AI Adoption", "Developer: AI Adoption"),
+            ("Technology Evaluation", "Developer: Technology Evaluation"),
+            ("Open Source Behavior", "Developer: Open Source Behavior"),
+            ("Professional Context", "Developer: Professional Context"),
+            ("Community Behavior", "Developer: Community Behavior"),
         ]),
     ]),
     ("Personality", "#CCB974", [
-        ("Character", ["Personality: Character"]),
-        ("Big Five", ["Personality: Big Five"]),
-        ("MBTI", ["Personality: MBTI"]),
-        ("Relationships", ["Personality: Relationships"]),
+        ("Personality", [
+            ("Character", "Personality: Character"),
+            ("Big Five", "Personality: Big Five"),
+            ("MBTI", "Personality: MBTI"),
+            ("Relationships", "Personality: Relationships"),
+        ]),
     ]),
     ("Values and worldview", "#C44E52", [
-        ("Risk & Decision", ["Risk & Decision"]),
-        ("Values & Motivation", ["Values & Motivation"]),
-        ("Beliefs", ["Worldview: Beliefs"]),
+        ("Risk & Decision", [
+            ("Risk & Decision", "Risk & Decision"),
+        ]),
+        ("Values & Motivation", [
+            ("Values & Motivation", "Values & Motivation"),
+        ]),
+        ("Worldview", [
+            ("Beliefs", "Worldview: Beliefs"),
+        ]),
     ]),
     ("Health and accessibility", "#59A14F", [
-        ("Physical Health", ["Health: Physical"]),
-        ("Fitness", ["Health: Fitness"]),
-        ("Health Lifestyle", ["Health: Lifestyle"]),
+        ("Health", [
+            ("Physical Health", "Health: Physical"),
+            ("Fitness", "Health: Fitness"),
+            ("Health Lifestyle", "Health: Lifestyle"),
+        ]),
     ]),
     ("Behavior and interaction state", "#F1CE63", [
-        ("Emotional State", ["State: Emotional"]),
-        ("Time", ["Behavior: Time"]),
-        ("Preferences", ["Behavior: Preferences"]),
-        ("Work", ["Behavior: Work"]),
-        ("Habits", ["Behavior: Habits"]),
+        ("State", [
+            ("Emotional State", "State: Emotional"),
+        ]),
+        ("Behavior", [
+            ("Time", "Behavior: Time"),
+            ("Preferences", "Behavior: Preferences"),
+            ("Work", "Behavior: Work"),
+            ("Habits", "Behavior: Habits"),
+        ]),
     ]),
     ("Interests and culture", "#55A868", [
-        ("Topics", ["Interests: Topics"]),
-        ("Culture", ["Interests: Culture"]),
-        ("Media", ["Interests: Media"]),
-        ("Food", ["Interests: Food"]),
-        ("Sports", ["Interests: Sports"]),
-        ("Hobbies", ["Interests: Hobbies"]),
+        ("Interests", [
+            ("Topics", "Interests: Topics"),
+            ("Culture", "Interests: Culture"),
+            ("Media", "Interests: Media"),
+            ("Food", "Interests: Food"),
+            ("Sports", "Interests: Sports"),
+            ("Hobbies", "Interests: Hobbies"),
+        ]),
     ]),
 ]
 
@@ -116,7 +148,7 @@ def _lighten(hex_color: str, factor: float) -> tuple[float, float, float]:
 
 
 def _wrap(text: str, width: int) -> str:
-    """Greedy word wrap so long group names fit inside a box on two/three lines."""
+    """Greedy word wrap so long names fit inside a box on multiple lines."""
     words = text.split(" ")
     lines: list[str] = []
     current = ""
@@ -137,20 +169,6 @@ def render(graph_path: Path, out_dir: Path) -> None:
     graph = json.loads(graph_path.read_text(encoding="utf-8"))
     counts = collections.Counter(n.get("category") for n in graph["nodes"])
 
-    # Flatten to leaves and compute counts.
-    leaves: list[tuple[str, str, str, int]] = []  # (group, colour, subgroup, count)
-    group_total: dict[str, int] = {}
-    for group_name, color, subs in GROUPS:
-        total = 0
-        for disp, keys in subs:
-            count = sum(counts[key] for key in keys)
-            total += count
-            leaves.append((group_name, color, disp, count))
-        group_total[group_name] = total
-
-    n_leaf = len(leaves)
-    grand_total = sum(group_total.values())
-
     plt.rcParams.update({
         "font.family": "DejaVu Sans",
         "savefig.bbox": "tight",
@@ -159,37 +177,50 @@ def render(graph_path: Path, out_dir: Path) -> None:
     })
 
     # Vertical layout: leaves top-to-bottom, uniform spacing within a group and
-    # a small gap between groups so the (taller) group boxes have room.
+    # a small gap between groups.
     step = 1.0
-    group_gap = 0.7
-    group_leaf_idx: list[list[int]] = []
-    positions: list[float] = []
+    group_gap = 0.8
+    y_leaf: list[float] = []
+    leaf_meta: list[tuple[str, int, str]] = []            # (display, count, colour)
+    aspect_spans: list[tuple[str, str, list[int]]] = []   # (aspect, colour, leaf idxs)
+    group_spans: list[tuple[str, str, int, list[int]]] = []  # (group, colour, total, aspect idxs)
+
     cursor = 0.0
     leaf_i = 0
-    for _name, _color, subs in GROUPS:
-        idxs = []
-        for _ in subs:
-            positions.append(cursor)
-            idxs.append(leaf_i)
-            leaf_i += 1
-            cursor -= step
-        group_leaf_idx.append(idxs)
+    for group_name, color, aspects in GROUPS:
+        group_total = 0
+        aspect_idxs: list[int] = []
+        for aspect_name, cats in aspects:
+            idxs: list[int] = []
+            for disp, key in cats:
+                count = counts[key]
+                group_total += count
+                y_leaf.append(cursor)
+                leaf_meta.append((disp, count, color))
+                idxs.append(leaf_i)
+                leaf_i += 1
+                cursor -= step
+            aspect_idxs.append(len(aspect_spans))
+            aspect_spans.append((aspect_name, color, idxs))
+        group_spans.append((group_name, color, group_total, aspect_idxs))
         cursor -= group_gap
-    shift = min(positions)
-    y_leaf = {i: positions[i] - shift for i in range(n_leaf)}
-    span = max(y_leaf.values())
 
-    fig, ax = plt.subplots(figsize=(11, 0.40 * (span + 2) + 1.0))
+    shift = min(y_leaf)
+    y_leaf = [y - shift for y in y_leaf]
+    span = max(y_leaf)
+
+    fig, ax = plt.subplots(figsize=(13, 0.34 * (span + 2) + 1.0))
     ax.axis("off")
 
-    x_group, w_group = 0.0, 4.6
-    x_sub, w_sub = 6.6, 4.2
-    leaf_h = 0.78
+    x_group, w_group = 0.0, 3.9
+    x_aspect, w_aspect = 4.9, 3.9
+    x_leaf, w_leaf = 9.4, 4.2
+    leaf_h = 0.68
 
     def draw_box(x, y, w, h, text, face, edge, size):
         ax.add_patch(FancyBboxPatch(
             (x, y - h / 2), w, h,
-            boxstyle="round,pad=0.02,rounding_size=0.14",
+            boxstyle="round,pad=0.02,rounding_size=0.12",
             linewidth=1.0, edgecolor=edge, facecolor=face, zorder=3))
         ax.text(x + w / 2, y, text, ha="center", va="center", fontsize=size,
                 color=TEXT_COLOR, zorder=4)
@@ -199,33 +230,45 @@ def render(graph_path: Path, out_dir: Path) -> None:
         ax.add_patch(mpatches.PathPatch(MplPath(
             [(x0, y0), (xm, y0), (xm, y1), (x1, y1)],
             [MplPath.MOVETO, MplPath.CURVE4, MplPath.CURVE4, MplPath.CURVE4]),
-            fill=False, edgecolor=color, lw=1.0, alpha=0.6, zorder=1))
+            fill=False, edgecolor=color, lw=1.0, alpha=0.55, zorder=1))
 
-    # Sub-category boxes (leaves).
-    for i, (_group, color, disp, count) in enumerate(leaves):
-        draw_box(x_sub, y_leaf[i], w_sub, leaf_h, f"{disp}  ({count})",
-                 _lighten(color, 0.80), color, size=9.5)
+    # Category boxes (leaves).
+    for i, (disp, count, color) in enumerate(leaf_meta):
+        draw_box(x_leaf, y_leaf[i], w_leaf, leaf_h, f"{disp}  ({count})",
+                 _lighten(color, 0.80), color, size=9.0)
 
-    # Group boxes at the mean y of their sub-categories, with brackets.
-    # Box height adapts to the wrapped label so the text always fits inside.
-    for (group_name, color, subs), idxs in zip(GROUPS, group_leaf_idx):
+    # Aspect boxes (mid) at the mean y of their leaves, with brackets to leaves.
+    aspect_y: list[float] = []
+    for aspect_name, color, idxs in aspect_spans:
         y_mid = float(np.mean([y_leaf[i] for i in idxs]))
-        label = f"{_wrap(group_name, 26)}\n({group_total[group_name]})"
+        aspect_y.append(y_mid)
+        label = _wrap(aspect_name, 20)
         n_lines = label.count("\n") + 1
-        group_h = n_lines * 0.52 + 0.30
-        draw_box(x_group, y_mid, w_group, group_h, label,
-                 _lighten(color, 0.42), color, size=10.0)
+        draw_box(x_aspect, y_mid, w_aspect, n_lines * 0.46 + 0.28, label,
+                 _lighten(color, 0.58), color, size=9.5)
         for i in idxs:
-            connect(x_group + w_group, y_mid, x_sub, y_leaf[i], color)
+            connect(x_aspect + w_aspect, y_mid, x_leaf, y_leaf[i], color)
+
+    # Group boxes at the mean y of their aspects, with brackets to aspects.
+    for group_name, color, total, aspect_idxs in group_spans:
+        y_mid = float(np.mean([aspect_y[a] for a in aspect_idxs]))
+        label = f"{_wrap(group_name, 24)}\n({total})"
+        n_lines = label.count("\n") + 1
+        draw_box(x_group, y_mid, w_group, n_lines * 0.50 + 0.28, label,
+                 _lighten(color, 0.40), color, size=10.0)
+        for a in aspect_idxs:
+            connect(x_group + w_group, y_mid, x_aspect, aspect_y[a], color)
 
     # Column headers.
-    top = span + 1.2
+    top = span + 1.3
     ax.text(x_group + w_group / 2, top, "Group  (# attributes)",
             ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
-    ax.text(x_sub + w_sub / 2, top, "Sub-category  (# attributes)",
+    ax.text(x_aspect + w_aspect / 2, top, "Aspect",
+            ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
+    ax.text(x_leaf + w_leaf / 2, top, "Category  (# attributes)",
             ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
 
-    ax.set_xlim(-0.4, x_sub + w_sub + 0.4)
+    ax.set_xlim(-0.4, x_leaf + w_leaf + 0.4)
     ax.set_ylim(-1.0, top + 1.0)
 
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -234,10 +277,12 @@ def render(graph_path: Path, out_dir: Path) -> None:
     fig.savefig(png_path, dpi=300, facecolor="white")
     fig.savefig(pdf_path, facecolor="white")
     plt.close(fig)
+    grand_total = sum(total for _n, _c, total, _a in group_spans)
     print(
         f"wrote {png_path.relative_to(REPO_ROOT)} and "
         f"{pdf_path.relative_to(REPO_ROOT)} | groups={len(GROUPS)} "
-        f"sub-categories={n_leaf} attributes={grand_total} (expect 1290)"
+        f"aspects={len(aspect_spans)} categories={len(leaf_meta)} "
+        f"attributes={grand_total} (expect 1290)"
     )
 
 
