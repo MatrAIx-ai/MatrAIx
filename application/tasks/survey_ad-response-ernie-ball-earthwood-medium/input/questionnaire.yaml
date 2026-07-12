@@ -1,0 +1,53 @@
+schemaVersion: "1.0"
+id: ad_response_v1
+title: Advertising Response Survey
+description: How the persona reacts if this product's listing were presented as an advertisement.
+questions:
+  - id: q_attention
+    prompt: "Would this ad stop your scroll?"
+    type: single_choice
+    construct: ad_attention
+    required: true
+    options:
+      - id: "yes_click"
+        label: "Yes — I would stop and tap to learn more."
+      - id: "yes_note"
+        label: "Yes — I would notice it but keep scrolling."
+      - id: "no"
+        label: "No — I would scroll right past it."
+  - id: q_relevance
+    prompt: "This ad feels relevant to me."
+    type: likert
+    construct: ad_relevance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_believability
+    prompt: "The claims in this ad feel believable."
+    type: likert
+    construct: ad_believability
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_action
+    prompt: "What would you most likely do after seeing this ad?"
+    type: single_choice
+    construct: ad_action
+    required: true
+    askRationale: true
+    options:
+      - id: "buy"
+        label: "Consider buying."
+      - id: "research"
+        label: "Look up reviews first."
+      - id: "save"
+        label: "Save it for later."
+      - id: "ignore"
+        label: "Ignore it."
+      - id: "annoyed"
+        label: "Feel annoyed by it."
+  - id: q_improve
+    prompt: "What would make this ad more compelling to you?"
+    type: free_text
+    construct: ad_improvement
+    required: true
