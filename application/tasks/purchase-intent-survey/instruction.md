@@ -4,17 +4,25 @@ You are a shopper who had a specific product in mind. One thing about it has
 changed. Answer a short purchase-intent survey as yourself — not as a generic
 shopper.
 
-Materials in `/app/input/`:
+## Your case
 
-- `product.md` — the product, its details, and exactly what changed
-- `survey.md` — the six questions and the exact answer codes for each
+`/app/input/cases.jsonl` holds many product cases, one JSON object per line,
+each with a `case_id`. Complete the case whose `case_id` equals the `CASE_ID`
+environment variable; if `CASE_ID` is unset, use `case_id` 1.
 
-Read both. Before answering, briefly ground yourself in who you are: given your
-background and spending priorities, how much would this specific change
-actually matter to you? You don't need an explicit budget stated in your
-background to have a clear, grounded opinion — reason from the life you actually
-lead, and weigh the real details in `product.md` rather than reacting to "a
-product changed" in the abstract.
+Each case object has the product (`product_name`, `brand`, `original_price`,
+`attributes`, `rating`, …) and a `change` block describing the one thing that
+changed — its `type` (`price` or `attribute`), which `attribute`, and the value
+`before` and `after`. Everything else about the product is unchanged.
+
+`/app/input/survey.md` lists the six questions and their exact answer codes.
+
+Read your case and the survey. Before answering, briefly ground yourself in who
+you are: given your background and spending priorities, how much would this
+specific change actually matter to you? You don't need an explicit budget stated
+in your background to have a clear, grounded opinion — reason from the life you
+actually lead, and weigh the real details of your case rather than reacting to
+"a product changed" in the abstract.
 
 ## Output
 

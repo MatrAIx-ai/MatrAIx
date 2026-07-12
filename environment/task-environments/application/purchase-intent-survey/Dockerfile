@@ -7,5 +7,5 @@ ENV PATH="/root/.local/bin:${PATH}"
 
 WORKDIR /app
 
-COPY product.md /app/input/product.md
+COPY cases.jsonl /app/input/cases.jsonl
 COPY survey.md /app/input/survey.md

@@ -2,21 +2,35 @@
 
 PersonaBench application (Type-1, survey) task, commerce-retail domain. The
 persona is shown a real product they were considering and told that **one**
-thing about it changed — its price or an attribute (the shipped scenario is a
-price increase) — then answers a short structured purchase-intent survey.
-Measures how a single product change shifts purchase intent.
+thing about it changed — its price or an attribute — then answers a short
+structured purchase-intent survey. Measures how a single product change shifts
+purchase intent.
+
+The task is **dataset-driven**: it ships 494 real Amazon product cases (each
+with one changed attribute), so a single task definition covers the whole set.
 
 ## The scenario
 
-Harbor injects the persona; the environment supplies the instrument in
-`/app/input/`:
+Harbor injects the persona; the environment supplies, in `/app/input/`:
 
-- `product.md` — a real Amazon product (STANLEY Quencher) with a +25% price
-  change.
-- `survey.md` — six questions and their exact answer codes.
+- `cases.jsonl` — **494 product cases**, one JSON object per line. Each has the
+  product (`product_name`, `brand`, `original_price`, `attributes`, `rating`, …)
+  and a `change` block (`type` = `price`/`attribute`, which `attribute`, and the
+  value `before`/`after`).
+- `survey.md` — the six questions and their exact answer codes.
 
-The agent reads both and writes its answers to
+The persona completes the case whose `case_id` equals the `CASE_ID` environment
+variable (default `1`) and writes its answers to
 `/app/output/purchase_decision.json`.
+
+## Running all 494 cases
+
+A trial is one `(persona × case)` pair. Harbor already fans out over personas
+(the job recipe lists them); this task adds the case axis via `CASE_ID`. To
+collect the full set, run the task once per `case_id` `1..494`, varying
+`CASE_ID` per trial — the same way personas are varied. Case selection is a
+runtime concern, so the exact fan-out lives in the environment team's execution
+layer; the data and the per-case contract are fixed here.
 
 ## Expected artifact
 
@@ -39,21 +53,20 @@ each value in its allowed set, `reasoning` non-empty, no extra fields. See
 
 ## Layout
 
-- `instruction.md` — the task prompt.
+- `instruction.md` — the task prompt (dataset + `CASE_ID` contract).
 - `task.toml` — metadata + `[environment].definition`.
 - `tests/` — verifier (`test_state.py` + `test.sh`).
-- `solution/solve.sh` — reference solution (posture-aware, schema-valid).
+- `solution/solve.sh` — reference solution (selects the case, posture-aware,
+  schema-valid).
 - `environment/task-environments/application/purchase-intent-survey/` (in the
-  `environment/` module) — Dockerfile + the `/app/input` materials.
-- `data-generation/` — **scale-up tooling** (not part of the single scenario):
-  the Amazon scraper + harvest pipeline, the 494-product dataset, and the survey
-  generator that turns products into many perturbed surveys. See
-  [`data-generation/README.md`](data-generation/README.md).
+  `environment/` module) — Dockerfile + the `/app/input` materials, including
+  `cases.jsonl` (the 494-case dataset).
 
 ## Local smoke
 
 ```bash
-# reference solution -> verifier (with a persona injected at /app/input/persona.yaml)
+# reference solution -> verifier (persona injected at /app/input/persona.yaml,
+# cases.jsonl + survey.md staged at /app/input/, CASE_ID optional)
 bash solution/solve.sh && python3 tests/test_state.py
 
 # or launch through Harbor
