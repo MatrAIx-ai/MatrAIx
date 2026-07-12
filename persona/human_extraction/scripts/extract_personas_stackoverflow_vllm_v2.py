@@ -111,6 +111,19 @@ AISELECT_UNRELATED_FIELD_IDS = frozenset(
         "future_developer_skill_belief",
     }
 )
+STACKOVERFLOW_2025_RANK_FIELD_MAP = {
+    "TechEndorse_1": ("coding_tool_ai_capability_importance", "importance"),
+    "TechEndorse_3": ("coding_tool_api_completeness_importance", "importance"),
+    "TechEndorse_8": (
+        "coding_tool_reliability_latency_importance",
+        "importance",
+    ),
+    "TechEndorse_6": ("coding_tool_open_source_importance", "importance"),
+    "TechOppose_9": ("coding_tool_security_privacy_blocker", "blocker"),
+    "TechOppose_16": ("coding_tool_ethics_blocker", "blocker"),
+    "TechOppose_11": ("coding_tool_alternative_sensitivity", "blocker"),
+    "TechOppose_13": ("coding_tool_obsolescence_blocker", "blocker"),
+}
 
 DEFAULT_MODEL = "Qwen/Qwen3.6-35B-A3B"
 DEFAULT_OUTPUT_TEMPLATE = "extraction_stackoverflow_v2_{year}.jsonl"
@@ -1055,6 +1068,68 @@ def visible_profile_source_answers(
     return source_answers
 
 
+def parse_positive_integer_rank(value: Any) -> int | None:
+    """Parse a positive integral survey rank without accepting arbitrary scores."""
+    if not is_present(value):
+        return None
+    text = str(value).strip()
+    if re.fullmatch(r"\d+", text) is None:
+        return None
+    rank = int(text)
+    return rank if rank > 0 else None
+
+
+def map_2025_rank_value(rank: int, scale: str) -> str:
+    """Map 2025 ordinal ranks to fixed five-level persona value scales."""
+    if scale == "importance":
+        if rank <= 2:
+            return "Critical"
+        if rank <= 5:
+            return "High"
+        if rank <= 9:
+            return "Moderate"
+        if rank <= 12:
+            return "Low"
+        return "Not a factor"
+    if scale == "blocker":
+        if rank == 1:
+            return "Hard blocker"
+        if rank <= 3:
+            return "Major concern"
+        if rank <= 7:
+            return "Moderate concern"
+        if rank <= 12:
+            return "Minor concern"
+        return "Not a concern"
+    raise ValueError(f"unknown 2025 rank scale: {scale}")
+
+
+def extract_2025_rank_fields(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Deterministically map selected 2025 ranks to schema-compatible fields."""
+    if year != 2025:
+        return []
+    fields: list[dict[str, Any]] = []
+    for column, (field_id, scale) in STACKOVERFLOW_2025_RANK_FIELD_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        entry = mapping.get(column, {})
+        label = clean_value(entry.get("description") or column, max_chars=1_000)
+        evidence = f"{column} - {label}: {rank}"
+        fields.append(
+            {
+                "field_id": field_id,
+                "value": map_2025_rank_value(rank, scale),
+                "confidence": 1.0,
+                "evidence": evidence,
+                "assignment_type": "direct",
+            }
+        )
+    return fields
+
+
 def reconcile_ai_fields(
     fields: list[dict[str, Any]],
     row: dict[str, Any],
@@ -1202,6 +1277,8 @@ def build_stackoverflow_prompt(
         year_specific_guidance = [
             "- YEAR-SPECIFIC: In the 2025 survey, TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks: a smaller number means a higher position within that question's list.",
             "- YEAR-SPECIFIC: A 2025 rank expresses relative order among the listed items, not an absolute rating or intensity score.",
+            '- YEAR-SPECIFIC: For mapped TechEndorse importance fields, use the deterministic buckets 1-2="Critical", 3-5="High", 6-9="Moderate", 10-12="Low", and 13+="Not a factor".',
+            '- YEAR-SPECIFIC: For mapped TechOppose blocker fields, use the deterministic buckets 1="Hard blocker", 2-3="Major concern", 4-7="Moderate concern", 8-12="Minor concern", and 13+="Not a concern".',
         ]
     else:
         year_specific_guidance = [
@@ -1778,15 +1855,26 @@ def extract_year(
                 year=work.year,
             )
             for row_index, row in batch:
-                deterministic_fields = extract_2025_ai_task_fields(
+                deterministic_ai_fields = extract_2025_ai_task_fields(
                     row, work.year, work.mapping
+                )
+                deterministic_rank_fields = extract_2025_rank_fields(
+                    row, work.year, work.mapping
+                )
+                deterministic_fields = (
+                    deterministic_ai_fields + deterministic_rank_fields
+                )
+                reserved_field_ids = (
+                    STACKOVERFLOW_2025_AI_TASK_FIELD_IDS
+                    if work.year == 2025
+                    else frozenset()
+                ) | frozenset(
+                    field["field_id"] for field in deterministic_rank_fields
                 )
                 final_fields = overlay_deterministic_fields(
                     merged[row_index],
                     deterministic_fields,
-                    STACKOVERFLOW_2025_AI_TASK_FIELD_IDS
-                    if work.year == 2025
-                    else frozenset(),
+                    reserved_field_ids,
                 )
                 final_fields = reconcile_ai_fields(
                     final_fields, row, work.mapping

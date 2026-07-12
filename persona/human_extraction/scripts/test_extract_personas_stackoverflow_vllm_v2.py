@@ -150,6 +150,78 @@ def test_2025_ai_task_crosswalk_is_year_isolated(extractor_module, year):
     ) == []
 
 
+@pytest.mark.parametrize(
+    ("rank", "expected"),
+    [
+        (1, "Critical"),
+        (2, "Critical"),
+        (3, "High"),
+        (5, "High"),
+        (6, "Moderate"),
+        (9, "Moderate"),
+        (10, "Low"),
+        (12, "Low"),
+        (13, "Not a factor"),
+        (15, "Not a factor"),
+    ],
+)
+def test_2025_importance_rank_boundaries(extractor_module, rank, expected):
+    assert extractor_module.map_2025_rank_value(rank, "importance") == expected
+
+
+@pytest.mark.parametrize(
+    ("rank", "expected"),
+    [
+        (1, "Hard blocker"),
+        (2, "Major concern"),
+        (3, "Major concern"),
+        (4, "Moderate concern"),
+        (7, "Moderate concern"),
+        (8, "Minor concern"),
+        (12, "Minor concern"),
+        (13, "Not a concern"),
+        (15, "Not a concern"),
+    ],
+)
+def test_2025_blocker_rank_boundaries(extractor_module, rank, expected):
+    assert extractor_module.map_2025_rank_value(rank, "blocker") == expected
+
+
+def test_2025_rank_fields_are_mapped_deterministically(extractor_module):
+    row = {
+        "TechEndorse_1": "2",
+        "TechEndorse_3": "5",
+        "TechEndorse_8": "10",
+        "TechEndorse_6": "14",
+        "TechOppose_9": "1",
+        "TechOppose_16": "3",
+        "TechOppose_11": "8",
+        "TechOppose_13": "15",
+    }
+
+    fields = fields_by_id(
+        extractor_module.extract_2025_rank_fields(
+            row, 2025, mapping_for(*row)
+        )
+    )
+
+    assert fields["coding_tool_ai_capability_importance"]["value"] == "Critical"
+    assert fields["coding_tool_api_completeness_importance"]["value"] == "High"
+    assert fields["coding_tool_reliability_latency_importance"]["value"] == "Low"
+    assert fields["coding_tool_open_source_importance"]["value"] == "Not a factor"
+    assert fields["coding_tool_security_privacy_blocker"]["value"] == "Hard blocker"
+    assert fields["coding_tool_ethics_blocker"]["value"] == "Major concern"
+    assert fields["coding_tool_alternative_sensitivity"]["value"] == (
+        "Minor concern"
+    )
+    assert fields["coding_tool_obsolescence_blocker"]["value"] == "Not a concern"
+    assert all(field["assignment_type"] == "direct" for field in fields.values())
+    assert all(field["confidence"] == 1.0 for field in fields.values())
+    assert extractor_module.extract_2025_rank_fields(
+        row, 2024, mapping_for(*row)
+    ) == []
+
+
 def test_deterministic_fields_replace_model_values(extractor_module):
     generated = [
         {
@@ -269,6 +341,8 @@ def test_prompt_rank_guidance_is_year_specific_and_semantic(extractor_module):
     assert "JobSatPoints_* values are allocated points, not ordinal ranks" in prompt_2024
     assert "TechEndorse answer is a select-all response" in prompt_2024
     assert "TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks" in prompt_2025
+    assert '1-2="Critical", 3-5="High", 6-9="Moderate"' in prompt_2025
+    assert '1="Hard blocker", 2-3="Major concern"' in prompt_2025
     assert "ranked options themselves are those behaviors or strategies" in prompt_2025
     assert "Topical association alone is insufficient" in prompt_2025
 
