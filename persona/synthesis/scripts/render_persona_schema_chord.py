@@ -214,7 +214,7 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         label = _wrap_label(sector.name)
         longest = max(len(line) for line in label.split("\n"))
         label_size = 17.0 if longest <= 11 else 15.0
-        sector.text(label, r=107, size=label_size, adjust_rotation=True,
+        sector.text(label, r=113, size=label_size, adjust_rotation=True,
                     orientation="vertical", color="#222")
 
     # Draw chord ribbons, heaviest first, so thin links stay visible on top.
@@ -242,9 +242,9 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
             lo, hi = sector_by_name[disp].deg_lim
             degrees += [lo, hi]
         lo, hi = min(degrees), max(degrees)
-        circos.rect(r_lim=(126, 132), deg_lim=(lo, hi), fc=group_col,
+        circos.rect(r_lim=(133, 139), deg_lim=(lo, hi), fc=group_col,
                     ec="white", lw=1.2)
-        circos.text(group_name, r=148, deg=(lo + hi) / 2, size=22,
+        circos.text(group_name, r=155, deg=(lo + hi) / 2, size=22,
                     adjust_rotation=True, orientation="horizontal",
                     color=group_col, fontweight="bold", va="center", ha="center")
 
