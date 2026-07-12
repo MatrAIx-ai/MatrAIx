@@ -1,4 +1,4 @@
-"""End-to-end orchestrator for the price-perturbation survey pipeline.
+"""End-to-end orchestrator for the purchase-intent survey pipeline.
 
 Wires together: product sourcing → price perturbation → prompt rendering
 (for each product × persona combination) → decision collection → retention-
@@ -60,7 +60,7 @@ def run_pipeline(
     factor: float = 1.25,
     template_path: Path | str | None = None,
 ) -> PipelineResult:
-    """Execute the full price-perturbation survey pipeline.
+    """Execute the full purchase-intent survey pipeline.
 
     Parameters
     ----------

@@ -1,4 +1,4 @@
-"""Decision collection for the price-perturbation survey.
+"""Decision collection for the purchase-intent survey.
 
 Runs a batch of rendered prompts through a model callable, parses each
 JSON response, and returns structured ``Decision`` objects.

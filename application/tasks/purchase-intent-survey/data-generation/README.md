@@ -1,11 +1,11 @@
 # Scale-up tooling
 
-Supporting code and data for producing **many** price-perturbation survey
+Supporting code and data for producing **many** purchase-intent survey
 scenarios from real Amazon products — the "products × perturbations → surveys"
 workflow. This is not part of the single harness scenario in the parent task
 folder; it's how that kind of scenario is generated at scale.
 
-All paths below are relative to this `generation/` directory.
+All paths below are relative to this `data-generation/` directory.
 
 ## Contents
 

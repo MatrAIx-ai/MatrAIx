@@ -1,9 +1,10 @@
-# Price-perturbation purchase-intent survey
+# Purchase-intent survey
 
-PersonaBench application (Type-1, survey) task. The persona is shown a real
-product they were considering and told that **one** thing about it changed —
-here, a price increase — then answers a short structured purchase-intent
-survey. Measures how a single perturbation shifts purchase intent.
+PersonaBench application (Type-1, survey) task, commerce-retail domain. The
+persona is shown a real product they were considering and told that **one**
+thing about it changed — its price or an attribute (the shipped scenario is a
+price increase) — then answers a short structured purchase-intent survey.
+Measures how a single product change shifts purchase intent.
 
 ## The scenario
 
@@ -42,12 +43,12 @@ each value in its allowed set, `reasoning` non-empty, no extra fields. See
 - `task.toml` — metadata + `[environment].definition`.
 - `tests/` — verifier (`test_state.py` + `test.sh`).
 - `solution/solve.sh` — reference solution (posture-aware, schema-valid).
-- `environment/task-environments/application/price-perturbation-survey/` (in the
+- `environment/task-environments/application/purchase-intent-survey/` (in the
   `environment/` module) — Dockerfile + the `/app/input` materials.
-- `generation/` — **scale-up tooling** (not part of the single scenario): the
-  Amazon scraper + harvest pipeline, the 494-product dataset, and the survey
+- `data-generation/` — **scale-up tooling** (not part of the single scenario):
+  the Amazon scraper + harvest pipeline, the 494-product dataset, and the survey
   generator that turns products into many perturbed surveys. See
-  [`generation/README.md`](generation/README.md).
+  [`data-generation/README.md`](data-generation/README.md).
 
 ## Local smoke
 
@@ -60,5 +61,5 @@ uv run harbor run \
   -a persona-claude-code \
   -m "${PERSONABENCH_HARBOR_PERSONA_MODEL:-anthropic/claude-haiku-4-5}" \
   --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
-  -p application/tasks/price-perturbation-survey
+  -p application/tasks/purchase-intent-survey
 ```

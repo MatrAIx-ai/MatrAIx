@@ -1,4 +1,4 @@
-"""Data models for the price-perturbation survey pipeline."""
+"""Data models for the purchase-intent survey pipeline."""
 
 from __future__ import annotations
 

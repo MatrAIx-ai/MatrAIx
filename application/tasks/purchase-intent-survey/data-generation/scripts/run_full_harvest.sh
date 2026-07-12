@@ -14,7 +14,7 @@
 # Usage:  nohup bash scripts/run_full_harvest.sh > output/harvest_run.log 2>&1 &
 set -uo pipefail
 
-# BASE_DIR is the generation/ folder (this script lives in generation/scripts/).
+# BASE_DIR is the data-generation/ folder (this script is in data-generation/scripts/).
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 REPO_ROOT="$(cd "$BASE_DIR/../../../.." && pwd)"
 cd "$BASE_DIR"

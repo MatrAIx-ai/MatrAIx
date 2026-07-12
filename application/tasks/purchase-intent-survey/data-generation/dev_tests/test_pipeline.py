@@ -1,4 +1,4 @@
-"""Tests for the price-perturbation survey pipeline.
+"""Tests for the purchase-intent survey pipeline.
 
 Runs the full pipeline end-to-end on the fixture product source with a
 deterministic mock model — no network calls, no LLM API key required.

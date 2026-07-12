@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verification run: price-perturbation survey pipeline on real personas.
+"""Verification run: purchase-intent survey pipeline on real personas.
 
 Loads 3 personas from the repo's bench-dev-sample dataset, constructs
 their system prompts using the repo's persona loader and dimension
@@ -24,8 +24,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── path setup (no editable install needed) ──────────────────────
-# This file lives at <repo>/application/tasks/price-perturbation-survey/
-# generation/verify_pipeline.py — five levels down from the repo root.
+# This file lives at <repo>/application/tasks/purchase-intent-survey/
+# data-generation/verify_pipeline.py — five levels down from the repo root.
 REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "environment" / "agents" / "personabench" / "agents"))
