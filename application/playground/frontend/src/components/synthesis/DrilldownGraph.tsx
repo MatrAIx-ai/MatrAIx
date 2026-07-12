@@ -5,7 +5,7 @@
  * edges are cubic curves with arrowheads. Click selects, double-click
  * re-centers.
  */
-import { useId, useMemo, useState } from "react";
+import { useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import type { SynthesisSubgraphResponse } from "@/lib/types";
 
@@ -32,6 +32,7 @@ export function DrilldownGraph({
   onSelectNode: (id: string) => void;
   onRecenter: (id: string) => void;
 }) {
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [focused, setFocused] = useState<string | null>(null);
   const markerScope = useId().replace(/:/g, "");
@@ -131,6 +132,23 @@ export function DrilldownGraph({
     };
   }, [subgraph.center, subgraph.edges, subgraph.nodes]);
 
+  useLayoutEffect(() => {
+    const scroller = scrollerRef.current;
+    const centerPosition = layout.positions.get(subgraph.center);
+    if (!scroller || !centerPosition) return;
+
+    const maximumScrollLeft = Math.max(0, scroller.scrollWidth - scroller.clientWidth);
+    const maximumScrollTop = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+    scroller.scrollLeft = Math.min(
+      maximumScrollLeft,
+      Math.max(0, centerPosition.x + NODE_W / 2 - scroller.clientWidth / 2),
+    );
+    scroller.scrollTop = Math.min(
+      maximumScrollTop,
+      Math.max(0, centerPosition.y + NODE_H / 2 - scroller.clientHeight / 2),
+    );
+  }, [layout, subgraph.center]);
+
   const nodesById = useMemo(
     () => new Map(subgraph.nodes.map((node) => [node.id, node])),
     [subgraph.nodes],
@@ -158,7 +176,7 @@ export function DrilldownGraph({
   }
 
   return (
-    <div className="custom-scrollbar h-full w-full overflow-auto">
+    <div ref={scrollerRef} className="custom-scrollbar h-full w-full overflow-auto">
       <svg
         width={layout.width}
         height={layout.height}
