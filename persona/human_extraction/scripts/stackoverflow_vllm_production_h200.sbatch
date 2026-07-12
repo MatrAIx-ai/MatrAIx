@@ -16,10 +16,30 @@
 
 set -euo pipefail
 
+YEAR=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --year)
+      YEAR="$2"
+      shift 2
+      ;;
+    *)
+      echo "Unknown option: $1"
+      exit 1
+      ;;
+  esac
+done
+
+if [[ -z "$YEAR" ]]; then
+  echo "Error: --year flag is required."
+  exit 1
+fi
+
+
 WORKDIR=/scratch/yl6586/MatrAIx
 SCRIPT="$WORKDIR/persona/human_extraction/scripts/extract_personas_stackoverflow_vllm_v2.py"
 SURVEY_ROOT="$WORKDIR/persona/human_extraction/data/stackoverflow_survey"
-OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v2_2025.jsonl"
+OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v3_$YEAR.jsonl"
 IMAGE=/scratch/yl6586/containers/vllm-v0.19.0.sif
 
 HF_CACHE=/scratch/yl6586/.cache/huggingface
@@ -38,12 +58,6 @@ else
     unset APPTAINER_TMPDIR
 fi
 
-for required_file in "$IMAGE" "$SCRIPT" "$SURVEY_ROOT/2025/results_2025_completeness_60.csv" "$SURVEY_ROOT/2025/stackoverflow_column_mapping_2025.csv"; do
-    if [[ ! -f "$required_file" ]]; then
-        echo "ERROR: Required file not found: $required_file" >&2
-        exit 1
-    fi
-done
 
 mkdir -p "$HF_CACHE" "$VLLM_CACHE_ROOT" "$(dirname "$OUTPUT")"
 cd "$WORKDIR"
@@ -62,7 +76,7 @@ apptainer exec \
   "$IMAGE" \
   /usr/bin/python3 \
   "$SCRIPT" \
-  --year 2025 \
+  --year "$YEAR" \
   --survey-root "$SURVEY_ROOT" \
   --execute \
   --batch-profiles 16 \

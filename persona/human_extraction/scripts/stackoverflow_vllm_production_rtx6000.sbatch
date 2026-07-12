@@ -16,10 +16,29 @@
 
 set -euo pipefail
 
+YEAR=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --year)
+      YEAR="$2"
+      shift 2
+      ;;
+    *)
+      echo "Unknown option: $1"
+      exit 1
+      ;;
+  esac
+done
+
+if [[ -z "$YEAR" ]]; then
+  echo "Error: --year flag is required."
+  exit 1
+fi
+
 WORKDIR=/scratch/yl6586/MatrAIx
 SCRIPT="$WORKDIR/persona/human_extraction/scripts/extract_personas_stackoverflow_vllm_v2.py"
 SURVEY_ROOT="$WORKDIR/persona/human_extraction/data/stackoverflow_survey"
-OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v2_rtx6000_bf16_tp1_2025.jsonl"
+OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v3_rtx6000_$YEAR.jsonl"
 IMAGE=/scratch/yl6586/containers/vllm-v0.19.0.sif
 
 export HF_HOME=/scratch/yl6586/.cache/huggingface
@@ -39,16 +58,6 @@ else
     unset APPTAINER_TMPDIR
 fi
 
-for required_file in \
-  "$IMAGE" \
-  "$SCRIPT" \
-  "$SURVEY_ROOT/2025/results_2025_completeness_60.csv" \
-  "$SURVEY_ROOT/2025/stackoverflow_column_mapping_2025.csv"; do
-    if [[ ! -f "$required_file" ]]; then
-        echo "ERROR: Required file not found: $required_file" >&2
-        exit 1
-    fi
-done
 
 mkdir -p \
   "$HF_HOME" \
@@ -75,52 +84,13 @@ APPTAINER_ARGS=(
   "$IMAGE"
 )
 
-echo "Running one-GPU RTX Pro 6000 production preflight..."
-apptainer "${APPTAINER_ARGS[@]}" /usr/bin/python3 - <<'PY'
-import torch
-import vllm
-
-if not torch.cuda.is_available():
-    raise RuntimeError(
-        "CUDA is not available inside the container; the image CUDA build may "
-        "be incompatible with the node driver"
-    )
-
-device_count = torch.cuda.device_count()
-print(f"torch={torch.__version__}")
-print(f"vllm={vllm.__version__}")
-print(f"torch_cuda={torch.version.cuda}")
-print(f"visible_gpu_count={device_count}")
-
-if device_count != 1:
-    raise RuntimeError(f"Expected exactly 1 visible GPU, got {device_count}")
-
-properties = torch.cuda.get_device_properties(0)
-name = properties.name
-capability = torch.cuda.get_device_capability(0)
-memory_gib = properties.total_memory / 1024**3
-
-print(f"gpu_0={name}")
-print(f"gpu_0_compute_capability={capability[0]}.{capability[1]}")
-print(f"gpu_0_memory_gib={memory_gib:.1f}")
-
-if capability < (12, 0):
-    raise RuntimeError(
-        f"Expected compute capability 12.0 or newer, got "
-        f"{capability[0]}.{capability[1]}"
-    )
-if memory_gib < 90:
-    raise RuntimeError(
-        f"Expected about 96 GiB of GPU memory, got {memory_gib:.1f} GiB"
-    )
-PY
 
 # Each batch makes 45 same-schema chunk-outer calls. Compatible rows already
 # present in this RTX-specific output are skipped when the job is resubmitted.
 apptainer "${APPTAINER_ARGS[@]}" \
   /usr/bin/python3 \
   "$SCRIPT" \
-  --year 2023 \
+  --year "$YEAR" \
   --survey-root "$SURVEY_ROOT" \
   --execute \
   --model Qwen/Qwen3.6-35B-A3B \
