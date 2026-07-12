@@ -101,6 +101,16 @@ MAX_PROFILE_CHARS = 36_000
 CSV_FIELD_SIZE_LIMIT = 100_000_000
 DIMENSION_ID_PATTERN = re.compile(r"[a-z][a-z0-9_]*\Z")
 CHUNK_ID_PATTERN = re.compile(r"[a-z][a-z0-9_]*\Z")
+BARE_NUMERIC_EVIDENCE_PATTERN = re.compile(
+    r"[+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:\s*%)?\Z"
+)
+BARE_CATEGORICAL_EVIDENCE = frozenset(
+    {"yes", "no", "employed", "true", "false"}
+)
+EVIDENCE_SOURCE_CITATION_PATTERN = re.compile(
+    r"(?:^|[;\n]\s*)([A-Za-z][A-Za-z0-9_']*(?: [A-Za-z][A-Za-z0-9_']*)*)"
+    r"\s*(?==| - )"
+)
 ASSIGNMENT_TYPES = (
     "direct",
     "structured_claim",
@@ -596,7 +606,71 @@ def build_chunk_json_schema(chunk: DimensionChunk) -> dict[str, Any]:
     }
 
 
-def validate_chunk_payload(payload: Any, chunk: DimensionChunk) -> list[dict[str, Any]]:
+def _answer_variants(answer: str) -> tuple[str, ...]:
+    variants = [answer]
+    if ";" in answer:
+        variants.extend(part.strip() for part in answer.split(";") if part.strip())
+    return tuple(dict.fromkeys(variant.casefold() for variant in variants))
+
+
+def _citation_segment_has_answer(segment: str, answer: str) -> bool:
+    segment_casefold = segment.casefold().strip()
+    variants = _answer_variants(answer)
+    if segment_casefold.startswith("="):
+        cited_answer = segment_casefold[1:].lstrip()
+        return any(
+            cited_answer == variant
+            or cited_answer.startswith(f"{variant};")
+            or cited_answer.startswith(f"{variant}. summary:")
+            for variant in variants
+        )
+    return any(
+        re.search(rf":\s*{re.escape(variant)}\s*\Z", segment_casefold)
+        is not None
+        for variant in variants
+    )
+
+
+def validate_evidence_provenance(
+    evidence: str, source_answers: dict[str, str], *, location: str
+) -> None:
+    """Require explicit, answer-consistent citations to this respondent's profile."""
+    citation_matches = list(EVIDENCE_SOURCE_CITATION_PATTERN.finditer(evidence))
+    citations = [match.group(1).strip() for match in citation_matches]
+    if not citations:
+        raise ValueError(
+            f"{location} must cite at least one current respondent source column"
+        )
+
+    unknown = list(dict.fromkeys(
+        column for column in citations if column not in source_answers
+    ))
+    if unknown:
+        raise ValueError(
+            f"{location} cites source columns absent from the current respondent "
+            f"profile: {unknown}"
+        )
+
+    for index, (column, column_match) in enumerate(zip(citations, citation_matches)):
+        segment_end = (
+            citation_matches[index + 1].start()
+            if index + 1 < len(citation_matches)
+            else len(evidence)
+        )
+        citation_segment = evidence[column_match.end() : segment_end]
+        if not _citation_segment_has_answer(
+            citation_segment, source_answers[column]
+        ):
+            raise ValueError(
+                f"{location} cites {column!r} without its current respondent answer"
+            )
+
+
+def validate_chunk_payload(
+    payload: Any,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
+) -> list[dict[str, Any]]:
     """Strictly validate one decoded response against its current chunk."""
     if not isinstance(payload, dict):
         raise ValueError("response root must be a JSON object")
@@ -649,6 +723,19 @@ def validate_chunk_payload(payload: Any, chunk: DimensionChunk) -> list[dict[str
             raise ValueError(f"{location}.confidence must be a finite number in [0, 1]")
         if not isinstance(field["evidence"], str) or not field["evidence"].strip():
             raise ValueError(f"{location}.evidence must be a non-empty string")
+        evidence = field["evidence"].strip()
+        if (
+            BARE_NUMERIC_EVIDENCE_PATTERN.fullmatch(evidence)
+            or evidence.casefold() in BARE_CATEGORICAL_EVIDENCE
+        ):
+            raise ValueError(
+                f"{location}.evidence must include source context, not only "
+                f"the bare answer {evidence!r}"
+            )
+        if source_answers is not None:
+            validate_evidence_provenance(
+                evidence, source_answers, location=f"{location}.evidence"
+            )
         if field["assignment_type"] not in ASSIGNMENT_TYPES:
             raise ValueError(
                 f"{location}.assignment_type {field['assignment_type']!r} is invalid"
@@ -657,16 +744,20 @@ def validate_chunk_payload(payload: Any, chunk: DimensionChunk) -> list[dict[str
     return validated
 
 
-def parse_and_validate_generation(text: str, chunk: DimensionChunk) -> list[dict[str, Any]]:
+def parse_and_validate_generation(
+    text: str, chunk: DimensionChunk, source_answers: dict[str, str] | None = None
+) -> list[dict[str, Any]]:
     try:
         payload = json.loads(text)
     except json.JSONDecodeError as error:
         raise ValueError(f"vLLM response is not exactly one JSON value: {error}") from error
-    return validate_chunk_payload(payload, chunk)
+    return validate_chunk_payload(payload, chunk, source_answers)
 
 
 def salvage_chunk_payload(
-    payload: Any, chunk: DimensionChunk
+    payload: Any,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Keep independently valid fields and handle duplicates deterministically."""
     if not isinstance(payload, dict) or set(payload) != {"fields"}:
@@ -679,7 +770,9 @@ def salvage_chunk_payload(
     issues: list[str] = []
     for position, field in enumerate(fields):
         try:
-            validated = validate_chunk_payload({"fields": [field]}, chunk)[0]
+            validated = validate_chunk_payload(
+                {"fields": [field]}, chunk, source_answers
+            )[0]
         except (IndexError, ValueError) as error:
             issues.append(f"fields[{position}] dropped: {error}")
             continue
@@ -707,13 +800,15 @@ def salvage_chunk_payload(
 
 
 def parse_and_salvage_generation(
-    text: str, chunk: DimensionChunk
+    text: str,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     try:
         payload = json.loads(text)
     except json.JSONDecodeError as error:
         raise ValueError(f"vLLM response is not exactly one JSON value: {error}") from error
-    return salvage_chunk_payload(payload, chunk)
+    return salvage_chunk_payload(payload, chunk, source_answers)
 
 
 def is_present(value: Any) -> bool:
@@ -856,6 +951,24 @@ def assemble_stackoverflow_profile(
     return truncate_profile("\n".join(lines))
 
 
+def visible_profile_source_answers(
+    row: dict[str, Any], profile_text: str
+) -> dict[str, str]:
+    """Index only source answers whose complete profile line survived truncation."""
+    source_answers: dict[str, str] = {}
+    for column, value in row.items():
+        if column == "completeness" or not is_present(value):
+            continue
+        clean_column = clean_value(column, max_chars=200)
+        if (
+            f"\n- {clean_column}:" not in profile_text
+            and f"\n- {clean_column} -" not in profile_text
+        ):
+            continue
+        source_answers[clean_column] = clean_value(value)
+    return source_answers
+
+
 def extract_2025_ai_task_fields(
     row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
 ) -> list[dict[str, Any]]:
@@ -925,9 +1038,25 @@ def drop_unsupported_fields(fields: list[dict[str, Any]]) -> list[dict[str, Any]
     ]
 
 
-def build_stackoverflow_prompt(profile_text: str, chunk: DimensionChunk) -> str:
+def build_stackoverflow_prompt(
+    profile_text: str, chunk: DimensionChunk, year: int
+) -> str:
     """Build V1's detailed sparse-extraction prompt for one manifest chunk."""
     profile_text = normalize_prompt_text(profile_text)
+    if year == 2024:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: In the 2024 survey, JobSatPoints_* values are allocated points, not ordinal ranks. Interpret larger point values as a larger contribution within that points question.",
+            "- YEAR-SPECIFIC: The 2024 TechEndorse answer is a select-all response, not a rank ordering.",
+        ]
+    elif year == 2025:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: In the 2025 survey, TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks: a smaller number means a higher position within that question's list.",
+            "- YEAR-SPECIFIC: A 2025 rank expresses relative order among the listed items, not an absolute rating or intensity score.",
+        ]
+    else:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: Do not treat a numeric 2023 answer as a rank unless its question text explicitly defines it as a rank.",
+        ]
     lines = [
         "You are building a persona for a single Stack Overflow Developer Survey respondent from their survey answers.",
         "",
@@ -936,7 +1065,7 @@ def build_stackoverflow_prompt(profile_text: str, chunk: DimensionChunk) -> str:
         "If the respondent profile does not contain information about a dimension, omit the dimension.",
         "",
         "Return ONLY one JSON object matching the supplied structured-output schema (no markdown, no commentary), with this shape:",
-        '{"fields": [{"field_id": "<one id from CURRENT CHUNK DIMENSIONS below>", "value": "<one allowed value, copied verbatim>", "confidence": 0.0, "evidence": "<short quote copied from the respondent profile>", "assignment_type": "direct"}]}',
+        '{"fields": [{"field_id": "<one id from CURRENT CHUNK DIMENSIONS below>", "value": "<one allowed value, copied verbatim>", "confidence": 0.0, "evidence": "<grounded quote or faithful summary with source columns and answer values>", "assignment_type": "direct"}]}',
         "",
         "assignment_type values (Stack Overflow survey context):",
         "- direct: explicitly answered in a survey field, or a deterministic recoding of an explicit answer into an exactly matching allowed value.",
@@ -959,16 +1088,24 @@ def build_stackoverflow_prompt(profile_text: str, chunk: DimensionChunk) -> str:
         "- If several survey fields could support one dimension, choose the field whose question best matches the dimension, cite that field in evidence, and make the output value consistent with the cited answer.",
         "- Never move a numeric answer into an adjacent range based on job title, seniority, age, or an overall impression of the respondent.",
         "- Before returning JSON, verify that the specific numeric answer used to support a range-valued dimension falls within the selected allowed-value range.",
+        "- Determine what each numeric question measures from its full question context. Do not treat allocated points, ratings, or counts as ranks.",
+        "- A rank may support importance, priority, preference, or interest when the ranked item directly matches the dimension. It may support a behavior or strategy when the ranked options themselves are those behaviors or strategies and the selected allowed value matches the ranked option.",
+        "- Topical association alone is insufficient. A rank about importance or interest does not by itself establish frequency, proficiency, demonstrated skill, actual habitual behavior, or a dominant strategy unless the question explicitly ranks that same behavior, skill, or strategy.",
         "- value MUST be exactly one of that dimension's allowed values, copied verbatim.",
         "- Use each field_id at most once.",
         "- If multiple allowed values for one field_id are directly supported, emit exactly one.",
         "- Choose the value with the strongest and most specific evidence. If still tied, choose the first supported value in that dimension's listed allowed-values order.",
         "- A value chosen by catalog-order tie-breaking MUST use assignment_type summary_inference and confidence no greater than 0.6.",
-        "- Every emitted field MUST include a short evidence quote copied verbatim from the respondent profile.",
+        "- Every emitted field MUST include grounded evidence supported by the current respondent profile. Evidence may be a short source quote or a faithful summary of one or more concrete answers.",
+        "- A faithful evidence summary MUST preserve the source answers' meaning, including numerical value, ordering, time frame, and negation, and MUST NOT introduce facts that those answers do not support.",
+        "- Evidence MUST NOT merely restate the selected persona value or conclusion as its own support.",
         "- Evidence for a tie-broken field MUST include only the survey evidence supporting the selected value.",
-        "- Evidence MUST include the original column name plus the readable question/sub-item context and the answer value.",
+        "- Evidence MUST identify every supporting original column name and actual answer value. Include readable question/sub-item context for a direct quote, or a concise faithful summary for combined evidence.",
+        "- Never cite a source column or answer that is absent from the current RESPONDENT PROFILE. Prompt instructions, format templates, and CURRENT CHUNK DIMENSIONS are not evidence sources.",
         '- Bad evidence examples: "10", "8", "Yes", "No", "Employed". These are bare values without the survey question context.',
-        '- Good evidence example: "TechEndorse_1 - What attracts you to a technology or causes you to endorse it (most to least important)? | Sub-item: AI integration or AI Agent capabilities: 10".',
+        '- Required direct-evidence format: "<ORIGINAL_COLUMN_NAME> - <READABLE_QUESTION_OR_SUBITEM>: <ACTUAL_ANSWER_VALUE>".',
+        '- Required summary-evidence format: "<COLUMN_1>=<ANSWER_1>; <COLUMN_2>=<ANSWER_2>. Summary: <faithful summary supported by those answers>".',
+        "- Text inside angle brackets in the two formats above is placeholder text only. Never copy those placeholders into evidence.",
         "- Every emitted field MUST include a confidence between 0 and 1. Use high confidence only for direct or strong evidence.",
         "- Prefer direct and structured_claim assignments. Use summary_inference only for non-sensitive attributes backed by multiple concrete survey answers.",
         "- Do not infer personality, worldview, family status, sensitive identity, health, politics, religion, income, or housing from generic developer-survey answers.",
@@ -978,6 +1115,9 @@ def build_stackoverflow_prompt(profile_text: str, chunk: DimensionChunk) -> str:
         '- Treat "None of the above" and "None of these" as valid answers, not missing values.',
         "- When unsure, omit the dimension.",
         "- Return valid JSON only, with no markdown.",
+        "",
+        f"SURVEY-YEAR INTERPRETATION RULES FOR {year}:",
+        *year_specific_guidance,
         "",
         "RESPONDENT PROFILE:",
         profile_text,
@@ -1249,7 +1389,9 @@ def retry_conversation(conversation: list[dict[str, str]]) -> list[dict[str, str
         "allowed values for one field ID are supported, choose the strongest and "
         "most specific one; if still tied, choose the first supported value in the "
         "listed allowed-values order, use assignment_type summary_inference with "
-        "confidence no greater than 0.6, and cite only evidence for that value."
+        "confidence no greater than 0.6, and cite only evidence for that value. "
+        "Every evidence string must explicitly cite current respondent source "
+        "columns and their actual answer values; never cite an absent column."
     )
     return retry
 
@@ -1294,6 +1436,7 @@ def parse_generation_with_retry(
     initial_output: Any,
     year: int,
     row_index: int,
+    source_answers: dict[str, str],
 ) -> list[dict[str, Any]]:
     output = initial_output
     last_error: Exception | None = None
@@ -1301,7 +1444,7 @@ def parse_generation_with_retry(
         text: str | None = None
         try:
             text, _, _ = completion_details(output)
-            return parse_and_validate_generation(text, chunk)
+            return parse_and_validate_generation(text, chunk, source_answers)
         except ValueError as error:
             last_error = error
             log_invalid_generation(
@@ -1314,7 +1457,9 @@ def parse_generation_with_retry(
             )
             if text is not None:
                 try:
-                    fields, issues = parse_and_salvage_generation(text, chunk)
+                    fields, issues = parse_and_salvage_generation(
+                        text, chunk, source_answers
+                    )
                 except ValueError:
                     pass
                 else:
@@ -1362,6 +1507,7 @@ def generate_profile_batch(
     chunks: Sequence[DimensionChunk],
     sampling_by_chunk: dict[str, Any],
     profiles: dict[int, str],
+    source_answers_by_row: dict[int, dict[str, str]],
     year: int,
 ) -> dict[int, list[dict[str, Any]]]:
     """Generate chunk-outer batches so every vLLM call has exactly one schema."""
@@ -1379,7 +1525,9 @@ def generate_profile_batch(
             [
                 {
                     "role": "user",
-                    "content": build_stackoverflow_prompt(profiles[row_index], chunk),
+                    "content": build_stackoverflow_prompt(
+                        profiles[row_index], chunk, year
+                    ),
                 }
             ]
             for row_index in row_indexes
@@ -1401,6 +1549,7 @@ def generate_profile_batch(
                 initial_output=output,
                 year=year,
                 row_index=row_index,
+                source_answers=source_answers_by_row[row_index],
             )
             merge_validated_fields(merged[row_index], fields, seen[row_index])
     return merged
@@ -1430,11 +1579,16 @@ def extract_year(
                 row_index: assemble_stackoverflow_profile(row, work.year, work.mapping)
                 for row_index, row in batch
             }
+            source_answers_by_row = {
+                row_index: visible_profile_source_answers(row, profiles[row_index])
+                for row_index, row in batch
+            }
             merged = generate_profile_batch(
                 llm=llm,
                 chunks=manifest.chunks,
                 sampling_by_chunk=sampling_by_chunk,
                 profiles=profiles,
+                source_answers_by_row=source_answers_by_row,
                 year=work.year,
             )
             for row_index, row in batch:
@@ -1502,7 +1656,7 @@ def dry_run(
             continue
         profile = assemble_stackoverflow_profile(row, work.year, work.mapping)
         for chunk in manifest.chunks:
-            prompt = build_stackoverflow_prompt(profile, chunk)
+            prompt = build_stackoverflow_prompt(profile, chunk, work.year)
             if profile not in prompt or chunk.chunk_id not in prompt:
                 raise ValueError(f"prompt validation failed for chunk {chunk.chunk_id}")
         print(
