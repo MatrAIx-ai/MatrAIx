@@ -87,12 +87,13 @@ export function SynthesisStudioView() {
                       {direction}
                       <select
                         value={hops[direction]}
-                        onChange={(event) =>
+                        onChange={(event) => {
+                          setSelectedNode(null);
                           setHops((previous) => ({
                             ...previous,
                             [direction]: Number(event.target.value),
-                          }))
-                        }
+                          }));
+                        }}
                         className={`h-7 rounded border border-outline bg-field px-1.5 text-xs text-text-main ${FOCUS_RING}`}
                       >
                         {[0, 1, 2, 3, 4].map((hopCount) => (

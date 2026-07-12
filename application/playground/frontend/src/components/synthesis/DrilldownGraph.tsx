@@ -38,14 +38,78 @@ export function DrilldownGraph({
   const activeEdgeArrowId = `${edgeArrowId}-active`;
 
   const layout = useMemo(() => {
+    const nodeById = new Map(subgraph.nodes.map((node) => [node.id, node]));
+    const originalOrder = new Map(subgraph.nodes.map((node, index) => [node.id, index]));
+    // The service payload order is stable (signed layer, topological order,
+    // then id), so retain it whenever Kahn's algorithm has multiple choices.
+    const compareNodeIds = (left: string, right: string): number => {
+      const orderDifference =
+        (originalOrder.get(left) ?? Number.MAX_SAFE_INTEGER) -
+        (originalOrder.get(right) ?? Number.MAX_SAFE_INTEGER);
+      if (orderDifference !== 0) return orderDifference;
+      const layerDifference =
+        (nodeById.get(left)?.layer ?? 0) - (nodeById.get(right)?.layer ?? 0);
+      if (layerDifference !== 0) return layerDifference;
+      return left.localeCompare(right);
+    };
+
+    const outgoing = new Map<string, string[]>(
+      subgraph.nodes.map((node) => [node.id, []]),
+    );
+    const inDegree = new Map<string, number>(
+      subgraph.nodes.map((node) => [node.id, 0]),
+    );
+    for (const edge of subgraph.edges) {
+      if (!nodeById.has(edge.source) || !nodeById.has(edge.target)) continue;
+      outgoing.get(edge.source)?.push(edge.target);
+      inDegree.set(edge.target, (inDegree.get(edge.target) ?? 0) + 1);
+    }
+    for (const targets of outgoing.values()) targets.sort(compareNodeIds);
+
+    const ready = subgraph.nodes
+      .filter((node) => inDegree.get(node.id) === 0)
+      .map((node) => node.id)
+      .sort(compareNodeIds);
+    const topologicalOrder: string[] = [];
+    const rankById = new Map(subgraph.nodes.map((node) => [node.id, 0]));
+    while (ready.length > 0) {
+      const source = ready.shift();
+      if (!source) break;
+      topologicalOrder.push(source);
+      const sourceRank = rankById.get(source) ?? 0;
+      for (const target of outgoing.get(source) ?? []) {
+        rankById.set(target, Math.max(rankById.get(target) ?? 0, sourceRank + 1));
+        const remaining = (inDegree.get(target) ?? 0) - 1;
+        inDegree.set(target, remaining);
+        if (remaining !== 0) continue;
+        const insertionIndex = ready.findIndex(
+          (readyNode) => compareNodeIds(target, readyNode) < 0,
+        );
+        if (insertionIndex === -1) ready.push(target);
+        else ready.splice(insertionIndex, 0, target);
+      }
+    }
+
+    if (topologicalOrder.length !== subgraph.nodes.length) {
+      return {
+        positions: new Map<string, { x: number; y: number }>(),
+        width: PADDING * 2 + NODE_W,
+        height: PADDING * 2 + NODE_H,
+        cycleDetected: true,
+      };
+    }
+
+    const centerRank = rankById.get(subgraph.center) ?? 0;
     const layers = new Map<number, string[]>();
-    for (const node of subgraph.nodes) {
-      const bucket = layers.get(node.layer) ?? [];
-      bucket.push(node.id);
-      layers.set(node.layer, bucket);
+    for (const nodeId of topologicalOrder) {
+      const centeredRank = (rankById.get(nodeId) ?? 0) - centerRank;
+      const bucket = layers.get(centeredRank) ?? [];
+      bucket.push(nodeId);
+      layers.set(centeredRank, bucket);
     }
     const layerKeys = [...layers.keys()].sort((a, b) => a - b);
     const minLayer = layerKeys[0] ?? 0;
+    const maxLayer = layerKeys[layerKeys.length - 1] ?? minLayer;
     const positions = new Map<string, { x: number; y: number }>();
     let maxRows = 1;
     for (const layer of layerKeys) {
@@ -60,13 +124,11 @@ export function DrilldownGraph({
     }
     return {
       positions,
-      width: Math.max(
-        PADDING * 2 + NODE_W,
-        PADDING * 2 + Math.max(0, layerKeys.length - 1) * COL_WIDTH + NODE_W,
-      ),
+      width: PADDING * 2 + Math.max(0, maxLayer - minLayer) * COL_WIDTH + NODE_W,
       height: PADDING * 2 + maxRows * (NODE_H + ROW_GAP) - ROW_GAP,
+      cycleDetected: false,
     };
-  }, [subgraph.nodes]);
+  }, [subgraph.center, subgraph.edges, subgraph.nodes]);
 
   const nodesById = useMemo(
     () => new Map(subgraph.nodes.map((node) => [node.id, node])),
@@ -82,6 +144,17 @@ export function DrilldownGraph({
     }
     return ids;
   }, [focus, subgraph.edges]);
+
+  if (layout.cycleDetected) {
+    return (
+      <div
+        role="alert"
+        className="grid h-full place-items-center px-6 text-center text-sm text-danger"
+      >
+        Unable to render a left-to-right layout because this subgraph contains a cycle.
+      </div>
+    );
+  }
 
   return (
     <div className="custom-scrollbar h-full w-full overflow-auto">
