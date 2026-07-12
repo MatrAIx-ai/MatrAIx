@@ -96,14 +96,21 @@ class OpenHandsSDK(BaseInstalledAgent):
         already_installed = check_result.return_code == 0
 
         if not already_installed:
-            # Install python3-venv if needed (root)
+            # Install python3.12 / venv if needed (root). openhands-sdk requires Python >=3.12.
             await self.exec_as_root(
                 environment,
                 command=(
                     "mkdir -p /opt && "
-                    'if ! python3 -c "import ensurepip" 2>/dev/null; then'
-                    "  apt-get update -qq && apt-get install -y python3-venv;"
-                    " fi"
+                    "if command -v python3.12 >/dev/null 2>&1; then "
+                    '  python3.12 -c "import ensurepip" 2>/dev/null || '
+                    "  (apt-get update -qq && apt-get install -y python3.12-venv); "
+                    "elif python3 -c 'import sys; assert sys.version_info >= (3, 12)' 2>/dev/null; then "
+                    '  python3 -c "import ensurepip" 2>/dev/null || '
+                    "  (apt-get update -qq && apt-get install -y python3-venv); "
+                    "else "
+                    "  apt-get update -qq && "
+                    "  (apt-get install -y python3.12 python3.12-venv || apt-get install -y python3-venv); "
+                    "fi"
                 ),
                 env={"DEBIAN_FRONTEND": "noninteractive"},
             )
@@ -119,7 +126,16 @@ class OpenHandsSDK(BaseInstalledAgent):
                 environment,
                 command=(
                     "set -euo pipefail; "
-                    "python3 -m venv /opt/openhands-sdk-venv && "
+                    "PY=$(command -v python3.12 2>/dev/null || true); "
+                    'if [ -z "$PY" ]; then '
+                    '  if python3 -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)"; then '
+                    "    PY=python3; "
+                    "  else "
+                    '    echo "openhands-sdk requires Python 3.12+. Rebuild the task environment image with Python 3.12." >&2; '
+                    "    exit 1; "
+                    "  fi; "
+                    "fi; "
+                    '$PY -m venv /opt/openhands-sdk-venv && '
                     "source /opt/openhands-sdk-venv/bin/activate && "
                     "export PIP_DEFAULT_TIMEOUT=120 && "
                     "pip install --upgrade pip || true && "
@@ -174,11 +190,18 @@ class OpenHandsSDK(BaseInstalledAgent):
 
         # Pass through LLM configuration from extra_env or environment
         llm_api_key = self._get_env("LLM_API_KEY")
+        if llm_api_key is None and self.model_name and self.model_name.startswith("dashscope/"):
+            llm_api_key = self._get_env("DASHSCOPE_API_KEY")
         if llm_api_key is None:
             raise ValueError("LLM_API_KEY environment variable must be set")
         env["LLM_API_KEY"] = llm_api_key
 
         llm_base_url = self._get_env("LLM_BASE_URL")
+        if llm_base_url is None and self.model_name and self.model_name.startswith("dashscope/"):
+            llm_base_url = (
+                self._get_env("DASHSCOPE_API_BASE")
+                or "https://dashscope.aliyuncs.com/compatible-mode/v1"
+            )
         if llm_base_url is not None:
             env["LLM_BASE_URL"] = llm_base_url
 

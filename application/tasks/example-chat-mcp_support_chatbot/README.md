@@ -4,35 +4,30 @@ PersonaBench chat task with a **mock Acme support bot** exposed as an MCP sideca
 
 Requires **Docker Compose** (local `docker` environment). Not supported on cloud providers yet.
 
-## Suggested setup (non-binding)
+## Smoke run
 
-| Field | Value |
-|-------|-------|
-| Agent | `persona-claude-code` |
-| Environment | `docker` (default) |
-| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` |
-
-```bash
-uv run harbor run \
-  -a persona-claude-code \
-  -m anthropic/claude-sonnet-4-6 \
-  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
-  -p application/tasks/example-chat-mcp_support_chatbot
-```
-
-Oracle check (no API key):
+**No API key** — validates Docker + verifier:
 
 ```bash
 uv run harbor run -p application/tasks/example-chat-mcp_support_chatbot -a oracle
 ```
 
+**Full run** — Playground UI or terminal auto mode: [Application Quickstart](../../QUICKSTART.md).
+
 ## Layout
 
 ```
+application/tasks/example-chat-mcp_support_chatbot/
+├── input/
+│   ├── chatbot.yaml
+│   ├── instruction.md
+│   ├── context.md
+│   └── self_report_schema.yaml
+└── ...
+
 environment/
 ├── Dockerfile
 ├── docker-compose.yaml      # support-bot sidecar
-├── order_context.md         # → /app/input/
 └── support-bot/
     ├── Dockerfile
     └── server.py            # FastMCP tools

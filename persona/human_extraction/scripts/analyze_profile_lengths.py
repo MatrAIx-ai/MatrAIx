@@ -102,7 +102,8 @@ def main() -> None:
     fig, ax = plt.subplots(1, 2, figsize=(13, 5))
     ax[0].hist(full_lens, bins=80, color="#4C78A8")
     ax[0].set_title(f"Profile length (Qwen tokens), n={len(full_lens):,}")
-    ax[0].set_xlabel("tokens"); ax[0].set_ylabel("count")
+    ax[0].set_xlabel("tokens")
+    ax[0].set_ylabel("count")
     for lim, c in [(16384, "red"), (32768, "green")]:
         ax[0].axvline(lim, color=c, ls="--", lw=1, label=f"ctx {lim}")
     ax[0].legend()
@@ -110,7 +111,8 @@ def main() -> None:
     clipped = np.clip(full_lens, 0, 40000)
     ax[1].hist(clipped, bins=80, cumulative=True, density=True, color="#F58518")
     ax[1].set_title("Cumulative fraction")
-    ax[1].set_xlabel("tokens (clipped at 40k)"); ax[1].set_ylabel("cum. fraction")
+    ax[1].set_xlabel("tokens (clipped at 40k)")
+    ax[1].set_ylabel("cum. fraction")
     for lim, c in [(16384, "red"), (32768, "green")]:
         ax[1].axvline(lim, color=c, ls="--", lw=1)
     ax[1].grid(alpha=0.3)

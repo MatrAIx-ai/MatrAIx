@@ -48,8 +48,8 @@ Three ways to launch the same Harbor contract:
 | Surface | When to use | Entry |
 |---------|-------------|-------|
 | **Harbor CLI** | Scripts, CI, debugging | `uv run harbor run -c configs/jobs/…` |
-| **PersonaEval Cockpit** | Interactive task play, persona sampling | [application/QUICKSTART.md §10](../application/QUICKSTART.md#10-personaeval-cockpit--play-tasks-visually) |
-| **PersonaEval API** | Automation, external tools | `POST /api/harbor/jobs` — [REST_API.md](../application/persona_eval/REST_API.md) |
+| **Playground** | Interactive task play, persona sampling | [application/QUICKSTART.md §10](../application/QUICKSTART.md#10-playground--play-tasks-visually) |
+| **Playground API** | Automation, external tools | `POST /api/harbor/jobs` — [REST_API.md](../application/playground/REST_API.md) |
 
 All paths share:
 
@@ -64,7 +64,7 @@ All paths share:
 | `harbor` (default) | API or laptop runs `harbor run` locally | `MATRIX_EXECUTION_PLANE=harbor` |
 | `remote` | API dispatches to a Remote Runner worker over HTTP | `MATRIX_EXECUTION_PLANE=remote` + `REMOTE_RUNNER_API_URL` |
 
-Remote plane details: [UNIFIED_RUNTIME.md](../application/persona_eval/UNIFIED_RUNTIME.md).
+Remote plane details: [UNIFIED_RUNTIME.md](../application/playground/UNIFIED_RUNTIME.md).
 
 **Security note:** the remote plane sends only `PYTHONPATH` and `MATRIX_*` task
 exports over HTTP. API keys must live on the **worker**, not in the dispatch
@@ -88,13 +88,13 @@ configs/jobs/
   application-task-job-recipe/  Generated multi-persona application jobs
 
 packages/
-  persona-eval/             PersonaEval Python package (remote runner, harbor helpers)
+  playground/             Playground Python package (remote runner, harbor helpers)
   rewardkit/                Verifier / LLM-judge toolkit
 
 apps/viewer/                Frontend paired with `harbor view`
 ```
 
-Python import names stay stable: `harbor.*`, `personabench.agents.*`, `persona_eval.*`.
+Python import names stay stable: `harbor.*`, `personabench.agents.*`, `playground.*`.
 
 ---
 
@@ -136,12 +136,12 @@ Not sent over the remote plane. Per-agent names:
 
 Full matrix: [application/choosing-an-agent.md](../application/choosing-an-agent.md).
 
-### PersonaEval reporting (optional)
+### Playground reporting (optional)
 
 | Variable | Purpose |
 |----------|---------|
-| `PERSONAEVAL_REPORTING_ENABLE_LLM` | Enable LLM judge rollups in aggregation |
-| `PERSONAEVAL_REPORTING_LLM_MODEL` | Override judge model |
+| `PLAYGROUND_REPORTING_ENABLE_LLM` | Enable LLM judge rollups in aggregation |
+| `PLAYGROUND_REPORTING_LLM_MODEL` | Override judge model |
 
 ---
 
@@ -175,7 +175,7 @@ flowchart LR
 1. **Job recipe** selects task path, agent, model, and N persona paths.
 2. **Trial** picks one persona, materializes instruction, runs the agent.
 3. **Verifier** (`application/tasks/.../tests/`) scores outputs under `/logs/verifier/`.
-4. **Aggregation** (`report_job.py` or Cockpit) rolls up batch metrics from `reporting.json`.
+4. **Aggregation** (`report_job.py` or Playground) rolls up batch metrics from `reporting.json`.
 
 ---
 
@@ -246,6 +246,6 @@ link it in your PR.
 | [docs/architecture.md](../docs/architecture.md) | Three-module overview |
 | [docs/running.md](../docs/running.md) | Install, smoke, viewer |
 | [application/choosing-an-agent.md](../application/choosing-an-agent.md) | Agent ↔ API key matrix |
-| [application/persona_eval/UNIFIED_RUNTIME.md](../application/persona_eval/UNIFIED_RUNTIME.md) | Harbor vs remote plane |
-| [application/persona_eval/REST_API.md](../application/persona_eval/REST_API.md) | PersonaEval HTTP API |
+| [application/playground/UNIFIED_RUNTIME.md](../application/playground/UNIFIED_RUNTIME.md) | Harbor vs remote plane |
+| [application/playground/REST_API.md](../application/playground/REST_API.md) | Playground HTTP API |
 | [environment/adapters/README.md](adapters/README.md) | External benchmark adapters |

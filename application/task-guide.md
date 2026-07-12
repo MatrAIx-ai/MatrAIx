@@ -12,8 +12,7 @@ application/tasks/example-survey_product-feedback/
 ├── instruction.md      # What the agent should do (scenario + output format)
 ├── input/              # Task-owned content (survey, chat, web docs)
 │   ├── context.md
-│   ├── questionnaire.yaml    # survey
-│   ├── output_schema.md      # survey only
+│   ├── questionnaire.yaml    # survey (askRationale / askConfidence)
 │   ├── self_report_schema.yaml  # chatbot / web / os-app (under input/)
 │   └── chatbot.yaml          # chat (under input/)
 ├── tests/              # Verifier — runs after the agent; scores output / trajectory
@@ -68,19 +67,19 @@ where to write it (`/app/output/...`).
 
 Persona traits do **not** go here — they come from `persona_path` at run time.
 
-Agent names, Cockpit labels, and operator setup hints do **not** belong here
+Agent names, Playground labels, and operator setup hints do **not** belong here
 either. Put those in the task `README.md` under **Suggested setup (non-binding)**.
 
 ### `input/`
 
 Task-owned materials the agent reads:
 
-- **Survey:** `instruction.md` (optional if task-root copy exists), `context.md`,
-  `questionnaire.yaml`, `output_schema.md`
+- **Survey:** `context.md`, `questionnaire.yaml` (`askRationale` / `askConfidence`)
 - **Chat:** `context.md`, `protocol.md`, `chatbot.yaml`, `self_report_schema.yaml`
   (all under `input/`)
-- **Web / OS-app:** `self_report_schema.yaml` under `input/`; task-result JSON
-  schema inline in `instruction.md` (no `input/output_schema.md`)
+- **Web / OS-app:** `context.md` (optional), `self_report_schema.yaml` under
+  `input/`; prefer trace/state verification (optional submission schema inline
+  in `instruction.md`)
 
 These files are copied or mounted into `/app/input/` by the shared runtime.
 
@@ -155,22 +154,22 @@ Web stack details — [web-interaction.md](web-interaction.md).
 Real application survey tasks (`survey_*`) follow the same layout as the reference
 example; only **`example-survey_product-feedback`** is the copy-from reference.
 
-## Cockpit registration
+## Playground registration
 
-Tasks appear in the PersonaEval Cockpit only when indexed. After scaffolding,
+Tasks appear in the Playground only when indexed. After scaffolding,
 add an entry to:
 
-`application/persona_eval/backend/service/persona_eval_task_registry.py`
+`application/playground/backend/service/playground_task_registry.py`
 
 ```python
-"<your-task-folder>": PersonaEvalTaskEntry(application_type="survey"),  # or chatbot / web / os-app
+"<your-task-folder>": PlaygroundTaskEntry(application_type="survey"),  # or chatbot / web / os-app
 ```
 
 **Web tasks** also need `site_name`, `site_url`, `output_artifact`, and
 `submission_profile` (copy fields from the nearest `example-web-*` entry).
 
 **Survey tasks** also need a questionnaire id mapping in
-`packages/persona-eval/src/persona_eval/survey_task_content.py`:
+`packages/playground/src/playground/survey_task_content.py`:
 
 ```python
 SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID = {
@@ -181,14 +180,14 @@ SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID = {
 
 The questionnaire id must match `input/questionnaire.yaml` → `id`.
 
-Restart the PersonaEval backend after registry changes.
+Restart the Playground backend after registry changes.
 
 ## Job recipes
 
 | Config path | Use |
 |-------------|-----|
 | [`configs/jobs/example-job-recipe/`](../configs/jobs/example-job-recipe/) | Hand-written smoke jobs (`appSim-*`, 1 persona) |
-| [`configs/jobs/application-task-job-recipe/`](../configs/jobs/application-task-job-recipe/) | Multi-persona runs from `generate_application_job.py` or Cockpit |
+| [`configs/jobs/application-task-job-recipe/`](../configs/jobs/application-task-job-recipe/) | Multi-persona runs from `generate_application_job.py` or Playground |
 
 **Smoke** (checked-in YAML):
 
@@ -209,7 +208,7 @@ Full list: [`configs/jobs/README.md`](../configs/jobs/README.md).
 
 ## Related
 
-- [QUICKSTART.md](QUICKSTART.md) — install through Cockpit play
+- [QUICKSTART.md](QUICKSTART.md) — install through Playground play
 - [web-interaction.md](web-interaction.md) — live-web modes
 - [choosing-an-agent.md](choosing-an-agent.md) — agents and API keys
 - [task-spec/](task-spec/) — shared metric and artifact contracts

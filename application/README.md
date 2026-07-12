@@ -13,11 +13,11 @@ you are in the right place.
 | You want to… | Go to |
 |--------------|-------|
 | Run your first persona survey (terminal) | **[QUICKSTART.md](QUICKSTART.md)** |
-| Play tasks in the UI | QUICKSTART **[§10 — PersonaEval Cockpit](QUICKSTART.md#10-personaeval-cockpit--play-tasks-visually)** |
+| Play tasks in the UI | QUICKSTART **[§10 — Playground](QUICKSTART.md#10-playground--play-tasks-visually)** |
 | Add a new task | [tasks/README.md](tasks/README.md) + [task-guide.md](task-guide.md) |
 | Pick agent + API keys | [choosing-an-agent.md](choosing-an-agent.md) |
 | Understand how runs execute | [environment/README.md](../environment/README.md) |
-| Use the HTTP API | [persona_eval/REST_API.md](persona_eval/REST_API.md) |
+| Use the HTTP API | [playground/REST_API.md](playground/REST_API.md) |
 
 **Time budget:** ~30–60 minutes for a first end-to-end pass (Docker image builds
  dominate on web/CUA tasks).
@@ -40,7 +40,7 @@ Persona profiles live in `persona/datasets/`. Tasks reference them via
 application/
   tasks/              Executable scenarios (survey, chat, web, os-app)
   task-spec/          Shared contracts per interaction type
-  persona_eval/       Cockpit UI, FastAPI backend, remote runner client
+  playground/       Playground UI, FastAPI backend, remote runner client
   scripts/            generate_application_job.py, report_job.py
   QUICKSTART.md       Contributor walkthrough (terminal → batch → UI)
   task-guide.md       Folder layout and reference tasks
@@ -71,7 +71,7 @@ Copy the closest **`example-*`** sibling when adding a task. See
 1. **`instruction.md` is persona-facing only** — scenario + output format. Put
    agent names and smoke commands in the task **README** under *Suggested setup
    (non-binding)*.
-2. **Harbor task names** use one slash: `personabench/application-{slug}`.
+2. **Harbor task names** use one slash: `application/{slug}`.
 3. **Generated job YAML** uses hyphenated slugs from folder names
    (`example-survey-product-feedback-auto-n1.yaml`, not underscores).
 4. **Do not commit** bulk `jobs/` output — curated demo jobs in `jobs/` are
@@ -110,7 +110,7 @@ Reporting is task-owned, not a separate app folder:
 |-------|----------|
 | Policy | `application/tasks/<name>/reporting.json` |
 | Rollup script | `application/scripts/report_job.py` → `jobs/<job>/aggregation.json` |
-| Cockpit / API | optional LLM judges when `PERSONAEVAL_REPORTING_ENABLE_LLM=1` |
+| Playground / API | optional LLM judges when `PLAYGROUND_REPORTING_ENABLE_LLM=1` |
 
 ---
 
@@ -118,15 +118,15 @@ Reporting is task-owned, not a separate app folder:
 
 | Doc | Purpose |
 |-----|---------|
-| [QUICKSTART.md](QUICKSTART.md) | Zero → first run → batch → Cockpit → new task |
+| [QUICKSTART.md](QUICKSTART.md) | Zero → first run → batch → Playground → new task |
 | [task-guide.md](task-guide.md) | Task folder structure |
-| [task-spec/](task-spec/) | Survey / chat / web / os-app contracts |
+| [task-spec/README.md](task-spec/README.md) | Hub — links to per-type specs and shared reporting docs |
 | [web-interaction.md](web-interaction.md) | Playwright vs browser-use vs Cocoa vs CUA |
 | [choosing-an-agent.md](choosing-an-agent.md) | Agent ↔ form ↔ API keys |
 | [tasks/README.md](tasks/README.md) | Contributor checklist |
 | [scripts/README.md](scripts/README.md) | Job generation scripts |
-| [persona_eval/README.md](persona_eval/README.md) | PersonaEval app |
-| [persona_eval/UNIFIED_RUNTIME.md](persona_eval/UNIFIED_RUNTIME.md) | Local vs remote execution |
+| [playground/README.md](playground/README.md) | Playground app |
+| [playground/UNIFIED_RUNTIME.md](playground/UNIFIED_RUNTIME.md) | Local vs remote execution |
 
 ---
 
@@ -134,7 +134,7 @@ Reporting is task-owned, not a separate app folder:
 
 - New scenarios → `application/tasks/`
 - Metrics / judges → `reporting.json` + `packages/rewardkit/`
-- UI / API → `application/persona_eval/`
+- UI / API → `application/playground/`
 
 Workflow and PR rules: [CONTRIBUTING.md](../CONTRIBUTING.md).
 

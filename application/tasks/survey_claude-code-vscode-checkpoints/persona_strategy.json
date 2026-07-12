@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "domain": [
+      "Software & AI",
+      "Engineering",
+      "Natural Sciences",
+      "Education"
+    ],
+    "tech_savviness": [
+      "Digital native",
+      "Comfortable"
+    ]
+  },
+  "stratifyFields": [
+    "life_stage",
+    "values_priority"
+  ],
+  "sampleSize": 8
+}

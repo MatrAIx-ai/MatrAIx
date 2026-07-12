@@ -6,7 +6,7 @@ Application scenarios and persona bench tasks can share a folder slug (e.g.
 ``PERSONA_BENCH_TASK_METADATA`` (ClearQueue MCQ bench with grounding).
 
 Domain / vertical (first focus set):
-  software | finance | healthcare | commerce-retail
+  software | finance | healthcare | commerce-retail | arts-culture
 
 Tags are **task topic** labels (what the scenario is about). Use short
 human-readable phrases (spaces allowed). Do not repeat ``type`` / ``domain``.
@@ -31,6 +31,7 @@ DOMAIN_SOFTWARE = "software"
 DOMAIN_FINANCE = "finance"
 DOMAIN_HEALTHCARE = "healthcare"
 DOMAIN_COMMERCE_RETAIL = "commerce-retail"
+DOMAIN_ARTS_CULTURE = "arts-culture"
 
 APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
     "example-survey_product-feedback": {
@@ -45,7 +46,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
         ],
     },
     "example-chat-api_support_chatbot": {
-        "type": "chat",
+        "type": "chatbot",
         "domain": DOMAIN_COMMERCE_RETAIL,
         "tags": [
             "acme support",
@@ -56,7 +57,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
         ],
     },
     "example-chat-mcp_support_chatbot": {
-        "type": "chat",
+        "type": "chatbot",
         "domain": DOMAIN_COMMERCE_RETAIL,
         "tags": [
             "acme support",
@@ -67,7 +68,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
         ],
     },
     "recommender-agent_chat_api": {
-        "type": "chat",
+        "type": "chatbot",
         "domain": DOMAIN_COMMERCE_RETAIL,
         "tags": [
             "recommender agent",
@@ -77,74 +78,94 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "recommendation grounding",
         ],
     },
-    "example-web-playwright_books-interest": {
+    "finance-openbb_chatbot": {
+        "type": "chatbot",
+        "domain": DOMAIN_FINANCE,
+        "tags": [
+            "financial research",
+            "openbb",
+            "equity analysis",
+            "multi turn chat",
+        ],
+    },
+    "medical-assistant_chatbot": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "medical assistant",
+            "health information",
+            "triage guidance",
+            "multi turn chat",
+        ],
+    },
+    "example-web-playwright_quote-choice": {
+        "type": "web",
+        "domain": DOMAIN_ARTS_CULTURE,
+        "tags": [
+            "quotes toscrape",
+            "quote shortlist",
+            "values preference",
+            "playwright dom browsing",
+        ],
+    },
+    "example-web-browser-use_laptop-choice": {
         "type": "web",
         "domain": DOMAIN_COMMERCE_RETAIL,
         "tags": [
-            "books toscrape",
-            "fiction catalog",
-            "book purchase intent",
-            "online bookshop",
+            "laptop shortlist",
+            "product comparison",
+            "budget tradeoff",
+            "browser-use browsing",
         ],
     },
-    "example-web-browser-use_books-interest": {
+    "example-web-cocoa_plan-choice": {
         "type": "web",
-        "domain": DOMAIN_COMMERCE_RETAIL,
-        "tags": [
-            "books toscrape",
-            "fiction catalog",
-            "book purchase intent",
-            "online bookshop",
-        ],
-    },
-    "example-web-cocoa_books-interest": {
-        "type": "web",
-        "domain": DOMAIN_COMMERCE_RETAIL,
-        "tags": [
-            "books toscrape",
-            "fiction catalog",
-            "book purchase intent",
-            "online bookshop",
-        ],
-    },
-    "example-web-cua_books-interest": {
-        "type": "web",
-        "domain": DOMAIN_COMMERCE_RETAIL,
-        "tags": [
-            "books toscrape",
-            "fiction catalog",
-            "book purchase intent",
-            "online bookshop",
-        ],
-    },
-    "example-computer-use-macos_notification-preferences": {
-        "type": "desktop",
         "domain": DOMAIN_SOFTWARE,
         "tags": [
-            "notification permissions",
-            "do not disturb",
-            "app notifications",
+            "pricing page",
+            "plan selection",
+            "budget sensitivity",
+            "cocoa browser workflow",
+        ],
+    },
+    "example-web-cua_bookshop-choice": {
+        "type": "web",
+        "domain": DOMAIN_ARTS_CULTURE,
+        "tags": [
+            "books toscrape",
+            "bookshop browsing",
+            "reading taste",
+            "desktop browser choice",
+        ],
+    },
+    "example-computer-use-macos_calendar-reminder-handoff": {
+        "type": "os-app",
+        "domain": DOMAIN_SOFTWARE,
+        "tags": [
+            "calendar planning",
+            "reminders handoff",
+            "cross app workflow",
+            "desktop productivity",
+        ],
+    },
+    "example-computer-use-ios_photo-access-review": {
+        "type": "os-app",
+        "domain": DOMAIN_SOFTWARE,
+        "tags": [
+            "photo permissions",
+            "privacy settings",
+            "app access review",
             "system settings",
         ],
     },
-    "example-computer-use-ios_notification-preferences": {
-        "type": "mobile",
+    "example-computer-use-linux_note-to-csv": {
+        "type": "os-app",
         "domain": DOMAIN_SOFTWARE,
         "tags": [
-            "notification permissions",
-            "do not disturb",
-            "app notifications",
-            "system settings",
-        ],
-    },
-    "example-computer-use-linux_notification-preferences": {
-        "type": "desktop",
-        "domain": DOMAIN_SOFTWARE,
-        "tags": [
-            "notification permissions",
-            "do not disturb",
-            "app notifications",
-            "system settings",
+            "file transform",
+            "csv creation",
+            "desktop editor",
+            "structured output",
         ],
     },
 }

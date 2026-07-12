@@ -105,13 +105,18 @@ def _controller_type(model: str) -> str:
     return "llm"
 
 
-def _api_key() -> str:
-    for name in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "LLM_API_KEY"):
+def _api_key(model: str) -> str:
+    if model.startswith("dashscope/"):
+        value = os.environ.get("DASHSCOPE_API_KEY", "").strip()
+        if value:
+            return value
+    for name in ("ANTHROPIC_API_KEY", "OPENAI_API_KEY", "LLM_API_KEY", "DASHSCOPE_API_KEY"):
         value = os.environ.get(name, "").strip()
         if value:
             return value
     raise RuntimeError(
-        "Set ANTHROPIC_API_KEY, OPENAI_API_KEY, or LLM_API_KEY for persona-cocoa"
+        "Set DASHSCOPE_API_KEY (for dashscope/*), or ANTHROPIC_API_KEY, OPENAI_API_KEY, "
+        "or LLM_API_KEY for persona-cocoa"
     )
 
 
@@ -254,6 +259,31 @@ def _cocoa_summary(result: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _flush_partial_trajectory(
+    trajectory_path: Path,
+    *,
+    steps: list[dict[str, Any]],
+    model_name: str,
+    agent_version: str,
+    session_id: str,
+) -> None:
+    """Best-effort checkpoint so the host can poll growing browser traces."""
+    payload = {
+        "schema_version": "ATIF-v1.6",
+        "session_id": session_id,
+        "agent": {
+            "name": "cocoa",
+            "version": agent_version,
+            "model_name": model_name,
+        },
+        "steps": steps,
+    }
+    trajectory_path.write_text(
+        json.dumps(payload, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def cocoa_to_atif(
     result: dict[str, Any],
     *,
@@ -277,6 +307,7 @@ def cocoa_to_atif(
             "message": instruction,
         }
     ]
+    session = session_id or str(uuid4())
     step_id = 2
     trace_idx = 0
     agent_step_number = 0
@@ -381,6 +412,13 @@ def cocoa_to_atif(
             agent_step["observation"] = {"results": observation_results}
         steps.append(agent_step)
         step_id += 1
+        _flush_partial_trajectory(
+            trajectory_path,
+            steps=steps,
+            model_name=model_name,
+            agent_version=agent_version,
+            session_id=session,
+        )
 
     cost = result.get("api_cost_stats")
     cost = cost if isinstance(cost, dict) else {}
@@ -394,7 +432,7 @@ def cocoa_to_atif(
 
     return {
         "schema_version": "ATIF-v1.6",
-        "session_id": session_id or str(uuid4()),
+        "session_id": session,
         "agent": {
             "name": "cocoa",
             "version": agent_version,
@@ -426,8 +464,14 @@ def main() -> int:
             "type": _controller_type(args.model),
             "args": {
                 "model": bare_model,
-                "api_key": _api_key(),
-                "base_url": os.environ.get("LLM_BASE_URL", ""),
+                "api_key": _api_key(args.model),
+                "base_url": os.environ.get("LLM_BASE_URL")
+                or os.environ.get("DASHSCOPE_API_BASE")
+                or (
+                    "https://dashscope.aliyuncs.com/compatible-mode/v1"
+                    if args.model.startswith("dashscope/")
+                    else ""
+                ),
             },
         },
         "sandbox": {

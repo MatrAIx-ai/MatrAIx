@@ -20,7 +20,7 @@ os.environ.setdefault("HF_XET_CACHE", f"{CACHE}/xet")
 os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
 os.environ.setdefault("VLLM_WORKER_MULTIPROC_METHOD", "spawn")
 
-from vllm import LLM, SamplingParams
+from vllm import LLM, SamplingParams  # noqa: E402
 
 REPO_ROOT = Path("/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx")
 DATA_DIR = REPO_ROOT / "persona/human_extraction/data"

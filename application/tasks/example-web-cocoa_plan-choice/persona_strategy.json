@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "domain": [
+      "Software & AI",
+      "Engineering",
+      "Education",
+      "Natural Sciences"
+    ],
+    "economic_motivation": [
+      "Cost-sensitive",
+      "Value-driven"
+    ]
+  },
+  "stratifyFields": [
+    "life_stage",
+    "tech_savviness"
+  ],
+  "sampleSize": 6
+}
