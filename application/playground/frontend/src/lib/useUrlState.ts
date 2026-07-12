@@ -45,6 +45,16 @@ function readSearch(): URLSearchParams {
   return new URLSearchParams(window.location.search);
 }
 
+function writeStorageMirror(value: Partial<UrlState>): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+  } catch {
+    // Storage is optional in private/embedded preview contexts; URL state
+    // remains the source of truth when persistence is unavailable.
+  }
+}
+
 function readState(): UrlState {
   const search = readSearch();
   const state = Object.fromEntries(
@@ -78,7 +88,7 @@ function readState(): UrlState {
           }
         }
         if (touched) {
-          window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cleaned));
+          writeStorageMirror(cleaned);
         }
       }
     } catch {
@@ -110,7 +120,7 @@ export function useUrlState(): {
     const mirror = Object.fromEntries(
       STORAGE_MIRROR_KEYS.map((key) => [key, state[key]]),
     );
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(mirror));
+    writeStorageMirror(mirror);
   }, [state]);
 
   const setState = useCallback((patch: Partial<UrlState>) => {
@@ -132,7 +142,7 @@ export function useUrlState(): {
     const mirror = Object.fromEntries(
       STORAGE_MIRROR_KEYS.map((key) => [key, nextState[key]]),
     );
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(mirror));
+    writeStorageMirror(mirror);
     const next = `${window.location.pathname}${search.toString() ? `?${search}` : ""}${window.location.hash}`;
     window.history.pushState(null, "", next);
     window.dispatchEvent(new Event("playground:urlstate"));

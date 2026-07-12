@@ -39,9 +39,15 @@ function readStore(): CockpitBatchStore {
   }
 }
 
-function writeStore(store: CockpitBatchStore): void {
-  if (typeof window === "undefined") return;
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+function writeStore(store: CockpitBatchStore): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+    return true;
+  } catch {
+    // Persistence is optional in private/embedded preview contexts.
+    return false;
+  }
 }
 
 function inferTaskKindFromJobName(jobName: string): HarborCockpitTaskKind | null {
@@ -55,8 +61,8 @@ function inferTaskKindFromJobName(jobName: string): HarborCockpitTaskKind | null
 
 function migrateLegacyBatchStore(): void {
   if (typeof window === "undefined") return;
-  if (window.localStorage.getItem(STORAGE_KEY)) return;
   try {
+    if (window.localStorage.getItem(STORAGE_KEY)) return;
     const urlState = JSON.parse(
       window.localStorage.getItem(LEGACY_URL_STATE_KEY) ?? "{}",
     ) as { cockpitBatch?: string | null; pgTask?: string | null };
@@ -74,8 +80,9 @@ function migrateLegacyBatchStore(): void {
     const personaIds = Array.isArray(legacyPersonas)
       ? legacyPersonas.filter((id): id is string => typeof id === "string")
       : [];
-    writeStore({ [taskKind]: { jobName, personaIds } });
-    window.localStorage.removeItem(LEGACY_PERSONAS_KEY);
+    if (writeStore({ [taskKind]: { jobName, personaIds } })) {
+      window.localStorage.removeItem(LEGACY_PERSONAS_KEY);
+    }
   } catch {
     // Ignore corrupt legacy payloads.
   }

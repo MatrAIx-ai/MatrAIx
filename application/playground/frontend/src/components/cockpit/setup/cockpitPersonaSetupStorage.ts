@@ -35,7 +35,11 @@ function readStore(): CockpitPersonaSetupStore {
 
 function writeStore(store: CockpitPersonaSetupStore): void {
   if (typeof window === "undefined") return;
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+  } catch {
+    // Persistence is optional in private/embedded preview contexts.
+  }
 }
 
 function normalizeRecord(
