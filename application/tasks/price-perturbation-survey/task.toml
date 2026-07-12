@@ -2,12 +2,12 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "personabench/price-perturbation-survey"
+name = "personabench/application-price-perturbation-survey"
 
 [metadata]
 difficulty = "easy"
 type = "survey"
-domain = "commerce"
+domain = "commerce-retail"
 tags = [ "price perturbation", "purchase intent", "retention rate", "one-time purchase", "retail",]
 
 [verifier]
@@ -17,6 +17,7 @@ timeout_sec = 120.0
 timeout_sec = 600.0
 
 [environment]
+definition = "application/price-perturbation-survey"
 build_timeout_sec = 600.0
 cpus = 1
 memory_mb = 2048

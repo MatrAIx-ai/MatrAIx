@@ -1,12 +1,16 @@
-"""Prompt rendering for the price-perturbation survey.
+"""Prompt rendering for bulk survey generation.
 
-Loads the parameterized ``instruction.md`` template, fills in product-
-specific fields (name, description, original price, new +25% price),
-and optionally prepends a persona system prompt to produce a complete
-prompt pair (system, user) suitable for an LLM call.
+Loads the parameterized ``templates/price_change.md`` template, fills in
+product-specific fields (name, description, original price, new +25%
+price), and optionally prepends a persona system prompt to produce a
+complete prompt pair (system, user) suitable for an LLM call.
 
-Also supports a generalized ``instruction_attribute.md`` template for
-non-price attribute perturbations (color, shape, material).
+Also supports the ``templates/attribute_change.md`` template for
+non-price attribute perturbations (color, material, size, ...).
+
+(These templates are the bulk-generation source used by
+``scripts/generate_surveys.py``; the task-root ``instruction.md`` is the
+separate harness single-scenario prompt.)
 """
 
 from __future__ import annotations
@@ -19,9 +23,10 @@ from .perturbation import Perturbation, perturb_price
 
 _TASK_DIR = Path(__file__).resolve().parent.parent
 
-# instruction.md lives one level above the pipeline/ package.
-_INSTRUCTION_TEMPLATE = _TASK_DIR / "instruction.md"
-_ATTRIBUTE_TEMPLATE = _TASK_DIR / "instruction_attribute.md"
+# The bulk-generation templates live under templates/. (The task-root
+# instruction.md is the harness single-scenario prompt, a different file.)
+_INSTRUCTION_TEMPLATE = _TASK_DIR / "templates" / "price_change.md"
+_ATTRIBUTE_TEMPLATE = _TASK_DIR / "templates" / "attribute_change.md"
 
 
 def _brand_line(product: Product) -> str:
@@ -78,7 +83,7 @@ def render_instruction(
         Price-perturbation factor (default 1.25 = +25%).
     template_path:
         Override path to the instruction template.  Defaults to the
-        ``instruction.md`` shipped with this task.
+        ``templates/price_change.md`` shipped with this task.
     """
     path = Path(template_path) if template_path is not None else _INSTRUCTION_TEMPLATE
     template_text = path.read_text()
@@ -171,8 +176,8 @@ def render_prompt_with_perturbation(
 ) -> RenderedPrompt:
     """Build a ``RenderedPrompt`` using the appropriate template.
 
-    For price perturbations, uses the original ``instruction.md``.
-    For attribute perturbations, uses ``instruction_attribute.md``.
+    For price perturbations, uses ``templates/price_change.md``.
+    For attribute perturbations, uses ``templates/attribute_change.md``.
     """
     if perturbation.attribute == "price":
         user_prompt = render_instruction(product, factor=factor)

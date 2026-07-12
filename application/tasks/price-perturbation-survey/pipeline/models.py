@@ -10,7 +10,7 @@ class Product:
     """A one-time-purchase retail product.
 
     Fields align with the fixture schema in ``fixtures/products.json``
-    and the ``{{placeholder}}`` names in ``instruction.md``.
+    and the ``{{placeholder}}`` names in ``templates/price_change.md``.
 
     The core three fields (``product_name``, ``description``,
     ``original_price``) are required; everything else is optional

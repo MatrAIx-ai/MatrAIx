@@ -19,12 +19,59 @@ No local model is required: the pipeline runs against a mock model for
 tests, and survey collection targets any OpenAI-compatible API you point
 it at (see "Generating and running surveys").
 
-## Layout
+## The task (harness single scenario)
 
-- `instruction.md` — the survey prompt template for a **price** change.
-- `instruction_attribute.md` — the survey prompt template for a non-price
-  **attribute** change (color/material/size/...). Actively used: the 238
-  attribute surveys in `surveys_v1.jsonl` render from this template.
+Like the other application survey tasks, this runs as one scenario:
+Harbor builds the environment, injects the persona, the agent answers,
+and the verifier scores the output file.
+
+- `instruction.md` — the task prompt. Tells the agent to read
+  `/app/input/`, answer as its assigned persona, and save the six-field
+  JSON to `/app/output/purchase_decision.json`.
+- `environment/task-environments/application/price-perturbation-survey/`
+  (in the `environment/` module) — the runtime: `Dockerfile` +
+  `install-claude-code.sh`, and the input materials `product.md` (a real
+  Amazon product with a +25% price change) and `survey.md` (the six
+  questions and answer codes) that become `/app/input/`.
+- `tests/test_state.py` + `tests/test.sh` — the verifier. Validates
+  `/app/output/purchase_decision.json` against the six-field schema
+  (allowed-value membership, non-empty reasoning, no extra fields) and
+  writes the reward. Standalone; no repo imports.
+- `solution/solve.sh` — reference solution: reads the persona's economic
+  posture and emits a schema-valid, internally consistent answer set.
+  Proves the task is solvable and exercises the verifier.
+- `task.toml` — task metadata and `[environment].definition`.
+
+## Scale-up tooling (dataset + generator)
+
+Supporting code for producing many such scenarios at scale (Shirley's
+"products × perturbations → surveys" workflow). Not part of the single
+harness scenario above.
+
+- `templates/price_change.md`, `templates/attribute_change.md` — the
+  parameterized (`{{placeholder}}`) survey templates the bulk generator
+  renders per product. (The task-root `instruction.md` is separate.)
+- `fixtures/surveys_v1.jsonl` — **494 ready-to-run perturbed surveys**,
+  one per product, each changing exactly one attribute (price or a
+  physical attribute), with a fully rendered `prompt` + `response_schema`.
+- `fixtures/survey_swaps.json` — the authored replacement values that
+  `generate_surveys.py` merges in to build the surveys.
+- `scripts/generate_surveys.py` — builds `surveys_v1.jsonl`: a
+  seeded-random choice of which attribute to perturb per product
+  (`--emit-worklist`), then rendering + validation (`--assemble`).
+- `scripts/run_surveys.py` — collects responses to the surveys. Model-
+  agnostic: `--dry-run` validates every survey with no model (safe
+  default), or `--endpoint` targets any OpenAI-compatible
+  `/v1/chat/completions` API (bring your own model + `$SURVEY_API_KEY`).
+- `pipeline/` — the survey library: product model, prompt rendering,
+  response parsing/validation, and retention-rate metrics.
+- `dev_tests/` — pytest unit tests for the tooling (mocked model, no
+  network). Kept separate from the verifier `tests/`.
+- `verify_pipeline.py` — fast end-to-end smoke test with a deterministic
+  mock model.
+
+## Product data + scraper
+
 - `fixtures/products.json` — 15 real, curated products with verified
   Amazon links (`amazon_url`/`asin`), attributes, and provenance notes.
 - `scripts/scrape_amazon.py` — fetches real product data (title, price,
@@ -70,21 +117,23 @@ it at (see "Generating and running surveys").
   Amazon cooldown — rerun `scripts/run_full_harvest.sh` (ideally from
   a different network) to grow it toward the 1000 target; all stages
   resume from checkpoints.
-- `pipeline/` — the survey pipeline: product loading, prompt rendering,
-  response parsing/validation, and retention-rate metrics.
-- `tests/` — pytest unit tests (mocked model, no network needed).
-- `verify_pipeline.py` — fast end-to-end smoke test with a deterministic
-  mock model. Run this first to confirm your setup works.
 
 ## Running
 
 ```bash
-# Unit tests
-python3 -m pytest tests/ -q
+# Verifier (validates a /app/output/purchase_decision.json)
+python3 tests/test_state.py
 
-# End-to-end smoke test (mock model, no network)
+# Tooling unit tests (mock model, no network)
+python3 -m pytest dev_tests/ -q
+
+# End-to-end smoke test of the pipeline (mock model, no network)
 python3 verify_pipeline.py
 ```
+
+To exercise the full task the way the harness does — build the
+environment, produce an output, score it — see the reference solution
+`solution/solve.sh` and verifier `tests/test.sh`.
 
 ## Adding products
 

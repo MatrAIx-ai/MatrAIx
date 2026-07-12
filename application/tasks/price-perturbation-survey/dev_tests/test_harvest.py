@@ -14,7 +14,7 @@ from pathlib import Path
 import pytest
 
 _TASK_DIR = Path(__file__).resolve().parent.parent
-for _p in (_TASK_DIR / "scripts", _TASK_DIR / "tests"):
+for _p in (_TASK_DIR / "scripts", _TASK_DIR / "dev_tests"):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 

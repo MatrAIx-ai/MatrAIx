@@ -1,86 +1,60 @@
-# Price-perturbation purchase-intent survey
+# Purchase-intent survey — a product you were considering just changed
 
-A retailer has raised the price of a product you were considering. Read the
-details below and answer as yourself — not as a generic shopper.
+You are a shopper who had a specific product in mind. One thing about it has
+changed. Answer a short purchase-intent survey as yourself — not as a generic
+shopper.
 
-## Product under consideration
+Materials in `/app/input/`:
 
-- **Product:** {{product_name}}
-- **Brand:** {{brand}}
-- **Description:** {{product_description}}
-- **Customer rating:** {{rating_line}}
-- **Original price:** ${{original_price}}
-- **New price:** ${{new_price}}
+- `product.md` — the product, its details, and exactly what changed
+- `survey.md` — the six questions and the exact answer codes for each
 
-Everything else about the product is unchanged — same features, same
-quality, same retailer. Only the price shown above has changed.
+Read both. Before answering, briefly ground yourself in who you are: given your
+background and spending priorities, how much would this specific change
+actually matter to you? You don't need an explicit budget stated in your
+background to have a clear, grounded opinion — reason from the life you actually
+lead, and weigh the real details in `product.md` rather than reacting to "a
+product changed" in the abstract.
 
-## Your task
-
-Before answering, briefly ground yourself in who you are: given your
-background, what does your financial situation and spending priorities
-probably look like, and how much would a price change of this size actually
-matter to you? You don't need an explicit budget or income stated in your
-background to have a clear, grounded opinion — reason from the life you
-actually lead.
-
-Then answer the six questions below honestly, weighing the actual dollar
-prices shown above against your own priorities — not a generic reaction to
-"a price increase" in the abstract.
-
-## Output format
+## Output
 
 Save a single valid JSON object to `/app/output/purchase_decision.json`.
 
-The object must have exactly six fields. The block below is a structural
-example only — it shows the JSON shape, not real content. Do not copy any
-wording, phrasing, or values from it; every field must reflect this specific
-persona's own judgment about this specific product:
+The object must have exactly these six fields. The block below shows the JSON
+shape only — do not copy any wording or values from it; every field must
+reflect your own judgment about this specific product and change:
 
 ```json
 {
-  "purchase_intent": "<one of the 5 allowed values listed below>",
-  "price_fairness": "<one of the 5 allowed values listed below>",
+  "purchase_intent": "<one of the 5 allowed values>",
+  "price_fairness": "<one of the 5 allowed values>",
   "alternative_seeking": "<yes or no>",
-  "purchase_timing": "<one of the 3 allowed values listed below>",
-  "necessity_level": "<one of the 3 allowed values listed below>",
-  "reasoning": "<1-3 sentences, in your own words, specific to this persona and this product>"
+  "purchase_timing": "<one of the 3 allowed values>",
+  "necessity_level": "<one of the 3 allowed values>",
+  "reasoning": "<1-3 sentences, in your own words, specific to you and this product>"
 }
 ```
 
-### Field requirements
+### Allowed values
 
-- **`purchase_intent`** — How likely you are to buy at the new price. Allowed values are exactly:
-  - `"definitely_would_buy"`
-  - `"probably_would_buy"`
-  - `"might_or_might_not"`
-  - `"probably_would_not"`
-  - `"definitely_would_not"`
-
-- **`price_fairness`** — How you perceive the new price relative to the product's value. Allowed values are exactly:
-  - `"much_too_high"`
-  - `"somewhat_high"`
-  - `"about_right"`
-  - `"good_value"`
-  - `"great_value"`
-
-- **`alternative_seeking`** — Whether you would look for a competing product or brand instead of paying the new price. Allowed values are exactly `"yes"` or `"no"`.
-
-- **`purchase_timing`** — When, if ever, you would make this purchase at the new price. Allowed values are exactly:
-  - `"buy_now"` — You would go ahead and buy it now.
-  - `"wait_for_sale"` — You would hold off and buy only if the price drops or it goes on sale.
-  - `"not_planning_to_buy"` — You would not buy it at this price, now or later.
-
-- **`necessity_level`** — How essential this purchase is to you right now. Allowed values are exactly:
-  - `"essential"` — You need this and must buy it regardless of price.
-  - `"important_but_not_urgent"` — You want this and it matters, but you could delay.
-  - `"nice_to_have"` — This is a discretionary purchase you could easily skip.
-
-- **`reasoning`** — A non-empty string explaining your decision in your own voice, grounded in your own situation and this specific product. 1–3 sentences, no generic filler. Never reuse the wording or structure of the placeholder example above.
+- **`purchase_intent`** — how likely you are to buy given the change:
+  `"definitely_would_buy"`, `"probably_would_buy"`, `"might_or_might_not"`,
+  `"probably_would_not"`, `"definitely_would_not"`.
+- **`price_fairness`** — how you perceive the price relative to the product's
+  value now: `"much_too_high"`, `"somewhat_high"`, `"about_right"`,
+  `"good_value"`, `"great_value"`.
+- **`alternative_seeking`** — whether you would look for a competing product or
+  brand instead because of this change: `"yes"` or `"no"`.
+- **`purchase_timing`** — when, if ever, you would buy given the change:
+  `"buy_now"`, `"wait_for_sale"`, `"not_planning_to_buy"`.
+- **`necessity_level`** — how essential this purchase is to you right now:
+  `"essential"`, `"important_but_not_urgent"`, `"nice_to_have"`.
+- **`reasoning`** — a non-empty string, 1–3 sentences, in your own voice,
+  grounded in your situation and this specific product. No generic filler, and
+  do not reuse the wording of the example above.
 
 ### Rules
 
-- The JSON must be valid and parseable.
-- Do not add extra fields beyond the six listed above.
-- Every value must reflect your genuine assessment as the persona you are — not a placeholder.
-- Do not produce an empty file or an array — the output must be a single JSON object.
+- The JSON must be valid and parseable, a single object (not an array).
+- Include exactly the six fields above — no more, no fewer.
+- Every value must be one of the allowed values for its field.
