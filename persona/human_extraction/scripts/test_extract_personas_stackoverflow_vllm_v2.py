@@ -152,7 +152,7 @@ def test_prompt_requires_numeric_evidence_range_consistency(extractor_module):
     )
 
     prompt = extractor_module.build_stackoverflow_prompt(
-        "YearsCode - Total coding years: 10", chunk
+        "YearsCode - Total coding years: 10", chunk, 2025
     )
 
     assert 'evidence of 10 maps to "6-10", not "11-20"' in prompt
@@ -161,6 +161,186 @@ def test_prompt_requires_numeric_evidence_range_consistency(extractor_module):
     assert "Never move a numeric answer into an adjacent range" in prompt
     assert "the specific numeric answer used to support" in prompt
     assert "falls within the selected allowed-value range" in prompt
+
+
+def test_prompt_uses_leak_safe_evidence_formats(extractor_module):
+    chunk = extractor_module.DimensionChunk(
+        chunk_id="evidence_test",
+        label="Evidence test",
+        description="Test evidence guidance.",
+        source_categories=("Professional: Career",),
+        dimensions=(
+            {
+                "id": "years_experience",
+                "label": "Years experience",
+                "description": "Tenure in their field.",
+                "values": ["0-2", "3-5", "6-10", "11-20", "20+"],
+            },
+        ),
+    )
+
+    prompt = extractor_module.build_stackoverflow_prompt(
+        "YearsCode - Total coding years: 10", chunk, 2023
+    )
+
+    assert "TechEndorse_1 - What attracts you" not in prompt
+    assert "<ORIGINAL_COLUMN_NAME> - <READABLE_QUESTION_OR_SUBITEM>" in prompt
+    assert "Evidence may be a short source quote or a faithful summary" in prompt
+    assert "Prompt instructions, format templates" in prompt
+
+
+def test_prompt_rank_guidance_is_year_specific_and_semantic(extractor_module):
+    chunk = extractor_module.DimensionChunk(
+        chunk_id="rank_test",
+        label="Rank test",
+        description="Test rank guidance.",
+        source_categories=("Developer: Code Maintenance",),
+        dimensions=(
+            {
+                "id": "debugging_strategy",
+                "label": "Debugging strategy",
+                "description": "Dominant debugging approach.",
+                "values": ["Read code / traces first", "Interactive debugger"],
+            },
+        ),
+    )
+
+    prompt_2024 = extractor_module.build_stackoverflow_prompt(
+        "JobSatPoints_1 - Driving strategy for my team: 20", chunk, 2024
+    )
+    prompt_2025 = extractor_module.build_stackoverflow_prompt(
+        "SO_Actions_4 - Directly open a Q&A post via search: 1", chunk, 2025
+    )
+
+    assert "JobSatPoints_* values are allocated points, not ordinal ranks" in prompt_2024
+    assert "TechEndorse answer is a select-all response" in prompt_2024
+    assert "TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks" in prompt_2025
+    assert "ranked options themselves are those behaviors or strategies" in prompt_2025
+    assert "Topical association alone is insufficient" in prompt_2025
+
+
+@pytest.mark.parametrize("evidence", ["10", "8.5", "20%", "Yes", "No", "Employed"])
+def test_validator_rejects_bare_evidence_values(extractor_module, evidence):
+    chunk = extractor_module.DimensionChunk(
+        chunk_id="bare_evidence_test",
+        label="Bare evidence test",
+        description="Test bare evidence rejection.",
+        source_categories=("Professional: Career",),
+        dimensions=(
+            {
+                "id": "years_experience",
+                "label": "Years experience",
+                "description": "Tenure in their field.",
+                "values": ["6-10"],
+            },
+        ),
+    )
+    field = {
+        "field_id": "years_experience",
+        "value": "6-10",
+        "confidence": 0.9,
+        "evidence": evidence,
+        "assignment_type": "direct",
+    }
+
+    with pytest.raises(ValueError, match="must include source context"):
+        extractor_module.validate_chunk_payload({"fields": [field]}, chunk)
+
+
+def evidence_test_chunk(extractor_module):
+    return extractor_module.DimensionChunk(
+        chunk_id="provenance_test",
+        label="Provenance test",
+        description="Test evidence provenance.",
+        source_categories=("Professional: Career",),
+        dimensions=(
+            {
+                "id": "years_experience",
+                "label": "Years experience",
+                "description": "Tenure in their field.",
+                "values": ["6-10"],
+            },
+        ),
+    )
+
+
+def evidence_test_field(evidence):
+    return {
+        "field_id": "years_experience",
+        "value": "6-10",
+        "confidence": 0.9,
+        "evidence": evidence,
+        "assignment_type": "summary_inference",
+    }
+
+
+def test_validator_accepts_current_source_quote_and_summary(extractor_module):
+    chunk = evidence_test_chunk(extractor_module)
+    sources = {"YearsCode": "10", "DevType": "Developer;Researcher"}
+    direct = evidence_test_field("YearsCode - Total coding years: 10")
+    summary = evidence_test_field(
+        "YearsCode=10; DevType=Developer. Summary: ten years of coding experience"
+    )
+
+    assert extractor_module.validate_chunk_payload(
+        {"fields": [direct]}, chunk, sources
+    ) == [direct]
+    assert extractor_module.validate_chunk_payload(
+        {"fields": [summary]}, chunk, sources
+    ) == [summary]
+
+
+def test_validator_rejects_source_absent_from_current_profile(extractor_module):
+    chunk = evidence_test_chunk(extractor_module)
+    field = evidence_test_field(
+        "TechEndorse_1 - AI integration or AI Agent capabilities: 10"
+    )
+
+    with pytest.raises(ValueError, match="absent from the current respondent profile"):
+        extractor_module.validate_chunk_payload(
+            {"fields": [field]}, chunk, {"YearsCode": "10"}
+        )
+
+
+def test_validator_rejects_answer_mismatched_to_current_respondent(extractor_module):
+    chunk = evidence_test_chunk(extractor_module)
+    field = evidence_test_field("YearsCode - Total coding years: 11")
+
+    with pytest.raises(ValueError, match="without its current respondent answer"):
+        extractor_module.validate_chunk_payload(
+            {"fields": [field]}, chunk, {"YearsCode": "10"}
+        )
+
+
+def test_question_numbers_do_not_mask_a_mismatched_answer(extractor_module):
+    chunk = evidence_test_chunk(extractor_module)
+    field = evidence_test_field(
+        "JobSatPoints_1 - Rank from 1 (most important) to 10: 4"
+    )
+
+    with pytest.raises(ValueError, match="without its current respondent answer"):
+        extractor_module.validate_chunk_payload(
+            {"fields": [field]}, chunk, {"JobSatPoints_1": "1"}
+        )
+
+
+def test_validator_rejects_summary_without_explicit_source_column(extractor_module):
+    chunk = evidence_test_chunk(extractor_module)
+    field = evidence_test_field("The respondent reports ten years of experience.")
+
+    with pytest.raises(ValueError, match="must cite at least one"):
+        extractor_module.validate_chunk_payload(
+            {"fields": [field]}, chunk, {"YearsCode": "10"}
+        )
+
+
+def test_visible_profile_sources_exclude_truncated_rows(extractor_module):
+    row = {"YearsCode": "10", "DevType": "Developer"}
+    profile = "Profile header\n\n## Career\n- YearsCode - Total coding years: 10"
+
+    assert extractor_module.visible_profile_source_answers(row, profile) == {
+        "YearsCode": "10"
+    }
 
 
 def test_unsupported_assignment_is_accepted_then_dropped(extractor_module):
