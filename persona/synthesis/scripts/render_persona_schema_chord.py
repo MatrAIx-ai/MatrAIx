@@ -43,6 +43,15 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_GRAPH_PATH = REPO_ROOT / "persona" / "synthesis" / "graph" / "full_dag.json"
 DEFAULT_OUT_DIR = REPO_ROOT / "persona" / "synthesis" / "visualization"
 
+
+def _display_path(path: Path) -> str:
+    """Show a repo-relative path when possible, else the absolute path."""
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path.resolve())
+
+
 # OFFICIAL taxonomy: 9 groups -> sub-categories.
 # Each entry is (group display name, group colour, [(sub-category display name,
 # [schema category keys it aggregates]), ...]).
@@ -85,7 +94,7 @@ GROUPS = [
         ("Values & Motivation", ["Values & Motivation"]),
         ("Beliefs", ["Worldview: Beliefs"]),
     ]),
-    ("Health and\naccessibility", "#59A14F", [
+    ("Health and\naccessibility", "#17A2B8", [
         ("Physical Health", ["Health: Physical"]),
         ("Fitness", ["Health: Fitness"]),
         ("Health Lifestyle", ["Health: Lifestyle"]),
@@ -204,7 +213,7 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         track.axis(fc=group_color[group_name], ec="white", lw=0.6)
         label = _wrap_label(sector.name)
         longest = max(len(line) for line in label.split("\n"))
-        label_size = 15.5 if longest <= 11 else 13.5
+        label_size = 17.0 if longest <= 11 else 15.0
         sector.text(label, r=107, size=label_size, adjust_rotation=True,
                     orientation="vertical", color="#222")
 
@@ -235,22 +244,23 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         lo, hi = min(degrees), max(degrees)
         circos.rect(r_lim=(126, 132), deg_lim=(lo, hi), fc=group_col,
                     ec="white", lw=1.2)
-        circos.text(group_name, r=147, deg=(lo + hi) / 2, size=20,
+        circos.text(group_name, r=148, deg=(lo + hi) / 2, size=22,
                     adjust_rotation=True, orientation="horizontal",
                     color=group_col, fontweight="bold", va="center", ha="center")
 
     fig = circos.plotfig(figsize=(18, 18))
-    fig.suptitle("Persona schema", y=1.01, fontsize=19)
+    fig.suptitle("Persona schema", y=1.01, fontsize=21)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "persona_schema_chord.png"
     pdf_path = out_dir / "persona_schema_chord.pdf"
     fig.savefig(png_path, dpi=300, bbox_inches="tight", facecolor="white")
     fig.savefig(pdf_path, bbox_inches="tight", facecolor="white")
+    covered_total = sum(covered.values())
     print(
-        f"wrote {png_path.relative_to(REPO_ROOT)} and "
-        f"{pdf_path.relative_to(REPO_ROOT)} | sub-categories={n_sub} "
-        f"attributes_covered={sum(covered.values())} (expect 1290)"
+        f"wrote {_display_path(png_path)} and {_display_path(pdf_path)} | "
+        f"sub-categories={n_sub} attributes_covered={covered_total} "
+        f"(1290 total; Family's 1 attribute is excluded as it has no edges)"
     )
 
 
@@ -259,7 +269,7 @@ def main() -> None:
     parser.add_argument("--graph", type=Path, default=DEFAULT_GRAPH_PATH)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument(
-        "--threshold", type=int, default=6,
+        "--threshold", type=int, default=4,
         help="minimum aggregated edges for a sub-category pair to be drawn",
     )
     args = parser.parse_args()
