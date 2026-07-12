@@ -89,21 +89,6 @@ def test_2025_aggregated_tasks_use_strongest_current_status(extractor_module):
     assert "Generating content or synthetic data" in data_generation["evidence"]
 
 
-def test_generic_ai_no_plan_expands_to_all_tasks(extractor_module):
-    row = {"AISelect": "No, and I don't plan to"}
-
-    fields = extractor_module.extract_generic_ai_no_plan_task_fields(
-        row, mapping_for("AISelect")
-    )
-
-    assert {field["field_id"] for field in fields} == set(
-        extractor_module.STACKOVERFLOW_2025_AI_TASK_FIELD_ORDER
-    )
-    assert all(field["value"] == "Does not plan AI use" for field in fields)
-    assert all(field["assignment_type"] == "direct" for field in fields)
-    assert all(field["confidence"] == 1.0 for field in fields)
-
-
 def test_ai_reconciliation_prefers_specific_past_use_and_drops_unrelated_fanout(
     extractor_module,
 ):
@@ -133,6 +118,13 @@ def test_ai_reconciliation_prefers_specific_past_use_and_drops_unrelated_fanout(
             "evidence": "AISelect - Current AI use: No, and I don't plan to",
             "assignment_type": "direct",
         },
+        {
+            "field_id": "ai_task_testing",
+            "value": "Does not plan AI use",
+            "confidence": 0.9,
+            "evidence": "AISelect - Current AI use: No, and I don't plan to",
+            "assignment_type": "direct",
+        },
     ]
 
     fields = fields_by_id(
@@ -145,6 +137,8 @@ def test_ai_reconciliation_prefers_specific_past_use_and_drops_unrelated_fanout(
         "summary_inference"
     )
     assert fields["att_ai"]["assignment_type"] == "summary_inference"
+    assert fields["ai_task_testing"]["assignment_type"] == "summary_inference"
+    assert fields["ai_task_testing"]["confidence"] == 0.9
 
 
 @pytest.mark.parametrize("year", [2023, 2024])
@@ -342,7 +336,8 @@ def test_prompt_blocks_observed_proxy_failure_modes(extractor_module):
     assert "Country directly supports region" in prompt
     assert "likely dominant, native, or working language as summary_inference" in prompt
     assert "Never label a Country-based language completion as direct" in prompt
-    assert "deterministically supports ai_task_*=Does not plan AI use" in prompt
+    assert "positively supports ai_task_*=Does not plan AI use" in prompt
+    assert "do not mark these completions direct or force confidence to 1.0" in prompt
     assert "specific past-use answers taking priority" in prompt
     assert "Generic AISelect does not constrain named-product history" in prompt
     assert 'company_size="Solo / freelance"' in prompt

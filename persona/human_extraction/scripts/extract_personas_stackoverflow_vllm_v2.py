@@ -1055,46 +1055,6 @@ def visible_profile_source_answers(
     return source_answers
 
 
-def source_evidence(
-    row: dict[str, Any], mapping: dict[str, dict[str, str]], column: str
-) -> str:
-    """Format one present survey answer as canonical direct evidence."""
-    raw_value = row.get(column)
-    if not is_present(raw_value):
-        raise ValueError(f"cannot build evidence for absent source column {column!r}")
-    entry = mapping.get(column, {})
-    clean_column = clean_value(column, max_chars=200)
-    label = clean_value(entry.get("description") or column, max_chars=1_200)
-    clean_raw_value = clean_value(raw_value)
-    return (
-        f"{clean_column} - {label}: {clean_raw_value}"
-        if label != clean_column
-        else f"{clean_column}={clean_raw_value}"
-    )
-
-
-def extract_generic_ai_no_plan_task_fields(
-    row: dict[str, Any], mapping: dict[str, dict[str, str]]
-) -> list[dict[str, Any]]:
-    """Expand an explicit overall AI no-plan answer to every AI task."""
-    raw_value = row.get("AISelect")
-    if not is_present(raw_value) or str(raw_value).strip().casefold() != (
-        "no, and i don't plan to"
-    ):
-        return []
-    evidence = source_evidence(row, mapping, "AISelect")
-    return [
-        {
-            "field_id": field_id,
-            "value": "Does not plan AI use",
-            "confidence": 1.0,
-            "evidence": evidence,
-            "assignment_type": "direct",
-        }
-        for field_id in STACKOVERFLOW_2025_AI_TASK_FIELD_ORDER
-    ]
-
-
 def reconcile_ai_fields(
     fields: list[dict[str, Any]],
     row: dict[str, Any],
@@ -1124,10 +1084,10 @@ def reconcile_ai_fields(
         ):
             continue
 
-        if only_generic_ai_select and field_id in {
-            "att_ai",
-            "coding_ai_usage_frequency",
-        }:
+        if only_generic_ai_select and (
+            field_id in {"att_ai", "coding_ai_usage_frequency"}
+            or field_id.startswith("ai_task_")
+        ):
             field["assignment_type"] = "summary_inference"
         reconciled.append(field)
 
@@ -1281,7 +1241,7 @@ def build_stackoverflow_prompt(
         "- Task use is not task mastery: using or planning to use AI for debugging, review, writing, analytics, or another task does not establish proficiency in that task and does not identify the respondent's dominant method or problem profile.",
         "- Tenure and job title directly support role, seniority, and broad experience. Long professional tenure in an active developer role can strongly support high-confidence summary_inference for core skills that are intrinsic to that role: skill_coding, skill_debugging, and skill_problem_solving may reasonably reach Master for a long-tenured professional developer. Role-relevant system-design or code-review evidence may similarly support high levels. Do not spread tenure into unrelated skills such as writing, time management, leadership, research, or mentoring without separate responsibility-, behavior-, or achievement-specific evidence.",
         "- Worked-with answers establish use or exposure. Do not infer Expert or Master from a technology list alone; use the least specific supported familiarity or proficiency value, or omit when the allowed scale cannot be justified.",
-        '- Current status is not complete history: an individual contributor is not proven to have no leadership or management skill; a current industry does not prove no experience in other industries. AISelect="No, and I don\'t plan to" deterministically supports ai_task_*=Does not plan AI use for every development task, because the overall no-plan answer applies to all task subsets. It also constrains overall coding-AI adoption: coding_ai_usage_frequency may be "Never used" or "Tried but not active" as a summary_inference, with specific past-use answers taking priority. AISelect="Yes" or a generic answer indicating future interest does not identify individual tasks; use AITool current/interested/not-interested answers for those. Generic AISelect does not constrain named-product history or agent memory, security, context-sharing, explanation, tool-integration, API, ethics, human-help, or similar preferences.',
+        '- Current status is not complete history: an individual contributor is not proven to have no leadership or management skill; a current industry does not prove no experience in other industries. AISelect="No, and I don\'t plan to" positively supports ai_task_*=Does not plan AI use as summary_inference because the overall no-plan answer is compatible with every task subset, but it is not an explicit per-task response: do not mark these completions direct or force confidence to 1.0. Let confidence reflect evidence compatibility. The answer also constrains overall coding-AI adoption: coding_ai_usage_frequency may be "Never used" or "Tried but not active" as summary_inference, with specific past-use answers taking priority. AISelect="Yes" or generic future interest does not identify individual tasks; use AITool current/interested/not-interested answers for those. Generic AISelect does not constrain named-product history or agent memory, security, context-sharing, explanation, tool-integration, API, ethics, human-help, or similar preferences.',
         "- Absence of evidence is not negative evidence. Never emit None, Never, Absent, no experience, no mobility, or a similar negative value merely because the profile does not mention the construct.",
         "- Country directly supports region and may provide positive statistical support for a likely dominant, native, or working language as summary_inference. Never label a Country-based language completion as direct. Reduce certainty for multilingual countries and use professional or language-use context when available. If the country's likely dominant language is absent from primary_language's allowed values, omit primary_language rather than substitute an implausible listed language; prefer a matching lang_* dimension when available. Country alone still does not establish nationality, cultural identity, immigration history, hometown mobility, adversity, or other personal history.",
         '- Explicit freelancer, independent-contractor, or solo-work evidence may support company_size="Solo / freelance" because that allowed value includes freelance work. Self-employed status alone does not establish founder status, entrepreneurship history, exact headcount, or a strictly one-person organization.',
@@ -1818,23 +1778,15 @@ def extract_year(
                 year=work.year,
             )
             for row_index, row in batch:
-                generic_no_plan_fields = extract_generic_ai_no_plan_task_fields(
-                    row, work.mapping
-                )
-                year_specific_fields = extract_2025_ai_task_fields(
+                deterministic_fields = extract_2025_ai_task_fields(
                     row, work.year, work.mapping
-                )
-                deterministic_fields = overlay_deterministic_fields(
-                    generic_no_plan_fields,
-                    year_specific_fields,
-                    frozenset(
-                        field["field_id"] for field in year_specific_fields
-                    ),
                 )
                 final_fields = overlay_deterministic_fields(
                     merged[row_index],
                     deterministic_fields,
-                    frozenset(field["field_id"] for field in deterministic_fields),
+                    STACKOVERFLOW_2025_AI_TASK_FIELD_IDS
+                    if work.year == 2025
+                    else frozenset(),
                 )
                 final_fields = reconcile_ai_fields(
                     final_fields, row, work.mapping
