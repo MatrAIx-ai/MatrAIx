@@ -7,7 +7,7 @@
  * count. Always-on labels occupy collision-relaxed side columns connected by
  * leader lines, while color remains reserved for hover/selection.
  */
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import type { SynthesisCategoryEdge, SynthesisOverviewResponse } from "@/lib/types";
 
@@ -26,8 +26,6 @@ const MIN_HIT_R = 22;
 const HIT_PADDING = 10;
 const EDGE_NODE_GAP = 2;
 const ARROW_SIZE = 8;
-const EDGE_ARROW_ID = "synthesis-category-edge-arrow";
-const ACTIVE_EDGE_ARROW_ID = "synthesis-category-edge-arrow-active";
 
 interface Point {
   x: number;
@@ -148,6 +146,9 @@ export function CategoryOverviewGraph({
   const [canvasSize, setCanvasSize] = useState<CanvasSize | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [focused, setFocused] = useState<string | null>(null);
+  const markerScope = useId().replace(/:/g, "");
+  const edgeArrowId = `synthesis-category-${markerScope}-edge-arrow`;
+  const activeEdgeArrowId = `${edgeArrowId}-active`;
 
   useLayoutEffect(() => {
     const container = containerRef.current;
@@ -302,7 +303,7 @@ export function CategoryOverviewGraph({
       >
         <defs aria-hidden="true">
           <marker
-            id={EDGE_ARROW_ID}
+            id={edgeArrowId}
             viewBox={`0 0 ${ARROW_SIZE} ${ARROW_SIZE}`}
             markerWidth={ARROW_SIZE}
             markerHeight={ARROW_SIZE}
@@ -317,7 +318,7 @@ export function CategoryOverviewGraph({
             />
           </marker>
           <marker
-            id={ACTIVE_EDGE_ARROW_ID}
+            id={activeEdgeArrowId}
             viewBox={`0 0 ${ARROW_SIZE} ${ARROW_SIZE}`}
             markerWidth={ARROW_SIZE}
             markerHeight={ARROW_SIZE}
@@ -348,7 +349,7 @@ export function CategoryOverviewGraph({
               <path
                 key={`${edge.source}->${edge.target}`}
                 d={edgePath(edge)}
-                markerEnd={`url(#${active ? ACTIVE_EDGE_ARROW_ID : EDGE_ARROW_ID})`}
+                markerEnd={`url(#${active ? activeEdgeArrowId : edgeArrowId})`}
                 style={{
                   stroke: active ? "rgb(var(--primary))" : "rgb(var(--outline))",
                   opacity,

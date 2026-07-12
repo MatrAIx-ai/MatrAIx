@@ -4,7 +4,7 @@
  * Nav: Home · Playground · Runs · Persona World · Synthesis.
  */
 import { PreflightChip } from "./PreflightChip";
-import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
+import { FOCUS_RING } from "./cockpit/cockpitShared";
 import { MatrAIxLogo } from "./studio/MatrAIxLogo";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -20,6 +20,32 @@ export interface TopBarProps {
   onOpenRuns: () => void;
   onOpenPersonaStore: () => void;
   onOpenSynthesis: () => void;
+}
+
+function ThemeIcon({ showSun }: { showSun: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {showSun ? (
+        <>
+          <circle cx="12" cy="12" r="3.75" />
+          <path d="M12 2.25v2M12 19.75v2M4.25 12h-2M21.75 12h-2M5.1 5.1l1.4 1.4M17.5 17.5l1.4 1.4M18.9 5.1l-1.4 1.4M6.5 17.5l-1.4 1.4" />
+        </>
+      ) : (
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      )}
+    </svg>
+  );
 }
 
 export function TopBar({
@@ -88,7 +114,7 @@ export function TopBar({
             title="Toggle light / dark"
             className={`grid h-9 w-9 flex-none place-items-center rounded-md border border-outline text-text-variant transition hover:border-primary hover:text-text-main active:scale-95 ${FOCUS_RING}`}
           >
-            <Sym name={nextIsLight ? "light_mode" : "dark_mode"} size={18} />
+            <ThemeIcon showSun={nextIsLight} />
           </button>
         </div>
       </div>
