@@ -11,6 +11,8 @@
 #SBATCH --time=04:00:00
 #SBATCH --output=/scratch/yl6586/slurm_logs/slurm-%x-%j.out
 #SBATCH --error=/scratch/yl6586/slurm_logs/slurm-%x-%j.err
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=yl6586@nyu.edu
 
 set -euo pipefail
 
